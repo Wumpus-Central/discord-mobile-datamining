@@ -1,18 +1,19 @@
 // === Module 14880: useOnNewPendingRequest ===
 
 // Module 14880 (useOnNewPendingRequest)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "freshTeenActivityWithMap" /* 7537 */;
+import noop from "module_19" /* 19 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
 
-export default function useOnNewPendingRequest(first) {
-  const _require = first;
-  const pendingRequestCount = _require(stateFromStores[2]).usePendingRequestCount();
-  let obj = _require(stateFromStores[2]);
-  const items = [closure_4];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => ref2.getAreLinkedUsersProcessed());
+export default function useOnNewPendingRequest(set) {
+  _require = set;
+  const pendingRequestCount = require("useUserLinks").usePendingRequestCount();
+  let obj = require("useUserLinks");
+  const items = [ref2];
+  stateFromStores = require("initialize").useStateFromStores(items, () => ref2.getAreLinkedUsersProcessed());
   pendingRequestCount(stateFromStores[4])(() => {
     if (!ref2.getAreLinkedUsersProcessed()) {
       const linkedUsers = pendingRequestCount(stateFromStores[5]).fetchLinkedUsers();
@@ -22,14 +23,14 @@ export default function useOnNewPendingRequest(first) {
       const obj = pendingRequestCount(stateFromStores[5]);
     }
   });
-  React = React.useRef(first);
-  const items1 = [first];
-  const effect = React.useEffect(() => {
-    closure_3.current = closure_0;
+  noop = noop.useRef(set);
+  const items1 = [set];
+  const effect = noop.useEffect(() => {
+    closure_3.current = current;
   }, items1);
-  closure_4 = React.useRef(null);
+  const obj2 = require("initialize");
   const items2 = [stateFromStores, pendingRequestCount];
-  const effect1 = React.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (stateFromStores) {
       if (null != ref2.current) {
         tmp.current = pendingRequestCount;

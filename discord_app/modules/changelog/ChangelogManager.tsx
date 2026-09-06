@@ -1,101 +1,85 @@
-// === Module 17325: prototype ===
+// === Module 17325: ChangelogManager ===
 
-// Module 17325 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_getSystemLocale" /* 2025 */;
-import closure_6 from "handleUserSettingsProtoStoreChange" /* 4574 */;
+// Module 17325 (ChangelogManager)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import ChangelogStore from "ChangelogStore" /* 4574 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-const require = arg1;
-initializeDefault;
+let require = fn;
 let prototype = function ChangelogManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  closure_0 = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN(arg0) {
-      return closure_0.handleConnectionOpen(arg0);
+      return applyArgumentsResult.handleConnectionOpen(arg0);
     }
   };
-  closure_0 = undefined;
-  closure_0 = callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
+  closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+    if (locale === 2) {
+      locale = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        c5 = 2;
-        if (0 === dispatchResult2) {
+        locale = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
+            locale = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            locale = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            c1 = tmp3;
-            c0 = tmp7;
-            c0 = undefined;
-            c1 = undefined;
-            c2 = undefined;
-            c3 = undefined;
-            dispatchResult2 = undefined;
-            c5 = undefined;
+            applyArgumentsResult = tmp7;
+            closure_128_0 = undefined;
+            let body;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            closure_128_5 = undefined;
             c3 = 1;
-            dispatchResult2 = 2;
-            c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = body(8092).fetchChangelogConfig();
+            c4 = 2;
+            locale = 1;
+            let obj1 = { value: tmp3(tmp86[5]).fetchChangelogConfig(), done: false };
             return obj1;
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
-          throw c2;
+          tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+          throw tmp86;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
+            locale = 3;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
-            body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
-            c5 = 3;
-            let obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+            locale = 3;
+            let obj2 = { value, done: true };
             return obj2;
           } else {
-            dispatchResult2 = c0;
-            dispatchResult2 = c1;
-            const lib = arg1;
-            dispatchResult2 = lib;
-            body = lib.body;
-            dispatchResult2 = body;
-            dispatchResult2 = lib;
-            dispatchResult2 = dependencyMap;
-            dependencyMap = (function getLatestChangelogIdForVersion(body, clientVersionForChangelog) {
+            closure_128_0 = value;
+            body = closure_128_0.body;
+            closure_128_2 = (function getLatestChangelogIdForVersion(arg0, clientVersionForChangelog) {
               let num = 0;
               let first = null;
-              const entries = Object.entries(body);
+              const entries = Object.entries(arg0);
               while (tmp3 !== undefined) {
-                let tmp5 = dispatchResult2;
-                let tmp6 = dispatchResult2(tmp4, 2);
+                let tmp6 = closure_1_4(tmp4, 2);
                 let min_version = tmp6[1].min_version;
                 let tmp8 = min_version <= clientVersionForChangelog;
                 if (tmp8) {
-                  let tmp9 = min_version;
-                  let tmp10 = num;
                   tmp8 = tmp7 > num;
                 }
                 if (tmp8) {
@@ -105,130 +89,107 @@ let prototype = function ChangelogManager() {
                 continue;
               }
               return first;
-            })(body, lib(17326).getClientVersionForChangelog());
-            dispatchResult2 = body;
-            dispatchResult2 = dependencyMap;
-            const obj23 = lib(17326);
-            let obj3 = { type: "CHANGE_LOG_SET_CONFIG", config: null, latestChangelogId: null };
-            dispatchResult2 = lib;
-            obj3[1] = lib.body;
-            dispatchResult2 = dependencyMap;
-            obj3[2] = dependencyMap;
-            dispatchResult2 = body(573).dispatch(obj3);
-            dispatchResult2 = dependencyMap;
-            if (null == dependencyMap) {
+            })(body, applyArgumentsResult(tmp86[6]).getClientVersionForChangelog());
+            const obj23 = applyArgumentsResult(tmp86[6]);
+            let obj3 = { type: "CHANGE_LOG_SET_CONFIG", config: closure_128_0.body, latestChangelogId: closure_128_2 };
+            tmp3(tmp86[7]).dispatch(obj3);
+            if (null == closure_128_2) {
               c3 = 0;
-              body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
-              c5 = 3;
+              tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+              locale = 3;
+              return { value: "HermesInternal", done: null };
+            } else if (true !== body[closure_128_2].show_on_startup) {
+              c3 = 0;
+              tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+              locale = 3;
               return { value: "HermesInternal", done: null };
             } else {
-              dispatchResult2 = c0;
-              dispatchResult2 = body;
-              dispatchResult2 = dependencyMap;
-              if (true !== body[dependencyMap].show_on_startup) {
-                c3 = 0;
-                body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
-                c5 = 3;
-                return { value: "HermesInternal", done: null };
-              } else {
-                dispatchResult2 = c0;
-                dispatchResult2 = c1;
-                dispatchResult2 = closure_1_6;
-                closure_3 = closure_1_6.lastSeenChangelogId();
-                dispatchResult2 = closure_1_6;
-                closure_4 = closure_1_6.lastSeenChangelogDate();
-                dispatchResult2 = closure_3;
-                if (null != closure_3) {
-                  if (obj10.compare(dependencyMap, closure_3) <= 0) {
-                    c3 = 0;
-                    body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
-                    c5 = 3;
-                    return { value: "HermesInternal", done: null };
-                  }
-                  obj10 = body(11);
+              closure_128_3 = ChangelogStore.lastSeenChangelogId();
+              closure_128_4 = ChangelogStore.lastSeenChangelogDate();
+              if (null != closure_128_3) {
+                if (obj10.compare(closure_128_2, closure_128_3) <= 0) {
+                  c3 = 0;
+                  tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+                  locale = 3;
+                  return { value: "HermesInternal", done: null };
                 }
-                dispatchResult2 = 3;
-                c5 = 1;
-                let obj4 = { value: null, done: false };
-                obj4[0] = body(8092).fetchChangelog(dependencyMap, c5.locale);
-                return obj4;
+                obj10 = tmp3(tmp86[8]);
               }
+              c4 = 3;
+              locale = 1;
+              let obj4 = { value: tmp3(tmp86[5]).fetchChangelog(closure_128_2, locale.locale), done: false };
+              return obj4;
             }
-            const obj24 = body(573);
+            const obj24 = tmp3(tmp86[7]);
           }
         } else if (arg0 === 1) {
-          c5 = 3;
-          throw arg1;
+          locale = 3;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
-          body(573).dispatch({ type: "CHANGE_LOG_RESOLVED" });
-          c5 = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = arg1;
+          tmp3(tmp86[7]).dispatch({ type: "CHANGE_LOG_RESOLVED" });
+          locale = 3;
+          const obj5 = { value, done: true };
           return obj5;
         } else {
-          c5 = arg1;
-          if (null == c5) {
+          closure_128_5 = value;
+          if (null == closure_128_5) {
             c3 = 0;
-            let obj6 = body(573);
+            let obj6 = tmp3(tmp86[7]);
             obj6.dispatch({ type: "CHANGE_LOG_RESOLVED" });
-            c5 = 3;
+            locale = 3;
             return { value: "HermesInternal", done: null };
           } else {
-            if (null != dispatchResult2) {
-              dispatchResult2 = c1;
-              dispatchResult2 = closure_1_6;
-              if (null != closure_1_6.lastSeenChangelogDate()) {
-                dispatchResult2 = c1;
-                dispatchResult2 = closure_1_6;
-                if (closure_1_6.isLocked()) {
+            if (null != closure_128_4) {
+              if (null != ChangelogStore.lastSeenChangelogDate()) {
+                if (ChangelogStore.isLocked()) {
                   c3 = 0;
-                  obj2 = body(573);
+                  obj2 = tmp3(tmp86[7]);
                   obj2.dispatch({ type: "CHANGE_LOG_RESOLVED" });
-                  c5 = 3;
+                  locale = 3;
                   return { value: "HermesInternal", done: null };
                 } else {
                   const _Date = Date;
-                  const date = new Date(c5.date);
+                  const date = new Date(closure_128_5.date);
                   const _Date2 = Date;
-                  const date1 = new Date(dispatchResult2);
+                  const date1 = new Date(closure_128_4);
                   if (date > date1) {
-                    obj = lib(17328);
+                    obj = applyArgumentsResult(tmp86[9]);
                     obj.openChangelog();
                   }
                   c3 = 0;
-                  obj1 = body(573);
+                  obj1 = tmp3(tmp86[7]);
                   obj1.dispatch({ type: "CHANGE_LOG_RESOLVED" });
-                  c5 = 3;
+                  locale = 3;
                   return { value: "HermesInternal", done: null };
                 }
               }
             }
-            obj3 = body(8092);
-            obj3.markChangelogAsSeen(dependencyMap, c5.date);
+            obj3 = tmp3(tmp86[5]);
+            obj3.markChangelogAsSeen(closure_128_2, closure_128_5.date);
             c3 = 0;
-            obj4 = body(573);
+            obj4 = tmp3(tmp86[7]);
             obj4.dispatch({ type: "CHANGE_LOG_RESOLVED" });
-            c5 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = undefined;
+            locale = 3;
+            obj6 = { value: undefined, done: true };
             return obj6;
           }
         }
       } catch (tmp86) {
-        c2 = tmp86;
         if (tmp4 === c3) {
-          c5 = tmp2;
+          locale = tmp2;
           throw tmp86;
+        } else {
+          c4 = tmp;
         }
       }
     }
   });
   applyArgumentsResult.handleConnectionOpen = function() {
     const self = this;
-    const apply = closure_0.apply;
+    const apply = applyArgumentsResult.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
@@ -239,6 +200,7 @@ let prototype = function ChangelogManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/changelog/ChangelogManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/changelog/ChangelogManager.tsx");
 
 export default prototype;

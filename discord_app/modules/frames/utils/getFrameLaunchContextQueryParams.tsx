@@ -1,9 +1,9 @@
 // === Module 16617: getFrameLaunchContextQueryParams ===
 
 // Module 16617 (getFrameLaunchContextQueryParams)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/frames/utils/getFrameLaunchContextQueryParams.tsx");
+const result = size.fileFinishedImporting("modules/frames/utils/getFrameLaunchContextQueryParams.tsx");
 
 export default function getFrameLaunchContextQueryParams(customId) {
   const obj = {};

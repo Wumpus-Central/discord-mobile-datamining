@@ -1,29 +1,26 @@
-// === Module 17436: DefaultAvatarButton ===
+// === Module 17436: PresetAvatarSelect ===
 
-// Module 17436 (DefaultAvatarButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import preloadDefault from "preload" /* 5587 */;
-import setDefault from "set" /* 17437 */;
-import setDefault2 from "set" /* 17438 */;
-import setDefault3 from "set" /* 17439 */;
-import setDefault4 from "set" /* 17440 */;
-import setDefault5 from "set" /* 17441 */;
-import setDefault6 from "set" /* 17442 */;
-import setDefault7 from "set" /* 17443 */;
-import setDefault8 from "set" /* 17444 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17436 (PresetAvatarSelect)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import defaultAvatar1Default from "defaultAvatar1" /* 17437 */;
+import defaultAvatar2Default from "defaultAvatar2" /* 17438 */;
+import defaultAvatar3Default from "defaultAvatar3" /* 17439 */;
+import defaultAvatar4Default from "defaultAvatar4" /* 17440 */;
+import defaultAvatar5Default from "defaultAvatar5" /* 17441 */;
+import defaultAvatar6Default from "defaultAvatar6" /* 17442 */;
+import defaultAvatar7Default from "defaultAvatar7" /* 17443 */;
+import defaultAvatar8Default from "defaultAvatar8" /* 17444 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function DefaultAvatarButton(selected) {
   selected = selected.selected;
   ({ source, onSelect, accessibilityLabel } = selected);
-  const tmp = callback3();
+  const tmp = closure_7();
   const items = [tmp.defaultAvatarContainer, ];
   let prop;
   if (selected) {
@@ -32,169 +29,168 @@ function DefaultAvatarButton(selected) {
   let obj = { style: items, accessibilityRole: "button", accessibilityLabel, accessibilityState: { selected }, accessibilityHint: null, onPress: null, children: null };
   items[1] = prop;
   const intl = tmp3(1114).intl;
-  obj[4] = intl.string(getSystemLocale.t.vw2RsD);
-  obj[5] = onSelect;
+  obj.accessibilityHint = intl.string(util.t.vw2RsD);
+  obj.onPress = onSelect;
   obj = { style: tmp.defaultAvatarButton, source: { uri: source } };
-  obj[6] = closure_4(preloadDefault, obj);
-  return closure_4(PressableBase.PressableOpacity, obj);
+  obj.children = React4(FastImageDefault, obj);
+  return React4(Pressables.PressableOpacity, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let items = [setDefault, setDefault2, setDefault3, setDefault4, setDefault5, setDefault6, setDefault7, setDefault8];
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+let items = [defaultAvatar1Default, defaultAvatar2Default, defaultAvatar3Default, defaultAvatar4Default, defaultAvatar5Default, defaultAvatar6Default, defaultAvatar7Default, defaultAvatar8Default];
 let obj = {
-  avatar: setDefault,
+  avatar: defaultAvatar1Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["u/VENK"]);
+    const intl = util.intl;
+    return intl.string(util.t["u/VENK"]);
   }
 };
 let items1 = [obj, , , , , , , ];
 obj = {
-  avatar: setDefault2,
+  avatar: defaultAvatar2Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["pBx+d8"]);
+    const intl = util.intl;
+    return intl.string(util.t["pBx+d8"]);
   }
 };
 items1[1] = obj;
 obj = {
-  avatar: setDefault3,
+  avatar: defaultAvatar3Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.vbERmz);
+    const intl = util.intl;
+    return intl.string(util.t.vbERmz);
   }
 };
 items1[2] = obj;
 items1[3] = {
-  avatar: setDefault4,
+  avatar: defaultAvatar4Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Ecxz3Z);
+    const intl = util.intl;
+    return intl.string(util.t.Ecxz3Z);
   }
 };
-const obj1 = {
-  avatar: setDefault4,
+let obj1 = {
+  avatar: defaultAvatar4Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Ecxz3Z);
+    const intl = util.intl;
+    return intl.string(util.t.Ecxz3Z);
   }
 };
 items1[4] = {
-  avatar: setDefault5,
+  avatar: defaultAvatar5Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Jb8PYM);
+    const intl = util.intl;
+    return intl.string(util.t.Jb8PYM);
   }
 };
 const obj2 = {
-  avatar: setDefault5,
+  avatar: defaultAvatar5Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Jb8PYM);
+    const intl = util.intl;
+    return intl.string(util.t.Jb8PYM);
   }
 };
 items1[5] = {
-  avatar: setDefault6,
+  avatar: defaultAvatar6Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3h0yoI"]);
+    const intl = util.intl;
+    return intl.string(util.t["3h0yoI"]);
   }
 };
 const obj3 = {
-  avatar: setDefault6,
+  avatar: defaultAvatar6Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3h0yoI"]);
+    const intl = util.intl;
+    return intl.string(util.t["3h0yoI"]);
   }
 };
 items1[6] = {
-  avatar: setDefault7,
+  avatar: defaultAvatar7Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.frIpZ5);
+    const intl = util.intl;
+    return intl.string(util.t.frIpZ5);
   }
 };
 const obj4 = {
-  avatar: setDefault7,
+  avatar: defaultAvatar7Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.frIpZ5);
+    const intl = util.intl;
+    return intl.string(util.t.frIpZ5);
   }
 };
 items1[7] = {
-  avatar: setDefault8,
+  avatar: defaultAvatar8Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.zpfUeg);
+    const intl = util.intl;
+    return intl.string(util.t.zpfUeg);
   }
 };
+const createStyles = fn(4560);
 const obj6 = { container: { display: "flex", alignItems: "center", flex: 1 }, buttonsContainer: { display: "flex", flexDirection: "row", marginTop: 20, justifyContent: "space-between" }, defaultAvatarButton: null, defaultAvatarContainer: null, defaultAvatarSelected: null };
+let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xl };
+obj6.defaultAvatarButton = size;
+obj6.defaultAvatarContainer = { marginHorizontal: 8, width: 56, height: 56, padding: 2, borderWidth: 2, borderRadius: 28, borderColor: "transparent", display: "flex", alignItems: "center", justifyContent: "center" };
 const obj5 = {
-  avatar: setDefault8,
+  avatar: defaultAvatar8Default,
   label() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.zpfUeg);
+    const intl = util.intl;
+    return intl.string(util.t.zpfUeg);
   }
 };
-obj6[2] = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xl };
-obj6[3] = { marginHorizontal: 8, width: 56, height: 56, padding: 2, borderWidth: 2, borderRadius: 28, borderColor: "transparent", display: "flex", alignItems: "center", justifyContent: "center" };
-createCacheKey = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
-obj6[4] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(obj6);
-const obj7 = { height: 48, width: 48, borderRadius: ThemesDefault.radii.xl };
-const result = require("set").fileFinishedImporting("modules/avatar/native/components/PresetAvatarSelect.tsx");
+obj6.defaultAvatarSelected = { borderColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let closure_7 = createStyles.createStyles(obj6);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/avatar/native/components/PresetAvatarSelect.tsx");
 
 export default function PresetAvatarSelect(arg0) {
   ({ onAvatarSelect: require, selectedAvatar: importDefault } = arg0);
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { style: tmp.container, accessibilityRole: "list", children: null };
   obj = { variant: "text-sm/medium", color: "text-default", children: null };
-  let intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.yP28YL);
-  const items = [callback(Text.Text, obj), , ];
-  obj = {
-    style: tmp.buttonsContainer,
-    children: items1.map((arg0) => {
-      closure_0 = arg0;
-      let obj = closure_1_6[arg0];
-      obj = {
-        source: obj.avatar,
-        onSelect() {
-          return callback(callback);
-        },
-        selected: closure_1 === arg0,
-        accessibilityLabel: null
-      };
-      const intl = closure_1_0(closure_1_2[11]).intl;
-      obj = { index: arg0 + 1, description: obj.label() };
-      obj[3] = intl.formatToPlainString(closure_1_0(closure_1_2[11]).t["1K8jaQ"], obj);
-      return closure_1_4(closure_1_8, obj, arg0);
-    })
-  };
+  let intl = util.intl;
+  obj.children = intl.string(util.t.yP28YL);
+  const items = [closure_4(Text_Text.Text, obj), , ];
+  obj = { style: tmp.buttonsContainer, children: null };
   items1 = [0, 1, 2, 3];
-  items[1] = callback(View, obj);
-  const items2 = [4, 5, 6, 7];
-  items[2] = callback(View, {
-    style: tmp.buttonsContainer,
-    children: items2.map((arg0) => {
-      closure_0 = arg0;
-      let obj = closure_1_6[arg0];
-      obj = {
-        source: obj.avatar,
-        onSelect() {
-          return callback(callback);
-        },
-        selected: closure_1 === arg0,
-        accessibilityLabel: null
-      };
-      const intl = closure_1_0(closure_1_2[11]).intl;
-      obj = { index: arg0 + 1, description: obj.label() };
-      obj[3] = intl.formatToPlainString(closure_1_0(closure_1_2[11]).t["1K8jaQ"], obj);
-      return closure_1_4(closure_1_8, obj, arg0);
-    })
+  obj.children = items1.map((item) => {
+    closure_0 = item;
+    let obj = dependencyMap2[item];
+    obj = {
+      source: obj.avatar,
+      onSelect() {
+        return require(closure_0);
+      },
+      selected: closure_1 === item,
+      accessibilityLabel: null
+    };
+    const intl = util.intl;
+    obj = { index: item + 1, description: obj.label() };
+    obj.accessibilityLabel = intl.formatToPlainString(util.t["1K8jaQ"], obj);
+    return closure_1_4(DefaultAvatarButton, obj, item);
   });
-  obj[2] = items;
-  return callback2(View, obj);
+  items[1] = closure_4(View, obj);
+  const obj1 = { style: tmp.buttonsContainer, children: null };
+  const items2 = [4, 5, 6, 7];
+  obj1.children = items2.map((item) => {
+    closure_0 = item;
+    let obj = dependencyMap2[item];
+    obj = {
+      source: obj.avatar,
+      onSelect() {
+        return require(closure_0);
+      },
+      selected: closure_1 === item,
+      accessibilityLabel: null
+    };
+    const intl = util.intl;
+    obj = { index: item + 1, description: obj.label() };
+    obj.accessibilityLabel = intl.formatToPlainString(util.t["1K8jaQ"], obj);
+    return closure_1_4(DefaultAvatarButton, obj, item);
+  });
+  items[2] = closure_4(View, obj1);
+  obj.children = items;
+  return closure_5(View, obj);
 };
 export const DEFAULT_AVATARS = items;
 export const DEFAULT_AVATARS_WITH_LABELS = items1;

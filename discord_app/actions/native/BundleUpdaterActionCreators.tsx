@@ -1,29 +1,28 @@
-// === Module 17899: ? ===
+// === Module 17899: BundleUpdaterActionCreators ===
 
-// Module 17899
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault from "set" /* 4904 */;
+// Module 17899 (BundleUpdaterActionCreators)
+import _mod17 from "module_17" /* 17 */;
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
+const NativeModules = _mod17.NativeModules;
 let c4 = false;
-const result = set.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
 
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = setDefault;
-      obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
-      const intl = getSystemLocale.intl;
-      obj[0] = intl.string(getSystemLocale.t.GQZdmI);
-      const intl2 = getSystemLocale.intl;
-      obj[1] = intl2.string(getSystemLocale.t.Fizu9y);
-      const intl3 = getSystemLocale.intl;
-      obj[2] = intl3.string(getSystemLocale.t.UefCDS);
-      const intl4 = getSystemLocale.intl;
-      obj[3] = intl4.string(getSystemLocale.t["1SzcG6"]);
-      obj[4] = function onConfirm() {
+      const obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.GQZdmI);
+      const intl2 = util.intl;
+      obj.body = intl2.string(util.t.Fizu9y);
+      const intl3 = util.intl;
+      obj.confirmText = intl3.string(util.t.UefCDS);
+      const intl4 = util.intl;
+      obj.cancelText = intl4.string(util.t["1SzcG6"]);
+      obj.onConfirm = function onConfirm() {
         BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
         return BundleUpdaterManager.reload();
       };

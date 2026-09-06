@@ -1,34 +1,33 @@
-// === Module 7345: getMuteStates ===
+// === Module 7345: useMuteStates ===
 
-// Module 7345 (getMuteStates)
-import closure_2 from "initialize" /* 2014 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_6 from "updateVoiceState" /* 4579 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 7345 (useMuteStates)
+import ImpersonateStore from "ImpersonateStore" /* 2014 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-const require = arg1;
+const require = fn;
 function getMuteStates(voiceStateStore) {
   ({ channel, authenticationStore } = voiceStateStore);
   if (authenticationStore === undefined) {
-    authenticationStore = closure_3;
+    authenticationStore = AuthenticationStore;
   }
   voiceStateStore = voiceStateStore.voiceStateStore;
   if (voiceStateStore === undefined) {
-    voiceStateStore = closure_6;
+    voiceStateStore = VoiceStateStore;
   }
   let mediaEngineStore = voiceStateStore.mediaEngineStore;
   if (mediaEngineStore === undefined) {
-    mediaEngineStore = closure_4;
+    mediaEngineStore = MediaEngineStore;
   }
   let permissionStore = voiceStateStore.permissionStore;
   if (permissionStore === undefined) {
-    permissionStore = closure_5;
+    permissionStore = PermissionStore;
   }
   let impersonateStore = voiceStateStore.impersonateStore;
   if (impersonateStore === undefined) {
-    impersonateStore = closure_2;
+    impersonateStore = ImpersonateStore;
   }
   let voiceState = null;
   if (null != channel) {
@@ -51,7 +50,7 @@ function getMuteStates(voiceStateStore) {
   if (!suppress) {
     suppress = isViewingRolesResult;
   }
-  obj[1] = suppress;
+  obj.suppress = suppress;
   let flag;
   if (voiceState != null) {
     flag = voiceState.mute;
@@ -59,14 +58,16 @@ function getMuteStates(voiceStateStore) {
   if (flag == null) {
     flag = false;
   }
-  obj[2] = flag;
+  obj.mute = flag;
   return obj;
 }
-const result = require("set").fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");
 
-export default function useMuteStates(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_6, closure_4, closure_5, closure_2];
-  return _require(504).useStateFromStoresObject(items, () => closure_1_8({ channel: closure_0, authenticationStore: closure_1_3, voiceStateStore: closure_1_6, mediaEngineStore: closure_1_4, permissionStore: closure_1_5, impersonateStore: closure_1_2 }));
+export default function useMuteStates(channel) {
+  _require = channel;
+  const items = [AuthenticationStore, VoiceStateStore, MediaEngineStore, PermissionStore, ImpersonateStore];
+  return require("initialize").useStateFromStoresObject(items, () => getMuteStates({ channel, authenticationStore: AuthenticationStore, voiceStateStore: VoiceStateStore, mediaEngineStore: MediaEngineStore, permissionStore: PermissionStore, impersonateStore: ImpersonateStore }));
 };
 export { getMuteStates };

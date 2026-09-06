@@ -1,27 +1,31 @@
 // === Module 10861: SearchableUserList ===
 
 // Module 10861 (SearchableUserList)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import shared from "shared" /* 4411 */;
+import makeUserListPillDataDefault from "makeUserListPillData" /* 10863 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { searchBarContainer: null, searchBar: null, searchBarRowContainer: null, noResults: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: "ip", minHeight: false };
-createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_8 };
-let obj1 = { paddingTop: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx");
+require = fn;
+const View = fn(17).View;
+const UserRowModes = fn(10860).UserRowModes;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = { searchBarContainer: null, searchBar: null, searchBarRowContainer: null, noResults: null };
+createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createStyles.searchBarContainer = createStyles;
+createStyles.searchBar = { height: "ip", minHeight: false };
+createStyles.searchBarRowContainer = { paddingTop: nativeDefault.space.PX_8 };
+let obj1 = { paddingTop: nativeDefault.space.PX_8 };
+createStyles.noResults = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_11 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx");
 
 export default function SearchableUserList(selectedUserIds) {
   selectedUserIds = selectedUserIds.selectedUserIds;
@@ -92,43 +96,39 @@ export default function SearchableUserList(selectedUserIds) {
   if (insetEnd === undefined) {
     insetEnd = disabledUserIds(onSelectUser[7]).space.PX_12;
   }
-  closure_5 = undefined;
-  let memo;
-  ref = undefined;
   ({ onContentLengthChange, onLayout, onScroll } = selectedUserIds);
-  const tmp4 = callback();
+  const tmp4 = closure_11();
   let obj = ACTIONS;
   const tmp5 = handleMessage(ACTIONS.useState(""), 2);
   const tmp8 = disabledUserIds(onSelectUser[8])({ query: tmp5[0], withGuildMembers: flag3, withAffinitySuggestions: flag4, withAlphabeticalSections: flag5, withFriends: flag6, withGameFriends: flag7, withFriendSuggestions: flag12, withFriendRequests: flag8, withFriendRequestsIncoming: flag9, withFriendRequestsOutgoing: flag10, withFriendRequestsSpam: flag11 });
   closure_5 = tmp8;
   let items = [selectedUserIds];
-  memo = ACTIONS.useMemo(() => {
+  const memo = ACTIONS.useMemo(() => {
     let items = selectedUserIds;
     if (selectedUserIds == null) {
       items = [];
     }
-    const mapped = items.map(memo.getUser);
-    const found = mapped.filter(selectedUserIds(onSelectUser[9]).isNotNullish);
-    return found.map(disabledUserIds(onSelectUser[10]));
+    const mapped = items.map(UserStore.getUser);
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    return found.map(makeUserListPillDataDefault);
   }, items);
   const items1 = [onSelectUser, memo];
   const items2 = [tmp8];
-  callback = ACTIONS.useCallback((arg0) => {
-    const user = memo.getUser(tmp.id);
+  const callback = ACTIONS.useCallback((arg0) => {
+    const user = UserStore.getUser(tmp.id);
     if (null != user) {
       onSelectUser(user);
-      const AccessibilityAnnouncer = selectedUserIds(onSelectUser[11]).AccessibilityAnnouncer;
-      const intl = selectedUserIds(onSelectUser[12]).intl;
-      const obj = { text: null };
-      obj[0] = tmp.text;
-      AccessibilityAnnouncer.announce(intl.formatToPlainString(selectedUserIds(onSelectUser[12]).t.srlxB8, obj));
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      const obj = { text: tmp.text };
+      AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.srlxB8, obj));
     }
   }, items1);
   const memo1 = ACTIONS.useMemo(() => closure_5.map((items) => items.items.length), items2);
   const items3 = [tmp8];
   const callback1 = ACTIONS.useCallback((arg0) => {
-    const props = { title: closure_5[arg0].title };
-    return { type: "section", props };
+    const element = { type: "section", props: { title: closure_5[arg0].title } };
+    return element;
   }, items3);
   const tmp12 = tmp5[0].trim().length > 0;
   const items4 = [tmp8, disabledUserIds, onSelectUser, handleMessage, ACTIONS, selectedUserIds];
@@ -140,9 +140,9 @@ export default function SearchableUserList(selectedUserIds) {
     if (user.username !== firstMatch) {
       tmp3 = firstMatch;
     }
-    props[2] = tmp3;
-    props[3] = onSelectUser;
-    props[4] = handleMessage;
+    props.nickname = tmp3;
+    props.onPress = onSelectUser;
+    props.handleMessage = handleMessage;
     let flag;
     if (disabledUserIds != null) {
       flag = obj2.includes(user.id);
@@ -150,7 +150,7 @@ export default function SearchableUserList(selectedUserIds) {
     if (flag == null) {
       flag = false;
     }
-    props[5] = flag;
+    props.disabled = flag;
     let flag2;
     if (selectedUserIds != null) {
       flag2 = selectedUserIds.includes(user.id);
@@ -165,10 +165,10 @@ export default function SearchableUserList(selectedUserIds) {
     if (flag2 == null) {
       flag2 = false;
     }
-    props[6] = flag2;
-    props[7] = ACTIONS;
-    props[8] = 0 === arg1;
-    props[9] = arg1 === diff;
+    props.selected = flag2;
+    props.mode = ACTIONS;
+    props.start = 0 === arg1;
+    props.end = arg1 === diff;
     return { type: "user", props };
   }, items4);
   ref = ACTIONS.useRef(null);
@@ -184,7 +184,7 @@ export default function SearchableUserList(selectedUserIds) {
       prop = tmp4.searchBarRowContainer;
     }
   }
-  obj[1] = prop;
+  obj.style = prop;
   const userListActionsProps = obj2.useUserListActionsProps(obj);
   const items5 = [tmp5[0]];
   ({ renderHeader, headerSize } = userListActionsProps);
@@ -194,7 +194,7 @@ export default function SearchableUserList(selectedUserIds) {
       current.scrollToTop(false);
     }
   }, items5);
-  const someResult = memo1.some((arg0) => arg0 > 0);
+  const someResult = memo1.some((item) => item > 0);
   if (flag13) {
     flag13 = !someResult;
   }
@@ -202,23 +202,11 @@ export default function SearchableUserList(selectedUserIds) {
     flag13 = !tmp12;
   }
   if (someResult) {
-    obj = { ref: null, sections: null, getItemProps: null, getSectionProps: null, renderListHeader: null, listHeaderSize: null, insetEnd: null, onContentLengthChange: null, onLayout: null, onScroll: null, disableStickySections: null, disableThemedGradient: null };
-    obj[0] = ref;
-    obj[1] = memo1;
-    obj[2] = callback2;
-    obj[3] = callback1;
-    obj[4] = renderHeader;
-    obj[5] = headerSize;
-    obj[6] = insetEnd;
-    obj[7] = onContentLengthChange;
-    obj[8] = onLayout;
-    obj[9] = onScroll;
-    obj[10] = disableStickySections;
-    obj[11] = disableThemedGradient;
+    obj = { ref, sections: memo1, getItemProps: callback2, getSectionProps: callback1, renderListHeader: renderHeader, listHeaderSize: headerSize, insetEnd, onContentLengthChange, onLayout, onScroll, disableStickySections, disableThemedGradient };
     let tmp22Result = tmp22(tmp15(tmp7[14]).UsersFastList, obj);
     let tmp29 = tmp22;
   } else {
-    obj1 = { style: null, children: null };
+    const obj1 = { style: null, children: null };
     if (tmp21) {
       const items6 = [noResults, ];
       let prop1;
@@ -228,29 +216,27 @@ export default function SearchableUserList(selectedUserIds) {
         }
       }
       items6[1] = prop1;
-      obj1[0] = items6;
-      obj1[1] = defaultNoResultsFound;
+      obj1.style = items6;
+      obj1.children = defaultNoResultsFound;
       let tmp26 = obj1;
     } else {
-      obj1[0] = noResults;
+      obj1.style = noResults;
       obj2 = { title: null, children: null };
       let tmp6Result = tmp6(tmp7[15]);
       let intl = tmp15(tmp7[12]).intl;
-      obj2[0] = intl.string(tmp15(tmp7[12]).t.V6nAfF);
-      const obj3 = { actions: null, style: null };
-      obj3[0] = actions;
+      obj2.title = intl.string(tmp15(tmp7[12]).t.V6nAfF);
+      const obj3 = { actions, style: null };
       let prop2;
       if (flag6) {
         prop2 = tmp4.searchBarRowContainer;
       }
-      obj3[1] = prop2;
-      obj2[1] = tmp22(tmp15(tmp7[13]).UserFlashListActions, obj3);
-      obj1[1] = tmp22(tmp6Result, obj2);
+      obj3.style = prop2;
+      obj2.children = tmp22(tmp15(tmp7[13]).UserFlashListActions, obj3);
+      obj1.children = tmp22(tmp6Result, obj2);
       tmp26 = obj1;
     }
     tmp22Result = tmp22(closure_5, tmp26);
     tmp29 = tmp22;
-    const tmp23 = closure_5;
   }
   let tmp29Result = !disableGradient;
   if (!disableGradient) {
@@ -261,22 +247,16 @@ export default function SearchableUserList(selectedUserIds) {
   if (flag6) {
     tmp29Result = null;
     if (!flag13) {
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp4.searchBarContainer;
-      const obj5 = { onChangeText: null, onRemove: null, tags: null, style: null, autoFocus: null, focusOnAdd: null };
-      obj5[0] = tmp5[1];
-      obj5[1] = callback;
-      obj5[2] = memo;
-      obj5[3] = tmp4.searchBar;
+      const obj4 = { style: tmp4.searchBarContainer, children: null };
+      const obj5 = { onChangeText: tmp5[1], onRemove: callback, tags: memo, style: tmp4.searchBar, autoFocus: null, focusOnAdd: null };
       tmp6Result = tmp6(tmp7[17]);
       if (flag) {
         flag = someResult;
       }
-      obj5[4] = flag;
-      obj5[5] = flag2;
-      obj4[1] = tmp29(tmp6Result, obj5);
+      obj5.autoFocus = flag;
+      obj5.focusOnAdd = flag2;
+      obj4.children = tmp29(tmp6Result, obj5);
       tmp29Result = tmp29(closure_5, obj4);
-      const tmp34 = closure_5;
     }
   }
   children[1] = tmp29Result;

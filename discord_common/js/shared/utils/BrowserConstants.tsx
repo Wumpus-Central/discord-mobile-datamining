@@ -1,6 +1,6 @@
-// === Module 13802: parsed ===
+// === Module 13802: BrowserConstants ===
 
-// Module 13802 (parsed)
+// Module 13802 (BrowserConstants)
 import formatDefault from "format" /* 1341 */;
 
 let str = formatDefault.version;
@@ -146,7 +146,8 @@ if (!tmp20) {
   }
   tmp20 = tmp23;
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/BrowserConstants.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/BrowserConstants.tsx");
 
 export const BROWSER_VERSION = parsed;
 export const IS_OCULUS_BROWSER = tmp3;

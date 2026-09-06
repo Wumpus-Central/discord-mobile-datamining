@@ -1,12 +1,12 @@
-// === Module 9468: BOX_MODE_ACTIONSHEET_WIDTH ===
+// === Module 9468: ChannelCallConstants ===
 
-// Module 9468 (BOX_MODE_ACTIONSHEET_WIDTH)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9468 (ChannelCallConstants)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 const items = [, , , ];
-({ TOP_LEFT: arr[0], TOP_RIGHT: arr[1], BOTTOM_LEFT: arr[2], BOTTOM_RIGHT: arr[3] } = ME.PictureInPicturePositions);
-const result = set.fileFinishedImporting("modules/video_calls/native/ChannelCallConstants.tsx");
+({ TOP_LEFT: arr[0], TOP_RIGHT: arr[1], BOTTOM_LEFT: arr[2], BOTTOM_RIGHT: arr[3] } = Constants.PictureInPicturePositions);
+const result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallConstants.tsx");
 
 export const BOX_MODE_ACTIONSHEET_WIDTH = 360;
 export const BOX_MODE_ACTIONSHEET_HEIGHT = 720;

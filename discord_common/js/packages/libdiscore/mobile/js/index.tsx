@@ -1,26 +1,27 @@
 // === Module 1352: LIBDISCORE_JSI ===
 
 // Module 1352 (LIBDISCORE_JSI)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import typedGlobal from "typedGlobal" /* 1353 */;
-import monotonicNowMs from "monotonicNowMs" /* 1354 */;
+import _mod17 from "module_17" /* 17 */;
+import global_types from "global_types" /* 1353 */;
+import clock from "clock" /* 1354 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
+const NativeModules = _mod17.NativeModules;
 if (NativeModules.LibDiscoreModule) {
   let LibDiscoreModule = NativeModules.LibDiscoreModule;
 } else {
   const _Proxy = Proxy;
-  const obj = { get: null };
-  obj[0] = function get() {
-    error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
-    throw error;
+  const obj = {
+    get() {
+        const error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
+        throw error;
+      }
   };
   LibDiscoreModule = new Proxy({}, obj);
 }
 LibDiscoreModule.bridgeJSIFunctions();
-const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
+const LIBDISCORE_JSI = global_types.typedGlobal.LIBDISCORE_JSI;
+let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
 const prototype = function BlockedDomainsStore() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -38,7 +39,7 @@ export const rustMultiply = function rustMultiply(arg0, arg1) {
 export const consumeLogs = function consumeLogs() {
   return LIBDISCORE_JSI.consumeLogs();
 };
-export const monotonicNowMs = monotonicNowMs.monotonicNowMs;
+export const monotonicNowMs = clock.monotonicNowMs;
 export const BlockedDomainsStore = prototype;
 export const getFluxApi = function getFluxApi() {
   return LIBDISCORE_JSI.fluxApi;

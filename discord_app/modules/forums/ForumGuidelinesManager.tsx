@@ -1,12 +1,11 @@
-// === Module 10269: _initialize ===
+// === Module 10269: ForumGuidelinesManager ===
 
-// Module 10269 (_initialize)
+// Module 10269 (ForumGuidelinesManager)
 import Storage2 from "Storage" /* 510 */;
-import initializeDefault from "initialize" /* 7118 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
+require = fn;
 const formGuidelinesStorageKey = "formGuidelinesStorageKey";
-initializeDefault;
 class ForumGuidelinesManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,7 +17,7 @@ class ForumGuidelinesManager extends tmp2 {
 const prototype = ForumGuidelinesManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const Storage = Storage2.Storage;
-  const value = Storage.get(formGuidelinesStorageKey);
+  value = Storage.get(formGuidelinesStorageKey);
   if (null != value) {
     const self = this;
     const _Set = Set;
@@ -41,6 +40,7 @@ prototype["hasSeen"] = function hasSeen(arg0) {
   return seenForumGuidelines.has(arg0);
 };
 const forumGuidelinesManager = new ForumGuidelinesManager();
-let result = require("set").fileFinishedImporting("modules/forums/ForumGuidelinesManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/ForumGuidelinesManager.tsx");
 
 export default forumGuidelinesManager;

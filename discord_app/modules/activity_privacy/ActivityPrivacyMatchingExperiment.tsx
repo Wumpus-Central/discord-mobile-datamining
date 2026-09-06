@@ -1,15 +1,15 @@
-// === Module 15907: useIsInActivityPrivacyCopyExperiment ===
+// === Module 15907: ActivityPrivacyMatchingExperiment ===
 
-// Module 15907 (useIsInActivityPrivacyCopyExperiment)
-import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 13075 */;
+// Module 15907 (ActivityPrivacyMatchingExperiment)
+import PrivateProfilesExperiment from "PrivateProfilesExperiment" /* 13075 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 let closure_2 = ApexExperiment.createApexExperiment({ name: "2026-02-activity-privacy-matching", kind: "user", defaultConfig: { copyChanges: false, upsell: false }, variations: { 0: { copyChanges: false, upsell: false }, 1: { copyChanges: true, upsell: false }, 2: { copyChanges: true, upsell: true } } });
-const result = set.fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");
+const result = size.fileFinishedImporting("modules/activity_privacy/ActivityPrivacyMatchingExperiment.tsx");
 
 export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPrivacyCopyExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let obj = apexExperiment;
+  let obj = PrivateProfilesExperiment;
   let copyChanges = obj.useIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   obj = { location: ActivityPrivacyDefaultSharingSetting };
   if (!copyChanges) {
@@ -18,11 +18,10 @@ export const useIsInActivityPrivacyCopyExperiment = function useIsInActivityPriv
   return copyChanges;
 };
 export const getIsInActivityPrivacyUpsellExperiment = function getIsInActivityPrivacyUpsellExperiment(ActivityPrivacyDefaultSharingSetting) {
-  let obj = apexExperiment;
+  let obj = PrivateProfilesExperiment;
   let upsell = obj.getIsInPrivateProfilesExperiment(ActivityPrivacyDefaultSharingSetting);
   if (!upsell) {
-    obj = { location: null };
-    obj[0] = ActivityPrivacyDefaultSharingSetting;
+    obj = { location: ActivityPrivacyDefaultSharingSetting };
     upsell = closure_2.getConfig(obj).upsell;
   }
   return upsell;

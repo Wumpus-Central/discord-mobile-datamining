@@ -1,15 +1,14 @@
-// === Module 17889: handleUserApplicationIdentityGatewayEvent ===
+// === Module 17889: UserApplicationIdentityManager ===
 
-// Module 17889 (handleUserApplicationIdentityGatewayEvent)
-import initializeDefault from "initialize" /* 7118 */;
-import fetchStore from "fetchStore" /* 9024 */;
+// Module 17889 (UserApplicationIdentityManager)
+import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 9024 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
+require = fn;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
-  const useUserApplicationIdentities = fetchStore.useUserApplicationIdentities;
+  const useUserApplicationIdentities = UserApplicationIdentityActionCreators.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
-initializeDefault;
 let prototype = function UserApplicationIdentityManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { USER_APPLICATION_IDENTITY_UPDATE: handleUserApplicationIdentityGatewayEvent, USER_APPLICATION_IDENTITY_REMOVE: handleUserApplicationIdentityGatewayEvent };
@@ -18,6 +17,7 @@ let prototype = function UserApplicationIdentityManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityManager.tsx");
 
 export default prototype;

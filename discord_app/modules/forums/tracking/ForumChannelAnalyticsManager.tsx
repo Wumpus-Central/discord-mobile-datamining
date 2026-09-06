@@ -1,10 +1,9 @@
-// === Module 7772: setFilterTagIds ===
+// === Module 7772: ForumChannelAnalyticsManager ===
 
-// Module 7772 (setFilterTagIds)
-import set from "ensureGuildLoaded" /* 1957 */;
-import set from "set" /* 2 */;
+// Module 7772 (ForumChannelAnalyticsManager)
+import "ChannelStore";
 
-set = Object.create(function ForumChannelAnalyticsManager() {
+let size = Object.create(function ForumChannelAnalyticsManager() {
   const obj = Object.create(new.target.prototype);
   obj.setFilterTagIds = function setFilterTagIds(filterTagIds) {
     obj.filterTagIds = filterTagIds;
@@ -30,7 +29,7 @@ set = Object.create(function ForumChannelAnalyticsManager() {
   obj.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
     let sortOrder = obj.sortOrder;
     if (sortOrder == null) {
-      const channel = obj.getChannel(id);
+      const channel = ChannelStore.getChannel(id);
       let defaultSortOrder;
       if (channel != null) {
         defaultSortOrder = channel.getDefaultSortOrder();
@@ -42,7 +41,7 @@ set = Object.create(function ForumChannelAnalyticsManager() {
   obj.getLayoutAnalytics = function getLayoutAnalytics(id) {
     let layout = obj.layout;
     if (layout == null) {
-      const channel = obj.getChannel(id);
+      const channel = ChannelStore.getChannel(id);
       let defaultLayout;
       if (channel != null) {
         defaultLayout = channel.getDefaultLayout();
@@ -54,7 +53,7 @@ set = Object.create(function ForumChannelAnalyticsManager() {
   obj.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
     let tagSetting = obj.tagSetting;
     if (tagSetting == null) {
-      const channel = obj.getChannel(id);
+      const channel = ChannelStore.getChannel(id);
       let defaultTagSetting;
       if (channel != null) {
         defaultTagSetting = channel.getDefaultTagSetting();
@@ -65,19 +64,20 @@ set = Object.create(function ForumChannelAnalyticsManager() {
   };
   return obj;
 }.prototype.prototype);
-set.setFilterTagIds = function setFilterTagIds(filterTagIds) {
+const ChannelStore = size;
+size.setFilterTagIds = function setFilterTagIds(filterTagIds) {
   obj.filterTagIds = filterTagIds;
 };
-set.setSortOrder = function setSortOrder(sortOrder) {
+size.setSortOrder = function setSortOrder(sortOrder) {
   obj.sortOrder = sortOrder;
 };
-set.setLayout = function setLayout(layout) {
+size.setLayout = function setLayout(layout) {
   obj.layout = layout;
 };
-set.setTagSetting = function setTagSetting(tagSetting) {
+size.setTagSetting = function setTagSetting(tagSetting) {
   obj.tagSetting = tagSetting;
 };
-set.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
+size.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
   if (null != obj.filterTagIds) {
     const _Array = Array;
     let items = Array.from(tmp.filterTagIds);
@@ -86,10 +86,10 @@ set.getFilterTagIdsAnalytics = function getFilterTagIdsAnalytics() {
   }
   return items;
 };
-set.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
+size.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
   let sortOrder = obj.sortOrder;
   if (sortOrder == null) {
-    const channel = obj.getChannel(id);
+    const channel = ChannelStore.getChannel(id);
     let defaultSortOrder;
     if (channel != null) {
       defaultSortOrder = channel.getDefaultSortOrder();
@@ -98,10 +98,10 @@ set.getSortOrderAnalytics = function getSortOrderAnalytics(id) {
   }
   return sortOrder;
 };
-set.getLayoutAnalytics = function getLayoutAnalytics(id) {
+size.getLayoutAnalytics = function getLayoutAnalytics(id) {
   let layout = obj.layout;
   if (layout == null) {
-    const channel = obj.getChannel(id);
+    const channel = ChannelStore.getChannel(id);
     let defaultLayout;
     if (channel != null) {
       defaultLayout = channel.getDefaultLayout();
@@ -110,10 +110,10 @@ set.getLayoutAnalytics = function getLayoutAnalytics(id) {
   }
   return layout;
 };
-set.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
+size.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
   let tagSetting = obj.tagSetting;
   if (tagSetting == null) {
-    const channel = obj.getChannel(id);
+    const channel = ChannelStore.getChannel(id);
     let defaultTagSetting;
     if (channel != null) {
       defaultTagSetting = channel.getDefaultTagSetting();
@@ -122,6 +122,7 @@ set.getTagSettingAnalytics = function getTagSettingAnalytics(id) {
   }
   return tagSetting;
 };
-const result = set.fileFinishedImporting("modules/forums/tracking/ForumChannelAnalyticsManager.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/tracking/ForumChannelAnalyticsManager.tsx");
 
-export default set;
+export default size;

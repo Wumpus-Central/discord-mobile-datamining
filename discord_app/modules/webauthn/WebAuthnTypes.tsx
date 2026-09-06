@@ -1,13 +1,13 @@
-// === Module 6950: prototype ===
+// === Module 6950: WebAuthnTypes ===
 
-// Module 6950 (prototype)
-import set from "set" /* 2 */;
+// Module 6950 (WebAuthnTypes)
+import size from "module_2" /* 2 */;
 
 const prototype = function IgnorableWebAuthnError() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("modules/webauthn/WebAuthnTypes.tsx");
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnTypes.tsx");
 
 export const IgnorableWebAuthnError = prototype;

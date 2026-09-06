@@ -1,25 +1,23 @@
-// === Module 15766: route ===
+// === Module 15766: DesignSystemsTableRowSetting ===
 
-// Module 15766 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15766 (DesignSystemsTableRowSetting)
+import Constants from "Constants" /* 1074 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "Table Row";
   },
-  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
-  getComponent() {
-    return require(15767) /* MyTableRow */.default;
+  parent: SettingsConstants.MobileUserSettings.DESIGN_SYSTEMS,
+  screen: {
+    route: Constants.UserSettingsSections.DESIGN_SYSTEM_TABLE_ROW,
+    getComponent() {
+      return require("UserSettingsDesignSystemTableRow").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsTableRowSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsTableRowSetting.tsx");
 
 export default route;

@@ -1,11 +1,11 @@
 // === Module 12462: useCommunicationDisabledCountdownCleanup ===
 
 // Module 12462 (useCommunicationDisabledCountdownCleanup)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
+import size from "module_2" /* 2 */;
 
-({ useEffect: obj1, useRef: c3 } = noop);
-let result = set.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");
+({ useEffect: c2, useRef: c3 } = noop);
+let result = size.fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledCountdownCleanup.tsx");
 
 export const useCommunicationDisabledCountdownCleanup = function useCommunicationDisabledCountdownCleanup(guildMember) {
   importDefault = guildMember;
@@ -22,9 +22,9 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
     const _Date = Date;
     parsed = Date.now();
   }
-  const tmpResult = importDefault(userId[1])(parsed);
+  const tmpResult = require("useCountdown")(parsed);
   const seconds = tmpResult.seconds;
-  closure_4 = seconds(null);
+  seconds(null);
   const items = [guildId, userId, seconds, communicationDisabledUntil, guildMember];
   guildId(() => {
     if (null != closure_0) {
@@ -37,7 +37,7 @@ export const useCommunicationDisabledCountdownCleanup = function useCommunicatio
           if (tmp5) {
             const _setTimeout = setTimeout;
             ref.current = setTimeout(() => {
-              const result = closure_1_0(closure_1_1[2]).clearGuildMemberTimeout(closure_2, closure_1);
+              const result = closure_0(userId[2]).clearGuildMemberTimeout(guildId, closure_1_1);
             }, 1000);
           }
           return () => {

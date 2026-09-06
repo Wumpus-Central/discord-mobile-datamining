@@ -1,12 +1,12 @@
-// === Module 8738: showInvite ===
+// === Module 8738: DisplayedInviteActionCreators ===
 
-// Module 8738 (showInvite)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8378 */;
-import getDisplayedInviteCode from "getDisplayedInviteCode" /* 8739 */;
+// Module 8738 (DisplayedInviteActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8739 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/native/DisplayedInviteActionCreators.tsx");
 
 export const showInvite = function showInvite(code, username, arg2) {
   let obj = arg2;
@@ -14,12 +14,11 @@ export const showInvite = function showInvite(code, username, arg2) {
     obj = {};
   }
   ({ deeplinkAttemptId, location: _location } = obj);
-  getDisplayedInviteCode;
+  DisplayedInviteStore;
   obj = { type: "DISPLAYED_INVITE_SHOW", code, username, deeplinkAttemptId };
-  dispatcherDefault.dispatch(obj);
-  const obj2 = dispatcherDefault;
-  const invite = generateAcceptInviteOptionsDefault.resolveInvite(code, _location);
+  DispatcherDefault.dispatch(obj);
+  const invite = InstantInviteActionCreatorsDefault.resolveInvite(code, _location);
 };
 export const clearDisplayedInvite = function clearDisplayedInvite() {
-  dispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
+  DispatcherDefault.dispatch({ type: "DISPLAYED_INVITE_CLEAR" });
 };

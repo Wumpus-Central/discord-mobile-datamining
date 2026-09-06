@@ -1,14 +1,18 @@
-// === Module 13108: computeEntryState ===
+// === Module 13108: useCollectiblesShopProducts ===
 
-// Module 13108 (computeEntryState)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getFetchState" /* 13109 */;
-import closure_5 from "getFetchState" /* 8220 */;
-import closure_6 from "fromServer" /* 7543 */;
-import closure_7 from "fromServer" /* 7544 */;
+// Module 13108 (useCollectiblesShopProducts)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8219 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 13110 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 13111 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13109 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8220 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7543 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7544 */;
 
-const require = arg1;
+require = fn;
 function computeEntryState(arg0) {
   ({ productFetchState, needsCategory, product } = arg0);
   let str = "error";
@@ -45,22 +49,22 @@ function computeEntryState(arg0) {
   return str;
 }
 function useAbsentIds(arg0) {
-  const tmp = joined(React.useState(() => new Set()), 2);
+  const tmp = _slicedToArray(noop.useState(() => new Set()), 2);
   const first = tmp[0];
   const entries = Object.entries(arg0);
-  const found = entries.filter((arg0) => {
-    [tmp, tmp2] = arg0;
+  const found = entries.filter((item) => {
+    [tmp, tmp2] = item;
     let tmp3 = "" !== tmp;
     if (tmp3) {
       tmp3 = null != tmp2;
     }
     return tmp3;
   });
-  const mapped = found.map((arg0) => {
-    [tmp] = arg0;
+  const mapped = found.map((item) => {
+    [tmp] = item;
     return tmp;
   });
-  const someResult = mapped.some((arg0) => !first.has(arg0));
+  const someResult = mapped.some((item) => !first.has(item));
   let set = first;
   if (someResult) {
     const _Set = Set;
@@ -72,8 +76,8 @@ function useAbsentIds(arg0) {
     tmp[1](set);
   }
   const entries1 = Object.entries(arg0);
-  const found1 = entries1.filter((arg0) => {
-    [tmp, tmp2] = arg0;
+  const found1 = entries1.filter((item) => {
+    [tmp, tmp2] = item;
     let hasItem = "" !== tmp;
     if (hasItem) {
       hasItem = null == tmp2;
@@ -83,13 +87,13 @@ function useAbsentIds(arg0) {
     }
     return hasItem;
   });
-  const mapped1 = found1.map((arg0) => {
-    [tmp] = arg0;
+  const mapped1 = found1.map((item) => {
+    [tmp] = item;
     return tmp;
   });
-  joined = mapped1.join(",");
+  const joined = mapped1.join(",");
   const items1 = [joined];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if ("" === joined) {
       let items = [];
     } else {
@@ -98,22 +102,20 @@ function useAbsentIds(arg0) {
     return new Set(items);
   }, items1);
 }
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesShopProducts.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesShopProducts.tsx");
 
-export const useFetchResolvedAbsent = function useFetchResolvedAbsent(id) {
+export const useFetchResolvedAbsent = function useFetchResolvedAbsent(id, arg1) {
   let obj = { id, sawFetch: false };
-  [tmp2, tmp3] = callback(React.useState(obj), 2);
+  [tmp2, tmp3] = _slicedToArray(noop.useState(obj), 2);
   let flag = tmp2.sawFetch;
   if (tmp2.id !== id) {
-    obj = { id: null, sawFetch: null };
-    obj[0] = id;
-    obj[1] = null != arg1;
+    obj = { id, sawFetch: null != arg1 };
     tmp3(obj);
     flag = tmp8;
   } else {
     if (!tmp5) {
-      obj = { id: null, sawFetch: true };
-      obj[0] = id;
+      obj = { id, sawFetch: true };
       tmp3(obj);
       flag = true;
     }
@@ -129,7 +131,7 @@ export const useFetchResolvedAbsent = function useFetchResolvedAbsent(id) {
   return tmp10;
 };
 export const useCollectiblesShopProduct = function useCollectiblesShopProduct(skuId, arg1) {
-  const _require = skuId;
+  _require = skuId;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -155,7 +157,6 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
     flag5 = false;
   }
   fetchState = undefined;
-  let first;
   let str;
   let collection;
   let fetchState2;
@@ -163,21 +164,21 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
   let memo1;
   closure_13 = undefined;
   closure_14 = undefined;
-  obj1 = flag3;
+  let obj1 = flag3;
   let items = [skuId, flag3];
   const effect = flag3.useEffect(() => {
     if (flag3) {
-      const CollectiblesShopManager = skuId(flag[6]).CollectiblesShopManager;
-      const items = [skuId];
+      const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
+      const items = [closure_0];
       const products = CollectiblesShopManager.requestProducts(items);
     }
   }, items);
-  let obj2 = _require(flag[7]);
+  let obj2 = require("initialize");
   let items1 = [flag5];
   const items2 = [skuId];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => ({ products: flag5.getProductsForSku(closure_0), fetchState: flag5.getFetchStateForSku(closure_0) }), items2);
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => ({ products: StorefrontProductStore.getProductsForSku(closure_0), fetchState: StorefrontProductStore.getFetchStateForSku(closure_0) }), items2);
   ({ products, fetchState } = stateFromStoresObject);
-  first = undefined;
+  let first;
   if (products != null) {
     first = products[0];
   }
@@ -199,16 +200,15 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
       tmp = "" !== str;
     }
     if (tmp) {
-      const CollectiblesShopManager = skuId(flag[6]).CollectiblesShopManager;
+      const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
       const items = [str];
-      const obj = { includeUnpublished: null };
-      obj[0] = flag4;
+      const obj = { includeUnpublished: flag4 };
       const collections = CollectiblesShopManager.requestCollections(items, obj);
     }
   }, items3);
   const items4 = [flag4];
   const items5 = [str];
-  const stateFromStoresObject1 = _require(flag[7]).useStateFromStoresObject(items4, () => ({ collection: flag4.getCollection(str), fetchState: flag4.getFetchState(str) }), items5);
+  const stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items4, () => ({ collection: StorefrontCollectionStore.getCollection(str), fetchState: StorefrontCollectionStore.getFetchState(str) }), items5);
   collection = stateFromStoresObject1.collection;
   fetchState2 = stateFromStoresObject1.fetchState;
   const items6 = [first, flag5, skuId];
@@ -219,9 +219,8 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
       if (flag5) {
         tmp5 = closure_0;
       }
-      const obj = { flattenVariantSkuId: null };
-      obj[0] = tmp5;
-      let result = first.fromStorefrontProductRecord(tmp, obj);
+      const obj = { flattenVariantSkuId: tmp5 };
+      let result = CollectiblesProductRecord.fromStorefrontProductRecord(tmp, obj);
       if (result == null) {
         result = null;
       }
@@ -235,28 +234,23 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
     if (flag) {
       result = null;
       if (null != collection) {
-        result = fetchState.fromStorefrontCollectionRecord(tmp2);
+        result = CollectiblesCategoryRecord.fromStorefrontCollectionRecord(tmp2);
       }
     }
     return result;
   }, items7);
   obj = { id: skuId, sawFetch: false };
   const tmp10 = flag2;
-  let tmp2 = _require;
-  const tmp2Result = _require(flag[7]);
-  const tmp3 = flag;
+  const tmp2Result = require("initialize");
   [tmp12, tmp13] = flag2(obj1.useState(obj), 2);
   let flag6 = tmp12.sawFetch;
   if (tmp12.id !== skuId) {
-    obj = { id: null, sawFetch: null };
-    obj[0] = skuId;
-    obj[1] = null != fetchState;
+    obj = { id: skuId, sawFetch: null != fetchState };
     tmp13(obj);
     flag6 = tmp16;
   } else {
     if (!tmp14) {
-      obj1 = { id: null, sawFetch: true };
-      obj1[0] = skuId;
+      obj1 = { id: skuId, sawFetch: true };
       tmp13(obj1);
       flag6 = true;
     }
@@ -271,15 +265,12 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
   [tmp20, tmp21] = tmp10(obj1.useState({ id: str3, sawFetch: false }), 2);
   let flag7 = tmp20.sawFetch;
   if (tmp20.id !== str3) {
-    obj2 = { id: null, sawFetch: null };
-    obj2[0] = str3;
-    obj2[1] = null != fetchState2;
+    obj2 = { id: str3, sawFetch: null != fetchState2 };
     tmp21(obj2);
     flag7 = tmp24;
   } else {
     if (!tmp22) {
-      const obj3 = { id: null, sawFetch: true };
-      obj3[0] = str3;
+      const obj3 = { id: str3, sawFetch: true };
       tmp21(obj3);
       flag7 = true;
     }
@@ -328,8 +319,7 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
       tmp = null != memo;
     }
     if (tmp) {
-      const result = skuId(flag[8]).seedCollectiblesProductFromStandaloneLoad(memo);
-      const obj = skuId(flag[8]);
+      const result = CollectiblesActionCreators.seedCollectiblesProductFromStandaloneLoad(memo);
     }
   }, items9);
   const items10 = [skuId, flag, str, flag4];
@@ -339,9 +329,10 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
     category: memo1,
     state: memo2,
     retry: obj1.useCallback(() => {
-      let obj = skuId(flag[9]);
-      const items = [skuId];
-      const result = obj.maybeFetchProductsBySkuIds({ skuIds: items, ignoreCache: true });
+      let obj = { skuIds: null, ignoreCache: true };
+      const items = [closure_0];
+      obj.skuIds = items;
+      const result = obj.maybeFetchProductsBySkuIds(obj);
       let tmp4 = flag;
       if (flag) {
         tmp4 = "" !== str;
@@ -349,17 +340,17 @@ export const useCollectiblesShopProduct = function useCollectiblesShopProduct(sk
       if (tmp4) {
         obj = { collectionIds: null, includeUnpublishedCollections: null, includeUnpublishedProducts: null, ignoreCache: true };
         const items1 = [str];
-        obj[0] = items1;
-        obj[1] = flag4;
-        obj[2] = flag4;
-        const result1 = skuId(flag[10]).maybeFetchCollectionsWithProducts(obj);
-        const tmpResult = skuId(flag[10]);
+        obj.collectionIds = items1;
+        obj.includeUnpublishedCollections = flag4;
+        obj.includeUnpublishedProducts = flag4;
+        const result1 = StorefrontCollectionActionCreators.maybeFetchCollectionsWithProducts(obj);
+        const tmpResult = StorefrontCollectionActionCreators;
       }
     }, items10)
   };
 };
 export const useCollectiblesShopProducts = function useCollectiblesShopProducts(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -373,32 +364,24 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
     flag2 = false;
   }
   let memo;
-  let stateFromStoresObject;
   let stateFromStoresObject1;
-  let memo1;
-  let memo2;
-  let stateFromStoresObject2;
-  let stateFromStoresObject3;
-  closure_10 = undefined;
-  closure_11 = undefined;
   let items = [arg0];
-  memo = memo.useMemo(() => lib.filter((arg0) => "" !== arg0), items);
+  memo = memo.useMemo(() => closure_0.filter((item) => "" !== item), items);
   const items1 = [memo.join(",")];
   const effect = memo.useEffect(() => {
     if (memo.length > 0) {
-      const CollectiblesShopManager = lib(flag[6]).CollectiblesShopManager;
+      const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
       const products = CollectiblesShopManager.requestProducts(tmp);
     }
   }, items1);
   const items2 = [stateFromStoresObject1];
   const items3 = [memo];
-  stateFromStoresObject = _require(flag[7]).useStateFromStoresObject(items2, () => {
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items2, () => {
     const obj = {};
     const iter = memo[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp3 = stateFromStoresObject1;
-      let productsForSku = stateFromStoresObject1.getProductsForSku(nextResult);
+      let productsForSku = StorefrontProductStore.getProductsForSku(nextResult);
       let first;
       if (productsForSku != null) {
         first = productsForSku[0];
@@ -408,29 +391,25 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
     }
     return obj;
   }, items3);
-  const obj3 = _require(flag[7]);
+  const obj3 = require("initialize");
   const items4 = [stateFromStoresObject1];
   const items5 = [memo];
-  stateFromStoresObject1 = _require(flag[7]).useStateFromStoresObject(items4, () => {
+  stateFromStoresObject1 = require("initialize").useStateFromStoresObject(items4, () => {
     const obj = {};
     for (const item10006 of memo) {
-      let tmp = stateFromStoresObject1;
-      obj[item10006] = stateFromStoresObject1.getFetchStateForSku(item10006);
+      obj[item10006] = StorefrontProductStore.getFetchStateForSku(item10006);
       continue;
     }
     return obj;
   }, items5);
   const items6 = [memo, stateFromStoresObject, flag];
-  memo1 = memo.useMemo(() => {
+  const memo1 = memo.useMemo(() => {
     const obj = {};
     const iter = memo[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp4 = flag;
       let str = "";
       if (flag) {
-        let tmp5 = stateFromStoresObject;
-        let tmp6 = nextResult;
         let tmp7 = stateFromStoresObject[tmp3];
         let str2;
         if (tmp7 != null) {
@@ -447,9 +426,9 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
     return obj;
   }, items6);
   const items7 = [memo1];
-  memo2 = memo.useMemo(() => {
+  const memo2 = memo.useMemo(() => {
     const values = Object.values(memo1);
-    const items = [...new Set(values.filter((arg0) => "" !== arg0))];
+    const items = [...new Set(values.filter((item) => "" !== item))];
     return items;
   }, items7);
   const items8 = [flag, memo2.join(",")];
@@ -459,38 +438,34 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
       tmp = memo2.length > 0;
     }
     if (tmp) {
-      const CollectiblesShopManager = lib(flag[6]).CollectiblesShopManager;
+      const CollectiblesShopManager = CollectiblesShopManager2.CollectiblesShopManager;
       const collections = CollectiblesShopManager.requestCollections(memo2);
     }
   }, items8);
-  const obj4 = _require(flag[7]);
+  const obj4 = require("initialize");
   const items9 = [stateFromStoresObject];
   const items10 = [memo2];
-  stateFromStoresObject2 = _require(flag[7]).useStateFromStoresObject(items9, () => {
+  const stateFromStoresObject2 = require("initialize").useStateFromStoresObject(items9, () => {
     const obj = {};
     for (const item10006 of memo2) {
-      let tmp = stateFromStoresObject;
-      obj[item10006] = stateFromStoresObject.getCollection(item10006);
+      obj[item10006] = StorefrontCollectionStore.getCollection(item10006);
       continue;
     }
     return obj;
   }, items10);
-  const obj6 = _require(flag[7]);
+  const obj6 = require("initialize");
   const items11 = [stateFromStoresObject];
   const items12 = [memo2];
-  stateFromStoresObject3 = _require(flag[7]).useStateFromStoresObject(items11, () => {
+  const stateFromStoresObject3 = require("initialize").useStateFromStoresObject(items11, () => {
     const obj = {};
     for (const item10006 of memo2) {
-      let tmp = stateFromStoresObject;
-      obj[item10006] = stateFromStoresObject.getFetchState(item10006);
+      obj[item10006] = StorefrontCollectionStore.getFetchState(item10006);
       continue;
     }
     return obj;
   }, items12);
   let tmp8 = stateFromStoresObject3(stateFromStoresObject1);
-  closure_10 = tmp8;
   let tmp9 = stateFromStoresObject3(stateFromStoresObject3);
-  closure_11 = tmp9;
   const items13 = [memo, stateFromStoresObject, stateFromStoresObject1, memo1, stateFromStoresObject2, stateFromStoresObject3, tmp8, tmp9, flag, flag2];
   return memo.useMemo(() => {
     let obj = {};
@@ -498,38 +473,27 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
-      let tmp4 = stateFromStoresObject;
       let tmp5 = stateFromStoresObject[nextResult];
-      let tmp6 = stateFromStoresObject1;
       let tmp7 = stateFromStoresObject1[nextResult];
-      let tmp8 = memo1;
       let str = memo1[nextResult];
       if (str == null) {
         str = "";
       }
       let tmp9 = str;
-      let tmp10 = stateFromStoresObject2;
       let tmp11 = stateFromStoresObject2[str];
       if (tmp11 == null) {
         tmp11 = null;
       }
       let tmp12 = tmp11;
-      let tmp13 = stateFromStoresObject3;
-      let tmp14 = str;
       let tmp15 = stateFromStoresObject3[tmp9];
-      let tmp16 = tmp5;
       let tmp17 = null;
       if (null != tmp5) {
-        let tmp19 = tmp5;
-        let tmp20 = flag2;
         let tmp21;
-        let tmp18 = memo2;
         if (flag2) {
           tmp21 = nextResult;
         }
-        obj = { flattenVariantSkuId: null };
-        obj[0] = tmp21;
-        let result = memo2.fromStorefrontProductRecord(tmp5, obj);
+        obj = { flattenVariantSkuId: tmp21 };
+        let result = CollectiblesProductRecord.fromStorefrontProductRecord(tmp5, obj);
         if (result == null) {
           result = null;
         }
@@ -539,44 +503,30 @@ export const useCollectiblesShopProducts = function useCollectiblesShopProducts(
       let result1 = null;
       let tmp24 = flag;
       if (flag) {
-        let tmp26 = tmp11;
         result1 = null;
         if (null != tmp12) {
-          let tmp27 = memo1;
-          let tmp28 = tmp11;
-          result1 = memo1.fromStorefrontCollectionRecord(tmp12);
+          result1 = CollectiblesCategoryRecord.fromStorefrontCollectionRecord(tmp12);
         }
       }
-      let tmp30 = nextResult;
       obj = { product: null, category: null, state: null };
-      let tmp31 = tmp17;
-      obj[0] = tmp23;
-      obj[1] = result1;
-      obj1 = { productFetchState: null, productAbsent: null, collectionFetchState: null, collectionAbsent: null, needsCategory: null, collectionId: null, product: null, category: null };
-      let tmp33 = tmp7;
-      obj1[0] = tmp7;
-      let tmp34 = set;
+      obj.product = tmp23;
+      obj.category = result1;
+      let obj1 = { productFetchState: null, productAbsent: null, collectionFetchState: null, collectionAbsent: null, needsCategory: null, collectionId: null, product: null, category: null };
+      obj1.productFetchState = tmp7;
       let tmp29 = result1;
-      let tmp32 = stateFromStoresObject2;
-      obj1[1] = set.has(tmp3);
-      let tmp35 = tmp15;
-      obj1[2] = tmp15;
-      let tmp36 = str;
+      let tmp32 = computeEntryState;
+      obj1.productAbsent = set.has(tmp3);
+      obj1.collectionFetchState = tmp15;
       let hasItem = "" !== tmp9;
       if (hasItem) {
-        let tmp38 = set2;
-        let tmp39 = str;
         hasItem = set2.has(tmp9);
       }
-      obj1[3] = hasItem;
-      obj1[4] = tmp24;
-      let tmp40 = str;
-      obj1[5] = tmp9;
-      let tmp41 = tmp17;
-      obj1[6] = tmp23;
-      let tmp42 = result1;
-      obj1[7] = tmp29;
-      obj[2] = tmp32(obj1);
+      obj1.collectionAbsent = hasItem;
+      obj1.needsCategory = tmp24;
+      obj1.collectionId = tmp9;
+      obj1.product = tmp23;
+      obj1.category = tmp29;
+      obj.state = tmp32(obj1);
       obj[tmp3] = obj;
       continue;
     }

@@ -1,38 +1,37 @@
-// === Module 15003: ? ===
+// === Module 15003: BountiesModal ===
 
-// Module 15003
-import importAllResult from "noop" /* 19 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15003 (BountiesModal)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
+const require = fn;
+const QuestsExperimentLocations = fn(5444).QuestsExperimentLocations;
+const jsx = fn(21).jsx;
 const bounty_main = "bounty_main";
-const memoResult = importAllResult.memo(function BountiesModal(bountyId) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
+
+export default noop.memo(function BountiesModal(bountyId) {
   bountyId = bountyId.bountyId;
   const sourceQuestContent = bountyId.sourceQuestContent;
   let verticalScrollEnabled;
   let obj = bountyId(verticalScrollEnabled[3]);
   verticalScrollEnabled = obj.useBountiesExperience(QuestsExperimentLocations.VIDEO_MODAL_MOBILE).verticalScrollEnabled;
   const items = [bountyId, sourceQuestContent, verticalScrollEnabled];
-  const memo = importAllResult.useMemo(() => ({
-    [closure_1_6]: {
+  const memo = noop.useMemo(() => ({
+    [closure_2_6]: {
       fullscreen: true,
       headerLeft() {
         return null;
       },
       render() {
-        return closure_1_5(closure_1_1(closure_2 ? closure_1_2[4] : closure_1_2[5]), { bountyId: closure_0, sourceQuestContent: closure_1 });
+        return jsx(sourceQuestContent(closure_1_2 ? verticalScrollEnabled[4] : verticalScrollEnabled[5]), { bountyId, sourceQuestContent });
       }
     }
   }), items);
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     bountyId(verticalScrollEnabled[6]).applyOrientationLock("PORTRAIT");
     return bountyId(verticalScrollEnabled[6]).restoreDefaultOrientationLock;
   }, []);
   obj = { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } };
   return jsx(bountyId(verticalScrollEnabled[7]).Modal, { hideTitle: true, initialRouteName: bounty_main, screens: memo, viewStyle: { backgroundColor: "#000000" } });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModal.tsx");
-
-export default memoResult;

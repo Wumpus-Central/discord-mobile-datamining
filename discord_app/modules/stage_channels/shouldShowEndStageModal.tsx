@@ -1,43 +1,44 @@
 // === Module 9914: shouldShowEndStageModal ===
 
 // Module 9914 (shouldShowEndStageModal)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "getActiveStageChannelIds" /* 5418 */;
-import closure_4 from "buildStageChannelUserRoles" /* 5421 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5418 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5421 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/shouldShowEndStageModal.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/shouldShowEndStageModal.tsx");
 
 export default function shouldShowEndStageModal(isGuildStageVoice) {
-  const _require = isGuildStageVoice;
+  _require = isGuildStageVoice;
   if (isGuildStageVoice.isGuildStageVoice()) {
-    if (live.isLive(isGuildStageVoice.id)) {
-      id = id.getId();
-      let isModeratorResult = moderator.isModerator(id, isGuildStageVoice.id);
+    if (StageInstanceStore.isLive(isGuildStageVoice.id)) {
+      const id = AuthenticationStore.getId();
+      let isModeratorResult = StageChannelRoleStore.isModerator(id, isGuildStageVoice.id);
       if (isModeratorResult) {
-        let isSpeakerResult = moderator.isSpeaker(id, isGuildStageVoice.id);
+        let isSpeakerResult = StageChannelRoleStore.isSpeaker(id, isGuildStageVoice.id);
         if (isSpeakerResult) {
-          mutableParticipants = mutableParticipants.getMutableParticipants(isGuildStageVoice.id);
+          const mutableParticipants = StageChannelParticipantStore.getMutableParticipants(isGuildStageVoice.id);
           let tmp7 = null == mutableParticipants.find((user) => {
             let isModeratorResult = user.user.id !== id;
             if (isModeratorResult) {
-              isModeratorResult = closure_1_4.isModerator(user.user.id, isGuildStageVoice.id);
+              isModeratorResult = StageChannelRoleStore.isModerator(user.user.id, isGuildStageVoice.id);
             }
             return isModeratorResult;
           });
           if (!tmp7) {
-            const mutableParticipants1 = obj2.getMutableParticipants(isGuildStageVoice.id, _require(id[4]).StageChannelParticipantNamedIndex.SPEAKER);
+            const mutableParticipants1 = obj2.getMutableParticipants(isGuildStageVoice.id, require("StageChannelParticipants").StageChannelParticipantNamedIndex.SPEAKER);
             tmp7 = null == mutableParticipants1.find((user) => {
               let isModeratorResult = user.user.id !== id;
               if (isModeratorResult) {
-                isModeratorResult = closure_1_4.isModerator(user.user.id, isGuildStageVoice.id);
+                isModeratorResult = StageChannelRoleStore.isModerator(user.user.id, isGuildStageVoice.id);
               }
               return isModeratorResult;
             });
           }
           isSpeakerResult = tmp7;
-          obj2 = mutableParticipants;
+          obj2 = StageChannelParticipantStore;
         }
         isModeratorResult = isSpeakerResult;
       }

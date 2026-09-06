@@ -1,10 +1,10 @@
-// === Module 7684: regExp ===
+// === Module 7684: parseContentForSuppressNotifications ===
 
-// Module 7684 (regExp)
-import set from "set" /* 2 */;
+// Module 7684 (parseContentForSuppressNotifications)
+import size from "module_2" /* 2 */;
 
 const regExp = new RegExp("^" + "@silent" + "(\\s|$)");
-const result = set.fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");
+const result = size.fileFinishedImporting("modules/suppress_notifications/parseContentForSuppressNotifications.tsx");
 
 export default function parseContentForSuppressNotifications(str) {
   if (null == str) {

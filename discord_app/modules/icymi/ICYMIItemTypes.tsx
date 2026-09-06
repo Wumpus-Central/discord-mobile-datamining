@@ -1,9 +1,8 @@
-// === Module 8357: set ===
+// === Module 8357: ICYMIItemTypes ===
 
-// Module 8357 (set)
-import set from "set" /* 2 */;
+// Module 8357 (ICYMIItemTypes)
+import size from "module_2" /* 2 */;
 
-let set = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);
-const result = set.fileFinishedImporting("modules/icymi/ICYMIItemTypes.tsx");
+const result = size.fileFinishedImporting("modules/icymi/ICYMIItemTypes.tsx");
 
-export const NON_ELIGIBLE_SCROLL_ITEMS = set;
+export const NON_ELIGIBLE_SCROLL_ITEMS = new Set(["end", "loading", "bottomLoading", "icymiHeader", "recommendedGuilds"]);

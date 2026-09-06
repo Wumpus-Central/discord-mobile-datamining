@@ -1,18 +1,18 @@
-// === Module 17933: promise ===
+// === Module 17933: MarkAsRead ===
 
-// Module 17933 (promise)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 17933 (MarkAsRead)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7110 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ AnalyticsObjectTypes: obj1, AnalyticsObjects: c3 } = ME);
-const result = set.fileFinishedImporting("modules/headless_tasks/android/MarkAsRead.tsx");
+({ AnalyticsObjectTypes: c2, AnalyticsObjects: c3 } = Constants);
+const result = size.fileFinishedImporting("modules/headless_tasks/android/MarkAsRead.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
-  return new Promise((arg0) => {
-    let obj = lib(closure_1_1[1]);
-    obj = { object: closure_1_3.MARK_CHANNEL_AS_READ_FROM_NOTIFICATION, objectType: closure_1_2.ACK_MANUAL };
-    obj.ack(lib.channelId, obj, true, true, lib.messageId);
-    arg0(true);
+  return new Promise((fn) => {
+    const obj = { object: constants2.MARK_CHANNEL_AS_READ_FROM_NOTIFICATION, objectType: constants.ACK_MANUAL };
+    obj.ack(closure_0.channelId, obj, true, true, closure_0.messageId);
+    fn(true);
   });
 };

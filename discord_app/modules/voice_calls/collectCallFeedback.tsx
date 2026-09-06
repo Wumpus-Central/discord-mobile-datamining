@@ -1,39 +1,40 @@
 // === Module 13626: collectCallFeedback ===
 
 // Module 13626 (collectCallFeedback)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import closure_3 from "handleSyncedStoresUpdate" /* 9096 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_6 from "createRTCConnection" /* 4583 */;
-import closure_7 from "handleConnectionOpen" /* 2011 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "handleAudioRouteChanged" /* 9083 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 9096 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import UserStore from "UserStore" /* 1371 */;
+import AudioRouteStore from "AudioRouteStore" /* 9083 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");
 
-export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
-  voiceChannelId = voiceChannelId.getVoiceChannelId();
-  channel = channel.getChannel(voiceChannelId);
+export default function collectCallFeedback(fn, arg1, arg2, videoEnabled) {
+  const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
+  const channel = ChannelStore.getChannel(voiceChannelId);
   if (null == arg1) {
     if (null != voiceChannelId) {
       if (null != channel) {
-        obj1 = rTCConnection;
-        rTCConnection = rTCConnection.getRTCConnection();
+        let obj1 = RTCConnectionStore;
+        const rTCConnection = RTCConnectionStore.getRTCConnection();
         let voiceDurationStats;
         if (rTCConnection != null) {
           voiceDurationStats = rTCConnection.getVoiceDurationStats();
         }
         let obj = { channel_id: null, channel_type: null, guild_id: null, rtc_connection_id: null, duration: null, media_session_id: null };
-        ({ id: obj4[0], type: obj4[1] } = channel);
-        obj[2] = channel.getGuildId();
-        obj[3] = obj1.getRTCConnectionId();
-        obj[4] = obj1.getDuration();
-        obj[5] = obj1.getMediaSessionId();
+        ({ id: obj4.channel_id, type: obj4.channel_type } = channel);
+        obj.guild_id = channel.getGuildId();
+        obj.rtc_connection_id = obj1.getRTCConnectionId();
+        obj.duration = obj1.getDuration();
+        obj.media_session_id = obj1.getMediaSessionId();
         const guildId = obj1.getGuildId();
-        const merged = Object.assign(collectGuildAnalyticsMetadata.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled));
+        const merged = Object.assign(AppAnalyticsUtils.getVoiceStateMetadata(guildId, obj1.getChannelId(), videoEnabled));
         let duration_muted_ms;
         if (voiceDurationStats != null) {
           duration_muted_ms = voiceDurationStats.duration_muted_ms;
@@ -42,41 +43,33 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           duration_muted_ms = null;
         }
         obj.duration_muted_ms = duration_muted_ms;
-        obj.output_audio_route_type = currentRouteType.getCurrentRouteType();
-        arg0();
-        if (obj.hasUsedBackgroundInCall) {
+        obj.output_audio_route_type = AudioRouteStore.getCurrentRouteType();
+        fn();
+        if (VideoBackgroundStore.hasUsedBackgroundInCall) {
           obj = {};
           const merged1 = Object.assign(obj);
           let tmp5Result = tmp5(9100);
-          const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(currentUser.getCurrentUser());
-          const videoDevices = store.getVideoDevices();
-          const tmp22 = videoDevices[store.getVideoDeviceId(store)];
+          const lastUsedVideoBackgroundOption = tmp5Result.getLastUsedVideoBackgroundOption(UserStore.getCurrentUser());
+          const videoDevices = MediaEngineStore.getVideoDevices();
+          const tmp22 = videoDevices[MediaEngineStore.getVideoDeviceId(MediaEngineStore)];
           let name;
           if (tmp22 != null) {
             name = tmp22.name;
           }
-          obj1 = { video_device_name: null, video_hardware_scaling_enabled: null, video_effect_type: null, video_effect_detail: null };
-          obj1[0] = name;
-          obj1[1] = store.getHardwareEncoding();
+          obj1 = { video_device_name: name, video_hardware_scaling_enabled: MediaEngineStore.getHardwareEncoding(), video_effect_type: null, video_effect_detail: null };
           tmp5Result = tmp5(9097);
-          obj1[2] = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
-          obj1[3] = tmp5(9097).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
+          obj1.video_effect_type = tmp5Result.getEffectAnalyticsType(lastUsedVideoBackgroundOption);
+          obj1.video_effect_detail = tmp5(9097).getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption);
           const merged2 = Object.assign(obj1);
-          const obj10 = store;
           const tmp5Result1 = tmp5(9097);
-          const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: null };
-          obj2[1] = obj;
-          dispatcherDefault.dispatch(obj2);
-          const obj14 = dispatcherDefault;
+          const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: obj };
+          DispatcherDefault.dispatch(obj2);
         } else {
-          const obj3 = { type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: null };
-          obj3[1] = obj;
-          dispatcherDefault.dispatch(obj3);
-          const obj6 = dispatcherDefault;
+          const obj3 = { type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: obj };
+          DispatcherDefault.dispatch(obj3);
         }
-        const obj5 = collectGuildAnalyticsMetadata;
       }
     }
   }
-  arg0();
+  fn();
 };

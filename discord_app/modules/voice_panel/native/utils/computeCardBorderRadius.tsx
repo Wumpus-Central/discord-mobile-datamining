@@ -1,11 +1,11 @@
-// === Module 17134: VoicePanelModes ===
+// === Module 17134: computeCardBorderRadius ===
 
-// Module 17134 (VoicePanelModes)
-import set from "set" /* 2 */;
-import VoicePanelModes from "VoicePanelModes" /* 12273 */;
+// Module 17134 (computeCardBorderRadius)
+import VoicePanelConstants from "VoicePanelConstants" /* 12273 */;
+import size from "module_2" /* 2 */;
 
-VoicePanelModes = VoicePanelModes.VoicePanelModes;
-const DEFAULT_BORDER_RADIUS_PIP = VoicePanelModes.DEFAULT_BORDER_RADIUS_PIP;
+const VoicePanelModes = VoicePanelConstants.VoicePanelModes;
+const DEFAULT_BORDER_RADIUS_PIP = VoicePanelConstants.DEFAULT_BORDER_RADIUS_PIP;
 const fn = function o(arg0) {
   ({ mode, focused, defaultBorderRadius } = arg0);
   if (mode === VoicePanelModes.PANEL) {
@@ -28,6 +28,6 @@ const fn = function o(arg0) {
 fn.__closure = { VoicePanelModes, DEFAULT_BORDER_RADIUS_PIP };
 fn.__workletHash = 10593808953118;
 fn.__initData = { code: "function computeCardBorderRadius_computeCardBorderRadiusTsx1({id:id,mode:mode,focused:focused,isSelf:isSelf,defaultBorderRadius:defaultBorderRadius}){const{VoicePanelModes,DEFAULT_BORDER_RADIUS_PIP}=this.__closure;if(mode===VoicePanelModes.PANEL){if(focused!=null){if(focused===id){return 0;}else if(isSelf){return DEFAULT_BORDER_RADIUS_PIP;}}return defaultBorderRadius;}if(mode===VoicePanelModes.PIP){return DEFAULT_BORDER_RADIUS_PIP;}return defaultBorderRadius;}" };
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/computeCardBorderRadius.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/computeCardBorderRadius.tsx");
 
 export default fn;

@@ -1,38 +1,38 @@
-// === Module 1113: AbortCodes ===
+// === Module 1113: ThreadConstants ===
 
-// Module 1113 (AbortCodes)
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 2 */;
+// Module 1113 (ThreadConstants)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const AbortCodes = ME.AbortCodes;
-let obj = { HAS_INTERACTED: 1, ALL_MESSAGES: 2, ONLY_MENTIONS: 4, NO_MESSAGES: 8 };
+const AbortCodes = Constants.AbortCodes;
+const ThreadMemberFlags = { HAS_INTERACTED: 1, ALL_MESSAGES: 2, ONLY_MENTIONS: 4, NO_MESSAGES: 8 };
 let items = [, , , ];
 ({ TOO_MANY_ATTACHMENTS: arr[0], EXPLICIT_CONTENT: arr[1], ENTITY_TOO_LARGE: arr[2], EXPLICIT_CONTENT: arr[3] } = AbortCodes);
-let set = new Set(items);
 const items1 = [, ];
 ({ AUTOMOD_MESSAGE_BLOCKED: arr2[0], AUTOMOD_TITLE_BLOCKED: arr2[1] } = AbortCodes);
-const result = set.fileFinishedImporting("modules/threads/ThreadConstants.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/threads/ThreadConstants.tsx");
 
 export const DEFAULT_AUTO_ARCHIVE_DURATION = 4320;
 export const MAX_THREAD_MESSAGE_COUNT_OLD = 50;
 export const MAX_THREAD_MESSAGE_COUNT = 100000;
 export const MAX_THREAD_MEMBERS_PREVIEW = 50;
 export const MAX_THREAD_UNREAD_MESSAGE_COUNT = 25;
-export const ThreadMemberFlags = obj;
+export { ThreadMemberFlags };
 export const OpenThreadAnalyticsLocations = { EMBED: "Embed", BROWSER: "Thread Browser", POPOUT: "Active Threads Popout", CHANNEL_LIST: "Channel List", GUILD_ACTIVE_THREADS_MODAL: "Guild Active Threads Modal", INBOX: "Inbox", FORUM: "Forum", VOICE_AUTO_OPEN: "Voice Auto Open" };
 export const getThreadNotificationOptions = function getThreadNotificationOptions() {
   obj = { setting: obj.ALL_MESSAGES, label: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["n/bTaY"]);
+  const intl = util.intl;
+  obj.label = intl.string(util.t["n/bTaY"]);
   const items = [obj, , ];
   obj = { setting: obj.ONLY_MENTIONS, label: null };
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.format(getSystemLocale.t.L2hmYy, {});
+  const intl2 = util.intl;
+  obj.label = intl2.format(util.t.L2hmYy, {});
   items[1] = obj;
   obj = { setting: obj.NO_MESSAGES, label: null };
-  const intl3 = getSystemLocale.intl;
-  obj[1] = intl3.string(getSystemLocale.t.CtVGyQ);
+  const intl3 = util.intl;
+  obj.label = intl3.string(util.t.CtVGyQ);
   items[2] = obj;
   return items;
 };

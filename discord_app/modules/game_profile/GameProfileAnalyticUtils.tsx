@@ -1,15 +1,16 @@
-// === Module 8686: GameProfileEmbedAction ===
+// === Module 8686: GameProfileAnalyticUtils ===
 
-// Module 8686 (GameProfileEmbedAction)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 8686 (GameProfileAnalyticUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import v1 from "v1" /* 1256 */;
-import closure_3 from "map" /* 8336 */;
-import ME from "ME" /* 1074 */;
-import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 8358 */;
+import ContentInventoryStore from "ContentInventoryStore" /* 8336 */;
 
-require = arg1;
-({ AnalyticEvents: c4, GuildFeatures: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
+const ContentInventoryFeedKey = fn(8358).ContentInventoryFeedKey;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileAnalyticUtils.tsx");
 
 export const GameProfileEmbedAction = { CopyLink: 0, [0]: "CopyLink" };
 export const GameProfileTrackActionActions = { FollowGame: 0, [0]: "FollowGame", UnfollowGame: 1, [1]: "UnfollowGame", ClickMessageUser: 2, [2]: "ClickMessageUser", SendMessageUser: 3, [3]: "SendMessageUser", JoinVC: 4, [4]: "JoinVC", WatchStream: 5, [5]: "WatchStream", ClickSimilarGame: 6, [6]: "ClickSimilarGame", WebsiteLink: 7, [7]: "WebsiteLink", XLink: 8, [8]: "XLink", YouTubeLink: 9, [9]: "YouTubeLink", ShowMore: 10, [10]: "ShowMore", ShowLess: 11, [11]: "ShowLess", JoinServer: 12, [12]: "JoinServer", ClickImage: 13, [13]: "ClickImage", GameShop: 14, [14]: "GameShop", LinkAccount: 15, [15]: "LinkAccount", ClaimGame: 16, [16]: "ClaimGame", FacebookLink: 17, [17]: "FacebookLink", InstagramLink: 18, [18]: "InstagramLink", BlueskyLink: 19, [19]: "BlueskyLink", RedditLink: 20, [20]: "RedditLink", TwitchLink: 21, [21]: "TwitchLink", SteamStoreLink: 22, [22]: "SteamStoreLink", EpicStoreLink: 23, [23]: "EpicStoreLink", RobloxStoreLink: 24, [24]: "RobloxStoreLink", BattlenetStoreLink: 25, [25]: "BattlenetStoreLink", RiotStoreLink: 26, [26]: "RiotStoreLink", MinecraftStoreLink: 27, [27]: "MinecraftStoreLink", DiscordCollectiblesShop: 28, [28]: "DiscordCollectiblesShop", DiscordCollectiblesShopItem: 29, [29]: "DiscordCollectiblesShopItem", GameShopItem: 30, [30]: "GameShopItem", SteamReviews: 31, [31]: "SteamReviews", OpenCriticReviews: 32, [32]: "OpenCriticReviews", Announcements: 33, [33]: "Announcements", AnnouncementsItem: 34, [34]: "AnnouncementsItem", CloudPlay: 35, [35]: "CloudPlay", ClickTrailer: 36, [36]: "ClickTrailer", Feedback: 37, [37]: "Feedback", XboxGamePassStoreLink: 38, [38]: "XboxGamePassStoreLink", CopyLink: 39, [39]: "CopyLink" };
@@ -38,7 +39,7 @@ export const getGuildIdAndVerifiedFromInvite = function getGuildIdAndVerifiedFro
   if (flag == null) {
     flag = false;
   }
-  obj[1] = flag;
+  obj.isVerified = flag;
   return obj;
 };
 export const generateViewId = function generateViewId() {
@@ -47,43 +48,40 @@ export const generateViewId = function generateViewId() {
 export const trackGameProfileOpen = function trackGameProfileOpen(viewId) {
   viewId = viewId.viewId;
   ({ source, gameName, gameId, authorId, profileType } = viewId);
-  let obj = expandEventPropertiesDefault;
-  obj = { view_id: viewId, source, game_name: gameName, application_id: gameId, author_id: authorId, request_id: store.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED), profile_type: profileType };
+  const obj = { view_id: viewId, source, game_name: gameName, application_id: gameId, author_id: authorId, request_id: ContentInventoryStore.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED), profile_type: profileType };
   obj.track(constants.GAME_PROFILE_OPEN, obj);
   return viewId;
 };
 export const trackGameProfileClose = function trackGameProfileClose(guildId) {
   guildId = guildId.guildId;
   ({ viewId, gameName, gameId, playedFriendIds, playedFriendsData, similarGames, isVerified } = guildId);
-  let obj = expandEventPropertiesDefault;
-  obj = { view_id: viewId, game_name: gameName, application_id: gameId, played_friend_ids: playedFriendIds, played_friends_data: playedFriendsData, similar_games: similarGames, request_id: store.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED), official_guild_id: null, guild_id: null };
+  const obj = { view_id: viewId, game_name: gameName, application_id: gameId, played_friend_ids: playedFriendIds, played_friends_data: playedFriendsData, similar_games: similarGames, request_id: ContentInventoryStore.getFeedRequestId(ContentInventoryFeedKey.GLOBAL_FEED), official_guild_id: null, guild_id: null };
   let tmp;
   if (isVerified) {
     tmp = guildId;
   }
-  obj[7] = tmp;
-  obj[8] = guildId;
+  obj.official_guild_id = tmp;
+  obj.guild_id = guildId;
   obj.track(constants.GAME_PROFILE_CLOSE, obj);
 };
 export const trackGameProfileAction = function trackGameProfileAction(guildId) {
   guildId = guildId.guildId;
   ({ gameName, gameId, action, recipientUserId, similarGameId, viewId, isVerified, source } = guildId);
-  let obj = expandEventPropertiesDefault;
-  obj = { game_name: gameName, application_id: gameId, action, recipient_user_id: recipientUserId, similar_game_id: similarGameId, view_id: viewId, official_guild_id: null, guild_id: null, source: null };
+  const obj = { game_name: gameName, application_id: gameId, action, recipient_user_id: recipientUserId, similar_game_id: similarGameId, view_id: viewId, official_guild_id: null, guild_id: null, source: null };
   let tmp;
   if (isVerified) {
     tmp = guildId;
   }
-  obj[6] = tmp;
-  obj[7] = guildId;
-  obj[8] = source;
+  obj.official_guild_id = tmp;
+  obj.guild_id = guildId;
+  obj.source = source;
   obj.track(constants.GAME_PROFILE_ACTION, obj);
 };
 export const trackGameProfileEmbedAction = function trackGameProfileEmbedAction(arg0) {
   ({ gameName, gameId, action } = arg0);
-  expandEventPropertiesDefault.track(constants.GAME_PROFILE_EMBED_ACTION, { game_name: gameName, application_id: gameId, action });
+  AnalyticsUtilsDefault.track(constants.GAME_PROFILE_EMBED_ACTION, { game_name: gameName, application_id: gameId, action });
 };
 export const trackGameProfileFeedback = function trackGameProfileFeedback(arg0) {
   ({ viewId, applicationId, suggestedGameName, suggestedGameApplicationId, feedback, submitted } = arg0);
-  return expandEventPropertiesDefault.track(constants.GAME_PROFILE_FEEDBACK, { view_id, application_id, suggested_game_name, suggested_game_application_id, feedback, submitted });
+  return AnalyticsUtilsDefault.track(constants.GAME_PROFILE_FEEDBACK, { view_id, application_id, suggested_game_name, suggested_game_application_id, feedback, submitted });
 };

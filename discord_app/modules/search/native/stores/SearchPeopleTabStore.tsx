@@ -1,14 +1,16 @@
-// === Module 12365: teardown ===
+// === Module 12365: SearchPeopleTabStore ===
 
-// Module 12365 (teardown)
-import applyDefault from "apply" /* 12 */;
+// Module 12365 (SearchPeopleTabStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import _toPropertyKey from "_toPropertyKey" /* 10862 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "handleChannelSelect" /* 5509 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import useUserListData from "useUserListData" /* 10862 */;
+import NewMessageUserList from "NewMessageUserList" /* 12366 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import FrecencyStore from "FrecencyStore" /* 5509 */;
 
-require = arg1;
+require = fn;
 let closure_5 = [];
 class PeopleSearchManager {
   constructor() {
@@ -19,7 +21,7 @@ class PeopleSearchManager {
     obj.groupDMs = [];
     obj.userIndexes = {};
     obj.results = [];
-    userSearch = new require("_toPropertyKey").UserSearch(() => obj.processResults());
+    userSearch = new closure_0(closure_2[4]).UserSearch(() => obj.processResults());
     obj.userSearch = userSearch;
     userSearch = obj.userSearch;
     subscription = userSearch.subscribe(() => obj.processResults(), true);
@@ -42,20 +44,18 @@ prototype["search"] = function search(str) {
     self.userIndexes = userSearch.filter(trimmed);
     userSearch = self.userSearch;
     const response = userSearch.fetch(trimmed, true);
-    let trimmed1;
-    trimmed1 = trimmed.toLocaleLowerCase().trim();
+    const trimmed1 = trimmed.toLocaleLowerCase().trim();
     if (0 === trimmed1.length) {
       let items = [];
     } else {
-      const obj2 = applyDefault;
-      const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
+      const values = _modDef12.chain(ChannelStore.getMutablePrivateChannels()).values();
       const found = values.filter(trimmed1(12366).filterGroupDMs);
       const mapped = found.map((id) => {
-        const items = [id, trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(id.id)];
+        const items = [id, NewMessageUserList.matchGroupDM(id, trimmed1), FrecencyStore.getScoreWithoutFetchingLatest(id.id)];
         return items;
       });
-      const found1 = mapped.filter((arg0) => {
-        [, tmp] = arg0;
+      const found1 = mapped.filter((item) => {
+        [, tmp] = item;
         return tmp > 0;
       });
       const sorted = found1.sort((arg0, arg1) => {
@@ -65,13 +65,13 @@ prototype["search"] = function search(str) {
         }
         return diff;
       });
-      const chainResult = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels());
-      items = sorted.map((arg0) => {
-        [tmp] = arg0;
+      const chainResult = _modDef12.chain(ChannelStore.getMutablePrivateChannels());
+      items = sorted.map((item) => {
+        [tmp] = item;
         return tmp;
       }).value();
-      const iter = sorted.map((arg0) => {
-        [tmp] = arg0;
+      const iter = sorted.map((item) => {
+        [tmp] = item;
         return tmp;
       });
     }
@@ -83,8 +83,7 @@ prototype["processResults"] = function processResults() {
   const self = this;
   const userSearch = this.userSearch;
   this.userIndexes = userSearch.filter(this.searchQueryString);
-  let obj = _toPropertyKey;
-  obj = { data: this.userIndexes, withGuildMembers: true, withAffinitySuggestions: true, withFriends: true, withFriendSuggestions: false, withFriendRequests: false, withFriendRequestsIncoming: false, withFriendRequestsOutgoing: false, excludeCurrentUser: true };
+  let obj = { data: this.userIndexes, withGuildMembers: true, withAffinitySuggestions: true, withFriends: true, withFriendSuggestions: false, withFriendRequests: false, withFriendRequestsIncoming: false, withFriendRequestsOutgoing: false, excludeCurrentUser: true };
   const result = obj.parseUserSearchResults(obj);
   let arr3 = result;
   if (this.groupDMs.length > 0) {
@@ -92,11 +91,11 @@ prototype["processResults"] = function processResults() {
     if ("" !== self.searchQueryString) {
       obj = { title: null, items: null };
       let intl = tmp(1114).intl;
-      obj[0] = intl.string(tmp(1114).t.qGlQrW);
-      obj[1] = self.groupDMs;
+      obj.title = intl.string(tmp(1114).t.qGlQrW);
+      obj.items = self.groupDMs;
       const findIndexResult = result.findIndex((title) => {
-        const intl = callback(1114).intl;
-        return title.title === intl.string(callback(1114).t.y29JXs);
+        const intl = util.intl;
+        return title.title === intl.string(util.t.y29JXs);
       });
       if (-1 === findIndexResult) {
         const items = [];
@@ -112,7 +111,7 @@ prototype["processResults"] = function processResults() {
     }
   }
   if (self.searchQueryString.length > 0) {
-    self.count = arr3.reduce((arg0, items) => arg0 + items.items.length, 0);
+    self.count = arr3.reduce((acc, items) => acc + items.items.length, 0);
   } else {
     self.count = null;
   }
@@ -131,10 +130,10 @@ class SearchPeopleTabStoreImpl extends Store {
 }
 const prototype2 = SearchPeopleTabStoreImpl.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_4);
+  this.waitFor(ChannelStore, FrecencyStore);
 };
 prototype2["getResults"] = function getResults(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let results;
   if (value != null) {
     results = value.getResults();
@@ -145,7 +144,7 @@ prototype2["getResults"] = function getResults(arg0) {
   return results;
 };
 prototype2["getCount"] = function getCount(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let count;
   if (value != null) {
     count = value.getCount();
@@ -156,40 +155,41 @@ prototype2["getCount"] = function getCount(arg0) {
   return count;
 };
 SearchPeopleTabStoreImpl.displayName = "SearchPeopleTabStore";
-const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault, {
+const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(DispatcherDefault, {
   SEARCH_PEOPLE_TAB_SEARCH: function handleSearchPeopleTabSearch(id) {
     id = id.id;
     let obj = map;
-    let value = map.get(id);
+    value = map.get(id);
     if (value == null) {
-      if (typeof PeopleSearchManager !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof PeopleSearchManager === "function") {
+        obj = Object.create(PeopleSearchManager.prototype);
+        obj.count = null;
+        obj.searchQueryString = "";
+        obj.groupDMs = [];
+        obj.userIndexes = {};
+        obj.results = [];
+        let userSearch = new useUserListData.UserSearch(() => obj.processResults());
+        obj.userSearch = userSearch;
+        userSearch = obj.userSearch;
+        const subscription = userSearch.subscribe(() => obj.processResults(), true);
+        value = obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      obj = Object.create(PeopleSearchManager.prototype);
-      obj.count = null;
-      obj.searchQueryString = "";
-      obj.groupDMs = [];
-      obj.userIndexes = {};
-      obj.results = [];
-      let userSearch = new obj(10862).UserSearch(() => obj.processResults());
-      obj.userSearch = userSearch;
-      userSearch = obj.userSearch;
-      const subscription = userSearch.subscribe(() => obj.processResults(), true);
-      value = obj;
-      const tmp11 = PeopleSearchManager;
     }
     const result = obj.set(id, value);
     value.search(id.searchQueryString);
   },
   SEARCH_PEOPLE_TAB_CLEANUP: function handleSearchPeopleTabCleanup(id) {
     id = id.id;
-    const value = map.get(id);
+    value = map.get(id);
     if (value != null) {
       value.teardown();
     }
     map.delete(id);
   }
 });
-let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
 
 export default searchPeopleTabStoreImpl;

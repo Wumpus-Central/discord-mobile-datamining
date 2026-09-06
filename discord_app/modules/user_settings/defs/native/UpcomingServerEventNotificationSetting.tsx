@@ -1,46 +1,30 @@
-// === Module 15509: toggle ===
+// === Module 15509: UpcomingServerEventNotificationSetting ===
 
-// Module 15509 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import apexExperiment from "apexExperiment" /* 15510 */;
-import onUpcomingServerEventNotificationSettingsChanged from "onUpcomingServerEventNotificationSettingsChanged" /* 15511 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15509 (UpcomingServerEventNotificationSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 15510 */;
+import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 15511 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.MCVmjA);
+    const intl = util.intl;
+    return intl.string(util.t.MCVmjA);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.R0VpSW);
+    const intl = util.intl;
+    return intl.string(util.t.R0VpSW);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableUpcomingServerEventNotifications.useSetting,
-  onValueChange: onUpcomingServerEventNotificationSettingsChanged.onUpcomingServerEventNotificationSettingsChanged,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableUpcomingServerEventNotifications.useSetting,
+  onValueChange: UpcomingServerEventNotificationUtils.onUpcomingServerEventNotificationSettingsChanged,
   usePredicate: function useExperiment() {
-    return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
+    return UpcomingServerEventExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.MCVmjA);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.R0VpSW);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableUpcomingServerEventNotifications.useSetting,
-  onValueChange: onUpcomingServerEventNotificationSettingsChanged.onUpcomingServerEventNotificationSettingsChanged,
-  usePredicate: function useExperiment() {
-    return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");
 
 export default toggle;

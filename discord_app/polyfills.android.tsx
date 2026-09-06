@@ -1,9 +1,9 @@
-// === Module 14196: toLocaleLowerCase ===
+// === Module 14196: polyfills ===
 
-// Module 14196 (toLocaleLowerCase)
-import set from "set" /* 2 */;
-import addLikelySubtags from "addLikelySubtags" /* 14197 */;
-import module_14293 from "module_14293" /* 14293 */;
+// Module 14196 (polyfills)
+import module_14197 from "module_14197" /* 14197 */;
+import polyfillsNative from "polyfillsNative" /* 14293 */;
+import size from "module_2" /* 2 */;
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   const self = this;
@@ -12,7 +12,6 @@ String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   } else {
     const call = toLocaleLowerCase.call;
     typeof call === "unknown" ? toLocaleLowerCase() : call(self);
-    const tmp = toLocaleLowerCase;
   }
 };
-const result = set.fileFinishedImporting("polyfills.android.tsx");
+const result = size.fileFinishedImporting("polyfills.android.tsx");

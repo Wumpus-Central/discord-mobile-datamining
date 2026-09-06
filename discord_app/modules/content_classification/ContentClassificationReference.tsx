@@ -1,10 +1,10 @@
-// === Module 9480: isAgeRestrictedClassificationReference ===
+// === Module 9480: ContentClassificationReference ===
 
-// Module 9480 (isAgeRestrictedClassificationReference)
-import set from "set" /* 2 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5112 */;
+// Module 9480 (ContentClassificationReference)
+import utils from "utils" /* 5112 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
+let result = size.fileFinishedImporting("modules/content_classification/ContentClassificationReference.tsx");
 
 export const isAgeRestrictedClassificationReference = function isAgeRestrictedClassificationReference(contentClassification) {
   let loaded;
@@ -13,8 +13,7 @@ export const isAgeRestrictedClassificationReference = function isAgeRestrictedCl
   }
   let result = !loaded;
   if (loaded) {
-    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.data);
-    const obj = isAgeRestrictedContentClassification;
+    result = utils.isAgeRestrictedContentClassification(contentClassification.data);
   }
   return result;
 };

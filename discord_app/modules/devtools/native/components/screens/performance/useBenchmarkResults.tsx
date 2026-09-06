@@ -1,35 +1,36 @@
 // === Module 15733: useBenchmarkResults ===
 
 // Module 15733 (useBenchmarkResults)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useBenchmarkResults.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/useBenchmarkResults.tsx");
 
 export default function useBenchmarkResults() {
-  const tmp = callback(React.useState([]), 2);
-  callback = tmp[1];
-  React = React.useRef(0);
+  const tmp = _slicedToArray(noop.useState([]), 2);
+  closure_0 = tmp[1];
+  closure_1 = noop.useRef(0);
   return {
     results: tmp[0],
-    addMount: React.useCallback((arg0, arg1) => {
-      const callback = arg0;
-      closure_1 = arg1;
-      callback((arg0) => {
+    addMount: noop.useCallback((label, elapsedMs) => {
+      label((arg0) => {
+        const obj = { kind: "mount", id: +elapsedMs.current, label, elapsedMs };
+        elapsedMs.current = +elapsedMs.current + 1;
+        const items = [obj, ...arg0];
+        return items;
+      });
+    }, []),
+    addScroll: noop.useCallback((arg0) => {
+      closure_0 = arg0;
+      closure_0((arg0) => {
+        const obj = { kind: "scroll", id: +ref.current };
         ref.current = +ref.current + 1;
-        const items = [{ kind: "mount", id: tmp, label: closure_0, elapsedMs: ref }, ...arg0];
-        return items;
-      });
-    }, []),
-    addScroll: React.useCallback((arg0) => {
-      const callback = arg0;
-      callback((arg0) => {
-        closure_1_1.current = +closure_1_1.current + 1;
         const merged = Object.assign(closure_0);
-        const items = [{ kind: "scroll", id: tmp }, ...arg0];
+        const items = [obj, ...arg0];
         return items;
       });
     }, []),
-    clear: React.useCallback(() => callback([]), [])
+    clear: noop.useCallback(() => closure_0([]), [])
   };
 };

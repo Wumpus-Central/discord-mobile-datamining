@@ -1,14 +1,14 @@
-// === Module 5058: isValidFormResponse ===
+// === Module 5058: MemberVerificationUtils ===
 
-// Module 5058 (isValidFormResponse)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
-import items from "items" /* 5059 */;
+// Module 5058 (MemberVerificationUtils)
+import Constants from "Constants" /* 1074 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+import MemberVerificationConstants from "MemberVerificationConstants" /* 5059 */;
+import size from "module_2" /* 2 */;
 
-({ AUTOMATIC_APPROVAL_FORM_FIELDS: obj1, MANUAL_APPROVAL_FORM_FIELDS: c3 } = items);
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
+({ AUTOMATIC_APPROVAL_FORM_FIELDS: c2, MANUAL_APPROVAL_FORM_FIELDS: c3 } = MemberVerificationConstants);
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
 
 export const isValidFormResponse = function isValidFormResponse(required) {
   ({ response, field_type } = required);
@@ -16,7 +16,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
     if (null == response) {
       return false;
     } else {
-      if (MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS !== field_type) {
+      if (MemberVerificationTypes.VerificationFormFieldTypes.TERMS !== field_type) {
         if (tmp4(4384).VerificationFormFieldTypes.VERIFICATION !== field_type) {
           if (tmp4(4384).VerificationFormFieldTypes.TEXT_INPUT !== field_type) {
             if (tmp4(4384).VerificationFormFieldTypes.PARAGRAPH !== field_type) {
@@ -42,7 +42,7 @@ export const isValidFormResponse = function isValidFormResponse(required) {
   }
 };
 export const removeInternalFields = function removeInternalFields(arr) {
-  return arr.filter((field_type) => field_type.field_type !== callback(table[2]).VerificationFormFieldTypes.VERIFICATION);
+  return arr.filter((field_type) => field_type.field_type !== MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION);
 };
 export const isAutomaticApprovalFormField = function isAutomaticApprovalFormField(field_type) {
   field_type = undefined;

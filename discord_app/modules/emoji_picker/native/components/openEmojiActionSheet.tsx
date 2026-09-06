@@ -1,15 +1,15 @@
 // === Module 10328: openEmojiActionSheet ===
 
 // Module 10328 (openEmojiActionSheet)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1374 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1874 */;
+import EmojiConstants from "EmojiConstants" /* 1374 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import size from "module_2" /* 2 */;
 
-const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
-let result = set.fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
+const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
+let result = size.fileFinishedImporting("modules/emoji_picker/native/components/openEmojiActionSheet.tsx");
 
 export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
   if (null != uniqueName.uniqueName) {
@@ -18,30 +18,26 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
     }
     if (null == uniqueName.id) {
       if (null != uniqueName.surrogates) {
-        let obj = { surrogate: null, content: null };
-        obj[0] = uniqueName.surrogates;
+        let obj = { surrogate: uniqueName.surrogates, content: null };
         const _HermesInternal = HermesInternal;
-        obj[1] = ":" + name + ":";
+        obj.content = ":" + name + ":";
       }
-      const result = dismissGlobalKeyboard.dismissGlobalKeyboard();
-      const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
+      const result = KeyboardManagerUtils.dismissGlobalKeyboard();
+      const obj6 = ActionSheetActionCreatorsDefault;
       obj = { emojiNode: null };
-      obj[0] = obj;
+      obj.emojiNode = obj;
       obj6.openLazy(asyncRequireImpl(10329, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
     }
-    obj = { id: null, alt: null, src: null };
-    obj[0] = uniqueName.id;
-    obj[1] = name;
+    obj = { id: uniqueName.id, alt: name, src: null };
     if (null != uniqueName.id) {
-      obj1 = getAvatarURLDefault;
-      obj1 = { id: null, animated: null, size: null };
-      ({ id: obj3[0], animated: obj3[1] } = uniqueName);
-      obj1[2] = EMOJI_URL_BASE_SIZE;
+      const obj1 = { id: null, animated: null, size: null };
+      ({ id: obj3.id, animated: obj3.animated } = uniqueName);
+      obj1.size = EMOJI_URL_BASE_SIZE;
       let url = obj1.getEmojiURL(obj1);
     } else {
       url = uniqueName.url;
     }
-    obj[2] = url;
+    obj.src = url;
   }
   name = uniqueName.name;
 };

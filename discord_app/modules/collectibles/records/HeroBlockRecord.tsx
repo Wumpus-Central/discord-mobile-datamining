@@ -1,11 +1,10 @@
-// === Module 7579: fromServer ===
+// === Module 7579: HeroBlockRecord ===
 
-// Module 7579 (fromServer)
-import set from "set" /* 2 */;
+// Module 7579 (HeroBlockRecord)
 import ShopBlockType from "ShopBlockType" /* 7573 */;
+import size from "module_2" /* 2 */;
 
-let prototype;
-prototype = function HeroBlockRecord(unpublished_at) {
+const prototype = function HeroBlockRecord(unpublished_at) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.HERO;
   ({ category_sku_id: tmp.categorySkuId, name: tmp.name, summary } = unpublished_at);
@@ -27,6 +26,6 @@ prototype = function HeroBlockRecord(unpublished_at) {
 prototype["fromServer"] = function fromServer(arg0) {
   return new prototype(arg0);
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/HeroBlockRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/HeroBlockRecord.tsx");
 
 export const HeroBlockRecord = prototype;

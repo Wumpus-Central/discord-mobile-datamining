@@ -1,13 +1,13 @@
-// === Module 1354: monotonicNowMs ===
+// === Module 1354: clock ===
 
-// Module 1354 (monotonicNowMs)
-import set from "set" /* 2 */;
-import typedGlobal from "typedGlobal" /* 1353 */;
+// Module 1354 (clock)
+import global_types from "global_types" /* 1353 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/clock.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/clock.tsx");
 
 export const monotonicNowMs = function monotonicNowMs() {
-  const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
+  const LIBDISCORE_JSI = global_types.typedGlobal.LIBDISCORE_JSI;
   let monotonicNowMs;
   if (LIBDISCORE_JSI != null) {
     monotonicNowMs = LIBDISCORE_JSI.monotonicNowMs;

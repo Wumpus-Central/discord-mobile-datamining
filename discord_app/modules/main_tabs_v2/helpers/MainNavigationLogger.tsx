@@ -1,9 +1,9 @@
-// === Module 14559: timestamp ===
+// === Module 14559: MainNavigationLogger ===
 
-// Module 14559 (timestamp)
-import timestampDefault from "timestamp" /* 3 */;
+// Module 14559 (MainNavigationLogger)
+import LoggerDefault from "Logger" /* 3 */;
 
-const tmp2 = new timestampDefault("MainNavigationLogger");
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/helpers/MainNavigationLogger.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/helpers/MainNavigationLogger.tsx");
 
-export default tmp2;
+export default new LoggerDefault("MainNavigationLogger");

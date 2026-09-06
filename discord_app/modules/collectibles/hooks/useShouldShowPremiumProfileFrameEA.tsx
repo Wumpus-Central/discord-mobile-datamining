@@ -1,18 +1,19 @@
 // === Module 13161: useShouldShowPremiumProfileFrameEA ===
 
 // Module 13161 (useShouldShowPremiumProfileFrameEA)
-import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 8212 */;
-import apexExperiment2 from "apexExperiment" /* 8831 */;
-import apexExperimentDefault from "apexExperiment" /* 8831 */;
+import CollectiblesProfileFramesExperiment from "CollectiblesProfileFramesExperiment" /* 8212 */;
+import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8831 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
+const CollectiblesProfileFramesPurchaseExperimentDefault = CollectiblesProfileFramesPurchaseExperiment;
+
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameEA.tsx");
 
 export default function useShouldShowPremiumProfileFrameEA(location) {
-  let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(location);
-  apexExperimentDefault;
+  let isProfileFramesEnabled = CollectiblesProfileFramesExperiment.useIsProfileFramesEnabled(location);
+  CollectiblesProfileFramesPurchaseExperimentDefault;
   if (isProfileFramesEnabled) {
-    isProfileFramesEnabled = tmp5 === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+    isProfileFramesEnabled = tmp5 === CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   return isProfileFramesEnabled;
 };

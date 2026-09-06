@@ -1,21 +1,21 @@
 // === Module 6978: AuthNavbarPlaceholder ===
 
 // Module 6978 (AuthNavbarPlaceholder)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import HeaderBackImage from "HeaderBackImage" /* 5624 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { navBar: null };
-createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 };
-createCacheKey[0] = createCacheKey;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { navBar: null };
+createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 };
+createStyles.navBar = createStyles;
+let closure_3 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx");
 
 export default function AuthNavbarPlaceholder() {
-  const tmp = callback();
-  return jsx(HeaderBackImage.FauxHeader, { style: callback().navBar, children: null });
+  const tmp = closure_3();
+  return jsx(NavigatorHeader.FauxHeader, { style: closure_3().navBar, children: null });
 };

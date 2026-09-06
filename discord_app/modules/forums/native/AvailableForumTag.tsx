@@ -1,58 +1,59 @@
 // === Module 11249: AvailableForumTag ===
 
 // Module 11249 (AvailableForumTag)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5459 */;
-import { EMOJI_URL_BASE_SIZE } from "set" /* 1374 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import EmojiDefault from "Emoji" /* 7130 */;
+import native from "native" /* 8902 */;
+import noop from "module_19" /* 19 */;
+import EmojiStore from "EmojiStore" /* 5459 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { pill: null, pillSelected: null, pillDisabled: null, emoji: null, imageEmoji: null, textEmoji: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderWidth: 1 };
-createCacheKey[2] = { opacity: 0.6 };
-createCacheKey[3] = { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" };
-createCacheKey[4] = { height: 16, width: 16 };
-createCacheKey[5] = { fontSize: 14, lineHeight: 20 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderWidth: 1 };
-const result = require("set").fileFinishedImporting("modules/forums/native/AvailableForumTag.tsx");
+require = fn;
+const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { pill: null, pillSelected: null, pillDisabled: null, emoji: null, imageEmoji: null, textEmoji: null };
+createStyles = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 12, borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 6, borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, overflow: "hidden", height: 32 };
+createStyles.pill = createStyles;
+createStyles.pillSelected = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderWidth: 1 };
+createStyles.pillDisabled = { opacity: 0.6 };
+createStyles.emoji = { height: 18, width: 18, marginRight: 4, display: "flex", alignItems: "center", justifyContent: "center" };
+createStyles.imageEmoji = { height: 16, width: 16 };
+createStyles.textEmoji = { fontSize: 14, lineHeight: 20 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/AvailableForumTag.tsx");
 
 export default function AvailableForumTag(tag) {
   tag = tag.tag;
   ({ onPress: importDefault, disabled } = tag);
   const selected = tag.selected;
-  closure_4 = undefined;
   c5 = undefined;
-  let callback;
+  c6 = undefined;
   c7 = undefined;
-  let callback2;
-  closure_10 = undefined;
+  closure_8 = undefined;
   function handlePress() {
     if (!disabled) {
-      callback(tag);
+      importDefault(tag);
     }
   }
-  const tmp = callback2();
-  closure_4 = tmp;
+  const tmp = closure_8();
+  const pill = tmp;
   ({ name: c5, emojiId: c6, emojiName: c7 } = tag);
   let obj = tag(disabled[6]);
-  let items = [closure_4];
-  callback2 = obj.useStateFromStores(items, () => {
+  let items = [pill];
+  closure_8 = obj.useStateFromStores(items, () => {
     let usableCustomEmojiById = null;
     if (null != c6) {
-      usableCustomEmojiById = usableCustomEmojiById.getUsableCustomEmojiById(tmp);
+      usableCustomEmojiById = EmojiStore.getUsableCustomEmojiById(tmp);
     }
     return usableCustomEmojiById;
   });
   const items1 = [disabled, selected, tmp];
-  closure_10 = selected.useMemo(() => {
+  const style = selected.useMemo(() => {
     const items = [];
-    items.push(usableCustomEmojiById.pill);
+    items.push(pill.pill);
     if (selected) {
       items.push(tmp.pillSelected);
     }
@@ -64,9 +65,10 @@ export default function AvailableForumTag(tag) {
   obj = {
     tagId: tag.id,
     children(ref) {
-      const merged = Object.assign(ref, Object.create(null));
-      obj = { style: closure_10, accessibilityRole: "button", accessibilityState: obj, disabled, ref: ref.ref };
+      const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+      let obj = { style, accessibilityRole: "button", accessibilityState: null, disabled, ref: ref.ref };
       obj = { selected };
+      obj.accessibilityState = obj;
       const merged1 = Object.assign(merged);
       obj.onPress = handlePress;
       let tmp9Result = null != closure_8;
@@ -75,30 +77,28 @@ export default function AvailableForumTag(tag) {
       }
       if (tmp9Result) {
         obj = { style: null, textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
-        ({ emoji: obj3[0], textEmoji: obj3[1], imageEmoji: obj3[2] } = closure_4);
+        ({ emoji: obj3.style, textEmoji: obj3.textEmojiStyle, imageEmoji: obj3.fastImageStyle } = closure_4);
         let emojiURL;
         if (null != tmp6) {
-          obj1 = { id: null, animated: null, size: null };
-          ({ id: obj5[0], animated: obj5[1] } = tmp6);
-          obj1[2] = c5;
-          emojiURL = tmp10(tmp4[10]).getEmojiURL(obj1);
-          const tmp10Result = tmp10(tmp4[10]);
+          const obj1 = { id: null, animated: null, size: null };
+          ({ id: obj5.id, animated: obj5.animated } = tmp6);
+          obj1.size = EMOJI_URL_BASE_SIZE;
+          emojiURL = tmp10(1396).getEmojiURL(obj1);
+          const tmp10Result = tmp10(1396);
         }
-        obj[3] = emojiURL;
+        obj.src = emojiURL;
         let str = c7;
         if (c7 == null) {
           str = "";
         }
-        obj[4] = str;
-        tmp9Result = _undefined(closure_1_1(tmp4[9]), obj);
-        tmp10 = closure_1_1;
-        const tmp11 = closure_1_1(tmp4[9]);
-        const tmp9 = _undefined;
+        obj.name = str;
+        tmp9Result = timestampProducer(EmojiDefault, obj);
+        tmp10 = importDefault;
       }
-      const items = [tmp9Result, _undefined(tag(disabled[11]).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: c5 })];
+      const items = [tmp9Result, timestampProducer(Text_Text.Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children })];
       obj.children = items;
-      return c7(tag(disabled[8]).PressableScale, obj);
+      return React5(native.PressableScale, obj);
     }
   };
-  return callback(importDefault(disabled[7]), obj);
+  return c6(require("ForumTagContextMenu"), obj);
 };

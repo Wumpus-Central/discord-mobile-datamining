@@ -1,18 +1,19 @@
 // === Module 12196: getAppDMApplication ===
 
 // Module 12196 (getAppDMApplication)
-import closure_0 from "addApplication" /* 4788 */;
-import closure_1 from "createUserWidgetFromServer" /* 7621 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const result = require("set").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
 export const getAppDMApplication = function getAppDMApplication(channel) {
   let recipientId;
   if (channel.isPrivate()) {
     recipientId = channel.getRecipientId();
   }
-  user = user.getUser(recipientId);
+  const user = UserStore.getUser(recipientId);
   let bot;
   if (user != null) {
     bot = user.bot;
@@ -21,9 +22,9 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
   if (true === bot) {
     tmp4 = recipientId;
   }
-  appIdForBotUserId = appIdForBotUserId.getAppIdForBotUserId(tmp4);
+  let appIdForBotUserId = ApplicationStore.getAppIdForBotUserId(tmp4);
   if (null != tmp4) {
-    userProfile = userProfile.getUserProfile(tmp4);
+    const userProfile = UserProfileStore.getUserProfile(tmp4);
     let id;
     if (userProfile != null) {
       const application = userProfile.application;
@@ -36,5 +37,5 @@ export const getAppDMApplication = function getAppDMApplication(channel) {
   if (appIdForBotUserId == null) {
     appIdForBotUserId = tmp6;
   }
-  return appIdForBotUserId.getApplication(appIdForBotUserId);
+  return ApplicationStore.getApplication(appIdForBotUserId);
 };

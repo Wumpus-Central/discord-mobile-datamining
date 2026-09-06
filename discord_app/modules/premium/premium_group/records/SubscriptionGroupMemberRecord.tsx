@@ -1,16 +1,14 @@
-// === Module 13491: createFromServer ===
+// === Module 13491: SubscriptionGroupMemberRecord ===
 
-// Module 13491 (createFromServer)
-import toJSDefault from "toJS" /* 1386 */;
-import closure_0 from "createdAt" /* 1385 */;
+// Module 13491 (SubscriptionGroupMemberRecord)
+import Record from "Record" /* 1386 */;
+import UserRecord from "UserRecord" /* 1385 */;
 
-toJSDefault;
-const obj = { PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };
+const SubscriptionMemberTypes = { PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };
 let SubscriptionGroupMemberRecord;
 class SubscriptionGroupMemberRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new SubscriptionGroupMemberRecord(tmp, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp3 = new closure_0(global.user);
     tmp2.user = tmp3;
     ({ member_type: tmp2.member_type, accepted_at: tmp2.accepted_at } = global);
@@ -19,14 +17,15 @@ class SubscriptionGroupMemberRecord extends tmp2 {
 }
 const prototype = SubscriptionGroupMemberRecord.prototype;
 SubscriptionGroupMemberRecord["createFromServer"] = function createFromServer(user) {
-  if (typeof SubscriptionGroupMemberRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof SubscriptionGroupMemberRecord === "function") {
+    const tmp7 = new SubscriptionGroupMemberRecord(tmp, tmp2, new.target);
+    const tmp12 = new UserRecord(user.user);
+    tmp7.user = tmp12;
+    ({ member_type: tmp7.member_type, accepted_at: tmp7.accepted_at } = user);
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new SubscriptionGroupMemberRecord("Trying to call a non-function", SubscriptionGroupMemberRecord, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.user = new closure_0(user.user);
-  ({ member_type: tmp2.member_type, accepted_at: tmp2.accepted_at } = user);
-  return tmp2;
 };
 prototype["isPrimary"] = function isPrimary() {
   return this.member_type === obj.PRIMARY;
@@ -45,7 +44,8 @@ prototype["isInvited"] = function isInvited() {
   }
   return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx");
 
 export default SubscriptionGroupMemberRecord;
-export const SubscriptionMemberTypes = obj;
+export { SubscriptionMemberTypes };

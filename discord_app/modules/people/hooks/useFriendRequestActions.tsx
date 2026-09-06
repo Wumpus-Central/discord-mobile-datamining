@@ -1,9 +1,11 @@
 // === Module 13119: useFriendRequestActions ===
 
 // Module 13119 (useFriendRequestActions)
-import closure_2 from "noop" /* 19 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10870 */;
+import noop from "module_19" /* 19 */;
 
-let result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestActions.tsx");
 
 export const useFriendRequestActions = function useFriendRequestActions(userId) {
   userId = userId.userId;
@@ -17,30 +19,28 @@ export const useFriendRequestActions = function useFriendRequestActions(userId) 
   let obj = { acceptFriendRequest: null, cancelFriendRequest: null };
   const items1 = [applicationId, isGameRelationship, _location, onCancel, onConfirm, onFinally, userId];
   const callback = isGameRelationship.useCallback(() => {
-    let obj = userId(applicationId[1]);
-    obj = { userId, applicationId: null, location: null };
+    const obj = { userId, applicationId: null, location: null };
     let tmp = null;
     if (isGameRelationship) {
       tmp = applicationId;
     }
-    obj[1] = tmp;
-    obj[2] = _location;
+    obj.applicationId = tmp;
+    obj.location = _location;
     obj.cancelFriendRequest(obj);
   }, items);
-  obj[0] = isGameRelationship.useCallback(() => {
-    let obj = userId(applicationId[1]);
-    obj = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
+  obj.acceptFriendRequest = isGameRelationship.useCallback(() => {
+    const obj = { userId, applicationId: null, location: null, onConfirm: null, onCancel: null, onFinally: null };
     let tmp = null;
     if (isGameRelationship) {
       tmp = applicationId;
     }
-    obj[1] = tmp;
-    obj[2] = _location;
-    obj[3] = onConfirm;
-    obj[4] = onCancel;
-    obj[5] = onFinally;
+    obj.applicationId = tmp;
+    obj.location = _location;
+    obj.onConfirm = onConfirm;
+    obj.onCancel = onCancel;
+    obj.onFinally = onFinally;
     const result = obj.maybeConfirmFriendRequestAccept(obj);
   }, items1);
-  obj[1] = callback;
+  obj.cancelFriendRequest = callback;
   return obj;
 };

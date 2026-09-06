@@ -1,40 +1,34 @@
-// === Module 7312: subscribeMembers ===
+// === Module 7312: GuildSubscriptionsActionCreators ===
 
-// Module 7312 (subscribeMembers)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import reset from "reset" /* 7286 */;
+// Module 7312 (GuildSubscriptionsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7286 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
+let result = size.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 
 export const subscribeMembers = function subscribeMembers(guildId, userIds) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds };
+  const obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds };
   obj.dispatch(obj);
 };
 export const unsubscribeMembers = function unsubscribeMembers(guildId, userIds) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds };
+  const obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds };
   obj.dispatch(obj);
 };
 export const subscribeToMemberUpdates = function subscribeToMemberUpdates(guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId };
+  const obj = { type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId };
   obj.dispatch(obj);
 };
 export const unsubscribeFromMemberUpdates = function unsubscribeFromMemberUpdates(guildId) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId };
+  const obj = { type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId };
   obj.dispatch(obj);
 };
-export const subscribeGuild = function subscribeGuild(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_SUBSCRIPTIONS", guildId: id };
+export const subscribeGuild = function subscribeGuild(guildId) {
+  const obj = { type: "GUILD_SUBSCRIPTIONS", guildId };
   obj.dispatch(obj);
 };
 export const subscribeChannel = function subscribeChannel(guildId, channelId, ranges) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges };
+  const obj = { type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges };
   obj.dispatch(obj);
 };
 export const subscribeChannelDimensions = function subscribeChannelDimensions(arg0) {
@@ -52,23 +46,20 @@ export const subscribeChannelDimensions = function subscribeChannelDimensions(ar
   let bound3 = bound1;
   if (bound1 > 0) {
     const _Math = Math;
-    const diff = reset.MINIMUM_RANGE - 1;
+    const diff = GuildChannelSubscriptions.MINIMUM_RANGE - 1;
     const items1 = [0, diff];
     items.push(items1);
     bound3 = Math.max(diff + 1, bound1);
   }
-  const rounded = Math.floor(bound3 / reset.MINIMUM_RANGE);
-  let result = rounded * reset.MINIMUM_RANGE;
+  const rounded = Math.floor(bound3 / GuildChannelSubscriptions.MINIMUM_RANGE);
+  let result = rounded * GuildChannelSubscriptions.MINIMUM_RANGE;
   if (result <= bound2) {
     do {
-      let tmp14 = require;
-      let tmp15 = dependencyMap;
-      let sum1 = result + (reset.MINIMUM_RANGE - 1);
+      let sum1 = result + (GuildChannelSubscriptions.MINIMUM_RANGE - 1);
       let items2 = [result, sum1];
       let arr = items.push(items2);
       result = sum1 + 1;
-      let tmp11 = dependencyMap;
     } while (result <= bound2);
   }
-  dispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges: items });
+  DispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges: items });
 };

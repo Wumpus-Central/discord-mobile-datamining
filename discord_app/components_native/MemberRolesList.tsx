@@ -1,23 +1,24 @@
 // === Module 11859: MemberRolesList ===
 
 // Module 11859 (MemberRolesList)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import RolePillDefault from "RolePill" /* 10947 */;
+import noop from "module_19" /* 19 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
-const require = arg1;
-noopAll;
-let closure_6 = createCacheKey.createStyles({ wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("components_native/MemberRolesList.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ wrapper: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/MemberRolesList.tsx");
 
 export default function MemberRolesList(userRoles) {
   userRoles = userRoles.userRoles;
   const guild = userRoles.guild;
   let obj = userRoles(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getSortedRoles(guild.id));
+  const items = [GuildRoleStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guild.id));
   const tmp4 = <View />;
   let tmp2Result = tmp4;
   if (null != userRoles) {
@@ -51,8 +52,8 @@ export default function MemberRolesList(userRoles) {
       });
       obj = { style: null, children: null };
       const items1 = [tmp.wrapper, userRoles.style];
-      obj[0] = items1;
-      obj[1] = sorted.map((id) => closure_1_5(guild(closure_1_2[6]), { role: id, guildId: guild.id }, id.id));
+      obj.style = items1;
+      obj.children = sorted.map((role) => jsx(RolePillDefault, { role, guildId: guild.id }, role.id));
       tmp2Result = <View style={null}>{null}</View>;
     }
   }

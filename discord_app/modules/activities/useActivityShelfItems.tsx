@@ -1,41 +1,38 @@
 // === Module 12039: useActivityShelfItems ===
 
 // Module 12039 (useActivityShelfItems)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "initialize" /* 8855 */;
+import noop from "module_19" /* 19 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8855 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItems.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useActivityShelfItems.tsx");
 
 export default function useActivityShelfItems(enableFilter) {
   let flag = enableFilter.enableFilter;
   if (flag === undefined) {
     flag = false;
   }
-  let filter;
-  dependencyMap = undefined;
-  let developerActivityShelfItems;
-  let items = [closure_4];
-  filter = flag(504).useStateFromStoresObject(items, () => ({ filter: filter.getFilter() })).filter;
+  let items = [DeveloperActivityShelfStore];
+  const filter = flag(504).useStateFromStoresObject(items, () => ({ filter: filter.getFilter() })).filter;
   const obj = flag(504);
   const activityShelfData = flag(12040).useActivityShelfData(enableFilter.guildId);
   const tmp2 = filter(12041)(activityShelfData);
   dependencyMap = tmp2;
   const obj2 = flag(12040);
-  developerActivityShelfItems = flag(12042).useDeveloperActivityShelfItems();
+  const developerActivityShelfItems = flag(12042).useDeveloperActivityShelfItems();
   const items1 = [developerActivityShelfItems, flag, filter, tmp2];
   return developerActivityShelfItems.useMemo(() => {
     function shouldKeepShelfItem(application) {
-      let tmp = !closure_0;
-      if (closure_0) {
-        let hasItem = "" === closure_1;
+      let tmp = !flag;
+      if (flag) {
+        let hasItem = "" === filter;
         if (!hasItem) {
           const formatted = application.application.name.toLowerCase();
           hasItem = formatted.includes(str.toLowerCase());
-          const str3 = application.application.name;
         }
         tmp = hasItem;
-        str = closure_1;
+        str = filter;
       }
       return tmp;
     }
@@ -46,11 +43,9 @@ export default function useActivityShelfItems(enableFilter) {
       let hasItem = set.has(item10023.application.id);
       let shouldKeepShelfItemResult = !hasItem;
       if (!hasItem) {
-        let tmp4 = item10023;
         shouldKeepShelfItemResult = shouldKeepShelfItem(tmp);
       }
       if (shouldKeepShelfItemResult) {
-        let tmp5 = item10023;
         let arr = found.push(tmp);
       }
       continue;

@@ -1,17 +1,20 @@
-// === Module 15149: ? ===
+// === Module 15149: VideoQuestModalReward ===
 
-// Module 15149
-import ThemesDefault from "Themes" /* 576 */;
-import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 15131 */;
-import importAllResult from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15149 (VideoQuestModalReward)
+import nativeDefault from "native" /* 576 */;
+import QuestUtils from "QuestUtils" /* 11767 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15131 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ questName: { textAlign: "center" } });
-const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ questName: { textAlign: "center" } });
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx");
+
+export default noop.memo(function VideoQuestModalReward(style) {
   const withQuestName = style.withQuestName;
   let tmp = undefined === withQuestName;
   if (!tmp) {
@@ -27,40 +30,34 @@ const memoResult = importAllResult.memo(function VideoQuestModalReward(style) {
   ({ withRewardTileAnimation, onTextBlockLayout } = style);
   let obj = quest(15126);
   quest = obj.useVideoQuestModalContext().quest;
-  obj1 = quest(11483);
+  let obj1 = quest(11483);
   const items = [quest.id];
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
-  const callback = importAllResult.useCallback(() => {
-    let obj = quest(closure_1_2[5]);
-    obj = { questId: quest.id };
+  const callback = noop.useCallback(() => {
+    const obj = { questId: quest.id };
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items);
-  obj = { justify: "center", align: "center", spacing: ThemesDefault.space.PX_24, style: style.style, children: null };
+  obj = { justify: "center", align: "center", spacing: nativeDefault.space.PX_24, style: style.style, children: null };
   obj = { hasConfetti: true, quest, size: str, progress: questTaskDetails.percentComplete, onPress: callback, withAnimation: withRewardTileAnimation };
-  const items1 = [callback(COMPLETION_GLOW_SHADOW_RADIUSDefault, obj), ];
-  obj1 = { align: "center", spacing: ThemesDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };
+  const items1 = [closure_4(QuestProgressIndicatorDefault, obj), ];
+  obj1 = { align: "center", spacing: nativeDefault.space.PX_4, onLayout: onTextBlockLayout, children: null };
   if (tmp) {
-    const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: null, children: null };
-    obj2[2] = tmp7.questName;
+    const obj2 = { variant: "heading-lg/semibold", color: "text-strong", style: tmp7.questName, children: null };
     const intl = tmp3(1114).intl;
-    const obj3 = { questName: null };
-    obj3[0] = quest.config.messages.questName;
-    obj2[3] = intl.formatToPlainString(tmp3(1114).t.EAYZAr, obj3);
+    const obj3 = { questName: quest.config.messages.questName };
+    obj2.children = intl.formatToPlainString(tmp3(1114).t.EAYZAr, obj3);
     tmp = tmp9(tmp3(4556).Text, obj2);
   }
   const items2 = [tmp, ];
   if (tmp9Result) {
     const obj4 = { variant: "heading-sm/medium", color: "text-subtle", children: null };
     const intl2 = tmp3(1114).intl;
-    obj4[2] = intl2.string(tmp3(1114).t["1Wvve2"]);
+    obj4.children = intl2.string(tmp3(1114).t["1Wvve2"]);
     tmp9Result = tmp9(tmp3(4556).Text, obj4);
   }
   items2[1] = tmp9Result;
-  obj1[3] = items2;
+  obj1.children = items2;
   items1[1] = closure_5(quest(4973).Stack, obj1);
-  obj[4] = items1;
+  obj.children = items1;
   return closure_5(quest(4973).Stack, obj);
 });
-let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalReward.tsx");
-
-export default memoResult;

@@ -1,17 +1,17 @@
 // === Module 7382: openUserSettings ===
 
 // Module 7382 (openUserSettings)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import handleFormClose from "handleFormClose" /* 7383 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7383 */;
+import size from "module_2" /* 2 */;
 
-const UserSettingsSections = ME.UserSettingsSections;
-const result = set.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
+const UserSettingsSections = Constants.UserSettingsSections;
+const result = size.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
-export const openUserSettings = (screen) => {
-  let obj = getRootNavigationRef;
+export const openUserSettings = (screen, fn) => {
+  let obj = RootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
   if (tmp2) {
     screen = undefined;
@@ -21,13 +21,11 @@ export const openUserSettings = (screen) => {
     if (screen == null) {
       screen = UserSettingsSections.OVERVIEW;
     }
-    obj = { type: "USER_SETTINGS_MODAL_INIT", section: null };
-    obj[1] = screen;
-    dispatcherDefault.dispatch(obj);
+    obj = { type: "USER_SETTINGS_MODAL_INIT", section: screen };
+    DispatcherDefault.dispatch(obj);
     rootNavigationRef.navigate("settings", screen);
-    if (arg1 != null) {
-      arg1();
+    if (fn != null) {
+      fn();
     }
-    const obj3 = dispatcherDefault;
   }
 };

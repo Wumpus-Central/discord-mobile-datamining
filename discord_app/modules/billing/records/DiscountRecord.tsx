@@ -1,17 +1,15 @@
-// === Module 7451: createFromServer ===
+// === Module 7451: DiscountRecord ===
 
-// Module 7451 (createFromServer)
-import toJSDefault from "toJS" /* 1386 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 7451 (DiscountRecord)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = GuildFeatures);
+const PremiumConstants = fn(1373);
+({ SubscriptionIntervalTypes, DiscountUserUsageLimitIntervalTypes } = PremiumConstants);
 let closure_0 = { [DiscountUserUsageLimitIntervalTypes.DAY]: SubscriptionIntervalTypes.DAY, [DiscountUserUsageLimitIntervalTypes.WEEK]: SubscriptionIntervalTypes.DAY, [DiscountUserUsageLimitIntervalTypes.MONTH]: SubscriptionIntervalTypes.MONTH, [DiscountUserUsageLimitIntervalTypes.YEAR]: SubscriptionIntervalTypes.YEAR };
 let DiscountRecord;
 class DiscountRecord extends tmp2 {
   constructor(arg0) {
     tmp = new DiscountRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, planIds: tmp.planIds, userUsageLimitInterval: tmp.userUsageLimitInterval, userUsageLimitIntervalCount: tmp.userUsageLimitIntervalCount, userUsageLimit: tmp.userUsageLimit, amount: tmp.amount } = global);
     return tmp;
   }
@@ -19,19 +17,18 @@ class DiscountRecord extends tmp2 {
 const prototype = DiscountRecord.prototype;
 DiscountRecord["createFromServer"] = function createFromServer(arg0) {
   ({ id, plan_ids, user_usage_limit_interval, user_usage_limit_interval_count } = arg0);
-  ({ user_usage_limit, amount } = arg0);
-  if (typeof DiscountRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof DiscountRecord === "function") {
+    const tmp8 = new DiscountRecord(tmp, tmp2, new.target, id, plan_ids, user_usage_limit_interval, user_usage_limit_interval_count);
+    tmp8.id = id;
+    tmp8.planIds = plan_ids;
+    tmp8.userUsageLimitInterval = user_usage_limit_interval;
+    tmp8.userUsageLimitIntervalCount = user_usage_limit_interval_count;
+    tmp8.userUsageLimit = tmp3;
+    tmp8.amount = tmp4;
+    return tmp8;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new DiscountRecord("Trying to call a non-function", DiscountRecord, new.target, id, plan_ids, user_usage_limit_interval, user_usage_limit_interval_count);
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.id = id;
-  tmp2.planIds = plan_ids;
-  tmp2.userUsageLimitInterval = user_usage_limit_interval;
-  tmp2.userUsageLimitIntervalCount = user_usage_limit_interval_count;
-  tmp2.userUsageLimit = user_usage_limit;
-  tmp2.amount = amount;
-  return tmp2;
 };
 Object.defineProperty(prototype, "intervalType", {
   get: function intervalType() {
@@ -53,7 +50,7 @@ Object.defineProperty(prototype, "isMultiInterval", {
 });
 Object.defineProperty(prototype, "applicableSubscriptionInterval", {
   get: function applicableSubscriptionInterval() {
-    return table[this.userUsageLimitInterval];
+    return closure_0[this.userUsageLimitInterval];
   },
   set: undefined
 });
@@ -66,6 +63,7 @@ prototype["getApproximateDiscountAmountOff"] = function getApproximateDiscountAm
   }
   return rounded;
 };
-const result = require("set").fileFinishedImporting("modules/billing/records/DiscountRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/records/DiscountRecord.tsx");
 
 export default DiscountRecord;

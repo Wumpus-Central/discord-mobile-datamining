@@ -1,19 +1,19 @@
-// === Module 2002: malformedValueCount ===
+// === Module 2002: api/Stats ===
 
-// Module 2002 (malformedValueCount)
-import set from "set" /* 2 */;
-import open from "open" /* 1995 */;
+// Module 2002 (api/Stats)
+import Host2 from "Host" /* 1995 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Stats.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Stats.tsx");
 const prototype = function Stats() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["malformedValueCount"] = function malformedValueCount() {
-  const Host = open.Host;
+  const Host = Host2.Host;
   return Host.malformedValueCount();
 };
 prototype["malformedEntryCount"] = function malformedEntryCount() {
-  const Host = open.Host;
+  const Host = Host2.Host;
   return Host.malformedEntryCount();
 };
 

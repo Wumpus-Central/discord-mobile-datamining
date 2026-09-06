@@ -1,28 +1,28 @@
-// === Module 9486: initialize ===
+// === Module 9486: ChannelCallLifecycleStore ===
 
-// Module 9486 (initialize)
+// Module 9486 (ChannelCallLifecycleStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 1332 */;
-import closure_3 from "handleConnectionOpen" /* 2011 */;
-import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 9468 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _modDef1332 from "module_1332" /* 1332 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
+const VoiceCallOverlayType = fn(9468).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;
-let c7 = false;
+let visible = false;
 let obj = {};
-obj = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
-obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
-obj = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
-obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = obj;
+let size = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8332).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = size;
+const size1 = { x: "Array", y: "flexDirection", width: "y", height: "HermesInternal", screenOrientation: fn(8332).OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: null };
+obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = size1;
 let c10 = true;
 const Store = initializeDefault.Store;
 class ChannelCallLifecycleStore extends Store {
 }
 const prototype = ChannelCallLifecycleStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(SelectedChannelStore);
 };
 prototype["shouldReactToSeriousThermalStateWhenActivityFocused"] = function shouldReactToSeriousThermalStateWhenActivityFocused() {
   return c4;
@@ -41,7 +41,7 @@ prototype["isReactingToThermalState"] = function isReactingToThermalState() {
   return tmp;
 };
 prototype["getShowActivitiesDebugOverlay"] = function getShowActivitiesDebugOverlay() {
-  return c7;
+  return visible;
 };
 prototype["getVoiceCallOverlayLayoutStates"] = function getVoiceCallOverlayLayoutStates() {
   return obj;
@@ -50,38 +50,37 @@ prototype["isPipEnabledWhileFocusedOnActivityOrStream"] = function isPipEnabledW
   return c10;
 };
 ChannelCallLifecycleStore.displayName = "ChannelCallLifecycleStore";
-const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefault, {
+obj = {
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(arg0) {
     if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
-      voiceChannelId = voiceChannelId.getVoiceChannelId();
+      voiceChannelId = SelectedChannelStore.getVoiceChannelId();
       if (voiceChannelId !== voiceChannelId) {
         c4 = false;
         c5 = false;
-        c7 = false;
+        visible = false;
         c6 = false;
-        closure_9 = obj;
       }
     }
   },
   EMBEDDED_ACTIVITY_REQUEST_RESPOND_TO_SERIOUS_THERMAL_STATE: function handleRequestRespondToSeriousThermalState(arg0) {
     if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
       c4 = true;
     }
   },
   EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST: function handleConsumeReactToSeriousThermalStateRequest(arg0) {
     if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
       c5 = true;
     }
   },
   EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE: function handleDisregardSeriousThermalState(arg0) {
     if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
       c6 = true;
     }
@@ -96,23 +95,25 @@ const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefaul
     obj[voiceCallOverlayType] = voiceCallOverlayLayoutState;
   },
   VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM: function handleSetPipEnabledForActivityOrStream(pipEnabledWhileFocusedOnActivityOrStream) {
-    closure_10 = pipEnabledWhileFocusedOnActivityOrStream.pipEnabledWhileFocusedOnActivityOrStream;
+    c10 = pipEnabledWhileFocusedOnActivityOrStream.pipEnabledWhileFocusedOnActivityOrStream;
   },
   EMBEDDED_ACTIVITY_OPEN: function handleEmbeddedActivityOpen(arg0) {
     if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
       c10 = true;
     }
   },
   STREAM_WATCH: function handleStreamWatch(arg0) {
     if (arg0 == null) {
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Cannot destructure 'undefined' or 'null'.");
     } else {
       c10 = true;
     }
   }
-});
-const result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
+};
+const channelCallLifecycleStore = new ChannelCallLifecycleStore(DispatcherDefault, obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
 
 export default channelCallLifecycleStore;

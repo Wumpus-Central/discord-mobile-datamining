@@ -1,29 +1,29 @@
-// === Module 7932: setOptions ===
+// === Module 7932: RowGenerator ===
 
-// Module 7932 (setOptions)
-import applyDefault from "apply" /* 12 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import generateBlockedGroupRowData from "generateBlockedGroupRowData" /* 7935 */;
-import generateMessageRowData from "generateMessageRowData" /* 7937 */;
-import generateSeparatorRowData from "generateSeparatorRowData" /* 13248 */;
-import generateLoadingRowData from "generateLoadingRowData" /* 13249 */;
-import closure_3 from "handleThemeChange" /* 1183 */;
-import Changeset from "Changeset" /* 7933 */;
+// Module 7932 (RowGenerator)
+import _modDef12 from "module_12" /* 12 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import BlockedGroup from "BlockedGroup" /* 7935 */;
+import MessageWithContent from "MessageWithContent" /* 7937 */;
+import Separator from "Separator" /* 13248 */;
+import Loading from "Loading" /* 13249 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-({ RowType: c4, SeparatorType: c5, LoadingType: closure_6 } = Changeset);
+require = fn;
+const RowGeneratorConstants = fn(7933);
+({ RowType: closure_4, SeparatorType: hasOwnProperty, LoadingType: metroRequire } = RowGeneratorConstants);
 let obj = { constrainedWidth: 0, animatingStickerMessageId: null, forcedTheme: null, shouldObscureSpoiler: true, shouldDisableInteractiveComponents: true };
-const merged = Object.assign(require("UserOption").DEFAULT_OPTIONS);
+let merged = Object.assign(fn(7934).DEFAULT_OPTIONS);
 class RowManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = closure_7;
-    return obj;
+    merged = Object.assign({ options: null });
+    merged[0] = closure_7;
+    return merged;
   }
 }
 const prototype = RowManager.prototype;
 prototype["setOptions"] = function setOptions(arg0) {
-  obj = applyDefault;
+  obj = _modDef12;
   this.options = obj.merge({}, obj, this.options, arg0);
 };
 prototype["generate"] = function generate(rowType) {
@@ -31,33 +31,34 @@ prototype["generate"] = function generate(rowType) {
   rowType = rowType.rowType;
   let theme = this.options.forcedTheme;
   if (theme == null) {
-    theme = theme.theme;
+    theme = ThemeStore.theme;
   }
   if (constants.BLOCKED_GROUP !== rowType) {
     if (tmp2.IGNORED_GROUP !== rowType) {
       if (tmp2.SUSPENDED_USER_GROUP !== rowType) {
         if (tmp2.MESSAGE === rowType) {
-          return generateMessageRowData.generateMessageRowData(rowType, self.options, theme);
+          return MessageWithContent.generateMessageRowData(rowType, self.options, theme);
         } else {
           if (constants2.DAY !== rowType) {
             if (tmp12.UNREAD !== rowType) {
               if (tmp12.SUMMARY !== rowType) {
                 if (constants3.LOAD_BEFORE !== rowType) {
                   if (constants3.LOAD_AFTER !== rowType) {
-                    isDiscordFrontendDevelopment.assertNever(rowType);
+                    GlobalUtils.assertNever(rowType);
                   }
                 }
-                return generateLoadingRowData.generateLoadingRowData(rowType, theme);
+                return Loading.generateLoadingRowData(rowType, theme);
               }
             }
           }
-          return generateSeparatorRowData.generateSeparatorRowData(rowType, theme);
+          return Separator.generateSeparatorRowData(rowType, theme);
         }
       }
     }
   }
-  return generateBlockedGroupRowData.generateBlockedGroupRowData(rowType, theme, self);
+  return BlockedGroup.generateBlockedGroupRowData(rowType, theme, self);
 };
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
 
 export default RowManager;

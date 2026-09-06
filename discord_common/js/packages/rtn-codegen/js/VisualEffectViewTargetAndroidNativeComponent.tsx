@@ -1,12 +1,12 @@
-// === Module 16799: __INTERNAL_VIEW_CONFIG ===
+// === Module 16799: VisualEffectViewTargetAndroidNativeComponent ===
 
-// Module 16799 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+// Module 16799 (VisualEffectViewTargetAndroidNativeComponent)
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-const obj = { uiViewClassName: "DCDVisualEffectViewTarget", validAttributes: {} };
-const value = setRuntimeConfigProvider.get("DCDVisualEffectViewTarget", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/VisualEffectViewTargetAndroidNativeComponent.tsx");
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDVisualEffectViewTarget", validAttributes: {} };
+const value = module_65.get("DCDVisualEffectViewTarget", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/VisualEffectViewTargetAndroidNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

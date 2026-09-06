@@ -1,18 +1,18 @@
-// === Module 4264: getNodeText ===
+// === Module 4264: native ===
 
-// Module 4264 (getNodeText)
-import set from "set" /* 2 */;
+// Module 4264 (native)
 import getNodeText from "getNodeText" /* 4265 */;
-import chainCallbacks from "chainCallbacks" /* 4267 */;
+import mergeProps from "mergeProps" /* 4267 */;
 import useFocus from "useFocus" /* 4268 */;
-import isThemeLight from "isThemeLight" /* 4269 */;
+import themes from "themes" /* 4269 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/utils/native.tsx");
+const result = size.fileFinishedImporting("design/utils/native.tsx");
 
 export const getNodeText = getNodeText.getNodeText;
-export const chainCallbacks = chainCallbacks.chainCallbacks;
-export const mergeProps = chainCallbacks.mergeProps;
-export const mergeRefs = chainCallbacks.mergeRefs;
+export const chainCallbacks = mergeProps.chainCallbacks;
+export const mergeProps = mergeProps.mergeProps;
+export const mergeRefs = mergeProps.mergeRefs;
 export const useFocus = useFocus.useFocus;
-export const isThemeLight = isThemeLight.isThemeLight;
-export const isThemeDark = isThemeLight.isThemeDark;
+export const isThemeLight = themes.isThemeLight;
+export const isThemeDark = themes.isThemeDark;

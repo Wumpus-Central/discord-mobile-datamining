@@ -1,22 +1,22 @@
-// === Module 10753: useThemeAndReducedMotionAwareAssetUrl ===
+// === Module 10753: MarketingComponentHooks ===
 
-// Module 10753 (useThemeAndReducedMotionAwareAssetUrl)
+// Module 10753 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
-import isThemeLight from "isThemeLight" /* 4269 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");
+const themes = tmp3(4269);
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");
 
 export const useThemeAndReducedMotionAwareAssetUrl = function useThemeAndReducedMotionAwareAssetUrl(asset, arg1) {
   const tmp2 = useThemeDefault();
-  const tmp3 = require;
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (null == asset) {
     return null;
   } else {
-    const tmp3Result = isThemeLight;
+    const tmp3Result = themes;
   }
 };

@@ -1,51 +1,44 @@
 // === Module 10044: StageChannelCallList ===
 
 // Module 10044 (StageChannelCallList)
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
-import jsxProd from "jsxProd" /* 21 */;
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10045 */;
+import _modDef38 from "module_38" /* 38 */;
+import util from "util" /* 1114 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
+import SpeakerTile from "SpeakerTile" /* 10046 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 10053 */;
+import StageGridRowDefault from "StageGridRow" /* 10055 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 10067 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ useActiveSpeakerPillScrollHandler: c5, useActiveSpeakerPillState: closure_6 } = require("useActiveSpeakerPillScrollHandler"));
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let obj = { direction: require("Button").CutoutDirection.RIGHT, radius: 13, inset: -6 };
+require = fn;
+const StageChannelListStore = fn(10045);
+({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } = StageChannelListStore);
+const MAX_AUDIENCE_ROW_LIMIT = fn(5414).MAX_AUDIENCE_ROW_LIMIT;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let cutout = { direction: fn(1178).CutoutDirection.RIGHT, radius: 13, inset: -6 };
 let closure_11 = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
-let closure_12 = importAllResult.memo((channel) => {
+let closure_12 = noop.memo((channel) => {
   channel = channel.channel;
   const listSections = channel.listSections;
   const rowsBySection = channel.rowsBySection;
-  let first;
-  importAllResult = undefined;
-  let first1;
-  let callback2;
-  let first2;
-  let callback3;
-  let sections;
-  let actualStageSpeakerCount;
-  let stageParticipantsCount;
-  let callback;
-  let itemSize;
-  let mapped;
-  callback2 = undefined;
-  let memo1;
-  let memo2;
-  let tmp = first(importAllResult.useState(false), 2);
-  first = tmp[0];
-  importAllResult = tmp3;
-  let tmp4 = first(importAllResult.useState(false), 2);
-  first1 = tmp4[0];
-  callback2 = tmp6;
-  const tmp7 = first(callback2(), 2);
-  first2 = tmp7[0];
-  callback3 = tmp9;
+  let collapsed;
+  noop = undefined;
+  let tmp = collapsed(noop.useState(false), 2);
+  collapsed = tmp[0];
+  noop = tmp3;
+  let tmp4 = collapsed(noop.useState(false), 2);
+  const first1 = tmp4[0];
+  closure_6 = tmp6;
+  const tmp7 = collapsed(closure_6(), 2);
+  const first2 = tmp7[0];
+  closure_8 = tmp9;
   listSections(rowsBySection[8])(() => () => {
-    callback(false);
+    closure_1_8(false);
   });
   let items = [listSections];
-  sections = importAllResult.useMemo(() => {
+  const sections = noop.useMemo(() => {
     let num = listSections[stageParticipantsCount.STREAM];
     if (num == null) {
       num = 1;
@@ -59,11 +52,11 @@ let closure_12 = importAllResult.memo((channel) => {
     items[2] = listSections[stageParticipantsCount.AUDIENCE];
     return items;
   }, items);
-  actualStageSpeakerCount = channel(rowsBySection[9]).useActualStageSpeakerCount(channel.id);
-  obj = channel(rowsBySection[9]);
-  stageParticipantsCount = channel(rowsBySection[9]).useStageParticipantsCount(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.AUDIENCE);
+  const actualStageSpeakerCount = channel(rowsBySection[9]).useActualStageSpeakerCount(channel.id);
+  let obj = channel(rowsBySection[9]);
+  const stageParticipantsCount = channel(rowsBySection[9]).useStageParticipantsCount(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.AUDIENCE);
   let items1 = [actualStageSpeakerCount, stageParticipantsCount];
-  callback = importAllResult.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     if (stageParticipantsCount.STREAM === arg0) {
       return 0;
     } else if (tmp.SPEAKER === arg0) {
@@ -79,12 +72,12 @@ let closure_12 = importAllResult.memo((channel) => {
       }
       return num2;
     } else {
-      listSections(rowsBySection[10])(null != arg0, "Section Not Found");
+      _modDef38(null != arg0, "Section Not Found");
       return 0;
     }
   }, items1);
-  const items2 = [callback, rowsBySection, first, first1];
-  itemSize = importAllResult.useCallback((arg0, arg1) => {
+  const items2 = [callback, rowsBySection, collapsed, first1];
+  const itemSize = noop.useCallback((arg0, arg1) => {
     if (null == arg1) {
       return 0;
     } else {
@@ -95,7 +88,7 @@ let closure_12 = importAllResult.memo((channel) => {
       if (stageParticipantsCount.STREAM === arg0) {
         let sum = num;
         if (null != rowsBySection[arg0][arg1]) {
-          sum = channel(rowsBySection[6]).SPEAKER_TILE_HEIGHTS.FULL + 8 + num;
+          sum = SpeakerTile.SPEAKER_TILE_HEIGHTS.FULL + 8 + num;
         }
         return sum;
       } else if (tmp2.SPEAKER === arg0) {
@@ -103,13 +96,13 @@ let closure_12 = importAllResult.memo((channel) => {
           return num;
         } else {
           if (arg1 > 0) {
-            let sum1 = channel(rowsBySection[6]).SPEAKER_TILE_HEIGHTS.THIRD + 8;
+            let sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.THIRD + 8;
           } else if (1 === length) {
-            sum1 = channel(rowsBySection[6]).SPEAKER_TILE_HEIGHTS.FULL + 8;
+            sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.FULL + 8;
           } else if (2 === length) {
-            sum1 = channel(rowsBySection[6]).SPEAKER_TILE_HEIGHTS.HALF + 8;
+            sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.HALF + 8;
           } else {
-            sum1 = channel(rowsBySection[6]).SPEAKER_TILE_HEIGHTS.THIRD + 8;
+            sum1 = SpeakerTile.SPEAKER_TILE_HEIGHTS.THIRD + 8;
           }
           let sum2 = num;
           if (!first1) {
@@ -124,7 +117,7 @@ let closure_12 = importAllResult.memo((channel) => {
         }
         return sum3;
       } else {
-        listSections(rowsBySection[10])(null != arg0, "Section Not Found");
+        _modDef38(null != arg0, "Section Not Found");
         return 0;
       }
     }
@@ -132,59 +125,55 @@ let closure_12 = importAllResult.memo((channel) => {
   let obj2 = channel(rowsBySection[9]);
   const stageParticipants = channel(rowsBySection[9]).useStageParticipants(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.SPEAKER);
   const found = stageParticipants.filter((type) => type.type === channel(rowsBySection[7]).StageChannelParticipantTypes.VOICE);
-  mapped = found.map((user) => user.user);
-  const items3 = [tmp[1], first, first1, tmp4[1], actualStageSpeakerCount, stageParticipantsCount, mapped];
-  callback2 = importAllResult.useCallback((arg0) => {
+  const mapped = found.map((user) => user.user);
+  const items3 = [tmp[1], collapsed, first1, tmp4[1], actualStageSpeakerCount, stageParticipantsCount, mapped];
+  const callback2 = noop.useCallback((arg0) => {
     if (stageParticipantsCount.STREAM === arg0) {
       return null;
     } else if (tmp.AUDIENCE === arg0) {
       let tmp13 = null;
       if (0 !== stageParticipantsCount) {
-        obj = { label: null, count: null, onToggleCollapse: null, collapsed: null };
-        const intl = channel(rowsBySection[12]).intl;
-        obj[0] = intl.string(channel(rowsBySection[12]).t["3foUu5"]);
-        obj[1] = tmp12;
-        obj[2] = function onToggleCollapse() {
-          return callback(!closure_3);
+        cutout = { label: null, count: null, onToggleCollapse: null, collapsed: null };
+        const intl = util.intl;
+        cutout.label = intl.string(util.t["3foUu5"]);
+        cutout.count = tmp12;
+        cutout.onToggleCollapse = function onToggleCollapse() {
+          return closure_1_4(!collapsed);
         };
-        obj[3] = first;
-        tmp13 = callback(listSections(rowsBySection[11]), obj);
-        const tmp17 = listSections(rowsBySection[11]);
+        cutout.collapsed = collapsed;
+        tmp13 = React6(StageSectionHeaderDefault, cutout);
       }
       return tmp13;
     } else if (tmp.SPEAKER === arg0) {
       let tmp21Result = null;
       if (0 !== actualStageSpeakerCount) {
-        obj = { label: null, count: null, onToggleCollapse: null, collapsed: null, children: null };
-        const intl2 = channel(rowsBySection[12]).intl;
-        obj[0] = intl2.string(channel(rowsBySection[12]).t.CduOkx);
-        obj[1] = tmp6;
-        obj[2] = function onToggleCollapse() {
-          return callback2(!closure_5);
+        cutout = { label: null, count: null, onToggleCollapse: null, collapsed: null, children: null };
+        const intl2 = util.intl;
+        cutout.label = intl2.string(util.t.CduOkx);
+        cutout.count = tmp6;
+        cutout.onToggleCollapse = function onToggleCollapse() {
+          return closure_1_6(!first1);
         };
-        obj[3] = first1;
+        cutout.collapsed = first1;
         tmp21Result = undefined;
         if (first1) {
-          obj = { users: null, max: 10, avatarSize: null, cutout: null };
-          obj[0] = mapped;
-          obj[2] = tmp25(tmp23[5]).AvatarSizes.XSMALL_20;
-          obj[3] = actualStageSpeakerCount;
-          tmp21Result = tmp21(tmp22(tmp23[13]), obj);
-          const tmp22Result = tmp22(tmp23[13]);
+          cutout = { users: mapped, max: 10, avatarSize: tmp25(1178).AvatarSizes.XSMALL_20, cutout: null };
+          cutout.cutout = cutout;
+          tmp21Result = tmp21(tmp22(10054), cutout);
+          const tmp22Result = tmp22(10054);
         }
-        obj[4] = tmp21Result;
-        tmp21Result = tmp21(listSections(rowsBySection[11]), obj);
-        tmp22 = listSections;
-        const tmp24 = listSections(rowsBySection[11]);
-        tmp25 = channel;
+        cutout.children = tmp21Result;
+        tmp21Result = tmp21(StageSectionHeaderDefault, cutout);
+        tmp22 = importDefault;
+        tmp25 = require;
       }
       return tmp21Result;
     } else {
-      listSections(rowsBySection[10])(null != arg0, "Section Not Found");
+      _modDef38(null != arg0, "Section Not Found");
       return null;
     }
   }, items3);
-  const renderSectionFooter = importAllResult.useCallback((arg0) => {
+  const renderSectionFooter = noop.useCallback((arg0) => {
     if (stageParticipantsCount.SPEAKER !== arg0) {
       if (stageParticipantsCount.AUDIENCE !== arg0) {
         listSections(rowsBySection[10])(null != arg0, "Section Not Found");
@@ -193,8 +182,8 @@ let closure_12 = importAllResult.memo((channel) => {
     }
     return null;
   }, []);
-  const items4 = [channel, callback2, rowsBySection, first, first1];
-  const sectionFooterSize = importAllResult.useCallback((arg0) => {
+  const items4 = [channel, callback2, rowsBySection, collapsed, first1];
+  const sectionFooterSize = noop.useCallback((arg0) => {
     if (stageParticipantsCount.SPEAKER === arg0) {
       return 0;
     } else if (tmp.AUDIENCE === arg0) {
@@ -205,57 +194,49 @@ let closure_12 = importAllResult.memo((channel) => {
     }
   }, []);
   const items5 = [sections, itemSize];
-  const renderItem = importAllResult.useCallback((arg0, arg1) => {
+  const renderItem = noop.useCallback((arg0, row) => {
     let tmp = null;
-    if (0 === arg1) {
+    if (0 === row) {
       tmp = callback2(arg0);
     }
-    if (null == rowsBySection[arg0][arg1]) {
+    if (null == rowsBySection[arg0][row]) {
       return tmp;
     } else if (stageParticipantsCount.STREAM === arg0) {
-      obj = { children: null };
-      obj = { channel: null, participants: null, row: null };
-      obj[0] = channel;
-      obj[1] = tmp3[arg0][arg1];
-      obj[2] = arg1;
-      obj[0] = callback(listSections(rowsBySection[14]), obj);
+      let obj = { children: null };
+      obj = { channel, participants: tmp3[arg0][row], row };
+      obj.children = React6(StageGridRowDefault, obj);
       const _HermesInternal3 = HermesInternal;
-      return callback(React.Fragment, obj, "stream-" + arg0 + "-" + arg1);
+      return React6(noop.Fragment, obj, "stream-" + arg0 + "-" + row);
     } else if (tmp31.SPEAKER === arg0) {
       const items = [tmp, ];
       let tmp19 = !first1;
       if (!first1) {
-        obj1 = { channel: null, participants: null, row: null };
-        obj1[0] = channel;
-        obj1[1] = tmp3[arg0][arg1];
-        obj1[2] = arg1;
-        tmp19 = callback(listSections(rowsBySection[14]), obj1);
+        const obj1 = { channel, participants: tmp3[arg0][row], row };
+        tmp19 = React6(StageGridRowDefault, obj1);
       }
       const obj2 = { children: null };
       items[1] = tmp19;
-      obj2[0] = items;
+      obj2.children = items;
       const _HermesInternal2 = HermesInternal;
-      return sections(React.Fragment, obj2, "speaker-" + arg0 + "-" + arg1);
+      return React7(noop.Fragment, obj2, "speaker-" + arg0 + "-" + row);
     } else if (tmp31.AUDIENCE === arg0) {
       const items1 = [tmp, ];
       let tmp10 = !first;
       if (!first) {
-        obj = { channel: null, participants: null };
-        obj[0] = channel;
-        obj[1] = tmp3[arg0][arg1];
-        tmp10 = callback(listSections(rowsBySection[15]), obj);
+        obj = { channel, participants: tmp3[arg0][row] };
+        tmp10 = React6(AudienceGridRowDefault, obj);
       }
       const obj3 = { children: null };
       items1[1] = tmp10;
-      obj3[0] = items1;
+      obj3.children = items1;
       const _HermesInternal = HermesInternal;
-      return sections(React.Fragment, obj3, "audience-" + arg0 + "-" + arg1);
+      return React7(noop.Fragment, obj3, "audience-" + arg0 + "-" + row);
     } else {
-      listSections(rowsBySection[10])(null != arg0, "Section Not Found");
+      _modDef38(null != arg0, "Section Not Found");
       return null;
     }
   }, items4);
-  memo1 = importAllResult.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     let num = 0;
     if (sections[stageParticipantsCount.STREAM] > 0) {
       num = itemSize(tmp.STREAM, 0);
@@ -263,18 +244,15 @@ let closure_12 = importAllResult.memo((channel) => {
     return num;
   }, items5);
   const items6 = [sections, itemSize];
-  memo2 = importAllResult.useMemo(() => {
+  const memo2 = noop.useMemo(() => {
     let tmp4;
     let num = 0;
     let num2 = 0;
     let num3 = 0;
     if (0 < sections[stageParticipantsCount.SPEAKER]) {
       do {
-        let tmp = itemSize;
-        let tmp2 = stageParticipantsCount;
         num2 = num2 + itemSize(stageParticipantsCount.SPEAKER, num);
         num = num + 1;
-        let tmp3 = sections;
         num3 = num2;
         tmp4 = sections[stageParticipantsCount.SPEAKER];
       } while (num < tmp4);
@@ -282,49 +260,50 @@ let closure_12 = importAllResult.memo((channel) => {
     return num3;
   }, items6);
   const items7 = [tmp7[1], first2, memo2, memo1];
-  const onScroll = importAllResult.useCallback((nativeEvent) => {
+  const onScroll = noop.useCallback((nativeEvent) => {
     const y = nativeEvent.nativeEvent.contentOffset.y;
     const diff = memo2 + memo1 - 60;
     let tmp2 = first2;
     if (!first2) {
       if (y > diff) {
-        callback(true);
+        closure_8(true);
       }
     }
     if (tmp2) {
       tmp2 = y < diff;
     }
     if (tmp2) {
-      callback(false);
+      closure_8(false);
     }
   }, items7);
-  return callback3(listSections(rowsBySection[16]), { ref: first(first1(), 1)[0], sections, renderItem, itemSize, renderSectionFooter, sectionFooterSize, onScroll });
+  return closure_8(listSections(rowsBySection[16]), { ref: collapsed(first1(), 1)[0], sections, renderItem, itemSize, renderSectionFooter, sectionFooterSize, onScroll });
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallList.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallList.tsx");
 
 export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  obj = width(10071);
+  let obj = width(10071);
   const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1477)().width;
   isScreenLandscape = width(5126).useIsScreenLandscape();
   const items = [width, isScreenLandscape];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let num = 3;
     if (isScreenLandscape) {
       const _Math = Math;
       const _Math2 = Math;
-      num = Math.max(3, Math.floor(width / tmp2(tmp3[6]).LANDSCAPE_MAX_TILE_WIDTH));
+      num = Math.max(3, Math.floor(width / tmp2(10046).LANDSCAPE_MAX_TILE_WIDTH));
     }
-    obj = {};
-    obj[width(closure_1_2[7]).StageChannelParticipantNamedIndex.SPEAKER] = num;
-    obj[width(closure_1_2[7]).StageChannelParticipantNamedIndex.AUDIENCE] = closure_1_7;
+    const obj = {};
+    obj[StageChannelParticipants.StageChannelParticipantNamedIndex.SPEAKER] = num;
+    obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
     return obj;
   }, items);
   const obj2 = width(5126);
-  const tmp4 = callback(width(10071).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const tmp4 = _slicedToArray(width(10071).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   obj = { channel, listSections: tmp4[0], rowsBySection: tmp4[1] };
-  return callback3(closure_12, obj);
+  return closure_8(closure_12, obj);
 };

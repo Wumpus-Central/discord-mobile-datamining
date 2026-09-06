@@ -1,48 +1,43 @@
-// === Module 5022: TIMESTAMP_FORMATS ===
+// === Module 5022: TimestampUtils ===
 
-// Module 5022 (TIMESTAMP_FORMATS)
-import set from "set" /* 2 */;
-import setDefault from "set" /* 1090 */;
-import hooksDefault from "hooks" /* 4153 */;
-import resetCache from "resetCache" /* 4242 */;
+// Module 5022 (TimestampUtils)
+import DurationsDefault from "Durations" /* 1090 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import DateUtils from "DateUtils" /* 4242 */;
+import size from "module_2" /* 2 */;
 
-let obj = {
+const TIMESTAMP_FORMATS = {
   t(date) {
-    return resetCache.dateFormat(date, "LT");
+    return DateUtils.dateFormat(date, "LT");
   },
   T(date) {
-    return resetCache.dateFormat(date, "LTS");
+    return DateUtils.dateFormat(date, "LTS");
   },
   d(date) {
-    return resetCache.dateFormat(date, "L");
+    return DateUtils.dateFormat(date, "L");
   },
   D(date) {
-    return resetCache.dateFormat(date, "LL");
+    return DateUtils.dateFormat(date, "LL");
   },
   f(date) {
-    return resetCache.dateFormat(date, "LLL");
+    return DateUtils.dateFormat(date, "LLL");
   },
   F(date) {
-    return resetCache.dateFormat(date, "LLLL");
+    return DateUtils.dateFormat(date, "LLLL");
   },
   s(date) {
-    return resetCache.dateFormat(date, "L LT");
+    return DateUtils.dateFormat(date, "L LT");
   },
   S(date) {
-    return resetCache.dateFormat(date, "L LTS");
+    return DateUtils.dateFormat(date, "L LTS");
   },
   R(toDate) {
-    const result = hooksDefault.relativeTimeThreshold("s");
-    obj = hooksDefault;
-    const result1 = hooksDefault.relativeTimeThreshold("s", 60);
-    const obj2 = hooksDefault;
-    const result2 = hooksDefault.relativeTimeThreshold("ss");
-    const obj3 = hooksDefault;
-    const result3 = hooksDefault.relativeTimeThreshold("ss", -1);
-    const obj4 = hooksDefault;
-    const result4 = hooksDefault.relativeTimeThreshold("m");
-    const obj5 = hooksDefault;
-    const result5 = hooksDefault.relativeTimeThreshold("m", 60);
+    const result = _modDef4153.relativeTimeThreshold("s");
+    const result1 = _modDef4153.relativeTimeThreshold("s", 60);
+    const result2 = _modDef4153.relativeTimeThreshold("ss");
+    const result3 = _modDef4153.relativeTimeThreshold("ss", -1);
+    const result4 = _modDef4153.relativeTimeThreshold("m");
+    const result5 = _modDef4153.relativeTimeThreshold("m", 60);
     try {
       let tmpResult = tmp(4153);
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
@@ -62,18 +57,18 @@ let obj = {
     }
   }
 };
-Object.setPrototypeOf(obj, null);
-const keys = Object.keys(obj);
+Object.setPrototypeOf(TIMESTAMP_FORMATS, null);
+const keys = Object.keys(TIMESTAMP_FORMATS);
 const regExp = new RegExp("^<t:(-?\\d{1,17})(?::(" + keys.join("|") + "))?>");
-let result = set.fileFinishedImporting("modules/markup/TimestampUtils.tsx");
+let result = size.fileFinishedImporting("modules/markup/TimestampUtils.tsx");
 
-export const TIMESTAMP_FORMATS = obj;
+export { TIMESTAMP_FORMATS };
 export const DEFAULT_TIMESTAMP_FORMAT = "f";
 export const TIMESTAMP_REGEX = regExp;
 export const formatTimestampMention = function formatTimestampMention(mention) {
   ({ timestamp, format } = mention);
-  const tmp = hooksDefault;
-  const tmpResult = tmp(Number(timestamp) * setDefault.Millis.SECOND);
+  const tmp = _modDef4153;
+  const tmpResult = tmp(Number(timestamp) * DurationsDefault.Millis.SECOND);
   if (tmpResult.isValid()) {
     let f;
     if (null != format) {
@@ -82,36 +77,30 @@ export const formatTimestampMention = function formatTimestampMention(mention) {
     if (null == f) {
       f = obj.f;
     }
-    obj = { timestamp: null, format: null, parsed: null, full: null, formatted: null };
-    obj[0] = timestamp;
-    obj[1] = format;
-    obj[2] = tmpResult;
-    obj[3] = obj.F(tmpResult);
-    obj[4] = f(tmpResult);
+    obj = { timestamp, format, parsed: tmpResult, full: null, formatted: null };
+    obj.full = obj.F(tmpResult);
+    obj.formatted = f(tmpResult);
     return obj;
   } else {
     return null;
   }
   const NumberResult = Number(timestamp);
 };
-export const parseTimestamp = function parseTimestamp(arg0, arg1) {
-  const tmp = hooksDefault;
-  const tmpResult = tmp(Number(arg0) * setDefault.Millis.SECOND);
+export const parseTimestamp = function parseTimestamp(timestamp, format) {
+  const tmp = _modDef4153;
+  const tmpResult = tmp(Number(timestamp) * DurationsDefault.Millis.SECOND);
   let tmp3 = null;
   if (tmpResult.isValid()) {
     let f;
-    if (null != arg1) {
-      f = obj[arg1];
+    if (null != format) {
+      f = obj[format];
     }
     if (null == f) {
       f = obj.f;
     }
-    obj = { timestamp: null, format: null, parsed: null, full: null, formatted: null };
-    obj[0] = arg0;
-    obj[1] = arg1;
-    obj[2] = tmpResult;
-    obj[3] = obj.F(tmpResult);
-    obj[4] = f(tmpResult);
+    obj = { timestamp, format, parsed: tmpResult, full: null, formatted: null };
+    obj.full = obj.F(tmpResult);
+    obj.formatted = f(tmpResult);
     tmp3 = obj;
   }
   return tmp3;

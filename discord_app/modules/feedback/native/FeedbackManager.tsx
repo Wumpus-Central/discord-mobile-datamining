@@ -1,15 +1,16 @@
-// === Module 17349: prototype ===
+// === Module 17349: FeedbackManager ===
 
-// Module 17349 (prototype)
-import optOutEligibilityCheckDefault from "optOutEligibilityCheck" /* 17350 */;
-import closure_3 from "addApplication" /* 4788 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "createRTCConnection" /* 4583 */;
-import closure_6 from "initialize" /* 4599 */;
-import { FeedbackType } from "FeedbackRating" /* 11626 */;
+// Module 17349 (FeedbackManager)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
+import FeedbackManager from "feedback/FeedbackManager" /* 17350 */;
 
-let require = arg1;
-optOutEligibilityCheckDefault;
+require = fn;
+const FeedbackType = fn(11626).FeedbackType;
 let prototype = function FeedbackManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -30,31 +31,27 @@ let prototype = function FeedbackManager() {
   applyArgumentsResult.handleShowStreamFeedback = function handleShowStreamFeedback(streamKey) {
     streamKey = streamKey.streamKey;
     if (streamKey.canShowFeedback) {
-      const result = streamKey.possiblyShowFeedbackModal(closure_1_7.STREAM, () => {
-        let obj = streamKey(closure_1_2[6]);
-        const decodeStreamKeyResult = obj.decodeStreamKey(streamKey);
+      const result = applyArgumentsResult.possiblyShowFeedbackModal(FeedbackType.STREAM, () => {
+        let analyticsData = streamKey(dependencyMap[6]);
+        const decodeStreamKeyResult = analyticsData.decodeStreamKey(streamKey);
         streamKey = decodeStreamKeyResult;
-        const channel = closure_1_4.getChannel(decodeStreamKeyResult.channelId);
+        channel = channel.getChannel(decodeStreamKeyResult.channelId);
         let isGuildStageVoiceResult;
         if (channel != null) {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (!isGuildStageVoiceResult) {
-          let videoStats = closure_1_6.getVideoStats(tmp3);
+          videoStats = videoStats.getVideoStats(tmp3);
           if (videoStats == null) {
             videoStats = {};
           }
-          obj = { media_session_id: null, rtc_connection_id: null, stream_region: null, max_viewers: null };
-          obj[0] = closure_1_6.getMediaSessionId(tmp3);
-          obj[1] = closure_1_6.getRtcConnectionId(tmp3);
-          obj[2] = closure_1_6.getRegion(tmp3);
-          obj[3] = closure_1_6.getMaxViewers(tmp3);
+          analyticsData = { media_session_id: videoStats.getMediaSessionId(tmp3), rtc_connection_id: videoStats.getRtcConnectionId(tmp3), stream_region: videoStats.getRegion(tmp3), max_viewers: videoStats.getMaxViewers(tmp3) };
           const merged = Object.assign(videoStats);
           closure_2 = tmp(tmp2[8])(tmp2[7], tmp2.paths);
           tmp(tmp2[9]).runAfterInteractions(() => {
-            obj = closure_2_1(closure_2_2[10]);
-            obj = { stream: closure_0, analyticsData: obj };
-            obj.openLazy(closure_2, "StreamFeedback" + decodeStreamKeyResult, obj);
+            analyticsData = ActionSheetActionCreatorsDefault;
+            analyticsData = { stream: decodeStreamKeyResult, analyticsData };
+            analyticsData.openLazy(closure_2, "StreamFeedback" + streamKey, analyticsData);
           });
           const tmpResult = tmp(tmp2[9]);
         }
@@ -64,43 +61,40 @@ let prototype = function FeedbackManager() {
   applyArgumentsResult.handleShowActivityFeedback = function handleShowActivityFeedback(applicationId) {
     applicationId = applicationId.applicationId;
     const _location = applicationId.location;
-    let application;
-    let channel;
-    application = closure_1_3.getApplication(applicationId);
-    channel = closure_1_4.getChannel(applyArgumentsResult(closure_1_2[11]).getEmbeddedActivityLocationChannelId(_location));
+    const application = ApplicationStore.getApplication(applicationId);
+    const channel = ChannelStore.getChannel(embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location));
     if (tmp2) {
-      const result = applicationId.possiblyShowFeedbackModal(closure_1_7.ACTIVITY, () => {
+      const result = applyArgumentsResult.possiblyShowFeedbackModal(FeedbackType.ACTIVITY, () => {
         closure_0 = applicationId(application[8])(application[12], application.paths);
-        let obj = { media_session_id: closure_1_5.getMediaSessionId(), rtc_connection_id: closure_1_5.getRTCConnectionId() };
+        let analyticsData = { media_session_id: closure_1_5.getMediaSessionId(), rtc_connection_id: closure_1_5.getRTCConnectionId() };
         applicationId(application[9]).runAfterInteractions(() => {
-          obj = _location(application[10]);
-          obj = { analyticsData: obj, activityApplication: closure_1_2, channel: closure_1_3, embeddedActivityLocation: obj };
-          obj.openLazy(closure_0, "ActivityFeedback" + obj.id + closure_0, obj);
+          analyticsData = ActionSheetActionCreatorsDefault;
+          analyticsData = { analyticsData, activityApplication: application, channel, embeddedActivityLocation: _location };
+          analyticsData.openLazy(closure_0, "ActivityFeedback" + _location.id + applicationId, analyticsData);
         });
       });
     }
   };
   applyArgumentsResult.handleShowVoiceFeedback = function handleShowVoiceFeedback(analyticsData) {
     analyticsData = analyticsData.analyticsData;
-    const result = analyticsData.possiblyShowFeedbackModal(closure_1_7.VOICE, () => {
-      closure_0 = analyticsData(closure_1_2[8])(closure_1_2[13], closure_1_2.paths);
-      analyticsData(closure_1_2[9]).runAfterInteractions(() => {
-        let obj = closure_2_1(closure_2_2[10]);
-        obj = { analyticsData: channel_id };
-        obj.openLazy(channel_id, "VoiceFeedback" + channel_id.channel_id, obj);
+    const result = applyArgumentsResult.possiblyShowFeedbackModal(FeedbackType.VOICE, () => {
+      closure_0 = analyticsData(paths[8])(paths[13], paths.paths);
+      analyticsData(paths[9]).runAfterInteractions(() => {
+        const obj = { analyticsData };
+        obj.openLazy(closure_0, "VoiceFeedback" + analyticsData.channel_id, obj);
       });
     });
   };
   applyArgumentsResult.handleInAppReportsFeedback = function handleInAppReportsFeedback(arg0) {
     ({ reportId: closure_0, reportType: closure_1 } = arg0);
-    const result = applyArgumentsResult.possiblyShowFeedbackModal(closure_1_7.IN_APP_REPORTS, () => {
-      closure_0 = closure_1_0(closure_1_2[8])(closure_1_2[14], closure_1_2.paths);
-      closure_1_0(closure_1_2[9]).runAfterInteractions(() => {
-        let str = closure_0;
-        if (closure_0 == null) {
+    const result = applyArgumentsResult.possiblyShowFeedbackModal(FeedbackType.IN_APP_REPORTS, () => {
+      closure_0 = reportId(paths[8])(paths[14], paths.paths);
+      reportId(paths[9]).runAfterInteractions(() => {
+        let str = reportId;
+        if (reportId == null) {
           str = "";
         }
-        closure_2_1(closure_2_2[10]).openLazy(closure_0, "ReportingFeedback" + closure_1_1 + str, { reportId: closure_0, reportType: closure_1_1 });
+        ActionSheetActionCreatorsDefault.openLazy(closure_0, "ReportingFeedback" + reportType + str, { reportId, reportType });
       });
     });
   };
@@ -109,6 +103,7 @@ let prototype = function FeedbackManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/feedback/native/FeedbackManager.tsx");
 
 export default prototype;

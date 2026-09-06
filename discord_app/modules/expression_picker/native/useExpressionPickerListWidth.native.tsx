@@ -1,15 +1,15 @@
 // === Module 10291: useExpressionPickerListWidth ===
 
 // Module 10291 (useExpressionPickerListWidth)
-import set from "set" /* 2 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1219 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7151 */;
+import size from "module_2" /* 2 */;
 
-const PADDING_HORIZONTAL = ExpressionPickerViewType.PADDING_HORIZONTAL;
-const ACTION_SHEET_MAX_WIDTH = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_MAX_WIDTH;
-const result = set.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
+const PADDING_HORIZONTAL = ExpressionPickerConstants.PADDING_HORIZONTAL;
+const ACTION_SHEET_MAX_WIDTH = ActionSheetConstants.ACTION_SHEET_MAX_WIDTH;
+const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerListWidth.native.tsx");
 
 export default function useExpressionPickerListWidth(arg0) {
   const rect = useSafeAreaInsetsDefault();

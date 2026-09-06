@@ -1,13 +1,13 @@
 // === Module 5821: ButterflyIllocon ===
 
 // Module 5821 (ButterflyIllocon)
-import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 5822 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef5822 from "module_5822" /* 5822 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
 
 export const ButterflyIllocon = function ButterflyIllocon(size) {
   let num = size.size;
@@ -16,12 +16,12 @@ export const ButterflyIllocon = function ButterflyIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  obj = { uri: _modDef5822 };
+  obj.source = obj;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { uri: _modDef5822 });
 };

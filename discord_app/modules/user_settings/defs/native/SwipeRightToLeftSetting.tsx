@@ -1,24 +1,24 @@
-// === Module 15473: route ===
+// === Module 15473: SwipeRightToLeftSetting ===
 
-// Module 15473 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import create from "create" /* 1187 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15473 (SwipeRightToLeftSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["D/Dkcd"]);
+    const intl = util.intl;
+    return intl.string(util.t["D/Dkcd"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
   useTrailing: function useSwipeRightToLeftSettingTrailing() {
-    const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
+    const SwipeRightToLeftModeSetting = UserSettings.SwipeRightToLeftModeSetting;
     const setting = SwipeRightToLeftModeSetting.useSetting();
-    if (setting === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
+    if (setting === preloaded_user_settings.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY) {
       const intl2 = tmp(1114).intl;
       let stringResult = intl2.string(tmp(1114).t["3tYNDS"]);
     } else {
@@ -30,15 +30,13 @@ obj = {
     }
     return stringResult;
   },
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
-  getComponent() {
-    return require(15474) /* UserSettingsSwipeRightToLeft */.default;
+  screen: {
+    route: Constants.UserSettingsSections.SWIPE_RIGHT_TO_LEFT,
+    getComponent() {
+      return require("SwipeRightToLeftScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SwipeRightToLeftSetting.tsx");
 
 export default route;

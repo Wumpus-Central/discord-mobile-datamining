@@ -1,20 +1,21 @@
-// === Module 17725: context ===
+// === Module 17725: CreatorMonetizationSettingsDisabledContext ===
 
-// Module 17725 (context)
-import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7253 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17725 (CreatorMonetizationSettingsDisabledContext)
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7253 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
 
 export default context;
 export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetizationSettingsDisabled() {
-  context = importAllResult.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
+    const error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
     throw error;
   } else {
     return context;
@@ -22,7 +23,7 @@ export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetiz
 };
 export const CreatorMonetizationSettingsDisabledContextProvider = function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
   ({ guildId, children } = arg0);
-  let obj = useShouldHideGuildPurchaseEntryPoints;
+  let obj = CreatorMonetizationRestrictionsHooks;
   obj = { value: obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings, children };
   return <context.Provider value={obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings}>{children}</context.Provider>;
 };

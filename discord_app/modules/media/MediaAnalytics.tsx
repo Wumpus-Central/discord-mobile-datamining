@@ -1,34 +1,32 @@
-// === Module 11874: logMediaAttachmentPlaybackStarted ===
+// === Module 11874: MediaAnalytics ===
 
-// Module 11874 (logMediaAttachmentPlaybackStarted)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 11874 (MediaAnalytics)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/media/MediaAnalytics.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/media/MediaAnalytics.tsx");
 
 export const logMediaAttachmentPlaybackStarted = function logMediaAttachmentPlaybackStarted(messageChannel, found, totalDurationSecs, messageId, startDurationSecs, id) {
   let tmp = totalDurationSecs;
-  let obj = expandEventPropertiesDefault;
-  obj = { guild_id: messageChannel.guild_id, channel_id: messageChannel.id, channel_type: messageChannel.type, type: found.content_type, flags: found.flags, size: found.size, duration: totalDurationSecs, message_id: messageId, attachment_id: found.id, start_duration_secs: null, sender_user_id: null };
+  const obj = { guild_id: messageChannel.guild_id, channel_id: messageChannel.id, channel_type: messageChannel.type, type: found.content_type, flags: found.flags, size: found.size, duration: totalDurationSecs, message_id: messageId, attachment_id: found.id, start_duration_secs: null, sender_user_id: null };
   if (totalDurationSecs == null) {
     tmp = startDurationSecs;
   }
-  obj[9] = Math.min(tmp, startDurationSecs);
-  obj[10] = id;
+  obj.start_duration_secs = Math.min(tmp, startDurationSecs);
+  obj.sender_user_id = id;
   obj.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_STARTED, obj);
 };
 export const logMediaAttachmentPlaybackEnded = function logMediaAttachmentPlaybackEnded(messageId, totalDurationSecs, endDurationSecs, id, durationListeningSecs, found) {
   let tmp = totalDurationSecs;
-  let obj = expandEventPropertiesDefault;
-  obj = { message_id: messageId, total_duration_secs: totalDurationSecs, end_duration_secs: null, sender_user_id: null, duration_listening_secs: null, type: null };
+  const obj = { message_id: messageId, total_duration_secs: totalDurationSecs, end_duration_secs: null, sender_user_id: null, duration_listening_secs: null, type: null };
   if (totalDurationSecs == null) {
     tmp = endDurationSecs;
   }
-  obj[2] = Math.min(tmp, endDurationSecs);
-  obj[3] = id;
-  obj[4] = durationListeningSecs;
-  obj[5] = found.content_type;
+  obj.end_duration_secs = Math.min(tmp, endDurationSecs);
+  obj.sender_user_id = id;
+  obj.duration_listening_secs = durationListeningSecs;
+  obj.type = found.content_type;
   obj.track(AnalyticEvents.MEDIA_ATTACHMENT_PLAYBACK_ENDED, obj);
 };

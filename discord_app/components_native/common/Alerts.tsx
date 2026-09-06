@@ -1,86 +1,89 @@
-// === Module 16915: StyleSheet ===
+// === Module 16915: Alerts ===
 
-// Module 16915 (StyleSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4905 from "module_4905" /* 4905 */;
+// Module 16915 (Alerts)
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import nativeDefault from "native" /* 576 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
 import Dialog from "Dialog" /* 4958 */;
-import _modDef5578 from "module_5578" /* 5578 */;
-import getStoresDefault from "getStores" /* 16916 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import importDefaultResult from "initialize" /* 13751 */;
-import importDefaultResult1 from "handleUpdateVADPermission" /* 14396 */;
-import importDefaultResult2 from "fetchSurveyIfNeeded" /* 4751 */;
-import closure_12 from "getAlert" /* 11545 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
+import ModalRegistryDefault from "ModalRegistry" /* 16916 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13751 */;
+import PermissionVADStore from "PermissionVADStore" /* 14396 */;
+import SurveyStore from "SurveyStore" /* 4751 */;
+import AlertStore from "AlertStore" /* 11545 */;
 
-require = arg1;
-let c3 = importAllResult;
+require = fn;
+get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-({ Animated: c5, Easing: closure_6, TouchableWithoutFeedback: error } = get_ActivityIndicator);
-let c9 = importDefaultResult;
+({ Animated: hasOwnProperty, Easing: metroRequire, TouchableWithoutFeedback: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = {
-  stores: items,
+  stores: null,
   center: true,
   isOpen() {
-    return importDefaultResult.shouldShowWarning();
+    return PermissionSpeakStore.shouldShowWarning();
   },
   getComponent() {
-    return require(16917) /* render */.default;
+    return require("Suppressed").default;
   }
 };
-items = [importDefaultResult];
+let items = [PermissionSpeakStore];
+obj.stores = items;
 let items1 = [obj, , ];
 obj = {
-  stores: items2,
+  stores: null,
   center: true,
   isOpen() {
-    return importDefaultResult1.shouldShowWarning();
+    return PermissionVADStore.shouldShowWarning();
   },
   getComponent() {
-    return require(16921) /* render */.default;
+    return require("VADPermission").default;
   }
 };
-items2 = [importDefaultResult1];
+let items2 = [PermissionVADStore];
+obj.stores = items2;
 items1[1] = obj;
-let items3 = [importDefaultResult2];
-items1[2] = {
-  stores: items3,
+let obj1 = {
+  stores: null,
   center: true,
   isOpen() {
-    return null != importDefaultResult2.getCurrentSurvey();
+    return null != SurveyStore.getCurrentSurvey();
   },
   getComponent() {
-    return require(16922) /* MobileSurvey */.default;
+    return require("MobileSurvey").default;
   }
 };
-let closure_15 = new getStoresDefault(items1);
+let items3 = [SurveyStore];
+obj1.stores = items3;
+items1[2] = obj1;
+const stores = new ModalRegistryDefault(items1);
+const createStyles = fn(4560);
 let obj2 = { alertWrapper: null, alertContentWrapper: null };
-const obj3 = {};
+let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.backgroundColor = ThemesDefault.colors.BACKGROUND_SCRIM;
+obj3.backgroundColor = nativeDefault.colors.BACKGROUND_SCRIM;
 obj3.justifyContent = "center";
 obj3.alignItems = "center";
-obj2[0] = obj3;
-obj2[1] = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
-let closure_16 = createCacheKey.createLegacyClassComponentStyles(obj2);
-const PureComponent = importAllResult.PureComponent;
+obj2.alertWrapper = obj3;
+obj2.alertContentWrapper = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
+let closure_16 = createStyles.createLegacyClassComponentStyles(obj2);
+const PureComponent = noop.PureComponent;
 class AlertWrapper extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     obj = { opacity: null, scale: null };
     value = new Animated.Value(0);
-    obj[0] = value;
+    obj.opacity = value;
     num = 0;
     if (applyArgumentsResult.props.useReducedMotion) {
       num = 1;
     }
     value1 = new Animated.Value(num);
-    obj[1] = value1;
+    obj.scale = value1;
     applyArgumentsResult.state = obj;
     applyArgumentsResult.componentDidAppear = function componentDidAppear() {
       const opacity = applyArgumentsResult.state.opacity;
@@ -89,29 +92,25 @@ class AlertWrapper extends PureComponent {
       scale.setValue(1);
     };
     applyArgumentsResult.componentWillEnter = function componentWillEnter(arg0) {
-      let obj = closure_1_5;
-      obj = { toValue: 1, easing: closure_1_6.linear, duration: 250, useNativeDriver: true };
-      const items = [closure_1_5.timing(applyArgumentsResult.state.opacity, obj)];
+      const obj = { toValue: 1, easing: timestampProducer.linear, duration: 250, useNativeDriver: true };
+      const items = [RN.timing(applyArgumentsResult.state.opacity, obj)];
       if (!applyArgumentsResult.props.useReducedMotion) {
         items.push(obj.spring(applyArgumentsResult.state.scale, { toValue: 1, useNativeDriver: true }));
       }
       obj.parallel(items).start(arg0);
     };
     applyArgumentsResult.componentWillLeave = function componentWillLeave(arg0) {
-      let obj = closure_1_5;
-      obj = { toValue: 0, easing: closure_1_6.linear, duration: 100, useNativeDriver: true };
-      const items = [closure_1_5.timing(applyArgumentsResult.state.opacity, obj)];
+      let obj = { toValue: 0, easing: timestampProducer.linear, duration: 100, useNativeDriver: true };
+      const items = [RN.timing(applyArgumentsResult.state.opacity, obj)];
       if (!applyArgumentsResult.props.useReducedMotion) {
-        obj = { toValue: 0, easing: null, duration: 100, useNativeDriver: true };
-        obj[1] = obj3.in(obj3.ease);
+        obj = { toValue: 0, easing: obj3.in(obj3.ease), duration: 100, useNativeDriver: true };
         items.push(obj.timing(applyArgumentsResult.state.scale, obj));
       }
       obj.parallel(items).start(arg0);
     };
     applyArgumentsResult.handleRequestClose = function handleRequestClose() {
       if (applyArgumentsResult.props.isDismissable) {
-        closure_1_1(closure_1_2[15]).close();
-        const obj = closure_1_1(closure_1_2[15]);
+        actions_AlertActionCreatorsDefault.close();
       }
     };
     return applyArgumentsResult;
@@ -119,67 +118,63 @@ class AlertWrapper extends PureComponent {
 }
 AlertWrapper.prototype["render"] = function render() {
   const self = this;
-  const tmp = callback3(this.context);
+  const tmp = closure_16(this.context);
   let str = this.props.renderKey;
   if (str == null) {
     str = "alerts-component";
   }
   const props = self.props;
-  let obj = { onClose: _modDef4905.close };
+  let obj = { onClose: actions_AlertActionCreatorsDefault.close };
   ({ opacity, scale } = self.state);
   obj = { dialogKey: str, onDismiss: self.handleRequestClose, children: null };
-  obj = { style: items, children: null };
-  items = [StyleSheet.absoluteFill, tmp.alertContentWrapper];
-  obj1 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", accessible: false, onPress: self.handleRequestClose, children: null };
+  obj = { style: null, children: null };
+  const items = [StyleSheet.absoluteFill, tmp.alertContentWrapper];
+  obj.style = items;
+  const obj1 = { accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", accessible: false, onPress: self.handleRequestClose, children: null };
+  const obj2 = { style: null };
   const items1 = [tmp.alertWrapper, self.props.style, { opacity }];
+  obj2.style = items1;
   const renderAlertResult = props.renderAlert(obj);
-  obj1[5] = callback(RN.View, { style: items1 });
-  const items2 = [callback(closure_7, obj1), ];
+  obj1.children = map1(RN.View, obj2);
+  const items2 = [map1(React5, obj1), ];
+  const obj3 = { style: null, children: renderAlertResult };
+  const obj4 = { transform: null };
   const items3 = [{ scale }];
-  items2[1] = callback(RN.View, { style: { transform: items3 }, children: renderAlertResult });
-  obj[1] = items2;
-  obj[2] = callback2(_modDef5578, obj);
-  return callback(Dialog.Dialog, obj);
+  obj4.transform = items3;
+  obj3.style = obj4;
+  items2[1] = map1(RN.View, obj3);
+  obj.children = items2;
+  obj.children = closure_1_14(KeyboardAwareViewDefault, obj);
+  return map1(Dialog.Dialog, obj);
 };
-AlertWrapper.contextType = require("ManaContext").ThemeContext;
+AlertWrapper.contextType = fn(4271).ThemeContext;
 let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "call", props: "o" });
-let obj1 = {
-  stores: items3,
-  center: true,
-  isOpen() {
-    return null != importDefaultResult2.getCurrentSurvey();
-  },
-  getComponent() {
-    return require(16922) /* MobileSurvey */.default;
-  }
-};
-const tmp7 = new getStoresDefault(items1);
-const memoResult = importAllResult.memo(function Alerts() {
-  const _require = renderAlert.useRef(closure_18);
-  let obj = _require(stateFromStores[18]);
-  const items = [closure_12, ...closure_15.getStores()];
+const tmp7 = new ModalRegistryDefault(items1);
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
+
+export default noop.memo(function Alerts() {
+  _require = renderAlert.useRef(closure_18);
+  let obj = require("initialize");
+  const items = [AlertStore, ...closure_15.getStores()];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = closure_1_12;
-    const _alert = closure_1_12.getAlert();
+    let obj = AlertStore;
+    const _alert = AlertStore.getAlert();
     if (null != _alert) {
-      obj = { renderAlert: null, renderKey: null, props: null };
-      obj[0] = _alert;
-      obj[1] = obj.getAlertKey();
+      obj = { renderAlert: _alert, renderKey: null, props: null };
+      obj.renderKey = obj.getAlertKey();
       return obj;
     } else {
-      const openModal = closure_1_15.getOpenModal();
+      openModal = openModal.getOpenModal();
       if (null != openModal) {
         const props = openModal.props;
         const _HermesInternal = HermesInternal;
         const combined = "alert-registery-" + openModal.key;
-        if (combined === openModal.current.renderKey) {
-          if (stateFromStoresObject(stateFromStores[19])(props, tmp4.current.props)) {
+        if (combined === ref.current.renderKey) {
+          if (discord_common_shallowEqualDefault(props, tmp4.current.props)) {
             let fn = tmp4.current.renderAlert;
           }
-          obj = { renderAlert: null, renderKey: null, props: null };
-          obj[0] = fn;
-          obj[1] = combined;
-          obj[2] = openModal.props;
+          obj = { renderAlert: fn, renderKey: combined, props: openModal.props };
           return obj;
         }
         fn = (arg0) => {
@@ -195,38 +190,30 @@ const memoResult = importAllResult.memo(function Alerts() {
   const effect = renderAlert.useEffect(() => {
     closure_0.current = stateFromStoresObject;
   });
-  const items1 = [closure_12];
-  stateFromStores = _require(stateFromStores[18]).useStateFromStores(items1, () => alertDismissable.isAlertDismissable());
-  const obj2 = _require(stateFromStores[18]);
-  const items2 = [closure_8];
+  const items1 = [AlertStore];
+  stateFromStores = require("initialize").useStateFromStores(items1, () => alertDismissable.isAlertDismissable());
+  const obj2 = require("initialize");
+  const items2 = [AccessibilityStore];
   renderAlert = stateFromStoresObject.renderAlert;
   const renderKey = stateFromStoresObject.renderKey;
   const items3 = [renderAlert, stateFromStores];
-  const stateFromStores1 = _require(stateFromStores[18]).useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
   const callback = renderAlert.useCallback(() => {
     let tmp2 = tmp;
     if (null != renderAlert) {
       tmp2 = stateFromStores;
     }
     if (tmp2) {
-      stateFromStoresObject(stateFromStores[15]).close();
-      const obj = stateFromStoresObject(stateFromStores[15]);
+      actions_AlertActionCreatorsDefault.close();
     }
     return null != renderAlert;
   }, items3);
   stateFromStoresObject(stateFromStores[20])(callback);
   let tmp9;
   if (null != renderAlert) {
-    obj = { isDismissable: null, renderAlert: null, renderKey: null, useReducedMotion: null };
-    obj[0] = stateFromStores;
-    obj[1] = renderAlert;
-    obj[2] = renderKey;
-    obj[3] = stateFromStores1;
-    tmp9 = callback(AlertWrapper, obj, renderKey);
+    obj = { isDismissable: stateFromStores, renderAlert, renderKey, useReducedMotion: stateFromStores1 };
+    tmp9 = closure_13(AlertWrapper, obj, renderKey);
   }
   obj = { component: tmp(tmp2[22]).TransitionGroupOverlayView, style: StyleSheet.absoluteFill, children: tmp9 };
-  return callback(_require(stateFromStores[21]).TransitionGroup, obj);
+  return closure_13(require("TransitionGroup").TransitionGroup, obj);
 });
-const result = require("set").fileFinishedImporting("components_native/common/Alerts.tsx");
-
-export default memoResult;

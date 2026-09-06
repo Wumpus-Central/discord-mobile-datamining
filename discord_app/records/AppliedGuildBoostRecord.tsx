@@ -1,13 +1,10 @@
-// === Module 4459: createFromServer ===
+// === Module 4459: AppliedGuildBoostRecord ===
 
-// Module 4459 (createFromServer)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 4459 (AppliedGuildBoostRecord)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-let prototype;
-prototype = function AppliedGuildBoostRecord(endsAt) {
+const prototype = function AppliedGuildBoostRecord(endsAt) {
   const tmp = new prototype(new.target, endsAt, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, guildId: tmp.guildId, userId: tmp.userId, user: tmp.user, ended: tmp.ended } = endsAt);
   endsAt = null;
   if (null != endsAt.endsAt) {
@@ -37,23 +34,24 @@ prototype["createFromServer"] = function createFromServer(user) {
       date = new Date(user.ends_at);
     }
   }
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp9 = new prototype(tmp4, _Date, str, tmp, new.target, id, guild_id, user_id, user);
+    tmp9.id = id;
+    tmp9.guildId = guild_id;
+    tmp9.userId = user_id;
+    tmp9.user = user;
+    tmp9.ended = user.ended;
+    let tmp11 = null;
+    if (null != date) {
+      tmp11 = date;
+    }
+    tmp9.endsAt = tmp11;
+    return tmp9;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp5 = new prototype(str2, _Date, str, prototype, new.target, id, guild_id, user_id, user);
-  // ThrowIfThisInitialized (0x7c)
-  tmp5.id = id;
-  tmp5.guildId = guild_id;
-  tmp5.userId = user_id;
-  tmp5.user = user;
-  tmp5.ended = user.ended;
-  let tmp6 = null;
-  if (null != date) {
-    tmp6 = date;
-  }
-  tmp5.endsAt = tmp6;
-  return tmp5;
 };
-const result = require("set").fileFinishedImporting("records/AppliedGuildBoostRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/AppliedGuildBoostRecord.tsx");
 
 export default prototype;

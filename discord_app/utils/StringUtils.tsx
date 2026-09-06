@@ -1,10 +1,10 @@
-// === Module 1925: isNullOrEmpty ===
+// === Module 1925: StringUtils ===
 
-// Module 1925 (isNullOrEmpty)
-import set from "set" /* 2 */;
-import cssValueToNumber from "cssValueToNumber" /* 1926 */;
+// Module 1925 (StringUtils)
+import utils_StringUtils from "utils/StringUtils" /* 1926 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/StringUtils.tsx");
+const result = size.fileFinishedImporting("utils/StringUtils.tsx");
 
 export const isNullOrEmpty = function isNullOrEmpty(application_id) {
   let tmp = null == application_id;
@@ -13,9 +13,9 @@ export const isNullOrEmpty = function isNullOrEmpty(application_id) {
   }
   return tmp;
 };
-export const upperCaseFirstChar = cssValueToNumber.upperCaseFirstChar;
-export const getAcronym = cssValueToNumber.getAcronym;
-export const cssValueToNumber = cssValueToNumber.cssValueToNumber;
-export const stripDiacritics = cssValueToNumber.stripDiacritics;
-export const truncateText = cssValueToNumber.truncateText;
-export const normalize = cssValueToNumber.normalize;
+export const upperCaseFirstChar = utils_StringUtils.upperCaseFirstChar;
+export const getAcronym = utils_StringUtils.getAcronym;
+export const cssValueToNumber = utils_StringUtils.cssValueToNumber;
+export const stripDiacritics = utils_StringUtils.stripDiacritics;
+export const truncateText = utils_StringUtils.truncateText;
+export const normalize = utils_StringUtils.normalize;

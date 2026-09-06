@@ -1,32 +1,30 @@
-// === Module 15475: route ===
+// === Module 15475: WebBrowserSetting ===
 
-// Module 15475 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 15475 (WebBrowserSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import GlobeEarthIcon from "GlobeEarthIcon" /* 8886 */;
-import useWebBrowserSettingOptions from "useWebBrowserSettingOptions" /* 15476 */;
-import createToggle from "createToggle" /* 11468 */;
+import SelectWebBrowserSetting from "SelectWebBrowserSetting" /* 15476 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["C+DkPu"]);
+    const intl = util.intl;
+    return intl.string(util.t["C+DkPu"]);
   },
   usePredicate() {
-    return useWebBrowserSettingOptions.useWebBrowserSettingOptions().length > 1;
+    return SelectWebBrowserSetting.useWebBrowserSettingOptions().length > 1;
   },
   parent: null,
   IconComponent: GlobeEarthIcon.GlobeEarthIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.BROWSER,
-  getComponent() {
-    return require(15477).default;
+  screen: {
+    route: Constants.UserSettingsSections.BROWSER,
+    getComponent() {
+      return require("SettingsWebBrowserScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/WebBrowserSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/WebBrowserSetting.tsx");
 
 export default route;

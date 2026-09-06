@@ -1,57 +1,56 @@
-// === Module 14858: useIsHarvestRequestDisabled ===
+// === Module 14858: RequestYourDataSetting ===
 
-// Module 14858 (useIsHarvestRequestDisabled)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 14858 (RequestYourDataSetting)
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hooksDefault from "hooks" /* 4153 */;
-import isIterable from "isIterable" /* 4184 */;
-import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 6984 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import harvestDisabled from "harvestDisabled" /* 14859 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import identity from "identity" /* 1244 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import _mod4184 from "module_4184" /* 4184 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6984 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import UserStore from "UserStore" /* 1371 */;
+import Constants from "Constants" /* 1074 */;
+import identity from "module_1244" /* 1244 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
+const HarvesterUtils = tmp(14859);
 function useIsHarvestRequestDisabled() {
-  const items = [closure_4];
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const obj = initialize;
-  const tmp = require;
-  let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable.shallow);
+  let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4184.shallow);
   let tmp6 = null == stateFromStores;
   if (!tmp6) {
     if (!harvestDisabledResult) {
-      harvestDisabledResult = harvestDisabled.harvestDisabled(tmp4, stateFromStores);
-      const tmpResult = harvestDisabled;
+      harvestDisabledResult = HarvesterUtils.harvestDisabled(tmp4, stateFromStores);
+      const tmpResult = HarvesterUtils;
     }
     tmp6 = harvestDisabledResult;
   }
   return tmp6;
 }
-const ActivityIndicator = get_ActivityIndicator.ActivityIndicator;
-({ REQUEST_DATA_LIMIT_DAYS: c5, UserSettingsSections } = ME);
+const ActivityIndicator = _mod17.ActivityIndicator;
+({ REQUEST_DATA_LIMIT_DAYS: hasOwnProperty, UserSettingsSections } = Constants);
 const jsx = jsxProd.jsx;
 let closure_7 = identity.createWithEqualityFn(() => ({ isRequesting: false, harvestRequest: null }));
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.XAHCgJ);
+    const intl = util.intl;
+    return intl.string(util.t.XAHCgJ);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
   useTrailing: function useHarvestRequestSettingTrailing() {
     let tmp = null;
-    if (callback((isRequesting) => isRequesting.isRequesting, isIterable.shallow)) {
+    if (closure_7((isRequesting) => isRequesting.isRequesting, _mod4184.shallow)) {
       tmp = <ActivityIndicator />;
     }
     return tmp;
   },
   useDescription: function useRequestYourDataSettingDescription() {
-    const tmp3 = callback((harvestRequest) => harvestRequest.harvestRequest, isIterable.shallow);
-    currentUser = currentUser.getCurrentUser();
+    const tmp3 = closure_7((harvestRequest) => harvestRequest.harvestRequest, _mod4184.shallow);
+    const currentUser = UserStore.getCurrentUser();
     if (null == currentUser) {
       return null;
     } else if (currentUser.isStaff()) {
@@ -60,12 +59,11 @@ obj = {
     } else if (null == tmp3) {
       return null;
     } else {
-      const addResult = hooksDefault(tmp3.created_at).add(closure_5, "days");
+      const addResult = _modDef4153(tmp3.created_at).add(hasOwnProperty, "days");
       let formatToPlainStringResult = null;
-      if (!addResult.isBefore(hooksDefault())) {
+      if (!addResult.isBefore(_modDef4153())) {
         const intl = tmp(1114).intl;
-        const obj = { date: null };
-        obj[0] = addResult.format("MMMM Do YYYY");
+        const obj = { date: addResult.format("MMMM Do YYYY") };
         formatToPlainStringResult = intl.formatToPlainString(tmp(1114).t.RNDlV9, obj);
       }
       return formatToPlainStringResult;
@@ -73,50 +71,46 @@ obj = {
   },
   useIsDisabled: useIsHarvestRequestDisabled,
   usePreNavigationAction() {
-    const items = [closure_4];
+    const items = [UserStore];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-    const obj = initialize;
-    const tmp = require;
-    let harvestDisabledResult = callback((isRequesting) => isRequesting.isRequesting, isIterable.shallow);
+    let harvestDisabledResult = closure_7((isRequesting) => isRequesting.isRequesting, _mod4184.shallow);
     let tmp6 = null == stateFromStores;
     if (!tmp6) {
       if (!harvestDisabledResult) {
-        harvestDisabledResult = harvestDisabled.harvestDisabled(tmp4, stateFromStores);
-        const tmpResult = harvestDisabled;
+        harvestDisabledResult = HarvesterUtils.harvestDisabled(tmp4, stateFromStores);
+        const tmpResult = HarvesterUtils;
       }
       tmp6 = harvestDisabledResult;
     }
     require = tmp6;
-    return (arg0) => {
-      let flag = !closure_0;
-      if (!closure_0) {
-        arg0();
+    return (fn) => {
+      let flag = !harvestDisabledResult;
+      if (!harvestDisabledResult) {
+        fn();
         flag = true;
       }
       return flag;
     };
   },
-  screen: obj
-};
-obj = {
-  route: UserSettingsSections.REQUEST_DATA,
-  getComponent() {
-    return require(14861).default;
+  screen: {
+    route: UserSettingsSections.REQUEST_DATA,
+    getComponent() {
+      return require("RequestDataScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/RequestYourDataSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/RequestYourDataSetting.tsx");
 
 export default route;
 export const fetchHarvestStatus = function fetchHarvestStatus() {
-  const harvestStatus = saveProfileAndAccountRequest.getHarvestStatus();
-  harvestStatus.then((arg0) => {
-    const callback = arg0;
-    callback(1249).batchUpdates(() => {
-      closure_1_7.setState({ isRequesting: false, harvestRequest: body.body });
+  const harvestStatus = UserSettingsAccountActionCreators.getHarvestStatus();
+  harvestStatus.then((result) => {
+    const body = result;
+    body(1249).batchUpdates(() => {
+      state.setState({ isRequesting: false, harvestRequest: body.body });
     });
   }, () => {
-    callback(1249).batchUpdates(() => state.setState({ isRequesting: false }));
+    ReactBatchUpdates.batchUpdates(() => state.setState({ isRequesting: false }));
   });
 };
 export { useIsHarvestRequestDisabled };

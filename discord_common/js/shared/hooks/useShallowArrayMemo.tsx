@@ -1,12 +1,13 @@
 // === Module 16126: useShallowArrayMemo ===
 
 // Module 16126 (useShallowArrayMemo)
-import set from "set" /* 2 */;
+import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import useMemoWithEqualityFunctionDefault from "useMemoWithEqualityFunction" /* 16127 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/useShallowArrayMemo.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useShallowArrayMemo.tsx");
 
 export default function useShallowArrayMemo(arg0) {
-  const _require = arg0;
-  return useMemoWithEqualityFunctionDefault(() => closure_0, arg0, _require(558).areArraysShallowEqual);
+  closure_0 = arg0;
+  return useMemoWithEqualityFunctionDefault(() => closure_0, arg0, discord_common_shallowEqual.areArraysShallowEqual);
 };

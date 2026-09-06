@@ -1,25 +1,25 @@
 // === Module 14916: FamilyCenterEmpty ===
 
 // Module 14916 (FamilyCenterEmpty)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 14917 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import _modDef14917 from "module_14917" /* 14917 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ art: { marginBottom: 10, width: 243 }, empty: { display: "flex", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ art: { marginBottom: 10, width: 243 }, empty: { display: "flex", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterEmpty.tsx");
 
 export default function FamilyCenterEmpty(children) {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { style: tmp.empty, children: null };
-  obj = { source: registerAssetDefault, style: tmp.art, resizeMethod: "scale" };
-  const items = [callback(closure_4, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
-  obj[1] = items;
-  return callback2(closure_3, obj);
+  obj = { source: _modDef14917, style: tmp.art, resizeMethod: "scale" };
+  const items = [hasOwnProperty(React4, obj), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text })];
+  obj.children = items;
+  return timestampProducer(React3, obj);
 };

@@ -1,20 +1,20 @@
-// === Module 13699: getFirstInstallTimeMillis ===
+// === Module 13699: InstallTime ===
 
-// Module 13699 (getFirstInstallTimeMillis)
+// Module 13699 (InstallTime)
 import Storage4 from "Storage" /* 510 */;
-import sleep from "sleep" /* 4589 */;
-import enforcingDefault from "enforcing" /* 13700 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
+import TimeUtils from "TimeUtils" /* 4589 */;
+import NativeInstallTimeModuleDefault from "NativeInstallTimeModule" /* 13700 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
+require = fn;
 function getFirstInstallTimeMillis(arg0) {
-  const firstInstallTimeMillis = enforcingDefault.getFirstInstallTimeMillis();
+  const firstInstallTimeMillis = NativeInstallTimeModuleDefault.getFirstInstallTimeMillis();
   let str = "InstallTimeLaunch";
   if ("authed" === arg0.from) {
     str = "InstallTimeAuthed";
   }
   const Storage = Storage4.Storage;
-  const value = Storage.get(str);
+  value = Storage.get(str);
   if (null != value) {
     if (value > 0) {
       let bound = value;
@@ -28,7 +28,7 @@ function getFirstInstallTimeMillis(arg0) {
   }
   if ("authed" === arg0.from) {
     num2 = 0;
-    if (authenticated.isAuthenticated()) {
+    if (AuthenticationStore.isAuthenticated()) {
       const _Date2 = Date;
       const timestamp = Date.now();
       const Storage3 = tmp4(510).Storage;
@@ -45,12 +45,13 @@ function getFirstInstallTimeMillis(arg0) {
     const result1 = Storage2.set(str, num2);
   }
 }
-let result = require("set").fileFinishedImporting("modules/install/native/InstallTime.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/install/native/InstallTime.tsx");
 
 export { getFirstInstallTimeMillis };
 export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(unit) {
   unit = unit.unit;
-  const tmp = getFirstInstallTimeMillis(Object.assign(unit, Object.create(null)));
+  const tmp = getFirstInstallTimeMillis(Object.assign(unit, Object.assign({ unit: 0 })));
   if (0 === tmp) {
     return 0;
   } else {
@@ -58,8 +59,7 @@ export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(un
     const diff = Date.now() - tmp;
     let result = diff;
     if (null != unit) {
-      result = sleep.convertMinutesToGivenTimeUnit(diff / sleep.MS_PER_MINUTE, unit);
-      const obj = sleep;
+      result = TimeUtils.convertMinutesToGivenTimeUnit(diff / TimeUtils.MS_PER_MINUTE, unit);
     }
     return result;
   }

@@ -1,34 +1,35 @@
 // === Module 13040: useUserProfileActivity ===
 
 // Module 13040 (useUserProfileActivity)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
-import closure_4 from "map" /* 8791 */;
-import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_6 from "sortActivity" /* 4600 */;
+import _mod19 from "module_19" /* 19 */;
+import Constants from "Constants" /* 4585 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 13041 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8791 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import PresenceStore from "PresenceStore" /* 4600 */;
+import size from "module_2" /* 2 */;
 
-const useMemo = noop.useMemo;
-const Features = DesktopSources.Features;
+const useMemo = _mod19.useMemo;
+const Features = Constants.Features;
 let closure_8 = [];
 let closure_9 = [];
-let result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
 
 export default function useUserProfileActivity(arg0) {
-  const _require = arg0;
-  let obj = _require(stateFromStores2[5]);
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_5.supports(constants.VIDEO));
+  _require = arg0;
+  let obj = require("initialize");
+  const items = [MediaEngineStore];
+  const stateFromStores = obj.useStateFromStores(items, () => MediaEngineStore.supports(constants.VIDEO));
   let tmp4 = null;
   if (stateFromStores) {
     tmp4 = stateFromStores1(stateFromStores2[6])(arg0);
   }
   let tmpResult = tmp(tmp2[5]);
-  const items1 = [closure_6];
-  stateFromStores1 = tmpResult.useStateFromStores(items1, () => closure_1_6.getActivities(closure_0));
+  const items1 = [PresenceStore];
+  stateFromStores1 = tmpResult.useStateFromStores(items1, () => PresenceStore.getActivities(closure_0));
   tmpResult = tmp(tmp2[5]);
-  const items2 = [closure_4];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => closure_1_4.getUserOutbox(closure_0));
+  const items2 = [ContentInventoryOutboxStore];
+  stateFromStores2 = tmpResult.useStateFromStores(items2, () => ContentInventoryOutboxStore.getUserOutbox(closure_0));
   const items3 = [stateFromStores1, ];
   let entries;
   if (stateFromStores2 != null) {
@@ -36,15 +37,15 @@ export default function useUserProfileActivity(arg0) {
   }
   items3[1] = entries;
   const tmp7Result = useMemo(() => {
-    let obj = callback(stateFromStores2[7]);
+    let obj = UserProfileStackedActivityCardUtils;
     let userProfileLiveActivities = obj.getUserProfileLiveActivities(stateFromStores1);
     let found;
     if (stateFromStores2 != null) {
       const entries = stateFromStores2.entries;
-      found = entries.filter((traits) => {
-        let length = traits;
-        userProfileLiveActivities = traits;
-        const isEntryLiveResult = userProfileLiveActivities(closure_1_2[8]).isEntryLive(traits);
+      found = entries.filter((item) => {
+        let length = item;
+        userProfileLiveActivities = item;
+        const isEntryLiveResult = userProfileLiveActivities(stateFromStores2[8]).isEntryLive(item);
         if (isEntryLiveResult) {
           return !isEntryLiveResult;
         } else {
@@ -54,11 +55,11 @@ export default function useUserProfileActivity(arg0) {
             let tmp6 = length > 0;
             if (tmp6) {
               length = userProfileLiveActivities;
-              tmp6 = !userProfileLiveActivities.some((party) => {
-                let result = null != party;
+              tmp6 = !userProfileLiveActivities.some((item) => {
+                let result = null != item;
                 if (result) {
-                  result = traits(closure_1_2[10]).isMatchingListeningActivity(traits, party);
-                  const obj = traits(closure_1_2[10]);
+                  result = userProfileLiveActivities(8337).isMatchingListeningActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8337);
                 }
                 return result;
               });
@@ -67,11 +68,11 @@ export default function useUserProfileActivity(arg0) {
           } else {
             tmpResult = tmp(tmp2[9]);
             if (tmpResult.isWatchedMediaEntry(length)) {
-              result = !userProfileLiveActivities.some((details) => {
-                let result = null != details;
+              result = !userProfileLiveActivities.some((item) => {
+                let result = null != item;
                 if (result) {
-                  result = traits(closure_1_2[10]).isMatchingWatchActivity(traits, details);
-                  const obj = traits(closure_1_2[10]);
+                  result = userProfileLiveActivities(8337).isMatchingWatchActivity(closure_0, item);
+                  const obj = userProfileLiveActivities(8337);
                 }
                 return result;
               });
@@ -84,13 +85,13 @@ export default function useUserProfileActivity(arg0) {
       });
     }
     if (0 === userProfileLiveActivities.length) {
-      userProfileLiveActivities = closure_1_8;
+      userProfileLiveActivities = closure_8;
     }
     obj = { live: userProfileLiveActivities, recent: null };
     if (null == found) {
-      found = closure_1_9;
+      found = closure_9;
     }
-    obj[1] = found;
+    obj.recent = found;
     return obj;
   }, items3);
   obj = { live: tmp7Result.live, recent: tmp7Result.recent, stream: tmp4, outbox: stateFromStores2 };

@@ -1,26 +1,24 @@
-// === Module 10088: computeThreadNotificationSetting ===
+// === Module 10088: ThreadNotificationSettings ===
 
-// Module 10088 (computeThreadNotificationSetting)
-import hasFlag from "hasFlag" /* 1384 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_4 from "storeThread" /* 4201 */;
-import { ThreadMemberFlags } from "AbortCodes" /* 1113 */;
-import { UserNotificationSettings } from "ME" /* 1074 */;
+// Module 10088 (ThreadNotificationSettings)
+import FlagUtils from "FlagUtils" /* 1384 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
 
-require = arg1;
+require = fn;
 function computeThreadNotificationSetting(channel) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_4;
+    obj = JoinedThreadsStore;
   }
   let obj2 = arg2;
   if (arg2 === undefined) {
-    obj2 = closure_3;
+    obj2 = UserGuildSettingsStore;
   }
   let obj3 = arg3;
   if (arg3 === undefined) {
-    obj3 = closure_2;
+    obj3 = ChannelStore;
   }
   const flagsResult = obj.flags(channel.id);
   if (null == flagsResult) {
@@ -54,15 +52,18 @@ function computeThreadNotificationSetting(channel) {
         }
       }
     }
-    obj6 = hasFlag;
+    obj6 = FlagUtils;
   }
 }
-let result = require("set").fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");
+const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
+const UserNotificationSettings = fn(1074).UserNotificationSettings;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/ThreadNotificationSettings.tsx");
 
 export { computeThreadNotificationSetting };
 export const useThreadNotificationSetting = function useThreadNotificationSetting(channel) {
-  const _require = channel;
-  const items = [closure_4, closure_3, closure_2];
+  _require = channel;
+  const items = [JoinedThreadsStore, UserGuildSettingsStore, ChannelStore];
   const items1 = [channel];
-  return _require(504).useStateFromStores(items, () => closure_1_7(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => computeThreadNotificationSetting(closure_0), items1);
 };

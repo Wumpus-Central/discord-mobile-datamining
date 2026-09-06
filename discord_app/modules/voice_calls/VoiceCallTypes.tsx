@@ -1,8 +1,8 @@
-// === Module 9084: RouteTypes ===
+// === Module 9084: VoiceCallTypes ===
 
-// Module 9084 (RouteTypes)
-import set from "set" /* 2 */;
+// Module 9084 (VoiceCallTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_calls/VoiceCallTypes.tsx");
+const result = size.fileFinishedImporting("modules/voice_calls/VoiceCallTypes.tsx");
 
 export const RouteTypes = { UNKNOWN: "unknown", BLUETOOTH: "bluetooth", SPEAKER: "speaker", RECEIVER: "receiver", WIRED: "wired" };

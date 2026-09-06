@@ -1,54 +1,54 @@
-// === Module 9469: areParticipantStatesEqual ===
+// === Module 9469: useIsPrivateAudioOnlyCall ===
 
-// Module 9469 (areParticipantStatesEqual)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "getParticipants" /* 4576 */;
-import closure_5 from "reset" /* 4582 */;
-import closure_6 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_7 from "updateVoiceState" /* 4579 */;
-import { isActivityParticipant } from "ParticipantTypes" /* 4581 */;
+// Module 9469 (useIsPrivateAudioOnlyCall)
+import _slicedToArray from "module_32" /* 32 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-const require = arg1;
+const require = fn;
 function areParticipantStatesEqual(arg0, arg1) {
   [, tmp] = arg0;
   [, tmp2] = arg1;
   return tmp === tmp2;
 }
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
+const isActivityParticipant = fn(4581).isActivityParticipant;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/useIsPrivateAudioOnlyCall.tsx");
 
 export default function useIsPrivateAudioOnlyCall(id) {
-  const _require = id;
-  let items = [closure_4];
+  _require = id;
+  let items = [ChannelRTCStore];
   const items1 = [id];
-  let tmp3 = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(id.id).length > 0;
+  let tmp3 = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(id.id).length > 0;
   if (!tmp3) {
-    tmp3 = isActivityParticipant(callback(obj.useStateFromStores(items, () => {
-      const items = [closure_1_4.getSelectedParticipant(_private.id), closure_1_4.getParticipantsVersion(_private.id)];
+    tmp3 = isActivityParticipant(_slicedToArray(obj.useStateFromStores(items, () => {
+      const items = [ChannelRTCStore.getSelectedParticipant(_private.id), ChannelRTCStore.getParticipantsVersion(_private.id)];
       return items;
     }, items1, areParticipantStatesEqual), 1)[0]);
   }
   dependencyMap = tmp3;
-  obj = _require(504);
-  const tmp = _require;
-  const items2 = [closure_7, closure_6, closure_5];
+  obj = require("initialize");
+  const items2 = [VoiceStateStore, MediaEngineStore, ApplicationStreamingStore];
   const items3 = [id, tmp3];
-  return _require(504).useStateFromStores(items2, () => {
+  return require("initialize").useStateFromStores(items2, () => {
     let isPrivateResult = _private.isPrivate();
     if (isPrivateResult) {
-      isPrivateResult = !closure_1_7.hasVideo(tmp.id);
+      isPrivateResult = !VoiceStateStore.hasVideo(tmp.id);
     }
     if (isPrivateResult) {
       isPrivateResult = !closure_1;
     }
     if (isPrivateResult) {
-      isPrivateResult = 0 === closure_1_5.getAllApplicationStreamsForChannel(tmp.id).length;
+      isPrivateResult = 0 === ApplicationStreamingStore.getAllApplicationStreamsForChannel(tmp.id).length;
     }
     if (isPrivateResult) {
-      isPrivateResult = 0 === closure_1_5.getAllActiveStreamsForChannel(tmp.id).length;
+      isPrivateResult = 0 === ApplicationStreamingStore.getAllActiveStreamsForChannel(tmp.id).length;
     }
     if (isPrivateResult) {
-      isPrivateResult = !closure_1_6.isVideoEnabled();
+      isPrivateResult = !MediaEngineStore.isVideoEnabled();
     }
     return isPrivateResult;
   }, items3);

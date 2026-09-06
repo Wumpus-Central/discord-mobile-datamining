@@ -1,13 +1,15 @@
-// === Module 10287: getSoundmojiSendExperiment ===
+// === Module 10287: SoundmojiSendingExperiment ===
 
-// Module 10287 (getSoundmojiSendExperiment)
-import set from "set" /* 2 */;
+// Module 10287 (SoundmojiSendingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
+let obj = { name: "2026-03-soundmoji-sending", kind: "user", defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false }, variations: null };
+obj = { 1: null, 2: { enabled: true, showSoundmojiInEmojiPicker: false } };
 obj[2] = { enabled: true, showSoundmojiInEmojiPicker: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-03-soundmoji-sending", kind: "user", defaultConfig: { enabled: false, showSoundmojiInEmojiPicker: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
+obj.variations = obj;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/SoundmojiSendingExperiment.tsx");
 
 export const getSoundmojiSendExperiment = function getSoundmojiSendExperiment(location) {
   return closure_0.getConfig({ location: location.location }).enabled;

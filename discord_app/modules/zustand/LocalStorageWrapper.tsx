@@ -1,13 +1,13 @@
-// === Module 7707: frozen ===
+// === Module 7707: LocalStorageWrapper ===
 
-// Module 7707 (frozen)
-import set from "set" /* 2 */;
+// Module 7707 (LocalStorageWrapper)
 import Storage2 from "Storage" /* 510 */;
+import size from "module_2" /* 2 */;
 
 const frozen = Object.freeze({
   getItem(arg0) {
     const Storage = Storage2.Storage;
-    let value = Storage.get(arg0);
+    value = Storage.get(arg0);
     if (value == null) {
       value = null;
     }
@@ -22,6 +22,6 @@ const frozen = Object.freeze({
     return Storage.remove(arg0);
   }
 });
-const result = set.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
+const result = size.fileFinishedImporting("modules/zustand/LocalStorageWrapper.tsx");
 
 export default frozen;

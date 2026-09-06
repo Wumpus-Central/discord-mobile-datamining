@@ -1,23 +1,22 @@
-// === Module 13417: getSubscriptionPlansLoaded ===
+// === Module 13417: useSubscriptionPlansLoaded ===
 
-// Module 13417 (getSubscriptionPlansLoaded)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "handlePaymentSourceUpdate" /* 4221 */;
-import closure_3 from "addSubscriptionPlan" /* 4223 */;
-import closure_4 from "reset" /* 4224 */;
-import { ACTIVE_PREMIUM_SKUS } from "GuildFeatures" /* 1373 */;
+// Module 13417 (useSubscriptionPlansLoaded)
+import LoggerDefault from "Logger" /* 3 */;
+import PaymentSourceStore from "PaymentSourceStore" /* 4221 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4223 */;
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
-const require = arg1;
-function getSubscriptionPlansLoaded(items) {
+const require = fn;
+function getSubscriptionPlansLoaded(items, items2) {
   let tmp = items;
   if (items === undefined) {
     items = [];
     HermesBuiltin.arraySpread(ACTIVE_PREMIUM_SKUS, 0);
     tmp = items;
   }
-  let tmp5 = arg1;
-  if (arg1 === undefined) {
-    const items1 = [closure_2, closure_3, closure_4];
+  let tmp5 = items2;
+  if (items2 === undefined) {
+    const items1 = [PaymentSourceStore, SubscriptionPlanStore, SubscriptionStore];
     tmp5 = items1;
   }
   [tmp9, obj, obj2] = tmp5;
@@ -41,7 +40,6 @@ function getSubscriptionPlansLoaded(items) {
     if (obj.hasPaymentSourceForSKUIds(item10046, tmp)) {
       continue;
     } else {
-      let tmp13 = obj3;
       obj3.return();
       let flag3 = false;
       return false;
@@ -49,8 +47,10 @@ function getSubscriptionPlansLoaded(items) {
   }
   return obj.isLoadedForSKUs(tmp);
 }
-new timestampDefault("useSubscriptionPlansLoaded");
-const result = require("set").fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");
+const ACTIVE_PREMIUM_SKUS = fn(1373).ACTIVE_PREMIUM_SKUS;
+new LoggerDefault("useSubscriptionPlansLoaded");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");
 
 export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() {
   let tmp = arg0;
@@ -60,11 +60,11 @@ export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() 
     tmp = items;
   }
   items = tmp;
-  const items1 = [closure_2, closure_3, closure_4];
+  const items1 = [PaymentSourceStore, SubscriptionPlanStore, SubscriptionStore];
   const items2 = [tmp];
   return items(504).useStateFromStores(items1, () => {
-    items = [closure_1_2, closure_1_3, closure_1_4];
-    return closure_1_6(items, items);
+    items = [PaymentSourceStore, SubscriptionPlanStore, SubscriptionStore];
+    return getSubscriptionPlansLoaded(items, items);
   }, items2);
 };
 export { getSubscriptionPlansLoaded };

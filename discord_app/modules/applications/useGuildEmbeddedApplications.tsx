@@ -1,96 +1,85 @@
-// === Module 9744: importDefaultResult1 ===
+// === Module 9744: useGuildEmbeddedApplications ===
 
-// Module 9744 (importDefaultResult1)
-import setDefault from "set" /* 1090 */;
-import closure_4 from "noop" /* 19 */;
-import importDefaultResult1 from "addApplication" /* 4788 */;
-import initialize from "initialize" /* 504 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+// Module 9744 (useGuildEmbeddedApplications)
+import DurationsDefault from "Durations" /* 1090 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
 
-const require = arg1;
-initialize = {
-  getQueryId: require("ME").QueryIds.GUILD_EMBEDDED_APPLICATIONS,
-  failureStaleAfter: setDefault.Seconds.MINUTE,
+const require = fn;
+fn(504);
+const initialize = {
+  getQueryId: fn(1074).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
+  failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   get(arg0, arg1) {
-    const guildEmbeddedApplications = importDefaultResult1.getGuildEmbeddedApplications(arg1, arg0);
+    const guildEmbeddedApplications = ApplicationStore.getGuildEmbeddedApplications(arg1, arg0);
     let found = null;
     if (null != guildEmbeddedApplications) {
       const mapped = guildEmbeddedApplications.map((applicationId) => {
         application = application.getApplication(applicationId.applicationId);
         let tmp2 = null;
         if (null != application) {
-          const obj = { application: null, status: null };
-          obj[0] = application;
-          obj[1] = applicationId.status;
+          const obj = { application, status: applicationId.status };
           tmp2 = obj;
         }
         return tmp2;
       });
-      found = mapped.filter(require(1369) /* isDiscordFrontendDevelopment */.isNotNullish);
+      found = mapped.filter(require("GlobalUtils").isNotNullish);
     }
     return found;
   },
   load: null
 };
-let closure_3 = importDefaultResult((arg0, arg1, arg2) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
-  c4 = 0;
-  c3 = 0;
-  return (function*(arg0, arg1, arg2) {
-    if (c3 === 2) {
-      c3 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_3 = asyncGeneratorStep(async (arg0, value, arg2) => {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c3 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c3 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else if (null != callback) {
-            obj1 = callback(table[7]);
-            c4 = 1;
-            c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = obj1.getEmbeddedApplicationsForGuild(tmp6, tmp5, tmp7);
-            return obj1;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
+        } else if (null != closure_1) {
+          let obj1 = ApplicationActionCreatorsDefault;
+          c4 = 1;
+          c3 = 1;
+          obj1 = { value: null, done: false };
+          obj1.value = obj1.getEmbeddedApplicationsForGuild(tmp6, tmp5, tmp7);
+          return obj1;
         }
+      } else if (arg0 === 1) {
         c3 = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp11) {
-        c3 = tmp;
-        throw tmp11;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        obj = { value, done: true };
+        return obj;
       }
+      c3 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp11) {
+      c3 = tmp;
+      throw tmp11;
     }
-  })();
+  }
 });
-initialize[3] = function() {
+initialize.load = function() {
   const self = this;
   const apply = closure_3.apply;
   if (typeof apply === "unknown") {
@@ -100,18 +89,19 @@ initialize[3] = function() {
   }
   return applyArgumentsResult;
 };
-let closure_6 = initialize.createFetchStore(importDefaultResult1, initialize);
-const result = require("set").fileFinishedImporting("modules/applications/useGuildEmbeddedApplications.tsx");
+let closure_6 = initialize.createFetchStore(ApplicationStore, initialize);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/useGuildEmbeddedApplications.tsx");
 
 export const useGuildEmbeddedApplications = function useGuildEmbeddedApplications(APP_CHANNEL, guildId, channelId) {
-  let tmp = callback(APP_CHANNEL, guildId, channelId);
+  let tmp = closure_6(APP_CHANNEL, guildId, channelId);
   const data = tmp.data;
-  error = tmp.error;
+  const error = tmp.error;
   const isLoading = tmp.isLoading;
   const refetch = tmp.refetch;
-  React = React.useRef(false);
+  noop.useRef(false);
   const items = [data, isLoading, error, refetch];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != data) {
       ref.current = true;
     } else {

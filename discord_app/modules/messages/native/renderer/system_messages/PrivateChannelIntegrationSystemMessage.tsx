@@ -1,18 +1,18 @@
-// === Module 8031: createPrivateChannelIntegrationSystemMessage ===
+// === Module 8031: PrivateChannelIntegrationSystemMessage ===
 
-// Module 8031 (createPrivateChannelIntegrationSystemMessage)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+// Module 8031 (PrivateChannelIntegrationSystemMessage)
+import Constants from "Constants" /* 1074 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import size from "module_2" /* 2 */;
 
-const MessageTypes = ME.MessageTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx");
+const MessageTypes = Constants.MessageTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PrivateChannelIntegrationSystemMessage.tsx");
 
 export const createPrivateChannelIntegrationSystemMessage = function createPrivateChannelIntegrationSystemMessage(roleStyle, type) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp5 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   const application = message.application;
@@ -21,25 +21,15 @@ export const createPrivateChannelIntegrationSystemMessage = function createPriva
     bot = application.bot;
   }
   if (null != bot) {
-    obj = { action: "bindUserMenu", userId: null, messageChannelId: null, medium: true };
-    obj[1] = application.bot.id;
-    obj[2] = message.channel_id;
+    obj = { action: "bindUserMenu", userId: application.bot.id, messageChannelId: message.channel_id, medium: true };
   }
   if (type === MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED) {
     let tmpResult = tmp(7996);
-    obj = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
-    obj[0] = application;
-    obj[1] = messageAuthorWithProcessedColor.nick;
-    obj[2] = tmp5;
-    obj[3] = tmp7;
+    obj = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
     let privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationAddedSystemMessageASTContent(obj);
   } else {
     tmpResult = tmp(7996);
-    obj1 = { application: null, username: null, usernameOnClick: null, applicationNameOnClick: null };
-    obj1[0] = application;
-    obj1[1] = messageAuthorWithProcessedColor.nick;
-    obj1[2] = tmp5;
-    obj1[3] = tmp7;
+    const obj1 = { application, username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp5, applicationNameOnClick: tmp7 };
     privateChannelIntegrationAddedSystemMessageASTContent = tmpResult.getPrivateChannelIntegrationRemovedSystemMessageASTContent(obj1);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));

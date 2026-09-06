@@ -1,14 +1,13 @@
 // === Module 4270: getGradientThemeFromFlags ===
 
 // Module 4270 (getGradientThemeFromFlags)
-import set from "set" /* 2 */;
-import ManaContext from "ManaContext" /* 4271 */;
+import native from "native" /* 4271 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");
+const result = size.fileFinishedImporting("design/components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx");
 
 export const getGradientThemeFromFlags = function getGradientThemeFromFlags(themeContext) {
-  const obj = ManaContext;
-  ManaContext;
+  native;
   let str = "dark";
   if (!hasThemeFlagResult) {
     let str2 = null;

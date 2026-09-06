@@ -1,10 +1,9 @@
-// === Module 7659: recomputeAffinities ===
+// === Module 7659: UserAffinitiesV2Store ===
 
-// Module 7659 (recomputeAffinities)
+// Module 7659 (UserAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "markAllUserIdListsStale" /* 4209 */;
-import { USER_AFFINITY_TTL } from "result" /* 7660 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
 function recomputeAffinities() {
   const userAffinities = obj.userAffinities;
@@ -14,6 +13,7 @@ function recomputeAffinities() {
     return items;
   }));
 }
+const USER_AFFINITY_TTL = fn(7660).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 const frozen = Object.freeze({ userAffinities: [], lastFetched: 0 });
@@ -25,7 +25,7 @@ class UserAffinitiesV2Store extends PersistedStore {
 const prototype = UserAffinitiesV2Store.prototype;
 prototype["initialize"] = function initialize(userAffinities) {
   const self = this;
-  this.waitFor(closure_0);
+  this.waitFor(RelationshipStore);
   userAffinities = undefined;
   if (userAffinities != null) {
     userAffinities = userAffinities.userAffinities;
@@ -41,7 +41,7 @@ prototype["initialize"] = function initialize(userAffinities) {
       return items;
     }));
   }
-  const items = [closure_0];
+  const items = [RelationshipStore];
   self.syncWith(items, recomputeAffinities);
 };
 prototype["shouldFetch"] = function shouldFetch() {
@@ -60,7 +60,7 @@ prototype["getUserAffinitiesMap"] = function getUserAffinitiesMap() {
   return map;
 };
 prototype["compare"] = function compare(arg0, arg1) {
-  let value = map.get(arg1);
+  value = map.get(arg1);
   let num;
   if (value != null) {
     num = value.communicationProbability;
@@ -79,7 +79,7 @@ prototype["compare"] = function compare(arg0, arg1) {
   return num - num2;
 };
 prototype["compareByDmProbability"] = function compareByDmProbability(arg0, arg1) {
-  let value = map.get(arg1);
+  value = map.get(arg1);
   let num;
   if (value != null) {
     num = value.dmProbability;
@@ -104,7 +104,7 @@ prototype["getState"] = function getState() {
   return obj;
 };
 prototype["isHighlyAffinedVCUser"] = function isHighlyAffinedVCUser(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let num;
   if (value != null) {
     num = value.vcProbability;
@@ -141,7 +141,8 @@ obj = {
     c3 = false;
   }
 };
-const userAffinitiesV2Store = new UserAffinitiesV2Store(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
+const userAffinitiesV2Store = new UserAffinitiesV2Store(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_affinities/UserAffinitiesV2Store.tsx");
 
 export default userAffinitiesV2Store;

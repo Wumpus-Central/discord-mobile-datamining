@@ -1,31 +1,30 @@
-// === Module 15612: fromServer ===
+// === Module 15612: GeneratedTestUsersModels ===
 
-// Module 15612 (fromServer)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 15612 (GeneratedTestUsersModels)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
 let GeneratedTestPoolRecord;
 class GeneratedTestPoolRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GeneratedTestPoolRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ pool_id: tmp.id, summary: tmp.summary, user_ids: tmp.userIds } = global);
     return tmp;
   }
 }
 GeneratedTestPoolRecord["fromServer"] = function fromServer(arg0) {
-  if (typeof GeneratedTestPoolRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof GeneratedTestPoolRecord === "function") {
+    const tmp7 = new GeneratedTestPoolRecord(tmp, tmp2);
+    ({ pool_id: tmp7.id, summary: tmp7.summary, user_ids: tmp7.userIds } = arg0);
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new GeneratedTestPoolRecord("Trying to call a non-function", GeneratedTestPoolRecord);
-  // ThrowIfThisInitialized (0x7c)
-  ({ pool_id: tmp2.id, summary: tmp2.summary, user_ids: tmp2.userIds } = arg0);
-  return tmp2;
 };
-GeneratedTestPoolRecord.prototype["setPassword"] = function setPassword(closure_0) {
-  this.password = closure_0;
+GeneratedTestPoolRecord.prototype["setPassword"] = function setPassword(password) {
+  this.password = password;
   return this;
 };
-const result = require("set").fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersModels.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/generated_test_users/GeneratedTestUsersModels.tsx");
 
 export { GeneratedTestPoolRecord };

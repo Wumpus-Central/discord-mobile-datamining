@@ -1,9 +1,9 @@
-// === Module 10372: filterFavoriteGIFsByQuery ===
+// === Module 10372: GifPickerUtils ===
 
-// Module 10372 (filterFavoriteGIFsByQuery)
-import set from "set" /* 2 */;
+// Module 10372 (GifPickerUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
+const result = size.fileFinishedImporting("modules/gif_picker/GifPickerUtils.tsx");
 
 export const filterFavoriteGIFsByQuery = function filterFavoriteGIFsByQuery(favorites, first2) {
   if ("" === first2) {

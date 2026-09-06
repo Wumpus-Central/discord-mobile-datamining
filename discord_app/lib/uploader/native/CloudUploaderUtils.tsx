@@ -1,26 +1,27 @@
-// === Module 5173: getUploadPayload ===
+// === Module 5173: CloudUploaderUtils ===
 
-// Module 5173 (getUploadPayload)
-import applyDefault from "apply" /* 12 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_3 from "_getSystemLocale" /* 2025 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "refreshSourceMapCookie" /* 1347 */;
+// Module 5173 (CloudUploaderUtils)
+import _modDef12 from "module_12" /* 12 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UploadUtils from "UploadUtils" /* 5129 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
 
-const require = arg1;
-function getUploadPayload(c0) {
-  const obj = { filename: c0.filename, file_size: c0.currentSize, id: applyDefault.uniqueId(), original_content_type: "Array" };
+require = fn;
+function getUploadPayload(self) {
+  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "Array" };
   return obj;
 }
-let result = require("set").fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("lib/uploader/native/CloudUploaderUtils.tsx");
 
 export default { getUploadPayload };
-export const prepareMessagePayload = function prepareMessagePayload(arg0, arr) {
+export const prepareMessagePayload = function prepareMessagePayload(Authorization, arr, arg2, arg3) {
   const items = [];
-  const item = arr.forEach((closure_0, closure_1) => {
-    let obj = items(closure_1_2[3]);
-    obj = {};
-    const merged = Object.assign(obj.getAttachmentPayload(closure_0, closure_1));
+  const item = arr.forEach((item, index) => {
+    const obj = {};
+    const merged = Object.assign(obj.getAttachmentPayload(item, index));
     items.push(obj);
   });
   if (null != arg3) {
@@ -28,26 +29,19 @@ export const prepareMessagePayload = function prepareMessagePayload(arg0, arr) {
       let obj = {};
       let merged = Object.assign(arg2);
       const items1 = [];
-      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(applyDefault.get(obj, arg3, []), 0));
-      const obj3 = applyDefault;
-      let result = applyDefault.set(obj, arg3, items1);
-      const obj4 = applyDefault;
+      HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(_modDef12.get(obj, arg3, []), 0));
+      let result = _modDef12.set(obj, arg3, items1);
     }
-    obj = { Authorization: null, "X-Debug-Options": null, "Accept-Language": null };
-    obj[0] = arg0;
-    obj[1] = debugOptionsHeaderValue.getDebugOptionsHeaderValue();
-    obj[2] = locale.locale;
-    const superPropertiesBase64 = expandEventPropertiesDefault.getSuperPropertiesBase64();
+    obj = { Authorization, "X-Debug-Options": DeveloperOptionsStore.getDebugOptionsHeaderValue(), "Accept-Language": LocaleStore.locale };
+    const superPropertiesBase64 = AnalyticsUtilsDefault.getSuperPropertiesBase64();
     if (null != superPropertiesBase64) {
       obj["X-Super-Properties"] = superPropertiesBase64;
     }
-    fingerprint = fingerprint.getFingerprint();
+    const fingerprint = AuthenticationStore.getFingerprint();
     if (null != fingerprint) {
       obj["X-Fingerprint"] = fingerprint;
     }
-    obj1 = { headers: null, body: null };
-    obj1[0] = obj;
-    obj1[1] = result;
+    const obj1 = { headers: obj, body: result };
     return obj1;
   }
   result = {};

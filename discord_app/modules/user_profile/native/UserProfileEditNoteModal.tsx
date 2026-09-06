@@ -1,60 +1,62 @@
 // === Module 13057: UserProfileEditNoteModal ===
 
 // Module 13057 (UserProfileEditNoteModal)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import UserProfileEditNote from "UserProfileEditNote" /* 13058 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
 
 export default function UserProfileEditNoteModal(arg0) {
   ({ userId: navigation, onSave: closure_1, onBack: dependencyMap } = arg0);
-  let callback;
+  _slicedToArray = undefined;
   function handleClose() {
-    let arr = callback(closure_1_2[4]);
+    let arr = ModalActionCreatorsDefault;
     arr = arr.pop();
     if (dependencyMap != null) {
       dependencyMap();
     }
   }
   navigation = undefined;
-  closure_1 = undefined;
   let obj = navigation(1483);
   navigation = obj.useNavigation();
-  const tmp4 = callback(handleClose.useState(false), 2);
-  closure_1 = tmp4[1];
+  const tmp4 = _slicedToArray(handleClose.useState(false), 2);
+  const onSave = tmp4[1];
   const items = [navigation];
   const effect = handleClose.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     if (!data.data.closing) {
-      callback(true);
+      onSave(true);
     }
   }), items);
-  callback = tmp4[0];
-  obj1 = navigation(1116);
+  _slicedToArray = tmp4[0];
+  let obj1 = navigation(1116);
   obj = { initialRouteName: "root", headerStatusBarHeight: num, headerStyle: null, screens: null };
   let tmpResult = tmp(1116);
   obj = undefined;
   if (!tmpResult.isAndroid()) {
     obj = { height: 56 };
   }
-  obj[2] = obj;
+  obj.headerStyle = obj;
   obj1 = { root: null };
   const obj2 = { title: null, headerTitle: null, headerLeft: null, render: null };
   let intl = tmp(1114).intl;
-  obj2[0] = intl.string(navigation(1114).t.sHHsOM);
-  obj2[1] = function headerTitle() {
+  obj2.title = intl.string(navigation(1114).t.sHHsOM);
+  obj2.headerTitle = function headerTitle() {
     const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
     const intl = navigation(1114).intl;
-    obj[2] = intl.string(navigation(1114).t.sHHsOM);
-    return callback2(navigation(4556).Text, obj);
+    obj.children = intl.string(navigation(1114).t.sHHsOM);
+    return jsx(navigation(4556).Text, { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null });
   };
   tmpResult = tmp(5624);
-  obj2[2] = tmpResult.getHeaderCloseButton(handleClose);
-  obj2[3] = function render() {
-    return closure_1_5(navigation(closure_1_2[10]).default, { userId: navigation, onSave: closure_1, onClose: handleClose, shouldFocusInput: closure_3 });
+  obj2.headerLeft = tmpResult.getHeaderCloseButton(handleClose);
+  obj2.render = function render() {
+    return jsx(UserProfileEditNote.default, { userId: navigation, onSave, onClose: handleClose, shouldFocusInput });
   };
-  obj1[0] = obj2;
-  obj[3] = obj1;
+  obj1.root = obj2;
+  obj.screens = obj1;
   return jsx(navigation(7000).Navigator, obj);
 };

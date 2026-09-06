@@ -1,30 +1,29 @@
-// === Module 7984: createChannelPinnedMessageSystemMessage ===
+// === Module 7984: ChannelPinnedMessageSystemMessage ===
 
-// Module 7984 (createChannelPinnedMessageSystemMessage)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+// Module 7984 (ChannelPinnedMessageSystemMessage)
+import util from "util" /* 1114 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import MessageAccessibilityAction from "MessageAccessibilityAction" /* 7967 */;
+import MessageAccessibilityActions from "MessageAccessibilityActions" /* 7967 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  let obj = getMessageAuthorWithProcessedColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
-  obj = { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true } };
   const messageReference = message.messageReference;
   if (null != messageReference) {
     const intl2 = tmp(1114).intl;
-    obj1 = {};
+    obj = {};
     const merged = Object.assign(obj);
-    ({ channel_id: obj5[1], message_id: obj5[2] } = messageReference);
-    obj1.messageOnClick = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
-    let formatToPartsResult = intl2.formatToParts(tmp(1114).t["7mvRNF"], obj1);
-    const obj2 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
+    ({ channel_id: obj4.targetChannelId, message_id: obj4.targetMessageId } = messageReference);
+    obj.messageOnClick = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
+    let formatToPartsResult = intl2.formatToParts(tmp(1114).t["7mvRNF"], obj);
+    const obj1 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
   } else {
     const intl = tmp(1114).intl;
     formatToPartsResult = intl.formatToParts(tmp(1114).t["6TrHq2"], obj);
@@ -35,20 +34,20 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
     accessibilityActions = [];
   }
   const items = [...accessibilityActions];
-  const obj3 = { label: null, name: null };
+  const obj2 = { label: null, name: null };
   const intl3 = tmp(1114).intl;
-  obj3[0] = intl3.string(getSystemLocale.t["mp1N/2"]);
-  obj3[1] = MessageAccessibilityAction.MessageAccessibilityAction.OPEN_PINS;
-  items.push(obj3);
+  obj2.label = intl3.string(util.t["mp1N/2"]);
+  obj2.name = MessageAccessibilityActions.MessageAccessibilityAction.OPEN_PINS;
+  items.push(obj2);
   if (null != messageReference) {
-    const obj4 = { label: null, name: null };
+    const obj3 = { label: null, name: null };
     const intl4 = tmp(1114).intl;
-    obj4[0] = intl4.string(tmp(1114).t["+TSRGD"]);
-    obj4[1] = tmp(7967).MessageAccessibilityAction.JUMP_TO_MESSAGE;
-    items.push(obj4);
+    obj3.label = intl4.string(tmp(1114).t["+TSRGD"]);
+    obj3.name = tmp(7967).MessageAccessibilityAction.JUMP_TO_MESSAGE;
+    items.push(obj3);
   }
-  const obj5 = { content: formatToPartsResult };
+  const obj4 = { content: formatToPartsResult };
   const merged1 = Object.assign(tmp9);
-  obj5.accessibilityActions = items;
-  return obj5;
+  obj4.accessibilityActions = items;
+  return obj4;
 };

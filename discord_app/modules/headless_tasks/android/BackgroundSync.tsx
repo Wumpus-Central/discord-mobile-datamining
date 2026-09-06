@@ -1,33 +1,31 @@
-// === Module 17929: resolved ===
+// === Module 17929: BackgroundSync ===
 
-// Module 17929 (resolved)
-import timestampDefault from "timestamp" /* 3 */;
-import databaseNameDefault from "databaseName" /* 2003 */;
-import closure_3 from "_handleConnectionOpen" /* 5277 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "getState" /* 1895 */;
+// Module 17929 (BackgroundSync)
+import LoggerDefault from "Logger" /* 3 */;
+import DatabaseManagerDefault from "DatabaseManager" /* 2003 */;
+import background_sync_BackgroundSync from "background_sync/BackgroundSync" /* 17321 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-const require = arg1;
-let closure_6 = new timestampDefault("BackgroundSync");
-let tmp = new timestampDefault("BackgroundSync");
-let result = require("set").fileFinishedImporting("modules/headless_tasks/android/BackgroundSync.tsx");
+require = fn;
+let closure_6 = new LoggerDefault("BackgroundSync");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/headless_tasks/android/BackgroundSync.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
-  if ("active" === state.getState()) {
+  if ("active" === AppStateStore.getState()) {
     let resolved = Promise.resolve();
   } else {
     if (!tmp) {
-      const result = databaseNameDefault.carefullyOpenDatabase(id.getId());
-      const obj2 = databaseNameDefault;
+      const result = DatabaseManagerDefault.carefullyOpenDatabase(AuthenticationStore.getId());
     }
     resolved = new Promise((arg0) => {
-      closure_1_6.log("Executing BackgroundSync with ", callback);
-      const obj = callback(closure_1_2[5]);
-      callback(closure_1_2[5]).backgroundSync({}).then(arg0);
+      logger.log("Executing BackgroundSync with ", closure_0);
+      background_sync_BackgroundSync.backgroundSync({}).then(arg0);
     });
-    let obj = connected;
-    tmp = connected.isConnected() || connected.isTryingToConnect();
+    tmp = GatewayConnectionStore.isConnected() || GatewayConnectionStore.isTryingToConnect();
   }
   return resolved;
 };

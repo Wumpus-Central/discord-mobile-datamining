@@ -1,57 +1,26 @@
 // === Module 8186: useDisplayProfile ===
 
 // Module 8186 (useDisplayProfile)
-import premiumSinceDefault from "premiumSince" /* 8189 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "createUserWidgetFromServer" /* 7621 */;
-import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1933 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8187 */;
+import DisplayProfileDefault from "DisplayProfile" /* 8189 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
 
-const require = arg1;
-let closure_6 = areArraysShallowlyEqual.cachedFunction((arg0, arg1) => new premiumSinceDefault(arg0, arg1));
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
+const require = fn;
+const FunctionUtils = fn(1933);
+let closure_6 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");
 
 export default function useDisplayProfile(arg0, arg1) {
-  const _require = arg0;
-  closure_1 = arg1;
-  const items = [closure_4, closure_5];
-  return _require(504).useStateFromStores(items, () => {
-    let tmp2 = null;
-    if (null != closure_0) {
-      const items = [closure_1_4, closure_1_5];
-      [obj, obj2] = items;
-      let tmp6 = null;
-      if (null !== tmp) {
-        const user = obj.getUser(tmp);
-        const userProfile = obj2.getUserProfile(tmp);
-        let tmp10 = null;
-        if (null != user) {
-          tmp10 = null;
-          if (null != userProfile) {
-            tmp10 = closure_1_6(userProfile, tmp9);
-          }
-        }
-        tmp6 = tmp10;
-      }
-      tmp2 = tmp6;
-    }
-    return tmp2;
-  });
-};
-export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFetchEffect(arg0, arg1) {
-  let _require = arg0;
-  closure_1 = arg1;
-  let items = [arg1, arg0];
-  const effect = React.useEffect(() => {
-    callback(closure_1_2[4])(closure_0, undefined, { guildId: callback });
-  }, items);
   _require = arg0;
   closure_1 = arg1;
-  const items1 = [closure_4, closure_5];
-  return _require(504).useStateFromStores(items1, () => {
+  const items = [UserStore, UserProfileStore];
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_0) {
-      const items = [closure_1_4, closure_1_5];
+      const items = [UserStore, UserProfileStore];
       [obj, obj2] = items;
       let tmp6 = null;
       if (null !== tmp) {
@@ -61,7 +30,7 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
         if (null != user) {
           tmp10 = null;
           if (null != userProfile) {
-            tmp10 = closure_1_6(userProfile, tmp9);
+            tmp10 = closure_6(userProfile, tmp9);
           }
         }
         tmp6 = tmp10;
@@ -71,10 +40,42 @@ export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFe
     return tmp2;
   });
 };
-export const getDisplayProfile = function getDisplayProfile(id, arg1) {
+export const useDisplayProfileWithFetchEffect = function useDisplayProfileWithFetchEffect(arg0, guildId) {
+  _require = arg0;
+  let items = [guildId, arg0];
+  const effect = noop.useEffect(() => {
+    maybeFetchUserProfileDefault(closure_0, undefined, { guildId });
+  }, items);
+  closure_129_0 = arg0;
+  closure_129_1 = guildId;
+  const items1 = [UserStore, UserProfileStore];
+  return require("initialize").useStateFromStores(items1, () => {
+    let tmp2 = null;
+    if (null != closure_0) {
+      const items = [UserStore, UserProfileStore];
+      [obj, obj2] = items;
+      let tmp6 = null;
+      if (null !== tmp) {
+        const user = obj.getUser(tmp);
+        const userProfile = obj2.getUserProfile(tmp);
+        let tmp10 = null;
+        if (null != user) {
+          tmp10 = null;
+          if (null != userProfile) {
+            tmp10 = closure_6(userProfile, tmp9);
+          }
+        }
+        tmp6 = tmp10;
+      }
+      tmp2 = tmp6;
+    }
+    return tmp2;
+  });
+};
+export const getDisplayProfile = function getDisplayProfile(id, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_4, closure_5];
+    const items = [UserStore, UserProfileStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -87,7 +88,7 @@ export const getDisplayProfile = function getDisplayProfile(id, arg1) {
     if (null != user) {
       tmp8 = null;
       if (null != userProfile) {
-        tmp8 = callback(userProfile, tmp7);
+        tmp8 = closure_6(userProfile, tmp7);
       }
     }
     return tmp8;

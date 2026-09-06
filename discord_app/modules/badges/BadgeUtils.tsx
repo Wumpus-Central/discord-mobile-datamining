@@ -1,10 +1,10 @@
-// === Module 11199: isPinnedBadge ===
+// === Module 11199: BadgeUtils ===
 
-// Module 11199 (isPinnedBadge)
-import set from "set" /* 2 */;
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
+// Module 11199 (BadgeUtils)
+import Constants from "Constants" /* 8183 */;
 import BadgeId from "BadgeId" /* 8184 */;
-import items2 from "items" /* 8193 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8193 */;
+import size from "module_2" /* 2 */;
 
 function isPinnedBadge(badge_id) {
   return badge_id === BadgeId.BadgeId.STAFF;
@@ -16,8 +16,8 @@ function getProfileBadgeIconUrl(iconSrc) {
   }
   return iconSrc;
 }
-const getBadgeAssetFromCDN = USER_PROFILE_TOOLTIP_DELAY.getBadgeAssetFromCDN;
-let result = set.fileFinishedImporting("modules/badges/BadgeUtils.tsx");
+const getBadgeAssetFromCDN = Constants.getBadgeAssetFromCDN;
+let result = size.fileFinishedImporting("modules/badges/BadgeUtils.tsx");
 
 export const MAX_DISPLAYED_PROFILE_BADGES = 6;
 export { isPinnedBadge };
@@ -42,20 +42,12 @@ export const groupCustomizableBadges = function groupCustomizableBadges(memo) {
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if (nextResult.owned) {
-      let tmp3 = isPinnedBadge;
-      let tmp4 = nextResult;
       if (isPinnedBadge(tmp2.badge_id)) {
-        let tmp10 = nextResult;
         let arr = fixedBadges.push(tmp2);
+      } else if (tmp2.hidden) {
+        arr = hiddenBadges.push(tmp2);
       } else {
-        let tmp5 = nextResult;
-        if (tmp2.hidden) {
-          let tmp8 = nextResult;
-          arr = hiddenBadges.push(tmp2);
-        } else {
-          let tmp6 = nextResult;
-          let arr1 = reorderableBadges.push(tmp2);
-        }
+        let arr1 = reorderableBadges.push(tmp2);
       }
     }
     continue;
@@ -68,21 +60,15 @@ export const getLegacyIconUrlByBadgeId = function getLegacyIconUrlByBadgeId(badg
   const iter = badges[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tmp2 = nextResult;
-    let obj2 = items2;
+    let obj2 = BadgeIdResolution;
     let profileBadgeId = obj2.resolveProfileBadgeId(nextResult.id);
     let tmp6 = profileBadgeId;
     let hasItem = null == profileBadgeId;
     if (!hasItem) {
-      let tmp8 = profileBadgeId;
       hasItem = map.has(tmp6);
     }
     if (!hasItem) {
-      let tmp9 = profileBadgeId;
-      let tmp10 = getProfileBadgeIconUrl;
-      let tmp11 = nextResult;
       let result = map.set(tmp6, getProfileBadgeIconUrl(tmp2));
     }
     continue;

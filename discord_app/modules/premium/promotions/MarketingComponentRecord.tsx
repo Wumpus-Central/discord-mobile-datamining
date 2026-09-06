@@ -1,19 +1,17 @@
-// === Module 10667: createFromServer ===
+// === Module 10667: MarketingComponentRecord ===
 
-// Module 10667 (createFromServer)
-import setDefault from "set" /* 1090 */;
-import BINARY_READ_OPTIONS from "BINARY_READ_OPTIONS" /* 1224 */;
+// Module 10667 (MarketingComponentRecord)
+import DurationsDefault from "Durations" /* 1090 */;
+import ProtoUtils from "ProtoUtils" /* 1224 */;
 import MurmurHashV3Default from "MurmurHashV3" /* 1241 */;
-import toJSDefault from "toJS" /* 1386 */;
-import create from "create" /* 10668 */;
+import premium_marketing_component_properties from "premium_marketing_component_properties" /* 10668 */;
+import Record from "Record" /* 1386 */;
 
-require = arg1;
-toJSDefault;
+require = fn;
 let MarketingComponentRecord;
 class MarketingComponentRecord extends tmp2 {
   constructor(arg0) {
     tmp = new MarketingComponentRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, componentType: tmp.componentType, properties: tmp.properties, promotionId: tmp.promotionId, startDate: tmp.startDate, endDate: tmp.endDate, effectiveStartDate: tmp.effectiveStartDate, effectiveEndDate: tmp.effectiveEndDate } = global);
     return tmp;
   }
@@ -45,32 +43,32 @@ MarketingComponentRecord["createFromServer"] = function createFromServer(start_d
     endDate = null;
   }
   ({ id, component_type } = start_date);
-  const tmp13 = BINARY_READ_OPTIONS;
-  const b64ToProto = tmp13.b64ToProto;
-  const b64ToProtoResult = b64ToProto(create.PremiumMarketingComponentProperties, start_date.properties);
+  const tmp14 = ProtoUtils;
+  const b64ToProto = tmp14.b64ToProto;
+  const b64ToProtoResult = b64ToProto(premium_marketing_component_properties.PremiumMarketingComponentProperties, start_date.properties);
   const promotion_id = start_date.promotion_id;
-  let tmp15 = date;
+  let tmp16 = date;
   if (date == null) {
-    tmp15 = startDate;
+    tmp16 = startDate;
   }
-  let tmp16 = date1;
+  let tmp17 = date1;
   if (date1 == null) {
-    tmp16 = endDate;
+    tmp17 = endDate;
   }
-  if (typeof MarketingComponentRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof MarketingComponentRecord === "function") {
+    const tmp21 = new MarketingComponentRecord(tmp4, tmp, tmp14, b64ToProto, tmp13, new.target, id, component_type, b64ToProtoResult, promotion_id, date, date1);
+    tmp21.id = id;
+    tmp21.componentType = component_type;
+    tmp21.properties = b64ToProtoResult;
+    tmp21.promotionId = promotion_id;
+    tmp21.startDate = date;
+    tmp21.endDate = date1;
+    tmp21.effectiveStartDate = tmp16;
+    tmp21.effectiveEndDate = tmp17;
+    return tmp21;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp17 = new MarketingComponentRecord(str, tmp, tmp13, b64ToProto, MarketingComponentRecord, new.target, id, component_type, b64ToProtoResult, promotion_id, date, date1);
-  // ThrowIfThisInitialized (0x7c)
-  tmp17.id = id;
-  tmp17.componentType = component_type;
-  tmp17.properties = b64ToProtoResult;
-  tmp17.promotionId = promotion_id;
-  tmp17.startDate = date;
-  tmp17.endDate = date1;
-  tmp17.effectiveStartDate = tmp15;
-  tmp17.effectiveEndDate = tmp16;
-  return tmp17;
 };
 Object.defineProperty(prototype, "isTimed", {
   get: function isTimed() {
@@ -87,13 +85,14 @@ prototype["isIncludedInRollout"] = function isIncludedInRollout(id, date) {
       const diff = time - effectiveStartDate.getTime();
       const _Math = Math;
       const _Math2 = Math;
-      const result = 10000 * Math.min(1, Math.max(0, 0.2 * (diff / setDefault.Millis.HOUR)));
+      const result = 10000 * Math.min(1, Math.max(0, 0.2 * (diff / DurationsDefault.Millis.HOUR)));
       const _HermesInternal = HermesInternal;
       return MurmurHashV3Default.v3("" + self.promotionId + ":" + id) % 10000 < result;
     }
   }
   return true;
 };
-let result = require("set").fileFinishedImporting("modules/premium/promotions/MarketingComponentRecord.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/promotions/MarketingComponentRecord.tsx");
 
 export default MarketingComponentRecord;

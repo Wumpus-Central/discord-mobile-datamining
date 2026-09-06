@@ -1,19 +1,21 @@
 // === Module 16693: useSearchMessages ===
 
 // Module 16693 (useSearchMessages)
-import closure_2 from "handleReaction" /* 7281 */;
-import closure_3 from "prototype" /* 12339 */;
+import SearchUtils from "SearchUtils" /* 12340 */;
+import SearchMessageStore from "SearchMessageStore" /* 7281 */;
+import SearchQueryStore from "SearchQueryStore" /* 12339 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
 
 export const useSearchMessages = function useSearchMessages(searchContext, tab) {
-  const _require = searchContext;
+  _require = searchContext;
   dependencyMap = tab;
-  const items = [closure_3, closure_2];
+  const items = [SearchQueryStore, SearchMessageStore];
   const items1 = [searchContext, tab];
-  return _require(504).useStateFromStores(items, () => {
-    const searchResultsQuery = closure_1_3.getSearchResultsQuery(searchContext);
-    return closure_1_2.getMessages(searchContext(tab[3]).getSearchTabFetchId(searchContext, tab, searchResultsQuery));
+  return require("initialize").useStateFromStores(items, () => {
+    const searchResultsQuery = SearchQueryStore.getSearchResultsQuery(closure_0);
+    return SearchMessageStore.getMessages(SearchUtils.getSearchTabFetchId(closure_0, closure_1, searchResultsQuery));
   }, items1);
 };

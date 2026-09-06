@@ -1,13 +1,14 @@
-// === Module 12303: getSearchState ===
+// === Module 12303: GuildDirectorySearchStore ===
 
-// Module 12303 (getSearchState)
+// Module 12303 (GuildDirectorySearchStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12304 */;
 
-const require = arg1;
+require = fn;
 let closure_2 = [];
-let closure_3 = {};
-let closure_4 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 const Store = initializeDefault.Store;
 class GuildDirectorySearchStore extends Store {
 }
@@ -46,20 +47,19 @@ prototype["shouldFetch"] = function shouldFetch(arg0, arg1) {
   return tmp5;
 };
 GuildDirectorySearchStore.displayName = "GuildDirectorySearchStore";
-const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefault, {
+const guildDirectorySearchStore = new GuildDirectorySearchStore(DispatcherDefault, {
   GUILD_DIRECTORY_SEARCH_START: function handleSearchStart(channelId) {
     closure_3[channelId.channelId] = { fetching: true, mostRecentQuery: channelId.query };
   },
   GUILD_DIRECTORY_SEARCH_SUCCESS: function handleSearchSuccess(query) {
     ({ channelId, results } = query);
-    let items;
     let obj = {};
     const merged = Object.assign(dependencyMap[channelId]);
     obj.fetching = false;
     dependencyMap[channelId] = obj;
-    items = [];
-    const item = results.forEach((entry) => {
-      items.push(items(closure_1_1[0]).guildDirectoryEntryFromServer(entry));
+    const items = [];
+    const item = results.forEach((item) => {
+      items.push(GuildDirectoryUtils.guildDirectoryEntryFromServer(item));
     });
     obj = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
@@ -90,7 +90,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
       if (null != dependencyMap2[channelId][mostRecentQuery]) {
         const results = tmp5.results;
         let obj = {};
-        const found = results.filter((guildId) => guildId.guildId !== closure_0);
+        const found = results.filter((guildId) => guildId.guildId !== require);
         const merged = Object.assign(tmp4[channelId]);
         obj = {};
         const merged1 = Object.assign(tmp5);
@@ -101,6 +101,7 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefaul
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/directory_channels/GuildDirectorySearchStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/GuildDirectorySearchStore.tsx");
 
 export default guildDirectorySearchStore;

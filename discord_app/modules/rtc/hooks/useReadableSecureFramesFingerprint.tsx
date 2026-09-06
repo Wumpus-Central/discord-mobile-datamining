@@ -1,22 +1,24 @@
 // === Module 9158: useReadableSecureFramesFingerprint ===
 
 // Module 9158 (useReadableSecureFramesFingerprint)
-import closure_3 from "noop" /* 19 */;
+import byteLengthDefault from "byteLength" /* 206 */;
+import _mod9135 from "module_9135" /* 9135 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx");
 
 export const useReadableSecureFramesFingerprint = function useReadableSecureFramesFingerprint(fingerprintBase64) {
   fingerprintBase64 = fingerprintBase64.fingerprintBase64;
   const chunkSize = fingerprintBase64.chunkSize;
   const desiredLength = fingerprintBase64.desiredLength;
   const items = [chunkSize, fingerprintBase64, desiredLength];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != fingerprintBase64) {
       if ("" !== tmp) {
-        const obj = chunkSize(desiredLength[1]);
-        const toByteArrayResult = chunkSize(desiredLength[1]).toByteArray(tmp);
-        const str5 = fingerprintBase64(desiredLength[2]).generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
+        const toByteArrayResult = byteLengthDefault.toByteArray(tmp);
+        const str5 = _mod9135.generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize);
         if (null == str5) {
           return null;
         } else {
@@ -31,7 +33,6 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
           }
           return arr;
         }
-        const obj2 = fingerprintBase64(desiredLength[2]);
         tmp14 = chunkSize;
       }
     }
@@ -41,7 +42,7 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
     if ("" !== fingerprintBase64) {
       if (null == memo) {
         const _Error = Error;
-        error = new Error("[useReadableSecureFramesCode] Failed to parse base 64 code.");
+        const error = new Error("[useReadableSecureFramesCode] Failed to parse base 64 code.");
         throw error;
       }
     }

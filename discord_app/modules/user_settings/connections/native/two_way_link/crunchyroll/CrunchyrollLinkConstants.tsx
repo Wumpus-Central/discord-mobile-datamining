@@ -1,8 +1,8 @@
-// === Module 9272: CrunchyrollLinkModalScenes ===
+// === Module 9272: CrunchyrollLinkConstants ===
 
-// Module 9272 (CrunchyrollLinkModalScenes)
-import set from "set" /* 2 */;
+// Module 9272 (CrunchyrollLinkConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkConstants.tsx");
 
 export const CrunchyrollLinkModalScenes = { LANDING: "landing", PRE_CONNECT: "pre-connect", DISCORD_CONSENT: "discord-consent", SUCCESS: "success", ERROR: "error" };

@@ -1,24 +1,16 @@
-// === Module 1607: DRAG_HANDLE ===
+// === Module 1607: MediaKeyboardConstants ===
 
-// Module 1607 (DRAG_HANDLE)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
+// Module 1607 (MediaKeyboardConstants)
+import nativeDefault from "native" /* 576 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import size from "module_2" /* 2 */;
 
-if (isMetaQuest.isMetaQuest()) {
-  let obj = { slotHeight: 24, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };
-  obj[1] = ThemesDefault.colors.BACKGROUND_MOD_STRONG;
-  obj[2] = ThemesDefault.space.PX_64;
-  obj[3] = ThemesDefault.space.PX_8;
-  obj[4] = ThemesDefault.space.PX_16;
+if (MetaQuestUtils.isMetaQuest()) {
+  let obj = { slotHeight: 24, barColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, barWidth: nativeDefault.space.PX_64, barHeight: nativeDefault.space.PX_8, barMarginTop: nativeDefault.space.PX_16 };
 } else {
-  obj = { slotHeight: 16, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };
-  obj[1] = ThemesDefault.colors.BACKGROUND_MOD_MUTED;
-  obj[2] = ThemesDefault.space.PX_32;
-  obj[3] = ThemesDefault.space.PX_4;
-  obj[4] = ThemesDefault.space.PX_4;
+  obj = { slotHeight: 16, barColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, barWidth: nativeDefault.space.PX_32, barHeight: nativeDefault.space.PX_4, barMarginTop: nativeDefault.space.PX_4 };
 }
-const result = set.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
+const result = size.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
 
 export const DRAG_HANDLE = obj;
 export const HEADER_HANDLE_HEIGHT = obj.slotHeight;

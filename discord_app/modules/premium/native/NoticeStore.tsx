@@ -1,15 +1,13 @@
-// === Module 13722: clearDismissUntil ===
+// === Module 13722: NoticeStore ===
 
-// Module 13722 (clearDismissUntil)
+// Module 13722 (NoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import hooksDefault from "hooks" /* 4153 */;
-import closure_3 from "emitChanges" /* 7450 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1373 */;
-import { NoticeTypes } from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import UserOfferStore from "UserOfferStore" /* 7450 */;
 
-require = arg1;
+require = fn;
 function clearDismissUntil(arg0) {
   const Storage = Storage4.Storage;
   Storage.remove(`${closure_8[arg0]}-untilAtLeast`);
@@ -20,13 +18,13 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
   } else {
     if (null != dependencyMap[PREMIUM_TIER_0_TRIAL_ENDING]) {
       const Storage = Storage4.Storage;
-      const value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
+      value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = hooksDefault(value);
+        tmp4 = _modDef4153(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(hooksDefault());
+        return tmp4.isAfter(_modDef4153());
       }
     }
     let tmp6 = null != tmp11;
@@ -52,59 +50,48 @@ function updateNotice() {
     let tmp3 = nextResult;
     let tmp4 = NoticeTypes;
     if (nextResult === NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING) {
-      let tmp9 = store;
-      let tmp10 = PremiumSubscriptionSKUs;
       items = [PremiumSubscriptionSKUs.TIER_2];
-      if (store.getAlmostExpiringTrialOffersForReminder(items).length > 0) {
-        let tmp11 = isNoticeDismissed;
+      if (UserOfferStore.getAlmostExpiringTrialOffersForReminder(items).length > 0) {
         if (!isNoticeDismissed(tmp4.PREMIUM_TIER_2_TRIAL_ENDING)) {
-          let tmp12 = nextResult;
           c6 = tmp3;
-          let tmp13 = iter;
           iter.return();
           break;
         }
       }
-    } else {
-      let tmp5 = nextResult;
-      if (tmp3 === tmp4.PREMIUM_TIER_0_TRIAL_ENDING) {
-        let tmp14 = store;
-        let tmp15 = PremiumSubscriptionSKUs;
-        let items1 = [PremiumSubscriptionSKUs.TIER_0];
-        if (store.getAlmostExpiringTrialOffersForReminder(items1).length > 0) {
-          let tmp6 = isNoticeDismissed;
-          if (!isNoticeDismissed(tmp4.PREMIUM_TIER_0_TRIAL_ENDING)) {
-            let tmp7 = nextResult;
-            c6 = tmp3;
-            let tmp8 = iter;
-            iter.return();
-            break;
-          }
+    } else if (tmp3 === tmp4.PREMIUM_TIER_0_TRIAL_ENDING) {
+      let items1 = [PremiumSubscriptionSKUs.TIER_0];
+      if (UserOfferStore.getAlmostExpiringTrialOffersForReminder(items1).length > 0) {
+        if (!isNoticeDismissed(tmp4.PREMIUM_TIER_0_TRIAL_ENDING)) {
+          c6 = tmp3;
+          iter.return();
           break;
         }
+        break;
       }
     }
     continue;
   }
 }
+const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+const NoticeTypes = fn(1074).NoticeTypes;
 let c6 = null;
 let items = [, ];
 ({ PREMIUM_TIER_2_TRIAL_ENDING: arr[0], PREMIUM_TIER_0_TRIAL_ENDING: arr[1] } = NoticeTypes);
-let closure_8 = { [NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING]: "hidePremiumTier0TrialEndingReminder", [NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: "hidePremiumTier2TrialEndingReminder" };
+const dependencyMap = { [NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING]: "hidePremiumTier0TrialEndingReminder", [NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: "hidePremiumTier2TrialEndingReminder" };
 const Store = initializeDefault.Store;
 class NoticeStore extends Store {
 }
 const prototype = NoticeStore.prototype;
 prototype["initialize"] = function initialize() {
-  items = [closure_3];
+  items = [UserOfferStore];
   this.syncWith(items, updateNotice);
-  this.waitFor(closure_3);
+  this.waitFor(UserOfferStore);
 };
 prototype["getNoticeType"] = function getNoticeType() {
   return c6;
 };
 NoticeStore.displayName = "NoticeStore";
-const noticeStore = new NoticeStore(dispatcherDefault, {
+const noticeStore = new NoticeStore(DispatcherDefault, {
   CONNECTION_OPEN: updateNotice,
   CURRENT_USER_UPDATE: updateNotice,
   PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: updateNotice,
@@ -116,19 +103,13 @@ const noticeStore = new NoticeStore(dispatcherDefault, {
       const iter = dependencyMap[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp4 = table2;
-        let tmp5 = table2[nextResult];
+        let tmp5 = closure_1_8[nextResult];
         let tmp3 = nextResult;
         if (null != tmp5) {
-          let tmp7 = callback;
-          let tmp8 = table;
-          let Storage = callback(table[3]).Storage;
-          let tmp9 = tmp5;
+          let Storage = require("Storage").Storage;
           let removeResult = Storage.remove(tmp6);
         }
-        let tmp11 = callback2;
-        let tmp12 = nextResult;
-        let tmp13 = callback2(tmp3);
+        let tmp13 = clearDismissUntil(tmp3);
         continue;
       }
     })();
@@ -157,6 +138,7 @@ const noticeStore = new NoticeStore(dispatcherDefault, {
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/premium/native/NoticeStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/NoticeStore.tsx");
 
 export default noticeStore;

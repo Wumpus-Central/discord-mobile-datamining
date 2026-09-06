@@ -1,90 +1,85 @@
-// === Module 14467: ? ===
+// === Module 14467: application ===
 
-// Module 14467
-import sendRequest from "sendRequest" /* 1272 */;
-import isTestModeForApplication from "isTestModeForApplication" /* 8854 */;
-import prototypeDefault from "prototype" /* 9554 */;
+// Module 14467 (application)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import TestModeUtils from "TestModeUtils" /* 8854 */;
+import RPCErrorDefault from "RPCError" /* 9554 */;
 import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
+import RPCHelpers from "RPCHelpers" /* 9559 */;
 import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14468 */;
-import closure_3 from "addApplication" /* 4788 */;
-import ME from "ME" /* 1074 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
 
-require = arg1;
-({ ApplicationFlags: c4, Endpoints: c5, RPCCommands, RPCErrors: closure_6 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ ApplicationFlags: closure_4, Endpoints: hasOwnProperty, RPCCommands, RPCErrors: metroRequire } = Constants);
 let obj = {
   validation(string) {
-    let obj = createRpcJoiSchemaObjectDefault(string);
-    obj = { event_name: null, event_properties: null };
+    createRpcJoiSchemaObjectDefault(string);
+    const obj = { event_name: null, event_properties: null };
     const requiredResult = obj.required();
-    obj[0] = string.string().required();
+    obj.event_name = string.string().required();
     const stringResult = string.string();
-    obj[1] = createRpcJoiSchemaObjectDefault(string).required();
+    obj.event_properties = createRpcJoiSchemaObjectDefault(string).required();
     return requiredResult.keys(obj);
   },
   handler(arg0) {
     ({ socket, args } = arg0);
     const event_properties = args.event_properties;
-    let obj = recurseReplaceContentTree;
+    let obj = RPCHelpers;
     const result = obj.validatePostMessageTransport(socket.transport);
-    obj1 = recurseReplaceContentTree;
+    let obj1 = RPCHelpers;
     obj1.validateApplication(socket.application);
     const id = socket.application.id;
     const obj3 = getCurrentEmbeddedActivityChannelDefault();
     if (obj3 != null) {
       const guildId = obj3.getGuildId();
     }
-    application = application.getApplication(id);
+    const application = ApplicationStore.getApplication(id);
     let tmpResult = tmp(8856);
     if (tmpResult.hasApplicationFlag(application, constants.EMBEDDED_FIRST_PARTY)) {
       tmpResult = tmp(9518);
       const activeAnalyticsSessionIDs = tmpResult.getActiveAnalyticsSessionIDs(id);
-      obj = { activity_application_id: null, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
-      obj[0] = id;
+      obj = { activity_application_id: id, activity_channel_type: null, activity_guild_id: null, activity_user_session_id: null };
       let type;
       if (obj3 != null) {
         type = obj3.type;
       }
-      obj[1] = type;
-      obj[2] = guildId;
+      obj.activity_channel_type = type;
+      obj.activity_guild_id = guildId;
       let prop;
       if (activeAnalyticsSessionIDs != null) {
         prop = activeAnalyticsSessionIDs.activityUserSessionId;
       }
-      obj[3] = prop;
+      obj.activity_user_session_id = prop;
       obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(event_properties);
       tmp5(1242).track(args.event_name, obj);
     } else {
-      obj1 = { errorCode: null };
-      obj1[0] = constants2.INVALID_COMMAND;
+      obj1 = { errorCode: constants2.INVALID_COMMAND };
       const tmp12 = new tmp5(9554)(obj1, "This application cannot access this API");
       throw tmp12;
     }
   }
 };
 obj = {
-  scope: require("RPC_SCOPE_CONFIG").RPC_LOCAL_SCOPE,
+  scope: fn(4465).RPC_LOCAL_SCOPE,
   handler(socket) {
     const id = socket.socket.application.id;
     if (null == id) {
-      let obj = { errorCode: null };
-      obj[0] = constants2.INVALID_COMMAND;
-      const tmp10 = new prototypeDefault(obj, "No application.");
+      let obj = { errorCode: constants2.INVALID_COMMAND };
+      const tmp10 = new RPCErrorDefault(obj, "No application.");
       throw tmp10;
     } else {
-      const HTTP = sendRequest.HTTP;
-      obj = { url: null, body: null, retries: 3, oldFormErrors: true, rejectWithError: false };
-      obj[0] = closure_5.APPLICATION_TICKET(id);
-      obj = { test_mode: null };
-      obj[0] = isTestModeForApplication.isTestModeForApplication(id);
-      obj[1] = obj;
-      const obj3 = isTestModeForApplication;
-      return HTTP.post(obj).then((body) => body.body);
+      const HTTP = HTTPUtils.HTTP;
+      const request = { url: hasOwnProperty.APPLICATION_TICKET(id), body: null, retries: 3, oldFormErrors: true, rejectWithError: false };
+      obj = { test_mode: TestModeUtils.isTestModeForApplication(id) };
+      request.body = obj;
+      return HTTP.post(request).then((body) => body.body);
     }
   }
 };
-let result = require("set").fileFinishedImporting("modules/rpc/server/commands/application.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/application.tsx");
 
 export default { [RPCCommands.SEND_ANALYTICS_EVENT]: obj, [RPCCommands.GET_APPLICATION_TICKET]: obj };

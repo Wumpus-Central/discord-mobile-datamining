@@ -1,34 +1,35 @@
 // === Module 11453: GiftCodeRedeemError ===
 
 // Module 11453 (GiftCodeRedeemError)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Link from "Link" /* 1484 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, body: null, header: null, message: null, footer: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 };
-createCacheKey[2] = { marginTop: 32, textAlign: "center" };
-createCacheKey[3] = { marginTop: 8, textAlign: "center" };
-createCacheKey[4] = { paddingHorizontal: 24 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, body: null, header: null, message: null, footer: null };
+createStyles = { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.container = createStyles;
+createStyles.body = { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 };
+createStyles.header = { marginTop: 32, textAlign: "center" };
+createStyles.message = { marginTop: 8, textAlign: "center" };
+createStyles.footer = { paddingHorizontal: 24 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemError.tsx");
 
 export default function GiftCodeRedeemError(children) {
-  const tmp = callback();
-  let obj = createStandardNavigationFactories;
+  const tmp = closure_8();
+  let obj = Link;
   const theme = obj.useTheme();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
@@ -37,23 +38,23 @@ export default function GiftCodeRedeemError(children) {
   } else {
     tmp9Result = tmp9(11455);
   }
-  const items = [closure_6(closure_3, { source: tmp9Result }), , ];
-  obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
+  const items = [timestampProducer(React3, { source: tmp9Result }), , ];
+  const obj1 = { variant: "heading-xl/bold", style: tmp.header, children: null };
   const intl = tmp2(1114).intl;
-  obj1[2] = intl.formatToMarkdownString(getSystemLocale.t.JUvC0s, {});
-  items[1] = closure_6(Text.Text, obj1);
-  items[2] = closure_6(Text.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
-  obj[2] = items;
-  const items1 = [closure_7(closure_5, obj), ];
+  obj1.children = intl.formatToMarkdownString(util.t.JUvC0s, {});
+  items[1] = timestampProducer(Text_Text.Text, obj1);
+  items[2] = timestampProducer(Text_Text.Text, { variant: "text-lg/medium", style: tmp.message, children: children.message });
+  obj.children = items;
+  const items1 = [React5(hasOwnProperty, obj), ];
   const obj3 = { style: tmp.footer, children: null };
   const obj4 = { text: null, size: "md", onPress: null };
   const intl2 = tmp2(1114).intl;
-  obj4[0] = intl2.string(getSystemLocale.t.cpT0Cq);
-  obj4[2] = function onPress() {
-    return callback(table[12]).pop();
+  obj4.text = intl2.string(util.t.cpT0Cq);
+  obj4.onPress = function onPress() {
+    return ModalActionCreatorsDefault.pop();
   };
-  obj3[1] = closure_6(Button.Button, obj4);
-  items1[1] = closure_6(closure_4, obj3);
-  obj[2] = items1;
-  return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  obj3.children = timestampProducer(components_Button_Button.Button, obj4);
+  items1[1] = timestampProducer(React4, obj3);
+  obj.children = items1;
+  return React5(common_SafeAreaView.SafeAreaPaddingView, obj);
 };

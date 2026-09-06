@@ -1,16 +1,19 @@
-// === Module 17035: ? ===
+// === Module 17035: VoicePanelIconButton ===
 
-// Module 17035
-import setDefault from "set" /* 7073 */;
+// Module 17035 (VoicePanelIconButton)
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7073 */;
 import IconButton from "IconButton" /* 8097 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVariant, ref) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
+
+export default noop.memo(noop.forwardRef((overrideVariant, ref) => {
   let str = overrideVariant.overrideVariant;
   ({ style, layout } = overrideVariant);
-  const merged = Object.assign(overrideVariant, Object.create(null));
+  const merged = Object.assign(overrideVariant, Object.assign({ style: 0, overrideVariant: 0, layout: 0 }));
   let obj = { ref, style, layout, children: null };
   obj = {};
   const merged1 = Object.assign(merged);
@@ -20,9 +23,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVari
   }
   obj.variant = str;
   obj.maxFontSizeMultiplier = 2;
-  obj[3] = jsx(IconButton.IconButton, {});
-  return jsx(setDefault, {});
+  obj.children = jsx(IconButton.IconButton, {});
+  return jsx(ReanimatedNativeViewDefault, {});
 }));
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
-
-export default memoResult;

@@ -1,40 +1,38 @@
-// === Module 14829: useObscuredContentNonFriendsDmSettingValue ===
+// === Module 14829: ExplicitMediaFiltersNonFriendsDMsSetting ===
 
-// Module 14829 (useObscuredContentNonFriendsDmSettingValue)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import MobileUserSettings2 from "MobileUserSettings" /* 7975 */;
-import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14820 */;
-import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14821 */;
+// Module 14829 (ExplicitMediaFiltersNonFriendsDMsSetting)
+import util from "util" /* 1114 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7298 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14820 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14821 */;
 import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14823 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
 function useObscuredContentNonFriendsDmSettingValue() {
-  const obj = useExplicitContentSettingOrDefault;
-  return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm)();
+  const obj = useExplicitContentSettingsOrDefault;
+  return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentNonFriendDm)();
 }
 function onObscuredContentNonFriendsDmOnPress() {
-  let obj = resolveExplicitContentSettingWithDefaults;
-  const intl = getSystemLocale.intl;
-  const stringResult = intl.string(getSystemLocale.t.GYpoAq);
-  obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["Yh+HX1"]);
-  obj[2] = function handlePress(explicitContentNonFriendDm) {
-    let obj = callback(table[3]);
-    obj = { explicitContentNonFriendDm };
+  const intl = util.intl;
+  const stringResult = intl.string(util.t.GYpoAq);
+  let obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null };
+  const intl2 = util.intl;
+  obj.subtitle = intl2.string(util.t["Yh+HX1"]);
+  obj.handlePress = function handlePress(explicitContentNonFriendDm) {
+    const obj = { explicitContentNonFriendDm };
     return obj.updateExplicitContentSetting(obj);
   };
-  obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
-  const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
+  obj.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
+  const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
 }
-const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
-const pressable = createToggle.createPressable({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yh+HX1"]);
+    const intl = util.intl;
+    return intl.string(util.t["Yh+HX1"]);
   },
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
@@ -42,38 +40,17 @@ const pressable = createToggle.createPressable({
   useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["N/oRI+"]), , ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.QVdYsK);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t["5mnTa7"]);
     return items;
   },
   useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
 });
-let obj = {
-  useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yh+HX1"]);
-  },
-  parent() {
-    return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
-  },
-  useTrailing: useObscuredContentNonFriendsDmSettingValue,
-  onPress: onObscuredContentNonFriendsDmOnPress,
-  useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
-    return items;
-  },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx");
 
 export default pressable;
 export { useObscuredContentNonFriendsDmSettingValue };

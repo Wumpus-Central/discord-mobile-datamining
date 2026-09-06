@@ -1,9 +1,9 @@
-// === Module 6964: set ===
+// === Module 6964: useStableCallback ===
 
-// Module 6964 (set)
-import set from "set" /* 2 */;
-import useStableCallbackDefault from "useStableCallback" /* 6965 */;
+// Module 6964 (useStableCallback)
+import hooks_useStableCallbackDefault from "hooks/useStableCallback" /* 6965 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("hooks/useStableCallback.tsx");
+const result = size.fileFinishedImporting("hooks/useStableCallback.tsx");
 
-export default useStableCallbackDefault;
+export default hooks_useStableCallbackDefault;

@@ -1,33 +1,33 @@
 // === Module 15221: NavigateForwardButton ===
 
 // Module 15221 (NavigateForwardButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import registerAssetDefault from "registerAsset" /* 15222 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import _modDef15222 from "module_15222" /* 15222 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: null, text: null };
-createCacheKey = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, flexDirection: "row", padding: 16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, text: null };
+createStyles = { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flexDirection: "row", padding: 16 };
+createStyles.container = createStyles;
+createStyles.text = { flexGrow: 1 };
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/NavigateForwardButton.tsx");
 
 export default function NavigateForwardButton(arg0) {
   ({ onPress, text } = arg0);
-  const tmp = callback3();
+  const tmp = closure_5();
   let obj = { style: tmp.container, onPress, children: null };
   obj = { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text };
-  const items = [callback(Text.Text, obj), ];
-  obj = { source: registerAssetDefault };
-  items[1] = callback(Button.Icon, obj);
-  obj[2] = items;
-  return callback2(PressableBase.PressableHighlight, obj);
+  const items = [React3(Text_Text.Text, obj), ];
+  obj = { source: _modDef15222 };
+  items[1] = React3(native.Icon, obj);
+  obj.children = items;
+  return React4(Pressables.PressableHighlight, obj);
 };

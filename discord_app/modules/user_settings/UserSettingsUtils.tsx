@@ -1,32 +1,33 @@
-// === Module 1223: b64ToProto ===
+// === Module 1223: user_settings/UserSettingsUtils ===
 
-// Module 1223 (b64ToProto)
-import applyDefault from "apply" /* 12 */;
-import create from "create" /* 1187 */;
-import create2 from "create" /* 1216 */;
-import create3 from "create" /* 1222 */;
-import BINARY_READ_OPTIONS from "BINARY_READ_OPTIONS" /* 1224 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { ZERO_STRING_GUILD_ID } from "ME" /* 1074 */;
+// Module 1223 (user_settings/UserSettingsUtils)
+import _modDef12 from "module_12" /* 12 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import user_settings_shared from "user_settings_shared" /* 1216 */;
+import frecency_user_settings from "frecency_user_settings" /* 1222 */;
+import ProtoUtils from "ProtoUtils" /* 1224 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function b64ToProto(arg0, arg1) {
   if (null == arg1) {
     return null;
   } else {
     try {
-      return BINARY_READ_OPTIONS.b64ToProto(arg0, arg1);
+      return ProtoUtils.b64ToProto(arg0, arg1);
     } catch (tmp4) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("Settings proto failed to deserialize (potentially corrupt): " + tmp4);
+      const error = new Error("Settings proto failed to deserialize (potentially corrupt): " + tmp4);
       throw error;
     }
   }
 }
-let obj = { [PRELOADED_USER_SETTINGS]: require("create").PreloadedUserSettings, [FRECENCY_AND_FAVORITES_SETTINGS]: require("create").FrecencyUserSettings };
-({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = require("MAX_FAVORITES").UserSettingsTypes);
-const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
+const ZERO_STRING_GUILD_ID = fn(1074).ZERO_STRING_GUILD_ID;
+let obj = { [PRELOADED_USER_SETTINGS]: fn(1187).PreloadedUserSettings, [FRECENCY_AND_FAVORITES_SETTINGS]: fn(1222).FrecencyUserSettings };
+({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = fn(1084).UserSettingsTypes);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
 
 export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
   let tmp = null;
@@ -41,29 +42,28 @@ export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
 };
 export { b64ToProto };
 export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettingsProto(settings) {
-  return b64ToProto(create.PreloadedUserSettings, settings);
+  return b64ToProto(preloaded_user_settings.PreloadedUserSettings, settings);
 };
 export const protoToB64WithType = function protoToB64WithType(arg0, arg1) {
-  obj = BINARY_READ_OPTIONS;
+  obj = ProtoUtils;
   return obj.protoToB64(obj[arg0], arg1);
 };
 export const protoToB64 = function protoToB64(arg0, arg1) {
-  return BINARY_READ_OPTIONS.protoToB64(arg0, arg1);
+  return ProtoUtils.protoToB64(arg0, arg1);
 };
 export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
   obj = {};
   const merged = Object.assign(proto);
   for (const key10007 in arg2) {
-    let tmp5 = key10007;
     delete tmp[tmp2];
     continue;
   }
   ProtoClass.mergePartial(obj, proto2);
   return obj;
 };
-export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds) {
+export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds, arg1, fn) {
   if (null == guilds.guilds) {
-    const AllGuildSettings = create.AllGuildSettings;
+    const AllGuildSettings = preloaded_user_settings.AllGuildSettings;
     guilds.guilds = AllGuildSettings.create();
   }
   let tmp3 = arg1;
@@ -76,14 +76,14 @@ export const mutateUserGuildSettings = function mutateUserGuildSettings(guilds) 
     tmp3 = ZERO_STRING_GUILD_ID;
   }
   if (!(tmp3 in guilds.guilds)) {
-    const GuildSettings = create.GuildSettings;
+    const GuildSettings = preloaded_user_settings.GuildSettings;
     guilds.guilds[tmp3] = GuildSettings.create();
   }
-  return arg2(guilds.guilds[tmp3]);
+  return fn(guilds.guilds[tmp3]);
 };
-export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, closure_0, f74604) {
-  let tmp = closure_0;
-  let tmp2 = null != closure_0;
+export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsInternal(guilds, arg1, fn) {
+  let tmp = arg1;
+  let tmp2 = null != arg1;
   if (tmp2) {
     tmp2 = "null" !== tmp;
   }
@@ -91,14 +91,14 @@ export const mutateUserGuildSettingsInternal = function mutateUserGuildSettingsI
     tmp = ZERO_STRING_GUILD_ID;
   }
   if (!(tmp in guilds.guilds)) {
-    const GuildSettings = create.GuildSettings;
+    const GuildSettings = preloaded_user_settings.GuildSettings;
     guilds.guilds[tmp] = GuildSettings.create();
   }
-  return f74604(guilds.guilds[tmp]);
+  return fn(guilds.guilds[tmp]);
 };
-export const mutateUserChannelSettings = function mutateUserChannelSettings(guilds, arg1, id, arg3) {
+export const mutateUserChannelSettings = function mutateUserChannelSettings(guilds, arg1, id, fn) {
   if (null == guilds.guilds) {
-    const AllGuildSettings = create.AllGuildSettings;
+    const AllGuildSettings = preloaded_user_settings.AllGuildSettings;
     guilds.guilds = AllGuildSettings.create();
   }
   let tmp3 = arg1;
@@ -111,69 +111,62 @@ export const mutateUserChannelSettings = function mutateUserChannelSettings(guil
     tmp3 = ZERO_STRING_GUILD_ID;
   }
   if (!(tmp3 in guilds.guilds)) {
-    const GuildSettings = create.GuildSettings;
+    const GuildSettings = preloaded_user_settings.GuildSettings;
     guilds.guilds[tmp3] = GuildSettings.create();
   }
   if (!(id in guilds.guilds[tmp3].channels)) {
-    const ChannelSettings = create.ChannelSettings;
+    const ChannelSettings = preloaded_user_settings.ChannelSettings;
     tmp7.channels[id] = ChannelSettings.create();
   }
-  return arg3(guilds.guilds[tmp3].channels[id]);
+  return fn(guilds.guilds[tmp3].channels[id]);
 };
-export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, closure_0, f74604) {
-  if (!(closure_0 in channels.channels)) {
-    const ChannelSettings = create.ChannelSettings;
-    channels.channels[closure_0] = ChannelSettings.create();
+export const mutateUserChannelSettingsInternal = function mutateUserChannelSettingsInternal(channels, arg1, fn) {
+  if (!(arg1 in channels.channels)) {
+    const ChannelSettings = preloaded_user_settings.ChannelSettings;
+    channels.channels[arg1] = ChannelSettings.create();
   }
-  return f74604(channels.channels[closure_0]);
+  return fn(channels.channels[arg1]);
 };
-export const runMigrations = function runMigrations(closure_1, closure_2) {
-  if (null == closure_1.versions) {
-    const Versions = create2.Versions;
-    closure_1.versions = Versions.create();
+export const runMigrations = function runMigrations(proto, arg1) {
+  if (null == proto.versions) {
+    const Versions = user_settings_shared.Versions;
+    proto.versions = Versions.create();
   }
   let num = 0;
-  const iter = closure_2[Symbol.iterator]();
+  const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp5 = num;
     if (nextResult.version <= num) {
       let tmp7 = globalThis;
       let _Error = Error;
       let str = "Migrations are out of order or there is a duplicate version";
       throw Error("Migrations are out of order or there is a duplicate version");
     } else {
-      let tmp6 = nextResult;
       num = tmp4.version;
       continue;
     }
   }
   let flag = false;
   const items = [];
-  const iter2 = closure_2[Symbol.iterator]();
+  const iter2 = arg1[Symbol.iterator]();
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {
     obj = nextResult1;
-    if (nextResult1.version <= closure_1.versions.clientVersion) {
+    if (nextResult1.version <= proto.versions.clientVersion) {
       if (tmp8) {
-        let tmp16 = nextResult1;
         let cleanup2 = obj.cleanup;
         if (cleanup2 != null) {
           let cleanup2Result = cleanup2();
         }
       }
     } else {
-      let tmp10 = nextResult1;
-      closure_1.versions.clientVersion = obj.version;
-      if (false !== obj.run(closure_1)) {
+      proto.versions.clientVersion = obj.version;
+      if (false !== obj.run(proto)) {
         flag = true;
-        let tmp13 = nextResult1;
         if (null != obj.cleanup) {
-          let tmp14 = nextResult1;
           let arr = items.push(obj.cleanup);
         }
       } else {
-        let tmp11 = nextResult1;
         let cleanup = obj.cleanup;
         if (cleanup != null) {
           let cleanupResult = cleanup();
@@ -182,26 +175,23 @@ export const runMigrations = function runMigrations(closure_1, closure_2) {
     }
     continue;
   }
-  obj = { proto: closure_1, isDirty: flag, cleanupFuncs: items };
+  obj = { proto, isDirty: flag, cleanupFuncs: items };
   return obj;
 };
-export const serializeUsageHistory = function serializeUsageHistory(usageHistory, closure_13) {
+export const serializeUsageHistory = function serializeUsageHistory(usageHistory, arg1) {
   let length;
   const entries = Object.entries(usageHistory);
-  let tmp = entries;
-  if (entries.length > closure_13) {
-    obj = applyDefault;
+  if (entries.length > arg1) {
+    obj = _modDef12;
     const reversed = obj.sortBy(entries, (arg0) => {
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     }).reverse();
-    tmp = reversed;
-    if (reversed.length > closure_13) {
+    if (reversed.length > arg1) {
       do {
         let arr = reversed.pop();
-        tmp = reversed;
         length = reversed.length;
-      } while (length > closure_13);
+      } while (length > arg1);
     }
     const sortByResult = obj.sortBy(entries, (arg0) => {
       [, tmp] = arg0;
@@ -210,18 +200,15 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
   }
   obj = {};
   while (tmp5 !== undefined) {
-    let tmp7 = callback;
-    let tmp8 = callback(tmp6, 2);
+    let tmp8 = _slicedToArray(tmp6, 2);
     let tmp9 = tmp8[1];
-    let tmp10 = require;
-    let tmp11 = dependencyMap;
-    let FrecencyItem = create3.FrecencyItem;
+    let FrecencyItem = frecency_user_settings.FrecencyItem;
     obj = FrecencyItem.create();
     ({ frecency: tmp12.frecency, recentUses } = tmp9);
-    let found = recentUses.filter((arg0) => {
-      let tmp = null != arg0;
+    let found = recentUses.filter((item) => {
+      let tmp = null != item;
       if (tmp) {
-        tmp = arg0 > 0;
+        tmp = item > 0;
       }
       return tmp;
     });

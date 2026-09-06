@@ -1,21 +1,20 @@
 // === Module 15998: showPushNotificationPromptModal ===
 
 // Module 15998 (showPushNotificationPromptModal)
-import set from "set" /* 2 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import set2 from "set" /* 12409 */;
-import NewUserTypes from "NewUserTypes" /* 12705 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12409 */;
+import NUFConstants from "NUFConstants" /* 12705 */;
+import size from "module_2" /* 2 */;
 
-const PermissionStateType = set2.PermissionStateType;
-let closure_4 = NewUserTypes.NUF_NOTIFICATION_MODAL_KEY;
-let result = set.fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
+const PermissionStateType = PushNotificationPermissionStore.PermissionStateType;
+let closure_4 = NUFConstants.NUF_NOTIFICATION_MODAL_KEY;
+let result = size.fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  let obj = _modDef4763;
-  obj = {
+  const obj = {
     onComplete() {
-      closure_1_1(closure_1_2[2]).popWithKey(closure_1_4);
+      ModalActionCreatorsDefault.popWithKey(closure_4);
       onComplete();
     }
   };

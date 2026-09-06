@@ -1,132 +1,125 @@
 // === Module 6604: ConfirmEmailCode ===
 
 // Module 6604 (ConfirmEmailCode)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import ChangeEmailFields from "ChangeEmailFields" /* 5623 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ useChangeEmailError: c9, ChangeEmailFields: c10 } = ChangeEmailFields);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { background: null, title: null, prompt: null, input: null, contentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center" };
-createCacheKey[2] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
-createCacheKey[3] = { marginTop: ThemesDefault.space.PX_24 };
-let obj1 = { marginTop: ThemesDefault.space.PX_24 };
-createCacheKey[4] = { gap: ThemesDefault.space.PX_24 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { gap: ThemesDefault.space.PX_24 };
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailCode.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const ChangeEmailStore = fn(5623);
+({ useChangeEmailError: closure_9, ChangeEmailFields: c10 } = ChangeEmailStore);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = { background: null, title: null, prompt: null, input: null, contentContainer: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.background = createStyles;
+createStyles.title = { textAlign: "center" };
+createStyles.prompt = { marginTop: 8, lineHeight: 18, textAlign: "center" };
+createStyles.input = { marginTop: nativeDefault.space.PX_24 };
+let obj1 = { marginTop: nativeDefault.space.PX_24 };
+createStyles.contentContainer = { gap: nativeDefault.space.PX_24 };
+let closure_13 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/ConfirmEmailCode.tsx");
 
 export default function ConfirmEmailCode(onFormSubmit) {
   onFormSubmit = onFormSubmit.onFormSubmit;
   const onSuccess = onFormSubmit.onSuccess;
   const onResend = onFormSubmit.onResend;
-  let first;
-  let callback;
-  let React;
+  _slicedToArray = undefined;
+  noop = undefined;
   ({ headerText, confirmButtonText } = onFormSubmit);
-  const tmp = callback5();
+  const tmp = closure_13();
   let obj = onFormSubmit(onResend[9]);
-  const items = [closure_8];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const tmp5 = callback(React.useState(""), 2);
-  first = tmp5[0];
-  const tmp7 = callback(callback2(constants.EMAIL_TOKEN), 2);
-  callback = tmp8;
-  [tmp10, c5] = callback(React.useState(false), 2);
-  const items1 = [first, tmp7[1], onFormSubmit, onSuccess];
-  callback = React.useCallback(first(function*() {
-    if (v02 === 2) {
-      v02 = 3;
-      HermesBuiltin.throwTypeError();
+  const tmp5 = _slicedToArray(noop.useState(""), 2);
+  value = tmp5[0];
+  const tmp7 = _slicedToArray(closure_9(constants.EMAIL_TOKEN), 2);
+  _slicedToArray = tmp8;
+  [tmp10, c5] = _slicedToArray(noop.useState(false), 2);
+  const items1 = [value, tmp7[1], onFormSubmit, onSuccess];
+  const callback = noop.useCallback(value(function*(arg0, value) {
+    if (v32 === 2) {
+      v32 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v02 = 2;
-        if (0 === v0) {
+        v32 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
+            v32 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v02 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            v32 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            let anyErrorMessage = tmp4;
-            let user = tmp8;
-            user = undefined;
-            anyErrorMessage = undefined;
+            closure_0 = tmp8;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
             c3 = 2;
-            v0(null);
-            v02(true);
-            v0 = 3;
-            v02 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(c3);
+            v3(null);
+            v32(true);
+            c4 = 3;
+            v32 = 1;
+            const obj1 = { value: onFormSubmit(first), done: false };
             return obj1;
           }
         } else if (1 === tmp8) {
           c3 = 0;
-          v02(false);
-          throw closure_2;
+          closure_129_5(false);
+          throw tmp45;
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            const tmp26 = new closure_1_1(closure_1_2[10])(closure_2);
-            anyErrorMessage = tmp26;
-            v0(anyErrorMessage.getAnyErrorMessage());
+            closure_128_2 = tmp45;
+            const tmp26 = new tmp4(tmp45[10])(closure_128_2);
+            closure_128_1 = tmp26;
+            closure_129_4(closure_128_1.getAnyErrorMessage());
             c3 = 0;
-            v02(false);
-            v02 = 3;
+            closure_129_5(false);
+            v32 = 3;
           } else if (arg0 === 1) {
-            v02 = 3;
-            throw arg1;
+            v32 = 3;
+            throw value;
           } else if (arg0 !== 2) {
-            user = arg1;
+            closure_128_0 = value;
             let token;
-            if (user != null) {
-              token = user.token;
+            if (closure_128_0 != null) {
+              token = closure_128_0.token;
             }
-            anyErrorMessage(token);
+            closure_129_1(token);
             c3 = 1;
-            const tmp11 = anyErrorMessage;
           }
           c3 = 0;
-          v02(false);
-          v02 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          closure_129_5(false);
+          v32 = 3;
+          obj = { value, done: true };
           return obj;
         }
       } catch (tmp45) {
-        closure_2 = tmp45;
         if (tmp5 === c3) {
-          v02 = tmp3;
+          v32 = tmp3;
           throw tmp45;
         } else if (tmp2 === tmp47) {
-          v0 = tmp2;
+          c4 = tmp2;
         } else {
-          v0 = tmp;
+          c4 = tmp;
         }
       }
     }
@@ -134,70 +127,57 @@ export default function ConfirmEmailCode(onFormSubmit) {
   let tmp13 = null;
   if (null != stateFromStores) {
     obj = { style: null, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: null, children: null };
-    ({ background: obj2[0], contentContainer: obj2[3] } = tmp);
+    ({ background: obj2.style, contentContainer: obj2.contentContainerStyle } = tmp);
     obj = { children: null };
-    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    obj1[0] = tmp.title;
-    obj1[4] = headerText;
-    const items2 = [callback3(tmp2(tmp3[11]).Text, obj1), , , ];
-    let obj2 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
-    obj2[0] = tmp.prompt;
+    let obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: headerText };
+    const items2 = [closure_11(tmp2(tmp3[11]).Text, obj1), , , ];
+    const obj2 = { style: tmp.prompt, variant: "text-sm/medium", color: "text-default", children: null };
     let intl = tmp2(tmp3[12]).intl;
-    obj2[3] = intl.string(tmp2(tmp3[12]).t.SZJowy);
-    items2[1] = callback3(tmp2(tmp3[11]).Text, obj2);
-    let obj3 = { style: null, label: null, textContentType: "emailAddress", keyboardType: "email-address", value: null, onChangeText: null, onSubmitEditing: null, returnKeyType: "done", autoCapitalize: "none", error: null, autoFocus: true };
-    obj3[0] = tmp.input;
+    obj2.children = intl.string(tmp2(tmp3[12]).t.SZJowy);
+    items2[1] = closure_11(tmp2(tmp3[11]).Text, obj2);
+    let obj3 = { style: tmp.input, label: null, textContentType: "emailAddress", keyboardType: "email-address", value: null, onChangeText: null, onSubmitEditing: null, returnKeyType: "done", autoCapitalize: "none", error: null, autoFocus: true };
     const intl2 = tmp2(tmp3[12]).intl;
-    obj3[1] = intl2.string(tmp2(tmp3[12]).t["8mZX6M"]);
-    obj3[4] = first;
-    obj3[5] = tmp5[1];
-    obj3[6] = callback;
-    obj3[9] = tmp7[0];
-    items2[2] = callback3(onSuccess(tmp3[13]), obj3);
-    let obj4 = { text: null, variant: "text-sm/medium", onPress: null };
+    obj3.label = intl2.string(tmp2(tmp3[12]).t["8mZX6M"]);
+    obj3.value = value;
+    obj3.onChangeText = tmp5[1];
+    obj3.onSubmitEditing = callback;
+    obj3.error = tmp7[0];
+    items2[2] = closure_11(onSuccess(tmp3[13]), obj3);
+    const obj4 = { text: null, variant: "text-sm/medium", onPress: null };
     const intl3 = tmp2(tmp3[12]).intl;
-    obj4[0] = intl3.string(tmp2(tmp3[12]).t.K0NPQ6);
-    obj4[2] = first(function*() {
-      closure_1 = tmp3;
-      c3 = 1;
-      yield closure_1_2();
+    obj4.text = intl3.string(tmp2(tmp3[12]).t.K0NPQ6);
+    obj4.onPress = value(function*() {
+      yield onResend();
       if (1 === tmp7) {
         c3 = 0;
-        closure_1 = closure_2;
-        let obj3 = new closure_1_1(closure_1_2[10])(closure_1);
+        closure_128_1 = tmp33;
+        let obj3 = new tmp3(tmp33[10])(closure_128_1);
         const anyErrorMessage = obj3.getAnyErrorMessage();
         if (null != anyErrorMessage) {
-          const obj4 = closure_1_1(closure_1_2[15]);
-          const obj2 = { key: "CONFIRM_EMAIL_ERROR", content: null };
-          obj2[1] = closure_1_0;
-          obj4.open(obj2);
+          tmp3(tmp33[15]).open({ key: "CONFIRM_EMAIL_ERROR", content: anyErrorMessage });
+          tmp3(tmp33[15]);
         }
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = closure_1_1(closure_1_2[15]);
         obj3 = { key: "USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", content: null };
-        const intl = closure_1_0(closure_1_2[12]).intl;
-        obj3[1] = intl.string(closure_1_0(closure_1_2[12]).t["84yeoz"]);
-        obj.open(obj3);
+        const intl = onFormSubmit(tmp33[12]).intl;
+        obj3.content = intl.string(onFormSubmit(tmp33[12]).t["84yeoz"]);
+        tmp3(tmp33[15]).open(obj3);
         c3 = 0;
+        tmp3(tmp33[15]);
       }
-      c3 = 0;
       return arg1;
     });
-    items2[3] = callback3(tmp2(tmp3[14]).LinkButton, obj4);
-    obj[0] = items2;
-    const items3 = [callback4(closure_6, obj), ];
-    const obj5 = { text: null, onPress: null, loading: null, disabled: null };
-    obj5[0] = confirmButtonText;
-    obj5[1] = callback;
-    obj5[2] = tmp10;
-    obj5[3] = "" === first;
-    items3[1] = callback3(tmp2(tmp3[16]).Button, obj5);
-    obj[4] = items3;
-    tmp13 = callback4(closure_7, obj);
+    items2[3] = closure_11(tmp2(tmp3[14]).LinkButton, obj4);
+    obj.children = items2;
+    const items3 = [closure_12(closure_6, obj), ];
+    const obj5 = { text: confirmButtonText, onPress: callback, loading: tmp10, disabled: "" === value };
+    items3[1] = closure_11(tmp2(tmp3[16]).Button, obj5);
+    obj.children = items3;
+    tmp13 = closure_12(closure_7, obj);
     const tmp19 = onSuccess(tmp3[13]);
   }
   return tmp13;

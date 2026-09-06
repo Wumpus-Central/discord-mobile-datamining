@@ -1,14 +1,13 @@
-// === Module 4788: addApplication ===
+// === Module 4788: ApplicationStore ===
 
-// Module 4788 (addApplication)
+// Module 4788 (ApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "createExecutable" /* 1918 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
 function addApplication(fromServer) {
-  const value = map.get(fromServer.id);
+  value = map.get(fromServer.id);
   const result = map4.set(fromServer.id, Date.now());
   let result1 = fromServer;
   if (null != value) {
@@ -17,7 +16,6 @@ function addApplication(fromServer) {
   const result2 = map.set(fromServer.id, result1);
   const result3 = map3.set(fromServer.name.toLowerCase(), result1);
   for (const item10031 of tmp5) {
-    let tmp6 = map3;
     let result4 = map3.set(item10031.toLowerCase(), result1);
     continue;
   }
@@ -30,14 +28,11 @@ function addApplication(fromServer) {
       if (null == nextResult.application) {
         continue;
       } else {
-        let tmp14 = nextResult;
-        let obj3 = closure_1;
+        let obj3 = ApplicationRecord;
         let tmp13 = addApplication;
-        if (tmp12.application instanceof closure_1) {
-          let tmp16 = nextResult;
+        if (tmp12.application instanceof ApplicationRecord) {
           let application = tmp12.application;
         } else {
-          let tmp15 = nextResult;
           application = obj3.createFromServer(tmp12.application);
         }
         let tmp13Result = tmp13(application);
@@ -51,7 +46,6 @@ function handleWishlistAction(wishlistData) {
   if (null != applications) {
     if (0 !== applications.length) {
       for (const item10010 of applications) {
-        let tmp3 = addApplication;
         let tmp4 = addApplication(item10010);
         continue;
       }
@@ -63,14 +57,11 @@ function handleAppWithBot(arg0) {
   ({ userId, applicationId } = arg0);
   let num = closure_10.botUserIdToAppUsage;
   if (null == closure_10.botUserIdToAppUsage[userId]) {
-    let obj = { applicationId: null, lastUsedMs: null };
-    obj[0] = applicationId;
+    let obj = { applicationId, lastUsedMs: null };
     const _Date = Date;
-    obj[1] = Date.now();
+    obj.lastUsedMs = Date.now();
   } else {
-    obj = { applicationId: null, lastUsedMs: null };
-    obj[0] = applicationId;
-    obj[1] = tmp2.lastUsedMs;
+    obj = { applicationId, lastUsedMs: tmp2.lastUsedMs };
   }
   num[userId] = obj;
   new Map();
@@ -85,9 +76,7 @@ function handleApplicationWidgetConfigFetchSuccess(applications) {
     return false;
   } else {
     for (const item10008 of applications) {
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
-      let tmp5 = addApplication(closure_1.createFromServer(item10008));
+      let tmp5 = addApplication(ApplicationRecord.createFromServer(item10008));
       continue;
     }
     return true;
@@ -104,10 +93,7 @@ function handleEntitlementsFetched(arg0) {
       application = sku.application;
     }
     if (null != application) {
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
-      let tmp5 = sku;
-      let tmp6 = addApplication(closure_1.createFromServer(tmp.application));
+      let tmp6 = addApplication(ApplicationRecord.createFromServer(tmp.application));
       flag = true;
     }
     continue;
@@ -140,7 +126,6 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
   if (null != botUserIdToAppUsage) {
     if (typeof botUserIdToAppUsage.botUserIdToAppUsage === "object") {
       for (const key10002 in arg0.botUserIdToAppUsage) {
-        let tmp3 = key10002;
         ({ applicationId, lastUsedMs } = arg0.botUserIdToAppUsage[key10002]);
         let tmp = typeof applicationId === "string";
         if (typeof applicationId === "string") {
@@ -155,10 +140,7 @@ prototype["initialize"] = function initialize(botUserIdToAppUsage) {
         if (!tmp) {
           continue;
         } else {
-          let tmp2 = closure_10;
-          let obj = { applicationId: null, lastUsedMs: null };
-          obj[0] = applicationId;
-          obj[1] = lastUsedMs;
+          let obj = { applicationId, lastUsedMs };
           closure_10.botUserIdToAppUsage[key10002] = obj;
           continue;
         }
@@ -173,14 +155,12 @@ prototype["getState"] = function getState() {
 prototype["_getAllApplications"] = function _getAllApplications() {
   return Array.from(map.values());
 };
-prototype["getGuildApplication"] = function getGuildApplication(closure_0, closure_1) {
-  if (null != closure_0) {
+prototype["getGuildApplication"] = function getGuildApplication(arg0, arg1) {
+  if (null != arg0) {
     const values = map.values();
     for (const item10011 of values) {
       if (item10011.guildId === arg0) {
-        let tmp6 = item10011;
         if (tmp5.type === arg1) {
-          let tmp7 = obj;
           obj.return();
           return item10011;
         }
@@ -191,7 +171,7 @@ prototype["getGuildApplication"] = function getGuildApplication(closure_0, closu
 };
 prototype["getGuildApplicationIds"] = function getGuildApplicationIds(arg0) {
   if (null == arg0) {
-    let value = closure_2;
+    value = closure_2;
   } else {
     value = map1.get(arg0);
     if (value == null) {
@@ -202,7 +182,7 @@ prototype["getGuildApplicationIds"] = function getGuildApplicationIds(arg0) {
 };
 prototype["getGuildEmbeddedApplications"] = function getGuildEmbeddedApplications(arg0, arg1) {
   if (null != arg0) {
-    let value = map2.get(arg0);
+    map2.get(arg0);
     value = undefined;
     if (value != null) {
       value = value.get(arg1);
@@ -218,7 +198,7 @@ prototype["getApplication"] = function getApplication(arg0) {
 prototype["getApplicationByName"] = function getApplicationByName(name) {
   if (null != name) {
     const formatted = name.toLowerCase();
-    let value;
+    value = undefined;
     if (map3.has(formatted)) {
       value = map3.get(formatted);
     }
@@ -231,8 +211,8 @@ prototype["getApplicationLastUpdated"] = function getApplicationLastUpdated(arg0
 prototype["isFetchingApplication"] = function isFetchingApplication(id) {
   return true === map5.get(id);
 };
-prototype["isHydrated"] = function isHydrated(id) {
-  return set.has(id);
+prototype["isHydrated"] = function isHydrated(item) {
+  return set.has(item);
 };
 prototype["didFetchingApplicationFail"] = function didFetchingApplicationFail(applicationId) {
   return false === map5.get(applicationId);
@@ -251,7 +231,7 @@ prototype["getAppIdForBotUserId"] = function getAppIdForBotUserId(id) {
 };
 ApplicationStore.displayName = "ApplicationStore";
 ApplicationStore.persistKey = "ApplicationStore";
-const applicationStore = new ApplicationStore(dispatcherDefault, {
+const applicationStore = new ApplicationStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     map.clear();
     map1.clear();
@@ -265,20 +245,16 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const iter = arg0.applications[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp2 = addApplication;
-      let tmp3 = closure_1;
       let tmp4 = new.target;
       let tmp5 = new.target;
-      let tmp6 = nextResult;
-      let tmp7 = new closure_1(nextResult);
-      let tmp8 = tmp7;
+      let tmp7 = new ApplicationRecord(nextResult);
       let tmp9 = addApplication(tmp7);
       continue;
     }
   },
   APPLICATION_FETCH: function handleApplicationFetch(applicationId) {
     applicationId = applicationId.applicationId;
-    const value = map5.get(applicationId);
+    value = map5.get(applicationId);
     const result = map5.set(applicationId, true);
     return true !== value;
   },
@@ -287,11 +263,11 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     if (true === application.isHydrated) {
       set.add(application.id);
     }
-    addApplication(closure_1.createFromServer(application));
+    addApplication(ApplicationRecord.createFromServer(application));
   },
   APPLICATION_FETCH_FAIL: function handleApplicationFetchFail(applicationId) {
     applicationId = applicationId.applicationId;
-    const value = map5.get(applicationId);
+    value = map5.get(applicationId);
     const result = map5.set(applicationId, false);
     return false !== value;
   },
@@ -300,8 +276,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const iter = arg0.applicationIds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp2 = map5;
-      let value = map5.get(nextResult);
+      value = map5.get(nextResult);
       let result = map5.set(nextResult, true);
       flag = true !== value;
       continue;
@@ -314,22 +289,16 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (true === tmp) {
-        let tmp4 = set;
-        let tmp5 = nextResult;
         let addResult = set.add(tmp3.id);
       }
-      let tmp7 = addApplication;
-      let tmp8 = closure_1;
-      let tmp9 = nextResult;
-      let tmp10 = addApplication(closure_1.createFromServer(tmp3));
+      let tmp10 = addApplication(ApplicationRecord.createFromServer(tmp3));
       continue;
     }
   },
   APPLICATIONS_FETCH_FAIL: function handleApplicationsFetchFail(arg0) {
     let flag = false;
     for (const item10008 of tmp) {
-      let tmp2 = map5;
-      let value = map5.get(item10008);
+      value = map5.get(item10008);
       let result = map5.set(item10008, false);
       flag = false !== value;
       continue;
@@ -337,7 +306,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     return flag;
   },
   APPLICATION_UPDATE: function handleUpdateApplication(application) {
-    addApplication(closure_1.createFromServer(application.application));
+    addApplication(ApplicationRecord.createFromServer(application.application));
   },
   APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: handleEntitlementsFetched,
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: handleEntitlementsFetched,
@@ -348,9 +317,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let arr = items.push(nextResult.id);
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
-      let tmp5 = addApplication(closure_1.createFromServer(nextResult));
+      let tmp5 = addApplication(ApplicationRecord.createFromServer(nextResult));
       continue;
     }
     const result = map1.set(guildId.guildId, items);
@@ -362,16 +329,12 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let application = nextResult.application;
-      let obj = { applicationId: null, status: null };
-      obj[0] = application.id;
-      obj[1] = nextResult.status;
+      let obj = { applicationId: application.id, status: nextResult.status };
       let arr = items.push(obj);
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
-      let tmp5 = addApplication(closure_1.createFromServer(application));
+      let tmp5 = addApplication(ApplicationRecord.createFromServer(application));
       continue;
     }
-    let value = map2.get(guildId);
+    value = map2.get(guildId);
     if (null == value) {
       const _Map = Map;
       map = new Map();
@@ -396,14 +359,10 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
       let tmp2 = application;
       let hasItem = null == application;
       if (!hasItem) {
-        let tmp4 = application;
         hasItem = set.has(tmp2.id);
       }
       if (!hasItem) {
-        let tmp5 = addApplication;
-        let tmp6 = closure_1;
-        let tmp7 = application;
-        let tmp8 = addApplication(closure_1.createFromServer(tmp2));
+        let tmp8 = addApplication(ApplicationRecord.createFromServer(tmp2));
       }
       continue;
     }
@@ -419,7 +378,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     if (null == application) {
       return false;
     } else {
-      addApplication(closure_1.createFromServer(payment.sku.application));
+      addApplication(ApplicationRecord.createFromServer(payment.sku.application));
     }
   },
   INVITE_RESOLVE_SUCCESS: function handleResolveInvite(invite) {
@@ -427,7 +386,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     if (null == invite.target_application) {
       return false;
     } else {
-      addApplication(closure_1.createFromServer(invite.target_application));
+      addApplication(ApplicationRecord.createFromServer(invite.target_application));
     }
   },
   GIFT_CODE_RESOLVE_SUCCESS: function handleGiftCodeResolveSuccess(giftCode) {
@@ -440,14 +399,12 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     if (null == application) {
       return false;
     } else {
-      addApplication(closure_1.createFromServer(giftCode.store_listing.sku.application));
+      addApplication(ApplicationRecord.createFromServer(giftCode.store_listing.sku.application));
     }
   },
   LIBRARY_FETCH_SUCCESS: function handleLibraryApplicationsFetch(arg0) {
     while (tmp !== undefined) {
-      let tmp3 = addApplication;
-      let tmp4 = closure_1;
-      let tmp5 = addApplication(closure_1.createFromServer(tmp2.application));
+      let tmp5 = addApplication(ApplicationRecord.createFromServer(tmp2.application));
       continue;
     }
   },
@@ -456,7 +413,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     if (null == storeListing.sku.application) {
       return false;
     } else {
-      addApplication(closure_1.createFromServer(storeListing.sku.application));
+      addApplication(ApplicationRecord.createFromServer(storeListing.sku.application));
     }
   },
   LOAD_MESSAGES_SUCCESS: function handleLoadMessages(messages) {
@@ -466,7 +423,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
       if (attachments != null) {
         const item = attachments.forEach((application) => {
           if (null != application.application) {
-            callback(closure_1.createFromServer(application.application));
+            closure_1_11(closure_1_1.createFromServer(application.application));
           }
         });
       }
@@ -479,9 +436,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
       bot = null != application;
     }
     if (bot) {
-      const obj = { userId: null, applicationId: null };
-      obj[0] = user.id;
-      obj[1] = application.id;
+      const obj = { userId: user.id, applicationId: application.id };
       handleAppWithBot(obj);
     }
   },
@@ -502,18 +457,12 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult) {
-        let tmp4 = addApplication;
-        let tmp5 = closure_1;
-        let tmp6 = nextResult;
-        let tmp7 = addApplication(closure_1.createFromServer(tmp3.application));
+        let tmp7 = addApplication(ApplicationRecord.createFromServer(tmp3.application));
         let bot = tmp3.application.bot;
         if (null != bot) {
-          let tmp9 = handleAppWithBot;
           let obj = { userId: null, applicationId: null };
-          let tmp10 = bot;
-          obj[0] = tmp8.id;
-          let tmp11 = nextResult;
-          obj[1] = tmp3.application.id;
+          obj.userId = tmp8.id;
+          obj.applicationId = tmp3.application.id;
           let tmp12 = handleAppWithBot(obj);
         }
       }
@@ -524,12 +473,12 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     items = items.items;
     const item = items.forEach((application) => {
       if (null != application.application) {
-        callback(closure_1.createFromServer(application.application));
+        addApplication(ApplicationRecord.createFromServer(application.application));
       }
     });
   },
   OAUTH2_TOKEN_CREATE: function handleOAuth2TokenCreate(application) {
-    addApplication(closure_1.createFromServer(application.application));
+    addApplication(ApplicationRecord.createFromServer(application.application));
   },
   WISHLIST_FETCH_SUCCESS: handleWishlistAction,
   WISHLIST_ADD_SKU_SUCCESS: handleWishlistAction,
@@ -547,7 +496,6 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
     if (null != applications) {
       if (0 !== applications.length) {
         for (const item10010 of applications) {
-          let tmp3 = addApplication;
           let tmp4 = addApplication(item10010);
           continue;
         }
@@ -559,6 +507,7 @@ const applicationStore = new ApplicationStore(dispatcherDefault, {
   APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess,
   APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: handleApplicationWidgetConfigFetchSuccess
 });
-let result = set.fileFinishedImporting("modules/applications/ApplicationStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/applications/ApplicationStore.tsx");
 
 export default applicationStore;

@@ -1,13 +1,13 @@
-// === Module 9943: getMessageLimit ===
+// === Module 9943: getAdaptiveMessageLimit ===
 
-// Module 9943 (getMessageLimit)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9943 (getAdaptiveMessageLimit)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const MAX_MESSAGES_PER_CHANNEL = ME.MAX_MESSAGES_PER_CHANNEL;
-const result = set.fileFinishedImporting("modules/messages/getAdaptiveMessageLimit.native.tsx");
+const MAX_MESSAGES_PER_CHANNEL = Constants.MAX_MESSAGES_PER_CHANNEL;
+const result = size.fileFinishedImporting("modules/messages/getAdaptiveMessageLimit.native.tsx");
 
-export function getMessageLimit(arg0) {
+export function getMessageLimit() {
   return MAX_MESSAGES_PER_CHANNEL;
 }
 export function useMessageLimit() {

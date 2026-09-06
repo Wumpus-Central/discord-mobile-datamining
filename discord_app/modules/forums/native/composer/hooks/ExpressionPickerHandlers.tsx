@@ -1,9 +1,10 @@
-// === Module 10260: usePressEmojiHandler ===
+// === Module 10260: ExpressionPickerHandlers ===
 
-// Module 10260 (usePressEmojiHandler)
-import closure_0 from "noop" /* 19 */;
+// Module 10260 (ExpressionPickerHandlers)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/composer/hooks/ExpressionPickerHandlers.tsx");
 
 export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
   selection = selection.selection;
@@ -11,12 +12,11 @@ export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
   const handleTextChange = selection.handleTextChange;
   const focusTextInput = selection.focusTextInput;
   const setSelection = selection.setSelection;
-  closure_5 = undefined;
-  closure_5 = selection.useRef({ selection, draftContent, handleTextChange, focusTextInput, setSelection });
-  const effect = selection.useEffect(() => {
+  noop.useRef({ selection, draftContent, handleTextChange, focusTextInput, setSelection });
+  const effect = noop.useEffect(() => {
     closure_5.current = { selection, draftContent, handleTextChange, focusTextInput, setSelection };
   });
-  return selection.useCallback((id) => {
+  return noop.useCallback((id) => {
     const current = ref.current;
     ({ selection, draftContent, handleTextChange } = current);
     ({ focusTextInput, setSelection } = current);
@@ -31,9 +31,7 @@ export const usePressEmojiHandler = function usePressEmojiHandler(selection) {
         handleTextChange(substr + id.surrogates + substr1);
         let length = substr + id.surrogates.length;
       }
-      const obj = { start: null, end: null };
-      obj[0] = length;
-      obj[1] = length;
+      const obj = { start: length, end: length };
       setSelection(obj);
       focusTextInput();
     }
@@ -58,7 +56,7 @@ export const usePressGIFHandler = function usePressGIFHandler(selection) {
   const items = [draftContent, focusTextInput, handleTextChange, , , ];
   ({ end: arr[3], start: arr[4] } = selection);
   items[5] = setSelection;
-  return selection.useCallback((url) => {
+  return noop.useCallback((url) => {
     url = url.url;
     const substr = draftContent.substring(0, selection.start);
     let start = selection.end;

@@ -1,40 +1,41 @@
-// === Module 12638: ? ===
+// === Module 12638: ChatPlaceholder ===
 
-// Module 12638
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { useChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight" /* 9485 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12638 (ChatPlaceholder)
+import nativeDefault from "native" /* 576 */;
+import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight" /* 12640 */;
+import ChatPlaceholderRowDefault from "ChatPlaceholderRow" /* 12641 */;
+import noop from "module_19" /* 19 */;
 
+let closure_3 = fn(9485).useChatInputContainerHeight;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { placeholder: null };
 obj = {};
-const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
-obj.paddingBottom = ThemesDefault.space.PX_24;
+const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
+obj.paddingBottom = nativeDefault.space.PX_24;
 obj.flexDirection = "column-reverse";
 obj.overflow = "hidden";
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function ChatPlaceholder(screenIndex) {
-  importDefault = undefined;
+obj.placeholder = obj;
+let closure_5 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
+
+export default noop.memo(function ChatPlaceholder(screenIndex) {
   let height;
-  importAllResult = undefined;
-  let callback;
-  callback = undefined;
-  let tmp2 = callback(screenIndex.screenIndex);
+  c3 = undefined;
+  let tmp2 = c3(screenIndex.screenIndex);
   importDefault = tmp2;
-  height = importDefault(height[8])().height;
-  const rect = importDefault(height[6])();
-  const insets = importDefault(height[7])({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets;
+  height = require("useWindowDimensions")().height;
+  const rect = require("useSafeAreaInsets")();
+  const insets = require("useSafeAreaInsetsKeyboardAware")({ isKeyboardAwareOnAndroid: false, includeKeyboardHeight: true }).insets;
   let diff = insets.bottom - rect.bottom;
   let sum = rect.top + insets.bottom;
-  importAllResult = diff;
-  callback = sum;
+  noop = diff;
+  c3 = sum;
   let items = [tmp2, diff];
-  importDefault = undefined;
-  const memo = importAllResult.useMemo(() => ({ marginBottom: closure_0 + c2 }), items);
-  importDefault = importAllResult.useRef([]);
-  callback = importAllResult.useCallback((arg0) => {
+  const memo = noop.useMemo(() => ({ marginBottom: closure_0 + c2 }), items);
+  importDefault = noop.useRef([]);
+  const callback = noop.useCallback((arg0) => {
     let tmp2 = ref.current[arg0];
     if (null == tmp2) {
       const _Math = Math;
@@ -46,34 +47,25 @@ const memoResult = importAllResult.memo(function ChatPlaceholder(screenIndex) {
     return tmp2;
   }, []);
   const items1 = [height, sum, tmp2, callback];
-  let tmp = callback2();
-  const children = importAllResult.useMemo(() => {
+  let tmp = closure_5();
+  const memo1 = noop.useMemo(() => {
     let diff;
     const items = [];
     let num = 0;
     let num2 = 0;
     do {
-      let tmp = callback;
       let tmp2 = callback(num);
-      let tmp3 = ref;
-      let tmp4 = height;
-      num2 = num2 + ref(height[10])(tmp2);
-      let tmp5 = callback;
-      let obj = { lines: null };
-      obj[0] = tmp2;
+      num2 = num2 + getChatPlaceholderRowHeightDefault(tmp2);
+      let obj = { lines: tmp2 };
       let sum = num + 1;
-      let arr = items.push(callback(ref(height[11]), obj, num));
-      let tmp8 = height;
-      let tmp9 = ref;
-      let tmp10 = c3;
+      let arr = items.push(jsx(ChatPlaceholderRowDefault, { lines: tmp2 }, num));
       num = sum;
-      diff = height - ref - c3;
+      diff = height - closure_0 - c3;
     } while (num2 < diff);
     return items;
   }, items1);
-  const style = [tmp.placeholder, memo, importDefault(height[9])({ visible: true, animated: true })];
-  return callback(importDefault(height[12]).View, { style, pointerEvents: "none", children });
+  let obj = { style: null, pointerEvents: "none", children: memo1 };
+  const items2 = [tmp.placeholder, memo, require("useChatPlaceholderAnimatedStyles")({ visible: true, animated: true })];
+  obj.style = items2;
+  return callback(require("ReanimatedRexport").View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
-
-export default memoResult;

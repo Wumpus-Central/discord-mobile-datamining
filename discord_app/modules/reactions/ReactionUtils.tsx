@@ -1,24 +1,24 @@
-// === Module 4211: MAX_REACTIONS ===
+// === Module 4211: ReactionUtils ===
 
-// Module 4211 (MAX_REACTIONS)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
-import ReactionTypes from "ReactionTypes" /* 7763 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import ME from "ME" /* 1074 */;
-import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4212 */;
+// Module 4211 (ReactionUtils)
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-({ AnalyticsSections: c4, AnalyticEvents: c5 } = ME);
-let result = require("set").fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AnalyticsSections: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
+const constants3 = fn(4212).NotificationSettingsUpdateType;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
 export const MAX_REACTIONS = 20;
 export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   if (null == emoji.id) {
-    let result = parseRawEmojiObjectDefault.convertSurrogateToName(emoji.name);
-    const obj = parseRawEmojiObjectDefault;
+    let result = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);
   } else {
     const _HermesInternal = HermesInternal;
     result = ":" + emoji.name + ":";
@@ -26,18 +26,12 @@ export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   return result;
 };
 export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayName(me, count, emoji, arg3) {
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (arg3) {
     if (me) {
-      Z_l_qu = t.i9DXqM;
-      let tmp6 = tmp2;
-      let tmp7 = tmp2;
-      let tmp8 = tmp;
+      let i9DXqM = t.i9DXqM;
     } else {
-      Z_l_qu = t["Z/l+qu"];
-      tmp6 = tmp2;
-      tmp7 = tmp2;
-      tmp8 = tmp;
+      i9DXqM = t["Z/l+qu"];
     }
   } else {
     if (me) {
@@ -48,11 +42,9 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
       tmp5 = tmp;
     }
     const intl = tmp5(1114).intl;
-    const obj = { reactions: null, emojiName: null };
-    obj[0] = count;
+    const obj = { reactions: count, emojiName: null };
     if (null == emoji.id) {
-      let str2 = parseRawEmojiObjectDefault.convertSurrogateToName(emoji.name);
-      const obj2 = parseRawEmojiObjectDefault;
+      let str2 = UnicodeEmojisDefault.convertSurrogateToName(emoji.name);
     } else {
       const _HermesInternal = HermesInternal;
       str2 = ":" + emoji.name + ":";
@@ -67,17 +59,17 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
     if (str3 == null) {
       str3 = "";
     }
-    obj[1] = str3;
+    obj.emojiName = str3;
     return intl.formatToPlainString(PirBBE, obj);
   }
 };
 export const isMeReaction = function isMeReaction(me, me_burst, arg2) {
-  let tmp3 = arg2 === ReactionTypes.ReactionTypes.BURST;
+  let tmp3 = arg2 === MessageReactionsTypes.ReactionTypes.BURST;
   if (tmp3) {
     tmp3 = true === me_burst;
   }
   if (!tmp3) {
-    let tmp5 = arg2 === ReactionTypes.ReactionTypes.NORMAL;
+    let tmp5 = arg2 === MessageReactionsTypes.ReactionTypes.NORMAL;
     if (tmp5) {
       tmp5 = true === me;
     }
@@ -98,8 +90,8 @@ export const toReactionEmoji = function toReactionEmoji(byName) {
   if (str == null) {
     str = "";
   }
-  obj[1] = str;
-  obj[2] = Boolean(byName.animated);
+  obj.name = str;
+  obj.animated = Boolean(byName.animated);
   return obj;
 };
 export const isCustomReactionEmojiId = function isCustomReactionEmojiId(emojiId) {
@@ -116,8 +108,8 @@ export const isCustomReactionEmojiId = function isCustomReactionEmojiId(emojiId)
     tmp2 = "0" !== String(emojiId);
   }
 };
-export const emojiEquals = function emojiEquals(emoji, closure_0) {
-  if (null != closure_0.id) {
+export const emojiEquals = function emojiEquals(emoji, id2) {
+  if (null != id2.id) {
     if (null != emoji.id) {
       const _HermesInternal = HermesInternal;
       let id = "" + emoji.id;
@@ -125,9 +117,9 @@ export const emojiEquals = function emojiEquals(emoji, closure_0) {
       id = emoji.id;
     }
     const _HermesInternal2 = HermesInternal;
-    return "" + closure_0.id === id;
+    return "" + id2.id === id;
   } else {
-    return null == emoji.id && closure_0.name === emoji.name;
+    return null == emoji.id && id2.name === emoji.name;
   }
 };
 export const getBurstAnalyticsSection = function getBurstAnalyticsSection(isThread) {
@@ -143,14 +135,13 @@ export const getBurstAnalyticsSection = function getBurstAnalyticsSection(isThre
 export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
   optimistic = optimistic.optimistic;
   if (optimistic) {
-    optimistic = id.getId() !== optimistic.userId;
+    optimistic = AuthenticationStore.getId() !== optimistic.userId;
   }
   return !optimistic;
 };
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
-  const ReactionNotifications = explicitContentFromProto.ReactionNotifications;
+  const ReactionNotifications = UserSettings.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };
+  const obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

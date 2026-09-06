@@ -1,9 +1,9 @@
-// === Module 7390: useOverlayTrackedGames ===
+// === Module 7390: OverlayTrackingUtils ===
 
-// Module 7390 (useOverlayTrackedGames)
-import set from "set" /* 2 */;
+// Module 7390 (OverlayTrackingUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
 
 export function useOverlayTrackedGames() {
   return [];

@@ -1,20 +1,21 @@
 // === Module 13065: useIsGameFriends ===
 
 // Module 13065 (useIsGameFriends)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 7658 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
+import _slicedToArray from "module_32" /* 32 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
+const require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");
 
 export const useIsGameFriends = function useIsGameFriends(id) {
-  const _require = id;
-  let items = [closure_3];
+  _require = id;
+  let items = [GameRelationshipStore];
   const items1 = [id];
-  return callback(_require(504).useStateFromStores(items, () => {
-    const gameRelationshipsForUserByType = closure_1_3.getGameRelationshipsForUserByType(closure_0, closure_1_4.FRIEND);
-    const items = [gameRelationshipsForUserByType.length > 0, closure_1_3.getGameRelationshipsVersion()];
+  return _slicedToArray(require("initialize").useStateFromStores(items, () => {
+    const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, RelationshipTypes.FRIEND);
+    const items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5432).isVersionEqual), 1)[0];
+  }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 };

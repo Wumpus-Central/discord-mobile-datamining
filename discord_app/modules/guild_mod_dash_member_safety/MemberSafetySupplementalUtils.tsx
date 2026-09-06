@@ -1,175 +1,151 @@
-// === Module 7502: createFetchKeys ===
+// === Module 7502: MemberSafetySupplementalUtils ===
 
-// Module 7502 (createFetchKeys)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5283 */;
-import PlatformTypes from "PlatformTypes" /* 7503 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 7502 (MemberSafetySupplementalUtils)
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import shared from "shared" /* 4411 */;
+import PlatformsDefault from "Platforms" /* 5283 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7503 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
+require = fn;
 function createFetchKeys(arg0, arr) {
   closure_0 = arg0;
-  return arr.map((arg0) => closure_0 + arg0);
+  return arr.map((item) => closure_0 + item);
 }
 function getUserIdFromFetchKey(arg0) {
   return arg0.split("-")[1];
 }
-function updateFetchRequests(arr) {
+function updateFetchRequests(arr, arg1) {
   closure_0 = arg1;
-  const item = arr.forEach((arg0) => {
-    closure_1_5[arg0] = closure_0;
+  const item = arr.forEach((item) => {
+    closure_5[item] = closure_0;
   });
 }
 function _transformFetchMemberSupplementalResponse(userId) {
   return { userId: userId.user_id, sourceInviteCode: userId.source_invite_code, joinSourceType: userId.join_source_type, inviterId: userId.inviter_id, integrationType: userId.integration_type };
 }
-function _fetchMemberSupplemental() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_13 = async function _fetchMemberSupplemental(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          throw arg1;
+          c7 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c7 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = closure_0;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          const tmp52 = createFetchKeys(closure_0, closure_1);
+          closure_130_1 = tmp52;
+          const arr2 = (function getFetchchableUsers(arr) {
+            const found = arr.filter((item) => closure_1_5[item] <= constants.UNFETCHED);
+            return found.map(closure_1_8);
+          })(tmp52);
+          closure_130_2 = arr2;
+          if (0 === arr2.length) {
+            c7 = 3;
+            const obj1 = { value: [], done: true };
+            return obj1;
+          } else {
+            updateFetchRequests(tmp52, constants.PENDING);
+            c5 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(tmp49), body: null, rejectWithError: true };
+            const obj2 = { user_ids: arr2 };
+            request.body = obj2;
+            c6 = 2;
+            c7 = 1;
+            const obj3 = { value: HTTP.post(request), done: false };
+            return obj3;
+          }
+          tmp49 = closure_0;
         }
+      } else if (1 === tmp7) {
+        c5 = 0;
+        closure_131_9(closure_130_1, closure_131_6.FAILED);
+        c7 = 3;
+        const obj4 = { value: [], done: true };
+        return obj4;
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        c7 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
       } else {
-        try {
-          v0 = 2;
-          if (0 === constants) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              let arr2 = tmp7;
-              closure_1 = undefined;
-              arr2 = undefined;
-              closure_3 = undefined;
-              closure_4 = undefined;
-              c5 = undefined;
-              constants = undefined;
-              v0 = undefined;
-              const tmp53 = v0(callback, closure_1);
-              closure_1 = tmp53;
-              arr2 = (function getFetchchableUsers(arr) {
-                const found = arr.filter((arg0) => table[arg0] <= constants.UNFETCHED);
-                return found.map(closure_8);
-              })(tmp53);
-              if (0 === arr2.length) {
-                v0 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = [];
-                return obj1;
-              } else {
-                closure_1_9(tmp53, constants.PENDING);
-                c5 = 1;
-                const HTTP = callback(closure_1_2[7]).HTTP;
-                const obj2 = { url: null, body: null, rejectWithError: true };
-                obj2[0] = closure_1_4.MEMBER_SAFETY_SUPPLEMENTAL(tmp50);
-                const obj3 = { user_ids: null };
-                obj3[0] = arr2;
-                obj2[1] = obj3;
-                constants = 2;
-                v0 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = HTTP.post(obj2);
-                return obj4;
-              }
-              tmp50 = callback;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            callback2(closure_1, constants.FAILED);
-            v0 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = [];
-            return obj5;
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            v0 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            closure_3 = arg1;
-            const _Array = Array;
-            if (Array.isArray(closure_3.body)) {
-              const body = closure_3.body;
-              closure_4 = body.map(closure_12);
-              c5 = [];
-              const item = closure_4.forEach((userId) => arr.push(userId.userId));
-              constants = v0(callback, c5);
-              v0 = v0(callback, arr2.filter((arg0) => !arr.includes(arg0)));
-              callback2(constants, constants.SUCCEEDED);
-              callback2(v0, constants.FAILED);
-              c5 = 0;
-              v0 = 3;
-              const obj7 = { value: null, done: true };
-              obj7[0] = closure_4;
-              return obj7;
-            } else {
-              callback2(closure_1, constants.FAILED);
-              c5 = 0;
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = [];
-              return obj;
-            }
-          }
-        } catch (tmp37) {
-          closure_4 = tmp37;
-          if (tmp4 === c5) {
-            v0 = tmp2;
-            throw tmp37;
-          } else {
-            constants = tmp;
-          }
+        closure_130_3 = value;
+        const _Array = Array;
+        if (Array.isArray(closure_130_3.body)) {
+          const body = closure_130_3.body;
+          closure_130_4 = body.map(closure_131_12);
+          closure_130_5 = [];
+          const item = closure_130_4.forEach((userId) => closure_1_5.push(userId.userId));
+          closure_130_6 = closure_131_7(closure_130_0, closure_130_5);
+          closure_130_7 = closure_131_7(closure_130_0, closure_130_2.filter((item) => !closure_1_5.includes(item)));
+          closure_131_9(closure_130_6, closure_131_6.SUCCEEDED);
+          closure_131_9(closure_130_7, closure_131_6.FAILED);
+          c5 = 0;
+          c7 = 3;
+          const obj6 = { value: closure_130_4, done: true };
+          return obj6;
+        } else {
+          closure_131_9(closure_130_1, closure_131_6.FAILED);
+          c5 = 0;
+          c7 = 3;
+          obj = { value: [], done: true };
+          return obj;
         }
       }
-    })();
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp37) {
+      closure_4 = tmp37;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp37;
+      } else {
+        c6 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
+const Endpoints = fn(1074).Endpoints;
 let closure_5 = {};
 let closure_6 = { FAILED: 0, [0]: "FAILED", UNFETCHED: 1, [1]: "UNFETCHED", PENDING: 2, [2]: "PENDING", SUCCEEDED: 3, [3]: "SUCCEEDED", FAILED_NO_RETRY: 4, [4]: "FAILED_NO_RETRY" };
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };
 obj = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
-const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
 export const registerFetchedSupplementals = function registerFetchedSupplementals(guildId, memberIds) {
   closure_0 = guildId;
-  const item = memberIds.forEach((arg0) => {
-    closure_1_5[closure_0 + arg0] = closure_1_6.SUCCEEDED;
+  const item = memberIds.forEach((item) => {
+    closure_5[closure_0 + item] = constants.SUCCEEDED;
   });
 };
 export const JoinSourceType = obj;
@@ -183,78 +159,76 @@ export const getJoinSourceTypeLabel = function getJoinSourceTypeLabel(arg0) {
     flag = false;
   }
   if (obj.BOT === arg0) {
-    const intl10 = getSystemLocale.intl;
-    return intl10.string(getSystemLocale.t.HumZAi);
+    const intl10 = util.intl;
+    return intl10.string(util.t.HumZAi);
   } else if (tmp2.INTEGRATION === arg0) {
-    const intl9 = getSystemLocale.intl;
-    return intl9.string(getSystemLocale.t.gmCUFw);
+    const intl9 = util.intl;
+    return intl9.string(util.t.gmCUFw);
   } else if (tmp2.DISCOVERY === arg0) {
-    const intl8 = getSystemLocale.intl;
-    return intl8.string(getSystemLocale.t["Ql/e9Y"]);
+    const intl8 = util.intl;
+    return intl8.string(util.t["Ql/e9Y"]);
   } else if (tmp2.HUB === arg0) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t.Op8B3O);
+    const intl7 = util.intl;
+    return intl7.string(util.t.Op8B3O);
   } else if (tmp2.INVITE === arg0) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t["/3vIRd"]);
+    const intl6 = util.intl;
+    return intl6.string(util.t["/3vIRd"]);
   } else if (tmp2.VANITY_URL === arg0) {
     if (null != tmp) {
       if (!flag) {
-        const intl4 = getSystemLocale.intl;
-        obj = { vanityUrl: null };
-        obj[0] = tmp;
-        let formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.EIUjRy, obj);
+        const intl4 = util.intl;
+        obj = { vanityUrl: tmp };
+        let formatToPlainStringResult = intl4.formatToPlainString(util.t.EIUjRy, obj);
       }
       return formatToPlainStringResult;
     }
-    const intl5 = getSystemLocale.intl;
-    formatToPlainStringResult = intl5.string(getSystemLocale.t.dGiD1O);
+    const intl5 = util.intl;
+    formatToPlainStringResult = intl5.string(util.t.dGiD1O);
   } else if (tmp2.MANUAL_MEMBER_VERIFICATION === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.vdu7oS);
+    const intl3 = util.intl;
+    return intl3.string(util.t.vdu7oS);
   } else if (tmp2.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t["9/ZreX"]);
+    const intl2 = util.intl;
+    return intl2.string(util.t["9/ZreX"]);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.DvMBkS);
+    const intl = util.intl;
+    return intl.string(util.t.DvMBkS);
   }
 };
 export const IntegrationType = obj;
 export const getIntegrationLabel = function getIntegrationLabel(arg0) {
   if (obj.TWITCH === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.AVGAkw);
+    const intl3 = util.intl;
+    return intl3.string(util.t.AVGAkw);
   } else if (tmp.YOUTUBE === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.PHSAsn);
+    const intl2 = util.intl;
+    return intl2.string(util.t.PHSAsn);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.gmCUFw);
+    const intl = util.intl;
+    return intl.string(util.t.gmCUFw);
   }
 };
 export const useGetIntegrationIconString = function useGetIntegrationIconString(arg0) {
-  obj = getPlatformUserUrlDefault;
-  const value = obj.get(PlatformTypes.useLegacyPlatformType(arg0));
+  obj = PlatformsDefault;
+  value = obj.get(ConnectionsHooks.useLegacyPlatformType(arg0));
   let tmp5 = null;
   if (null != value) {
     const items = [, ];
     ({ TWITCH: arr[0], YOUTUBE: arr[1] } = obj);
     tmp5 = null;
     if (items.includes(arg0)) {
-      let str = value.icon;
       const _HermesInternal = HermesInternal;
-      const tmp2Result = AccessibilityAnnouncer;
-      str = "url('";
-      const combined = "url('" + AccessibilityAnnouncer.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
-      const tmp7 = AccessibilityAnnouncer.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
+      const tmp2Result = shared;
+      const str = "url('";
+      const combined = "url('" + shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG + "')";
+      const tmp7 = shared.isThemeDark(tmp4) ? str.darkSVG : str.lightSVG;
     }
   }
   return tmp5;
 };
 export const fetchMemberSupplemental = function fetchMemberSupplemental() {
   const self = this;
-  const apply = _fetchMemberSupplemental.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

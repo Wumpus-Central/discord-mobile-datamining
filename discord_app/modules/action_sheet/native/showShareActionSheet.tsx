@@ -1,28 +1,29 @@
 // === Module 8361: showShareActionSheet ===
 
 // Module 8361 (showShareActionSheet)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 8362 */;
-import trackAppClickInNativeShareSheet from "trackAppClickInNativeShareSheet" /* 8363 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+import _mod17 from "module_17" /* 17 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8362 */;
+import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8363 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+import size from "module_2" /* 2 */;
 
-if (PlatformTypes.isAndroid()) {
-  const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcingDefault);
+if (PlatformUtils.isAndroid()) {
+  const nativeEventEmitter = new _mod17.NativeEventEmitter(NativeShareManagerModuleDefault);
   nativeEventEmitter.addListener("share-broadcast-receiver-app-clicked", (arg0) => {
     ({ app, location: _location } = arg0);
-    const result = trackAppClickInNativeShareSheet.trackAppClickInNativeShareSheet(app, _location);
+    const result = ShowShareActionSheetUtils.trackAppClickInNativeShareSheet(app, _location);
   });
 }
-let result = set.fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
+let result = size.fileFinishedImporting("modules/action_sheet/native/showShareActionSheet.tsx");
 
 export const showShareActionSheet = function showShareActionSheet(source, PREMIUM_GIFT_SUCCESS_MODAL) {
-  const _require = source;
+  _require = source;
   let tmp = PREMIUM_GIFT_SUCCESS_MODAL;
   importDefault = PREMIUM_GIFT_SUCCESS_MODAL;
   if (null != source.source) {
-    let mediaShareParams = _require(fn[3]).getMediaShareParams(source.source);
-    const obj2 = _require(fn[3]);
+    let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
+    const obj2 = require("ShowShareActionSheetUtils");
   } else {
     mediaShareParams = { mediaFallbackUrl: "hash", mediaStagingOptions: "call" };
   }
@@ -31,12 +32,13 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
     mediaFallbackUrl = source.url;
   }
   if (null != mediaStagingOptions) {
-    let obj = { onCancel: null };
-    obj[0] = function onCancel() {
-      return PREMIUM_GIFT_SUCCESS_MODAL(fn[2]).cancelPendingShare();
+    let obj = {
+      onCancel() {
+          return PREMIUM_GIFT_SUCCESS_MODAL(fn[2]).cancelPendingShare();
+        }
     };
-    fn = _require(fn[4]).showSharePreparingModal(obj);
-    const obj3 = _require(fn[4]);
+    fn = require("showSharePreparingModal").showSharePreparingModal(obj);
+    const obj3 = require("showSharePreparingModal");
   } else {
     fn = () => {
 
@@ -59,9 +61,9 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
   if (mediaStagingOptions == null) {
     mediaStagingOptions = null;
   }
-  const obj5 = importDefault(fn[2]);
-  const shareResult = importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn);
-  const nextPromise = importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
+  const obj5 = require("NativeShareManagerModule");
+  const shareResult = require("NativeShareManagerModule").share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn);
+  const nextPromise = require("NativeShareManagerModule").share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
     if (null != method) {
       method = method.method;
       if (source.iOSOnlyShareCallback != null) {
@@ -71,11 +73,10 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
         }
         iOSOnlyShareCallback(tmp, tmp3);
       }
-      const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
-      const obj = source(fn[3]);
+      const result = ShowShareActionSheetUtils.trackAppClickInNativeShareSheet(method, closure_1);
     }
   });
-  importDefault(fn[2]).share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
+  require("NativeShareManagerModule").share(message, mediaFallbackUrl, subject, tmp, mediaStagingOptions, fn).then((method) => {
     if (null != method) {
       method = method.method;
       if (source.iOSOnlyShareCallback != null) {
@@ -85,15 +86,16 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
         }
         iOSOnlyShareCallback(tmp, tmp3);
       }
-      const result = source(fn[3]).trackAppClickInNativeShareSheet(method, closure_1);
-      const obj = source(fn[3]);
+      const result = ShowShareActionSheetUtils.trackAppClickInNativeShareSheet(method, closure_1);
     }
-  }).catch((arg0) => {
-    let str = PREMIUM_GIFT_SUCCESS_MODAL;
-    if (PREMIUM_GIFT_SUCCESS_MODAL == null) {
+  }).catch((error) => {
+    let obj = SentryUtilsDefault;
+    let str = closure_1;
+    if (closure_1 == null) {
       str = "";
     }
-    PREMIUM_GIFT_SUCCESS_MODAL(fn[5]).captureException(arg0, { tags: { location: str } });
+    obj = { tags: { location: str } };
+    obj.captureException(error, obj);
     if (source.iOSOnlyShareCallback != null) {
       iOSOnlyShareCallback(false, null);
     }

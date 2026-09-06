@@ -1,13 +1,12 @@
-// === Module 12055: setFrecencySectionSelection ===
+// === Module 12055: FrecencySectionStoreActionCreators ===
 
-// Module 12055 (setFrecencySectionSelection)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 12055 (FrecencySectionStoreActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStoreActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStoreActionCreators.tsx");
 
 export const setFrecencySectionSelection = function setFrecencySectionSelection(APPS) {
-  let obj = dispatcherDefault;
-  obj = { type: "FRECENCY_SECTION_SET_SELECTION", selection: APPS };
+  const obj = { type: "FRECENCY_SECTION_SET_SELECTION", selection: APPS };
   obj.dispatch(obj);
 };

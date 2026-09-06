@@ -1,16 +1,14 @@
-// === Module 7539: maybeFetchCollectiblesForInvoices ===
+// === Module 7539: FamilyCenterActionCreators ===
 
-// Module 7539 (maybeFetchCollectiblesForInvoices)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getSettings" /* 7540 */;
-import { FamilyCenterAction } from "items" /* 7538 */;
-import ME from "ME" /* 1074 */;
+// Module 7539 (FamilyCenterActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7540 */;
 
-const require = arg1;
+const require = fn;
 function maybeFetchCollectiblesForInvoices() {
   const self = this;
-  const apply = _maybeFetchCollectiblesForInvoices.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -18,89 +16,69 @@ function maybeFetchCollectiblesForInvoices() {
   }
   return applyArgumentsResult;
 }
-function _maybeFetchCollectiblesForInvoices() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (c1 === 2) {
-        c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+let closure_9 = async function _maybeFetchCollectiblesForInvoices(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
         if (arg0 === 1) {
-          throw arg1;
+          c1 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c1 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const _Set = Set;
-              const set = new Set();
-              const item = set.forEach((invoice_items) => {
-                if (null != invoice_items.invoice_items) {
-                  if (invoice_items.invoice_items.length > 0) {
-                    const first = invoice_items.invoice_items[0];
-                    if (null != first.sku_id) {
-                      set.add(first.sku_id);
-                    }
-                  }
+          const _Set = Set;
+          const set = new Set();
+          const item = _require.forEach((invoice_items) => {
+            if (null != invoice_items.invoice_items) {
+              if (invoice_items.invoice_items.length > 0) {
+                const first = invoice_items.invoice_items[0];
+                if (null != first.sku_id) {
+                  set.add(first.sku_id);
                 }
-              });
-              const _Array = Array;
-              c2 = 1;
-              c1 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(Array.from(set).map((skuId) => set(table[4]).maybeFetchCollectiblesProduct(skuId)));
-              return obj1;
+              }
             }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
+          });
+          const _Array = Array;
+          c2 = 1;
+          c1 = 1;
+          const obj1 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
+          return obj1;
         }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function maybeFetchCollectiblesForGifts() {
   const self = this;
-  const apply = _maybeFetchCollectiblesForGifts.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -108,790 +86,423 @@ function maybeFetchCollectiblesForGifts() {
   }
   return applyArgumentsResult;
 }
-function _maybeFetchCollectiblesForGifts() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (c1 === 2) {
+let closure_11 = async function _maybeFetchCollectiblesForGifts(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          const _Set = Set;
+          const set = new Set();
+          const item = _require.forEach((sku_id) => {
+            if (null != sku_id.sku_id) {
+              set.add(sku_id.sku_id);
+            }
+          });
+          const _Array = Array;
+          c2 = 1;
+          c1 = 1;
+          const obj1 = { value: Promise.all(Array.from(set).map((item) => set(closure_1_2[4]).maybeFetchCollectiblesProduct(item))), done: false };
+          return obj1;
+        }
+      } else if (arg0 === 1) {
         c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c1 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const _Set = Set;
-              const set = new Set();
-              const item = set.forEach((sku_id) => {
-                if (null != sku_id.sku_id) {
-                  set.add(sku_id.sku_id);
-                }
-              });
-              const _Array = Array;
-              c2 = 1;
-              c1 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(Array.from(set).map((skuId) => set(table[4]).maybeFetchCollectiblesProduct(skuId)));
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
-        }
-      }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _updateLinkForUserId() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c2 = 0;
-    return (function*(arg0, arg1) {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          dependencyMap = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              dependencyMap = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              dependencyMap = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
-              const obj2 = { linked_user_id: null, link_status: null };
-              obj2[0] = callback;
-              obj2[1] = closure_1;
-              obj1[1] = obj2;
-              obj1[2] = callback(1272).rejectWithMigratedError();
-              const obj7 = callback(1272);
-              c3 = 1;
-              dependencyMap = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.patch(obj1).then((body) => {
-                body = body.body;
-                callback(table[5]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: body });
-                return body;
-              });
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            dependencyMap = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          dependencyMap = tmp;
-          throw tmp5;
-        }
-      }
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _removeLinkForUserId() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (c1 === 2) {
+        throw value;
+      } else if (arg0 === 2) {
         c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c1 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              obj1 = { url: null, body: null, rejectWithError: null };
-              obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
-              const obj2 = { linked_user_id: null };
-              obj2[0] = callback;
-              obj1[1] = obj2;
-              obj1[2] = callback(1272).rejectWithMigratedError();
-              const obj7 = callback(1272);
-              dependencyMap = 1;
-              c1 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.del(obj1).then((body) => {
-                body = body.body;
-                let obj = v3(table[5]);
-                obj = { type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId: closure_0 };
-                obj.dispatch(obj);
-                return body;
-              });
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c1 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
-        }
+        c1 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp5) {
+      c1 = tmp;
+      throw tmp5;
+    }
   }
-  return applyArgumentsResult;
-}
-function _getLinkCodeForCurrentUser() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+};
+let closure_12 = async function _updateLinkForUserId(linked_user_id, link_status) {
+  c3 = 0;
+  c2 = 0;
+  return (async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === c1) {
+        c2 = 2;
+        if (0 === c3) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            c2 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c2 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = v0(closure_1_2[6]).HTTP;
-            obj1 = { url: null, rejectWithError: null };
-            obj1[0] = closure_1_7.FAMILY_CENTER_LINK_CODE;
-            obj1[1] = v0(closure_1_2[6]).rejectWithMigratedError();
-            const value = HTTP.get(obj1);
-            c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = value.then((body) => {
-              body = body.body;
-              const link_code = body.link_code;
-              v1(table[5]).dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: link_code, expiresAt: body.expires_at });
-              return link_code;
-            });
+            const HTTP = require("HTTPUtils").HTTP;
+            const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: null, rejectWithError: null };
+            const obj1 = { linked_user_id, link_status };
+            request.body = obj1;
+            request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+            const obj7 = require("HTTPUtils");
+            c3 = 1;
+            c2 = 1;
+            const obj2 = {
+              value: HTTP.patch(request).then((body) => {
+                        body = body.body;
+                        link_status(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: body });
+                        return body;
+                      }),
+              done: false
+            };
             return obj2;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          c2 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c2 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          v0 = 3;
+          c2 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp5) {
-        v0 = tmp;
+        c2 = tmp;
         throw tmp5;
       }
     }
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _shareIarWithParents() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (v0 === 2) {
-      v0 = 3;
-      HermesBuiltin.throwTypeError();
+  })();
+};
+let closure_13 = async function _removeLinkForUserId(linked_user_id) {
+  c2 = 0;
+  c1 = 0;
+  return (async (arg0, value) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        v0 = 2;
-        if (0 === c1) {
+        c1 = 2;
+        if (0 === c2) {
           if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            c1 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c1 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            const HTTP = v0(closure_1_2[6]).HTTP;
-            obj1 = { url: null, rejectWithError: true };
-            obj1[0] = closure_1_7.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS;
+            const HTTP = require("HTTPUtils").HTTP;
+            const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: null, rejectWithError: null };
+            const obj1 = { linked_user_id };
+            request.body = obj1;
+            request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+            const obj7 = require("HTTPUtils");
+            c2 = 1;
             c1 = 1;
-            v0 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.post(obj1);
+            const obj2 = {
+              value: HTTP.del(request).then((body) => {
+                        body = body.body;
+                        c1(c2[5]);
+                        const obj = { type: "FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS", linkedUsers: body, deletedUserId };
+                        obj.dispatch(obj);
+                        return body;
+                      }),
+              done: false
+            };
             return obj2;
           }
         } else if (arg0 === 1) {
-          v0 = 3;
-          throw arg1;
+          c1 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          v0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c1 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          v0 = 3;
+          c1 = 3;
           return { value: "HermesInternal", done: null };
         }
-      } catch (tmp8) {
-        v0 = tmp;
-        throw tmp8;
+      } catch (tmp5) {
+        c1 = tmp;
+        throw tmp5;
       }
     }
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  })();
+};
+let closure_14 = async function _getLinkCodeForCurrentUser(arg0, value) {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c0 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c0 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c0 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          const HTTP = require("HTTPUtils").HTTP;
+          const obj1 = { url: constants.FAMILY_CENTER_LINK_CODE, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+          value = HTTP.get(obj1);
+          c1 = 1;
+          c0 = 1;
+          const obj2 = {
+            value: value.then((body) => {
+                      body = body.body;
+                      const link_code = body.link_code;
+                      closure_1_1(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS", linkCode: link_code, expiresAt: body.expires_at });
+                      return link_code;
+                    }),
+            done: false
+          };
+          return obj2;
+        }
+      } else if (arg0 === 1) {
+        c0 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c0 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        c0 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp5) {
+      c0 = tmp;
+      throw tmp5;
+    }
   }
-  return applyArgumentsResult;
-}
-({ AnalyticEvents: closure_6, Endpoints: error } = ME);
-let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
+};
+let closure_15 = async function _shareIarWithParents(arg0, value) {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c0 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c0 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c0 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          const HTTP = require("HTTPUtils").HTTP;
+          const obj1 = { url: constants.FAMILY_CENTER_SHARE_IAR_WITH_PARENTS, rejectWithError: true };
+          c1 = 1;
+          c0 = 1;
+          const obj2 = { value: HTTP.post(obj1), done: false };
+          return obj2;
+        }
+      } else if (arg0 === 1) {
+        c0 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c0 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        c0 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp8) {
+      c0 = tmp;
+      throw tmp8;
+    }
+  }
+};
+const FamilyCenterAction = fn(7538).FamilyCenterAction;
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
 
 export default {
   initialPageLoad() {
-    return callback(function*() {
-      if (closure_15 === 2) {
-        closure_15 = 3;
-        HermesBuiltin.throwTypeError();
+    return (async (arg0, value) => {
+      if (c15 === 2) {
+        c15 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          closure_15 = 2;
+          c15 = 2;
           if (0 === c14) {
             if (arg0 === 1) {
-              closure_15 = 3;
-              throw arg1;
+              c15 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              closure_15 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c15 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
               c13 = 0;
               closure_12 = tmp4;
               let body;
-              let lib;
-              dependencyMap = undefined;
+              let teen_audit_log;
+              let linked_users;
               let users2;
               let age_group;
-              let obj4;
-              closure_1_1(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-              let tmp = closure_1_0;
-              tmp = closure_1_2;
-              const HTTP = closure_1_0(closure_1_2[6]).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              tmp = closure_1_7;
-              obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_ACTIVITY_ME;
-              tmp = closure_1_2;
-              const obj15 = closure_1_1(closure_1_2[5]);
-              obj1[1] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
+              closure_140_5 = undefined;
+              DispatcherDefault.dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+              const HTTP = require("HTTPUtils").HTTP;
+              const obj1 = { url: constants.FAMILY_CENTER_TEEN_ACTIVITY_ME, rejectWithError: null };
+              obj1.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
               c14 = 1;
-              closure_15 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
+              c15 = 1;
+              const obj2 = { value: HTTP.get(obj1), done: false };
               return obj2;
             }
           } else {
             if (1 === tmp4) {
               if (arg0 === 1) {
-                closure_15 = 3;
-                throw arg1;
+                c15 = 3;
+                throw value;
               } else if (arg0 === 2) {
-                closure_15 = 3;
-                let obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                c15 = 3;
+                let obj3 = { value, done: true };
                 return obj3;
               } else {
-                body = arg1.body;
-                lib = body.teen_audit_log;
-                dependencyMap = body.linked_users;
+                body = value.body;
+                teen_audit_log = body.teen_audit_log;
+                linked_users = body.linked_users;
                 users2 = body.users;
                 age_group = body.age_group;
                 let teen_user_id;
-                if (lib != null) {
-                  teen_user_id = lib.teen_user_id;
+                if (teen_audit_log != null) {
+                  teen_user_id = teen_audit_log.teen_user_id;
                 }
-                obj4 = { teenId: null, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
-                obj4[0] = teen_user_id;
+                const obj4 = { teenId: teen_user_id, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
                 let range_start_id;
-                if (lib != null) {
-                  range_start_id = lib.range_start_id;
+                if (teen_audit_log != null) {
+                  range_start_id = teen_audit_log.range_start_id;
                 }
-                obj4[1] = range_start_id;
+                obj4.rangeStartId = range_start_id;
                 let totals;
-                if (lib != null) {
-                  totals = lib.totals;
+                if (teen_audit_log != null) {
+                  totals = teen_audit_log.totals;
                 }
-                body = totals;
                 if (totals == null) {
-                  body = {};
+                  totals = {};
                 }
-                obj4[2] = body;
+                obj4.totals = totals;
                 let actions;
-                if (lib != null) {
-                  actions = lib.actions;
+                if (teen_audit_log != null) {
+                  actions = teen_audit_log.actions;
                 }
-                lib = actions;
                 if (actions == null) {
-                  lib = [];
+                  actions = [];
                 }
-                obj4[3] = lib;
+                obj4.actions = actions;
                 let users;
-                if (lib != null) {
-                  users = lib.users;
+                if (teen_audit_log != null) {
+                  users = teen_audit_log.users;
                 }
-                dependencyMap = users;
                 if (users == null) {
-                  dependencyMap = [];
+                  users = [];
                 }
-                obj4[4] = dependencyMap;
+                obj4.users = users;
                 let guilds;
-                if (lib != null) {
-                  guilds = lib.guilds;
+                if (teen_audit_log != null) {
+                  guilds = teen_audit_log.guilds;
                 }
-                users2 = guilds;
                 if (guilds == null) {
-                  users2 = [];
+                  guilds = [];
                 }
-                obj4[5] = users2;
+                obj4.guilds = guilds;
                 let top_user_activities;
-                if (lib != null) {
-                  top_user_activities = lib.top_user_activities;
+                if (teen_audit_log != null) {
+                  top_user_activities = teen_audit_log.top_user_activities;
                 }
-                age_group = top_user_activities;
+                let topUserActivities = top_user_activities;
                 if (top_user_activities == null) {
-                  age_group = [];
+                  topUserActivities = [];
                 }
-                obj4[6] = age_group;
+                obj4.topUserActivities = topUserActivities;
                 let top_guild_activities;
-                if (lib != null) {
-                  top_guild_activities = lib.top_guild_activities;
+                if (teen_audit_log != null) {
+                  top_guild_activities = teen_audit_log.top_guild_activities;
                 }
-                obj4 = top_guild_activities;
+                let topGuildActivities = top_guild_activities;
                 if (top_guild_activities == null) {
-                  obj4 = [];
+                  topGuildActivities = [];
                 }
-                obj4[7] = obj4;
-                let amount;
-                if (lib != null) {
-                  const total_spend = lib.total_spend;
-                  if (total_spend != null) {
-                    amount = total_spend.amount;
-                  }
-                }
-                c6 = amount;
-                if (amount == null) {
-                  c6 = null;
-                }
-                obj4[8] = c6;
-                let currency;
-                if (lib != null) {
-                  const total_spend2 = lib.total_spend;
-                  if (total_spend2 != null) {
-                    currency = total_spend2.currency;
-                  }
-                }
-                c7 = currency;
-                if (currency == null) {
-                  c7 = null;
-                }
-                obj4[9] = c7;
-                const spending_limit = body.spending_limit;
-                let callback = spending_limit;
-                if (spending_limit == null) {
-                  callback = null;
-                }
-                obj4[10] = callback;
-                const monthly_purchases = body.monthly_purchases;
-                c9 = monthly_purchases;
-                if (monthly_purchases == null) {
-                  c9 = null;
-                }
-                obj4[11] = c9;
-                let invoices;
-                if (lib != null) {
-                  invoices = lib.invoices;
-                }
-                let callback2 = invoices;
-                if (invoices == null) {
-                  callback2 = [];
-                }
-                obj4[12] = callback2;
-                let gifts;
-                if (lib != null) {
-                  gifts = lib.gifts;
-                }
-                closure_11 = gifts;
-                if (gifts == null) {
-                  closure_11 = [];
-                }
-                obj4[13] = closure_11;
-                let tmp46 = null != obj4.invoices;
-                if (tmp46) {
-                  tmp46 = obj4.invoices.length > 0;
-                }
-                if (tmp46) {
-                  c14 = 2;
-                  closure_15 = 1;
-                  let obj5 = { value: null, done: false };
-                  obj5[0] = callback(obj4.invoices);
-                  return obj5;
-                }
-              }
-            } else {
-              if (2 === tmp4) {
-                if (arg0 === 1) {
-                  closure_15 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  closure_15 = 3;
-                  const obj6 = { value: null, done: true };
-                  obj6[0] = arg1;
-                  return obj6;
-                }
-              } else if (arg0 === 1) {
-                closure_15 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                closure_15 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-              obj3 = lib(573);
-              const obj7 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: null, linkedUsers: null, users: null, ageGroup: null };
-              obj7[1] = obj4;
-              obj7[2] = dependencyMap;
-              obj7[3] = users2;
-              obj7[4] = age_group;
-              obj3.dispatch(obj7);
-              let tmp66 = null != body.restricted_schedule;
-              if (tmp66) {
-                tmp66 = null != obj4.teenId;
-              }
-              if (tmp66) {
-                obj5 = lib(573);
-                const obj8 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
-                obj8[1] = obj4.teenId;
-                obj8[2] = body.restricted_schedule;
-                obj5.dispatch(obj8);
-              }
-              closure_15 = 3;
-              const obj9 = { value: null, done: true };
-              obj9[0] = obj4;
-              return obj9;
-            }
-            let tmp52 = null != obj4.gifts;
-            if (tmp52) {
-              tmp52 = obj4.gifts.length > 0;
-            }
-            if (tmp52) {
-              c14 = 3;
-              closure_15 = 1;
-              const obj10 = { value: null, done: false };
-              obj10[0] = callback2(obj4.gifts);
-              return obj10;
-            }
-          }
-        } catch (tmp85) {
-          closure_15 = tmp;
-          throw tmp85;
-        }
-      }
-    })();
-  },
-  fetchLinkedUsers() {
-    return callback(function*() {
-      let obj4 = tmp2;
-      let body = tmp5;
-      const HTTP = closure_1_0(1272).HTTP;
-      obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
-      obj1[1] = closure_1_0(1272).rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      body = arg1.body;
-      obj4 = { linkedUsers: null, users: null };
-      obj4[0] = body.linked_users;
-      obj4[1] = body.users;
-      const obj5 = { type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" };
-      const merged = Object.assign(obj4);
-      obj4(573).dispatch(obj5);
-      return obj4;
-    })();
-  },
-  getConnectionPrerequisites(closure_0, closure_1) {
-    return callback(function*() {
-      const HTTP = v0(closure_1_2[6]).HTTP;
-      obj1 = { url: null, query: null, rejectWithError: true };
-      obj1[0] = closure_1_7.FAMILY_CENTER_CONNECTION_PREREQUISITES;
-      const obj2 = { teen_id: null, link_code: null };
-      obj2[0] = v0;
-      obj2[1] = c1;
-      obj1[1] = obj2;
-      yield HTTP.get(obj1);
-      return arg1.body;
-    })();
-  },
-  setPendingConnection(teenId, linkCode) {
-    let obj = dispatcherDefault;
-    obj = { type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId, linkCode };
-    obj.dispatch(obj);
-  },
-  clearPendingConnection() {
-    dispatcherDefault.dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_CLEAR" });
-  },
-  requestLink(userId, linkCode) {
-    closure_0 = userId;
-    closure_1 = linkCode;
-    return callback(function*() {
-      let obj5 = tmp2;
-      let body = tmp5;
-      const HTTP = closure_1_0(1272).HTTP;
-      obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = closure_1_7.FAMILY_CENTER_LINKED_USERS;
-      const obj2 = { recipient_id: null, code: null };
-      obj2[0] = closure_1_0;
-      obj2[1] = closure_1_1;
-      obj1[1] = obj2;
-      obj1[2] = closure_1_0(1272).rejectWithMigratedError();
-      yield HTTP.post(obj1);
-      body = arg1.body;
-      obj5 = { linkedUsers: null, users: null };
-      obj5[0] = body.linked_users;
-      obj5[1] = body.users;
-      let obj6 = closure_1_1(573);
-      obj6 = { type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" };
-      const merged = Object.assign(obj5);
-      obj6.dispatch(obj6);
-      return obj5;
-    })();
-  },
-  fetchTeenActivity(arg0) {
-    closure_0 = arg0;
-    return callback(function*() {
-      if (c11 === 2) {
-        c11 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c11 = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              c11 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c11 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_9 = tmp5;
-              closure_8 = tmp2;
-              let body;
-              let teen_audit_log;
-              let obj4;
-              closure_1_1(closure_1_2[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
-              const result = closure_1_7.FAMILY_CENTER_TEEN_ACTIVITY(closure_1_0);
-              const HTTP = closure_1_0(closure_1_2[6]).HTTP;
-              obj1 = { url: null, rejectWithError: null };
-              obj1[0] = result;
-              const obj15 = closure_1_1(closure_1_2[5]);
-              obj1[1] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
-              v0 = 1;
-              c11 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c11 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c11 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
-              } else {
-                body = arg1.body;
-                teen_audit_log = body.teen_audit_log;
-                obj4 = { teenId: null, rangeStartId: null, totals: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
-                obj4[0] = teen_audit_log.teen_user_id;
-                obj4[1] = teen_audit_log.range_start_id;
-                obj4[2] = teen_audit_log.totals;
-                obj4[3] = teen_audit_log.actions;
-                obj4[4] = teen_audit_log.users;
-                obj4[5] = teen_audit_log.guilds;
-                const top_user_activities = teen_audit_log.top_user_activities;
-                body = top_user_activities;
-                if (top_user_activities == null) {
-                  body = [];
-                }
-                obj4[6] = body;
-                const top_guild_activities = teen_audit_log.top_guild_activities;
-                teen_audit_log = top_guild_activities;
-                if (top_guild_activities == null) {
-                  teen_audit_log = [];
-                }
-                obj4[7] = teen_audit_log;
+                obj4.topGuildActivities = topGuildActivities;
                 let amount;
                 if (teen_audit_log != null) {
                   const total_spend = teen_audit_log.total_spend;
@@ -899,11 +510,11 @@ export default {
                     amount = total_spend.amount;
                   }
                 }
-                obj4 = amount;
+                let totalSpendAmount = amount;
                 if (amount == null) {
-                  obj4 = null;
+                  totalSpendAmount = null;
                 }
-                obj4[8] = obj4;
+                obj4.totalSpendAmount = totalSpendAmount;
                 let currency;
                 if (teen_audit_log != null) {
                   const total_spend2 = teen_audit_log.total_spend;
@@ -911,50 +522,277 @@ export default {
                     currency = total_spend2.currency;
                   }
                 }
-                c3 = currency;
+                let totalSpendCurrency = currency;
                 if (currency == null) {
-                  c3 = null;
+                  totalSpendCurrency = null;
                 }
-                obj4[9] = c3;
+                obj4.totalSpendCurrency = totalSpendCurrency;
                 const spending_limit = body.spending_limit;
-                c4 = spending_limit;
+                let spendingLimit = spending_limit;
                 if (spending_limit == null) {
-                  c4 = null;
+                  spendingLimit = null;
                 }
-                obj4[10] = c4;
+                obj4.spendingLimit = spendingLimit;
                 const monthly_purchases = body.monthly_purchases;
-                c5 = monthly_purchases;
+                let monthlyPurchases = monthly_purchases;
                 if (monthly_purchases == null) {
-                  c5 = null;
+                  monthlyPurchases = null;
                 }
-                obj4[11] = c5;
+                obj4.monthlyPurchases = monthlyPurchases;
                 let invoices;
                 if (teen_audit_log != null) {
                   invoices = teen_audit_log.invoices;
                 }
-                closure_6 = invoices;
                 if (invoices == null) {
-                  closure_6 = [];
+                  invoices = [];
                 }
-                obj4[12] = closure_6;
+                obj4.invoices = invoices;
                 let gifts;
                 if (teen_audit_log != null) {
                   gifts = teen_audit_log.gifts;
                 }
-                closure_7 = gifts;
                 if (gifts == null) {
-                  closure_7 = [];
+                  gifts = [];
                 }
-                obj4[13] = closure_7;
-                invoices = obj4.invoices;
+                obj4.gifts = gifts;
+                closure_140_5 = obj4;
+                let tmp46 = null != closure_140_5.invoices;
+                if (tmp46) {
+                  tmp46 = closure_140_5.invoices.length > 0;
+                }
+                if (tmp46) {
+                  c14 = 2;
+                  c15 = 1;
+                  let obj5 = { value: closure_141_8(closure_140_5.invoices), done: false };
+                  return obj5;
+                }
+              }
+            } else {
+              if (2 === tmp4) {
+                if (arg0 === 1) {
+                  c15 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c15 = 3;
+                  const obj6 = { value, done: true };
+                  return obj6;
+                }
+              } else if (arg0 === 1) {
+                c15 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c15 = 3;
+                obj = { value, done: true };
+                return obj;
+              }
+              obj3 = closure_141_1(closure_141_2[5]);
+              const obj7 = { type: "FAMILY_CENTER_INITIAL_LOAD", familyCenterTeenActivity: closure_140_5, linkedUsers: linked_users, users: users2, ageGroup: age_group };
+              obj3.dispatch(obj7);
+              let tmp66 = null != body.restricted_schedule;
+              if (tmp66) {
+                tmp66 = null != closure_140_5.teenId;
+              }
+              if (tmp66) {
+                obj5 = closure_141_1(closure_141_2[5]);
+                const obj8 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_140_5.teenId, restrictedSchedule: body.restricted_schedule };
+                obj5.dispatch(obj8);
+              }
+              c15 = 3;
+              const obj9 = { value: closure_140_5, done: true };
+              return obj9;
+            }
+            let tmp52 = null != closure_140_5.gifts;
+            if (tmp52) {
+              tmp52 = closure_140_5.gifts.length > 0;
+            }
+            if (tmp52) {
+              c14 = 3;
+              c15 = 1;
+              const obj10 = { value: closure_141_10(closure_140_5.gifts), done: false };
+              return obj10;
+            }
+          }
+        } catch (tmp85) {
+          c15 = tmp;
+          throw tmp85;
+        }
+      }
+    })();
+  },
+  fetchLinkedUsers() {
+    return (async () => {
+      closure_1 = tmp2;
+      closure_0 = tmp5;
+      const HTTP = require("HTTPUtils").HTTP;
+      await HTTP.get({ url: constants.FAMILY_CENTER_LINKED_USERS, rejectWithError: require("HTTPUtils").rejectWithMigratedError() });
+      const body = arg1.body;
+      closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
+      const merged = Object.assign(closure_128_1);
+      closure_129_1(closure_129_2[5]).dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS" });
+      return closure_128_1;
+    })();
+  },
+  getConnectionPrerequisites(arg0, arg1) {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    return (async () => {
+      const HTTP = teen_id(dependencyMap[6]).HTTP;
+      const request = { url: constants.FAMILY_CENTER_CONNECTION_PREREQUISITES, query: { teen_id, link_code }, rejectWithError: true };
+      await HTTP.get(request);
+      return arg1.body;
+    })();
+  },
+  setPendingConnection(match, match2) {
+    const obj = { type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId: match, linkCode: match2 };
+    obj.dispatch(obj);
+  },
+  clearPendingConnection() {
+    DispatcherDefault.dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_CLEAR" });
+  },
+  requestLink(userId, linkCode) {
+    closure_0 = userId;
+    closure_1 = linkCode;
+    return (async () => {
+      const code = tmp2;
+      const recipient_id = tmp5;
+      const HTTP = recipient_id(1272).HTTP;
+      const request = { url: constants.FAMILY_CENTER_LINKED_USERS, body: { recipient_id, code }, rejectWithError: recipient_id(1272).rejectWithMigratedError() };
+      await HTTP.post(request);
+      const body = arg1.body;
+      closure_128_1 = { linkedUsers: body.linked_users, users: body.users };
+      const merged = Object.assign(closure_128_1);
+      code(573).dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_SUCCESS" });
+      return closure_128_1;
+    })();
+  },
+  fetchTeenActivity(arg0) {
+    closure_0 = arg0;
+    return (async (arg0, value) => {
+      if (c11 === 2) {
+        c11 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
+        } else {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c11 = 2;
+          if (0 === v3) {
+            if (arg0 === 1) {
+              c11 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c11 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_9 = tmp5;
+              let body;
+              let teen_audit_log;
+              closure_136_2 = undefined;
+              topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_FETCH_START" });
+              const result = gifts.FAMILY_CENTER_TEEN_ACTIVITY(topUserActivities);
+              const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
+              const obj1 = { url: result, rejectWithError: null };
+              const obj15 = topGuildActivities(totalSpendAmount[5]);
+              obj1.rejectWithError = topUserActivities(totalSpendAmount[6]).rejectWithMigratedError();
+              v3 = 1;
+              c11 = 1;
+              let obj2 = { value: HTTP.get(obj1), done: false };
+              return obj2;
+            }
+          } else {
+            if (1 === tmp5) {
+              if (arg0 === 1) {
+                c11 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c11 = 3;
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                body = value.body;
+                teen_audit_log = body.teen_audit_log;
+                let obj4 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, totals: teen_audit_log.totals, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, spendingLimit: null, monthlyPurchases: null, invoices: null, gifts: null };
+                const top_user_activities = teen_audit_log.top_user_activities;
+                topUserActivities = top_user_activities;
+                if (top_user_activities == null) {
+                  topUserActivities = [];
+                }
+                obj4.topUserActivities = topUserActivities;
+                const top_guild_activities = teen_audit_log.top_guild_activities;
+                topGuildActivities = top_guild_activities;
+                if (top_guild_activities == null) {
+                  topGuildActivities = [];
+                }
+                obj4.topGuildActivities = topGuildActivities;
+                let amount;
+                if (teen_audit_log != null) {
+                  const total_spend = teen_audit_log.total_spend;
+                  if (total_spend != null) {
+                    amount = total_spend.amount;
+                  }
+                }
+                totalSpendAmount = amount;
+                if (amount == null) {
+                  totalSpendAmount = null;
+                }
+                obj4.totalSpendAmount = totalSpendAmount;
+                let currency;
+                if (teen_audit_log != null) {
+                  const total_spend2 = teen_audit_log.total_spend;
+                  if (total_spend2 != null) {
+                    currency = total_spend2.currency;
+                  }
+                }
+                let totalSpendCurrency = currency;
+                if (currency == null) {
+                  totalSpendCurrency = null;
+                }
+                obj4.totalSpendCurrency = totalSpendCurrency;
+                const spending_limit = body.spending_limit;
+                let spendingLimit = spending_limit;
+                if (spending_limit == null) {
+                  spendingLimit = null;
+                }
+                obj4.spendingLimit = spendingLimit;
+                const monthly_purchases = body.monthly_purchases;
+                let monthlyPurchases = monthly_purchases;
+                if (monthly_purchases == null) {
+                  monthlyPurchases = null;
+                }
+                obj4.monthlyPurchases = monthlyPurchases;
+                let invoices;
+                if (teen_audit_log != null) {
+                  invoices = teen_audit_log.invoices;
+                }
+                if (invoices == null) {
+                  invoices = [];
+                }
+                obj4.invoices = invoices;
+                gifts = undefined;
+                if (teen_audit_log != null) {
+                  gifts = teen_audit_log.gifts;
+                }
+                if (gifts == null) {
+                  gifts = [];
+                }
+                obj4.gifts = gifts;
+                closure_136_2 = obj4;
+                invoices = closure_136_2.invoices;
                 if (invoices) {
-                  invoices = obj4.invoices.length > 0;
+                  invoices = closure_136_2.invoices.length > 0;
                 }
                 if (invoices) {
-                  v0 = 2;
+                  v3 = 2;
                   c11 = 1;
-                  const obj5 = { value: null, done: false };
-                  obj5[0] = closure_1_8(closure_1_2.invoices);
+                  const obj5 = { value: tmp2(closure_136_2.invoices), done: false };
                   return obj5;
                 }
               }
@@ -962,47 +800,40 @@ export default {
               if (2 === tmp5) {
                 if (arg0 === 1) {
                   c11 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c11 = 3;
-                  const obj6 = { value: null, done: true };
-                  obj6[0] = arg1;
+                  const obj6 = { value, done: true };
                   return obj6;
                 }
               } else if (arg0 === 1) {
                 c11 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c11 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               }
-              obj2 = closure_1_1(closure_1_2[5]);
-              const obj7 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: null };
-              obj7[1] = obj4;
+              obj2 = topGuildActivities(totalSpendAmount[5]);
+              const obj7 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS", familyCenterTeenActivity: closure_136_2 };
               obj2.dispatch(obj7);
               if (null != body.restricted_schedule) {
-                obj4 = closure_1_1(closure_1_2[5]);
-                const obj8 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: null, restrictedSchedule: null };
-                obj8[1] = body;
-                obj8[2] = body.restricted_schedule;
+                obj4 = topGuildActivities(totalSpendAmount[5]);
+                const obj8 = { type: "USER_RESTRICTED_SCHEDULE_UPDATE", userId: closure_137_0, restrictedSchedule: body.restricted_schedule };
                 obj4.dispatch(obj8);
               }
               c11 = 3;
-              const obj9 = { value: null, done: true };
-              obj9[0] = closure_1_2;
+              const obj9 = { value: closure_136_2, done: true };
               return obj9;
             }
-            gifts = obj4.gifts;
+            gifts = closure_136_2.gifts;
             if (gifts) {
-              gifts = obj4.gifts.length > 0;
+              gifts = closure_136_2.gifts.length > 0;
             }
             if (gifts) {
-              v0 = 3;
+              v3 = 3;
               c11 = 1;
-              const obj10 = { value: null, done: false };
-              obj10[0] = v0(closure_1_2.gifts);
+              const obj10 = { value: v3(closure_136_2.gifts), done: false };
               return obj10;
             }
           }
@@ -1017,116 +848,96 @@ export default {
     closure_0 = selectedTeenId;
     closure_1 = arg1;
     closure_2 = startId;
-    const callback = event_id;
-    return callback(function*() {
-      closure_7 = tmp2;
-      closure_6 = tmp5;
-      const HTTP = closure_1_0(closure_1_2[6]).HTTP;
-      obj1 = { url: null, rejectWithError: null };
-      obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_ACTIVITY_MORE(closure_1_0, closure_1_1, closure_1_2, closure_1_3);
-      obj1[1] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
-      yield HTTP.get(obj1);
-      let teen_audit_log = arg1.body.teen_audit_log;
-      let obj4 = { teenId: null, rangeStartId: null, actions: null, users: null, guilds: null, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
-      obj4[0] = teen_audit_log.teen_user_id;
-      obj4[1] = teen_audit_log.range_start_id;
-      obj4[2] = teen_audit_log.actions;
-      obj4[3] = teen_audit_log.users;
-      obj4[4] = teen_audit_log.guilds;
+    asyncGeneratorStep = event_id;
+    return (async () => {
+      const HTTP = topUserActivities(totalSpendAmount[6]).HTTP;
+      await HTTP.get({ url: tmp2.FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, closure_2, closure_3), rejectWithError: topUserActivities(totalSpendAmount[6]).rejectWithMigratedError() });
+      const teen_audit_log = arg1.body.teen_audit_log;
+      const obj4 = { teenId: teen_audit_log.teen_user_id, rangeStartId: teen_audit_log.range_start_id, actions: teen_audit_log.actions, users: teen_audit_log.users, guilds: teen_audit_log.guilds, topUserActivities: null, topGuildActivities: null, totalSpendAmount: null, totalSpendCurrency: null, invoices: null, gifts: null };
       const top_user_activities = teen_audit_log.top_user_activities;
-      teen_audit_log = top_user_activities;
+      topUserActivities = top_user_activities;
       if (top_user_activities == null) {
-        teen_audit_log = [];
+        topUserActivities = [];
       }
-      obj4[5] = teen_audit_log;
+      obj4.topUserActivities = topUserActivities;
       const top_guild_activities = teen_audit_log.top_guild_activities;
-      obj4 = top_guild_activities;
+      topGuildActivities = top_guild_activities;
       if (top_guild_activities == null) {
-        obj4 = [];
+        topGuildActivities = [];
       }
-      obj4[6] = obj4;
+      obj4.topGuildActivities = topGuildActivities;
       if (teen_audit_log != null) {
         const total_spend = teen_audit_log.total_spend;
         if (total_spend != null) {
           const amount = total_spend.amount;
         }
       }
-      c2 = amount;
+      totalSpendAmount = amount;
       if (amount == null) {
-        c2 = null;
+        totalSpendAmount = null;
       }
-      obj4[7] = c2;
+      obj4.totalSpendAmount = totalSpendAmount;
       if (teen_audit_log != null) {
         const total_spend2 = teen_audit_log.total_spend;
         if (total_spend2 != null) {
           const currency = total_spend2.currency;
         }
       }
-      c3 = currency;
+      let totalSpendCurrency = currency;
       if (currency == null) {
-        c3 = null;
+        totalSpendCurrency = null;
       }
-      obj4[8] = c3;
+      obj4.totalSpendCurrency = totalSpendCurrency;
       if (teen_audit_log != null) {
-        const invoices = teen_audit_log.invoices;
+        let invoices = teen_audit_log.invoices;
       }
-      closure_4 = invoices;
       if (invoices == null) {
-        closure_4 = [];
+        invoices = [];
       }
-      obj4[9] = closure_4;
+      obj4.invoices = invoices;
       if (teen_audit_log != null) {
-        const gifts = teen_audit_log.gifts;
+        let gifts = teen_audit_log.gifts;
       }
-      closure_5 = gifts;
       if (gifts == null) {
-        closure_5 = [];
+        gifts = [];
       }
-      obj4[10] = closure_5;
-      const obj = closure_1_1(closure_1_2[7]);
-      const obj5 = { action: null, selected_teen_id: null, action_display_type: null };
-      obj5[0] = closure_1_5.LoadMore;
-      obj5[1] = teen_audit_log;
-      obj5[2] = obj4;
-      obj.track(closure_1_6.FAMILY_CENTER_ACTION, obj5);
-      const obj2 = closure_1_1(closure_1_2[5]);
-      const obj6 = { type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: null };
-      obj6[1] = obj4;
-      obj2.dispatch(obj6);
+      obj4.gifts = gifts;
+      closure_134_1 = obj4;
+      { url: tmp2.FAMILY_CENTER_TEEN_ACTIVITY_MORE(topUserActivities, topGuildActivities, closure_2, closure_3), rejectWithError: topUserActivities(totalSpendAmount[6]).rejectWithMigratedError() };
+      topGuildActivities(totalSpendAmount[7]).track(tmp5.FAMILY_CENTER_ACTION, { action: gifts.LoadMore, selected_teen_id: closure_135_0, action_display_type: closure_135_1 });
+      topGuildActivities(totalSpendAmount[7]);
+      topGuildActivities(totalSpendAmount[5]).dispatch({ type: "FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS", familyCenterTeenActivity: closure_134_1 });
       return teen_audit_log;
     })();
   },
   selectTab(REQUESTS) {
-    let obj = dispatcherDefault;
-    obj = { type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS };
+    const obj = { type: "FAMILY_CENTER_HANDLE_TAB_SELECT", tab: REQUESTS };
     obj.dispatch(obj);
   },
   fetchTeenSettingsAndConsents(id) {
-    const _require = id;
-    const HTTP = _require(1272).HTTP;
-    let obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: _require(1272).rejectWithMigratedError() };
-    const value = HTTP.get(obj);
+    _require = id;
+    const HTTP = require("HTTPUtils").HTTP;
+    let obj = { url: closure_7.FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS(id), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    value = HTTP.get(obj);
     return value.then((body) => {
       ({ settings, consents } = body.body);
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId: closure_0, settings, consents };
+      const obj = { type: "FAMILY_CENTER_TEEN_SETTINGS_AND_CONSENTS_FETCH_SUCCESS", userId, settings, consents };
       obj.dispatch(obj);
     });
   },
-  updateTeenSettings(arg0, closure_0, arg2) {
+  updateTeenSettings(arg0, arg1, arg2) {
     closure_0 = arg0;
-    closure_1 = closure_0;
+    closure_1 = arg1;
     closure_2 = arg2;
-    return callback(function*() {
+    return (async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -1137,58 +948,50 @@ export default {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp2;
-              let settings = tmp5;
-              settings = undefined;
-              const protoFieldClass = closure_1_0(1941).getProtoFieldClass(closure_1_0(1187).PreloadedUserSettings, closure_1_1);
-              settings = closure_1_4.getSettings(closure_1_0);
+              let settings2;
+              const protoFieldClass = tmp5(1941).getProtoFieldClass(tmp5(1187).PreloadedUserSettings, tmp2);
+              settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
-                tmp13 = settings[tmp37];
+                tmp13 = settings[tmp36];
               }
-              let tmp34Result = tmp34(1941);
-              const modifiedProto = tmp34Result.createModifiedProto(tmp13, dependencyMap, protoFieldClass, tmp34(1187).PreloadedUserSettings, tmp37);
+              let tmp33Result = tmp33(1941);
+              const modifiedProto = tmp33Result.createModifiedProto(tmp13, closure_2, protoFieldClass, tmp33(1187).PreloadedUserSettings, tmp36);
               if (null != modifiedProto) {
-                const HTTP = tmp34(1272).HTTP;
-                obj1 = { url: null, body: null, rejectWithError: null };
-                obj1[0] = closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(closure_1_0);
-                const obj2 = { settings: null };
-                tmp34Result = tmp34(1223);
-                obj2[0] = tmp34Result.protoToB64(tmp34(1187).PreloadedUserSettings, modifiedProto);
-                obj1[1] = obj2;
-                obj1[2] = tmp34(1272).rejectWithMigratedError();
+                const HTTP = tmp33(1272).HTTP;
+                const request = { url: closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(tmp5), body: null, rejectWithError: null };
+                const obj1 = { settings: null };
+                tmp33Result = tmp33(1223);
+                obj1.settings = tmp33Result.protoToB64(tmp33(1187).PreloadedUserSettings, modifiedProto);
+                request.body = obj1;
+                request.rejectWithError = tmp33(1272).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = HTTP.patch(obj1);
-                return obj3;
+                const obj2 = { value: HTTP.patch(request), done: false };
+                return obj2;
               } else {
                 c3 = 3;
               }
-              const obj12 = closure_1_0(1941);
+              const obj12 = tmp5(1941);
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            settings = arg1.body.settings;
-            obj = closure_1_1(573);
-            const obj4 = { type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: null, settings: null };
-            obj4[1] = settings;
-            obj4[2] = settings;
-            obj.dispatch(obj4);
+            settings2 = value.body.settings;
+            obj = tmp2(573);
+            const obj3 = { type: "FAMILY_CENTER_TEEN_UPDATE_SETTINGS_SUCCESS", userId: closure_129_0, settings: settings2 };
+            obj.dispatch(obj3);
           }
           c3 = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = arg1;
-          return obj5;
+          const obj4 = { value, done: true };
+          return obj4;
         } catch (tmp28) {
           c3 = tmp;
           throw tmp28;
@@ -1197,22 +1000,20 @@ export default {
     })();
   },
   updateTeenConsents(selectedTeenId, items1, items2) {
-    const _require = selectedTeenId;
-    const HTTP = _require(1272).HTTP;
-    obj = { url: closure_7.FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId), body: obj, rejectWithError: null };
-    obj = { grant: items1, revoke: items2 };
-    obj[2] = _require(1272).rejectWithMigratedError();
-    const obj3 = _require(1272);
-    return HTTP.patch(obj).then((body) => {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId: closure_0, consents: body.body };
+    _require = selectedTeenId;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: closure_7.FAMILY_CENTER_TEEN_CONSENTS(selectedTeenId), body: { grant: items1, revoke: items2 }, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    let obj = { grant: items1, revoke: items2 };
+    const obj3 = require("HTTPUtils");
+    return HTTP.patch(request).then((body) => {
+      const obj = { type: "FAMILY_CENTER_TEEN_CONSENTS_UPDATE_SUCCESS", userId, consents: body.body };
       obj.dispatch(obj);
     });
   }
 };
-export const updateLinkForUserId = function updateLinkForUserId(arg0, ACTIVE) {
+export const updateLinkForUserId = function updateLinkForUserId() {
   const self = this;
-  const apply = _updateLinkForUserId.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1220,9 +1021,9 @@ export const updateLinkForUserId = function updateLinkForUserId(arg0, ACTIVE) {
   }
   return applyArgumentsResult;
 };
-export const removeLinkForUserId = function removeLinkForUserId(arg0) {
+export const removeLinkForUserId = function removeLinkForUserId() {
   const self = this;
-  const apply = _removeLinkForUserId.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1232,7 +1033,7 @@ export const removeLinkForUserId = function removeLinkForUserId(arg0) {
 };
 export const getLinkCodeForCurrentUser = function getLinkCodeForCurrentUser() {
   const self = this;
-  const apply = _getLinkCodeForCurrentUser.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1242,7 +1043,7 @@ export const getLinkCodeForCurrentUser = function getLinkCodeForCurrentUser() {
 };
 export const shareIarWithParents = function shareIarWithParents() {
   const self = this;
-  const apply = _shareIarWithParents.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

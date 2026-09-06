@@ -1,25 +1,22 @@
 // === Module 9114: showAudioOutputSelector ===
 
 // Module 9114 (showAudioOutputSelector)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
+import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import VOICE_PANEL_SETTINGS_KEY from "VOICE_PANEL_SETTINGS_KEY" /* 9115 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import VoicePanelHeaderConstants from "VoicePanelHeaderConstants" /* 9115 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-let closure_4 = VOICE_PANEL_SETTINGS_KEY.VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
-const result = set.fileFinishedImporting("modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx");
+const NativeModules = _mod17.NativeModules;
+let closure_4 = VoicePanelHeaderConstants.VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY;
+const result = size.fileFinishedImporting("modules/voice_calls/native/audio_output_selector/showAudioOutputSelector.tsx");
 
-export const showAudioOutputSelector = function showAudioOutputSelector(channelId, closure_1) {
-  let obj = set2;
+export const showAudioOutputSelector = function showAudioOutputSelector(channelId, isConnectedToVoiceChannel) {
+  let obj = PlatformUtils;
   if (obj.isAndroid()) {
-    obj = { channelId: null, isConnectedToVoiceChannel: null };
-    obj[0] = channelId;
-    obj[1] = closure_1;
-    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9116, dependencyMap.paths), closure_4, obj);
-    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+    obj = { channelId, isConnectedToVoiceChannel };
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9116, dependencyMap.paths), closure_4, obj);
   } else {
     const AudioRoutePicker = NativeModules.AudioRoutePicker;
     if (AudioRoutePicker != null) {

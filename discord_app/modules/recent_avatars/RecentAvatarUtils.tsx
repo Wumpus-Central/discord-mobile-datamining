@@ -1,12 +1,12 @@
-// === Module 8169: getArchivedAvatarURL ===
+// === Module 8169: RecentAvatarUtils ===
 
-// Module 8169 (getArchivedAvatarURL)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getAvatarURL from "getAvatarURL" /* 1396 */;
-import handleImageLoad from "handleImageLoad" /* 1430 */;
-import parseDefault from "parse" /* 1471 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 6989 */;
+// Module 8169 (RecentAvatarUtils)
+import Constants from "Constants" /* 1074 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
+import _modDef1471 from "module_1471" /* 1471 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6989 */;
+import size from "module_2" /* 2 */;
 
 function getArchivedAvatarURL(allowWebp) {
   ({ userId, avatarId, storageHash, canAnimate } = allowWebp);
@@ -33,7 +33,7 @@ function getArchivedAvatarURL(allowWebp) {
     flag = true;
   }
   if (flag2) {
-    let obj = getAvatarURL;
+    let obj = AvatarUtils;
     if (obj.isAnimatedIconHash(storageHash)) {
       let str6 = "gif";
       if (flag) {
@@ -45,10 +45,10 @@ function getArchivedAvatarURL(allowWebp) {
       let str2 = str6;
     }
     obj = { size: null };
-    const obj3 = handleImageLoad;
+    const obj3 = ImageLoaderUtils;
     tmp2 = require;
     const tmp6 = require;
-    obj[0] = obj3.getBestMediaProxySize(allowWebp.size * handleImageLoad.getDevicePixelRatio());
+    obj.size = obj3.getBestMediaProxySize(allowWebp.size * ImageLoaderUtils.getDevicePixelRatio());
     let isAnimatedIconHashResult = "webp" === str2 && canAnimate;
     if (isAnimatedIconHashResult) {
       isAnimatedIconHashResult = tmp6(1396).isAnimatedIconHash(storageHash);
@@ -57,25 +57,24 @@ function getArchivedAvatarURL(allowWebp) {
     if (isAnimatedIconHashResult) {
       obj.animated = true;
     }
-    const obj4 = handleImageLoad;
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
     const _HermesInternal2 = HermesInternal;
-    return "" + combined + ARCHIVED_AVATARResult + "?" + parseDefault.stringify(obj);
+    return "" + combined + ARCHIVED_AVATARResult + "?" + _modDef1471.stringify(obj);
   }
   str2 = "jpg";
   if (null != window.GLOBAL_ENV.CDN_HOST) {
     let str4 = "png";
     if (flag) {
       str4 = "png";
-      if (getAvatarURL.SUPPORTS_WEBP) {
+      if (AvatarUtils.SUPPORTS_WEBP) {
         str4 = "webp";
       }
     }
     str2 = str4;
   }
 }
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
 
 export const getImageFormat = function getImageFormat(canAnimate) {
   let flag = canAnimate.canAnimate;
@@ -91,7 +90,7 @@ export const getImageFormat = function getImageFormat(canAnimate) {
       let str5 = "gif";
       if (flag2) {
         str5 = "gif";
-        if (getAvatarURL.SUPPORTS_WEBP) {
+        if (AvatarUtils.SUPPORTS_WEBP) {
           str5 = "webp";
         }
       }
@@ -104,7 +103,7 @@ export const getImageFormat = function getImageFormat(canAnimate) {
     let str3 = "png";
     if (flag2) {
       str3 = "png";
-      if (getAvatarURL.SUPPORTS_WEBP) {
+      if (AvatarUtils.SUPPORTS_WEBP) {
         str3 = "webp";
       }
     }
@@ -112,16 +111,16 @@ export const getImageFormat = function getImageFormat(canAnimate) {
   }
 };
 export { getArchivedAvatarURL };
-export const generateAvatarDescription = function generateAvatarDescription(maxSettingsForPreset) {
-  let obj = maxSettingsForPreset;
-  if (maxSettingsForPreset == null) {
+export const generateAvatarDescription = function generateAvatarDescription(time) {
+  let obj = time;
+  if (time == null) {
     obj = {};
   }
   ({ filename, assetOrigin } = obj);
   if (undefined === assetOrigin) {
-    assetOrigin = AssetOriginTypes.AssetOriginTypes.NEW_ASSET;
+    assetOrigin = ProfilePendingImageTypes.AssetOriginTypes.NEW_ASSET;
   }
-  if (assetOrigin !== AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+  if (assetOrigin !== ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
     if (filename == null) {
       const intl = tmp3(1114).intl;
       filename = intl.string(tmp3(1114).t.lqaIxI);
@@ -134,14 +133,12 @@ export const generateAvatarDescription = function generateAvatarDescription(maxS
     } else {
       DYil93 = tmp3(1114).t.DYil93;
     }
-    obj = { name: null, dateTime: null };
-    obj[0] = filename;
-    obj[1] = date.toLocaleString(tmp3(1114).intl.currentLocale, { year: "numeric", day: "numeric", month: "long", hour: "numeric", minute: "numeric" });
+    obj = { name: filename, dateTime: date.toLocaleString(tmp3(1114).intl.currentLocale, { year: "numeric", day: "numeric", month: "long", hour: "numeric", minute: "numeric" }) };
     return intl2.formatToPlainString(DYil93, obj);
   }
 };
-export const generateRecentAvatarFileDetails = function generateRecentAvatarFileDetails(storageHash) {
-  let flag = getAvatarURL.SUPPORTS_WEBP;
+export const generateRecentAvatarFileDetails = function generateRecentAvatarFileDetails(storageHash, arg1) {
+  let flag = AvatarUtils.SUPPORTS_WEBP;
   if (flag === undefined) {
     flag = true;
   }
@@ -189,7 +186,7 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
       tmpResult.assertNever(str);
     }
   }
-  obj[1] = str9;
+  obj.type = str9;
   return obj;
 };
 export const getPendingAvatarSrc = function getPendingAvatarSrc(canAnimate) {
@@ -205,15 +202,14 @@ export const getPendingAvatarSrc = function getPendingAvatarSrc(canAnimate) {
   if (null != image) {
     tmp = image;
     if (typeof image !== "string") {
-      if (image.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
-        const obj = { userId: null, avatarId: null, storageHash: null, size: null, canAnimate: null };
-        obj[0] = userId;
+      if (image.assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+        const obj = { userId, avatarId: null, storageHash: null, size: null, canAnimate: null };
         userId = image.originalAsset.id;
-        obj[1] = userId;
+        obj.avatarId = userId;
         image = image.originalAsset.storageHash;
-        obj[2] = image;
-        obj[3] = size;
-        obj[4] = flag;
+        obj.storageHash = image;
+        obj.size = size;
+        obj.canAnimate = flag;
         let imageUri = getArchivedAvatarURL(obj);
       } else if (flag) {
         imageUri = image.imageUri;

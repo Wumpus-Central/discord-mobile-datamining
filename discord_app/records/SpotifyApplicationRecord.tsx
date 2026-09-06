@@ -1,16 +1,15 @@
-// === Module 13228: getIconURL ===
+// === Module 13228: SpotifyApplicationRecord ===
 
-// Module 13228 (getIconURL)
-import createExecutableDefault from "createExecutable" /* 1918 */;
-import importDefaultResult1 from "getPlatformUserUrl" /* 5283 */;
+// Module 13228 (SpotifyApplicationRecord)
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import Platforms from "Platforms" /* 5283 */;
 
-createExecutableDefault;
 const spotify = "spotify";
-const value = importDefaultResult1.get("spotify");
+const value = Platforms.get("spotify");
+let closure_1 = value;
 class SpotifyApplicationRecord extends tmp4 {
   constructor() {
     tmp = new tmp({}, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
     tmp.id = spotify;
     tmp.name = closure_1.name;
     return tmp;
@@ -24,10 +23,10 @@ prototype["getWhiteIconURL"] = function getWhiteIconURL() {
   return value.icon.whitePNG;
 };
 const tmp6 = new "getWhiteIconURL"({}, tmp2, tmp);
-// ThrowIfThisInitialized (0x7c)
 tmp6.id = "spotify";
 tmp6.name = value.name;
-const result = require("set").fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/SpotifyApplicationRecord.tsx");
 
 export default SpotifyApplicationRecord;
 export const SPOTIFY_APPLICATION_ID = "spotify";

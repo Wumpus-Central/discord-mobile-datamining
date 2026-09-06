@@ -1,36 +1,35 @@
 // === Module 10737: useMaybeFetchCollectiblesCategoriesShared ===
 
 // Module 10737 (useMaybeFetchCollectiblesCategoriesShared)
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import closure_5 from "getHash" /* 4476 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7542 */;
-import items from "items" /* 1076 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7589 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
 
-const require = arg1;
-({ useEffect: c3, useCallback: c4 } = noop);
-({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: error, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } = items);
-let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
+require = fn;
+const noop = fn(19);
+({ useEffect: c3, useCallback: closure_4 } = noop);
+const CollectiblesShopConstants = fn(1076);
+({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_7, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } = CollectiblesShopConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategoriesShared.tsx");
 
 export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchCollectiblesCategoriesShared(arg0, noOp, arg2, skipFetch) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = noOp;
-  const callback = arg2;
+  _slicedToArray = arg2;
   let flag = skipFetch;
   if (skipFetch === undefined) {
     flag = false;
   }
-  let stateFromStores;
-  closure_5 = undefined;
+  let hasLoadedExperiments;
   closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  closure_9 = undefined;
-  let obj = _require(504);
-  let items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
+  let obj = require("initialize");
+  let items = [hasLoadedExperiments];
+  const stateFromStores = obj.useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   const items1 = [closure_6];
-  const tmp2 = callback(_require(504).useStateFromStoresArray(items1, () => {
+  const tmp2 = _slicedToArray(require("initialize").useStateFromStoresArray(items1, () => {
     const items = [, , , , , , ];
     ({ isFetchingCategories: arr[0], lastFetchOptions: arr[1], error: arr[2], lastErrorTimestamp } = closure_6);
     if (lastErrorTimestamp == null) {
@@ -45,40 +44,38 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
     ({ categories: arr[5], skipNumCategories: arr[6] } = closure_6);
     return items;
   }), 7);
-  closure_5 = tmp3;
+  hasLoadedExperiments = tmp3;
   closure_6 = tmp4;
   closure_7 = tmp5;
   closure_8 = tmp6;
-  closure_9 = tmp7;
+  const skipNumCategories = tmp7;
   const items2 = [flag, stateFromStores, tmp2[1], tmp2[4], arg0, tmp2[2], tmp2[3], noOp, arg2, tmp2[6]];
   flag(() => {
     if (!flag) {
       if (stateFromStores) {
-        if (!isFetchingCategories.isFetchingCategories) {
+        if (!CollectiblesCategoryStore.isFetchingCategories) {
           const _Date = Date;
           const _Boolean = Boolean;
-          if (!Boolean(isFetchingCategories)) {
+          if (!Boolean(closure_6)) {
             const obj = {};
-            const merged = Object.assign(callback);
-            obj.variantsReturnStyle = callback(noOp[6]).ShopVariantsReturnStyle.VARIANTS_GROUP;
+            const merged = Object.assign(closure_0);
+            obj.variantsReturnStyle = ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP;
             obj.includeBundles = true;
-            obj.skipNumCategories = closure_9;
-            const result = callback(noOp[7]).areRequestOptionsEqual(closure_5, obj);
+            obj.skipNumCategories = skipNumCategories;
+            const result = CollectiblesActionCreators.areRequestOptionsEqual(closure_5, obj);
             const _Date2 = Date;
             let tmp19 = !!result;
             if (result) {
-              tmp19 = Date.now() - closure_8 < closure_7;
+              tmp19 = Date.now() - closure_8 < React5;
             }
             if (!tmp19) {
-              const collectiblesCategories = tmp11(tmp12[7]).fetchCollectiblesCategories(obj, noOp, closure_2);
-              const tmp11Result = tmp11(tmp12[7]);
+              const collectiblesCategories = tmp11(7541).fetchCollectiblesCategories(obj, closure_1, closure_2);
+              const tmp11Result = tmp11(7541);
             }
-            const obj2 = callback(noOp[7]);
-            tmp11 = callback;
-            tmp12 = noOp;
+            tmp11 = require;
             const tmp16 = !result;
           }
-          const tmp6 = Date.now() - closure_7 < closure_8;
+          const tmp6 = Date.now() - closure_7 < React6;
         }
       }
     }
@@ -90,11 +87,11 @@ export const useMaybeFetchCollectiblesCategoriesShared = function useMaybeFetchC
     fetchCategoriesError: tmp4,
     refreshCategories: stateFromStores(() => {
       const obj = {};
-      const merged = Object.assign(callback);
-      obj.variantsReturnStyle = callback(noOp[6]).ShopVariantsReturnStyle.VARIANTS_GROUP;
+      const merged = Object.assign(closure_0);
+      obj.variantsReturnStyle = ShopVariantsReturnStyle.ShopVariantsReturnStyle.VARIANTS_GROUP;
       obj.includeBundles = true;
-      obj.skipNumCategories = closure_9;
-      const collectiblesCategories = callback(noOp[7]).fetchCollectiblesCategories(obj, undefined, closure_2);
+      obj.skipNumCategories = skipNumCategories;
+      const collectiblesCategories = CollectiblesActionCreators.fetchCollectiblesCategories(obj, undefined, closure_2);
     }, items3)
   };
   return obj;

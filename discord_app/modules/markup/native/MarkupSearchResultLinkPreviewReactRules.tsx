@@ -1,11 +1,11 @@
-// === Module 16676: createSearchResultLinkPreviewReactRules ===
+// === Module 16676: MarkupSearchResultLinkPreviewReactRules ===
 
-// Module 16676 (createSearchResultLinkPreviewReactRules)
-import set from "set" /* 2 */;
-import defaultReactFn from "defaultReactFn" /* 10117 */;
+// Module 16676 (MarkupSearchResultLinkPreviewReactRules)
+import MarkupMessagePreviewReactRules from "MarkupMessagePreviewReactRules" /* 10117 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
+const result = size.fileFinishedImporting("modules/markup/native/MarkupSearchResultLinkPreviewReactRules.tsx");
 
 export const createSearchResultLinkPreviewReactRules = function createSearchResultLinkPreviewReactRules() {
-  return defaultReactFn.createMessagePreviewReactRules({ customEmojiSize: 16 });
+  return MarkupMessagePreviewReactRules.createMessagePreviewReactRules({ customEmojiSize: 16 });
 };

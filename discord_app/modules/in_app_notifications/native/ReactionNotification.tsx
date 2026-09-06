@@ -1,39 +1,42 @@
-// === Module 10217: ReactionNotificationBody ===
+// === Module 10217: ReactionNotification ===
 
-// Module 10217 (ReactionNotificationBody)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import GuildIconSizes from "GuildIconSizes" /* 5584 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10094 */;
+// Module 10217 (ReactionNotification)
+import _mod12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import transitionToChannel from "transitionToChannel" /* 4571 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import GuildIcon from "GuildIcon" /* 5584 */;
+import EmojiDefault from "Emoji" /* 7130 */;
+import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10094 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 10096 */;
 import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10108 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10910 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import set from "set" /* 10095 */;
-import ME from "ME" /* 1074 */;
-import { Fonts } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10131 */;
+import ForumPostReactionButton from "ForumPostReactionButton" /* 10218 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
+const GuildIconDefault = GuildIcon;
+
+require = fn;
 function ReactionNotificationBody(arg0) {
   ({ secondaryText, messagePreview } = arg0);
   ({ text, hasMessageContent } = arg0);
-  let obj = isReactionMilestoneNotification;
+  let obj = InAppNotificationUtils;
   const messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
-  const tmp = callback2();
+  const tmp = closure_13();
   ({ gradientColors, gradientStyles } = useTruncatedGradientColorsDefault());
   obj = { variant: messagePreviewTextVariant, color: "text-default", style: tmp.italic, children: text };
-  const children = [callback(Text.Text, obj), , ];
+  const children = [closure_1_10(Text_Text.Text, obj), , ];
   let tmp8Result = null;
   if (null != secondaryText) {
-    obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp: null, children: null };
-    obj[2] = closure_7;
-    obj[3] = secondaryText;
+    obj = { variant: "redesign/message-preview/medium", color: "text-link", lineClamp, children: secondaryText };
     tmp8Result = tmp8(tmp2(4556).Text, obj);
   }
   children[1] = tmp8Result;
@@ -41,16 +44,12 @@ function ReactionNotificationBody(arg0) {
   if (hasMessageContent) {
     tmp8Result = null;
     if (null != messagePreview) {
-      obj1 = { message: null, lineClamp: 1, maxHeight: null, textColor: "text-subtle", gradientStyles: null, gradientColors: null };
-      obj1[0] = messagePreview;
-      obj1[2] = closure_6;
-      obj1[4] = gradientStyles;
-      obj1[5] = gradientColors;
+      const obj1 = { message: messagePreview, lineClamp: 1, maxHeight, textColor: "text-subtle", gradientStyles, gradientColors };
       tmp8Result = tmp8(tmp2(10109).NativeChannelRowPreview, obj1);
     }
   }
   children[2] = tmp8Result;
-  return closure_12(closure_11, { children });
+  return closure_1_12(closure_1_11, { children });
 }
 function ReactionNotificationBodyWrapper(arg0) {
   ({ message, reaction, reactionCount } = arg0);
@@ -62,21 +61,20 @@ function ReactionNotificationBodyWrapper(arg0) {
   let tmp3 = null != message.content;
   if (tmp3) {
     tmp3 = "" !== message.content.trim();
-    const str = message.content;
   }
   if (tmp3) {
     tmp3 = !tmp;
   }
   dependencyMap = tmp3;
-  const tmp4 = callback2();
-  const React = tmp4;
+  const tmp4 = closure_13();
+  noop = tmp4;
   const AnimateEmoji = message(1935).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
   let obj = message(10131);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , , ];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
-  const callback = React.useCallback(() => {
+  const emojiHook = noop.useCallback(() => {
     let name;
     if (reaction != null) {
       name = tmp.emoji.name;
@@ -94,10 +92,8 @@ function ReactionNotificationBodyWrapper(arg0) {
           id = tmp.emoji.id;
         }
         if (null == id) {
-          let obj = { style: null, variant: "text-sm/normal", children: null };
-          obj[0] = italic.italic;
-          obj[2] = tmp.emoji.name;
-          return closure_1_10(message(4556).Text, obj, tmp.emoji.name);
+          let obj = { style: italic.italic, variant: "text-sm/normal", children: tmp.emoji.name };
+          return closure_2_10(Text_Text.Text, obj, tmp.emoji.name);
         }
       }
       let id1;
@@ -106,133 +102,115 @@ function ReactionNotificationBodyWrapper(arg0) {
       }
       let emojiURL;
       if (null != id1) {
-        obj = reaction(1396);
-        obj = { id: null, animated: null, size: null };
-        obj[0] = tmp.emoji.id;
+        obj = { id: tmp.emoji.id, animated: null, size: null };
         let animated = setting;
         if (setting) {
           animated = tmp.emoji.animated;
         }
-        obj[1] = animated;
-        obj[2] = message(10218).DEFAULT_EMOJI_SIZE;
+        obj.animated = animated;
+        obj.size = ForumPostReactionButton.DEFAULT_EMOJI_SIZE;
         emojiURL = obj.getEmojiURL(obj);
       }
-      obj1 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
-      ({ textEmoji: obj3[0], imageEmoji: obj3[1] } = italic);
-      obj1[2] = emojiURL;
-      obj1[3] = tmp.emoji.name;
-      return closure_1_10(reaction(7130), obj1);
+      const obj1 = { textEmojiStyle: null, fastImageStyle: null, src: null, name: null };
+      ({ textEmoji: obj3.textEmojiStyle, imageEmoji: obj3.fastImageStyle } = italic);
+      obj1.src = emojiURL;
+      obj1.name = tmp.emoji.name;
+      return closure_2_10(EmojiDefault, obj1);
     }
   }, items);
-  const items1 = [callback, tmp3, message, previewableMedia];
-  const memo = React.useMemo(() => {
+  const items1 = [emojiHook, tmp3, message, previewableMedia];
+  const memo = noop.useMemo(() => {
     if (0 !== previewableMedia.length) {
-      if (!dependencyMap) {
+      if (!closure_2) {
         if (1 === arr.length) {
           const first = arr[0];
           const type = first.type;
-          if (message(10131).PreviewableMediaTypes.IMAGE === type) {
+          if (usePreviewableMedia.PreviewableMediaTypes.IMAGE === type) {
             let obj = { text: null, secondaryText: null };
-            const intl11 = message(1114).intl;
-            obj = { emojiHook: null };
-            obj[0] = callback;
-            obj[0] = intl11.format(message(1114).t.I7mNcA, obj);
+            const intl11 = util.intl;
+            obj = { emojiHook };
+            obj.text = intl11.format(util.t.I7mNcA, obj);
             return obj;
-          } else if (message(10131).PreviewableMediaTypes.VIDEO === type) {
-            obj1 = { text: null, secondaryText: null };
-            const intl10 = message(1114).intl;
-            const obj2 = { emojiHook: null };
-            obj2[0] = callback;
-            obj1[0] = intl10.format(message(1114).t["Umew/z"], obj2);
+          } else if (usePreviewableMedia.PreviewableMediaTypes.VIDEO === type) {
+            const obj1 = { text: null, secondaryText: null };
+            const intl10 = util.intl;
+            const obj2 = { emojiHook };
+            obj1.text = intl10.format(util.t["Umew/z"], obj2);
             return obj1;
-          } else if (message(10131).PreviewableMediaTypes.AUDIO === type) {
+          } else if (usePreviewableMedia.PreviewableMediaTypes.AUDIO === type) {
             const obj3 = { text: null, secondaryText: null };
-            const intl9 = message(1114).intl;
-            const obj4 = { emojiHook: null };
-            obj4[0] = callback;
-            obj3[0] = intl9.format(message(1114).t["P/bwx9"], obj4);
-            obj3[1] = first.media.filename;
+            const intl9 = util.intl;
+            const obj4 = { emojiHook };
+            obj3.text = intl9.format(util.t["P/bwx9"], obj4);
+            obj3.secondaryText = first.media.filename;
             return obj3;
-          } else if (message(10131).PreviewableMediaTypes.FILE === type) {
+          } else if (usePreviewableMedia.PreviewableMediaTypes.FILE === type) {
             const obj5 = { text: null, secondaryText: null };
-            const intl8 = message(1114).intl;
-            const obj6 = { emojiHook: null };
-            obj6[0] = callback;
-            obj5[0] = intl8.format(message(1114).t.TXNjGW, obj6);
-            obj5[1] = first.media.filename;
+            const intl8 = util.intl;
+            const obj6 = { emojiHook };
+            obj5.text = intl8.format(util.t.TXNjGW, obj6);
+            obj5.secondaryText = first.media.filename;
             return obj5;
-          } else if (message(10131).PreviewableMediaTypes.STICKER === type) {
+          } else if (usePreviewableMedia.PreviewableMediaTypes.STICKER === type) {
             const obj7 = { text: null, secondaryText: null };
-            const intl7 = message(1114).intl;
-            const obj8 = { emojiHook: null };
-            obj8[0] = callback;
-            obj7[0] = intl7.format(message(1114).t.pnm8NC, obj8);
+            const intl7 = util.intl;
+            const obj8 = { emojiHook };
+            obj7.text = intl7.format(util.t.pnm8NC, obj8);
             return obj7;
-          } else if (message(10131).PreviewableMediaTypes.VOICE_MESSAGE === type) {
+          } else if (usePreviewableMedia.PreviewableMediaTypes.VOICE_MESSAGE === type) {
             const obj9 = { text: null, secondaryText: null };
-            const intl6 = message(1114).intl;
-            const obj10 = { emojiHook: null };
-            obj10[0] = callback;
-            obj9[0] = intl6.format(message(1114).t.k6YnQO, obj10);
+            const intl6 = util.intl;
+            const obj10 = { emojiHook };
+            obj9.text = intl6.format(util.t.k6YnQO, obj10);
             return obj9;
-          } else if (message(10131).PreviewableMediaTypes.GIF === type) {
+          } else if (usePreviewableMedia.PreviewableMediaTypes.GIF === type) {
             const obj11 = { text: null, secondaryText: null };
-            const intl5 = message(1114).intl;
-            const obj12 = { emojiHook: null };
-            obj12[0] = callback;
-            obj11[0] = intl5.format(message(1114).t["3oS3Jq"], obj12);
+            const intl5 = util.intl;
+            const obj12 = { emojiHook };
+            obj11.text = intl5.format(util.t["3oS3Jq"], obj12);
             return obj11;
           } else {
             const obj13 = { text: null, secondaryText: null };
-            const intl4 = message(1114).intl;
-            const obj14 = { emojiHook: null };
-            obj14[0] = callback;
-            obj13[0] = intl4.format(message(1114).t.sHV43G, obj14);
+            const intl4 = util.intl;
+            const obj14 = { emojiHook };
+            obj13.text = intl4.format(util.t.sHV43G, obj14);
             return obj13;
           }
-        } else if (reaction(7302)(message)) {
+        } else if (isForwardMessageDefault(message)) {
           const obj15 = { text: null, secondaryText: null };
-          const intl3 = message(1114).intl;
-          const obj16 = { emojiHook: null };
-          obj16[0] = callback;
-          obj15[0] = intl3.format(message(1114).t["8xg9ZQ"], obj16);
+          const intl3 = util.intl;
+          const obj16 = { emojiHook };
+          obj15.text = intl3.format(util.t["8xg9ZQ"], obj16);
           return obj15;
         } else {
-          const intl = message(1114).intl;
-          obj = { emojiHook: null, count: null };
-          obj[0] = callback;
-          obj[1] = arr.length;
-          const everyResult = arr.every((type) => type.type === callback(table[11]).PreviewableMediaTypes.FILE);
-          const intl2 = message(1114).intl;
-          const obj17 = { emojiHook: null, count: null };
-          obj17[0] = callback;
-          obj17[1] = arr.length;
-          let formatResult1 = intl2.format(message(1114).t.UNRyki, obj17);
+          const intl = util.intl;
+          obj = { emojiHook, count: arr.length };
+          const everyResult = arr.every((type) => type.type === message(closure_1_2[11]).PreviewableMediaTypes.FILE);
+          const intl2 = util.intl;
+          const obj17 = { emojiHook, count: arr.length };
+          let formatResult1 = intl2.format(util.t.UNRyki, obj17);
           if (everyResult) {
             formatResult1 = formatResult;
           }
-          const obj18 = { text: null, secondaryText: null };
-          obj18[0] = formatResult1;
+          const obj18 = { text: formatResult1, secondaryText: null };
           return obj18;
         }
       }
     }
-    const intl12 = message(1114).intl;
+    const intl12 = util.intl;
     const format = intl12.format;
-    const t = message(1114).t;
-    if (dependencyMap) {
-      const obj19 = { emojiHook: null };
-      obj19[0] = callback;
+    const t = util.t;
+    if (closure_2) {
+      const obj19 = { emojiHook };
       let text = format(t.sHV43G, obj19);
     } else {
-      const obj20 = { emojiHook: null };
-      obj20[0] = callback;
+      const obj20 = { emojiHook };
       text = format(t.ZOzpKt, obj20);
     }
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  obj1 = message(10094);
+  let obj1 = message(10094);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
   let obj2 = message(10140);
   if (hasPreviewableMedia) {
@@ -241,103 +219,86 @@ function ReactionNotificationBodyWrapper(arg0) {
   if (renderAnnouncementText) {
     obj = { text: null };
     let intl2 = tmp5(1114).intl;
-    obj = { count: null };
-    obj[0] = reactionCount;
-    obj[0] = intl2.format(tmp5(1114).t.Tqk79E, obj);
-    return callback(ReactionNotificationBody, obj);
+    obj = { count: reactionCount };
+    obj.text = intl2.format(tmp5(1114).t.Tqk79E, obj);
+    return closure_10(ReactionNotificationBody, obj);
   } else if (isMilestone) {
     let intl = tmp5(1114).intl;
     let format = intl.format;
     let t = tmp5(1114).t;
     if (tmp3) {
-      obj1 = { count: null };
-      obj1[0] = reactionCount;
+      obj1 = { count: reactionCount };
       let formatResult = format(t.NfZxrD, obj1);
     } else {
-      obj2 = { count: null };
-      obj2[0] = reactionCount;
+      obj2 = { count: reactionCount };
       formatResult = format(t.vfYN5b, obj2);
     }
-    let obj3 = { text: null, secondaryText: null, hasMessageContent: null, messagePreview: null };
-    obj3[0] = formatResult;
-    obj3[1] = secondaryText;
-    obj3[2] = tmp3;
-    obj3[3] = message;
-    return callback(ReactionNotificationBody, obj3);
+    let obj3 = { text: formatResult, secondaryText, hasMessageContent: tmp3, messagePreview: message };
+    return closure_10(ReactionNotificationBody, obj3);
   } else {
-    let obj4 = { text: null, secondaryText: null, hasMessageContent: null, messagePreview: null };
-    obj4[0] = text;
-    obj4[1] = secondaryText;
-    obj4[2] = tmp3;
-    obj4[3] = message;
-    return callback(ReactionNotificationBody, obj4);
+    let obj4 = { text, secondaryText, hasMessageContent: tmp3, messagePreview: message };
+    return closure_10(ReactionNotificationBody, obj4);
   }
 }
 function ReactorNotificationIcon(notification) {
   ({ user, guild, channel } = notification.notification);
   if (notification.isMilestone) {
     if (channel.isGroupDM()) {
-      let obj = { channel: null, size: null };
-      obj[0] = channel;
-      obj[1] = Button.AvatarSizes.NORMAL;
-      let tmp8Result = callback(FacepileGroupDMAvatarDefault, obj);
-      const tmp15 = FacepileGroupDMAvatarDefault;
+      let obj = { channel, size: native.AvatarSizes.NORMAL };
+      let tmp8Result = closure_1_10(GroupDMAvatarDefault, obj);
     }
     return tmp8Result;
   }
   if (null != user) {
-    obj = { user: null, guildId: null, size: null };
-    obj[0] = user;
+    obj = { user, guildId: null, size: null };
     let id;
     if (guild != null) {
       id = guild.id;
     }
-    obj[1] = id;
-    obj[2] = Button.AvatarSizes.NORMAL;
-    tmp8Result = callback(Button.Avatar, obj);
-    const tmp8 = callback;
-    const tmp9 = require;
+    obj.guildId = id;
+    obj.size = native.AvatarSizes.NORMAL;
+    tmp8Result = closure_1_10(native.Avatar, obj);
   } else {
-    obj = { guild: null, size: null, style: null };
-    obj[0] = guild;
-    obj[1] = GuildIconSizes.GuildIconSizes.NORMAL;
-    obj[2] = tmp.guildIcon;
-    tmp8Result = callback(GuildIconSizesDefault, obj);
-    const tmp5 = GuildIconSizesDefault;
+    obj = { guild, size: GuildIcon.GuildIconSizes.NORMAL, style: tmp.guildIcon };
+    tmp8Result = closure_1_10(GuildIconDefault, obj);
   }
 }
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
-({ ChannelTypes: closure_8, MessageEmbedTypes: c9 } = ME);
-({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { newContainerRoleDot: { paddingRight: 4, paddingTop: 0 }, container: { flexDirection: "column" }, textEmoji: { fontSize: 12 }, imageEmoji: null, italic: null, guildIcon: null };
+const View = fn(17).View;
+const InAppNotificationConstants = fn(10095);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } = InAppNotificationConstants);
+const Constants = fn(1074);
+({ ChannelTypes: closure_8, MessageEmbedTypes: closure_9 } = Constants);
+const Fonts = fn(1085).Fonts;
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = { newContainerRoleDot: { paddingRight: 4, paddingTop: 0 }, container: { flexDirection: "column" }, textEmoji: { fontSize: 12 }, imageEmoji: null, italic: null, guildIcon: null };
+let PlatformUtils = fn(1116);
 let tmp5;
-if (!PlatformTypes.isIOS()) {
+if (!PlatformUtils.isIOS()) {
   let items = [{ translateY: 2 }];
   tmp5 = items;
 }
-createCacheKey[3] = { height: 16, width: 16, transform: tmp5 };
-createCacheKey = { fontStyle: "italic", fontFamily: PlatformTypes.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
-createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { borderRadius: ThemesDefault.radii.sm };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let result = set.fileFinishedImporting("modules/in_app_notifications/native/ReactionNotification.tsx");
+createStyles.imageEmoji = { height: 16, width: 16, transform: tmp5 };
+PlatformUtils = fn(1116);
+createStyles = { fontStyle: "italic", fontFamily: PlatformUtils.isIOS() ? Fonts.PRIMARY_NORMAL_ITALIC : Fonts.PRIMARY_MEDIUM_ITALIC };
+createStyles.italic = createStyles;
+createStyles.guildIcon = { borderRadius: nativeDefault.radii.sm };
+let closure_13 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/in_app_notifications/native/ReactionNotification.tsx");
 
 export default function ReactionNotification(notification) {
   notification = notification.notification;
-  let channel;
-  let guild;
-  let parentChannel;
-  let id;
-  id = undefined;
   let message;
   c7 = undefined;
-  let constants;
+  constants = undefined;
   let userAuthor;
-  const tmp = callback2();
-  channel = notification.channel;
-  guild = notification.guild;
-  parentChannel = notification.parentChannel;
-  id = undefined;
+  const tmp = closure_13();
+  const channel = notification.channel;
+  const guild = notification.guild;
+  const parentChannel = notification.parentChannel;
+  let id;
   if (guild != null) {
     id = guild.id;
   }
@@ -354,9 +315,9 @@ export default function ReactionNotification(notification) {
   let tmp6 = channel.type === constants.GUILD_ANNOUNCEMENT;
   const result = obj.isReactionMilestoneNotification(message.reactions, type);
   c7 = result;
-  obj1 = parentChannel;
+  let obj1 = parentChannel;
   const items = [message.reactions];
-  const memo = parentChannel.useMemo(() => notification(guild[25]).sumBy(message.reactions, (count_details) => {
+  const memo = parentChannel.useMemo(() => _mod12.sumBy(message.reactions, (count_details) => {
     count_details = count_details.count_details;
     let num;
     if (count_details != null) {
@@ -396,8 +357,7 @@ export default function ReactionNotification(notification) {
   let tmp13Result;
   if ("dot" === stateFromStores) {
     if (undefined !== colorString) {
-      obj = { color: null, colors: null, containerStyles: null };
-      obj[0] = colorString;
+      obj = { color: colorString, colors: null, containerStyles: null };
       let colorStrings;
       if (userAuthor != null) {
         colorStrings = userAuthor.colorStrings;
@@ -405,10 +365,9 @@ export default function ReactionNotification(notification) {
       if (colorStrings == null) {
         colorStrings = null;
       }
-      obj[1] = colorStrings;
-      obj[2] = tmp.newContainerRoleDot;
-      tmp13Result = callback(tmp3(tmp4[23]).RoleDot, obj);
-      const tmp13 = callback;
+      obj.colors = colorStrings;
+      obj.containerStyles = tmp.newContainerRoleDot;
+      tmp13Result = closure_10(tmp3(tmp4[23]).RoleDot, obj);
     }
   }
   const items2 = [channel, parentChannel, guild, userAuthor, tmp6, result];
@@ -419,23 +378,19 @@ export default function ReactionNotification(notification) {
     return obj;
   }, items2);
   const items4 = [id];
-  callback = obj1.useCallback(() => {
-    let obj = notification(guild[18]);
-    obj = { type: notification.type, dismissReason: "notification_clicked", guildId: id, channelId: id, messageId: message.id, inAppNotificationId: notification.inAppNotificationId };
+  const callback = obj1.useCallback(() => {
+    const obj = { type: notification.type, dismissReason: "notification_clicked", guildId: id, channelId: id, messageId: message.id, inAppNotificationId: notification.inAppNotificationId };
     obj.trackDismissed(obj);
-    channel(guild[28]).popAll();
-    const obj3 = channel(guild[28]);
-    notification(guild[29]).transitionToMessage(channel.id, message.id, { navigationReplace: true });
-    const obj4 = notification(guild[29]);
-    channel(guild[30]).clearNotification();
+    ModalActionCreatorsDefault.popAll();
+    transitionToChannel.transitionToMessage(channel.id, message.id, { navigationReplace: true });
+    InAppNotificationActionCreatorsDefault.clearNotification();
   }, items3);
   const callback1 = obj1.useCallback(() => {
-    let obj = channel(guild[28]);
-    obj = { channelId: id };
-    return obj.pushLazy(notification(guild[32])(guild[31], guild.paths), obj);
+    const obj = { channelId: id };
+    return obj.pushLazy(asyncRequireImpl(10142, dependencyMap.paths), obj);
   }, items4);
-  obj = { icon: callback(ReactorNotificationIcon, { notification, isMilestone: result }), accessoryLabelNode: tmp13Result, header: memo1, onPress: callback, onSettingsPress: callback1, notification, rightAccessory: callback(tmp3(tmp4[34]).MediaPreviewRightAccessory, { message }), children: null };
-  obj1 = { style: tmp.container, children: callback(ReactionNotificationBodyWrapper, { message, reaction: notification.reaction, reactionCount: memo, renderAnnouncementText: tmp6, isMilestone: result }) };
-  obj[7] = callback(id, obj1);
-  return callback(notification(guild[33]).NotificationPressable, obj);
+  obj = { icon: closure_10(ReactorNotificationIcon, { notification, isMilestone: result }), accessoryLabelNode: tmp13Result, header: memo1, onPress: callback, onSettingsPress: callback1, notification, rightAccessory: closure_10(tmp3(tmp4[34]).MediaPreviewRightAccessory, { message }), children: null };
+  obj1 = { style: tmp.container, children: closure_10(ReactionNotificationBodyWrapper, { message, reaction: notification.reaction, reactionCount: memo, renderAnnouncementText: tmp6, isMilestone: result }) };
+  obj.children = closure_10(id, obj1);
+  return closure_10(notification(guild[33]).NotificationPressable, obj);
 };

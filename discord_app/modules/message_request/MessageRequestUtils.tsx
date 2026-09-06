@@ -1,50 +1,51 @@
-// === Module 13837: filterOutMessageRequestsAndSpam ===
+// === Module 13837: MessageRequestUtils ===
 
-// Module 13837 (filterOutMessageRequestsAndSpam)
-import closure_2 from "processChannel" /* 7219 */;
-import closure_3 from "processChannel" /* 7220 */;
+// Module 13837 (MessageRequestUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import MessageRequestStore from "MessageRequestStore" /* 7219 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7220 */;
 
-const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
 
 export const filterOutMessageRequestsAndSpam = function filterOutMessageRequestsAndSpam(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    let items = [closure_2, closure_3];
+    let items = [MessageRequestStore, SpamMessageRequestStore];
     tmp = items;
   }
-  [importDefault, ] = tmp;
-  importDefault = arg0;
-  const keys = importDefault(nextResult1[2]).keys(arg0);
-  const mapped = keys.map((arg0) => {
-    const items = [arg0, messageRequest[arg0]];
+  [messageRequest, ] = tmp;
+  messageRequest = arg0;
+  const keys = SnowflakeUtilsDefault.keys(arg0);
+  const mapped = keys.map((item) => {
+    const items = [item, messageRequest[item]];
     return items;
   });
-  const obj = importDefault(nextResult1[2]);
-  return Array.from(mapped.filter((arg0) => {
-    [, tmp] = arg0;
+  return Array.from(mapped.filter((item) => {
+    [, tmp] = item;
     const isMessageRequestResult = messageRequest.isMessageRequest(tmp.id);
     let tmp3 = !isMessageRequestResult;
     if (!isMessageRequestResult) {
       tmp3 = !nextResult1.isSpam(tmp.id);
     }
     return tmp3;
-  })).reduce((arg0, arg1) => {
-    [r10007, tmp] = arg1;
-    return Object.assign(arg0, { [r10007]: tmp });
+  })).reduce((acc, item) => {
+    [r10007, tmp] = item;
+    return Object.assign(acc, { [r10007]: tmp });
   }, {});
 };
 export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequestsAndSpamById(unreadPrivateChannelIds, items) {
   let tmp = items;
   if (items === undefined) {
-    items = [closure_2, closure_3];
+    items = [MessageRequestStore, SpamMessageRequestStore];
     tmp = items;
   }
   [importDefault, ] = tmp;
-  return unreadPrivateChannelIds.filter((id) => {
-    const isMessageRequestResult = nextResult.isMessageRequest(id);
+  return unreadPrivateChannelIds.filter((item) => {
+    const isMessageRequestResult = nextResult.isMessageRequest(item);
     let tmp2 = !isMessageRequestResult;
     if (!isMessageRequestResult) {
-      tmp2 = !nextResult1.isSpam(id);
+      tmp2 = !nextResult1.isSpam(item);
     }
     return tmp2;
   });
@@ -52,7 +53,7 @@ export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequ
 export const isMessageRequestOrSpamRequest = function isMessageRequestOrSpamRequest(channelId, items) {
   let tmp = items;
   if (items === undefined) {
-    items = [closure_2, closure_3];
+    items = [MessageRequestStore, SpamMessageRequestStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -61,7 +62,7 @@ export const isMessageRequestOrSpamRequest = function isMessageRequestOrSpamRequ
 export const shouldShowMessageRequests = function shouldShowMessageRequests() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [closure_2, closure_3];
+    const items = [MessageRequestStore, SpamMessageRequestStore];
     tmp = items;
   }
   [obj, obj2] = tmp;

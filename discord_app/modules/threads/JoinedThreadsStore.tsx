@@ -1,13 +1,13 @@
-// === Module 4201: storeThread ===
+// === Module 4201: JoinedThreadsStore ===
 
-// Module 4201 (storeThread)
-import applyDefault from "apply" /* 12 */;
+// Module 4201 (JoinedThreadsStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import resetDefault from "reset" /* 4202 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import MuteTimersDefault from "MuteTimers" /* 4202 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import size from "module_2" /* 2 */;
 
 function storeThread(channel) {
   let hasItem = ALL_CHANNEL_TYPES.has(channel.type);
@@ -15,29 +15,29 @@ function storeThread(channel) {
     hasItem = null != channel.member;
   }
   if (hasItem) {
-    const obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
-    ({ id: obj[0], guild_id: obj[1] } = channel);
-    obj[2] = channel.member.flags;
-    obj[3] = channel.member.muted;
-    obj[4] = channel.member.muteConfig;
+    obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
+    ({ id: obj.threadId, guild_id: obj.guildId } = channel);
+    obj.flags = channel.member.flags;
+    obj.muted = channel.member.muted;
+    obj.muteConfig = channel.member.muteConfig;
     const _Date = Date;
     const date = new Date(channel.member.joinTimestamp);
-    obj[5] = date;
-    dependencyMap[channel.id] = obj;
+    obj.joinTimestamp = date;
+    obj[channel.id] = obj;
     const id = channel.id;
     navigation.clearTimer(id);
-    if (true === dependencyMap[id].muted) {
+    if (true === obj[id].muted) {
       const _Set2 = Set;
-      set = new Set(set2);
+      const set = new Set(set2);
       set2 = set;
       set.add(id);
       if (obj2.setTimer(id, tmp10.muteConfig, () => {
-        closure_1_4[id].muted = false;
+        dependencyMap[id].muted = false;
         set = new Set(set);
         set.delete(id);
-        closure_1_8.emitChange();
+        closure_2_8.emitChange();
       })) {
-        dependencyMap[id].muted = false;
+        obj[id].muted = false;
         const _Set3 = Set;
         const set1 = new Set(set2);
         set2 = set1;
@@ -56,22 +56,22 @@ function handleThreadListSyncOrSearchFinish(guildId) {
   const members = guildId.members;
   if (tmp) {
     const item = members.forEach((id) => {
-      const obj = { threadId: id.id, guildId: id, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: new Date(id.joinTimestamp) };
-      closure_1_4[id.id] = obj;
+      obj = { threadId: id.id, guildId, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: new Date(id.joinTimestamp) };
+      obj[id.id] = obj;
       id = id.id;
-      closure_1_5.clearTimer(id);
-      if (true === closure_1_4[id].muted) {
+      closure_5.clearTimer(id);
+      if (true === obj[id].muted) {
         const _Set2 = Set;
-        set = new Set(set2);
+        const set = new Set(set2);
         set2 = set;
         set.add(id);
-        if (closure_1_5.setTimer(id, tmp2.muteConfig, () => {
-          closure_1_4[id].muted = false;
+        if (closure_5.setTimer(id, tmp2.muteConfig, () => {
+          dependencyMap[id].muted = false;
           set = new Set(set);
           set.delete(id);
-          closure_1_8.emitChange();
+          closure_2_8.emitChange();
         })) {
-          closure_1_4[id].muted = false;
+          obj[id].muted = false;
           const _Set3 = Set;
           const set1 = new Set(set2);
           set2 = set1;
@@ -92,22 +92,22 @@ function handleSearchMessagesSuccess(guildId) {
     let item = data.forEach((members) => {
       members = members.members;
       const item = members.forEach((id) => {
-        const obj = { threadId: id.id, guildId: id, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: new Date(id.joinTimestamp) };
-        closure_1_4[id.id] = obj;
+        obj = { threadId: id.id, guildId, flags: id.flags, muted: id.muted, muteConfig: id.muteConfig, joinTimestamp: new Date(id.joinTimestamp) };
+        dependencyMap[id.id] = obj;
         id = id.id;
-        closure_1_5.clearTimer(id);
-        if (true === closure_1_4[id].muted) {
+        navigation.clearTimer(id);
+        if (true === dependencyMap[id].muted) {
           const _Set2 = Set;
           set = new Set(set2);
           set2 = set;
           set.add(id);
-          if (closure_1_5.setTimer(id, tmp2.muteConfig, () => {
-            closure_1_4[id].muted = false;
+          if (navigation.setTimer(id, tmp2.muteConfig, () => {
+            dependencyMap[id].muted = false;
             set = new Set(set);
             set.delete(id);
-            closure_1_8.emitChange();
+            closure_2_8.emitChange();
           })) {
-            closure_1_4[id].muted = false;
+            dependencyMap[id].muted = false;
             const _Set3 = Set;
             const set1 = new Set(set2);
             set2 = set1;
@@ -122,80 +122,78 @@ function handleSearchMessagesSuccess(guildId) {
     });
   }
 }
-const ALL_CHANNEL_TYPES = createChannelRecord.ALL_CHANNEL_TYPES;
-let closure_4 = {};
-let closure_5 = new resetDefault();
-let set = new Set();
+const ALL_CHANNEL_TYPES = ChannelRecord.ALL_CHANNEL_TYPES;
+let obj = {};
+const navigation = new MuteTimersDefault();
+const tmp2 = new MuteTimersDefault();
 const Store = initializeDefault.Store;
 class JoinedThreadsStoreClass extends Store {
 }
 const prototype = JoinedThreadsStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(AuthenticationStore);
 };
 prototype["hasJoined"] = function hasJoined(id) {
-  return id in closure_4;
+  return id in obj;
 };
 prototype["joinTimestamp"] = function joinTimestamp(id) {
   let joinTimestamp;
-  if (dependencyMap[id] != null) {
+  if (obj[id] != null) {
     joinTimestamp = tmp.joinTimestamp;
   }
   return joinTimestamp;
 };
 prototype["flags"] = function flags(arg0) {
   let flags;
-  if (dependencyMap[arg0] != null) {
+  if (obj[arg0] != null) {
     flags = tmp.flags;
   }
   return flags;
 };
 prototype["getInitialOverlayState"] = function getInitialOverlayState() {
-  return Object.values(closure_4);
+  return Object.values(obj);
 };
 prototype["getMuteConfig"] = function getMuteConfig(arg0) {
   let muteConfig;
-  if (dependencyMap[arg0] != null) {
+  if (obj[arg0] != null) {
     muteConfig = tmp.muteConfig;
   }
   return muteConfig;
 };
 prototype["getMutedThreads"] = function getMutedThreads() {
-  return set;
+  return set2;
 };
 prototype["isMuted"] = function isMuted(arg0) {
-  return set.has(arg0);
+  return set2.has(arg0);
 };
 JoinedThreadsStoreClass.displayName = "JoinedThreadsStore";
-const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
+obj = {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     navigation.reset();
-    set = new Set();
-    closure_4 = {};
     guilds = guilds.guilds;
     let item = guilds.forEach((threads) => {
       threads = threads.threads;
       if (threads != null) {
-        const item = threads.forEach(closure_7);
+        const item = threads.forEach(storeThread);
       }
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(joinedThreads) {
-    const mapped = applyDefault(joinedThreads.joinedThreads).map((joinTimestamp) => {
-      const obj = {};
+    const mapped = _modDef12(joinedThreads.joinedThreads).map((joinTimestamp) => {
+      obj = {};
       const merged = Object.assign(joinTimestamp);
       obj.joinTimestamp = new Date(joinTimestamp.joinTimestamp);
       return obj;
     });
-    const arr = applyDefault(joinedThreads.joinedThreads);
-    closure_4 = mapped.keyBy("threadId").value();
+    const arr = _modDef12(joinedThreads.joinedThreads);
+    mapped.keyBy("threadId").value();
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
     const id = guild.id;
-    const obj = id(12)(closure_4);
-    const rejectResult = id(12)(closure_4).reject((guildId) => guildId.guildId === id);
-    closure_4 = id(12)(closure_4).reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
+    obj = _modDef12(obj);
+    const rejectResult = obj.reject((guildId) => guildId.guildId === id);
+    obj = obj.reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
     const threads = guild.threads;
     if (threads != null) {
       const item = threads.forEach(storeThread);
@@ -203,9 +201,9 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     const id = guild.guild.id;
-    const obj = id(12)(closure_4);
-    const rejectResult = id(12)(closure_4).reject((guildId) => guildId.guildId === id);
-    closure_4 = id(12)(closure_4).reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
+    obj = _modDef12(obj);
+    const rejectResult = obj.reject((guildId) => guildId.guildId === id);
+    obj = obj.reject((guildId) => guildId.guildId === id).keyBy("threadId").value();
   },
   THREAD_CREATE: function handleThreadCreate(channel) {
     storeThread(channel.channel);
@@ -227,29 +225,29 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
     }
   },
   THREAD_MEMBER_UPDATE: function handleThreadMemberUpdate(userId) {
-    if (store.getId() !== userId.userId) {
+    if (AuthenticationStore.getId() !== userId.userId) {
       return false;
     } else {
-      const obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
-      ({ id: obj4[0], guildId: obj4[1], flags: obj4[2], muted: obj4[3], muteConfig: obj4[4] } = userId);
+      obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
+      ({ id: obj4.threadId, guildId: obj4.guildId, flags: obj4.flags, muted: obj4.muted, muteConfig: obj4.muteConfig } = userId);
       const _Date = Date;
       const date = new Date(userId.joinTimestamp);
-      obj[5] = date;
-      dependencyMap[userId.id] = obj;
+      obj.joinTimestamp = date;
+      obj[userId.id] = obj;
       const id = userId.id;
       navigation.clearTimer(id);
-      if (true === dependencyMap[id].muted) {
+      if (true === obj[id].muted) {
         const _Set2 = Set;
-        set = new Set(set2);
+        const set = new Set(set2);
         set2 = set;
         set.add(id);
         if (navigation.setTimer(id, tmp24.muteConfig, () => {
-          closure_1_4[id].muted = false;
+          dependencyMap[id].muted = false;
           set = new Set(set);
           set.delete(id);
-          closure_1_8.emitChange();
+          closure_2_8.emitChange();
         })) {
-          dependencyMap[id].muted = false;
+          obj[id].muted = false;
           const _Set3 = Set;
           const set1 = new Set(set2);
           set2 = set1;
@@ -265,19 +263,16 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
   THREAD_MEMBER_LOCAL_UPDATE: function handleThreadMemberLocalUpdate(arg0) {
     ({ id, guildId } = arg0);
     ({ userId, isJoining } = arg0);
-    let tmp3 = store.getId() === userId;
+    let tmp3 = AuthenticationStore.getId() === userId;
     if (tmp3) {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        const obj = { threadId: null, guildId: null, flags: 0, muted: true, muteConfig: null, joinTimestamp: null };
-        obj[0] = id;
-        obj[1] = guildId;
-        obj[4] = { end_time: "Array" };
+        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "Array" }, joinTimestamp: null };
         const _Date = Date;
         const date = new Date();
         guildId = date;
-        obj[5] = date;
+        obj.joinTimestamp = date;
         tmp6[id] = obj;
       } else {
         delete tmp[tmp2];
@@ -286,12 +281,12 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
     return tmp3;
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(removedMemberIds) {
-    closure_0 = removedMemberIds;
+    const user = removedMemberIds;
     c1 = false;
     removedMemberIds = removedMemberIds.removedMemberIds;
     let hasItem;
     if (removedMemberIds != null) {
-      hasItem = removedMemberIds.includes(store.getId());
+      hasItem = removedMemberIds.includes(AuthenticationStore.getId());
     }
     if (hasItem) {
       hasItem = removedMemberIds.id in obj;
@@ -306,30 +301,30 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
     const addedMembers = removedMemberIds.addedMembers;
     if (addedMembers != null) {
       const item = addedMembers.forEach((userId) => {
-        if (userId.userId === closure_1_3.getId()) {
+        if (userId.userId === AuthenticationStore.getId()) {
           obj = {};
           const merged = Object.assign(obj);
           obj = { threadId: null, guildId: null, flags: null, muted: null, muteConfig: null, joinTimestamp: null };
-          ({ id: obj5[0], guildId: obj5[1] } = id);
-          ({ flags: obj5[2], muted: obj5[3], muteConfig: obj5[4] } = userId);
+          ({ id: obj5.threadId, guildId: obj5.guildId } = user);
+          ({ flags: obj5.flags, muted: obj5.muted, muteConfig: obj5.muteConfig } = userId);
           let tmp15 = globalThis;
           const _Date = Date;
           const date = new Date(userId.joinTimestamp);
-          obj[5] = date;
-          obj[id.id] = obj;
-          id = id.id;
+          obj.joinTimestamp = date;
+          obj[user.id] = obj;
+          const id = user.id;
           let muteConfig = obj[id];
-          closure_1_5.clearTimer(id);
+          closure_5.clearTimer(id);
           if (true === muteConfig.muted) {
-            set = new tmp15.Set(set2);
+            const set = new tmp15.Set(set2);
             set2 = set;
             set.add(id);
             muteConfig = muteConfig.muteConfig;
             if (obj6.setTimer(id, muteConfig, () => {
-              closure_1_4[id].muted = false;
+              dependencyMap[id].muted = false;
               set = new Set(set);
               set.delete(id);
-              closure_1_8.emitChange();
+              closure_2_8.emitChange();
             })) {
               obj[id].muted = false;
               const set1 = new tmp15.Set(set2);
@@ -343,13 +338,14 @@ const joinedThreadsStoreClass = new JoinedThreadsStoreClass(dispatcherDefault, {
             set2.delete(id);
           }
           c1 = true;
-          obj6 = closure_1_5;
+          obj6 = closure_5;
         }
       });
     }
     return c1;
   }
-});
-const result = set.fileFinishedImporting("modules/threads/JoinedThreadsStore.tsx");
+};
+const joinedThreadsStoreClass = new JoinedThreadsStoreClass(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/threads/JoinedThreadsStore.tsx");
 
 export default joinedThreadsStoreClass;

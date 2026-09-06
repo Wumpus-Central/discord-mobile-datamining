@@ -1,9 +1,9 @@
-// === Module 7611: hasAttachmentsEmbedsComponentsOrSnapshots ===
+// === Module 7611: ExplicitMediaManagerUtils ===
 
-// Module 7611 (hasAttachmentsEmbedsComponentsOrSnapshots)
-import set from "set" /* 2 */;
+// Module 7611 (ExplicitMediaManagerUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
 
 export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachmentsEmbedsComponentsOrSnapshots(message) {
   if (null == message) {

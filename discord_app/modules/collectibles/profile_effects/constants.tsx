@@ -1,9 +1,9 @@
-// === Module 8803: PROFILE_EFFECT_INTRO_MINIMUM_DELAY ===
+// === Module 8803: constants ===
 
-// Module 8803 (PROFILE_EFFECT_INTRO_MINIMUM_DELAY)
-import set from "set" /* 2 */;
+// Module 8803 (constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");
 
 export const PROFILE_EFFECT_INTRO_MINIMUM_DELAY = 0.1;
 export const PROFILE_EFFECT_INTRO_DELAY = 500;

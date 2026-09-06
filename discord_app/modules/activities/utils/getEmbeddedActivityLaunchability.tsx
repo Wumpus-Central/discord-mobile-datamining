@@ -1,16 +1,14 @@
 // === Module 9582: getEmbeddedActivityLaunchability ===
 
 // Module 9582 (getEmbeddedActivityLaunchability)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9502 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "updateVoiceState" /* 4579 */;
-import { SUPPORTED_ACTIVITIES_CHANNEL_TYPES as closure_6 } from "items3" /* 1920 */;
-import { Permissions } from "ME" /* 1074 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-require = arg1;
+require = fn;
 function getEmbeddedActivityLaunchability(arg0) {
   ({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore } = arg0);
   const channel = ChannelStore.getChannel(channelId);
@@ -58,29 +56,32 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-const obj = { CAN_LAUNCH: 0, [0]: "CAN_LAUNCH", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", NO_CHANNEL: 3, [3]: "NO_CHANNEL", NO_GUILD: 4, [4]: "NO_GUILD", IS_AFK_CHANNEL: 5, [5]: "IS_AFK_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7, [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL" };
-const result = require("set").fileFinishedImporting("modules/activities/utils/getEmbeddedActivityLaunchability.tsx");
+let closure_6 = fn(1920).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+const Permissions = fn(1074).Permissions;
+const EmbeddedActivityLaunchability = { CAN_LAUNCH: 0, [0]: "CAN_LAUNCH", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", NO_CHANNEL: 3, [3]: "NO_CHANNEL", NO_GUILD: 4, [4]: "NO_GUILD", IS_AFK_CHANNEL: 5, [5]: "IS_AFK_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7, [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedActivityLaunchability.tsx");
 
-export const EmbeddedActivityLaunchability = obj;
+export { EmbeddedActivityLaunchability };
 export { getEmbeddedActivityLaunchability };
 export const getEmbeddedActivityLaunchabilityForChannel = function getEmbeddedActivityLaunchabilityForChannel(channelId) {
-  return getEmbeddedActivityLaunchability({ channelId, ChannelStore: closure_2, GuildStore: closure_3, PermissionStore: closure_4, VoiceStateStore: closure_5 });
+  return getEmbeddedActivityLaunchability({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore });
 };
 export const useEmbeddedActivityLaunchability = function useEmbeddedActivityLaunchability(channelId) {
-  const _require = channelId;
-  const items = [closure_2, closure_3, closure_4, closure_5];
+  _require = channelId;
+  const items = [ChannelStore, GuildStore, PermissionStore, VoiceStateStore];
   const items1 = [channelId];
-  return _require(504).useStateFromStores(items, () => closure_1_9({ channelId: closure_0, ChannelStore: closure_1_2, GuildStore: closure_1_3, PermissionStore: closure_1_4, VoiceStateStore: closure_1_5 }), items1);
+  return require("initialize").useStateFromStores(items, () => getEmbeddedActivityLaunchability({ channelId, ChannelStore, GuildStore, PermissionStore, VoiceStateStore }), items1);
 };
 export const getEmbeddedActivityLaunchabilityLabel = function getEmbeddedActivityLaunchabilityLabel(arg0) {
   if (obj.CAN_LAUNCH === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.qJvTKQ);
+    const intl3 = util.intl;
+    return intl3.string(util.t.qJvTKQ);
   } else if (tmp.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.hHGrWz);
+    const intl2 = util.intl;
+    return intl2.string(util.t.hHGrWz);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.j29zCr);
+    const intl = util.intl;
+    return intl.string(util.t.j29zCr);
   }
 };

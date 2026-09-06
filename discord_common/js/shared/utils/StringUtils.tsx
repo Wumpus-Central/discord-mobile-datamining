@@ -1,8 +1,9 @@
-// === Module 1926: cssValueToNumber ===
+// === Module 1926: utils/StringUtils ===
 
-// Module 1926 (cssValueToNumber)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1928 */;
+// Module 1926 (utils/StringUtils)
+import _mod1927 from "module_1927" /* 1927 */;
+import DOMUtils from "DOMUtils" /* 1928 */;
+import size from "module_2" /* 2 */;
 
 const re2 = /[\u0300-\u036f]/g;
 const re3 = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
@@ -10,37 +11,37 @@ if (null == String.prototype.normalize) {
   let fn = (arg0) => arg0;
 } else {
   fn = (str) => {
-    const replaced = str.normalize("NFD").replace(closure_2, "");
-    return replaced.normalize("NFC");
+    const normalizer = str.normalize("NFD").replace(re2, "");
+    return normalizer.normalize("NFC");
   };
 }
 if (null == String.prototype.normalize) {
   let fullNormalize = (arg0) => arg0;
 } else {
   fullNormalize = function fullNormalize(str) {
-    _require = _require(1927);
+    closure_0 = _mod1927;
     dependencyMap = "";
     const items = [...str.normalize("NFD")];
-    const item = items.forEach((arg0) => {
-      let tmp2 = table[arg0];
+    const item = items.forEach((item) => {
+      let tmp2 = closure_0[item];
       if (tmp2 == null) {
-        tmp2 = arg0;
+        tmp2 = item;
       }
       closure_1 = closure_1 + tmp2;
     });
     return dependencyMap.normalize("NFD").toLocaleLowerCase();
   };
 }
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
 
-export const cssValueToNumber = set2.cssValueToNumber;
-export const upperCaseFirstChar = function upperCaseFirstChar(str) {
-  str = "";
-  if (null != str) {
-    const formatted = str.charAt(0).toUpperCase();
+export const cssValueToNumber = DOMUtils.cssValueToNumber;
+export const upperCaseFirstChar = function upperCaseFirstChar(item) {
+  let str = "";
+  if (null != item) {
+    const formatted = item.charAt(0).toUpperCase();
     const _HermesInternal = HermesInternal;
-    str = "" + formatted + str.slice(1);
-    const str2 = str.charAt(0);
+    str = "" + formatted + item.slice(1);
+    const str2 = item.charAt(0);
   }
   return str;
 };
@@ -57,7 +58,7 @@ export const truncateText = (arg0, arg1) => {
       if (concat.length <= arg1) {
         str2 = concat;
       } else {
-        if (regex.test(concat)) {
+        if (re3.test(concat)) {
           const items = [];
           HermesBuiltin.arraySpread(concat, 0);
           const substr = items.slice(0, arg1 - str.length);

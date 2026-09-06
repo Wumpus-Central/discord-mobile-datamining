@@ -1,68 +1,64 @@
-// === Module 17765: PriceTier ===
+// === Module 17765: GuildRoleSubscriptionListingPreview ===
 
-// Module 17765 (PriceTier)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import preloadDefault from "preload" /* 5587 */;
-import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 7234 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
-import getBenefitKey from "getBenefitKey" /* 15231 */;
+// Module 17765 (GuildRoleSubscriptionListingPreview)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import PriceUtils from "PriceUtils" /* 7234 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15227 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 15231 */;
 import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 15238 */;
+import GuildRoleSubscriptionsActionCreatorExtras from "GuildRoleSubscriptionsActionCreatorExtras" /* 17739 */;
+import GuildRoleSubscriptionBenefitPreview from "GuildRoleSubscriptionBenefitPreview" /* 17760 */;
 import GuildPremiumRoleSubscribeButton from "GuildPremiumRoleSubscribeButton" /* 17766 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function PriceTier(arg0) {
   ({ price, currency } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
-  const tmp2 = callback4();
+  const merged = Object.assign(arg0, Object.assign({ price: 0, currency: 0 }));
+  const tmp2 = closure_9();
   let obj = { style: tmp2.priceGroup, children: null };
-  obj = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: formatSingleCurrencyPrice.formatPrice(price, currency) };
-  const items = [callback2(Text.Text, obj), ];
+  obj = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: PriceUtils.formatPrice(price, currency) };
+  const items = [timestampProducer(Text_Text.Text, obj), ];
   obj = { style: tmp2.priceInterval, variant: "eyebrow", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  obj1 = { period: null };
-  const obj3 = formatSingleCurrencyPrice;
-  obj1[0] = getBenefitKey.formatPlanInterval(merged);
-  obj[3] = intl.format(getSystemLocale.t.isLGyX, obj1);
-  items[1] = callback2(Text.Text, obj);
-  obj[1] = items;
-  return callback3(View, obj);
+  const intl = util.intl;
+  const obj1 = { period: null };
+  obj1.period = GuildRoleSubscriptionTypeUtils.formatPlanInterval(merged);
+  obj.children = intl.format(util.t.isLGyX, obj1);
+  items[1] = timestampProducer(Text_Text.Text, obj);
+  obj.children = items;
+  return React5(View, obj);
 }
 function Header(onPress) {
   const listingId = onPress.listingId;
-  const tmp = callback4();
-  let obj = getRoleEmojisAll;
-  obj1 = getRoleEmojisAll;
-  let str = callback(getRoleEmojisAll.useImage(listingId), 1)[0];
-  const obj3 = getRoleEmojisAll;
-  obj = { style: tmp.header, children: null };
-  const items = [callback2(Text.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: callback(obj1.useName(listingId), 1)[0] }), , , , ];
+  const tmp = closure_9();
+  let obj1 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  let str = _slicedToArray(GuildRoleSubscriptionListingEditStateUtilsAll.useImage(listingId), 1)[0];
+  let obj = { style: tmp.header, children: null };
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-md/semibold", color: "interactive-text-active", children: _slicedToArray(obj1.useName(listingId), 1)[0] }), , , , ];
   obj = { style: tmp.image, source: null };
-  obj4 = getRoleEmojisAll;
-  const tmp3 = closure_7;
+  const obj4 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const tmp3 = React5;
   const tmp4 = View;
   if (str == null) {
     str = "";
   }
-  obj[1] = { uri: str };
-  items[1] = callback2(preloadDefault, obj);
+  obj.source = { uri: str };
+  items[1] = timestampProducer(FastImageDefault, obj);
   obj1 = {};
-  const merged = Object.assign(callback(obj.useSubscriptionPlan(listingId), 1)[0]);
-  items[2] = callback2(PriceTier, obj1);
-  items[3] = callback2(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, { onPress: onPress.onSubscribePress });
-  items[4] = callback2(Text.Text, { variant: "text-sm/medium", children: callback(obj4.useDescription(listingId), 1)[0] });
-  obj[1] = items;
+  const merged = Object.assign(_slicedToArray(obj.useSubscriptionPlan(listingId), 1)[0]);
+  items[2] = timestampProducer(PriceTier, obj1);
+  items[3] = timestampProducer(GuildPremiumRoleSubscribeButton.GuildPremiumRoleSubscribeButton, { onPress: onPress.onSubscribePress });
+  items[4] = timestampProducer(Text_Text.Text, { variant: "text-sm/medium", children: _slicedToArray(obj4.useDescription(listingId), 1)[0] });
+  obj.children = items;
   return tmp3(tmp4, obj);
 }
 function Content(arg0) {
   ({ children, noBackground, style } = arg0);
-  const tmp = callback4();
+  const tmp = closure_9();
   style = [tmp.content, , ];
   let contentWithBackground = true !== noBackground;
   if (contentWithBackground) {
@@ -70,36 +66,36 @@ function Content(arg0) {
   }
   style[1] = contentWithBackground;
   style[2] = style;
-  return closure_6(View, { style, children });
+  return timestampProducer(View, { style, children });
 }
 function SectionLabel(children) {
-  const merged = Object.assign(children, Object.create(null));
+  const merged = Object.assign(children, Object.assign({ label: 0 }));
   let obj = {};
   const merged1 = Object.assign(merged);
-  obj = { style: callback4().sectionLabel, variant: "eyebrow", color: "text-default", children: children.label };
-  obj.children = callback2(Text.Text, obj);
-  return callback2(Content, obj);
+  obj = { style: closure_9().sectionLabel, variant: "eyebrow", color: "text-default", children: children.label };
+  obj.children = timestampProducer(Text_Text.Text, obj);
+  return timestampProducer(Content, obj);
 }
 function LabeledSection(arg0) {
   ({ label, children } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(arg0, Object.assign({ label: 0, children: 0 }));
   let obj = { children: null };
   obj = {};
   const merged1 = Object.assign(merged);
   obj.label = label;
-  const items = [callback2(SectionLabel, obj), ];
+  const items = [timestampProducer(SectionLabel, obj), ];
   obj = {};
   const merged2 = Object.assign(merged);
   obj.children = children;
-  items[1] = callback2(Content, obj);
-  obj[0] = items;
-  return callback3(closure_8, obj);
+  items[1] = timestampProducer(Content, obj);
+  obj.children = items;
+  return React5(React6, obj);
 }
 function Separator() {
   let obj = { children: null };
-  obj = { style: callback4().separator };
-  obj[0] = callback2(View, obj);
-  return callback2(Content, obj);
+  obj = { style: closure_9().separator };
+  obj.children = timestampProducer(View, obj);
+  return timestampProducer(Content, obj);
 }
 class BenefitsSection {
   constructor(arg0) {
@@ -120,111 +116,105 @@ class BenefitsSection {
       if (typeof label !== "string") {
         tmp11 = guildId;
         tmp12 = closure_3;
-        intl = require("getSystemLocale").intl;
+        intl = guildId(closure_3[8]).intl;
         obj = { count: null };
-        obj[0] = benefits.length;
+        obj.count = benefits.length;
         formatToPlainStringResult = intl.formatToPlainString(label, obj);
       }
-      mapped = benefits.map((benefit) => {
-        let benefitSpacing = arg1 > 0;
+      mapped = benefits.map((benefit, index) => {
+        benefitSpacing = index > 0;
         if (benefitSpacing) {
           benefitSpacing = benefitSpacing.benefitSpacing;
         }
         let obj = { style: benefitSpacing, children: null };
-        obj = { guildId: closure_0, benefit, isInteractive: listingId !== closure_1_0(closure_1_3[14]).NEW_LISTING_EDIT_STATE_ID };
-        obj[1] = closure_1_6(closure_1_0(closure_1_3[13]).GuildRoleSubscriptionBenefitPreview, obj);
-        return closure_1_6(closure_1_5, obj, closure_1_0(closure_1_3[9]).getBenefitKey(benefit));
+        obj = { guildId, benefit, isInteractive: listingId !== GuildRoleSubscriptionsActionCreatorExtras.NEW_LISTING_EDIT_STATE_ID };
+        obj.children = timestampProducer(GuildRoleSubscriptionBenefitPreview.GuildRoleSubscriptionBenefitPreview, obj);
+        return timestampProducer(View, obj, GuildRoleSubscriptionTypeUtils.getBenefitKey(benefit));
       });
       tmp4 = jsx;
       obj = { noBackground: null, label: null, children: null };
       tmp6 = closure_16;
-      obj[0] = look === closure_16.ROUNDED;
-      obj[1] = formatToPlainStringResult;
+      obj.noBackground = look === closure_16.ROUNDED;
+      obj.label = formatToPlainStringResult;
       tmp4Result = mapped;
       tmp5 = LabeledSection;
       if (look !== closure_16.FLAT) {
         tmp8 = View;
         obj1 = { style: null, children: null };
-        obj1[0] = tmp2.roundedBenefitsContainer;
-        obj1[1] = mapped;
+        obj1.style = tmp2.roundedBenefitsContainer;
+        obj1.children = mapped;
         tmp4Result = tmp4(View, obj1);
       }
-      obj[2] = tmp4Result;
+      obj.children = tmp4Result;
       return tmp4(tmp5, obj);
     }
   }
 }
-noopAll;
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, header: null, image: null, priceGroup: null, priceInterval: null, content: null, contentWithBackground: null, separator: null, sectionLabel: null, benefitSpacing: null, roundedBenefitsContainer: null, footer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: 16 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: 80, height: 80, borderRadius: 40, marginTop: 16 };
-createCacheKey[3] = { marginTop: 16, alignItems: "center" };
-createCacheKey[4] = { marginTop: 4 };
-createCacheKey[5] = { paddingHorizontal: 16 };
-createCacheKey[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[7] = { width: "100%", height: 1, marginTop: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[8] = { paddingVertical: 16 };
-createCacheKey[9] = { marginTop: 16 };
-let obj2 = { width: "100%", height: 1, marginTop: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: 16 };
-createCacheKey[11] = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
-BenefitsSection.Looks = obj4;
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: 16 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { container: { padding: 16 }, header: null, image: null, priceGroup: null, priceInterval: null, content: null, contentWithBackground: null, separator: null, sectionLabel: null, benefitSpacing: null, roundedBenefitsContainer: null, footer: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderTopStartRadius: 8, borderTopEndRadius: 8, display: "flex", flexDirection: "column", alignItems: "center", padding: 16 };
+createStyles.header = createStyles;
+createStyles.image = { width: 80, height: 80, borderRadius: 40, marginTop: 16 };
+createStyles.priceGroup = { marginTop: 16, alignItems: "center" };
+createStyles.priceInterval = { marginTop: 4 };
+createStyles.content = { paddingHorizontal: 16 };
+createStyles.contentWithBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+let size = { width: "100%", height: 1, marginTop: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.separator = size;
+createStyles.sectionLabel = { paddingVertical: 16 };
+createStyles.benefitSpacing = { marginTop: 16 };
+let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.roundedBenefitsContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, padding: 16 };
+createStyles.footer = { borderBottomStartRadius: 8, borderBottomEndRadius: 8, height: 16 };
+const React7 = createStyles.createStyles(createStyles);
+let obj3 = { FLAT: 0, [0]: "FLAT", ROUNDED: 1, [1]: "ROUNDED" };
+BenefitsSection.Looks = obj3;
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionListingPreview.tsx");
 
 export { BenefitsSection };
 export const GuildRoleSubscriptionListingPreview = function GuildRoleSubscriptionListingPreview(arg0) {
-  const tmp = callback4();
+  const tmp = closure_9();
   ({ guildId, listingId } = arg0);
-  let obj = getRoleEmojisAll;
-  const first = callback(obj.useChannelBenefits(listingId), 1)[0];
-  obj1 = getRoleEmojisAll;
-  const first1 = callback(obj1.useIntangibleBenefits(listingId), 1)[0];
-  let obj2 = getRoleEmojisAll;
+  let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first = _slicedToArray(obj.useChannelBenefits(listingId), 1)[0];
+  let obj1 = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first1 = _slicedToArray(obj1.useIntangibleBenefits(listingId), 1)[0];
+  let obj2 = GuildRoleSubscriptionListingEditStateUtilsAll;
   obj = { style: tmp.container, children: null };
   obj = {};
   const role = obj2.useRole(listingId, guildId);
   const merged = Object.assign(arg0);
-  const items = [callback2(Header, obj), , , , ];
+  const items = [timestampProducer(Header, obj), , , , ];
   obj1 = { label: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj1[0] = intl.string(getSystemLocale.t.FJZmYx);
-  obj1[1] = callback2(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { role });
-  items[1] = callback2(LabeledSection, obj1);
+  const intl = util.intl;
+  obj1.label = intl.string(util.t.FJZmYx);
+  obj1.children = timestampProducer(GuildRoleSubscriptionMemberPreview.GuildRoleSubscriptionMemberPreview, { role });
+  items[1] = timestampProducer(LabeledSection, obj1);
   let tmp4Result = first.length > 0;
   if (tmp4Result) {
     obj2 = { children: null };
     const items1 = [tmp6(Separator, {}), ];
-    const obj3 = { guildId: null, benefits: null, label: null, listingId: null };
-    obj3[0] = guildId;
-    obj3[1] = first;
-    obj3[2] = tmp8(1114).t.sqjII9;
-    obj3[3] = listingId;
+    obj3 = { guildId, benefits: first, label: tmp8(1114).t.sqjII9, listingId };
     items1[1] = tmp6(BenefitsSection, obj3);
-    obj2[0] = items1;
-    tmp4Result = tmp4(closure_8, obj2);
+    obj2.children = items1;
+    tmp4Result = tmp4(React6, obj2);
   }
   items[2] = tmp4Result;
   tmp4Result = first1.length > 0;
   if (tmp4Result) {
-    obj4 = { children: null };
+    const obj4 = { children: null };
     const items2 = [tmp6(Separator, {}), ];
-    const obj5 = { guildId: null, benefits: null, label: null, listingId: null };
-    obj5[0] = guildId;
-    obj5[1] = first1;
-    obj5[2] = tmp8(1114).t.aBE7f9;
-    obj5[3] = listingId;
+    const obj5 = { guildId, benefits: first1, label: tmp8(1114).t.aBE7f9, listingId };
     items2[1] = tmp6(BenefitsSection, obj5);
-    obj4[0] = items2;
-    tmp4Result = tmp4(closure_8, obj4);
+    obj4.children = items2;
+    tmp4Result = tmp4(React6, obj4);
   }
   items[3] = tmp4Result;
-  items[4] = callback2(Content, { style: tmp.footer });
-  obj[1] = items;
-  return closure_7(View, obj);
+  items[4] = timestampProducer(Content, { style: tmp.footer });
+  obj.children = items;
+  return React5(View, obj);
 };

@@ -1,18 +1,17 @@
-// === Module 10678: create ===
+// === Module 10678: gradient ===
 
-// Module 10678 (create)
+// Module 10678 (gradient)
 import _mod1188 from "module_1188" /* 1188 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1188" /* 1188 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class Gradient$Type extends MessageType {
   constructor() {
     items = [, ];
     items[0] = { no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 };
     items[1] = { no: 2, name: "angle", kind: "scalar", T: 2 };
     tmp = new tmp("discord_protos.premium_marketing.v1.Gradient", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -28,7 +27,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -37,8 +36,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let colors = obj.colors;
@@ -54,25 +52,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -86,8 +75,6 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, wri
   let num = 0;
   if (0 < colors.colors.length) {
     do {
-      let tmp = require;
-      let tmp2 = dependencyMap;
       let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
       let stringResult = tagResult.string(colors.colors[num]);
       num = num + 1;
@@ -109,8 +96,8 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(colors, tag, wri
   return tag;
 };
 let items = [{ no: 1, name: "colors", kind: "scalar", repeat: 2, T: 9 }, { no: 2, name: "angle", kind: "scalar", T: 2 }];
-prototype = new prototype("discord_protos.premium_marketing.v1.Gradient", items, tmp, Gradient$Type, prototype, items, arg1);
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gradient.tsx");
+prototype = new prototype("discord_protos.premium_marketing.v1.Gradient", items, tmp, Gradient$Type, prototype, items, fn);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gradient.tsx");
 
 export const Gradient = prototype;

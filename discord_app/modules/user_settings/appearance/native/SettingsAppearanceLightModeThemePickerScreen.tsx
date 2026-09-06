@@ -1,19 +1,19 @@
 // === Module 15305: SettingsAppearanceLightModeThemePickerScreen ===
 
 // Module 15305 (SettingsAppearanceLightModeThemePickerScreen)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ThemeTypesDefault from "ThemeTypes" /* 15266 */;
-import { SystemTheme } from "SystemThemeState" /* 1186 */;
-import { jsx } from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import SettingsAppearanceThemePickerScreenDefault from "SettingsAppearanceThemePickerScreen" /* 15266 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx");
+require = fn;
+const SystemTheme = fn(1186).SystemTheme;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx");
 
 export default function SettingsAppearanceLightModeThemePickerScreen() {
   const obj = { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.NoFvjZ);
-  return jsx(ThemeTypesDefault, { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null });
+  const intl = util.intl;
+  obj.headerTitle = intl.string(util.t.NoFvjZ);
+  return jsx(SettingsAppearanceThemePickerScreenDefault, { mode: SystemTheme.LIGHT, themeSelector: "nitro", headerTitle: null });
 };

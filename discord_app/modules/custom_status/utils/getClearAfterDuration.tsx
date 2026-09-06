@@ -1,18 +1,18 @@
 // === Module 11119: getClearAfterDuration ===
 
 // Module 11119 (getClearAfterDuration)
-import set from "set" /* 2 */;
 import _modDef38 from "module_38" /* 38 */;
-import setDefault from "set" /* 1090 */;
-import StatusTypes from "StatusTypes" /* 11115 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import Constants from "Constants" /* 11115 */;
+import size from "module_2" /* 2 */;
 
-const ClearAfterValues = StatusTypes.ClearAfterValues;
-const result = set.fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");
+const ClearAfterValues = Constants.ClearAfterValues;
+const result = size.fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");
 
 export default function getClearAfterDuration(arg0) {
   let DAY = arg0;
   if (arg0 === ClearAfterValues.TODAY) {
-    DAY = setDefault.Millis.DAY;
+    DAY = DurationsDefault.Millis.DAY;
   } else {
     _modDef38(typeof DAY === "number", "Invalid custom status clear timeout");
   }

@@ -1,60 +1,57 @@
-// === Module 5625: useHeaderDebugOverlay ===
+// === Module 5625: HeaderDebugOverlay ===
 
-// Module 5625 (useHeaderDebugOverlay)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
+// Module 5625 (HeaderDebugOverlay)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useDesignToggleDefault from "useDesignToggle" /* 5626 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let closure_7 = { "os-drawn": "OS-Drawn", "custom-drawn": "Custom-Drawn", "js-stack": "JS Stack", sheet: "Sheet", bespoke: "Bespoke" };
-createCacheKey = { tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 }, badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" }, badge: null, "color-os-drawn": null, "color-custom-drawn": null, "color-js-stack": null, "color-sheet": null, "color-bespoke": null };
-createCacheKey = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.TEXT_LINK };
-let obj1 = { backgroundColor: ThemesDefault.colors.TEXT_LINK };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.STATUS_DANGER };
-let obj2 = { backgroundColor: ThemesDefault.colors.STATUS_DANGER };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[6] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
-const obj4 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
-createCacheKey[7] = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj5 = { backgroundColor: ThemesDefault.colors.STATUS_WARNING };
-const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
+fn(4560);
+let createStyles = { tintWash: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, pointerEvents: "none", opacity: 0.15 }, badgeContainer: { position: "absolute", bottom: 2, right: 4, pointerEvents: "none" }, badge: null, "color-os-drawn": null, "color-custom-drawn": null, "color-js-stack": null, "color-sheet": null, "color-bespoke": null };
+createStyles = { paddingHorizontal: 4, paddingVertical: 1, borderRadius: nativeDefault.radii.xs };
+createStyles.badge = createStyles;
+createStyles["color-os-drawn"] = { backgroundColor: nativeDefault.colors.TEXT_LINK };
+let obj1 = { backgroundColor: nativeDefault.colors.TEXT_LINK };
+createStyles["color-custom-drawn"] = { backgroundColor: nativeDefault.colors.STATUS_DANGER };
+let obj2 = { backgroundColor: nativeDefault.colors.STATUS_DANGER };
+createStyles["color-js-stack"] = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+createStyles["color-sheet"] = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
+const obj4 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
+createStyles["color-bespoke"] = { backgroundColor: nativeDefault.colors.STATUS_WARNING };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx");
 
 export default function useHeaderDebugOverlay(arg0, arg1) {
-  const tmp3 = callback3();
+  const tmp3 = closure_8();
   if (tmp2) {
     let tmp6 = arg1;
     const _HermesInternal = HermesInternal;
     const tmp8 = tmp3["color-" + arg0];
     if (arg1 == null) {
-      tmp6 = table[arg0];
+      tmp6 = closure_7[arg0];
     }
     let obj = { children: null };
     obj = { style: null };
     const items = [tmp3.tintWash, tmp8];
-    obj[0] = items;
-    const items1 = [callback(View, obj), ];
-    obj = { style: null, children: null };
-    obj[0] = tmp3.badgeContainer;
-    obj1 = { style: null, children: null };
+    obj.style = items;
+    const items1 = [React4(View, obj), ];
+    obj = { style: tmp3.badgeContainer, children: null };
+    const obj1 = { style: null, children: null };
     const items2 = [tmp3.badge, tmp8];
-    obj1[0] = items2;
-    const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", children: null };
-    obj2[2] = tmp6;
-    obj1[1] = callback(Text.Text, obj2);
-    obj[1] = callback(View, obj1);
-    items1[1] = callback(View, obj);
-    obj[0] = items1;
-    return callback2(closure_5, obj);
+    obj1.style = items2;
+    const obj2 = { variant: "text-xs/bold", color: "text-overlay-light", children: tmp6 };
+    obj1.children = React4(Text_Text.Text, obj2);
+    obj.children = React4(View, obj1);
+    items1[1] = React4(View, obj);
+    obj.children = items1;
+    return timestampProducer(hasOwnProperty, obj);
   } else {
     return null;
   }

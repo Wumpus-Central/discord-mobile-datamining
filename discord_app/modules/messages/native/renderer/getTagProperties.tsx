@@ -1,15 +1,15 @@
 // === Module 8033: getTagProperties ===
 
 // Module 8033 (getTagProperties)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4553 */;
-import isPublicSystemMessage from "isPublicSystemMessage" /* 8034 */;
+import _mod17 from "module_17" /* 17 */;
+import MessageConstants from "MessageConstants" /* 4553 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8034 */;
 import isCrosspostDefault from "isCrosspost" /* 8036 */;
+import size from "module_2" /* 2 */;
 
-const Image = get_ActivityIndicator.Image;
-const MessageTagTypes = MESSAGE_GROUP_SPACING.MessageTagTypes;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/getTagProperties.tsx");
+const Image = _mod17.Image;
+const MessageTagTypes = MessageConstants.MessageTagTypes;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/getTagProperties.tsx");
 
 export default function getTagProperties(arg0) {
   ({ message, isSystemDM } = arg0);
@@ -19,7 +19,7 @@ export default function getTagProperties(arg0) {
   ({ channel, colors } = arg0);
   const author = message.author;
   const isVerifiedBotResult = author.isVerifiedBot();
-  let obj = isPublicSystemMessage;
+  let obj = PublicGuildsUtils;
   if (!obj.isPublicSystemMessage(message)) {
     if (!isSystemDM) {
       if (isCrosspostDefault(message)) {
@@ -62,14 +62,8 @@ export default function getTagProperties(arg0) {
         const intl6 = tmp2(1114).intl;
         stringResult2 = intl6.string(tmp2(1114).t.fyE8sH);
       }
-      obj = { tagText: null, tagAccessibilityLabel: null, tagVerified: null, tagTextColor: "Boolean", tagBackgroundColor: "accessible", tagType: "rar", tagIconUrl: "_a", opTagText: "princess", opTagTextColor: "isArray", opTagBackgroundColor: "shouldObscureSpoiler" };
-      obj[0] = stringResult;
-      obj[1] = null;
-      obj[2] = flag;
-      obj[5] = SYSTEM_DM_TAG_SYSTEM_TYPE;
-      obj[6] = tmp5;
-      obj[7] = stringResult2;
-      ({ opTagTextColor: obj3[8], opTagBackgroundColor: obj3[9] } = colors);
+      obj = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "accessible", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "isArray", opTagBackgroundColor: "shouldObscureSpoiler" };
+      ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj;
     } else {
       if (!tmp2Result.isPublicSystemMessage(message)) {

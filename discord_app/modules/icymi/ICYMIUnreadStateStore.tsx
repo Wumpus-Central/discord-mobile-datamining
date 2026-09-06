@@ -1,13 +1,13 @@
-// === Module 8349: initialize ===
+// === Module 8349: ICYMIUnreadStateStore ===
 
-// Module 8349 (initialize)
+// Module 8349 (ICYMIUnreadStateStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8348 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import ICYMITypes from "ICYMITypes" /* 8348 */;
 
-require = arg1;
-let closure_2 = 7 * setDefault.Millis.DAY;
+require = fn;
+let closure_2 = 7 * DurationsDefault.Millis.DAY;
 let closure_3 = { readIdToTimestampMap: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ICYMIUnreadStateStore extends DeviceSettingsStore {
@@ -16,13 +16,12 @@ const prototype = ICYMIUnreadStateStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let tmp = arg0;
   if (null == arg0) {
-    let obj = { readIdToTimestampMap: null };
-    obj[0] = {};
+    let obj = { readIdToTimestampMap: {} };
     const _Date = Date;
     closure_0 = Date.now() - closure_2;
     const _Object = Object;
     const keys = Object.keys(obj.readIdToTimestampMap);
-    const found = keys.filter((arg0) => obj.readIdToTimestampMap[arg0] < closure_0);
+    const found = keys.filter((item) => closure_3.readIdToTimestampMap[item] < closure_0);
     tmp = found[Symbol.iterator]();
   }
   obj = { readIdToTimestampMap: tmp.readIdToTimestampMap };
@@ -38,17 +37,17 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 ICYMIUnreadStateStore.displayName = "ICYMIUnreadStateStore";
 ICYMIUnreadStateStore.persistKey = "ICYMIUnreadStateStore";
-const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
+const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(DispatcherDefault, {
   ICYMI_ACK_ITEMS: function handleTabAck(arg0) {
     ({ items, override: require } = arg0);
     const item = items.forEach((id) => {
       let tmp = null != id;
       if (tmp) {
-        tmp = null == closure_1_3.readIdToTimestampMap[id.id] || closure_0;
-        const tmp3 = null == closure_1_3.readIdToTimestampMap[id.id] || closure_0;
+        tmp = null == closure_3.readIdToTimestampMap[id.id] || require;
+        const tmp3 = null == closure_3.readIdToTimestampMap[id.id] || require;
       }
       if (tmp) {
-        closure_1_3.readIdToTimestampMap[id.id] = id.timestamp;
+        closure_3.readIdToTimestampMap[id.id] = id.timestamp;
       }
     });
   },
@@ -58,13 +57,9 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
     while (iter !== undefined) {
       let tmp2 = nextResult;
       let tmp3 = require;
-      let tmp4 = dependencyMap;
-      if (nextResult.type === MessageEmbedTypes.ICYMIItemTypes.MESSAGE) {
-        let tmp11 = closure_3;
-        let tmp12 = nextResult;
+      if (nextResult.type === ICYMITypes.ICYMIItemTypes.MESSAGE) {
         let result = null != closure_3.readIdToTimestampMap[tmp2.id];
         if (!result) {
-          let tmp5 = nextResult;
           let message_context = tmp2.data.message_context;
           let prop;
           if (message_context != null) {
@@ -74,12 +69,9 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
         }
         if (!result) {
           let tmp3Result = tmp3(8350);
-          let tmp8 = nextResult;
           result = tmp3Result.isItemUnreadInChannel(tmp2.data.channel_id, tmp2.data.message_id);
         }
         if (!result) {
-          let tmp9 = closure_3;
-          let tmp10 = nextResult;
           closure_3.readIdToTimestampMap[tmp2.id] = 0;
         }
       }
@@ -90,6 +82,7 @@ const iCYMIUnreadStateStore = new ICYMIUnreadStateStore(dispatcherDefault, {
     closure_3.readIdToTimestampMap = {};
   }
 });
-let result = require("set").fileFinishedImporting("modules/icymi/ICYMIUnreadStateStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/ICYMIUnreadStateStore.tsx");
 
 export default iCYMIUnreadStateStore;

@@ -1,31 +1,31 @@
 // === Module 15054: BountiesModalCloseButton ===
 
 // Module 15054 (BountiesModalCloseButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import PressableBase from "PressableBase" /* 5123 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Pressables from "Pressables" /* 5123 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles(() => {
-  let obj = { closeButton: null };
-  obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32 };
-  obj[0] = obj;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles(() => {
+  const obj = { closeButton: null };
+  const size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32 };
+  obj.closeButton = size;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
 
 export default function BountiesModalCloseButton(onPress) {
   let obj = { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.cpT0Cq);
-  obj[3] = onPress.onPress;
-  obj[4] = callback().closeButton;
-  obj = { size: "sm", color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
-  obj[5] = jsx(XSmallIcon.XSmallIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });
-  return jsx(PressableBase.PressableOpacity, { size: "sm", color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj.onPress = onPress.onPress;
+  obj.style = closure_4().closeButton;
+  obj = { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
+  obj.children = jsx(XSmallIcon.XSmallIcon, { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });
+  return jsx(Pressables.PressableOpacity, { size: "sm", color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });
 };

@@ -1,14 +1,14 @@
-// === Module 13666: getIsPaused ===
+// === Module 13666: PauseGatewaySocket ===
 
-// Module 13666 (getIsPaused)
-import set from "set" /* 2 */;
+// Module 13666 (PauseGatewaySocket)
+import size from "module_2" /* 2 */;
 
-let c0 = false;
-const result = set.fileFinishedImporting("modules/gateway/PauseGatewaySocket.tsx");
+let global = false;
+const result = size.fileFinishedImporting("modules/gateway/PauseGatewaySocket.tsx");
 
 export function getIsPaused() {
-  return c0;
+  return global;
 }
 export function setIsPaused(arg0) {
-  closure_0 = arg0;
+  global = arg0;
 }

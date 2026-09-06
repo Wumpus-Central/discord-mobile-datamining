@@ -1,10 +1,11 @@
 // === Module 12081: useAndroidOrientationSheetResync ===
 
 // Module 12081 (useAndroidOrientationSheetResync)
-import closure_2 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/keyboard/native/useAndroidOrientationSheetResync.tsx");
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/keyboard/native/useAndroidOrientationSheetResync.tsx");
 
 export default function useAndroidOrientationSheetResync(animatedIndex) {
   animatedIndex = animatedIndex.animatedIndex;
@@ -12,11 +13,9 @@ export default function useAndroidOrientationSheetResync(animatedIndex) {
   const containerHeight = animatedIndex.containerHeight;
   const isYeeted = animatedIndex.isYeeted;
   const snapPoints = animatedIndex.snapPoints;
-  closure_4 = undefined;
-  let num;
   c6 = undefined;
-  closure_4 = containerHeight.useRef(false);
-  num = 0;
+  containerHeight.useRef(false);
+  let num = 0;
   if (animatedIndex.forceMaxHeight) {
     num = 1;
   }
@@ -51,10 +50,10 @@ export default function useAndroidOrientationSheetResync(animatedIndex) {
               }
               const _requestAnimationFrame = requestAnimationFrame;
               bottomSheetRef = requestAnimationFrame(function apply() {
-                const result = bound.set(closure_1_5);
-                const current = ref.current;
+                const result = animatedIndex.set(num);
+                const current = bottomSheetRef.current;
                 if (current != null) {
-                  current.setToIndex(closure_1_5, bound);
+                  current.setToIndex(num, bound);
                 }
               });
               return () => cancelAnimationFrame(closure_1);

@@ -1,8 +1,8 @@
-// === Module 14685: TINY_BRONCO_DEV_ONLY ===
+// === Module 14685: TinyBroncoGate ===
 
-// Module 14685 (TINY_BRONCO_DEV_ONLY)
-import set from "set" /* 2 */;
+// Module 14685 (TinyBroncoGate)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/tiny_bronco/TinyBroncoGate.tsx");
+const result = size.fileFinishedImporting("modules/tiny_bronco/TinyBroncoGate.tsx");
 
 export const TINY_BRONCO_DEV_ONLY = false;

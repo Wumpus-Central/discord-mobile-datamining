@@ -1,14 +1,13 @@
-// === Module 7654: okAsync ===
+// === Module 7654: KvCacheVersion ===
 
-// Module 7654 (okAsync)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import HELLO_KEY from "HELLO_KEY" /* 499 */;
-import set from "set" /* 2 */;
+// Module 7654 (KvCacheVersion)
+import LoggerDefault from "Logger" /* 3 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let set = importDefault;
-({ HELLO_KEY: c3, VERSION_TO_FORCE_RESYNCING_ALL_DATA: c4, VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: c5, VERSION_TO_SKIP_READING_THE_DATABASE: closure_6, VERSION_TO_SKIP_READING_THE_DATABASE_KEY: error } = HELLO_KEY);
-let closure_8 = new timestampDefault("KvCacheVersion");
+const KvCacheVersionConstants = fn(499);
+({ HELLO_KEY: c3, VERSION_TO_FORCE_RESYNCING_ALL_DATA: closure_4, VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY: hasOwnProperty, VERSION_TO_SKIP_READING_THE_DATABASE: metroRequire, VERSION_TO_SKIP_READING_THE_DATABASE_KEY: closure_7 } = KvCacheVersionConstants);
+let closure_8 = new LoggerDefault("KvCacheVersion");
 class KvCacheVersion {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -29,15 +28,13 @@ class KvCacheVersion {
   }
 }
 const prototype = KvCacheVersion.prototype;
-prototype["okAsync"] = function okAsync(closure_0) {
-  return callback(function*() {
-    closure_1 = tmp2;
-    closure_0 = tmp5;
-    const obj2 = closure_1_0(closure_1_1[3]);
-    closure_0 = yield obj2.cache(closure_1_0).get(closure_1_7);
+prototype["okAsync"] = function okAsync(databaseResult) {
+  closure_0 = databaseResult;
+  return (async () => {
+    closure_128_0 = await tmp5(tmp2[3]).cache(tmp5).get(closure_1_7);
     let tmp8 = null;
-    if (null != closure_0) {
-      tmp8 = closure_0 === closure_1_6;
+    if (null != closure_128_0) {
+      tmp8 = closure_128_0 === closure_1_6;
     }
     return tmp8;
   })();
@@ -52,22 +49,22 @@ prototype["canUseGuildVersions"] = function canUseGuildVersions() {
   return resolved;
 };
 prototype["doesDatabaseVersionMatchJsConstants"] = function doesDatabaseVersionMatchJsConstants() {
-  return callback(function*() {
-    let version = tmp5;
-    version = tmp2;
-    const obj2 = closure_1_0(closure_1_1[3]);
-    const forceResyncVersionResult = obj2.forceResyncVersion();
+  return (async () => {
+    closure_1 = tmp5;
+    closure_0 = tmp2;
+    const forceResyncVersionResult = DatabaseDaosDefault.forceResyncVersion();
     if (null == forceResyncVersionResult) {
       return false;
     }
-    version = yield forceResyncVersionResult.get(closure_1_5);
-    if (version != null) {
-      version = version.version;
+    closure_128_0 = await forceResyncVersionResult.get(closure_2_5);
+    if (closure_128_0 != null) {
+      version = closure_128_0.version;
     }
-    let flag = version === closure_4;
+    closure_128_1 = version;
+    let flag = closure_128_1 === closure_129_4;
     if (!flag) {
       const _HermesInternal = HermesInternal;
-      logger.info("KVStore version mismatch: " + version + " vs " + tmp10);
+      closure_129_8.info("KVStore version mismatch: " + closure_128_1 + " vs " + tmp10);
       flag = false;
     }
     return flag;
@@ -81,22 +78,22 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
 };
 prototype["handleWrite"] = function handleWrite(database) {
   this.hasSuccessfullyConnected = true;
-  let obj = set(1986);
-  obj.cacheTransaction(database).put(closure_3, "\u{1F44B}");
+  let obj = DatabaseDaosDefault;
+  obj.cacheTransaction(database).put(React3, "\u{1F44B}");
   const cacheTransactionResult = obj.cacheTransaction(database);
-  const obj3 = set(1986);
-  set(1986).cacheTransaction(database).put(closure_7, closure_6);
-  const cacheTransactionResult1 = set(1986).cacheTransaction(database);
-  const result = set(1986).forceResyncVersionTransaction(database);
-  obj = { version: closure_4 };
-  result.put(closure_5, obj);
+  DatabaseDaosDefault.cacheTransaction(database).put(React5, timestampProducer);
+  const cacheTransactionResult1 = DatabaseDaosDefault.cacheTransaction(database);
+  const result = DatabaseDaosDefault.forceResyncVersionTransaction(database);
+  obj = { version };
+  result.put(hasOwnProperty, obj);
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
   this.hasSuccessfullyConnected = false;
 };
-set = Object.create(KvCacheVersion.prototype);
-set.hasSuccessfullyConnected = false;
-set.actions = {
+let size = Object.create(KvCacheVersion.prototype);
+let closure_129_0 = size;
+size.hasSuccessfullyConnected = false;
+size.actions = {
   BACKGROUND_SYNC(arg0, database) {
     return obj.handleWrite(database);
   },
@@ -107,6 +104,7 @@ set.actions = {
     return obj.handleWrite(database);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/KvCacheVersion.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/app_database/modules/KvCacheVersion.tsx");
 
-export default set;
+export default size;

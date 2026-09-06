@@ -1,20 +1,21 @@
-// === Module 8346: fetchGuildAffinities ===
+// === Module 8346: GuildAffinitiesActionCreators ===
 
-// Module 8346 (fetchGuildAffinities)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import sendRequest from "sendRequest" /* 1272 */;
+// Module 8346 (GuildAffinitiesActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("actions/GuildAffinitiesActionCreators.tsx");
 
 export const fetchGuildAffinities = function fetchGuildAffinities() {
-  const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.GUILD_AFFINITIES, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
-  const value = HTTP.get(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const obj = { url: Endpoints.GUILD_AFFINITIES, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  value = HTTP.get(obj);
   return value.then((guildAffinities) => {
-    callback(573).dispatch({ type: "LOAD_GUILD_AFFINITIES_SUCCESS", guildAffinities: guildAffinities.body.guild_affinities });
+    DispatcherDefault.dispatch({ type: "LOAD_GUILD_AFFINITIES_SUCCESS", guildAffinities: guildAffinities.body.guild_affinities });
   }, () => {
-    callback(573).dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
+    DispatcherDefault.dispatch({ type: "LOAD_GUILD_AFFINITIES_FAILURE" });
   });
 };

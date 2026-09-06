@@ -1,17 +1,17 @@
-// === Module 4467: prototype ===
+// === Module 4467: ClientOutdatedAcceptGiftError ===
 
-// Module 4467 (prototype)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 4467 (ClientOutdatedAcceptGiftError)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AbortCodes = ME.AbortCodes;
-const prototype = function ClientOutdatedAcceptGiftError(arg0) {
+const AbortCodes = Constants.AbortCodes;
+const prototype = function ClientOutdatedAcceptGiftError() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.code = AbortCodes.INVALID_GIFT_REDEMPTION_CLIENT_UPDATE_REQUIRED;
   return applyArgumentsResult;
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("errors/ClientOutdatedAcceptGiftError.tsx");
+const result = size.fileFinishedImporting("errors/ClientOutdatedAcceptGiftError.tsx");
 
 export default prototype;

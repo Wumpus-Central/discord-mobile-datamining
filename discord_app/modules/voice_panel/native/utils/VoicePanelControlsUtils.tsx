@@ -1,14 +1,14 @@
-// === Module 12279: VOICE_PANEL_DRAWER_MAX_WIDTH ===
+// === Module 12279: VoicePanelControlsUtils ===
 
-// Module 12279 (VOICE_PANEL_DRAWER_MAX_WIDTH)
-import set from "set" /* 2 */;
-import VoicePanelControlsModes from "VoicePanelControlsModes" /* 12271 */;
-import VoicePanelModes from "VoicePanelModes" /* 12273 */;
-import CARD_SIZE from "CARD_SIZE" /* 12276 */;
+// Module 12279 (VoicePanelControlsUtils)
+import VoicePanelControlsConstants from "VoicePanelControlsConstants" /* 12271 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 12273 */;
+import VoicePanelCardConstants from "VoicePanelCardConstants" /* 12276 */;
+import size from "module_2" /* 2 */;
 
-const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelModes.VOICE_PANEL_DRAWER_MAX_WIDTH;
-const EDGE_GUTTER = CARD_SIZE.EDGE_GUTTER;
-const CONTROLS_MAX_WIDTH = VoicePanelControlsModes.CONTROLS_MAX_WIDTH;
+const VOICE_PANEL_DRAWER_MAX_WIDTH = VoicePanelConstants.VOICE_PANEL_DRAWER_MAX_WIDTH;
+const EDGE_GUTTER = VoicePanelCardConstants.EDGE_GUTTER;
+const CONTROLS_MAX_WIDTH = VoicePanelControlsConstants.CONTROLS_MAX_WIDTH;
 function getControlsDefaultWidth(width, left, right) {
   const bound = Math.max(left, EDGE_GUTTER);
   return Math.min(width - bound - Math.max(right, EDGE_GUTTER), CONTROLS_MAX_WIDTH);
@@ -22,7 +22,7 @@ function getControlsDrawerOpenWidth(width, left, right) {
 getControlsDrawerOpenWidth.__closure = { VOICE_PANEL_DRAWER_MAX_WIDTH };
 getControlsDrawerOpenWidth.__workletHash = 10795739180192;
 getControlsDrawerOpenWidth.__initData = { code: "function getControlsDrawerOpenWidth_VoicePanelControlsUtilsTsx2(windowWidth,safeAreaLeft,safeAreaRight){const{VOICE_PANEL_DRAWER_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,VOICE_PANEL_DRAWER_MAX_WIDTH);}" };
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/VoicePanelControlsUtils.tsx");
 
 export { getControlsDefaultWidth };
 export { getControlsDrawerOpenWidth };

@@ -1,58 +1,44 @@
 // === Module 8904: TwinButtons ===
 
 // Module 8904 (TwinButtons)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_6 = createCacheKey.createStyles((arg0) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles((arg0) => {
   let str = "row";
   if (arg0) {
     str = "column";
   }
   const container = { flexDirection: str, gap: null };
-  const space = ThemesDefault.space;
-  container[1] = arg0 ? space.PX_8 : space.PX_12;
+  const space = nativeDefault.space;
+  container.gap = arg0 ? space.PX_8 : space.PX_12;
   return { container, button: { flex: 1 } };
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/TwinButtons.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/Button/native/TwinButtons.native.tsx");
 
 export const TwinButtons = function TwinButtons(children) {
-  let _require;
-  let obj = _require(4982);
-  let tmp = callback(obj.useFontScale() > 1.2);
+  _require = undefined;
+  let obj = require("useFontScale");
+  let tmp = closure_6(obj.useFontScale() > 1.2);
   _require = tmp;
-  obj = {
-    style: tmp.container,
-    children: Children.map(children.children, (type) => {
-      let tmp = null;
-      if (closure_1_3.isValidElement(type)) {
-        tmp = null;
-        if (type.type === lib(closure_1_2[6]).Button) {
-          const obj = { style: null, children: null };
-          obj[0] = lib.button;
-          obj[1] = type;
-          tmp = closure_1_5(closure_1_4, obj);
-        }
-      }
-      return tmp;
-    })
-  };
-  Children = React.Children;
-  return <View style={tmp.container}>{Children.map(arg0.children, (type) => {
+  obj = { style: tmp.container, children: null };
+  const Children = noop.Children;
+  obj.children = Children.map(children.children, (type) => {
     let tmp = null;
-    if (closure_1_3.isValidElement(type)) {
+    if (noop.isValidElement(type)) {
       tmp = null;
-      if (type.type === lib(closure_1_2[6]).Button) {
-        const obj = { style: null, children: null };
-        obj[0] = lib.button;
-        obj[1] = type;
-        tmp = closure_1_5(closure_1_4, obj);
+      if (type.type === components_Button_Button.Button) {
+        const obj = { style: button.button, children: type };
+        tmp = <View style={button.button}>{arg0}</View>;
       }
     }
     return tmp;
-  })}</View>;
+  });
+  return <View style={tmp.container}>{null}</View>;
 };

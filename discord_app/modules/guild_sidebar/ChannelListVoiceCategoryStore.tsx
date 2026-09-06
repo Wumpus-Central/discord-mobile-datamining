@@ -1,8 +1,8 @@
-// === Module 7533: handleChange ===
+// === Module 7533: ChannelListVoiceCategoryStore ===
 
-// Module 7533 (handleChange)
+// Module 7533 (ChannelListVoiceCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 function handleChange(expand) {
   if (expand.expand) {
@@ -11,13 +11,12 @@ function handleChange(expand) {
     delete tmp[tmp2];
   }
 }
-let closure_0 = {};
+let obj = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class ChannelListVoiceCategoryStore extends PersistedStore {
 }
 const prototype = ChannelListVoiceCategoryStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
@@ -25,7 +24,7 @@ prototype["initialize"] = function initialize(arg0) {
 prototype["isVoiceCategoryExpanded"] = function isVoiceCategoryExpanded(id) {
   let flag = null != id;
   if (flag) {
-    flag = table[id];
+    flag = obj[id];
   }
   if (flag == null) {
     flag = false;
@@ -36,11 +35,13 @@ prototype["isVoiceCategoryCollapsed"] = function isVoiceCategoryCollapsed(id) {
   return !this.isVoiceCategoryExpanded(id);
 };
 prototype["getState"] = function getState() {
-  return closure_0;
+  return obj;
 };
 ChannelListVoiceCategoryStore.displayName = "ChannelListVoiceCategoryStore";
 ChannelListVoiceCategoryStore.persistKey = "ChannelListVoiceCategoryStore";
-const channelListVoiceCategoryStore = new ChannelListVoiceCategoryStore(dispatcherDefault, { VOICE_CATEGORY_COLLAPSE: handleChange, VOICE_CATEGORY_EXPAND: handleChange });
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/ChannelListVoiceCategoryStore.tsx");
+obj = { VOICE_CATEGORY_COLLAPSE: handleChange, VOICE_CATEGORY_EXPAND: handleChange };
+const channelListVoiceCategoryStore = new ChannelListVoiceCategoryStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListVoiceCategoryStore.tsx");
 
 export default channelListVoiceCategoryStore;

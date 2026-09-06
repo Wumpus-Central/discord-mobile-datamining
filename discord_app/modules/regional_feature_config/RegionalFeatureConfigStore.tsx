@@ -1,15 +1,15 @@
-// === Module 4775: getRegionalFeatureConfig ===
+// === Module 4775: RegionalFeatureConfigStore ===
 
-// Module 4775 (getRegionalFeatureConfig)
-import set from "set" /* 2 */;
+// Module 4775 (RegionalFeatureConfigStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isFeatureTeenByDefault from "isFeatureTeenByDefault" /* 4780 */;
-import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4776 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import RegionalFeatureConfigModels from "RegionalFeatureConfigModels" /* 4780 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 4776 */;
+import size from "module_2" /* 2 */;
 
-({ getDefaultCountryCode: obj1, getCountryCodeByAlpha2: c3 } = DEFAULT_COUNTRY_CODE_NAME);
+({ getDefaultCountryCode: c2, getCountryCodeByAlpha2: c3 } = CountryCodeUtils);
 let c4 = null;
-let c5 = null;
+let closure_5 = null;
 const Store = initializeDefault.Store;
 class RegionalFeatureConfigStore extends Store {
 }
@@ -19,8 +19,8 @@ prototype["getRegionalFeatureConfig"] = function getRegionalFeatureConfig() {
 };
 prototype["isFeatureAgeGated"] = function isFeatureAgeGated(arg0) {
   let flag;
-  if (c4 != null) {
-    flag = c4.isFeatureAgeGated(arg0);
+  if (_null != null) {
+    flag = _null.isFeatureAgeGated(arg0);
   }
   if (flag == null) {
     flag = false;
@@ -29,8 +29,8 @@ prototype["isFeatureAgeGated"] = function isFeatureAgeGated(arg0) {
 };
 prototype["isSettingTeenByDefault"] = function isSettingTeenByDefault(arg0) {
   let flag;
-  if (c4 != null) {
-    flag = c4.isFeatureTeenByDefault(arg0);
+  if (_null != null) {
+    flag = _null.isFeatureTeenByDefault(arg0);
   }
   if (flag == null) {
     flag = false;
@@ -39,8 +39,8 @@ prototype["isSettingTeenByDefault"] = function isSettingTeenByDefault(arg0) {
 };
 prototype["hasAgeGatedFeatures"] = function hasAgeGatedFeatures() {
   let flag;
-  if (c4 != null) {
-    flag = c4.hasAgeGatedFeatures();
+  if (_null != null) {
+    flag = _null.hasAgeGatedFeatures();
   }
   if (flag == null) {
     flag = false;
@@ -49,8 +49,8 @@ prototype["hasAgeGatedFeatures"] = function hasAgeGatedFeatures() {
 };
 prototype["hasTeenDefaults"] = function hasTeenDefaults() {
   let flag;
-  if (c4 != null) {
-    flag = c4.hasTeenDefaults();
+  if (_null != null) {
+    flag = _null.hasTeenDefaults();
   }
   if (flag == null) {
     flag = false;
@@ -59,8 +59,8 @@ prototype["hasTeenDefaults"] = function hasTeenDefaults() {
 };
 prototype["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal() {
   let flag;
-  if (c4 != null) {
-    flag = c4.shouldCollectAppStoreSignal();
+  if (_null != null) {
+    flag = _null.shouldCollectAppStoreSignal();
   }
   if (flag == null) {
     flag = false;
@@ -68,22 +68,22 @@ prototype["shouldCollectAppStoreSignal"] = function shouldCollectAppStoreSignal(
   return flag;
 };
 prototype["getUserCountryCode"] = function getUserCountryCode() {
-  return c5;
+  return closure_5;
 };
 RegionalFeatureConfigStore.displayName = "RegionalFeatureConfigStore";
-const regionalFeatureConfigStore = new RegionalFeatureConfigStore(dispatcherDefault, {
+const regionalFeatureConfigStore = new RegionalFeatureConfigStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(countryCode) {
     countryCode = countryCode.countryCode;
     if (null != countryCode) {
-      let tmp2 = callback2(countryCode);
+      let tmp2 = React3(countryCode);
       if (tmp2 == null) {
-        tmp2 = callback();
+        tmp2 = React2();
       }
       closure_5 = tmp2;
     }
     let fromConnectionOpenResult = null;
     if (null != countryCode.regionalFeatureConfig) {
-      const RegionalFeatureConfig = isFeatureTeenByDefault.RegionalFeatureConfig;
+      const RegionalFeatureConfig = RegionalFeatureConfigModels.RegionalFeatureConfig;
       fromConnectionOpenResult = RegionalFeatureConfig.fromConnectionOpen(countryCode.regionalFeatureConfig);
     }
     c4 = fromConnectionOpenResult;
@@ -91,15 +91,15 @@ const regionalFeatureConfigStore = new RegionalFeatureConfigStore(dispatcherDefa
   SET_LOCATION_METADATA: function handleSetLocationMetadata(countryCode) {
     countryCode = countryCode.countryCode;
     if (null != countryCode) {
-      let tmp2 = callback2(countryCode);
+      let tmp2 = React3(countryCode);
       if (tmp2 == null) {
-        tmp2 = callback();
+        tmp2 = React2();
       }
       closure_5 = tmp2;
     }
     return false;
   }
 });
-const result = set.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigStore.tsx");
+const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalFeatureConfigStore.tsx");
 
 export default regionalFeatureConfigStore;

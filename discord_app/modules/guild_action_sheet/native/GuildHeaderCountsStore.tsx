@@ -1,15 +1,16 @@
-// === Module 13971: initialize ===
+// === Module 13971: GuildHeaderCountsStore ===
 
-// Module 13971 (initialize)
+// Module 13971 (GuildHeaderCountsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "getMemberListId" /* 7279 */;
-import closure_1 from "ensureGuildLoaded" /* 1957 */;
-import closure_2 from "handleInviteData" /* 4480 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import closure_4 from "updateVoiceState" /* 4579 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7279 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
+import UserStore from "UserStore" /* 1371 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
 let obj = {};
+const dependencyMap = obj;
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildHeaderCountsStore extends PersistedStore {
 }
@@ -19,32 +20,32 @@ prototype["initialize"] = function initialize() {
   if (arg0 === undefined) {
     tmp = obj;
   }
-  this.waitFor(closure_2, closure_0, closure_3, closure_1, closure_4, closure_0);
+  this.waitFor(GuildMemberCountStore, ChannelMemberStore, UserStore, ChannelStore, VoiceStateStore, ChannelMemberStore);
   if (tmp == null) {
     tmp = obj;
   }
   closure_6 = tmp;
 };
 prototype["getState"] = function getState() {
-  return obj;
+  return closure_6;
 };
-prototype["getActiveChannelsCount"] = function getActiveChannelsCount(GUILD_HEADER_ONLINE_COUNT) {
+prototype["getActiveChannelsCount"] = function getActiveChannelsCount(arg0) {
   let activeChannelsCount;
-  if (obj[GUILD_HEADER_ONLINE_COUNT] != null) {
+  if (dependencyMap[arg0] != null) {
     activeChannelsCount = tmp.activeChannelsCount;
   }
   return activeChannelsCount;
 };
 prototype["getOnlineCount"] = function getOnlineCount(arg0) {
   let onlineCount;
-  if (obj[arg0] != null) {
+  if (dependencyMap[arg0] != null) {
     onlineCount = tmp.onlineCount;
   }
   return onlineCount;
 };
 prototype["getMemberCount"] = function getMemberCount(arg0) {
   let memberCount;
-  if (obj[arg0] != null) {
+  if (dependencyMap[arg0] != null) {
     memberCount = tmp.memberCount;
   }
   return memberCount;
@@ -54,27 +55,28 @@ GuildHeaderCountsStore.persistKey = "GuildHeaderCountsStore";
 obj = {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
-    if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
+    if (null == dependencyMap[guildId]) {
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
     }
-    obj[guildId].memberCount = guildId.count;
+    dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
-    if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
+    if (null == dependencyMap[guildId]) {
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
     }
-    obj[guildId].onlineCount = guildId.count;
+    dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
-    if (null == obj[guildId]) {
-      obj[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
+    if (null == dependencyMap[guildId]) {
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "call", memberCount: "o" };
     }
-    obj[guildId].activeChannelsCount = guildId.count;
+    dependencyMap[guildId].activeChannelsCount = guildId.count;
   }
 };
-const guildHeaderCountsStore = new GuildHeaderCountsStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
+const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
 
 export default guildHeaderCountsStore;

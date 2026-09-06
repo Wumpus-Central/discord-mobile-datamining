@@ -1,9 +1,9 @@
-// === Module 7151: ACTION_SHEET_START_HEIGHT_RATIO ===
+// === Module 7151: ActionSheetConstants ===
 
-// Module 7151 (ACTION_SHEET_START_HEIGHT_RATIO)
-import set from "set" /* 2 */;
+// Module 7151 (ActionSheetConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
+const result = size.fileFinishedImporting("modules/action_sheet/native/ActionSheetConstants.tsx");
 
 export const ACTION_SHEET_START_HEIGHT_RATIO = 0.6;
 export const ACTION_SHEET_MAX_DYNAMIC_CONTENT_SIZE_RATIO = 0.85;

@@ -1,16 +1,15 @@
-// === Module 8777: get ===
+// === Module 8777: WishlistStore ===
 
-// Module 8777 (get)
-import set from "set" /* 2 */;
+// Module 8777 (WishlistStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 7621 */;
-import fromServer from "fromServer" /* 8778 */;
-import closure_5 from "fromServer" /* 8778 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
+import WishlistRecord from "WishlistRecord" /* 8778 */;
+import size from "module_2" /* 2 */;
 
-({ getWishlistSkuIds: c3, wishlistHasSkuId: c4 } = fromServer);
-let closure_6 = {};
+({ getWishlistSkuIds: c3, wishlistHasSkuId: closure_4 } = WishlistRecord);
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class WishlistStore extends Store {
 }
@@ -28,17 +27,17 @@ prototype["getWishlist"] = function getWishlist(wishlistId) {
 prototype["getWishlistItems"] = function getWishlistItems(arg0) {
   const data = this.get(arg0).data;
   if (null != data) {
-    let items = callback(data);
+    let items = React3(data);
   } else {
     items = [];
   }
   return items;
 };
-prototype["hasSkuId"] = function hasSkuId(arg0, closure_1) {
+prototype["hasSkuId"] = function hasSkuId(arg0, arg1) {
   const data = this.get(arg0).data;
   let tmp = null != data;
   if (tmp) {
-    tmp = callback2(data, closure_1);
+    tmp = React4(data, arg1);
   }
   return tmp;
 };
@@ -54,13 +53,13 @@ prototype["hasError"] = function hasError(arg0) {
 prototype["getError"] = function getError(arg0) {
   return this.get(arg0).error;
 };
-prototype["getUpdatedAt"] = function getUpdatedAt(arg0) {
-  return this.get(arg0).updatedAt;
+prototype["getUpdatedAt"] = function getUpdatedAt(wishlistId) {
+  return this.get(wishlistId).updatedAt;
 };
 prototype["getLastFetchedAt"] = function getLastFetchedAt(arg0) {
   return this.get(arg0).lastFetchedAt;
 };
-const wishlistStore = new WishlistStore(dispatcherDefault, {
+const wishlistStore = new WishlistStore(DispatcherDefault, {
   WISHLIST_FETCH_START: function handleFetchStart(wishlistId) {
     wishlistId = wishlistId.wishlistId;
     let tmp2 = dependencyMap[wishlistId];
@@ -112,7 +111,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_ADD_SKU_FAILURE: function handleAddSkuFailure(error) {
-    _modDef1232.captureException(error.error);
+    SentryUtilsDefault.captureException(error.error);
   },
   WISHLIST_REMOVE_SKU_START: function handleRemoveSkuStart(arg0) {
     ({ wishlistId, skuId: require } = arg0);
@@ -123,13 +122,11 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       tmp2 = obj;
     }
     if (null != tmp2.data) {
-      obj = { id: null, userId: null, items: null, applications: null };
-      obj[0] = tmp2.data.id;
-      obj[1] = tmp2.data.userId;
+      obj = { id: tmp2.data.id, userId: tmp2.data.userId, items: null, applications: null };
       const items = tmp2.data.items;
-      obj[2] = items.filter((skuId) => skuId.skuId !== closure_0);
-      obj[3] = tmp2.data.applications;
-      const tmp7 = new closure_5(obj);
+      obj.items = items.filter((skuId) => skuId.skuId !== require);
+      obj.applications = tmp2.data.applications;
+      const tmp7 = new WishlistRecord(obj);
       tmp2.data = tmp7;
     }
   },
@@ -155,7 +152,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    _modDef1232.captureException(wishlistId.error);
+    SentryUtilsDefault.captureException(wishlistId.error);
   },
   WISHLIST_UPDATE_VISIBILITY_SUCCESS: function handleUpdateVisibilitySuccess(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -170,7 +167,7 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_UPDATE_VISIBILITY_FAILURE: function handleUpdateVisibilityFailure(error) {
-    _modDef1232.captureException(error.error);
+    SentryUtilsDefault.captureException(error.error);
   },
   WISHLIST_REORDER_START: function handleReorderStart(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -204,11 +201,11 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    _modDef1232.captureException(wishlistId.error);
+    SentryUtilsDefault.captureException(wishlistId.error);
   },
   WISHLIST_ITEM_PURCHASED: function handleWishlistItemPurchased(arg0) {
     ({ recipientId, skuId } = arg0);
-    const firstWishlistId = createUserWidgetFromServer.default.getFirstWishlistId(recipientId);
+    const firstWishlistId = UserProfileStore.default.getFirstWishlistId(recipientId);
     let tmp2 = null != firstWishlistId;
     if (tmp2) {
       tmp2 = null != dependencyMap[firstWishlistId];
@@ -217,13 +214,13 @@ const wishlistStore = new WishlistStore(dispatcherDefault, {
       tmp2 = null != dependencyMap[firstWishlistId].data;
     }
     if (tmp2) {
-      tmp2 = callback2(dependencyMap[firstWishlistId].data, skuId);
+      tmp2 = React4(dependencyMap[firstWishlistId].data, skuId);
     }
     if (tmp2) {
       dependencyMap[firstWishlistId].updatedAt = undefined;
     }
   }
 });
-const result = set.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
+const result = size.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
 
 export default wishlistStore;

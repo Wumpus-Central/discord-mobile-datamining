@@ -1,14 +1,14 @@
 // === Module 17348: reportMalformedStorageValues ===
 
 // Module 17348 (reportMalformedStorageValues)
-import set from "set" /* 2 */;
-import _modDef1232 from "module_1232" /* 1232 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import _mod1987 from "module_1987" /* 1987 */;
+import size from "module_2" /* 2 */;
 
 let c3 = false;
-const result = set.fileFinishedImporting("modules/app_database/app/reportMalformedStorageValues.tsx");
+const result = size.fileFinishedImporting("modules/app_database/app/reportMalformedStorageValues.tsx");
 
-export default function reportMalformedStorageValues(arg0) {
+export default function reportMalformedStorageValues(source) {
   if (!c3) {
     const Stats = _mod1987.Stats;
     const malformedValueCountResult = Stats.malformedValueCount();
@@ -16,14 +16,10 @@ export default function reportMalformedStorageValues(arg0) {
     const malformedEntryCountResult = Stats2.malformedEntryCount();
     if (!tmp5) {
       c3 = true;
-      let obj = _modDef1232;
-      obj = { extra: null, fingerprint: null };
-      obj = { malformed_value_count: null, malformed_entry_count: null, source: null };
-      obj[0] = malformedValueCountResult;
-      obj[1] = malformedEntryCountResult;
-      obj[2] = arg0;
-      obj[0] = obj;
-      obj[1] = ["kv-storage-omitted-undecodable-values"];
+      let obj = { extra: null, fingerprint: null };
+      obj = { malformed_value_count: malformedValueCountResult, malformed_entry_count: malformedEntryCountResult, source };
+      obj.extra = obj;
+      obj.fingerprint = ["kv-storage-omitted-undecodable-values"];
       obj.captureMessage("kv-storage: omitted undecodable values", obj, "warning");
     }
     tmp5 = 0 === malformedValueCountResult && 0 === malformedEntryCountResult;

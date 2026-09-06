@@ -1,41 +1,38 @@
 // === Module 8244: UserProfileOverscrollBanner ===
 
 // Module 8244 (UserProfileOverscrollBanner)
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 1115 */;
-import _modDef8245 from "module_8245" /* 8245 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8245 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8246 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+import noop from "module_19" /* 19 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = importDefaultResult.createAnimatedComponent(_modDef8245);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const VisualEffectViewThemed = ReanimatedRexport.createAnimatedComponent(VisualEffectViewThemedDefault);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
 export default function UserProfileOverscrollBanner(arg0) {
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(arg0, Object.assign({ bannerAnimatedStyle: 0, bannerImageAnimatedStyle: 0, blurAnimatedProps: 0, showBlur: 0, privateBanner: 0 }));
   let obj = { style: bannerAnimatedStyle, children: null };
   const items = [privateBanner, ];
   obj = { style: bannerImageAnimatedStyle, children: null };
   obj = {};
   const merged1 = Object.assign(merged);
-  const items1 = [callback(UserProfileBannerDefault, obj), ];
-  const tmp3 = callback;
-  const tmp4 = UserProfileBannerDefault;
-  let tmp3Result = set.isIOS() && showBlur;
+  const items1 = [React4(UserProfileBannerDefault, obj), ];
+  const tmp3 = React4;
+  let tmp3Result = PlatformUtils.isIOS() && showBlur;
   if (tmp3Result) {
-    obj1 = { animatedProps: null, style: null };
-    obj1[0] = blurAnimatedProps;
-    obj1[1] = StyleSheet.absoluteFillObject;
-    tmp3Result = tmp3(closure_6, obj1);
+    const obj1 = { animatedProps: blurAnimatedProps, style: StyleSheet.absoluteFillObject };
+    tmp3Result = tmp3(VisualEffectViewThemed, obj1);
   }
   items1[1] = tmp3Result;
-  obj[1] = items1;
-  items[1] = closure_5(importDefaultResult.View, obj);
-  obj[1] = items;
-  return closure_5(importDefaultResult.View, obj);
+  obj.children = items1;
+  items[1] = hasOwnProperty(ReanimatedRexport.View, obj);
+  obj.children = items;
+  return hasOwnProperty(ReanimatedRexport.View, obj);
 };

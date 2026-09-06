@@ -1,27 +1,29 @@
 // === Module 6613: TextField ===
 
 // Module 6613 (TextField)
-import useTextFieldState from "useTextFieldState" /* 6614 */;
+import useTextField from "useTextField" /* 6614 */;
 import useInputClearButton from "useInputClearButton" /* 6615 */;
-import InputAttachmentContainer from "InputAttachmentContainer" /* 6619 */;
+import useInputAttachments from "useInputAttachments" /* 6619 */;
 import BaseTextField from "BaseTextField" /* 6623 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {
-  let obj = useTextFieldState;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
+
+export const TextField = noop.forwardRef((onClear, ref) => {
+  let obj = useTextField;
   const textField = obj.useTextField(onClear, ref);
   ({ inputProps, innerRef, state } = textField);
   const inputClearButtonConfig = useInputClearButton.useInputClearButtonConfig(onClear, state);
   let tmp5;
   if (null != inputClearButtonConfig) {
     obj = { trailing: null, trailingPressableProps: null };
-    ({ content: obj3[0], pressableProps: obj3[1] } = inputClearButtonConfig);
+    ({ content: obj3.trailing, pressableProps: obj3.trailingPressableProps } = inputClearButtonConfig);
     tmp5 = obj;
   }
-  const obj2 = useInputClearButton;
-  const inputAttachments = InputAttachmentContainer.useInputAttachments(onClear, tmp5);
+  const inputAttachments = useInputAttachments.useInputAttachments(onClear, tmp5);
   ({ leading, trailing, inputStyle } = inputAttachments);
   obj = {};
   const merged = Object.assign(inputProps);
@@ -31,6 +33,3 @@ const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {
   obj.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });
-const result = require("set").fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
-
-export const TextField = forwardRefResult;

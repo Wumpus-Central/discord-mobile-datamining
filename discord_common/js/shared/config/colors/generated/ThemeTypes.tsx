@@ -1,7 +1,7 @@
-// === Module 1087: items ===
+// === Module 1087: generated/ThemeTypes ===
 
-// Module 1087 (items)
-import set from "set" /* 2 */;
+// Module 1087 (generated/ThemeTypes)
+import size from "module_2" /* 2 */;
 
 const obj = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" };
 const items = [, ];
@@ -10,9 +10,8 @@ const items1 = [items, ];
 const items2 = [, ];
 ({ DARKER: arr3[0], DARK: arr3[1] } = obj);
 items1[1] = items2;
-const map = new Map(items1);
-const result = set.fileFinishedImporting("../discord_common/js/shared/config/colors/generated/ThemeTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/config/colors/generated/ThemeTypes.tsx");
 
 export const ThemeTypes = obj;
-export const ThemeExtends = map;
+export const ThemeExtends = new Map(items1);
 export const _private = { Themes: obj };

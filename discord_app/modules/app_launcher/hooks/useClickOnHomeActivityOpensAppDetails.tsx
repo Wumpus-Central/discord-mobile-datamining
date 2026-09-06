@@ -1,12 +1,12 @@
 // === Module 12089: useClickOnHomeActivityOpensAppDetails ===
 
 // Module 12089 (useClickOnHomeActivityOpensAppDetails)
-import set from "set" /* 2 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_launcher/hooks/useClickOnHomeActivityOpensAppDetails.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useClickOnHomeActivityOpensAppDetails.tsx");
 
 export const useClickOnHomeActivityOpensAppDetails = function useClickOnHomeActivityOpensAppDetails() {
-  const DeveloperMode = explicitContentFromProto.DeveloperMode;
+  const DeveloperMode = UserSettings.DeveloperMode;
   return DeveloperMode.useSetting();
 };

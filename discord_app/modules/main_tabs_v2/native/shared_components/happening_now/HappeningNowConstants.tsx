@@ -1,11 +1,10 @@
-// === Module 15294: HAPPENING_NOW_PANELS_CONTAINER_PADDING ===
+// === Module 15294: HappeningNowConstants ===
 
-// Module 15294 (HAPPENING_NOW_PANELS_CONTAINER_PADDING)
-import set from "set" /* 2 */;
-import Button from "Button" /* 1178 */;
+// Module 15294 (HappeningNowConstants)
+import native from "native" /* 1178 */;
+import size from "module_2" /* 2 */;
 
-const obj = { padding: Button.STATUS_PADDING - 1 };
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx");
 
 export const HAPPENING_NOW_PANELS_CONTAINER_PADDING = 8;
 export const HAPPENING_NOW_CARD_HEIGHT = 88;
@@ -35,4 +34,4 @@ export const HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN = 96;
 export const HappeningNowItem = { USER: 1, [1]: "USER", VOICES: 2, [2]: "VOICES", STREAMS: 3, [3]: "STREAMS", ACTIVITIES: 4, [4]: "ACTIVITIES", ACTIVE_CHANNEL: 5, [5]: "ACTIVE_CHANNEL", LIVE_GUILD_EVENT: 6, [6]: "LIVE_GUILD_EVENT", LIVE_GUILD_STAGE: 7, [7]: "LIVE_GUILD_STAGE", USER_CUSTOM_STATUS: 8, [8]: "USER_CUSTOM_STATUS", UPCOMING_GUILD_EVENT: 9, [9]: "UPCOMING_GUILD_EVENT", CUSTOMIZE_GUILD: 10, [10]: "CUSTOMIZE_GUILD", INVITE: 11, [11]: "INVITE", CREATE_CHANNEL: 12, [12]: "CREATE_CHANNEL", STUDENT_HUB_ADD_CHANNEL: 13, [13]: "STUDENT_HUB_ADD_CHANNEL", EMBEDDED_ACTIVITY: 14, [14]: "EMBEDDED_ACTIVITY", COMBINED_VC: 15, [15]: "COMBINED_VC" };
 export const HappeningNowKindIds = { placeholder: -1, "live-guild-stage": 0, "guild-event": 1, "active-channel": 2, user: 3, voice: 5, activity: 6, invite: 7, "create-channel": 8, "customize-guild": 9, "student-hub-add-channel": 10, "embedded-activity": 11, "unified-vc": 12 };
 export const HappeningNowCardTrackingType = { VOICE_CARD: "VOICE_CARD", STREAM_CARD: "STREAM_CARD", STATUS_CARD: "STATUS_CARD", ACTIVITY_CARD: "ACTIVITY_CARD", GUILD_EVENT_CARD: "GUILD_EVENT_CARD", GUILD_MEMBERS_CARD: "GUILD_MEMBERS_CARD", ACTIVE_CHANNEL_CARD: "ACTIVE_CHANNEL_CARD", INDIVIDUAL_USER_CARD: "INDIVIDUAL_USER_CARD", GUILD_LIVE_STAGE_CARD: "GUILD_LIVE_STAGE_CARD", GUILD_ACTION_INVITE_CARD: "GUILD_ACTION_INVITE_CARD", GUILD_ACTION_CUSTOMIZE_CARD: "GUILD_ACTION_CUSTOMIZE_CARD", GUILD_ACTION_CREATE_CHANNEL_CARD: "GUILD_ACTION_CREATE_CHANNEL_CARD", GUILD_ACTION_STUDENT_HUB_ADD_SERVER: "GUILD_ACTION_STUDENT_HUB_ADD_SERVER", EMBEDDED_ACTIVITY_CARD: "EMBEDDED_ACTIVITY_CARD" };
-export const STATUS_CUTOUT_SMALL = obj;
+export const STATUS_CUTOUT_SMALL = { padding: native.STATUS_PADDING - 1 };

@@ -1,20 +1,23 @@
 // === Module 14172: useAccessibilityNativeStackFocusTracking ===
 
 // Module 14172 (useAccessibilityNativeStackFocusTracking)
-import closure_2 from "noop" /* 19 */;
+import setAccessibilityFocusPreviousDefault from "setAccessibilityFocusPrevious" /* 4907 */;
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4909 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useAccessibilityNativeStackFocusTracking.tsx");
 
 export const useAccessibilityNativeStackFocusTracking = function useAccessibilityNativeStackFocusTracking() {
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     c0 = false;
     return {
       transitionStart(data) {
         if (data.data.closing) {
-          callback(closure_1_1[1])();
-        } else if (callback) {
-          callback = false;
-          callback(closure_1_1[2])();
+          markAccessibilityFocusDefault();
+        } else if (c0) {
+          c0 = false;
+          setAccessibilityFocusPreviousDefault();
         }
       },
       beforeRemove() {

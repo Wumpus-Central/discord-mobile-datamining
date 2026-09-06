@@ -1,9 +1,9 @@
-// === Module 1990: prefix ===
+// === Module 1990: Dao ===
 
-// Module 1990 (prefix)
-import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1991 */;
+// Module 1990 (Dao)
+import Table from "Table" /* 1991 */;
 import TableId from "TableId" /* 1993 */;
+import size from "module_2" /* 2 */;
 
 let Dao;
 class Dao {
@@ -16,7 +16,7 @@ class Dao {
     obj.originalPrefix = global;
     items = [];
     items[0] = global;
-    table = new require("fromDatabaseTransaction").Table(items, require, importDefault, flag);
+    table = new closure_0(closure_1[0]).Table(items, require, importDefault, flag);
     obj.table = table;
     return obj;
   }
@@ -30,15 +30,18 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof Dao !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableId = this.table.tableId;
+  const database = this.table.database;
+  if (typeof Dao === "function") {
+    const obj = Object.create(Dao.prototype);
+    obj.originalPrefix = originalPrefix;
+    const items = [originalPrefix];
+    const table = new Table.Table(items, tableId, database, false);
+    obj.table = table;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(Dao.prototype);
-  obj.originalPrefix = originalPrefix;
-  const items = [originalPrefix];
-  const table = new fromDatabaseTransaction.Table(items, this.table.tableId, this.table.database, false);
-  obj.table = table;
-  return obj;
 };
 prototype["get"] = function get(arg0) {
   const table = this.table;
@@ -78,8 +81,10 @@ prototype["put"] = function put(arg0, data) {
     Replace = TableId.ConflictOptions.Replace;
   }
   const table = this.table;
+  const obj = { key: null, data, generation: null };
   const items = [arg0];
-  return table.put({ key: items, data, generation: null }, Replace);
+  obj.key = items;
+  return table.put(obj, Replace);
 };
 prototype["delete"] = function delete(arg0) {
   const self = this;
@@ -97,22 +102,24 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof closure_1_2 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof DaoTransaction === "function") {
+      const obj = Object.create(tmp2.prototype);
+      obj.transaction = transaction;
+      return tmp(obj);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = Object.create(closure_1_2.prototype);
-    obj.transaction = transaction;
-    return closure_0(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
-  const table = this.table;
-  if (typeof DaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof DaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.transaction = tmp2;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(DaoTransaction.prototype);
-  obj.transaction = table.upgradeTransaction(arg0);
-  return obj;
+  tmp = DaoTransaction;
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0) {
   const table = this.table;
@@ -132,13 +139,15 @@ class DaoTransaction {
 }
 const prototype2 = DaoTransaction.prototype;
 DaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new fromDatabaseTransaction.TableTransaction(prefix, tableId, transaction);
-  if (typeof DaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
+  if (typeof DaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.transaction = tableTransaction;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(DaoTransaction.prototype);
-  obj.transaction = tableTransaction;
-  return obj;
+  tmp = DaoTransaction;
 };
 prototype2["put"] = function put(arg0, data) {
   let Replace = arg2;
@@ -146,8 +155,10 @@ prototype2["put"] = function put(arg0, data) {
     Replace = TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
+  const obj = { key: null, data, generation: null };
   const items = [arg0];
-  transaction.put({ key: items, data, generation: null }, Replace);
+  obj.key = items;
+  transaction.put(obj, Replace);
 };
 prototype2["delete"] = function delete(arg0) {
   const self = this;
@@ -161,7 +172,7 @@ prototype2["delete"] = function delete(arg0) {
   }
   return deleteResult;
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Dao.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Dao.tsx");
 
 export { Dao };
 export { DaoTransaction };

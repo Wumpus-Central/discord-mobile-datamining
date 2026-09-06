@@ -1,20 +1,21 @@
-// === Module 7428: createDefinedContext ===
+// === Module 7428: ContextUtils ===
 
-// Module 7428 (createDefinedContext)
-import closure_0 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 7428 (ContextUtils)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("utils/ContextUtils.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/ContextUtils.tsx");
 
 export default function createDefinedContext() {
   context = context.createContext(undefined);
   const items = [
     context,
-    function useContext(context) {
-      context = context.useContext(context);
+    function useContext() {
+      context = noop.useContext(context);
       if (null == context) {
         const _Error = Error;
-        error = new Error("Context was used outside of defined provider.");
+        const error = new Error("Context was used outside of defined provider.");
         throw error;
       } else {
         return context;
@@ -24,10 +25,10 @@ export default function createDefinedContext() {
       context = context.useContext(context);
       if (null == context) {
         const _Error = Error;
-        error = new Error("Context was used outside of defined provider.");
+        const error = new Error("Context was used outside of defined provider.");
         throw error;
       } else {
-        return (children) => closure_2_1(context.Provider, { value: context, children: children.children });
+        return (children) => <context.Provider value={context}>{arg0.children}</context.Provider>;
       }
     }
   ];

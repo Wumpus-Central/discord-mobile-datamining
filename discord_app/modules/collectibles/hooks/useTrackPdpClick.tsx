@@ -1,11 +1,14 @@
 // === Module 13132: useTrackPdpClick ===
 
 // Module 13132 (useTrackPdpClick)
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackPdpClick.tsx");
 
 export const useTrackPdpClick = function useTrackPdpClick(skuId) {
   skuId = skuId.skuId;
@@ -25,13 +28,13 @@ export const useTrackPdpClick = function useTrackPdpClick(skuId) {
   tmpResult = tmp(tmp2[4]);
   shopDiscountSource = tmpResult.getShopDiscountSource(currentUserIfAvailable);
   const items = [skuId, analyticsLocations, cardId, productSkuIds, sessionId, shopDiscountSource];
-  return cardId.useCallback((cta) => {
+  return cardId.useCallback((cta, arg1) => {
     let tmp = arg1;
-    let obj = productSkuIds(analyticsLocations[5]);
+    let obj = AnalyticsUtilsDefault;
     if (arg1 == null) {
       tmp = skuId;
     }
-    obj = { sku_id: tmp, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: skuId(analyticsLocations[4]).getAnalyticsShopDiscountSource(shopDiscountSource) };
-    obj.track(sessionId.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
+    obj = { sku_id: tmp, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: productSkuIds, location_stack: analyticsLocations, discount_source: CollectiblesUtils.getAnalyticsShopDiscountSource(shopDiscountSource) };
+    obj.track(AnalyticEvents.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, obj);
   }, items);
 };

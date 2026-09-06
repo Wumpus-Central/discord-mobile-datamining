@@ -1,187 +1,68 @@
-// === Module 17361: _trackVoiceFeedback ===
+// === Module 17361: trackVoiceFeedback ===
 
-// Module 17361 (_trackVoiceFeedback)
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
+// Module 17361 (trackVoiceFeedback)
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-function _trackVoiceFeedback() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let store = tmp5;
-              c4 = tmp2;
-              dependencyMap = undefined;
-              closure_2 = undefined;
-              let callback2;
-              c4 = undefined;
-              store = undefined;
-              c6 = undefined;
-              c7 = undefined;
-              ({ rating: c1, category: closure_2, reasonCode: c3, reasonDescription: c4, variant: c5, feedback: c6, analyticsData: c7 } = dependencyMap);
-              let settings;
-              let inputDeviceId;
-              let name;
-              let outputDeviceId;
-              let name2;
-              let videoDeviceId;
-              let name3;
-              let noiseCancellation;
-              let audioSubsystem;
-              let audioLayer;
-              closure_18 = undefined;
-              obj = undefined;
-              let output_audio_route_type;
-              closure_21 = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              settings = store.getSettings();
-              inputDeviceId = store.getInputDeviceId();
-              name = store.getInputDevices()[inputDeviceId];
-              outputDeviceId = store.getOutputDeviceId();
-              name2 = store.getOutputDevices()[outputDeviceId];
-              videoDeviceId = store.getVideoDeviceId();
-              name3 = store.getVideoDevices()[videoDeviceId];
-              noiseCancellation = store.getNoiseCancellation();
-              const mediaEngine = store.getMediaEngine();
-              audioSubsystem = mediaEngine.getAudioSubsystem();
-              const mediaEngine1 = store.getMediaEngine();
-              audioLayer = mediaEngine1.getAudioLayer();
-              c6 = 2;
-              c7 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = callback(13810).getKrispModel();
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            closure_18 = arg1;
-            closure_2 = c7;
-            if (c7 == null) {
-              closure_2 = {};
-            }
-            obj = closure_2;
-            output_audio_route_type = obj.output_audio_route_type;
-            closure_21 = callback2(obj, closure_2);
-            obj = callback(1242);
-            callback2 = dependencyMap;
-            if (dependencyMap == null) {
-              callback2 = "no response";
-            }
-            const obj4 = { rating: null, category: null, reason_code: null, reason_description: null, reason_variant: null, feedback: null, audio_input_mode: null, automatic_audio_input_sensitivity_enabled: null, audio_input_sensitivity: null, vad_use_advanced_voice_activity: null, echo_cancellation_enabled: null, noise_suppression_enabled: null, automatic_gain_control_enabled: null, voice_output_volume: null, noise_cancellation_enabled: null, input_device_name: null, output_device_name: null, video_device_name: null, audio_subsystem: null, audio_layer: null, automatic_audio_subsystem: null, krisp_nc_model: null, audio_output_mode: null };
-            obj4[0] = callback2;
-            obj4[1] = closure_2;
-            obj4[2] = callback2;
-            obj4[3] = c4;
-            obj4[4] = store;
-            obj4[5] = c6;
-            obj4[6] = settings.mode;
-            obj4[7] = settings.modeOptions.autoThreshold;
-            obj4[8] = settings.modeOptions.threshold;
-            obj4[9] = settings.modeOptions.vadUseKrisp;
-            obj4[10] = settings.echoCancellation;
-            obj4[11] = settings.noiseSuppression;
-            obj4[12] = settings.automaticGainControl;
-            obj4[13] = settings.outputVolume;
-            obj4[14] = noiseCancellation;
-            name = undefined;
-            if (name != null) {
-              name = name.name;
-            }
-            obj4[15] = name;
-            let name1;
-            if (name2 != null) {
-              name1 = name2.name;
-            }
-            obj4[16] = name1;
-            name2 = undefined;
-            if (name3 != null) {
-              name2 = name3.name;
-            }
-            obj4[17] = name2;
-            obj4[18] = audioSubsystem;
-            obj4[19] = audioLayer;
-            obj4[20] = settings.automaticAudioSubsystem;
-            obj4[21] = closure_18;
-            obj4[22] = output_audio_route_type;
-            const merged = Object.assign(closure_21);
-            obj.track(callback, obj4);
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp48) {
-          c7 = tmp;
-          throw tmp48;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_6 = async function _trackVoiceFeedback() {
+  const settings = closure_133_5.getSettings();
+  const inputDeviceId = closure_133_5.getInputDeviceId();
+  closure_132_10 = closure_133_5.getInputDevices()[inputDeviceId];
+  const outputDeviceId = closure_133_5.getOutputDeviceId();
+  closure_132_12 = closure_133_5.getOutputDevices()[outputDeviceId];
+  const videoDeviceId = closure_133_5.getVideoDeviceId();
+  closure_132_14 = closure_133_5.getVideoDevices()[videoDeviceId];
+  const noiseCancellation = closure_133_5.getNoiseCancellation();
+  const mediaEngine = closure_133_5.getMediaEngine();
+  const audioSubsystem = mediaEngine.getAudioSubsystem();
+  const mediaEngine1 = closure_133_5.getMediaEngine();
+  const audioLayer = mediaEngine1.getAudioLayer();
+  closure_132_18 = await closure_133_0(closure_133_1[3]).getKrispModel();
+  closure_2 = closure_132_7;
+  if (closure_132_7 == null) {
+    closure_2 = {};
   }
-  return applyArgumentsResult;
-}
+  closure_132_19 = closure_2;
+  closure_132_20 = closure_132_19.output_audio_route_type;
+  closure_132_21 = closure_133_3(closure_132_19, closure_133_2);
+  let rating = closure_132_1;
+  if (closure_132_1 == null) {
+    rating = "no response";
+  }
+  const obj4 = { rating, category: closure_132_2, reason_code: closure_132_3, reason_description: closure_132_4, reason_variant: closure_132_5, feedback: closure_132_6, audio_input_mode: settings.mode, automatic_audio_input_sensitivity_enabled: settings.modeOptions.autoThreshold, audio_input_sensitivity: settings.modeOptions.threshold, vad_use_advanced_voice_activity: settings.modeOptions.vadUseKrisp, echo_cancellation_enabled: settings.echoCancellation, noise_suppression_enabled: settings.noiseSuppression, automatic_gain_control_enabled: settings.automaticGainControl, voice_output_volume: settings.outputVolume, noise_cancellation_enabled: noiseCancellation, input_device_name: null, output_device_name: null, video_device_name: null, audio_subsystem: null, audio_layer: null, automatic_audio_subsystem: null, krisp_nc_model: null, audio_output_mode: null };
+  if (closure_132_10 != null) {
+    const name = closure_132_10.name;
+  }
+  obj4.input_device_name = name;
+  if (closure_132_12 != null) {
+    const name1 = closure_132_12.name;
+  }
+  obj4.output_device_name = name1;
+  if (closure_132_14 != null) {
+    const name2 = closure_132_14.name;
+  }
+  obj4.video_device_name = name2;
+  obj4.audio_subsystem = audioSubsystem;
+  obj4.audio_layer = audioLayer;
+  obj4.automatic_audio_subsystem = settings.automaticAudioSubsystem;
+  obj4.krisp_nc_model = closure_132_18;
+  obj4.audio_output_mode = closure_132_20;
+  const merged = Object.assign(closure_132_21);
+  closure_133_0(closure_133_1[4]).track(closure_132_0, obj4);
+  await "HermesInternal";
+  closure_4 = tmp2;
+  closure_132_0 = closure_0;
+  ({ rating: closure_132_1, category: closure_132_2, reasonCode: closure_132_3, reasonDescription: closure_132_4, variant: closure_132_5, feedback: closure_132_6, analyticsData: closure_132_7 } = closure_1);
+  return "PX_16";
+};
 let closure_2 = ["output_audio_route_type"];
-const result = require("set").fileFinishedImporting("modules/voice_calls/trackVoiceFeedback.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_calls/trackVoiceFeedback.tsx");
 
 export default function trackVoiceFeedback() {
   const self = this;
-  const apply = _trackVoiceFeedback.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

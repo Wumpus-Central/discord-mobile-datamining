@@ -1,30 +1,31 @@
-// === Module 9211: useGetGuildJoinRequest ===
+// === Module 9211: useGetJoinRequestGuild ===
 
-// Module 9211 (useGetGuildJoinRequest)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleGatewayJoinRequestUpdate" /* 4382 */;
+// Module 9211 (useGetJoinRequestGuild)
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5541 */;
+import noop from "module_19" /* 19 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4382 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestGuild.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useGetJoinRequestGuild.tsx");
 
 export default function useGetGuildJoinRequest(arg0) {
-  const _require = arg0;
-  const items = [closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [UserGuildJoinRequestStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {
-      request = closure_1_4.getRequest(tmp);
+      request = UserGuildJoinRequestStore.getRequest(tmp);
     }
     return request;
   });
-  let obj = _require(504);
-  const items1 = [closure_4];
-  const stateFromStores1 = _require(504).useStateFromStores(items1, () => obj.hasFetchedRequestToJoinGuilds);
+  let obj = require("initialize");
+  const items1 = [UserGuildJoinRequestStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => UserGuildJoinRequestStore.hasFetchedRequestToJoinGuilds);
   const items2 = [stateFromStores1];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!stateFromStores1) {
-      const requestToJoinGuilds = stateFromStores1(closure_1_2[3]).fetchRequestToJoinGuilds();
-      const obj = stateFromStores1(closure_1_2[3]);
+      const requestToJoinGuilds = GuildJoinRequestActionCreatorsDefault.fetchRequestToJoinGuilds();
     }
   }, items2);
   return stateFromStores;

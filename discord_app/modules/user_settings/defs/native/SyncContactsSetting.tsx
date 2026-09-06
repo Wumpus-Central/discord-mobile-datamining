@@ -1,37 +1,37 @@
-// === Module 14843: toggle ===
+// === Module 14843: SyncContactsSetting ===
 
-// Module 14843 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _uploadContacts from "_uploadContacts" /* 12680 */;
-import syncContacts from "syncContacts" /* 14844 */;
-import closure_2 from "set" /* 5281 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { PlatformTypes } from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 14843 (SyncContactsSetting)
+import util from "util" /* 1114 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12680 */;
+import ContactSyncSettings from "ContactSyncSettings" /* 14844 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const PlatformTypes = fn(1074).PlatformTypes;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.uSvEy7);
+    const intl = util.intl;
+    return intl.string(util.t.uSvEy7);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7975).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useContactSyncSettingValue() {
-    const contactSyncAccount = _uploadContacts.useContactSyncAccount();
-    const obj = _uploadContacts;
-    return _uploadContacts.isContactSyncEnabled(contactSyncAccount);
+    const contactSyncAccount = ContactSyncUtils.useContactSyncAccount();
+    return ContactSyncUtils.isContactSyncEnabled(contactSyncAccount);
   },
   onValueChange: function onContactSyncSettingValueChange(arg0) {
-    localAccount = localAccount.getLocalAccount(PlatformTypes.CONTACTS);
-    currentUser = currentUser.getCurrentUser();
+    const localAccount = ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
+    const currentUser = UserStore.getCurrentUser();
     let phone;
     if (currentUser != null) {
       phone = currentUser.phone;
     }
-    syncContacts.handleSyncContacts(localAccount, phone, arg0);
+    ContactSyncSettings.handleSyncContacts(localAccount, phone, arg0);
   }
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

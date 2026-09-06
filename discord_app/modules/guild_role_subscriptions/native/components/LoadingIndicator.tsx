@@ -1,15 +1,15 @@
 // === Module 15215: LoadingIndicator ===
 
 // Module 15215 (LoadingIndicator)
-import noopAll from "noop" /* 19 */;
-import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-let closure_2 = createCacheKey.createStyles({ indicator: { margin: 16 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx");
+const ActivityIndicator = fn(17).ActivityIndicator;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_2 = createStyles.createStyles({ indicator: { margin: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/LoadingIndicator.tsx");
 
 export default function LoadingIndicator() {
-  return <ActivityIndicator style={callback().indicator} />;
+  return <ActivityIndicator style={closure_2().indicator} />;
 };

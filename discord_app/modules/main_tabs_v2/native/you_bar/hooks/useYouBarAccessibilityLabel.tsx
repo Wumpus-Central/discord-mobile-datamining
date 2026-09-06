@@ -1,30 +1,35 @@
 // === Module 16366: useYouBarAccessibilityLabel ===
 
 // Module 16366 (useYouBarAccessibilityLabel)
-import closure_3 from "reset" /* 4582 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_6 from "sortActivity" /* 4600 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "filterPlayingActivities" /* 5279 */;
-import closure_9 from "updateVoiceState" /* 4579 */;
-import ME from "ME" /* 1074 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10878 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10879 */;
+import isGameActivityDefault from "isGameActivity" /* 10886 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10888 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import PresenceStore from "PresenceStore" /* 4600 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-const require = arg1;
-({ ActivityTypes: c10, StatusTypes: unpackModuleId } = ME);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
+require = fn;
+const Constants = fn(1074);
+({ ActivityTypes: c10, StatusTypes: closure_11 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarAccessibilityLabel.tsx");
 
 export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(stateFromStores) {
-  const _require = id(4404).useName(stateFromStores);
+  _require = id(4404).useName(stateFromStores);
   id = undefined;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
   let obj = id(4404);
-  dependencyMap = _require(16367).useYouBarActivityStatusEnabled("YouBar");
-  const obj2 = _require(16367);
-  const isYouBarGuildTagEnabled = _require(16368).useIsYouBarGuildTagEnabled("YouBar");
-  const CustomStatusSetting = _require(1935).CustomStatusSetting;
+  dependencyMap = require("YouBarActivityStatusExperiment").useYouBarActivityStatusEnabled("YouBar");
+  const obj2 = require("YouBarActivityStatusExperiment");
+  const isYouBarGuildTagEnabled = require("YouBarGuildTagExperiment").useIsYouBarGuildTagEnabled("YouBar");
+  const CustomStatusSetting = require("UserSettings").CustomStatusSetting;
   const setting = CustomStatusSetting.useSetting();
   let text;
   if (setting != null) {
@@ -51,35 +56,31 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
     tmp8 = tag;
   }
   tag = tmp8;
-  const obj3 = _require(16368);
-  let items = [closure_8, closure_3, closure_7, tag, closure_5, closure_9, closure_6];
-  return _require(504).useStateFromStores(items, () => {
-    if (null != callback) {
-      const status = closure_1_8.getStatus();
-      let obj = callback(10878);
-      const items = [closure_3, closure_1_7];
+  const obj3 = require("YouBarGuildTagExperiment");
+  let items = [SelfPresenceStore, closure_3, RelationshipStore, tag, PermissionStore, VoiceStateStore, PresenceStore];
+  return require("initialize").useStateFromStores(items, () => {
+    if (null != closure_0) {
+      const status = SelfPresenceStore.getStatus();
+      let obj = useDiscoverableApplicationStream;
+      const items = [ApplicationStreamingStore, RelationshipStore];
       const discoverableApplicationStream = obj.getDiscoverableApplicationStream(id, items);
-      obj1 = callback(10879);
-      obj = { userId: null };
-      obj[0] = id;
-      obj = { ChannelStore: null, PermissionStore: null, VoiceStateStore: null };
-      obj[0] = tag;
-      obj[1] = closure_1_5;
-      obj[2] = closure_1_9;
+      let obj1 = useUserVoiceActivity;
+      obj = { userId: id };
+      obj = { ChannelStore, PermissionStore, VoiceStateStore };
       const voiceChannel = obj1.getVisibleUserVoiceActivity(obj, obj).voiceChannel;
       let text = null;
-      if (dependencyMap) {
+      if (closure_2) {
         text = null;
         if (null != tmp6) {
           text = null;
-          if (status !== closure_1_11.OFFLINE) {
+          if (status !== constants.OFFLINE) {
             text = null;
-            if (status !== closure_1_11.INVISIBLE) {
-              const activities = closure_1_6.getActivities(tmp6);
+            if (status !== constants.INVISIBLE) {
+              const activities = PresenceStore.getActivities(tmp6);
               if (null != discoverableApplicationStream) {
                 let name;
                 if (activities != null) {
-                  const found = activities.find(id(10886));
+                  const found = activities.find(isGameActivityDefault);
                   if (found != null) {
                     name = found.name;
                   }
@@ -89,8 +90,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   let stringResult = intl3.string(tmp4(1114).t.eXan7B);
                 }
                 const intl4 = tmp4(1114).intl;
-                obj1 = { name: null };
-                obj1[0] = name;
+                obj1 = { name };
                 stringResult = intl4.formatToPlainString(tmp4(1114).t["0wJXSh"], obj1);
               } else {
                 let found1;
@@ -101,7 +101,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
                   });
                 }
                 if (null != found1) {
-                  text = id(10888)(found1, true).text;
+                  text = getActivityStatusTextDefault(found1, true).text;
                 } else {
                   text = null;
                   if (null != voiceChannel) {
@@ -136,7 +136,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
         const tmp4Result = tmp4(4404);
       }
       const items1 = [tmp, tag, text];
-      const found2 = items1.filter((arg0) => null != arg0);
+      const found2 = items1.filter((item) => null != item);
       return found2.join(", ");
     }
   });

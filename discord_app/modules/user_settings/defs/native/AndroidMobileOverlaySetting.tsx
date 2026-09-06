@@ -1,31 +1,32 @@
-// === Module 15254: toggle ===
+// === Module 15254: AndroidMobileOverlaySetting ===
 
-// Module 15254 (toggle)
+// Module 15254 (AndroidMobileOverlaySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import dispatcherDefault from "dispatcher" /* 9991 */;
-import closure_2 from "getUserAgnosticState" /* 9980 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9991 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9980 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9CSZJm"]);
+    const intl = util.intl;
+    return intl.string(util.t["9CSZJm"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
-    const items = [closure_2];
+    const items = [MobileVoiceOverlayStore];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
   },
-  onValueChange: dispatcherDefault.setEnabled,
+  onValueChange: MobileVoiceOverlayActionCreatorsDefault.setEnabled,
   useDescription: function useAndroidMobileOverlaySettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Wfoivk);
+    const intl = util.intl;
+    return intl.string(util.t.Wfoivk);
   },
-  usePredicate: require("getUserAgnosticState").isMobileOverlaySupported
+  usePredicate: fn(9980).isMobileOverlaySupported
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,24 +1,24 @@
 // === Module 7198: ActionSheet ===
 
 // Module 7198 (ActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import Background from "Background" /* 7150 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import nativeDefault from "native" /* 576 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { content: null, body: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-obj[1] = { gap: 24 };
-let closure_3 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+obj = { paddingHorizontal: nativeDefault.space.PX_16 };
+obj.content = obj;
+obj.body = { gap: 24 };
+let closure_3 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
+
+export const ActionSheet = noop.forwardRef((arg0, ref) => {
   const obj = { ref };
   const merged = Object.assign(arg0);
-  ({ content: obj.contentStyles, body: obj.bodyStyles } = callback());
-  return jsx(Background.BottomSheet, { ref });
+  ({ content: obj.contentStyles, body: obj.bodyStyles } = closure_3());
+  return jsx(Sheet_BottomSheet.BottomSheet, { ref });
 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheet.native.tsx");
-
-export const ActionSheet = forwardRefResult;

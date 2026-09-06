@@ -1,15 +1,15 @@
-// === Module 10831: LottieType ===
+// === Module 10831: GiftAnimationData ===
 
-// Module 10831 (LottieType)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import _sendGiftMessage from "_sendGiftMessage" /* 8082 */;
+// Module 10831 (GiftAnimationData)
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import PremiumGiftingUtils from "PremiumGiftingUtils" /* 8082 */;
+import size from "module_2" /* 2 */;
 
-const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
-const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
-const result = set.fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
+const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
+const LottieType = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
+const result = size.fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
 
-export const LottieType = obj;
+export { LottieType };
 export const getLottieType = function getLottieType(giftStyle) {
   if (giftStyle === PremiumGiftStyles.NITROWEEN_STANDARD) {
     let _JSON = obj.LOTTIE;
@@ -20,7 +20,7 @@ export const getLottieType = function getLottieType(giftStyle) {
 };
 export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACTION) {
   if (PremiumGiftStyles.STANDARD_BOX === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp17(10832);
     } else if (tmp17(8082).AnimationState.LOOP === ACTION) {
       return tmp17(10833);
@@ -28,7 +28,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
       return tmp17(10834);
     }
   } else if (tmp.CAKE === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp15(10835);
     } else if (tmp15(8082).AnimationState.LOOP === ACTION) {
       return tmp15(10836);
@@ -36,7 +36,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
       return tmp15(10837);
     }
   } else if (tmp.CHEST === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp13(10838);
     } else if (tmp13(8082).AnimationState.LOOP === ACTION) {
       return tmp13(10839);
@@ -44,7 +44,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
       return tmp13(10840);
     }
   } else if (tmp.COFFEE === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp11(10841);
     } else if (tmp11(8082).AnimationState.LOOP === ACTION) {
       return tmp11(10842);
@@ -52,7 +52,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
       return tmp11(10843);
     }
   } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp9(10844);
     } else if (tmp9(8082).AnimationState.LOOP === ACTION) {
       return tmp9(10845);
@@ -60,7 +60,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
       return tmp9(10846);
     }
   } else if (tmp.SEASONAL_CAKE === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp7(10847);
     } else if (tmp7(8082).AnimationState.LOOP === ACTION) {
       return tmp7(10848);
@@ -68,7 +68,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
       return tmp7(10849);
     }
   } else if (tmp.SEASONAL_CHEST === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp5(10850);
     } else if (tmp5(8082).AnimationState.LOOP === ACTION) {
       return tmp5(10851);
@@ -76,7 +76,7 @@ export const getGiftAnimationData = function getGiftAnimationData(giftStyle, ACT
       return tmp5(10852);
     }
   } else if (tmp.SEASONAL_COFFEE === giftStyle) {
-    if (_sendGiftMessage.AnimationState.IDLE === ACTION) {
+    if (PremiumGiftingUtils.AnimationState.IDLE === ACTION) {
       return tmp3(10853);
     } else if (tmp3(8082).AnimationState.LOOP === ACTION) {
       return tmp3(10854);

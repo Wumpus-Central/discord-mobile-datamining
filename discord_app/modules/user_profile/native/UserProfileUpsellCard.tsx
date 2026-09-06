@@ -1,77 +1,79 @@
 // === Module 14622: UserProfileUpsellCard ===
 
 // Module 14622 (UserProfileUpsellCard)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { Gradients } from "items" /* 7432 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { upsellButton: null, titleContainer: null, linearGradient: null, outer: null, scroll: null, inner: null };
-createCacheKey = { marginTop: 8, flexShrink: 0, borderRadius: ThemesDefault.radii.round, gap: 4 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
-createCacheKey[2] = { width: "100%", height: "100%", position: "absolute", overflow: "hidden" };
-createCacheKey[3] = { marginHorizontal: require("ARBITRARY_LARGE_OFFSET").PROFILE_SIDE_PADDING - 1 };
-let obj1 = { marginHorizontal: require("ARBITRARY_LARGE_OFFSET").PROFILE_SIDE_PADDING - 1 };
-createCacheKey[4] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[5] = { paddingVertical: 12, paddingHorizontal: 14 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCard.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const Gradients = fn(7432).Gradients;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { upsellButton: null, titleContainer: null, linearGradient: null, outer: null, scroll: null, inner: null };
+createStyles = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
+createStyles.upsellButton = createStyles;
+createStyles.titleContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
+createStyles.linearGradient = { width: "100%", height: "100%", position: "absolute", overflow: "hidden" };
+createStyles.outer = { marginHorizontal: fn(7208).PROFILE_SIDE_PADDING - 1 };
+let obj1 = { marginHorizontal: fn(7208).PROFILE_SIDE_PADDING - 1 };
+createStyles.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.inner = { paddingVertical: 12, paddingHorizontal: 14 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileUpsellCard.tsx");
 
 export default function UserProfileUpsellCard(headerText) {
   headerText = headerText.headerText;
-  let _require;
   ({ style, children, ctaText, showLinearGradient, cardStyle, contentStyle, ctaStyle, onPress } = headerText);
-  const tmp = callback();
+  const tmp = closure_8();
   _require = tmp;
-  let obj = { borderWidth: 1, style: items, direction: _require(1178).GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: ThemesDefault.radii.lg, children: null };
-  items = [tmp.outer, style];
-  obj = { bounces: false, style: items1, contentContainerStyle: items2, children: null };
-  items1 = [tmp.scroll, cardStyle];
-  items2 = [tmp.inner, contentStyle];
+  let obj = { borderWidth: 1, style: null, direction: require("native").GradientBorder.Direction.HORIZONTAL, colors: Gradients.PREMIUM_TIER_2, borderRadius: nativeDefault.radii.lg, children: null };
+  let items = [tmp.outer, style];
+  obj.style = items;
+  obj = { bounces: false, style: null, contentContainerStyle: null, children: null };
+  const items1 = [tmp.scroll, cardStyle];
+  obj.style = items1;
+  const items2 = [tmp.inner, contentStyle];
+  obj.contentContainerStyle = items2;
   let tmp6Result = null;
   if (null != headerText) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.titleContainer;
-    obj1 = { color: null, size: "xs" };
-    obj1[0] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj = { style: tmp.titleContainer, children: null };
+    const obj1 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
     const items3 = [tmp2(tmp3(8662).NitroWheelIcon, obj1), ];
-    const obj2 = { variant: "heading-sm/bold", children: null };
-    obj2[1] = headerText;
+    const obj2 = { variant: "heading-sm/bold", children: headerText };
     items3[1] = tmp2(tmp3(4556).Text, obj2);
-    obj[1] = items3;
+    obj.children = items3;
     tmp6Result = tmp6(closure_3, obj);
   }
   const items4 = [tmp6Result, children, ];
   const obj3 = {
-    style: items5,
+    style: null,
     onPress,
     text: ctaText,
-    color: _require(1178).ButtonColors.GREEN,
+    color: require("native").ButtonColors.GREEN,
     renderIcon() {
-      return callback(lib(table[8]).NitroWheelIcon, { color: "white", size: "xs" });
+      return closure_1_6(closure_0(dependencyMap[8]).NitroWheelIcon, { color: "white", size: "xs" });
     },
     renderLinearGradient: null
   };
-  items5 = [tmp.upsellButton, ctaStyle];
+  const items5 = [tmp.upsellButton, ctaStyle];
+  obj3.style = items5;
   let fn;
   if (showLinearGradient) {
     fn = () => {
-      const obj = { style: items, start: lib(closure_1_2[11]).HorizontalGradient.START, end: lib(closure_1_2[11]).HorizontalGradient.END, colors: closure_1_5.PREMIUM_TIER_2_TRI_COLOR };
-      items = [lib.linearGradient];
-      return closure_1_6(closure_1_1(closure_1_2[10]), obj);
+      const obj = { style: null, start: ConstantsIOS.HorizontalGradient.START, end: ConstantsIOS.HorizontalGradient.END, colors: Gradients.PREMIUM_TIER_2_TRI_COLOR };
+      const items = [closure_0.linearGradient];
+      obj.style = items;
+      return timestampProducer(LinearGradientDefault, obj);
     };
   }
-  obj3[5] = fn;
-  items4[2] = closure_6(_require(1178).ShinyButton, obj3);
-  obj[3] = items4;
-  obj[5] = closure_7(closure_4, obj);
-  return closure_6(_require(1178).GradientBorder, obj);
+  obj3.renderLinearGradient = fn;
+  items4[2] = closure_6(require("native").ShinyButton, obj3);
+  obj.children = items4;
+  obj.children = closure_7(closure_4, obj);
+  return closure_6(require("native").GradientBorder, obj);
 };

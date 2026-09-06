@@ -1,62 +1,64 @@
-// === Module 16874: ? ===
+// === Module 16874: MessageRequestsScreenWithTabs ===
 
-// Module 16874
-import ThemesDefault from "Themes" /* 576 */;
-import PendingMessageRequestRowDefault from "PendingMessageRequestRow" /* 16875 */;
-import PendingSpamMessageRequestRowDefault from "PendingSpamMessageRequestRow" /* 16891 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16874 (MessageRequestsScreenWithTabs)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import SegmentedControlState from "SegmentedControlState" /* 9792 */;
+import SegmentedControl from "SegmentedControl" /* 9793 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11896 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 12616 */;
+import MessageRequestListDefault from "MessageRequestList" /* 16875 */;
+import SpamMessageListDefault from "SpamMessageList" /* 16891 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = { REQUEST: "REQUEST", SPAM: "SPAM" };
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const constants = { REQUEST: "REQUEST", SPAM: "SPAM" };
+fn(4560);
 let obj = { container: null, messageRequestContent: null, tabContainer: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-obj[0] = obj;
-obj[1] = { flex: 1 };
-createCacheKey = { minHeight: 32, paddingHorizontal: ThemesDefault.space.PX_16 };
-obj[2] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((navigation) => {
+obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj.container = obj;
+obj.messageRequestContent = { flex: 1 };
+const createStyles = { minHeight: 32, paddingHorizontal: nativeDefault.space.PX_16 };
+obj.tabContainer = createStyles;
+let closure_9 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
+
+export default noop.memo((navigation) => {
   navigation = navigation.navigation;
-  importDefault = undefined;
-  const tmp = callback4();
-  const tmp2 = callback(importAllResult.useState(0), 2);
-  importDefault = tmp2[1];
+  const tmp = closure_9();
+  const tmp2 = _slicedToArray(noop.useState(0), 2);
+  closure_1 = tmp2[1];
   const items = [navigation];
-  callback = importAllResult.useCallback((channelId) => navigation.push("preview", { channelId }), items);
-  const callback1 = importAllResult.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.width);
+  const callback = noop.useCallback((channelId) => navigation.push("preview", { channelId }), items);
+  const callback1 = noop.useCallback((nativeEvent) => {
+    closure_1(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj = navigation(9792);
-  obj = { items: null, pageWidth: null, defaultIndex: 0 };
+  let obj = { items: null, pageWidth: null, defaultIndex: 0 };
   obj = { label: null, id: null, page: null };
-  const intl = navigation(1114).intl;
-  obj[0] = intl.string(navigation(1114).t["7RFcXZ"]);
-  obj[1] = constants.REQUEST;
-  obj[2] = callback2(PendingMessageRequestRowDefault, { goToMessageRequestPreview: callback });
+  const intl = util.intl;
+  obj.label = intl.string(util.t["7RFcXZ"]);
+  obj.id = constants.REQUEST;
+  obj.page = timestampProducer(MessageRequestListDefault, { goToMessageRequestPreview: callback });
   const items1 = [obj, ];
-  obj1 = { label: null, id: null, page: null };
-  const intl2 = navigation(1114).intl;
-  obj1[0] = intl2.string(navigation(1114).t.ulKXHp);
-  obj1[1] = constants.SPAM;
-  obj1[2] = callback2(PendingSpamMessageRequestRowDefault, { goToMessageRequestPreview: callback });
+  const obj1 = { label: null, id: null, page: null };
+  const intl2 = util.intl;
+  obj1.label = intl2.string(util.t.ulKXHp);
+  obj1.id = constants.SPAM;
+  obj1.page = timestampProducer(SpamMessageListDefault, { goToMessageRequestPreview: callback });
   items1[1] = obj1;
-  obj[0] = items1;
-  obj[1] = tmp2[0];
+  obj.items = items1;
+  obj.pageWidth = tmp2[0];
   const segmentedControlState = obj.useSegmentedControlState(obj);
   const obj2 = { style: tmp.container, children: null };
-  const items2 = [callback2(View, { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9793).SegmentedControl, { state: segmentedControlState }) }), , ];
-  const obj3 = { style: tmp.tabContainer, onLayout: callback1, children: callback2(navigation(9793).SegmentedControl, { state: segmentedControlState }) };
-  items2[1] = callback2(View, { style: tmp.messageRequestContent, children: callback2(navigation(12616).SegmentedControlPages, { state: segmentedControlState }) });
-  items2[2] = callback2(navigation(11896).TTIFirstContentfulPaint, { label: "message_requests" });
-  obj2[1] = items2;
-  return callback3(View, obj2);
+  const items2 = [timestampProducer(View, { style: tmp.tabContainer, onLayout: callback1, children: timestampProducer(SegmentedControl.SegmentedControl, { state: segmentedControlState }) }), , ];
+  const obj3 = { style: tmp.tabContainer, onLayout: callback1, children: timestampProducer(SegmentedControl.SegmentedControl, { state: segmentedControlState }) };
+  items2[1] = timestampProducer(View, { style: tmp.messageRequestContent, children: timestampProducer(SegmentedControlPages.SegmentedControlPages, { state: segmentedControlState }) });
+  items2[2] = timestampProducer(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "message_requests" });
+  obj2.children = items2;
+  return React5(View, obj2);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsScreenWithTabs.tsx");
-
-export default memoResult;

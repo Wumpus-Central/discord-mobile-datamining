@@ -1,53 +1,54 @@
-// === Module 7941: deleteNonce ===
+// === Module 7941: InteractionStore ===
 
-// Module 7941 (deleteNonce)
+// Module 7941 (InteractionStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import InteractionState from "InteractionState" /* 4790 */;
-import trackInviteDefault from "trackInvite" /* 7456 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import Server from "Server" /* 1894 */;
+import InteractionTypes from "InteractionTypes" /* 4790 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-function deleteNonce(first) {
-  if (null == dependencyMap4[first]) {
+require = fn;
+function deleteNonce(nonce) {
+  if (null == dependencyMap4[nonce]) {
     delete tmp[tmp2];
-    if (null != dependencyMap3[first]) {
+    if (null != dependencyMap3[nonce]) {
       delete tmp[tmp3];
     }
     delete tmp[tmp2];
     const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
     const _Date = Date;
-    obj[0] = Date.now();
-    obj[1] = first;
-    obj[2] = dependencyMap3[first];
-    obj[3] = dependencyMap[first];
-    dependencyMap4[first] = obj;
+    obj.insertedAt = Date.now();
+    obj.nonce = nonce;
+    obj.messageId = dependencyMap3[nonce];
+    obj.interaction = dependencyMap[nonce];
+    dependencyMap4[nonce] = obj;
   } else {
     delete tmp[tmp2];
   }
 }
-const result = 5 * setDefault.Millis.MINUTE;
-const result1 = 10 * setDefault.Millis.SECOND;
-let closure_8 = {};
-let closure_9 = {};
-let closure_10 = {};
-let c11;
+const result = 5 * DurationsDefault.Millis.MINUTE;
+const metroRequire = result;
+const result1 = 10 * DurationsDefault.Millis.SECOND;
+const dependencyMap = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
+let modalKey;
 let c12;
-let closure_13 = {};
+const dependencyMap4 = {};
 const Store = initializeDefault.Store;
 class InteractionStore extends Store {
 }
 const prototype = InteractionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5);
+  this.waitFor(AuthenticationStore, ChannelStore);
 };
-prototype["getInteraction"] = function getInteraction(closure_0) {
+prototype["getInteraction"] = function getInteraction(message) {
   let tmp2 = null;
-  if (null != dependencyMap2[closure_0.id]) {
+  if (null != dependencyMap2[message.id]) {
     tmp2 = dependencyMap[tmp];
   }
   return tmp2;
@@ -56,32 +57,28 @@ prototype["getMessageInteractionStates"] = function getMessageInteractionStates(
   const obj = {};
   const entries = Object.entries(closure_8);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
+    let tmp5 = _slicedToArray(tmp3, 2);
     let tmp6 = tmp5[1];
-    let tmp7 = dependencyMap3;
     let tmp8 = dependencyMap3[tmp5[0]];
     if (null != tmp8) {
-      let tmp10 = tmp8;
-      let tmp11 = tmp6;
       obj[tmp9] = tmp6.state;
     }
     continue;
   }
   return obj;
 };
-prototype["canQueueInteraction"] = function canQueueInteraction(c1, closure_9) {
+prototype["canQueueInteraction"] = function canQueueInteraction(arg0, arg1) {
   let tmp2 = null != tmp;
   if (tmp2) {
     tmp2 = null != dependencyMap[tmp];
   }
   if (tmp2) {
-    tmp2 = dependencyMap[tmp].state !== InteractionState.InteractionState.FAILED;
+    tmp2 = dependencyMap[tmp].state !== InteractionTypes.InteractionState.FAILED;
   }
   if (!tmp2) {
-    let tmp9 = null != dependencyMap[closure_9];
+    let tmp9 = null != dependencyMap[arg1];
     if (tmp9) {
-      tmp9 = dependencyMap[closure_9].state !== InteractionState.InteractionState.FAILED;
+      tmp9 = dependencyMap[arg1].state !== InteractionTypes.InteractionState.FAILED;
     }
     tmp2 = tmp9;
   }
@@ -91,20 +88,18 @@ prototype["getIFrameModalApplicationId"] = function getIFrameModalApplicationId(
   return c12;
 };
 prototype["getIFrameModalKey"] = function getIFrameModalKey() {
-  return c11;
+  return modalKey;
 };
 prototype["getInteractionDebugContext"] = function getInteractionDebugContext(nonce) {
   if (null != nonce) {
     if (null != dependencyMap[nonce]) {
-      let obj = { interaction: null, messageId: null };
-      obj[0] = tmp2;
-      obj[1] = dependencyMap3[nonce];
+      let obj = { interaction: tmp2, messageId: dependencyMap3[nonce] };
       return obj;
     } else {
       let tmp5;
       if (null != dependencyMap4[nonce]) {
         obj = { interaction: null, messageId: null };
-        ({ interaction: obj[0], messageId: obj[1] } = tmp4);
+        ({ interaction: obj.interaction, messageId: obj.messageId } = tmp4);
         tmp5 = obj;
       }
       return tmp5;
@@ -112,7 +107,7 @@ prototype["getInteractionDebugContext"] = function getInteractionDebugContext(no
   }
 };
 InteractionStore.displayName = "InteractionStore";
-const interactionStore = new InteractionStore(dispatcherDefault, {
+const interactionStore = new InteractionStore(DispatcherDefault, {
   LOGOUT: function handleInit() {
     closure_8 = {};
     closure_9 = {};
@@ -120,19 +115,15 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     closure_13 = {};
     const timerId = setInterval(() => {
       const timestamp = Date.now();
-      const entries = Object.entries(closure_13);
+      const entries = Object.entries(dependencyMap4);
       while (tmp5 !== undefined) {
-        let tmp7 = callback;
-        let tmp8 = callback(tmp6, 2);
-        let tmp10 = closure_7;
-        if (timestamp - tmp8[1].insertedAt > closure_7) {
-          let tmp11 = closure_13;
-          let tmp12 = tmp9;
+        let tmp8 = _slicedToArray(tmp6, 2);
+        if (timestamp - tmp8[1].insertedAt > result1) {
           delete tmp2[tmp];
         }
         continue;
       }
-    }, closure_6);
+    }, result);
   },
   INTERACTION_QUEUE: function handleInteractionQueue(arg0) {
     ({ nonce, messageId } = arg0);
@@ -141,7 +132,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
       closure_9[messageId] = nonce;
       closure_10[nonce] = messageId;
     }
-    closure_8[nonce] = { state: InteractionState.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
+    closure_8[nonce] = { state: InteractionTypes.InteractionState.QUEUED, data, onCreate, onCancel, onSuccess, onFailure };
   },
   INTERACTION_CREATE: function handleInteractionCreate(nonce) {
     nonce = nonce.nonce;
@@ -149,7 +140,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
       return false;
     } else {
       if (null != dependencyMap[nonce]) {
-        if (tmp3.state === InteractionState.InteractionState.QUEUED) {
+        if (tmp3.state === InteractionTypes.InteractionState.QUEUED) {
           tmp3.state = tmp4(4790).InteractionState.CREATED;
           const onCreate = tmp3.onCreate;
           if (onCreate != null) {
@@ -177,10 +168,10 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
           delete tmp[tmp2];
           const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
-          obj[0] = Date.now();
-          obj[1] = nonce;
-          obj[2] = dependencyMap3[nonce];
-          obj[3] = dependencyMap[nonce];
+          obj.insertedAt = Date.now();
+          obj.nonce = nonce;
+          obj.messageId = dependencyMap3[nonce];
+          obj.interaction = dependencyMap[nonce];
           dependencyMap4[nonce] = obj;
         } else {
           delete tmp[tmp2];
@@ -199,7 +190,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
       if (onFailure != null) {
         onFailure(errorCode, errorMessage, status, reasonCode);
       }
-      if (tmp27.data.interactionType === PermissionOverwriteType.InteractionTypes.APPLICATION_COMMAND) {
+      if (tmp27.data.interactionType === Server.InteractionTypes.APPLICATION_COMMAND) {
         if (null == dependencyMap4[nonce]) {
           delete tmp[tmp2];
           if (null != dependencyMap3[nonce]) {
@@ -208,10 +199,10 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
           delete tmp[tmp2];
           let obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
-          obj[0] = Date.now();
-          obj[1] = nonce;
-          obj[2] = dependencyMap3[nonce];
-          obj[3] = dependencyMap[nonce];
+          obj.insertedAt = Date.now();
+          obj.nonce = nonce;
+          obj.messageId = dependencyMap3[nonce];
+          obj.interaction = dependencyMap[nonce];
           dependencyMap4[nonce] = obj;
         } else {
           delete tmp[tmp2];
@@ -219,7 +210,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
       } else {
         obj = {};
         const merged = Object.assign(tmp27);
-        obj.state = InteractionState.InteractionState.FAILED;
+        obj.state = InteractionTypes.InteractionState.FAILED;
         obj.errorCode = errorCode;
         obj.errorMessage = errorMessage;
         obj.reasonCode = reasonCode;
@@ -247,10 +238,10 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
         delete tmp[tmp2];
         const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
         const _Date = Date;
-        obj[0] = Date.now();
-        obj[1] = nonce;
-        obj[2] = dependencyMap3[nonce];
-        obj[3] = dependencyMap[nonce];
+        obj.insertedAt = Date.now();
+        obj.nonce = nonce;
+        obj.messageId = dependencyMap3[nonce];
+        obj.interaction = dependencyMap[nonce];
         dependencyMap4[nonce] = obj;
       } else {
         delete tmp[tmp2];
@@ -258,21 +249,16 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     }
   },
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
-    if (null == channel.getChannel(channelId.channelId)) {
+    if (null == ChannelStore.getChannel(channelId.channelId)) {
       return false;
     } else {
       const _Object = Object;
       const entries = Object.entries(closure_8);
       const tmp16 = entries[Symbol.iterator]();
       while (tmp16 !== undefined) {
-        let tmp4 = callback;
-        let tmp5 = callback(tmp2, 2);
+        let tmp5 = _slicedToArray(tmp2, 2);
         let first = tmp5[0];
-        let tmp7 = require;
-        let tmp8 = dependencyMap;
-        if (tmp5[1].state === InteractionState.InteractionState.FAILED) {
-          let tmp9 = deleteNonce;
-          let tmp10 = first;
+        if (tmp5[1].state === InteractionTypes.InteractionState.FAILED) {
           let tmp11 = deleteNonce(first);
         }
         continue;
@@ -296,10 +282,10 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
           delete tmp[tmp2];
           const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
-          obj[0] = Date.now();
-          obj[1] = nonce;
-          obj[2] = dependencyMap3[nonce];
-          obj[3] = dependencyMap[nonce];
+          obj.insertedAt = Date.now();
+          obj.nonce = nonce;
+          obj.messageId = dependencyMap3[nonce];
+          obj.interaction = dependencyMap[nonce];
           dependencyMap4[nonce] = obj;
         } else {
           delete tmp[tmp2];
@@ -308,7 +294,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     }
   },
   INTERACTION_IFRAME_MODAL_CLOSE: function handleIFrameModalClose() {
-    c11 = undefined;
+    modalKey = undefined;
     c12 = undefined;
   },
   INTERACTION_IFRAME_MODAL_KEY_CREATE: function handleIFrameModalKeyCreate(modalKey) {
@@ -330,10 +316,10 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
           delete tmp[tmp2];
           const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
           const _Date = Date;
-          obj[0] = Date.now();
-          obj[1] = nonce;
-          obj[2] = dependencyMap3[nonce];
-          obj[3] = dependencyMap[nonce];
+          obj.insertedAt = Date.now();
+          obj.nonce = nonce;
+          obj.messageId = dependencyMap3[nonce];
+          obj.interaction = dependencyMap[nonce];
           dependencyMap4[nonce] = obj;
         } else {
           delete tmp[tmp2];
@@ -342,11 +328,9 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     }
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
-    let sessionId;
-    importDefault = undefined;
     const participants = instance.instance.participants;
-    sessionId = store.getSessionId();
-    importDefault = store.getId();
+    const sessionId = AuthenticationStore.getSessionId();
+    const id = AuthenticationStore.getId();
     const found = participants.find((user_id) => {
       let tmp = user_id.user_id === closure_1;
       if (tmp) {
@@ -372,10 +356,10 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
             delete tmp[tmp2];
             const obj = { insertedAt: null, nonce: null, messageId: null, interaction: null };
             const _Date = Date;
-            obj[0] = Date.now();
-            obj[1] = nonce;
-            obj[2] = dependencyMap3[nonce];
-            obj[3] = dependencyMap[nonce];
+            obj.insertedAt = Date.now();
+            obj.nonce = nonce;
+            obj.messageId = dependencyMap3[nonce];
+            obj.interaction = dependencyMap[nonce];
             dependencyMap4[nonce] = obj;
           } else {
             delete tmp[tmp2];
@@ -385,8 +369,7 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
             tmp18 = "channelId" in interaction.data;
           }
           if (tmp18) {
-            trackInviteDefault.deleteMessage(interaction.data.channelId, messageId, true);
-            const obj2 = trackInviteDefault;
+            MessageActionCreatorsDefault.deleteMessage(interaction.data.channelId, messageId, true);
           }
         }
         tmp7 = null != interaction && null != messageId;
@@ -394,7 +377,8 @@ const interactionStore = new InteractionStore(dispatcherDefault, {
     }
   }
 });
-const result2 = require("set").fileFinishedImporting("modules/interactions/InteractionStore.tsx");
+const size = fn(2);
+const result2 = size.fileFinishedImporting("modules/interactions/InteractionStore.tsx");
 
 export default interactionStore;
 export const STALE_INTERACTION_INTERVAL = result;

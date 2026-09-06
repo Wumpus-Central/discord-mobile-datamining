@@ -1,37 +1,36 @@
-// === Module 13689: handleConnectionOpen ===
+// === Module 13689: ExperimentTriggerPointStore ===
 
-// Module 13689 (handleConnectionOpen)
+// Module 13689 (ExperimentTriggerPointStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcher from "dispatcher" /* 573 */;
-import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 13691 */;
-import closure_3 from "getHash" /* 4476 */;
-import closure_4 from "initialize" /* 1236 */;
-import apexExperiment from "apexExperiment" /* 13690 */;
-import importDefaultResult from "dispatcher" /* 573 */;
+import Dispatcher2 from "Dispatcher" /* 573 */;
+import ConnectionOpenTriggerPoint2 from "ConnectionOpenTriggerPoint" /* 13691 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
-require = arg1;
+const Dispatcher = Dispatcher2;
+
+require = fn;
 function handleConnectionOpen() {
-  const ConnectionOpenTriggerPoint = commonTriggerPointConfiguration.ConnectionOpenTriggerPoint;
+  const ConnectionOpenTriggerPoint = ConnectionOpenTriggerPoint2.ConnectionOpenTriggerPoint;
   ConnectionOpenTriggerPoint.trigger();
 }
+const DebugExperiment = fn(13690);
 const Store = initializeDefault.Store;
 class ExperimentTriggerPointStore extends Store {
   constructor() {
-    tmp2 = require("dispatcher");
+    tmp2 = closure_1(closure_2[5]);
     obj = { CONNECTION_OPEN: handleConnectionOpen };
-    tmp = new tmp(tmp2, obj, require("dispatcher").DispatchBand.Early, handleConnectionOpen, new.target);
-    // ThrowIfThisInitialized (0x7c)
+    tmp = new tmp(tmp2, obj, closure_0(closure_2[5]).DispatchBand.Early, handleConnectionOpen, new.target);
     return tmp;
   }
 }
 const prototype = ExperimentTriggerPointStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_4);
+  this.waitFor(ExperimentStore, ApexExperimentStore);
 };
 ExperimentTriggerPointStore.displayName = "ExperimentTriggerPointStore";
 const obj = { CONNECTION_OPEN: handleConnectionOpen };
-// ThrowIfThisInitialized (0x7c)
-const tmp4 = new "initialize"(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, prototype, ExperimentTriggerPointStore, "initialize", importDefaultResult, obj);
-const result = require("set").fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/ExperimentTriggerPointStore.tsx");
 
-export default tmp4;
+export default new "initialize"(Dispatcher, obj, fn(573).DispatchBand.Early, prototype, ExperimentTriggerPointStore, "initialize", Dispatcher, obj);

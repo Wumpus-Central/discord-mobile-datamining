@@ -1,33 +1,33 @@
 // === Module 8810: AvatarDecorationSampleV2 ===
 
 // Module 8810 (AvatarDecorationSampleV2)
-import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 0.8333333333333334;
-let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
-  obj = { position: "absolute", height: arg0 * c8, width: arg0 * c8, borderRadius: arg0 * c8 / 2, opacity: 0.8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-  obj[0] = obj;
-  obj[1] = { opacity: 1 };
-  obj[2] = { position: "absolute" };
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles((arg0) => {
+  const obj = { avatar: null, solidAvatar: null, avatarDecoration: null };
+  const size = { position: "absolute", height: arg0 * c8, width: arg0 * c8, borderRadius: arg0 * c8 / 2, opacity: 0.8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+  obj.avatar = size;
+  obj.solidAvatar = { opacity: 1 };
+  obj.avatarDecoration = { position: "absolute" };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/AvatarDecorationSampleV2.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/AvatarDecorationSampleV2.tsx");
 
 export default function AvatarDecorationSampleV2(arg0) {
   ({ item, size, avatarSource } = arg0);
   ({ animate, threeTierBundle } = arg0);
-  const tmp = callback(size);
+  const tmp = closure_9(size);
   _modDef38(item.type === CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION, "Item must be Avatar Decoration");
   const items = [tmp.avatar, ];
   let solidAvatar = null != avatarSource;
@@ -42,12 +42,11 @@ export default function AvatarDecorationSampleV2(arg0) {
   if (null == avatarSource) {
     avatarSource = tmp2(8811);
   }
-  obj = { children: null };
-  obj[2] = avatarSource;
-  const items1 = [closure_5(closure_3, obj), ];
+  obj = { children: null, source: avatarSource };
+  const items1 = [hasOwnProperty(React3, obj), ];
   obj = { style: tmp.avatarDecoration, accessibilityLabel: item.label, children: tmp8(tmp2(8812), { avatarDecoration: item, size, animate }) };
-  items1[1] = closure_5(closure_4, obj);
-  obj[0] = items1;
-  return closure_7(closure_6, obj);
+  items1[1] = hasOwnProperty(React4, obj);
+  obj.children = items1;
+  return React5(timestampProducer, obj);
 };
 export const avatarPlaceholderSizeRatio = 0.8333333333333334;

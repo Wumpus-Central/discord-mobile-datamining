@@ -1,29 +1,28 @@
 // === Module 16252: useIsGuildEligibleForRoleSubscriptionsUpsell ===
 
 // Module 16252 (useIsGuildEligibleForRoleSubscriptionsUpsell)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import Constants from "Constants" /* 1074 */;
+import GuildRecord from "GuildRecord" /* 1975 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+import size from "module_2" /* 2 */;
 
-const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
+const isGuildOwner = GuildRecord.isGuildOwner;
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
 
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
-  _require(504);
-  [][0] = closure_4;
+  _require = arg0;
+  const items = [GuildStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  require("initialize");
+  [][0] = UserStore;
   let tmp6 = null != stateFromStores;
   if (tmp6) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);
   }
-  const obj = _require(504);
-  const tmp = _require;
-  const isUserInCreatorMonetizationEligibleCountry = _require(7261).useIsUserInCreatorMonetizationEligibleCountry();
+  const obj = require("initialize");
+  const isUserInCreatorMonetizationEligibleCountry = require("CreatorMonetizationEligibilityExperimentUtils").useIsUserInCreatorMonetizationEligibleCountry();
   if (tmp6) {
     let flag;
     if (stateFromStores != null) {

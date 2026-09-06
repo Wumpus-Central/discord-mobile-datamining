@@ -1,70 +1,65 @@
 // === Module 14808: IgnoredUsersList ===
 
 // Module 14808 (IgnoredUsersList)
-import noopAll from "noop" /* 19 */;
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import context from "context" /* 7162 */;
-import contextDefault from "context" /* 7162 */;
-import getBlockedSource from "getBlockedSource" /* 14802 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7162 */;
+import Blocked from "Blocked" /* 14802 */;
+import IgnoredUserRowDefault from "IgnoredUserRow" /* 14809 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-require = arg1;
+const useAnalyticsLocationsDefault = useAnalyticsLocations;
+
+require = fn;
 function IgnoredUsersList(userIds) {
   userIds = userIds.userIds;
-  const tmp = callback3();
-  contextDefault;
+  const tmp = closure_7();
+  useAnalyticsLocationsDefault;
   if (0 === userIds.length) {
-    let obj = { Illustration: null, body: null };
-    obj[0] = getBlockedSource.Blocked;
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t.PYrWFW);
-    let tmp7 = callback(Button.EmptyState, obj);
+    let obj = { Illustration: Blocked.Blocked, body: null };
+    const intl = util.intl;
+    obj.body = intl.string(util.t.PYrWFW);
+    let tmp7 = hasOwnProperty(native.EmptyState, obj);
   } else {
-    obj = { value: null, children: null };
-    obj[0] = tmp4;
-    obj = { bottom: true, style: null, children: null };
-    obj[1] = tmp.list;
-    obj1 = { children: null };
-    const obj2 = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
-    obj2[0] = tmp.sectionLabelStyle;
-    const intl2 = getSystemLocale.intl;
-    const obj3 = { numberOfIgnoredUsers: null };
-    obj3[0] = userIds.length;
-    obj2[3] = intl2.formatToPlainString(getSystemLocale.t.iNKUhU, obj3);
-    const items = [callback(Text.Text, obj2), ];
-    const obj4 = { hasIcons: true, children: null };
-    obj4[1] = userIds.map((userId) => callback2(callback(table[14]), { userId }, userId));
-    const intl3 = getSystemLocale.intl;
-    items[1] = callback(TableRowGroupTitle.TableRowGroup, obj4, intl3.string(getSystemLocale.t["93ZDWE"]));
-    obj1[0] = items;
-    obj[2] = callback2(ScrollView, obj1);
-    obj[1] = callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-    tmp7 = callback(context.AnalyticsLocationProvider, obj);
+    obj = { value: tmp4, children: null };
+    obj = { bottom: true, style: tmp.list, children: null };
+    const obj1 = { children: null };
+    const obj2 = { style: tmp.sectionLabelStyle, variant: "text-sm/semibold", color: "text-default", children: null };
+    const intl2 = util.intl;
+    const obj3 = { numberOfIgnoredUsers: userIds.length };
+    obj2.children = intl2.formatToPlainString(util.t.iNKUhU, obj3);
+    const items = [hasOwnProperty(Text_Text.Text, obj2), ];
+    const obj4 = { hasIcons: true, children: userIds.map((userId) => closure_1_5(IgnoredUserRowDefault, { userId }, userId)) };
+    const intl3 = util.intl;
+    items[1] = hasOwnProperty(TableRowGroup.TableRowGroup, obj4, intl3.string(util.t["93ZDWE"]));
+    obj1.children = items;
+    obj.children = timestampProducer(ScrollView, obj1);
+    obj.children = hasOwnProperty(common_SafeAreaView.SafeAreaPaddingView, obj);
+    tmp7 = hasOwnProperty(useAnalyticsLocations.AnalyticsLocationProvider, obj);
   }
   return tmp7;
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { list: null, sectionLabelStyle: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { list: null, sectionLabelStyle: null };
+createStyles = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.list = createStyles;
+createStyles.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/IgnoredUsersList.tsx");
 
 export default function ConnectedIgnoredUsersList() {
   let obj = initialize;
-  const items = [closure_4];
+  const items = [RelationshipStore];
   obj = { userIds: obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs()) };
-  return callback(IgnoredUsersList, obj);
+  return hasOwnProperty(IgnoredUsersList, obj);
 };

@@ -1,13 +1,15 @@
-// === Module 4620: logger ===
+// === Module 4620: DirectVideo ===
 
-// Module 4620 (logger)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 4620 (DirectVideo)
+import DirectVideoStream from "DirectVideoStream" /* 4621 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const logger = new require("log").Logger("DirectVideo");
+require = fn;
+const jsx = fn(21).jsx;
+const logger = new fn(4).Logger("DirectVideo");
 logger.enableNativeLogger(true);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx");
 
 export default function DirectVideo(streamId, onContainerResized) {
   streamId = streamId.streamId;
@@ -21,13 +23,9 @@ export default function DirectVideo(streamId, onContainerResized) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const merged = Object.assign(streamId, Object.create(null));
-  let ref;
-  closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  ref = onResize.useRef(null);
-  closure_6 = onResize.useRef(null);
+  const merged = Object.assign(streamId, Object.assign({ streamId: 0, paused: 0, onReady: 0, onResize: 0, reportContainerResized: 0, className: 0 }));
+  onResize.useRef(null);
+  const ref = onResize.useRef(null);
   closure_7 = onResize.useRef({ width: 0, height: 0 });
   let obj = { streamId, paused: flag, onReady, onResize, onContainerResized };
   closure_8 = onResize.useRef(obj);
@@ -35,24 +33,20 @@ export default function DirectVideo(streamId, onContainerResized) {
   const layoutEffect = onResize.useLayoutEffect(() => {
     let current = ref.current;
     const resizeObserver = new globalThis.ResizeObserver((arg0) => {
-      if (closure_4) {
+      if (flag2) {
         const iter = arg0[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp8 = nextResult;
-          let tmp9 = ref;
           if (nextResult.target === ref.current) {
             let _window = window;
-            let tmp10 = nextResult;
             let result = window.devicePixelRatio * tmp8.target.clientWidth;
             let _window2 = window;
             let result1 = window.devicePixelRatio * tmp8.target.clientHeight;
-            let current = closure_8.current;
+            let current = closure_1_8.current;
             let onContainerResized = current.onContainerResized;
             if (onContainerResized != null) {
-              let tmp13 = result;
-              let tmp14 = result1;
-              let onContainerResizedResult = onContainerResized(closure_8.current.streamId, result, result1);
+              let onContainerResizedResult = onContainerResized(closure_1_8.current.streamId, result, result1);
             }
           }
           continue;
@@ -68,7 +62,7 @@ export default function DirectVideo(streamId, onContainerResized) {
       element.autoplay = true;
       element.muted = true;
       const listener = element.addEventListener("pause", function handlePause() {
-        if (!closure_8.current.paused) {
+        if (!closure_1_8.current.paused) {
           const current = ref.current;
           if (current != null) {
             current.play();
@@ -94,27 +88,25 @@ export default function DirectVideo(streamId, onContainerResized) {
           num2 = 0;
         }
         if (width !== num) {
-          const obj = { width: null, height: null };
-          obj[0] = num;
-          obj[1] = num2;
-          const current3 = closure_8.current;
+          const size = { width: num, height: num2 };
+          const current3 = closure_1_8.current;
           onResize = current3.onResize;
           if (onResize != null) {
-            onResize(obj);
+            onResize(size);
           }
-          ref2.current = obj;
+          ref2.current = size;
         }
       });
       const listener2 = element.addEventListener("canplaythrough", function handleReady() {
-        closure_1_5.info("handleReady for " + closure_8.current.streamId + ", have onReady callback = " + null != closure_8.current.onReady);
-        const current = closure_8.current;
+        ref.info("handleReady for " + closure_1_8.current.streamId + ", have onReady callback = " + null != closure_1_8.current.onReady);
+        const current = closure_1_8.current;
         onReady = current.onReady;
         if (onReady != null) {
           onReady();
         }
       });
       const _HermesInternal2 = HermesInternal;
-      ref.info("create video element for " + closure_8.current.streamId + ", readyState=" + element.readyState);
+      logger.info("create video element for " + closure_8.current.streamId + ", readyState=" + element.readyState);
       if (element.readyState > 3) {
         const _HermesInternal = HermesInternal;
         obj3.error("video element for " + tmp10.current.streamId + " was ready before attached");
@@ -122,8 +114,8 @@ export default function DirectVideo(streamId, onContainerResized) {
       current.appendChild(element);
       resizeObserver.disconnect();
       resizeObserver.observe(element);
-      closure_6.current = element;
-      obj3 = ref;
+      ref.current = element;
+      obj3 = logger;
       tmp10 = closure_8;
     }
   }, items);
@@ -143,11 +135,11 @@ export default function DirectVideo(streamId, onContainerResized) {
         }
       } else {
         const _HermesInternal = HermesInternal;
-        ref.info("attaching srcObject for " + current);
-        const result = streamId(onReady[3]).acquireDirectVideoStream(current);
+        logger.info("attaching srcObject for " + streamId);
+        const result = DirectVideoStream.acquireDirectVideoStream(streamId);
         current.srcObject = result.stream;
         return () => {
-          closure_1.release();
+          result.release();
           current.srcObject = null;
         };
       }

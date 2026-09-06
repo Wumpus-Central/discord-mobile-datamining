@@ -1,25 +1,26 @@
-// === Module 9994: getNoiseCancellationDeferredToSystem ===
+// === Module 9994: NoiseCancellationUtils ===
 
-// Module 9994 (getNoiseCancellationDeferredToSystem)
+// Module 9994 (NoiseCancellationUtils)
 import initialize from "initialize" /* 504 */;
-import setDefault from "set" /* 9995 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
+import getEffectiveNoiseCancellationDefault from "getEffectiveNoiseCancellation" /* 9995 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/noise_cancellation/NoiseCancellationUtils.tsx");
 
-export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem(closure_3) {
-  let obj = closure_3;
-  if (closure_3 === undefined) {
-    obj = closure_3;
+export const getNoiseCancellationDeferredToSystem = function getNoiseCancellationDeferredToSystem(MediaEngineStore) {
+  let obj = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
+    obj = MediaEngineStore;
   }
   const systemMicrophoneMode = obj.getSystemMicrophoneMode();
-  return !setDefault(true, systemMicrophoneMode);
+  return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
 };
 export const useNoiseCancellationDeferredToSystem = function useNoiseCancellationDeferredToSystem() {
-  const items = [closure_3];
+  const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => {
     systemMicrophoneMode = systemMicrophoneMode.getSystemMicrophoneMode();
-    return !callback(table[1])(true, systemMicrophoneMode);
+    return !getEffectiveNoiseCancellationDefault(true, systemMicrophoneMode);
   });
 };

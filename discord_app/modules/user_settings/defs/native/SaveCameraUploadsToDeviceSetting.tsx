@@ -1,30 +1,30 @@
-// === Module 15466: toggle ===
+// === Module 15466: SaveCameraUploadsToDeviceSetting ===
 
-// Module 15466 (toggle)
+// Module 15466 (SaveCameraUploadsToDeviceSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9358 */;
-import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9358 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["99tBAC"]);
+    const intl = util.intl;
+    return intl.string(util.t["99tBAC"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7975).MobileUserSettings.CHAT,
   useValue: function useSaveCameraUploadsToDeviceValue() {
-    const items = [closure_3];
-    return initialize.useStateFromStores(items, () => obj.saveCameraUploadsToDevice);
+    const items = [UnsyncedUserSettingsStore];
+    return initialize.useStateFromStores(items, () => UnsyncedUserSettingsStore.saveCameraUploadsToDevice);
   },
   onValueChange: function onSaveCameraUploadsToDeviceValueChange(saveCameraUploadsToDevice) {
-    let obj = saveGuildFoldersDefault;
-    obj = { saveCameraUploadsToDevice };
+    const obj = { saveCameraUploadsToDevice };
     const result = obj.updatedUnsyncedSettings(obj);
   }
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SaveCameraUploadsToDeviceSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

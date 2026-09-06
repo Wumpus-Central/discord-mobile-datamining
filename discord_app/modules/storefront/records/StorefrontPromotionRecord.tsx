@@ -1,8 +1,8 @@
-// === Module 8788: parseSkuIds ===
+// === Module 8788: StorefrontPromotionRecord ===
 
-// Module 8788 (parseSkuIds)
-import toJSDefault from "toJS" /* 1386 */;
-import closure_0 from "_slicedToArray" /* 32 */;
+// Module 8788 (StorefrontPromotionRecord)
+import _slicedToArray from "module_32" /* 32 */;
+import Record from "Record" /* 1386 */;
 
 function parseSkuIds(sku_ids) {
   if (null == sku_ids) {
@@ -13,21 +13,16 @@ function parseSkuIds(sku_ids) {
     const entries = Object.entries(sku_ids);
     const tmp4 = entries[Symbol.iterator]();
     while (tmp4 !== undefined) {
-      let tmp8 = callback;
-      let tmp9 = callback(tmp6, 2);
-      obj = { priceTiers: null };
-      obj[0] = tmp9[1].price_tiers;
+      let tmp9 = _slicedToArray(tmp6, 2);
+      obj = { priceTiers: tmp9[1].price_tiers };
       obj[tmp9[0]] = obj;
       continue;
     }
     return obj;
   }
 }
-toJSDefault;
-let prototype;
-prototype = function StorefrontPromotionRecord(arg0) {
+const prototype = function StorefrontPromotionRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, applicationId: tmp.applicationId, name: tmp.name, displayName: tmp.displayName, rewardType: tmp.rewardType, rewardStatus: tmp.rewardStatus, rewardConfig: tmp.rewardConfig, skuIds: tmp.skuIds, appliesToAllSkus: tmp.appliesToAllSkus, includeBundles: tmp.includeBundles, startsAt: tmp.startsAt, endsAt: tmp.endsAt, tenantMetadata: tmp.tenantMetadata } = arg0);
   return tmp;
 }.prototype;
@@ -53,16 +48,10 @@ prototype["createFromServer"] = function createFromServer(display_name) {
     if (null != reward_config) {
       let tmp12 = null;
       if (null != reward_config.discount) {
-        let obj = { id: null, type: null, amount: null, fiatEnabled: null, orbsEnabled: null };
-        obj[0] = reward_config.discount.id;
-        obj[1] = reward_config.discount.type;
-        obj[2] = reward_config.discount.amount;
-        obj[3] = reward_config.discount.fiat_enabled;
-        obj[4] = reward_config.discount.orbs_enabled;
+        let obj = { id: reward_config.discount.id, type: reward_config.discount.type, amount: reward_config.discount.amount, fiatEnabled: reward_config.discount.fiat_enabled, orbsEnabled: reward_config.discount.orbs_enabled };
         tmp12 = obj;
       }
-      obj = { discount: null };
-      obj[0] = tmp12;
+      obj = { discount: tmp12 };
       tmp11 = obj;
     }
     tmp10 = tmp11;
@@ -79,13 +68,12 @@ prototype["createFromServer"] = function createFromServer(display_name) {
     const _Date2 = Date;
     date1 = new Date(display_name.ends_at);
   }
-  let tmp21 = null;
+  let tmp22 = null;
   if (null != display_name.tenant_metadata) {
     const tenant_metadata = display_name.tenant_metadata;
     if (null == tenant_metadata.collectibles) {
-      obj = { collectibles: null };
-      obj[0] = _Date;
-      tmp21 = obj;
+      obj = { collectibles: _Date };
+      tmp22 = obj;
     } else {
       const collectibles = tenant_metadata.collectibles;
       const reward = collectibles.reward;
@@ -112,10 +100,10 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           override_title = collected.override_title;
         }
       }
-      let tmp25;
+      let tmp26;
       if (null != override_title) {
         if ("" !== override_title) {
-          tmp25 = override_title;
+          tmp26 = override_title;
         }
       }
       const reward4 = collectibles.reward;
@@ -125,76 +113,73 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       }
       if (null == nagbar) {
         if (null == offer_notice) {
-          obj1 = {};
+          let obj1 = {};
         }
       }
-      let tmp27;
+      let tmp28;
       if (null != nagbar) {
         const header_text = nagbar.header_text;
-        const obj2 = { headerText: null, cta: null, helpCenterId: null, icon: null };
-        obj2[0] = header_text;
-        let tmp28;
+        const obj2 = { headerText: header_text, cta: null, helpCenterId: null, icon: null };
+        let tmp29;
         if (null != nagbar.cta) {
           const text = nagbar.cta.text;
-          const obj3 = { text: null };
-          obj3[0] = text;
-          tmp28 = obj3;
+          const obj3 = { text };
+          tmp29 = obj3;
         }
-        obj2[1] = tmp28;
+        obj2.cta = tmp29;
         const help_center_id = nagbar.help_center_id;
-        obj2[2] = help_center_id;
+        obj2.helpCenterId = help_center_id;
         const icon = nagbar.icon;
         const obj4 = { nagbar: null };
-        obj2[3] = icon;
-        obj4[0] = obj2;
-        tmp27 = obj4;
+        obj2.icon = icon;
+        obj4.nagbar = obj2;
+        tmp28 = obj4;
       }
-      const obj5 = { storefront: null, checkout: null, collected: null, flavor: null };
-      obj5[0] = tmp27;
-      let tmp29;
+      const obj5 = { storefront: tmp28, checkout: null, collected: null, flavor: null };
+      let tmp30;
       if (null != offer_notice) {
         const icon2 = offer_notice.icon;
-        const obj6 = { icon: null, text: null };
-        obj6[0] = icon2;
+        const obj6 = { icon: icon2, text: null };
         const text2 = offer_notice.text;
         const obj7 = { offerNotice: null };
-        obj6[1] = text2;
-        obj7[0] = obj6;
-        tmp29 = obj7;
+        obj6.text = text2;
+        obj7.offerNotice = obj6;
+        tmp30 = obj7;
       }
-      obj5[1] = tmp29;
-      let tmp30;
-      if (null != tmp25) {
-        const obj8 = { overrideTitle: null };
-        obj8[0] = tmp25;
-        tmp30 = obj8;
+      obj5.checkout = tmp30;
+      let tmp31;
+      if (null != tmp26) {
+        const obj8 = { overrideTitle: tmp26 };
+        tmp31 = obj8;
       }
-      obj5[2] = tmp30;
+      obj5.collected = tmp31;
       obj1 = { reward: null };
-      obj5[3] = flavor;
-      obj1[0] = obj5;
+      obj5.flavor = flavor;
+      obj1.reward = obj5;
     }
   }
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp36 = new prototype(tmp16, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, tmp8, new.target, id, application_id, name, display_name, reward_type, reward_status);
+    tmp36.id = id;
+    tmp36.applicationId = application_id;
+    tmp36.name = name;
+    tmp36.displayName = display_name;
+    tmp36.rewardType = reward_type;
+    tmp36.rewardStatus = reward_status;
+    tmp36.rewardConfig = tmp10;
+    tmp36.skuIds = tmp13;
+    tmp36.appliesToAllSkus = applies_to_all_skus;
+    tmp36.includeBundles = include_bundles;
+    tmp36.startsAt = date;
+    tmp36.endsAt = date1;
+    tmp36.tenantMetadata = tmp22;
+    return tmp36;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp32 = new prototype(str, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp, _Date2, _Date, prototype, new.target, id, application_id, name, display_name, reward_type, reward_status);
-  // ThrowIfThisInitialized (0x7c)
-  tmp32.id = id;
-  tmp32.applicationId = application_id;
-  tmp32.name = name;
-  tmp32.displayName = display_name;
-  tmp32.rewardType = reward_type;
-  tmp32.rewardStatus = reward_status;
-  tmp32.rewardConfig = tmp10;
-  tmp32.skuIds = parseSkuIds(display_name.sku_ids);
-  tmp32.appliesToAllSkus = applies_to_all_skus;
-  tmp32.includeBundles = include_bundles;
-  tmp32.startsAt = date;
-  tmp32.endsAt = date1;
-  tmp32.tenantMetadata = tmp21;
-  return tmp32;
+  tmp13 = parseSkuIds(display_name.sku_ids);
 };
-const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontPromotionRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/records/StorefrontPromotionRecord.tsx");
 
 export default prototype;

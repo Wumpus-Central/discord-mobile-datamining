@@ -1,9 +1,9 @@
 // === Module 12487: regionResponseToRegion ===
 
 // Module 12487 (regionResponseToRegion)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");
+const result = size.fileFinishedImporting("modules/game_server/utils/regionResponseToRegion.tsx");
 
 export default function regionResponseToRegion(id) {
   return { id: id.id, name: id.name, countryCode: id.country_code, pingUrl: id.ping_url, enabled: id.enabled };

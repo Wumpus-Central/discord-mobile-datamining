@@ -1,8 +1,8 @@
-// === Module 9680: RTC_PANEL_HEIGHT ===
+// === Module 9680: ConnectivityConstants ===
 
-// Module 9680 (RTC_PANEL_HEIGHT)
-import set from "set" /* 2 */;
+// Module 9680 (ConnectivityConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/connectivity/native/ConnectivityConstants.tsx");
+const result = size.fileFinishedImporting("modules/connectivity/native/ConnectivityConstants.tsx");
 
 export const RTC_PANEL_HEIGHT = 28;

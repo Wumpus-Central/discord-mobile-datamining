@@ -1,17 +1,16 @@
-// === Module 17502: _fetchGameCommunities ===
+// === Module 17502: MobileGameCommunitiesManager ===
 
-// Module 17502 (_fetchGameCommunities)
-import initializeDefault from "initialize" /* 7118 */;
-import DetectableAppNames from "DetectableAppNames" /* 13712 */;
-import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT" /* 13714 */;
-import DETECTABLE_GAME_TO_APPLICATION_ID_MAP from "DETECTABLE_GAME_TO_APPLICATION_ID_MAP" /* 15621 */;
-import fetchMobileGameCommunitiesAll from "fetchMobileGameCommunities" /* 16266 */;
-import closure_3 from "initialize" /* 13711 */;
-import closure_4 from "set" /* 15620 */;
-import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS" /* 16265 */;
+// Module 17502 (MobileGameCommunitiesManager)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13712 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13714 */;
+import GameCommunityConfig from "GameCommunityConfig" /* 15621 */;
+import MobileGameCommunitiesActionCreatorsAll from "MobileGameCommunitiesActionCreators" /* 16266 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13711 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15620 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
+let closure_5 = fn(16265).MAX_DISPLAYED_UPSELL_GUILDS;
 class MobileGameCommunitiesManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -29,22 +28,21 @@ class MobileGameCommunitiesManager extends tmp2 {
 }
 const prototype = MobileGameCommunitiesManager.prototype;
 prototype["_fetchGameCommunities"] = function _fetchGameCommunities(result) {
-  const gameIdsForDetectedGames = DETECTABLE_GAME_TO_APPLICATION_ID_MAP.getGameIdsForDetectedGames(result);
+  const gameIdsForDetectedGames = GameCommunityConfig.getGameIdsForDetectedGames(result);
   const timestamp = Date.now();
-  const diff = timestamp - store.getLastFetchedAt();
+  const diff = timestamp - MobileGameCommunitiesStore.getLastFetchedAt();
   if (diff >= 86400000) {
-    const dismissedGuildIds = store.getDismissedGuildIds();
+    const dismissedGuildIds = MobileGameCommunitiesStore.getDismissedGuildIds();
     const _Array = Array;
-    const mobileGameCommunities = fetchMobileGameCommunitiesAll.fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), closure_5);
-    const obj3 = fetchMobileGameCommunitiesAll;
+    const mobileGameCommunities = MobileGameCommunitiesActionCreatorsAll.fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), closure_5);
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  const GameCommunityAddServerEntryExperiment = GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT.GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = GameCommunityUpsellExperiment.GameCommunityAddServerEntryExperiment;
   if (GameCommunityAddServerEntryExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
-    if (0 === store.getLastFetchedAt()) {
+    if (0 === MobileGameCommunitiesStore.getLastFetchedAt()) {
       const _Object = Object;
-      const values = Object.values(closure_3.getUserAgnosticState().apps);
+      const values = Object.values(LocalAppDetectionStore.getUserAgnosticState().apps);
       if (values.some((lastScannedAt) => {
         lastScannedAt = undefined;
         if (lastScannedAt != null) {
@@ -53,10 +51,9 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         return null != lastScannedAt;
       })) {
         const obj = {};
-        const ALL_DETECTABLE_APP_NAMES = DetectableAppNames.ALL_DETECTABLE_APP_NAMES;
+        const ALL_DETECTABLE_APP_NAMES = LocalAppDetectionTypes.ALL_DETECTABLE_APP_NAMES;
         for (const item10021 of ALL_DETECTABLE_APP_NAMES) {
-          let tmp6 = closure_3;
-          obj[item10021] = closure_3.isAppInstalled(item10021);
+          obj[item10021] = LocalAppDetectionStore.isAppInstalled(item10021);
           continue;
         }
         const self = this;
@@ -66,13 +63,14 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   }
 };
 prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionComplete(result) {
-  const GameCommunityAddServerEntryExperiment = GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT.GameCommunityAddServerEntryExperiment;
+  const GameCommunityAddServerEntryExperiment = GameCommunityUpsellExperiment.GameCommunityAddServerEntryExperiment;
   if (GameCommunityAddServerEntryExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
     const self = this;
     result = this._fetchGameCommunities(result.result);
   }
 };
 const mobileGameCommunitiesManager = new MobileGameCommunitiesManager();
-let result = require("set").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
 
 export default mobileGameCommunitiesManager;

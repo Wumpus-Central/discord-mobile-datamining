@@ -1,29 +1,27 @@
-// === Module 14779: route ===
+// === Module 14779: AccountConfirmPasswordSetting ===
 
-// Module 14779 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import UserSettingsConfirmPasswordWrapped from "UserSettingsConfirmPasswordWrapped" /* 6993 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 14779 (AccountConfirmPasswordSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import UserSettingsConfirmPassword from "UserSettingsConfirmPassword" /* 6993 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["7qKDrE"]);
+    const intl = util.intl;
+    return intl.string(util.t["7qKDrE"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   unsearchable: true,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD,
-  getComponent() {
-    return UserSettingsConfirmPasswordWrapped.UserSettingsConfirmPasswordWrapped;
+  screen: {
+    route: Constants.UserSettingsSections.ACCOUNT_CONFIRM_PASSWORD,
+    getComponent() {
+      return UserSettingsConfirmPassword.UserSettingsConfirmPasswordWrapped;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountConfirmPasswordSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountConfirmPasswordSetting.tsx");
 
 export default route;

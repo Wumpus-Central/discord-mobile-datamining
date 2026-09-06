@@ -1,13 +1,13 @@
-// === Module 7463: isActiveUserRoute ===
+// === Module 7463: SessionRouteUtils ===
 
-// Module 7463 (isActiveUserRoute)
-import set from "set" /* 2 */;
+// Module 7463 (SessionRouteUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/analytics_sessions/SessionRouteUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/analytics_sessions/SessionRouteUtils.native.tsx");
 
 export function isActiveUserRoute() {
   return true;
 }
-export function subscribeToLocationChanges(handleLocationChange) {
+export function subscribeToLocationChanges() {
 
 }

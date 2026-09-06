@@ -2,47 +2,48 @@
 
 // Module 9465 (useIsVideoMode)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "reset" /* 4582 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import closure_6 from "updateVoiceState" /* 4579 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/useIsVideoMode.tsx");
 
 export default function useIsVideoMode() {
-  const items = [closure_3, closure_5, closure_4, closure_6, closure_2];
+  const items = [ChannelStore, SelectedChannelStore, MediaEngineStore, VoiceStateStore, ApplicationStreamingStore];
   return initialize.useStateFromStores(items, () => {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
     let tmp2 = null != channel;
     if (tmp2) {
-      tmp2 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
-      const tmp3 = closure_2.getAllActiveStreams().length > 0 || closure_6.hasVideo(channel.id) || closure_4.isVideoEnabled();
+      tmp2 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
+      const tmp3 = ApplicationStreamingStore.getAllActiveStreams().length > 0 || VoiceStateStore.hasVideo(channel.id) || MediaEngineStore.isVideoEnabled();
     }
     return tmp2;
   });
 };
-export const isVideoMode = function isVideoMode(closure_9, closure_11, closure_8, closure_12, closure_10) {
-  let obj = closure_9;
-  if (closure_9 === undefined) {
-    obj = closure_3;
+export const isVideoMode = function isVideoMode(arg0, arg1, arg2, arg3, arg4) {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = ChannelStore;
   }
-  let obj2 = closure_11;
-  if (closure_11 === undefined) {
-    obj2 = closure_5;
+  let obj2 = arg1;
+  if (arg1 === undefined) {
+    obj2 = SelectedChannelStore;
   }
-  let obj3 = closure_8;
-  if (closure_8 === undefined) {
-    obj3 = closure_2;
+  let obj3 = arg2;
+  if (arg2 === undefined) {
+    obj3 = ApplicationStreamingStore;
   }
-  let obj4 = closure_12;
-  if (closure_12 === undefined) {
-    obj4 = closure_6;
+  let obj4 = arg3;
+  if (arg3 === undefined) {
+    obj4 = VoiceStateStore;
   }
-  let obj5 = closure_10;
-  if (closure_10 === undefined) {
-    obj5 = closure_4;
+  let obj5 = arg4;
+  if (arg4 === undefined) {
+    obj5 = MediaEngineStore;
   }
   const channel = obj.getChannel(obj2.getVoiceChannelId());
   let tmp2 = null != channel;

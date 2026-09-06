@@ -1,21 +1,20 @@
 // === Module 13034: getActivityJoinability ===
 
 // Module 13034 (getActivityJoinability)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import hasFlagDefault from "hasFlag" /* 7313 */;
 import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9502 */;
 import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9531 */;
-import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability" /* 9531 */;
 import getPartySize from "getPartySize" /* 11755 */;
 import getIsInParty from "getIsInParty" /* 11758 */;
 import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11761 */;
 import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 13035 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ ActivityFlags: c3, ChannelTypes: c4, GuildFeatures: c5 } = ME);
-let obj = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
-const result = set.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
+({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty } = Constants);
+const ActivityJoinability = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
+const result = size.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
 
 export default function getActivityJoinability(arg0) {
   ({ user, activity, channelId, isEmbedded, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, EmbeddedActivitiesStore } = arg0);
@@ -36,19 +35,12 @@ export default function getActivityJoinability(arg0) {
     } else {
       if (isEmbedded) {
         if (null != channelId) {
-          obj = { userId: null, activity: null, channelId: null, currentUser: null, application: null, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
-          obj[0] = user.id;
-          obj[1] = activity;
-          obj[2] = channelId;
-          obj[3] = tmp2;
-          obj[4] = tmp;
-          const tmp45 = getEmbeddedActivityJoinabilityDefault;
-          obj[5] = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
-          obj[6] = ChannelStore;
-          obj[7] = VoiceStateStore;
-          obj[8] = tmp3;
-          obj[9] = GuildStore;
-          const obj8 = useIsActivitiesEnabledForCurrentPlatform;
+          obj = { userId: user.id, activity, channelId, currentUser: tmp2, application: tmp, isActivitiesEnabledForCurrentPlatform: null, ChannelStore: null, VoiceStateStore: null, PermissionStore: null, GuildStore: null };
+          obj.isActivitiesEnabledForCurrentPlatform = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
+          obj.ChannelStore = ChannelStore;
+          obj.VoiceStateStore = VoiceStateStore;
+          obj.PermissionStore = tmp3;
+          obj.GuildStore = GuildStore;
           if (tmp45Result === getEmbeddedActivityJoinability.EmbeddedActivityJoinability.CAN_JOIN) {
             let CANNOT_JOIN2 = obj.CAN_JOIN;
           } else {
@@ -65,13 +57,9 @@ export default function getActivityJoinability(arg0) {
         }
       }
       if (!isEmbedded) {
-        if (isActivityJoinableOnCurrentPlatformDefault(activity)) {
-          const obj2 = set2;
-        }
         return obj.CANNOT_JOIN;
       }
       const partySize = getPartySize.getPartySize(activity);
-      const obj3 = getPartySize;
       const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
@@ -129,8 +117,7 @@ export default function getActivityJoinability(arg0) {
       obj = getIsInParty;
       isInParty = obj.getIsInParty(tmp8Result, activity);
     }
-    const tmp8 = getCurrentUserPresenceActivityDefault;
   }
   return obj.JOINED;
 };
-export const ActivityJoinability = obj;
+export { ActivityJoinability };

@@ -1,8 +1,8 @@
-// === Module 14001: apexExperiment ===
+// === Module 14001: PTTEducationExperiment ===
 
-// Module 14001 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 14001 (PTTEducationExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 let obj = { showPTTJoinTooltip: false, showPTTIconIndicator: false, showPTTNoKeybindWarning: false, showPTTSpeakingIndicator: false };
 obj = { name: "2025-12-09-ptt-education", kind: "user", defaultConfig: obj, variations: null };
@@ -17,8 +17,8 @@ const obj2 = {};
 const merged1 = Object.assign(obj);
 obj2.showPTTIconIndicator = true;
 obj[2] = obj2;
-obj[3] = obj;
+obj.variations = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = set.fileFinishedImporting("modules/voice_calls/PTTEducationExperiment.tsx");
+const result = size.fileFinishedImporting("modules/voice_calls/PTTEducationExperiment.tsx");
 
 export default apexExperiment;

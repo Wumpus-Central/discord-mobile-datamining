@@ -1,18 +1,19 @@
-// === Module 13811: getKrispModel ===
+// === Module 13811: noise_cancellation/KrispUtils ===
 
-// Module 13811 (getKrispModel)
-import set from "set" /* 2 */;
+// Module 13811 (noise_cancellation/KrispUtils)
+import inject from "inject" /* 1910 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
+const result = size.fileFinishedImporting("modules/noise_cancellation/native/KrispUtils.tsx");
 
 export const getKrispModel = function getKrispModel() {
-  return new Promise((arg0) => {
-    const callback = arg0;
-    const voiceEngine = callback(table[0]).getVoiceEngine();
+  return new Promise((fn) => {
+    closure_0 = fn;
+    const voiceEngine = inject.getVoiceEngine();
     if (null != voiceEngine.getNcModelFilename) {
-      const ncModelFilename = voiceEngine.getNcModelFilename((arg0) => callback(arg0));
+      const ncModelFilename = voiceEngine.getNcModelFilename((arg0) => closure_0(arg0));
     } else {
-      arg0(null);
+      fn(null);
     }
   });
 };

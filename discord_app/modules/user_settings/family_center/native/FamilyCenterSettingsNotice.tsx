@@ -1,38 +1,40 @@
-// === Module 14816: FamilyCenterSettingsParentalControlsNotice ===
+// === Module 14816: FamilyCenterSettingsNotice ===
 
-// Module 14816 (FamilyCenterSettingsParentalControlsNotice)
-import noopAll from "noop" /* 19 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
+// Module 14816 (FamilyCenterSettingsNotice)
+import _modDef2396 from "module_2396" /* 2396 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
+import LayerActionCreators from "LayerActionCreators" /* 7587 */;
 import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14687 */;
-import { SafetySettingsNoticeType } from "SafetyToastType" /* 8399 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
+require = fn;
+const SafetySettingsNoticeType = fn(8399).SafetySettingsNoticeType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
   let obj = activeLinkUserIds(8645);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = {
-    label: messagesProxyDefault.i284fU,
+    label: _modDef2396.i284fU,
     noticeType: SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
     labelHook() {
-      let obj = activeLinkUserIds(closure_1_2[6]);
+      let obj = LayerActionCreators;
       obj.popLayer();
       obj = { recipientIds: activeLinkUserIds };
-      closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
+      ChannelActionCreatorsDefault.openPrivateChannel(obj);
     },
     count: activeLinkUserIds.length
   };
   return jsx(SafetySettingsNoticeDefault, {
-    label: messagesProxyDefault.i284fU,
+    label: _modDef2396.i284fU,
     noticeType: SafetySettingsNoticeType.CONTENT_AND_SOCIAL_PARENTAL_CONTROLS_NOTICE,
     labelHook() {
-      let obj = activeLinkUserIds(closure_1_2[6]);
+      let obj = LayerActionCreators;
       obj.popLayer();
       obj = { recipientIds: activeLinkUserIds };
-      closure_1_1(closure_1_2[7]).openPrivateChannel(obj);
+      ChannelActionCreatorsDefault.openPrivateChannel(obj);
     },
     count: activeLinkUserIds.length
   });

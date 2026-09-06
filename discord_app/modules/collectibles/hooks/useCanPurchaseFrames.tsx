@@ -2,28 +2,28 @@
 
 // Module 8830 (useCanPurchaseFrames)
 import initialize from "initialize" /* 504 */;
-import create from "create" /* 1379 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1885 */;
-import apexExperiment from "apexExperiment" /* 8212 */;
-import apexExperiment2 from "apexExperiment" /* 8831 */;
-import apexExperimentDefault from "apexExperiment" /* 8831 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+import user from "user" /* 1379 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
+import CollectiblesProfileFramesExperiment from "CollectiblesProfileFramesExperiment" /* 8212 */;
+import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8831 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");
+const CollectiblesProfileFramesPurchaseExperimentDefault = CollectiblesProfileFramesPurchaseExperiment;
+
+require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");
 
 export default function useCanPurchaseFrames(location) {
-  let obj = apexExperiment;
+  let obj = CollectiblesProfileFramesExperiment;
   let isProfileFramesEnabled = obj.useIsProfileFramesEnabled(location);
   obj = { location };
-  const bucket = apexExperimentDefault.useConfig(obj).bucket;
-  const obj2 = apexExperimentDefault;
-  const tmp = require;
-  const items = [closure_3];
+  const bucket = CollectiblesProfileFramesPurchaseExperimentDefault.useConfig(obj).bucket;
+  const items = [UserStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
-    let isPremiumExactlyResult = callback(table[4]).isPremiumExactly(currentUser, TIER_2.TIER_2);
+    let isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(currentUser, TIER_2.TIER_2);
     if (isPremiumExactlyResult) {
       let premiumState;
       if (currentUser != null) {
@@ -32,14 +32,14 @@ export default function useCanPurchaseFrames(location) {
       isPremiumExactlyResult = null != premiumState;
     }
     if (isPremiumExactlyResult) {
-      isPremiumExactlyResult = currentUser.premiumState.premiumSubscriptionType === callback(table[5]).PremiumSubscriptionType.TIER_2;
+      isPremiumExactlyResult = currentUser.premiumState.premiumSubscriptionType === user.PremiumSubscriptionType.TIER_2;
     }
     return isPremiumExactlyResult;
   });
-  let tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.OPEN_PURCHASE;
+  let tmp5 = bucket === CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.OPEN_PURCHASE;
   if (!tmp5) {
-    tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
-    const tmp6 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    tmp5 = bucket === CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    const tmp6 = bucket === CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
   }
   if (isProfileFramesEnabled) {
     isProfileFramesEnabled = tmp5;
@@ -47,23 +47,23 @@ export default function useCanPurchaseFrames(location) {
   return isProfileFramesEnabled;
 };
 export const useCanViewProfileFramesInCollectiblesShop = function useCanViewProfileFramesInCollectiblesShop(UserProfileFrameEditButton) {
-  let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(UserProfileFrameEditButton);
-  apexExperimentDefault;
+  let isProfileFramesEnabled = CollectiblesProfileFramesExperiment.useIsProfileFramesEnabled(UserProfileFrameEditButton);
+  CollectiblesProfileFramesPurchaseExperimentDefault;
   if (isProfileFramesEnabled) {
-    isProfileFramesEnabled = tmp5 !== apexExperiment2.ProfileFramesPurchaseBucket.CONTROL;
+    isProfileFramesEnabled = tmp5 !== CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.CONTROL;
   }
   return isProfileFramesEnabled;
 };
 export const useIsProfileFramesEarlyAccessPhase = function useIsProfileFramesEarlyAccessPhase(CollectiblesShopCardCardDetailsV2) {
-  let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(CollectiblesShopCardCardDetailsV2);
-  apexExperimentDefault;
+  let isProfileFramesEnabled = CollectiblesProfileFramesExperiment.useIsProfileFramesEnabled(CollectiblesShopCardCardDetailsV2);
+  CollectiblesProfileFramesPurchaseExperimentDefault;
   if (isProfileFramesEnabled) {
-    isProfileFramesEnabled = tmp5 === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+    isProfileFramesEnabled = tmp5 === CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   return isProfileFramesEnabled;
 };
 export const isUserPaidTier2 = function isUserPaidTier2(premiumState) {
-  let isPremiumExactlyResult = isPremiumAtLeast.isPremiumExactly(premiumState, PremiumTypes.TIER_2);
+  let isPremiumExactlyResult = PremiumTypeUtils.isPremiumExactly(premiumState, PremiumTypes.TIER_2);
   if (isPremiumExactlyResult) {
     premiumState = undefined;
     if (premiumState != null) {
@@ -72,7 +72,7 @@ export const isUserPaidTier2 = function isUserPaidTier2(premiumState) {
     isPremiumExactlyResult = null != premiumState;
   }
   if (isPremiumExactlyResult) {
-    isPremiumExactlyResult = premiumState.premiumState.premiumSubscriptionType === create.PremiumSubscriptionType.TIER_2;
+    isPremiumExactlyResult = premiumState.premiumState.premiumSubscriptionType === user.PremiumSubscriptionType.TIER_2;
   }
   return isPremiumExactlyResult;
 };

@@ -1,14 +1,15 @@
 // === Module 9260: PlayStationLinkDiscordConsent ===
 
 // Module 9260 (PlayStationLinkDiscordConsent)
-import closure_2 from "noop" /* 19 */;
-import { PlayStationLinkModalScenes as closure_3 } from "PlayStationLinkModalScenes" /* 9255 */;
-import { PlatformTypes } from "ME" /* 1074 */;
-import { PLAYSTATION_CLIENT_SCOPES } from "XBOX_URL_BASE" /* 9233 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");
+const require = fn;
+let closure_3 = fn(9255).PlayStationLinkModalScenes;
+const PlatformTypes = fn(1074).PlatformTypes;
+const PLAYSTATION_CLIENT_SCOPES = fn(9233).PLAYSTATION_CLIENT_SCOPES;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");
 
 export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordConsent(platformType) {
   platformType = platformType.platformType;
@@ -18,11 +19,11 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
   navigation = obj.useNavigation();
   const items = [navigation];
   const items1 = [navigation];
-  const callback = React.useCallback(() => {
-    navigation.push(closure_1_3.SUCCESS);
+  const callback = noop.useCallback(() => {
+    navigation.push(constants.SUCCESS);
   }, items);
-  const callback1 = React.useCallback((errorCode) => {
-    navigation.push(closure_1_3.ERROR, { errorCode });
+  const callback1 = noop.useCallback((errorCode) => {
+    navigation.push(constants.ERROR, { errorCode });
   }, items1);
   if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
     let PLAYSTATION_APPLICATION_ID = tmp(9261).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;

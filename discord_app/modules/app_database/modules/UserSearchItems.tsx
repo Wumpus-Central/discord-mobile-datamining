@@ -1,18 +1,18 @@
-// === Module 7657: getAll ===
+// === Module 7657: UserSearchItems ===
 
-// Module 7657 (getAll)
-import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1986 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recountRelationshipTypes" /* 7658 */;
-import closure_5 from "recomputeAffinities" /* 7659 */;
-import closure_6 from "markAllUserIdListsStale" /* 4209 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+// Module 7657 (UserSearchItems)
+import LoggerDefault from "Logger" /* 3 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import UserSearchUtils from "UserSearchUtils" /* 7661 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
 
-let set = arg1;
-let closure_9 = new timestampDefault("UserSearchItems");
+require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+let closure_9 = new LoggerDefault("UserSearchItems");
 let c10 = false;
 class UserSearchItems {
   constructor() {
@@ -29,16 +29,15 @@ class UserSearchItems {
 }
 const prototype = UserSearchItems.prototype;
 prototype["getAll"] = function getAll() {
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -46,55 +45,49 @@ prototype["getAll"] = function getAll() {
     } else {
       try {
         c3 = 2;
-        if (0 === closure_2) {
+        if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            let length = tmp5;
+            closure_1 = tmp5;
             closure_0 = tmp2;
-            closure_0 = undefined;
-            length = undefined;
-            closure_2 = undefined;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
             const _performance2 = performance;
-            closure_0 = performance.now();
-            const userSearchItemsResult = closure_1_1(table[7]).userSearchItems();
+            closure_128_0 = performance.now();
+            const userSearchItemsResult = DatabaseDaosDefault.userSearchItems();
             if (null == userSearchItemsResult) {
               c3 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = [];
+              const obj1 = { value: [], done: true };
               return obj1;
             } else {
-              closure_2 = 1;
+              c2 = 1;
               c3 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = userSearchItemsResult.getMany();
+              const obj2 = { value: userSearchItemsResult.getMany(), done: false };
               return obj2;
             }
-            const obj7 = closure_1_1(table[7]);
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          const obj3 = { value, done: true };
           return obj3;
         } else {
-          length = arg1;
+          closure_128_1 = value;
           const _performance = performance;
-          closure_2 = performance.now();
+          closure_128_2 = performance.now();
           const _HermesInternal = HermesInternal;
-          logger.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (userSearchItems: " + length.length + ")");
+          closure_129_9.log("asynchronously loaded in " + closure_128_2 - closure_128_0 + "ms (userSearchItems: " + closure_128_1.length + ")");
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = length;
+          obj = { value: closure_128_1, done: true };
           return obj;
         }
       } catch (tmp6) {
@@ -117,30 +110,22 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   c10 = true;
 };
 prototype["handleWriteCaches"] = function handleWriteCaches(database) {
-  friendIDs = friendIDs.getFriendIDs();
+  const friendIDs = RelationshipStore.getFriendIDs();
   let obj = {};
   const iter = friendIDs[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    let tmp4 = authStore2;
-    let user = authStore2.getUser(nextResult);
+    let user = UserStore.getUser(nextResult);
     let tmp6 = user;
     if (null != user) {
-      let tmp14 = set;
-      let tmp15 = dependencyMap;
-      let obj5 = set(7661);
-      let tmp16 = user;
+      let obj5 = UserSearchUtils;
       let names = obj5.getNames(tmp6);
-      let tmp18 = nextResult;
-      obj = { id: null, type: null, user: null, names: null, nick: null, affinity: null };
-      obj[0] = tmp3;
-      let tmp19 = RelationshipTypes;
-      obj[1] = RelationshipTypes.FRIEND;
-      obj[2] = tmp6;
-      ({ names: obj6[3], nick: obj6[4] } = names);
-      let tmp20 = authStore;
-      let userAffinity = authStore.getUserAffinity(tmp3);
+      obj = { id: tmp3, type: null, user: null, names: null, nick: null, affinity: null };
+      obj.type = RelationshipTypes.FRIEND;
+      obj.user = tmp6;
+      ({ names: obj6.names, nick: obj6.nick } = names);
+      let userAffinity = UserAffinitiesV2Store.getUserAffinity(tmp3);
       let num;
       if (userAffinity != null) {
         num = userAffinity.communicationProbability;
@@ -148,34 +133,26 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       if (num == null) {
         num = 0;
       }
-      obj[5] = num;
+      obj.affinity = num;
       obj[tmp3] = obj;
     }
     continue;
   }
-  gameRelationships = gameRelationships.getGameRelationships();
+  const gameRelationships = GameRelationshipStore.getGameRelationships();
   const values = gameRelationships.values();
   const found = values.filter((type) => type.type === constants.FRIEND);
   for (const item10033 of found) {
     let tmp8 = item10033;
-    let tmp9 = authStore2;
-    let user1 = authStore2.getUser(item10033.id);
+    let user1 = UserStore.getUser(item10033.id);
     let tmp11 = user1;
     if (null != user1) {
-      let tmp22 = set;
-      let tmp23 = dependencyMap;
-      let obj7 = set(7661);
-      let tmp24 = user1;
+      let obj7 = UserSearchUtils;
       let names1 = obj7.getNames(tmp11);
-      let tmp26 = item10033;
-      obj = { id: null, type: null, user: null, names: null, nick: null, affinity: null };
-      obj[0] = tmp8.id;
-      let tmp27 = RelationshipTypes;
-      obj[1] = RelationshipTypes.FRIEND;
-      obj[2] = tmp11;
-      ({ names: obj8[3], nick: obj8[4] } = names1);
-      let tmp28 = authStore;
-      let userAffinity1 = authStore.getUserAffinity(tmp8.id);
+      obj = { id: tmp8.id, type: null, user: null, names: null, nick: null, affinity: null };
+      obj.type = RelationshipTypes.FRIEND;
+      obj.user = tmp11;
+      ({ names: obj8.names, nick: obj8.nick } = names1);
+      let userAffinity1 = UserAffinitiesV2Store.getUserAffinity(tmp8.id);
       let num2;
       if (userAffinity1 != null) {
         num2 = userAffinity1.communicationProbability;
@@ -183,22 +160,24 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       if (num2 == null) {
         num2 = 0;
       }
-      obj[5] = num2;
+      obj.affinity = num2;
       obj[tmp8.id] = obj;
     }
     continue;
   }
-  const result = itemsDefault.userSearchItemsTransaction(database);
+  const result = DatabaseDaosDefault.userSearchItemsTransaction(database);
   result.delete();
   result.putAll(Object.values(obj));
 };
-set = Object.create(UserSearchItems.prototype);
-set.actions = {
-  POST_CONNECTION_OPEN: set.handlePostConnectionOpen,
+let size = Object.create(UserSearchItems.prototype);
+let closure_129_0 = size;
+size.actions = {
+  POST_CONNECTION_OPEN: size.handlePostConnectionOpen,
   WRITE_CACHES(arg0, arg1) {
     return obj.handleWriteCaches(arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/UserSearchItems.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/app_database/modules/UserSearchItems.tsx");
 
-export default set;
+export default size;

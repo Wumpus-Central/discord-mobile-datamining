@@ -1,29 +1,27 @@
-// === Module 15541: route ===
+// === Module 15541: ChangeLogSetting ===
 
-// Module 15541 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 15541 (ChangeLogSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import ChangeLogScreen from "ChangeLogScreen" /* 15542 */;
-import createToggle from "createToggle" /* 11468 */;
+import ChangeLogModal from "ChangeLogModal" /* 15542 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.LRmNAl);
+    const intl = util.intl;
+    return intl.string(util.t.LRmNAl);
   },
   parent: null,
   IconComponent: CircleInformationIcon.CircleInformationIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.CHANGE_LOG,
-  getComponent() {
-    return ChangeLogScreen.ChangeLogScreen;
+  screen: {
+    route: Constants.UserSettingsSections.CHANGE_LOG,
+    getComponent() {
+      return ChangeLogModal.ChangeLogScreen;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChangeLogSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ChangeLogSetting.tsx");
 
 export default route;

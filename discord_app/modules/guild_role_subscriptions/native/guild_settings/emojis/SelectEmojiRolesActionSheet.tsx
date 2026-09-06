@@ -1,56 +1,51 @@
 // === Module 17781: SelectEmojiRolesActionSheet ===
 
 // Module 17781 (SelectEmojiRolesActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import PressableBase from "PressableBase" /* 5123 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Pressables from "Pressables" /* 5123 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15212 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Fonts } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15212 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import TextStyles from "TextStyles" /* 5524 */;
 
-require = arg1;
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let closure_9 = require("semanticColor").FORM_ROW_VERTICAL_PADDING + 22;
-createCacheKey = { list: null, label: null, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center" };
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
-createCacheKey[2] = { flexShrink: 1 };
+require = fn;
+const View = fn(17).View;
+const Fonts = fn(1085).Fonts;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const itemSize = fn(1182).FORM_ROW_VERTICAL_PADDING + 22;
+fn(4560);
+let createStyles = { list: null, label: null, roleName: null, archivedBadge: null, archivedBadgeText: null, divider: null, saveButton: null, saveButtonDisabled: null };
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.list = createStyles;
+createStyles.label = { flex: 1, flexDirection: "row", alignItems: "center" };
+const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
+createStyles.roleName = { flexShrink: 1 };
+createStyles.archivedBadge = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
+const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_BOLD, nativeDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
+createStyles.archivedBadgeText = {};
 let obj1 = { flexShrink: 1 };
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
-let obj2 = { borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
-const obj3 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_BOLD, ThemesDefault.unsafe_rawColors.WHITE, 12, { uppercase: true }));
-createCacheKey[4] = obj3;
-const importDefaultResult1 = importDefaultResult;
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj4 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-const obj5 = {};
-const merged2 = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
-createCacheKey[6] = obj5;
-createCacheKey[7] = { opacity: 0.3 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const importDefaultResult2 = importDefaultResult;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/emojis/SelectEmojiRolesActionSheet.tsx");
+let obj2 = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
+let obj3 = {};
+createStyles.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+const merged2 = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
+createStyles.saveButton = {};
+createStyles.saveButtonDisabled = { opacity: 0.3 };
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/emojis/SelectEmojiRolesActionSheet.tsx");
 
 export default function SelectEmojiRolesActionSheet(arg0) {
   ({ onSave: require, emoji } = arg0);
-  dependencyMap = undefined;
   let first;
-  let React;
-  let subscriptionListingsForGuild;
+  noop = undefined;
   ({ guildId, onCancel } = arg0);
-  const tmp = callback();
+  const tmp = closure_10();
   dependencyMap = tmp;
-  const tmp2 = first(React.useState(() => {
+  const tmp2 = first(noop.useState(() => {
     let roles;
     if (emoji != null) {
       roles = emoji.roles;
@@ -61,18 +56,19 @@ export default function SelectEmojiRolesActionSheet(arg0) {
     return new Set(roles);
   }), 2);
   first = tmp2[0];
-  React = tmp2[1];
-  let obj = useFetchListingsForGuild;
-  subscriptionListingsForGuild = obj.useSubscriptionListingsForGuild(guildId, { includeSoftDeleted: true, sortDeletedListingsLast: true });
+  noop = tmp2[1];
+  let obj = GuildRoleSubscriptionsHooks;
+  const subscriptionListingsForGuild = obj.useSubscriptionListingsForGuild(guildId, { includeSoftDeleted: true, sortDeletedListingsLast: true });
   obj = {
     onPress() {
-      callback(Array.from(first));
+      require(Array.from(first));
     },
-    disabled: saveButtonDisabled,
+    disabled: null,
     accessibilityRole: "button",
     children: null
   };
-  saveButtonDisabled = !tmp4;
+  let saveButtonDisabled = !tmp4;
+  obj.disabled = saveButtonDisabled;
   let items = [tmp.saveButton, ];
   if (first.size <= 0) {
     saveButtonDisabled = tmp.saveButtonDisabled;
@@ -86,16 +82,67 @@ export default function SelectEmojiRolesActionSheet(arg0) {
     let intl = tmp5(1114).intl;
     stringResult = intl.string(tmp5(1114).t["R3BPH+"]);
   }
-  obj[1] = stringResult;
-  obj[3] = closure_6(Button.LegacyText, obj);
-  let tmp7Result = tmp7(PressableBase.PressableOpacity, obj);
-  obj1 = { title: null, subtitle: null, trailing: null };
+  obj.children = stringResult;
+  obj.children = closure_6(native.LegacyText, obj);
+  let tmp7Result = tmp7(Pressables.PressableOpacity, obj);
+  let obj1 = { title: null, subtitle: null, trailing: null };
   const intl3 = tmp5(1114).intl;
-  obj1[0] = intl3.string(getSystemLocale.t.JPU0EF);
+  obj1.title = intl3.string(util.t.JPU0EF);
   const intl4 = tmp5(1114).intl;
-  obj1[1] = intl4.string(getSystemLocale.t.MZusPv);
-  obj1[2] = tmp7Result;
+  obj1.subtitle = intl4.string(util.t.MZusPv);
+  obj1.trailing = tmp7Result;
   tmp7Result = tmp7(tmp5(7149).BottomSheetTitleHeader, obj1);
+  let obj2 = { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: null };
+  const obj3 = {
+    inActionSheet: true,
+    style: tmp.list,
+    itemSize,
+    sections: null,
+    renderItem(arg0, arg1) {
+      let role_id = tmp;
+      const diff = subscriptionListingsForGuild.length - 1;
+      let obj = { style: closure_2.label, children: null };
+      obj = { style: closure_2.roleName, lineClamp: 1, variant: "text-md/medium", color: "interactive-text-active", children: tmp.name };
+      const items = [closure_1_6(require("Text/Text").Text, obj), ];
+      let archived = tmp.archived;
+      if (archived) {
+        obj = { style: tmp9.archivedBadge, children: null };
+        const obj1 = { style: tmp9.archivedBadgeText, variant: "text-xs/bold", color: "text-overlay-light", children: null };
+        const intl = tmp6(tmp7[12]).intl;
+        obj1.children = intl.string(tmp6(tmp7[12]).t.HRtfn9);
+        obj.children = tmp5(tmp6(tmp7[17]).Text, obj1);
+        archived = tmp5(tmp8, obj);
+      }
+      const obj2 = {
+        label: closure_1_7(subscriptionListingsForGuild, obj),
+        onPress() {
+          role_id = role_id.role_id;
+          return closure_4((has) => {
+            const set = new Set(has);
+            if (has.has(role_id)) {
+              set.delete(tmp);
+            } else {
+              set.add(tmp);
+            }
+            return set;
+          });
+        },
+        trailing: closure_1_6(require("Form").FormRow.Checkbox, { selected: first.has(subscriptionListingsForGuild[arg1].role_id) })
+      };
+      items[1] = archived;
+      obj.children = items;
+      const children = [closure_1_6(require("Form").FormRow, obj2), ];
+      let tmp5Result = !tmp10;
+      if (arg1 !== diff) {
+        const obj4 = { style: tmp9.divider };
+        tmp5Result = tmp5(tmp6(tmp7[16]).FormDivider, obj4);
+      }
+      children[1] = tmp5Result;
+      return closure_1_7(closure_1_8, { children });
+    }
+  };
   const items1 = [subscriptionListingsForGuild.length];
-  return closure_6(ActionSheet.ActionSheet, { scrollable: true, header: tmp7Result, startExpanded: true, onDismiss: onCancel, children: closure_6(emoji(7072), obj3) });
+  obj3.sections = items1;
+  obj2.children = closure_6(emoji(7072), obj3);
+  return closure_6(ActionSheet.ActionSheet, obj2);
 };

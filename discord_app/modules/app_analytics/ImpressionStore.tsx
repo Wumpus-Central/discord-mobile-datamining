@@ -1,41 +1,46 @@
-// === Module 1243: withEqualityFn ===
+// === Module 1243: ImpressionStore ===
 
-// Module 1243 (withEqualityFn)
-import set from "set" /* 2 */;
-import identity from "identity" /* 1244 */;
+// Module 1243 (ImpressionStore)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import identity from "module_1244" /* 1244 */;
+import size from "module_2" /* 2 */;
 
 let closure_2 = Object.freeze({ debugTrackedData: null, impressions: [] });
 const withEqualityFn = identity.createWithEqualityFn(() => closure_2);
-const result = set.fileFinishedImporting("modules/app_analytics/ImpressionStore.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/ImpressionStore.tsx");
 
 export const setCurrentImpression = function setCurrentImpression(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_3.setState((impressions) => {
-      impressions = [];
-      impressions[HermesBuiltin.arraySpread(impressions.impressions, 0)] = closure_0;
-      return { impressions };
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    withEqualityFn.setState((impressions) => {
+      const obj = { impressions: null };
+      const items = [];
+      items[HermesBuiltin.arraySpread(impressions.impressions, 0)] = closure_1_0;
+      obj.impressions = items;
+      return obj;
     });
   });
 };
 export const cleanupImpression = function cleanupImpression(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_3.setState((impressions) => {
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    withEqualityFn.setState((impressions) => {
+      const obj = { impressions: null };
       impressions = impressions.impressions;
-      return { impressions: impressions.filter((sequenceId) => sequenceId.sequenceId !== sequenceId.sequenceId) };
+      obj.impressions = impressions.filter((sequenceId) => sequenceId.sequenceId !== sequenceId.sequenceId);
+      return obj;
     });
   });
 };
 export const setDebugTrackedData = function setDebugTrackedData(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  _require(1249).batchUpdates(() => {
-    closure_1_3.setState(() => {
+  require("ReactBatchUpdates").batchUpdates(() => {
+    withEqualityFn.setState(() => {
       let obj = { debugTrackedData: null };
-      obj = { name: closure_0 };
-      const merged = Object.assign(closure_1);
-      obj[0] = obj;
+      obj = { name };
+      const merged = Object.assign(closure_1_1);
+      obj.debugTrackedData = obj;
       return obj;
     });
   });
@@ -45,7 +50,7 @@ export const getLocation = function getLocation() {
   const obj = {};
   const impressions = withEqualityFn.getState().impressions;
   const item = impressions.forEach((type) => {
-    if (type.type === obj(closure_1_1[2]).ImpressionTypes.PAGE) {
+    if (type.type === discord_common_AnalyticsUtils.ImpressionTypes.PAGE) {
       obj.page = type.name;
     } else {
       obj.section = type.name;

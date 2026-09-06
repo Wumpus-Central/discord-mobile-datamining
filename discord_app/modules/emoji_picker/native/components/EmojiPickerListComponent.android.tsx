@@ -1,28 +1,36 @@
-// === Module 10323: ? ===
+// === Module 10323: EmojiPickerListComponent ===
 
-// Module 10323
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10324 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "getEmojiToGroupId" /* 5459 */;
-import { EmojiCategoryTypes } from "EmojiCategoryTypes" /* 5463 */;
-import { IMAGE_SIZE } from "IMAGE_SIZE" /* 10290 */;
-import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1219 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+// Module 10323 (EmojiPickerListComponent)
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
+import PortalToNativeViewDefault from "PortalToNativeView" /* 7070 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10313 */;
+import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 10324 */;
+import noop from "module_19" /* 19 */;
+import EmojiStore from "EmojiStore" /* 5459 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ container: { flex: 1 } });
-const animatedComponent = importDefaultResult.createAnimatedComponent(__INTERNAL_VIEW_CONFIGDefault);
-let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(require("BottomSheetModal").SCROLLABLE_TYPE.SCROLLVIEW, animatedComponent);
-let closure_13 = isMetaQuest.isMetaQuest();
-let closure_14 = { code: "function EmojiPickerListComponentAndroidTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}" };
-let closure_15 = { code: "function EmojiPickerListComponentAndroidTsx2(index){const{inPortalKeyboard,IS_META_QUEST,runOnJS,scrollingEnabled}=this.__closure;if(!inPortalKeyboard||index<0||IS_META_QUEST){return;}if(index===0){runOnJS(scrollingEnabled)(false);}else if(index===1){runOnJS(scrollingEnabled)(true);}}" };
-const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) => {
+const EmojiPickerNativeComponentDefault = EmojiPickerNativeComponent2;
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
+const EmojiCategoryTypes = fn(5463).EmojiCategoryTypes;
+const IMAGE_SIZE = fn(10290).IMAGE_SIZE;
+const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let closure_11 = createStyles.createStyles({ container: { flex: 1 } });
+const EmojiPickerNativeComponent = ReanimatedRexport.createAnimatedComponent(EmojiPickerNativeComponentDefault);
+const BottomSheetModal = fn(6627);
+let closure_12 = BottomSheetModal.createBottomSheetScrollableComponent(fn(6627).SCROLLABLE_TYPE.SCROLLVIEW, EmojiPickerNativeComponent);
+const MetaQuestUtils = fn(1608);
+let closure_13 = MetaQuestUtils.isMetaQuest();
+const __initData = { code: "function EmojiPickerListComponentAndroidTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}" };
+const __initData2 = { code: "function EmojiPickerListComponentAndroidTsx2(index){const{inPortalKeyboard,IS_META_QUEST,runOnJS,scrollingEnabled}=this.__closure;if(!inPortalKeyboard||index<0||IS_META_QUEST){return;}if(index===0){runOnJS(scrollingEnabled)(false);}else if(index===1){runOnJS(scrollingEnabled)(true);}}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
+
+export default noop.forwardRef((analyticsLocations, ref) => {
   analyticsLocations = analyticsLocations.analyticsLocations;
   const bottomSheetIndex = analyticsLocations.bottomSheetIndex;
   const categoryIndexActive = analyticsLocations.categoryIndexActive;
@@ -34,8 +42,6 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   const onLongPressEmoji = analyticsLocations.onLongPressEmoji;
   const onShowNitroUpsell = analyticsLocations.onShowNitroUpsell;
   const useTier0UpsellContent = analyticsLocations.useTier0UpsellContent;
-  ref = undefined;
-  let callback;
   let callback1;
   ({ paddingTop, paddingBottom } = analyticsLocations);
   ref = data.useRef(null);
@@ -46,13 +52,13 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
       hasGuildData = data.hasGuildData;
     }
     if (hasGuildData) {
-      const Commands = analyticsLocations(categoryIndexActive[8]).Commands;
+      const Commands = EmojiPickerNativeComponent2.Commands;
       Commands.refreshEmojis(ref.current);
     }
   }, items);
-  callback = data.useCallback((arg0) => {
+  const scrollingEnabled = data.useCallback((arg0) => {
     if (null != ref.current) {
-      const Commands = analyticsLocations(categoryIndexActive[8]).Commands;
+      const Commands = EmojiPickerNativeComponent2.Commands;
       Commands.scrollingEnabled(tmp.current, arg0);
     }
   }, []);
@@ -64,7 +70,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   }
   H.__closure = { bottomSheetIndex };
   H.__workletHash = 10656486632396;
-  H.__initData = closure_14;
+  H.__initData = __initData;
   class D {
     constructor(arg0) {
       tmp = !inPortalKeyboard;
@@ -78,18 +84,18 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
       if (!tmp) {
         num2 = 0;
         if (0 === analyticsLocations) {
-          tmp6 = analyticsLocations;
-          tmp7 = categoryIndexActive;
-          obj2 = analyticsLocations(categoryIndexActive[7]);
+          tmp6 = closure_0;
+          tmp7 = closure_2;
+          obj2 = closure_0(closure_2[7]);
           tmp8 = closure_12;
           flag2 = false;
           tmp9 = obj2.runOnJS(closure_12)(false);
         } else {
           num3 = 1;
           if (1 === analyticsLocations) {
-            tmp2 = analyticsLocations;
-            tmp3 = categoryIndexActive;
-            obj = analyticsLocations(categoryIndexActive[7]);
+            tmp2 = closure_0;
+            tmp3 = closure_2;
+            obj = closure_0(closure_2[7]);
             tmp4 = closure_12;
             flag = true;
             tmp5 = obj.runOnJS(closure_12)(true);
@@ -99,20 +105,19 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
       return;
     }
   }
-  obj = { inPortalKeyboard, IS_META_QUEST: callback1, runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS, scrollingEnabled: callback };
+  obj = { inPortalKeyboard, IS_META_QUEST: callback1, runOnJS: analyticsLocations(categoryIndexActive[7]).runOnJS, scrollingEnabled };
   D.__closure = obj;
   D.__workletHash = 2460528828147;
-  D.__initData = closure_15;
+  D.__initData = __initData2;
   const animatedReaction = obj.useAnimatedReaction(H, D);
   const items1 = [guildId];
   callback1 = data.useCallback((emojiId) => {
     emojiId = emojiId.emojiId;
     if (null != emojiId) {
-      const disambiguatedEmojiContext = animateEmoji.getDisambiguatedEmojiContext(guildId);
+      const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(guildId);
       let byId = disambiguatedEmojiContext.getById(emojiId);
     } else {
-      byId = bottomSheetIndex(categoryIndexActive[11]).getByName(tmp);
-      const obj = bottomSheetIndex(categoryIndexActive[11]);
+      byId = UnicodeEmojisDefault.getByName(tmp);
     }
     return byId;
   }, items1);
@@ -145,7 +150,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = closure_1_0(closure_1_2[8]).Commands;
+        const Commands = analyticsLocations(categoryIndexActive[8]).Commands;
         Commands.scrollToHeaderIndex(tmp.current, animated.index, flag);
       }
     },
@@ -160,28 +165,20 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   obj = { config: data.useMemo(() => ({ animateEmoji, scrollFastOptimizationEnabled: true, scrollFastVelocity: 8000, disableAnimationsOnScroll: true }), items6), emojiData: data, emojiMargin: onPressEmoji, emojiSize: inPortalKeyboard, onPressEmoji: callback2, onLongPressEmoji: callback3, onStickyHeaderRender: callback4, onShowNitroUpsell: callback5, paddingTop, paddingBottom, useTier0UpsellContent, ref, style: ref().container };
   const items7 = [guildId, analyticsLocations, useTier0UpsellContent, data.hasSearchUpsell];
   let tmp = ref();
-  obj1 = { children: null };
+  const obj1 = { children: null };
   const items8 = [
-    onLongPressEmoji(callback, obj),
+    onLongPressEmoji(scrollingEnabled, obj),
     data.useMemo(() => {
       let tmp = null;
       if (data.hasSearchUpsell) {
-        let obj = { portalId: null, children: null };
-        obj[0] = guildId.PREMIUM_UPSELL;
-        obj = { guildId: null, analyticsLocations: null, useTier0UpsellContent: null };
-        obj[0] = guildId;
-        obj[1] = analyticsLocations;
-        obj[2] = useTier0UpsellContent;
-        obj[1] = onLongPressEmoji(analyticsLocations(categoryIndexActive[13]).PremiumSearchUpsell, obj);
-        tmp = onLongPressEmoji(bottomSheetIndex(categoryIndexActive[12]), obj);
-        const tmp5 = bottomSheetIndex(categoryIndexActive[12]);
+        let obj = { portalId: EmojiCategoryTypes.PREMIUM_UPSELL, children: null };
+        obj = { guildId, analyticsLocations, useTier0UpsellContent };
+        obj.children = React6(EmojiPickerPremiumSearchUpsell.PremiumSearchUpsell, obj);
+        tmp = React6(PortalToNativeViewDefault, obj);
       }
       return tmp;
     }, items7)
   ];
-  obj1[0] = items8;
+  obj1.children = items8;
   return useTier0UpsellContent(onShowNitroUpsell, obj1);
 });
-let result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListComponent.android.tsx");
-
-export default forwardRefResult;

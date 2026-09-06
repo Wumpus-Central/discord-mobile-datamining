@@ -1,10 +1,10 @@
-// === Module 1432: items ===
+// === Module 1432: AttachmentImageLadder ===
 
-// Module 1432 (items)
-import set from "set" /* 2 */;
+// Module 1432 (AttachmentImageLadder)
+import size from "module_2" /* 2 */;
 
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
-let result = set.fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");
+let result = size.fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");
 
 export const ATTACHMENT_LADDER = items;
 export const ATTACHMENT_LADDER_MAX_UPSCALE = 1.1;
@@ -17,15 +17,12 @@ export const getSnapDownMaxUpscale = function getSnapDownMaxUpscale(minSnapDownD
 };
 export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) {
   ({ targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale } = arg0);
-  let bound;
-  bound = Math.max(targetWidth, targetHeight);
+  const bound = Math.max(targetWidth, targetHeight);
   if (bound <= 0) {
-    let obj = { width: null, height: null };
-    obj[0] = targetWidth;
-    obj[1] = targetHeight;
-    return obj;
+    const size = { width: targetWidth, height: targetHeight };
+    return size;
   } else {
-    let found = bound.find((arg0) => bound <= arg0);
+    let found = items.find((item) => bound <= item);
     if (found == null) {
       found = arr[arr.length - 1];
     }
@@ -41,19 +38,15 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
         tmp5 = found;
         if (!tmp4) {
           for (const item10027 of arr) {
-            let tmp8 = item10027;
             if (item10027 <= bound) {
               let tmp = item10027;
               continue;
             } else {
-              let tmp9 = obj;
               obj.return();
               break;
             }
-            let tmp10 = tmp;
             let tmp11 = null != tmp;
             if (tmp11) {
-              let tmp12 = tmp;
               tmp11 = bound <= tmp * maxUpscale;
             }
             tmp5 = found;
@@ -68,10 +61,8 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
       if (null != sourceHeight) {
         const _Math2 = Math;
         if (Math.max(sourceWidth, sourceHeight) <= tmp5) {
-          obj = { width: null, height: null };
-          obj[0] = sourceWidth;
-          obj[1] = sourceHeight;
-          return obj;
+          const size1 = { width: sourceWidth, height: sourceHeight };
+          return size1;
         }
       }
     }
@@ -87,14 +78,13 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
       const _Math7 = Math;
       bound3 = Math.min(bound1, sourceWidth);
     }
-    obj1 = { width: null, height: null };
-    obj1[0] = bound3;
+    const size2 = { width: bound3, height: null };
     let bound4 = bound2;
     if (null != sourceHeight) {
       const _Math8 = Math;
       bound4 = Math.min(bound2, sourceHeight);
     }
-    obj1[1] = bound4;
-    return obj1;
+    size2.height = bound4;
+    return size2;
   }
 };

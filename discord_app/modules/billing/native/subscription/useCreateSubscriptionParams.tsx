@@ -1,11 +1,13 @@
 // === Module 10806: useCreateSubscriptionParams ===
 
 // Module 10806 (useCreateSubscriptionParams)
+import v1 from "v1" /* 1256 */;
 import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10807 */;
-import closure_3 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useCreateSubscriptionParams.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/billing/native/subscription/useCreateSubscriptionParams.tsx");
 
 export default function useCreateSubscriptionParams(arg0, arg1) {
   closure_0 = arg0;
@@ -13,22 +15,19 @@ export default function useCreateSubscriptionParams(arg0, arg1) {
   const tmp = useToggleOnIAPSuccessDefault();
   dependencyMap = tmp;
   let items = [arg0, arg1, tmp];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp2 = null;
-    if (null != callback) {
+    if (null != closure_0) {
       tmp2 = null;
       if (null != closure_1) {
         tmp2 = null;
-        if (null != table) {
-          let obj = { requestIdentifier: null, items: null, countryCode: null, currency: null };
-          obj[0] = callback(table[2]).v4();
-          obj = { planId: null, quantity: 1 };
-          obj[0] = tmp.id;
+        if (null != closure_2) {
+          let obj = { requestIdentifier: v1.v4(), items: null, countryCode: null, currency: null };
+          obj = { planId: tmp.id, quantity: 1 };
           const items = [obj];
-          obj[1] = items;
-          ({ country: obj[2], currency: obj[3] } = tmp3);
+          obj.items = items;
+          ({ country: obj.countryCode, currency: obj.currency } = tmp3);
           tmp2 = obj;
-          const obj2 = callback(table[2]);
         }
       }
       tmp3 = closure_1;

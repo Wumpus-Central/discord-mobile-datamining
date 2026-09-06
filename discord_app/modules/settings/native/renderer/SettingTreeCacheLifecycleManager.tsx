@@ -1,9 +1,8 @@
-// === Module 17484: prototype ===
+// === Module 17484: SettingTreeCacheLifecycleManager ===
 
-// Module 17484 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17484 (SettingTreeCacheLifecycleManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-initializeDefault;
 let prototype = function SettingTreeManagerLifecycleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   importDefault = applyArgumentsResult;
@@ -13,13 +12,14 @@ let prototype = function SettingTreeManagerLifecycleManager() {
     }
   };
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-    applyArgumentsResult(table[1]).clearCaches();
+    applyArgumentsResult(dependencyMap[1]).clearCaches();
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx");
 
 export default prototype;

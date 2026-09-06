@@ -1,60 +1,60 @@
-// === Module 11786: QuestCollectibleRewardModalMessages ===
+// === Module 11786: openQuestCollectibleRewardModal ===
 
-// Module 11786 (QuestCollectibleRewardModalMessages)
+// Module 11786 (openQuestCollectibleRewardModal)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import getQuestLogger from "getQuestLogger" /* 7709 */;
-import MODAL_KEYDefault from "MODAL_KEY" /* 11077 */;
-import _getDefaultRewardName from "_getDefaultRewardName" /* 11290 */;
-import useQuests from "useQuests" /* 11483 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 5444 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ProductPurchaseSuccessActionCreatorsDefault from "ProductPurchaseSuccessActionCreators" /* 11077 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11290 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11483 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function QuestCollectibleRewardModalMessages(quest) {
   quest = quest.quest;
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = initialize;
-  const items = [closure_3];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = _getDefaultRewardName;
+  let obj1 = QuestRewardUtils;
   const defaultRewardNameWithArticle = obj1.getDefaultRewardNameWithArticle(quest.config, stateFromStores);
   obj = { children: null };
-  const claimedCollectibleRewardMessage = useQuests.useClaimedCollectibleRewardMessage(quest.config);
+  const claimedCollectibleRewardMessage = hooks_QuestHooks.useClaimedCollectibleRewardMessage(quest.config);
   obj = { variant: "heading-xl/bold", style: tmp.title, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.format(getSystemLocale.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
-  const items1 = [callback(Text.Text, obj), ];
+  const intl = util.intl;
+  obj.children = intl.format(util.t.YNaxMp, { itemName: defaultRewardNameWithArticle });
+  const items1 = [hasOwnProperty(Text_Text.Text, obj), ];
   obj1 = { variant: "text-md/medium", style: tmp.title, children: claimedCollectibleRewardMessage };
-  items1[1] = callback(Text.Text, obj1);
-  obj[0] = items1;
-  return callback2(closure_6, obj);
+  items1[1] = hasOwnProperty(Text_Text.Text, obj1);
+  obj.children = items1;
+  return React5(timestampProducer, obj);
 }
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { title: null };
-createCacheKey = { textAlign: "center", marginHorizontal: ThemesDefault.space.PX_32 };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/quests/native/openQuestCollectibleRewardModal.tsx");
+const QuestsExperimentLocations = fn(5444).QuestsExperimentLocations;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { title: null };
+createStyles = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_32 };
+createStyles.title = createStyles;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/openQuestCollectibleRewardModal.tsx");
 
 export const openQuestCollectibleRewardModal = function openQuestCollectibleRewardModal(onSuccess) {
   ({ quest: require, product } = onSuccess);
-  let obj = getQuestLogger;
-  obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
+  let obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
   const questLogger = obj.getQuestLogger(obj);
   if (null != product) {
-    obj = { product: null, renderMessages: null, onSuccess: null };
-    obj[0] = product;
-    obj[1] = function renderMessages() {
-      return closure_1_5(closure_1_9, { quest: closure_0 });
+    obj = {
+      product,
+      renderMessages() {
+          return hasOwnProperty(QuestCollectibleRewardModalMessages, { quest });
+        },
+      onSuccess: onSuccess.onSuccess
     };
-    obj[2] = onSuccess.onSuccess;
-    MODAL_KEYDefault.open(obj);
-    const obj4 = MODAL_KEYDefault;
+    ProductPurchaseSuccessActionCreatorsDefault.open(obj);
   } else {
     questLogger.warn("Product is null");
   }

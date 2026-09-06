@@ -1,13 +1,13 @@
-// === Module 7890: regExp ===
+// === Module 7890: ExperimentEmbedUtils ===
 
-// Module 7890 (regExp)
-import set from "set" /* 2 */;
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4481 */;
-import getFirstEligibleUserExperimentDefault from "getFirstEligibleUserExperiment" /* 7891 */;
-import getExperimentVariantsForDevTools from "getExperimentVariantsForDevTools" /* 7892 */;
+// Module 7890 (ExperimentEmbedUtils)
+import ExperimentManager from "ExperimentManager" /* 4481 */;
+import ExperimentUtilsDefault from "ExperimentUtils" /* 7891 */;
+import ExperimentDevToolsUtils from "ExperimentDevToolsUtils" /* 7892 */;
+import size from "module_2" /* 2 */;
 
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-const result = set.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
+const result = size.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
 export const isExperimentEmbedURL = function isExperimentEmbedURL(target) {
@@ -36,7 +36,7 @@ export const getExperimentTreatmentFromEmbedURL = function getExperimentTreatmen
   }
   return parsed;
 };
-export const getURLForExperiment = function getURLForExperiment(id) {
+export const getURLForExperiment = function getURLForExperiment(id, arg1) {
   if (null != arg1) {
     const _HermesInternal2 = HermesInternal;
     let combined = "dev://experiment/" + id + "/" + arg1;
@@ -50,8 +50,8 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
   if (null != experimentServerAssignment) {
     if (null != system) {
       const system2 = system.system;
-      if (trackExposureToExperiment.ExperimentSystem.LEGACY === system2) {
-        return getFirstEligibleUserExperimentDefault.getExperimentBucketName(experimentServerAssignment.bucket);
+      if (ExperimentManager.ExperimentSystem.LEGACY === system2) {
+        return ExperimentUtilsDefault.getExperimentBucketName(experimentServerAssignment.bucket);
       } else if (tmp4(4481).ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
         return "Variant " + experimentServerAssignment.variantId;
@@ -65,6 +65,6 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
   return null;
 };
 export const getExperimentBuckets = function getExperimentBuckets(experiment) {
-  const experimentVariantsForDevTools = getExperimentVariantsForDevTools.getExperimentVariantsForDevTools(experiment);
+  const experimentVariantsForDevTools = ExperimentDevToolsUtils.getExperimentVariantsForDevTools(experiment);
   return experimentVariantsForDevTools.map((id) => ({ id: id.id, label: id.label, value: id.id }));
 };

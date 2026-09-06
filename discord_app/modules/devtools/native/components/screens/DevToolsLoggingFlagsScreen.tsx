@@ -1,67 +1,64 @@
 // === Module 15585: DevToolsLoggingFlagsScreen ===
 
 // Module 15585 (DevToolsLoggingFlagsScreen)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import nativeDefault from "native" /* 576 */;
+import DeveloperOptionsActionCreators from "DeveloperOptionsActionCreators" /* 1348 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import closure_3 from "refreshSourceMapCookie" /* 1347 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
-const ScrollView = get_ActivityIndicator.ScrollView;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const ScrollView = _mod17.ScrollView;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { container: null, content: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[0] = obj;
-obj[1] = { padding: ThemesDefault.space.PX_16 };
-let closure_6 = createCacheKey.createStyles(obj);
-const obj1 = { padding: ThemesDefault.space.PX_16 };
-const result = set.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.container = obj;
+obj.content = { padding: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
 
 export default function DevToolsLoggingFlagsScreen() {
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = initialize;
-  const items = [closure_3];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: closure_3.isLoggingGatewayEvents, isLoggingAnalyticsEvents: closure_3.isLoggingAnalyticsEvents, isTracingRequests: closure_3.isTracingRequests }));
+  const items = [DeveloperOptionsStore];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: DeveloperOptionsStore.isLoggingGatewayEvents, isLoggingAnalyticsEvents: DeveloperOptionsStore.isLoggingAnalyticsEvents, isTracingRequests: DeveloperOptionsStore.isTracingRequests }));
   obj = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
   ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
   obj = { title: "Logging", hasIcons: false, children: null };
   const items1 = [
-    callback(TableSwitchRow.TableSwitchRow, {
+    React4(TableSwitchRow.TableSwitchRow, {
       label: "Gateway Events",
       subLabel: "Logs all gateway events to console, including content. Enable verbose logs to see them.",
       value: isLoggingGatewayEvents,
       onValueChange(logGatewayEvents) {
-        let obj = callback(1348);
-        obj = { logGatewayEvents };
+        const obj = { logGatewayEvents };
         return obj.setDeveloperOptionSettings(obj);
       }
     }),
-    callback(TableSwitchRow.TableSwitchRow, {
+    React4(TableSwitchRow.TableSwitchRow, {
       label: "Analytics Events",
       subLabel: "Logs all analytics events to the developer console.",
       value: isLoggingAnalyticsEvents,
       onValueChange(logAnalyticsEvents) {
-        let obj = callback(1348);
-        obj = { logAnalyticsEvents };
+        const obj = { logAnalyticsEvents };
         return obj.setDeveloperOptionSettings(obj);
       }
     }),
-    callback(TableSwitchRow.TableSwitchRow, {
+    React4(TableSwitchRow.TableSwitchRow, {
       label: "Tracing Requests",
       subLabel: "Force trace all client requests with APM.",
       value: isTracingRequests,
       onValueChange(trace) {
-        let obj = callback(1348);
-        obj = { trace };
+        const obj = { trace };
         return obj.setDeveloperOptionSettings(obj);
       }
     })
   ];
-  obj[2] = items1;
-  obj[2] = callback2(TableRowGroupTitle.TableRowGroup, obj);
-  return callback(ScrollView, obj);
+  obj.children = items1;
+  obj.children = hasOwnProperty(TableRowGroup.TableRowGroup, obj);
+  return React4(ScrollView, obj);
 };

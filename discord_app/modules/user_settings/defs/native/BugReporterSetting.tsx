@@ -1,36 +1,36 @@
-// === Module 15737: useBugReporterExperimentSettingPredicate ===
+// === Module 15737: BugReporterSetting ===
 
-// Module 15737 (useBugReporterExperimentSettingPredicate)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 15737 (BugReporterSetting)
+import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import apexExperimentDefault from "apexExperiment" /* 10215 */;
-import closure_3 from "zustandStore" /* 10184 */;
-import createToggle from "createToggle" /* 11468 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import BugReporterExperimentDefault from "BugReporterExperiment" /* 10215 */;
+import BugReportStore from "BugReportStore" /* 10184 */;
 
-require = arg1;
+require = fn;
 function useBugReporterExperimentSettingPredicate() {
-  return apexExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return BugReporterExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/tZh0A"]);
+    const intl = util.intl;
+    return intl.string(util.t["/tZh0A"]);
   },
   parent: null,
-  IconComponent: require("BugIcon").BugIcon,
+  IconComponent: fn(15738).BugIcon,
   onPress: function handleBugReporterSettingPress() {
-    if (!field.getField("isReportOpen")) {
-      field.setState({ isReportOpen: true });
-      _modDef4763.pushLazy(asyncRequireImpl(10185, dependencyMap.paths));
-      const obj2 = _modDef4763;
+    if (!BugReportStore.getField("isReportOpen")) {
+      BugReportStore.setState({ isReportOpen: true });
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10185, dependencyMap.paths));
     }
   },
   withArrow: true,
   usePredicate: useBugReporterExperimentSettingPredicate
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useBugReporterExperimentSettingPredicate };

@@ -1,20 +1,23 @@
 // === Module 12561: useGuildPowerupsWarningConfig ===
 
 // Module 12561 (useGuildPowerupsWarningConfig)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleModifyingAppliedBoostStart" /* 12562 */;
+import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import noop from "module_19" /* 19 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12562 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
 
 export default function useGuildPowerupsWarningConfig(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   importDefault = arg1;
-  const items = [closure_4];
+  const items = [AppliedGuildBoostStore];
   const items1 = [arg0];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => closure_1_4.getAppliedGuildBoostsForGuild(closure_0), items1);
+  stateFromStores = require("initialize").useStateFromStores(items, () => AppliedGuildBoostStore.getAppliedGuildBoostsForGuild(closure_0), items1);
   const items2 = [stateFromStores];
-  const diff = importDefault(stateFromStores[2])(arg0).spent - React.useMemo(() => {
+  const diff = require("useGuildPowerupsBoostCount")(arg0).spent - noop.useMemo(() => {
     let num;
     if (stateFromStores != null) {
       const filter = stateFromStores.filter;
@@ -37,21 +40,19 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
     }
     return num;
   }, items2);
-  React = diff;
+  noop = diff;
   const items3 = [diff, arg1];
-  return React.useMemo(() => {
-    if (closure_3 <= 0) {
+  return noop.useMemo(() => {
+    if (diff <= 0) {
       let obj = { shouldShow: false, title: "", description: "", requiredBoostCount: 0 };
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
-      const intl = callback(stateFromStores[4]).intl;
-      obj[1] = intl.string(lib(stateFromStores[5]).n5hQhc);
-      const intl2 = callback(stateFromStores[4]).intl;
-      obj = { boostCount: null, perksString: null };
-      obj[0] = tmp;
-      obj[1] = lib.join(", ");
-      obj[2] = intl2.formatToPlainString(lib(stateFromStores[5]).iAaAiG, obj);
-      obj[3] = tmp;
+      const intl = util.intl;
+      obj.title = intl.string(_modDef2428.n5hQhc);
+      const intl2 = util.intl;
+      obj = { boostCount: tmp, perksString: closure_1.join(", ") };
+      obj.description = intl2.formatToPlainString(_modDef2428.iAaAiG, obj);
+      obj.requiredBoostCount = tmp;
     }
     return obj;
   }, items3);

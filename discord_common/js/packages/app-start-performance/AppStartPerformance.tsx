@@ -1,24 +1,24 @@
-// === Module 10: isTracing ===
+// === Module 10: AppStartPerformance ===
 
-// Module 10 (isTracing)
-import closure_0 from "asyncGeneratorStep" /* 5 */;
+// Module 10 (AppStartPerformance)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let fn = globalThis.__getTotalRequireTime;
+fn = globalThis.__getTotalRequireTime;
 if (fn == null) {
   fn = () => 0;
 }
 let closure_2 = typeof performance !== "undefined";
 class AppStartPerformance {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[1] = Date.now() + 15000;
+    merged = Object.assign({ isTracing_: true, endTime_: null, lastImportDuration: 0, logGroups: null });
+    merged[1] = Date.now() + 15000;
     obj = { index: 0, timestamp: Date.now(), logs: [], nativeLogs: [] };
     items = [];
     items[0] = obj;
-    obj[3] = items;
-    obj.logs = obj.logGroups[0].logs;
-    obj.prefix = "";
-    return obj;
+    merged[3] = items;
+    merged.logs = merged.logGroups[0].logs;
+    merged.prefix = "";
+    return merged;
   }
 }
 const prototype = AppStartPerformance.prototype;
@@ -60,45 +60,39 @@ prototype["resumeTracing"] = function resumeTracing() {
   const self = this;
   if (!this.isTracing) {
     const logGroups = self.logGroups;
-    const obj = { index: null, timestamp: null, logs: null, nativeLogs: null };
-    obj[0] = self.logGroups.length;
+    const obj = { index: self.logGroups.length, timestamp: null, logs: null, nativeLogs: null };
     const _Date = Date;
-    obj[1] = Date.now();
-    obj[2] = [];
-    obj[3] = [];
+    obj.timestamp = Date.now();
+    obj.logs = [];
+    obj.nativeLogs = [];
     logGroups.unshift(obj);
     self.logs = self.logGroups[0].logs;
   }
   self.endTime = Date.now() + 10000;
 };
-prototype["mark"] = function mark(arg0, arg1, arg2) {
+prototype["mark"] = function mark(emoji, log, delta) {
   const self = this;
   if (this.isTracing) {
     const logs = self.logs;
-    const obj = { emoji: null, prefix: null, log: null, delta: null, timestamp: null };
-    obj[0] = arg0;
+    const obj = { emoji, prefix: null, log: null, delta: null, timestamp: null };
     const _HermesInternal = HermesInternal;
-    obj[1] = "" + self.prefix;
-    obj[2] = arg1;
-    obj[3] = arg2;
+    obj.prefix = "" + self.prefix;
+    obj.log = log;
+    obj.delta = delta;
     const _Date = Date;
-    obj[4] = Date.now();
+    obj.timestamp = Date.now();
     logs.push(obj);
     self.addImportLogDetail();
   }
 };
-prototype["markAndLog"] = function markAndLog(closure_20, arg1, arg2) {
+prototype["markAndLog"] = function markAndLog(log, emoji, log2, delta) {
   const self = this;
-  closure_20.log(arg2);
+  log.log(log2);
   if (this.isTracing) {
     const logs = self.logs;
-    const obj = { emoji: null, prefix: null, log: null, delta: null, timestamp: null };
-    obj[0] = arg1;
-    obj[1] = self.prefix;
-    obj[2] = arg2;
-    obj[3] = arg3;
+    const obj = { emoji, prefix: self.prefix, log: log2, delta, timestamp: null };
     const _Date = Date;
-    obj[4] = Date.now();
+    obj.timestamp = Date.now();
     logs.push(obj);
     self.addImportLogDetail();
   }
@@ -122,15 +116,14 @@ prototype["markWithDelta"] = function markWithDelta(arg0, arg1) {
   }
   this.mark(arg0, arg1, diff);
 };
-prototype["markAt"] = function markAt(arg0, app_opened, JSBundleLoadedTimestamp) {
+prototype["markAt"] = function markAt(emoji, app_opened, timestamp) {
   const self = this;
   if (this.isTracing) {
     let num3 = 0;
     let num4 = 0;
     if (0 < self.logs.length) {
       while (true) {
-        let timestamp = self.logs[num3].timestamp;
-        let tmp3 = num3;
+        timestamp = self.logs[num3].timestamp;
         if (null == timestamp) {
           num3 = num3 + 1;
           num4 = num3;
@@ -139,7 +132,7 @@ prototype["markAt"] = function markAt(arg0, app_opened, JSBundleLoadedTimestamp)
           }
         } else {
           num4 = num3;
-          if (timestamp > JSBundleLoadedTimestamp) {
+          if (timestamp > timestamp) {
             break;
           }
         }
@@ -147,10 +140,7 @@ prototype["markAt"] = function markAt(arg0, app_opened, JSBundleLoadedTimestamp)
       }
     }
     const logs = self.logs;
-    const obj = { emoji: null, log: null, timestamp: null, prefix: null };
-    obj[0] = arg0;
-    obj[1] = app_opened;
-    obj[2] = JSBundleLoadedTimestamp;
+    const obj = { emoji, log: app_opened, timestamp, prefix: null };
     let str;
     if (self.logs[num4] != null) {
       str = tmp6.prefix;
@@ -158,23 +148,21 @@ prototype["markAt"] = function markAt(arg0, app_opened, JSBundleLoadedTimestamp)
     if (str == null) {
       str = "";
     }
-    obj[3] = str;
+    obj.prefix = str;
     logs.splice(num4, 0, obj);
   }
 };
-prototype["addDetail"] = function addDetail(TTI, closure_5) {
+prototype["addDetail"] = function addDetail(TTI, length) {
   const self = this;
   if (this.isTracing) {
     const logs = self.logs;
-    const obj = { emoji: null, prefix: null, log: null };
-    obj[0] = self.logs[self.logs.length - 1].emoji;
-    obj[1] = self.prefix;
+    const obj = { emoji: self.logs[self.logs.length - 1].emoji, prefix: self.prefix, log: null };
     const _HermesInternal = HermesInternal;
-    obj[2] = "  \u21AA " + TTI + " " + closure_5;
+    obj.log = "  \u21AA " + TTI + " " + length;
     logs.push(obj);
   }
 };
-prototype["time"] = function time(arg0, arg1, arg2) {
+prototype["time"] = function time(arg0, arg1, fn) {
   const self = this;
   if (this.isTracing) {
     const _HermesInternal = HermesInternal;
@@ -188,43 +176,44 @@ prototype["time"] = function time(arg0, arg1, arg2) {
     const _HermesInternal2 = HermesInternal;
     const diff = Date.now() - timestamp;
     self.mark(arg0, "Finish " + arg1, diff);
-    return arg2();
+    return fn();
   } else {
-    return arg2();
+    return fn();
   }
 };
-prototype["timeAsync"] = function timeAsync(emoji, name, closure_1_0) {
-  const callback = emoji;
+prototype["timeAsync"] = function timeAsync(emoji, name, callback) {
+  closure_0 = emoji;
   closure_1 = name;
-  closure_2 = closure_1_0;
+  closure_2 = callback;
   const self = this;
-  return callback(function*() {
+  return (async () => {
     closure_1 = tmp5;
     closure_0 = tmp2;
-    if (!c3.isTracing) {
-      return v0();
+    if (!self.isTracing) {
+      return v1();
     }
     const _HermesInternal2 = HermesInternal;
-    c3.mark(closure_1_0, "Start " + closure_1_1);
+    self.mark(closure_0, "Start " + closure_1);
     const _Date2 = Date;
-    closure_0 = Date.now();
-    closure_1 = yield v0();
+    closure_128_0 = Date.now();
+    closure_128_1 = await v1();
     const _Date = Date;
+    closure_128_2 = Date.now() - closure_128_0;
     const _HermesInternal = HermesInternal;
-    c3.mark(closure_0, "Finish " + closure_1, closure_2);
-    return closure_1;
+    closure_129_3.mark(closure_129_0, "Finish " + closure_129_1, closure_128_2);
+    return closure_128_1;
   })();
 };
 prototype["setServerTrace"] = function setServerTrace(connectionPath) {
   this.logGroups[0].serverTrace = connectionPath;
 };
-let obj = Object.create(AppStartPerformance.prototype);
-obj[1] = Date.now() + 15000;
-obj = { index: 0, timestamp: Date.now(), logs: [], nativeLogs: [] };
-let items = [obj];
-obj[3] = items;
-obj.logs = obj.logGroups[0].logs;
-obj.prefix = "";
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
+let merged = Object.assign({ isTracing_: true, endTime_: null, lastImportDuration: 0, logGroups: null });
+merged[1] = Date.now() + 15000;
+let items = [{ index: 0, timestamp: Date.now(), logs: [], nativeLogs: [] }];
+merged[3] = items;
+merged.logs = merged.logGroups[0].logs;
+merged.prefix = "";
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx");
 
-export default obj;
+export default merged;

@@ -1,10 +1,10 @@
-// === Module 14691: zustandStore ===
+// === Module 14691: UserSettingSearchStore ===
 
-// Module 14691 (zustandStore)
-import set from "set" /* 2 */;
-import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4429 */;
+// Module 14691 (UserSettingSearchStore)
+import ZustandStore from "ZustandStore" /* 4429 */;
+import size from "module_2" /* 2 */;
 
-const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ query: "", isActive: false, isFocused: false, selected: null }));
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingSearchStore.tsx");
+const zustandStore = ZustandStore.createZustandStore(() => ({ query: "", isActive: false, isFocused: false, selected: null }));
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingSearchStore.tsx");
 
 export default zustandStore;

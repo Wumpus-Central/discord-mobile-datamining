@@ -1,626 +1,489 @@
-// === Module 7844: _createScheduledMessage ===
+// === Module 7844: ScheduledMessageActionCreators ===
 
-// Module 7844 (_createScheduledMessage)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 1074 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
+// Module 7844 (ScheduledMessageActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _createScheduledMessage() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function*(arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === constants) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp3;
-              let body = tmp7;
-              let callback;
-              message = undefined;
-              closure_2 = undefined;
-              ({ channelId: c0, scheduledTimestamp: message, messageSendData: closure_2 } = callback);
-              body = undefined;
-              closure_4 = undefined;
-              constants = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj2 = { type: "SCHEDULED_MESSAGES_CREATE_START", channelId: null };
-              obj2[1] = callback;
-              message(closure_2[4]).dispatch(obj2);
-              c6 = 1;
-              const HTTP = callback(closure_2[5]).HTTP;
-              const obj3 = { url: null, body: null, rejectWithError: true };
-              obj3[0] = closure_5.SCHEDULED_MESSAGES;
-              const obj4 = { channel_id: null, content: null, scheduled_timestamp: null, flags: null, message_reference: null, allowed_mentions: null, sticker_ids: null, poll: null, attachments: null };
-              obj4[0] = callback;
-              obj4[1] = closure_2.content;
-              obj4[2] = message;
-              obj4[3] = closure_2.flags;
-              obj4[4] = closure_2.message_reference;
-              obj4[5] = closure_2.allowed_mentions;
-              obj4[6] = closure_2.sticker_ids;
-              obj4[7] = closure_2.poll;
-              const attachments = closure_2.attachments;
-              closure_2 = attachments;
-              if (attachments == null) {
-                closure_2 = [];
-              }
-              obj4[8] = closure_2;
-              obj3[1] = obj4;
-              constants = 3;
-              c8 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.post(obj3);
-              return obj5;
-            }
-          } else if (2 === tmp7) {
-            c6 = 0;
-            const scheduledMessageLogger = callback(closure_2[6]).scheduledMessageLogger;
-            scheduledMessageLogger.error("Failed to create scheduled message", closure_5);
-            body = closure_5.body;
-            message = undefined;
-            if (body != null) {
-              message = body.message;
-            }
-            if (message == null) {
-              message = closure_5.message;
-            }
-            closure_4 = message;
-            obj2 = message(closure_2[4]);
-            const obj6 = { type: "SCHEDULED_MESSAGES_CREATE_FAILURE", channelId: null, errorMsg: null };
-            obj6[1] = callback;
-            obj6[2] = closure_4;
-            obj2.dispatch(obj6);
-            throw closure_5;
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          } else {
-            body = arg1;
-            let obj8 = message(closure_2[4]);
-            obj8 = { type: "SCHEDULED_MESSAGES_CREATE_SUCCESS", channelId: null, scheduledMessageSend: null };
-            obj8[1] = callback;
-            obj8[2] = callback(closure_2[6]).convertServerScheduledMessageSend(body.body);
-            obj8.dispatch(obj8);
-            const obj11 = callback(closure_2[6]);
-            const obj9 = { dismissAction: null };
-            obj9[0] = constants.INDIRECT_ACTION;
-            const result = callback(closure_2[7]).UNSAFE_markDismissibleContentAsDismissed(callback(closure_2[8]).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK, obj9);
-            c6 = 0;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body;
-            return obj;
-          }
-        } catch (tmp31) {
-          closure_5 = tmp31;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp31;
-          } else {
-            constants = tmp;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _updateScheduledMessage() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function*(arg0) {
-      if (body === 2) {
-        body = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          body = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              body = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              body = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c4 = tmp3;
-              let callback2 = tmp7;
-              let callback;
-              message = undefined;
-              dependencyMap = undefined;
-              callback2 = undefined;
-              ({ scheduledMessageId: c0, scheduledTimestamp: message, content: c2, flags: c3 } = callback);
-              c4 = undefined;
-              closure_5 = undefined;
-              let constants;
-              c7 = undefined;
-              body = undefined;
-              closure_9 = undefined;
-              c7 = 1;
-              body = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              body = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              body = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj2 = { type: "SCHEDULED_MESSAGES_UPDATE_START", scheduledMessageId: null };
-              obj2[1] = callback;
-              message(573).dispatch(obj2);
-              constants = 1;
-              if (null == dependencyMap) {
-                const items = [dependencyMap, callback2];
-                let result = items;
-              } else {
-                const obj3 = { content: null, flags: null };
-                obj3[0] = dependencyMap;
-                const obj14 = callback(7845);
-                dependencyMap = callback2;
-                if (callback2 == null) {
-                  dependencyMap = 0;
-                }
-                obj3[1] = callback(1384).removeFlag(dependencyMap, constants.SUPPRESS_NOTIFICATIONS);
-                result = obj14.parseContentAndFlagsForSilentMessage(obj3);
-                const obj16 = callback(1384);
-              }
-              c4 = result;
-              closure_5 = callback2(c4, 2);
-              constants = closure_5[0];
-              c7 = closure_5[1];
-              const HTTP = callback(1272).HTTP;
-              let obj4 = { url: null, body: null, rejectWithError: true };
-              obj4[0] = closure_5.SCHEDULED_MESSAGE(callback);
-              const obj5 = { scheduled_timestamp: null, content: null, flags: null };
-              obj5[0] = message;
-              obj5[1] = constants;
-              obj5[2] = c7;
-              obj4[1] = obj5;
-              HTTP.patch(obj4);
-              c7 = 3;
-              body = 1;
-              const obj12 = message(573);
-            }
-          } else if (2 === tmp7) {
-            constants = 0;
-            closure_10 = closure_5;
-            const scheduledMessageLogger = callback(7845).scheduledMessageLogger;
-            scheduledMessageLogger.error("Failed to update scheduled message", closure_10);
-            body = closure_10.body;
-            message = undefined;
-            if (body != null) {
-              message = body.message;
-            }
-            if (message == null) {
-              message = closure_10.message;
-            }
-            closure_9 = message;
-            obj4 = message(573);
-            const obj6 = { type: "SCHEDULED_MESSAGES_UPDATE_FAILURE", scheduledMessageId: null, errorMsg: null };
-            obj6[1] = callback;
-            obj6[2] = closure_9;
-            obj4.dispatch(obj6);
-            const _Error = Error;
-            error = new Error(closure_9);
-            throw error;
-          } else if (arg0 === 1) {
-            body = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            constants = 0;
-            body = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          } else {
-            body = arg1;
-            obj = message(573);
-            const obj8 = { type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS", scheduledMessageSend: null };
-            obj2 = callback(7845);
-            obj8[1] = obj2.convertServerScheduledMessageSend(body.body);
-            obj.dispatch(obj8);
-            constants = 0;
-            body = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp63) {
-          closure_5 = tmp63;
-          if (tmp4 === constants) {
-            body = tmp2;
-            throw tmp63;
-          } else {
-            c7 = tmp;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _deleteScheduledMessage() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              closure_2 = tmp7;
-              let callback2;
-              obj1 = { type: "SCHEDULED_MESSAGES_DELETE_START", scheduledMessageId: null };
-              obj1[1] = callback;
-              closure_1_1(closure_1_2[4]).dispatch(obj1);
-              c5 = 1;
-              const HTTP = callback(closure_1_2[5]).HTTP;
-              const obj2 = { url: null, rejectWithError: true };
-              obj2[0] = c5.SCHEDULED_MESSAGE(callback);
-              c6 = 2;
-              c7 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.del(obj2);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            closure_2 = closure_4;
-            const scheduledMessageLogger = callback(closure_2[6]).scheduledMessageLogger;
-            scheduledMessageLogger.error("Failed to cancel scheduled message", closure_2);
-            const body = closure_2.body;
-            let message;
-            if (body != null) {
-              message = body.message;
-            }
-            callback2 = message;
-            if (message == null) {
-              callback2 = closure_2.message;
-            }
-            obj3 = callback2(closure_2[4]);
-            const obj4 = { type: "SCHEDULED_MESSAGES_DELETE_FAILURE", scheduledMessageId: null, errorMsg: null };
-            obj4[1] = callback;
-            obj4[2] = callback2;
-            obj3.dispatch(obj4);
-            const _Error = Error;
-            error = new Error(callback2);
-            throw error;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            obj = callback2(closure_2[4]);
-            const obj6 = { type: "SCHEDULED_MESSAGES_DELETE_SUCCESS", scheduledMessageId: null };
-            obj6[1] = callback;
-            obj.dispatch(obj6);
-            c5 = 0;
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp39) {
-          closure_4 = tmp39;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp39;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _sendScheduledMessageNow() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function*(arg0) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              closure_2 = tmp7;
-              let callback2;
-              obj1 = { type: "SCHEDULED_MESSAGES_SEND_NOW_START", scheduledMessageId: null };
-              obj1[1] = callback;
-              closure_1_1(closure_1_2[4]).dispatch(obj1);
-              c5 = 1;
-              const HTTP = callback(closure_1_2[5]).HTTP;
-              const obj2 = { url: null, rejectWithError: true };
-              obj2[0] = c5.SCHEDULED_MESSAGE_SEND(callback);
-              c6 = 2;
-              c7 = 1;
-              let obj3 = { value: null, done: false };
-              obj3[0] = HTTP.post(obj2);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            closure_2 = closure_4;
-            const scheduledMessageLogger = callback(closure_2[6]).scheduledMessageLogger;
-            scheduledMessageLogger.error("Failed to send scheduled message now", closure_2);
-            const body = closure_2.body;
-            let message;
-            if (body != null) {
-              message = body.message;
-            }
-            callback2 = message;
-            if (message == null) {
-              callback2 = closure_2.message;
-            }
-            obj3 = callback2(closure_2[4]);
-            const obj4 = { type: "SCHEDULED_MESSAGES_SEND_NOW_FAILURE", scheduledMessageId: null, errorMsg: null };
-            obj4[1] = callback;
-            obj4[2] = callback2;
-            obj3.dispatch(obj4);
-            const _Error = Error;
-            error = new Error(callback2);
-            throw error;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            obj = callback2(closure_2[4]);
-            const obj6 = { type: "SCHEDULED_MESSAGES_SEND_NOW_SUCCESS", scheduledMessageId: null };
-            obj6[1] = callback;
-            obj.dispatch(obj6);
-            c5 = 0;
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp39) {
-          closure_4 = tmp39;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp39;
-          } else {
-            c6 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _getScheduledMessages() {
-  const self = this;
-  const tmp = callback(function*() {
-    const callback = tmp2;
-    const HTTP = closure_1_0(1272).HTTP;
-    obj1 = { url: null, rejectWithError: true };
-    obj1[0] = closure_1_5.SCHEDULED_MESSAGES;
-    yield HTTP.get(obj1);
-    const body = arg1.body;
-    return body.map(callback(7845).convertServerScheduledMessageSend);
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchScheduledMessages() {
-  let self = this;
-  const tmp = callback(function*() {
-    let callback2 = tmp3;
-    closure_1_1(closure_1_2[4]).dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
-    c3 = 1;
-    yield (function getScheduledMessages() {
-      const self = this;
-      const apply = closure_12.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    })();
-    if (1 === tmp7) {
-      c3 = 0;
-      callback2 = dependencyMap;
-      const scheduledMessageLogger2 = callback(7845).scheduledMessageLogger;
-      scheduledMessageLogger2.error("Failed to fetch scheduled messages", callback2);
-      let obj3 = callback2(573);
-      const obj2 = { type: "FETCH_SCHEDULED_MESSAGES_FAILURE", error: null };
-      obj2[1] = callback2;
-      obj3.dispatch(obj2);
-      c5 = 3;
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      callback = arg1;
-      const scheduledMessageLogger = callback(7845).scheduledMessageLogger;
-      scheduledMessageLogger.info("Fetched scheduled messages", callback);
-      const obj = callback2(573);
-      obj3 = { type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: null };
-      obj3[1] = callback;
-      obj.dispatch(obj3);
-      c3 = 0;
+require = fn;
+let closure_8 = async function _createScheduledMessage(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
     }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          ({ channelId: closure_131_0, scheduledTimestamp: closure_131_1, messageSendData: closure_131_2 } = closure_0);
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let obj2 = { type: "SCHEDULED_MESSAGES_CREATE_START", channelId: closure_131_0 };
+          closure_132_1(closure_132_2[4]).dispatch(obj2);
+          c6 = 1;
+          const HTTP = closure_132_0(closure_132_2[5]).HTTP;
+          const request = { url: closure_132_5.SCHEDULED_MESSAGES, body: null, rejectWithError: true };
+          const obj3 = { channel_id: closure_131_0, content: closure_131_2.content, scheduled_timestamp: closure_131_1, flags: closure_131_2.flags, message_reference: closure_131_2.message_reference, allowed_mentions: closure_131_2.allowed_mentions, sticker_ids: closure_131_2.sticker_ids, poll: closure_131_2.poll, attachments: null };
+          let attachments = closure_131_2.attachments;
+          if (attachments == null) {
+            attachments = [];
+          }
+          obj3.attachments = attachments;
+          request.body = obj3;
+          c7 = 3;
+          c8 = 1;
+          const obj4 = { value: HTTP.post(request), done: false };
+          return obj4;
+        }
+      } else if (2 === tmp7) {
+        c6 = 0;
+        closure_131_5 = closure_5;
+        const scheduledMessageLogger = closure_132_0(closure_132_2[6]).scheduledMessageLogger;
+        scheduledMessageLogger.error("Failed to create scheduled message", closure_131_5);
+        const body = closure_131_5.body;
+        let message;
+        if (body != null) {
+          message = body.message;
+        }
+        if (message == null) {
+          message = closure_131_5.message;
+        }
+        closure_131_4 = message;
+        obj2 = closure_132_1(closure_132_2[4]);
+        const obj5 = { type: "SCHEDULED_MESSAGES_CREATE_FAILURE", channelId: closure_131_0, errorMsg: closure_131_4 };
+        obj2.dispatch(obj5);
+        throw closure_131_5;
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        closure_131_3 = value;
+        let obj8 = closure_132_1(closure_132_2[4]);
+        const obj7 = { type: "SCHEDULED_MESSAGES_CREATE_SUCCESS", channelId: closure_131_0, scheduledMessageSend: closure_132_0(closure_132_2[6]).convertServerScheduledMessageSend(closure_131_3.body) };
+        obj8.dispatch(obj7);
+        const obj11 = closure_132_0(closure_132_2[6]);
+        obj8 = { dismissAction: closure_132_7.INDIRECT_ACTION };
+        const result = closure_132_0(closure_132_2[7]).UNSAFE_markDismissibleContentAsDismissed(closure_132_0(closure_132_2[8]).DismissibleContent.SCHEDULED_MESSAGES_DRAFT_COACHMARK, obj8);
+        c6 = 0;
+        c8 = 3;
+        obj = { value: closure_131_3, done: true };
+        return obj;
+      }
+    } catch (tmp31) {
+      closure_5 = tmp31;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp31;
+      } else {
+        c7 = tmp;
+      }
+    }
+  }
+};
+let closure_9 = async function _updateScheduledMessage(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_0 = undefined;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          ({ scheduledMessageId: closure_131_0, scheduledTimestamp: closure_131_1, content: closure_131_2, flags: closure_131_3 } = closure_0);
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          closure_131_7 = undefined;
+          closure_131_8 = undefined;
+          closure_131_9 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let obj2 = { type: "SCHEDULED_MESSAGES_UPDATE_START", scheduledMessageId: closure_131_0 };
+          closure_132_1(closure_132_2[4]).dispatch(obj2);
+          c6 = 1;
+          if (null == closure_131_2) {
+            const items = [closure_131_2, closure_131_3];
+            let result = items;
+          } else {
+            const obj3 = { content: closure_131_2, flags: null };
+            const obj14 = closure_132_0(closure_132_2[6]);
+            c2 = closure_131_3;
+            if (closure_131_3 == null) {
+              c2 = 0;
+            }
+            obj3.flags = closure_132_0(closure_132_2[9]).removeFlag(c2, closure_132_6.SUPPRESS_NOTIFICATIONS);
+            result = obj14.parseContentAndFlagsForSilentMessage(obj3);
+            const obj16 = closure_132_0(closure_132_2[9]);
+          }
+          closure_131_4 = result;
+          closure_131_5 = closure_132_3(closure_131_4, 2);
+          closure_131_6 = closure_131_5[0];
+          closure_131_7 = closure_131_5[1];
+          const HTTP = closure_132_0(closure_132_2[5]).HTTP;
+          const request = { url: closure_132_5.SCHEDULED_MESSAGE(closure_131_0), body: null, rejectWithError: true };
+          let obj4 = { scheduled_timestamp: closure_131_1, content: closure_131_6, flags: closure_131_7 };
+          request.body = obj4;
+          HTTP.patch(request);
+          c7 = 3;
+          c8 = 1;
+          const obj12 = closure_132_1(closure_132_2[4]);
+        }
+      } else if (2 === tmp7) {
+        c6 = 0;
+        closure_131_10 = closure_5;
+        const scheduledMessageLogger = closure_132_0(closure_132_2[6]).scheduledMessageLogger;
+        scheduledMessageLogger.error("Failed to update scheduled message", closure_131_10);
+        const body = closure_131_10.body;
+        let message;
+        if (body != null) {
+          message = body.message;
+        }
+        if (message == null) {
+          message = closure_131_10.message;
+        }
+        closure_131_9 = message;
+        obj4 = closure_132_1(closure_132_2[4]);
+        const obj5 = { type: "SCHEDULED_MESSAGES_UPDATE_FAILURE", scheduledMessageId: closure_131_0, errorMsg: closure_131_9 };
+        obj4.dispatch(obj5);
+        const _Error = Error;
+        const error = new Error(closure_131_9);
+        throw error;
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
+      } else {
+        closure_131_8 = value;
+        obj = closure_132_1(closure_132_2[4]);
+        const obj7 = { type: "SCHEDULED_MESSAGES_UPDATE_SUCCESS", scheduledMessageSend: null };
+        obj2 = closure_132_0(closure_132_2[6]);
+        obj7.scheduledMessageSend = obj2.convertServerScheduledMessageSend(closure_131_8.body);
+        obj.dispatch(obj7);
+        c6 = 0;
+        c8 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp63) {
+      closure_5 = tmp63;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp63;
+      } else {
+        c7 = tmp;
+      }
+    }
+  }
+};
+let closure_10 = async function _deleteScheduledMessage(scheduledMessageId) {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = scheduledMessageId;
+            closure_130_1 = undefined;
+            const obj1 = { type: "SCHEDULED_MESSAGES_DELETE_START", scheduledMessageId };
+            DispatcherDefault.dispatch(obj1);
+            c5 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const obj2 = { url: closure_2_5.SCHEDULED_MESSAGE(scheduledMessageId), rejectWithError: true };
+            c6 = 2;
+            c7 = 1;
+            let obj3 = { value: HTTP.del(obj2), done: false };
+            return obj3;
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_2 = closure_4;
+          const scheduledMessageLogger = closure_131_0(closure_131_2[6]).scheduledMessageLogger;
+          scheduledMessageLogger.error("Failed to cancel scheduled message", closure_130_2);
+          const body = closure_130_2.body;
+          message = undefined;
+          if (body != null) {
+            message = body.message;
+          }
+          if (message == null) {
+            message = closure_130_2.message;
+          }
+          closure_130_1 = message;
+          obj3 = closure_131_1(closure_131_2[4]);
+          const obj4 = { type: "SCHEDULED_MESSAGES_DELETE_FAILURE", scheduledMessageId: closure_130_0, errorMsg: closure_130_1 };
+          obj3.dispatch(obj4);
+          const _Error = Error;
+          const error = new Error(closure_130_1);
+          throw error;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          obj = closure_131_1(closure_131_2[4]);
+          const obj6 = { type: "SCHEDULED_MESSAGES_DELETE_SUCCESS", scheduledMessageId: closure_130_0 };
+          obj.dispatch(obj6);
+          c5 = 0;
+          c7 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp39) {
+        closure_4 = tmp39;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp39;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_11 = async function _sendScheduledMessageNow(scheduledMessageId) {
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = scheduledMessageId;
+            closure_130_1 = undefined;
+            const obj1 = { type: "SCHEDULED_MESSAGES_SEND_NOW_START", scheduledMessageId };
+            DispatcherDefault.dispatch(obj1);
+            c5 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const obj2 = { url: closure_2_5.SCHEDULED_MESSAGE_SEND(scheduledMessageId), rejectWithError: true };
+            c6 = 2;
+            c7 = 1;
+            let obj3 = { value: HTTP.post(obj2), done: false };
+            return obj3;
+          }
+        } else if (1 === tmp7) {
+          c5 = 0;
+          closure_130_2 = closure_4;
+          const scheduledMessageLogger = closure_131_0(closure_131_2[6]).scheduledMessageLogger;
+          scheduledMessageLogger.error("Failed to send scheduled message now", closure_130_2);
+          const body = closure_130_2.body;
+          message = undefined;
+          if (body != null) {
+            message = body.message;
+          }
+          if (message == null) {
+            message = closure_130_2.message;
+          }
+          closure_130_1 = message;
+          obj3 = closure_131_1(closure_131_2[4]);
+          const obj4 = { type: "SCHEDULED_MESSAGES_SEND_NOW_FAILURE", scheduledMessageId: closure_130_0, errorMsg: closure_130_1 };
+          obj3.dispatch(obj4);
+          const _Error = Error;
+          const error = new Error(closure_130_1);
+          throw error;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          obj = closure_131_1(closure_131_2[4]);
+          const obj6 = { type: "SCHEDULED_MESSAGES_SEND_NOW_SUCCESS", scheduledMessageId: closure_130_0 };
+          obj.dispatch(obj6);
+          c5 = 0;
+          c7 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp39) {
+        closure_4 = tmp39;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp39;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_12 = async function _getScheduledMessages() {
+  closure_0 = tmp2;
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({ url: constants.SCHEDULED_MESSAGES, rejectWithError: true });
+  const body = arg1.body;
+  return body.map(closure_128_0(closure_128_2[6]).convertServerScheduledMessageSend);
+};
+let closure_13 = async function _fetchScheduledMessages() {
+  closure_1 = tmp3;
+  DispatcherDefault.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
+  await (function getScheduledMessages() {
+    const self = this;
+    const apply = closure_1_12.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    } else {
+      applyArgumentsResult = apply(self, arguments);
+    }
+    return applyArgumentsResult;
+  })();
+  if (1 === tmp7) {
     c3 = 0;
-    return arg1;
-  });
-  closure_13 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    closure_128_1 = closure_2;
+    const scheduledMessageLogger2 = closure_129_0(closure_129_2[6]).scheduledMessageLogger;
+    scheduledMessageLogger2.error("Failed to fetch scheduled messages", closure_128_1);
+    let obj3 = closure_129_1(closure_129_2[4]);
+    obj3.dispatch({ type: "FETCH_SCHEDULED_MESSAGES_FAILURE", error: closure_128_1 });
+    c5 = 3;
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    closure_128_0 = arg1;
+    const scheduledMessageLogger = closure_129_0(closure_129_2[6]).scheduledMessageLogger;
+    scheduledMessageLogger.info("Fetched scheduled messages", closure_128_0);
+    obj3 = { type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: closure_128_0 };
+    closure_129_1(closure_129_2[4]).dispatch(obj3);
+    c3 = 0;
+    closure_129_1(closure_129_2[4]);
   }
-  return applyArgumentsResult;
-}
-({ Endpoints: c5, MessageFlags: closure_6 } = ME);
-let result = require("set").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
+  return arg1;
+};
+const Constants = fn(1074);
+({ Endpoints: hasOwnProperty, MessageFlags: metroRequire } = Constants);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/scheduled_messages/ScheduledMessageActionCreators.tsx");
 
-export const createScheduledMessage = function createScheduledMessage(arg0) {
+export const createScheduledMessage = function createScheduledMessage() {
   const self = this;
-  const apply = _createScheduledMessage.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -628,9 +491,9 @@ export const createScheduledMessage = function createScheduledMessage(arg0) {
   }
   return applyArgumentsResult;
 };
-export const updateScheduledMessage = function updateScheduledMessage(arg0) {
+export const updateScheduledMessage = function updateScheduledMessage() {
   const self = this;
-  const apply = _updateScheduledMessage.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -638,9 +501,9 @@ export const updateScheduledMessage = function updateScheduledMessage(arg0) {
   }
   return applyArgumentsResult;
 };
-export const deleteScheduledMessage = function deleteScheduledMessage(closure_0) {
+export const deleteScheduledMessage = function deleteScheduledMessage() {
   const self = this;
-  const apply = _deleteScheduledMessage.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -650,7 +513,7 @@ export const deleteScheduledMessage = function deleteScheduledMessage(closure_0)
 };
 export const sendScheduledMessageNow = function sendScheduledMessageNow() {
   const self = this;
-  const apply = _sendScheduledMessageNow.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -660,7 +523,7 @@ export const sendScheduledMessageNow = function sendScheduledMessageNow() {
 };
 export const fetchScheduledMessages = function fetchScheduledMessages() {
   const self = this;
-  const apply = _fetchScheduledMessages.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

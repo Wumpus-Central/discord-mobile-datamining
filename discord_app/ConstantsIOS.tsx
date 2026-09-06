@@ -1,12 +1,11 @@
-// === Module 1093: keys ===
+// === Module 1093: ConstantsIOS ===
 
-// Module 1093 (keys)
-import set from "set" /* 2 */;
+// Module 1093 (ConstantsIOS)
+import size from "module_2" /* 2 */;
 
-let set = new Set(["token", "fingerprint"]);
 const frozen = Object.freeze({ START: { x: 0, y: 0 }, END: { x: 1, y: 0 } });
 const frozen1 = Object.freeze({ START: { x: 0, y: 0 }, END: { x: 0, y: 1 } });
-const result = set.fileFinishedImporting("ConstantsIOS.tsx");
+const result = size.fileFinishedImporting("ConstantsIOS.tsx");
 
 export const DrawerSourceTypes = { BACK_BUTTON: "Back Button", SWIPE: "Swipe", MUTUAL_GUILD_ITEM: "Mutual Guild Item", MEMBER_LIST_ICON: "Member List Icon", CHANNEL_DRAWER_ICON: "Channel Drawer Icon", CHANNEL_TITLE: "Channel Title", PREMIUM_GUILD_SUBSCRIPTION_GUILD_LIST_UPSELL: "Premium Guild Subscription Guild List Upsell" };
 export const AppStates = { INACTIVE: "inactive", BACKGROUND: "background", ACTIVE: "active" };
@@ -31,7 +30,7 @@ export const ActivityPartyApplicationNames = { spotify: "Spotify" };
 export const CACHE_STORE_LAZY_KEY = "CacheStoreLazy";
 export const CACHE_STORE_CHANNELS_LAZY_KEY = "CacheStoreChannelsLazy";
 export const CACHE_STORE_KEY = "CacheStore";
-export const STORAGE_SECURE_KEYS = set;
+export const STORAGE_SECURE_KEYS = new Set(["token", "fingerprint"]);
 export const MAX_INVITE_AVATARS_TO_SHOW = 6;
 export const INVITE_EMBED_AVATAR_SIZE = 50;
 export const UPLOAD_BANNER_SIZE = { width: 1080, height: 432 };

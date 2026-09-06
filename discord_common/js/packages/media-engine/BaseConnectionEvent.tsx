@@ -1,8 +1,8 @@
-// === Module 4631: BaseConnectionEvent ===
+// === Module 4631: discord_common/BaseConnectionEvent ===
 
-// Module 4631 (BaseConnectionEvent)
-import set from "set" /* 2 */;
+// Module 4631 (discord_common/BaseConnectionEvent)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnectionEvent.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnectionEvent.tsx");
 
 export const BaseConnectionEvent = { Destroy: "destroy", LocalVideoDisabled: "local-video-disabled", ActiveSinksChange: "active-sinks-change", ExperimentFlag: "experiment-flag", ConnectionStateChange: "connectionstatechange", Error: "error", Connected: "connected", VideoHookStart: "videohook-start", VideoHookStop: "videohook-stop", VideoHookInitialize: "videohook-initialize", ScreenshareFinish: "screenshare-finish", VideoState: "video-state", SoundshareTrace: "soundsharetrace", SoundshareSpeaking: "soundsharespeaking", SoundshareAttached: "soundshareattached", SoundshareFailed: "soundsharefailed", Speaking: "speaking", SpeakingWhileMuted: "speakingwhilemuted", Mute: "mute", Deafen: "deafen", NativeMuteChanged: "native-mute-changed", LocalMute: "local-mute", NoiseLevel: "noiselevel", Video: "video", Ping: "ping", PingTimeout: "pingtimeout", Silence: "silence", DesktopSourceEnd: "desktopsourceend", OutboundLossRate: "outboundlossrate", NoiseCancellationError: "noisecancellererror", VoiceActivityDetectorError: "voiceactivitydetectorerror", InteractionRequired: "interactionrequired", AudioPermission: "audio-permission", VideoPermission: "video-permission", Stats: "stats", FirstFrame: "first-frame", FirstFrameStats: "first-frame-stats", FirstFrameEncryptedStats: "first-frame-encrypted-stats", VideoEncoderFallback: "video-encoder-fallback", VideoDecoderFallback: "video-decoder-fallback", VideoCodecError: "video-codec-error", RemoteStreamsReady: "remote-streams-ready", MLSFailure: "mls-failure", SecureFramesUpdate: "secure-frames-update", SdpError: "sdp-error", UsersMerged: "users-merged" };

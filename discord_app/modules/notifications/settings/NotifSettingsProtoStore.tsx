@@ -1,14 +1,14 @@
-// === Module 13680: initialize ===
+// === Module 13680: NotifSettingsProtoStore ===
 
-// Module 13680 (initialize)
-import set from "set" /* 2 */;
+// Module 13680 (NotifSettingsProtoStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import b64ToProto from "b64ToProto" /* 1223 */;
-import create from "create" /* 13681 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
+import notification_settings from "notification_settings" /* 13681 */;
+import size from "module_2" /* 2 */;
 
-let DeclarativeSettings = create.DeclarativeSettings;
-let closure_2 = DeclarativeSettings.create();
+let DeclarativeSettings = notification_settings.DeclarativeSettings;
+const values = DeclarativeSettings.create();
 let c3 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class NotifSettingsProtoStore extends PersistedStore {
@@ -20,15 +20,14 @@ prototype["initialize"] = function initialize(proto) {
     proto = proto.proto;
   }
   if (null != proto) {
-    const b64ToProtoResult = b64ToProto.b64ToProto(create.DeclarativeSettings, proto);
+    const b64ToProtoResult = user_settings_UserSettingsUtils.b64ToProto(notification_settings.DeclarativeSettings, proto);
     if (null != b64ToProtoResult) {
       closure_2 = b64ToProtoResult;
     }
-    const obj = b64ToProto;
   }
 };
 prototype["getState"] = function getState() {
-  const obj = { proto: b64ToProto.protoToB64(create.DeclarativeSettings, closure_2) };
+  const obj = { proto: user_settings_UserSettingsUtils.protoToB64(notification_settings.DeclarativeSettings, closure_2) };
   return obj;
 };
 Object.defineProperty(prototype, "hasLoaded", {
@@ -48,29 +47,37 @@ prototype["getSetting"] = function getSetting(arg0) {
 };
 NotifSettingsProtoStore.displayName = "NotifSettingsProtoStore";
 NotifSettingsProtoStore.persistKey = "NotifSettingsProtoStore-Cache";
-const notifSettingsProtoStore = new NotifSettingsProtoStore(dispatcherDefault, {
+const notifSettingsProtoStore = new NotifSettingsProtoStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(notificationSettings) {
-    const declarativeSettings = notificationSettings.notificationSettings.declarativeSettings;
+    let declarativeSettings = notificationSettings.notificationSettings.declarativeSettings;
+    if (declarativeSettings == null) {
+      declarativeSettings = closure_2;
+    }
+    closure_2 = declarativeSettings;
     c3 = true;
   },
   NOTIFICATION_SETTINGS_UPDATE: function handleNotificationSettingsUpdate(settings) {
     const declarativeSettings = settings.settings.declarativeSettings;
     if (null == declarativeSettings) {
       return false;
+    } else {
+      closure_2 = declarativeSettings;
     }
   },
   DECLARATIVE_NOTIFICATION_SETTINGS_UPDATE: function handleDeclarativeNotificationSettingsUpdate(declarativeSettings) {
     declarativeSettings = declarativeSettings.declarativeSettings;
     if (null == declarativeSettings) {
       return false;
+    } else {
+      closure_2 = declarativeSettings;
     }
   },
   LOGOUT: function handleLogout() {
-    const DeclarativeSettings = create.DeclarativeSettings;
+    const DeclarativeSettings = notification_settings.DeclarativeSettings;
     closure_2 = DeclarativeSettings.create();
     c3 = false;
   }
 });
-const result = set.fileFinishedImporting("modules/notifications/settings/NotifSettingsProtoStore.tsx");
+const result = size.fileFinishedImporting("modules/notifications/settings/NotifSettingsProtoStore.tsx");
 
 export default notifSettingsProtoStore;

@@ -1,11 +1,11 @@
-// === Module 7861: getRemindersLastSeenAt ===
+// === Module 7861: MessageRemindersSeenStorage ===
 
-// Module 7861 (getRemindersLastSeenAt)
-import set from "set" /* 2 */;
+// Module 7861 (MessageRemindersSeenStorage)
 import Storage2 from "Storage" /* 510 */;
+import size from "module_2" /* 2 */;
 
 const MessageRemindersLastSeenAt = "MessageRemindersLastSeenAt";
-let result = set.fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageRemindersSeenStorage.tsx");
+let result = size.fileFinishedImporting("modules/saved_messages/message_reminders/native/MessageRemindersSeenStorage.tsx");
 
 export const getRemindersLastSeenAt = function getRemindersLastSeenAt() {
   const Storage = Storage2.Storage;

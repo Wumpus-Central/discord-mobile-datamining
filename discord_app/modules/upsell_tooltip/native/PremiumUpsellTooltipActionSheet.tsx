@@ -1,90 +1,90 @@
 // === Module 11145: PremiumUpsellTooltipActionSheet ===
 
 // Module 11145 (PremiumUpsellTooltipActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import Button2 from "Button" /* 4975 */;
-import Background from "Background" /* 7150 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
-createCacheKey = { justifyContent: "center", paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "center", width: 231, height: 231, borderRadius: ThemesDefault.radii.sm, marginBottom: 16 };
-createCacheKey[2] = { flexDirection: "row", justifyContent: "center" };
-createCacheKey[3] = { textAlign: "center", marginBottom: 8 };
-let obj1 = { alignSelf: "center", width: 231, height: 231, borderRadius: ThemesDefault.radii.sm, marginBottom: 16 };
-createCacheKey[4] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
-const obj2 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_24 };
-createCacheKey[5] = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 32, height: 32, marginTop: -2, marginLeft: -16 };
-const obj3 = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 32, height: 32, marginTop: -2, marginLeft: -16 };
-createCacheKey[6] = { gap: ThemesDefault.space.PX_8 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj4 = { gap: ThemesDefault.space.PX_8 };
-let result = require("set").fileFinishedImporting("modules/upsell_tooltip/native/PremiumUpsellTooltipActionSheet.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, img: null, header: null, title: null, description: null, nitroWheel: null, buttonContainer: null };
+createStyles = { justifyContent: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.container = createStyles;
+let size = { alignSelf: "center", width: 231, height: 231, borderRadius: nativeDefault.radii.sm, marginBottom: 16 };
+createStyles.img = size;
+createStyles.header = { flexDirection: "row", justifyContent: "center" };
+createStyles.title = { textAlign: "center", marginBottom: 8 };
+createStyles.description = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+const size1 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 32, height: 32, marginTop: -2, marginLeft: -16 };
+createStyles.nitroWheel = size1;
+let obj1 = { textAlign: "center", marginBottom: nativeDefault.space.PX_24 };
+createStyles.buttonContainer = { gap: nativeDefault.space.PX_8 };
+let closure_8 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/upsell_tooltip/native/PremiumUpsellTooltipActionSheet.tsx");
 
 export default function PremiumUpsellTooltipActionSheet(arg0) {
   ({ imageSource, dismissibleContent: require, primaryButtonIcon, secondaryButtonText, onDismiss: importDefault, onPrimaryButtonPress: dependencyMap, onSecondaryButtonPress: closure_3 } = arg0);
   ({ title, backdropProps, description, descriptionStyle, imageStyle, primaryButtonText } = arg0);
-  let tmp = callback();
+  let tmp = closure_8();
   let obj = { startExpanded: true };
   const merged = Object.assign(backdropProps);
   obj.onDismiss = function handleDismiss(dismissAction) {
     let tmp = null != dismissAction;
     if (tmp) {
-      tmp = dismissAction !== closure_1_5.DISMISS;
+      tmp = dismissAction !== ContentDismissActionType.DISMISS;
     }
     if (!tmp) {
-      if (closure_1 != null) {
+      if (importDefault != null) {
         tmp3();
       }
     }
-    let obj = closure_1_0(closure_1_2[6]);
-    obj = { forceTrack: true, dismissAction };
-    const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_0, obj);
+    const obj = { forceTrack: true, dismissAction };
+    const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, obj);
   };
   obj = { style: tmp.container, children: null };
   let tmp2Result = null;
   if (null != imageSource) {
     obj = { style: null, source: null };
     const items = [tmp.img, imageStyle];
-    obj[0] = items;
-    obj[1] = imageSource;
+    obj.style = items;
+    obj.source = imageSource;
     tmp2Result = tmp2(closure_3, obj);
   }
   const items1 = [tmp2Result, , , ];
-  obj1 = { style: tmp.header, children: null };
-  const items2 = [closure_6(Button.NitroWheel, { style: tmp.nitroWheel }), closure_6(Text.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
-  obj1[1] = items2;
+  const obj1 = { style: tmp.header, children: null };
+  const items2 = [closure_6(native.NitroWheel, { style: tmp.nitroWheel }), closure_6(Text_Text.Text, { variant: "heading-xl/bold", style: tmp.title, color: "mobile-text-heading-primary", accessibilityRole: "header", children: title })];
+  obj1.children = items2;
   items1[1] = closure_7(closure_4, obj1);
+  const obj4 = { style: null, variant: "text-md/medium", color: "text-default", children: description };
   const items3 = [tmp.description, descriptionStyle];
-  items1[2] = closure_6(Text.Text, { style: items3, variant: "text-md/medium", color: "text-default", children: description });
-  const obj4 = { style: tmp.buttonContainer, children: null };
-  const obj5 = {
+  obj4.style = items3;
+  items1[2] = closure_6(Text_Text.Text, obj4);
+  const obj5 = { style: tmp.buttonContainer, children: null };
+  const obj6 = {
     variant: "active",
     text: primaryButtonText,
     onPress() {
-      callback2();
-      closure_1_1(closure_1_2[11]).hideActionSheet();
-      const PRIMARY = closure_1_5.PRIMARY;
+      dependencyMap();
+      ActionSheetActionCreatorsDefault.hideActionSheet();
+      const PRIMARY = ContentDismissActionType.PRIMARY;
       if (!tmp4) {
-        if (callback != null) {
-          callback();
+        if (closure_1_1 != null) {
+          closure_1_1();
         }
       }
-      const obj = closure_1_1(closure_1_2[11]);
-      const tmp2 = closure_1_2;
-      tmp4 = null != PRIMARY && PRIMARY !== closure_1_5.DISMISS;
-      const result = closure_1_0(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, { forceTrack: true, dismissAction: PRIMARY });
+      tmp4 = null != PRIMARY && PRIMARY !== ContentDismissActionType.DISMISS;
+      const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, { forceTrack: true, dismissAction: PRIMARY });
     },
     icon: null,
     size: "lg"
@@ -93,34 +93,35 @@ export default function PremiumUpsellTooltipActionSheet(arg0) {
   if (primaryButtonIcon != null) {
     primaryButtonIconResult = primaryButtonIcon();
   }
-  obj5[3] = primaryButtonIconResult;
-  const items4 = [closure_6(Button2.Button, obj5), ];
+  obj6.icon = primaryButtonIconResult;
+  const items4 = [closure_6(components_Button_Button.Button, obj6), ];
   tmp2Result = null;
   if (null != secondaryButtonText) {
-    const obj6 = { variant: "secondary", text: null, onPress: null, size: "lg" };
-    obj6[1] = secondaryButtonText;
-    obj6[2] = function onPress() {
-      if (closure_3 != null) {
-        tmp();
-      }
-      closure_1_1(closure_1_2[11]).hideActionSheet();
-      const DISMISS = closure_1_5.DISMISS;
-      if (!tmp5) {
-        if (callback != null) {
-          callback();
-        }
-      }
-      const obj = closure_1_1(closure_1_2[11]);
-      const tmp3 = closure_1_2;
-      tmp5 = null != DISMISS && DISMISS !== closure_1_5.DISMISS;
-      const result = closure_1_0(closure_1_2[6]).UNSAFE_markDismissibleContentAsDismissed(closure_0, { forceTrack: true, dismissAction: DISMISS });
+    const obj7 = {
+      variant: "secondary",
+      text: secondaryButtonText,
+      onPress() {
+          if (closure_1_3 != null) {
+            tmp();
+          }
+          ActionSheetActionCreatorsDefault.hideActionSheet();
+          const DISMISS = ContentDismissActionType.DISMISS;
+          if (!tmp5) {
+            if (closure_1_1 != null) {
+              closure_1_1();
+            }
+          }
+          tmp5 = null != DISMISS && DISMISS !== ContentDismissActionType.DISMISS;
+          const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(closure_1_0, { forceTrack: true, dismissAction: DISMISS });
+        },
+      size: "lg"
     };
-    tmp2Result = tmp2(tmp3(4975).Button, obj6);
+    tmp2Result = tmp2(tmp3(4975).Button, obj7);
   }
   items4[1] = tmp2Result;
-  obj4[1] = items4;
-  items1[3] = closure_7(closure_4, obj4);
-  obj[1] = items1;
+  obj5.children = items4;
+  items1[3] = closure_7(closure_4, obj5);
+  obj.children = items1;
   obj.children = closure_7(closure_4, obj);
-  return closure_6(Background.BottomSheet, obj);
+  return closure_6(Sheet_BottomSheet.BottomSheet, obj);
 };

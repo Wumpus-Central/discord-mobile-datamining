@@ -1,10 +1,9 @@
-// === Module 9743: compareOptions ===
+// === Module 9743: useAppChannelApplicationOptions ===
 
-// Module 9743 (compareOptions)
-import closure_2 from "noop" /* 19 */;
-import { EmbeddedSurfaceType } from "FrameLayoutModes" /* 9511 */;
+// Module 9743 (useAppChannelApplicationOptions)
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function compareOptions(status, status2) {
   if (status.status.supported !== status2.status.supported) {
     let num = 1;
@@ -18,7 +17,9 @@ function compareOptions(status, status2) {
   }
   return localeCompareResult;
 }
-const result = require("set").fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
+const EmbeddedSurfaceType = fn(9511).EmbeddedSurfaceType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplicationOptions.tsx");
 
 export const useAppChannelApplicationOptions = function useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId, disabled) {
   let flag = disabled;
@@ -26,7 +27,6 @@ export const useAppChannelApplicationOptions = function useAppChannelApplication
     flag = false;
   }
   let data;
-  data = undefined;
   let obj = data(data[2]);
   let tmp3;
   if (!flag) {
@@ -37,38 +37,32 @@ export const useAppChannelApplicationOptions = function useAppChannelApplication
   let isLoading = guildEmbeddedApplications.isLoading;
   const application = data(data[3]).useApplication(selectedApplicationId, true);
   data = application.data;
-  obj = {
-    options: React.useMemo(() => {
-      let items = data;
-      if (data == null) {
-        items = [];
-      }
-      const items1 = [...items];
-      let someResult = null == data;
-      if (!someResult) {
-        someResult = items1.some((application) => application.application.id === id.id);
-      }
-      if (!someResult) {
-        const obj = { application: null, status: null };
-        obj[0] = data;
-        obj[1] = { supported: true };
-        items1.push(obj);
-      }
-      return items1.sort(closure_1_4);
-    }, items),
-    selectedApplication: data,
-    isLoading: null,
-    hasNoApplications: null
-  };
-  items = [data, data];
+  obj = { options: null, selectedApplication: data, isLoading: null, hasNoApplications: null };
+  let items = [data, data];
+  obj.options = noop.useMemo(() => {
+    let items = data;
+    if (data == null) {
+      items = [];
+    }
+    const items1 = [...items];
+    let someResult = null == data;
+    if (!someResult) {
+      someResult = items1.some((application) => application.application.id === id.id);
+    }
+    if (!someResult) {
+      const obj = { application: data, status: { supported: true } };
+      items1.push(obj);
+    }
+    return items1.sort(compareOptions);
+  }, items);
   if (!isLoading) {
     isLoading = application.isLoading;
   }
-  obj[2] = isLoading;
+  obj.isLoading = isLoading;
   let tmp6 = null != data;
   if (tmp6) {
     tmp6 = 0 === data.length;
   }
-  obj[3] = tmp6;
+  obj.hasNoApplications = tmp6;
   return obj;
 };

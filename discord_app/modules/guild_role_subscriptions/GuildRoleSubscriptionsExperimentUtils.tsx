@@ -1,27 +1,28 @@
-// === Module 13893: GuildFeatures ===
+// === Module 13893: GuildRoleSubscriptionsExperimentUtils ===
 
-// Module 13893 (GuildFeatures)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 13893 (GuildRoleSubscriptionsExperimentUtils)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
 let items = [, , ];
 ({ ROLE_SUBSCRIPTIONS_ENABLED: arr[0], CREATOR_MONETIZABLE: arr[1], CREATOR_MONETIZABLE_PROVISIONAL: arr[2] } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsExperimentUtils.tsx");
 
 export const hasEnabledMonetization = function hasEnabledMonetization(arg0) {
-  closure_0 = arg0;
+  let features = arg0;
   let someResult = null != arg0;
   if (someResult) {
-    someResult = items.some((arg0) => {
+    someResult = items.some((item) => {
       features = features.features;
-      return features.has(arg0);
+      return features.has(item);
     });
   }
   return someResult;
 };
 export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTemplates(id) {
-  guild = guild.getGuild(id);
+  const guild = GuildStore.getGuild(id);
   let flag;
   if (guild != null) {
     const features = guild.features;
@@ -33,14 +34,14 @@ export const isGuildEligibleForTierTemplates = function isGuildEligibleForTierTe
   return flag;
 };
 export const useGuildEligibleForTierTemplates = function useGuildEligibleForTierTemplates(guildId) {
-  const _require = guildId;
-  items = [closure_2];
-  return _require(563).useStateFromStores(items, () => {
-    const guild = closure_1_2.getGuild(closure_0);
+  _require = guildId;
+  items = [GuildStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;
-      flag = features.has(closure_1_3.ROLE_SUBSCRIPTIONS_ENABLED);
+      flag = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
     }
     if (flag == null) {
       flag = false;

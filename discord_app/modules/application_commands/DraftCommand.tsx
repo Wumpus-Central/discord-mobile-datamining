@@ -1,9 +1,9 @@
-// === Module 4903: isDraftCommandValidForText ===
+// === Module 4903: DraftCommand ===
 
-// Module 4903 (isDraftCommandValidForText)
-import set from "set" /* 2 */;
+// Module 4903 (DraftCommand)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");
+const result = size.fileFinishedImporting("modules/application_commands/DraftCommand.tsx");
 
 export const isDraftCommandValidForText = function isDraftCommandValidForText(command, substr) {
   let tmp = null != command;

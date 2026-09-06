@@ -1,11 +1,13 @@
-// === Module 7189: experiment ===
+// === Module 7189: TidaWebformExperiment ===
 
-// Module 7189 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 7189 (TidaWebformExperiment)
+import createExperiment from "module_4474" /* 4474 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "user", id: "2025-11_tida_webform", label: "Tida Webform", defaultConfig: { tidaWebformEnabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enabled", config: { tidaWebformEnabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "user", id: "2025-11_tida_webform", label: "Tida Webform", defaultConfig: { tidaWebformEnabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/guild/TidaWebformExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/guild/TidaWebformExperiment.tsx");
 
 export default experiment;

@@ -1,21 +1,20 @@
 // === Module 4749: guildHasOnboardingHome ===
 
 // Module 4749 (guildHasOnboardingHome)
-import set from "set" /* 2 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
-import ME from "ME" /* 1074 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ GuildFeatures: obj1, ME: c3 } = ME);
-const result = set.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
+({ GuildFeatures: c2, ME: c3 } = Constants);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
 
 export default function guildHasOnboardingHome(id) {
   let isFavoritesGuildIdResult = null == id;
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = id.id === closure_3;
+    isFavoritesGuildIdResult = id.id === React3;
   }
   if (!isFavoritesGuildIdResult) {
-    isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id.id);
-    const obj = getFavoritesAwareGuildName;
+    isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(id.id);
   }
   if (!isFavoritesGuildIdResult) {
     const features = id.features;

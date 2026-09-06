@@ -1,9 +1,9 @@
-// === Module 7097: GUILD_ONBOARDING_MODAL_KEY ===
+// === Module 7097: GuildOnboardingConstants ===
 
-// Module 7097 (GUILD_ONBOARDING_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 7097 (GuildOnboardingConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingConstants.tsx");
 
 export const GUILD_ONBOARDING_MODAL_KEY = "GUILD_ONBOARDING_MODAL_KEY";
 export const CHANNELS_AND_ROLES_MODAL_KEY = "CHANNELS_AND_ROLES_MODAL_KEY";

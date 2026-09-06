@@ -1,17 +1,15 @@
 // === Module 15175: MobileQuestPreviewControlBar ===
 
 // Module 15175 (MobileQuestPreviewControlBar)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "initializeState" /* 7703 */;
-import { AppRoutes } from "sum" /* 1085 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7196 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import QuestStore from "QuestStore" /* 7703 */;
 
-const require = arg1;
+require = fn;
 class MobileQuestPreviewControlBar {
   constructor(arg0) {
     questId = global.questId;
@@ -27,10 +25,10 @@ class MobileQuestPreviewControlBar {
     [tmp3, closure_3] = tmp2;
     tmp4 = questId;
     tmp5 = refreshQuest;
-    obj = require("useQuests");
+    obj = questId(refreshQuest[9]);
     questsWithPreviewAccess = obj.useQuestsWithPreviewAccess();
     closure_4 = questsWithPreviewAccess;
-    obj2 = require("initialize");
+    obj2 = questId(refreshQuest[10]);
     items = [];
     items[0] = closure_7;
     items1 = [];
@@ -38,11 +36,11 @@ class MobileQuestPreviewControlBar {
     stateFromStores = obj2.useStateFromStores(items, () => {
       let fetchQuestPreviewError = null;
       if (null != questId) {
-        fetchQuestPreviewError = callback3.getFetchQuestPreviewError(tmp);
+        fetchQuestPreviewError = QuestStore.getFetchQuestPreviewError(tmp);
       }
       return fetchQuestPreviewError;
     }, items1);
-    obj3 = require("initialize");
+    obj3 = questId(refreshQuest[10]);
     items2 = [];
     items2[0] = closure_7;
     items3 = [];
@@ -50,7 +48,7 @@ class MobileQuestPreviewControlBar {
     stateFromStores1 = obj3.useStateFromStores(items2, () => {
       let result = null != questId;
       if (result) {
-        result = callback3.isFetchingQuestPreview(tmp);
+        result = QuestStore.isFetchingQuestPreview(tmp);
       }
       return result;
     }, items3);
@@ -75,9 +73,7 @@ class MobileQuestPreviewControlBar {
         return { label: "" + questName + " (" + config.id + ")", value: config.id };
       });
       if (!tmp2) {
-        const obj = { label: null, value: null };
-        obj[0] = tmp;
-        obj[1] = tmp;
+        const obj = { label: tmp, value: tmp };
         mapped.unshift(obj);
       }
       return mapped;
@@ -90,16 +86,15 @@ class MobileQuestPreviewControlBar {
     items6 = [, ];
     items6[0] = questId;
     items6[1] = refreshQuest;
-    callback1 = closure_5.useCallback(closure_3(function*() {
+    callback1 = closure_5.useCallback(closure_3(async (arg0, value) => {
       if (c4 === 2) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -110,47 +105,41 @@ class MobileQuestPreviewControlBar {
           if (0 === c1) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
+            } else if (null != questId) {
+              v0(true);
+              v0 = 1;
+              let obj1 = tmp3(tmp27[11]);
+              c1 = 2;
+              c4 = 1;
+              obj1 = { value: null, done: false };
+              obj1.value = obj1.completeQuestPreview(tmp22, 1);
+              return obj1;
             } else {
-              closure_0 = tmp3;
-              if (null != closure_1_0) {
-                v0(true);
-                v0 = 1;
-                obj1 = closure_1_0(closure_1_2[11]);
-                c1 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.completeQuestPreview(tmp22, 1);
-                return obj1;
-              } else {
-                c4 = 3;
-              }
+              c4 = 3;
             }
           } else if (1 === tmp7) {
             v0 = 0;
-            v0(false);
-            throw callback;
+            closure_128_3(false);
+            throw tmp27;
           } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            callback();
+            closure_128_2();
             v0 = 0;
-            v0(false);
+            closure_128_3(false);
           }
           v0 = 0;
-          v0(false);
+          closure_128_3(false);
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } catch (tmp27) {
-          callback = tmp27;
           if (tmp4 === v0) {
             c4 = tmp2;
             throw tmp27;
@@ -164,16 +153,15 @@ class MobileQuestPreviewControlBar {
     items7 = [, ];
     items7[0] = questId;
     items7[1] = refreshQuest;
-    callback2 = closure_5.useCallback(closure_3(function*() {
+    callback2 = closure_5.useCallback(closure_3(async (arg0, value) => {
       if (c4 === 2) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -184,47 +172,41 @@ class MobileQuestPreviewControlBar {
           if (0 === c1) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
+            } else if (null != questId) {
+              v0(true);
+              v0 = 1;
+              let obj1 = tmp3(tmp27[11]);
+              c1 = 2;
+              c4 = 1;
+              obj1 = { value: null, done: false };
+              obj1.value = obj1.resetQuestPreviewStatus(tmp22);
+              return obj1;
             } else {
-              closure_0 = tmp3;
-              if (null != closure_1_0) {
-                v0(true);
-                v0 = 1;
-                obj1 = closure_1_0(closure_1_2[11]);
-                c1 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.resetQuestPreviewStatus(tmp22);
-                return obj1;
-              } else {
-                c4 = 3;
-              }
+              c4 = 3;
             }
           } else if (1 === tmp7) {
             v0 = 0;
-            v0(false);
-            throw callback;
+            closure_128_3(false);
+            throw tmp27;
           } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            callback();
+            closure_128_2();
             v0 = 0;
-            v0(false);
+            closure_128_3(false);
           }
           v0 = 0;
-          v0(false);
+          closure_128_3(false);
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } catch (tmp27) {
-          callback = tmp27;
           if (tmp4 === v0) {
             c4 = tmp2;
             throw tmp27;
@@ -238,16 +220,15 @@ class MobileQuestPreviewControlBar {
     items8 = [, ];
     items8[0] = questId;
     items8[1] = refreshQuest;
-    callback3 = closure_5.useCallback(closure_3(function*() {
+    callback3 = closure_5.useCallback(closure_3(async (arg0, value) => {
       if (c4 === 2) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -258,49 +239,43 @@ class MobileQuestPreviewControlBar {
           if (0 === c1) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
+            } else if (null != questId) {
+              v0(true);
+              v0 = 1;
+              const _Math = Math;
+              const random = Math.random();
+              let obj1 = tmp3(tmp28[11]);
+              c1 = 2;
+              c4 = 1;
+              obj1 = { value: null, done: false };
+              obj1.value = obj1.completeQuestPreview(tmp22, random);
+              return obj1;
             } else {
-              closure_0 = tmp3;
-              if (null != closure_1_0) {
-                v0(true);
-                v0 = 1;
-                const _Math = Math;
-                const random = Math.random();
-                obj1 = closure_1_0(closure_1_2[11]);
-                c1 = 2;
-                c4 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.completeQuestPreview(tmp22, random);
-                return obj1;
-              } else {
-                c4 = 3;
-              }
+              c4 = 3;
             }
           } else if (1 === tmp7) {
             v0 = 0;
-            v0(false);
-            throw callback;
+            closure_128_3(false);
+            throw tmp28;
           } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            callback();
+            closure_128_2();
             v0 = 0;
-            v0(false);
+            closure_128_3(false);
           }
           v0 = 0;
-          v0(false);
+          closure_128_3(false);
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } catch (tmp28) {
-          callback = tmp28;
           if (tmp4 === v0) {
             c4 = tmp2;
             throw tmp28;
@@ -321,106 +296,109 @@ class MobileQuestPreviewControlBar {
     obj = { style: tmp.container, children: null };
     tmp17 = jsx;
     callback4 = closure_5.useCallback(() => {
-      let obj = questId(refreshQuest[12]);
-      obj = { key: "quest-preview-menu", options: null, hasIcons: false };
+      let obj = { key: "quest-preview-menu", options: null, hasIcons: false };
       obj = { label: null, onPress: null };
-      const intl = questId(refreshQuest[13]).intl;
-      obj[0] = intl.string(questId(refreshQuest[13]).t.jQEfRT);
-      obj[1] = callback1;
+      const intl = util.intl;
+      obj.label = intl.string(util.t.jQEfRT);
+      obj.onPress = callback1;
       const items = [obj, , , ];
-      obj1 = { label: null, onPress: null };
-      const intl2 = questId(refreshQuest[13]).intl;
-      obj1[0] = intl2.string(questId(refreshQuest[13]).t.taqkwK);
-      obj1[1] = callback2;
+      const obj1 = { label: null, onPress: null };
+      const intl2 = util.intl;
+      obj1.label = intl2.string(util.t.taqkwK);
+      obj1.onPress = callback2;
       items[1] = obj1;
       const obj2 = { label: null, onPress: null };
-      const intl3 = questId(refreshQuest[13]).intl;
-      obj2[0] = intl3.string(questId(refreshQuest[13]).t.cKSLr4);
-      obj2[1] = callback3;
+      const intl3 = util.intl;
+      obj2.label = intl3.string(util.t.cKSLr4);
+      obj2.onPress = callback3;
       items[2] = obj2;
       const obj3 = { label: null, onPress: null };
-      const intl4 = questId(refreshQuest[13]).intl;
-      obj3[0] = intl4.string(questId(refreshQuest[13]).t.rNGQfD);
-      obj3[1] = function onPress() {
-        if (null != closure_0) {
-          closure_1_0(closure_1_2[14]).copy(closure_1_8.QUEST_PREVIEW_TOOL_2(tmp));
-          const obj = closure_1_0(closure_1_2[14]);
+      const intl4 = util.intl;
+      obj3.label = intl4.string(util.t.rNGQfD);
+      obj3.onPress = function onPress() {
+        if (null != closure_1_0) {
+          questId(refreshQuest[14]).copy(AppRoutes.QUEST_PREVIEW_TOOL_2(tmp));
+          const obj = questId(refreshQuest[14]);
         }
       };
       items[3] = obj3;
-      obj[1] = items;
+      obj.options = items;
       const result = obj.showSimpleActionSheet(obj);
     }, items9);
     items10 = [, , ];
-    items10[0] = jsx(require("QuestThemePicker"), {});
+    items10[0] = jsx(setQuestId(refreshQuest[15]), {});
     obj1 = { style: tmp.questInputContainer, children: null };
     obj2 = { style: tmp.searchField, children: null };
     obj3 = { options: memo, value: questId, onChange: callback, placeholder: null, allowCustomValue: true, isDisabled: null };
-    intl = require("getSystemLocale").intl;
-    obj3[3] = intl.string(require("getSystemLocale").t.Zw8jxn);
+    intl = questId(refreshQuest[13]).intl;
+    obj3.placeholder = intl.string(questId(refreshQuest[13]).t.Zw8jxn);
     tmp18 = stateFromStores1;
     if (!stateFromStores1) {
       tmp18 = tmp3;
     }
-    obj3[5] = tmp18;
-    obj2[1] = tmp17(require("MobileSearchableSelect").MobileSearchableSelect, obj3);
+    obj3.isDisabled = tmp18;
+    obj2.children = tmp17(questId(refreshQuest[16]).MobileSearchableSelect, obj3);
     items11 = [, ];
     items11[0] = tmp17(tmp16, obj2);
     obj4 = { style: tmp.iconsColumn, children: null };
-    obj5 = { icon: tmp17(require("RefreshIcon").RefreshIcon, {}), accessibilityLabel: null, onPress: null, disabled: null, loading: null, size: "sm", variant: "secondary" };
-    intl2 = require("getSystemLocale").intl;
-    obj5[1] = intl2.string(require("getSystemLocale").t.wzzjk9);
-    obj5[2] = refreshQuest;
+    obj5 = { icon: tmp17(tmp4(tmp5[18]).RefreshIcon, {}), accessibilityLabel: null, onPress: null, disabled: null, loading: null, size: "sm", variant: "secondary" };
+    intl2 = tmp4(tmp5[13]).intl;
+    obj5.accessibilityLabel = intl2.string(tmp4(tmp5[13]).t.wzzjk9);
+    obj5.onPress = refreshQuest;
     tmp19 = stateFromStores1;
     if (!stateFromStores1) {
       tmp20 = null;
       tmp19 = null == questId;
     }
-    obj5[3] = tmp19;
-    obj5[4] = stateFromStores1;
+    obj5.disabled = tmp19;
+    obj5.loading = stateFromStores1;
     items12 = [, ];
-    items12[0] = tmp17(require("IconButton").IconButton, obj5);
+    items12[0] = tmp17(tmp4(tmp5[17]).IconButton, obj5);
     tmp17Result = null != questId;
     if (tmp17Result) {
       obj6 = { icon: null, size: "sm", variant: "secondary", accessibilityLabel: null, disabled: null, onPress: null };
-      obj6[0] = tmp17(require("MoreVerticalIcon").MoreVerticalIcon, {});
-      intl3 = require("getSystemLocale").intl;
-      obj6[3] = intl3.string(require("getSystemLocale").t["+1H47t"]);
+      obj6.icon = tmp17(tmp4(tmp5[19]).MoreVerticalIcon, {});
+      intl3 = tmp4(tmp5[13]).intl;
+      obj6.accessibilityLabel = intl3.string(tmp4(tmp5[13]).t["+1H47t"]);
       if (!stateFromStores1) {
         stateFromStores1 = tmp3;
       }
-      obj6[4] = stateFromStores1;
-      obj6[5] = callback4;
-      tmp17Result = tmp17(require("IconButton").IconButton, obj6);
+      obj6.disabled = stateFromStores1;
+      obj6.onPress = callback4;
+      tmp17Result = tmp17(tmp4(tmp5[17]).IconButton, obj6);
     }
     items12[1] = tmp17Result;
-    obj4[1] = items12;
+    obj4.children = items12;
     items11[1] = tmp15(tmp16, obj4);
-    obj1[1] = items11;
+    obj1.children = items11;
     items10[1] = tmp15(tmp16, obj1);
     tmp17Result1 = null != stateFromStores;
     if (tmp17Result1) {
       obj7 = { variant: "text-sm/medium", color: "text-feedback-critical", style: null, children: null };
-      obj7[2] = tmp.errorText;
-      obj7[3] = stateFromStores.message;
-      tmp17Result1 = tmp17(require("Text").Text, obj7);
+      obj7.style = tmp.errorText;
+      obj7.children = stateFromStores.message;
+      tmp17Result1 = tmp17(tmp4(tmp5[20]).Text, obj7);
     }
     items10[2] = tmp17Result1;
-    obj[1] = items10;
+    obj.children = items10;
     return tmp15(tmp16, obj);
   }
 }
-({ jsx: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { container: { overflow: "visible", zIndex: 1 }, questInputContainer: null, searchField: null, iconsColumn: null, errorText: null };
-createCacheKey = { flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start", gap: ThemesDefault.space.PX_8, zIndex: 2, overflow: "visible" };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flex: 1, zIndex: 3, overflow: "visible" };
-createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_4 };
-let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_4 };
-createCacheKey[4] = { marginTop: ThemesDefault.space.PX_4, zIndex: 1 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginTop: ThemesDefault.space.PX_4, zIndex: 1 };
-let result = require("set").fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx");
+const View = fn(17).View;
+const AppRoutes = fn(1085).AppRoutes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = { container: { overflow: "visible", zIndex: 1 }, questInputContainer: null, searchField: null, iconsColumn: null, errorText: null };
+createStyles = { flexDirection: "row", alignItems: "flex-start", justifyContent: "flex-start", gap: nativeDefault.space.PX_8, zIndex: 2, overflow: "visible" };
+createStyles.questInputContainer = createStyles;
+createStyles.searchField = { flex: 1, zIndex: 3, overflow: "visible" };
+createStyles.iconsColumn = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
+let obj1 = { flexDirection: "row", gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
+createStyles.errorText = { marginTop: nativeDefault.space.PX_4, zIndex: 1 };
+let closure_11 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewControlBar.tsx");
 
 export default MobileQuestPreviewControlBar;
 export { MobileQuestPreviewControlBar };

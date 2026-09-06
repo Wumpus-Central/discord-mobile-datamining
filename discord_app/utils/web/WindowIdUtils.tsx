@@ -1,16 +1,16 @@
-// === Module 5555: getWindowId ===
+// === Module 5555: WindowIdUtils ===
 
-// Module 5555 (getWindowId)
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
+// Module 5555 (WindowIdUtils)
+import _mod12 from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
+const result = size.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
 
 export const getWindowId = function getWindowId(defaultView) {
   return defaultView.__DISCORD_WINDOW_ID;
 };
 export const setupWindowId = function setupWindowId(arg0) {
-  const uniqueIdResult = apply.uniqueId("window-");
+  const uniqueIdResult = _mod12.uniqueId("window-");
   arg0.__DISCORD_WINDOW_ID = uniqueIdResult;
   return uniqueIdResult;
 };

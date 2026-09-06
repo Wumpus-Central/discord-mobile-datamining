@@ -1,13 +1,15 @@
-// === Module 8066: apexExperiment ===
+// === Module 8066: ReferralReminderDCExperiment ===
 
-// Module 8066 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 8066 (ReferralReminderDCExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { name: "2026-02-referral-reminder-dc", kind: "user", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-referral-reminder-dc", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/premium/experiments/ReferralReminderDCExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/premium/experiments/ReferralReminderDCExperiment.tsx");
 
 export const ReferralReminderDCExperiment = apexExperiment;
 export const useIsReferralReminderDCExperimentEnabled = function useIsReferralReminderDCExperimentEnabled(location) {

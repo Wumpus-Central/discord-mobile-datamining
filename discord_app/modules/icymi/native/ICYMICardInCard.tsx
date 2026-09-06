@@ -1,67 +1,72 @@
-// === Module 16493: CutoutGuildIconWithUserCustom ===
+// === Module 16493: ICYMICardInCard ===
 
-// Module 16493 (CutoutGuildIconWithUserCustom)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import GuildIconSizes from "GuildIconSizes" /* 5584 */;
-import GuildIconSizesDefault from "GuildIconSizes" /* 5584 */;
-import SolidCutout from "SolidCutout" /* 8813 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import closure_7 from "createGuildRecordFromRust" /* 1979 */;
-import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+// Module 16493 (ICYMICardInCard)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import TextIcon2 from "TextIcon" /* 5080 */;
+import GuildIcon from "GuildIcon" /* 5584 */;
+import ClipView from "ClipView" /* 8813 */;
+import openDetailsActionSheet from "openDetailsActionSheet" /* 16492 */;
+import getIconForChannel from "getIconForChannel" /* 16494 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
+const GuildIconDefault = GuildIcon;
+const ClipViewDefault = ClipView;
+
+require = fn;
 function CutoutGuildIconWithUserCustom(guild) {
   guild = guild.guild;
   let obj = { style: { width: 40, height: 40 }, children: null };
   obj = { cutouts: null, children: null };
-  obj = { shape: null, x: 18, y: 18, size: 24 };
-  const tmp = callback3();
-  obj[0] = SolidCutout.CutoutShape.Circle;
-  const items = [obj];
-  obj[0] = items;
-  obj1 = { guild, size: null };
-  const tmp2 = SolidCutoutDefault;
-  obj1[1] = GuildIconSizes.GuildIconSizes.SMALL_32;
-  obj[1] = callback(GuildIconSizesDefault, obj1);
-  const items1 = [callback(tmp2, obj), ];
-  const tmp3 = GuildIconSizesDefault;
-  items1[1] = callback(Button.Avatar, { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: Button.AvatarSizes.XSMALL_20 });
-  obj[1] = items1;
-  return callback2(View, obj);
+  const point = { shape: null, x: 18, y: 18, size: 24 };
+  const tmp = closure_12();
+  point.shape = ClipView.CutoutShape.Circle;
+  const items = [point];
+  obj.cutouts = items;
+  obj = { guild, size: null };
+  const tmp2 = ClipViewDefault;
+  obj.size = GuildIcon.GuildIconSizes.SMALL_32;
+  obj.children = React7(GuildIconDefault, obj);
+  const items1 = [React7(tmp2, obj), ];
+  items1[1] = React7(native.Avatar, { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: native.AvatarSizes.XSMALL_20 });
+  obj.children = items1;
+  return closure_1_10(View, obj);
 }
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
+const View = fn(17).View;
+const DEFAULT_ROLE_COLOR_HEX = fn(1074).DEFAULT_ROLE_COLOR_HEX;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+const createICYMIStyles = fn(16452);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
-  obj = { container: obj, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: null, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
-  obj = { marginTop: marginHorizontal.margin };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
-  obj[2] = obj;
-  obj[3] = { flexDirection: "column", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
-  obj[4] = { flexDirection: "row", flexGrow: 1 };
-  obj1 = { flexDirection: "column", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
-  obj[5] = { flexGrow: 1, flexShrink: 1, marginLeft: ThemesDefault.space.PX_12 };
-  obj[6] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 2 };
-  obj[7] = { flexShrink: 1, flexGrow: 0, flexDirection: "row", alignItems: "center", gap: 6 };
-  const obj2 = { flexGrow: 1, flexShrink: 1, marginLeft: ThemesDefault.space.PX_12 };
-  obj[8] = { flexDirection: "row", justifyContent: "space-between", borderRadius: ThemesDefault.radii.sm };
-  obj[9] = { flexShrink: 1, flexGrow: 0, width: "100%" };
-  obj[10] = { flexDirection: "row", alignItems: "center", gap: 2 };
-  obj[11] = { flexDirection: "row", alignItems: "center", gap: 2, flex: 1 };
-  obj[12] = { paddingVertical: 1 };
-  const obj3 = { flexDirection: "row", justifyContent: "space-between", borderRadius: ThemesDefault.radii.sm };
-  obj[13] = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  const obj4 = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  obj[14] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_STRONG, flexShrink: 0 };
-  obj[15] = { position: "absolute", right: 0, bottom: 0 };
+  let obj = { container: { marginTop: marginHorizontal.margin }, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: null, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
+  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj.channelNameAndAccessory = obj;
+  obj = { flexDirection: "column", paddingBottom: nativeDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj.channelNameAndAccessoryLarge = obj;
+  obj.header = { flexDirection: "row", flexGrow: 1 };
+  obj.headerInfo = { flexGrow: 1, flexShrink: 1, marginLeft: nativeDefault.space.PX_12 };
+  obj.title = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 2 };
+  obj.titleLeft = { flexShrink: 1, flexGrow: 0, flexDirection: "row", alignItems: "center", gap: 6 };
+  const obj1 = { flexGrow: 1, flexShrink: 1, marginLeft: nativeDefault.space.PX_12 };
+  obj.subTitleContainer = { flexDirection: "row", justifyContent: "space-between", borderRadius: nativeDefault.radii.sm };
+  obj.subtitle = { flexShrink: 1, flexGrow: 0, width: "100%" };
+  obj.genContentSubtitle = { flexDirection: "row", alignItems: "center", gap: 2 };
+  obj.genContentSubtitleChannel = { flexDirection: "row", alignItems: "center", gap: 2, flex: 1 };
+  obj.subtitleTrailing = { paddingVertical: 1 };
+  const size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+  obj.separator = size;
+  const obj2 = { flexDirection: "row", justifyContent: "space-between", borderRadius: nativeDefault.radii.sm };
+  obj.normalContent = { borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_STRONG, flexShrink: 0 };
+  obj.authorAvatar = { position: "absolute", right: 0, bottom: 0 };
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMICardInCard.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/ICYMICardInCard.tsx");
 
 export default function ICYMICardInCard(message) {
   message = message.message;
@@ -79,24 +84,20 @@ export default function ICYMICardInCard(message) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  closure_7 = undefined;
-  let fontScale;
-  let stateFromStores;
-  let guild_id;
   let stateFromStores1;
   let stateFromStores2;
   let displayNameStylesFont;
   c14 = undefined;
-  closure_15 = undefined;
+  children = undefined;
   const tmp = stateFromStores2();
   closure_7 = tmp;
   let obj = message(id[12]);
-  fontScale = obj.useFontScale();
-  obj1 = message(id[13]);
+  const fontScale = obj.useFontScale();
+  let obj1 = message(id[13]);
   let items = [channelId];
   let items1 = [channelId];
-  stateFromStores = obj1.useStateFromStores(items, () => channelId.getChannel(channelId), items1);
-  guild_id = undefined;
+  const stateFromStores = obj1.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
+  let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
@@ -109,7 +110,7 @@ export default function ICYMICardInCard(message) {
   stateFromStores1 = tmp2Result.useStateFromStores(items2, () => {
     let guild = null;
     if (null != guild_id) {
-      guild = guild.getGuild(tmp);
+      guild = GuildStore.getGuild(tmp);
     }
     return guild;
   }, items3);
@@ -127,7 +128,7 @@ export default function ICYMICardInCard(message) {
         }
         member = null;
         if (null != id) {
-          member = flag2.getMember(tmp2, tmp3.author.id);
+          member = GuildMemberStore.getMember(tmp2, tmp3.author.id);
         }
       }
     }
@@ -181,37 +182,30 @@ export default function ICYMICardInCard(message) {
       return null;
     } else {
       if (!flag2) {
-        let obj = { guild: null, size: null };
-        obj[0] = tmp;
-        obj[1] = message(id[10]).GuildIconSizes.NORMAL;
-        let tmp10 = stateFromStores(actionLabel(id[10]), obj);
-        const tmp8 = actionLabel(id[10]);
+        let obj = { guild: tmp, size: GuildIcon.GuildIconSizes.NORMAL };
+        let tmp10 = React7(GuildIconDefault, obj);
       } else {
-        let author = message;
-        author = undefined;
+        let author;
         if (message != null) {
           author = author.author;
         }
       }
-      obj = { guild: null, author: null };
-      obj[0] = tmp;
+      obj = { guild: tmp, author: null };
       author = author.author;
-      obj[1] = author;
-      tmp10 = stateFromStores(displayNameStylesFont, obj);
+      obj.author = author;
+      tmp10 = React7(CutoutGuildIconWithUserCustom, obj);
     }
   }, items6);
   const memo1 = obj5.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
-      const obj = { style: null, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-      obj[0] = { maxWidth: 225 };
-      obj[4] = tmp.name;
-      tmp2 = stateFromStores(message(id[17]).Text, obj, tmp.id);
+      const obj = { style: { maxWidth: 225 }, lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: tmp.name };
+      tmp2 = React7(Text_Text.Text, obj, tmp.id);
     }
     return tmp2;
   }, items7);
   const tmp21 = actionLabel(id[18])(stateFromStores);
-  closure_15 = tmp21;
+  children = tmp21;
   const items8 = [flag2, , , , , , , , , , , ];
   author2 = undefined;
   if (message != null) {
@@ -243,84 +237,73 @@ export default function ICYMICardInCard(message) {
                 colorString = stateFromStores2.colorString;
               }
               if (colorString == null) {
-                colorString = fontScale;
+                colorString = DEFAULT_ROLE_COLOR_HEX;
               }
-              let obj7 = message(id[19]);
-              let obj = { style: null, children: null };
-              obj[0] = guild.genContentSubtitle;
+              let obj7 = getIconForChannel;
+              let obj = { style: closure_7.genContentSubtitle, children: null };
               const iconForChannel = obj7.getIconForChannel(tmp4);
-              obj = { color: null };
-              obj[0] = colorString;
+              obj = { color: colorString };
               const items = [obj, ];
               let tmp42;
               if (null != displayNameStylesFont) {
-                obj1 = { fontFamily: null };
-                obj1[0] = tmp41;
+                const obj1 = { fontFamily: tmp41 };
                 tmp42 = obj1;
               }
               const obj2 = { variant: "text-sm/semibold", style: null, children: null };
               items[1] = tmp42;
-              obj2[1] = items;
+              obj2.style = items;
               let combined = arr;
               if (arr.length > 20) {
                 const _HermesInternal = HermesInternal;
                 combined = "" + arr.slice(0, 17) + "...";
               }
-              obj2[2] = combined;
-              const items1 = [stateFromStores(message(id[17]).Text, obj2), , ];
+              obj2.children = combined;
+              const items1 = [React7(Text_Text.Text, obj2), , ];
               const obj3 = { variant: "text-sm/medium", color: "text-default", children: null };
-              const intl2 = message(id[20]).intl;
-              obj3[2] = intl2.string(message(id[20]).t.CHUAYk);
-              items1[1] = stateFromStores(message(id[17]).Text, obj3);
-              const obj4 = { style: null, children: null };
-              obj4[0] = guild.genContentSubtitleChannel;
-              const items2 = [stateFromStores(iconForChannel, { size: "xs", color: "text-default" }), ];
-              const obj5 = { variant: "text-sm/medium", color: "text-default", onPress: null, style: null, lineClamp: 1, ellipsizeMode: "tail", children: null };
-              obj5[2] = onHeaderPress;
-              obj5[3] = { flex: 1 };
-              obj5[6] = closure_15;
-              items2[1] = stateFromStores(message(id[17]).Text, obj5);
-              obj4[1] = items2;
-              items1[2] = guild_id(onHeaderPress, obj4);
-              obj[1] = items1;
-              return guild_id(onHeaderPress, obj);
+              const intl2 = util.intl;
+              obj3.children = intl2.string(util.t.CHUAYk);
+              items1[1] = React7(Text_Text.Text, obj3);
+              const obj4 = { style: closure_7.genContentSubtitleChannel, children: null };
+              const items2 = [React7(iconForChannel, { size: "xs", color: "text-default" }), ];
+              const obj5 = { variant: "text-sm/medium", color: "text-default", onPress: onHeaderPress, style: { flex: 1 }, lineClamp: 1, ellipsizeMode: "tail", children };
+              items2[1] = React7(Text_Text.Text, obj5);
+              obj4.children = items2;
+              items1[2] = closure_2_10(View, obj4);
+              obj.children = items1;
+              return closure_2_10(View, obj);
             }
           }
         }
       }
     }
     if (null != stateFromStores) {
-      obj = message(id[19]);
+      obj = getIconForChannel;
       let TextIcon = obj.getIconForChannel(tmp5);
     } else {
-      TextIcon = message(id[21]).TextIcon;
+      TextIcon = TextIcon2.TextIcon;
     }
-    const obj6 = { style: guild.genContentSubtitle, children: null };
+    const obj6 = { style: closure_7.genContentSubtitle, children: null };
     obj7 = { variant: "text-sm/medium", color: "text-default", children: actionLabel };
-    const items3 = [stateFromStores(message(id[17]).Text, obj7), ];
+    const items3 = [React7(Text_Text.Text, obj7), ];
     let tmp13 = null;
     if (null != stateFromStores) {
       const obj8 = { children: null };
       const obj9 = { variant: "text-sm/medium", color: "text-default", children: null };
-      const intl = message(id[20]).intl;
-      obj9[2] = intl.string(message(id[20]).t.CHUAYk);
-      const items4 = [stateFromStores(message(id[17]).Text, obj9), ];
-      const obj10 = { style: null, children: null };
-      obj10[0] = guild.genContentSubtitleChannel;
-      const items5 = [stateFromStores(TextIcon, { size: "xs", color: "text-default" }), ];
-      const obj11 = { variant: "text-sm/medium", color: "text-default", onPress: null, style: null, lineClamp: 1, ellipsizeMode: "tail", children: null };
-      obj11[2] = onHeaderPress;
-      obj11[3] = { flex: 1 };
-      obj11[6] = closure_15;
-      items5[1] = stateFromStores(message(id[17]).Text, obj11);
-      obj10[1] = items5;
-      items4[1] = guild_id(onHeaderPress, obj10);
-      obj8[0] = items4;
-      tmp13 = guild_id(stateFromStores1, obj8);
+      const intl = util.intl;
+      obj9.children = intl.string(util.t.CHUAYk);
+      const items4 = [React7(Text_Text.Text, obj9), ];
+      const obj10 = { style: closure_7.genContentSubtitleChannel, children: null };
+      const items5 = [React7(TextIcon, { size: "xs", color: "text-default" }), ];
+      const obj11 = { variant: "text-sm/medium", color: "text-default", onPress: onHeaderPress, style: { flex: 1 }, lineClamp: 1, ellipsizeMode: "tail", children };
+      items5[1] = React7(Text_Text.Text, obj11);
+      obj10.children = items5;
+      items4[1] = closure_2_10(View, obj10);
+      obj8.children = items4;
+      tmp13 = closure_2_10(closure_2_11, obj8);
     }
     items3[1] = tmp13;
-    obj6[1] = items3;
-    return guild_id(onHeaderPress, obj6);
+    obj6.children = items3;
+    return closure_2_10(View, obj6);
   }, items8);
   const items10 = [fontScale, , ];
   ({ channelNameAndAccessoryLarge: arr11[1], channelNameAndAccessory: arr11[2] } = tmp);
@@ -330,21 +313,16 @@ export default function ICYMICardInCard(message) {
       tmp2 = null != stateFromStores;
     }
     if (tmp2) {
-      let obj = message(id[22]);
-      obj = { guildId: null, channelId: null, id: null, type: null };
-      obj[0] = stateFromStores1.id;
-      obj[1] = stateFromStores.id;
-      obj[2] = id;
-      obj[3] = interactionType;
+      const obj = { guildId: stateFromStores1.id, channelId: stateFromStores.id, id, type: interactionType };
       const result = obj.openDetailsActionSheet(obj);
     }
   }, items9);
   obj = { style: tmp.container, children: null };
   const memo3 = obj5.useMemo(() => {
     if (fontScale > 1.8) {
-      let channelNameAndAccessory = guild.channelNameAndAccessoryLarge;
+      let channelNameAndAccessory = closure_7.channelNameAndAccessoryLarge;
     } else {
-      channelNameAndAccessory = guild.channelNameAndAccessory;
+      channelNameAndAccessory = closure_7.channelNameAndAccessory;
     }
     return channelNameAndAccessory;
   }, items10);
@@ -358,28 +336,27 @@ export default function ICYMICardInCard(message) {
   const items12 = [memo1, ];
   let tmp28Result = !flag;
   if (!flag) {
-    let obj6 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
-    obj6[3] = tmp2(tmp3[24]).getRelativeTimestamp(timestamp);
+    let obj6 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp2(tmp3[24]).getRelativeTimestamp(timestamp) };
     tmp28Result = tmp28(tmp2(tmp3[17]).Text, obj6);
     const tmp2Result3 = tmp2(tmp3[24]);
   }
   items12[1] = tmp28Result;
-  obj5[1] = items12;
+  obj5.children = items12;
   const items13 = [guild_id(onHeaderPress, obj5), ];
   let obj7 = { onPress: callback, style: tmp.subtitleTrailing, hitSlop: 8, children: null };
   const tmp2Result1 = message(id[15]);
-  obj7[3] = stateFromStores(message(id[25]).MoreHorizontalIcon, { color: actionLabel(id[8]).colors.ICON_MUTED, size: "sm" });
+  obj7.children = stateFromStores(message(id[25]).MoreHorizontalIcon, { color: actionLabel(id[8]).colors.ICON_MUTED, size: "sm" });
   items13[1] = stateFromStores(message(id[23]).PressableOpacity, obj7);
-  obj4[1] = items13;
+  obj4.children = items13;
   const items14 = [guild_id(onHeaderPress, obj4), ];
-  let obj8 = { color: actionLabel(id[8]).colors.ICON_MUTED, size: "sm" };
-  items14[1] = stateFromStores(onHeaderPress, { style: tmp.subTitleContainer, children: stateFromStores(onHeaderPress, obj10) });
-  obj3[1] = items14;
+  let obj9 = { style: tmp.subTitleContainer, children: stateFromStores(onHeaderPress, { style: tmp.subtitle, children: memo2 }) };
+  items14[1] = stateFromStores(onHeaderPress, obj9);
+  obj3.children = items14;
   items11[1] = guild_id(onHeaderPress, obj3);
-  obj2[1] = items11;
-  obj1[1] = guild_id(onHeaderPress, obj2);
-  obj[3] = stateFromStores(onHeaderPress, obj1);
+  obj2.children = items11;
+  obj1.children = guild_id(onHeaderPress, obj2);
+  obj.children = stateFromStores(onHeaderPress, obj1);
   const items15 = [stateFromStores(message(id[23]).PressableHighlight, obj), stateFromStores(onHeaderPress, { style: tmp.normalContent, children })];
-  obj[1] = items15;
+  obj.children = items15;
   return guild_id(onHeaderPress, obj);
 };

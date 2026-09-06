@@ -1,47 +1,50 @@
 // === Module 14788: TwoFASetupScan ===
 
 // Module 14788 (TwoFASetupScan)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import ClipboardUtils from "ClipboardUtils" /* 7190 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, copy: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
-createCacheKey[1] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupScan.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, copy: null };
+createStyles = { color: nativeDefault.colors.TEXT_BRAND };
+createStyles.copy = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupScan.tsx");
 
 export default function TwoFASetupScan(totpSecret) {
   totpSecret = totpSecret.totpSecret;
-  dependencyMap = undefined;
-  const tmp = callback3();
-  const tmp2 = callback(React.useState(false), 2);
+  const tmp = closure_6();
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp2[1];
   const items = [totpSecret];
-  callback = React.useCallback(() => {
-    dependencyMap(true);
-    totpSecret(7190).copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
+  const callback = noop.useCallback(() => {
+    closure_1(true);
+    ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
   let obj = totpSecret(14786);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { bottom: true, style: tmp.container, children: null };
-  obj = { style: items1, children: null };
-  items1 = [, ];
+  obj = { style: null, children: null };
+  const items1 = [, ];
   ({ modalHeader: arr2[0], text: arr2[1] } = twoFASetupStyles);
+  obj.style = items1;
   const intl = totpSecret(1114).intl;
-  obj[1] = intl.string(totpSecret(1114).t["hg/+aT"]);
-  const items2 = [callback2(totpSecret(1178).LegacyText, obj), , , ];
-  obj1 = { style: items3, children: null };
-  items3 = [, ];
+  obj.children = intl.string(totpSecret(1114).t["hg/+aT"]);
+  const items2 = [closure_4(totpSecret(1178).LegacyText, obj), , , ];
+  const obj1 = { style: null, children: null };
+  const items3 = [, ];
   ({ modalBody: arr4[0], text: arr4[1] } = twoFASetupStyles);
+  obj1.style = items3;
   const intl2 = totpSecret(1114).intl;
-  obj1[1] = intl2.string(totpSecret(1114).t["UQR+Qy"]);
-  items2[1] = callback2(totpSecret(1178).LegacyText, obj1);
-  items2[2] = callback2(totpSecret(4556).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
+  obj1.children = intl2.string(totpSecret(1114).t["UQR+Qy"]);
+  items2[1] = closure_4(totpSecret(1178).LegacyText, obj1);
+  items2[2] = closure_4(totpSecret(4556).Text, { variant: "text-md/bold", style: { textAlign: "center" }, children: totpSecret });
   const obj2 = { accessibilityRole: "button", onPress: callback, children: null };
   const obj3 = { style: tmp.copy, children: null };
   const intl3 = totpSecret(1114).intl;
@@ -53,10 +56,10 @@ export default function TwoFASetupScan(totpSecret) {
     stringResult = string(t.OpuAlK);
   }
   const obj4 = { children: null };
-  obj3[1] = stringResult;
-  obj2[2] = callback2(totpSecret(1178).LegacyText, obj3);
-  items2[3] = callback2(totpSecret(5123).PressableOpacity, obj2);
-  obj[2] = items2;
-  obj4[0] = closure_5(totpSecret(7123).SafeAreaPaddingView, obj);
-  return callback2(totpSecret(14782).TwoFASetupModalScreen, obj4);
+  obj3.children = stringResult;
+  obj2.children = closure_4(totpSecret(1178).LegacyText, obj3);
+  items2[3] = closure_4(totpSecret(5123).PressableOpacity, obj2);
+  obj.children = items2;
+  obj4.children = closure_5(totpSecret(7123).SafeAreaPaddingView, obj);
+  return closure_4(totpSecret(14782).TwoFASetupModalScreen, obj4);
 };

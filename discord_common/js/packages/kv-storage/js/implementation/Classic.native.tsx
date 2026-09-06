@@ -1,10 +1,10 @@
-// === Module 1989: __KvStorage ===
+// === Module 1989: Classic ===
 
-// Module 1989 (__KvStorage)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 1989 (Classic)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
+const NativeModules = _mod17.NativeModules;
 if (null != global.__KvStorage) {
   let __KvStorage = global.__KvStorage;
 } else if (null == NativeModules.KvStorage) {
@@ -34,6 +34,6 @@ if (null != global.__KvStorage) {
     throw error3;
   }
 }
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx");
 
 export const KV_RAW = __KvStorage;

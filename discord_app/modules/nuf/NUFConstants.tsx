@@ -1,9 +1,9 @@
-// === Module 12705: NewUserTypes ===
+// === Module 12705: NUFConstants ===
 
-// Module 12705 (NewUserTypes)
-import set from "set" /* 2 */;
+// Module 12705 (NUFConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/nuf/NUFConstants.tsx");
+const result = size.fileFinishedImporting("modules/nuf/NUFConstants.tsx");
 
 export const NewUserTypes = { MARKETING_UNCLAIMED: 0, [0]: "MARKETING_UNCLAIMED", INVITE_UNCLAIMED: 1, [1]: "INVITE_UNCLAIMED", ORGANIC_REGISTERED: 2, [2]: "ORGANIC_REGISTERED", ORGANIC_REGISTERED_GUILD_TEMPLATE: 3, [3]: "ORGANIC_REGISTERED_GUILD_TEMPLATE" };
 export const NUF_NOTIFICATION_MODAL_KEY = "nuf-notification-modal-key";

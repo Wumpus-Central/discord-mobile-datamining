@@ -1,17 +1,16 @@
 // === Module 5147: openPrivacySettings ===
 
 // Module 5147 (openPrivacySettings)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 5148 */;
+import _mod17 from "module_17" /* 17 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5148 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");
 
 export default function openPrivacySettings() {
   if (obj.isAndroid()) {
-    enforcingDefault.openPrivacySettings();
-    const obj2 = enforcingDefault;
+    NativeDeviceSettingsModuleDefault.openPrivacySettings();
   } else {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     DeviceSettingsManager.openPrivacySettings();

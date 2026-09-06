@@ -1,24 +1,27 @@
 // === Module 12580: useMaybeGetSortedBoosts ===
 
 // Module 12580 (useMaybeGetSortedBoosts)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "handleModifyingAppliedBoostStart" /* 12562 */;
-import closure_6 from "handleConnectionReset" /* 5426 */;
-import closure_7 from "trackCommunicationDisabled" /* 2021 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import util from "util" /* 1114 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 4458 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12562 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5426 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");
 
 export default function useMaybeGetSortedBoosts(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
   const items = [stateFromStoresArray1];
   const items1 = [arg0];
-  stateFromStoresArray = _require(stateFromStoresArray[6]).useStateFromStoresArray(items, () => {
-    let appliedGuildBoostsForGuild = stateFromStoresArray1.getAppliedGuildBoostsForGuild(closure_0);
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
+    let appliedGuildBoostsForGuild = AppliedGuildBoostStore.getAppliedGuildBoostsForGuild(closure_0);
     if (appliedGuildBoostsForGuild == null) {
       appliedGuildBoostsForGuild = [];
     }
@@ -27,34 +30,28 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   first = first(memo.useState(() => Date.now()), 1)[0];
   const items2 = [stateFromStoresArray, arg1, first];
   memo = memo.useMemo(() => {
-    const mapped = stateFromStoresArray.map((ended) => {
-      let obj = closure_1_0(closure_1_2[7]);
-      const boostLifecycleInfo = obj.getBoostLifecycleInfo(ended, closure_3);
-      const boostLifecycleTimestamp = closure_1_0(closure_1_2[7]).getBoostLifecycleTimestamp(ended, boostLifecycleInfo);
+    const mapped = stateFromStoresArray.map((boost) => {
+      let obj = closure_0(stateFromStoresArray[7]);
+      const boostLifecycleInfo = obj.getBoostLifecycleInfo(boost, first);
+      const boostLifecycleTimestamp = closure_0(stateFromStoresArray[7]).getBoostLifecycleTimestamp(boost, boostLifecycleInfo);
       if ("expiring" === boostLifecycleInfo.phase) {
-        obj = { boost: null, phase: "expiring", sortKey: null, endsAt: null };
-        obj[0] = ended;
-        obj[2] = boostLifecycleTimestamp;
-        obj[3] = boostLifecycleInfo.endsAt;
+        obj = { boost, phase: "expiring", sortKey: boostLifecycleTimestamp, endsAt: boostLifecycleInfo.endsAt };
       } else {
-        obj = { boost: null, phase: null, sortKey: null };
-        obj[0] = ended;
-        obj[1] = boostLifecycleInfo.phase;
-        obj[2] = boostLifecycleTimestamp;
+        obj = { boost, phase: boostLifecycleInfo.phase, sortKey: boostLifecycleTimestamp };
       }
       return obj;
     });
     const sorted = mapped.sort((sortKey, sortKey2) => sortKey2.sortKey - sortKey.sortKey);
     return sorted.slice(0, closure_1);
   }, items2);
-  let obj = _require(stateFromStoresArray[6]);
+  let obj = require("initialize");
   const items3 = [memo1];
   const items4 = [arg0, memo];
-  stateFromStoresArray1 = _require(stateFromStoresArray[6]).useStateFromStoresArray(items3, () => {
+  stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items3, () => {
     const set = new Set();
     const item = memo.forEach((boost) => {
       boost = boost.boost;
-      if (null == memo1.getMember(set, boost.userId)) {
+      if (null == GuildMemberStore.getMember(closure_0, boost.userId)) {
         set.add(boost.userId);
       }
     });
@@ -63,13 +60,13 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const items5 = [arg0, stateFromStoresArray1];
   const effect = memo.useEffect(() => {
     if (stateFromStoresArray1.length > 0) {
-      const item = stateFromStoresArray1.forEach((id) => closure_1_6.requestMember(closure_0, id));
+      const item = stateFromStoresArray1.forEach((item) => stateFromStores.requestMember(closure_1_0, item));
     }
   }, items5);
-  const obj2 = _require(stateFromStoresArray[6]);
+  const obj2 = require("initialize");
   const items6 = [stateFromStores1];
-  const stateFromStores = _require(stateFromStoresArray[6]).useStateFromStores(items6, () => {
-    const guild = stateFromStores1.getGuild(closure_0);
+  const stateFromStores = require("initialize").useStateFromStores(items6, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let prop;
     if (guild != null) {
       prop = guild.premiumSubscriberCount;
@@ -78,28 +75,27 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   });
   const items7 = [stateFromStoresArray];
   memo1 = memo.useMemo(() => stateFromStoresArray.filter((ended) => !ended.ended).length, items7);
-  const obj3 = _require(stateFromStoresArray[6]);
+  const obj3 = require("initialize");
   const items8 = [stateFromStoresArray1];
   const items9 = [arg0];
-  stateFromStores1 = _require(stateFromStoresArray[6]).useStateFromStores(items8, () => null != stateFromStoresArray1.getLastFetchedAtForGuild(closure_0), items9);
+  stateFromStores1 = require("initialize").useStateFromStores(items8, () => null != AppliedGuildBoostStore.getLastFetchedAtForGuild(closure_0), items9);
   const items10 = [arg0, stateFromStores, memo1, stateFromStores1];
   const effect1 = memo.useEffect(() => {
     if (!tmp) {
-      const appliedGuildBoostsForGuild = callback(stateFromStoresArray[8]).fetchAppliedGuildBoostsForGuild(callback, { includeEnded: true });
-      const obj = callback(stateFromStoresArray[8]);
+      const appliedGuildBoostsForGuild = BoostingActionCreators.fetchAppliedGuildBoostsForGuild(closure_0, { includeEnded: true });
     }
   }, items10);
   return memo;
 };
 export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
-  const _require = boost;
-  let obj = DISCORD_EPOCHDefault;
+  _require = boost;
+  let obj = SnowflakeUtilsDefault;
   const date = new Date(obj.extractTimestamp(boost.id));
-  const items = [closure_7];
+  const items = [GuildMemberStore];
   const items1 = [boost];
-  const stateFromStoresObject = _require(504).useStateFromStoresObject(items, () => {
-    const member = closure_1_7.getMember(boost.guildId, boost.userId);
-    let nick = closure_1_7.getNick(boost.guildId, boost.userId);
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+    const member = GuildMemberStore.getMember(boost.guildId, boost.userId);
+    let nick = GuildMemberStore.getNick(boost.guildId, boost.userId);
     if (nick == null) {
       const user = boost.user;
       let username;
@@ -109,8 +105,8 @@ export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
       nick = username;
     }
     if (nick == null) {
-      const intl = boost(closure_1_2[10]).intl;
-      nick = intl.string(boost(closure_1_2[10]).t["30mdIx"]);
+      const intl = util.intl;
+      nick = intl.string(util.t["30mdIx"]);
     }
     const obj = { username: nick, roleColor: null, roleColorStrings: null };
     let colorString;
@@ -120,7 +116,7 @@ export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
     if (colorString == null) {
       colorString = null;
     }
-    obj[1] = colorString;
+    obj.roleColor = colorString;
     let colorStrings;
     if (member != null) {
       colorStrings = member.colorStrings;
@@ -128,7 +124,7 @@ export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
     if (colorStrings == null) {
       colorStrings = null;
     }
-    obj[2] = colorStrings;
+    obj.roleColorStrings = colorStrings;
     return obj;
   }, items1);
   obj = { timestamp: date, username: stateFromStoresObject.username, roleColor: stateFromStoresObject.roleColor, roleColorStrings: stateFromStoresObject.roleColorStrings };

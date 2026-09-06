@@ -1,29 +1,27 @@
-// === Module 7588: constructGoLiveSource ===
+// === Module 7588: utils/CollectiblesUtils ===
 
-// Module 7588 (constructGoLiveSource)
-import set from "set" /* 2 */;
-import resetCache from "resetCache" /* 4242 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
+// Module 7588 (utils/CollectiblesUtils)
+import DateUtils from "DateUtils" /* 4242 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4607 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 7393 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7393 */;
 import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7589 */;
+import size from "module_2" /* 2 */;
 
-const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
-const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
+const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
+const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
 export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
-  obj = { qualityOptions: obj, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
+  let obj = { qualityOptions: null, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
   obj = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution, frameRate };
+  obj.qualityOptions = obj;
   if (null != desktopSource) {
     if (null != desktopSource.desktopSource) {
-      obj = { sourceId: null, sound: true };
-      obj[0] = desktopSource.desktopSource.id;
+      obj = { sourceId: desktopSource.desktopSource.id, sound: true };
       obj.desktopSettings = obj;
     }
     if (null != desktopSource.cameraSource) {
-      obj1 = { videoDeviceGuid: null, audioDeviceGuid: null };
-      obj1[0] = desktopSource.cameraSource.videoDeviceGuid;
-      obj1[1] = desktopSource.cameraSource.audioDeviceGuid;
+      const obj1 = { videoDeviceGuid: desktopSource.cameraSource.videoDeviceGuid, audioDeviceGuid: desktopSource.cameraSource.audioDeviceGuid };
       obj.cameraSettings = obj1;
     }
   }
@@ -77,8 +75,8 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
   }
 };
 export const useFetchFractionalPremiumInfo = function useFetchFractionalPremiumInfo() {
-  const tmp = calculateFractionalPremiumInfoDefault({ forceFetch: true });
-  let obj = resetCache;
+  const tmp = useFractionalPremiumInfoDefault({ forceFetch: true });
+  let obj = DateUtils;
   obj = { isLoading: !tmp.fetched, isFractionalPremiumActive: tmp.isFractionalPremiumActive, expiresAt: obj.dateFormat(tmp.endsAt, "L") };
   return obj;
 };

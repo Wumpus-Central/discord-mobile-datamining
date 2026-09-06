@@ -1,49 +1,54 @@
-// === Module 8334: useMediaShareActions ===
+// === Module 8334: MediaShareActions ===
 
-// Module 8334 (useMediaShareActions)
+// Module 8334 (MediaShareActions)
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import useChatLayout from "useChatLayout" /* 4420 */;
+import DownloadIcon from "DownloadIcon" /* 4509 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import transitionToChannel from "transitionToChannel" /* 4571 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4710 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "filterStaffGuild" /* 8335 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "reinjectEphemerals" /* 4781 */;
-import closure_7 from "messages" /* 8360 */;
-import ME from "ME" /* 1074 */;
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7601 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ActionSheetRow from "ActionSheetRow" /* 7200 */;
+import MediaSourceUtil from "MediaSourceUtil" /* 8263 */;
+import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8266 */;
+import showShareActionSheet from "showShareActionSheet" /* 8361 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
+import ShareIcon from "ShareIcon" /* 9053 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11680 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11688 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11736 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 12956 */;
+import noop from "module_19" /* 19 */;
+import ICYMIStore from "ICYMIStore" /* 8335 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MessageStore from "MessageStore" /* 4781 */;
+import MessagePreviewStore from "MessagePreviewStore" /* 8360 */;
 
-require = arg1;
+require = fn;
 function useMediaShareActions(source) {
   source = source.source;
   let disableDownload = source.disableDownload;
   const shareable = source.shareable;
-  let channelId;
-  let messageId;
-  let stateFromStores;
   let obscure;
-  let callback;
-  let callback1;
-  let callback2;
-  let callback3;
-  let callback4;
-  let callback5;
-  let canForwardMessage;
+  let action;
   let videoSourceType;
-  channelId = source.channelId;
-  messageId = source.messageId;
-  let items = [obscure, messageId, callback];
+  const channelId = source.channelId;
+  const messageId = source.messageId;
+  let items = [obscure, messageId, action];
   let items1 = [channelId, messageId];
-  stateFromStores = source(shareable[8]).useStateFromStores(items, () => {
+  const stateFromStores = source(shareable[8]).useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != channelId) {
       tmp2 = null;
       if (null != messageId) {
-        let message = obscure.getMessage(tmp, tmp3);
+        let message = MessageStore.getMessage(tmp, tmp3);
         if (message == null) {
-          message = callback.getMessage(tmp3);
+          message = MessagePreviewStore.getMessage(tmp3);
         }
         if (message == null) {
-          message = messageId.getMessage(tmp3);
+          message = ICYMIStore.getMessage(tmp3);
         }
         tmp2 = message;
       }
@@ -57,101 +62,92 @@ function useMediaShareActions(source) {
   let obj2 = source(shareable[9]);
   obscure = source(shareable[10]).getAttachmentObscurityProps({ attachment: source, shouldObscureSpoiler: true, enabledContentHarmTypeFlags: 0, shouldAgeVerify: result }).obscure;
   const items2 = [source];
-  callback = channelId.useCallback(() => {
-    disableDownload(shareable[11]).hideActionSheet();
+  action = channelId.useCallback(() => {
+    ActionSheetActionCreatorsDefault.hideActionSheet();
     if (null != source.videoURI) {
-      const result = source(tmp[12]).downloadMediaAssetWithContentType(tmp3.videoURI, callback3.VIDEO, tmp3.contentType);
-      const obj2 = source(tmp[12]);
+      const result = MediaSourceUtil.downloadMediaAssetWithContentType(tmp3.videoURI, constants2.VIDEO, tmp3.contentType);
     } else if (null != tmp3.sourceURI) {
-      const result1 = source(tmp[13]).urlMatchesFileExtension(tmp3.sourceURI, callback2);
-      const obj3 = source(tmp[13]);
-      const result2 = source(tmp[12]).downloadMediaAssetWithContentType(tmp3.sourceURI, result1 ? tmp11.GIF : tmp11.IMAGE, tmp3.contentType);
-      const obj4 = source(tmp[12]);
+      const result1 = MediaFormatTesters.urlMatchesFileExtension(tmp3.sourceURI, React7);
+      const result2 = MediaSourceUtil.downloadMediaAssetWithContentType(tmp3.sourceURI, result1 ? tmp11.GIF : tmp11.IMAGE, tmp3.contentType);
     }
   }, items2);
   const items3 = [source];
-  callback1 = channelId.useCallback(() => {
-    let obj = disableDownload(shareable[11]);
+  const callback1 = channelId.useCallback(() => {
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     obj = { source };
-    source(shareable[14]).showShareActionSheet(obj, callback1.MEDIA_VIEWER);
-    const MediaViewerAnalytics = source(shareable[15]).MediaViewerAnalytics;
+    showShareActionSheet.showShareActionSheet(obj, constants.MEDIA_VIEWER);
+    const MediaViewerAnalytics = MediaViewerAnalyticsManager.MediaViewerAnalytics;
     const result = MediaViewerAnalytics.trackMediaViewerShareButtonTapped();
   }, items3);
   const items4 = [source];
-  callback2 = channelId.useCallback(() => {
-    let obj = disableDownload(shareable[11]);
+  const callback2 = channelId.useCallback(() => {
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     if (null != source.sourceURI) {
-      obj = { href: null, onConfirm: null };
-      obj[0] = tmp3.sourceURI;
-      obj[1] = function onConfirm() {
-        closure_1_1(closure_1_2[17]).openURL(sourceURI.sourceURI);
+      obj = {
+        href: tmp3.sourceURI,
+        onConfirm() {
+            disableDownload(shareable[17]).openURL(sourceURI.sourceURI);
+          }
       };
-      source(shareable[16]).handleClick(obj);
-      const obj2 = source(shareable[16]);
+      MaskedLinkUtils.handleClick(obj);
     }
   }, items4);
   const items5 = [stateFromStores, source];
-  callback3 = channelId.useCallback(() => {
-    let obj = disableDownload(shareable[11]);
+  const callback3 = channelId.useCallback(() => {
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     if (null != stateFromStores) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = tmp8.attachmentId;
         if (null != attachmentId) {
-          obj = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
-          obj[0] = tmp3;
+          obj = { message: tmp3, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
-          obj[0] = items;
-          obj[3] = obj;
-          source(tmp[18]).openForwardModal(obj);
-          const obj5 = source(tmp[18]);
+          obj.onlyAttachmentIds = items;
+          obj.forwardOptions = obj;
+          ForwardModalUtils.openForwardModal(obj);
         }
       } else {
-        obj1 = source(tmp[18]);
-        obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
-        obj1[0] = tmp3;
+        const obj1 = { message: tmp3, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [tmp8.mediaIndex];
-        obj2[0] = items1;
-        obj1[3] = obj2;
+        obj2.onlyEmbedIndices = items1;
+        obj1.forwardOptions = obj2;
         obj1.openForwardModal(obj1);
       }
     }
   }, items5);
   const items6 = [source];
-  callback4 = channelId.useCallback(() => {
-    let obj = disableDownload(shareable[11]);
+  const callback4 = channelId.useCallback(() => {
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     if (tmp4) {
       ({ channelId, messageId } = tmp3);
-      const obj2 = source(tmp[19]);
-      const isChatLockedOpen = source(tmp[20]).getChatLayout().isChatLockedOpen;
-      obj = { navigationReplace: null };
-      obj[0] = !isChatLockedOpen;
+      const obj2 = transitionToChannel;
+      const isChatLockedOpen = useChatLayout.getChatLayout().isChatLockedOpen;
+      obj = { navigationReplace: !isChatLockedOpen };
       obj2.transitionToMessage(channelId, messageId, obj);
-      const obj3 = source(tmp[20]);
       const tmp6 = !isChatLockedOpen;
     }
   }, items6);
   const items7 = [source];
-  callback5 = channelId.useCallback(() => {
-    let obj = disableDownload(shareable[11]);
+  const callback5 = channelId.useCallback(() => {
+    let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
     const attachmentId = source.attachmentId;
     if (tmp5) {
       obj = { messageId: null, channelId: null, attachmentId: null };
-      ({ messageId: obj3[0], channelId: obj3[1] } = tmp4);
-      obj[2] = attachmentId;
-      disableDownload(tmp2[11]).openLazy(source(tmp2[22])(tmp2[21], tmp2.paths), callback4, obj);
-      const tmpResult = disableDownload(tmp2[11]);
+      ({ messageId: obj3.messageId, channelId: obj3.channelId } = tmp4);
+      obj.attachmentId = attachmentId;
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11677, dependencyMap.paths), closure_11, obj);
+      const tmpResult = ActionSheetActionCreatorsDefault;
     }
   }, items7);
   let obj3 = source(shareable[10]);
   let obj4 = channelId;
-  canForwardMessage = source(shareable[23]).useCanForwardMessage(stateFromStores);
+  let canForwardMessage = source(shareable[23]).useCanForwardMessage(stateFromStores);
   if (canForwardMessage) {
     let tmp13 = null != source.attachmentId;
     if (!tmp13) {
@@ -161,99 +157,98 @@ function useMediaShareActions(source) {
   }
   let obj5 = source(shareable[23]);
   videoSourceType = tmp(tmp2[12]).getVideoSourceType(source);
-  const items8 = [disableDownload, callback3, callback4, callback2, callback5, callback, callback1, obscure, shareable, canForwardMessage, videoSourceType, , , ];
+  const items8 = [disableDownload, callback3, callback4, callback2, callback5, action, callback1, obscure, shareable, canForwardMessage, videoSourceType, , , ];
   ({ channelId: arr9[11], messageId: arr9[12], disableDownload: arr9[13] } = source);
   return obj4.useMemo(() => {
     disableDownload = true === disableDownload;
     if (!disableDownload) {
-      disableDownload = videoSourceType === source(shareable[12]).VideoSourceType.WEB_FILE_IFRAME;
+      disableDownload = videoSourceType === MediaSourceUtil.VideoSourceType.WEB_FILE_IFRAME;
     }
     if (!disableDownload) {
       disableDownload = source.disableDownload;
     }
     const items = [];
     if (!disableDownload) {
-      let obj = { IconComponent: null, label: null, action: null };
-      obj[0] = source(shareable[24]).DownloadIcon;
-      const intl = source(shareable[25]).intl;
-      obj[1] = intl.string(source(shareable[25]).t["R3BPH+"]);
-      obj[2] = callback;
+      let obj = { IconComponent: DownloadIcon.DownloadIcon, label: null, action: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t["R3BPH+"]);
+      obj.action = action;
       items.push(obj);
     }
     if (canForwardMessage) {
-      obj = { IconComponent: null, label: null, action: null };
-      obj[0] = disableDownload(shareable[26]);
-      const intl2 = source(shareable[25]).intl;
-      obj[1] = intl2.string(source(shareable[25]).t.I3ltXO);
-      obj[2] = callback3;
+      obj = { IconComponent: ForwardingIconDefault, label: null, action: null };
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.I3ltXO);
+      obj.action = callback3;
       items.push(obj);
     }
     if (shareable) {
-      obj = { IconComponent: null, label: null, action: null };
-      obj[0] = source(shareable[27]).ShareIcon;
-      const intl3 = source(shareable[25]).intl;
-      obj[1] = intl3.string(source(shareable[25]).t.RDE0Sc);
-      obj[2] = callback1;
+      obj = { IconComponent: ShareIcon.ShareIcon, label: null, action: null };
+      const intl3 = util.intl;
+      obj.label = intl3.string(util.t.RDE0Sc);
+      obj.action = callback1;
       items.push(obj);
     }
-    obj1 = { IconComponent: source(shareable[28]).WindowLaunchIcon, label: null, action: null };
-    const intl4 = source(shareable[25]).intl;
-    obj1[1] = intl4.string(source(shareable[25]).t.q5jLJB);
-    obj1[2] = callback2;
+    const obj1 = { IconComponent: WindowLaunchIcon.WindowLaunchIcon, label: null, action: null };
+    const intl4 = util.intl;
+    obj1.label = intl4.string(util.t.q5jLJB);
+    obj1.action = callback2;
     items.push(obj1);
     if (tmp30) {
-      const obj2 = { IconComponent: null, label: null, action: null };
-      obj2[0] = source(shareable[29]).ChatArrowRightIcon;
-      const intl5 = source(shareable[25]).intl;
-      obj2[1] = intl5.string(source(shareable[25]).t["+TSRGD"]);
-      obj2[2] = callback4;
+      const obj2 = { IconComponent: ChatArrowRightIcon.ChatArrowRightIcon, label: null, action: null };
+      const intl5 = util.intl;
+      obj2.label = intl5.string(util.t["+TSRGD"]);
+      obj2.action = callback4;
       items.push(obj2);
     }
     if (obscure) {
-      const obj3 = { IconComponent: null, label: null, action: null };
-      obj3[0] = source(shareable[30]).ImageWarningIcon;
-      const intl6 = source(shareable[25]).intl;
-      obj3[1] = intl6.string(source(shareable[25]).t.ZH7P2h);
-      obj3[2] = callback5;
+      const obj3 = { IconComponent: ImageWarningIcon.ImageWarningIcon, label: null, action: null };
+      const intl6 = util.intl;
+      obj3.label = intl6.string(util.t.ZH7P2h);
+      obj3.action = callback5;
       items.push(obj3);
     }
     return items;
   }, items8);
 }
-({ AnalyticsSections: closure_8, GIF_RE_IOS: c9, MediaType: c10 } = ME);
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");
+const Constants = fn(1074);
+({ AnalyticsSections: closure_8, GIF_RE_IOS: closure_9, MediaType: c10 } = Constants);
+let closure_11 = fn(7601).EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");
 
 export default function MediaShareActionSheet(source) {
   let obj = { source: source.source, disableDownload: source.disableDownload, shareable: source.shareable };
   obj = { children: null };
   obj = {
     hasIcons: true,
-    children: useMediaShareActions(obj).map((IconComponent) => {
+    children: useMediaShareActions(obj).map((IconComponent, index) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
-      ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(7200).ActionSheetRow, obj, arg1);
+      obj.icon = jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent });
+      ({ action: obj.onPress, label: obj.label } = IconComponent);
+      return jsx(ActionSheetRow.ActionSheetRow, { IconComponent: IconComponent.IconComponent }, index);
     })
   };
-  obj[0] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, {
+  obj.children = jsx(ActionSheetRow.ActionSheetRow.Group, {
     hasIcons: true,
-    children: useMediaShareActions(obj).map((IconComponent) => {
+    children: useMediaShareActions(obj).map((IconComponent, index) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
-      ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(7200).ActionSheetRow, obj, arg1);
+      obj.icon = jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent });
+      ({ action: obj.onPress, label: obj.label } = IconComponent);
+      return jsx(ActionSheetRow.ActionSheetRow, { IconComponent: IconComponent.IconComponent }, index);
     })
   });
   return jsx(ActionSheet.ActionSheet, {
     hasIcons: true,
-    children: useMediaShareActions(obj).map((IconComponent) => {
+    children: useMediaShareActions(obj).map((IconComponent, index) => {
       let obj = { icon: null, onPress: null, label: null };
       obj = { IconComponent: IconComponent.IconComponent };
-      obj[0] = callback2(callback(7200).ActionSheetRow.Icon, obj);
-      ({ action: obj[1], label: obj[2] } = IconComponent);
-      return callback2(callback(7200).ActionSheetRow, obj, arg1);
+      obj.icon = jsx(ActionSheetRow.ActionSheetRow.Icon, { IconComponent: IconComponent.IconComponent });
+      ({ action: obj.onPress, label: obj.label } = IconComponent);
+      return jsx(ActionSheetRow.ActionSheetRow, { IconComponent: IconComponent.IconComponent }, index);
     })
   });
 };

@@ -1,13 +1,15 @@
-// === Module 14709: isRateLimited ===
+// === Module 14709: UniqueUsernamesStore ===
 
-// Module 14709 (isRateLimited)
+// Module 14709 (UniqueUsernamesStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
 import privDefault from "priv" /* 1437 */;
 
 let closure_2 = { taken: null, error: "HermesInternal", rateLimited: null };
-let obj = { validations: new privDefault({ max: 100, maxAge: 60000 }), currentUsernameInvalid: false, retryAfterTime: null, suggestions: { migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-05-mana-type-consolidation" } } };
+let suggestions = { validations: new privDefault({ max: 100, maxAge: 60000 }), currentUsernameInvalid: false, retryAfterTime: null, suggestions: null };
+suggestions = { migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false }, registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-05-mana-type-consolidation" } };
+suggestions.suggestions = suggestions;
 const Store = initializeDefault.Store;
 class UniqueUsernamesStore extends Store {
 }
@@ -23,7 +25,7 @@ prototype["isRateLimited"] = function isRateLimited() {
 prototype["validate"] = function validate(arg0) {
   const self = this;
   const validations = obj.validations;
-  const value = validations.get(arg0);
+  value = validations.get(arg0);
   if (!this.isRateLimited()) {
     let tmp4 = value;
   } else {
@@ -50,7 +52,7 @@ prototype["wasSuggestionsFetched"] = function wasSuggestionsFetched() {
   return obj.suggestions.migration.fetched;
 };
 UniqueUsernamesStore.displayName = "UniqueUsernamesStore";
-obj = {
+suggestions = {
   UNIQUE_USERNAME_ATTEMPT_SUCCESS: function handleUniqueUsernameAttemptSuccess(taken) {
     const validations = obj.validations;
     obj = { taken: taken.taken };
@@ -60,26 +62,23 @@ obj = {
     ({ username, error, retryAfter } = statusCode);
     if (429 === statusCode.statusCode) {
       let validations = obj.validations;
-      obj = { taken: null, error: null, rateLimited: true };
-      obj[1] = error;
+      obj = { taken: null, error, rateLimited: true };
       let num = retryAfter;
       if (retryAfter == null) {
         num = 7;
       }
-      const result = validations.set(username, obj, num * setDefault.Millis.SECOND);
+      const result = validations.set(username, obj, num * DurationsDefault.Millis.SECOND);
       let tmp = obj;
-      const tmp3 = obj;
     } else {
       tmp = obj;
       validations = obj.validations;
-      obj = { taken: null, error: null };
-      obj[1] = error;
+      obj = { taken: null, error };
       const result1 = validations.set(username, obj);
     }
     if (null != retryAfter) {
       const _Date = Date;
       const timestamp = Date.now();
-      tmp.retryAfterTime = timestamp + retryAfter * setDefault.Millis.SECOND;
+      tmp.retryAfterTime = timestamp + retryAfter * DurationsDefault.Millis.SECOND;
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
@@ -110,8 +109,8 @@ obj = {
     }
   }
 };
-const uniqueUsernamesStore = new UniqueUsernamesStore(dispatcherDefault, obj);
-let tmp2 = new privDefault({ max: 100, maxAge: 60000 });
-let result = require("set").fileFinishedImporting("modules/unique_usernames/UniqueUsernamesStore.tsx");
+const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, suggestions);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesStore.tsx");
 
 export default uniqueUsernamesStore;

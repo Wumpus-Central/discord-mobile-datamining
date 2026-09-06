@@ -1,19 +1,18 @@
-// === Module 12683: trackNUFStep ===
+// === Module 12683: NewUserAnalyticsUtils ===
 
-// Module 12683 (trackNUFStep)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 12683 (NewUserAnalyticsUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-let c3 = 0;
-let result = set.fileFinishedImporting("modules/nuf/native/NewUserAnalyticsUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+let timestamp = 0;
+let result = size.fileFinishedImporting("modules/nuf/native/NewUserAnalyticsUtils.tsx");
 
 export const trackNUFStep = function trackNUFStep(STEP_GUILD_TEMPLATE, STEP_FRIEND_LIST, arg2) {
-  const timestamp = Date.now();
+  timestamp = Date.now();
   const result = (timestamp - timestamp) / 1000;
-  let obj = expandEventPropertiesDefault;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(arg2);
   obj.flow_type = "Mobile NUX Post Reg";
   obj.from_step = STEP_GUILD_TEMPLATE;

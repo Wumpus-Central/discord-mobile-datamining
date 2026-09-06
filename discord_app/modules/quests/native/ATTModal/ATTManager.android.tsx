@@ -1,12 +1,11 @@
-// === Module 17315: onPostConnectionOpen ===
+// === Module 17315: ATTManager ===
 
-// Module 17315 (onPostConnectionOpen)
-import _modDef1232 from "module_1232" /* 1232 */;
-import initializeDefault from "initialize" /* 7118 */;
-import _fetchAdUser from "_fetchAdUser" /* 7732 */;
+// Module 17315 (ATTManager)
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import AdUserActionCreators from "AdUserActionCreators" /* 7732 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
 class ATTManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,10 +17,9 @@ class ATTManager extends tmp2 {
 const prototype = ATTManager.prototype;
 prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   try {
-    const adUser = _fetchAdUser.fetchAdUser("post_connection_open");
+    const adUser = AdUserActionCreators.fetchAdUser("post_connection_open");
   } catch (tmp4) {
-    _modDef1232.captureException(tmp4);
-    const obj2 = _modDef1232;
+    SentryUtilsDefault.captureException(tmp4);
   }
 };
 prototype["_terminate"] = function _terminate() {
@@ -33,6 +31,7 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const aTTManager = new ATTManager();
-const result = require("set").fileFinishedImporting("modules/quests/native/ATTModal/ATTManager.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/ATTModal/ATTManager.android.tsx");
 
 export default aTTManager;

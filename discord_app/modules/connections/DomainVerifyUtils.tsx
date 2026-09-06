@@ -1,9 +1,9 @@
-// === Module 9282: EXAMPLE_DOMAIN ===
+// === Module 9282: DomainVerifyUtils ===
 
-// Module 9282 (EXAMPLE_DOMAIN)
-import set from "set" /* 2 */;
+// Module 9282 (DomainVerifyUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/connections/DomainVerifyUtils.tsx");
+const result = size.fileFinishedImporting("modules/connections/DomainVerifyUtils.tsx");
 
 export const EXAMPLE_DOMAIN = "example.com";
 export const getDnsName = function getDnsName(domain) {

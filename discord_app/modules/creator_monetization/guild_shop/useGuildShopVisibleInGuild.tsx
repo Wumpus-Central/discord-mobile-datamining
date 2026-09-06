@@ -1,21 +1,21 @@
 // === Module 7262: useGuildShopVisibleInGuild ===
 
 // Module 7262 (useGuildShopVisibleInGuild)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import computeCanEveryoneInGuildSeeRoleSubscriptions from "computeCanEveryoneInGuildSeeRoleSubscriptions" /* 7250 */;
-import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7253 */;
-import useGuildEligibleForGuildProducts from "useGuildEligibleForGuildProducts" /* 7258 */;
+import Constants from "Constants" /* 1074 */;
+import useRoleSubscriptionsVisibleInGuild from "useRoleSubscriptionsVisibleInGuild" /* 7250 */;
+import CreatorMonetizationRestrictionsHooks from "CreatorMonetizationRestrictionsHooks" /* 7253 */;
+import GuildProductsEligibility from "GuildProductsEligibility" /* 7258 */;
+import size from "module_2" /* 2 */;
 
-const GuildFeatures = ME.GuildFeatures;
-let result = set.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
+const GuildFeatures = Constants.GuildFeatures;
+let result = size.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 
 export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id) {
   id = undefined;
   if (id != null) {
     id = id.id;
   }
-  const guildEligibleForGuildProducts = useGuildEligibleForGuildProducts.useGuildEligibleForGuildProducts(id);
+  const guildEligibleForGuildProducts = GuildProductsEligibility.useGuildEligibleForGuildProducts(id);
   let tmpResult = tmp(7250);
   let id1;
   if (id != null) {
@@ -24,26 +24,23 @@ export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id
   const roleSubscriptionsVisibleInGuild = tmpResult.useRoleSubscriptionsVisibleInGuild(id1);
   tmpResult = tmp(7263);
   const guildShopPreviewVisible = tmpResult.useGuildShopPreviewVisible(id);
-  const obj = useGuildEligibleForGuildProducts;
   let id2;
   if (id != null) {
     id2 = id.id;
   }
-  const shouldHideGuildPurchaseEntryPoints = useShouldHideGuildPurchaseEntryPoints.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
+  const shouldHideGuildPurchaseEntryPoints = CreatorMonetizationRestrictionsHooks.useShouldHideGuildPurchaseEntryPoints(id2).shouldHideGuildPurchaseEntryPoints;
   return false;
 };
-export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(closure_2, closure_3) {
-  let id;
-  if (closure_2 != null) {
-    id = closure_2.id;
+export const isGuildShopVisibleInGuild = function isGuildShopVisibleInGuild(id, arg1) {
+  id = undefined;
+  if (id != null) {
+    id = id.id;
   }
-  const result = useGuildEligibleForGuildProducts.isGuildEligibleForGuildProducts(id);
-  const obj = useGuildEligibleForGuildProducts;
-  const tmp = require;
+  const result = GuildProductsEligibility.isGuildEligibleForGuildProducts(id);
   let id1;
-  if (closure_2 != null) {
-    id1 = closure_2.id;
+  if (id != null) {
+    id1 = id.id;
   }
-  const result1 = computeCanEveryoneInGuildSeeRoleSubscriptions.areRoleSubscriptionsVisibleInGuild(id1, closure_3);
+  const result1 = useRoleSubscriptionsVisibleInGuild.areRoleSubscriptionsVisibleInGuild(id1, arg1);
   return false;
 };

@@ -1,13 +1,13 @@
-// === Module 9534: shouldOpenActivityInPopoutWindow ===
+// === Module 9534: ActivityPopoutUtils ===
 
-// Module 9534 (shouldOpenActivityInPopoutWindow)
-import set from "set" /* 2 */;
+// Module 9534 (ActivityPopoutUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/ActivityPopoutUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/activities/ActivityPopoutUtils.native.tsx");
 
 export function shouldOpenActivityInPopoutWindow() {
   return false;
 }
-export const wrapPreemptiveActivityPopout = function wrapPreemptiveActivityPopout(closure_2, arg1) {
-  return arg1();
+export const wrapPreemptiveActivityPopout = function wrapPreemptiveActivityPopout(arg0, fn) {
+  return fn();
 };

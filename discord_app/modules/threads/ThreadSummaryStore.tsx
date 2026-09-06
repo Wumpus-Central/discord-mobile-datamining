@@ -1,8 +1,8 @@
-// === Module 7776: handleSummarizeThreadFinish ===
+// === Module 7776: ThreadSummaryStore ===
 
-// Module 7776 (handleSummarizeThreadFinish)
+// Module 7776 (ThreadSummaryStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 function handleSummarizeThreadFinish() {
   c0 = false;
@@ -24,13 +24,14 @@ prototype["isInProgress"] = function isInProgress() {
   return c0;
 };
 ThreadSummaryStore.displayName = "ThreadSummaryStore";
-const threadSummaryStore = new ThreadSummaryStore(dispatcherDefault, {
+const threadSummaryStore = new ThreadSummaryStore(DispatcherDefault, {
   SUMMARIZE_THREAD_START: function handleSummarizeThreadStart() {
     c0 = true;
   },
   SUMMARIZE_THREAD_SUCCESS: handleSummarizeThreadFinish,
   SUMMARIZE_THREAD_FAILURE: handleSummarizeThreadFinish
 });
-const result = require("set").fileFinishedImporting("modules/threads/ThreadSummaryStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadSummaryStore.tsx");
 
 export default threadSummaryStore;

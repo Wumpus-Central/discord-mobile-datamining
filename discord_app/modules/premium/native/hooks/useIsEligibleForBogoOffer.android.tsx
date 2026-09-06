@@ -1,19 +1,20 @@
 // === Module 10707: useIsEligibleForBogoOffer ===
 
 // Module 10707 (useIsEligibleForBogoOffer)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "reset" /* 4224 */;
-import closure_4 from "createEmptyPromotionsByType" /* 10665 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+import noop from "module_19" /* 19 */;
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
+import PromotionsStore from "PromotionsStore" /* 10665 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
+const require = fn;
+const PremiumTypes = fn(1373).PremiumTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
 export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
-  const items = [closure_4];
+  const items = [PromotionsStore];
   const stateFromStores = forceUpdate(504).useStateFromStores(items, () => activeBogoRewardPromotion.getActiveBogoRewardPromotion());
   const obj = forceUpdate(504);
-  const items1 = [closure_3];
+  const items1 = [SubscriptionStore];
   const stateFromStores1 = forceUpdate(504).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const obj2 = forceUpdate(504);
   const premiumTrialOffer = forceUpdate(7447).usePremiumTrialOffer();
@@ -30,13 +31,13 @@ export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
   }
   dependencyMap = valueOfResult;
   const items2 = [valueOfResult, forceUpdate];
-  const effect = React.useEffect(() => {
-    if (null != closure_1) {
+  const effect = noop.useEffect(() => {
+    if (null != valueOfResult) {
       const _Date = Date;
       const diff = tmp - Date.now();
       if (diff > 0) {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(timeout, diff);
+        const timeout = setTimeout(forceUpdate, diff);
         return () => clearTimeout(closure_0);
       }
     }

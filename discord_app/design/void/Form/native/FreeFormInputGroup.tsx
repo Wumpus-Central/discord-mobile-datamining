@@ -1,32 +1,34 @@
-// === Module 6605: ? ===
+// === Module 6605: FreeFormInputGroup ===
 
-// Module 6605
-import set from "set" /* 1115 */;
-import context2 from "context" /* 5686 */;
+// Module 6605 (FreeFormInputGroup)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import RedesignCompat from "RedesignCompat" /* 5686 */;
 import FreeFormLabelDefault from "FreeFormLabel" /* 6938 */;
-import ClearButtonDefault from "ClearButton" /* 6939 */;
-import LabelDefault from "Label" /* 6941 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import FreeFormTextInputDefault from "FreeFormTextInput" /* 6939 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6941 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 } });
-const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");
+
+export default noop.forwardRef((accessibilityLabel, ref) => {
   ({ style, label, error, value, hint, enableAndroidSanitizedInputWorkaround } = accessibilityLabel);
   if (enableAndroidSanitizedInputWorkaround === undefined) {
     enableAndroidSanitizedInputWorkaround = false;
   }
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   ({ secureTextEntry, keyboardType } = accessibilityLabel);
-  const merged = Object.assign(accessibilityLabel, Object.create(null));
-  const tmp2 = callback2();
+  const merged = Object.assign(accessibilityLabel, Object.assign({ style: 0, label: 0, error: 0, value: 0, hint: 0, textStyle: 0, enableAndroidSanitizedInputWorkaround: 0, secureTextEntry: 0, keyboardType: 0, accessibilityLabel: 0 }));
+  const tmp2 = closure_7();
   let isAndroidResult = enableAndroidSanitizedInputWorkaround;
   if (enableAndroidSanitizedInputWorkaround) {
-    let obj = set;
+    let obj = PlatformUtils;
     isAndroidResult = obj.isAndroid();
   }
   if (!isAndroidResult) {
@@ -35,36 +37,21 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
   if (!enableAndroidSanitizedInputWorkaround) {
     let str = keyboardType;
   } else {
-    obj1 = set;
+    let obj1 = PlatformUtils;
     str = "visible-password";
   }
-  const context = importAllResult.useContext(context2.RedesignCompatContext);
-  const id = importAllResult.useId();
+  const context = noop.useContext(RedesignCompat.RedesignCompatContext);
+  const id = noop.useId();
   if (context) {
     ({ placeholder, onChangeText, clearButtonVisibility } = merged);
-    obj = { containerStyle: null, value: null, label: null, errorMessage: null, description: null, placeholder: null, onChange: null, isClearable: null, keyboardType: null, secureTextEntry: null, autoCapitalize: null };
-    obj[0] = style;
-    obj[1] = value;
-    obj[2] = label;
-    obj[3] = error;
-    obj[4] = hint;
-    obj[5] = placeholder;
-    obj[6] = onChangeText;
-    obj[7] = clearButtonVisibility !== tmp8(1178).ClearButtonVisibility.WITH_CONTENT;
-    obj[8] = str;
-    obj[9] = isAndroidResult;
-    obj[10] = merged.autoCapitalize;
-    return callback(tmp8(6606).TextInput, obj);
+    obj = { containerStyle: style, value, label, errorMessage: error, description: hint, placeholder, onChange: onChangeText, isClearable: clearButtonVisibility !== tmp8(1178).ClearButtonVisibility.WITH_CONTENT, keyboardType: str, secureTextEntry: isAndroidResult, autoCapitalize: merged.autoCapitalize };
+    return hasOwnProperty(tmp8(6606).TextInput, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = style;
+    obj = { style, children: null };
     let tmp14 = null;
     if (null != label) {
-      obj1 = { style: null, nativeID: null, children: null };
-      obj1[0] = tmp2.label;
-      obj1[1] = id;
-      obj1[2] = label;
-      tmp14 = callback(FreeFormLabelDefault, obj1);
+      obj1 = { style: tmp2.label, nativeID: id, children: label };
+      tmp14 = hasOwnProperty(FreeFormLabelDefault, obj1);
     }
     const items = [tmp14, , , ];
     const obj2 = {};
@@ -86,27 +73,20 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityLabel, ref) =>
     obj2.keyboardType = str;
     const items1 = [tmp2.input, accessibilityLabel.textStyle];
     obj2.style = items1;
-    items[1] = callback(ClearButtonDefault, obj2);
+    items[1] = hasOwnProperty(FreeFormTextInputDefault, obj2);
     let tmp17Result = null;
     if (null != error) {
-      const obj3 = { style: null, children: null };
-      obj3[0] = tmp2.error;
-      obj3[1] = error;
-      tmp17Result = tmp17(LabelDefault, obj3);
+      const obj3 = { style: tmp2.error, children: error };
+      tmp17Result = tmp17(FreeFormErrorLabelDefault, obj3);
     }
     items[2] = tmp17Result;
     tmp17Result = null;
     if (null != hint) {
-      const obj4 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
-      obj4[0] = tmp2.hint;
-      obj4[3] = hint;
+      const obj4 = { style: tmp2.hint, variant: "text-xs/medium", color: "text-muted", children: hint };
       tmp17Result = tmp17(tmp8(4556).Text, obj4);
     }
     items[3] = tmp17Result;
-    obj[1] = items;
-    return closure_6(View, obj);
+    obj.children = items;
+    return timestampProducer(View, obj);
   }
 });
-const result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormInputGroup.tsx");
-
-export default forwardRefResult;

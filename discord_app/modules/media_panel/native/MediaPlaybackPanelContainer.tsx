@@ -1,15 +1,18 @@
-// === Module 17221: ? ===
+// === Module 17221: MediaPlaybackPanelContainer ===
 
-// Module 17221
-import _initialize from "_initialize" /* 14536 */;
+// Module 17221 (MediaPlaybackPanelContainer)
+import MediaPlayerManager from "MediaPlayerManager" /* 14536 */;
 import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 17222 */;
 import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 17224 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function MediaPlaybackPanelContainer() {
-  let obj = _initialize;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
+
+export default noop.memo(function MediaPlaybackPanelContainer() {
+  let obj = MediaPlayerManager;
   let tmp2 = null;
   if (obj.useMediaPlayerManagerStore(obj2.useShallow((showPip) => {
     showPip = showPip.showPip;
@@ -54,13 +57,8 @@ const memoResult = importAllResult.memo(function MediaPlaybackPanelContainer() {
     }
     return tmp3;
   }))) {
-    obj = { children: null };
-    obj[0] = jsx(MediaPlaybackPanelUIDefault, {});
-    tmp2 = jsx(MediaPlaybackPanelControllerDefault, { children: null });
-    let tmp5 = MediaPlaybackPanelControllerDefault;
+    obj = { children: jsx(MediaPlaybackPanelUIDefault, {}) };
+    tmp2 = jsx(MediaPlaybackPanelControllerDefault, { children: jsx(MediaPlaybackPanelUIDefault, {}) });
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
-
-export default memoResult;

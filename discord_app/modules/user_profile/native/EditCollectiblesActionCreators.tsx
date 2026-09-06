@@ -1,15 +1,14 @@
-// === Module 8175: navigateToNitroManagement ===
+// === Module 8175: EditCollectiblesActionCreators ===
 
-// Module 8175 (navigateToNitroManagement)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 8175 (EditCollectiblesActionCreators)
+import Constants from "Constants" /* 1074 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
+import size from "module_2" /* 2 */;
 
-const UserSettingsSections = ME.UserSettingsSections;
-const result = set.fileFinishedImporting("modules/user_profile/native/EditCollectiblesActionCreators.tsx");
+const UserSettingsSections = Constants.UserSettingsSections;
+const result = size.fileFinishedImporting("modules/user_profile/native/EditCollectiblesActionCreators.tsx");
 
 export const navigateToNitroManagement = function navigateToNitroManagement() {
-  let obj = openUserSettings;
-  obj = { screen: UserSettingsSections.PREMIUM };
+  const obj = { screen: UserSettingsSections.PREMIUM };
   obj.openUserSettings(obj);
 };

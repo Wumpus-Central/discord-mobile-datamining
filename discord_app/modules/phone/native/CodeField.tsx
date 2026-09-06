@@ -1,16 +1,14 @@
-// === Module 7080: SingleCodeInput ===
+// === Module 7080: CodeField ===
 
-// Module 7080 (SingleCodeInput)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import _modDef5578 from "module_5578" /* 5578 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 7080 (CodeField)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function SingleCodeInput(loading) {
   let flag = loading.loading;
   if (flag === undefined) {
@@ -26,32 +24,32 @@ function SingleCodeInput(loading) {
   }
   ({ onCodeEntered: importDefault, disabled, code } = loading);
   const setCode = loading.setCode;
-  const tmp2 = callback4();
+  const tmp2 = closure_10();
   obj = { style: tmp2.singleInputWrapper, children: null };
   obj = { errorMessage: error, value: code, autoCapitalize: "characters", maxLength: count, accessibilityLabel: null, textContentType: "oneTimeCode", keyboardType: null, onChange: null, isDisabled: null, isClearable: true, autoFocus: true };
   const intl = NUMERIC(code[8]).intl;
-  obj[4] = intl.string(NUMERIC(code[8]).t["ysthA+"]);
+  obj.accessibilityLabel = intl.string(NUMERIC(code[8]).t["ysthA+"]);
   let str = "default";
   if (NUMERIC === obj.NUMERIC) {
     str = "number-pad";
   }
-  obj[6] = str;
-  obj[7] = function handleChange(str) {
-    setCode(str.replace(NUMERIC === closure_1_9.NUMERIC ? /\D/g : /[^A-Z0-9]/g, ""));
+  obj.keyboardType = str;
+  obj.onChange = function handleChange(str) {
+    setCode(str.replace(NUMERIC === obj.NUMERIC ? /\D/g : /[^A-Z0-9]/g, ""));
   };
-  obj[8] = disabled;
+  obj.isDisabled = disabled;
   const items = [closure_7(NUMERIC(code[7]).TextInput, obj), ];
   obj = { style: tmp2.singleInputButton, children: null };
-  obj1 = { loading: flag, variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
+  const obj1 = { loading: flag, variant: "primary", size: "lg", text: null, onPress: null, disabled: null };
   const intl2 = tmp6(tmp7[8]).intl;
-  obj1[3] = intl2.string(NUMERIC(code[8]).t["13ofGu"]);
-  obj1[4] = function handlePressSubmit() {
-    return callback(code);
+  obj1.text = intl2.string(NUMERIC(code[8]).t["13ofGu"]);
+  obj1.onPress = function handlePressSubmit() {
+    return importDefault(code);
   };
-  obj1[5] = code.length !== count || disabled;
-  obj[1] = closure_7(NUMERIC(code[9]).Button, obj1);
+  obj1.disabled = code.length !== count || disabled;
+  obj.children = closure_7(NUMERIC(code[9]).Button, obj1);
   items[1] = closure_7(closure_5, obj);
-  obj[1] = items;
+  obj.children = items;
   return closure_8(closure_5, obj);
 }
 function CodeFieldInner(loading) {
@@ -69,44 +67,48 @@ function CodeFieldInner(loading) {
     NUMERIC = obj.NUMERIC;
   }
   ({ actions, footer, backgroundStyle, disabled } = loading);
-  const tmp2 = callback4();
-  obj = { style: items, contentContainerStyle: tmp2.backgroundFlex, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
-  items = [tmp2.background, backgroundStyle];
+  const tmp2 = closure_10();
+  obj = { style: null, contentContainerStyle: tmp2.backgroundFlex, keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
+  const items = [tmp2.background, backgroundStyle];
+  obj.style = items;
   obj = { style: tmp2.container, children: null };
-  [tmp4, tmp5] = callback(React.useState(""), 2);
+  [tmp4, tmp5] = _slicedToArray(noop.useState(""), 2);
   obj = { style: tmp2.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
-  const items1 = [callback2(Text.Text, obj), callback2(Text.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
-  obj1 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
-  const tmp3 = callback(React.useState(""), 2);
-  items1[2] = callback2(closure_5, { style: tmp2.inputContainer, children: callback2(SingleCodeInput, { loading: flag, error, count: num, onCodeEntered, codeType: NUMERIC, disabled, code: tmp4, setCode: tmp5 }) });
+  const items1 = [React5(Text_Text.Text, obj), React5(Text_Text.Text, { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description }), , ];
+  const obj1 = { style: tmp2.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
+  const tmp3 = _slicedToArray(noop.useState(""), 2);
+  items1[2] = React5(hasOwnProperty, { style: tmp2.inputContainer, children: React5(SingleCodeInput, { loading: flag, error, count: num, onCodeEntered, codeType: NUMERIC, disabled, code: tmp4, setCode: tmp5 }) });
   items1[3] = actions;
-  obj[1] = items1;
-  const items2 = [callback3(closure_5, obj), callback2(_modDef5578, { children: footer })];
-  obj[4] = items2;
-  return callback3(closure_6, obj);
+  obj.children = items1;
+  const items2 = [React6(hasOwnProperty, obj), React5(KeyboardAwareViewDefault, { children: footer })];
+  obj.children = items2;
+  return React6(timestampProducer, obj);
 }
-({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let obj = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
-obj = { viewWrapper: { flex: 1 }, background: null, backgroundFlex: null, container: null, title: null, subtitle: null, inputContainer: null, codeContainer: null, spacer: null, inputWrapper: null, inputWrapperError: null, input: null, singleInputWrapper: null, singleInputButton: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj[1] = obj;
-obj[2] = { flex: 1, justifyContent: "space-between" };
-obj[3] = { padding: 16 };
-obj[4] = { textAlign: "center" };
-obj[5] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
-obj[6] = { marginTop: 20, width: "100%", alignItems: "center" };
-obj[7] = { maxWidth: 336, width: "100%", flexDirection: "row", justifyContent: "space-around" };
-obj[8] = { width: 4 };
-createCacheKey = { borderWidth: 1, borderRadius: 5, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-obj[9] = createCacheKey;
-obj[10] = { borderColor: ThemesDefault.unsafe_rawColors.RED_400 };
-obj[11] = { textAlign: "center" };
-obj[12] = { width: "100%" };
-obj[13] = { marginTop: 8, justifyContent: "flex-end" };
-let closure_10 = createCacheKey.createStyles(obj);
-let obj2 = { borderColor: ThemesDefault.unsafe_rawColors.RED_400 };
-const result = require("set").fileFinishedImporting("modules/phone/native/CodeField.tsx");
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+let CodeType = { NUMERIC: "numeric", ALPHANUMERIC: "alphanumeric" };
+fn(4560);
+CodeType = { viewWrapper: { flex: 1 }, background: null, backgroundFlex: null, container: null, title: null, subtitle: null, inputContainer: null, codeContainer: null, spacer: null, inputWrapper: null, inputWrapperError: null, input: null, singleInputWrapper: null, singleInputButton: null };
+CodeType = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+CodeType.background = CodeType;
+CodeType.backgroundFlex = { flex: 1, justifyContent: "space-between" };
+CodeType.container = { padding: 16 };
+CodeType.title = { textAlign: "center" };
+CodeType.subtitle = { marginTop: 8, lineHeight: 18, textAlign: "center" };
+CodeType.inputContainer = { marginTop: 20, width: "100%", alignItems: "center" };
+CodeType.codeContainer = { maxWidth: 336, width: "100%", flexDirection: "row", justifyContent: "space-around" };
+CodeType.spacer = { width: 4 };
+const createStyles = { borderWidth: 1, borderRadius: 5, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+CodeType.inputWrapper = createStyles;
+CodeType.inputWrapperError = { borderColor: nativeDefault.unsafe_rawColors.RED_400 };
+CodeType.input = { textAlign: "center" };
+CodeType.singleInputWrapper = { width: "100%" };
+CodeType.singleInputButton = { marginTop: 8, justifyContent: "flex-end" };
+let closure_10 = createStyles.createStyles(CodeType);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/phone/native/CodeField.tsx");
 
 export default function CodeField(disableKeyboardAvoidingView) {
   if (disableKeyboardAvoidingView.disableKeyboardAvoidingView) {
@@ -114,17 +116,15 @@ export default function CodeField(disableKeyboardAvoidingView) {
     const merged = Object.assign(disableKeyboardAvoidingView);
     let tmp2Result = tmp2(CodeFieldInner, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.viewWrapper;
+    obj = { style: tmp.viewWrapper, children: null };
     obj = {};
     const merged1 = Object.assign(disableKeyboardAvoidingView);
-    obj[1] = tmp2(CodeFieldInner, obj);
-    tmp2Result = tmp2(_modDef5578, obj);
-    const tmp5 = _modDef5578;
+    obj.children = tmp2(CodeFieldInner, obj);
+    tmp2Result = tmp2(KeyboardAwareViewDefault, obj);
   }
   return tmp2Result;
 };
-export const CodeType = obj;
+export { CodeType };
 export const CodeBlocks = function CodeBlocks(onCodeEntered) {
   onCodeEntered = onCodeEntered.onCodeEntered;
   const num2 = onCodeEntered;
@@ -136,88 +136,86 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
   if (NUMERIC === undefined) {
     NUMERIC = obj.NUMERIC;
   }
-  let first;
-  let callback;
-  let React;
-  closure_5 = undefined;
-  const tmp3 = callback4();
-  const tmp4 = callback(React.useState(Array(num).fill("")), 2);
-  first = tmp4[0];
-  callback = tmp4[1];
+  const tmp3 = closure_10();
+  const tmp4 = _slicedToArray(noop.useState(Array(num).fill("")), 2);
+  const first = tmp4[0];
+  closure_3 = tmp4[1];
   const ArrayResult = Array(num);
-  React = React.useRef(Array(num).fill(null));
-  closure_5 = React.useRef(onCodeEntered);
-  const effect = React.useEffect(() => {
+  closure_4 = noop.useRef(Array(num).fill(null));
+  noop.useRef(onCodeEntered);
+  const effect = noop.useEffect(() => {
     closure_5.current = num2;
   });
   let items = [first];
-  const effect1 = React.useEffect(() => {
-    if (first.every((str) => "" !== str.trim())) {
-      ref2.current(first.join(""));
+  const effect1 = noop.useEffect(() => {
+    if (first.every((item) => "" !== item.trim())) {
+      ref.current(first.join(""));
     }
   }, items);
   let items1 = [];
   for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-    let tmp8 = num2;
     if (num2 === num / 2) {
-      let tmp9 = callback2;
-      let tmp10 = closure_5;
-      obj = { style: null };
-      obj[0] = tmp3.spacer;
-      let arr = items1.push(callback2(closure_5, obj, "spacer"));
+      obj = { style: tmp3.spacer };
+      let arr = items1.push(React5(hasOwnProperty, obj, "spacer"));
     }
-    let tmp12 = callback2;
+    let tmp12 = React5;
     let items2 = [tmp3.inputWrapper, ];
     let inputWrapperError = null;
-    let tmp13 = closure_5;
+    let tmp13 = hasOwnProperty;
     if (tmp) {
       inputWrapperError = tmp3.inputWrapperError;
     }
     obj = { style: null, children: null };
     items2[1] = inputWrapperError;
-    obj[0] = items2;
-    let tmp15 = num2;
-    let tmp16 = first;
-    obj1 = { ref: null, style: null, keyboardType: null, autoFocus: null, value: null, onKeyPress: null, onChangeText: null, selection: null, autoCapitalize: "characters", autoCorrect: false };
-    obj1[0] = function ref(arg0) {
-      ref.current[num2] = arg0;
+    obj.style = items2;
+    let obj1 = {
+      ref(arg0) {
+          noop.current[num2] = arg0;
+        },
+      style: null,
+      keyboardType: null,
+      autoFocus: null,
+      value: null,
+      onKeyPress: null,
+      onChangeText: null,
+      selection: null,
+      autoCapitalize: "characters",
+      autoCorrect: false
     };
-    let obj2 = { height: 42, width: null };
-    obj2[1] = 252 / num;
-    let items3 = [obj2, tmp3.input];
-    obj1[1] = items3;
-    let tmp17 = obj;
+    let size = { height: 42, width: 252 / num };
+    let items3 = [size, tmp3.input];
+    obj1.style = items3;
     let str = "default";
     if (NUMERIC === obj.NUMERIC) {
       str = "phone-pad";
     }
-    obj1[2] = str;
-    obj1[3] = 0 === num2;
-    obj1[4] = first[num2];
-    obj1[5] = function onKeyPress(nativeEvent) {
+    obj1.keyboardType = str;
+    obj1.autoFocus = 0 === num2;
+    obj1.value = first[num2];
+    obj1.onKeyPress = function onKeyPress(nativeEvent) {
       if ("Backspace" !== nativeEvent.nativeEvent.key) {
-        if (ref.current[tmp + 1] != null) {
+        if (noop.current[tmp + 1] != null) {
           obj2.focus();
         }
-      } else if ("" === first[tmp]) {
+      } else if ("" === dependencyMap[tmp]) {
         const diff = tmp - 1;
         const items = [];
         HermesBuiltin.arraySpread(tmp2, 0);
         items[diff] = "";
-        callback(items);
-        if (ref.current[diff] != null) {
+        _slicedToArray(items);
+        if (noop.current[diff] != null) {
           obj.focus();
         }
       }
     };
-    obj1[6] = function onChangeText(arr) {
+    obj1.onChangeText = function onChangeText(arr) {
       let str = arr;
-      if (arr[0] === first[num2]) {
+      if (arr[0] === dependencyMap[num2]) {
         str = arr.slice(1);
       }
       const str2 = str.replace("-", "");
       const tmp = num2;
-      const tmp2 = first;
+      const tmp2 = dependencyMap;
       const str4 = str.replace("-", "").trim().toUpperCase();
       let parts = str4.split("");
       if ("" === str4) {
@@ -226,14 +224,12 @@ export const CodeBlocks = function CodeBlocks(onCodeEntered) {
       const items = [...tmp2];
       const items1 = [tmp, 1, ...parts];
       items.splice.apply(items1);
-      callback(items.slice(0, num));
+      _slicedToArray(items.slice(0, importDefault));
     };
-    let obj3 = { start: null, end: null };
-    obj3[0] = first[num2].length;
-    obj3[1] = first[num2].length;
-    obj1[7] = obj3;
-    obj[1] = tmp12(num2(first[6]).TextInput, obj1);
+    let obj2 = { start: first[num2].length, end: first[num2].length };
+    obj1.selection = obj2;
+    obj.children = tmp12(native.TextInput, obj1);
     arr = items1.push(tmp12(tmp13, obj, num2));
   }
-  return callback2(closure_5, { style: tmp3.codeContainer, children: items1 });
+  return React5(hasOwnProperty, { style: tmp3.codeContainer, children: items1 });
 };

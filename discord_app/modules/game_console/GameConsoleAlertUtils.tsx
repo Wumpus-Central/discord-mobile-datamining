@@ -1,9 +1,9 @@
-// === Module 9451: set ===
+// === Module 9451: GameConsoleAlertUtils ===
 
-// Module 9451 (set)
-import set from "set" /* 2 */;
-import _mod9452 from "module_9452" /* 9452 */;
+// Module 9451 (GameConsoleAlertUtils)
+import game_console_GameConsoleAlertUtils from "game_console/GameConsoleAlertUtils" /* 9452 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_console/GameConsoleAlertUtils.tsx");
+const result = size.fileFinishedImporting("modules/game_console/GameConsoleAlertUtils.tsx");
 
-export default _mod9452.default;
+export default game_console_GameConsoleAlertUtils.default;

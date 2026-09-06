@@ -1,29 +1,30 @@
 // === Module 9034: useUserProfileWidgets ===
 
 // Module 9034 (useUserProfileWidgets)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "createUserWidgetFromServer" /* 7621 */;
-import closure_4 from "initialize" /* 7625 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
+import WidgetStore from "WidgetStore" /* 7625 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useUserProfileWidgets.tsx");
 
 export default function useUserProfileWidgets(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
+  _require = arg0;
+  const items = [AuthenticationStore];
   const items1 = [arg0];
-  const stateFromStores = _require(504).useStateFromStores(items, () => null != closure_0 && closure_1_2.getId() === closure_0, items1);
-  const obj = _require(504);
-  const items2 = [closure_4];
-  const stateFromStores1 = _require(504).useStateFromStores(items2, () => pendingWidgets.getPendingWidgets());
-  const obj2 = _require(504);
-  const items3 = [closure_3];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => null != closure_0 && AuthenticationStore.getId() === closure_0, items1);
+  const obj = require("initialize");
+  const items2 = [WidgetStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => pendingWidgets.getPendingWidgets());
+  const obj2 = require("initialize");
+  const items3 = [UserProfileStore];
   const items4 = [arg0];
-  const stateFromStoresArray = _require(504).useStateFromStoresArray(items3, () => {
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items3, () => {
     if (null == closure_0) {
       return [];
     } else {
-      const userProfile = closure_1_3.getUserProfile(tmp);
+      const userProfile = UserProfileStore.getUserProfile(tmp);
       let widgets;
       if (userProfile != null) {
         widgets = userProfile.widgets;

@@ -1,21 +1,21 @@
 // === Module 14165: useToggleButtonProps ===
 
 // Module 14165 (useToggleButtonProps)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
+const result = size.fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
 
-export const useToggleButtonProps = function useToggleButtonProps(on, first) {
+export const useToggleButtonProps = function useToggleButtonProps(on, checked) {
   const obj = {};
-  const merged = Object.assign(first ? on.on : on.off);
+  const merged = Object.assign(checked ? on.on : on.off);
   obj.accessibilityRole = "togglebutton";
-  obj.accessibilityState = { checked: first };
+  obj.accessibilityState = { checked };
   return obj;
 };
-export const useToggleIconButtonProps = function useToggleIconButtonProps(on, first) {
+export const useToggleIconButtonProps = function useToggleIconButtonProps(on, checked) {
   const obj = {};
-  const merged = Object.assign(first ? on.on : on.off);
+  const merged = Object.assign(checked ? on.on : on.off);
   obj.accessibilityRole = "togglebutton";
-  obj.accessibilityState = { checked: first };
+  obj.accessibilityState = { checked };
   return obj;
 };

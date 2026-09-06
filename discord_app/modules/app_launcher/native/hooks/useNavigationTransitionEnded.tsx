@@ -1,24 +1,26 @@
 // === Module 12128: useNavigationTransitionEnded ===
 
 // Module 12128 (useNavigationTransitionEnded)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
+import Link from "Link" /* 1484 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
+require = fn;
+const useAppLauncherNavigation = fn(1482).useAppLauncherNavigation;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 
 export default function useNavigationTransitionEnded() {
-  const tmp = route(React.useState(false), 2);
-  const _require = tmp2;
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_0 = tmp2;
   const tmp3 = useAppLauncherNavigation();
-  dependencyMap = tmp3;
-  route = _require(1484).useRoute();
+  closure_1 = tmp3;
+  const route = Link.useRoute();
   const items = [tmp3, route, tmp[1]];
-  const effect = React.useEffect(() => closure_1.addListener("transitionEnd", () => {
+  const effect = noop.useEffect(() => state.addListener("transitionEnd", () => {
     state = state.getState();
     if (state.routes[state.index].key === key.key) {
-      callback(true);
+      closure_1_0(true);
     }
   }), items);
   return tmp[0];

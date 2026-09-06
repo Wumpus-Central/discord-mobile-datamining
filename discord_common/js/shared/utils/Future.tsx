@@ -1,9 +1,9 @@
 // === Module 9293: Future ===
 
 // Module 9293 (Future)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
 
 export const Future = function Future() {
   const obj = Object.create(new.target.prototype);

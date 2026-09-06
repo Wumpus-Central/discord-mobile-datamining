@@ -1,14 +1,16 @@
 // === Module 9692: useCanShowTooltip ===
 
 // Module 9692 (useCanShowTooltip)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "set" /* 9693 */;
+import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9694 */;
+import noop from "module_19" /* 19 */;
+import TooltipStore from "TooltipStore" /* 9693 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/tooltip/useCanShowTooltip.tsx");
 
 export const useCanShowTooltip = function useCanShowTooltip(SCREENSHARE_SWIPE_UP_CONTROLS, arg1) {
-  const _require = SCREENSHARE_SWIPE_UP_CONTROLS;
+  _require = SCREENSHARE_SWIPE_UP_CONTROLS;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -17,13 +19,12 @@ export const useCanShowTooltip = function useCanShowTooltip(SCREENSHARE_SWIPE_UP
   if (arg2 === undefined) {
     flag2 = true;
   }
-  const items = [closure_4];
+  const items = [TooltipStore];
   const items1 = [flag2, flag, SCREENSHARE_SWIPE_UP_CONTROLS];
-  const stateFromStores = _require(flag2[2]).useStateFromStores(items, () => closure_1_4.canShowTooltip(closure_0) && flag2);
-  const effect = React.useEffect(() => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => TooltipStore.canShowTooltip(closure_0) && flag2);
+  const effect = noop.useEffect(() => {
     if (flag2) {
-      flag(flag2[3]).attemptToShowTooltip(closure_0, flag);
-      const obj = flag(flag2[3]);
+      TooltipActionCreatorsDefault.attemptToShowTooltip(closure_0, flag);
     }
   }, items1);
   return stateFromStores;

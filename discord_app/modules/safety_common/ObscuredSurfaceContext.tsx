@@ -1,14 +1,14 @@
-// === Module 8712: context ===
+// === Module 8712: ObscuredSurfaceContext ===
 
-// Module 8712 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 8712 (ObscuredSurfaceContext)
+import noop from "module_19" /* 19 */;
 
-let c0 = importAllResult;
-const context = importAllResult.createContext({ obscured: false });
-const result = require("set").fileFinishedImporting("modules/safety_common/ObscuredSurfaceContext.tsx");
+const context = noop.createContext({ obscured: false });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_common/ObscuredSurfaceContext.tsx");
 
 export const ObscuredSurfaceContext = context;
 export const OBSCURED_VALUE = { obscured: true };
 export const useObscuredSurface = function useObscuredSurface() {
-  return importAllResult.useContext(context);
+  return noop.useContext(context);
 };

@@ -1,14 +1,15 @@
 // === Module 7998: transformSticker ===
 
 // Module 7998 (transformSticker)
-import set from "set" /* 2 */;
-import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID" /* 1938 */;
+import util from "util" /* 1114 */;
+import StickersConstants from "StickersConstants" /* 1938 */;
+import size from "module_2" /* 2 */;
 
-const StickerAnimationSettings = STICKER_PICKER_TAB_PANEL_ID.StickerAnimationSettings;
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
+const StickerAnimationSettings = StickersConstants.StickerAnimationSettings;
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
 
 export const transformSticker = function transformSticker(tmp5Result1) {
-  const AnimateStickers = _require(1935).AnimateStickers;
+  const AnimateStickers = require("UserSettings").AnimateStickers;
   _require = tmp5Result1;
   let obj = {};
   const setting = AnimateStickers.getSetting();
@@ -30,15 +31,15 @@ export const transformSticker = function transformSticker(tmp5Result1) {
   tmpResult = tmp(7951);
   obj = {
     expensive() {
-      const intl = tmp5Result1(closure_1_1[4]).intl;
-      return intl.formatToPlainString(tmp5Result1(closure_1_1[4]).t.rk6pOw, { stickerName: tmp5Result1.name });
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.rk6pOw, { stickerName: tmp5Result1.name });
     },
     cheap: null
   };
   let intl = tmp(1114).intl;
-  obj[1] = intl.string(_require(1114).t["fT+Yjp"]);
+  obj.cheap = intl.string(require("util").t["fT+Yjp"]);
   obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
   const intl2 = tmp(1114).intl;
-  obj.accessibilityHint = intl2.string(_require(1114).t.GCEruV);
+  obj.accessibilityHint = intl2.string(require("util").t.GCEruV);
   return obj;
 };

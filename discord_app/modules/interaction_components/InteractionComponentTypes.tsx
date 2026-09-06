@@ -1,9 +1,9 @@
-// === Module 4792: ActionComponentState ===
+// === Module 4792: InteractionComponentTypes ===
 
-// Module 4792 (ActionComponentState)
-import set from "set" /* 2 */;
+// Module 4792 (InteractionComponentTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
+const result = size.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
 
 export const ActionComponentState = { NORMAL: 0, [0]: "NORMAL", LOADING: 1, [1]: "LOADING", DISABLED: 2, [2]: "DISABLED" };
 export function asComponentId(componentId) {

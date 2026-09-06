@@ -1,22 +1,20 @@
-// === Module 11093: forwardRef ===
+// === Module 11093: OrbLottieAnimation ===
 
-// Module 11093 (forwardRef)
-import closure_2 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 11093 (OrbLottieAnimation)
+import shared from "shared" /* 4411 */;
+import useTheme from "useTheme" /* 4495 */;
+import "module_19";
 
-const require = arg1;
-({ useRef: c3, useEffect: c4, forwardRef } = noop);
+require = fn;
+const noop = fn(19);
+({ useRef: c3, useEffect: closure_4, forwardRef } = noop);
+const jsx = fn(21).jsx;
 const forwardRefResult = forwardRef((animationType, ref) => {
   animationType = animationType.animationType;
-  dependencyMap = undefined;
-  let obj = animationType(4495);
-  const theme = obj.useTheme();
-  const obj2 = animationType(4411);
-  const tmp5 = callback(null);
-  dependencyMap = tmp5;
+  const theme = useTheme.useTheme();
+  const tmp5 = React3(null);
   const items = [animationType];
-  callback2(() => {
+  React4(() => {
     if (null !== animationType) {
       const current = ref.current;
       if (current != null) {
@@ -24,7 +22,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
       }
     }
   }, items);
-  const imperativeHandle = React.useImperativeHandle(ref, () => ({
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     play() {
       const current = ref.current;
       let playResult;
@@ -39,16 +37,17 @@ const forwardRefResult = forwardRef((animationType, ref) => {
   } else {
     SpendEarnOrbsLottie = tmp(11096).SpendEarnOrbsLottie;
   }
-  obj = { ref: tmp5, size: "custom", width: 60, height: 60, opacity: 0.8, animation: null, useLottieDefaultColors: true };
+  const size = { ref: tmp5, size: "custom", width: 60, height: 60, opacity: 0.8, animation: null, useLottieDefaultColors: true };
   let str = "spend";
   if (null != animationType) {
     str = animationType;
   }
-  obj[5] = str;
+  size.animation = str;
   return <SpendEarnOrbsLottie ref={tmp5} size="custom" width={60} height={60} opacity={0.8} animation={null} useLottieDefaultColors />;
 });
 forwardRefResult.displayName = "OrbsLottieAnimation";
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
 
 export default forwardRefResult;
 export const OrbLottieAnimation = forwardRefResult;

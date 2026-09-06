@@ -1,43 +1,46 @@
-// === Module 16908: BurstReactionAnimationContainer ===
+// === Module 16908: MainShared ===
 
-// Module 16908 (BurstReactionAnimationContainer)
+// Module 16908 (MainShared)
 import initialize from "initialize" /* 504 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import usePipVideoOrStream from "usePipVideoOrStream" /* 9490 */;
-import isVoicePanelEnabled from "isVoicePanelEnabled" /* 9681 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 9681 */;
+import AccessibilityManagerDefault from "AccessibilityManager" /* 14434 */;
 import KeyCommandsView from "KeyCommandsView" /* 14575 */;
 import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 16909 */;
-import BurstReactionAnimationContainerInnerDefault from "BurstReactionAnimationContainerInner" /* 16912 */;
-import MenuContainerDefault from "MenuContainer" /* 16913 */;
-import ActionSheetPresenterDefault from "ActionSheetPresenter" /* 16914 */;
-import StyleSheetDefault from "StyleSheet" /* 16915 */;
-import MuteDeafenDefault from "MuteDeafen" /* 16923 */;
-import trackActionSheetImpressionDefault from "trackActionSheetImpression" /* 16924 */;
-import AnimatedToastDefault from "AnimatedToast" /* 16954 */;
-import closure_3 from "noop" /* 19 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "createRTCConnection" /* 4583 */;
-import { jsx } from "jsxProd" /* 21 */;
+import BurstReactionAnimationContainerDefault from "BurstReactionAnimationContainer" /* 16912 */;
+import NativeMenuPresenterDefault from "NativeMenuPresenter" /* 16913 */;
+import components_ActionSheetPresenterDefault from "components/ActionSheetPresenter" /* 16914 */;
+import AlertsDefault from "Alerts" /* 16915 */;
+import SoundPlayerDefault from "SoundPlayer" /* 16923 */;
+import MainViewTooltipActionSheetsV2Default from "MainViewTooltipActionSheetsV2" /* 16924 */;
+import ToastContainerDefault from "ToastContainer" /* 16954 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("components_native/MainShared.tsx");
+require = fn;
+const NativeModules = fn(17).NativeModules;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/MainShared.tsx");
 
-export const BurstReactionAnimationContainer = BurstReactionAnimationContainerInnerDefault;
-export const MenuContainer = MenuContainerDefault;
-export const ActionSheetContainer = ActionSheetPresenterDefault;
-export const Alerts = StyleSheetDefault;
-export const SoundPlayer = MuteDeafenDefault;
-export const MainViewTooltipActionSheetsV2 = trackActionSheetImpressionDefault;
-export const ToastContainer = AnimatedToastDefault;
+export const BurstReactionAnimationContainer = BurstReactionAnimationContainerDefault;
+export const MenuContainer = NativeMenuPresenterDefault;
+export const ActionSheetContainer = components_ActionSheetPresenterDefault;
+export const Alerts = AlertsDefault;
+export const SoundPlayer = SoundPlayerDefault;
+export const MainViewTooltipActionSheetsV2 = MainViewTooltipActionSheetsV2Default;
+export const ToastContainer = ToastContainerDefault;
 export const PictureInPictureGlobalContainer = function PictureInPictureGlobalContainer() {
   let obj = initialize;
-  const items = [closure_5, closure_6];
+  const items = [ChannelStore, RTCConnectionStore];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
-  const obj2 = usePipVideoOrStream;
-  const isModalOpen = coerceMainRoute.useIsModalOpen();
-  isVoicePanelEnabled;
+  const isModalOpen = NavigationRouteUtils.useIsModalOpen();
+  VoicePanelUtils;
   let tmp7 = null;
   if (null != stateFromStores) {
     tmp7 = null;
@@ -46,9 +49,8 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
       if (!isModalOpen) {
         tmp7 = null;
         if (!tmp6) {
-          obj = { channel: null };
-          obj[0] = stateFromStores;
-          tmp7 = jsx(PictureInPictureGlobalDefault, { channel: null });
+          obj = { channel: stateFromStores };
+          tmp7 = jsx(PictureInPictureGlobalDefault, { channel: stateFromStores });
         }
       }
     }
@@ -56,19 +58,19 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
   return tmp7;
 };
 export const useAppKeyCommands = function useAppKeyCommands() {
-  const memo = React.useMemo(() => {
-    let obj = callback(table[10]);
+  const memo = noop.useMemo(() => {
+    let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      let keyModifierCommand = callback2(tmp2[11]).getConstants().keyModifierCommand;
-      const obj2 = callback2(tmp2[11]);
+      let keyModifierCommand = require("NativeKeyCommandsModule").getConstants().keyModifierCommand;
+      const obj2 = require("NativeKeyCommandsModule");
     } else {
       keyModifierCommand = KeyCommandsView.KeyCommandsView.keyModifierCommand;
     }
     obj = { input: "k", modifierFlags: keyModifierCommand, eventName: "keyCommandShowQuickSwitcher", discoverabilityTitle: null, onKeyCommand: null };
     const intl = tmp(tmp2[12]).intl;
-    obj[3] = intl.string(callback(table[12]).t.yYsRlD);
-    obj[4] = function onKeyCommand() {
-      callback(table[13])();
+    obj.discoverabilityTitle = intl.string(util.t.yYsRlD);
+    obj.onKeyCommand = function onKeyCommand() {
+      closure_1_1(closure_1_2[13])();
     };
     const items = [obj];
     return items;
@@ -76,7 +78,7 @@ export const useAppKeyCommands = function useAppKeyCommands() {
   const keyCommands = KeyCommandsView.useKeyCommands(memo);
 };
 export const useScreenReaderEnabled = function useScreenReaderEnabled() {
-  const effect = React.useEffect(() => {
-    const result = callback(table[15]).checkScreenreaderEnabled();
+  const effect = noop.useEffect(() => {
+    const result = AccessibilityManagerDefault.checkScreenreaderEnabled();
   }, []);
 };

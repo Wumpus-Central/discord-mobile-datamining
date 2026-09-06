@@ -1,13 +1,13 @@
-// === Module 11537: useMessagePreviewHeightStore ===
+// === Module 11537: useMessagePreviewHeight ===
 
-// Module 11537 (useMessagePreviewHeightStore)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 11537 (useMessagePreviewHeight)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-const obj = keys.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));
-const result = set.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");
+const useMessagePreviewHeightStore = module_560.create(() => ({ collapsedHeight: 0, expandedHeight: 0 }));
+const result = size.fileFinishedImporting("modules/media_viewer/native/useMessagePreviewHeight.tsx");
 
-export const useMessagePreviewHeightStore = obj;
+export { useMessagePreviewHeightStore };
 export const useMessagePreviewCollapsedheight = function useMessagePreviewCollapsedheight() {
   return obj().collapsedHeight;
 };
@@ -15,14 +15,20 @@ export const useMessagePreviewExpandedHeight = function useMessagePreviewExpande
   return obj().expandedHeight;
 };
 export const setMesssagePreviewHeight = function setMesssagePreviewHeight(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_2.setState(closure_0));
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => obj.setState(closure_0));
 };
-export const setMesssagePreviewCollapsedHeight = function setMesssagePreviewCollapsedHeight(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_2.setState({ collapsedHeight: closure_0 }));
+export const setMesssagePreviewCollapsedHeight = function setMesssagePreviewCollapsedHeight(collapsedHeight) {
+  _require = collapsedHeight;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { collapsedHeight };
+    return obj.setState(obj);
+  });
 };
-export const setMesssagePreviewExpandedHeight = function setMesssagePreviewExpandedHeight(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_2.setState({ expandedHeight: closure_0 }));
+export const setMesssagePreviewExpandedHeight = function setMesssagePreviewExpandedHeight(expandedHeight) {
+  _require = expandedHeight;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { expandedHeight };
+    return obj.setState(obj);
+  });
 };

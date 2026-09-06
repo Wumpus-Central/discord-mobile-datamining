@@ -1,13 +1,13 @@
-// === Module 17464: clearPendingRetry ===
+// === Module 17464: ParentalConsentWarningActionCreators ===
 
-// Module 17464 (clearPendingRetry)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 14867 */;
-import importDefaultResult from "fails" /* 559 */;
+// Module 17464 (ParentalConsentWarningActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14867 */;
+import Backoff from "Backoff" /* 559 */;
 
-const require = arg1;
+const require = fn;
 function clearPendingRetry() {
   if (null != c8) {
     const _clearTimeout = clearTimeout;
@@ -20,17 +20,16 @@ function fetchWarning() {
     if (null != closure_7) {
       return closure_7;
     } else {
-      const _require = c9;
-      const tmp6 = callback(function*() {
+      _require = closure_9;
+      const tmp6 = (async (arg0, value) => {
         if (logger === 2) {
           logger = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp7 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            let obj = { value, done: true };
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
@@ -41,107 +40,101 @@ function fetchWarning() {
             if (0 === c4) {
               if (arg0 === 1) {
                 logger = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 logger = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
-                closure_1 = tmp4;
-                let body = tmp8;
-                body = undefined;
-                closure_1 = undefined;
+                closure_0 = tmp8;
+                closure_128_0 = undefined;
+                closure_128_1 = undefined;
                 c3 = 2;
-                const HTTP = closure_1_0(closure_1_2[6]).HTTP;
+                const HTTP = closure_0(tmp41[6]).HTTP;
                 c4 = 3;
                 logger = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = HTTP.get({ url: "/users/@me/parental-consent/warning", rejectWithError: true });
+                const obj1 = { value: HTTP.get({ url: "/users/@me/parental-consent/warning", rejectWithError: true }), done: false };
                 return obj1;
               }
             } else if (1 === tmp8) {
               c3 = 0;
-              if (body === closure_1_9) {
+              if (closure_129_0 === closure_1_9) {
                 c7 = null;
               }
-              throw closure_2;
+              throw tmp41;
             } else {
               if (2 === tmp8) {
                 c3 = 1;
-                if (body !== closure_1_9) {
+                closure_128_2 = tmp41;
+                if (closure_129_0 !== closure_1_9) {
                   c3 = 0;
-                  if (body === closure_1_9) {
+                  if (closure_129_0 === closure_1_9) {
                     c7 = null;
                   }
                   logger = 3;
                   return { value: "HermesInternal", done: null };
                 } else {
-                  logger.error("Failed to fetch parental-consent warning", closure_2);
-                  const obj2 = { tags: null };
-                  obj2[0] = { source: "parental_consent_warning", step: "fetch_warning" };
-                  closure_1_1(closure_1_2[8]).captureException(closure_2, obj2);
+                  logger.error("Failed to fetch parental-consent warning", closure_128_2);
+                  const obj2 = { tags: { source: "parental_consent_warning", step: "fetch_warning" } };
+                  tmp4(tmp41[8]).captureException(closure_128_2, obj2);
                   (function scheduleRetry() {
                     if (null == timeout) {
                       const _setTimeout = setTimeout;
                       timeout = setTimeout(() => {
                         c8 = null;
-                        callback();
-                      }, closure_6.fail());
+                        closure_1_12();
+                      }, closure_1_6.fail());
                     }
                   })();
-                  const obj7 = closure_1_1(closure_1_2[8]);
+                  const obj7 = tmp4(tmp41[8]);
                 }
               } else if (arg0 === 1) {
                 logger = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
-                if (closure_1_0 === closure_1_9) {
+                if (closure_129_0 === closure_1_9) {
                   c7 = null;
                 }
                 logger = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                const obj3 = { value, done: true };
                 return obj3;
               } else {
-                body = arg1;
-                if (body !== closure_1_9) {
+                closure_128_0 = value;
+                if (closure_129_0 !== closure_1_9) {
                   c3 = 0;
-                  if (body === closure_1_9) {
+                  if (closure_129_0 === closure_1_9) {
                     c7 = null;
                   }
                   logger = 3;
                   return { value: "HermesInternal", done: null };
                 } else {
-                  closure_1 = (function normalizeWarning(body) {
+                  closure_128_1 = (function normalizeWarning(body) {
                     const obj = { inGrace: true === body.in_grace, daysRemaining: null, surfaces: null };
                     let days_remaining = null;
                     if (typeof body.days_remaining === "number") {
                       days_remaining = body.days_remaining;
                     }
-                    obj[1] = days_remaining;
-                    obj[2] = Array.isArray(body.surfaces) ? body.surfaces : [];
+                    obj.daysRemaining = days_remaining;
+                    obj.surfaces = Array.isArray(body.surfaces) ? body.surfaces : [];
                     return obj;
-                  })(body.body);
-                  closure_1_6.succeed();
-                  closure_1_10();
-                  obj = closure_1_1(closure_1_2[7]);
-                  const obj4 = { type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: null };
-                  obj4[1] = closure_1;
+                  })(closure_128_0.body);
+                  Backoff.succeed();
+                  clearPendingRetry();
+                  obj = tmp4(tmp41[7]);
+                  const obj4 = { type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: closure_128_1 };
                   obj.dispatch(obj4);
                   c3 = 1;
                 }
               }
               c3 = 0;
-              if (closure_1_0 === closure_1_9) {
+              if (closure_129_0 === closure_1_9) {
                 c7 = null;
               }
               logger = 3;
               return { value: "HermesInternal", done: null };
             }
           } catch (tmp41) {
-            closure_2 = tmp41;
             if (tmp5 === c3) {
               logger = tmp3;
               throw tmp41;
@@ -159,11 +152,11 @@ function fetchWarning() {
   } else {
     return Promise.resolve();
   }
-  obj = _require(17465);
+  obj = require("ParentalConsentWarningFetchExperiment");
 }
 function maybeFetchWarning() {
   const self = this;
-  const apply = _maybeFetchWarning.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -171,155 +164,126 @@ function maybeFetchWarning() {
   }
   return applyArgumentsResult;
 }
-function _maybeFetchWarning() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_13 = async function _maybeFetchWarning(arg0, value) {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let shouldFetchTodayResult = null == closure_1_7;
-            if (shouldFetchTodayResult) {
-              shouldFetchTodayResult = null == closure_1_8;
-            }
-            if (shouldFetchTodayResult) {
-              shouldFetchTodayResult = closure_1_4.shouldFetchToday();
-            }
-            if (shouldFetchTodayResult) {
-              c1 = 1;
-              c0 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_11();
-              return obj1;
-            }
-          }
-        } else if (arg0 === 1) {
-          c0 = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        }
-        c0 = 3;
-        return { value: "HermesInternal", done: null };
-      } catch (tmp11) {
-        c0 = tmp;
-        throw tmp11;
-      }
+      return { value: "HermesInternal", done: null };
     }
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _forceFetchWarning() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c0 === 2) {
-      c0 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c0 = 2;
-        if (0 === c1) {
-          if (arg0 === 1) {
-            c0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_1_10();
-            if (null != c7) {
-              closure_9 = closure_9 + 1;
-              c7 = null;
-            }
-            c1 = 1;
-            c0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_11();
-            return obj1;
-          }
-        } else if (arg0 === 1) {
+    try {
+      c0 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
           c0 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          c0 = 3;
-          return { value: "HermesInternal", done: null };
+          let shouldFetchTodayResult = null == React5;
+          if (shouldFetchTodayResult) {
+            shouldFetchTodayResult = null == React6;
+          }
+          if (shouldFetchTodayResult) {
+            shouldFetchTodayResult = ParentalConsentWarningStore.shouldFetchToday();
+          }
+          if (shouldFetchTodayResult) {
+            c1 = 1;
+            c0 = 1;
+            const obj1 = { value: fetchWarning(), done: false };
+            return obj1;
+          }
         }
-      } catch (tmp11) {
-        c0 = tmp;
-        throw tmp11;
+      } else if (arg0 === 1) {
+        c0 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c0 = 3;
+        obj = { value, done: true };
+        return obj;
       }
+      c0 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp11) {
+      c0 = tmp;
+      throw tmp11;
     }
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-let logger = new require("log").Logger("ParentalConsentWarning");
-const result = 5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, 5 * setDefault.Millis.MINUTE, true);
+};
+let closure_14 = async function _forceFetchWarning(arg0, value) {
+  if (c0 === 2) {
+    c0 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c0 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c0 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c0 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          clearPendingRetry();
+          if (null != c7) {
+            closure_9 = closure_9 + 1;
+            c7 = null;
+          }
+          c1 = 1;
+          c0 = 1;
+          const obj1 = { value: fetchWarning(), done: false };
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        c0 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c0 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        c0 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp11) {
+      c0 = tmp;
+      throw tmp11;
+    }
+  }
+};
+let logger = new fn(4).Logger("ParentalConsentWarning");
+const result = 5 * DurationsDefault.Millis.SECOND;
+Backoff = new Backoff(result, 5 * DurationsDefault.Millis.MINUTE, true);
 let c7 = null;
 let c8 = null;
-let c9 = 0;
-const result1 = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentWarningActionCreators.tsx");
+let closure_9 = 0;
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/parent_tools/ParentalConsentWarningActionCreators.tsx");
 
 export { maybeFetchWarning };
 export const forceFetchWarning = function forceFetchWarning() {
   const self = this;
-  const apply = _forceFetchWarning.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -335,8 +299,8 @@ export const resetFetchState = function resetFetchState() {
     c8 = null;
   }
   c7 = null;
-  importDefaultResult.succeed();
+  Backoff.succeed();
 };
 export const clearWarning = function clearWarning() {
-  dispatcherDefault.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
+  DispatcherDefault.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
 };

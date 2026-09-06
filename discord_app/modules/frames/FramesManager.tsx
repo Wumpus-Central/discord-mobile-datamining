@@ -1,15 +1,15 @@
-// === Module 9569: leaveFrame ===
+// === Module 9569: FramesManager ===
 
-// Module 9569 (leaveFrame)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "map" /* 9510 */;
-import ME from "ME" /* 1074 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;
+// Module 9569 (FramesManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import FramesStore from "FramesStore" /* 9510 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
-({ AnalyticEvents: c4, RPCCloseCodes: c5 } = ME);
-initializeDefault;
+let require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
+const TransportTypes = fn(4465).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,16 +32,15 @@ class FramesManager extends tmp3 {
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
       ({ reason, source } = arg0);
       if (null != reason) {
-        if (source.type === closure_1_6.POST_MESSAGE) {
-          const frameByIframeId = closure_1_3.getFrameByIframeId(source.iframeId);
+        if (source.type === TransportTypes.POST_MESSAGE) {
+          const frameByIframeId = FramesStore.getFrameByIframeId(source.iframeId);
           if (null != frameByIframeId) {
             applyArgumentsResult.leaveFrame(frameByIframeId.id);
-            if (reason.code !== closure_1_5.CLOSE_NORMAL) {
-              let obj = closure_1_1(closure_1_2[6]);
-              obj = { rpc_close_code: null, rpc_message: null, application_id: null };
-              ({ code: obj2[0], message: obj2[1] } = reason);
-              obj[2] = frameByIframeId.applicationId;
-              obj.track(closure_1_4.ACTIVITY_CLOSED_RPC_ERROR, obj);
+            if (reason.code !== constants2.CLOSE_NORMAL) {
+              const obj = { rpc_close_code: null, rpc_message: null, application_id: null };
+              ({ code: obj2.rpc_close_code, message: obj2.rpc_message } = reason);
+              obj.application_id = frameByIframeId.applicationId;
+              obj.track(constants.ACTIVITY_CLOSED_RPC_ERROR, obj);
               const result = obj3.showRPCDisconnectErrorUI(reason);
             }
             obj3 = applyArgumentsResult;
@@ -53,15 +52,15 @@ class FramesManager extends tmp3 {
   }
 }
 FramesManager.prototype["leaveFrame"] = function leaveFrame(frameId) {
-  frame = frame.getFrame(frameId);
+  const frame = FramesStore.getFrame(frameId);
   if (null != frame) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRAME_STOP", applicationId: null, frameId: null };
-    ({ applicationId: obj2[1], id: obj2[2] } = frame);
+    const obj = { type: "FRAME_STOP", applicationId: null, frameId: null };
+    ({ applicationId: obj2.applicationId, id: obj2.frameId } = frame);
     obj.dispatch(obj);
   }
 };
 FramesManager.displayName = "FramesManager";
-let result = require("set").fileFinishedImporting("modules/frames/FramesManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/frames/FramesManager.tsx");
 
 export default FramesManager;

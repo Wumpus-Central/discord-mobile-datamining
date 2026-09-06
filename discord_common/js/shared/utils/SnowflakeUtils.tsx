@@ -1,15 +1,15 @@
-// === Module 13: extractTimestamp ===
+// === Module 13: utils/SnowflakeUtils ===
 
-// Module 13 (extractTimestamp)
-import set from "set" /* 2 */;
+// Module 13 (utils/SnowflakeUtils)
 import IntegerDefault from "Integer" /* 14 */;
+import size from "module_2" /* 2 */;
 
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;
 }
 let c2 = 1420070400000;
 let c3 = 4095;
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/SnowflakeUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/SnowflakeUtils.tsx");
 class SnowflakeSequence {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -23,7 +23,7 @@ prototype["next"] = function next() {
   if (this.seq > c3) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Snowflake sequence number overflow: " + self.seq);
+    const error = new Error("Snowflake sequence number overflow: " + self.seq);
     throw error;
   } else {
     self.seq = +self.seq + 1;
@@ -56,7 +56,6 @@ export const fromTimestampWithSequence = function fromTimestampWithSequence(arg0
   if (diff > 0) {
     num = diff;
   }
-  const tmp2 = IntegerDefault;
   const tmp2Result = IntegerDefault(num);
   const shiftLeftResult = IntegerDefault(num).shiftLeft(22);
   return IntegerDefault(num).shiftLeft(22).add(next.next()).toString();

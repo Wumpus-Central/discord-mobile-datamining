@@ -1,139 +1,135 @@
-// === Module 12006: GIFIcon ===
+// === Module 12006: ForumPostGridBody ===
 
-// Module 12006 (GIFIcon)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 11245 */;
-import registerAssetDefault2 from "registerAsset" /* 12007 */;
-import registerAssetDefault3 from "registerAsset" /* 12008 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12006 (ForumPostGridBody)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 7897 */;
+import _modDef11245 from "module_11245" /* 11245 */;
+import _modDef12007 from "module_12007" /* 12007 */;
+import _modDef12008 from "module_12008" /* 12008 */;
+import ForumPostMedia from "ForumPostMedia" /* 12009 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function GIFIcon() {
-  const tmp = callback3();
-  return callback(Button.Icon, { size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault2, disableColor: true, style: callback3().gifIcon });
+  const tmp = closure_8();
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.CUSTOM, source: _modDef12007, disableColor: true, style: closure_8().gifIcon });
 }
 function PlayIcon() {
-  return callback(Button.Icon, { size: Button.Icon.Sizes.SMALL_20, source: registerAssetDefault3, disableColor: true });
+  return timestampProducer(native.Icon, { size: native.Icon.Sizes.SMALL_20, source: _modDef12008, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = { style: tmp.extraMediaCountContainer, children: null };
-  obj = { source: registerAssetDefault, color: tmp.icon.color, size: Button.Icon.Sizes.REFRESH_SMALL_16 };
-  items = [callback(Button.Icon, obj), ];
+  obj = { source: _modDef11245, color: tmp.icon.color, size: native.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [timestampProducer(native.Icon, obj), ];
   obj = { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  items[1] = timestampProducer(Text_Text.Text, obj);
+  obj.children = items;
+  return React5(View, obj);
 }
 function MediaGridColumn(arg0) {
   ({ column, thread: require } = arg0);
-  closure_1 = undefined;
-  const tmp = callback3();
-  closure_1 = tmp;
-  const found = column.filter(isDiscordFrontendDevelopment.isNotNullish);
-  return callback(View, {
+  const tmp = closure_8();
+  const rowSpacer = tmp;
+  const found = column.filter(GlobalUtils.isNotNullish);
+  return closure_6(View, {
     style: tmp.column,
-    children: found.map((media) => {
-      let tmp2 = arg1 > 0;
+    children: found.map((media, index) => {
+      let tmp2 = index > 0;
       if (tmp2) {
-        let obj = { style: null };
-        obj[0] = rowSpacer.rowSpacer;
-        tmp2 = closure_1_6(closure_1_5, obj);
+        let obj = { style: rowSpacer.rowSpacer };
+        tmp2 = timestampProducer(View, obj);
       }
       obj = { children: null };
       items = [tmp2, ];
-      obj = { channel: id, media: media.media, targetWidth: media.targetWidth, targetHeight: media.targetHeight };
-      items[1] = closure_1_6(closure_1_0(closure_1_2[13]).ForumPostGridMedia, obj);
-      obj[0] = items;
-      return closure_1_7(closure_1_4.Fragment, obj, "" + id.id + "-" + arg1);
+      obj = { channel, media: media.media, targetWidth: media.targetWidth, targetHeight: media.targetHeight };
+      items[1] = timestampProducer(ForumPostMedia.ForumPostGridMedia, obj);
+      obj.children = items;
+      return React5(noop.Fragment, obj, "" + channel.id + "-" + index);
     })
   });
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
-createCacheKey = { height: 20, width: 33, backgroundColor: "black", borderRadius: ThemesDefault.radii.xs, resizeMode: "cover" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 225 };
-createCacheKey[2] = { height: 192 };
-createCacheKey[3] = { paddingLeft: 6 };
-createCacheKey[4] = { flexDirection: "row", position: "absolute", top: 4, left: 4 };
-createCacheKey[5] = { flexDirection: "row", position: "absolute", bottom: 4, left: 4, alignItems: "center", justifyContent: "flex-start" };
-createCacheKey[6] = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "flex-start" };
-let obj1 = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 225 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
-createCacheKey[8] = { marginLeft: 2 };
-let obj2 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
-createCacheKey[9] = { height: 225, flexDirection: "row", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
-createCacheKey[10] = { height: 192 };
-createCacheKey[11] = { flex: 1, flexDirection: "column" };
-createCacheKey[12] = { flex: 0, width: 2, height: "100%" };
-createCacheKey[13] = { flex: 0, height: 2, width: "100%" };
-let obj3 = { height: 225, flexDirection: "row", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
-createCacheKey[14] = { color: ThemesDefault.colors.TEXT_SUBTLE };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
+let size = { height: 20, width: 33, backgroundColor: "black", borderRadius: nativeDefault.radii.xs, resizeMode: "cover" };
+createStyles.gifIcon = size;
+createStyles = { position: "relative", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: 225 };
+createStyles.container = createStyles;
+createStyles.wideAspectRatioContainer = { height: 192 };
+createStyles.mediaIconContainer = { paddingLeft: 6 };
+createStyles.headerLeftContainer = { flexDirection: "row", position: "absolute", top: 4, left: 4 };
+createStyles.footerLeftContainer = { flexDirection: "row", position: "absolute", bottom: 4, left: 4, alignItems: "center", justifyContent: "flex-start" };
+createStyles.footerRightContainer = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "flex-start" };
+createStyles.extraMediaCountContainer = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
+createStyles.extraMediaCount = { marginLeft: 2 };
+let obj1 = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
+createStyles.grid = { height: 225, flexDirection: "row", borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
+createStyles.wideAspectRatioGrid = { height: 192 };
+createStyles.column = { flex: 1, flexDirection: "column" };
+createStyles.columnSpacer = { flex: 0, width: 2, height: "100%" };
+createStyles.rowSpacer = { flex: 0, height: 2, width: "100%" };
+let obj2 = { height: 225, flexDirection: "row", borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
+createStyles.icon = { color: nativeDefault.colors.TEXT_SUBTLE };
+let closure_8 = createStyles.createStyles(createStyles);
 let items = [[0, 3], [1, 2]];
-let obj4 = { color: ThemesDefault.colors.TEXT_SUBTLE };
-let result = require("set").fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridBody.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridBody.tsx");
 
 export default function ForumPostGridBody(thread) {
   thread = thread.thread;
-  let memo = thread;
-  let media = thread.media;
-  let width;
-  const tmp = callback3();
-  width = tmp;
-  let obj = memo(width[14]);
-  const tmp4 = memo1(obj.useSomeAppliedTags(thread, 2), 2);
+  const media = thread.media;
+  const tmp = closure_8();
+  dependencyMap = tmp;
+  let obj = thread(7275);
+  const tmp4 = _slicedToArray(obj.useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp13Result = first.length > 0;
   items = [media];
-  memo = React.useMemo(() => media.slice(0, 4), items);
+  const memo = noop.useMemo(() => media.slice(0, 4), items);
   const bound = Math.max(0, media.length - 4);
   const isMediaPostResult = thread.isMediaPost();
-  media = isMediaPostResult;
-  width = undefined;
-  memo1 = undefined;
-  width = media(width[11])().width;
+  closure_129_0 = memo;
+  closure_129_1 = isMediaPostResult;
+  const width = media(1477)().width;
+  closure_129_2 = width;
   const items1 = [memo];
-  memo1 = React.useMemo(() => {
-    const substr = closure_1_12.slice(0, Math.min(memo.length, 2));
+  const memo1 = noop.useMemo(() => {
+    const substr = items.slice(0, Math.min(thread.length, 2));
     let mapped = substr.map((arr) => {
-      const mapped = arr.map((arg0) => table[arg0]);
-      return mapped.filter(closure_1_0(closure_1_2[12]).isNotNullish);
+      const mapped = arr.map((item) => closure_1_0[item]);
+      return mapped.filter(thread(closure_2[12]).isNotNullish);
     });
-    return mapped.filter((arg0) => arg0.length > 0);
+    return mapped.filter((item) => item.length > 0);
   }, items1);
+  closure_129_3 = memo1;
   const items2 = [width, memo1, isMediaPostResult];
-  const memo2 = React.useMemo(() => {
-    let num = 225;
-    if (media) {
-      num = 192;
-    }
-    return memo1.map((arr) => {
-      arr.filter(memo(width[12]).isNotNullish).length;
+  const memo2 = noop.useMemo(() => {
+    return length.map((arr) => {
+      length = arr.filter(thread(closure_2[12]).isNotNullish).length;
+      length = length.length;
       return arr.map((media) => {
-        const diff = (closure_2_2 - 48) / length - 2 * (length - 1) / length;
+        const diff = (closure_2 - 48) / length - 2 * (length - 1) / length;
         const obj = { media, targetWidth: diff, targetHeight: null };
-        if (closure_2_1) {
+        if (media) {
           if (length < 2) {
             let result = diff / 1.7777777777777777;
           }
-          obj[2] = result;
+          obj.targetHeight = result;
           return obj;
         }
-        result = length / length - 2 * (length - 1) / length;
+        result = num / length - 2 * (length - 1) / length;
       });
     });
   }, items2);
   const items3 = [media];
-  const memo3 = React.useMemo(() => memo(width[15]).messageContainsGifOrVideo(media), items3);
+  const memo3 = noop.useMemo(() => ForumPostMediaUtils.messageContainsGifOrVideo(media), items3);
   ({ containsVideo, containsGif } = memo3);
   const items4 = [tmp.container, ];
   let wideAspectRatioContainer = isMediaPostResult;
@@ -149,31 +145,26 @@ export default function ForumPostGridBody(thread) {
   }
   obj = {
     style: items5,
-    children: memo2.map((column) => {
-      let tmp2 = arg1 > 0;
+    children: memo2.map((column, index) => {
+      let tmp2 = index > 0;
       if (tmp2) {
-        let obj = { style: null };
-        obj[0] = width.columnSpacer;
-        tmp2 = closure_1_6(closure_1_5, obj);
+        let obj = { style: columnSpacer.columnSpacer };
+        tmp2 = timestampProducer(View, obj);
       }
       obj = { children: null };
       items = [tmp2, ];
-      obj = { column, thread: memo };
-      items[1] = closure_1_6(closure_1_13, obj);
-      obj[0] = items;
-      return closure_1_7(closure_1_4.Fragment, obj, "" + column + "-" + arg1);
+      obj = { column, thread };
+      items[1] = timestampProducer(MediaGridColumn, obj);
+      obj.children = items;
+      return React5(noop.Fragment, obj, "" + column + "-" + index);
     })
   };
   items5[1] = wideAspectRatioGrid;
   const items6 = [closure_6(View, obj), , , ];
   if (tmp13Result) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.footerLeftContainer;
-    const obj2 = { appliedTags: null, additionalTagsCount: null, hasUnreads: null };
-    obj2[0] = first;
-    obj2[1] = tmp4[1];
-    obj2[2] = thread.hasUnreads;
-    obj1[1] = tmp13(memo(width[16]).ForumPostAppliedTagPills, obj2);
+    const obj1 = { style: tmp.footerLeftContainer, children: null };
+    const obj2 = { appliedTags: first, additionalTagsCount: tmp4[1], hasUnreads: thread.hasUnreads };
+    obj1.children = tmp13(thread(12013).ForumPostAppliedTagPills, obj2);
     tmp13Result = tmp13(tmp12, obj1);
   }
   items6[1] = tmp13Result;
@@ -182,37 +173,30 @@ export default function ForumPostGridBody(thread) {
     tmp11Result = containsVideo;
   }
   if (tmp11Result) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.headerLeftContainer;
+    const obj3 = { style: tmp.headerLeftContainer, children: null };
     if (containsGif) {
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp.mediaIconContainer;
-      obj4[1] = tmp13(GIFIcon, {});
+      const obj4 = { style: tmp.mediaIconContainer, children: tmp13(GIFIcon, {}) };
       containsGif = tmp13(tmp12, obj4);
     }
     const items7 = [containsGif, ];
     if (containsVideo) {
-      const obj5 = { style: null, children: null };
-      obj5[0] = tmp.mediaIconContainer;
-      obj5[1] = tmp13(PlayIcon, {});
+      const obj5 = { style: tmp.mediaIconContainer, children: tmp13(PlayIcon, {}) };
       containsVideo = tmp13(tmp12, obj5);
     }
     items7[1] = containsVideo;
-    obj3[1] = items7;
+    obj3.children = items7;
     tmp11Result = tmp11(tmp12, obj3);
   }
   items6[2] = tmp11Result;
   tmp13Result = 0 !== bound;
   if (tmp13Result) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.footerRightContainer;
-    const obj7 = { extraMediaCount: null };
-    obj7[0] = bound;
-    obj6[1] = tmp13(ExtraMediaIcon, obj7);
+    const obj6 = { style: tmp.footerRightContainer, children: null };
+    const obj7 = { extraMediaCount: bound };
+    obj6.children = tmp13(ExtraMediaIcon, obj7);
     tmp13Result = tmp13(tmp12, obj6);
   }
   items6[3] = tmp13Result;
-  obj[1] = items6;
+  obj.children = items6;
   return closure_7(View, obj);
 };
 export const GRID_HORIZONTAL_PADDING = 48;

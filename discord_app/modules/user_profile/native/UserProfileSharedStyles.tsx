@@ -1,33 +1,35 @@
-// === Module 8241: useSharedStyles ===
+// === Module 8241: UserProfileSharedStyles ===
 
-// Module 8241 (useSharedStyles)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8241 (UserProfileSharedStyles)
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 7208 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
-({ AVATAR_CONTAINER_SIZE: obj1, AVATAR_CUSTOM_STATUS_GAP: c3, AVATAR_PADDING: c4, CARD_PADDING: c5, PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_SIDE_PADDING: error, PROFILE_TOP_LAYER_Z_INDEX: closure_8 } = ARBITRARY_LARGE_OFFSET);
-let closure_9 = createCacheKey.createStyles(() => {
-  obj = { avatarPosition: obj, avatarBackground: obj, avatar: obj1, profileContentWrapper: obj2, profileContent: obj3, customStatusBubble: obj4, customStatusBubbleInset: obj5, emojiOnlyCustomStatusBubble: { marginBottom: 4 }, primaryInfo: { rowGap: 12, paddingBottom: 12 }, primaryButtons: { paddingVertical: 12 }, bannerButtons: obj6, bannerButtonsWithPrivateBanner: { top: 54 }, profileTablist: null, cards: null, card: null };
-  obj = { position: "absolute", top: -closure_2 / 2, left: closure_7 - closure_4 };
-  obj = { width: closure_2, height: closure_2, borderRadius: closure_2, padding: closure_4, zIndex: 0 };
-  obj[12] = { paddingHorizontal: closure_7, marginBottom: ThemesDefault.space.PX_16 };
-  obj[13] = { rowGap: 16 };
-  obj1 = { margin: closure_4, zIndex: 1 };
-  obj2 = { flexGrow: 1, paddingBottom: closure_6, overflow: "visible" };
-  obj3 = { paddingHorizontal: closure_7 };
-  obj4 = { marginTop: 6, marginBottom: 12, marginLeft: closure_2 - closure_4 + closure_3 };
-  obj5 = { marginLeft: closure_7 + closure_2 - closure_4 + closure_3, marginRight: closure_7 };
-  obj6 = { flexDirection: "row", position: "absolute", top: 16, right: 16, gap: 8, zIndex: closure_8 };
-  const obj7 = { paddingHorizontal: closure_7, marginBottom: ThemesDefault.space.PX_16 };
-  obj[14] = { borderRadius: ThemesDefault.radii.md, padding: closure_5, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+({ AVATAR_CONTAINER_SIZE: c2, AVATAR_CUSTOM_STATUS_GAP: c3, AVATAR_PADDING: closure_4, CARD_PADDING: hasOwnProperty, PROFILE_CONTENT_BOTTOM_PADDING: metroRequire, PROFILE_SIDE_PADDING: closure_7, PROFILE_TOP_LAYER_Z_INDEX: closure_8 } = Constants);
+let closure_9 = createStyles.createStyles(() => {
+  let obj = { avatarPosition: null, avatarBackground: { width: borderRadius, height: borderRadius, borderRadius, padding: margin, zIndex: 0 }, avatar: { margin, zIndex: 1 }, profileContentWrapper: null, profileContent: null, customStatusBubble: null, customStatusBubbleInset: null, emojiOnlyCustomStatusBubble: { marginBottom: 4 }, primaryInfo: { rowGap: 12, paddingBottom: 12 }, primaryButtons: { paddingVertical: 12 }, bannerButtons: null, bannerButtonsWithPrivateBanner: { top: 54 }, profileTablist: null, cards: null, card: null };
+  const rect = { position: "absolute", top: -borderRadius / 2, left: paddingHorizontal - margin };
+  obj.avatarPosition = rect;
+  obj = { flexGrow: 1, paddingBottom, overflow: "visible" };
+  obj.profileContentWrapper = obj;
+  obj.profileContent = { paddingHorizontal };
+  obj = { marginTop: 6, marginBottom: 12, marginLeft: borderRadius - margin + React3 };
+  obj.customStatusBubble = obj;
+  obj.customStatusBubbleInset = { marginLeft: paddingHorizontal + borderRadius - margin + React3, marginRight: paddingHorizontal };
+  const rect1 = { flexDirection: "row", position: "absolute", top: 16, right: 16, gap: 8, zIndex };
+  obj.bannerButtons = rect1;
+  obj.profileTablist = { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 };
+  obj.cards = { rowGap: 16 };
+  const obj1 = { paddingHorizontal, marginBottom: nativeDefault.space.PX_16 };
+  obj.card = { borderRadius: nativeDefault.radii.md, padding, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/user_profile/native/UserProfileSharedStyles.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileSharedStyles.tsx");
 
 export default function useSharedStyles() {
-  return callback();
+  return closure_9();
 };
 export const useUserProfileCardRadius = function useUserProfileCardRadius() {
-  return ThemesDefault.radii.md;
+  return nativeDefault.radii.md;
 };

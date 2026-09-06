@@ -1,14 +1,13 @@
-// === Module 17617: updateGuildRole ===
+// === Module 17617: GuildSettingsModalRolesActionCreators ===
 
-// Module 17617 (updateGuildRole)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 17617 (GuildSettingsModalRolesActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function updateGuildRole(arg0) {
+const require = fn;
+function updateGuildRole() {
   const self = this;
-  const apply = _updateGuildRole.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -16,165 +15,134 @@ function updateGuildRole(arg0) {
   }
   return applyArgumentsResult;
 }
-function _updateGuildRole() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_6 = async function _updateGuildRole(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          ({ guildId: closure_130_0, roleId: closure_130_1, name: closure_130_2, permissions: closure_130_3, color: closure_130_4, hoist: closure_130_5, mentionable: closure_130_6 } = closure_0);
+          closure_130_7 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
         }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c3 = tmp5;
-              dependencyMap = tmp2;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              ({ guildId: c0, roleId: c1, name: c2, permissions: c3, color: c4, hoist: c5, mentionable: c6 } = callback);
-              closure_7 = undefined;
-              c4 = 1;
-              c5 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-              obj2[0] = c4.GUILD_ROLE(callback, callback2);
-              let obj3 = { name: null, permissions: null, color: null, hoist: null, mentionable: null };
-              obj3[0] = dependencyMap;
-              obj3[1] = c3;
-              callback2 = c4;
-              if (c4 == null) {
-                callback2 = 0;
-              }
-              obj3[2] = callback2;
-              obj3[3] = c5;
-              obj3[4] = c6;
-              obj2[1] = obj3;
-              obj3 = callback(1272);
-              obj2[3] = obj3.rejectWithMigratedError();
-              c4 = 2;
-              c5 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.patch(obj2);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_7 = arg1;
-            obj = callback2(7323);
-            const result = obj.checkGuildTemplateDirty(callback);
-            c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = closure_7;
-            return obj6;
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          const HTTP = closure_131_0(closure_131_2[2]).HTTP;
+          const request = { url: closure_131_4.GUILD_ROLE(closure_130_0, closure_130_1), body: null, oldFormErrors: true, rejectWithError: null };
+          const obj2 = { name: closure_130_2, permissions: closure_130_3, color: null, hoist: null, mentionable: null };
+          let color = closure_130_4;
+          if (closure_130_4 == null) {
+            color = 0;
           }
-        } catch (tmp19) {
-          c5 = tmp;
-          throw tmp19;
+          obj2.color = color;
+          obj2.hoist = closure_130_5;
+          obj2.mentionable = closure_130_6;
+          request.body = obj2;
+          let obj3 = closure_131_0(closure_131_2[2]);
+          request.rejectWithError = obj3.rejectWithMigratedError();
+          c4 = 2;
+          c5 = 1;
+          obj3 = { value: HTTP.patch(request), done: false };
+          return obj3;
         }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_130_7 = value;
+        obj = closure_131_1(closure_131_2[3]);
+        const result = obj.checkGuildTemplateDirty(closure_130_0);
+        c5 = 3;
+        const obj5 = { value: closure_130_7, done: true };
+        return obj5;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp19) {
+      c5 = tmp;
+      throw tmp19;
+    }
   }
-  return applyArgumentsResult;
-}
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesActionCreators.tsx");
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesActionCreators.tsx");
 
 export default {
   startReordering(guildId) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_ROLES_START_REORDER", guildId };
+    const obj = { type: "GUILD_SETTINGS_MODAL_ROLES_START_REORDER", guildId };
     obj.dispatch(obj);
   },
   stopReordering() {
-    dispatcherDefault.wait(() => callback(table[4]).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER" }));
+    DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER" }));
   },
-  updateRoleOrder(arg0, to) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_ROLES_EDIT_ORDER", from: arg0, to };
+  updateRoleOrder(from, to) {
+    const obj = { type: "GUILD_SETTINGS_MODAL_ROLES_EDIT_ORDER", from, to };
     obj.dispatch(obj);
   },
   toggleRoleSetting(guildId, id, hoist, mentionable) {
     return updateGuildRole({ guildId, roleId: id.id, name: id.name, permissions: id.permissions, color: id.color, hoist, mentionable });
   },
   startEditingPermissions(guildId, roleId) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_START_EDITING", guildId, roleId };
+    const obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_START_EDITING", guildId, roleId };
     obj.dispatch(obj);
   },
   stopEditingPermissions() {
-    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_STOP_EDITING" });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_STOP_EDITING" });
   },
   allowPermission(permission) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSION_ALLOW", permission };
+    const obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSION_ALLOW", permission };
     obj.dispatch(obj);
   },
   denyPermission(permission) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSION_DENY", permission };
+    const obj = { type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSION_DENY", permission };
     obj.dispatch(obj);
   },
   cancelPermissionChanges() {
-    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_CANCEL" });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_CANCEL" });
   },
   savePermissionChanges(arg0) {
     ({ guildId, roleId, name, permissions, color, hoist, mentionable } = arg0);
-    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING" });
-    const obj = dispatcherDefault;
-    updateGuildRole({ guildId, roleId, name, permissions, color, hoist, mentionable }).then(() => callback(573).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS" }), () => callback(573).dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE" }));
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING" });
+    updateGuildRole({ guildId, roleId, name, permissions, color, hoist, mentionable }).then(() => DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS" }), () => DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE" }));
   }
 };

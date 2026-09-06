@@ -1,32 +1,27 @@
-// === Module 8003: createUserPremiumGuildSubscriptionSystemMessage ===
+// === Module 8003: UserPremiumGuildSubscriptionSystemMessage ===
 
-// Module 8003 (createUserPremiumGuildSubscriptionSystemMessage)
-import set from "set" /* 2 */;
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+// Module 8003 (UserPremiumGuildSubscriptionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
 import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8004 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
   const message = roleStyle.message;
   const tmp3 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
-  let obj = getMessageAuthorWithProcessedColor;
+  let obj = useAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {
     const intl2 = tmp4(1114).intl;
-    obj = { username: null, usernameOnClick: null, numSubscriptions: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj[1] = tmp6;
-    obj[2] = tmp3;
+    obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6, numSubscriptions: tmp3 };
     let formatToPartsResult = intl2.formatToParts(tmp4(1114).t.rbj006, obj);
   } else {
     const intl = tmp4(1114).intl;
-    obj = { username: null, usernameOnClick: null };
-    obj[0] = messageAuthorWithProcessedColor.nick;
-    obj[1] = tmp6;
+    obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6 };
     formatToPartsResult = intl.formatToParts(tmp4(1114).t.ihxM9x, obj);
   }
   const merged = Object.assign(createCommonMessageDefault(roleStyle));

@@ -1,30 +1,30 @@
-// === Module 16330: canConnectToChannel ===
+// === Module 16330: useGuildMediaState ===
 
-// Module 16330 (canConnectToChannel)
-import set from "set" /* 1094 */;
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import { isVoiceChannel } from "createChannelRecord" /* 1961 */;
-import closure_6 from "reset" /* 4582 */;
-import closure_7 from "fetchFingerprint" /* 502 */;
-import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import closure_9 from "createGuildRecordFromRust" /* 1979 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_11 from "markAllUserIdListsStale" /* 4209 */;
-import closure_12 from "handleConnectionOpen" /* 2011 */;
-import closure_13 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_14 from "updateVoiceState" /* 4579 */;
-import { BasicPermissions } from "ME" /* 1074 */;
+// Module 16330 (useGuildMediaState)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import ChannelTypes from "ChannelTypes" /* 1094 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13709 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-require = arg1;
-function canConnectToChannel(type) {
+require = fn;
+function canConnectToChannel(type, arg1) {
   let obj = arg2;
   if (arg2 === undefined) {
-    obj = closure_10;
+    obj = PermissionStore;
   }
   let canBasicChannelResult = null != type;
   if (canBasicChannelResult) {
-    canBasicChannelResult = type.type !== set.ChannelTypes.GUILD_STAGE_VOICE;
+    canBasicChannelResult = type.type !== ChannelTypes.ChannelTypes.GUILD_STAGE_VOICE;
   }
   if (canBasicChannelResult) {
     canBasicChannelResult = arg1 !== type.id;
@@ -34,27 +34,30 @@ function canConnectToChannel(type) {
   }
   return canBasicChannelResult;
 }
-let result = require("set").fileFinishedImporting("modules/guilds_bar/useGuildMediaState.tsx");
+const isVoiceChannel = fn(1961).isVoiceChannel;
+const BasicPermissions = fn(1074).BasicPermissions;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/useGuildMediaState.tsx");
 
 export default function useGuildMediaState(guild_id) {
-  const _require = guild_id;
-  let items = [closure_13];
-  const stateFromStores = _require(isDontBadgeMutedVcsEnabled[14]).useStateFromStores(items, () => closure_1_13.isMuted(closure_0));
-  let obj = _require(isDontBadgeMutedVcsEnabled[14]);
-  isDontBadgeMutedVcsEnabled = _require(isDontBadgeMutedVcsEnabled[15]).useIsDontBadgeMutedVcsEnabled("useGuildMediaState");
-  let obj2 = _require(isDontBadgeMutedVcsEnabled[15]);
-  const guildActiveEvent = _require(isDontBadgeMutedVcsEnabled[16]).useGuildActiveEvent(guild_id);
-  const obj3 = _require(isDontBadgeMutedVcsEnabled[16]);
-  const items1 = [guildActiveEvent, selectedVoiceChannelHasVideo, closure_11];
-  const stateFromStoresArray = _require(isDontBadgeMutedVcsEnabled[14]).useStateFromStoresArray(items1, () => {
-    const embeddedActivitiesForGuild = guildActiveEvent.getEmbeddedActivitiesForGuild(closure_0);
+  _require = guild_id;
+  let items = [UserGuildSettingsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => UserGuildSettingsStore.isMuted(closure_0));
+  let obj = require("initialize");
+  isDontBadgeMutedVcsEnabled = require("DontBadgeMutedVcsExperiment").useIsDontBadgeMutedVcsEnabled("useGuildMediaState");
+  let obj2 = require("DontBadgeMutedVcsExperiment");
+  const guildActiveEvent = require("useGuildScheduledEvents").useGuildActiveEvent(guild_id);
+  const obj3 = require("useGuildScheduledEvents");
+  const items1 = [guildActiveEvent, selectedVoiceChannelHasVideo, RelationshipStore];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => {
+    const embeddedActivitiesForGuild = EmbeddedActivitiesStore.getEmbeddedActivitiesForGuild(closure_0);
     return embeddedActivitiesForGuild.filter((location) => {
-      basicChannel = basicChannel.getBasicChannel(callback(table[17]).getEmbeddedActivityLocationChannelId(location.location));
+      basicChannel = basicChannel.getBasicChannel(guild_id(isDontBadgeMutedVcsEnabled[17]).getEmbeddedActivityLocationChannelId(location.location));
       let type;
       if (basicChannel != null) {
         type = basicChannel.type;
       }
-      if (type === callback(table[13]).ChannelTypes.GUILD_SPACE) {
+      if (type === guild_id(isDontBadgeMutedVcsEnabled[13]).ChannelTypes.GUILD_SPACE) {
         return false;
       } else {
         blockedOrIgnoredIDs = blockedOrIgnoredIDs.getBlockedOrIgnoredIDs();
@@ -62,74 +65,66 @@ export default function useGuildMediaState(guild_id) {
         HermesBuiltin.arraySpread(location.userIds, 0);
         return !tmp(tmp2[18]).hasBlockedOrIgnoredUserIds(items, blockedOrIgnoredIDs);
       }
-      const obj = callback(table[17]);
+      const obj = guild_id(isDontBadgeMutedVcsEnabled[17]);
     });
   });
-  const obj4 = _require(isDontBadgeMutedVcsEnabled[14]);
+  const obj4 = require("initialize");
   const first = stateFromStoresArray[0];
   let _location;
   if (first != null) {
     _location = first.location;
   }
-  const embeddedActivityLocationChannelId = _require(isDontBadgeMutedVcsEnabled[17]).getEmbeddedActivityLocationChannelId(_location);
+  const embeddedActivityLocationChannelId = require("embeddedActivityLocationUtils").getEmbeddedActivityLocationChannelId(_location);
   let tmpResult = tmp(tmp2[19]);
   const isActivitiesInTextEnabled = tmpResult.useIsActivitiesInTextEnabled(embeddedActivityLocationChannelId);
   tmpResult = tmp(tmp2[14]);
-  const items2 = [closure_12, closure_14, id, closure_10, selectedVoiceChannelHasVideo, closure_13];
+  const items2 = [SelectedChannelStore, VoiceStateStore, id, PermissionStore, selectedVoiceChannelHasVideo, UserGuildSettingsStore];
   const items3 = [guild_id, stateFromStores, isDontBadgeMutedVcsEnabled];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items2, () => {
-    const voiceChannelId = closure_1_12.getVoiceChannelId();
+    voiceChannelId = voiceChannelId.getVoiceChannelId();
     const guild = id.getGuild(afkChannelId);
     afkChannelId = undefined;
     if (guild != null) {
       afkChannelId = guild.afkChannelId;
     }
-    const usersWithVideo = closure_1_14.getUsersWithVideo(tmp3);
+    dependencyMap = authStore.getUsersWithVideo(tmp3);
     let obj = guild_id(isDontBadgeMutedVcsEnabled[18]);
-    const result = obj.filterBlockedUsersFromVoiceStates(closure_1_14.getVoiceStates(tmp3));
+    const result = obj.filterBlockedUsersFromVoiceStates(authStore.getVoiceStates(tmp3));
     isDontBadgeMutedVcsEnabled = result;
     let flag = false;
-    if (!usersWithVideo) {
+    if (!dependencyMap) {
       flag = false;
       const keys = Object.keys();
       if (keys !== undefined) {
         flag = false;
         while (keys[tmp] !== undefined) {
-          let tmp22 = tmp9;
           let channelId = result[tmp9].channelId;
           if (null == channelId) {
             continue;
           } else {
-            let tmp10 = selectedVoiceChannelHasVideo;
             let basicChannel = selectedVoiceChannelHasVideo.getBasicChannel(channelId);
             let tmp12 = afkChannelId;
-            let obj2 = closure_1_10;
-            if (closure_1_10 !== undefined) {
+            let obj2 = PermissionStore;
+            if (PermissionStore !== undefined) {
               let canBasicChannelResult = null != basicChannel;
               if (canBasicChannelResult) {
-                let tmp14 = guild_id;
-                let tmp15 = isDontBadgeMutedVcsEnabled;
                 canBasicChannelResult = basicChannel.type !== guild_id(isDontBadgeMutedVcsEnabled[13]).ChannelTypes.GUILD_STAGE_VOICE;
               }
               if (canBasicChannelResult) {
                 canBasicChannelResult = tmp12 !== basicChannel.id;
               }
               if (canBasicChannelResult) {
-                let tmp16 = closure_1_15;
-                canBasicChannelResult = obj2.canBasicChannel(closure_1_15.VIEW_CHANNEL, basicChannel);
+                canBasicChannelResult = obj2.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
               }
               if (!canBasicChannelResult) {
                 continue;
               } else {
-                let tmp17 = isDontBadgeMutedVcsEnabled;
                 flag = true;
                 if (!isDontBadgeMutedVcsEnabled) {
                   break;
                 } else {
-                  let tmp18 = closure_1_13;
-                  let tmp19 = afkChannelId;
                   flag = true;
-                  if (!closure_1_13.isGuildOrCategoryOrChannelMuted(afkChannelId, channelId)) {
+                  if (!UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(afkChannelId, channelId)) {
                     break;
                   }
                 }
@@ -144,33 +139,22 @@ export default function useGuildMediaState(guild_id) {
     obj = {
       guildHasVoice: flag,
       guildHasVideo: (() => {
-        if (dependencyMap) {
+        if (stateFromStores) {
           return false;
         } else {
           const obj = dependencyMap[Symbol.iterator]();
           while (obj !== undefined) {
-            let tmp7 = table;
-            let tmp8 = table[tmp5];
+            let tmp8 = result[tmp5];
             let channelId;
             if (tmp8 != null) {
               channelId = tmp8.channelId;
             }
             let tmp10 = channelId;
             if (null != channelId) {
-              let tmp12 = selectedVoiceChannelHasVideo;
-              let tmp13 = channelId;
-              let tmp11 = closure_2_16;
+              let tmp11 = canConnectToChannel;
               let tmp15 = afkChannelId;
-              let basicChannel = selectedVoiceChannelHasVideo.getBasicChannel(tmp10);
-              let tmp16 = closure_2_10;
-              if (tmp11(basicChannel, tmp15, closure_2_10)) {
-                let tmp17 = result;
-                if (result) {
-                  let tmp18 = closure_2_13;
-                  let tmp19 = afkChannelId;
-                  let tmp20 = channelId;
-                }
-                let tmp21 = obj;
+              let basicChannel = ChannelStore.getBasicChannel(tmp10);
+              if (tmp11(basicChannel, tmp15, PermissionStore)) {
                 obj.return();
                 let flag = true;
                 return true;
@@ -185,36 +169,34 @@ export default function useGuildMediaState(guild_id) {
     };
     let hasVideoResult = null != voiceChannelId;
     if (hasVideoResult) {
-      hasVideoResult = closure_1_14.hasVideo(voiceChannelId);
+      hasVideoResult = authStore.hasVideo(voiceChannelId);
     }
-    obj[2] = hasVideoResult;
+    obj.selectedVoiceChannelHasVideo = hasVideoResult;
     return obj;
   }, items3);
   const guildHasVoice = stateFromStoresObject.guildHasVoice;
   const guildHasVideo = stateFromStoresObject.guildHasVideo;
   selectedVoiceChannelHasVideo = stateFromStoresObject.selectedVoiceChannelHasVideo;
   id = guildHasVideo.getId();
-  let obj5 = _require(isDontBadgeMutedVcsEnabled[17]);
-  const items4 = [closure_12, selectedVoiceChannelHasVideo, stateFromStoresArray, guildHasVoice, closure_10, closure_13];
+  let obj5 = require("embeddedActivityLocationUtils");
+  const items4 = [SelectedChannelStore, selectedVoiceChannelHasVideo, stateFromStoresArray, guildHasVoice, PermissionStore, UserGuildSettingsStore];
   const items5 = [guild_id, stateFromStores, selectedVoiceChannelHasVideo, id, isActivitiesInTextEnabled, stateFromStoresArray, guildActiveEvent, guildHasVoice, guildHasVideo, isDontBadgeMutedVcsEnabled];
-  return _require(isDontBadgeMutedVcsEnabled[14]).useStateFromStoresObject(items4, () => {
-    const voiceChannelId = closure_1_12.getVoiceChannelId();
-    let obj = selectedVoiceChannelHasVideo;
-    let channel = selectedVoiceChannelHasVideo.getChannel(voiceChannelId);
+  return require("initialize").useStateFromStoresObject(items4, () => {
+    voiceChannelId = SelectedChannelStore.getVoiceChannelId();
+    let obj = ChannelStore;
+    let channel = ChannelStore.getChannel(voiceChannelId);
     guild_id = undefined;
     if (channel != null) {
       guild_id = channel.guild_id;
     }
-    let tmp5 = guild_id === guild_id;
+    let tmp5 = guild_id === closure_0;
     if (!tmp5) {
       if (stateFromStores) {
         return { audio: false, video: false, screenshare: false, liveStage: false, activeEvent: false, activity: false, isCurrentUserConnected: false };
       }
     }
-    const keys = stateFromStores(isDontBadgeMutedVcsEnabled[20]).keys(stateFromStoresArray.getStageInstancesByGuild(tmp4));
+    const keys = SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(tmp4));
     let tmp9 = tmp5;
-    let obj2 = stateFromStores(isDontBadgeMutedVcsEnabled[20]);
-    let tmp7 = isDontBadgeMutedVcsEnabled;
     if (tmp5) {
       const channel1 = obj.getChannel(voiceChannelId);
       let flag;
@@ -228,34 +210,27 @@ export default function useGuildMediaState(guild_id) {
     }
     let tmp10 = tmp5;
     if (tmp10) {
-      tmp10 = null != guildHasVoice.getActiveStreamForUser(id, tmp4);
+      tmp10 = null != ApplicationStreamingStore.getActiveStreamForUser(id, tmp4);
     }
-    const someResult = keys.some((arg0) => {
-      basicChannel = basicChannel.getBasicChannel(arg0);
+    const someResult = keys.some((item) => {
+      basicChannel = basicChannel.getBasicChannel(item);
       let tmp2 = null != basicChannel;
       if (tmp2) {
-        tmp2 = callback(table[21])(basicChannel, closure_10);
+        tmp2 = stateFromStores(isDontBadgeMutedVcsEnabled[21])(basicChannel, closure_1_10);
       }
       return tmp2;
     });
-    let result = guild_id(tmp7[18]).filterOutStreamsByBlockedOwner(guildHasVoice.getAllApplicationStreams());
-    const obj5 = guild_id(tmp7[18]);
+    let result = BlockedUserUtils.filterOutStreamsByBlockedOwner(ApplicationStreamingStore.getAllApplicationStreams());
     let tmp14 = (() => {
-      if (closure_5) {
+      if (closure_1_5) {
         return arr.length > 0;
       } else {
         const obj = arr[Symbol.iterator]();
         while (obj !== undefined) {
-          let tmp6 = closure_1_8;
-          let tmp7 = closure_1_0;
-          let tmp8 = closure_1_2;
-          let obj2 = closure_1_0(closure_1_2[17]);
-          let channel = closure_1_8.getChannel(obj2.getEmbeddedActivityLocationChannelId(tmp4.location));
+          let obj2 = closure_0(isDontBadgeMutedVcsEnabled[17]);
+          let channel = selectedVoiceChannelHasVideo.getChannel(obj2.getEmbeddedActivityLocationChannelId(tmp4.location));
           if (null != channel) {
-            let tmp11 = closure_1_5;
-            let tmp12 = channel;
-            if (closure_1_5(tmp10.type)) {
-              let tmp13 = obj;
+            if (isActivitiesInTextEnabled(tmp10.type)) {
               obj.return();
               let flag = true;
               return true;
@@ -292,7 +267,7 @@ export default function useGuildMediaState(guild_id) {
     if (!tmp5) {
       tmp5 = tmp9;
     }
-    obj[6] = tmp5;
+    obj.isCurrentUserConnected = tmp5;
     return obj;
   }, items5);
 };

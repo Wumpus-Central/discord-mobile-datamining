@@ -1,13 +1,13 @@
 // === Module 10212: useScaledSectionHeight ===
 
 // Module 10212 (useScaledSectionHeight)
-import set from "set" /* 2 */;
-import getFontScale from "getFontScale" /* 4982 */;
-import PX_24 from "PX_24" /* 10213 */;
+import useFontScale from "useFontScale" /* 4982 */;
+import UsersFastListConstants from "UsersFastListConstants" /* 10213 */;
+import size from "module_2" /* 2 */;
 
-({ USERS_LIST_SECTION_HEIGHT: obj1, USERS_LIST_SECTION_TEXT_HEIGHT: c3 } = PX_24);
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledSectionHeight.tsx");
+({ USERS_LIST_SECTION_HEIGHT: c2, USERS_LIST_SECTION_TEXT_HEIGHT: c3 } = UsersFastListConstants);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledSectionHeight.tsx");
 
 export default function useScaledSectionHeight() {
-  return closure_2 + Math.max(Math.min(getFontScale.useFontScale(), 2) * closure_3 - closure_3, 0);
+  return React2 + Math.max(Math.min(useFontScale.useFontScale(), 2) * React3 - React3, 0);
 };

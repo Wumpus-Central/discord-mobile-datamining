@@ -1,18 +1,19 @@
 // === Module 13241: transformStickers ===
 
 // Module 13241 (transformStickers)
-import set from "set" /* 2 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
+import util from "util" /* 1114 */;
+import StickersUtils from "StickersUtils" /* 4899 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");
 
 export default function transformStickers(message) {
   ({ animateStickersSetting: require, isUserInteracting: dependencyMap } = message);
-  const messageStickers = getStickerExtensionFromFormatType.getMessageStickers(message.message);
+  const messageStickers = StickersUtils.getMessageStickers(message.message);
   return messageStickers.map((id) => {
-    closure_0 = id;
-    let obj = closure_1_0(closure_1_1[0]);
-    const shouldAnimateStickerResult = obj.shouldAnimateSticker(closure_0, closure_1);
+    const name = id;
+    let obj = StickersUtils;
+    const shouldAnimateStickerResult = obj.shouldAnimateSticker(closure_1_0, dependencyMap);
     obj = {};
     const merged = Object.assign(id);
     let str = id.id;
@@ -20,7 +21,7 @@ export default function transformStickers(message) {
       str = "";
     }
     obj.asset = str;
-    let tmpResult = tmp(tmp2[0]);
+    let tmpResult = tmp(4899);
     obj = { isPreview: !shouldAnimateStickerResult };
     let str2 = tmpResult.getStickerAssetUrl(id, obj);
     if (str2 == null) {
@@ -29,21 +30,21 @@ export default function transformStickers(message) {
     obj.url = str2;
     obj.width = 160;
     obj.height = 160;
-    const NativeLottieRenderMode = tmp(tmp2[1]).NativeLottieRenderMode;
+    const NativeLottieRenderMode = tmp(7999).NativeLottieRenderMode;
     obj.renderMode = shouldAnimateStickerResult ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
-    tmpResult = tmp(tmp2[2]);
-    obj1 = {
+    tmpResult = tmp(7951);
+    const obj1 = {
       expensive() {
-        const intl = id(closure_1_1[3]).intl;
-        return intl.formatToPlainString(id(closure_1_1[3]).t.rk6pOw, { stickerName: id.name });
+        const intl = util.intl;
+        return intl.formatToPlainString(util.t.rk6pOw, { stickerName: name.name });
       },
       cheap: null
     };
-    let intl = tmp(tmp2[3]).intl;
-    obj1[1] = intl.string(closure_1_0(closure_1_1[3]).t["fT+Yjp"]);
+    let intl = tmp(1114).intl;
+    obj1.cheap = intl.string(util.t["fT+Yjp"]);
     obj.accessibilityLabel = tmpResult.getAccessibilityLabelOrCheapFallbackUnsafe(obj1);
-    const intl2 = tmp(tmp2[3]).intl;
-    obj.accessibilityHint = intl2.string(closure_1_0(closure_1_1[3]).t.GCEruV);
+    const intl2 = tmp(1114).intl;
+    obj.accessibilityHint = intl2.string(util.t.GCEruV);
     return obj;
   });
 };

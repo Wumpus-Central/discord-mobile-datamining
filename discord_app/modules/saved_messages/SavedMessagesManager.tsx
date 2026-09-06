@@ -1,78 +1,64 @@
-// === Module 17478: _refreshSavedMessages ===
+// === Module 17478: SavedMessagesManager ===
 
-// Module 17478 (_refreshSavedMessages)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 17478 (SavedMessagesManager)
+import ForLaterExperiment from "ForLaterExperiment" /* 7855 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 11705 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
-function _refreshSavedMessages() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c2 === 2) {
-      c2 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+require = fn;
+let closure_3 = async function _refreshSavedMessages(arg0, value) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c2 = 2;
-        if (0 === dependencyMap) {
-          if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            const callback = tmp4;
-            let obj2 = closure_1_0(7855);
-            if (obj2.isForLaterExperimentOn("saved_messages_manager")) {
-              dependencyMap = 1;
-              c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_0(11705).fetchAndUpdateSavedMessages();
-              return obj1;
-            } else {
-              c2 = 3;
-            }
-          }
-        } else if (arg0 === 1) {
-          c2 = 3;
-          throw arg1;
-        } else if (arg0 !== 2) {
-          obj = callback(17479);
-          const result = obj.showOverdueRemindersToast();
-        }
-        c2 = 3;
-        obj2 = { value: null, done: true };
-        obj2[0] = arg1;
-        return obj2;
-      } catch (tmp13) {
-        c2 = tmp;
-        throw tmp13;
-      }
+      return { value: "HermesInternal", done: null };
     }
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c2 = 2;
+      if (0 === c1) {
+        if (arg0 === 1) {
+          c2 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c2 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_0 = tmp4;
+          let obj2 = ForLaterExperiment;
+          if (obj2.isForLaterExperimentOn("saved_messages_manager")) {
+            c1 = 1;
+            c2 = 1;
+            const obj1 = { value: SavedMessagesActions.fetchAndUpdateSavedMessages(), done: false };
+            return obj1;
+          } else {
+            c2 = 3;
+          }
+        }
+      } else if (arg0 === 1) {
+        c2 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        obj = closure_128_0(closure_128_1[3]);
+        const result = obj.showOverdueRemindersToast();
+      }
+      c2 = 3;
+      obj2 = { value, done: true };
+      return obj2;
+    } catch (tmp13) {
+      c2 = tmp;
+      throw tmp13;
+    }
   }
-  return applyArgumentsResult;
-}
-initializeDefault;
+};
 let prototype = function SavedMessagesManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -84,7 +70,7 @@ let prototype = function SavedMessagesManager() {
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     !(function refreshSavedMessages() {
       const self = this;
-      const apply = closure_3.apply;
+      const apply = closure_1_3.apply;
       if (typeof apply === "unknown") {
         applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -98,6 +84,7 @@ let prototype = function SavedMessagesManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
 
 export default prototype;

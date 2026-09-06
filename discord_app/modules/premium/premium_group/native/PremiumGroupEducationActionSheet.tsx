@@ -1,43 +1,43 @@
 // === Module 13516: PremiumGroupEducationActionSheet ===
 
 // Module 13516 (PremiumGroupEducationActionSheet)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3063 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4232 */;
-import Text from "Text" /* 4556 */;
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef3063 from "module_3063" /* 3063 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4232 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import Background from "Background" /* 7150 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-const HELP_CENTER_LINK = SubscriptionStatusTypes.HELP_CENTER_LINK;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const View = _mod17.View;
+const HELP_CENTER_LINK = PremiumGroupConstants.HELP_CENTER_LINK;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { container: { marginTop: 32, marginHorizontal: 30 }, aboutContainer: null, warningIcon: null, aboutTextContainer: null, helpdeskText: null };
-obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
-obj[1] = obj;
-obj[2] = { margin: 16 };
-obj[3] = { justifyContent: "center", flex: 1, marginRight: 30 };
-obj[4] = { textAlign: "center", marginBottom: 24 };
-let closure_7 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx");
+obj = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", borderRadius: nativeDefault.radii.lg, marginBottom: 12 };
+obj.aboutContainer = obj;
+obj.warningIcon = { margin: 16 };
+obj.aboutTextContainer = { justifyContent: "center", flex: 1, marginRight: 30 };
+obj.helpdeskText = { textAlign: "center", marginBottom: 24 };
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupEducationActionSheet.tsx");
 
 export default function PremiumGroupEducationActionSheet(children) {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.aboutContainer, children: null };
-  const items = [callback(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), callback(View, { style: tmp.aboutTextContainer, children: callback(Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
-  obj[1] = items;
-  const items1 = [callback2(View, obj), ];
+  const items = [hasOwnProperty(CircleErrorIcon.CircleErrorIcon, { size: "lg", style: tmp.warningIcon }), hasOwnProperty(View, { style: tmp.aboutTextContainer, children: hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-overlay-light", children: children.aboutText }) })];
+  obj.children = items;
+  const items1 = [timestampProducer(View, obj), ];
   const obj3 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
-  const intl = getSystemLocale.intl;
-  obj3[3] = intl.format(messagesProxyDefault.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
-  items1[1] = callback(Text.Text, obj3);
-  obj[1] = items1;
-  obj[0] = callback2(View, obj);
-  return callback(Background.BottomSheet, obj);
+  const intl = util.intl;
+  obj3.children = intl.format(_modDef3063.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+  items1[1] = hasOwnProperty(Text_Text.Text, obj3);
+  obj.children = items1;
+  obj.children = timestampProducer(View, obj);
+  return hasOwnProperty(Sheet_BottomSheet.BottomSheet, obj);
 };

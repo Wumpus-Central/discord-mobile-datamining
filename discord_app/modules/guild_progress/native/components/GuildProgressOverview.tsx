@@ -1,18 +1,19 @@
-// === Module 13975: GuildProgressOverviewView ===
+// === Module 13975: GuildProgressOverview ===
 
-// Module 13975 (GuildProgressOverviewView)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import registerAssetDefault from "registerAsset" /* 9939 */;
+// Module 13975 (GuildProgressOverview)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7195 */;
+import _modDef9939 from "module_9939" /* 9939 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12474 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12477 */;
 import GuildProgressBarDefault from "GuildProgressBar" /* 13976 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class GuildProgressOverviewView {
   constructor(arg0) {
     ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = global);
@@ -20,35 +21,41 @@ class GuildProgressOverviewView {
     obj = { accessibilityRole: "button", activeOpacity: 0.4, style: tmp.container, onPress, onLongPress, children: null };
     obj = { style: tmp.horizontal, children: null };
     obj1 = { children: null };
+    obj2 = { style: null, children: title };
     items = [, ];
     items[0] = tmp.title;
     items[1] = titleStyle;
+    obj2.style = items;
     items1 = [, ];
-    items1[0] = jsx(require("Button").LegacyText, { style: items, children: title });
-    obj2 = { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
-    items1[1] = jsx(require("Text").Text, obj2);
-    obj1[0] = items1;
+    items1[0] = jsx(closure_0(closure_2[11]).LegacyText, obj2);
+    obj3 = { style: tmp.step, variant: "text-xs/medium", color: "text-default", children: subtitle };
+    items1[1] = jsx(closure_0(closure_2[12]).Text, obj3);
+    obj1.children = items1;
     items2 = [, ];
     items2[0] = jsxs(View, obj1);
-    obj3 = { source: require("registerAsset") };
-    items2[1] = jsx(require("Button").Icon, obj3);
-    obj[1] = items2;
+    obj4 = { source: closure_1(closure_2[13]) };
+    items2[1] = jsx(closure_0(closure_2[11]).Icon, obj4);
+    obj.children = items2;
     items3 = [, ];
     items3[0] = jsxs(View, obj);
-    obj4 = { style: tmp.progressBar, percent: percentComplete };
-    items3[1] = jsx(require("GuildProgressBar"), obj4);
-    obj[5] = items3;
-    return jsxs(require("PressableBase").PressableOpacity, obj);
+    obj5 = { style: tmp.progressBar, percent: percentComplete };
+    items3[1] = jsx(closure_1(closure_2[14]), obj5);
+    obj.children = items3;
+    return jsxs(closure_0(closure_2[10]).PressableOpacity, obj);
   }
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: null, step: null, progressBar: null };
-createCacheKey = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { lineHeight: 16 };
-createCacheKey[4] = { marginTop: 8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: null, step: null, progressBar: null };
+createStyles = { fontSize: 16, lineHeight: 20, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 };
+createStyles.title = createStyles;
+createStyles.step = { lineHeight: 16 };
+createStyles.progressBar = { marginTop: 8 };
+const React5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 
 export default function GuildProgressOverview(guild) {
   guild = guild.guild;
@@ -66,33 +73,30 @@ export default function GuildProgressOverview(guild) {
   completed = guildProgressStep.completed;
   let items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (completed) {
-      const result = flag(completed[7]).markCompletedProgressSeen(guild.id);
-      const obj = flag(completed[7]);
+      const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
     }
   }, items);
   obj = {
     titleStyle: guild.titleStyle,
     onPress() {
       if (!completed) {
-        const progress = flag(completed[7]).createProgress(guild.id);
-        const obj = flag(completed[7]);
+        const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
       }
-      guild(completed[6]).openActionSheet(guild);
+      GuildProgressUtils.openActionSheet(guild);
     },
     onLongPress() {
       if (!flag) {
-        let obj = guild(completed[8]);
-        obj = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
+        let obj = { key: "GuildProgressOverviewLongPress", options: null, hasIcons: false };
         obj = { label: null, onPress: null };
-        const intl = guild(completed[9]).intl;
-        obj[0] = intl.string(guild(completed[9]).t.PbNxaW);
-        obj[1] = function onPress() {
-          closure_1_1(closure_1_2[7]).dismissProgress(id.id);
+        const intl = util.intl;
+        obj.label = intl.string(util.t.PbNxaW);
+        obj.onPress = function onPress() {
+          flag(completed[7]).dismissProgress(id.id);
         };
         const items = [obj];
-        obj[1] = items;
+        obj.options = items;
         const result = obj.showSimpleActionSheet(obj);
       }
     },
@@ -108,9 +112,9 @@ export default function GuildProgressOverview(guild) {
   } else {
     stringResult = string(t.o3HK3d);
   }
-  obj[3] = stringResult;
-  obj[4] = subtitle;
-  obj[5] = percentComplete;
+  obj.title = stringResult;
+  obj.subtitle = subtitle;
+  obj.percentComplete = percentComplete;
   return closure_5(GuildProgressOverviewView, obj);
 };
 export { GuildProgressOverviewView };

@@ -1,61 +1,61 @@
-// === Module 15898: useObscuredContentNonFriendsDmSettingValue ===
+// === Module 15898: ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting ===
 
-// Module 15898 (useObscuredContentNonFriendsDmSettingValue)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15898 (ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting)
+import util from "util" /* 1114 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14828 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
-require = arg1;
+require = fn;
 function useObscuredContentNonFriendsDmSettingValue() {
-  const parentalControlledExplicitContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledExplicitContentSettings();
+  const parentalControlledExplicitContentSettings = useParentalControlSettings.useParentalControlledExplicitContentSettings();
   let prop;
   if (parentalControlledExplicitContentSettings != null) {
     prop = parentalControlledExplicitContentSettings.explicitContentNonFriendDm;
   }
   let tmp5 = null;
   if (null != prop) {
-    tmp5 = redactionSettingToRenderedString.redactionSettingToRenderedString(prop)();
-    const tmpResult = redactionSettingToRenderedString;
+    tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(prop)();
+    const tmpResult = ExplicitMediaRedactionUtils;
   }
   return tmp5;
 }
 function onObscuredContentNonFriendsDmOnPress() {
-  selectedTeenId = selectedTeenId.getSelectedTeenId();
+  const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14828);
+    selectedTeenId(14828);
     const intl = selectedTeenId(1114).intl;
     const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
-    obj = { title: null, subtitle: null, excluded: null, handlePress: null, currentValue: null };
-    obj[0] = stringResult;
+    let obj = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
     const intl2 = selectedTeenId(1114).intl;
-    obj[1] = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
+    obj.subtitle = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
     const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
-    obj[2] = items;
-    obj[3] = function handlePress(explicitContentNonFriendDm) {
-      let obj = selectedTeenId(closure_1_1[4]);
-      obj = { explicitContentNonFriendDm };
+    obj.excluded = items;
+    obj.handlePress = function handlePress(explicitContentNonFriendDm) {
+      const obj = { explicitContentNonFriendDm };
       const result = obj.updateExplicitContentSetting(selectedTeenId, obj);
     };
-    obj[4] = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
+    obj.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
     let result = selectedTeenId(14821).handleSensitiveMediaFilterPress(obj);
     const obj2 = selectedTeenId(14821);
   }
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yh+HX1"]);
+    const intl = util.intl;
+    return intl.string(util.t["Yh+HX1"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(7975).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useObscuredContentNonFriendsDmSettingValue,
   onPress: onObscuredContentNonFriendsDmOnPress,
   unsearchable: true
 };
-createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useObscuredContentNonFriendsDmSettingValue };
 export { onObscuredContentNonFriendsDmOnPress };

@@ -1,11 +1,11 @@
-// === Module 10916: ChannelDetailsNavigatorScreens ===
+// === Module 10916: ChannelDetailsConstants ===
 
-// Module 10916 (ChannelDetailsNavigatorScreens)
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
+// Module 10916 (ChannelDetailsConstants)
+import SearchConstants from "SearchConstants" /* 7878 */;
+import size from "module_2" /* 2 */;
 
-const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
+const sum = SearchConstants.SEARCH_BAR_HEIGHT + 40;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
 
 export const ChannelDetailsNavigatorScreens = { DETAILS: "root", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", PINNED_MESSAGES: "pinned-messages" };
 export const ChannelDetailsButtonTypes = { SEARCH: "search", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", MORE: "more" };

@@ -1,19 +1,16 @@
-// === Module 1960: initializeFromUserSettings ===
+// === Module 1960: FavoriteStore ===
 
-// Module 1960 (initializeFromUserSettings)
-import apply from "apply" /* 12 */;
+// Module 1960 (FavoriteStore)
+import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import create from "create" /* 1187 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import { createChannelRecord } from "createChannelRecord" /* 1961 */;
-import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date" /* 1970 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
+require = fn;
 function initializeFromUserSettings() {
-  const favorites = settings.settings.favorites;
-  let flag;
+  const favorites = UserSettingsProtoStore.settings.favorites;
+  flag = undefined;
   if (favorites != null) {
     flag = favorites.muted;
   }
@@ -24,48 +21,37 @@ function initializeFromUserSettings() {
   if (favorites != null) {
     favoriteChannels = favorites.favoriteChannels;
   }
-  let obj = {};
-  let num = 0;
-  let num2 = 0;
+  obj = {};
   if (null != favoriteChannels) {
     let num4 = 0;
     let num5 = 0;
-    num = 0;
-    num2 = 0;
     const keys = Object.keys();
     if (keys !== undefined) {
-      num = num4;
-      num2 = num5;
       while (keys[tmp] !== undefined) {
-        let tmp23 = tmp7;
         let tmp24 = favoriteChannels[tmp7];
-        let tmp25 = require;
-        let tmp26 = dependencyMap;
         let sum = num4;
-        if (tmp24.type !== create.FavoriteChannelType.CATEGORY) {
+        if (tmp24.type !== preloaded_user_settings.FavoriteChannelType.CATEGORY) {
           sum = num4 + 1;
         }
-        obj = { id: null, nickname: null, type: null, channelType: null, order: null, parentId: null };
-        obj[0] = tmp7;
+        obj = { id: tmp7, nickname: null, type: null, channelType: null, order: null, parentId: null };
         let nickname = null;
         if ("" !== tmp24.nickname) {
           nickname = tmp24.nickname;
         }
-        obj[1] = nickname;
-        ({ type: obj2[2], channelType } = tmp24);
-        let value;
+        obj.nickname = nickname;
+        ({ type: obj2.type, channelType } = tmp24);
+        value = undefined;
         if (channelType != null) {
           value = channelType.value;
         }
-        obj[3] = value;
-        obj[4] = tmp24.position;
-        let tmp11 = closure_5;
+        obj.channelType = value;
+        obj.order = tmp24.position;
         let parentId = null;
         if (tmp24.parentId !== closure_5) {
           parentId = tmp24.parentId;
         }
         num5 = num5 + 1;
-        obj[5] = parentId;
+        obj.parentId = parentId;
         obj[tmp7] = obj;
         num4 = sum;
         continue;
@@ -80,10 +66,9 @@ function initializeFromUserSettings() {
   }
   let tmp14 = value;
   if (value == null) {
-    tmp14 = !apply.isEmpty(obj);
-    const obj3 = apply;
+    tmp14 = !_mod12.isEmpty(obj);
   }
-  let flag2;
+  flag2 = undefined;
   if (favorites != null) {
     flag2 = favorites.autoAddJoinedThreads;
   }
@@ -95,65 +80,61 @@ function initializeFromUserSettings() {
     flag3 = closure_12 !== tmp14;
   }
   if (!flag3) {
-    flag3 = closure_2 !== value;
+    flag3 = value !== value;
   }
   if (!flag3) {
     flag3 = flag2 !== flag2;
   }
   if (!flag3) {
-    flag3 = !apply.isEqual(obj, obj);
-    const obj4 = apply;
+    flag3 = !_mod12.isEqual(obj, obj);
   }
   if (flag3) {
     closure_12 = tmp14;
-    closure_2 = value;
     flag3 = true;
   }
   return flag3;
 }
-({ ChannelTypes: closure_6, FAVORITES: error } = ME);
-let closure_8 = {};
-let c9 = 0;
-let c10 = 0;
-let c11 = false;
-let c12 = false;
-let c13 = false;
+const createChannelRecord = fn(1961).createChannelRecord;
+let closure_5 = fn(1970).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const Constants = fn(1074);
+({ ChannelTypes: metroRequire, FAVORITES: closure_7 } = Constants);
+let closure_12 = false;
 const Store = initializeDefault.Store;
 class FavoriteStore extends Store {
 }
 const prototype = FavoriteStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(UserSettingsProtoStore);
   initializeFromUserSettings();
-  const items = [closure_3];
+  const items = [UserSettingsProtoStore];
   this.syncWith(items, initializeFromUserSettings);
 };
 prototype["getFavoriteChannels"] = function getFavoriteChannels() {
-  return closure_8;
+  return obj;
 };
 Object.defineProperty(prototype, "favoriteGuildMuted", {
   get: function favoriteGuildMuted() {
-    return c11;
+    return flag;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "favoriteGuildEnabled", {
   get: function favoriteGuildEnabled() {
-    return c12;
+    return closure_12;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "favoriteGuildVisibleSetting", {
   get: function favoriteGuildVisibleSetting() {
-    return closure_2;
+    return value;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "autoAddJoinedThreads", {
   get: function autoAddJoinedThreads() {
-    let tmp = c13;
-    if (c13) {
-      tmp = c12;
+    let tmp = flag2;
+    if (flag2) {
+      tmp = closure_12;
     }
     return tmp;
   },
@@ -162,7 +143,7 @@ Object.defineProperty(prototype, "autoAddJoinedThreads", {
 prototype["isFavorite"] = function isFavorite(arg0) {
   let tmp = null != arg0;
   if (tmp) {
-    tmp = null != dependencyMap[arg0];
+    tmp = null != obj[arg0];
   }
   return tmp;
 };
@@ -177,25 +158,24 @@ prototype["isChannelOrParentFavorited"] = function isChannelOrParentFavorited(ch
 };
 prototype["getFavorite"] = function getFavorite(categoryId) {
   if (null != categoryId) {
-    return dependencyMap[categoryId];
+    return obj[categoryId];
   }
 };
 prototype["getCategoryRecord"] = function getCategoryRecord(categoryId) {
   let tmp = null;
-  if (categoryId in dependencyMap) {
+  if (categoryId in obj) {
     tmp = null;
-    if (dependencyMap[categoryId].type === create.FavoriteChannelType.CATEGORY) {
-      const obj = { id: null, name: null, type: null, position: null, guild_id: null };
-      ({ id: obj[0], nickname } = dependencyMap[categoryId]);
+    if (obj[categoryId].type === preloaded_user_settings.FavoriteChannelType.CATEGORY) {
+      obj = { id: null, name: null, type: null, position: null, guild_id: null };
+      ({ id: obj.id, nickname } = obj[categoryId]);
       if (nickname == null) {
         nickname = "";
       }
-      obj[1] = nickname;
-      obj[2] = constants.GUILD_CATEGORY;
-      obj[3] = dependencyMap[categoryId].order;
-      obj[4] = closure_7;
+      obj.name = nickname;
+      obj.type = constants.GUILD_CATEGORY;
+      obj.position = obj[categoryId].order;
+      obj.guild_id = guild_id;
       tmp = createChannelRecord(obj);
-      const tmp7 = createChannelRecord;
     }
   }
   return tmp;
@@ -209,16 +189,17 @@ prototype["getNickname"] = function getNickname(categoryId) {
   return nickname;
 };
 prototype["getFavoritesCount"] = function getFavoritesCount() {
-  return c9;
+  return num2;
 };
 prototype["getFavoritesCountAgainstLimit"] = function getFavoritesCountAgainstLimit() {
-  return c10;
+  return num;
 };
 prototype["hasStoredFavorites"] = function hasStoredFavorites() {
-  return !apply.isEmpty(this.getFavoriteChannels());
+  return !_mod12.isEmpty(this.getFavoriteChannels());
 };
 FavoriteStore.displayName = "FavoriteStore";
-const favoriteStore = new FavoriteStore(dispatcherDefault, {});
-const result = require("set").fileFinishedImporting("modules/favorites/FavoriteStore.tsx");
+const favoriteStore = new FavoriteStore(DispatcherDefault, {});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/FavoriteStore.tsx");
 
 export default favoriteStore;

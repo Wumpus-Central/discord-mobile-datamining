@@ -1,17 +1,18 @@
-// === Module 12943: CustomLinkType ===
+// === Module 12943: utils/CustomActivityLinkUtils ===
 
-// Module 12943 (CustomLinkType)
-import closure_0 from "_slicedToArray" /* 32 */;
+// Module 12943 (utils/CustomActivityLinkUtils)
+import _slicedToArray from "module_32" /* 32 */;
 
-let obj = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx");
+const CustomLinkType = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx");
 
-export const CustomLinkType = obj;
+export { CustomLinkType };
 export const decodeCustomActivityLink = function decodeCustomActivityLink(link_id) {
   if (null == link_id) {
     return null;
   } else {
-    const tmp2 = callback(link_id.split("-"), 2);
+    const tmp2 = _slicedToArray(link_id.split("-"), 2);
     const first = tmp2[0];
     if ("0" === first) {
       let MANAGED = obj.MANAGED;
@@ -23,10 +24,7 @@ export const decodeCustomActivityLink = function decodeCustomActivityLink(link_i
     }
     let tmp7 = null;
     if (null != MANAGED) {
-      obj = { type: null, encodedLinkId: null, decodedLinkId: null };
-      obj[0] = MANAGED;
-      obj[1] = link_id;
-      obj[2] = tmp2[1];
+      obj = { type: MANAGED, encodedLinkId: link_id, decodedLinkId: tmp2[1] };
       tmp7 = obj;
     }
     return tmp7;

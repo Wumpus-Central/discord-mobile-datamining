@@ -1,38 +1,38 @@
-// === Module 5516: map ===
+// === Module 5516: utils/AutocompleteUtils ===
 
-// Module 5516 (map)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 5516 (utils/AutocompleteUtils)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-ME.AutoCompleteResultTypes;
+Constants.AutoCompleteResultTypes;
 const items = [["game", "gameMentionInput"], ["time", "timestampMentionInput"]];
 const map = new Map(items);
-const result = set.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
+const result = size.fileFinishedImporting("utils/native/AutocompleteUtils.tsx");
 
 export default {
   MENTION_EVERYONE() {
     const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "everyone", text: "@everyone", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t["5atMLZ"]);
+    const intl = util.intl;
+    obj.description = intl.string(util.t["5atMLZ"]);
     return obj;
   },
   MENTION_HERE() {
     const obj = { type: AutoCompleteResultTypes.GLOBAL, test: "here", text: "@here", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t.iX9SFD);
+    const intl = util.intl;
+    obj.description = intl.string(util.t.iX9SFD);
     return obj;
   },
   MENTION_GAME() {
     const obj = { test: "game", text: "@game", inlineAutocompleteType: "gameMentionInput", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t["1kR88y"]);
+    const intl = util.intl;
+    obj.description = intl.string(util.t["1kR88y"]);
     return obj;
   },
   MENTION_TIMESTAMP() {
     const obj = { test: "time", text: "@time", inlineAutocompleteType: "timestampMentionInput", description: null };
-    const intl = getSystemLocale.intl;
-    obj[3] = intl.string(getSystemLocale.t.V6L3TV);
+    const intl = util.intl;
+    obj.description = intl.string(util.t.V6L3TV);
     return obj;
   },
   LAUNCHABLE_APPLICATIONS() {

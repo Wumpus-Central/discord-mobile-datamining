@@ -1,11 +1,13 @@
-// === Module 9407: getUnitId ===
+// === Module 9407: AgeRestrictedApplicationCommandsExperiment ===
 
-// Module 9407 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 9407 (AgeRestrictedApplicationCommandsExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-05-age-restricted-application-commands", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-05-age-restricted-application-commands", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx");
+obj.variations = obj;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/AgeRestrictedApplicationCommandsExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

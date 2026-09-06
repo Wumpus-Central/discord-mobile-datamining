@@ -1,48 +1,48 @@
 // === Module 16534: UnavailableNotice ===
 
 // Module 16534 (UnavailableNotice)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 16243 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef16243 from "module_16243" /* 16243 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, brightTitle: null, unavailableContainer: null, unavailableInfo: null, unavailableDescription: null, joinCtaTitle: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[2] = { justifyContent: "center" };
-createCacheKey[3] = { alignItems: "center", justifyContent: "center" };
-createCacheKey[4] = { marginTop: 8, marginHorizontal: 16, textAlign: "center" };
-createCacheKey[5] = { alignSelf: "center", marginTop: 16, paddingHorizontal: 24, textAlign: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null, brightTitle: null, unavailableContainer: null, unavailableInfo: null, unavailableDescription: null, joinCtaTitle: null };
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.container = createStyles;
+createStyles.brightTitle = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles.unavailableContainer = { justifyContent: "center" };
+createStyles.unavailableInfo = { alignItems: "center", justifyContent: "center" };
+createStyles.unavailableDescription = { marginTop: 8, marginHorizontal: 16, textAlign: "center" };
+createStyles.joinCtaTitle = { alignSelf: "center", marginTop: 16, paddingHorizontal: 24, textAlign: "center" };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx");
 
 export default function UnavailableNotice(brightTitle) {
   brightTitle = brightTitle.brightTitle;
   ({ title, description } = brightTitle);
-  const tmp = callback2();
-  let obj = { style: items, children: null };
-  items = [, ];
+  const tmp = closure_6();
+  let obj = { style: null, children: null };
+  const items = [, ];
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
+  obj.style = items;
   obj = { style: tmp.unavailableInfo, children: null };
-  obj = { source: registerAssetDefault };
-  const items1 = [callback(preloadDefault, obj), , ];
+  obj = { source: _modDef16243 };
+  const items1 = [React4(FastImageDefault, obj), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {
     brightTitle = tmp.brightTitle;
   }
   items2[1] = brightTitle;
-  items1[1] = callback(Text.Text, { variant: "heading-lg/extrabold", color: "text-default", style: items2, children: title });
-  items1[2] = callback(Text.Text, { style: tmp.unavailableDescription, variant: "text-sm/medium", color: "text-default", children: description });
-  obj[1] = items1;
-  obj[1] = closure_5(View, obj);
-  return callback(View, obj);
+  items1[1] = React4(Text_Text.Text, { variant: "heading-lg/extrabold", color: "text-default", style: items2, children: title });
+  items1[2] = React4(Text_Text.Text, { style: tmp.unavailableDescription, variant: "text-sm/medium", color: "text-default", children: description });
+  obj.children = items1;
+  obj.children = hasOwnProperty(View, obj);
+  return React4(View, obj);
 };

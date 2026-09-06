@@ -1,15 +1,15 @@
 // === Module 5062: isRoleRequired ===
 
 // Module 5062 (isRoleRequired)
-import set from "set" /* 2 */;
-import sum from "sum" /* 1085 */;
-import fromStringAll from "fromString" /* 1086 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import applyOverwritesAll from "applyOverwrites" /* 4204 */;
+import Constants from "Constants" /* 1085 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = createChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
-const Permissions = sum.Permissions;
-const result = set.fileFinishedImporting("modules/channel/isRoleRequired.tsx");
+ChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
+const Permissions = Constants.Permissions;
+const result = size.fileFinishedImporting("modules/channel/isRoleRequired.tsx");
 
 export default function isRoleRequired(guild_id) {
   if (null == guild_id) {
@@ -21,12 +21,11 @@ export default function isRoleRequired(guild_id) {
           if (!obj.canEveryoneRole(Permissions.CONNECT, guild_id)) {
             return true;
           }
-          obj = applyOverwritesAll;
+          obj = PermissionUtilsAll;
         }
         let hasItem = null != tmp4;
         if (hasItem) {
-          hasItem = fromStringAll.has(tmp4.deny, Permissions.VIEW_CHANNEL);
-          const obj2 = fromStringAll;
+          hasItem = BigFlagUtilsAll.has(tmp4.deny, Permissions.VIEW_CHANNEL);
         }
         return hasItem;
       }

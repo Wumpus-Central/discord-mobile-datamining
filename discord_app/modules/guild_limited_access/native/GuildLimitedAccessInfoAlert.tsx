@@ -1,52 +1,50 @@
 // === Module 13831: GuildLimitedAccessInfoAlert ===
 
 // Module 13831 (GuildLimitedAccessInfoAlert)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import { GUILD_LIMITED_ACCESS_HC_LINK as closure_4 } from "GUILD_LIMITED_ACCESS_HC_LINK" /* 13832 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import TextStyles from "TextStyles" /* 5524 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { header: null, text: null };
-createCacheKey = {};
-const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
-createCacheKey.textAlign = "center";
-createCacheKey.marginVertical = 12;
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginVertical: 8 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
+require = fn;
+const helpdeskArticle = fn(13832).GUILD_LIMITED_ACCESS_HC_LINK;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { header: null, text: null };
+createStyles = {};
+const merged = Object.assign(TextStyles(fn(1074).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+createStyles.textAlign = "center";
+createStyles.marginVertical = 12;
+createStyles.header = createStyles;
+createStyles.text = { textAlign: "center", marginVertical: 8 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_limited_access/native/GuildLimitedAccessInfoAlert.tsx");
 
 export default function GuildLimitedAccessInfoAlert(arg0) {
   ({ guildId, onClose } = arg0);
-  const tmp = callback3();
-  const intl = getSystemLocale.intl;
-  let obj = { helpdeskArticle: closure_4 };
-  guild = guild.getGuild(guildId);
-  let formatResult1 = intl.format(getSystemLocale.t.ZqkXsC, obj);
+  const tmp = closure_7();
+  const intl = util.intl;
+  let obj = { helpdeskArticle };
+  const guild = GuildStore.getGuild(guildId);
+  let formatResult1 = intl.format(util.t.ZqkXsC, obj);
   if (null != guild) {
     const intl2 = tmp2(1114).intl;
-    obj = { guildName: null, helpdeskArticle: null };
-    obj[0] = guild.name;
-    obj[1] = tmp4;
+    obj = { guildName: guild.name, helpdeskArticle: tmp4 };
     formatResult1 = intl2.format(tmp2(1114).t.jn0Xyx, obj);
   }
   obj = { onClose, children: null };
-  const formatResult = intl.format(getSystemLocale.t.ZqkXsC, obj);
-  tmp4 = closure_4;
-  obj1 = { style: tmp.header, children: null };
+  const formatResult = intl.format(util.t.ZqkXsC, obj);
+  tmp4 = helpdeskArticle;
+  const obj1 = { style: tmp.header, children: null };
   const intl3 = tmp2(1114).intl;
-  obj1[1] = intl3.string(getSystemLocale.t.kJwpBW);
-  const items = [callback(Button.LegacyText, obj1), callback(Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
-  obj[1] = items;
-  return callback2(componentDidMountDefault, obj);
+  obj1.children = intl3.string(util.t.kJwpBW);
+  const items = [hasOwnProperty(native.LegacyText, obj1), hasOwnProperty(Text_Text.Text, { style: tmp.text, variant: "text-md/medium", children: formatResult1 })];
+  obj.children = items;
+  return timestampProducer(common_AlertDefault, obj);
 };

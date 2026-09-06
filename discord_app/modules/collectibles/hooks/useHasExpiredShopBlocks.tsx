@@ -1,34 +1,35 @@
 // === Module 15810: useHasExpiredShopBlocks ===
 
 // Module 15810 (useHasExpiredShopBlocks)
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { MAX_TIMEOUT_MS } from "ME" /* 1074 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const require = arg1;
-({ useEffect: c3, useState: c4 } = noop);
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
+const require = fn;
+const noop = fn(19);
+({ useEffect: c3, useState: closure_4 } = noop);
+const MAX_TIMEOUT_MS = fn(1074).MAX_TIMEOUT_MS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");
 
 export const useHasExpiredShopBlocks = (arg0, arg1, arg2) => {
   closure_0 = arg0;
   closure_1 = arg1;
-  const callback = arg2;
-  const tmp = callback(callback3(false), 2);
-  const callback2 = tmp[1];
+  _slicedToArray = arg2;
+  const tmp = _slicedToArray(closure_4(false), 2);
+  closure_3 = tmp[1];
   const items = [arg1, arg2, arg0];
-  callback2(() => {
-    let timeout = null;
-    const item = timeout.forEach((type) => {
-      if (type.type === callback(closure_1_1[3]).ShopBlockType.IMMERSIVE_BANNER) {
+  closure_3(() => {
+    let time1 = null;
+    const item = time1.forEach((type) => {
+      if (type.type === time1(dependencyMap[3]).ShopBlockType.IMMERSIVE_BANNER) {
         let time = null;
         if (null != type.endTime) {
           const endTime2 = type.endTime;
           time = endTime2.getTime();
         }
-        let time1 = time;
+        time1 = time;
       } else {
         time1 = null;
-        if (type.type === callback(closure_1_1[3]).ShopBlockType.COUNTDOWN_TIMER) {
+        if (type.type === time1(dependencyMap[3]).ShopBlockType.COUNTDOWN_TIMER) {
           const endTime = type.endTime;
           time1 = endTime.getTime();
         }
@@ -42,26 +43,26 @@ export const useHasExpiredShopBlocks = (arg0, arg1, arg2) => {
         tmp5 = tmp6;
       }
     });
-    if (!closure_1) {
+    if (!dependencyMap) {
       if (!closure_2) {
         if (null != tmp2) {
           const _Date = Date;
           const diff = tmp2 - Date.now();
           if (diff <= 0) {
-            callback(true);
+            closure_3(true);
           } else {
-            callback(false);
+            closure_3(false);
             const _setTimeout = setTimeout;
             const _Math = Math;
-            timeout = setTimeout(() => {
-              callback2(true);
-            }, Math.min(closure_1_5, diff));
-            return () => clearTimeout(closure_0);
+            time1 = setTimeout(() => {
+              closure_1_3(true);
+            }, Math.min(MAX_TIMEOUT_MS, diff));
+            return () => clearTimeout(time1);
           }
         }
       }
     }
-    callback(false);
+    closure_3(false);
   }, items);
   return tmp[0];
 };

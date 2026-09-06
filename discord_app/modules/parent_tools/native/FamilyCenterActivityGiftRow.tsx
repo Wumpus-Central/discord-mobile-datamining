@@ -1,33 +1,33 @@
 // === Module 14905: FamilyCenterActivityGiftRow ===
 
 // Module 14905 (FamilyCenterActivityGiftRow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
 import useSelectedTeenUser from "useSelectedTeenUser" /* 14893 */;
-import getCollectibleTypeName from "getCollectibleTypeName" /* 14902 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14902 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, textContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "column", flexShrink: 1 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null, textContainer: null };
+createStyles = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+createStyles.container = createStyles;
+createStyles.textContainer = { display: "flex", flexDirection: "column", flexShrink: 1 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
 
 export default function FamilyCenterActivityGiftRow(arg0) {
   ({ skuId, subscriptionPlanId } = arg0);
   ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
-  const tmp = callback();
+  const tmp = closure_6();
   let product = useCollectiblesDataDefault(skuId).product;
   let obj = useSelectedTeenUser;
   const teenUserForId = obj.useTeenUserForId(gifterUserId);
-  obj1 = getCollectibleTypeName;
+  let obj1 = FamilyCenterActivityPurchaseRowUtils;
   let tmp7 = product;
   if (product == null) {
     tmp7 = null;
@@ -44,41 +44,34 @@ export default function FamilyCenterActivityGiftRow(arg0) {
   if (null == displayName) {
     return null;
   } else {
-    obj = { claimed: null, price: null, gifterName: null, offeredAt: null, claimedAt: null };
-    obj[0] = claimed;
-    obj[1] = price;
+    obj = { claimed, price, gifterName: null, offeredAt: null, claimedAt: null };
     let name = null;
     if (null != teenUserForId) {
       let tmp2Result = tmp2(4404);
       name = tmp2Result.getName(teenUserForId);
     }
-    obj[2] = name;
-    obj[3] = offeredAt;
-    obj[4] = claimedAt;
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj.gifterName = name;
+    obj.offeredAt = offeredAt;
+    obj.claimedAt = claimedAt;
+    obj = { style: tmp.container, children: null };
     const giftSubtext = tmp5(14904).getGiftSubtext(obj);
-    obj1 = { displayName: null, product: null, isSubscription: null, subscriptionPlanId: null };
-    obj1[0] = displayName;
+    obj1 = { displayName, product: null, isSubscription: null, subscriptionPlanId: null };
     tmp2Result = tmp2(14903);
     if (product == null) {
       product = null;
     }
-    obj1[1] = product;
-    obj1[2] = isSubscription;
-    obj1[3] = subscriptionPlanId;
-    const items = [closure_4(tmp2Result, obj1), ];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.textContainer;
-    const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: null };
-    obj3[4] = displayName;
-    const items1 = [closure_4(tmp5(4556).Text, obj3), ];
-    const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
-    obj4[2] = giftSubtext;
-    items1[1] = closure_4(tmp5(4556).Text, obj4);
-    obj2[1] = items1;
-    items[1] = closure_5(View, obj2);
-    obj[1] = items;
-    return closure_5(View, obj);
+    obj1.product = product;
+    obj1.isSubscription = isSubscription;
+    obj1.subscriptionPlanId = subscriptionPlanId;
+    const items = [React4(tmp2Result, obj1), ];
+    const obj2 = { style: tmp.textContainer, children: null };
+    const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", ellipsizeMode: "tail", lineClamp: 1, children: displayName };
+    const items1 = [React4(tmp5(4556).Text, obj3), ];
+    const obj4 = { variant: "text-xs/medium", color: "text-muted", children: giftSubtext };
+    items1[1] = React4(tmp5(4556).Text, obj4);
+    obj2.children = items1;
+    items[1] = hasOwnProperty(View, obj2);
+    obj.children = items;
+    return hasOwnProperty(View, obj);
   }
 };

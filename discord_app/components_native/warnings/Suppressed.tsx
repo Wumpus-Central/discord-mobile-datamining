@@ -1,43 +1,45 @@
-// === Module 16917: render ===
+// === Module 16917: Suppressed ===
 
-// Module 16917 (render)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import registerAssetDefault from "registerAsset" /* 16919 */;
-import registerAssetDefault2 from "registerAsset" /* 16920 */;
-import closure_3 from "initialize" /* 13751 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16917 (Suppressed)
+import util from "util" /* 1114 */;
+import PermissionActionCreatorsDefault from "PermissionActionCreators" /* 16918 */;
+import _modDef16919 from "module_16919" /* 16919 */;
+import _modDef16920 from "module_16920" /* 16920 */;
+import noop from "module_19" /* 19 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13751 */;
 
-require = arg1;
-const Component = importAllResult.Component;
+require = fn;
+const jsx = fn(21).jsx;
+const Component = noop.Component;
 class Suppressed extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.close = function close() {
-      callback(table[3]).clearSuppressWarning();
+      PermissionActionCreatorsDefault.clearSuppressWarning();
     };
     return applyArgumentsResult;
   }
 }
 Suppressed.prototype["render"] = function render() {
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  const t = getSystemLocale.t;
+  const t = util.t;
   if (isAFKChannelResult) {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1114).intl;
     let stringResult1 = intl3.string(tmp2(1114).t["RaFZ3+"]);
-    let tmp7 = registerAssetDefault;
+    let tmp7 = _modDef16919;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = tmp2(1114).intl;
     stringResult1 = intl2.string(tmp2(1114).t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = registerAssetDefault2;
+    tmp7 = _modDef16920;
   }
   return jsx(tmp6(4994), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
-const result = require("set").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 
 export default Suppressed;

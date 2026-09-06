@@ -1,8 +1,8 @@
-// === Module 1921: items ===
+// === Module 1921: UserApplicationIdentityConstants ===
 
-// Module 1921 (items)
-import set from "set" /* 2 */;
-import apexExperiment from "apexExperiment" /* 1922 */;
+// Module 1921 (UserApplicationIdentityConstants)
+import socialSDKMigration from "socialSDKMigration" /* 1922 */;
+import size from "module_2" /* 2 */;
 
 let obj = { RIOT_GAMES: "1443033465766281327", LEAGUE_OF_LEGENDS: "1443349464290168976", VALORANT: "1443350165678198935", BATTLENET: "1356665549089800303", WORLD_OF_WARCRAFT: "1384671873593512078" };
 obj = { [obj.RIOT_GAMES]: obj, [obj.LEAGUE_OF_LEGENDS]: obj1, [obj.VALORANT]: obj2, [obj.BATTLENET]: obj3, [obj.WORLD_OF_WARCRAFT]: obj4 };
@@ -15,7 +15,7 @@ obj = {
 };
 const items = [obj[obj.RIOT_GAMES], obj[obj.BATTLENET]];
 const items1 = [obj[obj.RIOT_GAMES], obj[obj.BATTLENET]];
-const result = set.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityConstants.tsx");
 
 export const ApplicationIdentityAppIds = obj;
 export const APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS = items;

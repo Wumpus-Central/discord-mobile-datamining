@@ -1,31 +1,22 @@
-// === Module 15470: toggle ===
+// === Module 15470: StickerAutocompleteSetting ===
 
-// Module 15470 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+// Module 15470 (StickerAutocompleteSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
 import UserSettingsText from "UserSettingsText" /* 15463 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["29xPVZ"]);
+    const intl = util.intl;
+    return intl.string(util.t["29xPVZ"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.IncludeStickersInAutocomplete.useSetting,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
+  useValue: UserSettings.IncludeStickersInAutocomplete.useSetting,
   onValueChange: UserSettingsText.setStickerAutocomplete
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["29xPVZ"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue: explicitContentFromProto.IncludeStickersInAutocomplete.useSetting,
-  onValueChange: UserSettingsText.setStickerAutocomplete
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/StickerAutocompleteSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/StickerAutocompleteSetting.tsx");
 
 export default toggle;

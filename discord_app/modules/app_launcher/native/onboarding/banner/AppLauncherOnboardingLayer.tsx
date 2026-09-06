@@ -1,37 +1,34 @@
-// === Module 12047: ? ===
+// === Module 12047: AppLauncherOnboardingLayer ===
 
-// Module 12047
-import ThemesDefault from "Themes" /* 576 */;
+// Module 12047 (AppLauncherOnboardingLayer)
+import nativeDefault from "native" /* 576 */;
 import AppLauncherOnboardingBannerDefault from "AppLauncherOnboardingBanner" /* 12048 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useBestActiveChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight" /* 9485 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
+const View = fn(17).View;
+let closure_3 = fn(9485).useBestActiveChatInputContainerHeight;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { container: null };
-obj = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
-obj[0] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((visibleContent) => {
+const rect = { opacity: 1, width: "100%", position: "absolute", left: 0, top: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM };
+obj.container = rect;
+let closure_5 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx");
+
+export default noop.memo((visibleContent) => {
   visibleContent = visibleContent.visibleContent;
   ({ context, bottomOffset } = visibleContent);
   let tmp3 = null;
   if (null != visibleContent) {
     let obj = { style: null, children: null };
     const items = [tmp.container, ];
-    obj = { bottom: null };
-    obj[0] = tmp2 + bottomOffset;
+    obj = { bottom: tmp2 + bottomOffset };
     items[1] = obj;
-    obj[0] = items;
-    obj = { context: null, visibleContent: null };
-    obj[0] = context;
-    obj[1] = visibleContent;
-    obj[1] = jsx(AppLauncherOnboardingBannerDefault, { context: null, visibleContent: null });
-    tmp3 = <View context={null} visibleContent={null} />;
+    obj.style = items;
+    obj = { context, visibleContent };
+    obj.children = jsx(AppLauncherOnboardingBannerDefault, { context, visibleContent });
+    tmp3 = <View context={context} visibleContent={visibleContent} />;
   }
   return tmp3;
 });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppLauncherOnboardingLayer.tsx");
-
-export default memoResult;

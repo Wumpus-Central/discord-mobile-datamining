@@ -1,22 +1,24 @@
 // === Module 8173: useCollectiblesData ===
 
 // Module 8173 (useCollectiblesData)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "updateCategoriesAndProducts" /* 7542 */;
-import closure_4 from "map" /* 7558 */;
+import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
 
 export default function useCollectiblesData(arg0) {
-  const _require = arg0;
-  let obj = _require(563);
-  let items = [closure_3];
-  const tmp = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_1_3.getCategoryForProduct(closure_0), closure_1_3.getProduct(closure_0)];
+  _require = arg0;
+  let obj = require("useStateFromStores");
+  let items = [CollectiblesCategoryStore];
+  const tmp = _slicedToArray(obj.useStateFromStoresArray(items, () => {
+    const items = [CollectiblesCategoryStore.getCategoryForProduct(closure_0), CollectiblesCategoryStore.getProduct(closure_0)];
     return items;
   }), 2);
-  obj = { category: tmp[0], product: tmp[1], purchase: _require(563).useStateFromStores(items1, () => closure_1_4.getPurchase(closure_0)) };
-  items1 = [closure_4];
+  obj = { category: tmp[0], product: tmp[1], purchase: null };
+  const items1 = [CollectiblesPurchaseStore];
+  obj.purchase = require("useStateFromStores").useStateFromStores(items1, () => CollectiblesPurchaseStore.getPurchase(closure_0));
   return obj;
 };

@@ -1,21 +1,20 @@
-// === Module 7147: RowCheckmark ===
+// === Module 7147: FormCheckmark ===
 
-// Module 7147 (RowCheckmark)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 7147 (FormCheckmark)
+import nativeDefault from "native" /* 576 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormCheckmark.tsx");
 
 export default function RowCheckmark(selected) {
   let tmp = null;
   if (selected.selected) {
-    const obj = { color: null };
-    obj[0] = ThemesDefault.unsafe_rawColors.BRAND_500;
-    tmp = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: null });
+    const obj = { color: nativeDefault.unsafe_rawColors.BRAND_500 };
+    tmp = jsx(CheckmarkSmallIcon.CheckmarkSmallIcon, { color: nativeDefault.unsafe_rawColors.BRAND_500 });
   }
   return tmp;
 };

@@ -1,22 +1,24 @@
-// === Module 17931: promise ===
+// === Module 17931: Disconnect ===
 
-// Module 17931 (promise)
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+// Module 17931 (Disconnect)
+import CallsUtils from "CallsUtils" /* 9082 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17932 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/headless_tasks/android/Disconnect.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/headless_tasks/android/Disconnect.tsx");
 
 export default (channelId) => {
   channelId = channelId.channelId;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1_1(closure_1_2[1]).awaitStorage(() => {
-      const channel = closure_2_3.getChannel(callback);
+    HeadlessTaskUtilsDefault.awaitStorage(() => {
+      const channel = ChannelStore.getChannel(channelId);
       if (null != channel) {
-        channelId(closure_2_2[2]).handleDisconnect(channel);
-        const obj = channelId(closure_2_2[2]);
+        CallsUtils.handleDisconnect(channel);
       }
-      callback(true);
+      closure_0(true);
     });
   });
 };

@@ -1,14 +1,16 @@
-// === Module 17863: getLastBundle ===
+// === Module 17863: NavigationSpanTracker ===
 
-// Module 17863 (getLastBundle)
-import set from "set" /* 2 */;
+// Module 17863 (NavigationSpanTracker)
+import v1 from "v1" /* 1256 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 17864 */;
+import size from "module_2" /* 2 */;
 
 class NavigationSpanTracker {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ active: null, lastBundle: null, listeners: null });
     set = new Set();
-    obj[2] = set;
-    return obj;
+    merged[2] = set;
+    return merged;
   }
 }
 const prototype = NavigationSpanTracker.prototype;
@@ -26,21 +28,19 @@ prototype["subscribe"] = function subscribe(arg0) {
   };
 };
 prototype["beginNavigation"] = function beginNavigation(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   if (null != this.active) {
     self.flush("interrupted");
   }
   const timestamp = Date.now();
   const obj = { traceId: null, navigationSpanId: null, spanTtiName: null, destinationKey: null, properties: null, startEpochMs: null, startMonotonicMs: null, deadlineTimer: null };
   const nowResult = performance.now();
-  obj[0] = self(1256).v4();
-  const obj2 = self(1256);
-  obj[1] = self(1256).v4();
-  ({ spanTtiName: obj[2], destinationKey: obj[3], properties: obj[4] } = arg0);
-  obj[5] = timestamp;
-  obj[6] = nowResult;
-  obj[7] = setTimeout(() => self.flush("deadline_exceeded"), 30000);
+  obj.traceId = v1.v4();
+  obj.navigationSpanId = v1.v4();
+  ({ spanTtiName: obj.spanTtiName, destinationKey: obj.destinationKey, properties: obj.properties } = arg0);
+  obj.startEpochMs = timestamp;
+  obj.startMonotonicMs = nowResult;
+  obj.deadlineTimer = setTimeout(() => self.flush("deadline_exceeded"), 30000);
   self.active = obj;
   self.publishLive();
 };
@@ -61,13 +61,12 @@ prototype["flush"] = function flush(arg0) {
     }
     self.active = null;
     if ("deadline_exceeded" === arg0) {
-      let INTERRUPTED = _require(17864).NavigationSpanStatus.DEADLINE_EXCEEDED;
+      let INTERRUPTED = NavigationSpanTypes.NavigationSpanStatus.DEADLINE_EXCEEDED;
     } else {
-      INTERRUPTED = _require(17864).NavigationSpanStatus.INTERRUPTED;
+      INTERRUPTED = NavigationSpanTypes.NavigationSpanStatus.INTERRUPTED;
     }
     const bundle = self.buildBundle(str, str.spanTtiName, true, INTERRUPTED);
     self.lastBundle = bundle;
-    _require = undefined;
     const navigation = bundle.navigation;
     let items = ["event", navigation.spanTtiName];
     const items1 = [items, ];
@@ -76,27 +75,27 @@ prototype["flush"] = function flush(arg0) {
     items1[1] = items2;
     const _Object = Object;
     const entries = Object.entries(navigation.spanTtiProperties);
-    HermesBuiltin.arraySpread(entries.map((arg0) => {
-      [tmp, str] = arg0;
+    HermesBuiltin.arraySpread(entries.map((item) => {
+      [tmp, str] = item;
       const items = [tmp, String(str)];
       return items;
     }), 2);
     const _Math = Math;
     const items3 = [5];
-    HermesBuiltin.arraySpread(items1.map((arg0) => {
-      [arr] = arg0;
+    HermesBuiltin.arraySpread(items1.map((item) => {
+      [arr] = item;
       return arr.length;
     }), 1);
     const _Math2 = Math;
     const applyResult = HermesBuiltin.apply(items3, Math);
-    _require = applyResult;
+    c0 = applyResult;
     const padEnd = "field".padEnd;
     "field".padEnd(applyResult);
     str = "-";
     const repeat = "-".repeat;
     "-".repeat(applyResult);
-    const mapped = items1.map((arg0) => {
-      [obj, tmp] = arg0;
+    const mapped = items1.map((item) => {
+      [obj, tmp] = item;
       return "  " + obj.padEnd(c0) + "  " + tmp;
     });
     self.notify();
@@ -108,10 +107,10 @@ prototype["notify"] = function notify() {
     continue;
   }
 };
-prototype["buildBundle"] = function buildBundle(active, spanTtiName, arg2, INTERRUPTED) {
+prototype["buildBundle"] = function buildBundle(active, spanTtiName, settled, INTERRUPTED) {
   let num = 0;
   ({ startEpochMs, navigationSpanId, traceId } = active);
-  if (arg2) {
+  if (settled) {
     const _Math = Math;
     const _Math2 = Math;
     const _performance = performance;
@@ -133,14 +132,13 @@ prototype["buildBundle"] = function buildBundle(active, spanTtiName, arg2, INTER
   obj.interactive_ms = null;
   obj.trace_start_timestamp_ms = startEpochMs;
   obj.span_status = INTERRUPTED;
-  obj[1] = obj;
-  obj[0] = obj;
-  obj[1] = arg2;
+  obj.spanTtiProperties = obj;
+  obj.navigation = obj;
+  obj.settled = settled;
   return obj;
 };
-let obj = Object.create(NavigationSpanTracker.prototype);
-let set = new Set();
-obj[2] = set;
-const result = set.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTracker.tsx");
+let merged = Object.assign({ active: null, lastBundle: null, listeners: null });
+merged[2] = new Set();
+const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/NavigationSpanTracker.tsx");
 
-export default obj;
+export default merged;

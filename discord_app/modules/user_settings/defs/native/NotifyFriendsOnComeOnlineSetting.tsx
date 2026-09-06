@@ -1,40 +1,27 @@
-// === Module 15910: toggle ===
+// === Module 15910: NotifyFriendsOnComeOnlineSetting ===
 
-// Module 15910 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import messagesProxyDefault from "messagesProxy" /* 2562 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import onFriendOnlineNotificationSettingsChanged from "onFriendOnlineNotificationSettingsChanged" /* 15502 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15910 (NotifyFriendsOnComeOnlineSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import _modDef2562 from "module_2562" /* 2562 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import FriendOnlineNotificationUtils from "FriendOnlineNotificationUtils" /* 15502 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.A0FVCV);
+    const intl = util.intl;
+    return intl.string(_modDef2562.A0FVCV);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.vHX6RG);
+    const intl = util.intl;
+    return intl.string(_modDef2562.vHX6RG);
   },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: explicitContentFromProto.NotifyFriendsOnComeOnline.useSetting,
-  onValueChange: onFriendOnlineNotificationSettingsChanged.onNotifyFriendsOnComeOnlineSettingsChanged
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: UserSettings.NotifyFriendsOnComeOnline.useSetting,
+  onValueChange: FriendOnlineNotificationUtils.onNotifyFriendsOnComeOnlineSettingsChanged
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.A0FVCV);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.vHX6RG);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: explicitContentFromProto.NotifyFriendsOnComeOnline.useSetting,
-  onValueChange: onFriendOnlineNotificationSettingsChanged.onNotifyFriendsOnComeOnlineSettingsChanged
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx");
 
 export default toggle;

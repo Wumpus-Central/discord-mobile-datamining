@@ -1,53 +1,60 @@
-// === Module 11476: useMessageAuthorActivities ===
+// === Module 11476: MessagesHooks ===
 
-// Module 11476 (useMessageAuthorActivities)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_toTimestampMs" /* 11308 */;
-import { updateShouldShowJumpToPresentButton as closure_7 } from "updateChatInputContainerHeight" /* 9485 */;
-import closure_8 from "handleConnectionOpen" /* 4902 */;
-import closure_9 from "createGuildRecordFromRust" /* 1979 */;
-import closure_10 from "sortActivity" /* 4600 */;
+// Module 11476 (MessagesHooks)
+import _modDef12 from "module_12" /* 12 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11478 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11308 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4902 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PresenceStore from "PresenceStore" /* 4600 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
+let closure_7 = fn(9485).updateShouldShowJumpToPresentButton;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/MessagesHooks.tsx");
 
 export const useMessageAuthorActivities = function useMessageAuthorActivities(arg0) {
-  const _require = arg0;
+  _require = arg0;
   const items = [arg0];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = {};
-    const item = obj.forEach((author) => {
+    const item = closure_0.forEach((author) => {
       if (tmp) {
         obj[author.author.id] = null;
       }
     });
     return obj;
   }, items);
-  const items1 = [closure_10];
+  const items1 = [PresenceStore];
   const items2 = [memo];
-  return _require(504).useStateFromStoresObject(items1, () => memo(closure_1_2[9]).mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
+  return require("initialize").useStateFromStoresObject(items1, () => _modDef12.mapValues(memo, (arg0, arg1) => primaryActivity.getPrimaryActivity(arg1)), items2);
 };
 export const useFetchMessageApplications = function useFetchMessageApplications(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const set = new Set();
-    const item = set.forEach((applicationId) => {
+    const item = closure_0.forEach((applicationId) => {
       if (tmp) {
         set.add(applicationId.applicationId);
       }
     });
     return Array.from(set);
   }, items);
-  closure_2 = React.useRef([]);
+  noop.useRef([]);
   const items1 = [memo];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!obj.areArraysShallowEqual(memo, ref.current)) {
-      const obj2 = memo(tmp2[11]);
-      const found = memo(tmp2[9])(tmp3).filter(callback(tmp2[12]).isNotNullish);
-      const arr = memo(tmp2[9])(tmp3);
+      const obj2 = ApplicationActionCreatorsDefault;
+      const found = _modDef12(tmp3).filter(GlobalUtils.isNotNullish);
+      const arr = _modDef12(tmp3);
       const applications = obj2.fetchApplications(found.uniq().value(), false);
       ref.current = tmp3;
       const iter = found.uniq();
@@ -55,10 +62,10 @@ export const useFetchMessageApplications = function useFetchMessageApplications(
   }, items1);
 };
 export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChannelInviteStartTimes(stateFromStores4) {
-  const _require = stateFromStores4;
-  const items = [closure_9, closure_8];
+  _require = stateFromStores4;
+  const items = [GuildStore, GuildAvailabilityStore];
   const items1 = [stateFromStores4];
-  const stateFromStoresObject = _require(504).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     const obj = {};
     const values = stateFromStores4.values();
     const iter = values[Symbol.iterator]();
@@ -66,20 +73,13 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.guild) {
-        let tmp4 = stateFromStores4;
-        let tmp5 = closure_1_2;
-        let obj2 = stateFromStores4(closure_1_2[13]);
-        let tmp6 = nextResult;
+        let obj2 = InviteTypeUtils;
         if (obj2.isVoiceChannelInvite(tmp3)) {
-          let tmp7 = nextResult;
           let id = tmp3.guild.id;
-          let tmp9 = closure_1_9;
           let tmp8 = id;
-          let tmp10 = null != closure_1_9.getGuild(id);
+          let tmp10 = null != GuildStore.getGuild(id);
           if (tmp10) {
-            let tmp11 = closure_1_8;
-            let tmp12 = id;
-            tmp10 = !closure_1_8.isUnavailable(tmp8);
+            tmp10 = !GuildAvailabilityStore.isUnavailable(tmp8);
           }
           obj[id] = tmp10;
         }
@@ -89,31 +89,24 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
     return obj;
   }, items1);
   const items2 = [stateFromStores4, stateFromStoresObject];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const values = stateFromStores4.values();
     const iter = values[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp3 = nextResult;
       if (null != nextResult.guild) {
-        let tmp4 = stateFromStores4;
-        let tmp5 = closure_1_2;
-        let obj = stateFromStores4(closure_1_2[13]);
-        let tmp6 = nextResult;
+        let tmp4 = require;
+        let obj = InviteTypeUtils;
         if (obj.isVoiceChannelInvite(tmp3)) {
-          let tmp7 = nextResult;
           let id = tmp3.guild.id;
           let tmp8 = id;
-          let tmp9 = stateFromStoresObject;
           let result = true !== stateFromStoresObject[id];
           if (!result) {
-            let tmp11 = closure_1_6;
-            let tmp12 = id;
-            result = closure_1_6.hasRequestedStartTimes(tmp8);
+            result = VoiceChannelStartTimeStore.hasRequestedStartTimes(tmp8);
           }
           if (!result) {
-            let tmp4Result = tmp4(tmp5[14]);
-            let tmp13 = id;
+            let tmp4Result = tmp4(11477);
             let channelInfo = tmp4Result.fetchChannelInfo(tmp8);
           }
         }
@@ -125,26 +118,25 @@ export const useFetchVoiceChannelInviteStartTimes = function useFetchVoiceChanne
 export const useMessagesLifecycle = function useMessagesLifecycle(screenIndex) {
   ({ messages: require, isMessagesReady: importDefault, oldestUnreadMessageId: dependencyMap, channelId } = screenIndex);
   screenIndex = screenIndex.screenIndex;
-  ({ updateRows: findNodeHandle, scrollToMessageId: closure_6 } = screenIndex);
+  ({ updateRows: findNodeHandle, scrollToMessageId: VoiceChannelStartTimeStore } = screenIndex);
   const effect = screenIndex.useEffect(() => {
-    let obj = closure_1_0(closure_1_2[15]);
-    obj = { messages: closure_0, isMessagesReady: closure_1, oldestUnreadMessageId: closure_2, channelId, screenIndex, updateRows: closure_5, scrollToMessageId: closure_6 };
+    const obj = { messages, isMessagesReady, oldestUnreadMessageId, channelId, screenIndex, updateRows, scrollToMessageId };
     obj.syncMessageDisplay(obj);
-    closure_1_0(closure_1_2[15]).recordTimings(channelId, closure_0);
+    messages_MessagesUtils.recordTimings(channelId, messages);
   }, []);
   const items = [channelId, screenIndex];
   const effect1 = screenIndex.useEffect(() => () => {
-    closure_1_7(closure_3, closure_4, false);
+    closure_2_7(channelId, screenIndex, false);
   }, items);
 };
 export const useScrollState = function useScrollState() {
-  const tmp = callback(React.useState({ animated: false, hasHandledScroll: false, isAtBottom: false, isNearBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, _loaded: false }), 2);
+  const tmp = _slicedToArray(noop.useState({ animated: false, hasHandledScroll: false, isAtBottom: false, isNearBottom: false, isNearTop: false, decelerating: false, dragging: false, hasMoreMessagesAfterForLastUpdate: false, _loaded: false }), 2);
   closure_0 = tmp[1];
   const items = [
     tmp[0],
-    React.useCallback((arg0) => {
-      const callback = arg0;
-      callback((arg0) => {
+    noop.useCallback((arg0) => {
+      closure_0 = arg0;
+      closure_0((arg0) => {
         const merged = Object.assign(arg0);
         const merged1 = Object.assign(closure_0);
         return {};
@@ -157,23 +149,23 @@ export const useChatUpdatesQueue = function useChatUpdatesQueue(ref5, callback) 
   closure_0 = ref5;
   closure_1 = callback;
   const items = [ref5, callback];
-  const memo = React.useMemo(() => new callback(memo[16])(() => {
+  const memo = noop.useMemo(() => new ChatUpdatesQueueDefault(() => {
     let tmp2 = null;
     if (null !== ref.current) {
-      tmp2 = closure_1_5(tmp.current);
+      tmp2 = findNodeHandle(tmp.current);
     }
     return tmp2;
   }, (arg0) => {
     callback(arg0);
   }), items);
   const items1 = [memo];
-  const effect = React.useEffect(() => () => {
-    closure_2.cleanup();
+  const effect = noop.useEffect(() => () => {
+    memo.cleanup();
   }, items1);
   return memo;
 };
 export const useMessagesState = function useMessagesState() {
-  [tmp2, tmp3] = callback(React.useState(false), 2);
-  const tmp4 = callback(React.useState(false), 2);
+  [tmp2, tmp3] = _slicedToArray(noop.useState(false), 2);
+  const tmp4 = _slicedToArray(noop.useState(false), 2);
   return { shouldForceRender: tmp2, hasJumpedToOriginalPost: tmp4[0], setHasJumpedToOriginalPost: tmp4[1], setShouldForceRender: tmp3 };
 };

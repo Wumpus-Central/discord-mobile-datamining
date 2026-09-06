@@ -1,20 +1,21 @@
 // === Module 12291: renderChannelBadge ===
 
 // Module 12291 (renderChannelBadge)
-import set from "set" /* 2 */;
-import renderChannelBadge from "renderChannelBadge" /* 12292 */;
-import _modDef12293 from "module_12293" /* 12293 */;
+import components_ChannelBadge from "components/ChannelBadge" /* 12292 */;
+import VocalChannelJoinButtonDefault from "VocalChannelJoinButton" /* 12293 */;
 import Divider from "Divider" /* 12295 */;
-import DividerDefault from "Divider" /* 12295 */;
 import NewBadgeDefault from "NewBadge" /* 12296 */;
-import handleInviteDisabledPressDefault from "handleInviteDisabledPress" /* 12297 */;
+import GuildSearchAndInviteDefault from "GuildSearchAndInvite" /* 12297 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/components/index.tsx");
+const DividerDefault = Divider;
 
-export const renderChannelBadge = renderChannelBadge.renderChannelBadge;
-export const VocalChannelJoinButton = _modDef12293;
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/components/index.tsx");
+
+export const renderChannelBadge = components_ChannelBadge.renderChannelBadge;
+export const VocalChannelJoinButton = VocalChannelJoinButtonDefault;
 export const Divider = DividerDefault;
 export const DIVIDER_MARGIN_BOTTOM = Divider.DIVIDER_MARGIN_BOTTOM;
 export const DIVIDER_MARGIN_TOP = Divider.DIVIDER_MARGIN_TOP;
 export const NewBadge = NewBadgeDefault;
-export const GuildSearchAndInvite = handleInviteDisabledPressDefault;
+export const GuildSearchAndInvite = GuildSearchAndInviteDefault;

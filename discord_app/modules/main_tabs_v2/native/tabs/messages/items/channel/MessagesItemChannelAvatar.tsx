@@ -1,29 +1,32 @@
-// === Module 16034: ? ===
+// === Module 16034: MessagesItemChannelAvatar ===
 
-// Module 16034
-import ThemesDefault from "Themes" /* 576 */;
-import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 10910 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "sortActivity" /* 4600 */;
-import closure_6 from "handleTypingStart" /* 11965 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10118 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16034 (MessagesItemChannelAvatar)
+import nativeDefault from "native" /* 576 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import PresenceStore from "PresenceStore" /* 4600 */;
+import TypingStore from "TypingStore" /* 11965 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let closure_10 = createCacheKey.createStyles((arg0) => {
-  const avatar = { borderRadius: ThemesDefault.radii.round, marginRight: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
+const require = fn;
+const MUTED_OPACITY_CONTENT = fn(10118).MUTED_OPACITY_CONTENT;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles((arg0) => {
+  const avatar = { borderRadius: nativeDefault.radii.round, marginRight: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_MARGIN_END, width: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, height: nativeDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_AVATAR_SIZE, opacity: null };
   let num = 1;
   if (arg0) {
     num = MUTED_OPACITY_CONTENT;
   }
-  avatar[4] = num;
+  avatar.opacity = num;
   return { avatar };
 });
-const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(channel) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
+
+export default noop.memo(function MessagesItemChannelAvatar(channel) {
   channel = channel.channel;
   ({ hasUnreadMessages: importDefault, muted, status } = channel);
   dependencyMap = undefined;
@@ -40,14 +43,12 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   }
   const tmpResult = closure_10(muted);
   const REFRESH_MEDIUM_32 = channel(1178).AvatarSizes.REFRESH_MEDIUM_32;
-  dependencyMap = id.getId();
+  dependencyMap = AuthenticationStore.getId();
   let obj = channel(504);
-  const items = [closure_6];
+  const items = [TypingStore];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const typingUsers = closure_1_6.getTypingUsers(channel.id);
+    const typingUsers = TypingStore.getTypingUsers(channel.id);
     for (const key10007 in typingUsers) {
-      let tmp2 = key10007;
-      let tmp3 = closure_2;
       if (key10007 === closure_2) {
         continue;
       } else {
@@ -59,78 +60,64 @@ const memoResult = importAllResult.memo(function MessagesItemChannelAvatar(chann
   });
   const items1 = [stateFromStores];
   const stateFromStores1 = channel(504).useStateFromStores(items1, () => {
-    const useReducedMotion = stateFromStores.useReducedMotion;
+    const useReducedMotion = AccessibilityStore.useReducedMotion;
     let tmp = !useReducedMotion;
     if (!useReducedMotion) {
       let tmp2 = stateFromStores;
       if (!stateFromStores) {
-        tmp2 = closure_1;
+        tmp2 = importDefault;
       }
       tmp = tmp2;
     }
     return tmp;
   });
   const obj2 = channel(504);
-  let tmp = closure_10;
   let tmp3 = channel;
-  const items2 = [closure_7];
+  const items2 = [UserStore];
   const stateFromStores2 = channel(504).useStateFromStores(items2, () => {
     let recipientId;
     if (true === channel.isDM()) {
       recipientId = channel.getRecipientId();
     }
-    return closure_1_7.getUser(recipientId);
+    return UserStore.getUser(recipientId);
   });
   const obj3 = channel(504);
-  const items3 = [closure_5];
+  const items3 = [PresenceStore];
   const stateFromStores3 = channel(504).useStateFromStores(items3, () => {
     let isMobileOnlineResult = channel.isDM();
     if (isMobileOnlineResult) {
-      isMobileOnlineResult = closure_1_5.isMobileOnline(channel.getRecipientId());
+      isMobileOnlineResult = PresenceStore.isMobileOnline(channel.getRecipientId());
     }
     return isMobileOnlineResult;
   });
   const obj5 = channel(504);
-  const items4 = [closure_5];
+  const items4 = [PresenceStore];
   const stateFromStores4 = channel(504).useStateFromStores(items4, () => {
     let isVROnlineResult = channel.isDM();
     if (isVROnlineResult) {
-      isVROnlineResult = closure_1_5.isVROnline(channel.getRecipientId());
+      isVROnlineResult = PresenceStore.isVROnline(channel.getRecipientId());
     }
     return isVROnlineResult;
   });
   if (channel.isGroupDM()) {
-    obj = { status: null, size: null, channel: null, animate: null, style: null };
-    obj[0] = status;
-    obj[1] = REFRESH_MEDIUM_32;
-    obj[2] = channel;
-    obj[3] = stateFromStores1;
-    obj[4] = tmpResult.avatar;
-    let tmp11Result = jsx(FacepileGroupDMAvatarDefault, { status: null, size: null, channel: null, animate: null, style: null });
+    obj = { status, size: REFRESH_MEDIUM_32, channel, animate: stateFromStores1, style: tmpResult.avatar };
+    let tmp11Result = jsx(GroupDMAvatarDefault, { status, size: REFRESH_MEDIUM_32, channel, animate: stateFromStores1, style: tmpResult.avatar });
   } else {
     tmp11Result = null;
     if (null != stateFromStores2) {
-      obj = { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessible", size: "<string:307298308>", animate: "<string:906248450>", typing: "<string:1715535874>", autoStatusCutout: "<string:1358955583>" };
-      obj[0] = stateFromStores2;
-      obj[1] = stateFromStores2.avatarDecoration;
-      obj[3] = stateFromStores3;
-      obj[4] = stateFromStores4;
+      obj = { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: "accessible", size: "<string:307298308>", animate: "<string:906248450>", typing: "<string:1715535874>", autoStatusCutout: "<string:1358955583>" };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
         tmp12 = status;
       }
-      obj[5] = tmp12;
-      obj[6] = isStreaming;
-      obj[7] = tmpResult.avatar;
-      obj[8] = REFRESH_MEDIUM_32;
-      obj[9] = stateFromStores1;
-      obj[10] = stateFromStores;
-      tmp11Result = jsx(tmp3(1178).Avatar, { user: null, avatarDecoration: null, guildId: "e", isMobileOnline: true, isVROnline: false, status: true, streaming: true, style: "accessible", size: "<string:307298308>", animate: "<string:906248450>", typing: "<string:1715535874>", autoStatusCutout: "<string:1358955583>" });
-      const tmp11 = jsx;
+      obj.status = tmp12;
+      obj.streaming = isStreaming;
+      obj.style = tmpResult.avatar;
+      obj.size = REFRESH_MEDIUM_32;
+      obj.animate = stateFromStores1;
+      obj.typing = stateFromStores;
+      tmp11Result = jsx(tmp3(1178).Avatar, { user: stateFromStores2, avatarDecoration: stateFromStores2.avatarDecoration, guildId: "e", isMobileOnline: stateFromStores3, isVROnline: stateFromStores4, status: true, streaming: true, style: "accessible", size: "<string:307298308>", animate: "<string:906248450>", typing: "<string:1715535874>", autoStatusCutout: "<string:1358955583>" });
     }
   }
   return tmp11Result;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelAvatar.tsx");
-
-export default memoResult;

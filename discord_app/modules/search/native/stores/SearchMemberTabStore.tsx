@@ -1,14 +1,15 @@
-// === Module 12364: setAutocompleteOptions ===
+// === Module 12364: SearchMemberTabStore ===
 
-// Module 12364 (setAutocompleteOptions)
+// Module 12364 (SearchMemberTabStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 5519 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import GuildUtilsDefault from "GuildUtils" /* 5519 */;
 import sortByMatchScoreDefault from "sortByMatchScore" /* 9835 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { Permissions } from "ME" /* 1074 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
+const require = fn;
+const Permissions = fn(1074).Permissions;
 let closure_6 = [];
 class GuildMemberSearchManager {
   constructor() {
@@ -19,19 +20,15 @@ class GuildMemberSearchManager {
     obj.searchQueryString = "";
     obj.targetChannelId = null;
     obj.results = [];
-    obj.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr) {
-      if (arg1 === items.searchQueryString) {
+    obj.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
+      if (arg1 === obj.searchQueryString) {
         tmp.isFetching = false;
-        items = [];
-        const channel = closure_1_4.getChannel(tmp.targetChannelId);
+        let items = [];
+        const channel = ChannelStore.getChannel(tmp.targetChannelId);
         const item = arr.forEach((type) => {
-          if (type.type === items(closure_1_3[2]).AutocompleterResultTypes.USER) {
+          if (type.type === obj(dependencyMap[2]).AutocompleterResultTypes.USER) {
             if (null != closure_1) {
-              obj = closure_1_2(closure_1_3[3]);
-              obj = { permission: null, user: null, context: null };
-              obj[0] = closure_1_5.VIEW_CHANNEL;
-              obj[1] = type.record;
-              obj[2] = tmp2;
+              obj = { permission: constants.VIEW_CHANNEL, user: type.record, context: tmp2 };
             }
             items.push(type);
           }
@@ -42,13 +39,13 @@ class GuildMemberSearchManager {
         } else {
           tmp.count = null;
         }
-        items = closure_1_9;
-        closure_1_9.emitChange();
+        items = searchGuildMemberTabStoreImpl;
+        searchGuildMemberTabStoreImpl.emitChange();
       }
     };
-    tmp2 = require("sortByMatchScore");
+    tmp2 = closure_1(closure_3[2]);
     items = [];
-    items[0] = require("sortByMatchScore").AutocompleterResultTypes.USER;
+    items[0] = closure_0(closure_3[2]).AutocompleterResultTypes.USER;
     tmp2 = new tmp2(obj.onAutocompleterResultsChange, items, 50);
     obj.autocompleter = tmp2;
     autocompleter = obj.autocompleter;
@@ -71,7 +68,7 @@ prototype["search"] = function search(arg0, targetChannelId, str) {
   const trimmed = str.toLowerCase().trim();
   this.searchQueryString = trimmed;
   str = str.toLowerCase();
-  const members = getGuildNameSuggestionDefault.requestMembers(arg0, trimmed, 50);
+  const members = GuildUtilsDefault.requestMembers(arg0, trimmed, 50);
   const autocompleter = this.autocompleter;
   autocompleter.search(trimmed);
 };
@@ -90,10 +87,10 @@ class SearchGuildMemberTabStoreImpl extends Store {
 }
 const prototype2 = SearchGuildMemberTabStoreImpl.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(closure_4);
+  this.waitFor(ChannelStore);
 };
 prototype2["getResults"] = function getResults(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let results;
   if (value != null) {
     results = value.getResults();
@@ -104,7 +101,7 @@ prototype2["getResults"] = function getResults(arg0) {
   return results;
 };
 prototype2["getCount"] = function getCount(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let count;
   if (value != null) {
     count = value.getCount();
@@ -115,7 +112,7 @@ prototype2["getCount"] = function getCount(arg0) {
   return count;
 };
 prototype2["getIsFetching"] = function getIsFetching(arg0) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   let flag;
   if (value != null) {
     flag = value.getIsFetching();
@@ -126,72 +123,69 @@ prototype2["getIsFetching"] = function getIsFetching(arg0) {
   return flag;
 };
 SearchGuildMemberTabStoreImpl.displayName = "SearchGuildMemberTabStore";
-const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(dispatcherDefault, {
+const searchGuildMemberTabStoreImpl = new SearchGuildMemberTabStoreImpl(DispatcherDefault, {
   SEARCH_GUILD_MEMBER_TAB_SEARCH: function handleSearchGuildMemberTabSearch(arg0) {
     ({ id, guildId, threadId } = arg0);
-    let obj = map;
+    let userFilters = map;
     ({ channelId, searchQueryString } = arg0);
-    let value = map.get(id);
+    value = map.get(id);
     if (value == null) {
-      if (typeof GuildMemberSearchManager !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      obj = Object.create(GuildMemberSearchManager.prototype);
-      obj.count = null;
-      obj.isFetching = false;
-      obj.searchQueryString = "";
-      obj.targetChannelId = null;
-      obj.results = [];
-      obj.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr) {
-        if (arg1 === items.searchQueryString) {
-          tmp.isFetching = false;
-          items = [];
-          const channel = closure_1_4.getChannel(tmp.targetChannelId);
-          const item = arr.forEach((type) => {
-            if (type.type === items(closure_1_3[2]).AutocompleterResultTypes.USER) {
-              if (null != closure_1) {
-                obj = closure_1_2(closure_1_3[3]);
-                obj = { permission: null, user: null, context: null };
-                obj[0] = closure_1_5.VIEW_CHANNEL;
-                obj[1] = type.record;
-                obj[2] = tmp2;
+      if (typeof GuildMemberSearchManager === "function") {
+        userFilters = Object.create(GuildMemberSearchManager.prototype);
+        userFilters.count = null;
+        userFilters.isFetching = false;
+        userFilters.searchQueryString = "";
+        userFilters.targetChannelId = null;
+        userFilters.results = [];
+        userFilters.onAutocompleterResultsChange = function onAutocompleterResultsChange(arr, arg1) {
+          if (arg1 === obj.searchQueryString) {
+            tmp.isFetching = false;
+            let items = [];
+            const channel = ChannelStore.getChannel(tmp.targetChannelId);
+            const item = arr.forEach((type) => {
+              if (type.type === obj(dependencyMap[2]).AutocompleterResultTypes.USER) {
+                if (null != closure_1) {
+                  obj = { permission: constants.VIEW_CHANNEL, user: type.record, context: tmp2 };
+                }
+                items.push(type);
               }
-              items.push(type);
+            });
+            tmp.results = items;
+            if (tmp.searchQueryString.length > 0) {
+              tmp.count = items.length;
+            } else {
+              tmp.count = null;
             }
-          });
-          tmp.results = items;
-          if (tmp.searchQueryString.length > 0) {
-            tmp.count = items.length;
-          } else {
-            tmp.count = null;
+            items = searchGuildMemberTabStoreImpl;
+            searchGuildMemberTabStoreImpl.emitChange();
           }
-          items = closure_1_9;
-          closure_1_9.emitChange();
-        }
-      };
-      let tmp4 = sortByMatchScoreDefault;
-      let items = [obj(9835).AutocompleterResultTypes.USER];
-      tmp4 = new tmp4(onAutocompleterResultsChange, items, 50);
-      obj.autocompleter = tmp4;
-      const autocompleter = obj.autocompleter;
-      const searchContext = autocompleter.createSearchContext();
-      value = obj;
-      const tmp16 = GuildMemberSearchManager;
+        };
+        let tmp4 = sortByMatchScoreDefault;
+        let items = [userFilters(9835).AutocompleterResultTypes.USER];
+        tmp4 = new tmp4(onAutocompleterResultsChange, items, 50);
+        userFilters.autocompleter = tmp4;
+        const autocompleter = userFilters.autocompleter;
+        const searchContext = autocompleter.createSearchContext();
+        value = userFilters;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     }
-    const result = obj.set(id, value);
-    obj = { guild: guildId, strict: true, thread: threadId };
-    const result1 = value.setAutocompleteOptions({ frecencyBoosters: true, allowSnowflake: true, userFilters: obj });
+    const result = userFilters.set(id, value);
+    userFilters = { guild: guildId, strict: true, thread: threadId };
+    const result1 = value.setAutocompleteOptions({ frecencyBoosters: true, allowSnowflake: true, userFilters });
     value.search(guildId, channelId, searchQueryString);
   },
   SEARCH_GUILD_MEMBER_TAB_CLEANUP: function handleSearchGuildMemberTabCleanup(id) {
     id = id.id;
-    const value = map.get(id);
+    value = map.get(id);
     if (value != null) {
       value.teardown();
     }
     map.delete(id);
   }
 });
-let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchMemberTabStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/stores/SearchMemberTabStore.tsx");
 
 export default searchGuildMemberTabStoreImpl;

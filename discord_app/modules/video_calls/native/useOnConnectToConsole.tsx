@@ -1,57 +1,53 @@
-// === Module 9216: onConnectToConsole ===
+// === Module 9216: useOnConnectToConsole ===
 
-// Module 9216 (onConnectToConsole)
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
-import _modDef9217 from "module_9217" /* 9217 */;
-import _modDef9253 from "module_9253" /* 9253 */;
-import _beginConsoleTransfer from "_beginConsoleTransfer" /* 9447 */;
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 1074 */;
+// Module 9216 (useOnConnectToConsole)
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9217 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 9253 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ AnalyticsLocations: c4, PlatformTypes: c5 } = ME);
-let result = require("set").fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");
+const beginConsoleTransfer = tmp(9447);
+require = fn;
+const Constants = fn(1074);
+({ AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/video_calls/native/useOnConnectToConsole.tsx");
 
-export const onConnectToConsole = function onConnectToConsole(channel, closure_0) {
-  const result = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.DONUT_MOBILE_NUX);
-  if (closure_0.twoWayLink) {
-    if (!closure_0.revoked) {
-      _beginConsoleTransfer.beginConsoleTransfer(channel, closure_0.type);
+export const onConnectToConsole = function onConnectToConsole(channel, found) {
+  const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.DONUT_MOBILE_NUX);
+  if (found.twoWayLink) {
+    if (!found.revoked) {
+      beginConsoleTransfer.beginConsoleTransfer(channel, found.type);
     }
   }
-  const type = closure_0.type;
+  const type = found.type;
   if (constants2.XBOX === type) {
     const items = [constants.CHANNEL_CALL];
-    return _modDef9217.showModal(items);
+    return XboxLinkModalActionCreatorsDefault.showModal(items);
   } else {
     const items1 = [constants.CHANNEL_CALL];
-    return _modDef9253.showModal(items1, closure_0.type);
+    return PlayStationLinkModalActionCreatorsDefault.showModal(items1, found.type);
   }
-  const obj = UNSAFE_isDismissibleContentDismissed;
-  const tmp = require;
 };
 export const useOnConnectToConsole = function useOnConnectToConsole(channel, account) {
   closure_0 = channel;
-  closure_1 = account;
   let items = [channel, account];
-  return React.useCallback(() => {
-    const result = channel(closure_1_2[2]).UNSAFE_markDismissibleContentAsDismissed(channel(closure_1_2[3]).DismissibleContent.DONUT_MOBILE_NUX);
+  return noop.useCallback(() => {
+    const result = DismissibleContentUnsafeUtils.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.DONUT_MOBILE_NUX);
     if (account.twoWayLink) {
       if (!tmp2.revoked) {
-        channel(tmp4[6]).beginConsoleTransfer(channel, tmp2.type);
-        const tmp3Result = channel(tmp4[6]);
+        beginConsoleTransfer.beginConsoleTransfer(closure_0, tmp2.type);
+        const tmp3Result = beginConsoleTransfer;
       }
     }
     const type = tmp2.type;
-    if (closure_1_5.XBOX === type) {
-      const items = [closure_1_4.CHANNEL_CALL];
-      account(tmp4[4]).showModal(items);
-      const obj4 = account(tmp4[4]);
+    if (constants2.XBOX === type) {
+      const items = [constants.CHANNEL_CALL];
+      XboxLinkModalActionCreatorsDefault.showModal(items);
     } else if (tmp7.PLAYSTATION === type) {
-      const items1 = [closure_1_4.CHANNEL_CALL];
-      account(tmp4[5]).showModal(items1, tmp2.type);
-      const obj3 = account(tmp4[5]);
+      const items1 = [constants.CHANNEL_CALL];
+      PlayStationLinkModalActionCreatorsDefault.showModal(items1, tmp2.type);
     }
   }, items);
 };

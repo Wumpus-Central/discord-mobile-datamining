@@ -2,23 +2,24 @@
 
 // Module 17455 (useConnectGuardianGate)
 import initialize from "initialize" /* 504 */;
-import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4992 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
+import useMountEffectDefault from "useMountEffect" /* 4992 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useConnectGuardianGate.tsx");
 
 export const useConnectGuardianGate = function useConnectGuardianGate() {
   let obj = initialize;
-  const items = [closure_5];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ linkCode: store.getLinkCode(), expiresAt: store.getLinkCodeExpiresAt() }));
+  const items = [FamilyCenterStore];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ linkCode: FamilyCenterStore.getLinkCode(), expiresAt: FamilyCenterStore.getLinkCodeExpiresAt() }));
   ({ linkCode, expiresAt } = stateFromStoresObject);
-  [tmp3, require] = callback(React.useState(false), 2);
-  const tmp4 = callback(React.useState(() => {
-    const linkCodeExpiresAt = store.getLinkCodeExpiresAt();
-    let tmp2 = null != store.getLinkCode() && null != linkCodeExpiresAt;
+  [tmp3, require] = _slicedToArray(noop.useState(false), 2);
+  const tmp4 = _slicedToArray(noop.useState(() => {
+    const linkCodeExpiresAt = FamilyCenterStore.getLinkCodeExpiresAt();
+    let tmp2 = null != FamilyCenterStore.getLinkCode() && null != linkCodeExpiresAt;
     if (tmp2) {
       const _Date = Date;
       tmp2 = linkCodeExpiresAt > Date.now();
@@ -26,45 +27,42 @@ export const useConnectGuardianGate = function useConnectGuardianGate() {
     return tmp2;
   }), 2);
   importDefault = tmp4[1];
-  dependencyMap = React.useRef(0);
-  callback = React.useCallback(() => {
+  dependencyMap = noop.useRef(0);
+  const callback = noop.useCallback(() => {
     const sum = ref.current + 1;
     ref.current = sum;
-    const callback = sum;
-    callback(false);
-    const linkCodeForCurrentUser = closure_1_0(ref[4]).getLinkCodeForCurrentUser();
-    const obj = closure_1_0(ref[4]);
+    closure_0 = sum;
+    closure_0(false);
+    const linkCodeForCurrentUser = require("FamilyCenterActionCreators").getLinkCodeForCurrentUser();
+    const obj = require("FamilyCenterActionCreators");
     linkCodeForCurrentUser.then(() => {
-      if (closure_0 === closure_1_2.current) {
-        sum(false);
-        closure_1_1(true);
+      if (sum === ref.current) {
+        require(false);
+        closure_1(true);
       }
     }).catch(() => {
-      if (closure_0 === closure_1_2.current) {
-        const linkCodeExpiresAt = closure_2_5.getLinkCodeExpiresAt();
-        if (null != closure_2_5.getLinkCode()) {
+      if (sum === ref.current) {
+        const linkCodeExpiresAt = FamilyCenterStore.getLinkCodeExpiresAt();
+        if (null != FamilyCenterStore.getLinkCode()) {
           if (null != linkCodeExpiresAt) {
             const _Date = Date;
             if (linkCodeExpiresAt > Date.now()) {
-              closure_1_1(true);
+              closure_1(true);
             }
           }
         }
-        sum(true);
+        require(true);
       }
     });
   }, []);
-  useMountLayoutEffectDefault(callback);
+  useMountEffectDefault(callback);
   if (tmp3) {
     obj = { state: "error" };
   } else if (tmp4[0]) {
     if (null == linkCode) {
       obj = { state: "error" };
     }
-    obj1 = { state: "gate", linkCode: null, expiresAt: null, refresh: null };
-    obj1[1] = linkCode;
-    obj1[2] = expiresAt;
-    obj1[3] = callback;
+    const obj1 = { state: "gate", linkCode, expiresAt, refresh: callback };
     obj = obj1;
   } else {
     obj = { state: "loading" };

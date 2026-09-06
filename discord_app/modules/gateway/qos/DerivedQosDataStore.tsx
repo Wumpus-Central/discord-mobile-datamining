@@ -1,29 +1,28 @@
-// === Module 501: initialize ===
+// === Module 501: DerivedQosDataStore ===
 
-// Module 501 (initialize)
+// Module 501 (DerivedQosDataStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDerivedQosData from "setDerivedQosData" /* 14194 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DerivedQosDataStorage from "DerivedQosDataStorage" /* 14194 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-let closure_3 = {};
+require = fn;
+let obj = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class DerivedQosDataStore extends PersistedStore {
 }
 const prototype = DerivedQosDataStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
-  this.waitFor(closure_2);
+  this.waitFor(AuthenticationStore);
   if (arg0 == null) {
     obj = {};
   }
 };
 prototype["getState"] = function getState() {
-  return closure_3;
+  return obj;
 };
 prototype["getForCurrentUser"] = function getForCurrentUser() {
-  const tmp = dependencyMap[id.getId(id)];
+  const tmp = obj[AuthenticationStore.getId(AuthenticationStore)];
   let data;
   if (tmp != null) {
     data = tmp.data;
@@ -32,40 +31,37 @@ prototype["getForCurrentUser"] = function getForCurrentUser() {
 };
 prototype["getForUser"] = function getForUser(userId) {
   let data;
-  if (dependencyMap[userId] != null) {
+  if (obj[userId] != null) {
     data = tmp.data;
   }
   return data;
 };
 DerivedQosDataStore.displayName = "DerivedQosDataStore";
 DerivedQosDataStore.persistKey = "DerivedQosDataStore";
-const derivedQosDataStore = new DerivedQosDataStore(dispatcherDefault, {
+obj = {
   CONNECTION_OPEN: function handleConnectionOpen(qosToken) {
     if (null == qosToken.qosToken) {
-      setDerivedQosData.setDerivedQosData(qosToken.user.id, null);
-      let flag = null != dependencyMap[qosToken.user.id];
+      DerivedQosDataStorage.setDerivedQosData(qosToken.user.id, null);
+      let flag = null != obj[qosToken.user.id];
       if (flag) {
         const id = qosToken.user.id;
         delete tmp2[tmp];
         flag = true;
       }
       let tmp4 = flag;
-      const obj2 = setDerivedQosData;
     } else {
-      setDerivedQosData.setDerivedQosData(qosToken.user.id, qosToken.qosToken);
+      DerivedQosDataStorage.setDerivedQosData(qosToken.user.id, qosToken.qosToken);
       let data;
-      if (dependencyMap[qosToken.user.id] != null) {
+      if (obj[qosToken.user.id] != null) {
         data = tmp16.data;
       }
       tmp4 = data !== qosToken.qosToken;
       if (tmp4) {
-        const obj = { data: null, updatedAt: null };
-        obj[0] = qosToken.qosToken;
+        obj = { data: qosToken.qosToken, updatedAt: null };
         const _Date = Date;
-        obj[1] = Date.now();
-        dependencyMap[qosToken.user.id] = obj;
+        obj.updatedAt = Date.now();
+        obj[qosToken.user.id] = obj;
       }
-      const obj3 = setDerivedQosData;
     }
     return tmp4;
   },
@@ -76,8 +72,8 @@ const derivedQosDataStore = new DerivedQosDataStore(dispatcherDefault, {
       if (null != isSwitchingAccount.userId) {
         const userId = isSwitchingAccount.userId;
         delete tmp2[tmp];
-        setDerivedQosData.setDerivedQosData(isSwitchingAccount.userId, null);
-        const obj = setDerivedQosData;
+        obj = DerivedQosDataStorage;
+        obj.setDerivedQosData(isSwitchingAccount.userId, null);
       }
       tmp3 = tmp5;
     }
@@ -85,9 +81,11 @@ const derivedQosDataStore = new DerivedQosDataStore(dispatcherDefault, {
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function handleMultiAccountRemoveAccount(userId) {
     delete tmp2[tmp];
-    setDerivedQosData.setDerivedQosData(userId.userId, null);
+    DerivedQosDataStorage.setDerivedQosData(userId.userId, null);
   }
-});
-const result = require("set").fileFinishedImporting("modules/gateway/qos/DerivedQosDataStore.tsx");
+};
+const derivedQosDataStore = new DerivedQosDataStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/qos/DerivedQosDataStore.tsx");
 
 export default derivedQosDataStore;

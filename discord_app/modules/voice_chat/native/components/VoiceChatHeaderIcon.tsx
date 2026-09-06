@@ -1,74 +1,73 @@
-// === Module 10000: VoiceChatCallScreenHeaderIconInner ===
+// === Module 10000: VoiceChatHeaderIcon ===
 
-// Module 10000 (VoiceChatCallScreenHeaderIconInner)
-import applyDefault from "apply" /* 12 */;
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import PressableBase from "PressableBase" /* 5123 */;
+// Module 10000 (VoiceChatHeaderIcon)
+import _modDef12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import native2 from "native" /* 4271 */;
+import Pressables from "Pressables" /* 5123 */;
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "generateOldThreadCutoff" /* 4575 */;
-import { ThemeTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
 
-require = arg1;
+require = fn;
 function VoiceChatCallScreenHeaderIconInner(onPress) {
   let noop = onPress.onPress;
   ({ children, source, accessibilityLabel } = onPress);
-  const tmp = callback2();
+  const tmp = closure_8();
   let obj = { style: tmp.chatIconContainer, children: null };
   obj = { containerStyle: tmp.chatIcon, accessibilityLabel, source, onPress: null, children: null };
   if (noop == null) {
-    noop = applyDefault.noop;
+    noop = _modDef12.noop;
   }
-  obj[3] = noop;
-  obj[4] = children;
-  obj[1] = closure_6(ChannelCallNavigatorIconDefault, obj);
-  return closure_6(View, obj);
+  obj.onPress = noop;
+  obj.children = children;
+  obj.children = timestampProducer(ChannelCallNavigatorIconDefault, obj);
+  return timestampProducer(View, obj);
 }
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
-createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { opacity: 0.6 };
-createCacheKey[2] = { marginRight: 12, height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
-createCacheKey[3] = { marginHorizontal: 0, width: 32, height: 32 };
-const obj1 = { marginRight: 12, height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.ICON_STRONG };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { backgroundColor: ThemesDefault.colors.ICON_STRONG };
-const result = require("set").fileFinishedImporting("modules/voice_chat/native/components/VoiceChatHeaderIcon.tsx");
+const View = fn(17).View;
+const ThemeTypes = fn(1074).ThemeTypes;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
+let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
+createStyles.headerButton = size;
+createStyles.disabledOpacity = { opacity: 0.6 };
+createStyles = { marginRight: 12, height: fn(5682).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+createStyles.chatIconContainer = createStyles;
+createStyles.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
+createStyles.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
+let closure_8 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_chat/native/components/VoiceChatHeaderIcon.tsx");
 
 export default function VoiceChatHeaderIcon(disabled) {
   let disabledOpacity = disabled.disabled;
   ({ accessibilityLabel, onPress, source, children } = disabled);
-  const tmp = callback2();
+  const tmp = closure_8();
   let obj = { disabled: disabledOpacity, activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel, onPress, style: null, children: null };
   const items = [tmp.headerButton, ];
   if (disabledOpacity) {
     disabledOpacity = tmp.disabledOpacity;
   }
   items[1] = disabledOpacity;
-  obj[5] = items;
+  obj.style = items;
   obj = { source, color: tmp.badge.backgroundColor, size: tmp3(1178).Icon.Sizes.SMALL_20 };
-  const items1 = [callback(Button.Icon, obj), children];
-  obj[6] = items1;
-  return closure_7(PressableBase.PressableOpacity, obj);
+  const items1 = [timestampProducer(native.Icon, obj), children];
+  obj.children = items1;
+  return React5(Pressables.PressableOpacity, obj);
 };
 export const useVoiceChatMentions = function useVoiceChatMentions(arg0) {
-  const _require = arg0;
-  const items = [closure_4];
+  _require = arg0;
+  const items = [ReadStateStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStoresObject(items, () => ({ unreadCount: closure_1_4.getUnreadCount(closure_0), mentionCount: closure_1_4.getMentionCount(closure_0) }), items1);
+  return require("initialize").useStateFromStoresObject(items, () => ({ unreadCount: ReadStateStore.getUnreadCount(closure_0), mentionCount: ReadStateStore.getMentionCount(closure_0) }), items1);
 };
 export const VoiceChatCallScreenHeaderIcon = function VoiceChatCallScreenHeaderIcon(arg0) {
   let obj = { theme: ThemeTypes.DARK, children: null };
   obj = {};
   const merged = Object.assign(arg0);
-  obj[1] = callback(VoiceChatCallScreenHeaderIconInner, obj);
-  return callback(ManaContext.ThemeContextProvider, obj);
+  obj.children = timestampProducer(VoiceChatCallScreenHeaderIconInner, obj);
+  return timestampProducer(native2.ThemeContextProvider, obj);
 };

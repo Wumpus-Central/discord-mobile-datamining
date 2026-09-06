@@ -1,95 +1,94 @@
-// === Module 9042: handleRelationshipAddError ===
+// === Module 9042: RelationshipActionCreators ===
 
-// Module 9042 (handleRelationshipAddError)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import setDefault from "set" /* 4904 */;
+// Module 9042 (RelationshipActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import shared from "shared" /* 4411 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 5522 */;
-import openContextMenu from "openContextMenu" /* 5553 */;
-import isLimitedAccessErrorCode from "isLimitedAccessErrorCode" /* 9045 */;
-import openClearAllIncomingRequestsConfirmationModalDefault from "openClearAllIncomingRequestsConfirmationModal" /* 9047 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { ClearFriendRequestFilters } from "ClearFriendRequestFilters" /* 9043 */;
+import ContextMenuActionCreators from "ContextMenuActionCreators" /* 5553 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8404 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9044 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9045 */;
+import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9047 */;
+import _slicedToArray from "module_32" /* 32 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-function handleRelationshipAddError(arg0, arg1, substr) {
-  ({ status, body } = arg0);
+require = fn;
+function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
+  ({ status, body } = error);
   let num = body;
   if (body) {
     num = body.code;
   }
   if (429 === status) {
-    if (arg1 === obj.SHOW_ALWAYS) {
+    if (SHOW_ALWAYS === obj.SHOW_ALWAYS) {
       obj = { title: null, body: null, confirmText: null };
-      const intl7 = getSystemLocale.intl;
-      obj[0] = intl7.string(getSystemLocale.t["3D5eox"]);
-      const intl8 = getSystemLocale.intl;
-      obj[1] = intl8.string(getSystemLocale.t.TuJriJ);
-      const intl9 = getSystemLocale.intl;
-      obj[2] = intl9.string(getSystemLocale.t.DppXIx);
-      openContextMenu.closeContextMenu();
-      const obj11 = openContextMenu;
-      setDefault.show(obj);
-      const obj12 = setDefault;
+      const intl7 = util.intl;
+      obj.title = intl7.string(util.t["3D5eox"]);
+      const intl8 = util.intl;
+      obj.body = intl8.string(util.t.TuJriJ);
+      const intl9 = util.intl;
+      obj.confirmText = intl9.string(util.t.DppXIx);
+      ContextMenuActionCreators.closeContextMenu();
+      AlertActionCreatorsDefault.show(obj);
     }
   } else {
     if (403 === status) {
       if (num === constants.EMAIL_VERIFICATION_REQUIRED) {
         obj = { title: null, body: null, confirmText: null, onConfirm: null };
-        const intl4 = getSystemLocale.intl;
-        obj[0] = intl4.string(getSystemLocale.t.Gqf33E);
-        const intl5 = getSystemLocale.intl;
-        obj[1] = intl5.string(getSystemLocale.t.GHOBdx);
-        const intl6 = getSystemLocale.intl;
-        obj[2] = intl6.string(getSystemLocale.t.HbTSE6);
-        obj[3] = function onConfirm() {
-          const result = callback(table[8]).openClaimAccountModal();
+        const intl4 = util.intl;
+        obj.title = intl4.string(util.t.Gqf33E);
+        const intl5 = util.intl;
+        obj.body = intl5.string(util.t.GHOBdx);
+        const intl6 = util.intl;
+        obj.confirmText = intl6.string(util.t.HbTSE6);
+        obj.onConfirm = function onConfirm() {
+          const result = ClaimAccountModalActionCreatorsAll.openClaimAccountModal();
         };
-        openContextMenu.closeContextMenu();
-        const obj7 = openContextMenu;
-        setDefault.show(obj);
-        const obj8 = setDefault;
+        ContextMenuActionCreators.closeContextMenu();
+        AlertActionCreatorsDefault.show(obj);
       }
     }
     if (num === constants.USER_QUARANTINED) {
-      openContextMenu.closeContextMenu();
+      ContextMenuActionCreators.closeContextMenu();
       openQuarantineModeInfoModalDefault();
-      const obj5 = openContextMenu;
     } else {
       if (!obj9.isLimitedAccessErrorCode(status, num)) {
         if (num !== tmp2.RELATIONSHIP_INVALID_NO_CONFIRMATION) {
-          if (arg1 === obj.SHOW_ALWAYS) {
-            if (null != substr) {
+          if (SHOW_ALWAYS === obj.SHOW_ALWAYS) {
+            if (null != userTag) {
               let tmp18Result = tmp18(9046);
               if (!num) {
                 num = 0;
               }
-              let humanizeAbortCodeResult = tmp18Result.humanizeAbortCode(num, substr);
+              let humanizeAbortCodeResult = tmp18Result.humanizeAbortCode(num, userTag);
             } else {
               const intl = tmp18(1114).intl;
               humanizeAbortCodeResult = intl.string(tmp18(1114).t.paDJBM);
             }
-            obj1 = { title: null, body: null, confirmText: null };
+            const obj1 = { title: null, body: null, confirmText: null };
             const intl2 = tmp18(1114).intl;
-            obj1[0] = intl2.string(tmp18(1114).t["6moJ8s"]);
-            obj1[1] = humanizeAbortCodeResult;
+            obj1.title = intl2.string(tmp18(1114).t["6moJ8s"]);
+            obj1.body = humanizeAbortCodeResult;
             const intl3 = tmp18(1114).intl;
-            obj1[2] = intl3.string(tmp18(1114).t.BddRzS);
+            obj1.confirmText = intl3.string(tmp18(1114).t.BddRzS);
             tmp18Result = tmp18(5553);
             tmp18Result.closeContextMenu();
-            setDefault.show(obj1);
-            const obj4 = setDefault;
+            AlertActionCreatorsDefault.show(obj1);
           }
         }
       }
-      obj9 = isLimitedAccessErrorCode;
+      obj9 = UserLimitedAccessUtils;
     }
   }
-  throw arg0;
+  throw error;
 }
-({ Endpoints: closure_6, AbortCodes: error, RelationshipTypes: closure_8 } = ME);
+const Constants = fn(1074);
+({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
+const ClearFriendRequestFilters = fn(9043).ClearFriendRequestFilters;
 let obj = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 obj = {
   sendRequest(discordTag) {
@@ -99,188 +98,184 @@ obj = {
     if (errorUxConfig === undefined) {
       errorUxConfig = obj.SHOW_ALWAYS;
     }
-    [tmp3, tmp4] = callback(str.split("#"), 2);
+    [tmp3, tmp4] = _slicedToArray(str.split("#"), 2);
     const HTTP = str(1272).HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
+    const request = { url: closure_6.USER_RELATIONSHIPS(), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     obj = { username: tmp3, discriminator: parseInt(tmp4), note };
     const merged = Object.assign(captchaPayload);
-    obj[1] = obj;
-    obj[2] = context;
-    const tmp2 = callback(str.split("#"), 2);
-    obj[4] = str(1272).rejectWithMigratedError();
+    request.body = obj;
+    request.context = context;
+    const tmp2 = _slicedToArray(str.split("#"), 2);
+    request.rejectWithError = str(1272).rejectWithMigratedError();
     const obj3 = str(1272);
-    return HTTP.post(obj).catch((arg0) => {
-      closure_1_11(arg0, errorUxConfig, str);
+    return HTTP.post(request).catch((error) => {
+      handleRelationshipAddError(error, errorUxConfig, str);
     });
   },
   addRelationship(arg0, arg1) {
     ({ userId, captchaPayload } = arg0);
-    const _require = arg1;
+    _require = arg1;
     let SHOW_ALWAYS = arg2;
     ({ context, type, fromFriendSuggestion, confirmStrangerRequest } = arg0);
     if (arg2 === undefined) {
       SHOW_ALWAYS = obj.SHOW_ALWAYS;
     }
-    let user2;
-    user2 = user.getUser(userId);
-    const HTTP = _require(1272).HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
+    const user = UserStore.getUser(userId);
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: closure_6.USER_RELATIONSHIP(userId), body: null, context: null, oldFormErrors: true, rejectWithError: null };
     obj = { type, from_friend_suggestion: fromFriendSuggestion, confirm_stranger_request: confirmStrangerRequest };
     const merged = Object.assign(captchaPayload);
-    obj[1] = obj;
-    obj[2] = context;
-    obj[4] = _require(1272).rejectWithMigratedError();
-    const obj3 = _require(1272);
-    const putResult = HTTP.put(obj);
-    return HTTP.put(obj).then(() => {
+    request.body = obj;
+    request.context = context;
+    request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    const obj3 = require("HTTPUtils");
+    const putResult = HTTP.put(request);
+    return HTTP.put(request).then(() => {
       if (closure_0 != null) {
         tmp();
       }
-    }).catch((arg0) => {
-      closure_1_11(arg0, SHOW_ALWAYS, SHOW_ALWAYS(closure_1_3[12]).getUserTag(closure_2));
+    }).catch((error) => {
+      handleRelationshipAddError(error, SHOW_ALWAYS, UserUtilsDefault.getUserTag(closure_2));
     });
   },
   acceptFriendRequest(arg0) {
     return obj.addRelationship(arg0, () => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t["3goNa5"]));
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t["3goNa5"]));
     });
   },
   cancelFriendRequest(arg0, arg1) {
     return obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.pLUaxR));
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t.pLUaxR));
     });
   },
   removeFriend(arg0, arg1) {
     obj.removeRelationship(arg0, arg1, () => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.vGSLa2));
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t.vGSLa2));
     });
   },
   blockUser(userId, context) {
     obj = { userId, context, type: constants2.BLOCKED };
     return obj.addRelationship(obj, () => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.mU0Vrp));
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t.mU0Vrp));
     });
   },
   unblockUser(id, arg1) {
     return obj.removeRelationship(id, arg1, () => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t["9t1au7"]));
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t["9t1au7"]));
     });
   },
-  removeRelationship(userId, context) {
-    const _require = arg2;
-    const HTTP = _require(1272).HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: _require(1272).rejectWithMigratedError() };
-    const obj2 = _require(1272);
+  removeRelationship(userId, context, arg2) {
+    _require = arg2;
+    const HTTP = require("HTTPUtils").HTTP;
+    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    const obj2 = require("HTTPUtils");
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
       if (closure_0 != null) {
         tmp();
       }
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.n6Jo3E));
+      const AccessibilityAnnouncer = closure_0(4411).AccessibilityAnnouncer;
+      const intl = closure_0(1114).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.n6Jo3E));
     });
   },
-  updateRelationship(closure_1_0, closure_0) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIP(closure_1_0), body: obj, rejectWithError: null };
-    obj = { nickname: closure_0 };
-    obj[2] = sendRequest.rejectWithMigratedError();
-    return HTTP.patch(obj);
+  updateRelationship(userId, c0) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: timestampProducer.USER_RELATIONSHIP(userId), body: { nickname: c0 }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    return HTTP.patch(request);
   },
   fetchRelationships() {
-    const HTTP = sendRequest.HTTP;
-    const value = HTTP.get({ url: closure_6.USER_RELATIONSHIPS(), oldFormErrors: true, rejectWithError: true });
+    const HTTP = HTTPUtils.HTTP;
+    value = HTTP.get({ url: timestampProducer.USER_RELATIONSHIPS(), oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
-      obj = callback(573);
       obj = { type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: body.body };
       return obj.dispatch(obj);
-    }, () => callback(573).dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }));
+    }, () => DispatcherDefault.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }));
   },
   confirmClearPendingRelationships(arg0) {
-    openClearAllIncomingRequestsConfirmationModalDefault(arg0);
+    ClearAllIncomingRequestsConfirmationModalDefault(arg0);
   },
   clearPendingRelationships() {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIPS(), query: obj, rejectWithError: null };
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: timestampProducer.USER_RELATIONSHIPS(), query: { relationship_type: constants2.PENDING_INCOMING }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     obj = { relationship_type: constants2.PENDING_INCOMING };
-    obj[2] = sendRequest.rejectWithMigratedError();
-    const obj3 = sendRequest;
-    const delResult = HTTP.del(obj);
-    return HTTP.del(obj).then(() => {
-      callback2(573).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+    const delResult = HTTP.del(request);
+    return HTTP.del(request).then(() => {
+      DispatcherDefault.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.n6Jo3E));
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t.n6Jo3E));
     });
   },
   clearPendingSpamAndIgnored() {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: closure_6.USER_RELATIONSHIPS(), query: obj, body: { filters: items }, rejectWithError: null };
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: timestampProducer.USER_RELATIONSHIPS(), query: null, body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     obj = { relationship_type: constants2.PENDING_INCOMING };
-    items = [, ];
+    request.query = obj;
+    obj = { filters: null };
+    const items = [, ];
     ({ SPAM: arr[0], IGNORED: arr[1] } = ClearFriendRequestFilters);
-    obj[3] = sendRequest.rejectWithMigratedError();
-    const obj3 = sendRequest;
-    const delResult = HTTP.del(obj);
-    return HTTP.del(obj).then(() => {
-      callback2(573).dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
+    obj.filters = items;
+    request.body = obj;
+    const delResult = HTTP.del(request);
+    return HTTP.del(request).then(() => {
+      DispatcherDefault.dispatch({ type: "RELATIONSHIP_PENDING_INCOMING_REMOVED" });
     }).catch(() => {
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.n6Jo3E));
+      const AccessibilityAnnouncer = require("shared").AccessibilityAnnouncer;
+      const intl = require("util").intl;
+      AccessibilityAnnouncer.announce(intl.string(require("util").t.n6Jo3E));
     });
   },
-  ignoreUser(closure_3, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
-    const _require = closure_3;
-    closure_1 = channelId;
-    const HTTP = _require(1272).HTTP;
-    obj = { url: closure_6.IGNORE_USER(closure_3), context: obj, rejectWithError: null };
+  ignoreUser(id, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
+    _require = id;
+    const HTTP = require("HTTPUtils").HTTP;
+    obj = { url: closure_6.IGNORE_USER(id), context: null, rejectWithError: null };
     obj = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
-    obj[2] = _require(1272).rejectWithMigratedError();
-    const obj3 = _require(1272);
+    obj.context = obj;
+    obj.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    const obj3 = require("HTTPUtils");
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then(() => {
-      obj = channelId(closure_1_3[16]);
-      const result = obj.showIgnoreSuccessToast(callback, channelId);
-      const AccessibilityAnnouncer = callback(closure_1_3[13]).AccessibilityAnnouncer;
-      const intl = callback(closure_1_3[7]).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(closure_1_3[7]).t.Us93Ca));
-      obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: callback, timestamp: Date.now() };
-      channelId(closure_1_3[14]).dispatch(obj);
+      obj = SafetyToastsActionCreatorsDefault;
+      const result = obj.showIgnoreSuccessToast(userId, closure_1);
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t.Us93Ca));
+      obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId, timestamp: Date.now() };
+      DispatcherDefault.dispatch(obj);
     }).catch(() => {
       channelId(8404).showFailedToast();
-      const AccessibilityAnnouncer = callback(4411).AccessibilityAnnouncer;
-      const intl = callback(1114).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(1114).t.n6Jo3E));
+      const AccessibilityAnnouncer = userId(4411).AccessibilityAnnouncer;
+      const intl = userId(1114).intl;
+      AccessibilityAnnouncer.announce(intl.string(userId(1114).t.n6Jo3E));
     });
   },
-  unignoreUser(id, UserProfileRemediatedNotice, id2) {
-    const _require = id;
-    closure_1 = id2;
-    const HTTP = _require(1272).HTTP;
-    obj = { url: closure_6.IGNORE_USER(id), context: obj, rejectWithError: null };
-    obj = { location: UserProfileRemediatedNotice };
-    obj[2] = _require(1272).rejectWithMigratedError();
-    const obj3 = _require(1272);
+  unignoreUser(id, newestAnalyticsLocation, id2) {
+    _require = id;
+    const HTTP = require("HTTPUtils").HTTP;
+    obj = { url: closure_6.IGNORE_USER(id), context: null, rejectWithError: null };
+    obj = { location: newestAnalyticsLocation };
+    obj.context = obj;
+    obj.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    const obj3 = require("HTTPUtils");
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
-      const result = id2(closure_1_3[16]).showUnignoreSuccessToast(id, id2);
-      const AccessibilityAnnouncer = id(closure_1_3[13]).AccessibilityAnnouncer;
-      const intl = id(closure_1_3[7]).intl;
-      AccessibilityAnnouncer.announce(intl.string(id(closure_1_3[7]).t.QlH5w6));
+      const result = SafetyToastsActionCreatorsDefault.showUnignoreSuccessToast(closure_0, closure_1);
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+      const intl = util.intl;
+      AccessibilityAnnouncer.announce(intl.string(util.t.QlH5w6));
     }).catch(() => {
       id2(8404).showFailedToast();
       const AccessibilityAnnouncer = id(4411).AccessibilityAnnouncer;
@@ -289,7 +284,8 @@ obj = {
     });
   }
 };
-let result = require("set").fileFinishedImporting("actions/RelationshipActionCreators.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("actions/RelationshipActionCreators.tsx");
 
 export default obj;
 export const RelationshipErrorUXConfig = obj;

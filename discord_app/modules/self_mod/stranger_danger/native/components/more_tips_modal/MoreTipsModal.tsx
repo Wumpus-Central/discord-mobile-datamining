@@ -1,122 +1,124 @@
-// === Module 11375: MoreTipsModalScreen ===
+// === Module 11375: MoreTipsModal ===
 
-// Module 11375 (MoreTipsModalScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text from "Text" /* 4556 */;
-import SafetyTipsContainerDefault from "SafetyTipsContainer" /* 11376 */;
+// Module 11375 (MoreTipsModal)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import _modDef6992 from "module_6992" /* 6992 */;
+import HeaderActionButton from "HeaderActionButton" /* 7377 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
+import MetricEvents from "MetricEvents" /* 7607 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11370 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11376 */;
 import WasThisHelpfulSectionDefault from "WasThisHelpfulSection" /* 11377 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "handleConnectionOpen" /* 10915 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10915 */;
 
-require = arg1;
+require = fn;
 function MoreTipsModalScreen(learnMore) {
   learnMore = learnMore.learnMore;
   ({ channelId, warningId, senderId, description, safetyTips, actionItems } = learnMore);
-  const tmp = callback2();
+  const tmp = closure_10();
   let obj = { keyboardShouldPersistTaps: "handled", style: tmp.scroll, children: null };
   obj = { style: tmp.contentContainer, children: null };
   obj = { style: tmp.tipsContainer, children: null };
-  const items = [callback(SafetyTipsContainerDefault, { description, safetyTips, showHeader: true }), ];
+  const items = [React6(SafetyTipsSectionDefault, { description, safetyTips, showHeader: true }), ];
   let tmp2Result = null;
   if (null != learnMore) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.learnMore;
-    obj1[1] = learnMore;
+    const obj1 = { style: tmp.learnMore, children: learnMore };
     tmp2Result = tmp2(tmp5, obj1);
   }
   items[1] = tmp2Result;
-  obj[1] = items;
-  const items1 = [closure_9(closure_4, obj), , ];
+  obj.children = items;
+  const items1 = [React7(React4, obj), , ];
   const obj2 = { children: null };
   const obj3 = { variant: "eyebrow", color: "text-default", style: tmp.header, children: null };
-  const intl = getSystemLocale.intl;
-  obj3[3] = intl.string(getSystemLocale.t.K5FKtc);
-  const items2 = [callback(Text.Text, obj3), actionItems];
-  obj2[0] = items2;
-  items1[1] = closure_9(closure_4, obj2);
-  items1[2] = callback(WasThisHelpfulSectionDefault, { channelId, warningId, senderId });
-  obj[1] = items1;
-  obj[2] = closure_9(closure_4, obj);
-  return callback(closure_5, obj);
+  const intl = util.intl;
+  obj3.children = intl.string(util.t.K5FKtc);
+  const items2 = [React6(Text_Text.Text, obj3), actionItems];
+  obj2.children = items2;
+  items1[1] = React7(React4, obj2);
+  items1[2] = React6(WasThisHelpfulSectionDefault, { channelId, warningId, senderId });
+  obj.children = items1;
+  obj.children = React7(React4, obj);
+  return React6(hasOwnProperty, obj);
 }
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { scroll: null, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-let obj1 = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { alignItems: "center" };
-let obj2 = { gap: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
-const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx");
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = { scroll: null, contentContainer: null, tipsContainer: null, learnMore: null, header: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+createStyles.scroll = createStyles;
+createStyles.contentContainer = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+let obj1 = { marginHorizontal: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
+createStyles.tipsContainer = { gap: nativeDefault.space.PX_8 };
+createStyles.learnMore = { alignItems: "center" };
+let obj2 = { gap: nativeDefault.space.PX_8 };
+createStyles.header = { marginTop: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_4 };
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/more_tips_modal/MoreTipsModal.tsx");
 
-export default function MoreTipsModal(channelId) {
-  channelId = channelId.channelId;
-  let _require = channelId;
-  const warningId = channelId.warningId;
-  importDefault = warningId;
-  const senderId = channelId.senderId;
-  dependencyMap = senderId;
-  let MORE_TIPS = _require(563);
-  const items = [c6];
-  const stateFromStores = MORE_TIPS.useStateFromStores(items, () => _undefined5.getChannelSafetyWarning(c0, c1));
-  let React = stateFromStores;
+export default function MoreTipsModal(headerStyle) {
+  const channelId = headerStyle.channelId;
+  const warningId = headerStyle.warningId;
+  const senderId = headerStyle.senderId;
+  let obj = channelId(senderId[16]);
+  const items = [ChannelSafetyWarningsStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelSafetyWarningsStore.getChannelSafetyWarning(channelId, warningId));
   const items1 = [channelId, warningId, senderId, stateFromStores];
-  const effect = React.useEffect(() => {
-    let obj = _undefined(_undefined3[17]);
-    obj = { channelId: _undefined, warningId: _undefined2, senderId: _undefined3, warningType: null };
+  const effect = stateFromStores.useEffect(() => {
+    let obj = { channelId, warningId, senderId, warningType: null };
     let type;
-    if (_undefined4 != null) {
-      type = _undefined4.type;
+    if (stateFromStores != null) {
+      type = stateFromStores.type;
     }
-    obj[3] = type;
-    obj.trackViewedEvent(_undefined6.SAFETY_WARNING_MODAL_VIEWED, obj);
-    obj = { name: _undefined(tmp2[19]).MetricEvents.SAFETY_WARNING_MODAL_VIEW };
-    _undefined2(_undefined3[18]).increment(obj);
+    obj.warningType = type;
+    obj.trackViewedEvent(AnalyticEvents.SAFETY_WARNING_MODAL_VIEWED, obj);
+    obj = { name: MetricEvents.MetricEvents.SAFETY_WARNING_MODAL_VIEW };
+    MonitoringAgentDefault.increment(obj);
   }, items1);
-  _require = undefined;
-  importDefault = undefined;
-  dependencyMap = undefined;
-  React = undefined;
-  c4 = undefined;
-  c5 = undefined;
-  c6 = undefined;
-  c7 = undefined;
-  ({ modalKey: c0, channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 } = channelId);
-  MORE_TIPS = {
-    headerRight() {
-      const obj = {
-        onPress() {
-          return closure_1_1(closure_1_2[12]).popWithKey(closure_0);
-        },
-        source: _undefined2(_undefined3[13]),
-        iconSize: _undefined(_undefined3[14]).IconSizes.MEDIUM,
-        accessibilityLabel: null
-      };
-      const intl = _undefined(_undefined3[9]).intl;
-      obj[3] = intl.string(_undefined(_undefined3[9]).t.cpT0Cq);
-      return closure_1_8(_undefined(_undefined3[11]).HeaderActionButton, obj);
-    },
-    headerTitle() {
-      return null;
-    },
-    headerLeft() {
-      return null;
-    },
-    headerStyle: channelId.headerStyle,
-    render() {
-      return closure_1_8(closure_1_11, { channelId: c1, warningId: c2, senderId: c3, description: c4, safetyTips: c5, actionItems: c6, learnMore: c7 });
+  obj = { screens: null, initialRouteName: "MORE_TIPS", headerStatusBarHeight: warningId(senderId[15])().top };
+  closure_129_0 = undefined;
+  closure_129_1 = undefined;
+  closure_129_2 = undefined;
+  closure_129_3 = undefined;
+  closure_129_4 = undefined;
+  closure_129_5 = undefined;
+  closure_129_6 = undefined;
+  closure_129_7 = undefined;
+  ({ modalKey: closure_129_0, channelId: closure_129_1, warningId: closure_129_2, senderId: closure_129_3, description: closure_129_4, safetyTips: closure_129_5, actionItems: closure_129_6, learnMore: closure_129_7 } = headerStyle);
+  obj = {
+    MORE_TIPS: {
+      headerRight() {
+        const obj = {
+          onPress() {
+            return warningId(senderId[12]).popWithKey(channelId);
+          },
+          source: _modDef6992,
+          iconSize: native.IconSizes.MEDIUM,
+          accessibilityLabel: null
+        };
+        const intl = util.intl;
+        obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+        return React6(HeaderActionButton.HeaderActionButton, obj);
+      },
+      headerTitle() {
+        return null;
+      },
+      headerLeft() {
+        return null;
+      },
+      headerStyle: headerStyle.headerStyle,
+      render() {
+        return React6(MoreTipsModalScreen, { channelId: warningId, warningId: senderId, senderId: stateFromStores, description, safetyTips, actionItems, learnMore });
+      }
     }
   };
-  return callback(_require(7000).Navigator, { screens: { MORE_TIPS }, initialRouteName: "MORE_TIPS", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
+  obj.screens = obj;
+  return closure_8(channelId(senderId[20]).Navigator, obj);
 };

@@ -1,51 +1,53 @@
 // === Module 17799: InviteSelectActionSheet ===
 
 // Module 17799 (InviteSelectActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import context from "context" /* 5685 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import TableRadioGroup from "TableRadioGroup" /* 5685 */;
+import TableRadioRow from "TableRadioRow" /* 5688 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { content: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { content: null };
+createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
+createStyles.content = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_invite/native/action_sheet/InviteSelectActionSheet.tsx");
 
 export default function InviteSelectActionSheet(arg0) {
   ({ options, onChange: require } = arg0);
   ({ title, value } = arg0);
-  let obj = { contentStyles: callback().content, header: jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title }), children: null };
+  let obj = { contentStyles: closure_4().content, header: jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { title }), children: null };
   obj = {
     value,
     onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      require(arg0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((value) => jsx(TableRadioRow.TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
   };
-  obj[2] = jsx(context.TableRadioGroup, {
+  obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     value,
     onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      require(arg0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((value) => jsx(TableRadioRow.TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
   });
-  return jsx(Background.BottomSheet, {
+  return jsx(Sheet_BottomSheet.BottomSheet, {
     value,
     onChange(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_2[7]).hideActionSheet();
+      require(arg0);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     },
     hasIcons: false,
-    children: options.map((value) => callback2(callback(table[8]).TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
+    children: options.map((value) => jsx(TableRadioRow.TableRadioRow, { value: value.value, label: value.label, accessibilityHint: value.descriptiveLabel }, "" + value.value))
   });
 };

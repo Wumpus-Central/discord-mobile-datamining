@@ -1,16 +1,16 @@
-// === Module 4711: isIOSWithWebM ===
+// === Module 4711: WebViewWebmSupportTest ===
 
-// Module 4711 (isIOSWithWebM)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
+// Module 4711 (WebViewWebmSupportTest)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
+const DeviceUtils = tmp(4539);
 const ARM64_ = "ARM64_";
-const result = set.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
+const result = size.fileFinishedImporting("modules/messages/WebViewWebmSupportTest.native.tsx");
 
 export const isIOSWithWebM = function isIOSWithWebM() {
   if (obj.isIOS()) {
-    const str = DCDDeviceManager.getSocName();
+    const str = DeviceUtils.getSocName();
     let tmp4 = null == str;
     if (!tmp4) {
       tmp4 = !str.startsWith(ARM64_);
@@ -40,6 +40,5 @@ export const isIOSWithWebM = function isIOSWithWebM() {
   } else {
     return false;
   }
-  obj = set2;
-  const tmp = require;
+  obj = PlatformUtils;
 };

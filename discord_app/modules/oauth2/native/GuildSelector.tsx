@@ -1,59 +1,59 @@
-// === Module 9425: styles ===
+// === Module 9425: GuildSelector ===
 
-// Module 9425 (styles)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { Permissions } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9425 (GuildSelector)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { selectorGroup: { display: "flex", flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.xs };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
-const obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
-createCacheKey[3] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+require = fn;
+const View = fn(17).View;
+const Permissions = fn(1074).Permissions;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { selectorGroup: { display: "flex", flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
+createStyles.select = createStyles;
+createStyles.label = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+const obj1 = { color: nativeDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+createStyles.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
+createStyles = createStyles.createStyles(createStyles);
 const GuildSelector = "GuildSelector";
-let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-const result = require("set").fileFinishedImporting("modules/oauth2/native/GuildSelector.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/oauth2/native/GuildSelector.tsx");
 
 export default function GuildSelector(disabled) {
   ({ error, selectedGuildId } = disabled);
   const onGuildChange = disabled.onGuildChange;
   const guilds = disabled.guilds;
-  const tmp = createCacheKey();
+  const tmp = createStyles();
   const items = [guilds, onGuildChange, selectedGuildId];
-  const callback = React.useCallback(() => {
-    let obj = onGuildChange(closure_1_3[6]);
-    obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-    const intl = selectedGuildId(closure_1_3[9]).intl;
-    obj[0] = intl.string(selectedGuildId(closure_1_3[9]).t.oM4E1A);
-    const found = guilds.filter((permissions) => callback2(table[10]).has(permissions.permissions, constants.MANAGE_GUILD));
-    obj[1] = found.map((label) => ({ label: label.name, value: label.id }));
-    obj[2] = function onItemSelect(arg0) {
-      callback(arg0);
-      closure_1_1(closure_1_3[6]).hideActionSheet(closure_1_10);
+  const callback = noop.useCallback(() => {
+    const obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
+    const intl = util.intl;
+    obj.title = intl.string(util.t.oM4E1A);
+    const found = guilds.filter((permissions) => guilds(closure_1_3[10]).has(permissions.permissions, constants.MANAGE_GUILD));
+    obj.items = found.map((label) => ({ label: label.name, value: label.id }));
+    obj.onItemSelect = function onItemSelect(arg0) {
+      closure_1_1(arg0);
+      onGuildChange(dependencyMap[6]).hideActionSheet(GuildSelector);
     };
-    obj[3] = selectedGuildId;
-    obj.openLazy(selectedGuildId(closure_1_3[8])(closure_1_3[7], closure_1_3.paths), closure_1_10, obj);
+    obj.selectedItem = selectedGuildId;
+    obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), GuildSelector, obj);
   }, items);
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: null };
   obj = { variant: "eyebrow", color: "text-default", children: null };
   let intl = selectedGuildId(1114).intl;
-  obj[2] = intl.string(selectedGuildId(1114).t["1DXFFd"]);
-  const items1 = [callback(selectedGuildId(4556).Text, obj), , , ];
+  obj.children = intl.string(selectedGuildId(1114).t["1DXFFd"]);
+  const items1 = [closure_7(selectedGuildId(4556).Text, obj), , , ];
   let tmp6Result = null;
   if (null != error) {
     tmp6Result = null;
     if ("" !== error) {
-      obj = { style: null, children: null };
-      obj[0] = tmp.error;
-      obj[1] = error;
+      obj = { style: tmp.error, children: error };
       tmp6Result = tmp6(tmp7(1178).LegacyText, obj);
     }
   }
@@ -66,12 +66,12 @@ export default function GuildSelector(disabled) {
     const intl2 = tmp7(1114).intl;
     name = intl2.string(tmp7(1114).t.oM4E1A);
   }
-  items1[2] = callback(selectedGuildId(8593).FormRow, { label: name, disabled: disabled.disabled, trailing: callback(selectedGuildId(8593).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
+  items1[2] = closure_7(selectedGuildId(8593).FormRow, { label: name, disabled: disabled.disabled, trailing: closure_7(selectedGuildId(8593).FormRow.Arrow, {}), DEPRECATED_style: tmp.select, onPress: callback });
   const obj2 = { style: tmp.label, children: null };
   const intl3 = tmp7(1114).intl;
-  obj2[1] = intl3.format(selectedGuildId(1114).t.t9Jm9o, {});
-  items1[3] = callback(selectedGuildId(1178).LegacyText, obj2);
-  obj[1] = items1;
+  obj2.children = intl3.format(selectedGuildId(1114).t.t9Jm9o, {});
+  items1[3] = closure_7(selectedGuildId(1178).LegacyText, obj2);
+  obj.children = items1;
   return closure_8(View, obj);
 };
-export const useStyles = createCacheKey;
+export const useStyles = createStyles;

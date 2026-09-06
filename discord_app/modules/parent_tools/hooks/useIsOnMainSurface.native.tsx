@@ -1,14 +1,13 @@
-// === Module 16998: getIsOnMainSurface ===
+// === Module 16998: useIsOnMainSurface ===
 
-// Module 16998 (getIsOnMainSurface)
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+// Module 16998 (useIsOnMainSurface)
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function getIsOnMainSurface() {
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
@@ -50,24 +49,24 @@ function getIsOnMainSurface() {
   }
   return false;
 }
-let set = new Set(["tabs", "channel"]);
-const result = set.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
+const set = new Set(["tabs", "channel"]);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
 
 export const useIsOnMainSurface = function useIsOnMainSurface() {
-  [tmp2, require] = callback(React.useState(getIsOnMainSurface), 2);
-  const effect = React.useEffect(() => {
+  [tmp2, require] = _slicedToArray(noop.useState(getIsOnMainSurface), 2);
+  const effect = noop.useEffect(() => {
     function handleNavigationChange() {
-      return rootNavigationRef(closure_1_5());
+      return rootNavigationRef(getIsOnMainSurface());
     }
-    const rootNavigationRef = closure_1_0(closure_1_1[2]).getRootNavigationRef();
+    const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
     if (null != rootNavigationRef) {
-      rootNavigationRef(closure_1_5());
+      rootNavigationRef(getIsOnMainSurface());
       rootNavigationRef.addListener("state", handleNavigationChange);
       return () => {
         rootNavigationRef.removeListener("state", handleNavigationChange);
       };
     }
-    const obj = closure_1_0(closure_1_1[2]);
   }, []);
   return tmp2;
 };

@@ -1,11 +1,11 @@
 // === Module 17112: getChannelInfoSubtitle ===
 
 // Module 17112 (getChannelInfoSubtitle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getNicknameDefault from "getNickname" /* 4712 */;
+import util from "util" /* 1114 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");
 
 export default function getChannelInfoSubtitle(arg0, arg1, arg2) {
   let num = arg3;
@@ -15,21 +15,17 @@ export default function getChannelInfoSubtitle(arg0, arg1, arg2) {
   if (0 === arg2.length) {
     return null;
   } else if (1 === length) {
-    return getNicknameDefault.getName(arg0, arg1, arg2[0]);
+    return NicknameUtilsDefault.getName(arg0, arg1, arg2[0]);
   } else if (2 === length) {
-    const intl = getSystemLocale.intl;
-    let obj = { user1: null, user2: null };
-    obj[0] = getNicknameDefault.getName(arg0, arg1, arg2[0]);
-    const obj2 = getNicknameDefault;
-    obj[1] = getNicknameDefault.getName(arg0, arg1, arg2[1]);
-    return intl.formatToPlainString(getSystemLocale.t["lRD/ru"], obj);
+    const intl = util.intl;
+    let obj = { user1: NicknameUtilsDefault.getName(arg0, arg1, arg2[0]), user2: null };
+    obj.user2 = NicknameUtilsDefault.getName(arg0, arg1, arg2[1]);
+    return intl.formatToPlainString(util.t["lRD/ru"], obj);
   } else {
-    const intl2 = getSystemLocale.intl;
-    obj = { user1: null, user2: null, numPeople: null };
-    obj[0] = getNicknameDefault.getName(arg0, arg1, arg2[0]);
-    const obj6 = getNicknameDefault;
-    obj[1] = getNicknameDefault.getName(arg0, arg1, arg2[1]);
-    obj[2] = arg2.length - 2 + num;
-    return intl2.formatToPlainString(getSystemLocale.t.RFCI3S, obj);
+    const intl2 = util.intl;
+    obj = { user1: NicknameUtilsDefault.getName(arg0, arg1, arg2[0]), user2: null, numPeople: null };
+    obj.user2 = NicknameUtilsDefault.getName(arg0, arg1, arg2[1]);
+    obj.numPeople = arg2.length - 2 + num;
+    return intl2.formatToPlainString(util.t.RFCI3S, obj);
   }
 };

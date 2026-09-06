@@ -1,8 +1,8 @@
-// === Module 7731: DEFAULT_TIMEOUT_MS ===
+// === Module 7731: AdDataUtilsConstants ===
 
-// Module 7731 (DEFAULT_TIMEOUT_MS)
-import set from "set" /* 2 */;
+// Module 7731 (AdDataUtilsConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/ads/utils/AdDataUtilsConstants.tsx");
+const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtilsConstants.tsx");
 
 export const DEFAULT_TIMEOUT_MS = 5000;

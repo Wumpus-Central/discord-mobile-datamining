@@ -1,9 +1,9 @@
 // === Module 13031: getReactNativeSVGImageSource ===
 
 // Module 13031 (getReactNativeSVGImageSource)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");
+const result = size.fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");
 
 export default function getReactNativeSVGImageSource(arg0) {
   let first = arg0;

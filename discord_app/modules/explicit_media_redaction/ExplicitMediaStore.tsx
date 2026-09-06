@@ -1,39 +1,38 @@
-// === Module 7293: getFpMessageInfo ===
+// === Module 7293: ExplicitMediaStore ===
 
-// Module 7293 (getFpMessageInfo)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 7293 (ExplicitMediaStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
 
-const require = arg1;
-let closure_3 = 14 * setDefault.Millis.DAY;
+const require = fn;
+let closure_3 = 14 * DurationsDefault.Millis.DAY;
 let closure_4 = Object.freeze([]);
-let c5;
-let closure_6 = {};
-let closure_7 = {};
+let closure_5;
+const dependencyMap = {};
+const dependencyMap2 = {};
 const Store = initializeDefault.Store;
 class ExplicitMediaStore extends Store {
 }
 const prototype = ExplicitMediaStore.prototype;
-prototype["getFpMessageInfo"] = function getFpMessageInfo(closure_0) {
-  return dependencyMap[closure_0];
+prototype["getFpMessageInfo"] = function getFpMessageInfo(messageId) {
+  return dependencyMap[messageId];
 };
-prototype["getChannelFpInfo"] = function getChannelFpInfo(memo1) {
-  let tmp = dependencyMap2[memo1];
+prototype["getChannelFpInfo"] = function getChannelFpInfo(id) {
+  let tmp = dependencyMap2[id];
   if (tmp == null) {
     tmp = closure_4;
   }
   return tmp;
 };
-prototype["canSubmitFpReport"] = function canSubmitFpReport(closure_1) {
+prototype["canSubmitFpReport"] = function canSubmitFpReport(messageId) {
   let tmp2 = null != tmp;
   if (tmp2) {
     const reportSubmit = tmp.reportSubmit;
     let tmp3 = !reportSubmit;
     if (!reportSubmit) {
-      tmp3 = DISCORD_EPOCHDefault.age(tmp.messageId) < closure_3;
-      const obj = DISCORD_EPOCHDefault;
+      tmp3 = SnowflakeUtilsDefault.age(tmp.messageId) < closure_3;
     }
     tmp2 = tmp3;
   }
@@ -41,7 +40,7 @@ prototype["canSubmitFpReport"] = function canSubmitFpReport(closure_1) {
 };
 Object.defineProperty(prototype, "validContentScanVersion", {
   get: function validContentScanVersion() {
-    let num = c5;
+    let num = closure_5;
     if (obj.isSensitiveContentSelfHarmEnabled("ExplicitMediaStore.validContentScanVersion")) {
       if (num == null) {
         num = 5;
@@ -55,12 +54,12 @@ Object.defineProperty(prototype, "validContentScanVersion", {
       const _Math = Math;
       return Math.min(num2, 4);
     }
-    obj = require(7294) /* apexExperiment */;
+    obj = require("SensitiveContentSelfHarmExperiment");
   },
   set: undefined
 });
 ExplicitMediaStore.displayName = "FalsePositiveStore";
-const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
+const explicitMediaStore = new ExplicitMediaStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_6 = {};
     closure_7 = {};
@@ -103,6 +102,7 @@ const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
 
 export default explicitMediaStore;

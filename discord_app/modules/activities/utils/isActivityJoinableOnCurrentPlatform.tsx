@@ -1,13 +1,13 @@
 // === Module 13035: isActivityJoinableOnCurrentPlatform ===
 
 // Module 13035 (isActivityJoinableOnCurrentPlatform)
-import set from "set" /* 2 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import hasFlagDefault from "hasFlag" /* 7313 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ ActivityFlags: c3, ActivityGamePlatforms: c4, ActivityTypes: c5 } = ME);
-const result = set.fileFinishedImporting("modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx");
+({ ActivityFlags: c3, ActivityGamePlatforms: closure_4, ActivityTypes: hasOwnProperty } = Constants);
+const result = size.fileFinishedImporting("modules/activities/utils/isActivityJoinableOnCurrentPlatform.tsx");
 
 export default function isActivityJoinableOnCurrentPlatform(type) {
   let tmp = null == type;
@@ -57,7 +57,7 @@ export default function isActivityJoinableOnCurrentPlatform(type) {
       }
       return hasItem;
     }
-    obj = PlatformTypes;
+    obj = utils_PlatformUtils;
   } else {
     return false;
   }

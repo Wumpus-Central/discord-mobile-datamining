@@ -1,19 +1,19 @@
-// === Module 12407: useKeyboardOpenPaddingStyle ===
+// === Module 12407: FloatingChatInputContainer ===
 
-// Module 12407 (useKeyboardOpenPaddingStyle)
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import { Easing } from "module_4296" /* 4296 */;
+// Module 12407 (FloatingChatInputContainer)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
+import timingPresets from "timingPresets" /* 4564 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function useKeyboardOpenPaddingStyle() {
-  token = token(4262).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  token = token(4262).useToken(nativeDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
   let obj = token(4262);
-  const obj2 = React;
-  [tmp5, importDefault] = sharedValue(React.useState(() => {
+  const obj2 = noop;
+  [tmp5, importDefault] = sharedValue(noop.useState(() => {
     const KeyboardController = token(1625).KeyboardController;
     const stateResult = KeyboardController.state();
     let num;
@@ -25,17 +25,17 @@ function useKeyboardOpenPaddingStyle() {
     }
     return num > 0;
   }), 2);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const KeyboardEvents = token(1625).KeyboardEvents;
-    closure_0 = KeyboardEvents.addListener("keyboardWillShow", () => lib(true));
+    closure_0 = KeyboardEvents.addListener("keyboardWillShow", () => closure_1(true));
     const KeyboardEvents2 = token(1625).KeyboardEvents;
-    closure_1 = KeyboardEvents2.addListener("keyboardWillHide", () => lib(false));
+    closure_1 = KeyboardEvents2.addListener("keyboardWillHide", () => closure_1(false));
     return () => {
       closure_0.remove();
-      lib.remove();
+      closure_1.remove();
     };
   }, []);
-  const tmp4 = sharedValue(React.useState(() => {
+  const tmp4 = sharedValue(noop.useState(() => {
     const KeyboardController = token(1625).KeyboardController;
     const stateResult = KeyboardController.state();
     let num;
@@ -63,12 +63,12 @@ function useKeyboardOpenPaddingStyle() {
   sharedValue = tmpResult.useSharedValue(num);
   const items = [tmp5, token, sharedValue];
   const effect1 = obj2.useEffect(() => {
-    let obj = token(4561);
+    let obj = timing;
     let num = 0;
-    if (dependencyMap) {
+    if (closure_2) {
       num = token;
     }
-    obj = { duration: token(4564).timingStandardDuration, easing: closure_1_6 };
+    obj = { duration: timingPresets.timingStandardDuration, easing };
     const result = sharedValue.set(obj.withTiming(num, obj));
   }, items);
   tmpResult = tmp(4296);
@@ -77,18 +77,21 @@ function useKeyboardOpenPaddingStyle() {
   };
   fn.__closure = { paddingSV: sharedValue };
   fn.__workletHash = 5673482424037;
-  fn.__initData = closure_7;
+  fn.__initData = __initData;
   return tmpResult.useAnimatedStyle(fn);
 }
+const jsx = fn(21).jsx;
+const Easing = fn(4296).Easing;
 let closure_6 = Easing.bezier(0.2, 0, 0, 1);
-let closure_7 = { code: "function FloatingChatInputContainerTsx1(){const{paddingSV}=this.__closure;return{paddingBottom:paddingSV.get()};}" };
-let result = require("set").fileFinishedImporting("modules/chat_input/native/FloatingChatInputContainer.tsx");
+const __initData = { code: "function FloatingChatInputContainerTsx1(){const{paddingSV}=this.__closure;return{paddingBottom:paddingSV.get()};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/chat_input/native/FloatingChatInputContainer.tsx");
 
 export default function FloatingChatInputContainer(arg0) {
   ({ style, onLayout, children } = arg0);
-  style = [, ];
-  style[0] = style;
-  style[1] = useKeyboardOpenPaddingStyle();
-  return jsx(_modDef4296.View, { style, onLayout, children });
+  const obj = { style: null, onLayout, children };
+  const items = [style, useKeyboardOpenPaddingStyle()];
+  obj.style = items;
+  return jsx(ReanimatedRexportDefault.View, { style: null, onLayout, children });
 };
 export { useKeyboardOpenPaddingStyle };

@@ -1,13 +1,13 @@
 // === Module 16016: useGuildsRouteGuildId ===
 
 // Module 16016 (useGuildsRouteGuildId)
-import set from "set" /* 2 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
+import Link from "Link" /* 1484 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 
 export default function useGuildsRouteGuildId() {
-  const params = createStandardNavigationFactories.useRoute().params;
+  const params = Link.useRoute().params;
   let guildId;
   if (params != null) {
     guildId = params.guildId;
@@ -15,7 +15,7 @@ export default function useGuildsRouteGuildId() {
   return guildId;
 };
 export const useGuildsRouteGuildAndChannelId = function useGuildsRouteGuildAndChannelId() {
-  const route = createStandardNavigationFactories.useRoute();
+  const route = Link.useRoute();
   let guildId;
   if (route != null) {
     const params = route.params;

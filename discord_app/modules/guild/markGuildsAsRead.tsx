@@ -1,35 +1,35 @@
 // === Module 13960: markGuildsAsRead ===
 
 // Module 13960 (markGuildsAsRead)
-import applyDefault from "apply" /* 12 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_3 from "handleUpdate" /* 7100 */;
-import closure_4 from "rebuild" /* 5506 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "comparator" /* 2012 */;
-import closure_7 from "generateOldThreadCutoff" /* 4575 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4742 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7100 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5506 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
+const require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const ReadStateTypes = fn(4742).ReadStateTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
 export default function markGuildsAsRead(arr, source, onFinished) {
-  let obj = applyDefault;
-  const mapped = obj.flatMap(arr, (closure_0) => {
-    const selectableChannelIds = store.getSelectableChannelIds(closure_0);
-    const vocalChannelIds = store.getVocalChannelIds(closure_0);
+  let obj = _modDef12;
+  const mapped = obj.flatMap(arr, (guildId) => {
+    const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
+    const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
     const items = [...vocalChannelIds];
-    activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(closure_0);
+    activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(guildId);
     const iter = selectableChannelIds[Symbol.iterator]();
     while (iter !== undefined) {
       let obj = activeJoinedThreadsForGuild[iter.next()];
       if (obj == null) {
         obj = {};
       }
-      let tmp4 = obj;
       for (const key10027 in obj) {
-        let tmp5 = key10027;
         let arr = items.push(key10027);
         continue;
       }
@@ -45,38 +45,34 @@ export default function markGuildsAsRead(arr, source, onFinished) {
     }
     if (isForumLikeChannelResult) {
       const _Date = Date;
-      let fromTimestampResult = callback(table[8]).fromTimestamp(Date.now());
-      const obj3 = callback(table[8]);
+      let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(Date.now());
     } else {
-      fromTimestampResult = closure_7.lastMessageId(channelId);
+      fromTimestampResult = ReadStateStore.lastMessageId(channelId);
     }
-    obj[2] = fromTimestampResult;
+    obj.messageId = fromTimestampResult;
     return obj;
   });
-  const item = arr.forEach((id) => {
-    let obj = { channelId: closure_1_1(closure_1_2[8]).cast(id), readStateType: closure_1_9.GUILD_EVENT, messageId: closure_1_7.lastMessageId(id, closure_1_9.GUILD_EVENT) };
+  const item = arr.forEach((item) => {
+    let obj = { channelId: SnowflakeUtilsDefault.cast(item), readStateType: ReadStateTypes.GUILD_EVENT, messageId: ReadStateStore.lastMessageId(item, ReadStateTypes.GUILD_EVENT) };
     mapped.push(obj);
     obj = { channelId: null, readStateType: null, messageId: null };
-    const obj2 = closure_1_1(closure_1_2[8]);
-    obj[0] = closure_1_1(closure_1_2[8]).cast(id);
-    obj[1] = closure_1_9.GUILD_ONBOARDING_QUESTION;
-    obj[2] = closure_1_3.ackIdForGuild(id);
+    obj.channelId = SnowflakeUtilsDefault.cast(item);
+    obj.readStateType = ReadStateTypes.GUILD_ONBOARDING_QUESTION;
+    obj.messageId = GuildOnboardingPromptsStore.ackIdForGuild(item);
     mapped.push(obj);
   });
-  const flatMapResult = obj.flatMap(arr, (closure_0) => {
-    const selectableChannelIds = store.getSelectableChannelIds(closure_0);
-    const vocalChannelIds = store.getVocalChannelIds(closure_0);
+  const flatMapResult = obj.flatMap(arr, (guildId) => {
+    const selectableChannelIds = GuildChannelStore.getSelectableChannelIds(guildId);
+    const vocalChannelIds = GuildChannelStore.getVocalChannelIds(guildId);
     const items = [...vocalChannelIds];
-    activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(closure_0);
+    activeJoinedThreadsForGuild = activeJoinedThreadsForGuild.getActiveJoinedThreadsForGuild(guildId);
     const iter = selectableChannelIds[Symbol.iterator]();
     while (iter !== undefined) {
       let obj = activeJoinedThreadsForGuild[iter.next()];
       if (obj == null) {
         obj = {};
       }
-      let tmp4 = obj;
       for (const key10027 in obj) {
-        let tmp5 = key10027;
         let arr = items.push(key10027);
         continue;
       }
@@ -85,7 +81,6 @@ export default function markGuildsAsRead(arr, source, onFinished) {
     return items;
   });
   obj = { source, type: "guild" };
-  expandEventPropertiesDefault.track(AnalyticEvents.MARK_AS_READ, obj);
-  let obj2 = expandEventPropertiesDefault;
+  AnalyticsUtilsDefault.track(AnalyticEvents.MARK_AS_READ, obj);
   return mapped(7110).bulkAck(mapped, onFinished);
 };

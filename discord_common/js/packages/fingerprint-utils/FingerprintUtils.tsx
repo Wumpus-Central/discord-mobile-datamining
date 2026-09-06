@@ -1,9 +1,9 @@
-// === Module 1255: extractId ===
+// === Module 1255: FingerprintUtils ===
 
-// Module 1255 (extractId)
-import set from "set" /* 2 */;
+// Module 1255 (FingerprintUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");
 
 export const extractId = function extractId(fingerprint) {
   return fingerprint.split(".")[0];

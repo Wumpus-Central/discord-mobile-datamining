@@ -1,19 +1,19 @@
 // === Module 15136: SimpleMuxWrapper ===
 
 // Module 15136 (SimpleMuxWrapper)
-import set from "set" /* 2 */;
-import logger from "logger" /* 15137 */;
-import generateSessionId from "generateSessionId" /* 15138 */;
-import mapDiscordToMuxMetadata from "mapDiscordToMuxMetadata" /* 15139 */;
-import logger2 from "logger" /* 15141 */;
-import logger3 from "logger" /* 15142 */;
-import getVideoQoEMetricsConfig from "getVideoQoEMetricsConfig" /* 15143 */;
+import modules_SimpleMuxWrapper from "modules/SimpleMuxWrapper" /* 15137 */;
+import SessionManager from "SessionManager" /* 15138 */;
+import MuxIntegration from "MuxIntegration" /* 15139 */;
+import MobileMuxWrapper from "MobileMuxWrapper" /* 15141 */;
+import MobileCustomMuxIntegration from "MobileCustomMuxIntegration" /* 15142 */;
+import VideoQoEMetricsExperiment from "VideoQoEMetricsExperiment" /* 15143 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/video-qoe/index.tsx");
+const result = size.fileFinishedImporting("modules/video-qoe/index.tsx");
 
-export const SimpleMuxWrapper = logger.SimpleMuxWrapper;
-export const MobileMuxWrapper = logger2.MobileMuxWrapper;
-export const MuxIntegration = mapDiscordToMuxMetadata.MuxIntegration;
-export const MobileCustomMuxIntegration = logger3.MobileCustomMuxIntegration;
-export const SessionManager = generateSessionId.SessionManager;
-export const getVideoQoEMetricsConfig = getVideoQoEMetricsConfig.getVideoQoEMetricsConfig;
+export const SimpleMuxWrapper = modules_SimpleMuxWrapper.SimpleMuxWrapper;
+export const MobileMuxWrapper = MobileMuxWrapper.MobileMuxWrapper;
+export const MuxIntegration = MuxIntegration.MuxIntegration;
+export const MobileCustomMuxIntegration = MobileCustomMuxIntegration.MobileCustomMuxIntegration;
+export const SessionManager = SessionManager.SessionManager;
+export const getVideoQoEMetricsConfig = VideoQoEMetricsExperiment.getVideoQoEMetricsConfig;

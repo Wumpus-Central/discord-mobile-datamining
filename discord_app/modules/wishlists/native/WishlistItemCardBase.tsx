@@ -1,24 +1,21 @@
-// === Module 8773: SourceIcon ===
+// === Module 8773: WishlistItemCardBase ===
 
-// Module 8773 (SourceIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import map from "map" /* 4262 */;
-import ManaContext from "ManaContext" /* 4271 */;
+// Module 8773 (WishlistItemCardBase)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import useToken from "useToken" /* 4262 */;
+import native from "native" /* 4271 */;
 import useUserProfileColors from "useUserProfileColors" /* 8238 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function SourceIcon(toastText) {
   toastText = toastText.toastText;
   let obj = {
-    style: callback2().sourceIcon,
+    style: closure_8().sourceIcon,
     onPress() {
-      let obj = closure_1_1(closure_1_2[5]);
-      obj = { key: "WISHLIST_SOURCE_ICON", content: toastText };
+      const obj = { key: "WISHLIST_SOURCE_ICON", content: toastText };
       obj.open(obj);
     },
     accessible: false,
@@ -26,45 +23,48 @@ function SourceIcon(toastText) {
     importantForAccessibility: "no-hide-descendants",
     children: null
   };
-  obj = { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-  obj[5] = callback(toastText(8774).HeartIcon, obj);
-  return callback(closure_3, obj);
+  obj = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
+  obj.children = closure_5(toastText(8774).HeartIcon, obj);
+  return closure_5(closure_3, obj);
 }
-noopAll;
-({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let obj = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
-obj = { card: null, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
-obj = { borderWidth: 1, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-obj[0] = obj;
-createCacheKey = {};
+get_ActivityIndicator = fn(17);
+({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
+fn(4560);
+let obj = { card: null, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
+obj = { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj.card = obj;
+const createStyles = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.justifyContent = "center";
-createCacheKey.alignItems = "center";
-createCacheKey.zIndex = 2;
-createCacheKey.shadowOpacity = 0.5;
-createCacheKey.shadowRadius = 6;
-createCacheKey.elevation = 6;
-obj[1] = createCacheKey;
-obj[2] = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center" };
-obj[3] = { opacity: 0.5 };
+createStyles.justifyContent = "center";
+createStyles.alignItems = "center";
+createStyles.zIndex = 2;
+createStyles.shadowOpacity = 0.5;
+createStyles.shadowRadius = 6;
+createStyles.elevation = 6;
+obj.overlayContainer = createStyles;
+obj.previewWrap = { width: "100%", height: "100%", justifyContent: "center", alignItems: "center" };
+obj.dimmedPreview = { opacity: 0.5 };
 let obj2 = {};
-const merged1 = Object.assign(obj);
+const merged1 = Object.assign(rect);
 obj2.zIndex = 1;
-obj[4] = obj2;
+obj.sourceIcon = obj2;
 let obj3 = {};
-const merged2 = Object.assign(obj);
+const merged2 = Object.assign(rect);
 obj3.zIndex = 2;
 obj3.width = 32;
 obj3.height = 32;
-obj3.borderRadius = ThemesDefault.radii.round;
-obj3.backgroundColor = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+obj3.borderRadius = nativeDefault.radii.round;
+obj3.backgroundColor = nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
 obj3.alignItems = "center";
 obj3.justifyContent = "center";
-obj[5] = obj3;
-let closure_8 = createCacheKey.createStyles(obj);
+obj.lockBadge = obj3;
+let closure_8 = createStyles.createStyles(obj);
 let obj4 = { OWNED: "owned", LOCKED: "locked" };
-const result = require("set").fileFinishedImporting("modules/wishlists/native/WishlistItemCardBase.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/WishlistItemCardBase.tsx");
 
 export default function WishlistItemCardBase(username) {
   ({ onPress, size } = username);
@@ -73,27 +73,27 @@ export default function WishlistItemCardBase(username) {
     size = 170;
   }
   ({ overlay, accessibilityHidden } = username);
-  const tmp = callback2();
-  let obj = ManaContext;
+  const tmp = closure_8();
+  let obj = native;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme, secondaryColor } = themeContext);
-  obj1 = useUserProfileColors;
-  let obj2 = map;
-  let containerBackground = obj2.useToken(ThemesDefault.colors.BG_SURFACE_RAISED);
+  let obj1 = useUserProfileColors;
+  let obj2 = useToken;
+  let containerBackground = obj2.useToken(nativeDefault.colors.BG_SURFACE_RAISED);
   if (null != primaryColor) {
     containerBackground = obj1.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
   }
   const items = [tmp.card, { backgroundColor: containerBackground }, ];
   if (typeof size === "object") {
-    obj = { width: null, height: null };
-    ({ width: obj4[0], height: obj4[1] } = size);
+    size = { width: null, height: null };
+    ({ width: obj4.width, height: obj4.height } = size);
+    obj = size;
   } else {
-    obj = { width: null, aspectRatio: 1 };
-    obj[0] = size;
+    obj = { width: size, aspectRatio: 1 };
   }
   items[2] = obj;
   const intl = tmp2(1114).intl;
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.p3RmJF, { username: username.recipientName });
+  const formatToPlainStringResult = intl.formatToPlainString(util.t.p3RmJF, { username: username.recipientName });
   const items1 = [accessibilityLabel, , ];
   if (obj4.OWNED === overlay) {
     const intl3 = tmp2(1114).intl;
@@ -119,72 +119,57 @@ export default function WishlistItemCardBase(username) {
   if (dimmedPreview) {
     dimmedPreview = tmp.dimmedPreview;
   }
-  obj1 = { style: items2, "aria-hidden": true, children: renderPreview() };
+  obj = { style: items2, "aria-hidden": true, children: renderPreview() };
   items2[1] = dimmedPreview;
-  const items3 = [closure_5(closure_4, obj1), , , ];
+  const items3 = [hasOwnProperty(React4, obj), , , ];
   let tmp14Result = overlay === tmp7.OWNED;
   if (tmp14Result) {
-    obj2 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-    obj2[0] = tmp.overlayContainer;
-    const obj3 = { color: null, size: "custom", style: null };
-    obj3[0] = tmp5(576).colors.WHITE;
-    obj3[2] = { width: 40, height: 40 };
-    obj2[4] = tmp14(tmp2(8795).CheckmarkLargeBoldIcon, obj3);
-    tmp14Result = tmp14(tmp15, obj2);
+    obj1 = { style: tmp.overlayContainer, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+    obj2 = { color: tmp5(576).colors.WHITE, size: "custom", style: { width: 40, height: 40 } };
+    obj1.children = tmp14(tmp2(8795).CheckmarkLargeBoldIcon, obj2);
+    tmp14Result = tmp14(tmp15, obj1);
   }
   items3[1] = tmp14Result;
   tmp14Result = overlay === tmp7.LOCKED;
   if (tmp14Result) {
-    obj4 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-    obj4[0] = tmp.lockBadge;
-    const obj5 = { color: null, size: "custom", style: null };
-    obj5[0] = tmp5(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
-    obj5[2] = { width: 18, height: 18 };
-    obj4[4] = tmp14(tmp2(5095).LockIcon, obj5);
-    tmp14Result = tmp14(tmp15, obj4);
+    const obj3 = { style: tmp.lockBadge, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
+    obj4 = { color: tmp5(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, size: "custom", style: { width: 18, height: 18 } };
+    obj3.children = tmp14(tmp2(5095).LockIcon, obj4);
+    tmp14Result = tmp14(tmp15, obj3);
   }
   items3[2] = tmp14Result;
   if (tmp14Result1) {
-    const obj6 = { toastText: null };
-    obj6[0] = formatToPlainStringResult;
-    tmp14Result1 = tmp14(SourceIcon, obj6);
+    const obj5 = { toastText: formatToPlainStringResult };
+    tmp14Result1 = tmp14(SourceIcon, obj5);
   }
   items3[3] = tmp14Result1;
-  const tmp12Result = closure_7(closure_6, { children: items3 });
+  const tmp12Result = React5(timestampProducer, { children: items3 });
   if (null == onPress) {
-    const obj7 = { style: null, accessible: null, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-    obj7[0] = items;
-    obj7[1] = "" !== joined || undefined;
+    const obj6 = { style: items, accessible: "" !== joined || undefined, accessibilityLabel: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
     let tmp22;
     if ("" !== joined) {
       tmp22 = joined;
     }
-    obj7[2] = tmp22;
-    obj7[3] = accessibilityHidden;
+    obj6.accessibilityLabel = tmp22;
+    obj6.accessibilityElementsHidden = accessibilityHidden;
     let str3 = "auto";
     if (accessibilityHidden) {
       str3 = "no-hide-descendants";
     }
-    obj7[4] = str3;
-    obj7[5] = tmp12Result;
-    return tmp14(tmp15, obj7);
+    obj6.importantForAccessibility = str3;
+    obj6.children = tmp12Result;
+    return tmp14(tmp15, obj6);
   } else {
-    const obj8 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-    obj8[1] = joined;
-    obj8[2] = items;
-    obj8[3] = onPress;
-    obj8[4] = accessibilityHidden;
+    const obj7 = { accessibilityRole: "button", accessibilityLabel: joined, style: items, onPress, accessibilityElementsHidden: accessibilityHidden, importantForAccessibility: null, children: null };
     let str = "auto";
     if (accessibilityHidden) {
       str = "no-hide-descendants";
     }
-    obj8[5] = str;
-    obj8[6] = tmp12Result;
-    return tmp14(closure_3, obj8);
+    obj7.importantForAccessibility = str;
+    obj7.children = tmp12Result;
+    return tmp14(React3, obj7);
   }
-  const tmp12 = closure_7;
-  const tmp13 = closure_6;
 };
 export const DEFAULT_ITEM_SIZE = 170;
-export const CARD_TOP_RIGHT_OVERLAY_POSITION = obj;
+export const CARD_TOP_RIGHT_OVERLAY_POSITION = rect;
 export const WishlistItemCardOverlay = obj4;

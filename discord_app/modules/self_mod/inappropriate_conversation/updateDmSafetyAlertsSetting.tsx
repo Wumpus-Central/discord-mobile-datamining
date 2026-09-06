@@ -1,15 +1,16 @@
 // === Module 14835: updateDmSafetyAlertsSetting ===
 
 // Module 14835 (updateDmSafetyAlertsSetting)
-import set from "set" /* 2 */;
+import wrappers from "wrappers" /* 1218 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/updateDmSafetyAlertsSetting.tsx");
 
-export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(arg0) {
-  const _require = arg0;
-  const PreloadedUserSettingsActionCreators = _require(1940).PreloadedUserSettingsActionCreators;
-  return PreloadedUserSettingsActionCreators.updateAsync("privacy", (arg0) => {
-    const BoolValue = callback(closure_1_1[1]).BoolValue;
-    arg0.inappropriateConversationWarnings = BoolValue.create({ value: callback });
-  }, _require(1940).UserSettingsDelay.INFREQUENT_USER_ACTION);
+export const updateDmSafetyAlertsSetting = function updateDmSafetyAlertsSetting(value) {
+  _require = value;
+  const PreloadedUserSettingsActionCreators = require("UserSettingsProtoActionCreators").PreloadedUserSettingsActionCreators;
+  return PreloadedUserSettingsActionCreators.updateAsync("privacy", async (arg0) => {
+    const BoolValue = wrappers.BoolValue;
+    arg0.inappropriateConversationWarnings = BoolValue.create({ value });
+  }, require("UserSettingsProtoActionCreators").UserSettingsDelay.INFREQUENT_USER_ACTION);
 };

@@ -1,29 +1,34 @@
-// === Module 15700: ? ===
+// === Module 15700: DevToolsGuildPowerupsModal ===
 
-// Module 15700
-import setWarningBoostsDefault from "setWarningBoosts" /* 15701 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15700 (DevToolsGuildPowerupsModal)
+import HeaderShared from "HeaderShared" /* 7863 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10925 */;
+import DevToolsGuildPowerupsScreenDefault from "DevToolsGuildPowerupsScreen" /* 15701 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = importAllResult.memo(function DevToolsGuildPowerupsModal() {
-  let obj = _require(7000);
+require = fn;
+const jsx = fn(21).jsx;
+const NativeStackNavigator = fn(7913);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
+
+export default noop.memo(function DevToolsGuildPowerupsModal() {
+  let obj = require("Navigator");
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[4]).GenericHeaderTitle, { title: children.children });
+          return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(closure_1_2[4]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      let merged = Object.assign(callback);
-      let merged1 = Object.assign(closure_1_1(closure_1_2[5])());
+      let merged = Object.assign(closure_0);
+      let merged1 = Object.assign(getNavigationModalPresentationDefault());
       return obj;
     },
     children: null
@@ -33,16 +38,13 @@ const memoResult = importAllResult.memo(function DevToolsGuildPowerupsModal() {
     options() {
       return { title: "Guild Powerups" };
     },
-    component: setWarningBoostsDefault
+    component: DevToolsGuildPowerupsScreenDefault
   };
   ({ Navigator, Screen } = closure_4);
-  obj[1] = <Screen name="DevToolsGuildPowerups" options={function options() {
+  obj.children = <Screen name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={setWarningBoostsDefault} />;
+  }} component={DevToolsGuildPowerupsScreenDefault} />;
   return <Navigator name="DevToolsGuildPowerups" options={function options() {
     return { title: "Guild Powerups" };
-  }} component={setWarningBoostsDefault} />;
+  }} component={DevToolsGuildPowerupsScreenDefault} />;
 });
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildPowerupsModal.tsx");
-
-export default memoResult;

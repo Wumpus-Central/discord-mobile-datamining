@@ -1,21 +1,21 @@
-// === Module 16312: HomeDrawerFavoritesRowExpandedChildren ===
+// === Module 16312: HomeDrawerFavoritesRow ===
 
-// Module 16312 (HomeDrawerFavoritesRowExpandedChildren)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 16305 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16312 (HomeDrawerFavoritesRow)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16305 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
 
 export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavoritesRowExpandedChildren() {
   let obj = { title: null, subtitle: null };
   obj = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t.wMWyci);
-  obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
-  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  const intl = util.intl;
+  obj.children = intl.string(util.t.wMWyci);
+  obj.title = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
+  return jsx(HomeDrawerShared.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null });
 };

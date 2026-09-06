@@ -1,33 +1,34 @@
-// === Module 12371: useInvitesDisabledPermission ===
+// === Module 12371: GuildInvitesDisabledUtils ===
 
-// Module 12371 (useInvitesDisabledPermission)
-import closure_2 from "computeAlertSettings" /* 10080 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
+// Module 12371 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10080 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
-({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
+const require = fn;
+const Constants = fn(1074);
+({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
 
 export const useInvitesDisabledPermission = function useInvitesDisabledPermission(guild) {
-  const _require = guild;
-  const items = [closure_3];
+  _require = guild;
+  const items = [PermissionStore];
   const items1 = [guild];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
+      canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
     }
     return canResult;
   }, items1);
 };
 export const useInvitesDisabled = function useInvitesDisabled(features) {
-  const _require = features;
-  const items = [closure_2];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
+  _require = features;
+  const items = [GuildIncidentsStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let guildIncident = null;
     if (null != closure_0) {
-      guildIncident = closure_1_2.getGuildIncident(tmp.id);
+      guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
     }
     return guildIncident;
   });
@@ -54,23 +55,23 @@ export const useInvitesDisabled = function useInvitesDisabled(features) {
   return hasItem;
 };
 export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDisabledNotif(guild) {
-  let _require = guild;
-  const items = [closure_3];
+  _require = guild;
+  const items = [PermissionStore];
   const items1 = [guild];
-  let stateFromStores = _require(504).useStateFromStores(items, () => {
+  let stateFromStores = require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
+      canResult = PermissionStore.can(constants2.MANAGE_GUILD, tmp);
     }
     return canResult;
   }, items1);
-  _require = guild;
-  const obj = _require(504);
-  const items2 = [closure_2];
-  const stateFromStores1 = _require(504).useStateFromStores(items2, () => {
+  closure_129_0 = guild;
+  const obj = require("initialize");
+  const items2 = [GuildIncidentsStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
-      guildIncident = closure_1_2.getGuildIncident(tmp.id);
+      guildIncident = GuildIncidentsStore.getGuildIncident(tmp.id);
     }
     return guildIncident;
   });

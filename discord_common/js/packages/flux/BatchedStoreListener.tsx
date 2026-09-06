@@ -1,15 +1,16 @@
-// === Module 564: attach ===
+// === Module 564: BatchedStoreListener ===
 
-// Module 564 (attach)
-import set from "set" /* 2 */;
+// Module 564 (BatchedStoreListener)
+import flux_EmitterDefault from "flux/Emitter" /* 508 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("../discord_common/js/packages/flux/BatchedStoreListener.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/flux/BatchedStoreListener.tsx");
 class BatchedStoreListener {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.handleStoreChange = function handleStoreChange() {
-      obj = obj(closure_1_1[0]);
+      obj = flux_EmitterDefault;
       const changeSentinel = obj.getChangeSentinel();
       if (obj.storeVersionHandled !== changeSentinel) {
         obj2.changeCallback();
@@ -26,11 +27,11 @@ prototype["attach"] = function attach(arg0) {
   const self = this;
   closure_0 = arg0;
   const stores = this.stores;
-  const item = stores.forEach((addReactChangeListener) => {
+  const item = stores.forEach((addReactChangeListener, index) => {
     if (null == addReactChangeListener) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      error = new Error("" + closure_0 + " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded " + arg1 + " stores before error.");
+      const error = new Error("" + closure_0 + " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded " + index + " stores before error.");
       throw error;
     } else {
       const result = addReactChangeListener.addReactChangeListener(self.handleStoreChange);

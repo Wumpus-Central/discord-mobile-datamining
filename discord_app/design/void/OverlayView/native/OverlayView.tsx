@@ -1,38 +1,38 @@
-// === Module 4911: View ===
+// === Module 4911: OverlayView ===
 
-// Module 4911 (View)
-import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4946 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
+// Module 4911 (OverlayView)
+import _modDef4946 from "module_4946" /* 4946 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
+get_ActivityIndicator = fn(17);
 let View = get_ActivityIndicator.View;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
+const jsx = fn(21).jsx;
+let PlatformUtils = fn(1115);
 let FullWindowOverlay = View;
-if (set.isIOS()) {
-  FullWindowOverlay = require("enableScreens").FullWindowOverlay;
+if (PlatformUtils.isIOS()) {
+  FullWindowOverlay = fn(4912).FullWindowOverlay;
 }
-if (set.isIOS()) {
-  View = __INTERNAL_VIEW_CONFIGDefault;
+PlatformUtils = fn(1115);
+if (PlatformUtils.isIOS()) {
+  View = _modDef4946;
 }
-const result = set.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");
 
 export default FullWindowOverlay;
 export const TransitionGroupOverlayView = function TransitionGroupOverlayView(children) {
   children = children.children;
-  const merged = Object.assign(children, Object.create(null));
+  const merged = Object.assign(children, Object.assign({ children: 0 }));
   let tmp2 = null;
   if (Array.isArray(children)) {
     tmp2 = null;
     if (children.length > 0) {
-      let obj = { style: null, children: null };
-      obj[0] = StyleSheet.absoluteFill;
+      let obj = { style: StyleSheet.absoluteFill, children: null };
       obj = {};
       const merged1 = Object.assign(merged);
       obj.children = children;
-      obj[1] = <View />;
+      obj.children = <View />;
       tmp2 = <FullWindowOverlay />;
     }
   }

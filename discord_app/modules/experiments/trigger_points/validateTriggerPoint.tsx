@@ -1,14 +1,14 @@
-// === Module 4482: validateAllExperiments ===
+// === Module 4482: validateTriggerPoint ===
 
-// Module 4482 (validateAllExperiments)
-import getHashDefault from "getHash" /* 4476 */;
+// Module 4482 (validateTriggerPoint)
+import ExperimentStore from "ExperimentStore" /* 4476 */;
 
-getHashDefault;
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/validateTriggerPoint.tsx");
 
 export function validateAllExperiments() {
 
 }
-export function validateOneExperiment(id, label, commonTriggerPoint) {
+export function validateOneExperiment() {
 
 }

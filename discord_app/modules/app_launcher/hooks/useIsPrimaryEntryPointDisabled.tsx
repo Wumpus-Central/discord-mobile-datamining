@@ -2,22 +2,22 @@
 
 // Module 12143 (useIsPrimaryEntryPointDisabled)
 import getPlatformDefault from "getPlatform" /* 9410 */;
-import closure_3 from "createExecutable" /* 1918 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "sum" /* 1085 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
 
 export default function useIsPrimaryEntryPointDisabled(arg0) {
   ({ context, application, activityAction } = arg0);
   let channel;
-  channel = undefined;
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  const items = [closure_4];
-  const stateFromStores = channel(504).useStateFromStores(items, () => closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel));
+  const items = [PermissionStore];
+  const stateFromStores = channel(504).useStateFromStores(items, () => PermissionStore.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel));
   const obj = channel(504);
   let id;
   if (channel != null) {
@@ -68,7 +68,7 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   let disabled = flag;
   let reason;
   if (activityAction !== channel(12057).ActivityAction.LEAVE) {
-    const tmp10 = application instanceof closure_3 ? application.embeddedActivityConfig : application.embedded_activity_config;
+    const tmp10 = application instanceof ApplicationRecord ? application.embeddedActivityConfig : application.embedded_activity_config;
     getPlatformDefault;
     tmp2(1115);
     if (null != tmp10) {

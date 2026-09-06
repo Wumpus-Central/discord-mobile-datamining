@@ -1,25 +1,25 @@
 // === Module 14094: NewTag ===
 
 // Module 14094 (NewTag)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { HorizontalGradient } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
+require = fn;
+get_ActivityIndicator = fn(17);
 ({ View: c3, Platform } = get_ActivityIndicator);
-createCacheKey = { tagContainer: null, tagText: null };
-createCacheKey = { height: "auto", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, justifyContent: "center", alignItems: "center", paddingHorizontal: 4, marginBottom: 2, borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textTransform: "uppercase" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/NewTag/native/NewTag.tsx");
+const HorizontalGradient = fn(1074).HorizontalGradient;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { tagContainer: null, tagText: null };
+createStyles = { height: "auto", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, justifyContent: "center", alignItems: "center", paddingHorizontal: 4, marginBottom: 2, borderRadius: nativeDefault.radii.round };
+createStyles.tagContainer = createStyles;
+createStyles.tagText = { textTransform: "uppercase" };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/NewTag/native/NewTag.tsx");
 
 export default function NewTag(color) {
   ({ containerStyle, textStyle, variant } = color);
@@ -36,52 +36,45 @@ export default function NewTag(color) {
   }
   let sm = color.borderRadius;
   if (sm === undefined) {
-    sm = ThemesDefault.radii.sm;
+    sm = nativeDefault.radii.sm;
   }
   let colors = color.colors;
   if (colors === undefined) {
-    const items = [ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK];
+    const items = [nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, nativeDefault.unsafe_rawColors.PREMIUM_TIER_2_PINK];
     colors = items;
   }
-  const merged = Object.assign(color, Object.create(null));
-  const tmp6 = callback();
+  const merged = Object.assign(color, Object.assign({ containerStyle: 0, textStyle: 0, variant: 0, color: 0, gradient: 0, borderRadius: 0, colors: 0 }));
+  const tmp6 = closure_6();
   if (flag) {
     let obj = { style: null, start: null, end: null, colors: null, children: null };
-    obj = { borderRadius: null, marginLeft: null };
-    obj[0] = sm;
-    obj[1] = ThemesDefault.space.PX_4;
-    obj[0] = obj;
-    ({ START: obj3[1], END: obj3[2] } = HorizontalGradient);
-    obj[3] = colors;
-    obj1 = { style: null, children: null };
+    obj = { borderRadius: sm, marginLeft: nativeDefault.space.PX_4 };
+    obj.style = obj;
+    ({ START: obj3.start, END: obj3.end } = HorizontalGradient);
+    obj.colors = colors;
+    const obj1 = { style: null, children: null };
     const items1 = [tmp6.tagContainer, containerStyle];
-    obj1[0] = items1;
-    const obj2 = { variant: null, color: null };
-    obj2[0] = variant;
-    obj2[1] = str;
+    obj1.style = items1;
+    const obj2 = { variant, color: str };
     const merged1 = Object.assign(merged);
     const items2 = [tmp6.tagText, textStyle];
     obj2.style = items2;
-    const intl2 = getSystemLocale.intl;
-    obj2.children = intl2.string(getSystemLocale.t.y2b7CA);
-    obj1[1] = tmp7(Text.Text, obj2);
-    obj[4] = tmp7(closure_3, obj1);
+    const intl2 = util.intl;
+    obj2.children = intl2.string(util.t.y2b7CA);
+    obj1.children = tmp7(Text_Text.Text, obj2);
+    obj.children = tmp7(React3, obj1);
     let tmp7Result = tmp7(LinearGradientDefault, obj);
-    const tmp17 = LinearGradientDefault;
   } else {
     obj = { style: null, children: null };
     const items3 = [tmp6.tagContainer, containerStyle];
-    obj[0] = items3;
-    const obj3 = { variant: null, color: null };
-    obj3[0] = variant;
-    obj3[1] = str;
+    obj.style = items3;
+    const obj3 = { variant, color: str };
     const merged2 = Object.assign(merged);
     const items4 = [tmp6.tagText, textStyle];
     obj3.style = items4;
-    const intl = getSystemLocale.intl;
-    obj3.children = intl.string(getSystemLocale.t.y2b7CA);
-    obj[1] = tmp7(Text.Text, obj3);
-    tmp7Result = tmp7(closure_3, obj);
+    const intl = util.intl;
+    obj3.children = intl.string(util.t.y2b7CA);
+    obj.children = tmp7(Text_Text.Text, obj3);
+    tmp7Result = tmp7(React3, obj);
   }
   return tmp7Result;
 };

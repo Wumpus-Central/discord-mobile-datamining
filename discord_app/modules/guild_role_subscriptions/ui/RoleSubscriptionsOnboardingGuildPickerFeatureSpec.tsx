@@ -1,37 +1,36 @@
-// === Module 13891: ? ===
+// === Module 13891: RoleSubscriptionsOnboardingGuildPickerFeatureSpec ===
 
-// Module 13891
+// Module 13891 (RoleSubscriptionsOnboardingGuildPickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "getHash" /* 4476 */;
-import { isGuildOwner } from "GuildNSFWContentLevel" /* 1975 */;
+import util from "util" /* 1114 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
+require = fn;
+const isGuildOwner = fn(1975).isGuildOwner;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
 
 export default {
   title() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["KzCF/6"]);
+    const intl = util.intl;
+    return intl.string(util.t["KzCF/6"]);
   },
   description() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xMW8FH);
+    const intl = util.intl;
+    return intl.string(util.t.xMW8FH);
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => (id) => {
-      let result = callback2(id, arg1);
+    const items = [ExperimentStore];
+    return initialize.useStateFromStores(items, () => (guild, arg1) => {
+      let result = closure_1_3(guild, arg1);
       if (result) {
-        let obj = callback(7260);
-        obj = { guild: null, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-        obj[0] = id;
-        obj[3] = callback(7261).isUserInCreatorMonetizationEligibleCountry();
-        const obj3 = callback(7261);
-        obj[4] = callback(4192).shouldRestrictUpdatingCreatorMonetizationSettings(id.id);
+        closure_1_0(7260);
+        const obj = { guild, isOwner: true, canManageGuildRoleSubscriptions: true, isUserInCreatorMonetizationEligibleCountry: closure_1_0(7261).isUserInCreatorMonetizationEligibleCountry(), shouldRestrictUpdatingRoleSubscriptionSettings: null };
+        const obj3 = closure_1_0(7261);
+        obj.shouldRestrictUpdatingRoleSubscriptionSettings = closure_1_0(4192).shouldRestrictUpdatingCreatorMonetizationSettings(guild.id);
         result = obj.canSeeGuildRoleSubscriptionSettings(obj);
-        const obj4 = callback(4192);
+        const obj4 = closure_1_0(4192);
       }
       return result;
     }, [], initialize.statesWillNeverBeEqual);

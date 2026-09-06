@@ -1,19 +1,20 @@
 // === Module 5545: useCurrentUserGuildJoinRequest ===
 
 // Module 5545 (useCurrentUserGuildJoinRequest)
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4382 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4382 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx");
 
 export const useCurrentUserGuildJoinRequest = function useCurrentUserGuildJoinRequest(guildId) {
-  const _require = guildId;
-  const items = [closure_2];
+  _require = guildId;
+  const items = [UserGuildJoinRequestStore];
   const items1 = [guildId];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {
-      request = closure_1_2.getRequest(tmp);
+      request = UserGuildJoinRequestStore.getRequest(tmp);
     }
     return request;
   }, items1);

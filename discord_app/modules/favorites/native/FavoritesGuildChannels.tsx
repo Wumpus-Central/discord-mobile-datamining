@@ -1,31 +1,30 @@
 // === Module 16271: FavoritesGuildChannels ===
 
 // Module 16271 (FavoritesGuildChannels)
-import noopAll from "noop" /* 19 */;
-import getFontScale from "getFontScale" /* 4982 */;
+import useFontScale from "useFontScale" /* 4982 */;
 import useScaledRowHeightDefault from "useScaledRowHeight" /* 7049 */;
-import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 16051 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16135 */;
-import PX_8Default from "PX_8" /* 16201 */;
-import getMissingFavoriteThreadIds from "getMissingFavoriteThreadIds" /* 16272 */;
-import FavoritesGuildSuggestionsLoaderInnerDefault from "FavoritesGuildSuggestionsLoaderInner" /* 16273 */;
-import EmptyBodyDefault from "EmptyBody" /* 16278 */;
-import { useFavoritesGuildSuggestionCount as closure_3 } from "items" /* 16202 */;
-import jsxProd from "jsxProd" /* 21 */;
+import FavoritesGuildChannelList from "FavoritesGuildChannelList" /* 16272 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
+const ChannelListPanelBackdropDefault = tmp2(16051);
+const ChannelListStickyHeaderDefault = tmp2(16135);
+const FavoritesGuildSuggestedChannelsDefault = tmp2(16201);
+const FavoritesGuildSuggestionsLoaderDefault = tmp2(16273);
+const FavoritesGuildSidebarHeaderDefault = tmp2(16278);
+require = fn;
+let closure_3 = fn(16202).useFavoritesGuildSuggestionCount;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
 
 export default function FavoritesGuildChannels(arg0) {
-  const tmp = callback();
+  const tmp = closure_3();
   let tmp2 = importDefault;
-  let obj = dependencyMap;
-  obj1 = getFontScale;
+  let obj1 = useFontScale;
   const fontScale = obj1.useFontScale();
-  let obj2 = getMissingFavoriteThreadIds;
-  obj = { withSuggestionsNotice: tmp > 0 };
+  let obj2 = FavoritesGuildChannelList;
+  let obj = { withSuggestionsNotice: tmp > 0 };
   const favoritesGuildChannelList = obj2.useFavoritesGuildChannelList(obj);
   ({ guildChannels, shouldShowEmptyState, hasNoChannels } = favoritesGuildChannelList);
   const tmp3 = useScaledRowHeightDefault();
@@ -33,24 +32,23 @@ export default function FavoritesGuildChannels(arg0) {
     return null;
   } else {
     let tmp2Result = arg0;
-    const items = [callback2(FavoritesGuildSuggestionsLoaderInnerDefault, {}), ];
+    const items = [React4(FavoritesGuildSuggestionsLoaderDefault, {}), ];
     if (hasNoChannels) {
       obj = { style: null, contentInset: null, children: null };
-      ({ style: obj8[0], contentInset: obj8[1] } = tmp2Result);
+      ({ style: obj8.style, contentInset: obj8.contentInset } = tmp2Result);
       tmp2Result = ChannelListPanelBackdropDefault;
-      obj1 = { guild: null, showExtraButtons: false, canOpenGuildActionSheet: false };
-      obj1[0] = tmp2Result.guild;
+      obj1 = { guild: tmp2Result.guild, showExtraButtons: false, canOpenGuildActionSheet: false };
       const items1 = [tmp10(ChannelListStickyHeaderDefault, obj1), , ];
-      tmp2Result = PX_8Default;
+      tmp2Result = FavoritesGuildSuggestedChannelsDefault;
       items1[1] = tmp10(tmp2Result, {});
       let tmp10Result = null;
       if (shouldShowEmptyState) {
-        tmp2 = EmptyBodyDefault;
+        tmp2 = FavoritesGuildSidebarHeaderDefault;
         obj = {};
         tmp10Result = tmp10(tmp2, obj);
       }
       items1[2] = tmp10Result;
-      obj[2] = items1;
+      obj.children = items1;
       tmp10Result = tmp8(tmp2Result, obj);
     } else {
       obj2 = {};
@@ -63,8 +61,7 @@ export default function FavoritesGuildChannels(arg0) {
     }
     const obj3 = { children: null };
     items[1] = tmp10Result;
-    obj3[0] = items;
-    closure_5(closure_6, obj3);
-    const tmp9 = closure_6;
+    obj3.children = items;
+    hasOwnProperty(timestampProducer, obj3);
   }
 };

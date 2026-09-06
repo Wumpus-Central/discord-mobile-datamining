@@ -1,22 +1,25 @@
-// === Module 15317: useMessagePreview ===
+// === Module 15317: useMessagePreviews ===
 
-// Module 15317 (useMessagePreview)
+// Module 15317 (useMessagePreviews)
+import UserSettings from "UserSettings" /* 1935 */;
 import useIsNsfwGatedDefault from "useIsNsfwGated" /* 7884 */;
 import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 15318 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_4 from "generateOldThreadCutoff" /* 4575 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
 
-export default function useMessagePreview(guild_id) {
+export default function useMessagePreview(guild_id, arg1) {
+  _require = guild_id;
   ({ unread, disabled } = arg1);
   guild_id = guild_id.guild_id;
-  const items = [closure_3];
-  const stateFromStores = guild_id(504).useStateFromStores(items, () => {
-    const guilds = closure_1_3.settings.guilds;
+  const items = [UserSettingsProtoStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const guilds = UserSettingsProtoStore.settings.guilds;
     let tmp2 = null;
-    if (null != guild_id) {
+    if (null != closure_0) {
       let messagePreviews;
       if (guilds != null) {
         if (guilds.guilds[tmp] != null) {
@@ -29,21 +32,21 @@ export default function useMessagePreview(guild_id) {
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = UserSettings.ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = UserSettings.MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
-  const obj = guild_id(504);
-  const items1 = [closure_4];
-  const stateFromStores1 = guild_id(504).useStateFromStores(items1, () => {
-    let hasUnreadResult = null != guild_id;
+  const obj = require("initialize");
+  const items1 = [ReadStateStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    let hasUnreadResult = null != closure_0;
     if (hasUnreadResult) {
-      hasUnreadResult = closure_1_4.hasUnread(tmp.id);
+      hasUnreadResult = ReadStateStore.hasUnread(tmp.id);
     }
     return hasUnreadResult;
   });
@@ -66,12 +69,12 @@ export default function useMessagePreview(guild_id) {
   return useLatestChannelMessageDefault(guild_id, disabled);
 };
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  return _require(504).useStateFromStores(items, () => {
-    const guilds = closure_1_3.settings.guilds;
+  _require = arg0;
+  const items = [UserSettingsProtoStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const guilds = UserSettingsProtoStore.settings.guilds;
     let tmp2 = null;
-    if (null != guild_id) {
+    if (null != closure_0) {
       let messagePreviews;
       if (guilds != null) {
         if (guilds.guilds[tmp] != null) {
@@ -84,13 +87,13 @@ export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) 
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = UserSettings.ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = UserSettings.MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
 };

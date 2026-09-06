@@ -1,23 +1,23 @@
-// === Module 15137: logger ===
+// === Module 15137: modules/SimpleMuxWrapper ===
 
-// Module 15137 (logger)
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import generateSessionId from "generateSessionId" /* 15138 */;
-import mapDiscordToMuxMetadata from "mapDiscordToMuxMetadata" /* 15139 */;
+// Module 15137 (modules/SimpleMuxWrapper)
+import logger_Logger from "logger/Logger" /* 4 */;
+import SessionManager2 from "SessionManager" /* 15138 */;
+import MuxIntegration2 from "MuxIntegration" /* 15139 */;
 import UDefault from "U" /* 15140 */;
+import size from "module_2" /* 2 */;
 
-const logger = new log.Logger("SimpleMuxWrapper");
-const result = set.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
+const logger = new logger_Logger.Logger("SimpleMuxWrapper");
+const result = size.fileFinishedImporting("modules/video-qoe/SimpleMuxWrapper.tsx");
 class SimpleMuxWrapper {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.config = global;
-    obj.videoElement = global.videoElement;
-    SessionManager = require("generateSessionId").SessionManager;
-    obj.sessionId = SessionManager.generateSessionId();
-    obj.hlsInstance = global.hlsInstance;
-    return obj;
+    merged = Object.assign({ isMonitoring: false });
+    merged.config = global;
+    merged.videoElement = global.videoElement;
+    SessionManager = closure_0(closure_2[1]).SessionManager;
+    merged.sessionId = SessionManager.generateSessionId();
+    merged.hlsInstance = global.hlsInstance;
+    return merged;
   }
 }
 const prototype = SimpleMuxWrapper.prototype;
@@ -28,8 +28,8 @@ prototype["initialize"] = function initialize() {
     flag = false;
   }
   const obj = { debug: flag, disableCookies: true, respectDoNotTrack: true, data: null };
-  const MuxIntegration = mapDiscordToMuxMetadata.MuxIntegration;
-  obj[3] = MuxIntegration.mapDiscordToMuxMetadata(self.config, self.sessionId);
+  const MuxIntegration = MuxIntegration2.MuxIntegration;
+  obj.data = MuxIntegration.mapDiscordToMuxMetadata(self.config, self.sessionId);
   if (null != self.hlsInstance) {
     obj.hlsjs = self.hlsInstance;
     obj.Hls = self.hlsInstance.constructor;

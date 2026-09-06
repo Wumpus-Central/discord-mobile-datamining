@@ -1,11 +1,11 @@
-// === Module 8669: uid ===
+// === Module 8669: UID ===
 
-// Module 8669 (uid)
-import set from "set" /* 2 */;
+// Module 8669 (UID)
 import uniqueIdDefault from "uniqueId" /* 4764 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
+const result = size.fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {
   let str = arg0;
@@ -15,8 +15,8 @@ export const uid = function uid() {
   return uniqueIdDefault(str);
 };
 export const useUID = function useUID() {
-  return useInitialValueDefault(() => callback(table[0])("uid_"));
+  return useInitialValueDefault(() => uniqueIdDefault("uid_"));
 };
 export const UID = function UID(children) {
-  return children.children(useInitialValueDefault(() => callback(table[0])("uid_")));
+  return children.children(useInitialValueDefault(() => uniqueIdDefault("uid_")));
 };

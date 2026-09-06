@@ -1,18 +1,17 @@
-// === Module 10341: handleJoinGuild ===
+// === Module 10341: guild/GuildUtils ===
 
-// Module 10341 (handleJoinGuild)
-import set from "set" /* 2 */;
-import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 5520 */;
+// Module 10341 (guild/GuildUtils)
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
+let result = size.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
-export const handleJoinGuild = function handleJoinGuild(closure_0) {
-  importDefault = closure_0;
-  if (null != closure_0) {
-    const obj = showTooManyUserGuildsAlertDefault;
-    showTooManyUserGuildsAlertDefault.joinGuild(closure_0).then(() => {
-      const result = callback(closure_1_1[0]).transitionToGuildSync(callback);
+export const handleJoinGuild = function handleJoinGuild(guildId) {
+  importDefault = guildId;
+  if (null != guildId) {
+    GuildActionCreatorsDefault.joinGuild(guildId).then(() => {
+      const result = GuildActionCreatorsDefault.transitionToGuildSync(closure_0);
     });
-    const joinGuildResult = showTooManyUserGuildsAlertDefault.joinGuild(closure_0);
+    const joinGuildResult = GuildActionCreatorsDefault.joinGuild(guildId);
   }
 };

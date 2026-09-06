@@ -1,18 +1,17 @@
 // === Module 9532: showActivitiesInvalidPermissionsAlert ===
 
 // Module 9532 (showActivitiesInvalidPermissionsAlert)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault from "set" /* 4904 */;
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
+const result = size.fileFinishedImporting("modules/voice_calls/showActivitiesInvalidPermissionsAlert.tsx");
 
 export const showActivitiesInvalidPermissionsAlert = function showActivitiesInvalidPermissionsAlert() {
-  let obj = setDefault;
-  obj = { title: null, body: null, hideActionSheet: false };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.otsg2R);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["/Yx5qX"]);
+  const obj = { title: null, body: null, hideActionSheet: false };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.otsg2R);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t["/Yx5qX"]);
   obj.show(obj);
 };

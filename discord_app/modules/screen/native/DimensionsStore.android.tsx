@@ -1,36 +1,34 @@
-// === Module 1478: getDimensionsStoreStateForEntry ===
+// === Module 1478: DimensionsStore ===
 
-// Module 1478 (getDimensionsStoreStateForEntry)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
+// Module 1478 (DimensionsStore)
+import _mod17 from "module_17" /* 17 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import useSafeAreaInsets from "useSafeAreaInsets" /* 1611 */;
-import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1624 */;
-import readWindowSizeForAppEntry from "readWindowSizeForAppEntry" /* 1876 */;
-import keys from "keys" /* 560 */;
-import importDefaultResult from "subscribeToKeyboardUIStore" /* 1479 */;
-import importDefaultResult1 from "module_1612" /* 1612 */;
+import AppEntryKey from "AppEntryKey" /* 1624 */;
+import readAppEntryWindowMetrics from "readAppEntryWindowMetrics" /* 1876 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
+import module_560 from "module_560" /* 560 */;
+import SafeAreaStore from "SafeAreaStore" /* 1612 */;
+import size from "module_2" /* 2 */;
 
-function getDimensionsStoreStateForEntry(appEntryKey) {
-  const size = {};
-  obj = Dimensions;
+function getDimensionsStoreStateForEntry(appEntryKey, arg1) {
+  let size = {};
+  let obj = Dimensions;
   const merged = Object.assign(Dimensions.get("window"));
-  obj1 = readWindowSizeForAppEntry;
-  const merged1 = Object.assign(obj1.readWindowSizeForAppEntry(appEntryKey));
-  let obj2 = readWindowSizeForAppEntry;
-  let size2 = obj2.readScreenSizeForAppEntry(appEntryKey);
+  const merged1 = Object.assign(readAppEntryWindowMetrics.readWindowSizeForAppEntry(appEntryKey));
+  let size2 = readAppEntryWindowMetrics.readScreenSizeForAppEntry(appEntryKey);
   if (size2 == null) {
     size2 = obj.get("screen");
   }
-  obj2 = arg1;
+  obj = arg1;
   const fontScale = size.fontScale;
   let windowDimensions;
   if (arg1 != null) {
-    windowDimensions = obj2.windowDimensions;
+    windowDimensions = obj.windowDimensions;
   }
   let prop;
-  if (obj2 != null) {
-    prop = obj2.windowDimensionsIgnoringKeyboard;
+  if (obj != null) {
+    prop = obj.windowDimensionsIgnoringKeyboard;
   }
   let width = size.width;
   ({ width: width2, height } = size2);
@@ -52,10 +50,8 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
     width = windowDimensions.width;
   }
   if (width !== bound) {
-    obj = { width: null, height: null };
-    obj[0] = bound;
-    obj[1] = bound1;
-    windowDimensions = obj;
+    size = { width: bound, height: bound1 };
+    windowDimensions = size;
   }
   const width3 = size.width;
   ({ width: width4, height: height2 } = size2);
@@ -73,69 +69,63 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
     width1 = prop.width;
   }
   if (width1 !== bound2) {
-    obj1 = { width: null, height: null };
-    obj1[0] = bound2;
-    obj1[1] = bound3;
-    prop = obj1;
+    const size1 = { width: bound2, height: bound3 };
+    prop = size1;
   }
   let windowDimensions1;
-  if (obj2 != null) {
-    windowDimensions1 = obj2.windowDimensions;
+  if (obj != null) {
+    windowDimensions1 = obj.windowDimensions;
   }
   if (windowDimensions1 === windowDimensions) {
-    if (obj2.windowDimensionsIgnoringKeyboard === prop) {
-      return obj2;
+    if (obj.windowDimensionsIgnoringKeyboard === prop) {
+      return obj;
     }
   }
-  obj2 = { fontScale, screenIsLandscape: tmp5, windowDimensions, windowDimensionsIgnoringKeyboard: prop };
+  obj = { fontScale, screenIsLandscape: tmp5, windowDimensions, windowDimensionsIgnoringKeyboard: prop };
 }
 function getDimensionsStoreState(arg0) {
   let tmp = arg0;
-  obj = {};
+  byAppEntry = {};
   let flag = null != arg0;
-  const iter = APP_ENTRY_KEYS.APP_ENTRY_KEYS[Symbol.iterator]();
+  const iter = AppEntryKey.APP_ENTRY_KEYS[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let tmp5;
     let tmp4 = getDimensionsStoreStateForEntry;
     if (tmp != null) {
-      let tmp6 = nextResult;
       tmp5 = tmp.byAppEntry[tmp3];
     }
     let tmp4Result = tmp4(nextResult, tmp5);
-    let tmp9 = nextResult;
-    obj[tmp3] = tmp4Result;
+    byAppEntry[tmp3] = tmp4Result;
     let tmp10;
     let tmp8 = tmp4Result;
     if (tmp != null) {
-      let tmp11 = nextResult;
       tmp10 = tmp.byAppEntry[tmp3];
     }
-    let tmp12 = tmp4Result;
     if (tmp10 !== tmp8) {
       flag = false;
     }
     continue;
   }
   if (!flag) {
-    obj = { byAppEntry: null };
-    obj[0] = obj;
-    tmp = obj;
+    byAppEntry = { byAppEntry: null };
+    byAppEntry.byAppEntry = byAppEntry;
+    tmp = byAppEntry;
   }
   return tmp;
 }
-const Dimensions = get_ActivityIndicator.Dimensions;
-let obj = keys.create(() => getDimensionsStoreState(undefined));
-const subscription = importDefaultResult1.subscribe(() => {
-  batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
+const Dimensions = _mod17.Dimensions;
+let byAppEntry = module_560.create(() => getDimensionsStoreState(undefined));
+const subscription = SafeAreaStore.subscribe(() => {
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });
-importDefaultResult(() => {
-  batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
+subscribeToKeyboardUIStore(() => {
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });
 const listener = Dimensions.addEventListener("change", () => {
-  batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => closure_1_4(arg0)));
 });
-const result = set.fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
+const result = size.fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
 
-export default obj;
+export default byAppEntry;

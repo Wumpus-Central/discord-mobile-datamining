@@ -1,110 +1,90 @@
-// === Module 16204: _handleFavoritesGuildAddSuggestedChannel ===
+// === Module 16204: handleFavoritesGuildAddSuggestedChannel ===
 
-// Module 16204 (_handleFavoritesGuildAddSuggestedChannel)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 16204 (handleFavoritesGuildAddSuggestedChannel)
+import formatResults from "formatResults" /* 10981 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _handleFavoritesGuildAddSuggestedChannel() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+require = fn;
+let closure_3 = async function _handleFavoritesGuildAddSuggestedChannel(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          c3 = 1;
+          c4 = 1;
+          let obj1 = { value: formatResults.getOrResolveChannelIdFromDestinationId(closure_0), done: false };
+          return obj1;
         }
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp5;
-              dependencyMap = tmp2;
-              let callback;
-              c3 = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = callback(closure_1_1[1]).getOrResolveChannelIdFromDestinationId(callback);
-              return obj1;
-            }
-          } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                callback = arg1;
-                if (null != callback) {
-                  obj1 = callback(10223);
-                  const obj3 = { channelIds: null, categoryName: null, source: "suggestions" };
-                  const items = [callback];
-                  obj3[0] = items;
-                  const intl = callback(1114).intl;
-                  obj3[1] = intl.string(callback(1114).t.OGiMXJ);
-                  c3 = 2;
-                  c4 = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = obj1.addFavoriteChannelsToCategory(obj3);
-                  return obj4;
-                }
-              }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
+        if (1 === tmp5) {
+          if (arg0 === 1) {
             c4 = 3;
-            return { value: "HermesInternal", done: null };
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            closure_129_0 = value;
+            if (null != closure_129_0) {
+              obj1 = closure_130_0(closure_130_1[2]);
+              const obj3 = { channelIds: null, categoryName: null, source: "suggestions" };
+              const items = [closure_129_0];
+              obj3.channelIds = items;
+              const intl = closure_130_0(closure_130_1[3]).intl;
+              obj3.categoryName = intl.string(closure_130_0(closure_130_1[3]).t.OGiMXJ);
+              c3 = 2;
+              c4 = 1;
+              const obj4 = { value: obj1.addFavoriteChannelsToCategory(obj3), done: false };
+              return obj4;
+            }
           }
-        } catch (tmp18) {
-          c4 = tmp;
-          throw tmp18;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
         }
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp18) {
+      c4 = tmp;
+      throw tmp18;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx");
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx");
 
 export default function handleFavoritesGuildAddSuggestedChannel() {
   const self = this;
-  const apply = _handleFavoritesGuildAddSuggestedChannel.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

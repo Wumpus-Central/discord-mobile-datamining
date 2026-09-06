@@ -1,13 +1,13 @@
 // === Module 4794: useDisplayNameStyles ===
 
 // Module 4794 (useDisplayNameStyles)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
+import _mod19 from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
+import size from "module_2" /* 2 */;
 
-const useContext = noop.useContext;
-const result = set.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
+const useContext = _mod19.useContext;
+const result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStyles.tsx");
 
 export default function useDisplayNameStyles() {
   let obj = arg0;
@@ -21,33 +21,33 @@ export default function useDisplayNameStyles() {
     ignoreDisabledStylesSetting = false;
   }
   let stateFromStores;
-  const displayNameStylesEnabled = require(stateFromStores[3]).useDisplayNameStylesEnabled({ location: "useDisplayNameStyles" });
-  const obj2 = require(stateFromStores[3]);
+  const displayNameStylesEnabled = require("useDisplayNameStylesEnabled").useDisplayNameStylesEnabled({ location: "useDisplayNameStyles" });
+  const obj2 = require("useDisplayNameStylesEnabled");
   const tmp = require;
   const tmp2 = stateFromStores;
-  const items = [closure_5];
-  stateFromStores = require(stateFromStores[4]).useStateFromStores(items, () => {
-    if (null != closure_0) {
-      let user = closure_1_5.getUser(tmp);
+  const items = [UserStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    if (null != require) {
+      let user = UserStore.getUser(tmp);
     } else {
-      user = closure_1_5.getCurrentUser();
+      user = UserStore.getCurrentUser();
     }
     return user;
   });
-  const tmp5 = useContext(importDefault(stateFromStores[5]));
+  const tmp5 = useContext(require("GuildIDContext"));
   let tmp6 = null;
   if (null == guildId) {
     importDefault = tmp5;
     guildId = tmp5;
   }
-  const obj3 = require(stateFromStores[4]);
-  const items1 = [closure_4];
+  const obj3 = require("initialize");
+  const items1 = [GuildMemberStore];
   const stateFromStores1 = tmp(tmp2[4]).useStateFromStores(items1, () => {
     let member = null;
     if (null != closure_1) {
       member = null;
       if (null != stateFromStores) {
-        member = closure_1_4.getMember(tmp, tmp3.id);
+        member = GuildMemberStore.getMember(tmp, tmp3.id);
       }
     }
     return member;

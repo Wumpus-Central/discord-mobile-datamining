@@ -1,19 +1,19 @@
-// === Module 7574: fromServer ===
+// === Module 7574: FeaturedBlockRecord ===
 
-// Module 7574 (fromServer)
-import set from "set" /* 2 */;
+// Module 7574 (FeaturedBlockRecord)
 import ShopBlockType from "ShopBlockType" /* 7573 */;
-import fromServer from "fromServer" /* 7575 */;
+import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 7575 */;
+import FeaturedSubblockType from "FeaturedSubblockType" /* 7576 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = fromServer.FeaturedCategorySubblockRecord;
-let prototype;
-prototype = function FeaturedBlockRecord(subblocks) {
+let closure_2 = FeaturedCategorySubblockRecord.FeaturedCategorySubblockRecord;
+const prototype = function FeaturedBlockRecord(subblocks) {
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.FEATURED;
   subblocks = subblocks.subblocks;
   obj.subblocks = subblocks.map((type) => {
-    if (type.type === callback(table[2]).FeaturedSubblockType.CATEGORY) {
-      let fromServerResult = closure_2.fromServer(type);
+    if (type.type === FeaturedSubblockType.FeaturedSubblockType.CATEGORY) {
+      let fromServerResult = closure_1_2.fromServer(type);
     } else {
       type = type.type;
       fromServerResult = type;
@@ -23,23 +23,24 @@ prototype = function FeaturedBlockRecord(subblocks) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(subblocks) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.type = ShopBlockType.ShopBlockType.FEATURED;
+    subblocks = subblocks.subblocks;
+    obj.subblocks = subblocks.map((type) => {
+      if (type.type === FeaturedSubblockType.FeaturedSubblockType.CATEGORY) {
+        let fromServerResult = closure_1_2.fromServer(type);
+      } else {
+        type = type.type;
+        fromServerResult = type;
+      }
+      return fromServerResult;
+    });
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  obj.type = ShopBlockType.ShopBlockType.FEATURED;
-  subblocks = subblocks.subblocks;
-  obj.subblocks = subblocks.map((type) => {
-    if (type.type === callback(table[2]).FeaturedSubblockType.CATEGORY) {
-      let fromServerResult = closure_2.fromServer(type);
-    } else {
-      type = type.type;
-      fromServerResult = type;
-    }
-    return fromServerResult;
-  });
-  return obj;
 };
-const result = set.fileFinishedImporting("modules/collectibles/records/FeaturedBlockRecord.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/records/FeaturedBlockRecord.tsx");
 
 export const FeaturedBlockRecord = prototype;

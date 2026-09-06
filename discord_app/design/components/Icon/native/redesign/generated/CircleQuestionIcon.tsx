@@ -1,18 +1,18 @@
 // === Module 11105: CircleQuestionIcon ===
 
 // Module 11105 (CircleQuestionIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import registerAsset from "registerAsset" /* 11106 */;
-import registerAsset2 from "registerAsset" /* 11107 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _mod11106 from "module_11106" /* 11106 */;
+import _mod11107 from "module_11107" /* 11107 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx");
 
 export const CircleQuestionIcon = function CircleQuestionIcon(color) {
   ({ style, secondaryColor } = color);
@@ -21,19 +21,20 @@ export const CircleQuestionIcon = function CircleQuestionIcon(color) {
   }
   let INTERACTIVE_ICON_DEFAULT = color.color;
   if (INTERACTIVE_ICON_DEFAULT === undefined) {
-    INTERACTIVE_ICON_DEFAULT = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
+    INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
-  const merged = Object.assign(color, Object.create(null));
+  const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   let obj = { children: null };
-  obj = { source: registerAsset, color: secondaryColor, style };
+  obj = { source: _mod11106, color: secondaryColor, style };
   const merged1 = Object.assign(merged);
-  const items = [callback(BaseIconImage.BaseIconImage, obj), ];
-  obj = { source: registerAsset2, color: INTERACTIVE_ICON_DEFAULT, style: items2 };
+  const items = [React4(BaseIconImage.BaseIconImage, obj), ];
+  obj = { source: _mod11107, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
-  items2 = [];
+  const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
+  obj.style = items2;
   const merged2 = Object.assign(merged);
-  items[1] = callback(BaseIconImage.BaseIconImage, obj);
-  obj[0] = items;
-  return callback2(View, obj);
+  items[1] = React4(BaseIconImage.BaseIconImage, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

@@ -1,18 +1,18 @@
-// === Module 4341: context ===
+// === Module 4341: ManaContext ===
 
-// Module 4341 (context)
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 4341 (ManaContext)
+import noop from "module_19" /* 19 */;
 
-let c0 = importAllResult;
+const jsx = fn(21).jsx;
 const obj = {};
-const context = importAllResult.createContext(obj);
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx");
+const context = noop.createContext(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx");
 
 export const ManaContext = context;
-export const useManaContext = () => importAllResult.useContext(context);
+export const useManaContext = () => noop.useContext(context);
 export const ManaContextProvider = function ManaContextProvider(children) {
-  let value = children.value;
+  value = children.value;
   if (value == null) {
     value = obj;
   }

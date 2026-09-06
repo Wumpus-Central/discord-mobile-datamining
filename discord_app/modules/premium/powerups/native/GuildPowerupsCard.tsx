@@ -1,42 +1,39 @@
-// === Module 12568: importDefaultResult1 ===
+// === Module 12568: GuildPowerupsCard ===
 
-// Module 12568 (importDefaultResult1)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import PressableCard from "PressableCard" /* 5607 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "n" /* 672 */;
+// Module 12568 (GuildPowerupsCard)
+import nativeDefault from "native" /* 576 */;
+import Card from "Card" /* 5607 */;
+import noop from "module_19" /* 19 */;
+import n from "module_672" /* 672 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { cardActive: null, cardExpiring: null, cardRemoving: null };
-createCacheKey = { borderColor: null };
-const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360);
-createCacheKey[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
-createCacheKey[0] = createCacheKey;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { cardActive: null, cardExpiring: null, cardRemoving: null };
+createStyles = { borderColor: null };
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.GREEN_360);
+createStyles.borderColor = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35).hex();
+createStyles.cardActive = createStyles;
 const obj1 = { borderColor: null };
-const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.GREEN_360).alpha(0.35);
-const importDefaultResult1 = importDefaultResult;
-const importDefaultResult1Result = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300);
-obj1[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
-createCacheKey[1] = obj1;
+const alphaResult = n(nativeDefault.unsafe_rawColors.GREEN_360).alpha(0.35);
+const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
+obj1.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+createStyles.cardExpiring = obj1;
 const obj2 = { borderColor: null };
-const alphaResult1 = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
-const importDefaultResult2 = importDefaultResult;
-const importDefaultResult2Result = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300);
-obj2[0] = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
-createCacheKey[2] = obj2;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const alphaResult2 = importDefaultResult(ThemesDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
+const alphaResult1 = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35);
+const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.YELLOW_300);
+obj2.borderColor = n(nativeDefault.unsafe_rawColors.YELLOW_300).alpha(0.35).hex();
+createStyles.cardRemoving = obj2;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsCard.tsx");
 
 export default function GuildPowerupsCard(status) {
   status = status.status;
   ({ children, containerStyle, style } = status);
-  const merged = Object.assign(status, Object.create(null));
-  const tmp2 = callback();
+  const merged = Object.assign(status, Object.assign({ children: 0, containerStyle: 0, status: 0, style: 0 }));
+  const tmp2 = closure_4();
   let obj = { style: containerStyle, children: null };
   obj = { border: "faint", radius: 16, shadow: "none" };
   const merged1 = Object.assign(merged);
@@ -58,6 +55,6 @@ export default function GuildPowerupsCard(status) {
   items[3] = style;
   obj.style = items;
   obj.children = children;
-  obj[1] = jsx(PressableCard.Card, { border: "faint", radius: 16, shadow: "none" });
+  obj.children = jsx(Card.Card, { border: "faint", radius: 16, shadow: "none" });
   return <View border="faint" radius={16} shadow="none" />;
 };

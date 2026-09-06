@@ -1,20 +1,19 @@
-// === Module 7487: fromMessage ===
+// === Module 7487: KvMessage ===
 
-// Module 7487 (fromMessage)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "trackCommunicationDisabled" /* 2021 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
+// Module 7487 (KvMessage)
+import _slicedToArray from "module_32" /* 32 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
 
-let prototype;
-prototype = function KvMessage() {
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+const prototype = function KvMessage() {
   return Object.create(new.target.prototype);
 }.prototype;
-prototype["fromMessage"] = function fromMessage(c0, closure_1, nextResult, result) {
-  const tmp = callback(prototype.deriveMemberUsers(c0, nextResult), 2);
-  return { id: nextResult.id, channelId: closure_1, message: nextResult, members: tmp[0], users: tmp[1], connectionId: result };
+prototype["fromMessage"] = function fromMessage(guild_id, channelId, nextResult, connectionId) {
+  const tmp = _slicedToArray(prototype.deriveMemberUsers(guild_id, nextResult), 2);
+  return { id: nextResult.id, channelId, message: nextResult, members: tmp[0], users: tmp[1], connectionId };
 };
-prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
+prototype["deriveMemberUsers"] = function deriveMemberUsers(guild_id, author) {
   author = author.author;
   let id;
   if (author != null) {
@@ -41,24 +40,16 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   for (const item10035 of set) {
     let tmp5 = item10035;
     if (null != item10035) {
-      let tmp6 = user;
-      let tmp7 = item10035;
-      let user = user.getUser(tmp5);
+      let user = UserStore.getUser(tmp5);
       let tmp10 = arg0;
-      let tmp9 = trueMember;
       if (arg0 == null) {
         tmp10 = EMPTY_STRING_SNOWFLAKE_ID;
       }
-      let tmp11 = item10035;
-      let trueMember = trueMember.getTrueMember(tmp10, tmp5);
-      let tmp13 = user;
+      let trueMember = GuildMemberStore.getTrueMember(tmp10, tmp5);
       if (null != user) {
-        let tmp14 = user;
         let arr = items2.push(user);
       }
-      let tmp16 = trueMember;
       if (null != trueMember) {
-        let tmp17 = trueMember;
         arr = items1.push(trueMember);
       }
     }
@@ -67,6 +58,7 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   const items3 = [items1, items2];
   return items3;
 };
-const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/KvMessage.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/modules/messages/KvMessage.tsx");
 
 export const KvMessage = prototype;

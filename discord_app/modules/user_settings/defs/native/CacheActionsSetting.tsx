@@ -1,148 +1,143 @@
-// === Module 15569: handleCacheActionPress ===
+// === Module 15569: CacheActionsSetting ===
 
-// Module 15569 (handleCacheActionPress)
+// Module 15569 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import dispatcherDefault from "dispatcher" /* 4259 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
+import ActionSheetRow from "ActionSheetRow" /* 7200 */;
 import FileUpIcon from "FileUpIcon" /* 15538 */;
+import CacheActionCreators from "CacheActionCreators" /* 15570 */;
 import FileWarningIcon from "FileWarningIcon" /* 15571 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_handleConnectionOpen" /* 5277 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
 
-require = arg1;
+require = fn;
 function handleCacheActionPress(key) {
-  let obj = dispatcherDefault;
-  obj = {
+  const obj = {
     key,
     icon() {
-      return callback2(callback(table[5]).CircleInformationIcon, {});
+      return closure_1_5(closure_1_0(dependencyMap[5]).CircleInformationIcon, {});
     },
     content: key
   };
   obj.open(obj);
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(CacheActionsActionSheet);
+  ActionSheetActionCreatorsDefault.hideActionSheet(CacheActionsActionSheet);
 }
 function CacheActionsActionSheet() {
   let obj = { header: null, children: null };
   obj = { title: null };
-  let intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.ZVZVwR);
-  obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
+  let intl = util.intl;
+  obj.title = intl.string(util.t.ZVZVwR);
+  obj.header = hasOwnProperty(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
   obj = { hasIcons: true, children: null };
-  obj1 = { icon: callback2(FileUpIcon.FileUpIcon, {}), label: null, onPress: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[1] = intl2.string(getSystemLocale.t["/GUaXh"]);
-  obj1[2] = callback(function*() {
-    if (dependencyMap === 2) {
-      dependencyMap = 3;
-      HermesBuiltin.throwTypeError();
+  let obj1 = { icon: hasOwnProperty(FileUpIcon.FileUpIcon, {}), label: null, onPress: null };
+  const intl2 = util.intl;
+  obj1.label = intl2.string(util.t["/GUaXh"]);
+  obj1.onPress = asyncGeneratorStep(async (arg0, value) => {
+    if (c2 === 2) {
+      c2 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        dependencyMap = 2;
+        c2 = 2;
         if (0 === c1) {
           if (arg0 === 1) {
-            dependencyMap = 3;
-            throw arg1;
+            c2 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            dependencyMap = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c2 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            const callback = tmp2;
-            obj1 = closure_1_0(15570);
+            closure_0 = tmp2;
+            let obj1 = CacheActionCreators;
             c1 = 1;
-            dependencyMap = 1;
+            c2 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj1.writeCaches();
+            obj1.value = obj1.writeCaches();
             return obj1;
           }
         } else if (arg0 === 1) {
-          dependencyMap = 3;
-          throw arg1;
+          c2 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          dependencyMap = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          c2 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          const intl = callback(1114).intl;
-          callback2(intl.string(callback(1114).t.GgUIfl));
-          dependencyMap = 3;
+          const intl = closure_128_0(closure_128_2[6]).intl;
+          closure_128_8(intl.string(closure_128_0(closure_128_2[6]).t.GgUIfl));
+          c2 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp15) {
-        dependencyMap = tmp;
+        c2 = tmp;
         throw tmp15;
       }
     }
   });
-  const items = [callback2(ActionSheetRowIcon.ActionSheetRow, obj1), ];
-  let obj2 = { variant: "danger", icon: callback2(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
-  const intl3 = getSystemLocale.intl;
-  obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
-  obj2[3] = function onPress() {
-    let obj = callback(15570);
+  const items = [hasOwnProperty(ActionSheetRow.ActionSheetRow, obj1), ];
+  let obj2 = { variant: "danger", icon: hasOwnProperty(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
+  const intl3 = util.intl;
+  obj2.label = intl3.string(util.t.tgwiMO);
+  obj2.onPress = function onPress() {
+    let obj = CacheActionCreators;
     obj.clearCaches();
-    const intl = callback(1114).intl;
-    const stringResult = intl.string(callback(1114).t["23xR5w"]);
+    const intl = util.intl;
+    const stringResult = intl.string(util.t["23xR5w"]);
     obj = {
       key: stringResult,
       icon() {
-        return callback2(callback(table[5]).CircleInformationIcon, {});
+        return closure_1_5(closure_1_0(dependencyMap[5]).CircleInformationIcon, {});
       },
       content: stringResult
     };
-    callback2(4259).open(obj);
-    const obj2 = callback2(4259);
-    callback2(4527).hideActionSheet(closure_7);
+    ToastActionCreatorsDefault.open(obj);
+    ActionSheetActionCreatorsDefault.hideActionSheet(CacheActionsActionSheet);
   };
-  items[1] = callback2(ActionSheetRowIcon.ActionSheetRow, obj2);
-  obj[1] = items;
-  obj[1] = callback3(ActionSheetRowIcon.ActionSheetRow.Group, obj);
-  return callback2(ActionSheet.ActionSheet, obj);
+  items[1] = hasOwnProperty(ActionSheetRow.ActionSheetRow, obj2);
+  obj.children = items;
+  obj.children = timestampProducer(ActionSheetRow.ActionSheetRow.Group, obj);
+  return hasOwnProperty(ActionSheet.ActionSheet, obj);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle: function useCacheActionsTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.ZVZVwR);
+    const intl = util.intl;
+    return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: require("FileWarningIcon").FileWarningIcon,
+  IconComponent: fn(15571).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { default: CacheActionsActionSheet };
+    const obj = { default: CacheActionsActionSheet };
     obj.openLazy(Promise.resolve(obj), CacheActionsActionSheet);
   },
   usePredicate: function useCacheActionsPredicate() {
-    const items = [closure_4];
+    const items = [GatewayConnectionStore];
     const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
-    const DeveloperMode = explicitContentFromProto.DeveloperMode;
-    const obj = initialize;
+    const DeveloperMode = UserSettings.DeveloperMode;
     return DeveloperMode.useSetting() && stateFromStores;
   },
   withArrow: true
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CacheActionsSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/CacheActionsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

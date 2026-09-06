@@ -1,19 +1,18 @@
-// === Module 7196: showSimpleActionSheet ===
+// === Module 7196: Sheet/showSimpleActionSheet ===
 
-// Module 7196 (showSimpleActionSheet)
-import set from "set" /* 2 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+// Module 7196 (Sheet/showSimpleActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
+const result = size.fileFinishedImporting("design/components/Sheet/native/showSimpleActionSheet.native.tsx");
 
 export const showSimpleActionSheet = function showSimpleActionSheet(key) {
   key = key.key;
-  const merged = Object.assign(key, Object.create(null));
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {};
+  const merged = Object.assign(key, Object.assign({ key: 0, stackingBehavior: 0 }));
+  const obj = {};
   const merged1 = Object.assign(merged);
   obj.hideActionSheet = function hideActionSheet() {
-    closure_1_1(closure_1_2[0]).hideActionSheet(key);
+    ActionSheetActionCreatorsDefault.hideActionSheet(key);
   };
   obj.openLazy(key(1896)(7197, dependencyMap.paths), key, obj, key.stackingBehavior);
 };

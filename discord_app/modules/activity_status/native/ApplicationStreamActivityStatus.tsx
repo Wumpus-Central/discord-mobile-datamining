@@ -1,16 +1,16 @@
 // === Module 10881: ApplicationStreamActivityStatus ===
 
 // Module 10881 (ApplicationStreamActivityStatus)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10882 */;
 import ActivityStatusTextDefault from "ActivityStatusText" /* 10885 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
 
 export default function ApplicationStreamActivityStatus(hideText) {
   ({ game, hideIcon } = hideText);
@@ -40,33 +40,26 @@ export default function ApplicationStreamActivityStatus(hideText) {
     tmp2 = name1;
   }
   if (null != tmp2) {
-    const intl2 = getSystemLocale.intl;
-    let obj = { name: null };
-    obj[0] = tmp2;
-    let formatResult = intl2.format(getSystemLocale.t["0wJXSh"], obj);
+    const intl2 = util.intl;
+    let obj = { name: tmp2 };
+    let formatResult = intl2.format(util.t["0wJXSh"], obj);
     let tmp7 = require;
   } else {
-    const intl = getSystemLocale.intl;
-    formatResult = intl.string(getSystemLocale.t.eXan7B);
+    const intl = util.intl;
+    formatResult = intl.string(util.t.eXan7B);
     tmp7 = require;
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    obj = { icon: null, style: null };
-    obj[0] = tmp7(10883).TvIcon;
-    obj[1] = iconStyle;
-    tmp12 = callback(ActivityStatusIconDefault, obj);
-    const tmp15 = ActivityStatusIconDefault;
+    obj = { icon: tmp7(10883).TvIcon, style: iconStyle };
+    tmp12 = React3(ActivityStatusIconDefault, obj);
   }
   const children = [tmp12, ];
   let tmp16 = !flag;
   if (!flag) {
-    obj = { style: null, maxFontSizeMultiplier: null, children: null };
-    obj[0] = textStyle;
-    obj[1] = maxFontSizeMultiplier;
-    obj[2] = formatResult;
-    tmp16 = callback(ActivityStatusTextDefault, obj);
+    obj = { style: textStyle, maxFontSizeMultiplier, children: formatResult };
+    tmp16 = React3(ActivityStatusTextDefault, obj);
   }
   children[1] = tmp16;
-  return closure_5(closure_4, { children });
+  return hasOwnProperty(React4, { children });
 };

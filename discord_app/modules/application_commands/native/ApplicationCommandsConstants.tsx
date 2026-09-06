@@ -1,13 +1,14 @@
-// === Module 10263: AUTOCOMPLETE_ROW_HEIGHT ===
+// === Module 10263: ApplicationCommandsConstants ===
 
-// Module 10263 (AUTOCOMPLETE_ROW_HEIGHT)
-import set from "set" /* 1115 */;
+// Module 10263 (ApplicationCommandsConstants)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
 let num = 56;
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   num = 64;
 }
-const result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsConstants.tsx");
+const result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsConstants.tsx");
 
 export const AUTOCOMPLETE_ROW_HEIGHT = 48;
 export const AUTOCOMPLETE_EMOJI_ROW_HEIGHT = num;

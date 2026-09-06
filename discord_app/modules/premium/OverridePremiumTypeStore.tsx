@@ -1,18 +1,17 @@
-// === Module 1372: setActualFromUser ===
+// === Module 1372: OverridePremiumTypeStore ===
 
-// Module 1372 (setActualFromUser)
-import set from "set" /* 2 */;
+// Module 1372 (OverridePremiumTypeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1377 */;
-import validatePremiumType from "validatePremiumType" /* 1382 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PerksStateUtils from "PerksStateUtils" /* 1377 */;
+import UserStoreUtils from "UserStoreUtils" /* 1382 */;
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import size from "module_2" /* 2 */;
 
 function setActualFromUser(user) {
   user = user.user;
   if ("CURRENT_USER_UPDATE" !== user.type) {
-    closure_4.premiumTypeActual = validatePremiumType.getPremiumTypeFromRawValue(user.premium_type);
-    const obj = validatePremiumType;
+    closure_4.premiumTypeActual = UserStoreUtils.getPremiumTypeFromRawValue(user.premium_type);
   }
   const user2 = user.user;
   if ("CURRENT_USER_UPDATE" !== user.type) {
@@ -21,13 +20,11 @@ function setActualFromUser(user) {
     if (null != perks) {
       let parseServerPerksResult = perks;
       if (!("activePerksBitmask" in perks)) {
-        parseServerPerksResult = parseServerPerkConfigKind.parseServerPerks(perks);
-        const obj2 = parseServerPerkConfigKind;
+        parseServerPerksResult = PerksStateUtils.parseServerPerks(perks);
       }
       tmp5 = parseServerPerksResult;
     }
     closure_4.perksActual = tmp5;
-    const tmp4 = closure_4;
   }
   if (false === flag) {
     if (false === flag2) {
@@ -35,8 +32,8 @@ function setActualFromUser(user) {
     }
   }
 }
-const UNSELECTED_CREATED_AT_DATE = GuildFeatures.UNSELECTED_CREATED_AT_DATE;
-const UNSELECTED_PREMIUM_TYPE_OVERRIDE = GuildFeatures.UNSELECTED_PREMIUM_TYPE_OVERRIDE;
+const UNSELECTED_CREATED_AT_DATE = PremiumConstants.UNSELECTED_CREATED_AT_DATE;
+const UNSELECTED_PREMIUM_TYPE_OVERRIDE = PremiumConstants.UNSELECTED_PREMIUM_TYPE_OVERRIDE;
 let closure_4 = { premiumTypeOverride: UNSELECTED_PREMIUM_TYPE_OVERRIDE, premiumTypeActual: UNSELECTED_PREMIUM_TYPE_OVERRIDE, createdAtOverride: UNSELECTED_CREATED_AT_DATE, perksActual: null };
 const PersistedStore = initializeDefault.PersistedStore;
 class OverridePremiumTypeStore extends PersistedStore {
@@ -112,7 +109,7 @@ const items = [
   }
 ];
 OverridePremiumTypeStore.migrations = items;
-const overridePremiumTypeStore = new OverridePremiumTypeStore(dispatcherDefault, {
+const overridePremiumTypeStore = new OverridePremiumTypeStore(DispatcherDefault, {
   SET_PREMIUM_TYPE_OVERRIDE: function setPremiumTypeOverride(premiumType) {
     closure_4.premiumTypeOverride = premiumType.premiumType;
   },
@@ -122,6 +119,6 @@ const overridePremiumTypeStore = new OverridePremiumTypeStore(dispatcherDefault,
   CURRENT_USER_UPDATE: setActualFromUser,
   CONNECTION_OPEN: setActualFromUser
 });
-const result = set.fileFinishedImporting("modules/premium/OverridePremiumTypeStore.tsx");
+const result = size.fileFinishedImporting("modules/premium/OverridePremiumTypeStore.tsx");
 
 export default overridePremiumTypeStore;

@@ -1,11 +1,11 @@
-// === Module 11275: map ===
+// === Module 11275: MediaPlaybackFacts ===
 
-// Module 11275 (map)
-import set from "set" /* 2 */;
+// Module 11275 (MediaPlaybackFacts)
+import size from "module_2" /* 2 */;
 
 const map = new Map();
 const re1 = /\/[^/?#]+\/\d+\/(\d+)\/[^/?#]+/;
-let result = set.fileFinishedImporting("modules/messages/MediaPlaybackFacts.tsx");
+let result = size.fileFinishedImporting("modules/messages/MediaPlaybackFacts.tsx");
 
 export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id) {
   id = id.id;
@@ -24,13 +24,12 @@ export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id
       if (size == null) {
         size = null;
       }
-      const obj = { fileSize: null, fileDurationSec: null };
-      obj[0] = size;
+      const obj = { fileSize: size, fileDurationSec: null };
       let duration_secs = id.duration_secs;
       if (duration_secs == null) {
         duration_secs = null;
       }
-      obj[1] = duration_secs;
+      obj.fileDurationSec = duration_secs;
       const result = obj2.set(id, obj);
     }
   }
@@ -38,7 +37,7 @@ export const rememberMediaPlaybackFacts = function rememberMediaPlaybackFacts(id
 export const mediaItemIdFromSource = function mediaItemIdFromSource(arg0) {
   if (null != arg0) {
     if ("" !== arg0) {
-      const match = regex.exec(arg0);
+      const match = re1.exec(arg0);
       let tmp3;
       if (match != null) {
         tmp3 = match[1];
@@ -56,7 +55,7 @@ export const getMediaPlaybackFacts = function getMediaPlaybackFacts(arg0) {
   if (null != arg0) {
     tmp = null;
     if ("" !== arg0) {
-      const match = regex.exec(arg0);
+      const match = re1.exec(arg0);
       let tmp4;
       if (match != null) {
         tmp4 = match[1];
@@ -69,7 +68,7 @@ export const getMediaPlaybackFacts = function getMediaPlaybackFacts(arg0) {
   }
   let tmp5 = null;
   if (null != tmp) {
-    let value = map.get(tmp);
+    value = map.get(tmp);
     if (value == null) {
       value = null;
     }
@@ -82,7 +81,7 @@ export const resolveReportedMediaFacts = function resolveReportedMediaFacts(medi
   if (null != mediaSource) {
     tmp = null;
     if ("" !== mediaSource) {
-      const match = regex.exec(mediaSource);
+      const match = re1.exec(mediaSource);
       let tmp4;
       if (match != null) {
         tmp4 = match[1];
@@ -95,7 +94,7 @@ export const resolveReportedMediaFacts = function resolveReportedMediaFacts(medi
   }
   let tmp5 = null;
   if (null != tmp) {
-    let value = map.get(tmp);
+    value = map.get(tmp);
     if (value == null) {
       value = null;
     }
@@ -123,7 +122,7 @@ export const resolveReportedMediaFacts = function resolveReportedMediaFacts(medi
   if (fileDurationSec == null) {
     fileDurationSec = tmp8;
   }
-  obj[1] = fileDurationSec;
+  obj.fileDurationSec = fileDurationSec;
   return obj;
 };
 export const clearMediaPlaybackFactsForTest = function clearMediaPlaybackFactsForTest() {

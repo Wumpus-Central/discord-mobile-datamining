@@ -2,29 +2,25 @@
 
 // Module 15156 (useVideoExternallyPaused)
 import initialize from "initialize" /* 504 */;
-import set from "set" /* 1115 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import useAlertStore from "useAlertStore" /* 4906 */;
-import updateContextMenuState from "updateContextMenuState" /* 8667 */;
-import getVideoQuestWatchCtaText from "getVideoQuestWatchCtaText" /* 11512 */;
-import closure_2 from "setContent" /* 4251 */;
+import ContextMenuState from "ContextMenuState" /* 8667 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11512 */;
+import ActionSheetStore from "ActionSheetStore" /* 4251 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoExternallyPaused.tsx");
 
 export const useVideoExternallyPaused = function useVideoExternallyPaused(id, arg1) {
-  const activeContextMenu = updateContextMenuState.useActiveContextMenu();
-  const obj = updateContextMenuState;
-  const openModalKey = coerceMainRoute.useOpenModalKey();
-  const obj2 = coerceMainRoute;
-  const videoQuestModalKey = getVideoQuestWatchCtaText.getVideoQuestModalKey(id);
-  const obj3 = getVideoQuestWatchCtaText;
-  const items = [closure_2];
+  const activeContextMenu = ContextMenuState.useActiveContextMenu();
+  const openModalKey = NavigationRouteUtils.useOpenModalKey();
+  const videoQuestModalKey = VideoQuestUtils.getVideoQuestModalKey(id);
+  const items = [ActionSheetStore];
   const stateFromStores = initialize.useStateFromStores(items, () => key.getKey());
-  const obj4 = initialize;
-  const obj5 = useAlertStore;
   const tmp5 = useAlertStore.useAlertStore((alerts) => alerts.alerts).length > 0;
-  let tmp6 = set.isIOS() && arg1;
+  let tmp6 = PlatformUtils.isIOS() && arg1;
   if (!tmp6) {
     tmp6 = null != stateFromStores;
   }

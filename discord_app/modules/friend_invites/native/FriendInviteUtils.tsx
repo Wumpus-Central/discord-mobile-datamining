@@ -1,55 +1,54 @@
-// === Module 17303: DEFAULT_EXPIRATION_DAYS ===
+// === Module 17303: FriendInviteUtils ===
 
-// Module 17303 (DEFAULT_EXPIRATION_DAYS)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8378 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+// Module 17303 (FriendInviteUtils)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
+import _modDef9566 from "module_9566" /* 9566 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/friend_invites/native/FriendInviteUtils.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/friend_invites/native/FriendInviteUtils.tsx");
 
 export const DEFAULT_EXPIRATION_DAYS = 7;
 export const DEFAULT_EXPIRATION_USES = 5;
 export const revokeAllFriendInvites = function revokeAllFriendInvites() {
-  let obj = generateAcceptInviteOptionsDefault;
-  generateAcceptInviteOptionsDefault.revokeFriendInvites().then(() => {
-    let obj = callback2(4259);
-    obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.jSHEOQ);
-    obj[2] = callback2(9566);
+  InstantInviteActionCreatorsDefault.revokeFriendInvites().then(() => {
+    const obj = { key: "TOAST_FRIEND_INVITES_REVOKED", content: null, icon: null };
+    const intl = util.intl;
+    obj.content = intl.string(util.t.jSHEOQ);
+    obj.icon = _modDef9566;
     obj.open(obj);
   });
 };
-export const acceptFriendInvite = function acceptFriendInvite(invite, arg1) {
-  closure_0 = invite;
+export const acceptFriendInvite = function acceptFriendInvite(invite, context) {
   if (tmp) {
     let dMFromUserId = null;
-    if (friend.isFriend(invite.inviter.id)) {
-      dMFromUserId = dMFromUserId.getDMFromUserId(invite.inviter.id);
+    if (RelationshipStore.isFriend(invite.inviter.id)) {
+      dMFromUserId = ChannelStore.getDMFromUserId(invite.inviter.id);
     }
     if (null != dMFromUserId) {
-      generateAcceptInviteOptionsDefault.transitionToInvite(invite, { forceTransition: true });
-      const obj3 = generateAcceptInviteOptionsDefault;
-      dispatcherDefault.wait(() => callback(table[7])());
-      const obj4 = dispatcherDefault;
+      InstantInviteActionCreatorsDefault.transitionToInvite(invite, { forceTransition: true });
+      DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
     } else {
-      let obj = generateAcceptInviteOptionsDefault;
-      obj = { inviteKey: null, context: null, callback: null };
-      obj[0] = invite.code;
-      obj[1] = arg1;
-      obj[2] = function callback() {
-        let obj = closure_1_1(closure_1_2[3]);
-        const intl = invite(closure_1_2[4]).intl;
-        const inviter = invite.inviter;
-        let username;
-        if (inviter != null) {
-          username = inviter.username;
-        }
-        obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(invite(closure_1_2[4]).t.st2dcs, { username }), icon: tmp(tmp2[5]) };
-        obj.open(obj);
-        closure_1_1(closure_1_2[6]).wait(() => callback(table[7])());
+      let obj = {
+        inviteKey: invite.code,
+        context,
+        callback() {
+              let obj = ToastActionCreatorsDefault;
+              const intl = util.intl;
+              const inviter = invite.inviter;
+              let username;
+              if (inviter != null) {
+                username = inviter.username;
+              }
+              obj = { key: "FRIEND_INVITE_ACCEPT_CONFIRMATION", content: intl.formatToPlainString(util.t.st2dcs, { username }), icon: tmp(9566) };
+              obj.open(obj);
+              DispatcherDefault.wait(() => closure_1_1(closure_1_2[7])());
+            }
       };
       const result = obj.acceptInviteAndTransitionToInviteChannel(obj);
     }

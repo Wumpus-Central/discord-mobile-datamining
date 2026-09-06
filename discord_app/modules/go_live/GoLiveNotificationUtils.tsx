@@ -1,20 +1,19 @@
-// === Module 15497: onGoLiveNotificationSettingsChanged ===
+// === Module 15497: GoLiveNotificationUtils ===
 
-// Module 15497 (onGoLiveNotificationSettingsChanged)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4212 */;
+// Module 15497 (GoLiveNotificationUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4212 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = AccountNotificationFlags.NotificationSettingsUpdateType;
-const result = set.fileFinishedImporting("modules/go_live/GoLiveNotificationUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const result = size.fileFinishedImporting("modules/go_live/GoLiveNotificationUtils.tsx");
 
 export const onGoLiveNotificationSettingsChanged = function onGoLiveNotificationSettingsChanged(go_live_notifications) {
-  const StreamNotificationsEnabled = explicitContentFromProto.StreamNotificationsEnabled;
+  const StreamNotificationsEnabled = UserSettings.StreamNotificationsEnabled;
   StreamNotificationsEnabled.updateSetting(go_live_notifications);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, go_live_notifications };
+  const obj = { update_type: constants.ACCOUNT, go_live_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

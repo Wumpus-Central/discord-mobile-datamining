@@ -1,11 +1,13 @@
-// === Module 17158: getUnitId ===
+// === Module 17158: GameTagOnVoiceTileExperiment ===
 
-// Module 17158 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 17158 (GameTagOnVoiceTileExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-08-game-tag-on-mobile-voice-call-tiles", defaultConfig: { showGameTag: false }, variations: null };
+obj = { 1: null };
 obj[1] = { showGameTag: true };
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-08-game-tag-on-mobile-voice-call-tiles", defaultConfig: { showGameTag: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/game_profile/GameTagOnVoiceTileExperiment.tsx");
+obj.variations = obj;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/GameTagOnVoiceTileExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

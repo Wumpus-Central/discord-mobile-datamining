@@ -1,23 +1,20 @@
 // === Module 10963: showThreadBrowserModal ===
 
 // Module 10963 (showThreadBrowserModal)
-import set from "set" /* 2 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import getAccessibilityLabelFormatter from "getAccessibilityLabelFormatter" /* 7781 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10916 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ThreadUtils from "ThreadUtils" /* 7781 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10916 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
-let result = set.fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
+const constants = ChannelDetailsConstants.ChannelDetailsNavigatorScreens;
+let result = size.fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
 
 export default function showThreadBrowserModal(id) {
-  let obj = getAccessibilityLabelFormatter;
+  let obj = ThreadUtils;
   const result = obj.trackThreadBrowserOpened();
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
-  const obj2 = getRootNavigationRef;
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (tmp2) {
-    obj = { channelId: null, initialRouteName: null };
-    obj[0] = id.id;
-    obj[1] = constants.THREADS;
+    obj = { channelId: id.id, initialRouteName: constants.THREADS };
     rootNavigationRef.navigate("sidebar", obj);
   }
 };

@@ -1,13 +1,13 @@
-// === Module 11088: currentPreviewGeneration ===
+// === Module 11088: CollectiblePreviewSession ===
 
-// Module 11088 (currentPreviewGeneration)
-import set from "set" /* 2 */;
+// Module 11088 (CollectiblePreviewSession)
+import size from "module_2" /* 2 */;
 
-let c0 = 0;
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblePreviewSession.tsx");
+let closure_0 = 0;
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblePreviewSession.tsx");
 
 export function currentPreviewGeneration() {
-  return c0;
+  return closure_0;
 }
 export function commitCollectiblePreview() {
   closure_0 = closure_0 + 1;

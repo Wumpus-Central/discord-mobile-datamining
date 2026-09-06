@@ -1,16 +1,17 @@
-// === Module 1229: getThemeForColor ===
+// === Module 1229: ClientThemesUtils ===
 
-// Module 1229 (getThemeForColor)
-import set from "set" /* 2 */;
-import sum from "sum" /* 1085 */;
-import SystemThemeState from "SystemThemeState" /* 1186 */;
-import ThemeTypes2 from "ThemeTypes" /* 1230 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+// Module 1229 (ClientThemesUtils)
+import shims from "shims" /* 575 */;
+import Constants from "Constants" /* 1085 */;
+import ThemeConstants from "ThemeConstants" /* 1186 */;
+import ClientThemesConstants from "ClientThemesConstants" /* 1230 */;
+import shared from "shared" /* 4411 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = ThemeTypes2.REFRESH_STANDARD_BACKGROUND_THEMES;
-let closure_3 = SystemThemeState.PROTO_THEME_MAP_WEB_REFRESH;
-const ThemeTypes = sum.ThemeTypes;
-const result = set.fileFinishedImporting("modules/client_themes/ClientThemesUtils.tsx");
+let closure_2 = ClientThemesConstants.REFRESH_STANDARD_BACKGROUND_THEMES;
+let closure_3 = ThemeConstants.PROTO_THEME_MAP_WEB_REFRESH;
+const ThemeTypes = Constants.ThemeTypes;
+const result = size.fileFinishedImporting("modules/client_themes/ClientThemesUtils.tsx");
 
 export const getThemeForColor = function getThemeForColor(l) {
   if (l.l <= 0.3) {
@@ -21,7 +22,7 @@ export const getThemeForColor = function getThemeForColor(l) {
   return LIGHT;
 };
 export const getCustomThemeBaseTheme = function getCustomThemeBaseTheme(theme) {
-  return AccessibilityAnnouncer.isThemeDark(theme) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
+  return shared.isThemeDark(theme) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
 };
 export const hasCustomTheme = function hasCustomTheme(colors) {
   let tmp = null != colors;
@@ -38,15 +39,14 @@ export const resolveThemeWithCustomSettings = function resolveThemeWithCustomSet
   if (!tmp) {
     return theme;
   } else {
-    AccessibilityAnnouncer.isThemeDark(theme) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
-    const obj = AccessibilityAnnouncer;
+    shared.isThemeDark(theme) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
   }
 };
 export const getLinearGradientForBackgroundGradient = function getLinearGradientForBackgroundGradient(gradientPreset) {
   ({ angle, colors } = gradientPreset);
-  const mapped = colors.map((arg0) => {
-    ({ token, stop } = arg0);
-    return "" + callback(table[4]).unsafe_getResolvedRawColor(token, { saturation: 1 }) + " " + stop + "%";
+  const mapped = colors.map((item) => {
+    ({ token, stop } = item);
+    return "" + shims.unsafe_getResolvedRawColor(token, { saturation: 1 }) + " " + stop + "%";
   });
   return "linear-gradient(" + angle + "deg, " + mapped.join(", ") + ")";
 };
@@ -63,7 +63,7 @@ export const areThemesEqualForGradientThemes = function areThemesEqualForGradien
   return tmp;
 };
 export const getBaseTheme = function getBaseTheme(arg0) {
-  return AccessibilityAnnouncer.isThemeDark(table[arg0]) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
+  return shared.isThemeDark(closure_3[arg0]) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
 };
 export const getThemeName = function getThemeName(DARK) {
   closure_0 = DARK;

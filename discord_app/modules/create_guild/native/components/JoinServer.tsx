@@ -1,92 +1,91 @@
-// === Module 12715: JoinServerContainer ===
+// === Module 12715: components/JoinServer ===
 
-// Module 12715 (JoinServerContainer)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 6980 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12715 (components/JoinServer)
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ CreateGuildModalStates: c5, NUXGuildTemplatesAnalytics: closure_6 } = NUXGuildTemplatesAnalytics);
-createCacheKey = { flex: { flex: 1 }, contentContainer: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
-createCacheKey[1] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");
+require = fn;
+const CreateGuildConstants = fn(6980);
+({ CreateGuildModalStates: hasOwnProperty, NUXGuildTemplatesAnalytics: metroRequire } = CreateGuildConstants);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { flex: { flex: 1 }, contentContainer: null };
+createStyles = { marginTop: fn(5682).NAV_BAR_HEIGHT };
+createStyles.contentContainer = createStyles;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/create_guild/native/components/JoinServer.tsx");
 
 export default function JoinServerContainer(initialRoute) {
   initialRoute = initialRoute.initialRoute;
   const onClose = initialRoute.onClose;
   const location = initialRoute.location;
-  let first;
-  let React;
+  let inviteString;
+  noop = undefined;
   c5 = undefined;
-  closure_6 = undefined;
-  let navigation;
-  const tmp2 = first(React.useState(""), 2);
-  first = tmp2[0];
-  React = tmp2[1];
-  const tmp = callback();
-  [tmp5, c5] = first(React.useState(false), 2);
-  const tmp6 = first(React.useState(false), 2);
+  const tmp2 = inviteString(noop.useState(""), 2);
+  inviteString = tmp2[0];
+  noop = tmp2[1];
+  const tmp = closure_8();
+  [tmp5, c5] = inviteString(noop.useState(false), 2);
+  const tmp6 = inviteString(noop.useState(false), 2);
   closure_6 = tmp6[1];
   let obj = initialRoute(location[6]);
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [navigation, initialRoute, onClose];
-  const layoutEffect = React.useLayoutEffect(() => {
-    if (initialRoute === _undefined.JOIN_SERVER) {
-      let headerCloseButton = initialRoute(location[7]).getHeaderCloseButton(() => {
-        closure_1_0(closure_1_2[8]).trackNUFStep(closure_1_6.STEP_GUILD_JOIN, closure_1_6.STEP_FRIEND_LIST, { skip: true });
-        callback();
+  const layoutEffect = noop.useLayoutEffect(() => {
+    if (initialRoute === constants.JOIN_SERVER) {
+      let headerCloseButton = NavigatorHeader.getHeaderCloseButton(() => {
+        initialRoute(location[8]).trackNUFStep(constants.STEP_GUILD_JOIN, constants.STEP_FRIEND_LIST, { skip: true });
+        onClose();
       });
-      const obj2 = initialRoute(location[7]);
     } else {
-      headerCloseButton = initialRoute(location[7]).getHeaderBackButton(() => {
-        callback();
+      headerCloseButton = NavigatorHeader.getHeaderBackButton(() => {
+        onClose();
       });
-      const obj = initialRoute(location[7]);
     }
     navigation.setOptions({ headerLeft: headerCloseButton });
   }, items);
-  obj = { top: true, left: true, right: true, style: items1, children: null };
-  items1 = [, ];
+  const rect = { top: true, left: true, right: true, style: null, children: null };
+  const items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp);
-  obj = { inviteString: first, error: null, submitting: null, onInviteChange: null, onDone: null };
+  rect.style = items1;
+  obj = { inviteString, error: null, submitting: null, onInviteChange: null, onDone: null };
   let stringResult = null;
-  const tmp4 = first(React.useState(false), 2);
+  const tmp4 = inviteString(noop.useState(false), 2);
   if (tmp5) {
     const intl = tmp7(tmp8[11]).intl;
     stringResult = intl.string(tmp7(tmp8[11]).t.IRq5ah);
   }
-  obj[1] = stringResult;
-  obj[2] = tmp6[0];
-  obj[3] = function onInviteChange(arg0) {
-    callback(arg0);
+  obj.error = stringResult;
+  obj.submitting = tmp6[0];
+  obj.onInviteChange = function onInviteChange(arg0) {
+    closure_4(arg0);
   };
-  obj[4] = function onDone(arg0) {
+  obj.onDone = function onDone() {
     const str = first.trim();
     if ("" !== str) {
-      callback2(true);
+      closure_6(true);
       _undefined(false);
       const parts = str.split("/");
       let arr = parts.pop();
-      let obj = onClose(location[12]);
+      let obj = InstantInviteActionCreatorsDefault;
       let str3 = location;
       if (location == null) {
         str3 = "Join Guild Modal";
       }
       const invite = obj.resolveInvite(arr, str3);
       invite.then(() => {
-        callback(false);
+        closure_1_6(false);
       });
-      obj = { code: null };
-      obj[0] = arr;
-      arr = navigation.push(_undefined.ACCEPT_INVITE, obj);
+      obj = { code: arr };
+      arr = navigation.push(constants.ACCEPT_INVITE, obj);
     } else {
       _undefined(true);
     }
   };
-  obj[4] = navigation(onClose(location[10]), obj);
-  return navigation(initialRoute(location[9]).SafeAreaPaddingView, obj);
+  rect.children = navigation(onClose(location[10]), obj);
+  return navigation(initialRoute(location[9]).SafeAreaPaddingView, rect);
 };

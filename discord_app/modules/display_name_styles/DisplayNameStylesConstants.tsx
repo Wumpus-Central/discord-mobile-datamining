@@ -1,9 +1,9 @@
-// === Module 1389: items3 ===
+// === Module 1389: DisplayNameStylesConstants ===
 
-// Module 1389 (items3)
-import set from "set" /* 2 */;
+// Module 1389 (DisplayNameStylesConstants)
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import DisplayNameFont from "DisplayNameFont" /* 1391 */;
+import size from "module_2" /* 2 */;
 
 let items = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP];
 const items1 = [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS, DisplayNameFont.DisplayNameFont.ORBITRON, DisplayNameFont.DisplayNameFont.NEW_ROCKER, DisplayNameFont.DisplayNameFont.KALAM];
@@ -13,7 +13,7 @@ const items4 = [[2797222, 16762000], [2535780, 9497343], [14966527, 2522592], [9
 const mapped = items4.map((colors) => ({ colors, name: "" }));
 const items5 = [[15313365, 11132400, 12167150, 12184267], [16740290, 16076712, 16751574, 14248631], [16758138, 16749423, 16743544, 15756170], [12905829, 10018400, 7130467, 4570214], [8173823, 9363664, 10327285, 6737904], [14121983, 11889663, 14965989, 9137407]];
 const items6 = [[16683586, 3534206, 16769095, 16731346, 5793266], [16727357, 16747050, 16766023, 16732067, 8086015], [7997702, 13114898, 16013848, 16749824, 16766023], [8316888, 8178687, 8359167, 11890175, 15960792], [3528287, 1497266, 2147829, 2850047, 7032319], [11004065, 14282892, 16769162, 16762024, 15972057]];
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesConstants.tsx");
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesConstants.tsx");
 
 export const EFFECT_ORDER = items;
 export const FLYWHEEL_FONTS = items1;
@@ -25,16 +25,16 @@ export const DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION = 0.78;
 export const DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS = 0.72;
 export const MIN_PRISM_GRADIENT_WIDTH = 38;
 export const DISPLAY_NAME_STYLES_PRISM_PRESETS = items6;
-export const getColorPresetsForEffect = function getColorPresetsForEffect(arg0) {
-  if (DisplayNameEffect.DisplayNameEffect.GUMMY === arg0) {
+export const getColorPresetsForEffect = function getColorPresetsForEffect(selectedEffectId) {
+  if (DisplayNameEffect.DisplayNameEffect.GUMMY === selectedEffectId) {
     return items5;
-  } else if (tmp(1390).DisplayNameEffect.PRISM === arg0) {
+  } else if (tmp(1390).DisplayNameEffect.PRISM === selectedEffectId) {
     return items6;
   } else {
-    if (tmp(1390).DisplayNameEffect.GRADIENT !== arg0) {
-      if (tmp(1390).DisplayNameEffect.GLOW !== arg0) {
-        return items3.map((arg0) => {
-          const items = [arg0];
+    if (tmp(1390).DisplayNameEffect.GRADIENT !== selectedEffectId) {
+      if (tmp(1390).DisplayNameEffect.GLOW !== selectedEffectId) {
+        return items3.map((item) => {
+          const items = [item];
           return items;
         });
       }

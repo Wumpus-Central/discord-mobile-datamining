@@ -1,58 +1,58 @@
 // === Module 13825: useSpatialAudioControlState ===
 
 // Module 13825 (useSpatialAudioControlState)
-import apexExperimentDefault from "apexExperiment" /* 13826 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import SpatialAudioForVoiceExperimentDefault from "SpatialAudioForVoiceExperiment" /* 13826 */;
+import noop from "module_19" /* 19 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-const require = arg1;
-({ Features: c5, SpatialAudioStatus: closure_6 } = DesktopSources);
-let obj = { HIDDEN: "HIDDEN", AVAILABLE: "AVAILABLE", BLOCKED_MONO_OUTPUT: "BLOCKED_MONO_OUTPUT", BLOCKED_INIT_FAILED: "BLOCKED_INIT_FAILED", BLOCKED_HRTF_FAILED: "BLOCKED_HRTF_FAILED" };
-const result = require("set").fileFinishedImporting("modules/spatial_audio/useSpatialAudioControlState.tsx");
+const require = fn;
+const Constants = fn(4585);
+({ Features: hasOwnProperty, SpatialAudioStatus: metroRequire } = Constants);
+const SpatialAudioControlState = { HIDDEN: "HIDDEN", AVAILABLE: "AVAILABLE", BLOCKED_MONO_OUTPUT: "BLOCKED_MONO_OUTPUT", BLOCKED_INIT_FAILED: "BLOCKED_INIT_FAILED", BLOCKED_HRTF_FAILED: "BLOCKED_HRTF_FAILED" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/spatial_audio/useSpatialAudioControlState.tsx");
 
 export default function useSpatialAudioControlState(location) {
-  obj = supported(status[3]);
-  obj = { location };
+  supported(status[3]);
+  const obj = { location };
   const enabled = obj.useConfig(obj).enabled;
-  const items = [closure_4];
-  const stateFromStoresObject = enabled(status[4]).useStateFromStoresObject(items, () => ({ supported: closure_4.supports(constants.SPATIAL_AUDIO), status: closure_4.getSpatialAudioStatus() }));
+  const items = [MediaEngineStore];
+  const stateFromStoresObject = enabled(status[4]).useStateFromStoresObject(items, () => ({ supported: MediaEngineStore.supports(constants.SPATIAL_AUDIO), status: MediaEngineStore.getSpatialAudioStatus() }));
   supported = stateFromStoresObject.supported;
   status = stateFromStoresObject.status;
   const items1 = [enabled, supported, status];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let tmp = enabled;
     if (enabled) {
       tmp = supported;
     }
     if (tmp) {
-      if (closure_1_6.MONO_OUTPUT === tmp2) {
-        let HIDDEN = closure_1_7.BLOCKED_MONO_OUTPUT;
+      if (constants2.MONO_OUTPUT === tmp2) {
+        let HIDDEN = obj.BLOCKED_MONO_OUTPUT;
       } else if (tmp4.INIT_FAILED === tmp2) {
-        HIDDEN = closure_1_7.BLOCKED_INIT_FAILED;
+        HIDDEN = obj.BLOCKED_INIT_FAILED;
       } else if (tmp4.HRTF_FAILED === tmp2) {
-        HIDDEN = closure_1_7.BLOCKED_HRTF_FAILED;
+        HIDDEN = obj.BLOCKED_HRTF_FAILED;
       } else {
-        HIDDEN = closure_1_7.AVAILABLE;
+        HIDDEN = obj.AVAILABLE;
       }
     } else {
-      HIDDEN = closure_1_7.HIDDEN;
+      HIDDEN = obj.HIDDEN;
     }
     return HIDDEN;
   }, items1);
 };
-export const SpatialAudioControlState = obj;
+export { SpatialAudioControlState };
 export const isSpatialAudioBlocked = function isSpatialAudioBlocked(arg0) {
   const items = [, ];
   ({ HIDDEN: arr[0], AVAILABLE: arr[1] } = obj);
   return !items.includes(arg0);
 };
 export const isSpatialAudioEligible = function isSpatialAudioEligible(RTCConnectionStore) {
-  obj = apexExperimentDefault;
-  obj = { location: RTCConnectionStore };
+  const obj = { location: RTCConnectionStore };
   let enabled = obj.getConfig(obj).enabled;
   if (enabled) {
-    enabled = closure_4.supports(constants.SPATIAL_AUDIO);
+    enabled = MediaEngineStore.supports(constants.SPATIAL_AUDIO);
   }
   return enabled;
 };

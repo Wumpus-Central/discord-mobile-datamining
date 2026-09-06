@@ -1,9 +1,9 @@
-// === Module 4349: metadata ===
+// === Module 4349: ? ===
 
-// Module 4349 (metadata)
-import set from "set" /* 2 */;
+// Module 4349
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BountiesScrollGradient.riv.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/BountiesScrollGradient.riv.js");
 
 export default "https://cdn.discordapp.com/assets/content/e2271d5ae1d3ff605e7efedd077e751dfb4c90694f1b730f12713c54486a2b35.riv";
 export const metadata = { fileBytes: 1261 };

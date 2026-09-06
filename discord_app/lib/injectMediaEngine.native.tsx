@@ -1,8 +1,8 @@
-// === Module 1909: ? ===
+// === Module 1909: injectMediaEngine ===
 
-// Module 1909
-import set from "set" /* 2 */;
+// Module 1909 (injectMediaEngine)
 import inject from "inject" /* 1910 */;
+import size from "module_2" /* 2 */;
 
 inject.inject({
   supported() {
@@ -16,10 +16,10 @@ inject.inject({
 
   },
   getVoiceEngine() {
-    return require(1911) /* logger */.default;
+    return require("VoiceEngine").default;
   },
   getOpenH264LibraryPath() {
 
   }
 });
-const result = set.fileFinishedImporting("lib/injectMediaEngine.native.tsx");
+const result = size.fileFinishedImporting("lib/injectMediaEngine.native.tsx");

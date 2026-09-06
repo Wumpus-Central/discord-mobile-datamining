@@ -1,12 +1,10 @@
-// === Module 8905: HeaderButton ===
+// === Module 8905: Button/HeaderButton ===
 
-// Module 8905 (HeaderButton)
-import noopAll from "noop" /* 19 */;
-import CollapsingText from "CollapsingText" /* 4976 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8905 (Button/HeaderButton)
+import BaseTextButton from "BaseTextButton" /* 4976 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class HeaderButton {
   constructor(arg0) {
     tmp = closure_4();
@@ -16,16 +14,18 @@ class HeaderButton {
     obj.size = "sm";
     obj.textVariant = c3;
     obj.variant = "secondary-overlay";
-    return jsx(require("CollapsingText").BaseTextButton, obj);
+    return jsx(closure_0(closure_1[5]).BaseTextButton, obj);
   }
 }
-noopAll;
-let c3 = "heading-md/bold";
-const diff = require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT - 2 * require("MINIMUM_HIT_AREA").BUTTON_BORDER_WIDTH;
-const diff1 = diff - require("Text").TextStyleSheet["heading-md/bold"].lineHeight;
-createCacheKey = { paddingVertical: diff1 / 2 };
-let closure_4 = createCacheKey.createStyles({ pill: createCacheKey });
-HeaderButton.Icon = require("CollapsingText").BaseTextButton.Icon;
-const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
+const jsx = fn(21).jsx;
+const React3 = "heading-md/bold";
+const diff = fn(4980).SMALL_BUTTON_HEIGHT - 2 * fn(4980).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(4556).TextStyleSheet["heading-md/bold"].lineHeight;
+fn(4560);
+const createStyles = { pill: { paddingVertical: diff1 / 2 } };
+const React4 = createStyles.createStyles(createStyles);
+HeaderButton.Icon = fn(4976).BaseTextButton.Icon;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 
 export { HeaderButton };

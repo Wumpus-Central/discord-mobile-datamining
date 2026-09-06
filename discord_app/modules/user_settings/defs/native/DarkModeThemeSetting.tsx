@@ -1,36 +1,36 @@
-// === Module 15306: route ===
+// === Module 15306: DarkModeThemeSetting ===
 
-// Module 15306 (route)
+// Module 15306 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15304 */;
-import closure_2 from "handleThemeChange" /* 1183 */;
-import { SystemTheme } from "SystemThemeState" /* 1186 */;
-import createToggle from "createToggle" /* 11468 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const SystemTheme = fn(1186).SystemTheme;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["EgvHH/"]);
+    const intl = util.intl;
+    return intl.string(util.t["EgvHH/"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: fn(7975).MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
-    const items = [closure_2];
+    const items = [ThemeStore];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   useTrailing() {
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.DARK);
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
-  getComponent() {
-    return require(15307) /* SettingsAppearanceDarkModeThemePickerScreen */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
+    getComponent() {
+      return require("SettingsAppearanceDarkModeThemePickerScreen").default;
+    }
   }
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DarkModeThemeSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,13 +1,13 @@
-// === Module 14506: sum ===
+// === Module 14506: platformBehaviors ===
 
-// Module 14506 (sum)
-import set from "set" /* 2 */;
-import sum from "sum" /* 1085 */;
+// Module 14506 (platformBehaviors)
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
+const result = size.fileFinishedImporting("modules/rpc/server/commands/platformBehaviors.tsx");
 
 export default {
-  [sum.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
+  [Constants.RPCCommands.GET_PLATFORM_BEHAVIORS]: {
     handler() {
       return { iosKeyboardResizesView: true };
     }

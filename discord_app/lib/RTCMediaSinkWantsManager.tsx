@@ -1,37 +1,38 @@
-// === Module 13805: getDefaultWants ===
+// === Module 13805: RTCMediaSinkWantsManager ===
 
-// Module 13805 (getDefaultWants)
-import applyDefault from "apply" /* 12 */;
-import setDefault from "set" /* 1090 */;
+// Module 13805 (RTCMediaSinkWantsManager)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import onDefault from "on" /* 4618 */;
-import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 9609 */;
-import getBrowserInvertedWantsConfig from "getBrowserInvertedWantsConfig" /* 13806 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import { VideoToggleState } from "ME" /* 1074 */;
-import { SimulcastOverrideQuality } from "DesktopSources" /* 4585 */;
-import num2 from "num2" /* 4882 */;
+import WindowVisibilityVideoManager2 from "WindowVisibilityVideoManager" /* 9609 */;
+import BrowserInvertedWantsExperiment from "BrowserInvertedWantsExperiment" /* 13806 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4618 */;
 
-require = arg1;
-function getDefaultWants(arg0) {
-  obj = getBrowserInvertedWantsConfig;
+require = fn;
+function getDefaultWants(wantsLevel) {
+  obj = BrowserInvertedWantsExperiment;
   if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
     obj = {};
     const merged = Object.assign(obj);
   } else {
-    obj = { any: null };
-    obj[0] = arg0;
+    obj = { any: wantsLevel };
   }
   return obj;
 }
+const VideoToggleState = fn(1074).VideoToggleState;
+const SimulcastOverrideQuality = fn(4585).SimulcastOverrideQuality;
 let c7 = 100;
 let obj = { any: 0 };
-let closure_9 = 30 * setDefault.Millis.SECOND;
-let closure_10 = 120 * setDefault.Millis.SECOND;
-let closure_11 = -1 !== require("num2").getFirefoxVersion();
+let closure_9 = 30 * DurationsDefault.Millis.SECOND;
+let closure_10 = 120 * DurationsDefault.Millis.SECOND;
+const BrowserUtils = fn(4882);
+let closure_11 = -1 !== BrowserUtils.getFirefoxVersion();
 obj = { UserSSRCUpdate: "user-ssrc-update", Update: "update" };
-onDefault;
 class RTCMediaSinkWantsManager extends tmp2 {
   constructor(arg0, arg1, arg2) {
     mediaSinkWantsLadder = importAll;
@@ -40,10 +41,9 @@ class RTCMediaSinkWantsManager extends tmp2 {
       tmp8 = closure_2;
       tmp9 = new.target;
       tmp10 = new.target;
-      mediaSinkWantsLadder = new require("getMaxSinkValue").MediaSinkWantsLadder();
+      mediaSinkWantsLadder = new closure_0(closure_2[8]).MediaSinkWantsLadder();
     }
     tmp11 = new RTCMediaSinkWantsManager(tmp5, tmp4, tmp3, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp11;
     tmp11.connection = null;
     tmp11.audioSsrcs = {};
@@ -57,7 +57,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
     tmp13 = closure_0;
     tmp14 = closure_2;
     tmp12 = c7;
-    obj = require("getBrowserInvertedWantsConfig");
+    obj = closure_0(closure_2[6]);
     if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
       obj = {};
       tmp15 = closure_8;
@@ -66,7 +66,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
       obj1 = obj;
     } else {
       obj1 = { any: null };
-      obj1[0] = tmp12;
+      obj1.any = tmp12;
     }
     tmp11.latestWants = obj1;
     set = new Set();
@@ -79,7 +79,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
     set1 = new Set();
     tmp11.otherUsers = set1;
     tmp11.delayedUpdate = function delayedUpdate() {
-      const delayedCall = store.delayedCall;
+      const delayedCall = closure_0.delayedCall;
       delayedCall.delay();
     };
     tmp11.addLru = function addLru(arg0, timestamp, items) {
@@ -91,9 +91,7 @@ class RTCMediaSinkWantsManager extends tmp2 {
         let num4 = -1;
         if (0 < items.length) {
           do {
-            let tmp2 = store;
-            let diff = timestamp - store.offscreenUsers[items[num]];
-            let tmp4 = num;
+            let diff = timestamp - closure_0.offscreenUsers[items[num]];
             let tmp5 = num2;
             let tmp6 = num3;
             if (diff > num3) {
@@ -106,12 +104,12 @@ class RTCMediaSinkWantsManager extends tmp2 {
             num4 = tmp5;
           } while (num < items.length);
         }
-        store.offscreenDisabledUsers[items[num4]] = true;
+        closure_0.offscreenDisabledUsers[items[num4]] = true;
         items.splice(num4, 1);
       }
     };
     tmp11.updateOffscreenUsers = function updateOffscreenUsers() {
-      const connection = store.connection;
+      const connection = closure_0.connection;
       let activeOutputSinkTrackingEnabled;
       if (connection != null) {
         activeOutputSinkTrackingEnabled = connection.getActiveOutputSinkTrackingEnabled();
@@ -120,91 +118,70 @@ class RTCMediaSinkWantsManager extends tmp2 {
         const _Date = Date;
         const timestamp = Date.now();
         const items = [];
-        const entries = closure_1_1(closure_1_2[11]).entries(store.streamIds);
+        const entries = SnowflakeUtilsDefault.entries(closure_0.streamIds);
         const tmp14 = entries[Symbol.iterator]();
         while (tmp14 !== undefined) {
-          let tmp18 = closure_1_3;
-          let tmp19 = closure_1_3(tmp16, 2);
+          let tmp19 = _slicedToArray(tmp16, 2);
           [tmp20, tmp21] = tmp19;
           if (null != tmp21) {
-            let tmp55 = store;
-            let obj2 = store;
-            let connection2 = store.connection;
+            let obj2 = closure_0;
+            let connection2 = closure_0.connection;
             let hasActiveVideoOutputSink;
             if (connection2 != null) {
-              let tmp23 = tmp21;
               hasActiveVideoOutputSink = connection2.getHasActiveVideoOutputSink(tmp22);
             }
-            let tmp25 = tmp55;
-            let tmp27 = tmp20;
             if (hasActiveVideoOutputSink) {
               delete tmp3[tmp2];
               let offscreenDisabledUsers = obj2.offscreenDisabledUsers;
               delete tmp[tmp2];
             } else if (null == tmp26[tmp20]) {
-              let tmp38 = tmp55;
-              let tmp39 = tmp20;
               obj2.offscreenUsers[tmp20] = timestamp;
               let addLruResult = obj2.addLru(tmp20, timestamp, items);
-            } else {
-              let tmp28 = tmp55;
-              let tmp29 = tmp20;
-              if (!obj2.offscreenDisabledUsers[tmp20]) {
-                let tmp30 = tmp55;
-                let tmp31 = tmp20;
-                let diff = timestamp - obj2.offscreenUsers[tmp20];
-                if (diff >= obj2.getOffscreenTimeoutMs()) {
-                  let tmp36 = tmp55;
-                  let tmp37 = tmp20;
-                  obj2.offscreenDisabledUsers[tmp20] = true;
-                } else {
-                  let tmp33 = tmp55;
-                  let tmp34 = tmp20;
-                  let addLruResult1 = obj2.addLru(tmp20, timestamp, items);
-                }
+            } else if (!obj2.offscreenDisabledUsers[tmp20]) {
+              let diff = timestamp - obj2.offscreenUsers[tmp20];
+              if (diff >= obj2.getOffscreenTimeoutMs()) {
+                obj2.offscreenDisabledUsers[tmp20] = true;
+              } else {
+                let addLruResult1 = obj2.addLru(tmp20, timestamp, items);
               }
             }
           }
           continue;
         }
         if (items.length > 0) {
-          let sum = timestamp + store.getOffscreenTimeoutMs();
+          let sum = timestamp + closure_0.getOffscreenTimeoutMs();
           for (const item10083 of items) {
             let _Math = Math;
-            let tmp49 = sum;
-            let tmp50 = store;
-            let tmp51 = store;
-            sum = Math.min(sum, store.offscreenUsers[item10083] + store.getOffscreenTimeoutMs());
+            sum = Math.min(sum, closure_0.offscreenUsers[item10083] + closure_0.getOffscreenTimeoutMs());
             continue;
           }
-          const offscreenTimeout2 = store.offscreenTimeout;
-          offscreenTimeout2.start(sum - timestamp, store.update);
+          const offscreenTimeout2 = closure_0.offscreenTimeout;
+          offscreenTimeout2.start(sum - timestamp, closure_0.update);
         } else {
-          const offscreenTimeout = store.offscreenTimeout;
+          const offscreenTimeout = closure_0.offscreenTimeout;
           offscreenTimeout.stop();
         }
-        obj = closure_1_1(closure_1_2[11]);
       }
     };
     tmp11.handleLocalVideoDisabled = function handleLocalVideoDisabled() {
-      store.update();
+      closure_0.update();
     };
     tmp11.handleLocalMute = function handleLocalMute() {
-      store.update();
+      closure_0.update();
     };
     tmp11.update = function update() {
       let items = arg0;
       if (arg0 === undefined) {
         items = [];
       }
-      obj = store;
-      const wantsLevel = store.getWantsLevel();
-      let tmp5 = closure_1_13(wantsLevel);
+      obj = closure_0;
+      const wantsLevel = closure_0.getWantsLevel();
+      let tmp5 = getDefaultWants(wantsLevel);
       let tmp9 = tmp5;
       if (obj2.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.update").invertWants) {
         obj.invertWants(tmp5, wantsLevel);
         let tmp13 = tmp5;
-        if (closure_1_11) {
+        if (closure_11) {
           obj = {};
           const merged = Object.assign(tmp5);
           tmp13 = obj;
@@ -212,269 +189,176 @@ class RTCMediaSinkWantsManager extends tmp2 {
         tmp9 = tmp13;
       }
       obj.updateOffscreenUsers();
-      obj2 = store(closure_1_2[6]);
-      const tmp6 = store;
-      let isDesktopResult = store(closure_1_2[13]).isDesktop();
+      obj2 = BrowserInvertedWantsExperiment;
+      let isDesktopResult = PlatformUtils.isDesktop();
       if (isDesktopResult) {
         isDesktopResult = obj.isOneToOneCall();
       }
       if (isDesktopResult) {
         isDesktopResult = !obj.isStageChannel;
       }
-      const tmp6Result = store(closure_1_2[13]);
-      const entries = closure_1_1(closure_1_2[11]).entries(obj.videoSsrcs);
-      const obj5 = closure_1_1(closure_1_2[11]);
+      const tmp6Result = PlatformUtils;
+      const entries = SnowflakeUtilsDefault.entries(obj.videoSsrcs);
       while (tmp22 !== undefined) {
-        let tmp24 = closure_1_3;
-        let tmp25 = closure_1_3(tmp23, 2);
+        let tmp25 = _slicedToArray(tmp23, 2);
         let first = tmp25[0];
         let tmp27 = first;
         let arr2 = tmp25[1];
         let items1 = [];
         let flag = false;
-        let tmp28 = store;
-        let obj6 = store;
-        let num = store.streamPixelCounts[store.streamIds[first]];
+        let obj6 = closure_0;
+        let num = closure_0.streamPixelCounts[closure_0.streamIds[first]];
         if (num == null) {
           num = 0;
         }
-        let tmp29 = tmp28;
         let wantsLevel1 = obj6.getWantsLevel(num);
-        let tmp31 = arr2;
         let ssrc = arr2[0].ssrc;
-        let tmp32 = first;
         if (obj6.shouldReceiveFromUser(tmp27)) {
-          let tmp35 = first;
-          let tmp36 = tmp28;
           let tmp37 = tmp27 === obj6.selectedParticipantId;
           if (tmp37) {
-            let tmp38 = closure_1_7;
-            let tmp39 = closure_1_7;
-            tmp37 = wantsLevel !== closure_1_7;
+            tmp37 = wantsLevel !== c7;
           }
           if (tmp37) {
-            let tmp40 = tmp28;
             tmp37 = !obj6.pipOpen;
           }
           let tmp41 = tmp37;
-          let tmp42 = arr2;
           if (arr2.length > 1) {
-            let tmp49 = arr2;
-            let tmp50 = arr2;
             for (const item10121 of arr2) {
               let tmp51 = item10121;
-              if (item10121.quality === closure_1_7) {
-                let tmp59 = tmp37;
-                let tmp60 = item10121;
+              if (item10121.quality === c7) {
                 let ssrc2 = tmp51.ssrc;
                 if (tmp41) {
-                  let tmp61 = tmp52;
                   tmp5[ssrc2] = tmp53;
                   ssrc = tmp51.ssrc;
                 } else {
                   tmp5[ssrc2] = 0;
                 }
+              } else if (tmp41) {
+                tmp5[tmp51.ssrc] = 0;
               } else {
-                let tmp54 = tmp37;
-                if (tmp41) {
-                  let tmp58 = item10121;
-                  tmp5[tmp51.ssrc] = 0;
-                } else {
-                  if (isDesktopResult) {
-                    let tmp55 = item10121;
-                    let tmp56 = wantsLevel1;
-                    tmp5[tmp51.ssrc] = wantsLevel1;
-                  }
-                  let tmp57 = item10121;
-                  ssrc = tmp51.ssrc;
+                if (isDesktopResult) {
+                  tmp5[tmp51.ssrc] = wantsLevel1;
                 }
+                ssrc = tmp51.ssrc;
               }
               continue;
             }
-            if (store.supportsSeamless) {
-              let tmp63 = store;
-              let tmp64 = ssrc;
+            if (closure_0.supportsSeamless) {
               if (!tmp62.framesReceived[ssrc]) {
                 flag = true;
-                let tmp65 = ssrc;
                 let items2 = [ssrc];
                 items1 = items2;
-                let tmp66 = arr2;
-                let tmp67 = arr2;
                 for (const item10152 of arr2) {
                   let tmp68 = item10152;
-                  let tmp69 = ssrc;
                   let tmp70 = item10152.ssrc !== ssrc;
                   if (tmp70) {
-                    let tmp71 = store;
-                    let tmp72 = store;
-                    let tmp73 = item10152;
-                    tmp70 = store.framesReceived[tmp68.ssrc];
+                    tmp70 = closure_0.framesReceived[tmp68.ssrc];
                   }
                   if (!tmp70) {
                     continue;
                   } else {
-                    let tmp74 = item10152;
-                    if (tmp68.quality === closure_1_7) {
-                      let tmp79 = item10152;
-                      let tmp80 = tmp75;
+                    if (tmp68.quality === c7) {
                       tmp5[tmp68.ssrc] = tmp76;
                     } else {
-                      let tmp77 = item10152;
                       let tmp78 = wantsLevel;
                       if (isDesktopResult) {
                         tmp78 = wantsLevel1;
                       }
                       tmp5[tmp68.ssrc] = tmp78;
                     }
-                    let tmp81 = items1;
-                    let tmp82 = item10152;
                     let arr = items1.push(tmp68.ssrc);
                   }
                 }
               }
             }
-          } else {
-            let tmp43 = tmp37;
-            if (tmp41) {
-              let tmp46 = ssrc;
-              let tmp47 = closure_1_7;
-              let tmp48 = closure_1_7;
-              tmp5[ssrc] = closure_1_7;
-            } else if (isDesktopResult) {
-              let tmp44 = ssrc;
-              let tmp45 = wantsLevel1;
-              tmp5[ssrc] = wantsLevel1;
-            }
+          } else if (tmp41) {
+            tmp5[ssrc] = c7;
+          } else if (isDesktopResult) {
+            tmp5[ssrc] = wantsLevel1;
           }
         } else {
-          let tmp33 = arr2;
-          let tmp34 = arr2;
           for (const item10096 of arr2) {
             tmp5[item10096.ssrc] = 0;
             continue;
           }
         }
-        let tmp86 = first;
-        let tmp84 = store;
-        let tmp85 = store;
-        let simulcastOverrideQuality = store.getSimulcastOverrideQuality(tmp27);
-        if (simulcastOverrideQuality === closure_1_6.HIGH) {
-          let tmp92 = ssrc;
-          let tmp93 = closure_1_7;
-          let tmp94 = closure_1_7;
-          tmp5[ssrc] = closure_1_7;
-        } else {
-          let tmp90 = simulcastOverrideQuality;
-          if (tmp88 === tmp89.LOW) {
-            let tmp91 = ssrc;
-            tmp5[ssrc] = 50;
-          }
+        let tmp85 = closure_0;
+        let simulcastOverrideQuality = closure_0.getSimulcastOverrideQuality(tmp27);
+        if (simulcastOverrideQuality === SimulcastOverrideQuality.HIGH) {
+          tmp5[ssrc] = c7;
+        } else if (tmp88 === tmp89.LOW) {
+          tmp5[ssrc] = 50;
         }
-        let tmp95 = tmp84;
         let tmp96 = tmp85.supportsSeamless && flag;
         if (!tmp96) {
-          let tmp97 = ssrc;
           let items3 = [ssrc];
           items1 = items3;
         }
-        let tmp98 = arr2;
-        let tmp99 = arr2;
         for (const item10201 of arr2) {
-          let hasItem = items1;
-          hasItem = item10201;
+          let tmp100 = item10201;
           if (!items1.includes(item10201.ssrc)) {
-            hasItem = store;
-            hasItem = store;
-            let framesReceived = store.framesReceived;
-            hasItem = item10201;
-            let ssrc3 = hasItem.ssrc;
+            let framesReceived = closure_0.framesReceived;
+            let ssrc3 = tmp100.ssrc;
             delete tmp2[tmp];
           }
           continue;
         }
-        hasItem = first;
-        hasItem = items.includes(tmp27);
+        let hasItem = items.includes(tmp27);
         if (!hasItem) {
-          hasItem = first;
-          hasItem = undefined !== store.remoteVideoSsrcs[tmp27];
-          if (hasItem) {
-            hasItem = closure_1_1;
-            hasItem = closure_1_2;
-            hasItem = closure_1_2;
-            hasItem = first;
-            hasItem = items1;
-            hasItem = !closure_1_1(closure_1_2[14])(hasItem.remoteVideoSsrcs[tmp27], items1);
+          let tmp110 = undefined !== closure_0.remoteVideoSsrcs[tmp27];
+          if (tmp110) {
+            tmp110 = !discord_common_shallowEqualDefault(tmp108.remoteVideoSsrcs[tmp27], items1);
           }
+          hasItem = tmp110;
         }
         if (hasItem) {
-          hasItem = store;
-          hasItem = store;
-          hasItem = first;
-          hasItem = items1;
           let items4 = [];
-          hasItem = items4;
-          hasItem = items1;
-          let num2 = 0;
-          hasItem = HermesBuiltin.arraySpread(items1, 0);
-          store.remoteVideoSsrcs[tmp27] = items4;
-          hasItem = closure_1_12;
-          hasItem = store;
-          hasItem = tmp27;
-          hasItem = items1;
-          hasItem = store.emit(closure_1_12.UserSSRCUpdate, first, store.audioSsrcs[tmp27], items1);
+          let arraySpreadResult = HermesBuiltin.arraySpread(items1, 0);
+          closure_0.remoteVideoSsrcs[tmp27] = items4;
+          let emitResult = closure_0.emit(obj.UserSSRCUpdate, first, closure_0.audioSsrcs[tmp27], items1);
         }
         continue;
       }
-      if (closure_1_11) {
+      if (closure_11) {
         tmp5 = tmp9;
       }
-      hasItem = Object.entries(store.audioSsrcs);
-      for (const item10265 of hasItem) {
-        hasItem = closure_1_3;
-        hasItem = closure_1_3(item10265, 2);
-        [tmp, tmp] = hasItem;
-        hasItem = store;
-        hasItem = store;
-        let connection = store.connection;
-        hasItem = undefined;
+      const entries1 = Object.entries(closure_0.audioSsrcs);
+      for (const item10265 of entries1) {
+        let tmp131 = _slicedToArray(item10265, 2);
+        [tmp132, tmp133] = tmp131;
+        let connection = closure_0.connection;
+        let localMute;
         if (connection != null) {
-          hasItem = connection.getLocalMute(hasItem);
+          localMute = connection.getLocalMute(tmp132);
         }
-        if (hasItem) {
-          tmp5[hasItem] = 0;
+        if (localMute) {
+          tmp5[tmp133] = 0;
         }
         continue;
       }
-      hasItem = store;
-      hasItem = null == store.connection;
-      if (!hasItem) {
-        hasItem = closure_1_1;
-        hasItem = closure_1_2;
-        hasItem = closure_1_2;
-        hasItem = closure_1_1(closure_1_2[12]).isEqual(obj7.latestWants, tmp5);
-        const obj8 = closure_1_1(closure_1_2[12]);
+      let isEqualResult = null == closure_0.connection;
+      if (!isEqualResult) {
+        isEqualResult = _modDef12.isEqual(obj7.latestWants, tmp5);
       }
-      if (!hasItem) {
+      if (!isEqualResult) {
         obj7.latestWants = tmp5;
-        hasItem = closure_1_12;
-        hasItem = obj7.emit(closure_1_12.Update, tmp5);
+        obj7.emit(obj.Update, tmp5);
       }
       return tmp5;
     };
     tmp11.incomingVideoEnabledChanged = function incomingVideoEnabledChanged() {
-      store.update();
+      closure_0.update();
     };
     tmp11.userId = global;
-    tmp11.isStageChannel = arg1;
+    tmp11.isStageChannel = fn;
     tmp11.supportsSeamless = importDefault;
     tmp11.ladder = mediaSinkWantsLadder;
-    delayedCall = new require("start").DelayedCall(100, tmp11.update);
+    delayedCall = new tmp13(tmp14[9]).DelayedCall(100, tmp11.update);
     tmp11.delayedCall = delayedCall;
-    timeout = new require("start").Timeout();
+    timeout = new tmp13(tmp14[9]).Timeout();
     tmp11.offscreenTimeout = timeout;
-    WindowVisibilityVideoManager = require("isIncomingVideoEnabled").WindowVisibilityVideoManager;
-    onResult = WindowVisibilityVideoManager.on(require("isIncomingVideoEnabled").WindowVisibilityEvent.IncomingVideoEnabledChanged, tmp11.incomingVideoEnabledChanged);
+    WindowVisibilityVideoManager = tmp13(tmp14[10]).WindowVisibilityVideoManager;
+    onResult = WindowVisibilityVideoManager.on(tmp13(tmp14[10]).WindowVisibilityEvent.IncomingVideoEnabledChanged, tmp11.incomingVideoEnabledChanged);
     return tmp11;
   }
 }
@@ -496,7 +380,7 @@ prototype["isOneToOneCall"] = function isOneToOneCall() {
 prototype["updateCallUserIds"] = function updateCallUserIds(_userIds) {
   this.otherUsers = new Set(_userIds);
   const otherUsers = this.otherUsers;
-  otherUsers.delete(id.getId());
+  otherUsers.delete(AuthenticationStore.getId());
   this.update();
 };
 prototype["shouldReceiveFromUser"] = function shouldReceiveFromUser(arg0) {
@@ -518,7 +402,7 @@ prototype["shouldReceiveFromUser"] = function shouldReceiveFromUser(arg0) {
     }
     localVideoDisabled = userVideoDisabledResult;
   }
-  const WindowVisibilityVideoManager = isIncomingVideoEnabled.WindowVisibilityVideoManager;
+  const WindowVisibilityVideoManager = WindowVisibilityVideoManager2.WindowVisibilityVideoManager;
   return WindowVisibilityVideoManager.isIncomingVideoEnabled() && !localVideoDisabled;
 };
 prototype["invertWants"] = function invertWants(arg0, wantsLevel) {
@@ -527,17 +411,10 @@ prototype["invertWants"] = function invertWants(arg0, wantsLevel) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    let tmp4 = closure_11;
     if (closure_11) {
-      let tmp7 = importDefault;
-      let tmp8 = dependencyMap;
-      obj = applyDefault;
-      let tmp9 = nextResult;
+      obj = _modDef12;
       let minByResult = obj.minBy(tmp3, (quality) => quality.quality);
-      let tmp11 = tmp3;
-      let tmp12 = tmp9;
       for (const item10038 of nextResult) {
-        let tmp13 = minByResult;
         ssrc = undefined;
         ({ ssrc, ssrc: ssrc2 } = item10038);
         if (minByResult != null) {
@@ -551,8 +428,6 @@ prototype["invertWants"] = function invertWants(arg0, wantsLevel) {
         continue;
       }
     } else {
-      let tmp5 = tmp3;
-      let tmp6 = nextResult;
       for (const item10023 of nextResult) {
         arg0[item10023.ssrc] = arg1;
         continue;
@@ -562,7 +437,6 @@ prototype["invertWants"] = function invertWants(arg0, wantsLevel) {
   }
   values = Object.values(this.audioSsrcs);
   for (const item10055 of values) {
-    let tmp16 = c7;
     arg0[item10055] = c7;
     continue;
   }
@@ -631,7 +505,7 @@ prototype["setVideoSSRCs"] = function setVideoSSRCs(userId, mapped) {
   mapped = found.map((quality) => {
     quality = quality.quality;
     if (quality == null) {
-      quality = closure_7;
+      quality = any;
     }
     return { quality, ssrc: quality.ssrc };
   });
@@ -694,21 +568,19 @@ prototype["reset"] = function reset() {
   this.framesReceived = {};
   this.streamIds = {};
   this.streamPixelCounts = {};
-  obj = getBrowserInvertedWantsConfig;
+  obj = BrowserInvertedWantsExperiment;
   if (obj.getBrowserInvertedWantsConfig("RTCMediaSinkWantsManager.getDefaultWants").invertWants) {
     obj = {};
     const merged = Object.assign(obj);
   } else {
-    obj = { any: null };
-    obj[0] = c7;
+    obj = { any };
   }
   self.latestWants = obj;
   const WindowVisibilityVideoManager = tmp3(9609).WindowVisibilityVideoManager;
-  WindowVisibilityVideoManager.off(isIncomingVideoEnabled.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
+  WindowVisibilityVideoManager.off(WindowVisibilityVideoManager2.WindowVisibilityEvent.IncomingVideoEnabledChanged, self.incomingVideoEnabledChanged);
 };
 prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedParticipantId) {
-  let self = this;
-  self = this;
+  const self = this;
   if (selectedParticipantId === this.selectedParticipantId) {
     return self.latestWants;
   } else {
@@ -729,9 +601,9 @@ prototype["setSelectedParticipant"] = function setSelectedParticipant(selectedPa
     } else {
       self.selectedParticipantId = null;
     }
-    return self.update(items.filter((arg0) => {
+    return self.update(items.filter((item) => {
       let length;
-      if (self.videoSsrcs[arg0] != null) {
+      if (self.videoSsrcs[item] != null) {
         length = arr.length;
       }
       return length > 1;
@@ -775,11 +647,9 @@ prototype["getVideoParticipantCount"] = function getVideoParticipantCount() {
     let connection = this.connection;
     let localVideoDisabled;
     if (connection != null) {
-      let tmp5 = nextResult;
       localVideoDisabled = connection.getLocalVideoDisabled(tmp3);
     }
     if (!localVideoDisabled) {
-      let tmp6 = num;
       num = num + 1;
     }
     continue;
@@ -799,7 +669,8 @@ prototype["getSimulcastOverrideQuality"] = function getSimulcastOverrideQuality(
   }
   return NO_OVERRIDE;
 };
-let result = require("set").fileFinishedImporting("lib/RTCMediaSinkWantsManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("lib/RTCMediaSinkWantsManager.tsx");
 
 export default RTCMediaSinkWantsManager;
 export const DEFAULT_WANTS_FULL = { any: 100 };

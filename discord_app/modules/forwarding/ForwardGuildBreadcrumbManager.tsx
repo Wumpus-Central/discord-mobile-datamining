@@ -1,11 +1,11 @@
-// === Module 17824: fetchForwardReferencedGuilds ===
+// === Module 17824: ForwardGuildBreadcrumbManager ===
 
-// Module 17824 (fetchForwardReferencedGuilds)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17824 (ForwardGuildBreadcrumbManager)
+import Constants from "Constants" /* 1074 */;
 import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17423 */;
-import _fetchBasicGuild from "_fetchBasicGuild" /* 17825 */;
+import BasicGuildActionCreators from "BasicGuildActionCreators" /* 17825 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import size from "module_2" /* 2 */;
 
 function fetchForwardReferencedGuilds(message_reference) {
   message_reference = message_reference.message_reference;
@@ -16,24 +16,20 @@ function fetchForwardReferencedGuilds(message_reference) {
   if (type === MessageReferenceTypes.FORWARD) {
     const guild_id = message_reference.message_reference.guild_id;
     if (null != guild_id) {
-      const basicGuild = _fetchBasicGuild.fetchBasicGuild(guild_id);
-      const obj = _fetchBasicGuild;
+      const basicGuild = BasicGuildActionCreators.fetchBasicGuild(guild_id);
     }
   }
 }
-const MessageReferenceTypes = ME.MessageReferenceTypes;
-initializeDefault;
+const MessageReferenceTypes = Constants.MessageReferenceTypes;
 class ForwardGuildBreadcrumbManager extends tmp6 {
   constructor() {
     tmp3 = new ForwardGuildBreadcrumbManager(tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
-    tmp4 = require("setupLoadFromMessageManagerHandlers")(tmp3, fetchForwardReferencedGuilds);
+    tmp4 = closure_1(closure_2[3])(tmp3, fetchForwardReferencedGuilds);
     return tmp3;
   }
 }
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
-// ThrowIfThisInitialized (0x7c)
 setupLoadFromMessageManagerHandlersDefault(tmp, fetchForwardReferencedGuilds);
-const result = set.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
+const result = size.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
 
 export default tmp;

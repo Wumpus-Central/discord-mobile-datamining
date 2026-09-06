@@ -1,11 +1,11 @@
-// === Module 7559: items ===
+// === Module 7559: CollectiblesShopStore ===
 
-// Module 7559 (items)
+// Module 7559 (CollectiblesShopStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 const items = [];
+let analyticsLocations = items;
 let c3 = null;
 let closure_4 = {};
 let set = new Set();
@@ -15,30 +15,30 @@ class CollectiblesShopStore extends Store {
 }
 const prototype = CollectiblesShopStore.prototype;
 Object.defineProperty(prototype, "analyticsLocations", {
-  get: function analyticsLocations(c4, arg1) {
-    return items;
+  get: function analyticsLocations() {
+    return closure_2;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "analyticsSource", {
-  get: function analyticsSource(id, arg1) {
+  get: function analyticsSource() {
     return c3;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "initialProductSkuId", {
-  get: function initialProductSkuId(arg0) {
-    return closure_0;
+  get: function initialProductSkuId() {
+    return c0;
   },
   set: undefined
 });
 prototype["getAnalytics"] = function getAnalytics() {
-  return { analyticsLocations: items, analyticsSource: c3 };
+  return { analyticsLocations, analyticsSource };
 };
 prototype["getLayout"] = function getLayout(arg0) {
   let tmp = null;
   if (null != arg0) {
-    let tmp3 = table[arg0];
+    let tmp3 = closure_4[arg0];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -46,17 +46,17 @@ prototype["getLayout"] = function getLayout(arg0) {
   }
   return tmp;
 };
-prototype["isFetchingLayout"] = function isFetchingLayout(c0) {
-  let hasItem = null != c0;
+prototype["isFetchingLayout"] = function isFetchingLayout(arg0) {
+  let hasItem = null != arg0;
   if (hasItem) {
-    hasItem = set.has(c0);
+    hasItem = set.has(arg0);
   }
   return hasItem;
 };
-prototype["getLayoutFetchError"] = function getLayoutFetchError(c0) {
+prototype["getLayoutFetchError"] = function getLayoutFetchError(arg0) {
   let tmp = null;
-  if (null != c0) {
-    let tmp3 = table2[c0];
+  if (null != arg0) {
+    let tmp3 = closure_6[arg0];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -65,16 +65,18 @@ prototype["getLayoutFetchError"] = function getLayoutFetchError(c0) {
   return tmp;
 };
 CollectiblesShopStore.displayName = "CollectiblesShopStore";
-const collectiblesShopStore = new CollectiblesShopStore(dispatcherDefault, {
+const collectiblesShopStore = new CollectiblesShopStore(DispatcherDefault, {
   COLLECTIBLES_SHOP_OPEN: function handleOpen(analyticsLocations) {
     analyticsLocations = analyticsLocations.analyticsLocations;
     if (analyticsLocations == null) {
       analyticsLocations = items;
     }
-    let analyticsSource = analyticsLocations.analyticsSource;
+    closure_2 = analyticsLocations;
+    analyticsSource = analyticsLocations.analyticsSource;
     if (analyticsSource == null) {
       analyticsSource = null;
     }
+    c3 = analyticsSource;
     const initialProductSkuId = analyticsLocations.initialProductSkuId;
   },
   COLLECTIBLES_SHOP_CLOSE: function handleClose() {
@@ -110,6 +112,7 @@ const collectiblesShopStore = new CollectiblesShopStore(dispatcherDefault, {
     closure_6 = {};
   }
 });
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopStore.tsx");
 
 export default collectiblesShopStore;

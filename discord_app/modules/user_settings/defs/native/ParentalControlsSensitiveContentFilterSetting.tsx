@@ -1,30 +1,28 @@
-// === Module 15890: route ===
+// === Module 15890: ParentalControlsSensitiveContentFilterSetting ===
 
-// Module 15890 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 15890 (ParentalControlsSensitiveContentFilterSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Hj/But"]);
+    const intl = util.intl;
+    return intl.string(util.t["Hj/But"]);
   },
   IconComponent: ImageWarningIcon.ImageWarningIcon,
-  parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
-  screen: obj,
+  parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  screen: {
+    route: Constants.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+    getComponent() {
+      return require("ParentalControlsSensitiveContentFiltersScreen").default;
+    }
+  },
   unsearchable: true
-};
-obj = {
-  route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
-  getComponent() {
-    return require(15891) /* UserSettingsSensitiveContentFilters */.default;
-  }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx");
 
 export default route;

@@ -1,9 +1,9 @@
-// === Module 4975: Button ===
+// === Module 4975: components/Button/Button ===
 
-// Module 4975 (Button)
-import set from "set" /* 2 */;
-import CollapsingText from "CollapsingText" /* 4976 */;
+// Module 4975 (components/Button/Button)
+import BaseTextButton from "BaseTextButton" /* 4976 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Button/native/Button.native.tsx");
+const result = size.fileFinishedImporting("design/components/Button/native/Button.native.tsx");
 
-export const Button = CollapsingText.BaseTextButton;
+export const Button = BaseTextButton.BaseTextButton;

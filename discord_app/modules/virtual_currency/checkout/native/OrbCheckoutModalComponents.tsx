@@ -1,103 +1,104 @@
-// === Module 13154: OrbCheckoutErrorCard ===
+// === Module 13154: OrbCheckoutModalComponents ===
 
-// Module 13154 (OrbCheckoutErrorCard)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 13154 (OrbCheckoutModalComponents)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import Button from "Button" /* 4975 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7241 */;
 import OrbsIcon from "OrbsIcon" /* 8837 */;
-import ProfileEffectAssetPreviewDefault from "ProfileEffectAssetPreview" /* 11010 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11010 */;
 import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11012 */;
-import useOrbCheckoutModalContextProvider from "useOrbCheckoutModalContextProvider" /* 13153 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13153 */;
 import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13155 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { topRowWrapper: { width: "100%", marginBottom: 10 }, rowWrapper: { width: "100%", marginVertical: 10 }, rowDetailsContainer: null, orbPaymentSourceDetails: null, sectionTitle: null, spinner: null, disclaimer: null, errorCard: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, padding: ThemesDefault.space.PX_16 };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
-createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_8 };
-let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center" };
-createCacheKey[6] = { opacity: 0.5 };
-const obj2 = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center" };
-createCacheKey[7] = { borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
-const result = require("set").fileFinishedImporting("modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { topRowWrapper: { width: "100%", marginBottom: 10 }, rowWrapper: { width: "100%", marginVertical: 10 }, rowDetailsContainer: null, orbPaymentSourceDetails: null, sectionTitle: null, spinner: null, disclaimer: null, errorCard: null };
+createStyles = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: nativeDefault.space.PX_16 };
+createStyles.rowDetailsContainer = createStyles;
+createStyles.orbPaymentSourceDetails = { flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
+createStyles.sectionTitle = { marginBottom: nativeDefault.space.PX_8 };
+let obj1 = { marginBottom: nativeDefault.space.PX_8 };
+createStyles.spinner = { paddingVertical: nativeDefault.space.PX_16, alignItems: "center" };
+createStyles.disclaimer = { opacity: 0.5 };
+const obj2 = { paddingVertical: nativeDefault.space.PX_16, alignItems: "center" };
+createStyles.errorCard = { borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/virtual_currency/checkout/native/OrbCheckoutModalComponents.tsx");
 
 export const OrbCheckoutErrorCard = function OrbCheckoutErrorCard(children) {
-  let obj = { style: callback3().errorCard, children: null };
+  let obj = { style: closure_8().errorCard, children: null };
   obj = { direction: "horizontal", spacing: 8, align: "flex-start", children: null };
-  const items = [callback(CircleErrorIcon.CircleErrorIcon, { size: "sm", color: "mobile-text-heading-primary" }), callback(Text.Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.error })];
-  obj[3] = items;
-  obj[1] = callback2(Stack.Stack, obj);
-  return callback(closure_4, obj);
+  const items = [timestampProducer(CircleErrorIcon.CircleErrorIcon, { size: "sm", color: "mobile-text-heading-primary" }), timestampProducer(Text_Text.Text, { variant: "text-sm/medium", color: "mobile-text-heading-primary", children: children.error })];
+  obj.children = items;
+  obj.children = React5(Stack_Stack.Stack, obj);
+  return timestampProducer(React4, obj);
 };
 export const OrbCheckoutOrderSummary = function OrbCheckoutOrderSummary(product) {
   product = product.product;
-  const tmp = callback3();
+  const tmp = closure_8();
   if (null == product) {
     let obj = { style: null, children: null };
     const items = [, ];
     ({ rowDetailsContainer: arr[0], spinner: arr[1] } = tmp);
-    obj[0] = items;
-    obj[1] = callback(closure_5, { size: "small" });
-    let tmp5 = callback(closure_4, obj);
-    let tmp6 = callback;
+    obj.style = items;
+    obj.children = timestampProducer(hasOwnProperty, { size: "small" });
+    let tmp5 = timestampProducer(React4, obj);
+    let tmp6 = timestampProducer;
   } else {
-    obj = { product: null, useOrbPrice: true };
-    obj[0] = product;
-    tmp5 = callback(ProfileEffectAssetPreviewDefault, obj);
-    tmp6 = callback;
+    obj = { product, useOrbPrice: true };
+    tmp5 = timestampProducer(CollectiblesShopCheckoutDetailsDefault, obj);
+    tmp6 = timestampProducer;
   }
   obj = { style: tmp.topRowWrapper, children: null };
-  obj1 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
-  const intl = getSystemLocale.intl;
-  obj1[3] = intl.string(getSystemLocale.t.hws7bC);
-  const items1 = [tmp6(Text.Text, obj1), tmp5];
-  obj[1] = items1;
-  return callback2(closure_4, obj);
+  const obj1 = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
+  const intl = util.intl;
+  obj1.children = intl.string(util.t.hws7bC);
+  const items1 = [tmp6(Text_Text.Text, obj1), tmp5];
+  obj.children = items1;
+  return React5(React4, obj);
 };
 export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSourceDetails(orbAmount) {
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = { style: tmp.rowWrapper, children: null };
   obj = { variant: "heading-sm/bold", color: "mobile-text-heading-primary", style: tmp.sectionTitle, children: null };
-  const intl = getSystemLocale.intl;
-  obj[3] = intl.string(getSystemLocale.t["zLch/S"]);
-  const items = [callback(Text.Text, obj), ];
-  obj = { style: items1, children: null };
-  items1 = [, ];
+  const intl = util.intl;
+  obj.children = intl.string(util.t["zLch/S"]);
+  const items = [timestampProducer(Text_Text.Text, obj), ];
+  obj = { style: null, children: null };
+  const items1 = [, ];
   ({ rowDetailsContainer: arr2[0], orbPaymentSourceDetails: arr2[1] } = tmp);
-  obj1 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[2] = intl2.string(getSystemLocale.t.y0WGqP);
-  const items2 = [callback(Text.Text, obj1), callback(OrbCheckoutAmountTagDefault, { orbAmount: orbAmount.orbBalance })];
-  obj[1] = items2;
-  items[1] = callback2(closure_4, obj);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  obj.style = items1;
+  const obj1 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+  const intl2 = util.intl;
+  obj1.children = intl2.string(util.t.y0WGqP);
+  const items2 = [timestampProducer(Text_Text.Text, obj1), timestampProducer(OrbCheckoutAmountTagDefault, { orbAmount: orbAmount.orbBalance })];
+  obj.children = items2;
+  items[1] = React5(React4, obj);
+  obj.children = items;
+  return React5(React4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
   let obj = skuId(13153);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
-  const memo = React.useMemo(() => skuId(closure_1_2[12]).getOrbCheckoutDisclaimerMessage(skuId), items);
-  obj = { style: callback3().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo };
-  return callback(skuId(4556).Text, obj);
+  const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
+  obj = { style: closure_8().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo };
+  return closure_6(skuId(4556).Text, obj);
 };
 export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPress) {
   const tmp2 = useThemeDefault();
-  let obj = useOrbCheckoutModalContextProvider;
+  let obj = OrbCheckoutModalContext;
   const orbCheckoutModalContext = obj.useOrbCheckoutModalContext();
   ({ isRedeeming, orbProductContext } = orbCheckoutModalContext);
   const virtualCurrencyBalance = useVirtualCurrencyBalance.useVirtualCurrencyBalance();
@@ -111,15 +112,15 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   }
   obj = { variant: str, size: "lg", text: null, icon: null, iconPosition: "start", loading: null, onPress: null, disabled: null };
   const intl = tmp3(1114).intl;
-  obj[2] = intl.string(getSystemLocale.t["zLch/S"]);
+  obj.text = intl.string(util.t["zLch/S"]);
   tmp3Result = tmp3(4411);
   let str2 = "control-primary-text-default";
   if (tmp3Result.isThemeDark(tmp2)) {
     str2 = "control-overlay-primary-text-default";
   }
-  obj[3] = closure_6(OrbsIcon.OrbsIcon, { size: "md", color: str2 });
-  obj[5] = isRedeeming;
-  obj[6] = onPress.onPress;
+  obj.icon = timestampProducer(OrbsIcon.OrbsIcon, { size: "md", color: str2 });
+  obj.loading = isRedeeming;
+  obj.onPress = onPress.onPress;
   if (!isRedeeming) {
     isRedeeming = null == orbPriceAmount;
   }
@@ -129,6 +130,6 @@ export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPr
   if (!isRedeeming) {
     isRedeeming = virtualCurrencyBalance < orbPriceAmount;
   }
-  obj[7] = isRedeeming;
-  return closure_6(Button.Button, obj);
+  obj.disabled = isRedeeming;
+  return timestampProducer(components_Button_Button.Button, obj);
 };

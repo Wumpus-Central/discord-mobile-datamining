@@ -1,33 +1,32 @@
-// === Module 5157: fromBlob ===
+// === Module 5157: DiscordMd5 ===
 
-// Module 5157 (fromBlob)
+// Module 5157 (DiscordMd5)
 import _modDef5158 from "module_5158" /* 5158 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let prototype;
-prototype = function DiscordMd5() {
+const prototype = function DiscordMd5() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromBlob"] = function fromBlob(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
-    yield closure_1_0.arrayBuffer();
+  return (async () => {
+    await closure_0.arrayBuffer();
     return fromArrayBuffer(arg1);
   })();
 };
-prototype["fromArrayBuffer"] = function fromArrayBuffer(arg0) {
+prototype["fromArrayBuffer"] = function fromArrayBuffer(value) {
   const _ArrayBuffer = _modDef5158.ArrayBuffer;
-  return _ArrayBuffer.hash(arg0);
+  return _ArrayBuffer.hash(value);
 };
 prototype["fromDataURI"] = function fromDataURI(arg0) {
   closure_0 = arg0;
   const resolved = Promise.resolve();
   return resolved.then(() => {
     let length;
-    const match = /^data:[^;]*;base64,(.*)$/.exec(callback);
+    const match = /^data:[^;]*;base64,(.*)$/.exec(closure_0);
     if (null == match) {
       const _Error = Error;
-      error = new Error("Not a base64 data URI");
+      const error = new Error("Not a base64 data URI");
       throw error;
     } else {
       const _atob = atob;
@@ -44,12 +43,13 @@ prototype["fromDataURI"] = function fromDataURI(arg0) {
           length = atobResult.length;
         } while (num < length);
       }
-      const _ArrayBuffer = callback(closure_1_1[1]).ArrayBuffer;
+      const _ArrayBuffer = _modDef5158.ArrayBuffer;
       return _ArrayBuffer.hash(arrayBuffer);
     }
     const obj = /^data:[^;]*;base64,(.*)$/;
   });
 };
-const result = require("set").fileFinishedImporting("modules/discord_md5/DiscordMd5.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/discord_md5/DiscordMd5.tsx");
 
 export default prototype;

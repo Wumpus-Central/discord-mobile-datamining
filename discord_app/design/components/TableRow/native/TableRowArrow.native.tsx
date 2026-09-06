@@ -1,26 +1,27 @@
 // === Module 5612: TableRowArrow ===
 
 // Module 5612 (TableRowArrow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import IconSizes from "IconSizes" /* 4977 */;
-import IconSizesDefault from "IconSizes" /* 4977 */;
-import registerAssetDefault from "registerAsset" /* 5613 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import Icon from "Icon" /* 4977 */;
+import _modDef5613 from "module_5613" /* 5613 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { icon: null, iconColor: null };
-createCacheKey = { width: ThemesDefault.modules.mobile.TABLE_ROW_ARROW_WIDTH, height: 24, marginStart: ThemesDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_START, marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_END };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowArrow.native.tsx");
+const IconDefault = Icon;
+
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { icon: null, iconColor: null };
+let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ARROW_WIDTH, height: 24, marginStart: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_START, marginEnd: nativeDefault.modules.mobile.TABLE_ROW_ARROW_MARGIN_END };
+createStyles.icon = size;
+createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.iconColor = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowArrow.native.tsx");
 
 export const TableRowArrow = function TableRowArrow() {
-  const tmp = callback();
-  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: registerAssetDefault, size: IconSizes.IconSizes.CUSTOM };
-  return jsx(IconSizesDefault, { style: tmp.icon, color: tmp.iconColor.color, source: registerAssetDefault, size: IconSizes.IconSizes.CUSTOM });
+  const tmp = closure_4();
+  const obj = { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5613, size: Icon.IconSizes.CUSTOM };
+  return jsx(IconDefault, { style: tmp.icon, color: tmp.iconColor.color, source: _modDef5613, size: Icon.IconSizes.CUSTOM });
 };

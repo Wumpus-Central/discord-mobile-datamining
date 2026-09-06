@@ -1,12 +1,14 @@
-// === Module 9404: apexExperiment ===
+// === Module 9404: DiceRollExperiment ===
 
-// Module 9404 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 9404 (DiceRollExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-05-dice-roll-slash-command", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-05-dice-roll-slash-command", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/dice_roll/DiceRollExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/dice_roll/DiceRollExperiment.tsx");
 
 export default apexExperiment;

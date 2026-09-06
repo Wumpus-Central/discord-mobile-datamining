@@ -1,12 +1,13 @@
 // === Module 10925: getNavigationModalPresentation ===
 
 // Module 10925 (getNavigationModalPresentation)
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
+import DeviceUtils from "DeviceUtils" /* 4539 */;
 import useIsWindowLarge from "useIsWindowLarge" /* 6945 */;
-import handleOrientationChange from "handleOrientationChange" /* 8332 */;
-import set from "set" /* 1115 */;
+import DeviceOrientation from "DeviceOrientation" /* 8332 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-if (set.isAndroid()) {
+if (PlatformUtils.isAndroid()) {
   const _module1 = useIsWindowLarge;
   let str2 = "modal";
   if (_module1.getIsWindowLarge()) {
@@ -14,15 +15,15 @@ if (set.isAndroid()) {
   }
   let str = str2;
 } else {
-  const _module2 = DCDDeviceManager;
+  const _module2 = DeviceUtils;
   str = "modal";
   if (_module2.isIpadOS()) {
     str = "fullScreenModal";
   }
 }
 let obj = { presentation: str, lockOrientation: null };
-obj[1] = !set.isAndroid();
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
+obj.lockOrientation = !PlatformUtils.isAndroid();
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx");
 
 export default function getNavigationModalPresentation() {
   let tmp = arg0;
@@ -44,7 +45,7 @@ export default function getNavigationModalPresentation() {
   obj = { presentation, orientation: null };
   let tmp4;
   if (lockOrientation) {
-    const orientationLock = handleOrientationChange.getOrientationLock();
+    const orientationLock = DeviceOrientation.getOrientationLock();
     let str2 = "landscape";
     let str4 = "landscape";
     if ("LANDSCAPE" !== orientationLock) {
@@ -57,8 +58,7 @@ export default function getNavigationModalPresentation() {
       str4 = str2;
     }
     tmp4 = str4;
-    const obj2 = handleOrientationChange;
   }
-  obj[1] = tmp4;
+  obj.orientation = tmp4;
   return obj;
 };

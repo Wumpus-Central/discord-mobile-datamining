@@ -1,31 +1,23 @@
-// === Module 7249: isVibegrationsGuildEnabled ===
+// === Module 7249: VibegrationsGuildExperiment ===
 
-// Module 7249 (isVibegrationsGuildEnabled)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 7249 (VibegrationsGuildExperiment)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
+const require = fn;
 function isVibegrationsGuildEnabled(guildId) {
   guildId = guildId.guildId;
   let enabled = null != guildId;
   if (enabled) {
-    const obj = { guildId: null, location: null };
-    obj[0] = guildId;
-    obj[1] = tmp;
+    const obj = { guildId, location: tmp };
     enabled = closure_4.getConfig(obj).enabled;
   }
   return enabled;
 }
-function hasVibegrationsGuild(arg0, arg1) {
+function hasVibegrationsGuild(arg0, location) {
   let obj = arg0[Symbol.iterator]();
   while (obj !== undefined) {
-    let tmp2 = isVibegrationsGuildEnabled;
-    obj = { guildId: null, location: null };
-    obj[0] = tmp.id;
-    obj[1] = arg1;
+    obj = { guildId: tmp.id, location };
     if (isVibegrationsGuildEnabled(obj)) {
-      let tmp3 = obj;
       obj.return();
       let flag = true;
       return true;
@@ -33,8 +25,12 @@ function hasVibegrationsGuild(arg0, arg1) {
   }
   return false;
 }
-let closure_4 = ApexExperiment.createApexExperiment({ name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = require("set").fileFinishedImporting("modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx");
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+fn(1433);
+const ApexExperiment = { name: "2026-07-vibegrations-guild", kind: "guild", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } };
+let closure_4 = ApexExperiment.createApexExperiment(ApexExperiment);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/experiments/VibegrationsGuildExperiment.tsx");
 
 export const useIsVibegrationsGuildEnabled = function useIsVibegrationsGuildEnabled(location) {
   let guildId = location.guildId;
@@ -46,8 +42,8 @@ export const useIsVibegrationsGuildEnabled = function useIsVibegrationsGuildEnab
 export { isVibegrationsGuildEnabled };
 export { hasVibegrationsGuild };
 export const useHasVibegrationsGuild = function useHasVibegrationsGuild(arg0) {
-  const _require = arg0;
-  const items = [closure_2, _require(1433).ApexExperimentStore];
+  _require = arg0;
+  const items = [GuildStore, require("ApexExperiment").ApexExperimentStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => closure_1_6(Object.values(closure_1_2.getGuilds()), closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => hasVibegrationsGuild(Object.values(GuildStore.getGuilds()), closure_0), items1);
 };

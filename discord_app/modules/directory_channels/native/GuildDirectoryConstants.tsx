@@ -1,9 +1,9 @@
-// === Module 12310: GuildDirectoryCreate ===
+// === Module 12310: directory_channels/GuildDirectoryConstants ===
 
-// Module 12310 (GuildDirectoryCreate)
-import set from "set" /* 2 */;
+// Module 12310 (directory_channels/GuildDirectoryConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");
+const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryConstants.tsx");
 
 export const GuildDirectoryCreate = { CREATE_OR_ADD: "CREATE_OR_ADD", DESCRIPTION: "DESCRIPTION", TEMPLATES: "TEMPLATES", CREATE: "CREATE" };
 export const GUILD_DIRECTORY_BASE_HEADER_HEIGHT = 300;

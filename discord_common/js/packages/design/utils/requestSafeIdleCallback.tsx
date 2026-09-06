@@ -1,31 +1,31 @@
-// === Module 7472: setOriginWindow ===
+// === Module 7472: requestSafeIdleCallback ===
 
-// Module 7472 (setOriginWindow)
-import set from "set" /* 2 */;
-import getGlobalObject from "getGlobalObject" /* 1357 */;
+// Module 7472 (requestSafeIdleCallback)
+import GlobalUtils from "utils/GlobalUtils" /* 1357 */;
+import size from "module_2" /* 2 */;
 
-const globalObject = getGlobalObject.getGlobalObject();
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");
+let global = GlobalUtils.getGlobalObject();
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");
 
 export function setOriginWindow(arg0) {
-  closure_0 = arg0;
+  global = arg0;
 }
 export const requestSafeIdleCallback = function requestSafeIdleCallback(arg0, timeout) {
   closure_0 = arg0;
-  closure_1 = closure_0;
-  if (undefined !== closure_0) {
+  closure_1 = global;
+  if (undefined !== global) {
     if (null != obj.requestIdleCallback) {
       if (null != obj.cancelIdleCallback) {
         c2 = false;
         timeout = null;
-        closure_4 = obj.requestIdleCallback(function runOnce(arg0) {
+        closure_4 = obj.requestIdleCallback(function runOnce() {
           if (!c2) {
             c2 = true;
             if (null != c3) {
               closure_1.clearTimeout(c3);
               c3 = null;
             }
-            callback();
+            closure_0();
           }
         }, timeout);
         let num;
@@ -45,7 +45,7 @@ export const requestSafeIdleCallback = function requestSafeIdleCallback(arg0, ti
               closure_1.clearTimeout(c3);
               c3 = null;
             }
-            callback();
+            closure_0();
           }
         }, num);
         return () => {

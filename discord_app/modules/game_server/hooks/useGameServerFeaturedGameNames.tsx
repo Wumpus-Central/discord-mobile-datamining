@@ -1,17 +1,17 @@
 // === Module 12577: useGameServerFeaturedGameNames ===
 
 // Module 12577 (useGameServerFeaturedGameNames)
-import set from "set" /* 2 */;
-import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
-import str11 from "str11" /* 4451 */;
+import useGame from "useGame" /* 7309 */;
+import GameServerConstants from "GameServerConstants" /* 4451 */;
+import size from "module_2" /* 2 */;
 
-({ MINECRAFT_GAME_ID: obj1, HYTALE_GAME_ID: c3 } = str11);
-const result = set.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
+({ MINECRAFT_GAME_ID: c2, HYTALE_GAME_ID: c3 } = GameServerConstants);
+const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerFeaturedGameNames.tsx");
 
 export default function useGameServerFeaturedGameNames() {
-  let obj = importDefaultResult1;
-  const data = obj.useGame(closure_2).data;
-  const data2 = importDefaultResult1.useGame(closure_3).data;
+  let obj = useGame;
+  const data = obj.useGame(React2).data;
+  const data2 = useGame.useGame(React3).data;
   let str;
   if (data != null) {
     str = data.name;
@@ -27,6 +27,6 @@ export default function useGameServerFeaturedGameNames() {
   if (str2 == null) {
     str2 = "Hytale";
   }
-  obj[1] = str2;
+  obj.gameName2 = str2;
   return obj;
 };

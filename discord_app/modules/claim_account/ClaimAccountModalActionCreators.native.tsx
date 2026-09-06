@@ -1,9 +1,9 @@
-// === Module 9044: openNewUserAgeGateModal ===
+// === Module 9044: ClaimAccountModalActionCreators ===
 
-// Module 9044 (openNewUserAgeGateModal)
-import set from "set" /* 2 */;
+// Module 9044 (ClaimAccountModalActionCreators)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/claim_account/ClaimAccountModalActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/claim_account/ClaimAccountModalActionCreators.native.tsx");
 
 export function openNewUserAgeGateModal() {
 

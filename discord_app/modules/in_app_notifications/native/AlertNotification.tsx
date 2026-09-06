@@ -1,26 +1,27 @@
 // === Module 10216: AlertNotification ===
 
 // Module 10216 (AlertNotification)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import transitionToChannel from "transitionToChannel" /* 4571 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let obj = { shape: require("SolidCutout").CutoutShape.RoundedRect, x: require("GuildIconSizes").ImageSizes[require("GuildIconSizes").GuildIconSizes.NORMAL] - -6 - 24, y: -6, width: 24, height: 24, cornerRadius: ThemesDefault.radii.sm };
-let closure_9 = createCacheKey.createStyles({ warningBadge: { position: "absolute", top: -6, right: -6, width: 24, height: 24, alignItems: "center", justifyContent: "center" }, warningIcon: { width: 16, height: 16 } });
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/AlertNotification.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+let size = { shape: fn(8813).CutoutShape.RoundedRect, x: fn(5584).ImageSizes[fn(undefined, 5584).GuildIconSizes.NORMAL] - -6 - 24, y: -6, width: 24, height: 24, cornerRadius: nativeDefault.radii.sm };
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ warningBadge: { position: "absolute", top: -6, right: -6, width: 24, height: 24, alignItems: "center", justifyContent: "center" }, warningIcon: { width: 16, height: 16 } });
+size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/AlertNotification.tsx");
 
 export default function AlertNotification(notification) {
   notification = notification.notification;
-  let channel;
-  let guild;
-  channel = notification.channel;
-  guild = notification.guild;
-  const tmp = callback3();
-  obj = channel(10098);
+  const channel = notification.channel;
+  const guild = notification.guild;
+  const tmp = closure_9();
+  let obj = channel(10098);
   const incidentData = obj.useGuildIncidentsState(notification.key).incidentData;
   let raidDetectedAt;
   if (incidentData != null) {
@@ -35,34 +36,35 @@ export default function AlertNotification(notification) {
   }
   const items = [guild];
   const items1 = [channel.id];
-  const memo = React.useMemo(() => {
-    obj = { type: "simple", text: null, secondaryText: null };
-    const intl = channel(closure_1_2[8]).intl;
-    obj[1] = intl.string(channel(closure_1_2[8]).t["2IY4YN"]);
+  const memo = noop.useMemo(() => {
+    const obj = { type: "simple", text: null, secondaryText: null };
+    const intl = util.intl;
+    obj.text = intl.string(util.t["2IY4YN"]);
     let name;
     if (guild != null) {
       name = guild.name;
     }
-    obj[2] = name;
+    obj.secondaryText = name;
     return obj;
   }, items);
-  const callback = React.useCallback(() => {
-    channel(closure_1_2[9]).transitionToChannel(channel.id, { navigationReplace: true });
+  const callback = noop.useCallback(() => {
+    transitionToChannel.transitionToChannel(channel.id, { navigationReplace: true });
   }, items1);
   obj = { icon: null, header: null, children: null, onPress: null, notification: null };
   obj = { children: null };
-  obj1 = { cutouts: items2, children: callback(guild(5584), { guild, selected: false }) };
-  items2 = [obj];
-  const items3 = [callback(guild(8813), obj1), ];
+  const obj1 = { cutouts: null, children: closure_5(guild(5584), { guild, selected: false }) };
+  const items2 = [size];
+  obj1.cutouts = items2;
+  const items3 = [closure_5(guild(8813), obj1), ];
   const obj2 = { style: tmp.warningBadge, children: null };
   const tmp8 = guild(8813);
-  obj2[1] = callback(channel(8588).WarningIcon, { style: tmp.warningIcon, color: guild(576).colors.ICON_FEEDBACK_WARNING });
-  items3[1] = callback(View, obj2);
-  obj[0] = items3;
-  obj[0] = callback2(closure_6, obj);
-  obj[1] = memo;
-  obj[2] = callback(channel(10107).SystemMessageText, { text: stringResult });
-  obj[3] = callback;
-  obj[4] = notification;
-  return callback(channel(10170).NotificationPressable, obj);
+  obj2.children = closure_5(channel(8588).WarningIcon, { style: tmp.warningIcon, color: guild(576).colors.ICON_FEEDBACK_WARNING });
+  items3[1] = closure_5(View, obj2);
+  obj.children = items3;
+  obj.icon = closure_7(closure_6, obj);
+  obj.header = memo;
+  obj.children = closure_5(channel(10107).SystemMessageText, { text: stringResult });
+  obj.onPress = callback;
+  obj.notification = notification;
+  return closure_5(channel(10170).NotificationPressable, obj);
 };

@@ -1,26 +1,26 @@
-// === Module 4225: createSubscriptionItemFromServer ===
+// === Module 4225: SubscriptionRecord ===
 
-// Module 4225 (createSubscriptionItemFromServer)
-import toJSDefault from "toJS" /* 1386 */;
-import closure_3 from "createFromServer" /* 4226 */;
-import closure_4 from "createFromServer" /* 4227 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 4229 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 4225 (SubscriptionRecord)
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
+import PremiumSubscription from "PremiumSubscription" /* 4230 */;
+import Record from "Record" /* 1386 */;
+import GooglePlayPriceChangeRecord from "GooglePlayPriceChangeRecord" /* 4226 */;
+import InvoiceRecord from "InvoiceRecord" /* 4227 */;
 
-const require = arg1;
+require = fn;
 function createSubscriptionItemFromServer(id) {
   return { id: id.id, planId: id.plan_id, quantity: id.quantity };
 }
-toJSDefault;
-({ PaymentGateways: c5, SubscriptionStatusTypes: closure_6, SubscriptionStatusTypesSets: error, SubscriptionTypes: closure_8 } = ME);
-({ SubscriptionPauseReason: c9, SubscriptionPauseReasonSets: c10 } = set);
-({ PREMIUM_PLANS: unpackModuleId, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = GuildFeatures);
+const Constants = fn(1074);
+({ PaymentGateways: hasOwnProperty, SubscriptionStatusTypes: metroRequire, SubscriptionStatusTypesSets: closure_7, SubscriptionTypes: closure_8 } = Constants);
+const BillingConstants = fn(4229);
+({ SubscriptionPauseReason: closure_9, SubscriptionPauseReasonSets: c10 } = BillingConstants);
+const PremiumConstants = fn(1373);
+({ PREMIUM_PLANS: closure_11, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = PremiumConstants);
 let SubscriptionRecord;
 class SubscriptionRecord extends tmp2 {
   constructor(arg0) {
     tmp7 = new SubscriptionRecord(tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp7.id, type: tmp7.type, items: tmp7.items, createdAt: tmp7.createdAt, canceledAt: tmp7.canceledAt, currentPeriodStart: tmp7.currentPeriodStart, currentPeriodEnd: tmp7.currentPeriodEnd, status: tmp7.status, paymentSourceId: tmp7.paymentSourceId, paymentGateway: tmp7.paymentGateway, paymentGatewayPlanId: tmp7.paymentGatewayPlanId, paymentGatewaySubscriptionId: tmp7.paymentGatewaySubscriptionId, trialId: tmp7.trialId, trialEndsAt: tmp7.trialEndsAt, renewalMutations: tmp7.renewalMutations, currency: tmp7.currency, pauseEndsAt: tmp7.pauseEndsAt, pauseReason: tmp7.pauseReason, metadata: tmp7.metadata, latestInvoice: tmp7.latestInvoice, useStorekitResubscribe: tmp7.useStorekitResubscribe, price: tmp7.price, userId: tmp7.userId, streakStartedAt: tmp7.streakStartedAt, eligiblePaymentGateways: tmp7.eligiblePaymentGateways, priceChange: tmp7.priceChange } = global);
     renewalMutations = tmp7.renewalMutations;
     planId = global.items[0].planId;
@@ -31,13 +31,13 @@ class SubscriptionRecord extends tmp2 {
       ({ interval, intervalCount } = SubscriptionPlanInfo[global.items[0].planId]);
       tmp12 = closure_0;
       tmp13 = closure_2;
-      obj = require("getNonePlanIdForIntervalType");
+      obj = closure_0(closure_2[6]);
       basePlanIdForSubscriptionItems = obj.getBasePlanIdForSubscriptionItems(global.items, interval, intervalCount);
       closure_0 = basePlanIdForSubscriptionItems;
       tmp9 = null;
       tmp10 = basePlanIdForSubscriptionItems;
       if (null != renewalMutations) {
-        tmp12Result = require("getNonePlanIdForIntervalType");
+        tmp12Result = tmp12(tmp13[6]);
         basePlanIdForSubscriptionItems1 = tmp12Result.getBasePlanIdForSubscriptionItems(renewalMutations.items, interval, intervalCount);
         planId = basePlanIdForSubscriptionItems1;
         tmp9 = basePlanIdForSubscriptionItems1;
@@ -78,48 +78,47 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
     const _Date = Date;
     date1 = new Date(id.canceled_at);
   }
-  obj[3] = date1;
+  obj.canceledAt = date1;
   const date = new Date(id.created_at);
   const tmp = SubscriptionRecord;
-  obj[4] = new Date(id.current_period_start);
+  obj.currentPeriodStart = new Date(id.current_period_start);
   const date2 = new Date(id.current_period_start);
-  obj[5] = new Date(id.current_period_end);
-  ({ status: obj[6], payment_source_id: obj[7], payment_gateway: obj[8], payment_gateway_plan_id: obj[9], payment_gateway_subscription_id: obj[10], trial_id: obj[11] } = id);
+  obj.currentPeriodEnd = new Date(id.current_period_end);
+  ({ status: obj.status, payment_source_id: obj.paymentSourceId, payment_gateway: obj.paymentGateway, payment_gateway_plan_id: obj.paymentGatewayPlanId, payment_gateway_subscription_id: obj.paymentGatewaySubscriptionId, trial_id: obj.trialId } = id);
   let date4 = null;
   if (null != id.trial_ends_at) {
     const _Date2 = Date;
     date4 = new Date(id.trial_ends_at);
   }
-  obj[12] = date4;
+  obj.trialEndsAt = date4;
   const items = id.items;
-  obj[13] = items.map(createSubscriptionItemFromServer);
+  obj.items = items.map(createSubscriptionItemFromServer);
   let tmp12 = null;
   if (null != id.renewal_mutations) {
     obj = { items: null, paymentGatewayPlanId: null };
     const items1 = id.renewal_mutations.items;
-    obj[0] = items1.map(createSubscriptionItemFromServer);
-    obj[1] = id.renewal_mutations.payment_gateway_plan_id;
+    obj.items = items1.map(createSubscriptionItemFromServer);
+    obj.paymentGatewayPlanId = id.renewal_mutations.payment_gateway_plan_id;
     tmp12 = obj;
   }
-  obj[14] = tmp12;
+  obj.renewalMutations = tmp12;
   let date5 = null;
   if (null != id.streak_started_at) {
     const _Date3 = Date;
     date5 = new Date(id.streak_started_at);
   }
-  obj[15] = date5;
-  obj[16] = id.currency;
+  obj.streakStartedAt = date5;
+  obj.currency = id.currency;
   let date6 = null;
   if (null != id.pause_ends_at) {
     const _Date4 = Date;
     date6 = new Date(id.pause_ends_at);
   }
-  obj[17] = date6;
-  ({ pause_reason: obj[18], metadata: obj[19], use_storekit_resubscribe: obj[20], price: obj[21], user_id: obj[22] } = id);
+  obj.pauseEndsAt = date6;
+  ({ pause_reason: obj.pauseReason, metadata: obj.metadata, use_storekit_resubscribe: obj.useStorekitResubscribe, price: obj.price, user_id: obj.userId } = id);
   if (null != id.latest_invoice) {
-    obj = { latestInvoice: null };
-    obj[0] = closure_4.createInvoiceFromServer(id.latest_invoice);
-    obj1 = obj;
+    obj = { latestInvoice: InvoiceRecord.createInvoiceFromServer(id.latest_invoice) };
+    let obj1 = obj;
   } else {
     obj1 = {};
   }
@@ -131,13 +130,12 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
   obj.eligiblePaymentGateways = prop;
   let fromServer = null;
   if (null != id.price_change) {
-    fromServer = closure_3.createFromServer(id.price_change);
+    fromServer = GooglePlayPriceChangeRecord.createFromServer(id.price_change);
   }
   obj.priceChange = fromServer;
   return new tmp(obj);
 };
 prototype["getCurrentSubscriptionPlanIdForGroup"] = function getCurrentSubscriptionPlanIdForGroup(items) {
-  closure_0 = items;
   items = this.items;
   const found = items.find((planId) => items.includes(planId.planId));
   let planId;
@@ -166,9 +164,9 @@ Object.defineProperty(prototype, "planIdForCurrencies", {
       if (tmp5) {
         tmp5 = "" !== self.planIdFromItems;
       }
-      importDefault(38)(tmp5, "Premium subscription has no planId for currencies");
+      require("module_38")(tmp5, "Premium subscription has no planId for currencies");
       let planId = self.planIdFromItems;
-      const tmp3 = importDefault(38);
+      const tmp3 = require("module_38");
     } else {
       planId = self.planId;
     }
@@ -178,13 +176,13 @@ Object.defineProperty(prototype, "planIdForCurrencies", {
 });
 Object.defineProperty(prototype, "planIdFromItems", {
   get: function planIdFromItems() {
-    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(closure_13));
+    return this.getCurrentSubscriptionPlanIdForGroup(Object.values(map1));
   },
   set: undefined
 });
 Object.defineProperty(prototype, "premiumPlanIdFromItems", {
   get: function premiumPlanIdFromItems() {
-    const items = [...closure_11];
+    const items = [...closure_1_11];
     return this.getCurrentSubscriptionPlanIdForGroup(items);
   },
   set: undefined
@@ -223,14 +221,14 @@ Object.defineProperty(prototype, "isOnPlatformMatchingExternalPaymentGateway", {
   get: function isOnPlatformMatchingExternalPaymentGateway() {
     let isPurchasedViaApple = this.isPurchasedViaApple;
     if (isPurchasedViaApple) {
-      isPurchasedViaApple = require(1115) /* set */.isIOS();
-      const obj = require(1115) /* set */;
+      isPurchasedViaApple = require("PlatformUtils").isIOS();
+      const obj = require("PlatformUtils");
     }
     if (!isPurchasedViaApple) {
       let isPurchasedViaGoogle = this.isPurchasedViaGoogle;
       if (isPurchasedViaGoogle) {
-        isPurchasedViaGoogle = require(4231) /* isPremiumGiftingSupported */.isGooglePlayBillingSupported();
-        const obj2 = require(4231) /* isPremiumGiftingSupported */;
+        isPurchasedViaGoogle = require("BillingPlatformUtils").isGooglePlayBillingSupported();
+        const obj2 = require("BillingPlatformUtils");
       }
       isPurchasedViaApple = isPurchasedViaGoogle;
     }
@@ -264,7 +262,7 @@ Object.defineProperty(prototype, "isBoostOnly", {
     let items = this.items;
     return items.every((planId) => {
       const items = [, ];
-      ({ PREMIUM_MONTH_GUILD: arr[0], PREMIUM_YEAR_GUILD: arr[1] } = closure_13);
+      ({ PREMIUM_MONTH_GUILD: arr[0], PREMIUM_YEAR_GUILD: arr[1] } = closure_1_13);
       return items.includes(planId.planId);
     });
   },
@@ -423,11 +421,12 @@ prototype["hasPremiumAtLeast"] = function hasPremiumAtLeast(TIER_2) {
   let someResult = this.isPremium;
   if (someResult) {
     const items = this.items;
-    someResult = items.some((arg0) => TIER_2(closure_1_2[10]).isPremiumAtLeast(closure_1_12[arg0.planId].premiumType, TIER_2));
+    someResult = items.some((item) => PremiumTypeUtils.isPremiumAtLeast(dependencyMap[item.planId].premiumType, closure_0));
   }
   return someResult;
 };
-const result = set.fileFinishedImporting("records/SubscriptionRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/SubscriptionRecord.tsx");
 
 export default SubscriptionRecord;
 export { SubscriptionRecord };

@@ -1,11 +1,11 @@
-// === Module 17500: setVerifyTimezone ===
+// === Module 17500: UserSettingsManager ===
 
-// Module 17500 (setVerifyTimezone)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17500 (UserSettingsManager)
+import UserSettings from "UserSettings" /* 1935 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
+require = fn;
 let c2 = false;
-initializeDefault;
 class UserSettingsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -34,14 +34,15 @@ prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
     if (TimezoneOffset.getSetting() !== timezoneOffset) {
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        const TimezoneOffset = timezoneOffset(closure_1_1[1]).TimezoneOffset;
+        const TimezoneOffset = UserSettings.TimezoneOffset;
         return TimezoneOffset.updateSetting(timezoneOffset);
       });
     }
   }
 };
 const userSettingsManager = new UserSettingsManager();
-const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsManager.tsx");
 
 export default userSettingsManager;
 export { UserSettingsManager };

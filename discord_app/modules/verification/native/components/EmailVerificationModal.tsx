@@ -1,28 +1,31 @@
-// === Module 5622: closeModal ===
+// === Module 5622: EmailVerificationModal ===
 
-// Module 5622 (closeModal)
-import _modDef5621 from "module_5621" /* 5621 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { resetChangeEmailStore } from "ChangeEmailFields" /* 5623 */;
-import { VerificationModalScenes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 5622 (EmailVerificationModal)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5621 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+require = fn;
 function closeModal() {
   resetChangeEmailStore();
-  _modDef5621.close();
+  EmailVerificationModalActionCreatorsDefault.close();
 }
-const result = require("set").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
+const resetChangeEmailStore = fn(5623).resetChangeEmailStore;
+const VerificationModalScenes = fn(1074).VerificationModalScenes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 
 export default function EmailVerificationModal(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
   importDefault = undefined;
   let first;
-  let callback;
+  _slicedToArray = undefined;
   let obj = isChangeEmail(first[17]);
-  const items = [closure_5];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag;
   if (stateFromStores != null) {
@@ -31,11 +34,11 @@ export default function EmailVerificationModal(isChangeEmail) {
   if (flag == null) {
     flag = false;
   }
-  const tmp4Result = importDefault(first[18])(flag);
+  const tmp4Result = require("useInitialValue")(flag);
   importDefault = tmp4Result;
-  const tmp6 = callback(React.useState(), 2);
+  const tmp6 = _slicedToArray(noop.useState(), 2);
   first = tmp6[0];
-  callback = tmp6[1];
+  _slicedToArray = tmp6[1];
   const items1 = [first, isChangeEmail, tmp4Result];
   if (!isChangeEmail) {
     let email;
@@ -43,12 +46,10 @@ export default function EmailVerificationModal(isChangeEmail) {
       email = stateFromStores.email;
     }
     if (null != email) {
-      obj = { screens: null, initialRouteName: null, headerBackTitle: null };
-      obj[0] = tmp8;
-      obj[1] = VerificationModalScenes.RESEND_EMAIL;
+      obj = { screens: tmp8, initialRouteName: VerificationModalScenes.RESEND_EMAIL, headerBackTitle: null };
       const intl = tmp(tmp2[20]).intl;
-      obj[2] = intl.string(tmp(tmp2[20]).t["13/7kX"]);
-      return jsx(tmp(tmp2[19]).Navigator, { screens: null, initialRouteName: null, headerBackTitle: null });
+      obj.headerBackTitle = intl.string(tmp(tmp2[20]).t["13/7kX"]);
+      return jsx(tmp(tmp2[19]).Navigator, { screens: tmp8, initialRouteName: VerificationModalScenes.RESEND_EMAIL, headerBackTitle: null });
     }
   }
   if (stateFromStores != null) {

@@ -1,11 +1,11 @@
-// === Module 9477: makeTimeoutKey ===
+// === Module 9477: VideoStreamStore ===
 
-// Module 9477 (makeTimeoutKey)
-import set from "set" /* 2 */;
+// Module 9477 (VideoStreamStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 4585 */;
+import size from "module_2" /* 2 */;
 
 function makeTimeoutKey(arg0, arg1) {
   return "" + arg0 + ":" + arg1;
@@ -27,12 +27,9 @@ function clearUser(arg0, arg1) {
       const iter = values[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp11 = nextResult;
         let tmp12 = tmp4 !== nextResult && null != tmp4;
         if (!tmp12) {
-          let tmp13 = nextResult;
           delete tmp[tmp2];
-          let tmp14 = closure_5;
           let tmp16 = tmp4;
           let tmp15 = makeTimeoutKey;
           if (tmp4 == null) {
@@ -50,12 +47,12 @@ function clearUser(arg0, arg1) {
     }
   }
 }
-const NULL_STRING_GUILD_ID = ME.NULL_STRING_GUILD_ID;
-const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
-let c2 = null;
-let c3 = null;
-let closure_4 = {};
-let closure_5 = {};
+const NULL_STRING_GUILD_ID = Constants.NULL_STRING_GUILD_ID;
+const MediaEngineContextTypes = Constants2.MediaEngineContextTypes;
+let id = null;
+let sessionId = null;
+const dependencyMap = {};
+const dependencyMap2 = {};
 const Store = initializeDefault.Store;
 class VideoStreamStore extends Store {
 }
@@ -103,14 +100,14 @@ prototype["getTimedoutVideo"] = function getTimedoutVideo(arg0, arg1) {
   return dependencyMap2["" + arg0 + ":" + arg1];
 };
 VideoStreamStore.displayName = "VideoStreamStore";
-const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
+const videoStreamStore = new VideoStreamStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(user) {
-    const id = user.user.id;
-    const sessionId = user.sessionId;
+    id = user.user.id;
+    sessionId = user.sessionId;
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(user) {
-    const id = user.user.id;
-    const sessionId = user.sessionId;
+    id = user.user.id;
+    sessionId = user.sessionId;
   },
   RTC_CONNECTION_VIDEO: function handleVideo(arg0) {
     ({ userId, guildId, streamId, context } = arg0);
@@ -132,8 +129,7 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
       }
       obj = {};
       const merged = Object.assign(obj);
-      obj = { streamId: null };
-      obj[0] = streamId;
+      obj = { streamId };
       obj[context] = obj;
       dependencyMap[userId][tmp10] = obj;
       const _HermesInternal = HermesInternal;
@@ -145,14 +141,14 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    return voiceStates.reduce((arg0, arg1) => {
-      ({ userId, channelId, guildId } = arg1);
+    return voiceStates.reduce((acc, item) => {
+      ({ userId, channelId, guildId } = item);
       if (null == channelId) {
-        if (userId === closure_2) {
-          if (tmp !== closure_3) {
-            return arg0;
+        if (userId === id) {
+          if (tmp !== sessionId) {
+            return acc;
           } else {
-            const table = {};
+            closure_4 = {};
             closure_5 = {};
           }
         }
@@ -160,18 +156,18 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
       }
       if (null == channelId) {
         let tmp5;
-        if (table[userId] != null) {
+        if (closure_4[userId] != null) {
           let tmp6 = guildId;
           if (guildId == null) {
-            tmp6 = closure_0;
+            tmp6 = NULL_STRING_GUILD_ID;
           }
           tmp5 = tmp4[tmp6];
         }
         if (null != tmp5) {
-          callback(userId, guildId);
+          clearUser(userId, guildId);
         }
       }
-      return arg0;
+      return acc;
     }, false);
   },
   VIDEO_STREAM_READY_TIMEOUT: function handleVideoStreamReadyTimeout(arg0) {
@@ -187,6 +183,6 @@ const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("stores/VideoStreamStore.tsx");
+const result = size.fileFinishedImporting("stores/VideoStreamStore.tsx");
 
 export default videoStreamStore;

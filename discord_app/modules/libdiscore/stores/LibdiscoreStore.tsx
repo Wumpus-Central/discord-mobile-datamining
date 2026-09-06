@@ -1,22 +1,21 @@
-// === Module 1980: identity ===
+// === Module 1980: LibdiscoreStore ===
 
-// Module 1980 (identity)
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import { Store } from "initialize" /* 504 */;
+// Module 1980 (LibdiscoreStore)
+import LoggerDefault from "Logger" /* 3 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-const require = arg1;
+const require = fn;
 function identity(arg0) {
   return arg0;
 }
 let closure_3 = Symbol("version");
 let closure_4 = Object.freeze({});
-let closure_5 = new timestampDefault("LibdiscoreStore");
+let closure_5 = new LoggerDefault("LibdiscoreStore");
 class SecondaryIndexMetadata {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     obj = Object.create(new.target.prototype);
     obj.type = global;
-    obj.kkvDatabase = arg1;
+    obj.kkvDatabase = fn;
     obj.k1key = importDefault;
     obj.k2key = importAll;
     obj.shouldIndex = module;
@@ -53,12 +52,12 @@ class KVDatabase {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     obj.kkvDatabase = global;
-    obj.partition = arg1;
+    obj.partition = fn;
     return obj;
   }
 }
 const prototype2 = KVDatabase.prototype;
-prototype2["set"] = function set(id) {
+prototype2["set"] = function set(id, arg1) {
   const kkvDatabase = this.kkvDatabase;
   kkvDatabase.setRecord(this.partition, id, arg1);
 };
@@ -97,75 +96,81 @@ prototype2["version"] = function version() {
   }
   return partitionVersionResult;
 };
-prototype2["memoized"] = function memoized(arg0, arg1) {
+prototype2["memoized"] = function memoized(fn, arg1) {
   const kkvDatabase = this.kkvDatabase;
-  return kkvDatabase.memoizedSinglePartition(this.partition, arg0, arg1);
+  return kkvDatabase.memoizedSinglePartition(this.partition, fn, arg1);
 };
 let KKVDatabase;
 class KKVDatabase {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    obj.nextVersion = global;
-    obj.state = obj.emptyState();
-    return obj;
+    merged = Object.assign({ secondaryIndexes: null });
+    merged[0] = [];
+    merged.nextVersion = global;
+    merged.state = merged.emptyState();
+    return merged;
   }
 }
 const prototype3 = KKVDatabase.prototype;
-prototype3["addSecondaryKVIndex"] = function addSecondaryKVIndex(id) {
-  if (typeof KKVDatabase !== "function") {
-    HermesBuiltin.throwTypeError();
+prototype3["addSecondaryKVIndex"] = function addSecondaryKVIndex(id, shouldIndex) {
+  if (typeof KKVDatabase === "function") {
+    const merged = Object.assign({ secondaryIndexes: null });
+    merged[0] = [];
+    merged.nextVersion = tmp2;
+    merged.state = merged.emptyState();
+    if (typeof SecondaryIndexMetadata === "function") {
+      const obj = Object.create(tmp3.prototype);
+      obj.type = "kv";
+      obj.kkvDatabase = merged;
+      obj.k1key = id;
+      obj.k2key = undefined;
+      obj.shouldIndex = shouldIndex;
+      const secondaryIndexes = tmp.secondaryIndexes;
+      secondaryIndexes.push(obj);
+      return merged.intoKV();
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let obj = Object.create(KKVDatabase.prototype);
-  obj[0] = [];
-  obj.nextVersion = this.nextVersion;
-  obj.state = obj.emptyState();
-  if (typeof SecondaryIndexMetadata !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(SecondaryIndexMetadata.prototype);
-  obj.type = "kv";
-  obj.kkvDatabase = obj;
-  obj.k1key = id;
-  obj.k2key = undefined;
-  obj.shouldIndex = arg1;
-  const secondaryIndexes = this.secondaryIndexes;
-  secondaryIndexes.push(obj);
-  return obj.intoKV();
 };
 prototype3["addSecondaryKKVIndex"] = function addSecondaryKKVIndex(k1key, k2key, shouldIndex) {
-  if (typeof KKVDatabase !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof KKVDatabase === "function") {
+    const merged = Object.assign({ secondaryIndexes: null });
+    merged[0] = [];
+    merged.nextVersion = tmp2;
+    merged.state = merged.emptyState();
+    if (typeof SecondaryIndexMetadata === "function") {
+      const obj = Object.create(tmp3.prototype);
+      obj.type = "kkv";
+      obj.kkvDatabase = merged;
+      obj.k1key = k1key;
+      obj.k2key = k2key;
+      obj.shouldIndex = shouldIndex;
+      const secondaryIndexes = tmp.secondaryIndexes;
+      secondaryIndexes.push(obj);
+      return merged;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let obj = Object.create(KKVDatabase.prototype);
-  obj[0] = [];
-  obj.nextVersion = this.nextVersion;
-  obj.state = obj.emptyState();
-  if (typeof SecondaryIndexMetadata !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(SecondaryIndexMetadata.prototype);
-  obj.type = "kkv";
-  obj.kkvDatabase = obj;
-  obj.k1key = k1key;
-  obj.k2key = k2key;
-  obj.shouldIndex = shouldIndex;
-  const secondaryIndexes = this.secondaryIndexes;
-  secondaryIndexes.push(obj);
-  return obj;
 };
 prototype3["intoKV"] = function intoKV(arg0) {
   let str = arg0;
   if (arg0 == null) {
     str = "0";
   }
-  if (typeof KVDatabase !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof KVDatabase === "function") {
+    const self = this;
+    const obj = Object.create(tmp.prototype);
+    obj.kkvDatabase = this;
+    obj.partition = str;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(KVDatabase.prototype);
-  obj.kkvDatabase = this;
-  obj.partition = str;
-  return obj;
 };
 prototype3["version"] = function version() {
   return this.state.version;
@@ -205,7 +210,6 @@ prototype3["getManyRecords"] = function getManyRecords(guildId, selectedRoleIds)
     while (tmp4 !== undefined) {
       let tmp8 = tmp.root[tmp6];
       if (null != tmp8) {
-        let tmp10 = tmp8;
         let arr = items.push(tmp9);
       }
       continue;
@@ -256,22 +260,19 @@ prototype3["mapPartitions"] = function mapPartitions(toSerializedPartition) {
   const items = [];
   const root = this.state.root;
   for (const key10008 in root) {
-    let tmp = key10008;
-    let obj = { partitionKey: null, values: null };
-    obj[0] = key10008;
-    obj[1] = arg0(root[key10008].root, key10008);
+    let obj = { partitionKey: key10008, values: arg0(root[key10008].root, key10008) };
     let arr = items.push(obj);
     continue;
   }
   return items;
 };
-prototype3["memoizedPartition"] = function memoizedPartition(arg0) {
+prototype3["memoizedPartition"] = function memoizedPartition(fn, arg1) {
   const self = this;
-  closure_1 = arg0;
+  closure_1 = fn;
   let tmp = arg1;
   closure_2 = Symbol();
   if (undefined === arg1) {
-    tmp = arg0("", {});
+    tmp = fn("", {});
   }
   closure_0 = tmp;
   return (arg0) => {
@@ -281,9 +282,10 @@ prototype3["memoizedPartition"] = function memoizedPartition(arg0) {
       const memoized = tmp.derived.memoized;
       let tmp3 = memoized[closure_2];
       const _Object = Object;
+      hasOwnProperty = Object.hasOwnProperty;
       const call = hasOwnProperty.call;
       if (!(typeof call === "unknown" ? hasOwnProperty(closure_2) : call(memoized, closure_2))) {
-        const tmp6 = callback(arg0, tmp.root);
+        const tmp6 = closure_1(arg0, tmp.root);
         memoized[tmp2] = tmp6;
         tmp3 = tmp6;
       }
@@ -291,14 +293,14 @@ prototype3["memoizedPartition"] = function memoizedPartition(arg0) {
     }
   };
 };
-prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partition, arg1, arg2) {
+prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partition, fn, arg2) {
   const self = this;
   closure_1 = partition;
-  closure_2 = arg1;
+  closure_2 = fn;
   let tmp = arg2;
   closure_3 = Symbol();
   if (undefined === arg2) {
-    tmp = arg1(self);
+    tmp = fn(closure_4);
   }
   closure_0 = tmp;
   return () => {
@@ -308,9 +310,10 @@ prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partiti
       const memoized = tmp.derived.memoized;
       let tmp3 = memoized[closure_3];
       const _Object = Object;
+      hasOwnProperty = Object.hasOwnProperty;
       const call = hasOwnProperty.call;
       if (!(typeof call === "unknown" ? hasOwnProperty(closure_3) : call(memoized, closure_3))) {
-        const tmp6 = callback(tmp.root);
+        const tmp6 = closure_2(tmp.root);
         memoized[tmp2] = tmp6;
         tmp3 = tmp6;
       }
@@ -325,9 +328,10 @@ prototype3["memoized"] = function memoized(arg0) {
   return () => {
     const memoized = self.state.derived.memoized;
     let tmp3 = memoized[closure_0];
+    hasOwnProperty = Object.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (!(typeof call === "unknown" ? hasOwnProperty(closure_0) : call(memoized, closure_0))) {
-      const tmp5 = callback(self.state.root);
+      const tmp5 = closure_1(self.state.root);
       memoized[tmp2] = tmp5;
       tmp3 = tmp5;
     }
@@ -343,8 +347,8 @@ prototype3["emptyPartitionState"] = function emptyPartitionState(nextVersionResu
     const self = this;
     nextVersionResult = this.nextVersion();
   }
-  obj[1] = nextVersionResult;
-  obj[2] = { length: 0, memoized: {} };
+  obj.version = nextVersionResult;
+  obj.derived = { length: 0, memoized: {} };
   return obj;
 };
 prototype3["clear"] = function clear() {
@@ -415,7 +419,7 @@ prototype3["updateRecord"] = function updateRecord(partitionKey, clusteringKey, 
   if (null == self.state.root[partitionKey]) {
     const _Error2 = Error;
     const _HermesInternal2 = HermesInternal;
-    error = new Error("Partition " + partitionKey + " does not exist");
+    const error = new Error("Partition " + partitionKey + " does not exist");
     throw error;
   } else if (null == self.state.root[partitionKey].root[clusteringKey]) {
     const _Error = Error;
@@ -495,56 +499,37 @@ prototype3["updateSecondaryIndexes"] = function updateSecondaryIndexes(items, it
   while (iter !== undefined) {
     let obj = nextResult;
     if (undefined !== items2) {
-      let tmp2 = items2;
       let iter2 = items2[Symbol.iterator]();
-      let tmp3 = items2;
       let nextResult1 = iter2.next();
-      let tmp5 = iter2;
       while (iter2 !== undefined) {
-        let tmp6 = nextResult;
         let k1Key = obj.getK1Key(nextResult1);
         let tmp8 = k1Key;
         let k2Key = obj.getK2Key(nextResult1);
         let tmp10 = null != k1Key;
         if (tmp10) {
-          let tmp11 = k2Key;
           tmp10 = null != k2Key;
         }
         if (tmp10) {
-          let tmp12 = nextResult;
           let kkvDatabase = obj.kkvDatabase;
-          let tmp13 = k1Key;
-          let tmp14 = k2Key;
           let removeRecordResult = kkvDatabase.removeRecord(tmp8, k2Key, nextVersionResult);
         }
         continue;
       }
     }
     if (undefined !== items) {
-      let tmp16 = items;
       let iter3 = items[Symbol.iterator]();
-      let tmp17 = items;
       let nextResult2 = iter3.next();
-      let tmp19 = iter3;
       while (iter3 !== undefined) {
-        let tmp21 = nextResult;
         let tmp20 = nextResult2;
         let k1Key1 = obj.getK1Key(nextResult2);
         let tmp23 = k1Key1;
         let k2Key1 = obj.getK2Key(nextResult2);
         let tmp25 = null != k1Key1;
         if (tmp25) {
-          let tmp26 = k2Key1;
           tmp25 = null != k2Key1;
         }
         if (tmp25) {
-          let tmp27 = nextResult;
           let kkvDatabase2 = obj.kkvDatabase;
-          let tmp28 = k1Key1;
-          let tmp29 = k2Key1;
-          let tmp30 = nextResult2;
-          let tmp31 = kkvDatabase2;
-          let tmp32 = nextVersionResult;
           let setRecordResult = kkvDatabase2.setRecord(tmp23, k2Key1, tmp20, nextVersionResult);
         }
         continue;
@@ -553,10 +538,11 @@ prototype3["updateSecondaryIndexes"] = function updateSecondaryIndexes(items, it
     continue;
   }
 };
+const Store = fn(504).Store;
 class LibdiscoreStore extends Store {
   constructor(arg0) {
-    str = arg1;
-    if (arg1 === undefined) {
+    str = fn;
+    if (fn === undefined) {
       str = "typescript";
     }
     closure_0 = undefined;
@@ -568,11 +554,11 @@ class LibdiscoreStore extends Store {
         tmp11 = key10008;
         closure_0 = arg0[key10008];
         fn = (arg0) => {
-          if (lib.wrappedState == null) {
+          if (require.wrappedState == null) {
             obj.wrappedState = obj.stateWrapper();
           }
-          lib(arg0, lib.wrappedState);
-          if (lib._nextVersion === lib._nextVersion) {
+          closure_0(arg0, require.wrappedState);
+          if (require._nextVersion === require._nextVersion) {
             return false;
           }
         };
@@ -582,8 +568,7 @@ class LibdiscoreStore extends Store {
     } else {
       str2 = "typescript-libdiscore-dual-read";
     }
-    tmp3 = new tmp3(require("dispatcher"), obj, tmp12, tmp4, fn, obj, new.target);
-    // ThrowIfThisInitialized (0x7c)
+    tmp3 = new tmp3(closure_1(closure_2[2]), obj, tmp12, tmp4, fn, obj, new.target);
     tmp3._nextVersion = 0;
     map = new Map();
     tmp3.recordCreators = map;
@@ -619,14 +604,13 @@ prototype4["connectWithLibdiscore"] = function connectWithLibdiscore(FLUX_API) {
   const self = this;
   if ("typescript" === this.mode) {
     const _Error = Error;
-    error = new Error("connectWithLibdiscore should not be called in TypeScript mode.");
+    const error = new Error("connectWithLibdiscore should not be called in TypeScript mode.");
     throw error;
   } else {
-    const obj = { storeName: null, databases: null };
-    obj[0] = self.getName();
+    const obj = { storeName: self.getName(), databases: null };
     const _Object = Object;
     const keys = Object.keys(self.state.databases);
-    obj[1] = keys.map((name) => ({ name, type: "kkv" }));
+    obj.databases = keys.map((name) => ({ name, type: "kkv" }));
     const connectStoreResult = FLUX_API.connectStore(obj);
     self.applyChanges(connectStoreResult.initialState);
     if ("typescript-libdiscore-dual-read" === self.mode) {
@@ -636,75 +620,59 @@ prototype4["connectWithLibdiscore"] = function connectWithLibdiscore(FLUX_API) {
   }
 };
 prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
-  let self = this;
-  self = this;
+  const self = this;
   closure_2 = Symbol("didValidatePartition");
-  closure_0 = { root: {}, derived: { length: 0, memoized: {} } };
+  let obj = { root: {}, derived: { length: 0, memoized: {} } };
   this.addChangeListener(() => {
     const shadowDatabases = self.shadowDatabases;
     if (null != shadowDatabases) {
       if (!tmp.dualReadValidationDisabled) {
         for (const key10013 in tmp.state.databases) {
-          let tmp8 = key10013;
           let obj2 = _self;
           let obj3 = _self.state.databases[key10013];
           let obj4 = shadowDatabases[key10013];
           if (null == obj4) {
-            let tmp6 = closure_1_5;
             let _HermesInternal2 = HermesInternal;
-            let warnResult = closure_1_5.warn("Shadow database " + key10013 + " not found for dual-read validation");
+            let warnResult = logger.warn("Shadow database " + key10013 + " not found for dual-read validation");
             continue;
           } else {
-            let callback = obj3.getAllPartitions();
-            let _self = obj4.getAllPartitions();
-            let tmp3 = callback;
-            let tmp4 = table;
-            let obj = callback(table[3]);
+            let allPartitions = obj3.getAllPartitions();
+            _self = obj4.getAllPartitions();
+            obj = obj(closure_2[3]);
             let _HermesInternal = HermesInternal;
-            let result = obj.runDualReadValidation("" + obj2.getName() + ":" + key10013, "Kkv", (arg0) => {
-              const keys = Object.keys(table);
-              const keys1 = Object.keys(table2);
+            let result = obj.runDualReadValidation("" + obj2.getName() + ":" + key10013, "Kkv", (fn) => {
+              const keys = Object.keys(closure_0);
+              const keys1 = Object.keys(closure_1);
               const iter = keys[Symbol.iterator]();
               const nextResult = iter.next();
               while (iter !== undefined) {
-                let tmp5 = table;
-                let tmp6 = table[nextResult];
+                let tmp6 = closure_0[nextResult];
                 let _Object = Object;
+                hasOwnProperty = Object.prototype.hasOwnProperty;
                 let call = hasOwnProperty.call;
-                let tmp7 = table2;
+                let tmp7 = closure_1;
                 let tmp4 = nextResult;
-                let tmp8 = table2;
+                let tmp8 = closure_1;
                 if (typeof call === "unknown" ? hasOwnProperty(nextResult) : call(tmp7, nextResult)) {
-                  let tmp12 = tmp7;
-                  let tmp13 = nextResult;
                   let tmp14 = tmp8[tmp4];
                   let tmp15 = tmp14;
-                  let tmp16 = tmp6;
-                  let tmp17 = closure_1_2;
-                  let tmp18 = tmp6.derived.memoized[closure_1_2];
-                  let tmp20 = tmp14.derived.memoized[closure_1_2];
+                  let tmp17 = closure_2;
+                  let tmp18 = tmp6.derived.memoized[closure_2];
                   if (null == tmp18) {
-                    let tmp23 = tmp6;
-                    let tmp24 = tmp14;
-                    let tmp25 = arg0(tmp6, tmp15);
-                    let obj = {};
+                    let tmp25 = fn(tmp6, tmp15);
+                    obj = {};
                     tmp6.derived.memoized[tmp17] = obj;
                     tmp15.derived.memoized[tmp17] = obj;
-                  } else {
-                    let tmp21 = tmp18;
-                    let tmp22 = tmp20;
                   }
                 } else {
-                  let tmp9 = tmp6;
-                  let tmp10 = table;
-                  let tmp11 = arg0(tmp6, table);
+                  let tmp11 = fn(tmp6, obj);
                 }
                 continue;
               }
               for (const item10064 of keys1) {
                 let _Object2 = Object;
                 let call2 = hasOwnProperty2.call;
-                let tmp27 = table;
+                let tmp27 = closure_0;
                 let tmp26 = item10064;
                 if (typeof call2 === "unknown") {
                   let hasOwnProperty2Result = hasOwnProperty2(item10064);
@@ -712,11 +680,7 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
                   hasOwnProperty2Result = call2(tmp27, item10064);
                 }
                 if (!hasOwnProperty2Result) {
-                  let tmp29 = table2;
-                  let tmp30 = table2;
-                  let tmp31 = item10064;
-                  let tmp32 = table;
-                  let tmp33 = arg0(table, table2[tmp26]);
+                  let tmp33 = arg0(obj, closure_1[tmp26]);
                 }
                 continue;
               }
@@ -731,78 +695,79 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
 };
 prototype4["addKKVDatabase"] = function addKKVDatabase(guildStickers, createGuildRoleRecordFromRust) {
   const self = this;
-  const nextVersion = this.nextVersion;
-  if (typeof KKVDatabase !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  let tmp3 = createGuildRoleRecordFromRust;
-  let obj = Object.create(tmp.prototype);
-  obj[0] = [];
-  obj.nextVersion = nextVersion.bind(this);
-  obj.state = obj.emptyState();
-  self.state.databases[guildStickers] = obj;
-  const recordCreators = self.recordCreators;
-  let tmp4 = createGuildRoleRecordFromRust;
-  if (createGuildRoleRecordFromRust == null) {
-    tmp4 = identity;
-  }
-  const result = recordCreators.set(guildStickers, tmp4);
-  if (null != self.shadowDatabases) {
-    const nextVersion2 = self.nextVersion;
-    if (typeof tmp !== "function") {
-      HermesBuiltin.throwTypeError();
+  if (typeof KKVDatabase === "function") {
+    let tmp4 = createGuildRoleRecordFromRust;
+    const merged = Object.assign({ secondaryIndexes: null });
+    merged[0] = [];
+    merged.nextVersion = tmp2;
+    merged.state = merged.emptyState();
+    self.state.databases[guildStickers] = merged;
+    const recordCreators = self.recordCreators;
+    let tmp6 = createGuildRoleRecordFromRust;
+    if (createGuildRoleRecordFromRust == null) {
+      tmp6 = identity;
     }
-    obj = Object.create(tmp.prototype);
-    obj[0] = [];
-    obj.nextVersion = nextVersion2.bind(self);
-    obj.state = obj.emptyState();
-    self.shadowDatabases[guildStickers] = obj;
-    const shadowRecordCreators = self.shadowRecordCreators;
-    if (tmp3 == null) {
-      tmp3 = identity;
+    const result = recordCreators.set(guildStickers, tmp6);
+    if (null != self.shadowDatabases) {
+      const nextVersion = self.nextVersion;
+      if (typeof tmp === "function") {
+        const merged1 = Object.assign({ secondaryIndexes: null });
+        merged1[0] = [];
+        merged1.nextVersion = tmp8;
+        merged1.state = merged1.emptyState();
+        self.shadowDatabases[guildStickers] = merged1;
+        const shadowRecordCreators = self.shadowRecordCreators;
+        if (tmp4 == null) {
+          tmp4 = identity;
+        }
+        const result1 = shadowRecordCreators.set(guildStickers, tmp4);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     }
-    const result1 = shadowRecordCreators.set(guildStickers, tmp3);
-    const bindResult1 = nextVersion2.bind(self);
+    return merged;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return obj;
+  tmp = KKVDatabase;
 };
 prototype4["addKVDatabase"] = function addKVDatabase(guilds, createGuildRecordFromRust) {
   const self = this;
-  const nextVersion = this.nextVersion;
-  if (typeof KKVDatabase !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  let tmp3 = createGuildRecordFromRust;
-  let obj = Object.create(tmp.prototype);
-  obj[0] = [];
-  obj.nextVersion = nextVersion.bind(this);
-  obj.state = obj.emptyState();
-  self.state.databases[guilds] = obj;
-  const recordCreators = self.recordCreators;
-  let tmp5 = createGuildRecordFromRust;
-  const bindResult = nextVersion.bind(this);
-  if (createGuildRecordFromRust == null) {
-    tmp5 = identity;
-  }
-  const result = recordCreators.set(guilds, tmp5);
-  if (null != self.shadowDatabases) {
-    const nextVersion2 = self.nextVersion;
-    if (typeof tmp !== "function") {
-      HermesBuiltin.throwTypeError();
+  if (typeof KKVDatabase === "function") {
+    let tmp4 = createGuildRecordFromRust;
+    const merged = Object.assign({ secondaryIndexes: null });
+    merged[0] = [];
+    merged.nextVersion = tmp2;
+    merged.state = merged.emptyState();
+    self.state.databases[guilds] = merged;
+    const recordCreators = self.recordCreators;
+    let tmp7 = createGuildRecordFromRust;
+    if (createGuildRecordFromRust == null) {
+      tmp7 = identity;
     }
-    obj = Object.create(tmp.prototype);
-    obj[0] = [];
-    obj.nextVersion = nextVersion2.bind(self);
-    obj.state = obj.emptyState();
-    self.shadowDatabases[guilds] = obj;
-    const shadowRecordCreators = self.shadowRecordCreators;
-    if (tmp3 == null) {
-      tmp3 = identity;
+    const result = recordCreators.set(guilds, tmp7);
+    if (null != self.shadowDatabases) {
+      const nextVersion = self.nextVersion;
+      if (typeof tmp === "function") {
+        const merged1 = Object.assign({ secondaryIndexes: null });
+        merged1[0] = [];
+        merged1.nextVersion = tmp9;
+        merged1.state = merged1.emptyState();
+        self.shadowDatabases[guilds] = merged1;
+        const shadowRecordCreators = self.shadowRecordCreators;
+        if (tmp4 == null) {
+          tmp4 = identity;
+        }
+        const result1 = shadowRecordCreators.set(guilds, tmp4);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
     }
-    const result1 = shadowRecordCreators.set(guilds, tmp3);
-    const bindResult1 = nextVersion2.bind(self);
+    return merged.intoKV();
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return obj.intoKV();
+  tmp = KKVDatabase;
 };
 prototype4["applyChanges"] = function applyChanges(databaseChanges) {
   const self = this;
@@ -813,7 +778,6 @@ prototype4["applyChanges"] = function applyChanges(databaseChanges) {
 };
 prototype4["clearAllDatabases"] = function clearAllDatabases() {
   for (const key10004 in this.state.databases) {
-    let tmp2 = key10004;
     let obj = tmp.state.databases[key10004];
     let clearResult = obj.clear();
     continue;
@@ -838,47 +802,31 @@ prototype4["executeDatabaseChange"] = function executeDatabaseChange(arg0, arg1)
   if (null == databases[databaseName]) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("Database " + databaseName + " does not exist");
+    const error = new Error("Database " + databaseName + " does not exist");
     throw error;
   } else {
-    const value = obj.get(databaseName);
+    value = obj.get(databaseName);
     const iter2 = opcodes[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let iter = nextResult;
       let opcode = nextResult.opcode;
       if ("removePartition" === opcode) {
-        let tmp23 = nextResult;
         let removePartitionResult = obj2.removePartition(iter.partitionKey, nextVersionResult);
       } else if ("setPartition" === opcode) {
-        let tmp17 = nextResult;
         let partition = iter.partition;
         let tmp18 = partition;
-        let tmp19 = partition;
         for (const key10048 in partition) {
-          let tmp33 = key10048;
-          let tmp34 = partition;
           tmp18[key10048] = value(tmp18[key10048]);
           continue;
         }
-        let tmp20 = nextResult;
-        let tmp21 = partition;
         let setPartitionResult = obj2.setPartition(iter.partitionKey, tmp18, nextVersionResult);
       } else if ("updateRecord" === opcode) {
-        let tmp12 = nextResult;
-        let tmp13 = obj2;
-        let tmp14 = value;
-        let tmp15 = nextVersionResult;
         let updateRecordResult = obj2.updateRecord(iter.partitionKey, iter.clusteringKey, iter.value, value, nextVersionResult);
       } else if ("setRecord" === opcode) {
-        let tmp7 = nextResult;
         let partitionKey = iter.partitionKey;
-        let tmp8 = obj2;
-        let tmp9 = partitionKey;
-        let tmp10 = nextVersionResult;
         let setRecordResult = obj2.setRecord(partitionKey, iter.clusteringKey, value(iter.value), nextVersionResult);
       } else if ("removeRecord" === opcode) {
-        let tmp5 = nextResult;
         let removeRecordResult = obj2.removeRecord(iter.partitionKey, iter.clusteringKey, nextVersionResult);
       } else if ("clearDatabase" === opcode) {
         let clearResult = obj2.clear();
@@ -892,8 +840,8 @@ prototype4["nextVersion"] = function nextVersion() {
   this._nextVersion = +this._nextVersion + 1;
   return +this._nextVersion;
 };
-let tmp2 = new timestampDefault("LibdiscoreStore");
-let result = require("set").fileFinishedImporting("modules/libdiscore/stores/LibdiscoreStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/libdiscore/stores/LibdiscoreStore.tsx");
 
 export { KVDatabase };
 export { KKVDatabase };

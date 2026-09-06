@@ -1,34 +1,30 @@
 // === Module 16803: useShouldShowExpiringTrialOfferCard ===
 
 // Module 16803 (useShouldShowExpiringTrialOfferCard)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import setDefault from "set" /* 1090 */;
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import DurationsDefault from "Durations" /* 1090 */;
 import useCountdownDefault from "useCountdown" /* 7439 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
-import closure_3 from "clearDismissUntil" /* 13722 */;
-import { NoticeTypes } from "ME" /* 1074 */;
-import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1373 */;
+import NoticeStore from "NoticeStore" /* 13722 */;
 
-require = arg1;
-let closure_6 = 10 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
+require = fn;
+const NoticeTypes = fn(1074).NoticeTypes;
+const PremiumSubscriptionSKUs = fn(1373).PremiumSubscriptionSKUs;
+let closure_6 = 10 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
 
 export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpiringTrialOfferCard() {
-  const items = [closure_3];
-  const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => noticeType.getNoticeType());
-  const obj = defaultAreStatesEqual;
+  const items = [NoticeStore];
+  const stateFromStores = useStateFromStores.useStateFromStores(items, () => noticeType.getNoticeType());
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
-  let num = 0;
-  const obj2 = usePremiumTrialOffer;
   if (null != premiumTrialOffer) {
-    num = 0;
     if (null != premiumTrialOffer.expiresAt) {
       const expiresAt = premiumTrialOffer.expiresAt;
-      num = expiresAt.getTime();
+      const num = expiresAt.getTime();
     }
   }
   let tmp5 = null != premiumTrialOffer;
-  const tmp3 = useCountdownDefault;
   if (tmp5) {
     tmp5 = null != stateFromStores;
   }
@@ -43,7 +39,7 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
     if (tmp5) {
       const _Object = Object;
       const values = Object.values(tmp3Result);
-      tmp5 = !values.every((arg0) => 0 === arg0);
+      tmp5 = !values.every((item) => 0 === item);
     }
     return tmp5;
   } else {

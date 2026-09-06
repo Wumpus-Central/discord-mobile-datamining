@@ -1,11 +1,11 @@
-// === Module 13631: pack ===
+// === Module 13631: GatewayEncoding ===
 
-// Module 13631 (pack)
-import set from "set" /* 2 */;
-import get from "get" /* 5141 */;
-import getErlpackEncoding from "getErlpackEncoding" /* 13632 */;
+// Module 13631 (GatewayEncoding)
+import ProcessArgs2 from "ProcessArgs" /* 5141 */;
+import GatewayEncodingErlpackEncoding from "GatewayEncodingErlpackEncoding" /* 13632 */;
+import size from "module_2" /* 2 */;
 
-getErlpackEncoding = getErlpackEncoding.getErlpackEncoding();
+GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding.getErlpackEncoding();
 class JSONEncoding {
 }
 const prototype = JSONEncoding.prototype;
@@ -19,7 +19,7 @@ prototype["unpack"] = function unpack(str) {
       tmp2 = typeof str;
     }
     const _HermesInternal = HermesInternal;
-    error = new Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
+    const error = new Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
     throw error;
   } else {
     const _JSON = JSON;
@@ -33,13 +33,13 @@ prototype["wantsString"] = function wantsString() {
   return true;
 };
 let tmp3 = JSONEncoding;
-if (undefined !== getErlpackEncoding) {
-  tmp3 = getErlpackEncoding;
+if (undefined !== GatewayEncodingErlpackEncoding) {
+  tmp3 = GatewayEncodingErlpackEncoding;
 }
-const ProcessArgs = get.ProcessArgs;
+const ProcessArgs = ProcessArgs2.ProcessArgs;
 if (ProcessArgs.isDiscordGatewayPlaintextSet()) {
   tmp3 = JSONEncoding;
 }
-const result = set.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
+const result = size.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
 
 export default tmp3;

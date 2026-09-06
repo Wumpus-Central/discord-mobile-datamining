@@ -1,19 +1,20 @@
-// === Module 17835: AVErrorNoInputDevicesDefinition ===
+// === Module 17835: AVErrorNoInputDevices ===
 
-// Module 17835 (AVErrorNoInputDevicesDefinition)
-import mapped from "mapped" /* 9110 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17834 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
+// Module 17835 (AVErrorNoInputDevices)
+import AVError from "AVError" /* 9110 */;
+import AVErrorContext from "AVErrorContext" /* 17834 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorNoInputDevices.tsx");
 
 export const AVErrorNoInputDevicesDefinition = {
   getActiveErrors(voiceState) {
     voiceState = voiceState.voiceState;
-    channel = channel.getChannel(voiceState.voiceChannelId);
+    const channel = ChannelStore.getChannel(voiceState.voiceChannelId);
     let isGuildStageVoiceResult;
     if (channel != null) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
@@ -25,13 +26,12 @@ export const AVErrorNoInputDevicesDefinition = {
       }
       isGuildStageVoiceResult = suppress;
     }
-    if (0 === Object.keys(inputDevices.getInputDevices()).length) {
+    if (0 === Object.keys(MediaEngineStore.getInputDevices()).length) {
       if (null != channel) {
-        if (null != mediaSessionId.getMediaSessionId()) {
+        if (null != RTCConnectionStore.getMediaSessionId()) {
           if (!isGuildStageVoiceResult) {
-            const obj = { type: null };
-            obj[0] = mapped.AVError.NO_INPUT_DEVICES;
-            const merged = Object.assign(getVoiceChannelErrorContext.getVoiceChannelErrorContext());
+            const obj = { type: AVError.AVError.NO_INPUT_DEVICES };
+            const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
             const items = [obj];
             return items;
           }

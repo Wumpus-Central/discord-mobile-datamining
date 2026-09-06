@@ -1,10 +1,10 @@
-// === Module 7128: getRoleMemberCount ===
+// === Module 7128: GuildRoleMemberCountStore ===
 
-// Module 7128 (getRoleMemberCount)
+// Module 7128 (GuildRoleMemberCountStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let closure_0 = {};
+const dependencyMap = {};
 let closure_1 = {};
 const Store = initializeDefault.Store;
 class GuildRoleMemberCountStore extends Store {
@@ -30,7 +30,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0) {
   }
 };
 GuildRoleMemberCountStore.displayName = "GuildRoleMemberCountStore";
-const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefault, {
+const guildRoleMemberCountStore = new GuildRoleMemberCountStore(DispatcherDefault, {
   GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function handleGuildRoleMemberCountFetchSuccess(guildId) {
     guildId = guildId.guildId;
     closure_0[guildId] = guildId.roleMemberCount;
@@ -90,6 +90,7 @@ const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefaul
     delete tmp2[tmp];
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/GuildRoleMemberCountStore.tsx");
 
 export default guildRoleMemberCountStore;

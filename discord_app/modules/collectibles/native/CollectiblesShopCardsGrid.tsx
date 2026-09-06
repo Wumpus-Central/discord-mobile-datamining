@@ -1,27 +1,30 @@
-// === Module 15826: ShopCardGridItem ===
+// === Module 15826: CollectiblesShopCardsGrid ===
 
-// Module 15826 (ShopCardGridItem)
-import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 8764 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "updateCategoriesAndProducts" /* 7542 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15826 (CollectiblesShopCardsGrid)
+import _modDef12 from "module_12" /* 12 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8764 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8767 */;
+import noop from "module_19" /* 19 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
 
-const require = arg1;
+require = fn;
 function ShopCardGridItem(index) {
   index = index.index;
   const items = [index];
   ({ product, cardWidth, preferVCPrice, unpublishedAt, disableBundleStaticBackground, muteBundleStaticBackground } = index);
-  const memo = React.useMemo(() => ({ tilePosition: index }), items);
-  return jsx(index(8767).CollectiblesAnalyticsProvider, { newValue: memo, children: jsx(CollectiblesShopCardInternalV2Default, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground }) });
+  const memo = noop.useMemo(() => ({ tilePosition: index }), items);
+  return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { newValue: memo, children: jsx(CollectiblesShopCardV2Default, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground }) });
 }
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-createCacheKey = { rowContainer: null };
-createCacheKey = { flexDirection: "row", gap: require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_GAP };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { rowContainer: null };
+createStyles = { flexDirection: "row", gap: fn(8764).COLLECTIBLES_SHOP_CARD_GAP };
+createStyles.rowContainer = createStyles;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
 
 export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   const products = accessibilityLabel.products;
@@ -29,42 +32,39 @@ export default function CollectiblesShopCardsGrid(accessibilityLabel) {
   if (scrollEnabled === undefined) {
     scrollEnabled = false;
   }
-  ({ disableBundleStaticBackground: closure_3, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
-  closure_5 = undefined;
-  let columns;
-  let cardWidth;
+  ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
-  closure_5 = callback();
+  const rowContainer = closure_8();
   let obj = products(15825);
   const cardLayout = obj.useCardLayout();
-  columns = cardLayout.columns;
-  cardWidth = cardLayout.cardWidth;
+  const columns = cardLayout.columns;
+  const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
-  const memo = React.useMemo(() => closure_1_1(closure_1_2[8]).chunk(products, columns), items);
+  const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   obj = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
   obj = { gap: products(8764).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
-  obj[5] = obj;
-  obj[6] = memo.map((arr) => {
-    closure_0 = arg1;
-    return cardWidth(closure_1_4, {
+  obj.contentContainerStyle = obj;
+  obj.children = memo.map((arr, index) => {
+    closure_0 = index;
+    return cardWidth(muteBundleStaticBackground, {
       style: rowContainer.rowContainer,
-      children: arr.map((product) => {
-        let categoryForProduct = closure_1_1;
-        if (closure_1_1 == null) {
-          categoryForProduct = columns.getCategoryForProduct(product.skuId);
+      children: arr.map((product, index) => {
+        let categoryForProduct = importDefault;
+        if (importDefault == null) {
+          categoryForProduct = CollectiblesCategoryStore.getCategoryForProduct(product.skuId);
         }
-        const obj = { product, index: closure_0 * closure_1_6 + arg1, cardWidth: closure_1_7, unpublishedAt: null, preferVCPrice: null, disableBundleStaticBackground: null, muteBundleStaticBackground: null };
+        const obj = { product, index: closure_0 * columns + index, cardWidth, unpublishedAt: null, preferVCPrice: null, disableBundleStaticBackground: null, muteBundleStaticBackground: null };
         let unpublishedAt;
         if (categoryForProduct != null) {
           unpublishedAt = categoryForProduct.unpublishedAt;
         }
-        obj[3] = unpublishedAt;
-        obj[4] = closure_1_2;
-        obj[5] = closure_1_3;
-        obj[6] = closure_1_4;
-        return cardWidth(closure_2_9, obj, product.skuId);
+        obj.unpublishedAt = unpublishedAt;
+        obj.preferVCPrice = preferVCPrice;
+        obj.disableBundleStaticBackground = disableBundleStaticBackground;
+        obj.muteBundleStaticBackground = muteBundleStaticBackground;
+        return <ShopCardGridItem key={arg0.skuId} product={arg0} index={closure_0 * columns + arg1} cardWidth={cardWidth} unpublishedAt={null} preferVCPrice={null} disableBundleStaticBackground={null} muteBundleStaticBackground={null} />;
       })
-    }, arg1);
+    }, index);
   });
-  return cardWidth(closure_5, obj);
+  return cardWidth(rowContainer, obj);
 };

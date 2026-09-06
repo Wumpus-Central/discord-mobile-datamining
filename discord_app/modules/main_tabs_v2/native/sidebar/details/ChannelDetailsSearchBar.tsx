@@ -1,19 +1,22 @@
-// === Module 16626: ? ===
+// === Module 16626: ChannelDetailsSearchBar ===
 
-// Module 16626
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "prototype" /* 12339 */;
-import { setIsChannelDetailsSearchActive as closure_5 } from "useChannelDetailsStore" /* 7876 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16626 (ChannelDetailsSearchBar)
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12361 */;
+import noop from "module_19" /* 19 */;
+import SearchQueryStore from "SearchQueryStore" /* 12339 */;
 
-const require = arg1;
-let c3 = importAllResult;
+const require = fn;
+let closure_5 = fn(7876).setIsChannelDetailsSearchActive;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { back: null };
-obj = { justifyContent: "center", height: require("SEARCH_BAR_HEIGHT").SEARCH_BAR_HEIGHT, paddingStart: require("ChannelDetailsNavigatorScreens").CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
-obj[0] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, ref) => {
+obj = { justifyContent: "center", height: fn(12370).SEARCH_BAR_HEIGHT, paddingStart: fn(10916).CHANNEL_DETAILS_MARGIN, paddingEnd: 8 };
+obj.back = obj;
+let closure_7 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
+
+export default noop.memo(noop.forwardRef((channelId, ref) => {
   channelId = channelId.channelId;
   const onBackPress = channelId.onBackPress;
   let flag = channelId.showBackButton;
@@ -23,26 +26,24 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   }
   let channelDetailsSearchContext;
   let callback;
-  let callback1;
   let obj = channelId(channelDetailsSearchContext[7]);
   channelDetailsSearchContext = obj.useChannelDetailsSearchContext(channelId, guildId);
   const items = [channelId, channelDetailsSearchContext];
   const effect = callback.useEffect(() => () => {
-    let obj = closure_1_1(closure_1_2[8]);
-    obj = { searchContext: closure_2 };
+    onBackPress(channelDetailsSearchContext[8]);
+    const obj = { searchContext };
     obj.trackSearchClosed(obj);
   }, items);
   const items1 = [channelDetailsSearchContext];
   callback = callback.useCallback(() => {
-    if (!callback1.isInitialSearchQuery(channelDetailsSearchContext)) {
-      onBackPress(channelDetailsSearchContext[9]).updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
-      const obj = onBackPress(channelDetailsSearchContext[9]);
+    if (!SearchQueryStore.isInitialSearchQuery(channelDetailsSearchContext)) {
+      SearchPlatformActionCreatorsDefault.updateSearchQuery(channelDetailsSearchContext, (reset) => reset.reset());
     }
   }, items1);
   const items2 = [channelId, callback];
-  callback1 = callback.useCallback(() => {
+  const callback1 = callback.useCallback(() => {
     callback();
-    closure_1_5(channelId, false, "action");
+    closure_5(channelId, false, "action");
   }, items2);
   const items3 = [onBackPress, callback1, callback];
   const callback2 = callback.useCallback(() => {
@@ -55,19 +56,14 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   }, items3);
   obj = { ref, searchContext: channelDetailsSearchContext, onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed, backButton: null };
   let tmp9Result = null;
-  const tmp = callback();
+  const tmp = closure_7();
   if (flag) {
-    obj = { accessibilityRole: "button", onPress: null, style: null, accessibilityLabel: null, children: null };
-    obj[1] = callback2;
-    obj[2] = tmp.back;
+    obj = { accessibilityRole: "button", onPress: callback2, style: tmp.back, accessibilityLabel: null, children: null };
     const intl = tmp2(tmp3[12]).intl;
-    obj[3] = intl.string(tmp2(tmp3[12]).t["13/7kX"]);
-    obj[4] = tmp9(tmp2(tmp3[13]).ChevronLargeLeftIcon, { size: "sm", color: "interactive-text-default" });
+    obj.accessibilityLabel = intl.string(tmp2(tmp3[12]).t["13/7kX"]);
+    obj.children = tmp9(tmp2(tmp3[13]).ChevronLargeLeftIcon, { size: "sm", color: "interactive-text-default" });
     tmp9Result = tmp9(tmp2(tmp3[11]).PressableOpacity, obj);
   }
-  obj[5] = tmp9Result;
+  obj.backButton = tmp9Result;
   return jsx(onBackPress(channelDetailsSearchContext[10]), { ref, searchContext: channelDetailsSearchContext, onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed, backButton: null });
 }));
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
-
-export default memoResult;

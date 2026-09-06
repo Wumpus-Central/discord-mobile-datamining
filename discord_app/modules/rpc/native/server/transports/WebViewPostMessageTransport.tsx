@@ -1,16 +1,16 @@
-// === Module 9550: ? ===
+// === Module 9550: WebViewPostMessageTransport ===
 
-// Module 9550
-import timestampDefault from "timestamp" /* 3 */;
+// Module 9550 (WebViewPostMessageTransport)
+import LoggerDefault from "Logger" /* 3 */;
 import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9551 */;
-import loggerDefault from "logger" /* 9562 */;
-import importDefaultResult from "map" /* 9552 */;
+import WebViewWindowProxySocketFactoryDefault from "WebViewWindowProxySocketFactory" /* 9562 */;
+import PostMessageTransport from "PostMessageTransport" /* 9552 */;
 
-importDefaultResult = new importDefaultResult(require("validateSocketClient").validateSocketClient, new timestampDefault("RPCServer:PostMessage"), loggerDefault, (arg0, info, id) => {
+PostMessageTransport = new PostMessageTransport(fn(9558).validateSocketClient, new LoggerDefault("RPCServer:PostMessage"), WebViewWindowProxySocketFactoryDefault, (arg0, info, id) => {
   const combined = "Socket Message: " + id.id;
   info.info(combined, stripSensitiveLoggingDataDefault(arg0));
 });
-const tmp2 = new timestampDefault("RPCServer:PostMessage");
-const result = require("set").fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
 
-export default importDefaultResult;
+export default PostMessageTransport;

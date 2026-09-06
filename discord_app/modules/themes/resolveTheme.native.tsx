@@ -1,34 +1,35 @@
 // === Module 1227: resolveTheme ===
 
 // Module 1227 (resolveTheme)
-import getToken from "getToken" /* 7668 */;
-import closure_2 from "reset" /* 1228 */;
-import closure_3 from "initialize" /* 1184 */;
-import closure_4 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import closure_5 from "handleConnectionClosedOrResumed" /* 1221 */;
-import SystemThemeState from "SystemThemeState" /* 1186 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7668 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
-({ PROTO_THEME_MAP_MOBILE_REFRESH: closure_6, SystemTheme: error, SystemThemeState: closure_8 } = SystemThemeState);
-const result = require("set").fileFinishedImporting("modules/themes/resolveTheme.native.tsx");
+require = fn;
+const ThemeConstants = fn(1186);
+({ PROTO_THEME_MAP_MOBILE_REFRESH: metroRequire, SystemTheme: closure_7, SystemThemeState: closure_8 } = ThemeConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/themes/resolveTheme.native.tsx");
 
 export default function resolveTheme(arg0, arg1) {
-  previewTheme = previewTheme.getPreviewTheme();
+  const previewTheme = CustomThemeMobileStore.getPreviewTheme();
   if (undefined !== previewTheme) {
     return previewTheme.baseTheme;
   } else {
     if (!obj6.isAuthenticated()) {
       if (arg0 !== constants.NO_PREFERENCE) {
         let tmp17Result = tmp17(1229);
-        return tmp17Result.resolveThemeWithCustomSettings(arg1[arg0], previewTheme.getCustomTheme());
+        return tmp17Result.resolveThemeWithCustomSettings(arg1[arg0], CustomThemeMobileStore.getCustomTheme());
       }
     }
-    appearanceSettings = appearanceSettings.getAppearanceSettings();
+    const appearanceSettings = SelectivelySyncedUserSettingsStore.getAppearanceSettings();
     let theme;
     if (appearanceSettings != null) {
       theme = appearanceSettings.theme;
     }
-    const appearance = settings.settings.appearance;
+    const appearance = UserSettingsProtoStore.settings.appearance;
     if (null != appearanceSettings) {
       const clientThemeSettings2 = appearanceSettings.clientThemeSettings;
       let prop;
@@ -60,9 +61,9 @@ export default function resolveTheme(arg0, arg1) {
         }
         return themeWithCustomSettings;
       }
-      themeWithCustomSettings = tmp17(1229).resolveThemeWithCustomSettings(table[theme1], customUserThemeSettings);
+      themeWithCustomSettings = tmp17(1229).resolveThemeWithCustomSettings(timestampProducer[theme1], customUserThemeSettings);
       const tmp17Result2 = tmp17(1229);
     }
-    obj6 = getToken;
+    obj6 = AuthenticationUtils;
   }
 };

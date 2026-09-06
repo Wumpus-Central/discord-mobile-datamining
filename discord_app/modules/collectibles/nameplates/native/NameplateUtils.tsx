@@ -1,18 +1,17 @@
-// === Module 8819: getNameplateAssets ===
+// === Module 8819: NameplateUtils ===
 
-// Module 8819 (getNameplateAssets)
-import set from "set" /* 2 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1883 */;
+// Module 8819 (NameplateUtils)
+import CollectiblesAssetUtils from "CollectiblesAssetUtils" /* 1883 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
 
 export const getNameplateAssets = function getNameplateAssets(nameplate) {
   const skuId = nameplate.skuId;
   let obj = { staticImageUrl: null, animatedImageUrl: null };
-  obj = { skuId, assetFormat: parseSkuIdFromServerData.CollectiblesItemAssetFormat.STATIC };
-  obj[0] = parseSkuIdFromServerData.getCollectiblesItemAssetUrl(obj);
-  const obj2 = parseSkuIdFromServerData;
-  obj = { skuId, assetFormat: parseSkuIdFromServerData.CollectiblesItemAssetFormat.ANIMATED };
-  obj[1] = parseSkuIdFromServerData.getCollectiblesItemAssetUrl(obj);
+  obj = { skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
+  obj.staticImageUrl = CollectiblesAssetUtils.getCollectiblesItemAssetUrl(obj);
+  obj = { skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.ANIMATED };
+  obj.animatedImageUrl = CollectiblesAssetUtils.getCollectiblesItemAssetUrl(obj);
   return obj;
 };

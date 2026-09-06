@@ -1,46 +1,47 @@
 // === Module 12374: useEventsButtonProps ===
 
 // Module 12374 (useEventsButtonProps)
-import useGuildEventsDefault from "useGuildEvents" /* 9662 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "generateOldThreadCutoff" /* 4575 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { ReadStateTypes } from "ReadStateTypes" /* 4742 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import useGuildScheduledEventsDefault from "useGuildScheduledEvents" /* 9662 */;
+import noop from "module_19" /* 19 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
+require = fn;
+const ReadStateTypes = fn(4742).ReadStateTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
 export default function useEventsButtonProps(id) {
-  const _require = id;
-  let obj = _require(504);
-  const items = [closure_4];
+  _require = id;
+  let obj = require("initialize");
+  const items = [ReadStateStore];
   const items1 = [id.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: ReadStateStore.hasUnread(user.id, ReadStateTypes.GUILD_EVENT), mentionCount: ReadStateStore.getMentionCount(user.id, ReadStateTypes.GUILD_EVENT) }), items1);
   ({ hasUnread, mentionCount } = stateFromStoresObject);
-  const items2 = [closure_5];
-  const eventsMuted = _require(504).useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
-  const arr4 = useGuildEventsDefault(id.id);
+  const items2 = [UserGuildSettingsStore];
+  const eventsMuted = require("initialize").useStateFromStores(items2, () => UserGuildSettingsStore.isMuteScheduledEventsEnabled(user.id));
+  const arr4 = useGuildScheduledEventsDefault(id.id);
   const items3 = [id];
   const items4 = [id.id];
-  const handlePress = React.useCallback(() => {
-    if (obj.shouldShowMembershipVerificationGate(id.id)) {
-      let tmpResult = tmp(tmp2[7]);
+  const handlePress = noop.useCallback(() => {
+    if (obj.shouldShowMembershipVerificationGate(user.id)) {
+      let tmpResult = tmp(5569);
       let result = tmpResult.openMemberVerificationModal(tmp3.id);
     } else {
-      tmpResult = tmp(tmp2[8]);
+      tmpResult = tmp(9698);
       result = tmpResult.openGuildEventListActionSheet(tmp3);
     }
     return result;
   }, items3);
-  const handleLongPress = React.useCallback(() => {
-    let obj = closure_1_1(closure_1_2[9]);
-    obj = { guildId: id.id };
-    obj.openLazy(id(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "UpcomingEventsLongPress-" + id.id, obj);
+  const handleLongPress = noop.useCallback(() => {
+    const obj = { guildId: user.id };
+    obj.openLazy(asyncRequireImpl(12375, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, obj);
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1114).intl;
-    obj = { number: null };
-    obj[0] = arr4.length;
+    obj = { number: arr4.length };
     let name = intl2.formatToPlainString(tmp(1114).t.IBdqSu, obj);
   } else {
     const intl = tmp(1114).intl;

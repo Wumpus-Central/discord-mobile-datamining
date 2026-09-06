@@ -1,32 +1,34 @@
 // === Module 13557: useOutboundPromotionRedemptionEndDate ===
 
 // Module 13557 (useOutboundPromotionRedemptionEndDate)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "module_30" /* 30 */;
-import importDefaultResult from "hooks" /* 4153 */;
+import DateUtils from "DateUtils" /* 4242 */;
+import noop from "module_19" /* 19 */;
+import hooks from "module_4153" /* 4153 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");
+require = fn;
+let closure_4 = hooks.duration(30, "days");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/hooks/useOutboundPromotionRedemptionEndDate.tsx");
 
 export default function useOutboundPromotionRedemptionEndDate(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const items = [arg0, arg1];
-  return React.useMemo(() => {
-    let tmp = closure_1_2;
-    lib(closure_1_2[2]);
-    if (callback) {
-      let outboundRedemptionEndDate = lib;
-      if (null != lib.outboundRedemptionEndDate) {
-        tmp = callback(tmp[1]);
+  return noop.useMemo(() => {
+    let tmp = dependencyMap;
+    DateUtils;
+    if (closure_1) {
+      let outboundRedemptionEndDate = closure_0;
+      if (null != closure_0.outboundRedemptionEndDate) {
+        tmp = hooks;
         outboundRedemptionEndDate = outboundRedemptionEndDate.outboundRedemptionEndDate;
         let addResult = tmp(outboundRedemptionEndDate);
       } else {
-        addResult = callback(tmp[1])(outboundRedemptionEndDate.endDate).add(closure_1_4);
-        const obj = callback(tmp[1])(outboundRedemptionEndDate.endDate);
+        addResult = hooks(outboundRedemptionEndDate.endDate).add(closure_4);
+        const obj = hooks(outboundRedemptionEndDate.endDate);
       }
     } else {
-      return tmp3(callback(tmp[1])(lib.endDate), "LL");
+      return tmp3(hooks(closure_0.endDate), "LL");
     }
   }, items);
 };

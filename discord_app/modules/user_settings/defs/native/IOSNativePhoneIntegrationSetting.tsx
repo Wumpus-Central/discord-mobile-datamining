@@ -1,48 +1,30 @@
-// === Module 15489: toggle ===
+// === Module 15489: IOSNativePhoneIntegrationSetting ===
 
-// Module 15489 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set2 from "set" /* 1115 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import apexExperimentDefault from "apexExperiment" /* 15490 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15489 (IOSNativePhoneIntegrationSetting)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import CallKitMetricCollectionExperimentDefault from "CallKitMetricCollectionExperiment" /* 15490 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.V6D0wU);
+    const intl = util.intl;
+    return intl.string(util.t.V6D0wU);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.NativePhoneIntegrationEnabled.useSetting,
-  onValueChange: explicitContentFromProto.NativePhoneIntegrationEnabled.updateSetting,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.NativePhoneIntegrationEnabled.useSetting,
+  onValueChange: UserSettings.NativePhoneIntegrationEnabled.updateSetting,
   usePredicate() {
-    let enabled = apexExperimentDefault.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
+    let enabled = CallKitMetricCollectionExperimentDefault.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
     if (enabled) {
-      enabled = set2.isIOS();
-      const obj2 = set2;
+      enabled = PlatformUtils.isIOS();
     }
     return enabled;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.V6D0wU);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.NativePhoneIntegrationEnabled.useSetting,
-  onValueChange: explicitContentFromProto.NativePhoneIntegrationEnabled.updateSetting,
-  usePredicate() {
-    let enabled = apexExperimentDefault.useConfig({ location: "IOSNativePhoneIntegrationSetting" }).enabled;
-    if (enabled) {
-      enabled = set2.isIOS();
-      const obj2 = set2;
-    }
-    return enabled;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/IOSNativePhoneIntegrationSetting.tsx");
 
 export default toggle;

@@ -1,29 +1,29 @@
 // === Module 10018: useDeafStates ===
 
 // Module 10018 (useDeafStates)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_4 from "updateVoiceState" /* 4579 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
 
 export default function useDeafStates(arg0) {
-  const _require = arg0;
-  const items = [closure_4, closure_3, closure_2];
+  _require = arg0;
+  const items = [VoiceStateStore, MediaEngineStore, AuthenticationStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStoresObject(items, () => {
+  return require("initialize").useStateFromStoresObject(items, () => {
     let obj = closure_0;
-    if (closure_1_4 !== undefined) {
+    if (VoiceStateStore !== undefined) {
       if (obj3 !== undefined) {
         if (obj4 !== undefined) {
           let voiceState = null;
           if (null != obj) {
             const guildId = obj.getGuildId();
-            voiceState = closure_1_4.getVoiceState(guildId, obj4.getId());
+            voiceState = VoiceStateStore.getVoiceState(guildId, obj4.getId());
           }
-          obj = { selfDeaf: null, deaf: null };
-          obj[0] = obj3.isSelfDeaf();
+          obj = { selfDeaf: obj3.isSelfDeaf(), deaf: null };
           let flag;
           if (voiceState != null) {
             flag = voiceState.deaf;
@@ -31,25 +31,25 @@ export default function useDeafStates(arg0) {
           if (flag == null) {
             flag = false;
           }
-          obj[1] = flag;
+          obj.deaf = flag;
           return obj;
         }
       }
     }
   }, items1);
 };
-export const getDeafStates = function getDeafStates(channel, closure_1_12, closure_1_9, callback3) {
-  let obj = closure_1_12;
-  if (closure_1_12 === undefined) {
-    obj = closure_4;
+export const getDeafStates = function getDeafStates(channel, VoiceStateStore, MediaEngineStore, AuthenticationStore) {
+  let obj = VoiceStateStore;
+  if (VoiceStateStore === undefined) {
+    obj = VoiceStateStore;
   }
-  let obj2 = closure_1_9;
-  if (closure_1_9 === undefined) {
-    obj2 = closure_3;
+  let obj2 = MediaEngineStore;
+  if (MediaEngineStore === undefined) {
+    obj2 = MediaEngineStore;
   }
-  let obj3 = callback3;
-  if (callback3 === undefined) {
-    obj3 = closure_2;
+  let obj3 = AuthenticationStore;
+  if (AuthenticationStore === undefined) {
+    obj3 = AuthenticationStore;
   }
   let voiceState = null;
   if (null != channel) {
@@ -64,6 +64,6 @@ export const getDeafStates = function getDeafStates(channel, closure_1_12, closu
   if (flag == null) {
     flag = false;
   }
-  obj[1] = flag;
+  obj.deaf = flag;
   return obj;
 };

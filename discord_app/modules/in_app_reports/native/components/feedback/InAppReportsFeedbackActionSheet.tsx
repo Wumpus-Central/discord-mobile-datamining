@@ -1,43 +1,46 @@
 // === Module 17362: InAppReportsFeedbackActionSheet ===
 
 // Module 17362 (InAppReportsFeedbackActionSheet)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closeActionSheetDefault from "closeActionSheet" /* 11647 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ToastUtils from "ToastUtils" /* 4258 */;
+import FeedbackUtils from "FeedbackUtils" /* 11629 */;
+import FeedbackActionSheetDefault from "FeedbackActionSheet" /* 11647 */;
 import getInAppReportsFeedbackOptionsDefault from "getInAppReportsFeedbackOptions" /* 17363 */;
-import newGetEnglishMessageText from "newGetEnglishMessageText" /* 17364 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { FeedbackType } from "FeedbackRating" /* 11626 */;
-import { jsx } from "jsxProd" /* 21 */;
+import intl_migration from "intl/migration" /* 17364 */;
+import trackInAppReportsFeedbackDefault from "trackInAppReportsFeedback" /* 17365 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const FeedbackType = fn(11626).FeedbackType;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");
 
 export default function InAppReportsFeedbackActionSheet(arg0) {
   ({ reportId: require, reportType: importDefault } = arg0);
-  let obj = newGetEnglishMessageText;
+  let obj = intl_migration;
   const result = obj.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
   obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
   const tmp = getInAppReportsFeedbackOptionsDefault();
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.MP5lDj);
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(getSystemLocale.t["7Ct0Dj"]);
-  const intl3 = getSystemLocale.intl;
-  obj[4] = intl3.string(getSystemLocale.t.FJmoxF);
-  obj[5] = tmp;
+  const intl = util.intl;
+  obj.headerLabel = intl.string(util.t.MP5lDj);
+  const intl2 = util.intl;
+  obj.ratingsBodyLabel = intl2.string(util.t["7Ct0Dj"]);
+  const intl3 = util.intl;
+  obj.reasonsHeaderLabel = intl3.string(util.t.FJmoxF);
+  obj.reasons = tmp;
   const items = [result];
-  obj[6] = items;
-  obj[7] = result;
-  obj[8] = function trackOpen() {
-    let obj = closure_1_1(closure_1_2[8]);
-    obj = { report_id: closure_0, report_type: closure_1 };
-    obj.track(closure_1_3.IAR_FEEDBACK_MODAL_VIEWED, obj);
+  obj.feedbackReasons = items;
+  obj.otherKey = result;
+  obj.trackOpen = function trackOpen() {
+    const obj = { report_id, report_type };
+    obj.track(AnalyticEvents.IAR_FEEDBACK_MODAL_VIEWED, obj);
   };
-  obj[9] = function trackReport(arg0) {
+  obj.trackReport = function trackReport(arg0) {
     ({ rating, reason, feedback, dontShowAgain } = arg0);
-    let value = null;
+    value = null;
     if (null != reason) {
       value = reason.value;
     }
@@ -45,25 +48,22 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
     if (feedback == null) {
       feedback = "";
     }
-    obj[2] = feedback;
-    obj[3] = closure_0;
-    obj[4] = closure_1;
+    obj.feedback = feedback;
+    obj.reportId = reportId;
+    obj.reportType = reportType;
     let flag = dontShowAgain;
     if (dontShowAgain == null) {
       flag = false;
     }
-    obj[5] = flag;
-    closure_1_1(closure_1_2[9])(obj);
+    obj.dontShowAgain = flag;
+    trackInAppReportsFeedbackDefault(obj);
     if (dontShowAgain) {
-      obj = { feedbackType: null, location: "InAppReportsFeedbackActionSheet" };
-      obj[0] = closure_1_4.IN_APP_REPORTS;
-      closure_1_0(tmp2[10]).processOptOut(obj);
-      const obj2 = closure_1_0(tmp2[10]);
+      obj = { feedbackType: FeedbackType.IN_APP_REPORTS, location: "InAppReportsFeedbackActionSheet" };
+      FeedbackUtils.processOptOut(obj);
     }
     if (null != rating) {
-      closure_1_0(tmp2[11]).presentFeedbackSent();
-      const obj4 = closure_1_0(tmp2[11]);
+      ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(closeActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
+  return jsx(FeedbackActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
 };

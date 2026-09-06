@@ -1,10 +1,10 @@
 // === Module 10334: useMaybeAddReactionMarketingEasterEggNote ===
 
 // Module 10334 (useMaybeAddReactionMarketingEasterEggNote)
-import set from "set" /* 2 */;
 import useMaybeAddPollsMarketingEasterEggNoteDefault from "useMaybeAddPollsMarketingEasterEggNote" /* 10335 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/useMaybeAddReactionMarketingEasterEggNote.tsx");
+const result = size.fileFinishedImporting("modules/messages/useMaybeAddReactionMarketingEasterEggNote.tsx");
 
 export default function useMaybeAddReactionMarketingEasterEggNote(arg0) {
   let tmp = arg0;

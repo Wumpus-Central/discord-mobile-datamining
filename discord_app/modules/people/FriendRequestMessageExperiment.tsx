@@ -1,12 +1,14 @@
-// === Module 13856: apexExperiment ===
+// === Module 13856: FriendRequestMessageExperiment ===
 
-// Module 13856 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13856 (FriendRequestMessageExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-03-friend-request-message", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-friend-request-message", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/people/FriendRequestMessageExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/people/FriendRequestMessageExperiment.tsx");
 
 export default apexExperiment;

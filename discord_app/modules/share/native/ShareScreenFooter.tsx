@@ -1,16 +1,16 @@
 // === Module 13905: ShareScreenFooter ===
 
 // Module 13905 (ShareScreenFooter)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 4975 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import useShareChatInputActions from "useShareChatInputActions" /* 11692 */;
 import ShareFooterLayoutDefault from "ShareFooterLayout" /* 11693 */;
 import ShareChatInputDefault from "ShareChatInput" /* 11701 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareScreenFooter.tsx");
 
 export default function ShareScreenFooter(arg0) {
   ({ setText, canSend, isSending, onSend, disabled } = arg0);
@@ -27,15 +27,15 @@ export default function ShareScreenFooter(arg0) {
   if (canSend) {
     tmp6 = disabled;
   }
-  obj[3] = tmp6;
+  obj.disabled = tmp6;
   let tmp7;
   if (!isSending) {
     tmp7 = onSend;
   }
-  obj[4] = tmp7;
-  obj[5] = isSending;
-  obj[1] = jsx(Button.Button, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
-  obj[2] = jsx(ShareChatInputDefault, { inputRef: textInputRef, text, onChange: setText, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend, disabled });
-  obj[3] = isInputFocused;
+  obj.onPress = tmp7;
+  obj.loading = isSending;
+  obj.sendButton = jsx(components_Button_Button.Button, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
+  obj.chatInput = jsx(ShareChatInputDefault, { inputRef: textInputRef, text, onChange: setText, onSelectionChange: handleSelectionChange, onFocus: handleMessageFocus, onBlur: handleMessageBlur, onPressEmoji: handlePressEmoji, onSend, disabled });
+  obj.avoidKeyboard = isInputFocused;
   return jsx(ShareFooterLayoutDefault, { variant: "primary", size: "md", text: sendLabel, disabled: null, onPress: null, loading: null });
 };

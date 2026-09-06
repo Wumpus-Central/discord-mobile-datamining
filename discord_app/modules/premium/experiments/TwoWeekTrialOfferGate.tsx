@@ -1,10 +1,10 @@
-// === Module 8064: isTwoWeekTrialOfferIngestAllowed ===
+// === Module 8064: TwoWeekTrialOfferGate ===
 
-// Module 8064 (isTwoWeekTrialOfferIngestAllowed)
-import set from "set" /* 2 */;
+// Module 8064 (TwoWeekTrialOfferGate)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/experiments/TwoWeekTrialOfferGate.tsx");
+const result = size.fileFinishedImporting("modules/premium/experiments/TwoWeekTrialOfferGate.tsx");
 
-export function isTwoWeekTrialOfferIngestAllowed(arg0) {
+export function isTwoWeekTrialOfferIngestAllowed() {
   return true;
 }

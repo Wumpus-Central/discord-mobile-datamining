@@ -1,11 +1,12 @@
-// === Module 6973: context ===
+// === Module 6973: WideAuthScrollContext ===
 
-// Module 6973 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 6973 (WideAuthScrollContext)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext(() => {
+const context = noop.createContext(() => {
 
 });
-const result = require("set").fileFinishedImporting("modules/auth/native/components/WideAuthScrollContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/components/WideAuthScrollContext.tsx");
 
 export const WideAuthScrollContext = context;

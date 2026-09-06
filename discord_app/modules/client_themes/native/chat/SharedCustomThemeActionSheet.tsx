@@ -1,122 +1,128 @@
-// === Module 11947: PrimaryActionButton ===
+// === Module 11947: SharedCustomThemeActionSheet ===
 
-// Module 11947 (PrimaryActionButton)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import noop from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_9 from "reset" /* 4224 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11947 (SharedCustomThemeActionSheet)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4408 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7422 */;
+import UserSettingsActionCreators from "UserSettingsActionCreators" /* 9358 */;
+import CustomThemeMobileActionCreators from "CustomThemeMobileActionCreators" /* 11948 */;
+import _slicedToArray from "module_32" /* 32 */;
+import "module_19";
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
-const require = arg1;
+require = fn;
 function PrimaryActionButton(onPressApply) {
-  const tmp = callback6();
-  const _require = tmp;
-  let obj = _require(504);
-  let items = [closure_9];
+  const tmp = closure_14();
+  _require = tmp;
+  let obj = require("initialize");
+  let items = [SubscriptionStore];
   const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   if (obj2.getPremiumTypeFromSubscription(stateFromStores) !== PremiumTypes.TIER_2) {
     obj = { text: null, onPress: null, renderIcon: null, style: null };
     const intl2 = tmp2(1114).intl;
-    obj[0] = intl2.string(tmp2(1114).t.pj0XBN);
-    obj[1] = function onPressSubscribe() {
+    obj.text = intl2.string(tmp2(1114).t.pj0XBN);
+    obj.onPress = function onPressSubscribe() {
       const obj = { premiumType: TIER_2.TIER_2, analyticsLocations: null, analyticsLocation: null };
-      const items = [callback(7182).SHARE_CUSTOM_CLIENT_THEME_EMBED];
-      obj[1] = items;
-      obj[2] = {};
-      callback(7422)(obj);
+      const items = [AnalyticsLocationDefault.SHARE_CUSTOM_CLIENT_THEME_EMBED];
+      obj.analyticsLocations = items;
+      obj.analyticsLocation = {};
+      openPremiumPlanSelectionActionSheetDefault(obj);
     };
-    obj[2] = function renderIcon() {
-      const style = [lib.nitroWheelButton];
-      return closure_1_12(lib(closure_1_2[23]).NitroWheel, { style });
+    obj.renderIcon = function renderIcon() {
+      const obj = { style: null };
+      const items = [nitroWheelButton.nitroWheelButton];
+      obj.style = items;
+      return closure_2_12(native.NitroWheel, obj);
     };
-    obj[3] = tmp.getNitroButton;
-    let tmp6 = callback4(tmp2(1178).ShinyButton, obj);
+    obj.style = tmp.getNitroButton;
+    let tmp6 = closure_12(tmp2(1178).ShinyButton, obj);
   } else {
     obj = { text: null, onPress: null, variant: "primary" };
     const intl = tmp2(1114).intl;
-    obj[0] = intl.string(tmp2(1114).t["1Qm822"]);
-    obj[1] = onPressApply.onPressApply;
-    tmp6 = callback4(tmp2(4975).Button, obj);
+    obj.text = intl.string(tmp2(1114).t["1Qm822"]);
+    obj.onPress = onPressApply.onPressApply;
+    tmp6 = closure_12(tmp2(4975).Button, obj);
   }
   return tmp6;
 }
-({ useEffect: c5, useLayoutEffect: closure_6, useRef: error } = noop);
+const noop = fn(19);
+({ useEffect: hasOwnProperty, useLayoutEffect: metroRequire, useRef: closure_7 } = noop);
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const PremiumTypes = fn(1373).PremiumTypes;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 }, centeredText: { textAlign: "center" }, ctaContainer: { paddingHorizontal: 15, flexDirection: "column", display: "flex", gap: 6 }, nitroWheelButton: { marginStart: -2, width: 20, height: 20 }, getNitroButton: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.round };
-createCacheKey[4] = createCacheKey;
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx");
+fn(4560);
+let createStyles = { contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 }, centeredText: { textAlign: "center" }, ctaContainer: { paddingHorizontal: 15, flexDirection: "column", display: "flex", gap: 6 }, nitroWheelButton: { marginStart: -2, width: 20, height: 20 }, getNitroButton: null };
+createStyles = { borderRadius: nativeDefault.radii.round };
+createStyles.getNitroButton = createStyles;
+let closure_14 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx");
 
 export default function _default(message) {
   const sharedClientTheme = message.message.sharedClientTheme;
-  const tmp = callback6();
-  let tmp2 = callback3(null);
+  const tmp = closure_14();
+  let tmp2 = closure_7(null);
   importDefault = tmp2;
   let obj = first1;
   let tmp4;
   if (undefined !== sharedClientTheme) {
     obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
     let colors = sharedClientTheme.colors;
-    obj[0] = colors.map((arg0) => "#" + arg0);
-    obj[1] = [];
-    ({ gradient_angle: obj2[2], base_mix: obj2[3] } = sharedClientTheme);
+    obj.colors = colors.map((item) => "#" + item);
+    obj.gradientColorStops = [];
+    ({ gradient_angle: obj2.gradientAngle, base_mix: obj2.baseMix } = sharedClientTheme);
     tmp4 = obj;
   }
-  const tmp6 = callback(first1.useState(tmp4), 2);
-  const first = tmp6[0];
-  callback = tmp6[1];
+  const tmp6 = _slicedToArray(first1.useState(tmp4), 2);
+  const customTheme = tmp6[0];
+  _slicedToArray = tmp6[1];
   let baseTheme;
   if (undefined !== sharedClientTheme) {
-    let obj2 = sharedClientTheme(first[24]);
+    let obj2 = sharedClientTheme(customTheme[24]);
     baseTheme = obj2.getBaseTheme(sharedClientTheme.base_theme);
   }
   let tmp5Result = tmp5(obj.useState(baseTheme), 2);
   first1 = tmp5Result[0];
-  const callback2 = tmp5Result[1];
+  closure_5 = tmp5Result[1];
   tmp5Result = tmp5(obj.useState(false), 2);
   const first2 = tmp5Result[0];
-  callback3 = tmp5Result[1];
+  closure_7 = tmp5Result[1];
   const ref = obj.useRef(true);
   const items = [sharedClientTheme];
-  callback2(() => {
+  closure_5(() => {
     let tmp4;
     if (undefined !== sharedClientTheme) {
       const obj = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       const colors = tmp2.colors;
-      obj[0] = colors.map((arg0) => "#" + arg0);
-      obj[1] = [];
-      ({ gradient_angle: obj[2], base_mix: obj[3] } = tmp2);
+      obj.colors = colors.map((item) => "#" + item);
+      obj.gradientColorStops = [];
+      ({ gradient_angle: obj.gradientAngle, base_mix: obj.baseMix } = tmp2);
       tmp4 = obj;
     }
     closure_3(tmp4);
     let baseTheme;
     if (undefined !== sharedClientTheme) {
-      baseTheme = sharedClientTheme(first[24]).getBaseTheme(tmp2.base_theme);
-      const obj2 = sharedClientTheme(first[24]);
+      baseTheme = ClientThemesUtils.getBaseTheme(tmp2.base_theme);
     }
     closure_5(baseTheme);
-    ref(first[9]).track(closure_1_10.CUSTOM_THEME_SHARE_PREVIEWED, {});
+    AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_THEME_SHARE_PREVIEWED, {});
   }, items);
-  const items1 = [first, first1];
-  callback2(() => {
-    let tmp2 = undefined !== first;
+  const items1 = [customTheme, first1];
+  closure_5(() => {
+    let tmp2 = undefined !== customTheme;
     if (tmp2) {
       tmp2 = undefined !== first1;
     }
     if (tmp2) {
-      let obj = sharedClientTheme(first[10]);
-      obj = { baseTheme: null, customTheme: null };
-      obj[0] = first1;
-      obj[1] = first;
+      const obj = { baseTheme: first1, customTheme };
       obj.previewCustomTheme(obj);
-      sharedClientTheme(first[11]).refreshTheme();
-      const obj3 = sharedClientTheme(first[11]);
+      ThemeActionCreators.refreshTheme();
     }
   }, items1);
   const items2 = [first2];
@@ -124,28 +130,28 @@ export default function _default(message) {
     ref.current = !first2;
   }, items2);
   const items3 = [ref];
-  callback2(() => () => {
+  closure_5(() => () => {
     if (ref.current) {
-      closure_1_0(closure_1_2[10]).clearPreviewTheme();
-      const obj = closure_1_0(closure_1_2[10]);
-      closure_1_0(closure_1_2[11]).refreshTheme();
-      const obj2 = closure_1_0(closure_1_2[11]);
+      sharedClientTheme(first[10]).clearPreviewTheme();
+      const obj = sharedClientTheme(first[10]);
+      sharedClientTheme(first[11]).refreshTheme();
+      const obj2 = sharedClientTheme(first[11]);
     }
   }, items3);
   obj = { ref: tmp2, backdropOpacity: 0, children: null };
-  obj1 = { title: null };
-  const intl = sharedClientTheme(first[14]).intl;
-  obj1[0] = intl.string(importDefault(first[15])["3ej1LT"]);
-  const items4 = [callback4(sharedClientTheme(first[13]).BottomSheetTitleHeader, obj1), , ];
+  const obj1 = { title: null };
+  const intl = sharedClientTheme(customTheme[14]).intl;
+  obj1.title = intl.string(require("module_2626")["3ej1LT"]);
+  const items4 = [closure_12(sharedClientTheme(customTheme[13]).BottomSheetTitleHeader, obj1), , ];
   obj2 = { style: tmp.contentWrapper, children: null };
   let obj3 = { variant: "heading-md/medium", style: tmp.centeredText, children: null };
-  const intl2 = sharedClientTheme(first[14]).intl;
-  obj3[2] = intl2.string(importDefault(first[15]).qZMUoL);
-  obj2[1] = callback4(sharedClientTheme(first[16]).Text, obj3);
-  items4[1] = callback4(ref, obj2);
+  const intl2 = sharedClientTheme(customTheme[14]).intl;
+  obj3.children = intl2.string(require("module_2626").qZMUoL);
+  obj2.children = closure_12(sharedClientTheme(customTheme[16]).Text, obj3);
+  items4[1] = closure_12(ref, obj2);
   let obj4 = { style: tmp.ctaContainer, children: null };
   const items5 = [
-    callback4(PrimaryActionButton, {
+    closure_12(PrimaryActionButton, {
       onPressApply() {
         let tmp2 = undefined !== first;
         if (tmp2) {
@@ -155,41 +161,34 @@ export default function _default(message) {
           tmp2 = null !== ref.current;
         }
         if (tmp2) {
-          callback(true);
-          let obj = sharedClientTheme(first[10]);
+          closure_7(true);
+          let obj = CustomThemeMobileActionCreators;
           obj.updateCustomTheme(tmp, first1);
-          obj = { customUserThemeSettings: null, theme: null };
-          obj[0] = tmp;
-          obj[1] = first1;
-          sharedClientTheme(first[17]).saveClientTheme(obj);
-          const obj2 = sharedClientTheme(first[17]);
-          sharedClientTheme(first[10]).clearPreviewTheme();
-          const obj4 = sharedClientTheme(first[10]);
-          ref(first[9]).track(closure_1_10.CUSTOM_THEME_SHARE_APPLIED, {});
+          obj = { customUserThemeSettings: tmp, theme: first1 };
+          UserSettingsActionCreators.saveClientTheme(obj);
+          CustomThemeMobileActionCreators.clearPreviewTheme();
+          AnalyticsUtilsDefault.track(AnalyticEvents.CUSTOM_THEME_SHARE_APPLIED, {});
           const current = ref.current;
           current.closeActionSheet();
-          const obj5 = ref(first[9]);
         }
       }
     }),
 
   ];
   const obj6 = { text: null, onPress: null, variant: "secondary" };
-  const intl3 = sharedClientTheme(first[14]).intl;
-  obj6[0] = intl3.string(sharedClientTheme(first[14]).t["13/7kX"]);
-  obj6[1] = function onPress() {
+  const intl3 = sharedClientTheme(customTheme[14]).intl;
+  obj6.text = intl3.string(sharedClientTheme(customTheme[14]).t["13/7kX"]);
+  obj6.onPress = function onPress() {
     if (null !== ref.current) {
-      sharedClientTheme(first[10]).clearPreviewTheme();
-      const obj = sharedClientTheme(first[10]);
-      sharedClientTheme(first[11]).refreshTheme();
+      CustomThemeMobileActionCreators.clearPreviewTheme();
+      ThemeActionCreators.refreshTheme();
       const current = tmp.current;
       current.closeActionSheet();
-      const obj2 = sharedClientTheme(first[11]);
     }
   };
-  items5[1] = callback4(sharedClientTheme(first[18]).Button, obj6);
-  obj4[1] = items5;
-  items4[2] = callback5(ref, obj4);
-  obj[2] = items4;
-  return callback5(sharedClientTheme(first[12]).BottomSheet, obj);
+  items5[1] = closure_12(sharedClientTheme(customTheme[18]).Button, obj6);
+  obj4.children = items5;
+  items4[2] = closure_13(ref, obj4);
+  obj.children = items4;
+  return closure_13(sharedClientTheme(customTheme[12]).BottomSheet, obj);
 };

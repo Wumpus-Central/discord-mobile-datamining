@@ -1,12 +1,12 @@
-// === Module 9779: getGuildEventImageURL ===
+// === Module 9779: getGuildEventImage ===
 
-// Module 9779 (getGuildEventImageURL)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import handleImageLoad from "handleImageLoad" /* 1430 */;
+// Module 9779 (getGuildEventImage)
+import Constants from "Constants" /* 1074 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-let result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
+const Endpoints = Constants.Endpoints;
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
 
 export default function getGuildEventImageURL(image, size) {
   if (null == image.image) {
@@ -15,11 +15,10 @@ export default function getGuildEventImageURL(image, size) {
     let result = size;
     if (null == size) {
       const _window = window;
-      result = window.screen.width * handleImageLoad.getDevicePixelRatio();
-      const obj = handleImageLoad;
+      result = window.screen.width * ImageLoaderUtils.getDevicePixelRatio();
     }
     const _window2 = window;
-    const bestMediaProxySize = handleImageLoad.getBestMediaProxySize(result);
+    const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(result);
     if (null != CDN_HOST) {
       const _HermesInternal = HermesInternal;
       let combined = "https://" + CDN_HOST + "/guild-events/" + image.id + "/" + image.image;

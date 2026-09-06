@@ -1,28 +1,31 @@
 // === Module 9985: UserSettingsVoiceOutputOptions ===
 
 // Module 9985 (UserSettingsVoiceOutputOptions)
+import _modDef38 from "module_38" /* 38 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import VolumeSliderDefault from "VolumeSlider" /* 9986 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "reset" /* 4582 */;
-import closure_6 from "fetchFingerprint" /* 502 */;
-import closure_7 from "_detectH265HardwareDecode" /* 1908 */;
-import { MediaEngineContextTypes } from "DesktopSources" /* 4585 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-const require = arg1;
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ slider: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
+const require = fn;
+const View = fn(17).View;
+const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let closure_11 = createStyles.createStyles({ slider: { marginTop: 4 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
 
 export default function UserSettingsVoiceOutputOptions() {
-  const tmp = callback2();
+  const tmp = closure_11();
   let obj = stateFromStores1(504);
-  const items = [closure_7];
+  const items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => outputVolume.getOutputVolume());
-  obj1 = stateFromStores1(504);
-  const items1 = [closure_5, closure_6];
+  let obj1 = stateFromStores1(504);
+  const items1 = [ApplicationStreamingStore, AuthenticationStore];
   stateFromStores1 = obj1.useStateFromStores(items1, () => {
     lastActiveStream = lastActiveStream.getLastActiveStream();
     let tmp2 = null;
@@ -35,57 +38,54 @@ export default function UserSettingsVoiceOutputOptions() {
     return tmp2;
   });
   let obj2 = stateFromStores1(504);
-  const items2 = [closure_7];
+  const items2 = [MediaEngineStore];
   const items3 = [stateFromStores1];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let num = 0;
     if (null != stateFromStores1) {
-      num = closure_1_7.getLocalVolume(tmp.ownerId, closure_1_8.STREAM);
+      num = MediaEngineStore.getLocalVolume(tmp.ownerId, MediaEngineContextTypes.STREAM);
     }
     return num;
   });
-  const callback = React.useCallback((arg0) => {
-    closure_1_1(closure_1_2[9])(null != stateFromStores1, "Can not set stream volume without active stream");
-    closure_1_1(closure_1_2[10]).setLocalVolume(stateFromStores1.ownerId, arg0, closure_1_8.STREAM);
+  const callback = noop.useCallback((arg0) => {
+    _modDef38(null != stateFromStores1, "Can not set stream volume without active stream");
+    AudioActionCreatorsDefault.setLocalVolume(stateFromStores1.ownerId, arg0, MediaEngineContextTypes.STREAM);
   }, items3);
   obj = { title: null, hasIcons: false, children: null };
   const intl = stateFromStores1(1114).intl;
-  obj[0] = intl.string(stateFromStores1(1114).t.UXxPGB);
+  obj.title = intl.string(stateFromStores1(1114).t.UXxPGB);
   obj = { label: null, subLabel: null };
   const intl2 = stateFromStores1(1114).intl;
-  obj[0] = intl2.string(stateFromStores1(1114).t.xPHVBs);
+  obj.label = intl2.string(stateFromStores1(1114).t.xPHVBs);
   obj1 = { style: tmp.slider, children: null };
   obj2 = {
     style: tmp.slider,
     value: stateFromStores,
     onValueChange(arg0) {
-      return callback(table[10]).setOutputVolume(arg0);
+      return AudioActionCreatorsDefault.setOutputVolume(arg0);
     },
     accessibilityLabel: null
   };
   const intl3 = stateFromStores1(1114).intl;
-  obj2[3] = intl3.string(stateFromStores1(1114).t.xPHVBs);
-  obj1[1] = callback(VolumeSliderDefault, obj2);
-  obj[1] = callback(View, obj1);
-  const items4 = [callback(stateFromStores1(5605).TableRow, obj), ];
+  obj2.accessibilityLabel = intl3.string(stateFromStores1(1114).t.xPHVBs);
+  obj1.children = closure_9(VolumeSliderDefault, obj2);
+  obj.subLabel = closure_9(View, obj1);
+  const items4 = [closure_9(stateFromStores1(5605).TableRow, obj), ];
   let tmp9Result = null != stateFromStores1;
   if (tmp9Result) {
     const obj3 = { label: null, subLabel: null };
     const intl4 = tmp2(1114).intl;
-    obj3[0] = intl4.string(tmp2(1114).t.pEAl4b);
-    const obj4 = { style: null, children: null };
-    obj4[0] = tmp.slider;
-    const obj5 = { value: null, onValueChange: null, accessibilityLabel: null };
-    obj5[0] = stateFromStores2;
-    obj5[1] = callback;
+    obj3.label = intl4.string(tmp2(1114).t.pEAl4b);
+    const obj4 = { style: tmp.slider, children: null };
+    const obj5 = { value: stateFromStores2, onValueChange: callback, accessibilityLabel: null };
     const intl5 = tmp2(1114).intl;
-    obj5[2] = intl5.string(tmp2(1114).t.pEAl4b);
-    obj4[1] = tmp9(VolumeSliderDefault, obj5);
-    obj3[1] = tmp9(View, obj4);
+    obj5.accessibilityLabel = intl5.string(tmp2(1114).t.pEAl4b);
+    obj4.children = tmp9(VolumeSliderDefault, obj5);
+    obj3.subLabel = tmp9(View, obj4);
     tmp9Result = tmp9(tmp2(5605).TableRow, obj3);
     const tmp11Result = VolumeSliderDefault;
   }
   items4[1] = tmp9Result;
-  obj[2] = items4;
+  obj.children = items4;
   return closure_10(stateFromStores1(9979).UserSettingsTableRowGroup, obj);
 };

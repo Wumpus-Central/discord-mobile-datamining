@@ -1,9 +1,9 @@
 // === Module 12428: getEmojiText ===
 
 // Module 12428 (getEmojiText)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");
+const result = size.fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");
 
 export default function getEmojiText(id) {
   if (null == id.id) {

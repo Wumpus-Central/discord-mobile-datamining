@@ -1,28 +1,22 @@
 // === Module 13162: useCanGiftProduct ===
 
 // Module 13162 (useCanGiftProduct)
-import set from "set" /* 2 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import getProductOrbPrice from "getProductOrbPrice" /* 7553 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = function useCanGiftProduct(product) {
   const currentUser = useCurrentUser.useCurrentUser();
-  const obj = useCurrentUser;
-  let result = getItemRecordsFromPurchases.isPremiumCollectiblesProduct(product);
-  const obj2 = getItemRecordsFromPurchases;
-  const result1 = getItemRecordsFromPurchases.isFreeCollectiblesProduct(product);
-  const obj3 = getItemRecordsFromPurchases;
-  const result2 = getProductOrbPrice.isOrbsExclusiveProduct(product);
-  const obj4 = getProductOrbPrice;
-  const obj5 = getPremiumPlanItemDefault;
-  const canUseShopDiscountsResult = getPremiumPlanItemDefault.canUseShopDiscounts(currentUser);
-  const defaultPriceSetAssignmentPurchaseType = getItemRecordsFromPurchases.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
-  const obj6 = getItemRecordsFromPurchases;
-  const result3 = getItemRecordsFromPurchases.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
+  let result = CollectiblesUtils.isPremiumCollectiblesProduct(product);
+  const result1 = CollectiblesUtils.isFreeCollectiblesProduct(product);
+  const result2 = CollectiblesProductUtils.isOrbsExclusiveProduct(product);
+  const canUseShopDiscountsResult = PremiumUtilsDefault.canUseShopDiscounts(currentUser);
+  const defaultPriceSetAssignmentPurchaseType = CollectiblesUtils.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
+  const result3 = CollectiblesUtils.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);
   if (!result) {
     result = result1;
   }

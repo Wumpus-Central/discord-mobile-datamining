@@ -1,42 +1,28 @@
-// === Module 15495: toggle ===
+// === Module 15495: InAppMessageSoundsSetting ===
 
-// Module 15495 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import isInAppMessageSoundsEnabled from "isInAppMessageSoundsEnabled" /* 10104 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15495 (InAppMessageSoundsSetting)
+import util from "util" /* 1114 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import InAppMessageSoundsStore from "InAppMessageSoundsStore" /* 10104 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = isInAppMessageSoundsEnabled);
-const toggle = createToggle.createToggle({
+({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = InAppMessageSoundsStore);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jLCRyj);
+    const intl = util.intl;
+    return intl.string(util.t.jLCRyj);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["wls+Ax"]);
+    const intl = util.intl;
+    return intl.string(util.t["wls+Ax"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: isMetaQuest.isMetaQuest
+  usePredicate: MetaQuestUtils.isMetaQuest
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jLCRyj);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["wls+Ax"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: useInAppMessageSoundsEnabled,
-  onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: isMetaQuest.isMetaQuest
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
 
 export default toggle;

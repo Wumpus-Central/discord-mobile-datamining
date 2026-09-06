@@ -1,22 +1,21 @@
 // === Module 17591: GuildSettingsServerTagPickerCell ===
 
 // Module 17591 (GuildSettingsServerTagPickerCell)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { cell: null, cellSelected: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.md, borderWidth: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderColor: ThemesDefault.colors.BORDER_MUTED };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderColor: ThemesDefault.unsafe_rawColors.BRAND_500 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderColor: ThemesDefault.unsafe_rawColors.BRAND_500 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPickerCell.tsx");
+require = fn;
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { cell: null, cellSelected: null };
+createStyles = { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.md, borderWidth: 2, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderColor: nativeDefault.colors.BORDER_MUTED };
+createStyles.cell = createStyles;
+createStyles.cellSelected = { borderColor: nativeDefault.unsafe_rawColors.BRAND_500 };
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPickerCell.tsx");
 
 export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
   ({ size, selected, accessibilityRole } = accessibilityLabel);
@@ -24,24 +23,23 @@ export default function GuildSettingsServerTagPickerCell(accessibilityLabel) {
     accessibilityRole = "radio";
   }
   ({ onPress, children } = accessibilityLabel);
-  const tmp = callback();
-  let obj = useCheckboxA11yNative;
+  const tmp = closure_4();
+  let obj = useA11yRolesNative;
   let radioA11yNative = obj.useRadioA11yNative({ selected });
   if ("button" === accessibilityRole) {
     obj = { accessibilityRole: "button", accessibilityState: null };
-    obj = { selected: null };
-    obj[0] = selected;
-    obj[1] = obj;
+    obj = { selected };
+    obj.accessibilityState = obj;
     radioA11yNative = obj;
   }
-  obj1 = { accessibilityRole: radioA11yNative.accessibilityRole, accessibilityState: radioA11yNative.accessibilityState, accessibilityLabel: accessibilityLabel.accessibilityLabel, onPress, style: null, children: null };
+  const obj1 = { accessibilityRole: radioA11yNative.accessibilityRole, accessibilityState: radioA11yNative.accessibilityState, accessibilityLabel: accessibilityLabel.accessibilityLabel, onPress, style: null, children: null };
   const items = [tmp.cell, , ];
   if (selected) {
     selected = tmp.cellSelected;
   }
   items[1] = selected;
   items[2] = { width: size, height: size };
-  obj1[4] = items;
-  obj1[5] = children;
+  obj1.style = items;
+  obj1.children = children;
   return <Pressable accessibilityRole={radioA11yNative.accessibilityRole} accessibilityState={radioA11yNative.accessibilityState} accessibilityLabel={arg0.accessibilityLabel} onPress={onPress} style={null}>{null}</Pressable>;
 };

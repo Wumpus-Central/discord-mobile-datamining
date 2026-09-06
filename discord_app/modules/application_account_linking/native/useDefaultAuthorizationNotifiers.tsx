@@ -1,15 +1,19 @@
 // === Module 16260: useDefaultAuthorizationNotifiers ===
 
 // Module 16260 (useDefaultAuthorizationNotifiers)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getState" /* 1895 */;
-import { AppStates } from "ME" /* 1074 */;
+import util from "util" /* 1114 */;
+import _modDef3095 from "module_3095" /* 3095 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import noop from "module_19" /* 19 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
+require = fn;
+const AppStates = fn(1074).AppStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
 
 export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked, value) {
-  const _require = startAuthorization;
+  _require = startAuthorization;
   closure_1 = hasAlreadyLinked;
   let obj = value;
   if (value === undefined) {
@@ -19,40 +23,39 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
   if (flag === undefined) {
     flag = true;
   }
-  let React;
+  noop = undefined;
   let stateFromStores;
   let previousWhen;
-  React = React.useRef(false);
+  noop = noop.useRef(false);
   const items = [stateFromStores];
-  stateFromStores = _require(flag[3]).useStateFromStores(items, () => stateFromStores.getState() === previousWhen.ACTIVE);
-  const obj2 = React;
-  const obj3 = _require(flag[3]);
+  stateFromStores = require("initialize").useStateFromStores(items, () => stateFromStores.getState() === previousWhen.ACTIVE);
+  const obj2 = noop;
+  const obj3 = require("initialize");
   const tmp = _require;
   const tmp2 = flag;
   const items1 = [startAuthorization];
-  const isInAppBrowserOpen = _require(flag[4]).useIsInAppBrowserOpen();
-  const callback = React.useCallback((arg0) => {
+  const isInAppBrowserOpen = require("BrowserManager").useIsInAppBrowserOpen();
+  const callback = noop.useCallback((arg0) => {
     closure_3.current = true;
     return startAuthorization(arg0);
   }, items1);
   if (stateFromStores) {
     stateFromStores = !isInAppBrowserOpen;
   }
-  const obj4 = _require(flag[4]);
+  const obj4 = require("BrowserManager");
   obj = { value: hasAlreadyLinked, shouldUpdate: stateFromStores };
   previousWhen = tmp(tmp2[5]).usePreviousWhen(obj);
   const items2 = [hasAlreadyLinked, previousWhen, flag, stateFromStores];
   const effect = obj2.useEffect(() => {
     if (ref.current) {
       if (false === previousWhen) {
-        if (true === hasAlreadyLinked) {
+        if (true === closure_1) {
           if (stateFromStores) {
             tmp.current = false;
             if (flag) {
-              let obj = hasAlreadyLinked(flag[6]);
-              obj = { content: null, key: "account-linked-toast" };
-              const intl = startAuthorization(flag[7]).intl;
-              obj[0] = intl.string(hasAlreadyLinked(flag[8]).uG6teD);
+              const obj = { content: null, key: "account-linked-toast" };
+              const intl = util.intl;
+              obj.content = intl.string(_modDef3095.uG6teD);
               obj.open(obj);
             }
           }

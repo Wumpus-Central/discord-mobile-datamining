@@ -1,35 +1,37 @@
-// === Module 11441: getSubscriptionPlans ===
+// === Module 11441: SubscriptionUtils ===
 
-// Module 11441 (getSubscriptionPlans)
+// Module 11441 (SubscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
-import hooksDefault from "hooks" /* 4153 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import prototype from "prototype" /* 11442 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import PremiumUtils from "PremiumUtils" /* 4218 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7257 */;
+import CheckoutError from "CheckoutError" /* 11442 */;
 import PauseDuration from "PauseDuration" /* 11444 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "addSubscriptionPlan" /* 4223 */;
-import ME from "ME" /* 1074 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4223 */;
 
-require = arg1;
-({ SubscriptionStatusTypes: closure_6, SubscriptionTypes: error } = ME);
-({ SubscriptionPlans: closure_8, SubscriptionPlanInfo: c9 } = GuildFeatures);
-let result = require("set").fileFinishedImporting("utils/SubscriptionUtils.tsx");
+require = fn;
+const Constants = fn(1074);
+({ SubscriptionStatusTypes: metroRequire, SubscriptionTypes: closure_7 } = Constants);
+const PremiumConstants = fn(1373);
+({ SubscriptionPlans: closure_8, SubscriptionPlanInfo: closure_9 } = PremiumConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/SubscriptionUtils.tsx");
 
 export const getSubscriptionPlans = function getSubscriptionPlans(items) {
   items = items.items;
   return items.map((planId) => {
-    const value = closure_5.get(planId.planId);
-    callback(table[5])(null != value, "Unable to fetch plan");
+    value = SubscriptionPlanStore.get(planId.planId);
+    _modDef38(null != value, "Unable to fetch plan");
     return value;
   });
 };
 export const getSubscriptionSKUs = function getSubscriptionSKUs(items) {
   items = items.items;
   const mapped = items.map((planId) => {
-    const value = closure_5.get(planId.planId);
-    callback(table[5])(null != value, "Unable to fetch plan");
+    value = SubscriptionPlanStore.get(planId.planId);
+    _modDef38(null != value, "Unable to fetch plan");
     return value;
   });
   return mapped.map((skuId) => skuId.skuId);
@@ -44,15 +46,15 @@ export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchIm
   let obj = { oldPlanId: currentSubscriptionPlanIdForGroup, newPlanId };
   if (null == currentSubscriptionPlanIdForGroup) {
     obj = { message: "Current subscription has no plan in group", extraSentryInformation: null };
-    obj[1] = obj;
-    const checkoutError = new prototype.CheckoutError(obj);
+    obj.extraSentryInformation = obj;
+    const checkoutError = new CheckoutError.CheckoutError(obj);
     throw checkoutError;
   } else {
-    if (currentSubscriptionPlanIdForGroup === closure_8.PREMIUM_YEAR_TIER_1) {
-      if (newPlanId === closure_8.PREMIUM_MONTH_TIER_2) {
+    if (currentSubscriptionPlanIdForGroup === React6.PREMIUM_YEAR_TIER_1) {
+      if (newPlanId === React6.PREMIUM_MONTH_TIER_2) {
         obj = { message: "Unexpected plan switch", extraSentryInformation: null };
-        obj[1] = obj;
-        const checkoutError1 = new prototype.CheckoutError(obj);
+        obj.extraSentryInformation = obj;
+        const checkoutError1 = new CheckoutError.CheckoutError(obj);
         throw checkoutError1;
       }
     }
@@ -60,82 +62,76 @@ export const subscriptionCanSwitchImmediately = function subscriptionCanSwitchIm
     return index < arr.indexOf(newPlanId);
   }
 };
-export const subscriptionCanDowngrade = function subscriptionCanDowngrade(getCurrentSubscriptionPlanIdForGroup, arg1, arr) {
+export const subscriptionCanDowngrade = function subscriptionCanDowngrade(getCurrentSubscriptionPlanIdForGroup, newPlanId, arr) {
   const currentSubscriptionPlanIdForGroup = getCurrentSubscriptionPlanIdForGroup.getCurrentSubscriptionPlanIdForGroup(arr);
   if (getCurrentSubscriptionPlanIdForGroup.type !== constants2.PREMIUM) {
-    let obj = { oldPlanId: null, newPlanId: null };
-    obj[0] = currentSubscriptionPlanIdForGroup;
-    obj[1] = arg1;
+    let obj = { oldPlanId: currentSubscriptionPlanIdForGroup, newPlanId };
     if (null == currentSubscriptionPlanIdForGroup) {
       obj = { message: "Current subscription has no plan in group", extraSentryInformation: null };
-      obj[1] = obj;
-      const checkoutError = new prototype.CheckoutError(obj);
+      obj.extraSentryInformation = obj;
+      const checkoutError = new CheckoutError.CheckoutError(obj);
       throw checkoutError;
     } else {
-      if (currentSubscriptionPlanIdForGroup === closure_8.PREMIUM_YEAR_TIER_1) {
-        if (arg1 === closure_8.PREMIUM_MONTH_TIER_2) {
+      if (currentSubscriptionPlanIdForGroup === React6.PREMIUM_YEAR_TIER_1) {
+        if (newPlanId === React6.PREMIUM_MONTH_TIER_2) {
           obj = { message: "Unexpected plan switch", extraSentryInformation: null };
-          obj[1] = obj;
-          const checkoutError1 = new prototype.CheckoutError(obj);
+          obj.extraSentryInformation = obj;
+          const checkoutError1 = new CheckoutError.CheckoutError(obj);
           throw checkoutError1;
         }
       }
       const index = arr.indexOf(currentSubscriptionPlanIdForGroup);
-      let flag = index < arr.indexOf(arg1);
+      let flag = index < arr.indexOf(newPlanId);
     }
   } else {
     flag = true;
   }
   return !flag;
 };
-export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(subscriptionPlanId, closure_1) {
-  const value = closure_5.get(subscriptionPlanId);
+export const getOrFetchSubscriptionPlan = function getOrFetchSubscriptionPlan(subscriptionPlanId, arg1) {
+  value = SubscriptionPlanStore.get(subscriptionPlanId);
   if (null == value) {
     const _HermesInternal = HermesInternal;
-    _modDef38(null != table[subscriptionPlanId], "Missing hardcoded subscriptionPlan: " + subscriptionPlanId);
+    _modDef38(null != dependencyMap[subscriptionPlanId], "Missing hardcoded subscriptionPlan: " + subscriptionPlanId);
     const tmp12 = require;
-    const tmp8 = _modDef38;
-    const tmp9 = null != table[subscriptionPlanId];
-    const result = getPremiumPlanItem.castPremiumSubscriptionAsSkuId(tmp5.skuId);
-    if (!closure_5.isFetchingForSKU(result)) {
-      const subscriptionPlansForSKU = tmp12(7257).fetchSubscriptionPlansForSKU(result, closure_1);
+    const tmp9 = null != dependencyMap[subscriptionPlanId];
+    const result = PremiumUtils.castPremiumSubscriptionAsSkuId(tmp5.skuId);
+    if (!SubscriptionPlanStore.isFetchingForSKU(result)) {
+      const subscriptionPlansForSKU = tmp12(7257).fetchSubscriptionPlansForSKU(result, arg1);
       const tmp12Result = tmp12(7257);
     }
-    const obj3 = getPremiumPlanItem;
   }
   return value;
 };
-export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionPlan(subscriptionPlanId) {
-  const _require = subscriptionPlanId;
+export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionPlan(subscriptionPlanId, arg1) {
+  _require = subscriptionPlanId;
   closure_1 = arg1;
-  let items = [closure_5];
-  const tmp = callback(_require(first[9]).useStateFromStoresArray(items, () => {
-    let value = null;
+  let items = [SubscriptionPlanStore];
+  const tmp = _slicedToArray(require("initialize").useStateFromStoresArray(items, () => {
+    value = null;
     if (null != closure_0) {
-      value = closure_1_5.get(tmp);
+      value = SubscriptionPlanStore.get(tmp);
     }
     const items = [value, ];
     let isFetchingForSKUResult = null != value;
     if (isFetchingForSKUResult) {
-      isFetchingForSKUResult = closure_1_5.isFetchingForSKU(value.skuId);
+      isFetchingForSKUResult = SubscriptionPlanStore.isFetchingForSKU(value.skuId);
     }
     items[1] = isFetchingForSKUResult;
     return items;
   }), 2);
   first = tmp[0];
-  callback = tmp3;
+  _slicedToArray = tmp3;
   const items1 = [first, subscriptionPlanId, arg1, tmp[1]];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null == first) {
-      if (null != subscriptionPlanId) {
+      if (null != closure_0) {
         if (!closure_3) {
           const _HermesInternal = HermesInternal;
-          callback(first[5])(null != closure_1_9[tmp12], "Missing hardcoded subscriptionPlan: " + tmp12);
-          const tmp5 = callback(first[5]);
-          const tmp6 = null != closure_1_9[tmp12];
-          const obj = subscriptionPlanId(first[8]);
-          const subscriptionPlansForSKU = obj.fetchSubscriptionPlansForSKU(subscriptionPlanId(first[7]).castPremiumSubscriptionAsSkuId(tmp2.skuId), callback);
-          const obj2 = subscriptionPlanId(first[7]);
+          _modDef38(null != dependencyMap[tmp12], "Missing hardcoded subscriptionPlan: " + tmp12);
+          const tmp6 = null != dependencyMap[tmp12];
+          const obj = SubscriptionPlanActionCreators;
+          const subscriptionPlansForSKU = obj.fetchSubscriptionPlansForSKU(PremiumUtils.castPremiumSubscriptionAsSkuId(tmp2.skuId), closure_1);
         }
       }
     }
@@ -144,46 +140,36 @@ export const useGetOrFetchSubscriptionPlan = function useGetOrFetchSubscriptionP
 };
 export const getSubscriptionPauseDurations = function getSubscriptionPauseDurations(status) {
   const keys = Object.keys(PauseDuration.PauseDuration);
-  const found = keys.filter((arg0) => isNaN(Number(arg0)));
+  const found = keys.filter((item) => isNaN(Number(item)));
   if (status.status !== constants.PAUSED) {
-    let obj = { durations: null, currentDaysPaused: 0 };
-    obj[0] = found;
+    let obj = { durations: found, currentDaysPaused: 0 };
     return obj;
   } else if (null != status.pauseEndsAt) {
-    const tmp6 = hooksDefault(status.currentPeriodStart);
+    const tmp6 = _modDef4153(status.currentPeriodStart);
     const _Math = Math;
-    const rounded = Math.round(hooksDefault(status.pauseEndsAt).diff(tmp6, "days", true));
+    const rounded = Math.round(_modDef4153(status.pauseEndsAt).diff(tmp6, "days", true));
     const items = [];
     for (const item10042 of found) {
-      let tmp11 = require;
-      let tmp12 = dependencyMap;
-      let tmp13 = dependencyMap;
       let tmp10 = item10042;
       if (PauseDuration.PauseDuration[item10042] > rounded) {
-        let tmp14 = item10042;
         let arr = items.push(tmp10);
       }
       continue;
     }
-    obj = { durations: null, currentDaysPaused: null };
-    obj[0] = items;
-    obj[1] = rounded;
+    obj = { durations: items, currentDaysPaused: rounded };
     return obj;
   } else {
-    obj = { durations: null, currentDaysPaused: 0 };
-    obj[0] = [];
+    obj = { durations: [], currentDaysPaused: 0 };
     return obj;
   }
-  const tmp = dependencyMap;
 };
 export const didBeginPurchaseFlowOnFractionalPremium = function didBeginPurchaseFlowOnFractionalPremium(isSameOrAfter) {
   let isMomentResult = null != isSameOrAfter;
   if (isMomentResult) {
-    isMomentResult = hooksDefault.isMoment(isSameOrAfter);
-    const obj = hooksDefault;
+    isMomentResult = _modDef4153.isMoment(isSameOrAfter);
   }
   if (isMomentResult) {
-    isMomentResult = isSameOrAfter.isSameOrAfter(hooksDefault());
+    isMomentResult = isSameOrAfter.isSameOrAfter(_modDef4153());
   }
   return isMomentResult;
 };

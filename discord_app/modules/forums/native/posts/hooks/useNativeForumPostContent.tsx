@@ -1,33 +1,31 @@
 // === Module 12024: useNativeForumPostContent ===
 
 // Module 12024 (useNativeForumPostContent)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import StickersUtils from "StickersUtils" /* 4899 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
-const MessageFlags = ME.MessageFlags;
-let closure_4 = createCacheKey.createStyles({ italics: { fontStyle: "italic" } });
-const result = set.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
+const MessageFlags = Constants.MessageFlags;
+let closure_4 = createStyles.createStyles({ italics: { fontStyle: "italic" } });
+const result = size.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
 
 export default function useNativeForumPostContent(arg0) {
   ({ message, messageContent, senderModifier } = arg0);
   ({ messageLoaded, isMessageDeleted } = arg0);
-  const tmp = callback();
+  const tmp = closure_4();
   if (isMessageDeleted) {
     let obj = { content: null, style: null, variant: "text-sm/normal" };
-    const intl9 = getSystemLocale.intl;
-    obj[0] = intl9.string(getSystemLocale.t.U8Rr2l);
-    obj[1] = tmp.italics;
+    const intl9 = util.intl;
+    obj.content = intl9.string(util.t.U8Rr2l);
+    obj.style = tmp.italics;
     return obj;
   } else {
     if (null != message) {
       if (isSystemMessageDefault(message)) {
-        obj = { content: null, style: null, variant: "text-sm/normal" };
-        obj[0] = messageContent;
-        obj[1] = tmp.italics;
+        obj = { content: messageContent, style: tmp.italics, variant: "text-sm/normal" };
         return obj;
       }
     }
@@ -66,12 +64,11 @@ export default function useNativeForumPostContent(arg0) {
               if (tmp9) {
                 tmp20 = null;
               }
-              obj = { content: null, style: null, variant: "text-sm/medium" };
-              obj[0] = tmp20;
+              obj = { content: tmp20, style: null, variant: "text-sm/medium" };
               return obj;
             } else if (null == message) {
-              const intl6 = getSystemLocale.intl;
-              let stringResult = intl6.string(getSystemLocale.t.mE3KJN);
+              const intl6 = util.intl;
+              let stringResult = intl6.string(util.t.mE3KJN);
             } else {
               if (obj5.getMessageStickers(message).length > 0) {
                 const intl5 = tmp28(1114).intl;
@@ -99,7 +96,7 @@ export default function useNativeForumPostContent(arg0) {
                 }
                 tmp14 = MessageFlags;
               }
-              obj5 = getStickerExtensionFromFormatType;
+              obj5 = StickersUtils;
             }
           }
         }
@@ -107,16 +104,14 @@ export default function useNativeForumPostContent(arg0) {
     }
     if (!(null != message && message.blocked)) {
       if (!tmp7) {
-        const intl7 = getSystemLocale.intl;
-        let stringResult1 = intl7.string(getSystemLocale.t.yWK7ZM);
+        const intl7 = util.intl;
+        let stringResult1 = intl7.string(util.t.yWK7ZM);
       }
-      obj1 = { content: null, style: null, variant: "text-sm/normal" };
-      obj1[0] = stringResult1;
-      obj1[1] = tmp.italics;
+      const obj1 = { content: stringResult1, style: tmp.italics, variant: "text-sm/normal" };
       return obj1;
     }
-    const intl8 = getSystemLocale.intl;
-    stringResult1 = intl8.string(getSystemLocale.t.Lkp2fB);
+    const intl8 = util.intl;
+    stringResult1 = intl8.string(util.t.Lkp2fB);
     tmp6 = null != message && message.ignored;
   }
 };

@@ -1,42 +1,35 @@
-// === Module 14173: AccessibleNativeStackNavigator ===
+// === Module 14173: createAccessibleNativeStackNavigator ===
 
-// Module 14173 (AccessibleNativeStackNavigator)
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14173 (createAccessibleNativeStackNavigator)
+import Link from "Link" /* 1484 */;
+import Navigator from "Navigator" /* 7000 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 7913 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function AccessibleNativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
-  let merged = Object.assign(arg0, Object.create(null));
-  let obj = descriptors(accessibilityNativeStackOptions[3]);
-  const navigationBuilder = obj.useNavigationBuilder(descriptors(accessibilityNativeStackOptions[3]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
-  descriptors = navigationBuilder.descriptors;
-  accessibilityNativeStackOptions = undefined;
+  let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
+  let obj = Link;
+  const navigationBuilder = obj.useNavigationBuilder(Link.StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
+  const descriptors = navigationBuilder.descriptors;
   ({ state, describe, navigation, NavigationContent } = navigationBuilder);
-  accessibilityNativeStackOptions = descriptors(accessibilityNativeStackOptions[2]).useAccessibilityNativeStackOptions();
+  const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
   const items = [descriptors, accessibilityNativeStackOptions];
   obj = { children: null };
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null == accessibilityNativeStackOptions) {
       return descriptors;
     } else {
       let obj = {};
       for (const key10006 in descriptors) {
-        let tmp12 = key10006;
-        let tmp13 = descriptors;
         let tmp14 = descriptors[key10006];
         let tmp10 = tmp14;
         if ("none" !== tmp14.options.animation) {
           obj = {};
-          let tmp2 = obj;
-          let tmp3 = tmp14;
           let merged = Object.assign(tmp14);
           obj = {};
-          let tmp5 = obj;
           let merged1 = Object.assign(tmp14.options);
-          let tmp7 = accessibilityNativeStackOptions;
-          let tmp8 = obj;
           let merged2 = Object.assign(accessibilityNativeStackOptions);
           obj.options = obj;
           tmp10 = obj;
@@ -53,38 +46,33 @@ function AccessibleNativeStackNavigator(arg0) {
   obj.navigation = navigation;
   obj.descriptors = memo;
   obj.describe = describe;
-  obj[0] = jsx(descriptors(accessibilityNativeStackOptions[4]).NativeStackView, {});
+  obj.children = jsx(NativeStackNavigator.NativeStackView, {});
   return <NavigationContent />;
 }
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/createAccessibleNativeStackNavigator.native.tsx");
 
 export default function createAccessibleNativeStackNavigator(arg0) {
-  return createStandardNavigationFactories.createNavigatorFactory(AccessibleNativeStackNavigator)(arg0);
+  return Link.createNavigatorFactory(AccessibleNativeStackNavigator)(arg0);
 };
 export const useAccessibilityPatchedDescriptors = function useAccessibilityPatchedDescriptors(filteredDescriptors) {
-  const _require = filteredDescriptors;
-  accessibilityNativeStackOptions = _require(accessibilityNativeStackOptions[2]).useAccessibilityNativeStackOptions();
+  closure_0 = filteredDescriptors;
+  const accessibilityNativeStackOptions = Navigator.useAccessibilityNativeStackOptions();
   const items = [filteredDescriptors, accessibilityNativeStackOptions];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if (null == accessibilityNativeStackOptions) {
       return descriptors;
     } else {
       let obj = {};
       for (const key10006 in descriptors) {
-        let tmp12 = key10006;
-        let tmp13 = descriptors;
         let tmp14 = descriptors[key10006];
         let tmp10 = tmp14;
         if ("none" !== tmp14.options.animation) {
           obj = {};
-          let tmp2 = obj;
-          let tmp3 = tmp14;
           let merged = Object.assign(tmp14);
           obj = {};
-          let tmp5 = obj;
           let merged1 = Object.assign(tmp14.options);
-          let tmp7 = accessibilityNativeStackOptions;
-          let tmp8 = obj;
           let merged2 = Object.assign(accessibilityNativeStackOptions);
           obj.options = obj;
           tmp10 = obj;

@@ -1,15 +1,15 @@
-// === Module 8369: ? ===
+// === Module 8369: MediaViewerOverlayButton ===
 
-// Module 8369
+// Module 8369 (MediaViewerOverlayButton)
 import IconButton from "IconButton" /* 8097 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx");
+
+export default noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   return jsx(IconButton.IconButton, { ref, size: "md", variant: "secondary-overlay" });
 });
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx");
-
-export default forwardRefResult;

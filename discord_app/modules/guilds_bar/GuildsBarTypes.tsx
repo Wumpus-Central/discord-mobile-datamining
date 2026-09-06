@@ -1,8 +1,8 @@
-// === Module 16358: SpecialGuildsNodeIds ===
+// === Module 16358: GuildsBarTypes ===
 
-// Module 16358 (SpecialGuildsNodeIds)
-import set from "set" /* 2 */;
+// Module 16358 (GuildsBarTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");
+const result = size.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");
 
 export const SpecialGuildsNodeIds = { PENDING_JOIN_REQUESTS_FOLDER: 1, [1]: "PENDING_JOIN_REQUESTS_FOLDER" };

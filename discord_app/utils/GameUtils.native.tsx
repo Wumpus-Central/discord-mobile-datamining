@@ -1,10 +1,10 @@
-// === Module 8684: set ===
+// === Module 8684: GameUtils ===
 
-// Module 8684 (set)
-import set from "set" /* 2 */;
+// Module 8684 (GameUtils)
+import size from "module_2" /* 2 */;
 
 let c0 = "not supported";
-const result = set.fileFinishedImporting("utils/GameUtils.native.tsx");
+const result = size.fileFinishedImporting("utils/GameUtils.native.tsx");
 
 export default {
   waitSubscribed() {
@@ -26,11 +26,11 @@ export default {
     return Promise.resolve(false);
   },
   launch() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   launchDispatchApplication() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   removeShortcuts() {
@@ -40,7 +40,7 @@ export default {
     return Promise.resolve(false);
   },
   launchGame() {
-    error = new Error(c0);
+    const error = new Error(c0);
     return Promise.reject(error);
   },
   isProtocolRegistered() {

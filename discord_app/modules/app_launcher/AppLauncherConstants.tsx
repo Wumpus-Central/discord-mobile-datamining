@@ -1,9 +1,9 @@
-// === Module 12135: CommandListSortOrder ===
+// === Module 12135: AppLauncherConstants ===
 
-// Module 12135 (CommandListSortOrder)
-import set from "set" /* 2 */;
+// Module 12135 (AppLauncherConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/AppLauncherConstants.tsx");
 
 export const CommandListSortOrder = { POPULAR: 0, [0]: "POPULAR", ALPHABETICAL: 1, [1]: "ALPHABETICAL" };
 export const APP_LAUNCHER_ELEMENT_CLASSNAME = "app-launcher-element";

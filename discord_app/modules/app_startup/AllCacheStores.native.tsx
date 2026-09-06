@@ -1,41 +1,43 @@
-// === Module 7493: noop ===
+// === Module 7493: AllCacheStores ===
 
-// Module 7493 (noop)
-import set from "set" /* 2 */;
-import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 7478 */;
-import isSubscriptionGated from "isSubscriptionGated" /* 2013 */;
-import reset from "reset" /* 4379 */;
-import getHash from "getHash" /* 4476 */;
-import getMemberSafetyPageStore from "getMemberSafetyPageStore" /* 7494 */;
-import handleReset from "handleReset" /* 7525 */;
-import snapshotSelectedGuildId from "snapshotSelectedGuildId" /* 4448 */;
-import processChannel from "processChannel" /* 7219 */;
-import dropChannelIfEmpty from "dropChannelIfEmpty" /* 4782 */;
-import freshTeenActivityWithMap from "freshTeenActivityWithMap" /* 7537 */;
-import guildHasCommunity from "guildHasCommunity" /* 7532 */;
-import processMessage from "processMessage" /* 7595 */;
-import createUserWidgetFromServer from "createUserWidgetFromServer" /* 7621 */;
-import _getSystemLocale from "_getSystemLocale" /* 2025 */;
-import handleThemeChange from "handleThemeChange" /* 1183 */;
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed" /* 1221 */;
-import ensureGuildLoaded from "ensureGuildLoaded" /* 1957 */;
-import setIndex from "setIndex" /* 7111 */;
-import comparator from "comparator" /* 2012 */;
-import trackCommunicationDisabled from "trackCommunicationDisabled" /* 2021 */;
-import allGuildIds from "allGuildIds" /* 1959 */;
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel" /* 7636 */;
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust" /* 2015 */;
-import createGuildRecordFromRust from "createGuildRecordFromRust" /* 1979 */;
-import reinjectEphemerals from "reinjectEphemerals" /* 4781 */;
-import getUncachedChannelPermissions from "getUncachedChannelPermissions" /* 4199 */;
-import generateOldThreadCutoff from "generateOldThreadCutoff" /* 4575 */;
-import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5438 */;
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 4741 */;
-import mergeGuildAvatar from "mergeGuildAvatar" /* 1371 */;
-import handleCacheOrSocketLoaded from "handleCacheOrSocketLoaded" /* 7643 */;
-import makeSortedChannel from "makeSortedChannel" /* 7218 */;
+// Module 7493 (AllCacheStores)
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7478 */;
+import GatedChannelStore from "GatedChannelStore" /* 2013 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4379 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import MemberSafetyStore from "MemberSafetyStore" /* 7494 */;
+import ChannelListStore from "ChannelListStore" /* 7525 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 4448 */;
+import MessageRequestStore from "MessageRequestStore" /* 7219 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7220 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 4782 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
+import NewChannelsStore from "NewChannelsStore" /* 7532 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7595 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7111 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildMembershipStore from "GuildMembershipStore" /* 1959 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import MessageStore from "MessageStore" /* 4781 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
+import SortedGuildStore from "SortedGuildStore" /* 5438 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import UserStore from "UserStore" /* 1371 */;
+import NUFStore from "NUFStore" /* 7643 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7218 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_startup/AllCacheStores.native.tsx");
+const result = size.fileFinishedImporting("modules/app_startup/AllCacheStores.native.tsx");
 
 export default function noop() {
 

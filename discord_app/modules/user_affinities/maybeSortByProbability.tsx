@@ -1,14 +1,14 @@
 // === Module 8072: maybeSortByProbability ===
 
 // Module 8072 (maybeSortByProbability)
-import set from "set" /* 2 */;
+import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8073 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
+const result = size.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   let sort = reduced;
-  const _require = userAffinitiesMap;
-  const voiceUserAffinitySortType = _require(8073).getVoiceUserAffinitySortType(location);
+  const voiceUserAffinitySortType = VoiceUserAffinityExperiment.getVoiceUserAffinitySortType(location);
   if (null == voiceUserAffinitySortType) {
     return sort;
   } else if ("vc_probability" === voiceUserAffinitySortType) {
@@ -16,7 +16,7 @@ export const maybeSortByProbability = function maybeSortByProbability(reduced, u
     HermesBuiltin.arraySpread(sort, 0);
     sort = items.sort;
     let sorted = sort((id, id2) => {
-      let value = userAffinitiesMap.get(id2.id);
+      value = userAffinitiesMap.get(id2.id);
       let num;
       if (value != null) {
         num = value.vcProbability;
@@ -38,7 +38,7 @@ export const maybeSortByProbability = function maybeSortByProbability(reduced, u
     const items1 = [];
     HermesBuiltin.arraySpread(sort, 0);
     sorted = items1.sort((id, id2) => {
-      let value = userAffinitiesMap.get(id2.id);
+      value = userAffinitiesMap.get(id2.id);
       let num;
       if (value != null) {
         num = value.communicationProbability;

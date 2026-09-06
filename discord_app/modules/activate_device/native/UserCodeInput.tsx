@@ -1,43 +1,49 @@
 // === Module 13881: UserCodeInput ===
 
 // Module 13881 (UserCodeInput)
-import innerContentDefault from "innerContent" /* 13884 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { OAuthConstants } from "OAuthConstants" /* 13882 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import TextInput from "TextInput" /* 6606 */;
+import useUserCodeSubmit from "useUserCodeSubmit" /* 13883 */;
+import ActivateDeviceSharedStylesDefault from "ActivateDeviceSharedStyles" /* 13884 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ text: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
+require = fn;
+const View = fn(17).View;
+const OAuthConstants = fn(13882).OAuthConstants;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({ text: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activate_device/native/UserCodeInput.tsx");
 
 export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
   let str = prefilledUserCode.prefilledUserCode;
-  let _require;
+  c0 = undefined;
   ({ onClose, onUserCodeAccepted } = prefilledUserCode);
-  const tmp = callback4();
+  const tmp = closure_10();
   if (str == null) {
     str = "";
   }
-  [arr, c0] = callback(React.useState(str), 2);
-  let obj = _require(13883);
+  [arr, c0] = _slicedToArray(noop.useState(str), 2);
+  let obj = useUserCodeSubmit;
   const userCodeSubmit = obj.useUserCodeSubmit(arr, onUserCodeAccepted, onClose);
   obj = { children: null };
-  obj = { style: innerContentDefault.innerContent, children: null };
+  obj = { style: ActivateDeviceSharedStylesDefault.innerContent, children: null };
   ({ manualSubmit, error, submitting } = userCodeSubmit);
-  obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
-  const intl = _require(1114).intl;
-  obj1[3] = intl.string(_require(1114).t.KYPNUv);
-  const items = [callback2(_require(4556).Text, obj1), ];
+  const obj1 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  const intl = util.intl;
+  obj1.children = intl.string(util.t.KYPNUv);
+  const items = [React5(Text_Text.Text, obj1), ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
-  const intl2 = _require(1114).intl;
-  obj2[3] = intl2.string(_require(1114).t.xRHk7f);
-  items[1] = callback2(_require(4556).Text, obj2);
-  obj[1] = items;
-  const items1 = [callback3(View, obj), , ];
+  const intl2 = util.intl;
+  obj2.children = intl2.string(util.t.xRHk7f);
+  items[1] = React5(Text_Text.Text, obj2);
+  obj.children = items;
+  const items1 = [React6(View, obj), , ];
   const obj3 = {
     onChange(arg0) {
       return _undefined(arg0);
@@ -49,17 +55,17 @@ export const UserCodeInput = function UserCodeInput(prefilledUserCode) {
     placeholder: null,
     errorMessage: null
   };
-  const intl3 = _require(1114).intl;
-  obj3[5] = intl3.formatToPlainString(_require(1114).t["0tbz6x"], { number: OAuthConstants.USER_CODE_LENGTH });
-  obj3[6] = error;
-  items1[1] = callback2(_require(6606).TextInput, obj3);
+  const intl3 = util.intl;
+  obj3.placeholder = intl3.formatToPlainString(util.t["0tbz6x"], { number: OAuthConstants.USER_CODE_LENGTH });
+  obj3.errorMessage = error;
+  items1[1] = React5(TextInput.TextInput, obj3);
   const obj5 = { size: "lg", text: null, onPress: null, loading: null, disabled: null, grow: true };
-  const intl4 = _require(1114).intl;
-  obj5[1] = intl4.string(_require(1114).t["3PatSz"]);
-  obj5[2] = manualSubmit;
-  obj5[3] = submitting;
-  obj5[4] = arr.length !== OAuthConstants.USER_CODE_LENGTH;
-  items1[2] = callback2(_require(4975).Button, obj5);
-  obj[0] = items1;
-  return callback3(closure_9, obj);
+  const intl4 = util.intl;
+  obj5.text = intl4.string(util.t["3PatSz"]);
+  obj5.onPress = manualSubmit;
+  obj5.loading = submitting;
+  obj5.disabled = arr.length !== OAuthConstants.USER_CODE_LENGTH;
+  items1[2] = React5(components_Button_Button.Button, obj5);
+  obj.children = items1;
+  return React6(React7, obj);
 };

@@ -1,53 +1,53 @@
 // === Module 9979: UserSettingsVoice ===
 
 // Module 9979 (UserSettingsVoice)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import apexExperimentDefault from "apexExperiment" /* 9982 */;
-import handleInputModePressDefault from "handleInputModePress" /* 9983 */;
-import SoundboardVolumeDefault from "SoundboardVolume" /* 9989 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9982 */;
+import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 9983 */;
+import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 9989 */;
 import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 9990 */;
-import VoiceProcessingOptionsDefault from "VoiceProcessingOptions" /* 9992 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isMobileOverlaySupported } from "getUserAgnosticState" /* 9980 */;
-import { USER_SETTINGS_VOICE_GUILD_URL as closure_5 } from "combined" /* 9981 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 9992 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");
+require = fn;
+const View = fn(17).View;
+const isMobileOverlaySupported = fn(9980).isMobileOverlaySupported;
+const guideURL = fn(9981).USER_SETTINGS_VOICE_GUILD_URL;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ container: { paddingHorizontal: 16 }, tableRow: { marginTop: 12 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoice.tsx");
 
 export default function UserSettingsVoice() {
-  const tmp = callback2();
-  let obj = apexExperimentDefault;
+  const tmp = closure_8();
+  let obj = MobileAudioOutputExperimentDefault;
   let nonContextualStreamOutputPresent = obj.useConfig({ location: "NewUserSettingsVoice" }).nonContextualStreamOutputPresent;
   obj = { style: tmp.container, children: null };
-  const items = [callback(handleInputModePressDefault, {}), , , , , , ];
+  const items = [timestampProducer(UserSettingsVoiceInputOptionsDefault, {}), , , , , , ];
   if (nonContextualStreamOutputPresent) {
     nonContextualStreamOutputPresent = tmp4(tmp2(9985), {});
   }
   items[1] = nonContextualStreamOutputPresent;
   obj = { style: tmp.tableRow, variant: "text-sm/medium", children: null };
   const intl = tmp7(1114).intl;
-  obj[2] = intl.format(getSystemLocale.t["V+B3FH"], { guideURL: closure_5 });
-  items[2] = callback(Text.Text, obj);
-  items[3] = callback(SoundboardVolumeDefault, {});
+  obj.children = intl.format(util.t["V+B3FH"], { guideURL });
+  items[2] = timestampProducer(Text_Text.Text, obj);
+  items[3] = timestampProducer(UserSettingsSoundboardVolumeDefault, {});
   const obj2 = { spacing: 24, children: null };
-  items[4] = isMobileOverlaySupported() && callback(UserSettingsVoiceOverlayDefault, {});
-  items[5] = callback(VoiceProcessingOptionsDefault, {});
-  items[6] = callback(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true });
-  obj2[1] = items;
-  obj[1] = closure_7(Stack.Stack, obj2);
-  return callback(View, obj);
+  items[4] = isMobileOverlaySupported() && timestampProducer(UserSettingsVoiceOverlayDefault, {});
+  items[5] = timestampProducer(UserSettingsVoiceProcessingDefault, {});
+  items[6] = timestampProducer(common_SafeAreaView.SafeAreaPaddingView, { bottom: true });
+  obj2.children = items;
+  obj.children = React5(Stack_Stack.Stack, obj2);
+  return timestampProducer(View, obj);
 };
 export const UserSettingsTableRowGroup = function UserSettingsTableRowGroup(arg0) {
   const merged = Object.assign(arg0);
-  return callback(TableRowGroupTitle.TableRowGroup, {});
+  return timestampProducer(TableRowGroup.TableRowGroup, {});
 };

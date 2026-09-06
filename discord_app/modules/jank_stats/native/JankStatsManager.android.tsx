@@ -1,15 +1,14 @@
-// === Module 17410: handleAppStateUpdate ===
+// === Module 17410: JankStatsManager ===
 
-// Module 17410 (handleAppStateUpdate)
-import set from "set" /* 2 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import initializeDefault from "initialize" /* 7118 */;
-import getDeviceMetadata from "getDeviceMetadata" /* 7475 */;
-import enforcingDefault from "enforcing" /* 17411 */;
-import ME from "ME" /* 1074 */;
+// Module 17410 (JankStatsManager)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7475 */;
+import NativeJankStatsModuleDefault from "NativeJankStatsModule" /* 17411 */;
+import Constants from "Constants" /* 1074 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import size from "module_2" /* 2 */;
 
-({ AppStates: c3, AnalyticEvents: c4 } = ME);
-initializeDefault;
+({ AppStates: c3, AnalyticEvents: closure_4 } = Constants);
 class JankStatsManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -53,8 +52,7 @@ prototype["handleConnectionOpenSupplemental"] = function handleConnectionOpenSup
   }, 0);
 };
 prototype["scheduleReport"] = function scheduleReport() {
-  let self = this;
-  self = this;
+  const self = this;
   if (null == this._timeoutId) {
     self._isScheduledReportSent = false;
     const _setTimeout = setTimeout;
@@ -62,7 +60,7 @@ prototype["scheduleReport"] = function scheduleReport() {
       self._timeoutId = null;
       self.sendReport("timer");
       self._isScheduledReportSent = true;
-      const obj = closure_1_1(closure_1_2[2]);
+      const obj = NativeJankStatsModuleDefault;
       if (obj != null) {
         obj.stopTracking();
       }
@@ -70,7 +68,7 @@ prototype["scheduleReport"] = function scheduleReport() {
   }
 };
 prototype["sendReport"] = function sendReport(background) {
-  let obj = enforcingDefault;
+  let obj = NativeJankStatsModuleDefault;
   let report;
   if (obj != null) {
     report = obj.requestReport();
@@ -82,16 +80,15 @@ prototype["sendReport"] = function sendReport(background) {
   }
   if (!tmp4) {
     obj = {};
-    const tmpResult = expandEventPropertiesDefault;
-    const merged = Object.assign(getDeviceMetadata.getDeviceMetadata());
+    const tmpResult = AnalyticsUtilsDefault;
+    const merged = Object.assign(TTIAnalyticsUtils.getDeviceMetadata());
     obj.version = 2;
     ({ totalFrameCount: obj3.total_frame_count, jankFrameCount: obj3.jank_frame_count, frameMetricsTotalFrameCount: obj3.frame_metrics_total_frame_count, frameMetricsJankFrameCount: obj3.frame_metrics_jank_frame_count } = report);
     obj.trigger = background;
     tmpResult.track(constants2.ANDROID_JANK_STATS, obj);
-    const obj4 = getDeviceMetadata;
   }
 };
 const jankStatsManager = new JankStatsManager();
-let result = set.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");
+let result = size.fileFinishedImporting("modules/jank_stats/native/JankStatsManager.android.tsx");
 
 export default jankStatsManager;

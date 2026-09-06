@@ -1,21 +1,19 @@
-// === Module 17384: HolidayEmojiAnimationType ===
+// === Module 17384: HolidayEventsUtils ===
 
-// Module 17384 (HolidayEmojiAnimationType)
-import set from "set" /* 2 */;
-import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 17381 */;
+// Module 17384 (HolidayEventsUtils)
+import HolidayEventsConfigDefault from "HolidayEventsConfig" /* 17381 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
+const result = size.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 
 export default {
   isEligible() {
-    const isExperimentEligible = HolidayEmojiAnimationTypeDefault.getIsExperimentEligible();
+    const isExperimentEligible = HolidayEventsConfigDefault.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationTypeDefault;
-    const tmp = importDefault;
-    return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
+    return timestamp >= HolidayEventsConfigDefault.startTimeMs && timestamp <= HolidayEventsConfigDefault.endTimeMs && isExperimentEligible;
   },
   useHolidaySoundpack() {
-    let obj = HolidayEmojiAnimationTypeDefault;
+    let obj = HolidayEventsConfigDefault;
     const isExperimentEligible = obj.useIsExperimentEligible();
     const timestamp = Date.now();
     let tmp6 = null;
@@ -24,9 +22,7 @@ export default {
       if (null != tmp(17381).soundpack) {
         tmp6 = null;
         if (null != tmp(17381).soundpackLabel) {
-          obj = { soundpack: null, soundpackLabel: null };
-          obj[0] = tmp(17381).soundpack;
-          obj[1] = tmp(17381).soundpackLabel;
+          obj = { soundpack: tmp(17381).soundpack, soundpackLabel: tmp(17381).soundpackLabel };
           tmp6 = obj;
         }
       }
@@ -34,11 +30,9 @@ export default {
     return tmp6;
   },
   useIsEligible() {
-    const isExperimentEligible = HolidayEmojiAnimationTypeDefault.useIsExperimentEligible();
+    const isExperimentEligible = HolidayEventsConfigDefault.useIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationTypeDefault;
-    const tmp = importDefault;
-    return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
+    return timestamp >= HolidayEventsConfigDefault.startTimeMs && timestamp <= HolidayEventsConfigDefault.endTimeMs && isExperimentEligible;
   },
   getAppSpinnerSources() {
     const timestamp = Date.now();
@@ -63,9 +57,8 @@ export default {
     return tmp5;
   },
   getHolidaySoundpack() {
-    const isExperimentEligible = HolidayEmojiAnimationTypeDefault.getIsExperimentEligible();
+    const isExperimentEligible = HolidayEventsConfigDefault.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationTypeDefault;
     let soundpack = null;
     if (tmp5) {
       soundpack = null;

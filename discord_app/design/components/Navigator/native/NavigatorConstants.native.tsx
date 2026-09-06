@@ -1,9 +1,9 @@
-// === Module 5682: NAV_BAR_HEIGHT ===
+// === Module 5682: NavigatorConstants ===
 
-// Module 5682 (NAV_BAR_HEIGHT)
-import set from "set" /* 2 */;
+// Module 5682 (NavigatorConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Navigator/native/NavigatorConstants.native.tsx");
+const result = size.fileFinishedImporting("design/components/Navigator/native/NavigatorConstants.native.tsx");
 
 export const NAV_BAR_HEIGHT = 56;
 export const NAV_BAR_HEIGHT_MULTILINE = 56;

@@ -1,10 +1,11 @@
-// === Module 14457: ? ===
+// === Module 14457: NativeRPCServerManager ===
 
-// Module 14457
-import importDefaultResult1Default from "importDefaultResult1" /* 14465 */;
-import importDefaultResult from "loadServer" /* 14458 */;
+// Module 14457 (NativeRPCServerManager)
+import NativeRPCImplementationDefault from "NativeRPCImplementation" /* 14465 */;
+import RPCServerManager from "RPCServerManager" /* 14458 */;
 
-importDefaultResult = new importDefaultResult(importDefaultResult1Default);
-const result = require("set").fileFinishedImporting("modules/rpc/native/server/NativeRPCServerManager.tsx");
+RPCServerManager = new RPCServerManager(NativeRPCImplementationDefault);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/server/NativeRPCServerManager.tsx");
 
-export default importDefaultResult;
+export default RPCServerManager;

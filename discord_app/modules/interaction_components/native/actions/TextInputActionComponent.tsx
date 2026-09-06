@@ -1,49 +1,52 @@
-// === Module 17393: ? ===
+// === Module 17393: TextInputActionComponent ===
 
-// Module 17393
-import closure_2 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17393 (TextInputActionComponent)
+import Server from "Server" /* 1894 */;
+import ComponentStateContext from "ComponentStateContext" /* 8112 */;
+import InteractionModalUtils from "InteractionModalUtils" /* 17390 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo((type) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/actions/TextInputActionComponent.tsx");
+
+export default noop.memo((type) => {
   type = type.type;
   ({ style, label, value } = type);
   dependencyMap = value;
   ({ placeholder, required, maxLength } = type);
-  let obj = type(8112);
+  let obj = ComponentStateContext;
   let tmp3;
   if (null != value) {
-    obj = { type: null, value: null };
-    obj[0] = type;
-    obj[1] = value;
+    obj = { type, value };
     tmp3 = obj;
   }
   const componentState = obj.useComponentState(type, tmp3);
-  ({ state: closure_2, executeStateUpdate } = componentState);
-  error = componentState.error;
-  let obj3 = executeStateUpdate;
-  const isFirstTextInputInModal = type(17390).useIsFirstTextInputInModal(type.id);
+  ({ state: _slicedToArray, executeStateUpdate } = componentState);
+  const error = componentState.error;
+  let obj3 = noop;
+  const isFirstTextInputInModal = InteractionModalUtils.useIsFirstTextInputInModal(type.id);
   obj = { placeholder, maxLength, status: null, defaultValue: null, onChange: null, autoFocus: null, isClearable: true };
   let str = "default";
-  const state = executeStateUpdate.useState(() => {
+  const state = noop.useState(() => {
     type = undefined;
-    if (closure_2 != null) {
+    if (_slicedToArray != null) {
       type = iter.type;
     }
-    return type === type ? closure_2.value : closure_1;
+    return type === type ? _slicedToArray.value : value;
   });
   if (null != error) {
     str = "error";
   }
-  obj[2] = str;
-  obj[3] = callback(state, 1)[0];
+  obj.status = str;
+  obj.defaultValue = _slicedToArray(state, 1)[0];
   const items = [type, executeStateUpdate];
-  obj[4] = obj3.useCallback((value) => executeStateUpdate({ type, value }), items);
-  obj[5] = isFirstTextInputInModal;
-  if (type(1894).TextInputComponentStyle.SMALL === style) {
-    obj1 = {};
+  obj.onChange = obj3.useCallback((value) => executeStateUpdate({ type, value }), items);
+  obj.autoFocus = isFirstTextInputInModal;
+  if (Server.TextInputComponentStyle.SMALL === style) {
+    const obj1 = {};
     const merged = Object.assign(obj);
     let tmp7 = jsx(tmp(6613).TextField, {});
   } else if (tmp(1894).TextInputComponentStyle.PARAGRAPH === style) {
@@ -53,15 +56,8 @@ const memoResult = importAllResult.memo((type) => {
   }
   let tmp16 = tmp7;
   if (null != label) {
-    obj3 = { label: null, required: null, errorMessage: null, children: null };
-    obj3[0] = label;
-    obj3[1] = required;
-    obj3[2] = error;
-    obj3[3] = tmp7;
-    tmp16 = jsx(tmp(6607).Input, { label: null, required: null, errorMessage: null, children: null });
+    obj3 = { label, required, errorMessage: error, children: tmp7 };
+    tmp16 = jsx(tmp(6607).Input, { label, required, errorMessage: error, children: tmp7 });
   }
   return tmp16;
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/TextInputActionComponent.tsx");
-
-export default memoResult;

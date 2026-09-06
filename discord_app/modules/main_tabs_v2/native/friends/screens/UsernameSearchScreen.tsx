@@ -1,49 +1,49 @@
 // === Module 16773: UsernameSearchScreen ===
 
 // Module 16773 (UsernameSearchScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: closure_6, AnalyticsSections: error } = ME);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { background: null, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_40 };
-const obj2 = { paddingTop: ThemesDefault.space.PX_40 };
-createCacheKey[3] = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj3 = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
-createCacheKey[5] = { textTransform: "none" };
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const obj4 = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx");
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = { background: null, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createStyles.background = createStyles;
+createStyles.content = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj1 = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createStyles.iosPaddingThemeAdjust = { paddingTop: nativeDefault.space.PX_40 };
+const obj2 = { paddingTop: nativeDefault.space.PX_40 };
+createStyles.container = { flexGrow: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj3 = { flexGrow: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.inputContainer = { marginTop: nativeDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
+createStyles.headerText = { textTransform: "none" };
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx");
 
 export default function UsernameSearchScreen(navigation) {
   navigation = navigation.navigation;
   let ref;
-  const tmp = callback3();
-  const effect = React.useEffect(() => {
-    let obj = ref(table[6]);
-    obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
+  const tmp = closure_10();
+  const effect = noop.useEffect(() => {
+    ref(1242);
+    const obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
     obj.track(constants.FRIEND_ADD_VIEWED, obj);
   }, []);
   const insets = ref(6981)().insets;
-  ref = React.useRef(null);
+  ref = noop.useRef(null);
   const items = [navigation];
-  const effect1 = React.useEffect(() => navigation.addListener("transitionEnd", (data) => {
+  const effect1 = noop.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = closure_1_0(closure_1_2[8]).getIsScreenReaderEnabled();
-      const obj = closure_1_0(closure_1_2[8]);
+      closing = navigation(4962).getIsScreenReaderEnabled();
+      const obj = navigation(4962);
     }
     if (!closing) {
       const current = ref.current;
@@ -54,7 +54,7 @@ export default function UsernameSearchScreen(navigation) {
   }), items);
   let obj = navigation(7872);
   const clientThemesOverride = obj.useClientThemesOverride();
-  obj1 = navigation(1115);
+  let obj1 = navigation(1115);
   let prop = null;
   if (obj1.isIOS()) {
     prop = null;
@@ -66,22 +66,23 @@ export default function UsernameSearchScreen(navigation) {
     }
   }
   obj = { style: tmp.background, children: null };
-  obj = { style: items1, children: null };
-  items1 = [tmp.content, clientThemesOverride];
-  let tmp3Result = tmp3(5578);
-  const items2 = [callback(ref(5125), { absolute: true }), ];
+  obj = { style: null, children: null };
+  const items1 = [tmp.content, clientThemesOverride];
+  obj.style = items1;
+  tmp3(5578);
+  const items2 = [closure_8(ref(5125), { absolute: true }), ];
   obj1 = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
   const items3 = [tmp.container, prop, { paddingBottom: insets.bottom + ref(576).space.PX_16 }];
-  obj1[2] = items3;
+  obj1.contentContainerStyle = items3;
   const obj3 = { style: tmp.inputContainer, autoFocusInput: false, headerText: null, headerTextStyle: null, ref: null };
-  tmp3Result = tmp3(13855);
+  const tmp3Result = tmp3(13855);
   const intl = tmp7(1114).intl;
-  obj3[2] = intl.string(navigation(1114).t.YEOwDM);
-  obj3[3] = tmp.headerText;
-  obj3[4] = ref;
-  obj1[3] = callback(tmp3Result, obj3);
-  items2[1] = callback(closure_4, obj1);
-  obj[1] = items2;
-  obj[1] = callback2(tmp3Result, obj);
-  return callback(closure_5, obj);
+  obj3.headerText = intl.string(navigation(1114).t.YEOwDM);
+  obj3.headerTextStyle = tmp.headerText;
+  obj3.ref = ref;
+  obj1.children = closure_8(tmp3Result, obj3);
+  items2[1] = closure_8(closure_4, obj1);
+  obj.children = items2;
+  obj.children = closure_9(tmp3Result, obj);
+  return closure_8(closure_5, obj);
 };

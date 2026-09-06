@@ -1,10 +1,10 @@
-// === Module 17072: context ===
+// === Module 17072: SoundPlayerContext ===
 
-// Module 17072 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 17072 (SoundPlayerContext)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext({ audioRef: importAllResult.createRef() });
-const obj = { audioRef: importAllResult.createRef() };
-const result = require("set").fileFinishedImporting("modules/soundplayer/SoundPlayerContext.tsx");
+const context = noop.createContext({ audioRef: noop.createRef() });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/soundplayer/SoundPlayerContext.tsx");
 
 export default context;

@@ -1,38 +1,42 @@
 // === Module 16186: useLiveStageChannels ===
 
 // Module 16186 (useLiveStageChannels)
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useLiveStageChannels.tsx");
 
 export default function useLiveStageChannels(arg0) {
-  let stateFromStoresArray = arg0;
-  const items = [closure_5];
+  _require = arg0;
+  const items = [StageInstanceStore];
   const items1 = [arg0];
-  stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => stateFromStoresArray1(closure_1_2[6]).keys(closure_1_5.getStageInstancesByGuild(stateFromStoresArray)), items1);
-  let stateFromStoresArray1;
-  const obj = stateFromStoresArray(504);
-  const items2 = [closure_3];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => SnowflakeUtilsDefault.keys(StageInstanceStore.getStageInstancesByGuild(closure_0)), items1);
+  closure_129_0 = stateFromStoresArray;
+  const obj = require("initialize");
+  const items2 = [ChannelStore];
   const items3 = [stateFromStoresArray];
-  stateFromStoresArray1 = stateFromStoresArray(504).useStateFromStoresArray(items2, () => {
-    const mapped = stateFromStores.map((arg0) => channel.getChannel(arg0));
-    return mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
+  const stateFromStoresArray1 = require("initialize").useStateFromStoresArray(items2, () => {
+    const mapped = stateFromStores.map((item) => channel.getChannel(item));
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items3);
-  const obj2 = stateFromStoresArray(504);
-  const items4 = [closure_4];
+  closure_129_1 = stateFromStoresArray1;
+  const obj2 = require("initialize");
+  const items4 = [PermissionStore];
   const items5 = [stateFromStoresArray1];
-  return stateFromStoresArray(504).useStateFromStoresArray(items4, () => stateFromStoresArray.filter((arg0) => closure_4.can(callback(table[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, arg0)), items5);
+  return require("initialize").useStateFromStoresArray(items4, () => stateFromStoresArray.filter((item) => closure_1_4.can(stateFromStores(closure_1_2[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, item)), items5);
 };
 export const getAllLiveStageChannels = function getAllLiveStageChannels() {
-  allStageInstances = allStageInstances.getAllStageInstances();
+  const allStageInstances = StageInstanceStore.getAllStageInstances();
   return allStageInstances.reduce((arr, channel_id) => {
     channel = channel.getChannel(channel_id.channel_id);
     let canResult = null != channel;
     if (canResult) {
-      canResult = closure_4.can(callback(table[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
+      canResult = PermissionStore.can(require("StageChannelPermissions").JOIN_VOCAL_CHANNEL_PERMISSIONS, channel);
     }
     if (canResult) {
       arr.push(channel);
@@ -41,21 +45,20 @@ export const getAllLiveStageChannels = function getAllLiveStageChannels() {
   }, []);
 };
 export const useAllLiveStageChannels = function useAllLiveStageChannels() {
-  const items = [closure_5];
+  const items = [StageInstanceStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => {
     allStageInstances = allStageInstances.getAllStageInstances();
     return allStageInstances.map((channel_id) => channel_id.channel_id);
   }, []);
-  let stateFromStoresArray;
   const obj = stateFromStores(504);
-  const items1 = [closure_3];
+  const items1 = [ChannelStore];
   const items2 = [stateFromStores];
-  stateFromStoresArray = stateFromStores(504).useStateFromStoresArray(items1, () => {
-    const mapped = stateFromStores.map((arg0) => channel.getChannel(arg0));
-    return mapped.filter(stateFromStores(closure_1_2[5]).isNotNullish);
+  const stateFromStoresArray = stateFromStores(504).useStateFromStoresArray(items1, () => {
+    const mapped = stateFromStores.map((item) => channel.getChannel(item));
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items2);
   const obj2 = stateFromStores(504);
-  const items3 = [closure_4];
+  const items3 = [PermissionStore];
   const items4 = [stateFromStoresArray];
-  return stateFromStores(504).useStateFromStoresArray(items3, () => stateFromStoresArray.filter((arg0) => closure_4.can(callback(table[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, arg0)), items4);
+  return stateFromStores(504).useStateFromStoresArray(items3, () => stateFromStoresArray.filter((item) => closure_1_4.can(stateFromStores(closure_1_2[3]).JOIN_VOCAL_CHANNEL_PERMISSIONS, item)), items4);
 };

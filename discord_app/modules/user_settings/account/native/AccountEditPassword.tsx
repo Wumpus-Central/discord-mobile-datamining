@@ -1,20 +1,20 @@
-// === Module 14776: ? ===
+// === Module 14776: AccountEditPassword ===
 
-// Module 14776
-import ThemesDefault from "Themes" /* 576 */;
-import componentWillUnmountDefault from "componentWillUnmount" /* 14777 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 14776 (AccountEditPassword)
+import nativeDefault from "native" /* 576 */;
+import UserSettingsAccountEditPasswordDefault from "UserSettingsAccountEditPassword" /* 14777 */;
+import noop from "module_19" /* 19 */;
 
-({ View: obj1, StyleSheet } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ View: c2, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { container: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(() => <closure_2 style={callback().container}>{jsx(componentWillUnmountDefault, {})}</closure_2>);
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
+obj.container = obj;
+let closure_4 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
 
-export default memoResult;
+export default noop.memo(() => <React2 style={closure_4().container}>{jsx(UserSettingsAccountEditPasswordDefault, {})}</React2>);

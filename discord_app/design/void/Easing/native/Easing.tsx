@@ -1,14 +1,13 @@
-// === Module 14120: STANDARD_EASING ===
+// === Module 14120: Easing ===
 
-// Module 14120 (STANDARD_EASING)
-import set from "set" /* 2 */;
-import _mod4296 from "module_4296" /* 4296 */;
-import bezierResult1 from "module_0" /* 0 */;
+// Module 14120 (Easing)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import size from "module_2" /* 2 */;
 
-const Easing = _mod4296.Easing;
-const Easing2 = _mod4296.Easing;
+const Easing = ReanimatedRexport.Easing;
+const Easing2 = ReanimatedRexport.Easing;
 const bezierResult = Easing.bezier(0.4, 0, 0.2, 1);
-const result = set.fileFinishedImporting("design/void/Easing/native/Easing.tsx");
+const result = size.fileFinishedImporting("design/void/Easing/native/Easing.tsx");
 
 export const STANDARD_EASING = bezierResult;
-export const DECELERATED_EASING = bezierResult1;
+export const DECELERATED_EASING = Easing2.bezier(0, 0, 0.2, 1);

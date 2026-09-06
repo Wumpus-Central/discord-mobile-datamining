@@ -1,11 +1,11 @@
 // === Module 7302: isForwardMessage ===
 
 // Module 7302 (isForwardMessage)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const MessageReferenceTypes = ME.MessageReferenceTypes;
-const result = set.fileFinishedImporting("modules/forwarding/isForwardMessage.tsx");
+const MessageReferenceTypes = Constants.MessageReferenceTypes;
+const result = size.fileFinishedImporting("modules/forwarding/isForwardMessage.tsx");
 
 export default function isForwardMessage(messageReference) {
   messageReference = messageReference.messageReference;

@@ -1,19 +1,19 @@
-// === Module 4383: isActionedApplicationStatus ===
+// === Module 4383: GuildJoinRequestUtils ===
 
-// Module 4383 (isActionedApplicationStatus)
-import set from "set" /* 2 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
+// Module 4383 (GuildJoinRequestUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestUtils.tsx");
 
 export const isActionedApplicationStatus = function isActionedApplicationStatus(applicationStatus) {
-  return applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED || applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED;
+  return applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED || applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED;
 };
 export const isSubmittedApplicationStatus = function isSubmittedApplicationStatus(applicationStatus) {
-  return applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED;
+  return applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.SUBMITTED;
 };
 export const isApprovedAndAcked = function isApprovedAndAcked(applicationStatus) {
-  let tmp = applicationStatus.applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED;
+  let tmp = applicationStatus.applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED;
   if (tmp) {
     tmp = null != applicationStatus.lastSeen;
   }
@@ -21,7 +21,7 @@ export const isApprovedAndAcked = function isApprovedAndAcked(applicationStatus)
 };
 export const isActionedAndNotAcked = function isActionedAndNotAcked(request) {
   const applicationStatus = request.applicationStatus;
-  let tmp3 = applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED || applicationStatus === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED;
+  let tmp3 = applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.APPROVED || applicationStatus === MemberVerificationTypes.GuildJoinRequestApplicationStatuses.REJECTED;
   if (tmp3) {
     tmp3 = null == request.lastSeen;
   }

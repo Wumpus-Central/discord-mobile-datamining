@@ -1,10 +1,10 @@
-// === Module 4796: context ===
+// === Module 4796: DisplayNameStylesContext ===
 
-// Module 4796 (context)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+// Module 4796 (DisplayNameStylesContext)
+import _mod19 from "module_19" /* 19 */;
+import size from "module_2" /* 2 */;
 
-const context = noop.createContext({ overrideSettings: false });
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesContext.tsx");
+const context = _mod19.createContext({ overrideSettings: false });
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesContext.tsx");
 
 export const DisplayNameStylesContext = context;

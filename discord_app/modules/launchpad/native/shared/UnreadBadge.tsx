@@ -1,51 +1,48 @@
-// === Module 16981: ? ===
+// === Module 16981: UnreadBadge ===
 
-// Module 16981
-import getFontScale from "getFontScale" /* 4982 */;
-import DEFAULT_BADGE_SIZE from "DEFAULT_BADGE_SIZE" /* 7869 */;
-import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 7869 */;
-import getLayoutStyleDefault from "getLayoutStyle" /* 16977 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10118 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16981 (UnreadBadge)
+import useFontScale from "useFontScale" /* 4982 */;
+import Badge from "Badge" /* 7869 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16977 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
-const memoResult = importAllResult.memo(function UnreadBadge(arg0) {
+const BadgeDefault = Badge;
+
+require = fn;
+const View = fn(17).View;
+const MUTED_OPACITY_CONTENT = fn(10118).MUTED_OPACITY_CONTENT;
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" } });
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
+
+export default noop.memo(function UnreadBadge(arg0) {
   ({ unread, resolvedUnreadSetting, muted } = arg0);
-  const tmp4 = getLayoutStyleDefault();
-  getFontScale;
+  const tmp4 = getLayoutStylesDefault();
+  useFontScale;
   let tmp9Result = null;
   if (unread) {
     let obj = { style: null, children: null };
     const items = [tmp.unreadBadge, tmp4.unreadBadge.position, ];
-    obj = { width: null, height: null };
-    obj[0] = tmp4.unreadBadge.size;
-    obj[1] = tmp4.unreadBadge.size;
-    items[2] = obj;
-    obj[0] = items;
+    const size = { width: tmp4.unreadBadge.size, height: tmp4.unreadBadge.size };
+    items[2] = size;
+    obj.style = items;
     obj = { classic: true, size: null, badgeStyle: null };
     const _Math = Math;
-    obj[1] = DEFAULT_BADGE_SIZE.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
+    obj.size = Badge.CHANNEL_BADGE_SIZE * Math.max(tmp7, 1);
     if (resolvedUnreadSetting !== UnreadSetting.ALL_MESSAGES) {
       let num2 = MUTED_OPACITY_CONTENT;
     } else {
       num2 = 1;
     }
-    obj1 = { opacity: null };
-    obj1[0] = num2;
-    const items1 = [obj1];
-    obj[2] = items1;
-    obj[1] = jsx(DEFAULT_BADGE_SIZEDefault, { classic: true, size: null, badgeStyle: null });
+    obj = { opacity: num2 };
+    const items1 = [obj];
+    obj.badgeStyle = items1;
+    obj.children = jsx(BadgeDefault, { opacity: num2 });
     tmp9Result = tmp9(View, obj);
-    const tmp10 = View;
-    const tmp2Result = DEFAULT_BADGE_SIZEDefault;
+    const tmp2Result = BadgeDefault;
   }
   return tmp9Result;
 });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/UnreadBadge.tsx");
-
-export default memoResult;

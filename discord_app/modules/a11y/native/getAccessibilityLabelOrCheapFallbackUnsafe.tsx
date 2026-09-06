@@ -1,9 +1,9 @@
 // === Module 7951: getAccessibilityLabelOrCheapFallbackUnsafe ===
 
 // Module 7951 (getAccessibilityLabelOrCheapFallbackUnsafe)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/a11y/native/getAccessibilityLabelOrCheapFallbackUnsafe.tsx");
+const result = size.fileFinishedImporting("modules/a11y/native/getAccessibilityLabelOrCheapFallbackUnsafe.tsx");
 
 export const getAccessibilityLabelOrCheapFallbackUnsafe = function getAccessibilityLabelOrCheapFallbackUnsafe(cheap) {
   cheap = cheap.cheap;

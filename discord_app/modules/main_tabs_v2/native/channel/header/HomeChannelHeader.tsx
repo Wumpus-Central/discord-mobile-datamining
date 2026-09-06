@@ -1,33 +1,33 @@
-// === Module 13265: ? ===
+// === Module 13265: HomeChannelHeader ===
 
-// Module 13265
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
-import registerAssetDefault from "registerAsset" /* 12777 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 13265 (HomeChannelHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import _modDef12777 from "module_12777" /* 12777 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: null };
-obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-obj[0] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function HomeChannelHeader() {
-  let obj = { style: callback3().container, children: null };
-  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM, disableColor: true };
-  const items = [callback(Button.Icon, obj), ];
-  obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.Ym2Ri6);
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
-});
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
+obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+obj.container = obj;
+let closure_6 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
 
-export default memoResult;
+export default noop.memo(function HomeChannelHeader() {
+  let obj = { style: closure_6().container, children: null };
+  obj = { source: _modDef12777, size: native.Icon.Sizes.MEDIUM, disableColor: true };
+  const items = [React4(native.Icon, obj), ];
+  obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
+  const intl = util.intl;
+  obj.children = intl.string(util.t.Ym2Ri6);
+  items[1] = React4(Text_Text.Text, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
+});

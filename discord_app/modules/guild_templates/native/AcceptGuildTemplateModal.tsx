@@ -1,41 +1,37 @@
-// === Module 11793: ConnectedAcceptGuildTemplate ===
+// === Module 11793: AcceptGuildTemplateModal ===
 
-// Module 11793 (ConnectedAcceptGuildTemplate)
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import closure_7 from "handleGuildTemplateResolveSuccess" /* 7457 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11793 (AcceptGuildTemplateModal)
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import AcceptGuildTemplateActionCreatorsDefault from "AcceptGuildTemplateActionCreators" /* 11805 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7457 */;
 
-const require = arg1;
+require = fn;
 function ConnectedAcceptGuildTemplate(code) {
   code = code.code;
-  let stateFromStores;
-  let first;
-  dependencyMap = undefined;
-  let first1;
-  let callback;
-  let React;
+  let name;
+  _slicedToArray = undefined;
+  noop = undefined;
   let obj = code(504);
-  const items = [closure_7];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuildTemplate(code));
-  const tmp = callback2();
-  const tmp3 = callback(React.useState(first(5519).getGuildNameSuggestion()), 2);
-  first = tmp3[0];
+  const items = [GuildTemplateStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildTemplateStore.getGuildTemplate(code));
+  const tmp = closure_10();
+  const tmp3 = _slicedToArray(noop.useState(name(5519).getGuildNameSuggestion()), 2);
+  name = tmp3[0];
   dependencyMap = tmp3[1];
-  const tmp5 = callback(React.useState(null), 2);
-  first1 = tmp5[0];
-  callback = tmp5[1];
-  const tmp7 = callback(React.useState(null), 2);
-  React = tmp7[1];
+  const tmp5 = _slicedToArray(noop.useState(null), 2);
+  const first1 = tmp5[0];
+  _slicedToArray = tmp5[1];
+  const tmp7 = _slicedToArray(noop.useState(null), 2);
+  noop = tmp7[1];
   stateFromStores(11794)(stateFromStores);
   obj = { top: true, style: tmp.container, children: null };
   obj = {
     code,
     guildTemplate: stateFromStores,
-    name: first,
+    name,
     setName(arg0) {
       return dependencyMap(arg0);
     },
@@ -44,79 +40,72 @@ function ConnectedAcceptGuildTemplate(code) {
     chooseIcon: null,
     createServer: null
   };
-  let obj2 = first(5519);
-  obj[6] = first1(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
+  let obj2 = name(5519);
+  obj.chooseIcon = first1(function*(arg0, value) {
+    if (dependencyMap === 2) {
+      dependencyMap = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        table = 2;
+        dependencyMap = 2;
         if (0 === c2) {
           if (arg0 === 1) {
-            table = 3;
-            throw arg1;
+            dependencyMap = 3;
+            throw value;
           } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            dependencyMap = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp5;
-            let base64 = tmp2;
-            base64 = undefined;
-            obj1 = closure_1_1(table[13]);
-            obj1 = { size: null };
-            obj1[0] = closure_1_8;
+            closure_0 = tmp2;
+            let base64;
+            let obj1 = tmp5(dependencyMap[13]);
+            obj1 = { size };
             c2 = 1;
-            table = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj1.openImagePicker(obj1);
+            dependencyMap = 1;
+            const obj2 = { value: obj1.openImagePicker(obj1), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
+          dependencyMap = 3;
+          throw value;
         } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          dependencyMap = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          base64 = arg1.base64;
+          base64 = value.base64;
           if (null != base64) {
-            callback(base64);
+            closure_129_5(base64);
           }
-          table = 3;
+          dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp17) {
-        table = tmp;
+        dependencyMap = tmp;
         throw tmp17;
       }
     }
   });
-  obj[7] = function createServer() {
+  obj.createServer = function createServer() {
     if (null != stateFromStores) {
-      const obj = stateFromStores(11805);
-      stateFromStores(11805).acceptGuildTemplate(tmp.code, first, first1).then(() => callback(table[15]).hideModal(), (arg0) => callback2(arg0));
-      const acceptGuildTemplateResult = stateFromStores(11805).acceptGuildTemplate(tmp.code, first, first1);
+      AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1).then(() => stateFromStores(dependencyMap[15]).hideModal(), (arg0) => closure_1_6(arg0));
+      const acceptGuildTemplateResult = AcceptGuildTemplateActionCreatorsDefault.acceptGuildTemplate(tmp.code, first, first1);
     }
   };
-  obj[2] = jsx(stateFromStores(11795), {
+  obj.children = jsx(stateFromStores(11795), {
     code,
     guildTemplate: stateFromStores,
-    name: first,
+    name,
     setName(arg0) {
       return dependencyMap(arg0);
     },
@@ -128,7 +117,7 @@ function ConnectedAcceptGuildTemplate(code) {
   return jsx(code(7123).SafeAreaPaddingView, {
     code,
     guildTemplate: stateFromStores,
-    name: first,
+    name,
     setName(arg0) {
       return dependencyMap(arg0);
     },
@@ -138,30 +127,34 @@ function ConnectedAcceptGuildTemplate(code) {
     createServer: null
   });
 }
-createCacheKey = { container: null };
-createCacheKey = { flex: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
+const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = { flex: 1, marginTop: fn(5682).NAV_BAR_HEIGHT };
+createStyles.container = createStyles;
+let closure_10 = createStyles.createStyles(createStyles);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
-const result = require("set").fileFinishedImporting("modules/guild_templates/native/AcceptGuildTemplateModal.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_templates/native/AcceptGuildTemplateModal.tsx");
 
 export default function AcceptGuildTemplateModal(code) {
   code = code.code;
   const items = [code];
-  const memo = React.useMemo(() => {
-    obj = { code: obj };
+  const memo = noop.useMemo(() => {
+    let obj = { code };
     obj = {};
     obj = {
       title: "",
       fullscreen: true,
-      headerLeft: code(closure_1_3[16]).getHeaderCloseButton(() => callback(table[15]).hideModal()),
+      headerLeft: NavigatorHeader.getHeaderCloseButton(() => closure_1_1(closure_1_3[15]).hideModal()),
       render() {
         obj = {};
         const merged = Object.assign(obj);
-        return closure_1_9(closure_1_11, obj);
+        return <ConnectedAcceptGuildTemplate />;
       }
     };
-    obj[closure_1_12] = obj;
+    obj[ACCEPT_GUILD_TEMPLATE] = obj;
     return obj;
   }, items);
   return jsx(code(7000).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });

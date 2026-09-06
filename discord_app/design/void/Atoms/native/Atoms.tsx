@@ -1,14 +1,14 @@
-// === Module 14127: RNTextInput ===
+// === Module 14127: Atoms ===
 
-// Module 14127 (RNTextInput)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import _modDef8612 from "module_8612" /* 8612 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 14128 */;
+// Module 14127 (Atoms)
+import _mod17 from "module_17" /* 17 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8612 */;
+import native from "native" /* 14128 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
+const result = size.fileFinishedImporting("design/void/Atoms/native/Atoms.tsx");
 
-export const RNTextInput = get_ActivityIndicator.TextInput;
-export const TextInputProps = get_ActivityIndicator.TextInputProps;
-export const LegacyText = _modDef8612;
-export const Text = AccessibilityAnnouncer.Text;
+export const RNTextInput = _mod17.TextInput;
+export const TextInputProps = _mod17.TextInputProps;
+export const LegacyText = LegacyText_LegacyTextDefault;
+export const Text = native.Text;

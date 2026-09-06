@@ -1,38 +1,39 @@
-// === Module 15251: volumeSlider ===
+// === Module 15251: OutputVolumeSetting ===
 
-// Module 15251 (volumeSlider)
+// Module 15251 (OutputVolumeSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import trackDeviceChangedDefault from "trackDeviceChanged" /* 9089 */;
-import apexExperimentDefault from "apexExperiment" /* 9982 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9982 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.xPHVBs);
+    const intl = util.intl;
+    return intl.string(util.t.xPHVBs);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
-    const items = [closure_3];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => outputVolume.getOutputVolume());
   },
-  onValueChange: trackDeviceChangedDefault.setOutputVolume,
+  onValueChange: AudioActionCreatorsDefault.setOutputVolume,
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["3182VD"]), ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t["DGq/PR"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["3182VD"]), ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t["DGq/PR"]);
     return items;
   },
   usePredicate() {
-    return apexExperimentDefault.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
+    return MobileAudioOutputExperimentDefault.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   }
 };
-createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
+SettingBuilders = SettingBuilders.createVolumeSlider(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,99 +1,103 @@
-// === Module 9271: CloseButton ===
+// === Module 9271: CrunchyrollLinkModal ===
 
-// Module 9271 (CloseButton)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import registerAssetDefault from "registerAsset" /* 6992 */;
+// Module 9271 (CrunchyrollLinkModal)
+import util from "util" /* 1114 */;
+import _modDef6992 from "module_6992" /* 6992 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import closure_3 from "noop" /* 19 */;
-import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9272 */;
-import { PlatformTypes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 9270 */;
+import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 9278 */;
+import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 9280 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function CloseButton() {
   const obj = {
-    source: registerAssetDefault,
+    source: _modDef6992,
     onPress() {
-      return callback(table[6]).hideModal();
+      return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null
   };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: registerAssetDefault,
+    source: _modDef6992,
     onPress() {
-      return callback(table[6]).hideModal();
+      return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
     accessibilityLabel: null
   });
 }
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModal.tsx");
+const constants = fn(9272).CrunchyrollLinkModalScenes;
+const PlatformTypes = fn(1074).PlatformTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkModal.tsx");
 
 export default function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
   let obj = twoWayLinkStyles(9226);
   twoWayLinkStyles = obj.useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     function onClose() {
-      return callback(9270).hideModal();
+      return closure_1_1(9270).hideModal();
     }
     function blank() {
       return null;
     }
     let obj = {
       headerLeft: blank,
-      headerRight: closure_1_7,
+      headerRight: CloseButton,
       headerTitle: blank,
-      headerStyle: onClose.navHeader,
+      headerStyle: twoWayLinkStyles.navHeader,
       render() {
-        return callback2(callback(9273), {});
+        return closure_1_6(closure_1_1(9273), {});
       }
     };
     obj = {
       headerLeft: blank,
-      headerRight: closure_1_7,
-      headerStyle: onClose.navHeader,
+      headerRight: CloseButton,
+      headerStyle: twoWayLinkStyles.navHeader,
       headerTitle() {
-        return callback2(onClose(9227).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return closure_1_6(onClose(9227).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
-        return callback2(callback(9275), {});
+        return closure_1_6(closure_1_1(9275), {});
       }
     };
     obj = {
       headerLeft: blank,
-      headerRight: closure_1_7,
-      headerStyle: onClose.navHeader,
+      headerRight: CloseButton,
+      headerStyle: twoWayLinkStyles.navHeader,
       headerTitle() {
-        return callback2(onClose(9227).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return closure_1_6(onClose(9227).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
-        return callback2(callback(9277), { callbackCode, callbackState });
+        return closure_1_6(closure_1_1(9277), { callbackCode, callbackState });
       }
     };
     return {
-      [closure_1_4.LANDING]: obj,
-      [closure_1_4.PRE_CONNECT]: obj,
-      [closure_1_4.DISCORD_CONSENT]: obj,
-      [closure_1_4.SUCCESS]: {
+      [closure_2_4.LANDING]: obj,
+      [closure_2_4.PRE_CONNECT]: obj,
+      [closure_2_4.DISCORD_CONSENT]: obj,
+      [closure_2_4.SUCCESS]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
-        headerStyle: onClose.navHeader,
+        headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(closure_1_2[12]), { onClose });
+          return jsx(CrunchyrollLinkSuccessDefault, { onClose });
         }
       },
-      [closure_1_4.ERROR]: {
+      [closure_2_4.ERROR]: {
         headerLeft: blank,
-        headerRight: closure_1_7,
+        headerRight: CloseButton,
         headerTitle: blank,
-        headerStyle: onClose.navHeader,
+        headerStyle: twoWayLinkStyles.navHeader,
         render() {
-          return closure_1_6(closure_1_1(closure_1_2[13]), { onClose });
+          return jsx(CrunchyrollLinkErrorDefault, { onClose });
         }
       }
     };
@@ -101,6 +105,6 @@ export default function CrunchyrollLinkModal(locationStack) {
   const accountLinkStepTracking = twoWayLinkStyles(9269).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
   obj = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
   const intl = twoWayLinkStyles(1114).intl;
-  obj[3] = intl.string(twoWayLinkStyles(1114).t["13/7kX"]);
+  obj.headerBackTitle = intl.string(twoWayLinkStyles(1114).t["13/7kX"]);
   return jsx(twoWayLinkStyles(7000).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
 };

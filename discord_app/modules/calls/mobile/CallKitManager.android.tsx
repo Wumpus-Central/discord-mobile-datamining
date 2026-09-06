@@ -1,9 +1,8 @@
-// === Module 14441: _initialize ===
+// === Module 14441: CallKitManager ===
 
-// Module 14441 (_initialize)
-import initializeDefault from "initialize" /* 1898 */;
+// Module 14441 (CallKitManager)
+import LifecycleManager from "LifecycleManager" /* 1898 */;
 
-initializeDefault;
 class CallKitLifecycleManager extends tmp2 {
 }
 const prototype = CallKitLifecycleManager.prototype;
@@ -14,6 +13,7 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const callKitLifecycleManager = new CallKitLifecycleManager();
-const result = require("set").fileFinishedImporting("modules/calls/mobile/CallKitManager.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/mobile/CallKitManager.android.tsx");
 
 export default callKitLifecycleManager;

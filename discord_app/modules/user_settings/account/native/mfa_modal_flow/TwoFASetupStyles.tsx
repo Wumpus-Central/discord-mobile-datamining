@@ -1,19 +1,18 @@
-// === Module 14786: styles ===
+// === Module 14786: TwoFASetupStyles ===
 
-// Module 14786 (styles)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import ME from "ME" /* 1074 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 14786 (TwoFASetupStyles)
+import nativeDefault from "native" /* 576 */;
+import Constants from "Constants" /* 1074 */;
+import createStyles from "createStyles" /* 4560 */;
+import TextStyles from "TextStyles" /* 5524 */;
+import size from "module_2" /* 2 */;
 
 let obj = { text: { textAlign: "center", marginLeft: 20, marginRight: 20 }, modalHeader: null, modalBody: null };
 obj = {};
-const merged = Object.assign(importDefaultResult(ME.Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
-obj[1] = obj;
-obj[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: 8 };
-const styles = createCacheKey.createStyles(obj);
-const obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: 8 };
-const result = set.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupStyles.tsx");
+const merged = Object.assign(TextStyles(Constants.Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+obj.modalHeader = obj;
+obj.modalBody = { color: nativeDefault.colors.TEXT_SUBTLE, marginTop: 8 };
+const styles = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupStyles.tsx");
 
 export const useTwoFASetupStyles = styles;

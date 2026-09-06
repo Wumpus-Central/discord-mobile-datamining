@@ -1,25 +1,30 @@
 // === Module 12512: useGuildPowerupRollbackModalConfig ===
 
 // Module 12512 (useGuildPowerupRollbackModalConfig)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "calculateAppliedBoosts" /* 4449 */;
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 12500 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 4449 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupRollbackModalConfig.tsx");
 
 export default function useGuildPowerupRollbackModalConfig(guildId, location) {
-  const _require = guildId;
-  let obj = _require(storeRemovalDate[3]);
-  let items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(closure_0));
-  let flag = importDefault(storeRemovalDate[4])(guildId);
+  _require = guildId;
+  let obj = require("initialize");
+  let items = [GuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  let flag = require("useHasAllocateBoostPermission")(guildId);
   if (flag == null) {
     flag = false;
   }
   let tmpResult = tmp(tmp2[3]);
-  const items1 = [closure_5];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => closure_1_5.getStateForGuild(closure_0));
+  const items1 = [GuildPowerupsStore];
+  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => GuildPowerupsStore.getStateForGuild(closure_0));
   let tmp5;
   if (stateFromStores1 != null) {
     const allPowerups = stateFromStores1.allPowerups;
@@ -44,23 +49,19 @@ export default function useGuildPowerupRollbackModalConfig(guildId, location) {
     shouldShow: flag,
     modalConfig: flag.useMemo(() => {
       if (flag) {
-        if (null != callback) {
+        if (null != closure_1) {
           if (null != storeRemovalDate) {
-            const tmp6 = callback(storeRemovalDate[7])(tmp3);
-            let obj = { dismissibleContent: null, header: null, bodies: null, hasCancelButton: false };
-            obj[0] = guildId(storeRemovalDate[8]).DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_MODAL;
-            const intl = guildId(storeRemovalDate[9]).intl;
-            obj = { dateString: null };
-            obj[0] = tmp6;
+            const tmp6 = getGuildPowerupFormattedDateStringDefault(tmp3);
+            let obj = { dismissibleContent: dismissible_content.DismissibleContent.FILE_UPLOAD_POWERUP_ROLLBACK_MODAL, header: null, bodies: null, hasCancelButton: false };
+            const intl = util.intl;
+            obj = { dateString: tmp6 };
             const _HermesInternal = HermesInternal;
-            obj[1] = "" + tmp.title + " " + intl.formatToPlainString(callback(storeRemovalDate[10])["6e2ry1"], obj);
-            const intl2 = guildId(storeRemovalDate[9]).intl;
-            obj = { startDate: null, endDate: null, perkName: null, boostCount: null };
-            obj[0] = tmp6;
-            obj[1] = tmp6;
-            ({ title: obj3[2], cost: obj3[3] } = tmp);
-            const items = [intl2.formatToPlainString(callback(storeRemovalDate[10]).jd8fki, obj)];
-            obj[2] = items;
+            obj.header = "" + tmp.title + " " + intl.formatToPlainString(_modDef2428["6e2ry1"], obj);
+            const intl2 = util.intl;
+            obj = { startDate: tmp6, endDate: tmp6, perkName: null, boostCount: null };
+            ({ title: obj3.perkName, cost: obj3.boostCount } = tmp);
+            const items = [intl2.formatToPlainString(_modDef2428.jd8fki, obj)];
+            obj.bodies = items;
             return obj;
           }
         }

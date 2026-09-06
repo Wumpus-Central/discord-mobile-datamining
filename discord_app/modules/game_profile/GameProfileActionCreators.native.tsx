@@ -1,13 +1,13 @@
-// === Module 8680: ? ===
+// === Module 8680: GameProfileActionCreators ===
 
-// Module 8680
-import set from "set" /* 2 */;
+// Module 8680 (GameProfileActionCreators)
 import _modDef38 from "module_38" /* 38 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileActionCreators.native.tsx");
 
 export default {
   openGameProfileModal(arg0) {
@@ -15,25 +15,22 @@ export default {
     ({ source, sourceUserId, stackingBehavior } = arg0);
     _modDef38(gameProfileModalChecks.shouldOpenGameProfile, "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?");
     _modDef38(gameProfileModalChecks.gameId === gameId, "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?");
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { gameId, source, sourceUserId };
+    const obj = { gameId, source, sourceUserId };
     obj.openLazy(asyncRequireImpl(8681, dependencyMap.paths), "game-profile-" + gameId, obj, stackingBehavior);
   },
   returnToGameProfile(gameId) {
     gameId = gameId.gameId;
     ({ source, initialScrollOffset } = gameId);
-    dispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
-    const obj = dispatcherDefault;
-    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+    DispatcherDefault.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId });
+    const obj2 = ActionSheetActionCreatorsDefault;
     obj2.openLazy(asyncRequireImpl(8681, dependencyMap.paths), "game-profile-" + gameId, { gameId, source, initialScrollOffset });
   },
   setGameProfilePendingReturn(arg0) {
     ({ gameId, channelId, initialScrollOffset } = arg0);
-    dispatcherDefault.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
+    DispatcherDefault.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId, channelId, initialScrollOffset });
   },
   clearGameProfilePendingReturn(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id };
+    const obj = { type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: id };
     obj.dispatch(obj);
   }
 };

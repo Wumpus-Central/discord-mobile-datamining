@@ -1,12 +1,13 @@
-// === Module 17724: useRoleSubscriptionSettingsDisabled ===
+// === Module 17724: RoleSubscriptionSettingsDisabledContext ===
 
-// Module 17724 (useRoleSubscriptionSettingsDisabled)
-import set from "set" /* 2 */;
-import context from "context" /* 17725 */;
-import contextDefault from "context" /* 17725 */;
+// Module 17724 (RoleSubscriptionSettingsDisabledContext)
+import CreatorMonetizationSettingsDisabledContext from "CreatorMonetizationSettingsDisabledContext" /* 17725 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx");
+const CreatorMonetizationSettingsDisabledContextDefault = CreatorMonetizationSettingsDisabledContext;
 
-export default contextDefault;
-export const useRoleSubscriptionSettingsDisabled = context.useCreatorMonetizationSettingsDisabled;
-export const RoleSubscriptionSettingsDisabledContextProvider = context.CreatorMonetizationSettingsDisabledContextProvider;
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/RoleSubscriptionSettingsDisabledContext.tsx");
+
+export default CreatorMonetizationSettingsDisabledContextDefault;
+export const useRoleSubscriptionSettingsDisabled = CreatorMonetizationSettingsDisabledContext.useCreatorMonetizationSettingsDisabled;
+export const RoleSubscriptionSettingsDisabledContextProvider = CreatorMonetizationSettingsDisabledContext.CreatorMonetizationSettingsDisabledContextProvider;

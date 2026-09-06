@@ -1,11 +1,12 @@
-// === Module 9412: getString ===
+// === Module 9412: ApplicationCommandOptionUtils ===
 
-// Module 9412 (getString)
-import set from "set" /* 2 */;
+// Module 9412 (ApplicationCommandOptionUtils)
 import _modDef38 from "module_38" /* 38 */;
-import setDefault from "set" /* 4547 */;
-import TRUE_OPTION_NAME2 from "TRUE_OPTION_NAME" /* 4999 */;
+import Server from "Server" /* 1894 */;
+import RegexUtilsDefault from "RegexUtils" /* 4547 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 4999 */;
 import numberParts from "numberParts" /* 9413 */;
+import size from "module_2" /* 2 */;
 
 function getString(arg0, arg1) {
   let str = "";
@@ -17,37 +18,25 @@ function getString(arg0, arg1) {
     if ("text" !== type) {
       if ("textMention" !== type) {
         if ("userMention" === type) {
-          let tmp11 = str;
-          let tmp12 = nextResult;
           let _HermesInternal4 = HermesInternal;
           str = `${"<@" + tmp2.userId + ">"}`;
         } else if ("channelMention" === type) {
-          let tmp9 = str;
-          let tmp10 = nextResult;
           let _HermesInternal3 = HermesInternal;
           str = `${"<@" + tmp2.userId + ">"}${"<#" + tmp2.channelId + ">"}`;
         } else if ("roleMention" === type) {
-          let tmp7 = str;
-          let tmp8 = nextResult;
           let _HermesInternal2 = HermesInternal;
           str = `${"<@" + tmp2.userId + ">"}${"<#" + tmp2.channelId + ">"}${"<@&" + tmp2.roleId + ">"}`;
         } else if ("emoji" === type) {
-          let tmp5 = str;
-          let tmp6 = nextResult;
           str = `${"<@" + tmp2.userId + ">"}${"<#" + tmp2.channelId + ">"}${"<@&" + tmp2.roleId + ">"}${tmp2.surrogate}`;
         } else if ("customEmoji" === type) {
-          let tmp15 = str;
-          let tmp16 = nextResult;
           let str2 = "";
           if (tmp2.animated) {
             str2 = "a";
           }
-          let tmp3 = nextResult;
           let str3 = tmp2.name;
           let str4 = str3.replace(/:/g, "");
           let _HermesInternal = HermesInternal;
           let str5 = "<";
-          let tmp4 = str2;
           let str6 = ":";
           let str7 = ":";
           let str8 = ">";
@@ -56,27 +45,24 @@ function getString(arg0, arg1) {
       }
       continue;
     }
-    let tmp13 = str;
-    let tmp14 = nextResult;
   }
   return str;
 }
-const TRUE_OPTION_NAME = TRUE_OPTION_NAME2.TRUE_OPTION_NAME;
-const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandOptionUtils.tsx");
+const TRUE_OPTION_NAME = ApplicationCommandConstants.TRUE_OPTION_NAME;
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandOptionUtils.tsx");
 
 export const filterEmpty = function filterEmpty(arr) {
   closure_0 = arr;
   if (null == arr) {
     let items = [];
   } else {
-    items = arr.filter((type) => {
+    items = arr.filter((type, index) => {
       let str = type;
       if ("text" !== type.type) {
         return tmp;
       } else {
-        if (arg1 <= 0) {
+        if (index <= 0) {
           let tmp4 = "" !== str.text.trim();
-          const str2 = str.text;
         }
         str = "";
         tmp4 = "" !== str.text;
@@ -90,14 +76,13 @@ export const getBoolean = function getBoolean(arg0, arg1) {
   if (null == arr) {
     let items = [];
   } else {
-    items = arr.filter((type) => {
+    items = arr.filter((type, index) => {
       let str = type;
       if ("text" !== type.type) {
         return tmp;
       } else {
-        if (arg1 <= 0) {
+        if (index <= 0) {
           let tmp4 = "" !== str.text.trim();
-          const str2 = str.text;
         }
         str = "";
         tmp4 = "" !== str.text;
@@ -120,14 +105,13 @@ export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
     if (null == arr) {
       let items = [];
     } else {
-      items = arr.filter((type) => {
+      items = arr.filter((type, index) => {
         let str = type;
         if ("text" !== type.type) {
           return tmp;
         } else {
-          if (arg1 <= 0) {
+          if (index <= 0) {
             let tmp4 = "" !== str.text.trim();
-            const str2 = str.text;
           }
           str = "";
           tmp4 = "" !== str.text;
@@ -142,7 +126,6 @@ export const getOptionalBoolean = function getOptionalBoolean(arg0, arg1) {
     }
     _modDef38("text" === type, "First value is not text");
     tmp = items[0].text === TRUE_OPTION_NAME;
-    const tmp5 = _modDef38;
   }
   return tmp;
 };
@@ -151,14 +134,13 @@ export const getChannelId = function getChannelId(arg0, arg1) {
   if (null == arr) {
     let items = [];
   } else {
-    items = arr.filter((type) => {
+    items = arr.filter((type, index) => {
       let str = type;
       if ("text" !== type.type) {
         return tmp;
       } else {
-        if (arg1 <= 0) {
+        if (index <= 0) {
           let tmp4 = "" !== str.text.trim();
-          const str2 = str.text;
         }
         str = "";
         tmp4 = "" !== str.text;
@@ -181,14 +163,13 @@ export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
     if (null == arr) {
       let items = [];
     } else {
-      items = arr.filter((type) => {
+      items = arr.filter((type, index) => {
         let str = type;
         if ("text" !== type.type) {
           return tmp;
         } else {
-          if (arg1 <= 0) {
+          if (index <= 0) {
             let tmp4 = "" !== str.text.trim();
-            const str2 = str.text;
           }
           str = "";
           tmp4 = "" !== str.text;
@@ -203,7 +184,6 @@ export const getOptionalChannelId = function getOptionalChannelId(arg0, arg1) {
     }
     _modDef38("channelMention" === type, "First value is not a channel mention");
     channelId = items[0].channelId;
-    const tmp5 = _modDef38;
   }
   return channelId;
 };
@@ -212,14 +192,13 @@ export const getUserId = function getUserId(arg0, arg1) {
   if (null == arr) {
     let items = [];
   } else {
-    items = arr.filter((type) => {
+    items = arr.filter((type, index) => {
       let str = type;
       if ("text" !== type.type) {
         return tmp;
       } else {
-        if (arg1 <= 0) {
+        if (index <= 0) {
           let tmp4 = "" !== str.text.trim();
-          const str2 = str.text;
         }
         str = "";
         tmp4 = "" !== str.text;
@@ -242,14 +221,13 @@ export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
     if (null == arr) {
       let items = [];
     } else {
-      items = arr.filter((type) => {
+      items = arr.filter((type, index) => {
         let str = type;
         if ("text" !== type.type) {
           return tmp;
         } else {
-          if (arg1 <= 0) {
+          if (index <= 0) {
             let tmp4 = "" !== str.text.trim();
-            const str2 = str.text;
           }
           str = "";
           tmp4 = "" !== str.text;
@@ -264,7 +242,6 @@ export const getOptionalUserId = function getOptionalUserId(arg0, arg1) {
     }
     _modDef38("userMention" === type, "First value is not a user mention");
     userId = items[0].userId;
-    const tmp5 = _modDef38;
   }
   return userId;
 };
@@ -273,14 +250,13 @@ export const getRoleId = function getRoleId(arg0, arg1) {
   if (null == arr) {
     let items = [];
   } else {
-    items = arr.filter((type) => {
+    items = arr.filter((type, index) => {
       let str = type;
       if ("text" !== type.type) {
         return tmp;
       } else {
-        if (arg1 <= 0) {
+        if (index <= 0) {
           let tmp4 = "" !== str.text.trim();
-          const str2 = str.text;
         }
         str = "";
         tmp4 = "" !== str.text;
@@ -303,14 +279,13 @@ export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
     if (null == arr) {
       let items = [];
     } else {
-      items = arr.filter((type) => {
+      items = arr.filter((type, index) => {
         let str = type;
         if ("text" !== type.type) {
           return tmp;
         } else {
-          if (arg1 <= 0) {
+          if (index <= 0) {
             let tmp4 = "" !== str.text.trim();
-            const str2 = str.text;
           }
           str = "";
           tmp4 = "" !== str.text;
@@ -325,47 +300,44 @@ export const getOptionalRoleId = function getOptionalRoleId(arg0, arg1) {
     }
     _modDef38("roleMention" === type, "First value is not a role mention");
     roleId = items[0].roleId;
-    const tmp5 = _modDef38;
   }
   return roleId;
 };
 export { getString };
-export const getOptionalString = function getOptionalString(closure_1, name) {
+export const getOptionalString = function getOptionalString(arg0, name) {
   let tmp = null;
-  if (null != closure_1[name]) {
-    tmp = getString(closure_1, name);
+  if (null != arg0[name]) {
+    tmp = getString(arg0, name);
   }
   return tmp;
 };
 export const normalizeNumericString = function normalizeNumericString(locale, trimmed) {
-  if (locale !== closure_5) {
-    closure_5 = locale;
-    en_US = numberParts.numberParts[locale];
-    if (en_US == null) {
-      en_US = tmp11(9413).numberParts["en-US"];
+  if (locale !== global) {
+    global = locale;
+    let prop = numberParts.numberParts[locale];
+    if (prop == null) {
+      prop = tmp12(9413).numberParts["en-US"];
     }
     const _RegExp = RegExp;
-    ({ group, decimal } = en_US);
-    const regExp = new RegExp(setDefault.escape(group), "g");
+    ({ group, decimal } = prop);
+    regExp = new RegExp(RegexUtilsDefault.escape(group), "g");
     const _RegExp2 = RegExp;
-    const obj = setDefault;
-    tmp11 = require;
-    const regExp1 = new RegExp(setDefault.escape(decimal), "g");
-    const obj2 = setDefault;
+    tmp12 = require;
+    regExp1 = new RegExp(RegexUtilsDefault.escape(decimal), "g");
   }
   return trimmed.replace(regExp, "").replace(regExp1, ".");
 };
 export const getInitialValuesFromInteractionOptions = function getInitialValuesFromInteractionOptions(command, interactionOptions) {
-  closure_0 = command;
+  let options = command;
   const obj = {};
   function _loop(iter) {
-    command = iter;
-    const options = command.options;
+    options = iter;
+    options = options.options;
     if (options != null) {
       const found = options.find((name) => name.name === iter.name);
     }
     let num = 0;
-    if (iter.type !== command(closure_1_2[4]).ApplicationCommandOptionType.ATTACHMENT) {
+    if (iter.type !== Server.ApplicationCommandOptionType.ATTACHMENT) {
       let autocomplete;
       if (found != null) {
         autocomplete = found.autocomplete;

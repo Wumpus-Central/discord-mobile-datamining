@@ -1,51 +1,53 @@
-// === Module 15946: useRegistrationUIStore ===
+// === Module 15946: RegistrationUIStore ===
 
-// Module 15946 (useRegistrationUIStore)
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
-import keys from "keys" /* 560 */;
+// Module 15946 (RegistrationUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessible" }));
-const result = set.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
+const useRegistrationUIStore = module_560.create(() => ({ errors: {}, registrationOptions: {}, submitting: false, registrationVariant: "accessible" }));
+const result = size.fileFinishedImporting("modules/auth/native/RegistrationUIStore.tsx");
 
-export const useRegistrationUIStore = obj;
-export const setRegistrationErrors = function setRegistrationErrors(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_2.setState({ errors: closure_0 });
+export { useRegistrationUIStore };
+export const setRegistrationErrors = function setRegistrationErrors(errors) {
+  _require = errors;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { errors };
+    obj.setState(obj);
   });
 };
 export const clearRegistrationErrorMessage = function clearRegistrationErrorMessage() {
-  obj = {};
-  const merged = Object.assign(obj.getState().errors);
+  let errors = {};
+  const merged = Object.assign(errors.getState().errors);
   delete tmp2[tmp];
-  obj(1249).batchUpdates(() => {
-    obj = { errors: obj };
-    closure_1_2.setState(obj);
+  errors(1249).batchUpdates(() => {
+    errors = { errors };
+    errors.setState(errors);
   });
 };
 export const updateRegistrationOptions = function updateRegistrationOptions(arg0) {
-  const _require = arg0;
-  const registrationOptions = obj.getState().registrationOptions;
-  obj = _require(registrationOptions[1]);
+  _require = arg0;
+  let registrationOptions = obj.getState().registrationOptions;
+  obj = require("ReactBatchUpdates");
   obj.batchUpdates(() => {
-    obj = { registrationOptions: null };
-    obj = {};
+    registrationOptions = { registrationOptions: null };
+    registrationOptions = {};
     const merged = Object.assign(registrationOptions);
     const merged1 = Object.assign(closure_0);
-    obj[0] = obj;
-    closure_1_2.setState(obj);
+    registrationOptions.registrationOptions = registrationOptions;
+    registrationOptions.setState(registrationOptions);
   });
 };
 export const resetRegistration = function resetRegistration() {
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState({ errors: {}, registrationOptions: {}, submitting: false });
   });
 };
-export const setSubmitting = function setSubmitting(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_2.setState({ errors: {}, submitting: closure_0 });
+export const setSubmitting = function setSubmitting(submitting) {
+  _require = submitting;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { errors: {}, submitting };
+    obj.setState(obj);
   });
 };
 export const doesRegistrationHaveIdentityType = function doesRegistrationHaveIdentityType() {

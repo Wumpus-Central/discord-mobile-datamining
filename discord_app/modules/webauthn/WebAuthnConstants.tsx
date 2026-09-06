@@ -1,8 +1,8 @@
-// === Module 14657: WebAuthnScreens ===
+// === Module 14657: WebAuthnConstants ===
 
-// Module 14657 (WebAuthnScreens)
-import set from "set" /* 2 */;
+// Module 14657 (WebAuthnConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/webauthn/WebAuthnConstants.tsx");
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnConstants.tsx");
 
 export const WebAuthnScreens = { MODAL_UPSELL: "MODAL_UPSELL", INIT: "INIT", EDIT: "EDIT", REGISTER: "REGISTER", NAME: "NAME", SUCCESS: "SUCCESS" };

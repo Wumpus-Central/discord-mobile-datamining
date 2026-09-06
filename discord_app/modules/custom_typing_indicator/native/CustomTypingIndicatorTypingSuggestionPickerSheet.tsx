@@ -1,53 +1,53 @@
 // === Module 15358: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
 // Module 15358 (CustomTypingIndicatorTypingSuggestionPickerSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import messagesProxyDefault from "messagesProxy" /* 3549 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import _modDef3549 from "module_3549" /* 3549 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { content: null };
-createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorTypingSuggestionPickerSheet.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { content: null };
+createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.content = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorTypingSuggestionPickerSheet.tsx");
 
 export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChange) {
   onChange = onChange.onChange;
-  importDefault = undefined;
-  const tmp2 = callback(React.useState(onChange.initialValue), 2);
+  const tmp2 = _slicedToArray(noop.useState(onChange.initialValue), 2);
   importDefault = tmp2[1];
-  let obj = { contentStyles: callback2().content, header: null, dismissAccessibilityLabel: null, children: null };
+  let obj = { contentStyles: closure_6().content, header: null, dismissAccessibilityLabel: null, children: null };
   obj = { title: null };
   let intl = onChange(1114).intl;
-  obj[0] = intl.string(messagesProxyDefault["X+ijyw"]);
-  obj[1] = jsx(onChange(7149).BottomSheetTitleHeader, { title: null });
+  obj.title = intl.string(_modDef3549["X+ijyw"]);
+  obj.header = jsx(onChange(7149).BottomSheetTitleHeader, { title: null });
   const intl2 = onChange(1114).intl;
-  obj[2] = intl2.string(messagesProxyDefault.hrl2cG);
+  obj.dismissAccessibilityLabel = intl2.string(_modDef3549.hrl2cG);
   obj = {
     value: tmp2[0],
     onChange(arg0) {
-      callback(arg0);
+      closure_1(arg0);
       onChange(arg0);
     },
     hasIcons: false,
     children: null
   };
-  const tmp = callback2();
+  const tmp = closure_6();
   const customTypingIndicatorSuggestionPresets = onChange(11971).getCustomTypingIndicatorSuggestionPresets();
-  obj[3] = customTypingIndicatorSuggestionPresets.map((value) => {
+  obj.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1114).intl;
-    obj[1] = intl.string(onChange(11971).getCustomTypingIndicatorSuggestionMessage(value));
-    return callback2(onChange(5688).TableRadioRow, obj, value);
+    obj.label = intl.string(onChange(11971).getCustomTypingIndicatorSuggestionMessage(value));
+    return jsx(onChange(5688).TableRadioRow, { value, label: null }, value);
   });
-  obj[3] = jsx(onChange(5685).TableRadioGroup, {
+  obj.children = jsx(onChange(5685).TableRadioGroup, {
     value: tmp2[0],
     onChange(arg0) {
-      callback(arg0);
+      closure_1(arg0);
       onChange(arg0);
     },
     hasIcons: false,
@@ -56,7 +56,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
   return jsx(onChange(7198).ActionSheet, {
     value: tmp2[0],
     onChange(arg0) {
-      callback(arg0);
+      closure_1(arg0);
       onChange(arg0);
     },
     hasIcons: false,

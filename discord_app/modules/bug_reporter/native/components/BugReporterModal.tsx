@@ -1,23 +1,31 @@
-// === Module 10185: handleClose ===
+// === Module 10185: BugReporterModal ===
 
-// Module 10185 (handleClose)
-import ThemesDefault from "Themes" /* 576 */;
-import setDefault from "set" /* 1090 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "zustandStore" /* 10184 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "n" /* 672 */;
+// Module 10185 (BugReporterModal)
+import nativeDefault from "native" /* 576 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import Upload from "Upload" /* 5128 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import TableRadioRow from "TableRadioRow" /* 5688 */;
+import HeaderActionButton from "HeaderActionButton" /* 7377 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import BugReportStore from "BugReportStore" /* 10184 */;
+import n from "module_672" /* 672 */;
 
-const require = arg1;
+const UploadDefault = Upload;
+
+require = fn;
 function handleClose() {
-  state.setState({ isReportOpen: false });
-  let arr = _modDef4763;
+  BugReportStore.setState({ isReportOpen: false });
+  let arr = ModalActionCreatorsDefault;
   arr = arr.pop();
 }
 class BugCreateScreen {
@@ -47,93 +55,78 @@ class BugCreateScreen {
     closure_22 = undefined;
     closure_23 = undefined;
     closure_24 = undefined;
-    _handleAttachmentSelect = function _handleAttachmentSelect() {
-      const self = this;
-      const tmp = first(function*() {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+    closure_25 = async function _handleAttachmentSelect(arg0, value) {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c3 = 2;
-            if (0 === obj2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp5;
-                let assets = tmp2;
-                assets = undefined;
-                closure_1 = undefined;
-                obj2 = undefined;
-                c3 = undefined;
-                obj1 = closure_1_1(5150);
-                obj2 = 1;
-                c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.launchImageLibraryAsync({ mediaType: "any", includeBase64: false, selectionLimit: 1 });
-                return obj1;
-              }
-            } else if (arg0 === 1) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === dependencyMap) {
+            if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              assets = arg1;
-              if (null != assets) {
-                closure_1 = assets.assets[0];
-                closure_23.current = closure_7.length;
-                obj2 = {};
-                const merged = Object.assign(closure_1);
-                obj2.uri = closure_1.uri;
-                obj2.originalUri = closure_1.uri;
-                obj2.platform = closure_1_0(5128).UploadPlatform.REACT_NATIVE;
-                obj2.filename = closure_1.fileName;
-                const tmp35 = new closure_1_1(5128)(obj2);
-                c3 = tmp35;
-                closure_23.current = closure_7.length;
-                callback((arg0) => {
-                  const items = [];
-                  items[HermesBuiltin.arraySpread(arg0, 0)] = c3;
-                  return items;
-                });
-              }
-              c3 = 3;
-              return { value: "HermesInternal", done: null };
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              closure_128_2 = undefined;
+              closure_128_3 = undefined;
+              let obj1 = tmp5(5150);
+              dependencyMap = 1;
+              c3 = 1;
+              obj1 = { value: null, done: false };
+              obj1.value = obj1.launchImageLibraryAsync({ mediaType: "any", includeBase64: false, selectionLimit: 1 });
+              return obj1;
             }
-          } catch (tmp8) {
-            c3 = tmp;
-            throw tmp8;
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_128_0 = value;
+            if (null != closure_128_0) {
+              closure_128_1 = closure_128_0.assets[0];
+              closure_129_23.current = closure_129_7.length;
+              const obj2 = {};
+              const merged = Object.assign(closure_128_1);
+              obj2.uri = closure_128_1.uri;
+              obj2.originalUri = closure_128_1.uri;
+              obj2.platform = tmp2(5128).UploadPlatform.REACT_NATIVE;
+              obj2.filename = closure_128_1.fileName;
+              closure_128_2 = obj2;
+              const tmp34 = new tmp5(5128)(closure_128_2);
+              closure_128_3 = tmp34;
+              closure_129_23.current = closure_129_7.length;
+              closure_129_8((arg0) => {
+                const items = [];
+                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1_3;
+                return items;
+              });
+            }
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
+        } catch (tmp8) {
+          c3 = tmp;
+          throw tmp8;
         }
-      });
-      closure_25 = tmp;
-      const apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
       }
-      return applyArgumentsResult;
     };
     tmp = closure_14();
     closure_2 = tmp;
@@ -160,7 +153,7 @@ class BugCreateScreen {
     closure_11 = tmp10[1];
     callback = closure_5.useCallback((current) => {
       closure_9.current = current;
-      callback(current);
+      closure_11(current);
     }, []);
     closure_12 = callback;
     tmp13 = closure_4(closure_5.useState(false), 2);
@@ -181,13 +174,13 @@ class BugCreateScreen {
     closure_20 = tmp19[1];
     tmp21 = screenshotUri;
     tmp22 = closure_2;
-    obj = require("useNavigation");
+    obj = screenshotUri(closure_2[12]);
     navigation = obj.useNavigation();
     closure_21 = navigation;
     ref = closure_5.useRef(null);
     closure_22 = ref;
-    closure_23 = require("module_0");
-    obj2 = require("initialize");
+    closure_23 = closure_5.useRef(0);
+    obj2 = screenshotUri(closure_2[13]);
     items = [];
     items[0] = closure_8;
     stateFromStores = obj2.useStateFromStores(items, () => {
@@ -210,22 +203,22 @@ class BugCreateScreen {
     items1[0] = navigation;
     effect = closure_5.useEffect(() => {
       const obj = { title: null, headerLeft: null };
-      const intl = screenshotUri(closure_2[14]).intl;
-      obj[0] = intl.string(screenshotUri(closure_2[14]).t.mCCdwi);
-      obj[1] = screenshotUri(closure_2[15]).getHeaderCloseButton(first8);
+      const intl = util.intl;
+      obj.title = intl.string(util.t.mCCdwi);
+      obj.headerLeft = NavigatorHeader.getHeaderCloseButton(handleClose);
       navigation.setOptions(obj);
     }, items1);
     items2 = [, ];
     items2[0] = screenshotUri;
     items2[1] = screenshot;
     effect1 = closure_5.useEffect(() => {
-      if (null != closure_0) {
+      if (null != screenshotUri) {
         const obj = {};
         const merged = Object.assign(screenshot);
         obj.uri = tmp;
         obj.originalUri = tmp;
-        obj.platform = screenshotUri(closure_2[16]).UploadPlatform.REACT_NATIVE;
-        const tmp11 = new screenshot(closure_2[16])(obj);
+        obj.platform = Upload.UploadPlatform.REACT_NATIVE;
+        const tmp11 = new UploadDefault(obj);
         closure_0 = tmp11;
         currentUser((arg0) => {
           const items = [];
@@ -249,7 +242,7 @@ class BugCreateScreen {
     effect2 = closure_5.useEffect(() => {
       function handleSubmit() {
         const self = this;
-        const apply = _handleSubmit.apply;
+        const apply = closure_1.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -257,301 +250,362 @@ class BugCreateScreen {
         }
         return applyArgumentsResult;
       }
-      function _handleSubmit() {
-        let self = this;
-        let tmp = first(function*() {
-          if (c5 === 2) {
-            c5 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp7 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
+      closure_1 = async function _handleSubmit(arg0, value) {
+        if (priority === 2) {
+          priority = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp7 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            let obj = { value, done: true };
+            return obj;
           } else {
-            try {
-              c5 = 2;
-              if (0 === c4) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  c1 = tmp3;
-                  c0 = tmp5;
-                  c0 = undefined;
-                  c1 = undefined;
-                  closure_2 = undefined;
-                  c3 = function _submitReportWithNotifications() {
-                    const self = this;
-                    const tmp = v0((arg0, arg1, arg2) => {
-                      closure_0 = arg0;
-                      closure_1 = arg1;
-                      closure_2 = arg2;
-                      c5 = 0;
-                      c6 = 0;
-                      return (/* F125956 */ function*() { ... })();
-                    });
-                    closure_3 = tmp;
-                    const apply = tmp.apply;
-                    if (typeof apply === "unknown") {
-                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            priority = 2;
+            if (0 === description) {
+              if (arg0 === 1) {
+                priority = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                priority = 3;
+                obj = { value, done: true };
+                return obj;
+              } else {
+                closure_1 = tmp3;
+                closure_0 = tmp5;
+                closure_128_0 = undefined;
+                let timeout;
+                closure_128_2 = undefined;
+                closure_128_3 = function _submitReportWithNotifications() {
+                  const self = this;
+                  const tmp = closure_3_3(function*(arg0, value, arg2) {
+                    if (c6 === 2) {
+                      c6 = 3;
+                      throw new TypeError("Generator functions may not be called on executing generators");
+                    } else if (tmp4 === 3) {
+                      if (arg0 === 1) {
+                        throw value;
+                      } else if (arg0 === 2) {
+                        let obj = { value, done: true };
+                        return obj;
+                      } else {
+                        return { value: "HermesInternal", done: null };
+                      }
                     } else {
-                      applyArgumentsResult = apply(self, arguments);
+                      try {
+                        c6 = 2;
+                        if (0 === c5) {
+                          if (arg0 === 1) {
+                            c6 = 3;
+                            throw value;
+                          } else if (arg0 === 2) {
+                            c6 = 3;
+                            obj = { value, done: true };
+                            return obj;
+                          } else {
+                            closure_4 = tmp2;
+                            c3 = 1;
+                            closure_131_0 = closure_0;
+                            closure_131_1 = closure_1;
+                            closure_131_2 = closure_2;
+                            closure_131_3 = undefined;
+                            closure_131_4 = undefined;
+                            closure_131_5 = undefined;
+                            closure_131_6 = undefined;
+                            const tmp66 = new closure_2_1(559)(closure_2_17, closure_2_18, true);
+                            closure_131_3 = tmp66;
+                            closure_131_4 = false;
+                            closure_131_5 = 0;
+                            if (closure_131_5 >= 20) {
+                              if (closure_131_4) {
+                                closure_131_3.succeed();
+                                let obj5 = closure_2_1(4259);
+                                const obj1 = { key: "BUG_REPORT_BUG_SUBMITTED", icon: closure_2_1(9566), content: null, toastDurationMs: null };
+                                const intl2 = closure_2_0(1114).intl;
+                                obj1.content = intl2.string(closure_2_0(1114).t.jB8yOL);
+                                obj1.toastDurationMs = toastDurationMs;
+                                obj5.open(obj1);
+                              } else {
+                                let obj3 = closure_2_1(4259);
+                                const obj2 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: closure_2_1(6992), content: null };
+                                const intl = closure_2_0(1114).intl;
+                                obj2.content = intl.string(closure_2_0(1114).t["4t1o0u"]);
+                                obj3.open(obj2);
+                              }
+                              c6 = 3;
+                            }
+                          }
+                        } else if (1 === tmp5) {
+                          if (arg0 === 1) {
+                            c6 = 3;
+                            throw value;
+                          } else if (arg0 === 2) {
+                            c6 = 3;
+                            obj3 = { value, done: true };
+                            return obj3;
+                          } else {
+                            closure_131_6 = value;
+                            let ok;
+                            if (closure_131_6 != null) {
+                              ok = closure_131_6.ok;
+                            }
+                            if (ok) {
+                              closure_131_4 = true;
+                            } else if (closure_1_15) {
+                              const promise = new Promise((arg0) => {
+                                closure_1_3.fail(arg0);
+                              });
+                              c5 = 2;
+                              c6 = 1;
+                              const obj4 = { value: promise, done: false };
+                              return obj4;
+                            } else {
+                              closure_131_4 = false;
+                            }
+                          }
+                        } else if (arg0 === 1) {
+                          c6 = 3;
+                          throw value;
+                        } else if (arg0 === 2) {
+                          c6 = 3;
+                          obj = { value, done: true };
+                          return obj;
+                        } else {
+                          closure_131_5 = closure_131_5 + 1;
+                        }
+                        c5 = 1;
+                        c6 = 1;
+                        obj5 = { value: closure_2_0(10187).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        return obj5;
+                      } catch (tmp50) {
+                        c6 = tmp;
+                        throw tmp50;
+                      }
                     }
-                    return applyArgumentsResult;
-                  };
-                  if (closure_1_9.current) {
-                    if (closure_1_13) {
-                      obj1 = { key: "BUG_REPORT_SUBMITTING_BUG", icon: null, content: null, toastDurationMs: null };
-                      obj1[1] = callback(closure_2_2[18]);
-                      let intl2 = closure_2_0(closure_2_2[14]).intl;
-                      obj1[2] = intl2.string(closure_2_0(closure_2_2[14]).t.Uuqbcm);
-                      obj1[3] = closure_2_16;
-                      callback(closure_2_2[17]).open(obj1);
-                      closure_1_16(true);
-                      closure_2_19();
-                      const obj9 = callback(closure_2_2[17]);
-                    }
-                    c5 = 3;
+                  });
+                  closure_3 = tmp;
+                  const apply = tmp.apply;
+                  if (typeof apply === "unknown") {
+                    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
                   } else {
-                    closure_1_12(true);
-                    if (null == c5) {
-                      let obj5 = callback(closure_2_2[17]);
-                      let obj2 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: null, content: null };
-                      obj2[1] = callback(closure_2_2[18]);
-                      let intl = closure_2_0(closure_2_2[14]).intl;
-                      obj2[2] = intl.string(closure_2_0(closure_2_2[14]).t["4t1o0u"]);
-                      obj5.open(obj2);
-                      closure_1_12(false);
-                      c5 = 3;
-                      let obj3 = { value: null, done: true };
-                      obj3[0] = undefined;
-                      return obj3;
-                    } else {
-                      obj3 = closure_2_0(closure_2_2[19]);
-                      c4 = 1;
-                      c5 = 1;
-                      let obj4 = { value: null, done: false };
-                      obj4[0] = obj3.getAttachments(closure_1_7);
-                      return obj4;
-                    }
+                    applyArgumentsResult = apply(self, arguments);
+                  }
+                  return applyArgumentsResult;
+                };
+                if (ref.current) {
+                  if (first5) {
+                    let obj1 = { key: "BUG_REPORT_SUBMITTING_BUG", icon: screenshot(6992), content: null, toastDurationMs: null };
+                    let intl2 = handleSubmit(1114).intl;
+                    obj1.content = intl2.string(handleSubmit(1114).t.Uuqbcm);
+                    obj1.toastDurationMs = toastDurationMs;
+                    screenshot(4259).open(obj1);
+                    closure_1_16(true);
+                    first8();
+                    const obj9 = screenshot(4259);
+                  }
+                  priority = 3;
+                } else {
+                  callback(true);
+                  if (null == priority) {
+                    let obj5 = screenshot(4259);
+                    let obj2 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(6992), content: null };
+                    let intl = handleSubmit(1114).intl;
+                    obj2.content = intl.string(handleSubmit(1114).t["4t1o0u"]);
+                    obj5.open(obj2);
+                    callback(false);
+                    priority = 3;
+                    let obj3 = { value: undefined, done: true };
+                    return obj3;
+                  } else {
+                    obj3 = handleSubmit(10186);
+                    description = 1;
+                    priority = 1;
+                    let obj4 = { value: obj3.getAttachments(first3), done: false };
+                    return obj4;
                   }
                 }
-              } else if (1 === tmp8) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  obj5 = { value: null, done: true };
-                  obj5[0] = arg1;
-                  return obj5;
-                } else {
-                  closure_0 = arg1;
-                  closure_1_14(false);
-                  const _setTimeout = setTimeout;
-                  callback = setTimeout(() => {
-                    callback(true);
-                  }, closure_2_15);
-                  c3 = 1;
-                  const obj6 = { name: null, priority: null, description: null, feature: null, url: null };
-                  obj6[0] = c3;
-                  obj6[1] = c5;
-                  obj6[2] = c4;
-                  obj6[3] = closure_1_19;
-                  obj6[4] = closure_1_6;
-                  c4 = 3;
-                  c5 = 1;
-                  const obj7 = { value: null, done: false };
-                  obj7[0] = (function submitReportWithNotifications(arg0, arg1, closure_0) {
-                    const self = this;
-                    const apply = c3.apply;
-                    if (typeof apply === "unknown") {
-                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                    } else {
-                      applyArgumentsResult = apply(self, arguments);
-                    }
-                    return applyArgumentsResult;
-                  })(obj6, { overridePlatformInformation: false }, closure_0);
-                  return obj7;
-                }
-              } else if (2 === tmp8) {
-                c3 = 0;
-                closure_1_12(false);
-                closure_1_14(false);
-                const _clearTimeout3 = clearTimeout;
-                clearTimeout(callback);
-                throw closure_2;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                closure_2 = arg1;
-                if (closure_2) {
-                  closure_1_16(true);
-                  closure_2_19();
-                }
-                c3 = 0;
-                closure_1_12(false);
-                closure_1_14(false);
-                const _clearTimeout = clearTimeout;
-                clearTimeout(callback);
               }
-              c3 = 0;
-              closure_1_12(false);
-              closure_1_14(false);
-              const _clearTimeout2 = clearTimeout;
-              clearTimeout(callback);
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } catch (tmp74) {
-              closure_2 = tmp74;
-              if (tmp4 === c3) {
-                c5 = tmp2;
-                throw tmp74;
+            } else if (1 === tmp8) {
+              if (arg0 === 1) {
+                priority = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                priority = 3;
+                obj5 = { value, done: true };
+                return obj5;
               } else {
-                c4 = tmp;
+                closure_128_0 = value;
+                closure_1_14(false);
+                const _setTimeout = setTimeout;
+                timeout = setTimeout(() => {
+                  closure_1_14(true);
+                }, first6);
+                let name = 1;
+                const obj6 = { name, priority, description, feature, url };
+                description = 3;
+                priority = 1;
+                const obj7 = {
+                  value: (function submitReportWithNotifications(arg0, arg1, arg2) {
+                            const self = this;
+                            const apply = closure_3.apply;
+                            if (typeof apply === "unknown") {
+                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          })(obj6, { overridePlatformInformation: false }, closure_128_0),
+                  done: false
+                };
+                return obj7;
               }
+            } else if (2 === tmp8) {
+              name = 0;
+              callback(false);
+              closure_1_14(false);
+              const _clearTimeout3 = clearTimeout;
+              clearTimeout(timeout);
+              throw closure_2;
+            } else if (arg0 === 1) {
+              priority = 3;
+              throw value;
+            } else if (arg0 !== 2) {
+              closure_128_2 = value;
+              if (closure_128_2) {
+                closure_1_16(true);
+                first8();
+              }
+              name = 0;
+              callback(false);
+              closure_1_14(false);
+              const _clearTimeout = clearTimeout;
+              clearTimeout(timeout);
+            }
+            name = 0;
+            callback(false);
+            closure_1_14(false);
+            const _clearTimeout2 = clearTimeout;
+            clearTimeout(timeout);
+            priority = 3;
+            obj = { value, done: true };
+            return obj;
+          } catch (tmp74) {
+            closure_2 = tmp74;
+            if (tmp4 === name) {
+              priority = tmp2;
+              throw tmp74;
+            } else {
+              description = tmp;
             }
           }
-        });
-        closure_1 = tmp;
-        let apply = tmp.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
         }
-        return applyArgumentsResult;
-      }
+      };
       navigation.setOptions({
         headerRight() {
-          if (closure_1_13) {
-            const intl2 = tmp2(tmp3[14]).intl;
-            let stringResult = intl2.string(tmp2(tmp3[14]).t["tUu8V+"]);
+          if (first5) {
+            const intl2 = tmp2(1114).intl;
+            let stringResult = intl2.string(tmp2(1114).t["tUu8V+"]);
           } else {
-            const intl = tmp2(tmp3[14]).intl;
+            const intl = tmp2(1114).intl;
             const string = intl.string;
-            const t = tmp2(tmp3[14]).t;
-            if (closure_1_10) {
+            const t = tmp2(1114).t;
+            if (first4) {
               stringResult = string(t.ZiWcJ0);
             } else {
               stringResult = string(t.geKm7t);
             }
           }
           const obj = { text: stringResult, textStyle: { maxWidth: null }, onPress: handleSubmit, disabled: null };
-          let tmp8 = null == closure_1_3;
+          let tmp8 = null == first;
           if (!tmp8) {
             tmp8 = "" === tmp7;
           }
           if (!tmp8) {
-            tmp8 = null == closure_1_5;
+            tmp8 = null == num;
           }
           if (!tmp8) {
-            tmp8 = null == closure_1_4;
+            tmp8 = null == first1;
           }
           if (!tmp8) {
-            tmp8 = "" === closure_1_4;
+            tmp8 = "" === first1;
           }
           if (!tmp8) {
-            let tmp12 = closure_1_10;
-            if (closure_1_10) {
-              tmp12 = !closure_1_13;
+            let tmp12 = first4;
+            if (first4) {
+              tmp12 = !first5;
             }
             tmp8 = tmp12;
           }
-          obj[3] = tmp8;
-          return first4(screenshotUri(table[23]).HeaderActionButton, obj);
+          obj.disabled = tmp8;
+          return closure_3_10(HeaderActionButton.HeaderActionButton, obj);
         }
       });
     }, items3);
     items4 = [];
     items4[0] = stateFromStores;
     effect3 = closure_5.useEffect(() => {
-      function _fetchConfig() {
-        const self = this;
-        const tmp = first(function*() {
-          if (c3 === 2) {
-            c3 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp4 === 3) {
-            if (arg0 === 1) {
-              throw arg1;
-            } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              return { value: "HermesInternal", done: null };
-            }
+      closure_0 = async function _fetchConfig(arg0, value) {
+        if (c3 === 2) {
+          c3 = 3;
+          throw new TypeError("Generator functions may not be called on executing generators");
+        } else if (tmp4 === 3) {
+          if (arg0 === 1) {
+            throw value;
+          } else if (arg0 === 2) {
+            let obj = { value, done: true };
+            return obj;
           } else {
-            try {
-              c3 = 2;
-              if (0 === c2) {
-                if (arg0 === 1) {
-                  c3 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c3 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  closure_1 = tmp5;
-                  callback = tmp2;
-                  callback = undefined;
-                  obj1 = callback(closure_2_2[21]);
-                  c2 = 1;
-                  c3 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = obj1.fetchBugReportConfig();
-                  return obj1;
-                }
-              } else if (arg0 === 1) {
+            return { value: "HermesInternal", done: null };
+          }
+        } else {
+          try {
+            c3 = 2;
+            if (0 === c2) {
+              if (arg0 === 1) {
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
-                callback = arg1;
-                closure_1_18(callback);
-                c3 = 3;
-                return { value: "HermesInternal", done: null };
+                closure_1 = tmp5;
+                closure_0 = tmp2;
+                closure_128_0 = undefined;
+                let obj1 = screenshotUri(closure_2_2[21]);
+                c2 = 1;
+                c3 = 1;
+                obj1 = { value: null, done: false };
+                obj1.value = obj1.fetchBugReportConfig();
+                return obj1;
               }
-            } catch (tmp13) {
-              c3 = tmp;
-              throw tmp13;
+            } else if (arg0 === 1) {
+              c3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c3 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_128_0 = value;
+              closure_1_18(closure_128_0);
+              c3 = 3;
+              return { value: "HermesInternal", done: null };
             }
+          } catch (tmp13) {
+            c3 = tmp;
+            throw tmp13;
           }
-        });
-        closure_0 = tmp;
-        const apply = tmp.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
         }
-        return applyArgumentsResult;
-      }
+      };
       if (stateFromStores) {
         (function fetchConfig() {
           const self = this;
-          const apply = _fetchConfig.apply;
+          const apply = closure_0.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
@@ -578,40 +632,42 @@ class BugCreateScreen {
     obj = { spacing: 24, style: tmp.container, children: null };
     obj1 = { spacing: 8, children: null };
     obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
-    intl = require("getSystemLocale").intl;
-    obj2[2] = intl.string(require("getSystemLocale").t.tM969v);
+    intl = screenshotUri(closure_2[14]).intl;
+    obj2.children = intl.string(screenshotUri(closure_2[14]).t.tM969v);
     items6 = [, ];
-    items6[0] = closure_10(require("Text").Text, obj2);
+    items6[0] = closure_10(screenshotUri(closure_2[29]).Text, obj2);
     obj3 = { children: null };
     obj4 = {
       horizontal: true,
       ref,
       contentContainerStyle: tmp.attachmentCarousel,
-      children: first3.map((item) => {
+      children: first3.map((uri) => {
             let obj = { style: closure_2.attachmentContainer, children: null };
-            obj = { uri: item.item.uri, isImage: item.isImage, isVideo: item.isVideo, height: 280, width: 134 };
-            const items = [first4(screenshot(closure_2[31]), obj), ];
+            const size = { uri: uri.item.uri, isImage: uri.isImage, isVideo: uri.isVideo, height: 280, width: 134 };
+            const items = [first4(screenshot(closure_2[31]), size), ];
             obj = {
               onPress: () => {
-                closure_1_8((arr) => arr.filter((arg0) => arg0 !== closure_0));
+                closure_8((arr) => arr.filter((item) => item !== closure_1_0));
               },
               style: closure_2.closeContainer,
-              children: first4(screenshotUri(closure_2[33]).Icon, { source: screenshot(closure_2[18]), size: screenshotUri(closure_2[33]).Icon.Sizes.REFRESH_SMALL_16, color: screenshot(closure_2[8]).unsafe_rawColors.WHITE })
+              children: null
             };
-            closure_0 = item;
+            closure_0 = uri;
+            obj = { source: screenshot(closure_2[18]), size: screenshotUri(closure_2[33]).Icon.Sizes.REFRESH_SMALL_16, color: screenshot(closure_2[8]).unsafe_rawColors.WHITE };
+            obj.children = first4(screenshotUri(closure_2[33]).Icon, obj);
             items[1] = first4(screenshotUri(closure_2[32]).PressableOpacity, obj);
-            obj[1] = items;
-            return callback(first2, obj, item.id);
+            obj.children = items;
+            return closure_11(first2, obj, uri.id);
           })
     };
     items7 = [, ];
     items7[0] = closure_10(closure_7, obj4);
     obj5 = { text: null, onPress: null };
-    intl2 = require("getSystemLocale").intl;
-    obj5[0] = intl2.string(require("getSystemLocale").t.HVxmOD);
-    obj5[1] = function handleAttachmentSelect() {
+    intl2 = screenshotUri(closure_2[14]).intl;
+    obj5.text = intl2.string(screenshotUri(closure_2[14]).t.HVxmOD);
+    obj5.onPress = function handleAttachmentSelect() {
       const self = this;
-      const apply = _handleAttachmentSelect.apply;
+      const apply = closure_25.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -619,66 +675,66 @@ class BugCreateScreen {
       }
       return applyArgumentsResult;
     };
-    items7[1] = closure_10(require("Button").Button, obj5);
-    obj3[0] = items7;
-    items6[1] = closure_11(require("PressableCard").Card, obj3);
-    obj1[1] = items6;
+    items7[1] = closure_10(screenshotUri(closure_2[34]).Button, obj5);
+    obj3.children = items7;
+    items6[1] = closure_11(screenshotUri(closure_2[30]).Card, obj3);
+    obj1.children = items6;
     items8 = [, , , , , , ];
-    items8[0] = closure_11(require("Stack").Stack, obj1);
+    items8[0] = closure_11(screenshotUri(closure_2[28]).Stack, obj1);
     obj6 = { label: null, placeholder: null, onChange: null, isClearable: true, autoCapitalize: "sentences" };
-    intl3 = require("getSystemLocale").intl;
-    obj6[0] = intl3.string(require("getSystemLocale").t.OZRgjw);
-    intl4 = require("getSystemLocale").intl;
-    obj6[1] = intl4.string(require("getSystemLocale").t["6mpW05"]);
-    obj6[2] = tmp2[1];
-    items8[1] = closure_10(require("TextInput").TextInput, obj6);
+    intl3 = screenshotUri(closure_2[14]).intl;
+    obj6.label = intl3.string(screenshotUri(closure_2[14]).t.OZRgjw);
+    intl4 = screenshotUri(closure_2[14]).intl;
+    obj6.placeholder = intl4.string(screenshotUri(closure_2[14]).t["6mpW05"]);
+    obj6.onChange = tmp2[1];
+    items8[1] = closure_10(screenshotUri(closure_2[35]).TextInput, obj6);
     if (!stateFromStores) {
       items8[2] = stateFromStores;
       obj7 = { title: null, defaultValue: null, onChange: null, hasIcons: true, children: null };
-      intl7 = require("getSystemLocale").intl;
-      obj7[0] = intl7.string(require("getSystemLocale").t.xMXLda);
+      intl7 = tmp21(tmp22[14]).intl;
+      obj7.title = intl7.string(tmp21(tmp22[14]).t.xMXLda);
       if (num == null) {
         num = -1;
       }
       obj8 = { children: null };
-      obj7[1] = num;
-      obj7[2] = tmp6[1];
-      tmp21Result = require("_fetchBugReportConfig");
+      obj7.defaultValue = num;
+      obj7.onChange = tmp6[1];
+      tmp21Result = tmp21(tmp22[21]);
       priorities = tmp21Result.getPriorities();
-      obj7[4] = priorities.map((value) => {
+      obj7.children = priorities.map((value) => {
         value = value.value;
         ({ title, description, emoji } = value);
         let obj = { value, label: title, subLabel: description, icon: null };
         obj = { style: closure_2.priorityIcon, source: null, resizeMode: "contain" };
         obj = { uri: null };
-        const tmp = screenshot(closure_2[25]);
-        obj[0] = screenshotUri(closure_2[26]).getEmojiURL({ id: emoji, animated: true, size: 48 });
-        obj[1] = obj;
-        obj[3] = first4(tmp, obj);
-        return first4(screenshotUri(closure_2[24]).TableRadioRow, obj, value);
+        const tmp = FastImageDefault;
+        obj.uri = AvatarUtils.getEmojiURL({ id: emoji, animated: true, size: 48 });
+        obj.source = obj;
+        obj.icon = closure_2_10(tmp, obj);
+        return closure_2_10(TableRadioRow.TableRadioRow, obj, value);
       });
-      items8[3] = tmp33(require("context").TableRadioGroup, obj7);
+      items8[3] = tmp33(tmp21(tmp22[41]).TableRadioGroup, obj7);
       obj9 = { label: null, placeholder: null, onChange: null, autoCorrect: true, autoCapitalize: "sentences" };
-      intl8 = require("getSystemLocale").intl;
-      obj9[0] = intl8.string(require("getSystemLocale").t["1SplH2"]);
-      intl9 = require("getSystemLocale").intl;
-      obj9[1] = intl9.string(require("getSystemLocale").t.CQmAZd);
-      obj9[2] = tmp4[1];
-      items8[4] = tmp33(require("TextArea").TextArea, obj9);
+      intl8 = tmp21(tmp22[14]).intl;
+      obj9.label = intl8.string(tmp21(tmp22[14]).t["1SplH2"]);
+      intl9 = tmp21(tmp22[14]).intl;
+      obj9.placeholder = intl9.string(tmp21(tmp22[14]).t.CQmAZd);
+      obj9.onChange = tmp4[1];
+      items8[4] = tmp33(tmp21(tmp22[42]).TextArea, obj9);
       obj10 = { label: null, placeholder: null, onChange: null, isClearable: true };
-      intl10 = require("getSystemLocale").intl;
-      obj10[0] = intl10.string(require("getSystemLocale").t["7p5pqh"]);
-      intl11 = require("getSystemLocale").intl;
-      obj10[1] = intl11.string(require("getSystemLocale").t.HewMzo);
-      obj10[2] = tmp7[1];
-      items8[5] = tmp33(require("TextInput").TextInput, obj10);
+      intl10 = tmp21(tmp22[14]).intl;
+      obj10.label = intl10.string(tmp21(tmp22[14]).t["7p5pqh"]);
+      intl11 = tmp21(tmp22[14]).intl;
+      obj10.placeholder = intl11.string(tmp21(tmp22[14]).t.HewMzo);
+      obj10.onChange = tmp7[1];
+      items8[5] = tmp33(tmp21(tmp22[35]).TextInput, obj10);
       tmp36 = closure_6;
       obj11 = { style: null, children: null };
-      obj11[0] = tmp.offButton;
+      obj11.style = tmp.offButton;
       obj12 = { text: null, size: "sm", variant: "secondary", onPress: null };
-      intl12 = require("getSystemLocale").intl;
-      obj12[0] = intl12.string(require("getSystemLocale").t["636e+U"]);
-      obj12[3] = function onPress() {
+      intl12 = tmp21(tmp22[14]).intl;
+      obj12.text = intl12.string(tmp21(tmp22[14]).t["636e+U"]);
+      obj12.onPress = function onPress() {
         let obj = screenshotUri(closure_2[43]);
         const result = obj.setDeveloperOptionSettings({ bugReporterEnabled: false });
         screenshot(closure_2[44]).terminate(true);
@@ -688,98 +744,100 @@ class BugCreateScreen {
         const obj2 = screenshot(closure_2[44]);
         obj = { key: "BUG_REPORT_HAS_BEEN_TURNED_OFF_TEXT", icon: screenshot(closure_2[22]), content: null };
         const intl = screenshotUri(closure_2[14]).intl;
-        obj[2] = intl.string(screenshotUri(closure_2[14]).t["J3/feu"]);
+        obj.content = intl.string(screenshotUri(closure_2[14]).t["J3/feu"]);
         screenshot(closure_2[17]).open(obj);
       };
-      obj11[1] = tmp33(require("Button").Button, obj12);
+      obj11.children = tmp33(tmp21(tmp22[34]).Button, obj12);
       items8[6] = tmp33(closure_6, obj11);
-      obj[2] = items8;
-      obj8[0] = tmp31(require("Stack").Stack, obj);
+      obj.children = items8;
+      obj8.children = tmp31(screenshotUri(closure_2[28]).Stack, obj);
       items9 = [, ];
       items9[0] = tmp33(tmp34, obj8);
       tmp33Result = null;
       if (first4) {
         tmp33Result = tmp33(function Submitting() {
-          const tmp = callback2();
+          const tmp = closure_14();
           let obj = { style: tmp.submittingOverlay, children: null };
           obj = { sticker: first5, animated: true, size: 148 };
           const items = [first4(screenshot(closure_2[45]), obj), ];
           obj = { style: tmp.submittingText, variant: "heading-md/medium", children: null };
           const intl = screenshotUri(closure_2[14]).intl;
-          obj[2] = intl.string(screenshotUri(closure_2[14]).t.Uuqbcm);
+          obj.children = intl.string(screenshotUri(closure_2[14]).t.Uuqbcm);
           items[1] = first4(screenshotUri(closure_2[29]).Text, obj);
-          obj[1] = items;
-          return callback(first2, obj);
+          obj.children = items;
+          return closure_11(first2, obj);
         }, {});
       }
       obj13 = { children: null };
       items9[1] = tmp33Result;
-      obj13[0] = items9;
+      obj13.children = items9;
       return tmp31(tmp32, obj13);
     } else {
       obj14 = { title: null, hasIcons: false, children: null };
-      intl5 = require("getSystemLocale").intl;
-      obj14[0] = intl5.string(require("getSystemLocale").t["77VVd8"]);
+      intl5 = tmp21(tmp22[14]).intl;
+      obj14.title = intl5.string(tmp21(tmp22[14]).t["77VVd8"]);
       obj15 = { disabled: null, onPress: null, label: null, arrow: true };
-      obj15[0] = null == first7;
-      obj15[1] = function onPress() {
-        let obj = screenshot(closure_2[38]);
-        obj = { features: null != first7 ? first7.features : [], feature: first8, setFeature: closure_20 };
-        return obj.openLazy(screenshotUri(closure_2[40])(closure_2[39], closure_2.paths), "BugReporterFeatureActionSheet", obj);
+      obj15.disabled = null == first7;
+      obj15.onPress = function onPress() {
+        const obj = { features: null != first7 ? first7.features : [], feature: first8, setFeature };
+        return obj.openLazy(asyncRequireImpl(10211, dependencyMap.paths), "BugReporterFeatureActionSheet", obj);
       };
       if (null != first8) {
         name = first8.name;
       } else {
-        intl6 = require("getSystemLocale").intl;
-        name = intl6.string(require("getSystemLocale").t["77VVd8"]);
+        intl6 = tmp21(tmp22[14]).intl;
+        name = intl6.string(tmp21(tmp22[14]).t["77VVd8"]);
       }
-      obj15[2] = name;
-      obj15 = tmp33(require("TableRowInner").TableRow, obj15);
-      obj14[2] = obj15;
-      tmp33Result1 = tmp33(require("TableRowGroupTitle").TableRowGroup, obj14);
+      obj15.label = name;
+      obj15 = tmp33(tmp21(tmp22[37]).TableRow, obj15);
+      obj14.children = obj15;
+      tmp33Result1 = tmp33(tmp21(tmp22[36]).TableRowGroup, obj14);
     }
     return;
   }
 }
-({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-createCacheKey = { container: { padding: 16 }, attachmentCarousel: { justifyContent: "center", minWidth: "100%" }, attachmentContainer: { marginHorizontal: 4, marginBottom: 16 }, closeContainer: null, priorityIcon: null, offButton: null, submittingOverlay: null, submittingText: null };
-createCacheKey = { position: "absolute", top: 6, right: 10, height: 20, width: 20, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: null };
-const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
-createCacheKey[8] = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5).css();
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { width: 24, height: 24 };
-createCacheKey[5] = { marginBottom: 24 };
-const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5);
-createCacheKey[6] = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, bottom: 0, flex: 1, justifyContent: "center", position: "absolute", top: 0, width: "100%" };
-createCacheKey[7] = { marginTop: 8 };
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-let closure_15 = 5 * setDefault.Millis.SECOND;
-let closure_16 = 10 * setDefault.Millis.SECOND;
-let closure_17 = 5 * setDefault.Millis.SECOND;
-const MINUTE = setDefault.Millis.MINUTE;
-let obj1 = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, bottom: 0, flex: 1, justifyContent: "center", position: "absolute", top: 0, width: "100%" };
-let result = require("set").fileFinishedImporting("modules/bug_reporter/native/components/BugReporterModal.tsx");
+fn(4560);
+const createStyles = { container: { padding: 16 }, attachmentCarousel: { justifyContent: "center", minWidth: "100%" }, attachmentContainer: { marginHorizontal: 4, marginBottom: 16 }, closeContainer: null, priorityIcon: null, offButton: null, submittingOverlay: null, submittingText: null };
+let size = { position: "absolute", top: 6, right: 10, height: 20, width: 20, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", backgroundColor: null };
+const importDefaultResultResult = n(nativeDefault.unsafe_rawColors.BLACK);
+size.backgroundColor = n(nativeDefault.unsafe_rawColors.BLACK).alpha(0.5).css();
+createStyles.closeContainer = size;
+createStyles.priorityIcon = { width: 24, height: 24 };
+createStyles.offButton = { marginBottom: 24 };
+const rect = { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, bottom: 0, flex: 1, justifyContent: "center", position: "absolute", top: 0, width: "100%" };
+createStyles.submittingOverlay = rect;
+createStyles.submittingText = { marginTop: 8 };
+let value = createStyles.createStyles(createStyles);
+let closure_15 = 5 * DurationsDefault.Millis.SECOND;
+let closure_16 = 10 * DurationsDefault.Millis.SECOND;
+let closure_17 = 5 * DurationsDefault.Millis.SECOND;
+const MINUTE = DurationsDefault.Millis.MINUTE;
+size = fn(2);
+let result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterModal.tsx");
 
 export default function BugReportModal(screenshotUri) {
   screenshotUri = screenshotUri.screenshotUri;
   const screenshot = screenshotUri.screenshot;
   const items = [screenshotUri, screenshot];
-  const screens = React.useMemo(() => {
+  const screens = noop.useMemo(() => {
     let obj = { screenshotUri, screenshot };
     obj = { BUG_REPORT_CREATE: null };
     obj = { title: null, initialParams: null, render: null };
-    const intl = screenshotUri(closure_1_2[14]).intl;
-    obj[0] = intl.string(screenshotUri(closure_1_2[14]).t.mCCdwi);
-    obj[1] = obj;
-    obj[2] = function render(arg0) {
+    const intl = util.intl;
+    obj.title = intl.string(util.t.mCCdwi);
+    obj.initialParams = obj;
+    obj.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return callback(closure_20, {});
+      return closure_1_10(closure_1_20, {});
     };
-    obj[0] = obj;
+    obj.BUG_REPORT_CREATE = obj;
     return obj;
   }, items);
-  return callback(screenshotUri(7000).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(7000).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 };
 export { BugCreateScreen };

@@ -1,38 +1,35 @@
-// === Module 7891: getFirstEligibleUserExperiment ===
+// === Module 7891: ExperimentUtils ===
 
-// Module 7891 (getFirstEligibleUserExperiment)
-import applyDefault from "apply" /* 12 */;
-import trackExposureToExperiment from "trackExposureToExperiment" /* 4481 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4476 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
+// Module 7891 (ExperimentUtils)
+import _modDef12 from "module_12" /* 12 */;
+import ExperimentManager from "ExperimentManager" /* 4481 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
 
-require = arg1;
+require = fn;
 function getFirstEligibleUserExperiment(arg0) {
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = authStore;
     let tmp2 = nextResult;
-    let userExperimentDescriptor = authStore.getUserExperimentDescriptor(nextResult);
-    let tmp5 = userExperimentDescriptor;
+    let userExperimentDescriptor = ExperimentStore.getUserExperimentDescriptor(nextResult);
     if (null != userExperimentDescriptor) {
-      let tmp6 = nextResult;
       let items = [tmp2, userExperimentDescriptor];
-      let tmp7 = iter;
       iter.return();
       return items;
     }
   }
   return null;
 }
-({ ExperimentTypes: c5, ExperimentBuckets: closure_6 } = ExperimentBuckets);
-let result = require("set").fileFinishedImporting("utils/ExperimentUtils.tsx");
+const ExperimentConstants = fn(4477);
+({ ExperimentTypes: hasOwnProperty, ExperimentBuckets: metroRequire } = ExperimentConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/ExperimentUtils.tsx");
 
 export default {
   getFirstEligibleUserExperiment,
-  isInExperimentBucket(id) {
-    return authStore.getUserExperimentBucket(id) === arg1;
+  isInExperimentBucket(id, arg1) {
+    return ExperimentStore.getUserExperimentBucket(id) === arg1;
   },
   experimentDescriptorEquals(type, type2) {
     if (null == type) {
@@ -63,7 +60,7 @@ export default {
             return false;
           } else if (type.type === constants.USER) {
             if (type2.type === tmp.USER) {
-              return applyDefault.isEqual(type.context, type2.context);
+              return _modDef12.isEqual(type.context, type2.context);
             }
           }
         }
@@ -74,8 +71,8 @@ export default {
   trackExposureToFirstEligibleUserExperiment(arg0) {
     const tmp = getFirstEligibleUserExperiment(arg0);
     if (null != tmp) {
-      const tmp3 = callback(tmp, 2);
-      const result = trackExposureToExperiment.trackExposureToExperiment(tmp3[0], tmp4);
+      const tmp3 = _slicedToArray(tmp, 2);
+      const result = ExperimentManager.trackExposureToExperiment(tmp3[0], tmp4);
       return tmp3[1];
     }
   },
@@ -94,32 +91,32 @@ export default {
   getRecentExperimentBuckets(arg0, arg1) {
     closure_0 = arg1;
     const entries = Object.entries(arg0);
-    return entries.reduce((arg0, arg1) => {
-      [tmp, tmp2] = arg1;
-      let tmp3 = (function isRecentExperiment(str, closure_0) {
+    return entries.reduce((acc, item) => {
+      [tmp, tmp2] = item;
+      let tmp3 = (function isRecentExperiment(str, arg1) {
         try {
-          [tmp4, tmp5] = callback(str.split("-"), 2);
+          [tmp4, tmp5] = closure_1_3(str.split("-"), 2);
           if (null == tmp5) {
             return false;
           } else {
             const _Date = Date;
             const _HermesInternal = HermesInternal;
             const date = new Date("" + tmp4 + "-" + arr.slice(0, 2) + "-01");
-            return date > closure_0;
+            return date > arg1;
           }
           arr = tmp5;
-          const tmp3 = callback(str.split("-"), 2);
+          const tmp3 = closure_1_3(str.split("-"), 2);
         } catch (err) {
           return false;
         }
       })(tmp, closure_0);
       if (tmp3) {
-        tmp3 = tmp2 > closure_1_6.CONTROL;
+        tmp3 = tmp2 > constants2.CONTROL;
       }
       if (tmp3) {
-        arg0[tmp] = tmp2;
+        acc[tmp] = tmp2;
       }
-      return arg0;
+      return acc;
     }, {});
   }
 };

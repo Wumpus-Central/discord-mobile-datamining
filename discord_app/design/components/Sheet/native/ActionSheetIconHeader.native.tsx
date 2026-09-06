@@ -1,35 +1,34 @@
 // === Module 10998: ActionSheetIconHeader ===
 
 // Module 10998 (ActionSheetIconHeader)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 }, titles: { justifyContent: "center", flex: 1 } });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetIconHeader.native.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 }, titles: { justifyContent: "center", flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetIconHeader.native.tsx");
 
 export const ActionSheetIconHeader = function ActionSheetIconHeader(subtitle) {
   subtitle = subtitle.subtitle;
   ({ title, icon } = subtitle);
-  const tmp = callback2();
+  const tmp = closure_5();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(View, { children: icon }), ];
+  const items = [React3(View, { children: icon }), ];
   obj = { style: tmp.titles, children: null };
-  const items1 = [callback(Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
+  const items1 = [React3(Text_Text.Text, { variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", lineClamp: 2, children: title }), ];
   let tmp4Result = null;
   if (null != subtitle) {
-    obj = { variant: "text-xs/medium", color: "text-default", children: null };
-    obj[2] = subtitle;
-    tmp4Result = callback(Text.Text, obj);
+    obj = { variant: "text-xs/medium", color: "text-default", children: subtitle };
+    tmp4Result = React3(Text_Text.Text, obj);
   }
   items1[1] = tmp4Result;
-  obj[1] = items1;
-  items[1] = closure_4(View, obj);
-  obj[1] = items;
-  return closure_4(View, obj);
+  obj.children = items1;
+  items[1] = React4(View, obj);
+  obj.children = items;
+  return React4(View, obj);
 };

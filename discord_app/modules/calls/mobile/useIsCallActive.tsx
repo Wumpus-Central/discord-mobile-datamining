@@ -1,46 +1,47 @@
 // === Module 7981: useIsCallActive ===
 
 // Module 7981 (useIsCallActive)
-import closure_2 from "callConnect" /* 5278 */;
-import closure_3 from "getParticipants" /* 4576 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
+import CallStore from "CallStore" /* 5278 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
+const require = fn;
+const ParticipantTypes = fn(4581).ParticipantTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 
 export default function useIsCallActive(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  const items = [closure_2, closure_3];
+  const items = [CallStore, ChannelRTCStore];
   const items1 = [arg0, arg1];
-  return _require(504).useStateFromStores(items, () => {
-    let isCallActiveResult = closure_1_2.isCallActive(closure_0, closure_1);
+  return require("initialize").useStateFromStores(items, () => {
+    let isCallActiveResult = CallStore.isCallActive(closure_0, closure_1);
     if (isCallActiveResult) {
-      const participants = closure_1_3.getParticipants(closure_0);
+      const participants = ChannelRTCStore.getParticipants(closure_0);
       isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
     }
     return isCallActiveResult;
   }, items1);
 };
 export const checkIsCallActive = function checkIsCallActive(channelId, id) {
-  let isCallActiveResult = callActive.isCallActive(channelId, id);
+  let isCallActiveResult = CallStore.isCallActive(channelId, id);
   if (isCallActiveResult) {
-    participants = participants.getParticipants(channelId);
+    const participants = ChannelRTCStore.getParticipants(channelId);
     isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
   }
   return isCallActiveResult;
 };
-export const useIsCallActiveNullable = function useIsCallActiveNullable(id) {
-  const _require = id;
+export const useIsCallActiveNullable = function useIsCallActiveNullable(id, arg1) {
+  _require = id;
   dependencyMap = arg1;
-  const items = [closure_2, closure_3];
+  const items = [CallStore, ChannelRTCStore];
   const items1 = [id, arg1];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let isCallActiveResult = closure_1_2.isCallActive(tmp, closure_1);
+      let isCallActiveResult = CallStore.isCallActive(tmp, closure_1);
       if (isCallActiveResult) {
-        const participants = closure_1_3.getParticipants(tmp);
+        const participants = ChannelRTCStore.getParticipants(tmp);
         isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
       }
       tmp2 = isCallActiveResult;

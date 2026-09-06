@@ -1,11 +1,12 @@
-// === Module 9151: items ===
+// === Module 9151: SecureFramesPersistedStore ===
 
-// Module 9151 (items)
+// Module 9151 (SecureFramesPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let items = [];
-let c1 = false;
+let persistentCodesEnabled = false;
+let uploadedKeyVersions = items;
 const PersistedStore = initializeDefault.PersistedStore;
 class SecureFramesPersistedStore extends PersistedStore {
 }
@@ -18,47 +19,49 @@ prototype["initialize"] = function initialize(persistentCodesEnabled) {
   if (flag == null) {
     flag = false;
   }
-  let uploadedKeyVersions;
+  persistentCodesEnabled = flag;
+  uploadedKeyVersions = undefined;
   if (persistentCodesEnabled != null) {
     uploadedKeyVersions = persistentCodesEnabled.uploadedKeyVersions;
   }
   if (uploadedKeyVersions == null) {
     uploadedKeyVersions = items;
   }
+  closure_2 = uploadedKeyVersions;
 };
 prototype["getState"] = function getState() {
-  return { persistentCodesEnabled: c1, uploadedKeyVersions: items };
+  return { persistentCodesEnabled, uploadedKeyVersions };
 };
 prototype["getPersistentCodesEnabled"] = function getPersistentCodesEnabled() {
-  return c1;
+  return persistentCodesEnabled;
 };
 prototype["getUploadedKeyVersionsCached"] = function getUploadedKeyVersionsCached() {
-  return items;
+  return closure_2;
 };
 SecureFramesPersistedStore.displayName = "SecureFramesPersistedStore";
 SecureFramesPersistedStore.persistKey = "SecureFramesPersistedStore";
-const secureFramesPersistedStore = new SecureFramesPersistedStore(dispatcherDefault, {
+const secureFramesPersistedStore = new SecureFramesPersistedStore(DispatcherDefault, {
   SECURE_FRAMES_SETTINGS_UPDATE: function handleSecureFramesSettingsUpdate(persistentCodesEnabled) {
     persistentCodesEnabled = persistentCodesEnabled.persistentCodesEnabled;
   },
   SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: function handleSecureFramesUploadedKeyVersionAdd(keyVersion) {
     items = [];
-    for (const item10008 of items) {
+    for (const item10008 of closure_2) {
       if (item10008 === arg0.keyVersion) {
-        let tmp4 = obj;
         obj.return();
       } else {
-        let tmp2 = item10008;
         let arr = items.push(tmp);
         continue;
       }
     }
     items.push(keyVersion.keyVersion);
+    closure_2 = items;
   },
   SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function handleSecureFramesUploadedKeyVersionsClear() {
     closure_2 = items;
   }
 });
-const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesPersistedStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/SecureFramesPersistedStore.tsx");
 
 export default secureFramesPersistedStore;

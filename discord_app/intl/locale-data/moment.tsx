@@ -1,10 +1,10 @@
-// === Module 4151: momentLocales ===
+// === Module 4151: moment ===
 
-// Module 4151 (momentLocales)
-import set from "set" /* 2 */;
+// Module 4151 (moment)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("intl/locale-data/moment.tsx");
+const result = size.fileFinishedImporting("intl/locale-data/moment.tsx");
 
 export const momentLocales = {
   bg() {

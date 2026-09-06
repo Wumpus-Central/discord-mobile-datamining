@@ -1,11 +1,12 @@
 // === Module 11897: TTIMeasurementView ===
 
 // Module 11897 (TTIMeasurementView)
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 11898 */;
-import importDefaultResult from "map" /* 4968 */;
+import TTIMeasurementNativeComponentDefault from "TTIMeasurementNativeComponent" /* 11898 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 4968 */;
 
-const obj = { componentName: "DCDTTIMeasurementView", componentFoundInstance: __INTERNAL_VIEW_CONFIGDefault };
-const importDefaultResultResult = importDefaultResult(obj);
-const result = require("set").fileFinishedImporting("modules/tti_analytics/native/TTIMeasurementView.tsx");
+const obj = { componentName: "DCDTTIMeasurementView", componentFoundInstance: null };
+obj.componentFoundInstance = TTIMeasurementNativeComponentDefault;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/tti_analytics/native/TTIMeasurementView.tsx");
 
-export const TTIMeasurementView = importDefaultResultResult;
+export const TTIMeasurementView = requireNativeComponentOrDefault(obj);

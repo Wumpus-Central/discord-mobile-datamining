@@ -1,100 +1,103 @@
 // === Module 12535: useGuildPowerupOnActivate ===
 
 // Module 12535 (useGuildPowerupOnActivate)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "handleGuildBoostsUpdate" /* 4455 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4454 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5434 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4455 */;
 
-const require = arg1;
-({ BoostPurchaseIntent: closure_6, GuildPowerupType: error } = BoostedGuildTiers);
-let result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
+require = fn;
+const GuildPowerupsConstants = fn(4450);
+({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
 
 export default function useGuildPowerupOnActivate(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   importDefault = arg1;
-  const tmp = importDefault(onToggle[4])(arg0, arg1);
+  const tmp = require("useGuildPowerupOnToggle")(arg0, arg1);
   onToggle = tmp.onToggle;
   ({ isLoading, error } = tmp);
-  let obj = _require(onToggle[5]);
+  let obj = require("initialize");
   const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => guild.getGuild(closure_0));
-  const tmp3 = importDefault(onToggle[6])(arg0, arg1);
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  const tmp3 = require("useAvailableBoostCountForPowerup")(arg0, arg1);
   closure_4 = tmp3;
-  const analyticsLocations = importDefault(onToggle[7])().analyticsLocations;
-  const tmp4 = importDefault(onToggle[8])("guild_powerup_activation");
+  const analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
+  const tmp4 = require("useGuildBoostPurchaseHandler")("guild_powerup_activation");
   const shouldUseMobileWebRedirectCheckout = tmp4.shouldUseMobileWebRedirectCheckout;
   const handleMobileWebRedirectCheckout = tmp4.handleMobileWebRedirectCheckout;
-  obj = {
-    onActivate: stateFromStores.useCallback(() => {
-      if (null != stateFromStores) {
-        if (null != PERK) {
-          if (closure_4 >= tmp14.cost) {
-            onToggle(true);
+  obj = { onActivate: null, isLoading, error };
+  const items1 = [onToggle, arg1, tmp3, stateFromStores, analyticsLocations, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout];
+  obj.onActivate = stateFromStores.useCallback(() => {
+    if (null != stateFromStores) {
+      if (null != PERK) {
+        if (closure_4 >= tmp14.cost) {
+          onToggle(true);
+        } else {
+          const diff = tmp14.cost - tmp15;
+          closure_0 = diff;
+          let availableGuildBoostSlots = closure_0(onToggle[9]).getAvailableGuildBoostSlots(analyticsLocations.boostSlots);
+          if (tmp14.type === handleMobileWebRedirectCheckout.LEVEL) {
+            PERK = shouldUseMobileWebRedirectCheckout.LEVEL;
           } else {
-            const diff = tmp14.cost - tmp15;
-            const callback = diff;
-            let availableGuildBoostSlots = callback(onToggle[9]).getAvailableGuildBoostSlots(analyticsLocations.boostSlots);
-            if (tmp14.type === handleMobileWebRedirectCheckout.LEVEL) {
-              PERK = shouldUseMobileWebRedirectCheckout.LEVEL;
-            } else {
-              PERK = shouldUseMobileWebRedirectCheckout.PERK;
-            }
-            let obj = callback2(tmp18[10]);
-            obj.hideActionSheet(callback(onToggle[11]).GUILD_POWERUPS_BOTTOM_SHEET_KEY);
-            if (availableGuildBoostSlots.length > 0) {
-              let tmp17Result = tmp17(tmp18[12]);
-              obj = { guildBoostSlots: null, guildId: null, intent: null, onResult: null };
-              obj[0] = availableGuildBoostSlots.slice(0, diff);
-              obj[1] = tmp.id;
-              obj[2] = PERK;
-              obj[3] = function onResult(arg0) {
-                if (arg0) {
-                  dependencyMap(true);
-                }
-              };
-              tmp17Result.openTransferModal(obj);
-            } else if (shouldUseMobileWebRedirectCheckout) {
-              handleMobileWebRedirectCheckout(analyticsLocations, tmp.id);
-            } else {
-              tmp17Result = tmp17(tmp18[13]);
-              obj = { source: null, analyticsLocations: null, guildId: null, onBack: null, onPaymentSuccess: null, onPaymentDismiss: null };
-              obj[0] = { page: "Guild Powerups", section: "Powerup Activation" };
-              obj[1] = analyticsLocations;
-              obj[2] = tmp.id;
-              obj[3] = function onBack() {
-                return PERK(4763).popWithKey(diff(7412).PREMIUM_KEY);
-              };
-              obj[4] = function onPaymentSuccess() {
-                let obj = diff(onToggle[9]);
-                const availableGuildBoostSlots = obj.getAvailableGuildBoostSlots(analyticsLocations.boostSlots);
-                if (availableGuildBoostSlots.length >= diff) {
-                  obj = { guildBoostSlots: null, guildId: null, intent: null, onResult: null };
-                  obj[0] = availableGuildBoostSlots.slice(0, PERK.cost);
-                  obj[1] = closure_1_3.id;
-                  obj[2] = PERK;
-                  obj[3] = function onResult(arg0) {
-                    if (arg0) {
-                      callback(true);
-                    }
-                  };
-                  diff(onToggle[12]).openTransferModal(obj);
-                  const tmpResult = diff(onToggle[12]);
-                }
-              };
-              obj[5] = function onPaymentDismiss() {
-                return PERK(4763).popWithKey(diff(7412).PREMIUM_KEY);
-              };
-              const result = tmp17Result.launchGuildBoostFlowOrAlert(obj);
-            }
-            const obj6 = callback(onToggle[9]);
+            PERK = shouldUseMobileWebRedirectCheckout.PERK;
           }
+          let obj = PERK(tmp18[10]);
+          obj.hideActionSheet(closure_0(onToggle[11]).GUILD_POWERUPS_BOTTOM_SHEET_KEY);
+          if (availableGuildBoostSlots.length > 0) {
+            let tmp17Result = tmp17(tmp18[12]);
+            obj = {
+              guildBoostSlots: availableGuildBoostSlots.slice(0, diff),
+              guildId: tmp.id,
+              intent: PERK,
+              onResult(arg0) {
+                        if (arg0) {
+                          dependencyMap(true);
+                        }
+                      }
+            };
+            tmp17Result.openTransferModal(obj);
+          } else if (shouldUseMobileWebRedirectCheckout) {
+            handleMobileWebRedirectCheckout(analyticsLocations, tmp.id);
+          } else {
+            tmp17Result = tmp17(tmp18[13]);
+            obj = {
+              source: { page: "Guild Powerups", section: "Powerup Activation" },
+              analyticsLocations,
+              guildId: tmp.id,
+              onBack() {
+                        return PERK(4763).popWithKey(diff(7412).PREMIUM_KEY);
+                      },
+              onPaymentSuccess() {
+                        let obj = GuildBoostingUtils;
+                        const availableGuildBoostSlots = obj.getAvailableGuildBoostSlots(GuildBoostSlotStore.boostSlots);
+                        if (availableGuildBoostSlots.length >= diff) {
+                          obj = {
+                            guildBoostSlots: availableGuildBoostSlots.slice(0, PERK.cost),
+                            guildId: stateFromStores.id,
+                            intent: PERK,
+                            onResult(arg0) {
+                                if (arg0) {
+                                  dependencyMap(true);
+                                }
+                              }
+                          };
+                          actions_BoostingActionCreators.openTransferModal(obj);
+                          const tmpResult = actions_BoostingActionCreators;
+                        }
+                      },
+              onPaymentDismiss() {
+                        return PERK(4763).popWithKey(diff(7412).PREMIUM_KEY);
+                      }
+            };
+            const result = tmp17Result.launchGuildBoostFlowOrAlert(obj);
+          }
+          const obj6 = closure_0(onToggle[9]);
         }
       }
-    }, items1),
-    isLoading,
-    error
-  };
-  items1 = [onToggle, arg1, tmp3, stateFromStores, analyticsLocations, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout];
+    }
+  }, items1);
   return obj;
 };

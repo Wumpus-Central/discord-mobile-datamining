@@ -1,59 +1,58 @@
-// === Module 12569: GuildPowerupPerksSection ===
+// === Module 12569: GuildPowerupsPerksSection ===
 
-// Module 12569 (GuildPowerupPerksSection)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
+// Module 12569 (GuildPowerupsPerksSection)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2428 from "module_2428" /* 2428 */;
 import GuildPowerupsSectionHeaderDefault from "GuildPowerupsSectionHeader" /* 12552 */;
+import GuildPowerupsSinglePerkCardDefault from "GuildPowerupsSinglePerkCard" /* 12570 */;
+import GuildPowerupsMultiPerkCardDefault from "GuildPowerupsMultiPerkCard" /* 12572 */;
+import GuildPowerupsGameServerCardDefault from "GuildPowerupsGameServerCard" /* 12574 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
+const View = _mod17.View;
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = { container: null };
-obj = { flexDirection: "column", gap: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-let closure_7 = createCacheKey.createStyles(obj);
-const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerksSection.tsx");
+obj = { flexDirection: "column", gap: nativeDefault.space.PX_16 };
+obj.container = obj;
+let closure_7 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerksSection.tsx");
 
 export default function GuildPowerupPerksSection(arg0) {
   ({ guildId: require, listings } = arg0);
   let obj = { children: null };
   obj = { title: null, description: null };
-  const tmp = callback3();
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault.TV3Vm8);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(messagesProxyDefault.STx9hp);
-  const items = [callback(GuildPowerupsSectionHeaderDefault, obj), ];
+  const tmp = closure_7();
+  const intl = util.intl;
+  obj.title = intl.string(_modDef2428.TV3Vm8);
+  const intl2 = util.intl;
+  obj.description = intl2.string(_modDef2428.STx9hp);
+  const items = [closure_4(GuildPowerupsSectionHeaderDefault, obj), ];
   obj = {
     style: tmp.container,
-    children: listings.map((type) => {
+    children: listings.map((type, index) => {
       type = type.type;
       if ("singlePerk" === type) {
-        let obj = { guildId: null, powerup: null, badge: null };
-        obj[0] = closure_0;
-        ({ powerup: obj3[1], badge: obj3[2] } = type);
-        return closure_1_4(closure_1_1(closure_1_2[7]), obj, type.powerup.skuId);
+        let obj = { guildId, powerup: null, badge: null };
+        ({ powerup: obj3.powerup, badge: obj3.badge } = type);
+        return React4(GuildPowerupsSinglePerkCardDefault, obj, type.powerup.skuId);
       } else if ("multiPerk" === type) {
-        obj = { guildId: null, listing: null };
-        obj[0] = closure_0;
-        obj[1] = type;
+        obj = { guildId, listing: type };
         const _HermesInternal2 = HermesInternal;
-        return closure_1_4(closure_1_1(closure_1_2[8]), obj, "" + type.group + "-" + arg1);
+        return React4(GuildPowerupsMultiPerkCardDefault, obj, "" + type.group + "-" + index);
       } else if ("gameServer" === type) {
-        obj = { guildId: null };
-        obj[0] = closure_0;
+        obj = { guildId };
         const _HermesInternal = HermesInternal;
-        return closure_1_4(closure_1_1(closure_1_2[9]), obj, "game-server-" + arg1);
+        return React4(GuildPowerupsGameServerCardDefault, obj, "game-server-" + index);
       } else {
         return null;
       }
     })
   };
-  items[1] = callback(View, obj);
-  obj[0] = items;
-  return callback2(closure_5, obj);
+  items[1] = closure_4(View, obj);
+  obj.children = items;
+  return closure_6(closure_5, obj);
 };

@@ -1,16 +1,16 @@
 // === Module 16711: CachedSearchResultParser ===
 
 // Module 16711 (CachedSearchResultParser)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
+let result = size.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
 
 export const CachedSearchResultParser = function CachedSearchResultParser() {
   const obj = Object.create(new.target.prototype);
   obj.resultsCache = new Map();
   obj.parse = function parse(id) {
     const resultsCache = obj.resultsCache;
-    const value = resultsCache.get(id.id);
+    value = resultsCache.get(id.id);
     if (null != value) {
       return value;
     } else {

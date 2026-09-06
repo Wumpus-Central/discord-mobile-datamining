@@ -1,41 +1,41 @@
-// === Module 9838: fromPath ===
+// === Module 9838: LinkRecord ===
 
-// Module 9838 (fromPath)
-import toJSDefault from "toJS" /* 1386 */;
-import { Routes } from "ME" /* 1074 */;
+// Module 9838 (LinkRecord)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-let prototype;
-prototype = function LinkRecord(arg0) {
+const Routes = fn(1074).Routes;
+const prototype = function LinkRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, path: tmp.path, inviteCode: tmp.inviteCode } = arg0);
   return tmp;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype["fromPath"] = function fromPath(pathname) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp6 = new prototype(tmp, tmp2);
+    ({ id: tmp6.id, path: tmp6.path, inviteCode: tmp6.inviteCode } = obj);
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new prototype("Trying to call a non-function", prototype);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp2.id, path: tmp2.path, inviteCode: tmp2.inviteCode } = { id: pathname, path: pathname });
-  return tmp2;
+  obj = { id: pathname, path: pathname };
 };
 prototype["fromInviteCode"] = function fromInviteCode(code) {
   const combined = "invite:" + code;
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp8 = new prototype(tmp, tmp2, new.target, combined);
+    tmp8.id = combined;
+    tmp8.path = tmp4;
+    tmp8.inviteCode = code;
+    return tmp8;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp4 = new prototype("Trying to call a non-function", prototype, new.target, combined);
-  // ThrowIfThisInitialized (0x7c)
-  tmp4.id = combined;
-  tmp4.path = Routes.INVITE(code);
-  tmp4.inviteCode = code;
-  return tmp4;
+  tmp2 = prototype;
 };
-const result = require("set").fileFinishedImporting("records/LinkRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/LinkRecord.tsx");
 
 export default prototype;
 export const LinkRecord = prototype;

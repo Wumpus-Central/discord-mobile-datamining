@@ -1,37 +1,36 @@
-// === Module 7404: defaultMobileWebNitroManagementSuccessCallback ===
+// === Module 7404: PremiumManagementUtils ===
 
-// Module 7404 (defaultMobileWebNitroManagementSuccessCallback)
-import set from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
+// Module 7404 (PremiumManagementUtils)
+import LoggerDefault from "Logger" /* 3 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ME from "ME" /* 1074 */;
-import sum from "sum" /* 1085 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef4905 from "module_4905" /* 4905 */;
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 1085 */;
+import util from "util" /* 1114 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import BillingStandaloneNativeUtils from "BillingStandaloneNativeUtils" /* 7405 */;
+import size from "module_2" /* 2 */;
 
 function defaultMobileWebNitroManagementSuccessCallback() {
   return logger.log("Successfully opened mobile web Nitro Management page");
 }
 function defaultMobileWebNitroManagementFailureCallback(arg0) {
   logger.error("Failed to open mobile web Nitro Management page, error response: ", arg0);
-  obj = _modDef4905;
-  obj = { title: null, body: null, hideActionSheet: true };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.NrBVjw);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["gD+grx"]);
+  const obj = { title: null, body: null, hideActionSheet: true };
+  const intl = util.intl;
+  obj.title = intl.string(util.t.NrBVjw);
+  const intl2 = util.intl;
+  obj.body = intl2.string(util.t["gD+grx"]);
   obj.show(obj);
 }
-const SubscriptionStatusTypes = ME.SubscriptionStatusTypes;
-let closure_4 = sum.PaymentGatewayToFriendlyName;
+const SubscriptionStatusTypes = Constants.SubscriptionStatusTypes;
+let closure_4 = Constants2.PaymentGatewayToFriendlyName;
 const jsx = jsxProd.jsx;
-let closure_6 = new timestampDefault("PremiumManagementUtils");
-let obj = { IN_APP: "manage_in_app", IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY: "manage_in_external_mobile_payment_gateway", IN_WEB: "manage_in_web" };
-const tmp2 = new timestampDefault("PremiumManagementUtils");
-let result = set.fileFinishedImporting("modules/premium/native/utils/PremiumManagementUtils.tsx");
+const logger = new LoggerDefault("PremiumManagementUtils");
+const PremiumManagementMethod = { IN_APP: "manage_in_app", IN_EXTERNAL_MOBILE_PAYMENT_GATEWAY: "manage_in_external_mobile_payment_gateway", IN_WEB: "manage_in_web" };
+let result = size.fileFinishedImporting("modules/premium/native/utils/PremiumManagementUtils.tsx");
 
 export const MobileWebDestinationTypes = { PREMIUM_MANAGEMENT: "premium_management" };
-export const PremiumManagementMethod = obj;
+export { PremiumManagementMethod };
 export const getPremiumManagementMethod = function getPremiumManagementMethod(isOnPlatformMatchingExternalPaymentGateway) {
   if (null == isOnPlatformMatchingExternalPaymentGateway) {
     return null;
@@ -51,7 +50,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
   if (arg1 === undefined) {
     tmp = null;
   }
-  const _require = tmp;
+  _require = tmp;
   if (null == subscription) {
     if (null != null) {
       if (null !== obj.IN_APP) {
@@ -68,9 +67,7 @@ export const getExternalManagementMessage = function getExternalManagementMessag
           if (null != subscription) {
             if (null != subscription.paymentGateway) {
               const intl4 = tmp13(1114).intl;
-              obj = { mobilePlatform: null, externalPaymentGateway: null };
-              obj[0] = str2;
-              obj[1] = table[subscription.paymentGateway];
+              obj = { mobilePlatform: str2, externalPaymentGateway: closure_4[subscription.paymentGateway] };
               return intl4.formatToPlainString(tmp13(1114).t.cFZnqX, obj);
             }
           }
@@ -86,50 +83,58 @@ export const getExternalManagementMessage = function getExternalManagementMessag
                 status = subscription.status;
               }
               if (tmp.returnCtaAsComponent) {
-                obj = { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" };
-                obj[0] = { justifyContent: "flex-start" };
-                obj[1] = function onPress() {
-                  if (null != _null) {
-                    obj = _null(closure_1_2[8]);
-                    obj = { loadId: null };
-                    obj[0] = tmp.loadId;
-                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : closure_1_8;
-                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : closure_1_9;
-                    const result = obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
-                  }
+                obj = {
+                  containerStyle: { justifyContent: "flex-start" },
+                  onPress() {
+                                  if (null != c0) {
+                                    const obj = { loadId: tmp.loadId };
+                                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
+                                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
+                                    const result = obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
+                                  }
+                                },
+                  text: null,
+                  variant: "text-sm/semibold"
                 };
                 const intl3 = tmp13(1114).intl;
                 const t = tmp13(1114).t;
-                obj[2] = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
-                jsx(tmp13(7408).LinkButton, { containerStyle: null, onPress: null, text: null, variant: "text-sm/semibold" });
-                const tmp9 = jsx;
+                obj.text = intl3.string(tmp8 ? t.tqSSSA : t["olSp/D"]);
+                jsx(tmp13(7408).LinkButton, {
+                  containerStyle: { justifyContent: "flex-start" },
+                  onPress() {
+                                  if (null != c0) {
+                                    const obj = { loadId: tmp.loadId };
+                                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
+                                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
+                                    const result = obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
+                                  }
+                                },
+                  text: null,
+                  variant: "text-sm/semibold"
+                });
               } else {
                 function manageExternalNitroSubscription() {
-                  if (null != _null) {
-                    obj = _null(closure_1_2[8]);
-                    obj = { loadId: null };
-                    obj[0] = tmp.loadId;
-                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : closure_1_8;
-                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : closure_1_9;
+                  if (null != c0) {
+                    const obj = { loadId: tmp.loadId };
+                    const tmp4 = null != tmp.onSuccessCallback ? tmp.onSuccessCallback : defaultMobileWebNitroManagementSuccessCallback;
+                    const tmp5 = null != tmp.onFailureCallback ? tmp.onFailureCallback : defaultMobileWebNitroManagementFailureCallback;
                     return obj.goToStandaloneNitroManagementFromMobileApp("premium_external_management", obj, tmp4, tmp5);
                   }
                 }
                 const intl2 = tmp13(1114).intl;
-                obj1 = { manageExternalNitroSubscription: null };
-                obj1[0] = manageExternalNitroSubscription;
+                const obj1 = { manageExternalNitroSubscription };
                 return intl2.format(tmp13(1114).t.IERwUb, obj1);
               }
               tmp8 = status === SubscriptionStatusTypes.CANCELED || status === SubscriptionStatusTypes.PAUSE_PENDING || status === SubscriptionStatusTypes.PAST_DUE;
             }
           }
           const intl = tmp13(1114).intl;
-          const obj2 = { mobilePlatform: null };
-          obj2[0] = str2;
+          const obj2 = { mobilePlatform: str2 };
           return intl.formatToPlainString(tmp13(1114).t.CnoyAN, obj2);
         } else {
           return null;
         }
-        obj7 = _require(1115);
+        obj7 = require("PlatformUtils");
       }
     }
     return null;

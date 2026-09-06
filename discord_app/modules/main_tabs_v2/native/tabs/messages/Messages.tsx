@@ -1,23 +1,28 @@
-// === Module 16019: ? ===
+// === Module 16019: messages/Messages ===
 
-// Module 16019
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_5 from "_handleConnectionOpen" /* 5277 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 16019 (messages/Messages)
+import TTITrackerDefault from "TTITracker" /* 9 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7475 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = { code: "function MessagesTsx1(event){const{scrollPosition,handleGuildsNavigationScroll}=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);}" };
-const memoResult = importAllResult.memo(function Messages(style) {
+require = fn;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const __initData = { code: "function MessagesTsx1(event){const{scrollPosition,handleGuildsNavigationScroll}=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
+
+export default noop.memo(function Messages(style) {
   let sharedValue;
   let dataKey;
   let sections;
   let externalScrollEventHandler;
   let obj = sharedValue(sections[6]);
   sharedValue = obj.useSharedValue(0);
-  obj1 = sharedValue(sections[7]);
+  let obj1 = sharedValue(sections[7]);
   const youBarTotalHeight = obj1.useYouBarTotalHeight();
   let obj2 = sharedValue(sections[7]);
   const youBarTotalHeight1 = obj2.useYouBarTotalHeight(-16);
@@ -40,34 +45,33 @@ const memoResult = importAllResult.memo(function Messages(style) {
   const effect = externalScrollEventHandler.useEffect(() => {
     if (null != dataKey) {
       if (!obj7.isAndroid()) {
-        if (!closure_1_4.useReducedMotion) {
-          let tmp5Result = tmp5(tmp6[16]);
+        if (!AccessibilityStore.useReducedMotion) {
+          let tmp5Result = tmp5(4418);
           const rootNavigationRef = tmp5Result.getRootNavigationRef();
           let tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
           if (tmp2) {
-            tmp5Result = tmp5(tmp6[17]);
-            const rootNavigationRef1 = tmp5(tmp6[16]).getRootNavigationRef();
+            tmp5Result = tmp5(4417);
+            const rootNavigationRef1 = tmp5(4418).getRootNavigationRef();
             let currentRoute;
             if (rootNavigationRef1 != null) {
               currentRoute = rootNavigationRef1.getCurrentRoute();
             }
             tmp2 = null != tmp5Result.coerceGuildsRoute(currentRoute);
-            const tmp5Result1 = tmp5(tmp6[16]);
+            const tmp5Result1 = tmp5(4418);
           }
           if (tmp2) {
-            const result = tmp5(tmp6[18]).DeprecatedLayoutAnimation();
-            const tmp5Result2 = tmp5(tmp6[18]);
+            const result = tmp5(5581).DeprecatedLayoutAnimation();
+            const tmp5Result2 = tmp5(5581);
           }
         }
       }
-      obj7 = sharedValue(sections[15]);
+      obj7 = PlatformUtils;
     }
   }, items);
   const layoutEffect = externalScrollEventHandler.useLayoutEffect(() => {
-    sharedValue(sections[19]).trackAppUIViewed();
-    const obj = sharedValue(sections[19]);
-    const reduced = sections.reduce((arg0, arg1) => arg0 + arg1, 0);
-    dataKey(sections[20]).recordRender(reduced, closure_1_5.isConnected());
+    TTIAnalyticsUtils.trackAppUIViewed();
+    const reduced = sections.reduce((acc, item) => acc + item, 0);
+    TTITrackerDefault.recordRender(reduced, GatewayConnectionStore.isConnected());
   });
   const obj5 = sharedValue(sections[13]);
   externalScrollEventHandler = sharedValue(sections[21]).useExternalScrollEventHandler({ id: "messages" });
@@ -81,28 +85,28 @@ const memoResult = importAllResult.memo(function Messages(style) {
   }
   O.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
   O.__workletHash = 5461403437592;
-  O.__initData = closure_8;
+  O.__initData = __initData;
   obj = { accessibilityLabel: null, data: null, handleScrollAnimated: null, insetEnd: null, listItemHeight: null, listItemSizes: null, listItemSuggestedFriendHeight: null, listLeft: null, listRefHappeningNow: null, listTop: null, recycleItems: null, scrollIndicatorInsetBottom: null, scrollPosition: null };
   let obj7 = sharedValue(sections[6]);
   const intl = sharedValue(sections[22]).intl;
-  obj[0] = intl.string(sharedValue(sections[22]).t.OIgYlQ);
-  obj[1] = tmp9;
-  obj[2] = sharedValue(sections[6]).useAnimatedScrollHandler(O);
-  obj[3] = youBarTotalHeight;
-  obj[4] = listItemHeight;
-  obj[5] = listItemSizes;
-  obj[6] = listItemSuggestedFriendHeight;
-  obj[7] = listLeft;
-  obj[8] = ref1;
-  obj[9] = listTop;
-  obj[10] = recycleItems;
-  obj[11] = youBarTotalHeight1;
-  obj[12] = sharedValue;
+  obj.accessibilityLabel = intl.string(sharedValue(sections[22]).t.OIgYlQ);
+  obj.data = tmp9;
+  obj.handleScrollAnimated = sharedValue(sections[6]).useAnimatedScrollHandler(O);
+  obj.insetEnd = youBarTotalHeight;
+  obj.listItemHeight = listItemHeight;
+  obj.listItemSizes = listItemSizes;
+  obj.listItemSuggestedFriendHeight = listItemSuggestedFriendHeight;
+  obj.listLeft = listLeft;
+  obj.listRefHappeningNow = ref1;
+  obj.listTop = listTop;
+  obj.recycleItems = recycleItems;
+  obj.scrollIndicatorInsetBottom = youBarTotalHeight1;
+  obj.scrollPosition = sharedValue;
   obj = { value: tmp3(dataKey(sections[5]).MESSAGES).analyticsLocations, children: null };
   obj1 = { style: style.style, children: null };
   const animatedScrollHandler = sharedValue(sections[6]).useAnimatedScrollHandler(O);
   obj2 = { backgroundColor: dataKey(sections[25]).colors.PANEL_BG, children: null };
-  const items1 = [callback(dataKey(sections[26]), { height: headerSize, scrollPosition: sharedValue }), , ];
+  const items1 = [closure_6(dataKey(sections[26]), { height: headerSize, scrollPosition: sharedValue }), , ];
   if (tmp9.showFullscreenEmptyState) {
     let tmp20Result = tmp20(tmp(tmp2[27]), {});
   } else {
@@ -111,19 +115,15 @@ const memoResult = importAllResult.memo(function Messages(style) {
     } else {
       tmp23 = "flash" === list ? tmp2[29] : tmp2[30];
     }
-    obj3 = { ref: null };
-    obj3[0] = ref;
+    obj3 = { ref };
     const merged = Object.assign(obj);
     tmp20Result = tmp20(tmp(tmp23), obj3);
     const tmpResult = tmp(tmp23);
   }
   items1[1] = tmp20Result;
-  items1[2] = callback(tmp4(sections[31]).TTIFirstContentfulPaint, { label: "messages_tabs" });
-  obj2[1] = items1;
-  obj1[1] = closure_7(sharedValue(sections[24]).CutoutBackgroundProvider, obj2);
-  obj[1] = callback(dataKey(sections[23]), obj1);
-  return callback(sharedValue(sections[4]).AnalyticsLocationProvider, obj);
+  items1[2] = closure_6(tmp4(sections[31]).TTIFirstContentfulPaint, { label: "messages_tabs" });
+  obj2.children = items1;
+  obj1.children = closure_7(sharedValue(sections[24]).CutoutBackgroundProvider, obj2);
+  obj.children = closure_6(dataKey(sections[23]), obj1);
+  return closure_6(sharedValue(sections[4]).AnalyticsLocationProvider, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
-
-export default memoResult;

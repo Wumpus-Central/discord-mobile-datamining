@@ -1,14 +1,11 @@
-// === Module 8779: fromServer ===
+// === Module 8779: BaseWishlistItemRecord ===
 
-// Module 8779 (fromServer)
-import toJSDefault from "toJS" /* 1386 */;
-import closure_0 from "createFromServer" /* 5511 */;
+// Module 8779 (BaseWishlistItemRecord)
+import Record from "Record" /* 1386 */;
+import SKURecord from "SKURecord" /* 5511 */;
 
-toJSDefault;
-let prototype;
-prototype = function BaseWishlistItemRecord(arg0) {
+const prototype = function BaseWishlistItemRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ sku_id: tmp.skuId, sku_product_line: tmp.skuProductLine, sku_name: tmp.skuName, is_owned: tmp.isOwned, gifter_user_id: tmp.gifterUserId, sku: tmp.sku, added_at: tmp.addedAt } = arg0);
   return tmp;
 }.prototype;
@@ -17,11 +14,10 @@ class prototype extends tmp2 {
 prototype["fromServer"] = function fromServer(sku) {
   sku = sku.sku;
   ({ sku_id, sku_product_line, sku_name, is_owned, gifter_user_id } = sku);
-  let obj = Object.create(null);
-  const merged = Object.assign(sku, obj);
-  obj = {};
-  let str = obj;
-  const merged1 = Object.assign(merged);
+  const merged = Object.assign({ sku_id: 0, sku_product_line: 0, sku_name: 0, is_owned: 0, gifter_user_id: 0, sku: 0 });
+  const merged1 = Object.assign(sku, merged);
+  const obj = {};
+  const merged2 = Object.assign(merged1);
   obj.sku_id = sku_id;
   obj.sku_product_line = sku_product_line;
   obj.sku_name = sku_name;
@@ -29,18 +25,19 @@ prototype["fromServer"] = function fromServer(sku) {
   obj.gifter_user_id = gifter_user_id;
   let fromServer;
   if (null != sku) {
-    fromServer = closure_0.createFromServer(sku);
+    fromServer = SKURecord.createFromServer(sku);
   }
   obj.sku = fromServer;
-  if (typeof prototype !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  if (typeof tmp3 === "function") {
+    const tmp10 = new prototype(obj, merged1, merged);
+    ({ sku_id: tmp10.skuId, sku_product_line: tmp10.skuProductLine, sku_name: tmp10.skuName, is_owned: tmp10.isOwned, gifter_user_id: tmp10.gifterUserId, sku: tmp10.sku, added_at: tmp10.addedAt } = obj);
+    return tmp10;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp7 = new prototype(str, merged, obj);
-  // ThrowIfThisInitialized (0x7c)
-  ({ sku_id: tmp7.skuId, sku_product_line: tmp7.skuProductLine, sku_name: tmp7.skuName, is_owned: tmp7.isOwned, gifter_user_id: tmp7.gifterUserId, sku: tmp7.sku, added_at: tmp7.addedAt } = obj);
-  return tmp7;
+  tmp3 = prototype;
 };
-const result = require("set").fileFinishedImporting("modules/wishlists/records/BaseWishlistItemRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/records/BaseWishlistItemRecord.tsx");
 
 export default prototype;

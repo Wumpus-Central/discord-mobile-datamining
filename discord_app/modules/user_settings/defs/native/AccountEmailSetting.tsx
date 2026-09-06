@@ -1,21 +1,21 @@
-// === Module 14713: pressable ===
+// === Module 14713: AccountEmailSetting ===
 
-// Module 14713 (pressable)
+// Module 14713 (AccountEmailSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef5621 from "module_5621" /* 5621 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5621 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["w/qqKK"]);
+    const intl = util.intl;
+    return intl.string(util.t["w/qqKK"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7975).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
-    const items = [closure_3];
+    const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let email;
@@ -26,11 +26,12 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    _modDef5621.open(true);
+    EmailVerificationModalActionCreatorsDefault.open(true);
   },
   withArrow: true
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

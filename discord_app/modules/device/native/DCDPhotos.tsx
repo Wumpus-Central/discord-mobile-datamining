@@ -1,9 +1,9 @@
-// === Module 10646: get ActivityIndicator ===
+// === Module 10646: DCDPhotos ===
 
-// Module 10646 (get ActivityIndicator)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 10646 (DCDPhotos)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/device/native/DCDPhotos.tsx");
+const result = size.fileFinishedImporting("modules/device/native/DCDPhotos.tsx");
 
-export default get_ActivityIndicator.NativeModules.DCDPhotos;
+export default _mod17.NativeModules.DCDPhotos;

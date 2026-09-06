@@ -1,26 +1,25 @@
 // === Module 13240: getRequestToStreamCTAAndIsDisabled ===
 
 // Module 13240 (getRequestToStreamCTAAndIsDisabled)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2882 */;
-import result2 from "result" /* 11754 */;
-import canFulfillStreamRequest from "canFulfillStreamRequest" /* 11766 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import util from "util" /* 1114 */;
+import _modDef2882 from "module_2882" /* 2882 */;
+import isInviteActive from "isInviteActive" /* 11754 */;
+import useCanFulfillStreamRequest from "useCanFulfillStreamRequest" /* 11766 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
-  const tmp3 = callback(canFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
-  id = id.getId();
-  const obj = canFulfillStreamRequest;
-  const obj2 = DISCORD_EPOCHDefault;
-  const sum = DISCORD_EPOCHDefault.extractTimestamp(id.id) + result2.EMBED_LIFETIME;
-  const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(id.id);
-  const intl = getSystemLocale.intl;
-  const stringResult = intl.string(messagesProxyDefault["5+172e"]);
+  const tmp3 = _slicedToArray(useCanFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
+  id = AuthenticationStore.getId();
+  const sum = SnowflakeUtilsDefault.extractTimestamp(id.id) + isInviteActive.EMBED_LIFETIME;
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(id.id);
+  const intl = util.intl;
+  const stringResult = intl.string(_modDef2882["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1114).intl;
     let text = intl6.string(tmp6(2882).u4QmWl);

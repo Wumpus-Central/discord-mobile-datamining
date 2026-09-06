@@ -1,17 +1,15 @@
-// === Module 14591: ProfilePreviewButton ===
+// === Module 14591: UserProfileEditBannerButton ===
 
-// Module 14591 (ProfilePreviewButton)
-import ThemesDefault from "Themes" /* 576 */;
-import PressableBase from "PressableBase" /* 5123 */;
+// Module 14591 (UserProfileEditBannerButton)
+import nativeDefault from "native" /* 576 */;
+import Pressables from "Pressables" /* 5123 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8230 */;
 import UserProfileBannerDefault from "UserProfileBanner" /* 8246 */;
 import PencilIcon from "PencilIcon" /* 10250 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
   let analyticsLocations;
@@ -22,16 +20,14 @@ function ProfilePreviewButton(userId) {
   const items = [userId, context, analyticsLocations];
   let tmp5 = null;
   if (null != userId) {
-    obj = { style: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
-    obj[0] = tmp.previewButton;
-    obj[1] = tmp4;
+    obj = { style: tmp.previewButton, onPress: tmp4, accessibilityRole: "button", accessibilityLabel: null, children: null };
     const intl = tmp3(tmp2[9]).intl;
-    obj[3] = intl.string(tmp3(tmp2[9]).t["3Qcx6K"]);
+    obj.accessibilityLabel = intl.string(tmp3(tmp2[9]).t["3Qcx6K"]);
     obj = { variant: "text-sm/semibold", color: "text-overlay-light", children: null };
     const intl2 = tmp3(tmp2[9]).intl;
-    obj[2] = intl2.string(tmp3(tmp2[9]).t["3Qcx6K"]);
-    obj[4] = callback(tmp3(tmp2[10]).Text, obj);
-    tmp5 = callback(tmp3(tmp2[8]).PressableOpacity, obj);
+    obj.children = intl2.string(tmp3(tmp2[9]).t["3Qcx6K"]);
+    obj.children = closure_5(tmp3(tmp2[10]).Text, obj);
+    tmp5 = closure_5(tmp3(tmp2[8]).PressableOpacity, obj);
   }
   return tmp5;
 }
@@ -41,19 +37,23 @@ function EditButton(disabled) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: callback2().editButton, children: null };
-  obj = { size: "xs", color: ThemesDefault.colors.WHITE };
-  obj[5] = callback(PencilIcon.PencilIcon, obj);
-  return callback(PressableBase.PressableOpacity, obj);
+  let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: closure_7().editButton, children: null };
+  obj = { size: "xs", color: nativeDefault.colors.WHITE };
+  obj.children = hasOwnProperty(PencilIcon.PencilIcon, obj);
+  return hasOwnProperty(Pressables.PressableOpacity, obj);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { position: "relative" }, editButton: null, previewButton: null };
-createCacheKey = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+const createStyles = { container: { position: "relative" }, editButton: null, previewButton: null };
+let size = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round };
+createStyles.editButton = size;
+const rect = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
+createStyles.previewButton = rect;
+let closure_7 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
 export default function UserProfileEditBannerButton(arg0) {
   ({ user, showProfilePreviewButton, showEditButton } = arg0);
@@ -65,23 +65,19 @@ export default function UserProfileEditBannerButton(arg0) {
   if (editDisabled === undefined) {
     editDisabled = false;
   }
-  let obj = { style: callback2().container, children: null };
-  const tmp = callback2();
-  const items = [callback(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(), bannerSafeArea }), , ];
+  let obj = { style: closure_7().container, children: null };
+  const tmp = closure_7();
+  const items = [hasOwnProperty(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(), bannerSafeArea }), , ];
   if (showProfilePreviewButton) {
-    obj = { userId: null };
-    obj[0] = user.id;
+    obj = { userId: user.id };
     showProfilePreviewButton = tmp5(ProfilePreviewButton, obj);
   }
   items[1] = showProfilePreviewButton;
   if (showEditButton) {
-    obj = { onPress: null, accessibilityLabel: null, disabled: null };
-    obj[0] = onPressEdit;
-    obj[1] = editButtonAccessibilityLabel;
-    obj[2] = editDisabled;
+    obj = { onPress: onPressEdit, accessibilityLabel: editButtonAccessibilityLabel, disabled: editDisabled };
     showEditButton = tmp5(EditButton, obj);
   }
   items[2] = showEditButton;
-  obj[1] = items;
-  return closure_6(View, obj);
+  obj.children = items;
+  return timestampProducer(View, obj);
 };

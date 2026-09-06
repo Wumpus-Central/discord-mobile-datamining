@@ -1,53 +1,53 @@
-// === Module 15464: radio ===
+// === Module 15464: VideoUploadQualitySetting ===
 
-// Module 15464 (radio)
+// Module 15464 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsText from "UserSettingsText" /* 15463 */;
-import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import createToggle from "createToggle" /* 11468 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const VideoQualitySettings = fn(1185).VideoQualitySettings;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.PXq9f1);
+    const intl = util.intl;
+    return intl.string(util.t.PXq9f1);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7975).MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
-    const items = [closure_2];
+    const items = [UnsyncedUserSettingsStore];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
   },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
-    let obj = UserSettingsText;
-    obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
-    const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
-    obj[1] = ViewImageDescriptions.getSetting();
-    ({ lowQualityImageMode: obj2[2], dataSavingMode: obj2[3] } = closure_2);
+    const obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
+    obj.viewImageDescriptions = ViewImageDescriptions.getSetting();
+    ({ lowQualityImageMode: obj2.lowQualityImageMode, dataSavingMode: obj2.dataSavingMode } = UnsyncedUserSettingsStore);
     const result = obj.setVideoUploadQuality(obj);
   },
   useOptions: function useVideoUploadQualitySettingOptions() {
     let obj = { label: null, value: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t.cWGW5d);
-    obj[1] = VideoQualitySettings.BEST;
+    const intl = util.intl;
+    obj.label = intl.string(util.t.cWGW5d);
+    obj.value = VideoQualitySettings.BEST;
     const items = [obj, , ];
     obj = { label: null, value: null };
-    const intl2 = getSystemLocale.intl;
-    obj[0] = intl2.string(getSystemLocale.t["5hKnyC"]);
-    obj[1] = VideoQualitySettings.STANDARD;
+    const intl2 = util.intl;
+    obj.label = intl2.string(util.t["5hKnyC"]);
+    obj.value = VideoQualitySettings.STANDARD;
     items[1] = obj;
     obj = { label: null, value: null };
-    const intl3 = getSystemLocale.intl;
-    obj[0] = intl3.string(getSystemLocale.t.y5k4ZJ);
-    obj[1] = VideoQualitySettings.DATA_SAVER;
+    const intl3 = util.intl;
+    obj.label = intl3.string(util.t.y5k4ZJ);
+    obj.value = VideoQualitySettings.DATA_SAVER;
     items[2] = obj;
     return items;
   }
 };
-createToggle = createToggle.createRadio(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
+SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

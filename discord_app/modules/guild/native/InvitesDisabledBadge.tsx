@@ -1,31 +1,32 @@
-// === Module 16302: ? ===
+// === Module 16302: InvitesDisabledBadge ===
 
-// Module 16302
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import registerAssetDefault from "registerAsset" /* 12725 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16302 (InvitesDisabledBadge)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import _modDef12725 from "module_12725" /* 12725 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { pause: { alignContent: "center", justifyContent: "center", width: 10, height: 10 }, pauseBackground: null, pauseRing: null };
-obj = { borderRadius: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, padding: require("Button").BADGE_PADDING, height: 16, width: 16, alignContent: "center", justifyContent: "center" };
-obj[1] = obj;
-createCacheKey = { borderRadius: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, position: "absolute", bottom: -require("Button").BADGE_PADDING, right: -require("Button").BADGE_PADDING, padding: require("Button").BADGE_PADDING, height: 22, width: 22, alignContent: "center", justifyContent: "center" };
-obj[2] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function InvitesDisabledBadge(style) {
-  const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.pauseRing, style.style];
-  obj = { style: tmp.pauseBackground, children: null };
-  obj = { style: tmp.pause, themedColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: registerAssetDefault };
-  obj[1] = jsx(Button.ThemedIcon, { style: tmp.pause, themedColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: registerAssetDefault });
-  obj[1] = <View style={tmp.pause} themedColor={ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={registerAssetDefault} />;
-  return <View style={tmp.pause} themedColor={ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={registerAssetDefault} />;
-});
-const result = require("set").fileFinishedImporting("modules/guild/native/InvitesDisabledBadge.tsx");
+let size = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, padding: fn(1178).BADGE_PADDING, height: 16, width: 16, alignContent: "center", justifyContent: "center" };
+obj.pauseBackground = size;
+const size1 = { borderRadius: 20, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, position: "absolute", bottom: -fn(1178).BADGE_PADDING, right: -fn(1178).BADGE_PADDING, padding: fn(1178).BADGE_PADDING, height: 22, width: 22, alignContent: "center", justifyContent: "center" };
+obj.pauseRing = size1;
+let closure_5 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/native/InvitesDisabledBadge.tsx");
 
-export default memoResult;
+export default noop.memo(function InvitesDisabledBadge(style) {
+  const tmp = closure_5();
+  let obj = { style: null, children: null };
+  const items = [tmp.pauseRing, style.style];
+  obj.style = items;
+  obj = { style: tmp.pauseBackground, children: null };
+  obj = { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12725 };
+  obj.children = jsx(native.ThemedIcon, { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12725 });
+  obj.children = <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12725} />;
+  return <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12725} />;
+});

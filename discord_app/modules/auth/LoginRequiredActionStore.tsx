@@ -1,26 +1,26 @@
-// === Module 1950: handleUpdateUser ===
+// === Module 1950: LoginRequiredActionStore ===
 
-// Module 1950 (handleUpdateUser)
+// Module 1950 (LoginRequiredActionStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 function handleUpdateUser(user) {
-  const id = user.user.id;
+  id = user.user.id;
 }
-let closure_0 = {};
-let c1 = null;
-let c2 = null;
+let global = {};
+const user_id = null;
+let id = null;
 const PersistedStore = initializeDefault.PersistedStore;
 class LoginRequiredActionStore extends PersistedStore {
 }
 const prototype = LoginRequiredActionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    closure_0 = arg0;
+    global = arg0;
   }
 };
 prototype["requiredActions"] = function requiredActions(id) {
-  let tmp = table[id];
+  let tmp = global[id];
   if (tmp == null) {
     tmp = null;
   }
@@ -28,13 +28,13 @@ prototype["requiredActions"] = function requiredActions(id) {
 };
 prototype["requiredActionsIncludes"] = function requiredActionsIncludes(id, items) {
   const requiredActionsResult = this.requiredActions(id);
-  closure_0 = requiredActionsResult;
+  global = requiredActionsResult;
   let reduced = null != requiredActionsResult;
   if (reduced) {
-    reduced = items.reduce((arg0, arg1) => {
-      let hasItem = arg0;
-      if (!arg0) {
-        hasItem = closure_0.includes(arg1);
+    reduced = items.reduce((acc, item) => {
+      let hasItem = acc;
+      if (!acc) {
+        hasItem = requiredActionsResult.includes(item);
       }
       return hasItem;
     }, false);
@@ -42,22 +42,22 @@ prototype["requiredActionsIncludes"] = function requiredActionsIncludes(id, item
   return reduced;
 };
 prototype["wasLoginAttemptedInSession"] = function wasLoginAttemptedInSession(id) {
-  return c1 === id;
+  return user_id === id;
 };
 prototype["getState"] = function getState() {
-  return closure_0;
+  return global;
 };
 LoginRequiredActionStore.displayName = "LoginRequiredActionStore";
 LoginRequiredActionStore.persistKey = "LoginRequiredActionStore";
-const loginRequiredActionStore = new LoginRequiredActionStore(dispatcherDefault, {
+const loginRequiredActionStore = new LoginRequiredActionStore(DispatcherDefault, {
   LOGIN_ATTEMPTED: function handleLoginAttempted(arg0) {
     ({ required_actions, user_id } = arg0);
     if (null == required_actions) {
-      if (user_id in closure_0) {
+      if (user_id in global) {
         delete tmp[tmp2];
       }
     } else if (null != user_id) {
-      closure_0[user_id] = required_actions;
+      global[user_id] = required_actions;
     }
   },
   CONNECTION_OPEN: handleUpdateUser,
@@ -65,25 +65,26 @@ const loginRequiredActionStore = new LoginRequiredActionStore(dispatcherDefault,
   LOGOUT: function handleLogout(isSwitchingAccount) {
     isSwitchingAccount = isSwitchingAccount.isSwitchingAccount;
     if (!isSwitchingAccount) {
-      isSwitchingAccount = null == c2;
+      isSwitchingAccount = null == id;
     }
     if (!isSwitchingAccount) {
-      if (c2 in closure_0) {
+      if (id in global) {
         delete tmp[tmp2];
       }
     }
   },
   PASSWORD_UPDATED: function handlePasswordUpdated(userId) {
-    if (userId.userId in closure_0) {
+    if (userId.userId in global) {
       delete tmp[tmp2];
     }
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function handleRemoveMultiAccount(userId) {
-    if (userId.userId in closure_0) {
+    if (userId.userId in global) {
       delete tmp[tmp2];
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/auth/LoginRequiredActionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/LoginRequiredActionStore.tsx");
 
 export default loginRequiredActionStore;

@@ -1,26 +1,26 @@
-// === Module 15740: ? ===
+// === Module 15740: InternalBuildActiveSetting ===
 
-// Module 15740
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14842 */;
-import closure_2 from "checkForNewerBuild" /* 14394 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15740 (InternalBuildActiveSetting)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14842 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 14394 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
+  IconComponent: fn(15559).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
   usePredicate: function useHasCheckNativeUpdateSetting() {
-    const obj = useStaffOrDeveloperSettingPredicate;
-    return hasUpdatesConfigured.hasUpdatesConfigured && useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
+    return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   }
 };
-createToggle = createToggle.createStatic(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
+SettingBuilders = SettingBuilders.createStatic(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

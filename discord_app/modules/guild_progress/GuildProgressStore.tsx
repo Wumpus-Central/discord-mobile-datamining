@@ -1,13 +1,12 @@
-// === Module 12475: completeStep ===
+// === Module 12475: GuildProgressStore ===
 
-// Module 12475 (completeStep)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 12475 (GuildProgressStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import { Steps } from "Steps" /* 12469 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
 function completeStep(guild_id, CHANNEL) {
   let tmp = null != obj;
@@ -24,18 +23,19 @@ function completeStep(guild_id, CHANNEL) {
   }
   return tmp;
 }
-let closure_6 = {};
+const Steps = fn(12469).Steps;
+const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildProgressStore extends PersistedStore {
 }
 const prototype = GuildProgressStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   importDefault = arg0;
-  this.waitFor(closure_2, closure_3, closure_4);
+  this.waitFor(AuthenticationStore, ChannelStore, GuildStore);
   closure_6 = {};
   if (null != arg0) {
-    const keys = DISCORD_EPOCHDefault.keys(arg0);
-    const item = keys.forEach((arg0) => {
+    const keys = SnowflakeUtilsDefault.keys(arg0);
+    const item = keys.forEach((item) => {
       let tmp2 = null != tmp;
       if (tmp2) {
         const _Symbol = Symbol;
@@ -44,16 +44,15 @@ prototype["initialize"] = function initialize(arg0) {
       if (tmp2) {
         const _Set = Set;
         const set = new Set(tmp);
-        closure_6[arg0] = set;
+        closure_6[item] = set;
       }
     });
-    const obj = DISCORD_EPOCHDefault;
   }
 };
 prototype["getProgress"] = function getProgress(arg0) {
   return dependencyMap[arg0];
 };
-prototype["hasProgress"] = function hasProgress(hasAlreadyLinked) {
+prototype["hasProgress"] = function hasProgress(id) {
   let tmp = null != obj;
   if (tmp) {
     tmp = !obj.has(Steps.DISMISSED);
@@ -65,16 +64,16 @@ prototype["getState"] = function getState() {
 };
 GuildProgressStore.displayName = "GuildProgressStore";
 GuildProgressStore.persistKey = "GuildProgressStore";
-const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
+const guildProgressStore = new GuildProgressStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     const items = [];
-    const keys = items(11).keys(closure_6);
-    const item = keys.forEach((arg0) => {
-      if (obj.has(closure_1_5.COMPLETED)) {
-        items.push(arg0);
+    const keys = items(11).keys(dependencyMap);
+    const item = keys.forEach((item) => {
+      if (obj.has(Steps.COMPLETED)) {
+        items.push(item);
       }
     });
-    const item1 = items.forEach((arg0) => {
+    const item1 = items.forEach((item) => {
       const DISMISSED = constants.DISMISSED;
       let tmp = null != obj;
       if (tmp) {
@@ -83,7 +82,7 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
         if (!hasItem) {
           const _Set = Set;
           const set = new Set(obj.add(DISMISSED));
-          table[arg0] = set;
+          dependencyMap[item] = set;
           flag = true;
         }
         tmp = flag;
@@ -100,7 +99,6 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
     }
     if (!obj.has(Steps.COMPLETED)) {
       dependencyMap[guildId].delete(Steps.DISMISSED);
-      const obj2 = dependencyMap[guildId];
     }
   },
   GUILD_PROGRESS_COMPLETED_SEEN: function handleCompletedSeen(guildId) {
@@ -132,22 +130,20 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
-    guild = guild.getGuild(guild.id);
+    guild = GuildStore.getGuild(guild.id);
     if (null == guild) {
       return false;
     } else {
-      let tmp3 = guild.ownerId === store.getId();
+      let tmp3 = guild.ownerId === AuthenticationStore.getId();
       if (tmp3) {
         tmp3 = null != dependencyMap[guild.id];
       }
       if (tmp3) {
         if (null != guild.icon) {
           dependencyMap[guild.id].add(Steps.AVATAR);
-          const obj = dependencyMap[guild.id];
         }
         if (guild.member_count > 1) {
           dependencyMap[guild.id].add(Steps.INVITE);
-          const obj2 = dependencyMap[guild.id];
         }
       }
     }
@@ -185,18 +181,12 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
       let tmp2 = nextResult;
       let tmp3 = null != nextResult;
       if (tmp3) {
-        let tmp4 = nextResult;
         tmp3 = null != tmp2.guild_id;
       }
       if (tmp3) {
-        let tmp5 = dependencyMap;
-        let tmp6 = nextResult;
         tmp3 = null != dependencyMap[tmp2.guild_id];
       }
       if (tmp3) {
-        let tmp7 = completeStep;
-        let tmp8 = nextResult;
-        let tmp9 = Steps;
         tmp3 = false !== completeStep(tmp2.guild_id, Steps.CHANNEL);
       }
       if (tmp3) {
@@ -239,13 +229,13 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
     return tmp;
   },
   MESSAGE_CREATE: function handleMessage(channelId) {
-    channel = channel.getChannel(channelId.channelId);
+    const channel = ChannelStore.getChannel(channelId.channelId);
     const author = channelId.message.author;
     let id;
     if (author != null) {
       id = author.id;
     }
-    let tmp3 = id === store.getId() && null != channel;
+    let tmp3 = id === AuthenticationStore.getId() && null != channel;
     if (tmp3) {
       tmp3 = null != dependencyMap[channel.guild_id];
     }
@@ -293,6 +283,7 @@ const guildProgressStore = new GuildProgressStore(dispatcherDefault, {
     return tmp2;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_progress/GuildProgressStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_progress/GuildProgressStore.tsx");
 
 export default guildProgressStore;

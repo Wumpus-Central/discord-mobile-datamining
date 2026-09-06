@@ -1,17 +1,16 @@
-// === Module 11555: optIntoAllChannelsForExistingMember ===
+// === Module 11555: OptInOnboardingUtils ===
 
-// Module 11555 (optIntoAllChannelsForExistingMember)
-import create from "create" /* 1187 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 7535 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import comparator from "comparator" /* 2012 */;
-import closure_6 from "comparator" /* 2012 */;
-import closure_7 from "trackCommunicationDisabled" /* 2021 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+// Module 11555 (OptInOnboardingUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7105 */;
+import isOptInEnabled from "isOptInEnabled" /* 7535 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-require = arg1;
+require = fn;
 function optIntoAllChannelsForExistingMember(id, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
@@ -27,9 +26,8 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
     const _Set2 = Set;
     exclude = new Set();
   }
-  let mapped;
-  channels = channels.getChannels(id);
-  const items = [...channels[closure_5]];
+  const channels = GuildChannelStore.getChannels(id);
+  const items = [...channels[closure_1_5]];
   const found = items.filter((channel) => {
     channel = channel.channel;
     const isThreadResult = channel.isThread();
@@ -39,17 +37,20 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
     }
     return tmp2;
   });
-  mapped = found.map((channel) => channel.channel.id);
-  const item = include.forEach((arg0) => mapped.push(arg0));
-  const obj2 = mapped(7105);
+  const mapped = found.map((channel) => channel.channel.id);
+  const item = include.forEach((item) => mapped.push(item));
+  const obj2 = GuildOnboardingActionCreatorsDefault;
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
-({ GUILD_SELECTABLE_CHANNELS_KEY: c4, GUILD_VOCAL_CHANNELS_KEY: c5 } = comparator);
-let result = require("set").fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
+let GuildChannelStore = fn(2012);
+({ GUILD_SELECTABLE_CHANNELS_KEY: closure_4, GUILD_VOCAL_CHANNELS_KEY: hasOwnProperty } = GuildChannelStore);
+const GuildMemberFlags = fn(4187).GuildMemberFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 
 export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId) {
-  const result = useOptInEnabledForGuild.isOptInEnabledForGuild(guildId);
-  const selfMember = store.getSelfMember(guildId);
+  const result = isOptInEnabled.isOptInEnabledForGuild(guildId);
+  const selfMember = GuildMemberStore.getSelfMember(guildId);
   let num;
   if (selfMember != null) {
     num = selfMember.flags;
@@ -57,11 +58,9 @@ export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId)
   if (num == null) {
     num = 0;
   }
-  const obj = useOptInEnabledForGuild;
-  const tmp = require;
-  const tmpResult = hasFlag;
+  const tmpResult = FlagUtils;
   let tmp7 = !result;
-  const hasFlagResult = hasFlag.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
+  const hasFlagResult = FlagUtils.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
   if (!result) {
     tmp7 = !hasFlagResult;
   }
@@ -71,8 +70,8 @@ export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId)
   return tmp7;
 };
 export const toggleShowAllChannels = function toggleShowAllChannels(id) {
-  const result = useOptInEnabledForGuild.isOptInEnabledForGuild(id);
-  const selfMember = store.getSelfMember(id);
+  const result = isOptInEnabled.isOptInEnabledForGuild(id);
+  const selfMember = GuildMemberStore.getSelfMember(id);
   let num;
   if (selfMember != null) {
     num = selfMember.flags;
@@ -81,7 +80,6 @@ export const toggleShowAllChannels = function toggleShowAllChannels(id) {
     num = 0;
   }
   let tmpResult = tmp(1384);
-  const obj = useOptInEnabledForGuild;
   let tmp7 = !result;
   const hasFlagResult = tmpResult.hasFlag(num, GuildMemberFlags.COMPLETED_ONBOARDING);
   if (!result) {
@@ -103,7 +101,7 @@ export { optIntoAllChannelsForExistingMember };
 export const hasClearedGuildOnboardingNotice = function hasClearedGuildOnboardingNotice(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    tmp = closure_3;
+    tmp = UserSettingsProtoStore;
   }
   let hasFlagResult = null != arg0;
   if (hasFlagResult) {
@@ -117,9 +115,7 @@ export const hasClearedGuildOnboardingNotice = function hasClearedGuildOnboardin
     if (num == null) {
       num = 0;
     }
-    hasFlagResult = hasFlag.hasFlag(num, create.GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
-    const obj = hasFlag;
-    const tmp3 = require;
+    hasFlagResult = FlagUtils.hasFlag(num, preloaded_user_settings.GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
   }
   return hasFlagResult;
 };

@@ -1,15 +1,16 @@
 // === Module 13231: getApplicationFromMessage ===
 
 // Module 13231 (getApplicationFromMessage)
-import closure_0 from "createExecutable" /* 1918 */;
-import { SpotifyApplication } from "getIconURL" /* 13228 */;
-import { isSpotifyParty } from "SPOTIFY_APP_PROTOCOL" /* 8340 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
+const SpotifyApplication = fn(13228).SpotifyApplication;
+const isSpotifyParty = fn(8340).isSpotifyParty;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/getApplicationFromMessage.tsx");
 
 export const getApplicationFromMessage = function getApplicationFromMessage(application) {
   if (null != application.application) {
-    let fromServer = closure_0.createFromServer(application.application);
+    let fromServer = ApplicationRecord.createFromServer(application.application);
   } else if (null != application.activity) {
     if (null != application.activity.party_id) {
       if (isSpotifyParty(application.activity.party_id)) {

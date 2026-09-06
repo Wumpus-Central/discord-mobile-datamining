@@ -1,11 +1,11 @@
 // === Module 11759: getIsAskToJoin ===
 
 // Module 11759 (getIsAskToJoin)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const ActivityActionTypes = ME.ActivityActionTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");
+const ActivityActionTypes = Constants.ActivityActionTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/getIsAskToJoin.tsx");
 
 export const getIsAskToJoin = function getIsAskToJoin(message) {
   const activity = message.activity;

@@ -1,15 +1,14 @@
-// === Module 9991: dispatcher ===
+// === Module 9991: MobileVoiceOverlayActionCreators ===
 
-// Module 9991 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 9991 (MobileVoiceOverlayActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/voice_overlay/native/MobileVoiceOverlayActionCreators.tsx");
 
 export default {
   setEnabled(enabled) {
-    let obj = dispatcherDefault;
-    obj = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
+    const obj = { type: "MOBILE_VOICE_OVERLAY_STATE_CHANGED", enabled };
     obj.dispatch(obj);
   }
 };

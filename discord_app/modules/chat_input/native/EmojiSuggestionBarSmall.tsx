@@ -1,88 +1,91 @@
-// === Module 12431: EmojiSuggestionBarSmallAnimated ===
+// === Module 12431: EmojiSuggestionBarSmall ===
 
-// Module 12431 (EmojiSuggestionBarSmallAnimated)
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12431 (EmojiSuggestionBarSmall)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10310 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12426 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const ReanimatedRexportDefault = ReanimatedRexport;
+
+require = fn;
 function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   displayEmojis = displayEmojis.displayEmojis;
-  ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: closure_3, transitionState } = displayEmojis);
-  let suggestionBarHeight;
+  ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: noop, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
   let obj = displayEmojis(12426);
-  suggestionBarHeight = obj.useSuggestionBarHeight(transitionState, cleanUp, closure_6, onOccupiedHeightChange);
-  const tmp = callback(displayEmojis.anchorTop);
+  const suggestionBarHeight = obj.useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
+  const tmp = closure_7(displayEmojis.anchorTop);
   class A {
     constructor() {
       obj = { opacity: null };
-      obj2 = displayEmojis(handlePress[6]);
+      obj2 = closure_0(closure_2[6]);
       items = [0];
-      items[1] = closure_1_6;
-      obj[0] = obj2.interpolate(closure_4.get(), items, [0, 1]);
+      items[1] = closure_6;
+      obj.opacity = obj2.interpolate(closure_4.get(), items, [0, 1]);
       return obj;
     }
   }
-  obj = { interpolate: displayEmojis(4296).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT: closure_6 };
+  obj = { interpolate: displayEmojis(4296).interpolate, heightSv: suggestionBarHeight, CONTAINER_SMALL_WRAPPER_HEIGHT };
   A.__closure = obj;
   A.__workletHash = 1856279964267;
-  A.__initData = closure_8;
+  A.__initData = __initData;
   const animatedStyle = displayEmojis(4296).useAnimatedStyle(A);
   obj = {
-    style: items,
+    style: null,
     children: displayEmojis.map((emoji, index) => {
       const locked = emoji.locked;
-      let obj = { index, reducedMotion: closure_1, children: null };
-      obj = { emoji: emoji.emoji, disabled: locked, onPressEmoji: locked ? closure_3 : closure_2, onLongPressEmoji: null, animateEmoji: null, isSectionNitroLocked: false };
+      let obj = { index, reducedMotion, children: null };
+      obj = { emoji: emoji.emoji, disabled: locked, onPressEmoji: locked ? noop : dependencyMap, onLongPressEmoji: null, animateEmoji: null, isSectionNitroLocked: false };
       if (locked) {
-        let openEmojiActionSheet = closure_3;
+        let openEmojiActionSheet = noop;
       } else {
-        openEmojiActionSheet = tmp2(tmp3[8]).openEmojiActionSheet;
+        openEmojiActionSheet = tmp2(10328).openEmojiActionSheet;
       }
-      obj[3] = openEmojiActionSheet;
-      obj[4] = !closure_1;
-      obj[2] = suggestionBarHeight(displayEmojis(closure_1_2[7]).EmojiItem, obj);
-      return suggestionBarHeight(displayEmojis(closure_1_2[5]).EmojiEntranceAnimation, obj, displayEmojis(closure_1_2[5]).getEmojiEntranceKey(displayEmojis, index));
+      obj.onLongPressEmoji = openEmojiActionSheet;
+      obj.animateEmoji = !reducedMotion;
+      obj.children = jsx(EmojiPickerListRow.EmojiItem, { emoji: emoji.emoji, disabled: locked, onPressEmoji: locked ? noop : dependencyMap, onLongPressEmoji: null, animateEmoji: null, isSectionNitroLocked: false });
+      return jsx(EmojiSuggestionBarUtils.EmojiEntranceAnimation, { emoji: emoji.emoji, disabled: locked, onPressEmoji: locked ? noop : dependencyMap, onLongPressEmoji: null, animateEmoji: null, isSectionNitroLocked: false }, EmojiSuggestionBarUtils.getEmojiEntranceKey(displayEmojis, index));
     })
   };
-  items = [tmp.containerSmall, animatedStyle];
-  return suggestionBarHeight(_modDef4296.View, obj);
+  let items = [tmp.containerSmall, animatedStyle];
+  obj.style = items;
+  return suggestionBarHeight(ReanimatedRexportDefault.View, obj);
 }
-let c3 = importAllResult;
-const sum = require("IMAGE_SIZE").IMAGE_SIZE + 2 * ThemesDefault.space.PX_8 + 2;
-let c5 = sum;
-let closure_6 = sum + ThemesDefault.space.PX_8;
-let closure_7 = createCacheKey.createStyles((arg0) => {
-  let obj = { containerSmall: null };
-  obj = { position: "absolute", top: diff - ThemesDefault.space.PX_8, right: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, height: closure_5, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8, borderWidth: 1, borderColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
-  diff = arg0 - closure_5;
-  const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
-  obj[0] = obj;
+const jsx = fn(21).jsx;
+const sum = fn(10290).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const hasOwnProperty = sum;
+const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles((arg0) => {
+  const obj = { containerSmall: null };
+  const rect = { position: "absolute", top: null, right: nativeDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING, height: sum, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, borderWidth: 1, borderColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BORDER, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
+  const diff = arg0 - sum;
+  rect.top = diff - nativeDefault.space.PX_8;
+  const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
+  obj.containerSmall = rect;
   return obj;
 });
-let closure_8 = { code: "function EmojiSuggestionBarSmallTsx1(){const{interpolate,heightSv,CONTAINER_SMALL_WRAPPER_HEIGHT}=this.__closure;return{opacity:interpolate(heightSv.get(),[0,CONTAINER_SMALL_WRAPPER_HEIGHT],[0,1])};}" };
-const forwardRefResult = importAllResult.forwardRef((anchorTop, ref) => {
+const __initData = { code: "function EmojiSuggestionBarSmallTsx1(){const{interpolate,heightSv,CONTAINER_SMALL_WRAPPER_HEIGHT}=this.__closure;return{opacity:interpolate(heightSv.get(),[0,CONTAINER_SMALL_WRAPPER_HEIGHT],[0,1])};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarSmall.tsx");
+
+export const EmojiSuggestionBarSmall = noop.forwardRef((anchorTop, ref) => {
   anchorTop = anchorTop.anchorTop;
   const onOccupiedHeightChange = anchorTop.onOccupiedHeightChange;
   let unlockedEmojis;
-  let lockedEmojis;
-  let reducedMotion;
-  let handlePress;
-  let handlePressEmojiUnavailable;
-  let merged = Object.assign(anchorTop, Object.create(null));
+  let merged = Object.assign(anchorTop, Object.assign({ anchorTop: 0, onOccupiedHeightChange: 0 }));
   const emojiSuggestionBarState = anchorTop(unlockedEmojis[5]).useEmojiSuggestionBarState(merged, anchorTop(unlockedEmojis[5]).MAX_SUGGESTIONS_LARGE, ref);
   unlockedEmojis = emojiSuggestionBarState.unlockedEmojis;
-  lockedEmojis = emojiSuggestionBarState.lockedEmojis;
-  reducedMotion = emojiSuggestionBarState.reducedMotion;
-  handlePress = emojiSuggestionBarState.handlePress;
-  handlePressEmojiUnavailable = emojiSuggestionBarState.handlePressEmojiUnavailable;
+  const lockedEmojis = emojiSuggestionBarState.lockedEmojis;
+  const reducedMotion = emojiSuggestionBarState.reducedMotion;
+  const handlePress = emojiSuggestionBarState.handlePress;
+  const handlePressEmojiUnavailable = emojiSuggestionBarState.handlePressEmojiUnavailable;
   const items = [unlockedEmojis, lockedEmojis, reducedMotion, handlePress, handlePressEmojiUnavailable];
   const items1 = [anchorTop, onOccupiedHeightChange];
   const item = lockedEmojis.useMemo(() => {
-    const obj = { displayEmojis: anchorTop(unlockedEmojis[5]).sortEmojisForDisplay(unlockedEmojis, lockedEmojis.slice(0, 2), 3), reducedMotion, handlePress, handlePressEmojiUnavailable };
+    const obj = { displayEmojis: EmojiSuggestionBarUtils.sortEmojisForDisplay(unlockedEmojis, lockedEmojis.slice(0, 2), 3), reducedMotion, handlePress, handlePressEmojiUnavailable };
     return obj;
   }, items);
   const renderItem = lockedEmojis.useCallback((arg0, arg1, transitionState, cleanUp) => {
@@ -92,10 +95,7 @@ const forwardRefResult = importAllResult.forwardRef((anchorTop, ref) => {
     obj.onOccupiedHeightChange = onOccupiedHeightChange;
     obj.transitionState = transitionState;
     obj.cleanUp = cleanUp;
-    return reducedMotion(closure_1_9, obj, arg0);
+    return <EmojiSuggestionBarSmallAnimated key={arg0} />;
   }, items1);
   return reducedMotion(anchorTop(unlockedEmojis[9]).TransitionItem, { item, renderItem });
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/EmojiSuggestionBarSmall.tsx");
-
-export const EmojiSuggestionBarSmall = forwardRefResult;

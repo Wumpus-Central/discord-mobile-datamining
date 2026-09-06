@@ -1,16 +1,16 @@
 // === Module 17498: navigateToSystemDM ===
 
 // Module 17498 (navigateToSystemDM)
-import _modDef5411 from "module_5411" /* 5411 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import { SYSTEM_USER } from "SYSTEM_USER" /* 17497 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const result = require("set").fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
+const SYSTEM_USER = fn(17497).SYSTEM_USER;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/urgent_system_dm/navigateToSystemDM.tsx");
 
 export default function navigateToSystemDM() {
-  dMFromUserId = dMFromUserId.getDMFromUserId(SYSTEM_USER);
+  const dMFromUserId = ChannelStore.getDMFromUserId(SYSTEM_USER);
   if (null != dMFromUserId) {
-    const privateChannel = _modDef5411.selectPrivateChannel(dMFromUserId);
-    const obj = _modDef5411;
+    const privateChannel = SelectedChannelActionCreatorsDefault.selectPrivateChannel(dMFromUserId);
   }
 };

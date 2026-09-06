@@ -1,22 +1,21 @@
-// === Module 7595: processMessage ===
+// === Module 7595: ReferencedMessageStore ===
 
-// Module 7595 (processMessage)
+// Module 7595 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1437 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "removePendingListFetch" /* 7596 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "reinjectEphemerals" /* 4781 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4783 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ConversationsStore from "ConversationsStore" /* 7596 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MessageStore from "MessageStore" /* 4781 */;
 
-require = arg1;
+require = fn;
 function processMessage(message) {
+  let obj = merged;
   let flag = false;
-  if (obj.updateExistingMessageIfCached(message)) {
+  if (merged.updateExistingMessageIfCached(message)) {
     flag = true;
   }
   let flag2 = flag;
@@ -32,31 +31,28 @@ function processMessage(message) {
         const referenced_message = message.referenced_message;
         if (null != referenced_message) {
           obj = { state: null, message: null };
-          obj[0] = obj.LOADED;
+          obj.state = obj.LOADED;
           ({ channel_id, id } = referenced_message);
-          obj[1] = createMinimalMessageRecord.createMessageRecord(referenced_message);
+          obj.message = MessageRecordUtils.createMessageRecord(referenced_message);
           const result = obj.set(channel_id, id, obj);
           flag2 = true;
           if (message.type === constants.THREAD_STARTER_MESSAGE) {
             processMessage(referenced_message);
             flag2 = true;
           }
-          const obj5 = createMinimalMessageRecord;
         } else {
           obj = { state: null };
-          obj[0] = obj.DELETED;
+          obj.state = obj.DELETED;
           const result1 = obj.set(message.channel_id, message_id, obj);
           flag2 = true;
         }
       } else {
-        message = store.getMessage(message_reference.channel_id, message_id);
+        message = MessageStore.getMessage(message_reference.channel_id, message_id);
         if (message == null) {
-          message = message.getMessage(message_reference.channel_id, message_id);
+          message = ConversationsStore.getMessage(message_reference.channel_id, message_id);
         }
         if (null != message) {
-          obj1 = { state: null, message: null };
-          obj1[0] = obj.LOADED;
-          obj1[1] = message;
+          const obj1 = { state: obj.LOADED, message };
           const result2 = obj.set(message_reference.channel_id, message_id, obj1);
           flag2 = true;
         } else {
@@ -68,40 +64,41 @@ function processMessage(message) {
   }
   return flag2;
 }
-function anyChanged(messages, arg1) {
+function anyChanged(data, fn) {
   let flag = false;
-  const iter = messages[Symbol.iterator]();
+  const iter = data[Symbol.iterator]();
   while (iter !== undefined) {
-    let tmp = false !== arg1(iter.next()) || flag;
+    let tmp = false !== fn(iter.next()) || flag;
     flag = tmp;
     continue;
   }
   return flag;
 }
 function handleLoadMessages(messages) {
-  return anyChanged(messages.messages, (arg0) => callback(arg0));
+  return anyChanged(messages.messages, (arg0) => processMessage(arg0));
 }
 function handleSearchMessagesSuccess(data) {
-  return anyChanged(data.data, (messages) => callback(messages.messages, (arg0) => callback(arg0, (arg0) => callback(arg0))));
+  return anyChanged(data.data, (messages) => anyChanged(messages.messages, (arg0) => closure_1_15(arg0, (arg0) => closure_1_14(arg0))));
 }
 function handleChannelDelete(channel) {
-  return obj.deleteChannelCache(channel.channel.id);
+  return merged.deleteChannelCache(channel.channel.id);
 }
 function resetState() {
-  obj.clear();
+  merged.clear();
 }
 function handleLoadThreadsSuccess(firstMessages) {
   firstMessages = firstMessages.firstMessages;
   let tmp = null != firstMessages;
   if (tmp) {
-    tmp = anyChanged(firstMessages, (arg0) => callback(arg0));
+    tmp = anyChanged(firstMessages, (arg0) => processMessage(arg0));
   }
   return tmp;
 }
-({ MessageTypes: error, MessageTypesWithLazyLoadedReferences: closure_8 } = ME);
-let obj = { LOADED: 0, [0]: "LOADED", NOT_LOADED: 1, [1]: "NOT_LOADED", DELETED: 2, [2]: "DELETED" };
-obj = { state: obj.NOT_LOADED };
-let closure_10 = Object.freeze(obj);
+const Constants = fn(1074);
+({ MessageTypes: closure_7, MessageTypesWithLazyLoadedReferences: closure_8 } = Constants);
+let ReferencedMessageState = { LOADED: 0, [0]: "LOADED", NOT_LOADED: 1, [1]: "NOT_LOADED", DELETED: 2, [2]: "DELETED" };
+ReferencedMessageState = { state: ReferencedMessageState.NOT_LOADED };
+let closure_10 = Object.freeze(ReferencedMessageState);
 let set = new Set();
 class ChannelReferencedMessageCache {
   constructor() {
@@ -113,7 +110,7 @@ class ChannelReferencedMessageCache {
             return obj.handleCacheDisposed(arg0, arg1);
           }
     };
-    tmp2 = new require("priv")(obj);
+    tmp2 = new closure_1(closure_2[5])(obj);
     obj._cachedMessages = tmp2;
     set = new Set();
     obj._cachedMessageIds = set;
@@ -121,7 +118,7 @@ class ChannelReferencedMessageCache {
   }
 }
 const prototype = ChannelReferencedMessageCache.prototype;
-prototype["handleCacheDisposed"] = function handleCacheDisposed(arg0, arg1) {
+prototype["handleCacheDisposed"] = function handleCacheDisposed(arg0) {
   const self = this;
   const _cachedMessageIds = this._cachedMessageIds;
   if (_cachedMessageIds.has(arg0)) {
@@ -158,16 +155,16 @@ prototype["getCachedMessageIds"] = function getCachedMessageIds() {
 };
 class ReferencedMessageCache {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ _channelCaches: null });
     map = new Map();
-    obj[0] = map;
-    return obj;
+    merged[0] = map;
+    return merged;
   }
 }
 const prototype2 = ReferencedMessageCache.prototype;
 prototype2["has"] = function has(arg0, arg1) {
   const _channelCaches = this._channelCaches;
-  const value = _channelCaches.get(arg0);
+  value = _channelCaches.get(arg0);
   let flag;
   if (value != null) {
     flag = value.has(arg1);
@@ -179,7 +176,7 @@ prototype2["has"] = function has(arg0, arg1) {
 };
 prototype2["get"] = function get(arg0, arg1) {
   const _channelCaches = this._channelCaches;
-  let value = _channelCaches.get(arg0);
+  _channelCaches.get(arg0);
   value = undefined;
   if (value != null) {
     value = value.get(arg1);
@@ -188,41 +185,42 @@ prototype2["get"] = function get(arg0, arg1) {
 };
 prototype2["set"] = function set(arg0, arg1, arg2) {
   const _channelCaches = this._channelCaches;
-  let value = _channelCaches.get(arg0);
+  value = _channelCaches.get(arg0);
   if (null == value) {
-    if (typeof ChannelReferencedMessageCache !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof ChannelReferencedMessageCache === "function") {
+      Object.create(ChannelReferencedMessageCache.prototype);
+      const obj = {
+        max: 100,
+        dispose(arg0, arg1) {
+              return obj.handleCacheDisposed(arg0, arg1);
+            }
+      };
+      const tmp7 = new privDefault(obj);
+      obj._cachedMessages = tmp7;
+      const _Set = Set;
+      set = new Set();
+      obj._cachedMessageIds = set;
+      const _channelCaches2 = this._channelCaches;
+      const result = _channelCaches2.set(arg0, obj);
+      value = obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    obj = Object.create(ChannelReferencedMessageCache.prototype);
-    obj = { max: 100, dispose: null };
-    obj[1] = function dispose(arg0, arg1) {
-      return obj.handleCacheDisposed(arg0, arg1);
-    };
-    const tmp7 = new privDefault(obj);
-    obj._cachedMessages = tmp7;
-    const _Set = Set;
-    set = new Set();
-    obj._cachedMessageIds = set;
-    const _channelCaches2 = this._channelCaches;
-    const result = _channelCaches2.set(arg0, obj);
-    value = obj;
-    const tmp16 = ChannelReferencedMessageCache;
   }
   const result1 = value.set(arg1, arg2);
 };
 prototype2["updateExistingMessageIfCached"] = function updateExistingMessageIfCached(channel_id) {
   const _channelCaches = this._channelCaches;
-  const value = _channelCaches.get(channel_id.channel_id);
+  value = _channelCaches.get(channel_id.channel_id);
   let tmp = null != value;
   if (tmp) {
     let flag = value.has(channel_id.id);
     if (flag) {
-      obj = { state: null, message: null };
-      obj[0] = obj.LOADED;
-      obj[1] = createMinimalMessageRecord.createMessageRecord(channel_id);
+      const obj = { state: null, message: null };
+      obj.state = obj.LOADED;
+      obj.message = MessageRecordUtils.createMessageRecord(channel_id);
       const result = value.set(channel_id.id, obj);
       flag = true;
-      const obj3 = createMinimalMessageRecord;
     }
     tmp = flag;
   }
@@ -232,15 +230,13 @@ prototype2["deleteChannelCache"] = function deleteChannelCache(id) {
   const _channelCaches = this._channelCaches;
   return _channelCaches.delete(id);
 };
-prototype2["retainWhere"] = function retainWhere(arg0) {
+prototype2["retainWhere"] = function retainWhere(fn) {
   const self = this;
   const items = [];
   while (tmp !== undefined) {
-    let tmp3 = callback;
-    let first = callback(tmp2, 1)[0];
+    let first = _slicedToArray(tmp2, 1)[0];
     let tmp5 = first;
-    if (!arg0(first)) {
-      let tmp6 = first;
+    if (!fn(first)) {
       let arr = items.push(tmp5);
     }
     continue;
@@ -251,9 +247,9 @@ prototype2["retainWhere"] = function retainWhere(arg0) {
   }
   return items.length;
 };
-prototype2["getCachedMessageIdsForChannel"] = function getCachedMessageIdsForChannel(memo1) {
+prototype2["getCachedMessageIdsForChannel"] = function getCachedMessageIdsForChannel(id) {
   const _channelCaches = this._channelCaches;
-  const value = _channelCaches.get(memo1);
+  value = _channelCaches.get(id);
   let cachedMessageIds = null;
   if (null != value) {
     cachedMessageIds = value.getCachedMessageIds();
@@ -264,19 +260,19 @@ prototype2["clear"] = function clear() {
   const _channelCaches = this._channelCaches;
   _channelCaches.clear();
 };
-obj = Object.create(ReferencedMessageCache.prototype);
-obj[0] = new Map();
+let merged = Object.assign({ _channelCaches: null });
+merged[0] = new Map();
 const Store = initializeDefault.Store;
 class ReferencedMessageStore extends Store {
 }
 const prototype3 = ReferencedMessageStore.prototype;
 prototype3["initialize"] = function initialize() {
-  this.waitFor(closure_6, closure_5, closure_4);
+  this.waitFor(MessageStore, ChannelStore, ConversationsStore);
 };
 prototype3["getMessageByReference"] = function getMessageByReference(messageReference) {
-  let value;
+  value = undefined;
   if (null != messageReference) {
-    value = obj.get(messageReference.channel_id, messageReference.message_id);
+    value = merged.get(messageReference.channel_id, messageReference.message_id);
   }
   if (value == null) {
     value = closure_10;
@@ -284,16 +280,16 @@ prototype3["getMessageByReference"] = function getMessageByReference(messageRefe
   return value;
 };
 prototype3["getMessage"] = function getMessage(arg0, arg1) {
-  let value = obj.get(arg0, arg1);
+  value = merged.get(arg0, arg1);
   if (value == null) {
     value = closure_10;
   }
   return value;
 };
-prototype3["getReplyIdsForChannel"] = function getReplyIdsForChannel(memo1) {
+prototype3["getReplyIdsForChannel"] = function getReplyIdsForChannel(id) {
   let cachedMessageIdsForChannel;
-  if (null != memo1) {
-    cachedMessageIdsForChannel = obj.getCachedMessageIdsForChannel(memo1);
+  if (null != id) {
+    cachedMessageIdsForChannel = merged.getCachedMessageIdsForChannel(id);
   }
   if (cachedMessageIdsForChannel == null) {
     cachedMessageIdsForChannel = set;
@@ -301,9 +297,9 @@ prototype3["getReplyIdsForChannel"] = function getReplyIdsForChannel(memo1) {
   return cachedMessageIdsForChannel;
 };
 ReferencedMessageStore.displayName = "ReferencedMessageStore";
-const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
+ReferencedMessageState = {
   CACHE_LOADED: function handleCacheLoaded(messages) {
-    return anyChanged(Object.values(messages.messages), (arg0) => callback(Object.values(arg0), (arg0) => callback(arg0)));
+    return anyChanged(Object.values(messages.messages), (arg0) => anyChanged(Object.values(arg0), (arg0) => closure_1_14(arg0)));
   },
   LOCAL_MESSAGES_LOADED: handleLoadMessages,
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
@@ -312,7 +308,7 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   CONVERSATION_FETCH_SUCCESS: function handleConversationFetchSuccess(messages) {
     messages = messages.messages;
-    return anyChanged(messages.concat(messages.messageReferences), (arg0) => callback(arg0));
+    return anyChanged(messages.concat(messages.messageReferences), (arg0) => processMessage(arg0));
   },
   CONVERSATIONS_FETCH_SUCCESS: function handleConversationsFetchSuccess(rawConversations) {
     return anyChanged(rawConversations.rawConversations, (messages) => {
@@ -320,20 +316,19 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
       if (messages == null) {
         messages = [];
       }
-      return closure_15(messages, (arg0) => callback(arg0));
+      return anyChanged(messages, (arg0) => closure_1_14(arg0));
     });
   },
   LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess,
   LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadThreadsSuccess,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleMessageExplicitContentScanTimeout(arg0) {
     ({ messageId, channelId } = arg0);
-    if (obj.has(channelId, messageId)) {
-      const value = obj.get(channelId, messageId);
+    let obj = merged;
+    if (merged.has(channelId, messageId)) {
+      value = obj.get(channelId, messageId);
       if (null != value) {
         if (value.state === obj.LOADED) {
-          obj = { state: null, message: null };
-          obj[0] = tmp3.LOADED;
-          obj[1] = redactionSettingToRenderedString.handleExplicitMediaScanTimeoutForMessage(value.message);
+          obj = { state: tmp3.LOADED, message: ExplicitMediaRedactionUtils.handleExplicitMediaScanTimeoutForMessage(value.message) };
           const result = obj.set(channelId, messageId, obj);
         }
       }
@@ -347,14 +342,14 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
       first_message = first_message.first_message;
       let tmp = null != first_message;
       if (tmp) {
-        tmp = callback(first_message);
+        tmp = processMessage(first_message);
       }
       return tmp;
     });
   },
   MESSAGE_CREATE: function handleMessageCreate(message) {
     message = message.message;
-    let ready = store.getMessages(message.channel_id).ready;
+    let ready = MessageStore.getMessages(message.channel_id).ready;
     if (ready) {
       ready = processMessage(message);
     }
@@ -363,13 +358,12 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
     message = message.message;
     ({ id, channel_id } = message);
-    if (obj.has(channel_id, id)) {
-      const value = obj.get(channel_id, id);
+    let obj = merged;
+    if (merged.has(channel_id, id)) {
+      value = obj.get(channel_id, id);
       if (null != value) {
         if (value.state === obj.LOADED) {
-          obj = { state: null, message: null };
-          obj[0] = tmp3.LOADED;
-          obj[1] = createMinimalMessageRecord.updateMessageRecord(value.message, message);
+          obj = { state: tmp3.LOADED, message: MessageRecordUtils.updateMessageRecord(value.message, message) };
           const result = obj.set(channel_id, id, obj);
         }
       }
@@ -380,9 +374,10 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
   },
   MESSAGE_DELETE: function handleMessageDelete(arg0) {
     ({ id, channelId } = arg0);
-    if (obj.has(channelId, id)) {
+    let obj = merged;
+    if (merged.has(channelId, id)) {
       obj = { state: null };
-      obj[0] = obj.DELETED;
+      obj.state = obj.DELETED;
       const result = obj.set(channelId, id, obj);
     }
     return false;
@@ -390,10 +385,10 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(channelId) {
     channelId = channelId.channelId;
     return anyChanged(channelId.ids, (arg0) => {
-      obj = closure_1_13;
-      if (closure_1_13.has(channelId, arg0)) {
+      let obj = merged;
+      if (merged.has(channelId, arg0)) {
         obj = { state: null };
-        obj[0] = closure_1_9.DELETED;
+        obj.state = obj.DELETED;
         const result = obj.set(channelId, arg0, obj);
       }
       return false;
@@ -402,19 +397,21 @@ const referencedMessageStore = new ReferencedMessageStore(dispatcherDefault, {
   CREATE_PENDING_REPLY: function handleCreatePendingReply(message) {
     message = message.message;
     obj = { state: obj.LOADED, message };
-    const result = obj.set(message.channel_id, message.id, obj);
+    const result = merged.set(message.channel_id, message.id, obj);
   },
   CHANNEL_DELETE: handleChannelDelete,
   THREAD_DELETE: handleChannelDelete,
   GUILD_DELETE: function handleGenericCleanup() {
-    if (0 === obj.retainWhere((arg0) => null != channel.getChannel(arg0))) {
+    if (0 === merged.retainWhere((arg0) => null != channel.getChannel(arg0))) {
       return false;
     }
   },
   CONNECTION_OPEN: resetState,
   LOGOUT: resetState
-});
-let result = set.fileFinishedImporting("modules/replies/ReferencedMessageStore.tsx");
+};
+const referencedMessageStore = new ReferencedMessageStore(DispatcherDefault, ReferencedMessageState);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/replies/ReferencedMessageStore.tsx");
 
 export default referencedMessageStore;
-export const ReferencedMessageState = obj;
+export { ReferencedMessageState };

@@ -1,17 +1,18 @@
 // === Module 16559: useResourceChannels ===
 
 // Module 16559 (useResourceChannels)
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "handleSettingsLoadSuccess" /* 4747 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4747 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/useResourceChannels.tsx");
 
 export default function useResourceChannels(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_2];
-  return _require(563).useStateFromStoresArray(items, () => {
-    const resourceChannels = closure_1_3.getResourceChannels(closure_0);
+  _require = arg0;
+  const items = [GuildOnboardingHomeSettingsStore, ChannelStore];
+  return require("useStateFromStores").useStateFromStoresArray(items, () => {
+    const resourceChannels = GuildOnboardingHomeSettingsStore.getResourceChannels(closure_0);
     return resourceChannels.filter((channelId) => null != channel.getChannel(channelId.channelId));
   });
 };

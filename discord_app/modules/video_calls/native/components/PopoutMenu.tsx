@@ -1,20 +1,25 @@
-// === Module 9587: PopoutMenuRow ===
+// === Module 9587: PopoutMenu ===
 
-// Module 9587 (PopoutMenuRow)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9587 (PopoutMenu)
+import _modDef12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import Patterns from "Patterns" /* 4530 */;
+import timing from "timing" /* 4561 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
+import FormRowDefault from "FormRow" /* 7137 */;
+import Form from "Form" /* 8593 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function PopoutMenuRow(onClose) {
   ({ icon, onClick } = onClose);
   onClose = onClose.onClose;
-  const tmp = callback();
+  const tmp = closure_9();
   const items = [onClick, onClose];
-  callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (onClick != null) {
       tmp();
     }
@@ -24,69 +29,56 @@ function PopoutMenuRow(onClose) {
   }, items);
   let tmp3Result = null;
   if (null != icon) {
-    let obj = { source: null };
-    obj[0] = icon;
-    tmp3Result = tmp3(onClick(1178).Icon, obj);
+    let obj = { source: icon };
+    tmp3Result = tmp3(native.Icon, obj);
   }
-  obj = { leading: tmp3Result, label: tmp3(onClick(8593).FormLabel, obj), style: tmp.popoutMenuRow, onPress: callback };
+  obj = { leading: tmp3Result, label: null, style: tmp.popoutMenuRow, onPress: callback };
   obj = { style: tmp.popoutMenuRowLabel, text: onClose.text };
-  return closure_6(onClose(7137), obj);
+  obj.label = timestampProducer(Form.FormLabel, obj);
+  return timestampProducer(FormRowDefault, obj);
 }
-let c4 = importAllResult;
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: null, popoutMenuRow: null, popoutMenuRowLabel: null };
-obj = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm };
-obj[0] = obj;
-obj[1] = { flex: 1 };
-obj[2] = { width: "100%" };
-let closure_9 = createCacheKey.createStyles(obj);
+obj = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm };
+obj.container = obj;
+obj.popoutMenuRow = { flex: 1 };
+obj.popoutMenuRowLabel = { width: "100%" };
+let closure_9 = createStyles.createStyles(obj);
 let closure_11 = { code: "function PopoutMenuTsx1(){const{withTiming,animateIn,STANDARD_EASING,ANIMATION_DURATION,runOnJS,handleClose,EXTRA_PADDING}=this.__closure;return{opacity:withTiming(animateIn?1:0,{easing:STANDARD_EASING,duration:ANIMATION_DURATION},'respect-motion-settings',function(finished){if(finished){runOnJS(handleClose)();}}),transform:[{translateY:withTiming(animateIn?-EXTRA_PADDING:0,{easing:STANDARD_EASING,duration:ANIMATION_DURATION})}]};}" };
 let closure_12 = { code: "function PopoutMenuTsx2(finished){const{runOnJS,handleClose}=this.__closure;if(finished){runOnJS(handleClose)();}}" };
 let closure_13 = { code: "function PopoutMenuTsx3(){const{runOnJS,handleLongPress}=this.__closure;runOnJS(handleLongPress)();}" };
 let closure_14 = { code: "function PopoutMenuTsx4(){const{runOnJS,_setClose}=this.__closure;runOnJS(_setClose)(true);}" };
-const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose, ref) {
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/PopoutMenu.tsx");
+
+export default noop.forwardRef(function PopoutMenu(onClose, ref) {
   ({ title, trigger, rows, onOpen } = onClose);
-  onClose = onClose.onClose;
   let width;
-  let height;
-  let bottom;
-  closure_5 = undefined;
-  let first;
-  closure_7 = undefined;
-  let first1;
-  let callback;
-  ref = undefined;
-  let ref1;
-  let first2;
-  closure_13 = undefined;
-  let first3;
-  closure_15 = undefined;
-  closure_16 = undefined;
-  closure_17 = undefined;
-  callback = undefined;
-  closure_19 = undefined;
-  let callback1;
+  onClose = undefined;
   ({ disabled, style } = onClose);
   let size = onClose(width[9])();
   width = size.width;
-  height = size.height;
-  bottom = onClose(width[10])().bottom;
+  const height = size.height;
+  const bottom = onClose(width[10])().bottom;
   let obj = bottom;
   const tmp4 = height(bottom.useState(0), 2);
   closure_5 = tmp5;
   const tmp6 = height(bottom.useState(false), 2);
-  first = tmp6[0];
-  closure_7 = tmp8;
+  const first = tmp6[0];
+  const _setClose = tmp8;
   const tmp9 = height(bottom.useState(false), 2);
-  first1 = tmp9[0];
-  callback = tmp9[1];
+  const first1 = tmp9[0];
+  closure_9 = tmp9[1];
   ref = bottom.useRef(null);
-  ref1 = bottom.useRef(null);
+  const ref1 = bottom.useRef(null);
   const tmp13 = height(bottom.useState({ top: 0, left: 0, width: 0, height: 0 }), 2);
-  first2 = tmp13[0];
-  closure_13 = tmp13[1];
+  const first2 = tmp13[0];
+  __initData2 = tmp13[1];
   const tmp15 = height(bottom.useState({ width: 0, height: 0 }), 2);
-  first3 = tmp15[0];
+  const first3 = tmp15[0];
   closure_15 = tmp15[1];
   let items = [first1];
   const effect = bottom.useEffect(() => {
@@ -103,7 +95,8 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
         current = ref.current;
         if (current != null) {
           current.measureInWindow((left, arg1, width, height) => {
-            callback({ top: Math.max(arg1, 0), left, width, height });
+            const size = { top: Math.max(arg1, 0), left, width, height };
+            __initData2(size);
           });
         }
       }
@@ -113,7 +106,8 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
           const current = ref.current;
           if (current != null) {
             current.measureInWindow((arg0, arg1, width, height) => {
-              callback({ width, height });
+              const size = { width, height };
+              closure_1_15(size);
             });
           }
         }
@@ -137,95 +131,88 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
   ({ top, left } = memo);
   const imperativeHandle = bottom.useImperativeHandle(ref, () => ({
     close() {
-      callback(true);
+      _setClose(true);
     }
   }), items2);
   const items3 = [tmp4[1]];
-  closure_16 = bottom.useMemo(() => onClose(width[11]).debounce((arg0) => {
-    callback(arg0);
+  closure_16 = bottom.useMemo(() => _modDef12.debounce((arg0) => {
+    closure_1_5(arg0);
   }, 16), items3);
   closure_17 = tmp20;
   const items4 = [first, onClose];
-  callback = obj.useCallback(() => {
+  const handleClose = obj.useCallback(() => {
     if (first) {
       onClose();
-      callback2(false);
+      closure_9(false);
     }
   }, items4);
-  obj1 = onOpen(tmp3[12]);
+  let obj1 = onOpen(tmp3[12]);
   function te() {
-    let obj = onOpen(width[13]);
+    let obj = timing;
     let num = 0;
     if (closure_17) {
       num = 1;
     }
     obj = { opacity: null, transform: null };
-    obj = { easing: tmp(tmp2[7]).STANDARD_EASING, duration: 250 };
+    obj = { easing: tmp(1178).STANDARD_EASING, duration: 250 };
     const fn = function n(arg0) {
       if (arg0) {
-        closure_1_0(closure_1_2[12]).runOnJS(closure_18)();
-        const obj = closure_1_0(closure_1_2[12]);
+        onOpen(width[12]).runOnJS(handleClose)();
+        const obj = onOpen(width[12]);
       }
     };
-    fn.__closure = { runOnJS: onOpen(width[12]).runOnJS, handleClose: callback };
+    fn.__closure = { runOnJS: ReanimatedRexport.runOnJS, handleClose };
     fn.__workletHash = 7805688342878;
-    fn.__initData = first2;
-    obj[0] = obj.withTiming(num, obj, "respect-motion-settings", fn);
-    obj1 = { runOnJS: onOpen(width[12]).runOnJS, handleClose: callback };
+    fn.__initData = __initData;
+    obj.opacity = obj.withTiming(num, obj, "respect-motion-settings", fn);
+    const obj1 = { runOnJS: ReanimatedRexport.runOnJS, handleClose };
     const tmp3 = closure_17;
     let num2 = 0;
     if (tmp3) {
       num2 = -8;
     }
     const obj2 = { translateY: null };
-    const tmpResult = onOpen(width[13]);
-    obj2[0] = tmpResult.withTiming(num2, { easing: onOpen(width[7]).STANDARD_EASING, duration: 250 });
+    const tmpResult = timing;
+    obj2.translateY = tmpResult.withTiming(num2, { easing: native.STANDARD_EASING, duration: 250 });
     const items = [obj2];
-    obj[1] = items;
+    obj.transform = items;
     return obj;
   }
-  obj = { withTiming: onOpen(tmp3[13]).withTiming, animateIn: tmp20, STANDARD_EASING: onOpen(tmp3[7]).STANDARD_EASING, ANIMATION_DURATION: 250, runOnJS: onOpen(tmp3[12]).runOnJS, handleClose: callback, EXTRA_PADDING: 8 };
+  obj = { withTiming: onOpen(tmp3[13]).withTiming, animateIn: tmp20, STANDARD_EASING: onOpen(tmp3[7]).STANDARD_EASING, ANIMATION_DURATION: 250, runOnJS: onOpen(tmp3[12]).runOnJS, handleClose, EXTRA_PADDING: 8 };
   te.__closure = obj;
   te.__workletHash = 2727321893876;
   te.__initData = ref1;
   const animatedStyle = obj1.useAnimatedStyle(te);
-  closure_19 = obj.useCallback(() => callback(true), []);
+  onClose = obj.useCallback(() => _setClose(true), []);
   const items5 = [onOpen];
-  callback1 = obj.useCallback(() => {
-    callback(false);
-    onOpen(width[14]).trigger("impactHeavy");
-    callback2(true);
+  const callback1 = obj.useCallback(() => {
+    _setClose(false);
+    Patterns.trigger("impactHeavy");
+    closure_9(true);
     onOpen();
   }, items5);
   [][0] = callback1;
   let tmp27Result = trigger;
   if (!disabled) {
-    obj = { gesture: null, children: null };
-    obj[0] = tmp25;
-    obj1 = { ref: null, children: null };
-    obj1[0] = ref;
-    obj1[1] = trigger;
-    obj[1] = first(closure_5, obj1);
+    obj = { gesture: tmp25, children: null };
+    obj1 = { ref, children: trigger };
+    obj.children = first(closure_5, obj1);
     const items6 = [first(tmp22(tmp3[15]).GestureDetector, obj), ];
     tmp27Result = null;
     if (first1) {
-      let obj2 = { ref: null, style: null, onLayout: null, children: null };
-      obj2[0] = ref1;
+      let obj2 = { ref: ref1, style: null, onLayout: null, children: null };
       const items7 = [tmp.container, style, , ];
-      const obj3 = { left: null, top: null };
-      obj3[0] = left;
-      obj3[1] = top;
-      items7[2] = obj3;
+      const rect = { left, top };
+      items7[2] = rect;
       items7[3] = animatedStyle;
-      obj2[1] = items7;
-      obj2[2] = function onLayout(nativeEvent) {
-        callback3(nativeEvent.nativeEvent.layout.height);
+      obj2.style = items7;
+      obj2.onLayout = function onLayout(nativeEvent) {
+        closure_16(nativeEvent.nativeEvent.layout.height);
       };
       let tmp29Result = null;
       if (null != title) {
-        const obj4 = { text: null };
-        obj4[0] = title;
-        tmp29Result = tmp29(ref, obj4);
+        const obj3 = { text: title };
+        tmp29Result = tmp29(ref, obj3);
       }
       const items8 = [tmp29Result, , ];
       tmp29Result = null;
@@ -233,23 +220,19 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
         tmp29Result = tmp29(tmp22(tmp3[8]).FormDivider, {});
       }
       items8[1] = tmp29Result;
-      items8[2] = rows.map((arg0, _exports2) => {
+      items8[2] = rows.map((item, index) => {
         const obj = {};
-        const merged = Object.assign(arg0);
-        obj.onClose = closure_19;
-        return first(ref, obj, _exports2);
+        const merged = Object.assign(item);
+        obj.onClose = onClose;
+        return timestampProducer(PopoutMenuRow, obj, index);
       });
-      obj2[3] = items8;
+      obj2.children = items8;
       tmp27Result = tmp27(onClose(tmp3[12]).View, obj2);
     }
-    const obj5 = { children: null };
+    const obj4 = { children: null };
     items6[1] = tmp27Result;
-    obj5[0] = items6;
-    tmp27Result = tmp27(first1, obj5);
-    const tmp28 = first1;
+    obj4.children = items6;
+    tmp27Result = tmp27(first1, obj4);
   }
   return tmp27Result;
 });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PopoutMenu.tsx");
-
-export default forwardRefResult;

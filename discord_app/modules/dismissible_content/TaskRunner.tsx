@@ -1,10 +1,13 @@
-// === Module 1952: schedule ===
+// === Module 1952: TaskRunner ===
 
-// Module 1952 (schedule)
-import set from "set" /* 2 */;
+// Module 1952 (TaskRunner)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
+const result = size.fileFinishedImporting("modules/dismissible_content/TaskRunner.tsx");
 class TaskRunner {
+  constructor() {
+    return Object.assign({ timeoutId: null });
+  }
 }
 const prototype = TaskRunner.prototype;
 prototype["schedule"] = function schedule(arg0, arg1) {
@@ -13,7 +16,7 @@ prototype["schedule"] = function schedule(arg0, arg1) {
   this.unschedule();
   this.timeoutId = setTimeout(() => {
     self.timeoutId = null;
-    callback();
+    closure_0();
   }, arg1);
 };
 prototype["unschedule"] = function unschedule() {

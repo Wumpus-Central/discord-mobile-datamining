@@ -1,38 +1,37 @@
-// === Module 15514: toggle ===
+// === Module 15514: ScreenDowntimeReminderSetting ===
 
-// Module 15514 (toggle)
+// Module 15514 (ScreenDowntimeReminderSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import apexExperiment from "apexExperiment" /* 7594 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8645 */;
+import util from "util" /* 1114 */;
+import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7594 */;
+import useUserLinks from "useUserLinks" /* 8645 */;
 import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14911 */;
-import _modDef15515 from "module_15515" /* 15515 */;
-import closure_3 from "DesktopNotificationTypes" /* 10081 */;
-import createToggle from "createToggle" /* 11468 */;
+import NotificationActionCreatorsDefault from "NotificationActionCreators" /* 15515 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10081 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.z6tZKH);
+    const intl = util.intl;
+    return intl.string(util.t.z6tZKH);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.TummoQ);
+    const intl = util.intl;
+    return intl.string(util.t.TummoQ);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7975).MobileUserSettings.NOTIFICATIONS,
   useValue() {
-    const items = [closure_3];
-    return initialize.useStateFromStores(items, () => obj.screenDowntimeReminder);
+    const items = [NotificationSettingsStore];
+    return initialize.useStateFromStores(items, () => NotificationSettingsStore.screenDowntimeReminder);
   },
-  onValueChange(screenDowntimeReminder) {
-    return _modDef15515.setScreenDowntimeReminder(screenDowntimeReminder);
+  onValueChange(screen_downtime_reminder) {
+    return NotificationActionCreatorsDefault.setScreenDowntimeReminder(screen_downtime_reminder);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
-    const obj = apexExperiment;
+    let isFamilyCenterV3Enabled = FamilyCenterV3Experiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeReminderSetting" });
     const tmp2 = useUserIsTeenAgeGroupDefault();
-    const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
+    const hasActiveParentLinks = useUserLinks.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }
@@ -42,7 +41,8 @@ createToggle = {
     return isFamilyCenterV3Enabled;
   }
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeReminderSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

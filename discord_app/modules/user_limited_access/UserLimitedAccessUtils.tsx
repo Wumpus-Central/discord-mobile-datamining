@@ -1,11 +1,11 @@
-// === Module 9045: isLimitedAccessErrorCode ===
+// === Module 9045: UserLimitedAccessUtils ===
 
-// Module 9045 (isLimitedAccessErrorCode)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9045 (UserLimitedAccessUtils)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AbortCodes = ME.AbortCodes;
-const result = set.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
+const AbortCodes = Constants.AbortCodes;
+const result = size.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
 
 export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
   let tmp = arg0 >= 400;

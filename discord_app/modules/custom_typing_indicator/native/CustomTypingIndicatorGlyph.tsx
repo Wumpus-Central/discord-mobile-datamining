@@ -1,22 +1,23 @@
 // === Module 11981: CustomTypingIndicatorGlyph ===
 
 // Module 11981 (CustomTypingIndicatorGlyph)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 11982 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ emojiRow: { flexDirection: "row", alignItems: "center" } });
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorGlyph.tsx");
 
 export default function CustomTypingIndicatorGlyph(config) {
   let map = config.config;
   const size = config.size;
   dependencyMap = undefined;
   let obj = dependencyMap;
-  const tmp = callback();
+  const tmp = closure_5();
   const tmp2 = map;
   dependencyMap = map(1392).getEffectiveCustomTypingIndicatorAnimation(map);
   const obj2 = map(1392);
@@ -28,15 +29,13 @@ export default function CustomTypingIndicatorGlyph(config) {
       PX_4 = size / 4;
     }
     obj = { style: null, children: null };
-    obj = { gap: null };
-    obj[0] = PX_4;
+    obj = { gap: PX_4 };
     items[1] = obj;
-    obj[0] = items;
+    obj.style = items;
     items = map.emojis;
     map = items.map;
-    obj[1] = map((emoji, index) => closure_1_4(size(table[7]), { emoji, index, emojiCount: map.emojis.length, animation: table, size }, index));
+    obj.children = map((emoji, index) => jsx(CustomTypingIndicatorAnimatedEmojiDefault, { emoji, index, emojiCount: map.emojis.length, animation, size }, index));
     tmp3(View, obj);
-    const tmp4 = View;
   } else {
     return tmp3(tmp2(1178).Ellipsis, {});
   }

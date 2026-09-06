@@ -1,32 +1,33 @@
 // === Module 14772: SafetyHubAccountStandingSubwayMarker ===
 
 // Module 14772 (SafetyHubAccountStandingSubwayMarker)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { width: 56, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", rowGap: 8, flex: 1 }, marker: null, empty: null, label: null, firstOption: null, lastOption: null };
-createCacheKey = { display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1, padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: "100%", height: "100%" };
-createCacheKey[3] = { textAlign: "center" };
-createCacheKey[4] = { alignItems: "flex-start", textAlign: "left" };
-createCacheKey[5] = { alignItems: "flex-end", textAlign: "right" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: "100%", height: "100%" };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: { width: 56, display: "flex", flexDirection: "column", justifyContent: "space-between", alignItems: "center", rowGap: 8, flex: 1 }, marker: null, empty: null, label: null, firstOption: null, lastOption: null };
+createStyles = { display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1, padding: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.marker = createStyles;
+let size = { display: "flex", borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, width: "100%", height: "100%" };
+createStyles.empty = size;
+createStyles.label = { textAlign: "center" };
+createStyles.firstOption = { alignItems: "flex-start", textAlign: "left" };
+createStyles.lastOption = { alignItems: "flex-end", textAlign: "right" };
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/SafetyHubAccountStandingSubwayMarker.tsx");
 
 export default function SafetyHubAccountStandingSubwayMarker(arg0) {
   ({ selectedIcon, style: require, isSelected } = arg0);
   ({ index, size, numOptions } = arg0);
   ({ status, onLayout } = arg0);
-  const tmp = callback();
+  const tmp = closure_6();
   dependencyMap = tmp;
   let obj = {};
   const merged = Object.assign(tmp.container);
@@ -47,33 +48,29 @@ export default function SafetyHubAccountStandingSubwayMarker(arg0) {
     if (index === numOptions - 1) {
       num2 = -isSelected(576).space.PX_4;
     }
-    obj1 = { style: null, children: null };
+    const obj1 = { style: null, children: null };
     obj.marginRight = num2;
-    obj1[0] = obj;
-    const obj2 = { style: null };
-    obj2[0] = tmp.empty;
-    obj1[1] = closure_4(tmp9, obj2);
+    obj1.style = obj;
+    const obj2 = { style: tmp.empty };
+    obj1.children = closure_4(tmp9, obj2);
     selectedIcon = tmp10(tmp9, obj1);
   }
   const items = [selectedIcon, ];
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   items[1] = intl.format(status, {
-    hook(arg0, arg1) {
+    hook(children, arg1) {
       if (isSelected) {
         let obj = { style: null, variant: "text-xxs/bold", children: null };
-        obj = { color: null };
-        obj[0] = color.color;
-        obj[0] = obj;
-        obj[2] = arg0;
+        obj = { color: color.color };
+        obj.style = obj;
+        obj.children = children;
       } else {
-        obj = { color: "interactive-text-default", variant: "text-xxs/normal", style: null, children: null };
-        obj[2] = label.label;
-        obj[3] = arg0;
+        obj = { color: "interactive-text-default", variant: "text-xxs/normal", style: label.label, children };
       }
-      return closure_1_4(closure_1_0(label[6]).Text, obj, arg1);
+      return React4(Text_Text.Text, obj, arg1);
     }
   });
-  obj[2] = items;
+  obj.children = items;
   return closure_5(View, obj);
 };
 export const SUBWAY_MARKER_WIDTH = 56;

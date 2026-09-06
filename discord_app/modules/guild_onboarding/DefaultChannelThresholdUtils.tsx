@@ -1,91 +1,69 @@
-// === Module 9740: _isDefaultChannelThresholdMetAfterDelete ===
+// === Module 9740: DefaultChannelThresholdUtils ===
 
-// Module 9740 (_isDefaultChannelThresholdMetAfterDelete)
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "handleUpdate" /* 7100 */;
-import { NUM_DEFAULT_CHATTABLE_CHANNELS_MIN as closure_7 } from "serverPromptToClientPrompt" /* 7101 */;
-import ME from "ME" /* 1074 */;
+// Module 9740 (DefaultChannelThresholdUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import GuildOnboardingPromptsActionCreators from "GuildOnboardingPromptsActionCreators" /* 7099 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7100 */;
 
-const require = arg1;
-function _isDefaultChannelThresholdMetAfterDelete() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c2 = 0;
-    return (function*(arg0, arg1) {
-      if (c2 === 2) {
-        c2 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+require = fn;
+let closure_10 = async function _isDefaultChannelThresholdMetAfterDelete(arg0, value) {
+  if (c2 === 2) {
+    c2 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c2 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c2 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c2 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let tmp5 = null == closure_0;
-              if (!tmp5) {
-                c3 = 1;
-                c2 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_11(tmp6, tmp7, { removingView: true, removingChat: true });
-                return obj1;
-              }
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw arg1;
-          } else {
-            tmp5 = arg1;
-            if (arg0 === 2) {
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
+          let tmp5 = null == closure_0;
+          if (!tmp5) {
+            c3 = 1;
+            c2 = 1;
+            const obj1 = { value: isChattableChannelThresholdMetAfterChannelChange(tmp6, tmp7, { removingView: true, removingChat: true }), done: false };
+            return obj1;
           }
+        }
+      } else if (arg0 === 1) {
+        c2 = 3;
+        throw value;
+      } else {
+        tmp5 = value;
+        if (arg0 === 2) {
           c2 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = tmp5;
-          return obj2;
-        } catch (tmp10) {
-          c2 = tmp;
-          throw tmp10;
+          obj = { value, done: true };
+          return obj;
         }
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      c2 = 3;
+      const obj2 = { value: tmp5, done: true };
+      return obj2;
+    } catch (tmp10) {
+      c2 = tmp;
+      throw tmp10;
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function isChattableChannelThresholdMetAfterChannelChange() {
   const self = this;
-  const apply = _isChattableChannelThresholdMetAfterChannelChange.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -93,317 +71,274 @@ function isChattableChannelThresholdMetAfterChannelChange() {
   }
   return applyArgumentsResult;
 }
-function _isChattableChannelThresholdMetAfterChannelChange() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    let onboardingPromptsForOnboarding = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (store === 2) {
-        store = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+let closure_12 = async function _isChattableChannelThresholdMetAfterChannelChange(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          store = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              store = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              store = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let defaultChannelIds = tmp2;
-              closure_3 = tmp3;
-              closure_3 = undefined;
-              defaultChannelIds = undefined;
-              c5 = undefined;
-              const guild = onboardingPromptsForOnboarding.getGuild(callback);
-              if (null == guild) {
-                store = 3;
-                return { value: true, done: true };
-              } else {
-                if (null != guild) {
-                  const features = guild.features;
-                  let hasItem;
-                  if (features != null) {
-                    hasItem = features.has(closure_1_8.GUILD_ONBOARDING);
-                  }
-                  if (hasItem) {
-                    if (store.shouldFetchPrompts(tmp46)) {
-                      c5 = 1;
-                      store = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = callback(closure_1_3[5]).fetchOnboardingPrompts(tmp46);
-                      return obj1;
-                    }
-                  }
+          closure_4 = tmp2;
+          closure_3 = tmp3;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          closure_131_2 = closure_2;
+          closure_131_3 = undefined;
+          let defaultChannelIds;
+          closure_131_5 = undefined;
+          guild = guild.getGuild(closure_0);
+          if (null == guild) {
+            c6 = 3;
+            return { value: true, done: true };
+          } else {
+            if (null != guild) {
+              const features = guild.features;
+              let hasItem;
+              if (features != null) {
+                hasItem = features.has(constants.GUILD_ONBOARDING);
+              }
+              if (hasItem) {
+                if (GuildOnboardingPromptsStore.shouldFetchPrompts(tmp45)) {
+                  c5 = 1;
+                  c6 = 1;
+                  let obj1 = { value: GuildOnboardingPromptsActionCreators.fetchOnboardingPrompts(tmp45), done: false };
+                  return obj1;
                 }
-                store = 3;
-                return { value: true, done: true };
               }
             }
-          } else if (arg0 === 1) {
-            store = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            store = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c6 = 3;
+            return { value: true, done: true };
           }
-          closure_3 = (function getAllOnboardingChannelIds(closure_0) {
-            const defaultChannelIds = c6.getDefaultChannelIds(closure_0);
-            if (c6.isAdvancedMode(closure_0)) {
-              onboardingPromptsForOnboarding = obj.getOnboardingPromptsForOnboarding(closure_0);
-              const items = [];
-              const iter = onboardingPromptsForOnboarding[Symbol.iterator]();
-              const nextResult = iter.next();
-              while (iter !== undefined) {
-                if (nextResult.required) {
-                  let tmp9 = nextResult;
-                  let options = tmp8.options;
-                  let tmp10 = options;
-                  let tmp11 = options;
-                  for (const item10025 of options) {
-                    if (null != item10025.channelIds) {
-                      let push = items.push;
-                      let tmp13 = item10025;
-                      let items1 = [];
-                      let tmp14 = items1;
-                      let num = 0;
-                      let arraySpreadResult = HermesBuiltin.arraySpread(tmp12.channelIds, 0);
-                      let tmp16 = push;
-                      let tmp17 = items1;
-                      let tmp18 = items;
-                      let applyResult = HermesBuiltin.apply(items1, items);
-                    }
-                    continue;
-                  }
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+      closure_131_3 = (function getAllOnboardingChannelIds(guildId) {
+        const defaultChannelIds = closure_1_6.getDefaultChannelIds(guildId);
+        if (closure_1_6.isAdvancedMode(guildId)) {
+          const onboardingPromptsForOnboarding = obj.getOnboardingPromptsForOnboarding(guildId);
+          const items = [];
+          const iter = onboardingPromptsForOnboarding[Symbol.iterator]();
+          const nextResult = iter.next();
+          while (iter !== undefined) {
+            if (nextResult.required) {
+              let options = tmp8.options;
+              for (const item10025 of options) {
+                if (null != item10025.channelIds) {
+                  let push = items.push;
+                  let items1 = [];
+                  let arraySpreadResult = HermesBuiltin.arraySpread(tmp12.channelIds, 0);
+                  let applyResult = HermesBuiltin.apply(items1, items);
                 }
                 continue;
               }
-              const _Set = Set;
-              const items2 = [];
-              HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(defaultChannelIds, 0));
-              const set = new Set(items2);
-              const items3 = [];
-              HermesBuiltin.arraySpread(set, 0);
-              return items3;
-            } else {
-              return defaultChannelIds;
             }
-            obj = c6;
-          })(callback);
-          if (closure_3.includes(closure_1)) {
-            if (!closure_2.removingChat) {
-              if (!closure_2.removingView) {
-                store = 3;
-                return { value: true, done: true };
-              }
-            }
-            defaultChannelIds = store.getDefaultChannelIds(callback);
-            if (store.isAdvancedMode(callback)) {
-              onboardingPromptsForOnboarding = store.getOnboardingPromptsForOnboarding(callback);
-            } else {
-              onboardingPromptsForOnboarding = [];
-            }
-            obj1 = callback(closure_3[6]);
-            obj1.getMinimumSetOfDefaultChannelIds(callback, closure_1_4, onboardingPromptsForOnboarding, (arg0) => {
-              let isChattableChannelIdResult = arg0 !== closure_1;
-              if (isChattableChannelIdResult) {
-                isChattableChannelIdResult = callback(table[6]).isChattableChannelId(arg0);
-                const obj = callback(table[6]);
-              }
-              return isChattableChannelIdResult;
-            }).length < closure_7;
-            store = 3;
-          } else {
-            store = 3;
+            continue;
+          }
+          const _Set = Set;
+          const items2 = [];
+          HermesBuiltin.arraySpread(items, HermesBuiltin.arraySpread(defaultChannelIds, 0));
+          const set = new Set(items2);
+          const items3 = [];
+          HermesBuiltin.arraySpread(set, 0);
+          return items3;
+        } else {
+          return defaultChannelIds;
+        }
+        obj = closure_1_6;
+      })(closure_131_0);
+      if (closure_131_3.includes(closure_131_1)) {
+        if (!closure_131_2.removingChat) {
+          if (!closure_131_2.removingView) {
+            c6 = 3;
             return { value: true, done: true };
           }
-        } catch (tmp40) {
-          store = tmp;
-          throw tmp40;
         }
-      }
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (advancedMode === 2) {
-        advancedMode = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
+        defaultChannelIds = closure_132_6.getDefaultChannelIds(closure_131_0);
+        if (closure_132_6.isAdvancedMode(closure_131_0)) {
+          let onboardingPromptsForOnboarding = closure_132_6.getOnboardingPromptsForOnboarding(closure_131_0);
         } else {
-          return { value: "HermesInternal", done: null };
+          onboardingPromptsForOnboarding = [];
         }
-      } else {
-        try {
-          advancedMode = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              advancedMode = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              advancedMode = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp2;
-              dependencyMap = tmp3;
-              let guildId;
-              guildId = guildId.getGuildId();
-              if (null == guildId) {
-                advancedMode = 3;
-                return { value: true, done: true };
-              } else {
-                let found = tmp55;
-                if (null != tmp56) {
-                  let obj5 = callback2(closure_1_3[7]);
-                  found = callback2(closure_1_3[7]).filter(tmp55, obj5.invert(tmp56));
-                  const arr = callback2(closure_1_3[7]);
-                }
-                if (null != obj17.permissionOverwrites[guildId]) {
-                  const arr2 = callback2(closure_1_3[7]);
-                  let found1 = arr2.filter(tmp26.deny, callback2(closure_1_3[7]).invert(tmp26.allow));
-                  let tmp27 = callback2;
-                  const obj8 = callback2(closure_1_3[7]);
-                } else {
-                  tmp27 = callback2;
-                  found1 = callback2(closure_1_3[7]).deserialize(0);
-                  const obj7 = callback2(closure_1_3[7]);
-                }
-                let tmp27Result = tmp27(closure_1_3[7]);
-                const hasItem = tmp27Result.has(found, closure_1_9.VIEW_CHANNEL);
-                let tmp37 = hasItem;
-                if (hasItem) {
-                  tmp27Result = tmp27(closure_1_3[7]);
-                  tmp37 = !tmp27Result.has(found1, tmp34.VIEW_CHANNEL);
-                }
-                obj1 = { removingView: null, removingChat: false };
-                obj1[0] = tmp37;
-                const isForumLikeChannelResult = obj17.isForumLikeChannel();
-                const has = tmp27(closure_1_3[7]).has;
-                if (isForumLikeChannelResult) {
-                  let hasItem1 = has(found, tmp34.SEND_MESSAGES_IN_THREADS);
-                  if (hasItem1) {
-                    hasItem1 = !tmp27(closure_1_3[7]).has(found1, tmp34.SEND_MESSAGES_IN_THREADS);
-                    const tmp27Result2 = tmp27(closure_1_3[7]);
-                  }
-                  obj1.removingChat = hasItem1;
-                } else {
-                  let hasItem2 = has(found, tmp34.SEND_MESSAGES);
-                  if (hasItem2) {
-                    hasItem2 = !tmp27(closure_1_3[7]).has(found1, tmp34.SEND_MESSAGES);
-                    const tmp27Result3 = tmp27(closure_1_3[7]);
-                  }
-                  obj1.removingChat = hasItem2;
-                }
-                if (!obj1.removingChat) {
-                  if (!obj1.removingView) {
-                    advancedMode = 3;
-                    return { value: true, done: true };
-                  }
-                }
-                guildId = advancedMode.isAdvancedMode(guildId);
-                c5 = 1;
-                advancedMode = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = closure_1_11(guildId, obj17.id, obj1);
-                return obj2;
-              }
-            }
-          } else if (arg0 === 1) {
-            advancedMode = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            advancedMode = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else if (arg1) {
-            advancedMode = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = tmp54;
-            return obj4;
-          } else {
-            obj = callback(4904);
-            obj5 = { title: null, body: null };
-            const intl = guildId(1114).intl;
-            obj5[0] = intl.string(guildId(1114).t.ut7sq0);
-            const intl2 = guildId(1114).intl;
-            const format = intl2.format;
-            let t = guildId(1114).t;
-            if (guildId) {
-              t = {};
-              let formatResult = format(t.w9Oz5K, t);
-            } else {
-              formatResult = format(t["5sm9rH"], {});
-            }
-            obj5[1] = formatResult;
-            obj5 = obj.show(obj5);
+        closure_131_5 = onboardingPromptsForOnboarding;
+        obj1 = closure_132_0(closure_132_3[6]);
+        obj1.getMinimumSetOfDefaultChannelIds(closure_131_0, defaultChannelIds, closure_131_5, (arg0) => {
+          let isChattableChannelIdResult = arg0 !== closure_1_1;
+          if (isChattableChannelIdResult) {
+            isChattableChannelIdResult = closure_0(dependencyMap[6]).isChattableChannelId(arg0);
+            const obj = closure_0(dependencyMap[6]);
           }
-        } catch (tmp48) {
-          advancedMode = tmp;
-          throw tmp48;
-        }
+          return isChattableChannelIdResult;
+        }).length < closure_132_7;
+        c6 = 3;
+      } else {
+        c6 = 3;
+        return { value: true, done: true };
       }
-    })();
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp40) {
+      c6 = tmp;
+      throw tmp40;
+    }
   }
-  return applyArgumentsResult;
-}
-({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_onboarding/DefaultChannelThresholdUtils.tsx");
+};
+let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPermissionDeny(arg0, arg1, arg2) {
+  let guildId = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  c5 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp5 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_4 = tmp2;
+            closure_3 = tmp3;
+            closure_131_0 = undefined;
+            guildId = guildId.getGuildId();
+            if (null == guildId) {
+              c6 = 3;
+              return { value: true, done: true };
+            } else {
+              let found = tmp54;
+              if (null != tmp55) {
+                let obj5 = BigFlagUtilsAll;
+                found = BigFlagUtilsAll.filter(tmp54, obj5.invert(tmp55));
+              }
+              if (null != obj16.permissionOverwrites[guildId]) {
+                const arr2 = BigFlagUtilsAll;
+                let found1 = arr2.filter(tmp26.deny, BigFlagUtilsAll.invert(tmp26.allow));
+                let tmp27 = importAll;
+              } else {
+                tmp27 = importAll;
+                const deserializer = BigFlagUtilsAll;
+                found1 = deserializer.deserialize(0);
+              }
+              let tmp27Result = tmp27(1086);
+              const hasItem = tmp27Result.has(found, constants.VIEW_CHANNEL);
+              let tmp37 = hasItem;
+              if (hasItem) {
+                tmp27Result = tmp27(1086);
+                tmp37 = !tmp27Result.has(found1, tmp34.VIEW_CHANNEL);
+              }
+              const obj1 = { removingView: tmp37, removingChat: false };
+              const isForumLikeChannelResult = obj16.isForumLikeChannel();
+              const has = tmp27(1086).has;
+              if (isForumLikeChannelResult) {
+                let hasItem1 = has(found, tmp34.SEND_MESSAGES_IN_THREADS);
+                if (hasItem1) {
+                  hasItem1 = !tmp27(1086).has(found1, tmp34.SEND_MESSAGES_IN_THREADS);
+                  const tmp27Result2 = tmp27(1086);
+                }
+                obj1.removingChat = hasItem1;
+              } else {
+                let hasItem2 = has(found, tmp34.SEND_MESSAGES);
+                if (hasItem2) {
+                  hasItem2 = !tmp27(1086).has(found1, tmp34.SEND_MESSAGES);
+                  const tmp27Result3 = tmp27(1086);
+                }
+                obj1.removingChat = hasItem2;
+              }
+              if (!obj1.removingChat) {
+                if (!obj1.removingView) {
+                  c6 = 3;
+                  return { value: true, done: true };
+                }
+              }
+              closure_131_0 = advancedMode.isAdvancedMode(guildId);
+              c5 = 1;
+              c6 = 1;
+              const obj2 = { value: isChattableChannelThresholdMetAfterChannelChange(guildId, obj16.id, obj1), done: false };
+              return obj2;
+            }
+          }
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else if (value) {
+          c6 = 3;
+          const obj4 = { value: tmp53, done: true };
+          return obj4;
+        } else {
+          obj = closure_132_1(closure_132_3[8]);
+          obj5 = { title: null, body: null };
+          const intl = closure_132_0(closure_132_3[9]).intl;
+          obj5.title = intl.string(closure_132_0(closure_132_3[9]).t.ut7sq0);
+          const intl2 = closure_132_0(closure_132_3[9]).intl;
+          const format = intl2.format;
+          let t = closure_132_0(closure_132_3[9]).t;
+          if (closure_131_0) {
+            t = {};
+            let formatResult = format(t.w9Oz5K, t);
+          } else {
+            formatResult = format(t["5sm9rH"], {});
+          }
+          obj5.body = formatResult;
+          obj5 = obj.show(obj5);
+        }
+      } catch (tmp48) {
+        c6 = tmp;
+        throw tmp48;
+      }
+    }
+  })();
+};
+let closure_7 = fn(7101).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+const Constants = fn(1074);
+({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding/DefaultChannelThresholdUtils.tsx");
 
-export const isDefaultChannelThresholdMetAfterDelete = function isDefaultChannelThresholdMetAfterDelete(guildId, id) {
+export const isDefaultChannelThresholdMetAfterDelete = function isDefaultChannelThresholdMetAfterDelete() {
   const self = this;
-  const apply = _isDefaultChannelThresholdMetAfterDelete.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -411,9 +346,9 @@ export const isDefaultChannelThresholdMetAfterDelete = function isDefaultChannel
   }
   return applyArgumentsResult;
 };
-export const checkChattableChannelThresholdMetAfterChannelPermissionDeny = function checkChattableChannelThresholdMetAfterChannelPermissionDeny(c5, VIEW_CHANNEL, allow) {
+export const checkChattableChannelThresholdMetAfterChannelPermissionDeny = function checkChattableChannelThresholdMetAfterChannelPermissionDeny() {
   const self = this;
-  const apply = _checkChattableChannelThresholdMetAfterChannelPermissionDeny.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

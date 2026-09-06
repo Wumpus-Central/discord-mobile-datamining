@@ -1,16 +1,18 @@
 // === Module 15806: useShopOrientationLock ===
 
 // Module 15806 (useShopOrientationLock)
-import closure_2 from "noop" /* 19 */;
+import applyOrientationLock from "applyOrientationLock" /* 11785 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");
 
 export const useShopOrientationLock = function useShopOrientationLock() {
-  const effect = React.useEffect(() => {
-    callback(table[1]).applyOrientationLock("PORTRAIT", true);
+  const effect = noop.useEffect(() => {
+    applyOrientationLock.applyOrientationLock("PORTRAIT", true);
     return () => {
-      const result = callback(table[1]).releaseOrientationLock({ unlockAfterRotatingToPreviousLock: false });
+      const result = closure_1_0(closure_1_1[1]).releaseOrientationLock({ unlockAfterRotatingToPreviousLock: false });
     };
   }, []);
 };

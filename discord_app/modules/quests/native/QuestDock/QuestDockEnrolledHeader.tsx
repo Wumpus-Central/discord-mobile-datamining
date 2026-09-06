@@ -1,44 +1,44 @@
-// === Module 15190: ? ===
+// === Module 15190: QuestDockEnrolledHeader ===
 
-// Module 15190
-import Text from "Text" /* 4556 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
-import useQuests from "useQuests" /* 11483 */;
-import _getQuestsInstructionsToWinReward from "_getQuestsInstructionsToWinReward" /* 11775 */;
-import getCreativeAnalyticsParams from "getCreativeAnalyticsParams" /* 15102 */;
-import COMPLETION_GLOW_SHADOW_RADIUSDefault from "COMPLETION_GLOW_SHADOW_RADIUS" /* 15131 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15190 (QuestDockEnrolledHeader)
+import Text_Text from "Text/Text" /* 4556 */;
+import QuestTypes from "QuestTypes" /* 5447 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11483 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 11775 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15102 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15131 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: 8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1 } });
-const memoResult = importAllResult.memo(function QuestDockEnrolledHeader() {
-  let obj = getCreativeAnalyticsParams;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: 8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx");
+
+export default noop.memo(function QuestDockEnrolledHeader() {
+  let obj = QuestDockCreativeContext;
   const questDockQuest = obj.useQuestDockQuest();
-  const tmp2 = callback4();
-  obj1 = useQuests;
+  const tmp2 = closure_7();
+  let obj1 = hooks_QuestHooks;
   const questTaskDetails = obj1.useQuestTaskDetails(questDockQuest);
-  let obj2 = useQuests;
-  let obj3 = _getQuestsInstructionsToWinReward;
+  let obj2 = hooks_QuestHooks;
+  let obj3 = QuestCopyHooks;
   const questBarTitle = obj3.useQuestBarTitle(questDockQuest);
-  obj = { quest: questDockQuest, isExpanded: false, activeScreen: callback(obj2.useTaskPlatformScreen(questDockQuest, questTaskDetails), 1)[0], sourceQuestContent: QuestsVisibleMessagesChangedSource.QuestContent.QUEST_BAR_MOBILE };
+  obj = { quest: questDockQuest, isExpanded: false, activeScreen: _slicedToArray(obj2.useTaskPlatformScreen(questDockQuest, questTaskDetails), 1)[0], sourceQuestContent: QuestTypes.QuestContent.QUEST_BAR_MOBILE };
   obj = { style: tmp2.wrapper, children: null };
   obj1 = { style: tmp2.progressIndicatorWrapper, children: null };
-  const questBarSubtitle = _getQuestsInstructionsToWinReward.useQuestBarSubtitle(obj);
+  const questBarSubtitle = QuestCopyHooks.useQuestBarSubtitle(obj);
   obj2 = { quest: questDockQuest, size: "x-sm", progress: questTaskDetails.percentComplete, loading: false, hasConfetti: true };
-  obj1[1] = callback2(COMPLETION_GLOW_SHADOW_RADIUSDefault, obj2);
-  const items = [callback2(View, obj1), ];
+  obj1.children = hasOwnProperty(QuestProgressIndicatorDefault, obj2);
+  const items = [hasOwnProperty(View, obj1), ];
   obj3 = { style: tmp2.copy, children: null };
-  const items1 = [callback2(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: questBarTitle }), callback2(Text.Text, { variant: "text-sm/medium", color: "text-muted", children: questBarSubtitle })];
-  obj3[1] = items1;
-  items[1] = callback3(View, obj3);
-  obj[1] = items;
-  return callback3(View, obj);
+  const items1 = [hasOwnProperty(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: questBarTitle }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: questBarSubtitle })];
+  obj3.children = items1;
+  items[1] = timestampProducer(View, obj3);
+  obj.children = items;
+  return timestampProducer(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx");
-
-export default memoResult;

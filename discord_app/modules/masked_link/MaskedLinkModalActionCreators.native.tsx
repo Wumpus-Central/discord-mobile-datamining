@@ -1,18 +1,19 @@
-// === Module 12953: ? ===
+// === Module 12953: MaskedLinkModalActionCreators ===
 
-// Module 12953
+// Module 12953 (MaskedLinkModalActionCreators)
 import useAlertStore from "useAlertStore" /* 4906 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/masked_link/MaskedLinkModalActionCreators.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/masked_link/MaskedLinkModalActionCreators.native.tsx");
 
 export default {
   show(onCancel) {
     onCancel = onCancel.onCancel;
     ({ url, trustUrl, onConfirm, isProtocol } = onCancel);
-    const lazyResult = React.lazy(() => callback(paths[3])(paths[2], paths.paths));
+    const lazyResult = noop.lazy(() => require("asyncRequireImpl")(paths[2], paths.paths));
     useAlertStore.openAlert("masked-link", <lazyResult url={url} trustUrl={trustUrl} onConfirm={onConfirm} onCancel={onCancel} isProtocol={isProtocol} />, onCancel);
   }
 };

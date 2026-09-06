@@ -1,11 +1,11 @@
-// === Module 17327: getAppMajorVersion ===
+// === Module 17327: AppInfoUtils ===
 
-// Module 17327 (getAppMajorVersion)
-import set from "set" /* 2 */;
-import getConstants from "getConstants" /* 1364 */;
+// Module 17327 (AppInfoUtils)
+import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
+import size from "module_2" /* 2 */;
 
-const constants = getConstants.getConstants();
-const result = set.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
+const constants = ClientInfoUtils.getConstants();
+const result = size.fileFinishedImporting("utils/native/AppInfoUtils.tsx");
 
 export const getAppMajorVersion = function getAppMajorVersion() {
   if (undefined === closure_0) {

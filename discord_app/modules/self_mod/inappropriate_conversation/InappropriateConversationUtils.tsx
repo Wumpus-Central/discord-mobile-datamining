@@ -1,21 +1,22 @@
-// === Module 11397: getSafetyAlertsSettingOrDefault ===
+// === Module 11397: InappropriateConversationUtils ===
 
-// Module 11397 (getSafetyAlertsSettingOrDefault)
-import trackViewedEvent from "trackViewedEvent" /* 11370 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import closure_4 from "handleConnectionOpen" /* 10915 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10915 */;
+// Module 11397 (InappropriateConversationUtils)
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11370 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserStore from "UserStore" /* 1371 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10915 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");
+require = fn;
+const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");
 
 export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOrDefault() {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   if (currentUser != null) {
     const isStaffResult = currentUser.isStaff();
   }
-  const privacy = settings.settings.privacy;
+  const privacy = UserSettingsProtoStore.settings.privacy;
   let flag;
   if (privacy != null) {
     if (privacy.inappropriateConversationWarnings != null) {
@@ -25,7 +26,7 @@ export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOr
   if (flag == null) {
     flag = true;
   }
-  let userIsTeen = trackViewedEvent.getUserIsTeen();
+  let userIsTeen = SafetyWarningUtils.getUserIsTeen();
   if (!userIsTeen) {
     userIsTeen = true === isStaffResult;
   }
@@ -35,8 +36,8 @@ export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOr
   return userIsTeen;
 };
 export const getInappropriateConversationTakeoverForChannel = function getInappropriateConversationTakeoverForChannel(channelId) {
-  channelSafetyWarnings = channelSafetyWarnings.getChannelSafetyWarnings(channelId);
-  const found = channelSafetyWarnings.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1);
+  const channelSafetyWarnings = ChannelSafetyWarningsStore.getChannelSafetyWarnings(channelId);
+  const found = channelSafetyWarnings.filter((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
   if (found.filter((dismiss_timestamp) => null != dismiss_timestamp.dismiss_timestamp).length > 0) {
     return null;
   } else {
@@ -52,7 +53,7 @@ export const shouldShowInappropriateConversationTakeoverForChannelRecord = funct
   let tmp = null != safetyWarnings.safetyWarnings;
   if (tmp) {
     safetyWarnings = safetyWarnings.safetyWarnings;
-    const found = safetyWarnings.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1);
+    const found = safetyWarnings.filter((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
     let everyResult = found.length > 0;
     if (everyResult) {
       everyResult = found.every((dismiss_timestamp) => null == dismiss_timestamp.dismiss_timestamp);
@@ -62,7 +63,7 @@ export const shouldShowInappropriateConversationTakeoverForChannelRecord = funct
   return tmp;
 };
 export const shouldShowTakeoverForWarnings = function shouldShowTakeoverForWarnings(inappropriateConversationWarningsForChannel) {
-  const found = inappropriateConversationWarningsForChannel.filter((type) => type.type === obj.INAPPROPRIATE_CONVERSATION_TIER_1);
+  const found = inappropriateConversationWarningsForChannel.filter((type) => type.type === SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
   let everyResult = found.length > 0;
   if (everyResult) {
     everyResult = found.every((dismiss_timestamp) => null == dismiss_timestamp.dismiss_timestamp);

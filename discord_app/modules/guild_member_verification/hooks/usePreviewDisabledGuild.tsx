@@ -1,22 +1,24 @@
 // === Module 5576: usePreviewDisabledGuild ===
 
 // Module 5576 (usePreviewDisabledGuild)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "get" /* 5572 */;
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 5547 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5572 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");
+const require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member_verification/hooks/usePreviewDisabledGuild.tsx");
 
 export default function usePreviewDisabledGuild(arg0) {
-  const _require = arg0;
-  const items = [closure_4];
-  let stateFromStores = _require(504).useStateFromStores(items, () => closure_1_4.getGuild(closure_0));
-  let obj = _require(504);
+  _require = arg0;
+  const items = [GuildStore];
+  let stateFromStores = require("initialize").useStateFromStores(items, () => GuildStore.getGuild(closure_0));
+  let obj = require("initialize");
   const tmp = _require;
-  const items1 = [closure_5];
-  const stateFromStores1 = _require(504).useStateFromStores(items1, () => {
-    const value = closure_1_5.get(closure_0);
+  const items1 = [MemberVerificationFormStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
+    value = MemberVerificationFormStore.get(closure_0);
     let guild;
     if (value != null) {
       guild = value.guild;
@@ -24,10 +26,9 @@ export default function usePreviewDisabledGuild(arg0) {
     return guild;
   });
   const items2 = [arg0];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != closure_0) {
-      const verificationForm = closure_1_1(closure_1_2[4]).fetchVerificationForm(tmp);
-      const obj = closure_1_1(closure_1_2[4]);
+      const verificationForm = MemberVerificationActionCreatorsDefault.fetchVerificationForm(tmp);
     }
   }, items2);
   if (stateFromStores == null) {

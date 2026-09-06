@@ -1,9 +1,9 @@
-// === Module 16043: getSuggestedContactNameForSuggestion ===
+// === Module 16043: FriendSuggestionUtils ===
 
-// Module 16043 (getSuggestedContactNameForSuggestion)
-import set from "set" /* 2 */;
+// Module 16043 (FriendSuggestionUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
+const result = size.fileFinishedImporting("modules/friend_suggestions/FriendSuggestionUtils.tsx");
 
 export const getSuggestedContactNameForSuggestion = function getSuggestedContactNameForSuggestion(friendSuggestionName, suggestedFriend) {
   let contactNames;

@@ -1,72 +1,71 @@
-// === Module 13256: NewBadge ===
+// === Module 13256: ConversationCoachmark ===
 
-// Module 13256 (NewBadge)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 13256 (ConversationCoachmark)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function NewBadge() {
-  let obj = { style: callback2().badge, children: null };
+  let obj = { style: closure_9().badge, children: null };
   obj = { variant: "text-sm/bold", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.c2GSIl);
-  obj[1] = jsx(Text.Text, { variant: "text-sm/bold", color: "text-default", children: null });
+  const intl = util.intl;
+  obj.children = intl.string(util.t.c2GSIl);
+  obj.children = jsx(Text_Text.Text, { variant: "text-sm/bold", color: "text-default", children: null });
   return <View variant="text-sm/bold" color="text-default">{null}</View>;
 }
-const TOPICAL_NAVIGATION_HEADER_COACHMARK = require("DismissibleContent").DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
+const View = fn(17).View;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const TOPICAL_NAVIGATION_HEADER_COACHMARK = fn(1943).DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
-createCacheKey = { badge: null, coachmarkWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginRight: ThemesDefault.space.PX_12 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginRight: ThemesDefault.space.PX_12 };
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
+fn(4560);
+let createStyles = { badge: null, coachmarkWrapper: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
+createStyles.badge = createStyles;
+createStyles.coachmarkWrapper = { marginRight: nativeDefault.space.PX_12 };
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
 
 export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   let first;
-  dependencyMap = undefined;
   ({ children, isLast } = arg0);
-  const ref = React.useRef(null);
+  const ref = noop.useRef(null);
   let obj = first(7388);
-  const tmp3 = callback(obj.useSelectedDismissibleContent(items), 2);
+  const tmp3 = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
   first = tmp3[0];
   dependencyMap = tmp5;
   items = [tmp3[1], first];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null };
-    const intl = first(1114).intl;
-    obj[0] = intl.string(first(1114).t.UcQjDe);
-    const intl2 = first(1114).intl;
-    obj[1] = intl2.string(first(1114).t.QeJIbA);
-    obj[3] = first === closure_1_7;
-    obj[4] = function onDismiss() {
-      callback(closure_1_5.USER_DISMISS);
+    const intl = util.intl;
+    obj.title = intl.string(util.t.UcQjDe);
+    const intl2 = util.intl;
+    obj.description = intl2.string(util.t.QeJIbA);
+    obj.visible = first === TOPICAL_NAVIGATION_HEADER_COACHMARK;
+    obj.onDismiss = function onDismiss() {
+      closure_1_1(constants.USER_DISMISS);
     };
-    obj[5] = function renderImgComponent() {
-      return callback2(closure_10, {});
+    obj.renderImgComponent = function renderImgComponent() {
+      return closure_1_6(closure_1_10, {});
     };
     return obj;
   }, items);
-  const tmp = callback2();
+  const tmp = closure_9();
   const coachmark = first(11127).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
-  callback = React.useCallback(() => {
-    dependencyMap(closure_1_5.USER_DISMISS);
+  const callback = noop.useCallback(() => {
+    closure_1(ContentDismissActionType.USER_DISMISS);
   }, items1);
   if (!isLast) {
     coachmarkWrapper = tmp.coachmarkWrapper;
   }
   obj = { style: coachmarkWrapper, children: null };
   obj = { ref, children: children(callback) };
-  obj[1] = <View ref={ref}>{children(callback)}</View>;
+  obj.children = <View ref={ref}>{children(callback)}</View>;
   return <View ref={ref}>{children(callback)}</View>;
 };

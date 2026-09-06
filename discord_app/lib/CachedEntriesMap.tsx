@@ -1,9 +1,10 @@
-// === Module 1932: keys ===
+// === Module 1932: CachedEntriesMap ===
 
-// Module 1932 (keys)
-import set from "set" /* 2 */;
+// Module 1932 (CachedEntriesMap)
+import FunctionUtils from "FunctionUtils" /* 1933 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("lib/CachedEntriesMap.tsx");
+let result = size.fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -11,17 +12,17 @@ class CachedEntriesMap {
     obj.version = 0;
     map = new Map();
     obj.data = map;
-    obj = require("areArraysShallowlyEqual");
+    obj = closure_0(closure_1[0]);
     obj.cachedValues = obj.cachedFunction(() => {
       const data = obj.data;
       return Array.from(data.values());
     });
-    obj2 = require("areArraysShallowlyEqual");
+    obj2 = closure_0(closure_1[0]);
     obj.cachedKeys = obj2.cachedFunction(() => {
       const data = obj.data;
       return Array.from(data.keys());
     });
-    obj3 = require("areArraysShallowlyEqual");
+    obj3 = closure_0(closure_1[0]);
     obj.cachedEntries = obj3.cachedFunction(() => {
       const data = obj.data;
       return Array.from(data.entries());

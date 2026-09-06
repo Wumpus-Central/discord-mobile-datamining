@@ -1,20 +1,21 @@
 // === Module 13793: useSelectedActiveStream ===
 
 // Module 13793 (useSelectedActiveStream)
-import closure_2 from "getParticipants" /* 4576 */;
-import closure_3 from "reset" /* 4582 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
 
 export default function useSelectedActiveStream(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
-  return _require(504).useStateFromStores(items, () => {
-    const selectedParticipantId = closure_1_2.getSelectedParticipantId(id.id);
+  _require = arg0;
+  const items = [ChannelRTCStore, ApplicationStreamingStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const selectedParticipantId = ChannelRTCStore.getSelectedParticipantId(id.id);
     let activeStreamForStreamKey = null;
     if (null != selectedParticipantId) {
-      activeStreamForStreamKey = closure_1_3.getActiveStreamForStreamKey(selectedParticipantId);
+      activeStreamForStreamKey = ApplicationStreamingStore.getActiveStreamForStreamKey(selectedParticipantId);
     }
     return activeStreamForStreamKey;
   });

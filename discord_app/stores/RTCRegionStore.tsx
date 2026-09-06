@@ -1,13 +1,14 @@
-// === Module 4610: initialize ===
+// === Module 4610: RTCRegionStore ===
 
-// Module 4610 (initialize)
-import applyDefault from "apply" /* 12 */;
+// Module 4610 (RTCRegionStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
-const HOUR = setDefault.Millis.HOUR;
+let closure_3 = obj;
+const HOUR = DurationsDefault.Millis.HOUR;
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class RTCRegionStore extends DeviceSettingsStore {
 }
@@ -20,10 +21,10 @@ prototype["initialize"] = function initialize(arg0) {
   closure_3 = tmp;
 };
 prototype["shouldIncludePreferredRegion"] = function shouldIncludePreferredRegion() {
-  return null != obj.preferredRegions;
+  return null != closure_3.preferredRegions;
 };
 prototype["getPreferredRegion"] = function getPreferredRegion() {
-  const preferredRegions = obj.preferredRegions;
+  const preferredRegions = closure_3.preferredRegions;
   let first;
   if (preferredRegions != null) {
     first = preferredRegions[0];
@@ -34,7 +35,7 @@ prototype["getPreferredRegion"] = function getPreferredRegion() {
   return first;
 };
 prototype["getPreferredRegions"] = function getPreferredRegions() {
-  return obj.preferredRegions;
+  return closure_3.preferredRegions;
 };
 prototype["getRegion"] = function getRegion(str) {
   if (null != str) {
@@ -42,21 +43,20 @@ prototype["getRegion"] = function getRegion(str) {
   }
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return obj;
+  return closure_3;
 };
 prototype["shouldPerformLatencyTest"] = function shouldPerformLatencyTest(mapped) {
-  let tmp = null === obj.preferredRegions;
+  let tmp = null === closure_3.preferredRegions;
   if (!tmp) {
-    obj = applyDefault;
-    let lastGeoRankedOrder = obj.lastGeoRankedOrder;
+    let lastGeoRankedOrder = closure_3.lastGeoRankedOrder;
     if (lastGeoRankedOrder == null) {
       lastGeoRankedOrder = [];
     }
-    tmp = !obj.isEqual(mapped, lastGeoRankedOrder);
+    tmp = !_modDef12.isEqual(mapped, lastGeoRankedOrder);
   }
   if (!tmp) {
     const _Date = Date;
-    let num = obj.lastTestTimestamp;
+    let num = closure_3.lastTestTimestamp;
     const timestamp = Date.now();
     if (num == null) {
       num = 0;
@@ -83,13 +83,14 @@ RTCRegionStore.migrations = items;
 obj = {
   RTC_LATENCY_TEST_COMPLETE: function handleCompletedRTCLatencyTest(latencyRankedRegions) {
     if (latencyRankedRegions.latencyRankedRegions.length > 0) {
-      obj.lastGeoRankedOrder = latencyRankedRegions.geoRankedRegions;
-      obj.preferredRegions = latencyRankedRegions.latencyRankedRegions;
+      closure_3.lastGeoRankedOrder = latencyRankedRegions.geoRankedRegions;
+      closure_3.preferredRegions = latencyRankedRegions.latencyRankedRegions;
     }
-    obj.lastTestTimestamp = Date.now();
+    closure_3.lastTestTimestamp = Date.now();
   }
 };
-const rTCRegionStore = new RTCRegionStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("stores/RTCRegionStore.tsx");
+const rTCRegionStore = new RTCRegionStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/RTCRegionStore.tsx");
 
 export default rTCRegionStore;

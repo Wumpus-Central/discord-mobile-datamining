@@ -1,25 +1,25 @@
 // === Module 14764: useAccountStandingStatusLabel ===
 
 // Module 14764 (useAccountStandingStatusLabel)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 11882 */;
 import useSafetyHubInitialized from "useSafetyHubInitialized" /* 11910 */;
 import useSafetyHubFetchError from "useSafetyHubFetchError" /* 14765 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
+const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
 
 export const useAccountStandingStatusLabel = function useAccountStandingStatusLabel() {
   let obj = useSafetyHubAccountStanding;
   const safetyHubAccountStanding = obj.useSafetyHubAccountStanding();
   const safetyHubInitialized = useSafetyHubInitialized.useSafetyHubInitialized();
-  const obj2 = useSafetyHubInitialized;
   const safetyHubFetchError = useSafetyHubFetchError.useSafetyHubFetchError();
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   if (safetyHubInitialized) {
-    obj = { hook: null };
-    obj[0] = function hook(arg0) {
-      return arg0;
+    obj = {
+      hook(arg0) {
+          return arg0;
+        }
     };
     let formatToPlainStringResult = intl.formatToPlainString(tmp(14766).ACCOUNT_STANDING_SHORT_STATUS[safetyHubAccountStanding.state], obj);
   } else {

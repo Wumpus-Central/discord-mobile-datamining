@@ -1,29 +1,29 @@
-// === Module 14704: route ===
+// === Module 14704: AccountUsernameSetting ===
 
-// Module 14704 (route)
-import noopAll from "noop" /* 19 */;
+// Module 14704 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11871 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11871 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-noopAll;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.IEpCBQ);
+    const intl = util.intl;
+    return intl.string(util.t.IEpCBQ);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7975).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
-    const items = [closure_3];
-    return initialize.useStateFromStores(items, () => callback(table[6]).getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
+    const items = [UserStore];
+    return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
   },
   useDescription: function useAccountUsernameSettingDescription() {
-    let obj = useCurrentUserHasAutomodQuarantinedProfile;
+    let obj = AutomodQuarantineUtils;
     const guildAutomodProfileQuarantineErrors = obj.useGuildAutomodProfileQuarantineErrors();
     let first;
     if (guildAutomodProfileQuarantineErrors != null) {
@@ -34,21 +34,20 @@ createToggle = {
     }
     let tmp5 = null;
     if (null != first) {
-      obj = { variant: "text-xs/medium", color: "text-feedback-warning", children: null };
-      obj[2] = first;
-      tmp5 = jsx(Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: null });
+      obj = { variant: "text-xs/medium", color: "text-feedback-warning", children: first };
+      tmp5 = jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-feedback-warning", children: first });
     }
     return tmp5;
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
-  getComponent() {
-    return require(14705) /* UsernameStatusMessage */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
+    getComponent() {
+      return require("UserSettingsChangeUsername").default;
+    }
   }
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,21 +1,21 @@
-// === Module 575: unsafe_getRawColor ===
+// === Module 575: shims ===
 
-// Module 575 (unsafe_getRawColor)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 575 (shims)
+import nativeDefault from "native" /* 576 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/tokens/shims.native.tsx");
 
 export const unsafe_getRawColor = function unsafe_getRawColor(RED_400) {
-  return ThemesDefault.unsafe_rawColors[RED_400];
+  return nativeDefault.unsafe_rawColors[RED_400];
 };
 export const unsafe_getResolvedRawColor = function unsafe_getResolvedRawColor(BRAND_500, saturation) {
-  const internal = ThemesDefault.internal;
-  return internal.adjustColorSaturation(ThemesDefault.unsafe_rawColors[BRAND_500], saturation.saturation, "generic");
+  const internal = nativeDefault.internal;
+  return internal.adjustColorSaturation(nativeDefault.unsafe_rawColors[BRAND_500], saturation.saturation, "generic");
 };
 export const getThemes = function getThemes() {
-  return ThemesDefault.themes;
+  return nativeDefault.themes;
 };
 export const getRadii = function getRadii() {
-  return ThemesDefault.radii;
+  return nativeDefault.radii;
 };

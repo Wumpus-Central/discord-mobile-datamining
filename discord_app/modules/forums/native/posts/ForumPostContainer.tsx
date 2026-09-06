@@ -1,53 +1,57 @@
-// === Module 12020: useForumPostContainerPressedIn ===
+// === Module 12020: ForumPostContainer ===
 
-// Module 12020 (useForumPostContainerPressedIn)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 12020 (ForumPostContainer)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import Card from "Card" /* 5607 */;
 import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10219 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 7074 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { childContainer: { position: "relative", minHeight: 110, padding: 12 }, card: { marginBottom: 12 }, disabledContainer: null };
-obj = { marginBottom: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md, overflow: "hidden" };
-obj[2] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const context = importAllResult.createContext(createFakeSharedValue.createFakeSharedValue(false));
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");
+obj = { marginBottom: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
+obj.disabledContainer = obj;
+let closure_6 = createStyles.createStyles(obj);
+const ReanimatedHelperTypes = fn(7074);
+const redux = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue(false));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostContainer.tsx");
 
 export const useForumPostContainerPressedIn = function useForumPostContainerPressedIn() {
-  return importAllResult.useContext(closure_7);
+  return noop.useContext(closure_7);
 };
 export const ForumPostPressableContainer = function ForumPostPressableContainer(arg0) {
-  let sharedValue;
   ({ threadId, children, style } = arg0);
-  const tmp = callback();
-  let obj = sharedValue(4296);
-  sharedValue = obj.useSharedValue(false);
+  const tmp = closure_6();
+  let obj = ReanimatedRexport;
+  const sharedValue = obj.useSharedValue(false);
   const items = [sharedValue];
-  const memo = importAllResult.useMemo(() => ({
+  const memo = noop.useMemo(() => ({
     onPressIn() {
-      return store.set(true);
+      return sharedValue.set(true);
     },
     onPressOut() {
-      return store.set(false);
+      return sharedValue.set(false);
     }
   }), items);
   ({ onPressIn, onPressOut } = memo);
-  obj = { style: tmp.card, children: jsx(sharedValue(5607).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children }) };
+  obj = { style: tmp.card, children: null };
   ({ onTapPost, onLongTapPost } = useNativeForumPostHandlersDefault({ threadId }));
-  items1 = [tmp.childContainer, style];
-  obj = { value: sharedValue, children: <View style={tmp.card}>{jsx(sharedValue(5607).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View> };
-  return <redux.Provider value={sharedValue}><View style={tmp.card}>{jsx(sharedValue(5607).Card, { style: items1, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children })}</View></redux.Provider>;
+  obj = { style: null, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children };
+  const items1 = [tmp.childContainer, style];
+  obj.style = items1;
+  obj.children = jsx(Card.Card, { style: null, variant: "surface-high", accessibilityRole: "button", onPress: onTapPost, onPressIn, onPressOut, onLongPress: onLongTapPost, unstable_pressDelay: 130, children });
+  const tmp4 = useNativeForumPostHandlersDefault({ threadId });
+  return <redux.Provider value={sharedValue}><View style={null} variant="surface-high" accessibilityRole="button" onPress={onTapPost} onPressIn={onPressIn} onPressOut={onPressOut} onLongPress={onLongTapPost} unstable_pressDelay={130}>{children}</View></redux.Provider>;
 };
 export const ForumPostDisabledContainer = function ForumPostDisabledContainer(arg0) {
   ({ children, style } = arg0);
   const obj = { style: null, pointerEvents: "none", children: null };
-  const items = [callback().disabledContainer, style];
-  obj[0] = items;
-  obj[2] = children;
+  const items = [closure_6().disabledContainer, style];
+  obj.style = items;
+  obj.children = children;
   return <View style={null} pointerEvents="none">{null}</View>;
 };

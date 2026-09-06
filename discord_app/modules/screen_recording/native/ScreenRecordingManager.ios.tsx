@@ -1,11 +1,11 @@
-// === Module 15934: get ActivityIndicator ===
+// === Module 15934: ScreenRecordingManager ===
 
-// Module 15934 (get ActivityIndicator)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 15934 (ScreenRecordingManager)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const DCDScreenRecordingManager = get_ActivityIndicator.NativeModules.DCDScreenRecordingManager;
-const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
+const DCDScreenRecordingManager = _mod17.NativeModules.DCDScreenRecordingManager;
+const result = size.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
 
 export default {
   requestPermissions() {
@@ -23,8 +23,8 @@ export default {
   getLatestRecording() {
     return DCDScreenRecordingManager.getLatestRecording();
   },
-  setRecordingQuality(arg0) {
-    return DCDScreenRecordingManager.setRecordingQuality(arg0);
+  setRecordingQuality(size) {
+    return DCDScreenRecordingManager.setRecordingQuality(size);
   },
   getRecordingQuality() {
     return DCDScreenRecordingManager.getRecordingQuality();

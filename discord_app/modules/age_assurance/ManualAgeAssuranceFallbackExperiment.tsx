@@ -1,13 +1,15 @@
-// === Module 13763: isManualAgeAssuranceFallbackEnabled ===
+// === Module 13763: ManualAgeAssuranceFallbackExperiment ===
 
-// Module 13763 (isManualAgeAssuranceFallbackEnabled)
-import set from "set" /* 2 */;
+// Module 13763 (ManualAgeAssuranceFallbackExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-07-manual-age-assurance-fallback", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-07-manual-age-assurance-fallback", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx");
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/age_assurance/ManualAgeAssuranceFallbackExperiment.tsx");
 
 export const isManualAgeAssuranceFallbackEnabled = function isManualAgeAssuranceFallbackEnabled(isAgeVerificationMessageWithManualReviewCta) {
   return config.getConfig({ location: isAgeVerificationMessageWithManualReviewCta }).enabled;

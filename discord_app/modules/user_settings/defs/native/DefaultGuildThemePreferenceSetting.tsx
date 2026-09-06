@@ -1,44 +1,46 @@
-// === Module 15310: radio ===
+// === Module 15310: DefaultGuildThemePreferenceSetting ===
 
-// Module 15310 (radio)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import apexExperiment from "apexExperiment" /* 4488 */;
-import closure_2 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15310 (DefaultGuildThemePreferenceSetting)
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4488 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Q7mm4g);
+    const intl = util.intl;
+    return intl.string(util.t.Q7mm4g);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
-  useValue: require("explicitContentFromProto").DefaultGuildThemePreference.useSetting,
+  parent: fn(7975).MobileUserSettings.APPEARANCE,
+  useValue: fn(1935).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
-    const DefaultGuildThemePreference = explicitContentFromProto.DefaultGuildThemePreference;
+    const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;
     DefaultGuildThemePreference.updateSetting(Number(arg0));
   },
   useOptions: function useDefaultGuildThemePreferenceOptions() {
-    return React.useMemo(() => {
+    return noop.useMemo(() => {
       let obj = { label: null, value: null };
-      const intl = callback(1114).intl;
-      obj[0] = intl.string(callback(1114).t.aN3RNQ);
-      obj[1] = callback(1187).GuildThemeSourcePreference.GUILD;
+      const intl = util.intl;
+      obj.label = intl.string(util.t.aN3RNQ);
+      obj.value = preloaded_user_settings.GuildThemeSourcePreference.GUILD;
       const items = [obj, ];
       obj = { label: null, value: null };
-      const intl2 = callback(1114).intl;
-      obj[0] = intl2.string(callback(1114).t.js8y7t);
-      obj[1] = callback(1187).GuildThemeSourcePreference.PERSONAL;
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.js8y7t);
+      obj.value = preloaded_user_settings.GuildThemeSourcePreference.PERSONAL;
       items[1] = obj;
       return items;
     }, []);
   },
   usePredicate() {
-    return apexExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
+    return ServerThemeUserExperiment.useServerThemeUserEnabled("DefaultGuildThemePreferenceSetting");
   }
 };
-createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
+SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DefaultGuildThemePreferenceSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

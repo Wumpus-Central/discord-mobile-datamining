@@ -1,27 +1,23 @@
-// === Module 9568: postMessageToWebView ===
+// === Module 9568: FramesNativeManager ===
 
-// Module 9568 (postMessageToWebView)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 9568 (FramesNativeManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import util from "util" /* 1114 */;
 import v1 from "v1" /* 1256 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import enforcingDefault from "enforcing" /* 9516 */;
-import leaveFrameDefault from "leaveFrame" /* 9569 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "map" /* 9510 */;
-import { isLaunched } from "FrameLayoutModes" /* 9511 */;
-import { ComponentActions } from "ME" /* 1074 */;
-import { DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY as closure_7 } from "items3" /* 1920 */;
-import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4465 */;
-import WebView from "WebView" /* 8298 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9516 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9517 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9550 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import FramesStore from "FramesStore" /* 9510 */;
+import FramesManager from "FramesManager" /* 9569 */;
 
-require = arg1;
+require = fn;
 function postMessageToWebView() {
   const self = this;
-  const apply = _postMessageToWebView.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -29,48 +25,34 @@ function postMessageToWebView() {
   }
   return applyArgumentsResult;
 }
-function _postMessageToWebView() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
+let closure_12 = async function _postMessageToWebView(arg0, arg1) {
+  closure_2 = tmp3;
+  await closure_2_9.injectJavaScript(getPostMessageJavaScriptDefault(closure_0));
+  if (1 === tmp7) {
     c4 = 0;
-    return (function*(arg0) {
-      const table = tmp3;
-      c4 = 1;
-      yield closure_1_9.injectJavaScript(closure_1_1(closure_1_2[10])(closure_0));
-      if (1 === tmp7) {
-        c4 = 0;
-        closure_0 = closure_3;
-        obj1 = callback(table[11]);
-        obj1.captureException(closure_0);
-        c6 = 3;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c4 = 0;
-      }
-      c4 = 0;
-      return arg1;
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    closure_129_0 = closure_3;
+    closure_130_1(closure_130_2[11]).captureException(closure_129_0);
+    c6 = 3;
+    closure_130_1(closure_130_2[11]);
+  } else if (arg0 === 1) {
+    c6 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    c4 = 0;
   }
-  return applyArgumentsResult;
-}
-const webViewProxy = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
+  return arg1;
+};
+const isLaunched = fn(9511).isLaunched;
+const ComponentActions = fn(1074).ComponentActions;
+let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
+const TransportTypes = fn(4465).TransportTypes;
+const WebView = fn(8298);
+const React7 = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
+const PlatformUtils = fn(1116);
 let nativeEventEmitter = null;
-if (PlatformTypes.isAndroid()) {
-  nativeEventEmitter = new require("get ActivityIndicator").NativeEventEmitter(enforcingDefault);
+if (PlatformUtils.isAndroid()) {
+  nativeEventEmitter = new fn(17).NativeEventEmitter(NativeAppLifecycleModuleDefault);
 }
-leaveFrameDefault;
 class FramesNativeManager extends tmp5 {
   _initialize() {
     self = this;
@@ -103,36 +85,31 @@ class FramesNativeManager extends tmp5 {
         const managedFrame = self.getManagedFrame();
         let tmp9 = typeof parsed === "object";
         if (typeof parsed === "object") {
-          tmp9 = closure_1_5(managedFrame);
+          tmp9 = isLaunched(managedFrame);
         }
         if (tmp9) {
           tmp9 = null != managedFrame.data.iframeId;
         }
         if (tmp9) {
-          let obj = closure_1_1(closure_1_2[13]);
-          obj = { type: null, origin: null, iframeId: null };
-          obj[0] = closure_1_8.POST_MESSAGE;
-          obj[1] = managedFrame.data.url;
-          obj[2] = managedFrame.data.iframeId;
-          obj.handleMessage(parsed, obj, closure_1_11);
+          let obj = WebViewPostMessageTransportDefault;
+          obj = { type: TransportTypes.POST_MESSAGE, origin: managedFrame.data.url, iframeId: managedFrame.data.iframeId };
+          obj.handleMessage(parsed, obj, postMessageToWebView);
         }
       } catch (tmp18) {
         const _SyntaxError = SyntaxError;
         if (tmp18 instanceof SyntaxError) {
-          if (tmp2.data === closure_1_7) {
+          if (tmp2.data === closure_7) {
             const managedFrame1 = self.getManagedFrame();
             if (null != managedFrame1) {
               obj3.leaveFrame(managedFrame1.id);
               obj = { body: null, confirmText: null };
-              const intl = self(closure_1_2[15]).intl;
-              obj[0] = intl.string(self(closure_1_2[15]).t.tYBBWz);
-              const intl2 = self(closure_1_2[15]).intl;
-              obj[1] = intl2.string(self(closure_1_2[15]).t.BddRzS);
-              closure_1_1(closure_1_2[14]).show(obj);
-              const obj4 = closure_1_1(closure_1_2[14]);
+              const intl = util.intl;
+              obj.body = intl.string(util.t.tYBBWz);
+              const intl2 = util.intl;
+              obj.confirmText = intl2.string(util.t.BddRzS);
+              actions_AlertActionCreatorsDefault.show(obj);
             }
             obj3 = self;
-            const tmp23 = self;
           }
         } else {
           throw tmp18;
@@ -156,12 +133,12 @@ class FramesNativeManager extends tmp5 {
   leaveFrame(arg0) {
     releaseWebViewResult = this.releaseWebView();
     tmp2 = closure_2;
-    obj = require("isDiscordFrontendDevelopment");
+    obj = closure_0(closure_2[16]);
     if (obj.isNotNullish(global)) {
       tmp3 = closure_1;
-      obj2 = require("dispatcher");
+      obj2 = closure_1(tmp2[17]);
       obj = { type: "FRAME_SET_ORIENTATION_LOCK_STATE", frameId: null, lockState: null, pictureInPictureLockState: null };
-      obj[1] = global;
+      obj.frameId = global;
       dispatchResult = obj2.dispatch(obj);
     }
     leaveFrameResult = super.leaveFrame(global);
@@ -171,26 +148,24 @@ class FramesNativeManager extends tmp5 {
 const prototype = FramesNativeManager.prototype;
 prototype["showRPCDisconnectErrorUI"] = function showRPCDisconnectErrorUI(reason) {
   ({ code, message } = reason);
-  let obj = _modDef4905;
-  obj = { title: null, body: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.formatToPlainString(getSystemLocale.t.hbiAO6, { code });
-  obj[1] = message;
+  const obj = { title: null, body: null };
+  const intl = util.intl;
+  obj.title = intl.formatToPlainString(util.t.hbiAO6, { code });
+  obj.body = message;
   obj.show(obj);
 };
 prototype["getManagedFrame"] = function getManagedFrame() {
   let frameByIframeId;
   if (null != this.iframeId) {
-    frameByIframeId = frameByIframeId.getFrameByIframeId(tmp.iframeId);
+    frameByIframeId = FramesStore.getFrameByIframeId(tmp.iframeId);
   }
   return frameByIframeId;
 };
 prototype["releaseWebView"] = function releaseWebView() {
   const releaseIframeIdResult = this.releaseIframeId();
   if (null != releaseIframeIdResult) {
-    const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
-    const obj = { id: null };
-    obj[0] = releaseIframeIdResult;
+    const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+    const obj = { id: releaseIframeIdResult };
     ComponentDispatch.dispatch(ComponentActions.IFRAME_UNMOUNT, obj);
     closure_9.releaseWebView();
   }
@@ -215,7 +190,8 @@ prototype["getOrCreateIframeId"] = function getOrCreateIframeId() {
 };
 FramesNativeManager.displayName = "FramesNativeManager";
 const framesNativeManager = new FramesNativeManager();
-const result = require("set").fileFinishedImporting("modules/frames/native/FramesNativeManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/native/FramesNativeManager.tsx");
 
 export default framesNativeManager;
 export const FRAME_WEB_VIEW_KEY = "FRAME_WEB_VIEW_KEY";

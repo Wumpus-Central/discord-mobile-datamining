@@ -1,42 +1,45 @@
 // === Module 16053: MessagesEmptyState ===
 
 // Module 16053 (MessagesEmptyState)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
+import util from "util" /* 1114 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useNavigation from "useNavigation" /* 1483 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
+const _modDef16054 = tmp2(16054);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
 
 export default function MessagesEmptyState() {
-  const tmp = callback2();
-  let width = navigation(1477)().width;
-  [tmp5, require] = callback(React.useState(0), 2);
-  callback = React.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.width);
+  const tmp = closure_10();
+  let width = useWindowDimensionsDefault().width;
+  [tmp5, require] = _slicedToArray(noop.useState(0), 2);
+  const callback = noop.useCallback((nativeEvent) => {
+    require(nativeEvent.nativeEvent.layout.width);
   }, []);
   let obj = useNavigation;
-  navigation = obj.useNavigation();
+  const navigation = obj.useNavigation();
   const items = [navigation];
-  const callback1 = React.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     navigation.navigate("friends", { screen: "add-friends", params: { sourcePage: "Messages Empty State", presentation: "card" } });
   }, items);
   obj = { type: null, name: null };
-  const tmp2 = navigation;
-  const tmp4 = callback(React.useState(0), 2);
-  obj[0] = encodeProperties.ImpressionTypes.VIEW;
-  obj[1] = encodeProperties.ImpressionNames.MESSAGES_EMPTY_NUX;
-  navigation(8768)(obj);
+  const tmp4 = _slicedToArray(noop.useState(0), 2);
+  obj.type = discord_common_AnalyticsUtils.ImpressionTypes.VIEW;
+  obj.name = discord_common_AnalyticsUtils.ImpressionNames.MESSAGES_EMPTY_NUX;
+  useTrackImpressionDefault(obj);
   if (tmp5 > 0) {
     width = tmp5;
   }
@@ -47,47 +50,44 @@ export default function MessagesEmptyState() {
   const items1 = [tmp.scrollViewContentContainer, ];
   let tmp18;
   if (isScreenLandscape) {
-    obj = { paddingBottom: null };
-    obj[0] = tmp15;
+    obj = { paddingBottom: tmp15 };
     tmp18 = obj;
   }
-  obj1 = { alwaysBounceVertical: false, bounces: false, contentContainerStyle: items1, children: null };
+  const obj1 = { alwaysBounceVertical: false, bounces: false, contentContainerStyle: items1, children: null };
   items1[1] = tmp18;
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: tmp2(16054), style: null };
+  const obj5 = { resizeMode: "contain", source: _modDef16054, style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;
   }
-  const tmp10 = navigation(8768);
-  const tmp17 = closure_7;
-  const tmp21 = closure_6;
-  obj5[2] = { height: num, width: Math.min(result, 622) };
-  obj4[1] = closure_8(tmp21, obj5);
-  const items2 = [closure_8(closure_5, obj4), ];
-  const obj7 = { style: tmp.textWrapper, children: null };
-  const obj8 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
+  const size = { height: num, width: Math.min(result, 622) };
+  obj5.style = size;
+  obj4.children = React6(timestampProducer, obj5);
+  const items2 = [React6(hasOwnProperty, obj4), ];
+  const obj6 = { style: tmp.textWrapper, children: null };
+  const obj7 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp.title, children: null };
   const intl = tmp7(1114).intl;
-  obj8[3] = intl.string(getSystemLocale.t["8JZof8"]);
-  const items3 = [closure_8(Text.Heading, obj8), ];
-  const obj9 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
+  obj7.children = intl.string(util.t["8JZof8"]);
+  const items3 = [React6(Text_Text.Heading, obj7), ];
+  const obj8 = { color: "text-default", variant: "text-md/medium", style: tmp.body, children: null };
   const intl2 = tmp7(1114).intl;
-  obj9[3] = intl2.string(getSystemLocale.t["qm+H7x"]);
-  items3[1] = closure_8(Text.Text, obj9);
-  obj7[1] = items3;
-  items2[1] = closure_9(closure_5, obj7);
-  obj3[1] = items2;
-  const items4 = [closure_9(closure_5, obj3), ];
-  const obj10 = { style: tmp.buttonWrapper, children: null };
-  const obj11 = { text: null, onPress: null, size: "lg" };
+  obj8.children = intl2.string(util.t["qm+H7x"]);
+  items3[1] = React6(Text_Text.Text, obj8);
+  obj6.children = items3;
+  items2[1] = React7(hasOwnProperty, obj6);
+  obj3.children = items2;
+  const items4 = [React7(hasOwnProperty, obj3), ];
+  const obj9 = { style: tmp.buttonWrapper, children: null };
+  const obj10 = { text: null, onPress: null, size: "lg" };
   const intl3 = tmp7(1114).intl;
-  obj11[0] = intl3.string(getSystemLocale.t.zIJnA6);
-  obj11[1] = callback1;
-  obj10[1] = closure_8(Button.Button, obj11);
-  items4[1] = closure_8(closure_5, obj10);
-  obj2[2] = items4;
-  obj1[3] = closure_9(closure_5, obj2);
-  return closure_8(tmp17, obj1);
+  obj10.text = intl3.string(util.t.zIJnA6);
+  obj10.onPress = callback1;
+  obj9.children = React6(components_Button_Button.Button, obj10);
+  items4[1] = React6(hasOwnProperty, obj9);
+  obj2.children = items4;
+  obj1.children = React7(hasOwnProperty, obj2);
+  return React6(React5, obj1);
 };

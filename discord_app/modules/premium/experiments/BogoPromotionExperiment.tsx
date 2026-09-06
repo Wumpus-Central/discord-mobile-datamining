@@ -1,11 +1,11 @@
-// === Module 13469: apexExperiment ===
+// === Module 13469: BogoPromotionExperiment ===
 
-// Module 13469 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13469 (BogoPromotionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-bogo-promotion-gate-v2", kind: "user", defaultConfig: false, variations: { 1: true } });
-const result = set.fileFinishedImporting("modules/premium/experiments/BogoPromotionExperiment.tsx");
+const result = size.fileFinishedImporting("modules/premium/experiments/BogoPromotionExperiment.tsx");
 
 export default apexExperiment;
 export const useBogoPromotionGateEnabled = function useBogoPromotionGateEnabled(location) {

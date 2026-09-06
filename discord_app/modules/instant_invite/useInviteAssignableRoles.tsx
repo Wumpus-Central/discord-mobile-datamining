@@ -1,32 +1,34 @@
 // === Module 17797: useInviteAssignableRoles ===
 
 // Module 17797 (useInviteAssignableRoles)
-import closure_3 from "noop" /* 19 */;
-import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 2016 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { Permissions } from "ME" /* 1074 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import noop from "module_19" /* 19 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
+const require = fn;
+const isEveryoneRole = fn(2016).isEveryoneRole;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
 
 export default function useInviteAssignableRoles(arg0) {
-  const _require = arg0;
-  const items = [closure_5, closure_7, closure_6];
+  _require = arg0;
+  const items = [GuildRoleStore, UserStore, PermissionStore];
   const items1 = [arg0];
-  const stateFromStoresObject = _require(currentUser[6]).useStateFromStoresObject(items, () => {
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
     if (null != closure_0) {
-      sortedRoles = closure_1_5.getSortedRoles(tmp.id);
+      sortedRoles = GuildRoleStore.getSortedRoles(tmp.id);
     } else {
       sortedRoles = [];
     }
-    const obj = { sortedRoles, currentUser: closure_1_7.getCurrentUser(), canManageRoles: null };
+    const obj = { sortedRoles, currentUser: UserStore.getCurrentUser(), canManageRoles: null };
     let canResult = null != tmp;
     if (canResult) {
-      canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
+      canResult = PermissionStore.can(Permissions.MANAGE_ROLES, tmp);
     }
-    obj[2] = canResult;
+    obj.canManageRoles = canResult;
     return obj;
   }, items1);
   let sortedRoles = stateFromStoresObject.sortedRoles;
@@ -39,7 +41,7 @@ export default function useInviteAssignableRoles(arg0) {
         if (canManageRoles) {
           highestRole = sortedRoles(currentUser[7]).getHighestRole(tmp, tmp2.id);
           return sortedRoles.filter((managed) => {
-            const tmp = closure_2_4(managed);
+            const tmp = isEveryoneRole(managed);
             let tmp2 = !tmp;
             if (!tmp) {
               managed = managed.managed;
@@ -52,8 +54,8 @@ export default function useInviteAssignableRoles(arg0) {
                 }
                 let isRoleHigherResult = undefined === guild_connections;
                 if (isRoleHigherResult) {
-                  const obj = sortedRoles(currentUser[7]);
-                  isRoleHigherResult = obj.isRoleHigher(closure_0, closure_1_2.id, closure_0, managed);
+                  const obj = PermissionUtilsAll;
+                  isRoleHigherResult = obj.isRoleHigher(closure_0, currentUser.id, closure_0, managed);
                 }
                 tmp3 = isRoleHigherResult;
               }

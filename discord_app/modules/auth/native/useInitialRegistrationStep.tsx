@@ -1,40 +1,42 @@
 // === Module 15961: useInitialRegistrationStep ===
 
 // Module 15961 (useInitialRegistrationStep)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "hasConsented" /* 6595 */;
-import { resetRegistration } from "useRegistrationUIStore" /* 15946 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
+import RegistrationStepsUtils from "RegistrationStepsUtils" /* 15945 */;
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ConsentStore from "ConsentStore" /* 6595 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
+require = fn;
+const resetRegistration = fn(15946).resetRegistration;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/native/useInitialRegistrationStep.tsx");
 
 export default function useInitialRegistrationStep(arg0) {
-  const _require = arg0;
-  const items = [closure_5];
-  const stateFromStores = _require(504).useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
+  _require = arg0;
+  const items = [ConsentStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => authenticationConsentRequired.getAuthenticationConsentRequired());
   const items1 = [stateFromStores, arg0];
-  const effect = React.useEffect(() => {
-    let tmp2 = callback === callback(closure_1_2[4]).getRegistrationSteps()[1];
+  const effect = noop.useEffect(() => {
+    let tmp2 = closure_0 === RegistrationStepsUtils.getRegistrationSteps()[1];
     if (tmp2) {
       tmp2 = null == stateFromStores;
     }
     if (tmp2) {
-      const locationMetadata = stateFromStores(closure_1_2[6]).getLocationMetadata();
-      const obj2 = stateFromStores(closure_1_2[6]);
+      const locationMetadata = AuthenticationActionCreatorsDefault.getLocationMetadata();
     }
   }, items1);
   const items2 = [arg0];
-  const effect1 = React.useEffect(() => {
-    if (callback === obj.getRegistrationSteps()[1]) {
+  const effect1 = noop.useEffect(() => {
+    if (closure_0 === obj.getRegistrationSteps()[1]) {
       return () => {
-        callback2();
+        closure_1_6();
         if (!authenticated.isAuthenticated()) {
-          callback(table[6]).loginReset();
-          const obj = callback(table[6]);
+          stateFromStores(dependencyMap[6]).loginReset();
+          const obj = stateFromStores(dependencyMap[6]);
         }
       };
     }
-    obj = callback(closure_1_2[4]);
+    obj = RegistrationStepsUtils;
   }, items2);
 };

@@ -1,9 +1,9 @@
-// === Module 5518: sortByMatchScore ===
+// === Module 5518: autocompleter/sortByMatchScore ===
 
-// Module 5518 (sortByMatchScore)
-import set from "set" /* 2 */;
+// Module 5518 (autocompleter/sortByMatchScore)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
+const result = size.fileFinishedImporting("modules/autocompleter/sortByMatchScore.tsx");
 
 export default function sortByMatchScore(score, score2) {
   if (score.score === score2.score) {

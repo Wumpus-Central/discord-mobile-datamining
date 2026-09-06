@@ -1,10 +1,10 @@
 // === Module 16226: getChannelSubtitleData ===
 
 // Module 16226 (getChannelSubtitleData)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
+const result = size.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
 export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {
   if (null == subtitle) {
@@ -15,19 +15,19 @@ export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) 
       if ("event" !== type) {
         if ("go-live" === type) {
           let obj = { subtitle: null, type: null };
-          const intl = getSystemLocale.intl;
-          obj[0] = intl.string(getSystemLocale.t.Pa817q);
-          obj[1] = subtitle.type;
+          const intl = util.intl;
+          obj.subtitle = intl.string(util.t.Pa817q);
+          obj.type = subtitle.type;
           return obj;
         } else if ("voice" === type) {
           obj = { subtitle: null, type: null };
-          ({ text: obj[0], type: obj[1] } = subtitle);
+          ({ text: obj.subtitle, type: obj.type } = subtitle);
           return obj;
         }
       }
     }
     obj = { subtitle: null, type: null };
-    ({ name: obj3[0], type: obj3[1] } = subtitle);
+    ({ name: obj3.subtitle, type: obj3.type } = subtitle);
     return obj;
   }
 };

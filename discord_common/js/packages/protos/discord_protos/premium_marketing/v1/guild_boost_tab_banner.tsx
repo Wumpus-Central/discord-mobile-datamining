@@ -1,14 +1,14 @@
-// === Module 10696: create ===
+// === Module 10696: guild_boost_tab_banner ===
 
-// Module 10696 (create)
+// Module 10696 (guild_boost_tab_banner)
 import _mod1188 from "module_1188" /* 1188 */;
-import create from "create" /* 10670 */;
-import create2 from "create" /* 10671 */;
-import create3 from "create" /* 10680 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType } from "module_1188" /* 1188 */;
+import localized_string from "localized_string" /* 10670 */;
+import help_article from "help_article" /* 10671 */;
+import theme_aware_asset from "theme_aware_asset" /* 10680 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class GuildBoostTabBanner$Type extends MessageType {
   constructor() {
     obj = {
@@ -16,7 +16,7 @@ class GuildBoostTabBanner$Type extends MessageType {
       name: "asset",
       kind: "message",
       T() {
-            return callback(10680).ThemeAwareAsset;
+            return require("theme_aware_asset").ThemeAwareAsset;
           }
     };
     items = [, , , , , ];
@@ -26,29 +26,28 @@ class GuildBoostTabBanner$Type extends MessageType {
       name: "header_localized",
       kind: "message",
       T() {
-            return callback(10670).LocalizedString;
+            return require("localized_string").LocalizedString;
           }
     };
     obj = { no: 3, name: "body_localized", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").LocalizedString;
+        return closure_1_0(closure_1_1[3]).LocalizedString;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[2] = obj;
     items[3] = {
       no: 4,
       name: "help_article",
       kind: "message",
       T() {
-            return callback(10671).HelpArticle;
+            return require("help_article").HelpArticle;
           }
     };
     items[4] = { no: 5, name: "header", kind: "scalar", T: 9 };
     items[5] = { no: 6, name: "body", kind: "scalar", T: 9 };
     tmp = new tmp("discord_protos.premium_marketing.v1.GuildBoostTabBanner", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -64,7 +63,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -73,40 +72,19 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp37 = require;
-        let tmp38 = dependencyMap;
-        let ThemeAwareAsset = create3.ThemeAwareAsset;
-        let tmp39 = ThemeAwareAsset;
-        let tmp40 = pos;
-        let tmp41 = readUnknownField;
+        let ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
         obj.asset = ThemeAwareAsset.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.asset);
       } else if (2 === tmp5) {
-        let tmp32 = require;
-        let tmp33 = dependencyMap;
-        let LocalizedString2 = create.LocalizedString;
-        let tmp34 = LocalizedString2;
-        let tmp35 = pos;
-        let tmp36 = readUnknownField;
+        let LocalizedString2 = localized_string.LocalizedString;
         obj.headerLocalized = LocalizedString2.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.headerLocalized);
       } else if (3 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let LocalizedString = create.LocalizedString;
-        let tmp29 = LocalizedString;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let LocalizedString = localized_string.LocalizedString;
         obj.bodyLocalized = LocalizedString.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.bodyLocalized);
       } else if (4 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let HelpArticle = create2.HelpArticle;
-        let tmp24 = HelpArticle;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let HelpArticle = help_article.HelpArticle;
         obj.helpArticle = HelpArticle.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.helpArticle);
       } else if (5 === tmp5) {
         obj.header = pos.string();
@@ -121,25 +99,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -150,25 +119,25 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writeUnknownFields) {
   if (asset.asset) {
-    const ThemeAwareAsset = create3.ThemeAwareAsset;
+    const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
     const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     const joined = ThemeAwareAsset.internalBinaryWrite(asset.asset, tag.tag(1, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(asset.asset, tag.tag(1, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (asset.headerLocalized) {
-    const LocalizedString = create.LocalizedString;
+    const LocalizedString = localized_string.LocalizedString;
     const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(asset.headerLocalized, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(asset.headerLocalized, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (asset.bodyLocalized) {
-    const LocalizedString2 = create.LocalizedString;
+    const LocalizedString2 = localized_string.LocalizedString;
     const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
     const joined2 = LocalizedString2.internalBinaryWrite(asset.bodyLocalized, tag.tag(3, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult2 = LocalizedString2.internalBinaryWrite(asset.bodyLocalized, tag.tag(3, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (asset.helpArticle) {
-    const HelpArticle = create2.HelpArticle;
+    const HelpArticle = help_article.HelpArticle;
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     const joined3 = HelpArticle.internalBinaryWrite(asset.helpArticle, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult3 = HelpArticle.internalBinaryWrite(asset.helpArticle, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -196,7 +165,7 @@ let obj = {
   name: "asset",
   kind: "message",
   T() {
-    return callback(10680).ThemeAwareAsset;
+    return require("theme_aware_asset").ThemeAwareAsset;
   }
 };
 let items = [
@@ -206,7 +175,7 @@ let items = [
     name: "header_localized",
     kind: "message",
     T() {
-      return callback(10670).LocalizedString;
+      return require("localized_string").LocalizedString;
     }
   },
 ,
@@ -217,23 +186,23 @@ let items = [
 obj = { no: 3, name: "body_localized", kind: "message", T: null };
 class T {
   constructor() {
-    return require("create").LocalizedString;
+    return closure_1_0(closure_1_1[3]).LocalizedString;
   }
 }
-obj[3] = T;
+obj.T = T;
 items[2] = obj;
 items[3] = {
   no: 4,
   name: "help_article",
   kind: "message",
   T() {
-    return callback(10671).HelpArticle;
+    return require("help_article").HelpArticle;
   }
 };
 items[4] = { no: 5, name: "header", kind: "scalar", T: 9 };
 items[5] = { no: 6, name: "body", kind: "scalar", T: 9 };
 prototype = new prototype("discord_protos.premium_marketing.v1.GuildBoostTabBanner", items, tmp, T, GuildBoostTabBanner$Type, prototype, items);
-// ThrowIfThisInitialized (0x7c)
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/guild_boost_tab_banner.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/guild_boost_tab_banner.tsx");
 
 export const GuildBoostTabBanner = prototype;

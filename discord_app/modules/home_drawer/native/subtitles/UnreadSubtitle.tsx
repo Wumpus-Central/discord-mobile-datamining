@@ -1,13 +1,14 @@
 // === Module 16326: UnreadSubtitle ===
 
 // Module 16326 (UnreadSubtitle)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/UnreadSubtitle.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/UnreadSubtitle.tsx");
 
 export default function UnreadSubtitle(channel) {
   channel = channel.channel;
@@ -29,27 +30,27 @@ export default function UnreadSubtitle(channel) {
   obj = {
     channelName,
     count: count - 1,
-    labelHook(children) {
-      return callback(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, arg1);
+    labelHook(children, arg1) {
+      return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, arg1);
     },
     iconHook(arg0, arg1) {
-      return closure_1_3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.unreadChannelIcon }, arg1);
+      return <channelIconComponentWithGuild key={arg1} size="xxs" color="icon-muted" style={subtitleStyles.unreadChannelIcon} />;
     },
-    channelHook(children) {
-      return closure_1_3(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, arg1);
+    channelHook(children, arg1) {
+      return jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, arg1);
     },
-    overflowHook(children) {
-      return callback(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", children }, arg1);
+    overflowHook(children, arg1) {
+      return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", children }, arg1);
     }
   };
-  obj[1] = intl.format(subtitleStyles(channelIconComponentWithGuild[6]).t.OqlmU6, obj);
-  return <View channelName={channelName} count={count - 1} labelHook={function labelHook(children) {
-    return callback(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, arg1);
+  obj.children = intl.format(subtitleStyles(channelIconComponentWithGuild[6]).t.OqlmU6, obj);
+  return <View channelName={channelName} count={count - 1} labelHook={function labelHook(children, arg1) {
+    return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, arg1);
   }} iconHook={function iconHook(arg0, arg1) {
-    return closure_1_3(channelIconComponentWithGuild, { size: "xxs", color: "icon-muted", style: subtitleStyles.unreadChannelIcon }, arg1);
-  }} channelHook={function channelHook(children) {
-    return closure_1_3(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, arg1);
-  }} overflowHook={function overflowHook(children) {
-    return callback(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", children }, arg1);
+    return <channelIconComponentWithGuild key={arg1} size="xxs" color="icon-muted" style={subtitleStyles.unreadChannelIcon} />;
+  }} channelHook={function channelHook(children, arg1) {
+    return jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, arg1);
+  }} overflowHook={function overflowHook(children, arg1) {
+    return jsx(subtitleStyles(channelIconComponentWithGuild[7]).Text, { variant: "text-xs/medium", color: "text-muted", children }, arg1);
   }} />;
 };

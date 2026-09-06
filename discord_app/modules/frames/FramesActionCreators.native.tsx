@@ -1,42 +1,24 @@
-// === Module 9507: _launchFrameOnNative ===
+// === Module 9507: FramesActionCreators ===
 
-// Module 9507 (_launchFrameOnNative)
+// Module 9507 (FramesActionCreators)
 import _launchFrameAll from "_launchFrame" /* 9509 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "updateVoiceState" /* 4579 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-function _launchFrameOnNative() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function*(arg0) {
-      c1 = 0;
-      const obj2 = closure_1_1(table[3]);
-      closure_0 = yield obj2.launchFrame(closure_0);
-      (function closeVoicePanel() {
-        if (currentClientInVoiceChannel.isCurrentClientInVoiceChannel()) {
-          callback(table[2])();
-        }
-      })();
-      return closure_0;
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+let closure_5 = async function _launchFrameOnNative() {
+  closure_129_0 = await _launchFrameAll.launchFrame(closure_0);
+  (function closeVoicePanel() {
+    if (currentClientInVoiceChannel.isCurrentClientInVoiceChannel()) {
+      closure_1_0(closure_1_2[2])();
+    }
+  })();
+  return closure_129_0;
+};
 const obj = {};
-const merged = Object.assign(_launchFrameAll);
+const _launchFrame = Object.assign(_launchFrameAll);
 obj.launchFrame = function launchFrameOnNative() {
   const self = this;
-  const apply = _launchFrameOnNative.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -44,6 +26,7 @@ obj.launchFrame = function launchFrameOnNative() {
   }
   return applyArgumentsResult;
 };
-const result = require("set").fileFinishedImporting("modules/frames/FramesActionCreators.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/FramesActionCreators.native.tsx");
 
 export default obj;

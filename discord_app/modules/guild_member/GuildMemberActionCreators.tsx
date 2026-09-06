@@ -1,35 +1,30 @@
-// === Module 7120: updateGuildSelfMember ===
+// === Module 7120: GuildMemberActionCreators ===
 
-// Module 7120 (updateGuildSelfMember)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import updateImpersonating from "updateImpersonating" /* 5552 */;
-import closure_3 from "initialize" /* 2014 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 7120 (GuildMemberActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 5552 */;
+import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member/GuildMemberActionCreators.tsx");
 
-export const updateGuildSelfMember = function updateGuildSelfMember(closure_1_0, arg1) {
+export const updateGuildSelfMember = function updateGuildSelfMember(guildId, memberOptions) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  if (fullServerPreview.isFullServerPreview(closure_1_0)) {
-    let obj = { memberOptions: null };
-    obj[0] = arg1;
-    const result = updateImpersonating.updateImpersonatedData(closure_1_0, obj);
+  if (ImpersonateStore.isFullServerPreview(guildId)) {
+    let obj = { memberOptions };
+    const result = ImpersonateActionCreators.updateImpersonatedData(guildId, obj);
   } else {
-    obj = dispatcherDefault;
-    obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId: null, roles: null, flags: null };
-    obj[1] = closure_1_0;
-    ({ roles: obj2[2], flags: obj2[3] } = arg1);
+    obj = { type: "GUILD_MEMBER_UPDATE_LOCAL", guildId, roles: null, flags: null };
+    ({ roles: obj2.roles, flags: obj2.flags } = memberOptions);
     obj.dispatch(obj);
-    const HTTP = sendRequest.HTTP;
-    obj1 = { url: null, body: null, oldFormErrors: null, rejectWithError: false };
-    obj1[0] = Endpoints.SET_GUILD_MEMBER(closure_1_0);
-    obj1[1] = arg1;
-    obj1[2] = flag || undefined;
-    return HTTP.patch(obj1);
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.SET_GUILD_MEMBER(guildId), body: memberOptions, oldFormErrors: flag || undefined, rejectWithError: false };
+    return HTTP.patch(request);
   }
 };

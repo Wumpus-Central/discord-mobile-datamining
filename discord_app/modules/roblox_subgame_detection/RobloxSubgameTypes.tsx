@@ -1,7 +1,7 @@
-// === Module 4691: ROBLOX_PROTOCOL_URL ===
+// === Module 4691: RobloxSubgameTypes ===
 
-// Module 4691 (ROBLOX_PROTOCOL_URL)
-import set from "set" /* 2 */;
+// Module 4691 (RobloxSubgameTypes)
+import size from "module_2" /* 2 */;
 
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {
@@ -13,7 +13,7 @@ class ROBLOX_WEB_URL {
     return "https://www.roblox.com/games/start?placeId=" + global;
   }
 }
-const result = set.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");
+const result = size.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");
 
 export const ROBLOX_APPLICATION_ID = "363445589247131668";
 export const ROBLOX_GAME_ID = "363445589247131668";
@@ -23,11 +23,16 @@ export const ROBLOX_URL_SCHEME = "roblox";
 export { ROBLOX_PROTOCOL_URL };
 export { ROBLOX_WEB_URL };
 export const ROBLOX_DEFERRED_WEB_URL = (arg0) => {
-  if (typeof ROBLOX_PROTOCOL_URL !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof ROBLOX_PROTOCOL_URL === "function") {
+    const _HermesInternal = HermesInternal;
+    if (typeof ROBLOX_WEB_URL === "function") {
+      const _HermesInternal2 = HermesInternal;
+      const _HermesInternal3 = HermesInternal;
+      return "https://ro.blox.com/Ebh5?af_dp=" + tmp2 + "&af_web_dp=" + tmp3("https://www.roblox.com/games/start?placeId=" + arg0);
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  if (typeof ROBLOX_WEB_URL !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  return "https://ro.blox.com/Ebh5?af_dp=" + encodeURIComponent("roblox://placeId=" + arg0) + "&af_web_dp=" + encodeURIComponent("https://www.roblox.com/games/start?placeId=" + arg0);
 };

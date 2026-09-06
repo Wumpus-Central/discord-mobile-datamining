@@ -1,25 +1,25 @@
-// === Module 4382: handleGatewayJoinRequestUpdate ===
+// === Module 4382: UserGuildJoinRequestStore ===
 
-// Module 4382 (handleGatewayJoinRequestUpdate)
+// Module 4382 (UserGuildJoinRequestStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
-import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4383 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4383 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function handleGatewayJoinRequestUpdate(arg0) {
   ({ guildId, request } = arg0);
   if (null != request) {
     let obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
-    ({ join_request_id: obj2[0], guild_id: obj2[1], user_id: obj2[2], user: obj2[3], created_at: obj2[4], form_responses: obj2[5], rejection_reason: obj2[6], application_status: obj2[7], actioned_at: obj2[8], actioned_by_user: obj2[9], last_seen: obj2[10], interview_channel_id: obj2[11] } = request);
-    currentUser = currentUser.getCurrentUser();
+    ({ join_request_id: obj2.joinRequestId, guild_id: obj2.guildId, user_id: obj2.userId, user: obj2.user, created_at: obj2.createdAt, form_responses: obj2.formResponses, rejection_reason: obj2.rejectionReason, application_status: obj2.applicationStatus, actioned_at: obj2.actionedAt, actioned_by_user: obj2.actionedByUser, last_seen: obj2.lastSeen, interview_channel_id: obj2.interviewChannelId } = request);
+    const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
       if (obj.userId !== currentUser.id) {
         return false;
       }
     }
-    obj = isActionedApplicationStatus;
+    obj = GuildJoinRequestUtils;
     if (obj.isApprovedAndAcked(obj)) {
       delete tmp[tmp2];
       if (c3 === guildId) {
@@ -33,16 +33,16 @@ function handleGatewayJoinRequestUpdate(arg0) {
 let c3 = null;
 let closure_4 = {};
 let c5 = false;
-let closure_6 = {};
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class UserGuildJoinRequestStore extends Store {
 }
 const prototype = UserGuildJoinRequestStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(UserStore);
 };
 prototype["getRequest"] = function getRequest(arg0) {
-  return table[arg0];
+  return closure_4[arg0];
 };
 prototype["computeGuildIds"] = function computeGuildIds() {
   const values = Object.values(closure_4);
@@ -53,13 +53,12 @@ prototype["computeGuildIds"] = function computeGuildIds() {
     }
     return guildId;
   });
-  return mapped.filter((arg0) => null != arg0);
+  return mapped.filter((item) => null != item);
 };
 prototype["getJoinRequestGuild"] = function getJoinRequestGuild(guildId) {
   let fromGuildBasicResult = null;
   if (null != dependencyMap[guildId]) {
-    fromGuildBasicResult = fromGuildPropertiesWithAdditionalFields.fromGuildBasic(dependencyMap[guildId]);
-    const obj = fromGuildPropertiesWithAdditionalFields;
+    fromGuildBasicResult = GuildRecordUtils.fromGuildBasic(dependencyMap[guildId]);
   }
   return fromGuildBasicResult;
 };
@@ -73,7 +72,7 @@ prototype["hasJoinRequestCoackmark"] = function hasJoinRequestCoackmark() {
   return null != c3;
 };
 UserGuildJoinRequestStore.displayName = "UserGuildJoinRequestStore";
-const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefault, {
+const userGuildJoinRequestStore = new UserGuildJoinRequestStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guildJoinRequests) {
     guildJoinRequests = guildJoinRequests.guildJoinRequests;
     c5 = false;
@@ -83,8 +82,8 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefaul
       guild_id = guild_id.guild_id;
       if (null != guild_id) {
         const obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
-        ({ join_request_id: obj[0], guild_id: obj[1], user_id: obj[2], user: obj[3], created_at: obj[4], form_responses: obj[5], rejection_reason: obj[6], application_status: obj[7], actioned_at: obj[8], actioned_by_user: obj[9], last_seen: obj[10], interview_channel_id: obj[11] } = guild_id);
-        closure_4[guild_id] = obj;
+        ({ join_request_id: obj.joinRequestId, guild_id: obj.guildId, user_id: obj.userId, user: obj.user, created_at: obj.createdAt, form_responses: obj.formResponses, rejection_reason: obj.rejectionReason, application_status: obj.applicationStatus, actioned_at: obj.actionedAt, actioned_by_user: obj.actionedByUser, last_seen: obj.lastSeen, interview_channel_id: obj.interviewChannelId } = guild_id);
+        closure_1_4[guild_id] = obj;
       }
     });
   },
@@ -100,7 +99,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefaul
     ({ request, guildId } = arg0);
     if (null != request) {
       const obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
-      ({ join_request_id: obj[0], guild_id: obj[1], user_id: obj[2], user: obj[3], created_at: obj[4], form_responses: obj[5], rejection_reason: obj[6], application_status: obj[7], actioned_at: obj[8], actioned_by_user: obj[9], last_seen: obj[10], interview_channel_id: obj[11] } = request);
+      ({ join_request_id: obj.joinRequestId, guild_id: obj.guildId, user_id: obj.userId, user: obj.user, created_at: obj.createdAt, form_responses: obj.formResponses, rejection_reason: obj.rejectionReason, application_status: obj.applicationStatus, actioned_at: obj.actionedAt, actioned_by_user: obj.actionedByUser, last_seen: obj.lastSeen, interview_channel_id: obj.interviewChannelId } = request);
       if (obj2.isApprovedAndAcked(obj)) {
         delete tmp[tmp2];
         if (c3 === guildId) {
@@ -109,7 +108,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefaul
       } else {
         tmp8[guildId] = obj;
       }
-      obj2 = isActionedApplicationStatus;
+      obj2 = GuildJoinRequestUtils;
     } else {
       delete tmp3[tmp2];
       if (c3 === guildId) {
@@ -128,7 +127,7 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefaul
     c5 = true;
     const item = guilds.forEach((id) => {
       id = id.id;
-      closure_6[id] = { id, name: id.name, features: id.features, icon: id.icon, splash: id.splash };
+      dependencyMap[id] = { id, name: id.name, features: id.features, icon: id.icon, splash: id.splash };
     });
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function handleVerificationFormUpdate(form) {
@@ -141,14 +140,13 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefaul
       guild = form.guild;
       let features = guild.features;
       const obj = { id: null, name: null, icon: null, features: null, splash: null };
-      ({ id: obj[0], name: obj[1], icon: obj[2], splash } = guild);
+      ({ id: obj.id, name: obj.name, icon: obj.icon, splash } = guild);
       if (features == null) {
         features = [];
       }
-      obj[3] = features;
-      obj[4] = splash;
+      obj.features = features;
+      obj.splash = splash;
       closure_6[form.guildId] = obj;
-      const tmp2 = closure_6;
     }
   },
   INVITE_ACCEPT_SUCCESS: function handleInviteSuccess(invite) {
@@ -156,19 +154,17 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefaul
     if (null != guild) {
       if (null != join_request) {
         let obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
-        ({ join_request_id: obj[0], guild_id: obj[1], user_id: obj[2], user: obj[3], created_at: obj[4], form_responses: obj[5], rejection_reason: obj[6], application_status: obj[7], actioned_at: obj[8], actioned_by_user: obj[9], last_seen: obj[10], interview_channel_id: obj[11] } = join_request);
+        ({ join_request_id: obj.joinRequestId, guild_id: obj.guildId, user_id: obj.userId, user: obj.user, created_at: obj.createdAt, form_responses: obj.formResponses, rejection_reason: obj.rejectionReason, application_status: obj.applicationStatus, actioned_at: obj.actionedAt, actioned_by_user: obj.actionedByUser, last_seen: obj.lastSeen, interview_channel_id: obj.interviewChannelId } = join_request);
         closure_4[join_request.guild_id] = obj;
         ({ id, features } = guild);
-        obj = { id: null, name: null, icon: null, features: null, splash: null };
-        obj[0] = id;
-        ({ name: obj2[1], icon: obj2[2], splash } = guild);
+        obj = { id, name: null, icon: null, features: null, splash: null };
+        ({ name: obj2.name, icon: obj2.icon, splash } = guild);
         if (features == null) {
           features = [];
         }
-        obj[3] = features;
-        obj[4] = splash;
+        obj.features = features;
+        obj.splash = splash;
         closure_6[id] = obj;
-        const tmp2 = closure_6;
       }
     }
   },
@@ -185,7 +181,8 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefaul
     c3 = null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/UserGuildJoinRequestStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/UserGuildJoinRequestStore.tsx");
 
 export default userGuildJoinRequestStore;
 export const joinRequestFromServer = function joinRequestFromServer(request) {

@@ -1,73 +1,74 @@
-// === Module 14711: formatUsernameLiveCheckValidation ===
+// === Module 14711: UniqueUsernamesUtils ===
 
-// Module 14711 (formatUsernameLiveCheckValidation)
-import set from "set" /* 2 */;
-import t from "t" /* 4745 */;
+// Module 14711 (UniqueUsernamesUtils)
+import util from "util" /* 1114 */;
+import _mod4745 from "module_4745" /* 4745 */;
+import UniqueUsernamesTypes from "UniqueUsernamesTypes" /* 14706 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
+const result = size.fileFinishedImporting("modules/unique_usernames/UniqueUsernamesUtils.tsx");
 
 export const formatUsernameLiveCheckValidation = function formatUsernameLiveCheckValidation(arg0) {
-  const match = t.match(arg0);
-  const str = t;
+  const match = _mod4745.match(arg0);
   let obj = { error: null };
-  const P = t.P;
-  obj[0] = P.not(t.P.nullish);
+  const P = _mod4745.P;
+  obj.error = P.not(_mod4745.P.nullish);
   const withResult = match.with({ rateLimited: true }, () => {
-    const obj = { type: callback(14706).NameValidationState.RATE_LIMIT, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.T15lqn);
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.T15lqn);
     return obj;
   });
   const withResult1 = match.with({ rateLimited: true }, () => {
-    const obj = { type: callback(14706).NameValidationState.RATE_LIMIT, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.T15lqn);
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.T15lqn);
     return obj;
-  }).with(obj, (error) => ({ type: callback(14706).NameValidationState.ERROR, message: error.error }));
+  }).with(obj, (error) => ({ type: UniqueUsernamesTypes.NameValidationState.ERROR, message: error.error }));
   const withResult2 = match.with({ rateLimited: true }, () => {
-    const obj = { type: callback(14706).NameValidationState.RATE_LIMIT, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.T15lqn);
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.T15lqn);
     return obj;
-  }).with(obj, (error) => ({ type: callback(14706).NameValidationState.ERROR, message: error.error })).with({ taken: false }, () => {
-    const obj = { type: callback(14706).NameValidationState.AVAILABLE, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.PgfBSx);
+  }).with(obj, (error) => ({ type: UniqueUsernamesTypes.NameValidationState.ERROR, message: error.error })).with({ taken: false }, () => {
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.AVAILABLE, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.PgfBSx);
     return obj;
   });
-  obj = { error: t.P.nullish };
+  obj = { error: _mod4745.P.nullish };
   const withResult3 = match.with({ rateLimited: true }, () => {
-    const obj = { type: callback(14706).NameValidationState.RATE_LIMIT, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.T15lqn);
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.T15lqn);
     return obj;
-  }).with(obj, (error) => ({ type: callback(14706).NameValidationState.ERROR, message: error.error })).with({ taken: false }, () => {
-    const obj = { type: callback(14706).NameValidationState.AVAILABLE, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.PgfBSx);
+  }).with(obj, (error) => ({ type: UniqueUsernamesTypes.NameValidationState.ERROR, message: error.error })).with({ taken: false }, () => {
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.AVAILABLE, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.PgfBSx);
     return obj;
   }).with({ taken: true }, () => {
-    const obj = { type: callback(14706).NameValidationState.ERROR, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.mCrAUb);
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.ERROR, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.mCrAUb);
     return obj;
   });
   return match.with({ rateLimited: true }, () => {
-    const obj = { type: callback(14706).NameValidationState.RATE_LIMIT, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.T15lqn);
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.RATE_LIMIT, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.T15lqn);
     return obj;
-  }).with(obj, (error) => ({ type: callback(14706).NameValidationState.ERROR, message: error.error })).with({ taken: false }, () => {
-    const obj = { type: callback(14706).NameValidationState.AVAILABLE, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.PgfBSx);
+  }).with(obj, (error) => ({ type: UniqueUsernamesTypes.NameValidationState.ERROR, message: error.error })).with({ taken: false }, () => {
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.AVAILABLE, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.PgfBSx);
     return obj;
   }).with({ taken: true }, () => {
-    const obj = { type: callback(14706).NameValidationState.ERROR, message: null };
-    const intl = callback(1114).intl;
-    obj[1] = intl.string(callback(1114).t.mCrAUb);
+    const obj = { type: UniqueUsernamesTypes.NameValidationState.ERROR, message: null };
+    const intl = util.intl;
+    obj.message = intl.string(util.t.mCrAUb);
     return obj;
-  }).with(obj, () => ({ type: callback(14706).NameValidationState.INTERNAL_ERROR, message: "" })).otherwise(() => {
+  }).with(obj, () => ({ type: UniqueUsernamesTypes.NameValidationState.INTERNAL_ERROR, message: "" })).otherwise(() => {
 
   });
 };

@@ -1,20 +1,21 @@
 // === Module 14607: useScrollToUserProfileEditFormSection ===
 
 // Module 14607 (useScrollToUserProfileEditFormSection)
-import closure_2 from "noop" /* 19 */;
-import { findNodeHandle } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_5 from "zustandStore" /* 9208 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9208 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
+const require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useScrollToUserProfileEditFormSection.tsx");
 
 export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
   ref = ref.useRef({});
-  const items = [closure_4];
-  closure_3 = _require(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const items = [AccessibilityStore];
+  closure_3 = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = ref.useEffect(() => {
     let tmp2 = null != closure_1;
     if (tmp2) {
@@ -28,21 +29,18 @@ export default function useScrollToUserProfileEditFormSection(arg0, arg1) {
     if (tmp2) {
       const _setTimeout = setTimeout;
       const timerId = setTimeout(() => {
-        const tmp = closure_1_3(ref.current);
+        const tmp = closure_3(ref.current);
         if (null != tmp) {
           if (obj != null) {
-            obj.measureLayout(tmp, (arg0, arg1) => {
+            obj.measureLayout(tmp, (x, y) => {
               const current = ref.current;
               if (current != null) {
-                const obj = { x: null, y: null, animated: null };
-                obj[0] = arg0;
-                obj[1] = arg1;
-                obj[2] = !closure_3;
-                current.scrollTo(obj);
+                const point = { x, y, animated: !closure_1_3 };
+                current.scrollTo(point);
               }
             });
           }
-          closure_1_5.setState({ scrollPosition: null });
+          state.setState({ scrollPosition: null });
         }
       }, 0);
     }

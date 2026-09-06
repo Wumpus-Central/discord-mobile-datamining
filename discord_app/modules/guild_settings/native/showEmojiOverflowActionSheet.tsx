@@ -1,17 +1,16 @@
 // === Module 17565: showEmojiOverflowActionSheet ===
 
 // Module 17565 (showEmojiOverflowActionSheet)
-import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/guild_settings/native/showEmojiOverflowActionSheet.tsx");
 
 export default function showEmojiOverflowActionSheet(arg0) {
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const obj = {
     onClose() {
-      return callback(table[0]).hideActionSheet("EmojiOverflowActionSheet");
+      return ActionSheetActionCreatorsDefault.hideActionSheet("EmojiOverflowActionSheet");
     }
   };
   const merged = Object.assign(arg0);

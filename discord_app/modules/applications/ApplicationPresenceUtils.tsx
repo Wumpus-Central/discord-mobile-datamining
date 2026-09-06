@@ -1,13 +1,13 @@
-// === Module 8231: shouldDisableUserPresenceInChannel ===
+// === Module 8231: ApplicationPresenceUtils ===
 
-// Module 8231 (shouldDisableUserPresenceInChannel)
-import closure_0 from "ensureGuildLoaded" /* 1957 */;
+// Module 8231 (ApplicationPresenceUtils)
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const result = require("set").fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/ApplicationPresenceUtils.tsx");
 
 export const shouldDisableUserPresenceInChannel = function shouldDisableUserPresenceInChannel(bot, channelId) {
-  let channel = bot;
-  channel = channel.getChannel(channelId);
+  const channel = ChannelStore.getChannel(channelId);
   let tmp = null != channel && bot.bot && channel.isPrivate();
   if (tmp) {
     const rawRecipients = channel.rawRecipients;

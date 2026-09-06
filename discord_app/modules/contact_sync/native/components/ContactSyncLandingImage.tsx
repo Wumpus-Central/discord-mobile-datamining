@@ -1,28 +1,28 @@
 // === Module 12689: ContactSyncLandingImage ===
 
 // Module 12689 (ContactSyncLandingImage)
-import noopAll from "noop" /* 19 */;
-import registerAssetDefault from "registerAsset" /* 12690 */;
-import registerAssetDefault2 from "registerAsset" /* 12691 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _modDef12690 from "module_12690" /* 12690 */;
+import _modDef12691 from "module_12691" /* 12691 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ leftContainer: { zIndex: 2, height: 106, width: 102, position: "absolute" }, landingImageLeft: { left: 58, top: -92 }, rightContainer: { position: "absolute", height: 113, width: 103 }, landingImageRight: { left: 134, top: -99 } });
-const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingImage.tsx");
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ leftContainer: { zIndex: 2, height: 106, width: 102, position: "absolute" }, landingImageLeft: { left: 58, top: -92 }, rightContainer: { position: "absolute", height: 113, width: 103 }, landingImageRight: { left: 134, top: -99 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingImage.tsx");
 
 export default function ContactSyncLandingImage() {
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = { children: null };
   obj = { style: tmp.leftContainer, children: null };
-  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: registerAssetDefault };
-  obj[1] = callback(closure_2, obj);
-  const items = [callback(closure_3, obj), ];
-  obj1 = { style: tmp.rightContainer, children: callback(closure_2, { resizeMode: "contain", style: tmp.landingImageRight, source: registerAssetDefault2 }) };
-  items[1] = callback(closure_3, obj1);
-  obj[0] = items;
-  return callback2(closure_5, obj);
+  obj = { resizeMode: "contain", style: tmp.landingImageLeft, source: _modDef12690 };
+  obj.children = React4(React2, obj);
+  const items = [React4(React3, obj), ];
+  const obj1 = { style: tmp.rightContainer, children: React4(React2, { resizeMode: "contain", style: tmp.landingImageRight, source: _modDef12691 }) };
+  items[1] = React4(React3, obj1);
+  obj.children = items;
+  return timestampProducer(hasOwnProperty, obj);
 };

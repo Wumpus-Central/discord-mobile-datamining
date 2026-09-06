@@ -1,38 +1,39 @@
-// === Module 10343: Emoji ===
+// === Module 10343: EmojiGrid ===
 
-// Module 10343 (Emoji)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 10343 (EmojiGrid)
+import nativeDefault from "native" /* 576 */;
 import EmojiDefault from "Emoji" /* 7130 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import LayoutUtils from "LayoutUtils" /* 10346 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function Emoji(guildEmoji) {
   guildEmoji = guildEmoji.guildEmoji;
-  const tmp = callback();
+  const tmp = closure_5();
   if (null == guildEmoji.id) {
     let tmp3Result = tmp3(4217);
     let uRL = tmp3Result.getURL(guildEmoji.name);
   } else {
     tmp3Result = tmp3(1396);
     let obj = { id: null, animated: null, size: 48 };
-    ({ id: obj2[0], animated: obj2[1] } = guildEmoji);
+    ({ id: obj2.id, animated: obj2.animated } = guildEmoji);
     uRL = tmp3Result.getEmojiURL(obj);
   }
   obj = { src: uRL, fastImageStyle: tmp.gridEmojiFastImage, textEmojiStyle: tmp.gridEmojiText, name: guildEmoji.name };
   return jsx(EmojiDefault, { src: uRL, fastImageStyle: tmp.gridEmojiFastImage, textEmojiStyle: tmp.gridEmojiText, name: guildEmoji.name }, guildEmoji.id);
 }
-noopAll;
-createCacheKey = { gridEmojiFastImage: null, gridEmojiText: null, emojiGridRowContainer: null, emojiGridContainer: null };
-createCacheKey = { height: 40, width: 40, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { fontSize: 18, lineHeight: 44 };
-createCacheKey[2] = { marginTop: 16, flexDirection: "row" };
-createCacheKey[3] = { marginTop: 8, alignItems: "center" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/emoji/EmojiGrid.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { gridEmojiFastImage: null, gridEmojiText: null, emojiGridRowContainer: null, emojiGridContainer: null };
+let size = { height: 40, width: 40, borderRadius: nativeDefault.radii.sm };
+createStyles.gridEmojiFastImage = size;
+createStyles.gridEmojiText = { fontSize: 18, lineHeight: 44 };
+createStyles.emojiGridRowContainer = { marginTop: 16, flexDirection: "row" };
+createStyles.emojiGridContainer = { marginTop: 8, alignItems: "center" };
+let closure_5 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/emoji/EmojiGrid.tsx");
 
 export const EmojiGrid = function EmojiGrid(numberToShow) {
   ({ expressionSourceGuild, doNotDisplayEmojiIds } = numberToShow);
@@ -47,10 +48,9 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
   if (num2 === undefined) {
     num2 = 5;
   }
-  let obj;
-  obj = {};
+  let obj = {};
   const merged = Object.assign(doNotDisplayEmojiIds(10331).useSharedMessageEmojiStyles());
-  const merged1 = Object.assign(callback());
+  const merged1 = Object.assign(closure_5());
   let emojis;
   if (expressionSourceGuild != null) {
     emojis = expressionSourceGuild.emojis;
@@ -66,26 +66,26 @@ export const EmojiGrid = function EmojiGrid(numberToShow) {
   obj = { style: obj.emojiGridContainer, children: null };
   obj = {
     gap: 8,
-    children: obj(10344)(substr1, num2).map((arr) => {
+    children: obj(10344)(substr1, num2).map((arr, index) => {
       obj = { style: obj.emojiGridRowContainer, children: null };
-      obj = { gap: 32, children: arr.map((guildEmoji) => callback(closure_6, { guildEmoji }, guildEmoji.id)) };
-      obj[1] = closure_1_4(doNotDisplayEmojiIds(closure_1_2[10]).GappedList, obj);
-      return closure_1_4(closure_1_3, obj, arg1);
+      obj = { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) };
+      obj.children = jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) });
+      return <View key={arg1} gap={32}>{arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}</View>;
     })
   };
-  obj[1] = jsx(tmp(10346).GappedList, {
+  obj.children = jsx(tmp(10346).GappedList, {
     gap: 8,
-    children: obj(10344)(substr1, num2).map((arr) => {
+    children: obj(10344)(substr1, num2).map((arr, index) => {
       obj = { style: obj.emojiGridRowContainer, children: null };
-      obj = { gap: 32, children: arr.map((guildEmoji) => callback(closure_6, { guildEmoji }, guildEmoji.id)) };
-      obj[1] = closure_1_4(doNotDisplayEmojiIds(closure_1_2[10]).GappedList, obj);
-      return closure_1_4(closure_1_3, obj, arg1);
+      obj = { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) };
+      obj.children = jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) });
+      return <View key={arg1} gap={32}>{arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}</View>;
     })
   });
-  return <View gap={8}>{obj(10344)(substr1, num2).map((arr) => {
+  return <View gap={8}>{obj(10344)(substr1, num2).map((arr, index) => {
     obj = { style: obj.emojiGridRowContainer, children: null };
-    obj = { gap: 32, children: arr.map((guildEmoji) => callback(closure_6, { guildEmoji }, guildEmoji.id)) };
-    obj[1] = closure_1_4(doNotDisplayEmojiIds(closure_1_2[10]).GappedList, obj);
-    return closure_1_4(closure_1_3, obj, arg1);
+    obj = { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) };
+    obj.children = jsx(LayoutUtils.GappedList, { gap: 32, children: arr.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id)) });
+    return <View key={arg1} gap={32}>{arg0.map((guildEmoji) => closure_1_4(closure_1_6, { guildEmoji }, guildEmoji.id))}</View>;
   })}</View>;
 };

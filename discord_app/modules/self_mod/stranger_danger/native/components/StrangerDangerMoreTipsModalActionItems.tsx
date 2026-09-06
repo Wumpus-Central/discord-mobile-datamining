@@ -1,132 +1,127 @@
 // === Module 11385: StrangerDangerMoreTipsModalActionItems ===
 
 // Module 11385 (StrangerDangerMoreTipsModalActionItems)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "markAllUserIdListsStale" /* 4209 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10915 */;
-import { jsx } from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import DenyIcon from "DenyIcon" /* 7929 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9042 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11370 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");
+require = fn;
+const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
+let jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/native/components/StrangerDangerMoreTipsModalActionItems.tsx");
 
 export default function StrangerDangerMoreTipsModalActionItems(channelId) {
   channelId = channelId.channelId;
   const warningId = channelId.warningId;
   const senderId = channelId.senderId;
   const onBlockPressed = channelId.onBlockPressed;
-  let stateFromStores;
-  let memo;
   let isBlocked;
-  let first;
-  jsx = undefined;
-  let callback;
-  let callback1;
   let obj = channelId(senderId[6]);
   let items = [isBlocked];
   const items1 = [senderId];
-  stateFromStores = obj.useStateFromStores(items, () => isBlocked.getUser(senderId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(senderId), items1);
   const items2 = [stateFromStores];
-  memo = stateFromStores.useMemo(() => warningId(senderId[7]).getName(stateFromStores), items2);
+  const memo = stateFromStores.useMemo(() => UserUtilsDefault.getName(stateFromStores), items2);
   const items3 = [memo];
   const items4 = [senderId];
-  const stateFromStoresObject = channelId(senderId[6]).useStateFromStoresObject(items3, () => ({ isIgnored: memo.isIgnored(senderId), isBlocked: memo.isBlocked(senderId) }), items4);
+  const stateFromStoresObject = channelId(senderId[6]).useStateFromStoresObject(items3, () => ({ isIgnored: RelationshipStore.isIgnored(senderId), isBlocked: RelationshipStore.isBlocked(senderId) }), items4);
   isBlocked = stateFromStoresObject.isBlocked;
   const tmp4 = onBlockPressed(stateFromStores.useState(stateFromStoresObject.isIgnored), 2);
-  first = tmp4[0];
+  const first = tmp4[0];
   jsx = tmp6;
   const items5 = [channelId, warningId, senderId, tmp4[1]];
-  callback = stateFromStores.useCallback(() => {
-    let obj = channelId(senderId[8]);
-    obj = { channelId, warningId, senderId, warningType: first.STRANGER_DANGER, cta: channelId(senderId[8]).CtaEventTypes.USER_MODAL_IGNORE };
+  const callback = stateFromStores.useCallback(() => {
+    const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.STRANGER_DANGER, cta: SafetyWarningUtils.CtaEventTypes.USER_MODAL_IGNORE };
     obj.trackCtaEvent(obj);
-    warningId(senderId[9]).ignoreUser(senderId, "mobile_stranger_danger_more", channelId);
-    callback(true);
+    RelationshipActionCreatorsDefault.ignoreUser(senderId, "mobile_stranger_danger_more", channelId);
+    closure_8(true);
   }, items5);
   const items6 = [channelId, warningId, senderId, tmp4[1]];
-  callback1 = stateFromStores.useCallback(() => {
-    let obj = channelId(senderId[8]);
-    obj = { channelId, warningId, senderId, warningType: first.STRANGER_DANGER, cta: channelId(senderId[8]).CtaEventTypes.USER_MODAL_UNIGNORE };
+  const callback1 = stateFromStores.useCallback(() => {
+    const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.STRANGER_DANGER, cta: SafetyWarningUtils.CtaEventTypes.USER_MODAL_UNIGNORE };
     obj.trackCtaEvent(obj);
-    warningId(senderId[9]).unignoreUser(senderId, "mobile_stranger_danger_more", channelId);
-    callback(false);
+    RelationshipActionCreatorsDefault.unignoreUser(senderId, "mobile_stranger_danger_more", channelId);
+    closure_8(false);
   }, items6);
   const items7 = [first, isBlocked, memo, callback, callback1, onBlockPressed];
   const memo1 = stateFromStores.useMemo(() => {
-    const intl = channelId(senderId[10]).intl;
+    const intl = util.intl;
     const formatToPlainString = intl.formatToPlainString;
-    const t = channelId(senderId[10]).t;
+    const t = util.t;
     if (first) {
-      let obj = { username: null };
-      obj[0] = memo;
+      let obj = { username: memo };
       let formatToPlainStringResult = formatToPlainString(t.ZLIKgJ, obj);
       let tmp2 = memo;
     } else {
       obj = { username: null };
       tmp2 = memo;
-      obj[0] = memo;
+      obj.username = memo;
       formatToPlainStringResult = formatToPlainString(t.QiyPaJ, obj);
     }
     obj = { title: formatToPlainStringResult, description: null, onClick: null, icon: null, disabled: null };
     let stringResult;
     if (!first) {
-      const intl2 = channelId(senderId[10]).intl;
-      stringResult = intl2.string(channelId(senderId[10]).t.naWE6W);
+      const intl2 = util.intl;
+      stringResult = intl2.string(util.t.naWE6W);
     }
-    obj[1] = stringResult;
-    obj[2] = first ? callback1 : callback;
+    obj.description = stringResult;
+    obj.onClick = first ? callback1 : callback;
     if (first) {
-      let EyeSlashIcon = tmp11(tmp12[11]).EyeIcon;
+      let EyeSlashIcon = tmp11(6970).EyeIcon;
     } else {
-      EyeSlashIcon = tmp11(tmp12[12]).EyeSlashIcon;
+      EyeSlashIcon = tmp11(6968).EyeSlashIcon;
     }
-    obj[3] = closure_8(EyeSlashIcon, {});
-    obj[4] = isBlocked;
+    obj.icon = <EyeSlashIcon />;
+    obj.disabled = isBlocked;
     const items = [obj, ];
-    const intl3 = channelId(senderId[10]).intl;
+    const intl3 = util.intl;
     const formatToPlainString2 = intl3.formatToPlainString;
-    const t2 = channelId(senderId[10]).t;
+    const t2 = util.t;
     if (isBlocked) {
-      obj1 = { username: null };
-      obj1[0] = tmp2;
+      const obj1 = { username: tmp2 };
       let formatToPlainString2Result = formatToPlainString2(t2.bluEjH, obj1);
     } else {
-      const obj2 = { username: null };
-      obj2[0] = tmp2;
+      const obj2 = { username: tmp2 };
       formatToPlainString2Result = formatToPlainString2(t2["gc/wxc"], obj2);
     }
     const obj3 = { title: formatToPlainString2Result, description: null, onClick: null, icon: null, variant: "danger", disabled: null };
     let stringResult1;
     if (!isBlocked) {
-      const intl4 = channelId(senderId[10]).intl;
-      stringResult1 = intl4.string(channelId(senderId[10]).t.G08MKu);
+      const intl4 = util.intl;
+      stringResult1 = intl4.string(util.t.G08MKu);
     }
-    obj3[1] = stringResult1;
-    obj3[2] = onBlockPressed;
-    obj3[3] = closure_8(channelId(senderId[13]).DenyIcon, { color: "text-feedback-critical" });
-    obj3[5] = isBlocked;
+    obj3.description = stringResult1;
+    obj3.onClick = onBlockPressed;
+    obj3.icon = jsx(DenyIcon.DenyIcon, { color: "text-feedback-critical" });
+    obj3.disabled = isBlocked;
     items[1] = obj3;
     return items;
   }, items7);
   obj = {
     hasIcons: true,
-    children: memo1.map((arg0, arg1) => {
+    children: memo1.map((item, index) => {
       let obj = { children: null };
       obj = {};
-      const merged = Object.assign(arg0);
-      obj[0] = callback(warningId(senderId[15]), obj);
-      return callback(stateFromStores.Fragment, obj, arg1);
+      const merged = Object.assign(item);
+      obj.children = closure_8(warningId(senderId[15]), obj);
+      return closure_8(stateFromStores.Fragment, obj, index);
     })
   };
   return jsx(channelId(senderId[14]).TableRowGroup, {
     hasIcons: true,
-    children: memo1.map((arg0, arg1) => {
+    children: memo1.map((item, index) => {
       let obj = { children: null };
       obj = {};
-      const merged = Object.assign(arg0);
-      obj[0] = callback(warningId(senderId[15]), obj);
-      return callback(stateFromStores.Fragment, obj, arg1);
+      const merged = Object.assign(item);
+      obj.children = closure_8(warningId(senderId[15]), obj);
+      return closure_8(stateFromStores.Fragment, obj, index);
     })
   });
 };

@@ -1,16 +1,16 @@
-// === Module 9239: get ActivityIndicator ===
+// === Module 9239: SamsungManager ===
 
-// Module 9239 (get ActivityIndicator)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 9239 (SamsungManager)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
 
 export default {
-  checkIfOAuthRequest(closure_0) {
+  checkIfOAuthRequest(arg0) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.checkIfOAuthRequest(closure_0);
+    return Samsung.checkIfOAuthRequest(arg0);
   },
   showConnectionDisclaimer() {
     const Samsung = NativeModules.Samsung;
@@ -20,8 +20,8 @@ export default {
     const Samsung = NativeModules.Samsung;
     return Samsung.getAccountUrlAndAuthCode();
   },
-  finishSamsungAuthorization(arg0, arg1, closure_5) {
+  finishSamsungAuthorization(arg0, arg1, arg2) {
     const Samsung = NativeModules.Samsung;
-    return Samsung.finishSamsungAuthorization(arg0, arg1, closure_5);
+    return Samsung.finishSamsungAuthorization(arg0, arg1, arg2);
   }
 };

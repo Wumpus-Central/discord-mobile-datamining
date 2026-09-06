@@ -1,9 +1,9 @@
-// === Module 11044: useGiftingPromotionDefaultSelectionV2 ===
+// === Module 11044: useGiftingPromotionDefaultSelection ===
 
-// Module 11044 (useGiftingPromotionDefaultSelectionV2)
-import set from "set" /* 2 */;
+// Module 11044 (useGiftingPromotionDefaultSelection)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");
+const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftingPromotionDefaultSelection.tsx");
 
 export const useGiftingPromotionDefaultSelectionV2 = function useGiftingPromotionDefaultSelectionV2(claimableRewards, selectedGiftingPromotionReward) {
   if (null != claimableRewards) {

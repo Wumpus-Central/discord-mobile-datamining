@@ -1,9 +1,9 @@
-// === Module 5463: EmojiCategoryTypes ===
+// === Module 5463: EmojiPickerConstants ===
 
-// Module 5463 (EmojiCategoryTypes)
-import set from "set" /* 2 */;
+// Module 5463 (EmojiPickerConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/emoji_picker/EmojiPickerConstants.tsx");
+const result = size.fileFinishedImporting("modules/emoji_picker/EmojiPickerConstants.tsx");
 
 export const EmojiCategoryTypes = { GUILD: "GUILD", UNICODE: "UNICODE", RECENT: "RECENT", CUSTOM: "CUSTOM", SEARCH_RESULTS: "SEARCH_RESULTS", FAVORITES: "FAVORITES", TOP_GUILD_EMOJI: "TOP_GUILD_EMOJI", PREMIUM_UPSELL: "PREMIUM_UPSELL", SOUNDMOJI: "SOUNDMOJI" };
 export const GRID_NAVIGATOR_ID = "emoji-picker-grid";

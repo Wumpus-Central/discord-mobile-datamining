@@ -1,23 +1,21 @@
-// === Module 15942: ChatPanelNativeStackNavigator ===
+// === Module 15942: createChatPanelNativeStackNavigator ===
 
-// Module 15942 (ChatPanelNativeStackNavigator)
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15942 (createChatPanelNativeStackNavigator)
+import Link from "Link" /* 1484 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ChatPanelNativeStackNavigator(arg0) {
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
-  let merged = Object.assign(arg0, Object.create(null));
+  let merged = Object.assign(arg0, Object.assign({ id: 0, initialRouteName: 0, UNSTABLE_routeNamesChangeBehavior: 0, children: 0, layout: 0, screenListeners: 0, screenOptions: 0, screenLayout: 0, UNSTABLE_router: 0 }));
   let state;
   let descriptors;
-  let navigation;
-  let state2;
   let obj = state(descriptors[2]);
   const navigationBuilder = obj.useNavigationBuilder(state(descriptors[2]).StackRouter, { id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router });
   state = navigationBuilder.state;
   descriptors = navigationBuilder.descriptors;
-  navigation = navigationBuilder.navigation;
+  const navigation = navigationBuilder.navigation;
   let items = [state, descriptors];
   ({ describe, NavigationContent } = navigationBuilder);
   const memo = navigation.useMemo(() => {
@@ -34,11 +32,7 @@ function ChatPanelNativeStackNavigator(arg0) {
     if (0 < state.routes.length) {
       do {
         let tmp2 = state.routes[num];
-        let tmp3 = state;
-        let tmp4 = descriptors;
-        let obj3 = state(descriptors[3]);
-        let tmp5 = num;
-        let tmp6 = num2;
+        let obj3 = NavigationRouteUtils;
         if (null != obj3.coerceChannelRoute(tmp2)) {
           let arr = items1.push(tmp2);
           let sum = num2;
@@ -67,7 +61,7 @@ function ChatPanelNativeStackNavigator(arg0) {
     }
     return { state, filteredDescriptors };
   }, items);
-  state2 = memo.state;
+  const state2 = memo.state;
   let items1 = [navigation, , ];
   ({ index: arr2[1], key: arr2[2] } = state2);
   const accessibilityPatchedDescriptors = state(descriptors[4]).useAccessibilityPatchedDescriptors(memo.filteredDescriptors);
@@ -77,10 +71,10 @@ function ChatPanelNativeStackNavigator(arg0) {
       const addListener = navigation.addListener;
       if (addListener != null) {
         addListenerResult = addListener("tabPress", (arg0) => {
-          closure_0 = arg0;
+          const defaultPrevented = arg0;
           closure_1 = focused.isFocused();
           const animationFrame = requestAnimationFrame(() => {
-            let tmp2 = closure_1_3.index > 0;
+            let tmp2 = index.index > 0;
             if (tmp2) {
               tmp2 = closure_1;
             }
@@ -89,10 +83,10 @@ function ChatPanelNativeStackNavigator(arg0) {
             }
             if (tmp2) {
               const obj = {};
-              const StackActions = closure_2_0(closure_2_1[2]).StackActions;
+              const StackActions = state(descriptors[2]).StackActions;
               const merged = Object.assign(StackActions.popToTop());
-              obj.target = closure_1_3.key;
-              closure_1_2.dispatch(obj);
+              obj.target = index.key;
+              navigation.dispatch(obj);
             }
           });
         });
@@ -107,11 +101,13 @@ function ChatPanelNativeStackNavigator(arg0) {
   obj.navigation = navigation;
   obj.descriptors = accessibilityPatchedDescriptors;
   obj.describe = describe;
-  obj[0] = state2(state(descriptors[5]).NativeStackView, obj);
+  obj.children = state2(state(descriptors[5]).NativeStackView, obj);
   return state2(NavigationContent, obj);
 }
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx");
 
 export default function createChatPanelNativeStackNavigator(arg0) {
-  return createStandardNavigationFactories.createNavigatorFactory(ChatPanelNativeStackNavigator)(arg0);
+  return Link.createNavigatorFactory(ChatPanelNativeStackNavigator)(arg0);
 };

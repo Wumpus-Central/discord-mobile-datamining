@@ -1,15 +1,15 @@
 // === Module 11651: trackRepliedMessageClicked ===
 
 // Module 11651 (trackRepliedMessageClicked)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import processMessage from "processMessage" /* 7595 */;
+import Constants from "Constants" /* 1074 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7595 */;
 import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 8753 */;
+import size from "module_2" /* 2 */;
 
-const ReferencedMessageState = processMessage.ReferencedMessageState;
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/replies/trackRepliedMessageClicked.tsx");
+const ReferencedMessageState = ReferencedMessageStore.ReferencedMessageState;
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/replies/trackRepliedMessageClicked.tsx");
 
 export default function trackRepliedMessageClicked(messageReference, state, channel_id) {
   messageReference = messageReference.messageReference;
@@ -33,8 +33,7 @@ export default function trackRepliedMessageClicked(messageReference, state, chan
     tmp4 = tmp9.attachments.length > 0 || tmp9.embeds.length > 0 || tmp9.stickerItems.length > 0 || tmp9.stickers.length > 0;
     const tmp5 = tmp9.attachments.length > 0 || tmp9.embeds.length > 0 || tmp9.stickerItems.length > 0 || tmp9.stickers.length > 0;
   }
-  let obj = collectGuildAnalyticsMetadata;
   const guild_id = channel_id.guild_id;
-  obj = { guild_id, channel_id: channel_id.id, reply_message_id: messageReference.id, replied_message_id: message_id, replied_message_is_loaded: state.state === ReferencedMessageState.LOADED, replied_message_has_media: tmp4, replied_message_length: tmp3 };
+  const obj = { guild_id, channel_id: channel_id.id, reply_message_id: messageReference.id, replied_message_id: message_id, replied_message_is_loaded: state.state === ReferencedMessageState.LOADED, replied_message_has_media: tmp4, replied_message_length: tmp3 };
   obj.trackWithMetadata(AnalyticEvents.REPLIED_MESSAGE_CLICKED, obj);
 };

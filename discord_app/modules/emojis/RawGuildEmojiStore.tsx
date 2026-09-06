@@ -1,25 +1,19 @@
-// === Module 5461: fromServer ===
+// === Module 5461: RawGuildEmojiStore ===
 
-// Module 5461 (fromServer)
+// Module 5461 (RawGuildEmojiStore)
 import EmojiTypes from "EmojiTypes" /* 4216 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { TypeTag } from "TypeTag" /* 1973 */;
-import { LibdiscoreStore } from "identity" /* 1980 */;
-import { LibdiscoreBatchStoreRefactorExperiment } from "items" /* 1983 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-function fromServer(guildId) {
+require = fn;
+function fromServer(guildId, arg1) {
   let obj = {};
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     obj = {};
-    let tmp2 = TypeTag;
     obj[TypeTag] = "RawGuildEmoji";
     obj.guildId = guildId;
     ({ id: obj2.id, animated: obj2.animated, name: obj2.name, require_colons: obj2.require_colons, available: obj2.available, roles: obj2.roles, managed: obj2.managed, version: obj2.version } = nextResult);
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     obj.type = EmojiTypes.EmojiTypes.GUILD;
     obj[nextResult.id] = obj;
     continue;
@@ -45,7 +39,6 @@ function syncEmojis(id, emojis, setPartition) {
       const tmp9 = writes[Symbol.iterator]();
       while (tmp9 !== undefined) {
         let _Object = Object;
-        let tmp14 = fromServer;
         let items = [tmp12];
         let merged1 = Object.assign(obj, fromServer(id, items));
         continue;
@@ -54,6 +47,8 @@ function syncEmojis(id, emojis, setPartition) {
     }
   }
 }
+const TypeTag = fn(1973).TypeTag;
+const LibdiscoreStore = fn(1980).LibdiscoreStore;
 class RawGuildEmojiStore extends LibdiscoreStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -70,6 +65,7 @@ prototype["getGuildEmojis"] = function getGuildEmojis(guildId) {
   return database.getNullablePartition(guildId);
 };
 RawGuildEmojiStore.displayName = "RawGuildEmojiStore";
+const LibdiscoreBatchStoreRefactorExperiment = fn(1983).LibdiscoreBatchStoreRefactorExperiment;
 const rawGuildEmojiStore = new RawGuildEmojiStore({
   LOGOUT(arg0, clear) {
     return clear.clear();
@@ -91,7 +87,6 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     for (const item10028 of partitionKeys) {
       let tmp3 = item10028;
       if (!set.has(item10028)) {
-        let tmp4 = item10028;
         let removePartitionResult = arg1.removePartition(tmp3);
       }
       continue;
@@ -99,26 +94,23 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     const iter = guilds[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp7 = syncEmojis;
       let tmp8 = syncEmojis(nextResult.id, nextResult.emojis, getPartitionKeys);
       continue;
     }
   },
   OVERLAY_INITIALIZE(emojis, clear) {
-    closure_0 = clear;
+    const partition = clear;
     clear.clear();
     const entries = Object.entries(emojis.emojis);
-    const item = entries.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
-      partition.setPartition(tmp, closure_1_4(tmp, tmp2));
+    const item = entries.forEach((item) => {
+      [tmp, tmp2] = item;
+      partition.setPartition(tmp, fromServer(tmp, tmp2));
     });
   },
   CACHED_EMOJIS_LOADED(arg0, setPartition) {
     while (tmp !== undefined) {
-      let tmp3 = callback;
-      let tmp4 = callback(tmp2, 2);
+      let tmp4 = _slicedToArray(tmp2, 2);
       let first = tmp4[0];
-      let tmp6 = fromServer;
       let setPartitionResult = setPartition.setPartition(first, fromServer(first, tmp4[1]));
       continue;
     }
@@ -136,6 +128,7 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     removePartition.removePartition(guild.guild.id);
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-const result = require("set").fileFinishedImporting("modules/emojis/RawGuildEmojiStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emojis/RawGuildEmojiStore.tsx");
 
 export default rawGuildEmojiStore;

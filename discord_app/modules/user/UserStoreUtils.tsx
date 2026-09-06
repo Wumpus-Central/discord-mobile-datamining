@@ -1,23 +1,23 @@
-// === Module 1382: validatePremiumType ===
+// === Module 1382: UserStoreUtils ===
 
-// Module 1382 (validatePremiumType)
-import set from "set" /* 2 */;
+// Module 1382 (UserStoreUtils)
 import _modDef38 from "module_38" /* 38 */;
-import Environments2 from "Environments" /* 1383 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import ME from "ME" /* 1074 */;
+import UserStoreConstants from "UserStoreConstants" /* 1383 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Environments = Environments2.Environments;
-({ PREMIUM_TYPE_NONE: c4, UserFlags: c5 } = ME);
-const result = set.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
+const Environments = UserStoreConstants.Environments;
+({ PREMIUM_TYPE_NONE: closure_4, UserFlags: hasOwnProperty } = Constants);
+const result = size.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
 
-export const validatePremiumType = function validatePremiumType(arg0, arg1, premiumType) {
+export const validatePremiumType = function validatePremiumType(arg0, premiumType, premiumType2) {
   let tmp = arg0;
   if (!arg0) {
-    tmp = undefined === arg1;
+    tmp = undefined === premiumType;
   }
   if (!tmp) {
-    _modDef38(premiumType === arg1, "Premium type should not change for non-staff users");
+    _modDef38(premiumType2 === premiumType, "Premium type should not change for non-staff users");
   }
 };
 export const getEnv = function getEnv(arg0) {
@@ -72,8 +72,7 @@ export const isStaffEnvRawData = function isStaffEnvRawData(flags) {
     if (tmp9) {
       let tmp10 = null == flags.flags;
       if (!tmp10) {
-        tmp10 = !hasFlag.hasFlag(flags.flags, constants.STAFF);
-        const obj = hasFlag;
+        tmp10 = !FlagUtils.hasFlag(flags.flags, constants.STAFF);
       }
       let tmp14 = !tmp10;
       if (tmp10) {

@@ -1,9 +1,9 @@
-// === Module 5016: perceptualToAmplitude ===
+// === Module 5016: perceptual_volume/PerceptualVolumeUtils ===
 
-// Module 5016 (perceptualToAmplitude)
-import set from "set" /* 2 */;
+// Module 5016 (perceptual_volume/PerceptualVolumeUtils)
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
+let result = size.fileFinishedImporting("modules/perceptual_volume/PerceptualVolumeUtils.tsx");
 
 export const perceptualToAmplitude = function perceptualToAmplitude(arg0) {
   let num = arg1;

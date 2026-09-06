@@ -1,25 +1,27 @@
-// === Module 16634: useValidOrderedFilterTokens ===
+// === Module 16634: useValidFilterTokens ===
 
-// Module 16634 (useValidOrderedFilterTokens)
-import closure_2 from "initialize" /* 4405 */;
+// Module 16634 (useValidFilterTokens)
+import SearchTokenStreamerModeUtils from "SearchTokenStreamerModeUtils" /* 12345 */;
+import StreamerModeStore from "StreamerModeStore" /* 4405 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/tokens/hooks/useValidFilterTokens.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/tokens/hooks/useValidFilterTokens.tsx");
 
 export const useValidOrderedFilterTokens = function useValidOrderedFilterTokens(searchContext) {
-  const _require = searchContext;
-  let items = [closure_2];
-  return _require(504).useStateFromStoresArray(items, () => {
-    const items = [closure_1_2];
-    return searchContext(closure_1_1[2]).getValidOrderedFilterTokens(searchContext, items);
+  _require = searchContext;
+  let items = [StreamerModeStore];
+  return require("initialize").useStateFromStoresArray(items, () => {
+    const items = [StreamerModeStore];
+    return SearchTokenStreamerModeUtils.getValidOrderedFilterTokens(closure_0, items);
   });
 };
 export const useValidFilterTokens = function useValidFilterTokens(searchContext) {
-  const _require = searchContext;
-  let items = [closure_2];
+  _require = searchContext;
+  let items = [StreamerModeStore];
   const items1 = [searchContext];
-  return _require(504).useStateFromStores(items, () => {
-    const items = [closure_1_2];
-    return searchContext(closure_1_1[2]).getValidFilterTokens(searchContext, items);
-  }, items1, _require(1974).areSetsEqual);
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [StreamerModeStore];
+    return SearchTokenStreamerModeUtils.getValidFilterTokens(closure_0, items);
+  }, items1, require("SetUtils").areSetsEqual);
 };

@@ -1,12 +1,17 @@
 // === Module 10909: GroupDMRow ===
 
 // Module 10909 (GroupDMRow)
-import closure_3 from "noop" /* 19 */;
-import { UserRowModes } from "UserRowModes" /* 10860 */;
-import { jsx } from "jsxProd" /* 21 */;
+import native from "native" /* 1178 */;
+import useChannelNameDefault from "useChannelName" /* 4713 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
+import useRecipientsLabel from "useRecipientsLabel" /* 10911 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
+require = fn;
+const UserRowModes = fn(10860).UserRowModes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
 
 export default function GroupDMRow(channel) {
   channel = channel.channel;
@@ -23,29 +28,27 @@ export default function GroupDMRow(channel) {
     flag2 = false;
   }
   const onPress = channel.onPress;
-  const merged = Object.assign(channel, Object.create(null));
-  let str = onPress(4713)(channel);
+  const merged = Object.assign(channel, Object.assign({ channel: 0, mode: 0, selected: 0, disabled: 0, onPress: 0 }));
+  let str = useChannelNameDefault(channel);
   const items = [channel, onPress];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (onPress != null) {
       tmp(channel);
     }
   }, items);
-  let obj = { size: channel(1178).AvatarSizes.REFRESH_MEDIUM_32, channel };
-  const tmp6 = onPress(10910);
-  obj1 = channel(10911);
+  let obj = { size: native.AvatarSizes.REFRESH_MEDIUM_32, channel };
+  let obj1 = useRecipientsLabel;
   const recipientsLabel = obj1.useRecipientsLabel(channel);
   obj = {};
   const merged1 = Object.assign(merged);
   obj.disabled = flag2;
   let tmp5Result;
   if (null != recipientsLabel) {
-    obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
-    obj[3] = recipientsLabel;
+    obj = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: recipientsLabel };
     tmp5Result = tmp5(tmp7(4556).Text, obj);
   }
   obj.subLabel = tmp5Result;
-  obj.icon = jsx(onPress(10910), {});
+  obj.icon = jsx(GroupDMAvatarDefault, {});
   obj.onPress = callback;
   if (str == null) {
     str = "";

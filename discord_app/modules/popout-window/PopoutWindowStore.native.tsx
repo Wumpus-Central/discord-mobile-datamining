@@ -1,16 +1,14 @@
-// === Module 4703: initialize ===
+// === Module 4703: PopoutWindowStore ===
 
-// Module 4703 (initialize)
+// Module 4703 (PopoutWindowStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let closure_0 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class PopoutWindowStore extends PersistedStore {
 }
 const prototype = PopoutWindowStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
@@ -24,7 +22,7 @@ prototype["getWindowState"] = function getWindowState() {
 prototype["getWindowKeys"] = function getWindowKeys() {
   return [];
 };
-prototype["getWindowOpen"] = function getWindowOpen(CHANNEL_CALL_POPOUT) {
+prototype["getWindowOpen"] = function getWindowOpen() {
   return false;
 };
 prototype["getIsAlwaysOnTop"] = function getIsAlwaysOnTop() {
@@ -37,7 +35,7 @@ prototype["getWindowVisible"] = function getWindowVisible() {
   return false;
 };
 prototype["getState"] = function getState() {
-  return closure_0;
+  return obj;
 };
 prototype["isWindowFullyInitialized"] = function isWindowFullyInitialized() {
   return false;
@@ -50,7 +48,8 @@ prototype["unmountWindow"] = function unmountWindow() {
 };
 PopoutWindowStore.displayName = "PopoutWindowStore";
 PopoutWindowStore.persistKey = "PopoutWindowStoreIOS";
-const popoutWindowStore = new PopoutWindowStore(dispatcherDefault, {});
-const result = require("set").fileFinishedImporting("modules/popout-window/PopoutWindowStore.native.tsx");
+const popoutWindowStore = new PopoutWindowStore(DispatcherDefault, {});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/popout-window/PopoutWindowStore.native.tsx");
 
 export default popoutWindowStore;

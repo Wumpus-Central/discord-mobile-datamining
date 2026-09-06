@@ -1,27 +1,29 @@
 // === Module 11770: QuestRewardTile ===
 
 // Module 11770 (QuestRewardTile)
-import noopDefault from "noop" /* 19 */;
-import _modDef11771 from "module_11771" /* 11771 */;
-import { useMemo } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import AssetUtils from "AssetUtils" /* 11285 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11290 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 11771 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopDefault;
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestRewardTile.tsx");
 
 export default function QuestRewardTile(quest) {
   quest = quest.quest;
-  const merged = Object.assign(quest, Object.create(null));
+  const merged = Object.assign(quest, Object.assign({ quest: 0, accessibilityLabelPrefix: 0 }));
   const items = [quest];
-  const tmp3 = useMemo(() => quest(closure_1_2[2]).getQuestPrimaryReward(quest), items);
+  const tmp3 = useMemo(() => QuestRewardUtils.getQuestPrimaryReward(quest), items);
   if (null != tmp3.name) {
     let name = tmp3.name;
   } else {
     name = tmp3.messages.name;
   }
   const items1 = [quest];
-  const tmp2Result = useMemo(() => quest(closure_1_2[3]).getQuestAsset(quest, quest(closure_1_2[3]).QuestAssetType.REWARD, undefined, true), items1);
+  const tmp2Result = useMemo(() => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.REWARD, undefined, true), items1);
   const items2 = [quest.accessibilityLabelPrefix, name];
   const found = items2.filter(Boolean);
   const joined = found.join(", ");
@@ -30,7 +32,7 @@ export default function QuestRewardTile(quest) {
   if ("" !== joined) {
     tmp8 = joined;
   }
-  obj[2] = tmp8;
+  obj.accessibilityLabel = tmp8;
   const merged1 = Object.assign(merged);
-  return jsx(_modDef11771, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
+  return jsx(QuestDockRewardTileDefault, { assetUrl: tmp2Result.url, isAnimatedAsset: tmp2Result.isAnimated, accessibilityLabel: null });
 };

@@ -1,9 +1,9 @@
 // === Module 17229: ? ===
 
 // Module 17229
-import set from "set" /* 2 */;
-import getMessage from "getMessage" /* 17230 */;
-import I18nLinkDefault from "I18nLink" /* 17278 */;
+import i18n from "i18n" /* 17230 */;
+import updateRulesDefault from "updateRules" /* 17278 */;
+import size from "module_2" /* 2 */;
 
-getMessage.setUpdateRules(I18nLinkDefault);
-const result = set.fileFinishedImporting("i18n/native/index.tsx");
+const updateRules = i18n.setUpdateRules(updateRulesDefault);
+const result = size.fileFinishedImporting("i18n/native/index.tsx");

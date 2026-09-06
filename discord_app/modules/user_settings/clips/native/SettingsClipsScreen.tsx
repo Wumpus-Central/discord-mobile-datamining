@@ -1,19 +1,23 @@
-// === Module 14974: ClipsSettingsScreen ===
+// === Module 14974: SettingsClipsScreen ===
 
-// Module 14974 (ClipsSettingsScreen)
-import _modDef14689 from "module_14689" /* 14689 */;
-import closure_3 from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14974 (SettingsClipsScreen)
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingLayoutDefault from "SettingLayout" /* 14689 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
+require = fn;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/clips/native/SettingsClipsScreen.tsx");
 
 export default function ClipsSettingsScreen() {
-  const node = React.useMemo(() => {
+  const node = noop.useMemo(() => {
+    const obj = { settings: null };
     const items = [constants.CLIPS_OPT_OUT_OF_VOICE_RECORDING];
-    const sections = [{ settings: items }];
-    return callback(table[3]).createList({ sections });
+    obj.settings = items;
+    const sections = [obj];
+    return SettingBuilders.createList({ sections });
   }, []);
-  return jsx(_modDef14689, { node });
+  return jsx(SettingLayoutDefault, { node });
 };

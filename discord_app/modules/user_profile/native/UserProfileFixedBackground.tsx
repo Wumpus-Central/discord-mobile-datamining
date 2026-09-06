@@ -1,27 +1,28 @@
-// === Module 8237: ? ===
+// === Module 8237: UserProfileFixedBackground ===
 
-// Module 8237
-import ManaContext from "ManaContext" /* 4271 */;
+// Module 8237 (UserProfileFixedBackground)
+import native from "native" /* 4271 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import useUserProfileColors from "useUserProfileColors" /* 8238 */;
 import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8239 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-const memoResult = importAllResult.memo((style) => {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
+
+export default noop.memo((style) => {
   style = style.style;
   ({ gradientHeight, bannerHeight } = style);
-  let obj = ManaContext;
+  let obj = native;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, secondaryColor, theme } = themeContext);
   const gradientFallbackBackground = useUserProfileColors.useUserProfileColors({ theme, primaryColor, secondaryColor }).gradientFallbackBackground;
-  const obj2 = useUserProfileColors;
-  const obj3 = useUserProfileGradientColors;
-  const first = callback(useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
+  const first = _slicedToArray(useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, gradientFallbackBackground), 2)[0];
   if (null != primaryColor) {
     if (null != secondaryColor) {
       const _Math = Math;
@@ -29,18 +30,16 @@ const memoResult = importAllResult.memo((style) => {
       const bound = Math.min(1, Math.max(0, bannerHeight / gradientHeight));
       obj = { colors: null, locations: null, style: null, pointerEvents: "none" };
       const items = [first, first, tmp5];
-      obj[0] = items;
+      obj.colors = items;
       const items1 = [0, bound, 1];
-      obj[1] = items1;
-      const items2 = [closure_4.absoluteFill, style];
-      obj[2] = items2;
+      obj.locations = items1;
+      const items2 = [React4.absoluteFill, style];
+      obj.style = items2;
       return jsx(LinearGradientDefault, { colors: null, locations: null, style: null, pointerEvents: "none" });
     }
   }
-  style = [closure_4.absoluteFill, { backgroundColor: gradientFallbackBackground }, ];
-  style[2] = style;
-  return <closure_5 style={style} pointerEvents="none" />;
+  obj = { style: null, pointerEvents: "none" };
+  const items3 = [React4.absoluteFill, { backgroundColor: gradientFallbackBackground }, style];
+  obj.style = items3;
+  return <hasOwnProperty style={null} pointerEvents="none" />;
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
-
-export default memoResult;

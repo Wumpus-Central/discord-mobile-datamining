@@ -1,9 +1,9 @@
 // === Module 11758: getIsInParty ===
 
 // Module 11758 (getIsInParty)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getIsInParty.tsx");
 
 export const getIsInParty = function getIsInParty(tmp8Result, activity) {
   let id;

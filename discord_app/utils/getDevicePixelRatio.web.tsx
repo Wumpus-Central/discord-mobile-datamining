@@ -1,9 +1,9 @@
-// === Module 9191: getDevicePixelRatio ===
+// === Module 9191: utils/getDevicePixelRatio ===
 
-// Module 9191 (getDevicePixelRatio)
-import set from "set" /* 2 */;
+// Module 9191 (utils/getDevicePixelRatio)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");
+const result = size.fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");
 
 export default function getDevicePixelRatio() {
   let num = window.devicePixelRatio;

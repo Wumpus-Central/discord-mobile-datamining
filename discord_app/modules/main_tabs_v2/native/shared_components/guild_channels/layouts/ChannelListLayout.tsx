@@ -1,9 +1,9 @@
-// === Module 10121: getLayoutStyles ===
+// === Module 10121: ChannelListLayout ===
 
-// Module 10121 (getLayoutStyles)
-import set from "set" /* 2 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+// Module 10121 (ChannelListLayout)
+import UserSettings from "UserSettings" /* 1935 */;
 import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 7879 */;
+import size from "module_2" /* 2 */;
 
 function getLayoutStyles(layout, launchpad) {
   let flag = launchpad;
@@ -25,20 +25,21 @@ function getLayoutStyles(layout, launchpad) {
     return flag ? tmpResult.CHANNEL_LIST_STYLES_COZY_LAUNCHPAD : tmpResult.CHANNEL_LIST_STYLES_COZY;
   }
 }
-let result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx");
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx");
 
 export { getLayoutStyles };
 export function makeSizeStyle(size) {
-  return { width: size, height: size };
+  size = { width: size, height: size };
+  return size;
 }
-export const isLayoutCompact = function isLayoutCompact(closure_1_6) {
-  return closure_1_6 === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
+export const isLayoutCompact = function isLayoutCompact(layout) {
+  return layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
 };
 export const isLayoutCozy = function isLayoutCozy(layout) {
   return layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY || layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER || layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
 };
 export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) {
-  const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
+  const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;
   const setting = ChannelListLayoutSetting.useSetting();
   const ChannelListLayoutTypes = ChannelListLayoutTypes2.ChannelListLayoutTypes;
   if (panelVariant) {

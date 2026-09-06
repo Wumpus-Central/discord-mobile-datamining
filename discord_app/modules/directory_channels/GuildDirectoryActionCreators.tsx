@@ -1,368 +1,127 @@
-// === Module 12316: _addDirectoryGuildEntry ===
+// === Module 12316: GuildDirectoryActionCreators ===
 
-// Module 12316 (_addDirectoryGuildEntry)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import _modDef4753 from "module_4753" /* 4753 */;
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "getSearchState" /* 12303 */;
-import { DirectoryEntryCategories } from "DirectoryEntryTypes" /* 12305 */;
-import { Endpoints } from "ME" /* 1074 */;
-import importDefaultResult1 from "debounce" /* 551 */;
+// Module 12316 (GuildDirectoryActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GuildDirectorySearchStore from "GuildDirectorySearchStore" /* 12303 */;
+import "debounce";
+import debounce from "debounce" /* 551 */;
 
-let closure_0 = arg1;
-function _addDirectoryGuildEntry() {
-  const self = this;
-  const tmp = importDefaultResult((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c6 = 0;
-    c7 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_5 = tmp3;
-              let body = tmp2;
-              let UNCATEGORIZED;
-              if (UNCATEGORIZED === undefined) {
-                UNCATEGORIZED = closure_1_5.UNCATEGORIZED;
-              }
-              body = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj7 = callback2(4753);
-              const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
-              obj2[0] = c6.DIRECTORY_CHANNEL_ENTRY(callback, callback2);
-              const obj3 = { description: null, primary_category_id: null };
-              obj3[0] = dependencyMap;
-              obj3[1] = UNCATEGORIZED;
-              obj2[1] = obj3;
-              const obj4 = { event: null, properties: null };
-              obj4[0] = callback(1250).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE;
-              const obj5 = { directory_channel_id: null, guild_id: null, primary_category_id: null };
-              obj5[0] = callback;
-              obj5[1] = callback2;
-              obj5[2] = UNCATEGORIZED;
-              obj4[1] = obj5;
-              obj2[2] = obj4;
-              obj2[3] = callback(1272).rejectWithMigratedError();
-              c6 = 2;
-              c7 = 1;
-              const obj6 = { value: null, done: false };
-              obj6[0] = obj7.post(obj2);
-              return obj6;
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          } else {
-            body = arg1;
-            obj = callback2(573);
-            const obj8 = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: null, entry: null };
-            obj8[1] = callback;
-            obj8[2] = body.body;
-            obj.dispatch(obj8);
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp18) {
-          c7 = tmp;
-          throw tmp18;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_7 = async function _addDirectoryGuildEntry() {
+  let obj7 = closure_133_1(closure_133_2[7]);
+  const request = { url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1), body: { description: closure_132_2, primary_category_id: closure_132_3 }, trackedActionData: { event: closure_133_0(closure_133_2[8]).NetworkActionNames.DIRECTORY_GUILD_ENTRY_CREATE, properties: { directory_channel_id: closure_132_0, guild_id: closure_132_1, primary_category_id: closure_132_3 } }, rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError() };
+  closure_132_4 = await obj7.post(request);
+  obj7 = { type: "GUILD_DIRECTORY_ENTRY_CREATE", channelId: closure_132_0, entry: closure_132_4.body };
+  closure_133_1(closure_133_2[5]).dispatch(obj7);
+  await "HermesInternal";
+  closure_5 = tmp3;
+  closure_4 = tmp2;
+  closure_132_0 = closure_0;
+  closure_132_1 = closure_1;
+  closure_132_2 = closure_2;
+  let UNCATEGORIZED = closure_3;
+  if (closure_3 === undefined) {
+    UNCATEGORIZED = constants.UNCATEGORIZED;
   }
-  return applyArgumentsResult;
-}
-function _updateDirectoryEntry() {
-  const self = this;
-  const tmp = importDefaultResult((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c6 = 0;
-    c7 = 0;
-    const iter = (function*(arg0, arg1, arg2) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_5 = tmp3;
-              let body = tmp2;
-              let UNCATEGORIZED;
-              if (UNCATEGORIZED === undefined) {
-                UNCATEGORIZED = closure_1_5.UNCATEGORIZED;
-              }
-              body = undefined;
-              c6 = 1;
-              c7 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const HTTP = callback(1272).HTTP;
-              const obj2 = { url: null, body: null, rejectWithError: null };
-              obj2[0] = c6.DIRECTORY_CHANNEL_ENTRY(callback, callback2);
-              const obj3 = { description: null, primary_category_id: null };
-              obj3[0] = dependencyMap;
-              obj3[1] = UNCATEGORIZED;
-              obj2[1] = obj3;
-              obj2[2] = callback(1272).rejectWithMigratedError();
-              c6 = 2;
-              c7 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.patch(obj2);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            body = arg1;
-            obj = callback2(573);
-            const obj6 = { type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: null, entry: null };
-            obj6[1] = callback;
-            obj6[2] = body.body;
-            obj.dispatch(obj6);
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp18) {
-          c7 = tmp;
-          throw tmp18;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+  closure_132_3 = UNCATEGORIZED;
+  return "PX_16";
+};
+let closure_8 = async function _updateDirectoryEntry() {
+  const HTTP = closure_133_0(closure_133_2[6]).HTTP;
+  const request = { url: closure_133_6.DIRECTORY_CHANNEL_ENTRY(closure_132_0, closure_132_1), body: { description: closure_132_2, primary_category_id: closure_132_3 }, rejectWithError: closure_133_0(closure_133_2[6]).rejectWithMigratedError() };
+  closure_132_4 = await HTTP.patch(request);
+  closure_133_1(closure_133_2[5]).dispatch({ type: "GUILD_DIRECTORY_ENTRY_UPDATE", channelId: closure_132_0, entry: closure_132_4.body });
+  await "HermesInternal";
+  closure_5 = tmp3;
+  closure_4 = tmp2;
+  closure_132_0 = closure_0;
+  closure_132_1 = closure_1;
+  closure_132_2 = closure_2;
+  let UNCATEGORIZED = closure_3;
+  if (closure_3 === undefined) {
+    UNCATEGORIZED = constants.UNCATEGORIZED;
   }
-  return applyArgumentsResult;
-}
-function _fetchGuildEntriesForIds() {
-  const self = this;
-  const tmp = importDefaultResult((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      closure_3 = tmp3;
-      c5 = 1;
-      const HTTP = callback(closure_1_2[6]).HTTP;
-      obj1 = { url: null, query: null, rejectWithError: true };
-      obj1[0] = c6.DIRECTORY_CHANNEL_LIST_BY_ID(callback);
-      const obj2 = { entity_ids: null };
-      obj2[0] = lib;
-      obj1[1] = obj2;
-      yield HTTP.get(obj1);
-      if (1 === tmp7) {
-        c5 = 0;
-        c7 = 3;
-      } else if (arg0 === 1) {
-        c7 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        lib = arg1;
-        const obj = lib(table[5]);
-        const obj4 = { type: "GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS", channelId: null, entries: null };
-        obj4[1] = callback;
-        obj4[2] = lib.body;
-        obj.dispatch(obj4);
-        c5 = 0;
-      }
-      c5 = 0;
-      return arg1;
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-let c3 = importDefaultResult;
-closure_0 = undefined;
-closure_0 = importDefaultResult((arg0, arg1) => {
+  closure_132_3 = UNCATEGORIZED;
+  return "PX_16";
+};
+let closure_9 = async function _fetchGuildEntriesForIds(arg0, entity_ids) {
   closure_0 = arg0;
-  closure_1 = arg1;
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (function*(arg0, arg1) {
+  return (async (arg0, value) => {
     closure_3 = tmp3;
-    c5 = 1;
-    lib(closure_1_2[5]).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
-    const HTTP = callback(closure_1_2[6]).HTTP;
-    obj1 = { url: null, query: null, rejectWithError: true };
-    obj1[0] = c6.DIRECTORY_CHANNEL_ENTRIES(callback);
-    const obj2 = { category_id: null };
-    obj2[0] = lib;
-    obj1[1] = obj2;
-    yield HTTP.get(obj1);
+    closure_130_0 = closure_0;
+    const HTTP = closure_2_0(dependencyMap[6]).HTTP;
+    const request = { url: Endpoints.DIRECTORY_CHANNEL_LIST_BY_ID(closure_0), query: { entity_ids }, rejectWithError: true };
+    await HTTP.get(request);
     if (1 === tmp7) {
       c5 = 0;
-      const obj3 = lib(closure_1_2[5]);
+      c7 = 3;
+    } else if (arg0 === 1) {
+      c7 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      closure_130_1 = value;
+      closure_131_1(closure_131_2[5]).dispatch({ type: "GUILD_DIRECTORY_ADMIN_ENTRIES_FETCH_SUCCESS", channelId: closure_130_0, entries: closure_130_1.body });
+      c5 = 0;
+      closure_131_1(closure_131_2[5]);
+    }
+    return value;
+  })();
+};
+const DirectoryEntryCategories = fn(12305).DirectoryEntryCategories;
+let Endpoints = fn(1074).Endpoints;
+asyncGeneratorStep(async (arg0, category_id) => {
+  closure_0 = arg0;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    closure_3 = tmp3;
+    closure_130_0 = closure_0;
+    category_id(573).dispatch({ type: "GUILD_DIRECTORY_FETCH_START" });
+    const HTTP = closure_0(1272).HTTP;
+    const request = { url: c6.DIRECTORY_CHANNEL_ENTRIES(closure_0), query: { category_id }, rejectWithError: true };
+    await HTTP.get(request);
+    if (1 === tmp7) {
+      c5 = 0;
+      let obj3 = category_id(573);
       obj3.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
       c7 = 3;
     } else if (arg0 === 1) {
       c7 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      lib = arg1;
-      const obj = lib(closure_1_2[5]);
-      const obj4 = { type: "GUILD_DIRECTORY_FETCH_SUCCESS", channelId: null, entries: null };
-      obj4[1] = callback;
-      obj4[2] = lib.body;
-      obj.dispatch(obj4);
+      closure_130_1 = value;
+      obj3 = { type: "GUILD_DIRECTORY_FETCH_SUCCESS", channelId: closure_130_0, entries: closure_130_1.body };
+      category_id(573).dispatch(obj3);
       c5 = 0;
+      category_id(573);
     }
-    c5 = 0;
-    return arg1;
+    return value;
   })();
 });
-closure_0 = undefined;
-const importDefaultResult1Result = importDefaultResult1(function() {
-  const self = this;
-  const apply = closure_0.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}, 200);
-closure_0 = importDefaultResult((arg0) => {
-  closure_0 = arg0;
-  c5 = 0;
-  c6 = 0;
-  c4 = 0;
-  return (function*(arg0) {
-    closure_2 = tmp3;
-    c4 = 1;
-    const HTTP = callback(closure_1_2[6]).HTTP;
-    obj1 = { url: null, rejectWithError: true };
-    obj1[0] = c6.DIRECTORY_CHANNEL_CATEGORY_COUNTS(callback);
-    yield HTTP.get(obj1);
-    if (1 === tmp7) {
-      c4 = 0;
-      c6 = 3;
-    } else if (arg0 === 1) {
-      c6 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      const body = arg1;
-      const obj = closure_1_1(closure_1_2[5]);
-      const obj3 = { type: "GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS", channelId: null, counts: null };
-      obj3[1] = callback;
-      obj3[2] = body.body;
-      obj.dispatch(obj3);
-      c4 = 0;
-    }
+asyncGeneratorStep(async (arg0) => {
+  closure_129_0 = closure_0;
+  const HTTP = closure_0(tmp3[6]).HTTP;
+  await HTTP.get({ url: c6.DIRECTORY_CHANNEL_CATEGORY_COUNTS(closure_0), rejectWithError: true });
+  if (1 === tmp7) {
     c4 = 0;
-    return arg1;
-  })();
+    Endpoints = 3;
+  } else if (arg0 === 1) {
+    Endpoints = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    closure_129_1 = arg1;
+    require("Dispatcher").dispatch({ type: "GUILD_DIRECTORY_COUNTS_FETCH_SUCCESS", channelId: closure_129_0, counts: closure_129_1.body });
+    c4 = 0;
+    require("Dispatcher");
+  }
+  return arg1;
 });
-const importDefaultResult2 = importDefaultResult1;
-closure_0 = undefined;
-const importDefaultResult2Result = importDefaultResult1(function() {
+const importDefaultResult1Result = debounce(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -372,107 +131,87 @@ const importDefaultResult2Result = importDefaultResult1(function() {
   }
   return applyArgumentsResult;
 }, 200);
-closure_0 = importDefaultResult((arg0, arg1) => {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  c6 = 0;
-  c7 = 0;
-  c5 = 0;
-  return (function*(arg0, arg1) {
-    if (c7 === 2) {
-      c7 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c7 = 2;
-        if (0 === c6) {
-          if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_3 = tmp3;
-            let body = tmp7;
-            body = undefined;
-            if (closure_1_4.shouldFetch(callback, callback2)) {
-              c5 = 1;
-              let obj6 = callback2(closure_1_2[5]);
-              obj1 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId: null, query: null };
-              obj1[1] = tmp38;
-              obj1[2] = tmp39;
-              obj6.dispatch(obj1);
-              const HTTP = callback(closure_1_2[6]).HTTP;
-              const obj2 = { url: null, query: null, rejectWithError: true };
-              obj2[0] = c6.DIRECTORY_ENTRIES_SEARCH(tmp38);
-              let obj3 = { query: null };
-              obj3[0] = tmp39;
-              obj2[1] = obj3;
-              c6 = 2;
-              c7 = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj2);
-              return obj4;
-            } else {
-              obj4 = callback2(closure_1_2[5]);
-              const obj5 = { type: "GUILD_DIRECTORY_CACHED_SEARCH", channelId: null, query: null };
-              obj5[1] = tmp38;
-              obj5[2] = tmp39;
-              obj4.dispatch(obj5);
-            }
-          }
-        } else {
-          if (1 === tmp7) {
-            c5 = 0;
-            obj3 = callback2(closure_1_2[5]);
-            obj3.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            body = arg1;
-            obj = callback2(closure_1_2[5]);
-            obj6 = { type: "GUILD_DIRECTORY_SEARCH_SUCCESS", channelId: null, query: null, results: null };
-            obj6[1] = callback;
-            obj6[2] = callback2;
-            obj6[3] = body.body;
-            obj.dispatch(obj6);
-            c5 = 0;
-          }
-          c5 = 0;
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === Endpoints) {
+        if (arg0 === 1) {
           c7 = 3;
-          const obj7 = { value: null, done: true };
-          obj7[0] = arg1;
-          return obj7;
-        }
-        c7 = 3;
-      } catch (tmp30) {
-        closure_4 = tmp30;
-        if (tmp4 === c5) {
-          c7 = tmp2;
-          throw tmp30;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          c6 = tmp;
+          closure_3 = tmp3;
+          dependencyMap = tmp7;
+          closure_130_0 = closure_0;
+          closure_130_1 = importDefault;
+          closure_130_2 = undefined;
+          if (tmp30.shouldFetch(closure_0, importDefault)) {
+            c5 = 1;
+            let obj6 = DispatcherDefault;
+            const obj1 = { type: "GUILD_DIRECTORY_SEARCH_START", channelId: tmp37, query: tmp38 };
+            obj6.dispatch(obj1);
+            const HTTP = closure_0(1272).HTTP;
+            const request = { url: Endpoints.DIRECTORY_ENTRIES_SEARCH(tmp37), query: null, rejectWithError: true };
+            const obj2 = { query: tmp38 };
+            request.query = obj2;
+            Endpoints = 2;
+            c7 = 1;
+            let obj3 = { value: HTTP.get(request), done: false };
+            return obj3;
+          } else {
+            let obj4 = DispatcherDefault;
+            obj4 = { type: "GUILD_DIRECTORY_CACHED_SEARCH", channelId: tmp37, query: tmp38 };
+            obj4.dispatch(obj4);
+          }
         }
+      } else {
+        if (1 === tmp7) {
+          c5 = 0;
+          obj3 = DispatcherDefault;
+          obj3.dispatch({ type: "GUILD_DIRECTORY_FETCH_FAILURE" });
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_130_2 = value;
+          obj = DispatcherDefault;
+          const obj5 = { type: "GUILD_DIRECTORY_SEARCH_SUCCESS", channelId: closure_130_0, query: closure_130_1, results: closure_130_2.body };
+          obj.dispatch(obj5);
+          c5 = 0;
+        }
+        c5 = 0;
+        c7 = 3;
+        obj6 = { value, done: true };
+        return obj6;
+      }
+      c7 = 3;
+    } catch (tmp30) {
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp30;
+      } else {
+        Endpoints = tmp;
       }
     }
-  })();
+  }
 });
-const importDefaultResult3 = importDefaultResult1;
-const importDefaultResult3Result = importDefaultResult1(function() {
+const importDefaultResult2Result = debounce(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -482,13 +221,14 @@ const importDefaultResult3Result = importDefaultResult1(function() {
   }
   return applyArgumentsResult;
 }, 200);
-const result = require("set").fileFinishedImporting("modules/directory_channels/GuildDirectoryActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/GuildDirectoryActionCreators.tsx");
 
 export const fetchDirectoryEntries = importDefaultResult1Result;
 export const fetchDirectoryCounts = importDefaultResult2Result;
-export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3, c4) {
+export const addDirectoryGuildEntry = function addDirectoryGuildEntry() {
   const self = this;
-  const apply = _addDirectoryGuildEntry.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -497,22 +237,29 @@ export const addDirectoryGuildEntry = function addDirectoryGuildEntry(c0, id, c3
   return applyArgumentsResult;
 };
 export const removeDirectoryGuildEntry = function removeDirectoryGuildEntry(channelId, guildId) {
-  let obj = _modDef4753;
-  obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
-  obj = { event: callback(1250).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: obj1 };
-  obj[1] = obj;
+  let obj = { url: Endpoints.DIRECTORY_CHANNEL_ENTRY(channelId, guildId), trackedActionData: null, rejectWithError: true };
+  obj = { event: closure_0(1250).NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE, properties: { directory_channel_id: channelId, guild_id: guildId } };
+  obj.trackedActionData = obj;
   obj.delete(obj);
-  dispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
+  DispatcherDefault.dispatch({ type: "GUILD_DIRECTORY_ENTRY_DELETE", channelId, guildId });
 };
-export const searchDirectoryEntries = importDefaultResult3Result;
+export const searchDirectoryEntries = debounce(function() {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}, 200);
 export const clearDirectorySearch = function clearDirectorySearch(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id };
+  const obj = { type: "GUILD_DIRECTORY_SEARCH_CLEAR", channelId: id };
   obj.dispatch(obj);
 };
-export const updateDirectoryEntry = function updateDirectoryEntry(channelId, guildId, closure_0, closure_1) {
+export const updateDirectoryEntry = function updateDirectoryEntry() {
   const self = this;
-  const apply = _updateDirectoryEntry.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -521,13 +268,12 @@ export const updateDirectoryEntry = function updateDirectoryEntry(channelId, gui
   return applyArgumentsResult;
 };
 export const selectDirectoryCategory = function selectDirectoryCategory(id, value) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value };
+  const obj = { type: "GUILD_DIRECTORY_CATEGORY_SELECT", channelId: id, categoryId: value };
   obj.dispatch(obj);
 };
-export const fetchGuildEntriesForIds = function fetchGuildEntriesForIds(c1, closure_1_4) {
+export const fetchGuildEntriesForIds = function fetchGuildEntriesForIds() {
   const self = this;
-  const apply = _fetchGuildEntriesForIds.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

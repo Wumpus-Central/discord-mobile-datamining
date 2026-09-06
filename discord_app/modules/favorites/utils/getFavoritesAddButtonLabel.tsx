@@ -1,21 +1,20 @@
 // === Module 10997: getFavoritesAddButtonLabel ===
 
 // Module 10997 (getFavoritesAddButtonLabel)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
+import util from "util" /* 1114 */;
+import _modDef3225 from "module_3225" /* 3225 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
+const result = size.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {
   if (length >= 2) {
-    const intl2 = getSystemLocale.intl;
-    const obj = { count: null };
-    obj[0] = length;
-    let formatToPlainStringResult = intl2.formatToPlainString(messagesProxyDefault.LbCa8x, obj);
+    const intl2 = util.intl;
+    const obj = { count: length };
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3225.LbCa8x, obj);
   } else {
-    const intl = getSystemLocale.intl;
-    formatToPlainStringResult = intl.string(messagesProxyDefault.xKXcSu);
+    const intl = util.intl;
+    formatToPlainStringResult = intl.string(_modDef3225.xKXcSu);
   }
   return formatToPlainStringResult;
 };

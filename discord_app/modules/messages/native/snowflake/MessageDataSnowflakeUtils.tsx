@@ -1,13 +1,13 @@
-// === Module 11547: castNativeSyntheticEventData ===
+// === Module 11547: MessageDataSnowflakeUtils ===
 
-// Module 11547 (castNativeSyntheticEventData)
-import set from "set" /* 2 */;
+// Module 11547 (MessageDataSnowflakeUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
 
 export function castNativeSyntheticEventData(arg0) {
   return arg0;
 }
-export const getNativeSyntheticEventData = function getNativeSyntheticEventData(closure_0) {
-  return closure_0.nativeEvent;
+export const getNativeSyntheticEventData = function getNativeSyntheticEventData(nativeEvent) {
+  return nativeEvent.nativeEvent;
 };

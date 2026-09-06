@@ -1,10 +1,11 @@
-// === Module 7901: maybeMarkSeen ===
+// === Module 7901: AnalyticsFeedItemSeenManager ===
 
-// Module 7901 (maybeMarkSeen)
+// Module 7901 (AnalyticsFeedItemSeenManager)
 import _modDef38 from "module_38" /* 38 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let obj = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };
+const ForceFlushType = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };
 class TrackedFeedItem {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -13,15 +14,14 @@ class TrackedFeedItem {
   }
 }
 const prototype = TrackedFeedItem.prototype;
-prototype["maybeMarkSeen"] = function maybeMarkSeen(arg0) {
+prototype["maybeMarkSeen"] = function maybeMarkSeen(startTimeMillis) {
   let flag = null == tmp;
   if (!flag) {
     flag = null != tmp.endTimeMillis;
   }
   if (flag) {
     const seenIntervals = this.seenIntervals;
-    obj = { startTimeMillis: null };
-    obj[0] = arg0;
+    const obj = { startTimeMillis };
     seenIntervals.push(obj);
     flag = true;
   }
@@ -61,19 +61,13 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
       if (isForcedFlush) {
         let _Date = Date;
         let timestamp = Date.now();
-        let tmp8 = num;
-        let tmp9 = nextResult;
         num = num + (timestamp - tmp2.startTimeMillis);
-        obj = { startTimeMillis: null };
-        obj[0] = timestamp;
+        let obj = { startTimeMillis: timestamp };
         let arr = items.push(obj);
       } else {
-        let tmp5 = nextResult;
         arr = items.push(tmp2);
       }
     } else {
-      let tmp3 = num;
-      let tmp4 = nextResult;
       num = num + (tmp2.endTimeMillis - tmp2.startTimeMillis);
     }
     continue;
@@ -82,7 +76,8 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
   this.seenIntervals = items;
   return Math.round(num);
 };
-let result = require("set").fileFinishedImporting("utils/AnalyticsFeedItemSeenManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("utils/AnalyticsFeedItemSeenManager.tsx");
 class AnalyticsFeedItemSeenManager {
   constructor(arg0) {
     flag = global.isPaused;
@@ -90,36 +85,30 @@ class AnalyticsFeedItemSeenManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.initialize = function initialize() {
-      obj = obj(closure_1_1[2]);
+      obj = DispatcherDefault;
       const subscription = obj.subscribe("ANALYTICS_FEED_ITEM_SEEN", obj.handleFeedItemSeen);
-      const subscription1 = obj(closure_1_1[2]).subscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
-      const obj2 = obj(closure_1_1[2]);
-      const subscription2 = obj(closure_1_1[2]).subscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
-      const obj3 = obj(closure_1_1[2]);
-      const subscription3 = obj(closure_1_1[2]).subscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
-      const obj4 = obj(closure_1_1[2]);
-      const subscription4 = obj(closure_1_1[2]).subscribe("WINDOW_FOCUS", obj.handleWindowFocus);
+      const subscription1 = DispatcherDefault.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
+      const subscription2 = DispatcherDefault.subscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
+      const subscription3 = DispatcherDefault.subscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
+      const subscription4 = DispatcherDefault.subscribe("WINDOW_FOCUS", obj.handleWindowFocus);
       const onInitialize = obj.onInitialize;
       if (onInitialize != null) {
         onInitialize();
       }
     };
     obj.terminate = function terminate() {
-      obj = obj(closure_1_1[2]);
+      obj = DispatcherDefault;
       obj.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", obj.handleFeedItemSeen);
-      obj(closure_1_1[2]).unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
+      DispatcherDefault.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
       const obj2 = obj;
-      const obj3 = obj(closure_1_1[2]);
-      obj(closure_1_1[2]).unsubscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
-      const obj4 = obj(closure_1_1[2]);
-      obj(closure_1_1[2]).unsubscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
-      const obj5 = obj(closure_1_1[2]);
-      obj(closure_1_1[2]).unsubscribe("WINDOW_FOCUS", obj.handleWindowFocus);
+      DispatcherDefault.unsubscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
+      DispatcherDefault.unsubscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
+      DispatcherDefault.unsubscribe("WINDOW_FOCUS", obj.handleWindowFocus);
       const onTerminate = obj.onTerminate;
       if (onTerminate != null) {
         onTerminate();
       }
-      obj2.maybeFlushSeenItems(closure_1_3.IMMEDIATE);
+      obj2.maybeFlushSeenItems(obj.IMMEDIATE);
     };
     obj.handleFeedItemFlush = function handleFeedItemFlush(id) {
       if (obj._id === id.id) {
@@ -158,21 +147,21 @@ class AnalyticsFeedItemSeenManager {
     };
     obj.getTrackedFeedItem = function getTrackedFeedItem(feedItemId) {
       if (null == obj.trackedFeedItems[feedItemId]) {
-        if (typeof closure_1_4 !== "function") {
-          HermesBuiltin.throwTypeError();
+        if (typeof TrackedFeedItem === "function") {
+          obj = Object.create(TrackedFeedItem.prototype);
+          obj.seenIntervals = [];
+          tmp2[feedItemId] = obj;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        obj = Object.create(closure_1_4.prototype);
-        obj.seenIntervals = [];
-        tmp.trackedFeedItems[feedItemId] = obj;
-        const tmp2 = closure_1_4;
       }
       return obj.trackedFeedItems[feedItemId];
     };
     obj.getVisibleFeedItemIds = function getVisibleFeedItemIds() {
       const keys = Object.keys(obj.trackedFeedItems);
-      return new Set(keys.filter((arg0) => {
+      return new Set(keys.filter((item) => {
         let isVisibleResult;
-        if (trackedFeedItems.trackedFeedItems[arg0] != null) {
+        if (trackedFeedItems.trackedFeedItems[item] != null) {
           isVisibleResult = obj.isVisible();
         }
         return isVisibleResult;
@@ -191,7 +180,7 @@ class AnalyticsFeedItemSeenManager {
         if (obj._isReactNavigationFocused) {
           obj.pause();
         }
-        obj.maybeFlushSeenItems(closure_1_3.IMMEDIATE);
+        obj.maybeFlushSeenItems(obj.IMMEDIATE);
       }
     };
     obj.clearPausedFeedItemIds = function clearPausedFeedItemIds() {
@@ -202,7 +191,7 @@ class AnalyticsFeedItemSeenManager {
       if (!obj._paused) {
         const visibleFeedItemIds = obj.getVisibleFeedItemIds();
         const item = visibleFeedItemIds.forEach((feedItemId) => {
-          closure_0.handleFeedItemUnseen({ id: closure_0._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_UNSEEN" });
+          obj.handleFeedItemUnseen({ id: obj._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_UNSEEN" });
         });
         obj._paused = true;
         obj._pausedFeedItemIds = visibleFeedItemIds;
@@ -213,7 +202,7 @@ class AnalyticsFeedItemSeenManager {
         obj._paused = false;
         const _pausedFeedItemIds = obj._pausedFeedItemIds;
         const item = _pausedFeedItemIds.forEach((feedItemId) => {
-          closure_0.handleFeedItemSeen({ id: closure_0._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_SEEN" });
+          obj.handleFeedItemSeen({ id: obj._id, feedItemId, timestampMillis: Date.now(), type: "ANALYTICS_FEED_ITEM_SEEN" });
         });
         const result = obj.clearPausedFeedItemIds();
       }
@@ -274,16 +263,15 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
       if (IMMEDIATE !== tmp2.IMMEDIATE_WITH_COOLDOWN) {
         resolved = new Promise((arg0) => {
           closure_0 = arg0;
-          const timerId = setTimeout(closure_1_2(function*() {
+          const timerId = setTimeout(asyncGeneratorStep(async (arg0, value) => {
             if (c2 === 2) {
               c2 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp3 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                let obj = { value, done: true };
                 return obj;
               } else {
                 return { value: "HermesInternal", done: null };
@@ -294,30 +282,26 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                 if (0 === c1) {
                   if (arg0 === 1) {
                     c2 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c2 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    obj = { value, done: true };
                     return obj;
                   } else {
-                    const callback = tmp4;
                     c1 = 1;
                     c2 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_0();
+                    const obj1 = { value: tmp4(), done: false };
                     return obj1;
                   }
                 } else if (arg0 === 1) {
                   c2 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c2 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
-                  callback();
+                  closure_128_0();
                   c2 = 3;
                   return { value: "HermesInternal", done: null };
                 }
@@ -330,64 +314,55 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
         });
       }
     }
-    closure_0 = undefined;
-    closure_0 = callback((arg0) => {
-      closure_0 = arg0;
-      c2 = 0;
-      c3 = 0;
-      return (function*(arg0) {
-        if (c3 === 2) {
-          c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c3 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp2;
-                c2 = 1;
-                c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = callback();
-                return obj1;
-              }
-            } else if (arg0 === 1) {
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          c3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              callback();
-              c3 = 3;
-              return { value: "HermesInternal", done: null };
+              closure_1 = tmp2;
+              closure_129_0 = closure_0;
+              c2 = 1;
+              c3 = 1;
+              const obj1 = { value: closure_0(), done: false };
+              return obj1;
             }
-          } catch (tmp11) {
-            c3 = tmp;
-            throw tmp11;
+          } else if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_129_0();
+            c3 = 3;
+            return { value: "HermesInternal", done: null };
           }
+        } catch (tmp11) {
+          c3 = tmp;
+          throw tmp11;
         }
-      })();
+      }
     });
     resolved = new Promise(function() {
       const self = this;
@@ -404,6 +379,6 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
 };
 
 export const AnalyticsFeedTypes = { FORUM_CHANNEL: "forum_channel" };
-export const ForceFlushType = obj;
+export { ForceFlushType };
 export { TrackedFeedItem };
 export { AnalyticsFeedItemSeenManager };

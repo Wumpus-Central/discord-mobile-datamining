@@ -1,26 +1,35 @@
-// === Module 11834: ? ===
+// === Module 11834: ModerateUserActionSheet ===
 
-// Module 11834
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { Permissions } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11834 (ModerateUserActionSheet)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9403 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 11835 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11839 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 11855 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 11857 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createStyles({ container: { padding: 16, gap: 16 }, memberRoles: { justifyContent: "flex-start" } });
-const memoResult = importAllResult.memo((user) => {
+require = fn;
+const Permissions = fn(1074).Permissions;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let closure_11 = createStyles.createStyles({ container: { padding: 16, gap: 16 }, memberRoles: { justifyContent: "flex-start" } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_automod/native/ModerateUserActionSheet.tsx");
+
+export default noop.memo((user) => {
   user = user.user;
   const guild = user.guild;
   let stateFromStores;
   let hideActionSheet;
   c4 = undefined;
-  const tmp = callback3();
+  const tmp = closure_11();
   let obj = user(stateFromStores[8]);
   let items = [c4];
   const items1 = [user, guild];
@@ -29,41 +38,39 @@ const memoResult = importAllResult.memo((user) => {
     if (guild != null) {
       id = guild.id;
     }
-    return _undefined.getMember(id, user.id);
+    return GuildMemberStore.getMember(id, user.id);
   }, items1);
   let tmp2Result = tmp2(tmp3[8]);
-  const items2 = [closure_6, closure_7, closure_5];
+  const items2 = [PermissionStore, UserStore, GuildStore];
   const items3 = [user, guild];
   const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items2, () => {
     let canKickMemberResult = null != guild;
     if (canKickMemberResult) {
-      let obj = user(stateFromStores[9]);
+      let obj = GuildMemberUtils;
       canKickMemberResult = obj.canKickMember(user, tmp);
     }
     obj = { canKickUser: canKickMemberResult, canBanUser: null, canChangeNick: null, canManageRoles: null, canModerateMembers: null };
     let canBanMemberResult = null != tmp;
     if (canBanMemberResult) {
-      canBanMemberResult = user(stateFromStores[9]).canBanMember(user, tmp);
-      const obj3 = user(stateFromStores[9]);
+      canBanMemberResult = GuildMemberUtils.canBanMember(user, tmp);
     }
-    obj[1] = canBanMemberResult;
+    obj.canBanUser = canBanMemberResult;
     let canManageUserResult = null != tmp;
     if (canManageUserResult) {
-      canManageUserResult = closure_1_6.canManageUser(closure_1_8.MANAGE_NICKNAMES, user, tmp);
+      canManageUserResult = PermissionStore.canManageUser(Permissions.MANAGE_NICKNAMES, user, tmp);
     }
-    obj[2] = canManageUserResult;
+    obj.canChangeNick = canManageUserResult;
     let canResult = null != tmp;
     if (canResult) {
-      canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
+      canResult = PermissionStore.can(Permissions.MANAGE_ROLES, tmp);
     }
-    obj[3] = canResult;
+    obj.canManageRoles = canResult;
     let result = null != tmp;
     if (result) {
-      const items = [closure_1_7, closure_1_5, closure_1_6];
-      result = user(stateFromStores[10]).canToggleCommunicationDisableOnUser(tmp.id, user.id, items);
-      const obj4 = user(stateFromStores[10]);
+      const items = [UserStore, GuildStore, PermissionStore];
+      result = useCanToggleCommunicationDisableOnUser.canToggleCommunicationDisableOnUser(tmp.id, user.id, items);
     }
-    obj[4] = result;
+    obj.canModerateMembers = result;
     return obj;
   }, items3);
   ({ canKickUser, canBanUser } = stateFromStoresObject);
@@ -92,29 +99,27 @@ const memoResult = importAllResult.memo((user) => {
       if (tmp11) {
         obj = { label: null, icon: null, onPress: null };
         const intl = tmp2(tmp3[14]).intl;
-        obj[0] = intl.string(tmp2(tmp3[14]).t.HxrBOZ);
-        obj = { IconComponent: null };
-        obj[0] = tmp2(tmp3[15]).SettingsIcon;
-        obj[1] = callback(tmp2(tmp3[13]).ActionSheetRow.Icon, obj);
-        obj[2] = function onPress() {
+        obj.label = intl.string(tmp2(tmp3[14]).t.HxrBOZ);
+        obj = { IconComponent: tmp2(tmp3[15]).SettingsIcon };
+        obj.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj);
+        obj.onPress = function onPress() {
           hideActionSheet();
-          let obj = guild(stateFromStores[16]);
-          obj = {
+          const obj = {
             userId: user.id,
             guildId: guild.id,
             onClose() {
-              let arr = closure_1_1(closure_1_2[16]);
+              let arr = guild(stateFromStores[16]);
               arr = arr.pop();
-              closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
+              guild(stateFromStores[19])({ guild, user });
             },
             onRemove() {
-              let arr = callback(table[16]);
+              let arr = guild(stateFromStores[16]);
               arr = arr.pop();
             }
           };
-          obj.pushLazy(user(stateFromStores[18])(stateFromStores[17], stateFromStores.paths), obj);
+          obj.pushLazy(asyncRequireImpl(11836, dependencyMap.paths), obj);
         };
-        items4.push(callback(tmp2(tmp3[13]).ActionSheetRow, obj));
+        items4.push(closure_9(tmp2(tmp3[13]).ActionSheetRow, obj));
       }
       if (null != stateFromStores) {
         if (tmp9) {
@@ -129,23 +134,22 @@ const memoResult = importAllResult.memo((user) => {
           } else {
             IconResult = Icon(t.xpsADY);
           }
-          obj1 = { label: null, icon: null, onPress: null };
-          obj1[0] = IconResult;
+          const obj1 = { label: IconResult, icon: null, onPress: null };
           Icon = tmp2(tmp3[13]).ActionSheetRow.Icon;
           const obj2 = { IconComponent: null };
           ClockWarningIcon = tmp2(tmp3[21]).ClockWarningIcon;
-          obj2[0] = ClockWarningIcon;
-          obj1[1] = callback(Icon, obj2);
-          obj1[2] = function onPress() {
+          obj2.IconComponent = ClockWarningIcon;
+          obj1.icon = closure_9(Icon, obj2);
+          obj1.onPress = function onPress() {
             hideActionSheet();
-            let obj = user(stateFromStores[22]);
+            let obj = GuildDisableCommunicationActionCreators;
             if (c4) {
               obj = { guildId: null, userId: null };
-              ({ guildId: obj3[0], userId: obj3[1] } = stateFromStores);
+              ({ guildId: obj3.guildId, userId: obj3.userId } = stateFromStores);
               const result = obj.openEnableCommunication(obj);
             } else {
               obj = { guildId: null, userId: null };
-              ({ guildId: obj2[0], userId: obj2[1] } = stateFromStores);
+              ({ guildId: obj2.guildId, userId: obj2.userId } = stateFromStores);
               const result1 = obj.openDisableCommunication(obj);
             }
           };
@@ -155,62 +159,55 @@ const memoResult = importAllResult.memo((user) => {
       if (tmp17) {
         let obj3 = { label: null, icon: null, variant: "danger", onPress: null };
         const intl2 = tmp2(tmp3[14]).intl;
-        obj3[0] = intl2.string(tmp2(tmp3[14]).t["3glT6Z"]);
-        let obj4 = { IconComponent: null };
-        obj4[0] = tmp2(tmp3[23]).UserMinusIcon;
-        obj3[1] = callback(tmp2(tmp3[13]).ActionSheetRow.Icon, obj4);
-        obj3[3] = function onPress() {
-          guild(stateFromStores[24])({
+        obj3.label = intl2.string(tmp2(tmp3[14]).t["3glT6Z"]);
+        let obj4 = { IconComponent: tmp2(tmp3[23]).UserMinusIcon };
+        obj3.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj4);
+        obj3.onPress = function onPress() {
+          showKickConfirmModalDefault({
             guildId: guild.id,
             userId: user.id,
             cancelButtonCallback() {
-              return closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
+              return guild(stateFromStores[19])({ guild, user });
             }
           });
         };
-        items4.push(callback(tmp2(tmp3[13]).ActionSheetRow, obj3));
+        items4.push(closure_9(tmp2(tmp3[13]).ActionSheetRow, obj3));
       }
       if (tmp20) {
         const obj5 = { label: null, icon: null, variant: "danger", onPress: null };
         const intl3 = tmp2(tmp3[14]).intl;
-        obj5[0] = intl3.string(tmp2(tmp3[14]).t["5MBJ5M"]);
-        const obj6 = { IconComponent: null };
-        obj6[0] = tmp2(tmp3[25]).HammerIcon;
-        obj5[1] = callback(tmp2(tmp3[13]).ActionSheetRow.Icon, obj6);
-        obj5[3] = function onPress() {
-          guild(stateFromStores[26])({
+        obj5.label = intl3.string(tmp2(tmp3[14]).t["5MBJ5M"]);
+        const obj6 = { IconComponent: tmp2(tmp3[25]).HammerIcon };
+        obj5.icon = closure_9(tmp2(tmp3[13]).ActionSheetRow.Icon, obj6);
+        obj5.onPress = function onPress() {
+          showBanConfirmModalDefault({
             guildId: guild.id,
             userId: user.id,
             cancelButtonCallback() {
-              return closure_1_1(closure_1_2[19])({ guild: closure_1, user: closure_0 });
+              return guild(stateFromStores[19])({ guild, user });
             }
           });
         };
-        items4.push(callback(tmp2(tmp3[13]).ActionSheetRow, obj5));
+        items4.push(closure_9(tmp2(tmp3[13]).ActionSheetRow, obj5));
       }
       const obj7 = { header: null, bodyStyles: null, children: null };
       const obj8 = { title: null };
       const intl4 = tmp2(tmp3[14]).intl;
-      const obj9 = { nick: null };
-      obj9[0] = name;
-      obj8[0] = intl4.formatToPlainString(tmp2(tmp3[14]).t["792QKT"], obj9);
-      obj7[0] = callback(tmp2(tmp3[28]).BottomSheetTitleHeader, obj8);
-      obj7[1] = tmp.container;
+      const obj9 = { nick: name };
+      obj8.title = intl4.formatToPlainString(tmp2(tmp3[14]).t["792QKT"], obj9);
+      obj7.header = closure_9(tmp2(tmp3[28]).BottomSheetTitleHeader, obj8);
+      obj7.bodyStyles = tmp.container;
       const obj10 = { style: null, guild: null, userRoles: null };
       const items5 = [tmp.memberRoles];
-      obj10[0] = items5;
-      obj10[1] = guild;
-      obj10[2] = tmp5;
-      const items6 = [callback(guild(tmp3[29]), obj10), ];
-      const obj11 = { hasIcons: true, children: null };
-      obj11[1] = items4.map((children) => callback(hideActionSheet.Fragment, { children }, "action_" + arg1));
-      items6[1] = callback(tmp2(tmp3[30]).TableRowGroup, obj11);
-      obj7[2] = items6;
-      return callback2(tmp2(tmp3[27]).BottomSheet, obj7);
+      obj10.style = items5;
+      obj10.guild = guild;
+      obj10.userRoles = tmp5;
+      const items6 = [closure_9(guild(tmp3[29]), obj10), ];
+      const obj11 = { hasIcons: true, children: items4.map((children, index) => closure_1_9(hideActionSheet.Fragment, { children }, "action_" + index)) };
+      items6[1] = closure_9(tmp2(tmp3[30]).TableRowGroup, obj11);
+      obj7.children = items6;
+      return closure_10(tmp2(tmp3[27]).BottomSheet, obj7);
     }
   }
   return null;
 });
-let result = require("set").fileFinishedImporting("modules/guild_automod/native/ModerateUserActionSheet.tsx");
-
-export default memoResult;

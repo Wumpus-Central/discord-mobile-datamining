@@ -1,29 +1,30 @@
-// === Module 15259: toggle ===
+// === Module 15259: AutomaticGainControlSetting ===
 
-// Module 15259 (toggle)
+// Module 15259 (AutomaticGainControlSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.cUMdH0);
+    const intl = util.intl;
+    return intl.string(util.t.cUMdH0);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   useValue: function useAutomaticGainControlSettingValue() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => automaticGainControl.getAutomaticGainControl());
   },
-  onValueChange: require("handleAutomaticGainControlChange").handleAutomaticGainControlChange,
+  onValueChange: fn(9993).handleAutomaticGainControlChange,
   useDescription: function useAutomaticGainControlSettingDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["6EjbvA"]);
+    const intl = util.intl;
+    return intl.string(util.t["6EjbvA"]);
   }
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AutomaticGainControlSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AutomaticGainControlSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

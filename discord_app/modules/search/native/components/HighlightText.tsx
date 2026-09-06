@@ -1,24 +1,24 @@
 // === Module 10126: HighlightText ===
 
 // Module 10126 (HighlightText)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { text: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
-createCacheKey[1] = hexToRgba.hexOpacityToRgba(ThemesDefault.unsafe_rawColors.YELLOW_300, 0.3);
-createCacheKey[2] = ThemesDefault.colors.TEXT_STRONG;
-createCacheKey[0] = createCacheKey;
-let closure_3 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { text: null };
+createStyles = { fontFamily: fn(1074).Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
+const ColorUtils = fn(4409);
+createStyles.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3);
+createStyles.color = nativeDefault.colors.TEXT_STRONG;
+createStyles.text = createStyles;
+let closure_3 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/HighlightText.tsx");
 
 export default function HighlightText(children) {
-  const tmp = callback();
-  return jsx(Button.LegacyText, { style: callback().text, children: children.children });
+  const tmp = closure_3();
+  return jsx(native.LegacyText, { style: closure_3().text, children: children.children });
 };

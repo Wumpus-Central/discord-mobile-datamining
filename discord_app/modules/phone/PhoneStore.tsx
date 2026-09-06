@@ -1,10 +1,10 @@
-// === Module 6943: handleSetLocationMetadata ===
+// === Module 6943: PhoneStore ===
 
-// Module 6943 (handleSetLocationMetadata)
-import set from "set" /* 2 */;
+// Module 6943 (PhoneStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4776 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import CountryCodeUtils from "CountryCodeUtils" /* 4776 */;
+import size from "module_2" /* 2 */;
 
 function handleSetLocationMetadata(countryCode) {
   countryCode = countryCode.countryCode;
@@ -16,8 +16,8 @@ function handleSetLocationMetadata(countryCode) {
     closure_3 = tmp2;
   }
 }
-const getDefaultCountryCode = DEFAULT_COUNTRY_CODE_NAME.getDefaultCountryCode;
-const getCountryCodeByAlpha2 = DEFAULT_COUNTRY_CODE_NAME.getCountryCodeByAlpha2;
+const getDefaultCountryCode = CountryCodeUtils.getDefaultCountryCode;
+const getCountryCodeByAlpha2 = CountryCodeUtils.getCountryCodeByAlpha2;
 let closure_3 = getDefaultCountryCode();
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class PhoneStore extends DeviceSettingsStore {
@@ -25,24 +25,24 @@ class PhoneStore extends DeviceSettingsStore {
 const prototype = PhoneStore.prototype;
 prototype["initialize"] = function initialize(selectedCountryCode) {
   if (null != selectedCountryCode) {
-    selectedCountryCode = selectedCountryCode.selectedCountryCode;
+    countryCode = selectedCountryCode.selectedCountryCode;
   }
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return { selectedCountryCode: closure_0 };
+  return { selectedCountryCode: countryCode };
 };
 prototype["getCountryCode"] = function getCountryCode() {
-  return null != closure_0 ? closure_0 : closure_3;
+  return null != countryCode ? countryCode : closure_3;
 };
 PhoneStore.displayName = "PhoneStore";
 PhoneStore.persistKey = "PhoneStore";
-const phoneStore = new PhoneStore(dispatcherDefault, {
+const phoneStore = new PhoneStore(DispatcherDefault, {
   PHONE_SET_COUNTRY_CODE: function handleSetCountryCode(countryCode) {
     countryCode = countryCode.countryCode;
   },
   CONNECTION_OPEN: handleSetLocationMetadata,
   SET_LOCATION_METADATA: handleSetLocationMetadata
 });
-const result = set.fileFinishedImporting("modules/phone/PhoneStore.tsx");
+const result = size.fileFinishedImporting("modules/phone/PhoneStore.tsx");
 
 export default phoneStore;

@@ -1,15 +1,14 @@
 // === Module 11613: handleMessagesTapGameMention ===
 
 // Module 11613 (handleMessagesTapGameMention)
-import set from "set" /* 2 */;
-import _modDef8680 from "module_8680" /* 8680 */;
-import GameProfileEmbedAction from "GameProfileEmbedAction" /* 8686 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8680 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapGameMention.tsx");
 
 export const handleMessagesTapGameMention = function handleMessagesTapGameMention(gameId) {
   gameId = gameId.gameId;
-  let obj = _modDef8680;
-  obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileEmbedAction.GameProfileSources.GameMention };
+  const obj = { gameId, gameProfileModalChecks: { shouldOpenGameProfile: true, gameId }, source: GameProfileAnalyticUtils.GameProfileSources.GameMention };
   obj.openGameProfileModal(obj);
 };

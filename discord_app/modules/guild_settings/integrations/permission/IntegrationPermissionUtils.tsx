@@ -1,43 +1,41 @@
-// === Module 7522: commandPermissions ===
+// === Module 7522: IntegrationPermissionUtils ===
 
-// Module 7522 (commandPermissions)
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+// Module 7522 (IntegrationPermissionUtils)
+import Server from "Server" /* 1894 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function commandPermissions(arg0, items) {
   const obj = {};
   const entries = Object.entries(arg0);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
+    let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
     let tmp8 = tmp7;
     if (items.includes(tmp7.type)) {
-      let tmp9 = tmp6;
-      let tmp10 = tmp7;
       obj[tmp6] = tmp8;
     }
     continue;
   }
   return obj;
 }
-const result = require("set").fileFinishedImporting("modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx");
 
-export const commandName = function commandName(arg0) {
+export const commandName = function commandName(arg0, arg1) {
   let text = arg1;
-  if (arg0 === PermissionOverwriteType.ApplicationCommandType.CHAT) {
+  if (arg0 === Server.ApplicationCommandType.CHAT) {
     text = `/${arg1}`;
   }
   return text;
 };
 export const commandPermissionChannels = function commandPermissionChannels(arg0) {
-  const items = [ApplicationCommandSectionType.ApplicationCommandPermissionType.CHANNEL];
+  const items = [ApplicationCommandTypes.ApplicationCommandPermissionType.CHANNEL];
   return commandPermissions(arg0, items);
 };
 export const commandPermissionMembersRoles = function commandPermissionMembersRoles(arg0) {
-  const items = [ApplicationCommandSectionType.ApplicationCommandPermissionType.ROLE, ApplicationCommandSectionType.ApplicationCommandPermissionType.USER];
+  const items = [ApplicationCommandTypes.ApplicationCommandPermissionType.ROLE, ApplicationCommandTypes.ApplicationCommandPermissionType.USER];
   return commandPermissions(arg0, items);
 };
 export const toPermissionKey = function toPermissionKey(allChannelsSentinelResult, CHANNEL) {

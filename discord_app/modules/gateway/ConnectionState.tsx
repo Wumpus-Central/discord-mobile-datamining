@@ -1,8 +1,8 @@
-// === Module 13645: CLOSED ===
+// === Module 13645: ConnectionState ===
 
-// Module 13645 (CLOSED)
-import set from "set" /* 2 */;
+// Module 13645 (ConnectionState)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/ConnectionState.tsx");
+const result = size.fileFinishedImporting("modules/gateway/ConnectionState.tsx");
 
 export default { CLOSED: "CLOSED", WILL_RECONNECT: "WILL_RECONNECT", CONNECTING: "CONNECTING", IDENTIFYING: "IDENTIFYING", RESUMING: "RESUMING", SESSION_ESTABLISHED: "SESSION_ESTABLISHED" };

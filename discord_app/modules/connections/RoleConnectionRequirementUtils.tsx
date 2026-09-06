@@ -1,11 +1,11 @@
-// === Module 17637: realizedOperatorFor ===
+// === Module 17637: RoleConnectionRequirementUtils ===
 
-// Module 17637 (realizedOperatorFor)
-import set from "set" /* 2 */;
-import OperatorTypes2 from "OperatorTypes" /* 5408 */;
+// Module 17637 (RoleConnectionRequirementUtils)
+import Constants from "Constants" /* 5408 */;
+import size from "module_2" /* 2 */;
 
-const OperatorTypes = OperatorTypes2.OperatorTypes;
-const result = set.fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");
+const OperatorTypes = Constants.OperatorTypes;
+const result = size.fileFinishedImporting("modules/connections/RoleConnectionRequirementUtils.tsx");
 
 export const realizedOperatorFor = function realizedOperatorFor(operator) {
   let GREATER_THAN = operator;

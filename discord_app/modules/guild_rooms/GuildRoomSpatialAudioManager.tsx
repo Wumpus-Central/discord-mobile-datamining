@@ -1,20 +1,20 @@
-// === Module 17375: _initialize ===
+// === Module 17375: GuildRoomSpatialAudioManager ===
 
-// Module 17375 (_initialize)
-import GUILD_ROOMS_EXPERIMENT_ID from "GUILD_ROOMS_EXPERIMENT_ID" /* 4760 */;
-import initializeDefault from "initialize" /* 7118 */;
-import GUILD_ROOM_SPATIAL_AUDIO_ENABLED from "GUILD_ROOM_SPATIAL_AUDIO_ENABLED" /* 17376 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getHash" /* 4476 */;
-import closure_5 from "initialize" /* 1236 */;
-import closure_6 from "fetchFingerprint" /* 502 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_9 from "createRTCConnection" /* 4583 */;
-import closure_10 from "resolveCreatingNotes" /* 4718 */;
+// Module 17375 (GuildRoomSpatialAudioManager)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
+import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17376 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import GuildRoomStore from "GuildRoomStore" /* 4718 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
-initializeDefault;
+const GuildRoomsExperiment = tmp(4760);
+require = fn;
 class GuildRoomSpatialAudioManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -46,11 +46,10 @@ class GuildRoomSpatialAudioManager extends tmp2 {
           }
     };
     applyArgumentsResult.reapplyForExperimentUpdate = function reapplyForExperimentUpdate() {
-      if (applyArgumentsResult(closure_1_2[9]).GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
-        const audioMixerSettings = closure_1_8.getAudioMixerSettings();
-        const result = closure_1_1(closure_1_2[10]).setAudioMixerSettings(audioMixerSettings);
+      if (GuildRoomSpatialAudio.GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
+        const audioMixerSettings = MediaEngineStore.getAudioMixerSettings();
+        const result = AudioActionCreatorsDefault.setAudioMixerSettings(audioMixerSettings);
         applyArgumentsResult.apply();
-        const obj = closure_1_1(closure_1_2[10]);
       }
     };
     return applyArgumentsResult;
@@ -58,67 +57,60 @@ class GuildRoomSpatialAudioManager extends tmp2 {
 }
 const prototype = GuildRoomSpatialAudioManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const result = new Map().set(closure_4, this.reapplyForExperimentUpdate);
-  this.stores = result.set(closure_5, this.reapplyForExperimentUpdate);
+  const result = new Map().set(ExperimentStore, this.reapplyForExperimentUpdate);
+  this.stores = result.set(ApexExperimentStore, this.reapplyForExperimentUpdate);
 };
 prototype["_terminate"] = function _terminate() {
 
 };
 prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
-  if (GUILD_ROOM_SPATIAL_AUDIO_ENABLED.GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
-    const guildId = store.getGuildId();
+  if (GuildRoomSpatialAudio.GUILD_ROOM_SPATIAL_AUDIO_ENABLED) {
+    const guildId = RTCConnectionStore.getGuildId();
     let interactionsEnabled = null != guildId;
     if (interactionsEnabled) {
-      const obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
-      obj[0] = guildId;
-      interactionsEnabled = GUILD_ROOMS_EXPERIMENT_ID.getGuildRoomsConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
-      const tmpResult = GUILD_ROOMS_EXPERIMENT_ID;
+      const obj = { guildId, location: "GuildRoomSpatialAudioManager" };
+      interactionsEnabled = GuildRoomsExperiment.getGuildRoomsConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
+      const tmpResult = GuildRoomsExperiment;
     }
     return interactionsEnabled;
   } else {
     return false;
   }
-  const tmp = require;
 };
 prototype["apply"] = function apply() {
-  let obj = audioMixerSettings;
-  if (audioMixerSettings.getAudioMixerSettings().enabled) {
-    const channelId = store.getChannelId();
+  let obj = MediaEngineStore;
+  if (MediaEngineStore.getAudioMixerSettings().enabled) {
+    const channelId = RTCConnectionStore.getChannelId();
     if (null != channelId) {
       const self = this;
       if (this.isLivingRoomAvailable()) {
-        channel = channel.getChannel(channelId);
+        const channel = ChannelStore.getChannel(channelId);
         let isGuildStageVoiceResult;
         if (channel != null) {
           isGuildStageVoiceResult = channel.isGuildStageVoice();
         }
         if (!isGuildStageVoiceResult) {
-          obj = { users: null, currentUserId: null, channelId: null };
-          obj[0] = roomUsers.getRoomUsers(channelId);
-          obj[1] = id.getId();
-          obj[2] = channelId;
-          _require = _require(17376).computeLivingRoomWorldPoints(obj);
+          obj = { users: GuildRoomStore.getRoomUsers(channelId), currentUserId: AuthenticationStore.getId(), channelId };
+          _require = require("GuildRoomSpatialAudio").computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
-            const entries = Object.entries(callback);
+            const entries = Object.entries(closure_0);
             while (tmp2 !== undefined) {
-              let tmp4 = closure_1_3;
-              let tmp5 = closure_1_3(tmp3, 2);
-              let tmp8 = callback;
-              let tmp9 = closure_1_2;
+              let tmp5 = _slicedToArray(tmp3, 2);
               [tmp6, tmp7] = tmp5;
-              let obj = callback(closure_1_2[9]);
+              let obj = GuildRoomSpatialAudio;
               let setUserPositionResult = setUserPosition.setUserPosition(tmp6, obj.livingRoomWorldPointToMediaEnginePoint(tmp7));
               continue;
             }
           });
-          const obj3 = _require(17376);
+          const obj3 = require("GuildRoomSpatialAudio");
         }
       }
     }
   }
 };
 const guildRoomSpatialAudioManager = new GuildRoomSpatialAudioManager();
-let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudioManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudioManager.tsx");
 
 export default guildRoomSpatialAudioManager;

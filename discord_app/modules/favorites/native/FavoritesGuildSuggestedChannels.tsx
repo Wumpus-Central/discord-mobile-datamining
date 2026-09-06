@@ -1,74 +1,82 @@
-// === Module 16201: PX_8 ===
+// === Module 16201: FavoritesGuildSuggestedChannels ===
 
-// Module 16201 (PX_8)
-import ThemesDefault from "Themes" /* 576 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
+// Module 16201 (FavoritesGuildSuggestedChannels)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef3225 from "module_3225" /* 3225 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import XSmallIcon from "XSmallIcon" /* 5680 */;
 import useScaledRowHeightDefault from "useScaledRowHeight" /* 7049 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 16202 */;
-import { NOOP } from "ME" /* 1074 */;
-import { getScaledCategoryRowHeight as closure_8 } from "hairlineWidth" /* 10118 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 16203 */;
+import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 16204 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ useFavoritesGuildSuggestions: c5, useFavoritesGuildSuggestionsDismissal: closure_6 } = items);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-const PX_8 = ThemesDefault.space.PX_8;
-const PX_4 = ThemesDefault.space.PX_4;
-let closure_13 = createCacheKey.createStyles({ container: { marginTop: PX_4 }, rows: { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: PX_8 } });
-const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
+require = fn;
+const View = fn(17).View;
+const FavoritesGuildSuggestionsStore = fn(16202);
+({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } = FavoritesGuildSuggestionsStore);
+const NOOP = fn(1074).NOOP;
+let closure_8 = fn(10118).getScaledCategoryRowHeight;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const PX_8 = nativeDefault.space.PX_8;
+const PX_4 = nativeDefault.space.PX_4;
+fn(4560);
+const createStyles = { container: { marginTop: PX_4 }, rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 } };
+let closure_13 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGuildSuggestedChannels.tsx");
 
 export default function FavoritesGuildSuggestedChannels() {
-  let tmp = callback6();
+  let tmp = closure_13();
   let obj = arr(16106);
   const categoryStyles = obj.useCategoryStyles();
-  arr = callback();
-  const tmp5 = callback2();
+  arr = closure_5();
+  const tmp5 = closure_6();
   importDefault = tmp5;
   const items = [tmp5];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { label: null, perform: null, Icon: null };
-    const intl = arr(1114).intl;
-    obj[0] = intl.string(callback(3225).F3dWTe);
-    obj[1] = callback;
-    obj[2] = arr(5680).XSmallIcon;
+    const intl = util.intl;
+    obj.label = intl.string(_modDef3225.F3dWTe);
+    obj.perform = perform;
+    obj.Icon = XSmallIcon.XSmallIcon;
     return obj;
   }, items);
   const tmp8 = useScaledRowHeightDefault();
   dependencyMap = tmp8;
   const items1 = [tmp8];
-  React = React.useMemo(() => ({ height: closure_2 }), items1);
+  noop = noop.useMemo(() => ({ height }), items1);
   let tmp9 = null;
   if (0 !== arr.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj = { style: tmp.container, children: null };
     obj = { name: null, withMarginTop: false, styles: null, trailingAction: null };
     let intl = tmp2(1114).intl;
-    obj[0] = intl.string(messagesProxyDefault.oHWnLy);
-    obj[2] = categoryStyles;
-    obj[3] = memo;
+    obj.name = intl.string(_modDef3225.oHWnLy);
+    obj.styles = categoryStyles;
+    obj.trailingAction = memo;
     const items2 = [tmp2(16106).renderCategoryItem(obj), ];
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.rows;
-    obj1[1] = arr.map((result) => {
-      let obj = { style: closure_3, children: null };
-      obj = { result, onPressDestination: callback(16204), onLongPress: closure_1_7, start: 0 === arg1, end: arg1 === result.length - 1, trailing: null };
-      obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
-      const intl = arr(1114).intl;
-      obj[3] = intl.string(result(1114).t.OYkgVk);
-      obj[4] = function onPress() {
-        const tmp = closure_1_1(closure_1_2[14]);
-        return tmp(callback(closure_1_2[16]).getDestinationIdFromResult(callback));
-      };
-      obj[5] = closure_1_9(result(4975).Button, obj);
-      obj[1] = closure_1_9(callback(16203), obj);
-      return closure_1_9(closure_1_4, obj, "" + result.type + "-" + result.record.id);
-    });
-    items2[1] = callback4(View, obj1);
-    obj[1] = items2;
-    tmp9 = callback5(View, obj);
+    const obj1 = {
+      style: tmp.rows,
+      children: arr.map((item, index) => {
+          closure_0 = item;
+          let obj = { style, children: null };
+          obj = { result: item, onPressDestination: handleFavoritesGuildAddSuggestedChannelDefault, onLongPress: NOOP, start: 0 === index, end: index === arr.length - 1, trailing: null };
+          obj = { variant: "secondary", size: "sm", grow: false, text: null, onPress: null };
+          const intl = util.intl;
+          obj.text = intl.string(util.t.OYkgVk);
+          obj.onPress = function onPress() {
+            const tmp = closure_1(16204);
+            return tmp(arr(10981).getDestinationIdFromResult(closure_0));
+          };
+          obj.trailing = React7(components_Button_Button.Button, obj);
+          obj.children = React7(SearchableDestinationListRowDefault, obj);
+          return React7(View, obj, "" + item.type + "-" + item.record.id);
+        })
+    };
+    items2[1] = closure_9(View, obj1);
+    obj.children = items2;
+    tmp9 = closure_10(View, obj);
     const tmp2Result = tmp2(16106);
   }
   return tmp9;
@@ -76,7 +84,7 @@ export default function FavoritesGuildSuggestedChannels() {
 export const getFavoritesSuggestionsNoticeHeight = function getFavoritesSuggestionsNoticeHeight(fontScale, arg1, arg2) {
   let num = 0;
   if (0 !== arg2) {
-    num = PX_4 + callback3(fontScale) + arg2 * arg1 + PX_8;
+    num = PX_4 + closure_8(fontScale) + arg2 * arg1 + PX_8;
   }
   return num;
 };

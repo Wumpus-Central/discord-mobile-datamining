@@ -1,19 +1,20 @@
 // === Module 9654: useIsStreamFocused ===
 
 // Module 9654 (useIsStreamFocused)
-import closure_2 from "getParticipants" /* 4576 */;
-import { isStreamParticipant } from "ParticipantTypes" /* 4581 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
+const require = fn;
+const isStreamParticipant = fn(4581).isStreamParticipant;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useIsStreamFocused.tsx");
 
 export const useIsStreamFocused = function useIsStreamFocused(id) {
-  const _require = id;
-  const items = [closure_2];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
+  _require = id;
+  const items = [ChannelRTCStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let selectedParticipant = null;
     if (null != closure_0) {
-      selectedParticipant = closure_1_2.getSelectedParticipant(tmp);
+      selectedParticipant = ChannelRTCStore.getSelectedParticipant(tmp);
     }
     return selectedParticipant;
   });

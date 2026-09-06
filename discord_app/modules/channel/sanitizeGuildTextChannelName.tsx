@@ -1,9 +1,9 @@
 // === Module 4715: sanitizeGuildTextChannelName ===
 
 // Module 4715 (sanitizeGuildTextChannelName)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
+const result = size.fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
 
 export default function sanitizeGuildTextChannelName(str) {
   str = str.replace(/[\s-~]+/g, "-");

@@ -1,19 +1,19 @@
-// === Module 1364: getConstants ===
+// === Module 1364: ClientInfoUtils ===
 
-// Module 1364 (getConstants)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
-import enforcingDefault from "enforcing" /* 1344 */;
+// Module 1364 (ClientInfoUtils)
+import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import NativeClientInfoModuleDefault from "NativeClientInfoModule" /* 1344 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("utils/native/ClientInfoUtils.tsx");
 
 export const getConstants = function getConstants() {
   if (obj.isAndroid()) {
-    if (null === enforcingDefault) {
+    if (null === NativeClientInfoModuleDefault) {
       const _Error = Error;
-      error = new Error("Turbo module RTNClientInfoManager is undefined for Android");
+      const error = new Error("Turbo module RTNClientInfoManager is undefined for Android");
       throw error;
     } else {
       return tmp3(1344).getConstants();
@@ -23,7 +23,7 @@ export const getConstants = function getConstants() {
     const InfoDictionaryManager = NativeModules.InfoDictionaryManager;
     return InfoDictionaryManager.getConstants();
   }
-  obj = set2;
+  obj = PlatformUtils;
 };
 export const getBuildNumberLabel = function getBuildNumberLabel() {
   const items = ["0", "123456", "1234567890"];

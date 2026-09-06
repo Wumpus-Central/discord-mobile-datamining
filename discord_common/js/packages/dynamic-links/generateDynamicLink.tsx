@@ -3,21 +3,21 @@
 // Module 12937 (generateDynamicLink)
 import v1 from "v1" /* 1256 */;
 import formatDefault from "format" /* 1341 */;
-import setDefault from "set" /* 12938 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
+import getDescriptionDefault from "getDescription" /* 12938 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];
 let c6 = "https://discordapp.onelink.me";
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
 
 export default function generateDynamicLink(arg0, arg1) {
   ({ utmSource, androidFallbackLink, iosFallbackLink } = arg1);
-  const tmp = callback(arg1, closure_3);
+  const tmp = _objectWithoutProperties(arg1, closure_3);
   const str = new URL(arg0);
   for (const key10018 in tmp) {
-    let tmp24 = key10018;
     let tmp25 = tmp[key10018];
     if (null == tmp25) {
       continue;
@@ -66,7 +66,7 @@ export default function generateDynamicLink(arg0, arg1) {
     const _encodeURIComponent2 = encodeURIComponent;
     encodeURIComponentResult4 = encodeURIComponent(iosFallbackLink);
   }
-  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(setDefault()) + "&af_dp=" + encodeURIComponentResult1;
+  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(getDescriptionDefault()) + "&af_dp=" + encodeURIComponentResult1;
   let sum = combined;
   if (null != encodeURIComponentResult3) {
     const _HermesInternal = HermesInternal;
@@ -89,7 +89,7 @@ export const parseDynamicLink = function parseDynamicLink(str) {
       const uRL = new URL(str);
       const searchParams = uRL.searchParams;
       let obj = searchParams;
-      let value = searchParams.get("deep_link_value");
+      value = searchParams.get("deep_link_value");
       if (null == value) {
         return null;
       } else {
@@ -98,14 +98,11 @@ export const parseDynamicLink = function parseDynamicLink(str) {
         const uRL1 = new URL(decodeURIComponent(value));
         const searchParams2 = uRL1.searchParams;
         value = obj.get("pid");
-        obj = { utmSource: null };
-        obj[0] = value;
+        obj = { utmSource: value };
         const entries = searchParams2.entries();
         const tmp16 = entries[Symbol.iterator]();
         while (tmp16 !== undefined) {
-          let tmp20 = callback2;
-          let tmp21 = callback2(tmp18, 2);
-          let tmp22 = obj;
+          let tmp21 = _slicedToArray(tmp18, 2);
           obj[tmp21[0]] = tmp21[1];
           continue;
         }

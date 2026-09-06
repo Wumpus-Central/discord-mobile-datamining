@@ -1,8 +1,8 @@
-// === Module 12654: handleInviteData ===
+// === Module 12654: WelcomeScreenStore ===
 
-// Module 12654 (handleInviteData)
+// Module 12654 (WelcomeScreenStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 function handleInviteData(invite) {
   const guild = invite.invite.guild;
@@ -24,8 +24,8 @@ function handleWelcomeScreenUpdate(welcomeScreen) {
   }
   closure_1[welcomeScreen.guildId] = welcomeScreen;
 }
-let obj = {};
-let closure_1 = {};
+let NO_WELCOME_SCREEN = {};
+const dependencyMap = {};
 let closure_2 = {};
 let c3 = false;
 let c4 = false;
@@ -53,9 +53,8 @@ prototype["hasSeen"] = function hasSeen(arg0) {
   if (null == arg0) {
     return tmp;
   } else if (flag) {
-    let tmp3 = c3;
   } else {
-    tmp3 = table[arg0] || false;
+    const tmp3 = closure_2[arg0] || false;
   }
 };
 prototype["isEmpty"] = function isEmpty(arg0) {
@@ -70,7 +69,7 @@ prototype["isEmpty"] = function isEmpty(arg0) {
   }
 };
 WelcomeScreenStore.displayName = "WelcomeScreenStore";
-obj = {
+NO_WELCOME_SCREEN = {
   INVITE_RESOLVE_SUCCESS: handleInviteData,
   INVITE_ACCEPT_SUCCESS: handleInviteData,
   WELCOME_SCREEN_SUBMIT_SUCCESS: handleWelcomeScreenUpdate,
@@ -105,8 +104,9 @@ obj = {
     c5 = true;
   }
 };
-const welcomeScreenStore = new WelcomeScreenStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");
+const welcomeScreenStore = new WelcomeScreenStore(DispatcherDefault, NO_WELCOME_SCREEN);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");
 
 export default welcomeScreenStore;
-export const NO_WELCOME_SCREEN = obj;
+export { NO_WELCOME_SCREEN };

@@ -1,15 +1,15 @@
-// === Module 10081: DesktopNotificationTypes ===
+// === Module 10081: NotificationSettingsStore ===
 
-// Module 10081 (DesktopNotificationTypes)
-import set from "set" /* 2 */;
+// Module 10081 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set2 from "set" /* 1115 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const DesktopNotificationTypes = ME.DesktopNotificationTypes;
-({ NotificationPermissionTypes: c3, TTSNotificationTypes } = ME);
-let obj = { desktopType: set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER, disableAllSounds: false, disabledSounds: [], ttsType: TTSNotificationTypes.NEVER, disableUnreadBadge: false, taskbarFlash: true, notifyMessagesInSelectedChannel: false, screenDowntimeReminder: true };
+const DesktopNotificationTypes = Constants.DesktopNotificationTypes;
+({ NotificationPermissionTypes: c3, TTSNotificationTypes } = Constants);
+let obj = { desktopType: PlatformUtils.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER, disableAllSounds: false, disabledSounds: [], ttsType: TTSNotificationTypes.NEVER, disableUnreadBadge: false, taskbarFlash: true, notifyMessagesInSelectedChannel: false, screenDowntimeReminder: true };
 function handleSetDesktopType(desktopType) {
   obj.desktopType = desktopType.desktopType;
 }
@@ -80,7 +80,7 @@ const items = [
     if (null != obj.desktopType) {
       return obj;
     } else {
-      obj.desktopType = set2.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
+      obj.desktopType = PlatformUtils.isPlatformEmbedded ? DesktopNotificationTypes.ALL : DesktopNotificationTypes.NEVER;
     }
   }
 ];
@@ -117,7 +117,7 @@ obj = {
     obj.screenDowntimeReminder = screenDowntimeReminder.screenDowntimeReminder;
   }
 };
-const notificationSettingsStore = new NotificationSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
+const notificationSettingsStore = new NotificationSettingsStore(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("stores/NotificationSettingsStore.tsx");
 
 export default notificationSettingsStore;

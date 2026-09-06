@@ -1,41 +1,40 @@
-// === Module 12679: setStoredContacts ===
+// === Module 12679: ContactSyncPersistedStore ===
 
-// Module 12679 (setStoredContacts)
-import set from "set" /* 2 */;
+// Module 12679 (ContactSyncPersistedStore)
 import Storage4 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
-import keys from "keys" /* 560 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
 const V2_DCD_CONTACTS_STORAGE_KEY = "V2_DCD_CONTACTS_STORAGE_KEY";
 const ContactSyncUpsellCTADismissed = "ContactSyncUpsellCTADismissed";
 const ContactSyncDMListCTADismissed = "ContactSyncDMListCTADismissed";
 const contact_sync_dm_list_cta_first_seen_date = "contact_sync_dm_list_cta_first_seen_date";
 let Storage = Storage4.Storage;
-Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", (arg0) => {
-  const _require = arg0;
-  const Storage = _require(510).Storage;
+Storage.asyncGet("V2_DCD_CONTACTS_STORAGE_KEY", async (arg0) => {
+  _require = arg0;
+  const Storage = require("Storage").Storage;
   const result = Storage.set(V2_DCD_CONTACTS_STORAGE_KEY, arg0);
-  _require(1249).batchUpdates(() => {
-    closure_1_7.setState((arg0) => {
-      obj = {};
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj.setState((arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj.storedContacts = closure_0;
+      obj.storedContacts = storedContacts;
       return obj;
     });
   });
-  obj = _require(1249);
-  dispatcherDefault.wait(() => {
-    obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
+  let obj = require("ReactBatchUpdates");
+  DispatcherDefault.wait(() => {
+    const obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
     return obj.dispatch(obj);
   });
 });
-let obj = keys.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
+const useContactSyncStore = module_560.create(() => ({ loadedPolicyNotice: false, storedContacts: "", upsellCTADismissed: false, policyUpdateNoticeDismissed: false, dmListCTADismissed: false }));
 let Storage2 = Storage4.Storage;
-Storage2.asyncGet("ContactSyncDMListCTADismissed", (arg0) => {
-  let _require = Boolean(arg0);
-  const Storage = _require(510).Storage;
+Storage2.asyncGet("ContactSyncDMListCTADismissed", async (arg0) => {
+  _require = Boolean(arg0);
+  const Storage = require("Storage").Storage;
   let timestamp = Storage.get(contact_sync_dm_list_cta_first_seen_date);
   if (timestamp == null) {
     const _Date = Date;
@@ -44,31 +43,36 @@ Storage2.asyncGet("ContactSyncDMListCTADismissed", (arg0) => {
   if (Date.now() - timestamp > 5184000000) {
     _require = true;
   }
-  _require(1249).batchUpdates(() => closure_1_7.setState({ dmListCTADismissed: c0 }));
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { dmListCTADismissed };
+    return obj.setState(obj);
+  });
 });
 const Storage3 = Storage4.Storage;
-Storage3.asyncGet("ContactSyncUpsellCTADismissed", (arg0) => {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_7.setState({ upsellCTADismissed: closure_0 }));
+Storage3.asyncGet("ContactSyncUpsellCTADismissed", async (upsellCTADismissed) => {
+  _require = upsellCTADismissed;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { upsellCTADismissed };
+    return obj.setState(obj);
+  });
 });
-let result = set.fileFinishedImporting("modules/contact_sync/native/ContactSyncPersistedStore.tsx");
+let result = size.fileFinishedImporting("modules/contact_sync/native/ContactSyncPersistedStore.tsx");
 
 export const setStoredContacts = function setStoredContacts(arg0) {
-  const _require = arg0;
-  const Storage = _require(510).Storage;
+  _require = arg0;
+  const Storage = require("Storage").Storage;
   const result = Storage.set(V2_DCD_CONTACTS_STORAGE_KEY, arg0);
-  _require(1249).batchUpdates(() => {
-    closure_1_7.setState((arg0) => {
-      obj = {};
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj.setState((arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj.storedContacts = closure_0;
+      obj.storedContacts = storedContacts;
       return obj;
     });
   });
-  obj = _require(1249);
-  dispatcherDefault.wait(() => {
-    obj = closure_1_1(closure_1_2[2]);
-    obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
+  const obj = require("ReactBatchUpdates");
+  DispatcherDefault.wait(() => {
+    const obj = { type: "CONTACT_SYNC_STORED_CONTACTS", empty: "" === closure_0 };
     return obj.dispatch(obj);
   });
 };
@@ -80,9 +84,9 @@ export const deleteStoredContacts = function deleteStoredContacts() {
   }
   const Storage2 = tmp(510).Storage;
   Storage2.remove(V2_DCD_CONTACTS_STORAGE_KEY);
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(arg0);
       obj.storedContacts = "";
       return obj;
@@ -90,13 +94,13 @@ export const deleteStoredContacts = function deleteStoredContacts() {
   });
   return str;
 };
-export const useContactSyncStore = obj;
+export { useContactSyncStore };
 export const dismissUpsellCTA = function dismissUpsellCTA() {
   const Storage = Storage4.Storage;
   const result = Storage.set(ContactSyncUpsellCTADismissed, true);
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
-      obj = {};
+      const obj = {};
       const merged = Object.assign(arg0);
       obj.upsellCTADismissed = true;
       return obj;
@@ -106,8 +110,8 @@ export const dismissUpsellCTA = function dismissUpsellCTA() {
 export const dismissDMListCTA = function dismissDMListCTA() {
   const Storage = Storage4.Storage;
   const result = Storage.set(ContactSyncDMListCTADismissed, true);
-  batchUpdates.batchUpdates(() => state.setState((arg0) => {
-    obj = {};
+  ReactBatchUpdates.batchUpdates(() => state.setState((arg0) => {
+    const obj = {};
     const merged = Object.assign(arg0);
     obj.dmListCTADismissed = true;
     return obj;
@@ -127,7 +131,7 @@ export const clearDismissState = function clearDismissState() {
   const Storage2 = Storage4.Storage;
   Storage2.remove(ContactSyncDMListCTADismissed);
   obj.setState((arg0) => {
-    obj = {};
+    const obj = {};
     const merged = Object.assign(arg0);
     obj.upsellCTADismissed = false;
     obj.dmListCTADismissed = false;

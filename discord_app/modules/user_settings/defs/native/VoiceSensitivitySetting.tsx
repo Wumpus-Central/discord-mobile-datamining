@@ -1,87 +1,99 @@
-// === Module 15250: ? ===
+// === Module 15250: VoiceSensitivitySetting ===
 
-// Module 15250
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 15250 (VoiceSensitivitySetting)
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import VoiceSensitivityDefault from "VoiceSensitivity" /* 9984 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import createToggle from "createToggle" /* 11468 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import createStyles from "createStyles" /* 4560 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
-let closure_6 = createCacheKey.createStyles({ slider: { marginTop: 8 } });
+let closure_6 = createStyles.createStyles({ slider: { marginTop: 8 } });
 let obj = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["sqUm+k"]);
+    const intl = util.intl;
+    return intl.string(util.t["sqUm+k"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     let obj = inputMode(504);
-    const items = [closure_4];
-    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
+    const items = [MediaEngineStore];
+    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: callback().slider, children: jsx(VoiceSensitivityDefault, obj) };
+    obj = { style: closure_6().slider, children: null };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     obj = {
       auto: vadAutoThreshold,
       threshold: vadThreshold,
       onThresholdChange(threshold) {
-        let obj = closure_1_1(closure_1_2[7]);
-        obj = { threshold };
+        const obj = { threshold };
         return obj.setMode(inputMode, obj);
       }
     };
+    obj.children = jsx(VoiceSensitivityDefault, {
+      auto: vadAutoThreshold,
+      threshold: vadThreshold,
+      onThresholdChange(threshold) {
+        const obj = { threshold };
+        return obj.setMode(inputMode, obj);
+      }
+    });
     return <View auto={vadAutoThreshold} threshold={vadThreshold} onThresholdChange={function onThresholdChange(threshold) {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { threshold };
+      const obj = { threshold };
       return obj.setMode(inputMode, obj);
     }} />;
   },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.nuFtHH)];
+    const intl = util.intl;
+    const items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 };
-const createStaticResult = createToggle.createStatic({
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["sqUm+k"]);
+    const intl = util.intl;
+    return intl.string(util.t["sqUm+k"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
     let obj = inputMode(504);
-    const items = [closure_4];
-    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
+    const items = [MediaEngineStore];
+    const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: MediaEngineStore.getMode(), vadThreshold: MediaEngineStore.getModeOptions().threshold, vadAutoThreshold: MediaEngineStore.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: callback().slider, children: jsx(VoiceSensitivityDefault, obj) };
+    obj = { style: closure_6().slider, children: null };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     obj = {
       auto: vadAutoThreshold,
       threshold: vadThreshold,
       onThresholdChange(threshold) {
-        let obj = closure_1_1(closure_1_2[7]);
-        obj = { threshold };
+        const obj = { threshold };
         return obj.setMode(inputMode, obj);
       }
     };
+    obj.children = jsx(VoiceSensitivityDefault, {
+      auto: vadAutoThreshold,
+      threshold: vadThreshold,
+      onThresholdChange(threshold) {
+        const obj = { threshold };
+        return obj.setMode(inputMode, obj);
+      }
+    });
     return <View auto={vadAutoThreshold} threshold={vadThreshold} onThresholdChange={function onThresholdChange(threshold) {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj = { threshold };
+      const obj = { threshold };
       return obj.setMode(inputMode, obj);
     }} />;
   },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.nuFtHH)];
+    const intl = util.intl;
+    const items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 });
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
-
-export default createStaticResult;

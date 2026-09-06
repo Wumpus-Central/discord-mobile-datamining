@@ -1,12 +1,15 @@
-// === Module 14009: getGlobalFramePoolLockExperimentConfig ===
+// === Module 14009: GlobalFramePoolLockExperiment ===
 
-// Module 14009 (getGlobalFramePoolLockExperimentConfig)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 14009 (GlobalFramePoolLockExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-let obj = { 1: null };
+let obj = { kind: "user", name: "2025-11-global-frame-pool-lock", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = getUnitIdDefault({ kind: "user", name: "2025-11-global-frame-pool-lock", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/media_engine/GlobalFramePoolLockExperiment.tsx");
+obj.variations = obj;
+let closure_0 = apex_ApexExperimentDefault(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/GlobalFramePoolLockExperiment.tsx");
 
 export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoolLockExperimentConfig(disable) {
   let flag = disable.disable;
@@ -17,8 +20,7 @@ export const getGlobalFramePoolLockExperimentConfig = function getGlobalFramePoo
   if (flag) {
     let defaultConfig = obj.definition.defaultConfig;
   } else {
-    obj = { location: null };
-    obj[0] = disable.location;
+    obj = { location: disable.location };
     defaultConfig = obj.getConfig(obj);
   }
   return defaultConfig;

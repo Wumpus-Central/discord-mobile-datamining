@@ -1,16 +1,16 @@
-// === Module 13981: set ===
+// === Module 13981: PremiumSKUFeature ===
 
-// Module 13981 (set)
-import set from "set" /* 2 */;
+// Module 13981 (PremiumSKUFeature)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
+const result = size.fileFinishedImporting("modules/premium/PremiumSKUFeature.tsx");
 
-export default function PremiumSKUFeature(name, getFeatureValue, description) {
+export default function PremiumSKUFeature(INCREASED_FILE_UPLOAD_SIZE, getUserMaxFileSize, description) {
   let obj = Object.create(new.target.prototype);
-  obj.name = name;
+  obj.name = INCREASED_FILE_UPLOAD_SIZE;
   obj.description = description;
-  obj.getFeatureValue = getFeatureValue;
-  obj = { value: getFeatureValue, configurable: false, writable: false };
+  obj.getFeatureValue = getUserMaxFileSize;
+  obj = { value: getUserMaxFileSize, configurable: false, writable: false };
   Object.defineProperty(obj, "getFeatureValue", obj);
   return obj;
 }.prototype;

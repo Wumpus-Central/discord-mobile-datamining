@@ -1,10 +1,10 @@
-// === Module 11458: updateActivities ===
+// === Module 11458: FirstPartyRichPresenceStore ===
 
-// Module 11458 (updateActivities)
+// Module 11458 (FirstPartyRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 1332 */;
-import handleUpdateActivityDefault from "handleUpdateActivity" /* 11459 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _modDef1332 from "module_1332" /* 1332 */;
+import StageChannelSelfRichPresenceStoreDefault from "StageChannelSelfRichPresenceStore" /* 11459 */;
 
 function updateActivities() {
   items = [];
@@ -12,20 +12,19 @@ function updateActivities() {
   while (iter !== undefined) {
     let activity = nextResult.getActivity();
     if (null != activity) {
-      let tmp4 = activity;
       let arr = items.push(tmp3);
     }
     continue;
   }
-  const tmp6 = isUndefinedOrNullDefault(items, items);
+  const tmp6 = _modDef1332(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;
   }
   return flag;
 }
-let items = [handleUpdateActivityDefault];
-let closure_3 = [];
+let items = [StageChannelSelfRichPresenceStoreDefault];
+items = [];
 const Store = initializeDefault.Store;
 class FirstPartyRichPresenceStore extends Store {
 }
@@ -34,10 +33,11 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, updateActivities);
 };
 prototype["getActivities"] = function getActivities() {
-  return closure_3;
+  return items;
 };
 FirstPartyRichPresenceStore.displayName = "FirstPartyRichPresenceStore";
-const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(dispatcherDefault);
-const result = require("set").fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
+const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(DispatcherDefault);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
 
 export default firstPartyRichPresenceStore;

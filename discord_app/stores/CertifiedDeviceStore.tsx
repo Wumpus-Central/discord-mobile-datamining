@@ -1,45 +1,44 @@
-// === Module 9090: initialize ===
+// === Module 9090: CertifiedDeviceStore ===
 
-// Module 9090 (initialize)
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
+// Module 9090 (CertifiedDeviceStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 4585 */;
+import size from "module_2" /* 2 */;
 
-const DeviceTypes = DesktopSources.DeviceTypes;
+const DeviceTypes = Constants.DeviceTypes;
 const CertifiedDeviceStore = "CertifiedDeviceStore";
 let closure_5 = {};
-let closure_6 = {};
-let c7 = 0;
+const dependencyMap = {};
+let closure_7 = 0;
 const Store = initializeDefault.Store;
 class CertifiedDeviceStore extends Store {
 }
 const prototype = CertifiedDeviceStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
-  const value = Storage.get(CertifiedDeviceStore);
+  value = Storage.get(CertifiedDeviceStore);
   if (null != value) {
-    let item = applyDefault.forEach(value, (arr) => {
+    let item = _modDef12.forEach(value, (arr, arg1) => {
       const item = arr.forEach((type) => {
         if (tmp) {
           type.hardwareMute = false;
         }
       });
-      if (null != table[arg1]) {
-        const item1 = arr.forEach((arg0) => {
+      if (null != closure_1_5[arg1]) {
+        const item1 = arr.forEach((item) => {
           delete tmp3[tmp2];
           return tmp;
         });
       }
-      table[arg1] = arr;
+      closure_1_5[arg1] = arr;
       const item2 = arr.forEach((id) => {
-        closure_6[id.id] = id;
+        closure_1_6[id.id] = id;
         return id;
       });
     });
-    const arr = applyDefault;
   }
 };
 prototype["isCertified"] = function isCertified(found) {
@@ -48,8 +47,8 @@ prototype["isCertified"] = function isCertified(found) {
 prototype["getCertifiedDevice"] = function getCertifiedDevice(inputDeviceId) {
   return dependencyMap[inputDeviceId];
 };
-prototype["getCertifiedDeviceName"] = function getCertifiedDeviceName(inputDeviceId, arg1) {
-  let combined = arg1;
+prototype["getCertifiedDeviceName"] = function getCertifiedDeviceName(inputDeviceId, name) {
+  let combined = name;
   const certifiedDevice = this.getCertifiedDevice(inputDeviceId);
   if (null != certifiedDevice) {
     const _HermesInternal = HermesInternal;
@@ -59,7 +58,7 @@ prototype["getCertifiedDeviceName"] = function getCertifiedDeviceName(inputDevic
 };
 prototype["getCertifiedDeviceByType"] = function getCertifiedDeviceByType(arg0) {
   closure_0 = arg0;
-  return applyDefault.find(closure_6, (type) => type.type === closure_0);
+  return _modDef12.find(closure_6, (type) => type.type === closure_0);
 };
 prototype["isHardwareMute"] = function isHardwareMute(arg0) {
   let flag = false;
@@ -108,21 +107,21 @@ prototype["getModel"] = function getModel(arg0) {
   return model;
 };
 prototype["getRevision"] = function getRevision() {
-  return c7;
+  return closure_7;
 };
 CertifiedDeviceStore.displayName = "CertifiedDeviceStore";
-const certifiedDeviceStore = new CertifiedDeviceStore(dispatcherDefault, {
+const certifiedDeviceStore = new CertifiedDeviceStore(DispatcherDefault, {
   CERTIFIED_DEVICES_SET: function handleSetCertifiedDevices(arg0) {
     ({ applicationId, devices } = arg0);
-    if (null != table[applicationId]) {
-      const item = arr.forEach((arg0) => {
+    if (null != closure_5[applicationId]) {
+      const item = arr.forEach((item) => {
         delete tmp3[tmp2];
         return tmp;
       });
     }
-    table[applicationId] = devices;
+    closure_5[applicationId] = devices;
     const item1 = devices.forEach((id) => {
-      closure_6[id.id] = id;
+      closure_1_6[id.id] = id;
       return id;
     });
     const Storage = Storage2.Storage;
@@ -130,6 +129,6 @@ const certifiedDeviceStore = new CertifiedDeviceStore(dispatcherDefault, {
     closure_7 = closure_7 + 1;
   }
 });
-let result = set.fileFinishedImporting("stores/CertifiedDeviceStore.tsx");
+let result = size.fileFinishedImporting("stores/CertifiedDeviceStore.tsx");
 
 export default certifiedDeviceStore;

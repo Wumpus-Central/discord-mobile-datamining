@@ -2,22 +2,21 @@
 
 // Module 10239 (useCanShowFavoritesGuildOnboarding)
 import initialize from "initialize" /* 504 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import closure_2 from "setContent" /* 4251 */;
-import closure_3 from "handleConnectionOpen" /* 2011 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
+import ActionSheetStore from "ActionSheetStore" /* 4251 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
 
 export default function useCanShowFavoritesGuildOnboarding() {
-  const items = [closure_3];
+  const items = [SelectedChannelStore];
   const stateFromStores = initialize.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
-  const obj = initialize;
-  const items1 = [closure_2];
+  const items1 = [ActionSheetStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => open.isOpen());
-  const obj2 = initialize;
   let tmp4 = !stateFromStores;
-  const isModalOpen = coerceMainRoute.useIsModalOpen();
+  const isModalOpen = NavigationRouteUtils.useIsModalOpen();
   if (!stateFromStores) {
     tmp4 = !stateFromStores1;
   }

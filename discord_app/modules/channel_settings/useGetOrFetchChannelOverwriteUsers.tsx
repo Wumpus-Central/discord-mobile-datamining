@@ -1,50 +1,53 @@
 // === Module 16826: useGetOrFetchChannelOverwriteUsers ===
 
 // Module 16826 (useGetOrFetchChannelOverwriteUsers)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
+import _modDef16827 from "module_16827" /* 16827 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_settings/useGetOrFetchChannelOverwriteUsers.tsx");
 
 export default function useGetOrFetchChannelOverwriteUsers(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  let items = [closure_5];
+  let items = [GuildMemberStore];
   const items1 = [arg0];
-  stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(items, () => closure_1_5.getMemberIds(closure_0), items1);
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => GuildMemberStore.getMemberIds(closure_0), items1);
   const items2 = [arg1, stateFromStoresArray];
-  let tmp2 = first(React.useMemo(() => {
-    if (null == callback2) {
+  let tmp2 = first(noop.useMemo(() => {
+    if (null == closure_1) {
       let items = [];
     } else {
       const _Object = Object;
       const values = Object.values(tmp2);
-      const found = values.filter((type) => type.type === callback(closure_2[4]).PermissionOverwriteType.MEMBER);
+      const found = values.filter((type) => type.type === closure_1_0(stateFromStoresArray[4]).PermissionOverwriteType.MEMBER);
       items = found.map((id) => id.id);
     }
-    return callback2(stateFromStoresArray[6])(items, (arg0) => closure_2.includes(arg0));
+    return _modDef16827(items, (arg0) => stateFromStoresArray.includes(arg0));
   }, items2), 2);
   first = tmp2[0];
-  React = tmp4;
+  noop = tmp4;
   const items3 = [tmp2[1], arg0];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp2 = length.length > 0;
     if (tmp2) {
       tmp2 = null != closure_0;
     }
     if (tmp2) {
-      const membersById = callback2(stateFromStoresArray[7]).requestMembersById(closure_0, length, false);
-      const obj = callback2(stateFromStoresArray[7]);
+      const membersById = GuildActionCreatorsDefault.requestMembersById(closure_0, length, false);
     }
   }, items3);
-  let obj = _require(stateFromStoresArray[5]);
-  const items4 = [closure_6];
+  let obj = require("initialize");
+  const items4 = [UserStore];
   const items5 = [first];
-  return _require(stateFromStoresArray[5]).useStateFromStoresArray(items4, () => {
-    const mapped = first.map(closure_1_6.getUser);
-    return mapped.filter(callback(stateFromStoresArray[8]).isNotNullish);
+  return require("initialize").useStateFromStoresArray(items4, () => {
+    const mapped = first.map(UserStore.getUser);
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items5);
 };

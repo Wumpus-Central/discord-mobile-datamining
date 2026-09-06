@@ -1,130 +1,104 @@
-// === Module 14070: _queryAudioEffects ===
+// === Module 14070: queryAudioEffects ===
 
-// Module 14070 (_queryAudioEffects)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 14070 (queryAudioEffects)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _queryAudioEffects() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+require = fn;
+let closure_6 = async function _queryAudioEffects(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_0 = closure_1;
+          closure_131_1 = undefined;
+          if (obj13.isWindows()) {
+            c6 = 1;
+            c7 = 2;
+            c8 = 1;
+            const obj1 = { value: obj12.getDeviceAudioEffects(tmp46), done: false };
+            return obj1;
+          } else {
+            const _Error = Error;
+            const error = new Error("Audio effects querying not supported on non-Windows platforms");
+            c8 = 3;
+            let obj2 = { value: Promise.reject(error), done: true };
+            return obj2;
+          }
+          obj12 = closure_2;
+          obj13 = utils_PlatformUtils;
+          tmp46 = closure_0;
         }
+      } else if (1 === tmp7) {
+        c6 = 0;
+        closure_131_2 = closure_5;
+        closure_132_5.error("Failed to probe audio effects for device", closure_131_2);
+        obj2 = closure_132_1(closure_132_2[5]);
+        obj2.track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
+        c8 = 3;
+        return { value: "HermesInternal", done: null };
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const constants = tmp3;
-              closure_3 = tmp7;
-              const callback = lib;
-              lib = undefined;
-              if (obj13.isWindows()) {
-                c6 = 1;
-                c7 = 2;
-                c8 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj12.getDeviceAudioEffects(tmp47);
-                return obj1;
-              } else {
-                const _Error = Error;
-                error = new Error("Audio effects querying not supported on non-Windows platforms");
-                c8 = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = Promise.reject(error);
-                return obj2;
-              }
-              obj12 = dependencyMap;
-              obj13 = callback(1116);
-              tmp47 = callback;
-            }
-          } else if (1 === tmp7) {
-            c6 = 0;
-            dependencyMap = logger;
-            logger.error("Failed to probe audio effects for device", dependencyMap);
-            obj2 = lib(1242);
-            obj2.track(constants.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: false });
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            lib = arg1;
-            const obj4 = { type: "MEDIA_ENGINE_SET_DEVICE_AUDIO_EFFECTS", deviceId: null };
-            obj4[1] = callback;
-            const merged = Object.assign(lib);
-            lib(573).dispatch(obj4);
-            const obj8 = lib(573);
-            const obj5 = { succeeded: true, active_effects: null, available_effects: null };
-            obj5[1] = lib.active;
-            obj5[2] = lib.available;
-            lib(1242).track(constants.AUDIO_EFFECTS_PROBE_COMPLETED, obj5);
-            c6 = 0;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = lib;
-            return obj;
-          }
-        } catch (tmp23) {
-          logger = tmp23;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp23;
-          } else {
-            c7 = tmp;
-          }
-        }
+        closure_131_1 = value;
+        const obj4 = { type: "MEDIA_ENGINE_SET_DEVICE_AUDIO_EFFECTS", deviceId: closure_131_0 };
+        const merged = Object.assign(closure_131_1);
+        closure_132_1(closure_132_2[4]).dispatch(obj4);
+        const obj8 = closure_132_1(closure_132_2[4]);
+        const obj5 = { succeeded: true, active_effects: closure_131_1.active, available_effects: closure_131_1.available };
+        closure_132_1(closure_132_2[5]).track(closure_132_4.AUDIO_EFFECTS_PROBE_COMPLETED, obj5);
+        c6 = 0;
+        c8 = 3;
+        obj = { value: closure_131_1, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp23) {
+      closure_5 = tmp23;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp23;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-let logger = new require("log").Logger("AudioEffects");
-const result = require("set").fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
+};
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const logger = new fn(4).Logger("AudioEffects");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
 
 export default function queryAudioEffects() {
   const self = this;
-  const apply = _queryAudioEffects.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

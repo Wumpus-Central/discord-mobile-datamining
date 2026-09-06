@@ -1,12 +1,10 @@
-// === Module 9449: set ===
+// === Module 9449: ConsoleHandoffType ===
 
-// Module 9449 (set)
-import set from "set" /* 2 */;
+// Module 9449 (ConsoleHandoffType)
+import size from "module_2" /* 2 */;
 
-const obj = { ALL: null };
-let set = new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx");
+const obj = { ALL: new Set(["CREATE_NEW_CALL", "TRANSFER_EXISTING_CALL"]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ConsoleHandoffType.tsx");
 
 export const ConsoleHandoffType = { TRANSFER_EXISTING_CALL: "TRANSFER_EXISTING_CALL", CREATE_NEW_CALL: "CREATE_NEW_CALL" };
 export const ConsoleHandoffTypeSets = obj;

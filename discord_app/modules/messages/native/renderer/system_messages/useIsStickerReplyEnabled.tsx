@@ -1,28 +1,29 @@
-// === Module 7997: computeIsStickerReplyEnabled ===
+// === Module 7997: useIsStickerReplyEnabled ===
 
-// Module 7997 (computeIsStickerReplyEnabled)
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
-import closure_2 from "trackCommunicationDisabled" /* 2021 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 7997 (useIsStickerReplyEnabled)
+import ThreadHooks from "ThreadHooks" /* 7269 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");
+require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/useIsStickerReplyEnabled.tsx");
 
 export const computeIsStickerReplyEnabled = function computeIsStickerReplyEnabled(guildId, channel, message, arg3) {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let tmp2 = null != currentUser;
   if (tmp2) {
-    member = member.getMember(guildId, currentUser.id);
+    const member = GuildMemberStore.getMember(guildId, currentUser.id);
     let isPending;
     if (member != null) {
       isPending = member.isPending;
     }
     tmp2 = isPending;
   }
-  const isReadOnlyThread = useCanStartPrivateThread.computeIsReadOnlyThread(channel);
-  let canResult = closure_3.can(Permissions.SEND_MESSAGES, channel);
+  const isReadOnlyThread = ThreadHooks.computeIsReadOnlyThread(channel);
+  let canResult = PermissionStore.can(Permissions.SEND_MESSAGES, channel);
   if (canResult) {
     canResult = !isReadOnlyThread;
   }

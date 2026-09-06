@@ -1,60 +1,61 @@
-// === Module 15900: useGoreContentNonFriendsDmSettingValue ===
+// === Module 15900: ParentalControlsGoreMediaFiltersNonFriendsDMsSetting ===
 
-// Module 15900 (useGoreContentNonFriendsDmSettingValue)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15900 (ParentalControlsGoreMediaFiltersNonFriendsDMsSetting)
+import util from "util" /* 1114 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14828 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
-require = arg1;
+require = fn;
 function useGoreContentNonFriendsDmSettingValue() {
-  const parentalControlledGoreContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledGoreContentSettings();
+  const parentalControlledGoreContentSettings = useParentalControlSettings.useParentalControlledGoreContentSettings();
   let prop;
   if (parentalControlledGoreContentSettings != null) {
     prop = parentalControlledGoreContentSettings.goreContentNonFriendDm;
   }
   let tmp5 = null;
   if (null != prop) {
-    tmp5 = redactionSettingToRenderedString.redactionSettingToRenderedString(prop)();
-    const tmpResult = redactionSettingToRenderedString;
+    tmp5 = ExplicitMediaRedactionUtils.redactionSettingToRenderedString(prop)();
+    const tmpResult = ExplicitMediaRedactionUtils;
   }
   return tmp5;
 }
 function onGoreContentNonFriendsDmOnPress() {
-  selectedTeenId = selectedTeenId.getSelectedTeenId();
+  const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    let obj = selectedTeenId(14828);
-    obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
+    selectedTeenId(14828);
+    let obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
     const intl = selectedTeenId(1114).intl;
-    obj[0] = intl.string(selectedTeenId(1114).t["16/3Bi"]);
+    obj.title = intl.string(selectedTeenId(1114).t["16/3Bi"]);
     const intl2 = selectedTeenId(1114).intl;
-    obj[1] = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
-    obj[2] = function handlePress(goreContentNonFriendDm) {
-      let obj = selectedTeenId(closure_1_1[4]);
-      obj = { goreContentNonFriendDm };
+    obj.subtitle = intl2.string(selectedTeenId(1114).t["Yh+HX1"]);
+    obj.handlePress = function handlePress(goreContentNonFriendDm) {
+      const obj = { goreContentNonFriendDm };
       return obj.updateGoreContentSetting(selectedTeenId, obj);
     };
-    obj[3] = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
+    obj.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
     const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
-    obj[4] = items;
+    obj.excluded = items;
     const result = selectedTeenId(14821).handleSensitiveMediaFilterPress(obj);
     const obj2 = selectedTeenId(14821);
   }
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yh+HX1"]);
+    const intl = util.intl;
+    return intl.string(util.t["Yh+HX1"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(7975).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: useGoreContentNonFriendsDmSettingValue,
   onPress: onGoreContentNonFriendsDmOnPress,
   unsearchable: true
 };
-createToggle = createToggle.createPressable(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsGoreMediaFiltersNonFriendsDMsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useGoreContentNonFriendsDmSettingValue };
 export { onGoreContentNonFriendsDmOnPress };

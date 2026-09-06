@@ -1,11 +1,11 @@
-// === Module 12415: isStaff ===
+// === Module 12415: isStaffFromRawUser ===
 
-// Module 12415 (isStaff)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 12415 (isStaffFromRawUser)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const UserFlags = ME.UserFlags;
-const result = set.fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");
+const UserFlags = Constants.UserFlags;
+const result = size.fileFinishedImporting("modules/user/isStaffFromRawUser.tsx");
 
 export default function isStaff(flags) {
   let num = flags.flags;

@@ -1,32 +1,30 @@
-// === Module 10956: playVibingWumpusMusic ===
+// === Module 10956: InappropriateConversationsActionCreators ===
 
-// Module 10956 (playVibingWumpusMusic)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import sendRequest from "sendRequest" /* 1272 */;
+// Module 10956 (InappropriateConversationsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
 
 export const playVibingWumpusMusic = function playVibingWumpusMusic() {
-  dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
+  DispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
 };
 export const stopVibingWumpusMusic = function stopVibingWumpusMusic() {
-  dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
+  DispatcherDefault.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
 };
 export const pauseVibingWumpusMusic = function pauseVibingWumpusMusic() {
-  dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
+  DispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
 };
 export const deleteAllSafetyWarnings = function deleteAllSafetyWarnings(arg0) {
-  const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.DELETE_SAFETY_WARNINGS(arg0), rejectWithError: sendRequest.rejectWithMigratedError() };
+  const HTTP = HTTPUtils.HTTP;
+  const obj = { url: Endpoints.DELETE_SAFETY_WARNINGS(arg0), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.del(obj);
 };
 export const markAsInappropriateConversation = function markAsInappropriateConversation(id, INAPPROPRIATE_CONVERSATION_TIER_1) {
-  const HTTP = sendRequest.HTTP;
-  obj = { url: Endpoints.ADD_SAFETY_WARNING(id), body: obj, rejectWithError: null };
-  obj = { safety_warning_type: INAPPROPRIATE_CONVERSATION_TIER_1 };
-  obj[2] = sendRequest.rejectWithMigratedError();
-  return HTTP.post(obj);
+  const HTTP = HTTPUtils.HTTP;
+  const request = { url: Endpoints.ADD_SAFETY_WARNING(id), body: { safety_warning_type: INAPPROPRIATE_CONVERSATION_TIER_1 }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+  return HTTP.post(request);
 };

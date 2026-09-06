@@ -1,28 +1,30 @@
 // === Module 11411: useUnreadSettingNotice ===
 
 // Module 11411 (useUnreadSettingNotice)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING as closure_5 } from "createChannelRecord" /* 1961 */;
+import UnreadSettingNoticeStore2Default from "UnreadSettingNoticeStore2" /* 11412 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");
+const require = fn;
+let closure_5 = fn(1961).CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/utils/useUnreadSettingNotice.tsx");
 
 export default function useUnreadSettingNotice(id) {
-  const _require = id;
-  let obj = _require(first[3]);
+  _require = id;
+  let obj = require("notifications/NotificationUtils");
   const shouldUseNewNotificationSystem = obj.useShouldUseNewNotificationSystem("useShouldRenderBanner");
-  const tmp2 = callback(React.useState(""), 2);
+  const tmp2 = _slicedToArray(noop.useState(""), 2);
   first = tmp2[0];
-  callback = tmp2[1];
+  _slicedToArray = tmp2[1];
   const items = [id.id];
-  const effect = React.useEffect(() => {
-    callback("");
+  const effect = noop.useEffect(() => {
+    closure_3("");
   }, items);
   const items1 = [shouldUseNewNotificationSystem(first[5])];
-  const items2 = [first, shouldUseNewNotificationSystem, _require(first[4]).useStateFromStores(items1, () => shouldUseNewNotificationSystem(first[5]).getLastActionTime(id.id)), id];
-  const effect1 = React.useEffect(() => {
-    let hasItem = closure_1_5.has(id.type);
+  const items2 = [first, shouldUseNewNotificationSystem, require("initialize").useStateFromStores(items1, () => UnreadSettingNoticeStore2Default.getLastActionTime(id.id)), id];
+  const effect1 = noop.useEffect(() => {
+    let hasItem = set.has(id.type);
     if (hasItem) {
       hasItem = first !== tmp.id;
     }
@@ -30,13 +32,12 @@ export default function useUnreadSettingNotice(id) {
       hasItem = shouldUseNewNotificationSystem;
     }
     if (hasItem) {
-      hasItem = shouldUseNewNotificationSystem(first[5]).maybeAutoUpgradeChannel(tmp.id);
-      const obj = shouldUseNewNotificationSystem(first[5]);
+      hasItem = UnreadSettingNoticeStore2Default.maybeAutoUpgradeChannel(tmp.id);
     }
     if (hasItem) {
-      callback(tmp.id);
+      closure_3(tmp.id);
     }
   }, items2);
-  obj = { showUnreadsNotice: first === id.id, clearUnreadsNotice: React.useCallback(() => callback(""), []) };
+  obj = { showUnreadsNotice: first === id.id, clearUnreadsNotice: noop.useCallback(() => closure_3(""), []) };
   return obj;
 };

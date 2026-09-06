@@ -1,88 +1,50 @@
-// === Module 14831: pressable ===
+// === Module 14831: GoreMediaFiltersFriendsDMsSetting ===
 
-// Module 14831 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 7301 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14820 */;
-import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14821 */;
+// Module 14831 (GoreMediaFiltersFriendsDMsSetting)
+import util from "util" /* 1114 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7301 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14820 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14821 */;
 import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14823 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+uI23H"]);
+    const intl = util.intl;
+    return intl.string(util.t["+uI23H"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
+  parent: SettingsConstants.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
   useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
+    const obj = useExplicitContentSettingsOrDefault;
+    return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
   },
   onPress: function onGoreContentFriendsDmOnPress() {
-    let obj = resolveGoreSettingWithDefaults;
-    obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["16/3Bi"]);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["+uI23H"]);
-    obj[2] = function handlePress(goreContentFriendDm) {
-      let obj = callback(table[3]);
-      obj = { goreContentFriendDm };
+    let obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
+    const intl = util.intl;
+    obj.title = intl.string(util.t["16/3Bi"]);
+    const intl2 = util.intl;
+    obj.subtitle = intl2.string(util.t["+uI23H"]);
+    obj.handlePress = function handlePress(goreContentFriendDm) {
+      const obj = { goreContentFriendDm };
       return obj.updateGoreContentSetting(obj);
     };
-    obj[3] = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
-    const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
+    obj.currentValue = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["K0OWP+"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["N/oRI+"]), , ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.QVdYsK);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t["K0OWP+"]);
     return items;
   },
   useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
 });
-let obj = {
-  useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+uI23H"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.SENSITIVE_CONTENT_FILTERS,
-  useTrailing: function useGoreContentFriendsDmSettingValue() {
-    const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useGoreContentSettingOrDefault().goreContentFriendDm)();
-  },
-  onPress: function onGoreContentFriendsDmOnPress() {
-    let obj = resolveGoreSettingWithDefaults;
-    obj = { title: null, subtitle: null, handlePress: null, currentValue: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["16/3Bi"]);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["+uI23H"]);
-    obj[2] = function handlePress(goreContentFriendDm) {
-      let obj = callback(table[3]);
-      obj = { goreContentFriendDm };
-      return obj.updateGoreContentSetting(obj);
-    };
-    obj[3] = obj.getGoreContentSettingOrDefault().goreContentFriendDm;
-    const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
-  },
-  useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["K0OWP+"]);
-    return items;
-  },
-  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
-};
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/GoreMediaFiltersFriendsDMsSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/GoreMediaFiltersFriendsDMsSetting.tsx");
 
 export default pressable;

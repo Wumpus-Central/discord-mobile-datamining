@@ -1,12 +1,12 @@
-// === Module 8347: initialize ===
+// === Module 8347: ICYMIFiltersStore ===
 
-// Module 8347 (initialize)
+// Module 8347 (ICYMIFiltersStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 8348 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ICYMITypes from "ICYMITypes" /* 8348 */;
 
-require = arg1;
-let closure_2 = {};
+require = fn;
+let filters = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ICYMIFiltersStore extends DeviceSettingsStore {
 }
@@ -16,30 +16,32 @@ prototype["initialize"] = function initialize(arg0) {
   if (arg0 == null) {
     obj = {};
   }
+  filters = obj;
 };
 prototype["filterStaffContent"] = function filterStaffContent() {
-  return true === closure_2.filterStaffContent;
+  return true === filters.filterStaffContent;
 };
 prototype["getDoubleTapBehavior"] = function getDoubleTapBehavior() {
-  let DEFAULT = closure_2.doubleTapBehavior;
+  let DEFAULT = filters.doubleTapBehavior;
   if (DEFAULT == null) {
-    DEFAULT = MessageEmbedTypes.GravityICYMIDoubleTapBehavior.DEFAULT;
+    DEFAULT = ICYMITypes.GravityICYMIDoubleTapBehavior.DEFAULT;
   }
   return DEFAULT;
 };
 prototype["getState"] = function getState() {
-  return closure_2;
+  return filters;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return closure_2;
+  return filters;
 };
 ICYMIFiltersStore.displayName = "ICYMIFiltersStore";
 ICYMIFiltersStore.persistKey = "ICYMIFiltersStore";
-const iCYMIFiltersStore = new ICYMIFiltersStore(dispatcherDefault, {
+const iCYMIFiltersStore = new ICYMIFiltersStore(DispatcherDefault, {
   SET_ICYMI_FILTERS: function handleFilters(filters) {
     filters = filters.filters;
   }
 });
-const result = require("set").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
 
 export default iCYMIFiltersStore;

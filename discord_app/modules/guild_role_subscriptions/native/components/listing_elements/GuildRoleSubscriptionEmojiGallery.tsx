@@ -1,15 +1,16 @@
-// === Module 15239: EmojiGallery ===
+// === Module 15239: GuildRoleSubscriptionEmojiGallery ===
 
-// Module 15239 (EmojiGallery)
-import noopAll from "noop" /* 19 */;
+// Module 15239 (GuildRoleSubscriptionEmojiGallery)
 import chunkDefault from "chunk" /* 10344 */;
-import GappedList from "GappedList" /* 10346 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import LayoutUtils from "LayoutUtils" /* 10346 */;
+import EmojiIconDefault from "EmojiIcon" /* 15240 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx");
 
 export default function EmojiGallery(emojiIds) {
   ({ guildId: require, maxPerRow } = emojiIds);
@@ -19,26 +20,26 @@ export default function EmojiGallery(emojiIds) {
   let obj = { children: null };
   obj = {
     gap: 8,
-    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr) => {
+    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
       let obj = { style: { flexDirection: "row" }, children: null };
-      obj = { gap: 16, children: arr.map((id) => closure_1_4(closure_1_1(closure_1_2[5]), { size: 22, fontSize: 18, guildId: closure_0, id }, id)) };
-      obj[1] = closure_1_4(closure_1_0(closure_1_2[4]).GappedList, obj);
-      return closure_1_4(closure_1_3, obj, arg1);
+      obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
+      obj.children = jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
+      return <View key={arg1} gap={16}>{arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}</View>;
     })
   };
-  obj[0] = jsx(GappedList.GappedList, {
+  obj.children = jsx(LayoutUtils.GappedList, {
     gap: 8,
-    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr) => {
+    children: chunkDefault(emojiIds.emojiIds, maxPerRow).map((arr, index) => {
       let obj = { style: { flexDirection: "row" }, children: null };
-      obj = { gap: 16, children: arr.map((id) => closure_1_4(closure_1_1(closure_1_2[5]), { size: 22, fontSize: 18, guildId: closure_0, id }, id)) };
-      obj[1] = closure_1_4(closure_1_0(closure_1_2[4]).GappedList, obj);
-      return closure_1_4(closure_1_3, obj, arg1);
+      obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
+      obj.children = jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
+      return <View key={arg1} gap={16}>{arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}</View>;
     })
   });
-  return <View gap={8}>{chunkDefault(arg0.emojiIds, maxPerRow).map((arr) => {
+  return <View gap={8}>{chunkDefault(arg0.emojiIds, maxPerRow).map((arr, index) => {
     let obj = { style: { flexDirection: "row" }, children: null };
-    obj = { gap: 16, children: arr.map((id) => closure_1_4(closure_1_1(closure_1_2[5]), { size: 22, fontSize: 18, guildId: closure_0, id }, id)) };
-    obj[1] = closure_1_4(closure_1_0(closure_1_2[4]).GappedList, obj);
-    return closure_1_4(closure_1_3, obj, arg1);
+    obj = { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) };
+    obj.children = jsx(LayoutUtils.GappedList, { gap: 16, children: arr.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id)) });
+    return <View key={arg1} gap={16}>{arg0.map((id) => jsx(EmojiIconDefault, { size: 22, fontSize: 18, guildId, id }, id))}</View>;
   })}</View>;
 };

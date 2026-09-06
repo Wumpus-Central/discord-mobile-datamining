@@ -1,162 +1,141 @@
-// === Module 11931: _handleForwardBreadcrumb ===
+// === Module 11931: handleForwardBreadcrumb ===
 
-// Module 11931 (_handleForwardBreadcrumb)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import ME from "ME" /* 1074 */;
+// Module 11931 (handleForwardBreadcrumb)
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7341 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-function _handleForwardBreadcrumb() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    c3 = 0;
-    return (function*(arg0) {
-      if (guild === 2) {
-        guild = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+require = fn;
+let closure_9 = async function _handleForwardBreadcrumb(arg0) {
+  let messageReference = arg0;
+  c4 = 0;
+  c5 = 0;
+  c3 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          guild = 2;
-          if (0 === store) {
-            if (arg0 === 1) {
-              guild = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              guild = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let channel_id = tmp3;
-              let guild_id = tmp7;
-              guild_id = undefined;
-              channel_id = undefined;
-              let message_id;
-              store = undefined;
-              guild = undefined;
-              let constants;
-              if (null != lib.messageReference) {
-                guild_id = tmp60.messageReference.guild_id;
-                channel_id = tmp60.messageReference.channel_id;
-                message_id = tmp60.messageReference.message_id;
-                store = store.getChannel(channel_id);
-                guild = false;
-                if (null == store) {
-                  if (null != guild_id) {
-                    if (null == guild.getGuild(guild_id)) {
-                      message_id = 1;
-                      obj1 = { object: null };
-                      obj1[0] = closure_1_7.FORWARD_BREADCRUMB;
-                      store = 2;
-                      guild = 1;
-                      const obj2 = { value: null, done: false };
-                      obj2[0] = lib(closure_1_2[4]).startLurking(guild_id, obj1, { shouldNavigate: false });
-                      return obj2;
-                    }
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = messageReference;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            let message_id;
+            let channel2;
+            closure_129_5 = undefined;
+            closure_129_6 = undefined;
+            if (null != messageReference.messageReference) {
+              let guild_id = tmp59.messageReference.guild_id;
+              closure_129_1 = guild_id;
+              const channel_id = tmp59.messageReference.channel_id;
+              closure_129_2 = channel_id;
+              message_id = tmp59.messageReference.message_id;
+              channel2 = channel.getChannel(channel_id);
+              closure_129_5 = false;
+              if (null == channel2) {
+                if (null != guild_id) {
+                  if (null == guild.getGuild(guild_id)) {
+                    c3 = 1;
+                    let obj1 = { object: constants.FORWARD_BREADCRUMB };
+                    c4 = 2;
+                    c5 = 1;
+                    const obj2 = { value: GuildDiscoveryUtils.startLurking(guild_id, obj1, { shouldNavigate: false }), done: false };
+                    return obj2;
                   }
                 }
               }
-              guild = 3;
-              return { value: "HermesInternal", done: null };
             }
-          } else if (1 === tmp7) {
-            message_id = 0;
-          } else if (2 === tmp7) {
-            if (arg0 === 1) {
-              guild = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              message_id = 0;
-              guild = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              guild = true;
-              obj1 = lib(channel_id[5]);
-              store = 3;
-              guild = 1;
-              let obj4 = { value: null, done: false };
-              obj4[0] = obj1.waitForGuild(guild_id);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            guild = 3;
-            throw arg1;
+            c5 = 3;
+            return { value: "HermesInternal", done: null };
+          }
+        } else if (1 === tmp7) {
+          c3 = 0;
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            message_id = 0;
-            guild = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c3 = 0;
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            store = store.getChannel(channel_id);
-            message_id = 0;
+            closure_129_5 = true;
+            obj1 = closure_130_0(closure_130_2[5]);
+            c4 = 3;
+            c5 = 1;
+            let obj4 = { value: obj1.waitForGuild(closure_129_1), done: false };
+            return obj4;
           }
-          obj4 = guild_id(channel_id[6]);
-          const basicChannel = store.getBasicChannel(lib.channel_id);
-          guild_id = undefined;
-          if (basicChannel != null) {
-            guild_id = basicChannel.guild_id;
-          }
-          const obj5 = { guild_id: null, channel_id: null, message_id: null, breadcrumb_guild_id: null, breadcrumb_channel_id: null, breadcrumb_message_id: null, did_lurk: null };
-          obj5[0] = guild_id;
-          obj5[1] = lib.channel_id;
-          obj5[2] = lib.id;
-          obj5[3] = guild_id;
-          obj5[4] = channel_id;
-          obj5[5] = message_id;
-          obj5[6] = guild;
-          obj4.track(constants.FORWARD_BREADCRUMB_CLICKED, obj5);
-          let tmp36;
-          if (guild) {
-            tmp36 = channel_id;
-          }
-          constants = tmp36;
-          const obj6 = { navigationReplace: false, welcomeModalChannelId: null };
-          obj6[1] = constants;
-          guild_id(channel_id[7])(closure_8.CHANNEL(guild_id, channel_id, message_id), obj6);
-          const tmp42 = guild_id(channel_id[7]);
-        } catch (tmp52) {
-          if (tmp4 === message_id) {
-            guild = tmp2;
-            throw tmp52;
-          } else {
-            store = tmp;
-          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          channel2 = closure_130_4.getChannel(closure_129_2);
+          c3 = 0;
+        }
+        obj4 = closure_130_1(closure_130_2[6]);
+        const basicChannel = closure_130_4.getBasicChannel(closure_129_0.channel_id);
+        guild_id = undefined;
+        if (basicChannel != null) {
+          guild_id = basicChannel.guild_id;
+        }
+        const obj5 = { guild_id, channel_id: closure_129_0.channel_id, message_id: closure_129_0.id, breadcrumb_guild_id: closure_129_1, breadcrumb_channel_id: closure_129_2, breadcrumb_message_id: message_id, did_lurk: closure_129_5 };
+        obj4.track(closure_130_6.FORWARD_BREADCRUMB_CLICKED, obj5);
+        let tmp36;
+        if (closure_129_5) {
+          tmp36 = closure_129_2;
+        }
+        closure_129_6 = tmp36;
+        const obj6 = { navigationReplace: false, welcomeModalChannelId: closure_129_6 };
+        closure_130_1(closure_130_2[7])(closure_130_8.CHANNEL(closure_129_1, closure_129_2, message_id), obj6);
+        const tmp42 = closure_130_1(closure_130_2[7]);
+      } catch (tmp52) {
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp52;
+        } else {
+          c4 = tmp;
         }
       }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ AnalyticEvents: closure_6, AnalyticsObjects: error, Routes: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
+    }
+  })();
+};
+const Constants = fn(1074);
+({ AnalyticEvents: metroRequire, AnalyticsObjects: closure_7, Routes: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
 
 export default function handleForwardBreadcrumb() {
   const self = this;
-  const apply = _handleForwardBreadcrumb.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

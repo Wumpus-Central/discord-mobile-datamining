@@ -1,12 +1,14 @@
-// === Module 15117: apexExperiment ===
+// === Module 15117: AdRecheckIntervalExperiment ===
 
-// Module 15117 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 15117 (AdRecheckIntervalExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enableFastAdRecheck: false }, 3: { enableFastAdRecheck: true }, 4: { enableFastAdRecheck: true }, 5: { enableFastAdRecheck: true } };
+let obj = { name: "2026-07-ad-recheck-interval-experiment", kind: "user", defaultConfig: { enableFastAdRecheck: false }, variations: null };
+obj = { 1: null, 2: { enableFastAdRecheck: false }, 3: { enableFastAdRecheck: true }, 4: { enableFastAdRecheck: true }, 5: { enableFastAdRecheck: true } };
 obj[5] = { enableFastAdRecheck: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-ad-recheck-interval-experiment", kind: "user", defaultConfig: { enableFastAdRecheck: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/quests/experiments/AdRecheckIntervalExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/quests/experiments/AdRecheckIntervalExperiment.tsx");
 
 export default apexExperiment;

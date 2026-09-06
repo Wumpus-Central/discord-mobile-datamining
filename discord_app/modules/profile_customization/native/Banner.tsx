@@ -1,18 +1,18 @@
-// === Module 8254: ProfileBanner ===
+// === Module 8254: Banner ===
 
-// Module 8254 (ProfileBanner)
-import noopAll from "noop" /* 19 */;
-import int2hslRaw from "int2hslRaw" /* 1091 */;
-import preloadDefault from "preload" /* 5587 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { BANNER_HEIGHT } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8254 (Banner)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_6 = createCacheKey.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
-const result = require("set").fileFinishedImporting("modules/profile_customization/native/Banner.tsx");
+require = fn;
+const View = fn(17).View;
+const BANNER_HEIGHT = fn(1074).BANNER_HEIGHT;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/profile_customization/native/Banner.tsx");
 
 export default function ProfileBanner(bannerHeight) {
   ({ bannerSource, bannerSafeArea } = bannerHeight);
@@ -24,17 +24,16 @@ export default function ProfileBanner(bannerHeight) {
   if (bannerHeight === undefined) {
     bannerHeight = BANNER_HEIGHT;
   }
-  const tmp = callback();
-  let obj = { backgroundColor: int2hslRaw.int2hex(backgroundColor), height: bannerHeight + bannerSafeArea };
-  obj = { style: items, children: null };
-  items = [tmp.root, obj, style];
+  const tmp = closure_6();
+  let obj = { backgroundColor: utils_ColorUtils.int2hex(backgroundColor), height: bannerHeight + bannerSafeArea };
+  obj = { style: null, children: null };
+  const items = [tmp.root, obj, style];
+  obj.style = items;
   let tmp3Result = null;
   if (null != bannerSource) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.image;
-    obj[1] = bannerSource;
-    tmp3Result = tmp3(preloadDefault, obj);
+    obj = { style: tmp.image, source: bannerSource };
+    tmp3Result = tmp3(FastImageDefault, obj);
   }
-  obj[1] = tmp3Result;
-  return <View style={items}>{null}</View>;
+  obj.children = tmp3Result;
+  return <View style={null}>{null}</View>;
 };

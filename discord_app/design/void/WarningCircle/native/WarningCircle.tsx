@@ -1,13 +1,13 @@
 // === Module 14102: WarningCircle ===
 
 // Module 14102 (WarningCircle)
-import noopAll from "noop" /* 19 */;
 import inlineStyles from "inlineStyles" /* 8453 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/WarningCircle/native/WarningCircle.tsx");
 
 export default function WarningCircle(width) {
   let num = width.width;
@@ -22,7 +22,7 @@ export default function WarningCircle(width) {
   if (str === undefined) {
     str = "currentColor";
   }
-  const merged = Object.assign(width, Object.create(null));
+  const merged = Object.assign(width, Object.assign({ width: 0, height: 0, color: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.width = num;

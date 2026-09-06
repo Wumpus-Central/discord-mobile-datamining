@@ -1,18 +1,17 @@
-// === Module 1911: logger ===
+// === Module 1911: VoiceEngine ===
 
-// Module 1911 (logger)
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import constants2 from "constants" /* 1912 */;
+// Module 1911 (VoiceEngine)
+import logger_Logger from "logger/Logger" /* 4 */;
+import _mod17 from "module_17" /* 17 */;
+import VoiceEngineModule from "VoiceEngineModule" /* 1912 */;
+import size from "module_2" /* 2 */;
 
-let f25402 = require;
-let c1 = dependencyMap;
-const Platform = get_ActivityIndicator.Platform;
-const logger = new log.Logger("VoiceEngine");
+let global = dependencyMap;
+const Platform = _mod17.Platform;
+const logger = new logger_Logger.Logger("VoiceEngine");
 logger.enableNativeLogger(true);
-constants2.VoiceEngine.platform = "android";
-let VoiceEngine = constants2.VoiceEngine;
+VoiceEngineModule.VoiceEngine.platform = "android";
+let VoiceEngine = VoiceEngineModule.VoiceEngine;
 const constants = VoiceEngine.getConstants();
 let supportedFeatures;
 if (constants != null) {
@@ -21,19 +20,19 @@ if (constants != null) {
 if (supportedFeatures == null) {
   supportedFeatures = ["voice_sound_stop_loop", "voice_relative_sounds", "voice_legacy_subsystem", "voice_experimental_subsystem", "elevated_hook", "soundshare", "soundshare_loopback", "set_audio_device_by_id", "set_video_device_by_id", "loopback", "wumpus_video", "hybrid_video", "experiment_config", "remote_locus_network_control", "screen_previews", "window_previews", "audio_debug_state", "connection_replay", "simulcast_bugfix", "RTC_REGION_RANKING", "video_effects", "electron_video", "mediapipe", "fixed_keyframe_interval"];
 }
-constants2.VoiceEngine.supportsFeature = (arg0) => supportedFeatures.includes(arg0);
-let closure_4 = ["configureConnectionRetries", "getEncryptionModes", "setTransportOptions", "mergeUsers", "destroyUser", "setLocalPan", "setLocalVolume", "setLocalMute", "fastUdpReconnect", "setUdpEndpoint", "wasRemoteDisconnected", "setMinimumOutputDelay", "setSelfMute", "setSelfDeafen", "setNoInputThreshold", "setPTTActive", "setVideoBroadcast", "triggerOnVideoCallback", "getStats", "getFilteredStats", "setPingInterval", "setDesktopSource", "prepareSecureFramesTransition", "executeSecureFramesTransition", "prepareSecureFramesEpoch", "triggerOnSpeakingCallback"];
-if (null != constants2.VoiceEngine.consoleLog) {
-  const _module = log;
+VoiceEngineModule.VoiceEngine.supportsFeature = (arg0) => supportedFeatures.includes(arg0);
+const React4 = ["configureConnectionRetries", "getEncryptionModes", "setTransportOptions", "mergeUsers", "destroyUser", "setLocalPan", "setLocalVolume", "setLocalMute", "fastUdpReconnect", "setUdpEndpoint", "wasRemoteDisconnected", "setMinimumOutputDelay", "setSelfMute", "setSelfDeafen", "setNoInputThreshold", "setPTTActive", "setVideoBroadcast", "triggerOnVideoCallback", "getStats", "getFilteredStats", "setPingInterval", "setDesktopSource", "prepareSecureFramesTransition", "executeSecureFramesTransition", "prepareSecureFramesEpoch", "triggerOnSpeakingCallback"];
+if (null != VoiceEngineModule.VoiceEngine.consoleLog) {
+  const _module = logger_Logger;
   _module.setNativeLogFn((arg0, arg1, arg2) => {
-    const VoiceEngine = f25402(_null[2]).VoiceEngine;
+    const VoiceEngine = require("VoiceEngineModule").VoiceEngine;
     VoiceEngine.consoleLog(arg1, "[" + arg0 + "] " + arg2);
   });
 }
-if (null != constants2.VoiceEngine.getMLSSigningKeyB64) {
-  constants2.VoiceEngine.getMLSSigningKey = (arg0, arg1, arg2) => {
-    const callback = arg2;
-    const VoiceEngine = callback(_null[2]).VoiceEngine;
+if (null != VoiceEngineModule.VoiceEngine.getMLSSigningKeyB64) {
+  VoiceEngineModule.VoiceEngine.getMLSSigningKey = (arg0, arg1, arg2) => {
+    closure_0 = arg2;
+    const VoiceEngine = require("VoiceEngineModule").VoiceEngine;
     return VoiceEngine.getMLSSigningKeyB64(arg0, arg1, (arg0, arg1) => {
       let str = arg1;
       if (arg1 == null) {
@@ -91,7 +90,6 @@ class VoiceConnection {
       return items;
     });
     obj.setOnVideoCallback = function setOnVideoCallback(handleVideo) {
-      obj = handleVideo;
       if (null == handleVideo) {
         obj.setOnVideoCallback_(handleVideo);
       } else {
@@ -111,38 +109,41 @@ class VoiceConnection {
       const result = obj.triggerOnVideoCallback();
     };
     obj.getMLSKeyPackage = function getMLSKeyPackage(arg0) {
-      arg0.boundConnectionMethod("getMLSKeyPackageB64")((arg0) => {
-        callback(Buffer.from(arg0, "base64").buffer);
+      closure_0 = arg0;
+      obj.boundConnectionMethod("getMLSKeyPackageB64")((arg0) => {
+        closure_0(Buffer.from(arg0, "base64").buffer);
       });
     };
     obj.updateMLSExternalSender = function updateMLSExternalSender(arg0) {
       let str = Buffer.from(arg0);
       str = str.toString("base64");
-      closure_1_2.info("updateMLSExternalSender: " + str);
+      logger.info("updateMLSExternalSender: " + str);
       obj.boundConnectionMethod("updateMLSExternalSenderB64")(str);
     };
     obj.processMLSProposals = function processMLSProposals(arg0, arg1) {
+      closure_0 = arg1;
       let str = Buffer.from(arg0);
       str = str.toString("base64");
-      arg1.boundConnectionMethod("processMLSProposalsB64")(str, (arg0) => {
-        callback(Buffer.from(arg0, "base64").buffer);
+      obj.boundConnectionMethod("processMLSProposalsB64")(str, (arg0) => {
+        closure_0(Buffer.from(arg0, "base64").buffer);
       });
     };
-    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(g_v) {
+    obj.prepareMLSCommitTransition = function prepareMLSCommitTransition(g_v, arg1, arg2) {
       let str = Buffer.from(arg1);
       str = str.toString("base64");
       const result = obj.boundConnectionMethod("prepareMLSCommitTransitionB64");
       result(g_v, str, obj.wrapRosterCallback(arg2));
     };
-    obj.processMLSWelcome = function processMLSWelcome(g_v) {
+    obj.processMLSWelcome = function processMLSWelcome(g_v, arg1, arg2) {
       let str = Buffer.from(arg1);
       str = str.toString("base64");
       const result = obj.boundConnectionMethod("processMLSWelcomeB64");
       result(g_v, str, obj.wrapRosterCallback(arg2));
     };
     obj.getMLSPairwiseFingerprint = function getMLSPairwiseFingerprint(arg0, arg1, arg2) {
-      arg2.boundConnectionMethod("getMLSPairwiseFingerprintB64")(arg0, arg1, (arg0) => {
-        callback(Buffer.from(arg0, "base64").buffer);
+      closure_0 = arg2;
+      obj.boundConnectionMethod("getMLSPairwiseFingerprintB64")(arg0, arg1, (arg0) => {
+        closure_0(Buffer.from(arg0, "base64").buffer);
       });
     };
     obj.setOnMLSFailureCallback = obj.callbackSetter("mls-failure-callback", (arg0) => {
@@ -163,8 +164,8 @@ class VoiceConnection {
       const items = [stateUpdate];
       return items;
     });
-    item = closure_4.forEach((getMLSKeyPackageB64) => {
-      obj[getMLSKeyPackageB64] = obj.boundConnectionMethod(getMLSKeyPackageB64);
+    item = closure_4.forEach((item) => {
+      obj[item] = obj.boundConnectionMethod(item);
     });
     return obj;
   }
@@ -178,13 +179,12 @@ prototype["wrapRosterCallback"] = function wrapRosterCallback(arg0) {
       const _JSON = JSON;
       const parsed = JSON.parse(arg2);
       for (const key10010 in parsed) {
-        let tmp5 = key10010;
         let _Buffer = Buffer;
         obj[key10010] = Buffer.from(parsed[key10010], "base64").buffer;
         continue;
       }
     }
-    callback(arg0, arg1, obj);
+    closure_0(arg0, arg1, obj);
   };
 };
 prototype["destroy"] = function destroy() {
@@ -195,7 +195,7 @@ prototype["destroy"] = function destroy() {
   const subscriptions = this.subscriptions;
   const item = subscriptions.forEach((remove) => remove.remove());
   this.subscriptions.length = 0;
-  const VoiceEngine = f25402(_null[2]).VoiceEngine;
+  const VoiceEngine = require("VoiceEngineModule").VoiceEngine;
   const result = VoiceEngine.connectionInstanceDestroy(this.id, flag);
 };
 prototype["getId"] = function getId() {
@@ -204,10 +204,10 @@ prototype["getId"] = function getId() {
 prototype["boundConnectionMethod"] = function boundConnectionMethod(getMLSKeyPackageB64) {
   try {
     const self = this;
-    return f25402(_null[2]).VoiceEngine[(function connectionInstanceMethod(arr) {
+    return require("VoiceEngineModule").VoiceEngine[(function connectionInstanceMethod(arr) {
       const formatted = arr[0].toUpperCase();
       return "connectionInstance" + formatted + arr.slice(1);
-    })(0, getMLSKeyPackageB64)].bind(f25402(_null[2]).VoiceEngine, this.id);
+    })(0, getMLSKeyPackageB64)].bind(require("VoiceEngineModule").VoiceEngine, this.id);
   } catch (err) {
     const _HermesInternal = HermesInternal;
     logger.warn("VoiceConnection(...): " + tmp + " does not exist.");
@@ -218,14 +218,14 @@ prototype["boundConnectionMethod"] = function boundConnectionMethod(getMLSKeyPac
 };
 prototype["callbackSetter"] = function callbackSetter(arg0, arg1) {
   const self = this;
-  const _null = arg1;
-  const callback = null;
+  closure_1 = arg1;
+  closure_0 = null;
   const subscriptions = this.subscriptions;
-  const VoiceEngineEmitter = callback(_null[2]).VoiceEngineEmitter;
+  const VoiceEngineEmitter = require("VoiceEngineModule").VoiceEngineEmitter;
   subscriptions.push(VoiceEngineEmitter.addListener(arg0, (connectionId) => {
     if (tmp) {
       const items = [];
-      HermesBuiltin.arraySpread(callback(connectionId), 0);
+      HermesBuiltin.arraySpread(closure_1(connectionId), 0);
       HermesBuiltin.apply(items, undefined);
     }
   }));
@@ -235,289 +235,290 @@ prototype["callbackSetter"] = function callbackSetter(arg0, arg1) {
   };
 };
 VoiceConnection.nextId = 0;
-let closure_6 = constants2.VoiceEngine.createVoiceConnectionWithOptions;
-constants2.VoiceEngine.createVoiceConnectionWithOptions = (arg0, arg1, arg2) => {
+let closure_6 = VoiceEngineModule.VoiceEngine.createVoiceConnectionWithOptions;
+VoiceEngineModule.VoiceEngine.createVoiceConnectionWithOptions = (arg0, arg1, arg2) => {
   const obj = new VoiceConnection();
-  callback2(obj.getId(), arg0, arg1, arg2);
+  closure_6(obj.getId(), arg0, arg1, arg2);
   return obj;
 };
-let closure_7 = constants2.VoiceEngine.createOwnStreamConnectionWithOptions;
-constants2.VoiceEngine.createOwnStreamConnectionWithOptions = (arg0, arg1, arg2) => {
+let closure_7 = VoiceEngineModule.VoiceEngine.createOwnStreamConnectionWithOptions;
+VoiceEngineModule.VoiceEngine.createOwnStreamConnectionWithOptions = (arg0, arg1, arg2) => {
   const obj = new VoiceConnection();
-  callback3(obj.getId(), arg0, arg1, arg2);
+  closure_7(obj.getId(), arg0, arg1, arg2);
   return obj;
 };
-f25402 = (input) => {
+let closure_129_0 = (input) => {
   const items = [input.input];
   return items;
 };
-c1 = null;
-let VoiceEngineEmitter = constants2.VoiceEngineEmitter;
+let closure_129_1 = null;
+let VoiceEngineEmitter = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter.addListener("no-input-callback", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setNoInputCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setNoInputCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (arg0) => {
+let closure_130_0 = (arg0) => {
   const items = [, ];
   ({ level: arr[0], speaking: arr[1] } = arg0);
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter2 = constants2.VoiceEngineEmitter;
+let closure_130_1 = null;
+const VoiceEngineEmitter2 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter2.addListener("on-voice", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setOnVoiceCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setOnVoiceCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (muted) => {
+let closure_131_0 = (muted) => {
   const items = [muted.muted];
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter3 = constants2.VoiceEngineEmitter;
+let closure_131_1 = null;
+const VoiceEngineEmitter3 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter3.addListener("native-mute-state-changed", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setOnNativeMuteChangedCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setOnNativeMuteChangedCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (arg0) => {
+let closure_132_0 = (arg0) => {
   const items = [, , ];
   ({ inputDevices: arr[0], outputDevices: arr[1], videoInputDevices: arr[2] } = arg0);
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter4 = constants2.VoiceEngineEmitter;
+let closure_132_1 = null;
+const VoiceEngineEmitter4 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter4.addListener("device-changed", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setDeviceChangeCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setDeviceChangeCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (arg0) => {
+let closure_133_0 = (arg0) => {
   const items = [, ];
   ({ inputVolume: arr[0], outputVolume: arr[1] } = arg0);
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter5 = constants2.VoiceEngineEmitter;
+let closure_133_1 = null;
+const VoiceEngineEmitter5 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter5.addListener("volume-changed", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setVolumeChangeCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setVolumeChangeCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (arg0) => {
+let closure_134_0 = (arg0) => {
   const items = [, ];
   ({ streamId: arr[0], active: arr[1] } = arg0);
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter6 = constants2.VoiceEngineEmitter;
+let closure_134_1 = null;
+const VoiceEngineEmitter6 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter6.addListener("active-sinks-change", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setActiveSinksChangeCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setActiveSinksChangeCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = () => [];
-c1 = null;
-const VoiceEngineEmitter7 = constants2.VoiceEngineEmitter;
+let closure_135_0 = () => [];
+let closure_135_1 = null;
+const VoiceEngineEmitter7 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter7.addListener("on-broadcast-requested", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setBroadcastRequestCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setBroadcastRequestCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = () => [];
-c1 = null;
-const VoiceEngineEmitter8 = constants2.VoiceEngineEmitter;
+let closure_136_0 = () => [];
+let closure_136_1 = null;
+const VoiceEngineEmitter8 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter8.addListener("on-broadcast-finished", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setBroadcastFinishedCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setBroadcastFinishedCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (appBundleIdentifier) => {
+let closure_137_0 = (appBundleIdentifier) => {
   const items = [appBundleIdentifier.appBundleIdentifier];
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter9 = constants2.VoiceEngineEmitter;
+let closure_137_1 = null;
+const VoiceEngineEmitter9 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter9.addListener("on-broadcast-annotated", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setBroadcastAnnotatedCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setBroadcastAnnotatedCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = () => [];
-c1 = null;
-const VoiceEngineEmitter10 = constants2.VoiceEngineEmitter;
+let closure_138_0 = () => [];
+let closure_138_1 = null;
+const VoiceEngineEmitter10 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter10.addListener("on-broadcast-blocked", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setBroadcastBlockedCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setBroadcastBlockedCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (mode) => {
+let closure_139_0 = (mode) => {
   const items = [mode.mode];
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter11 = constants2.VoiceEngineEmitter;
+let closure_139_1 = null;
+const VoiceEngineEmitter11 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter11.addListener("system-microphone-mode-change", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setSystemMicrophoneModeChangeCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setSystemMicrophoneModeChangeCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (error) => {
+let closure_140_0 = (error) => {
   const items = [error.error];
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter12 = constants2.VoiceEngineEmitter;
+let closure_140_1 = null;
+const VoiceEngineEmitter12 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter12.addListener("voice-processing-error-callback", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setVoiceProcessingErrorCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setVoiceProcessingErrorCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-f25402 = (imgdata) => {
+let closure_141_0 = (imgdata) => {
   const items = [imgdata.imgdata];
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter13 = constants2.VoiceEngineEmitter;
+let closure_141_1 = null;
+const VoiceEngineEmitter13 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter13.addListener("on-broadcast-thumbnail", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
 const setAudioInputInitializationCallback = (arg0) => {
-  closure_1 = arg0;
+  global = arg0;
   return arg0;
 };
-constants2.VoiceEngine.setBroadcastThumbnailCallback = (arg0, arg1, arg2, arg3) => {
-  if (typeof setAudioInputInitializationCallback !== "function") {
-    HermesBuiltin.throwTypeError();
+VoiceEngineModule.VoiceEngine.setBroadcastThumbnailCallback = (arg0, arg1, arg2, arg3) => {
+  if (typeof setAudioInputInitializationCallback === "function") {
+    closure_136_1 = arg3;
+    const VoiceEngine = require("VoiceEngineModule").VoiceEngine;
+    const result = VoiceEngine.setBroadcastThumbnailParams(arg0, arg1, arg2);
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const _null = arg3;
-  const VoiceEngine = f25402(_null[2]).VoiceEngine;
-  const result = VoiceEngine.setBroadcastThumbnailParams(arg0, arg1, arg2);
 };
-f25402 = (arg0) => {
+let closure_142_0 = (arg0) => {
   const items = [arg0];
   return items;
 };
-c1 = null;
-const VoiceEngineEmitter14 = constants2.VoiceEngineEmitter;
+let closure_142_1 = null;
+const VoiceEngineEmitter14 = VoiceEngineModule.VoiceEngineEmitter;
 VoiceEngineEmitter14.addListener("audio-input-initialized", (arg0) => {
   let applyResult;
-  if (c1 != null) {
+  if (global != null) {
     const items = [];
-    HermesBuiltin.arraySpread(f25402(arg0), 0);
+    HermesBuiltin.arraySpread(require(arg0), 0);
     applyResult = HermesBuiltin.apply(items, undefined);
   }
   return applyResult;
 });
-constants2.VoiceEngine.setAudioInputInitializationCallback = (arg0) => {
-  closure_1 = arg0;
+VoiceEngineModule.VoiceEngine.setAudioInputInitializationCallback = (arg0) => {
+  global = arg0;
   return arg0;
 };
-const VoiceEngine2 = constants2.VoiceEngine;
+const VoiceEngine2 = VoiceEngineModule.VoiceEngine;
 VoiceEngine2.initializeEngine();
-let result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ios/VoiceEngine.tsx");
 
-export default constants2.VoiceEngine;
+export default VoiceEngineModule.VoiceEngine;

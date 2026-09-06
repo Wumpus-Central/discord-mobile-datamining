@@ -1,15 +1,15 @@
-// === Module 5059: items ===
+// === Module 5059: MemberVerificationConstants ===
 
-// Module 5059 (items)
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
-import set from "set" /* 2 */;
+// Module 5059 (MemberVerificationConstants)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+import size from "module_2" /* 2 */;
 
-const items = [{ field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION }];
-const items1 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TERMS];
-let set = new Set(items1);
-const items2 = [MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.MULTIPLE_CHOICE, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.TEXT_INPUT, MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.PARAGRAPH];
-const obj = { field_type: MAX_RESULTS_PER_PAGE.VerificationFormFieldTypes.VERIFICATION };
-const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
+const items = [{ field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION }];
+const items1 = [MemberVerificationTypes.VerificationFormFieldTypes.TERMS];
+const obj = { field_type: MemberVerificationTypes.VerificationFormFieldTypes.VERIFICATION };
+const items2 = [MemberVerificationTypes.VerificationFormFieldTypes.MULTIPLE_CHOICE, MemberVerificationTypes.VerificationFormFieldTypes.TEXT_INPUT, MemberVerificationTypes.VerificationFormFieldTypes.PARAGRAPH];
+const set = new Set(items1);
+const result = size.fileFinishedImporting("modules/guild_member_verification/MemberVerificationConstants.tsx");
 
 export const REQUIRED_FORM_FIELDS = items;
 export const AUTOMATIC_APPROVAL_FORM_FIELDS = set;

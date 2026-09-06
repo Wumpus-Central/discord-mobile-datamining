@@ -1,31 +1,32 @@
-// === Module 7258: useGuildEligibleForGuildProducts ===
+// === Module 7258: GuildProductsEligibility ===
 
-// Module 7258 (useGuildEligibleForGuildProducts)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 7258 (GuildProductsEligibility)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
 
 export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuildProducts(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [GuildStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = closure_1_2.getGuild(tmp);
+      const guild = GuildStore.getGuild(tmp);
       let tmp4 = null != guild;
       if (tmp4) {
         const features = guild.features;
-        let hasItem = features.has(closure_1_3.COMMUNITY);
+        let hasItem = features.has(GuildFeatures.COMMUNITY);
         if (!hasItem) {
           const features2 = guild.features;
           hasItem = features2.has(tmp5.GUILD_PRODUCTS);
         }
         tmp4 = hasItem;
-        tmp5 = closure_1_3;
+        tmp5 = GuildFeatures;
       }
       return tmp4;
     }
@@ -35,7 +36,7 @@ export const isGuildEligibleForGuildProducts = function isGuildEligibleForGuildP
   if (null == id) {
     return false;
   } else {
-    guild = guild.getGuild(id);
+    const guild = GuildStore.getGuild(id);
     let tmp3 = null != guild;
     if (tmp3) {
       const features = guild.features;

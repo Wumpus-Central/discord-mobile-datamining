@@ -1,13 +1,15 @@
-// === Module 5133: apexExperiment ===
+// === Module 5133: GameEventsOnPlayerExperiment ===
 
-// Module 5133 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 5133 (GameEventsOnPlayerExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-07-clips-game-events-on-player", defaultConfig: { enableGameEventsOnPlayer: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enableGameEventsOnPlayer: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-07-clips-game-events-on-player", defaultConfig: { enableGameEventsOnPlayer: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/clips/GameEventsOnPlayerExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/clips/GameEventsOnPlayerExperiment.tsx");
 
 export default apexExperiment;
 export const isGameEventsOnPlayerEnabled = function isGameEventsOnPlayerEnabled(getClipEventsTimeline) {

@@ -1,12 +1,12 @@
-// === Module 10268: useActionSheetHeight ===
+// === Module 10268: useActionSheetStartHeight ===
 
-// Module 10268 (useActionSheetHeight)
-import set from "set" /* 2 */;
+// Module 10268 (useActionSheetStartHeight)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7151 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_START_HEIGHT_RATIO;
-const result = set.fileFinishedImporting("modules/action_sheet/native/useActionSheetStartHeight.tsx");
+let closure_2 = ActionSheetConstants.ACTION_SHEET_START_HEIGHT_RATIO;
+const result = size.fileFinishedImporting("modules/action_sheet/native/useActionSheetStartHeight.tsx");
 
 export default function useActionSheetHeight() {
   return useWindowDimensionsDefault().height * closure_2;

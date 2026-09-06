@@ -1,12 +1,13 @@
-// === Module 8903: PX_4 ===
+// === Module 8903: ActionSheetDragHandleConstants ===
 
-// Module 8903 (PX_4)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 8903 (ActionSheetDragHandleConstants)
+import nativeDefault from "native" /* 576 */;
 
-const PX_4 = ThemesDefault.space.PX_4;
-const PX_8 = ThemesDefault.space.PX_8;
+const PX_4 = nativeDefault.space.PX_4;
+const PX_8 = nativeDefault.space.PX_8;
 const sum = 2 * PX_8 + PX_4;
-const result = require("set").fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandleConstants.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandleConstants.tsx");
 
 export const DRAG_HANDLE_BAR_HEIGHT = PX_4;
 export const DRAG_HANDLE_PADDING = PX_8;

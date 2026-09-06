@@ -1,9 +1,9 @@
-// === Module 14537: MediaPlaybackPanelModes ===
+// === Module 14537: MediaPlaybackPanelConstants ===
 
-// Module 14537 (MediaPlaybackPanelModes)
-import set from "set" /* 2 */;
+// Module 14537 (MediaPlaybackPanelConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
+const result = size.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
 
 export const MediaPlaybackPanelModes = { DISMISSED: "dismissed", PIP: "pip" };
 export const PLAYBACK_COMPLETION_DETECTION_TOLERANCE = 100;

@@ -1,21 +1,22 @@
 // === Module 14935: useTimeValue ===
 
 // Module 14935 (useTimeValue)
-import closure_0 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
 
 export default function useTimeValue(arg0) {
-  ({ initial: closure_0, defaultValue: closure_1 } = arg0);
-  return React.useState(() => {
-    if (null != closure_0) {
-      const obj = { hours: null, minutes: null };
-      ({ hours: obj[0], minutes: obj[1] } = closure_0);
-      let tmp2 = obj;
+  ({ initial: noop, defaultValue: closure_1 } = arg0);
+  return noop.useState(() => {
+    if (null != noop) {
+      const time = { hours: null, minutes: null };
+      ({ hours: obj.hours, minutes: obj.minutes } = noop);
+      let tmp2 = time;
     } else {
-      tmp2 = closure_1;
+      tmp2 = closure_1_1;
     }
     return tmp2;
   });
 };
-export const timeToMinutes = require("setsEqual").timeToMinutes;
+export const timeToMinutes = fn(10083).timeToMinutes;

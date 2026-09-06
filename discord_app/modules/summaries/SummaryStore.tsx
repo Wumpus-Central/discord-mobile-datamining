@@ -1,27 +1,29 @@
-// === Module 11345: handleQuickSwitcherUpdate ===
+// === Module 11345: SummaryStore ===
 
-// Module 11345 (handleQuickSwitcherUpdate)
-import applyDefault from "apply" /* 12 */;
+// Module 11345 (SummaryStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import canSeeChannelSummaries from "canSeeChannelSummaries" /* 11347 */;
-import closure_7 from "_slicedToArray" /* 32 */;
-import closure_8 from "getHash" /* 4476 */;
-import closure_9 from "handleConnectionOpen" /* 9834 */;
-import closure_10 from "ensureGuildLoaded" /* 1957 */;
-import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "generateOldThreadCutoff" /* 4575 */;
-import closure_13 from "handleConnectionOpen" /* 2011 */;
-import closure_14 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_15 from "mergeGuildAvatar" /* 1371 */;
-import { SUMMARY_POLL_INTERVAL } from "result" /* 11346 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import sortByMatchScore from "sortByMatchScore" /* 9835 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11347 */;
+import Summary from "Summary" /* 11348 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9834 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function handleQuickSwitcherUpdate() {
-  const results = props.getProps().results;
+  const results = QuickSwitcherStore.getProps().results;
   const found = results.filter((type) => {
-    let tmp = type.type === callback(table[10]).AutocompleterResultTypes.TEXT_CHANNEL;
+    let tmp = type.type === sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL;
     if (tmp) {
       tmp = 0 === type.record.type;
     }
@@ -29,13 +31,14 @@ function handleQuickSwitcherUpdate() {
   });
   closure_24 = found.map((record) => record.record.id);
 }
+const SUMMARY_POLL_INTERVAL = fn(11346).SUMMARY_POLL_INTERVAL;
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
-let closure_18 = {};
-let closure_19 = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
 let closure_20 = {};
-let closure_21 = [];
-let closure_22 = {};
-let closure_23 = { status: obj.OK, lastRequest: null, lastResponse: null };
+let items = [];
+let reduced = {};
+obj = { status: obj.OK, lastRequest: null, lastResponse: null };
 let closure_24 = [];
 let closure_25 = [];
 const PersistedStore = initializeDefault.PersistedStore;
@@ -43,7 +46,7 @@ class SummaryStore extends PersistedStore {
 }
 const prototype = SummaryStore.prototype;
 prototype["getState"] = function getState() {
-  return { shouldShowTopicsBar: closure_3 };
+  return { shouldShowTopicsBar };
 };
 prototype["initialize"] = function initialize(shouldShowTopicsBar) {
   let flag;
@@ -53,8 +56,9 @@ prototype["initialize"] = function initialize(shouldShowTopicsBar) {
   if (flag == null) {
     flag = true;
   }
-  this.waitFor(closure_10, closure_8, closure_11, closure_9, closure_12, closure_13, closure_14, closure_15);
-  const items = [closure_9];
+  closure_3 = flag;
+  this.waitFor(ChannelStore, ExperimentStore, GuildStore, QuickSwitcherStore, ReadStateStore, SelectedChannelStore, UserGuildSettingsStore, UserStore);
+  items = [QuickSwitcherStore];
   this.syncWith(items, handleQuickSwitcherUpdate);
 };
 prototype["allSummaries"] = function allSummaries() {
@@ -66,18 +70,16 @@ prototype["topSummaries"] = function topSummaries() {
     let tmp = people.people.length > 1;
     if (tmp) {
       const _Date = Date;
-      obj = callback(11);
       const date = new Date();
       const time = date.getTime();
-      tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(1090).Millis.HOUR;
-      const extractTimestampResult = callback(11).extractTimestamp(people.endId);
+      tmp = SnowflakeUtilsDefault.extractTimestamp(people.endId) > time - 5 * DurationsDefault.Millis.HOUR;
+      const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(people.endId);
     }
     return tmp;
   });
   return found.sort((endId, endId2) => {
-    obj = callback(11);
-    const extractTimestampResult = callback(11).extractTimestamp(endId2.endId);
-    return extractTimestampResult - callback(11).extractTimestamp(endId.endId);
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(endId2.endId);
+    return extractTimestampResult - SnowflakeUtilsDefault.extractTimestamp(endId.endId);
   });
 };
 prototype["summaries"] = function summaries(channelId) {
@@ -98,19 +100,19 @@ prototype["findSummary"] = function findSummary(channelId, summaryId) {
   }
   return found;
 };
-prototype["selectedSummary"] = function selectedSummary(id) {
+prototype["selectedSummary"] = function selectedSummary(channel_id) {
   let findSummaryResult = null;
-  if (null != closure_6) {
+  if (null != obj) {
     findSummaryResult = null;
-    if (closure_6.channelId === id) {
+    if (obj.channelId === channel_id) {
       findSummaryResult = null;
-      if (null != closure_6.summaryId) {
+      if (null != obj.summaryId) {
         let summaryId;
         const self = this;
-        if (closure_6 != null) {
-          summaryId = closure_6.summaryId;
+        if (obj != null) {
+          summaryId = obj.summaryId;
         }
-        findSummaryResult = this.findSummary(id, summaryId);
+        findSummaryResult = this.findSummary(channel_id, summaryId);
       }
     }
   }
@@ -119,7 +121,7 @@ prototype["selectedSummary"] = function selectedSummary(id) {
 prototype["summaryFeedback"] = function summaryFeedback(arg0) {
   let tmp = null;
   if (null != arg0) {
-    tmp = table[arg0.id];
+    tmp = closure_20[arg0.id];
   }
   return tmp;
 };
@@ -143,7 +145,7 @@ prototype["status"] = function status(arg0) {
   return dependencyMap3[arg0];
 };
 prototype["shouldFetch"] = function shouldFetch(arg0, arg1) {
-  channel = channel.getChannel(arg0);
+  const channel = ChannelStore.getChannel(arg0);
   if (obj.canSeeChannelSummaries(channel)) {
     if (null != arg1) {
       let num3;
@@ -186,25 +188,25 @@ prototype["shouldFetch"] = function shouldFetch(arg0, arg1) {
   } else {
     return false;
   }
-  obj = canSeeChannelSummaries;
+  obj = ChannelSummariesExperiment;
 };
 prototype["channelAffinities"] = function channelAffinities() {
-  return closure_21;
+  return items;
 };
 prototype["channelAffinitiesById"] = function channelAffinitiesById() {
-  return closure_22;
+  return reduced;
 };
 prototype["channelAffinitiesStatus"] = function channelAffinitiesStatus() {
-  return closure_23;
+  return obj;
 };
 prototype["shouldFetchChannelAffinities"] = function shouldFetchChannelAffinities() {
-  let tmp = closure_23.status !== obj.FETCHING;
+  let tmp = obj.status !== obj.FETCHING;
   if (tmp) {
-    let tmp4 = null != closure_23.lastResponse;
+    let tmp4 = null != obj.lastResponse;
     if (tmp4) {
       const _Date = Date;
-      const diff = Date.now() - closure_23.lastResponse;
-      tmp4 = diff < 30 * setDefault.Millis.SECOND;
+      const diff = Date.now() - obj.lastResponse;
+      tmp4 = diff < 30 * DurationsDefault.Millis.SECOND;
     }
     tmp = !tmp4;
   }
@@ -216,37 +218,37 @@ prototype["defaultChannelIds"] = function defaultChannelIds(numChannels) {
   if (num === undefined) {
     num = 25;
   }
-  const items = [];
+  items = [];
   let combined = items;
   if (withQuickSwitcher) {
     combined = items.concat(closure_24);
   }
   let combined1 = combined;
   if (withChannelAffinities) {
-    combined1 = combined.concat(closure_21.map((channel_id) => channel_id.channel_id));
+    combined1 = combined.concat(items.map((channel_id) => channel_id.channel_id));
   }
   let found = combined1;
   if (withUnreads) {
-    found = combined1.filter((id) => {
-      const channel = store.getChannel(id);
+    found = combined1.filter((item) => {
+      const channel = ChannelStore.getChannel(item);
       let hasUnreadResult = null != channel;
       if (hasUnreadResult) {
-        hasUnreadResult = !channelMuted.isChannelMuted(channel.guild_id, id);
+        hasUnreadResult = !channelMuted.isChannelMuted(channel.guild_id, item);
       }
       if (hasUnreadResult) {
-        hasUnreadResult = closure_12.hasUnread(id);
+        hasUnreadResult = ReadStateStore.hasUnread(item);
       }
       return hasUnreadResult;
     });
   }
-  const found1 = found.filter((arg0) => {
-    const channel = store.getChannel(arg0);
-    return callback(table[14]).canSeeChannelSummaries(channel, false, false);
+  const found1 = found.filter((item) => {
+    const channel = ChannelStore.getChannel(item);
+    return ChannelSummariesExperiment.canSeeChannelSummaries(channel, false, false);
   });
   return found1.slice(0, num);
 };
 prototype["visibleSummaryIndex"] = function visibleSummaryIndex() {
-  return closure_5;
+  return findIndexResult;
 };
 SummaryStore.persistKey = "SummaryStore";
 obj = {
@@ -255,11 +257,8 @@ obj = {
   },
   CHANNEL_SELECT(channelId) {
     channelId = undefined;
-    if (c6 != null) {
-      channelId = c6.channelId;
-    }
-    if (channelId !== channelId.channelId) {
-      c6 = null;
+    if (obj != null) {
+      channelId = obj.channelId;
     }
   },
   TOGGLE_TOPICS_BAR() {
@@ -272,15 +271,15 @@ obj = {
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        obj = summaryFromServer(11348);
+        obj = Summary;
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
-        let items = dependencyMap2[channelId];
+        items = dependencyMap2[channelId];
         if (items == null) {
           items = [];
         }
         const items1 = [];
         HermesBuiltin.arraySpread(items, 0);
-        let findIndexResult = items1.findIndex((id) => {
+        findIndexResult = items1.findIndex((id) => {
           id = undefined;
           if (summaryFromServer != null) {
             id = summaryFromServer.id;
@@ -323,25 +322,25 @@ obj = {
   RECEIVE_CHANNEL_SUMMARIES(error) {
     ({ summaries, channelId } = error);
     error = error.error;
-    const found = summaries.filter((arg0) => Object.keys(arg0).length > 0);
-    const mapped = found.map((summary) => channelId(closure_1_2[16]).createSummaryFromServer(summary, channelId));
-    if (null != closure_6) {
-      if (closure_6.channelId === channelId) {
+    const found = summaries.filter((item) => Object.keys(item).length > 0);
+    const mapped = found.map((item) => Summary.createSummaryFromServer(item, channelId));
+    if (null != obj) {
+      if (obj.channelId === channelId) {
         if (!mapped.some((id) => {
           let summaryId;
-          if (closure_6 != null) {
-            summaryId = closure_6.summaryId;
+          if (obj != null) {
+            summaryId = obj.summaryId;
           }
           return id.id === summaryId;
         })) {
-          let items = dependencyMap2[channelId];
+          items = dependencyMap2[channelId];
           if (items == null) {
             items = [];
           }
           const found1 = items.find((id) => {
             let summaryId;
-            if (closure_6 != null) {
-              summaryId = closure_6.summaryId;
+            if (obj != null) {
+              summaryId = obj.summaryId;
             }
             return id.id === summaryId;
           });
@@ -352,7 +351,7 @@ obj = {
       }
     }
     obj = channelId(12);
-    dependencyMap2[channelId] = obj.sortBy(mapped, (startId) => callback(table[12]).extractTimestamp(startId.startId)).reverse();
+    dependencyMap2[channelId] = obj.sortBy(mapped, (startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId)).reverse();
     obj = {};
     const merged = Object.assign(dependencyMap3[channelId]);
     obj.fetching = false;
@@ -396,43 +395,42 @@ obj = {
     let tmp3 = null;
     if (null != channelId.channelId) {
       obj = { channelId: null, summaryId: null };
-      ({ channelId: obj[0], summaryId } = channelId);
+      ({ channelId: obj.channelId, summaryId } = channelId);
       if (summaryId == null) {
         summaryId = null;
       }
-      obj[1] = summaryId;
+      obj.summaryId = summaryId;
       tmp3 = obj;
     }
     obj = tmp3;
     if (null != tmp3) {
       if (obj.channelId === channelId.channelId) {
         if (null != obj.summaryId) {
-          let findIndexResult;
+          findIndexResult = undefined;
           if (dependencyMap2[obj.channelId] != null) {
             findIndexResult = obj2.findIndex((id) => {
-              let summaryId;
-              if (obj != null) {
-                summaryId = obj.summaryId;
+              summaryId = undefined;
+              if (summaryId != null) {
+                summaryId = summaryId.summaryId;
               }
               return id.id === summaryId;
             });
           }
-          closure_5 = findIndexResult;
         }
       }
     }
   },
   UPDATE_VISIBLE_MESSAGES(arg0) {
     closure_0 = arg0;
-    channelId = channelId.getChannelId();
+    const channelId = SelectedChannelStore.getChannelId();
     if (null != channelId) {
-      if (null != closure_4) {
-        if (closure_4.channelId === channelId) {
-          if (null != closure_4.summaryId) {
-            let findIndexResult;
-            if (dependencyMap2[closure_4.channelId] != null) {
+      if (null != obj) {
+        if (obj.channelId === channelId) {
+          if (null != obj.summaryId) {
+            findIndexResult = undefined;
+            if (dependencyMap2[obj.channelId] != null) {
               findIndexResult = obj2.findIndex((id) => {
-                let summaryId;
+                summaryId = undefined;
                 if (summaryId != null) {
                   summaryId = summaryId.summaryId;
                 }
@@ -479,13 +477,12 @@ obj = {
         tmp3 = channelId.summaryId !== summaryId;
       }
       if (tmp3) {
-        obj = { channelId: null, summaryId: null };
-        obj[0] = channelId;
+        obj = { channelId, summaryId: null };
         let summaryId1 = channelId.summaryId;
         if (summaryId1 == null) {
           summaryId1 = null;
         }
-        obj[1] = summaryId1;
+        obj.summaryId = summaryId1;
       }
       tmp = tmp3;
     }
@@ -509,8 +506,8 @@ obj = {
   RECEIVE_CHANNEL_AFFINITIES(affinities) {
     affinities = affinities.affinities;
     if (null != affinities.error) {
-      let items = [];
-      let reduced = {};
+      items = [];
+      reduced = {};
       obj = {};
       const merged = Object.assign(obj);
       obj.status = obj.ERROR;
@@ -523,9 +520,9 @@ obj = {
       }
       reduced = undefined;
       if (affinities != null) {
-        reduced = affinities.reduce((arg0, channel_id) => {
-          arg0[channel_id.channel_id] = channel_id.affinity;
-          return arg0;
+        reduced = affinities.reduce((acc, channel_id) => {
+          acc[channel_id.channel_id] = channel_id.affinity;
+          return acc;
         }, {});
       }
       if (reduced == null) {
@@ -540,18 +537,18 @@ obj = {
   },
   REQUEST_CHANNEL_SUMMARIES_BULK(arg0) {
     ({ channelIds, requestedAt: require } = arg0);
-    const reduced = channelIds.reduce((arg0, arg1) => {
-      obj = obj[arg1];
+    reduced = channelIds.reduce((acc, item) => {
+      obj = closure_19[item];
       if (obj == null) {
         obj = {};
       }
       obj = {};
       const merged = Object.assign(obj);
       obj.fetching = true;
-      obj.lastRequestedAt = closure_0;
+      obj.lastRequestedAt = lastRequestedAt;
       obj.error = undefined;
-      arg0[arg1] = obj;
-      return arg0;
+      acc[item] = obj;
+      return acc;
     }, {});
     obj = {};
     let merged = Object.assign(obj);
@@ -560,34 +557,32 @@ obj = {
   RECEIVE_CHANNEL_SUMMARIES_BULK(requestArgs) {
     ({ receivedAt: require, error: importDefault } = requestArgs);
     const channelIds = requestArgs.requestArgs.channelIds;
-    dependencyMap = undefined;
-    obj = applyDefault;
-    dependencyMap = obj.toPairs(requestArgs.summaries).reduce((arg0, arg1) => {
-      const tmp = callback2(arg1, 2);
+    obj = _modDef12;
+    dependencyMap = obj.toPairs(requestArgs.summaries).reduce((acc, item) => {
+      const tmp = closure_7(item, 2);
       const first = tmp[0];
-      const arr = tmp[1];
-      obj = callback(12);
-      const chainResult = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first)));
-      const sortByResult = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId));
-      const reversed = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId)).takeRight(75).reverse();
-      const takeRightResult = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId)).takeRight(75);
-      arg0[first] = reversed.filter((arg0) => Object.keys(arg0).length > 0).value();
-      return arg0;
+      obj = error(12);
+      const chainResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11348).createSummaryFromServer(item, first)));
+      const sortByResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11348).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId));
+      const reversed = error(12).chain(tmp[1].map((item) => lastReceivedAt(11348).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75).reverse();
+      const takeRightResult = error(12).chain(tmp[1].map((item) => lastReceivedAt(11348).createSummaryFromServer(item, first))).sortBy((startId) => error(11).extractTimestamp(startId.startId)).takeRight(75);
+      acc[first] = reversed.filter((item) => Object.keys(item).length > 0).value();
+      return acc;
     }, {});
-    const reduced = channelIds.reduce((summariesByChannel) => {
-      obj = obj[arg1];
+    reduced = channelIds.reduce((summariesByChannel, item) => {
+      obj = closure_19[item];
       if (obj == null) {
         obj = {};
       }
-      if (null != dependencyMap[arg1]) {
-        summariesByChannel.summariesByChannel[arg1] = tmp;
+      if (null != dependencyMap[item]) {
+        summariesByChannel.summariesByChannel[item] = tmp;
       }
       obj = {};
       const merged = Object.assign(obj);
       obj.fetching = false;
-      obj.error = closure_1;
-      obj.lastReceivedAt = closure_0;
-      summariesByChannel.summaryFetchStatusByChannel[arg1] = obj;
+      obj.error = error;
+      obj.lastReceivedAt = lastReceivedAt;
+      summariesByChannel.summaryFetchStatusByChannel[item] = obj;
       return summariesByChannel;
     }, { summariesByChannel: {}, summaryFetchStatusByChannel: {} });
     obj = {};
@@ -600,25 +595,24 @@ obj = {
   CONVERSATION_SUMMARY_UPDATE(channel_id) {
     channel_id = channel_id.channel_id;
     const timestamp = Date.now();
-    obj = applyDefault;
+    obj = _modDef12;
     const chainResult = obj.chain(channel_id.summaries);
-    const tmp2 = importDefault;
-    const found = obj.chain(channel_id.summaries).sortBy((start_id) => callback(11).extractTimestamp(start_id.start_id)).filter((arg0) => Object.keys(arg0).length > 0);
-    const mapped = found.map((summary) => channel_id(closure_1_2[16]).createSummaryFromServer(summary, channel_id));
-    const sortByResult = obj.chain(channel_id.summaries).sortBy((start_id) => callback(11).extractTimestamp(start_id.start_id));
-    let items = dependencyMap2[channel_id];
+    const found = obj.chain(channel_id.summaries).sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id)).filter((item) => Object.keys(item).length > 0);
+    const mapped = found.map((item) => Summary.createSummaryFromServer(item, channel_id));
+    const sortByResult = obj.chain(channel_id.summaries).sortBy((start_id) => SnowflakeUtilsDefault.extractTimestamp(start_id.start_id));
+    items = dependencyMap2[channel_id];
     const iter = mapped.reverse();
     if (items == null) {
       items = [];
     }
     const valueResult = mapped.reverse().value();
-    const tmp2Result = applyDefault;
-    const combined = applyDefault.chain(valueResult).concat(items);
-    const chainResult1 = applyDefault.chain(valueResult);
-    const sortByResult1 = combined.sortBy((startId) => callback(11).extractTimestamp(startId.startId));
-    const takeRightResult = combined.sortBy((startId) => callback(11).extractTimestamp(startId.startId)).takeRight(75);
-    const uniqByResult = combined.sortBy((startId) => callback(11).extractTimestamp(startId.startId)).takeRight(75).uniqBy("id");
-    dependencyMap2[channel_id] = combined.sortBy((startId) => callback(11).extractTimestamp(startId.startId)).takeRight(75).uniqBy("id").reverse().value();
+    const tmp2Result = _modDef12;
+    const combined = _modDef12.chain(valueResult).concat(items);
+    const chainResult1 = _modDef12.chain(valueResult);
+    const sortByResult1 = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId));
+    const takeRightResult = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId)).takeRight(75);
+    const uniqByResult = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId)).takeRight(75).uniqBy("id");
+    dependencyMap2[channel_id] = combined.sortBy((startId) => SnowflakeUtilsDefault.extractTimestamp(startId.startId)).takeRight(75).uniqBy("id").reverse().value();
     obj = {};
     const merged = Object.assign(dependencyMap3[channel_id]);
     obj.error = undefined;
@@ -639,18 +633,18 @@ obj = {
   },
   DELETE_SUMMARY(summary) {
     const channelId = summary.summary.channelId;
-    let items = dependencyMap2[channelId];
+    items = dependencyMap2[channelId];
     if (items == null) {
       items = [];
     }
     const index = items.indexOf(summary.summary);
     if (-1 !== index) {
       dependencyMap2[channelId].splice(index, 1);
-      const arr2 = dependencyMap2[channelId];
     }
   }
 };
-const summaryStore = new SummaryStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/summaries/SummaryStore.tsx");
+const summaryStore = new SummaryStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/summaries/SummaryStore.tsx");
 
 export default summaryStore;

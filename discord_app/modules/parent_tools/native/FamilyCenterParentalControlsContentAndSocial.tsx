@@ -1,48 +1,48 @@
 // === Module 14930: FamilyCenterParentalControlsContentAndSocial ===
 
 // Module 14930 (FamilyCenterParentalControlsContentAndSocial)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import combinedDefault from "combined" /* 2024 */;
-import createToggle from "createToggle" /* 11468 */;
-import _modDef14689 from "module_14689" /* 14689 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { jsx } from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingLayoutDefault from "SettingLayout" /* 14689 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
+require = fn;
+const View = fn(17).View;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
 
 export default function FamilyCenterParentalControlsContentAndSocial() {
-  let obj = createToggle;
-  obj = { sections: null };
-  obj = { settings: items, subLabel: null };
-  items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
-  const intl = getSystemLocale.intl;
-  obj1 = { learnMoreLink: null };
-  let obj4 = combinedDefault;
-  obj1[0] = obj4.getArticleURL(HelpdeskArticles.EXPLICIT_MEDIA_REDACTION);
-  obj[1] = intl.format(getSystemLocale.t.dliU4j, obj1);
+  let obj = { sections: null };
+  obj = { settings: null, subLabel: null };
+  const items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
+  obj.settings = items;
+  const intl = util.intl;
+  const obj1 = { learnMoreLink: null };
+  let obj4 = HelpdeskUtilsDefault;
+  obj1.learnMoreLink = obj4.getArticleURL(HelpdeskArticles.EXPLICIT_MEDIA_REDACTION);
+  obj.subLabel = intl.format(util.t.dliU4j, obj1);
   const items1 = [obj, , ];
   const obj2 = { label: null, settings: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[0] = intl2.string(getSystemLocale.t.MeYuqs);
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.MeYuqs);
   const items2 = [, ];
   ({ PARENTAL_CONTROLS_DIRECT_MESSAGES: arr3[0], PARENTAL_CONTROLS_MESSAGE_REQUESTS: arr3[1] } = MobileUserSettings);
-  obj2[1] = items2;
+  obj2.settings = items2;
   items1[1] = obj2;
   const obj3 = { label: null, settings: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t.XlGG9c);
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.XlGG9c);
   const items3 = [, , ];
   ({ PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE: arr4[0], PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS: arr4[1], PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS: arr4[2] } = MobileUserSettings);
-  obj3[1] = items3;
+  obj3.settings = items3;
   items1[2] = obj3;
-  obj[0] = items1;
+  obj.sections = items1;
   obj4 = { children: null };
   const list = obj.createList(obj);
-  obj4[0] = jsx(_modDef14689, { node: list });
+  obj4.children = jsx(SettingLayoutDefault, { node: list });
   return <View>{null}</View>;
 };

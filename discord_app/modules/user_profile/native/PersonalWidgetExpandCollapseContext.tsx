@@ -1,38 +1,33 @@
-// === Module 8659: PersonalWidgetExpandCollapseProvider ===
+// === Module 8659: PersonalWidgetExpandCollapseContext ===
 
-// Module 8659 (PersonalWidgetExpandCollapseProvider)
-import closure_0 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8659 (PersonalWidgetExpandCollapseContext)
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let context = importAllResult.createContext({
+const jsx = fn(21).jsx;
+let redux = noop.createContext({
   isAnyFieldClipped: false,
   isExpanded: false,
-  setAnyFieldClipped(id, arg1) {
+  setAnyFieldClipped() {
 
   },
   setIsExpanded() {
 
   }
 });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/PersonalWidgetExpandCollapseContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/PersonalWidgetExpandCollapseContext.tsx");
 
 export const PersonalWidgetExpandCollapseProvider = function PersonalWidgetExpandCollapseProvider(children) {
-  let first;
-  importAllResult = undefined;
-  let first1;
-  let redux;
-  let first2;
-  let callback;
-  const tmp = first(importAllResult.useState(false), 2);
-  first = tmp[0];
-  importAllResult = tmp[1];
-  const tmp3 = first(importAllResult.useState(false), 2);
-  first1 = tmp3[0];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  const isExpanded = tmp[0];
+  const setIsExpanded = tmp[1];
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
+  const first1 = tmp3[0];
   redux = tmp3[1];
-  first2 = first(importAllResult.useState(() => new Set()), 1)[0];
+  const first2 = _slicedToArray(noop.useState(() => new Set()), 1)[0];
   const items = [first2];
-  callback = importAllResult.useCallback((arg0, arg1) => {
+  const setAnyFieldClipped = noop.useCallback((arg0, arg1) => {
     if (arg1) {
       obj.add(arg0);
       let tmp2 = obj;
@@ -40,31 +35,32 @@ export const PersonalWidgetExpandCollapseProvider = function PersonalWidgetExpan
       obj.delete(arg0);
       tmp2 = obj;
     }
-    callback(tmp2.size > 0);
+    closure_3(tmp2.size > 0);
   }, items);
-  const items1 = [first, first1, callback];
-  return first1(redux.Provider, { value: importAllResult.useMemo(() => ({ isExpanded: first, setIsExpanded: closure_1, isAnyFieldClipped: first1, setAnyFieldClipped: callback }), items1), children: children.children });
+  const items1 = [isExpanded, first1, setAnyFieldClipped];
+  return <redux.Provider value={noop.useMemo(() => ({ isExpanded, setIsExpanded, isAnyFieldClipped: first1, setAnyFieldClipped }), items1)}>{arg0.children}</redux.Provider>;
 };
 export const usePersonalWidgetExpandCollapse = function usePersonalWidgetExpandCollapse() {
-  return importAllResult.useContext(closure_3);
+  return noop.useContext(closure_3);
 };
 export const usePersonalWidgetFieldClamp = function usePersonalWidgetFieldClamp(maxLines, children) {
-  let callback = maxLines;
-  const context = importAllResult.useContext(id);
+  closure_0 = maxLines;
+  closure_1 = children;
+  const context = noop.useContext(closure_3);
   const setAnyFieldClipped = context.setAnyFieldClipped;
-  id = importAllResult.useId();
-  const tmp3 = callback(children.useState(null), 2);
+  const id = noop.useId();
+  const tmp3 = _slicedToArray(noop.useState(null), 2);
   const first = tmp3[0];
   closure_5 = tmp3[1];
   const items = [first, children, id, maxLines, setAnyFieldClipped];
   const items1 = [id, setAnyFieldClipped];
-  callback = importAllResult.useCallback((nativeEvent) => {
+  const callback = noop.useCallback((nativeEvent) => {
     if (first !== closure_1) {
-      callback(tmp);
+      closure_5(tmp);
       setAnyFieldClipped(id, nativeEvent.nativeEvent.lines.length > closure_0);
     }
   }, items);
-  const effect = importAllResult.useEffect(() => () => callback(closure_3, false), items1);
+  const effect = noop.useEffect(() => () => setAnyFieldClipped(id, false), items1);
   const obj = { onTextLayout: callback, lineClamp: null };
   let tmp7;
   if (first === children) {
@@ -72,6 +68,6 @@ export const usePersonalWidgetFieldClamp = function usePersonalWidgetFieldClamp(
       tmp7 = maxLines;
     }
   }
-  obj[1] = tmp7;
+  obj.lineClamp = tmp7;
   return obj;
 };

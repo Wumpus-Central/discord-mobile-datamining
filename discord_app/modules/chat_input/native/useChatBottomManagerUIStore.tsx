@@ -1,30 +1,32 @@
-// === Module 9485: updateChatInputContainerHeight ===
+// === Module 9485: useChatBottomManagerUIStore ===
 
-// Module 9485 (updateChatInputContainerHeight)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 9485 (useChatBottomManagerUIStore)
+import Storage3 from "Storage" /* 510 */;
+import ChatInputUtils from "ChatInputUtils" /* 4425 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
 let chatInputContainerHeight = "chatInputContainerHeight";
-let obj = keys.create(() => {
+let obj = module_560.create(() => {
   obj = { chatInputContainerHeight: new Map(), showingAutoComplete: null, showJumpToPresentButtonChannelId: null, isAtBottom: null, smallSuggestionBarHeight: null };
   const map = new Map();
-  obj[1] = new Map();
+  obj.showingAutoComplete = new Map();
   map1 = new Map();
-  obj[2] = new Map();
+  obj.showJumpToPresentButtonChannelId = new Map();
   const map2 = new Map();
-  obj[3] = new Map();
+  obj.isAtBottom = new Map();
   const map3 = new Map();
-  obj[4] = new Map();
+  obj.smallSuggestionBarHeight = new Map();
   return obj;
 });
-let result = set.fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
+let result = size.fileFinishedImporting("modules/chat_input/native/useChatBottomManagerUIStore.tsx");
 
 export default obj;
-export const updateChatInputContainerHeight = function updateChatInputContainerHeight(num) {
-  const _require = num;
-  dependencyMap = arg1;
+export const updateChatInputContainerHeight = function updateChatInputContainerHeight(num, arg1) {
+  closure_0 = num;
+  closure_1 = arg1;
   if (typeof num === "number") {
-    const Storage = _require(510).Storage;
+    const Storage = Storage3.Storage;
     let result = Storage.set(chatInputContainerHeight, arg1);
   }
   obj.setState((chatInputContainerHeight) => {
@@ -60,10 +62,10 @@ export const useChatInputContainerHeight = function useChatInputContainerHeight(
   closure_0 = arg0;
   return obj((chatInputContainerHeight) => {
     chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
-    let value = chatInputContainerHeight.get(callback);
+    value = chatInputContainerHeight.get(closure_0);
     if (value == null) {
-      const Storage = callback(closure_1_1[0]).Storage;
-      let num2 = Storage.get(closure_1_2, 0);
+      const Storage = Storage3.Storage;
+      let num2 = Storage.get(chatInputContainerHeight, 0);
       if (num2 == null) {
         num2 = 0;
       }
@@ -83,8 +85,7 @@ export const updateSmallSuggestionBarHeight = function updateSmallSuggestionBarH
       const _Map = Map;
       const map = new Map(smallSuggestionBarHeight.smallSuggestionBarHeight);
       const result = map.set(tmp, tmp2);
-      obj = { smallSuggestionBarHeight: null };
-      obj[0] = map;
+      obj = { smallSuggestionBarHeight: map };
       return obj;
     }
     tmp = closure_0;
@@ -123,8 +124,7 @@ export const updateIsAtBottom = function updateIsAtBottom(arg0, arg1) {
       const _Map = Map;
       const map = new Map(isAtBottom.isAtBottom);
       const result = map.set(tmp, tmp2);
-      obj = { isAtBottom: null };
-      obj[0] = map;
+      obj = { isAtBottom: map };
       return obj;
     }
     tmp = closure_0;
@@ -143,20 +143,20 @@ export const useChatIsAtBottom = function useChatIsAtBottom(arg0) {
 };
 export const useBestActiveChatInputContainerHeight = function useBestActiveChatInputContainerHeight() {
   return obj((chatInputContainerHeight) => {
-    const highestActiveScreenIndex = callback(table[2]).getHighestActiveScreenIndex();
+    const highestActiveScreenIndex = ChatInputUtils.getHighestActiveScreenIndex();
     if (null == highestActiveScreenIndex) {
       const Storage2 = tmp(tmp2[0]).Storage;
-      let num4 = Storage2.get(closure_2, 0);
+      let num4 = Storage2.get(closure_1_2, 0);
       if (num4 == null) {
         num4 = 0;
       }
-      let value = num4;
+      value = num4;
     } else {
       chatInputContainerHeight = chatInputContainerHeight.chatInputContainerHeight;
       value = chatInputContainerHeight.get(highestActiveScreenIndex);
       if (value == null) {
         const Storage = tmp(tmp2[0]).Storage;
-        let num2 = Storage.get(closure_2, 0);
+        let num2 = Storage.get(closure_1_2, 0);
         if (num2 == null) {
           num2 = 0;
         }

@@ -1,13 +1,13 @@
 // === Module 5416: canJoinVoiceChannel ===
 
 // Module 5416 (canJoinVoiceChannel)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
+import Constants from "Constants" /* 1074 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import size from "module_2" /* 2 */;
 
-const isPrivate = createChannelRecord.isPrivate;
-const BasicPermissions = ME.BasicPermissions;
-const result = set.fileFinishedImporting("modules/channel/canJoinVoiceChannel.tsx");
+const isPrivate = ChannelRecord.isPrivate;
+const BasicPermissions = Constants.BasicPermissions;
+const result = size.fileFinishedImporting("modules/channel/canJoinVoiceChannel.tsx");
 
 export default function canJoinVoiceChannel(type, canBasicChannel) {
   let canBasicChannelResult = isPrivate(type.type);

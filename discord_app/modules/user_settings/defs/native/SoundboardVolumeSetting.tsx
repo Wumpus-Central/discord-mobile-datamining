@@ -1,40 +1,27 @@
-// === Module 15253: volumeSlider ===
+// === Module 15253: SoundboardVolumeSetting ===
 
-// Module 15253 (volumeSlider)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import _fetchDefaultSoundsFromApi2 from "_fetchDefaultSoundsFromApi2" /* 7338 */;
-import hasPermissionToPlaySound from "hasPermissionToPlaySound" /* 7344 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15253 (SoundboardVolumeSetting)
+import util from "util" /* 1114 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7338 */;
+import SoundboardUtils from "SoundboardUtils" /* 7344 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const volumeSlider = createToggle.createVolumeSlider({
+const volumeSlider = SettingBuilders.createVolumeSlider({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.kbFsAD);
+    const intl = util.intl;
+    return intl.string(util.t.kbFsAD);
   },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
+  parent: SettingsConstants.MobileUserSettings.VOICE,
   maximum: 100,
-  useValue: hasPermissionToPlaySound.getAmplitudinalSoundboardVolume,
+  useValue: SoundboardUtils.getAmplitudinalSoundboardVolume,
   onValueChange(volume) {
-    const items = [QUICK_SWITCHERDefault.USER_SETTINGS];
-    return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
+    const items = [AnalyticsLocationDefault.USER_SETTINGS];
+    return SoundboardActionCreators.updateUserSoundboardVolume(volume, items);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.kbFsAD);
-  },
-  parent: MobileUserSettings.MobileUserSettings.VOICE,
-  maximum: 100,
-  useValue: hasPermissionToPlaySound.getAmplitudinalSoundboardVolume,
-  onValueChange(volume) {
-    const items = [QUICK_SWITCHERDefault.USER_SETTINGS];
-    return _fetchDefaultSoundsFromApi2.updateUserSoundboardVolume(volume, items);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SoundboardVolumeSetting.tsx");
 
 export default volumeSlider;

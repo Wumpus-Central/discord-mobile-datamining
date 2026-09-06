@@ -1,35 +1,35 @@
 // === Module 15818: useTrackProductCardImpression ===
 
 // Module 15818 (useTrackProductCardImpression)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
+import noop from "module_19" /* 19 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
 
 export const useTrackProductCardImpression = function useTrackProductCardImpression(categoryStoreListingId, mobile_home, featured_block) {
-  const _require = categoryStoreListingId;
+  _require = categoryStoreListingId;
   importDefault = mobile_home;
   let str = featured_block;
   if (featured_block === undefined) {
     str = "product";
   }
-  let collectiblesAnalyticsContext;
   let stateFromStores;
-  c5 = undefined;
-  closure_6 = undefined;
   let callback;
-  collectiblesAnalyticsContext = _require(str[3]).useCollectiblesAnalyticsContext();
-  let obj = _require(str[3]);
+  const collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
+  let obj = require("CollectiblesAnalyticsContext");
   const items = [stateFromStores];
-  stateFromStores = _require(str[4]).useStateFromStores(items, () => stateFromStores.getProduct(closure_0));
-  let obj2 = _require(str[4]);
-  const currentUser = _require(str[5]).useCurrentUser();
-  const obj3 = _require(str[5]);
-  const canUseShopDiscountsResult = importDefault(str[6]).canUseShopDiscounts(currentUser);
+  stateFromStores = require("initialize").useStateFromStores(items, () => CollectiblesCategoryStore.getProduct(closure_0));
+  let obj2 = require("initialize");
+  const currentUser = require("useCurrentUser").useCurrentUser();
+  const obj3 = require("useCurrentUser");
+  const canUseShopDiscountsResult = require("PremiumUtils").canUseShopDiscounts(currentUser);
   c5 = canUseShopDiscountsResult;
-  closure_6 = collectiblesAnalyticsContext.useRef(null);
+  collectiblesAnalyticsContext.useRef(null);
   let sessionId;
   if (collectiblesAnalyticsContext != null) {
     sessionId = collectiblesAnalyticsContext.sessionId;
@@ -63,54 +63,53 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
   callback = collectiblesAnalyticsContext.useCallback(() => {
     let priceForCollectiblesProduct = null;
     if (null != stateFromStores) {
-      let obj = categoryStoreListingId(str[7]);
-      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(tmp, _undefined, true);
+      let obj = CollectiblesUtils;
+      priceForCollectiblesProduct = obj.getPriceForCollectiblesProduct(tmp, c5, true);
     }
     let strikeThroughPriceAmountForCollectiblesProduct;
     if (null != stateFromStores) {
-      strikeThroughPriceAmountForCollectiblesProduct = categoryStoreListingId(str[7]).getStrikeThroughPriceAmountForCollectiblesProduct(tmp, _undefined, true);
-      const obj2 = categoryStoreListingId(str[7]);
+      strikeThroughPriceAmountForCollectiblesProduct = CollectiblesUtils.getStrikeThroughPriceAmountForCollectiblesProduct(tmp, c5, true);
     }
     let sessionId;
     if (collectiblesAnalyticsContext != null) {
       sessionId = tmp10.sessionId;
     }
-    obj = { collectibles_shop_session_id: sessionId, sku_id: categoryStoreListingId, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_type: null, page_category: null, page_section: null, type: null, category_position: null };
+    obj = { collectibles_shop_session_id: sessionId, sku_id, display_price: null, display_price_currency: null, display_price_strikethrough: null, position: null, page_type: null, page_category: null, page_section: null, type: null, category_position: null };
     let amount;
     if (priceForCollectiblesProduct != null) {
       amount = priceForCollectiblesProduct.amount;
     }
-    obj[2] = amount;
+    obj.display_price = amount;
     str = undefined;
     if (priceForCollectiblesProduct != null) {
       str = priceForCollectiblesProduct.currency;
       str = str.toString();
     }
-    obj[3] = str;
-    obj[4] = strikeThroughPriceAmountForCollectiblesProduct;
+    obj.display_price_currency = str;
+    obj.display_price_strikethrough = strikeThroughPriceAmountForCollectiblesProduct;
     let tilePosition;
     if (collectiblesAnalyticsContext != null) {
       tilePosition = tmp10.tilePosition;
     }
-    obj[5] = tilePosition;
-    obj[6] = mobile_home;
+    obj.position = tilePosition;
+    obj.page_type = page_type;
     let pageCategory;
     if (collectiblesAnalyticsContext != null) {
       pageCategory = tmp10.pageCategory;
     }
-    obj[7] = pageCategory;
+    obj.page_category = pageCategory;
     let pageSection;
     if (collectiblesAnalyticsContext != null) {
       pageSection = tmp10.pageSection;
     }
-    obj[8] = pageSection;
-    obj[9] = str;
+    obj.page_section = pageSection;
+    obj.type = str;
     let categoryPosition;
     if (collectiblesAnalyticsContext != null) {
       categoryPosition = tmp10.categoryPosition;
     }
-    obj[10] = categoryPosition;
-    mobile_home(str[8]).track(_undefined.COLLECTIBLES_TILE_IMPRESSION, obj);
+    obj.category_position = categoryPosition;
+    AnalyticsUtilsDefault.track(AnalyticEvents.COLLECTIBLES_TILE_IMPRESSION, obj);
   }, items1);
   const items2 = [callback];
   const items3 = [categoryStoreListingId];
@@ -121,7 +120,7 @@ export const useTrackProductCardImpression = function useTrackProductCardImpress
         const _setTimeout = setTimeout;
         tmp.current = setTimeout(() => {
           callback();
-          closure_6.current = null;
+          ref.current = null;
         }, 1000);
       }
     } else if (null !== current) {

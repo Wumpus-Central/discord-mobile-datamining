@@ -1,12 +1,14 @@
-// === Module 17641: experiment ===
+// === Module 17641: ApplicationIdentityLinkedRolesExperiment ===
 
-// Module 17641 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 17641 (ApplicationIdentityLinkedRolesExperiment)
+import createExperiment from "module_4474" /* 4474 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "guild", id: "2026-04_application_identity_linked_roles", label: "Application Identity Linked Roles", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enable Application Identity Linked Roles", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-04_application_identity_linked_roles", label: "Application Identity Linked Roles", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/connections/experiments/ApplicationIdentityLinkedRolesExperiment.tsx");
 
 export const ApplicationIdentityLinkedRolesExperiment = experiment;
 export const useApplicationIdentityLinkedRolesEnabled = function useApplicationIdentityLinkedRolesEnabled(guildId, location) {

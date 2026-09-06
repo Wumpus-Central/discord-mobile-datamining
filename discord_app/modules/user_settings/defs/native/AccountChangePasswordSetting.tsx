@@ -1,27 +1,25 @@
-// === Module 14775: route ===
+// === Module 14775: AccountChangePasswordSetting ===
 
-// Module 14775 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 14775 (AccountChangePasswordSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["CIGa+7"]);
+    const intl = util.intl;
+    return intl.string(util.t["CIGa+7"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
-  getComponent() {
-    return require(14776).default;
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
+  screen: {
+    route: Constants.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
+    getComponent() {
+      return require("AccountEditPassword").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");
 
 export default route;

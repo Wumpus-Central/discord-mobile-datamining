@@ -1,11 +1,13 @@
-// === Module 17051: getUnitId ===
+// === Module 17051: MobileMuteIndicatorExperiment ===
 
-// Module 17051 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 17051 (MobileMuteIndicatorExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-02-mobile-mute-indicator", defaultConfig: { enableMuteWarning: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enableMuteWarning: true };
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2026-02-mobile-mute-indicator", defaultConfig: { enableMuteWarning: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/calls/MobileMuteIndicatorExperiment.tsx");
+obj.variations = obj;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/MobileMuteIndicatorExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

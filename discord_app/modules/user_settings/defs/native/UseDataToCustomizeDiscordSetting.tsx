@@ -1,57 +1,57 @@
-// === Module 14857: toggle ===
+// === Module 14857: UseDataToCustomizeDiscordSetting ===
 
-// Module 14857 (toggle)
+// Module 14857 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setDefault from "set" /* 4904 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
-import handleRequestSuccess from "handleRequestSuccess" /* 14855 */;
-import closure_3 from "hasConsented" /* 6595 */;
-import { Consents } from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14855 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14856 */;
+import ConsentStore from "ConsentStore" /* 6595 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const Consents = fn(1074).Consents;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.MNKzyg);
+    const intl = util.intl;
+    return intl.string(util.t.MNKzyg);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7975).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
-    const items = [closure_3];
-    return initialize.useStateFromStores(items, () => closure_3.hasConsented(constants.PERSONALIZATION));
+    const items = [ConsentStore];
+    return initialize.useStateFromStores(items, () => ConsentStore.hasConsented(constants.PERSONALIZATION));
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     if (arg0) {
       let items = [Consents.PERSONALIZATION];
-      const obj3 = handleRequestSuccess;
-      handleRequestSuccess.setConsents(items, []).catch((message) => callback(14856).showDataPrivacyRateLimitAlert(message.message));
-      const setConsentsResult = handleRequestSuccess.setConsents(items, []);
+      ConsentActionCreators.setConsents(items, []).catch((error) => showDataPrivacyRateLimitAlert.showDataPrivacyRateLimitAlert(error.message));
+      const setConsentsResult = ConsentActionCreators.setConsents(items, []);
     } else {
-      let obj = setDefault;
-      obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null };
-      const intl = getSystemLocale.intl;
-      obj[0] = intl.string(getSystemLocale.t["9SNpzv"]);
-      const intl2 = getSystemLocale.intl;
-      obj[1] = intl2.string(getSystemLocale.t.gJvDDh);
-      const intl3 = getSystemLocale.intl;
-      obj[2] = intl3.string(getSystemLocale.t["9g5UGw"]);
-      const intl4 = getSystemLocale.intl;
-      obj[3] = intl4.string(getSystemLocale.t["+ZLPw9"]);
-      obj[4] = componentDidMountDefault.Colors.RED;
-      obj[5] = function onConfirm() {
+      const obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t["9SNpzv"]);
+      const intl2 = util.intl;
+      obj.body = intl2.string(util.t.gJvDDh);
+      const intl3 = util.intl;
+      obj.confirmText = intl3.string(util.t["9g5UGw"]);
+      const intl4 = util.intl;
+      obj.cancelText = intl4.string(util.t["+ZLPw9"]);
+      obj.confirmColor = common_AlertDefault.Colors.RED;
+      obj.onConfirm = function onConfirm() {
         const items = [constants.PERSONALIZATION];
-        return callback(14855).setConsents([], items);
+        return ConsentActionCreators.setConsents([], items);
       };
       obj.show(obj);
     }
   },
   useIsDisabled() {
-    return useParentalControlledExplicitContentSettings.useIsParentallyControlled();
+    return useParentalControlSettings.useIsParentallyControlled();
   }
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

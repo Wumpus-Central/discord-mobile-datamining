@@ -1,10 +1,10 @@
-// === Module 5121: compare ===
+// === Module 5121: AgeRestrictionUtils ===
 
-// Module 5121 (compare)
-import set from "set" /* 2 */;
+// Module 5121 (AgeRestrictionUtils)
 import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5115 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
 
 export const compare = function compare(arg0, arg1) {
   const prop = AgeRestrictionStatus.AGE_RESTRICTION_STATUS_RESTRICTIVENESS_ORDERING;

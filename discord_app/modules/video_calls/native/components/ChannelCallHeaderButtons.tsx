@@ -1,39 +1,39 @@
-// === Module 10034: CameraButton ===
+// === Module 10034: ChannelCallHeaderButtons ===
 
-// Module 10034 (CameraButton)
-import noopAll from "noop" /* 19 */;
+// Module 10034 (ChannelCallHeaderButtons)
 import initialize from "initialize" /* 504 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
 import useSelectedParticipantDefault from "useSelectedParticipant" /* 9470 */;
 import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
-import registerAssetDefault from "registerAsset" /* 10035 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef10035 from "module_10035" /* 10035 */;
+import noop from "module_19" /* 19 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallHeaderButtons.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallHeaderButtons.tsx");
 
 export const CameraButton = function CameraButton() {
   let obj = initialize;
-  const items = [closure_3];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isVideoEnabled: store.isVideoEnabled(), videoDeviceId: store.getVideoDeviceId(), videoDevices: store.getVideoDevices() }));
+  const items = [MediaEngineStore];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isVideoEnabled: MediaEngineStore.isVideoEnabled(), videoDeviceId: MediaEngineStore.getVideoDeviceId(), videoDevices: MediaEngineStore.getVideoDevices() }));
   ({ videoDeviceId: require, videoDevices: importDefault } = stateFromStoresObject);
   let tmp4 = null;
   if (stateFromStoresObject.isVideoEnabled) {
     obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
     const intl = tmp(1114).intl;
-    obj[0] = intl.string(tmp(1114).t["t9eQ/g"]);
-    obj[1] = registerAssetDefault;
-    obj[2] = function onPress() {
-      const keys = Object.keys(closure_1);
-      const found = keys.find((arg0) => arg0 !== closure_0);
+    obj.accessibilityLabel = intl.string(tmp(1114).t["t9eQ/g"]);
+    obj.source = _modDef10035;
+    obj.onPress = function onPress() {
+      const keys = Object.keys(closure_1_1);
+      const found = keys.find((item) => item !== closure_1_0);
       if (null != found) {
-        closure_1_1(closure_1_2[7]).setVideoDevice(found);
-        const obj = closure_1_1(closure_1_2[7]);
+        AudioActionCreatorsDefault.setVideoDevice(found);
       }
     };
     tmp4 = jsx(ChannelCallNavigatorIconDefault, { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
-    const tmp7 = ChannelCallNavigatorIconDefault;
   }
   return tmp4;
 };
@@ -45,10 +45,10 @@ export const GridButton = function GridButton(channel) {
     if (!tmp3) {
       const obj = { accessibilityLabel: null, source: null, onPress: null, disableBackground: true };
       const intl = channel(1114).intl;
-      obj[0] = intl.string(channel(1114).t.HK4JIu);
-      obj[1] = tmp(10036);
-      obj[2] = function onPress() {
-        return closure_1_1(closure_1_2[11]).selectParticipant(channel.id, null);
+      obj.accessibilityLabel = intl.string(channel(1114).t.HK4JIu);
+      obj.source = tmp(10036);
+      obj.onPress = function onPress() {
+        return ChannelRTCActionCreatorsDefault.selectParticipant(channel.id, null);
       };
       tmp4 = jsx(tmp(9924), { accessibilityLabel: null, source: null, onPress: null, disableBackground: true });
       const tmpResult = tmp(9924);

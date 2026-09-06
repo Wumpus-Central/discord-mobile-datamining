@@ -1,28 +1,26 @@
-// === Module 14953: route ===
+// === Module 14953: ConnectionsSetting ===
 
-// Module 14953 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 14953 (ConnectionsSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import PuzzlePieceIcon from "PuzzlePieceIcon" /* 14954 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3fe7U5"]);
+    const intl = util.intl;
+    return intl.string(util.t["3fe7U5"]);
   },
   parent: null,
   IconComponent: PuzzlePieceIcon.PuzzlePieceIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.CONNECTIONS,
-  getComponent() {
-    return require(14956) /* onPress */.default;
+  screen: {
+    route: Constants.UserSettingsSections.CONNECTIONS,
+    getComponent() {
+      return require("ConnectionsSettingScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ConnectionsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ConnectionsSetting.tsx");
 
 export default route;

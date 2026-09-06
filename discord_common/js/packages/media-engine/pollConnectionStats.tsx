@@ -1,16 +1,17 @@
 // === Module 4624: pollConnectionStats ===
 
 // Module 4624 (pollConnectionStats)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/pollConnectionStats.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/pollConnectionStats.tsx");
 
 export default function pollConnectionStats(on) {
-  const _require = on;
-  function pollStats(arg0) {
+  _require = on;
+  function pollStats() {
     const self = this;
-    const apply = _pollStats.apply;
+    const apply = closure_3.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -18,135 +19,89 @@ export default function pollConnectionStats(on) {
     }
     return applyArgumentsResult;
   }
-  function _pollStats() {
-    const self = this;
-    const tmp = pollStats(function*() {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_3 = async function _pollStats(arg0, value) {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        while (true) {
-          let num = 2;
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              let num7 = 3;
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              let num6 = 3;
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp;
-              c2 = tmp2;
-              closure_0 = undefined;
-              let items;
-              c2 = undefined;
-              closure_3 = undefined;
-              let tmp40 = closure_1_1;
-              if (!closure_1_1) {
-                items = [];
-                closure_0 = items;
-                let tmp17 = closure_1_0;
-                let eachConnectionResult = closure_1_0.eachConnection((connection) => arr.push({ connection, stats: connection.emitStats() }));
-                items = [];
-                let tmp19 = items;
-                closure_0 = items[Symbol.iterator]();
-              }
-              let num5 = 3;
-              c7 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } else if (1 === tmp5) {
-            let tmp14 = closure_4;
-            let tmp15 = closure_4;
-            c5 = 0;
-            let tmp16 = closure_0;
-            closure_0.return();
-            throw closure_4;
-          } else if (arg0 === 1) {
-            let num3 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      while (true) {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
             c7 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c5 = 0;
-            let tmp13 = closure_0;
-            closure_0.return();
-            let num2 = 3;
             c7 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
+            obj = { value, done: true };
+            return obj;
           } else {
-            let tmp6 = c2;
-            closure_3 = arg1;
-            let tmp7 = closure_3;
-            if (null != closure_3) {
-              let tmp8 = c2;
-              let tmp9 = items;
-              obj = { connection: null, stats: null };
-              let tmp10 = c2;
-              obj[0] = c2.connection;
-              let tmp11 = closure_3;
-              obj[1] = closure_3;
-              let arr = items.push(obj);
+            closure_3 = tmp;
+            closure_2 = tmp2;
+            closure_130_0 = undefined;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            if (!dependencyMap) {
+              let items = [];
+              closure_130_0 = items;
+              let eachConnectionResult = on.eachConnection((connection) => closure_1_0.push({ connection, stats: connection.emitStats() }));
+              closure_130_1 = [];
+              on = items[Symbol.iterator]();
             }
-            c5 = 0;
+            c7 = 3;
+            return { value: "HermesInternal", done: null };
           }
-          let tmp20 = items;
-          let tmp21 = closure_0;
-          if (closure_0 === undefined) {
-            let tmp25 = c2;
-            let tmp26 = closure_3;
-            let tmp27 = closure_0;
-            let tmp28 = closure_1_0;
-            let tmp29 = closure_1_1;
-            let tmp30 = items;
-            let emitResult = closure_0.emit(closure_1_0(closure_1_1[1]).MediaEngineEvent.ConnectionStats, items);
-            let _setTimeout = setTimeout;
-            let tmp32 = c2;
-            let timerId = setTimeout(c2, closure_1_0(closure_1_1[2]).STATS_INTERVAL);
-          } else {
-            let tmp23 = c2;
-            c5 = 1;
-            c2 = tmp22;
-            let tmp24 = c2;
-            c6 = 2;
-            let num4 = 1;
-            c7 = 1;
-            let obj2 = { value: null, done: false };
-            obj2[0] = c2.stats;
-            return obj2;
+        } else if (1 === tmp5) {
+          c5 = 0;
+          on.return();
+          throw closure_1_4;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          on.return();
+          c7 = 3;
+          let obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_130_3 = value;
+          if (null != closure_130_3) {
+            obj = { connection: null, stats: null };
+            obj.connection = closure_130_2.connection;
+            obj.stats = closure_130_3;
+            let arr = closure_130_1.push(obj);
           }
+          c5 = 0;
+        }
+        if (on === undefined) {
+          let emitResult = closure_131_0.emit(on(items[1]).MediaEngineEvent.ConnectionStats, closure_130_1);
+          let _setTimeout = setTimeout;
+          let timerId = setTimeout(closure_131_2, on(items[2]).STATS_INTERVAL);
+        } else {
+          c5 = 1;
+          closure_130_2 = tmp22;
+          c6 = 2;
+          c7 = 1;
+          let obj2 = { value: closure_130_2.stats, done: false };
+          return obj2;
         }
       }
-    });
-    closure_3 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
+  };
   dependencyMap = false;
-  on.on(_require(4615).MediaEngineEvent.Destroy, () => {
+  on.on(require("BaseConnectionEvent").MediaEngineEvent.Destroy, () => {
     c1 = true;
     return true;
   });
-  let timerId = setTimeout(pollStats, _require(4625).STATS_INTERVAL);
+  let timerId = setTimeout(pollStats, require("Stats").STATS_INTERVAL);
 };

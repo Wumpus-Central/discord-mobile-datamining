@@ -1,61 +1,56 @@
-// === Module 1912: constants ===
+// === Module 1912: VoiceEngineModule ===
 
-// Module 1912 (constants)
-import importDefaultResult from "enforcing" /* 1913 */;
+// Module 1912 (VoiceEngineModule)
+import NativeMediaEngineModule from "NativeMediaEngineModule" /* 1913 */;
 
-const constants = importDefaultResult.getConstants();
+NativeMediaEngineModule = NativeMediaEngineModule.getConstants();
 let closure_3 = ["getConstants", "setInputDevice", "setInputDeviceById", "setOutputDevice", "setOutputDeviceById", "setVideoInputDevice", "setVideoInputDeviceById", "addListener", "removeListeners"];
 let obj = {};
-const merged = Object.assign(constants);
+NativeMediaEngineModule = Object.assign(NativeMediaEngineModule);
 obj.getConstants = function getConstants() {
-  return constants;
+  return NativeMediaEngineModule;
 };
 obj.setInputDevice = function setInputDevice(str) {
   if (typeof str === "string") {
-    let setInputDeviceByIdResult = importDefaultResult.setInputDeviceById(str);
-    const obj = importDefaultResult;
+    let setInputDeviceByIdResult = NativeMediaEngineModule.setInputDeviceById(str);
   } else {
-    setInputDeviceByIdResult = importDefaultResult.setInputDevice(str);
-    const obj2 = importDefaultResult;
+    setInputDeviceByIdResult = NativeMediaEngineModule.setInputDevice(str);
   }
   return setInputDeviceByIdResult;
 };
 obj.setOutputDevice = function setOutputDevice(str) {
   if (typeof str === "string") {
-    let setOutputDeviceByIdResult = importDefaultResult.setOutputDeviceById(str);
-    const obj = importDefaultResult;
+    let setOutputDeviceByIdResult = NativeMediaEngineModule.setOutputDeviceById(str);
   } else {
-    setOutputDeviceByIdResult = importDefaultResult.setOutputDevice(str);
-    const obj2 = importDefaultResult;
+    setOutputDeviceByIdResult = NativeMediaEngineModule.setOutputDevice(str);
   }
   return setOutputDeviceByIdResult;
 };
 obj.setVideoInputDevice = function setVideoInputDevice(str) {
   if (typeof str === "string") {
-    let result = importDefaultResult.setVideoInputDeviceById(str);
-    const obj = importDefaultResult;
+    let result = NativeMediaEngineModule.setVideoInputDeviceById(str);
   } else {
-    result = importDefaultResult.setVideoInputDevice(str);
-    const obj2 = importDefaultResult;
+    result = NativeMediaEngineModule.setVideoInputDevice(str);
   }
   return result;
 };
-const keys = Object.keys(Object.getPrototypeOf(importDefaultResult));
-const found = keys.filter((arg0) => !closure_3.includes(arg0));
-const merged1 = Object.assign(Object.fromEntries(found.map((arg0) => {
-  closure_0 = arg0;
+const keys = Object.keys(Object.getPrototypeOf(NativeMediaEngineModule));
+const found = keys.filter((item) => !closure_3.includes(item));
+const merged1 = Object.assign(Object.fromEntries(found.map((item) => {
+  closure_0 = item;
   let items = [
-    arg0,
+    item,
     () => {
       const items = [...arguments];
       const items1 = [...items];
-      return callback(closure_1_1[1])[callback].apply(items1);
+      return NativeMediaEngineModule[closure_0].apply(items1);
     }
   ];
   return items;
 })));
-const nativeEventEmitter = new require("get ActivityIndicator").NativeEventEmitter(importDefaultResult);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ios/VoiceEngineModule.android.tsx");
+const nativeEventEmitter = new fn(17).NativeEventEmitter(NativeMediaEngineModule);
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ios/VoiceEngineModule.android.tsx");
 
 export const VoiceEngine = obj;
 export const VoiceEngineEmitter = nativeEventEmitter;

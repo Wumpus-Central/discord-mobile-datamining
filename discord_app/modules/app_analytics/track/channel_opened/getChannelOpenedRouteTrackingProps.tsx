@@ -1,23 +1,24 @@
 // === Module 16740: getChannelOpenedRouteTrackingProps ===
 
 // Module 16740 (getChannelOpenedRouteTrackingProps)
-import transitionTo from "transitionTo" /* 1100 */;
-import collectThreadMetadata from "collectThreadMetadata" /* 7774 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
+import router_utils from "router_utils" /* 1100 */;
+import ThreadAnalyticsUtils from "ThreadAnalyticsUtils" /* 7774 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
-  let obj = collectThreadMetadata;
-  const result = obj.collectThreadMetadata(channel.getChannel(selectedChannelId), true);
+  let obj = ThreadAnalyticsUtils;
+  const result = obj.collectThreadMetadata(ChannelStore.getChannel(selectedChannelId), true);
   let _location;
   if (result != null) {
     _location = result.location;
   }
   if (_location == null) {
-    _location = transitionTo.getLastRouteChangeSource();
-    const tmpResult = transitionTo;
+    _location = router_utils.getLastRouteChangeSource();
+    const tmpResult = router_utils;
   }
   obj = result;
   if (result == null) {
@@ -26,8 +27,7 @@ export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRoute
   obj = {};
   const merged = Object.assign(obj);
   if (null != _location) {
-    obj1 = { location: null };
-    obj1[0] = _location;
+    const obj1 = { location: _location };
     let obj2 = obj1;
   } else {
     obj2 = {};

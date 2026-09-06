@@ -1,22 +1,22 @@
-// === Module 15246: route ===
+// === Module 15246: VoiceSetting ===
 
-// Module 15246 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import ME from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15246 (VoiceSetting)
+import util from "util" /* 1114 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-({ InputModes: c3, UserSettingsSections } = ME);
-createToggle = {
+require = fn;
+const Constants = fn(1074);
+({ InputModes: c3, UserSettingsSections } = Constants);
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.K3lovD);
+    const intl = util.intl;
+    return intl.string(util.t.K3lovD);
   },
   parent: null,
-  IconComponent: require("MicrophoneIcon").MicrophoneIcon,
+  IconComponent: fn(10005).MicrophoneIcon,
   useTrailing: function useVoiceSettingTrailing() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
       const intl2 = tmp(1114).intl;
       let stringResult = intl2.string(tmp(1114).t.Q8gkVL);
@@ -26,20 +26,20 @@ createToggle = {
     }
     return stringResult;
   },
-  screen: createToggle,
+  screen: {
+    route: UserSettingsSections.VOICE,
+    getComponent() {
+      return require("SettingsVoiceScreen").default;
+    }
+  },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.nuFtHH)];
+    const intl = util.intl;
+    const items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 };
-createToggle = {
-  route: UserSettingsSections.VOICE,
-  getComponent() {
-    return require(15247) /* KrispLogo */.default;
-  }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,62 +1,44 @@
-// === Module 14572: MaybeClearBuildOverride ===
+// === Module 14572: ErrorBoundary ===
 
-// Module 14572 (MaybeClearBuildOverride)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import Text from "Text" /* 4556 */;
-import Button2 from "Button" /* 4975 */;
-import getAppCrashSource from "getAppCrashSource" /* 9849 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getCurrentBuildOverride" /* 11425 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14572 (ErrorBoundary)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import AppCrash from "AppCrash" /* 9849 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11425 */;
 
-require = arg1;
+require = fn;
 function MaybeClearBuildOverride() {
-  function _clearOverride() {
-    const self = this;
-    const tmp = closure_1_3(function*() {
-      const callback = tmp3;
-      c3 = 1;
-      closure_1_0(true);
-      obj1 = closure_1_0(closure_1_2[8]);
-      yield obj1.clearBuildOverride();
-      if (1 === tmp7) {
-        c3 = 0;
-        callback(false);
-        c4 = 3;
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c3 = 0;
-      }
+  closure_1 = async function _clearOverride() {
+    _require(true);
+    await tmp3(tmp16[8]).clearBuildOverride();
+    if (1 === tmp7) {
       c3 = 0;
-      return arg1;
-    });
-    closure_1 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+      closure_128_0(false);
+      c4 = 3;
+    } else if (arg0 === 1) {
+      c4 = 3;
+      throw arg1;
+    } else if (arg0 !== 2) {
+      c3 = 0;
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback(importAllResult.useState(false), 2);
-  const _require = tmp[1];
-  let obj = _require(504);
-  const items = [closure_8];
+    return arg1;
+  };
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  _require = tmp[1];
+  let obj = require("initialize");
+  const items = [BuildOverrideStore];
   if (null == obj.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let id;
     if (overrides != null) {
-      const tmp4 = overrides[callback(undefined, table[8]).DEVICE_FIELD];
+      const tmp4 = overrides[closure_0(undefined, dependencyMap[8]).DEVICE_FIELD];
       if (tmp4 != null) {
         id = tmp4.id;
       }
@@ -65,13 +47,12 @@ function MaybeClearBuildOverride() {
   })) {
     return null;
   } else {
-    obj = { variant: "secondary", loading: null, text: null, onPress: null };
-    obj[1] = tmp[0];
+    obj = { variant: "secondary", loading: tmp[0], text: null, onPress: null };
     const intl = tmp2(1114).intl;
-    obj[2] = intl.string(tmp2(1114).t["/Nz9rY"]);
-    obj[3] = function clearOverride() {
+    obj.text = intl.string(tmp2(1114).t["/Nz9rY"]);
+    obj.onPress = function clearOverride() {
       const self = this;
-      const apply = _clearOverride.apply;
+      const apply = closure_1.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -79,14 +60,16 @@ function MaybeClearBuildOverride() {
       }
       return applyArgumentsResult;
     };
-    return callback2(tmp2(4975).Button, obj);
+    return closure_9(tmp2(4975).Button, obj);
   }
 }
-let c5 = importAllResult;
-({ NativeModules: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = createCacheKey.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
-const PureComponent = importAllResult.PureComponent;
+get_ActivityIndicator = fn(17);
+({ NativeModules: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
+let closure_11 = createStyles.createLegacyClassComponentStyles({ buttons: { position: "absolute", right: 32, bottom: 32, left: 32, gap: 12 }, debugLogsContainer: { position: "absolute", right: 32, top: 64, display: "flex", flexDirection: "row", alignItems: "center", gap: 12 }, error: { marginTop: 24, textAlign: "center" }, text: { textAlign: "center" } });
+const PureComponent = noop.PureComponent;
 class ErrorBoundary extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -96,16 +79,15 @@ class ErrorBoundary extends PureComponent {
   }
 }
 const prototype = ErrorBoundary.prototype;
-prototype["componentDidCatch"] = function componentDidCatch(error, extra) {
-  this.triggerSoftCrash(error, extra);
+prototype["componentDidCatch"] = function componentDidCatch(error, info) {
+  this.triggerSoftCrash(error, info);
 };
-prototype["triggerSoftCrash"] = function triggerSoftCrash(error, extra) {
-  let obj = { error, info: extra };
+prototype["triggerSoftCrash"] = function triggerSoftCrash(error, info) {
+  let obj = { error, info };
   this.setState(obj);
-  obj = { extra };
-  _modDef1232.captureCrash(error, obj);
-  const obj2 = _modDef1232;
-  dispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
+  obj = { extra: info };
+  SentryUtilsDefault.captureCrash(error, obj);
+  DispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
 };
 prototype["handleReload"] = function handleReload() {
   BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
@@ -115,9 +97,10 @@ prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   if (null == window.DiscordErrors) {
     const _window = window;
-    const obj = { softCrash: null };
-    obj[0] = function softCrash(error) {
-      self.triggerSoftCrash(error);
+    const obj = {
+      softCrash(error) {
+          self.triggerSoftCrash(error);
+        }
     };
     window.DiscordErrors = obj;
     tmp.discordErrorsSet = true;
@@ -132,18 +115,16 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = callback3(this.context);
-  error = this.state.error;
+  const tmp = closure_11(this.context);
+  const error = this.state.error;
   if (null !== error) {
-    let obj = { Illustration: null, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
-    obj[0] = getAppCrashSource.AppCrash;
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t.tx8CkI);
-    const intl2 = getSystemLocale.intl;
-    obj[2] = intl2.string(getSystemLocale.t.CvQlAH);
-    ({ text: obj[3], text: obj[4] } = tmp);
-    obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
-    obj[0] = tmp.error;
+    let obj = { Illustration: AppCrash.AppCrash, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
+    const intl = util.intl;
+    obj.title = intl.string(util.t.tx8CkI);
+    const intl2 = util.intl;
+    obj.body = intl2.string(util.t.CvQlAH);
+    ({ text: obj.titleStyle, text: obj.bodyStyle } = tmp);
+    obj = { style: tmp.error, variant: "text-sm/medium", color: "text-muted", children: null };
     let str;
     if (error != null) {
       str = error.message;
@@ -158,27 +139,27 @@ prototype["render"] = function render() {
     if (str == null) {
       str = "Unknown Error";
     }
-    obj[3] = str;
-    const items = [closure_9(Text.Text, obj), , ];
-    obj = { style: null, children: null };
-    obj[0] = tmp.buttons;
-    const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
-    obj1 = { text: null, onPress: null };
+    obj.children = str;
+    const items = [React7(Text_Text.Text, obj), , ];
+    obj = { style: tmp.buttons, children: null };
+    const items1 = [React7(MaybeClearBuildOverride, {}), ];
+    const obj1 = { text: null, onPress: null };
     const intl3 = tmp3(1114).intl;
-    obj1[0] = intl3.string(getSystemLocale.t["4n8OJn"]);
-    obj1[1] = self.handleReload;
-    items1[1] = closure_9(Button2.Button, obj1);
-    obj[1] = items1;
-    items[1] = closure_10(closure_7, obj);
+    obj1.text = intl3.string(util.t["4n8OJn"]);
+    obj1.onPress = self.handleReload;
+    items1[1] = React7(components_Button_Button.Button, obj1);
+    obj.children = items1;
+    items[1] = closure_1_10(React5, obj);
     items[2] = null;
-    obj[5] = items;
-    let children = tmp2(Button.EmptyState, obj);
+    obj.children = items;
+    let children = tmp2(native.EmptyState, obj);
   } else {
     children = self.props.children;
   }
   return children;
 };
-ErrorBoundary.contextType = require("ManaContext").ThemeContext;
-const result = require("set").fileFinishedImporting("components_native/ErrorBoundary.tsx");
+ErrorBoundary.contextType = fn(4271).ThemeContext;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/ErrorBoundary.tsx");
 
 export default ErrorBoundary;

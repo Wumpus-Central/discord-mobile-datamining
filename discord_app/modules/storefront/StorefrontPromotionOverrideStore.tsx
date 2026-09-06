@@ -1,25 +1,26 @@
-// === Module 8786: getPromotionIdOverride ===
+// === Module 8786: StorefrontPromotionOverrideStore ===
 
-// Module 8786 (getPromotionIdOverride)
+// Module 8786 (StorefrontPromotionOverrideStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let c0;
+let promotionIdOverride;
 const Store = initializeDefault.Store;
 class StorefrontPromotionOverrideStore extends Store {
 }
 StorefrontPromotionOverrideStore.prototype["getPromotionIdOverride"] = function getPromotionIdOverride() {
-  return c0;
+  return promotionIdOverride;
 };
 StorefrontPromotionOverrideStore.displayName = "StorefrontPromotionOverrideStore";
-const storefrontPromotionOverrideStore = new StorefrontPromotionOverrideStore(dispatcherDefault, {
+const storefrontPromotionOverrideStore = new StorefrontPromotionOverrideStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
-    c0 = undefined;
+    promotionIdOverride = undefined;
   },
   STOREFRONT_PROMOTION_ID_OVERRIDE_SET: function handleSet(promotionIdOverride) {
     promotionIdOverride = promotionIdOverride.promotionIdOverride;
   }
 });
-const result = require("set").fileFinishedImporting("modules/storefront/StorefrontPromotionOverrideStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/StorefrontPromotionOverrideStore.tsx");
 
 export default storefrontPromotionOverrideStore;

@@ -1,15 +1,17 @@
 // === Module 16018: NativeFreezeScreens ===
 
 // Module 16018 (NativeFreezeScreens)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import enableScreens from "enableScreens" /* 4912 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let closure_7 = createCacheKey.createStyles({ screens: { flex: 1, overflow: "hidden" } });
-const result = require("set").fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
+require = fn;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ screens: { flex: 1, overflow: "hidden" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
 
 export const NativeFreezeScreens = function NativeFreezeScreens(detachInactiveScreens) {
   ({ children, activeIndex } = detachInactiveScreens);
@@ -35,7 +37,7 @@ export const NativeFreezeScreens = function NativeFreezeScreens(detachInactiveSc
   }
   let first;
   let tmp4 = activeIndex >= 0;
-  const tmp = callback();
+  const tmp = closure_7();
   const tmp2 = flag2;
   if (tmp4) {
     const _Array = Array;
@@ -60,32 +62,32 @@ export const NativeFreezeScreens = function NativeFreezeScreens(detachInactiveSc
     const items2 = [children];
     arr4 = items2;
   }
-  obj[4] = arr4.map((children) => {
+  obj.children = arr4.map((children, index) => {
     if (flag3) {
       if (!tmp) {
         return null;
       }
     }
     if (flag2) {
-      if (!first.includes(arg1)) {
+      if (!first.includes(index)) {
         if (!tmp) {
-          if (!preloadIndices.includes(arg1)) {
+          if (!preloadIndices.includes(index)) {
             return null;
           }
         }
       }
     }
     let num = 0;
-    if (activeIndex === arg1) {
+    if (activeIndex === index) {
       num = 2;
     }
-    const items = [preloadIndices.absoluteFill, ];
+    const items = [StyleSheet.absoluteFill, ];
     let num2 = -1;
-    if (activeIndex === arg1) {
+    if (activeIndex === index) {
       num2 = 0;
     }
     items[1] = { zIndex: num2 };
-    return first(activeIndex(flag2[5]).Screen, { style: items, activityState: num, enabled: flag, freezeOnBlur: flag4, children }, arg1);
+    return jsx(enableScreens.Screen, { style: items, activityState: num, enabled: flag, freezeOnBlur: flag4, children }, index);
   });
   return first(activeIndex(tmp2[5]).ScreenContainer, obj);
 };

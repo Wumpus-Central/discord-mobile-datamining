@@ -1,18 +1,18 @@
-// === Module 1221: handleConnectionClosedOrResumed ===
+// === Module 1221: UserSettingsProtoStore ===
 
-// Module 1221 (handleConnectionClosedOrResumed)
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
+// Module 1221 (UserSettingsProtoStore)
+import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import create from "create" /* 1187 */;
-import now from "now" /* 1217 */;
-import create2 from "create" /* 1222 */;
-import b64ToProto from "b64ToProto" /* 1223 */;
-import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1225 */;
-import resolveDefaultGuildThemePreference from "resolveDefaultGuildThemePreference" /* 1226 */;
-import MAX_FAVORITES from "MAX_FAVORITES" /* 1084 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import timestamp from "timestamp" /* 1217 */;
+import frecency_user_settings from "frecency_user_settings" /* 1222 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1225 */;
+import GuildThemeSourcePreferenceUtils from "GuildThemeSourcePreferenceUtils" /* 1226 */;
+import UserSettingsConstants from "UserSettingsConstants" /* 1084 */;
+import size from "module_2" /* 2 */;
 
 function handleConnectionClosedOrResumed() {
   const values = Object.values(closure_7);
@@ -48,9 +48,8 @@ function handleUserSettingsProtoUpdate(settings) {
     tmp.editInfo = createEmptyEditInfo();
   }
   if (settings.partial) {
-    tmp.proto = b64ToProto.mergeTopLevelFields(tmp.ProtoClass, tmp.proto, proto);
+    tmp.proto = user_settings_UserSettingsUtils.mergeTopLevelFields(tmp.ProtoClass, tmp.proto, proto);
     _modDef38(typeof tmp.proto !== "string", "UserSettingsProto cannot be a string");
-    obj = b64ToProto;
   } else {
     tmp.proto = proto;
     _modDef38(typeof tmp.proto !== "string", "UserSettingsProto cannot be a string");
@@ -58,18 +57,18 @@ function handleUserSettingsProtoUpdate(settings) {
     tmp.editInfo.loading = false;
   }
 }
-const UserSettingsTypes = MAX_FAVORITES.UserSettingsTypes;
-const createEmptyEditInfo = MAX_FAVORITES.createEmptyEditInfo;
-let obj = { ProtoClass: create.PreloadedUserSettings, proto: null, lazyLoaded: false, editInfo: null };
-const PreloadedUserSettings = create.PreloadedUserSettings;
-obj[1] = PreloadedUserSettings.create();
-obj[3] = createEmptyEditInfo();
-obj = { ProtoClass: create2.FrecencyUserSettings, proto: null, lazyLoaded: true, editInfo: null };
-const FrecencyUserSettings = create2.FrecencyUserSettings;
-obj[1] = FrecencyUserSettings.create();
-obj[3] = createEmptyEditInfo();
-let closure_7 = { [UserSettingsTypes.PRELOADED_USER_SETTINGS]: obj, [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj };
-let c8 = false;
+const UserSettingsTypes = UserSettingsConstants.UserSettingsTypes;
+const createEmptyEditInfo = UserSettingsConstants.createEmptyEditInfo;
+let obj = { ProtoClass: preloaded_user_settings.PreloadedUserSettings, proto: null, lazyLoaded: false, editInfo: null };
+const PreloadedUserSettings = preloaded_user_settings.PreloadedUserSettings;
+obj.proto = PreloadedUserSettings.create();
+obj.editInfo = createEmptyEditInfo();
+obj = { ProtoClass: frecency_user_settings.FrecencyUserSettings, proto: null, lazyLoaded: true, editInfo: null };
+const FrecencyUserSettings = frecency_user_settings.FrecencyUserSettings;
+obj.proto = FrecencyUserSettings.create();
+obj.editInfo = createEmptyEditInfo();
+const dependencyMap = { [UserSettingsTypes.PRELOADED_USER_SETTINGS]: obj, [UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: obj };
+let closure_8 = false;
 const PersistedStore = initializeDefault.PersistedStore;
 class UserSettingsProtoStore extends PersistedStore {
 }
@@ -77,7 +76,7 @@ const prototype = UserSettingsProtoStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   closure_0 = arg0;
   if (null != arg0) {
-    const item = applyDefault.forEach(closure_7, (ProtoClass) => {
+    const item = _modDef12.forEach(closure_7, (ProtoClass, arg1) => {
       const tmp = userSettings[Number(undefined, arg1)];
       if (null != tmp) {
         let str;
@@ -87,10 +86,10 @@ prototype["initialize"] = function initialize(arg0) {
         if (str == null) {
           str = "";
         }
-        const b64ToProtoResult = userSettings(closure_1_2[4]).b64ToProto(ProtoClass.ProtoClass, str);
+        const b64ToProtoResult = user_settings_UserSettingsUtils.b64ToProto(ProtoClass.ProtoClass, str);
         if (null != b64ToProtoResult) {
           ProtoClass.proto = b64ToProtoResult;
-          closure_1_1(tmp4[3])(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
+          _modDef38(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
           let protoToSave;
           if (tmp != null) {
             protoToSave = tmp.protoToSave;
@@ -100,32 +99,30 @@ prototype["initialize"] = function initialize(arg0) {
           }
           if (null != protoToSave) {
             if (null != tmp.offlineEditDataVersion) {
-              const b64ToProtoResult1 = tmp3(tmp4[4]).b64ToProto(ProtoClass.ProtoClass, protoToSave);
+              const b64ToProtoResult1 = tmp3(1223).b64ToProto(ProtoClass.ProtoClass, protoToSave);
               if (null != b64ToProtoResult1) {
                 ProtoClass.editInfo.protoToSave = b64ToProtoResult1;
                 ProtoClass.editInfo.offlineEditDataVersion = tmp.offlineEditDataVersion;
               }
-              const tmp3Result = tmp3(tmp4[4]);
+              const tmp3Result = tmp3(1223);
             }
           }
         }
-        obj = userSettings(closure_1_2[4]);
-        tmp3 = userSettings;
+        tmp3 = require;
       }
     });
-    const arr = applyDefault;
   }
 };
 prototype["getState"] = function getState() {
 
 };
 prototype["computeState"] = function computeState() {
-  return applyDefault.mapValues(closure_7, (ProtoClass) => {
-    obj = { proto: callback(table[4]).protoToB64(ProtoClass.ProtoClass, ProtoClass.proto) };
+  return _modDef12.mapValues(closure_7, (ProtoClass) => {
+    obj = { proto: user_settings_UserSettingsUtils.protoToB64(ProtoClass.ProtoClass, ProtoClass.proto) };
     if (tmp3) {
-      obj.protoToSave = callback(table[4]).protoToB64(ProtoClass.ProtoClass, ProtoClass.editInfo.protoToSave);
+      obj.protoToSave = user_settings_UserSettingsUtils.protoToB64(ProtoClass.ProtoClass, ProtoClass.editInfo.protoToSave);
       obj.offlineEditDataVersion = ProtoClass.editInfo.offlineEditDataVersion;
-      const tmpResult = callback(table[4]);
+      const tmpResult = user_settings_UserSettingsUtils;
     }
     return obj;
   });
@@ -147,7 +144,7 @@ Object.defineProperty(prototype, "frecencyWithoutFetchingLatest", {
 });
 Object.defineProperty(prototype, "wasMostRecentUpdateFromServer", {
   get: function wasMostRecentUpdateFromServer() {
-    return c8;
+    return closure_8;
   },
   set: undefined
 });
@@ -163,7 +160,7 @@ prototype["getGuildFolders"] = function getGuildFolders() {
   let mapped = null;
   if (null != folders) {
     mapped = folders.map((guildIds) => {
-      let value;
+      value = undefined;
       if (guildIds.id != null) {
         value = iter.value;
       }
@@ -177,18 +174,18 @@ prototype["getGuildFolders"] = function getGuildFolders() {
         const _Number = Number;
         NumberResult = Number(value);
       }
-      obj[1] = NumberResult;
+      obj.folderId = NumberResult;
       let value1;
       if (guildIds.name != null) {
         value1 = iter3.value;
       }
-      obj[2] = value1;
+      obj.folderName = value1;
       let NumberResult1;
       if (null != value) {
         const _Number2 = Number;
         NumberResult1 = Number(value);
       }
-      obj[3] = NumberResult1;
+      obj.folderColor = NumberResult1;
       return obj;
     });
   }
@@ -208,23 +205,23 @@ prototype["getGuildRecentsDismissedAt"] = function getGuildRecentsDismissedAt(_g
     }
     let num = 0;
     if (null != prop) {
-      const Timestamp = now.Timestamp;
+      const Timestamp = timestamp.Timestamp;
       num = Timestamp.toDate(prop).getTime();
       const toDateResult = Timestamp.toDate(prop);
     }
     return num;
   }
 };
-prototype["getDismissedGuildContent"] = function getDismissedGuildContent(closure_1) {
+prototype["getDismissedGuildContent"] = function getDismissedGuildContent(id) {
   let tmp = null;
-  if (null != closure_1) {
+  if (null != id) {
     const self = this;
     const guilds = this.settings.guilds;
     let prop;
     if (guilds != null) {
       const guilds2 = guilds.guilds;
       if (guilds2 != null) {
-        if (guilds2[closure_1] != null) {
+        if (guilds2[id] != null) {
           prop = tmp3.dismissedGuildContent;
         }
       }
@@ -233,13 +230,13 @@ prototype["getDismissedGuildContent"] = function getDismissedGuildContent(closur
   }
   return tmp;
 };
-prototype["getGuildDismissedContentState"] = function getGuildDismissedContentState(closure_0) {
+prototype["getGuildDismissedContentState"] = function getGuildDismissedContentState(guildId) {
   const guilds = this.settings.guilds;
   let prop;
   if (guilds != null) {
     const guilds2 = guilds.guilds;
     if (guilds2 != null) {
-      if (guilds2[closure_0] != null) {
+      if (guilds2[guildId] != null) {
         prop = tmp3.guildDismissibleContentStates;
       }
     }
@@ -247,8 +244,7 @@ prototype["getGuildDismissedContentState"] = function getGuildDismissedContentSt
   return prop;
 };
 prototype["getGuildsProto"] = function getGuildsProto() {
-  let guilds = this.settings.guilds;
-  guilds = undefined;
+  let guilds;
   if (guilds != null) {
     guilds = guilds.guilds;
   }
@@ -264,13 +260,13 @@ prototype["getDefaultGuildThemePreference"] = function getDefaultGuildThemePrefe
     prop = appearance.defaultGuildThemePreference;
   }
   if (prop == null) {
-    prop = create.GuildThemeSourcePreference.UNSPECIFIED;
+    prop = preloaded_user_settings.GuildThemeSourcePreference.UNSPECIFIED;
   }
   return prop;
 };
 prototype["getGuildThemeSourcePreferenceOverride"] = function getGuildThemeSourcePreferenceOverride(arg0) {
   if (null == arg0) {
-    let UNSPECIFIED = create.GuildThemeSourcePreference.UNSPECIFIED;
+    let UNSPECIFIED = preloaded_user_settings.GuildThemeSourcePreference.UNSPECIFIED;
   } else {
     const self = this;
     const guilds = this.settings.guilds;
@@ -284,14 +280,14 @@ prototype["getGuildThemeSourcePreferenceOverride"] = function getGuildThemeSourc
       }
     }
     if (UNSPECIFIED == null) {
-      UNSPECIFIED = create.GuildThemeSourcePreference.UNSPECIFIED;
+      UNSPECIFIED = preloaded_user_settings.GuildThemeSourcePreference.UNSPECIFIED;
     }
   }
   return UNSPECIFIED;
 };
 prototype["resolveGuildThemeSourcePreference"] = function resolveGuildThemeSourcePreference(arg0) {
   const guildThemeSourcePreferenceOverride = this.getGuildThemeSourcePreferenceOverride(arg0);
-  return resolveDefaultGuildThemePreference.resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, this.getDefaultGuildThemePreference());
+  return GuildThemeSourcePreferenceUtils.resolveGuildThemeSourcePreference(guildThemeSourcePreferenceOverride, this.getDefaultGuildThemePreference());
 };
 UserSettingsProtoStore.displayName = "UserSettingsProtoStore";
 UserSettingsProtoStore.persistKey = "UserSettingsProtoStore-Cache";
@@ -299,7 +295,7 @@ obj = {
   CACHE_LOADED: function handleCacheLoaded(userSettings) {
     userSettings = userSettings.userSettings;
     if (null != userSettings) {
-      const item = applyDefault.forEach(closure_7, (ProtoClass) => {
+      const item = _modDef12.forEach(closure_7, (ProtoClass, arg1) => {
         const tmp = userSettings[Number(undefined, arg1)];
         if (null != tmp) {
           let str;
@@ -309,10 +305,10 @@ obj = {
           if (str == null) {
             str = "";
           }
-          const b64ToProtoResult = userSettings(closure_1_2[4]).b64ToProto(ProtoClass.ProtoClass, str);
+          const b64ToProtoResult = user_settings_UserSettingsUtils.b64ToProto(ProtoClass.ProtoClass, str);
           if (null != b64ToProtoResult) {
             ProtoClass.proto = b64ToProtoResult;
-            closure_1_1(tmp4[3])(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
+            _modDef38(typeof ProtoClass.proto !== "string", "UserSettingsProto cannot be a string");
             let protoToSave;
             if (tmp != null) {
               protoToSave = tmp.protoToSave;
@@ -322,20 +318,18 @@ obj = {
             }
             if (null != protoToSave) {
               if (null != tmp.offlineEditDataVersion) {
-                const b64ToProtoResult1 = tmp3(tmp4[4]).b64ToProto(ProtoClass.ProtoClass, protoToSave);
+                const b64ToProtoResult1 = tmp3(1223).b64ToProto(ProtoClass.ProtoClass, protoToSave);
                 if (null != b64ToProtoResult1) {
                   ProtoClass.editInfo.protoToSave = b64ToProtoResult1;
                   ProtoClass.editInfo.offlineEditDataVersion = tmp.offlineEditDataVersion;
                 }
-                const tmp3Result = tmp3(tmp4[4]);
+                const tmp3Result = tmp3(1223);
               }
             }
           }
-          obj = userSettings(closure_1_2[4]);
-          tmp3 = userSettings;
+          tmp3 = require;
         }
       });
-      const arr = applyDefault;
     }
   },
   USER_SETTINGS_PROTO_UPDATE: handleUserSettingsProtoUpdate,
@@ -354,8 +348,8 @@ obj = {
       obj.proto = userSettingsProto;
       _modDef38(typeof obj.proto !== "string", "UserSettingsProto cannot be a string");
     }
-    obj = b64ToProto;
-    ({ isDirty, proto, cleanupFuncs } = obj.runMigrations(obj.proto, MAX_FAVORITESDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS]));
+    obj = user_settings_UserSettingsUtils;
+    ({ isDirty, proto, cleanupFuncs } = obj.runMigrations(obj.proto, UserSettingsMigrationsByTypeDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS]));
     if (isDirty) {
       if (null != tmp6.editInfo.timeout) {
         const _clearTimeout = clearTimeout;
@@ -399,7 +393,7 @@ obj = {
   CONNECTION_CLOSED: handleConnectionClosedOrResumed,
   CONNECTION_RESUMED: handleConnectionClosedOrResumed,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(userSettingsProto) {
-    obj = b64ToProto;
+    obj = user_settings_UserSettingsUtils;
     obj.proto = obj.b64ToPreloadedUserSettingsProto(userSettingsProto.userSettingsProto);
     _modDef38(typeof obj.proto !== "string", "UserSettingsProto cannot be a string");
   },
@@ -428,11 +422,11 @@ obj = {
     const item1 = values.forEach((ProtoClass) => {
       ProtoClass = ProtoClass.ProtoClass;
       ProtoClass.proto = ProtoClass.create();
-      ProtoClass.editInfo = callback();
+      ProtoClass.editInfo = createEmptyEditInfo();
     });
   }
 };
-const userSettingsProtoStore = new UserSettingsProtoStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/user_settings/UserSettingsProtoStore.tsx");
+const userSettingsProtoStore = new UserSettingsProtoStore(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoStore.tsx");
 
 export default userSettingsProtoStore;

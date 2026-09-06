@@ -1,29 +1,31 @@
-// === Module 16620: ? ===
+// === Module 16620: ThreadCreationTitleInput ===
 
-// Module 16620
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { MAX_CHANNEL_NAME_LENGTH } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16620 (ThreadCreationTitleInput)
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7274 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 7777 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef) => {
+const require = fn;
+const MAX_CHANNEL_NAME_LENGTH = fn(1074).MAX_CHANNEL_NAME_LENGTH;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx");
+
+export default noop.memo(noop.forwardRef((chatInputRef, ref) => {
   chatInputRef = chatInputRef.chatInputRef;
   const threadSettingsDraft = chatInputRef.threadSettingsDraft;
   const optional = chatInputRef.optional;
-  let ref;
-  dependencyMap = arg1;
-  let obj = chatInputRef(16621);
-  obj = { content: threadSettingsDraft.name };
+  ref = undefined;
+  dependencyMap = ref;
+  chatInputRef(16621);
+  let obj = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
   const items = [threadSettingsDraft.parentChannelId];
   const items1 = [threadSettingsDraft];
   const callback = ref.useCallback((current) => {
     if (null != threadSettingsDraft.parentChannelId) {
-      let obj = threadSettingsDraft(ref[5]);
-      obj = { name: null };
-      obj[0] = threadSettingsDraft(ref[6])(current, false);
+      const obj = { name: sanitizeThreadNameDefault(current, false) };
       obj.changeThreadSettings(tmp.parentChannelId, obj);
       ref.current = current;
     }
@@ -31,25 +33,23 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   const callback1 = ref.useCallback(() => {
     if (null != threadSettingsDraft.name) {
       if (null != tmp.parentChannelId) {
-        const tmp4 = threadSettingsDraft(ref[6])(tmp.name, true);
+        const tmp4 = sanitizeThreadNameDefault(tmp.name, true);
         if (tmp4 !== tmp.name) {
-          const obj = { name: null };
-          obj[0] = tmp4;
-          tmp2(tmp3[5]).changeThreadSettings(tmp.parentChannelId, obj);
-          const tmp2Result = tmp2(tmp3[5]);
+          const obj = { name: tmp4 };
+          tmp2(7777).changeThreadSettings(tmp.parentChannelId, obj);
+          const tmp2Result = tmp2(7777);
         }
-        tmp2 = threadSettingsDraft;
-        tmp3 = ref;
+        tmp2 = importDefault;
       }
     }
   }, items1);
   const items2 = [chatInputRef];
   const callback2 = ref.useCallback(() => {
-    let obj = chatInputRef(ref[7]);
-    obj = { type: chatInputRef(ref[8]).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
+    chatInputRef(ref[7]);
+    const obj = { type: chatInputRef(ref[8]).KeyboardTypes.SYSTEM, context: { keyboardWillOpen: true } };
     obj.setKeyboardType(obj);
   }, []);
-  const items3 = [threadSettingsDraft.name, arg1];
+  const items3 = [threadSettingsDraft.name, ref];
   const callback3 = ref.useCallback(() => {
     const current = chatInputRef.current;
     if (current != null) {
@@ -71,8 +71,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
     }
   }, items3);
   const renderErrorResult = obj.renderError(chatInputRef.threadNameError, obj);
-  const items4 = [closure_4];
-  const stateFromStores = chatInputRef(504).useStateFromStores(items4, () => closure_1_4.getChannel(threadSettingsDraft.parentChannelId));
+  const items4 = [ChannelStore];
+  const stateFromStores = chatInputRef(504).useStateFromStores(items4, () => ChannelStore.getChannel(threadSettingsDraft.parentChannelId));
   let str = "";
   if (null != stateFromStores) {
     str = tmp(9305).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
@@ -92,21 +92,18 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
     const intl2 = tmp(1114).intl;
     stringResult1 = intl2.string(tmp(1114).t["/+VEZN"]);
   }
-  obj[3] = stringResult1;
-  obj[4] = !optional;
-  obj[7] = MAX_CHANNEL_NAME_LENGTH;
-  obj[8] = callback3;
-  obj[9] = callback2;
-  obj[10] = callback1;
-  obj[11] = callback;
+  obj.accessibilityHint = stringResult1;
+  obj.required = !optional;
+  obj.maxLength = MAX_CHANNEL_NAME_LENGTH;
+  obj.onSubmitEditing = callback3;
+  obj.onFocus = callback2;
+  obj.onBlur = callback1;
+  obj.onChange = callback;
   if ("" === str) {
     const intl3 = tmp(1114).intl;
     str = intl3.string(tmp(1114).t["Nb2/RE"]);
   }
-  obj[12] = str;
-  obj[13] = arg1;
+  obj.placeholder = str;
+  obj.ref = ref;
   return jsx(chatInputRef(6606).TextInput, { defaultValue: threadSettingsDraft(5586)(ref), errorMessage: renderErrorResult, label: stringResult, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onFocus: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" });
 }));
-const result = require("set").fileFinishedImporting("modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx");
-
-export default memoResult;

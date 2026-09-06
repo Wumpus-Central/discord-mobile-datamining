@@ -1,108 +1,231 @@
-// === Module 16058: renderCard ===
+// === Module 16058: HappeningNow ===
 
-// Module 16058 (renderCard)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16058 (HappeningNow)
+import _mod12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
+import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 11354 */;
+import HappeningNowAnalytics from "HappeningNowAnalytics" /* 16059 */;
+import happeningNowRankingUtils from "happeningNowRankingUtils" /* 16067 */;
 import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 16069 */;
+import HappeningNowCardLiveStageDefault from "HappeningNowCardLiveStage" /* 16070 */;
 import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 16072 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createFakeSharedValue from "createFakeSharedValue" /* 7074 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import { Gesture } from "LegacyBaseButton" /* 6655 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16073 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16085 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16086 */;
+import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 16087 */;
+import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 16089 */;
+import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 16090 */;
+import HappeningNowActions from "HappeningNowActions" /* 16091 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function renderCard(kind, fullWidth) {
   if ("placeholder" !== kind.kind) {
     if (!fullWidth.loading) {
-      kind = kind.kind;
-      let obj = {};
-      const merged = Object.assign(kind);
-      const merged1 = Object.assign(fullWidth);
-      obj.cardKey = keyExtractor(kind);
-      return jsx(HappeningNowCardUnifiedVCDefault, {});
+      switch (kind.kind) {
+        case "live-guild-stage":
+          let obj = {};
+          const merged = Object.assign(kind);
+          const merged1 = Object.assign(fullWidth);
+          return jsx(HappeningNowCardLiveStageDefault, {});
+        case "guild-event":
+          obj = {};
+          const merged2 = Object.assign(kind);
+          const merged3 = Object.assign(fullWidth);
+          return jsx(HappeningNowCardEventDefault, {});
+        case "active-channel":
+          const obj1 = {};
+          const merged4 = Object.assign(kind);
+          const merged5 = Object.assign(fullWidth);
+          return jsx(HappeningNowCardActiveChannelDefault, {});
+        case "user":
+          const obj2 = {};
+          const merged6 = Object.assign(kind);
+          const merged7 = Object.assign(fullWidth);
+          return jsx(HappeningNowCardUserDefault, {});
+        case "activity":
+          const obj3 = {};
+          const merged8 = Object.assign(kind);
+          const merged9 = Object.assign(fullWidth);
+          return jsx(HappeningNowCardActivityDefault, {});
+        case "voice":
+          const obj4 = {};
+          const merged10 = Object.assign(kind);
+          const merged11 = Object.assign(fullWidth);
+          return jsx(HappeningNowCardVoiceDefault, {});
+        case "invite":
+          const obj5 = {};
+          const merged12 = Object.assign(kind);
+          const merged13 = Object.assign(fullWidth);
+          return jsx(HappeningNowActions.HappeningNowCardInvite, {});
+        case "customize-guild":
+          const obj6 = {};
+          const merged14 = Object.assign(kind);
+          const merged15 = Object.assign(fullWidth);
+          return jsx(HappeningNowActions.HappeningNowCardCustomizeGuild, {});
+        case "create-channel":
+          const obj7 = {};
+          const merged16 = Object.assign(kind);
+          const merged17 = Object.assign(fullWidth);
+          return jsx(HappeningNowActions.HappeningNowCardCreateChannel, {});
+        case "student-hub-add-channel":
+          const obj8 = {};
+          const merged18 = Object.assign(kind);
+          const merged19 = Object.assign(fullWidth);
+          return jsx(HappeningNowActions.HappeningNowStudentHubAddServer, {});
+        case "embedded-activity":
+          const obj9 = {};
+          const merged20 = Object.assign(kind);
+          const merged21 = Object.assign(fullWidth);
+          obj9.cardKey = keyExtractor(kind);
+          return jsx(HappeningNowCardEmbeddedActivityDefault, {});
+        case "unified-vc":
+          obj = {};
+          const merged22 = Object.assign(kind);
+          const merged23 = Object.assign(fullWidth);
+          obj.cardKey = keyExtractor(kind);
+          return jsx(HappeningNowCardUnifiedVCDefault, {});
+        default:
+          GlobalUtils.assertNever(kind);
+      }
     }
   }
-  obj = { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant };
   return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
-function keyExtractor(voiceState) {
-  ({ kind, kind: kind2 } = voiceState);
-  let userId = voiceState.voiceState.channelId;
-  if (userId == null) {
-    userId = voiceState.userId;
+function keyExtractor(kind) {
+  switch (kind.kind) {
+    case "placeholder":
+      const _HermesInternal7 = HermesInternal;
+      return "" + kind.kind + "-" + kind.index;
+    case "live-guild-stage":
+      const _HermesInternal6 = HermesInternal;
+      return "" + kind.kind + "-" + kind.stage.id;
+    case "guild-event":
+      const _HermesInternal5 = HermesInternal;
+      return "" + kind.kind + "-" + kind.event.id;
+    case "active-channel":
+      const _HermesInternal4 = HermesInternal;
+      return "" + kind.kind + "-" + kind.channelId;
+    case "user":
+      ({ kind: kind3, userId: userId3 } = kind);
+      let _HermesInternal3 = HermesInternal;
+      let combined = "" + kind3 + "-" + userId3;
+      return combined;
+    case "activity":
+      ({ kind: kind3, userId: userId3 } = kind);
+      _HermesInternal3 = HermesInternal;
+      combined = "" + kind3 + "-" + userId3;
+      return combined;
+    case "voice":
+      ({ kind: kind2, voiceState } = kind);
+      let userId2 = voiceState.channelId;
+      if (userId2 == null) {
+        userId2 = kind.userId;
+      }
+      let _HermesInternal2 = HermesInternal;
+      let combined1 = "" + kind2 + "-" + userId2;
+      return combined1;
+    case "unified-vc":
+      ({ kind: kind2, voiceState } = kind);
+      userId2 = voiceState.channelId;
+      if (userId2 == null) {
+        userId2 = kind.userId;
+      }
+      _HermesInternal2 = HermesInternal;
+      combined1 = "" + kind2 + "-" + userId2;
+      return combined1;
+    case "invite":
+      return kind.kind;
+    case "customize-guild":
+      return kind.kind;
+    case "create-channel":
+      return kind.kind;
+    case "student-hub-add-channel":
+      return kind.kind;
+    case "embedded-activity":
+      kind = kind.kind;
+      let userId = kind.voiceState.channelId;
+      if (userId == null) {
+        userId = kind.userId;
+      }
+      const _HermesInternal = HermesInternal;
+      return "" + kind + "-" + userId + "-" + kind.activity.applicationId;
+    default:
+      GlobalUtils.assertNever(kind);
   }
-  return "" + kind2 + "-" + userId + "-" + voiceState.activity.applicationId;
 }
 function getItemType(kind) {
   return kind.kind;
 }
-let c4 = importAllResult;
-({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: error, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: c9 } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
-const context = importAllResult.createContext(createFakeSharedValue.createFakeSharedValue([]));
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const HappeningNowConstants = fn(15294);
+({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_9 } = HappeningNowConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsx = fn(21).jsx;
+const ReanimatedHelperTypes = fn(7074);
+const context = noop.createContext(ReanimatedHelperTypes.createFakeSharedValue([]));
+const createStyles = fn(4560);
 let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: null };
-obj = { paddingHorizontal: ThemesDefault.space.PX_8, flex: 1 };
-obj[1] = obj;
-let closure_13 = createCacheKey.createStyles(obj);
-let closure_14 = Gesture.Native().disallowInterruption(true);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  let obj = { gesture: closure_14, children: null };
+obj = { paddingHorizontal: nativeDefault.space.PX_8, flex: 1 };
+obj.loading = obj;
+let closure_13 = createStyles.createStyles(obj);
+const Gesture = fn(6655).Gesture;
+const gesture = Gesture.Native().disallowInterruption(true);
+const forwardRefResult = noop.forwardRef((arg0, ref) => {
+  let obj = { gesture, children: null };
   obj = { ref };
   const merged = Object.assign(arg0);
-  obj[1] = <closure_5 ref={arg1} />;
+  obj.children = <hasOwnProperty ref={arg1} />;
   return jsx(LegacyBaseButton.GestureDetector, { ref });
 });
 forwardRefResult.displayName = "HappeningNowScrollView";
 const NativeResult = Gesture.Native();
-const memoResult = importAllResult.memo((listRef) => {
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
+
+export default noop.memo((listRef) => {
   listRef = listRef.listRef;
-  let obj = listRef;
+  let children;
+  _slicedToArray = undefined;
   let ref;
-  let isFocused;
-  let callback;
-  importAllResult = undefined;
-  c5 = undefined;
-  let num;
   let sharedValue;
   let callback2;
-  let tmp = callback2();
-  obj = obj(isFocused[14]);
-  isFocused = obj.useIsFocused();
-  ref = isFocused;
-  const tmp7 = callback(ref(isFocused[15])(listRef.cards, { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: null, isFocused }), 2);
-  let first = tmp7[0];
-  isFocused = first;
-  callback = tmp8;
-  obj1 = importAllResult;
-  ref = importAllResult.useRef(0);
-  importAllResult = ref;
-  obj = { data: first, isFocused, loading: tmp8 };
-  isFocused = undefined;
-  callback = undefined;
-  importAllResult = undefined;
+  let tmp = closure_13();
+  let obj = listRef(children[14]);
+  let isFocused = obj.useIsFocused();
+  const tmp7 = _slicedToArray(isFocused(children[15])(listRef.cards, { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: null, isFocused }), 2);
+  children = tmp7[0];
+  _slicedToArray = tmp8;
+  let obj1 = ref;
+  ref = ref.useRef(0);
+  obj = { data: children, isFocused, loading: tmp8 };
+  closure_129_0 = obj;
+  closure_129_1 = ref;
   isFocused = obj.isFocused;
-  callback = importAllResult.useRef(obj);
-  const tmp11 = ref(isFocused[10])(() => {
-    obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: data.map((arg0) => table[arg0.kind]) };
-    data = closure_3.current.data;
-    const merged = Object.assign(obj(isFocused[11]).getAffinityProperties(closure_3.current.data));
+  closure_129_2 = isFocused;
+  closure_129_3 = ref.useRef(obj);
+  const tmp11 = isFocused(children[10])(() => {
+    const obj = { context: "messages", num_cards: loading.current.data.length, max_viewed_card_index: Math.min(isFocused.current, loading.current.data.length), card_types: null };
+    const data = loading.current.data;
+    obj.card_types = data.map((item) => closure_1_9[item.kind]);
+    const merged = Object.assign(HappeningNowAnalytics.getAffinityProperties(loading.current.data));
     return obj;
   });
-  importAllResult = tmp11;
-  const effect = importAllResult.useEffect(() => {
-    closure_3.current = obj;
+  closure_129_4 = tmp11;
+  const effect = ref.useEffect(() => {
+    closure_3.current = listRef;
   });
   const items = [isFocused, tmp11];
-  const effect1 = importAllResult.useEffect(() => {
-    let tmp = !isFocused;
-    if (!isFocused) {
-      const current = closure_3.current;
-      const loading = current.loading;
+  const effect1 = ref.useEffect(() => {
+    let tmp = !first;
+    if (!first) {
+      const current = loading.current;
+      loading = current.loading;
       let tmp3 = !loading;
       if (!loading) {
         tmp3 = current.data.length > 0;
@@ -110,114 +233,95 @@ const memoResult = importAllResult.memo((listRef) => {
       tmp = tmp3;
     }
     if (tmp) {
-      ref(isFocused[12]).track(closure_1_10.ACTIVITY_CARDS_VIEWED, ref());
-      obj = ref(isFocused[12]);
+      AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARDS_VIEWED, ref());
     }
   }, items);
-  ref(isFocused[13])(() => () => {
+  isFocused(children[13])(() => () => {
     const current = ref.current;
-    const loading = current.loading;
+    loading = current.loading;
     let tmp = !loading;
     if (!loading) {
       tmp = current.data.length > 0;
     }
     if (tmp) {
-      closure_1_1(closure_1_2[12]).track(closure_1_10.ACTIVITY_CARDS_VIEWED, callback());
-      obj = closure_1_1(closure_1_2[12]);
+      isFocused(first[12]).track(constants.ACTIVITY_CARDS_VIEWED, closure_1_4());
+      const obj = isFocused(first[12]);
     }
   });
   const items1 = [isFocused, listRef];
-  const effect2 = importAllResult.useEffect(() => {
-    if (!ref) {
-      const current = obj.current;
+  const effect2 = ref.useEffect(() => {
+    if (!isFocused) {
+      const current = listRef.current;
       if (current != null) {
         current.scrollToOffset({ offset: 0, animated: false });
       }
-      closure_4.current = 0;
+      ref.current = 0;
     }
   }, items1);
-  const findIndexResult = first.findIndex((arg0) => {
-    obj = obj(isFocused[18]);
-    return obj.cardSize(arg0) === callback2;
-  });
+  const findIndexResult = children.findIndex((item) => listRef(first[18]).cardSize(item) === callback2);
   c5 = findIndexResult;
-  num = Infinity;
+  let num = Infinity;
   if (findIndexResult >= 0) {
     num = sharedValue * findIndexResult;
   }
   const items2 = [findIndexResult, num];
-  callback = obj1.useCallback((arg0, arg1) => {
+  const callback = obj1.useCallback((arg0, arg1) => {
     const sum = arg1 + arg0;
     if (sum < num) {
-      let sum1 = sum / sharedValue | 0;
+      let sum1 = sum / React5 | 0;
     } else {
-      sum1 = c5 + ((sum - tmp2) / callback2 | 0);
+      sum1 = c5 + ((sum - tmp2) / React6 | 0);
     }
     if (sum1 > ref.current) {
       ref.current = sum1;
     }
   }, items2);
-  const tmp6Result = callback(ref(isFocused[19])(num, callback), 2);
+  const tmp6Result = _slicedToArray(isFocused(children[19])(num, callback), 2);
   if (tmp6Result[1]) {
     const tmp20 = sharedValue;
   }
-  const items3 = [first];
+  const items3 = [children];
   const memo = obj1.useMemo(() => {
-    obj = obj(isFocused[18]);
-    const result = obj.filterHappeningNowCards(isFocused);
-    return obj(isFocused[18]).sortHappeningNowCards(result);
+    const result = happeningNowRankingUtils.filterHappeningNowCards(first);
+    return happeningNowRankingUtils.sortHappeningNowCards(result);
   }, items3);
   let tmp2Result = tmp2(tmp3[19]);
   const items4 = [tmp7[1]];
   const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj1.useCallback((index) => closure_1_16(index.item, { index: index.index, loading: closure_3, panelVariant: true }), items4);
+  const callback1 = obj1.useCallback((index) => renderCard(index.item, { index: index.index, loading, panelVariant: true }), items4);
   tmp2Result = tmp2(tmp3[20]);
   sharedValue = tmp2Result.useSharedValue([]);
   const items5 = [sharedValue];
   callback2 = obj1.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
-    obj = obj(isFocused[21]);
-    const result = obj.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => callback(item.item)));
+    const result = updateSharedValueIfChanged.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => closure_1_17(item.item)));
   }, items5);
   const items6 = [callback2];
-  const memo1 = obj1.useMemo(() => {
-    obj = obj(isFocused[22]);
-    return obj.debounce(callback2, 130);
-  }, items6);
-  if (0 === first.length) {
+  const memo1 = obj1.useMemo(() => _mod12.debounce(callback2, 130), items6);
+  if (0 === children.length) {
     if (!tmp8) {
       return <num />;
     }
   }
   if (!tmp7[1]) {
-    obj = { value: null, children: null };
-    obj[0] = sharedValue;
-    obj1 = { value: null, children: null };
-    obj1[0] = tmp9(ref(isFocused[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations;
-    const obj2 = { ref: null, horizontal: true, renderScrollComponent: null, decelerationRate: "fast", onScroll: null, snapToInterval: null, snapToOffsets: null, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
-    obj2[0] = listRef;
-    obj2[2] = closure_15;
-    obj2[4] = tmp6Result[0];
-    obj2[5] = tmp20;
-    obj2[6] = happeningNowScrollSnapping;
+    obj = { value: sharedValue, children: null };
+    obj1 = { value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
+    const obj2 = { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], snapToInterval: tmp20, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
     const intl = tmp2(tmp3[24]).intl;
-    obj2[8] = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
-    obj2[9] = tmp.containerInner;
-    obj2[10] = memo;
-    obj2[11] = callback1;
-    obj2[12] = memo1;
-    obj2[13] = keyExtractor;
-    obj2[14] = getItemType;
-    obj1[1] = tmp29(tmp2(tmp3[23]).FlashList, obj2);
-    obj[1] = tmp29(tmp2(tmp3[16]).AnalyticsLocationProvider, obj1);
+    obj2.accessibilityLabel = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
+    obj2.contentContainerStyle = tmp.containerInner;
+    obj2.data = memo;
+    obj2.renderItem = callback1;
+    obj2.onViewableItemsChanged = memo1;
+    obj2.keyExtractor = keyExtractor;
+    obj2.getItemType = getItemType;
+    obj1.children = tmp29(tmp2(tmp3[23]).FlashList, obj2);
+    obj.children = tmp29(tmp2(tmp3[16]).AnalyticsLocationProvider, obj1);
     tmp29(context.Provider, obj);
   }
   const obj3 = { style: tmp.loading, children: null };
-  first = renderCard(first.length > 0 ? first[0] : { kind: "placeholder", index: 0 }, { index: 0, loading: tmp8, fullwidth: true, panelVariant: true });
-  obj3[1] = first;
+  children = renderCard(children.length > 0 ? children[0] : { kind: "placeholder", index: 0 }, { index: 0, loading: tmp8, fullwidth: true, panelVariant: true });
+  obj3.children = children;
   <num style={tmp.loading}>{null}</num>;
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
-
-export default memoResult;
 export const ViewableHappeningNowCardKeysContext = context;

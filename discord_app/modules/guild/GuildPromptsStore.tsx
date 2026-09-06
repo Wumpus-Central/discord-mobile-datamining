@@ -1,23 +1,20 @@
-// === Module 12650: initialize ===
+// === Module 12650: GuildPromptsStore ===
 
-// Module 12650 (initialize)
+// Module 12650 (GuildPromptsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let closure_0 = {};
+const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class GuildPromptsStore extends PersistedStore {
 }
 const prototype = GuildPromptsStore.prototype;
 prototype["initialize"] = function initialize(obj) {
   for (const key10004 in arg0) {
-    let tmp = key10004;
-    let tmp2 = closure_0;
     let _Set = Set;
     let tmp3 = new.target;
     let tmp4 = new.target;
     let set = new Set(arg0[key10004]);
-    let tmp6 = set;
     closure_0[key10004] = set;
     continue;
   }
@@ -34,7 +31,7 @@ prototype["getState"] = function getState() {
 };
 GuildPromptsStore.displayName = "GuildPromptsStore";
 GuildPromptsStore.persistKey = "GuildPromptsStore";
-const guildPromptsStore = new GuildPromptsStore(dispatcherDefault, {
+const guildPromptsStore = new GuildPromptsStore(DispatcherDefault, {
   GUILD_PROMPT_VIEWED: function handleGuildPromptViewed(arg0) {
     ({ prompt: _prompt, guildId } = arg0);
     if (null == dependencyMap[guildId]) {
@@ -43,7 +40,6 @@ const guildPromptsStore = new GuildPromptsStore(dispatcherDefault, {
       tmp[guildId] = set;
       tmp[guildId].add(_prompt);
       let flag = true;
-      const obj2 = tmp[guildId];
     } else {
       const hasItem = obj.has(_prompt);
       flag = !hasItem;
@@ -65,6 +61,7 @@ const guildPromptsStore = new GuildPromptsStore(dispatcherDefault, {
     return flag;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild/GuildPromptsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/GuildPromptsStore.tsx");
 
 export default guildPromptsStore;

@@ -1,45 +1,47 @@
 // === Module 17205: VoicePanelDrawerToggleButton ===
 
 // Module 17205 (VoicePanelDrawerToggleButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import setDefault from "set" /* 5589 */;
+import nativeDefault from "native" /* 576 */;
+import NativeViewDefault from "NativeView" /* 5589 */;
 import useDrawerToggleDefault from "useDrawerToggle" /* 17170 */;
-import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 17184 */;
-import AnimatedButtonWrapperDefault from "AnimatedButtonWrapper" /* 17185 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import VoicePanelStyles from "VoicePanelStyles" /* 17184 */;
+import VoicePanelAnimatedButtonWrapperDefault from "VoicePanelAnimatedButtonWrapper" /* 17185 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { circle: null, iconContainer: null };
-createCacheKey = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+const createStyles = { circle: null, iconContainer: null };
+let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
+createStyles.circle = size;
+createStyles.iconContainer = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
+let closure_5 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelDrawerToggleButton.tsx");
 
 export default function VoicePanelDrawerToggleButton(arg0) {
   ({ props, openTab, wrapperSpecs } = arg0);
-  const tmp = callback2();
-  let obj = useVoicePanelButtonStyles;
+  const tmp = closure_5();
+  let obj = VoicePanelStyles;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
   ({ isDrawerOpen, handlePress, accessibilityLabel } = useDrawerToggleDefault(openTab));
-  obj = { onPress: handlePress, props, accessibilityLabel, children: null };
+  const element = { onPress: handlePress, props, accessibilityLabel, children: null };
   const tmp5 = useDrawerToggleDefault(openTab);
-  const tmp6 = closure_4;
+  const tmp6 = React4;
+  obj = { style: null };
   const items = [tmp.circle, { backgroundColor: voicePanelButtonStyles.iconBg.backgroundColor }];
-  const items1 = [callback(setDefault, { style: items }), ];
+  obj.style = items;
+  const items1 = [React3(NativeViewDefault, obj), ];
   obj = { style: tmp.iconContainer, children: null };
-  const tmp7 = AnimatedButtonWrapperDefault;
+  const tmp7 = VoicePanelAnimatedButtonWrapperDefault;
   if (isDrawerOpen) {
     let ChevronSmallUpIcon = tmp2(11153).ChevronSmallDownIcon;
   } else {
     ChevronSmallUpIcon = tmp2(13573).ChevronSmallUpIcon;
   }
-  obj[1] = callback(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
-  items1[1] = callback(setDefault, obj);
-  obj[3] = items1;
-  return tmp6(tmp7, obj);
+  obj.children = React3(ChevronSmallUpIcon, { color: voicePanelButtonStyles.iconFill.color });
+  items1[1] = React3(NativeViewDefault, obj);
+  element.children = items1;
+  return tmp6(tmp7, element);
 };

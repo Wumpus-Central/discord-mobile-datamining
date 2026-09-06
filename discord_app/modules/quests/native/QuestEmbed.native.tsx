@@ -1,30 +1,28 @@
-// === Module 13223: createQuestsEmbed ===
+// === Module 13223: QuestEmbed ===
 
-// Module 13223 (createQuestsEmbed)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
-import InviteSendStates from "InviteSendStates" /* 7736 */;
+// Module 13223 (QuestEmbed)
+import _mod17 from "module_17" /* 17 */;
+import Constants from "Constants" /* 1074 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import Constants2 from "Constants" /* 7736 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import registerAssetDefault from "registerAsset" /* 13224 */;
-import closure_4 from "handleThemeChange" /* 1183 */;
-import closure_5 from "initializeState" /* 7703 */;
-import QuestsExperimentLocations from "QuestsExperimentLocations" /* 5444 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import QuestStore from "QuestStore" /* 7703 */;
+import QuestConstants from "QuestConstants" /* 5444 */;
+import size from "module_2" /* 2 */;
 
-const Image = get_ActivityIndicator.Image;
-({ QuestsExperimentLocations: closure_6, QuestEmbedFallbackReason: error } = QuestsExperimentLocations);
-const ThemeTypes = ME.ThemeTypes;
-const InviteTypes = InviteSendStates.InviteTypes;
-let result = set.fileFinishedImporting("modules/quests/native/QuestEmbed.native.tsx");
+const Image = _mod17.Image;
+({ QuestsExperimentLocations: metroRequire, QuestEmbedFallbackReason: closure_7 } = QuestConstants);
+const ThemeTypes = Constants.ThemeTypes;
+const InviteTypes = Constants2.InviteTypes;
+let result = size.fileFinishedImporting("modules/quests/native/QuestEmbed.native.tsx");
 
 export const createQuestsEmbed = function createQuestsEmbed(questId) {
   questId = questId.questId;
-  let merged5 = importDefault;
   let acceptBlurpleLabelBackgroundColor = dependencyMap;
   ({ theme, currentUser } = questId);
   let acceptLabelGreenColor = getEmbedThemeColorsDefault(theme);
-  let obj = isMetaQuest;
+  let obj = MetaQuestUtils;
   if (obj.isMetaQuest()) {
     const intl9 = tmp2(1114).intl;
     const intl10 = tmp2(1114).intl;
@@ -35,7 +33,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     obj.headerColor = colors5.headerColor;
     obj.titleText = intl9.string(tmp2(1114).t["6LxbQM"]);
     ({ titleColor: obj25.titleColor, bodyTextColor: obj25.subtitleColor, bodyTextColor: obj25.bodyTextColor } = colors5);
-    obj.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
+    obj.thumbnailUrl = Image.resolveAssetSource(tmp(13224)).uri;
     obj.embedCanBeTapped = true;
     obj.canBeAccepted = true;
     obj.type = InviteTypes.GUILD;
@@ -63,13 +61,12 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     isAndroidResult = tmp2Result.isAndroid();
   } else {
     tmp2Result = tmp2(7699);
-    const result = tmp2Result.findQuestOrReplacement(questId, closure_5.quests, closure_5.excludedQuests);
-    const excludedQuests = closure_5.excludedQuests;
-    const value = excludedQuests.get(questId);
+    const result = tmp2Result.findQuestOrReplacement(questId, QuestStore.quests, QuestStore.excludedQuests);
+    const excludedQuests = QuestStore.excludedQuests;
+    value = excludedQuests.get(questId);
     if (null == result) {
       if (tmp3.isFetchingCurrentQuests) {
-        obj1 = { themeColors: null };
-        obj1[0] = acceptLabelGreenColor;
+        const obj1 = { themeColors: acceptLabelGreenColor };
         ({ bodyText, themeColors } = obj1);
         const colors4 = themeColors.colors;
         const obj2 = {};
@@ -88,11 +85,9 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         if (isAndroidResult1) {
           obj3.headerText = null;
           obj3.subtitle = bodyText;
-          let tmp75 = obj3;
         } else {
           obj3.headerText = undefined;
           obj3.subtitle = bodyText;
-          tmp75 = obj3;
         }
         isAndroidResult1 = tmp2(1115).isAndroid();
       }
@@ -106,31 +101,26 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         const stringResult2 = intl13.string(tmp2(1114).t.Ow5AQI);
         const colors6 = acceptLabelGreenColor.colors;
         const obj4 = {};
-        merged5 = Object.assign(acceptLabelGreenColor.baseColors);
+        const merged5 = Object.assign(acceptLabelGreenColor.baseColors);
         obj4.headerColor = colors6.headerColor;
         obj4.titleText = intl12.string(tmp2(1114).t["rxf+nx"]);
         ({ titleColor: obj34.titleColor, bodyTextColor: obj34.subtitleColor, bodyTextColor: obj34.bodyTextColor } = colors6);
-        obj4.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
+        obj4.thumbnailUrl = Image.resolveAssetSource(tmp(13224)).uri;
         obj4.embedCanBeTapped = true;
         obj4.canBeAccepted = true;
-        merged5 = InviteTypes;
         obj4.type = InviteTypes.GUILD;
         const stringResult1 = intl12.string(tmp2(1114).t["rxf+nx"]);
         const obj5 = {};
-        merged5 = obj5;
-        merged5 = obj4;
-        merged5 = tmp2(1115).isAndroid();
-        merged5 = Object.assign(obj4);
-        if (merged5) {
+        const tmp2Result3 = tmp2(1115);
+        const merged6 = Object.assign(obj4);
+        if (isAndroidResult2) {
           obj5.headerText = null;
           obj5.subtitle = stringResult2;
-          let tmp52 = obj5;
         } else {
           obj5.headerText = undefined;
           obj5.subtitle = stringResult2;
-          tmp52 = obj5;
         }
-        const tmp2Result3 = tmp2(1115);
+        isAndroidResult2 = tmp2(1115).isAndroid();
       }
       const result2 = tmp2(7718).trackQuestEmbedFallbackViewed(questId, constants2.EXCLUDED_QUEST);
       const intl7 = tmp2(1114).intl;
@@ -139,28 +129,26 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
       const stringResult4 = intl8.string(tmp2(1114).t.ii4mJo);
       const colors3 = acceptLabelGreenColor.colors;
       const obj6 = {};
-      const merged6 = Object.assign(acceptLabelGreenColor.baseColors);
+      const merged7 = Object.assign(acceptLabelGreenColor.baseColors);
       obj6.headerColor = colors3.headerColor;
       obj6.titleText = intl7.string(tmp2(1114).t.Dd6Daw);
       ({ titleColor: obj18.titleColor, bodyTextColor: obj18.subtitleColor, bodyTextColor: obj18.bodyTextColor } = colors3);
-      obj6.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
+      obj6.thumbnailUrl = Image.resolveAssetSource(tmp(13224)).uri;
       obj6.embedCanBeTapped = true;
       obj6.canBeAccepted = true;
       obj6.type = InviteTypes.GUILD;
       const stringResult3 = intl7.string(tmp2(1114).t.Dd6Daw);
       const obj7 = {};
       const tmp2Result5 = tmp2(1115);
-      const merged7 = Object.assign(obj6);
-      if (isAndroidResult2) {
+      const merged8 = Object.assign(obj6);
+      if (isAndroidResult3) {
         obj7.headerText = null;
         obj7.subtitle = stringResult4;
-        let tmp65 = obj7;
       } else {
         obj7.headerText = undefined;
         obj7.subtitle = stringResult4;
-        tmp65 = obj7;
       }
-      isAndroidResult2 = tmp2(1115).isAndroid();
+      isAndroidResult3 = tmp2(1115).isAndroid();
     } else {
       if (tmp2Result6.isShareableQuest(result.config)) {
         const userStatus = result.userStatus;
@@ -174,37 +162,29 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         const tmp21 = null != enrolledAt;
         const tmp2Result7 = tmp2(4411);
         const intl3 = tmp2(1114).intl;
-        const obj8 = { questName: null };
-        obj8[0] = result.config.messages.questName;
+        const obj8 = { questName: result.config.messages.questName };
         const gamePublisher = result.config.messages.gamePublisher;
         const _Date2 = Date;
-        const tmp29 = tmp2(4411).isThemeDark(state.getState().theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
+        const tmp29 = tmp2(4411).isThemeDark(ThemeStore.getState().theme) ? ThemeTypes.DARK : ThemeTypes.LIGHT;
         const tmp30 = null != tmp3.questEnrollmentBlockedUntil;
         const date1 = new Date();
         if (result.config.expiresAt < date1.toISOString()) {
           const intl4 = tmp2(1114).intl;
-          const obj9 = { questName: null };
-          obj9[0] = result.config.messages.questName;
+          const obj9 = { questName: result.config.messages.questName };
           let formatToPlainStringResult1 = intl4.formatToPlainString(tmp2(1114).t["ge+AJp"], obj9);
         } else {
           const questTaskDetails = tmp2(7724).getQuestTaskDetails(result);
           const tmp2Result8 = tmp2(7724);
           const thirdPartyTaskDetails = tmp2(7724).getThirdPartyTaskDetails(result);
           const tmp2Result9 = tmp2(7724);
-          const obj10 = { quest: null, taskDetails: null, location: null, sourceQuestContent: null, thirdPartyTaskDetails: null, withoutMarkdown: true, currentUser: null };
-          obj10[0] = result;
-          obj10[1] = questTaskDetails;
-          obj10[2] = constants.EMBED_MOBILE;
-          obj10[3] = tmp2(5447).QuestContent.QUEST_EMBED_MOBILE;
-          obj10[4] = thirdPartyTaskDetails;
-          obj10[6] = currentUser;
+          const obj10 = { quest: result, taskDetails: questTaskDetails, location: constants.EMBED_MOBILE, sourceQuestContent: tmp2(5447).QuestContent.QUEST_EMBED_MOBILE, thirdPartyTaskDetails, withoutMarkdown: true, currentUser };
           formatToPlainStringResult1 = tmp2(11775).getQuestsInstructionsToWinReward(obj10);
           const tmp2Result10 = tmp2(11775);
         }
         const formatToPlainStringResult = intl3.formatToPlainString(tmp2(1114).t.EAYZAr, obj8);
         const colors2 = acceptLabelGreenColor.colors;
         const obj11 = {};
-        const merged8 = Object.assign(acceptLabelGreenColor.baseColors);
+        const merged9 = Object.assign(acceptLabelGreenColor.baseColors);
         obj11.headerColor = colors2.headerColor;
         obj11.titleText = formatToPlainStringResult;
         ({ titleColor: obj13.titleColor, bodyTextColor: obj13.subtitleColor, bodyTextColor: obj13.bodyTextColor } = colors2);
@@ -215,8 +195,8 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         const tmp2Result11 = tmp2(11285);
         const obj12 = {};
         const tmp2Result12 = tmp2(1115);
-        const merged9 = Object.assign(obj11);
-        if (isAndroidResult3) {
+        const merged10 = Object.assign(obj11);
+        if (isAndroidResult4) {
           obj12.headerText = null;
           obj12.subtitle = formatToPlainStringResult1;
           let tmp44 = obj12;
@@ -226,7 +206,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
           tmp44 = obj12;
         }
         const obj13 = {};
-        const merged10 = Object.assign(tmp44);
+        const merged11 = Object.assign(tmp44);
         if (!tmp21) {
           if (!tmp26) {
             const intl5 = tmp2(1114).intl;
@@ -252,7 +232,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         } else {
           string2Result = string2(hvVgAZ["th2+0j"]);
         }
-        isAndroidResult3 = tmp2(1115).isAndroid();
+        isAndroidResult4 = tmp2(1115).isAndroid();
       } else {
         const result3 = tmp2(7718).trackQuestEmbedFallbackViewed(questId, constants2.NOT_SHAREABLE_QUEST);
         const intl = tmp2(1114).intl;
@@ -261,19 +241,19 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         const stringResult7 = intl2.string(tmp2(1114).t.NXrP3N);
         const colors = acceptLabelGreenColor.colors;
         const obj14 = {};
-        const merged11 = Object.assign(acceptLabelGreenColor.baseColors);
+        const merged12 = Object.assign(acceptLabelGreenColor.baseColors);
         obj14.headerColor = colors.headerColor;
         obj14.titleText = intl.string(tmp2(1114).t.Dd6Daw);
         ({ titleColor: obj4.titleColor, bodyTextColor: obj4.subtitleColor, bodyTextColor: obj4.bodyTextColor } = colors);
-        obj14.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
+        obj14.thumbnailUrl = Image.resolveAssetSource(tmp(13224)).uri;
         obj14.embedCanBeTapped = true;
         obj14.canBeAccepted = true;
         obj14.type = InviteTypes.GUILD;
         const stringResult6 = intl.string(tmp2(1114).t.Dd6Daw);
         const obj15 = {};
         const tmp2Result14 = tmp2(1115);
-        const merged12 = Object.assign(obj14);
-        if (isAndroidResult4) {
+        const merged13 = Object.assign(obj14);
+        if (isAndroidResult5) {
           obj15.headerText = null;
           obj15.subtitle = stringResult7;
           let tmp19 = obj15;

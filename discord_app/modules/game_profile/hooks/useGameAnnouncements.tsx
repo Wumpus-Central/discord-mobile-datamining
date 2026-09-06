@@ -1,47 +1,46 @@
 // === Module 8759: useGameAnnouncements ===
 
 // Module 8759 (useGameAnnouncements)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_3 from "getSimilarGames" /* 8682 */;
+import _mod19 from "module_19" /* 19 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8760 */;
+import GameProfileStore from "GameProfileStore" /* 8682 */;
+import size from "module_2" /* 2 */;
 
-const useEffect = noop.useEffect;
-let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
+const useEffect = _mod19.useEffect;
+let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
 
-export default function useGameAnnouncements(arg0, arg1) {
-  const _require = arg0;
-  dependencyMap = arg1;
-  let obj = _require(504);
-  const items = [closure_3];
+export default function useGameAnnouncements(arg0, limit) {
+  _require = arg0;
+  dependencyMap = limit;
+  let obj = require("initialize");
+  const items = [GameProfileStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let announcements;
     if (null != closure_0) {
-      announcements = closure_1_3.getAnnouncements(tmp);
+      announcements = GameProfileStore.getAnnouncements(tmp);
     }
     const obj = { data: announcements, hasFetched: null, isFetching: null };
     let result = null != tmp;
     if (result) {
-      result = closure_1_3.hasAnnouncementsBeenFetched(tmp);
+      result = GameProfileStore.hasAnnouncementsBeenFetched(tmp);
     }
-    obj[1] = result;
+    obj.hasFetched = result;
     let result1 = null != tmp;
     if (result1) {
-      result1 = closure_1_3.isAnnouncementsFetching(tmp);
+      result1 = GameProfileStore.isAnnouncementsFetching(tmp);
     }
-    obj[2] = result1;
+    obj.isFetching = result1;
     return obj;
   });
   ({ data, hasFetched } = stateFromStoresObject);
-  const items1 = [arg0, hasFetched, arg1];
+  const items1 = [arg0, hasFetched, limit];
   hasFetched(() => {
-    let result = null == callback || hasFetched;
+    let result = null == closure_0 || hasFetched;
     if (!result) {
-      result = closure_1_3.isAnnouncementsFetching(tmp);
+      result = GameProfileStore.isAnnouncementsFetching(tmp);
     }
     if (!result) {
-      let obj = callback(table[3]);
-      obj = { limit: null };
-      obj[0] = table;
+      const obj = { limit };
       const gameAnnouncements = obj.getGameAnnouncements(tmp, obj);
     }
   }, items1);
@@ -57,12 +56,12 @@ export default function useGameAnnouncements(arg0, arg1) {
   if (data != null) {
     channelId = data.channelId;
   }
-  obj[1] = channelId;
+  obj.channelId = channelId;
   let guildId;
   if (data != null) {
     guildId = data.guildId;
   }
-  obj[2] = guildId;
-  obj[3] = stateFromStoresObject.isFetching;
+  obj.guildId = guildId;
+  obj.loading = stateFromStoresObject.isFetching;
   return obj;
 };

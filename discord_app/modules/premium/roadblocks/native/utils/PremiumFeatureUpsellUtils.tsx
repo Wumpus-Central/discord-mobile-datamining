@@ -1,15 +1,15 @@
-// === Module 9965: isSoundboardSectionNitroLocked ===
+// === Module 9965: PremiumFeatureUpsellUtils ===
 
-// Module 9965 (isSoundboardSectionNitroLocked)
-import set from "set" /* 2 */;
+// Module 9965 (PremiumFeatureUpsellUtils)
 import _modDef38 from "module_38" /* 38 */;
-import SoundButtonOverlay from "SoundButtonOverlay" /* 5020 */;
+import SoundboardTypes from "SoundboardTypes" /* 5020 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
+const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
-  let tmp = categoryInfo.type === SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD;
+  let tmp = categoryInfo.type === SoundboardTypes.SoundboardSoundGridSectionType.GUILD;
   if (tmp) {
     tmp = categoryInfo.guild.id !== guild_id;
   }

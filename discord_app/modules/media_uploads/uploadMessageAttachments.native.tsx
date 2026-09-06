@@ -1,187 +1,161 @@
-// === Module 7837: _uploadMessageAttachments ===
+// === Module 7837: uploadMessageAttachments ===
 
-// Module 7837 (_uploadMessageAttachments)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 7838 */;
-import set from "set" /* 2 */;
+// Module 7837 (uploadMessageAttachments)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import UploadStore from "UploadStore" /* 7838 */;
 
-const require = arg1;
-function _uploadMessageAttachments() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0, attachments) {
-      if (set === 2) {
-        set = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+const require = fn;
+let closure_6 = async function _uploadMessageAttachments(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw attachments;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = attachments;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
+          closure_3 = tmp5;
+          dependencyMap = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          closure_130_4 = undefined;
+          ({ channelId: closure_130_0, message: closure_130_1, nonce: closure_130_2, items: closure_130_3, shouldUploadFailureSendNotification: closure_130_4 } = channelId);
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          closure_130_7 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else if (closure_131_5.has(closure_130_2)) {
+          c5 = 3;
           return { value: "HermesInternal", done: null };
+        } else {
+          const tmp16 = new closure_131_1(closure_131_2[2])();
+          closure_130_5 = tmp16;
+          const _HermesInternal = HermesInternal;
+          closure_130_6 = "pending-upload-" + closure_130_5._file.id;
+          let obj2 = closure_131_0(closure_131_2[3]);
+          obj2 = {};
+          const merged = Object.assign(closure_130_1);
+          obj2.key = closure_130_6;
+          closure_130_7 = obj2.createMessageRecord(obj2);
+          closure_130_5.on("start", (file) => {
+            uploader.add(dependencyMap);
+            closure_1(573);
+            const obj = { type: "UPLOAD_START", channelId, file, uploader, message };
+            obj.dispatch(obj);
+          });
+          closure_130_5.on("compression-progress", (file) => {
+            closure_1(573);
+            const obj = { type: "UPLOAD_COMPRESSION_PROGRESS", channelId, file };
+            obj.dispatch(obj);
+          });
+          closure_130_5.on("progress", (file) => {
+            closure_1(573);
+            const obj = { type: "UPLOAD_PROGRESS", channelId, file };
+            obj.dispatch(obj);
+          });
+          closure_130_5.on("error", (file) => {
+            uploader.delete(dependencyMap);
+            uploader.cancel();
+            closure_1(573);
+            const obj = { type: "UPLOAD_FAIL", channelId, file, messageId: message.id, shouldSendNotification };
+            obj.dispatch(obj);
+          });
+          closure_130_5.on("complete", (id) => {
+            const file = id;
+            uploader.delete(closure_2);
+            const messageForFile = shouldSendNotification.getMessageForFile(id.id);
+            let _aborted = null != messageForFile;
+            if (_aborted) {
+              _aborted = "" === messageForFile.content;
+            }
+            if (_aborted) {
+              _aborted = uploader._aborted;
+            }
+            if (_aborted) {
+              let obj = closure_1_1(573);
+              id = messageForFile.nonce;
+              if (id == null) {
+                id = messageForFile.id;
+              }
+              obj = { type: "MESSAGE_DELETE", id, channelId: messageForFile.channel_id };
+              obj.dispatch(obj);
+            }
+            if (uploader._aborted) {
+              const _setTimeout = setTimeout;
+              const timerId = setTimeout(() => {
+                closure_1(closure_2[4]);
+                const obj = { type: "UPLOAD_COMPLETE", channelId, file, aborted: true };
+                obj.dispatch(obj);
+              }, 0);
+            }
+          });
+          closure_130_5.on("cancel-upload-item", (file) => {
+            closure_1(573);
+            const obj = { type: "UPLOAD_FILE_UPDATE", file, channelId };
+            obj.dispatch(obj);
+          });
+          value = {};
+          c4 = 2;
+          c5 = 1;
+          const obj3 = { value: closure_130_5.uploadFiles(closure_130_3), done: false };
+          return obj3;
         }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          set = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              set = 3;
-              throw attachments;
-            } else if (arg0 === 2) {
-              set = 3;
-              obj = { value: null, done: true };
-              obj[0] = attachments;
-              return obj;
-            } else {
-              c3 = tmp5;
-              dependencyMap = tmp2;
-              let callback;
-              let callback2;
-              dependencyMap = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              ({ channelId: c0, message: closure_1, nonce: c2, items: c3, shouldUploadFailureSendNotification: c4 } = callback);
-              set = undefined;
-              closure_6 = undefined;
-              closure_7 = undefined;
-              c4 = 1;
-              set = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              set = 3;
-              throw attachments;
-            } else if (arg0 === 2) {
-              set = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = attachments;
-              return obj1;
-            } else if (set.has(dependencyMap)) {
-              set = 3;
-              return { value: "HermesInternal", done: null };
-            } else {
-              const tmp16 = new callback2(7839)();
-              set = tmp16;
-              const _HermesInternal = HermesInternal;
-              closure_6 = "pending-upload-" + set._file.id;
-              let obj2 = callback(4783);
-              obj2 = {};
-              const merged = Object.assign(callback2);
-              obj2.key = closure_6;
-              closure_7 = obj2.createMessageRecord(obj2);
-              set.on("start", (file) => {
-                set.add(_undefined);
-                let obj = callback(_undefined[4]);
-                obj = { type: "UPLOAD_START", channelId: c0, file, uploader: set, message: closure_7 };
-                obj.dispatch(obj);
-              });
-              set.on("compression-progress", (file) => {
-                let obj = callback(_undefined[4]);
-                obj = { type: "UPLOAD_COMPRESSION_PROGRESS", channelId: c0, file };
-                obj.dispatch(obj);
-              });
-              set.on("progress", (file) => {
-                let obj = callback(_undefined[4]);
-                obj = { type: "UPLOAD_PROGRESS", channelId: c0, file };
-                obj.dispatch(obj);
-              });
-              set.on("error", (file) => {
-                set.delete(_undefined);
-                set.cancel();
-                let obj = callback(_undefined[4]);
-                obj = { type: "UPLOAD_FAIL", channelId: c0, file, messageId: id.id, shouldSendNotification: c4 };
-                obj.dispatch(obj);
-              });
-              set.on("complete", (id) => {
-                closure_0 = id;
-                set.delete(_undefined);
-                messageForFile = messageForFile.getMessageForFile(id.id);
-                let _aborted = null != messageForFile;
-                if (_aborted) {
-                  _aborted = "" === messageForFile.content;
-                }
-                if (_aborted) {
-                  _aborted = set._aborted;
-                }
-                if (_aborted) {
-                  let obj = callback(_undefined[4]);
-                  id = messageForFile.nonce;
-                  if (id == null) {
-                    id = messageForFile.id;
-                  }
-                  obj = { type: "MESSAGE_DELETE", id: null, channelId: null };
-                  obj[1] = id;
-                  obj[2] = messageForFile.channel_id;
-                  obj.dispatch(obj);
-                }
-                if (set._aborted) {
-                  const _setTimeout = setTimeout;
-                  const timerId = setTimeout(() => {
-                    let obj = callback(table[4]);
-                    obj = { type: "UPLOAD_COMPLETE", channelId: closure_0, file: closure_0, aborted: true };
-                    obj.dispatch(obj);
-                  }, 0);
-                }
-              });
-              set.on("cancel-upload-item", (file) => {
-                let obj = callback(_undefined[4]);
-                obj = { type: "UPLOAD_FILE_UPDATE", file, channelId: c0 };
-                obj.dispatch(obj);
-              });
-              callback2 = {};
-              c4 = 2;
-              set = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = set.uploadFiles(c3);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            set = 3;
-            throw attachments;
-          } else if (arg0 === 2) {
-            set = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = attachments;
-            return obj4;
-          } else {
-            callback2.attachments = attachments;
-            callback2.uploader = set;
-            set = 3;
-            obj = { value: null, done: true };
-            obj[0] = callback2;
-            return obj;
-          }
-        } catch (tmp39) {
-          set = tmp;
-          throw tmp39;
-        }
+        value.attachments = value;
+        value.uploader = closure_130_5;
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp39) {
+      c5 = tmp;
+      throw tmp39;
+    }
   }
-  return applyArgumentsResult;
-}
-let set = new Set();
-const result = set.fileFinishedImporting("modules/media_uploads/uploadMessageAttachments.native.tsx");
+};
+const set = new Set();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_uploads/uploadMessageAttachments.native.tsx");
 
-export const uploadMessageAttachments = function uploadMessageAttachments(arg0) {
+export const uploadMessageAttachments = function uploadMessageAttachments() {
   const self = this;
-  const apply = _uploadMessageAttachments.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

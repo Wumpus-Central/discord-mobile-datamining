@@ -1,27 +1,26 @@
 // === Module 11343: isSelectedFromHomeChannel ===
 
 // Module 11343 (isSelectedFromHomeChannel)
-import handleConnectionOpenDefault from "handleConnectionOpen" /* 2011 */;
-import coerceMainRoute from "coerceMainRoute" /* 4417 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import toggleSectionDefault from "toggleSection" /* 7280 */;
-import { isGuildHomeChannel } from "set" /* 1964 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 7280 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-require = arg1;
-toggleSectionDefault;
-handleConnectionOpenDefault;
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
+require = fn;
+const isGuildHomeChannel = fn(1964).isGuildHomeChannel;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/isSelectedFromHomeChannel.native.tsx");
 
 export default function isSelectedFromHomeChannel(id) {
   let coerceChannelRouteResult1;
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const rootState = rootNavigationRef.getRootState();
       if (null == rootState) {
         return false;
       } else {
-        const coerceMainRouteResult = coerceMainRoute.coerceMainRoute(rootState.routes[rootState.index]);
+        const coerceMainRouteResult = NavigationRouteUtils.coerceMainRoute(rootState.routes[rootState.index]);
         if (null == coerceMainRouteResult) {
           return false;
         } else {
@@ -33,11 +32,9 @@ export default function isSelectedFromHomeChannel(id) {
             if (index >= 0) {
               while (true) {
                 let tmp4 = state.routes[index];
-                let tmp5 = index;
                 if (null != tmp4) {
                   let tmp6 = require;
-                  let tmp7 = dependencyMap;
-                  let obj3 = coerceMainRoute;
+                  let obj3 = NavigationRouteUtils;
                   let coerceChannelRouteResult = obj3.coerceChannelRoute(tmp4);
                   if (null != coerceChannelRouteResult) {
                     if (coerceChannelRouteResult.params.channelId === id.id) {
@@ -60,7 +57,7 @@ export default function isSelectedFromHomeChannel(id) {
             return false;
           }
         }
-        const tmpResult = coerceMainRoute;
+        const tmpResult = NavigationRouteUtils;
       }
     }
   }

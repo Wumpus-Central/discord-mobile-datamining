@@ -1,24 +1,26 @@
 // === Module 13405: useBuyNitroPlanSubLabelRenderer ===
 
 // Module 13405 (useBuyNitroPlanSubLabelRenderer)
-import closure_2 from "noop" /* 19 */;
-import { PRICE_PLACEHOLDER } from "GuildFeatures" /* 1373 */;
-import { jsx } from "jsxProd" /* 21 */;
+import BuyNitroPlanPriceDetailsDefault from "BuyNitroPlanPriceDetails" /* 13386 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanSubLabelRenderer.tsx");
+const PRICE_PLACEHOLDER = fn(1373).PRICE_PLACEHOLDER;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/plan_selector/useBuyNitroPlanSubLabelRenderer.tsx");
 
 export const useBuyNitroPlanSubLabelRenderer = function useBuyNitroPlanSubLabelRenderer() {
-  return React.useCallback((planSelection, item) => {
+  return noop.useCallback((planSelection, premiumTier) => {
     ({ priceStringByProductId, trialTier, discounted } = planSelection);
     if (!tmp) {
       if (!tmp2) {
-        let value = priceStringByProductId.get(item.productId);
+        value = priceStringByProductId.get(premiumTier.productId);
         if (value == null) {
-          value = closure_3;
+          value = PRICE_PLACEHOLDER;
         }
       }
       return value;
     }
-    value = callback2(callback(table[3]), { planSelection, item });
+    value = jsx(BuyNitroPlanPriceDetailsDefault, { planSelection, item: premiumTier });
   }, []);
 };

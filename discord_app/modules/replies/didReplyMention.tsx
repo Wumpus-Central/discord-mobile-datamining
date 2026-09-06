@@ -1,9 +1,9 @@
 // === Module 13177: didReplyMention ===
 
 // Module 13177 (didReplyMention)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/replies/didReplyMention.tsx");
+const result = size.fileFinishedImporting("modules/replies/didReplyMention.tsx");
 
 export default function didReplyMention(mentions, author) {
   let hasItem = null != author;

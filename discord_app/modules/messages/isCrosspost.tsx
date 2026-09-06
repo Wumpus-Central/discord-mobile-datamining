@@ -1,18 +1,17 @@
 // === Module 8036: isCrosspost ===
 
 // Module 8036 (isCrosspost)
-import set from "set" /* 2 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import ME from "ME" /* 1074 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ MessageFlags: obj1, MessageReferenceTypes: c3, MessageTypes: c4 } = ME);
-const result = set.fileFinishedImporting("modules/messages/isCrosspost.tsx");
+({ MessageFlags: c2, MessageReferenceTypes: c3, MessageTypes: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/messages/isCrosspost.tsx");
 
 export default function isCrosspost(type) {
   let hasFlagResult = type.type === constants3.DEFAULT;
   if (hasFlagResult) {
-    hasFlagResult = hasFlag.hasFlag(type.flags, constants.IS_CROSSPOST);
-    const obj = hasFlag;
+    hasFlagResult = FlagUtils.hasFlag(type.flags, constants.IS_CROSSPOST);
   }
   if (hasFlagResult) {
     hasFlagResult = null != type.messageReference;

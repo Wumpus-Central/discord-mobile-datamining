@@ -1,64 +1,62 @@
-// === Module 8599: Divider ===
+// === Module 8599: FormDivider ===
 
-// Module 8599 (Divider)
-import ThemesDefault from "Themes" /* 576 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import context from "context" /* 5686 */;
+// Module 8599 (FormDivider)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 4271 */;
+import RedesignCompat from "RedesignCompat" /* 5686 */;
 import useProfileThemeValues from "useProfileThemeValues" /* 7184 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
-let closure_7 = createCacheKey.createStyles(() => {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty, Platform } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+let createStyles = fn(4560);
+let closure_7 = createStyles.createStyles(() => {
   let obj = { divider: {}, dividerOuter: null, dividerHasIcon: null };
-  obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
-  obj[1] = obj;
-  obj[2] = { marginLeft: 56 };
+  obj = { marginLeft: 0, height: hasOwnProperty.hairlineWidth, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginTop: -1 * hasOwnProperty.hairlineWidth };
+  obj.dividerOuter = obj;
+  obj.dividerHasIcon = { marginLeft: 56 };
   return obj;
 });
-createCacheKey = { [LIGHT]: ThemesDefault.unsafe_rawColors.BLACK, [DARK]: ThemesDefault.unsafe_rawColors.WHITE, [DARKER]: ThemesDefault.unsafe_rawColors.WHITE, [MIDNIGHT]: ThemesDefault.unsafe_rawColors.WHITE };
-({ LIGHT, DARK, DARKER, MIDNIGHT } = require("ME").ThemeTypes);
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
+createStyles = { [LIGHT]: nativeDefault.unsafe_rawColors.BLACK, [DARK]: nativeDefault.unsafe_rawColors.WHITE, [DARKER]: nativeDefault.unsafe_rawColors.WHITE, [MIDNIGHT]: nativeDefault.unsafe_rawColors.WHITE };
+({ LIGHT, DARK, DARKER, MIDNIGHT } = fn(1074).ThemeTypes);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 
-export default function Divider(outer) {
-  let flag = outer.outer;
+export default function Divider(arg0) {
+  let flag = arg0.outer;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = outer.iconPush;
+  let flag2 = arg0.iconPush;
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp = callback();
-  let obj = ManaContext;
+  const tmp = closure_7();
+  let obj = native;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);
   const profileThemeValues = useProfileThemeValues.useProfileThemeValues(theme);
   let tmp7 = null;
   if (tmp6) {
-    obj = { backgroundColor: null };
-    obj[0] = tmp2(4409).hexOpacityToRgba(createCacheKey[theme], profileThemeValues.dividerOpacity);
+    obj = { backgroundColor: tmp2(4409).hexOpacityToRgba(createStyles[theme], profileThemeValues.dividerOpacity) };
     tmp7 = obj;
     const tmp2Result = tmp2(4409);
   }
   let tmp10Result = null;
-  if (!React.useContext(context.RedesignCompatContext)) {
+  if (!noop.useContext(RedesignCompat.RedesignCompatContext)) {
     const items = [flag ? tmp.dividerOuter : tmp.divider, , , ];
     if (flag2) {
       flag2 = tmp.dividerHasIcon;
     }
     obj = { style: null };
     items[1] = flag2;
-    items[2] = outer.style;
+    items[2] = arg0.style;
     items[3] = tmp7;
-    obj[0] = items;
-    tmp10Result = <closure_4 style={null} />;
-    const tmp10 = jsx;
-    const tmp11 = closure_4;
+    obj.style = items;
+    tmp10Result = <React4 style={null} />;
   }
   return tmp10Result;
 };
-export const DIVIDER_COLORS = createCacheKey;
+export const DIVIDER_COLORS = createStyles;

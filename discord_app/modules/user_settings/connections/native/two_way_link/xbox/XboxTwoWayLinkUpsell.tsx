@@ -1,39 +1,40 @@
 // === Module 14965: XboxTwoWayLinkUpsell ===
 
 // Module 14965 (XboxTwoWayLinkUpsell)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import combinedDefault from "combined" /* 2024 */;
-import preloadDefault from "preload" /* 5587 */;
-import OneWayToTwoWayNewTag from "OneWayToTwoWayNewTag" /* 14966 */;
-import registerAssetDefault from "registerAsset" /* 14967 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9217 */;
+import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 14966 */;
+import _modDef14967 from "module_14967" /* 14967 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ HelpdeskArticles: c3, AnalyticsLocations: c4 } = ME);
-let closure_6 = createCacheKey.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx");
+require = fn;
+const Constants = fn(1074);
+({ HelpdeskArticles: c3, AnalyticsLocations: closure_4 } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx");
 
 export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
-  let obj = combinedDefault;
+  let obj = HelpdeskUtilsDefault;
   const articleURL = obj.getArticleURL(constants.XBOX_CONNECTION);
   obj = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["2okkZV"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.format(getSystemLocale.t.OnERSS, { help_article: articleURL });
-  obj = { style: callback().upsellImage, source: null, resizeMode: "contain" };
-  const tmp = callback();
-  obj[1] = registerAssetDefault;
-  obj[2] = jsx(preloadDefault, { style: callback().upsellImage, source: null, resizeMode: "contain" });
-  obj[3] = DismissibleContent.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
-  obj[4] = function onPress() {
+  const intl = util.intl;
+  obj.title = intl.string(util.t["2okkZV"]);
+  const intl2 = util.intl;
+  obj.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
+  obj = { style: closure_6().upsellImage, source: null, resizeMode: "contain" };
+  const tmp = closure_6();
+  obj.source = _modDef14967;
+  obj.img = jsx(FastImageDefault, { style: closure_6().upsellImage, source: null, resizeMode: "contain" });
+  obj.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
+  obj.onPress = function onPress() {
     const items = [constants.RELINK_UPSELL];
-    return callback(table[10]).showModal(items);
+    return XboxLinkModalActionCreatorsDefault.showModal(items);
   };
-  return jsx(OneWayToTwoWayNewTag.OneWayToTwoWayLinkUpsell, { style: callback().upsellImage, source: null, resizeMode: "contain" });
+  return jsx(OneWayToTwoWayLinkUpsell.OneWayToTwoWayLinkUpsell, { style: closure_6().upsellImage, source: null, resizeMode: "contain" });
 };

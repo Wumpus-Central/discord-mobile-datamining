@@ -1,11 +1,11 @@
-// === Module 8088: isMessageNewerThanImprovedMarkdownEpoch ===
+// === Module 8088: MarkupEligibilityUtils ===
 
-// Module 8088 (isMessageNewerThanImprovedMarkdownEpoch)
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 8088 (MarkupEligibilityUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/markup/MarkupEligibilityUtils.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupEligibilityUtils.tsx");
 
-export const isMessageNewerThanImprovedMarkdownEpoch = function isMessageNewerThanImprovedMarkdownEpoch(timestamp) {
-  return timestamp >= DISCORD_EPOCHDefault.extractTimestamp("1088216706570268682");
+export const isMessageNewerThanImprovedMarkdownEpoch = function isMessageNewerThanImprovedMarkdownEpoch(arg0) {
+  return arg0 >= SnowflakeUtilsDefault.extractTimestamp("1088216706570268682");
 };

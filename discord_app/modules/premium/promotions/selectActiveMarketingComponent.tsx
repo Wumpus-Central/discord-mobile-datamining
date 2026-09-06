@@ -1,7 +1,7 @@
-// === Module 10698: comparePriorityDescending ===
+// === Module 10698: selectActiveMarketingComponent ===
 
-// Module 10698 (comparePriorityDescending)
-import set from "set" /* 2 */;
+// Module 10698 (selectActiveMarketingComponent)
+import size from "module_2" /* 2 */;
 
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
   effectiveStartDate = effectiveStartDate.effectiveStartDate;
@@ -58,9 +58,9 @@ function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
     }
   }
 }
-const result = set.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
+const result = size.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
 
-export default function selectActiveMarketingComponent(arr) {
+export default function selectActiveMarketingComponent(arr, arg1) {
   closure_0 = arg1;
   let fn = arg2;
   if (arg2 === undefined) {
@@ -98,7 +98,7 @@ export default function selectActiveMarketingComponent(arr) {
   if (0 !== found.length) {
     const items = [];
     HermesBuiltin.arraySpread(found, 0);
-    let first = items.sort(closure_0)[0];
+    let first = items.sort(comparePriorityDescending)[0];
     if (first == null) {
       first = null;
     }

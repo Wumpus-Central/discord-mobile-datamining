@@ -1,36 +1,33 @@
-// === Module 16894: MessageRequestsScreen ===
+// === Module 16894: MessageRequestsPreviewScreen ===
 
-// Module 16894 (MessageRequestsScreen)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "generateOldThreadCutoff" /* 4575 */;
-import { ME } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16894 (MessageRequestsPreviewScreen)
+import MessageManagerDefault from "MessageManager" /* 9941 */;
+import noop from "module_19" /* 19 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsPreviewScreen.tsx");
+const require = fn;
+const ME = fn(1074).ME;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsPreviewScreen.tsx");
 
 export default function MessageRequestsScreen(route) {
   const channelId = route.route.params.channelId;
   let obj = channelId(12440);
   const items = [channelId];
   const isMessageRequestRestrictedViewer = obj.useIsMessageRequestRestrictedViewer("MessageRequestsPreviewScreen");
-  const effect = React.useEffect(() => {
-    let obj = closure_1_1(closure_1_2[5]);
-    obj = { channelId, messageId: closure_1_4.lastMessageId(channelId) };
+  const effect = noop.useEffect(() => {
+    const obj = { channelId, messageId: ReadStateStore.lastMessageId(channelId) };
     const messages = obj.fetchMessages(obj);
   }, items);
   obj = { guildId: ME, channelId, children: null };
   if (isMessageRequestRestrictedViewer) {
-    obj = { channelId: null };
-    obj[0] = channelId;
+    obj = { channelId };
     let tmp5Result = tmp5(tmp7(16895), obj);
   } else {
-    obj1 = { guildId: null, channelId: null, chatInputRef: null, HACK_fixModalInteraction: true, screenIndex: "message-request" };
-    obj1[0] = tmp6;
-    obj1[1] = channelId;
-    obj1[2] = ref;
+    const obj1 = { guildId: tmp6, channelId, chatInputRef: ref, HACK_fixModalInteraction: true, screenIndex: "message-request" };
     tmp5Result = tmp5(tmp7(11340), obj1);
   }
-  obj[2] = tmp5Result;
+  obj.children = tmp5Result;
   return jsx(channelId(10077).ChannelContainer, { guildId: ME, channelId, children: null });
 };

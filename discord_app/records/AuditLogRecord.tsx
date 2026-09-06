@@ -1,11 +1,10 @@
-// === Module 17537: getTargetType ===
+// === Module 17537: AuditLogRecord ===
 
-// Module 17537 (getTargetType)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import toJSDefault from "toJS" /* 1386 */;
-import hooksDefault from "hooks" /* 4153 */;
-import ME from "ME" /* 1074 */;
+// Module 17537 (AuditLogRecord)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import Record from "Record" /* 1386 */;
 
 function getTargetType(action) {
   if (action === constants2.ALL) {
@@ -75,9 +74,8 @@ function getTargetType(action) {
                               CHANNEL = constants.GUILD;
                             } else {
                               const _HermesInternal = HermesInternal;
-                              _modDef1232.captureMessage("Unknown target type for: " + action);
+                              SentryUtilsDefault.captureMessage("Unknown target type for: " + action);
                               CHANNEL = constants.UNKNOWN;
-                              const obj = _modDef1232;
                             }
                           }
                         }
@@ -260,18 +258,16 @@ function getActionType(action) {
   }
   return constants3.CREATE;
 }
-toJSDefault;
-({ AuditLogTargetTypes: obj1, AuditLogActions: c3, AuditLogActionTypes: c4 } = ME);
+const Constants = fn(1074);
+({ AuditLogTargetTypes: c2, AuditLogActions: c3, AuditLogActionTypes: closure_4 } = Constants);
 const prototype = function AuditLogRecord(timestampEnd) {
   const tmp5 = new prototype(tmp4, tmp3, tmp2, tmp, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp5.id, action: tmp5.action } = timestampEnd);
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = hooksDefault;
-    timestampStart = tmp8(DISCORD_EPOCHDefault.extractTimestamp(tmp5.id));
-    const obj = DISCORD_EPOCHDefault;
+    const tmp8 = _modDef4153;
+    timestampStart = tmp8(SnowflakeUtilsDefault.extractTimestamp(tmp5.id));
   }
   tmp5.timestampStart = timestampStart;
   let timestampStart2 = timestampEnd.timestampEnd;
@@ -304,15 +300,16 @@ const prototype = function AuditLogRecord(timestampEnd) {
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("set").fileFinishedImporting("records/AuditLogRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/AuditLogRecord.tsx");
 
 export default prototype;
 export { getTargetType };
 export { getActionType };
-export const AuditLogChange = function AuditLogChange(AVAILABLE_TAG_ADD, oldValue, newValue) {
+export const AuditLogChange = function AuditLogChange(key, items2, added) {
   const obj = Object.create(new.target.prototype);
-  obj.key = AVAILABLE_TAG_ADD;
-  obj.oldValue = oldValue;
-  obj.newValue = newValue;
+  obj.key = key;
+  obj.oldValue = items2;
+  obj.newValue = added;
   return obj;
 }.prototype;

@@ -1,29 +1,23 @@
-// === Module 7771: getForumChannelSessionId ===
+// === Module 7771: ForumSessionAnalyticsManager ===
 
-// Module 7771 (getForumChannelSessionId)
-import set from "set" /* 2 */;
+// Module 7771 (ForumSessionAnalyticsManager)
 import v1 from "v1" /* 1256 */;
+import size from "module_2" /* 2 */;
 
 class ForumSessionAnalyticsManager {
 }
-ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(arg0) {
+ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(channelId) {
   const self = this;
   if (null == this.session) {
-    let obj = { channelId: null, sessionId: null };
-    obj[0] = arg0;
-    obj[1] = v1.v4();
+    let obj = { channelId, sessionId: v1.v4() };
     self.session = obj;
-    const obj2 = v1;
   }
-  if (self.session.channelId !== arg0) {
-    obj = { channelId: null, sessionId: null };
-    obj[0] = arg0;
-    obj[1] = v1.v4();
+  if (self.session.channelId !== channelId) {
+    obj = { channelId, sessionId: v1.v4() };
     self.session = obj;
-    const obj4 = v1;
   }
   return self.session.sessionId;
 };
-const result = set.fileFinishedImporting("modules/forums/tracking/ForumSessionAnalyticsManager.tsx");
+const result = size.fileFinishedImporting("modules/forums/tracking/ForumSessionAnalyticsManager.tsx");
 
 export default Object.create(ForumSessionAnalyticsManager.prototype);

@@ -1,18 +1,18 @@
-// === Module 15482: hasAndroidNotificationChannels ===
+// === Module 15482: SettingsNotificationUtils ===
 
-// Module 15482 (hasAndroidNotificationChannels)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
+// Module 15482 (SettingsNotificationUtils)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import DeviceUtils from "DeviceUtils" /* 4539 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationUtils.tsx");
 
 export const hasAndroidNotificationChannels = function hasAndroidNotificationChannels() {
-  let isAndroidResult = set2.isAndroid();
+  let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     const _parseInt = parseInt;
-    isAndroidResult = parseInt(DCDDeviceManager.getSystemVersion(), 10) >= 26;
-    const tmpResult = DCDDeviceManager;
+    isAndroidResult = parseInt(DeviceUtils.getSystemVersion(), 10) >= 26;
+    const tmpResult = DeviceUtils;
   }
   return isAndroidResult;
 };

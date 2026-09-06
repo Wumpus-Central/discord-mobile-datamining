@@ -1,46 +1,38 @@
 // === Module 10422: useHorizontalAutocompleteResults ===
 
 // Module 10422 (useHorizontalAutocompleteResults)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import ME from "ME" /* 1074 */;
+import AutocompleteOptions from "AutocompleteOptions" /* 10423 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ AutoCompleteResultTypes: c4, ChannelTypes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AutoCompleteResultTypes: closure_4, ChannelTypes: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
 
 export const useHorizontalAutocompleteResults = function useHorizontalAutocompleteResults(channel) {
   channel = channel.channel;
   const selection = channel.selection;
   const text = channel.text;
-  let callback = text;
+  _slicedToArray = text;
   let first;
-  closure_4 = undefined;
-  let memo;
-  let text2;
-  let selectionStart;
-  let selectionEnd;
-  closure_9 = undefined;
-  let autocompleteType;
-  let query;
-  let queryOptions;
-  callback = undefined;
-  let tmp = callback(first.useState([]), 2);
+  let tmp = _slicedToArray(first.useState([]), 2);
   first = tmp[0];
   closure_4 = tmp[1];
   let items = [channel];
-  memo = first.useMemo(() => channel(selection[3]).getAutocompleteOptions(channel, false, false), items);
+  const memo = first.useMemo(() => AutocompleteOptions.getAutocompleteOptions(channel, false, false), items);
   let obj = { text, selectionStart: selection.start, selectionEnd: selection.end };
-  let tmp4 = callback(first.useState(obj), 2);
+  let tmp4 = _slicedToArray(first.useState(obj), 2);
   const first1 = tmp4[0];
-  text2 = first1.text;
-  selectionStart = first1.selectionStart;
-  selectionEnd = first1.selectionEnd;
+  const text2 = first1.text;
+  const selectionStart = first1.selectionStart;
+  const selectionEnd = first1.selectionEnd;
   closure_9 = tmp4[1];
   const items1 = [text, selection];
   const effect = first.useEffect(() => {
     const timeout = setTimeout(() => {
-      callback({ text: closure_2, selectionStart: closure_1.start, selectionEnd: closure_1.end });
+      closure_1_9({ text, selectionStart: selection.start, selectionEnd: selection.end });
     }, 16);
     return () => {
       clearTimeout(closure_0);
@@ -53,11 +45,8 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     if (null != text2) {
       if (0 !== text2.trim().length) {
         while (true) {
-          let tmp2 = channel;
-          let tmp3 = selection;
           let obj = channel(selection[4]);
           let arr = text2;
-          let tmp4 = tmp;
           let tmp5 = tmp14;
           let found = tmp15;
           if (!obj.isAutocompleteSeparatingBoundary(text2, tmp)) {
@@ -82,15 +71,14 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
             let str2 = substr.slice(1);
             let formatted = str2.toLowerCase();
             let _Object = Object;
-            let tmp9 = memo;
             let keys = Object.keys(memo);
-            found = keys.find((arg0) => {
+            found = keys.find((item) => {
               let matchesResult = undefined !== closure_0;
               if (matchesResult) {
                 matchesResult = undefined !== formatted;
               }
               if (matchesResult) {
-                matchesResult = obj.matches(closure_0, formatted, closure_2);
+                matchesResult = obj.matches(closure_0, formatted, diff);
               }
               return matchesResult;
             });
@@ -102,34 +90,29 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
               break;
             }
           }
-          obj = { query: null, autocompleteType: null, autocompleteSelectionStart: null, queryOptions: null };
-          obj[0] = tmp11;
-          obj[1] = tmp12;
-          obj[2] = tmp10;
+          obj = { query: tmp11, autocompleteType: tmp12, autocompleteSelectionStart: tmp10, queryOptions: null };
           obj = { includeEmojiPremiumUpsell: false, channelTypes: null };
-          let tmp16 = memo;
           let items = [, , , ];
           ({ GUILD_FORUM: arr4[0], GUILD_MEDIA: arr4[1], GUILD_TEXT: arr4[2], GUILD_ANNOUNCEMENT: arr4[3] } = memo);
-          obj[1] = items;
-          obj[3] = obj;
+          obj.channelTypes = items;
+          obj.queryOptions = obj;
           return obj;
         }
       }
     }
     return { query: null, autocompleteType: null, autocompleteSelectionStart: null };
   }, items2);
-  autocompleteType = memo1.autocompleteType;
-  query = memo1.query;
-  queryOptions = memo1.queryOptions;
+  const autocompleteType = memo1.autocompleteType;
+  const query = memo1.query;
+  const queryOptions = memo1.queryOptions;
   const items3 = [autocompleteType, query, queryOptions, memo];
-  callback = first.useCallback((arg0) => {
+  const callback = first.useCallback((arg0) => {
     if (null != autocompleteType) {
       if (null != query) {
-        callback(memo[tmp].queryResults(tmp2, queryOptions, arg0));
-        const obj = memo[tmp];
+        closure_4(memo[tmp].queryResults(tmp2, queryOptions, arg0));
       }
     }
-    callback([]);
+    closure_4([]);
   }, items3);
   const items4 = [autocompleteType, callback, memo];
   const effect1 = first.useEffect(() => {
@@ -151,14 +134,11 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
   const effect2 = first.useEffect(() => {
     callback(true);
   }, items5);
-  obj = {
-    results: first.useMemo(() => first.filter((type) => {
-      type = type.type;
-      return type === constants.USER || type === constants.ROLE || type === constants.CHANNEL || type === constants.EMOJI;
-    }), items6),
-    autocompleteSelectionStart: memo1.autocompleteSelectionStart,
-    query
-  };
-  items6 = [first];
+  obj = { results: null, autocompleteSelectionStart: memo1.autocompleteSelectionStart, query };
+  const items6 = [first];
+  obj.results = first.useMemo(() => first.filter((type) => {
+    type = type.type;
+    return type === constants.USER || type === constants.ROLE || type === constants.CHANNEL || type === constants.EMOJI;
+  }), items6);
   return obj;
 };

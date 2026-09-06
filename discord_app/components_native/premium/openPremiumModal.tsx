@@ -1,12 +1,12 @@
 // === Module 9392: openPremiumModal ===
 
 // Module 9392 (openPremiumModal)
-import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("components_native/premium/openPremiumModal.tsx");
+const result = size.fileFinishedImporting("components_native/premium/openPremiumModal.tsx");
 
-export default function openPremiumModal(closure_0) {
-  return _modDef4763.pushLazy(asyncRequireImpl(7412, dependencyMap.paths), closure_0, "PREMIUM_KEY", { presentation: "modal" });
+export default function openPremiumModal(merged) {
+  return ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(7412, dependencyMap.paths), merged, "PREMIUM_KEY", { presentation: "modal" });
 };

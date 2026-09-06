@@ -1,17 +1,18 @@
 // === Module 7884: useIsNsfwGated ===
 
 // Module 7884 (useIsNsfwGated)
-import closure_2 from "initialize" /* 4772 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import GuildNSFWAgreeStore from "GuildNSFWAgreeStore" /* 4772 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_gate/useIsNsfwGated.tsx");
 
 export default function useIsNsfwGated(nsfw) {
-  const _require = nsfw;
+  _require = nsfw;
   nsfw = nsfw.nsfw;
-  const items = [closure_3];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
+  const items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
     if (currentUser != null) {
@@ -19,9 +20,9 @@ export default function useIsNsfwGated(nsfw) {
     }
     return nsfwAllowed;
   });
-  const obj = _require(504);
-  const items1 = [closure_2];
-  const stateFromStores1 = _require(504).useStateFromStores(items1, () => closure_1_2.didAgree(nsfw.guild_id));
+  const obj = require("initialize");
+  const items1 = [GuildNSFWAgreeStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => GuildNSFWAgreeStore.didAgree(nsfw.guild_id));
   let tmp3 = !stateFromStores1;
   if (nsfw) {
     if (stateFromStores1) {

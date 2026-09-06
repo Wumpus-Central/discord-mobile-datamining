@@ -1,24 +1,22 @@
 // === Module 9311: buildFileSizeLimitEventProperties ===
 
 // Module 9311 (buildFileSizeLimitEventProperties)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
+const result = size.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
   ({ guildId, channelId } = arg0);
   ({ userIndividualFileSizeLimit, numAttachments, preCompressionFileSizes, preCompressionAggregateSize, postCompressionFileSizes, postCompressionAggregateSize, attachmentMimeTypes, errorType, kestrelVariant } = arg0);
   if (undefined !== channelId) {
-    let obj = { channel_id: null };
-    obj[0] = channelId;
+    let obj = { channel_id: channelId };
   } else {
     obj = {};
   }
   obj = {};
   const merged = Object.assign(obj);
   if (undefined !== guildId) {
-    obj1 = { guild_id: null };
-    obj1[0] = guildId;
+    const obj1 = { guild_id: guildId };
     let obj2 = obj1;
   } else {
     obj2 = {};

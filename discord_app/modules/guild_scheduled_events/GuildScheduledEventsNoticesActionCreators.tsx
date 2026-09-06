@@ -1,33 +1,27 @@
-// === Module 17056: hideLiveChannelNotice ===
+// === Module 17056: GuildScheduledEventsNoticesActionCreators ===
 
-// Module 17056 (hideLiveChannelNotice)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 17056 (GuildScheduledEventsNoticesActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsNoticesActionCreators.tsx");
 
 export const hideLiveChannelNotice = function hideLiveChannelNotice(arg0) {
   ({ eventId, stageId } = arg0);
   if (!tmp) {
-    let obj = dispatcherDefault;
-    obj = { type: "LIVE_CHANNEL_NOTICE_HIDE", eventId: null, stageId: null };
-    obj[1] = eventId;
-    obj[2] = stageId;
+    const obj = { type: "LIVE_CHANNEL_NOTICE_HIDE", eventId, stageId };
     obj.dispatch(obj);
   }
 };
 export const hideUpcomingEventNotice = function hideUpcomingEventNotice(eventId) {
-  let obj = dispatcherDefault;
-  obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE", eventId };
+  const obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE", eventId };
   obj.dispatch(obj);
 };
 export const markUpcomingEventNoticeAsSeen = function markUpcomingEventNoticeAsSeen(guildEventId) {
-  let obj = dispatcherDefault;
-  obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN", guildEventId };
+  const obj = { type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN", guildEventId };
   obj.dispatch(obj);
 };
 export const dismissEventBanner = function dismissEventBanner(id) {
-  let obj = dispatcherDefault;
-  obj = { type: "EVENT_BANNER_DISMISS", eventId: id };
+  const obj = { type: "EVENT_BANNER_DISMISS", eventId: id };
   obj.dispatch(obj);
 };

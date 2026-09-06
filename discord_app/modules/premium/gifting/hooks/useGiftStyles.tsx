@@ -1,11 +1,11 @@
 // === Module 10701: useGiftStyles ===
 
 // Module 10701 (useGiftStyles)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import size from "module_2" /* 2 */;
 
-const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
-const result = set.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");
+const PremiumGiftStyles = PremiumConstants.PremiumGiftStyles;
+const result = size.fileFinishedImporting("modules/premium/gifting/hooks/useGiftStyles.tsx");
 
 export const useGiftStyles = function useGiftStyles() {
   const items = [PremiumGiftStyles.STANDARD_BOX];

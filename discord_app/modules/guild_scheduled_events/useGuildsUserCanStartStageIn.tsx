@@ -1,12 +1,13 @@
-// === Module 9712: useChannelsUserCanStartStageIn ===
+// === Module 9712: useGuildsUserCanStartStageIn ===
 
-// Module 9712 (useChannelsUserCanStartStageIn)
-import closure_2 from "comparator" /* 2012 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
+// Module 9712 (useGuildsUserCanStartStageIn)
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
+const require = fn;
+const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGuildsUserCanStartStageIn.tsx");
 
 export const useChannelsUserCanStartStageIn = function useChannelsUserCanStartStageIn(guild) {
   let id;
@@ -16,22 +17,22 @@ export const useChannelsUserCanStartStageIn = function useChannelsUserCanStartSt
   if (id == null) {
     id = null;
   }
-  const items = [closure_2, closure_4];
+  const items = [GuildChannelStore, PermissionStore];
   const items1 = [id];
-  return id(504).useStateFromStoresArray(items, () => closure_1_2.getChannels(id)[closure_1_3].reduce((arr, channel) => {
+  return id(504).useStateFromStoresArray(items, () => GuildChannelStore.getChannels(id)[GUILD_VOCAL_CHANNELS_KEY].reduce((arr, channel) => {
     channel = channel.channel;
     if (channel.isGuildStageVoice()) {
       const channel2 = channel.channel;
-      if (closure_4 !== undefined) {
+      if (closure_1_4 !== undefined) {
         let canResult = channel2.isGuildStageVoice();
         if (canResult) {
-          canResult = obj.can(callback(table[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
+          canResult = obj.can(id(closure_1_1[2]).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel2);
         }
         if (canResult) {
           arr.push(channel);
         }
       }
-      obj = closure_4;
+      obj = closure_1_4;
     }
     return arr;
   }, []), items1);

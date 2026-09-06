@@ -1,11 +1,11 @@
-// === Module 9995: set ===
+// === Module 9995: getEffectiveNoiseCancellation ===
 
-// Module 9995 (set)
-import set from "set" /* 2 */;
+// Module 9995 (getEffectiveNoiseCancellation)
+import size from "module_2" /* 2 */;
 
 const deep_noise_suppression = "deep_noise_suppression";
-let set = new Set(["voice_isolation", "wide_spectrum"]);
-const result = set.fileFinishedImporting("modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
+const set = new Set(["voice_isolation", "wide_spectrum"]);
+const result = size.fileFinishedImporting("modules/noise_cancellation/getEffectiveNoiseCancellation.tsx");
 
 export default function getEffectiveNoiseCancellation(arg0, arg1) {
   if (!obj.isIOS()) {

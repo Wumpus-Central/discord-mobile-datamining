@@ -1,29 +1,27 @@
-// === Module 14933: route ===
+// === Module 14933: FamilyCenterScheduleDowntimeSetting ===
 
-// Module 14933 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 14933 (FamilyCenterScheduleDowntimeSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["w/ISB8"]);
+    const intl = util.intl;
+    return intl.string(_modDef2396["w/ISB8"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: SettingsConstants.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   unsearchable: true,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
-  getComponent() {
-    return require(14934) /* OverlappingSchedulesWarning */.default;
+  screen: {
+    route: Constants.UserSettingsSections.FAMILY_CENTER_SCHEDULE_DOWNTIME,
+    getComponent() {
+      return require("ScheduleDowntimeScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterScheduleDowntimeSetting.tsx");
 
 export default route;

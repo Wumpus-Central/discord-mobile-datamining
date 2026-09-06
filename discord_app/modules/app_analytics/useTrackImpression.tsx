@@ -1,20 +1,19 @@
-// === Module 8768: trackImpression ===
+// === Module 8768: useTrackImpression ===
 
-// Module 8768 (trackImpression)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import encodeProperties2 from "encodeProperties" /* 1250 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import closure_6 from "handleConnectionOpen" /* 4381 */;
-import withEqualityFn from "withEqualityFn" /* 1243 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
+// Module 8768 (useTrackImpression)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import _modDef1332 from "module_1332" /* 1332 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
 
-require = arg1;
-function trackImpression(type, arg1, arg2) {
-  let flag = arg1;
-  if (arg1 === undefined) {
+require = fn;
+function trackImpression(type, disableTrack, arg2) {
+  let flag = disableTrack;
+  if (disableTrack === undefined) {
     flag = false;
   }
   let flag2 = arg2;
@@ -22,105 +21,107 @@ function trackImpression(type, arg1, arg2) {
     flag2 = false;
   }
   ({ name, type, properties } = type);
-  if (type.type === encodeProperties2.ImpressionTypes.MODAL) {
+  if (type.type === discord_common_AnalyticsUtils.ImpressionTypes.MODAL) {
     if (null == type.name) {
-      let obj = callback4();
+      let obj = closure_1_11();
     }
   }
   if (!flag2) {
-    callback(type);
+    React5(type);
   }
   let guild_id;
   if (properties != null) {
     guild_id = properties.guild_id;
   }
   if (guild_id == null) {
-    guild_id = guildId.getGuildId();
+    guild_id = SelectedGuildStore.getGuildId();
   }
   let channel_id;
   if (properties != null) {
     channel_id = properties.channel_id;
   }
   if (channel_id == null) {
-    channel_id = channelId.getChannelId(guild_id);
+    channel_id = SelectedChannelStore.getChannelId(guild_id);
   }
-  let tmpResult = tmp(1242);
-  obj = { impression_type: type, location: callback3() };
-  tmpResult = tmp(4740);
+  tmp(1242);
+  obj = { impression_type: type, location: closure_1_10() };
+  const tmpResult = tmp(4740);
   const merged = Object.assign(tmpResult.collectGuildAnalyticsMetadata(guild_id));
-  const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel.getChannel(channel_id)));
+  const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadata(ChannelStore.getChannel(channel_id)));
   const merged2 = Object.assign(properties);
   const result = tmpResult.expandEventProperties(obj);
   if (flag) {
-    callback2(null, null);
+    React7(null, null);
   } else {
     if (tmp15) {
       tmp(1242).debugLogEvent(name, result);
-      callback5(name, result);
+      closure_12(name, result);
       const tmpResult2 = tmp(1242);
     }
-    callback2(name, result);
+    React7(name, result);
     tmp15 = null != name && null != type;
   }
 }
-({ setCurrentImpression: error, cleanupImpression: closure_8, setDebugTrackedData: c9, getLocation: c10, getImpressionStack: unpackModuleId } = withEqualityFn);
-encodeProperties = { analyticEventConfigs: require("expandEventProperties").AnalyticEventConfigs, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
-let closure_12 = encodeProperties.trackMaker(encodeProperties);
-let result = require("set").fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
+const ImpressionStore = fn(1243);
+({ setCurrentImpression: closure_7, cleanupImpression: closure_8, setDebugTrackedData: closure_9, getLocation: c10, getImpressionStack: closure_11 } = ImpressionStore);
+fn(1250);
+const AnalyticsUtils = { analyticEventConfigs: fn(1242).AnalyticEventConfigs, dispatcher: DispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+let closure_12 = AnalyticsUtils.trackMaker(AnalyticsUtils);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
 
-export default function useTrackImpression(arg0) {
+export default function useTrackImpression(arg0, arg1, current) {
   closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = { disableTrack: false, trackOnInitialLoad: false };
   }
-  dependencyMap = arg2;
-  let React;
-  closure_4 = undefined;
-  React = React.useRef(undefined);
-  closure_4 = React.useRef(undefined);
+  dependencyMap = current;
+  noop = undefined;
+  noop = noop.useRef(undefined);
+  noop.useRef(undefined);
   obj(4992)(() => {
     if (obj.trackOnInitialLoad) {
-      const tmp6 = obj(1332)(ref.current, obj);
+      const tmp6 = _modDef1332(ref.current, closure_0);
       if (!tmp6) {
         ref.current = tmp5;
       }
-      const tmp10 = obj(1332)(ref2.current, dependencyMap);
+      const tmp10 = _modDef1332(ref2.current, current);
       if (!tmp10) {
-        ref2.current = dependencyMap;
+        ref2.current = current;
       }
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
         obj.sequenceId = tmp2(4764)("impression_");
-        closure_1_13(obj, tmp.disableTrack);
+        trackImpression(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
-            closure_1_8(tmp);
+            closure_2_8(tmp);
           }
         };
       }
       return fn;
     }
   });
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!obj.trackOnInitialLoad) {
-      const tmp6 = obj(1332)(ref.current, obj);
+      const tmp6 = _modDef1332(ref.current, closure_0);
       if (!tmp6) {
         ref.current = tmp5;
       }
-      const tmp10 = obj(1332)(ref2.current, dependencyMap);
+      const tmp10 = _modDef1332(ref2.current, current);
       if (!tmp10) {
-        ref2.current = dependencyMap;
+        ref2.current = current;
       }
       if (!tmp6) {
         obj = {};
         const merged = Object.assign(tmp5);
         obj.sequenceId = tmp2(4764)("impression_");
-        closure_1_13(obj, tmp.disableTrack);
+        trackImpression(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
-            closure_1_8(tmp);
+            closure_2_8(tmp);
           }
         };
       }

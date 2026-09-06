@@ -1,13 +1,13 @@
-// === Module 7464: monotonicNowMs ===
+// === Module 7464: MonotonicClock ===
 
-// Module 7464 (monotonicNowMs)
-import set from "set" /* 2 */;
-import monotonicNowMs from "monotonicNowMs" /* 1354 */;
+// Module 7464 (MonotonicClock)
+import clock from "clock" /* 1354 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/monotonic_clock/MonotonicClock.native.tsx");
+const result = size.fileFinishedImporting("modules/monotonic_clock/MonotonicClock.native.tsx");
 
 export const monotonicNowMs = function monotonicNowMs() {
-  let monotonicNowMsResult = monotonicNowMs.monotonicNowMs();
+  let monotonicNowMsResult = clock.monotonicNowMs();
   if (monotonicNowMsResult == null) {
     const _performance = performance;
     monotonicNowMsResult = performance.now();

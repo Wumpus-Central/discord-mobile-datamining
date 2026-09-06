@@ -1,17 +1,17 @@
-// === Module 4232: SubscriptionStatusTypes ===
+// === Module 4232: PremiumGroupConstants ===
 
-// Module 4232 (SubscriptionStatusTypes)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3063 */;
-import ME from "ME" /* 1074 */;
-import importDefaultResult from "combined" /* 2024 */;
+// Module 4232 (PremiumGroupConstants)
+import util from "util" /* 1114 */;
+import _modDef3063 from "module_3063" /* 3063 */;
+import Constants from "Constants" /* 1074 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2024 */;
+import size from "module_2" /* 2 */;
 
-({ SubscriptionStatusTypes, HelpdeskArticles } = ME);
+({ SubscriptionStatusTypes, HelpdeskArticles } = Constants);
 const items = [, , , , ];
 ({ CANCELED: arr[0], PAUSED: arr[1], PAST_DUE: arr[2], ACCOUNT_HOLD: arr[3], BILLING_RETRY: arr[4] } = SubscriptionStatusTypes);
-const articleURL = importDefaultResult.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
-const result = set.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
+const articleURL = HelpdeskUtils.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
+const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
 
 export const TOTAL_PREMIUM_GROUP_MEMBER_SEATS = 5;
 export const TOTAL_PREMIUM_GROUP_USERS = 6;
@@ -20,12 +20,12 @@ export const PREMIUM_GROUP_ANNOUNCEMENT_MODAL_PROMOTION_KEY = "2026-07-premium-g
 export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export const getPremiumGroupProductName = function getPremiumGroupProductName() {
-  const intl = getSystemLocale.intl;
-  return intl.string(messagesProxyDefault.aFBQ3d);
+  const intl = util.intl;
+  return intl.string(_modDef3063.aFBQ3d);
 };
 export const getPremiumGroupCountryName = function getPremiumGroupCountryName() {
-  const intl = getSystemLocale.intl;
-  return intl.string(getSystemLocale.t.jI66M4);
+  const intl = util.intl;
+  return intl.string(util.t.jI66M4);
 };
 export const PremiumGroupInviteState = { UNKNOWN: "UNKNOWN", FETCHING: "FETCHING", PENDING: "PENDING", ACCEPTED: "ACCEPTED", REMOVED: "REMOVED", NOT_FOUND: "NOT_FOUND", ERROR: "ERROR" };
 export const PremiumGroupAPIErrorCodes = { UNKNOWN_USER: 10013, [10013]: "UNKNOWN_USER", BILLING_SUBSCRIPTION_GROUP_MAX_MEMBERS: 100123, [100123]: "BILLING_SUBSCRIPTION_GROUP_MAX_MEMBERS", BILLING_SUBSCRIPTION_GROUP_USER_INELIGIBLE: 100124, [100124]: "BILLING_SUBSCRIPTION_GROUP_USER_INELIGIBLE", BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED: 100125, [100125]: "BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED", BILLING_SUBSCRIPTION_GROUP_USER_IS_BOT: 100126, [100126]: "BILLING_SUBSCRIPTION_GROUP_USER_IS_BOT", BILLING_SUBSCRIPTION_GROUP_USER_ALREADY_IN_GROUP: 100127, [100127]: "BILLING_SUBSCRIPTION_GROUP_USER_ALREADY_IN_GROUP", BILLING_SUBSCRIPTION_GROUP_USER_HAS_FRACTIONAL_NITRO: 100128, [100128]: "BILLING_SUBSCRIPTION_GROUP_USER_HAS_FRACTIONAL_NITRO", BILLING_SUBSCRIPTION_GROUP_USER_BOOST_ONLY: 100129, [100129]: "BILLING_SUBSCRIPTION_GROUP_USER_BOOST_ONLY", BILLING_SUBSCRIPTION_GROUP_USER_ACCOUNT_TOO_YOUNG: 100130, [100130]: "BILLING_SUBSCRIPTION_GROUP_USER_ACCOUNT_TOO_YOUNG", BILLING_SUBSCRIPTION_GROUP_USER_HAS_INELIGIBLE_PLAN: 100131, [100131]: "BILLING_SUBSCRIPTION_GROUP_USER_HAS_INELIGIBLE_PLAN", BILLING_SUBSCRIPTION_GROUP_USER_ON_COOLDOWN: 100132, [100132]: "BILLING_SUBSCRIPTION_GROUP_USER_ON_COOLDOWN", BILLING_SUBSCRIPTION_GROUP_USER_ACTIVE_BOOSTS: 100133, [100133]: "BILLING_SUBSCRIPTION_GROUP_USER_ACTIVE_BOOSTS", BILLING_SUBSCRIPTION_GROUP_USER_ON_GIFT_SUBSCRIPTION: 100135, [100135]: "BILLING_SUBSCRIPTION_GROUP_USER_ON_GIFT_SUBSCRIPTION", BILLING_SUBSCRIPTION_GROUP_USER_HAS_MOBILE_SUBSCRIPTION: 100136, [100136]: "BILLING_SUBSCRIPTION_GROUP_USER_HAS_MOBILE_SUBSCRIPTION", BILLING_SUBSCRIPTION_GROUP_USER_INVALID_SUBSCRIPTION: 100137, [100137]: "BILLING_SUBSCRIPTION_GROUP_USER_INVALID_SUBSCRIPTION" };

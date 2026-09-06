@@ -1,85 +1,80 @@
 // === Module 5683: ChangeEmailCollectReasons ===
 
 // Module 5683 (ChangeEmailCollectReasons)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import ChangeEmailReasons from "ChangeEmailReasons" /* 5684 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import TableRadioGroup from "TableRadioGroup" /* 5685 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ CHANGE_EMAIL_REASONS_ORDER: error, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = ChangeEmailReasons);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-createCacheKey = { background: null, container: null, radioGroup: null, title: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj1 = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 };
-createCacheKey[3] = { textAlign: "center" };
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 };
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const VerificationConstants = fn(5684);
+({ CHANGE_EMAIL_REASONS_ORDER: closure_7, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = VerificationConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = { background: null, container: null, radioGroup: null, title: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.background = createStyles;
+createStyles.container = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+let obj1 = { paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.radioGroup = { paddingTop: nativeDefault.space.PX_16, paddingBottom: 38 };
+createStyles.title = { textAlign: "center" };
+let closure_12 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
 
 export default function ChangeEmailCollectReasons(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   const setChangeEmailReason = changeEmailReason.setChangeEmailReason;
   let navigation;
   let callback1;
-  const tmp = callback3();
+  const tmp = closure_12();
   let obj = changeEmailReason(navigation[8]);
-  const items = [closure_6];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  obj1 = changeEmailReason(navigation[9]);
+  let obj1 = changeEmailReason(navigation[9]);
   navigation = obj1.useNavigation();
   const items1 = [navigation, changeEmailReason];
   const items2 = [setChangeEmailReason];
   const callback = callback1.useCallback(() => {
-    let obj = setChangeEmailReason(navigation[10]);
-    obj = { change_email_reason_enum: changeEmailReason };
-    obj.track(closure_1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, obj);
+    const obj = { change_email_reason_enum: changeEmailReason };
+    obj.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, obj);
     if (null != changeEmailReason) {
-      if (closure_1_8.has(changeEmailReason)) {
-        navigation.push(changeEmailReason(tmp[11]).VerificationModalScenes.CHANGE_EMAIL_WARNING);
+      if (set.has(changeEmailReason)) {
+        navigation.push(ConstantsIOS.VerificationModalScenes.CHANGE_EMAIL_WARNING);
       }
     }
-    navigation.push(changeEmailReason(navigation[11]).VerificationModalScenes.ENTER_EMAIL);
+    navigation.push(ConstantsIOS.VerificationModalScenes.ENTER_EMAIL);
   }, items1);
   callback1 = callback1.useCallback((change_email_reason_enum) => {
-    let obj = setChangeEmailReason(navigation[10]);
-    obj = { change_email_reason_enum };
-    obj.track(closure_1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, obj);
+    const obj = { change_email_reason_enum };
+    obj.track(AnalyticEvents.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, obj);
     setChangeEmailReason(change_email_reason_enum);
   }, items2);
   const items3 = [changeEmailReason, callback1];
   let tmp9 = null;
   if (null != stateFromStores) {
-    obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: null, children: null };
-    obj[2] = tmp.background;
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj1 = { style: null, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    obj1[0] = tmp.title;
+    obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, style: tmp.background, children: null };
+    obj = { style: tmp.container, children: null };
+    obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(tmp3[16]).intl;
-    obj1[4] = intl.string(tmp2(tmp3[16]).t["41NIIh"]);
-    const items4 = [callback(tmp2(tmp3[15]).Text, obj1), , ];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.radioGroup;
-    obj2[1] = tmp8;
-    items4[1] = callback(closure_4, obj2);
-    const obj3 = { size: "md", variant: "primary", onPress: null, text: null, disabled: null };
-    obj3[2] = callback;
+    obj1.children = intl.string(tmp2(tmp3[16]).t["41NIIh"]);
+    const items4 = [closure_10(tmp2(tmp3[15]).Text, obj1), , ];
+    const obj2 = { style: tmp.radioGroup, children: tmp8 };
+    items4[1] = closure_10(closure_4, obj2);
+    const obj3 = { size: "md", variant: "primary", onPress: callback, text: null, disabled: null };
     const intl2 = tmp2(tmp3[16]).intl;
-    obj3[3] = intl2.string(tmp2(tmp3[16]).t.XiOHRX);
-    obj3[4] = null == changeEmailReason;
-    items4[2] = callback(tmp2(tmp3[17]).Button, obj3);
-    obj[1] = items4;
-    obj[3] = callback2(closure_4, obj);
-    tmp9 = callback(closure_5, obj);
+    obj3.text = intl2.string(tmp2(tmp3[16]).t.XiOHRX);
+    obj3.disabled = null == changeEmailReason;
+    items4[2] = closure_10(tmp2(tmp3[17]).Button, obj3);
+    obj.children = items4;
+    obj.children = closure_11(closure_4, obj);
+    tmp9 = closure_10(closure_5, obj);
   }
   return tmp9;
 };

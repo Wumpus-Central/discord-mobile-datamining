@@ -1,51 +1,53 @@
-// === Module 16786: ReferralProgramCoachmarkImg ===
+// === Module 16786: useReferralProgramCoachmark ===
 
-// Module 16786 (ReferralProgramCoachmarkImg)
-import preloadDefault from "preload" /* 5587 */;
-import registerAssetDefault from "registerAsset" /* 16787 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UserSettingsSections } from "ME" /* 1074 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16786 (useReferralProgramCoachmark)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef16787 from "module_16787" /* 16787 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function ReferralProgramCoachmarkImg() {
-  const tmp = callback2();
+  const tmp = closure_9();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  obj = { source: registerAssetDefault, style: tmp.coachmarkImage };
-  obj[1] = jsx(preloadDefault, { source: registerAssetDefault, style: tmp.coachmarkImage });
-  return <View source={registerAssetDefault} style={tmp.coachmarkImage} />;
+  obj = { source: _modDef16787, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16787, style: tmp.coachmarkImage });
+  return <View source={_modDef16787} style={tmp.coachmarkImage} />;
 }
-let closure_9 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
-let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");
+const View = fn(17).View;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" }, coachmarkImage: { width: 200, height: 112 } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx");
 
 export const useReferralProgramCoachmark = function useReferralProgramCoachmark(disabled) {
   disabled = disabled.disabled;
-  let _require;
-  closure_1 = undefined;
-  let obj = _require(4380);
-  let result = obj.useIsDismissibleContentDismissed_UNSAFE(_require(1943).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
+  _require = undefined;
+  let visible;
+  let obj = require("DismissibleContentUnsafeUtils");
+  let result = obj.useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK);
   if (!result) {
     result = disabled;
   }
-  const isEligibleSenderForReferralProgram = _require(8056).useIsEligibleSenderForReferralProgram(result);
-  _require(7388);
+  const isEligibleSenderForReferralProgram = require("useIsEligibleSenderForReferralProgram").useIsEligibleSenderForReferralProgram(result);
+  require("useSelectedDismissibleContent");
   if (isEligibleSenderForReferralProgram) {
     if (!disabled) {
       let items = [tmp(1943).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK];
     }
-    const tmp8 = callback(tmp6(items), 2);
+    const tmp8 = _slicedToArray(tmp6(items), 2);
     _require = tmp9;
     const tmp10 = tmp8[0] === tmp(1943).DismissibleContent.REFERRAL_TRIAL_MOBILE_SENDER_COACHMARK;
-    closure_1 = tmp10;
+    visible = tmp10;
     const items1 = [tmp10, tmp8[1]];
     let tmp13 = null;
     if (tmp10) {
-      obj = { props: null };
-      obj[0] = tmp12;
+      obj = { props: tmp12 };
       tmp13 = obj;
     }
     return tmp13;

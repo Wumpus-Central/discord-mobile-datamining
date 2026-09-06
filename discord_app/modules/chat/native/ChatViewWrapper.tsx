@@ -1,16 +1,16 @@
-// === Module 11349: ? ===
+// === Module 11349: ChatViewWrapper ===
 
-// Module 11349
-import set from "set" /* 2 */;
+// Module 11349 (ChatViewWrapper)
 import ChatViewWrapperAnimatedKeyboardDefault from "ChatViewWrapperAnimatedKeyboard" /* 11351 */;
 import ChatViewWrapperBaseDefault from "ChatViewWrapperBase" /* 11361 */;
-import apexExperiment from "apexExperiment" /* 11350 */;
+import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 11350 */;
+import size from "module_2" /* 2 */;
 
-if (apexExperiment.isAnimatedAndroidKeyboard()) {
+if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
   let importDefaultResult = ChatViewWrapperAnimatedKeyboardDefault;
 } else {
   importDefaultResult = ChatViewWrapperBaseDefault;
 }
-const result = set.fileFinishedImporting("modules/chat/native/ChatViewWrapper.tsx");
+const result = size.fileFinishedImporting("modules/chat/native/ChatViewWrapper.tsx");
 
 export default importDefaultResult;

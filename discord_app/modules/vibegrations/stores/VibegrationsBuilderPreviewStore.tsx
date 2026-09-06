@@ -1,30 +1,30 @@
-// === Module 14463: getBuilderPreviewApplicationId ===
+// === Module 14463: VibegrationsBuilderPreviewStore ===
 
-// Module 14463 (getBuilderPreviewApplicationId)
+// Module 14463 (VibegrationsBuilderPreviewStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let c0 = null;
-let c1 = false;
+let applicationId = null;
+let enabled = false;
 const Store = initializeDefault.Store;
 class VibegrationsBuilderPreviewStore extends Store {
 }
 const prototype = VibegrationsBuilderPreviewStore.prototype;
 prototype["getBuilderPreviewApplicationId"] = function getBuilderPreviewApplicationId() {
-  return c0;
+  return applicationId;
 };
 prototype["isBuilderPreviewMobile"] = function isBuilderPreviewMobile() {
-  return c1;
+  return enabled;
 };
-const vibegrationsBuilderPreviewStore = new VibegrationsBuilderPreviewStore(dispatcherDefault, {
+const vibegrationsBuilderPreviewStore = new VibegrationsBuilderPreviewStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
-    if (null == c0) {
-      if (!c1) {
+    if (null == applicationId) {
+      if (!enabled) {
         return false;
       }
     }
-    c0 = null;
-    c1 = false;
+    applicationId = null;
+    enabled = false;
   },
   VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET: function handleBuilderPreviewApplicationSet(applicationId) {
     applicationId = applicationId.applicationId;
@@ -39,6 +39,7 @@ const vibegrationsBuilderPreviewStore = new VibegrationsBuilderPreviewStore(disp
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/vibegrations/stores/VibegrationsBuilderPreviewStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/stores/VibegrationsBuilderPreviewStore.tsx");
 
 export default vibegrationsBuilderPreviewStore;

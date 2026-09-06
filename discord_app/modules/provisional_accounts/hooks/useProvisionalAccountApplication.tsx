@@ -1,18 +1,19 @@
 // === Module 12630: useProvisionalAccountApplication ===
 
 // Module 12630 (useProvisionalAccountApplication)
-import closure_2 from "recountRelationshipTypes" /* 7658 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
 
 export default function useProvisionalAccountApplication(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
-    const gameRelationshipsForUser = closure_1_2.getGameRelationshipsForUser(closure_0);
+  _require = arg0;
+  const items = [GameRelationshipStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const gameRelationshipsForUser = GameRelationshipStore.getGameRelationshipsForUser(closure_0);
     return 0 !== gameRelationshipsForUser.length ? gameRelationshipsForUser[0].applicationId : undefined;
   });
-  const obj = _require(504);
-  return _require(7168).useGetOrFetchApplication(stateFromStores);
+  const obj = require("initialize");
+  return require("useGetOrFetchApplications").useGetOrFetchApplication(stateFromStores);
 };

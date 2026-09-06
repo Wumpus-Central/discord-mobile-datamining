@@ -1,13 +1,13 @@
 // === Module 6579: WordBalloonIllocon ===
 
 // Module 6579 (WordBalloonIllocon)
-import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6580 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef6580 from "module_6580" /* 6580 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/WordBalloonIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/WordBalloonIllocon.native.tsx");
 
 export const WordBalloonIllocon = function WordBalloonIllocon(size) {
   let num = size.size;
@@ -16,12 +16,12 @@ export const WordBalloonIllocon = function WordBalloonIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  obj = { uri: _modDef6580 };
+  obj.source = obj;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { uri: _modDef6580 });
 };

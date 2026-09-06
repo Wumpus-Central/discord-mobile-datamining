@@ -1,12 +1,11 @@
-// === Module 7288: ReportToModPermissions ===
+// === Module 7288: ReportToModConstants ===
 
-// Module 7288 (ReportToModPermissions)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import importAllResult from "fromString" /* 1086 */;
+// Module 7288 (ReportToModConstants)
+import Constants from "Constants" /* 1074 */;
+import BigFlagUtils from "BigFlagUtils" /* 1086 */;
+import size from "module_2" /* 2 */;
 
-const Permissions = ME.Permissions;
-const combineResult = importAllResult.combine(Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
-const result = set.fileFinishedImporting("modules/report_to_mod/ReportToModConstants.tsx");
+const Permissions = Constants.Permissions;
+const result = size.fileFinishedImporting("modules/report_to_mod/ReportToModConstants.tsx");
 
-export const ReportToModPermissions = combineResult;
+export const ReportToModPermissions = BigFlagUtils.combine(Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);

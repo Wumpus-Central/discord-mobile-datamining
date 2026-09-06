@@ -1,13 +1,11 @@
-// === Module 4250: sanitizeURLPart ===
+// === Module 4250: handleURL ===
 
-// Module 4250 (sanitizeURLPart)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Linking } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "setContent" /* 4251 */;
-import { WebBrowserType } from "ME" /* 1074 */;
+// Module 4250 (handleURL)
+import LoggerDefault from "Logger" /* 3 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ActionSheetStore from "ActionSheetStore" /* 4251 */;
 
-const require = arg1;
+const require = fn;
 function sanitizeURLPart(str) {
   let replaced = str;
   if (null != str) {
@@ -15,335 +13,344 @@ function sanitizeURLPart(str) {
   }
   return replaced;
 }
-function _handleURL() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_7 = 0;
-    c8 = 0;
-    c6 = 0;
-    let iter = (function*(arg0, arg1) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
+let closure_9 = async function _handleURL(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp3;
+          closure_3 = tmp5;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let obj1 = dependencyMap;
+          if (dependencyMap === undefined) {
+            obj1 = {};
+          }
+          let flag = obj1.allowExternal;
+          if (flag === undefined) {
+            flag = true;
+          }
+          closure_131_2 = flag;
+          let flag2 = obj1.forceExternalBrowser;
+          if (flag2 === undefined) {
+            flag2 = false;
+          }
+          closure_131_3 = flag2;
+          closure_131_5 = undefined;
+          let payload;
+          closure_131_7 = undefined;
+          closure_131_8 = undefined;
+          closure_131_9 = undefined;
+          closure_131_4 = function openInBrowser() {
+            if (null != obj.sanitizeUrl(closure_1_0)) {
+              let SAFARI = constants.SAFARI;
+              if (closure_1_0.startsWith("https:")) {
+                const browserManagerSelectedBrowser = closure_0(4525).getBrowserManagerSelectedBrowser();
+                let tmp10 = closure_1_1;
+                if (closure_1_1 == null) {
+                  tmp10 = browserManagerSelectedBrowser;
+                }
+                let tmp11 = closure_1_3;
+                if (closure_1_3) {
+                  tmp11 = tmp10 === tmp5.IN_APP;
+                }
+                SAFARI = tmp10;
+                if (tmp11) {
+                  if (browserManagerSelectedBrowser !== tmp5.IN_APP) {
+                    SAFARI = browserManagerSelectedBrowser;
+                  } else {
+                    tmp8(1115).isIOS() ? tmp5.SAFARI : tmp5.CHROME;
+                    const tmp8Result = tmp8(1115);
+                  }
+                }
+                const obj3 = closure_0(4525);
+                tmp8 = closure_0;
+              }
+              if (constants.IN_APP === SAFARI) {
+                const result = closure_0(4525).browserManagerOpenUrl(closure_1_0, tmp5.IN_APP);
+                result.catch(() => {
+                  const intl = closure_2_0(1114).intl;
+                  closure_2_0(4258).presentFailedToast("" + intl.string(closure_2_0(1114).t.HryVrx) + " " + closure_1_0);
+                });
+                const obj7 = closure_0(4525);
+                let isIOSResult = closure_0(1115).isIOS();
+                if (isIOSResult) {
+                  isIOSResult = open.isOpen();
+                }
+                if (isIOSResult) {
+                  closure_1(4527).hideAllActionSheets();
+                  const tmpResult = closure_1(4527);
+                }
+                const obj8 = closure_0(1115);
+              } else if (tmp5.CHROME === SAFARI) {
+                const result1 = closure_0(4525).browserManagerOpenUrl(closure_1_0, tmp5.CHROME);
+                result1.catch(() => {
+                  const intl = closure_2_0(1114).intl;
+                  closure_2_0(4258).presentFailedToast("" + intl.string(closure_2_0(1114).t.HryVrx) + " " + closure_1_0);
+                });
+                const obj6 = closure_0(4525);
+              } else {
+                const SAFARI2 = tmp5.SAFARI;
+                const result2 = closure_0(4525).browserManagerOpenUrl(closure_1_0, tmp5.SAFARI);
+                const obj5 = closure_0(4525);
+              }
+            } else {
+              let intl = closure_0(1114).intl;
+              closure_0(4258).presentFailedToast(intl.string(closure_0(1114).t.XiqzAp));
+              const obj2 = closure_0(4258);
+            }
+          };
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          v0 = 2;
-          if (0 === c7) {
+        if (1 === tmp8) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            let obj2 = { value, done: true };
+            return obj2;
+          } else if (closure_131_3) {
+            closure_131_4();
+          } else {
+            let obj5 = /^[a-zA-Z0-9+-.]+:/;
+            if (!obj5.test(closure_131_0)) {
+              closure_131_0 = "https://" + closure_131_0;
+            }
+            let obj6 = /^https?:/i;
+            if (obj6.test(closure_131_0)) {
+              c6 = 1;
+              let obj7 = closure_132_1(closure_132_2[15]);
+              closure_131_5 = obj7.parse(closure_131_0);
+              closure_131_5.pathname = closure_132_8(closure_131_5.pathname);
+              closure_131_5.search = closure_132_8(closure_131_5.search);
+              closure_131_5.hash = closure_132_8(closure_131_5.hash);
+              let obj8 = closure_132_1(closure_132_2[15]);
+              closure_131_0 = obj8.format(closure_131_5);
+              c6 = 0;
+            }
+            payload = closure_132_1(closure_132_2[16])(closure_131_0).payload;
+            let obj3 = { payload, safe: true };
+            if (!closure_132_1(closure_132_2[17])(obj3)) {
+              if (closure_131_2) {
+                c7 = 3;
+                c8 = 1;
+                const obj4 = {
+                  value: (function tryHandleUniversalLink(arg0) {
+                                  closure_0 = arg0;
+                                  return new Promise((arg0) => {
+                                    closure_0 = arg0;
+                                    const result = closure_2_1(4252).tryOpenUrlAsUniversalLink(closure_0);
+                                    const obj = closure_2_1(4252);
+                                    result.then(() => {
+                                      logger.info("Universal link opened successfully.");
+                                      closure_0(true);
+                                    }).catch(() => {
+                                      logger.info("URL is not a handled universal link.");
+                                      closure_0(false);
+                                    });
+                                  });
+                                })(closure_131_0),
+                  done: false
+                };
+                return obj4;
+              }
+            }
+          }
+        } else if (2 === tmp8) {
+          c6 = 0;
+          c8 = 3;
+          return { value: "HermesInternal", done: null };
+        } else {
+          if (3 === tmp8) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              c8 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              c8 = 3;
+              obj5 = { value, done: true };
+              return obj5;
             } else {
-              let openInBrowser = tmp3;
-              let flag2 = tmp5;
-              let flag;
-              flag2 = undefined;
-              obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
+              closure_131_7 = value;
+              if (!closure_131_7) {
+                c7 = 4;
+                c8 = 1;
+                obj6 = {
+                  value: (function tryHandleCustomScheme(arg0) {
+                                  let arr = arg0;
+                                  closure_0 = arg0;
+                                  const iter = closure_0(4254).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
+                                  while (iter !== undefined) {
+                                    ({ regex, protocol } = nextResult);
+                                    let match = regex.exec(arr);
+                                    let tmp4;
+                                    if (match != null) {
+                                      tmp4 = match[1];
+                                    }
+                                    if (null != tmp4) {
+                                      let sum = protocol + tmp5;
+                                      arr = sum;
+                                      closure_0 = sum;
+                                    }
+                                    continue;
+                                  }
+                                  let first = null;
+                                  if (-1 !== arr.indexOf("://")) {
+                                    first = arr.split("://")[0];
+                                  }
+                                  if ("http" !== first) {
+                                    if ("https" !== first) {
+                                      logger.info("tryHandleCustomScheme", arr);
+                                      let promise = new Promise((arg0) => {
+                                        closure_0 = arg0;
+                                        const obj = closure_2_1(4252);
+                                        const tryOpenSchemeResult = closure_2_1(4252).tryOpenScheme(closure_0);
+                                        closure_2_1(4252).tryOpenScheme(closure_0).then(() => {
+                                          logger.info("Custom scheme opened successfully.");
+                                          closure_0(true);
+                                        }).catch(() => {
+                                          logger.info("Custom scheme failed to open.");
+                                          closure_0(false);
+                                        });
+                                      });
+                                    }
+                                    return promise;
+                                  }
+                                  promise = new Promise((fn) => {
+                                    logger.info("URL is not a custom scheme.");
+                                    fn(false);
+                                  });
+                                })(closure_131_0),
+                  done: false
+                };
+                return obj6;
               }
-              flag = obj1.allowExternal;
-              if (flag === undefined) {
-                flag = true;
-              }
-              flag2 = obj1.forceExternalBrowser;
-              if (flag2 === undefined) {
-                flag2 = false;
-              }
-              closure_5 = undefined;
-              let payload;
-              c7 = undefined;
-              v0 = undefined;
-              closure_9 = undefined;
-              openInBrowser = function openInBrowser() {
-                if (null != obj.sanitizeUrl(lib)) {
-                  let SAFARI = constants.SAFARI;
-                  if (lib.startsWith("https:")) {
-                    const browserManagerSelectedBrowser = lib(tmp2[12]).getBrowserManagerSelectedBrowser();
-                    let tmp10 = callback;
-                    if (callback == null) {
-                      tmp10 = browserManagerSelectedBrowser;
-                    }
-                    let tmp11 = flag2;
-                    if (flag2) {
-                      tmp11 = tmp10 === tmp5.IN_APP;
-                    }
-                    SAFARI = tmp10;
-                    if (tmp11) {
-                      if (browserManagerSelectedBrowser !== tmp5.IN_APP) {
-                        SAFARI = browserManagerSelectedBrowser;
-                      } else {
-                        tmp8(tmp2[13]).isIOS() ? tmp5.SAFARI : tmp5.CHROME;
-                        const tmp8Result = tmp8(tmp2[13]);
-                      }
-                    }
-                    const obj3 = lib(tmp2[12]);
-                    tmp8 = lib;
-                  }
-                  if (constants.IN_APP === SAFARI) {
-                    const result = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.IN_APP);
-                    result.catch(() => {
-                      const intl = closure_1_0(closure_1_2[11]).intl;
-                      closure_1_0(closure_1_2[10]).presentFailedToast("" + intl.string(closure_1_0(closure_1_2[11]).t.HryVrx) + " " + closure_0);
-                    });
-                    const obj7 = lib(tmp2[12]);
-                    let isIOSResult = lib(tmp2[13]).isIOS();
-                    if (isIOSResult) {
-                      isIOSResult = tmp53.isOpen();
-                    }
-                    if (isIOSResult) {
-                      callback(tmp2[14]).hideAllActionSheets();
-                      const tmpResult = callback(tmp2[14]);
-                    }
-                    const obj8 = lib(tmp2[13]);
-                  } else if (tmp5.CHROME === SAFARI) {
-                    const result1 = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.CHROME);
-                    result1.catch(() => {
-                      const intl = closure_1_0(closure_1_2[11]).intl;
-                      closure_1_0(closure_1_2[10]).presentFailedToast("" + intl.string(closure_1_0(closure_1_2[11]).t.HryVrx) + " " + closure_0);
-                    });
-                    const obj6 = lib(tmp2[12]);
-                  } else {
-                    const SAFARI2 = tmp5.SAFARI;
-                    const result2 = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.SAFARI);
-                    const obj5 = lib(tmp2[12]);
-                  }
-                } else {
-                  let intl = lib(tmp2[11]).intl;
-                  lib(tmp2[10]).presentFailedToast(intl.string(lib(tmp2[11]).t.XiqzAp));
-                  const obj2 = lib(tmp2[10]);
-                }
-              };
-              c7 = 1;
-              v0 = 1;
-              return { value: "PX_16", done: true };
             }
-          } else {
-            if (1 === tmp8) {
-              if (arg0 === 1) {
-                v0 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v0 = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else if (closure_1_3) {
-                closure_1_4();
-              } else {
-                let obj5 = /^[a-zA-Z0-9+-.]+:/;
-                if (!obj5.test(closure_0)) {
-                  closure_0 = "https://" + closure_0;
-                }
-                let obj6 = /^https?:/i;
-                if (obj6.test(closure_0)) {
-                  payload = 1;
-                  let obj7 = callback(flag[15]);
-                  closure_5 = obj7.parse(closure_0);
-                  closure_5.pathname = v0(closure_5.pathname);
-                  closure_5.search = v0(closure_5.search);
-                  closure_5.hash = v0(closure_5.hash);
-                  let obj8 = callback(flag[15]);
-                  closure_0 = obj8.format(closure_5);
-                  payload = 0;
-                }
-                payload = callback(flag[16])(closure_0).payload;
-                let obj3 = { payload: null, safe: true };
-                obj3[0] = payload;
-                if (!callback(flag[17])(obj3)) {
-                  if (flag) {
-                    c7 = 3;
-                    v0 = 1;
-                    const obj4 = { value: null, done: false };
-                    obj4[0] = (function tryHandleUniversalLink(closure_0) {
-                      return new Promise((closure_0) => {
-                        const result = closure_1_1(closure_1_2[5]).tryOpenUrlAsUniversalLink(closure_0);
-                        const obj = closure_1_1(closure_1_2[5]);
-                        result.then(() => { ... }).catch(() => { ... });
-                      });
-                    })(closure_0);
-                    return obj4;
-                  }
-                }
-              }
-            } else if (2 === tmp8) {
-              payload = 0;
-              v0 = 3;
-              return { value: "HermesInternal", done: null };
+          } else if (4 === tmp8) {
+            if (arg0 === 1) {
+              c8 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c8 = 3;
+              obj7 = { value, done: true };
+              return obj7;
             } else {
-              if (3 === tmp8) {
-                if (arg0 === 1) {
-                  v0 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  v0 = 3;
-                  obj5 = { value: null, done: true };
-                  obj5[0] = arg1;
-                  return obj5;
-                } else {
-                  closure_7 = arg1;
-                  if (!closure_7) {
-                    c7 = 4;
-                    v0 = 1;
-                    obj6 = { value: null, done: false };
-                    obj6[0] = (function tryHandleCustomScheme(closure_0) {
-                      let arr = closure_0;
-                      let lib = closure_0;
-                      const iter = lib(flag[6]).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
-                      while (iter !== undefined) {
-                        ({ regex, protocol } = nextResult);
-                        let tmp2 = arr;
-                        let match = regex.exec(arr);
-                        let tmp4;
-                        if (match != null) {
-                          tmp4 = match[1];
-                        }
-                        if (null != tmp4) {
-                          let tmp6 = protocol;
-                          let tmp7 = tmp4;
-                          let sum = protocol + tmp5;
-                          arr = sum;
-                          lib = sum;
-                        }
-                        continue;
-                      }
-                      let first = null;
-                      if (-1 !== arr.indexOf("://")) {
-                        first = arr.split("://")[0];
-                      }
-                      if ("http" !== first) {
-                        if ("https" !== first) {
-                          logger.info("tryHandleCustomScheme", arr);
-                          let promise = new Promise((closure_0) => {
-                            const obj = closure_1_1(closure_1_2[5]);
-                            const tryOpenSchemeResult = closure_1_1(closure_1_2[5]).tryOpenScheme(closure_0);
-                            closure_1_1(closure_1_2[5]).tryOpenScheme(closure_0).then(() => { ... }).catch(() => { ... });
-                          });
-                        }
-                        return promise;
-                      }
-                      promise = new Promise((arg0) => {
-                        logger.info("URL is not a custom scheme.");
-                        arg0(false);
-                      });
-                    })(closure_0);
-                    return obj6;
-                  }
-                }
-              } else if (4 === tmp8) {
-                if (arg0 === 1) {
-                  v0 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  v0 = 3;
-                  obj7 = { value: null, done: true };
-                  obj7[0] = arg1;
-                  return obj7;
-                } else {
-                  v0 = arg1;
-                  if (!v0) {
-                    c7 = 5;
-                    v0 = 1;
-                    obj8 = { value: null, done: false };
-                    obj8[0] = (function tryHandleWhitelistedURL(closure_0) {
-                      const lib = closure_0;
-                      function _loop(protocol) {
-                        closure_0 = protocol;
-                        let num = 0;
-                        if (null !== regex.exec(closure_0)) {
-                          let obj = { v: null };
-                          const promise = new Promise(() => { ... });
-                          obj[0] = promise;
-                          num = obj;
-                        }
-                        return num;
-                      }
-                      const iter = lib(flag[8]).LINKING_WHITELIST_VALUES[Symbol.iterator]();
-                      const nextResult = iter.next();
-                      while (iter !== undefined) {
-                        let regex = nextResult.regex;
-                        let _loopResult = _loop(nextResult.protocol);
-                        if (0 !== _loopResult) {
-                          let tmp4 = _loopResult;
-                          if (tmp3) {
-                            let tmp5 = iter;
-                            iter.return();
-                            return _loopResult.v;
-                          }
-                        }
-                        continue;
-                      }
-                      return new Promise((arg0) => {
-                        logger.info("URL is not whitelisted.");
-                        arg0(false);
-                      });
-                    })(closure_0);
-                    return obj8;
-                  }
-                }
-              } else if (arg0 === 1) {
-                v0 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                closure_9 = arg1;
-                if (!closure_9) {
-                  openInBrowser();
-                }
+              closure_131_8 = value;
+              if (!closure_131_8) {
+                c7 = 5;
+                c8 = 1;
+                obj8 = {
+                  value: (function tryHandleWhitelistedURL(arg0) {
+                                  closure_0 = arg0;
+                                  function _loop(protocol) {
+                                    closure_0 = protocol;
+                                    let num = 0;
+                                    if (null !== regex.exec(closure_0)) {
+                                      let obj = { v: null };
+                                      const promise = new Promise((url) => {
+                                        const canOpenURLResult = closure_3_4.canOpenURL(url);
+                                        closure_3_4.canOpenURL(url).then((result) => {
+                                          if (result) {
+                                            regex(dependencyMap[7]).performURLNavigation(url);
+                                            url(true);
+                                            const obj = regex(dependencyMap[7]);
+                                          } else {
+                                            logger.info("Whitelisted URL, but cannot be opened (app likely not installed).");
+                                            url(false);
+                                          }
+                                        }).catch((error) => {
+                                          logger.info("Whitelisted URL encountered an error.", { error });
+                                          url(false);
+                                        });
+                                      });
+                                      obj.v = promise;
+                                      num = obj;
+                                    }
+                                    return num;
+                                  }
+                                  const iter = closure_0(4256).LINKING_WHITELIST_VALUES[Symbol.iterator]();
+                                  const nextResult = iter.next();
+                                  while (iter !== undefined) {
+                                    let regex = nextResult.regex;
+                                    let _loopResult = _loop(nextResult.protocol);
+                                    if (0 !== _loopResult) {
+                                      if (tmp3) {
+                                        iter.return();
+                                        return _loopResult.v;
+                                      }
+                                    }
+                                    continue;
+                                  }
+                                  return new Promise((fn) => {
+                                    logger.info("URL is not whitelisted.");
+                                    fn(false);
+                                  });
+                                })(closure_131_0),
+                  done: false
+                };
+                return obj8;
               }
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
             }
-            v0 = 3;
+          } else if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_131_9 = value;
+            if (!closure_131_9) {
+              closure_131_4();
+            }
           }
-        } catch (tmp53) {
-          closure_5 = tmp53;
-          if (tmp4 === payload) {
-            v0 = tmp2;
-            throw tmp53;
-          } else {
-            c7 = tmp;
-          }
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
         }
+        c8 = 3;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp53) {
+      const open = tmp53;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp53;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-let closure_7 = new timestampDefault("handleURL");
-let tmp2 = new timestampDefault("handleURL");
-let result = require("set").fileFinishedImporting("modules/links/native/handleURL.tsx");
+};
+const Linking = fn(17).Linking;
+const WebBrowserType = fn(1074).WebBrowserType;
+let closure_7 = new LoggerDefault("handleURL");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/links/native/handleURL.tsx");
 
 export default function handleURL(arg0, arg1) {
   const self = this;
-  const apply = _handleURL.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

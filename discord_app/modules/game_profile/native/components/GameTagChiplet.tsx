@@ -1,39 +1,37 @@
-// === Module 17159: ? ===
+// === Module 17159: GameTagChiplet ===
 
-// Module 17159
+// Module 17159 (GameTagChiplet)
 import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
-import GameProfileEmbedAction from "GameProfileEmbedAction" /* 8686 */;
-import memoResult1 from "memoResult1" /* 9184 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
+import GuildTag from "GuildTag" /* 9184 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_5 = createCacheKey.createStyles({ container: { flexShrink: 1, minWidth: 0, overflow: "hidden" }, text: { flexShrink: 1, minWidth: 0 }, image: { width: 12, height: 12 } });
-const memoResult = importAllResult.memo((game) => {
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ container: { flexShrink: 1, minWidth: 0, overflow: "hidden" }, text: { flexShrink: 1, minWidth: 0 }, image: { width: 12, height: 12 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/native/components/GameTagChiplet.tsx");
+
+export default noop.memo((game) => {
   game = game.game;
   ({ userId, textColor } = game);
-  const tmp = callback();
+  const tmp = closure_5();
   const iconURL = game.getIconURL(32);
-  let obj = { gameId: game.id, source: GameProfileEmbedAction.GameProfileSources.CallTile, sourceUserId: userId };
-  const tmp3 = useOpenGameProfileModalDefault;
+  let obj = { gameId: game.id, source: GameProfileAnalyticUtils.GameProfileSources.CallTile, sourceUserId: userId };
   obj = { guildTag: game.name, guildBadge: null, containerStyles: null, textStyle: null, onPress: null, textColor: null };
   let tmp5Result;
   if (null != iconURL) {
     obj = { source: null, alt: "", style: null };
-    obj1 = { uri: null };
-    obj1[0] = iconURL;
-    obj[0] = obj1;
-    obj[2] = tmp.image;
+    const obj1 = { uri: iconURL };
+    obj.source = obj1;
+    obj.style = tmp.image;
     tmp5Result = tmp5(Image, obj);
   }
-  obj[1] = tmp5Result;
-  ({ container: obj2[2], text: obj2[3] } = tmp);
-  obj[4] = useOpenGameProfileModalDefault(obj);
-  obj[5] = textColor;
-  return jsx(memoResult1.BaseGuildTagChiplet, { guildTag: game.name, guildBadge: null, containerStyles: null, textStyle: null, onPress: null, textColor: null });
+  obj.guildBadge = tmp5Result;
+  ({ container: obj2.containerStyles, text: obj2.textStyle } = tmp);
+  obj.onPress = useOpenGameProfileModalDefault(obj);
+  obj.textColor = textColor;
+  return jsx(GuildTag.BaseGuildTagChiplet, { guildTag: game.name, guildBadge: null, containerStyles: null, textStyle: null, onPress: null, textColor: null });
 });
-const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameTagChiplet.tsx");
-
-export default memoResult;

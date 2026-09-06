@@ -1,7 +1,6 @@
-// === Module 5692: AccountAgeTier10LargeBadge ===
+// === Module 5692: native ===
 
-// Module 5692 (AccountAgeTier10LargeBadge)
-import set from "set" /* 2 */;
+// Module 5692 (native)
 import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5693 */;
 import AccountAgeTier10SmallBadge from "AccountAgeTier10SmallBadge" /* 5695 */;
 import AccountAgeTier1LargeBadge from "AccountAgeTier1LargeBadge" /* 5697 */;
@@ -451,8 +450,9 @@ import WumpusCouchSpotIllustration from "WumpusCouchSpotIllustration" /* 6583 */
 import WumpusGearSpotIllustration from "WumpusGearSpotIllustration" /* 6585 */;
 import WumpusMahjongSpotIllustration from "WumpusMahjongSpotIllustration" /* 6587 */;
 import WumpusWishlistingSpotIllustration from "WumpusWishlistingSpotIllustration" /* 6589 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/assets/native.tsx");
+const result = size.fileFinishedImporting("design/assets/native.tsx");
 
 export const AccountAgeTier10LargeBadge = AccountAgeTier10LargeBadge.AccountAgeTier10LargeBadge;
 export const AccountAgeTier10SmallBadge = AccountAgeTier10SmallBadge.AccountAgeTier10SmallBadge;

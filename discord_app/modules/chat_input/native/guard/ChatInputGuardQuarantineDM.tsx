@@ -1,23 +1,23 @@
-// === Module 12451: ? ===
+// === Module 12451: ChatInputGuardQuarantineDM ===
 
-// Module 12451
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 12451 (ChatInputGuardQuarantineDM)
+import util from "util" /* 1114 */;
 import ChatInputGuardDefault from "ChatInputGuard" /* 12448 */;
 import ChatWarningIcon from "ChatWarningIcon" /* 12453 */;
-import { QUARANTINE_APPEAL_LINK } from "QUARANTINE_APPEAL_LINK" /* 12452 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function ChatInputGuardQuarantineDM() {
+require = fn;
+const QUARANTINE_APPEAL_LINK = fn(12452).QUARANTINE_APPEAL_LINK;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");
+
+export default noop.memo(function ChatInputGuardQuarantineDM() {
   let obj = { type: "simple-action", icon: jsx(ChatWarningIcon.ChatWarningIcon, {}), message: null, subtext: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.EouHwv);
-  const intl2 = getSystemLocale.intl;
+  const intl = util.intl;
+  obj.message = intl.string(util.t.EouHwv);
+  const intl2 = util.intl;
   obj = { appealLink: QUARANTINE_APPEAL_LINK };
-  obj[3] = intl2.format(getSystemLocale.t.PThBel, obj);
+  obj.subtext = intl2.format(util.t.PThBel, obj);
   return jsx(ChatInputGuardDefault, { appealLink: QUARANTINE_APPEAL_LINK });
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardQuarantineDM.tsx");
-
-export default memoResult;

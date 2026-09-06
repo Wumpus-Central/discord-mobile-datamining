@@ -1,17 +1,18 @@
-// === Module 7553: getProductOrbPrice ===
+// === Module 7553: CollectiblesProductUtils ===
 
-// Module 7553 (getProductOrbPrice)
+// Module 7553 (CollectiblesProductUtils)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { isProfileEffectRecord } from "fromServer" /* 7548 */;
-import ME from "ME" /* 1074 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
+require = fn;
+const isProfileEffectRecord = fn(7548).isProfileEffectRecord;
+const Constants = fn(1074);
+({ CurrencyCodes: closure_4, PriceSetAssignmentPurchaseTypes: hasOwnProperty } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
 
 export const getProductOrbPrice = function getProductOrbPrice(arg0) {
-  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? closure_5.PREMIUM_TIER_2 : closure_5.DEFAULT];
+  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.PREMIUM_TIER_2 : constants.DEFAULT];
   let substr;
   if (tmp2 != null) {
     const countryPrices = tmp2.countryPrices;
@@ -32,7 +33,7 @@ export const getProductOrbPrice = function getProductOrbPrice(arg0) {
   return found;
 };
 export const getProductFiatPrice = function getProductFiatPrice(arg0) {
-  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? closure_5.MOBILE_PREMIUM_TIER_2 : closure_5.MOBILE];
+  const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? constants.MOBILE_PREMIUM_TIER_2 : constants.MOBILE];
   let substr;
   if (tmp2 != null) {
     const countryPrices = tmp2.countryPrices;
@@ -150,7 +151,7 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
             const first = selectedProduct.variants[0];
             let type = null;
             if (null != first) {
-              type = callback(first.items, 1)[0].type;
+              type = _slicedToArray(first.items, 1)[0].type;
             }
             type1 = type;
           }
@@ -163,7 +164,7 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
     if (someResult) {
       const items = selectedProduct.items;
       someResult = items.some((effects) => {
-        let someResult = callback(effects);
+        let someResult = isProfileEffectRecord(effects);
         if (someResult) {
           effects = effects.effects;
           someResult = effects.some((randomizedSources) => {
@@ -182,9 +183,9 @@ export const isDynamicProduct = function isDynamicProduct(selectedProduct) {
   return tmp;
 };
 export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
-  return arr.filter((arg0) => {
+  return arr.filter((item) => {
     let substr;
-    if (arg0.prices[constants.DEFAULT] != null) {
+    if (item.prices[constants.DEFAULT] != null) {
       const countryPrices = tmp2.countryPrices;
       if (countryPrices != null) {
         const prices = countryPrices.prices;
@@ -202,7 +203,7 @@ export const getProductsWithOrbsPrice = function getProductsWithOrbsPrice(arr) {
     }
     let tmp4 = null != found;
     let substr1;
-    if (arg0.prices[constants.MOBILE] != null) {
+    if (item.prices[constants.MOBILE] != null) {
       const countryPrices2 = tmp5.countryPrices;
       if (countryPrices2 != null) {
         const prices1 = countryPrices2.prices;
@@ -234,19 +235,19 @@ export const getIsVariantProduct = function getIsVariantProduct(product) {
   }
   return tmp;
 };
-export const getProductSkuIds = function getProductSkuIds(closure_0) {
-  let tmp = closure_0.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
+export const getProductSkuIds = function getProductSkuIds(product) {
+  let tmp = product.type === CollectiblesItemType.CollectiblesItemType.VARIANTS_GROUP;
   if (tmp) {
-    tmp = null != closure_0.variants;
+    tmp = null != product.variants;
   }
   if (tmp) {
-    tmp = 0 !== closure_0.variants.length;
+    tmp = 0 !== product.variants.length;
   }
   if (tmp) {
-    const variants = closure_0.variants;
+    const variants = product.variants;
     let mapped = variants.map((skuId) => skuId.skuId);
   } else {
-    mapped = [closure_0.skuId];
+    mapped = [product.skuId];
   }
   return mapped;
 };
@@ -280,7 +281,7 @@ export const getProductType = function getProductType(product) {
         const first = product.variants[0];
         let type = null;
         if (null != first) {
-          type = callback(first.items, 1)[0].type;
+          type = _slicedToArray(first.items, 1)[0].type;
         }
         return type;
       }

@@ -1,20 +1,20 @@
-// === Module 13990: pathJoin ===
+// === Module 13990: PathUtils ===
 
-// Module 13990 (pathJoin)
-import set from "set" /* 2 */;
+// Module 13990 (PathUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/PathUtils.tsx");
+const result = size.fileFinishedImporting("utils/PathUtils.tsx");
 
-export const pathJoin = function pathJoin(closure_1, closure_17) {
+export const pathJoin = function pathJoin() {
   const items = [...arguments];
   let str = "/";
   if (obj.isWindows()) {
     str = "\\";
   }
-  const found = items.filter((arg0) => arg0.length > 0);
+  const found = items.filter((item) => item.length > 0);
   return found.join(str);
 };
-export const pathBasename = function pathBasename(str) {
+export const pathBasename = function pathBasename(str, arg1) {
   let arr = str;
   const parts = str.split(/[/\\]/);
   if ("" !== parts[parts.length - 1]) {

@@ -1,32 +1,32 @@
 // === Module 7083: TextInputField ===
 
 // Module 7083 (TextInputField)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import TextInput from "TextInput" /* 6606 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MAX_TEXT_RESPONSE_LENGTH } from "items" /* 5059 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TextInputField.tsx");
+require = fn;
+const View = fn(17).View;
+const MAX_TEXT_RESPONSE_LENGTH = fn(5059).MAX_TEXT_RESPONSE_LENGTH;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TextInputField.tsx");
 
 export default function TextInputField(field) {
   field = field.field;
   let str = field.response;
-  let obj = { style: callback().container, children: null };
-  obj = { label: jsx(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength: MAX_TEXT_RESPONSE_LENGTH, value: null, placeholder: null, onChange: null };
+  let obj = { style: closure_5().container, children: null };
+  obj = { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength: MAX_TEXT_RESPONSE_LENGTH, value: null, placeholder: null, onChange: null };
   if (str == null) {
     str = "";
   }
-  obj[2] = str;
+  obj.value = str;
   const intl = tmp3(1114).intl;
-  obj[3] = intl.string(getSystemLocale.t["Sqn+Wh"]);
-  obj[4] = field.onChange;
-  obj[1] = jsx(TextInput.TextInput, { label: jsx(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength: MAX_TEXT_RESPONSE_LENGTH, value: null, placeholder: null, onChange: null });
-  return <View label={jsx(Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label })} maxLength={MAX_TEXT_RESPONSE_LENGTH} value={null} placeholder={null} onChange={null} />;
+  obj.placeholder = intl.string(util.t["Sqn+Wh"]);
+  obj.onChange = field.onChange;
+  obj.children = jsx(TextInput.TextInput, { label: jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label }), maxLength: MAX_TEXT_RESPONSE_LENGTH, value: null, placeholder: null, onChange: null });
+  return <View label={jsx(Text_Text.Text, { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label })} maxLength={MAX_TEXT_RESPONSE_LENGTH} value={null} placeholder={null} onChange={null} />;
 };

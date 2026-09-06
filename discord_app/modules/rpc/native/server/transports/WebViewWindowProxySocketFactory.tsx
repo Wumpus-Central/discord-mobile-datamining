@@ -1,9 +1,10 @@
-// === Module 9562: logger ===
+// === Module 9562: WebViewWindowProxySocketFactory ===
 
-// Module 9562 (logger)
-import set from "set" /* 2 */;
+// Module 9562 (WebViewWindowProxySocketFactory)
+import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9551 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
+const result = size.fileFinishedImporting("modules/rpc/native/server/transports/WebViewWindowProxySocketFactory.tsx");
 
 export default function _default(logger) {
   logger = logger.logger;
@@ -17,7 +18,7 @@ export default function _default(logger) {
     postClose,
     onSendingToRPCClient(arg0, id) {
       const combined = "Socket Emit: " + id;
-      logger.info(combined, logger(closure_1_1[1])(arg0));
+      logger.info(combined, stripSensitiveLoggingDataDefault(arg0));
     }
   });
 };

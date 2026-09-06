@@ -1,71 +1,43 @@
-// === Module 15881: toggle ===
+// === Module 15881: GuildSettingActivityJoining ===
 
-// Module 15881 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 6995 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15869 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15881 (GuildSettingActivityJoining)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import UserSettingsSafetySelectedGuildStore from "UserSettingsSafetySelectedGuildStore" /* 15869 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-({ getSelectedGuildId: obj1, useUserSafetySettingsSelectedGuildStore: c3 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
-const toggle = createToggle.createToggle({
+({ getSelectedGuildId: c2, useUserSafetySettingsSelectedGuildStore: c3 } = UserSettingsSafetySelectedGuildStore);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["T+nevN"]);
+    const intl = util.intl;
+    return intl.string(util.t["T+nevN"]);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["b+bVSw"]);
+    const intl = util.intl;
+    return intl.string(util.t["b+bVSw"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
-    const ActivityJoiningRestrictedGuilds = explicitContentFromProto.ActivityJoiningRestrictedGuilds;
+    const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
     const setting = ActivityJoiningRestrictedGuilds.useSetting();
-    return !setting.includes(callback2().selectedGuildId);
+    return !setting.includes(React3().selectedGuildId);
   },
   onValueChange(arg0) {
-    const tmp = callback();
-    const sanitizedActivityJoiningRestrictedGuilds = getSanitizedRestrictedGuilds.getSanitizedActivityJoiningRestrictedGuilds();
+    const tmp = React2();
+    const sanitizedActivityJoiningRestrictedGuilds = UserSettingsUtils.getSanitizedActivityJoiningRestrictedGuilds();
     if (arg0) {
       sanitizedActivityJoiningRestrictedGuilds.delete(tmp);
     } else {
       sanitizedActivityJoiningRestrictedGuilds.add(tmp);
     }
-    const ActivityJoiningRestrictedGuilds = explicitContentFromProto.ActivityJoiningRestrictedGuilds;
+    const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
     const items = [...sanitizedActivityJoiningRestrictedGuilds];
     ActivityJoiningRestrictedGuilds.updateSetting(items);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["T+nevN"]);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["b+bVSw"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue() {
-    const ActivityJoiningRestrictedGuilds = explicitContentFromProto.ActivityJoiningRestrictedGuilds;
-    const setting = ActivityJoiningRestrictedGuilds.useSetting();
-    return !setting.includes(callback2().selectedGuildId);
-  },
-  onValueChange(arg0) {
-    const tmp = callback();
-    const sanitizedActivityJoiningRestrictedGuilds = getSanitizedRestrictedGuilds.getSanitizedActivityJoiningRestrictedGuilds();
-    if (arg0) {
-      sanitizedActivityJoiningRestrictedGuilds.delete(tmp);
-    } else {
-      sanitizedActivityJoiningRestrictedGuilds.add(tmp);
-    }
-    const ActivityJoiningRestrictedGuilds = explicitContentFromProto.ActivityJoiningRestrictedGuilds;
-    const items = [...sanitizedActivityJoiningRestrictedGuilds];
-    ActivityJoiningRestrictedGuilds.updateSetting(items);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityJoining.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityJoining.tsx");
 
 export default toggle;

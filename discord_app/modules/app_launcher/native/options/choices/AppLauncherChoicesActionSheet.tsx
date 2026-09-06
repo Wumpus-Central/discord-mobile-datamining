@@ -1,19 +1,18 @@
-// === Module 12165: FlashListWrapper ===
+// === Module 12165: AppLauncherChoicesActionSheet ===
 
-// Module 12165 (FlashListWrapper)
-import ThemesDefault from "Themes" /* 576 */;
-import noop from "noop" /* 8874 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1482 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 12165 (AppLauncherChoicesActionSheet)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5442 */;
+import Form from "Form" /* 8593 */;
+import _mod8874 from "module_8874" /* 8874 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function FlashListWrapper(scrollable) {
-  const merged = Object.assign(scrollable, Object.create(null));
-  const tmp3 = noop;
+  const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
+  const tmp3 = _mod8874;
   if (scrollable.scrollable) {
     let obj = { preserveScrollMomentum: true };
     const merged1 = Object.assign(merged);
@@ -25,29 +24,32 @@ function FlashListWrapper(scrollable) {
   }
   return tmp2Result;
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { listItemContainer: { overflow: "hidden" }, listItem: null, firstItem: null, lastItem: null, divider: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderTopLeftRadius: ThemesDefault.radii.xl, borderTopRightRadius: ThemesDefault.radii.xl };
-let obj1 = { borderTopLeftRadius: ThemesDefault.radii.xl, borderTopRightRadius: ThemesDefault.radii.xl };
-createCacheKey[3] = { borderBottomLeftRadius: ThemesDefault.radii.xl, borderBottomRightRadius: ThemesDefault.radii.xl };
-let obj2 = { borderBottomLeftRadius: ThemesDefault.radii.xl, borderBottomRightRadius: ThemesDefault.radii.xl };
-createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx");
+const View = fn(17).View;
+const DEFAULT_CONTENT_PADDING = fn(1482).DEFAULT_CONTENT_PADDING;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { listItemContainer: { overflow: "hidden" }, listItem: null, firstItem: null, lastItem: null, divider: null };
+createStyles = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
+createStyles.listItem = createStyles;
+createStyles.firstItem = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: nativeDefault.radii.xl };
+let obj1 = { borderTopLeftRadius: nativeDefault.radii.xl, borderTopRightRadius: nativeDefault.radii.xl };
+createStyles.lastItem = { borderBottomLeftRadius: nativeDefault.radii.xl, borderBottomRightRadius: nativeDefault.radii.xl };
+let obj2 = { borderBottomLeftRadius: nativeDefault.radii.xl, borderBottomRightRadius: nativeDefault.radii.xl };
+createStyles.divider = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx");
 
 export default function AppLauncherChoicesActionSheet(option) {
   option = option.option;
   const onChoiceSelect = option.onChoiceSelect;
-  dependencyMap = undefined;
-  let first;
-  let React;
+  let data;
+  noop = undefined;
   let first1;
   closure_6 = undefined;
   ({ initChoiceIndex, onDismiss } = option);
-  const tmp = callback2();
+  const tmp = closure_9();
   dependencyMap = tmp;
   const bottom = onChoiceSelect(1611)().bottom;
   let obj = option(1115);
@@ -55,32 +57,31 @@ export default function AppLauncherChoicesActionSheet(option) {
   if (!obj.isIOS()) {
     sum = bottom + closure_6;
   }
-  const tmp6 = first(React.useState(() => {
+  const tmp6 = data(noop.useState(() => {
     let choices = option.choices;
     if (choices == null) {
       choices = [];
     }
     return choices.map((choice, originalIndex) => ({ choice, originalIndex }));
   }), 2);
-  first = tmp6[0];
-  React = tmp6[1];
-  const tmp7 = first(React.useState(initChoiceIndex), 2);
+  data = tmp6[0];
+  noop = tmp6[1];
+  const tmp7 = data(noop.useState(initChoiceIndex), 2);
   first1 = tmp7[0];
   closure_6 = tmp7[1];
   let items = [option.choices];
-  let items1 = [onChoiceSelect, first1, tmp, first];
-  const callback = React.useCallback((query) => {
-    let obj = onChoiceSelect(closure_2[10]);
-    obj = { query, choices: null, limit: null };
+  let items1 = [onChoiceSelect, first1, tmp, data];
+  const callback = noop.useCallback((query) => {
+    const obj = { query, choices: null, limit: null };
     let choices = option.choices;
     if (choices == null) {
       choices = [];
     }
-    obj[1] = choices;
-    callback(obj.queryChoice(obj));
+    obj.choices = choices;
+    closure_4(obj.queryChoice(obj));
   }, items);
   const items2 = [tmp.divider];
-  const callback1 = React.useCallback((item) => {
+  const callback1 = noop.useCallback((item) => {
     item = item.item;
     const index = item.index;
     let lastItem = null != first;
@@ -96,23 +97,25 @@ export default function AppLauncherChoicesActionSheet(option) {
     if (lastItem) {
       lastItem = tmp4.lastItem;
     }
-    obj = { style: items, children: tmp2(option(closure_2[11]).FormRadioRow, obj) };
+    let obj = { style: items, children: null };
     items[2] = lastItem;
     obj = {
-      style: items1,
+      style: null,
       label: item.choice.displayName,
       align: "right",
       selected: first1 === item.originalIndex,
       onPress() {
-        closure_1_6(item.originalIndex);
-        closure_1_1(item.choice, item.originalIndex);
-        onChoiceSelect(table[12]).hideActionSheet();
+        closure_6(item.originalIndex);
+        onChoiceSelect(item.choice, item.originalIndex);
+        ActionSheetActionCreatorsDefault.hideActionSheet();
       }
     };
-    items1 = [closure_2.listItem];
+    const items1 = [closure_2.listItem];
+    obj.style = items1;
+    obj.children = closure_1_7(option(closure_2[11]).FormRadioRow, obj);
     return closure_1_7(first1, obj);
   }, items1);
-  callback2 = React.useCallback(() => closure_1_7(option(closure_2[11]).FormDivider, { style: closure_2.divider }), items2);
+  const callback2 = noop.useCallback(() => React5(Form.FormDivider, { style: closure_2.divider }), items2);
   let tmp13 = null != option.choices;
   if (tmp13) {
     let choices = option.choices;
@@ -129,31 +132,27 @@ export default function AppLauncherChoicesActionSheet(option) {
   obj = { option, startExpanded: tmp13, onDismiss, scrollable: tmp13, children: null };
   let tmp16 = tmp13;
   if (tmp13) {
-    obj = { onChange: null };
-    obj[0] = callback;
-    tmp16 = callback(tmp3(12167).AppLauncherListSearchBar, obj);
+    obj = { onChange: callback };
+    tmp16 = closure_7(tmp3(12167).AppLauncherListSearchBar, obj);
   }
   const items3 = [tmp16, ];
-  if (0 === first.length) {
-    let tmp20 = callback(tmp3(12167).AppLauncherListEmptyState, {});
+  if (0 === data.length) {
+    let tmp20 = closure_7(tmp3(12167).AppLauncherListEmptyState, {});
   } else {
-    obj1 = { scrollable: null, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
-    obj1[0] = tmp13;
-    const obj2 = { paddingBottom: null };
-    obj2[0] = sum;
-    obj1[1] = obj2;
-    const obj3 = { bottom: null };
-    obj3[0] = sum;
-    obj1[2] = obj3;
-    obj1[3] = function keyExtractor(choice) {
+    const obj1 = { scrollable: tmp13, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
+    const obj2 = { paddingBottom: sum };
+    obj1.contentContainerStyle = obj2;
+    const obj3 = { bottom: sum };
+    obj1.scrollIndicatorInsets = obj3;
+    obj1.keyExtractor = function keyExtractor(choice) {
       return "" + choice.choice.name + "_" + choice.originalIndex;
     };
-    obj1[4] = first;
-    obj1[5] = callback1;
-    obj1[6] = callback2;
-    tmp20 = callback(FlashListWrapper, obj1);
+    obj1.data = data;
+    obj1.renderItem = callback1;
+    obj1.ItemSeparatorComponent = callback2;
+    tmp20 = closure_7(FlashListWrapper, obj1);
   }
   items3[1] = tmp20;
-  obj[4] = items3;
+  obj.children = items3;
   return closure_8(option(12166).AppLauncherCommandOptionActionSheet, obj);
 };

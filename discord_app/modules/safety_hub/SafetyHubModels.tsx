@@ -1,9 +1,9 @@
-// === Module 8420: ContentIdType ===
+// === Module 8420: SafetyHubModels ===
 
-// Module 8420 (ContentIdType)
-import set from "set" /* 2 */;
+// Module 8420 (SafetyHubModels)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
+const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
 
 export const ContentIdType = { MESSAGE: "message" };
 export const MemberType = { OWNER: 1, [1]: "OWNER", MEMBER: 2, [2]: "MEMBER" };

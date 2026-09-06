@@ -1,9 +1,9 @@
-// === Module 14192: set ===
+// === Module 14192: TrackingConsentUtils ===
 
-// Module 14192 (set)
-import set from "set" /* 2 */;
+// Module 14192 (TrackingConsentUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
+const result = size.fileFinishedImporting("modules/tracking/TrackingConsentUtils.tsx");
 
 export default {
   canUseInstallationId() {

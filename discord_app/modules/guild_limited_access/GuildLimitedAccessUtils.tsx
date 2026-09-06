@@ -1,11 +1,11 @@
-// === Module 17292: isLimitedAccessErrorCode ===
+// === Module 17292: GuildLimitedAccessUtils ===
 
-// Module 17292 (isLimitedAccessErrorCode)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 17292 (GuildLimitedAccessUtils)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AbortCodes = ME.AbortCodes;
-const result = set.fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessUtils.tsx");
+const AbortCodes = Constants.AbortCodes;
+const result = size.fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessUtils.tsx");
 
 export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
   let tmp = 403 === arg0;

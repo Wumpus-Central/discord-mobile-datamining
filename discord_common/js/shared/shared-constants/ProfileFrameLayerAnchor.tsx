@@ -1,8 +1,8 @@
 // === Module 8209: ProfileFrameLayerAnchor ===
 
 // Module 8209 (ProfileFrameLayerAnchor)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerAnchor.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ProfileFrameLayerAnchor.tsx");
 
 export const ProfileFrameLayerAnchor = { TOP: "top", BOTTOM: "bottom", CENTER: "center" };

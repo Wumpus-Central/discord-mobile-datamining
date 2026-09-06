@@ -1,37 +1,37 @@
-// === Module 15519: useHighlightNotifications ===
+// === Module 15519: HighlightNotificationsSetting ===
 
-// Module 15519 (useHighlightNotifications)
+// Module 15519 (HighlightNotificationsSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
+require = fn;
 function useHighlightNotifications() {
-  const items = [closure_2];
+  const items = [GuildStore];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.o8Bypv);
+    const intl = util.intl;
+    return intl.string(util.t.o8Bypv);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: fn(7975).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Vw/Xn8"]);
+    const intl = util.intl;
+    return intl.string(util.t["Vw/Xn8"]);
   },
   usePredicate: useHighlightNotifications,
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
-  getComponent() {
-    return require(15520) /* Row */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
+    getComponent() {
+      return require("UserSettingsHighlightNotifications").default;
+    }
   }
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useHighlightNotifications };

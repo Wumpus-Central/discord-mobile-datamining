@@ -1,24 +1,25 @@
-// === Module 14581: navigateToDevTools ===
+// === Module 14581: DevToolsNavigator ===
 
-// Module 14581 (navigateToDevTools)
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import mapDefault from "map" /* 14582 */;
-import DevToolsContentSortButtonsDefault from "DevToolsContentSortButtons" /* 15743 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import importAllResult from "noop" /* 19 */;
+// Module 14581 (DevToolsNavigator)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import HeaderShared from "HeaderShared" /* 7863 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 14582 */;
+import DevToolsContentDefault from "DevToolsContent" /* 15743 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-let closure_7 = createNativeStackNavigator.createNativeStackNavigator();
-let closure_8 = importAllResult.memo((screenKey) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
+const NativeStackNavigator = fn(7913);
+const Navigator = NativeStackNavigator.createNativeStackNavigator();
+let closure_8 = noop.memo((screenKey) => {
   let str = screenKey.screenKey;
-  let _require;
-  let obj = _require(7000);
+  _require = undefined;
+  let obj = require("Navigator");
   _require = obj.useAccessibilityNativeStackOptions();
-  let items = [callback(mapDefault, {}), ];
+  let items = [closure_4(SettingHookHarnessDefault, {}), ];
   if (str == null) {
     str = "home";
   }
@@ -28,33 +29,33 @@ let closure_8 = importAllResult.memo((screenKey) => {
     screenOptions(navigation) {
       const obj = {
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
+          return closure_1_4(closure_1_0(closure_1_2[6]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: callback(closure_1_2[6]).getRenderModalCloseImage(navigation.navigation),
+        headerLeft: HeaderShared.getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      let merged = Object.assign(callback);
+      let merged = Object.assign(closure_0);
       return obj;
     },
     children: null
   };
   const items1 = [
-    callback(Navigator.Screen, {
+    closure_4(Navigator.Screen, {
       name: "home",
-      component: DevToolsContentSortButtonsDefault,
+      component: DevToolsContentDefault,
       options() {
         return {
           headerTitle() {
             let obj = { style: { flexDirection: "row" }, children: null };
-            const items = [callback3(callback(9433).HammerIcon, { size: "sm" }), ];
+            const items = [closure_1_4(closure_1_0(9433).HammerIcon, { size: "sm" }), ];
             obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-            obj = { marginLeft: callback2(576).space.PX_8 };
-            obj[0] = obj;
-            items[1] = callback3(callback(4556).Text, obj);
-            obj[1] = items;
-            return callback4(closure_3, obj);
+            obj = { marginLeft: closure_1_1(576).space.PX_8 };
+            obj.style = obj;
+            items[1] = closure_1_4(closure_1_0(4556).Text, obj);
+            obj.children = items;
+            return closure_1_5(closure_1_3, obj);
           },
           title: "DevTools"
         };
@@ -66,30 +67,30 @@ let closure_8 = importAllResult.memo((screenKey) => {
   let merged = Object.assign(tmp(15578).DevToolsScreens);
   let merged1 = Object.assign(tmp(15578).PerformanceTestingScreens);
   const entries = Object.entries({});
-  items1[1] = entries.map((arg0) => {
-    [tmp, ] = arg0;
-    return callback2(closure_7.Screen, {
+  items1[1] = entries.map((item) => {
+    [tmp, ] = item;
+    return closure_1_4(Navigator.Screen, {
       name: tmp,
       children: tmp2,
       options() {
-        return { title: closure_0 };
+        return { title };
       }
     }, tmp);
   });
-  obj1 = {
+  const obj1 = {
     name: "home",
-    component: DevToolsContentSortButtonsDefault,
+    component: DevToolsContentDefault,
     options() {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [callback3(callback(9433).HammerIcon, { size: "sm" }), ];
+          const items = [closure_1_4(closure_1_0(9433).HammerIcon, { size: "sm" }), ];
           obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
-          obj = { marginLeft: callback2(576).space.PX_8 };
-          obj[0] = obj;
-          items[1] = callback3(callback(4556).Text, obj);
-          obj[1] = items;
-          return callback4(closure_3, obj);
+          obj = { marginLeft: closure_1_1(576).space.PX_8 };
+          obj.style = obj;
+          items[1] = closure_1_4(closure_1_0(4556).Text, obj);
+          obj.children = items;
+          return closure_1_5(closure_1_3, obj);
         },
         title: "DevTools"
       };
@@ -97,39 +98,36 @@ let closure_8 = importAllResult.memo((screenKey) => {
   };
   const obj2 = {};
   const tmp4 = closure_6;
-  const tmp5 = callback;
-  const tmp6 = importDefault;
-  const tmp7 = Navigator;
-  const designSystemScreens = _require(14693).getDesignSystemScreens();
-  items1[2] = designSystemScreens.map((arg0) => {
-    [, tmp] = arg0;
-    return callback2(closure_7.Screen, {
+  const designSystemScreens = require("SettingRendererUtils").getDesignSystemScreens();
+  items1[2] = designSystemScreens.map((item) => {
+    [, tmp] = item;
+    return closure_4(Screen.Screen, {
       name: tmp.route,
       getComponent: tmp.getComponent,
       options(navigation) {
-        let obj = closure_1_0(closure_1_2[5]);
-        let str = obj.getCachedSettingTitle(closure_0);
+        let obj = closure_0(dependencyMap[5]);
+        let str = obj.getCachedSettingTitle(closure_1_0);
         if (str == null) {
           str = "Design System";
         }
-        obj = { title: str, headerLeft: closure_1_0(closure_1_2[6]).getRenderModalBackImage(navigation.navigation) };
+        obj = { title: str, headerLeft: closure_0(dependencyMap[6]).getRenderModalBackImage(navigation.navigation) };
         return obj;
       }
     }, tmp.route);
   });
-  obj[2] = items1;
+  obj.children = items1;
   items[1] = closure_5(Navigator.Navigator, obj);
-  obj[0] = items;
+  obj.children = items;
   return closure_5(tmp4, obj);
 });
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/DevToolsNavigator.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/DevToolsNavigator.tsx");
 
 export const navigateToDevTools = function navigateToDevTools(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
-  const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-  _modDef4763.pushLazy(() => Promise.resolve(closure_8), { screenKey: obj.screenKey }, "DevToolsNavigator");
+  ActionSheetActionCreatorsDefault.hideActionSheet();
+  ModalActionCreatorsDefault.pushLazy(() => Promise.resolve(closure_1_8), { screenKey: obj.screenKey }, "DevToolsNavigator");
 };

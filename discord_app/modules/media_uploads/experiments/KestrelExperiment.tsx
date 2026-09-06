@@ -1,12 +1,14 @@
-// === Module 5179: KESTREL_GA_UPLOAD_LIMIT_MB ===
+// === Module 5179: KestrelExperiment ===
 
-// Module 5179 (KESTREL_GA_UPLOAD_LIMIT_MB)
-import set from "set" /* 2 */;
+// Module 5179 (KestrelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });
-let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = set.fileFinishedImporting("modules/media_uploads/experiments/KestrelExperiment.tsx");
+let obj = { name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } };
+let config = ApexExperiment.createApexExperiment(obj);
+obj = { name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } };
+const config2 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_uploads/experiments/KestrelExperiment.tsx");
 
 export const KESTREL_GA_UPLOAD_LIMIT_MB = 20;
 export const getKestrelConfig = function getKestrelConfig(location) {
@@ -14,11 +16,10 @@ export const getKestrelConfig = function getKestrelConfig(location) {
   if (config2.getConfig({ location: _location }).enabled) {
     return { enabled: true, threshold: 20, isGA: true };
   } else {
-    let obj = { location: null };
-    obj[0] = _location;
+    let obj = { location: _location };
     config = config.getConfig(obj);
     obj = { enabled: null, threshold: null, isGA: false };
-    ({ enabled: obj2[0], threshold: obj2[1] } = config);
+    ({ enabled: obj2.enabled, threshold: obj2.threshold } = config);
     return obj;
   }
 };

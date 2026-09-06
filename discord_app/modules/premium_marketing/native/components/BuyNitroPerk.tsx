@@ -1,23 +1,25 @@
 // === Module 13393: BuyNitroPerk ===
 
 // Module 13393 (BuyNitroPerk)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import TableRow from "TableRow" /* 5605 */;
+import BuyNitroGradientDefault from "BuyNitroGradient" /* 13394 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = { x: 0, y: 0 };
-let closure_8 = { x: 1, y: 1 };
-createCacheKey = { iconTile: null };
-createCacheKey = { width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerk.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const start = { x: 0, y: 0 };
+const end = { x: 1, y: 1 };
+fn(4560);
+const createStyles = { iconTile: null };
+let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", overflow: "hidden" };
+createStyles.iconTile = size;
+let closure_9 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerk.tsx");
 
 export default function BuyNitroPerk(perk) {
   perk = perk.perk;
@@ -29,21 +31,21 @@ export default function BuyNitroPerk(perk) {
     tmp2 = null != perk.detail;
   }
   let obj = { label: perk.label, subLabel: perk.subLabel, disabled: perk.disabled, icon: null, arrow: null, onPress: null, start: null, end: null };
-  obj = { style: callback3().iconTile, children: null };
-  obj = { selectedTier, nitroColors: perk.iconGradient, basicColors: perk.iconGradientBasic, start: closure_7, end: closure_8, style: absoluteFill.absoluteFill };
-  const items = [callback(onOpenDetails(13394), obj), ];
-  const tmp = callback3();
-  const tmp4 = callback;
-  items[1] = callback(perk.IconComponent, { size: "sm", color: onOpenDetails(576).colors.WHITE });
-  obj[1] = items;
-  obj[3] = callback2(closure_4, obj);
-  obj[4] = tmp2;
+  obj = { style: closure_9().iconTile, children: null };
+  obj = { selectedTier, nitroColors: perk.iconGradient, basicColors: perk.iconGradientBasic, start, end, style: absoluteFill.absoluteFill };
+  const items = [hasOwnProperty(BuyNitroGradientDefault, obj), ];
+  const tmp = closure_9();
+  const tmp4 = hasOwnProperty;
+  items[1] = hasOwnProperty(perk.IconComponent, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj.children = items;
+  obj.icon = timestampProducer(React4, obj);
+  obj.arrow = tmp2;
   let fn;
   if (tmp2) {
     fn = () => onOpenDetails(perk);
   }
-  obj[5] = fn;
-  obj[6] = start;
-  obj[7] = end;
-  return tmp4(perk(5605).TableRow, obj);
+  obj.onPress = fn;
+  obj.start = start;
+  obj.end = end;
+  return tmp4(TableRow.TableRow, obj);
 };

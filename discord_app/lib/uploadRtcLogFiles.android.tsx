@@ -1,235 +1,141 @@
-// === Module 10190: _uploadRtcLogFiles ===
+// === Module 10190: uploadRtcLogFiles ===
 
-// Module 10190 (_uploadRtcLogFiles)
-import timestampDefault from "timestamp" /* 3 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 1074 */;
+// Module 10190 (uploadRtcLogFiles)
+import LoggerDefault from "Logger" /* 3 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _uploadRtcLogFiles() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function*(arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+const require = fn;
+let closure_6 = async function _uploadRtcLogFiles(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    while (true) {
+      c8 = 2;
+      let tmp4 = c7;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp;
+          closure_3 = tmp4;
+          closure_131_0 = closure_0;
+          closure_131_1 = undefined;
+          closure_131_2 = undefined;
+          let items = ["discord-webrtc_0", "discord-webrtc_1", "discord-last-webrtc_0", "discord-last-webrtc_1"];
+          dependencyMap = items[Symbol.iterator]();
         }
-      } else {
-        while (true) {
-          let num = 2;
-          c8 = 2;
-          let tmp4 = c7;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              let num9 = 3;
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              let num8 = 3;
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp;
-              closure_3 = tmp4;
-              let tmp81 = callback;
-              closure_1 = undefined;
-              let length;
-              let items = ["discord-webrtc_0", "discord-webrtc_1", "discord-last-webrtc_0", "discord-last-webrtc_1"];
-              length = items;
-              let tmp82 = items;
-              length = items;
-              closure_1 = items[Symbol.iterator]();
-            }
-          } else if (1 === tmp4) {
-            let tmp52 = logger;
-            let tmp53 = logger;
+      } else if (1 === tmp4) {
+        c6 = 0;
+        dependencyMap.return();
+        throw closure_1_5;
+      } else if (2 === tmp4) {
+        c6 = 1;
+        closure_131_3 = closure_1_5;
+        let _HermesInternal2 = HermesInternal;
+        let errorResult = closure_132_5.error("uploadRtcLogFiles: Log file reading error: " + closure_131_3.message);
+        let tmp48 = new.target;
+        let tmp49 = new.target;
+        let uploadVoiceDebugLogsError = new closure_132_0(closure_132_1[4]).UploadVoiceDebugLogsError(closure_132_0(closure_132_1[4]).UploadErrorCodes.READ);
+        throw uploadVoiceDebugLogsError;
+      } else if (3 === tmp4) {
+        c6 = 1;
+        closure_131_4 = closure_1_5;
+        let _HermesInternal = HermesInternal;
+        let errorResult1 = closure_132_5.error("uploadRtcLogFiles: Log file upload error: status: " + closure_131_4.status + ", message: " + closure_131_4.message);
+        if (429 === closure_131_4.status) {
+          let tmp33 = new.target;
+          let tmp34 = new.target;
+          let uploadVoiceDebugLogsError1 = new closure_132_0(closure_132_1[4]).UploadVoiceDebugLogsError(closure_132_0(closure_132_1[4]).UploadErrorCodes.PROGRESS);
+          throw uploadVoiceDebugLogsError1;
+        } else {
+          let tmp24 = new.target;
+          let tmp25 = new.target;
+          let uploadVoiceDebugLogsError2 = new closure_132_0(closure_132_1[4]).UploadVoiceDebugLogsError(closure_132_0(closure_132_1[4]).UploadErrorCodes.UPLOAD);
+          throw uploadVoiceDebugLogsError2;
+        }
+      } else if (4 === tmp4) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          dependencyMap.return();
+          c8 = 3;
+          let obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_131_2 = value;
+          if (null == value) {
             c6 = 0;
-            let tmp54 = closure_1;
-            closure_1.return();
-            throw logger;
-          } else if (2 === tmp4) {
-            let tmp37 = closure_3;
-            let tmp38 = closure_4;
-            let tmp39 = logger;
-            let tmp40 = logger;
-            c6 = 1;
-            closure_3 = logger;
-            let tmp41 = logger;
-            let tmp42 = closure_3;
-            let _HermesInternal2 = HermesInternal;
-            let errorResult = logger.error("uploadRtcLogFiles: Log file reading error: " + closure_3.message);
-            let tmp44 = callback;
-            let tmp45 = closure_1;
-            let tmp46 = callback;
-            let tmp47 = closure_1;
-            let tmp48 = new.target;
-            let tmp49 = new.target;
-            let uploadVoiceDebugLogsError = new callback(closure_1[4]).UploadVoiceDebugLogsError(callback(closure_1[4]).UploadErrorCodes.READ);
-            let tmp51 = uploadVoiceDebugLogsError;
-            throw uploadVoiceDebugLogsError;
-          } else if (3 === tmp4) {
-            let tmp10 = closure_3;
-            let tmp11 = closure_4;
-            let tmp12 = logger;
-            let tmp13 = logger;
-            c6 = 1;
-            closure_4 = logger;
-            let tmp14 = logger;
-            let tmp15 = closure_4;
-            let tmp16 = closure_4;
-            let _HermesInternal = HermesInternal;
-            let errorResult1 = logger.error("uploadRtcLogFiles: Log file upload error: status: " + closure_4.status + ", message: " + closure_4.message);
-            let tmp18 = closure_4;
-            if (429 === closure_4.status) {
-              let tmp28 = closure_4;
-              let tmp29 = callback;
-              let tmp30 = closure_1;
-              let tmp31 = callback;
-              let tmp32 = closure_1;
-              let tmp33 = new.target;
-              let tmp34 = new.target;
-              let uploadVoiceDebugLogsError1 = new callback(closure_1[4]).UploadVoiceDebugLogsError(callback(closure_1[4]).UploadErrorCodes.PROGRESS);
-              let tmp36 = uploadVoiceDebugLogsError1;
-              throw uploadVoiceDebugLogsError1;
-            } else {
-              let tmp19 = closure_4;
-              let tmp20 = callback;
-              let tmp21 = closure_1;
-              let tmp22 = callback;
-              let tmp23 = closure_1;
-              let tmp24 = new.target;
-              let tmp25 = new.target;
-              let uploadVoiceDebugLogsError2 = new callback(closure_1[4]).UploadVoiceDebugLogsError(callback(closure_1[4]).UploadErrorCodes.UPLOAD);
-              let tmp27 = uploadVoiceDebugLogsError2;
-              throw uploadVoiceDebugLogsError2;
-            }
-          } else if (4 === tmp4) {
-            if (arg0 === 1) {
-              let num5 = 3;
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              let tmp9 = closure_1;
-              closure_1.return();
-              let num4 = 3;
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let tmp69 = closure_3;
-              length = arg1;
-              if (null == arg1) {
-                c6 = 0;
-              } else {
-                let tmp70 = closure_3;
-                let tmp71 = length;
-                let tmp72 = callback;
-                if (length.length > callback) {
-                  let tmp6 = closure_4;
-                  let tmp7 = logger;
-                  let warnResult = logger.warn("uploadRtcLogFiles: Log file is too big, skipping upload");
-                  c6 = 0;
-                } else {
-                  let tmp73 = closure_3;
-                  let tmp74 = closure_4;
-                  c6 = 3;
-                  let tmp75 = callback;
-                  let tmp76 = closure_1;
-                  let HTTP = callback(closure_1[5]).HTTP;
-                  let obj2 = { url: null, body: null, headers: null, rejectWithError: false };
-                  let tmp77 = closure_4;
-                  let tmp78 = closure_3;
-                  let tmp79 = closure_1;
-                  obj2[0] = closure_4.DEBUG_LOG(closure_3.ANDROID_APP, closure_1);
-                  let tmp80 = length;
-                  obj2[1] = length;
-                  obj2[2] = { "Content-Type": "text/plain" };
-                  c7 = 5;
-                  let num18 = 1;
-                  c8 = 1;
-                  let obj3 = { value: null, done: false };
-                  obj3[0] = HTTP.post(obj2);
-                  return obj3;
-                }
-              }
-            }
-          } else if (arg0 === 1) {
-            let num3 = 3;
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
+          } else if (closure_131_2.length > closure_131_0) {
+            let warnResult = closure_132_5.warn("uploadRtcLogFiles: Log file is too big, skipping upload");
             c6 = 0;
-            let tmp5 = closure_1;
-            closure_1.return();
-            let num2 = 3;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           } else {
-            c6 = 0;
-          }
-          let tmp55 = length;
-          let tmp56 = closure_1;
-          if (closure_1 === undefined) {
-            let num7 = 3;
-            c8 = 3;
-            return { value: "HermesInternal", done: null };
-          } else {
-            let tmp58 = closure_3;
-            closure_1 = tmp57;
-            length = "";
-            let tmp59 = closure_4;
-            c6 = 2;
-            let tmp60 = callback;
-            let tmp61 = closure_1;
-            obj3 = callback(closure_1[3]);
-            let tmp62 = closure_1;
-            c7 = 4;
-            let num6 = 1;
+            c6 = 3;
+            let HTTP = closure_132_0(closure_132_1[5]).HTTP;
+            let request = { url: null, body: null, headers: null, rejectWithError: false };
+            request.url = closure_132_4.DEBUG_LOG(closure_132_3.ANDROID_APP, closure_131_1);
+            request.body = closure_131_2;
+            request.headers = { "Content-Type": "text/plain" };
+            c7 = 5;
             c8 = 1;
-            let obj4 = { value: null, done: false };
-            obj4[0] = obj3.readFile("documents", closure_1, "utf8");
-            return obj4;
+            let obj2 = { value: HTTP.post(request), done: false };
+            return obj2;
           }
         }
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        dependencyMap.return();
+        c8 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        c6 = 0;
       }
-    })();
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      if (dependencyMap === undefined) {
+        c8 = 3;
+        return { value: "HermesInternal", done: null };
+      } else {
+        closure_131_1 = tmp57;
+        closure_131_2 = "";
+        c6 = 2;
+        closure_132_0(closure_132_1[3]);
+        c7 = 4;
+        c8 = 1;
+        let obj3 = { value: null, done: false };
+        obj3.value = obj3.readFile("documents", closure_131_1, "utf8");
+        return obj3;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ DebugLogCategory: c3, Endpoints: c4 } = ME);
-let closure_5 = new timestampDefault("uploadRtcLogFiles");
-const tmp3 = new timestampDefault("uploadRtcLogFiles");
-const result = require("set").fileFinishedImporting("lib/uploadRtcLogFiles.android.tsx");
+};
+const Constants = fn(1074);
+({ DebugLogCategory: c3, Endpoints: closure_4 } = Constants);
+let closure_5 = new LoggerDefault("uploadRtcLogFiles");
+const size = fn(2);
+const result = size.fileFinishedImporting("lib/uploadRtcLogFiles.android.tsx");
 
-export const uploadRtcLogFiles = function uploadRtcLogFiles(arg0, enabled, closure_0) {
+export const uploadRtcLogFiles = function uploadRtcLogFiles() {
   const self = this;
-  const apply = _uploadRtcLogFiles.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

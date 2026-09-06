@@ -1,11 +1,11 @@
-// === Module 9047: openClearAllIncomingRequestsConfirmationModal ===
+// === Module 9047: ClearAllIncomingRequestsConfirmationModal ===
 
-// Module 9047 (openClearAllIncomingRequestsConfirmationModal)
-import set from "set" /* 2 */;
-import openClearAllIncomingRequestsConfirmationModal from "openClearAllIncomingRequestsConfirmationModal" /* 9048 */;
+// Module 9047 (ClearAllIncomingRequestsConfirmationModal)
+import people_ClearAllIncomingRequestsConfirmationModal from "people/ClearAllIncomingRequestsConfirmationModal" /* 9048 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");
+const result = size.fileFinishedImporting("modules/people/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(arg0) {
-  openClearAllIncomingRequestsConfirmationModal.default(arg0);
+  people_ClearAllIncomingRequestsConfirmationModal.default(arg0);
 };

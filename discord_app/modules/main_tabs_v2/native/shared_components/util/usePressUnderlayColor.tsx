@@ -1,20 +1,19 @@
 // === Module 16986: usePressUnderlayColor ===
 
 // Module 16986 (usePressUnderlayColor)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import CHANNEL_THEME_COLOR_PALETTE from "CHANNEL_THEME_COLOR_PALETTE" /* 16987 */;
+import ChannelEmojiConstants from "ChannelEmojiConstants" /* 16987 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = CHANNEL_THEME_COLOR_PALETTE.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");
+const ColorUtils = tmp3(4409);
+let closure_3 = ChannelEmojiConstants.DEFAULT_CHANNEL_EMOJI_BACKGROUND_COLOR;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/util/usePressUnderlayColor.tsx");
 
 export default function usePressUnderlayColor(arr) {
   const tmp2 = useThemeDefault();
-  const tmp3 = require;
-  const token = map.useToken(ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
+  const token = useToken.useToken(nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE);
   let substr;
   if (arr != null) {
     substr = arr.slice(0, arr.length - 2);
@@ -27,8 +26,8 @@ export default function usePressUnderlayColor(arr) {
       if ("dark" === tmp2) {
         num3 = 0.12;
       }
-      hexWithOpacityResult = hexToRgba.hexWithOpacity(substr, num3);
-      const tmp3Result = hexToRgba;
+      hexWithOpacityResult = ColorUtils.hexWithOpacity(substr, num3);
+      const tmp3Result = ColorUtils;
     }
   }
   return hexWithOpacityResult;

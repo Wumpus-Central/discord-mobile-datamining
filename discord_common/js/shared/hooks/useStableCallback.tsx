@@ -1,17 +1,18 @@
-// === Module 6965: useStableCallback ===
+// === Module 6965: hooks/useStableCallback ===
 
-// Module 6965 (useStableCallback)
-import closure_0 from "noop" /* 19 */;
+// Module 6965 (hooks/useStableCallback)
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
 
-export default function useStableCallback(first) {
-  const React = first;
-  closure_1 = React.useRef(first);
-  const insertionEffect = React.useInsertionEffect(() => {
-    closure_1.current = closure_0;
+export default function useStableCallback(set) {
+  const current = set;
+  noop.useRef(set);
+  const insertionEffect = noop.useInsertionEffect(() => {
+    closure_1.current = current;
   });
-  return React.useCallback(() => {
+  return noop.useCallback(() => {
     const items = [...HermesBuiltin.copyRestArgs()];
     return ref.current.apply(items);
   }, []);

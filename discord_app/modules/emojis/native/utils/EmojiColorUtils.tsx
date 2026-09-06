@@ -1,245 +1,193 @@
-// === Module 16078: _getEmojiCacheKey ===
+// === Module 16078: utils/EmojiColorUtils ===
 
-// Module 16078 (_getEmojiCacheKey)
+// Module 16078 (utils/EmojiColorUtils)
 import privDefault from "priv" /* 1437 */;
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function _getEmojiCacheKey(name) {
   return "" + name.name + "-" + name.id;
 }
-function _getFromCacheOrFallback2() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c4 = 0;
-    c3 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
+let closure_4 = async function _getFromCacheOrFallback2(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = tmp6;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ cache: closure_129_0, cacheKey: closure_129_1, fallbackParam: closure_129_2, fallbackFunc: closure_129_3 } = closure_0);
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          c2 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp6) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_129_4 = closure_129_0.get(closure_129_1);
+          if (null != closure_129_4) {
+            c4 = 3;
+            const obj2 = { value: closure_129_4, done: true };
+            return obj2;
+          } else {
+            c3 = 1;
+            c2 = 3;
+            c4 = 1;
+            const obj3 = { value: closure_129_3(closure_129_2), done: false };
+            return obj3;
+          }
+        }
+      } else if (2 === tmp6) {
+        c3 = 0;
         c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c4 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_129_5 = value;
+        if (null != closure_129_5) {
+          const result = closure_129_0.set(closure_129_1, closure_129_5);
+        }
+        c3 = 0;
+        c4 = 3;
+        obj = { value: closure_129_5, done: true };
+        return obj;
+      }
+    } catch (tmp24) {
+      if (tmp3 === c3) {
+        c4 = tmp2;
+        throw tmp24;
+      } else {
+        c2 = tmp;
+      }
+    }
+  }
+};
+let closure_5 = async function _getEmojiDominantColors(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          ({ emoji: closure_130_0, emojiSource: closure_130_1 } = closure_0);
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
         }
-      } else {
-        try {
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          const obj2 = { cache: closure_131_2, cacheKey: closure_131_3(closure_130_0), fallbackParam: closure_130_1, fallbackFunc: closure_131_1.ImageManager.getDominantColors };
           c4 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c1 = tmp6;
-              let store;
-              c1 = undefined;
-              c2 = undefined;
-              let v0;
-              ({ cache: c0, cacheKey: c1, fallbackParam: c2, fallbackFunc: c3 } = store);
-              c4 = undefined;
-              closure_5 = undefined;
-              c2 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp6) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c4 = store.get(c1);
-              if (null != c4) {
-                c4 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = c4;
-                return obj2;
-              } else {
-                v0 = 1;
-                c2 = 3;
-                c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = v0(c2);
-                return obj3;
-              }
-            }
-          } else if (2 === tmp6) {
-            v0 = 0;
-            c4 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 0;
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            closure_5 = arg1;
-            if (null != closure_5) {
-              const result = store.set(c1, closure_5);
-            }
-            v0 = 0;
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_5;
-            return obj;
-          }
-        } catch (tmp24) {
-          if (tmp3 === v0) {
-            c4 = tmp2;
-            throw tmp24;
-          } else {
-            c2 = tmp;
-          }
+          c5 = 1;
+          const obj3 = {
+            value: (function _getFromCacheOrFallback() {
+                      const self = this;
+                      const apply = closure_1_4.apply;
+                      if (typeof apply === "unknown") {
+                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                      } else {
+                        applyArgumentsResult = apply(self, arguments);
+                      }
+                      return applyArgumentsResult;
+                    })(obj2),
+            done: false
+          };
+          return obj3;
         }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _getEmojiDominantColors() {
-  let self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c5 === 2) {
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const callback = tmp5;
-              closure_2 = tmp2;
-              c0 = undefined;
-              let ImageManager;
-              ({ emoji: c0, emojiSource: closure_1 } = c0);
-              c4 = 1;
-              c5 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              const obj2 = { cache: null, cacheKey: null, fallbackParam: null, fallbackFunc: null };
-              obj2[0] = closure_2;
-              obj2[1] = callback(c0);
-              obj2[2] = ImageManager;
-              obj2[3] = ImageManager.ImageManager.getDominantColors;
-              c4 = 2;
-              c5 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = (function _getFromCacheOrFallback(arg0) {
-                const self = this;
-                const apply = c4.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            ImageManager = arg1;
-            if (arg1 == null) {
-              ImageManager = [];
-            }
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = ImageManager;
-            return obj;
-          }
-        } catch (tmp15) {
-          c5 = tmp;
-          throw tmp15;
+        if (value == null) {
+          value = [];
         }
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_5 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp15) {
+      c5 = tmp;
+      throw tmp15;
+    }
   }
-  return applyArgumentsResult;
-}
+};
+const NativeModules = fn(17).NativeModules;
 let closure_2 = new privDefault(100);
-const tmp2 = new privDefault(100);
-let result = require("set").fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
 
-export const getEmojiDominantColors = function getEmojiDominantColors(arg0) {
+export const getEmojiDominantColors = function getEmojiDominantColors() {
   const self = this;
-  const apply = _getEmojiDominantColors.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

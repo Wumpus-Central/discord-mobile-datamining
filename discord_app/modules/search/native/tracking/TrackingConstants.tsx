@@ -1,14 +1,14 @@
-// === Module 7877: SearchEntrypointAnalyticsLocations ===
+// === Module 7877: TrackingConstants ===
 
-// Module 7877 (SearchEntrypointAnalyticsLocations)
-import set from "set" /* 2 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
+// Module 7877 (TrackingConstants)
+import SearchConstants from "SearchConstants" /* 7878 */;
+import size from "module_2" /* 2 */;
 
-({ SearchHistoryItemTypes, SearchTabs } = MessageEmbedTypes);
+({ SearchHistoryItemTypes, SearchTabs } = SearchConstants);
 let obj = { RECENT: "recent", CHANNELS: "channels", MEDIA: "media", PINS: "pins", LINKS: "links", FILES: "files", MESSAGES: "messages", PEOPLE: "people", MEMBERS: "members", THREADS: "threads" };
 obj = { [SearchTabs.RECENT]: obj.RECENT, [SearchTabs.GUILD_CHANNELS]: obj.CHANNELS, [SearchTabs.MEDIA]: obj.MEDIA, [SearchTabs.PINS]: obj.PINS, [SearchTabs.LINKS]: obj.LINKS, [SearchTabs.FILES]: obj.FILES, [SearchTabs.MESSAGES]: obj.MESSAGES, [SearchTabs.PEOPLE]: obj.PEOPLE, [SearchTabs.MEMBERS]: obj.MEMBERS, [SearchTabs.THREADS]: obj.THREADS };
 obj = { GUILD_CHANNEL: "guild_channel", GDM_CHANNEL: "gdm_channel", DM_CHANNEL: "dm_channel", PLAINTEXT: "plaintext" };
-const result = set.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
+const result = size.fileFinishedImporting("modules/search/native/tracking/TrackingConstants.tsx");
 
 export const SearchEntrypointAnalyticsLocations = { GUILD: "guild", CHANNEL_HEADER: "channel_header", CHANNEL_DETAILS_HEADER: "channel_details_header", DM_LIST: "dm_list", INDIVIDUAL_DM: "individual_dm" };
 export const AnalyticsSearchTabs = obj;

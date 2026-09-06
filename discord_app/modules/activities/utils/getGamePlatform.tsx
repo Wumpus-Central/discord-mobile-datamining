@@ -1,12 +1,12 @@
 // === Module 16742: getGamePlatform ===
 
 // Module 16742 (getGamePlatform)
-import set from "set" /* 2 */;
 import isOnXboxDefault from "isOnXbox" /* 13002 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ ActivityTypes: obj1, ActivityGamePlatforms: c3 } = ME);
-const result = set.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");
+({ ActivityTypes: c2, ActivityGamePlatforms: c3 } = Constants);
+const result = size.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");
 
 export default function getGamePlatform(type) {
   let tmp = null;

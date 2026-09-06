@@ -1,19 +1,19 @@
-// === Module 11612: getChannelDetailsButtons ===
+// === Module 11612: ChannelDetailsUtils ===
 
-// Module 11612 (getChannelDetailsButtons)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1094 */;
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 10916 */;
+// Module 11612 (ChannelDetailsUtils)
+import ChannelTypes from "ChannelTypes" /* 1094 */;
+import ChannelDetailsConstants from "ChannelDetailsConstants" /* 10916 */;
+import size from "module_2" /* 2 */;
 
-const ChannelDetailsButtonTypes = ChannelDetailsNavigatorScreens.ChannelDetailsButtonTypes;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
+const ChannelDetailsButtonTypes = ChannelDetailsConstants.ChannelDetailsButtonTypes;
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 
 export const getChannelDetailsButtons = function getChannelDetailsButtons(channel, stateFromStores) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
   }
-  if (channel.type === set2.ChannelTypes.GUILD_DIRECTORY) {
+  if (channel.type === ChannelTypes.ChannelTypes.GUILD_DIRECTORY) {
     let items = [];
   } else {
     items = [, , ];
@@ -21,10 +21,10 @@ export const getChannelDetailsButtons = function getChannelDetailsButtons(channe
   }
   let found = items;
   if (flag) {
-    found = items.filter((arg0) => arg0 !== constants.MUTE);
+    found = items.filter((item) => item !== constants.MUTE);
   }
   return found;
 };
-export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(closure_4, PERMISSIONS, closure_0, source) {
-  closure_4.navigate("sidebar", { screen: PERMISSIONS, channelId: closure_0, source });
+export const navigateToChannelDetailsScreen = function navigateToChannelDetailsScreen(navigate, PERMISSIONS, channelId, source) {
+  navigate.navigate("sidebar", { screen: PERMISSIONS, channelId, source });
 };

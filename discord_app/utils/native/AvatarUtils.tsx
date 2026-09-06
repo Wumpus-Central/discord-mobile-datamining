@@ -1,63 +1,63 @@
-// === Module 1399: ensureAvatarSource ===
+// === Module 1399: utils/AvatarUtils ===
 
-// Module 1399 (ensureAvatarSource)
-import registerAssetDefault from "registerAsset" /* 1400 */;
-import registerAssetDefault2 from "registerAsset" /* 1401 */;
-import registerAssetDefault3 from "registerAsset" /* 1402 */;
-import registerAssetDefault4 from "registerAsset" /* 1403 */;
-import registerAssetDefault5 from "registerAsset" /* 1404 */;
-import registerAssetDefault6 from "registerAsset" /* 1405 */;
-import registerAssetDefault7 from "registerAsset" /* 1406 */;
-import registerAssetDefault8 from "registerAsset" /* 1407 */;
-import registerAssetDefault9 from "registerAsset" /* 1408 */;
-import registerAssetDefault10 from "registerAsset" /* 1409 */;
-import registerAssetDefault11 from "registerAsset" /* 1410 */;
-import registerAssetDefault12 from "registerAsset" /* 1411 */;
-import registerAssetDefault13 from "registerAsset" /* 1412 */;
-import registerAssetDefault14 from "registerAsset" /* 1413 */;
-import registerAssetDefault15 from "registerAsset" /* 1414 */;
-import registerAssetDefault16 from "registerAsset" /* 1415 */;
-import registerAssetDefault17 from "registerAsset" /* 1416 */;
-import registerAssetDefault18 from "registerAsset" /* 1417 */;
-import registerAssetDefault19 from "registerAsset" /* 1418 */;
-import registerAssetDefault20 from "registerAsset" /* 1419 */;
-import registerAssetDefault21 from "registerAsset" /* 1420 */;
-import registerAssetDefault22 from "registerAsset" /* 1421 */;
-import registerAssetDefault23 from "registerAsset" /* 1422 */;
-import registerAssetDefault24 from "registerAsset" /* 1423 */;
-import registerAssetDefault25 from "registerAsset" /* 1424 */;
-import registerAssetDefault26 from "registerAsset" /* 1425 */;
-import registerAssetDefault27 from "registerAsset" /* 1426 */;
-import registerAssetDefault28 from "registerAsset" /* 1427 */;
-import registerAssetDefault29 from "registerAsset" /* 1429 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
+// Module 1399 (utils/AvatarUtils)
+import _modDef1400 from "module_1400" /* 1400 */;
+import _modDef1401 from "module_1401" /* 1401 */;
+import _modDef1402 from "module_1402" /* 1402 */;
+import _modDef1403 from "module_1403" /* 1403 */;
+import _modDef1404 from "module_1404" /* 1404 */;
+import _modDef1405 from "module_1405" /* 1405 */;
+import _modDef1406 from "module_1406" /* 1406 */;
+import _modDef1407 from "module_1407" /* 1407 */;
+import _modDef1408 from "module_1408" /* 1408 */;
+import _modDef1409 from "module_1409" /* 1409 */;
+import _modDef1410 from "module_1410" /* 1410 */;
+import _modDef1411 from "module_1411" /* 1411 */;
+import _modDef1412 from "module_1412" /* 1412 */;
+import _modDef1413 from "module_1413" /* 1413 */;
+import _modDef1414 from "module_1414" /* 1414 */;
+import _modDef1415 from "module_1415" /* 1415 */;
+import _modDef1416 from "module_1416" /* 1416 */;
+import _modDef1417 from "module_1417" /* 1417 */;
+import _modDef1418 from "module_1418" /* 1418 */;
+import _modDef1419 from "module_1419" /* 1419 */;
+import _modDef1420 from "module_1420" /* 1420 */;
+import _modDef1421 from "module_1421" /* 1421 */;
+import _modDef1422 from "module_1422" /* 1422 */;
+import _modDef1423 from "module_1423" /* 1423 */;
+import _modDef1424 from "module_1424" /* 1424 */;
+import _modDef1425 from "module_1425" /* 1425 */;
+import _modDef1426 from "module_1426" /* 1426 */;
+import _modDef1427 from "module_1427" /* 1427 */;
+import _modDef1429 from "module_1429" /* 1429 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
 function ensureAvatarSource(source) {
   if (typeof source === "number") {
-    let assetSource = closure_2.resolveAssetSource(source);
+    let assetSource = React2.resolveAssetSource(source);
   } else {
     const _Array = Array;
     assetSource = source;
   }
   return assetSource;
 }
-({ Image: obj1, NativeModules } = get_ActivityIndicator);
-const items = [registerAssetDefault, registerAssetDefault2, registerAssetDefault3, registerAssetDefault4, registerAssetDefault5, registerAssetDefault6];
-const items1 = [registerAssetDefault7, registerAssetDefault8, registerAssetDefault9, registerAssetDefault10, registerAssetDefault11, registerAssetDefault12];
-const items2 = [registerAssetDefault13, registerAssetDefault14, registerAssetDefault15, registerAssetDefault16, registerAssetDefault17, registerAssetDefault18];
-const items3 = [registerAssetDefault19, registerAssetDefault20, registerAssetDefault21, registerAssetDefault22, registerAssetDefault23, registerAssetDefault24, registerAssetDefault25, registerAssetDefault26];
+({ Image: c2, NativeModules } = get_ActivityIndicator);
+const items = [_modDef1400, _modDef1401, _modDef1402, _modDef1403, _modDef1404, _modDef1405];
+const items1 = [_modDef1406, _modDef1407, _modDef1408, _modDef1409, _modDef1410, _modDef1411];
+const items2 = [_modDef1412, _modDef1413, _modDef1414, _modDef1415, _modDef1416, _modDef1417];
+const items3 = [_modDef1418, _modDef1419, _modDef1420, _modDef1421, _modDef1422, _modDef1423, _modDef1424, _modDef1425];
 const MediaManager = NativeModules.MediaManager;
-let set = new Set(MediaManager.getConstants().supportedExtensions);
+const set = new Set(MediaManager.getConstants().supportedExtensions);
 let obj = { DEFAULT_AVATARS: items, DEFAULT_AVATARS_SMALL: items1, DEFAULT_AVATARS_SMALL_MAX_SIZE: 24, DEFAULT_PROVISIONAL_AVATARS: items2, DEFAULT_GROUP_DM_AVATARS: items3, BOT_AVATARS: null, DEFAULT_CHANNEL_ICON: null, ensureAvatarSource: null, canUseWebp: null };
-obj = { clyde: registerAssetDefault27, nitro_wumpus: registerAssetDefault28 };
-obj[5] = obj;
-obj[6] = registerAssetDefault29;
-obj[7] = ensureAvatarSource;
-obj[8] = function canUseWebp() {
+obj = { clyde: _modDef1426, nitro_wumpus: _modDef1427 };
+obj.BOT_AVATARS = obj;
+obj.DEFAULT_CHANNEL_ICON = _modDef1429;
+obj.ensureAvatarSource = ensureAvatarSource;
+obj.canUseWebp = function canUseWebp() {
   return set.has("webp");
 };
-const result = set.fileFinishedImporting("utils/native/AvatarUtils.tsx");
+const result = size.fileFinishedImporting("utils/native/AvatarUtils.tsx");
 
 export default obj;
 export const DEFAULT_AVATARS = items;
@@ -66,5 +66,5 @@ export const DEFAULT_AVATARS_SMALL_MAX_SIZE = 24;
 export const DEFAULT_PROVISIONAL_AVATARS = items2;
 export { ensureAvatarSource };
 export const getAutomodAvatarURL = function getAutomodAvatarURL() {
-  return importDefault(1428);
+  return require("module_1428");
 };

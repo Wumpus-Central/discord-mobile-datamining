@@ -1,12 +1,12 @@
 // === Module 17175: getConsoleConnectingText ===
 
 // Module 17175 (getConsoleConnectingText)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const PlatformTypes = ME.PlatformTypes;
-const result = set.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
+const PlatformTypes = Constants.PlatformTypes;
+const result = size.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
 
 export const getConsoleConnectingText = function getConsoleConnectingText(stateFromStores1, stateFromStores, arg2) {
   let type;
@@ -22,23 +22,23 @@ export const getConsoleConnectingText = function getConsoleConnectingText(stateF
   }
   if (type === PlatformTypes.XBOX) {
     if (arg2) {
-      const intl4 = getSystemLocale.intl;
-      let str2 = intl4.format(getSystemLocale.t["ynEs/Y"], {});
+      const intl4 = util.intl;
+      let str2 = intl4.format(util.t["ynEs/Y"], {});
     } else {
       str2 = "Xbox";
       if (tmp4) {
-        const intl3 = getSystemLocale.intl;
-        str2 = intl3.string(getSystemLocale.t.UjA4HX);
+        const intl3 = util.intl;
+        str2 = intl3.string(util.t.UjA4HX);
       }
     }
   } else if (arg2) {
-    const intl2 = getSystemLocale.intl;
-    let str = intl2.format(getSystemLocale.t.TZ17Bg, {});
+    const intl2 = util.intl;
+    let str = intl2.format(util.t.TZ17Bg, {});
   } else {
     str = "PS5";
     if (tmp4) {
-      const intl = getSystemLocale.intl;
-      str = intl.string(getSystemLocale.t.QCw1oW);
+      const intl = util.intl;
+      str = intl.string(util.t.QCw1oW);
     }
   }
 };

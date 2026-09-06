@@ -1,49 +1,47 @@
 // === Module 16604: VibegrationsMessageAuthor ===
 
 // Module 16604 (VibegrationsMessageAuthor)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16605 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { author: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/vibegrations/native/VibegrationsMessageAuthor.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { author: null };
+createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+createStyles.author = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/vibegrations/native/VibegrationsMessageAuthor.tsx");
 
 export default function VibegrationsMessageAuthor(userId) {
   userId = userId.userId;
   const items = [userId];
-  const effect = React.useEffect(() => userId(closure_1_1[6]).requestMessageAuthor(userId), items);
+  const effect = noop.useEffect(() => vibegrationsMessageAuthors.requestMessageAuthor(userId), items);
   let obj = userId(504);
-  const items1 = [closure_4];
+  const items1 = [UserStore];
   const items2 = [userId];
   const stateFromStores = obj.useStateFromStores(items1, () => {
     let user = null;
     if (null != userId) {
-      user = closure_1_4.getUser(tmp);
+      user = UserStore.getUser(tmp);
     }
-    return userId(closure_1_1[6]).resolveMessageAuthor(userId, user, closure_1_4.getCurrentUser());
+    return vibegrationsMessageAuthors.resolveMessageAuthor(userId, user, UserStore.getCurrentUser());
   }, items2);
   userId(4404);
   let tmp8 = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.author;
-    obj = { size: null, user: null, guildId: "Array" };
-    obj[0] = tmp3(1178).AvatarSizes.SIZE_16;
-    obj[1] = stateFromStores;
-    const items3 = [callback(tmp3(1178).Avatar, obj), ];
-    obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
-    obj1[2] = tmp7;
-    items3[1] = callback(tmp3(4556).Text, obj1);
-    obj[1] = items3;
-    tmp8 = callback2(View, obj);
+    obj = { style: tmp.author, children: null };
+    obj = { size: tmp3(1178).AvatarSizes.SIZE_16, user: stateFromStores, guildId: "Array" };
+    const items3 = [closure_5(tmp3(1178).Avatar, obj), ];
+    const obj1 = { variant: "text-xs/semibold", color: "text-muted", children: tmp7 };
+    items3[1] = closure_5(tmp3(4556).Text, obj1);
+    obj.children = items3;
+    tmp8 = closure_6(View, obj);
   }
   return tmp8;
 };

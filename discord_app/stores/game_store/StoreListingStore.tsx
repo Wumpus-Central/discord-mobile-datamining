@@ -1,19 +1,18 @@
-// === Module 14498: addRegularStoreListing ===
+// === Module 14498: StoreListingStore ===
 
-// Module 14498 (addRegularStoreListing)
+// Module 14498 (StoreListingStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import closure_3 from "_getSystemLocale" /* 2025 */;
-import closure_4 from "createFromServer" /* 14499 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import StoreListingRecord from "StoreListingRecord" /* 14499 */;
 
-require = arg1;
+require = fn;
 function addRegularStoreListing(id) {
   let deleteResult = id;
   id = id.id;
   let id2 = id.sku.id;
-  const fromServer = closure_4.createFromServer(id);
+  const fromServer = StoreListingRecord.createFromServer(id);
   if (!tmp2) {
     if (false === deleteResult.published) {
       if (null == dependencyMap3[id2]) {
@@ -31,7 +30,7 @@ function addRegularStoreListing(id) {
   }
 }
 function handleUserSettingsStoreUpdate() {
-  if (locale === closure_3.locale) {
+  if (locale === LocaleStore.locale) {
     return false;
   } else {
     closure_5 = {};
@@ -43,9 +42,9 @@ function handleUserSettingsStoreUpdate() {
     locale = tmp.locale;
   }
 }
-let closure_5 = {};
-let closure_6 = {};
-let closure_7 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
+const dependencyMap3 = {};
 let closure_8 = {};
 let set = new Set();
 const Store = initializeDefault.Store;
@@ -53,10 +52,10 @@ class StoreListingStore extends Store {
 }
 const prototype = StoreListingStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
-  const items = [closure_3];
+  this.waitFor(LocaleStore);
+  const items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
-  const locale = closure_3.locale;
+  locale = LocaleStore.locale;
 };
 prototype["get"] = function get(arg0) {
   return dependencyMap[arg0];
@@ -78,8 +77,8 @@ prototype["getUnpublishedForSKU"] = function getUnpublishedForSKU(skuId) {
     let items = [];
   } else {
     const _Array = Array;
-    const mapped = Array.from(tmp).map((arg0) => table[arg0]);
-    items = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+    const mapped = Array.from(tmp).map((item) => dependencyMap[item]);
+    items = mapped.filter(GlobalUtils.isNotNullish);
     const arr = Array.from(tmp);
   }
   return items;
@@ -108,7 +107,7 @@ prototype["getStoreListing"] = function getStoreListing(isTestMode) {
   } else if (null != channelId) {
     if (null == skuId) {
       const _Error = Error;
-      error = new Error("getStoreListing with channel expects a skuId");
+      const error = new Error("getStoreListing with channel expects a skuId");
       throw error;
     } else {
       return self.getForChannel(channelId, skuId);
@@ -122,7 +121,7 @@ prototype["getStoreListing"] = function getStoreListing(isTestMode) {
   }
 };
 StoreListingStore.displayName = "StoreListingStore";
-const storeListingStore = new StoreListingStore(dispatcherDefault, {
+const storeListingStore = new StoreListingStore(DispatcherDefault, {
   STORE_LISTINGS_FETCH_START: function handleStoreListingsFetchStart(skuId) {
     set.add(skuId.skuId);
   },
@@ -131,7 +130,6 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
   },
   STORE_LISTINGS_FETCH_SUCCESS: function handleStoreListingsFetch(arg0) {
     while (tmp !== undefined) {
-      let tmp3 = addRegularStoreListing;
       let tmp4 = addRegularStoreListing(tmp2);
       continue;
     }
@@ -139,14 +137,14 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
   STORE_LISTING_FETCH_SUCCESS: function handleStoreListingFetch(arg0) {
     ({ storeListing, channelId } = arg0);
     if (null != channelId) {
-      const fromServer = closure_4.createFromServer(storeListing);
+      const fromServer = StoreListingRecord.createFromServer(storeListing);
       const _HermesInternal = HermesInternal;
       closure_6["" + channelId + ":" + fromServer.skuId] = fromServer;
       closure_8[fromServer.skuId] = fromServer.id;
     } else {
       const id = storeListing.id;
       const id2 = storeListing.sku.id;
-      const fromServer1 = closure_4.createFromServer(storeListing);
+      const fromServer1 = StoreListingRecord.createFromServer(storeListing);
       if (!tmp) {
         if (false === storeListing.published) {
           if (null == dependencyMap3[id2]) {
@@ -155,7 +153,6 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
             dependencyMap3[id2] = set;
           }
           dependencyMap3[id2].add(id);
-          const obj = dependencyMap3[id2];
         } else {
           closure_8[id2] = id;
         }
@@ -181,7 +178,7 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
       let store_listing = giftCode.store_listing;
       const id2 = store_listing.id;
       let id = store_listing.sku.id;
-      const fromServer = closure_4.createFromServer(store_listing);
+      const fromServer = StoreListingRecord.createFromServer(store_listing);
       if (!tmp) {
         if (false === store_listing.published) {
           if (null == dependencyMap3[id]) {
@@ -201,6 +198,7 @@ const storeListingStore = new StoreListingStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("stores/game_store/StoreListingStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/game_store/StoreListingStore.tsx");
 
 export default storeListingStore;

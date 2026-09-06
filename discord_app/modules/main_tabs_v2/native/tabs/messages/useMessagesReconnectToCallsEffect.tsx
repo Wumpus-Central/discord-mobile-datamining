@@ -1,31 +1,30 @@
 // === Module 16049: useMessagesReconnectToCallsEffect ===
 
 // Module 16049 (useMessagesReconnectToCallsEffect)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "_handleConnectionOpen" /* 5277 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "makeSortedChannel" /* 7218 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7218 */;
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
 
 export default function useMessagesReconnectToCallsEffect() {
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     function isGatewayConnectedListener() {
-      const isConnectedResult = closure_1_4.isConnected();
-      if (callback !== isConnectedResult) {
-        callback = isConnectedResult;
+      isConnectedResult = GatewayConnectionStore.isConnected();
+      if (isConnectedResult !== isConnectedResult) {
         if (isConnectedResult) {
-          [r10011, arr] = closure_1_2(closure_1_6.getSortedChannels(), 2);
+          [r10011, arr] = _slicedToArray(sortedChannels.getSortedChannels(), 2);
           const items = [];
           const _Math = Math;
           let num3 = 0;
           if (0 < Math.min(20, arr.length)) {
             do {
-              let tmp7 = closure_1_5;
-              let channel = closure_1_5.getChannel(arr[num3].channelId);
+              channel = channel.getChannel(arr[num3].channelId);
               let isGroupDMResult = null != channel;
-              let tmp9 = num3;
               if (isGroupDMResult) {
                 isGroupDMResult = channel.isGroupDM();
               }
@@ -36,18 +35,16 @@ export default function useMessagesReconnectToCallsEffect() {
               let _Math2 = Math;
             } while (num3 < Math.min(20, arr.length));
           }
-          const tmp4 = closure_1_2(closure_1_6.getSortedChannels(), 2);
-          const obj = { type: "CALL_CONNECT_MULTIPLE", channelIds: null };
-          obj[1] = items;
-          callback(isGatewayConnectedListener[5]).dispatch(obj);
-          const obj2 = callback(isGatewayConnectedListener[5]);
+          const tmp4 = _slicedToArray(sortedChannels.getSortedChannels(), 2);
+          const obj = { type: "CALL_CONNECT_MULTIPLE", channelIds: items };
+          DispatcherDefault.dispatch(obj);
         }
       }
     }
     closure_0 = closure_4.isConnected();
     closure_4.addChangeListener(isGatewayConnectedListener);
     return () => {
-      closure_1_4.removeChangeListener(isGatewayConnectedListener);
+      GatewayConnectionStore.removeChangeListener(isGatewayConnectedListener);
     };
   }, []);
 };

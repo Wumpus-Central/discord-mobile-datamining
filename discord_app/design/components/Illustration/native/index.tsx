@@ -1,10 +1,10 @@
-// === Module 8233: getIllustrationSource ===
+// === Module 8233: ? ===
 
-// Module 8233 (getIllustrationSource)
-import set from "set" /* 2 */;
-import ManaContext from "ManaContext" /* 4271 */;
+// Module 8233
+import native from "native" /* 4271 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Illustration/native/index.tsx");
+const result = size.fileFinishedImporting("design/components/Illustration/native/index.tsx");
 
 export const getIllustrationSource = function getIllustrationSource(theme, light) {
   if ("light" === theme) {
@@ -29,6 +29,6 @@ export const getIllustrationSource = function getIllustrationSource(theme, light
   }
   return lightResult;
 };
-export const useIllustrationSource = function useIllustrationSource(arg0) {
-  return arg0(ManaContext.useThemeContext().theme);
+export const useIllustrationSource = function useIllustrationSource(fn) {
+  return fn(native.useThemeContext().theme);
 };

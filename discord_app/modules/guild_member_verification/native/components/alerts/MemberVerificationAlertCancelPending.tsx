@@ -1,23 +1,25 @@
 // === Module 5540: MemberVerificationAlertCancelPending ===
 
 // Module 5540 (MemberVerificationAlertCancelPending)
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 5541 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertCancelPending.tsx");
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertCancelPending.tsx");
 
 export default function MemberVerificationAlertCancelPending(guildId) {
   guildId = guildId.guildId;
   ({ confirmText, subtitleText, onClose } = guildId);
-  const merged = Object.assign(guildId, Object.create(null));
+  const merged = Object.assign(guildId, Object.assign({ guildId: 0, confirmText: 0, subtitleText: 0, onClose: 0 }));
   const items = [guildId, onClose];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (onClose != null) {
       tmp();
     }
-    const result = onClose(closure_1_2[2]).removeGuildJoinRequest(guildId);
+    const result = GuildJoinRequestActionCreatorsDefault.removeGuildJoinRequest(guildId);
   }, items);
   let obj = {};
   const merged1 = Object.assign(merged);
@@ -36,10 +38,10 @@ export default function MemberVerificationAlertCancelPending(guildId) {
   const items1 = [closure_4(guildId(4975).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
   obj = { text: null, variant: "secondary", onPress: null };
   const intl4 = tmp7(1114).intl;
-  obj[0] = intl4.string(guildId(1114).t.bANR0R);
-  obj[2] = onClose;
+  obj.text = intl4.string(guildId(1114).t.bANR0R);
+  obj.onPress = onClose;
   items1[1] = closure_4(guildId(4975).Button, obj);
-  obj[0] = items1;
+  obj.children = items1;
   obj.buttons = closure_6(closure_5, obj);
   return closure_4(onClose(5537), obj);
 };

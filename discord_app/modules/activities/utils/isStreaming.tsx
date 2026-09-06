@@ -1,9 +1,9 @@
-// === Module 8259: _isStreaming ===
+// === Module 8259: isStreaming ===
 
-// Module 8259 (_isStreaming)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import items3 from "items3" /* 1920 */;
+// Module 8259 (isStreaming)
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 1920 */;
+import size from "module_2" /* 2 */;
 
 function _isStreaming(type) {
   let tmp = type.type === ActivityTypes.STREAMING;
@@ -16,11 +16,11 @@ function _isStreaming(type) {
   }
   return tmp;
 }
-const validStreamURL = items3.validStreamURL;
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
+const validStreamURL = Constants2.validStreamURL;
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/activities/utils/isStreaming.tsx");
 
-export default function isStreaming(activeSourceId, arg1) {
+export default function isStreaming(activeSourceId) {
   if (null == activeSourceId) {
     return tmp;
   } else {

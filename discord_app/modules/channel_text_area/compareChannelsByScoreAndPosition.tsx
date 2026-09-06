@@ -1,10 +1,11 @@
 // === Module 7336: compareChannelsByScoreAndPosition ===
 
 // Module 7336 (compareChannelsByScoreAndPosition)
-import closure_0 from "ensureGuildLoaded" /* 1957 */;
-import { ChannelTypes } from "ME" /* 1074 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const result = require("set").fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_text_area/compareChannelsByScoreAndPosition.tsx");
 
 export default function compareChannelsByScoreAndPosition(score, score2) {
   if (score.score !== score2.score) {
@@ -19,7 +20,7 @@ export default function compareChannelsByScoreAndPosition(score, score2) {
         position = record.position;
       }
     } else {
-      const channel = store.getChannel(record.parent_id);
+      const channel = ChannelStore.getChannel(record.parent_id);
       let num;
       if (channel != null) {
         num = channel.position;
@@ -43,7 +44,7 @@ export default function compareChannelsByScoreAndPosition(score, score2) {
           position2 = record2.position;
         }
       } else {
-        const channel1 = store.getChannel(record2.parent_id);
+        const channel1 = ChannelStore.getChannel(record2.parent_id);
         let num7;
         if (channel1 != null) {
           num7 = channel1.position;

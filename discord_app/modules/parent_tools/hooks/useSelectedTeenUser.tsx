@@ -2,46 +2,47 @@
 
 // Module 14893 (useSelectedTeenUser)
 import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import closure_4 from "getSettings" /* 7540 */;
-import closure_5 from "freshTeenActivityWithMap" /* 7537 */;
+import UserStore from "UserStore" /* 1371 */;
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7540 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useSelectedTeenUser.tsx");
 
 export const useSelectedTeenUser = function useSelectedTeenUser() {
-  const _require = useIsInAdultAgeGroupDefault();
-  const items = [closure_5, closure_3];
-  return _require(563).useStateFromStores(items, () => {
+  _require = useIsInAdultAgeGroupDefault();
+  const items = [FamilyCenterStore, UserStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
     if (true !== closure_0) {
-      return closure_1_3.getCurrentUser();
+      return UserStore.getCurrentUser();
     } else {
-      const selectedTeenId = closure_1_5.getSelectedTeenId();
+      const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
       let user;
       if (null !== selectedTeenId) {
-        user = closure_1_3.getUser(selectedTeenId);
+        user = UserStore.getUser(selectedTeenId);
       }
       return user;
     }
   });
 };
 export const useTeenUserForId = function useTeenUserForId(gifterUserId) {
-  const _require = gifterUserId;
-  const items = [closure_3];
-  return _require(563).useStateFromStores(items, () => {
-    const user = closure_1_3.getUser(closure_0);
+  _require = gifterUserId;
+  const items = [UserStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    const user = UserStore.getUser(closure_0);
     return null != user ? user : undefined;
   });
 };
 export const useShouldLoadSettingsForSelectedTeenUser = function useShouldLoadSettingsForSelectedTeenUser() {
-  selectedTeenId = selectedTeenId.getSelectedTeenId();
-  const items = [closure_4];
+  const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
+  const items = [FamilyCenterControlledSettingsStore];
   const stateFromStoresObject = selectedTeenId(563).useStateFromStoresObject(items, () => {
     let hasSettingsForUserResult = null != selectedTeenId;
     if (hasSettingsForUserResult) {
-      hasSettingsForUserResult = closure_1_4.hasSettingsForUser(tmp);
+      hasSettingsForUserResult = FamilyCenterControlledSettingsStore.hasSettingsForUser(tmp);
     }
-    return { hasLoadedSettings: hasSettingsForUserResult, isLoading: closure_1_4.isLoading };
+    return { hasLoadedSettings: hasSettingsForUserResult, isLoading: FamilyCenterControlledSettingsStore.isLoading };
   });
   const hasLoadedSettings = stateFromStoresObject.hasLoadedSettings;
   let tmp4 = null !== selectedTeenId;

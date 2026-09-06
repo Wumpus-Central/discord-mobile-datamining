@@ -1,176 +1,138 @@
-// === Module 12439: ? ===
+// === Module 12439: ChatInputGuardMessageRequest ===
 
-// Module 12439
+// Module 12439 (ChatInputGuardMessageRequest)
 import ChatInputGuardDefault from "ChatInputGuard" /* 12448 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(channel) {
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
+
+export default noop.memo(function ChatInputGuardMessageRequest(channel) {
   channel = channel.channel;
-  importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
-  function _onAcceptClick() {
-    const self = this;
-    const tmp = _undefined2((arg0) => {
-      closure_0 = arg0;
-      c2 = 0;
-      c3 = 0;
-      return (function*(arg0) {
-        if (c3 === 2) {
+  closure_4 = async function _onAcceptClick(arg0, value) {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_1 = tmp4;
+            channel.stopPropagation();
+            c2 = 1;
+            c3 = 1;
+            const obj1 = { value: _undefined(id.id), done: false };
+            return obj1;
+          }
+        } else if (arg0 === 1) {
           c3 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp3 === 3) {
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          obj = channel(c2[11]);
+          obj.transitionToChannel(closure_129_0.id, { navigationReplace: true });
+          c3 = 3;
+          return { value: "HermesInternal", done: null };
+        }
+      } catch (tmp14) {
+        c3 = tmp;
+        throw tmp14;
+      }
+    }
+  };
+  closure_5 = async function _onRejectClick(arg0, value) {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c1 = 2;
+        if (0 === c2) {
           if (arg0 === 1) {
-            throw arg1;
+            c1 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            c1 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            channel.stopPropagation();
+            c2 = 1;
+            c1 = 1;
+            const obj1 = { value: asyncGeneratorStep(id.id), done: false };
+            return obj1;
           }
-        } else {
-          try {
-            c3 = 2;
-            if (0 === dependencyMap) {
-              if (arg0 === 1) {
-                c3 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp4;
-                lib.stopPropagation();
-                dependencyMap = 1;
-                c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = dependencyMap(lib.id);
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              c3 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c3 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              obj = lib(4571);
-              obj.transitionToChannel(lib.id, { navigationReplace: true });
-              c3 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp14) {
-            c3 = tmp;
-            throw tmp14;
-          }
-        }
-      })();
-    });
-    closure_4 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  }
-  function _onRejectClick() {
-    const self = this;
-    const tmp = _undefined2((arg0) => {
-      closure_0 = arg0;
-      c2 = 0;
-      c1 = 0;
-      return (function*(arg0) {
-        if (c1 === 2) {
+        } else if (arg0 === 1) {
           c1 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            c1 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                c1 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c1 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_0.stopPropagation();
-                c2 = 1;
-                c1 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_3(closure_0.id);
-                return obj1;
-              }
-            } else if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c1 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp9) {
-            c1 = tmp;
-            throw tmp9;
-          }
+          c1 = 3;
+          return { value: "HermesInternal", done: null };
         }
-      })();
-    });
-    closure_5 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+      } catch (tmp9) {
+        c1 = tmp;
+        throw tmp9;
+      }
     }
-    return applyArgumentsResult;
-  }
+  };
   let obj = channel(1483);
   importDefault = obj.useNavigation();
   const isMessageRequestRestrictedViewer = channel(12440).useIsMessageRequestRestrictedViewer("ChatInputGuardMessageRequest");
   let obj2 = channel(12440);
-  const items = [_onAcceptClick];
-  const stateFromStores = channel(504).useStateFromStores(items, () => _onAcceptClick.getUser(channel.getRecipientId()));
+  const items = [closure_4];
+  const stateFromStores = channel(504).useStateFromStores(items, () => UserStore.getUser(channel.getRecipientId()));
   const obj3 = channel(504);
   obj = {
     user: stateFromStores,
     onError: function handleRequestError() {
-      let obj = arr(_undefined[8]);
-      obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
+      closure_1(_undefined[8]);
+      const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = channel(_undefined[9]).intl;
-      obj[1] = intl.string(channel(_undefined[9]).t["EDYbS+"]);
-      obj[2] = arr(_undefined[10]);
+      obj.content = intl.string(channel(_undefined[9]).t["EDYbS+"]);
+      obj.icon = closure_1(_undefined[10]);
       obj.open(obj);
     },
     onRejectSuccess: function handleRejectSuccess() {
-
+      closure_1.pop();
     }
   };
   const messageRequestActions = channel(12442).useMessageRequestActions(obj);
@@ -190,17 +152,17 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
   }
   obj = { type: "button-action", message: null, subtext: null, buttonPrimaryText: null, buttonPrimaryOnPress: null, buttonPrimaryDisabled: null, buttonPrimaryLoading: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryDisabled: null, buttonSecondaryLoading: null };
   const obj4 = channel(12442);
-  const tmp7 = _onRejectClick;
+  const tmp7 = closure_5;
   let intl = tmp(1114).intl;
-  obj[1] = intl.string(channel(1114).t["e/eQVB"]);
+  obj.message = intl.string(channel(1114).t["e/eQVB"]);
   const intl2 = tmp(1114).intl;
   const t = tmp(1114).t;
-  obj[2] = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
+  obj.subtext = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
   const intl3 = tmp(1114).intl;
-  obj[3] = intl3.string(channel(1114).t.Kz8Pwr);
-  obj[4] = function onAcceptClick(arg0) {
+  obj.buttonPrimaryText = intl3.string(channel(1114).t.Kz8Pwr);
+  obj.buttonPrimaryOnPress = function onAcceptClick(arg0) {
     const self = this;
-    const apply = _onAcceptClick.apply;
+    const apply = closure_4.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -208,20 +170,20 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
     }
     return applyArgumentsResult;
   };
-  obj[5] = tmp6;
+  obj.buttonPrimaryDisabled = tmp6;
   if (!isAcceptLoading) {
     isAcceptLoading = isUserProfileLoading;
   }
   if (!isAcceptLoading) {
     isAcceptLoading = isOptimisticAccepted;
   }
-  obj[6] = isAcceptLoading;
+  obj.buttonPrimaryLoading = isAcceptLoading;
   const intl4 = tmp(1114).intl;
   const t2 = tmp(1114).t;
-  obj[7] = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
-  obj[8] = function onRejectClick(arg0) {
+  obj.buttonSecondaryText = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
+  obj.buttonSecondaryOnPress = function onRejectClick(arg0) {
     const self = this;
-    const apply = _onRejectClick.apply;
+    const apply = closure_5.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -229,13 +191,10 @@ const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(ch
     }
     return applyArgumentsResult;
   };
-  obj[9] = tmp6;
+  obj.buttonSecondaryDisabled = tmp6;
   if (!isRejectLoading) {
     isRejectLoading = isOptimisticRejected;
   }
-  obj[10] = isRejectLoading;
+  obj.buttonSecondaryLoading = isRejectLoading;
   return tmp7(ChatInputGuardDefault, obj);
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
-
-export default memoResult;

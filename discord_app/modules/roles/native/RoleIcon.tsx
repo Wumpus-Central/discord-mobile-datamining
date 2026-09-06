@@ -1,34 +1,32 @@
 // === Module 7188: RoleIcon ===
 
 // Module 7188 (RoleIcon)
-import noopAll from "noop" /* 19 */;
-import Button from "Button" /* 1178 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
 export default function RoleIcon(arg0) {
   ({ source, unicodeEmoji, size } = arg0);
   if (size === undefined) {
     size = 20;
   }
-  let obj = { height: size, width: size, resizeMode: "contain" };
+  size = { height: size, width: size, resizeMode: "contain" };
   if (null != source) {
-    obj = { source: null, style: null };
-    obj[0] = source;
-    obj[1] = obj;
-    let tmp = <Image source={null} style={null} />;
+    let obj = { source, style: size };
+    let tmp = <Image source={source} style={size} />;
   } else {
     tmp = null;
     if (null != unicodeEmoji) {
       obj = { adjustsFontSizeToFit: true, style: null, children: null };
-      const items = [obj, { fontFamily: "System", fontSize: size, marginBottom: -2 }];
-      obj[1] = items;
-      obj[2] = unicodeEmoji.surrogates;
-      tmp = jsx(Button.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
+      const items = [size, { fontFamily: "System", fontSize: size, marginBottom: -2 }];
+      obj.style = items;
+      obj.children = unicodeEmoji.surrogates;
+      tmp = jsx(native.LegacyText, { adjustsFontSizeToFit: true, style: null, children: null });
     }
   }
   return tmp;

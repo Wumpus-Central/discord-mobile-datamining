@@ -1,23 +1,22 @@
-// === Module 14454: handleConnectionOpen ===
+// === Module 14454: UserSettingsProtoManager ===
 
-// Module 14454 (handleConnectionOpen)
-import applyDefault from "apply" /* 12 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import MAX_FAVORITESDefault from "MAX_FAVORITES" /* 1225 */;
-import updateUserGuildSettings from "updateUserGuildSettings" /* 1940 */;
-import migrateHotspotLocationDefault from "migrateHotspotLocation" /* 14455 */;
-import readFavoriteGIFsDefault from "readFavoriteGIFs" /* 14456 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
+// Module 14454 (UserSettingsProtoManager)
+import _modDef12 from "module_12" /* 12 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import UserSettingsMigrationsByTypeDefault from "UserSettingsMigrationsByType" /* 1225 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
+import PreloadedUserSettingsMigrationsDefault from "PreloadedUserSettingsMigrations" /* 14455 */;
+import FrecencySettingsMigrationsDefault from "FrecencySettingsMigrations" /* 14456 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
+require = fn;
 function handleConnectionOpen() {
-  fullState = fullState.getFullState();
+  const fullState = UserSettingsProtoStore.getFullState();
   if (fullState[UserSettingsTypes.PRELOADED_USER_SETTINGS].editInfo.triggeredMigrations) {
-    const PreloadedUserSettingsActionCreators = fullState(1940).PreloadedUserSettingsActionCreators;
+    const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     let result = PreloadedUserSettingsActionCreators.markDirtyFromMigration(tmp2.proto, tmp2.editInfo.cleanupFuncs);
   }
-  const item = applyDefault.forEach(fullState(1940).UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit) => {
+  const item = _modDef12.forEach(UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType, (scheduleSaveFromOfflineEdit, arg1) => {
     const tmp = fullState[Number(undefined, arg1)];
     if (tmp2) {
       const result = scheduleSaveFromOfflineEdit.scheduleSaveFromOfflineEdit();
@@ -27,10 +26,10 @@ function handleConnectionOpen() {
 function handleUserSettingsProtoEnqueueUpdate(settings) {
   ({ proto, type } = settings.settings);
   ({ delaySeconds, jitter } = settings);
-  updateUserGuildSettings.UserSettingsActionCreatorsByType[type].markDirty(proto, { delaySeconds, jitter });
+  UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType[type].markDirty(proto, { delaySeconds, jitter });
 }
 function handleUserSettingsProtoLoadIfNecessary(arg0) {
-  const ifNecessary = updateUserGuildSettings.UserSettingsActionCreatorsByType[arg0.settingsType].loadIfNecessary();
+  const ifNecessary = UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType[arg0.settingsType].loadIfNecessary();
 }
 function handleAppStateUpdate(state) {
   state = state.state;
@@ -39,29 +38,25 @@ function handleAppStateUpdate(state) {
     tmp = "background" !== state;
   }
   if (!tmp) {
-    const item = applyDefault.forEach(updateUserGuildSettings.UserSettingsActionCreatorsByType, (persistChanges) => {
+    const item = _modDef12.forEach(UserSettingsProtoActionCreators.UserSettingsActionCreatorsByType, (persistChanges, arg1) => {
       fullState = fullState.getFullState();
       if (null != fullState[Number(undefined, arg1)].editInfo.timeout) {
         persistChanges.persistChanges();
       }
     });
-    const arr = applyDefault;
   }
 }
-let result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsProtoManager.tsx");
+const UserSettingsTypes = fn(1084).UserSettingsTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/UserSettingsProtoManager.tsx");
 
 export default {
   init() {
-    MAX_FAVORITESDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS] = migrateHotspotLocationDefault;
-    const tmp = MAX_FAVORITESDefault;
-    MAX_FAVORITESDefault[UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = readFavoriteGIFsDefault;
-    const tmp2 = MAX_FAVORITESDefault;
-    const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", handleConnectionOpen);
-    const obj = dispatcherDefault;
-    const subscription1 = dispatcherDefault.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", handleUserSettingsProtoEnqueueUpdate);
-    const obj2 = dispatcherDefault;
-    const subscription2 = dispatcherDefault.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", handleUserSettingsProtoLoadIfNecessary);
-    const obj3 = dispatcherDefault;
-    const subscription3 = dispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
+    UserSettingsMigrationsByTypeDefault[UserSettingsTypes.PRELOADED_USER_SETTINGS] = PreloadedUserSettingsMigrationsDefault;
+    UserSettingsMigrationsByTypeDefault[UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = FrecencySettingsMigrationsDefault;
+    const subscription = DispatcherDefault.subscribe("CONNECTION_OPEN", handleConnectionOpen);
+    const subscription1 = DispatcherDefault.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", handleUserSettingsProtoEnqueueUpdate);
+    const subscription2 = DispatcherDefault.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", handleUserSettingsProtoLoadIfNecessary);
+    const subscription3 = DispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
   }
 };

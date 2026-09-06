@@ -1,8 +1,8 @@
-// === Module 15958: initialize ===
+// === Module 15958: ParentalConsentStore ===
 
-// Module 15958 (initialize)
+// Module 15958 (ParentalConsentStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let c0 = false;
 const PersistedStore = initializeDefault.PersistedStore;
@@ -17,18 +17,19 @@ prototype["initialize"] = function initialize(shouldShowGuardianConnect) {
   if (flag == null) {
     flag = false;
   }
+  c0 = flag;
 };
 prototype["getShouldShowGuardianConnect"] = function getShouldShowGuardianConnect() {
   return c0;
 };
 prototype["getState"] = function getState() {
-  return { shouldShowGuardianConnect: c0 };
+  return { shouldShowGuardianConnect };
 };
 ParentalConsentStore.displayName = "ParentalConsentStore";
 ParentalConsentStore.persistKey = "ParentalConsentStore";
-const parentalConsentStore = new ParentalConsentStore(dispatcherDefault, {
+const parentalConsentStore = new ParentalConsentStore(DispatcherDefault, {
   GUARDIAN_CONNECT_REQUIRED: function handleGuardianConnectRequired(shouldShowGuardianConnect) {
-    closure_0 = true === shouldShowGuardianConnect.shouldShowGuardianConnect;
+    c0 = true === shouldShowGuardianConnect.shouldShowGuardianConnect;
     parentalConsentStore.persist();
   },
   GUARDIAN_CONNECT_CLEARED: function handleGuardianConnectCleared() {
@@ -40,6 +41,7 @@ const parentalConsentStore = new ParentalConsentStore(dispatcherDefault, {
     parentalConsentStore.persist();
   }
 });
-const result = require("set").fileFinishedImporting("modules/parent_tools/ParentalConsentStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/ParentalConsentStore.tsx");
 
 export default parentalConsentStore;

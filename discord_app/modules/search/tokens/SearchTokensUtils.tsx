@@ -1,16 +1,17 @@
-// === Module 12344: ANSWER_IN_REGEX ===
+// === Module 12344: SearchTokensUtils ===
 
-// Module 12344 (ANSWER_IN_REGEX)
-import set from "set" /* 2 */;
+// Module 12344 (SearchTokensUtils)
+import RegexUtilsDefault from "RegexUtils" /* 4547 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
+const result = size.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
 
 export const ANSWER_IN_REGEX = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i;
 export const GENERIC_REGEX = /(?:\s*([^\s]+))/;
 export const makeRegexForOptionsWithNegation = function makeRegexForOptionsWithNegation(items) {
   items = [...items];
   const sorted = items.sort((arg0, arg1) => arg1.length - arg0.length);
-  const mapped = sorted.map((arg0) => callback(table[0]).escape(arg0));
+  const mapped = sorted.map((item) => RegexUtilsDefault.escape(item));
   const regExp = new RegExp("(?:\\s*(-?(?:" + mapped.join("|") + ")))", "i");
   return regExp;
 };

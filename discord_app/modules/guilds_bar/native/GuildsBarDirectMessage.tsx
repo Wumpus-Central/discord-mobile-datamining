@@ -1,48 +1,50 @@
-// === Module 16341: ? ===
+// === Module 16341: GuildsBarDirectMessage ===
 
-// Module 16341
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "callConnect" /* 5278 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "updateGuildUnreadSentinel" /* 7636 */;
-import closure_8 from "markAllUserIdListsStale" /* 4209 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import { ChannelTypes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16341 (GuildsBarDirectMessage)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
+import noop from "module_19" /* 19 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import CallStore from "CallStore" /* 5278 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c3 = importAllResult;
+require = fn;
+const ChannelTypes = fn(1074).ChannelTypes;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { dm: null };
-obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
-obj[0] = obj;
-let closure_12 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelId) {
+let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
+obj.dm = size;
+let closure_12 = createStyles.createStyles(obj);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
+
+export default noop.memo(function GuildsBarDirectMessage(channelId) {
   channelId = channelId.channelId;
-  let stateFromStores;
   let channel;
-  let dmRecipient;
   let obj = channelId(channel[11]);
-  const tmp = callback();
-  obj1 = channelId(channel[12]);
-  const items = [closure_7];
-  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getMentionCountForPrivateChannel(channelId).count);
+  const tmp = closure_12();
+  let obj1 = channelId(channel[12]);
+  const items = [GuildReadStateStore];
+  const stateFromStores = obj1.useStateFromStores(items, () => GuildReadStateStore.getMentionCountForPrivateChannel(channelId).count);
   let obj2 = channelId(channel[12]);
-  const items1 = [closure_6, closure_9, closure_8, closure_5, closure_4];
+  const items1 = [ChannelStore, UserStore, RelationshipStore, CallStore, AuthenticationStore];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => {
-    channel = closure_1_6.getChannel(channelId);
+    channel = ChannelStore.getChannel(channelId);
     let type;
     if (channel != null) {
       type = channel.type;
     }
     let user;
-    if (type === closure_1_10.DM) {
-      user = closure_1_9.getUser(channel.getRecipientId());
+    if (type === ChannelTypes.DM) {
+      user = UserStore.getUser(channel.getRecipientId());
     }
-    const call = closure_1_5.getCall(tmp);
-    const id = closure_1_4.getId();
+    const call = CallStore.getCall(tmp);
+    const id = AuthenticationStore.getId();
     let hasItem = null != call && null != id;
     if (hasItem) {
       const ringing = call.ringing;
@@ -50,22 +52,17 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
     }
     let obj = { channel, dmRecipient: user, label: null };
     if (null != channel) {
-      obj = { channel: null, unread: null, mentionCount: null, isIncomingCall: null, isOngoingCall: null };
-      obj[0] = channel;
-      obj[1] = stateFromStores > 0;
-      obj[2] = stateFromStores;
-      obj[3] = hasItem;
-      obj[4] = tmp8;
-      let stringResult = stateFromStores(channel[13])(obj);
+      obj = { channel, unread: stateFromStores > 0, mentionCount: stateFromStores, isIncomingCall: hasItem, isOngoingCall: tmp8 };
+      let stringResult = getChannelA11yLabelDefault(obj);
     } else {
-      const intl = channelId(channel[14]).intl;
-      stringResult = intl.string(channelId(channel[14]).t.zLZPmk);
+      const intl = util.intl;
+      stringResult = intl.string(util.t.zLZPmk);
     }
-    obj[2] = stringResult;
+    obj.label = stringResult;
     return obj;
   });
   channel = stateFromStoresObject.channel;
-  dmRecipient = stateFromStoresObject.dmRecipient;
+  const dmRecipient = stateFromStoresObject.dmRecipient;
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
   const items2 = [channel, dmRecipient];
   ({ badge, cutouts } = stateFromStores(channel[15])({ mentionCount: stateFromStores }));
@@ -88,15 +85,15 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   const items3 = [channel];
   const memo1 = dmRecipient.useMemo(() => ({
     onPress() {
-      if (null != closure_2) {
-        closure_1_0(closure_1_2[16]).transitionToChannel(tmp.id);
-        const obj = closure_1_0(closure_1_2[16]);
+      if (null != closure_1_2) {
+        channelId(channel[16]).transitionToChannel(tmp.id);
+        const obj = channelId(channel[16]);
       }
     },
     onLongPress() {
-      if (null != closure_2) {
-        const result = closure_1_0(closure_1_2[17]).openChannelLongPressActionSheet(tmp.id);
-        const obj = closure_1_0(closure_1_2[17]);
+      if (null != closure_1_2) {
+        const result = channelId(channel[17]).openChannelLongPressActionSheet(tmp.id);
+        const obj = channelId(channel[17]);
       }
     }
   }), items3);
@@ -105,40 +102,28 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" };
-  obj[6] = memo1;
-  obj[7] = cutouts;
-  obj[8] = badge;
+  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "flowing", children: "hourglass" };
   let tmp11Result = null;
   if (null != channel) {
-    obj = { channel: null };
-    obj[0] = channel;
+    obj = { channel };
     tmp11Result = tmp11(tmp7(tmp3[18]), obj);
   }
-  obj[9] = tmp11Result;
+  obj.expandedChildren = tmp11Result;
   let isMultiUserDMResult1;
   if (channel != null) {
     isMultiUserDMResult1 = channel.isMultiUserDM();
   }
   if (isMultiUserDMResult1) {
-    obj1 = { channel: null, size: null, pileSizeOverride: null, animate: true };
-    obj1[0] = channel;
-    obj1[1] = tmp2(tmp3[20]).AvatarSizes.LARGE_48;
-    obj1[2] = tmp2(tmp3[20]).AvatarSizes.REFRESH_MEDIUM_32;
+    obj1 = { channel, size: tmp2(tmp3[20]).AvatarSizes.LARGE_48, pileSizeOverride: tmp2(tmp3[20]).AvatarSizes.REFRESH_MEDIUM_32, animate: true };
     tmp11Result = tmp11(tmp7(tmp3[19]), obj1);
     const tmp7Result = tmp7(tmp3[19]);
   } else {
     tmp11Result = null;
     if (null != memo) {
-      obj2 = { style: null, source: null };
-      obj2[0] = tmp.dm;
-      obj2[1] = memo;
+      obj2 = { style: tmp.dm, source: memo };
       tmp11Result = tmp11(tmp7(tmp3[21]), obj2);
     }
   }
-  obj[10] = tmp11Result;
-  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" });
+  obj.children = tmp11Result;
+  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "flowing", children: "hourglass" });
 });
-let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
-
-export default memoResult;

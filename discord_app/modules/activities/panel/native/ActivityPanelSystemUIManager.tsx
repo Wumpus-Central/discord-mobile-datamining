@@ -1,21 +1,19 @@
-// === Module 17038: BaseActivityPanelSystemUIManager ===
+// === Module 17038: ActivityPanelSystemUIManager ===
 
-// Module 17038 (BaseActivityPanelSystemUIManager)
-import set from "set" /* 1115 */;
-import componentDidMountDefault from "componentDidMount" /* 9481 */;
-import pushStackEntryDefault from "pushStackEntry" /* 9483 */;
-import useActivityWebViewLockDefault from "useActivityWebViewLock" /* 17015 */;
-import importAllResult from "noop" /* 19 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 17038 (ActivityPanelSystemUIManager)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import StatusBarDefault from "StatusBar" /* 9481 */;
+import HomeIndicatorDefault from "HomeIndicator" /* 9483 */;
+import ActivityPanelStateContextDefault from "ActivityPanelStateContext" /* 17015 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class BaseActivityPanelSystemUIManager {
   constructor(arg0) {
     ({ mode, isWindowLandscape } = global);
     tmp = mode === ActivityPanelModes.PANEL;
     tmp2 = closure_2;
-    obj = require("set");
+    obj = closure_0(closure_2[4]);
     tmp3 = obj.isIOS() && tmp;
     tmp7Result = null;
     tmp4 = jsxs;
@@ -24,34 +22,35 @@ class BaseActivityPanelSystemUIManager {
       tmp8 = closure_1;
       tmp7 = jsx;
       tmp10 = !isWindowLandscape;
-      tmp9 = require("componentDidMount");
+      tmp9 = closure_1(tmp2[5]);
       if (isWindowLandscape) {
         tmp10 = !tmp;
       }
       obj = { hidden: null, barStyle: "light-content" };
-      obj[0] = !tmp10;
+      obj.hidden = !tmp10;
       tmp7Result = tmp7(tmp9, obj);
     }
     items = [, ];
     items[0] = tmp7Result;
     tmp11 = jsx;
-    tmp12 = require("pushStackEntry");
+    tmp12 = closure_1(tmp2[6]);
     if (tmp) {
       tmp = !tmp3;
     }
     obj1 = { children: null };
     items[1] = tmp11(tmp12, { prefersHidden: tmp, prefersDeferringSystemGestures: tmp3 });
-    obj1[0] = items;
+    obj1.children = items;
     return tmp4(tmp5, obj1);
   }
 }
-let c3 = importAllResult;
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const memoResult = importAllResult.memo(() => {
-  const context = importAllResult.useContext(useActivityWebViewLockDefault);
-  return callback(BaseActivityPanelSystemUIManager, { mode: context.mode, isWindowLandscape: context.wrapperDimensions.isWindowLandscape });
-});
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
+const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
 
-export default memoResult;
+export default noop.memo(() => {
+  const context = noop.useContext(ActivityPanelStateContextDefault);
+  return hasOwnProperty(BaseActivityPanelSystemUIManager, { mode: context.mode, isWindowLandscape: context.wrapperDimensions.isWindowLandscape });
+});
 export { BaseActivityPanelSystemUIManager };

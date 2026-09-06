@@ -1,9 +1,9 @@
-// === Module 14401: reactNativeCorePlugins ===
+// === Module 14401: ReactotronConfig ===
 
-// Module 14401 (reactNativeCorePlugins)
-import importDefaultResult from "reactNativeCorePlugins" /* 14402 */;
+// Module 14401 (ReactotronConfig)
+import reactNativeCorePlugins from "reactNativeCorePlugins" /* 14402 */;
 
-const reactNative = importDefaultResult.configure({}).useReactNative();
+const reactNative = reactNativeCorePlugins.configure({}).useReactNative();
 reactNative.connect();
-const configureResult = importDefaultResult.configure({});
-const result = require("set").fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/native/ReactotronConfig.tsx");

@@ -1,16 +1,16 @@
-// === Module 4578: handleUpdate ===
+// === Module 4578: SessionsStore ===
 
-// Module 4578 (handleUpdate)
-import applyDefault from "apply" /* 12 */;
+// Module 4578 (SessionsStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 function handleUpdate(sessions) {
   closure_4 = {};
   sessions = sessions.sessions;
   const item = sessions.forEach((sessionId) => {
-    closure_4[sessionId.sessionId] = sessionId;
+    closure_1_4[sessionId.sessionId] = sessionId;
   });
 }
 let closure_3 = Object.freeze([]);
@@ -20,13 +20,13 @@ class SessionsStore extends Store {
 }
 const prototype = SessionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(AuthenticationStore);
 };
 prototype["getSessions"] = function getSessions() {
   return closure_4;
 };
 prototype["getSession"] = function getSession() {
-  const sessionId = store.getSessionId();
+  const sessionId = AuthenticationStore.getSessionId();
   let sessionById = null;
   if (null != sessionId) {
     const self = this;
@@ -35,8 +35,8 @@ prototype["getSession"] = function getSession() {
   return sessionById;
 };
 prototype["getRemoteActivities"] = function getRemoteActivities() {
-  importDefault = store.getSessionId();
-  const found = applyDefault.find(closure_4, (active) => {
+  const sessionId = AuthenticationStore.getSessionId();
+  const found = _modDef12.find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -46,8 +46,8 @@ prototype["getRemoteActivities"] = function getRemoteActivities() {
   return null != found ? found.activities : closure_3;
 };
 prototype["getHiddenActivities"] = function getHiddenActivities() {
-  importDefault = store.getSessionId();
-  const found = applyDefault.find(closure_4, (active) => {
+  const sessionId = AuthenticationStore.getSessionId();
+  const found = _modDef12.find(closure_4, (active) => {
     active = active.active;
     if (active) {
       active = active.sessionId !== closure_0;
@@ -63,18 +63,18 @@ prototype["getHiddenActivities"] = function getHiddenActivities() {
   hiddenActivities = closure_3;
 };
 prototype["getSessionById"] = function getSessionById(sessionId) {
-  return table[sessionId];
+  return closure_4[sessionId];
 };
 prototype["getActiveSession"] = function getActiveSession() {
-  return applyDefault.find(closure_4, (active) => active.active);
+  return _modDef12.find(closure_4, (active) => active.active);
 };
 prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivity(application_id) {
-  importDefault = application_id;
+  closure_0 = application_id;
   if (null == application_id) {
     return null;
   } else {
-    dependencyMap = store.getSessionId();
-    const found = applyDefault.find(closure_4, (active) => {
+    const sessionId = AuthenticationStore.getSessionId();
+    const found = _modDef12.find(closure_4, (active) => {
       active = active.active;
       if (active) {
         active = active.sessionId !== closure_1;
@@ -96,11 +96,11 @@ prototype["getRemoteApplicationActivity"] = function getRemoteApplicationActivit
       }
       return found1;
     }
-    const arr3 = applyDefault;
   }
 };
 SessionsStore.displayName = "SessionsStore";
-const sessionsStore = new SessionsStore(dispatcherDefault, { CONNECTION_OPEN: handleUpdate, SESSIONS_REPLACE: handleUpdate });
-const result = require("set").fileFinishedImporting("stores/SessionsStore.tsx");
+const sessionsStore = new SessionsStore(DispatcherDefault, { CONNECTION_OPEN: handleUpdate, SESSIONS_REPLACE: handleUpdate });
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/SessionsStore.tsx");
 
 export default sessionsStore;

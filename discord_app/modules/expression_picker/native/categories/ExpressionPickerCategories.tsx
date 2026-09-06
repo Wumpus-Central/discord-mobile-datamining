@@ -1,28 +1,30 @@
 // === Module 10359: ExpressionPickerCategories ===
 
 // Module 10359 (ExpressionPickerCategories)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import Portal from "Portal" /* 4432 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null, containerRefresh: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/expression_picker/native/categories/ExpressionPickerCategories.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null, containerRefresh: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+createStyles.container = createStyles;
+createStyles.containerRefresh = { borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/expression_picker/native/categories/ExpressionPickerCategories.tsx");
 
 export default function ExpressionPickerCategories(arg0) {
   ({ children, portalHostName, style } = arg0);
-  const tmp = callback();
+  let obj = { hostName: portalHostName, children: null };
+  obj = { style: null, children };
   const items = [, , ];
-  ({ container: arr[0], containerRefresh: arr[1] } = tmp);
+  ({ container: arr[0], containerRefresh: arr[1] } = closure_4());
   items[2] = style;
-  return jsx(Portal.Portal, { hostName: portalHostName, children: <View style={items}>{children}</View> });
+  obj.style = items;
+  obj.children = <View style={null}>{children}</View>;
+  return jsx(Portal.Portal, { style: null, children });
 };

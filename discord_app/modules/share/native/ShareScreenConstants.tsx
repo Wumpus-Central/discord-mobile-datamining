@@ -1,8 +1,8 @@
-// === Module 13851: SHARE_SCREEN_MODAL_KEY ===
+// === Module 13851: ShareScreenConstants ===
 
-// Module 13851 (SHARE_SCREEN_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 13851 (ShareScreenConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/share/native/ShareScreenConstants.tsx");
+const result = size.fileFinishedImporting("modules/share/native/ShareScreenConstants.tsx");
 
 export const SHARE_SCREEN_MODAL_KEY = "share_screen_modal";

@@ -1,48 +1,47 @@
-// === Module 7989: collectAst ===
+// === Module 7989: MarkupASTUtils ===
 
-// Module 7989 (collectAst)
-import set2 from "set" /* 2 */;
+// Module 7989 (MarkupASTUtils)
+import size from "module_2" /* 2 */;
 
-function collectAst(arr) {
+function collectAst(content) {
   let items = arg1;
   if (arg1 === undefined) {
     items = [];
   }
-  if (Array.isArray(arr)) {
-    const item = arr.forEach((arr) => {
-      let items = items1;
-      if (items1 === undefined) {
+  if (Array.isArray(content)) {
+    const item = content.forEach((content) => {
+      let items = closure_1_0;
+      if (closure_1_0 === undefined) {
         items = [];
       }
       items1 = items;
-      if (Array.isArray(arr)) {
-        let item = arr.forEach((arr) => {
-          let items = items1;
-          if (items1 === undefined) {
+      if (Array.isArray(content)) {
+        let item = content.forEach((content) => {
+          let items = closure_1_0;
+          if (closure_1_0 === undefined) {
             items = [];
           }
           items1 = items;
-          if (Array.isArray(arr)) {
-            let item = arr.forEach((arr) => {
-              let items = items1;
-              if (items1 === undefined) {
+          if (Array.isArray(content)) {
+            let item = content.forEach((content) => {
+              let items = closure_1_0;
+              if (closure_1_0 === undefined) {
                 items = [];
               }
               items1 = items;
-              if (Array.isArray(arr)) {
-                let item = arr.forEach((arr) => {
-                  let items = items1;
-                  if (items1 === undefined) {
+              if (Array.isArray(content)) {
+                let item = content.forEach((content) => {
+                  let items = closure_1_0;
+                  if (closure_1_0 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(arr)) {
-                    let item = arr.forEach(() => { ... });
-                  } else if (typeof arr.content === "string") {
-                    items.push(arr.content);
-                  } else if (null != arr.content) {
-                    let content = arr.content;
-                    items1 = undefined;
+                  if (Array.isArray(content)) {
+                    let item = content.forEach(() => { ... });
+                  } else if (typeof content.content === "string") {
+                    items.push(content.content);
+                  } else if (null != content.content) {
+                    content = content.content;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
@@ -53,35 +52,33 @@ function collectAst(arr) {
                     } else if (typeof content.content === "string") {
                       items1.push(content.content);
                     } else if (null != content.content) {
-                      closure_1_0(content.content, items1);
+                      closure_2_0(content.content, items1);
                     }
                   }
                   return items;
                 });
-              } else if (typeof arr.content === "string") {
-                items.push(arr.content);
-              } else if (null != arr.content) {
-                let content = arr.content;
-                items1 = undefined;
+              } else if (typeof content.content === "string") {
+                items.push(content.content);
+              } else if (null != content.content) {
+                content = content.content;
                 items1 = items;
                 if (items === undefined) {
                   items1 = [];
                 }
                 let _Array = Array;
                 if (Array.isArray(content)) {
-                  let item1 = content.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                  let item1 = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    if (Array.isArray(content)) {
+                      let item = content.forEach(() => { ... });
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -92,7 +89,7 @@ function collectAst(arr) {
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
@@ -100,42 +97,40 @@ function collectAst(arr) {
                 } else if (typeof content.content === "string") {
                   items1.push(content.content);
                 } else if (null != content.content) {
-                  closure_1_0(content.content, items1);
+                  closure_2_0(content.content, items1);
                 }
               }
               return items;
             });
-          } else if (typeof arr.content === "string") {
-            items.push(arr.content);
-          } else if (null != arr.content) {
-            let content = arr.content;
-            items1 = undefined;
+          } else if (typeof content.content === "string") {
+            items.push(content.content);
+          } else if (null != content.content) {
+            content = content.content;
             items1 = items;
             if (items === undefined) {
               items1 = [];
             }
             let _Array = Array;
             if (Array.isArray(content)) {
-              let item1 = content.forEach((arr) => {
-                let items = items1;
-                if (items1 === undefined) {
+              let item1 = content.forEach((content) => {
+                let items = closure_1_0;
+                if (closure_1_0 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                if (Array.isArray(content)) {
+                  let item = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    if (Array.isArray(content)) {
+                      let item = content.forEach(() => { ... });
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -146,35 +141,33 @@ function collectAst(arr) {
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
-                  items.push(arr.content);
-                } else if (null != arr.content) {
-                  let content = arr.content;
-                  items1 = undefined;
+                } else if (typeof content.content === "string") {
+                  items.push(content.content);
+                } else if (null != content.content) {
+                  content = content.content;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                    let item1 = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -185,7 +178,7 @@ function collectAst(arr) {
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
@@ -193,7 +186,7 @@ function collectAst(arr) {
                   } else if (typeof content.content === "string") {
                     items1.push(content.content);
                   } else if (null != content.content) {
-                    closure_1_0(content.content, items1);
+                    closure_2_0(content.content, items1);
                   }
                 }
                 return items;
@@ -201,49 +194,47 @@ function collectAst(arr) {
             } else if (typeof content.content === "string") {
               items1.push(content.content);
             } else if (null != content.content) {
-              closure_1_0(content.content, items1);
+              closure_2_0(content.content, items1);
             }
           }
           return items;
         });
-      } else if (typeof arr.content === "string") {
-        items.push(arr.content);
-      } else if (null != arr.content) {
-        let content = arr.content;
-        items1 = undefined;
+      } else if (typeof content.content === "string") {
+        items.push(content.content);
+      } else if (null != content.content) {
+        content = content.content;
         items1 = items;
         if (items === undefined) {
           items1 = [];
         }
         let _Array = Array;
         if (Array.isArray(content)) {
-          let item1 = content.forEach((arr) => {
-            let items = items1;
-            if (items1 === undefined) {
+          let item1 = content.forEach((content) => {
+            let items = closure_1_0;
+            if (closure_1_0 === undefined) {
               items = [];
             }
             items1 = items;
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                let items = items1;
-                if (items1 === undefined) {
+            if (Array.isArray(content)) {
+              let item = content.forEach((content) => {
+                let items = closure_1_0;
+                if (closure_1_0 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                if (Array.isArray(content)) {
+                  let item = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    if (Array.isArray(content)) {
+                      let item = content.forEach(() => { ... });
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -254,35 +245,33 @@ function collectAst(arr) {
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
-                  items.push(arr.content);
-                } else if (null != arr.content) {
-                  let content = arr.content;
-                  items1 = undefined;
+                } else if (typeof content.content === "string") {
+                  items.push(content.content);
+                } else if (null != content.content) {
+                  content = content.content;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                    let item1 = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -293,7 +282,7 @@ function collectAst(arr) {
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
@@ -301,42 +290,40 @@ function collectAst(arr) {
                   } else if (typeof content.content === "string") {
                     items1.push(content.content);
                   } else if (null != content.content) {
-                    closure_1_0(content.content, items1);
+                    closure_2_0(content.content, items1);
                   }
                 }
                 return items;
               });
-            } else if (typeof arr.content === "string") {
-              items.push(arr.content);
-            } else if (null != arr.content) {
-              let content = arr.content;
-              items1 = undefined;
+            } else if (typeof content.content === "string") {
+              items.push(content.content);
+            } else if (null != content.content) {
+              content = content.content;
               items1 = items;
               if (items === undefined) {
                 items1 = [];
               }
               let _Array = Array;
               if (Array.isArray(content)) {
-                let item1 = content.forEach((arr) => {
-                  let items = items1;
-                  if (items1 === undefined) {
+                let item1 = content.forEach((content) => {
+                  let items = closure_1_0;
+                  if (closure_1_0 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(arr)) {
-                    let item = arr.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                  if (Array.isArray(content)) {
+                    let item = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -347,35 +334,33 @@ function collectAst(arr) {
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
-                    items.push(arr.content);
-                  } else if (null != arr.content) {
-                    let content = arr.content;
-                    items1 = undefined;
+                  } else if (typeof content.content === "string") {
+                    items.push(content.content);
+                  } else if (null != content.content) {
+                    content = content.content;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((arr) => {
-                        let items = items1;
-                        if (items1 === undefined) {
+                      let item1 = content.forEach((content) => {
+                        let items = closure_1_0;
+                        if (closure_1_0 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(arr)) {
-                          let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
-                          items.push(arr.content);
-                        } else if (null != arr.content) {
-                          let content = arr.content;
-                          items1 = undefined;
+                        if (Array.isArray(content)) {
+                          let item = content.forEach(() => { ... });
+                        } else if (typeof content.content === "string") {
+                          items.push(content.content);
+                        } else if (null != content.content) {
+                          content = content.content;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -386,7 +371,7 @@ function collectAst(arr) {
                           } else if (typeof content.content === "string") {
                             items1.push(content.content);
                           } else if (null != content.content) {
-                            closure_1_0(content.content, items1);
+                            closure_2_0(content.content, items1);
                           }
                         }
                         return items;
@@ -394,7 +379,7 @@ function collectAst(arr) {
                     } else if (typeof content.content === "string") {
                       items1.push(content.content);
                     } else if (null != content.content) {
-                      closure_1_0(content.content, items1);
+                      closure_2_0(content.content, items1);
                     }
                   }
                   return items;
@@ -402,7 +387,7 @@ function collectAst(arr) {
               } else if (typeof content.content === "string") {
                 items1.push(content.content);
               } else if (null != content.content) {
-                closure_1_0(content.content, items1);
+                closure_2_0(content.content, items1);
               }
             }
             return items;
@@ -410,21 +395,20 @@ function collectAst(arr) {
         } else if (typeof content.content === "string") {
           items1.push(content.content);
         } else if (null != content.content) {
-          closure_1_0(content.content, items1);
+          closure_2_0(content.content, items1);
         }
       }
       return items;
     });
-  } else if (typeof arr.content === "string") {
-    items.push(arr.content);
-  } else if (null != arr.content) {
-    items(arr.content, items);
+  } else if (typeof content.content === "string") {
+    items.push(content.content);
+  } else if (null != content.content) {
+    items(content.content, items);
   }
   return items;
 }
-let closure_1 = {};
-let prototype;
-prototype = function MarkupParserNodeTypeError(arg0) {
+let ast = {};
+const prototype = function MarkupParserNodeTypeError(arg0) {
   let _Array;
   let tmp8;
   let tmp9;
@@ -438,11 +422,7 @@ prototype = function MarkupParserNodeTypeError(arg0) {
         if (Array.isArray(arr)) {
           let push3 = items.push;
           let items1 = [];
-          let tmp16 = items1;
-          let tmp17 = arr;
-          let num3 = 0;
           let arraySpreadResult = HermesBuiltin.arraySpread(arr, 0);
-          let tmp19 = push3;
           tmp8 = items1;
           tmp9 = items;
           let applyResult = HermesBuiltin.apply(items1, items);
@@ -456,10 +436,7 @@ prototype = function MarkupParserNodeTypeError(arg0) {
           if (isArray) {
             let push = items.push;
             let items2 = [];
-            let tmp5 = items2;
-            let num = 0;
             arraySpreadResult = HermesBuiltin.arraySpread(arr.content, 0);
-            let tmp7 = push;
             tmp8 = items2;
             tmp9 = items;
             let applyResult1 = HermesBuiltin.apply(items2, items);
@@ -472,10 +449,7 @@ prototype = function MarkupParserNodeTypeError(arg0) {
           if (isArray1) {
             let push2 = items.push;
             let items3 = [];
-            let tmp12 = items3;
-            let num2 = 0;
             let arraySpreadResult1 = HermesBuiltin.arraySpread(arr.items, 0);
-            let tmp14 = push2;
             tmp8 = items3;
             tmp9 = items;
             let applyResult2 = HermesBuiltin.apply(items3, items);
@@ -486,7 +460,6 @@ prototype = function MarkupParserNodeTypeError(arg0) {
   }
   arr = Array.from(set);
   set = new set(prototype.getMessage(arr), tmp8, tmp9, _Array, tmp4, arr);
-  // ThrowIfThisInitialized (0x7c)
   set.nodeTypes = arr;
   return set;
 }.prototype;
@@ -495,23 +468,22 @@ class prototype extends Error {
 prototype["getMessage"] = function getMessage(join) {
   return "MarkupParserNodeTypeError: Unknown AST node type in \"" + join.join(", ") + "\" caused rendering failure";
 };
-const result = set2.fileFinishedImporting("../discord_common/js/packages/markup/MarkupASTUtils.tsx");
-function walkAst(content, arg1) {
+const result = size.fileFinishedImporting("../discord_common/js/packages/markup/MarkupASTUtils.tsx");
+function walkAst(content, fn) {
   if (Array.isArray(content)) {
     const tmp8 = content[Symbol.iterator]();
     while (tmp8 !== undefined) {
-      let tmp12 = walkAst;
-      let tmp13 = walkAst(tmp10, arg1);
+      let tmp13 = walkAst(tmp10, fn);
       continue;
     }
   } else {
-    arg1(content, null);
+    fn(content, null);
     const _Array = Array;
     if (Array.isArray(content.content)) {
-      walkAst(content.content, arg1);
+      walkAst(content.content, fn);
     }
     if ("list" === content.type) {
-      walkAst(content.items, arg1);
+      walkAst(content.items, fn);
     }
   }
 }
@@ -524,10 +496,8 @@ function flattenAst(isSlate, content, content) {
   if (Array.isArray(content)) {
     const items = [];
     for (let num3 = 0; num3 < length; num3 = num3 + 1) {
-      let tmp6 = flattenAst;
       let arr3 = flattenAst(isSlate, content[num3], tmp3);
       let _Array = Array;
-      let tmp7 = num3;
       if (Array.isArray(arr3)) {
         let length2 = arr3.length;
         for (let num4 = 0; num4 < length2; num4 = num4 + 1) {
@@ -543,8 +513,6 @@ function flattenAst(isSlate, content, content) {
       if (0 < items.length) {
         do {
           let tmp12 = items[num5];
-          let tmp13 = num5;
-          let tmp14 = tmp11;
           let diff = num5;
           let tmp16 = tmp12;
           if (null != tmp11) {
@@ -584,10 +552,10 @@ function flattenAst(isSlate, content, content) {
     }
     if ("list" === content.type) {
       const items1 = content.items;
-      content.items = items1.map((arg0) => {
-        let tmp = arg0;
-        if (Array.isArray(arg0)) {
-          tmp = closure_1_5(closure_0, arg0, null);
+      content.items = items1.map((item) => {
+        let tmp = item;
+        if (Array.isArray(item)) {
+          tmp = flattenAst(closure_0, item, null);
         }
         return tmp;
       });
@@ -606,13 +574,9 @@ function constrainAst(content, arg1) {
     obj = { limit: 200, hasBailedAst: false };
   }
   if (Array.isArray(content)) {
-    let num = 0;
+    const num = 0;
     if (0 < content.length) {
-      const ast = constrainAst(content[num], obj).ast;
-      while (ast !== closure_1) {
-        content[num] = ast;
-        num = num + 1;
-      }
+      ast = constrainAst(content[num], obj).ast;
       obj.hasBailedAst = true;
       content.length = num;
     }
@@ -620,8 +584,7 @@ function constrainAst(content, arg1) {
     obj.limit = obj.limit - 1;
     if (obj.limit <= 0) {
       obj.hasBailedAst = true;
-      obj = { ast: null, hasBailedAst: true };
-      obj[0] = closure_1;
+      obj = { ast, hasBailedAst: true };
       return obj;
     } else {
       const _Array = Array;
@@ -630,7 +593,7 @@ function constrainAst(content, arg1) {
       }
       if ("list" === content.type) {
         const items = content.items;
-        content.items = items.map((arg0) => closure_1_6(arg0, obj).ast);
+        content.items = items.map((item) => constrainAst(item, obj).ast);
       }
     }
   }
@@ -641,42 +604,41 @@ function constrainAst(content, arg1) {
 export const NUM_MAX_AST_NODES = 200;
 export { walkAst };
 export const astToString = function astToString(applicationSubscriptionSystemMessageASTContent) {
-  let items = [];
+  const items = [];
   if (Array.isArray(applicationSubscriptionSystemMessageASTContent)) {
-    const item = applicationSubscriptionSystemMessageASTContent.forEach((arr) => {
-      let items = items1;
-      if (items1 === undefined) {
+    const item = applicationSubscriptionSystemMessageASTContent.forEach((content) => {
+      let items = closure_1_0;
+      if (closure_1_0 === undefined) {
         items = [];
       }
       items1 = items;
-      if (Array.isArray(arr)) {
-        let item = arr.forEach((arr) => {
-          let items = items1;
-          if (items1 === undefined) {
+      if (Array.isArray(content)) {
+        let item = content.forEach((content) => {
+          let items = closure_1_0;
+          if (closure_1_0 === undefined) {
             items = [];
           }
           items1 = items;
-          if (Array.isArray(arr)) {
-            let item = arr.forEach((arr) => {
-              let items = items1;
-              if (items1 === undefined) {
+          if (Array.isArray(content)) {
+            let item = content.forEach((content) => {
+              let items = closure_1_0;
+              if (closure_1_0 === undefined) {
                 items = [];
               }
               items1 = items;
-              if (Array.isArray(arr)) {
-                let item = arr.forEach((arr) => {
-                  let items = items1;
-                  if (items1 === undefined) {
+              if (Array.isArray(content)) {
+                let item = content.forEach((content) => {
+                  let items = closure_1_0;
+                  if (closure_1_0 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(arr)) {
-                    let item = arr.forEach(() => { ... });
-                  } else if (typeof arr.content === "string") {
-                    items.push(arr.content);
-                  } else if (null != arr.content) {
-                    let content = arr.content;
-                    items1 = undefined;
+                  if (Array.isArray(content)) {
+                    let item = content.forEach(() => { ... });
+                  } else if (typeof content.content === "string") {
+                    items.push(content.content);
+                  } else if (null != content.content) {
+                    content = content.content;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
@@ -687,35 +649,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     } else if (typeof content.content === "string") {
                       items1.push(content.content);
                     } else if (null != content.content) {
-                      closure_1_0(content.content, items1);
+                      closure_2_0(content.content, items1);
                     }
                   }
                   return items;
                 });
-              } else if (typeof arr.content === "string") {
-                items.push(arr.content);
-              } else if (null != arr.content) {
-                let content = arr.content;
-                items1 = undefined;
+              } else if (typeof content.content === "string") {
+                items.push(content.content);
+              } else if (null != content.content) {
+                content = content.content;
                 items1 = items;
                 if (items === undefined) {
                   items1 = [];
                 }
                 let _Array = Array;
                 if (Array.isArray(content)) {
-                  let item1 = content.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                  let item1 = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    if (Array.isArray(content)) {
+                      let item = content.forEach(() => { ... });
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -726,7 +686,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
@@ -734,42 +694,40 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                 } else if (typeof content.content === "string") {
                   items1.push(content.content);
                 } else if (null != content.content) {
-                  closure_1_0(content.content, items1);
+                  closure_2_0(content.content, items1);
                 }
               }
               return items;
             });
-          } else if (typeof arr.content === "string") {
-            items.push(arr.content);
-          } else if (null != arr.content) {
-            let content = arr.content;
-            items1 = undefined;
+          } else if (typeof content.content === "string") {
+            items.push(content.content);
+          } else if (null != content.content) {
+            content = content.content;
             items1 = items;
             if (items === undefined) {
               items1 = [];
             }
             let _Array = Array;
             if (Array.isArray(content)) {
-              let item1 = content.forEach((arr) => {
-                let items = items1;
-                if (items1 === undefined) {
+              let item1 = content.forEach((content) => {
+                let items = closure_1_0;
+                if (closure_1_0 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                if (Array.isArray(content)) {
+                  let item = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    if (Array.isArray(content)) {
+                      let item = content.forEach(() => { ... });
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -780,35 +738,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
-                  items.push(arr.content);
-                } else if (null != arr.content) {
-                  let content = arr.content;
-                  items1 = undefined;
+                } else if (typeof content.content === "string") {
+                  items.push(content.content);
+                } else if (null != content.content) {
+                  content = content.content;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                    let item1 = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -819,7 +775,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
@@ -827,7 +783,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   } else if (typeof content.content === "string") {
                     items1.push(content.content);
                   } else if (null != content.content) {
-                    closure_1_0(content.content, items1);
+                    closure_2_0(content.content, items1);
                   }
                 }
                 return items;
@@ -835,49 +791,47 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
             } else if (typeof content.content === "string") {
               items1.push(content.content);
             } else if (null != content.content) {
-              closure_1_0(content.content, items1);
+              closure_2_0(content.content, items1);
             }
           }
           return items;
         });
-      } else if (typeof arr.content === "string") {
-        items.push(arr.content);
-      } else if (null != arr.content) {
-        let content = arr.content;
-        items1 = undefined;
+      } else if (typeof content.content === "string") {
+        items.push(content.content);
+      } else if (null != content.content) {
+        content = content.content;
         items1 = items;
         if (items === undefined) {
           items1 = [];
         }
         let _Array = Array;
         if (Array.isArray(content)) {
-          let item1 = content.forEach((arr) => {
-            let items = items1;
-            if (items1 === undefined) {
+          let item1 = content.forEach((content) => {
+            let items = closure_1_0;
+            if (closure_1_0 === undefined) {
               items = [];
             }
             items1 = items;
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                let items = items1;
-                if (items1 === undefined) {
+            if (Array.isArray(content)) {
+              let item = content.forEach((content) => {
+                let items = closure_1_0;
+                if (closure_1_0 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                if (Array.isArray(content)) {
+                  let item = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    if (Array.isArray(content)) {
+                      let item = content.forEach(() => { ... });
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -888,35 +842,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
-                  items.push(arr.content);
-                } else if (null != arr.content) {
-                  let content = arr.content;
-                  items1 = undefined;
+                } else if (typeof content.content === "string") {
+                  items.push(content.content);
+                } else if (null != content.content) {
+                  content = content.content;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                    let item1 = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -927,7 +879,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
@@ -935,42 +887,40 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   } else if (typeof content.content === "string") {
                     items1.push(content.content);
                   } else if (null != content.content) {
-                    closure_1_0(content.content, items1);
+                    closure_2_0(content.content, items1);
                   }
                 }
                 return items;
               });
-            } else if (typeof arr.content === "string") {
-              items.push(arr.content);
-            } else if (null != arr.content) {
-              let content = arr.content;
-              items1 = undefined;
+            } else if (typeof content.content === "string") {
+              items.push(content.content);
+            } else if (null != content.content) {
+              content = content.content;
               items1 = items;
               if (items === undefined) {
                 items1 = [];
               }
               let _Array = Array;
               if (Array.isArray(content)) {
-                let item1 = content.forEach((arr) => {
-                  let items = items1;
-                  if (items1 === undefined) {
+                let item1 = content.forEach((content) => {
+                  let items = closure_1_0;
+                  if (closure_1_0 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(arr)) {
-                    let item = arr.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                  if (Array.isArray(content)) {
+                    let item = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -981,35 +931,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
-                    items.push(arr.content);
-                  } else if (null != arr.content) {
-                    let content = arr.content;
-                    items1 = undefined;
+                  } else if (typeof content.content === "string") {
+                    items.push(content.content);
+                  } else if (null != content.content) {
+                    content = content.content;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((arr) => {
-                        let items = items1;
-                        if (items1 === undefined) {
+                      let item1 = content.forEach((content) => {
+                        let items = closure_1_0;
+                        if (closure_1_0 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(arr)) {
-                          let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
-                          items.push(arr.content);
-                        } else if (null != arr.content) {
-                          let content = arr.content;
-                          items1 = undefined;
+                        if (Array.isArray(content)) {
+                          let item = content.forEach(() => { ... });
+                        } else if (typeof content.content === "string") {
+                          items.push(content.content);
+                        } else if (null != content.content) {
+                          content = content.content;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -1020,7 +968,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           } else if (typeof content.content === "string") {
                             items1.push(content.content);
                           } else if (null != content.content) {
-                            closure_1_0(content.content, items1);
+                            closure_2_0(content.content, items1);
                           }
                         }
                         return items;
@@ -1028,7 +976,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     } else if (typeof content.content === "string") {
                       items1.push(content.content);
                     } else if (null != content.content) {
-                      closure_1_0(content.content, items1);
+                      closure_2_0(content.content, items1);
                     }
                   }
                   return items;
@@ -1036,7 +984,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
               } else if (typeof content.content === "string") {
                 items1.push(content.content);
               } else if (null != content.content) {
-                closure_1_0(content.content, items1);
+                closure_2_0(content.content, items1);
               }
             }
             return items;
@@ -1044,7 +992,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
         } else if (typeof content.content === "string") {
           items1.push(content.content);
         } else if (null != content.content) {
-          closure_1_0(content.content, items1);
+          closure_2_0(content.content, items1);
         }
       }
       return items;
@@ -1053,43 +1001,42 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
     items.push(applicationSubscriptionSystemMessageASTContent.content);
   } else if (null != applicationSubscriptionSystemMessageASTContent.content) {
     const content = applicationSubscriptionSystemMessageASTContent.content;
-    items = undefined;
+    closure_129_0 = items;
     const _Array = Array;
     if (Array.isArray(content)) {
-      const item1 = content.forEach((arr) => {
-        let items = items1;
-        if (items1 === undefined) {
+      const item1 = content.forEach((content) => {
+        let items = closure_1_0;
+        if (closure_1_0 === undefined) {
           items = [];
         }
         items1 = items;
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            let items = items1;
-            if (items1 === undefined) {
+        if (Array.isArray(content)) {
+          let item = content.forEach((content) => {
+            let items = closure_1_0;
+            if (closure_1_0 === undefined) {
               items = [];
             }
             items1 = items;
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                let items = items1;
-                if (items1 === undefined) {
+            if (Array.isArray(content)) {
+              let item = content.forEach((content) => {
+                let items = closure_1_0;
+                if (closure_1_0 === undefined) {
                   items = [];
                 }
                 items1 = items;
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                if (Array.isArray(content)) {
+                  let item = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach(() => { ... });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    if (Array.isArray(content)) {
+                      let item = content.forEach(() => { ... });
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
@@ -1100,35 +1047,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
                   });
-                } else if (typeof arr.content === "string") {
-                  items.push(arr.content);
-                } else if (null != arr.content) {
-                  let content = arr.content;
-                  items1 = undefined;
+                } else if (typeof content.content === "string") {
+                  items.push(content.content);
+                } else if (null != content.content) {
+                  content = content.content;
                   items1 = items;
                   if (items === undefined) {
                     items1 = [];
                   }
                   let _Array = Array;
                   if (Array.isArray(content)) {
-                    let item1 = content.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                    let item1 = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -1139,7 +1084,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
@@ -1147,42 +1092,40 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                   } else if (typeof content.content === "string") {
                     items1.push(content.content);
                   } else if (null != content.content) {
-                    closure_1_0(content.content, items1);
+                    closure_2_0(content.content, items1);
                   }
                 }
                 return items;
               });
-            } else if (typeof arr.content === "string") {
-              items.push(arr.content);
-            } else if (null != arr.content) {
-              let content = arr.content;
-              items1 = undefined;
+            } else if (typeof content.content === "string") {
+              items.push(content.content);
+            } else if (null != content.content) {
+              content = content.content;
               items1 = items;
               if (items === undefined) {
                 items1 = [];
               }
               let _Array = Array;
               if (Array.isArray(content)) {
-                let item1 = content.forEach((arr) => {
-                  let items = items1;
-                  if (items1 === undefined) {
+                let item1 = content.forEach((content) => {
+                  let items = closure_1_0;
+                  if (closure_1_0 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(arr)) {
-                    let item = arr.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                  if (Array.isArray(content)) {
+                    let item = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -1193,35 +1136,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
-                    items.push(arr.content);
-                  } else if (null != arr.content) {
-                    let content = arr.content;
-                    items1 = undefined;
+                  } else if (typeof content.content === "string") {
+                    items.push(content.content);
+                  } else if (null != content.content) {
+                    content = content.content;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((arr) => {
-                        let items = items1;
-                        if (items1 === undefined) {
+                      let item1 = content.forEach((content) => {
+                        let items = closure_1_0;
+                        if (closure_1_0 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(arr)) {
-                          let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
-                          items.push(arr.content);
-                        } else if (null != arr.content) {
-                          let content = arr.content;
-                          items1 = undefined;
+                        if (Array.isArray(content)) {
+                          let item = content.forEach(() => { ... });
+                        } else if (typeof content.content === "string") {
+                          items.push(content.content);
+                        } else if (null != content.content) {
+                          content = content.content;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -1232,7 +1173,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           } else if (typeof content.content === "string") {
                             items1.push(content.content);
                           } else if (null != content.content) {
-                            closure_1_0(content.content, items1);
+                            closure_2_0(content.content, items1);
                           }
                         }
                         return items;
@@ -1240,7 +1181,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     } else if (typeof content.content === "string") {
                       items1.push(content.content);
                     } else if (null != content.content) {
-                      closure_1_0(content.content, items1);
+                      closure_2_0(content.content, items1);
                     }
                   }
                   return items;
@@ -1248,49 +1189,47 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
               } else if (typeof content.content === "string") {
                 items1.push(content.content);
               } else if (null != content.content) {
-                closure_1_0(content.content, items1);
+                closure_2_0(content.content, items1);
               }
             }
             return items;
           });
-        } else if (typeof arr.content === "string") {
-          items.push(arr.content);
-        } else if (null != arr.content) {
-          let content = arr.content;
-          items1 = undefined;
+        } else if (typeof content.content === "string") {
+          items.push(content.content);
+        } else if (null != content.content) {
+          content = content.content;
           items1 = items;
           if (items === undefined) {
             items1 = [];
           }
           let _Array = Array;
           if (Array.isArray(content)) {
-            let item1 = content.forEach((arr) => {
-              let items = items1;
-              if (items1 === undefined) {
+            let item1 = content.forEach((content) => {
+              let items = closure_1_0;
+              if (closure_1_0 === undefined) {
                 items = [];
               }
               items1 = items;
-              if (Array.isArray(arr)) {
-                let item = arr.forEach((arr) => {
-                  let items = items1;
-                  if (items1 === undefined) {
+              if (Array.isArray(content)) {
+                let item = content.forEach((content) => {
+                  let items = closure_1_0;
+                  if (closure_1_0 === undefined) {
                     items = [];
                   }
                   items1 = items;
-                  if (Array.isArray(arr)) {
-                    let item = arr.forEach((arr) => {
-                      let items = items1;
-                      if (items1 === undefined) {
+                  if (Array.isArray(content)) {
+                    let item = content.forEach((content) => {
+                      let items = closure_1_0;
+                      if (closure_1_0 === undefined) {
                         items = [];
                       }
                       items1 = items;
-                      if (Array.isArray(arr)) {
-                        let item = arr.forEach(() => { ... });
-                      } else if (typeof arr.content === "string") {
-                        items.push(arr.content);
-                      } else if (null != arr.content) {
-                        let content = arr.content;
-                        items1 = undefined;
+                      if (Array.isArray(content)) {
+                        let item = content.forEach(() => { ... });
+                      } else if (typeof content.content === "string") {
+                        items.push(content.content);
+                      } else if (null != content.content) {
+                        content = content.content;
                         items1 = items;
                         if (items === undefined) {
                           items1 = [];
@@ -1301,35 +1240,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                         } else if (typeof content.content === "string") {
                           items1.push(content.content);
                         } else if (null != content.content) {
-                          closure_1_0(content.content, items1);
+                          closure_2_0(content.content, items1);
                         }
                       }
                       return items;
                     });
-                  } else if (typeof arr.content === "string") {
-                    items.push(arr.content);
-                  } else if (null != arr.content) {
-                    let content = arr.content;
-                    items1 = undefined;
+                  } else if (typeof content.content === "string") {
+                    items.push(content.content);
+                  } else if (null != content.content) {
+                    content = content.content;
                     items1 = items;
                     if (items === undefined) {
                       items1 = [];
                     }
                     let _Array = Array;
                     if (Array.isArray(content)) {
-                      let item1 = content.forEach((arr) => {
-                        let items = items1;
-                        if (items1 === undefined) {
+                      let item1 = content.forEach((content) => {
+                        let items = closure_1_0;
+                        if (closure_1_0 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(arr)) {
-                          let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
-                          items.push(arr.content);
-                        } else if (null != arr.content) {
-                          let content = arr.content;
-                          items1 = undefined;
+                        if (Array.isArray(content)) {
+                          let item = content.forEach(() => { ... });
+                        } else if (typeof content.content === "string") {
+                          items.push(content.content);
+                        } else if (null != content.content) {
+                          content = content.content;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -1340,7 +1277,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           } else if (typeof content.content === "string") {
                             items1.push(content.content);
                           } else if (null != content.content) {
-                            closure_1_0(content.content, items1);
+                            closure_2_0(content.content, items1);
                           }
                         }
                         return items;
@@ -1348,42 +1285,40 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                     } else if (typeof content.content === "string") {
                       items1.push(content.content);
                     } else if (null != content.content) {
-                      closure_1_0(content.content, items1);
+                      closure_2_0(content.content, items1);
                     }
                   }
                   return items;
                 });
-              } else if (typeof arr.content === "string") {
-                items.push(arr.content);
-              } else if (null != arr.content) {
-                let content = arr.content;
-                items1 = undefined;
+              } else if (typeof content.content === "string") {
+                items.push(content.content);
+              } else if (null != content.content) {
+                content = content.content;
                 items1 = items;
                 if (items === undefined) {
                   items1 = [];
                 }
                 let _Array = Array;
                 if (Array.isArray(content)) {
-                  let item1 = content.forEach((arr) => {
-                    let items = items1;
-                    if (items1 === undefined) {
+                  let item1 = content.forEach((content) => {
+                    let items = closure_1_0;
+                    if (closure_1_0 === undefined) {
                       items = [];
                     }
                     items1 = items;
-                    if (Array.isArray(arr)) {
-                      let item = arr.forEach((arr) => {
-                        let items = items1;
-                        if (items1 === undefined) {
+                    if (Array.isArray(content)) {
+                      let item = content.forEach((content) => {
+                        let items = closure_1_0;
+                        if (closure_1_0 === undefined) {
                           items = [];
                         }
                         items1 = items;
-                        if (Array.isArray(arr)) {
-                          let item = arr.forEach(() => { ... });
-                        } else if (typeof arr.content === "string") {
-                          items.push(arr.content);
-                        } else if (null != arr.content) {
-                          let content = arr.content;
-                          items1 = undefined;
+                        if (Array.isArray(content)) {
+                          let item = content.forEach(() => { ... });
+                        } else if (typeof content.content === "string") {
+                          items.push(content.content);
+                        } else if (null != content.content) {
+                          content = content.content;
                           items1 = items;
                           if (items === undefined) {
                             items1 = [];
@@ -1394,35 +1329,33 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                           } else if (typeof content.content === "string") {
                             items1.push(content.content);
                           } else if (null != content.content) {
-                            closure_1_0(content.content, items1);
+                            closure_2_0(content.content, items1);
                           }
                         }
                         return items;
                       });
-                    } else if (typeof arr.content === "string") {
-                      items.push(arr.content);
-                    } else if (null != arr.content) {
-                      let content = arr.content;
-                      items1 = undefined;
+                    } else if (typeof content.content === "string") {
+                      items.push(content.content);
+                    } else if (null != content.content) {
+                      content = content.content;
                       items1 = items;
                       if (items === undefined) {
                         items1 = [];
                       }
                       let _Array = Array;
                       if (Array.isArray(content)) {
-                        let item1 = content.forEach((arr) => {
-                          let items = items1;
-                          if (items1 === undefined) {
+                        let item1 = content.forEach((content) => {
+                          let items = closure_1_0;
+                          if (closure_1_0 === undefined) {
                             items = [];
                           }
                           items1 = items;
-                          if (Array.isArray(arr)) {
-                            let item = arr.forEach(() => { ... });
-                          } else if (typeof arr.content === "string") {
-                            items.push(arr.content);
-                          } else if (null != arr.content) {
-                            let content = arr.content;
-                            items1 = undefined;
+                          if (Array.isArray(content)) {
+                            let item = content.forEach(() => { ... });
+                          } else if (typeof content.content === "string") {
+                            items.push(content.content);
+                          } else if (null != content.content) {
+                            content = content.content;
                             items1 = items;
                             if (items === undefined) {
                               items1 = [];
@@ -1433,7 +1366,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                             } else if (typeof content.content === "string") {
                               items1.push(content.content);
                             } else if (null != content.content) {
-                              closure_1_0(content.content, items1);
+                              closure_2_0(content.content, items1);
                             }
                           }
                           return items;
@@ -1441,7 +1374,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                       } else if (typeof content.content === "string") {
                         items1.push(content.content);
                       } else if (null != content.content) {
-                        closure_1_0(content.content, items1);
+                        closure_2_0(content.content, items1);
                       }
                     }
                     return items;
@@ -1449,7 +1382,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
                 } else if (typeof content.content === "string") {
                   items1.push(content.content);
                 } else if (null != content.content) {
-                  closure_1_0(content.content, items1);
+                  closure_2_0(content.content, items1);
                 }
               }
               return items;
@@ -1457,7 +1390,7 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
           } else if (typeof content.content === "string") {
             items1.push(content.content);
           } else if (null != content.content) {
-            closure_1_0(content.content, items1);
+            closure_2_0(content.content, items1);
           }
         }
         return items;
@@ -1472,16 +1405,16 @@ export const astToString = function astToString(applicationSubscriptionSystemMes
 };
 export { flattenAst };
 export { constrainAst };
-export const getIndexedAST = function getIndexedAST(arr) {
+export const getIndexedAST = function getIndexedAST(arr, arg1) {
   closure_0 = arr;
   closure_1 = arg1;
   c2 = 0;
   return arr.map((type) => {
     let num = 0;
-    if (0 !== c2) {
-      num = content2[tmp - 1].endIndex;
+    if (0 !== closure_1_2) {
+      num = closure_1_0[tmp - 1].endIndex;
     }
-    c2 = c2 + 1;
+    closure_1_2 = closure_1_2 + 1;
     type = type.type;
     if ("spoiler" !== type) {
       if ("u" !== type) {
@@ -1492,21 +1425,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                 if ("emoji" !== type) {
                   if ("inlineCode" !== type) {
                     if ("text" === type) {
-                      type.startIndex = startIndex + num;
+                      type.startIndex = closure_1_1 + num;
                       type.endIndex = type.startIndex + type.content.length;
                       return type;
                     } else {
-                      type.startIndex = startIndex + num;
+                      type.startIndex = closure_1_1 + num;
                       let content = type.content;
                       content2 = content;
-                      startIndex = type.startIndex;
+                      let startIndex = type.startIndex;
                       c2 = 0;
                       let mapped = content.map((type) => {
                         let num = 0;
-                        if (0 !== c2) {
-                          num = content2[tmp - 1].endIndex;
+                        if (0 !== closure_1_2) {
+                          num = closure_1_0[tmp - 1].endIndex;
                         }
-                        c2 = c2 + 1;
+                        closure_1_2 = closure_1_2 + 1;
                         type = type.type;
                         if ("spoiler" !== type) {
                           if ("u" !== type) {
@@ -1517,21 +1450,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                     if ("emoji" !== type) {
                                       if ("inlineCode" !== type) {
                                         if ("text" === type) {
-                                          type.startIndex = startIndex + num;
+                                          type.startIndex = closure_1_1 + num;
                                           type.endIndex = type.startIndex + type.content.length;
                                           return type;
                                         } else {
-                                          type.startIndex = startIndex + num;
+                                          type.startIndex = closure_1_1 + num;
                                           let content = type.content;
                                           content2 = content;
-                                          startIndex = type.startIndex;
+                                          let startIndex = type.startIndex;
                                           c2 = 0;
                                           let mapped = content.map((type) => {
                                             let num = 0;
-                                            if (0 !== c2) {
-                                              num = content2[tmp - 1].endIndex;
+                                            if (0 !== closure_1_2) {
+                                              num = closure_1_0[tmp - 1].endIndex;
                                             }
-                                            c2 = c2 + 1;
+                                            closure_1_2 = closure_1_2 + 1;
                                             type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
@@ -1542,21 +1475,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               type.endIndex = type.startIndex + type.content.length;
                                                               return type;
                                                             } else {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               let content = type.content;
                                                               content2 = content;
-                                                              startIndex = type.startIndex;
+                                                              let startIndex = type.startIndex;
                                                               c2 = 0;
                                                               let mapped = content.map((type) => {
                                                                 let num = 0;
-                                                                if (0 !== c2) {
-                                                                  num = content2[tmp - 1].endIndex;
+                                                                if (0 !== closure_1_2) {
+                                                                  num = closure_1_0[tmp - 1].endIndex;
                                                                 }
-                                                                c2 = c2 + 1;
+                                                                closure_1_2 = closure_1_2 + 1;
                                                                 type = type.type;
                                                                 if ("spoiler" !== type) {
                                                                   if ("u" !== type) {
@@ -1567,14 +1500,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                             if ("emoji" !== type) {
                                                                               if ("inlineCode" !== type) {
                                                                                 if ("text" === type) {
-                                                                                  type.startIndex = startIndex + num;
+                                                                                  type.startIndex = closure_1_1 + num;
                                                                                   type.endIndex = type.startIndex + type.content.length;
                                                                                   return type;
                                                                                 } else {
-                                                                                  type.startIndex = startIndex + num;
+                                                                                  type.startIndex = closure_1_1 + num;
                                                                                   let content = type.content;
                                                                                   content2 = content;
-                                                                                  startIndex = type.startIndex;
+                                                                                  let startIndex = type.startIndex;
                                                                                   c2 = 0;
                                                                                   let mapped = content.map(() => { ... });
                                                                                   type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -1584,7 +1517,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                             }
                                                                           }
                                                                         }
-                                                                        type.startIndex = startIndex + num;
+                                                                        type.startIndex = closure_1_1 + num;
                                                                         let content1 = type.content;
                                                                         content2 = content1;
                                                                         startIndex = type.startIndex + 1;
@@ -1596,7 +1529,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                     }
                                                                   }
                                                                 }
-                                                                type.startIndex = startIndex + num;
+                                                                type.startIndex = closure_1_1 + num;
                                                                 content2 = type.content;
                                                                 startIndex = type.startIndex + 2;
                                                                 c2 = 0;
@@ -1611,17 +1544,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         }
                                                       }
                                                     }
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     let content1 = type.content;
                                                     content2 = content1;
                                                     startIndex = type.startIndex + 1;
                                                     c2 = 0;
                                                     let mapped1 = content1.map((type) => {
                                                       let num = 0;
-                                                      if (0 !== c2) {
-                                                        num = content2[tmp - 1].endIndex;
+                                                      if (0 !== closure_1_2) {
+                                                        num = closure_1_0[tmp - 1].endIndex;
                                                       }
-                                                      c2 = c2 + 1;
+                                                      closure_1_2 = closure_1_2 + 1;
                                                       type = type.type;
                                                       if ("spoiler" !== type) {
                                                         if ("u" !== type) {
@@ -1632,14 +1565,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   if ("emoji" !== type) {
                                                                     if ("inlineCode" !== type) {
                                                                       if ("text" === type) {
-                                                                        type.startIndex = startIndex + num;
+                                                                        type.startIndex = closure_1_1 + num;
                                                                         type.endIndex = type.startIndex + type.content.length;
                                                                         return type;
                                                                       } else {
-                                                                        type.startIndex = startIndex + num;
+                                                                        type.startIndex = closure_1_1 + num;
                                                                         let content = type.content;
                                                                         content2 = content;
-                                                                        startIndex = type.startIndex;
+                                                                        let startIndex = type.startIndex;
                                                                         c2 = 0;
                                                                         let mapped = content.map(() => { ... });
                                                                         type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -1649,7 +1582,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   }
                                                                 }
                                                               }
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               let content1 = type.content;
                                                               content2 = content1;
                                                               startIndex = type.startIndex + 1;
@@ -1661,7 +1594,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           }
                                                         }
                                                       }
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       content2 = type.content;
                                                       startIndex = type.startIndex + 2;
                                                       c2 = 0;
@@ -1675,16 +1608,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             content2 = type.content;
                                             startIndex = type.startIndex + 2;
                                             c2 = 0;
                                             let mapped2 = content2.map((type) => {
                                               let num = 0;
-                                              if (0 !== c2) {
-                                                num = content2[tmp - 1].endIndex;
+                                              if (0 !== closure_1_2) {
+                                                num = closure_1_0[tmp - 1].endIndex;
                                               }
-                                              c2 = c2 + 1;
+                                              closure_1_2 = closure_1_2 + 1;
                                               type = type.type;
                                               if ("spoiler" !== type) {
                                                 if ("u" !== type) {
@@ -1695,14 +1628,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           if ("emoji" !== type) {
                                                             if ("inlineCode" !== type) {
                                                               if ("text" === type) {
-                                                                type.startIndex = startIndex + num;
+                                                                type.startIndex = closure_1_1 + num;
                                                                 type.endIndex = type.startIndex + type.content.length;
                                                                 return type;
                                                               } else {
-                                                                type.startIndex = startIndex + num;
+                                                                type.startIndex = closure_1_1 + num;
                                                                 let content = type.content;
                                                                 content2 = content;
-                                                                startIndex = type.startIndex;
+                                                                let startIndex = type.startIndex;
                                                                 c2 = 0;
                                                                 let mapped = content.map(() => { ... });
                                                                 type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -1712,7 +1645,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           }
                                                         }
                                                       }
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content1 = type.content;
                                                       content2 = content1;
                                                       startIndex = type.startIndex + 1;
@@ -1724,7 +1657,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                   }
                                                 }
                                               }
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               content2 = type.content;
                                               startIndex = type.startIndex + 2;
                                               c2 = 0;
@@ -1742,17 +1675,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                     }
                                   }
                                 }
-                                type.startIndex = startIndex + num;
+                                type.startIndex = closure_1_1 + num;
                                 let content1 = type.content;
                                 content2 = content1;
                                 startIndex = type.startIndex + 1;
                                 c2 = 0;
                                 let mapped1 = content1.map((type) => {
                                   let num = 0;
-                                  if (0 !== c2) {
-                                    num = content2[tmp - 1].endIndex;
+                                  if (0 !== closure_1_2) {
+                                    num = closure_1_0[tmp - 1].endIndex;
                                   }
-                                  c2 = c2 + 1;
+                                  closure_1_2 = closure_1_2 + 1;
                                   type = type.type;
                                   if ("spoiler" !== type) {
                                     if ("u" !== type) {
@@ -1763,21 +1696,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               if ("emoji" !== type) {
                                                 if ("inlineCode" !== type) {
                                                   if ("text" === type) {
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     type.endIndex = type.startIndex + type.content.length;
                                                     return type;
                                                   } else {
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     let content = type.content;
                                                     content2 = content;
-                                                    startIndex = type.startIndex;
+                                                    let startIndex = type.startIndex;
                                                     c2 = 0;
                                                     let mapped = content.map((type) => {
                                                       let num = 0;
-                                                      if (0 !== c2) {
-                                                        num = content2[tmp - 1].endIndex;
+                                                      if (0 !== closure_1_2) {
+                                                        num = closure_1_0[tmp - 1].endIndex;
                                                       }
-                                                      c2 = c2 + 1;
+                                                      closure_1_2 = closure_1_2 + 1;
                                                       type = type.type;
                                                       if ("spoiler" !== type) {
                                                         if ("u" !== type) {
@@ -1788,14 +1721,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   if ("emoji" !== type) {
                                                                     if ("inlineCode" !== type) {
                                                                       if ("text" === type) {
-                                                                        type.startIndex = startIndex + num;
+                                                                        type.startIndex = closure_1_1 + num;
                                                                         type.endIndex = type.startIndex + type.content.length;
                                                                         return type;
                                                                       } else {
-                                                                        type.startIndex = startIndex + num;
+                                                                        type.startIndex = closure_1_1 + num;
                                                                         let content = type.content;
                                                                         content2 = content;
-                                                                        startIndex = type.startIndex;
+                                                                        let startIndex = type.startIndex;
                                                                         c2 = 0;
                                                                         let mapped = content.map(() => { ... });
                                                                         type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -1805,7 +1738,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   }
                                                                 }
                                                               }
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               let content1 = type.content;
                                                               content2 = content1;
                                                               startIndex = type.startIndex + 1;
@@ -1817,7 +1750,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           }
                                                         }
                                                       }
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       content2 = type.content;
                                                       startIndex = type.startIndex + 2;
                                                       c2 = 0;
@@ -1832,17 +1765,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               }
                                             }
                                           }
-                                          type.startIndex = startIndex + num;
+                                          type.startIndex = closure_1_1 + num;
                                           let content1 = type.content;
                                           content2 = content1;
                                           startIndex = type.startIndex + 1;
                                           c2 = 0;
                                           let mapped1 = content1.map((type) => {
                                             let num = 0;
-                                            if (0 !== c2) {
-                                              num = content2[tmp - 1].endIndex;
+                                            if (0 !== closure_1_2) {
+                                              num = closure_1_0[tmp - 1].endIndex;
                                             }
-                                            c2 = c2 + 1;
+                                            closure_1_2 = closure_1_2 + 1;
                                             type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
@@ -1853,14 +1786,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               type.endIndex = type.startIndex + type.content.length;
                                                               return type;
                                                             } else {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               let content = type.content;
                                                               content2 = content;
-                                                              startIndex = type.startIndex;
+                                                              let startIndex = type.startIndex;
                                                               c2 = 0;
                                                               let mapped = content.map(() => { ... });
                                                               type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -1870,7 +1803,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         }
                                                       }
                                                     }
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     let content1 = type.content;
                                                     content2 = content1;
                                                     startIndex = type.startIndex + 1;
@@ -1882,7 +1815,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             content2 = type.content;
                                             startIndex = type.startIndex + 2;
                                             c2 = 0;
@@ -1896,16 +1829,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   content2 = type.content;
                                   startIndex = type.startIndex + 2;
                                   c2 = 0;
                                   let mapped2 = content2.map((type) => {
                                     let num = 0;
-                                    if (0 !== c2) {
-                                      num = content2[tmp - 1].endIndex;
+                                    if (0 !== closure_1_2) {
+                                      num = closure_1_0[tmp - 1].endIndex;
                                     }
-                                    c2 = c2 + 1;
+                                    closure_1_2 = closure_1_2 + 1;
                                     type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
@@ -1916,14 +1849,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       type.endIndex = type.startIndex + type.content.length;
                                                       return type;
                                                     } else {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content = type.content;
                                                       content2 = content;
-                                                      startIndex = type.startIndex;
+                                                      let startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
                                                       type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -1933,7 +1866,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content1 = type.content;
                                             content2 = content1;
                                             startIndex = type.startIndex + 1;
@@ -1945,7 +1878,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     content2 = type.content;
                                     startIndex = type.startIndex + 2;
                                     c2 = 0;
@@ -1962,16 +1895,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             }
                           }
                         }
-                        type.startIndex = startIndex + num;
+                        type.startIndex = closure_1_1 + num;
                         content2 = type.content;
                         startIndex = type.startIndex + 2;
                         c2 = 0;
                         let mapped2 = content2.map((type) => {
                           let num = 0;
-                          if (0 !== c2) {
-                            num = content2[tmp - 1].endIndex;
+                          if (0 !== closure_1_2) {
+                            num = closure_1_0[tmp - 1].endIndex;
                           }
-                          c2 = c2 + 1;
+                          closure_1_2 = closure_1_2 + 1;
                           type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
@@ -1982,21 +1915,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             type.endIndex = type.startIndex + type.content.length;
                                             return type;
                                           } else {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content = type.content;
                                             content2 = content;
-                                            startIndex = type.startIndex;
+                                            let startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map((type) => {
                                               let num = 0;
-                                              if (0 !== c2) {
-                                                num = content2[tmp - 1].endIndex;
+                                              if (0 !== closure_1_2) {
+                                                num = closure_1_0[tmp - 1].endIndex;
                                               }
-                                              c2 = c2 + 1;
+                                              closure_1_2 = closure_1_2 + 1;
                                               type = type.type;
                                               if ("spoiler" !== type) {
                                                 if ("u" !== type) {
@@ -2007,14 +1940,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           if ("emoji" !== type) {
                                                             if ("inlineCode" !== type) {
                                                               if ("text" === type) {
-                                                                type.startIndex = startIndex + num;
+                                                                type.startIndex = closure_1_1 + num;
                                                                 type.endIndex = type.startIndex + type.content.length;
                                                                 return type;
                                                               } else {
-                                                                type.startIndex = startIndex + num;
+                                                                type.startIndex = closure_1_1 + num;
                                                                 let content = type.content;
                                                                 content2 = content;
-                                                                startIndex = type.startIndex;
+                                                                let startIndex = type.startIndex;
                                                                 c2 = 0;
                                                                 let mapped = content.map(() => { ... });
                                                                 type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2024,7 +1957,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           }
                                                         }
                                                       }
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content1 = type.content;
                                                       content2 = content1;
                                                       startIndex = type.startIndex + 1;
@@ -2036,7 +1969,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                   }
                                                 }
                                               }
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               content2 = type.content;
                                               startIndex = type.startIndex + 2;
                                               c2 = 0;
@@ -2051,17 +1984,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   let content1 = type.content;
                                   content2 = content1;
                                   startIndex = type.startIndex + 1;
                                   c2 = 0;
                                   let mapped1 = content1.map((type) => {
                                     let num = 0;
-                                    if (0 !== c2) {
-                                      num = content2[tmp - 1].endIndex;
+                                    if (0 !== closure_1_2) {
+                                      num = closure_1_0[tmp - 1].endIndex;
                                     }
-                                    c2 = c2 + 1;
+                                    closure_1_2 = closure_1_2 + 1;
                                     type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
@@ -2072,14 +2005,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       type.endIndex = type.startIndex + type.content.length;
                                                       return type;
                                                     } else {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content = type.content;
                                                       content2 = content;
-                                                      startIndex = type.startIndex;
+                                                      let startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
                                                       type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2089,7 +2022,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content1 = type.content;
                                             content2 = content1;
                                             startIndex = type.startIndex + 1;
@@ -2101,7 +2034,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     content2 = type.content;
                                     startIndex = type.startIndex + 2;
                                     c2 = 0;
@@ -2115,16 +2048,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           content2 = type.content;
                           startIndex = type.startIndex + 2;
                           c2 = 0;
                           let mapped2 = content2.map((type) => {
                             let num = 0;
-                            if (0 !== c2) {
-                              num = content2[tmp - 1].endIndex;
+                            if (0 !== closure_1_2) {
+                              num = closure_1_0[tmp - 1].endIndex;
                             }
-                            c2 = c2 + 1;
+                            closure_1_2 = closure_1_2 + 1;
                             type = type.type;
                             if ("spoiler" !== type) {
                               if ("u" !== type) {
@@ -2135,14 +2068,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         if ("emoji" !== type) {
                                           if ("inlineCode" !== type) {
                                             if ("text" === type) {
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               type.endIndex = type.startIndex + type.content.length;
                                               return type;
                                             } else {
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               let content = type.content;
                                               content2 = content;
-                                              startIndex = type.startIndex;
+                                              let startIndex = type.startIndex;
                                               c2 = 0;
                                               let mapped = content.map(() => { ... });
                                               type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2152,7 +2085,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     let content1 = type.content;
                                     content2 = content1;
                                     startIndex = type.startIndex + 1;
@@ -2164,7 +2097,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                 }
                               }
                             }
-                            type.startIndex = startIndex + num;
+                            type.startIndex = closure_1_1 + num;
                             content2 = type.content;
                             startIndex = type.startIndex + 2;
                             c2 = 0;
@@ -2185,17 +2118,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                 }
               }
             }
-            type.startIndex = startIndex + num;
+            type.startIndex = closure_1_1 + num;
             let content1 = type.content;
             content2 = content1;
             startIndex = type.startIndex + 1;
             c2 = 0;
             let mapped1 = content1.map((type) => {
               let num = 0;
-              if (0 !== c2) {
-                num = content2[tmp - 1].endIndex;
+              if (0 !== closure_1_2) {
+                num = closure_1_0[tmp - 1].endIndex;
               }
-              c2 = c2 + 1;
+              closure_1_2 = closure_1_2 + 1;
               type = type.type;
               if ("spoiler" !== type) {
                 if ("u" !== type) {
@@ -2206,21 +2139,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                           if ("emoji" !== type) {
                             if ("inlineCode" !== type) {
                               if ("text" === type) {
-                                type.startIndex = startIndex + num;
+                                type.startIndex = closure_1_1 + num;
                                 type.endIndex = type.startIndex + type.content.length;
                                 return type;
                               } else {
-                                type.startIndex = startIndex + num;
+                                type.startIndex = closure_1_1 + num;
                                 let content = type.content;
                                 content2 = content;
-                                startIndex = type.startIndex;
+                                let startIndex = type.startIndex;
                                 c2 = 0;
                                 let mapped = content.map((type) => {
                                   let num = 0;
-                                  if (0 !== c2) {
-                                    num = content2[tmp - 1].endIndex;
+                                  if (0 !== closure_1_2) {
+                                    num = closure_1_0[tmp - 1].endIndex;
                                   }
-                                  c2 = c2 + 1;
+                                  closure_1_2 = closure_1_2 + 1;
                                   type = type.type;
                                   if ("spoiler" !== type) {
                                     if ("u" !== type) {
@@ -2231,21 +2164,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               if ("emoji" !== type) {
                                                 if ("inlineCode" !== type) {
                                                   if ("text" === type) {
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     type.endIndex = type.startIndex + type.content.length;
                                                     return type;
                                                   } else {
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     let content = type.content;
                                                     content2 = content;
-                                                    startIndex = type.startIndex;
+                                                    let startIndex = type.startIndex;
                                                     c2 = 0;
                                                     let mapped = content.map((type) => {
                                                       let num = 0;
-                                                      if (0 !== c2) {
-                                                        num = content2[tmp - 1].endIndex;
+                                                      if (0 !== closure_1_2) {
+                                                        num = closure_1_0[tmp - 1].endIndex;
                                                       }
-                                                      c2 = c2 + 1;
+                                                      closure_1_2 = closure_1_2 + 1;
                                                       type = type.type;
                                                       if ("spoiler" !== type) {
                                                         if ("u" !== type) {
@@ -2256,14 +2189,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   if ("emoji" !== type) {
                                                                     if ("inlineCode" !== type) {
                                                                       if ("text" === type) {
-                                                                        type.startIndex = startIndex + num;
+                                                                        type.startIndex = closure_1_1 + num;
                                                                         type.endIndex = type.startIndex + type.content.length;
                                                                         return type;
                                                                       } else {
-                                                                        type.startIndex = startIndex + num;
+                                                                        type.startIndex = closure_1_1 + num;
                                                                         let content = type.content;
                                                                         content2 = content;
-                                                                        startIndex = type.startIndex;
+                                                                        let startIndex = type.startIndex;
                                                                         c2 = 0;
                                                                         let mapped = content.map(() => { ... });
                                                                         type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2273,7 +2206,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                                   }
                                                                 }
                                                               }
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               let content1 = type.content;
                                                               content2 = content1;
                                                               startIndex = type.startIndex + 1;
@@ -2285,7 +2218,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           }
                                                         }
                                                       }
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       content2 = type.content;
                                                       startIndex = type.startIndex + 2;
                                                       c2 = 0;
@@ -2300,17 +2233,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               }
                                             }
                                           }
-                                          type.startIndex = startIndex + num;
+                                          type.startIndex = closure_1_1 + num;
                                           let content1 = type.content;
                                           content2 = content1;
                                           startIndex = type.startIndex + 1;
                                           c2 = 0;
                                           let mapped1 = content1.map((type) => {
                                             let num = 0;
-                                            if (0 !== c2) {
-                                              num = content2[tmp - 1].endIndex;
+                                            if (0 !== closure_1_2) {
+                                              num = closure_1_0[tmp - 1].endIndex;
                                             }
-                                            c2 = c2 + 1;
+                                            closure_1_2 = closure_1_2 + 1;
                                             type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
@@ -2321,14 +2254,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               type.endIndex = type.startIndex + type.content.length;
                                                               return type;
                                                             } else {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               let content = type.content;
                                                               content2 = content;
-                                                              startIndex = type.startIndex;
+                                                              let startIndex = type.startIndex;
                                                               c2 = 0;
                                                               let mapped = content.map(() => { ... });
                                                               type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2338,7 +2271,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         }
                                                       }
                                                     }
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     let content1 = type.content;
                                                     content2 = content1;
                                                     startIndex = type.startIndex + 1;
@@ -2350,7 +2283,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             content2 = type.content;
                                             startIndex = type.startIndex + 2;
                                             c2 = 0;
@@ -2364,16 +2297,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   content2 = type.content;
                                   startIndex = type.startIndex + 2;
                                   c2 = 0;
                                   let mapped2 = content2.map((type) => {
                                     let num = 0;
-                                    if (0 !== c2) {
-                                      num = content2[tmp - 1].endIndex;
+                                    if (0 !== closure_1_2) {
+                                      num = closure_1_0[tmp - 1].endIndex;
                                     }
-                                    c2 = c2 + 1;
+                                    closure_1_2 = closure_1_2 + 1;
                                     type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
@@ -2384,14 +2317,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       type.endIndex = type.startIndex + type.content.length;
                                                       return type;
                                                     } else {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content = type.content;
                                                       content2 = content;
-                                                      startIndex = type.startIndex;
+                                                      let startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
                                                       type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2401,7 +2334,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content1 = type.content;
                                             content2 = content1;
                                             startIndex = type.startIndex + 1;
@@ -2413,7 +2346,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     content2 = type.content;
                                     startIndex = type.startIndex + 2;
                                     c2 = 0;
@@ -2431,17 +2364,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                           }
                         }
                       }
-                      type.startIndex = startIndex + num;
+                      type.startIndex = closure_1_1 + num;
                       let content1 = type.content;
                       content2 = content1;
                       startIndex = type.startIndex + 1;
                       c2 = 0;
                       let mapped1 = content1.map((type) => {
                         let num = 0;
-                        if (0 !== c2) {
-                          num = content2[tmp - 1].endIndex;
+                        if (0 !== closure_1_2) {
+                          num = closure_1_0[tmp - 1].endIndex;
                         }
-                        c2 = c2 + 1;
+                        closure_1_2 = closure_1_2 + 1;
                         type = type.type;
                         if ("spoiler" !== type) {
                           if ("u" !== type) {
@@ -2452,21 +2385,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                     if ("emoji" !== type) {
                                       if ("inlineCode" !== type) {
                                         if ("text" === type) {
-                                          type.startIndex = startIndex + num;
+                                          type.startIndex = closure_1_1 + num;
                                           type.endIndex = type.startIndex + type.content.length;
                                           return type;
                                         } else {
-                                          type.startIndex = startIndex + num;
+                                          type.startIndex = closure_1_1 + num;
                                           let content = type.content;
                                           content2 = content;
-                                          startIndex = type.startIndex;
+                                          let startIndex = type.startIndex;
                                           c2 = 0;
                                           let mapped = content.map((type) => {
                                             let num = 0;
-                                            if (0 !== c2) {
-                                              num = content2[tmp - 1].endIndex;
+                                            if (0 !== closure_1_2) {
+                                              num = closure_1_0[tmp - 1].endIndex;
                                             }
-                                            c2 = c2 + 1;
+                                            closure_1_2 = closure_1_2 + 1;
                                             type = type.type;
                                             if ("spoiler" !== type) {
                                               if ("u" !== type) {
@@ -2477,14 +2410,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         if ("emoji" !== type) {
                                                           if ("inlineCode" !== type) {
                                                             if ("text" === type) {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               type.endIndex = type.startIndex + type.content.length;
                                                               return type;
                                                             } else {
-                                                              type.startIndex = startIndex + num;
+                                                              type.startIndex = closure_1_1 + num;
                                                               let content = type.content;
                                                               content2 = content;
-                                                              startIndex = type.startIndex;
+                                                              let startIndex = type.startIndex;
                                                               c2 = 0;
                                                               let mapped = content.map(() => { ... });
                                                               type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2494,7 +2427,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                         }
                                                       }
                                                     }
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     let content1 = type.content;
                                                     content2 = content1;
                                                     startIndex = type.startIndex + 1;
@@ -2506,7 +2439,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             content2 = type.content;
                                             startIndex = type.startIndex + 2;
                                             c2 = 0;
@@ -2521,17 +2454,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                     }
                                   }
                                 }
-                                type.startIndex = startIndex + num;
+                                type.startIndex = closure_1_1 + num;
                                 let content1 = type.content;
                                 content2 = content1;
                                 startIndex = type.startIndex + 1;
                                 c2 = 0;
                                 let mapped1 = content1.map((type) => {
                                   let num = 0;
-                                  if (0 !== c2) {
-                                    num = content2[tmp - 1].endIndex;
+                                  if (0 !== closure_1_2) {
+                                    num = closure_1_0[tmp - 1].endIndex;
                                   }
-                                  c2 = c2 + 1;
+                                  closure_1_2 = closure_1_2 + 1;
                                   type = type.type;
                                   if ("spoiler" !== type) {
                                     if ("u" !== type) {
@@ -2542,14 +2475,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               if ("emoji" !== type) {
                                                 if ("inlineCode" !== type) {
                                                   if ("text" === type) {
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     type.endIndex = type.startIndex + type.content.length;
                                                     return type;
                                                   } else {
-                                                    type.startIndex = startIndex + num;
+                                                    type.startIndex = closure_1_1 + num;
                                                     let content = type.content;
                                                     content2 = content;
-                                                    startIndex = type.startIndex;
+                                                    let startIndex = type.startIndex;
                                                     c2 = 0;
                                                     let mapped = content.map(() => { ... });
                                                     type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2559,7 +2492,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                               }
                                             }
                                           }
-                                          type.startIndex = startIndex + num;
+                                          type.startIndex = closure_1_1 + num;
                                           let content1 = type.content;
                                           content2 = content1;
                                           startIndex = type.startIndex + 1;
@@ -2571,7 +2504,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   content2 = type.content;
                                   startIndex = type.startIndex + 2;
                                   c2 = 0;
@@ -2585,16 +2518,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             }
                           }
                         }
-                        type.startIndex = startIndex + num;
+                        type.startIndex = closure_1_1 + num;
                         content2 = type.content;
                         startIndex = type.startIndex + 2;
                         c2 = 0;
                         let mapped2 = content2.map((type) => {
                           let num = 0;
-                          if (0 !== c2) {
-                            num = content2[tmp - 1].endIndex;
+                          if (0 !== closure_1_2) {
+                            num = closure_1_0[tmp - 1].endIndex;
                           }
-                          c2 = c2 + 1;
+                          closure_1_2 = closure_1_2 + 1;
                           type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
@@ -2605,14 +2538,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             type.endIndex = type.startIndex + type.content.length;
                                             return type;
                                           } else {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content = type.content;
                                             content2 = content;
-                                            startIndex = type.startIndex;
+                                            let startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map(() => { ... });
                                             type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2622,7 +2555,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   let content1 = type.content;
                                   content2 = content1;
                                   startIndex = type.startIndex + 1;
@@ -2634,7 +2567,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           content2 = type.content;
                           startIndex = type.startIndex + 2;
                           c2 = 0;
@@ -2651,16 +2584,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                   }
                 }
               }
-              type.startIndex = startIndex + num;
+              type.startIndex = closure_1_1 + num;
               content2 = type.content;
               startIndex = type.startIndex + 2;
               c2 = 0;
               let mapped2 = content2.map((type) => {
                 let num = 0;
-                if (0 !== c2) {
-                  num = content2[tmp - 1].endIndex;
+                if (0 !== closure_1_2) {
+                  num = closure_1_0[tmp - 1].endIndex;
                 }
-                c2 = c2 + 1;
+                closure_1_2 = closure_1_2 + 1;
                 type = type.type;
                 if ("spoiler" !== type) {
                   if ("u" !== type) {
@@ -2671,21 +2604,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             if ("emoji" !== type) {
                               if ("inlineCode" !== type) {
                                 if ("text" === type) {
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   type.endIndex = type.startIndex + type.content.length;
                                   return type;
                                 } else {
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   let content = type.content;
                                   content2 = content;
-                                  startIndex = type.startIndex;
+                                  let startIndex = type.startIndex;
                                   c2 = 0;
                                   let mapped = content.map((type) => {
                                     let num = 0;
-                                    if (0 !== c2) {
-                                      num = content2[tmp - 1].endIndex;
+                                    if (0 !== closure_1_2) {
+                                      num = closure_1_0[tmp - 1].endIndex;
                                     }
-                                    c2 = c2 + 1;
+                                    closure_1_2 = closure_1_2 + 1;
                                     type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
@@ -2696,14 +2629,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       type.endIndex = type.startIndex + type.content.length;
                                                       return type;
                                                     } else {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content = type.content;
                                                       content2 = content;
-                                                      startIndex = type.startIndex;
+                                                      let startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
                                                       type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2713,7 +2646,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content1 = type.content;
                                             content2 = content1;
                                             startIndex = type.startIndex + 1;
@@ -2725,7 +2658,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     content2 = type.content;
                                     startIndex = type.startIndex + 2;
                                     c2 = 0;
@@ -2740,17 +2673,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             }
                           }
                         }
-                        type.startIndex = startIndex + num;
+                        type.startIndex = closure_1_1 + num;
                         let content1 = type.content;
                         content2 = content1;
                         startIndex = type.startIndex + 1;
                         c2 = 0;
                         let mapped1 = content1.map((type) => {
                           let num = 0;
-                          if (0 !== c2) {
-                            num = content2[tmp - 1].endIndex;
+                          if (0 !== closure_1_2) {
+                            num = closure_1_0[tmp - 1].endIndex;
                           }
-                          c2 = c2 + 1;
+                          closure_1_2 = closure_1_2 + 1;
                           type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
@@ -2761,14 +2694,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             type.endIndex = type.startIndex + type.content.length;
                                             return type;
                                           } else {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content = type.content;
                                             content2 = content;
-                                            startIndex = type.startIndex;
+                                            let startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map(() => { ... });
                                             type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2778,7 +2711,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   let content1 = type.content;
                                   content2 = content1;
                                   startIndex = type.startIndex + 1;
@@ -2790,7 +2723,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           content2 = type.content;
                           startIndex = type.startIndex + 2;
                           c2 = 0;
@@ -2804,16 +2737,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                     }
                   }
                 }
-                type.startIndex = startIndex + num;
+                type.startIndex = closure_1_1 + num;
                 content2 = type.content;
                 startIndex = type.startIndex + 2;
                 c2 = 0;
                 let mapped2 = content2.map((type) => {
                   let num = 0;
-                  if (0 !== c2) {
-                    num = content2[tmp - 1].endIndex;
+                  if (0 !== closure_1_2) {
+                    num = closure_1_0[tmp - 1].endIndex;
                   }
-                  c2 = c2 + 1;
+                  closure_1_2 = closure_1_2 + 1;
                   type = type.type;
                   if ("spoiler" !== type) {
                     if ("u" !== type) {
@@ -2824,14 +2757,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               if ("emoji" !== type) {
                                 if ("inlineCode" !== type) {
                                   if ("text" === type) {
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     type.endIndex = type.startIndex + type.content.length;
                                     return type;
                                   } else {
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     let content = type.content;
                                     content2 = content;
-                                    startIndex = type.startIndex;
+                                    let startIndex = type.startIndex;
                                     c2 = 0;
                                     let mapped = content.map(() => { ... });
                                     type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2841,7 +2774,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           let content1 = type.content;
                           content2 = content1;
                           startIndex = type.startIndex + 1;
@@ -2853,7 +2786,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                       }
                     }
                   }
-                  type.startIndex = startIndex + num;
+                  type.startIndex = closure_1_1 + num;
                   content2 = type.content;
                   startIndex = type.startIndex + 2;
                   c2 = 0;
@@ -2873,16 +2806,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
         }
       }
     }
-    type.startIndex = startIndex + num;
+    type.startIndex = closure_1_1 + num;
     content2 = type.content;
     startIndex = type.startIndex + 2;
     c2 = 0;
     let mapped2 = content2.map((type) => {
       let num = 0;
-      if (0 !== c2) {
-        num = content2[tmp - 1].endIndex;
+      if (0 !== closure_1_2) {
+        num = closure_1_0[tmp - 1].endIndex;
       }
-      c2 = c2 + 1;
+      closure_1_2 = closure_1_2 + 1;
       type = type.type;
       if ("spoiler" !== type) {
         if ("u" !== type) {
@@ -2893,21 +2826,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                   if ("emoji" !== type) {
                     if ("inlineCode" !== type) {
                       if ("text" === type) {
-                        type.startIndex = startIndex + num;
+                        type.startIndex = closure_1_1 + num;
                         type.endIndex = type.startIndex + type.content.length;
                         return type;
                       } else {
-                        type.startIndex = startIndex + num;
+                        type.startIndex = closure_1_1 + num;
                         let content = type.content;
                         content2 = content;
-                        startIndex = type.startIndex;
+                        let startIndex = type.startIndex;
                         c2 = 0;
                         let mapped = content.map((type) => {
                           let num = 0;
-                          if (0 !== c2) {
-                            num = content2[tmp - 1].endIndex;
+                          if (0 !== closure_1_2) {
+                            num = closure_1_0[tmp - 1].endIndex;
                           }
-                          c2 = c2 + 1;
+                          closure_1_2 = closure_1_2 + 1;
                           type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
@@ -2918,21 +2851,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             type.endIndex = type.startIndex + type.content.length;
                                             return type;
                                           } else {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content = type.content;
                                             content2 = content;
-                                            startIndex = type.startIndex;
+                                            let startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map((type) => {
                                               let num = 0;
-                                              if (0 !== c2) {
-                                                num = content2[tmp - 1].endIndex;
+                                              if (0 !== closure_1_2) {
+                                                num = closure_1_0[tmp - 1].endIndex;
                                               }
-                                              c2 = c2 + 1;
+                                              closure_1_2 = closure_1_2 + 1;
                                               type = type.type;
                                               if ("spoiler" !== type) {
                                                 if ("u" !== type) {
@@ -2943,14 +2876,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           if ("emoji" !== type) {
                                                             if ("inlineCode" !== type) {
                                                               if ("text" === type) {
-                                                                type.startIndex = startIndex + num;
+                                                                type.startIndex = closure_1_1 + num;
                                                                 type.endIndex = type.startIndex + type.content.length;
                                                                 return type;
                                                               } else {
-                                                                type.startIndex = startIndex + num;
+                                                                type.startIndex = closure_1_1 + num;
                                                                 let content = type.content;
                                                                 content2 = content;
-                                                                startIndex = type.startIndex;
+                                                                let startIndex = type.startIndex;
                                                                 c2 = 0;
                                                                 let mapped = content.map(() => { ... });
                                                                 type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -2960,7 +2893,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                           }
                                                         }
                                                       }
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content1 = type.content;
                                                       content2 = content1;
                                                       startIndex = type.startIndex + 1;
@@ -2972,7 +2905,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                   }
                                                 }
                                               }
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               content2 = type.content;
                                               startIndex = type.startIndex + 2;
                                               c2 = 0;
@@ -2987,17 +2920,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   let content1 = type.content;
                                   content2 = content1;
                                   startIndex = type.startIndex + 1;
                                   c2 = 0;
                                   let mapped1 = content1.map((type) => {
                                     let num = 0;
-                                    if (0 !== c2) {
-                                      num = content2[tmp - 1].endIndex;
+                                    if (0 !== closure_1_2) {
+                                      num = closure_1_0[tmp - 1].endIndex;
                                     }
-                                    c2 = c2 + 1;
+                                    closure_1_2 = closure_1_2 + 1;
                                     type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
@@ -3008,14 +2941,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       type.endIndex = type.startIndex + type.content.length;
                                                       return type;
                                                     } else {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content = type.content;
                                                       content2 = content;
-                                                      startIndex = type.startIndex;
+                                                      let startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
                                                       type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3025,7 +2958,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content1 = type.content;
                                             content2 = content1;
                                             startIndex = type.startIndex + 1;
@@ -3037,7 +2970,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     content2 = type.content;
                                     startIndex = type.startIndex + 2;
                                     c2 = 0;
@@ -3051,16 +2984,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           content2 = type.content;
                           startIndex = type.startIndex + 2;
                           c2 = 0;
                           let mapped2 = content2.map((type) => {
                             let num = 0;
-                            if (0 !== c2) {
-                              num = content2[tmp - 1].endIndex;
+                            if (0 !== closure_1_2) {
+                              num = closure_1_0[tmp - 1].endIndex;
                             }
-                            c2 = c2 + 1;
+                            closure_1_2 = closure_1_2 + 1;
                             type = type.type;
                             if ("spoiler" !== type) {
                               if ("u" !== type) {
@@ -3071,14 +3004,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         if ("emoji" !== type) {
                                           if ("inlineCode" !== type) {
                                             if ("text" === type) {
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               type.endIndex = type.startIndex + type.content.length;
                                               return type;
                                             } else {
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               let content = type.content;
                                               content2 = content;
-                                              startIndex = type.startIndex;
+                                              let startIndex = type.startIndex;
                                               c2 = 0;
                                               let mapped = content.map(() => { ... });
                                               type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3088,7 +3021,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     let content1 = type.content;
                                     content2 = content1;
                                     startIndex = type.startIndex + 1;
@@ -3100,7 +3033,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                 }
                               }
                             }
-                            type.startIndex = startIndex + num;
+                            type.startIndex = closure_1_1 + num;
                             content2 = type.content;
                             startIndex = type.startIndex + 2;
                             c2 = 0;
@@ -3118,17 +3051,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                   }
                 }
               }
-              type.startIndex = startIndex + num;
+              type.startIndex = closure_1_1 + num;
               let content1 = type.content;
               content2 = content1;
               startIndex = type.startIndex + 1;
               c2 = 0;
               let mapped1 = content1.map((type) => {
                 let num = 0;
-                if (0 !== c2) {
-                  num = content2[tmp - 1].endIndex;
+                if (0 !== closure_1_2) {
+                  num = closure_1_0[tmp - 1].endIndex;
                 }
-                c2 = c2 + 1;
+                closure_1_2 = closure_1_2 + 1;
                 type = type.type;
                 if ("spoiler" !== type) {
                   if ("u" !== type) {
@@ -3139,21 +3072,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             if ("emoji" !== type) {
                               if ("inlineCode" !== type) {
                                 if ("text" === type) {
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   type.endIndex = type.startIndex + type.content.length;
                                   return type;
                                 } else {
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   let content = type.content;
                                   content2 = content;
-                                  startIndex = type.startIndex;
+                                  let startIndex = type.startIndex;
                                   c2 = 0;
                                   let mapped = content.map((type) => {
                                     let num = 0;
-                                    if (0 !== c2) {
-                                      num = content2[tmp - 1].endIndex;
+                                    if (0 !== closure_1_2) {
+                                      num = closure_1_0[tmp - 1].endIndex;
                                     }
-                                    c2 = c2 + 1;
+                                    closure_1_2 = closure_1_2 + 1;
                                     type = type.type;
                                     if ("spoiler" !== type) {
                                       if ("u" !== type) {
@@ -3164,14 +3097,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 if ("emoji" !== type) {
                                                   if ("inlineCode" !== type) {
                                                     if ("text" === type) {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       type.endIndex = type.startIndex + type.content.length;
                                                       return type;
                                                     } else {
-                                                      type.startIndex = startIndex + num;
+                                                      type.startIndex = closure_1_1 + num;
                                                       let content = type.content;
                                                       content2 = content;
-                                                      startIndex = type.startIndex;
+                                                      let startIndex = type.startIndex;
                                                       c2 = 0;
                                                       let mapped = content.map(() => { ... });
                                                       type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3181,7 +3114,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                                 }
                                               }
                                             }
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content1 = type.content;
                                             content2 = content1;
                                             startIndex = type.startIndex + 1;
@@ -3193,7 +3126,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     content2 = type.content;
                                     startIndex = type.startIndex + 2;
                                     c2 = 0;
@@ -3208,17 +3141,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                             }
                           }
                         }
-                        type.startIndex = startIndex + num;
+                        type.startIndex = closure_1_1 + num;
                         let content1 = type.content;
                         content2 = content1;
                         startIndex = type.startIndex + 1;
                         c2 = 0;
                         let mapped1 = content1.map((type) => {
                           let num = 0;
-                          if (0 !== c2) {
-                            num = content2[tmp - 1].endIndex;
+                          if (0 !== closure_1_2) {
+                            num = closure_1_0[tmp - 1].endIndex;
                           }
-                          c2 = c2 + 1;
+                          closure_1_2 = closure_1_2 + 1;
                           type = type.type;
                           if ("spoiler" !== type) {
                             if ("u" !== type) {
@@ -3229,14 +3162,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       if ("emoji" !== type) {
                                         if ("inlineCode" !== type) {
                                           if ("text" === type) {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             type.endIndex = type.startIndex + type.content.length;
                                             return type;
                                           } else {
-                                            type.startIndex = startIndex + num;
+                                            type.startIndex = closure_1_1 + num;
                                             let content = type.content;
                                             content2 = content;
-                                            startIndex = type.startIndex;
+                                            let startIndex = type.startIndex;
                                             c2 = 0;
                                             let mapped = content.map(() => { ... });
                                             type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3246,7 +3179,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                       }
                                     }
                                   }
-                                  type.startIndex = startIndex + num;
+                                  type.startIndex = closure_1_1 + num;
                                   let content1 = type.content;
                                   content2 = content1;
                                   startIndex = type.startIndex + 1;
@@ -3258,7 +3191,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           content2 = type.content;
                           startIndex = type.startIndex + 2;
                           c2 = 0;
@@ -3272,16 +3205,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
                     }
                   }
                 }
-                type.startIndex = startIndex + num;
+                type.startIndex = closure_1_1 + num;
                 content2 = type.content;
                 startIndex = type.startIndex + 2;
                 c2 = 0;
                 let mapped2 = content2.map((type) => {
                   let num = 0;
-                  if (0 !== c2) {
-                    num = content2[tmp - 1].endIndex;
+                  if (0 !== closure_1_2) {
+                    num = closure_1_0[tmp - 1].endIndex;
                   }
-                  c2 = c2 + 1;
+                  closure_1_2 = closure_1_2 + 1;
                   type = type.type;
                   if ("spoiler" !== type) {
                     if ("u" !== type) {
@@ -3292,14 +3225,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               if ("emoji" !== type) {
                                 if ("inlineCode" !== type) {
                                   if ("text" === type) {
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     type.endIndex = type.startIndex + type.content.length;
                                     return type;
                                   } else {
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     let content = type.content;
                                     content2 = content;
-                                    startIndex = type.startIndex;
+                                    let startIndex = type.startIndex;
                                     c2 = 0;
                                     let mapped = content.map(() => { ... });
                                     type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3309,7 +3242,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           let content1 = type.content;
                           content2 = content1;
                           startIndex = type.startIndex + 1;
@@ -3321,7 +3254,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                       }
                     }
                   }
-                  type.startIndex = startIndex + num;
+                  type.startIndex = closure_1_1 + num;
                   content2 = type.content;
                   startIndex = type.startIndex + 2;
                   c2 = 0;
@@ -3338,16 +3271,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
           }
         }
       }
-      type.startIndex = startIndex + num;
+      type.startIndex = closure_1_1 + num;
       content2 = type.content;
       startIndex = type.startIndex + 2;
       c2 = 0;
       let mapped2 = content2.map((type) => {
         let num = 0;
-        if (0 !== c2) {
-          num = content2[tmp - 1].endIndex;
+        if (0 !== closure_1_2) {
+          num = closure_1_0[tmp - 1].endIndex;
         }
-        c2 = c2 + 1;
+        closure_1_2 = closure_1_2 + 1;
         type = type.type;
         if ("spoiler" !== type) {
           if ("u" !== type) {
@@ -3358,21 +3291,21 @@ export const getIndexedAST = function getIndexedAST(arr) {
                     if ("emoji" !== type) {
                       if ("inlineCode" !== type) {
                         if ("text" === type) {
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           type.endIndex = type.startIndex + type.content.length;
                           return type;
                         } else {
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           let content = type.content;
                           content2 = content;
-                          startIndex = type.startIndex;
+                          let startIndex = type.startIndex;
                           c2 = 0;
                           let mapped = content.map((type) => {
                             let num = 0;
-                            if (0 !== c2) {
-                              num = content2[tmp - 1].endIndex;
+                            if (0 !== closure_1_2) {
+                              num = closure_1_0[tmp - 1].endIndex;
                             }
-                            c2 = c2 + 1;
+                            closure_1_2 = closure_1_2 + 1;
                             type = type.type;
                             if ("spoiler" !== type) {
                               if ("u" !== type) {
@@ -3383,14 +3316,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         if ("emoji" !== type) {
                                           if ("inlineCode" !== type) {
                                             if ("text" === type) {
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               type.endIndex = type.startIndex + type.content.length;
                                               return type;
                                             } else {
-                                              type.startIndex = startIndex + num;
+                                              type.startIndex = closure_1_1 + num;
                                               let content = type.content;
                                               content2 = content;
-                                              startIndex = type.startIndex;
+                                              let startIndex = type.startIndex;
                                               c2 = 0;
                                               let mapped = content.map(() => { ... });
                                               type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3400,7 +3333,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                         }
                                       }
                                     }
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     let content1 = type.content;
                                     content2 = content1;
                                     startIndex = type.startIndex + 1;
@@ -3412,7 +3345,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                                 }
                               }
                             }
-                            type.startIndex = startIndex + num;
+                            type.startIndex = closure_1_1 + num;
                             content2 = type.content;
                             startIndex = type.startIndex + 2;
                             c2 = 0;
@@ -3427,17 +3360,17 @@ export const getIndexedAST = function getIndexedAST(arr) {
                     }
                   }
                 }
-                type.startIndex = startIndex + num;
+                type.startIndex = closure_1_1 + num;
                 let content1 = type.content;
                 content2 = content1;
                 startIndex = type.startIndex + 1;
                 c2 = 0;
                 let mapped1 = content1.map((type) => {
                   let num = 0;
-                  if (0 !== c2) {
-                    num = content2[tmp - 1].endIndex;
+                  if (0 !== closure_1_2) {
+                    num = closure_1_0[tmp - 1].endIndex;
                   }
-                  c2 = c2 + 1;
+                  closure_1_2 = closure_1_2 + 1;
                   type = type.type;
                   if ("spoiler" !== type) {
                     if ("u" !== type) {
@@ -3448,14 +3381,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               if ("emoji" !== type) {
                                 if ("inlineCode" !== type) {
                                   if ("text" === type) {
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     type.endIndex = type.startIndex + type.content.length;
                                     return type;
                                   } else {
-                                    type.startIndex = startIndex + num;
+                                    type.startIndex = closure_1_1 + num;
                                     let content = type.content;
                                     content2 = content;
-                                    startIndex = type.startIndex;
+                                    let startIndex = type.startIndex;
                                     c2 = 0;
                                     let mapped = content.map(() => { ... });
                                     type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3465,7 +3398,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                               }
                             }
                           }
-                          type.startIndex = startIndex + num;
+                          type.startIndex = closure_1_1 + num;
                           let content1 = type.content;
                           content2 = content1;
                           startIndex = type.startIndex + 1;
@@ -3477,7 +3410,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                       }
                     }
                   }
-                  type.startIndex = startIndex + num;
+                  type.startIndex = closure_1_1 + num;
                   content2 = type.content;
                   startIndex = type.startIndex + 2;
                   c2 = 0;
@@ -3491,16 +3424,16 @@ export const getIndexedAST = function getIndexedAST(arr) {
             }
           }
         }
-        type.startIndex = startIndex + num;
+        type.startIndex = closure_1_1 + num;
         content2 = type.content;
         startIndex = type.startIndex + 2;
         c2 = 0;
         let mapped2 = content2.map((type) => {
           let num = 0;
-          if (0 !== c2) {
-            num = content2[tmp - 1].endIndex;
+          if (0 !== closure_1_2) {
+            num = closure_1_0[tmp - 1].endIndex;
           }
-          c2 = c2 + 1;
+          closure_1_2 = closure_1_2 + 1;
           type = type.type;
           if ("spoiler" !== type) {
             if ("u" !== type) {
@@ -3511,14 +3444,14 @@ export const getIndexedAST = function getIndexedAST(arr) {
                       if ("emoji" !== type) {
                         if ("inlineCode" !== type) {
                           if ("text" === type) {
-                            type.startIndex = startIndex + num;
+                            type.startIndex = closure_1_1 + num;
                             type.endIndex = type.startIndex + type.content.length;
                             return type;
                           } else {
-                            type.startIndex = startIndex + num;
+                            type.startIndex = closure_1_1 + num;
                             let content = type.content;
                             content2 = content;
-                            startIndex = type.startIndex;
+                            let startIndex = type.startIndex;
                             c2 = 0;
                             let mapped = content.map(() => { ... });
                             type.endIndex = mapped[mapped.length - 1].endIndex;
@@ -3528,7 +3461,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
                       }
                     }
                   }
-                  type.startIndex = startIndex + num;
+                  type.startIndex = closure_1_1 + num;
                   let content1 = type.content;
                   content2 = content1;
                   startIndex = type.startIndex + 1;
@@ -3540,7 +3473,7 @@ export const getIndexedAST = function getIndexedAST(arr) {
               }
             }
           }
-          type.startIndex = startIndex + num;
+          type.startIndex = closure_1_1 + num;
           content2 = type.content;
           startIndex = type.startIndex + 2;
           c2 = 0;

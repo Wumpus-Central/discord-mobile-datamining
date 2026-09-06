@@ -1,8 +1,8 @@
-// === Module 673: interpolate ===
+// === Module 673: transforms ===
 
-// Module 673 (interpolate)
-import set2 from "set" /* 2 */;
-import nDefault from "n" /* 672 */;
+// Module 673 (transforms)
+import _modDef672 from "module_672" /* 672 */;
+import size from "module_2" /* 2 */;
 
 function interpolate(arg0, arg1, arg2) {
   [tmp, tmp2] = arg0;
@@ -19,14 +19,14 @@ function interpolate(arg0, arg1, arg2) {
     sum = result + (diff - result) / (tmp2 - result) * (tmp4 - result);
   }
 }
-let closure_2 = { BACKGROUND_LIGHTNESS_LIGHT_THEME: "*0.975", BACKGROUND_LIGHTNESS_DARK_THEME: "*1.6", BACKGROUND_SATURATION: "*0.8", TEXT_LIGHTNESS_LIGHT_THEME: "*1.05", TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME: 0.85, [0.85]: "TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME", TEXT_LIGHTNESS_MAX_DARK_THEME: 0.6, [0.6]: "TEXT_LIGHTNESS_MAX_DARK_THEME" };
-let closure_3 = { BORDER_MIN_OPACITY: 0.3, [0.3]: "BORDER_MIN_OPACITY", TEXT_LIGHTNESS_LIGHT_THEME: "*0.6", TEXT_LIGHTNESS_DARK_THEME: "*1.5", TEXT_SATURATION: "*2", BACKGROUND_LIGHTNESS_DARK_THEME: "*0.9" };
+const constants = { BACKGROUND_LIGHTNESS_LIGHT_THEME: "*0.975", BACKGROUND_LIGHTNESS_DARK_THEME: "*1.6", BACKGROUND_SATURATION: "*0.8", TEXT_LIGHTNESS_LIGHT_THEME: "*1.05", TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME: 0.85, [0.85]: "TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME", TEXT_LIGHTNESS_MAX_DARK_THEME: 0.6, [0.6]: "TEXT_LIGHTNESS_MAX_DARK_THEME" };
+const constants2 = { BORDER_MIN_OPACITY: 0.3, [0.3]: "BORDER_MIN_OPACITY", TEXT_LIGHTNESS_LIGHT_THEME: "*0.6", TEXT_LIGHTNESS_DARK_THEME: "*1.5", TEXT_SATURATION: "*2", BACKGROUND_LIGHTNESS_DARK_THEME: "*0.9" };
 let closure_5 = [0, 2];
 let closure_6 = [1.3, 0.7];
 let closure_7 = [0.98, 1];
 let closure_8 = [0.75, 1.5];
 let closure_9 = [1.45, 0.45];
-let result = set2.fileFinishedImporting("../discord_common/js/packages/tokens/transforms.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/tokens/transforms.tsx");
 
 export const transformColorForReducedContrast = function transformColorForReducedContrast(arg0, arg1, arg2) {
   if ("background" !== arg1) {
@@ -38,7 +38,7 @@ export const transformColorForReducedContrast = function transformColorForReduce
           const _Math = Math;
           TEXT_LIGHTNESS_LIGHT_THEME = Math.max(tmp3 * constants.TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME, constants.TEXT_LIGHTNESS_MAX_DARK_THEME);
         }
-        const result = nDefault(arg0).set("hsl.l", TEXT_LIGHTNESS_LIGHT_THEME);
+        const result = _modDef672(arg0).set("hsl.l", TEXT_LIGHTNESS_LIGHT_THEME);
         return result.hex();
       } else {
         return arg0;
@@ -52,7 +52,7 @@ export const transformColorForReducedContrast = function transformColorForReduce
     tmp7 = constants;
     BACKGROUND_LIGHTNESS_LIGHT_THEME = constants.BACKGROUND_LIGHTNESS_LIGHT_THEME;
   }
-  const result1 = nDefault(arg0).set("hsl.l", BACKGROUND_LIGHTNESS_LIGHT_THEME);
+  const result1 = _modDef672(arg0).set("hsl.l", BACKGROUND_LIGHTNESS_LIGHT_THEME);
   const result2 = result1.set("hsl.s", tmp7.BACKGROUND_SATURATION);
   return result2.hex();
 };
@@ -61,7 +61,7 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
     const items = [arg0, constants2.BORDER_MIN_OPACITY + arg1];
     let items3 = items;
   } else if ("text" === arg2) {
-    let set = nDefault(arg0).set;
+    let set = _modDef672(arg0).set;
     if ("light" === arg3) {
       let TEXT_LIGHTNESS_DARK_THEME = constants2.TEXT_LIGHTNESS_LIGHT_THEME;
       let tmp7 = constants2;
@@ -72,14 +72,14 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
     set = set("hsl.l", TEXT_LIGHTNESS_DARK_THEME);
     const result = set.set("hsl.s", tmp7.TEXT_SATURATION);
     const items1 = [result.hex(), arg1];
-    const tmp6 = nDefault(arg0);
+    const tmp6 = _modDef672(arg0);
   } else {
     if ("background" === arg2) {
       if ("light" !== arg3) {
-        const result1 = nDefault(arg0).set("hsl.l", constants2.BACKGROUND_LIGHTNESS_DARK_THEME);
+        const result1 = _modDef672(arg0).set("hsl.l", constants2.BACKGROUND_LIGHTNESS_DARK_THEME);
         const items2 = [result1.hex(), arg1];
         items3 = items2;
-        const obj = nDefault(arg0);
+        const obj = _modDef672(arg0);
       }
     }
     items3 = [arg0, arg1];
@@ -87,7 +87,7 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
   return items3;
 };
 export const transformColorForReducedSaturation = function transformColorForReducedSaturation(result, category, saturation) {
-  const obj = nDefault(result);
+  const obj = _modDef672(result);
   if ("background" === category) {
     [tmp2, tmp3] = [0, 1];
     const items = [0.25, 1];
@@ -106,13 +106,13 @@ export const transformColorContrast = function transformColorContrast(result, ca
     if ("border" !== category) {
       if ("text" === category) {
         const _HermesInternal = HermesInternal;
-        result = nDefault(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_9 : closure_8, contrast));
+        result = _modDef672(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_9 : closure_8, contrast));
         return result.hex();
       } else {
         return result;
       }
     }
   }
-  const result1 = nDefault(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast));
+  const result1 = _modDef672(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast));
   return result1.hex();
 };

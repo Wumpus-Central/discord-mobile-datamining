@@ -1,11 +1,11 @@
-// === Module 14525: ? ===
+// === Module 14525: NativeRPCServer ===
 
-// Module 14525
+// Module 14525 (NativeRPCServer)
 import root from "root" /* 9556 */;
-import registerTransportDefault from "registerTransport" /* 14526 */;
+import RPCServerDefault from "RPCServer" /* 14526 */;
 
-require = arg1;
-const tmp2 = new registerTransportDefault(() => Promise.resolve(root));
-const result = require("set").fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rpc/native/NativeRPCServer.tsx");
 
-export default tmp2;
+export default new RPCServerDefault(() => Promise.resolve(root));

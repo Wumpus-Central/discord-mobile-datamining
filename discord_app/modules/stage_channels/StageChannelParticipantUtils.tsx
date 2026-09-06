@@ -1,12 +1,13 @@
-// === Module 9923: participantMemberInfo ===
+// === Module 9923: StageChannelParticipantUtils ===
 
-// Module 9923 (participantMemberInfo)
-import setDefault from "set" /* 1090 */;
-import nameFromUser from "nameFromUser" /* 4404 */;
+// Module 9923 (StageChannelParticipantUtils)
+import DurationsDefault from "Durations" /* 1090 */;
+import UserUtils from "UserUtils" /* 4404 */;
 
-require = arg1;
-const DAY = setDefault.Millis.DAY;
-const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
+require = fn;
+const DAY = DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
 
 export const participantMemberInfo = function participantMemberInfo(participant) {
   if (obj.isNewUser(participant.user)) {
@@ -50,5 +51,5 @@ export const participantMemberInfo = function participantMemberInfo(participant)
     }
     return stringResult;
   }
-  obj = nameFromUser;
+  obj = UserUtils;
 };

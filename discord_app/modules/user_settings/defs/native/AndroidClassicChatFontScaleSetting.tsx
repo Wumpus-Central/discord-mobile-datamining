@@ -1,53 +1,34 @@
-// === Module 15315: toggle ===
+// === Module 15315: AndroidClassicChatFontScaleSetting ===
 
-// Module 15315 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set2 from "set" /* 1115 */;
-import isIterable from "isIterable" /* 4184 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import DEFAULT_FONT_SCALE_STORE_STATE from "DEFAULT_FONT_SCALE_STORE_STATE" /* 15263 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15315 (AndroidClassicChatFontScaleSetting)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import _mod4184 from "module_4184" /* 4184 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import FontScaleStore from "FontScaleStore" /* 15263 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const useFontScaleStore = DEFAULT_FONT_SCALE_STORE_STATE.useFontScaleStore;
-const toggle = createToggle.createToggle({
+const useFontScaleStore = FontScaleStore.useFontScaleStore;
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.gFob3e);
+    const intl = util.intl;
+    return intl.string(util.t.gFob3e);
   },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
+  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
   useValue: function useClassicChatFontScaleValue() {
-    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, isIterable.shallow);
+    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, _mod4184.shallow);
   },
-  onValueChange: function onClassicChatFontScaleChange(arg0) {
-    const _require = arg0;
-    return _require(1249).batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
+  onValueChange: function onClassicChatFontScaleChange(isClassicChatFontScaleEnabled) {
+    _require = isClassicChatFontScaleEnabled;
+    return require("ReactBatchUpdates").batchUpdates(() => useFontScaleStore.setState({ isClassicChatFontScaleEnabled }));
   },
   useDescription: function useClassicChatFontScaleDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OU3q8a);
+    const intl = util.intl;
+    return intl.string(util.t.OU3q8a);
   },
-  usePredicate: set2.isAndroid
+  usePredicate: PlatformUtils.isAndroid
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.gFob3e);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: function useClassicChatFontScaleValue() {
-    return useFontScaleStore((isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled, isIterable.shallow);
-  },
-  onValueChange: function onClassicChatFontScaleChange(arg0) {
-    const _require = arg0;
-    return _require(1249).batchUpdates(() => closure_1_2.setState({ isClassicChatFontScaleEnabled: closure_0 }));
-  },
-  useDescription: function useClassicChatFontScaleDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OU3q8a);
-  },
-  usePredicate: set2.isAndroid
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidClassicChatFontScaleSetting.tsx");
 
 export default toggle;

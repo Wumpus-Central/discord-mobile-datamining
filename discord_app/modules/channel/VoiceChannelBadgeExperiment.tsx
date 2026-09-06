@@ -1,14 +1,15 @@
-// === Module 13183: experiment ===
+// === Module 13183: VoiceChannelBadgeExperiment ===
 
-// Module 13183 (experiment)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 13183 (VoiceChannelBadgeExperiment)
+import ExperimentConstants from "ExperimentConstants" /* 4477 */;
+import createExperiment from "module_4474" /* 4474 */;
+import size from "module_2" /* 2 */;
 
+const obj = { id: "2026-03_voice_badge", kind: "guild", commonTriggerPoint: ExperimentConstants.CommonTriggerPoints.VOICE_CALL, label: "Display Voice Channel Badge", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 0, label: "Control", config: { enabled: false } }, { id: 1, label: "Show voice badges", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ id: "2026-03_voice_badge", kind: "guild", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, label: "Display Voice Channel Badge", defaultConfig: { enabled: false }, treatments: items });
-const obj = { id: "2026-03_voice_badge", kind: "guild", commonTriggerPoint: ExperimentBuckets.CommonTriggerPoints.VOICE_CALL, label: "Display Voice Channel Badge", defaultConfig: { enabled: false }, treatments: items };
-const result = set.fileFinishedImporting("modules/channel/VoiceChannelBadgeExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/channel/VoiceChannelBadgeExperiment.tsx");
 
 export const VoiceChannelBadgeExperiment = experiment;
 export const useVoiceChannelBadgeExperiment = function useVoiceChannelBadgeExperiment(guildId) {

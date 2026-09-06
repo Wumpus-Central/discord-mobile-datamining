@@ -1,60 +1,60 @@
 // === Module 16902: Settings ===
 
 // Module 16902 (Settings)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import DeviceUtils from "DeviceUtils" /* 4539 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
+import profileModalTransition from "profileModalTransition" /* 16784 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { containerOuter: { flex: 1, overflow: "hidden" }, containerOuterTablet: null, container: null, containerTablet: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, flex: 1 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flex: 1 };
-createCacheKey[3] = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", flex: 1 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", flex: 1 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { containerOuter: { flex: 1, overflow: "hidden" }, containerOuterTablet: null, container: null, containerTablet: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, flex: 1 };
+createStyles.containerOuterTablet = createStyles;
+createStyles.container = { flex: 1 };
+createStyles.containerTablet = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
 
 export default function Settings() {
-  let obj = top(right[5]);
+  let obj = profileModalTransition;
   const reportProfileModalTransition = obj.useReportProfileModalTransition();
-  const rect = left(right[6])();
-  top = rect.top;
-  left = rect.left;
-  right = rect.right;
-  let tmp5 = left(right[7])();
+  const rect = useSafeAreaInsetsDefault();
+  const top = rect.top;
+  const left = rect.left;
+  const right = rect.right;
+  let tmp5 = useIsWindowLargeDefault();
   if (tmp5) {
-    tmp5 = !top(tmp2[8]).isIpadOS();
-    const tmpResult = top(tmp2[8]);
+    tmp5 = !DeviceUtils.isIpadOS();
+    const tmpResult = DeviceUtils;
   }
-  const React = tmp5;
-  const tmp6 = callback();
+  closure_3 = tmp5;
+  const tmp6 = closure_6();
   closure_4 = tmp6;
   let items = [tmp6, tmp5, top, left, right];
   obj = {
-    style: React.useMemo(() => {
+    style: noop.useMemo(() => {
       if (closure_3) {
         const items = [tmp.containerOuterTablet, ];
-        let obj = { paddingTop: null, paddingLeft: null, paddingRight: null };
-        obj[0] = top;
-        obj[1] = left;
-        obj[2] = right;
+        let obj = { paddingTop: top, paddingLeft: left, paddingRight: right };
         items[1] = obj;
         let items1 = items;
       } else {
         items1 = [tmp.containerOuter, ];
-        obj = { paddingLeft: null, paddingRight: null };
-        obj[0] = left;
-        obj[1] = right;
+        obj = { paddingLeft: left, paddingRight: right };
         items1[1] = obj;
       }
       return items1;
     }, items),
     children: null
   };
-  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(tmp2[10]), {}) };
-  obj[1] = jsx(left(right[9]).View, { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(tmp2[10]), {}) });
-  return <closure_4 style={tmp5 ? tmp6.containerTablet : tmp6.container}>{tmp7(tmp4(tmp2[10]), {})}</closure_4>;
+  obj = { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(16903), {}) };
+  obj.children = jsx(ReanimatedRexportDefault.View, { style: tmp5 ? tmp6.containerTablet : tmp6.container, children: tmp7(tmp4(16903), {}) });
+  return <View style={tmp5 ? tmp6.containerTablet : tmp6.container}>{tmp7(tmp4(16903), {})}</View>;
 };

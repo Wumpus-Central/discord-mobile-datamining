@@ -1,10 +1,10 @@
-// === Module 8341: isPlayedGameEntry ===
+// === Module 8341: ContentInventoryTypes ===
 
-// Module 8341 (isPlayedGameEntry)
-import set from "set" /* 2 */;
+// Module 8341 (ContentInventoryTypes)
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8130 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
+const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
 
 export const isPlayedGameEntry = function isPlayedGameEntry(content_type) {
   content_type = undefined;
@@ -35,25 +35,25 @@ export const isGamingLikeEntry = function isGamingLikeEntry(content) {
   }
   return tmp4;
 };
-export const isApplicationEntry = function isApplicationEntry(closure_0) {
-  let extra;
-  if (closure_0 != null) {
-    extra = closure_0.extra;
+export const isApplicationEntry = function isApplicationEntry(extra) {
+  extra = undefined;
+  if (extra != null) {
+    extra = extra.extra;
   }
   let tmp2 = null != extra;
   if (tmp2) {
     let extra1;
-    if (closure_0 != null) {
-      extra1 = closure_0.extra;
+    if (extra != null) {
+      extra1 = extra.extra;
     }
     tmp2 = "application_id" in extra1;
   }
   return tmp2;
 };
-export const isListenedSessionEntry = function isListenedSessionEntry(closure_0) {
+export const isListenedSessionEntry = function isListenedSessionEntry(entry) {
   let content_type;
-  if (closure_0 != null) {
-    content_type = closure_0.content_type;
+  if (entry != null) {
+    content_type = entry.content_type;
   }
   return content_type === ContentInventoryEntryType.ContentInventoryEntryType.LISTENED_SESSION;
 };

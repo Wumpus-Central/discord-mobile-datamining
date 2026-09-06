@@ -1,62 +1,56 @@
-// === Module 7755: startBackgroundTask ===
+// === Module 7755: BackgroundTaskManager ===
 
-// Module 7755 (startBackgroundTask)
-import set2 from "set" /* 1115 */;
-import initializeDefault from "initialize" /* 7756 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { NativeModules } from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 1115 */;
+// Module 7755 (BackgroundTaskManager)
+import PlatformUtils2 from "PlatformUtils" /* 1115 */;
+import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7756 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
+require = fn;
 function startBackgroundTask(arg0) {
-  let obj = set2;
+  let obj = PlatformUtils2;
   if (obj.isAndroid()) {
     if (null == arg0) {
-      const promise = new Promise((arg0) => arg0(closure_5));
+      const promise = new Promise((fn) => fn(num));
       return promise;
     } else {
       ({ title, content } = arg0);
-      obj = { title: null, content: null, priority: null, type: null, usesGateway: false };
-      obj[0] = title;
-      obj[1] = content;
-      obj[2] = tmp(7758).ServiceNotificationPriority.MEDIUM;
-      obj[3] = tmp(7758).ServiceNotificationType.FILE_UPLOAD;
-      return initializeDefault.addServiceHandler(obj);
+      obj = { title, content, priority: tmp(7758).ServiceNotificationPriority.MEDIUM, type: tmp(7758).ServiceNotificationType.FILE_UPLOAD, usesGateway: false };
+      return ForegroundServiceManagerDefault.addServiceHandler(obj);
     }
   } else {
     const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
     return DCDBackgroundTaskManager.startBackgroundTask();
   }
 }
+const NativeModules = fn(17).NativeModules;
+const PlatformUtils = fn(1115);
 let num = -1;
-if (!set.isAndroid()) {
+if (!PlatformUtils.isAndroid()) {
   num = NativeModules.DCDBackgroundTaskManager.backgroundTaskIdentifierInvalid;
 }
-function endBackgroundTask(c7) {
-  if (c7 !== num) {
+function endBackgroundTask(arg0) {
+  if (arg0 !== num) {
     if (obj.isAndroid()) {
-      initializeDefault.removeServiceHandler(c7);
-      const obj2 = initializeDefault;
+      ForegroundServiceManagerDefault.removeServiceHandler(arg0);
     } else {
       const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
-      DCDBackgroundTaskManager.endBackgroundTask(c7);
+      DCDBackgroundTaskManager.endBackgroundTask(arg0);
     }
-    obj = set2;
+    obj = PlatformUtils2;
   }
 }
 function backgroundify(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return callback(function*() {
+  return asyncGeneratorStep(async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -67,55 +61,54 @@ function backgroundify(arg0, arg1) {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp3;
-            let callback = tmp5;
-            callback = c5;
+            closure_0 = tmp5;
+            closure_128_0 = c5;
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_6(closure_1_1);
+            const obj1 = { value: startBackgroundTask(closure_1), done: false };
             return obj1;
           }
         } else if (1 === tmp8) {
           c3 = 0;
           c5 = 3;
-          let obj2 = { value: null, done: true };
-          obj2[0] = callback();
+          let obj2 = { value: closure_129_0(), done: true };
           return obj2;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          const obj3 = { value, done: true };
           return obj3;
         } else {
-          callback = arg1;
+          closure_128_0 = value;
           c3 = 0;
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = callback().finally(() => {
-            if (callback !== c5) {
-              const obj = callback(tmp18[2]);
-              if (obj.isAndroid()) {
-                tmp3(tmp3[3]).removeServiceHandler(tmp);
-                const obj2 = tmp3(tmp3[3]);
-              } else {
-                const DCDBackgroundTaskManager = obj.DCDBackgroundTaskManager;
-                DCDBackgroundTaskManager.endBackgroundTask(tmp);
-              }
-            }
-          });
+          obj = {
+            value: closure_129_0().finally(() => {
+                    if (closure_1_0 !== c5) {
+                      if (obj.isAndroid()) {
+                        closure_1(tmp3[3]).removeServiceHandler(tmp);
+                        const obj2 = closure_1(tmp3[3]);
+                      } else {
+                        const DCDBackgroundTaskManager = c4.DCDBackgroundTaskManager;
+                        DCDBackgroundTaskManager.endBackgroundTask(tmp);
+                      }
+                      obj = closure_0(closure_2[2]);
+                      tmp3 = closure_2;
+                    }
+                  }),
+            done: true
+          };
           return obj;
         }
       } catch (tmp18) {
@@ -130,7 +123,8 @@ function backgroundify(arg0, arg1) {
     }
   });
 }
-const result = set.fileFinishedImporting("modules/messages/BackgroundTaskManager.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/BackgroundTaskManager.native.tsx");
 
 export default { backgroundTaskIdentifierInvalid: num, backgroundify, startBackgroundTask, endBackgroundTask };
 export const backgroundTaskIdentifierInvalid = num;

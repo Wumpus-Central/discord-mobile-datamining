@@ -1,21 +1,20 @@
-// === Module 5580: getKeyboardDuration ===
+// === Module 5580: useKeyboardDuration ===
 
-// Module 5580 (getKeyboardDuration)
-import set from "set" /* 2 */;
-import context from "context" /* 1480 */;
-import computeEntryStateDefault from "computeEntryState" /* 1481 */;
+// Module 5580 (useKeyboardDuration)
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1481 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");
+const result = size.fileFinishedImporting("modules/keyboard/native/useKeyboardDuration.tsx");
 
 export const getKeyboardDuration = function getKeyboardDuration() {
   let DEFAULT_APP_ENTRY_KEY = arg0;
   if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
   let num = 300;
   if (!obj.isAndroid()) {
-    num = computeEntryStateDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardDuration;
-    const obj2 = computeEntryStateDefault;
+    num = KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].keyboardDuration;
   }
   return num;
 };

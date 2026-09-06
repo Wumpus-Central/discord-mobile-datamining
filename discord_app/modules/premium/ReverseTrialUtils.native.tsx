@@ -1,14 +1,15 @@
-// === Module 8065: useIsInReverseTrial ===
+// === Module 8065: ReverseTrialUtils ===
 
-// Module 8065 (useIsInReverseTrial)
+// Module 8065 (ReverseTrialUtils)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/ReverseTrialUtils.native.tsx");
 
 export const useIsInReverseTrial = function useIsInReverseTrial() {
-  const items = [closure_2];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

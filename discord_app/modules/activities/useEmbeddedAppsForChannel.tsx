@@ -1,16 +1,15 @@
-// === Module 12059: useEmbeddedApps ===
+// === Module 12059: useEmbeddedAppsForChannel ===
 
-// Module 12059 (useEmbeddedApps)
+// Module 12059 (useEmbeddedAppsForChannel)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "sortActivity" /* 4600 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "participantFromServer" /* 1956 */;
-import { NO_ACTIVITIES } from "participantFromServer" /* 1956 */;
+import noop from "module_19" /* 19 */;
+import PresenceStore from "PresenceStore" /* 4600 */;
+import UserStore from "UserStore" /* 1371 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
-const require = arg1;
+const require = fn;
 function useEmbeddedApps(arr, arg1) {
-  const _require = arr;
+  _require = arr;
   importDefault = arg1;
   let mapped = arr.map((applicationId) => applicationId.applicationId);
   const tmp2 = useGetOrFetchApplicationsDefault(mapped);
@@ -19,21 +18,18 @@ function useEmbeddedApps(arr, arg1) {
   const iter = arr[Symbol.iterator]();
   while (iter !== undefined) {
     let userIds = iter.next().userIds;
-    let tmp3 = userIds;
-    let tmp4 = userIds;
     for (const item10027 of userIds) {
       let addResult = set.add(item10027);
       continue;
     }
     continue;
   }
-  let items = [closure_5];
+  let items = [UserStore];
   const items1 = [set];
-  const stateFromStoresArray = _require(504).useStateFromStoresArray(items, () => {
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const items = [];
     for (const item10006 of set) {
-      let tmp = closure_1_5;
-      arr = items.push(closure_1_5.getUser(item10006));
+      arr = items.push(UserStore.getUser(item10006));
       continue;
     }
     return items;
@@ -46,17 +42,14 @@ function useEmbeddedApps(arr, arg1) {
         const result = map.set(id.id, id);
       }
     });
-    const mapped = map.map((arg0, arg1) => {
+    const mapped = map.map((embeddedActivity, index) => {
       const items = [];
       while (tmp2 !== undefined) {
-        let tmp4 = map;
-        let value = map.get(tmp3);
+        value = map.get(tmp3);
         if (null != value) {
-          if (null != closure_1_1) {
-            let tmp8 = value;
+          if (null != closure_1) {
             let tmp7Result = tmp7(tmp6);
             if (null != tmp7Result) {
-              let tmp11 = tmp7Result;
               arr = items.push(tmp10);
             }
           }
@@ -64,52 +57,51 @@ function useEmbeddedApps(arr, arg1) {
         continue;
       }
       let tmp13 = null;
-      if (null != closure_1_2[arg1]) {
-        const obj = { embeddedActivity: null, application: null, userParticipantAvatarUrls: null };
-        obj[0] = arg0;
-        obj[1] = tmp;
-        obj[2] = items;
+      if (null != closure_2[index]) {
+        const obj = { embeddedActivity, application: tmp, userParticipantAvatarUrls: items };
         tmp13 = obj;
       }
       return tmp13;
     });
-    return mapped.filter(arr(table[7]).isNotNullish);
+    return mapped.filter(closure_0(closure_2[7]).isNotNullish);
   }, items2);
 }
-let result = require("set").fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
+const NO_ACTIVITIES = fn(1956).NO_ACTIVITIES;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activities/useEmbeddedAppsForChannel.tsx");
 
 export default function useEmbeddedAppsForChannel(arg0, arg1) {
-  const _require = arg0;
-  const items = [closure_6];
-  return useEmbeddedApps(_require(504).useStateFromStoresArray(items, () => {
+  _require = arg0;
+  const items = [EmbeddedActivitiesStore];
+  return useEmbeddedApps(require("initialize").useStateFromStoresArray(items, () => {
     if (null != closure_0) {
       if (null != tmp.id) {
         if ("" !== tmp.id) {
-          let embeddedActivitiesForChannel = closure_1_6.getEmbeddedActivitiesForChannel(tmp.id);
+          let embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp.id);
         }
         return embeddedActivitiesForChannel;
       }
     }
-    embeddedActivitiesForChannel = closure_1_7;
+    embeddedActivitiesForChannel = NO_ACTIVITIES;
   }), arg1);
 };
 export const useEmbeddedAppsByChannel = function useEmbeddedAppsByChannel(arg0) {
-  const _require = arg0;
-  let items = [closure_6];
-  const tmp = useEmbeddedApps(_require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  let items = [EmbeddedActivitiesStore];
+  const tmp = useEmbeddedApps(require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
-      let embeddedActivitiesForGuild = closure_1_6.getEmbeddedActivitiesForGuild(tmp);
+      let embeddedActivitiesForGuild = EmbeddedActivitiesStore.getEmbeddedActivitiesForGuild(tmp);
     } else {
-      embeddedActivitiesForGuild = closure_1_7;
+      embeddedActivitiesForGuild = NO_ACTIVITIES;
     }
     return embeddedActivitiesForGuild;
   }));
   closure_1 = tmp;
   const items1 = [tmp];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     const map = new Map();
     const item = closure_1.forEach((embeddedActivity) => {
-      const embeddedActivityLocationChannelId = map(closure_1_2[5]).getEmbeddedActivityLocationChannelId(embeddedActivity.embeddedActivity.location);
+      const embeddedActivityLocationChannelId = map(dependencyMap[5]).getEmbeddedActivityLocationChannelId(embeddedActivity.embeddedActivity.location);
       if (null != embeddedActivityLocationChannelId) {
         let items = map.get(embeddedActivityLocationChannelId);
         if (items == null) {
@@ -117,7 +109,6 @@ export const useEmbeddedAppsByChannel = function useEmbeddedAppsByChannel(arg0) 
         }
         items.push(embeddedActivity);
         const result = map.set(embeddedActivityLocationChannelId, items);
-        const obj2 = map;
       }
     });
     return map;
@@ -125,13 +116,13 @@ export const useEmbeddedAppsByChannel = function useEmbeddedAppsByChannel(arg0) 
 };
 export { useEmbeddedApps };
 export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(arg0) {
-  const _require = arg0;
-  const items = [closure_4];
+  _require = arg0;
+  const items = [PresenceStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     const map = new Map();
-    const item = map.forEach((embeddedActivity) => {
-      let value;
+    const item = closure_0.forEach((embeddedActivity) => {
+      value = undefined;
       if (embeddedActivity != null) {
         const userIds = embeddedActivity.embeddedActivity.userIds;
         value = userIds.values().next().value;
@@ -146,7 +137,7 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
       }
       const obj = {};
       const merged = Object.assign(embeddedActivity);
-      obj.presenceActivity = closure_1_4.findActivity(value, (application_id) => {
+      obj.presenceActivity = PresenceStore.findActivity(value, (application_id) => {
         let id;
         if (embeddedActivity != null) {
           const application = embeddedActivity.application;
@@ -159,5 +150,5 @@ export const useEmbeddedAppsWithPresence = function useEmbeddedAppsWithPresence(
       const result = map.set(id, obj);
     });
     return map;
-  }, items1, _require(504).statesWillNeverBeEqual);
+  }, items1, require("initialize").statesWillNeverBeEqual);
 };

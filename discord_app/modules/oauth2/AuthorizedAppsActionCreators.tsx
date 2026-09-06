@@ -1,18 +1,18 @@
-// === Module 7170: tokensToAppTokensMap ===
+// === Module 7170: AuthorizedAppsActionCreators ===
 
-// Module 7170 (tokensToAppTokensMap)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "recomputeFromAppTokens" /* 7107 */;
-import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 7170 (AuthorizedAppsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import Timers from "Timers" /* 4447 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7107 */;
 
-const require = arg1;
+require = fn;
 function tokensToAppTokensMap(arg0, arr) {
   let mapped;
   if (arr != null) {
-    mapped = arr.map((arg0) => {
-      const items = [arg0, null];
+    mapped = arr.map((item) => {
+      const items = [item, null];
       return items;
     });
   }
@@ -30,7 +30,7 @@ function tokensToAppTokensMap(arg0, arr) {
 }
 function fetchAuthorizedApps() {
   const self = this;
-  const apply = _fetchAuthorizedApps.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -38,124 +38,108 @@ function fetchAuthorizedApps() {
   }
   return applyArgumentsResult;
 }
-function _fetchAuthorizedApps() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (c1 === 2) {
-        c1 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_10 = async function _fetchAuthorizedApps(application_ids) {
+  c2 = 0;
+  c1 = 0;
+  return (async (arg0, value) => {
+    if (c1 === 2) {
+      c1 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c1 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c1 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c1 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const HTTP = callback(table[5]).HTTP;
-              obj1 = { url: null, oldFormErrors: true, rejectWithError: true, query: null };
-              obj1[0] = closure_1_6.OAUTH2_TOKENS;
-              const obj2 = { application_ids: null };
-              obj2[0] = callback;
-              obj1[3] = obj2;
-              const value = HTTP.get(obj1);
-              table = 1;
-              c1 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = value.then((body) => {
-                let obj = v3(573);
-                obj = { type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: closure_1_8(body.body, closure_0) };
-                return obj.dispatch(obj);
-              }, () => {
-                let request = v3(573);
-                if (null == closure_0) {
-                  request = { type: "full" };
-                } else {
-                  request = { type: "partial", applicationIds: null };
-                  request[1] = tmp;
-                }
-                return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request });
-              });
-              return obj3;
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c1 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
             c1 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c1 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            c1 = 3;
-            return { value: "HermesInternal", done: null };
+            const HTTP = HTTPUtils.HTTP;
+            let request = { url: OAUTH2_TOKENS.OAUTH2_TOKENS, oldFormErrors: true, rejectWithError: true, query: null };
+            const obj1 = { application_ids };
+            request.query = obj1;
+            value = HTTP.get(request);
+            c2 = 1;
+            c1 = 1;
+            const obj2 = {
+              value: value.then((body) => {
+                        c1(573);
+                        const obj = { type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: closure_2_8(body.body, closure_0) };
+                        return obj.dispatch(obj);
+                      }, () => {
+                        let request = c1(573);
+                        if (null == closure_0) {
+                          request = { type: "full" };
+                        } else {
+                          request = { type: "partial", applicationIds: tmp };
+                        }
+                        return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST_FAILED", request });
+                      }),
+              done: false
+            };
+            return obj2;
           }
-        } catch (tmp5) {
-          c1 = tmp;
-          throw tmp5;
+        } else if (arg0 === 1) {
+          c1 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c1 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c1 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp5) {
+        c1 = tmp;
+        throw tmp5;
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
+const FetchState = fn(7107).FetchState;
+const Endpoints = fn(1074).Endpoints;
 let obj = {
   predicate(arg0) {
-    return store.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
+    return AuthorizedAppsStore.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },
   onQueued(applicationIds) {
-    let request = dispatcherDefault;
-    request = { type: "partial", applicationIds };
-    return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request });
+    let obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: null };
+    obj = { type: "partial", applicationIds };
+    obj.request = obj;
+    return obj.dispatch(obj);
   },
   onCancelled(applicationIds) {
-    let obj = dispatcherDefault;
-    obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
+    const obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
     return obj.dispatch(obj);
   }
 };
-const batchInvocationManager = new require("start").BatchInvocationManager(fetchAuthorizedApps, obj);
+const batchInvocationManager = new fn(4447).BatchInvocationManager(fetchAuthorizedApps, obj);
 obj = {
   fetch(arg0) {
-    if (store.getFetchState() !== FetchState.FETCHING) {
+    if (AuthorizedAppsStore.getFetchState() !== FetchState.FETCHING) {
       if (null != arg0) {
-        batchInvocationManager.queue(arg0).catch((arg0) => {
-          if (!(arg0 instanceof callback(table[3]).BatchInvocationManagerResetError)) {
-            throw arg0;
+        batchInvocationManager.queue(arg0).catch((error) => {
+          if (!(error instanceof Timers.BatchInvocationManagerResetError)) {
+            throw error;
           }
         });
         const queueResult = batchInvocationManager.queue(arg0);
       } else {
         batchInvocationManager.reset();
-        let obj = dispatcherDefault;
-        obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: null };
-        obj[1] = { type: "full" };
+        const obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: { type: "full" } };
         obj.dispatch(obj);
         fetchAuthorizedApps();
       }
@@ -163,13 +147,14 @@ obj = {
   },
   delete(arg0) {
     const self = this;
-    const HTTP = self(1272).HTTP;
+    const HTTP = HTTPUtils.HTTP;
     const obj = { url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true };
     HTTP.del({ url: Endpoints.OAUTH2_TOKEN(arg0), oldFormErrors: true, rejectWithError: true }).then(() => {
       const response = self.fetch();
     });
   }
 };
-const result = require("set").fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
 
 export default obj;

@@ -1,14 +1,14 @@
-// === Module 5468: setParams ===
+// === Module 5468: LazyPromiseInitializer ===
 
-// Module 5468 (setParams)
-import set from "set" /* 2 */;
+// Module 5468 (LazyPromiseInitializer)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
+const result = size.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
 class LazyPromiseInitializer {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.loader = global;
-    return obj;
+    merged = Object.assign({ loading: false, loaded: false });
+    merged.loader = global;
+    return merged;
   }
 }
 const prototype = LazyPromiseInitializer.prototype;
@@ -25,16 +25,15 @@ prototype["get"] = function get() {
   return this.val;
 };
 prototype["ensureLoaded"] = function ensureLoaded() {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this.loaded) {
     if (!self.loading) {
       if (undefined !== self.param) {
         const param = self.param;
         self.loading = true;
-        self.loader(param).then((arg0) => {
+        self.loader(param).then((result) => {
           if (param === self.param) {
-            tmp.val = arg0;
+            tmp.val = result;
             tmp.loading = false;
             tmp.loaded = true;
           }

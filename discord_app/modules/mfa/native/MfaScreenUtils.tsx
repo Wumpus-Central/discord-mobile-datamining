@@ -1,21 +1,21 @@
-// === Module 15671: ? ===
+// === Module 15671: MfaScreenUtils ===
 
-// Module 15671
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import NAV_BAR_HEIGHT2 from "NAV_BAR_HEIGHT" /* 5682 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15671 (MfaScreenUtils)
+import nativeDefault from "native" /* 576 */;
+import NavigatorConstants from "NavigatorConstants" /* 5682 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
 let obj = { useScreenStyles: null };
-obj[0] = createCacheKey.createStyles((arg0) => {
-  const NAV_BAR_HEIGHT = NAV_BAR_HEIGHT2.NAV_BAR_HEIGHT;
+obj.useScreenStyles = createStyles.createStyles((arg0) => {
+  const NAV_BAR_HEIGHT = NavigatorConstants.NAV_BAR_HEIGHT;
   if (arg0) {
     let diff = NAV_BAR_HEIGHT;
   } else {
-    diff = NAV_BAR_HEIGHT - NAV_BAR_HEIGHT2.STATUS_BAR_HEIGHT;
+    diff = NAV_BAR_HEIGHT - NavigatorConstants.STATUS_BAR_HEIGHT;
   }
   let obj = { marginTop: diff, marginLeft: null, marginRight: null, paddingBottom: null, flex: 1, flexDirection: "column", justifyContent: "space-between", alignItems: "stretch" };
-  const space = ThemesDefault.space;
+  const space = nativeDefault.space;
   if (arg0) {
     let PX_16 = space.PX_24;
     let tmp6 = tmp5;
@@ -23,33 +23,32 @@ obj[0] = createCacheKey.createStyles((arg0) => {
     PX_16 = space.PX_16;
     tmp6 = tmp5;
   }
-  obj[1] = PX_16;
+  obj.marginLeft = PX_16;
   const space2 = tmp6(576).space;
-  obj[2] = arg0 ? space2.PX_24 : space2.PX_16;
+  obj.marginRight = arg0 ? space2.PX_24 : space2.PX_16;
   const space3 = tmp6(576).space;
-  obj = { contentContainer: obj, mfaContainerHeader: null, mfaContainerHeaderText: null, inputContainer: arg0 ? space3.PX_24 : space3.PX_16, smsContainer: null, smsInput: null, radioItem: null, submit: null };
+  obj = { contentContainer: obj, mfaContainerHeader: null, mfaContainerHeaderText: null, inputContainer: null, smsContainer: null, smsInput: null, radioItem: null, submit: null, paddingBottom: arg0 ? space3.PX_24 : space3.PX_16 };
   obj = { flexDirection: "column", alignItems: "center", paddingBottom: tmp6(576).space.PX_24 };
-  obj[1] = obj;
+  obj.mfaContainerHeader = obj;
   let num = 0;
   if (!arg0) {
     num = tmp6(576).space.PX_32;
   }
-  obj1 = { marginHorizontal: num, marginTop: null, textAlign: "center" };
+  const obj1 = { marginHorizontal: num, marginTop: null, textAlign: "center" };
   let num2 = 0;
   if (!arg0) {
     num2 = tmp6(576).space.PX_12;
   }
-  obj1[1] = num2;
-  obj[2] = obj1;
-  obj[3] = { flexDirection: "column", alignSelf: "stretch" };
-  obj[4] = { flexDirection: "column", alignSelf: "stretch" };
-  obj[5] = { flexDirection: "row", alignSelf: "stretch" };
-  obj[6] = { backgroundColor: tmp6(576).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(576).radii.md };
+  obj1.marginTop = num2;
+  obj.mfaContainerHeaderText = obj1;
+  obj.inputContainer = { flexDirection: "column", alignSelf: "stretch" };
+  obj.smsContainer = { flexDirection: "column", alignSelf: "stretch" };
+  obj.smsInput = { flexDirection: "row", alignSelf: "stretch" };
+  obj.radioItem = { backgroundColor: tmp6(576).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(576).radii.md };
   const obj2 = { backgroundColor: tmp6(576).colors.BACKGROUND_SURFACE_HIGH, borderRadius: tmp6(576).radii.md };
-  const tmp = require;
-  obj[7] = { paddingTop: tmp6(576).space.PX_24 };
+  obj.submit = { paddingTop: tmp6(576).space.PX_24 };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/mfa/native/MfaScreenUtils.tsx");
+const result = size.fileFinishedImporting("modules/mfa/native/MfaScreenUtils.tsx");
 
 export default obj;

@@ -1,20 +1,23 @@
-// === Module 17008: useIsActivityPanelFullscreen ===
+// === Module 17008: ActivityPanelUtils ===
 
-// Module 17008 (useIsActivityPanelFullscreen)
+// Module 17008 (ActivityPanelUtils)
 import initialize from "initialize" /* 504 */;
-import closure_3 from "participantFromServer" /* 1956 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9526 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
+require = fn;
+const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
 export const useIsActivityPanelFullscreen = function useIsActivityPanelFullscreen() {
-  const items = [closure_3];
+  const items = [EmbeddedActivitiesStore];
   return initialize.useStateFromStores(items, () => {
-    const embeddedActivityLocationChannelId = callback(table[3]).getEmbeddedActivityLocationChannelId(store.getConnectedActivityLocation());
-    let tmp3 = store.getActivityPanelMode() === constants.PANEL;
+    const embeddedActivityLocationChannelId = embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(EmbeddedActivitiesStore.getConnectedActivityLocation());
+    let tmp3 = EmbeddedActivitiesStore.getActivityPanelMode() === constants.PANEL;
     if (tmp3) {
-      tmp3 = !callback2(table[4])(embeddedActivityLocationChannelId);
+      tmp3 = !isVoiceEmbeddedActivityDefault(embeddedActivityLocationChannelId);
     }
     return tmp3;
   });

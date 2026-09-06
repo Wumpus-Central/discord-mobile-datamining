@@ -1,11 +1,13 @@
 // === Module 9606: useVideoSpinnerTimer ===
 
 // Module 9606 (useVideoSpinnerTimer)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
+import VideoSpinnerTimer from "VideoSpinnerTimer" /* 9607 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useVideoSpinnerTimer.tsx");
 
 export default function useVideoSpinnerTimer(userId) {
   ({ location: require, videoSpinnerContext } = userId);
@@ -16,9 +18,8 @@ export default function useVideoSpinnerTimer(userId) {
   if (flag === undefined) {
     flag = false;
   }
-  let first;
-  first = userId(streamId.useState(() => {
-    const videoSpinnerTimer = new closure_1_0(videoSpinnerContext[2]).VideoSpinnerTimer(closure_0);
+  const first = userId(streamId.useState(() => {
+    const videoSpinnerTimer = new VideoSpinnerTimer.VideoSpinnerTimer(closure_1_0);
     return videoSpinnerTimer;
   }), 1)[0];
   const items = [loading, flag, streamId, first, videoSpinnerContext, userId];

@@ -1,64 +1,63 @@
-// === Module 6999: handlePress ===
+// === Module 6999: ChangeEmailComplete ===
 
-// Module 6999 (handlePress)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import _modDef5621 from "module_5621" /* 5621 */;
-import registerAssetDefault from "registerAsset" /* 6602 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { resetChangeEmailStore } from "ChangeEmailFields" /* 5623 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 6999 (ChangeEmailComplete)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5621 */;
+import _modDef6602 from "module_6602" /* 6602 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function handlePress() {
   resetChangeEmailStore();
-  _modDef5621.close();
+  EmailVerificationModalActionCreatorsDefault.close();
 }
-noopAll;
-({ View: c3, Image: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { contentContainer: null, image: null, title: null, body: null, bodyInner: null, tooltip: null };
-createCacheKey = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, gap: 20, alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 190, width: 220, resizeMode: "contain" };
-createCacheKey[2] = { textAlign: "center" };
-createCacheKey[3] = { textAlign: "center" };
-createCacheKey[4] = { gap: 2 };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
-const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailComplete.tsx");
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const resetChangeEmailStore = fn(5623).resetChangeEmailStore;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { contentContainer: null, image: null, title: null, body: null, bodyInner: null, tooltip: null };
+createStyles = { flexGrow: 2, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, gap: 20, alignItems: "center" };
+createStyles.contentContainer = createStyles;
+createStyles.image = { height: 190, width: 220, resizeMode: "contain" };
+createStyles.title = { textAlign: "center" };
+createStyles.body = { textAlign: "center" };
+createStyles.bodyInner = { gap: 2 };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+createStyles.tooltip = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: nativeDefault.radii.sm, borderColor: nativeDefault.colors.BORDER_SUBTLE };
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/ChangeEmailComplete.tsx");
 
 export default function ChangeEmailComplete(email) {
-  const tmp = callback3();
+  const tmp = closure_9();
   let obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { style: tmp.image, source: registerAssetDefault };
-  const items = [callback(closure_4, obj), , , ];
+  obj = { style: tmp.image, source: _modDef6602 };
+  const items = [React5(React4, obj), , , ];
   obj = { style: tmp.bodyInner, children: null };
-  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = getSystemLocale.intl;
-  obj1[4] = intl.string(getSystemLocale.t["8O+nF7"]);
-  const items1 = [callback(Text.Text, obj1), ];
+  const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const intl = util.intl;
+  obj1.children = intl.string(util.t["8O+nF7"]);
+  const items1 = [React5(Text_Text.Text, obj1), ];
   const obj2 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[3] = intl2.format(getSystemLocale.t.Zvx0O3, { email: email.email });
-  items1[1] = callback(Text.Text, obj2);
-  obj[1] = items1;
-  items[1] = callback2(closure_3, obj);
+  const intl2 = util.intl;
+  obj2.children = intl2.format(util.t.Zvx0O3, { email: email.email });
+  items1[1] = React5(Text_Text.Text, obj2);
+  obj.children = items1;
+  items[1] = React6(React3, obj);
   const obj3 = { style: tmp.tooltip, variant: "text-sm/normal", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[2] = intl3.string(getSystemLocale.t.yb7itQ);
-  items[2] = callback(Text.Text, obj3);
+  const intl3 = util.intl;
+  obj3.children = intl3.string(util.t.yb7itQ);
+  items[2] = React5(Text_Text.Text, obj3);
   const obj4 = { text: null, onPress: null, grow: true };
-  const intl4 = getSystemLocale.intl;
-  obj4[0] = intl4.string(getSystemLocale.t.BddRzS);
-  obj4[1] = handlePress;
-  items[3] = callback(Button.Button, obj4);
-  obj[3] = items;
-  return callback2(closure_5, obj);
+  const intl4 = util.intl;
+  obj4.text = intl4.string(util.t.BddRzS);
+  obj4.onPress = handlePress;
+  items[3] = React5(components_Button_Button.Button, obj4);
+  obj.children = items;
+  return React6(hasOwnProperty, obj);
 };

@@ -1,23 +1,26 @@
 // === Module 10911: useRecipientsLabel ===
 
 // Module 10911 (useRecipientsLabel)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/useRecipientsLabel.tsx");
 
 export const useRecipientsLabel = function useRecipientsLabel(channel) {
-  const _require = channel;
-  const items = [closure_4];
-  const stateFromStoresArray = _require(504).useStateFromStoresArray(items, () => {
+  _require = channel;
+  const items = [UserStore];
+  const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
-    const mapped = recipients.map((arg0) => user.getUser(arg0));
-    const found = mapped.filter(channel(closure_1_2[4]).isNotNullish);
-    return found.map((arg0) => callback(table[5]).getName(arg0));
+    const mapped = recipients.map((item) => user.getUser(item));
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    return found.map((item) => stateFromStoresArray(closure_1_2[5]).getName(item));
   });
   const items1 = [channel, stateFromStoresArray];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if ("" === channel.name) {
       return null;
     } else {
@@ -25,29 +28,29 @@ export const useRecipientsLabel = function useRecipientsLabel(channel) {
       let formatToPlainStringResult = null;
       if (0 !== stateFromStoresArray.length) {
         if (1 === first.length) {
-          const intl4 = channel(closure_1_2[2]).intl;
+          const intl4 = util.intl;
           let obj = { first: null };
           first = first[0];
-          obj[0] = first;
-          formatToPlainStringResult = intl4.formatToPlainString(channel(closure_1_2[2]).t["J+Wpst"], obj);
+          obj.first = first;
+          formatToPlainStringResult = intl4.formatToPlainString(util.t["J+Wpst"], obj);
         } else {
           if (2 === first.length) {
-            const intl3 = channel(closure_1_2[2]).intl;
+            const intl3 = util.intl;
             obj = { first: null, second: null };
-            [obj3[0], obj3[1]] = first;
-            formatToPlainStringResult = intl3.formatToPlainString(channel(closure_1_2[2]).t.gwRP0Y, obj);
+            [obj3.first, obj3.second] = first;
+            formatToPlainStringResult = intl3.formatToPlainString(util.t.gwRP0Y, obj);
           } else if (3 !== first.length) {
             const diff = first.length - 3;
-            const intl = channel(closure_1_2[2]).intl;
+            const intl = util.intl;
             obj = { first: null, second: null, third: null, count: null };
-            [obj[0], obj[1], obj[2]] = first;
-            obj[3] = diff;
-            formatToPlainStringResult = intl.formatToPlainString(channel(closure_1_2[2]).t.VYfueb, obj);
+            [obj.first, obj.second, obj.third] = first;
+            obj.count = diff;
+            formatToPlainStringResult = intl.formatToPlainString(util.t.VYfueb, obj);
           }
-          const intl2 = channel(closure_1_2[2]).intl;
-          [obj2[0], obj2[1], obj2[2]] = first;
-          formatToPlainStringResult = intl2.formatToPlainString(channel(closure_1_2[2]).t.QDB5et, { first: null, second: null, third: null });
-          obj1 = { first: null, second: null, third: null };
+          const intl2 = util.intl;
+          [obj2.first, obj2.second, obj2.third] = first;
+          formatToPlainStringResult = intl2.formatToPlainString(util.t.QDB5et, { first: null, second: null, third: null });
+          const obj1 = { first: null, second: null, third: null };
         }
       }
     }

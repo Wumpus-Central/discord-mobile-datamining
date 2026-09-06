@@ -1,49 +1,48 @@
-// === Module 15203: ? ===
+// === Module 15203: QuestDockBountyBody ===
 
-// Module 15203
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import metadataDefault from "metadata" /* 11297 */;
-import useIsQuestDockExpanded from "useIsQuestDockExpanded" /* 15092 */;
-import getCreativeAnalyticsParams from "getCreativeAnalyticsParams" /* 15102 */;
-import contextDefault from "context" /* 15182 */;
-import QUEST_DOCK_EXPANDED_PADDING_BOTTOM from "QUEST_DOCK_EXPANDED_PADDING_BOTTOM" /* 15200 */;
-import QUEST_DOCK_EXPANDED_PADDING_BOTTOMDefault from "QUEST_DOCK_EXPANDED_PADDING_BOTTOM" /* 15200 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15203 (QuestDockBountyBody)
+import util from "util" /* 1114 */;
+import _modDef11297 from "module_11297" /* 11297 */;
+import QuestDockHooks from "QuestDockHooks" /* 15092 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15102 */;
+import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext" /* 15182 */;
+import QuestDockInsetHeaderBody from "QuestDockInsetHeaderBody" /* 15200 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function QuestDockBountyBody() {
-  const isRendered = importAllResult.useContext(contextDefault).isRendered;
-  let obj = getCreativeAnalyticsParams;
+const QuestDockInsetHeaderBodyDefault = QuestDockInsetHeaderBody;
+
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
+
+export default noop.memo(function QuestDockBountyBody() {
+  const isRendered = noop.useContext(QuestDockVisibilityContextDefault).isRendered;
+  let obj = QuestDockCreativeContext;
   const questDockBounty = obj.useQuestDockBounty();
-  let isQuestDockExpanded = useIsQuestDockExpanded.useIsQuestDockExpanded();
-  const callback = importAllResult.useCallback(() => {
+  let isQuestDockExpanded = QuestDockHooks.useIsQuestDockExpanded();
+  const callback = noop.useCallback(() => {
 
   }, []);
-  const obj2 = useIsQuestDockExpanded;
-  obj = { assetUrl: metadataDefault, isAnimatedAsset: true, paused: null, withAnimation: null };
+  obj = { assetUrl: _modDef11297, isAnimatedAsset: true, paused: null, withAnimation: null };
   let tmp8 = !isQuestDockExpanded;
   if (isQuestDockExpanded) {
     tmp8 = !isRendered;
   }
-  obj[2] = tmp8;
+  obj.paused = tmp8;
   if (isQuestDockExpanded) {
     isQuestDockExpanded = isRendered;
   }
-  obj = { rewardTile: tmp6(QUEST_DOCK_EXPANDED_PADDING_BOTTOM.QuestDockBodyRewardTile, obj), title: null, description: null, ctaText: isQuestDockExpanded, onCtaPress: null };
+  obj = { rewardTile: tmp6(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, obj), title: null, description: null, ctaText: null, onCtaPress: null, withAnimation: isQuestDockExpanded };
   let str = questDockBounty.productName;
   if (str == null) {
     str = "";
   }
-  obj[1] = str;
+  obj.title = str;
   const intl = tmp2(1114).intl;
-  obj[2] = intl.string(getSystemLocale.t["1uzE2S"]);
+  obj.description = intl.string(util.t["1uzE2S"]);
   const intl2 = tmp2(1114).intl;
-  obj[3] = intl2.string(getSystemLocale.t["1IPUq9"]);
-  obj[4] = callback;
-  return jsx(QUEST_DOCK_EXPANDED_PADDING_BOTTOMDefault, { rewardTile: tmp6(QUEST_DOCK_EXPANDED_PADDING_BOTTOM.QuestDockBodyRewardTile, obj), title: null, description: null, ctaText: isQuestDockExpanded, onCtaPress: null });
+  obj.ctaText = intl2.string(util.t["1IPUq9"]);
+  obj.onCtaPress = callback;
+  return jsx(QuestDockInsetHeaderBodyDefault, { rewardTile: tmp6(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, obj), title: null, description: null, ctaText: null, onCtaPress: null, withAnimation: isQuestDockExpanded });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyBody.tsx");
-
-export default memoResult;

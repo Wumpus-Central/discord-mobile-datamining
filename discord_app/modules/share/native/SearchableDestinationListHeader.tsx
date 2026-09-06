@@ -1,55 +1,52 @@
 // === Module 10983: SearchableDestinationListHeader ===
 
 // Module 10983 (SearchableDestinationListHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import HeaderBackImage from "HeaderBackImage" /* 5624 */;
-import Background from "Background" /* 5631 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6945 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import _mod5631 from "module_5631" /* 5631 */;
+import HeaderShared from "HeaderShared" /* 7863 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { headerLeftContainer: null, headerRightContainer: null, header: null };
-createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingRight: ThemesDefault.space.PX_16 };
-const obj1 = { paddingRight: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("set").fileFinishedImporting("modules/share/native/SearchableDestinationListHeader.tsx");
+const useIsWindowLarge = tmp5(6945);
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { headerLeftContainer: null, headerRightContainer: null, header: null };
+createStyles = { paddingLeft: nativeDefault.space.PX_16 };
+createStyles.headerLeftContainer = createStyles;
+createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+const obj1 = { paddingRight: nativeDefault.space.PX_16 };
+createStyles.header = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/SearchableDestinationListHeader.tsx");
 
 export default function SearchableDestinationListHeader(arg0) {
   ({ subtitle: require, subtitleColor: importDefault } = arg0);
   ({ title, headerRight, onClose } = arg0);
-  const tmp = callback();
+  const tmp = closure_4();
   const obj = {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
-      return closure_1_3(closure_1_0(closure_1_2[6]).GenericHeaderTitle, { title: children.children, subtitle: closure_0, subtitleColor: closure_1, variant: "redesign/heading-18/bold" });
+      return jsx(HeaderShared.GenericHeaderTitle, { title: children.children, subtitle, subtitleColor, variant: "redesign/heading-18/bold" });
     },
     headerTitleAlign: "center",
-    headerLeft: HeaderBackImage.getHeaderCloseButton(onClose),
+    headerLeft: NavigatorHeader.getHeaderCloseButton(onClose),
     headerRight,
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
     headerStatusBarHeight: null
   };
-  ({ headerLeftContainer: obj[6], headerRightContainer: obj[7] } = tmp);
-  const obj2 = HeaderBackImage;
-  const tmp2 = importDefault;
+  ({ headerLeftContainer: obj.headerLeftContainerStyle, headerRightContainer: obj.headerRightContainerStyle } = tmp);
   const tmp4 = jsx;
-  const tmp5 = require;
   if (!obj3.isIOS()) {
     let num = useSafeAreaInsetsDefault().top;
   } else {
     num = 0;
     const tmp5Result = useIsWindowLarge;
   }
-  obj[8] = num + ThemesDefault.space.PX_8;
-  return tmp4(Background.Header, obj);
+  obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
+  return tmp4(_mod5631.Header, obj);
 };

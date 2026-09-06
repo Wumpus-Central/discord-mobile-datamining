@@ -1,27 +1,27 @@
-// === Module 1076: items ===
+// === Module 1076: CollectiblesShopConstants ===
 
-// Module 1076 (items)
-import set2 from "set" /* 1077 */;
+// Module 1076 (CollectiblesShopConstants)
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
 import CollectibleSearchItemType from "CollectibleSearchItemType" /* 1078 */;
 import CollectibleSearchSortType from "CollectibleSearchSortType" /* 1079 */;
 import CollectibleSearchSortDirection from "CollectibleSearchSortDirection" /* 1080 */;
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-let obj = { HOME: "home", CATALOG: "catalog", ORBS: "orbs", AVATAR_DECORATIONS: "avatar-decorations", PROFILE_EFFECTS: "profile-effects", NAMEPLATES: "nameplates", PROFILE_FRAMES: "profile-frames", BUNDLES: "bundles", COLLABS: "collabs", OFFER_ELIGIBLE: "offer-eligible", LAYOUT: "layout", COLLECTION_INDEX: "collection-index", GAME_SHOPS: "game-shops", GAME_SERVERS: "game-servers" };
+let EXTERNAL_PRODUCT_SKU_IDS = { HOME: "home", CATALOG: "catalog", ORBS: "orbs", AVATAR_DECORATIONS: "avatar-decorations", PROFILE_EFFECTS: "profile-effects", NAMEPLATES: "nameplates", PROFILE_FRAMES: "profile-frames", BUNDLES: "bundles", COLLABS: "collabs", OFFER_ELIGIBLE: "offer-eligible", LAYOUT: "layout", COLLECTION_INDEX: "collection-index", GAME_SHOPS: "game-shops", GAME_SERVERS: "game-servers" };
 const items = [, , , , ];
-({ AVATAR_DECORATIONS: arr[0], PROFILE_EFFECTS: arr[1], NAMEPLATES: arr[2], PROFILE_FRAMES: arr[3], BUNDLES: arr[4] } = obj);
-obj = { ORB_PROFILE_BADGE: "1342211853484429445", FRACTIONAL_PREMIUM: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY, FRACTIONAL_PREMIUM_1_DAY: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY };
-let set = new Set(Object.values(obj));
+({ AVATAR_DECORATIONS: arr[0], PROFILE_EFFECTS: arr[1], NAMEPLATES: arr[2], PROFILE_FRAMES: arr[3], BUNDLES: arr[4] } = EXTERNAL_PRODUCT_SKU_IDS);
+EXTERNAL_PRODUCT_SKU_IDS = { ORB_PROFILE_BADGE: "1342211853484429445", FRACTIONAL_PREMIUM: FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY, FRACTIONAL_PREMIUM_1_DAY: FractionalPremiumSKUs.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY };
+const set = new Set(Object.values(EXTERNAL_PRODUCT_SKU_IDS));
 const items1 = [CollectibleSearchItemType.CollectibleSearchItemType.AVATAR_DECORATION, CollectibleSearchItemType.CollectibleSearchItemType.NAMEPLATE, CollectibleSearchItemType.CollectibleSearchItemType.PROFILE_EFFECT, CollectibleSearchItemType.CollectibleSearchItemType.PROFILE_FRAME, CollectibleSearchItemType.CollectibleSearchItemType.BUNDLE];
-obj = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RELEVANCE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
-const items2 = [obj, { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC }, , , ];
+EXTERNAL_PRODUCT_SKU_IDS = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RELEVANCE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
+const items2 = [EXTERNAL_PRODUCT_SKU_IDS, { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC }, , , ];
 const obj1 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
 items2[2] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC };
 const obj2 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC };
 items2[3] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
 const obj3 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
 items2[4] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.POPULARITY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
 const items3 = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
 
 export const POPULAR_PICK_PRODUCTS = ["1212569433839636530", "1232073608168472638", "1232071712695386162", "1212570343567261736", "1232071157746765906", "1144308439720394944", "1139323093991575696", "1232070870093008937", "1232073286582538261", "1228234634379132958", "1144307957425778779", "1197344764174008452", "1212569856189407352", "1139323093551165533", "1232073448415821854"];
@@ -36,7 +36,7 @@ export const STATE_TRANSITION_THRESHOLD_PX = 20;
 export const CollectiblesSearchBarCTAName = { SEARCH_ICON: "search icon", SEARCH_BAR: "search bar", SEARCH_BAR_CLEAR: "search bar clear" };
 export const BROWSE_CATEGORY_QUERY_PARAM = "category";
 export const GAME_SERVER_GAME_ID_QUERY_PARAM = "game_server_game_id";
-export const CollectibleShopTab = obj;
+export const CollectibleShopTab = EXTERNAL_PRODUCT_SKU_IDS;
 export const CollectiblesIndexPageTabs = items;
 export const isIndexPageTab = function isIndexPageTab(arg0) {
   return items.includes(arg0);
@@ -61,9 +61,9 @@ export const LIMITED_TIME_BADGE_DAYS_THRESHOLD = 60;
 export const MAX_FEED_SIZE = 36;
 export const SHOP_ALL_PAGE_SIZE = 5;
 export const ShopPurchaseType = { FIAT: 0, [0]: "FIAT", ORB: 1, [1]: "ORB", PREMIUM_PURCHASE: 2, [2]: "PREMIUM_PURCHASE", PROMOTIONAL: 3, [3]: "PROMOTIONAL", TENURE_REWARD: 4, [4]: "TENURE_REWARD", GIFT: 5, [5]: "GIFT" };
-export const EXTERNAL_PRODUCT_SKU_IDS = obj;
+export { EXTERNAL_PRODUCT_SKU_IDS };
 export const isFractionalPremiumSku = function isFractionalPremiumSku(arg0) {
-  const ALL = set2.FractionalPremiumSKUsSets.ALL;
+  const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
   return ALL.has(arg0);
 };
 export const isExternalProduct = function isExternalProduct(arg0) {

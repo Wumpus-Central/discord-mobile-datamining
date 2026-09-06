@@ -1,28 +1,32 @@
-// === Module 17399: ? ===
+// === Module 17399: CheckboxActionComponent ===
 
-// Module 17399
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17399 (CheckboxActionComponent)
+import _modDef38 from "module_38" /* 38 */;
+import Server from "Server" /* 1894 */;
+import ComponentStateContext from "ComponentStateContext" /* 8112 */;
+import Checkbox from "Checkbox" /* 9429 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo((type) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
+
+export default noop.memo((type) => {
   type = type.type;
-  let obj = type(executeStateUpdate[2]);
+  let obj = ComponentStateContext;
   const componentStateContext = obj.useComponentStateContext();
-  state(executeStateUpdate[3])(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
+  _modDef38(null != componentStateContext, "CheckboxActionComponent must be rendered inside a ComponentStateContext");
   let tmp5;
   if (null != type.default) {
-    obj = { type: null, value: null };
-    obj[0] = type;
-    obj[1] = _default;
+    obj = { type, value: _default };
     tmp5 = obj;
   }
   const componentState = componentStateContext.useComponentState(type, tmp5);
-  state = componentState.state;
-  executeStateUpdate = componentState.executeStateUpdate;
+  const state = componentState.state;
+  const executeStateUpdate = componentState.executeStateUpdate;
   const items = [state, type];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     type = undefined;
     if (state != null) {
       type = iter.type;
@@ -39,10 +43,10 @@ const memoResult = importAllResult.memo((type) => {
     type = first.type;
   }
   let tmp11;
-  if (type === type(executeStateUpdate[4]).ComponentType.LABEL) {
+  if (type === Server.ComponentType.LABEL) {
     tmp11 = first;
   }
-  state(executeStateUpdate[3])(null != tmp11, "CheckboxActionComponent must be a child of a Label component");
+  _modDef38(null != tmp11, "CheckboxActionComponent must be a child of a Label component");
   obj = {
     label: tmp11.label,
     description: tmp11.description,
@@ -51,7 +55,7 @@ const memoResult = importAllResult.memo((type) => {
       executeStateUpdate({ type, value });
     }
   };
-  return jsx(type(executeStateUpdate[5]).Checkbox, {
+  return jsx(Checkbox.Checkbox, {
     label: tmp11.label,
     description: tmp11.description,
     checked: memo,
@@ -60,6 +64,3 @@ const memoResult = importAllResult.memo((type) => {
     }
   });
 });
-const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
-
-export default memoResult;

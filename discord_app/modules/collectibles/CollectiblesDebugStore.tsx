@@ -1,32 +1,32 @@
-// === Module 7557: useCollectiblesDebugStore ===
+// === Module 7557: CollectiblesDebugStore ===
 
-// Module 7557 (useCollectiblesDebugStore)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 7557 (CollectiblesDebugStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create((arg0) => {
+const useCollectiblesDebugStore = module_560.create((arg0) => {
   closure_0 = arg0;
   return {
     logs: [],
     addLog(arg0) {
-      const callback = arg0;
-      return callback((logs) => {
-        obj = { logs: null };
+      closure_0 = arg0;
+      return closure_0((logs) => {
+        const obj = { logs: null };
         const items = [...logs.logs];
         const date = new Date();
         items[tmp] = "[" + new Date().toISOString().split("T")[0] + "] " + closure_0;
-        obj[0] = items;
+        obj.logs = items;
         return obj;
       });
     },
     clearLogs() {
-      return callback({ logs: [] });
+      return closure_0({ logs: [] });
     }
   };
 });
-const result = set.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
 
-export const useCollectiblesDebugStore = obj;
+export { useCollectiblesDebugStore };
 export const addDebugLog = function addDebugLog(arg0) {
   const date = new Date();
   const state = obj.getState();

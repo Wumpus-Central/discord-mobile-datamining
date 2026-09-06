@@ -1,22 +1,22 @@
-// === Module 12775: SpecialNavigationPath ===
+// === Module 12775: NavigationPathUtils ===
 
-// Module 12775 (SpecialNavigationPath)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import _extends from "_extends" /* 4392 */;
+// Module 12775 (NavigationPathUtils)
+import Constants from "Constants" /* 1074 */;
+import _mod4392 from "module_4392" /* 4392 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-let obj = { FRIENDS: 0, [0]: "FRIENDS" };
-const result = set.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
+const Routes = Constants.Routes;
+const SpecialNavigationPath = { FRIENDS: 0, [0]: "FRIENDS" };
+const result = size.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
 
-export const SpecialNavigationPath = obj;
+export { SpecialNavigationPath };
 export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavigationPath(pathname) {
   if (pathname.pathname === Routes.FRIENDS) {
     return obj.FRIENDS;
   }
 };
 export const useSelectedSpecialNavigationPath = function useSelectedSpecialNavigationPath() {
-  obj = _extends;
+  const obj = _mod4392;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

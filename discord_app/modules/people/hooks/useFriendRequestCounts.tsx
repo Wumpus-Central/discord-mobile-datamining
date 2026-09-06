@@ -1,24 +1,25 @@
-// === Module 16748: getIncomingFriendRequestCount ===
+// === Module 16748: useFriendRequestCounts ===
 
-// Module 16748 (getIncomingFriendRequestCount)
+// Module 16748 (useFriendRequestCounts)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 7658 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
+import _slicedToArray from "module_32" /* 32 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/people/hooks/useFriendRequestCounts.tsx");
 
 export const getIncomingFriendRequestCount = function getIncomingFriendRequestCount(items) {
-  [obj, obj2] = callback(items, 2);
+  [obj, obj2] = _slicedToArray(items, 2);
   const pendingCount = obj.getPendingCount();
   return pendingCount + obj2.getPendingIncomingCount();
 };
 export const useIncomingFriendRequestCount = function useIncomingFriendRequestCount() {
-  let items = [closure_4, closure_3];
+  let items = [RelationshipStore, GameRelationshipStore];
   return initialize.useStateFromStores(items, () => {
-    const items = [closure_4, closure_3];
-    [obj, obj2] = callback(items, 2);
+    const items = [RelationshipStore, GameRelationshipStore];
+    [obj, obj2] = _slicedToArray(items, 2);
     const pendingCount = obj.getPendingCount();
     return pendingCount + obj2.getPendingIncomingCount();
   });
@@ -30,7 +31,7 @@ export const getOutgoingFriendRequestCount = function getOutgoingFriendRequestCo
     items[1] = globalThis.s;
     tmp = items;
   }
-  [obj, obj2] = callback(tmp, 2);
+  [obj, obj2] = _slicedToArray(tmp, 2);
   const outgoingCount = obj.getOutgoingCount();
   return outgoingCount + obj2.getPendingOutgoingCount();
 };

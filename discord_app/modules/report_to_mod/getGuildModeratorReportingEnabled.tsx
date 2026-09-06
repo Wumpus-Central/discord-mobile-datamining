@@ -1,9 +1,9 @@
 // === Module 7266: getGuildModeratorReportingEnabled ===
 
 // Module 7266 (getGuildModeratorReportingEnabled)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportingEnabled.tsx");
+const result = size.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportingEnabled.tsx");
 
 export default function getGuildModeratorReportingEnabled(moderatorReporting) {
   moderatorReporting = moderatorReporting.moderatorReporting;

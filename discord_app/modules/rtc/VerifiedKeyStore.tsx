@@ -1,13 +1,13 @@
-// === Module 9134: initialize ===
+// === Module 9134: VerifiedKeyStore ===
 
-// Module 9134 (initialize)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 9134 (VerifiedKeyStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 9135 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _mod9135 from "module_9135" /* 9135 */;
 
-require = arg1;
-let closure_3 = {};
+require = fn;
+let users = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class VerifiedKeyStore extends PersistedStore {
 }
@@ -22,12 +22,12 @@ prototype["initialize"] = function initialize(users) {
   }
 };
 prototype["getState"] = function getState() {
-  return { users: closure_3 };
+  return { users };
 };
 prototype["getKeyTrustedAt"] = function getKeyTrustedAt(arg0, uint8Array) {
-  const obj = set;
+  const obj = _mod9135;
   let tmp2;
-  if (dependencyMap[arg0] != null) {
+  if (users[arg0] != null) {
     tmp2 = tmp[obj.serializeKey(obj, uint8Array)];
   }
   return tmp2;
@@ -36,28 +36,27 @@ prototype["isKeyVerified"] = function isKeyVerified(arg0, uint8Array) {
   return null != this.getKeyTrustedAt(arg0, uint8Array);
 };
 prototype["getUserIds"] = function getUserIds() {
-  return DISCORD_EPOCHDefault.keys(closure_3);
+  return SnowflakeUtilsDefault.keys(users);
 };
-prototype["getUserVerifiedKeys"] = function getUserVerifiedKeys(closure_0) {
-  return dependencyMap[closure_0];
+prototype["getUserVerifiedKeys"] = function getUserVerifiedKeys(userId) {
+  return users[userId];
 };
 VerifiedKeyStore.displayName = "VerifiedKeyStore";
 VerifiedKeyStore.persistKey = "VerifiedKeyStore";
-const verifiedKeyStore = new VerifiedKeyStore(dispatcherDefault, {
+const verifiedKeyStore = new VerifiedKeyStore(DispatcherDefault, {
   SECURE_FRAMES_VERIFIED_KEY_CREATE: function handleSecureFramesVerifiedKeyCreate(arg0) {
     ({ userId, key } = arg0);
-    let obj = dependencyMap[userId];
+    let obj = users[userId];
     if (obj == null) {
       obj = {};
     }
-    dependencyMap[userId] = obj;
+    users[userId] = obj;
     const uint8Array = new Uint8Array(key);
-    const obj2 = set;
-    obj[set.serializeKey(uint8Array)] = Date.now();
+    obj[_mod9135.serializeKey(uint8Array)] = Date.now();
   },
   SECURE_FRAMES_VERIFIED_KEY_DELETE: function handleSecureFramesVerifiedKeyDelete(arg0) {
     let tmp6 = null;
-    if (null == dependencyMap[arg0.userId]) {
+    if (null == users[arg0.userId]) {
       return false;
     } else {
       delete tmp4[tmp3];
@@ -74,12 +73,13 @@ const verifiedKeyStore = new VerifiedKeyStore(dispatcherDefault, {
     }
   },
   SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE: function handleSecureFramesUserVerifiedKeysDelete(arg0) {
-    if (null != dependencyMap[arg0.userId]) {
+    if (null != users[arg0.userId]) {
       delete tmp[tmp2];
     }
-    return null != dependencyMap[arg0.userId];
+    return null != users[arg0.userId];
   }
 });
-const result = require("set").fileFinishedImporting("modules/rtc/VerifiedKeyStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/VerifiedKeyStore.tsx");
 
 export default verifiedKeyStore;

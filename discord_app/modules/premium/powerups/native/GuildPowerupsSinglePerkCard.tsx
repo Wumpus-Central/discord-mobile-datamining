@@ -1,18 +1,18 @@
 // === Module 12570: GuildPowerupsSinglePerkCard ===
 
 // Module 12570 (GuildPowerupsSinglePerkCard)
-import noopAll from "noop" /* 19 */;
 import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12496 */;
 import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12499 */;
 import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12519 */;
 import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12520 */;
 import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 12567 */;
 import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 12571 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
 
 export default function GuildPowerupsSinglePerkCard(badge) {
   ({ guildId, powerup } = badge);
@@ -27,9 +27,9 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   if (str == null) {
     str = "";
   }
-  obj[3] = str;
-  obj[4] = calculatePowerupCardStatus;
-  obj[5] = tmp4;
-  obj[6] = badge.badge;
+  obj.imageUrl = str;
+  obj.status = calculatePowerupCardStatus;
+  obj.onPress = tmp4;
+  obj.badge = badge.badge;
   return tmp5(GuildPowerupsPerkCardDefault, obj);
 };

@@ -1,14 +1,15 @@
-// === Module 9308: itemNeedsHeicPreConversion ===
+// === Module 9308: heicPreConvert ===
 
-// Module 9308 (itemNeedsHeicPreConversion)
-import cancel from "cancel" /* 5128 */;
-import set from "set" /* 5171 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+// Module 9308 (heicPreConvert)
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import Upload from "Upload" /* 5128 */;
+import heicFilename from "heicFilename" /* 5171 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
+require = fn;
 function itemNeedsHeicPreConversion(file) {
-  let isHeicFileResult = file.platform === cancel.UploadPlatform.WEB;
+  let isHeicFileResult = file.platform === Upload.UploadPlatform.WEB;
   if (isHeicFileResult) {
     isHeicFileResult = true !== file.heicConversionEvaluated;
   }
@@ -16,266 +17,222 @@ function itemNeedsHeicPreConversion(file) {
     isHeicFileResult = null != file.file;
   }
   if (isHeicFileResult) {
-    isHeicFileResult = set.isHeicFile(file.file);
-    const tmpResult = set;
+    isHeicFileResult = heicFilename.isHeicFile(file.file);
+    const tmpResult = heicFilename;
   }
   return isHeicFileResult;
 }
-function _maybePreConvertHeicItem() {
-  const self = this;
-  let tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function*(arg0) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_5 = async function _maybePreConvertHeicItem(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
         if (arg0 === 1) {
-          throw arg1;
+          c8 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c8 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_5 = tmp3;
+          closure_4 = tmp7;
+          closure_132_0 = closure_0;
+          closure_132_1 = undefined;
+          closure_132_2 = undefined;
+          closure_132_3 = undefined;
+          closure_132_4 = undefined;
+          closure_132_5 = undefined;
+          closure_132_6 = undefined;
+          closure_132_7 = undefined;
+          closure_132_8 = undefined;
+          let config;
+          let file2;
+          closure_132_11 = undefined;
+          closure_132_12 = undefined;
+          closure_132_13 = undefined;
+          closure_132_14 = undefined;
+          closure_132_15 = undefined;
+          if (itemNeedsHeicPreConversion(closure_0)) {
+            c6 = 1;
+            const items = [asyncRequireImpl(dependencyMap[4], dependencyMap.paths), asyncRequireImpl(dependencyMap[6], dependencyMap.paths), asyncRequireImpl(dependencyMap[7], dependencyMap.paths)];
+            c7 = 2;
+            c8 = 1;
+            const obj1 = { value: Promise.all(items), done: false };
+            return obj1;
+          } else {
+            c8 = 3;
+            const obj2 = { value: tmp111, done: true };
+            return obj2;
+          }
+          tmp111 = closure_0;
         }
+      } else if (1 === tmp7) {
+        c6 = 0;
+        c8 = 3;
+        const obj3 = { value: closure_132_0, done: true };
+        return obj3;
+      } else if (2 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          const obj4 = { value, done: true };
+          return obj4;
+        } else {
+          closure_132_1 = value;
+          closure_132_2 = closure_133_2(closure_132_1, 3);
+          closure_132_3 = closure_132_2[0];
+          closure_132_4 = closure_132_3.maybeConvertHeicToJpeg;
+          closure_132_5 = closure_132_3.renameToJpegExtension;
+          closure_132_6 = closure_132_3.HeicConversionFailureReason;
+          closure_132_7 = closure_132_2[1].HeicUploadConversionExperiment;
+          closure_132_8 = closure_132_2[2].default;
+          config = closure_132_7.getConfig({ location: "heicPreConvert.maybePreConvertHeicItem" });
+          if (config.enabled) {
+            file2 = tmp110.file;
+            c7 = 3;
+            c8 = 1;
+            const obj5 = { value: closure_132_4(file2, config.quality, config.maxFileSizeBytes), done: false };
+            return obj5;
+          } else {
+            const obj6 = {};
+            const merged = Object.assign(tmp110);
+            obj6.heicConversionEvaluated = true;
+            c6 = 0;
+            c8 = 3;
+            const obj7 = { value: obj6, done: true };
+            return obj7;
+          }
+        }
+      } else if (3 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          const obj8 = { value, done: true };
+          return obj8;
+        } else {
+          closure_132_11 = value;
+          if (null != closure_132_11) {
+            if (closure_132_11.success) {
+              if (null != closure_132_11.convertedBlob) {
+                const _File = File;
+                const items1 = [closure_132_11.convertedBlob];
+                const obj9 = { type: "image/jpeg", lastModified: file2.lastModified };
+                const file = new File(items1, closure_132_5(file2.name), obj9);
+                closure_132_13 = file;
+                c7 = 4;
+                c8 = 1;
+                const obj10 = { value: closure_132_8.fromBlob(file2).catch(() => null), done: false };
+                return obj10;
+              }
+            }
+          }
+          let tmp39;
+          if (null != closure_132_11) {
+            const reason = closure_132_11.reason;
+            let UNKNOWN_ERROR = reason;
+            if (reason == null) {
+              UNKNOWN_ERROR = closure_132_6.UNKNOWN_ERROR;
+            }
+            const obj11 = { convertedMimeType: null, conversionFailureReason: UNKNOWN_ERROR, compressTimeMs: closure_132_11.compressTimeMs };
+            tmp39 = obj11;
+          }
+          closure_132_12 = tmp39;
+          const obj12 = {};
+          const merged1 = Object.assign(closure_132_0);
+          obj12.heicConversionEvaluated = true;
+          obj12.heicConversionAnalytics = closure_132_12;
+          c6 = 0;
+          c8 = 3;
+          const obj13 = { value: obj12, done: true };
+          return obj13;
+        }
+      } else if (arg0 === 1) {
+        c8 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj14 = { value, done: true };
+        return obj14;
       } else {
-        try {
-          c8 = 2;
-          if (0 === config) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let renameToJpegExtension = tmp3;
-              let maybeConvertHeicToJpeg = tmp7;
-              let table;
-              let UNKNOWN_ERROR;
-              let size;
-              maybeConvertHeicToJpeg = undefined;
-              renameToJpegExtension = undefined;
-              let constants;
-              config = undefined;
-              c8 = undefined;
-              let config2;
-              let file;
-              closure_11 = undefined;
-              let obj11;
-              file = undefined;
-              closure_14 = undefined;
-              let obj15;
-              let tmp = closure_1_4;
-              tmp = lib;
-              if (closure_1_4(lib)) {
-                constants = 1;
-                const items = [lib(closure_1_1[5])(closure_1_1[4], closure_1_1.paths), lib(closure_1_1[5])(closure_1_1[6], closure_1_1.paths), lib(closure_1_1[5])(closure_1_1[7], closure_1_1.paths)];
-                config = 2;
-                c8 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = Promise.all(items);
-                return obj1;
-              } else {
-                c8 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = tmp;
-                return obj2;
-              }
-            }
-          } else if (1 === tmp7) {
-            constants = 0;
-            c8 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = lib;
-            return obj3;
-          } else if (2 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 0;
-              c8 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
-              return obj4;
-            } else {
-              table = arg1;
-              tmp = UNKNOWN_ERROR;
-              tmp = table;
-              UNKNOWN_ERROR = UNKNOWN_ERROR(table, 3);
-              tmp = UNKNOWN_ERROR;
-              size = UNKNOWN_ERROR[0];
-              tmp = size;
-              maybeConvertHeicToJpeg = size.maybeConvertHeicToJpeg;
-              tmp = size;
-              renameToJpegExtension = size.renameToJpegExtension;
-              tmp = size;
-              constants = size.HeicConversionFailureReason;
-              tmp = UNKNOWN_ERROR;
-              config = UNKNOWN_ERROR[1].HeicUploadConversionExperiment;
-              tmp = UNKNOWN_ERROR;
-              c8 = UNKNOWN_ERROR[2].default;
-              tmp = config;
-              config2 = config.getConfig({ location: "heicPreConvert.maybePreConvertHeicItem" });
-              tmp = config2;
-              tmp = maybeConvertHeicToJpeg;
-              tmp = lib;
-              if (config2.enabled) {
-                file = tmp.file;
-                config = 3;
-                c8 = 1;
-                const obj5 = { value: null, done: false };
-                obj5[0] = maybeConvertHeicToJpeg(file, config2.quality, config2.maxFileSizeBytes);
-                return obj5;
-              } else {
-                const obj6 = {};
-                const merged = Object.assign(tmp);
-                obj6.heicConversionEvaluated = true;
-                constants = 0;
-                c8 = 3;
-                const obj7 = { value: null, done: true };
-                obj7[0] = obj6;
-                return obj7;
-              }
-            }
-          } else if (3 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              constants = 0;
-              c8 = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = arg1;
-              return obj8;
-            } else {
-              closure_11 = arg1;
-              if (null != closure_11) {
-                if (closure_11.success) {
-                  if (null != closure_11.convertedBlob) {
-                    const _File = File;
-                    const items1 = [closure_11.convertedBlob];
-                    const obj9 = { type: "image/jpeg", lastModified: null };
-                    obj9[1] = file.lastModified;
-                    file = new File(items1, renameToJpegExtension(file.name), obj9);
-                    config = 4;
-                    c8 = 1;
-                    const obj10 = { value: null, done: false };
-                    obj10[0] = c8.fromBlob(file).catch(() => null);
-                    return obj10;
-                  }
-                }
-              }
-              let tmp39;
-              if (null != closure_11) {
-                const reason = closure_11.reason;
-                UNKNOWN_ERROR = reason;
-                if (reason == null) {
-                  UNKNOWN_ERROR = constants.UNKNOWN_ERROR;
-                }
-                obj11 = { convertedMimeType: null, conversionFailureReason: null, compressTimeMs: null };
-                obj11[1] = UNKNOWN_ERROR;
-                obj11[2] = closure_11.compressTimeMs;
-                tmp39 = obj11;
-              }
-              obj11 = tmp39;
-              const obj12 = {};
-              const merged1 = Object.assign(lib);
-              obj12.heicConversionEvaluated = true;
-              obj12.heicConversionAnalytics = obj11;
-              constants = 0;
-              c8 = 3;
-              const obj13 = { value: null, done: true };
-              obj13[0] = obj12;
-              return obj13;
-            }
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            constants = 0;
-            c8 = 3;
-            const obj14 = { value: null, done: true };
-            obj14[0] = arg1;
-            return obj14;
-          } else {
-            table = arg1;
-            if (arg1 == null) {
-              table = undefined;
-            }
-            closure_14 = table;
-            const compressionMetadata = lib.compressionMetadata;
-            let originalContentType;
-            if (compressionMetadata != null) {
-              originalContentType = compressionMetadata.originalContentType;
-            }
-            if (null != originalContentType) {
-              if ("" !== lib.compressionMetadata.originalContentType) {
-                originalContentType = lib.compressionMetadata.originalContentType;
-              }
-              obj15 = { originalContentType: null, preCompressionSize: null };
-              obj15[0] = originalContentType;
-              const compressionMetadata2 = lib.compressionMetadata;
-              let preCompressionSize;
-              if (compressionMetadata2 != null) {
-                preCompressionSize = compressionMetadata2.preCompressionSize;
-              }
-              size = preCompressionSize;
-              if (preCompressionSize == null) {
-                size = file.size;
-              }
-              obj15[1] = size;
-              const obj16 = {};
-              const merged2 = Object.assign(lib);
-              obj16.file = file;
-              obj16.compressionMetadata = obj15;
-              obj16.originalMd5 = closure_14;
-              obj16.heicConversionEvaluated = true;
-              const obj17 = { convertedMimeType: "image/jpeg", compressTimeMs: null };
-              obj17[1] = closure_11.compressTimeMs;
-              obj16.heicConversionAnalytics = obj17;
-              constants = 0;
-              c8 = 3;
-              const obj18 = { value: null, done: true };
-              obj18[0] = obj16;
-              return obj18;
-            }
-            obj = lib(table[3]);
-            originalContentType = obj.heicMimeType(file);
-          }
-        } catch (tmp72) {
-          if (tmp4 === constants) {
-            c8 = tmp2;
-            throw tmp72;
-          } else {
-            config = tmp;
-          }
+        c1 = value;
+        if (value == null) {
+          c1 = undefined;
         }
+        closure_132_14 = c1;
+        const compressionMetadata = closure_132_0.compressionMetadata;
+        let originalContentType;
+        if (compressionMetadata != null) {
+          originalContentType = compressionMetadata.originalContentType;
+        }
+        if (null != originalContentType) {
+          if ("" !== closure_132_0.compressionMetadata.originalContentType) {
+            originalContentType = closure_132_0.compressionMetadata.originalContentType;
+          }
+          const obj15 = { originalContentType, preCompressionSize: null };
+          const compressionMetadata2 = closure_132_0.compressionMetadata;
+          let preCompressionSize;
+          if (compressionMetadata2 != null) {
+            preCompressionSize = compressionMetadata2.preCompressionSize;
+          }
+          let size = preCompressionSize;
+          if (preCompressionSize == null) {
+            size = file2.size;
+          }
+          obj15.preCompressionSize = size;
+          closure_132_15 = obj15;
+          const obj16 = {};
+          const merged2 = Object.assign(closure_132_0);
+          obj16.file = closure_132_13;
+          obj16.compressionMetadata = closure_132_15;
+          obj16.originalMd5 = closure_132_14;
+          obj16.heicConversionEvaluated = true;
+          const obj17 = { convertedMimeType: "image/jpeg", compressTimeMs: closure_132_11.compressTimeMs };
+          obj16.heicConversionAnalytics = obj17;
+          c6 = 0;
+          c8 = 3;
+          const obj18 = { value: obj16, done: true };
+          return obj18;
+        }
+        obj = closure_133_0(closure_133_1[3]);
+        originalContentType = obj.heicMimeType(file2);
       }
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp72) {
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp72;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("lib/uploader/heicPreConvert.tsx");
+};
+let size = fn(2);
+const result = size.fileFinishedImporting("lib/uploader/heicPreConvert.tsx");
 
 export { itemNeedsHeicPreConversion };
-export const maybePreConvertHeicItem = function maybePreConvertHeicItem(file) {
+export const maybePreConvertHeicItem = function maybePreConvertHeicItem() {
   const self = this;
-  const apply = _maybePreConvertHeicItem.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

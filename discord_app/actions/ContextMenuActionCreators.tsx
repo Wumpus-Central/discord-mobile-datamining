@@ -1,11 +1,11 @@
-// === Module 5553: openContextMenu ===
+// === Module 5553: ContextMenuActionCreators ===
 
-// Module 5553 (openContextMenu)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
+// Module 5553 (ContextMenuActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
+function openContextMenu(stopPropagation, render, enableSpellCheck, renderLazy) {
   stopPropagation.stopPropagation();
   if (null == stopPropagation.currentTarget.contains) {
     pageY = 0;
@@ -90,25 +90,22 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
         }
       }
     }
-    let obj = { render: null, renderLazy: null, target: null, rect: null, config: null };
-    obj[0] = arg1;
-    obj[1] = arg3;
+    let contextMenu = { render, renderLazy, target: null, rect: null, config: null };
     let currentTarget2 = stopPropagation.target;
     if (currentTarget2 == null) {
       currentTarget2 = stopPropagation.currentTarget;
     }
-    obj[2] = currentTarget2;
+    contextMenu.target = currentTarget2;
     const _DOMRect = DOMRect;
     const dOMRect = new DOMRect(tmp3, sum1, 0, 0);
-    obj[3] = dOMRect;
-    let APP = obj(5554).getCurrentlyInteractingAppContext();
+    contextMenu.rect = dOMRect;
+    let APP = contextMenu(5554).getCurrentlyInteractingAppContext();
     if (APP == null) {
       APP = AppContext.APP;
     }
-    obj = { context: null };
-    obj[0] = APP;
+    contextMenu = { context: APP };
     const merged = Object.assign(enableSpellCheck);
-    obj[4] = obj;
+    contextMenu.config = contextMenu;
     let nativeEvent = stopPropagation;
     if ("nativeEvent" in stopPropagation) {
       nativeEvent = stopPropagation.nativeEvent;
@@ -123,31 +120,29 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
         if (nativeEvent.isTrusted) {
           tmp16Result = tmp16(5557);
           importDefault = tmp16Result.addResultListener(() => {
-            callback();
-            obj = callback(closure_1_2[1]);
-            obj = { type: "CONTEXT_MENU_OPEN", contextMenu: obj };
-            obj.dispatch(obj);
+            closure_1();
+            let contextMenu = DispatcherDefault;
+            contextMenu = { type: "CONTEXT_MENU_OPEN", contextMenu };
+            contextMenu.dispatch(contextMenu);
           });
         }
       }
     }
     stopPropagation.preventDefault();
-    const obj3 = obj(5554);
-    obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
-    obj1[1] = obj;
-    dispatcherDefault.dispatch(obj1);
-    const obj6 = dispatcherDefault;
+    const obj3 = contextMenu(5554);
+    const obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu };
+    DispatcherDefault.dispatch(obj1);
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }
 }
-const AppContext = ME.AppContext;
-const result = set.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
+const AppContext = Constants.AppContext;
+const result = size.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
 
 export function closeContextMenu() {
 
 }
 export { openContextMenu };
-export const openContextMenuLazy = function openContextMenuLazy(stopPropagation, arg1, enableSpellCheck) {
-  openContextMenu(stopPropagation, undefined, enableSpellCheck, arg1);
+export const openContextMenuLazy = function openContextMenuLazy(stopPropagation, renderLazy, enableSpellCheck) {
+  openContextMenu(stopPropagation, undefined, enableSpellCheck, renderLazy);
 };

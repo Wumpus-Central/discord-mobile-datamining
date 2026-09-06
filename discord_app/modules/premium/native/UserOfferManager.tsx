@@ -1,13 +1,12 @@
-// === Module 17501: prototype ===
+// === Module 17501: UserOfferManager ===
 
-// Module 17501 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import closure_3 from "emitChanges" /* 7450 */;
-import { PaymentGateways } from "sum" /* 1085 */;
+// Module 17501 (UserOfferManager)
+import UserStore from "UserStore" /* 1371 */;
+import UserOfferStore from "UserOfferStore" /* 7450 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
-initializeDefault;
+let require = fn;
+const PaymentGateways = fn(1085).PaymentGateways;
 let prototype = function UserOfferManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -18,10 +17,9 @@ let prototype = function UserOfferManager() {
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
     currentUser = currentUser.getCurrentUser();
-    const NitroACOMSubscriptionExperiment = applyArgumentsResult(table[4]).NitroACOMSubscriptionExperiment;
+    const NitroACOMSubscriptionExperiment = applyArgumentsResult(dependencyMap[4]).NitroACOMSubscriptionExperiment;
     if (NitroACOMSubscriptionExperiment.getConfig({ location: "UserOfferManager.handlePostConnectionOpen" }).enabled) {
-      const obj = { offerId: "Array", paymentGatewayOverride: 0 };
-      obj[1] = constants.APPLE_ADVANCED_COMMERCE;
+      const obj = { offerId: "Array", paymentGatewayOverride: constants.APPLE_ADVANCED_COMMERCE };
       const tmp4 = obj;
     }
     let isPremiumResult = null == currentUser || !currentUser.verified;
@@ -42,6 +40,7 @@ let prototype = function UserOfferManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/UserOfferManager.tsx");
 
 export default prototype;

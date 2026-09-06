@@ -1,13 +1,16 @@
-// === Module 5526: RemoveMemberVerificationRouteExperiment ===
+// === Module 5526: MemberVerificationRouteExperiment ===
 
-// Module 5526 (RemoveMemberVerificationRouteExperiment)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 5526 (MemberVerificationRouteExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null };
+let obj = { name: "2026-07-rm-member-verification-route", kind: "user", defaultConfig: { isDeprecated: false }, variations: null };
+obj = { 1: null };
 obj[1] = { isDeprecated: true };
-const tmp2 = getUnitIdDefault({ name: "2026-07-rm-member-verification-route", kind: "user", defaultConfig: { isDeprecated: false }, variations: obj });
+obj.variations = obj;
+const tmp2 = apex_ApexExperimentDefault(obj);
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationRouteExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationRouteExperiment.tsx");
 
 export const RemoveMemberVerificationRouteExperiment = tmp2;
 export const getIsMemberVerificationRouteDeprecated = function getIsMemberVerificationRouteDeprecated(transitionToMemberVerification) {

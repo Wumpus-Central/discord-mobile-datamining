@@ -1,9 +1,9 @@
-// === Module 7523: ApplicationCommandSectionType ===
+// === Module 7523: ApplicationCommandTypes ===
 
-// Module 7523 (ApplicationCommandSectionType)
-import set from "set" /* 2 */;
+// Module 7523 (ApplicationCommandTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");
+const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandTypes.tsx");
 
 export const ApplicationCommandSectionType = { BUILT_IN: 0, [0]: "BUILT_IN", APPLICATION: 1, [1]: "APPLICATION" };
 export const ApplicationCommandInputType = { BUILT_IN: 0, [0]: "BUILT_IN", BUILT_IN_TEXT: 1, [1]: "BUILT_IN_TEXT", BUILT_IN_INTEGRATION: 2, [2]: "BUILT_IN_INTEGRATION", BOT: 3, [3]: "BOT", PLACEHOLDER: 4, [4]: "PLACEHOLDER" };

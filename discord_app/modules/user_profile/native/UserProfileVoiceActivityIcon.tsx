@@ -1,25 +1,25 @@
 // === Module 10894: UserProfileVoiceActivityIcon ===
 
 // Module 10894 (UserProfileVoiceActivityIcon)
-import noopAll from "noop" /* 19 */;
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "sum" /* 1085 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
+const require = fn;
+const Permissions = fn(1085).Permissions;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
 
 export default function UserProfileVoiceActivityIcon(channel) {
   channel = channel.channel;
-  const merged = Object.assign(channel, Object.create(null));
+  const merged = Object.assign(channel, Object.assign({ channel: 0 }));
   let obj = channel(504);
-  const items = [closure_3];
+  const items = [PermissionStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
-      isPrivateResult = closure_1_3.can(closure_1_4.CONNECT, channel);
+      isPrivateResult = PermissionStore.can(Permissions.CONNECT, channel);
     }
     return isPrivateResult;
   });
@@ -43,7 +43,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
         const merged2 = Object.assign(merged);
         tmp8Result = jsx(tmp2(5097).StageIcon, {});
       } else if (channel.isNSFW()) {
-        obj1 = {};
+        const obj1 = {};
         const merged3 = Object.assign(merged);
         tmp8Result = tmp8(tmp2(5099).VoiceWarningIcon, obj1);
       } else {

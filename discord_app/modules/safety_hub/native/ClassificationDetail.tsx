@@ -1,33 +1,32 @@
-// === Module 11879: ClassificationHeader ===
+// === Module 11879: ClassificationDetail ===
 
-// Module 11879 (ClassificationHeader)
+// Module 11879 (ClassificationDetail)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import renderDefault from "render" /* 9050 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "_getSystemLocale" /* 2025 */;
-import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
-import SafetyHubView from "SafetyHubView" /* 8419 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import LinkingDefault from "Linking" /* 4255 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import MetricEvents from "MetricEvents" /* 7607 */;
+import SafetyHubModels from "SafetyHubModels" /* 8420 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import SafetyHubStore from "SafetyHubStore" /* 8430 */;
 
-require = arg1;
+require = fn;
 function ClassificationHeader(classificationTypeText) {
   classificationTypeText = classificationTypeText.classificationTypeText;
   const guildMetadata = classificationTypeText.guildMetadata;
-  const tmp = callback3();
+  const tmp = closure_16();
   const items = [classificationTypeText, guildMetadata];
   let obj = { style: tmp.header, children: null };
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let name = {
       classification_type: classificationTypeText,
-      classificationHook(children) {
-        return callback2(callback(table[9]).Text, { variant: "heading-xl/bold", children }, arg1);
+      classificationHook(children, arg1) {
+        return closure_1_13(classificationTypeText(closure_1_2[9]).Text, { variant: "heading-xl/bold", children }, arg1);
       }
     };
     let tmp3 = null;
@@ -36,11 +35,11 @@ function ClassificationHeader(classificationTypeText) {
       if (tmp2 != tmp3) {
         member_type = tmp2.member_type;
       }
-      let X1ngSd = classificationTypeText;
-      name = closure_1_2;
-      if (member_type === classificationTypeText(closure_1_2[10]).MemberType.OWNER) {
-        const intl3 = X1ngSd(name[11]).intl;
-        X1ngSd = X1ngSd(name[11]).t.X1ngSd;
+      let X1ngSd = require;
+      name = dependencyMap;
+      if (member_type === SafetyHubModels.MemberType.OWNER) {
+        const intl3 = X1ngSd(1114).intl;
+        X1ngSd = X1ngSd(1114).t.X1ngSd;
         name = {};
         const merged = Object.assign(name);
         tmp3 = tmp2 == tmp3;
@@ -51,7 +50,7 @@ function ClassificationHeader(classificationTypeText) {
         name.guildName = name;
         let formatResult = intl3.format(X1ngSd, name);
       } else {
-        const intl2 = X1ngSd(name[11]).intl;
+        const intl2 = X1ngSd(1114).intl;
         const obj = {};
         const merged1 = Object.assign(name);
         name = undefined;
@@ -59,75 +58,71 @@ function ClassificationHeader(classificationTypeText) {
           name = tmp2.name;
         }
         obj.guildName = name;
-        formatResult = intl2.format(X1ngSd(name[11]).t.rmpEPD, obj);
+        formatResult = intl2.format(X1ngSd(1114).t.rmpEPD, obj);
       }
     } else {
-      const intl = classificationTypeText(closure_1_2[11]).intl;
-      return intl.format(classificationTypeText(closure_1_2[11]).t["39jfOz"], name);
+      const intl = util.intl;
+      return intl.format(util.t["39jfOz"], name);
     }
   }, items);
   obj = { variant: "text-lg/normal", style: tmp.headerText, color: "mobile-text-heading-primary", children: memo };
-  obj[1] = callback(classificationTypeText(4556).Text, obj);
-  return callback(closure_4, obj);
+  obj.children = closure_13(classificationTypeText(4556).Text, obj);
+  return closure_13(closure_4, obj);
 }
 function ClassificationActionsTaken(arg0) {
   ({ actions, classificationExpiration } = arg0);
   let obj = initialize;
-  const items = [closure_7];
+  const items = [LocaleStore];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  const tmp4 = callback3();
+  const tmp4 = closure_16();
   const found = actions.filter((descriptions) => descriptions.descriptions.length > 0);
   if (0 !== found.length) {
-    obj = { style: null, children: null };
-    obj[0] = tmp4.sectionContainer;
+    obj = { style: tmp4.sectionContainer, children: null };
     obj = { variant: "eyebrow", color: "text-muted", children: null };
     const intl = tmp(1114).intl;
-    obj[2] = intl.string(tmp(1114).t["O2nYk+"]);
-    const items1 = [callback(tmp(4556).Text, obj), ];
-    obj1 = { style: null, children: null };
+    obj.children = intl.string(tmp(1114).t["O2nYk+"]);
+    const items1 = [map1(tmp(4556).Text, obj), ];
+    const obj1 = { style: null, children: null };
     const items2 = [tmp4.actionsTaken];
-    obj1[0] = items2;
-    const items3 = [found.map((action) => callback(closure_19, { action }, action.id)), ];
+    obj1.style = items2;
+    const items3 = [found.map((action) => closure_1_13(ClassificationActionsTakenRows, { action }, action.id)), ];
     let tmp6Result = null;
     if (null != classificationExpiration) {
-      const obj2 = { style: null, children: null };
-      obj2[0] = tmp4.classificationActionDescription;
-      const obj3 = { variant: "text-xs/normal", children: null };
-      obj3[1] = [" ", "\u2022"];
+      const obj2 = { style: tmp4.classificationActionDescription, children: null };
+      const obj3 = { variant: "text-xs/normal", children: [" ", "\u2022"] };
       const items4 = [tmp6(tmp(4556).Text, obj3), ];
       const obj4 = { variant: "text-xs/normal", children: null };
       const intl2 = tmp(1114).intl;
-      const obj5 = { expirationDate: null };
-      obj5[0] = classificationExpiration.toLocaleDateString(stateFromStores, { dateStyle: "medium" });
-      obj4[1] = intl2.format(tmp(1114).t.TByIjT, obj5);
+      const obj5 = { expirationDate: classificationExpiration.toLocaleDateString(stateFromStores, { dateStyle: "medium" }) };
+      obj4.children = intl2.format(tmp(1114).t.TByIjT, obj5);
       items4[1] = tmp8(tmp(4556).Text, obj4);
-      obj2[1] = items4;
+      obj2.children = items4;
       tmp6Result = tmp6(tmp7, obj2, "expiration");
     }
     items3[1] = tmp6Result;
-    obj1[1] = items3;
-    items1[1] = closure_14(closure_4, obj1);
-    obj[1] = items1;
+    obj1.children = items3;
+    items1[1] = closure_1_14(React4, obj1);
+    obj.children = items1;
     tmp6Result = tmp6(tmp7, obj);
-    tmp8 = callback;
+    tmp8 = map1;
   } else {
     tmp6Result = null;
   }
   return tmp6Result;
 }
 function ClassificationActionsTakenRows(action) {
-  closure_0 = callback3();
+  closure_0 = closure_16();
+  let obj = { children: null };
   const descriptions = action.action.descriptions;
-  return callback(closure_15, {
-    children: descriptions.map((children) => {
-      let obj = { style: lib.classificationActionDescription, children: null };
-      const items = [closure_1_14(lib(closure_1_2[9]).Text, { variant: "text-xs/normal", children: [" ", "\u2022"] }), ];
-      obj = { variant: "text-xs/normal", children };
-      items[1] = closure_1_13(lib(closure_1_2[9]).Text, obj);
-      obj[1] = items;
-      return closure_1_14(closure_1_4, obj, arg1);
-    })
+  obj.children = descriptions.map((children, index) => {
+    let obj = { style: closure_0.classificationActionDescription, children: null };
+    const items = [closure_2_14(Text_Text.Text, { variant: "text-xs/normal", children: [" ", "\u2022"] }), ];
+    obj = { variant: "text-xs/normal", children };
+    items[1] = map1(Text_Text.Text, obj);
+    obj.children = items;
+    return closure_2_14(React4, obj, index);
   });
+  return closure_13(closure_15, obj);
 }
 function ClassificationGuidance(hidePolicyCard) {
   hidePolicyCard = hidePolicyCard.hidePolicyCard;
@@ -136,150 +131,153 @@ function ClassificationGuidance(hidePolicyCard) {
   if (tmp) {
     tmp = hidePolicyCard;
   }
-  let obj = { style: callback3().sectionContainer, children: null };
+  let obj = { style: closure_16().sectionContainer, children: null };
   obj = { variant: "eyebrow", color: "text-muted", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t["977iei"]);
-  const items = [callback(Text.Text, obj), , , ];
+  const intl = util.intl;
+  obj.children = intl.string(util.t["977iei"]);
+  const items = [map1(Text_Text.Text, obj), , , ];
   obj = { variant: "text-sm/normal", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.format(getSystemLocale.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
-  items[1] = callback(Text.Text, obj);
+  const intl2 = util.intl;
+  obj.children = intl2.format(util.t["1Z/+aA"], { tosLink, communityGuidelinesLink });
+  items[1] = map1(Text_Text.Text, obj);
   let tmp4Result = !tmp;
   if (!tmp) {
-    obj1 = { classificationTypeText: null, policyExplainerLink: null };
-    obj1[0] = classificationTypeText;
-    obj1[1] = policyExplainerLink;
-    tmp4Result = callback(ClassificationPolicyCard, obj1);
+    const obj1 = { classificationTypeText, policyExplainerLink };
+    tmp4Result = map1(ClassificationPolicyCard, obj1);
   }
   items[2] = tmp4Result;
   items[3] = appealComponent;
-  obj[1] = items;
-  return closure_14(closure_4, obj);
+  obj.children = items;
+  return closure_1_14(React4, obj);
 }
 function ClassificationPolicyCard(classificationDescription) {
   const policyExplainerLink = classificationDescription.policyExplainerLink;
-  const tmp = callback3();
+  const tmp = closure_16();
   let obj = { children: null };
   obj = {
     onPress() {
-      closure_1_1(closure_1_2[14]).openURL(policyExplainerLink);
+      LinkingDefault.openURL(policyExplainerLink);
     },
-    style: items,
+    style: null,
     children: null
   };
-  items = [tmp.classificationPolicyCard];
+  const items = [tmp.classificationPolicyCard];
+  obj.style = items;
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
-  const tmp2 = renderDefault;
-  obj[1] = callback(policyExplainerLink(9402).ShieldIcon, { size: "sm", color: ThemesDefault.colors.TEXT_LINK });
-  const items1 = [callback(closure_4, obj), ];
+  const tmp2 = TouchableHitBoxDefault;
+  obj.children = closure_13(policyExplainerLink(9402).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
+  const items1 = [closure_13(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = policyExplainerLink(1114).intl;
-  obj3[2] = intl.format(policyExplainerLink(1114).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
-  obj2[1] = callback(policyExplainerLink(4556).Text, obj3);
-  items1[1] = callback(closure_4, obj2);
-  obj[2] = items1;
-  obj[0] = callback2(tmp2, obj);
-  return callback(closure_4, obj);
+  obj3.children = intl.format(policyExplainerLink(1114).t.zxUdpj, { classificationDescription: classificationDescription.classificationTypeText });
+  obj2.children = closure_13(policyExplainerLink(4556).Text, obj3);
+  items1[1] = closure_13(closure_4, obj2);
+  obj.children = items1;
+  obj.children = closure_14(tmp2, obj);
+  return closure_13(closure_4, obj);
 }
 function AppealStatus() {
   const obj = { variant: "text-md/normal", color: "text-muted", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t["I2H0/E"]);
-  return callback(Text.Text, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t["I2H0/E"]);
+  return map1(Text_Text.Text, obj);
 }
 function LetUsKnow(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let obj = { variant: "text-sm/normal", color: "text-muted", children: null };
-  const intl = _require(1114).intl;
+  const intl = require("util").intl;
   obj = {
-    letUsKnowHook(children) {
-      return closure_1_13(lib(closure_1_2[9]).Text, { onPress: lib.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children }, arg1);
+    letUsKnowHook(children, arg1) {
+      return map1(Text_Text.Text, { onPress: onPressLetUsKnow.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children }, arg1);
     }
   };
-  obj[2] = intl.format(_require(1114).t.IFxUaT, obj);
-  return callback(_require(4556).Text, obj);
+  obj.children = intl.format(require("util").t.IFxUaT, obj);
+  return closure_13(require("Text/Text").Text, obj);
 }
 function AppealFooter(hasBeenAppealed) {
-  let obj = { style: callback3().letUsKnowContainer, children: null };
+  let obj = { style: closure_16().letUsKnowContainer, children: null };
   if (hasBeenAppealed.hasBeenAppealed) {
     let tmpResult = tmp(AppealStatus, {});
   } else {
-    obj = { onPressLetUsKnow: null };
-    obj[0] = hasBeenAppealed.onPressLetUsKnow;
+    obj = { onPressLetUsKnow: hasBeenAppealed.onPressLetUsKnow };
     tmpResult = tmp(LetUsKnow, obj);
   }
-  obj[1] = tmpResult;
-  return closure_13(closure_4, obj);
+  obj.children = tmpResult;
+  return map1(React4, obj);
 }
 function ExpressiveModalV2AppealFooter(arg0) {
-  const _require = arg0;
-  const tmp = callback3();
+  _require = arg0;
+  const tmp = closure_16();
   let obj = { style: tmp.expressiveModalV2LetUsKnowContainer, children: null };
   obj = { variant: "text-sm/normal", color: "text-muted", style: tmp.expressiveModalV2LetUsKnowText, children: null };
-  const intl = _require(1114).intl;
+  const intl = require("util").intl;
   obj = {
-    letUsKnowHook(children) {
-      return closure_1_13(lib(closure_1_2[9]).Text, { onPress: lib.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children }, arg1);
+    letUsKnowHook(children, arg1) {
+      return map1(Text_Text.Text, { onPress: onPressLetUsKnow.onPressLetUsKnow, variant: "text-sm/normal", color: "text-link", children }, arg1);
     }
   };
-  obj[3] = intl.format(_require(1114).t.LeAhOQ, obj);
-  obj[1] = callback(_require(4556).Text, obj);
-  return callback(closure_4, obj);
+  obj.children = intl.format(require("util").t.LeAhOQ, obj);
+  obj.children = closure_13(require("Text/Text").Text, obj);
+  return closure_13(closure_4, obj);
 }
 function ClassificationDetailFooter(onClose) {
-  let obj = { style: callback3().redirectButtonWrapper, children: null };
+  let obj = { style: closure_16().redirectButtonWrapper, children: null };
   obj = { size: "md", text: null, onPress: null, grow: true };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.elrEjL);
-  obj[2] = onClose.onClose;
-  obj[1] = callback(Button.Button, obj);
-  return callback(closure_4, obj);
+  const intl = util.intl;
+  obj.text = intl.string(util.t.elrEjL);
+  obj.onPress = onClose.onClose;
+  obj.children = map1(components_Button_Button.Button, obj);
+  return map1(React4, obj);
 }
-({ View: c4, ActivityIndicator: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ SafetyHubAnalyticsActionSource: c9, SafetyHubAnalyticsActions: c10, SafetyHubLinks: unpackModuleId } = SafetyHubView);
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ActivityIndicator: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
+const SafetyHubConstants = fn(8419);
+({ SafetyHubAnalyticsActionSource: closure_9, SafetyHubAnalyticsActions: c10, SafetyHubLinks: closure_11 } = SafetyHubConstants);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-createCacheKey = { root: null, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, expressiveModalV2LetUsKnowContainer: null, expressiveModalV2LetUsKnowText: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, redirectButtonWrapper: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "column", height: "100%", paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_32 };
-let obj1 = { display: "flex", flexDirection: "column", height: "100%", paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_32 };
-createCacheKey[2] = { display: "flex", textAlign: "center", alignItems: "center", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[3] = { textAlign: "center", maxWidth: 260 };
-let obj2 = { display: "flex", textAlign: "center", alignItems: "center", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_8 };
-createCacheKey[4] = { display: "flex", gap: ThemesDefault.space.PX_8 };
-let obj3 = { display: "flex", gap: ThemesDefault.space.PX_8 };
-createCacheKey[5] = { display: "flex", paddingLeft: ThemesDefault.space.PX_4, flexDirection: "column", gap: ThemesDefault.space.PX_8 };
-let obj4 = { display: "flex", paddingLeft: ThemesDefault.space.PX_4, flexDirection: "column", gap: ThemesDefault.space.PX_8 };
-createCacheKey[6] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
-createCacheKey[7] = { display: "flex", alignItems: "center" };
-let obj5 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_32 };
-createCacheKey[8] = { display: "flex", alignItems: "center", marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[9] = { textAlign: "center" };
-let obj6 = { display: "flex", alignItems: "center", marginTop: ThemesDefault.space.PX_16 };
-createCacheKey[10] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_4, flexShrink: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj7 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_12, padding: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_4, flexShrink: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[11] = { display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, width: 32, height: 32, borderRadius: ThemesDefault.radii.xxl };
-createCacheKey[12] = { flex: 1 };
-let obj8 = { display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, width: 32, height: 32, borderRadius: ThemesDefault.radii.xxl };
-createCacheKey[13] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-let obj9 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
-createCacheKey[14] = { width: 300, alignSelf: "center", marginTop: ThemesDefault.space.PX_32 };
-let closure_16 = createCacheKey.createStyles(createCacheKey);
-const obj10 = { width: 300, alignSelf: "center", marginTop: ThemesDefault.space.PX_32 };
-const result = require("set").fileFinishedImporting("modules/safety_hub/native/ClassificationDetail.tsx");
+fn(4560);
+let createStyles = { root: null, container: null, header: null, headerText: null, sectionContainer: null, actionsTaken: null, classificationDetailContainer: null, letUsKnowContainer: null, expressiveModalV2LetUsKnowContainer: null, expressiveModalV2LetUsKnowText: null, classificationPolicyCard: null, classificationPolicyCardIcon: null, classificationPolicyCardContent: null, classificationActionDescription: null, redirectButtonWrapper: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+createStyles.root = createStyles;
+createStyles.container = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };
+let obj1 = { display: "flex", flexDirection: "column", height: "100%", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_32 };
+createStyles.header = { display: "flex", textAlign: "center", alignItems: "center", flexDirection: "column", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 };
+createStyles.headerText = { textAlign: "center", maxWidth: 260 };
+let obj2 = { display: "flex", textAlign: "center", alignItems: "center", flexDirection: "column", gap: nativeDefault.space.PX_8, marginBottom: nativeDefault.space.PX_8 };
+createStyles.sectionContainer = { display: "flex", gap: nativeDefault.space.PX_8 };
+let obj3 = { display: "flex", gap: nativeDefault.space.PX_8 };
+createStyles.actionsTaken = { display: "flex", paddingLeft: nativeDefault.space.PX_4, flexDirection: "column", gap: nativeDefault.space.PX_8 };
+let obj4 = { display: "flex", paddingLeft: nativeDefault.space.PX_4, flexDirection: "column", gap: nativeDefault.space.PX_8 };
+createStyles.classificationDetailContainer = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_32 };
+createStyles.letUsKnowContainer = { display: "flex", alignItems: "center" };
+let obj5 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_32 };
+createStyles.expressiveModalV2LetUsKnowContainer = { display: "flex", alignItems: "center", marginTop: nativeDefault.space.PX_16 };
+createStyles.expressiveModalV2LetUsKnowText = { textAlign: "center" };
+let obj6 = { display: "flex", alignItems: "center", marginTop: nativeDefault.space.PX_16 };
+createStyles.classificationPolicyCard = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4, flexShrink: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let size = { display: "flex", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, width: 32, height: 32, borderRadius: nativeDefault.radii.xxl };
+createStyles.classificationPolicyCardIcon = size;
+createStyles.classificationPolicyCardContent = { flex: 1 };
+let obj7 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_12, marginTop: nativeDefault.space.PX_4, flexShrink: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles.classificationActionDescription = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+let obj8 = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_8 };
+createStyles.redirectButtonWrapper = { width: 300, alignSelf: "center", marginTop: nativeDefault.space.PX_32 };
+let closure_16 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationDetail.tsx");
 
 export default function ConnectedClassificationDetail(classificationId) {
   classificationId = classificationId.classificationId;
   const source = classificationId.source;
   const onClose = classificationId.onClose;
-  let obj = classificationId(onClose[17]);
-  const safetyHubClassification = obj.useSafetyHubClassification(classificationId);
+  let current = classificationId(onClose[17]);
+  const safetyHubClassification = current.useSafetyHubClassification(classificationId);
   const classification = safetyHubClassification.classification;
   const isAppealEligible = safetyHubClassification.isAppealEligible;
-  const tmp4 = callback3();
-  obj1 = classificationId(onClose[12]);
+  const tmp4 = closure_16();
+  let obj1 = classificationId(onClose[12]);
   let items = [hasItem];
   const stateFromStores = obj1.useStateFromStores(items, () => hasItem.getAppealEligibility());
   let flagged_content;
@@ -294,7 +292,7 @@ export default function ConnectedClassificationDetail(classificationId) {
     }
     tmp6 = length > 0;
   }
-  closure_6 = tmp6;
+  const is_violative_content_shown = tmp6;
   let tmpResult = tmp(tmp2[18]);
   const safetyHubAccountStanding = tmpResult.useSafetyHubAccountStanding();
   let is_coppa;
@@ -317,31 +315,28 @@ export default function ConnectedClassificationDetail(classificationId) {
   if (hasItem1) {
     hasItem1 = tmpResult.useIsExpressiveModalV2Enabled(tmp(tmp2[20]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS);
   }
-  obj = { accountStanding: safetyHubAccountStanding, classificationId, classificationState: safetyHubClassification, hasFlaggedContent: tmp6, source };
-  closure_11 = safetyHubClassification.useRef(obj);
+  current = { accountStanding: safetyHubAccountStanding, classificationId, classificationState: safetyHubClassification, hasFlaggedContent: tmp6, source };
+  const ref = safetyHubClassification.useRef(current);
   const effect = safetyHubClassification.useEffect(() => {
-    closure_11.current = obj;
+    closure_11.current = current;
   });
   const items1 = [classification];
   const effect1 = safetyHubClassification.useEffect(() => {
     if (null != classification) {
-      const current = ref.current;
+      current = ref.current;
       ({ classificationState, source } = current);
       ({ accountStanding, classificationId, hasFlaggedContent } = current);
-      obj = source(onClose[21]);
-      obj = { action: null, account_standing: null, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
-      obj[0] = obj.ViewViolationDetail;
-      obj[1] = accountStanding.state;
+      const obj = { action: closure_2_10.ViewViolationDetail, account_standing: accountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
       const _Number = Number;
       const items = [Number(classificationId)];
-      obj[2] = items;
+      obj.classification_ids = items;
       if (source == null) {
-        source = hasItem1.SystemDM;
+        source = React7.SystemDM;
       }
-      obj[3] = source;
-      obj[4] = hasFlaggedContent;
-      ({ isDsaEligible: obj2[5], violationType: obj2[6] } = classificationState);
-      obj.track(closure_1_12.SAFETY_HUB_ACTION, obj);
+      obj.source = source;
+      obj.is_violative_content_shown = hasFlaggedContent;
+      ({ isDsaEligible: obj2.is_dsa_eligible, violationType: obj2.violation_type } = classificationState);
+      obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj);
     }
   }, items1);
   if (null == classification) {
@@ -351,93 +346,83 @@ export default function ConnectedClassificationDetail(classificationId) {
     }
     return tmp15Result2;
   }
-  obj = { style: tmp4.root, children: null };
+  current = { style: tmp4.root, children: null };
   obj1 = { style: tmp4.container, bottom: true, children: null };
   if (null == classification) {
     let tmp29Result = tmp15(isAppealEligible, { size: "large" });
   } else {
     const obj2 = { style: null, children: null };
     const items2 = [tmp4.classificationDetailContainer];
-    obj2[0] = items2;
-    ({ description: obj17[0], guild_metadata: obj17[1] } = classification);
+    obj2.style = items2;
+    ({ description: obj17.classificationTypeText, guild_metadata: obj17.guildMetadata } = classification);
     const items3 = [tmp15(ClassificationHeader, { classificationTypeText: null, guildMetadata: null }), , , , ];
     let flagged_content1 = classification.flagged_content;
     if (flagged_content1 == null) {
       flagged_content1 = [];
     }
     function onPressLetUsKnow() {
-      obj = source(onClose[21]);
-      obj = { action: obj.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
+      let obj = { action: closure_2_10.ClickLetUsKnow, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_violative_content_shown: null, is_dsa_eligible: null, violation_type: null };
       const items = [Number(classificationId)];
-      obj[2] = items;
+      obj.classification_ids = items;
       let SystemDM = source;
       if (source == null) {
-        SystemDM = hasItem1.SystemDM;
+        SystemDM = React7.SystemDM;
       }
-      obj[3] = SystemDM;
-      obj[4] = closure_6;
-      ({ isDsaEligible: obj2[5], violationType: obj2[6] } = safetyHubClassification);
-      obj.track(closure_1_12.SAFETY_HUB_ACTION, obj);
+      obj.source = SystemDM;
+      obj.is_violative_content_shown = is_violative_content_shown;
+      ({ isDsaEligible: obj2.is_dsa_eligible, violationType: obj2.violation_type } = safetyHubClassification);
+      obj.track(AnalyticEvents.SAFETY_HUB_ACTION, obj);
       if (hasItem1) {
-        let tmpResult = tmp(tmp2[22]);
+        let tmpResult = tmp(11883);
         tmpResult.openV2(tmp3, onClose);
       } else if (hasItem) {
-        tmpResult = tmp(tmp2[22]);
+        tmpResult = tmp(11883);
         tmpResult.open(tmp3, onClose);
       } else if (isAppealEligible) {
-        obj = { name: null };
-        obj[0] = classificationId(tmp2[24]).MetricEvents.APPEAL_INGESTION_VIEW;
-        tmp(tmp2[23]).increment(obj);
-        const tmpResult1 = tmp(tmp2[23]);
-        obj1 = { classificationId: null };
-        obj1[0] = tmp3;
-        tmp(tmp2[25]).open(obj1);
-        const tmpResult2 = tmp(tmp2[25]);
+        obj = { name: MetricEvents.MetricEvents.APPEAL_INGESTION_VIEW };
+        tmp(7602).increment(obj);
+        const tmpResult1 = tmp(7602);
+        const obj1 = { classificationId: tmp3 };
+        tmp(11885).open(obj1);
+        const tmpResult2 = tmp(11885);
       } else {
-        tmp(tmp2[14]).openURL(ref.APPEALS_LINK);
-        const tmpResult3 = tmp(tmp2[14]);
+        tmp(4255).openURL(constants.APPEALS_LINK);
+        const tmpResult3 = tmp(4255);
       }
     }
-    const obj4 = { flaggedContent: null };
-    obj4[0] = flagged_content1;
+    const obj4 = { flaggedContent: flagged_content1 };
     items3[1] = tmp15(source(tmp2[27]), obj4);
-    const obj5 = { actions: null, classificationExpiration: null };
-    obj5[0] = classification.actions;
+    const obj5 = { actions: classification.actions, classificationExpiration: null };
     const obj3 = { classificationTypeText: null, guildMetadata: null };
     const tmp29 = closure_14;
     const tmp30 = classification;
     const tmp33 = source(tmp2[27]);
-    obj5[1] = tmp(tmp2[28]).getClassificationExpiration(classification);
+    obj5.classificationExpiration = tmp(tmp2[28]).getClassificationExpiration(classification);
     items3[2] = tmp15(ClassificationActionsTaken, obj5);
     const obj6 = { appealLink: null, communityGuidelinesLink: null, tosLink: null, classificationTypeText: null, policyExplainerLink: null, hidePolicyCard: null, appealComponent: null };
-    ({ APPEALS_LINK: obj12[0], COMMUNITY_GUIDELINES: obj12[1], TOS_LINK: obj12[2] } = closure_11);
-    ({ description: obj12[3], explainer_link: obj12[4] } = classification);
-    obj6[5] = hasItem1;
+    ({ APPEALS_LINK: obj12.appealLink, COMMUNITY_GUIDELINES: obj12.communityGuidelinesLink, TOS_LINK: obj12.tosLink } = ref);
+    ({ description: obj12.classificationTypeText, explainer_link: obj12.policyExplainerLink } = classification);
+    obj6.hidePolicyCard = hasItem1;
     if (hasItem1) {
-      const obj7 = { onPressLetUsKnow: null };
-      obj7[0] = onPressLetUsKnow;
+      const obj7 = { onPressLetUsKnow };
       let tmp15Result = tmp15(ExpressiveModalV2AppealFooter, obj7);
     } else {
-      const obj8 = { hasBeenAppealed: null, onPressLetUsKnow: null };
-      obj8[0] = null != classification.appeal_status;
-      obj8[1] = onPressLetUsKnow;
+      const obj8 = { hasBeenAppealed: null != classification.appeal_status, onPressLetUsKnow };
       tmp15Result = tmp15(AppealFooter, obj8);
     }
-    obj6[6] = tmp15Result;
+    obj6.appealComponent = tmp15Result;
     items3[3] = tmp15(ClassificationGuidance, obj6);
     let tmp15Result1 = !hasItem1;
     if (!hasItem1) {
-      const obj9 = { onClose: null };
-      obj9[0] = onClose;
+      const obj9 = { onClose };
       tmp15Result1 = tmp15(ClassificationDetailFooter, obj9);
     }
     items3[4] = tmp15Result1;
-    obj2[1] = items3;
+    obj2.children = items3;
     tmp29Result = tmp29(tmp30, obj2);
-    const tmp18 = ClassificationGuidance;
     let tmpResult1 = tmp(tmp2[28]);
   }
-  obj1[2] = tmp29Result;
-  obj[1] = closure_13(classificationId(onClose[26]).SafeAreaPaddingView, obj1);
-  tmp15Result2 = tmp15(closure_6, obj);
+  obj1.children = tmp29Result;
+  current.children = closure_13(classificationId(onClose[26]).SafeAreaPaddingView, obj1);
+  tmp15Result2 = tmp15(is_violative_content_shown, current);
 };

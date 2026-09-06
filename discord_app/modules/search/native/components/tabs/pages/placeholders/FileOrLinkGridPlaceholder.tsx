@@ -1,25 +1,31 @@
-// === Module 16666: FileOrLinkGridPlaceholderItem ===
+// === Module 16666: FileOrLinkGridPlaceholder ===
 
-// Module 16666 (FileOrLinkGridPlaceholderItem)
-import _modDef4296 from "module_4296" /* 4296 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16666 (FileOrLinkGridPlaceholder)
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import useFontScale from "useFontScale" /* 4982 */;
+import usePlaceholderStyles from "usePlaceholderStyles" /* 16646 */;
+import SearchListCard from "SearchListCard" /* 16667 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/FileOrLinkGridPlaceholder.tsx");
 
 export default function FileOrLinkGridPlaceholderItem(imageStyle) {
   imageStyle = imageStyle.imageStyle;
-  let width;
-  importDefault = undefined;
-  let obj = width(16646);
+  let obj = usePlaceholderStyles;
   const placeholderAnimatedStyle = obj.usePlaceholderAnimatedStyle(true);
-  width = imageStyle.width;
-  const sum = imageStyle.height + 108 * width(4982).useFontScale();
-  importDefault = sum;
+  const width = imageStyle.width;
+  const sum = imageStyle.height + 108 * useFontScale.useFontScale();
+  c1 = sum;
   const items = [width, sum];
-  const memo = React.useMemo(() => ({ width, height: c1 }), items);
-  obj = { style: items1, pointerEvents: "none", children: jsx(width(16667).SearchListCardContainer, { containerStyle: memo }) };
-  items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
-  return jsx(_modDef4296.View, { style: items1, pointerEvents: "none", children: jsx(width(16667).SearchListCardContainer, { containerStyle: memo }) });
+  const memo = noop.useMemo(() => {
+    const size = { width, height };
+    return size;
+  }, items);
+  obj = { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) };
+  const items1 = [imageStyle.containerStyle, placeholderAnimatedStyle];
+  obj.style = items1;
+  return jsx(ReanimatedRexportDefault.View, { style: null, pointerEvents: "none", children: jsx(SearchListCard.SearchListCardContainer, { containerStyle: memo }) });
 };

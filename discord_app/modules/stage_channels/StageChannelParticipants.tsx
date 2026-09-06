@@ -1,23 +1,22 @@
-// === Module 5425: sortKey ===
+// === Module 5425: StageChannelParticipants ===
 
-// Module 5425 (sortKey)
-import version from "version" /* 4195 */;
+// Module 5425 (StageChannelParticipants)
+import SecondaryIndexMap from "SecondaryIndexMap" /* 4195 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
-import getNicknameDefault from "getNickname" /* 4712 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import getParticipantUserKeyDefault from "getParticipantUserKey" /* 5428 */;
-import getHighestHoistedRole from "getHighestHoistedRole" /* 5429 */;
-import closure_3 from "reset" /* 4582 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "handleConnectionReset" /* 5426 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "updateVoiceState" /* 4579 */;
-import { getComparator } from "getVoiceStatesForGuild" /* 4584 */;
-import closure_11 from "buildStageChannelUserRoles" /* 5421 */;
-import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
+import useGuildMemberDisplayRole from "useGuildMemberDisplayRole" /* 5429 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5426 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5421 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
-require = arg1;
+require = fn;
 function sortKey(speaker) {
   ({ role, connectedOn, voiceState } = speaker);
   let str = "\u0001";
@@ -91,43 +90,45 @@ function getParticipantIndex(arg0) {
   }
   return items;
 }
+const getComparator = fn(4584).getComparator;
 let obj = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
 obj = { VOICE: "VOICE", STREAM: "STREAM" };
-let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
 class StageChannelParticipants {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[0] = {};
-    secondaryIndexMap = new require("version").SecondaryIndexMap(getParticipantIndex, sortKey);
-    obj[1] = secondaryIndexMap;
-    secondaryIndexMap1 = new require("version").SecondaryIndexMap(() => [], requestToSpeakSortKey);
-    obj[2] = secondaryIndexMap1;
-    obj.channelId = global;
+    merged = Object.assign({ participants: null, _participantsIndex: null, _requestToSpeakIndex: null });
+    merged[0] = {};
+    secondaryIndexMap = new closure_0(closure_2[12]).SecondaryIndexMap(getParticipantIndex, sortKey);
+    merged[1] = secondaryIndexMap;
+    secondaryIndexMap1 = new closure_0(closure_2[12]).SecondaryIndexMap(() => [], requestToSpeakSortKey);
+    merged[2] = secondaryIndexMap1;
+    merged.channelId = global;
     channel = closure_4.getChannel(global);
     guildId = undefined;
     if (channel != null) {
       guildId = channel.getGuildId();
     }
-    obj.guildId = guildId;
-    return obj;
+    merged.guildId = guildId;
+    return merged;
   }
 }
 const prototype = StageChannelParticipants.prototype;
-prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) {
+prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId, arg1) {
   const self = this;
   const items = [];
-  const voiceStateForChannel = store2.getVoiceStateForChannel(this.channelId, userId);
+  const voiceStateForChannel = VoiceStateStore.getVoiceStateForChannel(this.channelId, userId);
   if (null == voiceStateForChannel) {
     return items;
   } else {
-    user = user.getUser(userId);
+    const user = UserStore.getUser(userId);
     if (null == user) {
       let isPublicResult = null != self.guildId;
       if (isPublicResult) {
-        isPublicResult = _public.isPublic(self.channelId);
+        isPublicResult = StageInstanceStore.isPublic(self.channelId);
       }
       if (isPublicResult) {
-        const member = closure_5.requestMember(self.guildId, userId);
+        const member = GuildMemberRequesterStore.requestMember(self.guildId, userId);
       }
       return items;
     } else {
@@ -137,29 +138,23 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       }
       let member1 = null;
       if (null != self.guildId) {
-        member1 = member.getMember(self.guildId, userId);
+        member1 = GuildMemberStore.getMember(self.guildId, userId);
       }
       let nick;
       if (member1 != null) {
         nick = member1.nick;
       }
       if (nick == null) {
-        obj = getNicknameDefault;
+        obj = NicknameUtilsDefault;
         nick = obj.getName(self.guildId, self.channelId, user);
       }
-      obj = { user: null, userNick: null, nick: null, comparator: null, voiceState: null, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
-      obj[0] = user;
-      obj[1] = getNicknameDefault.getName(self.guildId, self.channelId, user);
-      obj[2] = nick;
-      obj[3] = getComparator(voiceStateForChannel, nick);
-      obj[4] = voiceStateForChannel;
-      const obj3 = getNicknameDefault;
-      obj[5] = getHighestHoistedRole.getHighestHoistedRole(self.guildId, userId);
-      obj[6] = speaker.isSpeaker(userId, self.channelId);
-      obj[7] = member1;
-      obj[8] = closure_7.isBlocked(user.id);
-      obj[9] = closure_7.isIgnored(user.id);
-      obj[10] = closure_7.isFriend(user.id);
+      obj = { user, userNick: NicknameUtilsDefault.getName(self.guildId, self.channelId, user), nick, comparator: getComparator(voiceStateForChannel, nick), voiceState: voiceStateForChannel, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
+      obj.role = useGuildMemberDisplayRole.getHighestHoistedRole(self.guildId, userId);
+      obj.speaker = StageChannelRoleStore.isSpeaker(userId, self.channelId);
+      obj.member = member1;
+      obj.blocked = RelationshipStore.isBlocked(user.id);
+      obj.ignored = RelationshipStore.isIgnored(user.id);
+      obj.isFriend = RelationshipStore.isFriend(user.id);
       let connectedOn;
       if (first != null) {
         connectedOn = first.connectedOn;
@@ -168,7 +163,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         const _Date = Date;
         connectedOn = Date.now();
       }
-      obj[11] = connectedOn;
+      obj.connectedOn = connectedOn;
       obj = {};
       const merged = Object.assign(obj);
       obj.type = obj.VOICE;
@@ -176,14 +171,14 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       let tmp11Result = tmp11(4707);
       obj.rtsState = tmp11Result.getAudienceRequestToSpeakState(voiceStateForChannel);
       items.push(obj);
-      streamForUser = streamForUser.getStreamForUser(userId, self.guildId);
+      let streamForUser = ApplicationStreamingStore.getStreamForUser(userId, self.guildId);
       if (streamForUser == null) {
-        streamForUser = streamForUser.getActiveStreamForUser(userId, self.guildId);
+        streamForUser = ApplicationStreamingStore.getActiveStreamForUser(userId, self.guildId);
       }
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
           tmp11Result = tmp11(4612);
-          obj1 = {};
+          const obj1 = {};
           const merged1 = Object.assign(obj);
           obj1.id = tmp11Result.encodeStreamKey(streamForUser);
           obj1.type = obj.STREAM;
@@ -216,7 +211,7 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
     const item1 = result.forEach((id) => {
       const _participantsIndex = self._participantsIndex;
       const result = _participantsIndex.set(id.id, id);
-      if (id.id === callback) {
+      if (id.id === closure_0) {
         const rtsState = id.rtsState;
         if (tmp6) {
           const _requestToSpeakIndex2 = tmp._requestToSpeakIndex;
@@ -224,7 +219,7 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
         }
       }
       const _requestToSpeakIndex = tmp._requestToSpeakIndex;
-      _requestToSpeakIndex.delete(callback);
+      _requestToSpeakIndex.delete(closure_0);
     });
     this.participants[arg0] = result;
     flag = true;
@@ -232,20 +227,19 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
   return flag;
 };
 prototype["rebuild"] = function rebuild() {
-  let self = this;
-  self = this;
-  const channel = store.getChannel(this.channelId);
+  const self = this;
+  const channel = ChannelStore.getChannel(this.channelId);
   if (null != channel) {
     if (channel.isGuildStageVoice()) {
       const _Set = Set;
       const _Object = Object;
-      const set = new Set(Object.keys(store2.getVoiceStatesForChannel(channel.id)));
+      const set = new Set(Object.keys(VoiceStateStore.getVoiceStatesForChannel(channel.id)));
       const _participantsIndex = self._participantsIndex;
       _participantsIndex.clear();
       const _requestToSpeakIndex = self._requestToSpeakIndex;
       _requestToSpeakIndex.clear();
       self.participants = {};
-      const item = set.forEach((arg0) => self.updateParticipant(arg0));
+      const item = set.forEach((item) => self.updateParticipant(item));
       return true;
     }
   }
@@ -267,7 +261,7 @@ prototype["toArray"] = function toArray(arg0) {
 };
 prototype["getParticipant"] = function getParticipant(arg0) {
   const _participantsIndex = this._participantsIndex;
-  let value = _participantsIndex.get(arg0);
+  value = _participantsIndex.get(arg0);
   if (value == null) {
     value = null;
   }

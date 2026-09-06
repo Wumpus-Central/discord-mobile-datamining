@@ -1,83 +1,77 @@
-// === Module 12494: isContentDismissed ===
+// === Module 12494: GuildDismissibleContentUtils ===
 
-// Module 12494 (isContentDismissed)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import hasBit from "hasBit" /* 1942 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { UserSettingsDelay } from "MAX_FAVORITES" /* 1084 */;
+// Module 12494 (GuildDismissibleContentUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import Uint8ArrayUtils from "Uint8ArrayUtils" /* 1942 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const UserSettingsDelay = fn(1084).UserSettingsDelay;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_dismissible_content/GuildDismissibleContentUtils.tsx");
 
-export const isContentDismissed = function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, closure_1) {
-  dismissedGuildContent = dismissedGuildContent.getDismissedGuildContent(closure_1);
+export const isContentDismissed = function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, id) {
+  const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(id);
   let hasBitResult = null != dismissedGuildContent;
   if (hasBitResult) {
-    hasBitResult = hasBit.hasBit(dismissedGuildContent, GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK);
-    const obj = hasBit;
+    hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK);
   }
   return hasBitResult;
 };
 export const useIsContentDismissed = function useIsContentDismissed(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  const items = [closure_3];
-  return _require(504).useStateFromStores(items, () => {
-    const dismissedGuildContent = closure_1_3.getDismissedGuildContent(closure_1);
+  const items = [UserSettingsProtoStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_1);
     let hasBitResult = null != dismissedGuildContent;
     if (hasBitResult) {
-      hasBitResult = callback(closure_1_2[4]).hasBit(dismissedGuildContent, callback);
-      const obj = callback(closure_1_2[4]);
+      hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, closure_0);
     }
     return hasBitResult;
   });
 };
-export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, closure_0, arg2, AUTO_DISMISS) {
-  const _require = true;
+export const markContentAsDismissed = function markContentAsDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId, arg2, AUTO_DISMISS) {
+  _require = true;
   importDefault = GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK;
-  dependencyMap = closure_0;
-  let obj = _require(1940);
-  const result = obj.updateUserGuildSettings(closure_0, (dismissedGuildContent) => {
-    dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
+  dependencyMap = guildId;
+  let obj = require("UserSettingsProtoActionCreators");
+  const result = obj.updateUserGuildSettings(guildId, (dismissedGuildContent) => {
+    dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_2);
     let hasBitResult = null != dismissedGuildContent;
     if (hasBitResult) {
-      hasBitResult = callback(guildId[4]).hasBit(dismissedGuildContent, tmp);
-      const obj = callback(guildId[4]);
+      hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, tmp);
     }
-    if (!callback) {
-      const tmp9 = callback(guildId[4]);
+    if (!c0) {
+      const tmp9 = Uint8ArrayUtils;
       dismissedGuildContent.dismissedGuildContent = tmp6 ? tmp9.addBit : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
     }
     return false;
   }, UserSettingsDelay.INFREQUENT_USER_ACTION);
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    obj = { type: null, guild_id: null, action: null };
-    obj[0] = _require(1943).DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK];
-    obj[1] = closure_0;
+    obj = { type: require("dismissible_content").DismissibleGuildContent[GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }
-    obj[2] = UNKNOWN;
-    expandEventPropertiesDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj);
-    const obj2 = expandEventPropertiesDefault;
+    obj.action = UNKNOWN;
+    AnalyticsUtilsDefault.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj);
   }
 };
 export const unmarkContentAsDismissed = function unmarkContentAsDismissed(dc, guildId) {
-  const _require = false;
+  _require = false;
   closure_1 = dc;
   dependencyMap = guildId;
-  const result = _require(1940).updateUserGuildSettings(guildId, (dismissedGuildContent) => {
-    dismissedGuildContent = closure_1_3.getDismissedGuildContent(guildId);
+  const result = require("UserSettingsProtoActionCreators").updateUserGuildSettings(guildId, (dismissedGuildContent) => {
+    dismissedGuildContent = UserSettingsProtoStore.getDismissedGuildContent(closure_2);
     let hasBitResult = null != dismissedGuildContent;
     if (hasBitResult) {
-      hasBitResult = callback(guildId[4]).hasBit(dismissedGuildContent, tmp);
-      const obj = callback(guildId[4]);
+      hasBitResult = Uint8ArrayUtils.hasBit(dismissedGuildContent, tmp);
     }
-    if (!callback) {
-      const tmp9 = callback(guildId[4]);
+    if (!c0) {
+      const tmp9 = Uint8ArrayUtils;
       dismissedGuildContent.dismissedGuildContent = tmp6 ? tmp9.addBit : tmp9.removeBit(dismissedGuildContent.dismissedGuildContent, tmp);
     }
     return false;

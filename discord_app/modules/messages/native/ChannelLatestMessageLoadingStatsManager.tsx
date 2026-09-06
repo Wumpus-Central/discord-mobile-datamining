@@ -1,11 +1,11 @@
-// === Module 11541: start ===
+// === Module 11541: ChannelLatestMessageLoadingStatsManager ===
 
-// Module 11541 (start)
-import ME from "ME" /* 1074 */;
-import isClickstreamEnabled from "isClickstreamEnabled" /* 7465 */;
-import set from "set" /* 2 */;
+// Module 11541 (ChannelLatestMessageLoadingStatsManager)
+import Constants from "Constants" /* 1074 */;
+import Clickstream from "Clickstream" /* 7465 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 let ChannelLatestMessageLoadingStatsManager;
 class ChannelLatestMessageLoadingStatsManager {
   constructor(arg0) {
@@ -33,11 +33,7 @@ prototype["finish"] = function finish(channelId) {
         const seenChannelIds = tmp10.seenChannelIds;
         seenChannelIds.add(channelId.channelId);
       }
-      let obj = isClickstreamEnabled;
-      obj = { load_duration_ms: null, were_messages_cached: null, is_first_load: null };
-      obj[0] = diff;
-      obj[1] = channelId.areMessagesCached;
-      obj[2] = !hasItem;
+      const obj = { load_duration_ms: diff, were_messages_cached: channelId.areMessagesCached, is_first_load: !hasItem };
       obj.trackClickstream(AnalyticEvents.CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, obj);
       tmp.latestChannelMessagesLoad = undefined;
       tmp10 = ChannelLatestMessageLoadingStatsManager;
@@ -45,8 +41,7 @@ prototype["finish"] = function finish(channelId) {
     }
   }
 };
-let set = new Set();
-ChannelLatestMessageLoadingStatsManager.seenChannelIds = set;
-const result = set.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
+ChannelLatestMessageLoadingStatsManager.seenChannelIds = new Set();
+const result = size.fileFinishedImporting("modules/messages/native/ChannelLatestMessageLoadingStatsManager.tsx");
 
 export default ChannelLatestMessageLoadingStatsManager;

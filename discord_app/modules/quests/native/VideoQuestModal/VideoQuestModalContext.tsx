@@ -1,15 +1,16 @@
-// === Module 15126: context ===
+// === Module 15126: VideoQuestModalContext ===
 
-// Module 15126 (context)
+// Module 15126 (VideoQuestModalContext)
 import _modDef38 from "module_38" /* 38 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-let context = importAllResult.createContext({ quest: null, videoSessionId: "" });
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx");
+let context = noop.createContext({ quest: null, videoSessionId: "" });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx");
 
 export default context;
 export const useVideoQuestModalContext = function useVideoQuestModalContext() {
-  context = importAllResult.useContext(context);
+  context = noop.useContext(context);
   _modDef38(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
   return context;
 };

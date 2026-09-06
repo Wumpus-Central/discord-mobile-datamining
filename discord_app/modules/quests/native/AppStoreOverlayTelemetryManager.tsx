@@ -1,15 +1,14 @@
-// === Module 11497: handleAppStateUpdate ===
+// === Module 11497: AppStoreOverlayTelemetryManager ===
 
-// Module 11497 (handleAppStateUpdate)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import set2 from "set" /* 1115 */;
-import initializeDefault from "initialize" /* 7118 */;
+// Module 11497 (AppStoreOverlayTelemetryManager)
+import Constants from "Constants" /* 1074 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
+const AnalyticEvents = Constants.AnalyticEvents;
 let c3 = null;
 let c4 = null;
-initializeDefault;
 class AppStoreOverlayTelemetryManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -24,7 +23,7 @@ class AppStoreOverlayTelemetryManager extends tmp2 {
 }
 AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
   state = state.state;
-  const isAndroidResult = set2.isAndroid();
+  const isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     return !isAndroidResult;
   } else {
@@ -47,11 +46,11 @@ AppStoreOverlayTelemetryManager.prototype["handleAppStateUpdate"] = function han
   }
 };
 const appStoreOverlayTelemetryManager = new AppStoreOverlayTelemetryManager();
-const result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlayTelemetryManager.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlayTelemetryManager.tsx");
 
 export default appStoreOverlayTelemetryManager;
 export function setAppStoreOverlayOpen(arg0) {
-  closure_3 = arg0;
+  c3 = arg0;
 }
 export function clearAppStoreOverlayOpen() {
   c3 = null;

@@ -1,18 +1,21 @@
-// === Module 11509: useMediaModalFooterActionStore ===
+// === Module 11509: useMediaModalFooterAction ===
 
-// Module 11509 (useMediaModalFooterActionStore)
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
-import keys from "keys" /* 560 */;
+// Module 11509 (useMediaModalFooterAction)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-const obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
+const useMediaModalFooterActionStore = module_560.create(() => ({}));
+const result = size.fileFinishedImporting("modules/media_viewer/native/useMediaModalFooterAction.tsx");
 
-export const useMediaModalFooterActionStore = obj;
-export const setMediaModalFooterAction = function setMediaModalFooterAction(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_2.setState({ footerAction: closure_0 }));
+export { useMediaModalFooterActionStore };
+export const setMediaModalFooterAction = function setMediaModalFooterAction(footerAction) {
+  _require = footerAction;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    const obj = { footerAction };
+    return obj.setState(obj);
+  });
 };
 export const clearMediaModalFooterAction = function clearMediaModalFooterAction() {
-  batchUpdates.batchUpdates(() => state.setState({ footerAction: "Array" }));
+  ReactBatchUpdates.batchUpdates(() => state.setState({ footerAction: "Array" }));
 };

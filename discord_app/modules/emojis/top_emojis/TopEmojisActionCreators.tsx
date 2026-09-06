@@ -1,56 +1,46 @@
-// === Module 10279: fetchTopEmojis ===
+// === Module 10279: TopEmojisActionCreators ===
 
-// Module 10279 (fetchTopEmojis)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
+// Module 10279 (TopEmojisActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisActionCreators.tsx");
 
 export const fetchTopEmojis = function fetchTopEmojis(guildId) {
-  const _require = guildId;
-  let obj = _require(4399);
+  _require = guildId;
+  let obj = require("RouteUtils");
   if (!obj.isPseudoGuildId(guildId)) {
-    obj = { type: "TOP_EMOJIS_FETCH", guildId: null };
-    obj[1] = guildId;
-    dispatcherDefault.dispatch(obj);
-    const HTTP = _require(1272).HTTP;
-    obj = { url: null, oldFormErrors: true, rejectWithError: true };
-    obj[0] = Endpoints.TOP_EMOJIS_FOR_GUILD(guildId);
-    const value = HTTP.get(obj);
+    obj = { type: "TOP_EMOJIS_FETCH", guildId };
+    DispatcherDefault.dispatch(obj);
+    const HTTP = require("HTTPUtils").HTTP;
+    obj = { url: Endpoints.TOP_EMOJIS_FOR_GUILD(guildId), oldFormErrors: true, rejectWithError: true };
+    value = HTTP.get(obj);
     value.then((body) => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { type: "TOP_EMOJIS_FETCH_SUCCESS", guildId: closure_0, topEmojisMetadata: null };
+      const obj = { type: "TOP_EMOJIS_FETCH_SUCCESS", guildId, topEmojisMetadata: null };
       const items = body.body.items;
       const mapped = items.map((emojiId) => ({ emojiId: emojiId.emoji_id, rank: emojiId.emoji_rank }));
-      obj[2] = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
+      obj.topEmojisMetadata = mapped.sort((rank, rank2) => rank.rank - rank2.rank);
       return obj.dispatch(obj);
     }, () => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { type: "TOP_EMOJIS_FETCH_FAILURE", guildId: closure_0 };
+      const obj = { type: "TOP_EMOJIS_FETCH_FAILURE", guildId };
       return obj.dispatch(obj);
     });
-    const obj2 = dispatcherDefault;
   }
 };
 export const updateNewlyAddedLastSeen = function updateNewlyAddedLastSeen(guildId, id) {
-  let obj = dispatcherDefault;
+  let obj = DispatcherDefault;
   obj.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED" });
   if (tmp4) {
-    obj = { type: "NEWLY_ADDED_EMOJI_SEEN_PENDING", guildId: null, emojiId: null };
-    obj[1] = guildId;
-    obj[2] = id;
-    dispatcherDefault.dispatch(obj);
-    const tmpResult = dispatcherDefault;
+    obj = { type: "NEWLY_ADDED_EMOJI_SEEN_PENDING", guildId, emojiId: id };
+    DispatcherDefault.dispatch(obj);
+    const tmpResult = DispatcherDefault;
   }
 };
-export const updateNewlyAddedEmojiSeenAcknowledged = function updateNewlyAddedEmojiSeenAcknowledged(arg0, arg1) {
+export const updateNewlyAddedEmojiSeenAcknowledged = function updateNewlyAddedEmojiSeenAcknowledged(guildId, emojiId) {
   if (tmp) {
-    let obj = dispatcherDefault;
-    obj = { type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED", guildId: null, emojiId: null };
-    obj[1] = arg0;
-    obj[2] = arg1;
+    const obj = { type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED", guildId, emojiId };
     obj.dispatch(obj);
   }
 };

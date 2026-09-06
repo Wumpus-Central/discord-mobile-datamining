@@ -1,10 +1,10 @@
 // === Module 9747: getAppChannelApplicationUnsupportedText ===
 
 // Module 9747 (getAppChannelApplicationUnsupportedText)
-import set from "set" /* 2 */;
 import GuildEmbeddedApplicationUnsupportedReason from "GuildEmbeddedApplicationUnsupportedReason" /* 9748 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_channels/getAppChannelApplicationUnsupportedText.tsx");
+const result = size.fileFinishedImporting("modules/app_channels/getAppChannelApplicationUnsupportedText.tsx");
 
 export default function getAppChannelApplicationUnsupportedText(supported) {
   if (!supported.supported) {

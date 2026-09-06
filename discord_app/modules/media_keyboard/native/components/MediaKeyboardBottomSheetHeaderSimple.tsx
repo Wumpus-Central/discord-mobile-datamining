@@ -1,21 +1,21 @@
-// === Module 10640: ? ===
+// === Module 10640: MediaKeyboardBottomSheetHeaderSimple ===
 
-// Module 10640
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef10641 from "module_10641" /* 10641 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 10640 (MediaKeyboardBottomSheetHeaderSimple)
+import nativeDefault from "native" /* 576 */;
+import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10641 */;
+import noop from "module_19" /* 19 */;
 
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { headerHandleOnlyWrap: null };
-obj = { height: require("DRAG_HANDLE").HEADER_HANDLE_HEIGHT, paddingBottom: ThemesDefault.space.PX_4 };
-obj[0] = obj;
-let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
-  ({ animatedIndex, onPress } = arg0);
-  return <View style={callback().headerHandleOnlyWrap}>{jsx(_modDef10641, { animatedIndex, onPress })}</View>;
-});
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
+obj = { height: fn(1607).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
+obj.headerHandleOnlyWrap = obj;
+let closure_4 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
 
-export default memoResult;
+export default noop.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
+  ({ animatedIndex, onPress } = arg0);
+  return <View style={closure_4().headerHandleOnlyWrap}>{jsx(MediaKeyboardBottomSheetHandleDefault, { animatedIndex, onPress })}</View>;
+});

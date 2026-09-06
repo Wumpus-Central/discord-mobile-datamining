@@ -1,197 +1,197 @@
-// === Module 17131: getCardKey ===
+// === Module 17131: VoicePanelCardView ===
 
-// Module 17131 (getCardKey)
-import SelfStreamCardDefault from "SelfStreamCard" /* 17132 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "getParticipants" /* 4576 */;
-import VoicePanelModes from "VoicePanelModes" /* 12273 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12271 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 17088 */;
-import { EDGE_GUTTER } from "CARD_SIZE" /* 12276 */;
-import { isUserParticipant } from "ParticipantTypes" /* 4581 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17131 (VoicePanelCardView)
+import _modDef12 from "module_12" /* 12 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 4271 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import Suspender from "Suspender" /* 4923 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7073 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12277 */;
+import VoicePanelCardDefault from "VoicePanelCard" /* 17132 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 
-const require = arg1;
+const spring = tmp23(4974);
+const roundToNearestPixelDefault = tmp3(10993);
+require = fn;
 function getCardKey(type) {
   return "" + type.type + "-" + type.id;
 }
 function renderCard(arg0, item, transitionState, cleanUp) {
-  return jsx(SelfStreamCardDefault, { item, transitionState, cleanUp }, arg0);
+  return jsx(VoicePanelCardDefault, { item, transitionState, cleanUp }, arg0);
 }
 function CardContentFreezer(children) {
   children = children.children;
-  let _require = children;
-  let connected;
+  importDefault = undefined;
   let animatedStyle;
-  _require = undefined;
-  connected = undefined;
-  animatedStyle = undefined;
-  obj = _require(animatedStyle[19]);
-  const mode = obj.usePIPState().mode;
-  _require = mode;
-  const ref = contentDimensions.useRef(mode === VoicePanelPIPModes.IN_APP);
-  connected = ref;
-  animatedStyle = safeArea(contentDimensions.useState({}), 2)[1];
+  let __closure = children(animatedStyle[19]);
+  const mode = __closure.usePIPState().mode;
+  closure_129_0 = mode;
+  const ref = noop.useRef(mode === VoicePanelPIPModes.IN_APP);
+  closure_129_1 = ref;
+  closure_129_2 = _slicedToArray(noop.useState({}), 2)[1];
   let items = [mode];
-  const effect = contentDimensions.useEffect(() => {
-    if (timeout === closure_1_11.IN_APP) {
+  const effect = noop.useEffect(() => {
+    if (timeout === constants.IN_APP) {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
         if (!ref.current) {
           tmp.current = true;
-          callback({});
+          animatedStyle({});
         }
       }, 700);
       return () => {
         clearTimeout(closure_0);
       };
     } else {
-      connected.current = false;
+      ref.current = false;
     }
   }, items);
-  const tmp6 = mode === VoicePanelPIPModes.IN_APP && connected(animatedStyle[20])(ref);
-  connected = tmp6;
-  _require = tmp6;
-  connected = undefined;
-  animatedStyle = undefined;
-  safeArea = undefined;
-  contentDimensions = undefined;
-  let windowDimensions;
-  let mode2;
-  let focused;
-  let wrapperOffset;
-  let token;
+  const tmp6 = mode === VoicePanelPIPModes.IN_APP && require("useRefValue")(ref);
+  importDefault = tmp6;
+  closure_130_0 = tmp6;
   const context = obj2.useContext(tmp5(tmp2[13]));
-  connected = context.connected;
+  const connected = context.connected;
+  closure_130_1 = connected;
   const controlsSpecs = context.controlsSpecs;
-  animatedStyle = controlsSpecs;
-  safeArea = context.safeArea;
-  contentDimensions = context.contentDimensions;
-  windowDimensions = context.windowDimensions;
-  mode2 = context.mode;
-  focused = context.focused;
-  wrapperOffset = context.wrapperOffset;
+  closure_130_2 = controlsSpecs;
+  const safeArea = context.safeArea;
+  closure_130_3 = safeArea;
+  const contentDimensions = context.contentDimensions;
+  closure_130_4 = contentDimensions;
+  const windowDimensions = context.windowDimensions;
+  closure_130_5 = windowDimensions;
+  const mode2 = context.mode;
+  closure_130_6 = mode2;
+  const focused = context.focused;
+  closure_130_7 = focused;
+  const wrapperOffset = context.wrapperOffset;
+  closure_130_8 = wrapperOffset;
   let tmpResult = tmp(tmp2[14]);
-  token = tmpResult.useToken(tmp5(tmp2[15]).modules.mobile.VOICE_PANEL_GUTTER);
+  const token = tmpResult.useToken(tmp5(tmp2[15]).modules.mobile.VOICE_PANEL_GUTTER);
+  closure_130_9 = token;
   tmpResult = tmp(tmp2[11]);
   const fn = function o() {
     obj = animatedStyle;
-    const bound = Math.max(safeArea.get().bottom, closure_1_12);
-    const tmp = closure_1_12;
-    const tmp3 = connected;
-    const tmp5 = connected(animatedStyle[16]);
-    ({ height, paddingTop } = connected(animatedStyle[16])(safeArea.get(), token));
+    const bound = Math.max(_slicedToArray.get().bottom, EDGE_GUTTER);
+    const tmp = EDGE_GUTTER;
+    ({ height, paddingTop } = calculateVoicePanelHeaderSpecsDefault(_slicedToArray.get(), closure_1_9));
     let num = 1;
     let num2 = 0;
     let num3 = 1;
     let num4 = 0;
-    if (connected.get()) {
-      obj1 = contentDimensions;
-      let height2 = paddingTop + contentDimensions.get().height + bound;
-      if (height2 - windowDimensions.get().height < 8) {
+    if (freeze.get()) {
+      let height2 = paddingTop + noop.get().height + bound;
+      if (height2 - absoluteFill.get().height < 8) {
         height2 = obj3.get().height;
       }
       num2 = 0;
       num3 = num;
       num4 = height2;
-      if (mode2.get() !== token.PIP) {
+      if (closure_1_6.get() !== VoicePanelModes.PIP) {
         num2 = 0;
         num3 = num;
         num4 = height2;
-        if (animatedStyle.get().mode !== closure_1_10.HIDDEN) {
+        if (animatedStyle.get().mode !== VoicePanelControlsModes.HIDDEN) {
           num2 = 0;
           num3 = num;
           num4 = height2;
-          if (null == focused.get()) {
+          if (null == ChannelRTCStore.get()) {
             const diff = height2 - height - tmp;
             const diff1 = diff - obj.get().height - bound;
             const diff2 = obj3.get().height - paddingTop - bound;
             const diff3 = obj3.get().height - height;
             const diff4 = diff3 - obj.get().height - bound;
             let result = num;
-            if (obj1.get().height > diff1) {
-              result = diff1 / obj1.get().height;
+            if (obj2.get().height > diff1) {
+              result = diff1 / obj2.get().height;
             }
             let diff5 = height;
             if (tmp16) {
-              const result1 = (diff2 - obj1.get().height) / 2;
-              diff5 = height - (result1 - (diff4 - obj1.get().height * result) / 2) * result;
+              const result1 = (diff2 - obj2.get().height) / 2;
+              diff5 = height - (result1 - (diff4 - obj2.get().height * result) / 2) * result;
             }
-            if (obj1.get().height > diff1) {
+            if (obj2.get().height > diff1) {
               let sum = diff5 + (height2 * result - height2) / 2;
             } else {
               sum = diff5 + (diff1 - (obj3.get().height - paddingTop - bound)) / 2;
             }
             paddingTop = paddingTop * result;
             const diff6 = sum - paddingTop;
-            tmp16 = obj1.get().height < diff2 && obj1.get().height > diff4;
+            tmp16 = obj2.get().height < diff2 && obj2.get().height > diff4;
           }
         }
       }
-      const tmp7 = paddingTop;
     }
-    obj = { position: "relative", width: windowDimensions.get().width, height: tmp3(tmp4[17])(num4), transform: null, opacity: null };
-    const tmp23 = callback;
-    const tmp5Result = connected(animatedStyle[16])(safeArea.get(), token);
-    const sum1 = num2 + wrapperOffset.get().y;
-    if (!wrapperOffset.get().gestureActive) {
-      if (mode2.get() !== token.PIP) {
-        let tmp27 = closure_1_15;
+    const size = { position: "relative", width: absoluteFill.get().width, height: roundToNearestPixelDefault(num4), transform: null, opacity: null };
+    const tmp5Result = calculateVoicePanelHeaderSpecsDefault(_slicedToArray.get(), closure_1_9);
+    const sum1 = num2 + closure_1_8.get().y;
+    if (!closure_1_8.get().gestureActive) {
+      if (closure_1_6.get() !== VoicePanelModes.PIP) {
+        let tmp27 = obj;
       }
-      obj = { translateY: null };
-      obj[0] = obj5.withSpring(sum1, tmp27);
+      obj = { translateY: obj5.withSpring(sum1, tmp27) };
       const items = [obj, ];
-      obj1 = { scale: null };
-      obj1[0] = tmp23(tmp4[18]).withSpring(num3, closure_1_15);
-      items[1] = obj1;
-      obj[3] = items;
-      if (callback) {
+      obj = { scale: null };
+      obj.scale = spring.withSpring(num3, obj);
+      items[1] = obj;
+      size.transform = items;
+      if (children) {
         num = 0;
       }
-      obj[4] = num;
-      return obj;
+      size.opacity = num;
+      return size;
     }
-    tmp27 = wrapperOffset;
+    tmp27 = closure_2_8;
   };
-  obj = { controlsSpecs, VoicePanelControlsModes, safeArea, EDGE_GUTTER, calculateVoicePanelHeaderSpecs: tmp5(tmp2[16]), edgeGutter: token, connected, contentDimensions, windowDimensions, mode: mode2, VoicePanelModes: token, focused, roundToNearestPixel: tmp5(tmp2[17]), withSpring: tmp(tmp2[18]).withSpring, wrapperOffset, LAYOUT_PHYSICS: wrapperOffset, SCALE_PHYSICS: obj, freeze: tmp6 };
-  fn.__closure = obj;
+  __closure = { controlsSpecs, VoicePanelControlsModes, safeArea, EDGE_GUTTER, calculateVoicePanelHeaderSpecs: tmp5(tmp2[16]), edgeGutter: token, connected, contentDimensions, windowDimensions, mode: mode2, VoicePanelModes, focused, roundToNearestPixel: tmp5(tmp2[17]), withSpring: tmp(tmp2[18]).withSpring, wrapperOffset, LAYOUT_PHYSICS, SCALE_PHYSICS: __closure, freeze: tmp6 };
+  fn.__closure = __closure;
   fn.__workletHash = 15194344033500;
-  fn.__initData = closure_21;
+  fn.__initData = __initData3;
   animatedStyle = tmpResult.useAnimatedStyle(fn);
   const items1 = [animatedStyle, tmp6, children];
-  return contentDimensions.useMemo(() => {
+  return noop.useMemo(() => {
     obj = { style: animatedStyle, children: null };
-    obj = { freeze: connected, children: closure_1_14(mode2, obj) };
-    obj = { collapsable: false, style: windowDimensions.absoluteFill, children: callback };
-    obj[1] = closure_1_14(callback(animatedStyle[22]).Freeze, obj);
-    return closure_1_14(connected(animatedStyle[21]), obj);
+    obj = { freeze, children: jsx(Suspender.Freeze, { style: animatedStyle, children: null }) };
+    obj = { collapsable: false, style: absoluteFill.absoluteFill, children };
+    obj.children = <timestampProducer collapsable={false} style={absoluteFill.absoluteFill}>{children}</timestampProducer>;
+    return jsx(ReanimatedNativeViewDefault, { collapsable: false, style: absoluteFill.absoluteFill, children });
   }, items1);
 }
-let c4 = importAllResult;
-({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
-({ LAYOUT_PHYSICS: closure_8, VoicePanelModes: c9, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelModes);
+get_ActivityIndicator = fn(17);
+({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
+const VoicePanelConstants = fn(12273);
+({ LAYOUT_PHYSICS: closure_8, VoicePanelModes: closure_9, UI_SHOW_HIDE_PHYSICS, VOICE_PANEL_CHUNK_DIVISOR } = VoicePanelConstants);
+const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12276).EDGE_GUTTER;
+const isUserParticipant = fn(4581).isUserParticipant;
+const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);
 obj.mass = 1;
 obj.restSpeedThreshold = 0.00001;
 let closure_18 = { start: 0, end: VOICE_PANEL_CHUNK_DIVISOR };
-let closure_19 = { code: "function VoicePanelCardViewTsx1(){const{viewableChunks}=this.__closure;return viewableChunks.get();}" };
-let closure_20 = { code: "function VoicePanelCardViewTsx2(newChunks,previous){const{cheapWorkletShallowEqual,runOnJS,updateValueIfChange}=this.__closure;if(cheapWorkletShallowEqual(newChunks,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(updateValueIfChange)(newChunks);}" };
-let closure_21 = { code: "function VoicePanelCardViewTsx3(){const{controlsSpecs,VoicePanelControlsModes,safeArea,EDGE_GUTTER,calculateVoicePanelHeaderSpecs,edgeGutter,connected,contentDimensions,windowDimensions,mode,VoicePanelModes,focused,roundToNearestPixel,withSpring,wrapperOffset,LAYOUT_PHYSICS,SCALE_PHYSICS,freeze}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;let height=0;let scale=1;let top=0;const safeAreaBottom=Math.max(safeArea.get().bottom,EDGE_GUTTER);const{height:headerBarHeight,paddingTop:safeAreaTop}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(connected.get()){height+=safeAreaTop;height+=contentDimensions.get().height;height+=safeAreaBottom;if(height-windowDimensions.get().height<8){height=windowDimensions.get().height;}if(mode.get()!==VoicePanelModes.PIP&&!hidden&&focused.get()==null){const targetHeight=height-headerBarHeight-EDGE_GUTTER-controlsSpecs.get().height-safeAreaBottom;const fullView=windowDimensions.get().height-safeAreaTop-safeAreaBottom;const controlsView=windowDimensions.get().height-headerBarHeight-controlsSpecs.get().height-safeAreaBottom;top=headerBarHeight;scale=function(){if(contentDimensions.get().height>targetHeight){return targetHeight/contentDimensions.get().height;}return 1;}();if(contentDimensions.get().height<fullView&&contentDimensions.get().height>controlsView){const offsetOriginal=(fullView-contentDimensions.get().height)/2;const scaledContent=contentDimensions.get().height*scale;const scaledOffset=(controlsView-scaledContent)/2;top-=(offsetOriginal-scaledOffset)*scale;}if(contentDimensions.get().height>targetHeight){top+=(height*scale-height)/2;}else{top+=(targetHeight-(windowDimensions.get().height-safeAreaTop-safeAreaBottom))/2;}top-=safeAreaTop*scale;}}return{position:'relative',width:windowDimensions.get().width,height:roundToNearestPixel(height),transform:[{translateY:withSpring(top+wrapperOffset.get().y,wrapperOffset.get().gestureActive||mode.get()===VoicePanelModes.PIP?LAYOUT_PHYSICS:SCALE_PHYSICS)},{scale:withSpring(scale,SCALE_PHYSICS)}],opacity:freeze?0:1};}" };
-const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChunks) {
+const __initData = { code: "function VoicePanelCardViewTsx1(){const{viewableChunks}=this.__closure;return viewableChunks.get();}" };
+const __initData2 = { code: "function VoicePanelCardViewTsx2(newChunks,previous){const{cheapWorkletShallowEqual,runOnJS,updateValueIfChange}=this.__closure;if(cheapWorkletShallowEqual(newChunks,previous!==null&&previous!==void 0?previous:undefined))return;runOnJS(updateValueIfChange)(newChunks);}" };
+const __initData3 = { code: "function VoicePanelCardViewTsx3(){const{controlsSpecs,VoicePanelControlsModes,safeArea,EDGE_GUTTER,calculateVoicePanelHeaderSpecs,edgeGutter,connected,contentDimensions,windowDimensions,mode,VoicePanelModes,focused,roundToNearestPixel,withSpring,wrapperOffset,LAYOUT_PHYSICS,SCALE_PHYSICS,freeze}=this.__closure;const hidden=controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN;let height=0;let scale=1;let top=0;const safeAreaBottom=Math.max(safeArea.get().bottom,EDGE_GUTTER);const{height:headerBarHeight,paddingTop:safeAreaTop}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);if(connected.get()){height+=safeAreaTop;height+=contentDimensions.get().height;height+=safeAreaBottom;if(height-windowDimensions.get().height<8){height=windowDimensions.get().height;}if(mode.get()!==VoicePanelModes.PIP&&!hidden&&focused.get()==null){const targetHeight=height-headerBarHeight-EDGE_GUTTER-controlsSpecs.get().height-safeAreaBottom;const fullView=windowDimensions.get().height-safeAreaTop-safeAreaBottom;const controlsView=windowDimensions.get().height-headerBarHeight-controlsSpecs.get().height-safeAreaBottom;top=headerBarHeight;scale=function(){if(contentDimensions.get().height>targetHeight){return targetHeight/contentDimensions.get().height;}return 1;}();if(contentDimensions.get().height<fullView&&contentDimensions.get().height>controlsView){const offsetOriginal=(fullView-contentDimensions.get().height)/2;const scaledContent=contentDimensions.get().height*scale;const scaledOffset=(controlsView-scaledContent)/2;top-=(offsetOriginal-scaledOffset)*scale;}if(contentDimensions.get().height>targetHeight){top+=(height*scale-height)/2;}else{top+=(targetHeight-(windowDimensions.get().height-safeAreaTop-safeAreaBottom))/2;}top-=safeAreaTop*scale;}}return{position:'relative',width:windowDimensions.get().width,height:roundToNearestPixel(height),transform:[{translateY:withSpring(top+wrapperOffset.get().y,wrapperOffset.get().gestureActive||mode.get()===VoicePanelModes.PIP?LAYOUT_PHYSICS:SCALE_PHYSICS)},{scale:withSpring(scale,SCALE_PHYSICS)}],opacity:freeze?0:1};}" };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardView.tsx");
+
+export default noop.memo(function VoicePanelCardView(viewableChunks) {
   viewableChunks = viewableChunks.viewableChunks;
-  viewableChunks = undefined;
-  chunkedParticipants = undefined;
+  let chunkedParticipants;
   let stateFromStoresArray;
-  let callback;
-  const channelId = importAllResult.useContext(chunkedParticipants(stateFromStoresArray[13])).channelId;
-  chunkedParticipants = undefined;
-  stateFromStoresArray = undefined;
-  [tmp2, chunkedParticipants] = callback(importAllResult.useState(closure_18), 2);
-  callback = importAllResult.useCallback((arg0) => {
-    closure_0 = arg0;
+  _slicedToArray = undefined;
+  const channelId = noop.useContext(chunkedParticipants(stateFromStoresArray[13])).channelId;
+  closure_129_0 = viewableChunks;
+  closure_129_1 = undefined;
+  [tmp2, closure_129_1] = _slicedToArray(noop.useState(closure_18), 2);
+  const callback = noop.useCallback((arg0) => {
+    const start = arg0;
     chunkedParticipants((start) => {
       let tmp2 = start;
       if (start.start === start.start) {
@@ -203,62 +203,59 @@ const memoResult = importAllResult.memo(function VoicePanelCardView(viewableChun
       return tmp2;
     });
   }, []);
-  stateFromStoresArray = callback;
-  obj = viewableChunks(stateFromStoresArray[11]);
+  closure_129_2 = callback;
+  channelId(stateFromStoresArray[11]);
   const fn = function c() {
-    return viewableChunks.get();
+    return channelId.get();
   };
   fn.__closure = { viewableChunks };
   fn.__workletHash = 1074173860641;
-  fn.__initData = closure_19;
+  fn.__initData = __initData;
   const fn2 = function s(safeAreaState, current) {
     if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
-      viewableChunks(stateFromStoresArray[11]).runOnJS(stateFromStoresArray)(safeAreaState);
-      const tmp2Result = viewableChunks(stateFromStoresArray[11]);
+      ReanimatedRexport.runOnJS(stateFromStoresArray)(safeAreaState);
+      const tmp2Result = ReanimatedRexport;
     }
   };
-  obj = { cheapWorkletShallowEqual: viewableChunks(stateFromStoresArray[12]).cheapWorkletShallowEqual, runOnJS: viewableChunks(stateFromStoresArray[11]).runOnJS, updateValueIfChange: callback };
-  fn2.__closure = obj;
+  const __closure = { cheapWorkletShallowEqual: channelId(stateFromStoresArray[12]).cheapWorkletShallowEqual, runOnJS: channelId(stateFromStoresArray[11]).runOnJS, updateValueIfChange: callback };
+  fn2.__closure = __closure;
   fn2.__workletHash = 13543715159803;
-  fn2.__initData = closure_20;
-  const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  const tmp = callback(importAllResult.useState(closure_18), 2);
-  chunkedParticipants = viewableChunks(stateFromStoresArray[23]).useChunkedParticipants(channelId, tmp2);
-  const obj3 = viewableChunks(stateFromStoresArray[23]);
-  const items = [closure_7];
+  fn2.__initData = __initData2;
+  const animatedReaction = __closure.useAnimatedReaction(fn, fn2);
+  const tmp = _slicedToArray(noop.useState(closure_18), 2);
+  chunkedParticipants = channelId(stateFromStoresArray[23]).useChunkedParticipants(channelId, tmp2);
+  const obj3 = channelId(stateFromStoresArray[23]);
+  const items = [ChannelRTCStore];
   const items1 = [channelId];
-  stateFromStoresArray = viewableChunks(stateFromStoresArray[24]).useStateFromStoresArray(items, () => {
-    const participants = closure_1_7.getParticipants(viewableChunks);
-    return participants.filter((arg0) => callback(arg0));
+  stateFromStoresArray = channelId(stateFromStoresArray[24]).useStateFromStoresArray(items, () => {
+    const participants = ChannelRTCStore.getParticipants(channelId);
+    return participants.filter((item) => closure_1_13(item));
   }, items1);
-  callback = importAllResult.useRef(stateFromStoresArray);
+  _slicedToArray = noop.useRef(stateFromStoresArray);
   const items2 = [stateFromStoresArray, channelId];
-  const effect = importAllResult.useEffect(() => {
-    obj = chunkedParticipants(stateFromStoresArray[25]);
+  const effect = noop.useEffect(() => {
+    obj = _modDef12;
     if (!obj.isEqual(ref.current, stateFromStoresArray)) {
-      const differenceWithResult = chunkedParticipants(tmp2[25]).differenceWith(tmp3.current, tmp4, (id, id2) => id.id === id2.id);
+      const differenceWithResult = _modDef12.differenceWith(tmp3.current, tmp4, (id, id2) => id.id === id2.id);
       let user = null;
       if (differenceWithResult.length > 0) {
         user = differenceWithResult[0].user;
       }
       if (null != user) {
-        const AccessibilityAnnouncer = viewableChunks(tmp2[26]).AccessibilityAnnouncer;
-        const intl = viewableChunks(tmp2[27]).intl;
-        obj = { username: null };
-        obj[0] = user.username;
-        AccessibilityAnnouncer.announce(intl.formatToPlainString(viewableChunks(tmp2[27]).t["9NqwWZ"], obj));
+        const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+        const intl = util.intl;
+        obj = { username: user.username };
+        AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t["9NqwWZ"], obj));
       }
-      const tmpResult = chunkedParticipants(tmp2[25]);
+      const tmpResult = _modDef12;
     }
     ref.current = stateFromStoresArray;
   }, items2);
   const items3 = [chunkedParticipants];
-  return importAllResult.useMemo(() => {
-    obj = { children: closure_1_14(viewableChunks(stateFromStoresArray[28]).TransitionGroup, obj) };
-    obj = { items: chunkedParticipants, renderItem: closure_1_17, getItemKey: closure_1_16, lazyCleanUpDelay: 1000 };
-    return closure_1_14(closure_1_22, obj);
+  return noop.useMemo(() => {
+    obj = { children: null };
+    obj = { items: chunkedParticipants, renderItem: renderCard, getItemKey: getCardKey, lazyCleanUpDelay: 1000 };
+    obj.children = jsx(native.TransitionGroup, { items: chunkedParticipants, renderItem: renderCard, getItemKey: getCardKey, lazyCleanUpDelay: 1000 });
+    return <CardContentFreezer items={chunkedParticipants} renderItem={renderCard} getItemKey={getCardKey} lazyCleanUpDelay={1000} />;
   }, items3);
 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCardView.tsx");
-
-export default memoResult;

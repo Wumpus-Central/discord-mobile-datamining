@@ -1,11 +1,11 @@
-// === Module 14195: defineProperty ===
+// === Module 14195: qos_token ===
 
-// Module 14195 (defineProperty)
+// Module 14195 (qos_token)
 import _mod1188 from "module_1188" /* 1188 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4 } from "module_1188" /* 1188 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class QosToken$Type extends MessageType {
   constructor() {
     obj = {
@@ -13,7 +13,7 @@ class QosToken$Type extends MessageType {
       name: "client_provided",
       kind: "message",
       T() {
-            return closure_3;
+            return closure_1_3;
           }
     };
     items = [, ];
@@ -23,11 +23,10 @@ class QosToken$Type extends MessageType {
       name: "derived",
       kind: "message",
       T() {
-            return closure_4;
+            return clientProvidedQosDataType;
           }
     };
     tmp = new tmp("discord_protos.qos_token.v1.QosToken", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -43,7 +42,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -52,20 +51,11 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp26 = closure_3;
-        let tmp27 = closure_3;
-        let tmp28 = pos;
-        let tmp29 = readUnknownField;
         obj.clientProvided = closure_3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.clientProvided);
       } else if (2 === tmp5) {
-        let tmp22 = clientProvidedQosDataType;
-        let tmp23 = clientProvidedQosDataType;
-        let tmp24 = pos;
-        let tmp25 = readUnknownField;
         obj.derived = clientProvidedQosDataType.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.derived);
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -76,25 +66,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -130,7 +111,7 @@ let items = [
     name: "client_provided",
     kind: "message",
     T() {
-      return closure_3;
+      return closure_1_3;
     }
   },
   {
@@ -138,18 +119,17 @@ let items = [
     name: "derived",
     kind: "message",
     T() {
-      return closure_4;
+      return clientProvidedQosDataType;
     }
   }
 ];
 defineProperty = new defineProperty("discord_protos.qos_token.v1.QosToken", items, tmp3, tmp2, "create");
-// ThrowIfThisInitialized (0x7c)
+const MessageType2 = fn(1188).MessageType;
 class ClientProvidedQosData$Type extends MessageType2 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "is_active", kind: "scalar", T: 8 };
     tmp = new tmp("discord_protos.qos_token.v1.ClientProvidedQosData", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -165,7 +145,7 @@ prototype2["create"] = function create(arr) {
   }
   return obj;
 };
-prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -174,8 +154,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.isActive = pos.bool();
@@ -188,25 +167,16 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -231,15 +201,14 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(isActive, tag, 
   return tag;
 };
 const items1 = [{ no: 1, name: "is_active", kind: "scalar", T: 8 }];
-tmp = new tmp("discord_protos.qos_token.v1.ClientProvidedQosData", items1, tmp3, tmp2, "create", "internalBinaryRead", ClientProvidedQosData$Type, "internalBinaryWrite", tmp, undefined, arg1, dependencyMap);
-// ThrowIfThisInitialized (0x7c)
+tmp = new tmp("discord_protos.qos_token.v1.ClientProvidedQosData", items1, tmp3, tmp2, "create", "internalBinaryRead", ClientProvidedQosData$Type, "internalBinaryWrite", tmp, undefined, fn, dependencyMap);
 let closure_3 = tmp;
+const MessageType3 = fn(1188).MessageType;
 class DerivedQosData$Type extends MessageType3 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "claims", kind: "scalar", T: 12 };
     tmp = new tmp("discord_protos.qos_token.v1.DerivedQosData", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -247,7 +216,7 @@ const prototype3 = DerivedQosData$Type.prototype;
 prototype3["create"] = function create(arr) {
   let obj = { claims: null };
   const uint8Array = new Uint8Array(0);
-  obj[0] = uint8Array;
+  obj.claims = uint8Array;
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);
@@ -257,7 +226,7 @@ prototype3["create"] = function create(arr) {
   }
   return obj;
 };
-prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -266,8 +235,7 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.claims = pos.bytes();
@@ -280,25 +248,16 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -323,8 +282,8 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(claims, tag, wr
   return tag;
 };
 const items2 = [{ no: 1, name: "claims", kind: "scalar", T: 12 }];
-const clientProvidedQosDataType = new ClientProvidedQosData$Type("discord_protos.qos_token.v1.DerivedQosData", items2, tmp3, DerivedQosData$Type, "create", "internalBinaryRead", ClientProvidedQosData$Type, "internalBinaryWrite", items2, undefined, arg1, dependencyMap, new.target, defineProperty, tmp);
-// ThrowIfThisInitialized (0x7c)
+const clientProvidedQosDataType = new ClientProvidedQosData$Type("discord_protos.qos_token.v1.DerivedQosData", items2, tmp3, DerivedQosData$Type, "create", "internalBinaryRead", ClientProvidedQosData$Type, "internalBinaryWrite", items2, undefined, fn, dependencyMap, new.target, defineProperty, tmp);
+const MessageType4 = fn(1188).MessageType;
 class Claims$Type extends MessageType4 {
   constructor() {
     items = [, , ];
@@ -332,7 +291,6 @@ class Claims$Type extends MessageType4 {
     items[1] = { no: 2, name: "issued_at", kind: "scalar", T: 6 };
     items[2] = { no: 3, name: "is_staff", kind: "scalar", T: 8 };
     tmp = new tmp("discord_protos.qos_token.v1.Claims", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -348,7 +306,7 @@ prototype4["create"] = function create(arr) {
   }
   return obj;
 };
-prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -357,8 +315,7 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let str5 = pos.fixed64();
@@ -377,25 +334,16 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -428,19 +376,10 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, wr
   return tag;
 };
 const items3 = [{ no: 1, name: "user_id", kind: "scalar", T: 6 }, { no: 2, name: "issued_at", kind: "scalar", T: 6 }, { no: 3, name: "is_staff", kind: "scalar", T: 8 }];
-// ThrowIfThisInitialized (0x7c)
-let obj = {
-  no: 1,
-  name: "client_provided",
-  kind: "message",
-  T() {
-    return closure_3;
-  }
-};
-let tmp8 = new "internalBinaryWrite"("discord_protos.qos_token.v1.Claims", items3, tmp3, DerivedQosData$Type, "create", "internalBinaryRead", Claims$Type, "internalBinaryWrite", items3, undefined, arg1, dependencyMap);
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/qos_token/v1/qos_token.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/qos_token/v1/qos_token.tsx");
 
 export const QosToken = defineProperty;
 export const ClientProvidedQosData = tmp;
 export const DerivedQosData = clientProvidedQosDataType;
-export const Claims = tmp8;
+export const Claims = new "internalBinaryWrite"("discord_protos.qos_token.v1.Claims", items3, tmp3, DerivedQosData$Type, "create", "internalBinaryRead", Claims$Type, "internalBinaryWrite", items3, undefined, fn, dependencyMap);

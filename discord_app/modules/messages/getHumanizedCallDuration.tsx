@@ -1,9 +1,9 @@
 // === Module 7980: getHumanizedCallDuration ===
 
 // Module 7980 (getHumanizedCallDuration)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/getHumanizedCallDuration.tsx");
+const result = size.fileFinishedImporting("modules/messages/getHumanizedCallDuration.tsx");
 
 export default function getHumanizedCallDuration(call) {
   let duration = null;

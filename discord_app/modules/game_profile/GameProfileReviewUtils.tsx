@@ -1,13 +1,13 @@
-// === Module 8724: getSteamReviewScoreDescriptionColor ===
+// === Module 8724: GameProfileReviewUtils ===
 
-// Module 8724 (getSteamReviewScoreDescriptionColor)
-import set from "set" /* 2 */;
-import GameTheme from "GameTheme" /* 1934 */;
+// Module 8724 (GameProfileReviewUtils)
+import GameDetectionTypes from "GameDetectionTypes" /* 1934 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
 export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreDescriptionColor(NO_USER_REVIEWS) {
-  if (GameTheme.SteamReviewScoreDescription.NO_USER_REVIEWS === NO_USER_REVIEWS) {
+  if (GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS === NO_USER_REVIEWS) {
     return "text-subtle";
   } else {
     if (tmp(1934).SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE !== NO_USER_REVIEWS) {
@@ -36,7 +36,7 @@ export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreD
   }
 };
 export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDescriptionIntl(result) {
-  if (GameTheme.SteamReviewScoreDescription.NO_USER_REVIEWS === result) {
+  if (GameDetectionTypes.SteamReviewScoreDescription.NO_USER_REVIEWS === result) {
     const intl10 = tmp(1114).intl;
     return intl10.string(tmp(1114).t.CLMt8J);
   } else if (tmp(1934).SteamReviewScoreDescription.OVERWHELMINGLY_POSITIVE === result) {

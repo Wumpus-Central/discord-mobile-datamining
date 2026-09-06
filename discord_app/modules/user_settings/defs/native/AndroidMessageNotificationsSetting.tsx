@@ -1,50 +1,40 @@
-// === Module 15491: useAndroidMessageNotificationsSettingValue ===
+// === Module 15491: AndroidMessageNotificationsSetting ===
 
-// Module 15491 (useAndroidMessageNotificationsSettingValue)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set2 from "set" /* 1115 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore" /* 15480 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15491 (AndroidMessageNotificationsSetting)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15480 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
 function useAndroidMessageNotificationsSettingValue() {
-  let flag = callback();
+  let flag = React2();
   if (flag == null) {
     flag = false;
   }
   return flag;
 }
 function useHasAndroidMessageNotificationsSetting() {
-  const tmp = callback();
-  let isAndroidResult = set2.isAndroid();
+  const tmp = React2();
+  let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = null != tmp;
   }
   return isAndroidResult;
 }
-({ useAndroidMessageNotificationsEnabled: obj1, setAndroidMessageNotificationsEnabled } = _initializeAndroidNotificationSettingsStore);
-const toggle = createToggle.createToggle({
+({ useAndroidMessageNotificationsEnabled: c2, setAndroidMessageNotificationsEnabled } = AndroidNotificationSettingsStore);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["zViLy+"]);
+    const intl = util.intl;
+    return intl.string(util.t["zViLy+"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: useAndroidMessageNotificationsSettingValue,
   onValueChange: setAndroidMessageNotificationsEnabled,
   usePredicate: useHasAndroidMessageNotificationsSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["zViLy+"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: useAndroidMessageNotificationsSettingValue,
-  onValueChange: setAndroidMessageNotificationsEnabled,
-  usePredicate: useHasAndroidMessageNotificationsSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidMessageNotificationsSetting.tsx");
 
 export default toggle;
 export { useAndroidMessageNotificationsSettingValue };

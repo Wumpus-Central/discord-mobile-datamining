@@ -1,16 +1,22 @@
-// === Module 12966: ? ===
+// === Module 12966: MediaViewerOverlayButtonFavoriteGIF ===
 
-// Module 12966
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12966 (MediaViewerOverlayButtonFavoriteGIF)
+import util from "util" /* 1114 */;
+import frecency_user_settings from "frecency_user_settings" /* 1222 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import GIFPickerActionCreators from "GIFPickerActionCreators" /* 10366 */;
+import GifIcon from "GifIcon" /* 10381 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function GIFFavButton(source) {
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx");
+
+export default noop.memo(function GIFFavButton(source) {
   source = source.source;
-  let uri;
   let isFavoriteGIF;
-  uri = source.isGIFV ? source.embedURI : source.sourceURI;
+  let uri = source.isGIFV ? source.embedURI : source.sourceURI;
   if (uri == null) {
     uri = source.uri;
   }
@@ -21,39 +27,33 @@ const memoResult = importAllResult.memo(function GIFFavButton(source) {
   const items = [isFavoriteGIF, , , , , , , ];
   ({ embedProviderName: arr[1], height: arr[2], isGIFV: arr[3], thumbnail: arr[4], uri: arr[5], width: arr[6] } = source);
   items[7] = uri;
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (isFavoriteGIF) {
-      let tmpResult = tmp(tmp2[3]);
+      let tmpResult = tmp(10366);
       tmpResult.removeFavoriteGIF(uri);
       let obj = { key: "REMOVED_FROM_FAVORITES", content: null, IconComponent: null };
-      const intl2 = source(isFavoriteGIF[5]).intl;
-      obj[1] = intl2.string(source(isFavoriteGIF[5]).t.in1rga);
-      obj[2] = source(isFavoriteGIF[6]).GifIcon;
-      uri(isFavoriteGIF[4]).open(obj);
-      const obj8 = uri(isFavoriteGIF[4]);
+      const intl2 = util.intl;
+      obj.content = intl2.string(util.t.in1rga);
+      obj.IconComponent = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open(obj);
     } else {
-      tmpResult = tmp(tmp2[7]);
+      tmpResult = tmp(10368);
       obj = { providerName: null, thumbnail: null };
-      ({ embedProviderName: obj2[0], thumbnail: obj2[1] } = source);
+      ({ embedProviderName: obj2.providerName, thumbnail: obj2.thumbnail } = source);
       const gIFThumbnailForFavorite = tmpResult.getGIFThumbnailForFavorite(obj);
-      let obj2 = source(isFavoriteGIF[3]);
-      obj1 = { url: null, src: null, gifSrc: null, width: null, height: null, format: null };
-      obj1[0] = uri;
-      obj1[1] = source.uri;
-      obj1[2] = gIFThumbnailForFavorite;
-      ({ width: obj4[3], height: obj4[4] } = source);
-      const GIFType = source(isFavoriteGIF[8]).GIFType;
-      obj1[5] = source.isGIFV ? GIFType.VIDEO : GIFType.IMAGE;
-      obj2.addFavoriteGIF(obj1);
-      obj2 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
-      const intl = source(isFavoriteGIF[5]).intl;
-      obj2[1] = intl.string(source(isFavoriteGIF[5]).t.okQonm);
-      obj2[2] = source(isFavoriteGIF[6]).GifIcon;
-      uri(isFavoriteGIF[4]).open(obj2);
-      const obj5 = uri(isFavoriteGIF[4]);
+      const size = { url: uri, src: source.uri, gifSrc: gIFThumbnailForFavorite, width: null, height: null, format: null };
+      ({ width: obj4.width, height: obj4.height } = source);
+      const GIFType = frecency_user_settings.GIFType;
+      size.format = source.isGIFV ? GIFType.VIDEO : GIFType.IMAGE;
+      GIFPickerActionCreators.addFavoriteGIF(size);
+      const obj1 = { key: "ADDED_TO_FAVORITES", content: null, IconComponent: null };
+      const intl = util.intl;
+      obj1.content = intl.string(util.t.okQonm);
+      obj1.IconComponent = GifIcon.GifIcon;
+      ToastActionCreatorsDefault.open(obj1);
     }
   }, items);
-  let obj2 = source(isFavoriteGIF[3]);
+  const obj2 = source(isFavoriteGIF[3]);
   if (!obj3.isAnimatedImageSource(source)) {
     if (!source.isGIFV) {
       return null;
@@ -74,14 +74,11 @@ const memoResult = importAllResult.memo(function GIFFavButton(source) {
     StarIcon = StarIcon(YELLOW_300[11]).StarIcon;
     obj = { color: null, size: "md" };
     YELLOW_300 = tmp5(YELLOW_300[12]).unsafe_rawColors.YELLOW_300;
-    obj[0] = YELLOW_300;
+    obj.color = YELLOW_300;
     let tmp4Result = tmp4(StarIcon, obj);
   } else {
     tmp4Result = tmp4(StarIcon(YELLOW_300[13]).StarOutlineIcon, { color: "interactive-text-default", size: "md" });
   }
-  obj[2] = tmp4Result;
+  obj.icon = tmp4Result;
   tmp4Result = tmp4(uri(YELLOW_300[10]), obj);
 });
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButtonFavoriteGIF.tsx");
-
-export default memoResult;

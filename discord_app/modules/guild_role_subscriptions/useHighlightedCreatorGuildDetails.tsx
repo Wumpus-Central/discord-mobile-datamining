@@ -1,26 +1,29 @@
 // === Module 17708: useHighlightedCreatorGuildDetails ===
 
 // Module 17708 (useHighlightedCreatorGuildDetails)
-import closure_2 from "noop" /* 19 */;
-import { MarketingURLs } from "ME" /* 1074 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCreatorGuildDetails" /* 17709 */;
+import noop from "module_19" /* 19 */;
 
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
+const MarketingURLs = fn(1074).MarketingURLs;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 
 export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
-  importDefault = arg1;
-  const tmp3 = importDefault(store_page[2])(id);
+  closure_0 = arg1;
+  const tmp3 = useFetchHighlightedCreatorGuildDetailsDefault(id);
   ({ isLoading, highlightedCreatorDetails } = tmp3);
-  store_page = undefined;
+  let store_page;
   if (highlightedCreatorDetails != null) {
     store_page = highlightedCreatorDetails.store_page;
   }
-  let obj = memo;
+  let obj = noop;
   let role_subscription;
   if (store_page != null) {
     role_subscription = store_page.role_subscription;
   }
   const items = [role_subscription];
-  memo = memo.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let group_listings;
     if (store_page != null) {
       const role_subscription = tmp.role_subscription;
@@ -50,7 +53,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     if (benefit_emojis != null) {
       found = benefit_emojis.filter((roles) => {
         roles = roles.roles;
-        return roles.some((arg0) => set.has(arg0));
+        return roles.some((item) => set.has(item));
       });
     }
     return found;
@@ -60,7 +63,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     icon_hash = store_page.guild.icon_hash;
   }
   obj = { id, icon: icon_hash, size };
-  const guildIconURL = importDefault(store_page[3]).getGuildIconURL(obj);
+  const guildIconURL = AvatarUtilsDefault.getGuildIconURL(obj);
   const items1 = [memo, arg1];
   let diff = null;
   const memo1 = obj.useMemo(() => {
@@ -109,24 +112,12 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     tmp13 = null != guildIconURL;
   }
   if (tmp13) {
-    obj = { hasAllImperativeDetails: null, isLoading: null, details: null };
-    obj[0] = tmp13;
-    obj[1] = isLoading;
-    obj1 = { guildName: null, guildIcon: null, guildAvatarUrl: null, storePageUrl: null, subscriberCount: null, emojisToShow: null, notShownEmojiCount: null };
-    obj1[0] = name;
-    obj1[1] = icon_hash;
-    obj1[2] = guildIconURL;
-    obj1[3] = result;
-    obj1[4] = subscriber_count;
-    obj1[5] = memo1;
-    obj1[6] = diff;
-    obj[2] = obj1;
+    obj = { hasAllImperativeDetails: tmp13, isLoading, details: null };
+    const obj1 = { guildName: name, guildIcon: icon_hash, guildAvatarUrl: guildIconURL, storePageUrl: result, subscriberCount: subscriber_count, emojisToShow: memo1, notShownEmojiCount: diff };
+    obj.details = obj1;
     let obj2 = obj;
   } else {
-    obj2 = { hasAllImperativeDetails: null, isLoading: null, error: null };
-    obj2[0] = tmp13;
-    obj2[1] = isLoading;
-    obj2[2] = tmp3.error;
+    obj2 = { hasAllImperativeDetails: tmp13, isLoading, error: tmp3.error };
   }
   return obj2;
 };

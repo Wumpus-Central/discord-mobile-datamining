@@ -1,11 +1,11 @@
-// === Module 1351: isBlockedDomain ===
+// === Module 1351: js_shim/shim ===
 
-// Module 1351 (isBlockedDomain)
-import set from "set" /* 2 */;
+// Module 1351 (js_shim/shim)
 import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1352 */;
-import _initLibdiscore from "_initLibdiscore" /* 1355 */;
+import initLibdiscore from "initLibdiscore" /* 1355 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {
   const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
@@ -31,4 +31,4 @@ export const rustMultiply = LIBDISCORE_JSI.rustMultiply;
 export const crash = LIBDISCORE_JSI.crash;
 export const generateLaunchSignature = LIBDISCORE_JSI.generateLaunchSignature;
 export const getFluxApi = LIBDISCORE_JSI.getFluxApi;
-export const isLibdiscoreInitialized = _initLibdiscore.isLibdiscoreInitialized;
+export const isLibdiscoreInitialized = initLibdiscore.isLibdiscoreInitialized;

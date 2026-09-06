@@ -1,25 +1,26 @@
 // === Module 13389: BuyNitroPurchaseButtonLegalDisclaimer ===
 
 // Module 13389 (BuyNitroPurchaseButtonLegalDisclaimer)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set from "set" /* 1115 */;
-import combinedDefault from "combined" /* 2024 */;
-import getPremiumPlanItem from "getPremiumPlanItem" /* 4218 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import PremiumUtils from "PremiumUtils" /* 4218 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ HelpdeskArticles: c3, MarketingURLs: c4 } = ME);
-createCacheKey = { disclaimer: null };
-createCacheKey = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
+const PremiumUtilsDefault = PremiumUtils;
+
+require = fn;
+const Constants = fn(1074);
+({ HelpdeskArticles: c3, MarketingURLs: closure_4 } = Constants);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { disclaimer: null };
+createStyles = { marginTop: nativeDefault.space.PX_12, textAlign: "center" };
+createStyles.disclaimer = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
 
 export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   ({ item, ctaText } = arg0);
@@ -31,49 +32,39 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
   if (null == interval) {
     return null;
   } else {
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     const format = intl.format;
     if (!isTrial) {
       if (isDiscounted) {
-        let obj = { buttonText: null, interval: null, cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
-        obj[0] = ctaText;
-        obj[1] = getPremiumPlanItemDefault.formatInterval(item.interval);
-        const obj5 = getPremiumPlanItemDefault;
-        obj[2] = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-        const obj6 = combinedDefault;
-        obj[3] = combinedDefault.getArticleURL(constants.PAID_TERMS);
+        let obj = { buttonText: ctaText, interval: PremiumUtilsDefault.formatInterval(item.interval), cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
+        obj.cancelSubscriptionArticle = HelpdeskUtilsDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+        obj.paidServiceTermsArticle = HelpdeskUtilsDefault.getArticleURL(constants.PAID_TERMS);
         let formatResult = format(tmp3(1114).t["3uC7vj"], obj);
         let tmp10 = tmp3;
-        const obj7 = combinedDefault;
       } else {
         let tmp3Result = tmp3(1115);
         let t = tmp3(1114).t;
-        obj = { paidURL: null, interval: null, ctaText: null };
-        obj[0] = constants2.PAID_TERMS;
+        obj = { paidURL: constants2.PAID_TERMS, interval: null, ctaText: null };
         const isAndroidResult = tmp3Result.isAndroid();
         tmp3Result = tmp3(4218);
-        obj[1] = tmp3Result.getIntervalStringAsNoun(item.interval);
-        obj[2] = ctaText;
+        obj.interval = tmp3Result.getIntervalStringAsNoun(item.interval);
+        obj.ctaText = ctaText;
         formatResult = format(tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"], obj);
         tmp10 = tmp3;
         const tmp6 = tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"];
       }
-      obj1 = { style: null, variant: "text-xxs/medium", children: null };
-      obj1[0] = tmp.disclaimer;
-      obj1[2] = formatResult;
-      jsx(tmp10(4556).Text, { style: null, variant: "text-xxs/medium", children: null });
+      const obj1 = { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult };
+      jsx(tmp10(4556).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
     }
-    const tmp3Result1 = set;
-    t = tmp3(1114).t;
-    const isAndroidResult1 = set.isAndroid();
-    t = { paidURL: null, interval: null, cancelURL: null };
-    t[0] = constants2.PAID_TERMS;
-    const tmp14 = set.isAndroid() ? t.tINI9V : t.ZWXtAj;
-    t[1] = getPremiumPlanItem.getIntervalStringAsNoun(item.interval);
-    const tmp3Result2 = getPremiumPlanItem;
-    item = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-    t[2] = item;
+    const tmp3Result1 = PlatformUtils;
+    tmp3(1114).t;
+    const isAndroidResult1 = PlatformUtils.isAndroid();
+    t = { paidURL: constants2.PAID_TERMS, interval: null, cancelURL: null };
+    const tmp14 = PlatformUtils.isAndroid() ? t.tINI9V : t.ZWXtAj;
+    t.interval = PremiumUtils.getIntervalStringAsNoun(item.interval);
+    const tmp3Result2 = PremiumUtils;
+    item = HelpdeskUtilsDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+    t.cancelURL = item;
     format(tmp14, t);
-    const obj11 = combinedDefault;
   }
 };

@@ -1,8 +1,8 @@
-// === Module 17002: DEFAULT_STATE ===
+// === Module 17002: ExternalPipEnablerState ===
 
-// Module 17002 (DEFAULT_STATE)
-import set from "set" /* 2 */;
+// Module 17002 (ExternalPipEnablerState)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/external_pip/ExternalPipEnablerState.tsx");
+const result = size.fileFinishedImporting("modules/external_pip/ExternalPipEnablerState.tsx");
 
 export const DEFAULT_STATE = { externalPipEnabled: false, selectedStreamId: null, focusedStreamId: null };

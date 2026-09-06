@@ -1,9 +1,9 @@
-// === Module 15882: ? ===
+// === Module 15882: ReactCompilerSetting ===
 
-// Module 15882
-import set from "set" /* 2 */;
+// Module 15882 (ReactCompilerSetting)
 import WrenchIcon from "WrenchIcon" /* 15562 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
 const obj = {
   useTitle() {
@@ -18,7 +18,9 @@ const obj = {
     return false;
   }
 };
-const createStaticResult = createToggle.createStatic({
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
+
+export default SettingBuilders.createStatic({
   useTitle() {
     return "React Compiler";
   },
@@ -31,6 +33,3 @@ const createStaticResult = createToggle.createStatic({
     return false;
   }
 });
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
-
-export default createStaticResult;

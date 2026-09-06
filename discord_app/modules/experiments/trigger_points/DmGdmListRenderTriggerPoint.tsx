@@ -1,11 +1,11 @@
-// === Module 16050: commonTriggerPointConfiguration ===
+// === Module 16050: DmGdmListRenderTriggerPoint ===
 
-// Module 16050 (commonTriggerPointConfiguration)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 10809 */;
+// Module 16050 (DmGdmListRenderTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4477 */;
+import Helpers from "Helpers" /* 10809 */;
+import size from "module_2" /* 2 */;
 
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/DmGdmListRenderTriggerPoint.tsx");
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.DM_GDM_LIST_RENDER, { location: "dm/gdm list rendered" });
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/DmGdmListRenderTriggerPoint.tsx");
 
 export const DmGdmListRenderTriggerPoint = commonTriggerPointConfiguration;

@@ -1,13 +1,13 @@
 // === Module 13002: isOnXbox ===
 
 // Module 13002 (isOnXbox)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import items3 from "items3" /* 1920 */;
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 1920 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = items3.XBOX_ACTIVITY_APPLICATION_ID;
-const ActivityGamePlatforms = ME.ActivityGamePlatforms;
-const result = set.fileFinishedImporting("modules/activities/utils/isOnXbox.tsx");
+let closure_0 = Constants2.XBOX_ACTIVITY_APPLICATION_ID;
+const ActivityGamePlatforms = Constants.ActivityGamePlatforms;
+const result = size.fileFinishedImporting("modules/activities/utils/isOnXbox.tsx");
 
 export default function isOnXbox(application_id) {
   application_id = undefined;

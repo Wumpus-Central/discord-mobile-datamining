@@ -1,38 +1,39 @@
 // === Module 10169: NotificationSettingsChannelPost ===
 
 // Module 10169 (NotificationSettingsChannelPost)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { jsx } from "jsxProd" /* 21 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
+import noop from "module_19" /* 19 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");
+const require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannelPost.tsx");
 
 export const NotificationSettingsChannelPost = function NotificationSettingsChannelPost(channel) {
-  const _require = channel;
+  _require = channel;
   ({ guild_id: importDefault, id: dependencyMap } = channel.channel);
-  let obj = _require(504);
-  const items = [closure_4];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ muted: closure_1_4.isChannelMuted(closure_1, closure_2), guildMuted: closure_1_4.isMuted(closure_1), newForumThreadsCreated: closure_1_4.getNewForumThreadsCreated(channel.channel) }));
+  let obj = require("initialize");
+  const items = [UserGuildSettingsStore];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ muted: UserGuildSettingsStore.isChannelMuted(importDefault, dependencyMap), guildMuted: UserGuildSettingsStore.isMuted(importDefault), newForumThreadsCreated: UserGuildSettingsStore.getNewForumThreadsCreated(channel.channel) }));
   ({ muted, newForumThreadsCreated } = stateFromStoresObject);
   obj = { style: channel.style, children: null };
   obj = { title: null, hasIcons: false, children: null };
-  const intl = _require(1114).intl;
-  obj[0] = intl.string(_require(1114).t.bK11jO);
-  obj1 = { label: null, checked: null, disabled: null, onPress: null };
-  const intl2 = _require(1114).intl;
-  obj1[0] = intl2.string(_require(1114).t.Rkgjph);
-  obj1[1] = newForumThreadsCreated;
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t.bK11jO);
+  const obj1 = { label: null, checked: null, disabled: null, onPress: null };
+  const intl2 = require("util").intl;
+  obj1.label = intl2.string(require("util").t.Rkgjph);
+  obj1.checked = newForumThreadsCreated;
   if (!muted) {
     muted = stateFromStoresObject.guildMuted;
   }
-  obj1[2] = muted;
-  obj1[3] = function onPress() {
-    const result = closure_1_1(closure_1_2[8]).setForumThreadsCreated(channel.channel, !newForumThreadsCreated);
+  obj1.disabled = muted;
+  obj1.onPress = function onPress() {
+    const result = NotificationSettingsModalActionCreatorsDefault.setForumThreadsCreated(channel.channel, !newForumThreadsCreated);
   };
-  obj[2] = jsx(_require(5604).TableCheckboxRow, { label: null, checked: null, disabled: null, onPress: null });
-  obj[1] = jsx(_require(5687).TableRowGroup, { title: null, hasIcons: false, children: null });
+  obj.children = jsx(require("TableCheckboxRow").TableCheckboxRow, { label: null, checked: null, disabled: null, onPress: null });
+  obj.children = jsx(require("TableRowGroup").TableRowGroup, { title: null, hasIcons: false, children: null });
   return <newForumThreadsCreated title={null} hasIcons={false}>{null}</newForumThreadsCreated>;
 };

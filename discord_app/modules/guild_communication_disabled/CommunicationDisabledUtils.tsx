@@ -1,15 +1,15 @@
-// === Module 4188: isCommunicationDisabled ===
+// === Module 4188: CommunicationDisabledUtils ===
 
-// Module 4188 (isCommunicationDisabled)
-import set from "set" /* 2 */;
+// Module 4188 (CommunicationDisabledUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledUtils.tsx");
 
-export const isCommunicationDisabled = function isCommunicationDisabled(arg0) {
-  let tmp = null != arg0;
+export const isCommunicationDisabled = function isCommunicationDisabled(communicationDisabledUserMap) {
+  let tmp = null != communicationDisabledUserMap;
   if (tmp) {
     const _Date = Date;
-    const date = new Date(arg0);
+    const date = new Date(communicationDisabledUserMap);
     const _Date2 = Date;
     const date1 = new Date();
     tmp = date > date1;

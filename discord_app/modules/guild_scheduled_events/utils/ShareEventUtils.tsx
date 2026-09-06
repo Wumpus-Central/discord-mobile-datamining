@@ -1,9 +1,9 @@
-// === Module 9775: SHARE_EVENT_DETAILS_LINK ===
+// === Module 9775: ShareEventUtils ===
 
-// Module 9775 (SHARE_EVENT_DETAILS_LINK)
-import set from "set" /* 2 */;
+// Module 9775 (ShareEventUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/utils/ShareEventUtils.tsx");
 
 export const SHARE_EVENT_DETAILS_LINK = (guildId) => "https://discord.com/events/" + guildId.guildId + "/" + guildId.guildEventId;
 export const canUseInviteModal = function canUseInviteModal(arg0, arg1, arg2) {

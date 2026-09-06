@@ -1,30 +1,21 @@
-// === Module 15417: toggle ===
+// === Module 15417: AutoplayGifSetting ===
 
-// Module 15417 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15417 (AutoplayGifSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9ptHSs"]);
+    const intl = util.intl;
+    return intl.string(util.t["9ptHSs"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCESSIBILITY,
-  useValue: explicitContentFromProto.GifAutoPlay.useSetting,
-  onValueChange: explicitContentFromProto.GifAutoPlay.updateSetting
+  parent: SettingsConstants.MobileUserSettings.ACCESSIBILITY,
+  useValue: UserSettings.GifAutoPlay.useSetting,
+  onValueChange: UserSettings.GifAutoPlay.updateSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["9ptHSs"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCESSIBILITY,
-  useValue: explicitContentFromProto.GifAutoPlay.useSetting,
-  onValueChange: explicitContentFromProto.GifAutoPlay.updateSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AutoplayGifSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AutoplayGifSetting.tsx");
 
 export default toggle;

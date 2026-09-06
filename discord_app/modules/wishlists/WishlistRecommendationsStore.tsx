@@ -1,47 +1,46 @@
-// === Module 10793: handleUserSettingsStoreUpdate ===
+// === Module 10793: WishlistRecommendationsStore ===
 
-// Module 10793 (handleUserSettingsStoreUpdate)
+// Module 10793 (WishlistRecommendationsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "_getSystemLocale" /* 2025 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
 
 function handleUserSettingsStoreUpdate() {
-  if (locale === closure_0.locale) {
+  if (locale === LocaleStore.locale) {
     return false;
   } else {
-    closure_2 = {};
     locale = tmp.locale;
   }
 }
-let closure_2 = {};
+let obj = {};
 const Store = initializeDefault.Store;
 class WishlistRecommendationsStore extends Store {
 }
 const prototype = WishlistRecommendationsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_0);
-  const items = [closure_0];
+  this.waitFor(LocaleStore);
+  const items = [LocaleStore];
   this.syncWith(items, handleUserSettingsStoreUpdate);
-  const locale = closure_0.locale;
+  locale = LocaleStore.locale;
 };
-prototype["getRecommendations"] = function getRecommendations(applicationIds, memo3) {
-  if (0 !== applicationIds.length) {
+prototype["getRecommendations"] = function getRecommendations(userIdsAndWishlistIds, memo3) {
+  if (0 !== userIdsAndWishlistIds.length) {
     if (0 !== memo3.length) {
-      if (0 === applicationIds.length) {
+      if (0 === userIdsAndWishlistIds.length) {
         const _Error = Error;
-        error = new Error("No user IDs provided");
+        const error = new Error("No user IDs provided");
         throw error;
       } else {
         const items = [];
-        HermesBuiltin.arraySpread(memo3, HermesBuiltin.arraySpread(applicationIds, 0));
+        HermesBuiltin.arraySpread(memo3, HermesBuiltin.arraySpread(userIdsAndWishlistIds, 0));
         return tmp2[items.join(items, ",")];
       }
     }
   }
 };
-const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcherDefault, {
+obj = {
   LOGOUT: function handleLogout() {
-    closure_2 = {};
+
   },
   WISHLIST_RECOMMENDATIONS_FETCH_START: function handleFetchStart(arg0) {
     ({ userIds, applicationIds } = arg0);
@@ -49,12 +48,12 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
       if (0 !== applicationIds.length) {
         if (0 === userIds.length) {
           const _Error = Error;
-          error = new Error("No user IDs provided");
+          const error = new Error("No user IDs provided");
           throw error;
         } else {
           const items = [];
           HermesBuiltin.arraySpread(applicationIds, HermesBuiltin.arraySpread(userIds, 0));
-          const obj = {};
+          obj = {};
           const joined = items.join(",");
           const merged = Object.assign(obj);
           obj[joined] = { state: "loading" };
@@ -69,18 +68,17 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
       if (0 !== applicationIds.length) {
         if (0 === userIds.length) {
           const _Error = Error;
-          error = new Error("No user IDs provided");
+          const error = new Error("No user IDs provided");
           throw error;
         } else {
           const items = [];
           HermesBuiltin.arraySpread(applicationIds, HermesBuiltin.arraySpread(userIds, 0));
-          let obj = {};
+          obj = {};
           const joined = items.join(",");
           const merged = Object.assign(obj);
-          obj = { state: "success", data: null, fetchedAt: null };
-          obj[1] = tmp;
+          obj = { state: "success", data: tmp, fetchedAt: null };
           const _Date = Date;
-          obj[2] = Date.now();
+          obj.fetchedAt = Date.now();
           obj[joined] = obj;
         }
       }
@@ -93,7 +91,7 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
       if (0 !== applicationIds.length) {
         if (0 === userIds.length) {
           const _Error = Error;
-          error = new Error("No user IDs provided");
+          const error = new Error("No user IDs provided");
           throw error;
         } else {
           const items = [];
@@ -110,7 +108,7 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
             const merged = Object.assign(obj);
             obj = { state: "error", fetchedAt: null };
             const _Date = Date;
-            obj[1] = Date.now();
+            obj.fetchedAt = Date.now();
             obj[joined] = obj;
           }
         }
@@ -118,7 +116,9 @@ const wishlistRecommendationsStore = new WishlistRecommendationsStore(dispatcher
     }
     return false;
   }
-});
-const result = require("set").fileFinishedImporting("modules/wishlists/WishlistRecommendationsStore.tsx");
+};
+const wishlistRecommendationsStore = new WishlistRecommendationsStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/WishlistRecommendationsStore.tsx");
 
 export default wishlistRecommendationsStore;

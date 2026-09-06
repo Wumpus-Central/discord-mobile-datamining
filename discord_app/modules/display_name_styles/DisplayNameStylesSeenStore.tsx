@@ -1,14 +1,12 @@
-// === Module 15340: set ===
+// === Module 15340: DisplayNameStylesSeenStore ===
 
-// Module 15340 (set)
+// Module 15340 (DisplayNameStylesSeenStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let obj = { seenFontIds: null, seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
+let obj = { seenFontIds: new Set(), seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
 let set = new Set();
-obj[0] = set;
-obj[1] = new Set();
+obj.seenEffectIds = new Set();
 const PersistedStore = initializeDefault.PersistedStore;
 class DisplayNameStylesSeenStore extends PersistedStore {
 }
@@ -30,7 +28,7 @@ prototype["initialize"] = function initialize(seenFontIds) {
     seenEffectIds = [];
   }
   const set = new Set(seenFontIds);
-  obj[1] = new Set(seenEffectIds);
+  obj.seenEffectIds = new Set(seenEffectIds);
   let flag;
   if (seenFontIds != null) {
     flag = seenFontIds.newFontsBadgeDismissed;
@@ -38,7 +36,7 @@ prototype["initialize"] = function initialize(seenFontIds) {
   if (flag == null) {
     flag = false;
   }
-  obj[2] = flag;
+  obj.newFontsBadgeDismissed = flag;
   let flag2;
   if (seenFontIds != null) {
     flag2 = seenFontIds.newEffectsBadgeDismissed;
@@ -46,7 +44,7 @@ prototype["initialize"] = function initialize(seenFontIds) {
   if (flag2 == null) {
     flag2 = false;
   }
-  obj[3] = flag2;
+  obj.newEffectsBadgeDismissed = flag2;
 };
 prototype["getState"] = function getState() {
   obj = { seenFontIds: Array.from(obj.seenFontIds), seenEffectIds: Array.from(obj.seenEffectIds), newFontsBadgeDismissed: obj.newFontsBadgeDismissed, newEffectsBadgeDismissed: obj.newEffectsBadgeDismissed };
@@ -126,7 +124,8 @@ obj = {
     }
   }
 };
-const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");
+const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");
 
 export default displayNameStylesSeenStore;

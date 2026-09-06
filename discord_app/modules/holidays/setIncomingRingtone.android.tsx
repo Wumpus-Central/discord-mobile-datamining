@@ -1,13 +1,13 @@
 // === Module 17386: setIncomingRingtone ===
 
 // Module 17386 (setIncomingRingtone)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/holidays/setIncomingRingtone.android.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/holidays/setIncomingRingtone.android.tsx");
 
-export const setIncomingRingtone = function setIncomingRingtone(call_ringing, arg1) {
+export const setIncomingRingtone = function setIncomingRingtone(call_ringing) {
   const DCDNotificationCategoryUtils = NativeModules.DCDNotificationCategoryUtils;
   if (DCDNotificationCategoryUtils != null) {
     const setIncomingRingtone = DCDNotificationCategoryUtils.setIncomingRingtone;

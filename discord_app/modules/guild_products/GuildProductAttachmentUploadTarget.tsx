@@ -1,13 +1,13 @@
-// === Module 5175: getCreateAttachmentURL ===
+// === Module 5175: GuildProductAttachmentUploadTarget ===
 
-// Module 5175 (getCreateAttachmentURL)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY" /* 5176 */;
+// Module 5175 (GuildProductAttachmentUploadTarget)
+import Constants from "Constants" /* 1074 */;
+import GuildProductConstants from "GuildProductConstants" /* 5176 */;
+import size from "module_2" /* 2 */;
 
-({ MAX_ATTACHMENT_UPLOAD_COUNT: c0, MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: closure_1, MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: obj1 } = GUILD_PRODUCT_EDIT_MODAL_KEY);
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductAttachmentUploadTarget.tsx");
+({ MAX_ATTACHMENT_UPLOAD_COUNT: closure_0, MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: closure_1, MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: c2 } = GuildProductConstants);
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductAttachmentUploadTarget.tsx");
 class GuildProductAttachmentUploadTarget {
 }
 const prototype = GuildProductAttachmentUploadTarget.prototype;
@@ -18,13 +18,13 @@ prototype["getDeleteUploadURL"] = function getDeleteUploadURL(arg0) {
   return Endpoints.MESSAGE_DELETE_UPLOAD(arg0);
 };
 prototype["getMaxFileSize"] = function getMaxFileSize() {
-  return closure_1;
+  return framebus;
 };
 prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
-  return closure_0;
+  return React;
 };
 prototype["getMaxTotalAttachmentSize"] = function getMaxTotalAttachmentSize() {
-  return closure_2;
+  return React2;
 };
 Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   get: function shouldReactNativeCompressUploads() {

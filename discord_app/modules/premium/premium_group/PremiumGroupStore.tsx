@@ -1,35 +1,36 @@
-// === Module 13489: handleMutationStart ===
+// === Module 13489: PremiumGroupStore ===
 
-// Module 13489 (handleMutationStart)
+// Module 13489 (PremiumGroupStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_3 from "reset" /* 4224 */;
-import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4232 */;
-import { NOOP_NULL } from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PremiumGroupActionCreators from "PremiumGroupActionCreators" /* 13490 */;
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
-const require = arg1;
+require = fn;
 function handleMutationStart() {
   closure_7.membersData.isUpdating = true;
 }
 function handleMutationSuccess(subscriptionId) {
   subscriptionId = subscriptionId.subscriptionId;
-  dispatcherDefault.wait(() => {
-    const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-    return subscriptionGroupMembers.catch(closure_1_6);
+  DispatcherDefault.wait(() => {
+    const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(subscriptionId);
+    return subscriptionGroupMembers.catch(NOOP_NULL);
   });
   closure_7.membersData.isUpdating = false;
 }
 function handleMutationFailure() {
   closure_7.membersData.isUpdating = false;
 }
-({ PremiumGroupAPIErrorCodes: c4, TOTAL_PREMIUM_GROUP_MEMBER_SEATS: c5 } = SubscriptionStatusTypes);
+const PremiumGroupConstants = fn(4232);
+({ PremiumGroupAPIErrorCodes: closure_4, TOTAL_PREMIUM_GROUP_MEMBER_SEATS: hasOwnProperty } = PremiumGroupConstants);
+const NOOP_NULL = fn(1074).NOOP_NULL;
 let closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
 const Store = initializeDefault.Store;
 class PremiumGroupStore extends Store {
 }
 const prototype = PremiumGroupStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3);
+  this.waitFor(SubscriptionStore);
 };
 prototype["getMembers"] = function getMembers() {
   return closure_7.membersData.data;
@@ -61,28 +62,27 @@ prototype["getNumUsedSeats"] = function getNumUsedSeats() {
 };
 prototype["getNumAvailableInvites"] = function getNumAvailableInvites() {
   if (null == closure_7.membersData.data) {
-    return closure_5;
+    return hasOwnProperty;
   } else {
     const _Math = Math;
-    return Math.max(0, closure_5 - (closure_7.membersData.data.members.length + closure_7.membersData.data.invitedUsers.length));
+    return Math.max(0, hasOwnProperty - (closure_7.membersData.data.members.length + closure_7.membersData.data.invitedUsers.length));
   }
 };
 prototype["getNumTotalSeats"] = function getNumTotalSeats() {
-  return closure_5;
+  return hasOwnProperty;
 };
 PremiumGroupStore.displayName = "PremiumGroupStore";
-const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
+const premiumGroupStore = new PremiumGroupStore(DispatcherDefault, {
   PREMIUM_GROUP_MEMBERS_REQUEST: function handleMembersRequest(subscriptionId) {
     subscriptionId = subscriptionId.subscriptionId;
     const isFetching = closure_7.membersData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      dispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(closure_1_6);
+      DispatcherDefault.wait(() => {
+        const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(NOOP_NULL);
       });
       flag = true;
-      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -100,12 +100,11 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     const isFetching = closure_7.membershipData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      dispatcherDefault.wait(() => {
-        const premiumGroupMembership = callback(table[4]).fetchPremiumGroupMembership();
-        return premiumGroupMembership.catch(closure_6);
+      DispatcherDefault.wait(() => {
+        const premiumGroupMembership = PremiumGroupActionCreators.fetchPremiumGroupMembership();
+        return premiumGroupMembership.catch(NOOP_NULL);
       });
       flag = true;
-      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -136,9 +135,9 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
   PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function handleRemoveInviteFailure(subscriptionId) {
     subscriptionId = subscriptionId.subscriptionId;
     if (subscriptionId.errorCode === constants.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED) {
-      dispatcherDefault.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(closure_1_6);
+      DispatcherDefault.wait(() => {
+        const subscriptionGroupMembers = PremiumGroupActionCreators.fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(NOOP_NULL);
       });
       closure_7.membersData.isUpdating = false;
       return true;
@@ -150,6 +149,7 @@ const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
     closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
   }
 });
-const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
 
 export default premiumGroupStore;

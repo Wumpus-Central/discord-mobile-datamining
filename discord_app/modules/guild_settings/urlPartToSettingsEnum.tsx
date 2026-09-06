@@ -1,9 +1,9 @@
 // === Module 13849: urlPartToSettingsEnum ===
 
 // Module 13849 (urlPartToSettingsEnum)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_settings/urlPartToSettingsEnum.tsx");
+const result = size.fileFinishedImporting("modules/guild_settings/urlPartToSettingsEnum.tsx");
 
 export default function urlPartToSettingsEnum(arg0, str) {
   let formatted;

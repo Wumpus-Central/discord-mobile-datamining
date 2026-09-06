@@ -1,11 +1,11 @@
-// === Module 5573: BANNER_RATIO_HEIGHT_16_9 ===
+// === Module 5573: MemberVerificationFormConstants ===
 
-// Module 5573 (BANNER_RATIO_HEIGHT_16_9)
-import set from "set" /* 2 */;
+// Module 5573 (MemberVerificationFormConstants)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
+import size from "module_2" /* 2 */;
 
 let c2 = 0.5625;
-const result = set.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationFormConstants.tsx");
 
 export const BANNER_RATIO_HEIGHT_16_9 = 0.5625;
 export const AVATAR_SIZE = 76;

@@ -1,31 +1,35 @@
 // === Module 13094: AddToWishlistGrid ===
 
 // Module 13094 (AddToWishlistGrid)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 13093 */;
+import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 13095 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: require("ARBITRARY_LARGE_OFFSET").WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } });
-const result = require("set").fileFinishedImporting("modules/wishlists/native/AddToWishlistGrid.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7208).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } };
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/AddToWishlistGrid.tsx");
 
 export default function AddToWishlistGrid(arg0) {
   ({ items, wishlist: require, analyticsLocations: importDefault, cardSize: dependencyMap } = arg0);
-  return <View style={callback().itemsContainer}>{items.map((itemSource, positionInSection) => {
+  return <View style={closure_5().itemsContainer}>{items.map((itemSource, positionInSection) => {
     const sku = itemSource.sku;
-    obj = { newValue: obj, children: null };
+    let obj = { newValue: null, children: null };
     obj = { positionInSection, skuId: sku.id, itemSource: itemSource.itemSource, productLine: sku.productLine };
+    obj.newValue = obj;
     obj = { sku, wishlistId: null, analyticsLocations: null, size: null };
-    let id;
+    id = undefined;
     if (id != null) {
       id = id.id;
     }
-    obj[1] = id;
-    obj[2] = closure_1;
-    obj[3] = closure_2;
-    obj[1] = closure_1_4(closure_1_1(closure_1_2[6]), obj);
-    return closure_1_4(closure_1_0(closure_1_2[5]).WishlistAnalyticsProvider, obj, sku.id);
+    obj.wishlistId = id;
+    obj.analyticsLocations = analyticsLocations;
+    obj.size = size;
+    obj.children = jsx(AddToWishlistItemCardDefault, { sku, wishlistId: null, analyticsLocations: null, size: null });
+    return jsx(WishlistAnalyticsContext.WishlistAnalyticsProvider, { sku, wishlistId: null, analyticsLocations: null, size: null }, sku.id);
   })}</View>;
 };

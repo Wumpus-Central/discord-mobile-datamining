@@ -1,31 +1,30 @@
-// === Module 8929: resolveFieldValue ===
+// === Module 8929: resolvedValues ===
 
-// Module 8929 (resolveFieldValue)
-import set from "set" /* 2 */;
+// Module 8929 (resolvedValues)
 import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 8930 */;
+import ApplicationWidgetFieldValueType from "ApplicationWidgetFieldValueType" /* 8931 */;
+import size from "module_2" /* 2 */;
 
 function resolveFieldValue(image, items, applicationAssets) {
-  const _require = image;
   applicationAssets = applicationAssets.applicationAssets;
   if (null == image) {
     return null;
-  } else if (image.value_type === _require(8931).ApplicationWidgetFieldValueType.DATA) {
+  } else if (image.value_type === ApplicationWidgetFieldValueType.ApplicationWidgetFieldValueType.DATA) {
     let iter = tmp[image.value];
     const presentation_type = image.presentation_type;
     if (null != iter) {
       let hasItem;
-      if (table[presentation_type] != null) {
+      if (closure_3[presentation_type] != null) {
         hasItem = obj4.includes(iter.type);
       }
       if (hasItem) {
         if (items.includes(iter.type)) {
           if ("playtime_hours" === image.value) {
-            obj = { type: null, value: null, presentationType: null };
-            obj[0] = iter.type;
+            let obj = { type: iter.type, value: null, presentationType: null };
             const _Math = Math;
             iter = iter.value;
-            obj[1] = Math.floor(60 * iter * 60 * 1000);
-            obj[2] = presentation_type;
+            obj.value = Math.floor(60 * iter * 60 * 1000);
+            obj.presentationType = presentation_type;
           }
           obj = {};
           const merged = Object.assign(iter);
@@ -46,10 +45,7 @@ function resolveFieldValue(image, items, applicationAssets) {
     if (image.presentation_type === tmp19(8930).ApplicationWidgetFieldPresentationType.TEXT) {
       tmp6 = null;
       if (items.includes(obj.STRING)) {
-        obj1 = { type: null, value: null, presentationType: null };
-        obj1[0] = tmp7.STRING;
-        obj1[1] = image.value;
-        obj1[2] = tmp19(8930).ApplicationWidgetFieldPresentationType.TEXT;
+        const obj1 = { type: tmp7.STRING, value: image.value, presentationType: tmp19(8930).ApplicationWidgetFieldPresentationType.TEXT };
         tmp6 = obj1;
       }
       tmp7 = obj;
@@ -60,14 +56,10 @@ function resolveFieldValue(image, items, applicationAssets) {
       const found = applicationAssets.find((key) => key.key === image.value);
       let tmp5 = null;
       if (null != found) {
-        obj = { type: null, media: null, presentationType: null };
-        obj[0] = tmp3.MEDIA;
-        const obj2 = { url: null, width: null, height: null };
-        obj2[0] = tmp2(found);
-        obj2[1] = found.metadata.width;
-        obj2[2] = found.metadata.height;
-        obj[1] = obj2;
-        obj[2] = tmp19(8930).ApplicationWidgetFieldPresentationType.IMAGE;
+        obj = { type: tmp3.MEDIA, media: null, presentationType: null };
+        const size = { url: tmp2(found), width: found.metadata.width, height: found.metadata.height };
+        obj.media = size;
+        obj.presentationType = tmp19(8930).ApplicationWidgetFieldPresentationType.IMAGE;
         tmp5 = obj;
       }
       return tmp5;
@@ -79,16 +71,16 @@ function resolveFieldValue(image, items, applicationAssets) {
     return null;
   }
 }
-let obj = { STRING: "string", NUMBER: "number", MEDIA: "media" };
-const items = [obj.STRING];
-const items1 = [obj.NUMBER];
-const items2 = [obj.MEDIA];
-const items3 = [obj.NUMBER];
+const ResolvedValueType = { STRING: "string", NUMBER: "number", MEDIA: "media" };
+const items = [ResolvedValueType.STRING];
+const items1 = [ResolvedValueType.NUMBER];
+const items2 = [ResolvedValueType.MEDIA];
+const items3 = [ResolvedValueType.NUMBER];
 let closure_3 = { [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.TEXT]: items, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.NUMBER]: items1, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.IMAGE]: items2, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION]: items3 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
 
-export const ResolvedValueType = obj;
+export { ResolvedValueType };
 export function bindResolveFieldValue(resolutionContext) {
   closure_0 = resolutionContext;
-  return (arg0, arg1) => closure_1_4(arg0, arg1, closure_0);
+  return (image, items) => resolveFieldValue(image, items, closure_0);
 }

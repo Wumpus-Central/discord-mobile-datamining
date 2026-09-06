@@ -1,32 +1,22 @@
-// === Module 15534: pressable ===
+// === Module 15534: SupportSetting ===
 
-// Module 15534 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 15534 (SupportSetting)
+import util from "util" /* 1114 */;
 import CircleQuestionIcon from "CircleQuestionIcon" /* 11105 */;
-import _emailSupport from "_emailSupport" /* 15535 */;
-import createToggle from "createToggle" /* 11468 */;
+import SupportUtils from "SupportUtils" /* 15535 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yl/Riu"]);
+    const intl = util.intl;
+    return intl.string(util.t["Yl/Riu"]);
   },
   parent: null,
   IconComponent: CircleQuestionIcon.CircleQuestionIcon,
-  onPress: _emailSupport.emailSupport,
+  onPress: SupportUtils.emailSupport,
   withArrow: true
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Yl/Riu"]);
-  },
-  parent: null,
-  IconComponent: CircleQuestionIcon.CircleQuestionIcon,
-  onPress: _emailSupport.emailSupport,
-  withArrow: true
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SupportSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SupportSetting.tsx");
 
 export default pressable;

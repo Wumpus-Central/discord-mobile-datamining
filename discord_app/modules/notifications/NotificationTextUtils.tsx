@@ -1,44 +1,40 @@
-// === Module 10085: shouldNotifyBase ===
+// === Module 10085: NotificationTextUtils ===
 
-// Module 10085 (shouldNotifyBase)
+// Module 10085 (NotificationTextUtils)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import getNicknameDefault from "getNickname" /* 4712 */;
-import computeChannelName from "computeChannelName" /* 4713 */;
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 4771 */;
-import isMentioned from "isMentioned" /* 4798 */;
+import util from "util" /* 1114 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import Server from "Server" /* 1894 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import useChannelName from "useChannelName" /* 4713 */;
+import AgeGateUtils from "AgeGateUtils" /* 4771 */;
+import isMessageMentioned from "isMessageMentioned" /* 4798 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
 import isForwardMessage from "isForwardMessage" /* 7302 */;
-import FSI from "FSI" /* 7685 */;
-import isChannelCurrentlyVisible from "isChannelCurrentlyVisible" /* 10087 */;
-import computeThreadNotificationSetting from "computeThreadNotificationSetting" /* 10088 */;
-import useFocusModeEnabled from "useFocusModeEnabled" /* 10090 */;
-import closure_3 from "participantFromServer" /* 1956 */;
-import closure_4 from "initialize" /* 4200 */;
-import closure_5 from "processChannel" /* 7219 */;
-import closure_6 from "storeThread" /* 4201 */;
-import closure_7 from "withEqualityFn" /* 4768 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import closure_10 from "ensureGuildLoaded" /* 1957 */;
-import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "createRTCConnection" /* 4583 */;
-import closure_13 from "markAllUserIdListsStale" /* 4209 */;
-import closure_14 from "handleConnectionOpen" /* 2011 */;
-import closure_15 from "handleConnectionOpen" /* 4381 */;
-import closure_16 from "filterPlayingActivities" /* 5279 */;
-import closure_17 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_18 from "handleRequiredAction" /* 1951 */;
-import closure_19 from "mergeGuildAvatar" /* 1371 */;
-import closure_20 from "initialize" /* 10086 */;
-import ME from "ME" /* 1074 */;
-import { ActivityPanelModes } from "ActivityPanelModes" /* 9505 */;
-import { ThreadMemberFlags } from "AbortCodes" /* 1113 */;
+import IsolateString from "IsolateString" /* 7685 */;
+import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 10087 */;
+import ThreadNotificationSettings from "ThreadNotificationSettings" /* 10088 */;
+import FocusModeUtils from "FocusModeUtils" /* 10090 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import LurkingStore from "LurkingStore" /* 4200 */;
+import MessageRequestStore from "MessageRequestStore" /* 7219 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
+import VoicePanelStore from "VoicePanelStore" /* 4768 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
+import UserStore from "UserStore" /* 1371 */;
+import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 10086 */;
 
-require = arg1;
+require = fn;
 function shouldNotifyBase(currentUser, user, channel, arg3) {
   let obj = arg3;
   if (arg3 === undefined) {
@@ -55,7 +51,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
       const guildId = channel.getGuildId();
       let tmp6 = null == guildId;
       if (!tmp6) {
-        tmp6 = !lurking.isLurking(guildId);
+        tmp6 = !LurkingStore.isLurking(guildId);
       }
       if (tmp6) {
         const ignoreSameUser = obj.ignoreSameUser;
@@ -65,13 +61,13 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
         }
         let tmp10 = !tmp8;
         if (!tmp8) {
-          const isBlockedOrIgnoredResult = closure_13.isBlockedOrIgnored(user.id);
+          const isBlockedOrIgnoredResult = RelationshipStore.isBlockedOrIgnored(user.id);
           let tmp13 = !isBlockedOrIgnoredResult;
           if (!isBlockedOrIgnoredResult) {
             const ignoreStatus = obj.ignoreStatus;
             let tmp14 = !ignoreStatus;
             if (!ignoreStatus) {
-              tmp14 = store3.getStatus() === constants6.DND;
+              tmp14 = SelfPresenceStore.getStatus() === constants6.DND;
             }
             let tmp17 = !tmp14;
             if (!tmp14) {
@@ -82,7 +78,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
                 const ignoreNoMessagesSetting = obj.ignoreNoMessagesSetting;
                 let allowNoMessagesResult = !ignoreNoMessagesSetting;
                 if (!ignoreNoMessagesSetting) {
-                  allowNoMessagesResult = closure_17.allowNoMessages(channel);
+                  allowNoMessagesResult = UserGuildSettingsStore.allowNoMessages(channel);
                 }
                 tmp19 = !allowNoMessagesResult;
               }
@@ -96,25 +92,23 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
       }
       return tmp6;
     }
-    obj2 = shouldShowAgeGateForVoiceChannel;
+    obj2 = AgeGateUtils;
     tmp2 = require;
   }
 }
 function renderTitle(channelName, channel, channel) {
-  const obj = FSI;
-  const isolateResult = FSI.isolate(channelName);
-  const obj2 = FSI;
-  const obj3 = computeChannelName;
-  const tmp4 = closure_19;
-  const tmp5 = closure_13;
+  const isolateResult = IsolateString.isolate(channelName);
+  const obj2 = IsolateString;
+  const tmp4 = UserStore;
+  const tmp5 = RelationshipStore;
   let str = "";
   if (null != channel) {
-    let tmpResult = tmp(7685);
-    tmpResult = tmp(4713);
+    tmp(7685);
+    const tmpResult = tmp(4713);
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
-  return "" + isolateResult + " (" + obj2.isolate(computeChannelName.computeChannelName(channel, closure_19, closure_13, true)) + str + ")";
+  return "" + isolateResult + " (" + obj2.isolate(useChannelName.computeChannelName(channel, UserStore, RelationshipStore, true)) + str + ")";
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
@@ -157,9 +151,14 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
-({ ActivityActionTypes: closure_21, ChannelTypes: closure_22, MessageFlags: closure_23, MessageTypes: closure_24, MessageTypesSets: closure_25, StatusTypes: closure_26, UserFlags: closure_27 } = ME);
-let result = require("set").fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
+const ChannelRecord = fn(1961);
+({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
+const Constants = fn(1074);
+({ ActivityActionTypes: closure_21, ChannelTypes: closure_22, MessageFlags: closure_23, MessageTypes: closure_24, MessageTypesSets: closure_25, StatusTypes: closure_26, UserFlags: closure_27 } = Constants);
+const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
 
 export { shouldNotifyBase };
 export const shouldNotify = function shouldNotify(message, channel_id, result) {
@@ -172,13 +171,13 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
     flag2 = false;
   }
   if (null != message.flags) {
-    let obj = hasFlag;
+    let obj = FlagUtils;
     if (obj.hasFlag(message.flags, constants3.SUPPRESS_NOTIFICATIONS)) {
       return false;
     }
   }
-  obj1 = store2;
-  const channel = store2.getChannel(channel_id);
+  let obj1 = ChannelStore;
+  const channel = ChannelStore.getChannel(channel_id);
   let channel1 = channel;
   if (message.type === constants4.THREAD_STARTER_MESSAGE) {
     let parent_id;
@@ -187,13 +186,13 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
     }
     channel1 = obj1.getChannel(parent_id);
   }
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   const author = message.author;
   let id;
   if (author != null) {
     id = author.id;
   }
-  const user = authStore.getUser(id);
+  const user = UserStore.getUser(id);
   if (null != channel1) {
     if (null != currentUser) {
       if (null != user) {
@@ -202,27 +201,26 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
             return false;
           }
         }
-        if (closure_20.areSlayerNotificationsSuppressed()) {
+        if (RpcNotificationSettingsStore.areSlayerNotificationsSuppressed()) {
           if (tmp12) {
             return false;
           }
           tmp12 = channel1.type === tmp41.DM || null != channel1.linkedLobby;
         }
-        obj = { ignoreStatus: null, ignoreSameUser: null };
-        obj[0] = flag2;
+        obj = { ignoreStatus: flag2, ignoreSameUser: null };
         const SELF_MENTIONABLE_SYSTEM = constants5.SELF_MENTIONABLE_SYSTEM;
-        obj[1] = SELF_MENTIONABLE_SYSTEM.has(message.type);
+        obj.ignoreSameUser = SELF_MENTIONABLE_SYSTEM.has(message.type);
         if (shouldNotifyBase(currentUser, user, channel1, obj)) {
-          if (messageRequest.isMessageRequest(channel_id)) {
+          if (MessageRequestStore.isMessageRequest(channel_id)) {
             return false;
           } else {
             if (!flag) {
               if (obj5.isChannelCurrentlyVisible(channel1.id)) {
                 return false;
               }
-              obj5 = isChannelCurrentlyVisible;
+              obj5 = ChannelVisibilityUtils;
             }
-            if (closure_13.isBlockedOrIgnoredForMessage(message)) {
+            if (RelationshipStore.isBlockedOrIgnoredForMessage(message)) {
               return false;
             } else {
               if (undefined !== message.activity_instance) {
@@ -233,7 +231,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 }
               }
               if (null != message.application_id) {
-                const currentEmbeddedActivity = store.getCurrentEmbeddedActivity();
+                const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
                 let applicationId;
                 if (currentEmbeddedActivity != null) {
                   applicationId = currentEmbeddedActivity.applicationId;
@@ -245,19 +243,17 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 }
               }
               if (set2.has(channel1.type)) {
-                if (muted.isMuted(channel1.id)) {
+                if (JoinedThreadsStore.isMuted(channel1.id)) {
                   return false;
                 } else {
-                  const threadNotificationSetting = computeThreadNotificationSetting.computeThreadNotificationSetting(channel1);
+                  const threadNotificationSetting = ThreadNotificationSettings.computeThreadNotificationSetting(channel1);
                   let tmp39 = threadNotificationSetting !== ThreadMemberFlags.NO_MESSAGES;
                   if (tmp39) {
                     result = threadNotificationSetting === ThreadMemberFlags.ALL_MESSAGES;
                     if (!result) {
-                      obj = { rawMessage: null, userId: null, suppressEveryone: false, suppressRoles: false };
-                      obj[0] = message;
-                      obj[1] = currentUser.id;
-                      result = isMentioned.isRawMessageMentioned(obj);
-                      const tmp36Result = isMentioned;
+                      obj = { rawMessage: message, userId: currentUser.id, suppressEveryone: false, suppressRoles: false };
+                      result = isMessageMentioned.isRawMessageMentioned(obj);
+                      const tmp36Result = isMessageMentioned;
                     }
                     tmp39 = result;
                   }
@@ -267,21 +263,17 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 const hasItem = set.has(channel1.type);
                 let tmp29 = !hasItem;
                 if (hasItem) {
-                  tmp29 = channelId.getChannelId() === channel1.id;
+                  tmp29 = RTCConnectionStore.getChannelId() === channel1.id;
                 }
-                if (closure_17.allowAllMessages(channel1)) {
+                if (UserGuildSettingsStore.allowAllMessages(channel1)) {
                   if (tmp29) {
                     return true;
                   }
                 }
                 const result1 = obj6.isSuppressEveryoneEnabled(channel1.getGuildId());
                 const result2 = obj6.isSuppressRolesEnabled(channel1.getGuildId());
-                obj1 = { rawMessage: null, userId: null, suppressEveryone: null, suppressRoles: null };
-                obj1[0] = message;
-                obj1[1] = currentUser.id;
-                obj1[2] = result1;
-                obj1[3] = result2;
-                return isMentioned.isRawMessageMentioned(obj1);
+                obj1 = { rawMessage: message, userId: currentUser.id, suppressEveryone: result1, suppressRoles: result2 };
+                return isMessageMentioned.isRawMessageMentioned(obj1);
               }
             }
           }
@@ -294,26 +286,26 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
   }
   return false;
 };
-export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedChannel(type) {
-  if (channelId2.getChannelId(guildId.getGuildId()) !== arg1) {
+export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedChannel(type, arg1) {
+  if (SelectedChannelStore.getChannelId(SelectedGuildStore.getGuildId()) !== arg1) {
     return false;
   } else {
-    const channel = store2.getChannel(arg1);
+    const channel = ChannelStore.getChannel(arg1);
     let channel1 = channel;
     if (type.type === constants4.THREAD_STARTER_MESSAGE) {
       let parent_id;
       if (channel != null) {
         parent_id = channel.parent_id;
       }
-      channel1 = store2.getChannel(parent_id);
+      channel1 = ChannelStore.getChannel(parent_id);
     }
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     const author = type.author;
     let id;
     if (author != null) {
       id = author.id;
     }
-    const user = authStore.getUser(id);
+    const user = UserStore.getUser(id);
     let tmp7 = null != channel1 && null != currentUser && null != user;
     if (tmp7) {
       const isManagedResult = channel1.isManaged();
@@ -322,18 +314,18 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
         const hasFlagResult = user.hasFlag(constants7.SPAMMER);
         let tmp12 = !hasFlagResult;
         if (!hasFlagResult) {
-          const result = closure_13.isBlockedOrIgnoredForMessage(type);
+          const result = RelationshipStore.isBlockedOrIgnoredForMessage(type);
           let tmp15 = !result;
           if (!result) {
             let tmp16 = user.id !== currentUser.id;
             if (tmp16) {
-              let tmp19 = store3.getStatus() !== constants6.DND;
+              let tmp19 = SelfPresenceStore.getStatus() !== constants6.DND;
               if (tmp19) {
-                const FocusMode = explicitContentFromProto.FocusMode;
+                const FocusMode = UserSettings.FocusMode;
                 const setting = FocusMode.getSetting();
                 let tmp23 = !setting;
                 if (!setting) {
-                  tmp23 = !closure_17.allowNoMessages(channel1);
+                  tmp23 = !UserGuildSettingsStore.allowNoMessages(channel1);
                 }
                 tmp19 = tmp23;
               }
@@ -359,21 +351,19 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
   if (arg3 === undefined) {
     flag2 = false;
   }
-  const currentUser = authStore.getCurrentUser();
-  const user = authStore.getUser(channel.ownerId);
+  const currentUser = UserStore.getCurrentUser();
+  const user = UserStore.getUser(channel.ownerId);
   let tmp3 = null != channel2 && null != currentUser && null != user;
   if (tmp3) {
-    const obj = { ignoreStatus: null, ignoreNoMessagesSetting: true };
-    obj[0] = flag2;
+    const obj = { ignoreStatus: flag2, ignoreNoMessagesSetting: true };
     let tmp9 = shouldNotifyBase(currentUser, user, channel2, obj);
     if (tmp9) {
-      const result = closure_17.isGuildOrCategoryOrChannelMuted(channel2.guild_id, channel2.id);
+      const result = UserGuildSettingsStore.isGuildOrCategoryOrChannelMuted(channel2.guild_id, channel2.id);
       let tmp11 = !result;
       if (!result) {
         let result1 = !flag;
         if (!flag) {
-          result1 = isChannelCurrentlyVisible.isChannelCurrentlyVisible(channel2.id);
-          const obj3 = isChannelCurrentlyVisible;
+          result1 = ChannelVisibilityUtils.isChannelCurrentlyVisible(channel2.id);
         }
         let newForumThreadsCreated = !result1;
         if (!result1) {
@@ -382,7 +372,7 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
         tmp11 = newForumThreadsCreated;
       }
       tmp9 = tmp11;
-      obj2 = closure_17;
+      obj2 = UserGuildSettingsStore;
     }
     tmp3 = tmp9;
   }
@@ -390,26 +380,25 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
 };
 export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
   ({ channel, reactor, includeSelectedChannel, message } = arg0);
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   const author = message.author;
   let id;
   if (author != null) {
     id = author.id;
   }
-  const user = authStore.getUser(id);
+  const user = UserStore.getUser(id);
   let tmp5 = null != currentUser && null != user;
   if (tmp5) {
     let tmp10 = shouldNotifyBase(currentUser, user, channel, { ignoreSameUser: true });
     if (tmp10) {
       let tmp11 = null == reactor;
       if (!tmp11) {
-        tmp11 = !closure_13.isBlockedOrIgnored(reactor.id);
+        tmp11 = !RelationshipStore.isBlockedOrIgnored(reactor.id);
       }
       if (tmp11) {
         let result = !includeSelectedChannel;
         if (!includeSelectedChannel) {
-          result = isChannelCurrentlyVisible.isChannelCurrentlyVisible(channel.id);
-          const obj = isChannelCurrentlyVisible;
+          result = ChannelVisibilityUtils.isChannelCurrentlyVisible(channel.id);
         }
         tmp11 = !result;
       }
@@ -420,29 +409,27 @@ export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
   return tmp5;
 };
 export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChannel() {
-  state = state.getState();
+  const state = VoicePanelStore.getState();
   let flag = true;
   if (!state.isVoicePanelFullscreen()) {
-    if (null == store.getConnectedActivityLocation()) {
-      const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+    if (null == EmbeddedActivitiesStore.getConnectedActivityLocation()) {
+      const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
       let tmp5 = null == rootNavigationRef || !rootNavigationRef.isReady();
       if (!tmp5) {
         tmp5 = !tmp3(10089).isChannelFocused();
         const tmp3Result = tmp3(10089);
       }
       flag = tmp5;
-      const obj3 = getRootNavigationRef;
       tmp3 = require;
     } else {
       flag = true;
     }
-    const obj2 = store;
   }
   return flag;
 };
 export { renderTitle };
 export const makeTextChatNotification = function makeTextChatNotification(getGuildId, content, bot) {
-  let obj = getNicknameDefault;
+  let obj = NicknameUtilsDefault;
   const name = obj.getName(getGuildId.getGuildId(), getGuildId.id, bot);
   const type = getGuildId.type;
   if (constants2.GUILD_ANNOUNCEMENT !== type) {
@@ -456,8 +443,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 if (tmp4.GROUP_DM === type) {
                   let tmp6 = getGuildId.isManaged() && bot.bot;
                   if (tmp6) {
-                    obj1 = computeChannelName;
-                    tmp6 = name === obj1.computeChannelName(getGuildId, closure_19, closure_13);
+                    let obj1 = useChannelName;
+                    tmp6 = name === obj1.computeChannelName(getGuildId, UserStore, RelationshipStore);
                   }
                   tmp5 = name;
                   if (!tmp6) {
@@ -471,11 +458,10 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 content = tmpResult.stringify(content, getGuildId);
                 if (null == content) {
                   const obj15 = new tmp(3)("NotificationTextUtils");
-                  obj = { message: null };
-                  obj[0] = content;
+                  obj = { message: content };
                   obj15.warn("SystemMessageUtils.stringify(...) could not convert", obj);
                   const _Error = Error;
-                  error = new Error("failed to stringify system message");
+                  const error = new Error("failed to stringify system message");
                   throw error;
                 }
               }
@@ -492,26 +478,22 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               }
               const items = [];
               if (result) {
-                const intl8 = getSystemLocale.intl;
-                let stringResult = intl8.string(getSystemLocale.t["9ddYKt"]);
+                const intl8 = util.intl;
+                let stringResult = intl8.string(util.t["9ddYKt"]);
                 let tmp26 = items;
               } else {
                 if (null != content.activity) {
                   if (null != content.application) {
                     if (content.activity.type === constants.JOIN) {
-                      const intl7 = getSystemLocale.intl;
-                      obj = { user: null, game: null };
-                      obj[0] = name;
-                      obj[1] = content.application.name;
-                      let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.E8CgCh, getSystemLocale.t.c6KHWJ, getSystemLocale.t.Fy7rJN), obj);
+                      const intl7 = util.intl;
+                      obj = { user: name, game: content.application.name };
+                      let str7 = intl7.formatToPlainString(getInviteEmbedFormatString(getGuildId, util.t.E8CgCh, util.t.c6KHWJ, util.t.Fy7rJN), obj);
                     } else {
                       str7 = "";
                       if (content.activity.type === tmp44.JOIN_REQUEST) {
-                        const intl9 = getSystemLocale.intl;
-                        obj1 = { user: null, game: null };
-                        obj1[0] = name;
-                        obj1[1] = content.application.name;
-                        str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"], getSystemLocale.t["/TD0la"]), obj1);
+                        const intl9 = util.intl;
+                        obj1 = { user: name, game: content.application.name };
+                        str7 = intl9.formatToPlainString(getInviteEmbedFormatString(getGuildId, util.t["/TD0la"], util.t["/TD0la"], util.t["/TD0la"]), obj1);
                       }
                     }
                     stringResult = str7;
@@ -520,35 +502,32 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 }
                 if (null != content.activity) {
                   if (content.activity.type === constants.LISTEN) {
-                    const intl6 = getSystemLocale.intl;
-                    let obj2 = { user: null };
-                    obj2[0] = name;
-                    stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW), obj2);
+                    const intl6 = util.intl;
+                    let obj2 = { user: name };
+                    stringResult = intl6.formatToPlainString(getInviteEmbedFormatString(getGuildId, util.t.SaDdmN, util.t.qsODhp, util.t.WeiMTW), obj2);
                     tmp26 = items;
-                    const tmp43 = getInviteEmbedFormatString(getGuildId, getSystemLocale.t.SaDdmN, getSystemLocale.t.qsODhp, getSystemLocale.t.WeiMTW);
+                    const tmp43 = getInviteEmbedFormatString(getGuildId, util.t.SaDdmN, util.t.qsODhp, util.t.WeiMTW);
                   }
                 }
                 if (null != sticker_items) {
                   if (sticker_items.length > 0) {
-                    const intl5 = getSystemLocale.intl;
-                    const obj3 = { stickerName: null };
-                    obj3[0] = sticker_items[0].name;
-                    stringResult = intl5.formatToPlainString(getSystemLocale.t.zY4v1B, obj3);
+                    const intl5 = util.intl;
+                    const obj3 = { stickerName: sticker_items[0].name };
+                    stringResult = intl5.formatToPlainString(util.t.zY4v1B, obj3);
                     tmp26 = items;
                   }
                 }
                 if (content.type === constants4.PREMIUM_REFERRAL) {
-                  const intl4 = getSystemLocale.intl;
+                  const intl4 = util.intl;
                   obj4 = { username: null };
                   tmpResult = tmp(4404);
-                  obj4[0] = tmpResult.getName(bot);
-                  stringResult = intl4.formatToPlainString(getSystemLocale.t.lieTqU, obj4);
+                  obj4.username = tmpResult.getName(bot);
+                  stringResult = intl4.formatToPlainString(util.t.lieTqU, obj4);
                   tmp26 = items;
                 } else if (null != content.poll) {
-                  const intl3 = getSystemLocale.intl;
-                  const obj5 = { question: null };
-                  obj5[0] = content.poll.question.text;
-                  stringResult = intl3.formatToPlainString(getSystemLocale.t.ImizdM, obj5);
+                  const intl3 = util.intl;
+                  const obj5 = { question: content.poll.question.text };
+                  stringResult = intl3.formatToPlainString(util.t.ImizdM, obj5);
                   tmp26 = items;
                 } else if (content.type === tmp23.POLL_RESULT) {
                   const embeds = content.embeds;
@@ -563,16 +542,15 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     }
                   }
                   if (null == found) {
-                    let intl2 = getSystemLocale.intl;
-                    const obj6 = { question: null };
-                    obj6[0] = "";
-                    stringResult = intl2.formatToPlainString(getSystemLocale.t["9WrecI"], obj6);
+                    let intl2 = util.intl;
+                    const obj6 = { question: "" };
+                    stringResult = intl2.formatToPlainString(util.t["9WrecI"], obj6);
                     tmp26 = items;
                   }
                 } else {
                   if (null != content.components) {
                     if (content.components.length > 0) {
-                      if (content.components[0].type === PermissionOverwriteType.ComponentType.CHECKPOINT_CARD) {
+                      if (content.components[0].type === Server.ComponentType.CHECKPOINT_CARD) {
                         let intl = tmp24(1114).intl;
                         stringResult = intl.string(tmp24(1114).t.HWnMTQ);
                         tmp26 = items;
@@ -634,7 +612,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                       }
                     }
                   }
-                  let obj = callback(table[22]);
+                  let obj = FlagUtils;
                   let num2 = embeds.flags;
                   if (num2 == null) {
                     num2 = 0;
@@ -646,8 +624,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                     if (undefined !== embeds.attachments) {
                       if (embeds.attachments.length > 0) {
                         const intl = tmp5(tmp6[30]).intl;
-                        obj = { filename: null };
-                        obj[0] = callback2(tmp6[31])(embeds.attachments[0]);
+                        obj = { filename: require("getDisplayFilename")(embeds.attachments[0]) };
                         return intl.formatToPlainString(tmp5(tmp6[30]).t["51OkwL"], obj);
                       }
                     }
@@ -655,11 +632,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                   }
                 })(content);
               }
-              const obj7 = { icon: null, title: null, body: null, emoji: null };
-              obj7[0] = bot.getAvatarURL(getGuildId.guild_id, 128);
-              obj7[1] = tmp5;
-              obj7[2] = stringResult;
-              obj7[3] = tmp26;
+              const obj7 = { icon: bot.getAvatarURL(getGuildId.guild_id, 128), title: tmp5, body: stringResult, emoji: tmp26 };
               return obj7;
             }
           }
@@ -667,8 +640,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
       }
     }
   }
-  obj2 = store2;
-  const channel = store2.getChannel(getGuildId.parent_id);
+  obj2 = ChannelStore;
+  const channel = ChannelStore.getChannel(getGuildId.parent_id);
   if (content.type === constants4.THREAD_STARTER_MESSAGE) {
     if (null != channel) {
       tmp5 = renderTitle(name, channel, obj2.getChannel(channel.parent_id));
@@ -676,7 +649,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
   }
   if (isSystemMessageDefault(content)) {
     tmp5 = name;
-    if (null != guild.getGuild(getGuildId.getGuildId())) {
+    if (null != GuildStore.getGuild(getGuildId.getGuildId())) {
       tmp5 = renderTitle(name, getGuildId, channel);
     }
   } else {
@@ -684,10 +657,10 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
   }
 };
 export const allowInAppNotifications = function allowInAppNotifications() {
-  if (closure_18.hasAction()) {
+  if (UserRequiredActionStore.hasAction()) {
     return false;
   } else {
-    const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
+    const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
     let setting = ShowInAppNotifications.getSetting();
     if (setting) {
       setting = !obj.getFocusModeEnabled();
@@ -696,12 +669,11 @@ export const allowInAppNotifications = function allowInAppNotifications() {
   }
 };
 export const useAllowInAppNotifications = function useAllowInAppNotifications() {
-  const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
+  const ShowInAppNotifications = UserSettings.ShowInAppNotifications;
   const setting = ShowInAppNotifications.useSetting();
-  const focusModeEnabled = useFocusModeEnabled.useFocusModeEnabled();
-  const obj = useFocusModeEnabled;
-  const items = [closure_18];
-  const stateFromStores = initialize.useStateFromStores(items, () => closure_18.hasAction());
+  const focusModeEnabled = FocusModeUtils.useFocusModeEnabled();
+  const items = [UserRequiredActionStore];
+  const stateFromStores = initialize.useStateFromStores(items, () => UserRequiredActionStore.hasAction());
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {
     tmp4 = setting;

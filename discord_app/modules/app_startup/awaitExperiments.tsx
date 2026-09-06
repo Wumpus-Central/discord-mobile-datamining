@@ -1,24 +1,24 @@
-// === Module 14191: future ===
+// === Module 14191: awaitExperiments ===
 
-// Module 14191 (future)
-import set from "set" /* 2 */;
+// Module 14191 (awaitExperiments)
 import Future from "Future" /* 9293 */;
+import size from "module_2" /* 2 */;
 
 const future = new Future.Future();
-let c1 = null;
-const result = set.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
+let closure_1 = null;
+const result = size.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
 
 export const beginLoadedExperimentsTimeout = function beginLoadedExperimentsTimeout() {
   const timeout = setTimeout(() => {
-    closure_0.resolve();
+    future.resolve();
     c1 = null;
   }, 1000);
 };
 export const onExperimentsLoaded = function onExperimentsLoaded() {
-  if (null != c1) {
+  if (null != closure_1) {
     future.resolve();
     const _clearTimeout = clearTimeout;
-    clearTimeout(c1);
+    clearTimeout(closure_1);
   }
 };
 export const getPromise = function getPromise() {

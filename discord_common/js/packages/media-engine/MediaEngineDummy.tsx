@@ -1,10 +1,10 @@
-// === Module 4687: Video ===
+// === Module 4687: MediaEngineDummy ===
 
-// Module 4687 (Video)
-import set from "set" /* 2 */;
+// Module 4687 (MediaEngineDummy)
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import onDefault from "on" /* 4618 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import Constants from "Constants" /* 4585 */;
+import TypedEventEmitter from "TypedEventEmitter" /* 4618 */;
+import size from "module_2" /* 2 */;
 
 function Video() {
   return null;
@@ -12,8 +12,7 @@ function Video() {
 function Camera() {
   return null;
 }
-({ AudioSubsystems: obj1, DISABLED_DEVICE_ID: c3, Features: c4, MediaEngineContextTypes: c5 } = DesktopSources);
-onDefault;
+({ AudioSubsystems: c2, DISABLED_DEVICE_ID: c3, Features: closure_4, MediaEngineContextTypes: hasOwnProperty } = Constants);
 class MediaEngineDummy extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -37,7 +36,7 @@ prototype["supports"] = function supports(arg0) {
   return false;
 };
 prototype["connect"] = function connect() {
-  error = new Error("NOT_IMPLEMENTED");
+  const error = new Error("NOT_IMPLEMENTED");
   throw error;
 };
 prototype["eachConnection"] = function eachConnection() {
@@ -74,16 +73,16 @@ prototype["setVideoInputDevice"] = function setVideoInputDevice() {
 
 };
 prototype["getVideoInputDeviceId"] = function getVideoInputDeviceId() {
-  return closure_3;
+  return React3;
 };
 prototype["setAsyncVideoInputDeviceInit"] = function setAsyncVideoInputDeviceInit() {
 
 };
-prototype["getCodecCapabilities"] = function getCodecCapabilities(arg0) {
-  arg0("");
+prototype["getCodecCapabilities"] = function getCodecCapabilities(fn) {
+  fn("");
 };
 prototype["getCodecSurvey"] = function getCodecSurvey() {
-  error = new Error("getCodecSurvey is not implemented for MediaEngineDummy");
+  const error = new Error("getCodecSurvey is not implemented for MediaEngineDummy");
   return Promise.reject(error);
 };
 prototype["getAudioSubsystem"] = function getAudioSubsystem() {
@@ -101,7 +100,7 @@ prototype["setClipsSource"] = function setClipsSource() {
 prototype["setClipsQualitySettings"] = function setClipsQualitySettings() {
   return false;
 };
-prototype["setDesktopSource"] = function setDesktopSource(arg0, useVideoHook, arg2) {
+prototype["setDesktopSource"] = function setDesktopSource(arg0, useVideoHook) {
   if (useVideoHook === undefined) {
     const DEFAULT = constants2.DEFAULT;
   }
@@ -110,19 +109,19 @@ prototype["setSoundshareSource"] = function setSoundshareSource() {
 
 };
 prototype["getDesktopSource"] = function getDesktopSource() {
-  error = new Error("NO_STREAM");
+  const error = new Error("NO_STREAM");
   return Promise.reject(error);
 };
 prototype["getScreenPreviews"] = function getScreenPreviews() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["getWindowPreviews"] = function getWindowPreviews() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["getSingleWindowPreview"] = function getSingleWindowPreview() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["setClipsModulePath"] = function setClipsModulePath() {
@@ -150,23 +149,23 @@ prototype["getSystemSteadyClockNowMs"] = function getSystemSteadyClockNowMs() {
   return null;
 };
 prototype["saveClipEx"] = function saveClipEx() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["updateClipMetadata"] = function updateClipMetadata() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["exportClipToFile"] = function exportClipToFile() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["setClipsPerfMonitoring"] = function setClipsPerfMonitoring() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["saveScreenshot"] = function saveScreenshot() {
-  error = new Error("UNSUPPORTED");
+  const error = new Error("UNSUPPORTED");
   return Promise.reject(error);
 };
 prototype["setAudioSubsystem"] = function setAudioSubsystem() {
@@ -188,7 +187,7 @@ prototype["setDebugLogging"] = function setDebugLogging() {
 
 };
 prototype["writeAudioDebugState"] = function writeAudioDebugState() {
-  error = new Error("Audio debug state is not supported.");
+  const error = new Error("Audio debug state is not supported.");
   return Promise.reject(error);
 };
 prototype["setLoopback"] = function setLoopback() {
@@ -222,7 +221,7 @@ prototype["cancelBatchAudioProcessing"] = function cancelBatchAudioProcessing() 
 
 };
 prototype["createReplayConnection"] = function createReplayConnection() {
-  error = new Error("Connection replay is not supported.");
+  const error = new Error("Connection replay is not supported.");
   throw error;
 };
 prototype["setOnVideoContainerResized"] = function setOnVideoContainerResized() {
@@ -232,14 +231,14 @@ prototype["setMaxSyncDelayOverride"] = function setMaxSyncDelayOverride() {
 
 };
 prototype["rankRtcRegions"] = function rankRtcRegions() {
-  error = new Error("RTC region latency test is not supported.");
+  const error = new Error("RTC region latency test is not supported.");
   return Promise.reject(error);
 };
 prototype["applyMediaFilterSettings"] = function applyMediaFilterSettings() {
   return Promise.resolve();
 };
 prototype["startLocalAudioRecording"] = function startLocalAudioRecording() {
-  error = new Error("startLocalAudioRecording is not supported.");
+  const error = new Error("startLocalAudioRecording is not supported.");
   return Promise.reject(error);
 };
 prototype["stopLocalAudioRecording"] = function stopLocalAudioRecording() {
@@ -254,11 +253,11 @@ prototype["setNcModels"] = function setNcModels() {
 prototype["getSupportedSecureFramesProtocolVersion"] = function getSupportedSecureFramesProtocolVersion() {
   return 0;
 };
-prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedBandwidthEstimationExperiments(arg0) {
-  arg0([]);
+prototype["getSupportedBandwidthEstimationExperiments"] = function getSupportedBandwidthEstimationExperiments(fn) {
+  fn([]);
 };
 prototype["getMLSSigningKey"] = function getMLSSigningKey() {
-  error = new Error("NOT_IMPLEMENTED");
+  const error = new Error("NOT_IMPLEMENTED");
   return Promise.reject(error);
 };
 prototype["setSidechainCompression"] = function setSidechainCompression() {
@@ -304,16 +303,16 @@ prototype["getDeviceOSMuted"] = function getDeviceOSMuted() {
   return Promise.resolve(undefined);
 };
 prototype["getDeviceAudioEffects"] = function getDeviceAudioEffects() {
-  error = new Error("Device audio effect querying not supported");
+  const error = new Error("Device audio effect querying not supported");
   return Promise.reject(error);
 };
 prototype["getNoiseCancellationStats"] = function getNoiseCancellationStats() {
-  error = new Error("Dummy noise cancellation stats not supported");
+  const error = new Error("Dummy noise cancellation stats not supported");
   return Promise.reject(error);
 };
 prototype["setNoiseCancellationEnableStats"] = function setNoiseCancellationEnableStats() {
 
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineDummy.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/MediaEngineDummy.tsx");
 
 export default MediaEngineDummy;

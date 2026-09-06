@@ -1,64 +1,63 @@
-// === Module 5620: BaseIdentityVerificationField ===
+// === Module 5620: IdentityVerificationField ===
 
-// Module 5620 (BaseIdentityVerificationField)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5620 (IdentityVerificationField)
+import nativeDefault from "native" /* 576 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function BaseIdentityVerificationField(icon) {
   icon = icon.icon;
   ({ label, passesVerification, onPress } = icon);
-  const tmp = callback2();
+  const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
   let tmp4 = null;
   if (null != icon) {
-    obj = { style: null };
-    obj[0] = tmp.icon;
-    tmp4 = callback(icon, obj);
+    obj = { style: tmp.icon };
+    tmp4 = React4(icon, obj);
   }
   const items = [tmp4, , ];
+  obj = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label };
   const items1 = [tmp.label];
-  items[1] = callback(Text.Text, { style: items1, variant: "text-md/medium", color: "mobile-text-heading-primary", children: label });
+  obj.style = items1;
+  items[1] = React4(Text_Text.Text, obj);
   if (passesVerification) {
-    obj = { style: null, accessible: true, accessibilityLabel: null, children: null };
-    obj[0] = tmp.verifiedContainer;
+    const obj1 = { style: tmp.verifiedContainer, accessible: true, accessibilityLabel: null, children: null };
     const intl2 = tmp7(1114).intl;
-    obj[2] = intl2.string(tmp7(1114).t.g62IJl);
-    obj[3] = tmp6(tmp7(4511).CheckmarkLargeIcon, { color: "status-positive" });
-    obj1 = obj;
+    obj1.accessibilityLabel = intl2.string(tmp7(1114).t.g62IJl);
+    obj1.children = tmp6(tmp7(4511).CheckmarkLargeIcon, { color: "status-positive" });
+    let obj2 = obj1;
   } else {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.ctaButton;
-    const obj2 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
+    obj2 = { style: tmp.ctaButton, children: null };
+    const obj3 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
     const intl = tmp7(1114).intl;
-    obj2[3] = intl.string(tmp7(1114).t["13ofGu"]);
-    obj2[4] = onPress;
-    obj1[1] = tmp6(tmp7(4975).Button, obj2);
+    obj3.text = intl.string(tmp7(1114).t["13ofGu"]);
+    obj3.onPress = onPress;
+    obj2.children = tmp6(tmp7(4975).Button, obj3);
   }
-  items[2] = callback(View, obj1);
-  obj[1] = items;
-  return closure_5(View, obj);
+  items[2] = React4(View, obj2);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
-createCacheKey = { padding: 8, marginTop: 8, borderRadius: ThemesDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginLeft: 4, marginRight: 8 };
-createCacheKey[2] = { flex: 1, marginLeft: 4, lineHeight: 20 };
-createCacheKey[3] = { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" };
-createCacheKey[4] = { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
+createStyles = { padding: 8, marginTop: 8, borderRadius: nativeDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.container = createStyles;
+createStyles.icon = { marginLeft: 4, marginRight: 8 };
+createStyles.label = { flex: 1, marginLeft: 4, lineHeight: 20 };
+createStyles.verifiedContainer = { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" };
+createStyles.ctaButton = { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
 
 export default function IdentityVerificationField(arg0) {
   ({ platform, passesVerification } = arg0);
-  if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
+  if (MemberVerificationTypes.UserVerificationFieldPlatforms.EMAIL === platform) {
     const intl3 = tmp(1114).intl;
     const string2 = intl3.string;
     let INsLgA = tmp(1114).t;
@@ -92,22 +91,18 @@ export default function IdentityVerificationField(arg0) {
     }
     if (tmp(4384).UserVerificationFieldPlatforms.EMAIL === platform) {
       let fn = () => {
-        callback2(paths[10]).open();
+        require("EmailVerificationModalActionCreators").open();
       };
     } else {
       fn = tmp(4384).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
-        let obj = callback2(paths[11]);
-        obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
-        obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);
+        require("ModalActionCreators");
+        const obj = { reason: require("PhoneActionCreators").ChangePhoneReason.GUILD_PHONE_REQUIRED };
+        obj.pushLazy(require("asyncRequireImpl")(paths[12], paths.paths), obj);
       }) : (() => {
 
       });
     }
-    let obj = { label: null, icon: null, passesVerification: null, onPress: null };
-    obj[0] = stringResult1;
-    obj[1] = EnvelopeIcon;
-    obj[2] = passesVerification;
-    obj[3] = fn;
-    return callback(BaseIdentityVerificationField, obj);
+    let obj = { label: stringResult1, icon: EnvelopeIcon, passesVerification, onPress: fn };
+    return React4(BaseIdentityVerificationField, obj);
   }
 };

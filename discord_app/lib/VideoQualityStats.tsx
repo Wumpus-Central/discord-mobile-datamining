@@ -1,26 +1,23 @@
-// === Module 7741: parseEncoder ===
+// === Module 7741: VideoQualityStats ===
 
-// Module 7741 (parseEncoder)
-import getSamples from "getSamples" /* 7742 */;
-import getStatsDefault from "getStats" /* 7748 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import set from "set" /* 2 */;
+// Module 7741 (VideoQualityStats)
+import TimeUtils from "TimeUtils" /* 4589 */;
+import Histogram from "Histogram" /* 7742 */;
+import SystemResourcesDefault from "SystemResources" /* 7748 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function parseEncoder(encoderImplementationName) {
   if (null == encoderImplementationName) {
     return obj.UNKNOWN;
   } else {
     const _Object = Object;
-    const keys = Object.keys(table);
+    const keys = Object.keys(closure_13);
     for (const item10012 of keys) {
-      let tmp6 = item10012;
       let formatted = arg0.toLowerCase();
       if (formatted.includes(item10012)) {
-        let tmp7 = table;
-        let tmp8 = obj;
         obj.return();
-        return table[item10012];
+        return closure_13[item10012];
       }
     }
     return obj.UNCATEGORIZED;
@@ -31,24 +28,21 @@ function parseDecoder(decoderImplementationName) {
     return obj.UNKNOWN;
   } else {
     const _Object = Object;
-    const keys = Object.keys(table2);
+    const keys = Object.keys(closure_14);
     for (const item10012 of keys) {
-      let tmp6 = item10012;
       let formatted = arg0.toLowerCase();
       if (formatted.includes(item10012)) {
-        let tmp7 = table2;
-        let tmp8 = obj;
         obj.return();
-        return table2[item10012];
+        return closure_14[item10012];
       }
     }
     return obj.UNCATEGORIZED;
   }
 }
-let closure_4 = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000];
-let closure_5 = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
-let closure_6 = [720, 480, 360];
-let closure_7 = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "networkFramesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "totalDecodeTime", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches", "screenshareFramesUnique"];
+const React4 = [0, 500000, 1000000, 1500000, 2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000];
+const hasOwnProperty = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60];
+const timestampProducer = [720, 480, 360];
+const dependencyMap = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "networkFramesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "totalDecodeTime", "keyframes", "passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount", "qualityDecodeErrors", "qualityDecoderReboots", "qualityScoreErrors", "qualityFrameDrops", "qualitySizeMismatches", "screenshareFramesUnique"];
 let set = new Set(["passthroughCount", "cryptorSuccessCount", "cryptorFailureCount", "cryptorDuration", "cryptorAttempts", "cryptorMissingKeyCount", "cryptorInvalidNonceCount"]);
 let closure_9 = ["bytes", "packets", "framesNetwork", "framesCodec"];
 let obj = { H264: "H264", H265: "H265", VP8: "VP8", VP9: "VP9", AV1: "AV1", UNKNOWN: "UNKNOWN" };
@@ -59,362 +53,401 @@ let closure_14 = Object.freeze({ videotoolbox: obj.VIDEOTOOLBOX, libvpx: obj.VP8
 const obj3 = { None: 0, [0]: "None", ClientSideDisableVideo: 1, [1]: "ClientSideDisableVideo", SenderStopped: 2, [2]: "SenderStopped" };
 let RawVideoStats;
 class RawVideoStats {
+  constructor() {
+    return Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+  }
 }
-RawVideoStats["parseInboundStats"] = function parseInboundStats(found, closure_1) {
-  if (typeof RawVideoStats !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(RawVideoStats.prototype);
-  if (null != found) {
-    ({ bytesReceived: tmp2.bytes, framesDecoded: tmp2.framesCodec, framesDecodeErrors } = found);
-    if (framesDecodeErrors == null) {
-      framesDecodeErrors = null;
-    }
-    obj.framesCodecError = framesDecodeErrors;
-    ({ framesReceived: tmp2.framesNetwork, packetsReceived: tmp2.packets, packetsLost: tmp2.packetsLost, framesDropped } = found);
-    if (framesDropped == null) {
-      framesDropped = 0;
-    }
-    obj.framesDropped = framesDropped;
-    let num = found.networkFramesDropped;
-    if (num == null) {
-      num = 0;
-    }
-    obj.networkFramesDropped = num;
-    let num3 = 0;
-    if (null != found.resolution) {
-      num3 = found.resolution.height;
-    }
-    obj.resolution = num3;
-    let num4 = 0;
-    if (null != found.resolution) {
-      const _Math = Math;
-      num4 = Math.min(found.resolution.height, found.resolution.width);
-    }
-    obj.minorResolution = num4;
-    let num5 = 0;
-    if (null != found.resolution) {
-      const _Math2 = Math;
-      num5 = Math.max(found.resolution.height, found.resolution.width);
-    }
-    obj.majorResolution = num5;
-    obj.timestamp = closure_1;
-    ({ nackCount: tmp2.nackCount, pliCount: tmp2.pliCount } = found);
-    obj.decoder = parseDecoder(found.decoderImplementationName);
-    if (null == found.codec.name) {
-      let AV1 = obj.UNKNOWN;
-    } else {
-      const formatted = str.toUpperCase();
-      if ("H264" === formatted) {
-        AV1 = obj.H264;
-      } else if ("H265" === formatted) {
-        AV1 = obj.H265;
-      } else if ("VP8" === formatted) {
-        AV1 = obj.VP8;
-      } else if ("VP9" === formatted) {
-        AV1 = obj.VP9;
-      } else {
-        if ("AV1" !== formatted) {
-          if ("AV1X" !== formatted) {
-            AV1 = obj.UNKNOWN;
-          }
-        }
-        AV1 = obj.AV1;
+RawVideoStats["parseInboundStats"] = function parseInboundStats(found, timestamp) {
+  if (typeof RawVideoStats === "function") {
+    const merged = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+    if (null != found) {
+      ({ bytesReceived: tmp3.bytes, framesDecoded: tmp3.framesCodec, framesDecodeErrors } = found);
+      if (framesDecodeErrors == null) {
+        framesDecodeErrors = null;
       }
+      merged.framesCodecError = framesDecodeErrors;
+      ({ framesReceived: tmp3.framesNetwork, packetsReceived: tmp3.packets, packetsLost: tmp3.packetsLost, framesDropped } = found);
+      if (framesDropped == null) {
+        framesDropped = 0;
+      }
+      merged.framesDropped = framesDropped;
+      let num = found.networkFramesDropped;
+      if (num == null) {
+        num = 0;
+      }
+      merged.networkFramesDropped = num;
+      let num3 = 0;
+      if (null != found.resolution) {
+        num3 = found.resolution.height;
+      }
+      merged.resolution = num3;
+      let num4 = 0;
+      if (null != found.resolution) {
+        const _Math = Math;
+        num4 = Math.min(found.resolution.height, found.resolution.width);
+      }
+      merged.minorResolution = num4;
+      let num5 = 0;
+      if (null != found.resolution) {
+        const _Math2 = Math;
+        num5 = Math.max(found.resolution.height, found.resolution.width);
+      }
+      merged.majorResolution = num5;
+      merged.timestamp = timestamp;
+      ({ nackCount: tmp3.nackCount, pliCount: tmp3.pliCount } = found);
+      merged.decoder = parseDecoder(found.decoderImplementationName);
+      if (null == found.codec.name) {
+        let AV1 = obj.UNKNOWN;
+      } else {
+        const formatted = str.toUpperCase();
+        if ("H264" === formatted) {
+          AV1 = obj.H264;
+        } else if ("H265" === formatted) {
+          AV1 = obj.H265;
+        } else if ("VP8" === formatted) {
+          AV1 = obj.VP8;
+        } else if ("VP9" === formatted) {
+          AV1 = obj.VP9;
+        } else {
+          if ("AV1" !== formatted) {
+            if ("AV1X" !== formatted) {
+              AV1 = obj.UNKNOWN;
+            }
+          }
+          AV1 = obj.AV1;
+        }
+      }
+      merged.codecType = AV1;
+      merged.qpSum = 0;
+      ({ freezeCount: tmp3.freezeCount, pauseCount: tmp3.pauseCount, totalFreezesDuration: tmp3.totalFreezesDuration, totalPausesDuration: tmp3.totalPausesDuration, totalFramesDuration: tmp3.totalFramesDuration, totalDecodeTime } = found);
+      if (totalDecodeTime == null) {
+        totalDecodeTime = 0;
+      }
+      merged.totalDecodeTime = totalDecodeTime;
+      let keyFramesDecoded = found.keyFramesDecoded;
+      if (keyFramesDecoded == null) {
+        keyFramesDecoded = null;
+      }
+      merged.keyframes = keyFramesDecoded;
+      let num6 = found.passthroughCount;
+      if (num6 == null) {
+        num6 = 0;
+      }
+      merged.passthroughCount = num6;
+      let num7 = found.decryptSuccessCount;
+      if (num7 == null) {
+        num7 = 0;
+      }
+      merged.cryptorSuccessCount = num7;
+      let num8 = found.decryptFailureCount;
+      if (num8 == null) {
+        num8 = 0;
+      }
+      merged.cryptorFailureCount = num8;
+      let num9 = found.decryptDuration;
+      if (num9 == null) {
+        num9 = 0;
+      }
+      merged.cryptorDuration = num9;
+      let num10 = found.decryptAttempts;
+      if (num10 == null) {
+        num10 = 0;
+      }
+      merged.cryptorAttempts = num10;
+      let num11 = found.decryptMissingKeyCount;
+      if (num11 == null) {
+        num11 = 0;
+      }
+      merged.cryptorMissingKeyCount = num11;
+      let num12 = found.decryptInvalidNonceCount;
+      if (num12 == null) {
+        num12 = 0;
+      }
+      merged.cryptorInvalidNonceCount = num12;
+      let num13 = found.sinkWantLocalAsInt;
+      if (num13 == null) {
+        num13 = 0;
+      }
+      merged.localWant = num13;
     }
-    obj.codecType = AV1;
-    obj.qpSum = 0;
-    ({ freezeCount: tmp2.freezeCount, pauseCount: tmp2.pauseCount, totalFreezesDuration: tmp2.totalFreezesDuration, totalPausesDuration: tmp2.totalPausesDuration, totalFramesDuration: tmp2.totalFramesDuration, totalDecodeTime } = found);
-    if (totalDecodeTime == null) {
-      totalDecodeTime = 0;
-    }
-    obj.totalDecodeTime = totalDecodeTime;
-    let keyFramesDecoded = found.keyFramesDecoded;
-    if (keyFramesDecoded == null) {
-      keyFramesDecoded = null;
-    }
-    obj.keyframes = keyFramesDecoded;
-    let num6 = found.passthroughCount;
-    if (num6 == null) {
-      num6 = 0;
-    }
-    obj.passthroughCount = num6;
-    let num7 = found.decryptSuccessCount;
-    if (num7 == null) {
-      num7 = 0;
-    }
-    obj.cryptorSuccessCount = num7;
-    let num8 = found.decryptFailureCount;
-    if (num8 == null) {
-      num8 = 0;
-    }
-    obj.cryptorFailureCount = num8;
-    let num9 = found.decryptDuration;
-    if (num9 == null) {
-      num9 = 0;
-    }
-    obj.cryptorDuration = num9;
-    let num10 = found.decryptAttempts;
-    if (num10 == null) {
-      num10 = 0;
-    }
-    obj.cryptorAttempts = num10;
-    let num11 = found.decryptMissingKeyCount;
-    if (num11 == null) {
-      num11 = 0;
-    }
-    obj.cryptorMissingKeyCount = num11;
-    let num12 = found.decryptInvalidNonceCount;
-    if (num12 == null) {
-      num12 = 0;
-    }
-    obj.cryptorInvalidNonceCount = num12;
-    let num13 = found.sinkWantLocalAsInt;
-    if (num13 == null) {
-      num13 = 0;
-    }
-    obj.localWant = num13;
+    return merged;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return obj;
 };
-RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, closure_1) {
-  if (typeof RawVideoStats !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(RawVideoStats.prototype);
-  if (null != resolution) {
-    obj = { bytes: null, framesCodec: null, framesCodecError: null, framesNetwork: null, packets: null, packetsLost: null, framesDropped: 0, networkFramesDropped: 0, resolution: null, minorResolution: null, majorResolution: null, timestamp: null, encoder: null, decoder: null, codecType: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: 0, totalFreezesDuration: null, totalPausesDuration: 0, totalFramesDuration: null, totalDecodeTime: 0, outboundSinkWant: null, vmafScore: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, psnrDb: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: null, cryptorSuccessCount: null, cryptorFailureCount: null, cryptorDuration: null, cryptorAttempts: null, cryptorMaxAttempts: null, cryptorMissingKeyCount: null, cryptorInvalidNonceCount: 0, localWant: 0, consecutiveStaticColorFrames: null, screenshareFramesUnique: 0 };
-    ({ bytesSent: obj[0], framesEncoded: obj[1], framesSent } = resolution);
-    if (framesSent == null) {
-      framesSent = 0;
-    }
-    obj[3] = framesSent;
-    ({ packetsSent: obj[4], packetsLost } = resolution);
-    if (packetsLost == null) {
-      packetsLost = 0;
-    }
-    obj[5] = packetsLost;
-    let num = 0;
-    if (null != resolution.resolution) {
-      num = resolution.resolution.height;
-    }
-    obj[8] = num;
-    let num2 = 0;
-    if (null != resolution.resolution) {
-      const _Math = Math;
-      num2 = Math.min(resolution.resolution.height, resolution.resolution.width);
-    }
-    obj[9] = num2;
-    let num3 = 0;
-    if (null != resolution.resolution) {
-      const _Math2 = Math;
-      num3 = Math.max(resolution.resolution.height, resolution.resolution.width);
-    }
-    obj[10] = num3;
-    obj[11] = closure_1;
-    obj[12] = parseEncoder(resolution.encoderImplementationName);
-    if (null == resolution.codec.name) {
-      let AV1 = obj.UNKNOWN;
-    } else {
-      const formatted = str.toUpperCase();
-      if ("H264" === formatted) {
-        AV1 = obj.H264;
-      } else if ("H265" === formatted) {
-        AV1 = obj.H265;
-      } else if ("VP8" === formatted) {
-        AV1 = obj.VP8;
-      } else if ("VP9" === formatted) {
-        AV1 = obj.VP9;
-      } else {
-        if ("AV1" !== formatted) {
-          if ("AV1X" !== formatted) {
-            AV1 = obj.UNKNOWN;
-          }
-        }
-        AV1 = obj.AV1;
+RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, timestamp) {
+  if (typeof RawVideoStats === "function") {
+    let merged = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+    if (null != resolution) {
+      obj = { bytes: null, framesCodec: null, framesCodecError: null, framesNetwork: null, packets: null, packetsLost: null, framesDropped: 0, networkFramesDropped: 0, resolution: null, minorResolution: null, majorResolution: null, timestamp: null, encoder: null, decoder: null, codecType: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: 0, totalFreezesDuration: null, totalPausesDuration: 0, totalFramesDuration: null, totalDecodeTime: 0, outboundSinkWant: null, vmafScore: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, psnrDb: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: null, cryptorSuccessCount: null, cryptorFailureCount: null, cryptorDuration: null, cryptorAttempts: null, cryptorMaxAttempts: null, cryptorMissingKeyCount: null, cryptorInvalidNonceCount: 0, localWant: 0, consecutiveStaticColorFrames: null, screenshareFramesUnique: 0 };
+      ({ bytesSent: obj.bytes, framesEncoded: obj.framesCodec, framesSent } = resolution);
+      if (framesSent == null) {
+        framesSent = 0;
       }
+      obj.framesNetwork = framesSent;
+      ({ packetsSent: obj.packets, packetsLost } = resolution);
+      if (packetsLost == null) {
+        packetsLost = 0;
+      }
+      obj.packetsLost = packetsLost;
+      let num = 0;
+      if (null != resolution.resolution) {
+        num = resolution.resolution.height;
+      }
+      obj.resolution = num;
+      let num2 = 0;
+      if (null != resolution.resolution) {
+        const _Math = Math;
+        num2 = Math.min(resolution.resolution.height, resolution.resolution.width);
+      }
+      obj.minorResolution = num2;
+      let num3 = 0;
+      if (null != resolution.resolution) {
+        const _Math2 = Math;
+        num3 = Math.max(resolution.resolution.height, resolution.resolution.width);
+      }
+      obj.majorResolution = num3;
+      obj.timestamp = timestamp;
+      obj.encoder = parseEncoder(resolution.encoderImplementationName);
+      if (null == resolution.codec.name) {
+        let AV1 = obj.UNKNOWN;
+      } else {
+        const formatted = str.toUpperCase();
+        if ("H264" === formatted) {
+          AV1 = obj.H264;
+        } else if ("H265" === formatted) {
+          AV1 = obj.H265;
+        } else if ("VP8" === formatted) {
+          AV1 = obj.VP8;
+        } else if ("VP9" === formatted) {
+          AV1 = obj.VP9;
+        } else {
+          if ("AV1" !== formatted) {
+            if ("AV1X" !== formatted) {
+              AV1 = obj.UNKNOWN;
+            }
+          }
+          AV1 = obj.AV1;
+        }
+      }
+      obj.codecType = AV1;
+      ({ nackCount: obj.nackCount, pliCount: obj.pliCount, qpSum: obj.qpSum, freezeCount } = resolution);
+      if (freezeCount == null) {
+        freezeCount = 0;
+      }
+      obj.freezeCount = freezeCount;
+      let num4 = resolution.totalFreezesDuration;
+      if (num4 == null) {
+        num4 = 0;
+      }
+      obj.totalFreezesDuration = num4;
+      let num5 = resolution.totalFramesDuration;
+      if (num5 == null) {
+        num5 = 0;
+      }
+      obj.totalFramesDuration = num5;
+      let sinkWantAsInt = resolution.sinkWantAsInt;
+      if (sinkWantAsInt == null) {
+        sinkWantAsInt = null;
+      }
+      obj.outboundSinkWant = sinkWantAsInt;
+      let encoderQualityVmaf = resolution.encoderQualityVmaf;
+      if (encoderQualityVmaf == null) {
+        encoderQualityVmaf = null;
+      }
+      obj.vmafScore = encoderQualityVmaf;
+      let num6 = resolution.qualityDecodeErrors;
+      if (num6 == null) {
+        num6 = 0;
+      }
+      obj.qualityDecodeErrors = num6;
+      let num7 = resolution.qualityDecoderReboots;
+      if (num7 == null) {
+        num7 = 0;
+      }
+      obj.qualityDecoderReboots = num7;
+      let num8 = resolution.qualityScoreErrors;
+      if (num8 == null) {
+        num8 = 0;
+      }
+      obj.qualityScoreErrors = num8;
+      let num9 = resolution.qualityFrameDrops;
+      if (num9 == null) {
+        num9 = 0;
+      }
+      obj.qualityFrameDrops = num9;
+      let num10 = resolution.qualitySizeMismatches;
+      if (num10 == null) {
+        num10 = 0;
+      }
+      obj.qualitySizeMismatches = num10;
+      let encoderQualityPsnr = resolution.encoderQualityPsnr;
+      if (encoderQualityPsnr == null) {
+        encoderQualityPsnr = null;
+      }
+      obj.psnrDb = encoderQualityPsnr;
+      let keyFramesEncoded = resolution.keyFramesEncoded;
+      if (keyFramesEncoded == null) {
+        keyFramesEncoded = null;
+      }
+      obj.keyframes = keyFramesEncoded;
+      let prop = resolution.framesDroppedRateLimiter;
+      if (prop == null) {
+        prop = null;
+      }
+      obj.framesDroppedRateLimiter = prop;
+      let prop1 = resolution.framesDroppedEncoderQueue;
+      if (prop1 == null) {
+        prop1 = null;
+      }
+      obj.framesDroppedEncoderQueue = prop1;
+      let prop2 = resolution.framesDroppedCongestionWindow;
+      if (prop2 == null) {
+        prop2 = null;
+      }
+      obj.framesDroppedCongestionWindow = prop2;
+      let framesDroppedEncoder = resolution.framesDroppedEncoder;
+      if (framesDroppedEncoder == null) {
+        framesDroppedEncoder = null;
+      }
+      obj.framesDroppedEncoder = framesDroppedEncoder;
+      let num11 = resolution.passthroughCount;
+      if (num11 == null) {
+        num11 = 0;
+      }
+      obj.passthroughCount = num11;
+      let num12 = resolution.encryptSuccessCount;
+      if (num12 == null) {
+        num12 = 0;
+      }
+      obj.cryptorSuccessCount = num12;
+      let num13 = resolution.encryptFailureCount;
+      if (num13 == null) {
+        num13 = 0;
+      }
+      obj.cryptorFailureCount = num13;
+      let num14 = resolution.encryptDuration;
+      if (num14 == null) {
+        num14 = 0;
+      }
+      obj.cryptorDuration = num14;
+      let num15 = resolution.encryptAttempts;
+      if (num15 == null) {
+        num15 = 0;
+      }
+      obj.cryptorAttempts = num15;
+      let num16 = resolution.encryptMaxAttempts;
+      if (num16 == null) {
+        num16 = 0;
+      }
+      obj.cryptorMaxAttempts = num16;
+      let num17 = resolution.encryptMissingKeyCount;
+      if (num17 == null) {
+        num17 = 0;
+      }
+      obj.cryptorMissingKeyCount = num17;
+      let num18 = resolution.consecutiveStaticColorFrames;
+      if (num18 == null) {
+        num18 = 0;
+      }
+      obj.consecutiveStaticColorFrames = num18;
+      merged = obj;
     }
-    obj[14] = AV1;
-    ({ nackCount: obj[15], pliCount: obj[16], qpSum: obj[17], freezeCount } = resolution);
-    if (freezeCount == null) {
-      freezeCount = 0;
-    }
-    obj[18] = freezeCount;
-    let num4 = resolution.totalFreezesDuration;
-    if (num4 == null) {
-      num4 = 0;
-    }
-    obj[20] = num4;
-    let num5 = resolution.totalFramesDuration;
-    if (num5 == null) {
-      num5 = 0;
-    }
-    obj[22] = num5;
-    let sinkWantAsInt = resolution.sinkWantAsInt;
-    if (sinkWantAsInt == null) {
-      sinkWantAsInt = null;
-    }
-    obj[24] = sinkWantAsInt;
-    let encoderQualityVmaf = resolution.encoderQualityVmaf;
-    if (encoderQualityVmaf == null) {
-      encoderQualityVmaf = null;
-    }
-    obj[25] = encoderQualityVmaf;
-    let num6 = resolution.qualityDecodeErrors;
-    if (num6 == null) {
-      num6 = 0;
-    }
-    obj[26] = num6;
-    let num7 = resolution.qualityDecoderReboots;
-    if (num7 == null) {
-      num7 = 0;
-    }
-    obj[27] = num7;
-    let num8 = resolution.qualityScoreErrors;
-    if (num8 == null) {
-      num8 = 0;
-    }
-    obj[28] = num8;
-    let num9 = resolution.qualityFrameDrops;
-    if (num9 == null) {
-      num9 = 0;
-    }
-    obj[29] = num9;
-    let num10 = resolution.qualitySizeMismatches;
-    if (num10 == null) {
-      num10 = 0;
-    }
-    obj[30] = num10;
-    let encoderQualityPsnr = resolution.encoderQualityPsnr;
-    if (encoderQualityPsnr == null) {
-      encoderQualityPsnr = null;
-    }
-    obj[31] = encoderQualityPsnr;
-    let keyFramesEncoded = resolution.keyFramesEncoded;
-    if (keyFramesEncoded == null) {
-      keyFramesEncoded = null;
-    }
-    obj[32] = keyFramesEncoded;
-    let prop = resolution.framesDroppedRateLimiter;
-    if (prop == null) {
-      prop = null;
-    }
-    obj[33] = prop;
-    let prop1 = resolution.framesDroppedEncoderQueue;
-    if (prop1 == null) {
-      prop1 = null;
-    }
-    obj[34] = prop1;
-    let prop2 = resolution.framesDroppedCongestionWindow;
-    if (prop2 == null) {
-      prop2 = null;
-    }
-    obj[35] = prop2;
-    let framesDroppedEncoder = resolution.framesDroppedEncoder;
-    if (framesDroppedEncoder == null) {
-      framesDroppedEncoder = null;
-    }
-    obj[36] = framesDroppedEncoder;
-    let num11 = resolution.passthroughCount;
-    if (num11 == null) {
-      num11 = 0;
-    }
-    obj[37] = num11;
-    let num12 = resolution.encryptSuccessCount;
-    if (num12 == null) {
-      num12 = 0;
-    }
-    obj[38] = num12;
-    let num13 = resolution.encryptFailureCount;
-    if (num13 == null) {
-      num13 = 0;
-    }
-    obj[39] = num13;
-    let num14 = resolution.encryptDuration;
-    if (num14 == null) {
-      num14 = 0;
-    }
-    obj[40] = num14;
-    let num15 = resolution.encryptAttempts;
-    if (num15 == null) {
-      num15 = 0;
-    }
-    obj[41] = num15;
-    let num16 = resolution.encryptMaxAttempts;
-    if (num16 == null) {
-      num16 = 0;
-    }
-    obj[42] = num16;
-    let num17 = resolution.encryptMissingKeyCount;
-    if (num17 == null) {
-      num17 = 0;
-    }
-    obj[43] = num17;
-    let num18 = resolution.consecutiveStaticColorFrames;
-    if (num18 == null) {
-      num18 = 0;
-    }
-    obj[46] = num18;
+    return merged;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return obj;
 };
 class InboundStats {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     values = Object.values(closure_12);
-    obj.decoderBuckets = Object.fromEntries(values.map((arg0) => {
-      const items = [arg0, 0];
+    obj.decoderBuckets = Object.fromEntries(values.map((item) => {
+      const items = [item, 0];
       return items;
     }));
     obj.codecBuckets = { H264: 0, H265: 0, VP8: 0, VP9: 0, AV1: 0, UNKNOWN: 0 };
     obj.statsWindow = [];
-    tmp2 = RawVideoStats;
-    if (typeof RawVideoStats !== "function") {
+    if (typeof RawVideoStats === "function") {
+      tmp3 = global;
+      obj.previousAggregationStats = Object.assign({ bytes: 0, framesCodec: 0, framesCodecError: null, framesNetwork: 0, resolution: 0, minorResolution: 0, majorResolution: 0, timestamp: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, nackCount: 0, pliCount: 0, encoder: null, decoder: null, codecType: null, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, vmafScore: null, psnrDb: null, outboundSinkWant: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMaxAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, localWant: 0, consecutiveStaticColorFrames: 0, screenshareFramesUnique: 0 });
+      tmp4 = closure_0;
+      tmp5 = closure_2;
+      tmp6 = new.target;
+      tmp7 = new.target;
+      histogram = new closure_0(closure_2[1]).Histogram();
+      tmp9 = histogram;
+      obj.fpsHistogram = histogram;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      histogram1 = new closure_0(closure_2[1]).Histogram();
+      tmp13 = histogram1;
+      obj.bitrateHistogram = histogram1;
+      tmp14 = new.target;
+      tmp15 = new.target;
+      histogram2 = new closure_0(closure_2[1]).Histogram();
+      tmp17 = histogram2;
+      obj.inboundBitrateEstimateHistogram = histogram2;
+      tmp18 = new.target;
+      tmp19 = new.target;
+      histogram3 = new closure_0(closure_2[1]).Histogram();
+      tmp21 = histogram3;
+      obj.resolutionHistogram = histogram3;
+      tmp22 = new.target;
+      tmp23 = new.target;
+      histogram4 = new closure_0(closure_2[1]).Histogram();
+      tmp25 = histogram4;
+      obj.localWantHistogram = histogram4;
+      tmp26 = closure_1;
+      tmp27 = new.target;
+      tmp28 = new.target;
+      tmp29 = new closure_1(closure_2[2])();
+      tmp30 = tmp29;
+      obj.systemResources = tmp29;
+      tmp31 = closure_10;
+      obj.decoderCodec = closure_10.UNKNOWN;
+      obj.aggregatedProperties = { framesCodec: 0, framesNetwork: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, framesCodecError: 0, bytes: 0, nackCount: 0, pliCount: 0, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, keyframes: 0, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, screenshareFramesUnique: 0 };
+      num = 0;
+      obj.aggregationDuration = 0;
+      obj.bitrateBuckets = {};
+      obj.fpsBuckets = {};
+      obj.resolutionBuckets = {};
+      obj.resolutionTotal = 0;
+      obj.minorResolutionTotal = 0;
+      obj.majorResolutionTotal = 0;
+      obj.intervalTotal = 0;
+      obj.cryptorMaxAttempts = 0;
+      tmp32 = null;
+      obj.minWidth = null;
+      obj.minHeight = null;
+      obj.maxConsecutiveStaticColorFrames = 0;
+      tmp33 = closure_15;
+      obj.videoStoppedReason = closure_15.None;
+      obj.startTime = global.now();
+      tmp34 = new.target;
+      tmp35 = new.target;
+      tmp36 = global;
+      stopWatch = new closure_0(closure_2[3]).StopWatch(global);
+      tmp38 = stopWatch;
+      obj.videoStoppedWatch = stopWatch;
+      tmp39 = closure_4;
+      item = closure_4.forEach((item) => {
+        obj.bitrateBuckets[item] = 0;
+      });
+      tmp41 = closure_5;
+      item1 = closure_5.forEach((item) => {
+        obj.fpsBuckets[item] = 0;
+      });
+      tmp43 = closure_6;
+      item2 = closure_6.forEach((item) => {
+        obj.resolutionBuckets[item] = 0;
+      });
+      return obj;
+    } else {
       str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      throw new TypeError("Trying to call a non-function");
     }
-    obj.previousAggregationStats = Object.create(tmp2.prototype);
-    histogram = new require("getSamples").Histogram();
-    obj.fpsHistogram = histogram;
-    histogram1 = new require("getSamples").Histogram();
-    obj.bitrateHistogram = histogram1;
-    histogram2 = new require("getSamples").Histogram();
-    obj.inboundBitrateEstimateHistogram = histogram2;
-    histogram3 = new require("getSamples").Histogram();
-    obj.resolutionHistogram = histogram3;
-    histogram4 = new require("getSamples").Histogram();
-    obj.localWantHistogram = histogram4;
-    tmp8 = new require("getStats")();
-    obj.systemResources = tmp8;
-    obj.decoderCodec = closure_10.UNKNOWN;
-    obj.aggregatedProperties = { framesCodec: 0, framesNetwork: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, framesCodecError: 0, bytes: 0, nackCount: 0, pliCount: 0, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, keyframes: 0, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, screenshareFramesUnique: 0 };
-    obj.aggregationDuration = 0;
-    obj.bitrateBuckets = {};
-    obj.fpsBuckets = {};
-    obj.resolutionBuckets = {};
-    obj.resolutionTotal = 0;
-    obj.minorResolutionTotal = 0;
-    obj.majorResolutionTotal = 0;
-    obj.intervalTotal = 0;
-    obj.cryptorMaxAttempts = 0;
-    obj.minWidth = null;
-    obj.minHeight = null;
-    obj.maxConsecutiveStaticColorFrames = 0;
-    obj.videoStoppedReason = closure_15.None;
-    obj.startTime = global.now();
-    stopWatch = new require("sleep").StopWatch(global);
-    obj.videoStoppedWatch = stopWatch;
-    item = closure_4.forEach((arg0) => {
-      obj.bitrateBuckets[arg0] = 0;
-    });
-    item1 = closure_5.forEach((arg0) => {
-      obj.fpsBuckets[arg0] = 0;
-    });
-    item2 = closure_6.forEach((arg0) => {
-      obj.resolutionBuckets[arg0] = 0;
-    });
-    return obj;
   }
 }
 const prototype = InboundStats.prototype;
@@ -433,8 +466,6 @@ Object.defineProperty(prototype, "videoStoppedDuration", {
 });
 prototype["collectAggregationStats"] = function collectAggregationStats(parseInboundStatsResult, previousAggregationStats) {
   const self = this;
-  closure_0 = parseInboundStatsResult;
-  closure_1 = previousAggregationStats;
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -442,32 +473,20 @@ prototype["collectAggregationStats"] = function collectAggregationStats(parseInb
     let tmp5 = parseInboundStatsResult[nextResult];
     let tmp6 = tmp5;
     if (null !== tmp5) {
-      let tmp7 = nextResult;
       let num = previousAggregationStats[tmp4];
       if (num == null) {
         num = 0;
       }
       let tmp8 = num;
       if (someResult) {
-        let tmp9 = set;
-        let tmp10 = nextResult;
         if (!set.has(tmp4)) {
           let aggregatedProperties = self.aggregatedProperties;
-          let tmp11 = nextResult;
-          let tmp12 = tmp5;
           aggregatedProperties[tmp4] = aggregatedProperties[tmp4] + tmp6;
         }
       }
-      let tmp13 = nextResult;
-      let tmp15 = num;
-      let tmp16 = tmp5;
       if (tmp8 <= tmp6) {
-        let tmp18 = tmp5;
-        let tmp19 = num;
         let diff = tmp6 - tmp8;
         self.aggregatedProperties[tmp4] = tmp14 + diff;
-      } else {
-        let tmp17 = nextResult;
       }
       diff = tmp5;
     }
@@ -492,8 +511,7 @@ prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
   }
 };
 prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInboundStatsResult) {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this.isVideoStopped) {
     const statsWindow = self.statsWindow;
     statsWindow.push(parseInboundStatsResult);
@@ -588,25 +606,25 @@ prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInb
       }
       if (self.statsWindow.length >= 6) {
         ({ bytes: bytes2, framesCodec: framesCodec2, timestamp: timestamp2 } = self.statsWindow[self.statsWindow.length - 3]);
-        const item = closure_6.forEach((arg0) => {
-          if (resolution <= arg0) {
+        const item = closure_6.forEach((item) => {
+          if (resolution <= item) {
             const resolutionBuckets = self.resolutionBuckets;
-            resolutionBuckets[arg0] = resolutionBuckets[arg0] + result1;
+            resolutionBuckets[item] = resolutionBuckets[item] + result1;
           }
         });
         const result2 = (timestamp - timestamp2) / 1000;
         const result3 = 8 * (bytes - bytes2) / result2;
         const result4 = (framesCodec - framesCodec2) / result2;
-        const item1 = self.forEach((arg0) => {
-          if (result3 <= arg0) {
+        const item1 = closure_4.forEach((item) => {
+          if (result3 <= item) {
             const bitrateBuckets = self.bitrateBuckets;
-            bitrateBuckets[arg0] = bitrateBuckets[arg0] + result1;
+            bitrateBuckets[item] = bitrateBuckets[item] + result1;
           }
         });
-        const item2 = closure_5.forEach((arg0) => {
-          if (result4 <= arg0) {
+        const item2 = closure_5.forEach((item) => {
+          if (result4 <= item) {
             const fpsBuckets = self.fpsBuckets;
-            fpsBuckets[arg0] = fpsBuckets[arg0] + result1;
+            fpsBuckets[item] = fpsBuckets[item] + result1;
           }
         });
         const resolutionHistogram = self.resolutionHistogram;
@@ -638,43 +656,42 @@ prototype["getCodecsUsed"] = function getCodecsUsed() {
   set = new Set();
   const entries = Object.entries(this.codecBuckets);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
+    let tmp5 = _slicedToArray(tmp3, 2);
     let first = tmp5[0];
     if (tmp5[1] > 0) {
-      let tmp7 = first;
       let addResult = set.add(first);
     }
     continue;
   }
   return set;
 };
-let result = set.fileFinishedImporting("lib/VideoQualityStats.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("lib/VideoQualityStats.tsx");
 class OutboundStats extends InboundStats {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     values = Object.values(closure_11);
-    applyArgumentsResult.encoderBuckets = Object.fromEntries(values.map((arg0) => {
-      const items = [arg0, 0];
+    applyArgumentsResult.encoderBuckets = Object.fromEntries(values.map((item) => {
+      const items = [item, 0];
       return items;
     }));
     applyArgumentsResult.encoderCodec = closure_10.UNKNOWN;
     applyArgumentsResult.targetFrames = 0;
     applyArgumentsResult.targetBytesMax = 0;
     applyArgumentsResult.targetBytesNetwork = 0;
-    histogram = new require("getSamples").Histogram();
+    histogram = new closure_0(closure_2[1]).Histogram();
     applyArgumentsResult.targetBitrateHistogram = histogram;
     applyArgumentsResult.outboundBytesAvailable = 0;
-    histogram1 = new require("getSamples").Histogram();
+    histogram1 = new closure_0(closure_2[1]).Histogram();
     applyArgumentsResult.outboundBandwidthSurplus = histogram1;
     applyArgumentsResult.averageEncodeTime = 0;
     applyArgumentsResult.vmafScoreSum = 0;
     applyArgumentsResult.vmafScoreNum = 0;
-    histogram2 = new require("getSamples").Histogram();
+    histogram2 = new closure_0(closure_2[1]).Histogram();
     applyArgumentsResult.vmafHistogram = histogram2;
     applyArgumentsResult.psnrDbSum = 0;
     applyArgumentsResult.psnrDbNum = 0;
-    histogram3 = new require("getSamples").Histogram();
+    histogram3 = new closure_0(closure_2[1]).Histogram();
     applyArgumentsResult.psnrHistogram = histogram3;
     applyArgumentsResult.qualityDecodeErrors = 0;
     applyArgumentsResult.qualityDecoderReboots = 0;
@@ -691,7 +708,7 @@ class OutboundStats extends InboundStats {
     return applyArgumentsResult;
   }
 }
-OutboundStats.prototype["appendTargetRates"] = function appendTargetRates(arg0, currentCPUUsagePercent) {
+OutboundStats.prototype["appendTargetRates"] = function appendTargetRates(arg0, currentCPUUsagePercent, arg2, arg3) {
   const self = this;
   if (this.statsWindow.length >= 2) {
     let num = arg0;

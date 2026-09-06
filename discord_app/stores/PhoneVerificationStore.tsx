@@ -1,8 +1,8 @@
-// === Module 17509: getCountrySelectorOpened ===
+// === Module 17509: PhoneVerificationStore ===
 
-// Module 17509 (getCountrySelectorOpened)
+// Module 17509 (PhoneVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let c0 = false;
 const Store = initializeDefault.Store;
@@ -12,7 +12,7 @@ PhoneVerificationStore.prototype["getCountrySelectorOpened"] = function getCount
   return c0;
 };
 PhoneVerificationStore.displayName = "PhoneVerificationStore";
-const phoneVerificationStore = new PhoneVerificationStore(dispatcherDefault, {
+const phoneVerificationStore = new PhoneVerificationStore(DispatcherDefault, {
   VERIFICATION_OPEN_COUNTRY_SELECTOR: function handleOpenCountry() {
     c0 = true;
   },
@@ -20,6 +20,7 @@ const phoneVerificationStore = new PhoneVerificationStore(dispatcherDefault, {
     c0 = false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/PhoneVerificationStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/PhoneVerificationStore.tsx");
 
 export default phoneVerificationStore;

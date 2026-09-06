@@ -1,10 +1,10 @@
-// === Module 4978: SUBTLE_SPRING ===
+// === Module 4978: springPresets ===
 
-// Module 4978 (SUBTLE_SPRING)
-import set from "set" /* 2 */;
+// Module 4978 (springPresets)
 import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4979 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
+const result = size.fileFinishedImporting("design/animation/reanimated/spring/springPresets.tsx");
 
 export const SUBTLE_SPRING = SUBTLE_SPRING.SUBTLE_SPRING;
 export const ON_PRESS_SPRING = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };

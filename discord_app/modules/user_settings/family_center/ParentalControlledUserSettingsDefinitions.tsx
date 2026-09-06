@@ -1,16 +1,13 @@
-// === Module 14826: defineParentalControlledSetting ===
+// === Module 14826: ParentalControlledUserSettingsDefinitions ===
 
-// Module 14826 (defineParentalControlledSetting)
-import closure_3 from "getSettings" /* 7540 */;
+// Module 14826 (ParentalControlledUserSettingsDefinitions)
+import FamilyCenterControlledSettingsStore from "FamilyCenterControlledSettingsStore" /* 7540 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");
 
 export const defineParentalControlledSetting = function defineParentalControlledSetting(privacy, defaultGuildsRestricted, explicitContentFromProto, explicitContentToProto, arg4) {
-  closure_0 = privacy;
-  closure_1 = defaultGuildsRestricted;
-  closure_2 = explicitContentFromProto;
-  closure_3 = explicitContentToProto;
   let obj = arg4;
   if (arg4 === undefined) {
     obj = {};
@@ -22,14 +19,14 @@ export const defineParentalControlledSetting = function defineParentalControlled
     };
   }
   function getControlledSetting(arg0) {
-    const settings = explicitContentToProto.getSettings(arg0);
+    const settings = FamilyCenterControlledSettingsStore.getSettings(arg0);
     let tmp3;
     if (settings != null) {
       if (settings[closure_0] != null) {
         tmp3 = tmp5[closure_1];
       }
     }
-    return closure_2(tmp3);
+    return explicitContentFromProto(tmp3);
   }
   obj = {
     getControlledSetting,
@@ -44,14 +41,13 @@ export const defineParentalControlledSetting = function defineParentalControlled
           }
         }
         tmp = fn(explicitContentFromProto(tmp4));
-        const tmp11 = explicitContentFromProto;
       }
       closure_0 = tmp;
       if (null == arg0) {
         let resolved = Promise.resolve();
       } else {
         resolved = defaultGuildsRestricted(explicitContentFromProto[1]).updateTeenSettings(arg0, closure_0, (arg0) => {
-          arg0[closure_1_1] = closure_1_3(closure_0, arg0[closure_1_1]);
+          arg0[closure_1] = closure_3(closure_0, arg0[closure_1]);
         });
         const obj = defaultGuildsRestricted(explicitContentFromProto[1]);
       }
@@ -59,17 +55,17 @@ export const defineParentalControlledSetting = function defineParentalControlled
     },
     useControlledSetting(arg0) {
       privacy = arg0;
-      const items = [closure_3];
+      const items = [settings];
       const items1 = [arg0];
       return privacy(explicitContentFromProto[2]).useStateFromStores(items, () => {
-        const settings = closure_1_3.getSettings(closure_0);
+        settings = settings.getSettings(closure_0);
         let tmp3;
         if (settings != null) {
           if (settings[closure_0] != null) {
-            tmp3 = tmp5[closure_1_1];
+            tmp3 = tmp5[closure_1];
           }
         }
-        return closure_1_2(tmp3);
+        return closure_2(tmp3);
       }, items1, fn);
     }
   };
@@ -79,40 +75,36 @@ export const defineParentalControlledSetting = function defineParentalControlled
   return obj;
 };
 export const wrapParentalControlledSettingWithExperimentDefaults = function wrapParentalControlledSettingWithExperimentDefaults(arg0) {
-  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: closure_3, ineligibleDefault: closure_4, onUseDefault: closure_5 } = arg0);
+  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: FamilyCenterControlledSettingsStore, ineligibleDefault: closure_4, onUseDefault: closure_5 } = arg0);
   return {
     getControlledSetting(arg0) {
-      const controlledSetting = closure_0.getControlledSetting(arg0);
+      const controlledSetting = require.getControlledSetting(arg0);
       if (null != controlledSetting) {
         return controlledSetting;
       } else {
-        if (closure_5 != null) {
+        if (closure_1_5 != null) {
           tmp2();
         }
-        if (callback()) {
-          let tmp5 = callback2();
-        } else {
-          tmp5 = closure_4;
+        if (importDefault()) {
+          const tmp5 = FamilyCenterControlledSettingsStore();
         }
       }
     },
     useControlledSetting(arg0) {
-      const controlledSetting = closure_0.useControlledSetting(arg0);
+      const controlledSetting = require.useControlledSetting(arg0);
       if (null != controlledSetting) {
         return controlledSetting;
       } else {
-        if (callback3 != null) {
-          callback3();
+        if (closure_1_5 != null) {
+          closure_1_5();
         }
         if (tmp2) {
-          let tmp4 = callback2();
-        } else {
-          tmp4 = closure_4;
+          const tmp4 = FamilyCenterControlledSettingsStore();
         }
       }
     },
     updateControlledSetting(selectedTeenId, addFlagResult) {
-      return closure_0.updateControlledSetting(selectedTeenId, addFlagResult);
+      return require.updateControlledSetting(selectedTeenId, addFlagResult);
     }
   };
 };

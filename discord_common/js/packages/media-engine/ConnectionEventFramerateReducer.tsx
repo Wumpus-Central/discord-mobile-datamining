@@ -1,20 +1,20 @@
-// === Module 4630: logger ===
+// === Module 4630: ConnectionEventFramerateReducer ===
 
-// Module 4630 (logger)
-import set from "set" /* 2 */;
-import log from "log" /* 4 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+// Module 4630 (ConnectionEventFramerateReducer)
+import logger_Logger from "logger/Logger" /* 4 */;
+import Constants from "Constants" /* 4585 */;
+import size from "module_2" /* 2 */;
 
-({ SpeakingFlags: obj1, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = DesktopSources);
-const logger = new log.Logger("ConnectionEventFramerateReducer");
-let result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx");
+({ SpeakingFlags: c2, VIDEO_QUALITY_FRAMRATE_NOT_SPEAKING_TIMEOUT: c3 } = Constants);
+const logger = new logger_Logger.Logger("ConnectionEventFramerateReducer");
+let result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/ConnectionEventFramerateReducer.tsx");
 class ConnectionEventFramerateReducer {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.handleSpeaking = function handleSpeaking(arg0, arg1) {
       if (arg0 === obj.connection.userId) {
-        obj.userSpeakingChange(arg1 === closure_1_2.NONE);
+        obj.userSpeakingChange(arg1 === constants.NONE);
       }
     };
     obj.handleSelfMute = function handleSelfMute(isMuted) {
@@ -28,8 +28,8 @@ class ConnectionEventFramerateReducer {
     obj.connection = global;
     obj.sinkWants = require;
     enableNativeLoggerResult = closure_4.enableNativeLogger(true);
-    onResult = global.on(require("BaseConnectionEvent").BaseConnectionEvent.Speaking, obj.handleSpeaking);
-    onResult1 = global.on(require("BaseConnectionEvent").BaseConnectionEvent.Mute, obj.handleSelfMute);
+    onResult = global.on(closure_0(closure_1[2]).BaseConnectionEvent.Speaking, obj.handleSpeaking);
+    onResult1 = global.on(closure_0(closure_1[2]).BaseConnectionEvent.Mute, obj.handleSelfMute);
     initializeResult = obj.initialize();
     return obj;
   }
@@ -39,8 +39,7 @@ prototype["initialize"] = function initialize() {
   this.userSpeakingChange(true);
 };
 prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   const connection = this.connection;
   if (!connection.hasDesktopSource()) {
     let result = self.destroyFramerateScaleFactorTimers();
@@ -49,7 +48,7 @@ prototype["userSpeakingChange"] = function userSpeakingChange(arg0) {
       self.framerateReductionTimeout = setTimeout(() => {
         if (!self.connection.destroyed) {
           const _HermesInternal = HermesInternal;
-          closure_1_4.info("BaseConnection.userSpeakingChange: Reduced framerate after " + closure_1_3 + " ms.");
+          logger.info("BaseConnection.userSpeakingChange: Reduced framerate after " + React3 + " ms.");
           obj.framerateReductionTimeout = undefined;
           obj.sinkWants.isMuted = true;
           const result = obj.updateRemoteWantsFramerate();

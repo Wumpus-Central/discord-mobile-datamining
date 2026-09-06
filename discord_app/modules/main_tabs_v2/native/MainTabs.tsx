@@ -1,33 +1,34 @@
-// === Module 16002: ? ===
+// === Module 16002: MainTabs ===
 
-// Module 16002
+// Module 16002 (MainTabs)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ManaContext from "ManaContext" /* 4271 */;
-import getGuildThemeNameDefault from "getGuildThemeName" /* 4413 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
-import useActiveThemeType from "useActiveThemeType" /* 7874 */;
-import _modDef16003 from "module_16003" /* 16003 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import native from "native" /* 4271 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4413 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
+import useActiveTheme from "useActiveTheme" /* 7874 */;
+import MainTabsNavigatorPanelDefault from "MainTabsNavigatorPanel" /* 16003 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ container: { flex: 1 } });
-const memoResult = importAllResult.memo(function MainTabs() {
-  let obj = useActiveThemeType;
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ container: { flex: 1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");
+
+export default noop.memo(function MainTabs() {
+  let obj = useActiveTheme;
   const isCustomThemeActive = obj.useIsCustomThemeActive();
-  const tmp = getGuildThemeNameDefault();
+  const tmp = useColorThemeBackgroundDefault();
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items, children: null };
-  items = [callback3().container, { marginLeft: rect.left, marginRight: rect.right }];
+  obj = { style: null, children: null };
+  const items = [closure_6().container, { marginLeft: rect.left, marginRight: rect.right }];
+  obj.style = items;
   obj = { gradient: tmp, children: null };
-  const items1 = [callback(getMixedGradientColorDefault, { absolute: true, mix: isCustomThemeActive }), callback(_modDef16003, {})];
-  obj[1] = items1;
-  obj[1] = callback2(ManaContext.ThemeContextProvider, obj);
-  return callback(View, obj);
+  const items1 = [React4(ThemedGradientDefault, { absolute: true, mix: isCustomThemeActive }), React4(MainTabsNavigatorPanelDefault, {})];
+  obj.children = items1;
+  obj.children = hasOwnProperty(native.ThemeContextProvider, obj);
+  return React4(View, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/MainTabs.tsx");
-
-export default memoResult;

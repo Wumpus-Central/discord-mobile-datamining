@@ -1,16 +1,16 @@
-// === Module 10003: NOOP ===
+// === Module 10003: VoiceActionUtils ===
 
-// Module 10003 (NOOP)
-import set from "set" /* 2 */;
-import _handleToggleVideo from "_handleToggleVideo" /* 9082 */;
+// Module 10003 (VoiceActionUtils)
+import CallsUtils from "CallsUtils" /* 9082 */;
+import size from "module_2" /* 2 */;
 
 function NOOP() {
 
 }
-const obj = { SERVER_MUTE: 0, [0]: "SERVER_MUTE", SUPPRESS: 1, [1]: "SUPPRESS", SELF_MUTE: 2, [2]: "SELF_MUTE", NONE: 3, [3]: "NONE" };
-const result = set.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
+const DominantMuteState = { SERVER_MUTE: 0, [0]: "SERVER_MUTE", SUPPRESS: 1, [1]: "SUPPRESS", SELF_MUTE: 2, [2]: "SELF_MUTE", NONE: 3, [3]: "NONE" };
+const result = size.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
-export const DominantMuteState = obj;
+export { DominantMuteState };
 export const createMuteHandler = function createMuteHandler(muteStates, stateFromStores) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
@@ -23,23 +23,23 @@ export const createMuteHandler = function createMuteHandler(muteStates, stateFro
   if (flag) {
     let onPress = NOOP;
   } else {
-    onPress = _handleToggleVideo.handleToggleSelfMute;
+    onPress = CallsUtils.handleToggleSelfMute;
   }
   if (muteStates.suppress) {
-    onPress = _handleToggleVideo.showSuppressedAlert;
+    onPress = CallsUtils.showSuppressedAlert;
     dominantMuteState = tmp.SUPPRESS;
   }
   if (muteStates.mute) {
-    onPress = _handleToggleVideo.showServerMuteAlert;
+    onPress = CallsUtils.showServerMuteAlert;
     dominantMuteState = tmp.SERVER_MUTE;
   }
   const mute = muteStates.selfMute || muteStates.mute || muteStates.suppress;
   return { mute, onPress, dominantMuteState };
 };
 export const createDeafHandler = function createDeafHandler(deafStates) {
-  let onPress = _handleToggleVideo.handleToggleSelfDeaf;
+  let onPress = CallsUtils.handleToggleSelfDeaf;
   if (deafStates.deaf) {
-    onPress = _handleToggleVideo.showServerDeafenAlert;
+    onPress = CallsUtils.showServerDeafenAlert;
   }
   const deaf = deafStates.selfDeaf || deafStates.deaf;
   return { deaf, onPress };

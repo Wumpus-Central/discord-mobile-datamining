@@ -1,22 +1,22 @@
 // === Module 7039: SceneLoadingIndicator ===
 
 // Module 7039 (SceneLoadingIndicator)
-import noopAll from "noop" /* 19 */;
-import ActivityIndicator from "ActivityIndicator" /* 5577 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5577 */;
 import NavScrim from "NavScrim" /* 7040 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ loadingContainer: { flex: 1, paddingTop: 40 } });
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/SceneLoadingIndicator.native.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ loadingContainer: { flex: 1, paddingTop: 40 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/SceneLoadingIndicator.native.tsx");
 
 export const SceneLoadingIndicator = function SceneLoadingIndicator() {
-  const obj = { style: callback3().loadingContainer, children: null };
-  const items = [callback(ActivityIndicator.ActivityIndicator, {}), callback(NavScrim.NavScrim, {})];
-  obj[1] = items;
-  return callback2(View, obj);
+  const obj = { style: closure_5().loadingContainer, children: null };
+  const items = [React3(ActivityIndicator_ActivityIndicator.ActivityIndicator, {}), React3(NavScrim.NavScrim, {})];
+  obj.children = items;
+  return React4(View, obj);
 };

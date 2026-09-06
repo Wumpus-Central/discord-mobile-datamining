@@ -1,104 +1,105 @@
-// === Module 16404: BadgedIcon ===
+// === Module 16404: ForLaterOpenActionButton ===
 
-// Module 16404 (BadgedIcon)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
+// Module 16404 (ForLaterOpenActionButton)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import styleProperties from "styleProperties" /* 4981 */;
-import SavedMessageSortTypes from "SavedMessageSortTypes" /* 7860 */;
-import SolidCutoutDefault from "SolidCutout" /* 8813 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getTimeSafe" /* 11660 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ButtonHooks from "ButtonHooks" /* 4981 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7850 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
+import showForLaterModal from "showForLaterModal" /* 7859 */;
+import SavedMessagesTypes from "SavedMessagesTypes" /* 7860 */;
+import ClipViewDefault from "ClipView" /* 8813 */;
+import noop from "module_19" /* 19 */;
+import SavedMessagesStore from "SavedMessagesStore" /* 11660 */;
 
-require = arg1;
+require = fn;
 function BadgedIcon(arg0) {
   ({ type, showRedDot } = arg0);
-  obj = map;
-  const token = obj.useToken(ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, useThemeDefault());
-  const tmp6 = callback2();
-  obj1 = styleProperties;
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, useThemeDefault());
+  const tmp6 = closure_9();
+  let obj1 = ButtonHooks;
   const iconSizeStyles = obj1.useIconSizeStyles("sm", true, 2);
-  if (type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER) {
+  if (type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER) {
     let BookmarkIcon = tmp4(4523).ClockIcon;
   } else {
     BookmarkIcon = tmp4(11707).BookmarkIcon;
   }
-  obj = { style: items, children: null };
-  items = [tmp6.container, iconSizeStyles];
+  obj = { style: null, children: null };
+  const items = [tmp6.container, iconSizeStyles];
+  obj.style = items;
   if (showRedDot) {
-    obj = { style: null, children: null };
-    obj[0] = tmp6.iconAnchor;
+    obj = { style: tmp6.iconAnchor, children: null };
     obj1 = { cutouts: null, children: null };
-    const items1 = [obj];
-    obj1[0] = items1;
-    const obj2 = { size: "sm", color: null };
-    obj2[1] = token;
-    obj1[1] = tmp8(BookmarkIcon, obj2);
-    const items2 = [tmp8(SolidCutoutDefault, obj1), ];
-    const obj3 = { style: null };
-    obj3[0] = tmp6.dot;
+    const items1 = [point];
+    obj1.cutouts = items1;
+    const obj2 = { size: "sm", color: token };
+    obj1.children = tmp8(BookmarkIcon, obj2);
+    const items2 = [tmp8(ClipViewDefault, obj1), ];
+    const obj3 = { style: tmp6.dot };
     items2[1] = tmp8(tmp9, obj3);
-    obj[1] = items2;
-    let tmp8Result = callback(tmp9, obj);
-    const tmpResult = SolidCutoutDefault;
+    obj.children = items2;
+    let tmp8Result = React5(tmp9, obj);
+    const tmpResult = ClipViewDefault;
   } else {
-    const obj4 = { size: "sm", color: null };
-    obj4[1] = token;
+    const obj4 = { size: "sm", color: token };
     tmp8Result = tmp8(BookmarkIcon, obj4);
   }
-  obj[1] = tmp8Result;
-  return closure_6(View, obj);
+  obj.children = tmp8Result;
+  return timestampProducer(View, obj);
 }
-let c3 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { shape: require("SolidCutout").CutoutShape.Circle, x: require("getIconSize").ICON_SIZE.sm - 7, y: require("getIconSize").ICON_SIZE.sm - 8, size: 10 };
-obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: { width: require("getIconSize").ICON_SIZE.sm, height: require("getIconSize").ICON_SIZE.sm, position: "relative" }, dot: null };
-createCacheKey = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: ThemesDefault.radii.lg, right: -2, bottom: -0.5 };
-obj[2] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(obj);
-let obj1 = { width: require("getIconSize").ICON_SIZE.sm, height: require("getIconSize").ICON_SIZE.sm, position: "relative" };
-const forwardRefResult = importAllResult.forwardRef((type, ref) => {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const point = { shape: fn(8813).CutoutShape.Circle, x: fn(16405).ICON_SIZE.sm - 7, y: fn(16405).ICON_SIZE.sm - 8, size: 10 };
+const createStyles = fn(4560);
+let obj = { container: { aspectRatio: 1, alignItems: "center", justifyContent: "center", position: "relative" }, iconAnchor: null, dot: null };
+let size = { width: fn(16405).ICON_SIZE.sm, height: fn(16405).ICON_SIZE.sm, position: "relative" };
+obj.iconAnchor = size;
+const size1 = { position: "absolute", height: 6.5, width: 6.5, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: nativeDefault.radii.lg, right: -2, bottom: -0.5 };
+obj.dot = size1;
+let closure_9 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterOpenActionButton.tsx");
+
+export default noop.forwardRef((type, ref) => {
   type = type.type;
   const onOpen = type.onOpen;
   let stateFromStores1;
-  let hasForLaterAccess;
-  obj = type(stateFromStores1[14]);
-  let items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_5.hasOverdueReminder(), []);
-  obj1 = type(stateFromStores1[14]);
-  const items1 = [closure_5];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_5.getSavedMessageCount());
-  hasForLaterAccess = type(stateFromStores1[15]).useHasForLaterAccess("ForLaterOpenActionButton");
+  let obj = type(stateFromStores1[14]);
+  let items = [SavedMessagesStore];
+  const stateFromStores = obj.useStateFromStores(items, () => SavedMessagesStore.hasOverdueReminder(), []);
+  let obj1 = type(stateFromStores1[14]);
+  const items1 = [SavedMessagesStore];
+  stateFromStores1 = obj1.useStateFromStores(items1, () => SavedMessagesStore.getSavedMessageCount());
+  const hasForLaterAccess = type(stateFromStores1[15]).useHasForLaterAccess("ForLaterOpenActionButton");
   const items2 = [hasForLaterAccess, onOpen, stateFromStores1, type];
   obj = { ref, children: null };
   const callback = hasForLaterAccess.useCallback(() => {
     onOpen();
     if (0 === stateFromStores1) {
       if (!hasForLaterAccess) {
-        const items = [onOpen(stateFromStores1[18]).FOR_LATER_ROADBLOCK];
-        onOpen(stateFromStores1[16])(type(stateFromStores1[17]).EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
-        const tmp5 = onOpen(stateFromStores1[16]);
+        const items = [AnalyticsLocationDefault.FOR_LATER_ROADBLOCK];
+        openPremiumUpsellActionSheetDefault(EntitlementFeatureNames.EntitlementFeatureNames.SAVED_MESSAGES, undefined, items);
       }
     }
-    type(stateFromStores1[19]).showForLaterModal(type);
+    showForLaterModal.showForLaterModal(type);
   }, items2);
   obj = { type, showRedDot: null };
   const obj3 = type(stateFromStores1[15]);
   const tmp8 = View;
   const tmp9 = BadgedIcon;
   obj1 = { variant: "tertiary", size: "sm", icon: tmp7(tmp9, obj), onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
-  obj[1] = type === type(stateFromStores1[11]).SavedMessageSortTypes.REMINDER && stateFromStores;
+  obj.showRedDot = type === type(stateFromStores1[11]).SavedMessageSortTypes.REMINDER && stateFromStores;
   const intl = tmp(tmp2[21]).intl;
   if (type === type(stateFromStores1[11]).SavedMessageSortTypes.REMINDER) {
+    let aUXxzT = tmp(tmp2[21]).t.aUXxzT;
   } else {
+    aUXxzT = tmp(tmp2[21]).t["2pAkDA"];
   }
-  obj1[4] = intl.string(_2pAkDA);
-  obj[1] = closure_6(type(stateFromStores1[20]).IconButton, obj1);
+  obj1.accessibilityLabel = intl.string(aUXxzT);
+  obj.children = closure_6(type(stateFromStores1[20]).IconButton, obj1);
   return closure_6(tmp8, obj);
 });
-const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterOpenActionButton.tsx");
-
-export default forwardRefResult;

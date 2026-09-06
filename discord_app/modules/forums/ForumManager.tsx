@@ -1,13 +1,12 @@
-// === Module 17366: handleChannelPreload ===
+// === Module 17366: ForumManager ===
 
-// Module 17366 (handleChannelPreload)
-import initializeDefault from "initialize" /* 7118 */;
-import loadForumPostData from "loadForumPostData" /* 7304 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import { isStaticChannelRoute } from "set" /* 1964 */;
+// Module 17366 (ForumManager)
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7304 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
+const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
 class ForumManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,15 +17,15 @@ class ForumManager extends tmp2 {
 ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(channelId) {
   channelId = channelId.channelId;
   if (!isStaticChannelRoute(channelId)) {
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     if (tmp3) {
-      loadForumPostData.preloadForumThreads(channel);
-      const obj2 = loadForumPostData;
+      ForumPostDataLoader.preloadForumThreads(channel);
     }
     tmp3 = null != channel && channel.isForumLikeChannel();
   }
 };
 const forumManager = new ForumManager();
-const result = require("set").fileFinishedImporting("modules/forums/ForumManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/ForumManager.tsx");
 
 export default forumManager;

@@ -1,16 +1,16 @@
-// === Module 5057: shouldShowMembershipVerificationGate ===
+// === Module 5057: useShowMemberVerificationGate ===
 
-// Module 5057 (shouldShowMembershipVerificationGate)
-import isValidFormResponse from "isValidFormResponse" /* 5058 */;
-import closure_2 from "trackCommunicationDisabled" /* 2021 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+// Module 5057 (useShowMemberVerificationGate)
+import MemberVerificationUtils from "MemberVerificationUtils" /* 5058 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function shouldShowMembershipVerificationGate(guildId, items) {
   let tmp = items;
   if (items === undefined) {
-    items = [closure_3, closure_4, closure_2];
+    items = [GuildStore, UserStore, GuildMemberStore];
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;
@@ -32,24 +32,24 @@ function shouldShowMembershipVerificationGate(guildId, items) {
       flag = flag2;
     }
     if (flag) {
-      flag = isValidFormResponse.guildHasVerificationGate(guild);
-      const obj4 = isValidFormResponse;
+      flag = MemberVerificationUtils.guildHasVerificationGate(guild);
     }
     return flag;
   }
 }
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
 
 export { shouldShowMembershipVerificationGate };
 export const useShowMemberVerificationGate = function useShowMemberVerificationGate(guild_id) {
-  const _require = guild_id;
-  let items = [closure_3, closure_4, closure_2];
+  _require = guild_id;
+  let items = [GuildStore, UserStore, GuildMemberStore];
   const items1 = [guild_id];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      const items = [closure_1_3, closure_1_4, closure_1_2];
-      tmp2 = closure_1_5(tmp, items);
+      const items = [GuildStore, UserStore, GuildMemberStore];
+      tmp2 = shouldShowMembershipVerificationGate(tmp, items);
     }
     return tmp2;
   }, items1);

@@ -1,24 +1,28 @@
 // === Module 7042: PhoneVerificationModal ===
 
 // Module 7042 (PhoneVerificationModal)
-import noopAll from "noop" /* 19 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { VerificationModalScenes } from "ME" /* 1074 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7043 */;
-import { jsx } from "jsxProd" /* 21 */;
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 6993 */;
+import AddPhoneDefault from "AddPhone" /* 7044 */;
+import PhoneActionCreatorsDefault from "PhoneActionCreators" /* 7045 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 7078 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
+const require = fn;
+const VerificationModalScenes = fn(1074).VerificationModalScenes;
+let closure_5 = fn(7043).PHONE_VERIFICATION_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/verification/native/components/PhoneVerificationModal.tsx");
 
 export default function PhoneVerificationModal(onClose) {
   let obj = { screens: null, initialRouteName: null, headerBackTitle: null };
-  const _require = onClose;
+  _require = onClose;
   obj = {};
-  obj = { headerTitle: _require(5624).getHeaderNoTitle(), headerLeft: null, render: null };
-  const obj4 = _require(5624);
-  obj[1] = _require(5624).getHeaderCloseButton(onClose.onClose);
-  obj[2] = function render(reason) {
+  obj = { headerTitle: require("NavigatorHeader").getHeaderNoTitle(), headerLeft: null, render: null };
+  const obj4 = require("NavigatorHeader");
+  obj.headerLeft = require("NavigatorHeader").getHeaderCloseButton(onClose.onClose);
+  obj.render = function render(reason, arg1) {
     onClose = reason;
     closure_1 = arg1;
     const obj = {};
@@ -32,50 +36,81 @@ export default function PhoneVerificationModal(onClose) {
     }
     obj.reason = reason;
     obj.onComplete = function onComplete(phone) {
-      return arr.push(closure_2_4.VERIFY_PHONE, {
+      return closure_1.push(VerificationModalScenes.VERIFY_PHONE, {
         phone,
         onVerified(arg0) {
-          closure_0 = arg0;
+          reason = arg0;
+          closure_1.push(constants.VERIFY_PASSWORD, {
+            hideUnverifiedBanner: true,
+            onSubmit(password) {
+              reason = undefined;
+              if (reason != null) {
+                reason = reason.reason;
+              }
+              if (reason == null) {
+                reason = reason.reason;
+              }
+              return PhoneActionCreatorsDefault.addPhone(reason, password, reason);
+            },
+            onSuccess() {
+              closure_1_1(closure_1_2[8]).popWithKey(closure_1_5);
+            }
+          });
         }
       });
     };
     let fn = null;
     if (onClose.allowDeletePhone) {
       fn = () => {
-
+        closure_1.push(VerificationModalScenes.VERIFY_PASSWORD, {
+          hideUnverifiedBanner: true,
+          onSubmit(password) {
+            reason = undefined;
+            if (closure_1_0 != null) {
+              reason = closure_1_0.reason;
+            }
+            if (reason == null) {
+              reason = closure_0.reason;
+            }
+            return PhoneActionCreatorsDefault.removePhone(password, reason);
+          },
+          onSuccess() {
+            let arr = closure_1_1(closure_1_2[8]);
+            arr = arr.pop();
+          }
+        });
       };
     }
     obj.onDeletePhone = fn;
-    return closure_1_6(closure_1_1(closure_1_2[6]), obj);
+    return jsx(AddPhoneDefault, {});
   };
   obj[VerificationModalScenes.ADD_PHONE] = obj;
-  obj1 = { headerTitle: null, impressionName: null, render: null };
-  const obj5 = _require(5624);
-  obj1[0] = _require(5624).getHeaderNoTitle();
-  obj1[1] = _require(1250).ImpressionNames.USER_VERIFY_PHONE;
-  obj1[2] = function render(arg0, arg1) {
+  let obj1 = { headerTitle: null, impressionName: null, render: null };
+  const obj5 = require("NavigatorHeader");
+  obj1.headerTitle = require("NavigatorHeader").getHeaderNoTitle();
+  obj1.impressionName = require("discord_common/AnalyticsUtils").ImpressionNames.USER_VERIFY_PHONE;
+  obj1.render = function render(arg0, arg1) {
     closure_0 = arg1;
     let obj = {};
     const merged = Object.assign(arg0);
     obj.disableKeyboardAvoidingView = true;
     obj.onVerified = function onVerified(arg0) {
-      let arr = arg0;
+      closure_0 = arg0;
       let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-      closure_1 = closure_2_3((arg0) => {
-        closure_0 = arg0;
+      closure_1 = asyncGeneratorStep(async (arg0) => {
+        const reason = arg0;
         c2 = 0;
         c1 = 0;
         c4 = 0;
-        return (function*(arg0) {
+        return (async (arg0, value) => {
           if (c1 === 2) {
             c1 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp5 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
+              let obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
@@ -86,45 +121,40 @@ export default function PhoneVerificationModal(onClose) {
               if (0 === c2) {
                 if (arg0 === 1) {
                   c1 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c1 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
                   c4 = 1;
-                  let obj3 = v0(closure_2_2[7]);
+                  let obj3 = v3(7045);
                   c2 = 2;
                   c1 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = obj3.addPhone(reason, reason, reason.reason);
+                  const obj1 = { value: obj3.addPhone(reason, reason, reason.reason), done: false };
                   return obj1;
                 }
               } else if (1 === tmp6) {
                 c4 = 0;
                 c1 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = closure_3;
+                const obj2 = { value, done: true };
                 return obj2;
               } else if (arg0 === 1) {
                 c1 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c4 = 0;
                 c1 = 3;
-                obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                obj3 = { value, done: true };
                 return obj3;
               } else {
                 c4 = 0;
                 c1 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               }
             } catch (tmp13) {
-              closure_3 = tmp13;
+              value = tmp13;
               if (tmp3 === c4) {
                 c1 = tmp2;
                 throw tmp13;
@@ -135,7 +165,7 @@ export default function PhoneVerificationModal(onClose) {
           }
         })();
       });
-      obj[1] = function() {
+      obj.onSubmit = function() {
         const self = this;
         const apply = closure_1.apply;
         if (typeof apply === "unknown") {
@@ -145,25 +175,25 @@ export default function PhoneVerificationModal(onClose) {
         }
         return applyArgumentsResult;
       };
-      obj[2] = function onSuccess() {
-        callback(table[8]).popWithKey(closure_5);
+      obj.onSuccess = function onSuccess() {
+        closure_1(4763).popWithKey(closure_1_5);
       };
-      arr = arr.push(closure_2_4.VERIFY_PASSWORD, obj);
+      closure_0.push(VerificationModalScenes.VERIFY_PASSWORD, obj);
     };
-    return closure_1_6(closure_1_1(closure_1_2[10]), obj);
+    return jsx(VerifyPhoneDefault, {});
   };
   obj[VerificationModalScenes.VERIFY_PHONE] = obj1;
   let obj2 = { headerTitle: null, render: null };
-  const obj7 = _require(5624);
-  obj2[0] = _require(5624).getHeaderNoTitle();
-  obj2[1] = function render(arg0) {
+  const obj7 = require("NavigatorHeader");
+  obj2.headerTitle = require("NavigatorHeader").getHeaderNoTitle();
+  obj2.render = function render(arg0) {
     const merged = Object.assign(arg0);
-    return callback2(callback(table[11]), {});
+    return jsx(UserSettingsConfirmPasswordDefault, {});
   };
   obj[VerificationModalScenes.VERIFY_PASSWORD] = obj2;
-  obj[0] = obj;
-  obj[1] = VerificationModalScenes.ADD_PHONE;
-  const intl = _require(1114).intl;
-  obj[2] = intl.string(_require(1114).t["13/7kX"]);
-  return jsx(_require(7000).Navigator, { headerTitle: _require(5624).getHeaderNoTitle(), headerLeft: null, render: null });
+  obj.screens = obj;
+  obj.initialRouteName = VerificationModalScenes.ADD_PHONE;
+  const intl = require("util").intl;
+  obj.headerBackTitle = intl.string(require("util").t["13/7kX"]);
+  return jsx(require("Navigator").Navigator, { headerTitle: require("NavigatorHeader").getHeaderNoTitle(), headerLeft: null, render: null });
 };

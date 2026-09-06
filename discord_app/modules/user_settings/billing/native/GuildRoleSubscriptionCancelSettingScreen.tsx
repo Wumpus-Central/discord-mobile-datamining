@@ -1,19 +1,19 @@
 // === Module 15225: GuildRoleSubscriptionCancelSettingScreen ===
 
 // Module 15225 (GuildRoleSubscriptionCancelSettingScreen)
-import noopAll from "noop" /* 19 */;
 import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6994 */;
-import WhatYouLoseDefault from "WhatYouLose" /* 15226 */;
-import { jsx } from "jsxProd" /* 21 */;
+import UserSettingsGuildRoleSubscriptionsCancelDefault from "UserSettingsGuildRoleSubscriptionsCancel" /* 15226 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/GuildRoleSubscriptionCancelSettingScreen.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/billing/native/GuildRoleSubscriptionCancelSettingScreen.tsx");
 
 export default function GuildRoleSubscriptionCancelSettingScreen() {
   let obj = useSettingNavigationRoute;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(WhatYouLoseDefault, {});
+  return jsx(UserSettingsGuildRoleSubscriptionsCancelDefault, {});
 };

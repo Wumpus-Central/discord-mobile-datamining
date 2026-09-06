@@ -1,14 +1,15 @@
 // === Module 13985: isActivityParticipantCurrentUserCurrentSession ===
 
 // Module 13985 (isActivityParticipantCurrentUserCurrentSession)
-import closure_0 from "fetchFingerprint" /* 502 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
 
 export const isActivityParticipantCurrentUserCurrentSession = function isActivityParticipantCurrentUserCurrentSession(userId) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = closure_0;
+    obj = AuthenticationStore;
   }
   const id = obj.getId();
   let tmp3 = userId.userId === id;

@@ -1,19 +1,18 @@
-// === Module 7704: useConsoleQuestUIStore ===
+// === Module 7704: ConsoleQuestUIStore ===
 
-// Module 7704 (useConsoleQuestUIStore)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 7704 (ConsoleQuestUIStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
 let closure_0 = [];
-let obj = keys.create((arg0, arg1) => {
+let obj = module_560.create((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   let obj = {
     errorHintsByQuestId: new Map(),
     setErrorHints(questId, arg1) {
-      const callback = questId;
-      closure_1 = arg1;
-      callback((errorHintsByQuestId) => {
+      closure_0 = questId;
+      closure_0((errorHintsByQuestId) => {
         if (0 === length.length) {
           errorHintsByQuestId = errorHintsByQuestId.errorHintsByQuestId;
           if (!errorHintsByQuestId.has(closure_0)) {
@@ -32,23 +31,22 @@ let obj = keys.create((arg0, arg1) => {
       });
     },
     getErrorHints(arg0) {
-      const errorHintsByQuestId = callback2().errorHintsByQuestId;
-      let value = errorHintsByQuestId.get(arg0);
+      const errorHintsByQuestId = closure_1().errorHintsByQuestId;
+      value = errorHintsByQuestId.get(arg0);
       if (value == null) {
         value = closure_0;
       }
       return value;
     },
     clearErrorHints(arg0) {
-      const callback = arg0;
-      callback((errorHintsByQuestId) => {
+      closure_0 = arg0;
+      closure_0((errorHintsByQuestId) => {
         errorHintsByQuestId = errorHintsByQuestId.errorHintsByQuestId;
         if (errorHintsByQuestId.has(closure_0)) {
           const _Map = Map;
           const map = new Map(errorHintsByQuestId.errorHintsByQuestId);
           map.delete(tmp);
-          const obj = { errorHintsByQuestId: null };
-          obj[0] = map;
+          const obj = { errorHintsByQuestId: map };
           return obj;
         } else {
           return errorHintsByQuestId;
@@ -57,15 +55,15 @@ let obj = keys.create((arg0, arg1) => {
       });
     },
     clearErrorHintsByType(arg0, arg1) {
-      const callback = arg0;
+      closure_0 = arg0;
       closure_1 = arg1;
-      callback((errorHintsByQuestId) => {
+      closure_0((errorHintsByQuestId) => {
         errorHintsByQuestId = errorHintsByQuestId.errorHintsByQuestId;
-        const value = errorHintsByQuestId.get(closure_0);
+        value = errorHintsByQuestId.get(closure_0);
         if (null == value) {
           return errorHintsByQuestId;
         } else {
-          const found = value.filter((type) => type.type !== closure_1);
+          const found = value.filter((type) => type.type !== closure_1_1);
           if (found.length === value.length) {
             return errorHintsByQuestId;
           } else {
@@ -76,8 +74,7 @@ let obj = keys.create((arg0, arg1) => {
             } else {
               const result = map.set(tmp, found);
             }
-            const obj = { errorHintsByQuestId: null };
-            obj[0] = map;
+            const obj = { errorHintsByQuestId: map };
             return obj;
           }
         }
@@ -85,12 +82,12 @@ let obj = keys.create((arg0, arg1) => {
     },
     reset() {
       const obj = { errorHintsByQuestId: new Map() };
-      callback(obj);
+      closure_0(obj);
     }
   };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/quests/ConsoleQuestUIStore.tsx");
+let result = size.fileFinishedImporting("modules/quests/ConsoleQuestUIStore.tsx");
 
 export default obj;
 export const useConsoleQuestUIStore = obj;

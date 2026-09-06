@@ -1,25 +1,25 @@
-// === Module 14398: initialize ===
+// === Module 14398: AnalyticsLogStore ===
 
-// Module 14398 (initialize)
+// Module 14398 (AnalyticsLogStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import extractId from "extractId" /* 1255 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import FingerprintUtils from "FingerprintUtils" /* 1255 */;
 import v1 from "v1" /* 1256 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "init" /* 7720 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7720 */;
 
-require = arg1;
-let c4 = 0;
+require = fn;
+let closure_4 = 0;
 let closure_5 = [];
-let c6 = 0;
+let closure_6 = 0;
 let closure_7 = [];
-let c8 = false;
+let enabled = false;
 const Store = initializeDefault.Store;
 class AnalyticsLogStore extends Store {
 }
 const prototype = AnalyticsLogStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3);
+  this.waitFor(AuthenticationStore, DeveloperExperimentStore);
 };
 Object.defineProperty(prototype, "loggedEvents", {
   get: function loggedEvents() {
@@ -29,7 +29,7 @@ Object.defineProperty(prototype, "loggedEvents", {
 });
 Object.defineProperty(prototype, "loggedEventsVersion", {
   get: function loggedEventsVersion() {
-    return c6;
+    return closure_6;
   },
   set: undefined
 });
@@ -41,64 +41,63 @@ Object.defineProperty(prototype, "loggedTriggers", {
 });
 Object.defineProperty(prototype, "trackTriggers", {
   get: function trackTriggers() {
-    return c8;
+    return enabled;
   },
   set: undefined
 });
 AnalyticsLogStore.displayName = "AnalyticsLogStore";
-const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
+const analyticsLogStore = new AnalyticsLogStore(DispatcherDefault, {
   TRACK: function handleTrack(fingerprint) {
     fingerprint = fingerprint.fingerprint;
-    if (closure_3.isDeveloper) {
+    if (DeveloperExperimentStore.isDeveloper) {
       const obj = { key: null, event: null, properties: null, fingerprint: null, timestamp: null };
       closure_4 = str + 1;
-      obj[0] = +closure_4.toString();
-      obj[1] = tmp;
-      obj[2] = tmp2;
+      obj.key = +closure_4.toString();
+      obj.event = tmp;
+      obj.properties = tmp2;
       if (null != fingerprint) {
-        let extractIdResult = extractId.extractId(fingerprint);
-        const obj2 = extractId;
+        let extractIdResult = FingerprintUtils.extractId(fingerprint);
       } else {
-        extractIdResult = id.getId();
+        extractIdResult = AuthenticationStore.getId();
       }
-      obj[3] = extractIdResult;
+      obj.fingerprint = extractIdResult;
       const _Date = Date;
       const date = new Date();
-      obj[4] = date;
-      arr = arr.push(obj);
+      obj.timestamp = date;
+      closure_5.push(obj);
       closure_6 = closure_6 + 1;
-      if (arr.length > 500) {
+      if (closure_5.length > 500) {
         const _Math = Math;
-        arr = arr.slice(-Math.floor(250));
+        closure_5 = closure_5.slice(-Math.floor(250));
       }
     }
   },
   TRACK_TRIGGER: function handleTrackTrigger(arg0) {
-    let isDeveloper = closure_3.isDeveloper;
+    let isDeveloper = DeveloperExperimentStore.isDeveloper;
     ({ experimentId, descriptor, exposureType, excluded, location: _location, previouslyTracked } = arg0);
     if (isDeveloper) {
-      isDeveloper = c8;
+      isDeveloper = enabled;
     }
     if (isDeveloper) {
       const items = [];
       const obj = { key: null, experimentId: null, descriptor: null, exposureType: null, excluded: null, location: null, previouslyTracked: null, timestamp: null };
-      const arraySpreadResult = HermesBuiltin.arraySpread(items, 0);
-      obj[0] = v1.v4();
-      obj[1] = experimentId;
-      obj[2] = descriptor;
-      obj[3] = exposureType;
-      obj[4] = excluded;
-      obj[5] = _location;
-      obj[6] = previouslyTracked;
+      const arraySpreadResult = HermesBuiltin.arraySpread(closure_7, 0);
+      obj.key = v1.v4();
+      obj.experimentId = experimentId;
+      obj.descriptor = descriptor;
+      obj.exposureType = exposureType;
+      obj.excluded = excluded;
+      obj.location = _location;
+      obj.previouslyTracked = previouslyTracked;
       const _Date = Date;
       const date = new Date();
-      obj[7] = date;
+      obj.timestamp = date;
       items[arraySpreadResult] = obj;
+      closure_7 = items;
       isDeveloper = items.length > 500;
-      const obj2 = v1;
     }
     if (isDeveloper) {
-      items.shift();
+      closure_7.shift();
     }
   },
   SET_TRACK_TRIGGERS: function handleSetTrackTriggers(enabled) {
@@ -110,6 +109,7 @@ const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
     closure_7 = [];
   }
 });
-const result = require("set").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
 
 export default analyticsLogStore;

@@ -1,18 +1,20 @@
 // === Module 16970: SimpleGuild ===
 
 // Module 16970 (SimpleGuild)
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { getGuildIconSource } from "GuildNSFWContentLevel" /* 1975 */;
-import closure_6 from "updateGuildUnreadSentinel" /* 7636 */;
-import closure_7 from "createGuildRecordFromRust" /* 1979 */;
-import { ME } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import util from "util" /* 1114 */;
+import noop from "module_19" /* 19 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-let closure_10 = createCacheKey.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");
+require = fn;
+const View = fn(17).View;
+const getGuildIconSource = fn(1975).getGuildIconSource;
+const ME = fn(1074).ME;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/SimpleGuild.tsx");
 
 export default function SimpleGuild(guildId) {
   guildId = guildId.guildId;
@@ -37,11 +39,11 @@ export default function SimpleGuild(guildId) {
   let str;
   unread2 = undefined;
   let badge2;
-  const tmp3 = callback();
+  const tmp3 = closure_10();
   ({ iconStroke, iconBackground, iconBackgroundBrand } = str(unread2[9])());
   let obj = guildId(unread2[10]);
-  const items = [closure_7];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(guildId));
+  const items = [GuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
   str = undefined;
   if (stateFromStores != null) {
     str = stateFromStores.name;
@@ -50,9 +52,9 @@ export default function SimpleGuild(guildId) {
     str = "";
   }
   let tmp7Result = tmp7(tmp5[10]);
-  const items1 = [closure_6];
+  const items1 = [GuildReadStateStore];
   const items2 = [guildId];
-  const stateFromStoresObject = tmp7Result.useStateFromStoresObject(items1, () => ({ unread: closure_1_6.hasUnread(guildId), badge: closure_1_6.getMentionCount(guildId) }), items2);
+  const stateFromStoresObject = tmp7Result.useStateFromStoresObject(items1, () => ({ unread: GuildReadStateStore.hasUnread(guildId), badge: GuildReadStateStore.getMentionCount(guildId) }), items2);
   unread2 = stateFromStoresObject.unread;
   badge2 = stateFromStoresObject.badge;
   tmp7Result = tmp7(tmp5[11]);
@@ -66,23 +68,18 @@ export default function SimpleGuild(guildId) {
     } else {
       if (null == badge2) {
         if (true === unread2) {
-          const intl2 = guildId(unread2[13]).intl;
-          let obj = { guildName: null };
-          obj[0] = tmp;
-          let formatToPlainStringResult = intl2.formatToPlainString(guildId(unread2[13]).t.lzqe42, obj);
+          const intl2 = util.intl;
+          let obj = { guildName: tmp };
+          let formatToPlainStringResult = intl2.formatToPlainString(util.t.lzqe42, obj);
         } else {
-          const intl = guildId(unread2[13]).intl;
-          obj = { guildName: null, mentions: null };
-          obj[0] = tmp;
-          obj[1] = tmp17;
-          formatToPlainStringResult = intl.formatToPlainString(guildId(unread2[13]).t["/uzRss"], obj);
+          const intl = util.intl;
+          obj = { guildName: tmp, mentions: tmp17 };
+          formatToPlainStringResult = intl.formatToPlainString(util.t["/uzRss"], obj);
         }
       }
-      const intl3 = guildId(unread2[13]).intl;
-      obj = { guildName: null, mentions: null };
-      obj[0] = tmp;
-      obj[1] = badge2;
-      formatToPlainStringResult = intl3.formatToPlainString(guildId(unread2[13]).t["/uzRss"], obj);
+      const intl3 = util.intl;
+      obj = { guildName: tmp, mentions: badge2 };
+      formatToPlainStringResult = intl3.formatToPlainString(util.t["/uzRss"], obj);
     }
   }, items3);
   const tmp11 = animated ? tmp7Result.SimpleGuildContainerAnimated : tmp7Result.SimpleGuildContainer;
@@ -108,50 +105,45 @@ export default function SimpleGuild(guildId) {
       tmp18 = !tmp15;
     }
     tmp17Result = getGuildIconSource(stateFromStores, containerSize, tmp18);
-    const tmp17 = getGuildIconSource;
   }
   if (null !== tmp17Result) {
     if (typeof tmp17Result === "object") {
       if ("uri" in tmp17Result) {
         let tmp19 = null != tmp17Result.uri;
       }
-      obj = { guildIconRef: null, guildId: null, style: null, backgroundColor: null, selected: null, size: null, borderRadius: null, onPress: null, onLongPress: null, unread: null, badge: null, onLayout: null, onAccessibilityAction: null, accessibilityLabel: null, usingCutout: null, activityIndicatorState: null, children: null };
-      obj[0] = guildIconRef;
+      obj = { guildIconRef, guildId: null, style: null, backgroundColor: null, selected: null, size: null, borderRadius: null, onPress: null, onLongPress: null, unread: null, badge: null, onLayout: null, onAccessibilityAction: null, accessibilityLabel: null, usingCutout: null, activityIndicatorState: null, children: null };
       let id;
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj[1] = id;
-      obj[2] = containerStyles;
-      obj[3] = backgroundColor;
-      obj[4] = flag2;
-      obj[5] = size;
-      obj[6] = borderRadius;
-      obj[7] = onPress;
-      obj[8] = onLongPress;
+      obj.guildId = id;
+      obj.style = containerStyles;
+      obj.backgroundColor = backgroundColor;
+      obj.selected = flag2;
+      obj.size = size;
+      obj.borderRadius = borderRadius;
+      obj.onPress = onPress;
+      obj.onLongPress = onLongPress;
       if (unread == null) {
         unread = unread2;
       }
-      obj[9] = unread;
+      obj.unread = unread;
       if (badge == null) {
         badge = badge2;
       }
-      obj[10] = badge;
-      obj[11] = onLayout;
-      obj[12] = onAccessibilityAction;
-      obj[13] = memo;
-      obj[14] = tmp15;
-      obj[15] = activityIndicatorState;
+      obj.badge = badge;
+      obj.onLayout = onLayout;
+      obj.onAccessibilityAction = onAccessibilityAction;
+      obj.accessibilityLabel = memo;
+      obj.usingCutout = tmp15;
+      obj.activityIndicatorState = activityIndicatorState;
       if (guildId === ME) {
-        obj = { style: null, children: null };
-        obj[0] = tmp3.dmsWrapper;
+        obj = { style: tmp3.dmsWrapper, children: null };
         let colors = tmp4(tmp5[16]).colors;
-        obj1 = { color: null };
-        obj1[0] = flag2 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
+        const obj1 = { color: flag2 ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
         colors = tmp20(tmp7(tmp5[15]).ChatIcon, obj1);
-        obj[1] = colors;
+        obj.children = colors;
         let tmp20Result = tmp20(View, obj);
-        const tmp27 = View;
       } else {
         if (tmp15) {
           let num4 = 13;
@@ -163,40 +155,34 @@ export default function SimpleGuild(guildId) {
             }
             num4 = num5;
           }
-          const obj2 = { cutoutBottomRightSize: null, cutoutBottomRightInsetX: 6, cutoutBottomRightInsetY: 7, cutoutTopRightSize: null, cutoutTopRightInsetX: 8, cutoutTopRightInsetY: 8, imageSize: null, imageSource: null, imageBorderRadius: null, imageBackgroundColor: null, clipOuterAmount: null, borderStroke: 1, borderStrokeColor: null };
-          obj2[0] = num4;
+          const obj2 = { cutoutBottomRightSize: num4, cutoutBottomRightInsetX: 6, cutoutBottomRightInsetY: 7, cutoutTopRightSize: null, cutoutTopRightInsetX: 8, cutoutTopRightInsetY: 8, imageSize: null, imageSource: null, imageBorderRadius: null, imageBackgroundColor: null, clipOuterAmount: null, borderStroke: 1, borderStrokeColor: null };
           let num6 = 0;
           if (null != activityIndicatorState.source) {
             num6 = 13;
           }
-          obj2[3] = num6;
-          obj2[6] = containerSize;
-          obj2[7] = tmp17Result;
-          obj2[8] = borderRadius;
-          obj2[9] = tmp19 ? iconBackground.color : iconBackgroundBrand.color;
+          obj2.cutoutTopRightSize = num6;
+          obj2.imageSize = containerSize;
+          obj2.imageSource = tmp17Result;
+          obj2.imageBorderRadius = borderRadius;
+          obj2.imageBackgroundColor = tmp19 ? iconBackground.color : iconBackgroundBrand.color;
           let num7 = 0;
           if (flag2) {
             num7 = 3;
           }
-          obj2[10] = num7;
-          obj2[12] = iconStroke.color;
+          obj2.clipOuterAmount = num7;
+          obj2.borderStrokeColor = iconStroke.color;
           tmp20Result = tmp20(tmp4Result, obj2);
         } else {
-          const obj3 = { guild: null, size: null, selected: null, animate: null, TABS_altDefaultBackground: null, style: null };
-          obj3[0] = stateFromStores;
-          obj3[1] = iconSize;
-          obj3[2] = flag2;
-          obj3[3] = flag2;
-          obj3[4] = flag;
+          const obj3 = { guild: stateFromStores, size: iconSize, selected: flag2, animate: flag2, TABS_altDefaultBackground: flag, style: null };
           let tmp24 = null;
           tmp4Result = tmp4(tmp5[8]);
           if (null != size) {
             tmp24 = containerSizeStyle;
           }
-          obj3[5] = tmp24;
+          obj3.style = tmp24;
           tmp20Result = tmp20(tmp4Result, obj3);
         }
-        obj[16] = tmp20Result;
+        obj.children = tmp20Result;
         return tmp20(tmp11, obj);
       }
     }

@@ -1,19 +1,16 @@
 // === Module 11935: getSoundboardEmojiUrl ===
 
 // Module 11935 (getSoundboardEmojiUrl)
-import set from "set" /* 2 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/native/utils/getSoundboardEmojiUrl.tsx");
 
-export default function getSoundboardEmojiUrl(emojiId) {
+export default function getSoundboardEmojiUrl(emojiId, size) {
   emojiId = emojiId.emojiId;
   let emojiURL;
   if (null != emojiId) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, animated: false, size: null };
-    obj[0] = emojiId;
-    obj[2] = arg1;
+    const obj = { id: emojiId, animated: false, size };
     emojiURL = obj.getEmojiURL(obj);
   }
   return emojiURL;

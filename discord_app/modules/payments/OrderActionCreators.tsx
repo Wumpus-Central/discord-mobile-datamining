@@ -1,264 +1,210 @@
-// === Module 7243: _signOrder ===
+// === Module 7243: OrderActionCreators ===
 
-// Module 7243 (_signOrder)
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 4240 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 7243 (OrderActionCreators)
+import LoggerDefault from "Logger" /* 3 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import BillingError from "BillingError" /* 4240 */;
 
-const require = arg1;
-function _signOrder() {
-  const self = this;
-  let tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+require = fn;
+let closure_6 = async function _signOrder(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          ({ orderId: closure_129_0, expectedRevision: closure_129_1, loadId: closure_129_2 } = closure_0);
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_129_4 = {};
+          if (null != closure_129_1) {
+            closure_129_4.expected_revision = closure_129_1;
+          }
+          c4 = 1;
+          const HTTP = closure_130_0(closure_130_1[4]).HTTP;
+          const request = { url: closure_130_3.ORDER_SIGN(closure_129_0), body: closure_129_4, context: null, rejectWithError: true };
+          let tmp45;
+          if (null != closure_129_2) {
+            if ("" !== closure_129_2) {
+              const obj2 = { load_id: closure_129_2 };
+              tmp45 = obj2;
+            }
+          }
+          request.context = tmp45;
+          c5 = 3;
+          c6 = 1;
+          const obj3 = { value: HTTP.post(request), done: false };
+          return obj3;
+        }
+      } else if (2 === tmp7) {
+        c4 = 0;
+        closure_129_5 = closure_3;
+        if (closure_129_5 instanceof closure_130_0(closure_130_1[4]).HTTPResponseError) {
+          if (400 === closure_129_5.status) {
+            if ((function isOrderShape(body) {
+              let tmp = null != body && typeof body === "object";
+              if (tmp) {
+                tmp = "id" in body;
+              }
+              if (tmp) {
+                tmp = "status" in body;
+              }
+              return tmp;
+            })(closure_129_5.body)) {
+              throw new closure_130_5(closure_129_5.body);
+            }
+          }
+        }
+        throw closure_129_5;
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c2 = tmp3;
-              dependencyMap = tmp7;
-              let callback;
-              dependencyMap = undefined;
-              c2 = undefined;
-              ({ orderId: c0, expectedRevision: c1, loadId: c2 } = callback);
-              closure_3 = undefined;
-              c4 = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              c4 = {};
-              if (null != dependencyMap) {
-                c4.expected_revision = dependencyMap;
-              }
-              c4 = 1;
-              const HTTP = callback(1272).HTTP;
-              const obj2 = { url: null, body: null, context: null, rejectWithError: true };
-              obj2[0] = closure_3.ORDER_SIGN(callback);
-              obj2[1] = c4;
-              let tmp45;
-              if (null != c2) {
-                if ("" !== c2) {
-                  const obj3 = { load_id: null };
-                  obj3[0] = c2;
-                  tmp45 = obj3;
-                }
-              }
-              obj2[2] = tmp45;
-              c5 = 3;
-              c6 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.post(obj2);
-              return obj4;
-            }
-          } else if (2 === tmp7) {
-            c4 = 0;
-            c5 = closure_3;
-            if (c5 instanceof callback(1272).HTTPResponseError) {
-              if (400 === c5.status) {
-                if ((function isOrderShape(body) {
-                  let tmp = null != body && typeof body === "object";
-                  if (tmp) {
-                    tmp = "id" in body;
-                  }
-                  if (tmp) {
-                    tmp = "status" in body;
-                  }
-                  return tmp;
-                })(c5.body)) {
-                  throw new c5(c5.body);
-                }
-              }
-            }
-            throw c5;
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = arg1;
-            return obj5;
-          } else {
-            closure_3 = arg1;
-            c4 = 0;
-            if (null == closure_3.body) {
-              const _Error = Error;
-              error = new Error("Invalid sign order response");
-              throw error;
-            } else {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = closure_3.body;
-              return obj;
-            }
-          }
-        } catch (tmp50) {
-          closure_3 = tmp50;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp50;
-          } else {
-            c5 = tmp;
-          }
+        closure_129_3 = value;
+        c4 = 0;
+        if (null == closure_129_3.body) {
+          const _Error = Error;
+          const error = new Error("Invalid sign order response");
+          throw error;
+        } else {
+          c6 = 3;
+          obj = { value: closure_129_3.body, done: true };
+          return obj;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp50) {
+      closure_3 = tmp50;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp50;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-function _getOrder() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0, body) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+};
+let closure_7 = async function _getOrder(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw body;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = closure_0;
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = { url: Endpoints.ORDER_GET(closure_0), rejectWithError: true };
+          c5 = 2;
+          c6 = 1;
+          const obj2 = { value: HTTP.get(obj1), done: false };
+          return obj2;
         }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_1 = closure_3;
+        let obj3 = { error: closure_129_1, orderId: closure_129_0 };
+        closure_130_4.error("failed to fetch order", obj3);
+        obj3 = closure_130_0(closure_130_1[5]);
+        const obj4 = { tags: { source: "OrderActionCreators_getOrder" }, extra: null };
+        const obj5 = { orderId: closure_129_0 };
+        obj4.extra = obj5;
+        const result = obj3.captureBillingException(closure_129_1, obj4);
+        c6 = 3;
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj6 = { value, done: true };
+        return obj6;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              let table = tmp7;
-              let logger = 1;
-              const HTTP = callback(closure_1_1[4]).HTTP;
-              obj1 = { url: null, rejectWithError: true };
-              obj1[0] = closure_1_3.ORDER_GET(callback);
-              c5 = 2;
-              c6 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            logger = 0;
-            table = closure_3;
-            let obj3 = { error: null, orderId: null };
-            obj3[0] = table;
-            obj3[1] = callback;
-            logger.error("failed to fetch order", obj3);
-            obj3 = callback(table[5]);
-            const obj4 = { tags: null, extra: null };
-            obj4[0] = { source: "OrderActionCreators_getOrder" };
-            const obj5 = { orderId: null };
-            obj5[0] = callback;
-            obj4[1] = obj5;
-            const result = obj3.captureBillingException(table, obj4);
-            c6 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            logger = 0;
-            c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          } else {
-            body = body.body;
-            if (!body) {
-              body = null;
-            }
-            logger = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body;
-            return obj;
-          }
-        } catch (tmp26) {
-          closure_3 = tmp26;
-          if (tmp4 === logger) {
-            c6 = tmp2;
-            throw tmp26;
-          } else {
-            c5 = tmp;
-          }
+        let body = value.body;
+        if (!body) {
+          body = null;
         }
+        c4 = 0;
+        c6 = 3;
+        obj = { value: body, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp26) {
+      closure_3 = tmp26;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp26;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 function fetchOrderEntitlements() {
   const self = this;
-  const apply = _fetchOrderEntitlements.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -266,380 +212,321 @@ function fetchOrderEntitlements() {
   }
   return applyArgumentsResult;
 }
-function _fetchOrderEntitlements() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c5 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c5 === 2) {
+let closure_9 = async function _fetchOrderEntitlements(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = tmp6;
+          closure_129_0 = undefined;
+          c4 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = { url: Endpoints.ORDER_ENTITLEMENTS(closure_0), rejectWithError: false };
+          c2 = 2;
+          c5 = 1;
+          const obj2 = { value: HTTP.get(obj1), done: false };
+          return obj2;
+        }
+      } else if (1 === tmp6) {
+        c4 = 0;
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        const obj3 = { value: [], done: true };
+        return obj3;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c2) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_1 = tmp6;
-              let lib;
-              c4 = 1;
-              const HTTP = lib(closure_1_1[4]).HTTP;
-              obj1 = { url: null, rejectWithError: false };
-              obj1[0] = closure_1_3.ORDER_ENTITLEMENTS(lib);
-              c2 = 2;
-              c5 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp6) {
-            c4 = 0;
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = [];
-            return obj3;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            lib = arg1;
-            if (null != lib.body) {
-              const body = lib.body;
-            } else {
-              const items = [];
-            }
-            c4 = 0;
-            c5 = 3;
-          }
-        } catch (tmp16) {
-          closure_3 = tmp16;
-          if (tmp3 === c4) {
-            c5 = tmp2;
-            throw tmp16;
-          } else {
-            c2 = tmp;
-          }
+        closure_129_0 = value;
+        if (null != closure_129_0.body) {
+          const body = closure_129_0.body;
+        } else {
+          const items = [];
         }
+        c4 = 0;
+        c5 = 3;
       }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp16) {
+      closure_3 = tmp16;
+      if (tmp3 === c4) {
+        c5 = tmp2;
+        throw tmp16;
+      } else {
+        c2 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-function _fetchOrderEntitlementsWithRetry() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c11 = 0;
-    c12 = 0;
-    c9 = 0;
-    return (function*(arg0) {
-      if (c12 === 2) {
-        c12 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp8 === 3) {
+};
+let closure_11 = async function _fetchOrderEntitlementsWithRetry(arg0, value) {
+  if (c12 === 2) {
+    c12 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp8 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c12 = 2;
+      if (0 === c11) {
         if (arg0 === 1) {
-          throw arg1;
+          c12 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c12 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_8 = tmp4;
+          closure_7 = tmp9;
+          closure_135_0 = closure_0;
+          closure_135_1 = undefined;
+          closure_135_2 = undefined;
+          closure_135_3 = undefined;
+          c11 = 1;
+          c12 = 1;
+          let obj1 = { value: fetchOrderEntitlements(closure_0), done: false };
+          return obj1;
         }
       } else {
-        try {
-          c12 = 2;
-          if (0 === c11) {
-            if (arg0 === 1) {
-              c12 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c12 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_8 = tmp4;
-              closure_7 = tmp9;
-              closure_1 = undefined;
-              let callback;
-              closure_3 = undefined;
-              c11 = 1;
-              c12 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_8(closure_0);
-              return obj1;
-            }
+        if (1 === tmp9) {
+          if (arg0 === 1) {
+            c12 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c12 = 3;
+            let obj2 = { value, done: true };
+            return obj2;
           } else {
-            if (1 === tmp9) {
-              if (arg0 === 1) {
-                c12 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c12 = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
+            closure_135_1 = value;
+            closure_135_2 = async function _loop(arg0, value) {
+              if (c3 === 2) {
+                c3 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp3 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  let obj = { value, done: true };
+                  return obj;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
               } else {
-                closure_1 = arg1;
-                callback = function _loop(arg0) {
-                  closure_0 = arg0;
-                  c2 = 0;
-                  c3 = 0;
-                  return (function* _loop(arg0) {
-                    if (c3 === 2) {
+                try {
+                  c3 = 2;
+                  if (0 === c2) {
+                    if (arg0 === 1) {
                       c3 = 3;
-                      HermesBuiltin.throwTypeError();
-                    } else if (tmp3 === 3) {
-                      if (arg0 === 1) {
-                        throw arg1;
-                      } else if (arg0 === 2) {
-                        let obj = { value: null, done: true };
-                        obj[0] = arg1;
-                        return obj;
-                      } else {
-                        return { value: "HermesInternal", done: null };
-                      }
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      obj = { value, done: true };
+                      return obj;
                     } else {
-                      try {
-                        c3 = 2;
-                        if (0 === c2) {
-                          if (arg0 === 1) {
-                            c3 = 3;
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            c3 = 3;
-                            obj = { value: null, done: true };
-                            obj[0] = arg1;
-                            return obj;
-                          } else {
-                            closure_1 = tmp4;
-                            if (closure_1_1.length > 0) {
-                              c3 = 3;
-                              return { value: 1, done: true };
-                            } else {
-                              const promise = new Promise(() => { ... });
-                              c2 = 1;
-                              c3 = 1;
-                              obj1 = { value: null, done: false };
-                              obj1[0] = promise;
-                              return obj1;
-                            }
-                          }
-                        } else if (1 === tmp4) {
-                          if (arg0 === 1) {
-                            c3 = 3;
-                            throw arg1;
-                          } else if (arg0 === 2) {
-                            c3 = 3;
-                            const obj2 = { value: null, done: true };
-                            obj2[0] = arg1;
-                            return obj2;
-                          } else {
-                            c2 = 2;
-                            c3 = 1;
-                            const obj3 = { value: null, done: false };
-                            obj3[0] = closure_1_8(closure_0);
-                            return obj3;
-                          }
-                        } else if (arg0 === 1) {
-                          c3 = 3;
-                          throw arg1;
-                        } else if (arg0 === 2) {
-                          c3 = 3;
-                          obj = { value: null, done: true };
-                          obj[0] = arg1;
-                          return obj;
-                        } else {
-                          closure_1 = arg1;
-                          c3 = 3;
-                          return { value: "HermesInternal", done: null };
-                        }
-                      } catch (tmp16) {
-                        c3 = tmp;
-                        throw tmp16;
+                      closure_1 = tmp4;
+                      if (length.length > 0) {
+                        c3 = 3;
+                        return { value: 1, done: true };
+                      } else {
+                        const promise = new Promise((arg0) => setTimeout(arg0, closure_0));
+                        c2 = 1;
+                        c3 = 1;
+                        const obj1 = { value: promise, done: false };
+                        return obj1;
                       }
                     }
-                  })();
-                };
-                callback = dependencyMap;
-                callback = dependencyMap;
-                closure_1 = dependencyMap[Symbol.iterator]();
-                if (closure_1 !== undefined) {
-                  c9 = 1;
-                  closure_3 = tmp36;
-                  const iter4 = callback(closure_3)[tmp54.iterator]();
-                  HermesBuiltin.ensureObject("iterator is not an object");
-                  const next = iter4.next;
-                  closure_3 = undefined;
-                  const tmp62 = callback(closure_3);
-                }
-                c12 = 3;
-                let obj3 = { value: null, done: true };
-                obj3[0] = closure_1;
-                return obj3;
-              }
-            } else if (2 === tmp9) {
-              c9 = 0;
-              closure_1.return();
-              throw dependencyMap;
-            } else {
-              if (3 !== tmp9) {
-                c9 = 1;
-                const method = HermesBuiltin.getMethod("throw");
-                if (method === undefined) {
-                  const method1 = HermesBuiltin.getMethod("return");
-                  if (method1 !== undefined) {
-                    HermesBuiltin.ensureObject("iterator.return() did not return an object");
+                  } else if (1 === tmp4) {
+                    if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      const obj2 = { value, done: true };
+                      return obj2;
+                    } else {
+                      c2 = 2;
+                      c3 = 1;
+                      const obj3 = { value: closure_1_8(closure_129_0), done: false };
+                      return obj3;
+                    }
+                  } else if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    obj = { value, done: true };
+                    return obj;
+                  } else {
+                    closure_129_1 = value;
+                    c3 = 3;
+                    return { value: "HermesInternal", done: null };
                   }
-                  HermesBuiltin.throwTypeError();
+                } catch (tmp16) {
+                  c3 = tmp;
+                  throw tmp16;
+                }
+              }
+            };
+            closure_2 = closure_136_10;
+            closure_2 = closure_136_10;
+            const length = closure_136_10[Symbol.iterator]();
+            if (length !== undefined) {
+              c9 = 1;
+              closure_135_3 = tmp35;
+              const iter4 = closure_135_2(closure_135_3)[tmp52.iterator]();
+              HermesBuiltin.ensureObject("iterator is not an object");
+              const next = iter4.next;
+              closure_3 = undefined;
+              const tmp60 = closure_135_2(closure_135_3);
+            }
+            c12 = 3;
+            let obj3 = { value: closure_135_1, done: true };
+            return obj3;
+          }
+        } else if (2 === tmp9) {
+          c9 = 0;
+          length.return();
+          throw closure_10;
+        } else {
+          if (3 === tmp9) {
+            c9 = 2;
+            if (arg0 === 1) {
+              c12 = 3;
+              throw value;
+            } else {
+              closure_3 = value;
+              if (arg0 === 2) {
+                closure_3 = value;
+                c9 = 1;
+                const method = HermesBuiltin.getMethod("return");
+                if (method === undefined) {
+                  c9 = 0;
+                  length.return();
+                  c12 = 3;
+                  const obj4 = { value, done: true };
+                  return obj4;
                 } else {
-                  const iter = method(tmp11);
-                  HermesBuiltin.ensureObject("iterator.throw() did not return an object");
-                  if (iter.done) {
-                    let iter3 = iter;
+                  const iter2 = method(closure_3);
+                  HermesBuiltin.ensureObject("iterator.return() did not return an object");
+                  if (iter2.done) {
+                    c9 = 0;
+                    length.return();
+                    c12 = 3;
+                    obj = { value: iter2.value, done: true };
+                    return obj;
                   } else {
                     c11 = 3;
                     c12 = 1;
-                    return iter;
+                    return iter2;
                   }
                 }
-                c9 = 0;
-                if (iter3.value) {
-                  closure_1.return();
-                }
-                tmp11 = dependencyMap;
-              }
-              c9 = 2;
-              if (arg0 === 1) {
-                c12 = 3;
-                throw arg1;
               } else {
-                closure_3 = arg1;
-                if (arg0 === 2) {
-                  closure_3 = arg1;
-                  c9 = 1;
-                  const method2 = HermesBuiltin.getMethod("return");
-                  if (method2 === undefined) {
-                    c9 = 0;
-                    closure_1.return();
-                    c12 = 3;
-                    const obj4 = { value: null, done: true };
-                    obj4[0] = arg1;
-                    return obj4;
-                  } else {
-                    const iter2 = method2(closure_3);
-                    HermesBuiltin.ensureObject("iterator.return() did not return an object");
-                    if (iter2.done) {
-                      c9 = 0;
-                      closure_1.return();
-                      c12 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = iter2.value;
-                      return obj;
-                    } else {
-                      c11 = 3;
-                      c12 = 1;
-                      return iter2;
-                    }
-                  }
-                } else {
-                  c9 = 1;
-                  const tmp22 = arg1;
-                }
+                c9 = 1;
+                const tmp21 = value;
               }
             }
-            iter3 = next(tmp22);
-            HermesBuiltin.ensureObject("iterator.next() did not return an object");
-            if (!iter3.done) {
-              c11 = 3;
-              c12 = 1;
-              return iter3;
-            }
-          }
-        } catch (tmp46) {
-          dependencyMap = tmp46;
-          if (tmp5 === c9) {
-            c12 = tmp3;
-            throw tmp46;
-          } else if (tmp2 === tmp48) {
-            c11 = tmp;
           } else {
-            c11 = tmp6;
+            c9 = 1;
+            const method1 = HermesBuiltin.getMethod("throw");
+            if (method1 === undefined) {
+              const method2 = HermesBuiltin.getMethod("return");
+              if (method2 !== undefined) {
+                HermesBuiltin.ensureObject("iterator.return() did not return an object");
+              }
+              throw new TypeError("yield* delegate must have a .throw() method");
+            } else {
+              const iter = method1(tmp11);
+              HermesBuiltin.ensureObject("iterator.throw() did not return an object");
+              if (iter.done) {
+                let iter3 = iter;
+              } else {
+                c11 = 3;
+                c12 = 1;
+                return iter;
+              }
+            }
+            tmp11 = closure_10;
+          }
+          c9 = 0;
+          if (iter3.value) {
+            length.return();
           }
         }
+        iter3 = next(tmp21);
+        HermesBuiltin.ensureObject("iterator.next() did not return an object");
+        if (!iter3.done) {
+          c11 = 3;
+          c12 = 1;
+          return iter3;
+        }
       }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp45) {
+      closure_10 = tmp45;
+      if (tmp5 === c9) {
+        c12 = tmp3;
+        throw tmp45;
+      } else if (tmp2 === tmp47) {
+        c11 = tmp;
+      } else {
+        c11 = tmp6;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-let closure_4 = new timestampDefault("OrderActionCreators");
-setDefault;
+};
+const Endpoints = fn(1074).Endpoints;
+let closure_4 = new LoggerDefault("OrderActionCreators");
 class OrderSigningFailedWithConstraintsError extends tmp3 {
   constructor(arg0) {
     tmp = new tmp("Order signing failed due to unsatisfied constraints", new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.order = global;
     return tmp;
   }
 }
-setDefault;
 const prototype = function OrderProcessingPendingError() {
   tmp = new tmp("Order signed but entitlements not yet visible after polling", new.target);
-  // ThrowIfThisInitialized (0x7c)
   return tmp;
 }.prototype;
 class prototype extends tmp4 {
 }
 let closure_10 = [250, 500, 1000, 1500, 2500, 4250];
-const tmp2 = new timestampDefault("OrderActionCreators");
-let result = require("set").fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/payments/OrderActionCreators.tsx");
 
 export { OrderSigningFailedWithConstraintsError };
 export const OrderProcessingPendingError = prototype;
-export const signOrder = function signOrder(arg0, items2) {
+export const signOrder = function signOrder() {
   const self = this;
-  const apply = _signOrder.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -647,9 +534,9 @@ export const signOrder = function signOrder(arg0, items2) {
   }
   return applyArgumentsResult;
 };
-export const getOrder = function getOrder(closure_0) {
+export const getOrder = function getOrder() {
   const self = this;
-  const apply = _getOrder.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -658,9 +545,9 @@ export const getOrder = function getOrder(closure_0) {
   return applyArgumentsResult;
 };
 export { fetchOrderEntitlements };
-export const fetchOrderEntitlementsWithRetry = function fetchOrderEntitlementsWithRetry(id) {
+export const fetchOrderEntitlementsWithRetry = function fetchOrderEntitlementsWithRetry() {
   const self = this;
-  const apply = _fetchOrderEntitlementsWithRetry.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

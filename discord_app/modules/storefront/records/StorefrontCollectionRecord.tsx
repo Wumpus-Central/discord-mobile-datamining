@@ -1,19 +1,18 @@
-// === Module 7561: fromServer ===
+// === Module 7561: StorefrontCollectionRecord ===
 
-// Module 7561 (fromServer)
-import closure_0 from "fromServer" /* 7562 */;
-import { AssetDisplayConfigRecord } from "fromServer" /* 7555 */;
-import closure_2 from "fromServer" /* 7563 */;
+// Module 7561 (StorefrontCollectionRecord)
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7562 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7563 */;
 
-let prototype;
-prototype = function StorefrontCollectionRecord(arg0) {
+const AssetDisplayConfigRecord = fn(7555).AssetDisplayConfigRecord;
+const prototype = function StorefrontCollectionRecord(arg0) {
   ({ id: tmp.id, applicationId: tmp.applicationId, name: tmp.name, description: tmp.description, products: tmp.products, isOrbsExclusive: tmp.isOrbsExclusive, createdAt: tmp.createdAt, updatedAt: tmp.updatedAt, unpublishedAt: tmp.unpublishedAt, willUnpublishAt: tmp.willUnpublishAt, styles: tmp.styles, bannerTextColor: tmp.bannerTextColor, heroRanking: tmp.heroRanking, heroDisplayConfig: tmp.heroDisplayConfig, heroLogoDisplayConfig: tmp.heroLogoDisplayConfig, heroUrl: tmp.heroUrl, heroRiveUrl: tmp.heroRiveUrl, heroAnimatedUrl: tmp.heroAnimatedUrl, heroLogoUrl: tmp.heroLogoUrl, heroBannerUrl: tmp.heroBannerUrl, heroBannerAnimatedUrl: tmp.heroBannerAnimatedUrl, catalogBannerUrl: tmp.catalogBannerUrl, catalogBannerRiveUrl: tmp.catalogBannerRiveUrl, catalogBannerAnimatedUrl: tmp.catalogBannerAnimatedUrl, featuredBlockUrl: tmp.featuredBlockUrl, logoUrl: tmp.logoUrl, pdpBgUrl: tmp.pdpBgUrl, wideBannerUrl: tmp.wideBannerUrl, wideBannerAnimatedUrl: tmp.wideBannerAnimatedUrl, mobileHeroUrl: tmp.mobileHeroUrl, mobileHeroAnimatedUrl: tmp.mobileHeroAnimatedUrl, mobileBannerUrl: tmp.mobileBannerUrl, mobileBgUrl: tmp.mobileBgUrl, shopButtonBgHoverUrl: tmp.shopButtonBgHoverUrl, upsellBannerPopoutUrl: tmp.upsellBannerPopoutUrl, upsellBannerUrl: tmp.upsellBannerUrl, heroBlockTitle: tmp.heroBlockTitle, featuredBlockBody: tmp.featuredBlockBody, mobileHeroBlockTitle: tmp.mobileHeroBlockTitle, mobileProductsTitle: tmp.mobileProductsTitle, mobileSummary: tmp.mobileSummary, wideBannerTitle: tmp.wideBannerTitle, wideBannerBody: tmp.wideBannerBody } = arg0);
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromServer"] = function fromServer(arg0) {
   ({ created_at, updated_at, unpublished_at, unpublish_settings } = arg0);
   ({ application_id, tenant_metadata, is_orbs_exclusive } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(arg0, Object.assign({ application_id: 0, created_at: 0, updated_at: 0, unpublished_at: 0, unpublish_settings: 0, tenant_metadata: 0, is_orbs_exclusive: 0 }));
   let collectibles = tenant_metadata.collectibles;
   if (collectibles == null) {
     collectibles = {};
@@ -25,7 +24,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   if (products == null) {
     products = [];
   }
-  obj.products = products.map(fromServer.fromServer);
+  obj.products = products.map(StorefrontProductRecord.fromServer);
   obj.isOrbsExclusive = is_orbs_exclusive;
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
@@ -49,7 +48,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   obj.willUnpublishAt = date3;
   let fromServerResult;
   if (null != collectibles.styles) {
-    fromServerResult = closure_0.fromServer(collectibles.styles);
+    fromServerResult = CollectiblesStoreListingStylesRecord.fromServer(collectibles.styles);
   }
   obj.styles = fromServerResult;
   ({ banner_text_color: obj2.bannerTextColor, hero_ranking: obj2.heroRanking } = collectibles);
@@ -66,6 +65,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ hero_url: obj2.heroUrl, hero_rive_url: obj2.heroRiveUrl, hero_animated_url: obj2.heroAnimatedUrl, hero_logo_url: obj2.heroLogoUrl, hero_banner_url: obj2.heroBannerUrl, hero_banner_animated_url: obj2.heroBannerAnimatedUrl, catalog_banner_url: obj2.catalogBannerUrl, catalog_banner_rive_url: obj2.catalogBannerRiveUrl, catalog_banner_animated_url: obj2.catalogBannerAnimatedUrl, featured_block_url: obj2.featuredBlockUrl, logo_url: obj2.logoUrl, pdp_bg_url: obj2.pdpBgUrl, wide_banner_url: obj2.wideBannerUrl, wide_banner_animated_url: obj2.wideBannerAnimatedUrl, mobile_hero_url: obj2.mobileHeroUrl, mobile_hero_animated_url: obj2.mobileHeroAnimatedUrl, mobile_banner_url: obj2.mobileBannerUrl, mobile_bg_url: obj2.mobileBgUrl, shop_button_bg_hover_url: obj2.shopButtonBgHoverUrl, upsell_banner_popout_url: obj2.upsellBannerPopoutUrl, upsell_banner_url: obj2.upsellBannerUrl, hero_block_title: obj2.heroBlockTitle, featured_block_body: obj2.featuredBlockBody, mobile_hero_block_title: obj2.mobileHeroBlockTitle, mobile_products_title: obj2.mobileProductsTitle, mobile_summary: obj2.mobileSummary, wide_banner_title: obj2.wideBannerTitle, wide_banner_body: obj2.wideBannerBody } = collectibles);
   return new tmp2(obj);
 };
-const result = require("set").fileFinishedImporting("modules/storefront/records/StorefrontCollectionRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/storefront/records/StorefrontCollectionRecord.tsx");
 
 export default prototype;

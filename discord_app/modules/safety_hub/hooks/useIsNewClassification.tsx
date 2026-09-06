@@ -1,13 +1,12 @@
 // === Module 14774: useIsNewClassification ===
 
 // Module 14774 (useIsNewClassification)
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/safety_hub/hooks/useIsNewClassification.tsx");
+const result = size.fileFinishedImporting("modules/safety_hub/hooks/useIsNewClassification.tsx");
 
 export const useIsNewClassification = function useIsNewClassification(classification) {
-  const obj = DISCORD_EPOCHDefault;
-  const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(classification.id);
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(classification.id);
   return Math.abs(extractTimestampResult - new Date().getTime()) < 86400000;
 };

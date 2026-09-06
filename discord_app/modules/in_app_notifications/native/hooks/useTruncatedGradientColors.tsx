@@ -1,29 +1,28 @@
 // === Module 10108: useTruncatedGradientColors ===
 
 // Module 10108 (useTruncatedGradientColors)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _mod19 from "module_19" /* 19 */;
+import nativeDefault from "native" /* 576 */;
+import _modDef672 from "module_672" /* 672 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
-const useMemo = noop.useMemo;
-let closure_4 = createCacheKey.createStyles({ gradient: { height: 40 } });
-const result = set.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
+const useMemo = _mod19.useMemo;
+let closure_4 = createStyles.createStyles({ gradient: { height: 40 } });
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/hooks/useTruncatedGradientColors.tsx");
 
 export default function useTruncatedGradientColors() {
   let obj = token(4262);
-  token = obj.useToken(ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
-  obj = {
-    gradientColors: useMemo(() => {
-      const obj = closure_1_1(closure_1_2[4])(token);
-      const items = [closure_1_1(closure_1_2[4])(token).alpha(0).hex(), ];
-      const alphaResult = closure_1_1(closure_1_2[4])(token).alpha(0);
-      const obj3 = closure_1_1(closure_1_2[4])(token);
-      items[1] = closure_1_1(closure_1_2[4])(token).alpha(0.72).hex();
-      return items;
-    }, items),
-    gradientStyles: callback().gradient
-  };
-  items = [token];
+  token = obj.useToken(nativeDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT);
+  obj = { gradientColors: null, gradientStyles: closure_4().gradient };
+  let items = [token];
+  obj.gradientColors = useMemo(() => {
+    const obj = _modDef672(token);
+    const items = [_modDef672(token).alpha(0).hex(), ];
+    const alphaResult = _modDef672(token).alpha(0);
+    const obj3 = _modDef672(token);
+    items[1] = _modDef672(token).alpha(0.72).hex();
+    return items;
+  }, items);
   return obj;
 };

@@ -1,15 +1,16 @@
-// === Module 13999: HdrCaptureMode ===
+// === Module 13999: GoLiveHdrExperiment ===
 
-// Module 13999 (HdrCaptureMode)
-import set from "set" /* 2 */;
+// Module 13999 (GoLiveHdrExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 let obj = { Never: "never", Always: "always", PermittedDevicesOnly: "permittedDevicesOnly" };
-obj = { hdrCaptureMode: obj.Never };
-obj = { 1: null, 2: obj1 };
+obj = { name: "2026-02-go-live-hdr", kind: "user", defaultConfig: { hdrCaptureMode: obj.Never }, variations: null };
+obj = { 1: null, 2: { hdrCaptureMode: obj.Always } };
 obj[2] = { hdrCaptureMode: obj.PermittedDevicesOnly };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-02-go-live-hdr", kind: "user", defaultConfig: obj, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/GoLiveHdrExperiment.tsx");
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/GoLiveHdrExperiment.tsx");
 
 export const HdrCaptureMode = obj;
 export const getGoLiveHdrConfig = function getGoLiveHdrConfig(location) {

@@ -1,13 +1,13 @@
 // === Module 10948: InstantInviteUsesLabel ===
 
 // Module 10948 (InstantInviteUsesLabel)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import { jsxs } from "jsxProd" /* 21 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
+require = fn;
+const jsxs = fn(21).jsxs;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
 
 export default function InstantInviteUsesLabel(style) {
   ({ uses, maxUses } = style);
@@ -16,6 +16,8 @@ export default function InstantInviteUsesLabel(style) {
     const _HermesInternal = HermesInternal;
     combined = "" + uses + "/" + maxUses;
   }
-  const children = ["Uses: ", combined];
-  return jsxs(Text.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children });
+  const obj = { variant: "text-md/semibold", color: "text-default", style: style.style, children: null };
+  const items = ["Uses: ", combined];
+  obj.children = items;
+  return jsxs(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", style: style.style, children: null });
 };

@@ -1,14 +1,14 @@
-// === Module 11491: getActiveIosAttributionFramework ===
+// === Module 11491: IosAttributionNativeModule ===
 
-// Module 11491 (getActiveIosAttributionFramework)
-import set from "set" /* 2 */;
+// Module 11491 (IosAttributionNativeModule)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionNativeModule.tsx");
+const result = size.fileFinishedImporting("modules/ads/ios_attribution/IosAttributionNativeModule.tsx");
 
 export function getActiveIosAttributionFramework() {
   return null;
 }
-export const startImpression = function startImpression(c0, c2, arg2) {
+export const startImpression = function startImpression() {
   return Promise.resolve(null);
 };
 export const endImpression = function endImpression() {

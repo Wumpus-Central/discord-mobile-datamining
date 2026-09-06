@@ -1,9 +1,9 @@
-// === Module 9699: CREATE_GUILD_EVENT_MODAL_KEY ===
+// === Module 9699: GuildEventModalConstants ===
 
-// Module 9699 (CREATE_GUILD_EVENT_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 9699 (GuildEventModalConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/GuildEventModalConstants.tsx");
 
 export const CREATE_GUILD_EVENT_MODAL_KEY = "create-guild-event-modal";
 export const START_EVENT_MODAL_KEY = "start-event-modal";

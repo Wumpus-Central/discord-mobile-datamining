@@ -1,17 +1,16 @@
-// === Module 5145: setPermission ===
+// === Module 5145: NativePermissionActionCreators ===
 
-// Module 5145 (setPermission)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 5145 (NativePermissionActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
 const prototype = function NativePermissionActionCreators() {
   return Object.create(new.target.prototype);
 }.prototype;
-prototype["setPermission"] = function setPermission(closure_0, DENIED) {
-  let obj = dispatcherDefault;
-  obj = { type: "SET_NATIVE_PERMISSION", permissionType: closure_0, state: DENIED };
+prototype["setPermission"] = function setPermission(permissionType, state) {
+  const obj = { type: "SET_NATIVE_PERMISSION", permissionType, state };
   obj.dispatch(obj);
 };
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionActionCreators.tsx");
 
 export default prototype;

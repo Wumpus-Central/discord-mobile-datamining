@@ -1,39 +1,40 @@
 // === Module 10880: useGameMentionsAsPlainText ===
 
 // Module 10880 (useGameMentionsAsPlainText)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "createGamesFromMessage" /* 1916 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import regExp from "regExp" /* 5000 */;
+import noop from "module_19" /* 19 */;
+import GameStore from "GameStore" /* 1916 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ extractGameMentionIds: c5, GAME_MENTION_RAW_RE_GLOBAL: closure_6 } = regExp);
-const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");
+const require = fn;
+const ChannelAutocompleteConstants = fn(5000);
+({ extractGameMentionIds: hasOwnProperty, GAME_MENTION_RAW_RE_GLOBAL: metroRequire } = ChannelAutocompleteConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_mentions/hooks/useGameMentionsAsPlainText.tsx");
 
 export const useGameMentionsAsPlainText = function useGameMentionsAsPlainText(state) {
-  const _require = state;
+  _require = state;
   const items = [state];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let str = closure_0;
     if (closure_0 == null) {
       str = "";
     }
-    return closure_1_5(str);
+    return hasOwnProperty(str);
   }, items);
-  const games = _require(memo[4]).useGames(memo);
-  const obj = _require(memo[4]);
-  const items1 = [closure_3, closure_4];
+  const games = require("useGame").useGames(memo);
+  const obj = require("useGame");
+  const items1 = [GameStore, UserStore];
   const items2 = [state, memo];
-  return _require(memo[5]).useStateFromStores(items1, () => {
+  return require("initialize").useStateFromStores(items1, () => {
     if (!obj.isNullOrEmpty(nsfwAllowed)) {
       if (0 !== memo.length) {
-        const currentUser = closure_1_4.getCurrentUser();
+        const currentUser = UserStore.getCurrentUser();
         nsfwAllowed = undefined;
         if (currentUser != null) {
           nsfwAllowed = currentUser.nsfwAllowed;
         }
-        return str.replace(closure_1_6, (arg0, closure_0) => {
-          const game = closure_1_3.getGame(closure_0);
+        return str.replace(timestampProducer, (arg0, gameId) => {
+          game = game.getGame(gameId);
           if (obj.isGameProfileObscured(game, nsfwAllowed)) {
             const intl2 = tmp2(tmp3[8]).intl;
             let stringResult = intl2.string(tmp2(tmp3[8]).t["11pdXZ"]);

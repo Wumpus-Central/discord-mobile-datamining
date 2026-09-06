@@ -1,25 +1,24 @@
-// === Module 11391: openSafetyToolsActionSheet ===
+// === Module 11391: SafetyToolsActionCreators ===
 
-// Module 11391 (openSafetyToolsActionSheet)
-import set from "set" /* 2 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import LOCATION_CONTEXT_MOBILE from "LOCATION_CONTEXT_MOBILE" /* 11363 */;
+// Module 11391 (SafetyToolsActionCreators)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Constants from "Constants" /* 11363 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = LOCATION_CONTEXT_MOBILE.getSafetyToolsActionSheetKey;
-const result = set.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
+let closure_3 = Constants.getSafetyToolsActionSheetKey;
+const result = size.fileFinishedImporting("modules/self_mod/SafetyToolsActionCreators.native.tsx");
 
 export const openSafetyToolsActionSheet = function openSafetyToolsActionSheet(channelId, recipientId, warningId, warningType) {
-  const tmp = callback(channelId);
-  const _require = tmp;
-  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = {
+  const tmp = closure_3(channelId);
+  _require = tmp;
+  const obj = {
     channelId,
     warningId,
     warningType,
     recipientId,
     onClose() {
-      closure_1_1(closure_1_2[1]).hideActionSheet(closure_0);
+      ActionSheetActionCreatorsDefault.hideActionSheet(closure_0);
     }
   };
-  obj.openLazy(_require(1896)(11392, dependencyMap.paths), tmp, obj);
+  obj.openLazy(require("asyncRequireImpl")(11392, dependencyMap.paths), tmp, obj);
 };

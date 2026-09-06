@@ -1,14 +1,14 @@
-// === Module 11697: isVisualMedia ===
+// === Module 11697: MosaicMediaType ===
 
-// Module 11697 (isVisualMedia)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4710 */;
-import set2 from "set" /* 11698 */;
+// Module 11697 (MosaicMediaType)
+import Constants from "Constants" /* 1074 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 4710 */;
+import PlaintextFilePreviewHelpers from "PlaintextFilePreviewHelpers" /* 11698 */;
+import size from "module_2" /* 2 */;
 
-const MessageAttachmentFlags = ME.MessageAttachmentFlags;
+const MessageAttachmentFlags = Constants.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;
-const result = set.fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
+const result = size.fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
 
 export function isVisualMedia(arg0) {
   let tmp = "IMAGE" === arg0;
@@ -52,7 +52,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
               str3 = str5;
             }
             let str = str3;
-            obj2 = urlMatchesFileExtension;
+            obj2 = MediaFormatTesters;
           }
           return str;
         }
@@ -60,7 +60,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     }
   }
   if (null != arg1) {
-    if (regex.test(filename)) {
+    if (re3.test(filename)) {
       str = "AUDIO";
     }
   }
@@ -70,7 +70,7 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     if (obj.isPlaintextPreviewableFile(filename)) {
       str2 = "PLAINTEXT_PREVIEW";
     }
-    obj = set2;
+    obj = PlaintextFilePreviewHelpers;
   }
   str = str2;
 };
@@ -88,7 +88,7 @@ export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTyp
             }
             tmpResult = tmp(4710);
           }
-          obj = urlMatchesFileExtension;
+          obj = MediaFormatTesters;
           tmp = require;
         }
       }

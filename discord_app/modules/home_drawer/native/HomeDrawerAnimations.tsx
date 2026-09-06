@@ -1,16 +1,16 @@
-// === Module 16024: HOME_DRAWER_SETTLE_TIMING ===
+// === Module 16024: HomeDrawerAnimations ===
 
-// Module 16024 (HOME_DRAWER_SETTLE_TIMING)
-import set from "set" /* 2 */;
-import _mod4296 from "module_4296" /* 4296 */;
+// Module 16024 (HomeDrawerAnimations)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import size from "module_2" /* 2 */;
 
 let obj = { duration: 280, easing: null };
-const Easing = _mod4296.Easing;
-obj[1] = Easing.out(_mod4296.Easing.cubic);
+const Easing = ReanimatedRexport.Easing;
+obj.easing = Easing.out(ReanimatedRexport.Easing.cubic);
 obj = { duration: 180, easing: null };
-const Easing2 = _mod4296.Easing;
-obj[1] = Easing2.out(_mod4296.Easing.cubic);
-const result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerAnimations.tsx");
+const Easing2 = ReanimatedRexport.Easing;
+obj.easing = Easing2.out(ReanimatedRexport.Easing.cubic);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerAnimations.tsx");
 
 export const HOME_DRAWER_SETTLE_TIMING = obj;
 export const HOME_DRAWER_SNAP_TIMING = obj;

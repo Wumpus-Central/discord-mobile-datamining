@@ -1,16 +1,16 @@
-// === Module 4618: on ===
+// === Module 4618: TypedEventEmitter ===
 
-// Module 4618 (on)
-import set from "set" /* 2 */;
-import EventEmitter from "EventEmitter" /* 568 */;
+// Module 4618 (TypedEventEmitter)
+import _mod568 from "module_568" /* 568 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
 class TypedEventEmitter {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    eventEmitter = new require("EventEmitter").EventEmitter();
-    obj[0] = eventEmitter;
-    return obj;
+    merged = Object.assign({ emitter: null });
+    eventEmitter = new closure_0(closure_1[0]).EventEmitter();
+    merged[0] = eventEmitter;
+    return merged;
   }
 }
 const prototype = TypedEventEmitter.prototype;

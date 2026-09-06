@@ -1,45 +1,46 @@
-// === Module 8395: setIsOnStartStageScreen ===
+// === Module 8395: useIsOnStartStageScreenStore ===
 
-// Module 8395 (setIsOnStartStageScreen)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import keys from "keys" /* 560 */;
+// Module 8395 (useIsOnStartStageScreenStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
+import noop from "module_19" /* 19 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const require = arg1;
-keys = keys.create(() => ({ isOnStartStageScreen: true }));
-const result = require("set").fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
+require = fn;
+let module_560 = fn(560);
+module_560 = module_560.create(() => ({ isOnStartStageScreen: true }));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useIsOnStartStageScreenStore.tsx");
 
-export default keys;
+export default module_560;
 export const setIsOnStartStageScreen = function setIsOnStartStageScreen(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => state.setState({ isOnStartStageScreen }));
 };
 export const useUpdateIsOnStartStageScreenEffect = function useUpdateIsOnStartStageScreenEffect(id) {
-  const _require = id;
-  const items = [closure_5];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_5.getVoiceChannelId() === id.id);
-  let obj = _require(504);
-  const items1 = [closure_4];
+  _require = id;
+  const items = [SelectedChannelStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => SelectedChannelStore.getVoiceChannelId() === id.id);
+  let obj = require("initialize");
+  const items1 = [PermissionStore];
   const items2 = [id];
-  const stateFromStores1 = _require(504).useStateFromStores(items1, () => closure_1_4.can(id(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, id), items2);
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, closure_0), items2);
   let tmp3 = stateFromStores1;
   if (stateFromStores1) {
     tmp3 = !stateFromStores(8396)(id.id);
   }
   dependencyMap = tmp3;
   const items3 = [stateFromStores, tmp3];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (stateFromStores) {
       if (!tmp) {
-        id = false;
-        id(1249).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
-        const obj2 = id(1249);
+        let isOnStartStageScreen = false;
+        ReactBatchUpdates.batchUpdates(() => state.setState({ isOnStartStageScreen }));
       }
     } else {
-      id = tmp;
-      id(1249).batchUpdates(() => closure_1_6.setState({ isOnStartStageScreen: closure_0 }));
-      const obj = id(1249);
+      isOnStartStageScreen = tmp;
+      ReactBatchUpdates.batchUpdates(() => state.setState({ isOnStartStageScreen }));
     }
   }, items3);
 };

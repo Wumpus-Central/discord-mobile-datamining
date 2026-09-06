@@ -1,33 +1,34 @@
-// === Module 15852: toggle ===
+// === Module 15852: SecureFramesPersistentCodesSetting ===
 
-// Module 15852 (toggle)
+// Module 15852 (SecureFramesPersistentCodesSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9153 */;
-import closure_3 from "items" /* 9151 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9153 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9151 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["opi/XK"]);
+    const intl = util.intl;
+    return intl.string(util.t["opi/XK"]);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.opw5ls);
+    const intl = util.intl;
+    return intl.string(util.t.opw5ls);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
+  parent: fn(7975).MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useSecureFramesPersistentCodesValue() {
-    const items = [closure_3];
+    const items = [SecureFramesPersistedStore];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
   },
   onValueChange: function handleSecureFramesPersistentCodesToggle(arg0) {
-    const result = savePersistentCodesEnabledDefault.updatePersistentCodesEnabled(arg0);
+    const result = SecureFramesActionCreatorsDefault.updatePersistentCodesEnabled(arg0);
   }
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SecureFramesPersistentCodesSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/SecureFramesPersistentCodesSetting.tsx");
 
-export default createToggle;
-export const DataAndPrivacySecureFramesPersistentCodesSetting = createToggle;
+export default SettingBuilders;
+export const DataAndPrivacySecureFramesPersistentCodesSetting = SettingBuilders;

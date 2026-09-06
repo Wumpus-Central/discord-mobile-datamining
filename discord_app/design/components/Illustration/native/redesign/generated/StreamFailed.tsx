@@ -1,52 +1,49 @@
-// === Module 9601: getStreamFailedSource ===
+// === Module 9601: StreamFailed ===
 
-// Module 9601 (getStreamFailedSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9601 (StreamFailed)
+import shared from "shared" /* 4411 */;
+import _mod8233 from "module_8233" /* 8233 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamFailed.tsx");
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/StreamFailed.tsx");
 
 export const getStreamFailedSource = function getStreamFailedSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
-      return callback(9602);
+      return require("module_9602");
     },
     darker() {
-      return callback(9603);
+      return require("module_9603");
     }
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useStreamFailedSource = function useStreamFailedSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
-      return callback(9602);
+      return require("module_9602");
     },
     darker() {
-      return callback(9603);
+      return require("module_9603");
     }
   };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const StreamFailed = function StreamFailed(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  let obj = {
     dark() {
-      return callback(9602);
+      return require("module_9602");
     },
     darker() {
-      return callback(9603);
+      return require("module_9603");
     }
   };
   obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

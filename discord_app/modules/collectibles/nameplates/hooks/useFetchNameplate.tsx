@@ -1,12 +1,12 @@
 // === Module 14635: useFetchNameplate ===
 
 // Module 14635 (useFetchNameplate)
-import set from "set" /* 2 */;
-import getNameplateData from "getNameplateData" /* 1886 */;
+import utils from "utils" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11042 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/hooks/useFetchNameplate.tsx");
 
 export const useFetchNameplate = function useFetchNameplate(skuId) {
   let obj = useFetchCollectiblesProduct;
@@ -23,6 +23,6 @@ export const useFetchNameplate = function useFetchNameplate(skuId) {
   if (type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE) {
     first1 = product.items[0];
   }
-  obj = { nameplateProduct: product, nameplateRecord: first1, nameplateData: getNameplateData.getNameplateData(first1), isFetching: fetchCollectiblesProduct.isFetching };
+  obj = { nameplateProduct: product, nameplateRecord: first1, nameplateData: utils.getNameplateData(first1), isFetching: fetchCollectiblesProduct.isFetching };
   return obj;
 };

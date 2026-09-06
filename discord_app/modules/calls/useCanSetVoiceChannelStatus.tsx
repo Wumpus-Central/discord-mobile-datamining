@@ -1,35 +1,33 @@
-// === Module 17114: Permissions ===
+// === Module 17114: useCanSetVoiceChannelStatus ===
 
-// Module 17114 (Permissions)
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 17114 (useCanSetVoiceChannelStatus)
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
+const require = fn;
+const Permissions = fn(1085).Permissions;
 let items = [, , ];
 ({ SET_VOICE_CHANNEL_STATUS: arr[0], CONNECT: arr[1], VIEW_CHANNEL: arr[2] } = Permissions);
 let items1 = [Permissions.SET_VOICE_CHANNEL_STATUS];
-const result = require("set").fileFinishedImporting("modules/calls/useCanSetVoiceChannelStatus.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/useCanSetVoiceChannelStatus.tsx");
 
 export default function useCanSetVoiceChannelStatus(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   dependencyMap = arg2;
-  items = [closure_3];
+  items = [PermissionStore];
   items1 = [arg0, flag, arg2];
-  return _require(504).useStateFromStores(items, () => {
-    closure_1 = closure_1_3;
-    return closure_1 ? closure_1_5 : closure_1_4.every((arg0) => {
-      if (null == table) {
-        let canResult = lib.can(arg0, closure_0);
+  return require("initialize").useStateFromStores(items, () => {
+    closure_1 = PermissionStore;
+    return flag ? items1 : items.every((permission) => {
+      if (null == closure_2) {
+        let canResult = closure_1.can(permission, context);
       } else {
-        let obj = lib(table[2]);
-        obj = { permission: null, user: null, context: null };
-        obj[0] = arg0;
-        obj[1] = tmp;
-        obj[2] = closure_0;
+        flag(closure_2[2]);
+        const obj = { permission, user: tmp, context };
         canResult = obj.can(obj);
       }
       return canResult;
@@ -40,15 +38,12 @@ export const _canSetVoiceChannelStatus = function _canSetVoiceChannelStatus(arg0
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg3;
-  return arg2 ? items1 : items.every((arg0) => {
-    if (null == table) {
-      let canResult = lib.can(arg0, closure_0);
+  return arg2 ? items1 : items.every((permission) => {
+    if (null == closure_2) {
+      let canResult = closure_1.can(permission, context);
     } else {
-      let obj = lib(table[2]);
-      obj = { permission: null, user: null, context: null };
-      obj[0] = arg0;
-      obj[1] = tmp;
-      obj[2] = closure_0;
+      flag(closure_2[2]);
+      const obj = { permission, user: tmp, context };
       canResult = obj.can(obj);
     }
     return canResult;
@@ -60,17 +55,14 @@ export const canSetVoiceChannelStatus = function canSetVoiceChannelStatus(arg0) 
     flag = false;
   }
   closure_0 = arg0;
-  closure_1 = closure_3;
+  closure_1 = PermissionStore;
   closure_2 = arg2;
-  return flag ? items1 : items.every((arg0) => {
-    if (null == table) {
-      let canResult = lib.can(arg0, closure_0);
+  return flag ? items1 : items.every((permission) => {
+    if (null == closure_2) {
+      let canResult = closure_1.can(permission, context);
     } else {
-      let obj = lib(table[2]);
-      obj = { permission: null, user: null, context: null };
-      obj[0] = arg0;
-      obj[1] = tmp;
-      obj[2] = closure_0;
+      flag(closure_2[2]);
+      const obj = { permission, user: tmp, context };
       canResult = obj.can(obj);
     }
     return canResult;

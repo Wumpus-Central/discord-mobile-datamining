@@ -1,23 +1,24 @@
-// === Module 14799: route ===
+// === Module 14799: AccountWebAuthnViewSetting ===
 
-// Module 14799 (route)
+// Module 14799 (AccountWebAuthnViewSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _fetchWebAuthnConditionalChallenge from "_fetchWebAuthnConditionalChallenge" /* 6597 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "hasFetchedCredentials" /* 14656 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
+import WebAuthnActionCreators from "WebAuthnActionCreators" /* 6597 */;
+import noop from "module_19" /* 19 */;
+import WebAuthnStore from "WebAuthnStore" /* 14656 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.y7SXYX);
+    const intl = util.intl;
+    return intl.string(util.t.y7SXYX);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7975).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: function useAccountCanUseWebAuthnView() {
-    return React.useCallback(() => {
+    return noop.useCallback(() => {
       currentUser = currentUser.getCurrentUser();
       let flag;
       if (currentUser != null) {
@@ -27,38 +28,36 @@ createToggle = {
         flag = false;
       }
       if (!flag) {
-        let obj = callback2(4904);
-        obj = { title: null, body: null };
-        const intl = callback(1114).intl;
-        obj[0] = intl.string(callback(1114).t.v740sh);
-        const intl2 = callback(1114).intl;
-        obj[1] = intl2.string(callback(1114).t.uggF7o);
+        const obj = { title: null, body: null };
+        const intl = util.intl;
+        obj.title = intl.string(util.t.v740sh);
+        const intl2 = util.intl;
+        obj.body = intl2.string(util.t.uggF7o);
         obj.show(obj);
       }
       return flag;
     }, []);
   },
   useTrailing: function useAccountSecurityKeysSettingTrailing() {
-    if (!closure_4.hasFetchedCredentials()) {
-      const webAuthnCredentials = _fetchWebAuthnConditionalChallenge.fetchWebAuthnCredentials();
-      const obj = _fetchWebAuthnConditionalChallenge;
+    if (!WebAuthnStore.hasFetchedCredentials()) {
+      const webAuthnCredentials = WebAuthnActionCreators.fetchWebAuthnCredentials();
     }
-    const items = [closure_4];
+    const items = [WebAuthnStore];
     return initialize.useStateFromStores(items, () => {
-      const intl = callback(1114).intl;
-      return intl.formatToPlainString(callback(1114).t.n8mZ0X, { count: credentials.getCredentials().length });
+      const intl = util.intl;
+      return intl.formatToPlainString(util.t.n8mZ0X, { count: credentials.getCredentials().length });
     });
   },
   unsearchable: true,
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.WEBAUTHN_VIEW,
-  getComponent() {
-    return require(14659) /* UserSettingsWebAuthn */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.WEBAUTHN_VIEW,
+    getComponent() {
+      return require("UserSettingsWebAuthn").default;
+    }
   }
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

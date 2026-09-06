@@ -1,32 +1,31 @@
-// === Module 17803: handleRTCConnectionState ===
+// === Module 17803: clips/ClipsManager ===
 
-// Module 17803 (handleRTCConnectionState)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 1115 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import setDefault from "set" /* 4182 */;
-import isStreamKeyAll from "isStreamKey" /* 4612 */;
+// Module 17803 (clips/ClipsManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import DiscordNativeDefault from "DiscordNative" /* 4182 */;
+import StreamKeyUtilsAll from "StreamKeyUtils" /* 4612 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import initializeDefault from "initialize" /* 7118 */;
 import isClipsEnabled from "isClipsEnabled" /* 13674 */;
-import apexExperiment from "apexExperiment" /* 13675 */;
+import ClipsExperiment from "ClipsExperiment" /* 13675 */;
 import isClientClipsCapableDefault from "isClientClipsCapable" /* 13676 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4605 */;
-import closure_6 from "fetchFingerprint" /* 502 */;
-import closure_7 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_8 from "createRTCConnection" /* 4583 */;
-import closure_9 from "initialize" /* 4599 */;
-import closure_10 from "_migrateDefaultStorage" /* 1914 */;
-import result from "result" /* 5132 */;
-import ME from "ME" /* 1074 */;
-import { StreamTypes } from "StreamIssueReportReasons" /* 4602 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
+import ClipsStore from "ClipsStore" /* 1914 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
-({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: unpackModuleId, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14, CLIP_RUNTIME: closure_15 } = result);
-({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = ME);
-initializeDefault;
+require = fn;
+const getSystemAnalyticsInfo = fn(4605).getSystemAnalyticsInfo;
+const ClipsConstants = fn(5132);
+({ WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_11, WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: closure_12, CLIPS_HARDWARE_CLASSIFICATION_VERSION: map1, ClipsHardwareClassification: closure_14, CLIP_RUNTIME: closure_15 } = ClipsConstants);
+const Constants = fn(1074);
+({ AnalyticEvents: closure_16, RTCConnectionStates: closure_17 } = Constants);
+const StreamTypes = fn(4602).StreamTypes;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -84,14 +83,14 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
   if (obj.areClipsAvailable()) {
     if (state.state === constants3.RTC_CONNECTED) {
       const self = this;
-      const id = store.getId();
+      const id = AuthenticationStore.getId();
       if (tmp(4615).MediaEngineContextTypes.DEFAULT === context) {
         const result = self.applyUserVoiceRecording(id);
         const result1 = self.applyUserSoundboardRecording(id);
       } else if (tmp(4615).MediaEngineContextTypes.STREAM === context) {
         if (null != streamKey) {
           if (tmpResult.decodeStreamKey(streamKey).ownerId === id) {
-            const rTCConnection = store2.getRTCConnection(streamKey);
+            const rTCConnection = StreamRTCConnectionStore.getRTCConnection(streamKey);
             if (null != rTCConnection) {
               self.applyStreamRecording(id, rTCConnection);
             }
@@ -105,10 +104,10 @@ prototype["handleRTCConnectionState"] = function handleRTCConnectionState(state)
 prototype["handleRTCUsersUpdate"] = function handleRTCUsersUpdate(userIds) {
   const self = this;
   userIds = userIds.userIds;
-  if (userIds.context === self(4615).MediaEngineContextTypes.DEFAULT) {
-    const item = userIds.forEach((id) => {
-      const result = self.applyUserVoiceRecording(id);
-      const result1 = self.applyUserSoundboardRecording(id);
+  if (userIds.context === BaseConnectionEvent.MediaEngineContextTypes.DEFAULT) {
+    const item = userIds.forEach((item) => {
+      const result = self.applyUserVoiceRecording(item);
+      const result1 = self.applyUserSoundboardRecording(item);
     });
   }
 };
@@ -123,66 +122,62 @@ prototype["handleRTCConnectionFlags"] = function handleRTCConnectionFlags(arg0) 
   } else {
     CALL = StreamTypes.CALL;
   }
-  const rTCConnection = store2.getRTCConnection(isStreamKeyAll.encodeStreamKey({ streamType: CALL, ownerId: userId, channelId, guildId }));
+  const rTCConnection = StreamRTCConnectionStore.getRTCConnection(StreamKeyUtilsAll.encodeStreamKey({ streamType: CALL, ownerId: userId, channelId, guildId }));
   if (null != rTCConnection) {
     self.applyStreamRecording(userId, rTCConnection);
   }
 };
 prototype["handleClipsInitFailure"] = function handleClipsInitFailure(arg0) {
   ({ applicationName, errMsg } = arg0);
-  let obj = expandEventPropertiesDefault;
-  obj = { application_name: applicationName, error_message: errMsg, clip_runtime: closure_15 };
+  const obj = { application_name: applicationName, error_message: errMsg, clip_runtime };
   obj.track(constants2.CLIPS_INIT_FAILURE, obj);
 };
 prototype["maybeShowClipsWarning"] = function maybeShowClipsWarning(userId) {
-  const channelId = authStore.getChannelId();
+  const channelId = RTCConnectionStore.getChannelId();
   if (null != channelId) {
-    if (!authStore2.getClipsWarningShown(channelId)) {
-      let setting = userId !== store.getId() && obj3.isClipsEnabledForUser(userId);
+    if (!ClipsStore.getClipsWarningShown(channelId)) {
+      let setting = userId !== AuthenticationStore.getId() && obj3.isClipsEnabledForUser(userId);
       if (setting) {
-        const ClipsAllowVoiceRecording = explicitContentFromProto.ClipsAllowVoiceRecording;
+        const ClipsAllowVoiceRecording = UserSettings.ClipsAllowVoiceRecording;
         setting = ClipsAllowVoiceRecording.getSetting();
       }
       if (setting) {
         const self = this;
-        let obj = dispatcherDefault;
-        obj = { type: "CLIPS_SHOW_CALL_WARNING", channelId: null };
-        obj[1] = channelId;
+        const obj = { type: "CLIPS_SHOW_CALL_WARNING", channelId };
         obj.dispatch(obj);
         this.showClipsToast();
       }
     }
-    obj3 = authStore2;
+    obj3 = ClipsStore;
   }
 };
 prototype["handleClipsAllowVoiceRecordingUpdate"] = function handleClipsAllowVoiceRecordingUpdate() {
   const self = this;
-  const userIds = authStore.getUserIds();
+  const userIds = RTCConnectionStore.getUserIds();
   if (userIds != null) {
-    const item = userIds.forEach((userId) => self.maybeShowClipsWarning(userId));
+    const item = userIds.forEach((item) => self.maybeShowClipsWarning(item));
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  if (isClientClipsCapableDefault(closure_7)) {
+  if (isClientClipsCapableDefault(MediaEngineStore)) {
     const self = this;
     const result = this.applyNativeClipsSettings();
     if (obj.areClipsAvailable()) {
       const clipsFromStorage = self.loadClipsFromStorage();
       self.maybeStartNtpClock();
-      let tmp7 = null != authStore2.getHardwareClassification() && null != obj2.getHardwareClassificationForDecoupled();
+      let tmp7 = null != ClipsStore.getHardwareClassification() && null != obj2.getHardwareClassificationForDecoupled();
       if (tmp7) {
-        tmp7 = obj2.getHardwareClassificationVersion() === closure_13;
+        tmp7 = obj2.getHardwareClassificationVersion() === map1;
       }
       if (!tmp7) {
         const result1 = self.classifyHardwareAndTrack();
         result1.then((classification) => {
-          let obj = callback(table[16]);
-          obj = { type: "CLIPS_CLASSIFY_HARDWARE", classification };
+          const obj = { type: "CLIPS_CLASSIFY_HARDWARE", classification };
           obj.dispatch(obj);
         });
       }
     }
-    obj = apexExperiment;
+    obj = ClipsExperiment;
   }
 };
 prototype["loadClipsFromStorage"] = function loadClipsFromStorage() {
@@ -192,19 +187,15 @@ prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) 
   ({ userId, guildId } = arg0);
   ({ context, channelId } = arg0);
   if (context === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
-    if (isClientClipsCapableDefault(closure_7)) {
-      let obj = isStreamKeyAll;
+    if (isClientClipsCapableDefault(MediaEngineStore)) {
+      let obj = StreamKeyUtilsAll;
       if (null != guildId) {
         let CALL = StreamTypes.GUILD;
       } else {
         CALL = StreamTypes.CALL;
       }
-      obj = { streamType: null, ownerId: null, channelId: null, guildId: null };
-      obj[0] = CALL;
-      obj[1] = userId;
-      obj[2] = channelId;
-      obj[3] = guildId;
-      const rTCConnection = store2.getRTCConnection(obj.encodeStreamKey(obj));
+      obj = { streamType: CALL, ownerId: userId, channelId, guildId };
+      const rTCConnection = StreamRTCConnectionStore.getRTCConnection(obj.encodeStreamKey(obj));
       if (null != rTCConnection) {
         const self = this;
         this.applyStreamRecording(userId, rTCConnection);
@@ -214,16 +205,15 @@ prototype["handleRTCConnectionVideo"] = function handleRTCConnectionVideo(arg0) 
 };
 prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
   const self = this;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -231,100 +221,87 @@ prototype["classifyHardwareAndTrack"] = function classifyHardwareAndTrack() {
     } else {
       try {
         c5 = 2;
-        if (0 === v0) {
+        if (0 === v2) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            let gpuModels = tmp3;
             closure_0 = tmp7;
-            closure_0 = undefined;
-            gpuModels = undefined;
+            closure_128_0 = undefined;
+            let gpuModels;
             let classification;
-            let table = 1;
-            v0 = 2;
+            c3 = 1;
+            v2 = 2;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = v0(function*() {
-              closure_0 = tmp2;
-              closure_0 = yield callback();
-              if (closure_0 != null) {
-                const gpus = closure_0.gpus;
-              }
-              if (null != gpus) {
-                const gpus1 = closure_0.gpus;
-                const mapped = gpus1.map((brand) => brand.brand);
-                closure_1 = mapped.filter((arg0) => {
-                  let tmp = null != arg0;
-                  if (tmp) {
-                    tmp = "" !== arg0;
-                  }
-                  return tmp;
-                });
-                const obj3 = { gpuModels: null, classification: null };
-                obj3[0] = closure_1;
-                obj3[1] = closure_1_0.classifyHardware(closure_1);
-                return obj3;
-              }
-              const processUtils = gpuModels(table[18]).processUtils;
-              yield processUtils.getSystemInfo();
-              const gpus2 = arg1.gpus;
-              const obj = { gpuModels: null, classification: null };
-              obj[0] = closure_2;
-              obj[1] = closure_1_0.classifyHardware(closure_2);
-              return obj;
-            })();
+            const obj1 = {
+              value: v2(async () => {
+                        closure_128_0 = await closure_2_5();
+                        if (closure_128_0 != null) {
+                          const gpus = closure_128_0.gpus;
+                        }
+                        if (null != gpus) {
+                          const gpus1 = closure_128_0.gpus;
+                          const mapped = gpus1.map((brand) => brand.brand);
+                          closure_128_1 = mapped.filter((item) => {
+                            let tmp = null != item;
+                            if (tmp) {
+                              tmp = "" !== item;
+                            }
+                            return tmp;
+                          });
+                          return { gpuModels: closure_128_1, classification: tmp2.classifyHardware(closure_128_1) };
+                        }
+                        const processUtils = tmp3(closure_2_3[18]).processUtils;
+                        await processUtils.getSystemInfo();
+                        const gpus2 = arg1.gpus;
+                        closure_128_2 = gpus2.map((model) => model.model);
+                        return { gpuModels: closure_128_2, classification: tmp2.classifyHardware(closure_128_2) };
+                      })(),
+              done: false
+            };
             return obj1;
           }
         } else if (1 === tmp7) {
-          table = 0;
+          c3 = 0;
           c5 = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = closure_1_14.UNKNOWN;
+          const obj2 = { value: constants.UNKNOWN, done: true };
           return obj2;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          table = 0;
+          c3 = 0;
           c5 = 3;
-          let obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_0 = arg1;
-          gpuModels = closure_0.gpuModels;
-          classification = closure_0.classification;
-          const obj4 = { classification: null, version: null, gpu_models: null, clip_runtime: null };
-          obj4[0] = classification;
-          obj4[1] = closure_1_13;
-          obj4[2] = gpuModels;
-          obj4[3] = closure_1_15;
-          closure_1_1(table[14]).track(closure_1_16.CLIPS_HARDWARE_CLASSIFICATION, obj4);
-          table = 0;
+          closure_128_0 = value;
+          gpuModels = closure_128_0.gpuModels;
+          classification = closure_128_0.classification;
+          const obj4 = { classification, version, gpu_models: gpuModels, clip_runtime };
+          tmp3(c3[14]).track(constants2.CLIPS_HARDWARE_CLASSIFICATION, obj4);
+          c3 = 0;
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = classification;
+          obj = { value: classification, done: true };
           return obj;
         }
       } catch (tmp12) {
-        classification = tmp12;
-        if (tmp4 === table) {
+        closure_2 = tmp12;
+        if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp12;
         } else {
-          v0 = tmp;
+          v2 = tmp;
         }
       }
     }
   })();
 };
-prototype["classifyHardware"] = function classifyHardware(closure_1) {
+prototype["classifyHardware"] = function classifyHardware(arr) {
   if (obj.isWindows()) {
     if (someResult) {
       let MEETS_AUTO_ENABLE = tmp11.MEETS_AUTO_ENABLE;
@@ -334,7 +311,7 @@ prototype["classifyHardware"] = function classifyHardware(closure_1) {
     return MEETS_AUTO_ENABLE;
   } else {
     if (tmpResult.isMac()) {
-      const app = setDefault.app;
+      const app = DiscordNativeDefault.app;
       if ("arm64" === app.getAppArch()) {
         let MEETS_MINIMUM = constants.MEETS_AUTO_ENABLE;
       } else {
@@ -343,41 +320,39 @@ prototype["classifyHardware"] = function classifyHardware(closure_1) {
     } else {
       return constants.UNKNOWN;
     }
-    tmpResult = set;
+    tmpResult = PlatformUtils;
   }
 };
 prototype["applyUserVoiceRecording"] = function applyUserVoiceRecording(id) {
-  if (isClientClipsCapableDefault(closure_7)) {
-    const rTCConnection = authStore.getRTCConnection();
+  if (isClientClipsCapableDefault(MediaEngineStore)) {
+    const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null != rTCConnection) {
-      if (id !== store.getId()) {
-        rTCConnection.setClipRecordUser(id, "audio", authStore2.isVoiceRecordingAllowedForUser(id));
+      if (id !== AuthenticationStore.getId()) {
+        rTCConnection.setClipRecordUser(id, "audio", ClipsStore.isVoiceRecordingAllowedForUser(id));
       } else {
         rTCConnection.setClipRecordUser(id, "audio", isClipsEnabled.isClipsEnabled());
-        const obj2 = isClipsEnabled;
       }
     }
   }
 };
 prototype["applyUserSoundboardRecording"] = function applyUserSoundboardRecording(id) {
-  if (isClientClipsCapableDefault(closure_7)) {
-    const rTCConnection = authStore.getRTCConnection();
+  if (isClientClipsCapableDefault(MediaEngineStore)) {
+    const rTCConnection = RTCConnectionStore.getRTCConnection();
     if (null != rTCConnection) {
       rTCConnection.setClipRecordUser(id, "soundboard", isClipsEnabled.isClipsEnabled());
-      const obj2 = isClipsEnabled;
     }
   }
 };
 prototype["applyStreamRecording"] = function applyStreamRecording(userId, rTCConnection) {
-  if (isClientClipsCapableDefault(closure_7)) {
-    if (store.getId() === userId) {
+  if (isClientClipsCapableDefault(MediaEngineStore)) {
+    if (AuthenticationStore.getId() === userId) {
       const isClipsEnabledResult = isClipsEnabled.isClipsEnabled();
       rTCConnection.setClipRecordUser(userId, "audio", isClipsEnabledResult);
       rTCConnection.setClipRecordUser(userId, "video", isClipsEnabledResult);
-      const obj = isClipsEnabled;
     }
   }
 };
-result = require("set").fileFinishedImporting("modules/clips/ClipsManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/clips/ClipsManager.tsx");
 
 export default ClipsManager;

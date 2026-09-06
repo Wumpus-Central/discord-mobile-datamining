@@ -1,38 +1,37 @@
-// === Module 14509: ? ===
+// === Module 14509: activities ===
 
-// Module 14509
-import recurseReplaceContentTree from "recurseReplaceContentTree" /* 9559 */;
+// Module 14509 (activities)
+import RPCHelpers from "RPCHelpers" /* 9559 */;
 import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14464 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 1074 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14476 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-({ RPCCommands, RPCErrors: c4, ApplicationFlags: c5 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ RPCCommands, RPCErrors: closure_4, ApplicationFlags: hasOwnProperty } = Constants);
 let obj = {};
+let CONTEXT_MENU_ICON_NAMES = fn(14476);
 obj = {
-  scope: require("activityInstanceConnectedParticipants").activityInstanceConnectedParticipantsScope,
+  scope: fn(14464).activityInstanceConnectedParticipantsScope,
   handler(socket) {
-    const result = recurseReplaceContentTree.validatePostMessageTransport(socket.socket.transport);
-    const obj = recurseReplaceContentTree;
+    const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
   }
 };
 obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS, obj);
+CONTEXT_MENU_ICON_NAMES = fn(14476);
 obj = {
-  scope: require("activityInstanceConnectedParticipants").activityInstanceConnectedParticipantsScope,
+  scope: fn(14464).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
-    return callback(function*() {
+    return (async (arg0, value) => {
       if (constants2 === 2) {
         constants2 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -43,65 +42,57 @@ obj = {
           if (0 === constants) {
             if (arg0 === 1) {
               constants2 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               constants2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = tmp3;
-              const result = closure_1_0(closure_1_2[4]).validatePostMessageTransport(closure_1_0.transport);
-              const obj9 = closure_1_0(closure_1_2[4]);
-              const tmp38 = closure_1_0;
-              const obj10 = closure_1_0(closure_1_2[4]);
-              const validateApplicationResult = closure_1_0(closure_1_2[4]).validateApplication(closure_1_0.application);
-              if (obj11.hasApplicationFlag(closure_1_0.application, constants2.EMBEDDED)) {
-                const tmp26 = tmp46(tmp47[7])();
+              const result = value(tmp29[4]).validatePostMessageTransport(socket.transport);
+              const obj9 = value(tmp29[4]);
+              const tmp37 = value;
+              const obj10 = value(tmp29[4]);
+              const validateApplicationResult = value(tmp29[4]).validateApplication(socket.application);
+              if (obj11.hasApplicationFlag(socket.application, constants2.EMBEDDED)) {
+                const tmp26 = tmp45(tmp46[7])();
                 c3 = 1;
-                closure_0 = {};
+                value = {};
                 let id;
                 if (tmp26 != null) {
                   id = tmp26.id;
                 }
                 constants = 2;
                 constants2 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = tmp38(closure_1_2[8]).createProxyTicket(validateApplicationResult, id);
+                const obj1 = { value: tmp37(tmp29[8]).createProxyTicket(validateApplicationResult, id), done: false };
                 return obj1;
               } else {
-                const obj2 = { errorCode: null };
-                obj2[0] = constants.UNAUTHORIZED_FOR_APPLICATION;
-                const tmp24 = new tmp46(tmp47[6])(obj2, "This application cannot access this API");
+                const obj2 = { errorCode: constants.UNAUTHORIZED_FOR_APPLICATION };
+                const tmp24 = new tmp45(tmp46[6])(obj2, "This application cannot access this API");
                 throw tmp24;
               }
-              obj11 = closure_1_0(closure_1_2[5]);
+              obj11 = value(tmp29[5]);
             }
           } else if (1 === tmp7) {
             c3 = 0;
-            const obj3 = { errorCode: null };
-            obj3[0] = constants.UNKNOWN_ERROR;
-            const tmp18 = new closure_1_1(closure_1_2[6])(obj3, "Failed to create proxy ticket");
+            const obj3 = { errorCode: constants.UNKNOWN_ERROR };
+            const tmp18 = new tmp3(tmp29[6])(obj3, "Failed to create proxy ticket");
             throw tmp18;
           } else if (arg0 === 1) {
             constants2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             constants2 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
+            const obj4 = { value, done: true };
             return obj4;
           } else {
-            closure_0.ticket = arg1;
+            value.ticket = value;
             c3 = 0;
             constants2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_0;
+            obj = { value, done: true };
             return obj;
           }
         } catch (tmp29) {
-          closure_2 = tmp29;
           if (tmp4 === c3) {
             constants2 = tmp2;
             throw tmp29;
@@ -114,6 +105,7 @@ obj = {
   }
 };
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, obj);
-let result = require("set").fileFinishedImporting("modules/rpc/server/commands/activities.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/activities.tsx");
 
 export default obj;

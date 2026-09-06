@@ -1,34 +1,30 @@
-// === Module 1888: fromServer ===
+// === Module 1888: BaseCollectiblesItemRecord ===
 
-// Module 1888 (fromServer)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 1888 (BaseCollectiblesItemRecord)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-let prototype;
-prototype = function BaseCollectiblesItemRecord(skuId) {
+const prototype = function BaseCollectiblesItemRecord(skuId) {
   const tmp = new prototype(new.target);
-  // ThrowIfThisInitialized (0x7c)
   tmp.skuId = skuId.skuId;
   return tmp;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(sku_id) {
-  let obj = Object.create(null);
-  const merged = Object.assign(sku_id, obj);
-  obj = {};
-  let str = obj;
-  const merged1 = Object.assign(merged);
+  const merged = Object.assign({ sku_id: 0 });
+  const merged1 = Object.assign(sku_id, merged);
+  const obj = {};
+  const merged2 = Object.assign(merged1);
   obj.skuId = sku_id.sku_id;
-  if (typeof prototype !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp7 = new prototype(obj, merged1, merged);
+    tmp7.skuId = obj.skuId;
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp4 = new prototype(str, merged, obj);
-  // ThrowIfThisInitialized (0x7c)
-  tmp4.skuId = obj.skuId;
-  return tmp4;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/BaseCollectiblesItemRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/BaseCollectiblesItemRecord.tsx");
 
 export default prototype;

@@ -1,13 +1,13 @@
-// === Module 13839: map ===
+// === Module 13839: visibleInlineChannels ===
 
-// Module 13839 (map)
-import set2 from "set" /* 2 */;
+// Module 13839 (visibleInlineChannels)
+import size from "module_2" /* 2 */;
 
 const map = new Map();
-let result = set2.fileFinishedImporting("modules/panels/visibleInlineChannels.tsx");
+let result = size.fileFinishedImporting("modules/panels/visibleInlineChannels.tsx");
 
 export const registerVisibleInlineChannel = function registerVisibleInlineChannel(arg0, arg1) {
-  let value = map.get(arg0);
+  value = map.get(arg0);
   if (null == value) {
     const _Set = Set;
     const set = new Set();
@@ -17,7 +17,7 @@ export const registerVisibleInlineChannel = function registerVisibleInlineChanne
   value.add(arg1);
 };
 export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(arg0, arg1) {
-  const value = map.get(arg0);
+  value = map.get(arg0);
   if (null != value) {
     value.delete(arg1);
     if (0 === value.size) {
@@ -25,14 +25,13 @@ export const unregisterVisibleInlineChannel = function unregisterVisibleInlineCh
     }
   }
 };
-export const isChannelVisibleInline = function isChannelVisibleInline(channelId, arg1) {
-  const value = map.get(channelId);
+export const isChannelVisibleInline = function isChannelVisibleInline(channelId, fn) {
+  value = map.get(channelId);
   if (null == value) {
     return false;
   } else {
     for (const item10010 of value) {
       if (arg1(item10010)) {
-        let tmp4 = obj;
         obj.return();
         let flag = true;
         return true;

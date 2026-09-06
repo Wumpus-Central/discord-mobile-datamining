@@ -1,9 +1,10 @@
-// === Module 7599: mapConversation ===
+// === Module 7599: ConversationsUtils ===
 
-// Module 7599 (mapConversation)
-import set from "set" /* 2 */;
+// Module 7599 (ConversationsUtils)
+import _mod12 from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
+const result = size.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
 
 export const mapConversation = function mapConversation(summary_map) {
   summary_map = summary_map.summary_map;
@@ -31,9 +32,7 @@ export const mapConversation = function mapConversation(summary_map) {
           }
           tmp6 = null;
           if (typeof brief_summary === "string") {
-            const obj = { title: null, brief_summary: null, key_points: null };
-            obj[0] = callback(table[0]).upperFirst(filter.title);
-            obj[1] = filter.brief_summary;
+            const obj = { title: _mod12.upperFirst(filter.title), brief_summary: filter.brief_summary, key_points: null };
             const _Array = Array;
             if (Array.isArray(filter.key_points)) {
               const key_points = filter.key_points;
@@ -49,8 +48,7 @@ export const mapConversation = function mapConversation(summary_map) {
             } else {
               found = [];
             }
-            obj[2] = found;
-            const obj2 = callback(table[0]);
+            obj.key_points = found;
           }
         }
         return tmp6;
@@ -67,38 +65,37 @@ export const mapConversation = function mapConversation(summary_map) {
   if (null != title) {
     tmp4 = null;
     if ("" !== tmp2.title) {
-      let obj = { id: null, title: null, briefSummary: null, keyPoints: null, channelId: null, guildId: null, messageIds: null, userIds: null, startMessageId: null, endMessageId: null, messageCount: null, userCount: null, keywords: null, summaryMap: null, engagement: null, substance: null, dynamics: null, moderation: null };
-      obj[0] = summary_map.id;
-      ({ title: obj3[1], brief_summary } = tmp2);
+      let obj = { id: summary_map.id, title: null, briefSummary: null, keyPoints: null, channelId: null, guildId: null, messageIds: null, userIds: null, startMessageId: null, endMessageId: null, messageCount: null, userCount: null, keywords: null, summaryMap: null, engagement: null, substance: null, dynamics: null, moderation: null };
+      ({ title: obj3.title, brief_summary } = tmp2);
       if (brief_summary == null) {
         brief_summary = null;
       }
-      obj[2] = brief_summary;
-      obj[3] = tmp2.key_points;
-      ({ channel_id: obj3[4], guild_id: obj3[5], message_ids: obj3[6], user_ids: obj3[7], start_message_id: obj3[8], end_message_id: obj3[9], message_count: obj3[10], user_count: obj3[11], keywords } = summary_map);
+      obj.briefSummary = brief_summary;
+      obj.keyPoints = tmp2.key_points;
+      ({ channel_id: obj3.channelId, guild_id: obj3.guildId, message_ids: obj3.messageIds, user_ids: obj3.userIds, start_message_id: obj3.startMessageId, end_message_id: obj3.endMessageId, message_count: obj3.messageCount, user_count: obj3.userCount, keywords } = summary_map);
       if (keywords == null) {
         keywords = [];
       }
-      obj[12] = keywords;
+      obj.keywords = keywords;
       let tmp5 = null;
       if (null != summary_map.summary_map) {
         obj = { entries: null };
         const entries1 = summary_map.summary_map.entries;
-        obj[0] = entries1.map((summaryType) => ({ summaryType: summaryType.summary_type, contentJson: summaryType.content_json }));
+        obj.entries = entries1.map((summaryType) => ({ summaryType: summaryType.summary_type, contentJson: summaryType.content_json }));
         tmp5 = obj;
       }
-      obj[13] = tmp5;
-      ({ engagement: obj3[14], substance: obj3[15], dynamics: obj3[16] } = summary_map);
+      obj.summaryMap = tmp5;
+      ({ engagement: obj3.engagement, substance: obj3.substance, dynamics: obj3.dynamics } = summary_map);
       let tmp6 = null;
       if (null != summary_map.moderation) {
         const moderation = summary_map.moderation;
         obj = { status: null, statusReason: null, messageViolationRate: null, flaggedMessageCount: null, totalMessageCount: null, flaggedMessageIds: null, flaggedMessageDetails: null, flaggedSummaryDetails: null, flaggedTitle: null, flaggedSummary: null, flaggedKeyPoints: null, failedMessageIds: null };
-        ({ status: obj2[0], status_reason: obj2[1], message_violation_rate: obj2[2], flagged_message_count: obj2[3], total_message_count: obj2[4], flagged_message_ids: obj2[5], flagged_message_details } = moderation);
-        obj[6] = flagged_message_details.map((messageId) => ({ messageId: messageId.message_id, category: messageId.category, severity: messageId.severity, confidence: messageId.confidence, reason: messageId.reason }));
-        ({ flagged_summary_details: obj2[7], flagged_title: obj2[8], flagged_summary: obj2[9], flagged_key_points: obj2[10], failed_message_ids: obj2[11] } = moderation);
+        ({ status: obj2.status, status_reason: obj2.statusReason, message_violation_rate: obj2.messageViolationRate, flagged_message_count: obj2.flaggedMessageCount, total_message_count: obj2.totalMessageCount, flagged_message_ids: obj2.flaggedMessageIds, flagged_message_details } = moderation);
+        obj.flaggedMessageDetails = flagged_message_details.map((messageId) => ({ messageId: messageId.message_id, category: messageId.category, severity: messageId.severity, confidence: messageId.confidence, reason: messageId.reason }));
+        ({ flagged_summary_details: obj2.flaggedSummaryDetails, flagged_title: obj2.flaggedTitle, flagged_summary: obj2.flaggedSummary, flagged_key_points: obj2.flaggedKeyPoints, failed_message_ids: obj2.failedMessageIds } = moderation);
         tmp6 = obj;
       }
-      obj[17] = tmp6;
+      obj.moderation = tmp6;
       tmp4 = obj;
     }
   }

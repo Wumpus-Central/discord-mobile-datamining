@@ -1,11 +1,13 @@
 // === Module 17206: useControlAccessoryHeight ===
 
 // Module 17206 (useControlAccessoryHeight)
-import closure_3 from "noop" /* 19 */;
+import VoicePanelConsoleStatus from "VoicePanelConsoleStatus" /* 17179 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 let closure_4 = { code: "function useControlAccessoryHeightTsx1(){const{consoleStatusHeight,floatingCTAHeight}=this.__closure;return consoleStatusHeight.get()+floatingCTAHeight.get();}" };
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useControlAccessoryHeight.tsx");
 
 export default function useControlAccessoryHeight() {
   const channelId = sharedValue1.useContext(sharedValue(shouldShowFloatingCTA[1])).channelId;
@@ -15,7 +17,7 @@ export default function useControlAccessoryHeight() {
   const effect = sharedValue1.useEffect(() => {
     let num = 0;
     if (isConnectingOrConnectedToConsole) {
-      num = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[4]).CONSOLE_STATUS_HEIGHT;
+      num = VoicePanelConsoleStatus.CONSOLE_STATUS_HEIGHT;
     }
     const result = sharedValue.set(num);
   }, items);
@@ -35,7 +37,7 @@ export default function useControlAccessoryHeight() {
   }, items1);
   const obj4 = isConnectingOrConnectedToConsole(shouldShowFloatingCTA[6]);
   const fn = function l() {
-    const value = sharedValue.get();
+    value = sharedValue.get();
     return value + sharedValue1.get();
   };
   fn.__closure = { consoleStatusHeight: sharedValue, floatingCTAHeight: sharedValue1 };

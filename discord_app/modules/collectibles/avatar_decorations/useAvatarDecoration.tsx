@@ -1,19 +1,20 @@
 // === Module 8217: useAvatarDecoration ===
 
 // Module 8217 (useAvatarDecoration)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
+import _slicedToArray from "module_32" /* 32 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
 
 export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
-  const _require = user;
+  _require = user;
   dependencyMap = guildId;
-  let items = [closure_3];
-  return _require(563).useStateFromStores(items, () => {
-    const items = [closure_1_3];
-    const first = closure_1_2(items, 1)[0];
+  let items = [GuildMemberStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
+    const items = [GuildMemberStore];
+    const first = _slicedToArray(items, 1)[0];
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -35,18 +36,18 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
     return avatarDecoration;
   });
 };
-export const getAvatarDecoration = function getAvatarDecoration(user, closure_2) {
+export const getAvatarDecoration = function getAvatarDecoration(user, guildId) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [closure_3];
+    const items = [GuildMemberStore];
     tmp = items;
   }
-  const first = callback(tmp, 1)[0];
+  const first = _slicedToArray(tmp, 1)[0];
   let member = null;
-  if (null != closure_2) {
+  if (null != guildId) {
     member = null;
     if (null != user) {
-      member = first.getMember(closure_2, user.id);
+      member = first.getMember(guildId, user.id);
     }
   }
   let avatarDecoration;

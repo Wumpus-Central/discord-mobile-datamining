@@ -1,38 +1,40 @@
-// === Module 16852: EditLinkedLobby ===
+// === Module 16852: IntegrationsSettingsEditLinkedLobby ===
 
-// Module 16852 (EditLinkedLobby)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16852 (IntegrationsSettingsEditLinkedLobby)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { screenContainer: null, header: null, divider: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center", marginTop: 8, marginBottom: 32, gap: 12 };
-createCacheKey[2] = { height: 1, width: 48, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 1, width: 48, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
-const result = require("set").fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { screenContainer: null, header: null, divider: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+createStyles.screenContainer = createStyles;
+createStyles.header = { alignItems: "center", marginTop: 8, marginBottom: 32, gap: 12 };
+let size = { height: 1, width: 48, backgroundColor: nativeDefault.colors.BORDER_STRONG };
+createStyles.divider = size;
+let closure_9 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/integration_settings/native/IntegrationsSettingsEditLinkedLobby.tsx");
 
 export default function EditLinkedLobby(channel) {
   channel = channel.channel;
   const numScreensToPop = channel.numScreensToPop;
   let navigation;
-  let analyticsLocations;
   let linked_at;
   let stateFromStores;
   let callback1;
   let obj = channel(navigation[6]);
   const token = obj.useToken(numScreensToPop(navigation[5]).modules.mobile.TABLE_ROW_PADDING);
-  const tmp5 = callback();
-  obj1 = channel(navigation[7]);
+  const tmp5 = closure_9();
+  let obj1 = channel(navigation[7]);
   navigation = obj1.useNavigation();
-  analyticsLocations = numScreensToPop(navigation[8])(numScreensToPop(navigation[9]).EDIT_CHANNEL_SYNCING).analyticsLocations;
+  const analyticsLocations = numScreensToPop(navigation[8])(numScreensToPop(navigation[9]).EDIT_CHANNEL_SYNCING).analyticsLocations;
   let obj2 = channel(navigation[10]);
   let linkedLobby = channel.linkedLobby;
   let application_id;
@@ -54,11 +56,11 @@ export default function EditLinkedLobby(channel) {
     if (linkedLobby != null) {
       linked_by = linkedLobby.linked_by;
     }
-    return stateFromStores.getUser(linked_by);
+    return UserStore.getUser(linked_by);
   });
   let obj4 = analyticsLocations;
   const items1 = [navigation, numScreensToPop];
-  callback = analyticsLocations.useCallback(() => {
+  const callback = analyticsLocations.useCallback(() => {
     navigation.pop(numScreensToPop);
   }, items1);
   let str;
@@ -73,11 +75,8 @@ export default function EditLinkedLobby(channel) {
   const tmpResult = channel(navigation[12]);
   callback1 = obj4.useCallback(() => {
     if (null != stateFromStores) {
-      const obj = { userId: null, channelId: null, sourceAnalyticsLocations: null };
-      obj[0] = tmp.id;
-      obj[1] = channel.id;
-      obj[2] = analyticsLocations;
-      numScreensToPop(navigation[14])(obj);
+      const obj = { userId: tmp.id, channelId: channel.id, sourceAnalyticsLocations: analyticsLocations };
+      showUserProfileActionSheetDefault(obj);
     }
   }, items2);
   const items3 = [linked_at, stateFromStores, callback1];
@@ -88,75 +87,66 @@ export default function EditLinkedLobby(channel) {
       const _Date = Date;
       const date = new Date(tmp);
       if (null != stateFromStores) {
-        const intl2 = channel(navigation[15]).intl;
-        let obj = { username: null, usernameHook: null, linkedAtDate: null };
-        obj[0] = tmp17.username;
-        obj[1] = function usernameHook(children) {
-          return closure_1_6(closure_1_0(closure_1_2[16]).Text, { onPress: closure_6, variant: "text-sm/semibold", color: "text-strong", children }, arg1);
+        const intl2 = util.intl;
+        let obj = {
+          username: tmp17.username,
+          usernameHook(children, arg1) {
+                return callback1(channel(navigation[16]).Text, { onPress, variant: "text-sm/semibold", color: "text-strong", children }, arg1);
+              },
+          linkedAtDate: date
         };
-        obj[2] = date;
-        let formatResult = intl2.format(channel(navigation[15]).t.uV2AkA, obj);
+        let formatResult = intl2.format(util.t.uV2AkA, obj);
       } else {
-        const intl = channel(navigation[15]).intl;
-        obj = { linkedAtDate: null };
-        obj[0] = date;
-        formatResult = intl.formatToPlainString(channel(navigation[15]).t.EyygeM, obj);
+        const intl = util.intl;
+        obj = { linkedAtDate: date };
+        formatResult = intl.formatToPlainString(util.t.EyygeM, obj);
       }
       return formatResult;
     }
   }, items3);
   let tmp19Result = null;
   if (null != getOrFetchApplication) {
-    obj = { style: null, contentContainerStyle: null, children: null };
-    obj[0] = tmp5.screenContainer;
-    obj[1] = { paddingTop: 16 };
-    obj = { spacing: null, style: null, children: null };
-    obj[0] = tmp3(tmp2[5]).space.PX_24;
-    obj1 = { paddingHorizontal: null };
-    obj1[0] = token;
-    obj[1] = obj1;
-    obj2 = { style: null, children: null };
-    obj2[0] = tmp5.header;
+    obj = { style: tmp5.screenContainer, contentContainerStyle: { paddingTop: 16 }, children: null };
+    obj = { spacing: tmp3(tmp2[5]).space.PX_24, style: null, children: null };
+    obj1 = { paddingHorizontal: token };
+    obj.style = obj1;
+    obj2 = { style: tmp5.header, children: null };
     const obj3 = { source: null, size: null };
     tmp3Result = tmp3(tmp2[20]);
     obj4 = { id: null, icon: null };
-    ({ id: obj12[0], icon: obj12[1] } = getOrFetchApplication);
-    obj3[0] = tmp3Result.getApplicationIconSource(obj4);
-    obj3[1] = tmp(tmp2[19]).AvatarSizes.XXLARGE;
+    ({ id: obj12.id, icon: obj12.icon } = getOrFetchApplication);
+    obj3.source = tmp3Result.getApplicationIconSource(obj4);
+    obj3.size = tmp(tmp2[19]).AvatarSizes.XXLARGE;
     const items4 = [callback1(tmp(tmp2[19]).Avatar, obj3), , ];
-    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
-    obj5[2] = getOrFetchApplication.name;
+    const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: getOrFetchApplication.name };
     items4[1] = callback1(tmp(tmp2[16]).Text, obj5);
     let tmp20Result = null != memo;
     if (tmp20Result) {
       const obj6 = { children: null };
-      const obj7 = { style: null };
-      obj7[0] = tmp5.divider;
+      const obj7 = { style: tmp5.divider };
       const items5 = [tmp19(tmp21, obj7), ];
-      const obj8 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-      obj8[2] = memo;
+      const obj8 = { variant: "text-sm/medium", color: "text-subtle", children: memo };
       items5[1] = tmp19(tmp(tmp2[16]).Text, obj8);
-      obj6[0] = items5;
+      obj6.children = items5;
       tmp20Result = tmp20(closure_7, obj6);
     }
     items4[2] = tmp20Result;
-    obj2[1] = items4;
+    obj2.children = items4;
     const items6 = [closure_8(linked_at, obj2), , ];
     const obj9 = { variant: "text-sm/normal", color: "text-default", children: null };
     let intl = tmp(tmp2[15]).intl;
-    const obj10 = { channelName: null };
-    obj10[0] = tmp10;
-    obj9[2] = intl.format(tmp(tmp2[15]).t.DA9v5F, obj10);
+    const obj10 = { channelName: tmp10 };
+    obj9.children = intl.format(tmp(tmp2[15]).t.DA9v5F, obj10);
     items6[1] = callback1(tmp(tmp2[16]).Text, obj9);
     const obj11 = { hasIcons: false, children: null };
     const obj12 = { label: null, variant: "danger", onPress: null };
     let intl2 = tmp(tmp2[15]).intl;
-    obj12[0] = intl2.string(tmp(tmp2[15]).t.LLWaxQ);
-    obj12[2] = tmp3ResultResult;
-    obj11[1] = callback1(tmp(tmp2[22]).TableRow, obj12);
+    obj12.label = intl2.string(tmp(tmp2[15]).t.LLWaxQ);
+    obj12.onPress = tmp3ResultResult;
+    obj11.children = callback1(tmp(tmp2[22]).TableRow, obj12);
     items6[2] = callback1(tmp(tmp2[21]).TableRowGroup, obj11);
-    obj[2] = items6;
-    obj[2] = closure_8(tmp(tmp2[18]).Stack, obj);
+    obj.children = items6;
+    obj.children = closure_8(tmp(tmp2[18]).Stack, obj);
     tmp19Result = tmp19(tmp(tmp2[17]).Form, obj);
   }
   return tmp19Result;

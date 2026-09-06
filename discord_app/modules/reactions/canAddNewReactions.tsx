@@ -1,20 +1,21 @@
-// === Module 7971: ? ===
+// === Module 7971: canAddNewReactions ===
 
-// Module 7971
-import closure_0 from "recomputeGuild" /* 5413 */;
-import closure_1 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 7971 (canAddNewReactions)
+import GuildVerificationStore from "GuildVerificationStore" /* 5413 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 
 export default (getGuildId) => {
   const guildId = getGuildId.getGuildId();
   let canChatInGuildResult = null != guildId;
   if (canChatInGuildResult) {
-    canChatInGuildResult = closure_0.canChatInGuild(guildId);
+    canChatInGuildResult = GuildVerificationStore.canChatInGuild(guildId);
   }
   if (canChatInGuildResult) {
-    canChatInGuildResult = closure_1.can(Permissions.ADD_REACTIONS, getGuildId);
+    canChatInGuildResult = PermissionStore.can(Permissions.ADD_REACTIONS, getGuildId);
   }
   if (!canChatInGuildResult) {
     canChatInGuildResult = getGuildId.isPrivate();

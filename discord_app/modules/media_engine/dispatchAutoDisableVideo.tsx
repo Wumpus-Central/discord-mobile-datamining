@@ -1,19 +1,18 @@
 // === Module 13822: dispatchAutoDisableVideo ===
 
 // Module 13822 (dispatchAutoDisableVideo)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 4585 */;
+import size from "module_2" /* 2 */;
 
-const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
-const result = set.fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");
+const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
+const result = size.fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");
 
-export default function dispatchAutoDisableVideo(arg0, arg1) {
-  importDefault = arg0;
-  dependencyMap = arg1;
-  dispatcherDefault.wait(() => {
-    let obj = callback(table[1]);
-    obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: closure_1_2.DEFAULT, userId: callback, videoToggleState: table, persist: false, isAutomatic: true };
+export default function dispatchAutoDisableVideo(userId, videoToggleState) {
+  importDefault = userId;
+  dependencyMap = videoToggleState;
+  DispatcherDefault.wait(() => {
+    const obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: MediaEngineContextTypes.DEFAULT, userId, videoToggleState, persist: false, isAutomatic: true };
     obj.dispatch(obj);
   });
 };

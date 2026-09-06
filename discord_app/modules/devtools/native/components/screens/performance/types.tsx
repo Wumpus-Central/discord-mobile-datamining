@@ -1,6 +1,6 @@
-// === Module 15729: set ===
+// === Module 15729: types ===
 
-// Module 15729 (set)
-import set from "set" /* 2 */;
+// Module 15729 (types)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/devtools/native/components/screens/performance/types.tsx");
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/types.tsx");

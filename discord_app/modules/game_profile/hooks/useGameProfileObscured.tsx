@@ -2,22 +2,23 @@
 
 // Module 5111 (useGameProfileObscured)
 import initialize from "initialize" /* 504 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5112 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import utils from "utils" /* 5112 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
 export default function useGameProfileObscured(contentClassification) {
   initialize;
-  [][0] = closure_2;
+  [][0] = UserStore;
   let result = null != contentClassification;
   if (result) {
     result = false === tmp4;
   }
   if (result) {
-    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(contentClassification.contentClassification);
-    const tmpResult = isAgeRestrictedContentClassification;
+    result = utils.isAgeRestrictedContentClassification(contentClassification.contentClassification);
+    const tmpResult = utils;
   }
   return result;
 };
@@ -27,8 +28,7 @@ export const isGameProfileObscured = function isGameProfileObscured(game, nsfwAl
     result = false === nsfwAllowed;
   }
   if (result) {
-    result = isAgeRestrictedContentClassification.isAgeRestrictedContentClassification(game.contentClassification);
-    const obj = isAgeRestrictedContentClassification;
+    result = utils.isAgeRestrictedContentClassification(game.contentClassification);
   }
   return result;
 };

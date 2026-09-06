@@ -1,22 +1,20 @@
-// === Module 11152: DisplayName ===
+// === Module 11152: UserProfilePrimaryInfo ===
 
-// Module 11152 (DisplayName)
-import ThemesDefault from "Themes" /* 576 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import guildHasTag from "guildHasTag" /* 8165 */;
-import memoResult1Default from "memoResult1" /* 9184 */;
-import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 10899 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { getBadgeName } from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
-import ME from "ME" /* 1074 */;
-import { GuildTagBadgeSize } from "items" /* 7944 */;
-import { DEFAULT_PREMIUM_BADGE_ID } from "DEFAULT_PREMIUM_BADGE_ID" /* 8194 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11152 (UserProfilePrimaryInfo)
+import nativeDefault from "native" /* 576 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import GuildTagUtils from "GuildTagUtils" /* 8165 */;
+import BadgeId from "BadgeId" /* 8184 */;
+import GuildTagDefault from "GuildTag" /* 9184 */;
+import BotTagDefault from "BotTag" /* 9438 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10899 */;
+import BadgeUtils from "BadgeUtils" /* 11199 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class DisplayName {
   constructor(arg0) {
     user = global.user;
@@ -39,21 +37,15 @@ class DisplayName {
     renderBotTag = function renderBotTag() {
       let obj = user;
       if (user.isSystemUser()) {
-        obj = { style: null, type: null, verified: null };
-        obj[0] = lib.botTag;
-        obj[1] = lib(closure_1_2[12]).Types.SYSTEM_DM;
-        obj[2] = obj.isVerifiedBot();
-        let tmp = closure_1_13(lib(closure_1_2[12]), obj);
-        const tmp12 = lib(closure_1_2[12]);
+        obj = { style: closure_1.botTag, type: BotTagDefault.Types.SYSTEM_DM, verified: null };
+        obj.verified = obj.isVerifiedBot();
+        let tmp = map1(BotTagDefault, obj);
       } else {
         tmp = null;
         if (obj.bot) {
-          obj = { style: null, type: null, verified: null };
-          obj[0] = lib.botTag;
-          obj[1] = lib(closure_1_2[12]).Types.BOT;
-          obj[2] = obj.isVerifiedBot();
-          tmp = closure_1_13(lib(closure_1_2[12]), obj);
-          const tmp5 = lib(closure_1_2[12]);
+          obj = { style: closure_1.botTag, type: BotTagDefault.Types.BOT, verified: null };
+          obj.verified = obj.isVerifiedBot();
+          tmp = map1(BotTagDefault, obj);
         }
       }
       return tmp;
@@ -67,53 +59,53 @@ class DisplayName {
       tmp8 = closure_1;
       tmp9 = closure_2;
       obj = { userId: null, guildId: null, userName: null, variant: null, effectDisplayType: null, lineClamp: 2, pendingDisplayNameStyles: null, defaultColor: "mobile-text-heading-primary", accessibilityRole: null, style: null, containerStyle: null };
-      obj[0] = user.id;
-      obj[1] = guildId;
-      obj[2] = name;
-      obj[3] = headingVariant;
+      obj.userId = user.id;
+      obj.guildId = guildId;
+      obj.userName = name;
+      obj.variant = headingVariant;
       tmp11 = user;
-      tmp10 = require("AVERAGE_FONT_WIDTH_RATIO");
-      obj[4] = require("DisplayNameStyleColorPreset").EffectDisplayType.STATIC;
-      obj[6] = pendingDisplayNameStyles;
-      obj[8] = displayNameAccessibilityRole;
-      ({ displayNameText: obj2[9], displayNameText: obj2[10] } = tmp);
+      tmp10 = closure_1(closure_2[10]);
+      obj.effectDisplayType = user(closure_2[11]).EffectDisplayType.STATIC;
+      obj.pendingDisplayNameStyles = pendingDisplayNameStyles;
+      obj.accessibilityRole = displayNameAccessibilityRole;
+      ({ displayNameText: obj2.style, displayNameText: obj2.containerStyle } = tmp);
       items = [, ];
       items[0] = jsx(tmp10, obj);
       num = 0;
       items[1] = renderBotTag();
-      obj[0] = items;
+      obj.children = items;
       tmp12Result = jsxs(View, obj);
     } else {
       tmp12 = jsxs;
       tmp13 = user;
       tmp14 = closure_2;
       obj1 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, style: null, children: null };
-      obj1[0] = onPress;
-      obj1[2] = name;
-      obj1[3] = global.accessibilityHint;
-      obj1[4] = tmp.displayName;
+      obj1.onPress = onPress;
+      obj1.accessibilityLabel = name;
+      obj1.accessibilityHint = global.accessibilityHint;
+      obj1.style = tmp.displayName;
       tmp16 = closure_1;
       tmp15 = jsx;
       obj2 = { userId: null, guildId: null, userName: null, variant: null, effectDisplayType: null, lineClamp: 2, pendingDisplayNameStyles: null, defaultColor: "mobile-text-heading-primary", accessibilityRole: null, style: null, containerStyle: null };
-      obj2[0] = user.id;
-      obj2[1] = guildId;
-      obj2[2] = name;
-      obj2[3] = headingVariant;
-      tmp17 = require("AVERAGE_FONT_WIDTH_RATIO");
-      obj2[4] = require("DisplayNameStyleColorPreset").EffectDisplayType.STATIC;
-      obj2[6] = pendingDisplayNameStyles;
-      obj2[8] = displayNameAccessibilityRole;
-      ({ displayNameText: obj4[9], displayNameText: obj4[10] } = tmp);
+      obj2.userId = user.id;
+      obj2.guildId = guildId;
+      obj2.userName = name;
+      obj2.variant = headingVariant;
+      tmp17 = closure_1(closure_2[10]);
+      obj2.effectDisplayType = user(closure_2[11]).EffectDisplayType.STATIC;
+      obj2.pendingDisplayNameStyles = pendingDisplayNameStyles;
+      obj2.accessibilityRole = displayNameAccessibilityRole;
+      ({ displayNameText: obj4.style, displayNameText: obj4.containerStyle } = tmp);
       items1 = [, , ];
       items1[0] = jsx(tmp17, obj2);
       num2 = 0;
       items1[1] = renderBotTag();
       if (showChevron) {
-        showChevron = tmp15(require("ChevronSmallDownIcon").ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
+        showChevron = tmp15(tmp13(tmp14[14]).ChevronSmallDownIcon, { size: "sm", color: "icon-muted" });
       }
       items1[2] = showChevron;
-      obj1[5] = items1;
-      tmp12Result = tmp12(require("PressableBase").PressableOpacity, obj1);
+      obj1.children = items1;
+      tmp12Result = tmp12(user(closure_2[13]).PressableOpacity, obj1);
     }
     return tmp12Result;
   }
@@ -153,28 +145,21 @@ class UserTagAndPronouns {
       if (null == userTag) {
         return null;
       } else {
-        let obj = { variant: null, color: "mobile-text-heading-primary", lineClamp: 2, children: null };
-        obj[0] = textVariant;
-        obj[3] = tmp;
-        const tmp9 = closure_1_13(userTag(userTagAccessibilityHint[15]).Text, obj);
+        let obj = { variant: textVariant, color: "mobile-text-heading-primary", lineClamp: 2, children: tmp };
+        const tmp9 = map1(Text_Text.Text, obj);
         if (null != onPressUserTag) {
-          obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, children: null };
-          obj[0] = tmp10;
-          obj[2] = tmp;
-          obj[3] = userTagAccessibilityHint;
-          obj[4] = tmp9;
-          let tmp5Result = tmp5(userTag(userTagAccessibilityHint[13]).PressableOpacity, obj);
+          obj = { onPress: tmp10, accessibilityRole: "button", accessibilityLabel: tmp, accessibilityHint: userTagAccessibilityHint, children: tmp9 };
+          let tmp5Result = tmp5(Pressables.PressableOpacity, obj);
         } else {
-          obj = { children: null };
-          obj[0] = tmp9;
-          tmp5Result = tmp5(closure_1_5, obj);
+          obj = { children: tmp9 };
+          tmp5Result = tmp5(hasOwnProperty, obj);
         }
         return tmp5Result;
       }
     }, items)();
     if (!tmp2) {
       items1[1] = tmp2;
-      obj[1] = items1;
+      obj.children = items1;
       return tmp5(tmp6, obj);
     } else {
       tmp8 = jsx;
@@ -182,34 +167,34 @@ class UserTagAndPronouns {
       tmp8Result = userTagAccessibilityHint;
       tmp7 = Fragment;
       obj = { variant: null, color: "mobile-text-heading-primary", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
-      obj[0] = textVariant;
+      obj.variant = textVariant;
       tmp10 = DIVIDER_DOT;
-      obj[4] = DIVIDER_DOT;
+      obj.children = DIVIDER_DOT;
       items2 = [, ];
-      items2[0] = jsx(require("Text").Text, obj);
+      items2[0] = jsx(userTag(userTagAccessibilityHint[15]).Text, obj);
       if (null != onPressUserTag) {
         obj1 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, children: null };
-        obj1[0] = onPressPronouns;
-        obj1[2] = pronouns;
-        obj1[3] = pronounsAccessibilityHint;
-        Text = require("Text").Text;
+        obj1.onPress = onPressPronouns;
+        obj1.accessibilityLabel = pronouns;
+        obj1.accessibilityHint = pronounsAccessibilityHint;
+        Text = Text(tmp8Result[15]).Text;
         obj2 = { variant: null, color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-        obj2[0] = textVariant;
-        obj2[3] = pronouns;
+        obj2.variant = textVariant;
+        obj2.children = pronouns;
         tmp8Result = tmp8(Text, obj2);
-        obj1[4] = tmp8Result;
-        tmp8Result1 = tmp8(require("PressableBase").PressableOpacity, obj1);
+        obj1.children = tmp8Result;
+        tmp8Result1 = tmp8(Text(tmp8Result[13]).PressableOpacity, obj1);
       } else {
         obj3 = { children: null };
         obj4 = { variant: null, color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-        obj4[0] = textVariant;
-        obj4[3] = pronouns;
-        obj3[0] = tmp8(require("Text").Text, obj4);
+        obj4.variant = textVariant;
+        obj4.children = pronouns;
+        obj3.children = tmp8(Text(tmp8Result[15]).Text, obj4);
         tmp8Result1 = tmp8(tmp6, obj3);
       }
       obj5 = { children: null };
       items2[1] = tmp8Result1;
-      obj5[0] = items2;
+      obj5.children = items2;
       tmp5Result = tmp5(tmp7, obj5);
     }
     return;
@@ -226,14 +211,12 @@ function ProfileBadge(source) {
   }
   closure_4 = undefined;
   closure_5 = undefined;
-  let items = callback3();
+  let items = closure_16();
   if (null != badgeSize) {
-    let obj = { width: null, height: null };
-    obj[0] = badgeSize;
-    obj[1] = badgeSize;
+    const size = { width: badgeSize, height: badgeSize };
   }
   const ref = label.useRef(null);
-  obj1 = source(id[16]);
+  let obj1 = source(id[16]);
   closure_4 = obj1.useTieredTenureBadgeClickHandler(id, source.userId, themeType);
   let obj2 = source(id[17]);
   closure_5 = obj2.useAdUser("profile_badge");
@@ -255,7 +238,7 @@ function ProfileBadge(source) {
   if (flag == null) {
     flag = false;
   }
-  obj = { disabled: !flag };
+  let obj = { disabled: !flag };
   const orbsBadgeCoachmark = source(id[19]).useOrbsBadgeCoachmark(obj);
   const intl = tmp3(tmp4[20]).intl;
   const formatToPlainStringResult = intl.formatToPlainString(source(id[20]).t.A0LN9t, { badgeLabel: label });
@@ -265,10 +248,8 @@ function ProfileBadge(source) {
   }
   let tmp10 = null;
   if (tmp9) {
-    obj = { targetRef: null, badgeId: null };
-    obj[0] = ref;
-    obj[1] = id;
-    tmp10 = callback(catalogBadge(tmp4[21]), obj);
+    obj = { targetRef: ref, badgeId: id };
+    tmp10 = closure_13(catalogBadge(tmp4[21]), obj);
   }
   let tmp13 = themeType !== UserProfileThemeTypes.YOU_SCREEN || typeof id !== "string";
   if (!tmp13) {
@@ -283,128 +264,119 @@ function ProfileBadge(source) {
   }
   let tmp16 = null;
   if (!tmp13) {
-    obj1 = { badgeRef: null };
-    obj1[0] = ref;
+    obj1 = { badgeRef: ref };
     let merged = Object.assign(orbsBadgeCoachmark.props);
-    tmp16 = callback(catalogBadge(tmp4[19]), obj1);
+    tmp16 = closure_13(catalogBadge(tmp4[19]), obj1);
     const tmp19 = catalogBadge(tmp4[19]);
   }
   obj2 = { children: null };
   if (showToastOnPress) {
     let PressableOpacity = tmp3(tmp4[13]).PressableOpacity;
-    obj3 = { accessibilityRole: "image", accessibilityLabel: null, onPress: null, ref: null, children: null };
-    obj3[1] = formatToPlainStringResult;
-    obj3[2] = function onPress() {
-      if (null == closure_4) {
-        if (id !== closure_1_6(source(id[22]).BadgeId.GIFTING)) {
-          let info_label;
-          if (catalogBadge != null) {
-            info_label = catalogBadge.info_label;
-          }
-          let tmp5Result = tmp5(tmp6[25]);
-          let tmp10 = info_label;
-          if (tmp5Result.isNullOrEmpty(info_label)) {
-            tmp10 = label;
-          }
-          let obj = { key: null, content: null, icon: null };
-          const _HermesInternal = HermesInternal;
-          obj[0] = "PROFILE_BADGE-" + label;
-          obj[1] = tmp10;
-          obj[2] = source;
-          catalogBadge(tmp6[26]).open(obj);
-          if (tmp3 === tmp5(tmp6[27]).QUEST_COMPLETED_BADGE) {
-            tmp5Result = tmp5(tmp6[28]);
-            if (tmp5Result.shouldMigrateToAdAnalyticsInterface(tmp5(tmp6[28]).AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_completed_badge_toast")) {
-              obj = { type: null, surfaceId: null, isTargeted: false };
-              obj[0] = tmp5(tmp6[30]).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION;
-              obj[1] = tmp5(tmp6[31]).QuestContent.QUEST_BADGE;
-              tmp5(tmp6[29]).captureAdUserAction(obj);
-              const tmp5Result1 = tmp5(tmp6[29]);
+    obj3 = {
+      accessibilityRole: "image",
+      accessibilityLabel: formatToPlainStringResult,
+      onPress() {
+          if (null == closure_4) {
+            if (id !== getBadgeName(BadgeId.BadgeId.GIFTING)) {
+              let info_label;
+              if (catalogBadge != null) {
+                info_label = catalogBadge.info_label;
+              }
+              let tmp5Result = tmp5(1925);
+              let tmp10 = info_label;
+              if (tmp5Result.isNullOrEmpty(info_label)) {
+                tmp10 = label;
+              }
+              let obj = { key: null, content: null, icon: null };
+              const _HermesInternal = HermesInternal;
+              obj.key = "PROFILE_BADGE-" + label;
+              obj.content = tmp10;
+              obj.icon = source;
+              ToastActionCreatorsDefault.open(obj);
+              if (tmp3 === tmp5(8242).QUEST_COMPLETED_BADGE) {
+                tmp5Result = tmp5(11192);
+                if (tmp5Result.shouldMigrateToAdAnalyticsInterface(tmp5(11192).AdAnalyticsInterfaceExperimentStep.STEP_4_VIEWED_NON_IMPRESSION, "quest_completed_badge_toast")) {
+                  obj = { type: tmp5(11197).AdUserActionType.VIEW_INTERNAL_SURFACE_IMPRESSION, surfaceId: tmp5(5447).QuestContent.QUEST_BADGE, isTargeted: false };
+                  tmp5(11193).captureAdUserAction(obj);
+                  const tmp5Result1 = tmp5(11193);
+                } else {
+                  const obj1 = {};
+                  const tmp11Result = tmp11(1242);
+                  const merged = Object.assign(tmp5(7728).getContentProperties(tmp5(5447).QuestContent.QUEST_BADGE));
+                  let advertisingId = null;
+                  if (null != closure_5) {
+                    advertisingId = null;
+                    if (tmp5Result3.isIOS()) {
+                      advertisingId = tmp19.advertisingId;
+                    }
+                    tmp5Result3 = tmp5(1115);
+                  }
+                  obj1.apple_advertising_id = advertisingId;
+                  let advertisingId1 = null;
+                  if (null != closure_5) {
+                    advertisingId1 = null;
+                    if (tmp5Result4.isAndroid()) {
+                      advertisingId1 = tmp19.advertisingId;
+                    }
+                    tmp5Result4 = tmp5(1115);
+                  }
+                  obj1.android_advertising_id = advertisingId1;
+                  obj1.is_targeted = false;
+                  tmp11Result.track(constants.QUEST_CONTENT_VIEWED, obj1);
+                  const tmp5Result2 = tmp5(7728);
+                }
+              }
+              tmp11 = importDefault;
             } else {
-              obj1 = {};
-              const tmp11Result = tmp11(tmp6[32]);
-              const merged = Object.assign(tmp5(tmp6[33]).getContentProperties(tmp5(tmp6[31]).QuestContent.QUEST_BADGE));
-              let advertisingId = null;
-              if (null != closure_5) {
-                advertisingId = null;
-                if (tmp5Result3.isIOS()) {
-                  advertisingId = tmp19.advertisingId;
-                }
-                tmp5Result3 = tmp5(tmp6[34]);
-              }
-              obj1.apple_advertising_id = advertisingId;
-              let advertisingId1 = null;
-              if (null != closure_5) {
-                advertisingId1 = null;
-                if (tmp5Result4.isAndroid()) {
-                  advertisingId1 = tmp19.advertisingId;
-                }
-                tmp5Result4 = tmp5(tmp6[34]);
-              }
-              obj1.android_advertising_id = advertisingId1;
-              obj1.is_targeted = false;
-              tmp11Result.track(closure_1_10.QUEST_CONTENT_VIEWED, obj1);
-              const tmp5Result2 = tmp5(tmp6[33]);
+              const obj2 = { screen: constants2.PREMIUM_GIFTING, params: {} };
+              tmp5(7382).openUserSettings(obj2);
+              const tmp5Result5 = tmp5(7382);
             }
+            tmp3 = id;
+          } else {
+            tmp();
           }
-          const obj4 = catalogBadge(tmp6[26]);
-          tmp11 = catalogBadge;
-        } else {
-          const obj2 = { screen: null, params: null };
-          obj2[0] = closure_1_11.PREMIUM_GIFTING;
-          obj2[1] = {};
-          tmp5(tmp6[24]).openUserSettings(obj2);
-          const tmp5Result5 = tmp5(tmp6[24]);
-        }
-        tmp3 = id;
-      } else {
-        tmp();
-      }
+        },
+      ref,
+      children: null
     };
-    obj3[3] = ref;
     if (null != source) {
       let obj4 = { style: null, source: null };
       items = [, ];
       items[0] = items.badge;
       items[1] = tmp;
-      obj4[0] = items;
-      obj4[1] = source;
+      obj4.style = items;
+      obj4.source = source;
       let tmp24Result = tmp24(closure_4, obj4);
     } else {
       tmp24Result = null;
       if (null != catalogBadge) {
-        const obj5 = { badge: null, size: null };
-        obj5[0] = catalogBadge;
-        obj5[1] = badgeSize;
+        const obj5 = { badge: catalogBadge, size: badgeSize };
         tmp24Result = tmp24(catalogBadge(tmp4[23]), obj5);
       }
     }
-    obj3[4] = tmp24Result;
+    obj3.children = tmp24Result;
     PressableOpacity = tmp24(PressableOpacity, obj3);
     obj3 = [PressableOpacity, tmp10, tmp16];
-    obj2[0] = obj3;
+    obj2.children = obj3;
   } else {
-    const obj6 = { accessible: true, accessibilityRole: "image", accessibilityLabel: null, ref: null, children: null };
-    obj6[2] = formatToPlainStringResult;
-    obj6[3] = ref;
+    const obj6 = { accessible: true, accessibilityRole: "image", accessibilityLabel: formatToPlainStringResult, ref, children: null };
     if (null != source) {
       const obj7 = { style: null, source: null };
       const items1 = [items.badge, tmp];
-      obj7[0] = items1;
-      obj7[1] = source;
+      obj7.style = items1;
+      obj7.source = source;
       tmp24Result = tmp24(closure_4, obj7);
     } else {
       tmp24Result = null;
       if (null != catalogBadge) {
-        const obj8 = { badge: null, size: null };
-        obj8[0] = catalogBadge;
-        obj8[1] = badgeSize;
+        const obj8 = { badge: catalogBadge, size: badgeSize };
         tmp24Result = tmp24(catalogBadge(tmp4[23]), obj8);
       }
     }
-    obj6[4] = tmp24Result;
+    obj6.children = tmp24Result;
     const items2 = [tmp24(closure_5, obj6), tmp10, tmp16];
-    obj2[0] = items2;
+    obj2.children = items2;
     return tmp22(tmp23, obj2);
   }
 }
@@ -436,22 +408,22 @@ class ProfileBadgeRows {
     badgeRowHorizontalPadding = tmp2.badgeRowHorizontalPadding;
     tmp4 = userId;
     tmp5 = style;
-    obj = require("apexExperiment");
+    obj = userId(style[35]);
     isBadgeManagementEnabled = obj.useIsBadgeManagementEnabled({ location: "ProfileBadgeRows" });
     closure_8 = isBadgeManagementEnabled;
     obj2 = themeType;
     items = [];
     items[0] = badges;
-    closure_9 = themeType.useMemo(() => userId(style[36]).getLegacyIconUrlByBadgeId(badges), items);
+    closure_9 = themeType.useMemo(() => BadgeUtils.getLegacyIconUrlByBadgeId(badges), items);
     mapped = badges.map((id) => {
       let obj = { id: id.id, userId, source: null, label: null, badgeSize: null, themeType: null, showToastOnPress: null };
-      obj = { uri: userId(style[36]).getProfileBadgeIconUrl(id) };
-      obj[2] = obj;
-      obj[3] = id.description;
-      obj[4] = badgeSize;
-      obj[5] = themeType;
-      obj[6] = showToastOnPress;
-      return closure_1_13(closure_1_21, obj, id.id);
+      obj = { uri: BadgeUtils.getProfileBadgeIconUrl(id) };
+      obj.source = obj;
+      obj.label = id.description;
+      obj.badgeSize = badgeSize;
+      obj.themeType = themeType;
+      obj.showToastOnPress = showToastOnPress;
+      return map1(ProfileBadge, obj, id.id);
     });
     closure_10 = mapped;
     if (isTryItOut) {
@@ -462,9 +434,9 @@ class ProfileBadgeRows {
       tmp8 = ProfileBadge;
       obj = { source: null, id: "premium", userId: null, label: null, badgeSize: null, showToastOnPress: null };
       tmp9 = badges;
-      obj[0] = require("registerAsset");
-      obj[2] = userId;
-      intl = require("getSystemLocale").intl;
+      obj.source = badges(tmp5[37]);
+      obj.userId = userId;
+      intl = tmp4(tmp5[20]).intl;
       obj1 = { date: null };
       tmp10 = globalThis;
       _Date = Date;
@@ -472,13 +444,13 @@ class ProfileBadgeRows {
       tmp12 = new.target;
       date = new Date();
       tmp14 = date;
-      obj1[0] = date;
-      obj[3] = intl.formatToPlainString(require("getSystemLocale").t["8zbGNR"], obj1);
-      obj[4] = badgeSize;
-      obj[5] = showToastOnPress;
+      obj1.date = date;
+      obj.label = intl.formatToPlainString(tmp4(tmp5[20]).t["8zbGNR"], obj1);
+      obj.badgeSize = badgeSize;
+      obj.showToastOnPress = showToastOnPress;
       arr = mapped.push(jsx(ProfileBadge, obj));
     }
-    width = require("useWindowDimensions")().width;
+    width = badges(tmp5[38])().width;
     items1 = [, , , , ];
     items1[0] = mapped;
     items1[1] = badgeRowHorizontalPadding;
@@ -494,39 +466,38 @@ class ProfileBadgeRows {
         const _Array = Array;
         const obj = { length: null };
         const _Math2 = Math;
-        obj[0] = Math.ceil(mapped.length / rounded);
-        return Array.from(obj, (arg0, arg1) => closure_1_10.slice(arg1 * rounded, (arg1 + 1) * rounded));
+        obj.length = Math.ceil(mapped.length / rounded);
+        return Array.from(obj, (arg0, arg1) => mapped.slice(arg1 * rounded, (arg1 + 1) * rounded));
       }
     }, items1);
     if (isBadgeManagementEnabled) {
       mapped1 = undefined;
       if (catalogBadges != null) {
         num = 0;
-        substr = require("module_0");
+        substr = catalogBadges.slice(0, tmp4(tmp5[36]).MAX_DISPLAYED_PROFILE_BADGES);
         mapped1 = substr.map((badge_id) => {
-          const value = closure_9.get(badge_id.badge_id);
-          let obj = badgeSize(badge_id.badge_id);
-          if (obj.startsWith(closure_1_12)) {
-            obj = closure_1_12;
+          value = closure_9.get(badge_id.badge_id);
+          let obj = getBadgeName(badge_id.badge_id);
+          if (obj.startsWith(DEFAULT_PREMIUM_BADGE_ID)) {
+            obj = DEFAULT_PREMIUM_BADGE_ID;
           }
           obj = { id: obj, userId, catalogBadge: badge_id, source: null, label: null, badgeSize: null, themeType: null, showToastOnPress: null };
           let tmp5;
           if (null != value) {
-            obj = { uri: null };
-            obj[0] = value;
+            obj = { uri: value };
             tmp5 = obj;
           }
-          obj[3] = tmp5;
-          obj[4] = badge_id.name;
-          obj[5] = badgeSize;
-          obj[6] = themeType;
-          obj[7] = showToastOnPress;
-          return closure_1_13(closure_1_21, obj, badge_id.badge_id);
+          obj.source = tmp5;
+          obj.label = badge_id.name;
+          obj.badgeSize = badgeSize;
+          obj.themeType = themeType;
+          obj.showToastOnPress = showToastOnPress;
+          return map1(ProfileBadge, obj, badge_id.badge_id);
         });
       }
       if (mapped1 == null) {
         num2 = 0;
-        mapped1 = require("module_0");
+        mapped1 = mapped.slice(0, tmp4(tmp5[36]).MAX_DISPLAYED_PROFILE_BADGES);
       }
       length = undefined;
       if (catalogBadges != null) {
@@ -544,35 +515,35 @@ class ProfileBadgeRows {
         obj2 = { style: null, children: null };
         items2 = [];
         items2[0] = tmp.badges;
-        obj2[0] = items2;
+        obj2.style = items2;
         obj3 = { style: null, children: null };
         items3 = [, , , ];
         ({ badgeRow: arr9[0], limitedBadgeRow: arr9[1] } = tmp);
         obj4 = { paddingHorizontal: null };
-        obj4[0] = badgeRowHorizontalPadding;
+        obj4.paddingHorizontal = badgeRowHorizontalPadding;
         items3[2] = obj4;
         items3[3] = style;
-        obj3[0] = items3;
+        obj3.style = items3;
         items4 = [, ];
         items4[0] = mapped1;
         tmp24Result = diff > 0;
         tmp26 = jsxs;
         if (tmp24Result) {
           obj5 = { variant: null, color: "mobile-text-heading-primary", accessibilityLabel: null, children: null };
-          obj5[0] = tmp2.textVariant;
-          intl2 = require("getSystemLocale").intl;
+          obj5.variant = tmp2.textVariant;
+          intl2 = tmp4(tmp5[20]).intl;
           obj6 = { overflow_count: null };
-          obj6[0] = diff;
-          obj5[2] = intl2.formatToPlainString(require("getSystemLocale").t.eIHfGZ, obj6);
+          obj6.overflow_count = diff;
+          obj5.accessibilityLabel = intl2.formatToPlainString(tmp4(tmp5[20]).t.eIHfGZ, obj6);
           tmp22 = globalThis;
           _HermesInternal = HermesInternal;
           str = "+";
-          obj5[3] = "+" + diff;
-          tmp24Result = tmp24(require("Text").Text, obj5);
+          obj5.children = "+" + diff;
+          tmp24Result = tmp24(tmp4(tmp5[15]).Text, obj5);
         }
         items4[1] = tmp24Result;
-        obj3[1] = items4;
-        obj2[1] = tmp26(tmp25, obj3);
+        obj3.children = items4;
+        obj2.children = tmp26(tmp25, obj3);
         tmp24Result1 = tmp24(tmp25, obj2);
       }
       return tmp24Result1;
@@ -582,14 +553,15 @@ class ProfileBadgeRows {
       obj7 = { style: null, children: null };
       items5 = [];
       items5[0] = tmp.badges;
-      obj7[0] = items5;
-      obj7[1] = memo.map((children) => {
-        let obj = { style: items, children };
-        items = [badgeRow.badgeRow, , ];
+      obj7.style = items5;
+      obj7.children = memo.map((children, index) => {
+        let obj = { style: null, children };
+        const items = [badgeRow.badgeRow, , ];
         obj = { paddingHorizontal: badgeRowHorizontalPadding };
         items[1] = obj;
         items[2] = style;
-        return closure_1_13(badgeRow, obj, arg1);
+        obj.style = items;
+        return map1(hasOwnProperty, obj, index);
       });
       return jsx(closure_5, obj7);
     }
@@ -600,8 +572,8 @@ function GuildTag(style) {
   if (showToastOnPress === undefined) {
     showToastOnPress = false;
   }
-  const tmp = callback3();
-  let obj = guildHasTag;
+  const tmp = closure_16();
+  let obj = GuildTagUtils;
   let primaryGuild;
   if (user != null) {
     primaryGuild = user.primaryGuild;
@@ -622,56 +594,58 @@ function GuildTag(style) {
     if (null != guildId) {
       obj = { style: null, children: null };
       const items = [tmp.guildTag, , ];
-      obj = { minHeight: null, paddingHorizontal: null };
-      obj[0] = badgeSize + 4;
-      obj[1] = guildTagHorizontalPadding;
+      obj = { minHeight: badgeSize + 4, paddingHorizontal: guildTagHorizontalPadding };
       items[1] = obj;
       items[2] = style.style;
-      obj[0] = items;
-      obj1 = { userId: null, disabledTooltip: null, containerStyles: null, textStyle: null, badgeSize: null, textVariant: null };
-      obj1[0] = user.id;
-      obj1[1] = !showToastOnPress;
-      obj1[2] = tmp.transparentBackground;
-      const obj2 = { lineHeight: null };
-      obj2[0] = tmp8;
-      obj1[3] = obj2;
-      obj1[4] = guildTagBadgeSize;
-      obj1[5] = guildTagTextVariant;
-      obj[1] = callback(memoResult1Default, obj1);
-      tmp9 = callback(closure_5, obj);
+      obj.style = items;
+      const obj1 = { userId: user.id, disabledTooltip: !showToastOnPress, containerStyles: tmp.transparentBackground, textStyle: null, badgeSize: null, textVariant: null };
+      const obj2 = { lineHeight: tmp8 };
+      obj1.textStyle = obj2;
+      obj1.badgeSize = guildTagBadgeSize;
+      obj1.textVariant = guildTagTextVariant;
+      obj.children = map1(GuildTagDefault, obj1);
+      tmp9 = map1(hasOwnProperty, obj);
     }
   }
   return tmp9;
 }
-({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ DIVIDER_DOT: error, PROFILE_SIDE_PADDING: closure_8, UserProfileThemeTypes } = ARBITRARY_LARGE_OFFSET);
-({ AnalyticEvents: c10, UserSettingsSections: unpackModuleId } = ME);
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const getBadgeName = fn(8183).getBadgeName;
+let Constants = fn(7208);
+({ DIVIDER_DOT: closure_7, PROFILE_SIDE_PADDING: closure_8, UserProfileThemeTypes } = Constants);
+Constants = fn(1074);
+({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
+const GuildTagBadgeSize = fn(7944).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8194).DEFAULT_PREMIUM_BADGE_ID;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-createCacheKey = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: null, transparentBackground: null, badge: null, badges: null, badgeRow: null, limitedBadgeRow: null };
-createCacheKey = { alignSelf: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, columnGap: 4 };
-createCacheKey[6] = createCacheKey;
-createCacheKey[7] = { backgroundColor: "transparent" };
-createCacheKey[8] = { resizeMode: "contain" };
-createCacheKey[9] = { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 };
-createCacheKey[10] = { borderRadius: ThemesDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
-createCacheKey[11] = { alignItems: "center" };
-let closure_16 = createCacheKey.createStyles(createCacheKey);
+fn(4560);
+let createStyles = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, displayNameText: { flexShrink: 1, minWidth: 0 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: null, transparentBackground: null, badge: null, badges: null, badgeRow: null, limitedBadgeRow: null };
+createStyles = { alignSelf: "center", justifyContent: "center", borderRadius: nativeDefault.radii.sm, columnGap: 4 };
+createStyles.guildTag = createStyles;
+createStyles.transparentBackground = { backgroundColor: "transparent" };
+createStyles.badge = { resizeMode: "contain" };
+createStyles.badges = { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 };
+createStyles.badgeRow = { borderRadius: nativeDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
+createStyles.limitedBadgeRow = { alignItems: "center" };
+let value = createStyles.createStyles(createStyles);
 let closure_17 = { headingVariant: "heading-xl/bold", textVariant: "text-md/normal", badgeSize: 20, badgeRowHorizontalPadding: 7, guildTagBadgeSize: GuildTagBadgeSize.SIZE_16, guildTagTextVariant: "text-sm/medium", guildTagHorizontalPadding: 8 };
-let closure_18 = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "heading-lg/bold", textVariant: "text-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "text-xs/medium", guildTagHorizontalPadding: 6 } };
-let obj1 = { borderRadius: ThemesDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
-let obj2 = { headingVariant: "heading-lg/bold", textVariant: "text-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "text-xs/medium", guildTagHorizontalPadding: 6 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryInfo.tsx");
+const collapsedCategories = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "heading-lg/bold", textVariant: "text-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "text-xs/medium", guildTagHorizontalPadding: 6 } };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryInfo.tsx");
 
 export default function UserProfilePrimaryInfo(arg0) {
   ({ user, displayName, themeType, showBadgeToastOnPress } = arg0);
   ({ guildId, pronouns, style, badges, catalogBadges, badgeContainerBackground, onPressDisplayName, displayNameAccessibilityHint, displayNameAccessibilityRole, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint, showChevron, pendingDisplayNameStyles } = arg0);
-  const tmp = callback3();
+  const tmp = closure_16();
   let obj = { backgroundColor: badgeContainerBackground };
-  obj1 = nameFromUserDefault;
+  let obj1 = UserUtilsDefault;
   const name = obj1.useName(user);
-  let obj2 = nameFromUserDefault;
-  obj = { style: items, children: null };
-  items = [tmp.container, style];
+  let obj2 = UserUtilsDefault;
+  obj = { style: null, children: null };
+  const items = [tmp.container, style];
+  obj.style = items;
   obj = { user, guildId, name: null, themeType: null, onPress: null, accessibilityHint: null, displayNameAccessibilityRole: null, showChevron: null, pendingDisplayNameStyles: null };
   let tmp8 = name;
   const userTag = obj2.useUserTag(user);
@@ -681,26 +655,26 @@ export default function UserProfilePrimaryInfo(arg0) {
     }
     tmp8 = displayName;
   }
-  obj[2] = tmp8;
-  obj[3] = themeType;
-  obj[4] = onPressDisplayName;
-  obj[5] = displayNameAccessibilityHint;
-  obj[6] = displayNameAccessibilityRole;
-  obj[7] = showChevron;
-  obj[8] = pendingDisplayNameStyles;
-  const items1 = [closure_13(DisplayName, obj), ];
+  obj.name = tmp8;
+  obj.themeType = themeType;
+  obj.onPress = onPressDisplayName;
+  obj.accessibilityHint = displayNameAccessibilityHint;
+  obj.displayNameAccessibilityRole = displayNameAccessibilityRole;
+  obj.showChevron = showChevron;
+  obj.pendingDisplayNameStyles = pendingDisplayNameStyles;
+  const items1 = [map1(DisplayName, obj), ];
   obj1 = { style: tmp.details, children: null };
   let tmp11 = null;
   if (!user.isProvisional) {
     tmp11 = userTag;
   }
-  const items2 = [closure_13(UserTagAndPronouns, { userTag: tmp11, pronouns, themeType, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint }), closure_13(GuildTag, { user, themeType, style: obj, showToastOnPress: showBadgeToastOnPress }), ];
+  const items2 = [map1(UserTagAndPronouns, { userTag: tmp11, pronouns, themeType, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint }), map1(GuildTag, { user, themeType, style: obj, showToastOnPress: showBadgeToastOnPress }), ];
   obj2 = { userId: user.id, badges, catalogBadges, style: obj, themeType, showToastOnPress: showBadgeToastOnPress };
-  items2[2] = closure_13(ProfileBadgeRows, obj2);
-  obj1[1] = items2;
-  items1[1] = closure_14(closure_5, obj1);
-  obj[1] = items1;
-  return closure_14(closure_5, obj);
+  items2[2] = map1(ProfileBadgeRows, obj2);
+  obj1.children = items2;
+  items1[1] = closure_1_14(hasOwnProperty, obj1);
+  obj.children = items1;
+  return closure_1_14(hasOwnProperty, obj);
 };
 export { DisplayName };
 export { UserTagAndPronouns };

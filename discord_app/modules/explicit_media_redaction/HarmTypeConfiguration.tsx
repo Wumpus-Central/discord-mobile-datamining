@@ -1,26 +1,26 @@
-// === Module 7295: ContentHarmType ===
+// === Module 7295: HarmTypeConfiguration ===
 
-// Module 7295 (ContentHarmType)
-import set from "set" /* 2 */;
-import create from "create" /* 1187 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4791 */;
-import ObscureReason from "ObscureReason" /* 7296 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 7297 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 7301 */;
-import ME from "ME" /* 1074 */;
+// Module 7295 (HarmTypeConfiguration)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import MediaTypes from "MediaTypes" /* 4791 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7296 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7297 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7298 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7301 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ MessageAttachmentFlags, MessageEmbedFlags } = ME);
+({ MessageAttachmentFlags, MessageEmbedFlags } = Constants);
 let obj = { EXPLICIT: "explicit", GORE: "gore", SELF_HARM: "self_harm" };
 obj = { NONE: 0, [0]: "NONE", EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM", ALL: 7, [7]: "ALL" };
 obj = {};
 obj[obj.EXPLICIT] = {
   harmType: obj.EXPLICIT,
-  obscureReason: ObscureReason.ObscureReason.EXPLICIT_CONTENT,
+  obscureReason: ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA,
   embedFlag: MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA,
-  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.EXPLICIT,
+  genericMediaFlag: MediaTypes.ContentScanFlags.EXPLICIT,
   bitmask: obj.EXPLICIT,
   devSettingKey: "obscure_blur_effect_explicit_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -36,72 +36,72 @@ obj[obj.EXPLICIT] = {
       prop1 = prop.explicitContentGuilds;
     }
     const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop1;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = prop1;
     let prop2;
     if (prop != null) {
       prop2 = prop.explicitContentFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop2;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = prop2;
     let prop3;
     if (prop != null) {
       prop3 = prop.explicitContentNonFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop3;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop3;
     return obj;
   },
   getUserSettingsWithDefaults(arg0) {
     let tmp = arg0;
     if (arg0 == null) {
-      const ExplicitContentSettings3 = explicitContentFromProto.ExplicitContentSettings;
+      const ExplicitContentSettings3 = UserSettings.ExplicitContentSettings;
       const setting = ExplicitContentSettings3.getSetting();
       let prop;
       if (setting != null) {
         prop = setting.explicitContentGuilds;
       }
       let obj = {};
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = prop;
       const ExplicitContentSettings = tmp12(1935).ExplicitContentSettings;
       const setting1 = ExplicitContentSettings.getSetting();
       let prop1;
       if (setting1 != null) {
         prop1 = setting1.explicitContentFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop1;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = prop1;
       const ExplicitContentSettings2 = tmp12(1935).ExplicitContentSettings;
       const setting2 = ExplicitContentSettings2.getSetting();
       let prop2;
       if (setting2 != null) {
         prop2 = setting2.explicitContentNonFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop2;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop2;
       tmp = obj;
     }
     let tmp9;
     if (tmp != null) {
       tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
     }
-    obj = { [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]: resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }) };
+    obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }) };
     let tmp7Result = tmp7(7298);
     let tmp10;
     if (tmp != null) {
       tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
     tmp7Result = tmp7(7298);
     let tmp11;
     if (tmp != null) {
       tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;
   }
 };
 const obj1 = {
   harmType: obj.EXPLICIT,
-  obscureReason: ObscureReason.ObscureReason.EXPLICIT_CONTENT,
+  obscureReason: ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA,
   embedFlag: MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA,
-  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.EXPLICIT,
+  genericMediaFlag: MediaTypes.ContentScanFlags.EXPLICIT,
   bitmask: obj.EXPLICIT,
   devSettingKey: "obscure_blur_effect_explicit_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -117,72 +117,72 @@ const obj1 = {
       prop1 = prop.explicitContentGuilds;
     }
     const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop1;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = prop1;
     let prop2;
     if (prop != null) {
       prop2 = prop.explicitContentFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop2;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = prop2;
     let prop3;
     if (prop != null) {
       prop3 = prop.explicitContentNonFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop3;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop3;
     return obj;
   },
   getUserSettingsWithDefaults(arg0) {
     let tmp = arg0;
     if (arg0 == null) {
-      const ExplicitContentSettings3 = explicitContentFromProto.ExplicitContentSettings;
+      const ExplicitContentSettings3 = UserSettings.ExplicitContentSettings;
       const setting = ExplicitContentSettings3.getSetting();
       let prop;
       if (setting != null) {
         prop = setting.explicitContentGuilds;
       }
       let obj = {};
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = prop;
       const ExplicitContentSettings = tmp12(1935).ExplicitContentSettings;
       const setting1 = ExplicitContentSettings.getSetting();
       let prop1;
       if (setting1 != null) {
         prop1 = setting1.explicitContentFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop1;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = prop1;
       const ExplicitContentSettings2 = tmp12(1935).ExplicitContentSettings;
       const setting2 = ExplicitContentSettings2.getSetting();
       let prop2;
       if (setting2 != null) {
         prop2 = setting2.explicitContentNonFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop2;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop2;
       tmp = obj;
     }
     let tmp9;
     if (tmp != null) {
       tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
     }
-    obj = { [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]: resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }) };
+    obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: tmp9 }) };
     let tmp7Result = tmp7(7298);
     let tmp10;
     if (tmp != null) {
       tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
     tmp7Result = tmp7(7298);
     let tmp11;
     if (tmp != null) {
       tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveExplicitContentSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;
   }
 };
 obj[obj.GORE] = {
   harmType: obj.GORE,
-  obscureReason: ObscureReason.ObscureReason.GORE_CONTENT,
+  obscureReason: ObscureMediaModels.ObscureReason.GORE_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_GORE_CONTENT,
   embedFlag: MessageEmbedFlags.CONTAINS_GORE_CONTENT,
-  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.GORE,
+  genericMediaFlag: MediaTypes.ContentScanFlags.GORE,
   bitmask: obj.GORE,
   devSettingKey: "obscure_blur_effect_gore_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -198,72 +198,72 @@ obj[obj.GORE] = {
       goreContentGuilds = goreContentSettings.goreContentGuilds;
     }
     const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
     let goreContentFriendDm;
     if (goreContentSettings != null) {
       goreContentFriendDm = goreContentSettings.goreContentFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
     let prop;
     if (goreContentSettings != null) {
       prop = goreContentSettings.goreContentNonFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
     return obj;
   },
   getUserSettingsWithDefaults(arg0) {
     let tmp = arg0;
     if (arg0 == null) {
-      const GoreContentSettings3 = explicitContentFromProto.GoreContentSettings;
+      const GoreContentSettings3 = UserSettings.GoreContentSettings;
       const setting = GoreContentSettings3.getSetting();
       let goreContentGuilds;
       if (setting != null) {
         goreContentGuilds = setting.goreContentGuilds;
       }
       let obj = {};
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
       const GoreContentSettings = tmp12(1935).GoreContentSettings;
       const setting1 = GoreContentSettings.getSetting();
       let goreContentFriendDm;
       if (setting1 != null) {
         goreContentFriendDm = setting1.goreContentFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
       const GoreContentSettings2 = tmp12(1935).GoreContentSettings;
       const setting2 = GoreContentSettings2.getSetting();
       let prop;
       if (setting2 != null) {
         prop = setting2.goreContentNonFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
       tmp = obj;
     }
     let tmp9;
     if (tmp != null) {
       tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
     }
-    obj = { [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]: resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: tmp9 }) };
+    obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: tmp9 }) };
     let tmp7Result = tmp7(7301);
     let tmp10;
     if (tmp != null) {
       tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
     tmp7Result = tmp7(7301);
     let tmp11;
     if (tmp != null) {
       tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp11, isDm: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;
   }
 };
 const obj2 = {
   harmType: obj.GORE,
-  obscureReason: ObscureReason.ObscureReason.GORE_CONTENT,
+  obscureReason: ObscureMediaModels.ObscureReason.GORE_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_GORE_CONTENT,
   embedFlag: MessageEmbedFlags.CONTAINS_GORE_CONTENT,
-  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.GORE,
+  genericMediaFlag: MediaTypes.ContentScanFlags.GORE,
   bitmask: obj.GORE,
   devSettingKey: "obscure_blur_effect_gore_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -279,72 +279,72 @@ const obj2 = {
       goreContentGuilds = goreContentSettings.goreContentGuilds;
     }
     const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
     let goreContentFriendDm;
     if (goreContentSettings != null) {
       goreContentFriendDm = goreContentSettings.goreContentFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
     let prop;
     if (goreContentSettings != null) {
       prop = goreContentSettings.goreContentNonFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
     return obj;
   },
   getUserSettingsWithDefaults(arg0) {
     let tmp = arg0;
     if (arg0 == null) {
-      const GoreContentSettings3 = explicitContentFromProto.GoreContentSettings;
+      const GoreContentSettings3 = UserSettings.GoreContentSettings;
       const setting = GoreContentSettings3.getSetting();
       let goreContentGuilds;
       if (setting != null) {
         goreContentGuilds = setting.goreContentGuilds;
       }
       let obj = {};
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = goreContentGuilds;
       const GoreContentSettings = tmp12(1935).GoreContentSettings;
       const setting1 = GoreContentSettings.getSetting();
       let goreContentFriendDm;
       if (setting1 != null) {
         goreContentFriendDm = setting1.goreContentFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = goreContentFriendDm;
       const GoreContentSettings2 = tmp12(1935).GoreContentSettings;
       const setting2 = GoreContentSettings2.getSetting();
       let prop;
       if (setting2 != null) {
         prop = setting2.goreContentNonFriendDm;
       }
-      obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
+      obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop;
       tmp = obj;
     }
     let tmp9;
     if (tmp != null) {
       tmp9 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.GUILD];
     }
-    obj = { [closure_0(closure_1[3]).ContentHarmTypeChannel.GUILD]: resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: tmp9 }) };
+    obj = { [closure_1_0(closure_1_1[3]).ContentHarmTypeChannel.GUILD]: SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: tmp9 }) };
     let tmp7Result = tmp7(7301);
     let tmp10;
     if (tmp != null) {
       tmp10 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp10, isDm: true, isFriend: true });
     tmp7Result = tmp7(7301);
     let tmp11;
     if (tmp != null) {
       tmp11 = tmp[tmp7(undefined, 7297).ContentHarmTypeChannel.NON_FRIEND_DM];
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp11, isDm: true });
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = tmp7Result.resolveGoreSettingWithDefaults({ setting: tmp11, isDm: true });
     return obj;
   }
 };
 obj[obj.SELF_HARM] = {
   harmType: obj.SELF_HARM,
-  obscureReason: ObscureReason.ObscureReason.SELF_HARM_CONTENT,
+  obscureReason: ObscureMediaModels.ObscureReason.SELF_HARM_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_SELF_HARM_CONTENT,
   embedFlag: MessageEmbedFlags.CONTAINS_SELF_HARM_CONTENT,
-  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.SELF_HARM,
+  genericMediaFlag: MediaTypes.ContentScanFlags.SELF_HARM,
   bitmask: obj.SELF_HARM,
   devSettingKey: "obscure_blur_effect_self_harm_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -360,70 +360,28 @@ obj[obj.SELF_HARM] = {
       prop1 = prop.selfHarmContentGuilds;
     }
     const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop1;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = prop1;
     let prop2;
     if (prop != null) {
       prop2 = prop.selfHarmContentFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop2;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = prop2;
     let prop3;
     if (prop != null) {
       prop3 = prop.selfHarmContentNonFriendDm;
     }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop3;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = prop3;
     return obj;
   },
   getUserSettingsWithDefaults() {
     const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD] = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM] = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
+    obj[ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM] = preloaded_user_settings.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
     return obj;
   }
 };
-const obj3 = {
-  harmType: obj.SELF_HARM,
-  obscureReason: ObscureReason.ObscureReason.SELF_HARM_CONTENT,
-  attachmentFlag: MessageAttachmentFlags.CONTAINS_SELF_HARM_CONTENT,
-  embedFlag: MessageEmbedFlags.CONTAINS_SELF_HARM_CONTENT,
-  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.SELF_HARM,
-  bitmask: obj.SELF_HARM,
-  devSettingKey: "obscure_blur_effect_self_harm_content_enabled",
-  getProtoUserSettings(textAndImages) {
-    let prop;
-    if (textAndImages != null) {
-      textAndImages = textAndImages.textAndImages;
-      if (textAndImages != null) {
-        prop = textAndImages.selfHarmContentSettings;
-      }
-    }
-    let prop1;
-    if (prop != null) {
-      prop1 = prop.selfHarmContentGuilds;
-    }
-    const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = prop1;
-    let prop2;
-    if (prop != null) {
-      prop2 = prop.selfHarmContentFriendDm;
-    }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = prop2;
-    let prop3;
-    if (prop != null) {
-      prop3 = prop.selfHarmContentNonFriendDm;
-    }
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = prop3;
-    return obj;
-  },
-  getUserSettingsWithDefaults() {
-    const obj = {};
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD] = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM] = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
-    obj[ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM] = create.ExplicitContentRedaction.UNSET_EXPLICIT_CONTENT_REDACTION;
-    return obj;
-  }
-};
-const result = set.fileFinishedImporting("modules/explicit_media_redaction/HarmTypeConfiguration.tsx");
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/HarmTypeConfiguration.tsx");
 
 export const ContentHarmType = obj;
 export const ContentHarmTypeBitMask = obj;

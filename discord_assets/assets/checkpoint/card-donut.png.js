@@ -1,9 +1,9 @@
-// === Module 8145: metadata ===
+// === Module 8145: ? ===
 
-// Module 8145 (metadata)
-import set from "set" /* 2 */;
+// Module 8145
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/checkpoint/card-donut.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/card-donut.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/28f1a6c284fccda18aa7a5281e3024c576a39012b5e8c9d44d4862e4ff3bc4ec.png";
 export const metadata = { fileBytes: 9652 };

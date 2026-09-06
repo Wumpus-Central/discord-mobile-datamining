@@ -1,11 +1,13 @@
-// === Module 5420: getUnitId ===
+// === Module 5420: ProportionalVadIndicatorExperiment ===
 
-// Module 5420 (getUnitId)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 5420 (ProportionalVadIndicatorExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const obj = { 1: null, 2: { enabled: true }, 3: { enabled: true, disableUI: true }, 4: { enabled: true, disableUI: true, swallowVolumeOnlySpeakingEvents: true } };
+let obj = { kind: "user", name: "2025-12-proportional-vad-indicator", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null, 2: { enabled: true }, 3: { enabled: true, disableUI: true }, 4: { enabled: true, disableUI: true, swallowVolumeOnlySpeakingEvents: true } };
 obj[4] = { enabled: true, disableUI: true, dontEmitVolumeOnlySpeakingEvents: true };
-const tmp2 = getUnitIdDefault({ kind: "user", name: "2025-12-proportional-vad-indicator", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/calls/ProportionalVadIndicatorExperiment.tsx");
+obj.variations = obj;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/calls/ProportionalVadIndicatorExperiment.tsx");
 
-export default tmp2;
+export default apex_ApexExperimentDefault(obj);

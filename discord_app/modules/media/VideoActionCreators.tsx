@@ -1,13 +1,12 @@
-// === Module 17004: updateVideoSize ===
+// === Module 17004: VideoActionCreators ===
 
-// Module 17004 (updateVideoSize)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 17004 (VideoActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media/VideoActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/media/VideoActionCreators.tsx");
 
-export const updateVideoSize = function updateVideoSize(streamId, dimensions, sharedValue2) {
-  let obj = dispatcherDefault;
-  obj = { type: "VIDEO_SIZE_UPDATE", streamId, dimensions, zoom: sharedValue2 };
+export const updateVideoSize = function updateVideoSize(streamId, size, sharedValue2) {
+  const obj = { type: "VIDEO_SIZE_UPDATE", streamId, dimensions: size, zoom: sharedValue2 };
   obj.dispatch(obj);
 };

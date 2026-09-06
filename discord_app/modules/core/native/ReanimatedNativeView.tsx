@@ -1,9 +1,9 @@
-// === Module 7073: set ===
+// === Module 7073: ReanimatedNativeView ===
 
-// Module 7073 (set)
-import set from "set" /* 2 */;
+// Module 7073 (ReanimatedNativeView)
 import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4297 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/core/native/ReanimatedNativeView.tsx");
+const result = size.fileFinishedImporting("modules/core/native/ReanimatedNativeView.tsx");
 
 export default REAWorkaroundViewDefault;

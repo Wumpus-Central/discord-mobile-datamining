@@ -1,11 +1,11 @@
 // === Module 9650: allowPopups ===
 
 // Module 9650 (allowPopups)
-import set from "set" /* 2 */;
-import items3 from "items3" /* 1920 */;
+import Constants from "Constants" /* 1920 */;
+import size from "module_2" /* 2 */;
 
-let closure_0 = items3.APPLICATIONS_WITH_ALLOWED_POPUPS;
-const result = set.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
+Constants.APPLICATIONS_WITH_ALLOWED_POPUPS;
+const result = size.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
 
 export const allowPopups = function allowPopups(application) {
   let prop = application;

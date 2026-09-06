@@ -1,16 +1,16 @@
-// === Module 7603: isStable ===
+// === Module 7603: ReleaseChannelUtils ===
 
-// Module 7603 (isStable)
-import getConstantsAll from "getConstants" /* 1364 */;
-import set from "set" /* 1115 */;
+// Module 7603 (ReleaseChannelUtils)
+import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
 
-const ReleaseChannel = getConstantsAll.getConstants().ReleaseChannel;
-set = set.isAndroid();
-if (set) {
-  set = -1 === ReleaseChannel.indexOf("canary");
+const ReleaseChannel = ClientInfoUtils.getConstants().ReleaseChannel;
+let PlatformUtils = fn(1115);
+PlatformUtils = PlatformUtils.isAndroid();
+if (PlatformUtils) {
+  PlatformUtils = -1 === ReleaseChannel.indexOf("canary");
 }
-if (set) {
-  set = -1 === ReleaseChannel.indexOf("beta");
+if (PlatformUtils) {
+  PlatformUtils = -1 === ReleaseChannel.indexOf("beta");
 }
 let tmp3 = -1 !== ReleaseChannel.indexOf("debug");
 if (!tmp3) {
@@ -18,10 +18,11 @@ if (!tmp3) {
 }
 let tmp4 = !tmp3;
 if (!tmp3) {
-  tmp4 = "stable" === ReleaseChannel || set;
-  const tmp5 = "stable" === ReleaseChannel || set;
+  tmp4 = "stable" === ReleaseChannel || PlatformUtils;
+  const tmp5 = "stable" === ReleaseChannel || PlatformUtils;
 }
-const result = set.fileFinishedImporting("utils/ReleaseChannelUtils.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/ReleaseChannelUtils.native.tsx");
 
 export const isStable = tmp4;
 export const CurrentReleaseChannel = ReleaseChannel;

@@ -1,12 +1,10 @@
-// === Module 11999: prototype ===
+// === Module 11999: UploaderError ===
 
-// Module 11999 (prototype)
-import prototypeDefault from "prototype" /* 4462 */;
+// Module 11999 (UploaderError)
+import APIError from "APIError" /* 4462 */;
 
-prototypeDefault;
-const prototype = function UploaderError(body) {
+const prototype = function UploaderError(body, arg1) {
   tmp = new tmp(body, arg1, new.target, tmp, new.target);
-  // ThrowIfThisInitialized (0x7c)
   tmp.attachments = [];
   if (tmp3) {
     tmp.attachments = body.body.attachments;
@@ -15,6 +13,7 @@ const prototype = function UploaderError(body) {
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("set").fileFinishedImporting("modules/errors/UploaderError.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/UploaderError.tsx");
 
 export default prototype;

@@ -1,89 +1,86 @@
-// === Module 15068: CARD_WIDTH ===
+// === Module 15068: BountyCard ===
 
-// Module 15068 (CARD_WIDTH)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_9 from "set" /* 7702 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+// Module 15068 (BountyCard)
+import nativeDefault from "native" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import BountyStore from "BountyStore" /* 7702 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ AppState: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ AppState: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 188;
-let closure_13 = createCacheKey.createStyles(() => {
+const createStyles = fn(4560);
+let closure_13 = createStyles.createStyles(() => {
   let obj = { tile: null, card: null, cardImage: null, previewVideo: null, badge: null, badgeContent: null, badgeText: null, startButton: null, cardFooter: null, advertiserRow: null, advertiserName: null, advertiserIcon: null };
-  obj = { gap: ThemesDefault.space.PX_12 };
-  obj[0] = obj;
-  obj = { width: c12, height: 313, overflow: "hidden", padding: 0 };
-  obj[1] = obj;
-  const merged = Object.assign(closure_6.absoluteFillObject);
-  obj[2] = {};
-  const merged1 = Object.assign(closure_6.absoluteFillObject);
-  obj[3] = {};
-  obj[4] = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj1 = {};
-  const obj2 = {};
-  const obj3 = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[5] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-  const obj4 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
-  obj[6] = { textTransform: "uppercase", color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  const obj5 = { textTransform: "uppercase", color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[7] = { position: "absolute", bottom: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
-  obj[8] = { flexDirection: "column", alignItems: "flex-start", maxWidth: c12 };
-  const obj6 = { position: "absolute", bottom: ThemesDefault.space.PX_8, left: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
-  obj[9] = { flexDirection: "row", gap: ThemesDefault.space.PX_4, alignItems: "center" };
-  obj[10] = { flexShrink: 1 };
-  obj[11] = { flexShrink: 0, opacity: 0.7 };
+  obj = { gap: nativeDefault.space.PX_12 };
+  obj.tile = obj;
+  const size = { width: v188, height: 313, overflow: "hidden", padding: 0 };
+  obj.card = size;
+  obj = {};
+  const merged = Object.assign(timestampProducer.absoluteFillObject);
+  obj.cardImage = obj;
+  const merged1 = Object.assign(timestampProducer.absoluteFillObject);
+  obj.previewVideo = {};
+  const rect = { position: "absolute", top: nativeDefault.space.PX_12, left: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj.badge = rect;
+  obj.badgeContent = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  const obj1 = {};
+  const obj2 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
+  obj.badgeText = { textTransform: "uppercase", color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  const rect1 = { position: "absolute", bottom: nativeDefault.space.PX_8, left: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
+  obj.startButton = rect1;
+  obj.cardFooter = { flexDirection: "column", alignItems: "flex-start", maxWidth: v188 };
+  const obj3 = { textTransform: "uppercase", color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj.advertiserRow = { flexDirection: "row", gap: nativeDefault.space.PX_4, alignItems: "center" };
+  obj.advertiserName = { flexShrink: 1 };
+  obj.advertiserIcon = { flexShrink: 0, opacity: 0.7 };
   return obj;
 });
-let num = 0;
-if (PlatformTypes.isAndroid()) {
-  num = 150;
-}
-let closure_15 = PlatformTypes.isAndroid();
-let closure_16 = PlatformTypes.isAndroid();
-const memoResult = importAllResult.memo((bounty) => {
+let PlatformUtils = fn(1116);
+PlatformUtils = fn(1116);
+let closure_15 = PlatformUtils.isAndroid();
+PlatformUtils = fn(1116);
+let closure_16 = PlatformUtils.isAndroid();
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/BountyCard.tsx");
+
+export default noop.memo((bounty) => {
   bounty = bounty.bounty;
   const index = bounty.index;
   const isActive = bounty.isActive;
   const onPress = bounty.onPress;
-  let currentState;
+  noop = undefined;
+  currentState = undefined;
   let first;
   closure_7 = undefined;
   closure_8 = undefined;
-  closure_9 = undefined;
+  let ref;
   c10 = undefined;
   c11 = undefined;
-  let tmp = callback();
+  let tmp = closure_13();
   let obj = bounty(isActive[9]);
-  const items = [closure_9];
-  const stateFromStores = obj.useStateFromStores(items, () => ref.isBountyCompleted(bounty.id));
-  obj1 = importAllResult;
+  const items = [ref];
+  const stateFromStores = obj.useStateFromStores(items, () => BountyStore.isBountyCompleted(bounty.id));
+  let obj1 = noop;
   const items1 = [onPress, bounty, index];
-  callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onPress(bounty, index);
   }, items1);
   const videoPreview = bounty.videoPreview;
   let scaledImageUrl = null;
   if (null != bounty.imagePreview) {
     let tmp2Result = tmp2(tmp3[10]);
-    obj = { assetUrl: null, width: null, height: 313 };
-    obj[0] = bounty.imagePreview;
-    obj[1] = c12;
-    scaledImageUrl = tmp2Result.getScaledImageUrl(obj);
+    const size = { assetUrl: bounty.imagePreview, width: v188, height: 313 };
+    scaledImageUrl = tmp2Result.getScaledImageUrl(size);
   }
   if (tmp8) {
     tmp2Result = tmp2(tmp3[10]);
-    obj = { assetUrl: null, width: null, height: 313 };
-    obj[0] = videoPreview;
-    obj[1] = c12;
-    scaledImageUrl = tmp2Result.getScaledFirstFrameImageUrl(obj);
+    const size1 = { assetUrl: videoPreview, width: v188, height: 313 };
+    scaledImageUrl = tmp2Result.getScaledFirstFrameImageUrl(size1);
   }
   [tmp12, c4] = onPress(obj1.useState(false), 2);
   const callback1 = obj1.useCallback(() => {
@@ -109,8 +106,8 @@ const memoResult = importAllResult.memo((bounty) => {
       clearTimeout(tmp.current);
     }
     closure_8.current = setTimeout(() => {
-      callback(true);
-    }, closure_1_14);
+      _undefined2(true);
+    }, num);
   }, []);
   const tmp24 = onPress(obj1.useState(isActive), 2);
   if (isActive !== tmp24[0]) {
@@ -130,15 +127,15 @@ const memoResult = importAllResult.memo((bounty) => {
       tmp19(true);
     }
   }
-  closure_9 = obj1.useRef(null);
+  ref = obj1.useRef(null);
   const items3 = [first];
   const effect = obj1.useEffect(() => {
     if (first) {
       const _setTimeout = setTimeout;
-      closure_9.current = setTimeout(() => {
-        callback2(false);
-        callback(false);
-        closure_9.current = null;
+      ref.current = setTimeout(() => {
+        closure_1_7(false);
+        _undefined2(false);
+        ref.current = null;
       }, 150);
     }
     return () => {
@@ -180,8 +177,8 @@ const memoResult = importAllResult.memo((bounty) => {
   const tmp2Result2 = bounty(isActive[11]);
   [tmp35, c10] = tmp10(obj1.useState("active" === currentState.currentState), 2);
   const effect3 = obj1.useEffect(() => {
-    closure_0 = _undefined2.addEventListener("change", (arg0) => {
-      callback("active" === arg0);
+    closure_0 = _undefined2.addEventListener("change", (event) => {
+      closure_1_10("active" === event);
     });
     return () => {
       closure_0.remove();
@@ -216,7 +213,7 @@ const memoResult = importAllResult.memo((bounty) => {
   }
   c11 = tmp38;
   const items5 = [tmp38];
-  obj1 = { style: tmp.tile, children: null };
+  obj = { style: tmp.tile, children: null };
   const memo = obj1.useMemo(() => {
     let opacity = 1;
     if (c11) {
@@ -224,47 +221,44 @@ const memoResult = importAllResult.memo((bounty) => {
     }
     return { opacity };
   }, items5);
-  const obj2 = { style: tmp.card, radius: token, onPress: callback, android_ripple: { color: "transparent" }, children: null };
+  obj = { style: tmp.card, radius: token, onPress: callback, android_ripple: { color: "transparent" }, children: null };
   if (tmp42Result) {
-    const obj3 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", onReadyForDisplay: null, source: null, style: null, resizeMode: "cover", repeat: true, muted: true, disableFocus: true, paused: null };
-    obj3[3] = callback2;
-    const obj4 = { uri: null };
-    obj4[0] = videoPreview;
-    obj3[4] = obj4;
-    obj3[5] = tmp.previewVideo;
+    obj1 = { accessible: false, importantForAccessibility: "no-hide-descendants", accessibilityRole: "none", onReadyForDisplay: callback2, source: null, style: null, resizeMode: "cover", repeat: true, muted: true, disableFocus: true, paused: null };
+    const obj2 = { uri: videoPreview };
+    obj1.source = obj2;
+    obj1.style = tmp.previewVideo;
     let tmp44 = !tmp35;
     let tmp21Result = tmp21(tmp3[13]);
     if (tmp35) {
       tmp44 = stateFromStores1;
     }
-    obj3[10] = tmp44;
-    tmp42Result = c10(tmp21Result, obj3);
-    const tmp42 = c10;
+    obj1.paused = tmp44;
+    tmp42Result = c10(tmp21Result, obj1);
   }
   const items6 = [tmp42Result, , , ];
-  const obj5 = { style: items7, onLoad: callback1, source: null, resizeMode: "cover" };
-  items7 = [tmp.cardImage, memo];
+  const obj3 = { style: null, onLoad: callback1, source: null, resizeMode: "cover" };
+  const items7 = [tmp.cardImage, memo];
+  obj3.style = items7;
   tmp21Result = tmp21(tmp3[14]);
-  obj5[2] = { uri: scaledImageUrl };
-  items6[1] = c10(tmp21Result, obj5);
-  const obj6 = { style: tmp.badge, children: null };
-  const obj7 = { style: tmp.badgeContent, children: null };
+  obj3.source = { uri: scaledImageUrl };
+  items6[1] = c10(tmp21Result, obj3);
+  const obj4 = { style: tmp.badge, children: null };
+  const obj5 = { style: tmp.badgeContent, children: null };
   let tmp45Result = stateFromStores;
   if (stateFromStores) {
-    const obj8 = { size: "xxs", color: null };
-    obj8[1] = tmp21(tmp3[7]).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT;
-    tmp45Result = tmp45(tmp2(tmp3[15]).CheckmarkSmallBoldIcon, obj8);
+    const obj6 = { size: "xxs", color: tmp21(tmp3[7]).colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+    tmp45Result = tmp45(tmp2(tmp3[15]).CheckmarkSmallBoldIcon, obj6);
   }
   const items8 = [tmp45Result, ];
-  const obj9 = { variant: "text-xs/bold", style: tmp.badgeText, children: null };
+  const obj7 = { variant: "text-xs/bold", style: tmp.badgeText, children: null };
   const intl = tmp2(tmp3[17]).intl;
   const t = tmp2(tmp3[17]).t;
-  obj9[2] = intl.string(stateFromStores ? t.vlGTLf : t["fFIJ/9"]);
-  items8[1] = c10(bounty(isActive[16]).Text, obj9);
-  obj7[1] = items8;
-  obj6[1] = c11(closure_7, obj7);
-  items6[2] = c10(closure_7, obj6);
-  const obj10 = { style: tmp.startButton, children: null };
+  obj7.children = intl.string(stateFromStores ? t.vlGTLf : t["fFIJ/9"]);
+  items8[1] = c10(bounty(isActive[16]).Text, obj7);
+  obj5.children = items8;
+  obj4.children = c11(closure_7, obj5);
+  items6[2] = c10(closure_7, obj4);
+  const obj8 = { style: tmp.startButton, children: null };
   const intl2 = tmp2(tmp3[17]).intl;
   const string = intl2.string;
   const t2 = tmp2(tmp3[17]).t;
@@ -273,28 +267,25 @@ const memoResult = importAllResult.memo((bounty) => {
   } else {
     stringResult = string(t2.LhlgY9);
   }
-  obj10[1] = c10(bounty(isActive[18]).Button, { variant: "secondary-overlay", text: stringResult, onPress: callback });
-  items6[3] = c10(closure_7, obj10);
-  obj2[4] = items6;
-  const items9 = [c11(bounty(isActive[12]).Card, obj2), ];
-  const obj11 = { style: tmp.cardFooter, children: null };
-  const obj12 = { style: tmp.advertiserRow, children: null };
+  obj8.children = c10(bounty(isActive[18]).Button, { variant: "secondary-overlay", text: stringResult, onPress: callback });
+  items6[3] = c10(closure_7, obj8);
+  obj.children = items6;
+  const items9 = [c11(bounty(isActive[12]).Card, obj), ];
+  const obj9 = { style: tmp.cardFooter, children: null };
+  const obj10 = { style: tmp.advertiserRow, children: null };
   const items10 = [c10(bounty(isActive[16]).Text, { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.advertiserName, children: bounty.advertiserName }), ];
-  const obj13 = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.advertiserName, children: bounty.advertiserName };
+  const obj11 = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, style: tmp.advertiserName, children: bounty.advertiserName };
   const tmp10Result = tmp10(obj1.useState("active" === currentState.currentState), 2);
   items10[1] = c10(bounty(isActive[19]).CircleCheckIcon, { size: "xxs", style: tmp.advertiserIcon, color: index(isActive[7]).colors.ICON_SUBTLE });
-  obj12[1] = items10;
-  const items11 = [c11(closure_7, obj12), ];
-  const obj15 = { variant: "text-sm/medium", color: "text-muted", children: null };
+  obj10.children = items10;
+  const items11 = [c11(closure_7, obj10), ];
+  const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl3 = tmp2(tmp3[17]).intl;
-  obj15[2] = intl3.string(bounty(isActive[17]).t.o6FLcF);
-  items11[1] = c10(bounty(isActive[16]).Text, obj15);
-  obj11[1] = items11;
-  items9[1] = c11(closure_7, obj11);
-  obj1[1] = items9;
-  return c11(closure_7, obj1);
+  obj13.children = intl3.string(bounty(isActive[17]).t.o6FLcF);
+  items11[1] = c10(bounty(isActive[16]).Text, obj13);
+  obj9.children = items11;
+  items9[1] = c11(closure_7, obj9);
+  obj.children = items9;
+  return c11(closure_7, obj);
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/BountyCard.tsx");
-
-export default memoResult;
 export const CARD_WIDTH = 188;

@@ -1,21 +1,20 @@
-// === Module 7900: prototype ===
+// === Module 7900: ForumChannelSeenManager ===
 
-// Module 7900 (prototype)
-import set from "set" /* 2 */;
-import markAnalyticsFeedItemSeen from "markAnalyticsFeedItemSeen" /* 7899 */;
-import maybeMarkSeen from "maybeMarkSeen" /* 7901 */;
+// Module 7900 (ForumChannelSeenManager)
+import AnalyticsFeedItemSeenActionCreators from "AnalyticsFeedItemSeenActionCreators" /* 7899 */;
+import AnalyticsFeedItemSeenManager2 from "AnalyticsFeedItemSeenManager" /* 7901 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticsFeedItemSeenManager = maybeMarkSeen.AnalyticsFeedItemSeenManager;
+const AnalyticsFeedItemSeenManager = AnalyticsFeedItemSeenManager2.AnalyticsFeedItemSeenManager;
 const prototype = function ForumChannelSeenManager(channelId) {
   channelId = channelId.channelId;
   let obj = { windowId: channelId.windowId, isPaused: channelId.isPaused, id: null };
-  const FORUM_CHANNEL = _require(7901).AnalyticsFeedTypes.FORUM_CHANNEL;
-  obj[2] = concat(FORUM_CHANNEL, "_", channelId);
+  const FORUM_CHANNEL = require("AnalyticsFeedItemSeenManager").AnalyticsFeedTypes.FORUM_CHANNEL;
+  obj.id = concat(FORUM_CHANNEL, "_", channelId);
   tmp = new tmp(obj, tmp3, tmp2, FORUM_CHANNEL, concat, "_", new.target);
-  // ThrowIfThisInitialized (0x7c)
   _require = tmp;
   tmp.createFlushSeenItemsFunction = function createFlushSeenItemsFunction(IMMEDIATE) {
-    obj = { guildId: obj.guildId, channelId: obj.channelId, sessionId: obj.sessionId, trackedFeedItems: obj.trackedFeedItems, isForcedFlush: null != IMMEDIATE };
+    let obj = { guildId: closure_0.guildId, channelId: closure_0.channelId, sessionId: closure_0.sessionId, trackedFeedItems: closure_0.trackedFeedItems, isForcedFlush: null != IMMEDIATE };
     return () => {
       (function flushSeenItems(trackedFeedItems) {
         trackedFeedItems = trackedFeedItems.trackedFeedItems;
@@ -30,42 +29,35 @@ const prototype = function ForumChannelSeenManager(channelId) {
           let tmp3 = nextResult;
           let seenTimeDestructive = obj.computeSeenTimeDestructive(isForcedFlush);
           if (seenTimeDestructive > 0) {
-            let tmp6 = nextResult;
-            let arr = items.push(tmp3);
-            let tmp8 = seenTimeDestructive;
-            arr = items1.push(tmp5);
+            items.push(tmp3);
+            let arr = items1.push(tmp5);
           }
           continue;
         }
         if (0 !== items.length) {
-          obj = { guildId: null, channelId: null, sessionId: null, postIds: null, additionalTimes: null };
-          obj[0] = guildId;
-          obj[1] = channelId;
-          obj[2] = sessionId;
-          obj[3] = items;
-          obj[4] = items1;
-          const result = callback(table[2]).trackForumChannelSeenBatch(obj);
-          const obj2 = callback(table[2]);
+          obj = { guildId, channelId, sessionId, postIds: items, additionalTimes: items1 };
+          const result = closure_1_0(dependencyMap[2]).trackForumChannelSeenBatch(obj);
+          const obj2 = closure_1_0(dependencyMap[2]);
         }
       })(obj);
     };
   };
   tmp.guildId = channelId.guildId;
   tmp.channelId = channelId;
-  tmp.sessionId = _require(7769).getForumChannelSessionId(channelId);
+  tmp.sessionId = require("TrackingUtils").getForumChannelSessionId(channelId);
   return tmp;
 }.prototype;
 class prototype extends AnalyticsFeedItemSeenManager {
 }
-let result = set.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
+let result = size.fileFinishedImporting("modules/forums/tracking/ForumChannelSeenManager.tsx");
 
 export default prototype;
 export const getForumPostSeenManagerId = function getForumPostSeenManagerId(arg0) {
-  return "" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + arg0;
+  return "" + AnalyticsFeedItemSeenManager2.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + arg0;
 };
 export const markForumPostItemAsSeen = function markForumPostItemAsSeen(parent_id, item, timestampMillis) {
-  const result = markAnalyticsFeedItemSeen.markAnalyticsFeedItemSeen("" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
+  const result = AnalyticsFeedItemSeenActionCreators.markAnalyticsFeedItemSeen("" + AnalyticsFeedItemSeenManager2.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
 };
 export const markForumPostItemAsUnseen = function markForumPostItemAsUnseen(parent_id, item, timestampMillis) {
-  const result = markAnalyticsFeedItemSeen.markAnalyticsFeedItemUnseen("" + maybeMarkSeen.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
+  const result = AnalyticsFeedItemSeenActionCreators.markAnalyticsFeedItemUnseen("" + AnalyticsFeedItemSeenManager2.AnalyticsFeedTypes.FORUM_CHANNEL + "_" + parent_id, item, timestampMillis);
 };

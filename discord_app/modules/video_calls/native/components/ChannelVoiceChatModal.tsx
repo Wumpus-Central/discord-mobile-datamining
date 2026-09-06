@@ -1,34 +1,37 @@
 // === Module 10965: ChannelVoiceChatModal ===
 
 // Module 10965 (ChannelVoiceChatModal)
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
-import _modDef10924 from "module_10924" /* 10924 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import GuildThemeGuildIdOverrideContextDefault from "GuildThemeGuildIdOverrideContext" /* 4443 */;
+import useChannelNameDefault from "useChannelName" /* 4713 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
+import ChannelVoiceChatDefault from "ChannelVoiceChat" /* 10076 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10924 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChatModal.tsx");
 
 export default function ChannelVoiceChatModal(channel) {
   channel = channel.channel;
-  const tmp2 = computeChannelNameDefault(channel);
+  const tmp2 = useChannelNameDefault(channel);
   const items = [channel.id];
-  const effect = React.useEffect(() => {
-    closure_1_1(closure_1_2[3]).updateChatOpen(channel.id, true);
+  const effect = noop.useEffect(() => {
+    ChannelRTCActionCreatorsDefault.updateChatOpen(channel.id, true);
     return () => {
-      closure_1_1(closure_1_2[3]).updateChatOpen(id.id, false);
+      ChannelRTCActionCreatorsDefault.updateChatOpen(id.id, false);
     };
   }, items);
   let str = tmp2;
   if (tmp2 == null) {
     str = "";
   }
-  const tmp5 = _modDef10924;
   return <tmp5 screenKey="StageVoiceChat" title={str} titleIcon={jsx(channel(5097).StageIcon, { size: "sm" })} render={function render() {
     let guild_id = channel.guild_id;
     if (guild_id == null) {
       guild_id = null;
     }
-    return closure_1_4(closure_1_1(closure_1_2[6]).Provider, { value: guild_id, children: closure_1_4(closure_1_1(closure_1_2[7]), { channel, inModal: true }) });
+    return jsx(GuildThemeGuildIdOverrideContextDefault.Provider, { value: guild_id, children: jsx(ChannelVoiceChatDefault, { channel, inModal: true }) });
   }} />;
 };

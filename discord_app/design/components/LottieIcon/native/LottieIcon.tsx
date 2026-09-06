@@ -1,43 +1,46 @@
 // === Module 9948: LottieIcon ===
 
 // Module 9948 (LottieIcon)
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
+import _modDef5530 from "module_5530" /* 5530 */;
+import IconSize from "IconSize" /* 6620 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const forwardRefResult = importAllResult.forwardRef((color, ref) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
+
+export const LottieIcon = noop.forwardRef((color, ref) => {
   ({ animation: require, size } = color);
   if (size === undefined) {
     size = "md";
   }
   let INTERACTIVE_TEXT_DEFAULT = color.color;
   if (INTERACTIVE_TEXT_DEFAULT === undefined) {
-    INTERACTIVE_TEXT_DEFAULT = layers(autoPlay[3]).colors.INTERACTIVE_TEXT_DEFAULT;
+    INTERACTIVE_TEXT_DEFAULT = nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT;
   }
   let num = color.opacity;
   if (num === undefined) {
     num = 1;
   }
   ({ markers, layers } = color);
-  autoPlay = color.autoPlay;
-  let start;
-  c4 = undefined;
-  let num2;
+  const autoPlay = color.autoPlay;
   let sum1;
   ref = undefined;
   let enabled;
   let token;
   let callback;
   ({ width, height, useLottieDefaultColors } = color);
-  let tmp5 = require(autoPlay[4]).ICON_SIZE[size];
-  const found = markers.find((name) => name.name === closure_0);
-  start = found.start;
+  let tmp5 = IconSize.ICON_SIZE[size];
+  const found = markers.find((name) => name.name === require);
+  const start = found.start;
   const sum = start + found.duration;
   c4 = sum;
   const found1 = markers.find((name) => "easteregg" === name.name);
-  num2 = undefined;
+  let num2;
   if (found1 != null) {
     num2 = found1.start;
   }
@@ -52,25 +55,25 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
     num3 = -1;
   }
   sum1 = num2 + num3;
-  let obj = start;
-  ref = start.useRef(null);
-  enabled = start.useContext(tmp3(tmp4[5]).AccessibilityPreferencesContext).reducedMotion.enabled;
+  let obj = noop;
+  ref = noop.useRef(null);
+  enabled = noop.useContext(tmp3(4279).AccessibilityPreferencesContext).reducedMotion.enabled;
   let tmp12 = tmp5;
   if ("custom" === size) {
     tmp12 = width;
   }
-  obj = { width: tmp12, height: null };
+  size = { width: tmp12, height: null };
   if ("custom" === size) {
     tmp5 = height;
   }
-  obj[1] = tmp5;
-  token = require(autoPlay[6]).useToken(INTERACTIVE_TEXT_DEFAULT);
+  size.height = tmp5;
+  token = useToken.useToken(INTERACTIVE_TEXT_DEFAULT);
   const items = [token, layers];
   const items1 = [enabled, start, sum, num2, sum1];
   const memo = obj.useMemo(() => {
     let mapped;
     if (null != token) {
-      mapped = layers.map((keypath) => ({ keypath, color: closure_9 }));
+      mapped = layers.map((keypath) => ({ keypath, color }));
     }
     return mapped;
   }, items);
@@ -102,7 +105,7 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
     }
   }), items2);
   const items3 = [start, autoPlay, callback];
-  obj = { style: obj, children: null };
+  obj = { style: size, children: null };
   const callback1 = obj.useCallback(() => {
     if (autoPlay) {
       callback();
@@ -113,20 +116,16 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
       }
     }
   }, items3);
-  obj1 = { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null };
+  obj = { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null };
   let tmp21;
-  const tmp19 = c4;
-  const tmp3Result = require(autoPlay[6]);
+  const tmp3Result = useToken;
   if (!useLottieDefaultColors) {
     tmp21 = memo;
   }
-  obj1[2] = tmp21;
-  obj1[5] = callback1;
-  const items4 = [obj, { opacity: num }];
-  obj1[7] = items4;
-  obj[1] = num2(layers(autoPlay[7]), obj1);
-  return num2(tmp19, obj);
+  obj.colorFilters = tmp21;
+  obj.onAnimationLoaded = callback1;
+  const items4 = [size, { opacity: num }];
+  obj.style = items4;
+  obj.children = jsx(_modDef5530, { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null });
+  return <tmp19 ref={ref} source={arg0.dotLottie} colorFilters={null} hardwareAccelerationAndroid loop={false} onAnimationLoaded={null} resizeMode="cover" style={null} />;
 });
-const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
-
-export const LottieIcon = forwardRefResult;

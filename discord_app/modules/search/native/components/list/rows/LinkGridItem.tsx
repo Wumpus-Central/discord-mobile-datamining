@@ -1,34 +1,45 @@
-// === Module 16674: getLinkNodeAtIndex ===
+// === Module 16674: LinkGridItem ===
 
-// Module 16674 (getLinkNodeAtIndex)
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "handleReaction" /* 7281 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16674 (LinkGridItem)
+import _modDef38 from "module_38" /* 38 */;
+import util from "util" /* 1114 */;
+import LinkIcon from "LinkIcon" /* 4503 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ChatIcon from "ChatIcon" /* 5071 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7888 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
+import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11614 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12338 */;
+import SearchMediaImage from "SearchMediaImage" /* 16665 */;
+import SearchResultLinkPreviewMarkup from "SearchResultLinkPreviewMarkup" /* 16675 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SearchMessageStore from "SearchMessageStore" /* 7281 */;
 
-const require = arg1;
-function getLinkNodeAtIndex(content, arg1, arg2) {
-  closure_0 = arg1;
-  closure_1 = arg2;
+require = fn;
+function getLinkNodeAtIndex(content, diff, fn) {
+  closure_0 = diff;
+  closure_1 = fn;
   if (Array.isArray(content)) {
-    const item = content.forEach((arr) => {
-      if (Array.isArray(arr)) {
-        const item = arr.forEach((arr) => {
-          if (Array.isArray(arr)) {
-            const item = arr.forEach((arr) => {
-              if (Array.isArray(arr)) {
-                const item = arr.forEach((arr) => {
-                  if (Array.isArray(arr)) {
-                    const item = arr.forEach(() => { ... });
+    const item = content.forEach((type) => {
+      closure_0 = diff;
+      if (Array.isArray(type)) {
+        const item = type.forEach((type) => {
+          closure_0 = diff;
+          if (Array.isArray(type)) {
+            const item = type.forEach((type) => {
+              closure_0 = diff;
+              if (Array.isArray(type)) {
+                const item = type.forEach((type) => {
+                  closure_0 = diff;
+                  if (Array.isArray(type)) {
+                    const item = type.forEach(() => { ... });
                   } else {
-                    if ("link" !== arr.type) {
-                      if ("channelMention" !== arr.type) {
-                        if (null != arr.content) {
-                          const content = arr.content;
+                    if ("link" !== type.type) {
+                      if ("channelMention" !== type.type) {
+                        if (null != type.content) {
+                          const content = type.content;
                           closure_0 = tmp;
                           closure_1 = tmp2;
                           const _Array = Array;
@@ -38,63 +49,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                             if ("link" !== content.type) {
                               if ("channelMention" !== content.type) {
                                 if (null != content.content) {
-                                  closure_1_14(content.content, tmp, tmp2);
+                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                 }
                               }
                             }
                             if (0 === tmp) {
                               tmp2(content);
                             } else {
-                              closure_1_14(content, tmp - 1, tmp2);
+                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                             }
                           }
                         }
                       }
                     }
                     if (0 === tmp) {
-                      tmp2(arr);
+                      tmp2(type);
                     } else {
                       diff = tmp - 1;
                       closure_0 = diff;
                       closure_1 = tmp2;
                       const _Array2 = Array;
-                      if (Array.isArray(arr)) {
-                        const item2 = arr.forEach(() => { ... });
+                      if (Array.isArray(type)) {
+                        const item2 = type.forEach(() => { ... });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              closure_1_14(arr.content, diff, tmp2);
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              getLinkNodeAtIndex(type.content, diff, tmp2);
                             }
                           }
                         }
                         if (0 === diff) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
-                          closure_1_14(arr, diff - 1, tmp2);
+                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                         }
                       }
                     }
                   }
-                  return arr;
+                  return type;
                 });
               } else {
-                if ("link" !== arr.type) {
-                  if ("channelMention" !== arr.type) {
-                    if (null != arr.content) {
-                      const content = arr.content;
+                if ("link" !== type.type) {
+                  if ("channelMention" !== type.type) {
+                    if (null != type.content) {
+                      const content = type.content;
                       closure_0 = tmp;
                       closure_1 = tmp2;
                       const _Array = Array;
                       if (Array.isArray(content)) {
-                        const item1 = content.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach(() => { ... });
+                        const item1 = content.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
@@ -104,79 +116,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
                         if ("link" !== content.type) {
                           if ("channelMention" !== content.type) {
                             if (null != content.content) {
-                              closure_1_14(content.content, tmp, tmp2);
+                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                             }
                           }
                         }
                         if (0 === tmp) {
                           tmp2(content);
                         } else {
-                          closure_1_14(content, tmp - 1, tmp2);
+                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                         }
                       }
                     }
                   }
                 }
                 if (0 === tmp) {
-                  tmp2(arr);
+                  tmp2(type);
                 } else {
                   diff = tmp - 1;
                   closure_0 = diff;
                   closure_1 = tmp2;
                   const _Array2 = Array;
-                  if (Array.isArray(arr)) {
-                    const item2 = arr.forEach((arr) => {
-                      if (Array.isArray(arr)) {
-                        const item = arr.forEach(() => { ... });
+                  if (Array.isArray(type)) {
+                    const item2 = type.forEach((type) => {
+                      closure_0 = diff;
+                      if (Array.isArray(type)) {
+                        const item = type.forEach(() => { ... });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              const content = arr.content;
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              const content = type.content;
                               closure_0 = tmp;
                               closure_1 = tmp2;
                               const _Array = Array;
@@ -186,83 +199,85 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
                                     if (null != content.content) {
-                                      closure_1_14(content.content, tmp, tmp2);
+                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
                                   tmp2(content);
                                 } else {
-                                  closure_1_14(content, tmp - 1, tmp2);
+                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                 }
                               }
                             }
                           }
                         }
                         if (0 === tmp) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
                           diff = tmp - 1;
                           closure_0 = diff;
                           closure_1 = tmp2;
                           const _Array2 = Array;
-                          if (Array.isArray(arr)) {
-                            const item2 = arr.forEach(() => { ... });
+                          if (Array.isArray(type)) {
+                            const item2 = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  closure_1_14(arr.content, diff, tmp2);
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                 }
                               }
                             }
                             if (0 === diff) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
-                              closure_1_14(arr, diff - 1, tmp2);
+                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                             }
                           }
                         }
                       }
-                      return arr;
+                      return type;
                     });
                   } else {
-                    if ("link" !== arr.type) {
-                      if ("channelMention" !== arr.type) {
-                        if (null != arr.content) {
-                          closure_1_14(arr.content, diff, tmp2);
+                    if ("link" !== type.type) {
+                      if ("channelMention" !== type.type) {
+                        if (null != type.content) {
+                          getLinkNodeAtIndex(type.content, diff, tmp2);
                         }
                       }
                     }
                     if (0 === diff) {
-                      tmp2(arr);
+                      tmp2(type);
                     } else {
-                      closure_1_14(arr, diff - 1, tmp2);
+                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                     }
                   }
                 }
               }
-              return arr;
+              return type;
             });
           } else {
-            if ("link" !== arr.type) {
-              if ("channelMention" !== arr.type) {
-                if (null != arr.content) {
-                  const content = arr.content;
+            if ("link" !== type.type) {
+              if ("channelMention" !== type.type) {
+                if (null != type.content) {
+                  const content = type.content;
                   closure_0 = tmp;
                   closure_1 = tmp2;
                   const _Array = Array;
                   if (Array.isArray(content)) {
-                    const item1 = content.forEach((arr) => {
-                      if (Array.isArray(arr)) {
-                        const item = arr.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach(() => { ... });
+                    const item1 = content.forEach((type) => {
+                      closure_0 = diff;
+                      if (Array.isArray(type)) {
+                        const item = type.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
@@ -272,63 +287,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              const content = arr.content;
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              const content = type.content;
                               closure_0 = tmp;
                               closure_1 = tmp2;
                               const _Array = Array;
                               if (Array.isArray(content)) {
-                                const item1 = content.forEach((arr) => {
-                                  if (Array.isArray(arr)) {
-                                    const item = arr.forEach(() => { ... });
+                                const item1 = content.forEach((type) => {
+                                  closure_0 = diff;
+                                  if (Array.isArray(type)) {
+                                    const item = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          const content = arr.content;
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          const content = type.content;
                                           closure_0 = tmp;
                                           closure_1 = tmp2;
                                           const _Array = Array;
@@ -338,79 +354,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
                                                 if (null != content.content) {
-                                                  closure_1_14(content.content, tmp, tmp2);
+                                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === tmp) {
                                               tmp2(content);
                                             } else {
-                                              closure_1_14(content, tmp - 1, tmp2);
+                                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
                                       diff = tmp - 1;
                                       closure_0 = diff;
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
-                                      if (Array.isArray(arr)) {
-                                        const item2 = arr.forEach(() => { ... });
+                                      if (Array.isArray(type)) {
+                                        const item2 = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              closure_1_14(arr.content, diff, tmp2);
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              getLinkNodeAtIndex(type.content, diff, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === diff) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
-                                          closure_1_14(arr, diff - 1, tmp2);
+                                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
-                                  return arr;
+                                  return type;
                                 });
                               } else {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
                                     if (null != content.content) {
-                                      closure_1_14(content.content, tmp, tmp2);
+                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
                                   tmp2(content);
                                 } else {
-                                  closure_1_14(content, tmp - 1, tmp2);
+                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                 }
                               }
                             }
                           }
                         }
                         if (0 === tmp) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
                           diff = tmp - 1;
                           closure_0 = diff;
                           closure_1 = tmp2;
                           const _Array2 = Array;
-                          if (Array.isArray(arr)) {
-                            const item2 = arr.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach(() => { ... });
+                          if (Array.isArray(type)) {
+                            const item2 = type.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
@@ -420,99 +437,101 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  closure_1_14(arr.content, diff, tmp2);
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                 }
                               }
                             }
                             if (0 === diff) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
-                              closure_1_14(arr, diff - 1, tmp2);
+                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                             }
                           }
                         }
                       }
-                      return arr;
+                      return type;
                     });
                   } else {
                     if ("link" !== content.type) {
                       if ("channelMention" !== content.type) {
                         if (null != content.content) {
-                          closure_1_14(content.content, tmp, tmp2);
+                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                         }
                       }
                     }
                     if (0 === tmp) {
                       tmp2(content);
                     } else {
-                      closure_1_14(content, tmp - 1, tmp2);
+                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                     }
                   }
                 }
               }
             }
             if (0 === tmp) {
-              tmp2(arr);
+              tmp2(type);
             } else {
               diff = tmp - 1;
               closure_0 = diff;
               closure_1 = tmp2;
               const _Array2 = Array;
-              if (Array.isArray(arr)) {
-                const item2 = arr.forEach((arr) => {
-                  if (Array.isArray(arr)) {
-                    const item = arr.forEach((arr) => {
-                      if (Array.isArray(arr)) {
-                        const item = arr.forEach(() => { ... });
+              if (Array.isArray(type)) {
+                const item2 = type.forEach((type) => {
+                  closure_0 = diff;
+                  if (Array.isArray(type)) {
+                    const item = type.forEach((type) => {
+                      closure_0 = diff;
+                      if (Array.isArray(type)) {
+                        const item = type.forEach(() => { ... });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              const content = arr.content;
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              const content = type.content;
                               closure_0 = tmp;
                               closure_1 = tmp2;
                               const _Array = Array;
@@ -522,63 +541,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
                                     if (null != content.content) {
-                                      closure_1_14(content.content, tmp, tmp2);
+                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
                                   tmp2(content);
                                 } else {
-                                  closure_1_14(content, tmp - 1, tmp2);
+                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                 }
                               }
                             }
                           }
                         }
                         if (0 === tmp) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
                           diff = tmp - 1;
                           closure_0 = diff;
                           closure_1 = tmp2;
                           const _Array2 = Array;
-                          if (Array.isArray(arr)) {
-                            const item2 = arr.forEach(() => { ... });
+                          if (Array.isArray(type)) {
+                            const item2 = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  closure_1_14(arr.content, diff, tmp2);
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                 }
                               }
                             }
                             if (0 === diff) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
-                              closure_1_14(arr, diff - 1, tmp2);
+                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                             }
                           }
                         }
                       }
-                      return arr;
+                      return type;
                     });
                   } else {
-                    if ("link" !== arr.type) {
-                      if ("channelMention" !== arr.type) {
-                        if (null != arr.content) {
-                          const content = arr.content;
+                    if ("link" !== type.type) {
+                      if ("channelMention" !== type.type) {
+                        if (null != type.content) {
+                          const content = type.content;
                           closure_0 = tmp;
                           closure_1 = tmp2;
                           const _Array = Array;
                           if (Array.isArray(content)) {
-                            const item1 = content.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach(() => { ... });
+                            const item1 = content.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
@@ -588,79 +608,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
                             if ("link" !== content.type) {
                               if ("channelMention" !== content.type) {
                                 if (null != content.content) {
-                                  closure_1_14(content.content, tmp, tmp2);
+                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                 }
                               }
                             }
                             if (0 === tmp) {
                               tmp2(content);
                             } else {
-                              closure_1_14(content, tmp - 1, tmp2);
+                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                             }
                           }
                         }
                       }
                     }
                     if (0 === tmp) {
-                      tmp2(arr);
+                      tmp2(type);
                     } else {
                       diff = tmp - 1;
                       closure_0 = diff;
                       closure_1 = tmp2;
                       const _Array2 = Array;
-                      if (Array.isArray(arr)) {
-                        const item2 = arr.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach(() => { ... });
+                      if (Array.isArray(type)) {
+                        const item2 = type.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
@@ -670,103 +691,106 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              closure_1_14(arr.content, diff, tmp2);
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              getLinkNodeAtIndex(type.content, diff, tmp2);
                             }
                           }
                         }
                         if (0 === diff) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
-                          closure_1_14(arr, diff - 1, tmp2);
+                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                         }
                       }
                     }
                   }
-                  return arr;
+                  return type;
                 });
               } else {
-                if ("link" !== arr.type) {
-                  if ("channelMention" !== arr.type) {
-                    if (null != arr.content) {
-                      closure_1_14(arr.content, diff, tmp2);
+                if ("link" !== type.type) {
+                  if ("channelMention" !== type.type) {
+                    if (null != type.content) {
+                      getLinkNodeAtIndex(type.content, diff, tmp2);
                     }
                   }
                 }
                 if (0 === diff) {
-                  tmp2(arr);
+                  tmp2(type);
                 } else {
-                  closure_1_14(arr, diff - 1, tmp2);
+                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                 }
               }
             }
           }
-          return arr;
+          return type;
         });
       } else {
-        if ("link" !== arr.type) {
-          if ("channelMention" !== arr.type) {
-            if (null != arr.content) {
-              const content = arr.content;
+        if ("link" !== type.type) {
+          if ("channelMention" !== type.type) {
+            if (null != type.content) {
+              const content = type.content;
               closure_0 = tmp;
               closure_1 = tmp2;
               const _Array = Array;
               if (Array.isArray(content)) {
-                const item1 = content.forEach((arr) => {
-                  if (Array.isArray(arr)) {
-                    const item = arr.forEach((arr) => {
-                      if (Array.isArray(arr)) {
-                        const item = arr.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach(() => { ... });
+                const item1 = content.forEach((type) => {
+                  closure_0 = diff;
+                  if (Array.isArray(type)) {
+                    const item = type.forEach((type) => {
+                      closure_0 = diff;
+                      if (Array.isArray(type)) {
+                        const item = type.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
@@ -776,63 +800,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              const content = arr.content;
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              const content = type.content;
                               closure_0 = tmp;
                               closure_1 = tmp2;
                               const _Array = Array;
                               if (Array.isArray(content)) {
-                                const item1 = content.forEach((arr) => {
-                                  if (Array.isArray(arr)) {
-                                    const item = arr.forEach(() => { ... });
+                                const item1 = content.forEach((type) => {
+                                  closure_0 = diff;
+                                  if (Array.isArray(type)) {
+                                    const item = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          const content = arr.content;
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          const content = type.content;
                                           closure_0 = tmp;
                                           closure_1 = tmp2;
                                           const _Array = Array;
@@ -842,79 +867,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
                                                 if (null != content.content) {
-                                                  closure_1_14(content.content, tmp, tmp2);
+                                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === tmp) {
                                               tmp2(content);
                                             } else {
-                                              closure_1_14(content, tmp - 1, tmp2);
+                                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
                                       diff = tmp - 1;
                                       closure_0 = diff;
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
-                                      if (Array.isArray(arr)) {
-                                        const item2 = arr.forEach(() => { ... });
+                                      if (Array.isArray(type)) {
+                                        const item2 = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              closure_1_14(arr.content, diff, tmp2);
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              getLinkNodeAtIndex(type.content, diff, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === diff) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
-                                          closure_1_14(arr, diff - 1, tmp2);
+                                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
-                                  return arr;
+                                  return type;
                                 });
                               } else {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
                                     if (null != content.content) {
-                                      closure_1_14(content.content, tmp, tmp2);
+                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
                                   tmp2(content);
                                 } else {
-                                  closure_1_14(content, tmp - 1, tmp2);
+                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                 }
                               }
                             }
                           }
                         }
                         if (0 === tmp) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
                           diff = tmp - 1;
                           closure_0 = diff;
                           closure_1 = tmp2;
                           const _Array2 = Array;
-                          if (Array.isArray(arr)) {
-                            const item2 = arr.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach(() => { ... });
+                          if (Array.isArray(type)) {
+                            const item2 = type.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
@@ -924,83 +950,85 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  closure_1_14(arr.content, diff, tmp2);
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                 }
                               }
                             }
                             if (0 === diff) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
-                              closure_1_14(arr, diff - 1, tmp2);
+                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                             }
                           }
                         }
                       }
-                      return arr;
+                      return type;
                     });
                   } else {
-                    if ("link" !== arr.type) {
-                      if ("channelMention" !== arr.type) {
-                        if (null != arr.content) {
-                          const content = arr.content;
+                    if ("link" !== type.type) {
+                      if ("channelMention" !== type.type) {
+                        if (null != type.content) {
+                          const content = type.content;
                           closure_0 = tmp;
                           closure_1 = tmp2;
                           const _Array = Array;
                           if (Array.isArray(content)) {
-                            const item1 = content.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach((arr) => {
-                                  if (Array.isArray(arr)) {
-                                    const item = arr.forEach(() => { ... });
+                            const item1 = content.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach((type) => {
+                                  closure_0 = diff;
+                                  if (Array.isArray(type)) {
+                                    const item = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          const content = arr.content;
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          const content = type.content;
                                           closure_0 = tmp;
                                           closure_1 = tmp2;
                                           const _Array = Array;
@@ -1010,63 +1038,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
                                                 if (null != content.content) {
-                                                  closure_1_14(content.content, tmp, tmp2);
+                                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === tmp) {
                                               tmp2(content);
                                             } else {
-                                              closure_1_14(content, tmp - 1, tmp2);
+                                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
                                       diff = tmp - 1;
                                       closure_0 = diff;
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
-                                      if (Array.isArray(arr)) {
-                                        const item2 = arr.forEach(() => { ... });
+                                      if (Array.isArray(type)) {
+                                        const item2 = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              closure_1_14(arr.content, diff, tmp2);
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              getLinkNodeAtIndex(type.content, diff, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === diff) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
-                                          closure_1_14(arr, diff - 1, tmp2);
+                                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
-                                  return arr;
+                                  return type;
                                 });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
                                       if (Array.isArray(content)) {
-                                        const item1 = content.forEach((arr) => {
-                                          if (Array.isArray(arr)) {
-                                            const item = arr.forEach(() => { ... });
+                                        const item1 = content.forEach((type) => {
+                                          closure_0 = diff;
+                                          if (Array.isArray(type)) {
+                                            const item = type.forEach(() => { ... });
                                           } else {
-                                            if ("link" !== arr.type) {
-                                              if ("channelMention" !== arr.type) {
-                                                if (null != arr.content) {
-                                                  const content = arr.content;
+                                            if ("link" !== type.type) {
+                                              if ("channelMention" !== type.type) {
+                                                if (null != type.content) {
+                                                  const content = type.content;
                                                   closure_0 = tmp;
                                                   closure_1 = tmp2;
                                                   const _Array = Array;
@@ -1076,79 +1105,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                                     if ("link" !== content.type) {
                                                       if ("channelMention" !== content.type) {
                                                         if (null != content.content) {
-                                                          closure_1_14(content.content, tmp, tmp2);
+                                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                         }
                                                       }
                                                     }
                                                     if (0 === tmp) {
                                                       tmp2(content);
                                                     } else {
-                                                      closure_1_14(content, tmp - 1, tmp2);
+                                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                                     }
                                                   }
                                                 }
                                               }
                                             }
                                             if (0 === tmp) {
-                                              tmp2(arr);
+                                              tmp2(type);
                                             } else {
                                               diff = tmp - 1;
                                               closure_0 = diff;
                                               closure_1 = tmp2;
                                               const _Array2 = Array;
-                                              if (Array.isArray(arr)) {
-                                                const item2 = arr.forEach(() => { ... });
+                                              if (Array.isArray(type)) {
+                                                const item2 = type.forEach(() => { ... });
                                               } else {
-                                                if ("link" !== arr.type) {
-                                                  if ("channelMention" !== arr.type) {
-                                                    if (null != arr.content) {
-                                                      closure_1_14(arr.content, diff, tmp2);
+                                                if ("link" !== type.type) {
+                                                  if ("channelMention" !== type.type) {
+                                                    if (null != type.content) {
+                                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                                     }
                                                   }
                                                 }
                                                 if (0 === diff) {
-                                                  tmp2(arr);
+                                                  tmp2(type);
                                                 } else {
-                                                  closure_1_14(arr, diff - 1, tmp2);
+                                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                                 }
                                               }
                                             }
                                           }
-                                          return arr;
+                                          return type;
                                         });
                                       } else {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach((arr) => {
-                                      if (Array.isArray(arr)) {
-                                        const item = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach((type) => {
+                                      closure_0 = diff;
+                                      if (Array.isArray(type)) {
+                                        const item = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              const content = arr.content;
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              const content = type.content;
                                               closure_0 = tmp;
                                               closure_1 = tmp2;
                                               const _Array = Array;
@@ -1158,99 +1188,101 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                                 if ("link" !== content.type) {
                                                   if ("channelMention" !== content.type) {
                                                     if (null != content.content) {
-                                                      closure_1_14(content.content, tmp, tmp2);
+                                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                     }
                                                   }
                                                 }
                                                 if (0 === tmp) {
                                                   tmp2(content);
                                                 } else {
-                                                  closure_1_14(content, tmp - 1, tmp2);
+                                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                                 }
                                               }
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
                                           diff = tmp - 1;
                                           closure_0 = diff;
                                           closure_1 = tmp2;
                                           const _Array2 = Array;
-                                          if (Array.isArray(arr)) {
-                                            const item2 = arr.forEach(() => { ... });
+                                          if (Array.isArray(type)) {
+                                            const item2 = type.forEach(() => { ... });
                                           } else {
-                                            if ("link" !== arr.type) {
-                                              if ("channelMention" !== arr.type) {
-                                                if (null != arr.content) {
-                                                  closure_1_14(arr.content, diff, tmp2);
+                                            if ("link" !== type.type) {
+                                              if ("channelMention" !== type.type) {
+                                                if (null != type.content) {
+                                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === diff) {
-                                              tmp2(arr);
+                                              tmp2(type);
                                             } else {
-                                              closure_1_14(arr, diff - 1, tmp2);
+                                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
-                                      return arr;
+                                      return type;
                                     });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
                             if ("link" !== content.type) {
                               if ("channelMention" !== content.type) {
                                 if (null != content.content) {
-                                  closure_1_14(content.content, tmp, tmp2);
+                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                 }
                               }
                             }
                             if (0 === tmp) {
                               tmp2(content);
                             } else {
-                              closure_1_14(content, tmp - 1, tmp2);
+                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                             }
                           }
                         }
                       }
                     }
                     if (0 === tmp) {
-                      tmp2(arr);
+                      tmp2(type);
                     } else {
                       diff = tmp - 1;
                       closure_0 = diff;
                       closure_1 = tmp2;
                       const _Array2 = Array;
-                      if (Array.isArray(arr)) {
-                        const item2 = arr.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach(() => { ... });
+                      if (Array.isArray(type)) {
+                        const item2 = type.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
@@ -1260,63 +1292,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach((arr) => {
-                                      if (Array.isArray(arr)) {
-                                        const item = arr.forEach(() => { ... });
+                                    const item1 = content.forEach((type) => {
+                                      closure_0 = diff;
+                                      if (Array.isArray(type)) {
+                                        const item = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              const content = arr.content;
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              const content = type.content;
                                               closure_0 = tmp;
                                               closure_1 = tmp2;
                                               const _Array = Array;
@@ -1326,79 +1359,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                                 if ("link" !== content.type) {
                                                   if ("channelMention" !== content.type) {
                                                     if (null != content.content) {
-                                                      closure_1_14(content.content, tmp, tmp2);
+                                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                     }
                                                   }
                                                 }
                                                 if (0 === tmp) {
                                                   tmp2(content);
                                                 } else {
-                                                  closure_1_14(content, tmp - 1, tmp2);
+                                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                                 }
                                               }
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
                                           diff = tmp - 1;
                                           closure_0 = diff;
                                           closure_1 = tmp2;
                                           const _Array2 = Array;
-                                          if (Array.isArray(arr)) {
-                                            const item2 = arr.forEach(() => { ... });
+                                          if (Array.isArray(type)) {
+                                            const item2 = type.forEach(() => { ... });
                                           } else {
-                                            if ("link" !== arr.type) {
-                                              if ("channelMention" !== arr.type) {
-                                                if (null != arr.content) {
-                                                  closure_1_14(arr.content, diff, tmp2);
+                                            if ("link" !== type.type) {
+                                              if ("channelMention" !== type.type) {
+                                                if (null != type.content) {
+                                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === diff) {
-                                              tmp2(arr);
+                                              tmp2(type);
                                             } else {
-                                              closure_1_14(arr, diff - 1, tmp2);
+                                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
-                                      return arr;
+                                      return type;
                                     });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach((arr) => {
-                                  if (Array.isArray(arr)) {
-                                    const item = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach((type) => {
+                                  closure_0 = diff;
+                                  if (Array.isArray(type)) {
+                                    const item = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          const content = arr.content;
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          const content = type.content;
                                           closure_0 = tmp;
                                           closure_1 = tmp2;
                                           const _Array = Array;
@@ -1408,119 +1442,122 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
                                                 if (null != content.content) {
-                                                  closure_1_14(content.content, tmp, tmp2);
+                                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === tmp) {
                                               tmp2(content);
                                             } else {
-                                              closure_1_14(content, tmp - 1, tmp2);
+                                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
                                       diff = tmp - 1;
                                       closure_0 = diff;
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
-                                      if (Array.isArray(arr)) {
-                                        const item2 = arr.forEach(() => { ... });
+                                      if (Array.isArray(type)) {
+                                        const item2 = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              closure_1_14(arr.content, diff, tmp2);
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              getLinkNodeAtIndex(type.content, diff, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === diff) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
-                                          closure_1_14(arr, diff - 1, tmp2);
+                                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
-                                  return arr;
+                                  return type;
                                 });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              closure_1_14(arr.content, diff, tmp2);
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              getLinkNodeAtIndex(type.content, diff, tmp2);
                             }
                           }
                         }
                         if (0 === diff) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
-                          closure_1_14(arr, diff - 1, tmp2);
+                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                         }
                       }
                     }
                   }
-                  return arr;
+                  return type;
                 });
               } else {
                 if ("link" !== content.type) {
                   if ("channelMention" !== content.type) {
                     if (null != content.content) {
-                      closure_1_14(content.content, tmp, tmp2);
+                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                     }
                   }
                 }
                 if (0 === tmp) {
                   tmp2(content);
                 } else {
-                  closure_1_14(content, tmp - 1, tmp2);
+                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                 }
               }
             }
           }
         }
         if (0 === tmp) {
-          tmp2(arr);
+          tmp2(type);
         } else {
           diff = tmp - 1;
           closure_0 = diff;
           closure_1 = tmp2;
           const _Array2 = Array;
-          if (Array.isArray(arr)) {
-            const item2 = arr.forEach((arr) => {
-              if (Array.isArray(arr)) {
-                const item = arr.forEach((arr) => {
-                  if (Array.isArray(arr)) {
-                    const item = arr.forEach((arr) => {
-                      if (Array.isArray(arr)) {
-                        const item = arr.forEach(() => { ... });
+          if (Array.isArray(type)) {
+            const item2 = type.forEach((type) => {
+              closure_0 = diff;
+              if (Array.isArray(type)) {
+                const item = type.forEach((type) => {
+                  closure_0 = diff;
+                  if (Array.isArray(type)) {
+                    const item = type.forEach((type) => {
+                      closure_0 = diff;
+                      if (Array.isArray(type)) {
+                        const item = type.forEach(() => { ... });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              const content = arr.content;
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              const content = type.content;
                               closure_0 = tmp;
                               closure_1 = tmp2;
                               const _Array = Array;
@@ -1530,63 +1567,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
                                     if (null != content.content) {
-                                      closure_1_14(content.content, tmp, tmp2);
+                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
                                   tmp2(content);
                                 } else {
-                                  closure_1_14(content, tmp - 1, tmp2);
+                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                 }
                               }
                             }
                           }
                         }
                         if (0 === tmp) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
                           diff = tmp - 1;
                           closure_0 = diff;
                           closure_1 = tmp2;
                           const _Array2 = Array;
-                          if (Array.isArray(arr)) {
-                            const item2 = arr.forEach(() => { ... });
+                          if (Array.isArray(type)) {
+                            const item2 = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  closure_1_14(arr.content, diff, tmp2);
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                 }
                               }
                             }
                             if (0 === diff) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
-                              closure_1_14(arr, diff - 1, tmp2);
+                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                             }
                           }
                         }
                       }
-                      return arr;
+                      return type;
                     });
                   } else {
-                    if ("link" !== arr.type) {
-                      if ("channelMention" !== arr.type) {
-                        if (null != arr.content) {
-                          const content = arr.content;
+                    if ("link" !== type.type) {
+                      if ("channelMention" !== type.type) {
+                        if (null != type.content) {
+                          const content = type.content;
                           closure_0 = tmp;
                           closure_1 = tmp2;
                           const _Array = Array;
                           if (Array.isArray(content)) {
-                            const item1 = content.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach(() => { ... });
+                            const item1 = content.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
@@ -1596,79 +1634,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
                             if ("link" !== content.type) {
                               if ("channelMention" !== content.type) {
                                 if (null != content.content) {
-                                  closure_1_14(content.content, tmp, tmp2);
+                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                 }
                               }
                             }
                             if (0 === tmp) {
                               tmp2(content);
                             } else {
-                              closure_1_14(content, tmp - 1, tmp2);
+                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                             }
                           }
                         }
                       }
                     }
                     if (0 === tmp) {
-                      tmp2(arr);
+                      tmp2(type);
                     } else {
                       diff = tmp - 1;
                       closure_0 = diff;
                       closure_1 = tmp2;
                       const _Array2 = Array;
-                      if (Array.isArray(arr)) {
-                        const item2 = arr.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach(() => { ... });
+                      if (Array.isArray(type)) {
+                        const item2 = type.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
@@ -1678,83 +1717,85 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              closure_1_14(arr.content, diff, tmp2);
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              getLinkNodeAtIndex(type.content, diff, tmp2);
                             }
                           }
                         }
                         if (0 === diff) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
-                          closure_1_14(arr, diff - 1, tmp2);
+                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                         }
                       }
                     }
                   }
-                  return arr;
+                  return type;
                 });
               } else {
-                if ("link" !== arr.type) {
-                  if ("channelMention" !== arr.type) {
-                    if (null != arr.content) {
-                      const content = arr.content;
+                if ("link" !== type.type) {
+                  if ("channelMention" !== type.type) {
+                    if (null != type.content) {
+                      const content = type.content;
                       closure_0 = tmp;
                       closure_1 = tmp2;
                       const _Array = Array;
                       if (Array.isArray(content)) {
-                        const item1 = content.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach(() => { ... });
+                        const item1 = content.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
@@ -1764,63 +1805,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
                                   if (Array.isArray(content)) {
-                                    const item1 = content.forEach((arr) => {
-                                      if (Array.isArray(arr)) {
-                                        const item = arr.forEach(() => { ... });
+                                    const item1 = content.forEach((type) => {
+                                      closure_0 = diff;
+                                      if (Array.isArray(type)) {
+                                        const item = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              const content = arr.content;
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              const content = type.content;
                                               closure_0 = tmp;
                                               closure_1 = tmp2;
                                               const _Array = Array;
@@ -1830,79 +1872,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                                 if ("link" !== content.type) {
                                                   if ("channelMention" !== content.type) {
                                                     if (null != content.content) {
-                                                      closure_1_14(content.content, tmp, tmp2);
+                                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                     }
                                                   }
                                                 }
                                                 if (0 === tmp) {
                                                   tmp2(content);
                                                 } else {
-                                                  closure_1_14(content, tmp - 1, tmp2);
+                                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                                 }
                                               }
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
                                           diff = tmp - 1;
                                           closure_0 = diff;
                                           closure_1 = tmp2;
                                           const _Array2 = Array;
-                                          if (Array.isArray(arr)) {
-                                            const item2 = arr.forEach(() => { ... });
+                                          if (Array.isArray(type)) {
+                                            const item2 = type.forEach(() => { ... });
                                           } else {
-                                            if ("link" !== arr.type) {
-                                              if ("channelMention" !== arr.type) {
-                                                if (null != arr.content) {
-                                                  closure_1_14(arr.content, diff, tmp2);
+                                            if ("link" !== type.type) {
+                                              if ("channelMention" !== type.type) {
+                                                if (null != type.content) {
+                                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === diff) {
-                                              tmp2(arr);
+                                              tmp2(type);
                                             } else {
-                                              closure_1_14(arr, diff - 1, tmp2);
+                                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
-                                      return arr;
+                                      return type;
                                     });
                                   } else {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach((arr) => {
-                                  if (Array.isArray(arr)) {
-                                    const item = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach((type) => {
+                                  closure_0 = diff;
+                                  if (Array.isArray(type)) {
+                                    const item = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          const content = arr.content;
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          const content = type.content;
                                           closure_0 = tmp;
                                           closure_1 = tmp2;
                                           const _Array = Array;
@@ -1912,99 +1955,101 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
                                                 if (null != content.content) {
-                                                  closure_1_14(content.content, tmp, tmp2);
+                                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === tmp) {
                                               tmp2(content);
                                             } else {
-                                              closure_1_14(content, tmp - 1, tmp2);
+                                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
                                       diff = tmp - 1;
                                       closure_0 = diff;
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
-                                      if (Array.isArray(arr)) {
-                                        const item2 = arr.forEach(() => { ... });
+                                      if (Array.isArray(type)) {
+                                        const item2 = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              closure_1_14(arr.content, diff, tmp2);
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              getLinkNodeAtIndex(type.content, diff, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === diff) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
-                                          closure_1_14(arr, diff - 1, tmp2);
+                                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
-                                  return arr;
+                                  return type;
                                 });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
                         if ("link" !== content.type) {
                           if ("channelMention" !== content.type) {
                             if (null != content.content) {
-                              closure_1_14(content.content, tmp, tmp2);
+                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                             }
                           }
                         }
                         if (0 === tmp) {
                           tmp2(content);
                         } else {
-                          closure_1_14(content, tmp - 1, tmp2);
+                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                         }
                       }
                     }
                   }
                 }
                 if (0 === tmp) {
-                  tmp2(arr);
+                  tmp2(type);
                 } else {
                   diff = tmp - 1;
                   closure_0 = diff;
                   closure_1 = tmp2;
                   const _Array2 = Array;
-                  if (Array.isArray(arr)) {
-                    const item2 = arr.forEach((arr) => {
-                      if (Array.isArray(arr)) {
-                        const item = arr.forEach((arr) => {
-                          if (Array.isArray(arr)) {
-                            const item = arr.forEach(() => { ... });
+                  if (Array.isArray(type)) {
+                    const item2 = type.forEach((type) => {
+                      closure_0 = diff;
+                      if (Array.isArray(type)) {
+                        const item = type.forEach((type) => {
+                          closure_0 = diff;
+                          if (Array.isArray(type)) {
+                            const item = type.forEach(() => { ... });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  const content = arr.content;
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  const content = type.content;
                                   closure_0 = tmp;
                                   closure_1 = tmp2;
                                   const _Array = Array;
@@ -2014,63 +2059,64 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                     if ("link" !== content.type) {
                                       if ("channelMention" !== content.type) {
                                         if (null != content.content) {
-                                          closure_1_14(content.content, tmp, tmp2);
+                                          getLinkNodeAtIndex(content.content, tmp, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
                                       tmp2(content);
                                     } else {
-                                      closure_1_14(content, tmp - 1, tmp2);
+                                      getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                     }
                                   }
                                 }
                               }
                             }
                             if (0 === tmp) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
                               diff = tmp - 1;
                               closure_0 = diff;
                               closure_1 = tmp2;
                               const _Array2 = Array;
-                              if (Array.isArray(arr)) {
-                                const item2 = arr.forEach(() => { ... });
+                              if (Array.isArray(type)) {
+                                const item2 = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      closure_1_14(arr.content, diff, tmp2);
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      getLinkNodeAtIndex(type.content, diff, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === diff) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
-                                  closure_1_14(arr, diff - 1, tmp2);
+                                  getLinkNodeAtIndex(type, diff - 1, tmp2);
                                 }
                               }
                             }
                           }
-                          return arr;
+                          return type;
                         });
                       } else {
-                        if ("link" !== arr.type) {
-                          if ("channelMention" !== arr.type) {
-                            if (null != arr.content) {
-                              const content = arr.content;
+                        if ("link" !== type.type) {
+                          if ("channelMention" !== type.type) {
+                            if (null != type.content) {
+                              const content = type.content;
                               closure_0 = tmp;
                               closure_1 = tmp2;
                               const _Array = Array;
                               if (Array.isArray(content)) {
-                                const item1 = content.forEach((arr) => {
-                                  if (Array.isArray(arr)) {
-                                    const item = arr.forEach(() => { ... });
+                                const item1 = content.forEach((type) => {
+                                  closure_0 = diff;
+                                  if (Array.isArray(type)) {
+                                    const item = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          const content = arr.content;
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          const content = type.content;
                                           closure_0 = tmp;
                                           closure_1 = tmp2;
                                           const _Array = Array;
@@ -2080,79 +2126,80 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                             if ("link" !== content.type) {
                                               if ("channelMention" !== content.type) {
                                                 if (null != content.content) {
-                                                  closure_1_14(content.content, tmp, tmp2);
+                                                  getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                 }
                                               }
                                             }
                                             if (0 === tmp) {
                                               tmp2(content);
                                             } else {
-                                              closure_1_14(content, tmp - 1, tmp2);
+                                              getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                             }
                                           }
                                         }
                                       }
                                     }
                                     if (0 === tmp) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
                                       diff = tmp - 1;
                                       closure_0 = diff;
                                       closure_1 = tmp2;
                                       const _Array2 = Array;
-                                      if (Array.isArray(arr)) {
-                                        const item2 = arr.forEach(() => { ... });
+                                      if (Array.isArray(type)) {
+                                        const item2 = type.forEach(() => { ... });
                                       } else {
-                                        if ("link" !== arr.type) {
-                                          if ("channelMention" !== arr.type) {
-                                            if (null != arr.content) {
-                                              closure_1_14(arr.content, diff, tmp2);
+                                        if ("link" !== type.type) {
+                                          if ("channelMention" !== type.type) {
+                                            if (null != type.content) {
+                                              getLinkNodeAtIndex(type.content, diff, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === diff) {
-                                          tmp2(arr);
+                                          tmp2(type);
                                         } else {
-                                          closure_1_14(arr, diff - 1, tmp2);
+                                          getLinkNodeAtIndex(type, diff - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
-                                  return arr;
+                                  return type;
                                 });
                               } else {
                                 if ("link" !== content.type) {
                                   if ("channelMention" !== content.type) {
                                     if (null != content.content) {
-                                      closure_1_14(content.content, tmp, tmp2);
+                                      getLinkNodeAtIndex(content.content, tmp, tmp2);
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
                                   tmp2(content);
                                 } else {
-                                  closure_1_14(content, tmp - 1, tmp2);
+                                  getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                 }
                               }
                             }
                           }
                         }
                         if (0 === tmp) {
-                          tmp2(arr);
+                          tmp2(type);
                         } else {
                           diff = tmp - 1;
                           closure_0 = diff;
                           closure_1 = tmp2;
                           const _Array2 = Array;
-                          if (Array.isArray(arr)) {
-                            const item2 = arr.forEach((arr) => {
-                              if (Array.isArray(arr)) {
-                                const item = arr.forEach(() => { ... });
+                          if (Array.isArray(type)) {
+                            const item2 = type.forEach((type) => {
+                              closure_0 = diff;
+                              if (Array.isArray(type)) {
+                                const item = type.forEach(() => { ... });
                               } else {
-                                if ("link" !== arr.type) {
-                                  if ("channelMention" !== arr.type) {
-                                    if (null != arr.content) {
-                                      const content = arr.content;
+                                if ("link" !== type.type) {
+                                  if ("channelMention" !== type.type) {
+                                    if (null != type.content) {
+                                      const content = type.content;
                                       closure_0 = tmp;
                                       closure_1 = tmp2;
                                       const _Array = Array;
@@ -2162,112 +2209,112 @@ function getLinkNodeAtIndex(content, arg1, arg2) {
                                         if ("link" !== content.type) {
                                           if ("channelMention" !== content.type) {
                                             if (null != content.content) {
-                                              closure_1_14(content.content, tmp, tmp2);
+                                              getLinkNodeAtIndex(content.content, tmp, tmp2);
                                             }
                                           }
                                         }
                                         if (0 === tmp) {
                                           tmp2(content);
                                         } else {
-                                          closure_1_14(content, tmp - 1, tmp2);
+                                          getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                         }
                                       }
                                     }
                                   }
                                 }
                                 if (0 === tmp) {
-                                  tmp2(arr);
+                                  tmp2(type);
                                 } else {
                                   diff = tmp - 1;
                                   closure_0 = diff;
                                   closure_1 = tmp2;
                                   const _Array2 = Array;
-                                  if (Array.isArray(arr)) {
-                                    const item2 = arr.forEach(() => { ... });
+                                  if (Array.isArray(type)) {
+                                    const item2 = type.forEach(() => { ... });
                                   } else {
-                                    if ("link" !== arr.type) {
-                                      if ("channelMention" !== arr.type) {
-                                        if (null != arr.content) {
-                                          closure_1_14(arr.content, diff, tmp2);
+                                    if ("link" !== type.type) {
+                                      if ("channelMention" !== type.type) {
+                                        if (null != type.content) {
+                                          getLinkNodeAtIndex(type.content, diff, tmp2);
                                         }
                                       }
                                     }
                                     if (0 === diff) {
-                                      tmp2(arr);
+                                      tmp2(type);
                                     } else {
-                                      closure_1_14(arr, diff - 1, tmp2);
+                                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                                     }
                                   }
                                 }
                               }
-                              return arr;
+                              return type;
                             });
                           } else {
-                            if ("link" !== arr.type) {
-                              if ("channelMention" !== arr.type) {
-                                if (null != arr.content) {
-                                  closure_1_14(arr.content, diff, tmp2);
+                            if ("link" !== type.type) {
+                              if ("channelMention" !== type.type) {
+                                if (null != type.content) {
+                                  getLinkNodeAtIndex(type.content, diff, tmp2);
                                 }
                               }
                             }
                             if (0 === diff) {
-                              tmp2(arr);
+                              tmp2(type);
                             } else {
-                              closure_1_14(arr, diff - 1, tmp2);
+                              getLinkNodeAtIndex(type, diff - 1, tmp2);
                             }
                           }
                         }
                       }
-                      return arr;
+                      return type;
                     });
                   } else {
-                    if ("link" !== arr.type) {
-                      if ("channelMention" !== arr.type) {
-                        if (null != arr.content) {
-                          closure_1_14(arr.content, diff, tmp2);
+                    if ("link" !== type.type) {
+                      if ("channelMention" !== type.type) {
+                        if (null != type.content) {
+                          getLinkNodeAtIndex(type.content, diff, tmp2);
                         }
                       }
                     }
                     if (0 === diff) {
-                      tmp2(arr);
+                      tmp2(type);
                     } else {
-                      closure_1_14(arr, diff - 1, tmp2);
+                      getLinkNodeAtIndex(type, diff - 1, tmp2);
                     }
                   }
                 }
               }
-              return arr;
+              return type;
             });
           } else {
-            if ("link" !== arr.type) {
-              if ("channelMention" !== arr.type) {
-                if (null != arr.content) {
-                  closure_1_14(arr.content, diff, tmp2);
+            if ("link" !== type.type) {
+              if ("channelMention" !== type.type) {
+                if (null != type.content) {
+                  getLinkNodeAtIndex(type.content, diff, tmp2);
                 }
               }
             }
             if (0 === diff) {
-              tmp2(arr);
+              tmp2(type);
             } else {
-              closure_1_14(arr, diff - 1, tmp2);
+              getLinkNodeAtIndex(type, diff - 1, tmp2);
             }
           }
         }
       }
-      return arr;
+      return type;
     });
   } else {
     if ("link" !== content.type) {
       if ("channelMention" !== content.type) {
         if (null != content.content) {
-          getLinkNodeAtIndex(content.content, arg1, arg2);
+          getLinkNodeAtIndex(content.content, diff, fn);
         }
       }
     }
-    if (0 === arg1) {
-      arg2(content);
+    if (0 === diff) {
+      fn(content);
     } else {
-      getLinkNodeAtIndex(content, arg1 - 1, arg2);
+      getLinkNodeAtIndex(content, diff - 1, fn);
     }
   }
   return content;
@@ -2280,41 +2327,40 @@ function LinkParsedGridItem(author) {
   const onPressSearchLink = author.onPressSearchLink;
   const onPressGuildVoiceChannelMention = author.onPressGuildVoiceChannelMention;
   const onPress = author.onPress;
-  closure_7 = undefined;
   let stateFromStores;
-  let stateFromStores1;
-  let first;
-  let callback;
-  callback = undefined;
   ({ imageStyle, containerStyle } = author);
-  const tmp = callback2();
-  closure_7 = tmp;
+  const tmp = closure_13();
+  const tapToSee = tmp;
   let obj = author(channelId[8]);
   const items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getMessage(messageId));
-  obj1 = author(channelId[8]);
-  const items1 = [closure_7];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => store.getChannel(channelId));
+  stateFromStores = obj.useStateFromStores(items, () => SearchMessageStore.getMessage(messageId));
+  let obj1 = author(channelId[8]);
+  const items1 = [tapToSee];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
+  let obj2 = onPressSearchLink;
   const tmp6 = messageId(onPressSearchLink.useState(null), 2);
-  first = tmp6[0];
-  callback = tmp6[1];
+  const first = tmp6[0];
+  closure_11 = tmp6[1];
   const items2 = [linkIndex];
-  callback = onPressSearchLink.useCallback((arr) => {
-    author = closure_1;
+  const postProcessor = onPressSearchLink.useCallback((type) => {
+    author = linkIndex;
     closure_1 = closure_11;
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          const item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              const item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  const item = arr.forEach(() => { ... });
+    if (Array.isArray(type)) {
+      let item = type.forEach((type) => {
+        closure_0 = diff;
+        if (Array.isArray(type)) {
+          const item = type.forEach((type) => {
+            closure_0 = diff;
+            if (Array.isArray(type)) {
+              const item = type.forEach((type) => {
+                closure_0 = diff;
+                if (Array.isArray(type)) {
+                  const item = type.forEach(() => { ... });
                 } else {
-                  if ("link" !== arr.type) {
-                    if ("channelMention" !== arr.type) {
-                      if (null != arr.content) {
-                        const content = arr.content;
+                  if ("link" !== type.type) {
+                    if ("channelMention" !== type.type) {
+                      if (null != type.content) {
+                        const content = type.content;
                         closure_0 = tmp;
                         closure_1 = tmp2;
                         const _Array = Array;
@@ -2324,63 +2370,64 @@ function LinkParsedGridItem(author) {
                           if ("link" !== content.type) {
                             if ("channelMention" !== content.type) {
                               if (null != content.content) {
-                                closure_1_14(content.content, tmp, tmp2);
+                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                               }
                             }
                           }
                           if (0 === tmp) {
                             tmp2(content);
                           } else {
-                            closure_1_14(content, tmp - 1, tmp2);
+                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                           }
                         }
                       }
                     }
                   }
                   if (0 === tmp) {
-                    tmp2(arr);
+                    tmp2(type);
                   } else {
                     diff = tmp - 1;
                     closure_0 = diff;
                     closure_1 = tmp2;
                     const _Array2 = Array;
-                    if (Array.isArray(arr)) {
-                      const item2 = arr.forEach(() => { ... });
+                    if (Array.isArray(type)) {
+                      const item2 = type.forEach(() => { ... });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            closure_1_14(arr.content, diff, tmp2);
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            getLinkNodeAtIndex(type.content, diff, tmp2);
                           }
                         }
                       }
                       if (0 === diff) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
-                        closure_1_14(arr, diff - 1, tmp2);
+                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                       }
                     }
                   }
                 }
-                return arr;
+                return type;
               });
             } else {
-              if ("link" !== arr.type) {
-                if ("channelMention" !== arr.type) {
-                  if (null != arr.content) {
-                    const content = arr.content;
+              if ("link" !== type.type) {
+                if ("channelMention" !== type.type) {
+                  if (null != type.content) {
+                    const content = type.content;
                     closure_0 = tmp;
                     closure_1 = tmp2;
                     const _Array = Array;
                     if (Array.isArray(content)) {
-                      const item1 = content.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach(() => { ... });
+                      const item1 = content.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
@@ -2390,79 +2437,80 @@ function LinkParsedGridItem(author) {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
                       if ("link" !== content.type) {
                         if ("channelMention" !== content.type) {
                           if (null != content.content) {
-                            closure_1_14(content.content, tmp, tmp2);
+                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                           }
                         }
                       }
                       if (0 === tmp) {
                         tmp2(content);
                       } else {
-                        closure_1_14(content, tmp - 1, tmp2);
+                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                       }
                     }
                   }
                 }
               }
               if (0 === tmp) {
-                tmp2(arr);
+                tmp2(type);
               } else {
                 diff = tmp - 1;
                 closure_0 = diff;
                 closure_1 = tmp2;
                 const _Array2 = Array;
-                if (Array.isArray(arr)) {
-                  const item2 = arr.forEach((arr) => {
-                    if (Array.isArray(arr)) {
-                      const item = arr.forEach(() => { ... });
+                if (Array.isArray(type)) {
+                  const item2 = type.forEach((type) => {
+                    closure_0 = diff;
+                    if (Array.isArray(type)) {
+                      const item = type.forEach(() => { ... });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            const content = arr.content;
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            const content = type.content;
                             closure_0 = tmp;
                             closure_1 = tmp2;
                             const _Array = Array;
@@ -2472,83 +2520,85 @@ function LinkParsedGridItem(author) {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
                                   if (null != content.content) {
-                                    closure_1_14(content.content, tmp, tmp2);
+                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                   }
                                 }
                               }
                               if (0 === tmp) {
                                 tmp2(content);
                               } else {
-                                closure_1_14(content, tmp - 1, tmp2);
+                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                               }
                             }
                           }
                         }
                       }
                       if (0 === tmp) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
                         diff = tmp - 1;
                         closure_0 = diff;
                         closure_1 = tmp2;
                         const _Array2 = Array;
-                        if (Array.isArray(arr)) {
-                          const item2 = arr.forEach(() => { ... });
+                        if (Array.isArray(type)) {
+                          const item2 = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                closure_1_14(arr.content, diff, tmp2);
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                getLinkNodeAtIndex(type.content, diff, tmp2);
                               }
                             }
                           }
                           if (0 === diff) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
-                            closure_1_14(arr, diff - 1, tmp2);
+                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                           }
                         }
                       }
                     }
-                    return arr;
+                    return type;
                   });
                 } else {
-                  if ("link" !== arr.type) {
-                    if ("channelMention" !== arr.type) {
-                      if (null != arr.content) {
-                        closure_1_14(arr.content, diff, tmp2);
+                  if ("link" !== type.type) {
+                    if ("channelMention" !== type.type) {
+                      if (null != type.content) {
+                        getLinkNodeAtIndex(type.content, diff, tmp2);
                       }
                     }
                   }
                   if (0 === diff) {
-                    tmp2(arr);
+                    tmp2(type);
                   } else {
-                    closure_1_14(arr, diff - 1, tmp2);
+                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                   }
                 }
               }
             }
-            return arr;
+            return type;
           });
         } else {
-          if ("link" !== arr.type) {
-            if ("channelMention" !== arr.type) {
-              if (null != arr.content) {
-                const content = arr.content;
+          if ("link" !== type.type) {
+            if ("channelMention" !== type.type) {
+              if (null != type.content) {
+                const content = type.content;
                 closure_0 = tmp;
                 closure_1 = tmp2;
                 const _Array = Array;
                 if (Array.isArray(content)) {
-                  const item1 = content.forEach((arr) => {
-                    if (Array.isArray(arr)) {
-                      const item = arr.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach(() => { ... });
+                  const item1 = content.forEach((type) => {
+                    closure_0 = diff;
+                    if (Array.isArray(type)) {
+                      const item = type.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
@@ -2558,63 +2608,64 @@ function LinkParsedGridItem(author) {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            const content = arr.content;
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            const content = type.content;
                             closure_0 = tmp;
                             closure_1 = tmp2;
                             const _Array = Array;
                             if (Array.isArray(content)) {
-                              const item1 = content.forEach((arr) => {
-                                if (Array.isArray(arr)) {
-                                  const item = arr.forEach(() => { ... });
+                              const item1 = content.forEach((type) => {
+                                closure_0 = diff;
+                                if (Array.isArray(type)) {
+                                  const item = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        const content = arr.content;
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        const content = type.content;
                                         closure_0 = tmp;
                                         closure_1 = tmp2;
                                         const _Array = Array;
@@ -2624,79 +2675,80 @@ function LinkParsedGridItem(author) {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
                                               if (null != content.content) {
-                                                closure_1_14(content.content, tmp, tmp2);
+                                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === tmp) {
                                             tmp2(content);
                                           } else {
-                                            closure_1_14(content, tmp - 1, tmp2);
+                                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
                                     diff = tmp - 1;
                                     closure_0 = diff;
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
-                                    if (Array.isArray(arr)) {
-                                      const item2 = arr.forEach(() => { ... });
+                                    if (Array.isArray(type)) {
+                                      const item2 = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            closure_1_14(arr.content, diff, tmp2);
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            getLinkNodeAtIndex(type.content, diff, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === diff) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
-                                        closure_1_14(arr, diff - 1, tmp2);
+                                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
-                                return arr;
+                                return type;
                               });
                             } else {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
                                   if (null != content.content) {
-                                    closure_1_14(content.content, tmp, tmp2);
+                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                   }
                                 }
                               }
                               if (0 === tmp) {
                                 tmp2(content);
                               } else {
-                                closure_1_14(content, tmp - 1, tmp2);
+                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                               }
                             }
                           }
                         }
                       }
                       if (0 === tmp) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
                         diff = tmp - 1;
                         closure_0 = diff;
                         closure_1 = tmp2;
                         const _Array2 = Array;
-                        if (Array.isArray(arr)) {
-                          const item2 = arr.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach(() => { ... });
+                        if (Array.isArray(type)) {
+                          const item2 = type.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
@@ -2706,99 +2758,101 @@ function LinkParsedGridItem(author) {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                closure_1_14(arr.content, diff, tmp2);
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                getLinkNodeAtIndex(type.content, diff, tmp2);
                               }
                             }
                           }
                           if (0 === diff) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
-                            closure_1_14(arr, diff - 1, tmp2);
+                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                           }
                         }
                       }
                     }
-                    return arr;
+                    return type;
                   });
                 } else {
                   if ("link" !== content.type) {
                     if ("channelMention" !== content.type) {
                       if (null != content.content) {
-                        closure_1_14(content.content, tmp, tmp2);
+                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                       }
                     }
                   }
                   if (0 === tmp) {
                     tmp2(content);
                   } else {
-                    closure_1_14(content, tmp - 1, tmp2);
+                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                   }
                 }
               }
             }
           }
           if (0 === tmp) {
-            tmp2(arr);
+            tmp2(type);
           } else {
             diff = tmp - 1;
             closure_0 = diff;
             closure_1 = tmp2;
             const _Array2 = Array;
-            if (Array.isArray(arr)) {
-              const item2 = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  const item = arr.forEach((arr) => {
-                    if (Array.isArray(arr)) {
-                      const item = arr.forEach(() => { ... });
+            if (Array.isArray(type)) {
+              const item2 = type.forEach((type) => {
+                closure_0 = diff;
+                if (Array.isArray(type)) {
+                  const item = type.forEach((type) => {
+                    closure_0 = diff;
+                    if (Array.isArray(type)) {
+                      const item = type.forEach(() => { ... });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            const content = arr.content;
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            const content = type.content;
                             closure_0 = tmp;
                             closure_1 = tmp2;
                             const _Array = Array;
@@ -2808,63 +2862,64 @@ function LinkParsedGridItem(author) {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
                                   if (null != content.content) {
-                                    closure_1_14(content.content, tmp, tmp2);
+                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                   }
                                 }
                               }
                               if (0 === tmp) {
                                 tmp2(content);
                               } else {
-                                closure_1_14(content, tmp - 1, tmp2);
+                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                               }
                             }
                           }
                         }
                       }
                       if (0 === tmp) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
                         diff = tmp - 1;
                         closure_0 = diff;
                         closure_1 = tmp2;
                         const _Array2 = Array;
-                        if (Array.isArray(arr)) {
-                          const item2 = arr.forEach(() => { ... });
+                        if (Array.isArray(type)) {
+                          const item2 = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                closure_1_14(arr.content, diff, tmp2);
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                getLinkNodeAtIndex(type.content, diff, tmp2);
                               }
                             }
                           }
                           if (0 === diff) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
-                            closure_1_14(arr, diff - 1, tmp2);
+                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                           }
                         }
                       }
                     }
-                    return arr;
+                    return type;
                   });
                 } else {
-                  if ("link" !== arr.type) {
-                    if ("channelMention" !== arr.type) {
-                      if (null != arr.content) {
-                        const content = arr.content;
+                  if ("link" !== type.type) {
+                    if ("channelMention" !== type.type) {
+                      if (null != type.content) {
+                        const content = type.content;
                         closure_0 = tmp;
                         closure_1 = tmp2;
                         const _Array = Array;
                         if (Array.isArray(content)) {
-                          const item1 = content.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach(() => { ... });
+                          const item1 = content.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
@@ -2874,79 +2929,80 @@ function LinkParsedGridItem(author) {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
                           if ("link" !== content.type) {
                             if ("channelMention" !== content.type) {
                               if (null != content.content) {
-                                closure_1_14(content.content, tmp, tmp2);
+                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                               }
                             }
                           }
                           if (0 === tmp) {
                             tmp2(content);
                           } else {
-                            closure_1_14(content, tmp - 1, tmp2);
+                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                           }
                         }
                       }
                     }
                   }
                   if (0 === tmp) {
-                    tmp2(arr);
+                    tmp2(type);
                   } else {
                     diff = tmp - 1;
                     closure_0 = diff;
                     closure_1 = tmp2;
                     const _Array2 = Array;
-                    if (Array.isArray(arr)) {
-                      const item2 = arr.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach(() => { ... });
+                    if (Array.isArray(type)) {
+                      const item2 = type.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
@@ -2956,103 +3012,106 @@ function LinkParsedGridItem(author) {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            closure_1_14(arr.content, diff, tmp2);
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            getLinkNodeAtIndex(type.content, diff, tmp2);
                           }
                         }
                       }
                       if (0 === diff) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
-                        closure_1_14(arr, diff - 1, tmp2);
+                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                       }
                     }
                   }
                 }
-                return arr;
+                return type;
               });
             } else {
-              if ("link" !== arr.type) {
-                if ("channelMention" !== arr.type) {
-                  if (null != arr.content) {
-                    closure_1_14(arr.content, diff, tmp2);
+              if ("link" !== type.type) {
+                if ("channelMention" !== type.type) {
+                  if (null != type.content) {
+                    getLinkNodeAtIndex(type.content, diff, tmp2);
                   }
                 }
               }
               if (0 === diff) {
-                tmp2(arr);
+                tmp2(type);
               } else {
-                closure_1_14(arr, diff - 1, tmp2);
+                getLinkNodeAtIndex(type, diff - 1, tmp2);
               }
             }
           }
         }
-        return arr;
+        return type;
       });
     } else {
-      if ("link" !== arr.type) {
-        if ("channelMention" !== arr.type) {
-          if (null != arr.content) {
-            let content = arr.content;
+      if ("link" !== type.type) {
+        if ("channelMention" !== type.type) {
+          if (null != type.content) {
+            let content = type.content;
             author = tmp;
             closure_1 = tmp2;
             let _Array = Array;
             if (Array.isArray(content)) {
-              let item1 = content.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  const item = arr.forEach((arr) => {
-                    if (Array.isArray(arr)) {
-                      const item = arr.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach(() => { ... });
+              let item1 = content.forEach((type) => {
+                closure_0 = diff;
+                if (Array.isArray(type)) {
+                  const item = type.forEach((type) => {
+                    closure_0 = diff;
+                    if (Array.isArray(type)) {
+                      const item = type.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
@@ -3062,63 +3121,64 @@ function LinkParsedGridItem(author) {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            const content = arr.content;
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            const content = type.content;
                             closure_0 = tmp;
                             closure_1 = tmp2;
                             const _Array = Array;
                             if (Array.isArray(content)) {
-                              const item1 = content.forEach((arr) => {
-                                if (Array.isArray(arr)) {
-                                  const item = arr.forEach(() => { ... });
+                              const item1 = content.forEach((type) => {
+                                closure_0 = diff;
+                                if (Array.isArray(type)) {
+                                  const item = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        const content = arr.content;
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        const content = type.content;
                                         closure_0 = tmp;
                                         closure_1 = tmp2;
                                         const _Array = Array;
@@ -3128,79 +3188,80 @@ function LinkParsedGridItem(author) {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
                                               if (null != content.content) {
-                                                closure_1_14(content.content, tmp, tmp2);
+                                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === tmp) {
                                             tmp2(content);
                                           } else {
-                                            closure_1_14(content, tmp - 1, tmp2);
+                                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
                                     diff = tmp - 1;
                                     closure_0 = diff;
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
-                                    if (Array.isArray(arr)) {
-                                      const item2 = arr.forEach(() => { ... });
+                                    if (Array.isArray(type)) {
+                                      const item2 = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            closure_1_14(arr.content, diff, tmp2);
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            getLinkNodeAtIndex(type.content, diff, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === diff) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
-                                        closure_1_14(arr, diff - 1, tmp2);
+                                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
-                                return arr;
+                                return type;
                               });
                             } else {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
                                   if (null != content.content) {
-                                    closure_1_14(content.content, tmp, tmp2);
+                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                   }
                                 }
                               }
                               if (0 === tmp) {
                                 tmp2(content);
                               } else {
-                                closure_1_14(content, tmp - 1, tmp2);
+                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                               }
                             }
                           }
                         }
                       }
                       if (0 === tmp) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
                         diff = tmp - 1;
                         closure_0 = diff;
                         closure_1 = tmp2;
                         const _Array2 = Array;
-                        if (Array.isArray(arr)) {
-                          const item2 = arr.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach(() => { ... });
+                        if (Array.isArray(type)) {
+                          const item2 = type.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
@@ -3210,83 +3271,85 @@ function LinkParsedGridItem(author) {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                closure_1_14(arr.content, diff, tmp2);
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                getLinkNodeAtIndex(type.content, diff, tmp2);
                               }
                             }
                           }
                           if (0 === diff) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
-                            closure_1_14(arr, diff - 1, tmp2);
+                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                           }
                         }
                       }
                     }
-                    return arr;
+                    return type;
                   });
                 } else {
-                  if ("link" !== arr.type) {
-                    if ("channelMention" !== arr.type) {
-                      if (null != arr.content) {
-                        const content = arr.content;
+                  if ("link" !== type.type) {
+                    if ("channelMention" !== type.type) {
+                      if (null != type.content) {
+                        const content = type.content;
                         closure_0 = tmp;
                         closure_1 = tmp2;
                         const _Array = Array;
                         if (Array.isArray(content)) {
-                          const item1 = content.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach((arr) => {
-                                if (Array.isArray(arr)) {
-                                  const item = arr.forEach(() => { ... });
+                          const item1 = content.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach((type) => {
+                                closure_0 = diff;
+                                if (Array.isArray(type)) {
+                                  const item = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        const content = arr.content;
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        const content = type.content;
                                         closure_0 = tmp;
                                         closure_1 = tmp2;
                                         const _Array = Array;
@@ -3296,63 +3359,64 @@ function LinkParsedGridItem(author) {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
                                               if (null != content.content) {
-                                                closure_1_14(content.content, tmp, tmp2);
+                                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === tmp) {
                                             tmp2(content);
                                           } else {
-                                            closure_1_14(content, tmp - 1, tmp2);
+                                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
                                     diff = tmp - 1;
                                     closure_0 = diff;
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
-                                    if (Array.isArray(arr)) {
-                                      const item2 = arr.forEach(() => { ... });
+                                    if (Array.isArray(type)) {
+                                      const item2 = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            closure_1_14(arr.content, diff, tmp2);
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            getLinkNodeAtIndex(type.content, diff, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === diff) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
-                                        closure_1_14(arr, diff - 1, tmp2);
+                                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
-                                return arr;
+                                return type;
                               });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
                                     if (Array.isArray(content)) {
-                                      const item1 = content.forEach((arr) => {
-                                        if (Array.isArray(arr)) {
-                                          const item = arr.forEach(() => { ... });
+                                      const item1 = content.forEach((type) => {
+                                        closure_0 = diff;
+                                        if (Array.isArray(type)) {
+                                          const item = type.forEach(() => { ... });
                                         } else {
-                                          if ("link" !== arr.type) {
-                                            if ("channelMention" !== arr.type) {
-                                              if (null != arr.content) {
-                                                const content = arr.content;
+                                          if ("link" !== type.type) {
+                                            if ("channelMention" !== type.type) {
+                                              if (null != type.content) {
+                                                const content = type.content;
                                                 closure_0 = tmp;
                                                 closure_1 = tmp2;
                                                 const _Array = Array;
@@ -3362,79 +3426,80 @@ function LinkParsedGridItem(author) {
                                                   if ("link" !== content.type) {
                                                     if ("channelMention" !== content.type) {
                                                       if (null != content.content) {
-                                                        closure_1_14(content.content, tmp, tmp2);
+                                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                       }
                                                     }
                                                   }
                                                   if (0 === tmp) {
                                                     tmp2(content);
                                                   } else {
-                                                    closure_1_14(content, tmp - 1, tmp2);
+                                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                                   }
                                                 }
                                               }
                                             }
                                           }
                                           if (0 === tmp) {
-                                            tmp2(arr);
+                                            tmp2(type);
                                           } else {
                                             diff = tmp - 1;
                                             closure_0 = diff;
                                             closure_1 = tmp2;
                                             const _Array2 = Array;
-                                            if (Array.isArray(arr)) {
-                                              const item2 = arr.forEach(() => { ... });
+                                            if (Array.isArray(type)) {
+                                              const item2 = type.forEach(() => { ... });
                                             } else {
-                                              if ("link" !== arr.type) {
-                                                if ("channelMention" !== arr.type) {
-                                                  if (null != arr.content) {
-                                                    closure_1_14(arr.content, diff, tmp2);
+                                              if ("link" !== type.type) {
+                                                if ("channelMention" !== type.type) {
+                                                  if (null != type.content) {
+                                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                                   }
                                                 }
                                               }
                                               if (0 === diff) {
-                                                tmp2(arr);
+                                                tmp2(type);
                                               } else {
-                                                closure_1_14(arr, diff - 1, tmp2);
+                                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                                               }
                                             }
                                           }
                                         }
-                                        return arr;
+                                        return type;
                                       });
                                     } else {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach((arr) => {
-                                    if (Array.isArray(arr)) {
-                                      const item = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach((type) => {
+                                    closure_0 = diff;
+                                    if (Array.isArray(type)) {
+                                      const item = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            const content = arr.content;
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            const content = type.content;
                                             closure_0 = tmp;
                                             closure_1 = tmp2;
                                             const _Array = Array;
@@ -3444,99 +3509,101 @@ function LinkParsedGridItem(author) {
                                               if ("link" !== content.type) {
                                                 if ("channelMention" !== content.type) {
                                                   if (null != content.content) {
-                                                    closure_1_14(content.content, tmp, tmp2);
+                                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                   }
                                                 }
                                               }
                                               if (0 === tmp) {
                                                 tmp2(content);
                                               } else {
-                                                closure_1_14(content, tmp - 1, tmp2);
+                                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                               }
                                             }
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
                                         diff = tmp - 1;
                                         closure_0 = diff;
                                         closure_1 = tmp2;
                                         const _Array2 = Array;
-                                        if (Array.isArray(arr)) {
-                                          const item2 = arr.forEach(() => { ... });
+                                        if (Array.isArray(type)) {
+                                          const item2 = type.forEach(() => { ... });
                                         } else {
-                                          if ("link" !== arr.type) {
-                                            if ("channelMention" !== arr.type) {
-                                              if (null != arr.content) {
-                                                closure_1_14(arr.content, diff, tmp2);
+                                          if ("link" !== type.type) {
+                                            if ("channelMention" !== type.type) {
+                                              if (null != type.content) {
+                                                getLinkNodeAtIndex(type.content, diff, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === diff) {
-                                            tmp2(arr);
+                                            tmp2(type);
                                           } else {
-                                            closure_1_14(arr, diff - 1, tmp2);
+                                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
-                                    return arr;
+                                    return type;
                                   });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
                           if ("link" !== content.type) {
                             if ("channelMention" !== content.type) {
                               if (null != content.content) {
-                                closure_1_14(content.content, tmp, tmp2);
+                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                               }
                             }
                           }
                           if (0 === tmp) {
                             tmp2(content);
                           } else {
-                            closure_1_14(content, tmp - 1, tmp2);
+                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                           }
                         }
                       }
                     }
                   }
                   if (0 === tmp) {
-                    tmp2(arr);
+                    tmp2(type);
                   } else {
                     diff = tmp - 1;
                     closure_0 = diff;
                     closure_1 = tmp2;
                     const _Array2 = Array;
-                    if (Array.isArray(arr)) {
-                      const item2 = arr.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach(() => { ... });
+                    if (Array.isArray(type)) {
+                      const item2 = type.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
@@ -3546,63 +3613,64 @@ function LinkParsedGridItem(author) {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach((arr) => {
-                                    if (Array.isArray(arr)) {
-                                      const item = arr.forEach(() => { ... });
+                                  const item1 = content.forEach((type) => {
+                                    closure_0 = diff;
+                                    if (Array.isArray(type)) {
+                                      const item = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            const content = arr.content;
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            const content = type.content;
                                             closure_0 = tmp;
                                             closure_1 = tmp2;
                                             const _Array = Array;
@@ -3612,79 +3680,80 @@ function LinkParsedGridItem(author) {
                                               if ("link" !== content.type) {
                                                 if ("channelMention" !== content.type) {
                                                   if (null != content.content) {
-                                                    closure_1_14(content.content, tmp, tmp2);
+                                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                   }
                                                 }
                                               }
                                               if (0 === tmp) {
                                                 tmp2(content);
                                               } else {
-                                                closure_1_14(content, tmp - 1, tmp2);
+                                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                               }
                                             }
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
                                         diff = tmp - 1;
                                         closure_0 = diff;
                                         closure_1 = tmp2;
                                         const _Array2 = Array;
-                                        if (Array.isArray(arr)) {
-                                          const item2 = arr.forEach(() => { ... });
+                                        if (Array.isArray(type)) {
+                                          const item2 = type.forEach(() => { ... });
                                         } else {
-                                          if ("link" !== arr.type) {
-                                            if ("channelMention" !== arr.type) {
-                                              if (null != arr.content) {
-                                                closure_1_14(arr.content, diff, tmp2);
+                                          if ("link" !== type.type) {
+                                            if ("channelMention" !== type.type) {
+                                              if (null != type.content) {
+                                                getLinkNodeAtIndex(type.content, diff, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === diff) {
-                                            tmp2(arr);
+                                            tmp2(type);
                                           } else {
-                                            closure_1_14(arr, diff - 1, tmp2);
+                                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
-                                    return arr;
+                                    return type;
                                   });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach((arr) => {
-                                if (Array.isArray(arr)) {
-                                  const item = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach((type) => {
+                                closure_0 = diff;
+                                if (Array.isArray(type)) {
+                                  const item = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        const content = arr.content;
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        const content = type.content;
                                         closure_0 = tmp;
                                         closure_1 = tmp2;
                                         const _Array = Array;
@@ -3694,119 +3763,122 @@ function LinkParsedGridItem(author) {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
                                               if (null != content.content) {
-                                                closure_1_14(content.content, tmp, tmp2);
+                                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === tmp) {
                                             tmp2(content);
                                           } else {
-                                            closure_1_14(content, tmp - 1, tmp2);
+                                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
                                     diff = tmp - 1;
                                     closure_0 = diff;
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
-                                    if (Array.isArray(arr)) {
-                                      const item2 = arr.forEach(() => { ... });
+                                    if (Array.isArray(type)) {
+                                      const item2 = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            closure_1_14(arr.content, diff, tmp2);
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            getLinkNodeAtIndex(type.content, diff, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === diff) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
-                                        closure_1_14(arr, diff - 1, tmp2);
+                                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
-                                return arr;
+                                return type;
                               });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            closure_1_14(arr.content, diff, tmp2);
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            getLinkNodeAtIndex(type.content, diff, tmp2);
                           }
                         }
                       }
                       if (0 === diff) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
-                        closure_1_14(arr, diff - 1, tmp2);
+                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                       }
                     }
                   }
                 }
-                return arr;
+                return type;
               });
             } else {
               if ("link" !== content.type) {
                 if ("channelMention" !== content.type) {
                   if (null != content.content) {
-                    closure_1_14(content.content, tmp, tmp2);
+                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                   }
                 }
               }
               if (0 === tmp) {
                 tmp2(content);
               } else {
-                closure_1_14(content, tmp - 1, tmp2);
+                getLinkNodeAtIndex(content, tmp - 1, tmp2);
               }
             }
           }
         }
       }
       if (0 === tmp) {
-        tmp2(arr);
+        tmp2(type);
       } else {
         let diff = tmp - 1;
         author = diff;
         closure_1 = tmp2;
         let _Array2 = Array;
-        if (Array.isArray(arr)) {
-          let item2 = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              const item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  const item = arr.forEach((arr) => {
-                    if (Array.isArray(arr)) {
-                      const item = arr.forEach(() => { ... });
+        if (Array.isArray(type)) {
+          let item2 = type.forEach((type) => {
+            closure_0 = diff;
+            if (Array.isArray(type)) {
+              const item = type.forEach((type) => {
+                closure_0 = diff;
+                if (Array.isArray(type)) {
+                  const item = type.forEach((type) => {
+                    closure_0 = diff;
+                    if (Array.isArray(type)) {
+                      const item = type.forEach(() => { ... });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            const content = arr.content;
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            const content = type.content;
                             closure_0 = tmp;
                             closure_1 = tmp2;
                             const _Array = Array;
@@ -3816,63 +3888,64 @@ function LinkParsedGridItem(author) {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
                                   if (null != content.content) {
-                                    closure_1_14(content.content, tmp, tmp2);
+                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                   }
                                 }
                               }
                               if (0 === tmp) {
                                 tmp2(content);
                               } else {
-                                closure_1_14(content, tmp - 1, tmp2);
+                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                               }
                             }
                           }
                         }
                       }
                       if (0 === tmp) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
                         diff = tmp - 1;
                         closure_0 = diff;
                         closure_1 = tmp2;
                         const _Array2 = Array;
-                        if (Array.isArray(arr)) {
-                          const item2 = arr.forEach(() => { ... });
+                        if (Array.isArray(type)) {
+                          const item2 = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                closure_1_14(arr.content, diff, tmp2);
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                getLinkNodeAtIndex(type.content, diff, tmp2);
                               }
                             }
                           }
                           if (0 === diff) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
-                            closure_1_14(arr, diff - 1, tmp2);
+                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                           }
                         }
                       }
                     }
-                    return arr;
+                    return type;
                   });
                 } else {
-                  if ("link" !== arr.type) {
-                    if ("channelMention" !== arr.type) {
-                      if (null != arr.content) {
-                        const content = arr.content;
+                  if ("link" !== type.type) {
+                    if ("channelMention" !== type.type) {
+                      if (null != type.content) {
+                        const content = type.content;
                         closure_0 = tmp;
                         closure_1 = tmp2;
                         const _Array = Array;
                         if (Array.isArray(content)) {
-                          const item1 = content.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach(() => { ... });
+                          const item1 = content.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
@@ -3882,79 +3955,80 @@ function LinkParsedGridItem(author) {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
                           if ("link" !== content.type) {
                             if ("channelMention" !== content.type) {
                               if (null != content.content) {
-                                closure_1_14(content.content, tmp, tmp2);
+                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                               }
                             }
                           }
                           if (0 === tmp) {
                             tmp2(content);
                           } else {
-                            closure_1_14(content, tmp - 1, tmp2);
+                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                           }
                         }
                       }
                     }
                   }
                   if (0 === tmp) {
-                    tmp2(arr);
+                    tmp2(type);
                   } else {
                     diff = tmp - 1;
                     closure_0 = diff;
                     closure_1 = tmp2;
                     const _Array2 = Array;
-                    if (Array.isArray(arr)) {
-                      const item2 = arr.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach(() => { ... });
+                    if (Array.isArray(type)) {
+                      const item2 = type.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
@@ -3964,83 +4038,85 @@ function LinkParsedGridItem(author) {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            closure_1_14(arr.content, diff, tmp2);
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            getLinkNodeAtIndex(type.content, diff, tmp2);
                           }
                         }
                       }
                       if (0 === diff) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
-                        closure_1_14(arr, diff - 1, tmp2);
+                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                       }
                     }
                   }
                 }
-                return arr;
+                return type;
               });
             } else {
-              if ("link" !== arr.type) {
-                if ("channelMention" !== arr.type) {
-                  if (null != arr.content) {
-                    const content = arr.content;
+              if ("link" !== type.type) {
+                if ("channelMention" !== type.type) {
+                  if (null != type.content) {
+                    const content = type.content;
                     closure_0 = tmp;
                     closure_1 = tmp2;
                     const _Array = Array;
                     if (Array.isArray(content)) {
-                      const item1 = content.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach(() => { ... });
+                      const item1 = content.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
@@ -4050,63 +4126,64 @@ function LinkParsedGridItem(author) {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
                                 if (Array.isArray(content)) {
-                                  const item1 = content.forEach((arr) => {
-                                    if (Array.isArray(arr)) {
-                                      const item = arr.forEach(() => { ... });
+                                  const item1 = content.forEach((type) => {
+                                    closure_0 = diff;
+                                    if (Array.isArray(type)) {
+                                      const item = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            const content = arr.content;
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            const content = type.content;
                                             closure_0 = tmp;
                                             closure_1 = tmp2;
                                             const _Array = Array;
@@ -4116,79 +4193,80 @@ function LinkParsedGridItem(author) {
                                               if ("link" !== content.type) {
                                                 if ("channelMention" !== content.type) {
                                                   if (null != content.content) {
-                                                    closure_1_14(content.content, tmp, tmp2);
+                                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                                   }
                                                 }
                                               }
                                               if (0 === tmp) {
                                                 tmp2(content);
                                               } else {
-                                                closure_1_14(content, tmp - 1, tmp2);
+                                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                               }
                                             }
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
                                         diff = tmp - 1;
                                         closure_0 = diff;
                                         closure_1 = tmp2;
                                         const _Array2 = Array;
-                                        if (Array.isArray(arr)) {
-                                          const item2 = arr.forEach(() => { ... });
+                                        if (Array.isArray(type)) {
+                                          const item2 = type.forEach(() => { ... });
                                         } else {
-                                          if ("link" !== arr.type) {
-                                            if ("channelMention" !== arr.type) {
-                                              if (null != arr.content) {
-                                                closure_1_14(arr.content, diff, tmp2);
+                                          if ("link" !== type.type) {
+                                            if ("channelMention" !== type.type) {
+                                              if (null != type.content) {
+                                                getLinkNodeAtIndex(type.content, diff, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === diff) {
-                                            tmp2(arr);
+                                            tmp2(type);
                                           } else {
-                                            closure_1_14(arr, diff - 1, tmp2);
+                                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
-                                    return arr;
+                                    return type;
                                   });
                                 } else {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach((arr) => {
-                                if (Array.isArray(arr)) {
-                                  const item = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach((type) => {
+                                closure_0 = diff;
+                                if (Array.isArray(type)) {
+                                  const item = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        const content = arr.content;
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        const content = type.content;
                                         closure_0 = tmp;
                                         closure_1 = tmp2;
                                         const _Array = Array;
@@ -4198,99 +4276,101 @@ function LinkParsedGridItem(author) {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
                                               if (null != content.content) {
-                                                closure_1_14(content.content, tmp, tmp2);
+                                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === tmp) {
                                             tmp2(content);
                                           } else {
-                                            closure_1_14(content, tmp - 1, tmp2);
+                                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
                                     diff = tmp - 1;
                                     closure_0 = diff;
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
-                                    if (Array.isArray(arr)) {
-                                      const item2 = arr.forEach(() => { ... });
+                                    if (Array.isArray(type)) {
+                                      const item2 = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            closure_1_14(arr.content, diff, tmp2);
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            getLinkNodeAtIndex(type.content, diff, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === diff) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
-                                        closure_1_14(arr, diff - 1, tmp2);
+                                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
-                                return arr;
+                                return type;
                               });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
                       if ("link" !== content.type) {
                         if ("channelMention" !== content.type) {
                           if (null != content.content) {
-                            closure_1_14(content.content, tmp, tmp2);
+                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                           }
                         }
                       }
                       if (0 === tmp) {
                         tmp2(content);
                       } else {
-                        closure_1_14(content, tmp - 1, tmp2);
+                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                       }
                     }
                   }
                 }
               }
               if (0 === tmp) {
-                tmp2(arr);
+                tmp2(type);
               } else {
                 diff = tmp - 1;
                 closure_0 = diff;
                 closure_1 = tmp2;
                 const _Array2 = Array;
-                if (Array.isArray(arr)) {
-                  const item2 = arr.forEach((arr) => {
-                    if (Array.isArray(arr)) {
-                      const item = arr.forEach((arr) => {
-                        if (Array.isArray(arr)) {
-                          const item = arr.forEach(() => { ... });
+                if (Array.isArray(type)) {
+                  const item2 = type.forEach((type) => {
+                    closure_0 = diff;
+                    if (Array.isArray(type)) {
+                      const item = type.forEach((type) => {
+                        closure_0 = diff;
+                        if (Array.isArray(type)) {
+                          const item = type.forEach(() => { ... });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                const content = arr.content;
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                const content = type.content;
                                 closure_0 = tmp;
                                 closure_1 = tmp2;
                                 const _Array = Array;
@@ -4300,63 +4380,64 @@ function LinkParsedGridItem(author) {
                                   if ("link" !== content.type) {
                                     if ("channelMention" !== content.type) {
                                       if (null != content.content) {
-                                        closure_1_14(content.content, tmp, tmp2);
+                                        getLinkNodeAtIndex(content.content, tmp, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
                                     tmp2(content);
                                   } else {
-                                    closure_1_14(content, tmp - 1, tmp2);
+                                    getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                   }
                                 }
                               }
                             }
                           }
                           if (0 === tmp) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
                             diff = tmp - 1;
                             closure_0 = diff;
                             closure_1 = tmp2;
                             const _Array2 = Array;
-                            if (Array.isArray(arr)) {
-                              const item2 = arr.forEach(() => { ... });
+                            if (Array.isArray(type)) {
+                              const item2 = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    closure_1_14(arr.content, diff, tmp2);
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    getLinkNodeAtIndex(type.content, diff, tmp2);
                                   }
                                 }
                               }
                               if (0 === diff) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
-                                closure_1_14(arr, diff - 1, tmp2);
+                                getLinkNodeAtIndex(type, diff - 1, tmp2);
                               }
                             }
                           }
                         }
-                        return arr;
+                        return type;
                       });
                     } else {
-                      if ("link" !== arr.type) {
-                        if ("channelMention" !== arr.type) {
-                          if (null != arr.content) {
-                            const content = arr.content;
+                      if ("link" !== type.type) {
+                        if ("channelMention" !== type.type) {
+                          if (null != type.content) {
+                            const content = type.content;
                             closure_0 = tmp;
                             closure_1 = tmp2;
                             const _Array = Array;
                             if (Array.isArray(content)) {
-                              const item1 = content.forEach((arr) => {
-                                if (Array.isArray(arr)) {
-                                  const item = arr.forEach(() => { ... });
+                              const item1 = content.forEach((type) => {
+                                closure_0 = diff;
+                                if (Array.isArray(type)) {
+                                  const item = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        const content = arr.content;
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        const content = type.content;
                                         closure_0 = tmp;
                                         closure_1 = tmp2;
                                         const _Array = Array;
@@ -4366,79 +4447,80 @@ function LinkParsedGridItem(author) {
                                           if ("link" !== content.type) {
                                             if ("channelMention" !== content.type) {
                                               if (null != content.content) {
-                                                closure_1_14(content.content, tmp, tmp2);
+                                                getLinkNodeAtIndex(content.content, tmp, tmp2);
                                               }
                                             }
                                           }
                                           if (0 === tmp) {
                                             tmp2(content);
                                           } else {
-                                            closure_1_14(content, tmp - 1, tmp2);
+                                            getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                           }
                                         }
                                       }
                                     }
                                   }
                                   if (0 === tmp) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
                                     diff = tmp - 1;
                                     closure_0 = diff;
                                     closure_1 = tmp2;
                                     const _Array2 = Array;
-                                    if (Array.isArray(arr)) {
-                                      const item2 = arr.forEach(() => { ... });
+                                    if (Array.isArray(type)) {
+                                      const item2 = type.forEach(() => { ... });
                                     } else {
-                                      if ("link" !== arr.type) {
-                                        if ("channelMention" !== arr.type) {
-                                          if (null != arr.content) {
-                                            closure_1_14(arr.content, diff, tmp2);
+                                      if ("link" !== type.type) {
+                                        if ("channelMention" !== type.type) {
+                                          if (null != type.content) {
+                                            getLinkNodeAtIndex(type.content, diff, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === diff) {
-                                        tmp2(arr);
+                                        tmp2(type);
                                       } else {
-                                        closure_1_14(arr, diff - 1, tmp2);
+                                        getLinkNodeAtIndex(type, diff - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
-                                return arr;
+                                return type;
                               });
                             } else {
                               if ("link" !== content.type) {
                                 if ("channelMention" !== content.type) {
                                   if (null != content.content) {
-                                    closure_1_14(content.content, tmp, tmp2);
+                                    getLinkNodeAtIndex(content.content, tmp, tmp2);
                                   }
                                 }
                               }
                               if (0 === tmp) {
                                 tmp2(content);
                               } else {
-                                closure_1_14(content, tmp - 1, tmp2);
+                                getLinkNodeAtIndex(content, tmp - 1, tmp2);
                               }
                             }
                           }
                         }
                       }
                       if (0 === tmp) {
-                        tmp2(arr);
+                        tmp2(type);
                       } else {
                         diff = tmp - 1;
                         closure_0 = diff;
                         closure_1 = tmp2;
                         const _Array2 = Array;
-                        if (Array.isArray(arr)) {
-                          const item2 = arr.forEach((arr) => {
-                            if (Array.isArray(arr)) {
-                              const item = arr.forEach(() => { ... });
+                        if (Array.isArray(type)) {
+                          const item2 = type.forEach((type) => {
+                            closure_0 = diff;
+                            if (Array.isArray(type)) {
+                              const item = type.forEach(() => { ... });
                             } else {
-                              if ("link" !== arr.type) {
-                                if ("channelMention" !== arr.type) {
-                                  if (null != arr.content) {
-                                    const content = arr.content;
+                              if ("link" !== type.type) {
+                                if ("channelMention" !== type.type) {
+                                  if (null != type.content) {
+                                    const content = type.content;
                                     closure_0 = tmp;
                                     closure_1 = tmp2;
                                     const _Array = Array;
@@ -4448,115 +4530,112 @@ function LinkParsedGridItem(author) {
                                       if ("link" !== content.type) {
                                         if ("channelMention" !== content.type) {
                                           if (null != content.content) {
-                                            closure_1_14(content.content, tmp, tmp2);
+                                            getLinkNodeAtIndex(content.content, tmp, tmp2);
                                           }
                                         }
                                       }
                                       if (0 === tmp) {
                                         tmp2(content);
                                       } else {
-                                        closure_1_14(content, tmp - 1, tmp2);
+                                        getLinkNodeAtIndex(content, tmp - 1, tmp2);
                                       }
                                     }
                                   }
                                 }
                               }
                               if (0 === tmp) {
-                                tmp2(arr);
+                                tmp2(type);
                               } else {
                                 diff = tmp - 1;
                                 closure_0 = diff;
                                 closure_1 = tmp2;
                                 const _Array2 = Array;
-                                if (Array.isArray(arr)) {
-                                  const item2 = arr.forEach(() => { ... });
+                                if (Array.isArray(type)) {
+                                  const item2 = type.forEach(() => { ... });
                                 } else {
-                                  if ("link" !== arr.type) {
-                                    if ("channelMention" !== arr.type) {
-                                      if (null != arr.content) {
-                                        closure_1_14(arr.content, diff, tmp2);
+                                  if ("link" !== type.type) {
+                                    if ("channelMention" !== type.type) {
+                                      if (null != type.content) {
+                                        getLinkNodeAtIndex(type.content, diff, tmp2);
                                       }
                                     }
                                   }
                                   if (0 === diff) {
-                                    tmp2(arr);
+                                    tmp2(type);
                                   } else {
-                                    closure_1_14(arr, diff - 1, tmp2);
+                                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                                   }
                                 }
                               }
                             }
-                            return arr;
+                            return type;
                           });
                         } else {
-                          if ("link" !== arr.type) {
-                            if ("channelMention" !== arr.type) {
-                              if (null != arr.content) {
-                                closure_1_14(arr.content, diff, tmp2);
+                          if ("link" !== type.type) {
+                            if ("channelMention" !== type.type) {
+                              if (null != type.content) {
+                                getLinkNodeAtIndex(type.content, diff, tmp2);
                               }
                             }
                           }
                           if (0 === diff) {
-                            tmp2(arr);
+                            tmp2(type);
                           } else {
-                            closure_1_14(arr, diff - 1, tmp2);
+                            getLinkNodeAtIndex(type, diff - 1, tmp2);
                           }
                         }
                       }
                     }
-                    return arr;
+                    return type;
                   });
                 } else {
-                  if ("link" !== arr.type) {
-                    if ("channelMention" !== arr.type) {
-                      if (null != arr.content) {
-                        closure_1_14(arr.content, diff, tmp2);
+                  if ("link" !== type.type) {
+                    if ("channelMention" !== type.type) {
+                      if (null != type.content) {
+                        getLinkNodeAtIndex(type.content, diff, tmp2);
                       }
                     }
                   }
                   if (0 === diff) {
-                    tmp2(arr);
+                    tmp2(type);
                   } else {
-                    closure_1_14(arr, diff - 1, tmp2);
+                    getLinkNodeAtIndex(type, diff - 1, tmp2);
                   }
                 }
               }
             }
-            return arr;
+            return type;
           });
         } else {
-          if ("link" !== arr.type) {
-            if ("channelMention" !== arr.type) {
-              if (null != arr.content) {
-                closure_1_14(arr.content, diff, tmp2);
+          if ("link" !== type.type) {
+            if ("channelMention" !== type.type) {
+              if (null != type.content) {
+                getLinkNodeAtIndex(type.content, diff, tmp2);
               }
             }
           }
           if (0 === diff) {
-            tmp2(arr);
+            tmp2(type);
           } else {
-            closure_1_14(arr, diff - 1, tmp2);
+            getLinkNodeAtIndex(type, diff - 1, tmp2);
           }
         }
       }
     }
-    return arr;
+    return type;
   }, items2);
-  const items3 = [stateFromStores, callback];
+  const items3 = [stateFromStores, postProcessor];
   const items4 = [first, tmp.tapToSee];
   const memo = onPressSearchLink.useMemo(() => {
     if (null == stateFromStores) {
-      const intl = author(channelId[9]).intl;
-      return intl.string(author(channelId[9]).t.mE3KJN);
+      const intl = util.intl;
+      return intl.string(util.t.mE3KJN);
     } else {
-      let obj = author(channelId[10]);
-      obj = { postProcessor: null };
-      obj[0] = callback;
+      let obj = { postProcessor };
       obj = { pointerEvents: "none", children: null };
-      obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: null };
-      obj1[3] = obj.renderMessageMarkupWithParser(author(channelId[11]).NativeSearchResultLinkPreviewParser, tmp, obj).content;
-      obj[1] = callback(author(channelId[12]).Text, obj1);
-      return callback(onPressGuildVoiceChannelMention, obj);
+      const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: obj.renderMessageMarkupWithParser(SearchResultLinkPreviewMarkup.NativeSearchResultLinkPreviewParser, tmp, obj).content };
+      obj.children = closure_2_11(Text_Text.Text, obj1);
+      return closure_2_11(hasOwnProperty, obj);
     }
   }, items3);
   let target;
@@ -4565,9 +4644,8 @@ function LinkParsedGridItem(author) {
       if ("link" === tmp.type) {
         if (null != tmp.target) {
           if ("" !== tmp.target) {
-            let obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: null };
-            obj[3] = tmp.target;
-            return callback(author(channelId[12]).Text, obj);
+            let obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: tmp.target };
+            return closure_2_11(Text_Text.Text, obj);
           }
         }
       }
@@ -4578,15 +4656,14 @@ function LinkParsedGridItem(author) {
         type = tmp.type;
       }
       if ("channelMention" === type) {
-        obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: null };
-        obj[3] = tmp.originalLink;
-        return callback(author(channelId[12]).Text, obj);
+        obj = { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: tmp.originalLink };
+        return closure_2_11(Text_Text.Text, obj);
       }
     }
-    obj = { variant: "text-xs/normal", color: "interactive-text-default", lineClamp: 1, style: store.tapToSee, children: null };
-    const intl = author(channelId[9]).intl;
-    obj[4] = intl.string(author(channelId[9]).t.q2IIoP);
-    return callback(author(channelId[12]).Text, obj);
+    obj = { variant: "text-xs/normal", color: "interactive-text-default", lineClamp: 1, style: tapToSee.tapToSee, children: null };
+    const intl = util.intl;
+    obj.children = intl.string(util.t.q2IIoP);
+    return closure_2_11(Text_Text.Text, obj);
   }, items4);
   if (first != null) {
     target = first.target;
@@ -4604,47 +4681,34 @@ function LinkParsedGridItem(author) {
       type = tmp.type;
     }
     if ("channelMention" === type) {
-      return callback(author(channelId[13]).ChatIcon, { size: "lg" });
+      return closure_2_11(ChatIcon.ChatIcon, { size: "lg" });
     } else if ("link" === type) {
-      return callback(author(channelId[14]).getUrlIcon(tmp.target), { size: "lg" });
+      return closure_2_11(SearchPlatformUtils.getUrlIcon(tmp.target), { size: "lg" });
     } else {
-      return callback(author(channelId[15]).LinkIcon, { size: "lg" });
+      return closure_2_11(LinkIcon.LinkIcon, { size: "lg" });
     }
   }, items5);
   const items7 = [author, ];
   let guild_id;
-  const callback1 = obj3.useCallback(() => {
+  const callback1 = obj2.useCallback(() => {
     if (null == first) {
-      let obj = { channelId: null, messageId: null };
-      obj[0] = channelId;
-      obj[1] = messageId;
+      let obj = { channelId, messageId };
       onPress(obj);
     } else if ("link" === tmp.type) {
-      obj = { url: null, trusted: null, messageId: null, channelId: null };
-      obj[0] = tmp.target;
-      obj[1] = author(channelId[16]).isLinkTrusted(tmp);
-      obj[2] = messageId;
-      obj[3] = channelId;
+      obj = { url: tmp.target, trusted: MarkupReactLinkUtils.isLinkTrusted(tmp), messageId, channelId };
       onPressSearchLink(obj);
-      const obj4 = author(channelId[16]);
     } else if ("channelMention" === tmp.type) {
       channelId = tmp.channelId;
-      const channel = store.getChannel(channelId);
+      const channel = ChannelStore.getChannel(channelId);
       let isGuildVocalResult;
       if (channel != null) {
         isGuildVocalResult = channel.isGuildVocal();
       }
       if (isGuildVocalResult) {
-        obj1 = { channelId: null, messageId: null, mentionedChannelId: null };
-        obj1[0] = channelId;
-        obj1[1] = messageId;
-        obj1[2] = channelId;
+        const obj1 = { channelId, messageId, mentionedChannelId: channelId };
         onPressGuildVoiceChannelMention(obj1);
       } else {
-        obj = { url: null, trusted: true, messageId: null, channelId: null };
-        obj[0] = tmp.originalLink;
-        obj[2] = messageId;
-        obj[3] = channelId;
+        obj = { url: tmp.originalLink, trusted: true, messageId, channelId };
         onPressSearchLink(obj);
       }
     }
@@ -4654,24 +4718,27 @@ function LinkParsedGridItem(author) {
   }
   items7[1] = guild_id;
   const items8 = [channelId, messageId, onPress];
-  const memo3 = obj3.useMemo(() => {
+  const memo3 = obj2.useMemo(() => {
     let guild_id;
     if (stateFromStores1 != null) {
       guild_id = stateFromStores1.guild_id;
     }
     return author.getAvatarSource(guild_id);
   }, items7);
-  callback2 = obj3.useCallback(() => {
+  const callback2 = obj2.useCallback(() => {
     onPress({ channelId, messageId });
   }, items8);
   obj = { containerStyle, onPress: callback1, children: null };
-  obj = { thumbnail: callback(onPressGuildVoiceChannelMention, { style: items9, children: memo2 }) };
-  items9 = [tmp.iconContainer, imageStyle];
-  const items10 = [callback(author(channelId[17]).SearchListCardThumbnail, obj), callback(author(channelId[17]).SearchListCardContent, { label: memo, subLabel: memo1 }), ];
-  obj1 = { onPress: callback2, children: callback(tmp2(tmp3[17]).SearchListCardFooter, { author, avatarSource: memo3, channel: stateFromStores1 }) };
-  items10[2] = callback(author(channelId[18]).PressableHighlight, obj1);
-  obj[2] = items10;
-  return callback(author(channelId[17]).SearchListCardContainer, obj);
+  obj = { thumbnail: null };
+  obj1 = { style: null, children: memo2 };
+  const items9 = [tmp.iconContainer, imageStyle];
+  obj1.style = items9;
+  obj.thumbnail = closure_11(onPressGuildVoiceChannelMention, obj1);
+  const items10 = [closure_11(author(channelId[17]).SearchListCardThumbnail, obj), closure_11(author(channelId[17]).SearchListCardContent, { label: memo, subLabel: memo1 }), ];
+  obj2 = { onPress: callback2, children: closure_11(tmp2(tmp3[17]).SearchListCardFooter, { author, avatarSource: memo3, channel: stateFromStores1 }) };
+  items10[2] = closure_11(author(channelId[18]).PressableHighlight, obj2);
+  obj.children = items10;
+  return postProcessor(author(channelId[17]).SearchListCardContainer, obj);
 }
 function LinkEmbedGridItem(containerStyle) {
   const embed = containerStyle.embed;
@@ -4682,22 +4749,17 @@ function LinkEmbedGridItem(containerStyle) {
   const onPressSearchLink = containerStyle.onPressSearchLink;
   const onPress = containerStyle.onPress;
   const imageStyle = containerStyle.imageStyle;
-  closure_8 = undefined;
-  let stateFromStores1;
-  let scale;
-  let url;
-  let url2;
-  const tmp = callback2();
+  const tmp = closure_13();
   closure_8 = tmp;
   let obj = embed(author[8]);
   let items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => message.getMessage(messageId));
-  obj1 = embed(author[8]);
+  const stateFromStores = obj.useStateFromStores(items, () => SearchMessageStore.getMessage(messageId));
+  let obj1 = embed(author[8]);
   const items1 = [imageStyle];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => imageStyle.getChannel(channelId));
-  scale = onPress().scale;
-  url = embed.url;
-  url2 = embed.rawTitle;
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
+  const scale = onPress().scale;
+  let url = embed.url;
+  let url2 = embed.rawTitle;
   if (url2 == null) {
     const author2 = embed.author;
     let name;
@@ -4712,7 +4774,7 @@ function LinkEmbedGridItem(containerStyle) {
   const items2 = [author.id, channelId, embed, imageStyle, messageId, scale, sources, tmp.iconContainer];
   const items3 = [author, ];
   let guild_id;
-  const memo = messageId.useMemo(() => url(embed(author[19]).SearchEmbedMediaImage, {
+  const memo = messageId.useMemo(() => closure_2_11(SearchMediaImage.SearchEmbedMediaImage, {
     messageId,
     channelId,
     authorId: author.id,
@@ -4720,12 +4782,14 @@ function LinkEmbedGridItem(containerStyle) {
     embed,
     containerStyle: imageStyle,
     renderFallback() {
-      const items = [iconContainer.iconContainer, closure_7];
-      return closure_1_11(closure_1_5, { style: items, children: closure_1_11(closure_1_0(closure_1_2[15]).LinkIcon, { size: "md" }) });
+      const obj = { style: null, children: url(embed(author[15]).LinkIcon, { size: "md" }) };
+      const items = [iconContainer.iconContainer, imageStyle];
+      obj.style = items;
+      return url(onPressSearchLink, obj);
     },
     scale,
-    containerHeight: imageStyle.height + stateFromStores1,
-    containerWidth: imageStyle.width + stateFromStores1
+    containerHeight: imageStyle.height + React7,
+    containerWidth: imageStyle.width + React7
   }), items2);
   if (stateFromStores1 != null) {
     guild_id = stateFromStores1.guild_id;
@@ -4741,8 +4805,8 @@ function LinkEmbedGridItem(containerStyle) {
   }, items3);
   const items5 = [channelId, messageId, onPress];
   const callback = obj3.useCallback(() => {
-    sources(author[20])(null != url, "[LinkGridItem] Embed url cannot be null");
-    const obj = { url, trusted: embed(author[21]).isLinkTrusted(url, url2), messageId, channelId };
+    _modDef38(null != url, "[LinkGridItem] Embed url cannot be null");
+    const obj = { url, trusted: MaskedLinkUtils.isLinkTrusted(url, url2), messageId, channelId };
     onPressSearchLink(obj);
   }, items4);
   const callback1 = obj3.useCallback(() => {
@@ -4759,42 +4823,45 @@ function LinkEmbedGridItem(containerStyle) {
     const intl2 = tmp2(tmp3[9]).intl;
     url = intl2.string(tmp2(tmp3[9]).t.q2IIoP);
   }
-  obj[1] = url(embed(author[12]).Text, { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: url });
+  obj.subLabel = url(embed(author[12]).Text, { variant: "text-xs/normal", color: "text-link", lineClamp: 1, children: url });
   items6[1] = url(embed(author[17]).SearchListCardContent, obj);
   obj1 = { onPress: callback1, children: tmp13(tmp2(tmp3[17]).SearchListCardFooter, { author, avatarSource: memo1, channel: stateFromStores1 }) };
   items6[2] = url(embed(author[18]).PressableHighlight, obj1);
-  obj[2] = items6;
+  obj.children = items6;
   return url2(embed(author[17]).SearchListCardContainer, obj);
 }
-let c4 = importAllResult;
-({ View: c5, useWindowDimensions: closure_6 } = get_ActivityIndicator);
-({ FILE_OR_LINK_IMAGE_BUFFER: c9, SearchLinkTypes: c10 } = MessageEmbedTypes);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createCacheKey.createStyles({ iconContainer: { alignItems: "center", justifyContent: "center" }, tapToSee: { fontStyle: "italic" } });
-const memoResult = importAllResult.memo(function LinkGridItem(arg0) {
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
+const SearchConstants = fn(7878);
+({ FILE_OR_LINK_IMAGE_BUFFER: closure_9, SearchLinkTypes: c10 } = SearchConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createStyles = fn(4560);
+let closure_13 = createStyles.createStyles({ iconContainer: { alignItems: "center", justifyContent: "center" }, tapToSee: { fontStyle: "italic" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/LinkGridItem.tsx");
+
+export default noop.memo(function LinkGridItem(arg0) {
   ({ data, onPressSearchLink, onPress, imageStyle, containerStyle } = arg0);
   const type = data.type;
   if (constants.EMBED === type) {
     let obj = { embed: null, sources: null, messageId: null, channelId: null, author: null, linkIndex: null, onPressSearchLink: null, onPress: null, imageStyle: null, containerStyle: null };
-    ({ embed: obj2[0], sources: obj2[1], messageId: obj2[2], channelId: obj2[3], author: obj2[4], linkIndex: obj2[5] } = data);
-    obj[6] = onPressSearchLink;
-    obj[7] = onPress;
-    obj[8] = imageStyle;
-    obj[9] = containerStyle;
-    return callback(LinkEmbedGridItem, obj);
+    ({ embed: obj2.embed, sources: obj2.sources, messageId: obj2.messageId, channelId: obj2.channelId, author: obj2.author, linkIndex: obj2.linkIndex } = data);
+    obj.onPressSearchLink = onPressSearchLink;
+    obj.onPress = onPress;
+    obj.imageStyle = imageStyle;
+    obj.containerStyle = containerStyle;
+    return closure_1_11(LinkEmbedGridItem, obj);
   } else if (tmp2.TEXT === type) {
     obj = { messageId: null, channelId: null, author: null, linkIndex: null, onPressSearchLink: null, onPressGuildVoiceChannelMention: null, onPress: null, imageStyle: null, containerStyle: null };
-    ({ messageId: obj[0], channelId: obj[1], author: obj[2], linkIndex: obj[3] } = data);
-    obj[4] = onPressSearchLink;
-    obj[5] = tmp;
-    obj[6] = onPress;
-    obj[7] = imageStyle;
-    obj[8] = containerStyle;
-    return callback(LinkParsedGridItem, obj);
+    ({ messageId: obj.messageId, channelId: obj.channelId, author: obj.author, linkIndex: obj.linkIndex } = data);
+    obj.onPressSearchLink = onPressSearchLink;
+    obj.onPressGuildVoiceChannelMention = tmp;
+    obj.onPress = onPress;
+    obj.imageStyle = imageStyle;
+    obj.containerStyle = containerStyle;
+    return closure_1_11(LinkParsedGridItem, obj);
   } else {
     return null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/LinkGridItem.tsx");
-
-export default memoResult;

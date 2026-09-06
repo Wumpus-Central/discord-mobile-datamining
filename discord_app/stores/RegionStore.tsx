@@ -1,10 +1,10 @@
-// === Module 16810: initialize ===
+// === Module 16810: RegionStore ===
 
-// Module 16810 (initialize)
-import applyDefault from "apply" /* 12 */;
+// Module 16810 (RegionStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
 let c3 = null;
 let closure_4 = {};
@@ -13,7 +13,7 @@ class RegionStore extends Store {
 }
 const prototype = RegionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(GuildStore);
 };
 prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   let tmp = guildId;
@@ -25,8 +25,7 @@ prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   if (null != regions) {
     let found = regions.find((optimal) => optimal.optimal);
     if (found == null) {
-      found = applyDefault.sample(regions);
-      const obj = applyDefault;
+      found = _modDef12.sample(regions);
     }
     tmp2 = found;
   }
@@ -52,8 +51,7 @@ prototype["getRandomRegion"] = function getRandomRegion(guildId) {
   const regions = this.getRegions(tmp);
   let sampleResult = null;
   if (null != regions) {
-    sampleResult = applyDefault.sample(regions);
-    const obj = applyDefault;
+    sampleResult = _modDef12.sample(regions);
   }
   return sampleResult;
 };
@@ -71,16 +69,16 @@ prototype["getRandomRegionId"] = function getRandomRegionId(guildId) {
 };
 prototype["getRegions"] = function getRegions(guildId) {
   if (null != guildId) {
-    let tmp = table[guildId];
+    let tmp = closure_4[guildId];
   } else {
     tmp = c3;
   }
   return tmp;
 };
 RegionStore.displayName = "RegionStore";
-const regionStore = new RegionStore(dispatcherDefault, {
+const regionStore = new RegionStore(DispatcherDefault, {
   LOAD_REGIONS: function handleLoadRegions(regions) {
-    const sortByResult = applyDefault.sortBy(regions.regions, (name) => name.name);
+    const sortByResult = _modDef12.sortBy(regions.regions, (name) => name.name);
     if (null != regions.guildId) {
       closure_4[regions.guildId] = sortByResult;
     } else {
@@ -91,6 +89,7 @@ const regionStore = new RegionStore(dispatcherDefault, {
     delete tmp2[tmp];
   }
 });
-const result = require("set").fileFinishedImporting("stores/RegionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/RegionStore.tsx");
 
 export default regionStore;

@@ -1,11 +1,11 @@
-// === Module 10907: getBotTagTypeFromUser ===
+// === Module 10907: getBotTagFromUser ===
 
-// Module 10907 (getBotTagTypeFromUser)
-import set from "set" /* 2 */;
-import ApplicationTypes from "ApplicationTypes" /* 1350 */;
+// Module 10907 (getBotTagFromUser)
+import ApplicationConstants from "ApplicationConstants" /* 1350 */;
+import size from "module_2" /* 2 */;
 
-const BotTagTypes = ApplicationTypes.BotTagTypes;
-const result = set.fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");
+const BotTagTypes = ApplicationConstants.BotTagTypes;
+const result = size.fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");
 
 export const getBotTagTypeFromUser = function getBotTagTypeFromUser(user) {
   if (user.isSystemUser()) {

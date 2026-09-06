@@ -2,31 +2,30 @@
 
 // Module 11358 (useCreateThreadViewProps)
 import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10253 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
 
 export default function useCreateThreadViewProps(arg0) {
   const tmp = useGetThreadDraftSettingsDefault(arg0);
-  const _require = tmp;
-  let obj = _require(563);
-  const items = [closure_3];
+  _require = tmp;
+  let obj = require("useStateFromStores");
+  const items = [ChannelStore];
   const items1 = [tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    let parentChannelId;
+    parentChannelId = undefined;
     if (parentChannelId != null) {
       parentChannelId = parentChannelId.parentChannelId;
     }
-    return closure_1_3.getChannel(parentChannelId);
+    return ChannelStore.getChannel(parentChannelId);
   }, items1);
   let tmp3 = null;
   if (null != tmp) {
     tmp3 = null;
     if (null != stateFromStores) {
-      obj = { threadSettingsDraft: null, parentChannel: null };
-      obj[0] = tmp;
-      obj[1] = stateFromStores;
+      obj = { threadSettingsDraft: tmp, parentChannel: stateFromStores };
       tmp3 = obj;
     }
   }

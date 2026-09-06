@@ -1,12 +1,13 @@
-// === Module 4207: doesThreadMembersActionAffectMe ===
+// === Module 4207: ThreadActionUtils ===
 
-// Module 4207 (doesThreadMembersActionAffectMe)
-import closure_0 from "fetchFingerprint" /* 502 */;
+// Module 4207 (ThreadActionUtils)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
 
 export const doesThreadMembersActionAffectMe = function doesThreadMembersActionAffectMe(removedMemberIds) {
-  id = id.getId();
+  const id = AuthenticationStore.getId();
   let tmp2 = null != id;
   if (tmp2) {
     removedMemberIds = removedMemberIds.removedMemberIds;

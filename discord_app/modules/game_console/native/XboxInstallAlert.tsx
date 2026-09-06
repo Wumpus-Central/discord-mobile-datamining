@@ -1,47 +1,50 @@
 // === Module 9462: XboxInstallAlert ===
 
 // Module 9462 (XboxInstallAlert)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9233 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import LinkingDefault from "Linking" /* 4255 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import _modDef9444 from "module_9444" /* 9444 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: c4 } = XBOX_URL_BASE);
-createCacheKey = { externalLinkIcon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
+require = fn;
+const GameConsoleConstants = fn(9233);
+({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { externalLinkIcon: null };
+let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
+createStyles.externalLinkIcon = size;
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/native/XboxInstallAlert.tsx");
 
 export default function XboxInstallAlert(arg0) {
-  const _require = callback();
+  _require = closure_6();
   let obj = {};
   const merged = Object.assign(arg0);
-  const intl = _require(1114).intl;
-  obj.title = intl.string(_require(1114).t["12Kx2v"]);
-  const intl2 = _require(1114).intl;
-  obj.body = intl2.string(_require(1114).t.msZW3j);
-  const intl3 = _require(1114).intl;
-  obj.confirmText = intl3.string(_require(1114).t["n+VrqG"]);
-  const intl4 = _require(1114).intl;
-  obj.cancelText = intl4.string(_require(1114).t.kYaBOg);
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t["12Kx2v"]);
+  const intl2 = require("util").intl;
+  obj.body = intl2.string(require("util").t.msZW3j);
+  const intl3 = require("util").intl;
+  obj.confirmText = intl3.string(require("util").t["n+VrqG"]);
+  const intl4 = require("util").intl;
+  obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return closure_1_5(lib(closure_1_2[7]).Icon, { source: closure_1_1(closure_1_2[8]), style: lib.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef9444, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
-    const obj = lib(1115);
-    const isAndroidResult = lib(1115).isAndroid();
-    const openURL = callback(4255).openURL;
+    const obj = closure_0(1115);
+    const isAndroidResult = closure_0(1115).isAndroid();
+    const openURL = LinkingDefault.openURL;
     if (isAndroidResult) {
-      openURL(closure_3);
+      openURL(closure_1_3);
     } else {
-      openURL(closure_4);
+      openURL(closure_1_4);
     }
   };
-  return jsx(componentDidMountDefault, {});
+  return jsx(common_AlertDefault, {});
 };

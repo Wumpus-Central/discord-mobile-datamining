@@ -1,11 +1,11 @@
 // === Module 4909: markAccessibilityFocus ===
 
 // Module 4909 (markAccessibilityFocus)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 4908 */;
+import NativeDeviceAccessibilityModuleDefault from "NativeDeviceAccessibilityModule" /* 4908 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/a11y/native/markAccessibilityFocus.tsx");
+const result = size.fileFinishedImporting("modules/a11y/native/markAccessibilityFocus.tsx");
 
 export default function markAccessibilityFocus() {
-  enforcingDefault.markCurrentFocus();
+  NativeDeviceAccessibilityModuleDefault.markCurrentFocus();
 };

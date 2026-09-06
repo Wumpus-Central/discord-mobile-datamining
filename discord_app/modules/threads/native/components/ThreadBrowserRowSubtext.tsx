@@ -1,52 +1,52 @@
-// === Module 16706: MessageContent ===
+// === Module 16706: ThreadBrowserRowSubtext ===
 
-// Module 16706 (MessageContent)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4793 */;
+// Module 16706 (ThreadBrowserRowSubtext)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 4793 */;
 import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 5004 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import closure_8 from "updateState" /* 7306 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 7888 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7961 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import UserStore from "UserStore" /* 1371 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7306 */;
 
-require = arg1;
+require = fn;
 function MessageContent(arg0) {
   ({ thread, message } = arg0);
-  importDefault = undefined;
   dependencyMap = undefined;
   c3 = undefined;
   c4 = undefined;
-  closure_5 = undefined;
+  let roleStyle;
   let obj = message(7311);
   items = [message.author.id];
   const subscribeGuildMembers = obj.useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
-  obj1 = message(504);
-  const items1 = [closure_7];
+  let obj1 = message(504);
+  const items1 = [UserStore];
   const stateFromStores = obj1.useStateFromStores(items1, () => {
-    let author = closure_1_7.getUser(message.author.id);
+    let author = UserStore.getUser(message.author.id);
     if (author == null) {
       author = message.author;
     }
     return author;
   });
-  const tmp = callback3();
-  const items2 = [closure_5];
+  const tmp = closure_13();
+  const items2 = [roleStyle];
   importDefault = message(504).useStateFromStores(items2, () => roleStyle.roleStyle);
   const obj3 = message(504);
-  ({ nick: c2, colorString: c3, colorStrings: c4 } = useNullableMessageAuthorDefault(message));
-  let tmp4 = useNullableMessageAuthorDefault(message);
-  const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
-  const obj4 = DISCORD_EPOCHDefault;
+  ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
+  let tmp4 = useMessageAuthorDefault(message);
+  const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
   const timestampString = message(7781).getTimestampString(extractTimestampResult);
   const obj5 = message(7781);
   const timestampAccessibilityLabel = message(7781).getTimestampAccessibilityLabel(extractTimestampResult);
-  closure_5 = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
+  roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   obj = { user: stateFromStores, timestamp: timestampString, accessibilityLabel: timestampAccessibilityLabel, children: null };
   obj = { lineClamp: 1, ellipsizeMode: "tail", lineBreakMode: "tail", style: tmp.subtextContent, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = message(1114).intl;
@@ -59,70 +59,60 @@ function MessageContent(arg0) {
       const obj = { nickname: str, usernameColor: null, roleColor: null, roleColors: null, shouldShowRoleDot: null };
       let tmp4 = null;
       if ("username" === closure_1) {
-        tmp4 = c3;
+        tmp4 = roleColor;
       }
-      obj[1] = tmp4;
-      obj[2] = c3;
+      obj.usernameColor = tmp4;
+      obj.roleColor = roleColor;
       let tmp6 = null;
       if (closure_5) {
         tmp6 = c4;
       }
-      obj[3] = tmp6;
-      obj[4] = "dot" === closure_1 && null != c3;
-      return closure_1_9(closure_1_17, obj, arg1);
+      obj.roleColors = tmp6;
+      obj.shouldShowRoleDot = "dot" === closure_1 && null != roleColor;
+      return React7(Username, obj, arg1);
     },
     messageTextHook(arg0, arg1) {
-      return closure_1_9(message(_undefined[21]).LegacyText, { children: callback(_undefined[22])(message, { formatInline: true, allowGameMentions: true }).content }, arg1);
+      return React7(native.LegacyText, { children: renderMessageMarkupDefault(message, { formatInline: true, allowGameMentions: true }).content }, arg1);
     }
   };
-  obj[6] = intl.format(message(1114).t.M79KAH, obj1);
-  obj[3] = callback(message(4556).Text, obj);
-  return callback(SubstringRow, obj);
+  obj.children = intl.format(message(1114).t.M79KAH, obj1);
+  obj.children = closure_9(message(4556).Text, obj);
+  return closure_9(SubstringRow, obj);
 }
 function SubstringRow(arg0) {
   ({ timestamp, accessibilityLabel } = arg0);
   ({ user, children } = arg0);
-  const tmp = callback3();
+  const tmp = closure_13();
   if (null == user) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.row;
-    obj = { style: null, accessibilityLabel: null, variant: "text-sm/medium", color: "text-muted", children: null };
-    obj[0] = tmp.timestamp;
-    obj[1] = accessibilityLabel;
-    obj[4] = ` ${timestamp}`;
-    obj[1] = callback(Text.Text, obj);
-    let tmp6 = callback(View, obj);
+    let obj = { style: tmp.row, children: null };
+    obj = { style: tmp.timestamp, accessibilityLabel, variant: "text-sm/medium", color: "text-muted", children: ` ${timestamp}` };
+    obj.children = React7(Text_Text.Text, obj);
+    let tmp6 = React7(View, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.row;
+    obj = { style: tmp.row, children: null };
     items = [children, , ];
-    obj1 = { style: null };
-    obj1[0] = tmp.dividerDot;
-    items[1] = callback(View, obj1);
-    const obj2 = { style: null, accessibilityLabel: null, variant: "text-sm/medium", color: "text-muted", children: null };
-    obj2[0] = tmp.timestamp;
-    obj2[1] = accessibilityLabel;
+    const obj1 = { style: tmp.dividerDot };
+    items[1] = React7(View, obj1);
+    const obj2 = { style: tmp.timestamp, accessibilityLabel, variant: "text-sm/medium", color: "text-muted", children: null };
     const _HermesInternal = HermesInternal;
-    obj2[4] = "" + timestamp;
-    items[2] = callback(Text.Text, obj2);
-    obj[1] = items;
-    tmp6 = callback2(View, obj);
+    obj2.children = "" + timestamp;
+    items[2] = React7(Text_Text.Text, obj2);
+    obj.children = items;
+    tmp6 = closure_1_10(View, obj);
   }
   return tmp6;
 }
 function Username(usernameColor) {
   usernameColor = usernameColor.usernameColor;
   ({ roleColors, shouldShowRoleDot } = usernameColor);
-  closure_1 = undefined;
   ({ nickname, roleColor } = usernameColor);
-  const tmp = callback3();
-  closure_1 = tmp;
+  const tmp = closure_13();
+  const user = tmp;
   items = [usernameColor, tmp];
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != usernameColor) {
       items = [user.username, ];
-      const obj = { color: null };
-      obj[0] = tmp;
+      const obj = { color: tmp };
       items[1] = obj;
       let username = items;
     } else {
@@ -130,17 +120,15 @@ function Username(usernameColor) {
     }
     return username;
   }, items);
-  let obj = usernameColor(7961);
+  let obj = enhanced_role_colors_EnhancedRoleColorUtils;
   const processColorStringsArray = obj.useProcessColorStringsArray(roleColors);
   let tmp5 = !shouldShowRoleDot;
   if (!shouldShowRoleDot) {
     tmp5 = processColorStringsArray.length > 1;
   }
   if (shouldShowRoleDot) {
-    obj = { color: null, colors: null, size: "small" };
-    obj[0] = roleColor;
-    obj[1] = roleColors;
-    shouldShowRoleDot = callback(tmp3(1178).RoleDot, obj);
+    obj = { color: roleColor, colors: roleColors, size: "small" };
+    shouldShowRoleDot = React7(tmp3(1178).RoleDot, obj);
   }
   const items1 = [shouldShowRoleDot, ];
   let tmp10;
@@ -148,40 +136,39 @@ function Username(usernameColor) {
     tmp10 = processColorStringsArray;
   }
   obj = { children: null };
-  items1[1] = callback(usernameColor(4556).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", gradientColors: tmp10, style: memo, children: nickname });
-  obj[0] = items1;
-  return closure_10(closure_11, obj);
+  items1[1] = React7(Text_Text.Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", gradientColors: tmp10, style: memo, children: nickname });
+  obj.children = items1;
+  return closure_1_10(closure_1_11, obj);
 }
-let c3 = importAllResult;
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let items = [, ];
-({ CHANNEL_NAME_CHANGE: arr[0], THREAD_STARTER_MESSAGE: arr[1] } = require("ME").MessageTypes);
+({ CHANNEL_NAME_CHANGE: arr[0], THREAD_STARTER_MESSAGE: arr[1] } = fn(1074).MessageTypes);
+const createStyles = fn(4560);
 let obj = { row: { flexDirection: "row" }, subtextContent: { lineHeight: 18, flexShrink: 1 }, timestamp: { lineHeight: 18 }, username: null, dividerDot: null };
-obj = { fontSize: 14, lineHeight: 18, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.TEXT_SUBTLE };
-obj[3] = obj;
-createCacheKey = { width: 4, height: 4, marginHorizontal: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, alignSelf: "center" };
-obj[4] = createCacheKey;
-let closure_13 = createCacheKey.createStyles(obj);
-let closure_14 = importAllResult.memo((thread) => {
+obj = { fontSize: 14, lineHeight: 18, fontFamily: fn(1085).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.TEXT_SUBTLE };
+obj.username = obj;
+let size = { width: 4, height: 4, marginHorizontal: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, alignSelf: "center" };
+obj.dividerDot = size;
+let closure_13 = createStyles.createStyles(obj);
+let closure_14 = noop.memo((thread) => {
   thread = thread.thread;
   const accessibilityLabel = thread.accessibilityLabel;
-  let stateFromStores;
   let stateFromStores1;
-  importAllResult = undefined;
-  let colorString;
   let colorStrings;
   closure_6 = undefined;
-  closure_7 = undefined;
+  let ref;
   let obj = thread(stateFromStores1[11]);
-  items = [closure_7];
-  stateFromStores = obj.useStateFromStores(items, () => ref.getUser(thread.ownerId));
-  obj1 = thread(stateFromStores1[11]);
+  items = [ref];
+  const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(thread.ownerId));
+  let obj1 = thread(stateFromStores1[11]);
   const items1 = [closure_6];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => member.getMember(thread.guild_id, thread.ownerId));
-  const tmp = callback3();
+  stateFromStores1 = obj1.useStateFromStores(items1, () => GuildMemberStore.getMember(thread.guild_id, thread.ownerId));
+  const tmp = closure_13();
   const items2 = [colorStrings];
-  importAllResult = thread(stateFromStores1[11]).useStateFromStores(items2, () => colorStrings.roleStyle);
-  colorString = undefined;
+  noop = thread(stateFromStores1[11]).useStateFromStores(items2, () => colorStrings.roleStyle);
+  let colorString;
   if (stateFromStores1 != null) {
     colorString = stateFromStores1.colorString;
   }
@@ -201,17 +188,16 @@ let closure_14 = importAllResult.memo((thread) => {
     id = stateFromStores.id;
   }
   closure_6 = stateFromStores(stateFromStores1[13])(thread.guild_id, id);
-  closure_7 = importAllResult.useRef(thread);
-  const effect = importAllResult.useEffect(() => {
+  ref = noop.useRef(thread);
+  const effect = noop.useEffect(() => {
     closure_7.current = thread;
   });
   const items3 = [stateFromStores1, stateFromStores];
-  const effect1 = importAllResult.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     if (null == stateFromStores) {
       const current = ref.current;
       items = [current.ownerId];
-      const membersById = stateFromStores(stateFromStores1[14]).requestMembersById(current.guild_id, items);
-      const obj = stateFromStores(stateFromStores1[14]);
+      const membersById = GuildActionCreatorsDefault.requestMembersById(current.guild_id, items);
     }
   }, items3);
   obj = { user: stateFromStores, timestamp: thread.timestamp, accessibilityLabel, children: null };
@@ -224,7 +210,7 @@ let closure_14 = importAllResult.memo((thread) => {
         str = stateFromStores1.nick;
       }
       if (str == null) {
-        let obj = stateFromStores(stateFromStores1[17]);
+        let obj = UserUtilsDefault;
         str = obj.getName(stateFromStores);
       }
       if (str == null) {
@@ -235,39 +221,37 @@ let closure_14 = importAllResult.memo((thread) => {
       if ("username" === closure_3) {
         tmp7 = colorString;
       }
-      obj[1] = tmp7;
-      obj[2] = colorString;
+      obj.usernameColor = tmp7;
+      obj.roleColor = colorString;
       let tmp9 = null;
       if (closure_6) {
         tmp9 = colorStrings;
       }
-      obj[3] = tmp9;
-      obj[4] = "dot" === closure_3 && null != colorString;
-      return closure_1_9(closure_1_17, obj, arg1);
+      obj.roleColors = tmp9;
+      obj.shouldShowRoleDot = "dot" === closure_3 && null != colorString;
+      return React7(Username, obj, arg1);
     }
   };
-  obj[7] = intl.format(thread(stateFromStores1[16]).t.imPXd5, obj1);
-  obj[3] = callback(thread(stateFromStores1[15]).Text, obj);
-  return callback(SubstringRow, obj);
+  obj.children = intl.format(thread(stateFromStores1[16]).t.imPXd5, obj1);
+  obj.children = closure_9(thread(stateFromStores1[15]).Text, obj);
+  return closure_9(SubstringRow, obj);
 });
-const result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadBrowserRowSubtext.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/native/components/ThreadBrowserRowSubtext.tsx");
 
 export const ThreadSubtext = function ThreadSubtext(thread) {
   thread = thread.thread;
-  let id;
-  id = thread.id;
+  const id = thread.id;
   let obj = id(504);
-  items = [closure_8];
+  items = [ThreadMessageStore];
   const items1 = [id];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getMostRecentMessage(id), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
   const lastMessageTimestamp = id(7781).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
-        obj = { thread: null, message: null };
-        obj[0] = thread;
-        obj[1] = stateFromStores;
-        return callback(MessageContent, obj);
+        obj = { thread, message: stateFromStores };
+        return closure_9(MessageContent, obj);
       }
     }
   }
@@ -275,5 +259,5 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
   const timestampString = tmpResult.getTimestampString(lastMessageTimestamp);
   tmpResult = tmp(7781);
   obj = { thread, timestamp: timestampString, accessibilityLabel: tmpResult.getTimestampAccessibilityLabel(lastMessageTimestamp) };
-  return callback(closure_14, obj);
+  return closure_9(closure_14, obj);
 };

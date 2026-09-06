@@ -1,6 +1,6 @@
-// === Module 7990: set ===
+// === Module 7990: MarkupParserTypes ===
 
-// Module 7990 (set)
-import set from "set" /* 2 */;
+// Module 7990 (MarkupParserTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParserTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParserTypes.tsx");

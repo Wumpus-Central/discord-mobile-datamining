@@ -1,11 +1,10 @@
-// === Module 10706: set ===
+// === Module 10706: hooks/usePremiumDiscountOffer ===
 
-// Module 10706 (set)
-import set from "set" /* 2 */;
+// Module 10706 (hooks/usePremiumDiscountOffer)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.native.tsx");
+const result = size.fileFinishedImporting("modules/premium/hooks/usePremiumDiscountOffer.native.tsx");
 for (const key10018 in require("usePremiumDiscountOffer")) {
-  let tmp3 = key10018;
   arg5[key10018] = require("usePremiumDiscountOffer")[key10018];
   continue;
 }

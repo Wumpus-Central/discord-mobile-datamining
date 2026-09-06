@@ -1,15 +1,18 @@
-// === Module 14797: renderContent ===
+// === Module 14797: UserSettingsInputAlert ===
 
-// Module 14797 (renderContent)
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import _modDef5578 from "module_5578" /* 5578 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 14797 (UserSettingsInputAlert)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
+import TextInput from "TextInput" /* 6606 */;
+import noop from "module_19" /* 19 */;
 
-let require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = { input: "", error: "add" };
-const PureComponent = importAllResult.PureComponent;
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const hasOwnProperty = { input: "", error: "add" };
+const PureComponent = noop.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -29,33 +32,32 @@ class UserSettingsInputAlert extends PureComponent {
       if (!isLoading) {
         const onSubmitResult = onSubmit(applyArgumentsResult.state.input);
         onSubmit(applyArgumentsResult.state.input).then(() => {
-          if (closure_0 != null) {
+          if (closure_1_0 != null) {
             tmp();
           }
-          if (closure_1) {
-            closure_1_0.close();
+          if (closure_1_1) {
+            applyArgumentsResult.close();
           }
-        }).catch((body) => {
-          if (closure_2 != null) {
-            tmp(body);
+        }).catch((error) => {
+          if (closure_1_2 != null) {
+            tmp(error);
           }
-          if (body) {
-            if (body.body) {
-              const v6OrEarlierAPIError = new applyArgumentsResult(closure_2_2[2]).V6OrEarlierAPIError(body);
-              if (v6OrEarlierAPIError.code !== closure_3) {
-                const obj = { error: null };
-                obj[0] = v6OrEarlierAPIError.message;
-                closure_1_0.setState(obj);
+          if (error) {
+            if (error.body) {
+              const v6OrEarlierAPIError = new HTTPUtils.V6OrEarlierAPIError(error);
+              if (v6OrEarlierAPIError.code !== closure_1_3) {
+                const obj = { error: v6OrEarlierAPIError.message };
+                applyArgumentsResult.setState(obj);
               }
             }
           }
         });
         const nextPromise = onSubmit(applyArgumentsResult.state.input).then(() => {
-          if (closure_0 != null) {
+          if (closure_1_0 != null) {
             tmp();
           }
-          if (closure_1) {
-            closure_1_0.close();
+          if (closure_1_1) {
+            applyArgumentsResult.close();
           }
         });
       }
@@ -65,54 +67,52 @@ class UserSettingsInputAlert extends PureComponent {
 }
 const prototype = UserSettingsInputAlert.prototype;
 prototype["renderContent"] = function renderContent() {
-  let self = this;
-  self = this;
+  const self = this;
   const helpText = this.props.helpText;
   if (null != this.props.error) {
     if ("" !== self.props.error) {
-      error = self.props.error;
+      let error = self.props.error;
     }
     let tmp7 = null != helpText;
     if (tmp7) {
-      let obj = { variant: "text-md/normal", children: null };
-      obj[1] = helpText;
-      tmp7 = callback(tmp5(4556).Text, obj);
+      let obj = { variant: "text-md/normal", children: helpText };
+      tmp7 = React3(tmp5(4556).Text, obj);
     }
     const items = [tmp7, ];
-    obj = { label: null, placeholder: null, secureTextEntry: null, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
-    obj[0] = tmp3;
-    obj[1] = tmp;
-    obj[2] = tmp2;
+    obj = { label: tmp3, placeholder: tmp, secureTextEntry: tmp2, returnKeyType: "done", autoFocus: true, status: null, errorMessage: null, onSubmitEditing: null, onChange: null };
     let str2 = "default";
     if (null != error) {
       str2 = "error";
     }
-    obj = { spacing: 16, children: null };
-    obj[5] = str2;
-    obj[6] = error;
-    obj[7] = self.handleSubmit;
-    obj[8] = function onChange(input) {
-      return self.setState({ input });
+    obj = {
+      spacing: 16,
+      children: null,
+      status: str2,
+      errorMessage: error,
+      onSubmitEditing: self.handleSubmit,
+      onChange(input) {
+          return self.setState({ input });
+        }
     };
-    items[1] = callback(self(6606).TextInput, obj);
-    obj[1] = items;
-    return closure_4(self(4973).Stack, obj);
+    items[1] = React3(TextInput.TextInput, obj);
+    obj.children = items;
+    return React4(Stack_Stack.Stack, obj);
   }
   error = self.state.error;
 };
 prototype["render"] = function render() {
   ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
   let obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: this.renderContent() };
-  const tmp5 = callback(componentDidMountDefault, obj);
+  const tmp5 = React3(common_AlertDefault, obj);
   let tmpResult = tmp5;
   if (useKeyboardAwareWrapper) {
-    obj = { children: null };
-    obj[0] = tmp5;
-    tmpResult = callback(_modDef5578, obj);
+    obj = { children: tmp5 };
+    tmpResult = React3(KeyboardAwareViewDefault, obj);
   }
   return tmpResult;
 };
 UserSettingsInputAlert.defaultProps = { isLoading: false, useKeyboardAwareWrapper: false, secureTextEntry: true };
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsInputAlert.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsInputAlert.tsx");
 
 export default UserSettingsInputAlert;

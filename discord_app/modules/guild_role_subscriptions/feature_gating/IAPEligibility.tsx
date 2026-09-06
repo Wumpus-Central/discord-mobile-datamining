@@ -1,17 +1,20 @@
-// === Module 5499: items ===
+// === Module 5499: IAPEligibility ===
 
-// Module 5499 (items)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+// Module 5499 (IAPEligibility)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
+const getSystemVersion = tmp(5500);
+require = fn;
 let c4 = "13.2";
-let items = [require("ME").GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
+let items = [fn(1074).GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
 
 export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {
-    const str = tmp(5500).getSystemVersion();
+    const str = getSystemVersion.getSystemVersion();
     if (null != str) {
       const parts = str.split(".");
       const _Number = Number;
@@ -26,7 +29,6 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
       if (0 < bound) {
         while (true) {
           let num = mapped[num4];
-          let tmp4 = num4;
           if (num == null) {
             num = 0;
           }
@@ -53,12 +55,12 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
         }
       }
       if (-1 !== num3) {
-        guild = guild.getGuild(guildId);
+        const guild = GuildStore.getGuild(guildId);
         let everyResult = null != guild;
         if (everyResult) {
-          everyResult = items.every((arg0) => {
+          everyResult = items.every((item) => {
             const features = guild.features;
-            return features.has(arg0);
+            return features.has(item);
           });
         }
         return everyResult;
@@ -68,19 +70,18 @@ export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guil
   } else {
     return false;
   }
-  obj = guild(1115);
-  tmp = guild;
+  obj = PlatformUtils;
 };
 export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIAP(guildId) {
-  const _require = guildId;
-  const memo = React.useMemo(() => {
+  _require = guildId;
+  const memo = noop.useMemo(() => {
     const str = guildId(5500).getSystemVersion();
     let tmp = null != str;
     if (tmp) {
       const parts = str.split(".");
       const _Number = Number;
       const mapped = parts.map(Number);
-      const parts1 = closure_4.split(".");
+      const parts1 = v132.split(".");
       const _Number2 = Number;
       const mapped1 = parts1.map(Number);
       const _Math = Math;
@@ -90,7 +91,6 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
       if (0 < bound) {
         while (true) {
           let num6 = mapped[num4];
-          let tmp5 = num4;
           if (num6 == null) {
             num6 = 0;
           }
@@ -120,16 +120,16 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
     }
     return tmp;
   }, []);
-  let memo1 = React.useMemo(() => guildId(1115).isIOS(), []);
-  items = [closure_3];
+  let memo1 = noop.useMemo(() => guildId(1115).isIOS(), []);
+  items = [GuildStore];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {
-      guild = closure_1_3.getGuild(guild);
+      const guild = GuildStore.getGuild(closure_0);
       let everyResult = null != guild;
       if (everyResult) {
-        everyResult = closure_1_5.every((arg0) => {
+        everyResult = items.every((item) => {
           const features = guild.features;
-          return features.has(arg0);
+          return features.has(item);
         });
       }
       return everyResult;

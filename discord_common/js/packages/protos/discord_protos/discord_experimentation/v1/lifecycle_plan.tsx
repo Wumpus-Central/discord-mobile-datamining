@@ -1,15 +1,15 @@
-// === Module 7895: create ===
+// === Module 7895: lifecycle_plan ===
 
-// Module 7895 (create)
+// Module 7895 (lifecycle_plan)
 import _mod1188 from "module_1188" /* 1188 */;
-import now from "now" /* 1217 */;
-import internalJsonWrite from "internalJsonWrite" /* 7896 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4 } from "module_1188" /* 1188 */;
+import timestamp from "timestamp" /* 1217 */;
+import duration from "duration" /* 7896 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", DRAFT: 1, [1]: "DRAFT", ACTIVE: 2, [2]: "ACTIVE", PAUSED_MANUAL: 3, [3]: "PAUSED_MANUAL", PAUSED_HEALTH_CHECK: 4, [4]: "PAUSED_HEALTH_CHECK", COMPLETED: 5, [5]: "COMPLETED", CANCELED: 6, [6]: "CANCELED" };
 obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", PENDING: 1, [1]: "PENDING", IN_PROGRESS: 2, [2]: "IN_PROGRESS", AWAITING_MANUAL_APPROVAL: 3, [3]: "AWAITING_MANUAL_APPROVAL", COMPLETED: 4, [4]: "COMPLETED" };
+const MessageType = fn(1188).MessageType;
 class LifecyclePlan$Type extends MessageType {
   constructor() {
     obj = {
@@ -17,7 +17,7 @@ class LifecyclePlan$Type extends MessageType {
       name: "measurement_plan",
       kind: "message",
       T() {
-            return closure_5;
+            return closure_1_5;
           }
     };
     items = [, ];
@@ -27,11 +27,10 @@ class LifecyclePlan$Type extends MessageType {
       name: "rollout_plan",
       kind: "message",
       T() {
-            return closure_6;
+            return measurementPlanType;
           }
     };
     tmp = new tmp("discord_protos.discord_experimentation.v1.LifecyclePlan", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -47,7 +46,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   obj = arg3;
   if (arg3 == null) {
@@ -56,20 +55,11 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp26 = closure_5;
-        let tmp27 = closure_5;
-        let tmp28 = pos;
-        let tmp29 = readUnknownField;
         obj.measurementPlan = closure_5.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.measurementPlan);
       } else if (2 === tmp5) {
-        let tmp22 = measurementPlanType;
-        let tmp23 = measurementPlanType;
-        let tmp24 = pos;
-        let tmp25 = readUnknownField;
         obj.rolloutPlan = measurementPlanType.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.rolloutPlan);
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -80,25 +70,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -133,7 +114,7 @@ obj = {
   name: "measurement_plan",
   kind: "message",
   T() {
-    return closure_5;
+    return closure_1_5;
   }
 };
 let items = [
@@ -143,12 +124,12 @@ let items = [
     name: "rollout_plan",
     kind: "message",
     T() {
-      return closure_6;
+      return measurementPlanType;
     }
   }
 ];
 let tmp8 = new "CANCELED"("discord_protos.discord_experimentation.v1.LifecyclePlan", items, tmp6, tmp5, "create", tmp4, "internalBinaryRead", "internalBinaryWrite", tmp3, tmp2);
-// ThrowIfThisInitialized (0x7c)
+const MessageType2 = fn(1188).MessageType;
 class MeasurementPlan$Type extends MessageType2 {
   constructor() {
     obj = {
@@ -156,7 +137,7 @@ class MeasurementPlan$Type extends MessageType2 {
       name: "status",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.PlanStatus", closure_3, "PLAN_STATUS_"];
+            const items = ["discord_protos.discord_experimentation.v1.PlanStatus", obj, "PLAN_STATUS_"];
             return items;
           }
     };
@@ -168,11 +149,10 @@ class MeasurementPlan$Type extends MessageType2 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_7;
+            return closure_1_7;
           }
     };
     tmp = new tmp("discord_protos.discord_experimentation.v1.MeasurementPlan", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -188,7 +168,7 @@ prototype2["create"] = function create(arr) {
   }
   return obj;
 };
-prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   obj = arg3;
   if (arg3 == null) {
@@ -197,14 +177,12 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.status = pos.int32();
       } else if (2 === tmp5) {
         let rampSteps = obj.rampSteps;
-        let tmp22 = closure_7;
         let arr = rampSteps.push(closure_7.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -215,25 +193,16 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -251,9 +220,6 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(status, tag, wr
   let num2 = 0;
   if (0 < status.rampSteps.length) {
     do {
-      let tmp4 = closure_7;
-      let tmp5 = require;
-      let tmp6 = dependencyMap;
       let tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
       let internalBinaryWriteResult = closure_7.internalBinaryWrite(status.rampSteps[num2], tagResult1.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
@@ -277,7 +243,7 @@ const items1 = [
     name: "status",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.PlanStatus", closure_3, "PLAN_STATUS_"];
+      const items = ["discord_protos.discord_experimentation.v1.PlanStatus", obj, "PLAN_STATUS_"];
       return items;
     }
   },
@@ -289,13 +255,13 @@ const obj2 = {
   kind: "message",
   repeat: 1,
   T() {
-    return closure_7;
+    return closure_1_7;
   }
 };
 items1[1] = obj2;
-tmp3 = new tmp3("discord_protos.discord_experimentation.v1.MeasurementPlan", items1, tmp6, tmp5, "create", MeasurementPlan$Type, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, arg1, dependencyMap, obj, obj, new.target, tmp8, items1, new.target, exports, obj2);
-// ThrowIfThisInitialized (0x7c)
+tmp3 = new tmp3("discord_protos.discord_experimentation.v1.MeasurementPlan", items1, tmp6, tmp5, "create", MeasurementPlan$Type, "internalBinaryRead", "internalBinaryWrite", tmp3, undefined, tmp, fn, dependencyMap, obj, obj, new.target, tmp8, items1, new.target, exports, obj2);
 let closure_5 = tmp3;
+const MessageType3 = fn(1188).MessageType;
 class RolloutPlan$Type extends MessageType3 {
   constructor() {
     obj = {
@@ -303,7 +269,7 @@ class RolloutPlan$Type extends MessageType3 {
       name: "status",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.PlanStatus", closure_3, "PLAN_STATUS_"];
+            const items = ["discord_protos.discord_experimentation.v1.PlanStatus", obj, "PLAN_STATUS_"];
             return items;
           }
     };
@@ -315,11 +281,10 @@ class RolloutPlan$Type extends MessageType3 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_7;
+            return closure_1_7;
           }
     };
     tmp = new tmp("discord_protos.discord_experimentation.v1.RolloutPlan", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -335,7 +300,7 @@ prototype3["create"] = function create(arr) {
   }
   return obj;
 };
-prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   obj = arg3;
   if (arg3 == null) {
@@ -344,14 +309,12 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.status = pos.int32();
       } else if (2 === tmp5) {
         let rampSteps = obj.rampSteps;
-        let tmp22 = closure_7;
         let arr = rampSteps.push(closure_7.internalBinaryRead(pos, pos.uint32(), readUnknownField));
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -362,25 +325,16 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -398,9 +352,6 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(status, tag, wr
   let num2 = 0;
   if (0 < status.rampSteps.length) {
     do {
-      let tmp4 = closure_7;
-      let tmp5 = require;
-      let tmp6 = dependencyMap;
       let tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
       let internalBinaryWriteResult = closure_7.internalBinaryWrite(status.rampSteps[num2], tagResult1.fork(), writeUnknownFields);
       let joined = internalBinaryWriteResult.join();
@@ -424,7 +375,7 @@ const items2 = [
     name: "status",
     kind: "enum",
     T() {
-      const items = ["discord_protos.discord_experimentation.v1.PlanStatus", closure_3, "PLAN_STATUS_"];
+      const items = ["discord_protos.discord_experimentation.v1.PlanStatus", obj, "PLAN_STATUS_"];
       return items;
     }
   },
@@ -436,12 +387,12 @@ const obj4 = {
   kind: "message",
   repeat: 1,
   T() {
-    return closure_7;
+    return closure_1_7;
   }
 };
 items2[1] = obj4;
-const measurementPlanType = new MeasurementPlan$Type("discord_protos.discord_experimentation.v1.RolloutPlan", items2, tmp6, RolloutPlan$Type, "create", MeasurementPlan$Type, "internalBinaryRead", "internalBinaryWrite", items2, undefined, tmp, arg1, dependencyMap, obj, obj, new.target, tmp8, tmp3, new.target, exports, obj4, undefined, 4);
-// ThrowIfThisInitialized (0x7c)
+const measurementPlanType = new MeasurementPlan$Type("discord_protos.discord_experimentation.v1.RolloutPlan", items2, tmp6, RolloutPlan$Type, "create", MeasurementPlan$Type, "internalBinaryRead", "internalBinaryWrite", items2, undefined, tmp, fn, dependencyMap, obj, obj, new.target, tmp8, tmp3, new.target, exports, obj4, undefined, 4);
+const MessageType4 = fn(1188).MessageType;
 class RampStep$Type extends MessageType4 {
   constructor() {
     items = [, , , , ];
@@ -451,29 +402,28 @@ class RampStep$Type extends MessageType4 {
       name: "hold_duration",
       kind: "message",
       T() {
-            return callback(7896).Duration;
+            return require("duration").Duration;
           }
     };
     items[2] = { no: 3, name: "require_manual_approval", kind: "scalar", T: 8 };
     obj = { no: 4, name: "started_at", kind: "message", T: null };
     class T {
       constructor() {
-        return require("now").Timestamp;
+        return closure_1_0(closure_1_1[3]).Timestamp;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[3] = obj;
     items[4] = {
       no: 5,
       name: "status",
       kind: "enum",
       T() {
-            const items = ["discord_protos.discord_experimentation.v1.StepStatus", closure_4, "STEP_STATUS_"];
+            const items = ["discord_protos.discord_experimentation.v1.StepStatus", obj, "STEP_STATUS_"];
             return items;
           }
     };
     tmp = new tmp("discord_protos.discord_experimentation.v1.RampStep", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -489,7 +439,7 @@ prototype4["create"] = function create(arr) {
   }
   return obj;
 };
-prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   obj = arg3;
   if (arg3 == null) {
@@ -498,28 +448,17 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.targetBasisPoints = pos.int32();
       } else if (2 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let Duration = internalJsonWrite.Duration;
-        let tmp29 = Duration;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let Duration = duration.Duration;
         obj.holdDuration = Duration.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.holdDuration);
       } else if (3 === tmp5) {
         obj.requireManualApproval = pos.bool();
       } else if (4 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let Timestamp = now.Timestamp;
-        let tmp24 = Timestamp;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let Timestamp = timestamp.Timestamp;
         obj.startedAt = Timestamp.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.startedAt);
       } else if (5 === tmp5) {
         obj.status = pos.int32();
@@ -532,25 +471,16 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -565,7 +495,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(targetBasisPoin
     const tagResult = tag.tag(1, _mod1188.WireType.Varint);
   }
   if (targetBasisPoints.holdDuration) {
-    const Duration = internalJsonWrite.Duration;
+    const Duration = duration.Duration;
     const tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     const joined = Duration.internalBinaryWrite(targetBasisPoints.holdDuration, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Duration.internalBinaryWrite(targetBasisPoints.holdDuration, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -575,7 +505,7 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(targetBasisPoin
     const tagResult2 = tag.tag(3, _mod1188.WireType.Varint);
   }
   if (targetBasisPoints.startedAt) {
-    const Timestamp = now.Timestamp;
+    const Timestamp = timestamp.Timestamp;
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     const joined1 = Timestamp.internalBinaryWrite(targetBasisPoints.startedAt, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = Timestamp.internalBinaryWrite(targetBasisPoints.startedAt, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -601,7 +531,7 @@ const items3 = [
     name: "hold_duration",
     kind: "message",
     T() {
-      return callback(7896).Duration;
+      return require("duration").Duration;
     }
   },
   { no: 3, name: "require_manual_approval", kind: "scalar", T: 8 },
@@ -610,7 +540,7 @@ const items3 = [
     name: "started_at",
     kind: "message",
     T() {
-      return callback(1217).Timestamp;
+      return require("timestamp").Timestamp;
     }
   },
 
@@ -620,15 +550,15 @@ const obj5 = {
   name: "status",
   kind: "enum",
   T() {
-    const items = ["discord_protos.discord_experimentation.v1.StepStatus", closure_4, "STEP_STATUS_"];
+    const items = ["discord_protos.discord_experimentation.v1.StepStatus", obj, "STEP_STATUS_"];
     return items;
   }
 };
 items3[4] = obj5;
-let tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.RampStep", items3, tmp6, RolloutPlan$Type, "create", RampStep$Type, "internalBinaryRead", items3, new.target, undefined, tmp, arg1, dependencyMap, obj, obj, new.target, tmp8, tmp3, measurementPlanType, exports, obj5);
-// ThrowIfThisInitialized (0x7c)
+let tmp11 = new "internalBinaryRead"("discord_protos.discord_experimentation.v1.RampStep", items3, tmp6, RolloutPlan$Type, "create", RampStep$Type, "internalBinaryRead", items3, new.target, undefined, tmp, fn, dependencyMap, obj, obj, new.target, tmp8, tmp3, measurementPlanType, exports, obj5);
 let closure_7 = tmp11;
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/lifecycle_plan.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_experimentation/v1/lifecycle_plan.tsx");
 
 export const PlanStatus = obj;
 export const StepStatus = obj;

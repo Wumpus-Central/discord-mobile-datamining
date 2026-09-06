@@ -1,35 +1,34 @@
-// === Module 15516: toggle ===
+// === Module 15516: ScreenDowntimeScheduleSetting ===
 
-// Module 15516 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import apexExperiment from "apexExperiment" /* 7594 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 8645 */;
+// Module 15516 (ScreenDowntimeScheduleSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import FamilyCenterV3Experiment from "FamilyCenterV3Experiment" /* 7594 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import useUserLinks from "useUserLinks" /* 8645 */;
 import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14911 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dxlHN2);
+    const intl = util.intl;
+    return intl.string(util.t.dxlHN2);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/071J7"]);
+    const intl = util.intl;
+    return intl.string(util.t["/071J7"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableScreenDowntimeScheduleNotifications.useSetting,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
+  useValue: UserSettings.EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
+    const EnableScreenDowntimeScheduleNotifications = UserSettings.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
   },
   usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
-    const obj = apexExperiment;
+    let isFamilyCenterV3Enabled = FamilyCenterV3Experiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
     const tmp2 = useUserIsTeenAgeGroupDefault();
-    const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
+    const hasActiveParentLinks = useUserLinks.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
     }
@@ -39,35 +38,6 @@ const toggle = createToggle.createToggle({
     return isFamilyCenterV3Enabled;
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dxlHN2);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["/071J7"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: explicitContentFromProto.EnableScreenDowntimeScheduleNotifications.useSetting,
-  onValueChange(arg0) {
-    const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
-    return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
-  },
-  usePredicate() {
-    let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
-    const obj = apexExperiment;
-    const tmp2 = useUserIsTeenAgeGroupDefault();
-    const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = tmp2;
-    }
-    if (isFamilyCenterV3Enabled) {
-      isFamilyCenterV3Enabled = hasActiveParentLinks;
-    }
-    return isFamilyCenterV3Enabled;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx");
 
 export default toggle;

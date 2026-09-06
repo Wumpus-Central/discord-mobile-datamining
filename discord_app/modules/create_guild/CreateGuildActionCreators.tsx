@@ -1,120 +1,99 @@
-// === Module 12320: _createGuildFromTemplate ===
+// === Module 12320: create_guild/CreateGuildActionCreators ===
 
-// Module 12320 (_createGuildFromTemplate)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 12320 (create_guild/CreateGuildActionCreators)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _createGuildFromTemplate() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3, arg4) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    closure_4 = arg4;
-    c9 = 0;
-    c10 = 0;
-    c8 = 0;
-    return (function*(arg0, body) {
-      if (c10 === 2) {
-        c10 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+require = fn;
+let closure_5 = async function _createGuildFromTemplate(name, icon, arg2, arg3, arg4) {
+  closure_2 = arg2;
+  closure_3 = arg3;
+  closure_4 = arg4;
+  c9 = 0;
+  c10 = 0;
+  c8 = 0;
+  return (async (arg0, value, arg2, arg3, arg4) => {
+    if (c10 === 2) {
+      c10 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c10 = 2;
-          if (0 === c9) {
-            if (arg0 === 1) {
-              c10 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c10 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_6 = tmp3;
-              closure_5 = tmp7;
-              c8 = 1;
-              obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj1[0] = constants.GUILDS;
-              const obj2 = { name: null, icon: null, channels: null, system_channel_id: null, roles: null, guild_template_code: null, staff_only: null };
-              obj2[0] = callback;
-              obj2[1] = callback2;
-              ({ channels: obj10[2], system_channel_id: obj10[3], roles: obj10[4], code: obj10[5] } = dependencyMap);
-              obj2[6] = constants;
-              obj1[1] = obj2;
-              const obj3 = { event: null, properties: null };
-              obj3[0] = callback(1250).NetworkActionNames.GUILD_CREATE;
-              const obj4 = { template_name: null, is_community_intent: null };
-              obj4[0] = dependencyMap.id;
-              obj4[1] = closure_3;
-              obj3[1] = obj4;
-              obj1[2] = obj3;
-              c9 = 2;
-              c10 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = callback2(4753).post(obj1);
-              return obj5;
-            }
-          } else if (1 === tmp7) {
-            c8 = 0;
-            callback = closure_7;
-            const aPIError = new callback(4461).APIError(callback);
-            throw aPIError;
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c10 = 2;
+        if (0 === c9) {
+          if (arg0 === 1) {
             c10 = 3;
-            throw body;
+            throw value;
           } else if (arg0 === 2) {
-            c8 = 0;
             c10 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          } else {
-            c8 = 0;
-            c10 = 3;
-            obj = { value: null, done: true };
-            obj[0] = body.body;
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp22) {
-          closure_7 = tmp22;
-          if (tmp4 === c8) {
-            c10 = tmp2;
-            throw tmp22;
           } else {
-            c9 = tmp;
+            closure_6 = tmp3;
+            closure_5 = tmp7;
+            c8 = 1;
+            const request = { url: constants.GUILDS, body: null, trackedActionData: null, rejectWithError: false };
+            const obj1 = { name, icon, channels: null, system_channel_id: null, roles: null, guild_template_code: null, staff_only: null };
+            ({ channels: obj10.channels, system_channel_id: obj10.system_channel_id, roles: obj10.roles, code: obj10.guild_template_code } = id);
+            obj1.staff_only = staff_only;
+            request.body = obj1;
+            const obj2 = { event: discord_common_AnalyticsUtils.NetworkActionNames.GUILD_CREATE, properties: null };
+            const obj3 = { template_name: id.id, is_community_intent };
+            obj2.properties = obj3;
+            request.trackedActionData = obj2;
+            c9 = 2;
+            c10 = 1;
+            const obj4 = { value: TrackedHTTPUtilsDefault.post(request), done: false };
+            return obj4;
           }
+        } else if (1 === tmp7) {
+          c8 = 0;
+          closure_133_0 = closure_7;
+          const aPIError = new closure_134_0(closure_134_2[4]).APIError(closure_133_0);
+          throw aPIError;
+        } else if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 0;
+          c10 = 3;
+          const obj5 = { value, done: true };
+          return obj5;
+        } else {
+          c8 = 0;
+          c10 = 3;
+          obj = { value: value.body, done: true };
+          return obj;
+        }
+      } catch (tmp22) {
+        closure_7 = tmp22;
+        if (tmp4 === c8) {
+          c10 = tmp2;
+          throw tmp22;
+        } else {
+          c9 = tmp;
         }
       }
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/create_guild/CreateGuildActionCreators.tsx");
+    }
+  })();
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/create_guild/CreateGuildActionCreators.tsx");
 
 export default {
-  createGuildFromTemplate(c4, c5, id, c3, closure_1_9) {
+  createGuildFromTemplate() {
     const self = this;
-    const apply = _createGuildFromTemplate.apply;
+    const apply = closure_5.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {

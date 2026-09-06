@@ -1,28 +1,30 @@
 // === Module 10975: useFavoritesGuildCategoryAddAction ===
 
 // Module 10975 (useFavoritesGuildCategoryAddAction)
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import closure_3 from "noop" /* 19 */;
-import { ChannelTypes } from "ME" /* 1074 */;
+import _modDef3225 from "module_3225" /* 3225 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10976 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx");
+const require = fn;
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryAddAction.tsx");
 
 export default function useFavoritesGuildCategoryAddAction(id) {
-  const _require = id;
+  _require = id;
   const items = [id.id];
-  const callback = React.useCallback(() => {
-    closure_1_1(closure_1_2[2])({ parentId: id.id, source: "favorites_add_to_category" });
+  const callback = noop.useCallback(() => {
+    openFavoritesGuildAddChannelModalDefault({ parentId: id.id, source: "favorites_add_to_category" });
   }, items);
-  let obj = _require(1982);
+  let obj = require("FavoritesUtils");
   let tmp4 = null;
   if (obj.isFavoritesGuildId(id.getGuildId())) {
     tmp4 = null;
     if (id.type === ChannelTypes.GUILD_CATEGORY) {
       obj = { label: null, perform: null };
-      const intl = _require(1114).intl;
-      obj[0] = intl.string(messagesProxyDefault["1QJmIL"]);
-      obj[1] = callback;
+      const intl = require("util").intl;
+      obj.label = intl.string(_modDef3225["1QJmIL"]);
+      obj.perform = callback;
       tmp4 = obj;
     }
   }

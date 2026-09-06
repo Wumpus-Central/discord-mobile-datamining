@@ -1,9 +1,9 @@
-// === Module 11721: NativeShadowType ===
+// === Module 11721: PollMessageChatDataTypes ===
 
-// Module 11721 (NativeShadowType)
-import set from "set" /* 2 */;
+// Module 11721 (PollMessageChatDataTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
+const result = size.fileFinishedImporting("modules/polls/chat/PollMessageChatDataTypes.tsx");
 
 export const NativeShadowType = { NONE: 0, [0]: "NONE", LOW: 1, [1]: "LOW", HIGH: 2, [2]: "HIGH" };
 export const PollRadioStyle = { NONE: 0, [0]: "NONE", HOLLOW: 1, [1]: "HOLLOW", FILLED: 2, [2]: "FILLED", CHECKMARK: 3, [3]: "CHECKMARK" };

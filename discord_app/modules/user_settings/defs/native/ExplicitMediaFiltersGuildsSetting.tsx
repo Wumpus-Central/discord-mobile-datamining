@@ -1,65 +1,62 @@
-// === Module 14830: pressable ===
+// === Module 14830: ExplicitMediaFiltersGuildsSetting ===
 
-// Module 14830 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import create from "create" /* 1187 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import MobileUserSettings2 from "MobileUserSettings" /* 7975 */;
+// Module 14830 (ExplicitMediaFiltersGuildsSetting)
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7298 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
 import useUserIsTeen from "useUserIsTeen" /* 8644 */;
-import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14820 */;
-import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14821 */;
-import createToggle from "createToggle" /* 11468 */;
+import useExplicitContentSettingsOrDefault from "useExplicitContentSettingsOrDefault" /* 14820 */;
+import ExplicitMediaRedactionNativeUtils from "ExplicitMediaRedactionNativeUtils" /* 14821 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
-const pressable = createToggle.createPressable({
+const MobileUserSettings = SettingsConstants.MobileUserSettings;
+const pressable = SettingBuilders.createPressable({
   useTitle: function getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["FP+a42"]);
+    const intl = util.intl;
+    return intl.string(util.t["FP+a42"]);
   },
   parent() {
     return MobileUserSettings.SENSITIVE_CONTENT_FILTERS;
   },
   useTrailing: function useObscuredContentGuildsSettingValue() {
-    const obj = useExplicitContentSettingOrDefault;
-    return redactionSettingToRenderedString.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
+    const obj = useExplicitContentSettingsOrDefault;
+    return ExplicitMediaRedactionUtils.redactionSettingToRenderedString(obj.useExplicitContentSettingOrDefault().explicitContentGuilds)();
   },
   onPress: function onObscuredContentGuildsOnPress() {
-    let obj = resolveExplicitContentSettingWithDefaults;
-    const intl = getSystemLocale.intl;
-    const stringResult = intl.string(getSystemLocale.t.GYpoAq);
-    obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["FP+a42"]);
-    obj[2] = function handlePress(explicitContentGuilds) {
-      let obj = callback(table[5]);
-      obj = { explicitContentGuilds };
+    const intl = util.intl;
+    const stringResult = intl.string(util.t.GYpoAq);
+    let obj = { title: stringResult, subtitle: null, handlePress: null, excluded: null, currentValue: null };
+    const intl2 = util.intl;
+    obj.subtitle = intl2.string(util.t["FP+a42"]);
+    obj.handlePress = function handlePress(explicitContentGuilds) {
+      const obj = { explicitContentGuilds };
       return obj.updateExplicitContentSetting(obj);
     };
-    const items = [create.ExplicitContentRedaction.BLOCK];
-    obj[3] = items;
-    obj[4] = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
-    const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
+    const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK];
+    obj.excluded = items;
+    obj.currentValue = obj.getExplicitContentSettingOrDefault().explicitContentGuilds;
+    const result = ExplicitMediaRedactionNativeUtils.handleSensitiveMediaFilterPress(obj);
   },
   useSearchTerms: function getSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t["N/oRI+"]), , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t.QVdYsK);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t["N/oRI+"]), , ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t.QVdYsK);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t["5mnTa7"]);
     return items;
   },
   useIsDisabled() {
     let userIsTeen = useUserIsTeen.useUserIsTeen();
-    const obj = useUserIsTeen;
     if (!userIsTeen) {
       userIsTeen = obj2.useIsParentallyControlled();
     }
     return userIsTeen;
   }
 });
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
 
 export default pressable;

@@ -1,27 +1,29 @@
 // === Module 12393: useAutocompleteAnimatedHeightStyles ===
 
 // Module 12393 (useAutocompleteAnimatedHeightStyles)
-import set from "set" /* 2 */;
+import timing from "timing" /* 4561 */;
+import timingPresets from "timingPresets" /* 4564 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };
-const result = set.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
+const __initData = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };
+const result = size.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
 
-export default function useAutocompleteAnimatedHeightStyles(height) {
-  const _require = height;
-  let obj = _require(isScreenIndexFrozenSharedValue[0]);
+export default function useAutocompleteAnimatedHeightStyles(height, arg1) {
+  _require = height;
+  let obj = require("ScreenIndexFrozen");
   isScreenIndexFrozenSharedValue = obj.useIsScreenIndexFrozenSharedValue(arg1);
   const fn = function s() {
-    const obj = { height: height(isScreenIndexFrozenSharedValue[2]).withTiming(height, height(isScreenIndexFrozenSharedValue[3]).timingStandard), display: null };
+    const obj = { height: timing.withTiming(closure_0, timingPresets.timingStandard), display: null };
     let str = "flex";
     if (isScreenIndexFrozenSharedValue.get()) {
       str = "none";
     }
-    obj[1] = str;
+    obj.display = str;
     return obj;
   };
-  obj = { withTiming: _require(isScreenIndexFrozenSharedValue[2]).withTiming, height, timingStandard: _require(isScreenIndexFrozenSharedValue[3]).timingStandard, isFrozenSharedValue: isScreenIndexFrozenSharedValue };
+  obj = { withTiming: require("timing").withTiming, height, timingStandard: require("timingPresets").timingStandard, isFrozenSharedValue: isScreenIndexFrozenSharedValue };
   fn.__closure = obj;
   fn.__workletHash = 3862216441966;
-  fn.__initData = closure_2;
-  return _require(isScreenIndexFrozenSharedValue[1]).useAnimatedStyle(fn);
+  fn.__initData = __initData;
+  return require("ReanimatedRexport").useAnimatedStyle(fn);
 };

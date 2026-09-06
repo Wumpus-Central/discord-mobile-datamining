@@ -1,16 +1,18 @@
-// === Module 4: log ===
+// === Module 4: logger/Logger ===
 
-// Module 4 (log)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 4 (logger/Logger)
+import LoggerPIIRestrictedObjects from "LoggerPIIRestrictedObjects" /* 6 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function log() {
+require = fn;
+let global = function log() {
 
-}
-function nativeLog() {
+};
+global = function nativeLog() {
 
-}
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/logger/Logger.tsx");
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/logger/Logger.tsx");
 class Logger {
   constructor() {
     str = global;
@@ -19,134 +21,121 @@ class Logger {
     }
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    obj.logDangerously = function logDangerously(arg0) {
+    obj.logDangerously = function logDangerously(syncChannels) {
       const substr = [...arguments].slice();
-      closure_1_3("log", arg0, ...substr);
+      global("log", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
-          const items = [logger.name, "log", arg0];
+        if (global != null) {
+          const items = [logger.name, "log", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }
-        const tmp4 = closure_1_4;
       }
     };
-    obj.log = function log(arg0) {
+    obj.log = function log(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [arg0, ...substr];
-      logger(obj[1]).checkLogForPII.apply(items);
-      closure_1_3("log", arg0, ...substr);
+      const items = [syncChannels, ...substr];
+      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
+      global("log", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
-          const items1 = [logger.name, "log", arg0];
+        if (global != null) {
+          const items1 = [logger.name, "log", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items1, undefined);
         }
-        const tmp6 = closure_1_4;
       }
     };
-    obj.verboseDangerously = function verboseDangerously(arg0, op, arg2, d) {
+    obj.verboseDangerously = function verboseDangerously(syncChannels) {
       const substr = [...arguments].slice();
-      closure_1_3("debug", arg0, ...substr);
+      global("debug", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
-          const items = [logger.name, "debug", arg0];
+        if (global != null) {
+          const items = [logger.name, "debug", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }
-        const tmp4 = closure_1_4;
       }
     };
-    obj.verbose = function verbose(handleBackPress, url, channel_id) {
+    obj.verbose = function verbose(handleBackPress) {
       const substr = [...arguments].slice();
       const items = [handleBackPress, ...substr];
-      logger(obj[1]).checkLogForPII.apply(items);
-      closure_1_3("debug", handleBackPress, ...substr);
+      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
+      global("debug", handleBackPress, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
+        if (global != null) {
           const items1 = [logger.name, "debug", handleBackPress];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items1, undefined);
         }
-        const tmp6 = closure_1_4;
       }
     };
-    obj.info = function info(arg0) {
+    obj.info = function info(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [arg0, ...substr];
-      logger(obj[1]).checkLogForPII.apply(items);
-      closure_1_3("info", arg0, ...substr);
+      const items = [syncChannels, ...substr];
+      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
+      global("info", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
-          const items1 = [logger.name, "info", arg0];
+        if (global != null) {
+          const items1 = [logger.name, "info", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items1, undefined);
         }
-        const tmp6 = closure_1_4;
       }
     };
-    obj.warn = function warn(arg0) {
+    obj.warn = function warn(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [arg0, ...substr];
-      logger(obj[1]).checkLogForPII.apply(items);
-      closure_1_3("warn", arg0, ...substr);
+      const items = [syncChannels, ...substr];
+      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
+      global("warn", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
-          const items1 = [logger.name, "warn", arg0];
+        if (global != null) {
+          const items1 = [logger.name, "warn", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items1, undefined);
         }
-        const tmp6 = closure_1_4;
       }
     };
-    obj.error = function error(arg0) {
+    obj.error = function error(syncChannels) {
       const substr = [...arguments].slice();
-      const items = [arg0, ...substr];
-      logger(obj[1]).checkLogForPII.apply(items);
-      closure_1_3("error", arg0, ...substr);
+      const items = [syncChannels, ...substr];
+      LoggerPIIRestrictedObjects.checkLogForPII.apply(items);
+      global("error", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
-          const items1 = [logger.name, "error", arg0];
+        if (global != null) {
+          const items1 = [logger.name, "error", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items1, undefined);
         }
-        const tmp6 = closure_1_4;
       }
     };
-    obj.trace = function trace(arg0) {
+    obj.trace = function trace(syncChannels) {
       const substr = [...arguments].slice();
-      closure_1_3("trace", arg0, ...substr);
+      global("trace", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
-          const items = [logger.name, "trace", arg0];
+        if (global != null) {
+          const items = [logger.name, "trace", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }
-        const tmp4 = closure_1_4;
       }
     };
-    obj.time = function time(arg0, arg1) {
+    obj.time = function time(arg0, fn) {
       const timestamp = Date.now();
       logger.log(arg0, Date.now() - timestamp);
-      return arg1();
+      return fn();
     };
     closure_0 = undefined;
     closure_1 = obj;
-    closure_0 = closure_2((arg0, arg1) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      c4 = 0;
-      c5 = 0;
-      return (function*(arg0, arg1) {
-        closure_3 = tmp5;
-        closure_2 = tmp2;
-        const _Date2 = Date;
-        const logger = Date.now();
-        closure_2 = yield logger();
-        const _Date = Date;
-        logger.log(closure_0, Date.now() - logger + "ms");
-        return closure_2;
-      })();
+    closure_0 = closure_2(async (arg0, arg1) => {
+      closure_3 = tmp5;
+      closure_2 = tmp2;
+      closure_130_0 = closure_0;
+      const _Date2 = Date;
+      closure_130_1 = Date.now();
+      closure_130_2 = await closure_1();
+      const _Date = Date;
+      closure_131_1.log(closure_130_0, Date.now() - closure_130_1 + "ms");
+      return closure_130_2;
     });
     obj.timeAsync = function() {
       const self = this;
@@ -158,16 +147,15 @@ class Logger {
       }
       return applyArgumentsResult;
     };
-    obj.fileOnly = function fileOnly(syncChannels, existingEvents) {
+    obj.fileOnly = function fileOnly(syncChannels) {
       const substr = [...arguments].slice();
-      closure_1_3("file-only", syncChannels, ...substr);
+      global("file-only", syncChannels, ...substr);
       if (logger.nativeLoggerEnabled) {
-        if (closure_1_4 != null) {
+        if (global != null) {
           const items = [logger.name, "file-only", syncChannels];
           HermesBuiltin.arraySpread(substr, 3);
           HermesBuiltin.apply(items, undefined);
         }
-        const tmp4 = closure_1_4;
       }
     };
     obj.name = str;
@@ -180,10 +168,10 @@ Logger.prototype["enableNativeLogger"] = function enableNativeLogger(nativeLogge
 };
 
 export function setLogFn(arg0) {
-  closure_3 = arg0;
+  global = arg0;
 }
 export function setNativeLogFn(arg0) {
-  closure_4 = arg0;
+  global = arg0;
 }
 export const defaultLogFn = function defaultLogFn(arg0, arg1, arg2) {
   const substr = [...arguments].slice();

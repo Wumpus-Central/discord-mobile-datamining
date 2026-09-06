@@ -2,16 +2,19 @@
 
 // Module 15124 (openVideoQuestModal)
 import v1All from "v1" /* 1256 */;
-import closure_4 from "initializeState" /* 7703 */;
+import VideoQuestUtils from "VideoQuestUtils" /* 11512 */;
+import QuestStore from "QuestStore" /* 7703 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx");
 
 export default function openVideoQuestModal(questId) {
   questId = questId.questId;
   const sourceQuestContent = questId.sourceQuestContent;
+  let obj = QuestStore;
   ({ questContentPosition, initialStep } = questId);
-  if (obj.isQuestAccessSuspended) {
+  if (QuestStore.isQuestAccessSuspended) {
     const quest = obj.getQuest(questId);
     let completedAt;
     if (quest != null) {
@@ -26,15 +29,13 @@ export default function openVideoQuestModal(questId) {
   }
   const v4Result = v1All.v4();
   importAll = v4Result;
-  const obj2 = v1All;
   obj = {
     questId,
     questContentPosition,
     videoSessionId: v4Result,
     initialStep,
     onClose() {
-      let obj = questId(closure_1_3[6]);
-      obj = { questId, sourceQuestContent, videoSessionId: closure_2 };
+      const obj = { questId, sourceQuestContent, videoSessionId: v4Result };
       return obj.handleVideoQuestModalClose(obj);
     },
     sourceQuestContent

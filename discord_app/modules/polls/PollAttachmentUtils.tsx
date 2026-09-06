@@ -1,56 +1,44 @@
-// === Module 12205: _downloadPollGif ===
+// === Module 12205: PollAttachmentUtils ===
 
-// Module 12205 (_downloadPollGif)
-import closure_0 from "asyncGeneratorStep" /* 5 */;
-import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7829 */;
+// Module 12205 (PollAttachmentUtils)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function _downloadPollGif() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      const _fetch = fetch;
-      closure_0 = yield fetch(closure_0);
-      function convertBlobToBase64(arg0) {
-        closure_0 = arg0;
-        const fileReader = new FileReader();
-        return new Promise((closure_0, onerror) => {
-          fileReader.onload = function onload() { ... };
-          fileReader.onerror = onerror;
-          const asDataURL = fileReader.readAsDataURL(closure_0);
-        });
-      }
-      yield closure_0.blob();
-      return convertBlobToBase64(arg1);
-    })();
-  });
-  closure_2 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+let closure_2 = async function _downloadPollGif() {
+  const _fetch = fetch;
+  closure_130_0 = await fetch(closure_0);
+  function convertBlobToBase64(value) {
+    closure_0 = value;
+    const fileReader = new FileReader();
+    return new Promise((data, onerror) => {
+      fileReader.onload = () => {
+        const parts = fileReader.result.split(",");
+        data(parts.pop());
+      };
+      fileReader.onerror = onerror;
+      const asDataURL = fileReader.readAsDataURL(data);
+    });
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
+  await closure_130_0.blob();
+  return convertBlobToBase64(arg1);
+};
+const POLL_ATTACHMENT_FOLDER = fn(7829).POLL_ATTACHMENT_FOLDER;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/PollAttachmentUtils.tsx");
 
-export const getFileNameFromGifUrl = function getFileNameFromGifUrl(closure_1, closure_2) {
-  const parts = decodeURIComponent(closure_2).split("/");
+export const getFileNameFromGifUrl = function getFileNameFromGifUrl(localCreationAnswerId, mediaURL) {
+  const parts = decodeURIComponent(mediaURL).split("/");
   let str2 = parts.pop();
   if (str2 == null) {
     str2 = "temp.gif";
   }
-  return "" + closure_1 + "-" + str2;
+  return "" + localCreationAnswerId + "-" + str2;
 };
-export const getFilePathForGif = function getFilePathForGif(closure_2) {
-  return POLL_ATTACHMENT_FOLDER + "/" + closure_2;
+export const getFilePathForGif = function getFilePathForGif(arg0) {
+  return POLL_ATTACHMENT_FOLDER + "/" + arg0;
 };
-export const downloadPollGif = function downloadPollGif(closure_2) {
+export const downloadPollGif = function downloadPollGif() {
   const self = this;
-  const apply = _downloadPollGif.apply;
+  const apply = closure_2.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

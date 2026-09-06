@@ -1,21 +1,22 @@
 // === Module 16187: useActiveEventOrStageInstanceChannel ===
 
 // Module 16187 (useActiveEventOrStageInstanceChannel)
-import useGuildEvents from "useGuildEvents" /* 9662 */;
+import useGuildScheduledEvents from "useGuildScheduledEvents" /* 9662 */;
 import useLiveStageChannelsDefault from "useLiveStageChannels" /* 16186 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
 
 export const useActiveEventOrStageInstanceChannel = function useActiveEventOrStageInstanceChannel(id) {
-  let firstActiveEventChannel = useGuildEvents.useFirstActiveEventChannel(id);
+  let firstActiveEventChannel = useGuildScheduledEvents.useFirstActiveEventChannel(id);
   const first = useLiveStageChannelsDefault(id)[0];
   if (first != null) {
     id = first.id;
   }
   if (firstActiveEventChannel == null) {
-    firstActiveEventChannel = channel.getChannel(id);
+    firstActiveEventChannel = ChannelStore.getChannel(id);
   }
   return firstActiveEventChannel;
 };

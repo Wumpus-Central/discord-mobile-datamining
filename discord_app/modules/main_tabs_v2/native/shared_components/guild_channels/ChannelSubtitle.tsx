@@ -1,13 +1,12 @@
-// === Module 16656: ChannelSubtitle ===
+// === Module 16656: guild_channels/ChannelSubtitle ===
 
-// Module 16656 (ChannelSubtitle)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import getLayoutStyles from "getLayoutStyles" /* 10121 */;
+// Module 16656 (guild_channels/ChannelSubtitle)
+import Text_Text from "Text/Text" /* 4556 */;
+import ChannelListLayout from "ChannelListLayout" /* 10121 */;
 import getChannelSubtitleData from "getChannelSubtitleData" /* 16226 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ChannelSubtitle(arg0) {
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
@@ -18,45 +17,38 @@ function ChannelSubtitle(arg0) {
   } else {
     obj = {};
     const merged = Object.assign(textProps);
-    obj = { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
-    obj[0] = channelSubtitleData.subtitle;
+    obj = { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null };
     if (muted == null) {
       muted = false;
     }
-    obj[1] = muted;
-    obj[2] = channelId;
-    obj[3] = guildId;
-    obj[4] = layout;
-    obj[6] = !("voice" === channelSubtitleData.type && connected);
+    obj.muted = muted;
+    obj.channelId = channelId;
+    obj.guildId = guildId;
+    obj.layout = layout;
+    obj.disableAnimatedEmoji = !("voice" === channelSubtitleData.type && connected);
     obj.children = tmp(10116).renderMessagePreviewMarkup(obj);
-    return jsx(tmp(4556).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
+    return jsx(tmp(4556).Text, { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
   }
 }
-noopAll;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
 
 export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
   ({ subtitle, layout } = arg0);
   if (null == subtitle) {
     return null;
   } else {
-    let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
-    obj[0] = getLayoutStyles.getLayoutStyles(layout).messagePreview.text.variant;
+    let obj = { variant: ChannelListLayout.getLayoutStyles(layout).messagePreview.text.variant, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75 };
     if (typeof subtitle === "string") {
       obj = {};
       const merged = Object.assign(obj);
       obj.children = subtitle;
-      let tmp9 = jsx(Text.Text, {});
+      let tmp9 = jsx(Text_Text.Text, {});
     } else {
-      obj = { channelId: null, guildId: null, layout: null, subtitle: null, muted: null, connected: null, textProps: null };
-      obj[0] = tmp2;
-      obj[1] = tmp3;
-      obj[2] = layout;
-      obj[3] = subtitle;
-      obj[4] = tmp;
-      obj[5] = tmp4;
-      obj[6] = obj;
-      tmp9 = <ChannelSubtitle channelId={null} guildId={null} layout={null} subtitle={null} muted={null} connected={null} textProps={null} />;
+      obj = { channelId: tmp2, guildId: tmp3, layout, subtitle, muted: tmp, connected: tmp4, textProps: null };
+      obj.textProps = obj;
+      tmp9 = <ChannelSubtitle channelId={tmp2} guildId={tmp3} layout={layout} subtitle={subtitle} muted={tmp} connected={tmp4} textProps={null} />;
     }
     return tmp9;
   }

@@ -1,7 +1,7 @@
-// === Module 11443: prototype ===
+// === Module 11443: RevenueError ===
 
-// Module 11443 (prototype)
-import set from "set" /* 2 */;
+// Module 11443 (RevenueError)
+import size from "module_2" /* 2 */;
 
 const prototype = function RevenueError(errorHandlingBehavior) {
   ({ message, extraSentryInformation } = errorHandlingBehavior);
@@ -17,7 +17,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
     flag = false;
   }
   const tmp = new prototype(message, message, new.target, new.target, extraSentryInformation);
-  // ThrowIfThisInitialized (0x7c)
   tmp.name = new.target.name;
   tmp.extraSentryInformation = extraSentryInformation;
   tmp.errorHandlingBehavior = str;
@@ -26,6 +25,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
 }.prototype;
 class prototype extends Error {
 }
-const result = set.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
+const result = size.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
 
 export const RevenueError = prototype;

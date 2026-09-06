@@ -1,15 +1,12 @@
-// === Module 17678: GuildSettingsRoleSubscriptionsEmptyContent ===
+// === Module 17678: GuildSettingsRoleSubscriptionsEmpty ===
 
-// Module 17678 (GuildSettingsRoleSubscriptionsEmptyContent)
-import noopAll from "noop" /* 19 */;
+// Module 17678 (GuildSettingsRoleSubscriptionsEmpty)
 import useNavigation from "useNavigation" /* 1483 */;
 import PlaceholderDefault from "Placeholder" /* 17680 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import ME from "ME" /* 1074 */;
-import { ApplicationTypes } from "ApplicationTypes" /* 1350 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
+require = fn;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
   let obj = useNavigation;
@@ -21,9 +18,8 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
     if (!features.has(constants.CREATOR_MONETIZABLE)) {
       const features2 = guild.features;
       if (!features2.has(tmp5.CREATOR_MONETIZABLE_PROVISIONAL)) {
-        obj = { guild: null };
-        obj[0] = guild;
-        tmp7 = jsx(tmp2(17681), { guild: null });
+        obj = { guild };
+        tmp7 = jsx(tmp2(17681), { guild });
       }
     }
     if (null == tmp4) {
@@ -37,21 +33,23 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   }
   return tmp7;
 }
-noopAll;
-({ GuildFeatures: c4, GuildSettingsSections: c5 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
+const Constants = fn(1074);
+({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
+const ApplicationTypes = fn(1350).ApplicationTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
 
 export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(504);
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(guildId));
+  const items = [GuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
   if (null == stateFromStores) {
     let tmp5 = jsx(PlaceholderDefault, {});
   } else {
-    obj = { guild: null };
-    obj[0] = stateFromStores;
-    tmp5 = <GuildSettingsRoleSubscriptionsEmptyContent guild={null} />;
+    obj = { guild: stateFromStores };
+    tmp5 = <GuildSettingsRoleSubscriptionsEmptyContent guild={stateFromStores} />;
   }
   return tmp5;
 };

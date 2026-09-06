@@ -1,19 +1,19 @@
-// === Module 9510: map ===
+// === Module 9510: FramesStore ===
 
-// Module 9510 (map)
-import set from "set" /* 2 */;
+// Module 9510 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sum from "sum" /* 1085 */;
-import ActivityPanelModes2 from "ActivityPanelModes" /* 9505 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1085 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9505 */;
 import getURLForApplicationDefault from "getURLForApplication" /* 9512 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
+import FramesConstants from "FramesConstants" /* 9511 */;
+import size from "module_2" /* 2 */;
 
-({ FrameIntent: obj1, FrameLayoutModes: c3, getFrameIntentForSurface: c4, isLaunched: c5, makeFrameId: closure_6 } = FrameLayoutModes);
-const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;
-const NOOP_TRUE = sum.NOOP_TRUE;
+({ FrameIntent: c2, FrameLayoutModes: c3, getFrameIntentForSurface: closure_4, isLaunched: hasOwnProperty, makeFrameId: metroRequire } = FramesConstants);
+const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
+const NOOP_TRUE = Constants.NOOP_TRUE;
 const map = new Map();
-let c10 = null;
+let frameId = null;
 const Store = initializeDefault.Store;
 class FramesStoreClass extends Store {
 }
@@ -25,8 +25,8 @@ prototype["getFrame"] = function getFrame(frameId) {
 };
 prototype["getMainFrame"] = function getMainFrame() {
   let tmp = null;
-  if (null != c10) {
-    let value = map.get(c10);
+  if (null != frameId) {
+    value = map.get(frameId);
     if (value == null) {
       value = null;
     }
@@ -40,12 +40,9 @@ prototype["getAllFrames"] = function getAllFrames() {
 prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
   const values = map.values();
   for (const item10009 of values) {
-    let tmp3 = callback2;
     let tmp2 = item10009;
-    if (callback2(item10009)) {
-      let tmp4 = item10009;
+    if (hasOwnProperty(item10009)) {
       if (tmp2.data.iframeId === arg0) {
-        let tmp5 = obj;
         obj.return();
         return item10009;
       }
@@ -53,41 +50,40 @@ prototype["getFrameByIframeId"] = function getFrameByIframeId(iframeId) {
     continue;
   }
 };
-prototype["getFrameBySurface"] = function getFrameBySurface(arg0, closure_1) {
-  return map.get(callback3(arg0, closure_1));
+prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
+  return map.get(timestampProducer(arg0, arg1));
 };
 FramesStoreClass.displayName = "FramesStore";
-const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
+const framesStoreClass = new FramesStoreClass(DispatcherDefault, {
   FRAME_LAUNCH_START: function handleFrameLaunchStart(applicationId) {
     ({ frameId, surface } = applicationId);
-    const tmp = callback(surface);
+    const tmp = React4(surface);
     const result = map.set(frameId, { id: frameId, applicationId: applicationId.applicationId, intent: tmp, surface, state: "loading", data: null });
   },
   FRAME_LAUNCH: function handleFrameLaunch(frameId) {
     frameId = frameId.frameId;
     let obj = map;
     ({ proxyTicket, customId, referrerId } = frameId);
-    const value = map.get(frameId);
+    value = map.get(frameId);
     if (null != value) {
       const tmp14 = getURLForApplicationDefault(value.applicationId);
       if (null == tmp14) {
         obj.delete(frameId);
-        if (c10 === frameId) {
-          c10 = null;
+        if (frameId === frameId) {
+          frameId = null;
         }
       } else {
         obj = {};
         const merged = Object.assign(value);
         obj.state = "launched";
-        obj = { url: null, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, customId: null, referrerId: null };
-        obj[0] = tmp14;
+        obj = { url: tmp14, connectedSince: null, layoutMode: null, activityPanelMode: null, proxyTicket: null, proxyTicketRefreshing: false, orientationLock: null, pipOrientationLock: null, prefersPictureInPictureOnNavigateAway: false, iframeId: null, customId: null, referrerId: null };
         const _Date = Date;
-        obj[1] = Date.now();
-        obj[2] = constants2.FOCUSED;
-        obj[3] = ActivityPanelModes.PANEL;
-        obj[4] = proxyTicket;
-        obj[10] = customId;
-        obj[11] = referrerId;
+        obj.connectedSince = Date.now();
+        obj.layoutMode = constants2.FOCUSED;
+        obj.activityPanelMode = ActivityPanelModes.PANEL;
+        obj.proxyTicket = proxyTicket;
+        obj.customId = customId;
+        obj.referrerId = referrerId;
         obj.data = obj;
         const result = obj.set(frameId, obj);
       }
@@ -96,22 +92,22 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
   FRAME_LAUNCH_FAIL: function handleFrameLaunchFail(frameId) {
     frameId = frameId.frameId;
     map.delete(frameId);
-    if (c10 === frameId) {
-      c10 = null;
+    if (frameId === frameId) {
+      frameId = null;
     }
   },
   FRAME_STOP: function handleFrameStop(frameId) {
     frameId = frameId.frameId;
     map.delete(frameId);
-    if (c10 === frameId) {
-      c10 = null;
+    if (frameId === frameId) {
+      frameId = null;
     }
   },
   FRAME_CLEAR_MAIN_SLOT: function handleFrameClearMainSlot(frameId) {
-    if (c10 !== frameId.frameId) {
+    if (frameId !== frameId.frameId) {
       return false;
     } else {
-      c10 = null;
+      frameId = null;
     }
   },
   FRAME_PROMOTE: function handleFramePromote(frameId) {
@@ -125,8 +121,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp5 = callback2(value);
+      value = map.get(frameId);
+      let tmp5 = hasOwnProperty(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -150,8 +146,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp5 = callback2(value);
+      value = map.get(frameId);
+      let tmp5 = hasOwnProperty(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -175,8 +171,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp4 = callback2(value);
+      value = map.get(frameId);
+      let tmp4 = hasOwnProperty(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
@@ -208,8 +204,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp5 = callback2(value);
+      value = map.get(frameId);
+      let tmp5 = hasOwnProperty(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -233,8 +229,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp5 = callback2(value);
+      value = map.get(frameId);
+      let tmp5 = hasOwnProperty(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -258,8 +254,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp5 = callback2(value);
+      value = map.get(frameId);
+      let tmp5 = hasOwnProperty(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -283,8 +279,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp4 = callback2(value);
+      value = map.get(frameId);
+      let tmp4 = hasOwnProperty(value);
       if (tmp4) {
         let flag2 = tmp(value.data);
         if (flag2) {
@@ -310,8 +306,8 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     let flag = false;
     if (null != frameId) {
       let obj = map;
-      const value = map.get(frameId);
-      let tmp4 = callback2(value);
+      value = map.get(frameId);
+      let tmp4 = hasOwnProperty(value);
       if (tmp4) {
         let flag2 = value.data.iframeId === tmp;
         if (flag2) {
@@ -333,10 +329,10 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
   },
   CHANNEL_SELECT: function handleChannelSelect() {
     let flag = false;
-    if (null != c10) {
+    if (null != frameId) {
       let obj = map;
-      const value = map.get(tmp);
-      let tmp5 = callback2(value);
+      value = map.get(tmp);
+      let tmp5 = hasOwnProperty(value);
       if (tmp5) {
         let flag2 = tmp2(value.data);
         if (flag2) {
@@ -356,6 +352,6 @@ const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
     return flag;
   }
 });
-let result = set.fileFinishedImporting("modules/frames/FramesStore.tsx");
+let result = size.fileFinishedImporting("modules/frames/FramesStore.tsx");
 
 export default framesStoreClass;

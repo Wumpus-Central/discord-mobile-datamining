@@ -1,18 +1,16 @@
-// === Module 14455: migrateHotspotLocation ===
+// === Module 14455: PreloadedUserSettingsMigrations ===
 
-// Module 14455 (migrateHotspotLocation)
+// Module 14455 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
-import create from "create" /* 1187 */;
-import defineProperty from "defineProperty" /* 1218 */;
-import b64ToProto from "b64ToProto" /* 1223 */;
-import DismissibleContent from "DismissibleContent" /* 1943 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import wrappers from "wrappers" /* 1218 */;
+import user_settings_UserSettingsUtils from "user_settings/UserSettingsUtils" /* 1223 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
 import HotspotStore2 from "HotspotStore" /* 7213 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import { ChannelNoticeTypes } from "ME" /* 1074 */;
-import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS" /* 12414 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
+require = fn;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {
   const HotspotStore = HotspotStore2.HotspotStore;
   let hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(ACTIVITY_BEB_TUTORIAL);
@@ -37,6 +35,8 @@ function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULT
   }
   return hasHiddenHotspotResult;
 }
+const ChannelNoticeTypes = fn(1074).ChannelNoticeTypes;
+let closure_5 = fn(12414).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
 let items = [
   {
     version: 2,
@@ -44,7 +44,7 @@ let items = [
       if (null != inbox.inbox) {
         return false;
       } else {
-        const InboxSettings = create.InboxSettings;
+        const InboxSettings = preloaded_user_settings.InboxSettings;
         const obj = InboxSettings.create();
         inbox.inbox = obj;
         const Storage3 = Storage4.Storage;
@@ -54,7 +54,7 @@ let items = [
           flag2 = true;
         }
         const Storage = tmp16(510).Storage;
-        let value = Storage.get("recentsButtonTab2");
+        value = Storage.get("recentsButtonTab2");
         if (null == value) {
           const Storage2 = tmp16(510).Storage;
           value = Storage2.get("unread-messages-collapsed-channels");
@@ -67,26 +67,19 @@ let items = [
           if (keys !== undefined) {
             tmp4 = flag4;
             while (keys[tmp] !== undefined) {
-              let tmp19 = tmp7;
               if (!value[tmp7]) {
                 continue;
               } else {
-                let tmp8 = channel;
-                channel = channel.getChannel(tmp7);
+                let channel = ChannelStore.getChannel(tmp7);
                 flag4 = tmp6;
                 if (null == channel) {
                   continue;
                 } else {
-                  let tmp10 = require;
-                  let tmp11 = dependencyMap;
-                  let obj2 = b64ToProto;
+                  let obj2 = user_settings_UserSettingsUtils;
                   let str4 = channel.guild_id;
                   if (str4 == null) {
                     str4 = "0";
                   }
-                  let tmp12 = obj2;
-                  let tmp13 = inbox;
-                  let tmp14 = str4;
                   let result = obj2.mutateUserChannelSettings(inbox, str4, channel.id, (arg0) => {
                     arg0.collapsedInInbox = true;
                   });
@@ -124,7 +117,7 @@ let items = [
       const PersistedStore = initializeDefault.PersistedStore;
       const items = [
         () => {
-          const Storage = callback(table[6]).Storage;
+          const Storage = Storage4.Storage;
           const diversitySurrogate = Storage.get("EmojiDiversitySurrogate") || "";
           return { diversitySurrogate };
         }
@@ -140,11 +133,11 @@ let items = [
         let flag = false;
         if (tmp2) {
           if (null == textAndImages.textAndImages) {
-            const TextAndImagesSettings = create.TextAndImagesSettings;
+            const TextAndImagesSettings = preloaded_user_settings.TextAndImagesSettings;
             textAndImages.textAndImages = TextAndImagesSettings.create();
           }
           if (null == textAndImages.textAndImages.diversitySurrogate) {
-            const StringValue = defineProperty.StringValue;
+            const StringValue = wrappers.StringValue;
             textAndImages.textAndImages.diversitySurrogate = StringValue.create();
           }
           textAndImages.textAndImages.diversitySurrogate.value = state.diversitySurrogate;
@@ -199,37 +192,37 @@ let items = [
     run(textAndImages) {
       textAndImages = textAndImages.textAndImages;
       if (textAndImages == null) {
-        const TextAndImagesSettings = create.TextAndImagesSettings;
+        const TextAndImagesSettings = preloaded_user_settings.TextAndImagesSettings;
         textAndImages = TextAndImagesSettings.create();
       }
       textAndImages.textAndImages = textAndImages;
       let notifications = textAndImages.notifications;
       if (notifications == null) {
-        const NotificationSettings = create.NotificationSettings;
+        const NotificationSettings = preloaded_user_settings.NotificationSettings;
         notifications = NotificationSettings.create();
       }
       textAndImages.notifications = notifications;
       let privacy = textAndImages.privacy;
       if (privacy == null) {
-        const PrivacySettings = create.PrivacySettings;
+        const PrivacySettings = preloaded_user_settings.PrivacySettings;
         privacy = PrivacySettings.create();
       }
       textAndImages.privacy = privacy;
       let voiceAndVideo = textAndImages.voiceAndVideo;
       if (voiceAndVideo == null) {
-        const VoiceAndVideoSettings = create.VoiceAndVideoSettings;
+        const VoiceAndVideoSettings = preloaded_user_settings.VoiceAndVideoSettings;
         voiceAndVideo = VoiceAndVideoSettings.create();
       }
       textAndImages.voiceAndVideo = voiceAndVideo;
       let gameLibrary = textAndImages.gameLibrary;
       if (gameLibrary == null) {
-        const GameLibrarySettings = create.GameLibrarySettings;
+        const GameLibrarySettings = preloaded_user_settings.GameLibrarySettings;
         gameLibrary = GameLibrarySettings.create();
       }
       textAndImages.gameLibrary = gameLibrary;
       let debug = textAndImages.debug;
       if (debug == null) {
-        const DebugSettings = create.DebugSettings;
+        const DebugSettings = preloaded_user_settings.DebugSettings;
         debug = DebugSettings.create();
       }
       textAndImages.debug = debug;
@@ -242,28 +235,25 @@ let items = [
       if (typeof obj.useRichChatTextBox === "boolean") {
         const BoolValue = tmp13(1218).BoolValue;
         obj = { value: null };
-        obj[0] = obj.useRichChatTextBox;
+        obj.value = obj.useRichChatTextBox;
         textAndImages.textAndImages.useRichChatInput = BoolValue.create(obj);
         flag = true;
       }
       if (typeof obj.renderSpoilers === "string") {
         const StringValue = tmp13(1218).StringValue;
-        obj1 = { value: null };
-        obj1[0] = obj.renderSpoilers;
+        const obj1 = { value: obj.renderSpoilers };
         textAndImages.textAndImages.renderSpoilers = StringValue.create(obj1);
         flag = true;
       }
       if (typeof obj.useThreadSidebar === "boolean") {
         const BoolValue2 = tmp13(1218).BoolValue;
-        const obj2 = { value: null };
-        obj2[0] = obj.useThreadSidebar;
+        const obj2 = { value: obj.useThreadSidebar };
         textAndImages.textAndImages.useThreadSidebar = BoolValue2.create(obj2);
         flag = true;
       }
       if (typeof obj.showInAppNotifications === "boolean") {
         const BoolValue3 = tmp13(1218).BoolValue;
-        const obj3 = { value: null };
-        obj3[0] = obj.showInAppNotifications;
+        const obj3 = { value: obj.showInAppNotifications };
         textAndImages.notifications.showInAppNotifications = BoolValue3.create(obj3);
         flag = true;
       }
@@ -277,64 +267,55 @@ let items = [
       }
       if (typeof obj.viewImageDescriptions === "boolean") {
         const BoolValue4 = tmp13(1218).BoolValue;
-        const obj4 = { value: null };
-        obj4[0] = obj.viewImageDescriptions;
+        const obj4 = { value: obj.viewImageDescriptions };
         textAndImages.textAndImages.viewImageDescriptions = BoolValue4.create(obj4);
         flag = true;
       }
       if (typeof obj.showCommandSuggestions === "boolean") {
         const BoolValue5 = tmp13(1218).BoolValue;
-        const obj5 = { value: null };
-        obj5[0] = obj.showCommandSuggestions;
+        const obj5 = { value: obj.showCommandSuggestions };
         textAndImages.textAndImages.showCommandSuggestions = BoolValue5.create(obj5);
         flag = true;
       }
       if (typeof obj.alwaysPreviewVideo === "boolean") {
         const BoolValue6 = tmp13(1218).BoolValue;
-        const obj6 = { value: null };
-        obj6[0] = obj.alwaysPreviewVideo;
+        const obj6 = { value: obj.alwaysPreviewVideo };
         textAndImages.voiceAndVideo.alwaysPreviewVideo = BoolValue6.create(obj6);
         flag = true;
       }
       if (typeof obj.notifyFriendsOnGoLive === "boolean") {
         const BoolValue7 = tmp13(1218).BoolValue;
-        const obj7 = { value: null };
-        obj7[0] = obj.notifyFriendsOnGoLive;
+        const obj7 = { value: obj.notifyFriendsOnGoLive };
         textAndImages.notifications.notifyFriendsOnGoLive = BoolValue7.create(obj7);
         flag = true;
       }
       if (typeof obj.installShortcutDesktop === "boolean") {
         const BoolValue8 = tmp13(1218).BoolValue;
-        const obj8 = { value: null };
-        obj8[0] = obj.installShortcutDesktop;
+        const obj8 = { value: obj.installShortcutDesktop };
         textAndImages.gameLibrary.installShortcutDesktop = BoolValue8.create(obj8);
         flag = true;
       }
       if (typeof obj.installShortcutStartMenu === "boolean") {
         const BoolValue9 = tmp13(1218).BoolValue;
-        const obj9 = { value: null };
-        obj9[0] = obj.installShortcutStartMenu;
+        const obj9 = { value: obj.installShortcutStartMenu };
         textAndImages.gameLibrary.installShortcutStartMenu = BoolValue9.create(obj9);
         flag = true;
       }
       if (typeof obj.allowActivityPartyPrivacyFriends === "boolean") {
         const BoolValue10 = tmp13(1218).BoolValue;
-        const obj10 = { value: null };
-        obj10[0] = obj.allowActivityPartyPrivacyFriends;
+        const obj10 = { value: obj.allowActivityPartyPrivacyFriends };
         textAndImages.privacy.allowActivityPartyPrivacyFriends = BoolValue10.create(obj10);
         flag = true;
       }
       if (typeof obj.allowActivityPartyPrivacyVoiceChannel === "boolean") {
         const BoolValue11 = tmp13(1218).BoolValue;
-        const obj11 = { value: null };
-        obj11[0] = obj.allowActivityPartyPrivacyVoiceChannel;
+        const obj11 = { value: obj.allowActivityPartyPrivacyVoiceChannel };
         textAndImages.privacy.allowActivityPartyPrivacyVoiceChannel = BoolValue11.create(obj11);
         flag = true;
       }
       if (typeof obj.rtcPanelShowVoiceStates === "boolean") {
         const BoolValue12 = tmp13(1218).BoolValue;
-        const obj12 = { value: null };
-        obj12[0] = obj.rtcPanelShowVoiceStates;
+        const obj12 = { value: obj.rtcPanelShowVoiceStates };
         textAndImages.debug.rtcPanelShowVoiceStates = BoolValue12.create(obj12);
         flag = true;
       }
@@ -347,7 +328,7 @@ let items = [
   {
     version: 7,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, DismissibleContent.DismissibleContent.APPLICATION_COMMAND_TOOLTIP);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, dismissible_content.DismissibleContent.APPLICATION_COMMAND_TOOLTIP);
     },
     cleanup() {
 
@@ -356,7 +337,7 @@ let items = [
   {
     version: 8,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, DismissibleContent.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, dismissible_content.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE);
     },
     cleanup() {
 
@@ -370,7 +351,7 @@ let items = [
         const Storage = tmp(510).Storage;
         const result = Storage.set(closure_5, "true");
       }
-      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, DismissibleContent.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, dismissible_content.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP);
     },
     cleanup() {
 
@@ -379,7 +360,7 @@ let items = [
   {
     version: 10,
     run(userContent) {
-      let flag = migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, DismissibleContent.DismissibleContent.CHANNEL_NOTICE_HUBLINK);
+      let flag = migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, dismissible_content.DismissibleContent.CHANNEL_NOTICE_HUBLINK);
       const Storage = Storage4.Storage;
       let obj = Storage.get("channelNotices");
       if (obj == null) {
@@ -468,10 +449,10 @@ let items = [
     version: 11,
     run(userContent) {
       let flag = false;
-      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_EVENT_UPSELL, DismissibleContent.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_EVENT_UPSELL, dismissible_content.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)) {
         flag = true;
       }
-      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, DismissibleContent.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, dismissible_content.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER)) {
         flag = true;
       }
       return flag;
@@ -484,7 +465,7 @@ let items = [
     version: 12,
     run(userContent) {
       const Storage = Storage4.Storage;
-      let value = Storage.get("hideNag");
+      value = Storage.get("hideNag");
       if (value) {
         const NAGBAR_NOTICE_DOWNLOAD = tmp(1943).DismissibleContent.NAGBAR_NOTICE_DOWNLOAD;
         if (null == userContent.userContent) {
@@ -574,7 +555,7 @@ let items = [
     version: 13,
     run(userContent) {
       const Storage = Storage4.Storage;
-      let value = Storage.get("hidePremiumPromo");
+      value = Storage.get("hidePremiumPromo");
       if (value) {
         const NAGBAR_NOTICE_PREMIUM_PROMO = tmp(1943).DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO;
         if (null == userContent.userContent) {
@@ -663,7 +644,7 @@ let items = [
   {
     version: 14,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.ACTIVITY_BEB_TUTORIAL, DismissibleContent.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.ACTIVITY_BEB_TUTORIAL, dismissible_content.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK);
     },
     cleanup() {
 
@@ -672,7 +653,7 @@ let items = [
   {
     version: 15,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.NOW_PLAYING_CONSENT_CARD, DismissibleContent.DismissibleContent.NOW_PLAYING_CONSENT_CARD);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.NOW_PLAYING_CONSENT_CARD, dismissible_content.DismissibleContent.NOW_PLAYING_CONSENT_CARD);
     },
     cleanup() {
 
@@ -682,7 +663,7 @@ let items = [
     version: 16,
     run(userContent) {
       const Storage = Storage4.Storage;
-      const value = Storage.get("PromotionsPersistedStore");
+      value = Storage.get("PromotionsPersistedStore");
       if (null == value) {
         return false;
       } else {
@@ -697,8 +678,7 @@ let items = [
         }
         if (flag) {
           const StringValue = tmp(1218).StringValue;
-          const obj = { value: null };
-          obj[0] = lastDismissedOutboundPromotionStartDate;
+          const obj = { value: lastDismissedOutboundPromotionStartDate };
           userContent.userContent.lastDismissedOutboundPromotionStartDate = StringValue.create(obj);
           flag = true;
         }
@@ -721,15 +701,14 @@ let items = [
         let flag = null != expressionSuggestionsEnabled;
         if (flag) {
           if (null == textAndImages.textAndImages) {
-            const TextAndImagesSettings = create.TextAndImagesSettings;
+            const TextAndImagesSettings = preloaded_user_settings.TextAndImagesSettings;
             textAndImages.textAndImages = TextAndImagesSettings.create();
           }
           flag = null == textAndImages.textAndImages.expressionSuggestionsEnabled;
         }
         if (flag) {
-          const BoolValue = defineProperty.BoolValue;
-          const obj = { value: null };
-          obj[0] = expressionSuggestionsEnabled;
+          const BoolValue = wrappers.BoolValue;
+          const obj = { value: expressionSuggestionsEnabled };
           textAndImages.textAndImages.expressionSuggestionsEnabled = BoolValue.create(obj);
           flag = true;
         }
@@ -745,10 +724,10 @@ let items = [
     version: 18,
     run(userContent) {
       let flag = false;
-      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_DELETE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_DELETE_FEEDBACK)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_DELETE_FEEDBACK, dismissible_content.DismissibleContent.GUILD_DELETE_FEEDBACK)) {
         flag = true;
       }
-      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_LEAVE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_LEAVE_FEEDBACK)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_LEAVE_FEEDBACK, dismissible_content.DismissibleContent.GUILD_LEAVE_FEEDBACK)) {
         flag = true;
       }
       return flag;
@@ -797,7 +776,7 @@ let items = [
     version: 20,
     run(userContent) {
       const Storage = Storage4.Storage;
-      const value = Storage.get("lastChangeLogId");
+      value = Storage.get("lastChangeLogId");
       if (null == value) {
         return false;
       } else {
@@ -837,9 +816,9 @@ let items = [
       if (appearance != null) {
         uiDensity = appearance.uiDensity;
       }
-      let flag = uiDensity === create.UIDensity.COMPACT;
+      let flag = uiDensity === preloaded_user_settings.UIDensity.COMPACT;
       if (flag) {
-        appearance.appearance.uiDensity = create.UIDensity.DEFAULT;
+        appearance.appearance.uiDensity = preloaded_user_settings.UIDensity.DEFAULT;
         flag = true;
       }
       return flag;
@@ -849,6 +828,7 @@ let items = [
     }
   }
 ];
-let result = require("set").fileFinishedImporting("modules/user_settings/PreloadedUserSettingsMigrations.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/PreloadedUserSettingsMigrations.tsx");
 
 export default items;

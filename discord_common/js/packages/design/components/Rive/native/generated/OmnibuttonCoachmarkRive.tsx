@@ -2,16 +2,15 @@
 
 // Module 4370 (OmnibuttonCoachmarkRive)
 import BaseRive from "BaseRive" /* 4290 */;
-import getDerivedStateFromError from "getDerivedStateFromError" /* 4345 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4345 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
-let c5 = importAllResult;
-let closure_7 = { Omnibutton: { reducedMotion: "boolean" } };
-let closure_8 = { Omnibutton: ["Instance"] };
+const jsx = fn(21).jsx;
+const artboardProperties = { Omnibutton: { reducedMotion: "boolean" } };
+const artboardViewModelInstances = { Omnibutton: ["Instance"] };
 let closure_9 = {
   Omnibutton: function OmnibuttonBindings(arg0) {
     ({ instance, reducedMotionEnabled, playIfNeeded } = arg0);
@@ -19,7 +18,7 @@ let closure_9 = {
     return null;
   }
 };
-let closure_10 = importAllResult.forwardRef(function OmnibuttonCoachmarkRiveInner(defaultViewModelInstance, ref) {
+let closure_10 = noop.forwardRef(function OmnibuttonCoachmarkRiveInner(defaultViewModelInstance, ref) {
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Omnibutton";
   if (undefined !== artboard) {
@@ -33,28 +32,28 @@ let closure_10 = importAllResult.forwardRef(function OmnibuttonCoachmarkRiveInne
   const dataBinding = defaultViewModelInstance.dataBinding;
   const onDataBindingChange = defaultViewModelInstance.onDataBindingChange;
   const items = [str, dataBinding, onDataBindingChange];
-  const callback = importAllResult.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     let tmp2 = null;
-    if (null != closure_1_9[str]) {
+    if (null != closure_9[str]) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = closure_1_6(tmp, obj);
+      tmp2 = <tmp />;
     }
     return tmp2;
   }, items);
-  const tmp = callback(defaultViewModelInstance, closure_3);
+  const tmp = _objectWithoutProperties(defaultViewModelInstance, closure_3);
   let merged = Object.assign(tmp);
-  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
+  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
-const forwardRefResult = importAllResult.forwardRef(function OmnibuttonCoachmarkRiveWithBoundary(fallback, ref) {
+const size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx");
+
+export const OmnibuttonCoachmarkRive = noop.forwardRef(function OmnibuttonCoachmarkRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
   obj = { ref };
   const merged = Object.assign(fallback);
-  obj[1] = <closure_10 ref={arg1} />;
-  return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
+  obj.children = <closure_10 ref={arg1} />;
+  return jsx(RiveErrorBoundary.RiveErrorBoundary, { ref });
 });
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/OmnibuttonCoachmarkRive.tsx");
-
-export const OmnibuttonCoachmarkRive = forwardRefResult;

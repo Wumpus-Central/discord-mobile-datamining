@@ -1,42 +1,43 @@
 // === Module 9273: CrunchyrollLinkLanding ===
 
 // Module 9273 (CrunchyrollLinkLanding)
-import combinedDefault from "combined" /* 2024 */;
-import registerAssetDefault from "registerAsset" /* 9274 */;
-import closure_3 from "noop" /* 19 */;
-import { CrunchyrollLinkModalScenes as closure_4 } from "CrunchyrollLinkModalScenes" /* 9272 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import _modDef9274 from "module_9274" /* 9274 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ HelpdeskArticles: c5, PlatformTypes: closure_6 } = ME);
-let closure_8 = createCacheKey.createStyles({ image: { width: 234, height: 147 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
+const require = fn;
+let closure_4 = fn(9272).CrunchyrollLinkModalScenes;
+const Constants = fn(1074);
+({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ image: { width: 234, height: 147 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkLanding.tsx");
 
 export default function CrunchyrollLinkLanding() {
   let obj = navigation(1483);
   navigation = obj.useNavigation();
   let items = [navigation];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = { label: null, icon: null };
     const intl = navigation(1114).intl;
-    obj[0] = intl.string(navigation(1114).t["2TXHQd"]);
-    obj[1] = navigation(8274).PlayIcon;
+    obj.label = intl.string(navigation(1114).t["2TXHQd"]);
+    obj.icon = navigation(8274).PlayIcon;
     const items = [obj];
     return items;
   }, []);
-  const callback = React.useCallback(() => {
-    navigation.push(closure_1_4.PRE_CONNECT);
+  const callback = noop.useCallback(() => {
+    navigation.push(constants.PRE_CONNECT);
   }, items);
-  obj = { platformType: constants2.CRUNCHYROLL, img: registerAssetDefault, imgStyle: callback().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
+  obj = { platformType: constants2.CRUNCHYROLL, img: _modDef9274, imgStyle: closure_8().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null };
   let intl = navigation(1114).intl;
-  obj[3] = intl.string(navigation(1114).t["Da+3NJ"]);
+  obj.headerConnect = intl.string(navigation(1114).t["Da+3NJ"]);
   const intl2 = navigation(1114).intl;
-  obj[4] = intl2.string(navigation(1114).t.MaPpPL);
-  const tmp = callback();
-  obj[5] = combinedDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
-  obj[6] = callback;
-  obj[7] = memo;
-  return jsx(navigation(9225).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: registerAssetDefault, imgStyle: callback().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
+  obj.body = intl2.string(navigation(1114).t.MaPpPL);
+  const tmp = closure_8();
+  obj.learnMoreLink = HelpdeskUtilsDefault.getArticleURL(constants.CRUNCHYROLL_CONNECTION);
+  obj.onNext = callback;
+  obj.valueProps = memo;
+  return jsx(navigation(9225).TwoWayLinkLanding, { platformType: constants2.CRUNCHYROLL, img: _modDef9274, imgStyle: closure_8().image, headerConnect: null, body: null, learnMoreLink: null, onNext: null, valueProps: null });
 };

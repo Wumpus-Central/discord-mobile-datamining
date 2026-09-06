@@ -1,9 +1,9 @@
-// === Module 4789: prototype ===
+// === Module 4789: InteractionCallbackError ===
 
-// Module 4789 (prototype)
-import set from "set" /* 2 */;
+// Module 4789 (InteractionCallbackError)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
+const result = size.fileFinishedImporting("modules/errors/InteractionCallbackError.tsx");
 const prototype = function InteractionCallbackError(reason) {
   const obj = Object.create(new.target.prototype);
   obj.reason = reason;

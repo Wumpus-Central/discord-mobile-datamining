@@ -1,21 +1,23 @@
-// === Module 7285: reset ===
+// === Module 7285: GuildMemberSubscriptions ===
 
-// Module 7285 (reset)
-import timestampDefault from "timestamp" /* 3 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import setDefault from "set" /* 1090 */;
+// Module 7285 (GuildMemberSubscriptions)
+import LoggerDefault from "Logger" /* 3 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import Timers from "Timers" /* 4447 */;
 
-const require = arg1;
-const MINUTE = setDefault.Millis.MINUTE;
-const result = require("set").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
+require = fn;
+const MINUTE = DurationsDefault.Millis.MINUTE;
+const size = fn(2);
+const result = size.fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
 class GuildMemberSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj._subscriptions = {};
     obj._unsubscriptions = {};
-    delayedCall = new require("start").DelayedCall(closure_3, () => obj.flushUnsubscriptions());
+    delayedCall = new closure_0(closure_2[1]).DelayedCall(closure_3, () => obj.flushUnsubscriptions());
     obj._unsubscribe = delayedCall;
     obj._onChange = global;
     return obj;
@@ -33,7 +35,7 @@ prototype["get"] = function get(arg0) {
   if (obj == null) {
     obj = {};
   }
-  return DISCORD_EPOCHDefault.keys(obj);
+  return SnowflakeUtilsDefault.keys(obj);
 };
 prototype["clear"] = function clear(arg0) {
   delete tmp3[tmp2];
@@ -102,36 +104,34 @@ prototype["checkForLeaks"] = function checkForLeaks(arg0, arg1) {
   }
   const diff = num - num2;
   if (diff > 5) {
-    const obj = new timestampDefault("GuildMemberSubscriptions");
+    const obj = new LoggerDefault("GuildMemberSubscriptions");
     const _HermesInternal = HermesInternal;
     obj.warn("GuildMemberSubscriptions.subscribe(...): Potential reference leak! (" + diff + " subscriptions)");
   }
 };
 prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
-  let self = this;
-  self = this;
+  const self = this;
   if (!obj.isEmpty(this._unsubscriptions)) {
-    let item = applyDefault.forEach(self._unsubscriptions, (arg0, arg1) => {
-      const _self = tmp3;
-      const item = closure_1_1(closure_1_2[4]).forEach(arg0, (arg0, arg1) => {
-        let num = table[arg1];
+    let item = _modDef12.forEach(self._unsubscriptions, (arg0, arg1) => {
+      dependencyMap = tmp3;
+      const item = _modDef12.forEach(arg0, (arg0, arg1) => {
+        let num = dependencyMap[arg1];
         if (num == null) {
           num = 0;
         }
-        table[arg1] = num - arg0;
-        if (table[arg1] <= 0) {
+        dependencyMap[arg1] = num - arg0;
+        if (dependencyMap[arg1] <= 0) {
           delete tmp[tmp2];
         }
       });
-      const arr = closure_1_1(closure_1_2[4]);
-      if (obj2.isEmpty(_self._subscriptions[arg1])) {
+      if (obj2.isEmpty(self._subscriptions[arg1])) {
         const _subscriptions = obj._subscriptions;
         delete tmp[tmp2];
       }
-      _self._onChange(arg1, _self.get(arg1));
+      self._onChange(arg1, self.get(arg1));
     });
     self._unsubscriptions = {};
-    const tmpResult = applyDefault;
+    const tmpResult = _modDef12;
   }
 };
 

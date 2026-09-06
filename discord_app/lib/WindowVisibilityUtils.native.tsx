@@ -1,13 +1,14 @@
-// === Module 9611: isDiscordVisible ===
+// === Module 9611: WindowVisibilityUtils ===
 
-// Module 9611 (isDiscordVisible)
-import closure_2 from "getState" /* 1895 */;
-import { AppStates } from "ME" /* 1074 */;
+// Module 9611 (WindowVisibilityUtils)
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-const result = require("set").fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");
+const AppStates = fn(1074).AppStates;
+const size = fn(2);
+const result = size.fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");
 
 export default function isDiscordVisible() {
-  const tmp = state.getState() === AppStates.BACKGROUND;
+  const tmp = AppStateStore.getState() === AppStates.BACKGROUND;
   let isInPipModeResult = !tmp;
   if (tmp) {
     isInPipModeResult = obj.isInPipMode();

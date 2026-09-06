@@ -1,13 +1,13 @@
 // === Module 13636: getCachedUseAltGateway ===
 
 // Module 13636 (getCachedUseAltGateway)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 13637 */;
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13637 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
+const result = size.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
 
 export default function getCachedUseAltGateway() {
-  let flag = enforcingDefault.getConstants().useAltGateway;
+  let flag = NativeFastConnectModuleDefault.getConstants().useAltGateway;
   if (flag == null) {
     flag = false;
   }

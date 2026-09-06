@@ -1,43 +1,44 @@
-// === Module 4481: trackExposureToExperiment ===
+// === Module 4481: ExperimentManager ===
 
-// Module 4481 (trackExposureToExperiment)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "getHash" /* 4476 */;
-import { registerExperiment } from "getHash" /* 4476 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
+// Module 4481 (ExperimentManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
 
-({ ExperimentTypes: c4, ExposureTypes } = ExperimentBuckets);
-let obj = { LEGACY: "legacy", APEX: "apex" };
-const result = require("set").fileFinishedImporting("modules/experiments/ExperimentManager.tsx");
+const registerExperiment = fn(4476).registerExperiment;
+const ExperimentConstants = fn(4477);
+({ ExperimentTypes: closure_4, ExposureTypes } = ExperimentConstants);
+const ExperimentSystem = { LEGACY: "legacy", APEX: "apex" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/ExperimentManager.tsx");
 
 export const trackExposureToExperiment = function trackExposureToExperiment(id, descriptor, location) {
-  obj = { experimentId: id, descriptor, location: null, location_stack: null, fingerprint: null, excluded: null, exposureType: null };
+  const obj = { experimentId: id, descriptor, location: null, location_stack: null, fingerprint: null, excluded: null, exposureType: null };
   let _location;
   if (location != null) {
     _location = location.location;
   }
-  obj[2] = _location;
+  obj.location = _location;
   let analyticsLocations;
   if (location != null) {
     analyticsLocations = location.analyticsLocations;
   }
-  obj[3] = analyticsLocations;
+  obj.location_stack = analyticsLocations;
   let fingerprint;
   if (location != null) {
     fingerprint = location.fingerprint;
   }
-  obj[4] = fingerprint;
+  obj.fingerprint = fingerprint;
   let excluded;
   if (location != null) {
     excluded = location.excluded;
   }
-  obj[5] = excluded;
+  obj.excluded = excluded;
   let exposureType;
   if (location != null) {
     exposureType = location.exposureType;
   }
-  obj[6] = exposureType;
-  closure_2.trackExposure(obj);
+  obj.exposureType = exposureType;
+  ExperimentStore.trackExposure(obj);
 };
 export const registerUserExperiment = function registerUserExperiment(id) {
   id = id.id;
@@ -49,29 +50,23 @@ export const registerGuildExperiment = function registerGuildExperiment(id) {
   registerExperiment({ experimentId: id, experimentType: constants.GUILD, title: id.title, description: id.description, buckets: id.buckets, commonTriggerPoint: id.commonTriggerPoint });
   return { id };
 };
-export const ExperimentSystem = obj;
-export const overrideBucket = function overrideBucket(system, closure_0, id) {
+export { ExperimentSystem };
+export const overrideBucket = function overrideBucket(system, map, id) {
   if (obj.LEGACY === system) {
-    obj = { type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: null, experimentBucket: null };
-    obj[1] = closure_0;
+    obj = { type: "EXPERIMENT_OVERRIDE_BUCKET", experimentId: map, experimentBucket: null };
     let tmp10 = null;
     if (null != id) {
       tmp10 = id;
     }
-    obj[2] = tmp10;
-    dispatcherDefault.dispatch(obj);
-    const obj5 = dispatcherDefault;
+    obj.experimentBucket = tmp10;
+    DispatcherDefault.dispatch(obj);
   } else if (tmp.APEX === system) {
     if (null == id) {
-      obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: null };
-      obj[1] = closure_0;
-      dispatcherDefault.dispatch(obj);
-      const obj3 = dispatcherDefault;
+      obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: map };
+      DispatcherDefault.dispatch(obj);
     } else {
-      obj = dispatcherDefault;
-      obj1 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: null, variantId: null };
-      obj1[1] = closure_0;
-      obj1[2] = id;
+      obj = DispatcherDefault;
+      const obj1 = { type: "APEX_EXPERIMENT_OVERRIDE_CREATE", experimentName: map, variantId: id };
       obj.dispatch(obj1);
     }
   }

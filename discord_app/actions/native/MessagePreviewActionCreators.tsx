@@ -1,28 +1,25 @@
-// === Module 16644: ? ===
+// === Module 16644: MessagePreviewActionCreators ===
 
-// Module 16644
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
+// Module 16644 (MessagePreviewActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: c4 } = ME);
-const result = set.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
+({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: closure_4 } = Constants);
+const result = size.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
 
 export default {
   fetchMessages(channelId, around) {
-    const _require = channelId;
-    closure_1 = around;
-    const HTTP = _require(1272).HTTP;
-    obj = { url: closure_3.MESSAGES(channelId), query: obj, retries: 2, oldFormErrors: true, rejectWithError: true };
-    obj = { limit: closure_4, around };
-    const value = HTTP.get(obj);
+    _require = channelId;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: closure_3.MESSAGES(channelId), query: { limit, around }, retries: 2, oldFormErrors: true, rejectWithError: true };
+    value = HTTP.get(request);
     value.then((body) => {
-      let obj = around(closure_1_2[2]);
-      obj = { type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId: closure_0, messages: body.body, around };
+      const obj = { type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId, messages: body.body, around };
       obj.dispatch(obj);
     });
   },
   clearMessages() {
-    dispatcherDefault.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
+    DispatcherDefault.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
   }
 };

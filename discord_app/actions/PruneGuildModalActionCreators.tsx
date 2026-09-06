@@ -1,106 +1,84 @@
-// === Module 16576: ? ===
+// === Module 16576: PruneGuildModalActionCreators ===
 
-// Module 16576
-import sendRequest from "sendRequest" /* 1272 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 16576 (PruneGuildModalActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
 
 export default {
   updateEstimate(arg0) {
     closure_0 = arg0;
-    let num = arg1;
-    if (arg1 === undefined) {
-      num = 7;
-    }
-    const callback = arg2;
-    return callback(function*() {
-      const HTTP = v0(1272).HTTP;
-      obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-      obj1[0] = closure_1_3.GUILD_PRUNE(v0);
-      const obj2 = { days: null, include_roles: null };
-      obj2[0] = dependencyMap;
-      obj2[1] = closure_1_2;
-      obj1[1] = obj2;
-      obj1[3] = v0(1272).rejectWithMigratedError();
-      yield HTTP.get(obj1);
+    asyncGeneratorStep = arg2;
+    return (async () => {
+      const HTTP = v3(1272).HTTP;
+      const request = { url: Endpoints.GUILD_PRUNE(closure_0), query: { days: num, include_roles }, oldFormErrors: true, rejectWithError: v3(1272).rejectWithMigratedError() };
+      await HTTP.get(request);
       return arg1.body.pruned;
     })();
   },
-  updateEstimateV2(id, first) {
+  updateEstimateV2(id, arg1) {
     closure_0 = id;
-    let num = first;
-    if (first === undefined) {
-      num = 7;
-    }
-    const callback = arg2;
-    return callback(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
+    asyncGeneratorStep = arg2;
+    return (async (arg0, value) => {
+      if (v3 === 2) {
+        v3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp3 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          v0 = 2;
+          v3 = 2;
           if (0 === dependencyMap) {
             if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
+              v3 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              v3 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              const HTTP = v0(1272).HTTP;
-              obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = closure_1_3.GUILD_PRUNE_V2(v0);
-              const obj2 = { days: null, include_roles: null };
-              obj2[0] = dependencyMap;
-              obj2[1] = closure_1_2;
-              obj1[1] = obj2;
-              obj1[3] = v0(1272).rejectWithMigratedError();
+              const HTTP = v3(1272).HTTP;
+              const request = { url: Endpoints.GUILD_PRUNE_V2(closure_0), query: null, oldFormErrors: true, rejectWithError: null };
+              const obj1 = { days: num, include_roles };
+              request.query = obj1;
+              request.rejectWithError = v3(1272).rejectWithMigratedError();
               dependencyMap = 1;
-              v0 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
+              v3 = 1;
+              const obj2 = { value: HTTP.get(request), done: false };
+              return obj2;
             }
           } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
+            v3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            v3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            v0 = 3;
+            v3 = 3;
             return { value: "HermesInternal", done: null };
           }
         } catch (tmp5) {
-          v0 = tmp;
+          v3 = tmp;
           throw tmp5;
         }
       }
     })();
   },
-  prune(c0, days, include_roles) {
-    const HTTP = sendRequest.HTTP;
-    obj = { url: Endpoints.GUILD_PRUNE(c0), body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { days, compute_prune_count: false, include_roles };
-    obj[3] = sendRequest.rejectWithMigratedError();
-    return HTTP.post(obj);
+  prune(arg0, days, include_roles) {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.GUILD_PRUNE(arg0), body: { days, compute_prune_count: false, include_roles }, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    return HTTP.post(request);
   }
 };

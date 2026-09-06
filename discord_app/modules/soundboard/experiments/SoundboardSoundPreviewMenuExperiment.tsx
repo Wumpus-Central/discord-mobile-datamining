@@ -1,13 +1,15 @@
-// === Module 17074: apexExperiment ===
+// === Module 17074: SoundboardSoundPreviewMenuExperiment ===
 
-// Module 17074 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 17074 (SoundboardSoundPreviewMenuExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2026-08-mobile-soundboard-sound-preview-menu", defaultConfig: { enabled: false, returnOnUpsellDismiss: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true, returnOnUpsellDismiss: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-mobile-soundboard-sound-preview-menu", defaultConfig: { enabled: false, returnOnUpsellDismiss: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/soundboard/experiments/SoundboardSoundPreviewMenuExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/soundboard/experiments/SoundboardSoundPreviewMenuExperiment.tsx");
 
 export const SoundboardSoundPreviewMenuExperiment = apexExperiment;
 export const useSoundboardSoundPreviewMenuEnabled = function useSoundboardSoundPreviewMenuEnabled(SoundboardSoundPreviewActionSheet) {

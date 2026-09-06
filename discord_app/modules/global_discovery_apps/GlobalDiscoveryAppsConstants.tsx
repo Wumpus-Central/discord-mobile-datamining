@@ -1,9 +1,9 @@
-// === Module 1082: GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID ===
+// === Module 1082: GlobalDiscoveryAppsConstants ===
 
-// Module 1082 (GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID)
-import set from "set" /* 2 */;
+// Module 1082 (GlobalDiscoveryAppsConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx");
+const result = size.fileFinishedImporting("modules/global_discovery_apps/GlobalDiscoveryAppsConstants.tsx");
 
 export const GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID = 0;
 export const EMPTY_QUERY = "";

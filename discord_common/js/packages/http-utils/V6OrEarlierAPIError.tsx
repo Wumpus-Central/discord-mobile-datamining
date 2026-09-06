@@ -1,9 +1,9 @@
-// === Module 1329: getFieldMessage ===
+// === Module 1329: discord_common/V6OrEarlierAPIError ===
 
-// Module 1329 (getFieldMessage)
-import set from "set" /* 2 */;
+// Module 1329 (discord_common/V6OrEarlierAPIError)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/http-utils/V6OrEarlierAPIError.tsx");
 class APIError {
   constructor(arg0, arg1) {
     str = importDefault;
@@ -13,8 +13,8 @@ class APIError {
     if (typeof global === "string") {
       tmp4 = require;
       obj = { message: null, code: null };
-      obj[0] = global;
-      obj[1] = require;
+      obj.message = global;
+      obj.code = require;
     } else {
       tmp8 = null;
       if (null != global.body) {
@@ -26,10 +26,10 @@ class APIError {
               _Array = Array;
             }
             obj1 = { message: null, code: null, retryAfter: null, status: null };
-            obj1[0] = global.body.message;
-            obj1[1] = global.body.code;
-            obj1[2] = global.body.retry_after;
-            obj1[3] = global.status;
+            obj1.message = global.body.message;
+            obj1.code = global.body.code;
+            obj1.retryAfter = global.body.retry_after;
+            obj1.status = global.status;
             obj = obj1;
           }
         }
@@ -45,13 +45,13 @@ class APIError {
           first1 = first[0];
         }
         obj2 = { message: null, fields: null, status: null };
-        obj2[0] = first1;
-        obj2[1] = body;
-        obj2[2] = global.status;
+        obj2.message = first1;
+        obj2.fields = body;
+        obj2.status = global.status;
         obj = obj2;
       } else {
         obj = { status: null };
-        obj[0] = global.status;
+        obj.status = global.status;
       }
     }
     ({ message, code, fields } = obj);

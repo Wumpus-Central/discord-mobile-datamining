@@ -1,33 +1,34 @@
 // === Module 15330: getSettingsOverrideReason ===
 
 // Module 15330 (getSettingsOverrideReason)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "updateExistingSettings" /* 1936 */;
-import { SettingsOverrideReasonKeys as closure_3 } from "MAX_FAVORITES" /* 1084 */;
+import util from "util" /* 1114 */;
+import UserSettingsOverridesStore from "UserSettingsOverridesStore" /* 1936 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
+require = fn;
+const constants = fn(1084).SettingsOverrideReasonKeys;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/accessibility/getSettingsOverrideReason.tsx");
 
 export default function getSettingsOverrideReason(arg0) {
   if (constants.REDUCED_MOTION === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.format(getSystemLocale.t["1dT9V4"], {});
+    const intl2 = util.intl;
+    return intl2.format(util.t["1dT9V4"], {});
   } else if (tmp.REDUCED_MOTION_STICKERS === arg0) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["2ExvRu"]);
+    const intl = util.intl;
+    return intl.string(util.t["2ExvRu"]);
   }
 };
 export const useSettingsOverrideReason = function useSettingsOverrideReason(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    const appliedOverrideReasonKey = closure_1_2.getAppliedOverrideReasonKey(callback);
-    if (closure_1_3.REDUCED_MOTION === appliedOverrideReasonKey) {
-      const intl2 = callback(closure_1_1[2]).intl;
-      let formatResult = intl2.format(callback(closure_1_1[2]).t["1dT9V4"], {});
+  _require = arg0;
+  const items = [UserSettingsOverridesStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const appliedOverrideReasonKey = UserSettingsOverridesStore.getAppliedOverrideReasonKey(closure_0);
+    if (constants.REDUCED_MOTION === appliedOverrideReasonKey) {
+      const intl2 = util.intl;
+      let formatResult = intl2.format(util.t["1dT9V4"], {});
     } else if (tmp2.REDUCED_MOTION_STICKERS === appliedOverrideReasonKey) {
-      const intl = callback(closure_1_1[2]).intl;
-      formatResult = intl.string(callback(closure_1_1[2]).t["2ExvRu"]);
+      const intl = util.intl;
+      formatResult = intl.string(util.t["2ExvRu"]);
     }
     return formatResult;
   });

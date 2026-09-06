@@ -1,21 +1,24 @@
 // === Module 10168: NotificationSettingsMessageUnreadChannelActionSheet ===
 
 // Module 10168 (NotificationSettingsMessageUnreadChannelActionSheet)
-import noopAll from "noop" /* 19 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10150 */;
 import NotificationSettingsMessageUnreadActionSheetDefault from "NotificationSettingsMessageUnreadActionSheet" /* 10167 */;
-import closure_3 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { UserNotificationSettings } from "ME" /* 1074 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import { ChannelNotificationSettingsFlags as closure_6 } from "MAX_FAVORITES" /* 1084 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadChannelActionSheet.tsx");
+require = fn;
+const UserNotificationSettings = fn(1074).UserNotificationSettings;
+const UnreadSetting = fn(4742).UnreadSetting;
+let closure_6 = fn(1084).ChannelNotificationSettingsFlags;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMessageUnreadChannelActionSheet.tsx");
 
 export default function NotificationSettingsMessageUnreadChannelActionSheet(channel) {
-  const _require = channel;
-  let obj = _require(10149);
+  _require = channel;
+  let obj = require("notficationSettingsChannelFlagUtils");
   const channelPresetSettings = obj.useChannelPresetSettings(channel.channel);
   ({ unread, notification } = channelPresetSettings);
   obj = { value: unread, disabledMentionOnlyWithReason: null, onChange: null };
@@ -24,18 +27,18 @@ export default function NotificationSettingsMessageUnreadChannelActionSheet(chan
     const intl = tmp(1114).intl;
     stringResult = intl.string(tmp(1114).t.eP8yWU);
   }
-  obj[1] = stringResult;
-  obj[2] = function onChange(ONLY_MENTIONS) {
-    const channelIdFlags = closure_1_3.getChannelIdFlags(channel.channel.guild_id, channel.channel.id);
-    let obj = closure_1_1(closure_1_2[9]);
-    if (ONLY_MENTIONS === closure_1_5.ALL_MESSAGES) {
-      let UNREADS_ONLY_MENTIONS = closure_1_6.UNREADS_ALL_MESSAGES;
+  obj.disabledMentionOnlyWithReason = stringResult;
+  obj.onChange = function onChange(toggleExpandedHistory) {
+    const channelIdFlags = UserGuildSettingsStore.getChannelIdFlags(channel.channel.guild_id, channel.channel.id);
+    let obj = NotificationSettingsModalActionCreatorsDefault;
+    if (toggleExpandedHistory === UnreadSetting.ALL_MESSAGES) {
+      let UNREADS_ONLY_MENTIONS = constants.UNREADS_ALL_MESSAGES;
     } else {
-      UNREADS_ONLY_MENTIONS = closure_1_6.UNREADS_ONLY_MENTIONS;
+      UNREADS_ONLY_MENTIONS = constants.UNREADS_ONLY_MENTIONS;
     }
-    obj = { flags: channel(closure_1_2[10]).withChannelUnreadFlags(channelIdFlags, UNREADS_ONLY_MENTIONS) };
-    const NotificationLabel = channel(closure_1_2[11]).NotificationLabel;
-    const result = obj.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.unreads(ONLY_MENTIONS));
+    obj = { flags: notificationSettingsFlagUtils.withChannelUnreadFlags(channelIdFlags, UNREADS_ONLY_MENTIONS) };
+    const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
+    const result = obj.updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, obj, NotificationLabel.unreads(toggleExpandedHistory));
   };
   return jsx(NotificationSettingsMessageUnreadActionSheetDefault, { value: unread, disabledMentionOnlyWithReason: null, onChange: null });
 };

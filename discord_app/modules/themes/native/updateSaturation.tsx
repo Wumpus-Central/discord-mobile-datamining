@@ -1,17 +1,16 @@
 // === Module 14438: updateSaturation ===
 
 // Module 14438 (updateSaturation)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcingDefault from "enforcing" /* 14439 */;
+import _mod17 from "module_17" /* 17 */;
+import NativeThemeModuleDefault from "NativeThemeModule" /* 14439 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/themes/native/updateSaturation.tsx");
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/themes/native/updateSaturation.tsx");
 
 export const updateSaturation = function updateSaturation(saturation) {
   if (obj.isAndroid()) {
-    let updateSaturationResult = enforcingDefault.updateSaturation(saturation);
-    const obj2 = enforcingDefault;
+    let updateSaturationResult = NativeThemeModuleDefault.updateSaturation(saturation);
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     updateSaturationResult = DCDTheme.updateSaturation(saturation);

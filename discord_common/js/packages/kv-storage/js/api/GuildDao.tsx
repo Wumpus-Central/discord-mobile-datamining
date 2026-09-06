@@ -1,9 +1,9 @@
-// === Module 1998: prefix ===
+// === Module 1998: GuildDao ===
 
-// Module 1998 (prefix)
-import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1991 */;
+// Module 1998 (GuildDao)
+import Table from "Table" /* 1991 */;
 import TableId from "TableId" /* 1993 */;
+import size from "module_2" /* 2 */;
 
 let GuildDao;
 class GuildDao {
@@ -16,7 +16,7 @@ class GuildDao {
     obj.originalPrefix = global;
     items = [];
     items[0] = global;
-    table = new require("fromDatabaseTransaction").Table(items, require, importDefault, flag);
+    table = new closure_0(closure_1[0]).Table(items, require, importDefault, flag);
     obj.table = table;
     return obj;
   }
@@ -30,15 +30,18 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof GuildDao !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableId = this.table.tableId;
+  const database = this.table.database;
+  if (typeof GuildDao === "function") {
+    const obj = Object.create(GuildDao.prototype);
+    obj.originalPrefix = originalPrefix;
+    const items = [originalPrefix];
+    const table = new Table.Table(items, tableId, database, false);
+    obj.table = table;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(GuildDao.prototype);
-  obj.originalPrefix = originalPrefix;
-  const items = [originalPrefix];
-  const table = new fromDatabaseTransaction.Table(items, this.table.tableId, this.table.database, false);
-  obj.table = table;
-  return obj;
 };
 prototype["get"] = function get(arg0, arg1) {
   const table = this.table;
@@ -91,8 +94,10 @@ prototype["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, ge
     Replace = TableId.ConflictOptions.Replace;
   }
   const table = this.table;
+  const obj = { key: null, data, generation };
   const items = [arg0, arg1];
-  return table.put({ key: items, data, generation }, Replace);
+  obj.key = items;
+  return table.put(obj, Replace);
 };
 prototype["delete"] = function delete(arg0, arg1) {
   const length = arguments.length;
@@ -118,22 +123,24 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((state) => {
-    if (typeof closure_1_2 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof GuildDaoTransaction === "function") {
+      const obj = Object.create(tmp2.prototype);
+      obj.state = state;
+      return tmp(obj);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = Object.create(closure_1_2.prototype);
-    obj.state = state;
-    return closure_0(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
-  const table = this.table;
-  if (typeof GuildDaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof GuildDaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.state = tmp2;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(GuildDaoTransaction.prototype);
-  obj.state = table.upgradeTransaction(arg0);
-  return obj;
+  tmp = GuildDaoTransaction;
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0, arg1) {
   const table = this.table;
@@ -154,13 +161,15 @@ class GuildDaoTransaction {
 }
 const prototype2 = GuildDaoTransaction.prototype;
 GuildDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new fromDatabaseTransaction.TableTransaction(prefix, tableId, transaction);
-  if (typeof GuildDaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
+  if (typeof GuildDaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.state = tableTransaction;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(GuildDaoTransaction.prototype);
-  obj.state = tableTransaction;
-  return obj;
+  tmp = GuildDaoTransaction;
 };
 prototype2["put"] = function put(arg0, arg1, arg2) {
   let Replace = arg3;
@@ -175,8 +184,10 @@ prototype2["putWithGeneration"] = function putWithGeneration(arg0, arg1, data, g
     Replace = TableId.ConflictOptions.Replace;
   }
   const state = this.state;
+  const obj = { key: null, data, generation };
   const items = [arg0, arg1];
-  return state.put({ key: items, data, generation }, Replace);
+  obj.key = items;
+  return state.put(obj, Replace);
 };
 prototype2["delete"] = function delete(arg0, arg1) {
   const length = arguments.length;
@@ -198,7 +209,7 @@ prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
   const state = this.state;
   return state.deleteGeneration([], arg0, arg1);
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildDao.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildDao.tsx");
 
 export { GuildDao };
 export { GuildDaoTransaction };

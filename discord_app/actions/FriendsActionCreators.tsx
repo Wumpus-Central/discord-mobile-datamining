@@ -1,14 +1,14 @@
-// === Module 17475: ? ===
+// === Module 17475: FriendsActionCreators ===
 
-// Module 17475
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import trackFriendsListClickedDefault from "trackFriendsListClicked" /* 16752 */;
+// Module 17475 (FriendsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-const result = set.fileFinishedImporting("actions/FriendsActionCreators.tsx");
+const router_utils = tmp(1100);
+const trackFriendListClickedDefault = tmp5(16752);
+const Routes = Constants.Routes;
+const result = size.fileFinishedImporting("actions/FriendsActionCreators.tsx");
 
 export default {
   transitionToSection(PENDING, arg1) {
@@ -21,28 +21,23 @@ export default {
       flag = false;
     }
     if (obj2.getHistory().location.pathname !== Routes.FRIENDS) {
-      transitionTo.transitionTo(tmp3.FRIENDS);
-      const tmpResult = transitionTo;
+      router_utils.transitionTo(tmp3.FRIENDS);
+      const tmpResult = router_utils;
     }
-    obj2 = transitionTo;
-    const tmp = require;
-    const tmp5 = importDefault;
+    obj2 = router_utils;
     obj = { type: "FRIENDS_SET_SECTION", section: PENDING };
-    dispatcherDefault.dispatch(obj);
+    DispatcherDefault.dispatch(obj);
     if (flag) {
-      obj = { tab_opened: null };
-      obj[0] = PENDING;
-      trackFriendsListClickedDefault(obj);
+      obj = { tab_opened: PENDING };
+      trackFriendListClickedDefault(obj);
     }
   },
   setSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_SECTION", section };
+    const obj = { type: "FRIENDS_SET_SECTION", section };
     obj.dispatch(obj);
   },
   setInitialSection(section) {
-    let obj = dispatcherDefault;
-    obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
+    const obj = { type: "FRIENDS_SET_INITIAL_SECTION", section };
     obj.dispatch(obj);
   }
 };

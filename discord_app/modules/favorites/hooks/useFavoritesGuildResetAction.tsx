@@ -1,21 +1,22 @@
 // === Module 16139: useFavoritesGuildResetAction ===
 
 // Module 16139 (useFavoritesGuildResetAction)
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleConnectionOpen" /* 4381 */;
-import { Routes } from "ME" /* 1074 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import _modDef3225 from "module_3225" /* 3225 */;
+import FavoritesHooks from "FavoritesHooks" /* 10224 */;
+import noop from "module_19" /* 19 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
+require = fn;
+const Routes = fn(1074).Routes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
 
 export default function useFavoritesGuildResetAction() {
-  const DeveloperMode = explicitContentFromProto.DeveloperMode;
+  const DeveloperMode = UserSettings.DeveloperMode;
   let hasAccess = DeveloperMode.useSetting();
-  let obj = useFavoritesAccess;
-  const callback = React.useCallback(() => {
+  let obj = FavoritesHooks;
+  const callback = noop.useCallback(() => {
     if (obj.isFavoritesGuildId(guildId.getGuildId())) {
       let tmpResult = tmp(tmp2[6]);
       tmpResult.transitionTo(constants.ME);
@@ -28,9 +29,9 @@ export default function useFavoritesGuildResetAction() {
   }
   obj = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = tmp(1114).intl;
-  obj[1] = intl.string(messagesProxyDefault.YkET6R);
+  obj.label = intl.string(_modDef3225.YkET6R);
   const intl2 = tmp(1114).intl;
-  obj[2] = intl2.string(messagesProxyDefault.ZzcwNk);
-  obj[3] = callback;
+  obj.subLabel = intl2.string(_modDef3225.ZzcwNk);
+  obj.perform = callback;
   return obj;
 };

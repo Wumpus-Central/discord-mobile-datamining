@@ -1,9 +1,9 @@
-// === Module 16295: set ===
+// === Module 16295: usePressability ===
 
-// Module 16295 (set)
-import set from "set" /* 2 */;
-import usePressabilityDefault from "usePressability" /* 301 */;
+// Module 16295 (usePressability)
+import _modDef301 from "module_301" /* 301 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/core/native/usePressability.tsx");
+const result = size.fileFinishedImporting("modules/core/native/usePressability.tsx");
 
-export default usePressabilityDefault;
+export default _modDef301;

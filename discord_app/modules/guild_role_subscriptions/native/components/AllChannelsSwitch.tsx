@@ -1,30 +1,25 @@
-// === Module 17761: Row ===
+// === Module 17761: AllChannelsSwitch ===
 
-// Module 17761 (Row)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4277 */;
-import renderDefault from "render" /* 9050 */;
-import registerAssetDefault from "registerAsset" /* 17762 */;
-import registerAssetDefault2 from "registerAsset" /* 17763 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AllChannelAccessOptions } from "AllChannelAccessOptions" /* 15228 */;
-import { Fonts } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importDefaultResult from "createTextStyle" /* 5524 */;
+// Module 17761 (AllChannelsSwitch)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
+import _modDef17762 from "module_17762" /* 17762 */;
+import _modDef17763 from "module_17763" /* 17763 */;
+import noop from "module_19" /* 19 */;
+import TextStyles from "TextStyles" /* 5524 */;
 
-require = arg1;
+require = fn;
 function Row(arg0) {
   ({ selected, disabled } = arg0);
   ({ icon, label, onPress } = arg0);
   if (disabled === undefined) {
     disabled = false;
   }
-  const tmp = callback3();
-  let obj = useCheckboxA11yNative;
+  const tmp = closure_7();
+  let obj = useA11yRolesNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   obj = { style: tmp.row, accessibilityRole, accessibilityState, disabled: null, onPress: null, children: null };
@@ -32,70 +27,73 @@ function Row(arg0) {
   if (!selected) {
     tmp7 = disabled;
   }
-  obj[3] = tmp7;
-  obj[4] = onPress;
+  obj.disabled = tmp7;
+  obj.onPress = onPress;
   obj = { size: tmp2(1178).Icon.Sizes.MEDIUM, source: icon };
-  const items = [callback(Button.Icon, obj), , ];
+  const items = [hasOwnProperty(native.Icon, obj), , ];
   const items1 = [tmp.rowLabel, ];
   let rowLabelSelected = selected;
   if (selected) {
     rowLabelSelected = tmp.rowLabelSelected;
   }
   items1[1] = rowLabelSelected;
-  items[1] = callback(Button.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
-  items[2] = callback(Button.RadioIndicator, { style: tmp.rowIndicator, active: selected });
-  obj[5] = items;
-  return closure_6(renderDefault, obj);
+  items[1] = hasOwnProperty(native.LegacyText, { style: items1, numberOfLines: 1, ellipsizeMode: "tail", children: label });
+  items[2] = hasOwnProperty(native.RadioIndicator, { style: tmp.rowIndicator, active: selected });
+  obj.children = items;
+  return timestampProducer(TouchableHitBoxDefault, obj);
 }
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, row: null, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 };
+const View = fn(17).View;
+const AllChannelAccessOptions = fn(15228).AllChannelAccessOptions;
+const Fonts = fn(1074).Fonts;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: null, row: null, rowLabel: null, rowLabelSelected: null, rowIndicator: null, separator: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
+createStyles.container = createStyles;
+createStyles.row = { alignSelf: "stretch", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", padding: 16 };
 let obj1 = {};
-const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_SUBTLE, 16));
+const merged = Object.assign(TextStyles(Fonts.PRIMARY_MEDIUM, nativeDefault.colors.TEXT_SUBTLE, 16));
 obj1.flexShrink = 1;
 obj1.marginHorizontal = 16;
-createCacheKey[2] = obj1;
-const obj2 = {};
-const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
-createCacheKey[3] = obj2;
-createCacheKey[4] = { marginStart: "auto" };
-const importDefaultResult1 = importDefaultResult;
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx");
+createStyles.rowLabel = obj1;
+const merged1 = Object.assign(TextStyles(Fonts.PRIMARY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16));
+createStyles.rowLabelSelected = {};
+createStyles.rowIndicator = { marginStart: "auto" };
+createStyles.separator = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, height: 1, marginStart: 56 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/AllChannelsSwitch.tsx");
 
 export default function AllChannelsSwitch(style) {
   ({ channelAccessFormat, setChannelAccessFormat: require, disabled } = style);
   if (disabled === undefined) {
     disabled = false;
   }
-  const tmp = callback3();
-  let obj = { style: items, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
-  items = [tmp.container, style.style];
-  obj = { icon: registerAssetDefault, label: null, selected: null, onPress: null, disabled: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t["vs2T+B"]);
-  obj[2] = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
-  obj[3] = function onPress() {
-    return callback(closure_1_4.SOME_CHANNELS_ACCESS);
+  const tmp = closure_7();
+  let obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
+  const items = [tmp.container, style.style];
+  obj.style = items;
+  obj = { icon: _modDef17762, label: null, selected: null, onPress: null, disabled: null };
+  const intl = util.intl;
+  obj.label = intl.string(util.t["vs2T+B"]);
+  obj.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
+  obj.onPress = function onPress() {
+    return require(AllChannelAccessOptions.SOME_CHANNELS_ACCESS);
   };
-  obj[4] = disabled;
-  const items1 = [callback(Row, obj), , ];
+  obj.disabled = disabled;
+  const items1 = [closure_5(Row, obj), , ];
   obj = { style: tmp.separator };
-  items1[1] = callback(View, obj);
-  obj1 = { icon: registerAssetDefault2, label: null, selected: null, onPress: null, disabled: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[1] = intl2.string(getSystemLocale.t.l4Tr7X);
-  obj1[2] = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;
-  obj1[3] = function onPress() {
-    return callback(closure_1_4.ALL_CHANNELS_ACCESS);
+  items1[1] = closure_5(View, obj);
+  const obj1 = { icon: _modDef17763, label: null, selected: null, onPress: null, disabled: null };
+  const intl2 = util.intl;
+  obj1.label = intl2.string(util.t.l4Tr7X);
+  obj1.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;
+  obj1.onPress = function onPress() {
+    return require(AllChannelAccessOptions.ALL_CHANNELS_ACCESS);
   };
-  obj1[4] = disabled;
-  items1[2] = callback(Row, obj1);
-  obj[3] = items1;
-  return callback2(View, obj);
+  obj1.disabled = disabled;
+  items1[2] = closure_5(Row, obj1);
+  obj.children = items1;
+  return closure_6(View, obj);
 };

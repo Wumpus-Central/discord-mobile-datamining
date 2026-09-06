@@ -1,13 +1,13 @@
-// === Module 17055: initialize ===
+// === Module 17055: EventBannerStore ===
 
-// Module 17055 (initialize)
-import set from "set" /* 2 */;
+// Module 17055 (EventBannerStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
+import size from "module_2" /* 2 */;
 
-const GuildScheduledEventStatus = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventStatus;
-let closure_1 = {};
+const GuildScheduledEventStatus = GuildScheduledEventsConstants.GuildScheduledEventStatus;
+let dismissedEventIds = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class EventBannerStore extends PersistedStore {
 }
@@ -21,14 +21,15 @@ prototype["initialize"] = function initialize(dismissedEventIds) {
   }
 };
 prototype["isEventDismissed"] = function isEventDismissed(id) {
-  return null != table[id];
+  return null != obj[id];
 };
 prototype["getState"] = function getState() {
-  return { dismissedEventIds: closure_1 };
+  dismissedEventIds = { dismissedEventIds };
+  return dismissedEventIds;
 };
 EventBannerStore.displayName = "EventBannerStore";
 EventBannerStore.persistKey = "EventBanner";
-const eventBannerStore = new EventBannerStore(dispatcherDefault, {
+dismissedEventIds = {
   EVENT_BANNER_DISMISS: function handleDismiss(eventId) {
     const obj = {};
     const merged = Object.assign(obj);
@@ -61,7 +62,8 @@ const eventBannerStore = new EventBannerStore(dispatcherDefault, {
       delete tmp[tmp2];
     }
   }
-});
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
+};
+const eventBannerStore = new EventBannerStore(DispatcherDefault, dismissedEventIds);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/EventBannerStore.tsx");
 
 export default eventBannerStore;

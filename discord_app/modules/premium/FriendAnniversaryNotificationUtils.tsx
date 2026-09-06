@@ -1,20 +1,19 @@
-// === Module 15499: onFriendAnniversaryNotificationSettingsChanged ===
+// === Module 15499: FriendAnniversaryNotificationUtils ===
 
-// Module 15499 (onFriendAnniversaryNotificationSettingsChanged)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import AccountNotificationFlags from "AccountNotificationFlags" /* 4212 */;
+// Module 15499 (FriendAnniversaryNotificationUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import NotificationConstants from "NotificationConstants" /* 4212 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = AccountNotificationFlags.NotificationSettingsUpdateType;
-const result = set.fileFinishedImporting("modules/premium/FriendAnniversaryNotificationUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const constants = NotificationConstants.NotificationSettingsUpdateType;
+const result = size.fileFinishedImporting("modules/premium/FriendAnniversaryNotificationUtils.tsx");
 
 export const onFriendAnniversaryNotificationSettingsChanged = function onFriendAnniversaryNotificationSettingsChanged(friend_anniversary_notifications) {
-  const EnableFriendAnniversaryNotifications = explicitContentFromProto.EnableFriendAnniversaryNotifications;
+  const EnableFriendAnniversaryNotifications = UserSettings.EnableFriendAnniversaryNotifications;
   EnableFriendAnniversaryNotifications.updateSetting(friend_anniversary_notifications);
-  let obj = expandEventPropertiesDefault;
-  obj = { update_type: constants.ACCOUNT, friend_anniversary_notifications };
+  const obj = { update_type: constants.ACCOUNT, friend_anniversary_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

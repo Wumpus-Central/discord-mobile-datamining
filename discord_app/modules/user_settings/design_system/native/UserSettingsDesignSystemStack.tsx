@@ -1,64 +1,64 @@
-// === Module 15789: StackBlock ===
+// === Module 15789: UserSettingsDesignSystemStack ===
 
-// Module 15789 (StackBlock)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import PressableCard from "PressableCard" /* 5607 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15789 (UserSettingsDesignSystemStack)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
+import Card from "Card" /* 5607 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function StackBlock() {
-  return callback(closure_2, { style: callback3().block });
+  return React4(React2, { style: closure_6().block });
 }
-noopAll;
-({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: { padding: 16, flex: 1, alignItems: "center" }, block: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 };
-createCacheKey[1] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx");
+get_ActivityIndicator = fn(17);
+({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: { padding: 16, flex: 1, alignItems: "center" }, block: null };
+createStyles = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 };
+createStyles.block = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx");
 
 export default function UserSettingsDesignSystemStack() {
   let obj = { children: null };
-  obj = { style: callback3().container, children: null };
+  obj = { style: closure_6().container, children: null };
   obj = { spacing: 16, children: null };
-  obj1 = { children: null };
+  const obj1 = { children: null };
   const obj2 = { children: null };
-  const items = [callback(Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "By default, stacks are vertical and have a spacing of 8." }), ];
+  const items = [React4(Text_Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "By default, stacks are vertical and have a spacing of 8." }), ];
   const obj3 = { children: null };
-  const items1 = [callback(StackBlock, {}), callback(StackBlock, {})];
-  obj3[0] = items1;
-  items[2] = callback2(Stack.Stack, obj3);
-  obj2[0] = items;
-  obj1[0] = callback2(Stack.Stack, obj2);
-  const items2 = [callback(PressableCard.Card, obj1), , ];
+  const items1 = [React4(StackBlock, {}), React4(StackBlock, {})];
+  obj3.children = items1;
+  items[2] = hasOwnProperty(Stack_Stack.Stack, obj3);
+  obj2.children = items;
+  obj1.children = hasOwnProperty(Stack_Stack.Stack, obj2);
+  const items2 = [React4(Card.Card, obj1), , ];
   const obj4 = { children: null };
   const obj5 = { children: null };
-  const items3 = [callback(Text.Text, { variant: "text-lg/bold", children: "Spacing" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can control the spacing with the spacing prop. The spacing prop uses our 4px-based spacing scale. By default, stacks are vertical and have a spacing of 8." }), ];
+  const items3 = [React4(Text_Text.Text, { variant: "text-lg/bold", children: "Spacing" }), React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can control the spacing with the spacing prop. The spacing prop uses our 4px-based spacing scale. By default, stacks are vertical and have a spacing of 8." }), ];
   const obj6 = { spacing: 24, children: null };
-  const items4 = [callback(StackBlock, {}), callback(StackBlock, {})];
-  obj6[1] = items4;
-  items3[2] = callback2(Stack.Stack, obj6);
-  obj5[0] = items3;
-  obj4[0] = callback2(Stack.Stack, obj5);
-  items2[1] = callback(PressableCard.Card, obj4);
+  const items4 = [React4(StackBlock, {}), React4(StackBlock, {})];
+  obj6.children = items4;
+  items3[2] = hasOwnProperty(Stack_Stack.Stack, obj6);
+  obj5.children = items3;
+  obj4.children = hasOwnProperty(Stack_Stack.Stack, obj5);
+  items2[1] = React4(Card.Card, obj4);
   const obj7 = { children: null };
   const obj8 = { children: null };
-  const items5 = [callback(Text.Text, { variant: "text-lg/bold", children: "Horizontal" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can control the direction with the direction prop. The direction prop can be either horizontal or vertical." }), ];
+  const items5 = [React4(Text_Text.Text, { variant: "text-lg/bold", children: "Horizontal" }), React4(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "You can control the direction with the direction prop. The direction prop can be either horizontal or vertical." }), ];
   const obj9 = { direction: "horizontal", children: null };
-  const items6 = [callback(StackBlock, {}), callback(StackBlock, {})];
-  obj9[1] = items6;
-  items5[2] = callback2(Stack.Stack, obj9);
-  obj8[0] = items5;
-  obj7[0] = callback2(Stack.Stack, obj8);
-  items2[2] = callback(PressableCard.Card, obj7);
-  obj[1] = items2;
-  obj[1] = callback2(Stack.Stack, obj);
-  obj[0] = callback(closure_2, obj);
-  return callback(closure_3, obj);
+  const items6 = [React4(StackBlock, {}), React4(StackBlock, {})];
+  obj9.children = items6;
+  items5[2] = hasOwnProperty(Stack_Stack.Stack, obj9);
+  obj8.children = items5;
+  obj7.children = hasOwnProperty(Stack_Stack.Stack, obj8);
+  items2[2] = React4(Card.Card, obj7);
+  obj.children = items2;
+  obj.children = hasOwnProperty(Stack_Stack.Stack, obj);
+  obj.children = React4(React2, obj);
+  return React4(React3, obj);
 };

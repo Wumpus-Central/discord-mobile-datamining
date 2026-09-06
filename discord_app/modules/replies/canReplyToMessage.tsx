@@ -1,48 +1,49 @@
-// === Module 7976: useCanReplyToMessage ===
+// === Module 7976: canReplyToMessage ===
 
-// Module 7976 (useCanReplyToMessage)
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
+// Module 7976 (canReplyToMessage)
+import MessageTypes from "MessageTypes" /* 1089 */;
+import ThreadHooks from "ThreadHooks" /* 7269 */;
 import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7977 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import { Permissions } from "sum" /* 1085 */;
+import _slicedToArray from "module_32" /* 32 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-({ MessageFlags: c5, MessageStates: closure_6 } = ME);
-const result = require("set").fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
+require = fn;
+const Constants = fn(1074);
+({ MessageFlags: hasOwnProperty, MessageStates: metroRequire } = Constants);
+const Permissions = fn(1085).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/replies/canReplyToMessage.tsx");
 
 export const useCanReplyToMessage = function useCanReplyToMessage(channel, message) {
-  const _require = channel;
+  _require = channel;
   dependencyMap = message;
-  const canUnarchiveThread = _require(7269).useCanUnarchiveThread(channel);
-  const obj = _require(7269);
+  const canUnarchiveThread = require("ThreadHooks").useCanUnarchiveThread(channel);
+  const obj = require("ThreadHooks");
   let tmp = _require;
   let guildId;
   if (channel != null) {
     guildId = channel.getGuildId();
   }
-  const obj2 = _require(7977);
-  const items = [closure_3];
+  const obj2 = require("useUserCommunicationDisabled");
+  const items = [PermissionStore];
   let stateFromStores = tmp(504).useStateFromStores(items, () => {
-    let tmp = null != channel;
+    let tmp = null != closure_0;
     if (tmp) {
-      tmp = null != message;
+      tmp = null != closure_1;
     }
     if (tmp) {
       if (obj.isPrivate()) {
         let hasItem = !obj.isSystemDM();
       } else {
-        hasItem = obj2.can(closure_1_7.SEND_MESSAGES, obj) && obj2.can(closure_1_7.READ_MESSAGE_HISTORY, obj);
-        const tmp4 = closure_1_7;
+        hasItem = obj2.can(Permissions.SEND_MESSAGES, obj) && obj2.can(Permissions.READ_MESSAGE_HISTORY, obj);
       }
       if (hasItem) {
-        const REPLYABLE = channel(message[5]).MessageTypesSets.REPLYABLE;
+        const REPLYABLE = MessageTypes.MessageTypesSets.REPLYABLE;
         hasItem = REPLYABLE.has(tmp3.type);
       }
       tmp = hasItem;
-      tmp3 = message;
+      tmp3 = closure_1;
     }
     return tmp;
   });
@@ -60,7 +61,7 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
       stateFromStores = !hasFlagResult;
     }
     if (stateFromStores) {
-      stateFromStores = !callback(obj2.useCurrentUserCommunicationDisabled(guildId), 2)[1];
+      stateFromStores = !_slicedToArray(obj2.useCurrentUserCommunicationDisabled(guildId), 2)[1];
     }
     if (stateFromStores) {
       stateFromStores = tmp11;
@@ -71,19 +72,17 @@ export const useCanReplyToMessage = function useCanReplyToMessage(channel, messa
   return tmp6;
 };
 export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
-  const obj = useCanStartPrivateThread;
   if (isPrivate.isPrivate()) {
     let hasItem = !isPrivate.isSystemDM();
   } else {
     hasItem = obj2.can(Permissions.SEND_MESSAGES, isPrivate) && obj2.can(Permissions.READ_MESSAGE_HISTORY, isPrivate);
-    const tmp4 = Permissions;
   }
   if (hasItem) {
     const REPLYABLE = tmp(1089).MessageTypesSets.REPLYABLE;
     hasItem = REPLYABLE.has(type.type);
   }
-  currentUser = currentUser.getCurrentUser();
-  const canUnarchiveThreadResult = useCanStartPrivateThread.canUnarchiveThread(isPrivate);
+  const currentUser = UserStore.getCurrentUser();
+  const canUnarchiveThreadResult = ThreadHooks.canUnarchiveThread(isPrivate);
   let id;
   if (currentUser != null) {
     id = currentUser.id;
@@ -102,7 +101,7 @@ export const canReplyToMessage = function canReplyToMessage(isPrivate, type) {
     hasItem = !hasFlagResult;
   }
   if (hasItem) {
-    hasItem = !callback(tmpResult.userCommunicationDisabled(id, guildId), 2)[1];
+    hasItem = !_slicedToArray(tmpResult.userCommunicationDisabled(id, guildId), 2)[1];
   }
   if (hasItem) {
     hasItem = tmp11;

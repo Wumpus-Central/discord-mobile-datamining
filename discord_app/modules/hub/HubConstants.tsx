@@ -1,9 +1,9 @@
-// === Module 12719: HubEmailConnectionSteps ===
+// === Module 12719: HubConstants ===
 
-// Module 12719 (HubEmailConnectionSteps)
-import set from "set" /* 2 */;
+// Module 12719 (HubConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/hub/HubConstants.tsx");
+const result = size.fileFinishedImporting("modules/hub/HubConstants.tsx");
 
 export const HubEmailConnectionSteps = { STUDENT_PROMPT: "STUDENT_PROMPT", VERIFY_EMAIL: "VERIFY_EMAIL", VERIFY_PIN: "VERIFY_PIN", SELECT_SCHOOL: "SELECT_SCHOOL", SELECT_SCHOOL_SEARCH: "SELECT_SCHOOL_SEARCH", SUBMIT_SCHOOL: "SUBMIT_SCHOOL", EMAIL_CONFIRMATION: "EMAIL_CONFIRMATION", EMAIL_WAITLIST: "EMAIL_WAITLIST" };
 export const INVITE_ROUTING_HUB_GUILD_ID = "884924873015689226";

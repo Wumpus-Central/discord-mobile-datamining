@@ -1,9 +1,9 @@
-// === Module 9554: prototype ===
+// === Module 9554: RPCError ===
 
-// Module 9554 (prototype)
-import set from "set" /* 2 */;
-import prototype from "prototype" /* 9555 */;
+// Module 9554 (RPCError)
+import shared_RPCError from "shared/RPCError" /* 9555 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/rpc/RPCError.tsx");
+const result = size.fileFinishedImporting("modules/rpc/RPCError.tsx");
 
-export default prototype.RPCError;
+export default shared_RPCError.RPCError;

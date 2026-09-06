@@ -1,11 +1,11 @@
-// === Module 8023: createPurchaseNotificationSystemMessage ===
+// === Module 8023: PurchaseNotificationSystemMessage ===
 
-// Module 8023 (createPurchaseNotificationSystemMessage)
-import set from "set" /* 2 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import createGuildProductPurchaseSystemMessage from "createGuildProductPurchaseSystemMessage" /* 8024 */;
+// Module 8023 (PurchaseNotificationSystemMessage)
+import Server from "Server" /* 1894 */;
+import GuildProductPurchaseSystemMessage from "GuildProductPurchaseSystemMessage" /* 8024 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PurchaseNotificationSystemMessage.tsx");
 
 export const createPurchaseNotificationSystemMessage = function createPurchaseNotificationSystemMessage(message) {
   const purchaseNotification = message.message.purchaseNotification;
@@ -14,9 +14,9 @@ export const createPurchaseNotificationSystemMessage = function createPurchaseNo
     type = purchaseNotification.type;
   }
   let guildProductPurchaseSystemMessage = null;
-  if (type === PermissionOverwriteType.PurchaseNotificationType.GUILD_PRODUCT) {
-    guildProductPurchaseSystemMessage = createGuildProductPurchaseSystemMessage.createGuildProductPurchaseSystemMessage(message);
-    const tmp2Result = createGuildProductPurchaseSystemMessage;
+  if (type === Server.PurchaseNotificationType.GUILD_PRODUCT) {
+    guildProductPurchaseSystemMessage = GuildProductPurchaseSystemMessage.createGuildProductPurchaseSystemMessage(message);
+    const tmp2Result = GuildProductPurchaseSystemMessage;
   }
   return guildProductPurchaseSystemMessage;
 };

@@ -1,27 +1,27 @@
-// === Module 1963: GUILD_EVENT_MAX_NAME_LENGTH ===
+// === Module 1963: GuildScheduledEventsConstants ===
 
-// Module 1963 (GUILD_EVENT_MAX_NAME_LENGTH)
-import ME from "ME" /* 1074 */;
-import setDefault from "set" /* 1090 */;
-import set from "set" /* 2 */;
+// Module 1963 (GuildScheduledEventsConstants)
+import Constants from "Constants" /* 1074 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import size from "module_2" /* 2 */;
 
-const ChannelTypes = ME.ChannelTypes;
+const ChannelTypes = Constants.ChannelTypes;
 let obj = { SCHEDULED: 1, [1]: "SCHEDULED", ACTIVE: 2, [2]: "ACTIVE", COMPLETED: 3, [3]: "COMPLETED", CANCELED: 4, [4]: "CANCELED" };
 const items = [, ];
 ({ COMPLETED: arr[0], CANCELED: arr[1] } = obj);
-let set = new Set(items);
 obj = { NONE: 0, [0]: "NONE", STAGE_INSTANCE: 1, [1]: "STAGE_INSTANCE", VOICE: 2, [2]: "VOICE", EXTERNAL: 3, [3]: "EXTERNAL", PRIME_TIME: 4, [4]: "PRIME_TIME" };
 const items1 = [, ];
 ({ STAGE_INSTANCE: arr2[0], PRIME_TIME: arr2[1] } = obj);
+const set = new Set(items);
 obj = { [obj.STAGE_INSTANCE]: ChannelTypes.GUILD_STAGE_VOICE, [obj.VOICE]: ChannelTypes.GUILD_VOICE };
 const items2 = [obj.EXTERNAL];
 const set1 = new Set(items1);
 const items3 = [, ];
 ({ STAGE_INSTANCE: arr4[0], VOICE: arr4[1] } = obj);
 const set2 = new Set(items2);
-const result = 2 * setDefault.Millis.DAY;
-const result1 = 12 * setDefault.Millis.HOUR;
-const result2 = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsConstants.tsx");
+const result = 2 * DurationsDefault.Millis.DAY;
+const result1 = 12 * DurationsDefault.Millis.HOUR;
+const result2 = size.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsConstants.tsx");
 
 export const GUILD_EVENT_MAX_NAME_LENGTH = 100;
 export const GUILD_EVENT_MAX_DESCRIPTION_LENGTH = 1000;

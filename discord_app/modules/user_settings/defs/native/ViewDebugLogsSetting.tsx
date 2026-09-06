@@ -1,110 +1,97 @@
-// === Module 15561: ViewDebugLogsActionSheetRow ===
+// === Module 15561: ViewDebugLogsSetting ===
 
-// Module 15561 (ViewDebugLogsActionSheetRow)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
+// Module 15561 (ViewDebugLogsSetting)
+import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
 import ClockIcon from "ClockIcon" /* 4523 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
+import ActionSheetRow from "ActionSheetRow" /* 7200 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10924 */;
 import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13843 */;
 import WrenchIcon from "WrenchIcon" /* 15562 */;
+import UserSettingsDebugLogsDefault from "UserSettingsDebugLogs" /* 15564 */;
+import UserSettingsStartupTimingsDefault from "UserSettingsStartupTimings" /* 15567 */;
+import UserSettingsPushNotificationLogsDefault from "UserSettingsPushNotificationLogs" /* 15568 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
 function ViewDebugLogsActionSheetRow(icon) {
   const title = icon.title;
   ({ screenKey: importDefault, render: dependencyMap } = icon);
-  return callback(title(7200).ActionSheetRow, {
+  return closure_5(title(7200).ActionSheetRow, {
     icon: icon.icon,
     label: title,
     onPress() {
-      let obj = closure_1_1(closure_1_2[3]);
-      obj.hideActionSheet(closure_1_7);
+      let obj = ActionSheetActionCreatorsDefault;
+      obj.hideActionSheet(ViewDebugLogsActionSheet);
       obj = {
         default() {
-          return closure_1_5(closure_1_1(closure_1_2[6]), { title: closure_0, render: closure_2, screenKey: closure_1 });
+          return closure_2_5(ModalStackNavigatorDefault, { title, render, screenKey });
         }
       };
-      closure_1_1(closure_1_2[5]).pushLazy(Promise.resolve(obj));
+      ModalActionCreatorsDefault.pushLazy(Promise.resolve(obj));
     }
   });
 }
 function ViewDebugLogsActionSheet() {
   let obj = { header: null, children: null };
   obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.BUOCPi);
-  obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj = { icon: callback(WrenchIcon.WrenchIcon, {}), title: null, screenKey: "debugLogs", render: null };
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.XpPGhL);
-  obj[3] = function render() {
-    return callback2(callback(15564), {});
+  const intl = util.intl;
+  obj.title = intl.string(util.t.BUOCPi);
+  obj.header = hasOwnProperty(BottomSheetTitleHeader.BottomSheetTitleHeader, obj);
+  obj = { icon: hasOwnProperty(WrenchIcon.WrenchIcon, {}), title: null, screenKey: "debugLogs", render: null };
+  const intl2 = util.intl;
+  obj.title = intl2.string(util.t.XpPGhL);
+  obj.render = function render() {
+    return closure_1_5(UserSettingsDebugLogsDefault, {});
   };
-  const items = [callback(ViewDebugLogsActionSheetRow, obj), , ];
-  obj1 = { icon: callback(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
-  const intl3 = getSystemLocale.intl;
-  obj1[1] = intl3.string(getSystemLocale.t.b0nJvk);
-  obj1[3] = function render() {
-    return callback2(closure_3, { children: callback2(callback(15567), {}) });
+  const items = [hasOwnProperty(ViewDebugLogsActionSheetRow, obj), , ];
+  const obj1 = { icon: hasOwnProperty(ClockIcon.ClockIcon, {}), title: null, screenKey: "startupTiming", render: null };
+  const intl3 = util.intl;
+  obj1.title = intl3.string(util.t.b0nJvk);
+  obj1.render = function render() {
+    return closure_1_5(Suspense, { children: closure_1_5(UserSettingsStartupTimingsDefault, {}) });
   };
-  items[1] = callback(ViewDebugLogsActionSheetRow, obj1);
+  items[1] = hasOwnProperty(ViewDebugLogsActionSheetRow, obj1);
   let tmpResult = null;
   if (obj5.isAndroid()) {
-    const obj2 = { icon: null, title: null, screenKey: "pushNotificationLogs", render: null };
-    obj2[0] = tmp(tmp2(10961).ChannelNotificationIcon, {});
+    const obj2 = { icon: tmp(tmp2(10961).ChannelNotificationIcon, {}), title: null, screenKey: "pushNotificationLogs", render: null };
     const intl4 = tmp2(1114).intl;
-    obj2[1] = intl4.string(tmp2(1114).t.Ljj0ps);
-    obj2[3] = function render() {
-      return callback2(callback(15568), {});
+    obj2.title = intl4.string(tmp2(1114).t.Ljj0ps);
+    obj2.render = function render() {
+      return closure_1_5(UserSettingsPushNotificationLogsDefault, {});
     };
     tmpResult = tmp(ViewDebugLogsActionSheetRow, obj2);
   }
   items[2] = tmpResult;
-  obj[1] = closure_6(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: true, children: items });
-  return callback(ActionSheet.ActionSheet, obj);
+  obj.children = timestampProducer(ActionSheetRow.ActionSheetRow.Group, { hasIcons: true, children: items });
+  return hasOwnProperty(ActionSheet.ActionSheet, obj);
 }
-const Suspense = noop.Suspense;
-const Keyboard = get_ActivityIndicator.Keyboard;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const Suspense = _mod19.Suspense;
+const Keyboard = _mod17.Keyboard;
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 ViewDebugLogsActionSheet = "ViewDebugLogsActionSheet";
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BUOCPi);
+    const intl = util.intl;
+    return intl.string(util.t.BUOCPi);
   },
   parent: null,
   IconComponent: ChannelListMagnifyingGlassIcon.ChannelListMagnifyingGlassIcon,
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting,
+  usePredicate: UserSettings.DeveloperMode.useSetting,
   onPress: function handleViewDebugLogsSettingPress() {
     Keyboard.dismiss();
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { default: ViewDebugLogsActionSheet };
+    const obj = { default: ViewDebugLogsActionSheet };
     obj.openLazy(Promise.resolve(obj), ViewDebugLogsActionSheet);
   },
   withArrow: true
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.BUOCPi);
-  },
-  parent: null,
-  IconComponent: ChannelListMagnifyingGlassIcon.ChannelListMagnifyingGlassIcon,
-  usePredicate: explicitContentFromProto.DeveloperMode.useSetting,
-  onPress: function handleViewDebugLogsSettingPress() {
-    Keyboard.dismiss();
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { default: ViewDebugLogsActionSheet };
-    obj.openLazy(Promise.resolve(obj), ViewDebugLogsActionSheet);
-  },
-  withArrow: true
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ViewDebugLogsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ViewDebugLogsSetting.tsx");
 
 export default pressable;

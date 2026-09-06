@@ -1,9 +1,9 @@
-// === Module 4605: getSystemAnalyticsInfo ===
+// === Module 4605: SystemAnalyticsStore ===
 
-// Module 4605 (getSystemAnalyticsInfo)
-import set from "set" /* 2 */;
+// Module 4605 (SystemAnalyticsStore)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/system_analytics/SystemAnalyticsStore.native.tsx");
+const result = size.fileFinishedImporting("modules/system_analytics/SystemAnalyticsStore.native.tsx");
 
 export const getSystemAnalyticsInfo = function getSystemAnalyticsInfo() {
   return Promise.resolve(undefined);

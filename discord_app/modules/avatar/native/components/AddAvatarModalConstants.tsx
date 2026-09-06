@@ -1,8 +1,8 @@
-// === Module 17434: ADD_AVATAR_MODAL_KEY ===
+// === Module 17434: AddAvatarModalConstants ===
 
-// Module 17434 (ADD_AVATAR_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 17434 (AddAvatarModalConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/avatar/native/components/AddAvatarModalConstants.tsx");
+const result = size.fileFinishedImporting("modules/avatar/native/components/AddAvatarModalConstants.tsx");
 
 export const ADD_AVATAR_MODAL_KEY = "ADD_AVATAR_MODAL_KEY";

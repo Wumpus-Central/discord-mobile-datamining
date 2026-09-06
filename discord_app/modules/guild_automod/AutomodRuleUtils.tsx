@@ -1,17 +1,19 @@
-// === Module 17540: getNewAutomodRuleMockId ===
+// === Module 17540: AutomodRuleUtils ===
 
-// Module 17540 (getNewAutomodRuleMockId)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import buildCommand from "buildCommand" /* 7521 */;
-import AutomodTriggerType from "AutomodTriggerType" /* 17543 */;
-import getRuleDefaultActionsFromConfig from "getRuleDefaultActionsFromConfig" /* 17544 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import { getRuleCountByTriggerType } from "withEqualityFn" /* 17541 */;
-import AutomodEventType from "AutomodEventType" /* 11862 */;
+// Module 17540 (AutomodRuleUtils)
+import util from "util" /* 1114 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
+import AutomodErrorUtils from "AutomodErrorUtils" /* 7939 */;
+import AutomodTriggerConfigs from "AutomodTriggerConfigs" /* 17543 */;
+import AutomodActionUtils from "AutomodActionUtils" /* 17544 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-({ AutomodTriggerType: c4, MAX_KEYWORDS_PER_KEYWORD_FILTER: c5, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6, MAX_CHARACTERS_PER_KEYWORD: error, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: c9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: unpackModuleId, AutomodEventType: closure_12 } = AutomodEventType);
-const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
+require = fn;
+const getRuleCountByTriggerType = fn(17541).getRuleCountByTriggerType;
+const Constants = fn(11862);
+({ AutomodTriggerType: closure_4, MAX_KEYWORDS_PER_KEYWORD_FILTER: hasOwnProperty, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: metroRequire, MAX_CHARACTERS_PER_KEYWORD: closure_7, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: closure_9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: closure_11, AutomodEventType: closure_12 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
 
 export const getNewAutomodRuleMockId = function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
@@ -58,23 +60,20 @@ export const isRuleUserProfileFilter = function isRuleUserProfileFilter(triggerT
   }
   return triggerType === constants.USER_PROFILE;
 };
-export const createDefaultRule = function createDefaultRule(arg0, arg1) {
-  let obj = AutomodTriggerType.triggerConfigs[arg1];
-  obj = { id: null, name: null, guildId: null, eventType: null, triggerType: null, triggerMetadata: null, enabled: true, creatorId: null, actions: null, position: 0, exemptChannels: null, exemptRoles: null };
-  const defaultTriggerMetadataForTriggerType = AutomodTriggerType.getDefaultTriggerMetadataForTriggerType(arg1, arg0);
-  obj[0] = "" + arg0 + "-" + arg1 + "-new-rule";
-  obj[1] = obj.getDefaultRuleName();
-  obj[2] = arg0;
-  obj[3] = obj.eventType;
-  obj[4] = arg1;
-  obj[5] = defaultTriggerMetadataForTriggerType;
-  obj[7] = id.getId();
-  const obj2 = AutomodTriggerType;
-  obj[8] = getRuleDefaultActionsFromConfig.getRuleDefaultActionsFromConfig(obj);
-  const obj4 = getRuleDefaultActionsFromConfig;
-  obj[10] = new Set();
+export const createDefaultRule = function createDefaultRule(guildId, triggerType) {
+  const obj = { id: null, name: null, guildId: null, eventType: null, triggerType: null, triggerMetadata: null, enabled: true, creatorId: null, actions: null, position: 0, exemptChannels: null, exemptRoles: null };
+  const defaultTriggerMetadataForTriggerType = AutomodTriggerConfigs.getDefaultTriggerMetadataForTriggerType(triggerType, guildId);
+  obj.id = "" + guildId + "-" + triggerType + "-new-rule";
+  obj.name = obj.getDefaultRuleName();
+  obj.guildId = guildId;
+  obj.eventType = obj.eventType;
+  obj.triggerType = triggerType;
+  obj.triggerMetadata = defaultTriggerMetadataForTriggerType;
+  obj.creatorId = AuthenticationStore.getId();
+  obj.actions = AutomodActionUtils.getRuleDefaultActionsFromConfig(obj);
+  obj.exemptChannels = new Set();
   const set = new Set();
-  obj[11] = new Set();
+  obj.exemptRoles = new Set();
   const set1 = new Set();
   let str = obj.id;
   if (str == null) {
@@ -83,46 +82,46 @@ export const createDefaultRule = function createDefaultRule(arg0, arg1) {
   if (obj5.isSnowflake(str)) {
     const _Error = Error;
     const intl = tmp(1114).intl;
-    error = new Error(intl.string(tmp(1114).t["A/nX8D"]));
+    const error = new Error(intl.string(tmp(1114).t["A/nX8D"]));
     throw error;
   } else {
-    const tmp7 = getRuleCountByTriggerType(arg0, arg1);
+    const tmp7 = getRuleCountByTriggerType(guildId, triggerType);
     if (tmp7 > 0) {
       const _HermesInternal = HermesInternal;
       obj.name = obj.name + " " + tmp7 + 1;
     }
     return obj;
   }
-  obj5 = buildCommand;
+  obj5 = ApplicationCommandUtils;
 };
-export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr) {
-  if (arr.length > arg1) {
+export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr, limit) {
+  if (arr.length > limit) {
     const _Error = Error;
-    const intl = getSystemLocale.intl;
-    const obj = { limit: null };
-    obj[0] = arg1;
-    error = new Error(intl.formatToPlainString(getSystemLocale.t.mee4qd, obj));
+    const intl = util.intl;
+    const obj = { limit };
+    const error = new Error(intl.formatToPlainString(util.t.mee4qd, obj));
     throw error;
   } else {
     const item = arr.forEach((keyword) => {
-      const intl = callback(1114).intl;
-      const invalidKeywordError = new callback(7939).InvalidKeywordError(intl.formatToPlainString(callback(1114).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }));
+      const intl = util.intl;
+      const range = { keyword, max, min };
+      const invalidKeywordError = new AutomodErrorUtils.InvalidKeywordError(intl.formatToPlainString(util.t.rbRvGe, range));
       throw invalidKeywordError;
     });
   }
 };
 export const validateRegexPatternsOrThrow = function validateRegexPatternsOrThrow(arr) {
-  if (arr.length > closure_6) {
+  if (arr.length > timestampProducer) {
     const _Error = Error;
-    const intl = getSystemLocale.intl;
-    const obj = { limit: null };
-    obj[0] = tmp;
-    error = new Error(intl.formatToPlainString(getSystemLocale.t.tDjhF1, obj));
+    const intl = util.intl;
+    const obj = { limit: tmp };
+    const error = new Error(intl.formatToPlainString(util.t.tDjhF1, obj));
     throw error;
   } else {
     const item = arr.forEach((regex) => {
-      const intl = callback(1114).intl;
-      const invalidRegexPatternError = new callback(7939).InvalidRegexPatternError(intl.formatToPlainString(callback(1114).t.WR0m9w, { regex, max: closure_10, min: closure_9 }));
+      const intl = util.intl;
+      const range = { regex, max: max2, min: min2 };
+      const invalidRegexPatternError = new AutomodErrorUtils.InvalidRegexPatternError(intl.formatToPlainString(util.t.WR0m9w, range));
       throw invalidRegexPatternError;
     });
   }
@@ -144,35 +143,35 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
     if (0 === keywordFilter.length) {
       if (0 === regexPatterns.length) {
         const _Error4 = Error;
-        const intl4 = getSystemLocale.intl;
-        error = new Error(intl4.string(getSystemLocale.t.kz2Av3));
+        const intl4 = util.intl;
+        const error = new Error(intl4.string(util.t.kz2Av3));
         throw error;
       }
     }
-    if (keywordFilter.length > closure_5) {
+    if (keywordFilter.length > hasOwnProperty) {
       const _Error3 = Error;
-      const intl3 = getSystemLocale.intl;
-      let obj = { limit: null };
-      obj[0] = tmp2;
-      const error1 = new Error(intl3.formatToPlainString(getSystemLocale.t.mee4qd, obj));
+      const intl3 = util.intl;
+      let obj = { limit: tmp2 };
+      const error1 = new Error(intl3.formatToPlainString(util.t.mee4qd, obj));
       throw error1;
     } else {
       const item = keywordFilter.forEach((keyword) => {
-        const intl = callback(1114).intl;
-        const invalidKeywordError = new callback(7939).InvalidKeywordError(intl.formatToPlainString(callback(1114).t.rbRvGe, { keyword, max: closure_7, min: closure_8 }));
+        const intl = util.intl;
+        const range = { keyword, max, min };
+        const invalidKeywordError = new AutomodErrorUtils.InvalidKeywordError(intl.formatToPlainString(util.t.rbRvGe, range));
         throw invalidKeywordError;
       });
-      if (regexPatterns.length > closure_6) {
+      if (regexPatterns.length > timestampProducer) {
         const _Error2 = Error;
-        const intl2 = getSystemLocale.intl;
-        obj = { limit: null };
-        obj[0] = tmp33;
-        const error2 = new Error(intl2.formatToPlainString(getSystemLocale.t.tDjhF1, obj));
+        const intl2 = util.intl;
+        obj = { limit: tmp33 };
+        const error2 = new Error(intl2.formatToPlainString(util.t.tDjhF1, obj));
         throw error2;
       } else {
         const item1 = regexPatterns.forEach((regex) => {
-          const intl = callback(1114).intl;
-          const invalidRegexPatternError = new callback(7939).InvalidRegexPatternError(intl.formatToPlainString(callback(1114).t.WR0m9w, { regex, max: closure_10, min: closure_9 }));
+          const intl = util.intl;
+          const range = { regex, max: max2, min: min2 };
+          const invalidRegexPatternError = new AutomodErrorUtils.InvalidRegexPatternError(intl.formatToPlainString(util.t.WR0m9w, range));
           throw invalidRegexPatternError;
         });
       }
@@ -180,8 +179,8 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
   }
   if (0 === triggerType.actions.length) {
     const _Error = Error;
-    let intl = getSystemLocale.intl;
-    const error3 = new Error(intl.string(getSystemLocale.t["t+gj5V"]));
+    let intl = util.intl;
+    const error3 = new Error(intl.string(util.t["t+gj5V"]));
     throw error3;
   }
 };
@@ -193,56 +192,56 @@ export const isBackendPersistedRule = function isBackendPersistedRule(id) {
   if (str == null) {
     str = "INVALID_SNOWFLAKE";
   }
-  return buildCommand.isSnowflake(str);
+  return ApplicationCommandUtils.isSnowflake(str);
 };
 export const eventTypeToName = function eventTypeToName(newValue) {
   if (constants3.MESSAGE_SEND === newValue) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.NlQW4P);
+    const intl3 = util.intl;
+    return intl3.string(util.t.NlQW4P);
   } else if (tmp.GUILD_MEMBER_JOIN_OR_UPDATE === newValue) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t["Q+68IX"]);
+    const intl2 = util.intl;
+    return intl2.string(util.t["Q+68IX"]);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.SP9BBx);
+    const intl = util.intl;
+    return intl.string(util.t.SP9BBx);
   }
 };
 export const actionTypeToName = function actionTypeToName(arg0) {
   if (constants2.BLOCK_MESSAGE === arg0) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.d1ab8n);
+    const intl5 = util.intl;
+    return intl5.string(util.t.d1ab8n);
   } else if (tmp.FLAG_TO_CHANNEL === arg0) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t["Y+VmvU"]);
+    const intl4 = util.intl;
+    return intl4.string(util.t["Y+VmvU"]);
   } else if (tmp.USER_COMMUNICATION_DISABLED === arg0) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t["6WPxY2"]);
+    const intl3 = util.intl;
+    return intl3.string(util.t["6WPxY2"]);
   } else if (tmp.QUARANTINE_USER === arg0) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.NPO8ee);
+    const intl2 = util.intl;
+    return intl2.string(util.t.NPO8ee);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.SP9BBx);
+    const intl = util.intl;
+    return intl.string(util.t.SP9BBx);
   }
 };
 export const triggerTypeToName = function triggerTypeToName(newValue) {
   if (constants.KEYWORD === newValue) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.ffR2cM);
+    const intl6 = util.intl;
+    return intl6.string(util.t.ffR2cM);
   } else if (tmp.ML_SPAM === newValue) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t["puF/Os"]);
+    const intl5 = util.intl;
+    return intl5.string(util.t["puF/Os"]);
   } else if (tmp.DEFAULT_KEYWORD_LIST === newValue) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.LnGhZv);
+    const intl4 = util.intl;
+    return intl4.string(util.t.LnGhZv);
   } else if (tmp.MENTION_SPAM === newValue) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.pX7i6n);
+    const intl3 = util.intl;
+    return intl3.string(util.t.pX7i6n);
   } else if (tmp.USER_PROFILE === newValue) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.q1L2v8);
+    const intl2 = util.intl;
+    return intl2.string(util.t.q1L2v8);
   } else {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.SP9BBx);
+    const intl = util.intl;
+    return intl.string(util.t.SP9BBx);
   }
 };

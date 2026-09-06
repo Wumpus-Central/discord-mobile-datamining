@@ -1,21 +1,22 @@
 // === Module 12333: CreateGuildContainer ===
 
 // Module 12333 (CreateGuildContainer)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "comparator" /* 2012 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { UPLOAD_MEDIUM_SIZE } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-createCacheKey = { flex: { flex: 1 }, contentContainer: null };
-createCacheKey = { marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
-createCacheKey[1] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/create_guild/native/components/CreateGuildContainer.tsx");
+const require = fn;
+const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { flex: { flex: 1 }, contentContainer: null };
+createStyles = { marginTop: fn(5682).NAV_BAR_HEIGHT };
+createStyles.contentContainer = createStyles;
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/create_guild/native/components/CreateGuildContainer.tsx");
 
 export default function CreateGuildContainer(onCreate) {
   onCreate = onCreate.onCreate;
@@ -24,26 +25,24 @@ export default function CreateGuildContainer(onCreate) {
   if (flag === undefined) {
     flag = true;
   }
-  const onHubGuildInfoSet = onCreate.onHubGuildInfoSet;
+  let onHubGuildInfoSet = onCreate.onHubGuildInfoSet;
   const isCommunityIntent = onCreate.isCommunityIntent;
-  const merged = Object.assign(onCreate, Object.create(null));
-  let first;
+  const merged = Object.assign(onCreate, Object.assign({ onCreate: 0, guildTemplate: 0, autoFocus: 0, onHubGuildInfoSet: 0, isCommunityIntent: 0 }));
+  let name;
   let first1;
-  closure_6 = undefined;
   c7 = undefined;
   c8 = undefined;
-  let first2;
   let obj = guildTemplate(onHubGuildInfoSet[9]);
-  const tmp3 = first(first1.useState(obj.getGuildNameSuggestion({ truncateUsername: true })), 2);
-  first = tmp3[0];
-  const tmp5 = first(first1.useState(null), 2);
+  const tmp3 = name(first1.useState(obj.getGuildNameSuggestion({ truncateUsername: true })), 2);
+  name = tmp3[0];
+  const tmp5 = name(first1.useState(null), 2);
   first1 = tmp5[0];
   closure_6 = tmp5[1];
-  const tmp2 = callback();
-  [tmp8, c7] = first(first1.useState(false), 2);
-  let tmp7 = first(first1.useState(false), 2);
-  [tmp10, c8] = first(first1.useState(null), 2);
-  const tmp11 = first(first1.useState(() => {
+  const tmp2 = closure_10();
+  [tmp8, c7] = name(first1.useState(false), 2);
+  let tmp7 = name(first1.useState(false), 2);
+  [tmp10, c8] = name(first1.useState(null), 2);
+  const tmp11 = name(first1.useState(() => {
     const currentUser = _undefined.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -54,17 +53,16 @@ export default function CreateGuildContainer(onCreate) {
     }
     return flag;
   }), 2);
-  first2 = tmp11[0];
-  callback = first1.useCallback(isCommunityIntent(function*() {
+  const first2 = tmp11[0];
+  const callback = first1.useCallback(isCommunityIntent(function*(arg0, value) {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -72,40 +70,35 @@ export default function CreateGuildContainer(onCreate) {
     } else {
       try {
         c3 = 2;
-        if (0 === table) {
+        if (0 === onHubGuildInfoSet) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp5;
-            let base64 = tmp2;
-            base64 = undefined;
-            obj1 = closure_1_1(table[10]);
-            obj1 = { size: null };
-            obj1[0] = closure_1_8;
-            table = 1;
+            closure_0 = tmp2;
+            let base64;
+            let obj1 = tmp5(onHubGuildInfoSet[10]);
+            obj1 = { size };
+            onHubGuildInfoSet = 1;
             c3 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = obj1.openImagePicker(obj1);
+            const obj2 = { value: obj1.openImagePicker(obj1), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          base64 = arg1.base64;
+          base64 = value.base64;
           if (null != base64) {
-            callback(base64);
+            closure_129_6(base64);
           }
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -116,17 +109,16 @@ export default function CreateGuildContainer(onCreate) {
       }
     }
   }), []);
-  const items = [guildTemplate, first1, first, onCreate, onHubGuildInfoSet, first2, isCommunityIntent];
-  const callback1 = first1.useCallback(isCommunityIntent(function*() {
+  const items = [guildTemplate, first1, name, onCreate, onHubGuildInfoSet, first2, isCommunityIntent];
+  const callback1 = first1.useCallback(isCommunityIntent(function*(arg0, value) {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -138,119 +130,107 @@ export default function CreateGuildContainer(onCreate) {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            c1 = tmp3;
-            c0 = tmp7;
-            c0 = undefined;
-            c1 = undefined;
-            let defaultChannel;
-            c3 = undefined;
-            closure_1_7(true);
+            onCreate = tmp7;
+            closure_128_0 = undefined;
+            let id;
+            let defaultChannel2;
+            closure_128_3 = undefined;
+            _undefined(true);
             c3 = 1;
-            if (null != closure_1_2) {
-              tmp65(c4, c5, id);
+            if (null != onHubGuildInfoSet) {
+              tmp64(first, first1, guildTemplate);
               c3 = 0;
             } else {
-              let obj9 = id(closure_1_2[11]);
+              let obj9 = tmp3(tmp38[11]);
               c4 = 2;
               c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj9.createGuildFromTemplate(c4, c5, id, c3, closure_1_9);
+              const obj1 = { value: obj9.createGuildFromTemplate(first, first1, guildTemplate, isCommunityIntent, first2), done: false };
               return obj1;
             }
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          closure_1_8(defaultChannel);
+          closure_129_8(tmp38);
         } else if (2 === tmp7) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            const obj2 = { value, done: true };
             return obj2;
           } else {
-            const lib = arg1;
-            id = lib.id;
-            let obj6 = lib(closure_1_2[12]);
+            closure_128_0 = value;
+            id = closure_128_0.id;
+            let obj6 = onCreate(tmp38[12]);
             c4 = 3;
             c5 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = obj6.waitForGuild(id);
+            const obj3 = { value: obj6.waitForGuild(id), done: false };
             return obj3;
           }
         } else if (3 === tmp7) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
+            const obj4 = { value, done: true };
             return obj4;
           } else {
-            defaultChannel = closure_1_6.getDefaultChannel(c1);
-            c3 = lib(closure_1_2[13]).dangerouslyConstructGuildRecordFromUntypedObject(c0);
-            const obj14 = lib(closure_1_2[13]);
+            defaultChannel2 = defaultChannel.getDefaultChannel(id);
+            closure_128_3 = onCreate(tmp38[13]).dangerouslyConstructGuildRecordFromUntypedObject(closure_128_0);
+            const obj14 = onCreate(tmp38[13]);
             const obj5 = { omitUserIds: null, guild: null, channel: null };
             const _Set = Set;
             const set = new Set();
-            obj5[0] = set;
-            obj5[1] = c3;
-            obj5[2] = defaultChannel;
+            obj5.omitUserIds = set;
+            obj5.guild = closure_128_3;
+            obj5.channel = defaultChannel2;
             c4 = 4;
             c5 = 1;
-            obj6 = { value: null, done: false };
-            obj6[0] = lib(closure_1_2[14]).loadInviteSuggestions(obj5);
+            obj6 = { value: onCreate(tmp38[14]).loadInviteSuggestions(obj5), done: false };
             return obj6;
           }
         } else if (4 === tmp7) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
+            const obj7 = { value, done: true };
             return obj7;
           } else {
             let tmp9Result;
-            if (c0 != null) {
-              const obj8 = { guild: null };
-              obj8[0] = c3;
+            if (closure_129_0 != null) {
+              const obj8 = { guild: closure_128_3 };
               tmp9Result = tmp9(obj8);
             }
             c4 = 5;
             c5 = 1;
-            obj9 = { value: null, done: false };
-            obj9[0] = tmp9Result;
+            obj9 = { value: tmp9Result, done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 0;
           c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         }
-        tmp7 = closure_1_7(false);
+        tmp7 = closure_129_7(false);
         c5 = 3;
       } catch (tmp38) {
-        defaultChannel = tmp38;
         if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp38;
@@ -260,13 +240,14 @@ export default function CreateGuildContainer(onCreate) {
       }
     }
   }), items);
-  obj = { top: true, left: true, right: true, style: items1, children: null };
-  items1 = [, ];
+  const rect = { top: true, left: true, right: true, style: null, children: null };
+  const items1 = [, ];
   ({ flex: arr2[0], contentContainer: arr2[1] } = tmp2);
+  rect.style = items1;
   obj = {};
-  const tmp9 = first(first1.useState(null), 2);
+  const tmp9 = name(first1.useState(null), 2);
   const merged1 = Object.assign(merged);
-  obj.guild = { name: first, icon: first1, staffOnly: first2 };
+  obj.guild = { name, icon: first1, staffOnly: first2 };
   obj.error = tmp10;
   obj.submitting = tmp8;
   obj.onIconPress = callback;
@@ -274,6 +255,6 @@ export default function CreateGuildContainer(onCreate) {
   obj.onStaffOnlyChange = tmp11[1];
   obj.onCreate = callback1;
   obj.autoFocus = flag;
-  obj[4] = first2(guildTemplate(onHubGuildInfoSet[16]), obj);
-  return first2(onCreate(onHubGuildInfoSet[15]).SafeAreaPaddingView, obj);
+  rect.children = first2(guildTemplate(onHubGuildInfoSet[16]), obj);
+  return first2(onCreate(onHubGuildInfoSet[15]).SafeAreaPaddingView, rect);
 };

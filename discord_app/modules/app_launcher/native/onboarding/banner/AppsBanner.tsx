@@ -1,26 +1,27 @@
-// === Module 12063: AppsBaner ===
+// === Module 12063: AppsBanner ===
 
-// Module 12063 (AppsBaner)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 12063 (AppsBanner)
+import util from "util" /* 1114 */;
 import BannerBaseDefault from "BannerBase" /* 12061 */;
-import SvgComponentDefault from "SvgComponent" /* 12064 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import OnboardingAppsRocketDefault from "OnboardingAppsRocket" /* 12064 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_5 = createCacheKey.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ rocketIconContainer: { position: "absolute", top: -20 }, rocketIcon: { width: 90, height: 90 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/banner/AppsBanner.tsx");
 
 export default function AppsBaner() {
-  const tmp = callback();
-  obj = { style: tmp.rocketIconContainer, children: jsx(SvgComponentDefault, obj) };
+  const tmp = closure_5();
+  let obj = { style: tmp.rocketIconContainer, children: null };
   obj = { style: tmp.rocketIcon };
+  obj.children = jsx(OnboardingAppsRocketDefault, { style: tmp.rocketIcon });
   obj = { image: <View style={tmp.rocketIcon} />, text: null };
   const tmp2 = <View image={<View style={tmp.rocketIcon} />} text={null} />;
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.sjRwMJ);
+  const intl = util.intl;
+  obj.text = intl.string(util.t.sjRwMJ);
   return jsx(BannerBaseDefault, { image: <View style={tmp.rocketIcon} />, text: null });
 };

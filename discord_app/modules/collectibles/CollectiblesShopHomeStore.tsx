@@ -1,8 +1,8 @@
-// === Module 7586: map ===
+// === Module 7586: CollectiblesShopHomeStore ===
 
-// Module 7586 (map)
+// Module 7586 (CollectiblesShopHomeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let closure_0 = [];
 const map = new Map();
@@ -18,8 +18,8 @@ const Store = initializeDefault.Store;
 class CollectiblesShopHomesStore extends Store {
 }
 const prototype = CollectiblesShopHomesStore.prototype;
-prototype["getLastSuccessfulFetch"] = function getLastSuccessfulFetch(closure_0) {
-  return map.get(closure_0);
+prototype["getLastSuccessfulFetch"] = function getLastSuccessfulFetch(arg0) {
+  return map.get(arg0);
 };
 prototype["getLastErrorTimestamp"] = function getLastErrorTimestamp(arg0) {
   return map1.get(arg0);
@@ -33,8 +33,8 @@ prototype["getFetchShopHomeError"] = function getFetchShopHomeError(arg0) {
 prototype["getIsFetchingShopHome"] = function getIsFetchingShopHome(arg0) {
   return map4.get(arg0);
 };
-prototype["getShopBlocks"] = function getShopBlocks(closure_0) {
-  let value = map6.get(closure_0);
+prototype["getShopBlocks"] = function getShopBlocks(arg0) {
+  value = map6.get(arg0);
   if (value == null) {
     value = closure_0;
   }
@@ -50,7 +50,7 @@ prototype["getShopLayoutUrlOverride"] = function getShopLayoutUrlOverride() {
   return c9;
 };
 CollectiblesShopHomesStore.displayName = "CollectiblesShopHomesStore";
-const collectiblesShopHomesStore = new CollectiblesShopHomesStore(dispatcherDefault, {
+const collectiblesShopHomesStore = new CollectiblesShopHomesStore(DispatcherDefault, {
   COLLECTIBLES_SHOP_HOME_FETCH: function handleFetchShopHome(tab) {
     const result = map4.set(tab.tab, true);
     const result1 = map3.set(tab.tab, undefined);
@@ -75,10 +75,10 @@ const collectiblesShopHomesStore = new CollectiblesShopHomesStore(dispatcherDefa
     const result4 = map5.set(tab.tab, true);
   },
   COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE: function handleSetShopHomeConfigOverride(shopHomeConfigOverride) {
-    shopHomeConfigOverride = shopHomeConfigOverride.shopHomeConfigOverride;
+    c8 = shopHomeConfigOverride.shopHomeConfigOverride;
   },
   COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE: function handleSetShopLayoutUrlOverride(shopLayoutUrlOverride) {
-    shopLayoutUrlOverride = shopLayoutUrlOverride.shopLayoutUrlOverride;
+    c9 = shopLayoutUrlOverride.shopLayoutUrlOverride;
   },
   LOGOUT: function reset() {
     map6.clear();
@@ -92,6 +92,7 @@ const collectiblesShopHomesStore = new CollectiblesShopHomesStore(dispatcherDefa
     c9 = undefined;
   }
 });
-let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesShopHomeStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/CollectiblesShopHomeStore.tsx");
 
 export default collectiblesShopHomesStore;

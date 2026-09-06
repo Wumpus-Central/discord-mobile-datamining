@@ -1,439 +1,260 @@
-// === Module 7246: _isAccessibleChannelOrThreadPath ===
+// === Module 7246: isAccessibleChannelOrThreadPath ===
 
-// Module 7246 (_isAccessibleChannelOrThreadPath)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "isSubscriptionGated" /* 2013 */;
-import closure_5 from "shouldShowOnboarding" /* 7096 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 1964 */;
+// Module 7246 (isAccessibleChannelOrThreadPath)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GatedChannelStore from "GatedChannelStore" /* 2013 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7096 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-function _isAccessibleChannelOrThreadPath() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
+const require = fn;
+let closure_13 = async function _isAccessibleChannelOrThreadPath(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          closure_130_1 = undefined;
+          ({ guildId: closure_130_0, channelId: closure_130_1 } = closure_0);
+          let guild;
+          let unsafeMutableRoles;
+          let channel2;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
+        }
       } else {
-        throwTypeErrorResult = arg1;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp3;
-        if (tmp4 === 3) {
+        if (1 === tmp5) {
           if (arg0 === 1) {
-            throw arg1;
+            c5 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            c5 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
           } else {
-            return { value: "HermesInternal", done: null };
+            guild = closure_131_8.getGuild(closure_130_0);
+            unsafeMutableRoles = closure_131_7.getUnsafeMutableRoles(closure_130_0);
+            if (null == guild) {
+              if (closure_130_0 !== closure_131_10) {
+                if (closure_130_1 !== closure_131_12.GAME_SHOP) {
+                  c5 = 3;
+                  return { value: false, done: true };
+                }
+              }
+            }
+            if (null == closure_130_1) {
+              c5 = 3;
+              return { value: true, done: true };
+            } else {
+              if (closure_131_11(closure_130_1)) {
+                if (closure_131_12.VIBEGRATIONS === closure_130_1) {
+                  let result = null != guild;
+                  if (result) {
+                    result = closure_131_0(closure_131_2[8]).canAccessVibegrations(guild, "isAccessibleChannelOrThreadPath");
+                    const obj34 = closure_131_0(closure_131_2[8]);
+                  }
+                  c5 = 3;
+                  const obj2 = { value: result, done: true };
+                  return obj2;
+                } else if (closure_131_12.ROLE_SUBSCRIPTIONS === tmp31) {
+                  c5 = 3;
+                  const obj3 = { value: closure_131_0(closure_131_2[9]).areRoleSubscriptionsVisibleInGuild(closure_130_0, unsafeMutableRoles), done: true };
+                  return obj3;
+                } else if (closure_131_12.SERVER_MONETIZATION_ONBOARDING === tmp31) {
+                  let result1 = null != guild;
+                  if (result1) {
+                    result1 = closure_131_0(closure_131_2[10]).canUserSeeMonetizationOnboarding(guild);
+                    const obj30 = closure_131_0(closure_131_2[10]);
+                  }
+                  c5 = 3;
+                  let obj4 = { value: result1, done: true };
+                  return obj4;
+                } else if (closure_131_12.GAME_SHOP === tmp31) {
+                  let obj5 = guild;
+                  if (guild == null) {
+                    obj5 = { id: closure_130_0, type: "id-only" };
+                  }
+                  c5 = 3;
+                  let obj6 = { value: closure_131_0(closure_131_2[11]).hasSocialLayerStorefront(obj5), done: true };
+                  return obj6;
+                } else if (closure_131_12.GUILD_SHOP === tmp31) {
+                  c5 = 3;
+                  const obj7 = { value: closure_131_0(closure_131_2[12]).isGuildShopVisibleInGuild(guild, unsafeMutableRoles), done: true };
+                  return obj7;
+                } else if (closure_131_12.MEMBER_APPLICATIONS === tmp31) {
+                  c5 = 3;
+                  let obj8 = { value: closure_131_0(closure_131_2[13]).canReviewGuildMemberApplications(closure_130_0), done: true };
+                  return obj8;
+                } else if (closure_131_12.GUILD_HOME === tmp31) {
+                  let obj20 = closure_131_0(closure_131_2[14]);
+                  c5 = 3;
+                  const obj9 = { value: obj20.canSeeOnboardingHome(closure_130_0), done: true };
+                  return obj9;
+                } else if (closure_131_12.CHANNEL_BROWSER === tmp31) {
+                  let hasItem = null != guild;
+                  if (hasItem) {
+                    const features3 = guild.features;
+                    hasItem = features3.has(closure_131_9.COMMUNITY);
+                  }
+                  c5 = 3;
+                  let obj10 = { value: hasItem, done: true };
+                  return obj10;
+                } else if (closure_131_12.GUILD_ONBOARDING === tmp31) {
+                  c5 = 3;
+                  const obj11 = { value: closure_131_5.shouldShowOnboarding(closure_130_0), done: true };
+                  return obj11;
+                } else if (closure_131_12.CUSTOMIZE_COMMUNITY === tmp31) {
+                  let hasItem1 = null != guild;
+                  if (hasItem1) {
+                    const features2 = guild.features;
+                    hasItem1 = features2.has(closure_131_9.COMMUNITY);
+                  }
+                  c5 = 3;
+                  let obj12 = { value: hasItem1, done: true };
+                  return obj12;
+                } else if (closure_131_12.MEMBER_SAFETY === tmp31) {
+                  let obj15 = closure_131_0(closure_131_2[15]);
+                  c5 = 3;
+                  const obj13 = { value: obj15.canAccessMemberSafetyPage(closure_130_0), done: true };
+                  return obj13;
+                } else if (closure_131_12.GUILD_BOOSTS === tmp31) {
+                  c5 = 3;
+                  return { value: true, done: true };
+                } else if (closure_131_12.REPORT_TO_MOD === tmp31) {
+                  let tmp78 = null != guild;
+                  if (tmp78) {
+                    tmp78 = closure_131_1(closure_131_2[16])(guild);
+                  }
+                  c5 = 3;
+                  const obj14 = { value: tmp78, done: true };
+                  return obj14;
+                } else if (closure_131_12.GAME_SERVERS === tmp31) {
+                  obj12 = closure_131_0(closure_131_2[17]);
+                  let gameServerEnabled = obj12.getGameServerEnabled(closure_130_0, "isAccessibleChannelOrThreadPath");
+                  if (gameServerEnabled) {
+                    gameServerEnabled = null != guild;
+                  }
+                  if (gameServerEnabled) {
+                    const features = guild.features;
+                    gameServerEnabled = features.has(closure_131_9.GAME_SERVERS);
+                  }
+                  c5 = 3;
+                  obj15 = { value: gameServerEnabled, done: true };
+                  return obj15;
+                } else if (closure_131_12.GUILD_OFFICIAL_MESSAGES === tmp31) {
+                  obj10 = closure_131_0(closure_131_2[18]);
+                  c5 = 3;
+                  const obj16 = { value: obj10.isGuildOfficialMessagesEnabled(guild, "isAccessibleChannelOrThreadPath"), done: true };
+                  return obj16;
+                } else if (closure_131_12.GUILD_SPACE === tmp31) {
+                  obj8 = closure_131_0(closure_131_2[19]);
+                  c5 = 3;
+                  const obj17 = { value: obj8.canUseGuildSpace(guild, "isAccessibleChannelOrThreadPath"), done: true };
+                  return obj17;
+                } else {
+                  closure_131_0(closure_131_2[20]).assertNever(closure_130_1);
+                  const obj39 = closure_131_0(closure_131_2[20]);
+                }
+              }
+              channel2 = closure_131_6.getChannel(closure_130_1);
+              let tmp15 = null != channel2;
+              if (!tmp15) {
+                obj4 = closure_131_1(closure_131_2[21]);
+                c4 = 2;
+                c5 = 1;
+                const obj18 = { value: obj4.loadThread(closure_130_1), done: false };
+                return obj18;
+              }
+            }
           }
         } else {
-          try {
-            c5 = 2;
-            if (0 === channelGatedAndVisible) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let unsafeMutableRoles2 = tmp5;
-                let guild2 = tmp2;
-                let callback;
-                obj5 = undefined;
-                throwTypeErrorResult = callback;
-                ({ guildId: c0, channelId: obj5 } = callback);
-                guild2 = undefined;
-                unsafeMutableRoles2 = undefined;
-                channelGatedAndVisible = undefined;
-                channelGatedAndVisible = 1;
-                c5 = 1;
-                return { value: "PX_16", done: true };
-              }
-            } else {
-              if (1 === tmp5) {
-                if (arg0 === 1) {
-                  c5 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = arg1;
-                  return obj1;
-                } else {
-                  throwTypeErrorResult = guild2;
-                  throwTypeErrorResult = unsafeMutableRoles2;
-                  throwTypeErrorResult = guild;
-                  throwTypeErrorResult = callback;
-                  guild2 = guild.getGuild(callback);
-                  throwTypeErrorResult = unsafeMutableRoles;
-                  throwTypeErrorResult = callback;
-                  unsafeMutableRoles2 = unsafeMutableRoles.getUnsafeMutableRoles(callback);
-                  throwTypeErrorResult = guild2;
-                  throwTypeErrorResult = null;
-                  if (null == guild2) {
-                    if (callback !== closure_10) {
-                      if (obj5 !== constants2.GAME_SHOP) {
-                        c5 = 3;
-                        return { value: false, done: true };
-                      }
-                    }
-                  }
-                  if (null == obj5) {
-                    c5 = 3;
-                    return { value: true, done: true };
-                  } else {
-                    throwTypeErrorResult = guild2;
-                    throwTypeErrorResult = unsafeMutableRoles2;
-                    throwTypeErrorResult = callback2;
-                    throwTypeErrorResult = obj5;
-                    if (callback2(obj5)) {
-                      if (constants2.VIBEGRATIONS === obj5) {
-                        throwTypeErrorResult = guild2;
-                        throwTypeErrorResult = guild2;
-                        throwTypeErrorResult = null != guild2;
-                        if (throwTypeErrorResult) {
-                          throwTypeErrorResult = guild2;
-                          throwTypeErrorResult = unsafeMutableRoles2;
-                          throwTypeErrorResult = callback;
-                          throwTypeErrorResult = guild2;
-                          throwTypeErrorResult = guild2;
-                          throwTypeErrorResult = callback(guild2[8]).canAccessVibegrations(guild2, "isAccessibleChannelOrThreadPath");
-                          const obj34 = callback(guild2[8]);
-                        }
-                        c5 = 3;
-                        const obj2 = { value: null, done: true };
-                        obj2[0] = throwTypeErrorResult;
-                        return obj2;
-                      } else {
-                        throwTypeErrorResult = unsafeMutableRoles2;
-                        throwTypeErrorResult = constants2;
-                        if (constants2.ROLE_SUBSCRIPTIONS === tmp31) {
-                          throwTypeErrorResult = guild2;
-                          throwTypeErrorResult = unsafeMutableRoles2;
-                          throwTypeErrorResult = callback;
-                          throwTypeErrorResult = guild2;
-                          throwTypeErrorResult = callback;
-                          throwTypeErrorResult = unsafeMutableRoles2;
-                          c5 = 3;
-                          const obj3 = { value: null, done: true };
-                          obj3[0] = callback(guild2[9]).areRoleSubscriptionsVisibleInGuild(callback, unsafeMutableRoles2);
-                          return obj3;
-                        } else {
-                          throwTypeErrorResult = unsafeMutableRoles2;
-                          throwTypeErrorResult = constants2;
-                          if (constants2.SERVER_MONETIZATION_ONBOARDING === tmp31) {
-                            throwTypeErrorResult = guild2;
-                            throwTypeErrorResult = guild2;
-                            throwTypeErrorResult = null != guild2;
-                            if (throwTypeErrorResult) {
-                              throwTypeErrorResult = guild2;
-                              throwTypeErrorResult = unsafeMutableRoles2;
-                              throwTypeErrorResult = callback;
-                              throwTypeErrorResult = guild2;
-                              throwTypeErrorResult = guild2;
-                              throwTypeErrorResult = callback(guild2[10]).canUserSeeMonetizationOnboarding(guild2);
-                              const obj30 = callback(guild2[10]);
-                            }
-                            c5 = 3;
-                            let obj4 = { value: null, done: true };
-                            obj4[0] = throwTypeErrorResult;
-                            return obj4;
-                          } else {
-                            throwTypeErrorResult = unsafeMutableRoles2;
-                            throwTypeErrorResult = constants2;
-                            if (constants2.GAME_SHOP === tmp31) {
-                              throwTypeErrorResult = guild2;
-                              throwTypeErrorResult = unsafeMutableRoles2;
-                              throwTypeErrorResult = callback;
-                              throwTypeErrorResult = guild2;
-                              throwTypeErrorResult = guild2;
-                              obj5 = guild2;
-                              if (guild2 == null) {
-                                throwTypeErrorResult = guild2;
-                                obj5 = { id: null, type: "id-only" };
-                                throwTypeErrorResult = callback;
-                                obj5[0] = callback;
-                              }
-                              throwTypeErrorResult = obj5;
-                              c5 = 3;
-                              let obj6 = { value: null, done: true };
-                              obj6[0] = callback(guild2[11]).hasSocialLayerStorefront(obj5);
-                              return obj6;
-                            } else {
-                              throwTypeErrorResult = unsafeMutableRoles2;
-                              throwTypeErrorResult = constants2;
-                              if (constants2.GUILD_SHOP === tmp31) {
-                                throwTypeErrorResult = guild2;
-                                throwTypeErrorResult = unsafeMutableRoles2;
-                                throwTypeErrorResult = callback;
-                                throwTypeErrorResult = guild2;
-                                throwTypeErrorResult = guild2;
-                                throwTypeErrorResult = unsafeMutableRoles2;
-                                c5 = 3;
-                                const obj7 = { value: null, done: true };
-                                obj7[0] = callback(guild2[12]).isGuildShopVisibleInGuild(guild2, unsafeMutableRoles2);
-                                return obj7;
-                              } else {
-                                throwTypeErrorResult = unsafeMutableRoles2;
-                                throwTypeErrorResult = constants2;
-                                if (constants2.MEMBER_APPLICATIONS === tmp31) {
-                                  throwTypeErrorResult = guild2;
-                                  throwTypeErrorResult = unsafeMutableRoles2;
-                                  throwTypeErrorResult = callback;
-                                  throwTypeErrorResult = guild2;
-                                  throwTypeErrorResult = callback;
-                                  c5 = 3;
-                                  let obj8 = { value: null, done: true };
-                                  obj8[0] = callback(guild2[13]).canReviewGuildMemberApplications(callback);
-                                  return obj8;
-                                } else {
-                                  throwTypeErrorResult = unsafeMutableRoles2;
-                                  throwTypeErrorResult = constants2;
-                                  if (constants2.GUILD_HOME === tmp31) {
-                                    throwTypeErrorResult = guild2;
-                                    throwTypeErrorResult = unsafeMutableRoles2;
-                                    throwTypeErrorResult = callback;
-                                    throwTypeErrorResult = guild2;
-                                    let obj20 = callback(guild2[14]);
-                                    throwTypeErrorResult = callback;
-                                    c5 = 3;
-                                    const obj9 = { value: null, done: true };
-                                    obj9[0] = obj20.canSeeOnboardingHome(callback);
-                                    return obj9;
-                                  } else {
-                                    throwTypeErrorResult = unsafeMutableRoles2;
-                                    throwTypeErrorResult = constants2;
-                                    if (constants2.CHANNEL_BROWSER === tmp31) {
-                                      throwTypeErrorResult = guild2;
-                                      throwTypeErrorResult = guild2;
-                                      throwTypeErrorResult = null != guild2;
-                                      if (throwTypeErrorResult) {
-                                        throwTypeErrorResult = guild2;
-                                        throwTypeErrorResult = unsafeMutableRoles2;
-                                        throwTypeErrorResult = guild2;
-                                        const features3 = guild2.features;
-                                        throwTypeErrorResult = constants;
-                                        throwTypeErrorResult = features3.has(constants.COMMUNITY);
-                                      }
-                                      c5 = 3;
-                                      let obj10 = { value: null, done: true };
-                                      obj10[0] = throwTypeErrorResult;
-                                      return obj10;
-                                    } else {
-                                      throwTypeErrorResult = unsafeMutableRoles2;
-                                      throwTypeErrorResult = constants2;
-                                      if (constants2.GUILD_ONBOARDING === tmp31) {
-                                        c5 = 3;
-                                        const obj11 = { value: null, done: true };
-                                        obj11[0] = c5.shouldShowOnboarding(callback);
-                                        return obj11;
-                                      } else {
-                                        throwTypeErrorResult = unsafeMutableRoles2;
-                                        throwTypeErrorResult = constants2;
-                                        if (constants2.CUSTOMIZE_COMMUNITY === tmp31) {
-                                          let hasItem = null != guild2;
-                                          if (hasItem) {
-                                            const features2 = guild2.features;
-                                            hasItem = features2.has(constants.COMMUNITY);
-                                          }
-                                          c5 = 3;
-                                          let obj12 = { value: null, done: true };
-                                          obj12[0] = hasItem;
-                                          return obj12;
-                                        } else {
-                                          throwTypeErrorResult = unsafeMutableRoles2;
-                                          throwTypeErrorResult = constants2;
-                                          if (constants2.MEMBER_SAFETY === tmp31) {
-                                            let obj15 = callback(guild2[15]);
-                                            c5 = 3;
-                                            const obj13 = { value: null, done: true };
-                                            obj13[0] = obj15.canAccessMemberSafetyPage(callback);
-                                            return obj13;
-                                          } else {
-                                            throwTypeErrorResult = unsafeMutableRoles2;
-                                            throwTypeErrorResult = constants2;
-                                            if (constants2.GUILD_BOOSTS === tmp31) {
-                                              c5 = 3;
-                                              return { value: true, done: true };
-                                            } else {
-                                              throwTypeErrorResult = unsafeMutableRoles2;
-                                              throwTypeErrorResult = constants2;
-                                              if (constants2.REPORT_TO_MOD === tmp31) {
-                                                let tmp78 = null != guild2;
-                                                if (tmp78) {
-                                                  tmp78 = obj5(guild2[16])(guild2);
-                                                }
-                                                c5 = 3;
-                                                const obj14 = { value: null, done: true };
-                                                obj14[0] = tmp78;
-                                                return obj14;
-                                              } else {
-                                                throwTypeErrorResult = unsafeMutableRoles2;
-                                                throwTypeErrorResult = constants2;
-                                                if (constants2.GAME_SERVERS === tmp31) {
-                                                  obj12 = callback(guild2[17]);
-                                                  let gameServerEnabled = obj12.getGameServerEnabled(callback, "isAccessibleChannelOrThreadPath");
-                                                  if (gameServerEnabled) {
-                                                    gameServerEnabled = null != guild2;
-                                                  }
-                                                  if (gameServerEnabled) {
-                                                    const features = guild2.features;
-                                                    gameServerEnabled = features.has(constants.GAME_SERVERS);
-                                                  }
-                                                  c5 = 3;
-                                                  obj15 = { value: null, done: true };
-                                                  obj15[0] = gameServerEnabled;
-                                                  return obj15;
-                                                } else {
-                                                  throwTypeErrorResult = unsafeMutableRoles2;
-                                                  throwTypeErrorResult = constants2;
-                                                  if (constants2.GUILD_OFFICIAL_MESSAGES === tmp31) {
-                                                    obj10 = callback(guild2[18]);
-                                                    c5 = 3;
-                                                    const obj16 = { value: null, done: true };
-                                                    obj16[0] = obj10.isGuildOfficialMessagesEnabled(guild2, "isAccessibleChannelOrThreadPath");
-                                                    return obj16;
-                                                  } else {
-                                                    throwTypeErrorResult = unsafeMutableRoles2;
-                                                    throwTypeErrorResult = constants2;
-                                                    if (constants2.GUILD_SPACE === tmp31) {
-                                                      obj8 = callback(guild2[19]);
-                                                      c5 = 3;
-                                                      const obj17 = { value: null, done: true };
-                                                      obj17[0] = obj8.canUseGuildSpace(guild2, "isAccessibleChannelOrThreadPath");
-                                                      return obj17;
-                                                    } else {
-                                                      throwTypeErrorResult = guild2;
-                                                      throwTypeErrorResult = unsafeMutableRoles2;
-                                                      throwTypeErrorResult = callback;
-                                                      throwTypeErrorResult = guild2;
-                                                      throwTypeErrorResult = obj5;
-                                                      throwTypeErrorResult = callback(guild2[20]).assertNever(obj5);
-                                                      const obj39 = callback(guild2[20]);
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    channelGatedAndVisible = store.getChannel(obj5);
-                    let tmp15 = null != channelGatedAndVisible;
-                    if (!tmp15) {
-                      obj4 = obj5(guild2[21]);
-                      channelGatedAndVisible = 2;
-                      c5 = 1;
-                      const obj18 = { value: null, done: false };
-                      obj18[0] = obj4.loadThread(obj5);
-                      return obj18;
-                    }
-                  }
-                }
-              } else {
-                if (2 === tmp5) {
-                  if (arg0 === 1) {
-                    c5 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c5 = 3;
-                    const obj19 = { value: null, done: true };
-                    obj19[0] = arg1;
-                    return obj19;
-                  } else {
-                    throwTypeErrorResult = guild2;
-                    throwTypeErrorResult = unsafeMutableRoles2;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = obj5;
-                    throwTypeErrorResult = store.getChannel(obj5);
-                    channelGatedAndVisible = throwTypeErrorResult;
-                    throwTypeErrorResult = null;
-                    let tmp11 = null == throwTypeErrorResult;
-                    if (tmp11) {
-                      tmp11 = callback === closure_10;
-                    }
-                    if (tmp11) {
-                      obj1 = obj5(guild2[22]);
-                      channelGatedAndVisible = 3;
-                      c5 = 1;
-                      obj20 = { value: null, done: false };
-                      obj20[0] = obj1.openChannel(obj5);
-                      return obj20;
-                    }
-                  }
-                } else if (arg0 === 1) {
-                  c5 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  channelGatedAndVisible = arg1;
-                }
-                tmp15 = null != channelGatedAndVisible;
-              }
-              if (tmp15) {
-                obj6 = callback(guild2[23]);
-                let canViewChannelResult = obj6.canViewChannel(channelGatedAndVisible);
-                if (!canViewChannelResult) {
-                  canViewChannelResult = channelGatedAndVisible.isChannelGatedAndVisible(callback, obj5);
-                }
-                tmp15 = canViewChannelResult;
-              }
+          if (2 === tmp5) {
+            if (arg0 === 1) {
               c5 = 3;
-              const obj21 = { value: null, done: true };
-              obj21[0] = tmp15;
-              return obj21;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj19 = { value, done: true };
+              return obj19;
+            } else {
+              const channel = closure_131_6.getChannel(closure_130_1);
+              channel2 = channel;
+              let tmp11 = null == channel;
+              if (tmp11) {
+                tmp11 = closure_130_0 === closure_131_10;
+              }
+              if (tmp11) {
+                obj1 = closure_131_1(closure_131_2[22]);
+                c4 = 3;
+                c5 = 1;
+                obj20 = { value: obj1.openChannel(closure_130_1), done: false };
+                return obj20;
+              }
             }
-          } catch (throwTypeErrorResult) {
-            c5 = throwTypeErrorResult;
-            throw throwTypeErrorResult;
+          } else if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            channel2 = value;
           }
+          tmp15 = null != channel2;
         }
+        if (tmp15) {
+          obj6 = closure_131_0(closure_131_2[23]);
+          let canViewChannelResult = obj6.canViewChannel(channel2);
+          if (!canViewChannelResult) {
+            canViewChannelResult = closure_131_4.isChannelGatedAndVisible(closure_130_0, closure_130_1);
+          }
+          tmp15 = canViewChannelResult;
+        }
+        c5 = 3;
+        const obj21 = { value: tmp15, done: true };
+        return obj21;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp154) {
+      c5 = tmp;
+      throw tmp154;
+    }
   }
-  return applyArgumentsResult;
-}
-({ GuildFeatures: c9, ME: c10 } = ME);
-({ isStaticChannelRoute: unpackModuleId, StaticChannelRoute: closure_12 } = set);
-const result = set.fileFinishedImporting("modules/links/isAccessibleChannelOrThreadPath.tsx");
+};
+const Constants = fn(1074);
+({ GuildFeatures: closure_9, ME: c10 } = Constants);
+const ChannelConstants = fn(1964);
+({ isStaticChannelRoute: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/links/isAccessibleChannelOrThreadPath.tsx");
 
 export default function isAccessibleChannelOrThreadPath() {
   const self = this;
-  const apply = _isAccessibleChannelOrThreadPath.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

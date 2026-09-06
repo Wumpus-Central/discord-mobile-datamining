@@ -1,52 +1,53 @@
 // === Module 16249: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
 // Module 16249 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import getIsScreenLandscape from "getIsScreenLandscape" /* 5126 */;
-import Background from "Background" /* 7150 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import ME from "ME" /* 1074 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5126 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-({ GuildSettingsSections: error, GuildSettingsSubsections: closure_8 } = ME);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let closure_12 = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-createCacheKey = { container: null, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[2] = { marginTop: 16, alignItems: "center" };
-createCacheKey[3] = { marginTop: 24, textAlign: "center" };
-createCacheKey[4] = { marginTop: 12, textAlign: "center" };
-createCacheKey[5] = { marginTop: 32 };
-createCacheKey[6] = { marginBottom: 8 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
+fn(4560);
+let createStyles = { container: null, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
+createStyles.container = createStyles;
+createStyles.videoContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+createStyles.info = { marginTop: 16, alignItems: "center" };
+createStyles.title = { marginTop: 24, textAlign: "center" };
+createStyles.subtitle = { marginTop: 12, textAlign: "center" };
+createStyles.footer = { marginTop: 32 };
+createStyles.button = { marginBottom: 8 };
+let closure_13 = createStyles.createStyles(createStyles);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
 
 export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0) {
   ({ guildId: require, markAsDismissed } = arg0);
   dependencyMap = undefined;
-  let callback;
-  const tmp = callback4();
-  [tmp3, c2] = callback(React.useState(0), 2);
-  let obj = getIsScreenLandscape;
-  callback = obj.useIsScreenLandscape();
-  obj1 = defaultAreStatesEqual;
-  const items = [closure_6];
+  _slicedToArray = undefined;
+  const tmp = closure_13();
+  [tmp3, c2] = _slicedToArray(noop.useState(0), 2);
+  let obj = useIsScreenLandscape;
+  _slicedToArray = obj.useIsScreenLandscape();
+  let obj1 = useStateFromStores;
+  const items = [AccessibilityStore];
   const items1 = [markAsDismissed];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const effect = React.useEffect(() => () => callback(closure_1_9.UNKNOWN), items1);
+  const effect = noop.useEffect(() => () => markAsDismissed(constants.UNKNOWN), items1);
   obj = { startExpanded: true, children: null };
   obj = {
     style: tmp.container,
@@ -56,50 +57,52 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
       if (closure_3) {
         result = diff / 2;
       }
-      c2(result);
+      _undefined(result);
     },
     children: null
   };
   obj1 = { accessibilityRole: "image", accessibilityLabel: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj1[1] = intl.string(getSystemLocale.t.gCgirr);
-  obj1[2] = callback2(markAsDismissed(8307), { style: tmp.videoContainer, src: closure_12, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true });
-  const items2 = [callback2(View, obj1), , ];
-  const obj3 = { style: tmp.info, children: null };
-  const obj4 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj4[3] = intl2.string(getSystemLocale.t.gCgirr);
-  const items3 = [callback2(Text.Text, obj4), ];
-  const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
-  const intl3 = getSystemLocale.intl;
-  obj5[3] = intl3.string(getSystemLocale.t.fLMZFw);
-  items3[1] = callback2(Text.Text, obj5);
-  obj3[1] = items3;
-  items2[1] = callback3(View, obj3);
-  const obj6 = { style: items4, children: null };
-  items4 = [tmp.footer];
-  const obj7 = { style: tmp.button, children: null };
-  const obj8 = { text: null, onPress: null };
-  const intl4 = getSystemLocale.intl;
-  obj8[0] = intl4.string(getSystemLocale.t.BQq86h);
-  obj8[1] = function onPress() {
-    markAsDismissed(_undefined[16]).open(closure_0, closure_1_7.ROLE_SUBSCRIPTIONS_TIERS, undefined, closure_1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
-    markAsDismissed(closure_1_9.UNKNOWN);
+  const intl = util.intl;
+  obj1.accessibilityLabel = intl.string(util.t.gCgirr);
+  const size = { style: tmp.videoContainer, src, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true };
+  obj1.children = closure_10(markAsDismissed(8307), size);
+  const items2 = [closure_10(View, obj1), , ];
+  const obj2 = { style: tmp.info, children: null };
+  const obj3 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };
+  const intl2 = util.intl;
+  obj3.children = intl2.string(util.t.gCgirr);
+  const items3 = [closure_10(Text_Text.Text, obj3), ];
+  const obj4 = { variant: "text-md/normal", color: "text-default", style: tmp.subtitle, children: null };
+  const intl3 = util.intl;
+  obj4.children = intl3.string(util.t.fLMZFw);
+  items3[1] = closure_10(Text_Text.Text, obj4);
+  obj2.children = items3;
+  items2[1] = closure_11(View, obj2);
+  const obj5 = { style: null, children: null };
+  const items4 = [tmp.footer];
+  obj5.style = items4;
+  const obj6 = { style: tmp.button, children: null };
+  const obj7 = { text: null, onPress: null };
+  const intl4 = util.intl;
+  obj7.text = intl4.string(util.t.BQq86h);
+  obj7.onPress = function onPress() {
+    GuildSettingsActionCreatorsDefault.open(require, constants.ROLE_SUBSCRIPTIONS_TIERS, undefined, constants2.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+    markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  obj7[1] = callback2(Button.Button, obj8);
-  const items5 = [callback2(View, obj7), ];
-  const obj9 = { style: tmp.button, children: null };
-  const obj10 = { text: null, onPress: null, variant: "secondary" };
-  const intl5 = getSystemLocale.intl;
-  obj10[0] = intl5.string(getSystemLocale.t.WAI6xu);
-  obj10[1] = function onPress() {
+  obj6.children = closure_10(components_Button_Button.Button, obj7);
+  const items5 = [closure_10(View, obj6), ];
+  const obj8 = { style: tmp.button, children: null };
+  const obj9 = { text: null, onPress: null, variant: "secondary" };
+  const intl5 = util.intl;
+  obj9.text = intl5.string(util.t.WAI6xu);
+  obj9.onPress = function onPress() {
     return markAsDismissed(_undefined[17]).hideActionSheet();
   };
-  obj9[1] = callback2(Button.Button, obj10);
-  items5[1] = callback2(View, obj9);
-  obj6[1] = items5;
-  items2[2] = callback3(View, obj6);
-  obj[2] = items2;
-  obj[1] = callback3(View, obj);
-  return callback2(Background.BottomSheet, obj);
+  obj8.children = closure_10(components_Button_Button.Button, obj9);
+  items5[1] = closure_10(View, obj8);
+  obj5.children = items5;
+  items2[2] = closure_11(View, obj5);
+  obj.children = items2;
+  obj.children = closure_11(View, obj);
+  return closure_10(Sheet_BottomSheet.BottomSheet, obj);
 };

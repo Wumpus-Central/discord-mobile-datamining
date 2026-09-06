@@ -1,14 +1,14 @@
-// === Module 1883: parseSkuIdFromServerData ===
+// === Module 1883: CollectiblesAssetUtils ===
 
-// Module 1883 (parseSkuIdFromServerData)
-import set from "set" /* 2 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1882 */;
+// Module 1883 (CollectiblesAssetUtils)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import mappers from "mappers" /* 1882 */;
+import size from "module_2" /* 2 */;
 
 let c2 = "media/v1/collectibles-shop";
-let result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");
+let result = size.fileFinishedImporting("modules/collectibles/utils/CollectiblesAssetUtils.tsx");
 
-export const parseSkuIdFromServerData = parseSkuIdFromServerData.parseSkuIdFromServerData;
+export const parseSkuIdFromServerData = mappers.parseSkuIdFromServerData;
 export const CollectiblesItemAssetFormat = { ANIMATED: "animated", STATIC: "static", VIDEO: "video" };
 export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(arg0) {
   ({ skuId, assetFormat, assetId } = arg0);
@@ -17,7 +17,7 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
   } else {
     let _HermesInternal = globalThis;
     const _Boolean = Boolean;
-    const result = isDiscordFrontendDevelopment.isDiscordBackendDevelopment();
+    const result = GlobalUtils.isDiscordBackendDevelopment();
     let str = Boolean(assetId);
     if (result) {
       let str9 = "";
@@ -36,6 +36,5 @@ export const getCollectiblesItemAssetUrl = function getCollectiblesItemAssetUrl(
       const _HermesInternal3 = HermesInternal;
       combined = "https://cdn.discordapp.com/" + tmp4 + "/" + skuId + "/" + str3 + assetFormat;
     }
-    const obj = isDiscordFrontendDevelopment;
   }
 };

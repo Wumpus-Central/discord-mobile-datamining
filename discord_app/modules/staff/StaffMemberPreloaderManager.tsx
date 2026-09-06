@@ -1,10 +1,9 @@
-// === Module 17488: prototype ===
+// === Module 17488: StaffMemberPreloaderManager ===
 
-// Module 17488 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17488 (StaffMemberPreloaderManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
-initializeDefault;
+let require = fn;
 let prototype = function StaffMemberPreloaderManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -14,13 +13,14 @@ let prototype = function StaffMemberPreloaderManager() {
     }
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-    applyArgumentsResult(table[1]).preloadStaffMembers();
+    applyArgumentsResult(dependencyMap[1]).preloadStaffMembers();
   };
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/staff/StaffMemberPreloaderManager.tsx");
 
 export default prototype;

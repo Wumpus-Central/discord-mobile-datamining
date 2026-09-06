@@ -1,12 +1,12 @@
 // === Module 8230: useUserProfileBannerHeight ===
 
 // Module 8230 (useUserProfileBannerHeight)
-import set from "set" /* 2 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
+import Constants from "Constants" /* 7208 */;
+import size from "module_2" /* 2 */;
 
-const BANNER_ASPECT_RATIO = ARBITRARY_LARGE_OFFSET.BANNER_ASPECT_RATIO;
-const result = set.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");
+const BANNER_ASPECT_RATIO = Constants.BANNER_ASPECT_RATIO;
+const result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileBannerHeight.tsx");
 
 export default function useUserProfileBannerHeight(arg0) {
   const width = useWindowDimensionsDefault().width;

@@ -1,20 +1,20 @@
-// === Module 15248: pressable ===
+// === Module 15248: InputModeSetting ===
 
-// Module 15248 (pressable)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import { InputModes } from "DesktopSources" /* 4585 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15248 (InputModeSetting)
+import util from "util" /* 1114 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+const InputModes = fn(4585).InputModes;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["pS+K2L"]);
+    const intl = util.intl;
+    return intl.string(util.t["pS+K2L"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   useTrailing: function useInputModeSettingTrailing() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     if (obj.useStateFromStores(items, () => mode.getMode()) === InputModes.PUSH_TO_TALK) {
       const intl2 = tmp(1114).intl;
       let stringResult = intl2.string(tmp(1114).t.Q8gkVL);
@@ -24,14 +24,15 @@ createToggle = {
     }
     return stringResult;
   },
-  onPress: require("handleInputModePress").handleInputModePress,
+  onPress: fn(9983).handleInputModePress,
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.nuFtHH)];
+    const intl = util.intl;
+    const items = [intl.string(util.t.nuFtHH)];
     return items;
   }
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InputModeSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/InputModeSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

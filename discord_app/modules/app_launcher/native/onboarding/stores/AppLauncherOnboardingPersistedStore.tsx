@@ -1,11 +1,11 @@
-// === Module 12044: initialize ===
+// === Module 12044: AppLauncherOnboardingPersistedStore ===
 
-// Module 12044 (initialize)
+// Module 12044 (AppLauncherOnboardingPersistedStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let obj = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };
-let closure_1 = { lastSeenTimeMs: null, triggeredOnboardingContentMetadata: obj };
+let triggeredOnboardingContentMetadata = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };
+let closure_1 = { lastSeenTimeMs: null, triggeredOnboardingContentMetadata };
 const PersistedStore = initializeDefault.PersistedStore;
 class AppLauncherOnboardingPersistedStore extends PersistedStore {
 }
@@ -35,18 +35,18 @@ const items = [
     if (lastSeenTimeMs == null) {
       lastSeenTimeMs = null;
     }
-    obj = { lastSeenTimeMs, triggeredOnboardingContentMetadata: null };
+    triggeredOnboardingContentMetadata = { lastSeenTimeMs, triggeredOnboardingContentMetadata: null };
     let canShowBotsBanner;
     if (lastSeenTimeMs != null) {
-      const triggeredOnboardingContentMetadata = lastSeenTimeMs.triggeredOnboardingContentMetadata;
+      triggeredOnboardingContentMetadata = lastSeenTimeMs.triggeredOnboardingContentMetadata;
       if (triggeredOnboardingContentMetadata != null) {
         canShowBotsBanner = triggeredOnboardingContentMetadata.canShowBotsBanner;
       }
     }
     if (canShowBotsBanner == null) {
-      canShowBotsBanner = obj.canShowBotsBanner;
+      canShowBotsBanner = triggeredOnboardingContentMetadata.canShowBotsBanner;
     }
-    obj = { canShowBotsBanner, canShowAppsOrActivitiesBanner: null, willShowGlobalSearchOnboarding: null, timeMs: null, channelId: null };
+    triggeredOnboardingContentMetadata = { canShowBotsBanner, canShowAppsOrActivitiesBanner: null, willShowGlobalSearchOnboarding: null, timeMs: null, channelId: null };
     let prop;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata2 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -55,9 +55,9 @@ const items = [
       }
     }
     if (prop == null) {
-      prop = obj.canShowAppsOrActivitiesBanner;
+      prop = triggeredOnboardingContentMetadata.canShowAppsOrActivitiesBanner;
     }
-    obj[1] = prop;
+    triggeredOnboardingContentMetadata.canShowAppsOrActivitiesBanner = prop;
     let prop1;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata3 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -66,9 +66,9 @@ const items = [
       }
     }
     if (prop1 == null) {
-      prop1 = obj.willShowGlobalSearchOnboarding;
+      prop1 = triggeredOnboardingContentMetadata.willShowGlobalSearchOnboarding;
     }
-    obj[2] = prop1;
+    triggeredOnboardingContentMetadata.willShowGlobalSearchOnboarding = prop1;
     let timeMs;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata4 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -77,9 +77,9 @@ const items = [
       }
     }
     if (timeMs == null) {
-      timeMs = obj.timeMs;
+      timeMs = triggeredOnboardingContentMetadata.timeMs;
     }
-    obj[3] = timeMs;
+    triggeredOnboardingContentMetadata.timeMs = timeMs;
     let channelId;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata5 = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -88,15 +88,15 @@ const items = [
       }
     }
     if (channelId == null) {
-      channelId = obj.channelId;
+      channelId = triggeredOnboardingContentMetadata.channelId;
     }
-    obj[4] = channelId;
-    obj[1] = obj;
-    return obj;
+    triggeredOnboardingContentMetadata.channelId = channelId;
+    triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata = triggeredOnboardingContentMetadata;
+    return triggeredOnboardingContentMetadata;
   }
 ];
 AppLauncherOnboardingPersistedStore.migrations = items;
-obj = {
+triggeredOnboardingContentMetadata = {
   APP_LAUNCHER_ONBOARDING_SET_LAST_SEEN_TIME_MS: function handleSetLastSeenTimeMs() {
     closure_1.lastSeenTimeMs = Date.now();
   },
@@ -104,7 +104,8 @@ obj = {
     closure_1.triggeredOnboardingContentMetadata = triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata;
   }
 };
-const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx");
+const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(DispatcherDefault, triggeredOnboardingContentMetadata);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx");
 
 export default appLauncherOnboardingPersistedStore;

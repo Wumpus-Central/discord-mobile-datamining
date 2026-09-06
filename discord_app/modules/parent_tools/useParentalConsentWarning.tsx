@@ -2,12 +2,13 @@
 
 // Module 14866 (useParentalConsentWarning)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "initialize" /* 14867 */;
+import ParentalConsentWarningStore from "ParentalConsentWarningStore" /* 14867 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/useParentalConsentWarning.tsx");
 
 export const useParentalConsentWarning = function useParentalConsentWarning() {
-  const items = [closure_2];
+  const items = [ParentalConsentWarningStore];
   return initialize.useStateFromStores(items, () => warning.getWarning());
 };

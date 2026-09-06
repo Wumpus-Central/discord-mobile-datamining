@@ -1,38 +1,25 @@
-// === Module 15322: toggle ===
+// === Module 15322: ExactSearchResultCountsSetting ===
 
-// Module 15322 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15322 (ExactSearchResultCountsSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aP91Ud);
+    const intl = util.intl;
+    return intl.string(util.t.aP91Ud);
   },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.SearchResultExactCountEnabled.useSetting,
-  onValueChange: explicitContentFromProto.SearchResultExactCountEnabled.updateSetting,
+  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
+  useValue: UserSettings.SearchResultExactCountEnabled.useSetting,
+  onValueChange: UserSettings.SearchResultExactCountEnabled.updateSetting,
   useDescription: function useSearchResultExactCountDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.qx4cha);
+    const intl = util.intl;
+    return intl.string(util.t.qx4cha);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aP91Ud);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  useValue: explicitContentFromProto.SearchResultExactCountEnabled.useSetting,
-  onValueChange: explicitContentFromProto.SearchResultExactCountEnabled.updateSetting,
-  useDescription: function useSearchResultExactCountDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.qx4cha);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ExactSearchResultCountsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ExactSearchResultCountsSetting.tsx");
 
 export default toggle;

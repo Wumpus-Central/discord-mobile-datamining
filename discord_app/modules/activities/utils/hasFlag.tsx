@@ -1,14 +1,14 @@
 // === Module 7313: hasFlag ===
 
 // Module 7313 (hasFlag)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import hasFlag from "hasFlag" /* 1384 */;
+import Constants from "Constants" /* 1074 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import size from "module_2" /* 2 */;
 
-const ActivityFlags = ME.ActivityFlags;
-const result = set.fileFinishedImporting("modules/activities/utils/hasFlag.tsx");
+const ActivityFlags = Constants.ActivityFlags;
+const result = size.fileFinishedImporting("modules/activities/utils/hasFlag.tsx");
 
-export default function hasFlag(flags) {
+export default function hasFlag(flags, arg1) {
   let tmp = arg1 !== ActivityFlags.INSTANCE;
   if (tmp) {
     let hasFlagResult = null != flags && null != flags.flags;
@@ -17,8 +17,7 @@ export default function hasFlag(flags) {
       if (num == null) {
         num = 0;
       }
-      hasFlagResult = hasFlag.hasFlag(num, arg1);
-      const obj = hasFlag;
+      hasFlagResult = FlagUtils.hasFlag(num, arg1);
     }
     tmp = hasFlagResult;
   }

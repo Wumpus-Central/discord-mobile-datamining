@@ -1,12 +1,12 @@
-// === Module 1928: set ===
+// === Module 1928: DOMUtils ===
 
-// Module 1928 (set)
-import set from "set" /* 2 */;
+// Module 1928 (DOMUtils)
+import size from "module_2" /* 2 */;
 
 const re0 = /input/i;
 const re1 = /textarea/i;
-let set = new Set(["text", "password", "number", "date", "datetime-local", "time", "week", "month", "email", "search", "tel", "url"]);
-let result = set.fileFinishedImporting("../discord_common/js/shared/utils/DOMUtils.tsx");
+const set = new Set(["text", "password", "number", "date", "datetime-local", "time", "week", "month", "email", "search", "tel", "url"]);
+let result = size.fileFinishedImporting("../discord_common/js/shared/utils/DOMUtils.tsx");
 
 export const isElement = function isElement(ownerDocument, name) {
   if (null == ownerDocument) {
@@ -33,8 +33,8 @@ export const isElement = function isElement(ownerDocument, name) {
     }
   }
 };
-export const cssValueToNumber = function cssValueToNumber(joined) {
-  const parsed = parseInt(joined, 10);
+export const cssValueToNumber = function cssValueToNumber(match) {
+  const parsed = parseInt(match, 10);
   let num = 0;
   if (!isNaN(parsed)) {
     num = parsed;
@@ -46,10 +46,10 @@ export const isInputLikeElement = function isInputLikeElement(getAttribute) {
     return false;
   } else if ("true" === getAttribute.getAttribute("contenteditable")) {
     return true;
-  } else if (regex2.test(getAttribute.tagName)) {
+  } else if (re1.test(getAttribute.tagName)) {
     return true;
   } else {
-    if (regex.test(getAttribute.tagName)) {
+    if (re0.test(getAttribute.tagName)) {
       let str2 = getAttribute.getAttribute("type");
       if (str2 == null) {
         str2 = "text";
@@ -98,7 +98,7 @@ export const clickedOnVisibleImage = function clickedOnVisibleImage(arg0, arg1, 
   }
   return tmp6;
 };
-export const getParentElementByClassName = function getParentElementByClassName(parentElement) {
+export const getParentElementByClassName = function getParentElementByClassName(parentElement, arg1) {
   parentElement = parentElement.parentElement;
   if (null != parentElement) {
     const classList = parentElement.classList;
@@ -109,7 +109,7 @@ export const getParentElementByClassName = function getParentElementByClassName(
   }
   return null;
 };
-export const getParentElementByAttribute = function getParentElementByAttribute(parentElement) {
+export const getParentElementByAttribute = function getParentElementByAttribute(parentElement, arg1) {
   parentElement = parentElement.parentElement;
   if (null != parentElement) {
     while (null == parentElement.getAttribute(arg1)) {

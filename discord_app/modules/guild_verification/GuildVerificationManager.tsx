@@ -1,13 +1,13 @@
-// === Module 17377: handleInviteData ===
+// === Module 17377: GuildVerificationManager ===
 
-// Module 17377 (handleInviteData)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import hasFlag from "hasFlag" /* 1384 */;
-import initializeDefault from "initialize" /* 7118 */;
-import set2 from "set" /* 8392 */;
-import _modDef12934 from "module_12934" /* 12934 */;
-import inviteGuildHasPendingMemberDisabledVerification from "inviteGuildHasPendingMemberDisabledVerification" /* 12935 */;
+// Module 17377 (GuildVerificationManager)
+import Constants from "Constants" /* 1074 */;
+import FlagUtils from "FlagUtils" /* 1384 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8392 */;
+import HubUtilsDefault from "HubUtils" /* 12934 */;
+import GuildVerificationUtils from "GuildVerificationUtils" /* 12935 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import size from "module_2" /* 2 */;
 
 function handleInviteData(invite) {
   const guild = invite.invite.guild;
@@ -24,34 +24,29 @@ function handleInviteData(invite) {
       }
     }
     if (hasItem) {
-      _modDef12934.onOpenHubInvite(invite.invite);
-      const obj5 = _modDef12934;
+      HubUtilsDefault.onOpenHubInvite(invite.invite);
     }
   }
   let new_member = invite.invite.new_member;
   if (new_member) {
-    let hasFlagResult = hasFlag.hasFlag(num, set2.GuildInviteFlags.IS_GUEST_INVITE);
+    let hasFlagResult = FlagUtils.hasFlag(num, GuildInviteFlags.GuildInviteFlags.IS_GUEST_INVITE);
     if (!hasFlagResult) {
       hasFlagResult = tmp3(1384).hasFlag(num, tmp3(8392).GuildInviteFlags.IS_APPLICATION_BYPASS);
       const tmp3Result = tmp3(1384);
     }
     new_member = !hasFlagResult;
-    const obj = hasFlag;
   }
   if (new_member) {
     new_member = null != guild;
   }
   if (new_member) {
-    new_member = inviteGuildHasPendingMemberDisabledVerification.inviteGuildHasPendingMemberDisabledVerification(guild);
-    const obj3 = inviteGuildHasPendingMemberDisabledVerification;
+    new_member = GuildVerificationUtils.inviteGuildHasPendingMemberDisabledVerification(guild);
   }
   if (new_member) {
-    const result = inviteGuildHasPendingMemberDisabledVerification.openVerificationModalOrTransitionToApplication(guild.id);
-    const obj4 = inviteGuildHasPendingMemberDisabledVerification;
+    const result = GuildVerificationUtils.openVerificationModalOrTransitionToApplication(guild.id);
   }
 }
-const GuildFeatures = ME.GuildFeatures;
-initializeDefault;
+const GuildFeatures = Constants.GuildFeatures;
 let prototype = function GuildVerificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { INVITE_ACCEPT_SUCCESS: handleInviteData };
@@ -60,6 +55,6 @@ let prototype = function GuildVerificationManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
+let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationManager.tsx");
 
 export default prototype;

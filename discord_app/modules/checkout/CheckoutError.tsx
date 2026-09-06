@@ -1,18 +1,17 @@
-// === Module 11442: prototype ===
+// === Module 11442: CheckoutError ===
 
-// Module 11442 (prototype)
-import set from "set" /* 2 */;
-import prototype2 from "prototype" /* 11443 */;
+// Module 11442 (CheckoutError)
+import RevenueError2 from "RevenueError" /* 11443 */;
+import size from "module_2" /* 2 */;
 
-const RevenueError = prototype2.RevenueError;
+const RevenueError = RevenueError2.RevenueError;
 const prototype = function CheckoutError(arg0) {
   tmp = new tmp(arg0, new.target);
-  // ThrowIfThisInitialized (0x7c)
   tmp.name = "FatalCheckoutError";
   return tmp;
 }.prototype;
 class prototype extends RevenueError {
 }
-const result = set.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
+const result = size.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
 
 export const CheckoutError = prototype;

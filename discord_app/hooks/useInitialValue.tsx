@@ -1,10 +1,11 @@
 // === Module 5598: useInitialValue ===
 
 // Module 5598 (useInitialValue)
-import closure_0 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("hooks/useInitialValue.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useInitialValue.tsx");
 
 export default function useInitialValue(arg0) {
-  return React.useState(arg0)[0];
+  return noop.useState(arg0)[0];
 };

@@ -1,44 +1,45 @@
-// === Module 9708: ? ===
+// === Module 9708: EditGuildEventStepContainer ===
 
-// Module 9708
-import ThemesDefault from "Themes" /* 576 */;
+// Module 9708 (EditGuildEventStepContainer)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-let c3 = importAllResult;
-({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: null, flex: null, scroller: null, buttonContainer: null };
-obj = { flex: 1, paddingHorizontal: 0, paddingVertical: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%" };
-obj[0] = obj;
-obj[1] = { flex: 1 };
-obj[2] = { paddingHorizontal: 16 };
-createCacheKey = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[3] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  importDefault = undefined;
+obj = { flex: 1, paddingHorizontal: 0, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%" };
+obj.container = obj;
+obj.flex = { flex: 1 };
+obj.scroller = { paddingHorizontal: 16 };
+const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+obj.buttonContainer = rect;
+let closure_8 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventStepContainer.tsx");
+
+export default noop.forwardRef((arg0, ref) => {
   ({ children, action } = arg0);
-  const tmp = callback4();
-  const tmp2 = callback(importAllResult.useState(32), 2);
-  importDefault = tmp2[1];
+  const tmp = closure_8();
+  const tmp2 = _slicedToArray(noop.useState(32), 2);
+  closure_0 = tmp2[1];
   const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   let obj = { style: tmp.container, children: null };
-  obj = { ref, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", style: items, contentContainerStyle: tmp.scroller, children };
-  items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
-  callback = importAllResult.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.height);
+  obj = { ref, automaticallyAdjustContentInsets: false, keyboardShouldPersistTaps: "handled", style: null, contentContainerStyle: tmp.scroller, children };
+  const items = [tmp.flex, { marginBottom: tmp2[0] + insets.bottom }];
+  obj.style = items;
+  const callback = noop.useCallback((nativeEvent) => {
+    closure_0(nativeEvent.nativeEvent.layout.height);
   }, []);
-  const items1 = [callback2(closure_5, obj), ];
+  const items1 = [timestampProducer(hasOwnProperty, obj), ];
+  obj = { style: null, onLayout: callback, children: action };
   const items2 = [tmp.buttonContainer, { paddingBottom: insets.bottom }];
-  items1[1] = callback2(closure_4, { style: items2, onLayout: callback, children: action });
-  obj[1] = items1;
-  return callback3(closure_4, obj);
+  obj.style = items2;
+  items1[1] = timestampProducer(React4, obj);
+  obj.children = items1;
+  return React5(React4, obj);
 });
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventStepContainer.tsx");
-
-export default forwardRefResult;

@@ -1,15 +1,15 @@
 // === Module 9629: mediaEngineContextFromParticipantType ===
 
 // Module 9629 (mediaEngineContextFromParticipantType)
-import set from "set" /* 2 */;
-import ParticipantTypes2 from "ParticipantTypes" /* 4581 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import CallConstants from "CallConstants" /* 4581 */;
+import Constants from "Constants" /* 4585 */;
+import size from "module_2" /* 2 */;
 
-const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
-const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
+const ParticipantTypes = CallConstants.ParticipantTypes;
+const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
 let closure_0 = Object.freeze({ [ParticipantTypes.STREAM]: MediaEngineContextTypes.STREAM, [ParticipantTypes.HIDDEN_STREAM]: MediaEngineContextTypes.STREAM, [ParticipantTypes.USER]: MediaEngineContextTypes.DEFAULT, [ParticipantTypes.ACTIVITY]: MediaEngineContextTypes.DEFAULT });
-const result = set.fileFinishedImporting("modules/calls/mediaEngineContextFromParticipantType.tsx");
+const result = size.fileFinishedImporting("modules/calls/mediaEngineContextFromParticipantType.tsx");
 
 export default function mediaEngineContextFromParticipantType(arg0) {
-  return table[arg0];
+  return closure_0[arg0];
 };

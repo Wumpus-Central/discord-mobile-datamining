@@ -1,181 +1,150 @@
-// === Module 9572: _installApplicationOnDemandIfNeeded ===
+// === Module 9572: installApplicationOnDemandIfNeeded ===
 
-// Module 9572 (_installApplicationOnDemandIfNeeded)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "createExecutable" /* 1918 */;
-import closure_4 from "addApplication" /* 4788 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 9572 (installApplicationOnDemandIfNeeded)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
 
-const require = arg1;
-function _installApplicationOnDemandIfNeeded() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (application === 2) {
-        application = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+const require = fn;
+let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          dependencyMap = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ applicationId: closure_129_0, channel: closure_129_1, commandIntegrationTypes: closure_129_2, appLauncherContext: closure_129_3 } = closure_0);
+          let application;
+          closure_129_5 = undefined;
+          let USER_INSTALL;
+          closure_129_7 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          application = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              application = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              application = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c2 = tmp5;
-              dependencyMap = tmp2;
-              let callback;
-              dependencyMap = undefined;
-              c2 = undefined;
-              c3 = undefined;
-              ({ applicationId: c0, channel: c1, commandIntegrationTypes: c2, appLauncherContext: c3 } = callback);
-              application = undefined;
-              obj = undefined;
-              let USER_INSTALL;
-              let scopes;
-              c3 = 1;
-              application = 1;
-              return { value: "PX_16", done: true };
-            }
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                application = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                application = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                let obj2 = { applicationId: null, channel: null, commandIntegrationTypes: null };
-                obj2[0] = callback;
-                obj2[1] = dependencyMap;
-                obj2[2] = c2;
-                if (obj11.shouldInstallApplicationOnDemand(obj2)) {
-                  application = application.getApplication(callback);
-                  if (null == application) {
-                    let obj5 = callback(7163);
-                    c3 = 2;
-                    application = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = obj5.fetchApplication(callback);
-                    return obj3;
-                  }
-                } else {
-                  application = 3;
-                  const obj4 = { value: null, done: true };
-                  obj4[0] = Promise.resolve({ isAuthorized: true });
-                  return obj4;
-                }
-                obj11 = callback(9418);
+            let obj2 = { applicationId: closure_129_0, channel: closure_129_1, commandIntegrationTypes: closure_129_2 };
+            if (obj11.shouldInstallApplicationOnDemand(obj2)) {
+              application = closure_130_4.getApplication(closure_129_0);
+              if (null == application) {
+                let obj5 = closure_130_0(closure_130_1[5]);
+                c3 = 2;
+                c4 = 1;
+                const obj3 = { value: obj5.fetchApplication(closure_129_0), done: false };
+                return obj3;
               }
-            } else if (arg0 === 1) {
-              application = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              application = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
             } else {
-              obj = arg1;
-              application = c3.createFromServer(obj);
+              c4 = 3;
+              const obj4 = { value: Promise.resolve({ isAuthorized: true }), done: true };
+              return obj4;
             }
-            USER_INSTALL = callback(9245).ApplicationIntegrationType.USER_INSTALL;
-            scopes = undefined;
-            if (application != null) {
-              const integrationTypesConfig = application.integrationTypesConfig;
-              if (integrationTypesConfig != null) {
-                if (integrationTypesConfig[USER_INSTALL] != null) {
-                  const oauth2InstallParams = tmp25.oauth2InstallParams;
-                  if (oauth2InstallParams != null) {
-                    scopes = oauth2InstallParams.scopes;
-                  }
-                }
+            obj11 = closure_130_0(closure_130_1[4]);
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_129_5 = value;
+          application = closure_130_3.createFromServer(closure_129_5);
+        }
+        USER_INSTALL = closure_130_0(closure_130_1[6]).ApplicationIntegrationType.USER_INSTALL;
+        let scopes;
+        if (application != null) {
+          const integrationTypesConfig = application.integrationTypesConfig;
+          if (integrationTypesConfig != null) {
+            if (integrationTypesConfig[USER_INSTALL] != null) {
+              const oauth2InstallParams = tmp25.oauth2InstallParams;
+              if (oauth2InstallParams != null) {
+                scopes = oauth2InstallParams.scopes;
               }
             }
-            if (null != c3) {
-              obj2 = callback(4740);
-              obj5 = { application_id: null, location: null, section_name: null, source: null };
-              obj5[0] = callback;
-              obj5[1] = c3.location;
-              obj5[2] = c3.sectionName;
-              obj5[3] = c3.entrypoint;
-              obj2.trackWithMetadata(obj.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj5);
-            }
-            const promise = new Promise((arg0) => {
-              closure_0 = arg0;
-              let obj = _undefined(_undefined2[8]);
-              obj.dismissKeyboard();
-              obj = {
-                clientId: closure_0,
-                integrationType: USER_INSTALL,
-                scopes,
-                callback(location) {
-                  if (null != location.location) {
-                    if (null != closure_1_3) {
-                      let obj = callback(table[7]);
-                      obj = { application_id: null, location: null, section_name: null, source: null };
-                      obj[0] = callback;
-                      ({ location: obj2[1], sectionName: obj2[2], entrypoint: obj2[3] } = tmp3);
-                      obj.trackWithMetadata(obj.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
-                    }
-                    callback({ isAuthorized: true });
-                    tmp3 = closure_1_3;
-                  } else {
-                    callback({ isAuthorized: false });
-                  }
-                }
-              };
-              _undefined(_undefined2[9]).openOAuth2Modal(obj);
-            });
-            application = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = promise;
-            return obj6;
           }
-        } catch (tmp50) {
-          application = tmp;
-          throw tmp50;
         }
+        closure_129_7 = scopes;
+        if (null != closure_129_3) {
+          obj2 = closure_130_0(closure_130_1[7]);
+          obj5 = { application_id: closure_129_0, location: closure_129_3.location, section_name: closure_129_3.sectionName, source: closure_129_3.entrypoint };
+          obj2.trackWithMetadata(closure_130_5.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj5);
+        }
+        const promise = new Promise((arg0) => {
+          const clientId = arg0;
+          let obj = closure_1_0(4425);
+          obj.dismissKeyboard();
+          obj = {
+            clientId,
+            integrationType,
+            scopes,
+            callback(location) {
+              if (null != location.location) {
+                if (null != closure_2_3) {
+                  closure_0(closure_1[7]);
+                  const obj = { application_id, location: null, section_name: null, source: null };
+                  ({ location: obj2.location, sectionName: obj2.section_name, entrypoint: obj2.source } = tmp3);
+                  obj.trackWithMetadata(closure_3_5.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
+                }
+                closure_0({ isAuthorized: true });
+                tmp3 = closure_2_3;
+              } else {
+                closure_0({ isAuthorized: false });
+              }
+            }
+          };
+          closure_1_0(9573).openOAuth2Modal(obj);
+        });
+        c4 = 3;
+        const obj6 = { value: promise, done: true };
+        return obj6;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp50) {
+      c4 = tmp;
+      throw tmp50;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
+};
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
 
-export const installApplicationOnDemandIfNeeded = function installApplicationOnDemandIfNeeded(arg0) {
+export const installApplicationOnDemandIfNeeded = function installApplicationOnDemandIfNeeded() {
   const self = this;
-  const apply = _installApplicationOnDemandIfNeeded.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

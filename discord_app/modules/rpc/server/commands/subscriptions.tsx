@@ -1,124 +1,111 @@
-// === Module 14501: ? ===
+// === Module 14501: subscriptions ===
 
-// Module 14501
-import prototypeDefault from "prototype" /* 9554 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 1074 */;
+// Module 14501 (subscriptions)
+import RPCErrorDefault from "RPCError" /* 9554 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-({ AnalyticEvents: c4, RPCCommands, RPCErrors: c5 } = ME);
+const require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_4, RPCCommands, RPCErrors: hasOwnProperty } = Constants);
 let obj = {
   handler(arg0) {
-    ({ server: require, socket: importDefault, evt: dependencyMap, args: closure_3 } = arg0);
-    return callback(function*() {
-      if (initialSubscriptionPayload === 2) {
-        initialSubscriptionPayload = 3;
-        HermesBuiltin.throwTypeError();
+    ({ server: require, socket: importDefault, evt: dependencyMap, args: asyncGeneratorStep } = arg0);
+    return (async (arg0, value) => {
+      if (c3 === 2) {
+        c3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          initialSubscriptionPayload = 2;
-          if (0 === closure_2) {
+          c3 = 2;
+          if (0 === dependencyMap) {
             if (arg0 === 1) {
-              initialSubscriptionPayload = 3;
-              throw arg1;
+              c3 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              initialSubscriptionPayload = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c3 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              closure_1 = 0;
-              closure_0 = tmp2;
-              closure_0 = undefined;
-              closure_1 = undefined;
-              closure_2 = undefined;
-              initialSubscriptionPayload = undefined;
-              closure_0 = tmp67;
-              if (null == closure_1_0.events[dependencyMap]) {
-                obj1 = { errorCode: null };
-                obj1[0] = closure_1_5.INVALID_EVENT;
+              const v0 = 0;
+              closure_128_0 = undefined;
+              closure_128_1 = undefined;
+              closure_128_2 = undefined;
+              let initialSubscriptionPayload;
+              closure_128_0 = tmp66;
+              if (null == events.events[event]) {
+                const obj1 = { errorCode: constants2.INVALID_EVENT };
                 const _HermesInternal = HermesInternal;
-                let tmp35 = closure_1_1(9554);
-                tmp35 = new tmp35(obj1, "Invalid event: " + dependencyMap);
+                let tmp35 = v0(9554);
+                tmp35 = new tmp35(obj1, "Invalid event: " + event);
                 throw tmp35;
-              } else if (closure_1_1(14502)(closure_1_1.authorization.scopes, tmp67.scope)) {
-                const obj2 = { event: null, scope: null, application_id: null, socket_scope: null };
-                obj2[0] = dependencyMap;
-                if (typeof tmp67.scope === "object") {
+              } else if (v0(14502)(importDefault.authorization.scopes, tmp66.scope)) {
+                const obj2 = { event, scope: null, application_id: null, socket_scope: null };
+                if (typeof tmp66.scope === "object") {
                   const _JSON = JSON;
-                  let scope = JSON.stringify(tmp67.scope);
+                  let scope = JSON.stringify(tmp66.scope);
                 } else {
-                  scope = tmp67.scope;
+                  scope = tmp66.scope;
                 }
-                obj2[1] = scope;
-                obj2[2] = closure_1_1.application.id;
-                obj2[3] = closure_1_1.authorization.scopes.toString();
-                tmp72(1242).track(closure_1_4.RPC_SUBSCRIPTION_REQUESTED, obj2);
-                if (null != tmp67.validation) {
-                  closure_2 = 1;
-                  initialSubscriptionPayload = 1;
-                  const obj3 = { value: null, done: false };
-                  obj3[0] = obj13.getJoi();
+                obj2.scope = scope;
+                obj2.application_id = importDefault.application.id;
+                obj2.socket_scope = importDefault.authorization.scopes.toString();
+                tmp71(1242).track(constants.RPC_SUBSCRIPTION_REQUESTED, obj2);
+                if (null != tmp66.validation) {
+                  dependencyMap = 1;
+                  c3 = 1;
+                  const obj3 = { value: obj13.getJoi(), done: false };
                   return obj3;
                 }
-                const str2 = closure_1_1.authorization.scopes;
-                const tmp72Result = tmp72(1242);
+                const tmp71Result = tmp71(1242);
               } else {
-                const obj4 = { errorCode: null };
-                obj4[0] = closure_1_5.INVALID_PERMISSIONS;
-                const tmp10 = new tmp72(9554)(obj4, "Not authenticated or invalid scope");
+                const obj4 = { errorCode: constants2.INVALID_PERMISSIONS };
+                const tmp10 = new tmp71(9554)(obj4, "Not authenticated or invalid scope");
                 throw tmp10;
               }
-              obj13 = closure_1_0;
+              obj13 = events;
             }
           } else if (arg0 === 1) {
-            initialSubscriptionPayload = 3;
-            throw arg1;
+            c3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            initialSubscriptionPayload = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = arg1;
-            if (null != closure_1.validate(initialSubscriptionPayload, closure_0.validation(closure_1), { convert: false }).error) {
-              let obj5 = { errorCode: null };
-              obj5[0] = closure_1_5.INVALID_PAYLOAD;
-              const tmp64 = new closure_1_1(9554)(obj5, "Invalid subscription parameters provided");
-              throw tmp64;
+            closure_128_1 = value;
+            if (null != closure_128_1.validate(closure_129_3, closure_128_0.validation(closure_128_1), { convert: false }).error) {
+              let obj5 = { errorCode: constants2.INVALID_PAYLOAD };
+              const tmp63 = new v0(9554)(obj5, "Invalid subscription parameters provided");
+              throw tmp63;
             }
           }
-          const obj6 = { args: null, socket: null };
-          obj6[0] = initialSubscriptionPayload;
-          obj6[1] = closure_1;
-          closure_2 = closure_0.handler(obj6);
-          obj5 = closure_1_0(14503);
-          initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_1, closure_2, initialSubscriptionPayload);
-          const promise = new Promise((arg0) => {
+          const obj6 = { args: closure_129_3, socket: closure_129_1 };
+          closure_128_2 = closure_128_0.handler(obj6);
+          obj5 = tmp2(14503);
+          initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_129_1, closure_129_2, closure_129_3);
+          const promise = new Promise((fn) => {
             setImmediate(() => {
-              closure_1_0.addSubscription(closure_1_1, closure_1_2, closure_1_3, closure_2);
-              if (null != closure_3) {
-                const result = closure_1_0.dispatchToSubscriptions(closure_1_2, (socket) => socket.socket.id === id.id, closure_3);
+              closure_2_0.addSubscription(v0, closure_2_2, closure_2_3, closure_1_2);
+              if (null != closure_1_3) {
+                const result = closure_2_0.dispatchToSubscriptions(closure_2_2, (socket) => socket.socket.id === id.id, closure_1_3);
               }
             });
-            arg0({ evt: closure_2 });
+            fn({ evt });
           });
-          initialSubscriptionPayload = 3;
-          const obj7 = { value: null, done: true };
-          obj7[0] = promise;
+          c3 = 3;
+          const obj7 = { value: promise, done: true };
           return obj7;
         } catch (tmp44) {
-          initialSubscriptionPayload = tmp;
+          c3 = tmp;
           throw tmp44;
         }
       }
@@ -129,20 +116,19 @@ obj = {
   handler(arg0) {
     ({ server, evt } = arg0);
     if (null == server.events[evt]) {
-      let obj = { errorCode: null };
-      obj[0] = constants.INVALID_EVENT;
+      let obj = { errorCode: constants.INVALID_EVENT };
       const _HermesInternal = HermesInternal;
-      let tmp6 = prototypeDefault;
+      let tmp6 = RPCErrorDefault;
       tmp6 = new tmp6(obj, "Invalid event: " + evt);
       throw tmp6;
     } else {
       server.removeSubscription(tmp, evt, tmp2);
-      obj = { evt: null };
-      obj[0] = evt;
+      obj = { evt };
       return obj;
     }
   }
 };
-let result = require("set").fileFinishedImporting("modules/rpc/server/commands/subscriptions.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rpc/server/commands/subscriptions.tsx");
 
 export default { [RPCCommands.SUBSCRIBE]: obj, [RPCCommands.UNSUBSCRIBE]: obj };

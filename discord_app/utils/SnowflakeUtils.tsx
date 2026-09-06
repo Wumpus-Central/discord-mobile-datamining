@@ -1,45 +1,45 @@
-// === Module 11: DISCORD_EPOCH ===
+// === Module 11: SnowflakeUtils ===
 
-// Module 11 (DISCORD_EPOCH)
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
-import extractTimestamp from "extractTimestamp" /* 13 */;
-import extractTimestampAll from "extractTimestamp" /* 13 */;
+// Module 11 (SnowflakeUtils)
+import _modDef12 from "module_12" /* 12 */;
+import utils_SnowflakeUtils from "utils/SnowflakeUtils" /* 13 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/SnowflakeUtils.tsx");
+const utils_SnowflakeUtilsAll = utils_SnowflakeUtils;
+
+const result = size.fileFinishedImporting("utils/SnowflakeUtils.tsx");
 
 export default {
   age(arg0) {
-    return extractTimestampAll.age(arg0);
+    return utils_SnowflakeUtilsAll.age(arg0);
   },
   extractTimestamp(arg0) {
-    return extractTimestampAll.extractTimestamp(arg0);
+    return utils_SnowflakeUtilsAll.extractTimestamp(arg0);
   },
   compare(arg0, arg1) {
-    return extractTimestampAll.compare(arg0, arg1);
+    return utils_SnowflakeUtilsAll.compare(arg0, arg1);
   },
   atPreviousMillisecond(arg0) {
-    return extractTimestampAll.atPreviousMillisecond(arg0);
+    return utils_SnowflakeUtilsAll.atPreviousMillisecond(arg0);
   },
   atNextMillisecond(arg0) {
-    return extractTimestampAll.atNextMillisecond(arg0);
+    return utils_SnowflakeUtilsAll.atNextMillisecond(arg0);
   },
   fromTimestamp(arg0) {
-    return extractTimestampAll.fromTimestamp(arg0);
+    return utils_SnowflakeUtilsAll.fromTimestamp(arg0);
   },
   fromTimestampWithSequence(arg0, arg1) {
-    return extractTimestampAll.fromTimestampWithSequence(arg0, arg1);
+    return utils_SnowflakeUtilsAll.fromTimestampWithSequence(arg0, arg1);
   },
   keys(arg0) {
     return Object.keys(arg0);
   },
   forEach(arg0, arg1) {
-    importDefault = arg1;
-    const item = applyDefault.forEach(arg0, (arg0, arg1) => callback(arg0, arg1));
+    closure_0 = arg1;
+    const item = _modDef12.forEach(arg0, (arg0, arg1) => closure_0(arg0, arg1));
   },
-  forEachKey(recurrenceCounts, arg1) {
+  forEachKey(recurrenceCounts, fn) {
     for (const key10004 in arg0) {
-      let tmp = key10004;
       let tmp2 = arg1(key10004);
       continue;
     }
@@ -48,7 +48,7 @@ export default {
     return Object.entries(arg0);
   },
   isProbablyAValidSnowflake(arg0) {
-    return extractTimestampAll.isProbablyAValidSnowflake(arg0);
+    return utils_SnowflakeUtilsAll.isProbablyAValidSnowflake(arg0);
   },
   castChannelIdAsMessageId(id) {
     return id;
@@ -63,5 +63,5 @@ export default {
     return id;
   }
 };
-export const DISCORD_EPOCH = extractTimestamp.DISCORD_EPOCH;
-export const SnowflakeSequence = extractTimestamp.SnowflakeSequence;
+export const DISCORD_EPOCH = utils_SnowflakeUtils.DISCORD_EPOCH;
+export const SnowflakeSequence = utils_SnowflakeUtils.SnowflakeSequence;

@@ -1,9 +1,9 @@
-// === Module 13644: isVoiceServerUpdateImmediateEnabled ===
+// === Module 13644: VoiceServerUpdateImmediateExperiment ===
 
-// Module 13644 (isVoiceServerUpdateImmediateEnabled)
-import set from "set" /* 2 */;
+// Module 13644 (VoiceServerUpdateImmediateExperiment)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/VoiceServerUpdateImmediateExperiment.tsx");
+const result = size.fileFinishedImporting("modules/gateway/VoiceServerUpdateImmediateExperiment.tsx");
 
 export function isVoiceServerUpdateImmediateEnabled(GatewaySocketDispatcher) {
   return false;

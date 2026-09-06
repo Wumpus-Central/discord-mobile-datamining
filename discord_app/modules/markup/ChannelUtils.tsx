@@ -1,16 +1,16 @@
-// === Module 5008: isChannelTypeMentionable ===
+// === Module 5008: markup/ChannelUtils ===
 
-// Module 5008 (isChannelTypeMentionable)
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
+// Module 5008 (markup/ChannelUtils)
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import size from "module_2" /* 2 */;
 
-({ isGuildSelectableChannelType: c0, isGuildVocalChannelType: closure_1 } = createChannelRecord);
-const result = set.fileFinishedImporting("modules/markup/ChannelUtils.tsx");
+({ isGuildSelectableChannelType: closure_0, isGuildVocalChannelType: closure_1 } = ChannelRecord);
+const result = size.fileFinishedImporting("modules/markup/ChannelUtils.tsx");
 
 export const isChannelTypeMentionable = function isChannelTypeMentionable(type) {
-  let tmp = callback(type);
+  let tmp = React(type);
   if (!tmp) {
-    tmp = callback2(type);
+    tmp = framebus(type);
   }
   return tmp;
 };

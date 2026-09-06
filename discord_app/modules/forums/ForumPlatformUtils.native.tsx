@@ -1,14 +1,14 @@
-// === Module 8402: getSystemLocale ===
+// === Module 8402: ForumPlatformUtils ===
 
-// Module 8402 (getSystemLocale)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 8402 (ForumPlatformUtils)
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/forums/ForumPlatformUtils.native.tsx");
 
 export default {
   getForumChannelPermissionText() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.LG9VAi);
+    const intl = util.intl;
+    return intl.string(util.t.LG9VAi);
   }
 };

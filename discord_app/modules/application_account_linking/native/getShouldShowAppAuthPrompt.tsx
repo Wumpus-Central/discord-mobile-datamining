@@ -1,20 +1,21 @@
 // === Module 11763: getShouldShowAppAuthPrompt ===
 
 // Module 11763 (getShouldShowAppAuthPrompt)
-import getAuthorizationApp from "getAuthorizationApp" /* 7167 */;
-import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7170 */;
-import closure_3 from "recomputeFromAppTokens" /* 7107 */;
-import { FetchState } from "recomputeFromAppTokens" /* 7107 */;
+import useAuthorizationApp from "useAuthorizationApp" /* 7167 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7170 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7107 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
+require = fn;
+const FetchState = fn(7107).FetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 
 export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(application) {
   if (null == application) {
     return false;
   } else {
     let response = dependencyMap;
-    const authorizationApp = getAuthorizationApp.getAuthorizationApp(application);
+    const authorizationApp = useAuthorizationApp.getAuthorizationApp(application);
     if (null == authorizationApp) {
       return false;
     } else {
@@ -36,11 +37,10 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
         }
         if (null == parentId) {
           return tmp4;
-        } else if (fetchStateForApplication.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
+        } else if (AuthorizedAppsStore.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
           const items = [parentId];
-          response = tokensToAppTokensMapDefault.fetch(items);
+          response = AuthorizedAppsActionCreatorsDefault.fetch(items);
           let flag2 = false;
-          const obj2 = tokensToAppTokensMapDefault;
         } else {
           flag2 = !(obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId));
           const tmp6 = obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId);
@@ -49,6 +49,5 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
         return false;
       }
     }
-    const obj3 = getAuthorizationApp;
   }
 };

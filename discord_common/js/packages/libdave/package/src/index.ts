@@ -1,15 +1,15 @@
 // === Module 9136: generateDisplayableCode ===
 
 // Module 9136 (generateDisplayableCode)
-import set from "set" /* 2 */;
-import generateDisplayableCode from "generateDisplayableCode" /* 9137 */;
-import _generateKeyFingerprint from "_generateKeyFingerprint" /* 9138 */;
-import compareArrays from "compareArrays" /* 9139 */;
-import serializeKey from "serializeKey" /* 9148 */;
+import DisplayableCode from "DisplayableCode" /* 9137 */;
+import KeyFingerprint from "KeyFingerprint" /* 9138 */;
+import PairwiseFingerprint from "PairwiseFingerprint" /* 9139 */;
+import KeySerialization from "KeySerialization" /* 9148 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/index.ts");
+const result = size.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/index.ts");
 
-export const generateDisplayableCode = generateDisplayableCode.generateDisplayableCode;
-export const generateKeyFingerprint = _generateKeyFingerprint.generateKeyFingerprint;
-export const generatePairwiseFingerprint = compareArrays.generatePairwiseFingerprint;
-export const serializeKey = serializeKey.serializeKey;
+export const generateDisplayableCode = DisplayableCode.generateDisplayableCode;
+export const generateKeyFingerprint = KeyFingerprint.generateKeyFingerprint;
+export const generatePairwiseFingerprint = PairwiseFingerprint.generatePairwiseFingerprint;
+export const serializeKey = KeySerialization.serializeKey;

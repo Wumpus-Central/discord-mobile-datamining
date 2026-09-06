@@ -1,20 +1,20 @@
 // === Module 5579: useCustomKeyboardHeight ===
 
 // Module 5579 (useCustomKeyboardHeight)
-import set from "set" /* 2 */;
-import context from "context" /* 1480 */;
-import computeEntryStateDefault from "computeEntryState" /* 1481 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
+import KeyboardUIStoreDefault from "KeyboardUIStore" /* 1481 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
+const result = size.fileFinishedImporting("modules/keyboard/native/useCustomKeyboardHeight.tsx");
 
 export default function useCustomKeyboardHeight() {
-  _require = _require(1480).useAppEntryKey();
-  return computeEntryStateDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
+  closure_0 = AppEntryKeyContext.useAppEntryKey();
+  return KeyboardUIStoreDefault((arg0) => arg0.byAppEntry[closure_0].customKeyboardHeight);
 };
-export const getCustomKeyboardHeight = function getCustomKeyboardHeight(arg0) {
-  let DEFAULT_APP_ENTRY_KEY = arg0;
-  if (arg0 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = context.DEFAULT_APP_ENTRY_KEY;
+export const getCustomKeyboardHeight = function getCustomKeyboardHeight(appEntryKey) {
+  let DEFAULT_APP_ENTRY_KEY = appEntryKey;
+  if (appEntryKey === undefined) {
+    DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
-  return computeEntryStateDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;
+  return KeyboardUIStoreDefault.getState().byAppEntry[DEFAULT_APP_ENTRY_KEY].customKeyboardHeight;
 };

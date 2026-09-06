@@ -1,29 +1,30 @@
-// === Module 7560: fromServer ===
+// === Module 7560: CollectiblesCategoriesRecord ===
 
-// Module 7560 (fromServer)
-import closure_0 from "fromServer" /* 7561 */;
-import closure_1 from "fromServer" /* 7543 */;
+// Module 7560 (CollectiblesCategoriesRecord)
+import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7561 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7543 */;
 
-let prototype;
-prototype = function CollectiblesCategoriesRecord(categories) {
+const prototype = function CollectiblesCategoriesRecord(categories) {
   const obj = Object.create(new.target.prototype);
   categories = categories.categories;
-  obj.categories = categories.map((arg0) => closure_1.fromServer(arg0));
+  obj.categories = categories.map((item) => CollectiblesCategoryRecord.fromServer(item));
   const collections = categories.collections;
-  obj.collections = collections.map((arg0) => closure_0.fromServer(arg0));
+  obj.collections = collections.map((item) => StorefrontCollectionRecord.fromServer(item));
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(categories) {
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const obj = Object.create(tmp.prototype);
+    categories = categories.categories;
+    obj.categories = categories.map((item) => CollectiblesCategoryRecord.fromServer(item));
+    const collections = categories.collections;
+    obj.collections = collections.map((item) => StorefrontCollectionRecord.fromServer(item));
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(prototype.prototype);
-  categories = categories.categories;
-  obj.categories = categories.map((arg0) => closure_1.fromServer(arg0));
-  const collections = categories.collections;
-  obj.collections = collections.map((arg0) => closure_0.fromServer(arg0));
-  return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoriesRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesCategoriesRecord.tsx");
 
 export const CollectiblesCategoriesRecord = prototype;

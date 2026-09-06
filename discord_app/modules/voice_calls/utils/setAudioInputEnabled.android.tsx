@@ -1,11 +1,11 @@
 // === Module 17318: setAudioInputEnabled ===
 
 // Module 17318 (setAudioInputEnabled)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 1913 */;
+import NativeMediaEngineModuleDefault from "NativeMediaEngineModule" /* 1913 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_calls/utils/setAudioInputEnabled.android.tsx");
+const result = size.fileFinishedImporting("modules/voice_calls/utils/setAudioInputEnabled.android.tsx");
 
 export default function setAudioInputEnabled(arg0) {
-  enforcingDefault.setAudioInputEnabled(arg0);
+  NativeMediaEngineModuleDefault.setAudioInputEnabled(arg0);
 };

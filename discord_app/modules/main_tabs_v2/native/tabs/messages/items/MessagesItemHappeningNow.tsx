@@ -1,38 +1,37 @@
-// === Module 16057: HappeningNowItem ===
+// === Module 16057: MessagesItemHappeningNow ===
 
-// Module 16057 (HappeningNowItem)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import useCutoutBackgroundColor from "useCutoutBackgroundColor" /* 8814 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 12187 */;
-import renderCardDefault from "renderCard" /* 16058 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 15294 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
-import set from "set" /* 2 */;
+// Module 16057 (MessagesItemHappeningNow)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8814 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12187 */;
+import HappeningNowDefault from "HappeningNow" /* 16058 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ HAPPENING_NOW_CARD_HEIGHT: c4, HappeningNowItem } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+require = fn;
+const View = fn(17).View;
+const HappeningNowConstants = fn(15294);
+({ HAPPENING_NOW_CARD_HEIGHT: closure_4, HappeningNowItem } = HappeningNowConstants);
+const jsx = fn(21).jsx;
 const items = [, , , , , , ];
 ({ LIVE_GUILD_STAGE: arr[0], VOICES: arr[1], EMBEDDED_ACTIVITY: arr[2], STREAMS: arr[3], ACTIVITIES: arr[4], USER_CUSTOM_STATUS: arr[5], USER: arr[6] } = HappeningNowItem);
-let set = new Set(items);
-let closure_7 = createCacheKey.createStyles((height) => {
+const set = new Set(items);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles((height) => {
   let obj = { container: null };
-  obj = { height, paddingStart: ThemesDefault.space.PX_8, overflow: "hidden" };
-  obj[0] = obj;
+  obj = { height, paddingStart: nativeDefault.space.PX_8, overflow: "hidden" };
+  obj.container = obj;
   return obj;
 });
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemHappeningNow.tsx");
 
-export default importAllResult.memo(function MessagesItemHappeningNow(listRef) {
-  let obj = map;
-  obj = { backgroundColor: null, children: null };
-  obj = { style: callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(renderCardDefault, obj1) };
-  obj[1] = <View style={callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{jsx(renderCardDefault, obj1)}</View>;
-  return jsx(useCutoutBackgroundColor.CutoutBackgroundProvider, { style: callback(closure_4 + obj.useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(renderCardDefault, obj1) });
+export default noop.memo(function MessagesItemHappeningNow(listRef) {
+  let obj = { backgroundColor: null, children: null };
+  obj = { style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }) };
+  obj.children = <View style={closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container} collapsable={false}>{jsx(HappeningNowDefault, { cards: set, listRef: arg0.listRef })}</View>;
+  return jsx(CutoutBackgroundContext.CutoutBackgroundProvider, { style: closure_7(React4 + obj.useToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM)).container, collapsable: false, children: jsx(HappeningNowDefault, { cards: set, listRef: listRef.listRef }) });
 });
 export const getMessagesItemHappeningNowHeight = function getMessagesItemHappeningNowHeight() {
-  return useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM) + closure_4;
+  return MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.MESSAGES_ITEM_HAPPENING_NOW_PADDING_BOTTOM) + React4;
 };

@@ -1,11 +1,12 @@
 // === Module 6945: useIsWindowLarge ===
 
 // Module 6945 (useIsWindowLarge)
-import set from "set" /* 2 */;
 import useWindowSizeClassifier from "useWindowSizeClassifier" /* 4421 */;
-import useWindowSizeClassifierDefault from "useWindowSizeClassifier" /* 4421 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/screen/native/useIsWindowLarge.tsx");
+const useWindowSizeClassifierDefault = useWindowSizeClassifier;
+
+const result = size.fileFinishedImporting("modules/screen/native/useIsWindowLarge.tsx");
 
 export default function useIsWindowLarge() {
   return useWindowSizeClassifierDefault() >= useWindowSizeClassifier.WindowSizeClassifier.LARGE;

@@ -1,25 +1,27 @@
 // === Module 12040: useActivityShelfData ===
 
 // Module 12040 (useActivityShelfData)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "reset" /* 8857 */;
-import closure_6 from "participantFromServer" /* 1956 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import TestModeStore from "TestModeStore" /* 8857 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
 
 export const useActivityShelfData = function useActivityShelfData(guildId) {
-  const _require = guildId;
-  let items = [getCurrentUser];
-  const stateFromStores = _require(stateFromStoresArray[4]).useStateFromStores(items, getCurrentUser.getCurrentUser);
-  let obj = _require(stateFromStoresArray[4]);
+  _require = guildId;
+  let items = [UserStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, UserStore.getCurrentUser);
+  let obj = require("initialize");
   let tmp = stateFromStoresArray;
   const items1 = [memo1];
-  stateFromStoresArray = _require(stateFromStoresArray[4]).useStateFromStoresArray(items1, () => memo1.getShelfActivities(closure_0));
-  const obj2 = _require(stateFromStoresArray[4]);
+  stateFromStoresArray = require("initialize").useStateFromStoresArray(items1, () => EmbeddedActivitiesStore.getShelfActivities(closure_0));
+  const obj2 = require("initialize");
   const items2 = [memo];
-  const stateFromStores1 = _require(stateFromStoresArray[4]).useStateFromStores(items2, () => memo.testModeEmbeddedApplicationId);
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => memo.testModeEmbeddedApplicationId);
   let mapped = stateFromStoresArray.map((application_id) => application_id.application_id);
   let tmp5 = mapped;
   if (null != stateFromStores1) {
@@ -28,18 +30,16 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
     tmp5 = items3;
   }
   const tmp9 = stateFromStores(tmp[5])(tmp5);
-  getCurrentUser = tmp9;
+  UserStore = tmp9;
   const items4 = [tmp9];
-  memo = stateFromStores1.useMemo(() => closure_4.filter(guildId(stateFromStoresArray[6]).isNotNullish), items4);
+  memo = stateFromStores1.useMemo(() => closure_4.filter(GlobalUtils.isNotNullish), items4);
   const items5 = [memo, stateFromStores1];
   memo1 = stateFromStores1.useMemo(() => {
     if (null != stateFromStores1) {
       if (memo.length > 0) {
         if (tmp2[0].id === tmp) {
           if (null != tmp2[0].embeddedActivityConfig) {
-            const obj = { activity: null, application: null };
-            obj[0] = tmp2[0].embeddedActivityConfig;
-            obj[1] = tmp2[0];
+            const obj = { activity: tmp2[0].embeddedActivityConfig, application: tmp2[0] };
             const items = [obj];
           }
           return [];
@@ -49,19 +49,16 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   }, items5);
   const items6 = [stateFromStoresArray, memo];
   const memo2 = stateFromStores1.useMemo(() => {
-    const mapped = stateFromStoresArray.map((arg0) => {
-      closure_0 = arg0;
-      const found = closure_5.find((id) => id.id === application_id.application_id);
+    const mapped = stateFromStoresArray.map((activity) => {
+      const found = memo.find((id) => id.id === activity.application_id);
       let tmp2 = null;
       if (null != found) {
-        const obj = { activity: null, application: null };
-        obj[0] = arg0;
-        obj[1] = found;
+        const obj = { activity, application: found };
         tmp2 = obj;
       }
       return tmp2;
     });
-    return mapped.filter(guildId(stateFromStoresArray[6]).isNotNullish);
+    return mapped.filter(GlobalUtils.isNotNullish);
   }, items6);
   let nsfwAllowed;
   if (stateFromStores != null) {
@@ -75,36 +72,36 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = lib(9410);
-      return supported_platforms.includes(tmp(callback(1115).getOS()));
+      const tmp = stateFromStores(9410);
+      return supported_platforms.includes(tmp(guildId(1115).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;
       let tmp = !requires_age_gate;
       if (requires_age_gate) {
-        let nsfwAllowed;
-        if (lib != null) {
-          nsfwAllowed = lib.nsfwAllowed;
+        nsfwAllowed = undefined;
+        if (stateFromStores != null) {
+          nsfwAllowed = stateFromStores.nsfwAllowed;
         }
         tmp = true === nsfwAllowed;
       }
       if (!tmp) {
         let nsfwAllowed1;
-        if (lib != null) {
-          nsfwAllowed1 = lib.nsfwAllowed;
+        if (stateFromStores != null) {
+          nsfwAllowed1 = stateFromStores.nsfwAllowed;
         }
         tmp = null == nsfwAllowed1;
       }
       return tmp;
     });
     return found1.filter((application) => {
-      let nsfwAllowed;
-      if (lib != null) {
-        nsfwAllowed = lib.nsfwAllowed;
+      nsfwAllowed = undefined;
+      if (nsfwAllowed != null) {
+        nsfwAllowed = nsfwAllowed.nsfwAllowed;
       }
       let tmp2 = false === nsfwAllowed;
       if (tmp2) {
-        tmp2 = closure_1_1(closure_1_2[9])(application.application.id);
+        tmp2 = stateFromStores(stateFromStoresArray[9])(application.application.id);
       }
       return !tmp2;
     });

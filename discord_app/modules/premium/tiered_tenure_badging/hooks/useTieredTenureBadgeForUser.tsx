@@ -1,18 +1,19 @@
 // === Module 11185: useTieredTenureBadgeForUser ===
 
 // Module 11185 (useTieredTenureBadgeForUser)
-import closure_2 from "createUserWidgetFromServer" /* 7621 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
 
 export const useTieredTenureBadgeForUser = function useTieredTenureBadgeForUser(id) {
-  const _require = id;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
+  _require = id;
+  const items = [UserProfileStore];
+  return require("initialize").useStateFromStores(items, () => {
     let userProfile = null;
-    if (null != closure_0) {
-      userProfile = closure_1_2.getUserProfile(tmp);
+    if (null != tieredTenureBadge) {
+      userProfile = UserProfileStore.getUserProfile(tmp);
     }
     if (userProfile != null) {
       const premiumSince = userProfile.premiumSince;
@@ -25,11 +26,11 @@ export const useTieredTenureBadgeForUser = function useTieredTenureBadgeForUser(
           const badges = userProfile.badges;
           if (badges != null) {
             const item = badges.forEach((id) => {
-              const tieredTenureBadge = closure_1_0(closure_1_1[2]).getTieredTenureBadge(id.id);
+              tieredTenureBadge = tieredTenureBadge(dependencyMap[2]).getTieredTenureBadge(id.id);
             });
           }
         }
-        tmp4 = closure_0;
+        tmp4 = tieredTenureBadge;
       }
     }
     return tmp4;

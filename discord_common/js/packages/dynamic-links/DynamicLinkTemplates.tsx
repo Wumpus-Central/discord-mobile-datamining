@@ -1,9 +1,9 @@
-// === Module 12936: getInviteDynamicLinkTemplate ===
+// === Module 12936: DynamicLinkTemplates ===
 
-// Module 12936 (getInviteDynamicLinkTemplate)
-import set from "set" /* 2 */;
+// Module 12936 (DynamicLinkTemplates)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/dynamic-links/DynamicLinkTemplates.tsx");
 
 export const getInviteDynamicLinkTemplate = function getInviteDynamicLinkTemplate(baseCode) {
   return "" + location.protocol + "//" + window.GLOBAL_ENV.INVITE_HOST + "/" + baseCode;

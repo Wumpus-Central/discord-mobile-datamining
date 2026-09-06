@@ -1,17 +1,16 @@
-// === Module 12670: RowType ===
+// === Module 12670: GuildDirectoryRowGenerator ===
 
-// Module 12670 (RowType)
-import set2 from "set" /* 2 */;
-import DirectoryEntryTypes from "DirectoryEntryTypes" /* 12305 */;
-import ArrayResult from "module_20" /* 20 */;
+// Module 12670 (GuildDirectoryRowGenerator)
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12305 */;
+import size from "module_2" /* 2 */;
 
-const DirectoryEntryCategories = DirectoryEntryTypes.DirectoryEntryCategories;
-let obj = { ENTRY: 0, [0]: "ENTRY", HEADER: 1, [1]: "HEADER", PLACEHOLDER: 2, [2]: "PLACEHOLDER" };
-obj = { type: obj.PLACEHOLDER };
-let closure_4 = require("module_20").fill(obj);
-let result = set2.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryRowGenerator.tsx");
+const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;
+let RowType = { ENTRY: 0, [0]: "ENTRY", HEADER: 1, [1]: "HEADER", PLACEHOLDER: 2, [2]: "PLACEHOLDER" };
+RowType = { type: RowType.PLACEHOLDER };
+let closure_4 = Array(20).fill(RowType);
+let result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryRowGenerator.tsx");
 
-export const RowType = obj;
+export { RowType };
 export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, currentCategoryId) {
   if (arg0) {
     if (0 === arr.length) {
@@ -30,10 +29,10 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
     set = new Set(rankByDateAddedResult.map((guildId) => guildId.guildId));
     let combined = items;
     if (rankByDateAddedResult.length > 0) {
-      obj = { type: null, header: null };
-      obj[0] = obj.HEADER;
+      let obj = { type: null, header: null };
+      obj.type = obj.HEADER;
       const intl = tmp12(1114).intl;
-      obj[1] = intl.string(tmp12(1114).t.CbaapP);
+      obj.header = intl.string(tmp12(1114).t.CbaapP);
       items.push(obj);
       combined = items.concat(rankByDateAddedResult.map((entry) => ({ type: constants.ENTRY, entry })));
     }
@@ -43,9 +42,9 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
     let combined1 = combined;
     if (result.length > 0) {
       obj = { type: null, header: null };
-      obj[0] = obj.HEADER;
+      obj.type = obj.HEADER;
       const intl2 = tmp12(1114).intl;
-      obj[1] = intl2.string(tmp12(1114).t.wxbhEe);
+      obj.header = intl2.string(tmp12(1114).t.wxbhEe);
       combined.push(obj);
       combined1 = combined.concat(result.map((entry) => ({ type: constants.ENTRY, entry })));
     }

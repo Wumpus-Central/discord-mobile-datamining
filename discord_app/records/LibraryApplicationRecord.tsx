@@ -1,20 +1,18 @@
-// === Module 7398: createFromServer ===
+// === Module 7398: LibraryApplicationRecord ===
 
-// Module 7398 (createFromServer)
-import hasFlagAll from "hasFlag" /* 1384 */;
-import toJSDefault from "toJS" /* 1386 */;
-import hooksDefault from "hooks" /* 4153 */;
-import closure_3 from "addApplication" /* 4788 */;
-import closure_4 from "createFromServer" /* 7395 */;
-import ME from "ME" /* 1074 */;
+// Module 7398 (LibraryApplicationRecord)
+import FlagUtilsAll from "FlagUtils" /* 1384 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import Record from "Record" /* 1386 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
+import EntitlementRecord from "EntitlementRecord" /* 7395 */;
 
-toJSDefault;
-({ LibraryApplicationFlags: c5, Distributors: closure_6, SKUTypes: error } = ME);
+const Constants = fn(1074);
+({ LibraryApplicationFlags: hasOwnProperty, Distributors: metroRequire, SKUTypes: closure_7 } = Constants);
 let LibraryApplicationRecord;
 class LibraryApplicationRecord extends tmp2 {
   constructor(arg0) {
     tmp = new LibraryApplicationRecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, createdAt: tmp.createdAt, flags: tmp.flags, branchId: tmp.branchId, entitlements: tmp.entitlements, branch: tmp.branch, sku: tmp.sku } = global);
     tmp.isTestMode = global.isTestMode || false;
     return tmp;
@@ -25,70 +23,72 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   let obj = { id: id.application.id, branchId: id.branch_id, entitlements: null, branch: null, flags: null, createdAt: null, sku: null };
   if (null != id.entitlements) {
     let entitlements = id.entitlements;
-    let mapped = entitlements.map((arg0) => closure_4.createFromServer(arg0));
+    let mapped = entitlements.map((item) => EntitlementRecord.createFromServer(item));
   } else {
     mapped = [];
   }
-  obj[2] = mapped;
-  ({ branch: obj[3], flags: obj[4], created_at: obj[5] } = id);
+  obj.entitlements = mapped;
+  ({ branch: obj.branch, flags: obj.flags, created_at: obj.createdAt } = id);
   obj = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = hooksDefault;
+    entitlements = _modDef4153;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
-  obj[3] = entitlementsResult;
+  obj.preorderReleaseAt = entitlementsResult;
   let prop = null;
   if (null != id.sku.preorder_approximate_release_date) {
     prop = id.sku.preorder_approximate_release_date;
   }
-  obj[4] = prop;
-  obj[6] = obj;
-  if (typeof LibraryApplicationRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  obj.preorderApproximateReleaseDate = prop;
+  obj.sku = obj;
+  if (typeof tmp2 === "function") {
+    const tmp11 = new LibraryApplicationRecord(tmp, entitlements, tmp3);
+    ({ id: tmp11.id, createdAt: tmp11.createdAt, flags: tmp11.flags, branchId: tmp11.branchId, entitlements: tmp11.entitlements, branch: tmp11.branch, sku: tmp11.sku } = obj);
+    tmp11.isTestMode = obj.isTestMode || false;
+    return tmp11;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp7 = new LibraryApplicationRecord("Trying to call a non-function", entitlements, tmp2);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp7.id, createdAt: tmp7.createdAt, flags: tmp7.flags, branchId: tmp7.branchId, entitlements: tmp7.entitlements, branch: tmp7.branch, sku: tmp7.sku } = obj);
-  tmp7.isTestMode = obj.isTestMode || false;
-  return tmp7;
+  tmp2 = LibraryApplicationRecord;
 };
 LibraryApplicationRecord["createForTestMode"] = function createForTestMode(id) {
   id = id.id;
   const id2 = id.branch.id;
   const branch = id.branch;
-  const ENTITLED = closure_5.ENTITLED;
+  const ENTITLED = hasOwnProperty.ENTITLED;
   const created_at = id.branch.created_at;
-  if (typeof LibraryApplicationRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof LibraryApplicationRecord === "function") {
+    const items = [];
+    const tmp6 = new LibraryApplicationRecord(tmp, tmp2, new.target, id, created_at, ENTITLED, id2, items, branch);
+    tmp6.id = id;
+    tmp6.createdAt = created_at;
+    tmp6.flags = ENTITLED;
+    tmp6.branchId = id2;
+    tmp6.entitlements = items;
+    tmp6.branch = branch;
+    tmp6.sku = obj;
+    tmp6.isTestMode = true;
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const items = [];
-  const tmp2 = new LibraryApplicationRecord("Trying to call a non-function", LibraryApplicationRecord, new.target, id, created_at, ENTITLED, id2, items, branch);
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.id = id;
-  tmp2.createdAt = created_at;
-  tmp2.flags = ENTITLED;
-  tmp2.branchId = id2;
-  tmp2.entitlements = items;
-  tmp2.branch = branch;
-  tmp2.sku = { id: id.skuId, type: constants2.DURABLE_PRIMARY, premium: false };
-  tmp2.isTestMode = true;
-  return tmp2;
+  obj = { id: id.skuId, type: constants2.DURABLE_PRIMARY, premium: false };
 };
 prototype["getFlags"] = function getFlags() {
   return this.flags;
 };
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return hasFlagAll.hasFlag(this.flags, arg0);
+  return FlagUtilsAll.hasFlag(this.flags, arg0);
 };
 prototype["isHidden"] = function isHidden() {
-  return this.hasFlag(closure_5.HIDDEN);
+  return this.hasFlag(hasOwnProperty.HIDDEN);
 };
 prototype["isLegacyOverlayEnabled"] = function isLegacyOverlayEnabled() {
-  return !this.hasFlag(closure_5.OVERLAY_DISABLED);
+  return !this.hasFlag(hasOwnProperty.OVERLAY_DISABLED);
 };
 prototype["isOverlayV3Enabled"] = function isOverlayV3Enabled() {
-  return !this.hasFlag(closure_5.OVERLAY_V3_DISABLED);
+  return !this.hasFlag(hasOwnProperty.OVERLAY_V3_DISABLED);
 };
 prototype["isOverlayEnabled"] = function isOverlayEnabled() {
   const self = this;
@@ -100,10 +100,10 @@ prototype["isMasterBranch"] = function isMasterBranch() {
 prototype["isDiscordApplication"] = function isDiscordApplication() {
   return true;
 };
-prototype["isEntitled"] = function isEntitled(currentUser, closure_4) {
+prototype["isEntitled"] = function isEntitled(currentUser, SKUStore) {
   const self = this;
   closure_1 = currentUser;
-  closure_0 = closure_4;
+  closure_0 = SKUStore;
   let someResult = this.isTestMode;
   if (!someResult) {
     const entitlements = this.entitlements;
@@ -140,7 +140,7 @@ prototype["getSkuIdForAnalytics"] = function getSkuIdForAnalytics() {
 };
 prototype["getAnalyticsData"] = function getAnalyticsData() {
   const self = this;
-  application = application.getApplication(this.id);
+  const application = ApplicationStore.getApplication(this.id);
   let id = null;
   if (null != application) {
     id = application.id;
@@ -150,11 +150,12 @@ prototype["getAnalyticsData"] = function getAnalyticsData() {
   if (null != application) {
     name = application.name;
   }
-  obj[1] = name;
-  obj[2] = self.getSkuIdForAnalytics();
-  obj[3] = self.getDistributor();
+  obj.application_name = name;
+  obj.sku_id = self.getSkuIdForAnalytics();
+  obj.launcher_platform = self.getDistributor();
   return obj;
 };
-const result = require("set").fileFinishedImporting("records/LibraryApplicationRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/LibraryApplicationRecord.tsx");
 
 export default LibraryApplicationRecord;

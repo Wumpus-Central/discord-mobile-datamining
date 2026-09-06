@@ -1,31 +1,33 @@
-// === Module 17937: promise ===
+// === Module 17937: DismissCallAction ===
 
-// Module 17937 (promise)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 17937 (DismissCallAction)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 9182 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17932 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/headless_tasks/android/DismissCallAction.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/headless_tasks/android/DismissCallAction.tsx");
 
 export default (arg0) => {
   closure_0 = arg0;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1_1(closure_1_2[1]).awaitStorage(() => {
-      if (lib.isFullscreenCallUI) {
-        let obj = closure_2_1(closure_2_2[2]);
-        obj = { action_type: "decline" };
-        const merged = Object.assign(lib(closure_2_2[3]).collectChannelAnalyticsMetadataFromId(tmp.channelId));
-        obj.track(closure_2_3.CALLKIT_CLICKED, obj);
-        const obj3 = lib(closure_2_2[3]);
+    HeadlessTaskUtilsDefault.awaitStorage(() => {
+      if (closure_0.isFullscreenCallUI) {
+        let obj = { action_type: "decline" };
+        const merged = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(tmp.channelId));
+        obj.track(AnalyticEvents.CALLKIT_CLICKED, obj);
       }
-      obj = { location: closure_2_1(closure_2_2[4]).PUSH_NOTIFICATION, guild_id: tmp.guildId, ringer_user_id: tmp.userId };
-      const obj4 = closure_2_1(closure_2_2[2]);
-      const merged1 = Object.assign(lib(closure_2_2[3]).collectChannelAnalyticsMetadataFromId(tmp.channelId));
-      obj4.track(closure_2_3.RING_CALL_DECLINED, obj);
-      const obj6 = lib(closure_2_2[3]);
-      closure_2_1(closure_2_2[5]).stopRinging(lib.channelId);
-      lib(true);
+      obj = { location: AnalyticsLocationDefault.PUSH_NOTIFICATION, guild_id: tmp.guildId, ringer_user_id: tmp.userId };
+      const obj4 = AnalyticsUtilsDefault;
+      const merged1 = Object.assign(AppAnalyticsUtils.collectChannelAnalyticsMetadataFromId(tmp.channelId));
+      obj4.track(AnalyticEvents.RING_CALL_DECLINED, obj);
+      CallActionCreatorsDefault.stopRinging(closure_0.channelId);
+      closure_0(true);
     });
   });
 };

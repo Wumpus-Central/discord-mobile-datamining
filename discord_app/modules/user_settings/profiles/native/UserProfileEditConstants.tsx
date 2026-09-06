@@ -1,9 +1,9 @@
-// === Module 14589: UserProfileEditAutoFocusElement ===
+// === Module 14589: UserProfileEditConstants ===
 
-// Module 14589 (UserProfileEditAutoFocusElement)
-import set from "set" /* 2 */;
+// Module 14589 (UserProfileEditConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/profiles/native/UserProfileEditConstants.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/profiles/native/UserProfileEditConstants.tsx");
 
 export const UserProfileEditAutoFocusElement = { AVATAR: "AVATAR", BIO: "BIO" };
 export const DEFAULT_UPSELL_GRADIENT_COLORS = ["rgba(0, 0, 0, 0)", "#000"];

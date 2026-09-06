@@ -1,8 +1,8 @@
-// === Module 13710: harvestType ===
+// === Module 13710: DataHarvestStore ===
 
-// Module 13710 (harvestType)
+// Module 13710 (DataHarvestStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let c0 = false;
 let c1;
@@ -23,7 +23,7 @@ Object.defineProperty(prototype, "requestingHarvest", {
   set: undefined
 });
 DataHarvestStore.displayName = "DataHarvestStore";
-const dataHarvestStore = new DataHarvestStore(dispatcherDefault, {
+const dataHarvestStore = new DataHarvestStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     c1 = undefined;
   },
@@ -42,6 +42,7 @@ const dataHarvestStore = new DataHarvestStore(dispatcherDefault, {
     c1 = null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/harvester/DataHarvestStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/harvester/DataHarvestStore.tsx");
 
 export default dataHarvestStore;

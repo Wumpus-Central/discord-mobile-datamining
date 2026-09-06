@@ -1,17 +1,17 @@
-// === Module 5585: getEmojiSourceData ===
+// === Module 5585: ExpressionSourceRecord ===
 
-// Module 5585 (getEmojiSourceData)
-import toJSDefault from "toJS" /* 1386 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
-import areSetsEqual from "areSetsEqual" /* 1974 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import ME from "ME" /* 1074 */;
+// Module 5585 (ExpressionSourceRecord)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import SetUtils from "SetUtils" /* 1974 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import Record from "Record" /* 1386 */;
 
-require = arg1;
+require = fn;
 function getEmojiSourceData() {
   const self = this;
-  const apply = _getEmojiSourceData.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -19,72 +19,47 @@ function getEmojiSourceData() {
   }
   return applyArgumentsResult;
 }
-function _getEmojiSourceData() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
+let closure_8 = async function _getEmojiSourceData(arg0, arg1) {
+  closure_2 = tmp3;
+  closure_129_0 = null;
+  const HTTP = HTTPUtils.HTTP;
+  await HTTP.get({ url: closure_2_4.EMOJI_SOURCE_DATA(closure_0), oldFormErrors: true, timeout: 5000, rejectWithError: true });
+  if (1 === tmp7) {
     c3 = 0;
-    return (function*(arg0, body) {
-      closure_2 = tmp3;
-      let obj3 = null;
-      c3 = 1;
-      const HTTP = callback(closure_1_2[3]).HTTP;
-      obj1 = { url: null, oldFormErrors: true, timeout: 5000, rejectWithError: true };
-      obj1[0] = c4.EMOJI_SOURCE_DATA(obj3);
-      yield HTTP.get(obj1);
-      if (1 === tmp7) {
-        c3 = 0;
-        c5 = 3;
-      } else if (arg0 === 1) {
-        c5 = 3;
-        throw body;
-      } else if (arg0 !== 2) {
-        body = body.body;
-        let type;
-        if (body != null) {
-          type = body.type;
-        }
-        if (type === constants.GUILD) {
-          obj = { guild: null, type: null };
-          obj[0] = closure_9.createFromServer(body.guild);
-          obj[1] = body.type;
-          obj3 = obj;
-        } else {
-          let type1;
-          if (body != null) {
-            type1 = body.type;
-          }
-          if (type1 === constants.APPLICATION) {
-            obj3 = { application: null, type: null };
-            obj3[0] = closure_10.createFromServer(body.application);
-            obj3[1] = body.type;
-          }
-        }
-        c3 = 0;
+    c5 = 3;
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    const body = arg1.body;
+    let type;
+    if (body != null) {
+      type = body.type;
+    }
+    if (type === closure_130_6.GUILD) {
+      closure_129_0 = { guild: closure_130_9.createFromServer(body.guild), type: body.type };
+      { guild: closure_130_9.createFromServer(body.guild), type: body.type };
+    } else {
+      let type1;
+      if (body != null) {
+        type1 = body.type;
       }
-      c3 = 0;
-      return body;
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      if (type1 === closure_130_6.APPLICATION) {
+        closure_129_0 = { application: closure_130_10.createFromServer(body.application), type: body.type };
+        { application: closure_130_10.createFromServer(body.application), type: body.type };
+      }
+    }
+    c3 = 0;
   }
-  return applyArgumentsResult;
-}
-toJSDefault;
-({ Endpoints: c4, GuildFeatures: c5 } = ME);
-let obj = { GUILD: "GUILD", APPLICATION: "APPLICATION" };
+  return arg1;
+};
+const Constants = fn(1074);
+({ Endpoints: closure_4, GuildFeatures: hasOwnProperty } = Constants);
+const EmojiSourceDataTypes = { GUILD: "GUILD", APPLICATION: "APPLICATION" };
 let ExpressionSourceGuildRecord;
 class ExpressionSourceGuildRecord extends tmp2 {
   constructor(arg0) {
     tmp = new ExpressionSourceGuildRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, name: tmp.name, icon: tmp.icon, description: tmp.description, features: tmp.features, premiumTier: tmp.premiumTier, premiumSubscriberCount: tmp.premiumSubscriberCount, presenceCount: tmp.presenceCount, memberCount: tmp.memberCount, emojis: tmp.emojis } = global);
     return tmp;
   }
@@ -95,19 +70,16 @@ prototype["getIconURL"] = function getIconURL(size) {
   if (arg1 === undefined) {
     flag = false;
   }
-  obj = getAvatarURLDefault;
-  obj = { id: this.id, size, icon: this.icon, canAnimate: flag };
+  const obj = { id: this.id, size, icon: this.icon, canAnimate: flag };
   return obj.getGuildIconURL(obj);
 };
-prototype["getIconSource"] = function getIconSource(arg0, flag) {
+prototype["getIconSource"] = function getIconSource(size, flag) {
   const self = this;
-  closure_0 = arg0;
   if (flag === undefined) {
     flag = false;
   }
   return self(1396).getAnimatableSourceWithFallback(flag, (canAnimate) => {
-    obj = self(closure_1_2[4]);
-    obj = { id: self.id, size: closure_0, icon: self.icon, canAnimate };
+    const obj = { id: self.id, size, icon: self.icon, canAnimate };
     return obj.getGuildIconSource(obj);
   });
 };
@@ -120,32 +92,31 @@ prototype["isDiscoverable"] = function isDiscoverable() {
 };
 ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiId(arg0) {
   closure_0 = arg0;
-  return callback(function*() {
+  return (async () => {
     closure_1 = tmp5;
-    let type = tmp2;
-    type = yield closure_1_7(closure_1_0);
+    closure_0 = tmp2;
+    closure_128_0 = await closure_1_7(closure_0);
     let guild = null;
-    if (null != type) {
-      type = undefined;
-      if (type != null) {
-        type = type.type;
+    if (null != closure_128_0) {
+      let type;
+      if (closure_128_0 != null) {
+        type = closure_128_0.type;
       }
       guild = null;
-      if (type === closure_1_6.GUILD) {
-        guild = closure_1_0.guild;
+      if (type === constants.GUILD) {
+        guild = closure_128_0.guild;
       }
     }
     return guild;
   })();
 };
 ExpressionSourceGuildRecord["_mapCommon"] = function _mapCommon(id) {
-  obj = { id: id.id, name: id.name, icon: id.icon, description: id.description, features: areSetsEqual.toSetInplace(id.features) };
+  const obj = { id: id.id, name: id.name, icon: id.icon, description: id.description, features: SetUtils.toSetInplace(id.features) };
   return obj;
 };
 ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildRecord(joinedEmojiSourceGuildRecord) {
-  obj = {};
+  const obj = {};
   const _mapCommonResult = ExpressionSourceGuildRecord._mapCommon(joinedEmojiSourceGuildRecord);
-  let str = obj;
   const merged = Object.assign(_mapCommonResult);
   const premiumTier = joinedEmojiSourceGuildRecord.premiumTier;
   obj.premiumTier = premiumTier;
@@ -153,47 +124,42 @@ ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildR
   obj.presenceCount = null;
   obj.memberCount = null;
   obj.emojis = null;
-  if (typeof ExpressionSourceGuildRecord !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  if (typeof ExpressionSourceGuildRecord === "function") {
+    const tmp6 = new ExpressionSourceGuildRecord(obj, _mapCommonResult, premiumTier);
+    ({ id: tmp6.id, name: tmp6.name, icon: tmp6.icon, description: tmp6.description, features: tmp6.features, premiumTier: tmp6.premiumTier, premiumSubscriberCount: tmp6.premiumSubscriberCount, presenceCount: tmp6.presenceCount, memberCount: tmp6.memberCount, emojis: tmp6.emojis } = obj);
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp3 = new ExpressionSourceGuildRecord(str, _mapCommonResult, premiumTier);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp3.id, name: tmp3.name, icon: tmp3.icon, description: tmp3.description, features: tmp3.features, premiumTier: tmp3.premiumTier, premiumSubscriberCount: tmp3.premiumSubscriberCount, presenceCount: tmp3.presenceCount, memberCount: tmp3.memberCount, emojis: tmp3.emojis } = obj);
-  return tmp3;
 };
 ExpressionSourceGuildRecord["createFromDiscoverableGuild"] = function createFromDiscoverableGuild(emojis) {
-  obj = {};
+  const obj = {};
   const _mapCommonResult = ExpressionSourceGuildRecord._mapCommon(emojis);
-  let str = obj;
   const merged = Object.assign(_mapCommonResult);
   obj.premiumTier = null;
   ({ premiumSubscriptionCount: obj.premiumSubscriberCount, presenceCount: obj.presenceCount, memberCount } = emojis);
   obj.memberCount = memberCount;
   obj.emojis = emojis.emojis;
-  if (typeof ExpressionSourceGuildRecord !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  if (typeof ExpressionSourceGuildRecord === "function") {
+    const tmp6 = new ExpressionSourceGuildRecord(obj, _mapCommonResult, memberCount);
+    ({ id: tmp6.id, name: tmp6.name, icon: tmp6.icon, description: tmp6.description, features: tmp6.features, premiumTier: tmp6.premiumTier, premiumSubscriberCount: tmp6.premiumSubscriberCount, presenceCount: tmp6.presenceCount, memberCount: tmp6.memberCount, emojis: tmp6.emojis } = obj);
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp3 = new ExpressionSourceGuildRecord(str, _mapCommonResult, memberCount);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp3.id, name: tmp3.name, icon: tmp3.icon, description: tmp3.description, features: tmp3.features, premiumTier: tmp3.premiumTier, premiumSubscriberCount: tmp3.premiumSubscriberCount, presenceCount: tmp3.presenceCount, memberCount: tmp3.memberCount, emojis: tmp3.emojis } = obj);
-  return tmp3;
 };
 ExpressionSourceGuildRecord["createFromServer"] = function createFromServer(id) {
-  obj = {};
+  const obj = {};
   const _mapCommonResult = ExpressionSourceGuildRecord._mapCommon(id);
-  let str = obj;
   const merged = Object.assign(_mapCommonResult);
   ({ premium_tier: obj.premiumTier, premium_subscription_count: obj.premiumSubscriberCount, approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, emojis: obj.emojis } = id);
-  if (typeof ExpressionSourceGuildRecord !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  if (typeof ExpressionSourceGuildRecord === "function") {
+    const tmp6 = new ExpressionSourceGuildRecord(obj, _mapCommonResult);
+    ({ id: tmp6.id, name: tmp6.name, icon: tmp6.icon, description: tmp6.description, features: tmp6.features, premiumTier: tmp6.premiumTier, premiumSubscriberCount: tmp6.premiumSubscriberCount, presenceCount: tmp6.presenceCount, memberCount: tmp6.memberCount, emojis: tmp6.emojis } = obj);
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp3 = new ExpressionSourceGuildRecord(str, _mapCommonResult);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp3.id, name: tmp3.name, icon: tmp3.icon, description: tmp3.description, features: tmp3.features, premiumTier: tmp3.premiumTier, premiumSubscriberCount: tmp3.premiumSubscriberCount, presenceCount: tmp3.presenceCount, memberCount: tmp3.memberCount, emojis: tmp3.emojis } = obj);
-  return tmp3;
 };
 ExpressionSourceGuildRecord["createFromGuildType"] = function createFromGuildType(guild) {
   if (guild instanceof ExpressionSourceGuildRecord) {
@@ -204,32 +170,30 @@ ExpressionSourceGuildRecord["createFromGuildType"] = function createFromGuildTyp
     } else {
       fromGuildRecord = obj.createFromDiscoverableGuild(guild);
     }
-    obj2 = fromGuildPropertiesWithAdditionalFields;
+    obj2 = GuildRecordUtils;
   }
 };
-let prototype2;
-prototype2 = function ExpressionSourceApplicationRecord(arg0) {
+const prototype2 = function ExpressionSourceApplicationRecord(arg0) {
   const tmp = new prototype2(new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, name: tmp.name } = arg0);
   return tmp;
 }.prototype;
 class prototype2 extends tmp2 {
 }
 prototype2["createFromServer"] = function createFromServer(arg0) {
-  ({ id, name } = arg0);
-  if (typeof prototype2 !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype2 === "function") {
+    const tmp8 = new prototype2(tmp, tmp2, new.target);
+    tmp8.id = tmp3;
+    tmp8.name = tmp4;
+    return tmp8;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new prototype2("Trying to call a non-function", prototype2, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.id = id;
-  tmp2.name = name;
-  return tmp2;
 };
-const result = require("set").fileFinishedImporting("modules/emojis/records/ExpressionSourceRecord.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/emojis/records/ExpressionSourceRecord.tsx");
 
-export const EmojiSourceDataTypes = obj;
+export { EmojiSourceDataTypes };
 export { getEmojiSourceData };
 export { ExpressionSourceGuildRecord };
 export const ExpressionSourceApplicationRecord = prototype2;

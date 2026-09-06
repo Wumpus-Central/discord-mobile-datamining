@@ -1,15 +1,15 @@
-// === Module 8336: map ===
+// === Module 8336: ContentInventoryStore ===
 
-// Module 8336 (map)
+// Module 8336 (ContentInventoryStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isMatchingListeningActivity from "isMatchingListeningActivity" /* 8337 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import matchUtils from "matchUtils" /* 8337 */;
 
-require = arg1;
+require = fn;
 let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
-let c6 = false;
+let closure_6 = false;
 const Store = initializeDefault.Store;
 class ContentInventoryStore extends Store {
 }
@@ -27,7 +27,7 @@ prototype["getLastFeedFetchDate"] = function getLastFeedFetchDate(arg0) {
   return map2.get(arg0);
 };
 prototype["getFilters"] = function getFilters() {
-  return closure_2;
+  return filters;
 };
 prototype["getFeedRequestId"] = function getFeedRequestId(GLOBAL_FEED) {
   const feed = this.getFeed(GLOBAL_FEED);
@@ -38,7 +38,7 @@ prototype["getFeedRequestId"] = function getFeedRequestId(GLOBAL_FEED) {
   return request_id;
 };
 prototype["getDebugImpressionCappingDisabled"] = function getDebugImpressionCappingDisabled() {
-  return c6;
+  return closure_6;
 };
 prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
   ({ activity, userId: require } = feedId);
@@ -46,23 +46,23 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
   if (null != feed) {
     if (null != activity) {
       const entries = feed.entries;
-      const reduced = entries.reduce((arg0, content) => {
-        if (content.content.author_id === closure_0) {
+      const reduced = entries.reduce((acc, content) => {
+        if (content.content.author_id === require) {
           const items = [];
-          items[HermesBuiltin.arraySpread(arg0, 0)] = content.content;
+          items[HermesBuiltin.arraySpread(acc, 0)] = content.content;
           let items1 = items;
         } else {
           items1 = [];
-          HermesBuiltin.arraySpread(arg0, 0);
+          HermesBuiltin.arraySpread(acc, 0);
         }
         return items1;
       }, []);
-      return isMatchingListeningActivity.findMatchingEntry(reduced, activity);
+      return matchUtils.findMatchingEntry(reduced, activity);
     }
   }
 };
 ContentInventoryStore.displayName = "ContentInventoryStore";
-const contentInventoryStore = new ContentInventoryStore(dispatcherDefault, {
+const contentInventoryStore = new ContentInventoryStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map = new Map();
   },
@@ -92,6 +92,7 @@ const contentInventoryStore = new ContentInventoryStore(dispatcherDefault, {
     closure_6 = !closure_6;
   }
 });
-let result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
 
 export default contentInventoryStore;

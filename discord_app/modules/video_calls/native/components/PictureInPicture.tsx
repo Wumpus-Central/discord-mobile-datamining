@@ -1,37 +1,40 @@
-// === Module 9488: PictureInPicturePositions ===
+// === Module 9488: PictureInPicture ===
 
-// Module 9488 (PictureInPicturePositions)
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { toggleFocus } from "VoiceChatDrawerState" /* 9467 */;
-import { PictureInPicturePositions } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import Button from "Button" /* 1178 */;
+// Module 9488 (PictureInPicture)
+import spring from "spring" /* 4974 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ StyleSheet, View: c5 } = get_ActivityIndicator);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
+const toggleFocus = fn(9467).toggleFocus;
+const PictureInPicturePositions = fn(1074).PictureInPicturePositions;
+const jsx = fn(21).jsx;
+fn(4560);
 let obj = { pipOuterContainer: null, pipInnerContainer: null, elevationShadow: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.alignItems = "baseline";
-obj[0] = obj;
-createCacheKey = {};
+obj.pipOuterContainer = obj;
+const createStyles = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.alignItems = "baseline";
-obj[1] = createCacheKey;
-obj[2] = Button.generateBoxShadowStyle(require("Button").EIGHT_DP_ELEVATION_SHADOW_PARAMS);
-let closure_9 = createCacheKey.createStyles(obj);
+createStyles.alignItems = "baseline";
+obj.pipInnerContainer = createStyles;
+const native = fn(1178);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1178).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+let closure_9 = createStyles.createStyles(obj);
 function getSpringAnimationConfig(velocity) {
   return { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity };
 }
 getSpringAnimationConfig.__closure = {};
 getSpringAnimationConfig.__workletHash = 6627401186753;
 getSpringAnimationConfig.__initData = { code: "function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,restDisplacementThreshold:0.1,restSpeedThreshold:0.1,overshootClamping:true,velocity:velocity};}" };
-let closure_11 = { code: "function PictureInPictureTsx2(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}" };
-const memoResult = importAllResult.memo((preferredPosition) => {
+const __initData = { code: "function PictureInPictureTsx2(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}" };
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
+
+export default noop.memo((preferredPosition) => {
   ({ children, style } = preferredPosition);
   if (preferredPosition.preferredPosition === undefined) {
     const TOP_LEFT = PictureInPicturePositions.TOP_LEFT;
@@ -40,81 +43,84 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   let insets;
   importDefault = undefined;
   let ref;
-  const tmp2 = callback2();
+  const tmp2 = closure_9();
   let obj = insets(ref[8]);
   const shouldForcePipOrientation = obj.useShouldForcePipOrientation({ channel });
-  ({ width, height } = importDefault(ref[9])());
-  insets = importDefault(ref[10])({ includeKeyboardHeight: true }).insets;
+  ({ width, height } = require("useWindowDimensions")());
+  insets = require("useSafeAreaInsetsKeyboardAware")({ includeKeyboardHeight: true }).insets;
   obj = { channelId: channel.id, forcedOrientation: shouldForcePipOrientation };
-  const size = importDefault(ref[11])(obj);
-  let obj2 = importAllResult;
-  const tmp7 = importDefault(ref[9])();
-  [size2, c1] = callback(importAllResult.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
+  let size = require("usePipDimensions")(obj);
+  let obj2 = noop;
+  const tmp7 = require("useWindowDimensions")();
+  [size2, c1] = _slicedToArray(noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
   let obj3 = insets(ref[12]);
   const fn = function w() {
-    const obj = { marginTop: insets.top, marginBottom: null };
-    if (typeof closure_1_10 !== "function") {
-      HermesBuiltin.throwTypeError();
+    let obj = { marginTop: insets.top, marginBottom: null };
+    spring;
+    if (typeof getSpringAnimationConfig === "function") {
+      obj = { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined };
+      obj.marginBottom = tmp2(tmp3, obj);
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    obj[1] = insets(ref[13]).withSpring(insets.bottom, { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined });
-    return obj;
   };
   obj = { insets, withSpring: insets(ref[13]).withSpring, getSpringAnimationConfig };
   fn.__closure = obj;
   fn.__workletHash = 16677290574613;
-  fn.__initData = closure_11;
+  fn.__initData = __initData;
   const animatedStyle = obj3.useAnimatedStyle(fn);
   let obj5 = insets(ref[14]);
   const isViewingActivity = obj5.useIsViewingActivity({ channelId: channel.id });
-  obj1 = { channelId: channel.id };
-  const tmp8 = callback(importAllResult.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
-  obj2 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
+  const obj1 = { channelId: channel.id };
+  const tmp8 = _slicedToArray(noop.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
+  size = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
   let tmp11;
   if (isViewingActivity) {
     tmp11 = toggleFocus;
   }
-  obj2[5] = tmp11;
-  const draggablePip = insets(ref[15]).useDraggablePip(obj2);
+  size.onPress = tmp11;
+  const draggablePip = insets(ref[15]).useDraggablePip(size);
   ({ gesture, draggableGridItemStyles } = draggablePip);
   ref = obj2.useRef(null);
-  obj3 = { style: items, pointerEvents: "box-none", children: null };
-  items = [tmp2.pipOuterContainer, animatedStyle, style];
-  const obj4 = {
+  obj2 = { style: null, pointerEvents: "box-none", children: null };
+  const items = [tmp2.pipOuterContainer, animatedStyle, style];
+  obj2.style = items;
+  obj3 = {
     ref,
     style: tmp2.pipInnerContainer,
     pointerEvents: "box-none",
     onLayout() {
       if (null != ref.current) {
         const current = ref.current;
-        current.measure((arg0, arg1, width, height, pageX, pageY) => {
-          callback({ x: arg0, y: arg1, width, height, pageX, pageY });
+        current.measure((x, y, width, height, pageX, pageY) => {
+          const size = { x, y, width, height, pageX, pageY };
+          closure_1_1(size);
         });
       }
     },
     children: null
   };
-  obj5 = { gesture, children: null };
+  const obj4 = { gesture, children: null };
   const items1 = [draggableGridItemStyles, ];
   const obj8 = insets(ref[15]);
   let elevationShadow;
   if (tmp3Result.isIOS()) {
     elevationShadow = tmp2.elevationShadow;
   }
-  tmp3Result = insets(ref[17]);
+  obj5 = { style: items1, children: tmp14(tmp15, { children }) };
   items1[1] = elevationShadow;
-  obj5[1] = jsx(importDefault(ref[12]).View, { style: items1, children: <closure_5>{children}</closure_5> });
-  obj4[4] = jsx(insets(ref[16]).GestureDetector, { gesture, children: null });
-  obj3[2] = <closure_5 ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
+  obj4.children = jsx(require("ReanimatedRexport").View, { style: items1, children: tmp14(tmp15, { children }) });
+  obj3.children = jsx(insets(ref[16]).GestureDetector, { gesture, children: null });
+  obj2.children = <closure_5 ref={ref} style={tmp2.pipInnerContainer} pointerEvents="box-none" onLayout={function onLayout() {
     if (null != ref.current) {
       const current = ref.current;
-      current.measure((arg0, arg1, width, height, pageX, pageY) => {
-        callback({ x: arg0, y: arg1, width, height, pageX, pageY });
+      current.measure((x, y, width, height, pageX, pageY) => {
+        const size = { x, y, width, height, pageX, pageY };
+        closure_1_1(size);
       });
     }
   }}>{null}</closure_5>;
-  return jsx(importDefault(ref[12]).View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(require("ReanimatedRexport").View, { style: null, pointerEvents: "box-none", children: null });
 });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
-
-export default memoResult;
 export const DEFAULT_PIP_POSITION = PictureInPicturePositions.TOP_LEFT;

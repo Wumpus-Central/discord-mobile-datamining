@@ -1,19 +1,21 @@
-// === Module 11995: tryUpdateSubscriptionForHereMention ===
+// === Module 11995: ChatInputContentCallbacks ===
 
-// Module 11995 (tryUpdateSubscriptionForHereMention)
-import reset from "reset" /* 7286 */;
-import subscribeMembers from "subscribeMembers" /* 7312 */;
+// Module 11995 (ChatInputContentCallbacks)
+import _modDef12 from "module_12" /* 12 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7286 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7312 */;
 import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9304 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "getMemberListId" /* 7279 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelMemberStore from "ChannelMemberStore" /* 7279 */;
 
-require = arg1;
+require = fn;
 let c6 = "@here";
-const result = require("set").fileFinishedImporting("modules/channel_text_area/ChatInputContentCallbacks.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_text_area/ChatInputContentCallbacks.tsx");
 
 export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptionForHereMention(arr, maxMessageLength, guild_id, id) {
-  const groups = props.getProps(guild_id, id).groups;
+  const groups = ChannelMemberStore.getProps(guild_id, id).groups;
   let tmp = groups.length > 1;
   if (!tmp) {
     let tmp2 = 1 === groups.length;
@@ -32,9 +34,8 @@ export const tryUpdateSubscriptionForHereMention = function tryUpdateSubscriptio
     if (!tmp5) {
       let flag = -1 !== arr.indexOf(c6);
       if (flag) {
-        subscribeMembers.subscribeChannel(guild_id, id, reset.DEFAULT_RANGES);
+        GuildSubscriptionsActionCreators.subscribeChannel(guild_id, id, GuildChannelSubscriptions.DEFAULT_RANGES);
         flag = true;
-        const obj = subscribeMembers;
       }
       tmp7 = flag;
     }
@@ -47,13 +48,13 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
   importDefault = arg1;
   dependencyMap = arg2;
   let tmp = useMessageMaxLengthDefault();
-  const callback = tmp;
-  let tmp2 = callback(first.useState(false), 2);
+  _slicedToArray = tmp;
+  let tmp2 = _slicedToArray(first.useState(false), 2);
   first = tmp2[0];
   closure_5 = tmp2[1];
   const items = [tmp, arg1, arg2];
-  const memo = first.useMemo(() => callback(table[6]).debounce((arr) => {
-    const groups = closure_1_5.getProps(closure_1, closure_2).groups;
+  const memo = first.useMemo(() => _modDef12.debounce((arr) => {
+    const groups = props.getProps(closure_1_1, dependencyMap).groups;
     let tmp4 = groups.length > 1;
     if (!tmp4) {
       let tmp5 = 1 === groups.length;
@@ -65,24 +66,24 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
     let tmp6 = tmp4;
     if (!tmp6) {
       let tmp9 = !tmp8;
-      if (!(arr.length < 5 || arr.length > closure_3)) {
-        let flag = -1 !== arr.indexOf(closure_1_6);
+      if (!(arr.length < 5 || arr.length > closure_1_3)) {
+        let flag = -1 !== arr.indexOf(memo);
         if (flag) {
-          closure_1_0(closure_1_2[3]).subscribeChannel(closure_1, closure_2, closure_1_0(closure_1_2[4]).DEFAULT_RANGES);
+          closure_0(7312).subscribeChannel(closure_1_1, dependencyMap, closure_0(7286).DEFAULT_RANGES);
           flag = true;
-          const obj = closure_1_0(closure_1_2[3]);
+          const obj = closure_0(7312);
         }
         tmp9 = flag;
       }
       tmp6 = tmp9;
     }
     if (tmp6) {
-      callback(true);
+      props(true);
     }
   }, 200, { maxWait: 500 }), items);
   const items1 = [first, memo, arg0, arg1, arg2];
   const effect = first.useEffect(() => {
-    const groups = props.getProps(closure_1, closure_2).groups;
+    const groups = ChannelMemberStore.getProps(closure_1, closure_2).groups;
     if (null != closure_1) {
       let tmp = groups.length > 1;
       if (!tmp) {
@@ -96,8 +97,8 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
         if (!first) {
           closure_0.addListener("text-changed", memo);
           return () => {
-            closure_0.removeListener("text-changed", closure_6);
-            closure_6.cancel();
+            closure_1_0.removeListener("text-changed", memo);
+            memo.cancel();
           };
         }
       }

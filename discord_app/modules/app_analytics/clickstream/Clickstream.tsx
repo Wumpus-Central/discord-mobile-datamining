@@ -1,30 +1,28 @@
-// === Module 7465: isClickstreamEnabled ===
+// === Module 7465: Clickstream ===
 
-// Module 7465 (isClickstreamEnabled)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 7466 */;
-import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 7467 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "createRTCConnection" /* 4583 */;
+// Module 7465 (Clickstream)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ClickstreamExperiment from "ClickstreamExperiment" /* 7466 */;
+import ClickstreamEvents from "ClickstreamEvents" /* 7467 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-require = arg1;
+require = fn;
 function isClickstreamEnabled(flag) {
   if (flag === undefined) {
     flag = true;
   }
   if (flag) {
-    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(store.getId());
+    const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(AuthenticationStore.getId());
     if (extractTimestampResult !== c7) {
       drainClickstream(false);
       c7 = extractTimestampResult;
     }
-    const obj = DISCORD_EPOCHDefault;
-    closure_8 = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
-    const obj2 = clickstreamExperimentEnabled;
+    result = ClickstreamExperiment.clickstreamExperimentEnabled();
   }
-  return closure_8;
+  return result;
 }
 function drainClickstream(flag) {
   if (flag === undefined) {
@@ -33,14 +31,10 @@ function drainClickstream(flag) {
   if (isClickstreamEnabled(flag)) {
     const tmp3 = obj[Symbol.iterator]();
     while (tmp3 !== undefined) {
-      let tmp7 = callback;
-      let tmp8 = callback(tmp5, 2);
+      let tmp8 = _slicedToArray(tmp5, 2);
       let first = tmp8[0];
-      let tmp10 = importDefault;
-      let tmp11 = dependencyMap;
-      let obj2 = expandEventPropertiesDefault;
-      let tmp12 = require;
-      let obj3 = getClickstreamDrainEvent;
+      let obj2 = AnalyticsUtilsDefault;
+      let obj3 = ClickstreamEvents;
       let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
       continue;
     }
@@ -51,29 +45,28 @@ function drainClickstream(flag) {
 }
 const map = new Map();
 let c7 = -1;
-let c8 = false;
-let result = require("set").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, arg1) {
-  let obj = DISCORD_EPOCHDefault;
-  const extractTimestampResult = obj.extractTimestamp(store.getId());
+  let obj = SnowflakeUtilsDefault;
+  const extractTimestampResult = obj.extractTimestamp(AuthenticationStore.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
     c7 = extractTimestampResult;
   }
-  const result = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
-  c8 = result;
+  result = ClickstreamExperiment.clickstreamExperimentEnabled();
   if (result) {
     if (!map.has(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM)) {
       const result1 = obj3.set(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM, []);
     }
-    const value = obj3.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
+    value = obj3.get(CHANNEL_LATEST_MESSAGES_LOADED_CLICKSTREAM);
     if (value != null) {
       obj = { timestamp: null, rtc_state: null };
       const _Date = Date;
       const date = new Date();
-      obj[0] = date;
-      obj[1] = state.getState();
+      obj.timestamp = date;
+      obj.rtc_state = RTCConnectionStore.getState();
       const merged = Object.assign(arg1);
       value.push(obj);
     }

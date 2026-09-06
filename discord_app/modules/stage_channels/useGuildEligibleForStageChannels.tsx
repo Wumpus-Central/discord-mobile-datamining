@@ -1,16 +1,17 @@
-// === Module 16831: isGuildEligibleForStageChannels ===
+// === Module 16831: useGuildEligibleForStageChannels ===
 
-// Module 16831 (isGuildEligibleForStageChannels)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 16831 (useGuildEligibleForStageChannels)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
 
 export const isGuildEligibleForStageChannels = function isGuildEligibleForStageChannels(id) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [closure_2];
+    const items = [GuildStore];
     tmp = items;
   }
   [obj] = tmp;
@@ -23,17 +24,17 @@ export const isGuildEligibleForStageChannels = function isGuildEligibleForStageC
   return Boolean(hasItem);
 };
 export const useGuildEligibleForStageChannels = function useGuildEligibleForStageChannels(arg0) {
-  const _require = arg0;
-  let items = [closure_2];
+  _require = arg0;
+  let items = [GuildStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    const items = [closure_1_2];
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [GuildStore];
     [obj] = items;
     const guild = obj.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(closure_1_3.COMMUNITY);
+      hasItem = features.has(GuildFeatures.COMMUNITY);
     }
     return Boolean(hasItem);
   }, items1);

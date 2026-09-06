@@ -1,17 +1,17 @@
-// === Module 9902: createSoundForPack ===
+// === Module 9902: SoundUtils ===
 
-// Module 9902 (createSoundForPack)
-import timestampDefault from "timestamp" /* 3 */;
-import getSoundPackDefault from "getSoundPack" /* 9905 */;
-import _createSound from "_createSound" /* 9906 */;
-import closure_3 from "Soundpacks" /* 9903 */;
-import closure_4 from "initialize" /* 4405 */;
-import { SoundOutputChannel } from "SoundOutputChannel" /* 9091 */;
+// Module 9902 (SoundUtils)
+import LoggerDefault from "Logger" /* 3 */;
+import getSoundsForPackDefault from "getSoundsForPack" /* 9905 */;
+import sound_playback_SoundUtils from "sound_playback/SoundUtils" /* 9906 */;
+import SoundpackStore from "SoundpackStore" /* 9903 */;
+import StreamerModeStore from "StreamerModeStore" /* 4405 */;
 
-require = arg1;
-let closure_6 = new timestampDefault("SoundUtils");
-const tmp2 = new timestampDefault("SoundUtils");
-const result = require("set").fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
+require = fn;
+const SoundOutputChannel = fn(9091).SoundOutputChannel;
+const logger = new LoggerDefault("SoundUtils");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
 
 export const createSoundForPack = function createSoundForPack(call_calling, soundpack) {
   let num = arg2;
@@ -22,7 +22,7 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   if (arg3 === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  let tmp3 = getSoundPackDefault(soundpack)[call_calling];
+  let tmp3 = getSoundsForPackDefault(soundpack)[call_calling];
   if (tmp3 == null) {
     tmp3 = call_calling;
   }
@@ -32,7 +32,7 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   if (DEFAULT === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  const mobileAudioSound = new _createSound.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
+  const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(tmp3, call_calling, num, DEFAULT, false);
   return mobileAudioSound;
 };
 export const createSound = function createSound(stage_waiting, soundboard_sound, arg2) {
@@ -48,7 +48,7 @@ export const createSound = function createSound(stage_waiting, soundboard_sound,
   if (arg4 === undefined) {
     flag = false;
   }
-  const mobileAudioSound = new _createSound.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
+  const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(stage_waiting, soundboard_sound, num, DEFAULT, flag);
   return mobileAudioSound;
 };
 export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChannel) {
@@ -56,13 +56,13 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
   if (arg1 === undefined) {
     num = 1;
   }
-  const _require = arg2;
-  if (!disableSounds.disableSounds) {
+  closure_0 = arg2;
+  if (!StreamerModeStore.disableSounds) {
     let soundpack = arg3;
     if (arg3 == null) {
-      soundpack = soundpack.getSoundpack();
+      soundpack = SoundpackStore.getSoundpack();
     }
-    const tmp4Result = getSoundPackDefault(soundpack);
+    const tmp4Result = getSoundsForPackDefault(soundpack);
     if (null == tmp4Result) {
       const _HermesInternal = HermesInternal;
       logger.log("Unable to find sound for pack name: " + arg3);
@@ -94,11 +94,11 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (flag === undefined) {
       flag = false;
     }
-    const mobileAudioSound = new _require(9906).MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
+    const mobileAudioSound = new sound_playback_SoundUtils.MobileAudioSound(tmp13, arg0, num, outputChannel, flag);
     if (null != arg2) {
-      mobileAudioSound.playWithListener().then((arg0) => {
-        if (arg0) {
-          callback();
+      mobileAudioSound.playWithListener().then((result) => {
+        if (result) {
+          closure_0();
         }
       });
       const playWithListenerResult = mobileAudioSound.playWithListener();

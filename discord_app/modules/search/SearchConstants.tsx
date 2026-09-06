@@ -1,16 +1,15 @@
-// === Module 7878: MessageEmbedTypes ===
+// === Module 7878: SearchConstants ===
 
-// Module 7878 (MessageEmbedTypes)
+// Module 7878 (SearchConstants)
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ MessageEmbedTypes, SearchTypes } = ME);
+({ MessageEmbedTypes, SearchTypes } = Constants);
 let obj = { Messages: 0, [0]: "Messages", Media: 1, [1]: "Media", Link: 2, [2]: "Link", File: 3, [3]: "File", Pins: 4, [4]: "Pins" };
 obj = { RECENT: "recent", MEMBERS: "members", PEOPLE: "people", MEDIA: "media", PINS: "pins", MESSAGES: "messages", LINKS: "links", FILES: "files", GUILD_CHANNELS: "guild_channels", THREADS: "threads" };
 const items = [, , , , ];
 ({ MESSAGES: arr[0], MEDIA: arr[1], PINS: arr[2], LINKS: arr[3], FILES: arr[4] } = obj);
-let set = new Set(items);
 const items1 = [, , ];
 ({ MEDIA: arr2[0], LINKS: arr2[1], FILES: arr2[2] } = obj);
 const items2 = [, , , ];
@@ -38,7 +37,8 @@ const items12 = [, , , , , ];
 ({ MEMBERS: arr13[0], MESSAGES: arr13[1], MEDIA: arr13[2], PINS: arr13[3], LINKS: arr13[4], FILES: arr13[5] } = obj);
 const items13 = [, , ];
 ({ IMAGE: arr14[0], VIDEO: arr14[1], GIFV: arr14[2] } = MessageEmbedTypes);
-const result = set.fileFinishedImporting("modules/search/SearchConstants.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/search/SearchConstants.tsx");
 
 export const SearchAutocompleteSelectAnalyticsActions = { KEY_PRESS: "key_press", CLICK: "click" };
 export const WEB_SEARCH_HISTORY_STORAGE_KEY = "SearchStore";

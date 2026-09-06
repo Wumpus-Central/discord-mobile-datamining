@@ -1,14 +1,14 @@
-// === Module 4405: initialize ===
+// === Module 4405: StreamerModeStore ===
 
-// Module 4405 (initialize)
+// Module 4405 (StreamerModeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import apexExperiment from "apexExperiment" /* 4406 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import OverlayV3Experiment from "OverlayV3Experiment" /* 4406 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
 let obj = { enabled: false, autoToggle: true, hideInstantInvites: true, hidePersonalInformation: true, disableSounds: true, disableNotifications: true, disabledOverlayWidgets: [], enableContentProtection: false };
 let closure_6 = {};
 obj = {};
@@ -19,21 +19,21 @@ class StreamerModeStore extends PersistedStore {
 const prototype = StreamerModeStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   let merged = Object.assign(closure_6, arg0);
-  const items = [closure_3];
+  const items = [AuthenticationStore];
   this.syncWith(items, () => {
     id = id.getId();
     if (null != id) {
-      let tmp6 = table[id];
+      let tmp6 = closure_1_6[id];
       if (null == tmp6) {
         obj = {};
-        const merged = Object.assign(closure_5);
-        table[id] = obj;
+        const merged = Object.assign(closure_1_5);
+        closure_1_6[id] = obj;
         tmp6 = obj;
       }
       obj = tmp6;
     } else {
       obj = {};
-      const merged1 = Object.assign(closure_5);
+      const merged1 = Object.assign(closure_1_5);
     }
   });
 };
@@ -106,7 +106,7 @@ Object.defineProperty(prototype, "enableContentProtection", {
   set: undefined
 });
 prototype["isOverlayWidgetDisabled"] = function isOverlayWidgetDisabled(arg0) {
-  obj = apexExperiment;
+  obj = OverlayV3Experiment;
   let enabled = obj.getOverlayStreamerModeConfig("StreamerModeStore").enabled;
   if (enabled) {
     const self = this;
@@ -126,7 +126,7 @@ StreamerModeStore.displayName = "StreamerModeStore";
 StreamerModeStore.persistKey = "StreamerModeStore";
 let items = [
   (arg0) => {
-    id = id.getId();
+    const id = AuthenticationStore.getId();
     if (null != arg0) {
       if (null != id) {
         obj = {};
@@ -159,14 +159,12 @@ obj = {
     const merged1 = Object.assign(obj, obj);
     if ("enabled" === value.key) {
       if (typeof value.value === "boolean") {
-        obj = { enabled: null, automatic: false };
-        obj[0] = value.value;
-        expandEventPropertiesDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
-        const obj5 = expandEventPropertiesDefault;
+        obj = { enabled: value.value, automatic: false };
+        AnalyticsUtilsDefault.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
       }
       return true;
     }
-    obj1 = { enabled: obj.enabled, automatic: obj.autoToggle, disable_notifications: obj.disableNotifications, disable_sounds: obj.disableSounds, hide_instant_invites: obj.hideInstantInvites, hide_personal_info: obj.hidePersonalInformation, enable_content_protection: obj.enableContentProtection, disabled_overlay_widgets: null, old_enabled: null, old_automatic: null, old_disable_notifications: null, old_disable_sounds: null, old_hide_instant_invites: null, old_hide_personal_info: null, old_enable_content_protection: null, old_disabled_overlay_widgets: null };
+    const obj1 = { enabled: obj.enabled, automatic: obj.autoToggle, disable_notifications: obj.disableNotifications, disable_sounds: obj.disableSounds, hide_instant_invites: obj.hideInstantInvites, hide_personal_info: obj.hidePersonalInformation, enable_content_protection: obj.enableContentProtection, disabled_overlay_widgets: null, old_enabled: null, old_automatic: null, old_disable_notifications: null, old_disable_sounds: null, old_hide_instant_invites: null, old_hide_personal_info: null, old_enable_content_protection: null, old_disabled_overlay_widgets: null };
     const disabledOverlayWidgets = obj.disabledOverlayWidgets;
     let str;
     if (disabledOverlayWidgets != null) {
@@ -175,8 +173,8 @@ obj = {
     if (str == null) {
       str = "";
     }
-    obj1[7] = str;
-    ({ enabled: obj4[8], autoToggle: obj4[9], disableNotifications: obj4[10], disableSounds: obj4[11], hideInstantInvites: obj4[12], hidePersonalInformation: obj4[13], enableContentProtection: obj4[14], disabledOverlayWidgets: disabledOverlayWidgets2 } = obj);
+    obj1.disabled_overlay_widgets = str;
+    ({ enabled: obj4.old_enabled, autoToggle: obj4.old_automatic, disableNotifications: obj4.old_disable_notifications, disableSounds: obj4.old_disable_sounds, hideInstantInvites: obj4.old_hide_instant_invites, hidePersonalInformation: obj4.old_hide_personal_info, enableContentProtection: obj4.old_enable_content_protection, disabledOverlayWidgets: disabledOverlayWidgets2 } = obj);
     let str3;
     if (disabledOverlayWidgets2 != null) {
       str3 = disabledOverlayWidgets2.join(",");
@@ -184,15 +182,13 @@ obj = {
     if (str3 == null) {
       str3 = "";
     }
-    obj1[15] = str3;
-    expandEventPropertiesDefault.track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj1);
+    obj1.old_disabled_overlay_widgets = str3;
+    AnalyticsUtilsDefault.track(AnalyticEvents.UPDATE_STREAMER_MODE_SETTINGS, obj1);
   },
   RUNNING_STREAMER_TOOLS_CHANGE: function handleRunningStreamerToolsChange(count) {
     if (obj.autoToggle) {
       obj.enabled = count.count > 0;
-      obj = expandEventPropertiesDefault;
-      obj = { enabled: null, automatic: true };
-      obj[0] = count.count > 0;
+      obj = { enabled: count.count > 0, automatic: true };
       obj.track(AnalyticEvents.STREAMER_MODE_TOGGLE, obj);
       return true;
     } else {
@@ -200,7 +196,8 @@ obj = {
     }
   }
 };
-const streamerModeStore = new StreamerModeStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("stores/StreamerModeStore.tsx");
+const streamerModeStore = new StreamerModeStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/StreamerModeStore.tsx");
 
 export default streamerModeStore;

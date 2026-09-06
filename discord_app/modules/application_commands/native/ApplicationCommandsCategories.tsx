@@ -1,58 +1,58 @@
 // === Module 12398: ApplicationCommandsCategories ===
 
 // Module 12398 (ApplicationCommandsCategories)
-import ThemesDefault from "Themes" /* 576 */;
-import preloadDefault from "preload" /* 5587 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import ICON_SIZE from "ICON_SIZE" /* 12395 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import HapticUtils from "HapticUtils" /* 4528 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12231 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ View: c4, FlatList: c5 } = get_ActivityIndicator);
-({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: error } = ICON_SIZE);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
+const ApplicationCommandsCategoriesConstants = fn(12395);
+({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
+const jsx = fn(21).jsx;
+fn(4560);
 let obj = { container: null, categoryImage: null, fadedItem: null, activeItem: null, item: null };
-obj = { backgroundColor: ThemesDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: ThemesDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
-obj[0] = obj;
-createCacheKey = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
-obj[1] = createCacheKey;
-obj[2] = { opacity: 0.5 };
-obj[3] = { opacity: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-obj[4] = { marginVertical: NODE_MARGIN, marginHorizontal: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
-let closure_9 = createCacheKey.createStyles(obj);
-let closure_10 = importAllResult.memo((section) => {
+obj = { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" };
+obj.container = obj;
+let size = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
+obj.categoryImage = size;
+obj.fadedItem = { opacity: 0.5 };
+const createStyles = { opacity: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+obj.activeItem = createStyles;
+obj.item = { marginVertical: NODE_MARGIN, marginHorizontal: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
+let closure_9 = createStyles.createStyles(obj);
+let closure_10 = noop.memo((section) => {
   section = section.section;
-  ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: closure_3 } = section);
-  let stateFromStores;
-  const tmp = callback();
+  ({ handlePressCategory: importDefault, active, index: dependencyMap, guildId: noop } = section);
+  const tmp = closure_9();
   let obj = section(504);
-  const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    if (null != closure_3) {
+  const items = [GuildMemberStore];
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    if (null != noop) {
       let botId;
       if (section != null) {
         botId = tmp2.botId;
       }
       if (null != botId) {
-        return closure_1_6.getMember(tmp, tmp2.botId);
+        return GuildMemberStore.getMember(tmp, tmp2.botId);
       }
     }
   });
   const items1 = [section, stateFromStores];
-  const memo = importAllResult.useMemo(() => section(closure_1_2[8]).getApplicationCommandsIconSource(section, stateFromStores), items1);
+  const memo = noop.useMemo(() => application_commands_ApplicationCommandUtils.getApplicationCommandsIconSource(section, stateFromStores), items1);
   let tmp6 = null != memo;
   if (tmp6) {
-    obj = { style: null, source: null };
-    obj[0] = tmp.categoryImage;
-    obj[1] = memo;
-    tmp6 = jsx(preloadDefault, { style: null, source: null });
+    obj = { style: tmp.categoryImage, source: memo };
+    tmp6 = jsx(FastImageDefault, { style: tmp.categoryImage, source: memo });
   }
   obj = {
     onPress() {
-      return callback(closure_2);
+      return importDefault(dependencyMap);
     },
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -62,54 +62,47 @@ let closure_10 = importAllResult.memo((section) => {
   const formatToPlainString = intl.formatToPlainString;
   const t = tmp2(1114).t;
   if (active) {
-    obj1 = { applicationName: null };
-    obj1[0] = section.name;
+    const obj1 = { applicationName: section.name };
     let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj1);
   } else {
-    const obj2 = { applicationName: null };
-    obj2[0] = section.name;
+    const obj2 = { applicationName: section.name };
     formatToPlainStringResult = formatToPlainString(t["9uqD4O"], obj2);
   }
-  obj[2] = formatToPlainStringResult;
+  obj.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
-  obj[3] = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
+  obj.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
   return jsx(section(5123).PressableOpacity, {
     onPress() {
-      return callback(closure_2);
+      return importDefault(dependencyMap);
     },
     accessibilityRole: "button",
     accessibilityLabel: null,
     children: null
   }, section.name);
 });
-let obj2 = { opacity: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
-let result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/application_commands/native/ApplicationCommandsCategories.tsx");
 
 export default function ApplicationCommandsCategories(onPressSection) {
   onPressSection = onPressSection.onPressSection;
   const selectedIndex = onPressSection.selectedIndex;
   const guildId = onPressSection.guildId;
-  importAllResult = undefined;
-  closure_4 = undefined;
-  closure_5 = undefined;
-  let ref;
-  let callback;
+  noop = undefined;
   ({ style, sections } = onPressSection);
-  importAllResult = importAllResult.useRef(null);
-  closure_4 = importAllResult.useRef(null);
-  closure_5 = importAllResult.useRef(null);
-  ref = importAllResult.useRef(null);
+  noop = noop.useRef(null);
+  const ref2 = noop.useRef(null);
+  const ref3 = noop.useRef(null);
+  const ref = noop.useRef(null);
   const items = [selectedIndex];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (null != ref.current) {
       if (null != ref2.current) {
         if (null != ref.current) {
           if (null != ref3.current) {
-            const result = selectedIndex * callback;
+            const result = selectedIndex * React5;
             if (tmp8) {
               const current = tmp3.current;
-              const obj = { offset: null };
-              obj[0] = result;
+              const obj = { offset: result };
               current.scrollToOffset(obj);
             }
             tmp8 = result > tmp2.current || result < tmp.current;
@@ -119,26 +112,27 @@ export default function ApplicationCommandsCategories(onPressSection) {
     }
   }, items);
   const items1 = [onPressSection];
-  callback = importAllResult.useCallback((arg0) => {
+  const handlePressCategory = noop.useCallback((arg0) => {
     onPressSection(arg0);
-    const result = onPressSection(guildId[12]).triggerHapticFeedback(selectedIndex(guildId[13]).IMPACT_LIGHT);
+    const result = HapticUtils.triggerHapticFeedback(haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT);
   }, items1);
-  const callback1 = importAllResult.useCallback((nativeEvent) => {
+  const callback1 = noop.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const contentOffset = nativeEvent.contentOffset;
     closure_3.current = contentOffset.x;
     closure_4.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
   }, []);
-  const callback2 = importAllResult.useCallback((nativeEvent) => {
+  const callback2 = noop.useCallback((nativeEvent) => {
     const layout = nativeEvent.nativeEvent.layout;
     closure_3.current = 0;
     closure_4.current = layout.width;
     closure_5.current = layout.width;
   }, []);
-  const items2 = [selectedIndex, callback, guildId];
-  const callback3 = importAllResult.useCallback((arg0, index) => ({ length: callback, offset: callback * index, index }), []);
-  let obj = { style: items3, children: null };
-  items3 = [callback().container, style];
+  const items2 = [selectedIndex, handlePressCategory, guildId];
+  const callback3 = noop.useCallback((arg0, index) => ({ length: callback, offset: callback * index, index }), []);
+  let obj = { style: null, children: null };
+  const items3 = [closure_9().container, style];
+  obj.style = items3;
   obj = {
     ref,
     getItemLayout: callback3,
@@ -148,24 +142,24 @@ export default function ApplicationCommandsCategories(onPressSection) {
     keyExtractor(id) {
       return id.id;
     },
-    renderItem: importAllResult.useCallback((index) => {
-      index = index.index;
-      return closure_1_8(closure_1_10, { active: index === selectedIndex, section: index.item, index, handlePressCategory: callback, guildId });
+    renderItem: noop.useCallback((section) => {
+      const index = section.index;
+      return <closure_10 active={index === selectedIndex} section={arg0.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
     }, items2),
     showsHorizontalScrollIndicator: false,
     onScroll: callback1,
     onLayout: callback2
   };
-  obj[1] = <closure_5 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
+  obj.children = <ref3 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
     return id.id;
-  }} renderItem={importAllResult.useCallback((index) => {
-    index = index.index;
-    return closure_1_8(closure_1_10, { active: index === selectedIndex, section: index.item, index, handlePressCategory: callback, guildId });
+  }} renderItem={noop.useCallback((section) => {
+    const index = section.index;
+    return <closure_10 active={index === selectedIndex} section={arg0.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
   }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
-  return <closure_4 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
+  return <ref2 ref={ref} getItemLayout={callback3} data={sections} keyboardShouldPersistTaps="always" horizontal keyExtractor={function keyExtractor(id) {
     return id.id;
-  }} renderItem={importAllResult.useCallback((index) => {
-    index = index.index;
-    return closure_1_8(closure_1_10, { active: index === selectedIndex, section: index.item, index, handlePressCategory: callback, guildId });
+  }} renderItem={noop.useCallback((section) => {
+    const index = section.index;
+    return <closure_10 active={index === selectedIndex} section={arg0.item} index={index} handlePressCategory={handlePressCategory} guildId={guildId} />;
   }, items2)} showsHorizontalScrollIndicator={false} onScroll={callback1} onLayout={callback2} />;
 };

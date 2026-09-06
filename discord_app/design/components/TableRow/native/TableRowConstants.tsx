@@ -1,9 +1,9 @@
-// === Module 5603: TABLE_ROW_HEIGHT ===
+// === Module 5603: TableRowConstants ===
 
-// Module 5603 (TABLE_ROW_HEIGHT)
-import set from "set" /* 2 */;
+// Module 5603 (TableRowConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/TableRow/native/TableRowConstants.tsx");
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowConstants.tsx");
 
 export const TABLE_ROW_HEIGHT = 60;
 export const TABLE_ROW_CONTENT_HEIGHT = 36;

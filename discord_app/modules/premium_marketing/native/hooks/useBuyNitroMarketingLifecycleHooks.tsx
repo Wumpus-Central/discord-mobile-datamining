@@ -1,72 +1,74 @@
 // === Module 13351: useBuyNitroMarketingLifecycleHooks ===
 
 // Module 13351 (useBuyNitroMarketingLifecycleHooks)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import usePremiumPlanPurchasedStore from "usePremiumPlanPurchasedStore" /* 7421 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUtilsAll from "DismissibleContentUtils" /* 1945 */;
+import DismissibleContentUnsafeUtilsAll from "DismissibleContentUnsafeUtils" /* 4380 */;
+import useBuyNitroPurchaseLock from "useBuyNitroPurchaseLock" /* 13356 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ reset: c4, usePremiumPlanPurchasedStore: c5 } = usePremiumPlanPurchasedStore);
-createCacheKey = { navigator: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopWidth: 0 };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx");
+require = fn;
+const PremiumPlanPurchasedStore = fn(7421);
+({ reset: closure_4, usePremiumPlanPurchasedStore: hasOwnProperty } = PremiumPlanPurchasedStore);
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+fn(4560);
+let createStyles = { navigator: null };
+createStyles = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopWidth: 0 };
+createStyles.navigator = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroMarketingLifecycleHooks.tsx");
 
 export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingLifecycleHooks(nativeStackNavigation, initialLoadCompleted) {
-  let _require = nativeStackNavigation;
-  let promotionMarketingComponent = initialLoadCompleted;
-  let tmp = callback();
+  _require = nativeStackNavigation;
+  let tmp = closure_7();
   dependencyMap = tmp;
-  _require = initialLoadCompleted;
-  promotionMarketingComponent = undefined;
-  promotionMarketingComponent = _require(13352).usePromotionMarketingComponent(_require(10742).MarketingComponentType.PREMIUM_TAB);
+  closure_129_0 = initialLoadCompleted;
+  const promotionMarketingComponent = require("usePromotionMarketingComponent").usePromotionMarketingComponent(require("MarketingComponentType").MarketingComponentType.PREMIUM_TAB);
+  closure_129_1 = promotionMarketingComponent;
   const items = [initialLoadCompleted, promotionMarketingComponent];
-  const effect = React.useEffect(() => {
-    let tmp = initialLoadCompleted;
-    if (initialLoadCompleted) {
-      tmp = null != promotionMarketingComponent;
+  const effect = noop.useEffect(() => {
+    let tmp = closure_0;
+    if (closure_0) {
+      tmp = null != initialLoadCompleted;
     }
     if (tmp) {
-      tmp = "premiumTab" === promotionMarketingComponent.properties.properties.oneofKind;
+      tmp = "premiumTab" === initialLoadCompleted.properties.properties.oneofKind;
     }
     if (tmp) {
-      let obj = promotionMarketingComponent(_navigator[7]);
-      tmp = !obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(initialLoadCompleted(_navigator[8]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionMarketingComponent.promotionId).isDismissed;
+      let obj = DismissibleContentUnsafeUtilsAll;
+      tmp = !obj.UNSAFE_isSnowflakeBoundDismissibleContentDismissed(dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, initialLoadCompleted.promotionId).isDismissed;
     }
     if (tmp) {
-      obj = { dismissAction: null };
-      obj[0] = closure_1_6.AUTO_DISMISS;
-      const result = promotionMarketingComponent(_navigator[9]).markSnowflakeBoundDismissibleContentAsDismissed(initialLoadCompleted(_navigator[8]).DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, promotionMarketingComponent.promotionId, obj);
-      const obj2 = promotionMarketingComponent(_navigator[9]);
+      obj = { dismissAction: ContentDismissActionType.AUTO_DISMISS };
+      const result = DismissibleContentUtilsAll.markSnowflakeBoundDismissibleContentAsDismissed(dismissible_content.DismissibleContent.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, initialLoadCompleted.promotionId, obj);
     }
   }, items);
-  const effect1 = React.useEffect(() => {
-    let BuyNitroPurchaseLock = initialLoadCompleted(_navigator[10]).BuyNitroPurchaseLock;
+  const effect1 = noop.useEffect(() => {
+    let BuyNitroPurchaseLock = nativeStackNavigation(_navigator[10]).BuyNitroPurchaseLock;
     BuyNitroPurchaseLock.end();
-    let result = initialLoadCompleted(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
+    let result = nativeStackNavigation(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
     return () => {
-      const BuyNitroPurchaseLock = callback(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = nativeStackNavigation(13356).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = callback(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = nativeStackNavigation(13356).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
-      const result1 = callback(13357).resetBuyNitroTrialAndPriceOverrides();
+      const result1 = nativeStackNavigation(13357).resetBuyNitroTrialAndPriceOverrides();
     };
   }, []);
   const items1 = [initialLoadCompleted];
-  const effect2 = React.useEffect(() => {
-    const BuyNitroPurchaseLock = initialLoadCompleted(_navigator[10]).BuyNitroPurchaseLock;
-    const result = BuyNitroPurchaseLock.setInitialLoadComplete(promotionMarketingComponent);
+  const effect2 = noop.useEffect(() => {
+    const BuyNitroPurchaseLock = useBuyNitroPurchaseLock.BuyNitroPurchaseLock;
+    const result = BuyNitroPurchaseLock.setInitialLoadComplete(closure_1);
   }, items1);
   const items2 = [nativeStackNavigation, tmp.navigator];
-  const layoutEffect = React.useLayoutEffect(() => {
-    initialLoadCompleted.setOptions({ headerShown: false, contentStyle: _navigator.navigator });
+  const layoutEffect = noop.useLayoutEffect(() => {
+    nativeStackNavigation.setOptions({ headerShown: false, contentStyle: _navigator.navigator });
   }, items2);
-  const effect3 = React.useEffect(() => () => {
+  const effect3 = noop.useEffect(() => () => {
     if (!state.getState().isPaymentSuccess) {
-      callback();
+      closure_1_4();
     }
   }, []);
 };

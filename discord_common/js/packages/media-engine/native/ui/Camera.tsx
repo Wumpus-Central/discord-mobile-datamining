@@ -1,9 +1,8 @@
 // === Module 4623: Camera ===
 
 // Module 4623 (Camera)
-import noopAll from "noop" /* 19 */;
 import VideoDefault from "Video" /* 4619 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
 class Camera {
   constructor(arg0) {
@@ -11,28 +10,29 @@ class Camera {
     tmp2 = jsx;
     if (global.disabled) {
       obj = { className: "media-engine-video", style: null };
-      obj1 = { width: null, height: null };
-      obj1[0] = width;
-      obj1[1] = height;
-      obj[1] = obj1;
+      size = { width: null, height: null };
+      size.width = width;
+      size.height = height;
+      obj.style = size;
       str = "div";
       tmp2Result = tmp2("div", obj);
     } else {
       tmp3 = closure_0;
       tmp4 = closure_1;
       obj = { streamId: null, style: null };
-      obj[0] = tmp;
-      obj2 = { width: null, height: null };
-      obj2[0] = width;
-      obj2[1] = height;
-      obj[1] = obj2;
-      tmp2Result = tmp2(require("Video"), obj);
+      obj.streamId = tmp;
+      size1 = { width: null, height: null };
+      size1.width = width;
+      size1.height = height;
+      obj.style = size1;
+      tmp2Result = tmp2(closure_0(closure_1[2]), obj);
     }
     return tmp2Result;
   }
 }
-noopAll;
+const jsx = fn(21).jsx;
 Camera.defaultProps = { disabled: false, width: 320, height: 180 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Camera.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Camera.tsx");
 
 export default Camera;

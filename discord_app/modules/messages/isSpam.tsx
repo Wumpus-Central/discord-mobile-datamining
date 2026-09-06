@@ -1,13 +1,14 @@
-// === Module 7507: isSpamSupported ===
+// === Module 7507: isSpam ===
 
-// Module 7507 (isSpamSupported)
-import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 7508 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+// Module 7507 (isSpam)
+import AutomodMessageUtils from "AutomodMessageUtils" /* 7508 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-({ UserFlags: c3, ChannelTypes: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/messages/isSpam.tsx");
+require = fn;
+const Constants = fn(1074);
+({ UserFlags: c3, ChannelTypes: closure_4 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/isSpam.tsx");
 
 export const isSpamSupported = function isSpamSupported(type) {
   let tmp = undefined !== type;
@@ -17,7 +18,7 @@ export const isSpamSupported = function isSpamSupported(type) {
   return tmp;
 };
 export const isSpammer = function isSpammer(userId) {
-  const user = authStore.getUser(userId);
+  const user = UserStore.getUser(userId);
   let flag;
   if (user != null) {
     flag = user.hasFlag(constants.SPAMMER);
@@ -28,7 +29,7 @@ export const isSpammer = function isSpammer(userId) {
   return flag;
 };
 export const isSpam = function isSpam(author) {
-  const user = authStore.getUser(author.author.id);
+  const user = UserStore.getUser(author.author.id);
   let flag;
   if (user != null) {
     flag = user.hasFlag(constants.SPAMMER);
@@ -37,8 +38,7 @@ export const isSpam = function isSpam(author) {
     flag = false;
   }
   if (flag) {
-    flag = !getDecisionOutcomeFromMessage.isAutomodMessageRecord(author);
-    const obj2 = getDecisionOutcomeFromMessage;
+    flag = !AutomodMessageUtils.isAutomodMessageRecord(author);
   }
   return flag;
 };

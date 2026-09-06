@@ -1,24 +1,26 @@
-// === Module 6941: Label ===
+// === Module 6941: FreeFormErrorLabel ===
 
-// Module 6941 (Label)
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 6941 (FreeFormErrorLabel)
+import shared from "shared" /* 4411 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
 
 export default function Label(style) {
   const children = style.children;
   let nodeText;
   nodeText = nodeText(4264).getNodeText(children);
   const items = [nodeText];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);

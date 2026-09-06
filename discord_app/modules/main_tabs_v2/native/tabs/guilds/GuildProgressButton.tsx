@@ -1,51 +1,49 @@
 // === Module 16197: GuildProgressButton ===
 
 // Module 16197 (GuildProgressButton)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 10119 */;
-import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 12187 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import nativeDefault from "native" /* 576 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12187 */;
+import GuildProgressUtils from "GuildProgressUtils" /* 12474 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12477 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/GuildProgressButton.tsx");
 
 export default function GuildProgressButton(guild) {
   guild = guild.guild;
-  let completed;
   let obj = guild(12474);
   const guildProgressStep = obj.useGuildProgressStep(guild);
-  completed = guildProgressStep.completed;
+  const completed = guildProgressStep.completed;
   const items = [completed, guild.id];
   ({ percentComplete, subtitle } = guildProgressStep);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (completed) {
-      const result = completed(closure_1_2[6]).markCompletedProgressSeen(guild.id);
-      const obj = completed(closure_1_2[6]);
+      const result = GuildProgressActionCreatorsDefault.markCompletedProgressSeen(guild.id);
     }
   }, items);
   const items1 = [guild, completed];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (!completed) {
-      const progress = completed(closure_1_2[6]).createProgress(guild.id);
-      const obj = completed(closure_1_2[6]);
+      const progress = GuildProgressActionCreatorsDefault.createProgress(guild.id);
     }
-    guild(closure_1_2[5]).openActionSheet(guild);
+    GuildProgressUtils.openActionSheet(guild);
   }, items1);
   obj = { icon: null, label: null, subLabel: null, onPress: null, trailing: null };
   obj = { source: completed(16198) };
-  obj[0] = jsx(guild(8595).RowButton.Icon, { source: completed(16198) });
+  obj.icon = jsx(guild(8595).RowButton.Icon, { source: completed(16198) });
   const intl = guild(1114).intl;
-  obj[1] = intl.string(guild(1114).t.o3HK3d);
-  obj[2] = subtitle;
-  obj[3] = callback;
-  obj[4] = jsx(completed(12590), { percent: percentComplete });
+  obj.label = intl.string(guild(1114).t.o3HK3d);
+  obj.subLabel = subtitle;
+  obj.onPress = callback;
+  obj.trailing = jsx(completed(12590), { percent: percentComplete });
   return jsx(guild(8595).RowButton, { source: completed(16198) });
 };
 export const getScaledGuildProgressButtonHeight = function getScaledGuildProgressButtonHeight(fontScale) {
-  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.TABLE_ROW_PADDING);
-  const obj = useIsMobileVisualRefreshExperimentEnabled;
-  const sum = refreshToken + map.scaleTextLineHeight("text-md/semibold", fontScale);
-  const obj2 = map;
-  return sum + 2 * map.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
+  const refreshToken = MobileVisualRefreshExperiment.resolveRefreshToken(nativeDefault.modules.mobile.TABLE_ROW_PADDING);
+  const sum = refreshToken + useScaledTextLineHeight.scaleTextLineHeight("text-md/semibold", fontScale);
+  return sum + 2 * useScaledTextLineHeight.scaleTextLineHeight("text-xs/medium", fontScale) + refreshToken;
 };

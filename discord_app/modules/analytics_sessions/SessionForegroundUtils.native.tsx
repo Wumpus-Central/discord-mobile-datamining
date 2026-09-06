@@ -1,11 +1,11 @@
-// === Module 7462: isForegrounded ===
+// === Module 7462: SessionForegroundUtils ===
 
-// Module 7462 (isForegrounded)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 7462 (SessionForegroundUtils)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const AppState = get_ActivityIndicator.AppState;
-const result = set.fileFinishedImporting("modules/analytics_sessions/SessionForegroundUtils.native.tsx");
+const AppState = _mod17.AppState;
+const result = size.fileFinishedImporting("modules/analytics_sessions/SessionForegroundUtils.native.tsx");
 
 export const isForegrounded = function isForegrounded() {
   return "active" === AppState.currentState;

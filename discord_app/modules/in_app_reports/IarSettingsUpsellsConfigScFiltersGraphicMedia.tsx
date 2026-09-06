@@ -1,53 +1,51 @@
-// === Module 8643: items ===
+// === Module 8643: IarSettingsUpsellsConfigScFiltersGraphicMedia ===
 
-// Module 8643 (items)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import create from "create" /* 1187 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 7301 */;
-import ReportNames from "ReportNames" /* 8630 */;
+// Module 8643 (IarSettingsUpsellsConfigScFiltersGraphicMedia)
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7301 */;
+import MenuTypes from "MenuTypes" /* 8630 */;
+import size from "module_2" /* 2 */;
 
 let obj = {
   getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.RVX1zT);
+    const intl = util.intl;
+    return intl.string(util.t.RVX1zT);
   },
   getDisabledTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.SYkEBi);
+    const intl = util.intl;
+    return intl.string(util.t.SYkEBi);
   },
   getDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.aqlmp8);
+    const intl = util.intl;
+    return intl.string(util.t.aqlmp8);
   },
   eligibleReportSubtypes: null,
   onApply: null,
   predicate: null
 };
-const items = [ReportNames.ReportSubType.SUB_GORE, ReportNames.ReportSubType.SUB_GLORIFYING_VIOLENCE];
-obj[3] = items;
-obj[4] = function onApply() {
-  let obj = resolveGoreSettingWithDefaults;
-  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
-  obj = {};
+const items = [MenuTypes.ReportSubType.SUB_GORE, MenuTypes.ReportSubType.SUB_GLORIFYING_VIOLENCE];
+obj.eligibleReportSubtypes = items;
+obj.onApply = function onApply() {
+  const goreContentSettingOrDefault = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
+  const obj = {};
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  if (goreContentGuilds === create.ExplicitContentRedaction.SHOW) {
+  if (goreContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.goreContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentFriendDm === create.ExplicitContentRedaction.SHOW) {
+  if (goreContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.goreContentFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
-  if (goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
+  if (goreContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.goreContentNonFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   return obj.updateGoreContentSetting(obj);
 };
-obj[5] = function predicate() {
-  const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
+obj.predicate = function predicate() {
+  const goreContentSettingOrDefault = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
-  const obj = resolveGoreSettingWithDefaults;
-  return goreContentGuilds === create.ExplicitContentRedaction.SHOW || goreContentFriendDm === create.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
+  return goreContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW || goreContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW;
 };
-const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
+const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
 
 export default obj;

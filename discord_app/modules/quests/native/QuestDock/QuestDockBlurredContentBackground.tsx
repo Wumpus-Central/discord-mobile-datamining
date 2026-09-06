@@ -1,11 +1,15 @@
-// === Module 15161: ? ===
+// === Module 15161: QuestDockBlurredContentBackground ===
 
-// Module 15161
-import importAllResult from "noop" /* 19 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15161 (QuestDockBlurredContentBackground)
+import VisualEffectViewAnimatedDefault from "VisualEffectViewAnimated" /* 4964 */;
+import noop from "module_19" /* 19 */;
 
-const memoResult = importAllResult.memo(function QuestDockBlurredContentBackground(blurTheme) {
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
+
+export default noop.memo(function QuestDockBlurredContentBackground(blurTheme) {
   blurTheme = blurTheme.blurTheme;
   let str = "dark";
   ({ animatedStyle, animatedLayout } = blurTheme);
@@ -14,23 +18,22 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   }
   const items = [str];
   const items1 = [str];
-  const android_fallbackColor = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     str = "rgba(255, 255, 255, 0.1)";
     if ("dark" === str) {
       str = "rgba(38, 39, 50, 0.65)";
     }
     return str;
   }, items);
-  const tintColor = importAllResult.useMemo(() => {
+  const memo1 = noop.useMemo(() => {
     str = "rgba(255, 255, 255, 0.1)";
     if ("dark" === str) {
       str = "rgba(38, 39, 50, 0.1)";
     }
     return str;
   }, items1);
-  const style = [StyleSheet.absoluteFillObject, animatedStyle];
-  return jsx(str(4964), { nativeID: "quest-dock-blurred-background", tintColor, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor, style, layout });
+  const obj = { nativeID: "quest-dock-blurred-background", tintColor: memo1, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor: memo, style: null, layout: animatedLayout };
+  const items2 = [StyleSheet.absoluteFillObject, animatedStyle];
+  obj.style = items2;
+  return jsx(VisualEffectViewAnimatedDefault, { nativeID: "quest-dock-blurred-background", tintColor: memo1, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor: memo, style: null, layout: animatedLayout });
 });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
-
-export default memoResult;

@@ -1,27 +1,27 @@
-// === Module 13996: mode ===
+// === Module 13996: VideoQualityModeStore ===
 
-// Module 13996 (mode)
-import set from "set" /* 2 */;
+// Module 13996 (VideoQualityModeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AUTO = ME.VideoQualityMode.AUTO;
+let mode = Constants.VideoQualityMode.AUTO;
 const Store = initializeDefault.Store;
 class VideoQualityModeStore extends Store {
 }
 Object.defineProperty(VideoQualityModeStore.prototype, "mode", {
-  get: function mode(activeIndex, arg1) {
-    return AUTO;
+  get: function mode() {
+    return mode;
   },
   set: undefined
 });
 VideoQualityModeStore.displayName = "VideoQualityModeStore";
-const videoQualityModeStore = new VideoQualityModeStore(dispatcherDefault, {
+const videoQualityModeStore = new VideoQualityModeStore(DispatcherDefault, {
   SET_CHANNEL_VIDEO_QUALITY_MODE: function handleSetChannelVideoQualityMode(mode) {
     mode = mode.mode;
   }
 });
-const result = set.fileFinishedImporting("stores/VideoQualityModeStore.tsx");
+const result = size.fileFinishedImporting("stores/VideoQualityModeStore.tsx");
 
 export default videoQualityModeStore;

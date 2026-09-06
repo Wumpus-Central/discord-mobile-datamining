@@ -1,22 +1,20 @@
 // === Module 4566: useTypographyVariantRemap ===
 
 // Module 4566 (useTypographyVariantRemap)
-import set from "set" /* 2 */;
-import json from "json" /* 4284 */;
-import remapTypographyVariant from "remapTypographyVariant" /* 4567 */;
+import ThemeContext from "ThemeContext" /* 4284 */;
+import typographyVariantRemap from "typographyVariantRemap" /* 4567 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx");
 
 export const useTypographyVariantRemap = function useTypographyVariantRemap(variant, arg1) {
-  let themeContext = json.useThemeContext();
+  let themeContext = ThemeContext.useThemeContext();
   if (themeContext == null) {
     themeContext = [];
   }
   let enabledExperiments = themeContext.enabledExperiments;
-  const obj = json;
-  const tmp = require;
   if (enabledExperiments == null) {
     enabledExperiments = [];
   }
-  return remapTypographyVariant.remapTypographyVariant(enabledExperiments, variant, arg1);
+  return typographyVariantRemap.remapTypographyVariant(enabledExperiments, variant, arg1);
 };

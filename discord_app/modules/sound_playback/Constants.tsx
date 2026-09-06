@@ -1,8 +1,8 @@
-// === Module 9091: SoundOutputChannel ===
+// === Module 9091: Constants ===
 
-// Module 9091 (SoundOutputChannel)
-import set from "set" /* 2 */;
+// Module 9091 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/sound_playback/Constants.tsx");
+const result = size.fileFinishedImporting("modules/sound_playback/Constants.tsx");
 
 export const SoundOutputChannel = { DEFAULT: "default", VOICE: "voice" };

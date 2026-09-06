@@ -1,12 +1,15 @@
 // === Module 8827: useTrackShopCardClick ===
 
 // Module 8827 (useTrackShopCardClick)
-import closure_3 from "noop" /* 19 */;
-import { useSelectedVariantIndex } from "useSelectedVariantIndex" /* 8828 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
+import noop from "module_19" /* 19 */;
 
-let require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
+require = fn;
+const useSelectedVariantIndex = fn(8828).useSelectedVariantIndex;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");
 
 export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   product = product.product;
@@ -17,7 +20,7 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   let tilePosition;
   closure_5 = undefined;
   let shopDiscountSource;
-  let collectiblesAnalyticsContext = require(cardId[3]).useCollectiblesAnalyticsContext();
+  let collectiblesAnalyticsContext = require("CollectiblesAnalyticsContext").useCollectiblesAnalyticsContext();
   if (collectiblesAnalyticsContext == null) {
     collectiblesAnalyticsContext = {};
   }
@@ -31,12 +34,12 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
   tmpResult = tmp(tmp2[5]);
   shopDiscountSource = tmpResult.getShopDiscountSource(currentUserIfAvailable);
   const items = [product, tmp3, sessionId, cardId, analyticsLocations, tilePosition, shopDiscountSource];
-  return sessionId.useCallback((cta) => {
-    let obj = product(cardId[6]);
-    if (obj.getIsVariantProduct(closure_0)) {
+  return sessionId.useCallback((cta, arg1) => {
+    let obj = CollectiblesProductUtils;
+    if (obj.getIsVariantProduct(product)) {
       let tmp4 = arg1;
       if (arg1 == null) {
-        tmp4 = constants;
+        tmp4 = closure_5;
       }
       let skuId;
       if (tmp3.variants[tmp4] != null) {
@@ -49,12 +52,12 @@ export const useTrackShopCardClick = function useTrackShopCardClick(product) {
       skuId = tmp3.skuId;
     }
     obj = { sku_id: skuId, cta, shop_session_id: sessionId, card_id: cardId, product_sku_ids: null, location_stack: null, position_in_section: null, discount_source: null };
-    let tmpResult = tmp(tmp2[6]);
-    obj[4] = tmpResult.getProductSkuIds(closure_0);
-    obj[5] = analyticsLocations;
-    obj[6] = tilePosition;
-    tmpResult = tmp(tmp2[5]);
-    obj[7] = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
-    analyticsLocations(cardId[7]).track(constants.SHOP_CARD_CLICKED, obj);
+    let tmpResult = tmp(7553);
+    obj.product_sku_ids = tmpResult.getProductSkuIds(product);
+    obj.location_stack = analyticsLocations;
+    obj.position_in_section = tilePosition;
+    tmpResult = tmp(7554);
+    obj.discount_source = tmpResult.getAnalyticsShopDiscountSource(shopDiscountSource);
+    AnalyticsUtilsDefault.track(AnalyticEvents.SHOP_CARD_CLICKED, obj);
   }, items);
 };

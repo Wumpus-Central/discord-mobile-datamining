@@ -1,163 +1,177 @@
-// === Module 15757: items ===
+// === Module 15757: UserSettingsDesignSystemButtonActionSheet ===
 
-// Module 15757 (items)
-import keysDefault from "keys" /* 15755 */;
-import closure_3 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 15757 (UserSettingsDesignSystemButtonActionSheet)
+import useDesignSystemSettingsStateDefault from "useDesignSystemSettingsState" /* 15755 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let items = [{ label: "Small", value: "sm" }, { label: "Medium", value: "md" }, { label: "Large", value: "lg" }];
 let items1 = [{ value: 6, label: "6" }, { value: 8, label: "8" }];
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonActionSheet.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonActionSheet.tsx");
 
 export default function UserSettingsDesignSystemButtonActionSheet() {
-  const tmp = keysDefault();
-  const _require = tmp;
-  importDefault = React.useCallback((arg0) => {
-    const lib = arg0;
-    lib(1249).batchUpdates(() => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { buttonSize: closure_0 };
+  const tmp = useDesignSystemSettingsStateDefault();
+  _require = tmp;
+  importDefault = noop.useCallback((buttonSize) => {
+    buttonSize(1249).batchUpdates(() => {
+      closure_1(closure_2[2]);
+      const obj = { buttonSize };
       return obj.setState(obj);
     });
   }, []);
-  dependencyMap = React.useCallback((arg0) => {
-    const lib = arg0;
-    lib(1249).batchUpdates(() => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { buttonScale: closure_0 };
+  dependencyMap = noop.useCallback((buttonScale) => {
+    buttonScale(1249).batchUpdates(() => {
+      closure_1(closure_2[2]);
+      const obj = { buttonScale };
       return obj.setState(obj);
     });
   }, []);
-  React = React.useCallback((arg0) => {
-    const lib = arg0;
-    lib(1249).batchUpdates(() => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { showDisabled: closure_0 };
+  noop = noop.useCallback((showDisabled) => {
+    showDisabled(1249).batchUpdates(() => {
+      closure_1(closure_2[2]);
+      const obj = { showDisabled };
       return obj.setState(obj);
     });
   }, []);
-  const callback = React.useCallback((arg0) => {
-    const lib = arg0;
-    lib(1249).batchUpdates(() => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { showIcon: closure_0 };
+  closure_4 = noop.useCallback((showIcon) => {
+    showIcon(1249).batchUpdates(() => {
+      closure_1(closure_2[2]);
+      const obj = { showIcon };
       return obj.setState(obj);
     });
   }, []);
-  const callback2 = React.useCallback((arg0) => {
-    const lib = arg0;
-    lib(1249).batchUpdates(() => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { iconPosition: closure_0 };
+  closure_5 = noop.useCallback((iconPosition) => {
+    iconPosition(1249).batchUpdates(() => {
+      closure_1(closure_2[2]);
+      const obj = { iconPosition };
       return obj.setState(obj);
     });
   }, []);
-  items = React.useCallback((arg0) => {
-    const lib = arg0;
-    lib(1249).batchUpdates(() => {
-      let obj = closure_1_1(closure_1_2[2]);
-      obj = { enableLoadingState: closure_0 };
+  noop.useCallback((enableLoadingState) => {
+    enableLoadingState(1249).batchUpdates(() => {
+      closure_1(closure_2[2]);
+      const obj = { enableLoadingState };
       return obj.setState(obj);
     });
   }, []);
   let obj = { children: null };
-  items = [callback(_require(7149).BottomSheetTitleHeader, { title: "Button Settings" }), ];
+  items = [closure_4(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: "Button Settings" }), ];
   obj = { children: null };
   obj = {
     title: "Button Size",
     accessibilityRole: "radiogroup",
     children: items.map((label) => {
-      const value = label.value;
-      const lib = value;
+      value = label.value;
+      closure_0 = value;
       let obj = { children: null };
       obj = {
         align: "right",
-        selected: lib.buttonSize === value,
+        selected: closure_0.buttonSize === value,
         label: label.label,
         onPress() {
-          return closure_1_1(closure_0);
+          return closure_1(value);
         }
       };
-      items = [callback(lib(8593).FormRadioRow, obj), callback(lib(8593).FormDivider, {})];
-      obj[0] = items;
-      return callback2(React.Fragment, obj, value);
+      items = [closure_4(closure_0(8593).FormRadioRow, obj), closure_4(closure_0(8593).FormDivider, {})];
+      obj.children = items;
+      return closure_5(React.Fragment, obj, value);
     })
   };
-  items1 = [callback(_require(8593).FormSection, obj), , , , , ];
-  obj1 = { title: "Button Scale", accessibilityRole: "radiogroup", children: null };
+  items1 = [closure_4(require("Form").FormSection, obj), , , , , ];
+  const obj1 = { title: "Button Scale", accessibilityRole: "radiogroup", children: null };
   const items2 = [
-    callback(_require(8593).FormHint, { children: "The amount in pixels that the button width will scale when pressed" }),
+    closure_4(require("Form").FormHint, { children: "The amount in pixels that the button width will scale when pressed" }),
     items1.map((label) => {
-      const value = label.value;
-      const lib = value;
+      value = label.value;
+      closure_0 = value;
       let obj = { children: null };
       obj = {
         align: "right",
-        selected: lib.buttonScale === value,
+        selected: closure_0.buttonScale === value,
         label: label.label,
         onPress() {
-          return closure_1_2(closure_0);
+          return closure_2(value);
         }
       };
-      items = [callback(lib(8593).FormRadioRow, obj), callback(lib(8593).FormDivider, {})];
-      obj[0] = items;
-      return callback2(React.Fragment, obj, value);
+      items = [closure_4(closure_0(8593).FormRadioRow, obj), closure_4(closure_0(8593).FormDivider, {})];
+      obj.children = items;
+      return closure_5(React.Fragment, obj, value);
     })
   ];
-  obj1[2] = items2;
-  items1[1] = callback2(_require(8593).FormSection, obj1);
-  items1[2] = callback(_require(8593).FormSection, { children: callback(_require(8593).FormSwitchRow, obj3) });
-  const obj2 = { children: callback(_require(8593).FormSwitchRow, obj3) };
-  items1[3] = callback(_require(8593).FormSection, { children: callback(_require(8593).FormSwitchRow, obj5) });
+  obj1.children = items2;
+  items1[1] = closure_5(require("Form").FormSection, obj1);
+  const obj2 = {
+    children: closure_4(require("Form").FormSwitchRow, {
+      label: "Disabled",
+      value: tmp.showDisabled,
+      onValueChange(arg0) {
+        return React(arg0);
+      }
+    })
+  };
+  items1[2] = closure_4(require("Form").FormSection, obj2);
+  const obj4 = {
+    children: closure_4(require("Form").FormSwitchRow, {
+      label: "Show Icons",
+      value: tmp.showIcon,
+      onValueChange(arg0) {
+        return closure_4(arg0);
+      }
+    })
+  };
+  items1[3] = closure_4(require("Form").FormSection, obj4);
   const obj6 = { title: "Icon Position", accessibilityRole: "radiogroup", children: null };
-  const items3 = [callback(_require(8593).FormHint, { children: "Whether to show the example icon on the left (default) or right." }), ];
+  const items3 = [closure_4(require("Form").FormHint, { children: "Whether to show the example icon on the left (default) or right." }), ];
   const items4 = ["start", "end"];
   items3[1] = items4.map((label) => {
-    const lib = label;
+    closure_0 = label;
     let obj = { children: null };
     obj = {
       align: "right",
-      selected: lib.iconPosition === label,
+      selected: closure_0.iconPosition === label,
       label,
       onPress() {
-        return closure_1_5(closure_0);
+        return closure_5(closure_0);
       }
     };
-    items = [callback(lib(8593).FormRadioRow, obj), callback(lib(8593).FormDivider, {})];
-    obj[0] = items;
-    return callback2(React.Fragment, obj, label);
+    items = [closure_4(closure_0(8593).FormRadioRow, obj), closure_4(closure_0(8593).FormDivider, {})];
+    obj.children = items;
+    return closure_5(React.Fragment, obj, label);
   });
-  obj6[2] = items3;
-  items1[4] = callback2(_require(8593).FormSection, obj6);
+  obj6.children = items3;
+  items1[4] = closure_5(require("Form").FormSection, obj6);
   const obj7 = { title: "Loading state", accessibilityRole: "radiogroup", children: null };
-  const items5 = [callback(_require(8593).FormHint, { children: "Whether or not to show a loading state when a button is pressed" }), ];
+  const items5 = [closure_4(require("Form").FormHint, { children: "Whether or not to show a loading state when a button is pressed" }), ];
   const items6 = [true, false];
-  items5[1] = items6.map((arg0) => {
-    const lib = arg0;
-    let obj = { align: "right", selected: lib.enableLoadingState === arg0, label: null, onPress: null };
+  items5[1] = items6.map((item) => {
+    closure_0 = item;
+    let obj = { align: "right", selected: closure_0.enableLoadingState === item, label: null, onPress: null };
     let str = "Disabled";
-    if (true === arg0) {
+    if (true === item) {
       str = "Enabled";
     }
-    obj = { children: null };
-    obj[2] = str;
-    obj[3] = function onPress() {
-      return closure_1_6(closure_0);
+    obj = {
+      children: null,
+      label: str,
+      onPress() {
+        return closure_6(closure_0);
+      }
     };
-    items = [closure_4(lib(8593).FormRadioRow, obj), closure_4(lib(8593).FormDivider, {})];
-    obj[0] = items;
+    items = [closure_4(closure_0(8593).FormRadioRow, obj), closure_4(closure_0(8593).FormDivider, {})];
+    obj.children = items;
     let str2 = "disabled";
-    if (true === arg0) {
+    if (true === item) {
       str2 = "enabled";
     }
     return closure_5(React.Fragment, obj, str2);
   });
-  obj7[2] = items5;
-  items1[5] = callback2(_require(8593).FormSection, obj7);
-  obj[0] = items1;
-  items[1] = callback2(_require(8593).Form, obj);
-  obj[0] = items;
-  return callback2(_require(7150).BottomSheet, obj);
+  obj7.children = items5;
+  items1[5] = closure_5(require("Form").FormSection, obj7);
+  obj.children = items1;
+  items[1] = closure_5(require("Form").Form, obj);
+  obj.children = items;
+  return closure_5(require("Sheet/BottomSheet").BottomSheet, obj);
 };

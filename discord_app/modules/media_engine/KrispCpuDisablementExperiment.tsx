@@ -1,13 +1,15 @@
-// === Module 14012: getKrispCpuDisablementConfig ===
+// === Module 14012: KrispCpuDisablementExperiment ===
 
-// Module 14012 (getKrispCpuDisablementConfig)
-import set from "set" /* 2 */;
+// Module 14012 (KrispCpuDisablementExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { consecutiveFailures: 3 }, 3: { consecutiveFailures: 5 } };
+let obj = { kind: "user", name: "2026-07-krisp-cpu-disablement", defaultConfig: { consecutiveFailures: 1 }, variations: null };
+obj = { 1: null, 2: { consecutiveFailures: 3 }, 3: { consecutiveFailures: 5 } };
 obj[3] = { consecutiveFailures: 10 };
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-07-krisp-cpu-disablement", defaultConfig: { consecutiveFailures: 1 }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/KrispCpuDisablementExperiment.tsx");
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/KrispCpuDisablementExperiment.tsx");
 
 export const getKrispCpuDisablementConfig = function getKrispCpuDisablementConfig(location) {
   return config.getConfig({ location: location.location });

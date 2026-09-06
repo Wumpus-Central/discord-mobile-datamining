@@ -1,8 +1,8 @@
-// === Module 17299: timestamp ===
+// === Module 17299: logThirdPartyImportsDone ===
 
-// Module 17299 (timestamp)
-import timestampDefault from "timestamp" /* 3 */;
+// Module 17299 (logThirdPartyImportsDone)
+import LoggerDefault from "Logger" /* 3 */;
 
-new timestampDefault("app").log("Finished loading third party imports");
-const obj = new timestampDefault("app");
-const result = require("set").fileFinishedImporting("modules/debug/logThirdPartyImportsDone.tsx");
+new LoggerDefault("app").log("Finished loading third party imports");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/debug/logThirdPartyImportsDone.tsx");

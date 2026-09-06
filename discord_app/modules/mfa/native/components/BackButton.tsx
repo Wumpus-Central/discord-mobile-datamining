@@ -1,23 +1,23 @@
 // === Module 15672: BackButton ===
 
 // Module 15672 (BackButton)
-import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import MFAButtonDefault from "MFAButton" /* 15673 */;
+import MfaStepsTypes from "MfaStepsTypes" /* 15667 */;
+import buttonDefault from "button" /* 15673 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
+const result = size.fileFinishedImporting("modules/mfa/native/components/BackButton.tsx");
 
 export default function BackButton(props) {
   props = props.props;
-  importDefault = undefined;
   let obj = props(1483);
   importDefault = obj.useNavigation();
   obj = { variant: "secondary", text: null, onPress: null };
   const intl = props(1114).intl;
-  obj[1] = intl.string(props(1114).t.Tot4EC);
-  obj[2] = function onPress() {
-
+  obj.text = intl.string(props(1114).t.Tot4EC);
+  obj.onPress = function onPress() {
+    closure_1.push(MfaStepsTypes.MfaScreens.SELECT, props);
   };
-  return jsx(MFAButtonDefault, { variant: "secondary", text: null, onPress: null });
+  return jsx(buttonDefault, { variant: "secondary", text: null, onPress: null });
 };

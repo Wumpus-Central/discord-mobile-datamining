@@ -1,9 +1,9 @@
-// === Module 14652: canResetThemeColors ===
+// === Module 14652: GuildIdentitySettingsUtils ===
 
-// Module 14652 (canResetThemeColors)
-import set from "set" /* 2 */;
+// Module 14652 (GuildIdentitySettingsUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_identity/GuildIdentitySettingsUtils.tsx");
 
 export const canResetThemeColors = function canResetThemeColors(pendingThemeColors, themeColors) {
   if (undefined === pendingThemeColors) {

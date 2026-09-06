@@ -1,12 +1,12 @@
 // === Module 13487: usePremiumGroupPrimaryName ===
 
 // Module 13487 (usePremiumGroupPrimaryName)
-import set from "set" /* 2 */;
-import nameFromUser from "nameFromUser" /* 4404 */;
+import UserUtils from "UserUtils" /* 4404 */;
 import usePremiumGroupMembershipDefault from "usePremiumGroupMembership" /* 13488 */;
 import usePremiumGroupMembersDefault from "usePremiumGroupMembers" /* 13492 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
+const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupPrimaryName.tsx");
 
 export default function usePremiumGroupPrimaryName() {
   let obj = arg0;
@@ -40,8 +40,7 @@ export default function usePremiumGroupPrimaryName() {
     if (premiumGroupMembers != null) {
       primary1 = premiumGroupMembers.primary;
     }
-    nameFromUserResult = nameFromUser.nameFromUser(primary1);
-    const obj2 = nameFromUser;
+    nameFromUserResult = UserUtils.nameFromUser(primary1);
   }
   return nameFromUserResult;
 };

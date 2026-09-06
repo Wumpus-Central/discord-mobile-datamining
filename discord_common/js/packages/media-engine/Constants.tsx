@@ -1,12 +1,12 @@
-// === Module 4585: DesktopSources ===
+// === Module 4585: Constants ===
 
-// Module 4585 (DesktopSources)
-import set from "set" /* 2 */;
-import SystemServiceNotAvailableError from "SystemServiceNotAvailableError" /* 4586 */;
+// Module 4585 (Constants)
+import discord_common_DiscordNative from "discord_common/DiscordNative" /* 4586 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
 
-export const DesktopSources = SystemServiceNotAvailableError.DesktopSources;
+export const DesktopSources = discord_common_DiscordNative.DesktopSources;
 export const MediaEngineContextTypes = { DEFAULT: "default", STREAM: "stream" };
 export const DeviceTypes = { AUDIO_INPUT: "audioinput", AUDIO_OUTPUT: "audiooutput", VIDEO_INPUT: "videoinput" };
 export const InputModes = { PUSH_TO_TALK: "PUSH_TO_TALK", VOICE_ACTIVITY: "VOICE_ACTIVITY" };

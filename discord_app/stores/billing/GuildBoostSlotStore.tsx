@@ -1,25 +1,26 @@
-// === Module 4455: handleGuildBoostsUpdate ===
+// === Module 4455: GuildBoostSlotStore ===
 
-// Module 4455 (handleGuildBoostsUpdate)
+// Module 4455 (GuildBoostSlotStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "reset" /* 4224 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
 function handleGuildBoostsUpdate(guildBoostSlot) {
   guildBoostSlot = guildBoostSlot.guildBoostSlot;
   const obj = {};
-  const merged = Object.assign(obj);
+  const merged = Object.assign(closure_3);
   obj[guildBoostSlot.id] = guildBoostSlot;
+  closure_3 = obj;
 }
 function handleSubscriptionStoreUpdate() {
   const obj = {};
-  const values = Object.values(obj);
+  const values = Object.values(closure_3);
   for (const item10010 of values) {
     obj[item10010.id] = item10010;
-    let tmp2 = subscriptionById;
-    item10010.subscription = subscriptionById.getSubscriptionById(item10010.subscriptionId);
+    item10010.subscription = SubscriptionStore.getSubscriptionById(item10010.subscriptionId);
     continue;
   }
+  closure_3 = obj;
 }
 let c1 = false;
 let c2 = false;
@@ -29,7 +30,7 @@ class GuildBoostSlotStore extends Store {
 }
 const prototype = GuildBoostSlotStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [closure_0];
+  const items = [SubscriptionStore];
   this.syncWith(items, handleSubscriptionStoreUpdate);
 };
 Object.defineProperty(prototype, "hasFetched", {
@@ -51,10 +52,10 @@ Object.defineProperty(prototype, "boostSlots", {
   set: undefined
 });
 prototype["getGuildBoostSlot"] = function getGuildBoostSlot(arg0) {
-  return table[arg0];
+  return closure_3[arg0];
 };
 GuildBoostSlotStore.displayName = "GuildBoostSlotStore";
-const guildBoostSlotStore = new GuildBoostSlotStore(dispatcherDefault, {
+const guildBoostSlotStore = new GuildBoostSlotStore(DispatcherDefault, {
   GUILD_BOOST_SLOTS_FETCH: function handleGuildBoostsFetch() {
     c2 = true;
   },
@@ -62,7 +63,7 @@ const guildBoostSlotStore = new GuildBoostSlotStore(dispatcherDefault, {
     guildBoostSlots = guildBoostSlots.guildBoostSlots;
     closure_3 = {};
     const item = guildBoostSlots.forEach((id) => {
-      closure_3[id.id] = id;
+      closure_1_3[id.id] = id;
     });
     c2 = false;
     c1 = true;
@@ -76,6 +77,7 @@ const guildBoostSlotStore = new GuildBoostSlotStore(dispatcherDefault, {
     c2 = false;
   }
 });
-const result = require("set").fileFinishedImporting("stores/billing/GuildBoostSlotStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/billing/GuildBoostSlotStore.tsx");
 
 export default guildBoostSlotStore;

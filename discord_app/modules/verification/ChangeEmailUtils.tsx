@@ -1,31 +1,31 @@
-// === Module 5690: getChangeEmailReasonDisplayText ===
+// === Module 5690: ChangeEmailUtils ===
 
-// Module 5690 (getChangeEmailReasonDisplayText)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ChangeEmailReasons2 from "ChangeEmailReasons" /* 5684 */;
+// Module 5690 (ChangeEmailUtils)
+import util from "util" /* 1114 */;
+import VerificationConstants from "VerificationConstants" /* 5684 */;
+import size from "module_2" /* 2 */;
 
-const ChangeEmailReasons = ChangeEmailReasons2.ChangeEmailReasons;
-let closure_2 = {
+const ChangeEmailReasons = VerificationConstants.ChangeEmailReasons;
+const dependencyMap = {
   [ChangeEmailReasons.DISCORD_EMPLOYEE_ASKED_ME_TO]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.naBTFO);
+    const intl = util.intl;
+    return intl.string(util.t.naBTFO);
   },
   [ChangeEmailReasons.SOMEONE_ASKED_ME_TO]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.LQ0RUP);
+    const intl = util.intl;
+    return intl.string(util.t.LQ0RUP);
   },
   [ChangeEmailReasons.NEW_EMAIL]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.oOqQjw);
+    const intl = util.intl;
+    return intl.string(util.t.oOqQjw);
   },
   [ChangeEmailReasons.SOMETHING_ELSE]: () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.p38n1b);
+    const intl = util.intl;
+    return intl.string(util.t.p38n1b);
   }
 };
-const result = set.fileFinishedImporting("modules/verification/ChangeEmailUtils.tsx");
+const result = size.fileFinishedImporting("modules/verification/ChangeEmailUtils.tsx");
 
-export const getChangeEmailReasonDisplayText = function getChangeEmailReasonDisplayText(arg0) {
-  return dependencyMap[arg0]();
+export const getChangeEmailReasonDisplayText = function getChangeEmailReasonDisplayText(value) {
+  return dependencyMap[value]();
 };

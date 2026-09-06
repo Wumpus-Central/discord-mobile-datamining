@@ -1,74 +1,72 @@
-// === Module 9683: nativeEventEmitter ===
+// === Module 9683: GlobalStatusIndicator ===
 
-// Module 9683 (nativeEventEmitter)
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "setContent" /* 4251 */;
-import closure_8 from "getParticipants" /* 4576 */;
-import closure_9 from "initialize" /* 9684 */;
-import closure_10 from "ensureGuildLoaded" /* 1957 */;
-import closure_11 from "createRTCConnection" /* 4583 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 9683 (GlobalStatusIndicator)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
+import noop from "module_19" /* 19 */;
+import ActionSheetStore from "ActionSheetStore" /* 4251 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+import NativeMenuStore from "NativeMenuStore" /* 9684 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-const require = arg1;
-({ View: c4, StyleSheet: c5, TouchableWithoutFeedback: closure_6, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet: hasOwnProperty, TouchableWithoutFeedback: metroRequire, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
+const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.DCDStatusBarOverlayViewManager);
 function GlobalStatusIndicatorWrapper(onPress) {
-  onPress = onPress.onPress;
   importDefault = undefined;
   let stateFromStores;
-  let stateFromStores1;
-  let openVoice;
-  let callback;
+  onPress = undefined;
   closure_6 = undefined;
-  const tmp3 = importDefault(stateFromStores[8])();
+  const tmp3 = require("useVoiceStateForRemoteSession")();
   importDefault = tmp3;
   let obj = onPress(stateFromStores[9]);
-  const items = [closure_11];
+  const items = [RTCConnectionStore];
   const items1 = [tmp3];
   stateFromStores = obj.useStateFromStores(items, () => {
-    let channelId;
+    channelId = undefined;
     if (channelId != null) {
       channelId = channelId.channelId;
     }
     if (channelId == null) {
-      channelId = closure_1_11.getChannelId();
+      channelId = RTCConnectionStore.getChannelId();
     }
     return channelId;
   }, items1);
-  const items2 = [closure_10];
+  const items2 = [ChannelStore];
   const items3 = [stateFromStores];
-  stateFromStores1 = onPress(stateFromStores[9]).useStateFromStores(items2, () => closure_1_10.getChannel(stateFromStores), items3);
+  const stateFromStores1 = onPress(stateFromStores[9]).useStateFromStores(items2, () => ChannelStore.getChannel(stateFromStores), items3);
   const obj2 = onPress(stateFromStores[9]);
   const tmp = importDefault;
   const voiceChatNavigationContext = onPress(stateFromStores[10]).useVoiceChatNavigationContext();
-  openVoice = undefined;
+  let openVoice;
   if (voiceChatNavigationContext != null) {
     openVoice = voiceChatNavigationContext.openVoice;
   }
   const items4 = [stateFromStores1, onPress, openVoice];
-  callback = stateFromStores1.useCallback(() => {
+  onPress = stateFromStores1.useCallback(() => {
     if (null != stateFromStores1) {
       if (null != openVoice) {
-        if (closure_1_8.getChatOpen(tmp.id)) {
+        if (ChannelRTCStore.getChatOpen(tmp.id)) {
           tmp2();
         }
         if (onPress != null) {
           tmp8();
         }
       }
-      const result = onPress(stateFromStores[11]).navigateToVoiceChannel(tmp, "RTC Panel");
-      const obj = onPress(stateFromStores[11]);
+      const result = PrivateChannelCallUtils.navigateToVoiceChannel(tmp, "RTC Panel");
     }
   }, items4);
-  closure_6 = stateFromStores1.useRef(callback);
+  closure_6 = stateFromStores1.useRef(onPress);
   const effect = stateFromStores1.useEffect(() => {
-    closure_6.current = callback;
+    closure_6.current = current;
   });
   const items5 = [stateFromStores];
   const effect1 = stateFromStores1.useEffect(() => {
-    closure_0 = closure_1_15.addListener("StatusBarTapped", () => {
+    closure_0 = nativeEventEmitter.addListener("StatusBarTapped", () => {
       ref.current();
     });
     return () => {
@@ -87,13 +85,14 @@ function GlobalStatusIndicatorWrapper(onPress) {
     const intl = tmp4(tmp2[12]).intl;
     stringResult = intl.string(tmp4(tmp2[12]).t.GaCMgX);
   }
-  obj[1] = stringResult;
-  obj[2] = callback;
+  obj.accessibilityHint = stringResult;
+  obj.onPress = onPress;
   obj = { children: tmp12(tmp(tmp2[13]), {}) };
-  obj[3] = closure_12(openVoice, obj);
+  obj.children = closure_12(openVoice, obj);
   return closure_12(closure_6, obj);
 }
-let result = require("set").fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/connectivity/native/components/GlobalStatusIndicator.tsx");
 
 export default function GlobalStatusIndicator(children) {
   children = children.children;
@@ -106,18 +105,15 @@ export default function GlobalStatusIndicator(children) {
     flag2 = false;
   }
   const onPress = children.onPress;
-  let height;
-  let isVisible;
-  let stateFromStores1;
   const globalStatusIndicatorState = children(onPress[15]).useGlobalStatusIndicatorState(flag);
   let obj = children(onPress[15]);
-  let items = [closure_7];
+  let items = [ActionSheetStore];
   const stateFromStores = children(onPress[9]).useStateFromStores(items, () => null != content.getContent());
   const obj2 = children(onPress[9]);
-  const items1 = [closure_9];
-  height = globalStatusIndicatorState.height;
-  isVisible = globalStatusIndicatorState.isVisible;
-  stateFromStores1 = children(onPress[9]).useStateFromStores(items1, () => open.isOpen());
+  const items1 = [NativeMenuStore];
+  const height = globalStatusIndicatorState.height;
+  let isVisible = globalStatusIndicatorState.isVisible;
+  let stateFromStores1 = children(onPress[9]).useStateFromStores(items1, () => open.isOpen());
   if (isVisible) {
     isVisible = !flag2;
   }
@@ -133,30 +129,28 @@ export default function GlobalStatusIndicator(children) {
       str = "no-hide-descendants";
     }
     let obj = { importantForAccessibility: str, accessibilityElementsHidden: stateFromStores1, style: null, children: null };
-    const items = [stateFromStores1.absoluteFill, ];
+    const items = [absoluteFill.absoluteFill, ];
     let num = 0;
     if (!flag2) {
       num = height;
     }
     items[1] = { marginTop: num, overflow: "hidden" };
-    obj[2] = items;
-    obj[3] = children;
-    children = [closure_1_12(isVisible, obj), ];
+    obj.style = items;
+    obj.children = children;
+    children = [closure_2_12(React4, obj), ];
     let tmp3Result = null;
     if (isVisible) {
-      obj = { onPress: null };
-      obj[0] = onPress;
-      tmp3Result = tmp3(closure_1_16, obj);
+      obj = { onPress };
+      tmp3Result = tmp3(GlobalStatusIndicatorWrapper, obj);
     }
     children[1] = tmp3Result;
-    return closure_1_14(closure_1_13, { children });
+    return closure_2_14(map1, { children });
   }, items2);
 };
 export const useGlobalStatusIndicatorHeightSharedValue = function useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState) {
-  const _require = globalStatusIndicatorState;
-  const sharedValue = _require(4296).useSharedValue(globalStatusIndicatorState.height);
+  const sharedValue = ReanimatedRexport.useSharedValue(globalStatusIndicatorState.height);
   const items = [globalStatusIndicatorState.height, sharedValue];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const result = sharedValue.set(globalStatusIndicatorState.height);
   }, items);
   return sharedValue;

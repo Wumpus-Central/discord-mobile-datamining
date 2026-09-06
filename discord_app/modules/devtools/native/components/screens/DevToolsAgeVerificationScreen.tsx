@@ -1,22 +1,22 @@
-// === Module 15709: showAgeVerificationTestModal ===
+// === Module 15709: DevToolsAgeVerificationScreen ===
 
-// Module 15709 (showAgeVerificationTestModal)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 15709 (DevToolsAgeVerificationScreen)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
+import TableRow from "TableRow" /* 5605 */;
 import TableRowArrow from "TableRowArrow" /* 5612 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import KeyIcon from "KeyIcon" /* 6958 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8417 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function showAgeVerificationTestModal() {
   const self = this;
-  const apply = _showAgeVerificationTestModal.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -24,79 +24,68 @@ function showAgeVerificationTestModal() {
   }
   return applyArgumentsResult;
 }
-function _showAgeVerificationTestModal() {
-  const self = this;
-  const tmp = callback(function*() {
-    const callback = tmp3;
-    c3 = 1;
-    let obj2 = closure_1_0(closure_1_2[6]);
-    yield obj2.requestAgeVerification({});
-    if (1 === tmp7) {
-      c3 = 0;
-      obj1 = callback(4259);
-      obj1.open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
-      c5 = 3;
-    } else if (arg0 === 1) {
-      c5 = 3;
-      throw arg1;
-    } else if (arg0 !== 2) {
-      const lib = arg1;
-      obj2 = { webviewUrl: null, verificationRequestId: null, verificationVendorName: null, incodeParameters: null, onComplete: null, entryPoint: null };
-      obj2[0] = lib.verification_webview_url;
-      obj2[1] = lib.verification_request_id;
-      obj2[2] = lib.verification_vendor_name;
-      obj2[3] = lib.incode_parameters;
-      obj2[4] = function onComplete() {
-        tmp3(tmp15[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
-      };
-      obj2[5] = lib(8413).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS;
-      callback(8411).showAgeVerification(obj2);
-      c3 = 0;
-      const obj7 = callback(8411);
-    }
+let closure_9 = async function _showAgeVerificationTestModal() {
+  closure_1 = tmp3;
+  let obj2 = AgeVerificationURLActionCreators;
+  await obj2.requestAgeVerification({});
+  if (1 === tmp7) {
     c3 = 0;
-    return arg1;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    closure_129_1(closure_129_2[8]).open({ content: "Failed to show age verification test modal", key: "age-verification-test-failure" });
+    c5 = 3;
+    closure_129_1(closure_129_2[8]);
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    closure_128_0 = arg1;
+    obj2 = {
+      webviewUrl: closure_128_0.verification_webview_url,
+      verificationRequestId: closure_128_0.verification_request_id,
+      verificationVendorName: closure_128_0.verification_vendor_name,
+      incodeParameters: closure_128_0.incode_parameters,
+      onComplete() {
+          closure_1_1(closure_1_2[8]).open({ content: "[On Complete] Successfully age verified", key: "age-verification-test-success" });
+        },
+      entryPoint: closure_129_0(closure_129_2[9]).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS
+    };
+    closure_129_1(closure_129_2[7]).showAgeVerification(obj2);
+    c3 = 0;
+    closure_129_1(closure_129_2[7]);
   }
-  return applyArgumentsResult;
-}
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, content: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { padding: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
+  return arg1;
+};
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: null, content: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.container = createStyles;
+createStyles.content = { padding: nativeDefault.space.PX_16 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAgeVerificationScreen.tsx");
 
 export default function DevToolsAgeVerificationScreen() {
-  const tmp = callback4();
+  const tmp = closure_7();
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   const items = [tmp.content, ];
   obj = { paddingBottom: tmp.content.padding + useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
-  obj[1] = items;
+  obj.contentContainerStyle = items;
   obj = { title: "Quick Actions", hasIcons: true, children: null };
-  const items1 = [callback2(TableRowInner.TableRow, { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: callback2(KeyIcon.KeyIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) }), ];
-  obj1 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: callback2(KeyIcon.KeyIcon, {}), trailing: callback2(TableRowArrow.TableRowArrow, {}) };
-  items1[1] = callback2(TableRowInner.TableRow, {
+  const items1 = [hasOwnProperty(TableRow.TableRow, { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: hasOwnProperty(KeyIcon.KeyIcon, {}), trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}) }), ];
+  const obj1 = { label: "Launch Age Verification Test Tool", onPress: showAgeVerificationTestModal, icon: hasOwnProperty(KeyIcon.KeyIcon, {}), trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {}) };
+  items1[1] = hasOwnProperty(TableRow.TableRow, {
     label: "Launch Age Verification Modal",
     onPress() {
-      let obj = callback2(8411);
-      obj = { entryPoint: callback(8413).AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
+      const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.DEV_TOOLS_QUICK_ACTIONS };
       return obj.showAgeVerificationGetStartedModal(obj);
     },
-    icon: callback2(KeyIcon.KeyIcon, {}),
-    trailing: callback2(TableRowArrow.TableRowArrow, {})
+    icon: hasOwnProperty(KeyIcon.KeyIcon, {}),
+    trailing: hasOwnProperty(TableRowArrow.TableRowArrow, {})
   });
-  obj[2] = items1;
-  obj[2] = callback3(TableRowGroupTitle.TableRowGroup, obj);
-  return callback2(ScrollView, obj);
+  obj.children = items1;
+  obj.children = timestampProducer(TableRowGroup.TableRowGroup, obj);
+  return hasOwnProperty(ScrollView, obj);
 };

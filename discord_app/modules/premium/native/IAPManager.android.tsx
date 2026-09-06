@@ -1,9 +1,8 @@
-// === Module 17387: prototype ===
+// === Module 17387: IAPManager ===
 
-// Module 17387 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17387 (IAPManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-initializeDefault;
 let prototype = function IAPManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -19,6 +18,7 @@ let prototype = function IAPManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/IAPManager.android.tsx");
 
 export default prototype;

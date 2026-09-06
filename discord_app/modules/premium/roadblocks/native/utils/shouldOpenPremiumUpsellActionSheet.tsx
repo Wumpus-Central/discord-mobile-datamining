@@ -1,15 +1,15 @@
-// === Module 9320: maybeOpenPremiumUpsellActionSheet ===
+// === Module 9320: shouldOpenPremiumUpsellActionSheet ===
 
-// Module 9320 (maybeOpenPremiumUpsellActionSheet)
-import set from "set" /* 2 */;
-import keys from "keys" /* 1093 */;
+// Module 9320 (shouldOpenPremiumUpsellActionSheet)
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7850 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
 
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   initialUpsellKey = initialUpsellKey.initialUpsellKey;
-  if (keys.UpsellTypes.UPLOAD === initialUpsellKey) {
+  if (ConstantsIOS.UpsellTypes.UPLOAD === initialUpsellKey) {
     openPremiumUpsellActionSheetDefault(tmp(7853).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
     return true;
   } else if (tmp(1093).UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {

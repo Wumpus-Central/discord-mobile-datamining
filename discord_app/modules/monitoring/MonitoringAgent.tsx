@@ -1,15 +1,17 @@
-// === Module 7602: set ===
+// === Module 7602: MonitoringAgent ===
 
-// Module 7602 (set)
-import ME from "ME" /* 1074 */;
-import enforcing from "enforcing" /* 7605 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 1115 */;
+// Module 7602 (MonitoringAgent)
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import NativeMetricMonitorModule from "NativeMetricMonitorModule" /* 7605 */;
+import MonitoringAgentUtils from "MonitoringAgentUtils" /* 7606 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-let obj = require;
-const Endpoints = ME.Endpoints;
-let set = new Set(["darwin", "linux", "win32", "ios", "android"]);
-obj = { COUNT: "count", DISTRIBUTION: "distribution" };
+const Endpoints = Constants.Endpoints;
+const set = new Set(["darwin", "linux", "win32", "ios", "android"]);
+let MetricType = { COUNT: "count", DISTRIBUTION: "distribution" };
 class MonitoringAgent {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -20,11 +22,11 @@ class MonitoringAgent {
     }, 120000);
     tmp2 = closure_0;
     tmp3 = closure_1;
-    tmp4 = require("get ActivityIndicator");
+    tmp4 = closure_0(closure_1[4]);
     ({ NativeModules, NativeEventEmitter } = tmp4);
-    obj = require("set");
+    obj = closure_0(closure_1[1]);
     if (obj.isAndroid()) {
-      MetricMonitor = require("enforcing").default;
+      MetricMonitor = tmp2(tmp3[5]).default;
     } else {
       MetricMonitor = NativeModules.MetricMonitor;
     }
@@ -38,11 +40,11 @@ class MonitoringAgent {
 const prototype = MonitoringAgent.prototype;
 prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUNT) {
   let tags = name.tags;
-  obj = { name: name.name, type: COUNT, tags: obj(7606).getGlobalTagsArray() };
+  obj = { name: name.name, type: COUNT, tags: MonitoringAgentUtils.getGlobalTagsArray() };
   if (null != tags) {
-    const item = tags.forEach((arg0) => {
+    const item = tags.forEach((item) => {
       const tags = obj.tags;
-      tags.push(arg0);
+      tags.push(item);
     });
   }
   let tmpResult = tmp(1115);
@@ -111,37 +113,34 @@ prototype["distribution"] = function distribution(name, value) {
   }
 };
 prototype["_flush"] = function _flush() {
-  let self = this;
-  self = this;
+  const self = this;
   if (this._metrics.length > 0) {
     let items = [];
     HermesBuiltin.arraySpread(self._metrics, 0);
-    const HTTP = items(self[7]).HTTP;
-    obj = { url: null, body: null, retries: 1, rejectWithError: true };
-    obj[0] = Endpoints.METRICS_V2;
-    obj = { metrics: null, client_info: null };
-    obj[0] = items;
-    obj[1] = { built_at: "1788585562456", build_number: "6365" };
-    obj[1] = obj;
-    HTTP.post(obj).catch(() => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.METRICS_V2, body: null, retries: 1, rejectWithError: true };
+    const body = { metrics: items, client_info: { built_at: "1788585562456", build_number: "6365" } };
+    request.body = body;
+    HTTP.post(request).catch(() => {
       if (self._metrics.length + items.length < 100) {
         items = [];
         HermesBuiltin.arraySpread(tmp2, HermesBuiltin.arraySpread(tmp._metrics, 0));
         tmp._metrics = items;
       }
     });
-    const postResult = HTTP.post(obj);
+    const postResult = HTTP.post(request);
   }
   self._metrics = [];
 };
-obj = Object.create(MonitoringAgent.prototype);
-obj._metrics = [];
-obj._intervalId = setInterval(() => {
+MetricType = Object.create(MonitoringAgent.prototype);
+let closure_129_0 = MetricType;
+MetricType._metrics = [];
+MetricType._intervalId = setInterval(() => {
   obj._flush();
 }, 120000);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-if (set.isAndroid()) {
-  let MetricMonitor = enforcing.default;
+if (PlatformUtils.isAndroid()) {
+  let MetricMonitor = NativeMetricMonitorModule.default;
 } else {
   MetricMonitor = NativeModules.MetricMonitor;
 }
@@ -149,7 +148,7 @@ let nativeEventEmitter = new NativeEventEmitter(MetricMonitor);
 nativeEventEmitter.addListener("logMetric", (arg0) => {
   obj.increment(arg0, false);
 });
-const result = set.fileFinishedImporting("modules/monitoring/MonitoringAgent.tsx");
+const result = size.fileFinishedImporting("modules/monitoring/MonitoringAgent.tsx");
 
-export default obj;
-export const MetricType = obj;
+export default MetricType;
+export { MetricType };

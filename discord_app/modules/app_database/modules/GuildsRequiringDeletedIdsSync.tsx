@@ -1,10 +1,9 @@
-// === Module 7651: getAll ===
+// === Module 7651: GuildsRequiringDeletedIdsSync ===
 
-// Module 7651 (getAll)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import set from "set" /* 2 */;
+// Module 7651 (GuildsRequiringDeletedIdsSync)
+import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let set = importDefault;
 class GuildsRequiringDeletedIdsSync {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -28,16 +27,15 @@ class GuildsRequiringDeletedIdsSync {
 }
 const prototype = GuildsRequiringDeletedIdsSync.prototype;
 prototype["getAll"] = function getAll() {
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c2 === 2) {
       c2 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -45,50 +43,44 @@ prototype["getAll"] = function getAll() {
     } else {
       try {
         c2 = 2;
-        if (0 === table) {
+        if (0 === c1) {
           if (arg0 === 1) {
             c2 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c2 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_0 = tmp2;
-            closure_0 = undefined;
-            const result = closure_1_0(table[1]).guildsRequiringDeletedIdsSync();
+            closure_128_0 = undefined;
+            const result = DatabaseDaosDefault.guildsRequiringDeletedIdsSync();
             if (null == result) {
               const _Set2 = Set;
-              set = new Set();
+              const set = new Set();
               c2 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = set;
+              const obj1 = { value: set, done: true };
               return obj1;
             } else {
-              table = 1;
+              c1 = 1;
               c2 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = result.getMany();
+              const obj2 = { value: result.getMany(), done: false };
               return obj2;
             }
-            const obj7 = closure_1_0(table[1]);
           }
         } else if (arg0 === 1) {
           c2 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c2 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_0 = arg1;
+          closure_128_0 = value;
           const _Set = Set;
-          const set1 = new Set(closure_0.map((id) => id.id));
+          const set1 = new Set(closure_128_0.map((id) => id.id));
           c2 = 3;
-          obj = { value: null, done: true };
-          obj[0] = set1;
+          obj = { value: set1, done: true };
           return obj;
         }
       } catch (tmp18) {
@@ -103,9 +95,8 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(guilds, databa
   const found = guilds.filter((unableToSyncDeletes) => unableToSyncDeletes.unableToSyncDeletes);
   const mapped = found.map((id) => ({ id: id.id }));
   if (mapped.length > 0) {
-    const result = set(1986).guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = DatabaseDaosDefault.guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
-    const obj = set(1986);
   }
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, database) {
@@ -113,30 +104,29 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, databa
   const found = guilds.filter((data_mode) => "partial" === data_mode.data_mode && data_mode.unable_to_sync_deletes);
   const mapped = found.map((id) => ({ id: id.id }));
   if (mapped.length > 0) {
-    const result = set(1986).guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = DatabaseDaosDefault.guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
-    const obj = set(1986);
   }
 };
 prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   guild = guild.guild;
   if (guild.unableToSyncDeletes) {
-    let obj = set(1986);
+    let obj = DatabaseDaosDefault;
     const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
-    obj = { id: null };
-    obj[0] = guild.id;
+    obj = { id: guild.id };
     result.put(obj);
   }
 };
 prototype["handleDeletedEntityIds"] = function handleDeletedEntityIds(guild_id, database) {
-  const result = set(1986).guildsRequiringDeletedIdsSyncTransaction(database);
+  const result = DatabaseDaosDefault.guildsRequiringDeletedIdsSyncTransaction(database);
   result.delete(guild_id.guild_id);
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
 
 };
-set = Object.create(GuildsRequiringDeletedIdsSync.prototype);
-set.actions = {
+let size = Object.create(GuildsRequiringDeletedIdsSync.prototype);
+let closure_129_0 = size;
+size.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);
   },
@@ -150,6 +140,7 @@ set.actions = {
     return obj.handleDeletedEntityIds(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx");
 
-export default set;
+export default size;

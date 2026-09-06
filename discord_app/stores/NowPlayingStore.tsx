@@ -1,12 +1,12 @@
-// === Module 13747: _handlePresenceUpdate ===
+// === Module 13747: NowPlayingStore ===
 
-// Module 13747 (_handlePresenceUpdate)
+// Module 13747 (NowPlayingStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "recomputeAffinities" /* 7659 */;
-import closure_3 from "sortActivity" /* 4600 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { ActivityTypes } from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import getApplicationIdForActivityDefault from "getApplicationIdForActivity" /* 13748 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
+import PresenceStore from "PresenceStore" /* 4600 */;
+import UserStore from "UserStore" /* 1371 */;
 
 function _handlePresenceUpdate(user) {
   user = user.user;
@@ -18,11 +18,11 @@ function _handlePresenceUpdate(user) {
     const found = activities.filter((type) => type.type !== constants.CUSTOM_STATUS);
     if (0 === found.length) {
       let flag2 = false;
-      if (null != obj5[user.id]) {
+      if (null != obj[user.id]) {
         let gameId = tmp7.gameId;
-        if (null != obj3[gameId]) {
-          let obj = {};
-          let merged = Object.assign(obj3);
+        if (null != obj[gameId]) {
+          obj = {};
+          let merged = Object.assign(obj);
           delete tmp[tmp2];
           let _Object = Object;
           if (0 === Object.values(obj[gameId]).length) {
@@ -30,7 +30,7 @@ function _handlePresenceUpdate(user) {
           }
         }
         obj = {};
-        let merged1 = Object.assign(obj5);
+        let merged1 = Object.assign(obj);
         delete tmp[tmp2];
         flag2 = true;
       }
@@ -38,13 +38,13 @@ function _handlePresenceUpdate(user) {
     } else {
       c1 = false;
       const item = found.forEach((timestamps) => {
-        const tmp7 = user(table[4])(timestamps);
+        const tmp7 = getApplicationIdForActivityDefault(timestamps);
         if (null == tmp7) {
           let flag2 = false;
           if (null != obj5[tmp6.id]) {
             const gameId2 = tmp34.gameId;
             if (null != obj3[gameId2]) {
-              let obj = {};
+              obj = {};
               const merged = Object.assign(obj3);
               obj3 = obj;
               delete tmp[tmp2];
@@ -74,7 +74,7 @@ function _handlePresenceUpdate(user) {
                   delete tmp2[tmp5];
                 }
               }
-              obj1 = {};
+              const obj1 = {};
               const merged3 = Object.assign(obj5);
               obj5 = obj1;
               delete tmp2[tmp4];
@@ -89,10 +89,7 @@ function _handlePresenceUpdate(user) {
             const _Date = Date;
             start = Date.now();
           }
-          const obj2 = { userId: null, activity: null, startedPlaying: null };
-          obj2[0] = tmp6.id;
-          obj2[1] = timestamps;
-          obj2[2] = start;
+          const obj2 = { userId: tmp6.id, activity: timestamps, startedPlaying: start };
           obj3 = {};
           const merged4 = Object.assign(obj3);
           const obj4 = {};
@@ -101,15 +98,13 @@ function _handlePresenceUpdate(user) {
           obj3[tmp7] = obj4;
           obj5 = {};
           const merged6 = Object.assign(obj5);
-          const obj6 = { gameId: null, startedPlaying: null };
-          obj6[0] = tmp7;
-          obj6[1] = obj2.startedPlaying;
+          const obj6 = { gameId: tmp7, startedPlaying: obj2.startedPlaying };
           obj5[obj2.userId] = obj6;
           flag = true;
           tmp8 = null != obj5[tmp6.id] && obj5[tmp6.id].gameId !== tmp7;
         }
         if (flag) {
-          table = true;
+          c1 = true;
         }
       });
       return c1;
@@ -121,105 +116,101 @@ function handleUserAffinitiesV2StoreUpdate() {
   if (!tmp) {
     closure_7 = {};
     closure_8 = {};
-    c0 = false;
-    userIds = userIds.getUserIds();
-    const item = userIds.forEach((arg0) => {
-      const user = closure_1_4.getUser(arg0);
+    closure_0 = false;
+    const userIds = PresenceStore.getUserIds();
+    const item = userIds.forEach((item) => {
+      const user = UserStore.getUser(item);
       if (null != user) {
-        const obj = { user: null, activities: null };
-        obj[0] = user;
-        obj[1] = closure_1_3.getActivities(arg0);
-        closure_0 = closure_1_9(obj) || closure_0;
-        const tmp4 = closure_1_9(obj) || closure_0;
+        const obj = { user, activities: PresenceStore.getActivities(item) };
+        closure_0 = _handlePresenceUpdate(obj) || closure_0;
+        const tmp4 = _handlePresenceUpdate(obj) || closure_0;
       }
     });
-    flag = c0;
+    flag = closure_0;
   }
-  closure_6 = !closure_2.shouldFetch();
+  closure_6 = !UserAffinitiesV2Store.shouldFetch();
   return flag;
 }
+const ActivityTypes = fn(1074).ActivityTypes;
 let c6 = false;
-let closure_7 = {};
-let closure_8 = {};
 const Store = initializeDefault.Store;
 class NowPlayingStore extends Store {
 }
 const prototype = NowPlayingStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_3, closure_2, closure_4);
-  const items = [closure_2];
+  this.waitFor(PresenceStore, UserAffinitiesV2Store, UserStore);
+  const items = [UserAffinitiesV2Store];
   this.syncWith(items, handleUserAffinitiesV2StoreUpdate);
 };
 Object.defineProperty(prototype, "games", {
   get: function games() {
-    return closure_7;
+    return obj3;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "usersPlaying", {
   get: function usersPlaying() {
-    return closure_8;
+    return obj5;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "gameIds", {
   get: function gameIds() {
-    return Object.keys(closure_7);
+    return Object.keys(obj3);
   },
   set: undefined
 });
 prototype["getNowPlaying"] = function getNowPlaying(arg0) {
-  return table[arg0];
+  return obj3[arg0];
 };
 prototype["getUserGame"] = function getUserGame(arg0) {
-  return table2[arg0];
+  return obj5[arg0];
 };
 NowPlayingStore.displayName = "NowPlayingStore";
-const nowPlayingStore = new NowPlayingStore(dispatcherDefault, {
+const nowPlayingStore = new NowPlayingStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    closure_7 = {};
-    closure_8 = {};
+
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function handleConnectionOpenSupplemental(arg0) {
     ({ guilds, presences } = arg0);
     c0 = false;
     let item = guilds.forEach((presences) => {
       presences = presences.presences;
-      c0 = false;
-      const item = presences.forEach((arg0) => {
-        closure_0 = false !== closure_1_9(arg0) || closure_0;
+      closure_0 = false;
+      const item = presences.forEach((item) => {
+        closure_0 = false !== _handlePresenceUpdate(item) || closure_0;
       });
-      if (c0) {
+      if (closure_0) {
         c0 = true;
       }
     });
-    c0 = false;
-    const item1 = presences.forEach((arg0) => {
-      closure_0 = false !== closure_1_9(arg0) || closure_0;
+    closure_129_0 = false;
+    const item1 = presences.forEach((item) => {
+      closure_0 = false !== _handlePresenceUpdate(item) || closure_0;
     });
-    if (c0) {
+    if (closure_129_0) {
       c0 = true;
     }
     return c0;
   },
   LOGOUT: function handleLogout() {
-    closure_7 = {};
-    closure_8 = {};
+
   },
   PRESENCE_UPDATES: function handlePresenceUpdates(updates) {
     updates = updates.updates;
-    const mapped = updates.map((arg0) => callback(arg0));
-    return mapped.some((arg0) => arg0);
+    const mapped = updates.map((item) => _handlePresenceUpdate(item));
+    return mapped.some((item) => item);
   },
   PRESENCES_REPLACE: function handlePresencesReplace(presences) {
     presences = presences.presences;
     c0 = false;
-    const item = presences.forEach((arg0) => {
-      closure_0 = false !== closure_1_9(arg0) || closure_0;
+    const item = presences.forEach((item) => {
+      closure_0 = false !== _handlePresenceUpdate(item) || closure_0;
     });
     return c0;
   }
 });
-const result = require("set").fileFinishedImporting("stores/NowPlayingStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/NowPlayingStore.tsx");
 
 export default nowPlayingStore;

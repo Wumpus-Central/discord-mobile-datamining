@@ -1,18 +1,16 @@
-// === Module 12955: trustDomain ===
+// === Module 12955: MaskedLinkActionCreators ===
 
-// Module 12955 (trustDomain)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 12955 (MaskedLinkActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/MaskedLinkActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/MaskedLinkActionCreators.tsx");
 
 export const trustDomain = function trustDomain(url) {
-  let obj = dispatcherDefault;
-  obj = { type: "MASKED_LINK_ADD_TRUSTED_DOMAIN", url };
+  const obj = { type: "MASKED_LINK_ADD_TRUSTED_DOMAIN", url };
   obj.dispatch(obj);
 };
 export const trustProtocol = function trustProtocol(url) {
-  let obj = dispatcherDefault;
-  obj = { type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL", url };
+  const obj = { type: "MASKED_LINK_ADD_TRUSTED_PROTOCOL", url };
   obj.dispatch(obj);
 };

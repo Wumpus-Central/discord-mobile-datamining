@@ -1,44 +1,42 @@
-// === Module 9303: ? ===
+// === Module 9303: ChangeNicknameActionCreators ===
 
-// Module 9303
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9303 (ChangeNicknameActionCreators)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-let result = set.fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+let result = size.fileFinishedImporting("actions/ChangeNicknameActionCreators.tsx");
 
 export default {
-  changeNickname(guildId, arg1, closure_4) {
-    const _require = arg1;
-    closure_1 = arg3;
-    const HTTP = _require(1272).HTTP;
-    obj = { url: Endpoints.GUILD_MEMBER_NICK(guildId, closure_4), body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { nick: closure_1 };
-    obj[3] = _require(1272).rejectWithMigratedError();
-    const obj3 = _require(1272);
-    return HTTP.patch(obj).then((body) => {
-      const nick = body.body.nick;
-      callback2(closure_1_2[2]);
+  changeNickname(guildId, arg1, arg2, arg3) {
+    _require = arg1;
+    let nick = arg3;
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: Endpoints.GUILD_MEMBER_NICK(guildId, arg2), body: { nick }, oldFormErrors: true, rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
+    let obj = { nick };
+    const obj3 = require("HTTPUtils");
+    return HTTP.patch(request).then((body) => {
+      nick = body.body.nick;
+      MessageActionCreatorsDefault;
       if (null != nick) {
         if ("" !== nick) {
-          const intl2 = callback(tmp[3]).intl;
-          const obj = { nick: null };
-          obj[0] = nick;
-          let result = intl2.formatToMarkdownString(callback(tmp[3]).t["gz+HRq"], obj);
+          const intl2 = util.intl;
+          const obj = { nick };
+          let result = intl2.formatToMarkdownString(util.t["gz+HRq"], obj);
         }
         tmp3(tmp4, result);
       }
-      const intl = callback(tmp[3]).intl;
-      result = intl.string(callback(tmp[3]).t.Vhpd9A);
+      const intl = util.intl;
+      result = intl.string(util.t.Vhpd9A);
     }, (status) => {
       if (403 === status.status) {
-        const intl2 = callback(closure_1_2[3]).intl;
-        callback2(closure_1_2[2]).sendBotMessage(callback, intl2.formatToMarkdownString(callback(closure_1_2[3]).t.Izf9jO, {}));
-        const obj2 = callback2(closure_1_2[2]);
+        const intl2 = util.intl;
+        MessageActionCreatorsDefault.sendBotMessage(closure_0, intl2.formatToMarkdownString(util.t.Izf9jO, {}));
       } else {
-        const intl = callback(closure_1_2[3]).intl;
-        callback2(closure_1_2[2]).sendBotMessage(callback, intl.string(callback(closure_1_2[3]).t["5LO/Ss"]));
-        const obj = callback2(closure_1_2[2]);
+        const intl = util.intl;
+        MessageActionCreatorsDefault.sendBotMessage(closure_0, intl.string(util.t["5LO/Ss"]));
       }
     });
   }

@@ -1,10 +1,9 @@
-// === Module 17424: handleLogout ===
+// === Module 17424: MessageQueueManager ===
 
-// Module 17424 (handleLogout)
-import initializeDefault from "initialize" /* 7118 */;
-import itemsDefault from "items" /* 7834 */;
+// Module 17424 (MessageQueueManager)
+import MessageQueueDefault from "MessageQueue" /* 7834 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-initializeDefault;
 class MessageQueueManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -13,9 +12,10 @@ class MessageQueueManager extends tmp2 {
   }
 }
 MessageQueueManager.prototype["handleLogout"] = function handleLogout() {
-  itemsDefault.clear();
+  MessageQueueDefault.clear();
 };
 const messageQueueManager = new MessageQueueManager();
-const result = require("set").fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/MessageQueueManager.tsx");
 
 export default messageQueueManager;

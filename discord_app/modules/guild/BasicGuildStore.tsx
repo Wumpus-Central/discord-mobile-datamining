@@ -1,11 +1,11 @@
-// === Module 7955: getGuild ===
+// === Module 7955: BasicGuildStore ===
 
-// Module 7955 (getGuild)
+// Module 7955 (BasicGuildStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let c0 = 0;
-let closure_1 = {};
+let closure_0 = 0;
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class BasicGuildStore extends Store {
 }
@@ -31,10 +31,10 @@ prototype["getGuildOrStatus"] = function getGuildOrStatus(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getVersion"] = function getVersion() {
-  return c0;
+  return closure_0;
 };
 BasicGuildStore.displayName = "BasicGuildStore";
-const basicGuildStore = new BasicGuildStore(dispatcherDefault, {
+const basicGuildStore = new BasicGuildStore(DispatcherDefault, {
   BASIC_GUILD_FETCH: function handleBasicGuildFetch(guildId) {
     closure_1[guildId.guildId] = { type: "loading" };
     return false;
@@ -48,6 +48,7 @@ const basicGuildStore = new BasicGuildStore(dispatcherDefault, {
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild/BasicGuildStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/BasicGuildStore.tsx");
 
 export default basicGuildStore;

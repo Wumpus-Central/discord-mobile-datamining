@@ -1,13 +1,15 @@
-// === Module 8688: set ===
+// === Module 8688: useGameProfileStoreWebsites ===
 
-// Module 8688 (set)
-import closure_3 from "noop" /* 19 */;
-import set from "set" /* 2 */;
+// Module 8688 (useGameProfileStoreWebsites)
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 8689 */;
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8691 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let set = new Set(["1402418703554842694", "356877880938070016"]);
-let items = [require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.STEAM, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.ROBLOX, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.BATTLENET, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.RIOT, require("ThirdPartyGameApplicationWebsiteCategory").ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
-const result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
+require = fn;
+const set = new Set(["1402418703554842694", "356877880938070016"]);
+let items = [fn(8689).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES, fn(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM, fn(8689).ThirdPartyGameApplicationWebsiteCategory.ROBLOX, fn(8689).ThirdPartyGameApplicationWebsiteCategory.BATTLENET, fn(8689).ThirdPartyGameApplicationWebsiteCategory.RIOT, fn(8689).ThirdPartyGameApplicationWebsiteCategory.MINECRAFT];
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileStoreWebsites.tsx");
 
 export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(data) {
   let id;
@@ -15,7 +17,7 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
     id = data.id;
   }
   steamWebsiteUrl = steamWebsiteUrl(id1[2]).useSteamWebsiteUrl(id);
-  const tmp4 = importDefault(id1[3])(data);
+  const tmp4 = require("useXboxGamePassStoreUrl")(data);
   importDefault = tmp4;
   id1 = undefined;
   if (data != null) {
@@ -37,18 +39,18 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         let found;
         if (arr != null) {
           found = arr.filter((category) => {
-            let tmp3 = category.category === closure_1_0(closure_1_2[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
+            let tmp3 = category.category === steamWebsiteUrl(id1[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
             if (tmp3) {
-              tmp3 = !closure_1_4.has(closure_2);
+              tmp3 = !steamReleaseStatus.has(dependencyMap);
             }
             let tmp6 = !tmp3;
             if (!tmp3) {
               let hasItem = category.category !== tmp(tmp2[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM;
               if (!hasItem) {
-                hasItem = closure_4 !== tmp(tmp2[4]).SteamReleaseStatus.RETIRED_ABANDONED;
+                hasItem = closure_1_4 !== tmp(tmp2[4]).SteamReleaseStatus.RETIRED_ABANDONED;
               }
               if (hasItem) {
-                hasItem = closure_1_5.includes(category.category);
+                hasItem = items.includes(category.category);
               }
               tmp6 = hasItem;
             }
@@ -60,22 +62,20 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         }
         let someResult = null == steamWebsiteUrl;
         if (!someResult) {
-          someResult = steamReleaseStatus === steamWebsiteUrl(id1[4]).SteamReleaseStatus.RETIRED_ABANDONED;
+          someResult = steamReleaseStatus === SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED;
         }
         if (!someResult) {
-          someResult = found.some((category) => category.category === callback(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+          someResult = found.some((category) => category.category === steamWebsiteUrl(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM);
         }
         if (!someResult) {
-          let obj = { category: null, url: null };
-          obj[0] = steamWebsiteUrl(id1[1]).ThirdPartyGameApplicationWebsiteCategory.STEAM;
-          obj[1] = steamWebsiteUrl;
+          let obj = { category: ThirdPartyGameApplicationWebsiteCategory.ThirdPartyGameApplicationWebsiteCategory.STEAM, url: steamWebsiteUrl };
           arr = found.push(obj);
         }
         const sorted = found.sort((category, category2) => {
           let num = -1;
-          if (category.category !== callback(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+          if (category.category !== steamWebsiteUrl(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
             let num2 = 0;
-            if (category2.category === callback(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
+            if (category2.category === steamWebsiteUrl(8689).ThirdPartyGameApplicationWebsiteCategory.STEAM) {
               num2 = 1;
             }
             num = num2;
@@ -83,8 +83,7 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
           return num;
         });
         if (null != closure_1) {
-          obj = { category: "XBOX_GAME_PASS", url: null };
-          obj[1] = tmp11;
+          obj = { category: "XBOX_GAME_PASS", url: tmp11 };
           arr = sorted.unshift(obj);
         }
         return sorted;

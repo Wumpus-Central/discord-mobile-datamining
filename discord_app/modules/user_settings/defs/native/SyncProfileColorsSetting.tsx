@@ -1,25 +1,26 @@
-// === Module 15414: toggle ===
+// === Module 15414: SyncProfileColorsSetting ===
 
-// Module 15414 (toggle)
+// Module 15414 (SyncProfileColorsSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["sSY+mD"]);
+    const intl = util.intl;
+    return intl.string(util.t["sSY+mD"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7975).MobileUserSettings.ACCESSIBILITY,
   useValue: function useProfileColorsSettingValue() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
+    const items = [AccessibilityStore];
+    return initialize.useStateFromStores(items, () => AccessibilityStore.syncProfileThemeWithUserTheme);
   },
-  onValueChange: require("setFontSize").toggleSyncProfileThemeWithUserTheme
+  onValueChange: fn(14437).toggleSyncProfileThemeWithUserTheme
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SyncProfileColorsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

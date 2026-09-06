@@ -3,15 +3,16 @@
 // Module 10970 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
 import useUserIsTeen from "useUserIsTeen" /* 8644 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useSafetyAlertsSettingOrDefault.tsx");
 
 export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOrDefault() {
-  currentUser = currentUser.getCurrentUser();
-  const items = [closure_2];
+  const currentUser = UserStore.getCurrentUser();
+  const items = [UserSettingsProtoStore];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     const privacy = settings.settings.privacy;
     let flag;
@@ -25,9 +26,7 @@ export const useSafetyAlertsSettingOrDefault = function useSafetyAlertsSettingOr
     }
     return flag;
   });
-  const obj2 = initialize;
   let userIsTeen = useUserIsTeen.useUserIsTeen();
-  const obj3 = useUserIsTeen;
   let tmp3 = !userIsTeen;
   if (userIsTeen) {
     tmp3 = !obj4.useIsEligibleForInappropriateConversationDefaultOn({ location: "useSafetyAlertsSettingOrDefault" });

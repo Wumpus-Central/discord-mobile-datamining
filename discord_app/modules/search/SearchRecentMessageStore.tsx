@@ -1,10 +1,10 @@
-// === Module 12343: handleReset ===
+// === Module 12343: SearchRecentMessageStore ===
 
-// Module 12343 (handleReset)
+// Module 12343 (SearchRecentMessageStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-const require = arg1;
+const require = fn;
 function handleReset() {
   map = new Map();
 }
@@ -14,14 +14,14 @@ const Store = initializeDefault.Store;
 class SearchRecentMessageStore extends Store {
 }
 SearchRecentMessageStore.prototype["getRecentMessageAuthorIds"] = function getRecentMessageAuthorIds(guildId) {
-  let value = map.get(guildId);
+  value = map.get(guildId);
   if (value == null) {
     value = closure_3;
   }
   return value;
 };
 SearchRecentMessageStore.displayName = "SearchRecentMessageStore";
-const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault, {
+const searchRecentMessageStore = new SearchRecentMessageStore(DispatcherDefault, {
   SEARCH_MESSAGES_SUCCESS: function handleSearchMessagesSuccess(arg0) {
     ({ guildId, data } = arg0);
     c0 = undefined;
@@ -41,9 +41,9 @@ const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault,
       set = new Set(items);
       let item = data.forEach((messages) => {
         messages = messages.messages;
-        const item = messages.forEach((arg0) => {
-          [tmp] = arg0;
-          const messageRecord = closure_1_0(closure_1_1[0]).createMessageRecord(tmp);
+        const item = messages.forEach((item) => {
+          [tmp] = item;
+          const messageRecord = _true(items[0]).createMessageRecord(tmp);
           const hasItem = set.has(messageRecord.author.id);
           let tmp4 = !hasItem;
           if (!hasItem) {
@@ -51,8 +51,8 @@ const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault,
           }
           if (tmp4) {
             obj2.add(messageRecord.author.id);
-            arr = arr.push(messageRecord.author.id);
-            c0 = true;
+            closure_1_1.push(messageRecord.author.id);
+            _true = true;
           }
         });
       });
@@ -65,6 +65,7 @@ const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault,
   SEARCH_RECENT_MESSAGES_CLEAR: handleReset,
   CONNECTION_OPEN: handleReset
 });
-let result = require("set").fileFinishedImporting("modules/search/SearchRecentMessageStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/SearchRecentMessageStore.tsx");
 
 export default searchRecentMessageStore;

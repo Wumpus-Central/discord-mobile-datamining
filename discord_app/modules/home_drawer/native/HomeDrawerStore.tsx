@@ -1,27 +1,28 @@
-// === Module 16023: withEqualityFn ===
+// === Module 16023: HomeDrawerStore ===
 
-// Module 16023 (withEqualityFn)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import isIterable from "isIterable" /* 4184 */;
-import identity from "identity" /* 1244 */;
+// Module 16023 (HomeDrawerStore)
+import Constants from "Constants" /* 1074 */;
+import _mod4184 from "module_4184" /* 4184 */;
+import timing from "timing" /* 4561 */;
+import identity from "module_1244" /* 1244 */;
+import size from "module_2" /* 2 */;
 
-const DM_WIDTH = ME.DM_WIDTH;
+const DM_WIDTH = Constants.DM_WIDTH;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  let obj = { panelX: _require(4296).makeMutable(0), snapX: null, isOpenTarget: null, gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
-  const obj2 = _require(4296);
-  obj[1] = _require(4296).makeMutable(0);
-  let obj3 = _require(4296);
-  obj[2] = _require(4296).makeMutable(false);
-  const obj4 = _require(4296);
-  obj[3] = _require(4296).makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-  obj[5] = { current: 0 };
-  const obj5 = _require(4296);
-  obj[6] = _require(4296).makeMutable(false);
-  obj[7] = function setPanelX(arg0, arg1) {
-    const tmp = dependencyMap();
+  let obj = { panelX: require("ReanimatedRexport").makeMutable(0), snapX: null, isOpenTarget: null, gestureState: null, maxX: 0, lastInteractionAt: null, isPanelTouchActive: null, setPanelX: null, updateMaxX: null, noteInteraction: null };
+  const obj2 = require("ReanimatedRexport");
+  obj.snapX = require("ReanimatedRexport").makeMutable(0);
+  let obj3 = require("ReanimatedRexport");
+  obj.isOpenTarget = require("ReanimatedRexport").makeMutable(false);
+  const obj4 = require("ReanimatedRexport");
+  obj.gestureState = require("ReanimatedRexport").makeMutable({ active: false, initialX: 0, initialY: 0, panelX: 0 });
+  obj.lastInteractionAt = { current: 0 };
+  const obj5 = require("ReanimatedRexport");
+  obj.isPanelTouchActive = require("ReanimatedRexport").makeMutable(false);
+  obj.setPanelX = function setPanelX(arg0) {
+    const tmp = closure_1();
     ({ panelX, snapX, isOpenTarget, gestureState } = tmp);
     if (isOpenTarget.get() !== "open" === arg0) {
       const result = isOpenTarget.set(tmp2);
@@ -29,25 +30,24 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (tmp2) {
         num = tmp.maxX;
       }
-      const result1 = panelX.set(callback(4561).withTiming(num, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
-      const obj3 = callback(4561);
-      const result2 = snapX.set(callback(4561).withTiming(0, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
+      const result1 = panelX.set(timing.withTiming(num, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
+      const result2 = snapX.set(timing.withTiming(0, tmp9(16024).HOME_DRAWER_SETTLE_TIMING));
       const obj = {};
       const merged = Object.assign(gestureState.get());
       obj.active = false;
       const result3 = gestureState.set(obj);
-      const tmp9Result = callback(4561);
+      const tmp9Result = timing;
     }
   };
-  obj[8] = function updateMaxX(width, left) {
-    callback({ maxX: width.width - left.left - left.right - closure_1_2 - 8 + 8 });
+  obj.updateMaxX = function updateMaxX(width, left) {
+    closure_0({ maxX: width.width - left.left - left.right - DM_WIDTH - 8 + 8 });
   };
-  obj[9] = function noteInteraction() {
-    dependencyMap().lastInteractionAt.current = Date.now();
+  obj.noteInteraction = function noteInteraction() {
+    closure_1().lastInteractionAt.current = Date.now();
   };
   return obj;
-}, isIterable.shallow);
-let result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
+}, _mod4184.shallow);
+let result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerStore.tsx");
 
 export default withEqualityFn;
 export const computeMaxX = function computeMaxX(width, left) {

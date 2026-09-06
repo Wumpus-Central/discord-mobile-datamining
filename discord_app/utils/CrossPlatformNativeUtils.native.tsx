@@ -1,9 +1,9 @@
-// === Module 4554: set ===
+// === Module 4554: CrossPlatformNativeUtils ===
 
-// Module 4554 (set)
-import set from "set" /* 2 */;
+// Module 4554 (CrossPlatformNativeUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
+const result = size.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
 
 export default {
   clearNavigationHistory() {

@@ -1,14 +1,13 @@
-// === Module 1392: CUSTOM_TYPING_INDICATOR_EMOJI_COUNT ===
+// === Module 1392: CustomTypingIndicatorTypes ===
 
-// Module 1392 (CUSTOM_TYPING_INDICATOR_EMOJI_COUNT)
-import set from "set" /* 2 */;
-import create from "create" /* 1379 */;
+// Module 1392 (CustomTypingIndicatorTypes)
+import user from "user" /* 1379 */;
+import size from "module_2" /* 2 */;
 
-let obj = { emojis: [], typingSuggestion: create.TypingSuggestion.UNSPECIFIED, animation: create.TypingIndicatorAnimation.UNSPECIFIED };
-const result = set.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");
+const result = size.fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorTypes.tsx");
 
 export const CUSTOM_TYPING_INDICATOR_EMOJI_COUNT = 3;
-export const EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = obj;
+export const EMPTY_CUSTOM_TYPING_INDICATOR_CONFIG = { emojis: [], typingSuggestion: user.TypingSuggestion.UNSPECIFIED, animation: user.TypingIndicatorAnimation.UNSPECIFIED };
 export const hasCustomTypingIndicatorEmojis = function hasCustomTypingIndicatorEmojis(emojis) {
   return 3 === emojis.length;
 };
@@ -23,26 +22,22 @@ export const getEffectiveCustomTypingIndicatorAnimation = function getEffectiveC
   if (3 === map.emojis.length) {
     let UNSPECIFIED = map.animation;
   } else {
-    UNSPECIFIED = create.TypingIndicatorAnimation.UNSPECIFIED;
+    UNSPECIFIED = user.TypingIndicatorAnimation.UNSPECIFIED;
   }
   return UNSPECIFIED;
 };
 export const serializeTypingIndicatorStyle = function serializeTypingIndicatorStyle(typingIndicatorStyle) {
+  let obj = { emojis: null, animation: typingIndicatorStyle.animation, typing_suggestion: typingIndicatorStyle.typingSuggestion };
   const emojis = typingIndicatorStyle.emojis;
-  return {
-    emojis: emojis.map((id) => {
-      if (null != id.id) {
-        let obj = { custom_emoji_id: null };
-        obj[0] = id.id;
-      } else {
-        obj = { unicode_emoji: null };
-        obj[0] = id.name;
-      }
-      return obj;
-    }),
-    animation: typingIndicatorStyle.animation,
-    typing_suggestion: typingIndicatorStyle.typingSuggestion
-  };
+  obj.emojis = emojis.map((id) => {
+    if (null != id.id) {
+      let obj = { custom_emoji_id: id.id };
+    } else {
+      obj = { unicode_emoji: id.name };
+    }
+    return obj;
+  });
+  return obj;
 };
 export const parseServerTypingIndicatorStyle = function parseServerTypingIndicatorStyle(typing_indicator_style) {
   let tmp = null;
@@ -51,35 +46,37 @@ export const parseServerTypingIndicatorStyle = function parseServerTypingIndicat
     if (emojis == null) {
       emojis = [];
     }
-    let obj = { emojis: null, typingSuggestion: null, animation: null };
-    obj[0] = emojis.map((custom_emoji_id) => {
-      if (null != custom_emoji_id.custom_emoji_id) {
-        let obj = { id: null, name: "", animated: null };
-        ({ custom_emoji_id: obj2[0], animated } = custom_emoji_id);
-        if (animated == null) {
-          animated = false;
-        }
-        obj[2] = animated;
-      } else {
-        let str = custom_emoji_id.unicode_emoji;
-        if (str == null) {
-          str = "";
-        }
-        obj = { name: null };
-        obj[0] = str;
-      }
-      return obj;
-    });
+    let obj = {
+      emojis: emojis.map((custom_emoji_id) => {
+          if (null != custom_emoji_id.custom_emoji_id) {
+            let obj = { id: null, name: "", animated: null };
+            ({ custom_emoji_id: obj2.id, animated } = custom_emoji_id);
+            if (animated == null) {
+              animated = false;
+            }
+            obj.animated = animated;
+          } else {
+            let str = custom_emoji_id.unicode_emoji;
+            if (str == null) {
+              str = "";
+            }
+            obj = { name: str };
+          }
+          return obj;
+        }),
+      typingSuggestion: null,
+      animation: null
+    };
     let UNSPECIFIED = typing_indicator_style.typing_suggestion;
     if (UNSPECIFIED == null) {
-      UNSPECIFIED = create.TypingSuggestion.UNSPECIFIED;
+      UNSPECIFIED = user.TypingSuggestion.UNSPECIFIED;
     }
-    obj[1] = UNSPECIFIED;
+    obj.typingSuggestion = UNSPECIFIED;
     let UNSPECIFIED2 = typing_indicator_style.animation;
     if (UNSPECIFIED2 == null) {
-      UNSPECIFIED2 = create.TypingIndicatorAnimation.UNSPECIFIED;
+      UNSPECIFIED2 = user.TypingIndicatorAnimation.UNSPECIFIED;
     }
-    obj[2] = UNSPECIFIED2;
+    obj.animation = UNSPECIFIED2;
     tmp = obj;
   }
   return tmp;

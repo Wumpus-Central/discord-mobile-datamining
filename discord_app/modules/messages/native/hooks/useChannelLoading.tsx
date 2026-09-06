@@ -1,30 +1,30 @@
 // === Module 11540: useChannelLoading ===
 
 // Module 11540 (useChannelLoading)
-import useMountEffectDefault from "useMountEffect" /* 4993 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
+import hooks_useMountEffectDefault from "hooks/useMountEffect" /* 4993 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/hooks/useChannelLoading.tsx");
 
 export default function useChannelLoading(arg0) {
-  ({ channelId: require, jumpTargetId: importDefault, oldestUnreadMessageId: dependencyMap, shouldJumpToOriginalPost: closure_3 } = arg0);
-  let first;
-  first = callback(first.useState(() => new callback(table[2])("Messages")), 1)[0];
-  useMountEffectDefault(() => {
-    let obj = closure_1_0(closure_1_2[3]);
-    obj = { jumpTargetId: closure_1, oldestUnreadMessageId: closure_2, shouldJumpToOriginalPost: callback2(false), channelId: closure_0, tracker: first };
+  ({ channelId: require, jumpTargetId: importDefault, oldestUnreadMessageId: dependencyMap, shouldJumpToOriginalPost: _slicedToArray } = arg0);
+  let channelLatestMessageLoadingStatsManager;
+  channelLatestMessageLoadingStatsManager = _slicedToArray(channelLatestMessageLoadingStatsManager.useState(() => new jumpTargetId(oldestUnreadMessageId[2])("Messages")), 1)[0];
+  hooks_useMountEffectDefault(() => {
+    const obj = { jumpTargetId, oldestUnreadMessageId, shouldJumpToOriginalPost: _slicedToArray(false), channelId, tracker };
     const result = obj.startOrCancelChannelLatestMessagesLoad(obj);
     return () => {
-      closure_4.cancel();
+      first.cancel();
     };
   });
   return {
-    channelLatestMessageLoadingStatsManager: first,
+    channelLatestMessageLoadingStatsManager,
     startOrCancelLatestMessagesLoad(arg0) {
-      let obj = closure_1_0(closure_1_2[3]);
-      obj = { jumpTargetId: closure_1, oldestUnreadMessageId: closure_2, shouldJumpToOriginalPost: callback2(arg0), channelId: closure_0, tracker: first };
+      const obj = { jumpTargetId, oldestUnreadMessageId, shouldJumpToOriginalPost: _slicedToArray(arg0), channelId, tracker };
       const result = obj.startOrCancelChannelLatestMessagesLoad(obj);
     }
   };

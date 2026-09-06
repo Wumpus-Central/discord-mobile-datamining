@@ -1,26 +1,29 @@
-// === Module 10988: apexExperiment ===
+// === Module 10988: PlaygroundAccessExperiment ===
 
-// Module 10988 (apexExperiment)
+// Module 10988 (PlaygroundAccessExperiment)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
+fn(1433);
+let ApexExperiment = { name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: null };
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: ApexExperiment });
-const result = require("set").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
+ApexExperiment.variations = ApexExperiment;
+ApexExperiment = ApexExperiment.createApexExperiment(ApexExperiment);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
 
-export default apexExperiment;
+export default ApexExperiment;
 export const usePlaygroundAccessExperiment = function usePlaygroundAccessExperiment(design_systems_settings) {
-  return apexExperiment.useConfig({ location: design_systems_settings }).enabled;
+  return ApexExperiment.useConfig({ location: design_systems_settings }).enabled;
 };
 export const getPlaygroundAccessExperiment = function getPlaygroundAccessExperiment(location) {
-  return apexExperiment.getConfig({ location }).enabled;
+  return ApexExperiment.getConfig({ location }).enabled;
 };
 export const useHasPlaygroundAccess = function useHasPlaygroundAccess(location) {
   let obj = initialize;
-  const items = [closure_2];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;
   if (stateFromStores != null) {
@@ -36,12 +39,12 @@ export const useHasPlaygroundAccess = function useHasPlaygroundAccess(location) 
   }
   obj = { location };
   if (!enabled) {
-    enabled = apexExperiment.useConfig(obj).enabled;
+    enabled = ApexExperiment.useConfig(obj).enabled;
   }
   return enabled;
 };
 export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitcher_action) {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
@@ -55,9 +58,8 @@ export const getHasPlaygroundAccess = function getHasPlaygroundAccess(quickswitc
     enabled = true === isStaffPersonalResult;
   }
   if (!enabled) {
-    const obj = { location: null };
-    obj[0] = quickswitcher_action;
-    enabled = apexExperiment.getConfig(obj).enabled;
+    const obj = { location: quickswitcher_action };
+    enabled = ApexExperiment.getConfig(obj).enabled;
   }
   return enabled;
 };

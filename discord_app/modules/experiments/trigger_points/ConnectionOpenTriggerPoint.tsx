@@ -1,13 +1,13 @@
-// === Module 13691: commonTriggerPointConfiguration ===
+// === Module 13691: ConnectionOpenTriggerPoint ===
 
-// Module 13691 (commonTriggerPointConfiguration)
-import set from "set" /* 2 */;
-import ExperimentBuckets from "ExperimentBuckets" /* 4477 */;
-import registeredExperimentIds from "registeredExperimentIds" /* 10809 */;
-import apexExperiment from "apexExperiment" /* 13692 */;
+// Module 13691 (ConnectionOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 4477 */;
+import Helpers from "Helpers" /* 10809 */;
+import ContentInventoryExperiments from "ContentInventoryExperiments" /* 13692 */;
+import size from "module_2" /* 2 */;
 
-const items = [apexExperiment.HotwheelsActivityFeedNvidiaExperiment];
-const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration(items, ExperimentBuckets.CommonTriggerPoints.CONNECTION_OPEN, { location: "app open" });
-const result = set.fileFinishedImporting("modules/experiments/trigger_points/ConnectionOpenTriggerPoint.tsx");
+const items = [ContentInventoryExperiments.HotwheelsActivityFeedNvidiaExperiment];
+const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration(items, ExperimentConstants.CommonTriggerPoints.CONNECTION_OPEN, { location: "app open" });
+const result = size.fileFinishedImporting("modules/experiments/trigger_points/ConnectionOpenTriggerPoint.tsx");
 
 export const ConnectionOpenTriggerPoint = commonTriggerPointConfiguration;

@@ -1,7 +1,7 @@
-// === Module 15300: getHorizontalOrVerticalStartPoint ===
+// === Module 15300: getGradientStartPont ===
 
-// Module 15300 (getHorizontalOrVerticalStartPoint)
-import set from "set" /* 2 */;
+// Module 15300 (getGradientStartPont)
+import size from "module_2" /* 2 */;
 
 function getHorizontalOrVerticalStartPoint(arg0, arg1, arg2) {
   if (0 === arg0) {
@@ -48,52 +48,54 @@ const fn = function t(arg0, arg1, arg2) {
     sum = result + 360;
   }
   if (sum % 90 === 0) {
-    if (typeof getHorizontalOrVerticalStartPoint !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    if (0 === sum) {
-      const items = [-arg1 / 2, 0];
-      let items3 = items;
-    } else if (90 === sum) {
-      const items1 = [0, -arg2 / 2];
-      items3 = items1;
-    } else if (180 === sum) {
-      const items2 = [arg1 / 2, 0];
-      items3 = items2;
+    if (typeof getHorizontalOrVerticalStartPoint === "function") {
+      if (0 === sum) {
+        const items = [-arg1 / 2, 0];
+        let items3 = items;
+      } else if (90 === sum) {
+        const items1 = [0, -arg2 / 2];
+        items3 = items1;
+      } else if (180 === sum) {
+        const items2 = [arg1 / 2, 0];
+        items3 = items2;
+      } else {
+        items3 = [0, arg2 / 2];
+      }
+      return items3;
     } else {
-      items3 = [0, arg2 / 2];
+      throw new TypeError("Trying to call a non-function");
     }
-    return items3;
   } else {
     const _Math = Math;
     const _Math2 = Math;
     const tanResult = Math.tan(sum * Math.PI / 180);
     const result1 = -1 / tanResult;
-    if (typeof getStartCornerToIntersect !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    const result2 = arg1 / 2;
-    const result3 = arg2 / 2;
-    if (sum < 90) {
-      const items4 = [-result2, -result3];
-      let items7 = items4;
-    } else if (sum < 180) {
-      const items5 = [result2, -result3];
-      items7 = items5;
-    } else if (sum < 270) {
-      const items6 = [result2, result3];
-      items7 = items6;
+    if (typeof getStartCornerToIntersect === "function") {
+      const result2 = arg1 / 2;
+      const result3 = arg2 / 2;
+      if (sum < 90) {
+        const items4 = [-result2, -result3];
+        let items7 = items4;
+      } else if (sum < 180) {
+        const items5 = [result2, -result3];
+        items7 = items5;
+      } else if (sum < 270) {
+        const items6 = [result2, result3];
+        items7 = items6;
+      } else {
+        items7 = [-result2, result3];
+      }
+      const result4 = (items7[1] - result1 * items7[0]) / (tanResult - result1);
+      const items8 = [result4, tanResult * result4];
+      return items8;
     } else {
-      items7 = [-result2, result3];
+      throw new TypeError("Trying to call a non-function");
     }
-    const result4 = (items7[1] - result1 * items7[0]) / (tanResult - result1);
-    const items8 = [result4, tanResult * result4];
-    return items8;
   }
 };
 fn.__closure = { getHorizontalOrVerticalStartPoint, getStartCornerToIntersect };
 fn.__workletHash = 11244204401624;
 fn.__initData = { code: "function getGradientStartPoint_getGradientStartPontTsx3(angle,width,height){const{getHorizontalOrVerticalStartPoint,getStartCornerToIntersect}=this.__closure;angle=angle%360;if(angle<0){angle+=360;}if(angle%90===0){return getHorizontalOrVerticalStartPoint(angle,width,height);}const slope=Math.tan(angle*Math.PI/180);const perpendicularSlope=-1/slope;const startCorner=getStartCornerToIntersect(angle,width,height);const b=startCorner[1]-perpendicularSlope*startCorner[0];const startX=b/(slope-perpendicularSlope);const startY=slope*startX;return[startX,startY];}" };
-let result = set.fileFinishedImporting("modules/user_settings/appearance/native/hooks/getGradientStartPont.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/appearance/native/hooks/getGradientStartPont.tsx");
 
 export default fn;

@@ -1,15 +1,16 @@
-// === Module 16737: collectGuildThemeAnalyticsMetadata ===
+// === Module 16737: GuildThemeAnalyticsUtils ===
 
-// Module 16737 (collectGuildThemeAnalyticsMetadata)
-import closure_0 from "createGuildRecordFromRust" /* 1979 */;
+// Module 16737 (GuildThemeAnalyticsUtils)
+import GuildStore from "GuildStore" /* 1979 */;
 
-const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_themes/GuildThemeAnalyticsUtils.tsx");
 
 export const collectGuildThemeAnalyticsMetadata = function collectGuildThemeAnalyticsMetadata(selectedGuildId) {
   if (null == selectedGuildId) {
     return null;
   } else {
-    guild = guild.getGuild(selectedGuildId);
+    const guild = GuildStore.getGuild(selectedGuildId);
     if (null == guild) {
       return null;
     } else {
@@ -21,8 +22,7 @@ export const collectGuildThemeAnalyticsMetadata = function collectGuildThemeAnal
           if (themeSettings != null) {
             prop = themeSettings.customUserThemeSettings;
           }
-          const obj = { guild_theme_enabled: true, guild_theme_is_custom: null };
-          obj[1] = null != prop;
+          const obj = { guild_theme_enabled: true, guild_theme_is_custom: null != prop };
           const themeSettings2 = guildTheme.themeSettings;
           let presetId;
           if (themeSettings2 != null) {

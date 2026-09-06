@@ -1,24 +1,24 @@
 // === Module 9718: ActionSheetHeaderPressableText ===
 
 // Module 9718 (ActionSheetHeaderPressableText)
-import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-let closure_3 = createCacheKey.createStyles(() => ({ container: { marginTop: 3 } }));
-const result = set.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx");
+let closure_3 = createStyles.createStyles(() => ({ container: { marginTop: 3 } }));
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx");
 
 export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressableText(onPress) {
   ({ label, accessibilityLabel } = onPress);
-  const obj = { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null };
+  const obj = { style: closure_3().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null };
   let tmp5 = label;
   if (null != accessibilityLabel) {
     tmp5 = accessibilityLabel;
   }
-  obj[3] = tmp5;
-  obj[4] = jsx(Text.Text, { variant: "text-md/medium", color: "text-brand", children: label });
-  return jsx(PressableBase.PressableOpacity, { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
+  obj.accessibilityLabel = tmp5;
+  obj.children = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-brand", children: label });
+  return jsx(Pressables.PressableOpacity, { style: closure_3().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null });
 };

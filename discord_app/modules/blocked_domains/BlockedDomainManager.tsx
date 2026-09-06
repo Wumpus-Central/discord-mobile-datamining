@@ -1,11 +1,10 @@
-// === Module 17322: _initialize ===
+// === Module 17322: BlockedDomainManager ===
 
-// Module 17322 (_initialize)
-import isBlockedDomain from "isBlockedDomain" /* 1351 */;
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17322 (BlockedDomainManager)
+import js_shim_shim from "js_shim/shim" /* 1351 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
-initializeDefault;
+require = fn;
 class BlockedDomainManager extends tmp2 {
 }
 BlockedDomainManager.prototype["_initialize"] = function _initialize() {
@@ -13,11 +12,12 @@ BlockedDomainManager.prototype["_initialize"] = function _initialize() {
     const _window = window;
     const _HermesInternal = HermesInternal;
     const combined = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + "/bad-hash-delta";
-    const result = isBlockedDomain.startFetchingBlockedDomains(combined);
-    const tmpResult = isBlockedDomain;
+    const result = js_shim_shim.startFetchingBlockedDomains(combined);
+    const tmpResult = js_shim_shim;
   }
 };
 const blockedDomainManager = new BlockedDomainManager();
-let result = require("set").fileFinishedImporting("modules/blocked_domains/BlockedDomainManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomainManager.tsx");
 
 export default blockedDomainManager;

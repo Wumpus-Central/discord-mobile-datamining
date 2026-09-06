@@ -1,20 +1,20 @@
-// === Module 16193: getMap ===
+// === Module 16193: UnclaimedGamesStore ===
 
-// Module 16193 (getMap)
+// Module 16193 (UnclaimedGamesStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let c0 = null;
+let guildIdToGameIds = null;
 const Store = initializeDefault.Store;
 class UnclaimedGamesStore extends Store {
 }
 const prototype = UnclaimedGamesStore.prototype;
 prototype["getMap"] = function getMap() {
-  return c0;
+  return guildIdToGameIds;
 };
 prototype["getUnclaimedGameIdsForGuild"] = function getUnclaimedGameIdsForGuild(arg0) {
   let items;
-  if (c0 != null) {
+  if (guildIdToGameIds != null) {
     items = tmp[arg0];
   }
   if (items == null) {
@@ -24,7 +24,7 @@ prototype["getUnclaimedGameIdsForGuild"] = function getUnclaimedGameIdsForGuild(
 };
 prototype["hasUnclaimedGames"] = function hasUnclaimedGames(arg0) {
   let tmp2;
-  if (c0 != null) {
+  if (guildIdToGameIds != null) {
     tmp2 = tmp[arg0];
   }
   let tmp4 = null != tmp2;
@@ -34,13 +34,14 @@ prototype["hasUnclaimedGames"] = function hasUnclaimedGames(arg0) {
   return tmp4;
 };
 prototype["getGuildIdsWithUnclaimedGames"] = function getGuildIdsWithUnclaimedGames() {
-  if (null == closure_0) {
+  if (null == guildIdToGameIds) {
     return [];
   } else {
+    closure_0 = guildIdToGameIds;
     const _Object = Object;
-    const keys = Object.keys(closure_0);
-    return keys.filter((arg0) => {
-      let items = table[arg0];
+    const keys = Object.keys(guildIdToGameIds);
+    return keys.filter((item) => {
+      let items = closure_0[item];
       if (items == null) {
         items = [];
       }
@@ -49,14 +50,15 @@ prototype["getGuildIdsWithUnclaimedGames"] = function getGuildIdsWithUnclaimedGa
   }
 };
 UnclaimedGamesStore.displayName = "UnclaimedGamesStore";
-const unclaimedGamesStore = new UnclaimedGamesStore(dispatcherDefault, {
+const unclaimedGamesStore = new UnclaimedGamesStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
-    c0 = null;
+    guildIdToGameIds = null;
   },
   UNCLAIMED_GAMES_FETCH_SUCCESS: function handleFetchSuccess(guildIdToGameIds) {
     guildIdToGameIds = guildIdToGameIds.guildIdToGameIds;
   }
 });
-const result = require("set").fileFinishedImporting("modules/game_claim/UnclaimedGamesStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_claim/UnclaimedGamesStore.tsx");
 
 export default unclaimedGamesStore;

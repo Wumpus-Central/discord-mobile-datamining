@@ -1,28 +1,29 @@
-// === Module 15411: useEnableSwitchIconsSettingValue ===
+// === Module 15411: EnableSwitchIconsSetting ===
 
-// Module 15411 (useEnableSwitchIconsSettingValue)
+// Module 15411 (EnableSwitchIconsSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
+require = fn;
 function useEnableSwitchIconsSettingValue() {
-  const items = [closure_2];
+  const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["S3z+pV"]);
+    const intl = util.intl;
+    return intl.string(util.t["S3z+pV"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7975).MobileUserSettings.ACCESSIBILITY,
   useValue: useEnableSwitchIconsSettingValue,
-  onValueChange: require("setFontSize").setSwitchIconsEnabled,
+  onValueChange: fn(14437).setSwitchIconsEnabled,
   hasIcon: true
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useEnableSwitchIconsSettingValue };

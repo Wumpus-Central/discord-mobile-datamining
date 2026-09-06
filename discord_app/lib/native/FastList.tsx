@@ -1,20 +1,21 @@
-// === Module 7072: renderDefaultEmpty ===
+// === Module 7072: FastList ===
 
-// Module 7072 (renderDefaultEmpty)
-import shallowEqualDefault from "shallowEqual" /* 558 */;
-import set2 from "set" /* 1115 */;
-import _mod4296 from "module_4296" /* 4296 */;
-import setDefault from "set" /* 5589 */;
+// Module 7072 (FastList)
+import _modDef12 from "module_12" /* 12 */;
+import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
+import NativeViewDefault from "NativeView" /* 5589 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import refObjectUnionAsPropDefault from "refObjectUnionAsProp" /* 7075 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+const discord_common_shallowEqualDefault = discord_common_shallowEqual;
+const ReanimatedRexport = ReanimatedRexport2;
+
+require = fn;
 function renderDefaultEmpty() {
   return null;
 }
@@ -26,9 +27,7 @@ function FastListScrollWorklet(scrollViewRef) {
   const scrollPosValue = scrollViewRef.scrollPosValue;
   const horizontal = scrollViewRef.horizontal;
   const onScrollWorklet = scrollViewRef.onScrollWorklet;
-  let mutable;
-  let event;
-  mutable = scrollViewRef(horizontal[10]).makeMutable(false);
+  const mutable = scrollViewRef(horizontal[10]).makeMutable(false);
   obj = scrollViewRef(horizontal[10]);
   const fn = function l(contentOffset) {
     contentOffset = contentOffset.contentOffset;
@@ -47,26 +46,28 @@ function FastListScrollWorklet(scrollViewRef) {
   };
   fn.__closure = { horizontal, workletMounted: mutable, scrollPosValue, onScrollWorklet };
   fn.__workletHash = 16225357996403;
-  fn.__initData = closure_29;
-  event = scrollViewRef(horizontal[10]).useEvent(fn, ["onScroll"]);
+  fn.__initData = __initData2;
+  const event = scrollViewRef(horizontal[10]).useEvent(fn, ["onScroll"]);
   const items = [event, scrollViewRef];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const tmp = closure_1_9(scrollViewRef.current);
     scrollViewRef = tmp;
     if (null != tmp) {
       event.workletEventHandler.registerForEvents(tmp);
       return () => {
-        closure_1_5.workletEventHandler.unregisterFromEvents(closure_0);
+        event.workletEventHandler.unregisterFromEvents(closure_0);
       };
     }
   }, items);
   return null;
 }
 let closure_3 = ["manualRef", "onScroll", "onScrollWorklet", "onScrollEnd", "onLayout", "renderHeader", "renderFooter", "renderSection", "renderItem", "renderSectionFooter", "getRecyclerKey", "onEndReached", "endReachedThreshold", "headerSize", "footerSize", "sectionSize", "sectionFooterSize", "itemSize", "sections", "scrollPosValue", "batchesToRender", "optimizeListItemRender", "initialScrollSection", "initialScrollItem", "initialScrollOrientation", "initialScrollStart", "getAnchorIdFromIndex", "getAnchorIndexFromId", "EXPERIMENTAL_enableAnchorWhileScrolling", "chunkBase", "disableContentWrappers", "childrenWrapper", "stickyHeaderFooter", "stickySectionsVariant", "persistantKeys", "disableRecyclingOnFullCompute", "disableLegacyGestureHandling", "viewabilityConfig", "onViewableItemsChanged", "debugLayout", "renderAccessory", "removeClippedSubviews", "inActionSheet"];
-({ PixelRatio: error, ScrollView: closure_8, StyleSheet, findNodeHandle: c9 } = get_ActivityIndicator);
-({ jsxs: c10, jsx: unpackModuleId, Fragment: closure_12 } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ PixelRatio: closure_7, ScrollView: closure_8, StyleSheet, findNodeHandle: closure_9 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsxs: c10, jsx: closure_11, Fragment: closure_12 } = jsxProd);
 let map = new Map();
-let obj = { SPACER: "SPACER", HEADER: "HEADER", FOOTER: "FOOTER", SECTION: "SECTION", ITEM: "ITEM", SECTION_FOOTER: "SECTION_FOOTER" };
+const FastListItemTypes = { SPACER: "SPACER", HEADER: "HEADER", FOOTER: "FOOTER", SECTION: "SECTION", ITEM: "ITEM", SECTION_FOOTER: "SECTION_FOOTER" };
 let FastListItemRecycler;
 class FastListItemRecycler {
   constructor(arg0) {
@@ -75,7 +76,7 @@ class FastListItemRecycler {
     obj._items = {};
     obj._pendingItems = {};
     item = global.forEach((recyclerKey) => {
-      closure_1_5(obj._itemsForType(recyclerKey.type), 1)[0][recyclerKey.recyclerKey] = recyclerKey;
+      _slicedToArray(obj._itemsForType(recyclerKey.type), 1)[0][recyclerKey.recyclerKey] = recyclerKey;
     });
     return obj;
   }
@@ -108,7 +109,7 @@ prototype["get"] = function get(type, layoutStart, layoutSize, customKey) {
   if (arg5 === undefined) {
     num2 = -1;
   }
-  const tmp = callback2(this._itemsForType(type), 2);
+  const tmp = _slicedToArray(this._itemsForType(type), 2);
   return this._get({ type, layoutStart, layoutSize, customKey, section: num, item: num2, items: tmp[0], pendingItems: tmp[1] });
 };
 prototype["_get"] = function _get(arg0) {
@@ -118,13 +119,7 @@ prototype["_get"] = function _get(arg0) {
     customKey = "" + type + ":" + section + ":" + item;
   }
   if (null == arg0.items[customKey]) {
-    obj = { type: null, key: -1, layoutStart: null, layoutSize: null, section: null, item: null, recyclerKey: null };
-    obj[0] = type;
-    obj[2] = layoutStart;
-    obj[3] = layoutSize;
-    obj[4] = section;
-    obj[5] = item;
-    obj[6] = customKey;
+    obj = { type, key: -1, layoutStart, layoutSize, section, item, recyclerKey: customKey };
     pendingItems.push(obj);
   } else {
     obj = {};
@@ -141,34 +136,32 @@ prototype["fill"] = function fill(arg0) {
   const self = this;
   closure_0 = arg0;
   const item = self(12).forEach(obj, (type) => {
-    const tmp = closure_1_5(self._itemsForType(type), 2);
+    const tmp = _slicedToArray(self._itemsForType(type), 2);
     self._fill(tmp[0], tmp[1], closure_0);
   });
 };
-prototype["_fill"] = function _fill(arg0, arg1, closure_0) {
+prototype["_fill"] = function _fill(arg0, arg1, arg2) {
   let length;
+  let sum1;
   closure_0 = arg1;
-  let sum1 = 0;
-  if (!closure_0) {
-    const item = sum1(12).forEach(arg0, (arg0) => {
-      if (null == table[closure_1]) {
+  closure_1 = 0;
+  if (!arg2) {
+    const item = _modDef12.forEach(arg0, (arg0) => {
+      if (null == closure_0[closure_1]) {
         return false;
       } else {
         tmp2.key = tmp;
         closure_1 = closure_1 + 1;
       }
     });
-    const arr = sum1(12);
   }
-  if (sum1 < arg1.length) {
+  if (closure_1 < arg1.length) {
     do {
-      let tmp5 = sum1;
-      let tmp6 = FastListItemRecycler;
       let sum = FastListItemRecycler._LAST_KEY + 1;
       FastListItemRecycler._LAST_KEY = sum;
-      arg1[sum1].key = sum;
-      let tmp8 = sum1;
-      sum1 = sum1 + 1;
+      arg1[closure_1].key = sum;
+      sum1 = closure_1 + 1;
+      closure_1 = sum1;
       length = arg1.length;
     } while (sum1 < length);
   }
@@ -177,13 +170,13 @@ prototype["_fill"] = function _fill(arg0, arg1, closure_0) {
 FastListItemRecycler._LAST_KEY = 0;
 class FastListComputer {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[2] = [];
-    obj[7] = [];
-    obj[8] = [];
-    obj.props = global;
-    updatePropsResult = obj.updateProps(global);
-    return obj;
+    merged = Object.assign({ chunkSize: 0, uniform: false, dataCache: null, size: 0, dirty: true, lastStartChunk: -1, lastEndChunk: -1, items: null, persistantItemData: null, disableRecycling: false });
+    merged[2] = [];
+    merged[7] = [];
+    merged[8] = [];
+    merged.props = global;
+    updatePropsResult = merged.updateProps(global);
+    return merged;
   }
 }
 const prototype2 = FastListComputer.prototype;
@@ -191,7 +184,7 @@ prototype2["updateProps"] = function updateProps(props) {
   const self = this;
   let dirty = this.dirty;
   if (!dirty) {
-    dirty = !shallowEqualDefault(props, self.props);
+    dirty = !discord_common_shallowEqualDefault(props, self.props);
   }
   self.dirty = dirty;
   self.props = props;
@@ -312,14 +305,13 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   getRecyclerKey = undefined;
   let items;
   let obj3;
-  c6 = undefined;
+  closure_6 = undefined;
   function addInitialSection(section, layoutStart, layoutSize, layoutStart2) {
-    let arr = items;
-    arr = items.push(obj3.get(closure_1_14.SECTION, layoutStart, layoutSize, getRecyclerKey(closure_1_14.SECTION, section), section));
+    let arr = items.push(obj3.get(obj.SECTION, layoutStart, layoutSize, getRecyclerKey(obj.SECTION, section), section));
     const sum = layoutStart + layoutSize;
     if (sum < layoutStart2) {
       closure_6 = closure_6 + 1;
-      arr = arr.push(obj.get(closure_1_14.SPACER, sum, layoutStart2 - sum, undefined, 0, closure_6));
+      arr = arr.push(obj.get(obj3.SPACER, sum, layoutStart2 - sum, undefined, 0, closure_6));
     }
   }
   function isVisible(layoutStart, layoutSize) {
@@ -334,7 +326,7 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
     return tmp;
   }
   if (this.dirty) {
-    let fullComputeResult = self.fullCompute();
+    self.fullCompute();
     let flag2 = true;
   } else {
     flag2 = false;
@@ -342,7 +334,7 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
       flag2 = false;
       if (lastEndChunk === self.lastEndChunk) {
         obj = { size: null, items: null };
-        ({ size: obj[0], items: obj[1] } = self);
+        ({ size: obj.size, items: obj.items } = self);
         return obj;
       }
     }
@@ -358,18 +350,13 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
-    let tmp5 = obj;
-    let tmp6 = obj;
     item = undefined;
     ({ type, section } = nextResult);
     if (nextResult.type === obj.ITEM) {
-      let tmp8 = nextResult;
       item = tmp4.item;
     }
     let recyclerKey = getRecyclerKey(type, section, item);
     if (null != recyclerKey) {
-      let tmp11 = recyclerKey;
-      let tmp12 = nextResult;
       let result = map.set(tmp10, tmp4);
     }
     continue;
@@ -383,12 +370,11 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   section2 = -1;
   let num = -1;
   section3 = -1;
-  c6 = 0;
+  closure_6 = 0;
   const set = new Set();
   if (rounded <= bound) {
     do {
       let chunk = self.getChunk(rounded);
-      let tmp19 = rounded;
       if (null != chunk) {
         let addResult = set.add(chunk);
       }
@@ -397,167 +383,102 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   }
   for (const item10103 of set) {
     if (null != item10103) {
-      fullComputeResult = item10103;
       let data = tmp21.data;
-      fullComputeResult = data;
-      let tmp22 = data;
       for (const item10107 of data) {
         let tmp23 = item10107;
-        let tmp24 = result1;
         if (item10107.layoutStart + item10107.layoutSize >= result1) {
-          fullComputeResult = item10107;
           let type4 = tmp23.type;
-          fullComputeResult = obj;
-          fullComputeResult = obj;
+          let tmp224 = obj;
           if (obj.HEADER === type4) {
-            fullComputeResult = item10107;
             if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
-              fullComputeResult = item10107;
-              fullComputeResult = obj3;
-              fullComputeResult = items.push(obj3.get(fullComputeResult.HEADER, tmp23.layoutStart, tmp23.layoutSize, undefined));
+              arr = items.push(obj3.get(tmp224.HEADER, tmp23.layoutStart, tmp23.layoutSize, undefined));
             }
-            fullComputeResult = item10107;
             result1 = tmp23.layoutStart + tmp23.layoutSize;
-          } else if (fullComputeResult.SECTION === type4) {
-            let tmp97 = item10107;
+          } else if (tmp224.SECTION === type4) {
             if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
-              let tmp98 = section2;
               if (-1 === section2) {
-                fullComputeResult = item10107;
                 ({ section: section2, section: section3 } = tmp23);
               } else {
-                let tmp99 = item10107;
                 section3 = tmp23.section;
               }
-              fullComputeResult = item10107;
-              fullComputeResult = getRecyclerKey(fullComputeResult.SECTION, tmp23.section);
-              fullComputeResult = null != fullComputeResult;
-              if (fullComputeResult) {
-                fullComputeResult = map.has(fullComputeResult);
+              let recyclerKey1 = getRecyclerKey(tmp224.SECTION, tmp23.section);
+              let tmp104 = recyclerKey1;
+              let hasItem = null != recyclerKey1;
+              if (hasItem) {
+                hasItem = map.has(tmp104);
               }
-              if (fullComputeResult) {
-                fullComputeResult = map.delete(fullComputeResult);
+              if (hasItem) {
+                let deleteResult = map.delete(tmp104);
               }
-              fullComputeResult = item10107;
-              fullComputeResult = obj3;
-              fullComputeResult = items.push(obj3.get(fullComputeResult.SECTION, tmp23.layoutStart, tmp23.layoutSize, fullComputeResult, tmp23.section));
+              arr = items.push(obj3.get(tmp224.SECTION, tmp23.layoutStart, tmp23.layoutSize, tmp104, tmp23.section));
             }
-            fullComputeResult = item10107;
             result1 = tmp23.layoutStart + tmp23.layoutSize;
-          } else if (fullComputeResult.ITEM === type4) {
-            let tmp41 = item10107;
+          } else if (tmp224.ITEM === type4) {
             if (null == tmp23.uniform) {
-              let tmp76 = item10107;
               if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
                 if (0 === items.length) {
-                  let tmp77 = item10107;
-                  let num5 = 0;
                   let addInitialSectionResult = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, tmp23.layoutStart);
                 }
-                let tmp79 = section2;
                 if (-1 === section2) {
-                  let tmp80 = item10107;
                   section2 = tmp23.section;
                 }
-                let tmp81 = num;
                 if (-1 === num) {
-                  let tmp82 = item10107;
                   num = tmp23.item;
                 }
-                let tmp83 = item10107;
                 ({ section: section3, item } = tmp23);
-                let tmp84 = fullComputeResult;
-                let recyclerKey1 = getRecyclerKey(fullComputeResult.ITEM, tmp23.section, tmp23.item);
-                let tmp86 = recyclerKey1;
-                let hasItem = null != recyclerKey1;
-                if (hasItem) {
-                  let tmp88 = recyclerKey1;
-                  hasItem = map.has(tmp86);
+                let recyclerKey2 = getRecyclerKey(tmp224.ITEM, tmp23.section, tmp23.item);
+                let tmp86 = recyclerKey2;
+                let hasItem1 = null != recyclerKey2;
+                if (hasItem1) {
+                  hasItem1 = map.has(tmp86);
                 }
-                if (hasItem) {
-                  let tmp89 = recyclerKey1;
-                  let deleteResult = map.delete(tmp86);
+                if (hasItem1) {
+                  let deleteResult1 = map.delete(tmp86);
                 }
-                let tmp91 = fullComputeResult;
-                let tmp92 = item10107;
-                let tmp93 = recyclerKey1;
-                let tmp94 = obj3;
-                arr = items.push(obj3.get(fullComputeResult.ITEM, tmp23.layoutStart, tmp23.layoutSize, tmp86, tmp23.section, tmp23.item));
+                let arr1 = items.push(obj3.get(tmp224.ITEM, tmp23.layoutStart, tmp23.layoutSize, tmp86, tmp23.section, tmp23.item));
               }
-              let tmp96 = item10107;
               result1 = tmp23.layoutStart + tmp23.layoutSize;
             } else {
-              fullComputeResult = result1;
-              fullComputeResult = item10107;
               let num3 = 0;
               if (result1 > tmp23.layoutStart) {
                 let _Math = Math;
-                let tmp42 = result1;
-                let tmp43 = item10107;
                 num3 = Math.floor((result1 - tmp23.layoutStart) / tmp23.itemSize);
               }
               let sum2 = num3;
-              let tmp45 = item10107;
               let sum = tmp23.layoutStart + tmp23.itemSize * num3;
               result1 = sum;
               if (sum < bound * self.chunkSize) {
-                fullComputeResult = sum2;
-                fullComputeResult = item10107;
                 if (sum2 < tmp23.items) {
                   while (true) {
-                    let tmp47 = result1;
-                    let tmp48 = item10107;
                     if (isVisible(result1, tmp23.itemSize)) {
                       if (0 === items.length) {
-                        let tmp49 = item10107;
-                        let tmp50 = result1;
-                        let num4 = 0;
                         let addInitialSectionResult1 = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, result1);
                       }
-                      let tmp52 = section2;
                       if (-1 === section2) {
-                        let tmp53 = item10107;
                         section2 = tmp23.section;
                       }
-                      let tmp54 = num;
                       if (-1 === num) {
                         num = sum2;
                       }
-                      let tmp55 = item10107;
                       section3 = tmp23.section;
-                      let tmp56 = sum2;
-                      let tmp57 = obj;
                       let tmp58 = obj;
-                      let recyclerKey2 = getRecyclerKey(obj.ITEM, tmp23.section, sum2);
-                      let tmp60 = recyclerKey2;
-                      let hasItem1 = null != recyclerKey2;
-                      if (hasItem1) {
-                        let tmp62 = recyclerKey2;
-                        hasItem1 = map.has(tmp60);
+                      let recyclerKey3 = getRecyclerKey(obj.ITEM, tmp23.section, sum2);
+                      let tmp60 = recyclerKey3;
+                      let hasItem2 = null != recyclerKey3;
+                      if (hasItem2) {
+                        hasItem2 = map.has(tmp60);
                       }
-                      if (hasItem1) {
-                        let tmp63 = recyclerKey2;
-                        let deleteResult1 = map.delete(tmp60);
+                      if (hasItem2) {
+                        let deleteResult2 = map.delete(tmp60);
                       }
-                      let tmp65 = tmp57;
-                      let tmp66 = result1;
-                      let tmp67 = item10107;
-                      let tmp68 = recyclerKey2;
-                      let tmp69 = sum2;
-                      let tmp70 = obj3;
-                      arr = items.push(obj3.get(tmp58.ITEM, result1, tmp23.itemSize, tmp60, tmp23.section, sum2));
+                      let arr2 = items.push(obj3.get(tmp58.ITEM, result1, tmp23.itemSize, tmp60, tmp23.section, sum2));
                     }
-                    let tmp72 = result1;
-                    let tmp73 = item10107;
                     let sum1 = result1 + tmp23.itemSize;
                     result1 = sum1;
-                    let tmp75 = sum2;
                     sum2 = sum2 + 1;
                     if (sum1 >= bound * self.chunkSize) {
                       break;
                     } else {
-                      fullComputeResult = sum2;
-                      fullComputeResult = item10107;
                       if (sum2 < tmp23.items) {
                         continue;
                       } else {
@@ -569,38 +490,21 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
                 }
               }
             }
-          } else if (fullComputeResult.SECTION_FOOTER === type4) {
-            let tmp31 = item10107;
+          } else if (tmp224.SECTION_FOOTER === type4) {
             if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
               if (0 === items.length) {
-                let tmp32 = item10107;
-                let num2 = 0;
                 let addInitialSectionResult2 = addInitialSection(tmp23.section, tmp23.sectionData.layoutStart, tmp23.sectionData.layoutSize, tmp23.layoutStart);
               }
-              let tmp34 = fullComputeResult;
-              let SECTION_FOOTER = fullComputeResult.SECTION_FOOTER;
-              let tmp35 = item10107;
+              let SECTION_FOOTER = tmp224.SECTION_FOOTER;
               let layoutStart = tmp23.layoutStart;
-              let tmp36 = obj3;
-              let tmp37 = SECTION_FOOTER;
-              let tmp38 = layoutStart;
-              let arr1 = items.push(obj3.get(SECTION_FOOTER, layoutStart, tmp23.layoutSize, getRecyclerKey(fullComputeResult.SECTION_FOOTER, tmp23.section), tmp23.section));
+              let arr3 = items.push(obj3.get(SECTION_FOOTER, layoutStart, tmp23.layoutSize, getRecyclerKey(tmp224.SECTION_FOOTER, tmp23.section), tmp23.section));
             }
-            let tmp40 = item10107;
             result1 = tmp23.layoutStart + tmp23.layoutSize;
-          } else {
-            let tmp25 = fullComputeResult;
-            if (fullComputeResult.FOOTER === type4) {
-              fullComputeResult = item10107;
-              if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
-                let tmp26 = fullComputeResult;
-                let tmp27 = item10107;
-                let tmp28 = obj3;
-                let arr2 = items.push(obj3.get(fullComputeResult.FOOTER, tmp23.layoutStart, tmp23.layoutSize, undefined));
-              }
-              let tmp30 = item10107;
-              result1 = tmp23.layoutStart + tmp23.layoutSize;
+          } else if (tmp224.FOOTER === type4) {
+            if (isVisible(tmp23.layoutStart, tmp23.layoutSize)) {
+              let arr4 = items.push(obj3.get(tmp224.FOOTER, tmp23.layoutStart, tmp23.layoutSize, undefined));
             }
+            result1 = tmp23.layoutStart + tmp23.layoutSize;
           }
         }
         continue;
@@ -612,107 +516,72 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
   const items2 = [];
   let num6 = 0;
   let num7 = 0;
-  fullComputeResult = map[Symbol.iterator]();
-  while (fullComputeResult !== undefined) {
-    fullComputeResult = obj3;
-    fullComputeResult = obj3(fullComputeResult, 2);
-    [tmp, tmp] = fullComputeResult;
-    fullComputeResult = section2;
-    if (fullComputeResult.section < section2) {
-      fullComputeResult = num6;
-      num6 = num6 + fullComputeResult.layoutSize;
-      let items3 = [fullComputeResult, fullComputeResult];
-      fullComputeResult = items1.push(items3);
-    } else {
-      fullComputeResult = section3;
-      if (fullComputeResult.section > section3) {
-        fullComputeResult = num7;
-        num7 = num7 + fullComputeResult.layoutSize;
-        let items4 = [fullComputeResult, fullComputeResult];
-        fullComputeResult = items2.push(items4);
-      } else {
-        fullComputeResult = obj;
-        fullComputeResult = obj;
-        if (fullComputeResult.type === obj.ITEM) {
-          fullComputeResult = section2;
-          if (fullComputeResult.section === section2) {
-            fullComputeResult = num;
-            if (fullComputeResult.item < num) {
-              fullComputeResult = num6;
-              num6 = num6 + fullComputeResult.layoutSize;
-              let items5 = [fullComputeResult, fullComputeResult];
-              fullComputeResult = items1.push(items5);
-            }
-          }
-          fullComputeResult = num7;
-          num7 = num7 + fullComputeResult.layoutSize;
-          let items6 = [fullComputeResult, fullComputeResult];
-          fullComputeResult = items2.push(items6);
+  while (tmp121 !== undefined) {
+    let tmp124 = obj3(tmp122, 2);
+    [tmp125, tmp126] = tmp124;
+    let tmp127 = tmp126;
+    if (tmp126.section < section2) {
+      num6 = num6 + tmp127.layoutSize;
+      let items3 = [tmp125, tmp127];
+      let arr5 = items1.push(items3);
+    } else if (tmp127.section > section3) {
+      num7 = num7 + tmp127.layoutSize;
+      let items4 = [tmp125, tmp127];
+      let arr6 = items2.push(items4);
+    } else if (tmp127.type === obj.ITEM) {
+      if (tmp127.section === section2) {
+        if (tmp127.item < num) {
+          num6 = num6 + tmp127.layoutSize;
+          let items5 = [tmp125, tmp127];
+          let arr7 = items1.push(items5);
         }
       }
+      num7 = num7 + tmp127.layoutSize;
+      let items6 = [tmp125, tmp127];
+      let arr8 = items2.push(items6);
     }
     continue;
   }
-  fullComputeResult = items[0];
-  if (null != fullComputeResult) {
-    if (fullComputeResult.layoutStart > 0) {
+  const first = items[0];
+  if (null != first) {
+    if (first.layoutStart > 0) {
       const headerDataCache = self.headerDataCache;
-      const layoutStart5 = fullComputeResult.layoutStart;
-      fullComputeResult = stickyHeaderFooter;
+      const layoutStart5 = first.layoutStart;
+      let tmp148 = stickyHeaderFooter;
       if (stickyHeaderFooter) {
-        fullComputeResult = null != headerDataCache;
+        tmp148 = null != headerDataCache;
       }
-      if (fullComputeResult) {
-        fullComputeResult = "HEADER" !== fullComputeResult.type;
+      if (tmp148) {
+        tmp148 = "HEADER" !== first.type;
       }
       let layoutStart2 = layoutStart5;
-      if (fullComputeResult) {
+      if (tmp148) {
         if (layoutStart5 - headerDataCache.layoutStart - headerDataCache.layoutSize > 0) {
-          fullComputeResult = obj;
-          fullComputeResult = obj;
-          fullComputeResult = obj3;
-          fullComputeResult = items.unshift(obj3.get(obj.SPACER, headerDataCache.layoutStart + headerDataCache.layoutSize, layoutStart5 - headerDataCache.layoutStart - headerDataCache.layoutSize, undefined, 0, 0));
+          items.unshift(obj3.get(obj.SPACER, headerDataCache.layoutStart + headerDataCache.layoutSize, layoutStart5 - headerDataCache.layoutStart - headerDataCache.layoutSize, undefined, 0, 0));
         }
-        fullComputeResult = obj;
-        fullComputeResult = obj;
-        fullComputeResult = obj3;
-        fullComputeResult = items.unshift(obj3.get(obj.HEADER, headerDataCache.layoutStart, headerDataCache.layoutSize, undefined));
+        items.unshift(obj3.get(obj.HEADER, headerDataCache.layoutStart, headerDataCache.layoutSize, undefined));
         layoutStart2 = headerDataCache.layoutStart;
       }
       const _Math2 = Math;
-      fullComputeResult = Math.max(layoutStart2 - num6, 0);
-      fullComputeResult = items1;
-      fullComputeResult = items1;
+      const bound1 = Math.max(layoutStart2 - num6, 0);
       for (const item10429 of items1) {
-        fullComputeResult = obj3;
-        fullComputeResult = obj3(item10429, 2);
-        [tmp, tmp] = fullComputeResult;
-        ({ type: type2, layoutStart: layoutStart3, layoutSize, section: section4 } = fullComputeResult);
-        fullComputeResult = obj;
-        fullComputeResult = obj;
-        fullComputeResult = undefined;
-        if (fullComputeResult.type === obj.ITEM) {
-          fullComputeResult = fullComputeResult.item;
+        let tmp161 = obj3(item10429, 2);
+        [tmp162, tmp163] = tmp161;
+        ({ type: type2, layoutStart: layoutStart3, layoutSize, section: section4 } = tmp163);
+        let item1;
+        if (tmp163.type === obj.ITEM) {
+          item1 = tmp164.item;
         }
-        fullComputeResult = obj3;
-        fullComputeResult = type2;
-        fullComputeResult = layoutStart3;
-        fullComputeResult = layoutSize;
-        fullComputeResult = section4;
-        fullComputeResult = items.unshift(obj3.get(type2, layoutStart3, layoutSize, fullComputeResult, section4, fullComputeResult));
+        let arr11 = items.unshift(obj3.get(type2, layoutStart3, layoutSize, tmp162, section4, item1));
         continue;
       }
-      if (fullComputeResult > 0) {
-        fullComputeResult = obj;
-        fullComputeResult = obj;
-        fullComputeResult = obj3;
-        fullComputeResult = items.unshift(obj3.get(obj.SPACER, 0, fullComputeResult, undefined, 0, 1));
+      if (bound1 > 0) {
+        items.unshift(obj3.get(obj.SPACER, 0, bound1, undefined, 0, 1));
       }
     }
   }
-  fullComputeResult = items[items.length - 1];
-  if (null != fullComputeResult) {
-    let size = fullComputeResult.layoutStart + fullComputeResult.layoutSize;
+  if (null != items[items.length - 1]) {
+    let size = tmp182.layoutStart + tmp182.layoutSize;
   } else {
     size = self.size;
   }
@@ -722,64 +591,43 @@ prototype2["compute"] = function compute(lastStartChunk, lastEndChunk, arr) {
       stickyHeaderFooter = null != footerDataCache;
     }
     if (stickyHeaderFooter) {
-      stickyHeaderFooter = "FOOTER" !== fullComputeResult.type;
+      stickyHeaderFooter = "FOOTER" !== tmp182.type;
     }
-    fullComputeResult = size;
+    let sum3 = size;
     if (stickyHeaderFooter) {
       if (size < footerDataCache.layoutStart) {
-        fullComputeResult = obj;
-        fullComputeResult = obj;
-        fullComputeResult = obj3;
-        fullComputeResult = size;
-        fullComputeResult = items.push(obj3.get(obj.SPACER, size, footerDataCache.layoutStart + footerDataCache.layoutSize - size, undefined, 1, 0));
+        items.push(obj3.get(obj.SPACER, size, footerDataCache.layoutStart + footerDataCache.layoutSize - size, undefined, 1, 0));
       }
-      fullComputeResult = obj;
-      fullComputeResult = obj;
-      fullComputeResult = obj3;
-      fullComputeResult = items.push(obj3.get(obj.FOOTER, footerDataCache.layoutStart, footerDataCache.layoutSize, undefined));
-      fullComputeResult = footerDataCache.layoutStart + footerDataCache.layoutSize;
+      items.push(obj3.get(obj.FOOTER, footerDataCache.layoutStart, footerDataCache.layoutSize, undefined));
+      sum3 = footerDataCache.layoutStart + footerDataCache.layoutSize;
     }
-    fullComputeResult = fullComputeResult + num7;
-    if (fullComputeResult < self.size) {
-      fullComputeResult = obj;
-      fullComputeResult = obj;
-      fullComputeResult = obj3;
-      fullComputeResult = items.push(obj3.get(obj.SPACER, fullComputeResult, self.size - fullComputeResult, undefined, 1, 1));
+    const sum4 = sum3 + num7;
+    if (sum4 < self.size) {
+      items.push(obj3.get(obj.SPACER, sum4, self.size - sum4, undefined, 1, 1));
     }
-    fullComputeResult = items2;
-    fullComputeResult = items2;
     for (const item10531 of items2) {
-      fullComputeResult = obj3;
-      fullComputeResult = obj3(item10531, 2);
-      [tmp, tmp] = fullComputeResult;
-      ({ type: type3, layoutStart: layoutStart4, layoutSize: layoutSize2, section: section5 } = fullComputeResult);
-      fullComputeResult = obj;
-      fullComputeResult = obj;
-      fullComputeResult = undefined;
-      if (fullComputeResult.type === obj.ITEM) {
-        fullComputeResult = fullComputeResult.item;
+      let tmp202 = obj3(item10531, 2);
+      [tmp203, tmp204] = tmp202;
+      ({ type: type3, layoutStart: layoutStart4, layoutSize: layoutSize2, section: section5 } = tmp204);
+      let item2;
+      if (tmp204.type === obj.ITEM) {
+        item2 = tmp205.item;
       }
-      fullComputeResult = obj3;
-      fullComputeResult = type3;
-      fullComputeResult = layoutStart4;
-      fullComputeResult = layoutSize2;
-      fullComputeResult = section5;
-      fullComputeResult = items.push(obj3.get(type3, layoutStart4, layoutSize2, fullComputeResult, section5, fullComputeResult));
+      let arr16 = items.push(obj3.get(type3, layoutStart4, layoutSize2, tmp203, section5, item2));
       continue;
     }
   }
   let disableRecycling = self.disableRecycling;
   if (!disableRecycling) {
-    fullComputeResult = self.props.disableRecyclingOnFullCompute && flag2;
-    disableRecycling = fullComputeResult;
+    disableRecycling = self.props.disableRecyclingOnFullCompute && flag2;
+    const tmp218 = self.props.disableRecyclingOnFullCompute && flag2;
   }
-  fullComputeResult = obj3.fill(disableRecycling);
+  obj3.fill(disableRecycling);
   obj = { size: self.size, items };
   return obj;
 };
 prototype2["fullCompute"] = function fullCompute() {
-  let self = this;
-  self = this;
+  const self = this;
   const props = this.props;
   ({ sections, insetStart } = props);
   let num = 0;
@@ -801,23 +649,20 @@ prototype2["fullCompute"] = function fullCompute() {
   self.dataCache = items;
   self.chunkCache = undefined;
   const chunkSize = self.chunkSize;
-  closure_0 = num;
+  _require = num;
   self.headerDataCache = undefined;
   self.footerDataCache = undefined;
-  function pushData(closure_0, arg1, type) {
-    closure_0 = closure_0 + (arg1 - closure_0);
-    const bound = Math.max(Math.floor(closure_0 / chunkSize), 0);
+  function pushData(arg0, arg1, type) {
+    closure_0 = closure_0 + (arg1 - arg0);
+    const bound = Math.max(Math.floor(arg0 / chunkSize), 0);
     const bound1 = Math.max(Math.floor(arg1 / chunkSize) - 1, bound);
     let chunk = self.getChunk(bound);
     if (null == chunk) {
-      obj = { start: null, end: null, data: null };
-      obj[0] = bound;
-      obj[1] = bound1;
-      obj[2] = [];
+      obj = { start: bound, end: bound1, data: [] };
       items.push(obj);
       chunk = obj;
     }
-    if (type.type === closure_1_14.HEADER) {
+    if (type.type === obj.HEADER) {
       tmp3.headerDataCache = type;
     } else if (type.type === tmp7.FOOTER) {
       tmp3.footerDataCache = type;
@@ -828,46 +673,37 @@ prototype2["fullCompute"] = function fullCompute() {
   }
   const sizeForHeader = self.getSizeForHeader();
   if (sizeForHeader > 0) {
-    obj = { type: null, layoutStart: null, layoutSize: null };
-    obj[0] = obj.HEADER;
-    obj[1] = closure_0;
-    obj[2] = sizeForHeader;
-    pushData(closure_0, closure_0 + sizeForHeader, obj);
+    let sectionData = { type: null, layoutStart: null, layoutSize: null };
+    sectionData.type = sectionData.HEADER;
+    sectionData.layoutStart = _require;
+    sectionData.layoutSize = sizeForHeader;
+    pushData(_require, _require + sizeForHeader, sectionData);
   }
   for (let num3 = 0; num3 < sections.length; num3 = num3 + 1) {
     let tmp5 = sections[num3];
-    let tmp6 = num3;
     if (0 !== tmp5) {
-      let tmp32 = closure_0;
+      let tmp32 = _require;
       let sizeForSection = self.getSizeForSection(num3);
-      obj = { type: null, layoutStart: null, layoutSize: null, section: null };
-      let tmp34 = obj;
-      obj[0] = obj.SECTION;
-      obj[1] = closure_0;
-      obj[2] = sizeForSection;
-      obj[3] = num3;
+      sectionData = { type: null, layoutStart: null, layoutSize: null, section: null };
+      let tmp34 = sectionData;
+      sectionData.type = sectionData.SECTION;
+      sectionData.layoutStart = _require;
+      sectionData.layoutSize = sizeForSection;
+      sectionData.section = num3;
       if (set.size > 0) {
         let recyclerKey = getRecyclerKey(tmp34.SECTION, num3);
         let tmp8 = null != recyclerKey && set.has(recyclerKey);
         if (tmp8) {
           let persistantItemData = self.persistantItemData;
-          let arr = persistantItemData.push(obj);
+          let arr = persistantItemData.push(sectionData);
           let deleteResult = set.delete(recyclerKey);
         }
       }
-      let pushDataResult1 = pushData(tmp32, tmp32 + sizeForSection, obj);
+      let pushDataResult1 = pushData(tmp32, tmp32 + sizeForSection, sectionData);
       if (self.uniform) {
         let sizeForItem = self.getSizeForItem(num3, 0);
-        let tmp23 = closure_0;
-        obj1 = { type: null, uniform: true, layoutStart: null, itemSize: null, layoutSize: null, section: null, items: null, sectionData: null };
-        obj1[0] = tmp34.ITEM;
-        obj1[2] = closure_0;
-        obj1[3] = sizeForItem;
-        obj1[4] = sizeForItem * tmp5;
-        obj1[5] = num3;
-        obj1[6] = tmp5;
-        obj1[7] = obj;
-        let pushDataResult2 = pushData(closure_0, closure_0 + sizeForItem * tmp5, obj1);
+        let obj1 = { type: tmp34.ITEM, uniform: true, layoutStart: _require, itemSize: sizeForItem, layoutSize: sizeForItem * tmp5, section: num3, items: tmp5, sectionData };
+        let pushDataResult2 = pushData(_require, _require + sizeForItem * tmp5, obj1);
         let tmp12 = tmp34;
       } else {
         let num4 = 0;
@@ -875,17 +711,15 @@ prototype2["fullCompute"] = function fullCompute() {
         if (0 < tmp5) {
           do {
             let sizeForItem1 = self.getSizeForItem(num3, num4);
-            let tmp14 = closure_0;
             let obj2 = { type: null, layoutStart: null, layoutSize: null, section: null, item: null, sectionData: null };
-            let tmp15 = obj;
-            obj2[0] = obj.ITEM;
-            obj2[1] = closure_0;
-            obj2[2] = sizeForItem1;
-            obj2[3] = num3;
-            obj2[4] = num4;
-            obj2[5] = obj;
-            let pushDataResult3 = pushData(closure_0, closure_0 + sizeForItem1, obj2);
-            let tmp17 = num4;
+            let tmp15 = sectionData;
+            obj2.type = sectionData.ITEM;
+            obj2.layoutStart = _require;
+            obj2.layoutSize = sizeForItem1;
+            obj2.section = num3;
+            obj2.item = num4;
+            obj2.sectionData = sectionData;
+            let pushDataResult3 = pushData(_require, _require + sizeForItem1, obj2);
             if (set.size > 0) {
               let recyclerKey1 = getRecyclerKey(tmp15.ITEM, num3, num4);
               let tmp19 = null != recyclerKey1 && set.has(recyclerKey1);
@@ -902,27 +736,18 @@ prototype2["fullCompute"] = function fullCompute() {
       }
       let sizeForSectionFooter = self.getSizeForSectionFooter(num3);
       if (sizeForSectionFooter > 0) {
-        let tmp26 = closure_0;
-        let obj3 = { type: null, layoutStart: null, layoutSize: null, section: null, sectionData: null };
-        obj3[0] = tmp12.SECTION_FOOTER;
-        obj3[1] = closure_0;
-        obj3[2] = sizeForSectionFooter;
-        obj3[3] = num3;
-        obj3[4] = obj;
-        let pushDataResult4 = pushData(closure_0, closure_0 + sizeForSectionFooter, obj3);
+        let obj3 = { type: tmp12.SECTION_FOOTER, layoutStart: _require, layoutSize: sizeForSectionFooter, section: num3, sectionData };
+        let pushDataResult4 = pushData(_require, _require + sizeForSectionFooter, obj3);
       }
     }
   }
   const sizeForFooter = self.getSizeForFooter();
   if (sizeForFooter > 0) {
-    const obj4 = { type: null, layoutStart: null, layoutSize: null };
-    obj4[0] = obj.FOOTER;
-    obj4[1] = closure_0;
-    obj4[2] = sizeForFooter;
-    pushData(closure_0, closure_0 + sizeForFooter, obj4);
+    const obj4 = { type: sectionData.FOOTER, layoutStart: _require, layoutSize: sizeForFooter };
+    pushData(_require, _require + sizeForFooter, obj4);
   }
-  closure_0 = closure_0 + num2;
-  self.size = closure_7.roundToNearestPixel(closure_0);
+  _require = _require + num2;
+  self.size = closure_7.roundToNearestPixel(_require);
   self.dirty = false;
 };
 prototype2["getChunkDataFromSectionItem"] = function getChunkDataFromSectionItem(arg0, arg1) {
@@ -935,43 +760,27 @@ prototype2["getChunkDataFromSectionItem"] = function getChunkDataFromSectionItem
   while (iter !== undefined) {
     let tmp3 = nextResult;
     let data = nextResult.data;
-    let tmp4 = data;
-    let tmp5 = data;
     for (const item10022 of data) {
       let tmp6 = item10022;
       let type = item10022.type;
       if (obj.ITEM === type) {
         if (null != arg1) {
-          let tmp27 = item10022;
           if (true === tmp6.uniform) {
-            let tmp13 = item10022;
             if (tmp6.section === arg0) {
-              let tmp20 = item10022;
               if (arg1 > tmp6.items) {
-                let tmp24 = obj;
                 obj.return();
-                let tmp25 = iter;
                 iter.return();
               } else {
-                let tmp21 = nextResult;
-                let tmp22 = obj;
                 obj.return();
-                let tmp23 = iter;
                 iter.return();
                 return tmp3;
               }
             }
           }
-          let tmp14 = item10022;
           if (null == tmp6.uniform) {
-            let tmp15 = item10022;
             if (tmp6.section === arg0) {
-              let tmp16 = item10022;
               if (tmp6.item === arg1) {
-                let tmp17 = nextResult;
-                let tmp18 = obj;
                 obj.return();
-                let tmp19 = iter;
                 iter.return();
                 return tmp3;
               }
@@ -980,19 +789,13 @@ prototype2["getChunkDataFromSectionItem"] = function getChunkDataFromSectionItem
         }
       } else {
         if (tmp7.SECTION === type) {
-          let tmp26 = item10022;
           if (tmp6.section > arg0) {
-            let tmp11 = obj;
             obj.return();
-            let tmp12 = iter;
             iter.return();
           } else if (null != arg1) {
             continue;
           } else {
-            let tmp8 = nextResult;
-            let tmp9 = obj;
             obj.return();
-            let tmp10 = iter;
             iter.return();
             return tmp3;
           }
@@ -1016,52 +819,38 @@ prototype2["getChunkIndexFromSectionItem"] = function getChunkIndexFromSectionIt
     let tmp2 = nextResult;
     let type = nextResult.type;
     if (obj.ITEM === type) {
-      let tmp8 = nextResult;
       if (tmp2.section !== targetSection) {
         continue;
       } else {
         if (null == targetItem) {
           continue;
-        } else {
-          let tmp15 = nextResult;
-          let tmp16 = nextResult;
-          if (tmp2.uniform) {
-            if (targetItem >= tmp2.items) {
-              let tmp12 = iter;
-              iter.return();
-            } else {
-              let tmp20 = nextResult;
-              let sum = tmp2.layoutStart + tmp2.sectionData.layoutSize + tmp2.itemSize * targetItem;
-              obj = { startIndex: null, endIndex: null };
-              let tmp22 = globalThis;
-              let _Math5 = Math;
-              obj[0] = Math.floor(sum / self.chunkSize);
-              let _Math6 = Math;
-              obj[1] = Math.floor((sum + tmp2.itemSize + padBottom) / self.chunkSize);
-              let tmp11 = iter;
-              iter.return();
-              return obj;
-            }
-          } else if (tmp2.item >= targetItem) {
-            let tmp10 = iter;
+        } else if (tmp2.uniform) {
+          if (targetItem >= tmp2.items) {
             iter.return();
           } else {
-            let tmp17 = nextResult;
-            if (tmp2.item !== targetItem) {
-              continue;
-            } else {
-              obj = { startIndex: null, endIndex: null };
-              let tmp18 = globalThis;
-              let _Math3 = Math;
-              let tmp19 = nextResult;
-              obj[0] = Math.floor((tmp2.layoutStart - tmp2.sectionData.layoutSize) / self.chunkSize);
-              let _Math4 = Math;
-              obj[1] = Math.floor((tmp2.layoutStart + tmp2.layoutSize + padBottom) / self.chunkSize);
-              let tmp9 = iter;
-              iter.return();
-              return obj;
-            }
+            let sum = tmp2.layoutStart + tmp2.sectionData.layoutSize + tmp2.itemSize * targetItem;
+            obj = { startIndex: null, endIndex: null };
+            let tmp22 = globalThis;
+            let _Math5 = Math;
+            obj.startIndex = Math.floor(sum / self.chunkSize);
+            let _Math6 = Math;
+            obj.endIndex = Math.floor((sum + tmp2.itemSize + padBottom) / self.chunkSize);
+            iter.return();
+            return obj;
           }
+        } else if (tmp2.item >= targetItem) {
+          iter.return();
+        } else if (tmp2.item !== targetItem) {
+          continue;
+        } else {
+          obj = { startIndex: null, endIndex: null };
+          let tmp18 = globalThis;
+          let _Math3 = Math;
+          obj.startIndex = Math.floor((tmp2.layoutStart - tmp2.sectionData.layoutSize) / self.chunkSize);
+          let _Math4 = Math;
+          obj.endIndex = Math.floor((tmp2.layoutStart + tmp2.layoutSize + padBottom) / self.chunkSize);
+          iter.return();
+          return obj;
         }
         continue;
       }
@@ -1071,26 +860,17 @@ prototype2["getChunkIndexFromSectionItem"] = function getChunkIndexFromSectionIt
         continue;
       } else if (null != targetItem) {
         continue;
-      } else {
-        let tmp13 = nextResult;
-        if (targetSection < tmp2.section) {
-          let tmp7 = iter;
-          iter.return();
-        } else {
-          let tmp14 = nextResult;
-          if (targetSection === tmp2.section) {
-            obj = { startIndex: null, endIndex: null };
-            let tmp4 = globalThis;
-            let _Math = Math;
-            let tmp5 = nextResult;
-            obj[0] = Math.floor(tmp2.layoutStart / self.chunkSize);
-            let _Math2 = Math;
-            obj[1] = Math.floor((tmp2.layoutStart + tmp2.layoutSize + padBottom) / self.chunkSize);
-            let tmp6 = iter;
-            iter.return();
-            return obj;
-          }
-        }
+      } else if (targetSection < tmp2.section) {
+        iter.return();
+      } else if (targetSection === tmp2.section) {
+        obj = { startIndex: null, endIndex: null };
+        let tmp4 = globalThis;
+        let _Math = Math;
+        obj.startIndex = Math.floor(tmp2.layoutStart / self.chunkSize);
+        let _Math2 = Math;
+        obj.endIndex = Math.floor((tmp2.layoutStart + tmp2.layoutSize + padBottom) / self.chunkSize);
+        iter.return();
+        return obj;
       }
       continue;
     }
@@ -1110,60 +890,42 @@ prototype2["computeScrollPosition"] = function computeScrollPosition(arg0, arg1,
       const iter = dataCache[Symbol.iterator]();
       while (iter !== undefined) {
         let data = iter.next().data;
-        let tmp5 = data;
-        let tmp6 = data;
         for (const item10020 of data) {
           let tmp7 = item10020;
           let type = item10020.type;
           if (obj.ITEM === type) {
             if (null != arg2) {
-              let tmp29 = item10020;
               if (true === tmp7.uniform) {
-                let tmp15 = item10020;
                 if (tmp7.section === arg1) {
-                  let tmp20 = item10020;
                   if (arg2 > tmp7.items) {
-                    let tmp25 = obj;
                     obj.return();
-                    let tmp26 = iter;
                     iter.return();
                   } else {
                     obj = { scrollPosition: null, size: null, sectionOffset: null };
-                    let tmp21 = item10020;
-                    obj[0] = tmp7.sectionData.layoutStart + tmp7.sectionData.layoutSize + tmp7.itemSize * arg2;
-                    obj[1] = tmp7.itemSize;
+                    obj.scrollPosition = tmp7.sectionData.layoutStart + tmp7.sectionData.layoutSize + tmp7.itemSize * arg2;
+                    obj.size = tmp7.itemSize;
                     let num4 = 0;
                     if (arg0) {
-                      let tmp22 = item10020;
                       num4 = tmp7.sectionData.layoutSize;
                     }
-                    obj[2] = num4;
-                    let tmp23 = obj;
+                    obj.sectionOffset = num4;
                     obj.return();
-                    let tmp24 = iter;
                     iter.return();
                     return obj;
                   }
                 }
               }
-              let tmp16 = item10020;
               if (null == tmp7.uniform) {
-                let tmp30 = item10020;
                 if (tmp7.section === arg1) {
-                  let tmp31 = item10020;
                   if (tmp7.item === arg2) {
                     obj = { scrollPosition: null, size: null, sectionOffset: null };
-                    let tmp32 = item10020;
-                    ({ layoutStart: obj4[0], layoutSize: obj4[1] } = tmp7);
+                    ({ layoutStart: obj4.scrollPosition, layoutSize: obj4.size } = tmp7);
                     let num3 = 0;
                     if (arg0) {
-                      let tmp17 = item10020;
                       num3 = tmp7.sectionData.layoutSize;
                     }
-                    obj[2] = num3;
-                    let tmp18 = obj;
+                    obj.sectionOffset = num3;
                     obj.return();
-                    let tmp19 = iter;
                     iter.return();
                     return obj;
                   }
@@ -1172,22 +934,15 @@ prototype2["computeScrollPosition"] = function computeScrollPosition(arg0, arg1,
             }
           } else {
             if (tmp8.SECTION === type) {
-              let tmp28 = item10020;
               if (tmp7.section > arg1) {
-                let tmp13 = obj;
                 obj.return();
-                let tmp14 = iter;
                 iter.return();
               } else {
                 if (null == arg2) {
-                  let tmp9 = item10020;
                   if (tmp7.section === arg1) {
-                    obj1 = { scrollPosition: null, size: null, sectionOffset: 0 };
-                    let tmp10 = item10020;
-                    ({ layoutStart: obj2[0], layoutSize: obj2[1] } = tmp7);
-                    let tmp11 = obj;
+                    let obj1 = { scrollPosition: null, size: null, sectionOffset: 0 };
+                    ({ layoutStart: obj2.scrollPosition, layoutSize: obj2.size } = tmp7);
                     obj.return();
-                    let tmp12 = iter;
                     iter.return();
                     return obj1;
                   }
@@ -1219,38 +974,26 @@ prototype2["getSectionItemFromPosition"] = function getSectionItemFromPosition(a
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
-    let tmp5 = num;
     let sum = nextResult.layoutStart + num;
     let layoutSize = obj.get(nextResult.recyclerKey);
     let tmp7 = layoutSize;
     if (layoutSize == null) {
-      let tmp8 = nextResult;
       layoutSize = tmp4.layoutSize;
     }
     if (layoutSize > 0) {
-      let tmp10 = sum;
       if (arg0 >= sum) {
-        let tmp11 = sum;
-        let tmp12 = layoutSize;
         if (arg0 <= sum + tmp9) {
           num2 = (arg0 - sum) / layoutSize;
           let tmp = nextResult;
-          let tmp17 = iter;
           iter.return();
           break;
         }
-        obj = { item: null, positionPercentage: null };
-        obj[0] = tmp;
-        obj[1] = num2;
+        obj = { item: tmp, positionPercentage: num2 };
         return obj;
       }
     }
-    let tmp13 = num;
-    let tmp14 = tmp7;
     let num3 = 0;
     if (null != tmp7) {
-      let tmp15 = tmp7;
-      let tmp16 = nextResult;
       num3 = tmp7 - tmp4.layoutSize;
     }
     num = num + num3;
@@ -1270,8 +1013,8 @@ prototype2["getSize"] = function getSize() {
 prototype2["isDirty"] = function isDirty() {
   return this.dirty;
 };
-let closure_19 = { code: "function FastListTsx1(){const{scrollPosValue,interpolate,inputRange,outputRange,horizontal}=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};}" };
-let closure_20 = importAllResult.memo(function FastListStickySectionRendererComponent(children) {
+const __initData = { code: "function FastListTsx1(){const{scrollPosValue,interpolate,inputRange,outputRange,horizontal}=this.__closure;const interpolatedValue=scrollPosValue!=null?interpolate(scrollPosValue.get(),inputRange,outputRange):null;return{transform:interpolatedValue!=null?[horizontal?{translateX:interpolatedValue}:{translateY:interpolatedValue}]:undefined};}" };
+let closure_20 = noop.memo(function FastListStickySectionRendererComponent(children) {
   ({ layoutStart, layoutSize, horizontal } = children);
   ({ nextSectionLayoutPosition, scrollPosValue } = children);
   ({ fastListInstance, section, debug, recyclerKey } = children);
@@ -1284,9 +1027,9 @@ let closure_20 = importAllResult.memo(function FastListStickySectionRendererComp
   }
   const diff = nextSectionLayoutPosition - layoutSize;
   if (diff >= layoutStart) {
-    obj = horizontal(items[9]);
+    let __closure = horizontal(items[9]);
     let num2 = 0;
-    if (obj.isAndroid()) {
+    if (__closure.isAndroid()) {
       num2 = -1;
     }
     items.push(diff, diff + 1);
@@ -1295,32 +1038,32 @@ let closure_20 = importAllResult.memo(function FastListStickySectionRendererComp
     items.push(layoutStart + 1);
     items1.push(1);
   }
-  obj1 = horizontal(items[10]);
+  let obj1 = horizontal(items[10]);
   class I {
     constructor() {
       obj = scrollPosValue;
       interpolateResult = null;
       if (null != scrollPosValue) {
-        tmp2 = horizontal;
+        tmp2 = closure_0;
         tmp3 = closure_2;
-        obj2 = horizontal(closure_2[10]);
+        obj2 = closure_0(closure_2[10]);
         tmp4 = closure_2;
         tmp5 = closure_3;
         interpolateResult = obj2.interpolate(obj.get(), closure_2, closure_3);
       }
       if (null == interpolateResult) {
         obj = { transform: null };
-        obj[0] = undefined;
+        obj.transform = undefined;
         return obj;
       } else {
         tmp6 = horizontal;
         if (horizontal) {
           obj1 = { translateX: null };
-          obj1[0] = interpolateResult;
+          obj1.translateX = interpolateResult;
           obj2 = obj1;
         } else {
           obj2 = { translateY: null };
-          obj2[0] = interpolateResult;
+          obj2.translateY = interpolateResult;
         }
         items = [];
         items[0] = obj2;
@@ -1329,11 +1072,11 @@ let closure_20 = importAllResult.memo(function FastListStickySectionRendererComp
       return;
     }
   }
-  obj = { scrollPosValue, interpolate: horizontal(items[10]).interpolate, inputRange: items, outputRange: items1, horizontal };
-  I.__closure = obj;
+  __closure = { scrollPosValue, interpolate: horizontal(items[10]).interpolate, inputRange: items, outputRange: items1, horizontal };
+  I.__closure = __closure;
   I.__workletHash = 699810682881;
-  I.__initData = closure_19;
-  const Children = importAllResult.Children;
+  I.__initData = __initData;
+  const Children = noop.Children;
   const animatedStyle = obj1.useAnimatedStyle(I);
   const onlyResult = Children.only(children.children(section, fastListInstance, scrollPosValue, layoutStart));
   let style;
@@ -1347,70 +1090,63 @@ let closure_20 = importAllResult.memo(function FastListStickySectionRendererComp
   if (!horizontal) {
     tmp15 = layoutSize;
   }
-  obj = { zIndex: 10, position: "relative", height: tmp15, width: null };
+  const size = { zIndex: 10, position: "relative", height: tmp15, width: null };
   let tmp16;
   if (horizontal) {
     tmp16 = layoutSize;
   }
-  obj1 = { style: items2, collapsable: false, children: null };
-  obj[3] = tmp16;
-  items2[1] = obj;
+  __closure = { style: items2, collapsable: false, children: null };
+  size.width = tmp16;
+  items2[1] = size;
   items2[2] = animatedStyle;
   let cloneElementResult;
   if (null != onlyResult) {
-    const obj2 = { style: null };
-    obj2[0] = { flex: 1 };
-    cloneElementResult = importAllResult.cloneElement(onlyResult, obj2);
+    obj1 = { style: { flex: 1 } };
+    cloneElementResult = noop.cloneElement(onlyResult, obj1);
   }
   const items3 = [cloneElementResult, false];
-  obj1[2] = items3;
-  return closure_10(scrollPosValue(items[11]), obj1);
+  __closure.children = items3;
+  return closure_10(scrollPosValue(items[11]), __closure);
 });
-let closure_21 = importAllResult.memo(function _FastListSectionRenderer(disableWrapper) {
+let closure_21 = noop.memo(function _FastListSectionRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, section, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
-      obj = { children: null };
-      obj[0] = children(section, fastListInstance);
-      return callback3(closure_12, obj);
+      let style = { children: children(section, fastListInstance) };
+      return closure_1_11(closure_1_12, style);
     }
   }
   if (horizontal) {
-    obj = { width: null };
-    obj[0] = layoutSize;
+    style = { width: layoutSize };
   } else {
-    obj = { height: null };
-    obj[0] = layoutSize;
+    style = { height: layoutSize };
   }
-  obj1 = { collapsable: false, style: obj, preventClipping: true, children: null };
+  const obj1 = { collapsable: false, style, preventClipping: true, children: null };
   fastListInstance = children(section, fastListInstance);
   section = [fastListInstance, false];
-  obj1[3] = section;
-  closure_10(setDefault, obj1);
+  obj1.children = section;
+  closure_1_10(NativeViewDefault, obj1);
 });
-let closure_22 = importAllResult.memo(function _FastListSectionFooterRenderer(disableWrapper) {
+let closure_22 = noop.memo(function _FastListSectionFooterRenderer(disableWrapper) {
   ({ layoutSize, fastListInstance, children, section, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
-      obj = { children: null };
-      obj[0] = children(section, fastListInstance);
-      return callback3(closure_12, obj);
+      let style = { children: children(section, fastListInstance) };
+      return closure_1_11(closure_1_12, style);
     }
   }
   if (horizontal) {
-    obj = { width: null };
-    obj[0] = layoutSize;
+    style = { width: layoutSize };
   } else {
-    obj = { height: null };
-    obj[0] = layoutSize;
+    style = { height: layoutSize };
   }
-  obj1 = { collapsable: false, style: obj, children: null };
+  const obj1 = { collapsable: false, style, children: null };
   children = children(section, fastListInstance);
   section = [children, false];
-  obj1[2] = section;
-  closure_10(setDefault, obj1);
+  obj1.children = section;
+  closure_1_10(NativeViewDefault, obj1);
 });
-let closure_23 = importAllResult.memo(function _FastListItemRenderer(disableWrapper) {
+let closure_23 = noop.memo(function _FastListItemRenderer(disableWrapper) {
   ({ layoutSize, children, section, fastListInstance, item, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
@@ -1421,62 +1157,55 @@ let closure_23 = importAllResult.memo(function _FastListItemRenderer(disableWrap
     return childrenResult;
   }
   if (horizontal) {
-    obj = { width: null };
-    obj[0] = layoutSize;
+    let style = { width: layoutSize };
   } else {
-    obj = { height: null };
-    obj[0] = layoutSize;
+    style = { height: layoutSize };
   }
-  obj = { collapsable: false, style: obj, children: null };
+  style = { collapsable: false, style, children: null };
   let childrenResult1;
   if (children != null) {
     childrenResult1 = children(section, item, fastListInstance);
   }
   const items = [childrenResult1, false];
-  obj[2] = items;
-  childrenResult = closure_10(setDefault, obj);
+  style.children = items;
+  childrenResult = closure_1_10(NativeViewDefault, style);
 });
-let closure_24 = importAllResult.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
+let closure_24 = noop.memo(function _FastListHeaderFooterRenderer(disableWrapper) {
   ({ layoutSize, children, fastListInstance, recyclerKey, horizontal } = disableWrapper);
   if (disableWrapper.disableWrapper) {
     if (!disableWrapper.debug) {
-      obj = { children: null };
-      obj[0] = children(fastListInstance);
-      return callback3(closure_12, obj);
+      let style = { children: children(fastListInstance) };
+      return closure_1_11(closure_1_12, style);
     }
   }
   if (horizontal) {
-    obj = { width: null };
-    obj[0] = layoutSize;
+    style = { width: layoutSize };
   } else {
-    obj = { height: null };
-    obj[0] = layoutSize;
+    style = { height: layoutSize };
   }
-  obj1 = { collapsable: false, style: obj, preventClipping: true, children: null };
+  const obj1 = { collapsable: false, style, preventClipping: true, children: null };
   children = children(fastListInstance);
   fastListInstance = [children, false];
-  obj1[3] = fastListInstance;
-  closure_10(setDefault, obj1);
+  obj1.children = fastListInstance;
+  closure_1_10(NativeViewDefault, obj1);
 });
-let closure_25 = importAllResult.memo(function _FastListSpacer(layoutSize) {
+let closure_25 = noop.memo(function _FastListSpacer(layoutSize) {
   layoutSize = layoutSize.layoutSize;
   if (layoutSize.horizontal) {
-    obj = { width: null };
-    obj[0] = layoutSize;
+    obj = { width: layoutSize };
     let style = obj;
   } else {
-    style = { height: null };
-    style[0] = layoutSize;
+    style = { height: layoutSize };
   }
-  return closure_11(setDefault, { collapsable: false, style });
+  return closure_1_11(NativeViewDefault, { collapsable: false, style });
 });
 let c26 = 1000;
 let c27 = 0.5;
 class FastListScrollAnchor {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj.getScrollPosition = global;
-    return obj;
+    merged = Object.assign({ isCustomAnchor: false });
+    merged.getScrollPosition = global;
+    return merged;
   }
 }
 const prototype3 = FastListScrollAnchor.prototype;
@@ -1519,31 +1248,25 @@ prototype3["findOrUpdateAnchor"] = function findOrUpdateAnchor(getAnchorIdFromIn
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp4 = nextResult;
-    let tmp5 = obj;
     if (nextResult.type === obj.ITEM) {
       if (self.isCustomAnchor) {
-        let tmp6 = nextResult;
         let num = tmp4.item;
         if (num == null) {
           num = 0;
         }
         if (self.anchorId === getAnchorIdFromIndex(tmp4.section, num)) {
           self.anchorOffset = nextResult.layoutStart - scrollPosition;
-          let tmp10 = iter;
           iter.return();
         }
       }
       if (!self.isCustomAnchor) {
-        let tmp7 = nextResult;
         if (tmp4.layoutStart >= scrollPosition) {
-          let tmp8 = nextResult;
           self.anchorOffset = tmp4.layoutStart - scrollPosition;
           ({ item, section } = tmp4);
           if (item == null) {
             item = 0;
           }
           self.anchorId = getAnchorIdFromIndex(section, item);
-          let tmp9 = iter;
           iter.return();
         }
       }
@@ -1558,16 +1281,15 @@ prototype3["getAnchorIndex"] = function getAnchorIndex(getAnchorIndexFromId) {
     return getAnchorIndexFromId(self.anchorId);
   }
 };
-const PureComponent = importAllResult.PureComponent;
+const PureComponent = noop.PureComponent;
 class FastList extends PureComponent {
   constructor(arg0) {
     tmp = new tmp(global, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2);
-    // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp;
     tmp.containerSize = 0;
     tmp.scrollPos = 0;
-    obj2 = require("createFakeSharedValue");
-    tmp.scrollPosValue = require("module_0");
+    obj2 = closure_0(closure_2[12]);
+    tmp.scrollPosValue = obj2.createFakeSharedValue(0);
     manualRef = tmp.props.manualRef;
     if (manualRef == null) {
       tmp8 = closure_6;
@@ -1575,437 +1297,425 @@ class FastList extends PureComponent {
     }
     tmp.scrollView = manualRef;
     tmp.getItems = function getItems() {
-      return lib.state.items;
+      return closure_0.state.items;
     };
-    tmp.getScrollPosition = function getScrollPosition(nativeElementReference) {
-      return lib.scrollPos;
+    tmp.getScrollPosition = function getScrollPosition() {
+      return closure_0.scrollPos;
     };
     tmp.disableAnchoringTimeout = undefined;
     tmp.deferredCompute = -1;
     tmp.deferNextCompute = false;
-    tmp9 = FastListScrollAnchor;
-    if (typeof FastListScrollAnchor !== "function") {
-      str5 = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    obj = Object.create(tmp9.prototype);
-    obj.getScrollPosition = tmp.getScrollPosition;
-    tmp.scrollAnchor = obj;
-    tmp.viewabilityDebounce = -1;
-    tmp.previouslyViewableItems = [];
-    tmp._scrollPositionToPoint = function _scrollPositionToPoint(result) {
-      const horizontal = lib.props.horizontal;
-      let num = 0;
-      if (horizontal) {
-        num = result;
-      }
-      obj = { x: num, y: null };
-      let num2 = 0;
-      if (!horizontal) {
-        num2 = result;
-      }
-      obj[1] = num2;
-      return obj;
-    };
-    tmp._calculateScrollPosition = function _calculateScrollPosition(paddingStart) {
-      ({ itemCoords, orientation } = paddingStart);
-      if (orientation === undefined) {
-        orientation = "top";
-      }
-      let num = paddingStart.paddingStart;
-      if (num === undefined) {
-        num = 0;
-      }
-      let num2 = paddingStart.paddingEnd;
-      if (num2 === undefined) {
-        num2 = 0;
-      }
-      ({ scrollPosition, size, sectionOffset } = itemCoords);
-      if (lib.containerSize > 0) {
-        let num3 = tmp.containerSize;
-      } else {
-        num3 = tmp.props.chunkBase;
-        if (num3 == null) {
-          num3 = 0;
+    if (typeof FastListScrollAnchor === "function") {
+      merged = Object.assign({ isCustomAnchor: false });
+      merged.getScrollPosition = tmp9;
+      tmp.scrollAnchor = merged;
+      tmp.viewabilityDebounce = -1;
+      tmp.previouslyViewableItems = [];
+      tmp._scrollPositionToPoint = function _scrollPositionToPoint(initialScrollStart) {
+        const horizontal = closure_0.props.horizontal;
+        let num = 0;
+        if (horizontal) {
+          num = initialScrollStart;
         }
-      }
-      if (size >= num3) {
-        orientation = "top";
-      }
-      if ("visible" === orientation) {
-        if (scrollPosition + sectionOffset >= tmp.scrollPos + num) {
-          if (scrollPosition + size <= tmp.scrollPos + (num3 - num2)) {
-            return null;
+        const point = { x: num, y: null };
+        let num2 = 0;
+        if (!horizontal) {
+          num2 = initialScrollStart;
+        }
+        point.y = num2;
+        return point;
+      };
+      tmp._calculateScrollPosition = function _calculateScrollPosition(paddingStart) {
+        ({ itemCoords, orientation } = paddingStart);
+        if (orientation === undefined) {
+          orientation = "top";
+        }
+        let num = paddingStart.paddingStart;
+        if (num === undefined) {
+          num = 0;
+        }
+        let num2 = paddingStart.paddingEnd;
+        if (num2 === undefined) {
+          num2 = 0;
+        }
+        ({ scrollPosition, size, sectionOffset } = itemCoords);
+        if (closure_0.containerSize > 0) {
+          let num3 = tmp.containerSize;
+        } else {
+          num3 = tmp.props.chunkBase;
+          if (num3 == null) {
+            num3 = 0;
           }
         }
-        if (size <= num3) {
-          if (scrollPosition >= tmp.scrollPos) {
-            let diff = scrollPosition + size + num2 - num3;
+        if (size >= num3) {
+          orientation = "top";
+        }
+        if ("visible" === orientation) {
+          if (scrollPosition + sectionOffset >= tmp.scrollPos + num) {
+            if (scrollPosition + size <= tmp.scrollPos + (num3 - num2)) {
+              return null;
+            }
+          }
+          if (size <= num3) {
+            if (scrollPosition >= tmp.scrollPos) {
+              let diff = scrollPosition + size + num2 - num3;
+            }
+          }
+          diff = scrollPosition - (sectionOffset + num);
+        } else if ("top" === orientation) {
+          diff = scrollPosition - (sectionOffset + num);
+        } else {
+          diff = scrollPosition;
+          if ("center" === orientation) {
+            const _Math = Math;
+            const _Math2 = Math;
+            const sum = itemCoords.scrollPosition + Math.floor(itemCoords.size / 2);
+            diff = sum - Math.floor(num3 / 2);
           }
         }
-        diff = scrollPosition - (sectionOffset + num);
-      } else if ("top" === orientation) {
-        diff = scrollPosition - (sectionOffset + num);
-      } else {
-        diff = scrollPosition;
-        if ("center" === orientation) {
-          const _Math = Math;
-          const _Math2 = Math;
-          const sum = itemCoords.scrollPosition + Math.floor(itemCoords.size / 2);
-          diff = sum - Math.floor(num3 / 2);
+        return Math.max(0, Math.min(diff, paddingStart.fullSize - num3));
+      };
+      props = tmp.props;
+      num = props.chunkBase;
+      obj = { headerSize: null, footerSize: null, sectionSize: null, itemSize: null, sectionFooterSize: null, sections: null, insetStart: null, insetEnd: null, stickyHeaderFooter: null, getRecyclerKey: null, persistantKeys: null, disableRecyclingOnFullCompute: null };
+      ({ headerSize: obj3.headerSize, footerSize: obj3.footerSize, sectionSize: obj3.sectionSize, itemSize: obj3.itemSize, sectionFooterSize: obj3.sectionFooterSize, sections: obj3.sections, insetStart: obj3.insetStart, insetEnd: obj3.insetEnd, stickyHeaderFooter: obj3.stickyHeaderFooter, getRecyclerKey: obj3.getRecyclerKey, persistantKeys: obj3.persistantKeys, disableRecyclingOnFullCompute: obj3.disableRecyclingOnFullCompute } = props);
+      tmp11 = new.target;
+      if (typeof FastListComputer === "function") {
+        merged1 = Object.assign({ chunkSize: 0, uniform: false, dataCache: null, size: 0, dirty: true, lastStartChunk: -1, lastEndChunk: -1, items: null, persistantItemData: null, disableRecycling: false });
+        merged1[2] = [];
+        merged1[7] = [];
+        merged1[8] = [];
+        merged1.props = obj;
+        updatePropsResult = merged1.updateProps(obj);
+        if (num == null) {
+          num = 0;
         }
-      }
-      return Math.max(0, Math.min(diff, paddingStart.fullSize - num3));
-    };
-    props = tmp.props;
-    num = props.chunkBase;
-    obj1 = { headerSize: props.headerSize, footerSize: props.footerSize, sectionSize: props.sectionSize, itemSize: props.itemSize, sectionFooterSize: props.sectionFooterSize, sections: props.sections, insetStart: props.insetStart, insetEnd: props.insetEnd, stickyHeaderFooter: props.stickyHeaderFooter, getRecyclerKey: props.getRecyclerKey, persistantKeys: props.persistantKeys, disableRecyclingOnFullCompute: props.disableRecyclingOnFullCompute };
-    tmp11 = FastListComputer;
-    if (typeof FastListComputer !== "function") {
-      str6 = "Trying to call a non-function";
-      throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
-    }
-    obj2 = Object.create(tmp11.prototype);
-    obj2[2] = [];
-    obj2[7] = [];
-    obj2[8] = [];
-    obj2.props = obj1;
-    updatePropsResult = obj2.updateProps(obj1);
-    if (num == null) {
-      num = 0;
-    }
-    tmp.state = tmp.getInitialState(num, obj2, true);
-    tmp.handleViewabilityChange = function handleViewabilityChange() {
-      const onViewableItemsChanged = lib.props.onViewableItemsChanged;
-      if (null != onViewableItemsChanged) {
-        let items = tmp.state.items;
-        const sum = tmp.scrollPos + tmp.containerSize;
-        items = [];
-        const iter = items[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp5 = nextResult;
-          if (nextResult.layoutStart > sum) {
-            let tmp16 = iter;
-            iter.return();
-            break;
-          } else {
-            let _Math = Math;
-            let tmp6 = nextResult;
-            let bound = Math.max(tmp5.layoutStart, tmp22);
-            let _Math2 = Math;
-            let tmp8 = bound;
-            let bound1 = Math.min(tmp5.layoutStart + tmp5.layoutSize, sum);
-            if (bound < bound1) {
-              let tmp11 = bound1;
-              let tmp12 = bound;
-              let tmp13 = nextResult;
-              if ((tmp10 - tmp8) / tmp5.layoutSize >= tmp21) {
-                let tmp14 = nextResult;
-                let arr = items.push(tmp5.recyclerKey);
+        flag = true;
+        tmp.state = tmp.getInitialState(num, merged1, true);
+        tmp.handleViewabilityChange = function handleViewabilityChange() {
+          const onViewableItemsChanged = closure_0.props.onViewableItemsChanged;
+          if (null != onViewableItemsChanged) {
+            const sum = tmp.scrollPos + tmp.containerSize;
+            const items = [];
+            const iter = items[Symbol.iterator]();
+            const nextResult = iter.next();
+            while (iter !== undefined) {
+              let tmp5 = nextResult;
+              if (nextResult.layoutStart > sum) {
+                iter.return();
+                break;
+              } else {
+                let _Math = Math;
+                let bound = Math.max(tmp5.layoutStart, tmp22);
+                let _Math2 = Math;
+                let tmp8 = bound;
+                let bound1 = Math.min(tmp5.layoutStart + tmp5.layoutSize, sum);
+                if (bound < bound1) {
+                  if ((tmp10 - tmp8) / tmp5.layoutSize >= tmp21) {
+                    let arr = items.push(tmp5.recyclerKey);
+                  }
+                }
+                continue;
+              }
+              obj = discord_common_shallowEqual;
+              let tmp19 = closure_0;
+              if (!obj.areArraysShallowEqual(items, closure_0.previouslyViewableItems)) {
+                tmp19.previouslyViewableItems = items;
+                let result = onViewableItemsChanged(items);
               }
             }
-            continue;
           }
-          let tmp17 = lib;
-          let tmp18 = closure_1_2;
-          obj = lib(closure_1_2[6]);
-          let tmp19 = lib;
-          if (!obj.areArraysShallowEqual(items, lib.previouslyViewableItems)) {
-            tmp19.previouslyViewableItems = items;
-            let result = onViewableItemsChanged(items);
+        };
+        tmp.isVisible = function isVisible(arg0) {
+          let num = arg1;
+          if (arg1 === undefined) {
+            num = 0;
           }
-        }
-      }
-    };
-    tmp.isVisible = function isVisible(arg0) {
-      let num = arg1;
-      if (arg1 === undefined) {
-        num = 0;
-      }
-      let num2 = arg2;
-      if (arg2 === undefined) {
-        num2 = 0;
-      }
-      return arg0 >= lib.scrollPos + num && arg0 <= lib.scrollPos + lib.containerSize - num2;
-    };
-    tmp.scrollToTop = function scrollToTop() {
-      let flag = arg0;
-      if (arg0 === undefined) {
-        flag = true;
-      }
-      const scrollView = lib.scrollView;
-      if (scrollView != null) {
-        const current = scrollView.current;
-        if (current != null) {
-          obj = { x: 0, y: 0, animated: null };
-          obj[2] = flag;
-          current.scrollTo(obj);
-        }
-      }
-    };
-    tmp.scrollToLocation = function scrollToLocation(orientation) {
-      ({ section, item, animated } = orientation);
-      if (animated === undefined) {
-        animated = false;
-      }
-      let str = orientation.orientation;
-      if (str === undefined) {
-        str = "top";
-      }
-      let num = orientation.paddingStart;
-      if (num === undefined) {
-        num = 0;
-      }
-      let num2 = orientation.paddingEnd;
-      if (num2 === undefined) {
-        num2 = 0;
-      }
-      let flag = orientation.setAnchor;
-      if (flag === undefined) {
-        flag = false;
-      }
-      obj = lib;
-      const current = lib.scrollView.current;
-      if (null == current) {
-        return false;
-      } else {
-        ({ getAnchorIdFromIndex, stickySectionsVariant } = obj.props);
-        let str2 = "default";
-        if (undefined !== stickySectionsVariant) {
-          str2 = stickySectionsVariant;
-        }
-        const fastListComputer = obj.state.fastListComputer;
-        const scrollPosition = fastListComputer.computeScrollPosition("default" === str2, section, item);
-        if (null == scrollPosition) {
-          return false;
-        } else {
-          if ("visible" === str) {
-            if (obj.isVisible(scrollPosition.scrollPosition, num, num2)) {
+          let num2 = arg2;
+          if (arg2 === undefined) {
+            num2 = 0;
+          }
+          return arg0 >= closure_0.scrollPos + num && arg0 <= closure_0.scrollPos + closure_0.containerSize - num2;
+        };
+        tmp.scrollToTop = function scrollToTop() {
+          let flag = arg0;
+          if (arg0 === undefined) {
+            flag = true;
+          }
+          const scrollView = closure_0.scrollView;
+          if (scrollView != null) {
+            const current = scrollView.current;
+            if (current != null) {
+              const point = { x: 0, y: 0, animated: flag };
+              current.scrollTo(point);
+            }
+          }
+        };
+        tmp.scrollToLocation = function scrollToLocation(orientation) {
+          ({ section, item, animated } = orientation);
+          if (animated === undefined) {
+            animated = false;
+          }
+          let str = orientation.orientation;
+          if (str === undefined) {
+            str = "top";
+          }
+          let num = orientation.paddingStart;
+          if (num === undefined) {
+            num = 0;
+          }
+          let num2 = orientation.paddingEnd;
+          if (num2 === undefined) {
+            num2 = 0;
+          }
+          let flag = orientation.setAnchor;
+          if (flag === undefined) {
+            flag = false;
+          }
+          obj = closure_0;
+          const current = closure_0.scrollView.current;
+          if (null == current) {
+            return false;
+          } else {
+            ({ getAnchorIdFromIndex, stickySectionsVariant } = obj.props);
+            let str2 = "default";
+            if (undefined !== stickySectionsVariant) {
+              str2 = stickySectionsVariant;
+            }
+            const fastListComputer = obj.state.fastListComputer;
+            const scrollPosition = fastListComputer.computeScrollPosition("default" === str2, section, item);
+            if (null == scrollPosition) {
               return false;
+            } else {
+              if ("visible" === str) {
+                if (obj.isVisible(scrollPosition.scrollPosition, num, num2)) {
+                  return false;
+                }
+              }
+              obj = { itemCoords: scrollPosition, fullSize: fastListComputer.getSize(), orientation: str, paddingStart: num, paddingEnd: num2 };
+              const result = obj._calculateScrollPosition(obj);
+              let tmp3 = !animated;
+              if (!animated) {
+                tmp3 = flag;
+              }
+              if (tmp3) {
+                tmp3 = null != getAnchorIdFromIndex;
+              }
+              if (tmp3) {
+                const scrollAnchor = obj.scrollAnchor;
+                let num3 = result;
+                if (result == null) {
+                  num3 = 0;
+                }
+                scrollAnchor.setCustomAnchor(getAnchorIdFromIndex, scrollPosition.scrollPosition - num3, section, item);
+              }
+              let flag2 = null != result && result !== obj.scrollPos;
+              if (flag2) {
+                if (!animated) {
+                  obj.scrollPos = result;
+                  const blocks = obj.computeBlocks();
+                }
+                obj = {};
+                const merged = Object.assign(obj._scrollPositionToPoint(result));
+                obj.animated = animated;
+                current.scrollTo(obj);
+                flag2 = true;
+              }
+              return flag2;
             }
           }
-          obj = { itemCoords: null, fullSize: null, orientation: null, paddingStart: null, paddingEnd: null };
-          obj[0] = scrollPosition;
-          obj[1] = fastListComputer.getSize();
-          obj[2] = str;
-          obj[3] = num;
-          obj[4] = num2;
-          const result = obj._calculateScrollPosition(obj);
-          let tmp3 = !animated;
-          if (!animated) {
-            tmp3 = flag;
+        };
+        tmp.scrollTo = function scrollTo(initialScrollStart) {
+          let flag = arg1;
+          if (arg1 === undefined) {
+            flag = false;
           }
-          if (tmp3) {
-            tmp3 = null != getAnchorIdFromIndex;
-          }
-          if (tmp3) {
-            const scrollAnchor = obj.scrollAnchor;
-            let num3 = result;
-            if (result == null) {
-              num3 = 0;
+          obj = closure_0;
+          const current = closure_0.scrollView.current;
+          const fastListComputer = closure_0.state.fastListComputer;
+          let tmp = null != current;
+          if (tmp) {
+            let flag2 = initialScrollStart <= fastListComputer.getSize() - obj.containerSize && initialScrollStart !== obj.scrollPos;
+            if (flag2) {
+              obj = {};
+              const merged = Object.assign(obj._scrollPositionToPoint(initialScrollStart));
+              obj.animated = flag;
+              current.scrollTo(obj);
+              flag2 = true;
             }
-            scrollAnchor.setCustomAnchor(getAnchorIdFromIndex, scrollPosition.scrollPosition - num3, section, item);
+            tmp = flag2;
           }
-          let flag2 = null != result && result !== obj.scrollPos;
-          if (flag2) {
-            if (!animated) {
-              obj.scrollPos = result;
-              const blocks = obj.computeBlocks();
+          return tmp;
+        };
+        tmp.handleScroll = function handleScroll(nativeEvent) {
+          obj = closure_0;
+          ({ contentInset, horizontal, onScroll, onEndReached, endReachedThreshold, EXPERIMENTAL_enableAnchorWhileScrolling } = closure_0.props);
+          ({ fastListComputer, hasReachedEndBefore } = obj.state);
+          const layoutMeasurement = nativeEvent.nativeEvent.layoutMeasurement;
+          const tmp2 = horizontal ? layoutMeasurement.width : layoutMeasurement.height;
+          let num = horizontal ? contentInset.left : contentInset.top;
+          if (num == null) {
+            num = 0;
+          }
+          let num2 = horizontal ? contentInset.right : contentInset.bottom;
+          if (num2 == null) {
+            num2 = 0;
+          }
+          obj.containerSize = tmp2 - num - num2;
+          const bound = Math.max(0, obj.getScrollPositionFromEvent(nativeEvent));
+          const bound1 = Math.min(bound, fastListComputer.getSize() - obj.containerSize);
+          obj.scrollPos = bound1;
+          if (onScroll != null) {
+            onScroll(nativeEvent);
+          }
+          if (obj.deferNextCompute) {
+            obj.deferNextCompute = false;
+            if (-1 !== obj.deferredCompute) {
+              const _cancelAnimationFrame = cancelAnimationFrame;
+              cancelAnimationFrame(obj.deferredCompute);
             }
-            obj = {};
-            const merged = Object.assign(obj._scrollPositionToPoint(result));
-            obj.animated = animated;
-            current.scrollTo(obj);
-            flag2 = true;
+            const _requestAnimationFrame = requestAnimationFrame;
+            obj.deferredCompute = requestAnimationFrame(() => closure_1_0.computeBlocks());
+          } else {
+            const blocks = obj.computeBlocks();
           }
-          return flag2;
+          if (!tmp) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(obj.disableAnchoringTimeout);
+            const _setTimeout = setTimeout;
+            obj.disableAnchoringTimeout = setTimeout(() => {
+              clearTimeout(closure_1_0.disableAnchoringTimeout);
+              closure_1_0.disableAnchoringTimeout = undefined;
+            }, 100);
+          }
+          if (null != onEndReached) {
+            const contentSize = nativeEvent.nativeEvent.contentSize;
+            if (endReachedThreshold == null) {
+              endReachedThreshold = 0;
+            }
+            const rounded = Math.ceil((horizontal ? contentSize.width : contentSize.height) - endReachedThreshold - tmp2);
+            const _Math = Math;
+            const rounded1 = Math.ceil(bound1);
+            if (rounded1 >= rounded) {
+              if (!hasReachedEndBefore) {
+                obj.setState({ hasReachedEndBefore: true });
+                obj = { distanceFromEnd: rounded1 - rounded };
+                onEndReached(obj);
+              }
+            }
+            let tmp15 = !tmp12;
+            if (rounded1 < rounded) {
+              tmp15 = hasReachedEndBefore;
+            }
+            if (tmp15) {
+              obj.setState({ hasReachedEndBefore: false });
+            }
+            const tmp9 = horizontal ? contentSize.width : contentSize.height;
+          }
+          const result = obj.queueViewabilityChange();
+        };
+        tmp.handleLayout = function handleLayout(nativeEvent) {
+          const state = closure_0.state;
+          const fastListComputer = state.fastListComputer;
+          ({ contentInset, onLayout, horizontal, chunkBase } = closure_0.props);
+          const layout = nativeEvent.nativeEvent.layout;
+          let num = horizontal ? contentInset.left : contentInset.top;
+          if (num == null) {
+            num = 0;
+          }
+          let num2 = horizontal ? contentInset.right : contentInset.bottom;
+          if (num2 == null) {
+            num2 = 0;
+          }
+          closure_0.containerSize = (horizontal ? layout.width : layout.height) - num - num2;
+          if (null == chunkBase) {
+            fastListComputer.setInfo(obj.containerSize);
+          }
+          if (onLayout != null) {
+            onLayout(nativeEvent, obj);
+          }
+          if (state.isFirstLayout) {
+            if (null == chunkBase) {
+              obj.setState(obj.getInitialState(obj.containerSize, fastListComputer, false));
+            }
+            const result = obj.queueViewabilityChange();
+          }
+          const blocks = obj.computeBlocks();
+        };
+        tmp.handleMomentumScrollEnd = function handleMomentumScrollEnd(arg0) {
+          const onScrollEnd = closure_0.props.onScrollEnd;
+          if (onScrollEnd != null) {
+            onScrollEnd(arg0);
+          }
+        };
+        tmp.handleScrollBeginDrag = function handleScrollBeginDrag(arg0) {
+          const scrollAnchor = closure_0.scrollAnchor;
+          scrollAnchor.handleUserScroll();
+          const props = closure_0.props;
+          const onScrollBeginDrag = props.onScrollBeginDrag;
+          if (onScrollBeginDrag != null) {
+            onScrollBeginDrag(arg0);
+          }
+        };
+        props2 = tmp.props;
+        ({ getAnchorIdFromIndex, getAnchorIndexFromId } = props2);
+        num2 = 5;
+        if (props2.batchesToRender < 5) {
+          tmp29 = globalThis;
+          _Error4 = Error;
+          tmp30 = new.target;
+          str4 = "FastList: `batchesToRender` must be >= 6";
+          tmp31 = new.target;
+          error = new Error("FastList: `batchesToRender` must be >= 6");
+          tmp33 = error;
+          throw error;
+        } else {
+          if (null != getAnchorIdFromIndex) {
+            if (null != getAnchorIdFromIndex) {
+            }
+            tmp13 = globalThis;
+            _Error = Error;
+            tmp14 = new.target;
+            str = "FastList: You must define BOTH `getAnchorIndexFromId` and `getAnchorIdFromIndex`, or neither";
+            tmp15 = new.target;
+            error1 = new Error("FastList: You must define BOTH `getAnchorIndexFromId` and `getAnchorIdFromIndex`, or neither");
+            tmp17 = error1;
+            throw error1;
+          }
+          viewabilityConfig = tmp.getViewabilityConfig();
+          if (viewabilityConfig.minimumViewTime <= 0) {
+            tmp24 = globalThis;
+            _Error3 = Error;
+            tmp25 = new.target;
+            str3 = "FastList: `viewabilityConfig.minimumViewTime` must be greater than 0";
+            tmp26 = new.target;
+            error2 = new Error("FastList: `viewabilityConfig.minimumViewTime` must be greater than 0");
+            tmp28 = error2;
+            throw error2;
+          } else {
+            if (viewabilityConfig.visibilityThreshold > 0) {
+              num3 = 1;
+              if (viewabilityConfig.visibilityThreshold <= 1) {
+                return tmp;
+              }
+            }
+            tmp19 = globalThis;
+            _Error2 = Error;
+            tmp20 = new.target;
+            str2 = "FastList: `viewabilityConfig.visibilityThreshold` must be floating point value greater than 0 and less than 1";
+            tmp21 = new.target;
+            error3 = new Error("FastList: `viewabilityConfig.visibilityThreshold` must be floating point value greater than 0 and less than 1");
+            tmp23 = error3;
+            throw error3;
+          }
         }
-      }
-    };
-    tmp.scrollTo = function scrollTo(result) {
-      let flag = arg1;
-      if (arg1 === undefined) {
-        flag = false;
-      }
-      obj = lib;
-      const current = lib.scrollView.current;
-      const fastListComputer = lib.state.fastListComputer;
-      let tmp = null != current;
-      if (tmp) {
-        let flag2 = result <= fastListComputer.getSize() - obj.containerSize && result !== obj.scrollPos;
-        if (flag2) {
-          obj = {};
-          const merged = Object.assign(obj._scrollPositionToPoint(result));
-          obj.animated = flag;
-          current.scrollTo(obj);
-          flag2 = true;
-        }
-        tmp = flag2;
-      }
-      return tmp;
-    };
-    tmp.handleScroll = function handleScroll(nativeEvent) {
-      obj = lib;
-      ({ contentInset, horizontal, onScroll, onEndReached, endReachedThreshold, EXPERIMENTAL_enableAnchorWhileScrolling } = lib.props);
-      ({ fastListComputer, hasReachedEndBefore } = obj.state);
-      const layoutMeasurement = nativeEvent.nativeEvent.layoutMeasurement;
-      const tmp2 = horizontal ? layoutMeasurement.width : layoutMeasurement.height;
-      let num = horizontal ? contentInset.left : contentInset.top;
-      if (num == null) {
-        num = 0;
-      }
-      let num2 = horizontal ? contentInset.right : contentInset.bottom;
-      if (num2 == null) {
-        num2 = 0;
-      }
-      obj.containerSize = tmp2 - num - num2;
-      const bound = Math.max(0, obj.getScrollPositionFromEvent(nativeEvent));
-      const bound1 = Math.min(bound, fastListComputer.getSize() - obj.containerSize);
-      obj.scrollPos = bound1;
-      if (onScroll != null) {
-        onScroll(nativeEvent);
-      }
-      if (obj.deferNextCompute) {
-        obj.deferNextCompute = false;
-        if (-1 !== obj.deferredCompute) {
-          const _cancelAnimationFrame = cancelAnimationFrame;
-          cancelAnimationFrame(obj.deferredCompute);
-        }
-        const _requestAnimationFrame = requestAnimationFrame;
-        obj.deferredCompute = requestAnimationFrame(() => closure_0.computeBlocks());
       } else {
-        const blocks = obj.computeBlocks();
+        str6 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
       }
-      if (!tmp) {
-        const _clearTimeout = clearTimeout;
-        clearTimeout(obj.disableAnchoringTimeout);
-        const _setTimeout = setTimeout;
-        obj.disableAnchoringTimeout = setTimeout(() => {
-          clearTimeout(closure_0.disableAnchoringTimeout);
-          closure_0.disableAnchoringTimeout = undefined;
-        }, 100);
-      }
-      if (null != onEndReached) {
-        const contentSize = nativeEvent.nativeEvent.contentSize;
-        if (endReachedThreshold == null) {
-          endReachedThreshold = 0;
-        }
-        const rounded = Math.ceil((horizontal ? contentSize.width : contentSize.height) - endReachedThreshold - tmp2);
-        const _Math = Math;
-        const rounded1 = Math.ceil(bound1);
-        if (rounded1 >= rounded) {
-          if (!hasReachedEndBefore) {
-            obj.setState({ hasReachedEndBefore: true });
-            obj = { distanceFromEnd: null };
-            obj[0] = rounded1 - rounded;
-            onEndReached(obj);
-          }
-        }
-        let tmp15 = !tmp12;
-        if (rounded1 < rounded) {
-          tmp15 = hasReachedEndBefore;
-        }
-        if (tmp15) {
-          obj.setState({ hasReachedEndBefore: false });
-        }
-        const tmp9 = horizontal ? contentSize.width : contentSize.height;
-      }
-      const result = obj.queueViewabilityChange();
-    };
-    tmp.handleLayout = function handleLayout(nativeEvent) {
-      const state = lib.state;
-      const fastListComputer = state.fastListComputer;
-      ({ contentInset, onLayout, horizontal, chunkBase } = lib.props);
-      const layout = nativeEvent.nativeEvent.layout;
-      let num = horizontal ? contentInset.left : contentInset.top;
-      if (num == null) {
-        num = 0;
-      }
-      let num2 = horizontal ? contentInset.right : contentInset.bottom;
-      if (num2 == null) {
-        num2 = 0;
-      }
-      lib.containerSize = (horizontal ? layout.width : layout.height) - num - num2;
-      if (null == chunkBase) {
-        fastListComputer.setInfo(obj.containerSize);
-      }
-      if (onLayout != null) {
-        onLayout(nativeEvent, obj);
-      }
-      if (state.isFirstLayout) {
-        if (null == chunkBase) {
-          obj.setState(obj.getInitialState(obj.containerSize, fastListComputer, false));
-        }
-        const result = obj.queueViewabilityChange();
-      }
-      const blocks = obj.computeBlocks();
-    };
-    tmp.handleMomentumScrollEnd = function handleMomentumScrollEnd(arg0) {
-      const onScrollEnd = lib.props.onScrollEnd;
-      if (onScrollEnd != null) {
-        onScrollEnd(arg0);
-      }
-    };
-    tmp.handleScrollBeginDrag = function handleScrollBeginDrag(arg0) {
-      const scrollAnchor = lib.scrollAnchor;
-      scrollAnchor.handleUserScroll();
-      const props = lib.props;
-      const onScrollBeginDrag = props.onScrollBeginDrag;
-      if (onScrollBeginDrag != null) {
-        onScrollBeginDrag(arg0);
-      }
-    };
-    props2 = tmp.props;
-    ({ getAnchorIdFromIndex, getAnchorIndexFromId } = props2);
-    if (props2.batchesToRender < 5) {
-      tmp29 = globalThis;
-      _Error4 = Error;
-      tmp30 = new.target;
-      str4 = "FastList: `batchesToRender` must be >= 6";
-      tmp31 = new.target;
-      error = new Error("FastList: `batchesToRender` must be >= 6");
-      tmp33 = error;
-      throw error;
     } else {
-      if (null != getAnchorIdFromIndex) {
-        if (null != getAnchorIdFromIndex) {
-        }
-        tmp13 = globalThis;
-        _Error = Error;
-        tmp14 = new.target;
-        str = "FastList: You must define BOTH `getAnchorIndexFromId` and `getAnchorIdFromIndex`, or neither";
-        tmp15 = new.target;
-        error1 = new Error("FastList: You must define BOTH `getAnchorIndexFromId` and `getAnchorIdFromIndex`, or neither");
-        tmp17 = error1;
-        throw error1;
-      }
-      viewabilityConfig = tmp.getViewabilityConfig();
-      if (viewabilityConfig.minimumViewTime <= 0) {
-        tmp24 = globalThis;
-        _Error3 = Error;
-        tmp25 = new.target;
-        str3 = "FastList: `viewabilityConfig.minimumViewTime` must be greater than 0";
-        tmp26 = new.target;
-        error2 = new Error("FastList: `viewabilityConfig.minimumViewTime` must be greater than 0");
-        tmp28 = error2;
-        throw error2;
-      } else {
-        if (viewabilityConfig.visibilityThreshold > 0) {
-          num2 = 1;
-          if (viewabilityConfig.visibilityThreshold <= 1) {
-            return tmp;
-          }
-        }
-        tmp19 = globalThis;
-        _Error2 = Error;
-        tmp20 = new.target;
-        str2 = "FastList: `viewabilityConfig.visibilityThreshold` must be floating point value greater than 0 and less than 1";
-        tmp21 = new.target;
-        error3 = new Error("FastList: `viewabilityConfig.visibilityThreshold` must be floating point value greater than 0 and less than 1");
-        tmp23 = error3;
-        throw error3;
-      }
+      str5 = "Trying to call a non-function";
+      throw new TypeError("Trying to call a non-function");
     }
   }
 }
@@ -2048,7 +1758,7 @@ prototype4["computeScrollPosition"] = function computeScrollPosition(arg0, arg1)
   const fastListComputer = this.state.fastListComputer;
   return fastListComputer.computeScrollPosition(false, arg0, arg1);
 };
-prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirstLayout) {
+prototype4["getInitialState"] = function getInitialState(endImportTime, setInfo, isFirstLayout) {
   let items = arg3;
   if (arg3 === undefined) {
     items = [];
@@ -2072,7 +1782,7 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
   }
   const horizontal = props.horizontal;
   const scrollPosValue = props.scrollPosValue;
-  setInfo.setInfo(result);
+  setInfo.setInfo(endImportTime);
   let num2 = initialScrollStart;
   if (initialScrollStart == null) {
     num2 = 0;
@@ -2082,15 +1792,12 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     let tmp3 = num2;
   } else if (num > 0) {
     tmp3 = num2;
-    if (result > 0) {
+    if (endImportTime > 0) {
       const scrollPosition = setInfo.computeScrollPosition("default" === str2, num, initialScrollItem);
       tmp3 = num2;
       if (null != scrollPosition) {
-        obj = { itemCoords: null, fullSize: null, orientation: null, paddingEnd: 16 };
-        obj[0] = scrollPosition;
-        obj[1] = setInfo.getSize();
-        obj[2] = str;
-        result = self._calculateScrollPosition(obj);
+        obj = { itemCoords: scrollPosition, fullSize: setInfo.getSize(), orientation: str, paddingEnd: 16 };
+        const result = self._calculateScrollPosition(obj);
         let diff = result;
         if (result == null) {
           diff = scrollPosition.scrollPosition - scrollPosition.sectionOffset;
@@ -2106,12 +1813,12 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     tmp3 = num2;
   }
   if (isFirstLayout) {
-    if (result > 0) {
-      if (0 === result) {
+    if (endImportTime > 0) {
+      if (0 === endImportTime) {
         obj = { batchSize: 0, blockStart: 0, blockEnd: 0 };
       } else {
         const _Math = Math;
-        const rounded = Math.ceil(result);
+        const rounded = Math.ceil(endImportTime);
         const _Math2 = Math;
         const _Math3 = Math;
         const rounded1 = Math.floor(tmp3);
@@ -2119,16 +1826,13 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
         const _Math4 = Math;
         const _Math5 = Math;
         const result1 = Math.max(0, Math.round((rounded1 + rounded / 2) / rounded2) - batchesToRender / 2) * rounded2;
-        obj = { batchSize: null, blockStart: null, blockEnd: null };
-        obj[0] = rounded2;
-        obj[1] = result1;
-        obj[2] = result1 + rounded2 * batchesToRender;
+        obj = { batchSize: rounded2, blockStart: result1, blockEnd: result1 + rounded2 * batchesToRender };
       }
       ({ batchSize, blockStart, blockEnd } = obj);
     }
   }
-  const sum = tmp3 + result;
-  const rounded3 = Math.ceil(result / 4);
+  const sum = tmp3 + endImportTime;
+  const rounded3 = Math.ceil(endImportTime / 4);
   if (point == null) {
     point = { x: 0, y: 0 };
   }
@@ -2138,14 +1842,12 @@ prototype4["getInitialState"] = function getInitialState(result, setInfo, isFirs
     const result2 = scrollPosValue.set(tmp10);
     self.scrollPosValue = scrollPosValue;
   } else {
-    self.scrollPosValue = _mod4296.makeMutable(tmp10);
-    const obj3 = _mod4296;
+    self.scrollPosValue = ReanimatedRexport2.makeMutable(tmp10);
   }
-  if (result > 0) {
+  if (endImportTime > 0) {
     let computeResult = setInfo.compute(tmp3, sum, items, true);
   } else {
-    computeResult = { size: 0, items: null };
-    computeResult[1] = [];
+    computeResult = { size: 0, items: [] };
   }
   obj = {};
   const merged = Object.assign(computeResult);
@@ -2183,12 +1885,11 @@ prototype4["getSnapshotBeforeUpdate"] = function getSnapshotBeforeUpdate(getAnch
   }
   return tmp2;
 };
-prototype4["componentDidUpdate"] = function componentDidUpdate(scrollPosValue, isFirstLayout) {
-  let self = this;
-  self = this;
+prototype4["componentDidUpdate"] = function componentDidUpdate(scrollPosValue, isFirstLayout, arg2) {
+  const self = this;
   if (scrollPosValue.scrollPosValue !== this.props.scrollPosValue) {
     const _Error = Error;
-    error = new Error("FastList: scrollPosValue cannot changed after mounting");
+    const error = new Error("FastList: scrollPosValue cannot changed after mounting");
     throw error;
   } else {
     if (!self.state.isFirstLayout) {
@@ -2226,7 +1927,7 @@ prototype4["getViewabilityConfig"] = function getViewabilityConfig() {
   if (visibilityThreshold == null) {
     visibilityThreshold = c27;
   }
-  obj[1] = visibilityThreshold;
+  obj.visibilityThreshold = visibilityThreshold;
   return obj;
 };
 prototype4["queueViewabilityChange"] = function queueViewabilityChange() {
@@ -2294,8 +1995,7 @@ prototype4["getScrollPositionFromEvent"] = function getScrollPositionFromEvent(n
   return this.props.horizontal ? contentOffset.x : contentOffset.y;
 };
 prototype4["restoreScrollPosition"] = function restoreScrollPosition() {
-  let self = this;
-  self = this;
+  const self = this;
   const props = this.props;
   ({ initialScrollItem, initialScrollSection } = props);
   let num = 0;
@@ -2318,13 +2018,12 @@ prototype4["restoreScrollPosition"] = function restoreScrollPosition() {
   if (null != initialScrollStart) {
     self.scrollTo(initialScrollStart, false);
   } else {
-    obj = { section: null, item: null, orientation: null, paddingEnd: 16, setAnchor: true };
-    obj[0] = num;
+    obj = { section: num, item: null, orientation: null, paddingEnd: 16, setAnchor: true };
     if (initialScrollItem == null) {
       initialScrollItem = -1;
     }
-    obj[1] = initialScrollItem;
-    obj[2] = str;
+    obj.item = initialScrollItem;
+    obj.orientation = str;
     if (self.scrollToLocation(obj)) {
       self.deferNextCompute = true;
     } else {
@@ -2360,10 +2059,7 @@ prototype4["computeBlocks"] = function computeBlocks() {
     const _Math4 = Math;
     const _Math5 = Math;
     const result = Math.max(0, Math.round((rounded1 + rounded / 2) / rounded2) - batchesToRender / 2) * rounded2;
-    obj = { batchSize: null, blockStart: null, blockEnd: null };
-    obj[0] = rounded2;
-    obj[1] = result;
-    obj[2] = result + rounded2 * batchesToRender;
+    obj = { batchSize: rounded2, blockStart: result, blockEnd: result + rounded2 * batchesToRender };
   }
   if (obj.batchSize === self.state.batchSize) {
     if (obj.blockStart === self.state.blockStart) {
@@ -2413,7 +2109,7 @@ prototype4["renderItems"] = function renderItems() {
   }
   const items1 = [];
   item = items.forEach((type) => {
-    if (type.type === closure_1_14.SECTION) {
+    if (type.type === obj.SECTION) {
       items1.push(tmp);
     }
   });
@@ -2425,149 +2121,118 @@ prototype4["renderItems"] = function renderItems() {
     let tmp5 = layoutSize;
     ({ section, item } = nextResult);
     if (0 !== layoutSize) {
-      let tmp44 = type;
       let tmp45 = obj;
       if (obj.SPACER === type) {
-        let tmp39 = callback3;
-        let tmp40 = closure_25;
-        obj = { horizontal: null, layoutSize: null };
-        obj[0] = flag;
-        let tmp41 = layoutSize;
-        obj[1] = tmp5;
-        let tmp42 = key;
+        obj = { horizontal: flag, layoutSize: null };
+        obj.layoutSize = tmp5;
         let _HermesInternal7 = HermesInternal;
-        let arr = items2.push(callback3(closure_25, obj, "" + key));
+        let arr = items2.push(closure_11(closure_25, obj, "" + key));
       } else if (tmp45.HEADER === type) {
         obj = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, debug: false, children: null };
-        let tmp35 = recyclerKey;
-        obj[0] = recyclerKey;
-        obj[1] = flag;
-        obj[2] = tmp2;
-        obj[3] = self;
-        let tmp36 = layoutSize;
-        obj[4] = tmp5;
+        obj.recyclerKey = recyclerKey;
+        obj.horizontal = flag;
+        obj.disableWrapper = tmp2;
+        obj.fastListInstance = self;
+        obj.layoutSize = tmp5;
         let fn6 = renderHeader;
-        let tmp33 = callback3;
+        let tmp33 = closure_11;
         let tmp34 = closure_24;
         if (!tmp) {
           fn6 = () => renderHeader(...HermesBuiltin.copyRestArgs());
         }
-        obj[6] = fn6;
-        let tmp37 = key;
+        obj.children = fn6;
         let _HermesInternal6 = HermesInternal;
         arr = items2.push(tmp33(tmp34, obj, "" + key));
       } else if (tmp45.FOOTER === type) {
-        obj1 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, debug: false, children: null };
-        let tmp29 = recyclerKey;
-        obj1[0] = recyclerKey;
-        obj1[1] = flag;
-        obj1[2] = tmp2;
-        obj1[3] = self;
-        let tmp30 = layoutSize;
-        obj1[4] = tmp5;
+        let obj1 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, debug: false, children: null };
+        obj1.recyclerKey = recyclerKey;
+        obj1.horizontal = flag;
+        obj1.disableWrapper = tmp2;
+        obj1.fastListInstance = self;
+        obj1.layoutSize = tmp5;
         let fn5 = renderFooter;
-        let tmp27 = callback3;
+        let tmp27 = closure_11;
         let tmp28 = closure_24;
         if (!tmp) {
           fn5 = () => renderFooter(...HermesBuiltin.copyRestArgs());
         }
-        obj1[6] = fn5;
-        let tmp31 = key;
+        obj1.children = fn5;
         let _HermesInternal5 = HermesInternal;
         let arr1 = items2.push(tmp27(tmp28, obj1, "" + key));
       } else if (tmp45.SECTION === type) {
         let arr2 = items1.shift();
         if ("default" !== str) {
           let obj2 = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutStart: null, layoutSize: null, fastListInstance: null, section: null, debug: false, children: null };
-          let tmp21 = recyclerKey;
-          obj2[0] = recyclerKey;
-          obj2[1] = flag;
-          obj2[2] = tmp2;
-          let tmp22 = layoutStart;
-          obj2[3] = layoutStart;
-          let tmp23 = layoutSize;
-          obj2[4] = tmp5;
-          obj2[5] = self;
-          let tmp24 = section;
-          obj2[6] = section;
+          obj2.recyclerKey = recyclerKey;
+          obj2.horizontal = flag;
+          obj2.disableWrapper = tmp2;
+          obj2.layoutStart = layoutStart;
+          obj2.layoutSize = tmp5;
+          obj2.fastListInstance = self;
+          obj2.section = section;
           let fn4 = renderSection;
-          let tmp19 = callback3;
+          let tmp19 = closure_11;
           let tmp20 = closure_21;
           if (!tmp) {
             fn4 = () => renderSection(...HermesBuiltin.copyRestArgs());
           }
-          obj2[8] = fn4;
-          let tmp25 = key;
+          obj2.children = fn4;
           let _HermesInternal4 = HermesInternal;
           let arr3 = items2.push(tmp19(tmp20, obj2, "" + key));
         } else {
           let obj3 = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutStart: null, layoutSize: null, nextSectionLayoutPosition: null, scrollPosValue: null, fastListInstance: null, section: null, debug: false, children: null };
-          let tmp53 = recyclerKey;
-          obj3[0] = recyclerKey;
-          obj3[1] = flag;
-          obj3[2] = tmp2;
-          let tmp54 = layoutStart;
-          obj3[3] = layoutStart;
-          let tmp55 = layoutSize;
-          obj3[4] = tmp5;
-          obj3[5] = items1[0];
-          obj3[6] = self.scrollPosValue;
-          obj3[7] = self;
-          let tmp56 = section;
-          obj3[8] = section;
+          obj3.recyclerKey = recyclerKey;
+          obj3.horizontal = flag;
+          obj3.disableWrapper = tmp2;
+          obj3.layoutStart = layoutStart;
+          obj3.layoutSize = tmp5;
+          obj3.nextSectionLayoutPosition = items1[0];
+          obj3.scrollPosValue = self.scrollPosValue;
+          obj3.fastListInstance = self;
+          obj3.section = section;
           let fn3 = renderSection;
-          let tmp51 = callback3;
+          let tmp51 = closure_11;
           let tmp52 = closure_20;
           if (!tmp) {
             fn3 = () => renderSection(...HermesBuiltin.copyRestArgs());
           }
-          obj3[10] = fn3;
-          let tmp17 = key;
+          obj3.children = fn3;
           let _HermesInternal3 = HermesInternal;
           let arr4 = items2.push(tmp51(tmp52, obj3, "" + key));
         }
       } else if (tmp45.ITEM === type) {
         obj = { recyclerKey: null, horizontal: null, disableWrapper: null, layoutSize: null, fastListInstance: null, section: null, item: null, debug: false, children: null };
-        let tmp10 = recyclerKey;
-        obj[0] = recyclerKey;
-        obj[1] = flag;
-        obj[2] = tmp2;
-        let tmp11 = layoutSize;
-        obj[3] = tmp5;
-        obj[4] = self;
-        let tmp12 = section;
-        obj[5] = section;
-        let tmp13 = item;
-        obj[6] = item;
+        obj.recyclerKey = recyclerKey;
+        obj.horizontal = flag;
+        obj.disableWrapper = tmp2;
+        obj.layoutSize = tmp5;
+        obj.fastListInstance = self;
+        obj.section = section;
+        obj.item = item;
         let fn2 = renderItem;
-        let tmp8 = callback3;
+        let tmp8 = closure_11;
         let tmp9 = closure_23;
         if (!tmp) {
           fn2 = () => renderItem(...HermesBuiltin.copyRestArgs());
         }
-        obj[8] = fn2;
-        let tmp14 = key;
+        obj.children = fn2;
         let _HermesInternal2 = HermesInternal;
         let arr5 = items2.push(tmp8(tmp9, obj, "" + key));
       } else if (tmp45.SECTION_FOOTER === type) {
         let obj4 = { recyclerKey: null, horizontal: null, disableWrapper: null, fastListInstance: null, layoutSize: null, section: null, debug: false, children: null };
-        let tmp48 = recyclerKey;
-        obj4[0] = recyclerKey;
-        obj4[1] = flag;
-        obj4[2] = tmp2;
-        obj4[3] = self;
-        let tmp49 = layoutSize;
-        obj4[4] = tmp5;
-        let tmp50 = section;
-        obj4[5] = section;
+        obj4.recyclerKey = recyclerKey;
+        obj4.horizontal = flag;
+        obj4.disableWrapper = tmp2;
+        obj4.fastListInstance = self;
+        obj4.layoutSize = tmp5;
+        obj4.section = section;
         let fn = renderSectionFooter;
-        let tmp46 = callback3;
+        let tmp46 = closure_11;
         let tmp47 = closure_22;
         if (!tmp) {
           fn = () => renderSectionFooter(...HermesBuiltin.copyRestArgs());
         }
-        obj4[7] = fn;
-        let tmp6 = key;
+        obj4.children = fn;
         let _HermesInternal = HermesInternal;
         let arr6 = items2.push(tmp46(tmp47, obj4, "" + key));
       }
@@ -2578,7 +2243,7 @@ prototype4["renderItems"] = function renderItems() {
 };
 prototype4["isEmpty"] = function isEmpty() {
   const sections = this.props.sections;
-  return 0 === sections.reduce((arg0, arg1) => arg0 + arg1, 0);
+  return 0 === sections.reduce((acc, item) => acc + item, 0);
 };
 prototype4["setDisableRecycling"] = function setDisableRecycling(arg0) {
   const fastListComputer = this.state.fastListComputer;
@@ -2589,16 +2254,16 @@ prototype4["render"] = function render() {
   const props = this.props;
   ({ manualRef, onScroll, onScrollEnd, onLayout, renderHeader, renderFooter, renderSection, renderItem, renderSectionFooter, getRecyclerKey, onEndReached, endReachedThreshold, headerSize, footerSize, sectionSize, sectionFooterSize, itemSize, sections, scrollPosValue, batchesToRender, optimizeListItemRender, initialScrollSection, initialScrollItem, initialScrollOrientation, initialScrollStart, getAnchorIdFromIndex, getAnchorIndexFromId, EXPERIMENTAL_enableAnchorWhileScrolling, chunkBase, disableContentWrappers, childrenWrapper, stickyHeaderFooter, stickySectionsVariant, persistantKeys, disableRecyclingOnFullCompute, disableLegacyGestureHandling, viewabilityConfig, onViewableItemsChanged, debugLayout, renderAccessory, removeClippedSubviews } = props);
   if (undefined === removeClippedSubviews) {
-    obj = set2;
+    obj = PlatformUtils;
     removeClippedSubviews = obj.isAndroid();
   }
   if (props.inActionSheet) {
     let BottomSheetScrollView = BottomSheetModal.BottomSheetScrollView;
   } else {
-    BottomSheetScrollView = closure_8;
+    BottomSheetScrollView = React6;
   }
   obj = {};
-  const merged = Object.assign(callback(props, closure_3));
+  const merged = Object.assign(_objectWithoutProperties(props, closure_3));
   obj.accessibilityRole = "list";
   obj.ref = refObjectUnionAsPropDefault(self.scrollView);
   obj.scrollEventThrottle = 16;
@@ -2606,26 +2271,27 @@ prototype4["render"] = function render() {
   ({ handleScroll: obj2.onScroll, handleLayout: obj2.onLayout, handleMomentumScrollEnd: obj2.onMomentumScrollEnd, handleScrollBeginDrag: obj2.onScrollBeginDrag } = self);
   obj.removeClippedSubviews = removeClippedSubviews;
   obj.children = self.renderItems();
-  const children = [callback3(BottomSheetScrollView, obj), , ];
+  const children = [closure_1_11(BottomSheetScrollView, obj), , ];
   obj = { scrollViewRef: self.scrollView, scrollPosValue: self.scrollPosValue, horizontal: null, onScrollWorklet: null };
   let flag = self.props.horizontal;
   if (flag == null) {
     flag = false;
   }
-  obj[2] = flag;
-  obj[3] = props.onScrollWorklet;
-  children[1] = callback3(FastListScrollWorklet, obj);
+  obj.horizontal = flag;
+  obj.onScrollWorklet = props.onScrollWorklet;
+  children[1] = closure_1_11(FastListScrollWorklet, obj);
   let renderAccessoryResult = null;
   if (null != renderAccessory) {
     renderAccessoryResult = renderAccessory(self);
   }
   children[2] = renderAccessoryResult;
-  return closure_10(closure_12, { children });
+  return closure_1_10(closure_1_12, { children });
 };
 FastList.defaultProps = { batchesToRender: 12, contentInset: { top: 0, right: 0, left: 0, bottom: 0 }, disableLegacyGestureHandling: false, disableRecyclingOnFullCompute: false, stickyHeaderFooter: false };
-let closure_29 = { code: "function FastListTsx2(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}" };
-const animatedComponent = importDefaultResult.createAnimatedComponent(FastList);
-let result = require("set").fileFinishedImporting("lib/native/FastList.tsx");
+const __initData2 = { code: "function FastListTsx2(event){const{horizontal,workletMounted,scrollPosValue,onScrollWorklet}=this.__closure;const scrollPosition=!horizontal?event.contentOffset.y:event.contentOffset.x;const contentSize=!horizontal?event.contentSize.height:event.contentSize.width;if(contentSize===0&&!workletMounted.get())return;workletMounted.set(true);scrollPosValue.set(Math.min(scrollPosition,contentSize));if(onScrollWorklet!=null){const layoutSize=!horizontal?event.layoutMeasurement.height:event.layoutMeasurement.width;onScrollWorklet(scrollPosition,contentSize,layoutSize);}}" };
+const animatedComponent = ReanimatedRexport.createAnimatedComponent(FastList);
+let size = fn(2);
+let result = size.fileFinishedImporting("lib/native/FastList.tsx");
 
 export default FastList;
 export const DEFAULT_BATCHES_TO_RENDER = 12;
@@ -2633,6 +2299,6 @@ export const MINIMUM_BATCHES_TO_RENDER = 5;
 export const getItemSizeOverrideKey = function getItemSizeOverrideKey(arg0, arg1, arg2) {
   return "" + arg0 + ":" + arg1 + ":" + arg2;
 };
-export const FastListItemTypes = obj;
+export { FastListItemTypes };
 export { FastListComputer };
 export const AnimatedFastList = animatedComponent;

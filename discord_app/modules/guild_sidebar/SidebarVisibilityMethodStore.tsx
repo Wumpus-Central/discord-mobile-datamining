@@ -1,22 +1,22 @@
 // === Module 11195: SidebarVisibilityMethodStore ===
 
 // Module 11195 (SidebarVisibilityMethodStore)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create(() => ({}));
-const result = set.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
+const SidebarVisibilityMethodStore = module_560.create(() => ({}));
+const result = size.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
 
-export const SidebarVisibilityMethodStore = obj;
+export { SidebarVisibilityMethodStore };
 export const setGetVisibleGuildIds = function setGetVisibleGuildIds(getVisibleGuildIds) {
-  obj = { getVisibleGuildIds };
+  const obj = { getVisibleGuildIds };
   obj.setState(obj);
 };
 export const getVisibleGuildIdsMethod = function getVisibleGuildIdsMethod() {
   return obj.getState().getVisibleGuildIds;
 };
 export const setGetVisibleChannelIds = function setGetVisibleChannelIds(getVisibleChannelIds) {
-  obj = { getVisibleChannelIds };
+  const obj = { getVisibleChannelIds };
   obj.setState(obj);
 };
 export const getVisibleChannelIdsMethod = function getVisibleChannelIdsMethod() {

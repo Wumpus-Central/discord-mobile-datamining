@@ -1,11 +1,11 @@
-// === Module 4609: handleConnectionInfoChange ===
+// === Module 4609: NetworkStore ===
 
-// Module 4609 (handleConnectionInfoChange)
-import set from "set" /* 2 */;
+// Module 4609 (NetworkStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import awaitOnlineDefault from "awaitOnline" /* 1461 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function handleConnectionInfoChange(type) {
   if (null != type.type) {
@@ -13,39 +13,38 @@ function handleConnectionInfoChange(type) {
   } else {
     UNKNOWN = NetworkConnectionTypes.UNKNOWN;
   }
-  let UNKNOWN2 = type.effectiveSpeed;
+  UNKNOWN2 = type.effectiveSpeed;
   if (UNKNOWN2 == null) {
     UNKNOWN2 = NetworkConnectionSpeeds.UNKNOWN;
   }
-  const serviceProvider = type.serviceProvider;
+  serviceProvider = type.serviceProvider;
   networkStoreClass.emitChange();
 }
-const NetworkConnectionTypes = ME.NetworkConnectionTypes;
-const NetworkConnectionSpeeds = ME.NetworkConnectionSpeeds;
+const NetworkConnectionTypes = Constants.NetworkConnectionTypes;
+const NetworkConnectionSpeeds = Constants.NetworkConnectionSpeeds;
 let UNKNOWN = NetworkConnectionTypes.UNKNOWN;
-UNKNOWN = NetworkConnectionSpeeds.UNKNOWN;
-let c6 = null;
+let UNKNOWN2 = NetworkConnectionSpeeds.UNKNOWN;
+let serviceProvider = null;
 const Store = initializeDefault.Store;
 class NetworkStoreClass extends Store {
 }
 const prototype = NetworkStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  const networkInformation = awaitOnlineDefault.getNetworkInformation();
+  const networkInformation = NetworkUtilsDefault.getNetworkInformation();
   networkInformation.then(handleConnectionInfoChange);
-  const obj = awaitOnlineDefault;
-  awaitOnlineDefault.addChangeCallback(handleConnectionInfoChange);
+  NetworkUtilsDefault.addChangeCallback(handleConnectionInfoChange);
 };
 prototype["getType"] = function getType() {
   return UNKNOWN;
 };
 prototype["getEffectiveConnectionSpeed"] = function getEffectiveConnectionSpeed() {
-  return UNKNOWN;
+  return UNKNOWN2;
 };
 prototype["getServiceProvider"] = function getServiceProvider() {
-  return c6;
+  return serviceProvider;
 };
 NetworkStoreClass.displayName = "NetworkStore";
-const networkStoreClass = new NetworkStoreClass(dispatcherDefault, {});
-const result = set.fileFinishedImporting("stores/NetworkStore.tsx");
+const networkStoreClass = new NetworkStoreClass(DispatcherDefault, {});
+const result = size.fileFinishedImporting("stores/NetworkStore.tsx");
 
 export default networkStoreClass;

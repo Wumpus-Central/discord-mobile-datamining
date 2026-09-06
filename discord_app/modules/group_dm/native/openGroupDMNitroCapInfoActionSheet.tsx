@@ -1,12 +1,12 @@
 // === Module 12188: openGroupDMNitroCapInfoActionSheet ===
 
 // Module 12188 (openGroupDMNitroCapInfoActionSheet)
-import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/group_dm/native/openGroupDMNitroCapInfoActionSheet.tsx");
+const result = size.fileFinishedImporting("modules/group_dm/native/openGroupDMNitroCapInfoActionSheet.tsx");
 
 export default function openGroupDMNitroCapInfoActionSheet() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12189, dependencyMap.paths), "GroupDMNitroCapInfoActionSheet");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12189, dependencyMap.paths), "GroupDMNitroCapInfoActionSheet");
 };

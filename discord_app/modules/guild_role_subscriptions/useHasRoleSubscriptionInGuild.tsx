@@ -1,29 +1,28 @@
-// === Module 7252: computeHasRoleSubscriptionsInGuild ===
+// === Module 7252: useHasRoleSubscriptionInGuild ===
 
-// Module 7252 (computeHasRoleSubscriptionsInGuild)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+// Module 7252 (useHasRoleSubscriptionInGuild)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-function computeHasRoleSubscriptionsInGuild(c0, closure_3) {
+const require = fn;
+function computeHasRoleSubscriptionsInGuild(id1, arg1) {
   let tmp = arg2;
   if (arg2 === undefined) {
     let member = null;
-    if (null != c0) {
-      member = member.getMember(c0, id.getId());
+    if (null != id1) {
+      member = GuildMemberStore.getMember(id1, AuthenticationStore.getId());
     }
     tmp = member;
   }
   let tmp5 = arg3;
   if (arg3 === undefined) {
-    const items = [closure_5];
+    const items = [GuildStore];
     tmp5 = items;
   }
   [obj] = tmp5;
-  const guild = obj.getGuild(c0);
+  const guild = obj.getGuild(id1);
   if (null != guild) {
     if (null != tmp) {
       const features = guild.features;
@@ -32,7 +31,6 @@ function computeHasRoleSubscriptionsInGuild(c0, closure_3) {
         for (const item10028 of roles) {
           let tmp11;
           if (arg1 != null) {
-            let tmp12 = item10028;
             tmp11 = arg1[tmp10];
           }
           let prop;
@@ -43,7 +41,6 @@ function computeHasRoleSubscriptionsInGuild(c0, closure_3) {
             }
           }
           if (null != prop) {
-            let tmp14 = obj2;
             obj2.return();
             let flag = true;
             return true;
@@ -55,28 +52,30 @@ function computeHasRoleSubscriptionsInGuild(c0, closure_3) {
   }
   return false;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx");
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHasRoleSubscriptionInGuild.tsx");
 
 export default function useHasRoleSubscriptionInGuild(arg0) {
-  const _require = arg0;
-  let items = [closure_2, closure_3];
-  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () => {
+  _require = arg0;
+  let items = [AuthenticationStore, GuildMemberStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     let member = null;
     if (null != closure_0) {
-      member = closure_1_3.getMember(tmp, closure_1_2.getId());
+      member = GuildMemberStore.getMember(tmp, AuthenticationStore.getId());
     }
     return member;
   });
-  const obj = _require(stateFromStores[5]);
-  const items1 = [closure_5, closure_4];
+  const obj = require("initialize");
+  const items1 = [GuildStore, GuildRoleStore];
   const items2 = [arg0, stateFromStores];
-  return _require(stateFromStores[5]).useStateFromStores(items1, () => {
+  return require("initialize").useStateFromStores(items1, () => {
     let rolesSnapshot;
     if (null != closure_0) {
-      rolesSnapshot = closure_1_4.getRolesSnapshot(tmp2);
+      rolesSnapshot = GuildRoleStore.getRolesSnapshot(tmp2);
     }
-    const items = [closure_1_5];
-    return closure_1_7(closure_0, rolesSnapshot, stateFromStores, items);
+    const items = [GuildStore];
+    return computeHasRoleSubscriptionsInGuild(closure_0, rolesSnapshot, stateFromStores, items);
   }, items2);
 };
 export { computeHasRoleSubscriptionsInGuild };

@@ -1,13 +1,11 @@
-// === Module 7110: ack ===
+// === Module 7110: ReadStateActionCreators ===
 
-// Module 7110 (ack)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "rebuild" /* 5506 */;
-import { isReadableType } from "createChannelRecord" /* 1961 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "setIndex" /* 7111 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { CURRENT_APP_CONTEXT } from "ME" /* 1074 */;
+// Module 7110 (ReadStateActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5506 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildCategoryStore from "GuildCategoryStore" /* 7111 */;
+import UserStore from "UserStore" /* 1371 */;
 
 function ack(channelId, location, arg2, arg3, messageId) {
   let flag = arg2;
@@ -18,11 +16,10 @@ function ack(channelId, location, arg2, arg3, messageId) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_ACK", channelId, messageId, immediate: flag, force: flag2, context: CURRENT_APP_CONTEXT, location };
+  const obj = { type: "CHANNEL_ACK", channelId, messageId, immediate: flag, force: flag2, context: CURRENT_APP_CONTEXT, location };
   obj.dispatch(obj);
 }
-function ackCategory(id, arg1, arg2, arg3) {
+function ackCategory(id, location, arg2, arg3) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -31,14 +28,13 @@ function ackCategory(id, arg1, arg2, arg3) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  let channel;
   let mapped;
-  channel = channel.getChannel(id);
+  let channel = ChannelStore.getChannel(id);
   if (null != channel) {
     if (null != channel.guild_id) {
-      categories = categories.getCategories(channel.guild_id);
+      const categories = GuildCategoryStore.getCategories(channel.guild_id);
       if (null != categories[id]) {
-        const found = categories[id].filter((channel) => callback(channel.channel.type));
+        const found = categories[id].filter((channel) => isReadableType(channel.channel.type));
         mapped = found.map((channel) => channel.channel.id);
         const item = found.forEach((channel) => {
           channel = channel.channel;
@@ -46,113 +42,86 @@ function ackCategory(id, arg1, arg2, arg3) {
           if (guild_id == null) {
             guild_id = channel.guild_id;
           }
-          const activeJoinedThreadsForParent = closure_1_2.getActiveJoinedThreadsForParent(guild_id, channel.id);
+          const activeJoinedThreadsForParent = ActiveJoinedThreadsStore.getActiveJoinedThreadsForParent(guild_id, channel.id);
           for (const key10011 in activeJoinedThreadsForParent) {
-            let tmp3 = key10011;
-            let tmp4 = mapped;
             let arr = mapped.push(key10011);
             continue;
           }
         });
         for (const item10022 of mapped) {
-          let tmp6 = ack;
-          let tmp7 = item10022;
-          let tmp8 = arg1;
-          let tmp9 = flag;
-          let tmp10 = flag2;
           let tmp11 = ack(item10022, arg1, flag, flag2);
           continue;
         }
-        let arr = categories[id];
       }
     }
   }
 }
-const result = require("set").fileFinishedImporting("actions/ReadStateActionCreators.tsx");
+const isReadableType = fn(1961).isReadableType;
+const CURRENT_APP_CONTEXT = fn(1074).CURRENT_APP_CONTEXT;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/ReadStateActionCreators.tsx");
 
 export { ack };
 export { ackCategory };
-export const ackChannel = function ackChannel(channel, arg1) {
+export const ackChannel = function ackChannel(channel, location) {
   if (channel.isCategory()) {
-    ackCategory(channel.id, arg1, true, true);
+    ackCategory(channel.id, location, true, true);
   } else {
     const id = channel.id;
     if (channel.isForumLikeChannel()) {
-      let tmpResult = tmp(11);
+      tmp(11);
       const _Date = Date;
-      tmpResult = tmp(573);
-      let obj = { type: "CHANNEL_ACK", channelId: null, messageId: null, immediate: null, force: null, context: null, location: null };
-      obj[1] = id;
-      obj[2] = tmpResult.fromTimestamp(Date.now());
-      obj[3] = true;
-      obj[4] = true;
-      obj[5] = CURRENT_APP_CONTEXT;
-      obj[6] = arg1;
+      const tmpResult = tmp(573);
+      let obj = { type: "CHANNEL_ACK", channelId: id, messageId: tmpResult.fromTimestamp(Date.now()), immediate: true, force: true, context: CURRENT_APP_CONTEXT, location };
       tmpResult.dispatch(obj);
       const fromTimestampResult = tmpResult.fromTimestamp(Date.now());
     } else {
-      obj = { type: "CHANNEL_ACK", channelId: null, messageId: "y", immediate: 4, force: 2, context: 0, location: "BULK_ACK" };
-      obj[1] = id;
-      obj[3] = true;
-      obj[4] = true;
-      obj[5] = CURRENT_APP_CONTEXT;
-      obj[6] = arg1;
+      obj = { type: "CHANNEL_ACK", channelId: id, messageId: "y", immediate: true, force: true, context: CURRENT_APP_CONTEXT, location };
       tmp(573).dispatch(obj);
       const tmpResult1 = tmp(573);
     }
   }
 };
 export const bulkAck = function bulkAck(mapped, onFinished) {
-  let obj = dispatcherDefault;
-  obj = { type: "BULK_ACK", channels: mapped, context: CURRENT_APP_CONTEXT, onFinished };
+  const obj = { type: "BULK_ACK", channels: mapped, context: CURRENT_APP_CONTEXT, onFinished };
   obj.dispatch(obj);
 };
 export const localAck = function localAck(channelId) {
-  let obj = dispatcherDefault;
-  obj = { type: "CHANNEL_LOCAL_ACK", channelId };
+  const obj = { type: "CHANNEL_LOCAL_ACK", channelId };
   obj.dispatch(obj);
 };
 export const enableAutomaticAck = function enableAutomaticAck(channelId, windowId) {
-  let obj = dispatcherDefault;
-  obj = { type: "ENABLE_AUTOMATIC_ACK", channelId, windowId };
+  const obj = { type: "ENABLE_AUTOMATIC_ACK", channelId, windowId };
   obj.dispatch(obj);
 };
 export const registerVisibleInlineChannel = function registerVisibleInlineChannel(channelId, windowId) {
-  let obj = dispatcherDefault;
-  obj = { type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
+  const obj = { type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
   obj.dispatch(obj);
 };
 export const unregisterVisibleInlineChannel = function unregisterVisibleInlineChannel(channelId, windowId) {
-  let obj = dispatcherDefault;
-  obj = { type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
+  const obj = { type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId, windowId };
   obj.dispatch(obj);
 };
 export const disableAutomaticAck = function disableAutomaticAck(channelId, windowId) {
-  let obj = dispatcherDefault;
-  obj = { type: "DISABLE_AUTOMATIC_ACK", channelId, windowId };
+  const obj = { type: "DISABLE_AUTOMATIC_ACK", channelId, windowId };
   obj.dispatch(obj);
 };
-export const ackGuildFeature = function ackGuildFeature(closure_0, GUILD_EVENT, closure_1_11) {
-  let obj = dispatcherDefault;
-  obj = { type: "GUILD_FEATURE_ACK", id: closure_0, ackType: GUILD_EVENT, ackedId: closure_1_11, local: false };
+export const ackGuildFeature = function ackGuildFeature(guildId, GUILD_EVENT, tmp12Result) {
+  const obj = { type: "GUILD_FEATURE_ACK", id: guildId, ackType: GUILD_EVENT, ackedId: tmp12Result, local: false };
   obj.dispatch(obj);
 };
-export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER) {
-  currentUser = currentUser.getCurrentUser();
+export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER, ackedId) {
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   if (null != id) {
-    let obj = dispatcherDefault;
-    obj = { type: "USER_NON_CHANNEL_ACK", ackType: null, ackedId: null, local: false };
-    obj[1] = NOTIFICATION_CENTER;
-    obj[2] = arg1;
+    const obj = { type: "USER_NON_CHANNEL_ACK", ackType: NOTIFICATION_CENTER, ackedId, local: false };
     obj.dispatch(obj);
   }
 };
 export const clearOldestUnreadMessageId = function clearOldestUnreadMessageId(current) {
-  let obj = dispatcherDefault;
-  obj = { type: "CLEAR_OLDEST_UNREAD_MESSAGE", channelId: current };
+  const obj = { type: "CLEAR_OLDEST_UNREAD_MESSAGE", channelId: current };
   obj.dispatch(obj);
 };

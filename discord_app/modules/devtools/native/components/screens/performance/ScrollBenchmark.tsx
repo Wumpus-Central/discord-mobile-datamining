@@ -1,14 +1,14 @@
 // === Module 15735: ScrollBenchmark ===
 
 // Module 15735 (ScrollBenchmark)
-import noopAll from "noop" /* 19 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
+import TableRow from "TableRow" /* 5605 */;
 import useFrameMonitorDefault from "useFrameMonitor" /* 15732 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
 
 export default function ScrollBenchmark(subLabel) {
   let str = subLabel.subLabel;
@@ -26,10 +26,10 @@ export default function ScrollBenchmark(subLabel) {
   if (monitoring) {
     str3 = "danger";
   }
-  obj[2] = str3;
+  obj.variant = str3;
   if (monitoring) {
     start = tmp.stop;
   }
-  obj[4] = start;
-  return jsx(TableRowInner.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
+  obj.onPress = start;
+  return jsx(TableRow.TableRow, { label: str2, subLabel: str, variant: null, arrow: true, onPress: null });
 };

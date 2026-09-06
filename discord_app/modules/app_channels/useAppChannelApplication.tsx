@@ -1,12 +1,12 @@
 // === Module 11611: useAppChannelApplication ===
 
 // Module 11611 (useAppChannelApplication)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import fetchApplication from "fetchApplication" /* 7163 */;
+import Constants from "Constants" /* 1074 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7163 */;
+import size from "module_2" /* 2 */;
 
-const ChannelTypes = ME.ChannelTypes;
-const result = set.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
+const ChannelTypes = Constants.ChannelTypes;
+const result = size.fileFinishedImporting("modules/app_channels/useAppChannelApplication.tsx");
 
 export const useAppChannelApplication = function useAppChannelApplication(stateFromStores) {
   let type;
@@ -17,5 +17,5 @@ export const useAppChannelApplication = function useAppChannelApplication(stateF
   if (type === ChannelTypes.GUILD_APP) {
     application_id = stateFromStores.application_id;
   }
-  return fetchApplication.useApplication(application_id).data;
+  return ApplicationActionCreators.useApplication(application_id).data;
 };

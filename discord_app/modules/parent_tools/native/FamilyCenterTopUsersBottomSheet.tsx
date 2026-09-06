@@ -1,53 +1,49 @@
-// === Module 14897: UserRow ===
+// === Module 14897: FamilyCenterTopUsersBottomSheet ===
 
-// Module 14897 (UserRow)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import Text from "Text" /* 4556 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+// Module 14897 (FamilyCenterTopUsersBottomSheet)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import TableRow from "TableRow" /* 5605 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7593 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7593 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function UserRow(userActivity) {
   userActivity = userActivity.userActivity;
-  user = user.getUser(userActivity.user_id);
+  const user = UserStore.getUser(userActivity.user_id);
   if (null == user) {
     return null;
   } else {
-    let obj = getEmptyActivityFormatter;
+    let obj = FamilyCenterUtils;
     const topUserOrGuildDescription = obj.getTopUserOrGuildDescription(userActivity.dms_sent, userActivity.call_count);
-    obj = { label: null, subLabel: null, icon: null };
-    obj[0] = nameFromUserDefault.getName(user);
-    obj[1] = topUserOrGuildDescription;
-    obj = { size: null, user: null, guildId: "Array" };
-    obj[0] = Button.AvatarSizes.SMALL;
-    obj[1] = user;
-    obj[2] = callback(Button.Avatar, obj);
-    return callback(TableRowInner.TableRow, obj);
+    obj = { label: UserUtilsDefault.getName(user), subLabel: topUserOrGuildDescription, icon: null };
+    obj = { size: native.AvatarSizes.SMALL, user, guildId: "Array" };
+    obj.icon = React4(native.Avatar, obj);
+    return React4(TableRow.TableRow, obj);
   }
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-let closure_6 = createCacheKey.createStyles({ header: { textAlign: "center" } });
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ header: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopUsersBottomSheet.tsx");
 
 export default function FamilyCenterTopUsersBottomSheet(topUserActivities) {
   topUserActivities = topUserActivities.topUserActivities;
   let obj = { children: null };
-  obj = { variant: "text-md/bold", style: callback3().header, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(messagesProxyDefault.BxbvS7);
-  const items = [callback(Text.Text, obj), ];
-  obj = { hasIcons: true, children: topUserActivities.map((userActivity) => callback(closure_7, { userActivity }, userActivity.user_id)) };
-  items[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
-  obj[0] = items;
-  return callback2(ActionSheet.ActionSheet, obj);
+  obj = { variant: "text-md/bold", style: closure_6().header, children: null };
+  const intl = util.intl;
+  obj.children = intl.string(_modDef2396.BxbvS7);
+  const items = [React4(Text_Text.Text, obj), ];
+  obj = { hasIcons: true, children: topUserActivities.map((userActivity) => closure_1_4(UserRow, { userActivity }, userActivity.user_id)) };
+  items[1] = React4(TableRowGroup.TableRowGroup, obj);
+  obj.children = items;
+  return hasOwnProperty(ActionSheet.ActionSheet, obj);
 };

@@ -1,9 +1,9 @@
-// === Module 8292: THUMBNAIL_MARGIN ===
+// === Module 8292: Constants ===
 
-// Module 8292 (THUMBNAIL_MARGIN)
-import set from "set" /* 2 */;
+// Module 8292 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");
+const result = size.fileFinishedImporting("modules/media_viewer/native/Constants.tsx");
 
 export const THUMBNAIL_MARGIN = 2;
 export const THUMBNAIL_MIN_WIDTH = 24;

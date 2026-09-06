@@ -1,33 +1,33 @@
 // === Module 5522: openQuarantineModeInfoModal ===
 
 // Module 5522 (openQuarantineModeInfoModal)
-import noopAll from "noop" /* 19 */;
-import getBestActiveInput from "getBestActiveInput" /* 4425 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import { Keyboard } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ChatInputUtils from "ChatInputUtils" /* 4425 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/quarantine/openQuarantineModeInfoModal.native.tsx");
+require = fn;
+const Keyboard = fn(17).Keyboard;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quarantine/openQuarantineModeInfoModal.native.tsx");
 
 export default function openQuarantineModeInfoModal() {
   Keyboard.dismiss();
-  let obj = getBestActiveInput;
+  let obj = ChatInputUtils;
   const bestActiveInput = obj.getBestActiveInput();
   if (bestActiveInput != null) {
     bestActiveInput.blur();
   }
   obj = {
     importer() {
-      return callback(paths[6])(paths[5], paths.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return require("asyncRequireImpl")(paths[5], paths.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const merged = Object.assign(arg0);
-          return closure_1_4(closure_0, {});
+          return closure_2_4(closure_0, {});
         };
       });
     }
   };
-  _modDef4905.openLazy(obj);
+  actions_AlertActionCreatorsDefault.openLazy(obj);
 };

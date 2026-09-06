@@ -1,15 +1,14 @@
-// === Module 10878: getDiscoverableApplicationStream ===
+// === Module 10878: useDiscoverableApplicationStream ===
 
-// Module 10878 (getDiscoverableApplicationStream)
-import closure_2 from "reset" /* 4582 */;
-import closure_3 from "markAllUserIdListsStale" /* 4209 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
+// Module 10878 (useDiscoverableApplicationStream)
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-const require = arg1;
+const require = fn;
 function getDiscoverableApplicationStream(id, items) {
   let tmp = items;
   if (items === undefined) {
-    items = [closure_2, closure_3];
+    items = [ApplicationStreamingStore, RelationshipStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -31,15 +30,17 @@ function getDiscoverableApplicationStream(id, items) {
   }
   return tmp6;
 }
-const result = require("set").fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
 
 export default function useDiscoverableApplicationStream(arg0) {
-  const _require = arg0;
-  let items = [closure_2, closure_3];
+  _require = arg0;
+  let items = [ApplicationStreamingStore, RelationshipStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
-    const items = [closure_1_2, closure_1_3];
-    return closure_1_5(closure_0, items);
+  return require("initialize").useStateFromStores(items, () => {
+    const items = [ApplicationStreamingStore, RelationshipStore];
+    return getDiscoverableApplicationStream(closure_0, items);
   }, items1);
 };
 export { getDiscoverableApplicationStream };

@@ -1,10 +1,12 @@
-// === Module 17042: renderActivityOrPIP ===
+// === Module 17042: FramePanelUI ===
 
-// Module 17042 (renderActivityOrPIP)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17042 (FramePanelUI)
+import ActivityPanelUI from "ActivityPanelUI" /* 17016 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17041 */;
+import FramePanelSystemUIManagerDefault from "FramePanelSystemUIManager" /* 17047 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   if ("pip" === arg1) {
     let tmp4 = 17043;
@@ -13,10 +15,12 @@ function renderActivityOrPIP(arg0, arg1, transitionState, transitionCleanUp) {
   }
   return jsx(importDefault(tmp4), { transitionState, transitionCleanUp }, arg0);
 }
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelUI.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelUI.tsx");
 
 export default function FramePanelUI() {
-  const callback = React.useCallback(() => callback2(callback(table[4]), {}), []);
-  const items = [callback];
-  return React.useMemo(() => closure_1_4(callback(closure_1_2[5]).BaseActivityPanelUI, { renderActivityOrPIP: closure_1_5, context: closure_1_1(closure_1_2[6]), renderActivityPanelSystemUIManager: callback }), items);
+  const renderActivityPanelSystemUIManager = noop.useCallback(() => jsx(FramePanelSystemUIManagerDefault, {}), []);
+  const items = [renderActivityPanelSystemUIManager];
+  return noop.useMemo(() => jsx(ActivityPanelUI.BaseActivityPanelUI, { renderActivityOrPIP, context: FramePanelStateContextDefault, renderActivityPanelSystemUIManager }), items);
 };

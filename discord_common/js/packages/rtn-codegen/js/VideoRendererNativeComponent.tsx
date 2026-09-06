@@ -1,16 +1,16 @@
-// === Module 9617: __INTERNAL_VIEW_CONFIG ===
+// === Module 9617: VideoRendererNativeComponent ===
 
-// Module 9617 (__INTERNAL_VIEW_CONFIG)
-import set from "set" /* 2 */;
+// Module 9617 (VideoRendererNativeComponent)
 import weakSet from "weakSet" /* 106 */;
-import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
+import module_65 from "module_65" /* 65 */;
+import size from "module_2" /* 2 */;
 
-let obj = { uiViewClassName: "DCDVideoRenderer", directEventTypes: { topSize: { registrationName: "onSize" }, topReady: { registrationName: "onReady" } }, validAttributes: null };
-obj = { useSurfaceDirectRenderer: true, streamId: true };
+let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "DCDVideoRenderer", directEventTypes: { topSize: { registrationName: "onSize" }, topReady: { registrationName: "onReady" } }, validAttributes: null };
+__INTERNAL_VIEW_CONFIG = { useSurfaceDirectRenderer: true, streamId: true };
 const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSize: true, onReady: true }));
-obj[2] = obj;
-const value = setRuntimeConfigProvider.get("DCDVideoRenderer", () => obj);
-const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/VideoRendererNativeComponent.tsx");
+__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+const value = module_65.get("DCDVideoRenderer", () => obj);
+const result = size.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/VideoRendererNativeComponent.tsx");
 
 export default value;
-export const __INTERNAL_VIEW_CONFIG = obj;
+export { __INTERNAL_VIEW_CONFIG };

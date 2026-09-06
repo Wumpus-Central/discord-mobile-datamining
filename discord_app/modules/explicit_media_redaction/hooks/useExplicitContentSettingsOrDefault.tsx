@@ -1,17 +1,18 @@
-// === Module 14820: useExplicitContentSettingOrDefault ===
+// === Module 14820: useExplicitContentSettingsOrDefault ===
 
-// Module 14820 (useExplicitContentSettingOrDefault)
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
-import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 7301 */;
-import closure_2 from "handleConnectionClosedOrResumed" /* 1221 */;
+// Module 14820 (useExplicitContentSettingsOrDefault)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7298 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7301 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
 
 export const useExplicitContentSettingOrDefault = function useExplicitContentSettingOrDefault() {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_2];
+  let obj = useStateFromStores;
+  const items = [UserSettingsProtoStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let prop;
@@ -19,8 +20,7 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
       prop = textAndImages.explicitContentSettings;
     }
     if (prop == null) {
-      prop = callback(table[2]).getExplicitContentSettingOrDefault();
-      const obj = callback(table[2]);
+      prop = SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();
     }
     return prop;
   });
@@ -28,24 +28,24 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.explicitContentGuilds;
   }
-  obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults.resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = { explicitContentGuilds: SensitiveMediaExplicitRedactionSettingsUtils.resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
   let tmpResult = tmp(7298);
   let prop1;
   if (stateFromStoresObject != null) {
     prop1 = stateFromStoresObject.explicitContentNonFriendDm;
   }
-  obj[1] = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop1, isDm: true });
+  obj.explicitContentNonFriendDm = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop1, isDm: true });
   tmpResult = tmp(7298);
   let prop2;
   if (stateFromStoresObject != null) {
     prop2 = stateFromStoresObject.explicitContentFriendDm;
   }
-  obj[2] = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop2, isDm: true, isFriend: true });
+  obj.explicitContentFriendDm = tmpResult.resolveExplicitContentSettingWithDefaults({ setting: prop2, isDm: true, isFriend: true });
   return obj;
 };
 export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDefault() {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_2];
+  let obj = useStateFromStores;
+  const items = [UserSettingsProtoStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let goreContentSettings;
@@ -53,8 +53,7 @@ export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDe
       goreContentSettings = textAndImages.goreContentSettings;
     }
     if (goreContentSettings == null) {
-      goreContentSettings = callback(table[3]).getGoreContentSettingOrDefault();
-      const obj = callback(table[3]);
+      goreContentSettings = SensitiveMediaGoreRedactionSettingsUtils.getGoreContentSettingOrDefault();
     }
     return goreContentSettings;
   });
@@ -62,18 +61,18 @@ export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDe
   if (stateFromStoresObject != null) {
     goreContentGuilds = stateFromStoresObject.goreContentGuilds;
   }
-  obj = { goreContentGuilds: resolveGoreSettingWithDefaults.resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
+  obj = { goreContentGuilds: SensitiveMediaGoreRedactionSettingsUtils.resolveGoreSettingWithDefaults({ setting: goreContentGuilds }), goreContentNonFriendDm: null, goreContentFriendDm: null };
   let tmpResult = tmp(7301);
   let prop;
   if (stateFromStoresObject != null) {
     prop = stateFromStoresObject.goreContentNonFriendDm;
   }
-  obj[1] = tmpResult.resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
+  obj.goreContentNonFriendDm = tmpResult.resolveGoreSettingWithDefaults({ setting: prop, isDm: true });
   tmpResult = tmp(7301);
   let goreContentFriendDm;
   if (stateFromStoresObject != null) {
     goreContentFriendDm = stateFromStoresObject.goreContentFriendDm;
   }
-  obj[2] = tmpResult.resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
+  obj.goreContentFriendDm = tmpResult.resolveGoreSettingWithDefaults({ setting: goreContentFriendDm, isDm: true, isFriend: true });
   return obj;
 };

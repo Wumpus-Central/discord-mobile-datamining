@@ -1,1422 +1,580 @@
-// === Module 7255: _fetchSubscriptionsSettings ===
+// === Module 7255: GuildRoleSubscriptionsActionCreators ===
 
-// Module 7255 (_fetchSubscriptionsSettings)
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+// Module 7255 (GuildRoleSubscriptionsActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildRoleSubscriptionsHttpApiAll from "GuildRoleSubscriptionsHttpApi" /* 7256 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _fetchSubscriptionsSettings() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+const require = fn;
+let closure_7 = async function _fetchSubscriptionsSettings(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let obj3 = GuildRoleSubscriptionsHttpApiAll;
+          c3 = 1;
+          c4 = 1;
+          const obj1 = { value: obj3.getGuildRoleSubscriptionsSettings(closure_0), done: false };
+          return obj1;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c4 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp5;
-              const callback = tmp2;
-              closure_0 = undefined;
-              let obj3 = closure_1_2(7256);
-              dependencyMap = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.getGuildRoleSubscriptionsSettings(closure_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            obj = callback(573);
-            obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS", settings: null };
-            obj3[1] = closure_0;
-            obj.dispatch(obj3);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp15) {
-          c4 = tmp;
-          throw tmp15;
-        }
+        closure_129_0 = value;
+        obj = closure_130_1(closure_130_3[4]);
+        obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS", settings: closure_129_0 };
+        obj.dispatch(obj3);
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp15) {
+      c4 = tmp;
+      throw tmp15;
+    }
   }
-  return applyArgumentsResult;
-}
-function _updateSubscriptionsSettings() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c5 === 2) {
+};
+let closure_8 = async function _updateSubscriptionsSettings(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_0 = undefined;
+          let obj3 = GuildRoleSubscriptionsHttpApiAll;
+          c4 = 1;
+          c5 = 1;
+          const obj1 = { value: obj3.updateGuildRoleSubscriptionsSettings(closure_0, closure_1), done: false };
+          return obj1;
+        }
+      } else if (arg0 === 1) {
         c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp5;
-              closure_2 = tmp2;
-              closure_0 = undefined;
-              let obj3 = closure_1_2(closure_1_3[3]);
-              c4 = 1;
-              c5 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.updateGuildRoleSubscriptionsSettings(closure_0, callback);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            obj = callback(table[4]);
-            obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS", settings: null };
-            obj3[1] = closure_0;
-            obj.dispatch(obj3);
-            c5 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp16) {
-          c5 = tmp;
-          throw tmp16;
-        }
+        closure_130_0 = value;
+        obj = closure_131_1(closure_131_3[4]);
+        obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS", settings: closure_130_0 };
+        obj.dispatch(obj3);
+        c5 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp16) {
+      c5 = tmp;
+      throw tmp16;
+    }
   }
-  return applyArgumentsResult;
-}
-function _fetchAllSubscriptionListingsDataForGuild() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c11 = 0;
-    c12 = 0;
-    c10 = 0;
-    const iter = (function*(arg0) {
-      if (c12 === 2) {
-        c12 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+};
+let closure_9 = async function _fetchAllSubscriptionListingsDataForGuild(arg0, value) {
+  if (c12 === 2) {
+    c12 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    while (true) {
+      c12 = 2;
+      let tmp4 = c11;
+      if (0 === c11) {
         if (arg0 === 1) {
-          throw arg1;
+          c12 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c12 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_8 = tmp;
+          closure_7 = tmp4;
+          closure_135_1 = undefined;
+          let countryCode;
+          closure_135_0 = closure_0;
+          let obj1 = closure_1;
+          if (closure_1 === undefined) {
+            obj1 = {};
+          }
+          let flag = obj1.includeSoftDeleted;
+          if (flag === undefined) {
+            flag = true;
+          }
+          closure_135_1 = flag;
+          countryCode = obj1.countryCode;
+          closure_135_3 = undefined;
+          closure_135_4 = undefined;
+          closure_135_5 = undefined;
+          closure_135_6 = undefined;
+          closure_135_7 = undefined;
+          closure_135_8 = undefined;
+          closure_135_9 = undefined;
+          closure_135_10 = undefined;
+          c11 = 1;
+          c12 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp4) {
+        if (arg0 === 1) {
+          c12 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c12 = 3;
+          let obj2 = { value, done: true };
+          return obj2;
+        } else {
+          let obj13 = closure_136_1(closure_136_3[4]);
+          let obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS", guildId: null };
+          obj3.guildId = closure_135_0;
+          let dispatchResult = obj13.dispatch(obj3);
+          c10 = 1;
+          let _Promise = Promise;
+          let obj15 = closure_136_2(closure_136_3[3]);
+          let obj4 = { includeSoftDeleted: null, countryCode: null };
+          obj4.includeSoftDeleted = closure_135_1;
+          obj4.countryCode = countryCode;
+          let items = [obj15.getGuildRoleSubscriptionGroupListingsForGuild(closure_135_0, obj4), , , ];
+          let obj17 = closure_136_2(closure_136_3[3]);
+          items[1] = obj17.getGuildRoleSubscriptionsSettings(closure_135_0);
+          let obj18 = closure_136_2(closure_136_3[3]);
+          items[2] = obj18.getGuildRoleSubscriptionTrials(closure_135_0);
+          let obj19 = closure_136_0(closure_136_3[5]);
+          items[3] = obj19.fetchSubscriptions();
+          c11 = 3;
+          c12 = 1;
+          let obj5 = { value: Promise.all(items), done: false };
+          return obj5;
         }
       } else {
-        while (true) {
-          let num = 2;
-          c12 = 2;
-          let tmp4 = c11;
-          if (0 === c11) {
-            if (arg0 === 1) {
-              let num9 = 3;
-              c12 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              let num8 = 3;
-              c12 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              obj = tmp;
-              closure_7 = tmp4;
-              let flag;
-              let lib;
-              let tmp80 = callback;
-              obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
-              }
-              flag = obj1.includeSoftDeleted;
-              if (flag === undefined) {
-                flag = true;
-              }
-              lib = obj1.countryCode;
-              dependencyMap = undefined;
-              let dependencyMap2;
-              let lib2;
-              closure_6 = undefined;
-              closure_7 = undefined;
-              obj = undefined;
-              c9 = undefined;
-              c10 = undefined;
-              c11 = 1;
-              let num7 = 1;
-              c12 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp4) {
-            if (arg0 === 1) {
-              let num6 = 3;
-              c12 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              let num5 = 3;
-              c12 = 3;
-              let obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let tmp61 = closure_7;
-              let tmp62 = obj;
-              let tmp63 = flag;
-              let tmp64 = dependencyMap;
-              let obj13 = flag(573);
-              let obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS", guildId: null };
-              let tmp65 = callback;
-              obj3[1] = callback;
-              let dispatchResult = obj13.dispatch(obj3);
-              let tmp67 = closure_7;
-              let tmp68 = obj;
-              c10 = 1;
-              let _Promise = Promise;
-              let tmp69 = lib;
-              let tmp70 = dependencyMap;
-              let obj15 = lib(7256);
-              let tmp71 = callback;
-              let obj4 = { includeSoftDeleted: null, countryCode: null };
-              let tmp72 = flag;
-              obj4[0] = flag;
-              let tmp73 = lib;
-              obj4[1] = lib;
-              let items = [obj15.getGuildRoleSubscriptionGroupListingsForGuild(callback, obj4), , , ];
-              let tmp74 = dependencyMap;
-              let obj17 = lib(7256);
-              let tmp75 = callback;
-              items[1] = obj17.getGuildRoleSubscriptionsSettings(callback);
-              let tmp76 = dependencyMap;
-              let obj18 = lib(7256);
-              let tmp77 = callback;
-              items[2] = obj18.getGuildRoleSubscriptionTrials(callback);
-              let tmp78 = callback;
-              let tmp79 = dependencyMap;
-              let obj19 = callback(4884);
-              items[3] = obj19.fetchSubscriptions();
-              c11 = 3;
-              let num17 = 1;
-              c12 = 1;
-              let obj5 = { value: null, done: false };
-              obj5[0] = Promise.all(items);
-              return obj5;
-            }
-          } else {
-            if (2 === tmp4) {
-              let tmp37 = closure_7;
-              let tmp38 = obj;
-              let tmp39 = c9;
-              c10 = 0;
-              let tmp40 = flag;
-              let tmp41 = dependencyMap;
-              obj5 = flag(573);
-              let obj6 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE", guildId: null };
-              let tmp42 = callback;
-              obj6[1] = callback;
-              let dispatchResult1 = obj5.dispatch(obj6);
-              let num4 = 3;
-              c12 = 3;
-            } else if (3 === tmp4) {
-              if (arg0 === 1) {
-                let num3 = 3;
-                c12 = 3;
-                throw arg1;
-              } else if (arg0 !== 2) {
-                let tmp50 = closure_7;
-                let tmp51 = obj;
-                dependencyMap = arg1;
-                let tmp52 = dependencyMap2;
-                let tmp53 = dependencyMap;
-                dependencyMap2 = dependencyMap2(dependencyMap, 3);
-                let tmp54 = dependencyMap2;
-                lib2 = 32;
-                let tmp55 = dependencyMap2;
-                closure_6 = 5;
-                let tmp56 = dependencyMap2;
-                closure_7 = 1074;
-                let tmp57 = lib2;
-                dependencyMap = lib2;
-                let tmp58 = lib2;
-                dependencyMap = lib2;
-                lib = lib2[Symbol.iterator]();
-                let tmp11 = dependencyMap;
-                let tmp12 = lib;
-                while (lib !== undefined) {
-                  let tmp59 = closure_7;
-                  c10 = 2;
-                  obj = tmp13;
-                  let tmp60 = obj;
-                  let subscription_listings = obj.subscription_listings;
-                  dependencyMap2 = subscription_listings;
-                  if (subscription_listings == null) {
-                    dependencyMap2 = [];
-                  }
-                  let tmp14 = dependencyMap2;
-                  closure_6 = dependencyMap2;
-                  let tmp15 = dependencyMap2;
-                  closure_6 = dependencyMap2;
-                  lib2 = dependencyMap2[Symbol.iterator]();
-                  let tmp16 = closure_6;
-                  let tmp17 = lib2;
-                  while (lib2 !== undefined) {
-                    let tmp19 = closure_7;
-                    let tmp20 = obj;
-                    c10 = 3;
-                    c9 = tmp18;
-                    let tmp21 = flag;
-                    let tmp22 = dependencyMap;
-                    obj = flag(573);
-                    let obj7 = { type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: null, subscriptionPlans: null };
-                    let tmp23 = c9;
-                    obj7[1] = c9.id;
-                    let tmp24 = c9;
-                    obj7[2] = c9.subscription_plans;
-                    let dispatchResult2 = obj.dispatch(obj7);
-                    c10 = 2;
-                    continue;
-                  }
-                  c10 = 1;
-                  continue;
-                }
-                let tmp26 = closure_7;
-                let tmp27 = obj;
-                let tmp28 = lib2;
-                c10 = lib2.flatMap((benefit_channels) => {
-                  benefit_channels = benefit_channels.benefit_channels;
-                  if (benefit_channels == null) {
-                    benefit_channels = [];
-                  }
-                  return benefit_channels;
-                });
-                let tmp29 = flag;
-                let tmp30 = dependencyMap;
-                obj2 = flag(573);
-                let obj8 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS", guildId: null, groupListings: null, benefitChannels: null, settings: null, subscriptionTrials: null };
-                let tmp31 = callback;
-                obj8[1] = callback;
-                let tmp32 = lib2;
-                obj8[2] = lib2;
-                let tmp33 = c10;
-                obj8[3] = c10;
-                let tmp34 = closure_6;
-                obj8[4] = closure_6;
-                let tmp35 = closure_7;
-                obj8[5] = closure_7;
-                let dispatchResult3 = obj2.dispatch(obj8);
-                c10 = 0;
-              }
-            } else if (4 === tmp4) {
-              let tmp8 = c9;
-              let tmp9 = c9;
-              c10 = 1;
-              let tmp10 = lib;
-              lib.return();
-              throw c9;
-            } else {
-              let tmp5 = c9;
-              let tmp6 = c9;
-              c10 = 2;
-              let tmp7 = lib2;
-              lib2.return();
-              throw c9;
-            }
-            c10 = 0;
-            let num2 = 3;
+        if (2 === tmp4) {
+          c10 = 0;
+          obj5 = closure_136_1(closure_136_3[4]);
+          let obj6 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE", guildId: null };
+          obj6.guildId = closure_135_0;
+          let dispatchResult1 = obj5.dispatch(obj6);
+          c12 = 3;
+        } else if (3 === tmp4) {
+          if (arg0 === 1) {
             c12 = 3;
-            let obj9 = { value: null, done: true };
-            obj9[0] = arg1;
-            return obj9;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _createSubscriptionGroupListing() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      const table = tmp5;
-      closure_2 = tmp2;
-      const obj4 = closure_1_2(closure_1_3[3]);
-      closure_0 = yield obj4.createGuildRoleSubscriptionGroupListing(closure_0, callback);
-      const obj = callback(table[4]);
-      const obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: null };
-      obj3[1] = closure_0;
-      obj.dispatch(obj3);
-      return closure_0;
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _updateSubscriptionGroupListing() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      closure_4 = tmp5;
-      const table = tmp2;
-      const obj4 = callback2(closure_1_3[3]);
-      closure_0 = yield obj4.updateGuildRoleSubscriptionGroupListing(closure_0, callback, callback2);
-      const obj = callback(table[4]);
-      const obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: null };
-      obj3[1] = closure_0;
-      obj.dispatch(obj3);
-      return closure_0;
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _deleteSubscriptionGroupListing() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      const table = tmp5;
-      closure_2 = tmp2;
-      closure_0 = callback;
-      let obj3 = closure_1_2(closure_1_3[3]);
-      yield obj3.deleteGuildRoleSubscriptionGroupListing(closure_0, callback);
-      const obj = callback(table[4]);
-      obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING", groupListingId: null };
-      obj3[1] = closure_0;
-      obj.dispatch(obj3);
-      return true;
-    })();
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchSubscriptionListingForPlan() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c8 = 0;
-    c9 = 0;
-    c7 = 0;
-    return (function*(arg0) {
-      if (c9 === 2) {
-        c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        while (true) {
-          let num = 2;
-          c9 = 2;
-          let tmp4 = c8;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              let num8 = 3;
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              let num7 = 3;
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_5 = tmp;
-              closure_4 = tmp4;
-              let tmp37 = closure_0;
-              let lib;
-              let lib2;
-              closure_3 = undefined;
-              let tmp38 = closure_1_1;
-              let tmp39 = closure_1_3;
-              let obj10 = closure_1_1(closure_1_3[4]);
-              obj1 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId: null };
-              obj1[1] = closure_0;
-              let dispatchResult = obj10.dispatch(obj1);
-              let tmp41 = closure_1_2;
-              let tmp42 = closure_1_3;
-              let obj12 = closure_1_2(closure_1_3[3]);
-              c8 = 1;
-              let num15 = 1;
-              c9 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = obj12.getGuildRoleSubscriptionGroupForSubscriptionPlan(closure_0);
-              return obj2;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_135_3 = value;
+            closure_135_4 = closure_136_4(closure_135_3, 3);
+            closure_135_5 = closure_135_4[0];
+            closure_135_6 = closure_135_4[1];
+            closure_135_7 = closure_135_4[2];
+            closure_3 = closure_135_5;
+            importAll = closure_135_5[Symbol.iterator]();
+            while (importAll !== undefined) {
+              c10 = 2;
+              closure_135_8 = tmp13;
+              let subscription_listings = closure_135_8.subscription_listings;
+              dependencyMap = subscription_listings;
+              if (subscription_listings == null) {
+                dependencyMap = [];
+              }
+              closure_6 = dependencyMap;
+              asyncGeneratorStep = dependencyMap[Symbol.iterator]();
+              while (asyncGeneratorStep !== undefined) {
+                closure_135_9 = tmp18;
+                obj = closure_136_1(closure_136_3[4]);
+                let obj7 = { type: "SUBSCRIPTION_PLANS_FETCH_SUCCESS", skuId: null, subscriptionPlans: null };
+                obj7.skuId = closure_135_9.id;
+                obj7.subscriptionPlans = closure_135_9.subscription_plans;
+                let dispatchResult2 = obj.dispatch(obj7);
+                c10 = 2;
+                continue;
+              }
+              c10 = 1;
+              continue;
             }
+            closure_135_10 = closure_135_5.flatMap((benefit_channels) => {
+              benefit_channels = benefit_channels.benefit_channels;
+              if (benefit_channels == null) {
+                benefit_channels = [];
+              }
+              return benefit_channels;
+            });
+            obj2 = closure_136_1(closure_136_3[4]);
+            let obj8 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS", guildId: null, groupListings: null, benefitChannels: null, settings: null, subscriptionTrials: null };
+            obj8.guildId = closure_135_0;
+            obj8.groupListings = closure_135_5;
+            obj8.benefitChannels = closure_135_10;
+            obj8.settings = closure_135_6;
+            obj8.subscriptionTrials = closure_135_7;
+            let dispatchResult3 = obj2.dispatch(obj8);
+            c10 = 0;
+          }
+        } else if (4 === tmp4) {
+          c10 = 1;
+          importAll.return();
+          throw closure_1_9;
+        } else {
+          c10 = 2;
+          asyncGeneratorStep.return();
+          throw closure_1_9;
+        }
+        c10 = 0;
+        c12 = 3;
+        let obj9 = { value, done: true };
+        return obj9;
+      }
+    }
+  }
+};
+let closure_10 = async function _createSubscriptionGroupListing() {
+  closure_3 = tmp5;
+  closure_2 = tmp2;
+  closure_130_0 = await GuildRoleSubscriptionsHttpApiAll.createGuildRoleSubscriptionGroupListing(closure_0, closure_1);
+  GuildRoleSubscriptionsHttpApiAll;
+  closure_131_1(closure_131_3[4]).dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: closure_130_0 });
+  return closure_130_0;
+};
+let closure_11 = async function _updateSubscriptionGroupListing() {
+  closure_4 = tmp5;
+  closure_3 = tmp2;
+  closure_131_0 = await GuildRoleSubscriptionsHttpApiAll.updateGuildRoleSubscriptionGroupListing(closure_0, closure_1, closure_2);
+  GuildRoleSubscriptionsHttpApiAll;
+  closure_132_1(closure_132_3[4]).dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: closure_131_0 });
+  return closure_131_0;
+};
+let closure_12 = async function _deleteSubscriptionGroupListing() {
+  closure_3 = tmp5;
+  closure_2 = tmp2;
+  closure_130_0 = closure_1;
+  let obj3 = GuildRoleSubscriptionsHttpApiAll;
+  await obj3.deleteGuildRoleSubscriptionGroupListing(closure_0, closure_1);
+  obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING", groupListingId: closure_130_0 };
+  closure_131_1(closure_131_3[4]).dispatch(obj3);
+  return true;
+};
+let closure_13 = async function _fetchSubscriptionListingForPlan(planId) {
+  c8 = 0;
+  c9 = 0;
+  c7 = 0;
+  return (async (arg0, value) => {
+    if (c9 === 2) {
+      c9 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      while (true) {
+        c9 = 2;
+        let tmp4 = c8;
+        if (0 === c8) {
+          if (arg0 === 1) {
+            c9 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c9 = 3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            if (1 === tmp4) {
-              if (arg0 === 1) {
-                let num6 = 3;
+            closure_5 = tmp;
+            closure_4 = tmp4;
+            closure_132_0 = planId;
+            closure_132_1 = undefined;
+            closure_132_2 = undefined;
+            closure_132_3 = undefined;
+            let obj10 = DispatcherDefault;
+            let obj1 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId };
+            let dispatchResult = obj10.dispatch(obj1);
+            let obj12 = GuildRoleSubscriptionsHttpApiAll;
+            c8 = 1;
+            c9 = 1;
+            let obj2 = { value: obj12.getGuildRoleSubscriptionGroupForSubscriptionPlan(planId), done: false };
+            return obj2;
+          }
+        } else {
+          if (1 === tmp4) {
+            if (arg0 === 1) {
+              c9 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c9 = 3;
+              let obj3 = { value, done: true };
+              return obj3;
+            } else {
+              closure_132_1 = value;
+              let obj8 = closure_133_1(closure_133_3[4]);
+              let obj4 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS", groupListing: null };
+              obj4.groupListing = closure_132_1;
+              let dispatchResult1 = obj8.dispatch(obj4);
+              let subscription_listings = closure_132_1.subscription_listings;
+              closure_1 = subscription_listings;
+              if (subscription_listings == null) {
+                closure_1 = [];
+              }
+              closure_132_2 = closure_1;
+              closure_3 = closure_132_2;
+              closure_2 = closure_132_2[Symbol.iterator]();
+              if (closure_2 === undefined) {
                 c9 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                let num5 = 3;
-                c9 = 3;
-                let obj3 = { value: null, done: true };
-                obj3[0] = arg1;
-                return obj3;
+                return { value: "HermesInternal", done: null };
               } else {
-                let tmp27 = closure_4;
-                let tmp28 = closure_5;
-                lib = arg1;
-                let tmp29 = lib;
-                let tmp30 = closure_3;
-                let obj8 = lib(closure_3[4]);
-                let obj4 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS", groupListing: null };
-                let tmp31 = lib;
-                obj4[1] = lib;
-                let dispatchResult1 = obj8.dispatch(obj4);
-                let tmp33 = lib;
-                let subscription_listings = lib.subscription_listings;
-                lib = subscription_listings;
-                if (subscription_listings == null) {
-                  lib = [];
-                }
-                let tmp8 = closure_4;
-                let tmp9 = lib;
-                lib2 = lib;
-                let tmp10 = lib2;
-                closure_3 = lib2;
-                let tmp11 = lib2;
-                closure_3 = lib2;
-                lib2 = lib2[Symbol.iterator]();
-                let tmp12 = closure_3;
-                let tmp13 = lib2;
-                if (lib2 === undefined) {
-                  let num4 = 3;
-                  c9 = 3;
-                  return { value: "HermesInternal", done: null };
-                } else {
-                  let tmp34 = closure_4;
-                  c7 = 1;
-                  closure_3 = tmp14;
-                  let tmp35 = closure_3;
-                  let tmp36 = closure_0;
-                  if (closure_3.subscription_plans[0].id === closure_0) {
-                    let tmp15 = closure_4;
-                    let tmp16 = closure_5;
-                    let tmp17 = lib2;
-                    let tmp18 = closure_3;
-                    obj1 = lib2(closure_3[6]);
-                    let tmp19 = closure_3;
-                    let tmp20 = obj1;
-                    let flag = true;
-                    c8 = 3;
-                    let num3 = 1;
-                    c9 = 1;
-                    let obj5 = { value: null, done: false };
-                    obj5[0] = obj1.fetchSubscriptionPlansForSKU(closure_3.id, undefined, undefined, true);
-                    return obj5;
-                  }
+                c7 = 1;
+                closure_132_3 = tmp14;
+                if (closure_132_3.subscription_plans[0].id === closure_132_0) {
+                  obj1 = closure_133_2(closure_133_3[6]);
+                  let flag = true;
+                  c8 = 3;
+                  c9 = 1;
+                  let obj5 = { value: obj1.fetchSubscriptionPlansForSKU(closure_132_3.id, undefined, undefined, true), done: false };
+                  return obj5;
                 }
               }
-            } else if (2 === tmp4) {
-              let tmp5 = closure_6;
-              let tmp6 = closure_6;
-              c7 = 0;
-              let tmp7 = lib2;
-              lib2.return();
-              throw closure_6;
-            } else if (arg0 === 1) {
-              let num2 = 3;
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 0;
-              let tmp26 = lib2;
-              lib2.return();
-              let num14 = 3;
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
             }
+          } else if (2 === tmp4) {
             c7 = 0;
-          }
-        }
-      }
-    })();
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _deleteSubscriptionListing() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              const table = tmp2;
-              closure_0 = callback2;
-              let obj3 = callback2(closure_1_3[3]);
-              c5 = 1;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.deleteGuildRoleSubscriptionListing(closure_0, callback, callback2);
-              return obj1;
-            }
+            closure_2.return();
+            throw closure_1_6;
           } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
+            c9 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            obj = callback(table[4]);
-            obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING", listingId: null };
-            obj3[1] = closure_0;
-            obj.dispatch(obj3);
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
-      }
-    })();
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _archiveSubscriptionListing() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              const table = tmp2;
-              closure_0 = undefined;
-              let obj3 = callback2(closure_1_3[3]);
-              c5 = 1;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.archiveGuildRoleSubscriptionListing(closure_0, callback, callback2);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            obj = callback(table[4]);
-            obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: null };
-            obj3[1] = closure_0;
-            obj.dispatch(obj3);
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
-      }
-    })();
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _updateSubscriptionTrial() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              const table = tmp2;
-              closure_0 = undefined;
-              let obj3 = callback2(closure_1_3[3]);
-              c5 = 1;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj3.updateGuildRoleSubscriptionsTrial(closure_0, callback, callback2);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            closure_0 = arg1;
-            obj = callback(table[4]);
-            obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL", subscriptionTrial: null };
-            obj3[1] = closure_0;
-            obj.dispatch(obj3);
-            c6 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
-      }
-    })();
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function fetchGuildRoleSubscriptionGroupListing() {
-  const self = this;
-  const apply = _fetchGuildRoleSubscriptionGroupListing.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchGuildRoleSubscriptionGroupListing() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              dependencyMap = tmp2;
-              obj1 = undefined;
-              if (obj1 === undefined) {
-                obj1 = {};
-              }
-              dependencyMap = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              let obj4 = obj1(7256);
-              c5 = 2;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj4.getGuildRoleSubscriptionGroupListing(closure_0, callback, obj1);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            dependencyMap = arg1;
-            obj = callback(573);
-            const obj5 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: null };
-            obj5[1] = dependencyMap;
-            obj.dispatch(obj5);
-            c6 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = dependencyMap;
-            return obj6;
-          }
-        } catch (tmp21) {
-          c6 = tmp;
-          throw tmp21;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_18 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _createSubscriptionListing() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let callback3 = tmp5;
-              let callback2 = tmp2;
-              let callback;
-              callback2 = undefined;
-              callback3 = undefined;
-              c3 = undefined;
-              c4 = undefined;
-              ({ guildId: c0, groupListingId: c1, data: c2, analyticsContext: c3, onBeforeDispatchNewListing: c4 } = callback);
-              let id;
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj6 = callback3(c3[3]);
-              c3 = 2;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj6.createGuildRoleSubscriptionListing(callback, callback2, callback3);
-              return obj2;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              id = arg1;
-              const obj4 = { role_subscription_listing_id: null, role_subscription_group_listing_id: null, template_name: null, has_change_from_template: null };
-              obj4[0] = id.id;
-              obj4[1] = callback2;
-              obj4[2] = c3.templateCategory;
-              obj4[3] = c3.hasChangeFromTemplate;
-              const obj12 = callback2(c3[7]);
-              const merged = Object.assign(callback(c3[8]).collectGuildAnalyticsMetadata(callback));
-              obj12.track(constants.ROLE_SUBSCRIPTION_LISTING_CREATED, obj4);
-              c3 = 3;
-              c4 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = callback4(callback, callback2, { includeArchivedListings: true });
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            if (c4 != null) {
-              tmp7(id);
-            }
-            obj = callback2(c3[4]);
-            const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: null };
-            obj7[1] = id;
-            obj.dispatch(obj7);
-            c4 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = id;
-            return obj8;
-          }
-        } catch (tmp26) {
-          c4 = tmp;
-          throw tmp26;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_19 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _updateSubscriptionListing() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let callback2 = tmp5;
-              let callback = tmp2;
-              c0 = undefined;
-              callback = undefined;
-              callback2 = undefined;
-              dependencyMap = undefined;
-              ({ guildId: c0, listingId: c1, groupListingId: c2, data: c3 } = c0);
-              c4 = undefined;
-              dependencyMap = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj6 = callback2(7256);
-              dependencyMap = 2;
-              c4 = 1;
-              let obj2 = { value: null, done: false };
-              obj2[0] = obj6.updateGuildRoleSubscriptionListing(c0, callback2, callback, dependencyMap);
-              return obj2;
-            }
-          } else if (2 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              const obj3 = { value: null, done: true };
-              obj3[0] = arg1;
-              return obj3;
-            } else {
-              c4 = arg1;
-              obj2 = callback(573);
-              const obj4 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: null };
-              obj4[1] = c4;
-              obj2.dispatch(obj4);
-              dependencyMap = 3;
-              c4 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = callback3(c0, callback2, { includeArchivedListings: true });
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = c4;
+            c7 = 0;
+            closure_2.return();
+            c9 = 3;
+            obj = { value, done: true };
             return obj;
           }
-        } catch (tmp26) {
-          c4 = tmp;
-          throw tmp26;
+          c7 = 0;
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_20 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    }
+  })();
+};
+let closure_14 = async function _deleteSubscriptionListing(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchMonetizationRestrictions() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, restrictions) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw restrictions;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = restrictions;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = closure_2;
+          let obj3 = GuildRoleSubscriptionsHttpApiAll;
+          c5 = 1;
+          c6 = 1;
+          const obj1 = { value: obj3.deleteGuildRoleSubscriptionListing(closure_0, closure_1, closure_2), done: false };
+          return obj1;
         }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw restrictions;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = restrictions;
-              return obj;
-            } else {
-              restrictions = tmp3;
-              dependencyMap = tmp7;
-              let signal;
-              obj1 = signal;
-              if (signal === undefined) {
-                obj1 = {};
-              }
-              signal = obj1.signal;
-              let callback2;
-              dependencyMap = undefined;
-              restrictions = undefined;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp7) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw restrictions;
-              } else if (arg0 === 2) {
-                c8 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = restrictions;
-                return obj2;
-              } else {
-                callback2 = false;
-                dependencyMap = 0;
-                if (dependencyMap >= 3) {
-                  if (!callback2) {
-                    let obj6 = signal(573);
-                    const obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE", guildId: null };
-                    obj3[1] = callback;
-                    obj6.dispatch(obj3);
-                  }
-                  c8 = 3;
-                  return { value: "HermesInternal", done: null };
-                }
-              }
-            } else if (2 === tmp7) {
-              c6 = 0;
-              let obj4 = callback(4589);
-              c7 = 3;
-              c8 = 1;
-              obj4 = { value: null, done: false };
-              obj4[0] = obj4.sleep((dependencyMap + 1) * signal(1090).Millis.SECOND);
-              return obj4;
-            } else if (3 === tmp7) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw restrictions;
-              } else if (arg0 === 2) {
-                c8 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = restrictions;
-                return obj5;
-              } else {
-                dependencyMap = dependencyMap + 1;
-              }
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw restrictions;
-            } else if (arg0 === 2) {
-              c6 = 0;
-              c8 = 3;
-              obj6 = { value: null, done: true };
-              obj6[0] = restrictions;
-              return obj6;
-            } else {
-              restrictions = restrictions.restrictions;
-              obj = signal(573);
-              const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS", guildId: null, restrictions: null };
-              obj7[1] = callback;
-              callback2 = restrictions;
-              if (restrictions == null) {
-                callback2 = [];
-              }
-              obj7[2] = callback2;
-              obj.dispatch(obj7);
-              callback2 = true;
-              c6 = 0;
-            }
-            c6 = 1;
-            let aborted;
-            if (signal != null) {
-              aborted = signal.aborted;
-            }
-            const dispatch = signal(573).dispatch;
-            if (aborted) {
-              const obj8 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED", guildId: null };
-              obj8[1] = callback;
-              dispatch(obj8);
-              c6 = 0;
-              c8 = 3;
-              let obj9 = { value: null, done: true };
-              obj9[0] = undefined;
-              return obj9;
-            } else {
-              const obj10 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS", guildId: null };
-              obj10[1] = callback;
-              dispatch(obj10);
-              obj9 = callback2(7256);
-              const obj11 = { signal: null };
-              obj11[0] = signal;
-              c7 = 4;
-              c8 = 1;
-              const obj12 = { value: null, done: false };
-              obj12[0] = obj9.getGuildMonetizationRestrictions(callback, obj11);
-              return obj12;
-            }
-            const tmp40 = signal(573);
-          }
-        } catch (tmp50) {
-          closure_5 = tmp50;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp50;
-          } else {
-            c7 = tmp;
-          }
-        }
+        obj = closure_132_1(closure_132_3[4]);
+        obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING", listingId: closure_131_0 };
+        obj.dispatch(obj3);
+        c6 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_21 = tmp;
-  const apply = tmp.apply;
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
+  }
+};
+let closure_15 = async function _archiveSubscriptionListing(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          let obj3 = GuildRoleSubscriptionsHttpApiAll;
+          c5 = 1;
+          c6 = 1;
+          const obj1 = { value: obj3.archiveGuildRoleSubscriptionListing(closure_0, closure_1, closure_2), done: false };
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        closure_131_0 = value;
+        obj = closure_132_1(closure_132_3[4]);
+        obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_131_0 };
+        obj.dispatch(obj3);
+        c6 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
+  }
+};
+let closure_16 = async function _updateSubscriptionTrial(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_0 = undefined;
+          let obj3 = GuildRoleSubscriptionsHttpApiAll;
+          c5 = 1;
+          c6 = 1;
+          const obj1 = { value: obj3.updateGuildRoleSubscriptionsTrial(closure_0, closure_1, closure_2), done: false };
+          return obj1;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        closure_131_0 = value;
+        obj = closure_132_1(closure_132_3[4]);
+        obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL", subscriptionTrial: closure_131_0 };
+        obj.dispatch(obj3);
+        c6 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
+  }
+};
+function fetchGuildRoleSubscriptionGroupListing() {
+  const self = this;
+  const apply = closure_18.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1424,11 +582,413 @@ function _fetchMonetizationRestrictions() {
   }
   return applyArgumentsResult;
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreators.tsx");
+let closure_18 = async function _fetchGuildRoleSubscriptionGroupListing(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let obj1 = closure_2;
+          if (closure_2 === undefined) {
+            obj1 = {};
+          }
+          closure_131_2 = obj1;
+          closure_131_3 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          let obj4 = closure_132_2(closure_132_3[3]);
+          c5 = 2;
+          c6 = 1;
+          const obj3 = { value: obj4.getGuildRoleSubscriptionGroupListing(closure_131_0, closure_131_1, closure_131_2), done: false };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_131_3 = value;
+        obj = closure_132_1(closure_132_3[4]);
+        const obj5 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: closure_131_3 };
+        obj.dispatch(obj5);
+        c6 = 3;
+        const obj6 = { value: closure_131_3, done: true };
+        return obj6;
+      }
+    } catch (tmp21) {
+      c6 = tmp;
+      throw tmp21;
+    }
+  }
+};
+let closure_19 = async function _createSubscriptionListing(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({ guildId: closure_129_0, groupListingId: closure_129_1, data: closure_129_2, analyticsContext: closure_129_3, onBeforeDispatchNewListing: closure_129_4 } = closure_0);
+          closure_129_5 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let obj6 = closure_130_2(closure_130_3[3]);
+          c3 = 2;
+          c4 = 1;
+          const obj2 = { value: obj6.createGuildRoleSubscriptionListing(closure_129_0, closure_129_1, closure_129_2), done: false };
+          return obj2;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_129_5 = value;
+          const obj4 = { role_subscription_listing_id: closure_129_5.id, role_subscription_group_listing_id: closure_129_1, template_name: closure_129_3.templateCategory, has_change_from_template: closure_129_3.hasChangeFromTemplate };
+          const obj12 = closure_130_1(closure_130_3[7]);
+          const merged = Object.assign(closure_130_0(closure_130_3[8]).collectGuildAnalyticsMetadata(closure_129_0));
+          obj12.track(closure_130_6.ROLE_SUBSCRIPTION_LISTING_CREATED, obj4);
+          c3 = 3;
+          c4 = 1;
+          const obj5 = { value: closure_130_17(closure_129_0, closure_129_1, { includeArchivedListings: true }), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        obj6 = { value, done: true };
+        return obj6;
+      } else {
+        if (closure_129_4 != null) {
+          tmp7(closure_129_5);
+        }
+        obj = closure_130_1(closure_130_3[4]);
+        const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_129_5 };
+        obj.dispatch(obj7);
+        c4 = 3;
+        const obj8 = { value: closure_129_5, done: true };
+        return obj8;
+      }
+    } catch (tmp26) {
+      c4 = tmp;
+      throw tmp26;
+    }
+  }
+};
+let closure_20 = async function _updateSubscriptionListing(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ guildId: closure_129_0, listingId: closure_129_1, groupListingId: closure_129_2, data: closure_129_3 } = closure_0);
+          closure_129_4 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let obj6 = closure_130_2(closure_130_3[3]);
+          c3 = 2;
+          c4 = 1;
+          let obj2 = { value: obj6.updateGuildRoleSubscriptionListing(closure_129_0, closure_129_2, closure_129_1, closure_129_3), done: false };
+          return obj2;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj3 = { value, done: true };
+          return obj3;
+        } else {
+          closure_129_4 = value;
+          obj2 = closure_130_1(closure_130_3[4]);
+          const obj4 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING", listing: closure_129_4 };
+          obj2.dispatch(obj4);
+          c3 = 3;
+          c4 = 1;
+          const obj5 = { value: closure_130_17(closure_129_0, closure_129_2, { includeArchivedListings: true }), done: false };
+          return obj5;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        obj6 = { value, done: true };
+        return obj6;
+      } else {
+        c4 = 3;
+        obj = { value: closure_129_4, done: true };
+        return obj;
+      }
+    } catch (tmp26) {
+      c4 = tmp;
+      throw tmp26;
+    }
+  }
+};
+let closure_21 = async function _fetchMonetizationRestrictions(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          let signal;
+          closure_131_0 = closure_0;
+          let obj1 = closure_1;
+          if (closure_1 === undefined) {
+            obj1 = {};
+          }
+          signal = obj1.signal;
+          closure_131_2 = undefined;
+          closure_131_3 = undefined;
+          let restrictions2;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else {
+        if (1 === tmp7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            closure_131_2 = false;
+            closure_131_3 = 0;
+            if (closure_131_3 >= 3) {
+              if (!closure_131_2) {
+                let obj6 = closure_132_1(closure_132_3[4]);
+                const obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE", guildId: closure_131_0 };
+                obj6.dispatch(obj3);
+              }
+              c8 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          }
+        } else if (2 === tmp7) {
+          c6 = 0;
+          let obj4 = closure_132_0(closure_132_3[9]);
+          c7 = 3;
+          c8 = 1;
+          obj4 = { value: null, done: false };
+          obj4.value = obj4.sleep((closure_131_3 + 1) * closure_132_1(closure_132_3[10]).Millis.SECOND);
+          return obj4;
+        } else if (3 === tmp7) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_131_3 = closure_131_3 + 1;
+          }
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          obj6 = { value, done: true };
+          return obj6;
+        } else {
+          restrictions2 = value.restrictions;
+          obj = closure_132_1(closure_132_3[4]);
+          const obj7 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS", guildId: closure_131_0, restrictions: null };
+          let restrictions = restrictions2;
+          if (restrictions2 == null) {
+            restrictions = [];
+          }
+          obj7.restrictions = restrictions;
+          obj.dispatch(obj7);
+          closure_131_2 = true;
+          c6 = 0;
+        }
+        c6 = 1;
+        let aborted;
+        if (signal != null) {
+          aborted = signal.aborted;
+        }
+        const dispatch = closure_132_1(closure_132_3[4]).dispatch;
+        if (aborted) {
+          const obj8 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED", guildId: closure_131_0 };
+          dispatch(obj8);
+          c6 = 0;
+          c8 = 3;
+          let obj9 = { value: undefined, done: true };
+          return obj9;
+        } else {
+          const obj10 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS", guildId: closure_131_0 };
+          dispatch(obj10);
+          obj9 = closure_132_2(closure_132_3[3]);
+          const obj11 = { signal };
+          c7 = 4;
+          c8 = 1;
+          const obj12 = { value: obj9.getGuildMonetizationRestrictions(closure_131_0, obj11), done: false };
+          return obj12;
+        }
+        const tmp40 = closure_132_1(closure_132_3[4]);
+      }
+    } catch (tmp50) {
+      closure_5 = tmp50;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp50;
+      } else {
+        c7 = tmp;
+      }
+    }
+  }
+};
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreators.tsx");
 
-export const fetchSubscriptionsSettings = function fetchSubscriptionsSettings(closure_0) {
+export const fetchSubscriptionsSettings = function fetchSubscriptionsSettings() {
   const self = this;
-  const apply = _fetchSubscriptionsSettings.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1436,9 +996,9 @@ export const fetchSubscriptionsSettings = function fetchSubscriptionsSettings(cl
   }
   return applyArgumentsResult;
 };
-export const updateSubscriptionsSettings = function updateSubscriptionsSettings(closure_0, closure_1) {
+export const updateSubscriptionsSettings = function updateSubscriptionsSettings() {
   const self = this;
-  const apply = _updateSubscriptionsSettings.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1446,9 +1006,9 @@ export const updateSubscriptionsSettings = function updateSubscriptionsSettings(
   }
   return applyArgumentsResult;
 };
-export const fetchAllSubscriptionListingsDataForGuild = function fetchAllSubscriptionListingsDataForGuild(arg0, arg1) {
+export const fetchAllSubscriptionListingsDataForGuild = function fetchAllSubscriptionListingsDataForGuild() {
   const self = this;
-  const apply = _fetchAllSubscriptionListingsDataForGuild.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1458,7 +1018,7 @@ export const fetchAllSubscriptionListingsDataForGuild = function fetchAllSubscri
 };
 export const createSubscriptionGroupListing = function createSubscriptionGroupListing() {
   const self = this;
-  const apply = _createSubscriptionGroupListing.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1466,9 +1026,9 @@ export const createSubscriptionGroupListing = function createSubscriptionGroupLi
   }
   return applyArgumentsResult;
 };
-export const updateSubscriptionGroupListing = function updateSubscriptionGroupListing(closure_0, closure_1, closure_2) {
+export const updateSubscriptionGroupListing = function updateSubscriptionGroupListing() {
   const self = this;
-  const apply = _updateSubscriptionGroupListing.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1478,7 +1038,7 @@ export const updateSubscriptionGroupListing = function updateSubscriptionGroupLi
 };
 export const deleteSubscriptionGroupListing = function deleteSubscriptionGroupListing() {
   const self = this;
-  const apply = _deleteSubscriptionGroupListing.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1488,7 +1048,7 @@ export const deleteSubscriptionGroupListing = function deleteSubscriptionGroupLi
 };
 export const fetchSubscriptionListingForPlan = function fetchSubscriptionListingForPlan() {
   const self = this;
-  const apply = _fetchSubscriptionListingForPlan.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1498,7 +1058,7 @@ export const fetchSubscriptionListingForPlan = function fetchSubscriptionListing
 };
 export const deleteSubscriptionListing = function deleteSubscriptionListing() {
   const self = this;
-  const apply = _deleteSubscriptionListing.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1508,7 +1068,7 @@ export const deleteSubscriptionListing = function deleteSubscriptionListing() {
 };
 export const archiveSubscriptionListing = function archiveSubscriptionListing() {
   const self = this;
-  const apply = _archiveSubscriptionListing.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1516,9 +1076,9 @@ export const archiveSubscriptionListing = function archiveSubscriptionListing() 
   }
   return applyArgumentsResult;
 };
-export const updateSubscriptionTrial = function updateSubscriptionTrial(c0, closure_1, closure_2) {
+export const updateSubscriptionTrial = function updateSubscriptionTrial() {
   const self = this;
-  const apply = _updateSubscriptionTrial.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1527,9 +1087,9 @@ export const updateSubscriptionTrial = function updateSubscriptionTrial(c0, clos
   return applyArgumentsResult;
 };
 export { fetchGuildRoleSubscriptionGroupListing };
-export const createSubscriptionListing = function createSubscriptionListing(arg0) {
+export const createSubscriptionListing = function createSubscriptionListing() {
   const self = this;
-  const apply = _createSubscriptionListing.apply;
+  const apply = closure_19.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1537,9 +1097,9 @@ export const createSubscriptionListing = function createSubscriptionListing(arg0
   }
   return applyArgumentsResult;
 };
-export const updateSubscriptionListing = function updateSubscriptionListing(arg0) {
+export const updateSubscriptionListing = function updateSubscriptionListing() {
   const self = this;
-  const apply = _updateSubscriptionListing.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1547,9 +1107,9 @@ export const updateSubscriptionListing = function updateSubscriptionListing(arg0
   }
   return applyArgumentsResult;
 };
-export const fetchMonetizationRestrictions = function fetchMonetizationRestrictions(id, arg1) {
+export const fetchMonetizationRestrictions = function fetchMonetizationRestrictions() {
   const self = this;
-  const apply = _fetchMonetizationRestrictions.apply;
+  const apply = closure_21.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

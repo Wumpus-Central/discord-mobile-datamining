@@ -1,233 +1,183 @@
-// === Module 4458: _fetchAppliedGuildBoostsForGuild ===
+// === Module 4458: BoostingActionCreators ===
 
-// Module 4458 (_fetchAppliedGuildBoostsForGuild)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createFromServer" /* 4459 */;
-import closure_5 from "createFromServer" /* 4460 */;
-import closure_6 from "reset" /* 4224 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 4458 (BoostingActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 4459 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 4460 */;
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
-const require = arg1;
-function _fetchAppliedGuildBoostsForGuild() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0, body) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw body;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_3 = tmp5;
-              dependencyMap = tmp2;
-              let flag;
-              obj1 = flag;
-              if (flag === undefined) {
-                obj1 = {};
-              }
-              flag = obj1.includeEnded;
-              if (flag === undefined) {
-                flag = false;
-              }
-              dependencyMap = undefined;
-              c4 = 1;
-              c5 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = body;
-              return obj2;
-            } else {
-              let obj4;
-              const HTTP = callback(1272).HTTP;
-              const obj3 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
-              obj3[0] = closure_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
-              if (flag) {
-                obj4 = { include_ended: true };
-              }
-              obj3[2] = obj4;
-              c4 = 2;
-              c5 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = HTTP.get(obj3);
-              return obj5;
-            }
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = body;
-            return obj6;
-          } else {
-            body = body.body;
-            dependencyMap = body.map((arg0) => c4.createFromServer(arg0));
-            obj = flag(573);
-            const obj7 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: null, appliedBoosts: null };
-            obj7[1] = callback;
-            obj7[2] = dependencyMap;
-            obj.dispatch(obj7);
-            c5 = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = dependencyMap;
-            return obj8;
-          }
-        } catch (tmp14) {
-          c5 = tmp;
-          throw tmp14;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+require = fn;
+let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchAppliedGuildBoostsForUser() {
-  const self = this;
-  const tmp = callback(() => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+    try {
+      c5 = 2;
+      if (0 === c4) {
         if (arg0 === 1) {
-          throw body;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp5;
+          closure_2 = tmp2;
+          closure_130_1 = undefined;
+          closure_130_0 = closure_0;
+          let obj1 = closure_1;
+          if (closure_1 === undefined) {
+            obj1 = {};
+          }
+          let flag = obj1.includeEnded;
+          if (flag === undefined) {
+            flag = false;
+          }
+          closure_130_1 = flag;
+          closure_130_2 = undefined;
+          c4 = 1;
+          c5 = 1;
+          return { value: "PX_16", done: true };
         }
-      } else {
-        try {
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          let obj3;
+          const HTTP = closure_131_0(closure_131_2[5]).HTTP;
+          const request = { url: closure_131_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(closure_130_0), oldFormErrors: true, query: null, rejectWithError: true };
+          if (closure_130_1) {
+            obj3 = { include_ended: true };
+          }
+          request.query = obj3;
           c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              dependencyMap = tmp5;
-              let callback = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              callback = undefined;
-              c3 = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = body;
-              return obj1;
-            } else {
-              const HTTP = flag(1272).HTTP;
-              const obj2 = { url: null, oldFormErrors: true, query: null, rejectWithError: true };
-              obj2[0] = constants.USER_APPLIED_GUILD_BOOSTS;
-              const obj3 = { paused: null };
-              obj3[0] = flag;
-              obj2[2] = obj3;
-              c3 = 2;
-              c4 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.get(obj2);
-              return obj4;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj5 = { value: null, done: true };
-            obj5[0] = body;
-            return obj5;
-          } else {
-            body = body.body;
-            callback = body.map((arg0) => c4.createFromServer(arg0));
-            obj = callback(573);
-            const obj6 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: null };
-            obj6[1] = callback;
-            obj.dispatch(obj6);
-            c4 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = callback;
-            return obj7;
-          }
-        } catch (tmp18) {
-          c4 = tmp;
-          throw tmp18;
+          c5 = 1;
+          const obj4 = { value: HTTP.get(request), done: false };
+          return obj4;
         }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        const body = value.body;
+        closure_130_2 = body.map((item) => closure_1_4.createFromServer(item));
+        obj = closure_131_1(closure_131_2[6]);
+        const obj6 = { type: "GUILD_APPLIED_BOOSTS_FETCH_SUCCESS", guildId: closure_130_0, appliedBoosts: closure_130_2 };
+        obj.dispatch(obj6);
+        c5 = 3;
+        const obj7 = { value: closure_130_2, done: true };
+        return obj7;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp14) {
+      c5 = tmp;
+      throw tmp14;
+    }
   }
-  return applyArgumentsResult;
-}
+};
+let closure_9 = async function _fetchAppliedGuildBoostsForUser(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          let flag = closure_0;
+          if (closure_0 === undefined) {
+            flag = false;
+          }
+          closure_129_0 = flag;
+          closure_129_1 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          const HTTP = closure_130_0(closure_130_2[5]).HTTP;
+          const request = { url: closure_130_7.USER_APPLIED_GUILD_BOOSTS, oldFormErrors: true, query: null, rejectWithError: true };
+          const obj2 = { paused: closure_129_0 };
+          request.query = obj2;
+          c3 = 2;
+          c4 = 1;
+          const obj3 = { value: HTTP.get(request), done: false };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        const body = value.body;
+        closure_129_1 = body.map((item) => closure_1_4.createFromServer(item));
+        obj = closure_130_1(closure_130_2[6]);
+        const obj5 = { type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: closure_129_1 };
+        obj.dispatch(obj5);
+        c4 = 3;
+        const obj6 = { value: closure_129_1, done: true };
+        return obj6;
+      }
+    } catch (tmp18) {
+      c4 = tmp;
+      throw tmp18;
+    }
+  }
+};
 function fetchGuildBoostSlots() {
   const self = this;
-  const apply = _fetchGuildBoostSlots.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -235,430 +185,306 @@ function fetchGuildBoostSlots() {
   }
   return applyArgumentsResult;
 }
-function _fetchGuildBoostSlots() {
-  const self = this;
-  const tmp = callback(function*() {
-    const callback = tmp2;
-    closure_0 = tmp5;
-    closure_1_1(573).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
-    const HTTP = closure_1_0(1272).HTTP;
-    obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-    obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOTS;
-    const obj8 = closure_1_1(573);
-    obj1[2] = closure_1_0(1272).rejectWithMigratedError();
-    yield HTTP.get(obj1);
-    const body = arg1.body;
-    closure_0 = body.map((subscription_id) => closure_5.createFromServer(subscription_id, subscriptionById.getSubscriptionById(subscription_id.subscription_id)));
-    const obj = callback(573);
-    const obj4 = { type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: null };
-    obj4[1] = closure_0;
-    obj.dispatch(obj4);
-    return closure_0;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchAppliedBoostsCooldown() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (c5 === 2) {
-      c5 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_11 = async function _fetchGuildBoostSlots() {
+  closure_1 = tmp2;
+  closure_0 = tmp5;
+  DispatcherDefault.dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
+  const HTTP = HTTPUtils.HTTP;
+  const obj1 = { url: constants.USER_GUILD_BOOST_SLOTS, oldFormErrors: true, rejectWithError: null };
+  obj1.rejectWithError = HTTPUtils.rejectWithMigratedError();
+  await HTTP.get(obj1);
+  const body = arg1.body;
+  closure_128_0 = body.map((subscription_id) => closure_1_5.createFromServer(subscription_id, subscriptionById.getSubscriptionById(subscription_id.subscription_id)));
+  closure_129_1(closure_129_2[6]).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: closure_128_0 });
+  return closure_128_0;
+};
+let closure_12 = async function _fetchAppliedBoostsCooldown(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c5 = 2;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            let lib = tmp3;
-            let ends_at = tmp7;
-            ends_at = undefined;
-            c3 = 1;
-            const HTTP = closure_1_0(closure_1_2[5]).HTTP;
-            obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-            obj1[0] = closure_1_7.APPLIED_GUILD_BOOST_COOLDOWN;
-            obj1[2] = closure_1_0(closure_1_2[5]).rejectWithMigratedError();
-            c4 = 2;
-            c5 = 1;
-            const obj2 = { value: null, done: false };
-            obj2[0] = HTTP.get(obj1);
-            return obj2;
-          }
-        } else if (1 === tmp7) {
-          c3 = 0;
-          lib = dependencyMap;
-          if (404 === lib.status) {
-            let obj4 = lib(573);
-            obj4.dispatch({ type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null });
-            c5 = 3;
-            return { value: null, done: true };
-          } else {
-            const appliedGuildBoostError = new ends_at(4461).AppliedGuildBoostError(lib);
-            throw appliedGuildBoostError;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          c3 = 0;
           c5 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          ends_at = arg1.body.ends_at;
-          obj = lib(573);
-          obj4 = { type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null };
-          obj4[1] = ends_at;
-          obj.dispatch(obj4);
-          c3 = 0;
+          closure_1 = tmp3;
+          closure_0 = tmp7;
+          let ends_at;
+          c3 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = { url: constants.APPLIED_GUILD_BOOST_COOLDOWN, oldFormErrors: true, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+          c4 = 2;
+          c5 = 1;
+          const obj2 = { value: HTTP.get(obj1), done: false };
+          return obj2;
+        }
+      } else if (1 === tmp7) {
+        c3 = 0;
+        closure_128_1 = closure_2;
+        if (404 === closure_128_1.status) {
+          let obj4 = closure_129_1(closure_129_2[6]);
+          obj4.dispatch({ type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: null });
           c5 = 3;
-          const obj5 = { value: null, done: true };
-          obj5[0] = ends_at;
-          return obj5;
-        }
-      } catch (tmp31) {
-        dependencyMap = tmp31;
-        if (tmp4 === c3) {
-          c5 = tmp2;
-          throw tmp31;
+          return { value: null, done: true };
         } else {
-          c4 = tmp;
+          const appliedGuildBoostError = new closure_129_0(closure_129_2[7]).AppliedGuildBoostError(closure_128_1);
+          throw appliedGuildBoostError;
         }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c5 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        ends_at = value.body.ends_at;
+        obj = closure_129_1(closure_129_2[6]);
+        obj4 = { type: "APPLIED_BOOSTS_COOLDOWN_FETCH_SUCCESS", endsAt: ends_at };
+        obj.dispatch(obj4);
+        c3 = 0;
+        c5 = 3;
+        const obj5 = { value: ends_at, done: true };
+        return obj5;
+      }
+    } catch (tmp31) {
+      closure_2 = tmp31;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp31;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  closure_12 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
-function _applyToGuild() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c8 === 2) {
+};
+let closure_13 = async function _applyToGuild(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = false;
+          }
+          closure_131_2 = flag;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_132_1(closure_132_2[6]).dispatch({ type: "GUILD_APPLY_BOOST_START" });
+          c6 = 1;
+          const HTTP = closure_132_0(closure_132_2[5]).HTTP;
+          const request = { url: closure_132_7.APPLIED_GUILD_BOOSTS_FOR_GUILD(closure_131_0), body: null, oldFormErrors: true, rejectWithError: null };
+          const obj2 = { user_premium_guild_subscription_slot_ids: closure_131_1, disable_powerup_auto_apply: closure_131_2 };
+          request.body = obj2;
+          const obj10 = closure_132_1(closure_132_2[6]);
+          request.rejectWithError = closure_132_0(closure_132_2[5]).rejectWithMigratedError();
+          c7 = 3;
+          c8 = 1;
+          let obj3 = { value: HTTP.put(request), done: false };
+          return obj3;
+        }
+      } else if (2 === tmp7) {
+        c6 = 0;
+        closure_131_6 = closure_5;
+        const appliedGuildBoostError = new closure_132_0(closure_132_2[7]).AppliedGuildBoostError(closure_131_6);
+        closure_131_5 = appliedGuildBoostError;
+        obj3 = closure_132_1(closure_132_2[6]);
+        const obj4 = { type: "GUILD_APPLY_BOOST_FAIL", error: closure_131_5 };
+        obj3.dispatch(obj4);
+        throw closure_131_5;
+      } else if (arg0 === 1) {
         c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 0;
+        c8 = 3;
+        const obj5 = { value, done: true };
+        return obj5;
+      } else {
+        closure_131_3 = value;
+        const _Array = Array;
+        if (Array.isArray(closure_131_3.body)) {
+          const body = closure_131_3.body;
+          let mapped = body.map(closure_132_4.createFromServer);
+        } else {
+          mapped = [closure_132_4.createFromServer(closure_131_3.body)];
+        }
+        closure_131_4 = mapped;
+        obj = closure_132_1(closure_132_2[6]);
+        const obj6 = { type: "GUILD_APPLY_BOOST_SUCCESS", appliedGuildBoost: closure_131_4 };
+        obj.dispatch(obj6);
+        closure_132_10();
+        c6 = 0;
+        c8 = 3;
+      }
+    } catch (tmp39) {
+      closure_5 = tmp39;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp39;
+      } else {
+        c7 = tmp;
+      }
+    }
+  }
+};
+let closure_14 = async function _unapplyFromGuild(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          throw arg1;
+          c7 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c7 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_3 = tmp3;
+          closure_2 = tmp7;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          DispatcherDefault.dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
+          c5 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = { url: Endpoints.APPLIED_GUILD_BOOST(closure_0, closure_1), oldFormErrors: true, rejectWithError: null };
+          obj1.rejectWithError = HTTPUtils.rejectWithMigratedError();
+          c6 = 2;
+          c7 = 1;
+          const obj2 = { value: HTTP.del(obj1), done: false };
+          return obj2;
         }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let mapped = tmp3;
-              closure_3 = tmp7;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              closure_3 = undefined;
-              mapped = undefined;
-              let appliedGuildBoostError;
-              c7 = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              callback2(flag[6]).dispatch({ type: "GUILD_APPLY_BOOST_START" });
-              c6 = 1;
-              const HTTP = callback(flag[5]).HTTP;
-              const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-              obj2[0] = c7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
-              let obj3 = { user_premium_guild_subscription_slot_ids: null, disable_powerup_auto_apply: null };
-              obj3[0] = callback2;
-              obj3[1] = flag;
-              obj2[1] = obj3;
-              const obj10 = callback2(flag[6]);
-              obj2[3] = callback(flag[5]).rejectWithMigratedError();
-              c7 = 3;
-              c8 = 1;
-              const obj4 = { value: null, done: false };
-              obj4[0] = HTTP.put(obj2);
-              return obj4;
-            }
-          } else if (2 === tmp7) {
-            c6 = 0;
-            c6 = appliedGuildBoostError;
-            appliedGuildBoostError = new callback(flag[7]).AppliedGuildBoostError(c6);
-            obj3 = callback2(flag[6]);
-            const obj5 = { type: "GUILD_APPLY_BOOST_FAIL", error: null };
-            obj5[1] = appliedGuildBoostError;
-            obj3.dispatch(obj5);
-            throw appliedGuildBoostError;
-          } else if (arg0 === 1) {
-            c8 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 0;
-            c8 = 3;
-            const obj6 = { value: null, done: true };
-            obj6[0] = arg1;
-            return obj6;
-          } else {
-            closure_3 = arg1;
-            const _Array = Array;
-            if (Array.isArray(closure_3.body)) {
-              const body = closure_3.body;
-              mapped = body.map(mapped.createFromServer);
-            } else {
-              mapped = [];
-              mapped[0] = mapped.createFromServer(closure_3.body);
-            }
-            obj = callback2(flag[6]);
-            const obj7 = { type: "GUILD_APPLY_BOOST_SUCCESS", appliedGuildBoost: null };
-            obj7[1] = mapped;
-            obj.dispatch(obj7);
-            callback3();
-            c6 = 0;
-            c8 = 3;
-          }
-        } catch (tmp39) {
-          appliedGuildBoostError = tmp39;
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp39;
-          } else {
-            c7 = tmp;
-          }
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _unapplyFromGuild() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c6 = 0;
-    c7 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c7 === 2) {
+      } else if (1 === tmp7) {
+        c5 = 0;
+        closure_130_2 = closure_4;
+        const appliedGuildBoostError = new closure_131_0(closure_131_2[7]).AppliedGuildBoostError(closure_130_2);
+        closure_130_1 = appliedGuildBoostError;
+        let obj3 = closure_131_1(closure_131_2[6]);
+        obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: closure_130_1 };
+        obj3.dispatch(obj3);
+        throw closure_130_1;
+      } else if (arg0 === 1) {
         c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 0;
+        c7 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp3;
-              dependencyMap = tmp7;
-              const callback = appliedGuildBoostError;
-              appliedGuildBoostError = undefined;
-              callback2(closure_1_2[6]).dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
-              c5 = 1;
-              const HTTP = callback(closure_1_2[5]).HTTP;
-              obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = c7.APPLIED_GUILD_BOOST(callback, appliedGuildBoostError);
-              const obj9 = callback2(closure_1_2[6]);
-              obj1[2] = callback(closure_1_2[5]).rejectWithMigratedError();
-              c6 = 2;
-              c7 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.del(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp7) {
-            c5 = 0;
-            dependencyMap = closure_4;
-            appliedGuildBoostError = new callback(4461).AppliedGuildBoostError(dependencyMap);
-            let obj3 = appliedGuildBoostError(573);
-            obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: null };
-            obj3[1] = appliedGuildBoostError;
-            obj3.dispatch(obj3);
-            throw appliedGuildBoostError;
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c5 = 0;
-            c7 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            callback3();
-            c5 = 0;
-            obj = appliedGuildBoostError(573);
-            const obj5 = { type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: null };
-            obj5[1] = callback;
-            obj.dispatch(obj5);
-            c7 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp33) {
-          closure_4 = tmp33;
-          if (tmp4 === c5) {
-            c7 = tmp2;
-            throw tmp33;
-          } else {
-            c6 = tmp;
-          }
-        }
+        closure_131_10();
+        c5 = 0;
+        obj = closure_131_1(closure_131_2[6]);
+        const obj5 = { type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: closure_130_0 };
+        obj.dispatch(obj5);
+        c7 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp33) {
+      closure_4 = tmp33;
+      if (tmp4 === c5) {
+        c7 = tmp2;
+        throw tmp33;
+      } else {
+        c6 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-function _cancelGuildBoostSlot() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      const table = tmp2;
-      let callback = tmp5;
-      const HTTP = lib(closure_1_2[5]).HTTP;
-      obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOT_CANCEL(lib);
-      lib = yield HTTP.post(obj1);
-      callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
-      const obj4 = { type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: null };
-      obj4[1] = callback;
-      callback(table[6]).dispatch(obj4);
-      return callback;
-    })();
-  });
-  closure_15 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _uncancelGuildBoostSlot() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      const table = tmp2;
-      let callback = tmp5;
-      const HTTP = lib(closure_1_2[5]).HTTP;
-      obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOT_UNCANCEL(lib);
-      lib = yield HTTP.post(obj1);
-      callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
-      const obj4 = { type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: null };
-      obj4[1] = callback;
-      callback(table[6]).dispatch(obj4);
-      return callback;
-    })();
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("actions/BoostingActionCreators.tsx");
+};
+let closure_15 = async function _cancelGuildBoostSlot() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  const HTTP = HTTPUtils.HTTP;
+  closure_129_0 = await HTTP.post({ url: Endpoints.USER_GUILD_BOOST_SLOT_CANCEL(closure_0), oldFormErrors: true, rejectWithError: true });
+  closure_129_1 = closure_130_5.createFromServer(closure_129_0.body, closure_130_6.getSubscriptionById(closure_129_0.body.subscription_id));
+  closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: closure_129_1 });
+  return closure_129_1;
+};
+let closure_16 = async function _uncancelGuildBoostSlot() {
+  closure_2 = tmp2;
+  closure_1 = tmp5;
+  const HTTP = HTTPUtils.HTTP;
+  closure_129_0 = await HTTP.post({ url: Endpoints.USER_GUILD_BOOST_SLOT_UNCANCEL(closure_0), oldFormErrors: true, rejectWithError: true });
+  closure_129_1 = closure_130_5.createFromServer(closure_129_0.body, closure_130_6.getSubscriptionById(closure_129_0.body.subscription_id));
+  closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: closure_129_1 });
+  return closure_129_1;
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/BoostingActionCreators.tsx");
 
-export const fetchAppliedGuildBoostsForGuild = function fetchAppliedGuildBoostsForGuild(closure_0, arg1) {
+export const fetchAppliedGuildBoostsForGuild = function fetchAppliedGuildBoostsForGuild() {
   const self = this;
-  const apply = _fetchAppliedGuildBoostsForGuild.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -668,7 +494,7 @@ export const fetchAppliedGuildBoostsForGuild = function fetchAppliedGuildBoostsF
 };
 export const fetchAppliedGuildBoostsForUser = function fetchAppliedGuildBoostsForUser() {
   const self = this;
-  const apply = _fetchAppliedGuildBoostsForUser.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -679,7 +505,7 @@ export const fetchAppliedGuildBoostsForUser = function fetchAppliedGuildBoostsFo
 export { fetchGuildBoostSlots };
 export const fetchAppliedBoostsCooldown = function fetchAppliedBoostsCooldown() {
   const self = this;
-  const apply = _fetchAppliedBoostsCooldown.apply;
+  const apply = closure_12.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -687,9 +513,9 @@ export const fetchAppliedBoostsCooldown = function fetchAppliedBoostsCooldown() 
   }
   return applyArgumentsResult;
 };
-export const applyToGuild = function applyToGuild(id, closure_7, arg2) {
+export const applyToGuild = function applyToGuild() {
   const self = this;
-  const apply = _applyToGuild.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -697,9 +523,9 @@ export const applyToGuild = function applyToGuild(id, closure_7, arg2) {
   }
   return applyArgumentsResult;
 };
-export const unapplyFromGuild = function unapplyFromGuild(guildId, id) {
+export const unapplyFromGuild = function unapplyFromGuild() {
   const self = this;
-  const apply = _unapplyFromGuild.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -709,7 +535,7 @@ export const unapplyFromGuild = function unapplyFromGuild(guildId, id) {
 };
 export const cancelGuildBoostSlot = function cancelGuildBoostSlot() {
   const self = this;
-  const apply = _cancelGuildBoostSlot.apply;
+  const apply = closure_15.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -719,7 +545,7 @@ export const cancelGuildBoostSlot = function cancelGuildBoostSlot() {
 };
 export const uncancelGuildBoostSlot = function uncancelGuildBoostSlot() {
   const self = this;
-  const apply = _uncancelGuildBoostSlot.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

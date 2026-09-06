@@ -1,9 +1,9 @@
-// === Module 11504: formatAppStoreRatingValue ===
+// === Module 11504: AppStoreOverlayStatCardUtils ===
 
-// Module 11504 (formatAppStoreRatingValue)
-import set from "set" /* 2 */;
+// Module 11504 (AppStoreOverlayStatCardUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatCardUtils.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatCardUtils.tsx");
 
 export const formatAppStoreRatingValue = function formatAppStoreRatingValue(rating, currentLocale) {
   const numberFormat = new Intl.NumberFormat(currentLocale, { minimumFractionDigits: 1, maximumFractionDigits: 1 });
@@ -18,7 +18,6 @@ export const getAppStoreStarFillAmounts = function getAppStoreStarFillAmounts(ra
   if (arg1 === undefined) {
     num = 5;
   }
-  closure_0 = undefined;
   const length = Math.max(1, num);
   closure_0 = Math.max(0, Math.min(rating, length));
   return Array.from({ length }, (arg0, arg1) => Math.min(1, Math.max(0, closure_0 - arg1)));

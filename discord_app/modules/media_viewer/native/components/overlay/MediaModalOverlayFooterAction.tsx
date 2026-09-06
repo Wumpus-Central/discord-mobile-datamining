@@ -1,56 +1,54 @@
 // === Module 12970: MediaModalOverlayFooterAction ===
 
 // Module 12970 (MediaModalOverlayFooterAction)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
-import Button from "Button" /* 4975 */;
-import SafeAreaPaddingView from "SafeAreaPaddingView" /* 7123 */;
-import ObscuredViewDefault from "ObscuredView" /* 12963 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 4965 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 12963 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, buttonContainer: null };
-createCacheKey = { paddingTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooterAction.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, buttonContainer: null };
+createStyles = { paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_8 };
+createStyles.container = createStyles;
+createStyles.buttonContainer = { paddingHorizontal: nativeDefault.space.PX_16 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooterAction.tsx");
 
 export const MediaModalOverlayFooterAction = function MediaModalOverlayFooterAction(arg0) {
   ({ footerAction, sliderElement, syncer } = arg0);
-  const tmp = callback2();
-  let obj = { bottom: true, left: true, right: true, style: tmp.container, children: null };
+  const tmp = closure_8();
+  const rect = { bottom: true, left: true, right: true, style: tmp.container, children: null };
   if (null != sliderElement) {
     let isIOSResult = tmp4(1115).isIOS();
     if (isIOSResult) {
-      obj = { blurTheme: "dark", style: null };
-      obj[1] = absoluteFill.absoluteFill;
-      isIOSResult = callback(isBlurDisabledDefault, obj);
+      let obj = { blurTheme: "dark", style: absoluteFill.absoluteFill };
+      isIOSResult = hasOwnProperty(VisualEffectViewDefault, obj);
     }
     const items = [isIOSResult, sliderElement, ];
     let tmp12 = null;
     if (tmp2) {
-      obj = { syncer: null };
-      obj[0] = syncer;
-      tmp12 = callback(ObscuredViewDefault, obj);
+      obj = { syncer };
+      tmp12 = hasOwnProperty(MediaViewerThumbnailsDefault, obj);
     }
-    obj1 = { children: null };
+    const obj1 = { children: null };
     items[2] = tmp12;
-    obj1[0] = items;
-    let tmp3Result = tmp3(closure_6, obj1);
+    obj1.children = items;
+    let tmp3Result = tmp3(timestampProducer, obj1);
     const tmp4Result = tmp4(1115);
-    const tmp7 = closure_6;
   } else {
     tmp3Result = null;
   }
-  const items1 = [tmp3Result, callback(closure_4, { style: tmp.buttonContainer, children: callback(Button.Button, obj3) })];
-  obj[4] = items1;
-  return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
+  const items1 = [tmp3Result, ];
+  const obj2 = { style: tmp.buttonContainer, children: hasOwnProperty(components_Button_Button.Button, { size: "lg", text: footerAction.text, onPress: footerAction.onPress }) };
+  items1[1] = hasOwnProperty(React4, obj2);
+  rect.children = items1;
+  return React5(common_SafeAreaView.SafeAreaPaddingView, rect);
 };

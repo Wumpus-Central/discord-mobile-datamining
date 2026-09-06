@@ -1,54 +1,60 @@
-// === Module 11960: VoiceMessageRecordingStatus ===
+// === Module 11960: VoiceMessagesUIStore ===
 
-// Module 11960 (VoiceMessageRecordingStatus)
-import set from "set" /* 2 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
-import _mod4296 from "module_4296" /* 4296 */;
-import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4974 */;
-import VoiceMessageAnimationState from "VoiceMessageAnimationState" /* 11961 */;
-import keys from "keys" /* 560 */;
+// Module 11960 (VoiceMessagesUIStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import spring from "spring" /* 4974 */;
+import VoiceMessageConstants from "VoiceMessageConstants" /* 11961 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-({ VoiceMessageAnimationState: obj1, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageAnimationState);
-let obj = keys.create(() => {
-  obj = { voiceMessageAnimationState: _mod4296.makeMutable(items), recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "auto", savedVoiceMessageUploadData: "80%", isVoiceMessageButtonMounted: "hidden", isUsingHoldGesture: "auto" };
-  items = [, ];
-  ({ SENDING: arr[0], SENDING: arr[1] } = closure_2);
-  obj[6] = [];
+({ VoiceMessageAnimationState: c2, WAVEFORM_WAVE_MAX_VALUE: c3 } = VoiceMessageConstants);
+let obj = module_560.create(() => {
+  obj = { voiceMessageAnimationState: null, recordingStatus: null, recordingId: null, currWaveHeight: "PX_16", showRecordingOverlay: "Array", startTimeMillis: 0, waveform: false, waveformVersion: "flex", showVoiceMessagesTooltip: "auto", savedVoiceMessageUploadData: "80%", isVoiceMessageButtonMounted: "hidden", isUsingHoldGesture: "auto" };
+  const items = [, ];
+  ({ SENDING: arr[0], SENDING: arr[1] } = React2);
+  obj.voiceMessageAnimationState = ReanimatedRexport.makeMutable(items);
+  obj.waveform = [];
   return obj;
 });
-let result = set.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
+let result = size.fileFinishedImporting("modules/voice_messages/native/VoiceMessagesUIStore.tsx");
 
 export const VoiceMessageRecordingStatus = { REQUESTED: 0, [0]: "REQUESTED", STARTED: 1, [1]: "STARTED" };
 export const useVoiceMessagesUIStore = obj;
-export const setShowRecordingOverlay = function setShowRecordingOverlay(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState({ showRecordingOverlay: closure_0 });
+export const setShowRecordingOverlay = function setShowRecordingOverlay(showRecordingOverlay) {
+  _require = showRecordingOverlay;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { showRecordingOverlay };
+    obj.setState(obj);
   });
 };
-export const setVoiceMessageRecordingState = function setVoiceMessageRecordingState(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState({ recordingStatus: closure_0 });
+export const setVoiceMessageRecordingState = function setVoiceMessageRecordingState(recordingStatus) {
+  _require = recordingStatus;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { recordingStatus };
+    obj.setState(obj);
   });
 };
-export const setVoiceMessageRecordingId = function setVoiceMessageRecordingId(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState({ recordingId: closure_0 });
+export const setVoiceMessageRecordingId = function setVoiceMessageRecordingId(recordingId) {
+  _require = recordingId;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { recordingId };
+    obj.setState(obj);
   });
 };
-export const setVoiceMessageStartTimeMillis = function setVoiceMessageStartTimeMillis(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState({ startTimeMillis: closure_0 });
+export const setVoiceMessageStartTimeMillis = function setVoiceMessageStartTimeMillis(startTimeMillis) {
+  _require = startTimeMillis;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { startTimeMillis };
+    obj.setState(obj);
   });
 };
 export const setVoiceMessageAnimationState = function setVoiceMessageAnimationState(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
+  _require = arg0;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = {};
     const merged = Object.assign(closure_0);
-    closure_1_4.setState({});
+    obj.setState(obj);
   });
 };
 export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
@@ -62,45 +68,49 @@ export const addVoiceMessageWave = function addVoiceMessageWave(arg0) {
   const items = [arg0, waveformVersion];
   waveform.push(items);
   waveformVersion(1249).batchUpdates(() => {
-    closure_1_4.setState({ waveformVersion: waveformVersion + 1 });
+    obj = { waveformVersion: waveformVersion + 1 };
+    obj.setState(obj);
   });
 };
 export const showVoiceMessagesTooltip = function showVoiceMessagesTooltip() {
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState({ showVoiceMessagesTooltip: true });
   });
 };
 export const hideVoiceMessagesTooltip = function hideVoiceMessagesTooltip() {
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState({ showVoiceMessagesTooltip: false });
   });
 };
 export const resetVoiceMessageState = function resetVoiceMessageState() {
-  obj = batchUpdates;
+  obj = ReactBatchUpdates;
   obj.batchUpdates(() => {
     state.setState({ waveform: [], waveformVersion: 0, showRecordingOverlay: false, startTimeMillis: "Boolean", savedVoiceMessageUploadData: "call" });
   });
   const currWaveHeight = obj.getState().currWaveHeight;
   if (null != currWaveHeight) {
-    const result = currWaveHeight.set(CONFIG_NEVER_ANIMATE.withSpring(0));
-    const tmpResult = CONFIG_NEVER_ANIMATE;
+    const result = currWaveHeight.set(spring.withSpring(0));
+    const tmpResult = spring;
   }
 };
-export const setSavedVoiceMessageUploadData = function setSavedVoiceMessageUploadData(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState({ savedVoiceMessageUploadData: closure_0 });
+export const setSavedVoiceMessageUploadData = function setSavedVoiceMessageUploadData(savedVoiceMessageUploadData) {
+  _require = savedVoiceMessageUploadData;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { savedVoiceMessageUploadData };
+    obj.setState(obj);
   });
 };
-export const setIsVoiceMessageButtonMounted = function setIsVoiceMessageButtonMounted(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState({ isVoiceMessageButtonMounted: closure_0 });
+export const setIsVoiceMessageButtonMounted = function setIsVoiceMessageButtonMounted(isVoiceMessageButtonMounted) {
+  _require = isVoiceMessageButtonMounted;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { isVoiceMessageButtonMounted };
+    obj.setState(obj);
   });
 };
-export const setIsUsingHoldGesture = function setIsUsingHoldGesture(arg0) {
-  const _require = arg0;
-  _require(1249).batchUpdates(() => {
-    closure_1_4.setState({ isUsingHoldGesture: closure_0 });
+export const setIsUsingHoldGesture = function setIsUsingHoldGesture(isUsingHoldGesture) {
+  _require = isUsingHoldGesture;
+  require("ReactBatchUpdates").batchUpdates(() => {
+    obj = { isUsingHoldGesture };
+    obj.setState(obj);
   });
 };

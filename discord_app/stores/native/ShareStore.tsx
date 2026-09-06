@@ -1,42 +1,41 @@
-// === Module 14395: handleTokenUpdated ===
+// === Module 14395: ShareStore ===
 
-// Module 14395 (handleTokenUpdated)
+// Module 14395 (ShareStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import enforcingDefault from "enforcing" /* 8362 */;
-import closure_6 from "fetchFingerprint" /* 502 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import closure_9 from "handleConnectionOpen" /* 2011 */;
-import closure_10 from "handleConnectionOpen" /* 4381 */;
-import closure_11 from "mergeGuildAvatar" /* 1371 */;
-import { AppStates } from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8362 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function handleTokenUpdated(token) {
   token = token.token;
   return false;
 }
+const AppStates = fn(1074).AppStates;
 const Store = initializeDefault.Store;
 class ShareStore extends Store {
 }
 ShareStore.prototype["initialize"] = function initialize() {
-  this.waitFor(closure_6, closure_7, closure_8, closure_9, closure_10, closure_11);
+  this.waitFor(AuthenticationStore, ChannelStore, GuildStore, SelectedChannelStore, SelectedGuildStore, UserStore);
 };
 ShareStore.displayName = "ShareStore";
-const shareStore = new ShareStore(dispatcherDefault, {
+const shareStore = new ShareStore(DispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
-    ({ guildId: closure_3, channelId: closure_4 } = arg0);
+    ({ guildId: c3, channelId: c4 } = arg0);
     return false;
   },
   LOGOUT: function handleLogout() {
-    enforcingDefault.setSelectedChannel(null, null);
-    const obj = enforcingDefault;
-    const obj2 = enforcingDefault;
-    const result = obj2.setAuthenticationToken(null, expandEventPropertiesDefault.getSuperPropertiesBase64());
+    NativeShareManagerModuleDefault.setSelectedChannel(null, null);
+    const obj2 = NativeShareManagerModuleDefault;
+    const result = obj2.setAuthenticationToken(null, AnalyticsUtilsDefault.getSuperPropertiesBase64());
     c5 = null;
     return false;
   },
@@ -44,20 +43,20 @@ const shareStore = new ShareStore(dispatcherDefault, {
   LOGIN_SUCCESS: handleTokenUpdated,
   UPDATE_TOKEN: handleTokenUpdated,
   START_SESSION: function handleStartSession() {
-    const token2 = token.getToken();
+    const token = AuthenticationStore.getToken();
     return false;
   },
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
     state = state.state;
     if (state === AppStates.INACTIVE) {
       if (null != c4) {
-        guild = guild.getGuild(c3);
+        const guild = GuildStore.getGuild(c3);
         let json = null;
         if (null != guild) {
           const _JSON = JSON;
           json = JSON.stringify(guild);
         }
-        channel = channel.getChannel(channelId.getChannelId());
+        const channel = ChannelStore.getChannel(SelectedChannelStore.getChannelId());
         let json1 = null;
         if (null != channel) {
           let obj = {};
@@ -66,31 +65,28 @@ const shareStore = new ShareStore(dispatcherDefault, {
           if (recipients == null) {
             recipients = [];
           }
-          const mapped = recipients.map(getUser.getUser);
-          obj.recipients = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+          const mapped = recipients.map(UserStore.getUser);
+          obj.recipients = mapped.filter(GlobalUtils.isNotNullish);
           json1 = JSON.stringify(obj);
         }
-        enforcingDefault.setSelectedChannel(json1, json);
+        NativeShareManagerModuleDefault.setSelectedChannel(json1, json);
         c3 = null;
         c4 = null;
-        const obj3 = enforcingDefault;
       }
     }
     if (null != c5) {
-      obj = { client_app_state: null };
-      obj[0] = state;
-      const result = encodeProperties.extendSuperProperties(obj);
-      const obj4 = encodeProperties;
-      const obj6 = enforcingDefault;
-      const result1 = obj6.setAuthenticationToken(c5, expandEventPropertiesDefault.getSuperPropertiesBase64());
+      obj = { client_app_state: state };
+      const result = discord_common_AnalyticsUtils.extendSuperProperties(obj);
+      const obj6 = NativeShareManagerModuleDefault;
+      const result1 = obj6.setAuthenticationToken(c5, AnalyticsUtilsDefault.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {
         c5 = null;
       }
-      const obj7 = expandEventPropertiesDefault;
     }
     return false;
   }
 });
-let result = require("set").fileFinishedImporting("stores/native/ShareStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/native/ShareStore.tsx");
 
 export default shareStore;

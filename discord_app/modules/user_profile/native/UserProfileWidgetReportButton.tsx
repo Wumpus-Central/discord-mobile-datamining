@@ -1,54 +1,57 @@
 // === Module 8663: UserProfileWidgetReportButton ===
 
 // Module 8663 (UserProfileWidgetReportButton)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ReportModals from "ReportModals" /* 8629 */;
 import FlagIcon from "FlagIcon" /* 8664 */;
 import ContextMenu from "ContextMenu" /* 8666 */;
-import { Pressable } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 8672 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
+require = fn;
+const Pressable = fn(17).Pressable;
+const jsx = fn(21).jsx;
 let closure_5 = { top: 8, bottom: 8, left: 8, right: 8 };
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
 
 export default function UserProfileWidgetReportButton(arg0) {
   ({ userId: require, widget: importDefault } = arg0);
   let obj = { label: null, variant: "destructive", IconComponent: null, action: null };
-  let intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.D4GvHE);
-  obj[2] = FlagIcon.FlagIcon;
-  obj[3] = function action() {
-    return closure_1_0(closure_1_2[5]).showReportModalForWidget(closure_0, closure_1);
+  let intl = util.intl;
+  obj.label = intl.string(util.t.D4GvHE);
+  obj.IconComponent = FlagIcon.FlagIcon;
+  obj.action = function action() {
+    return ReportModals.showReportModalForWidget(closure_1_0, importDefault);
   };
   const items = [obj];
   obj = {
     items,
     children(ref) {
       let obj = { ref: ref.ref };
-      const merged = Object.assign(Object.assign(ref, Object.create(null)));
-      obj.hitSlop = closure_5;
+      const merged = Object.assign(Object.assign(ref, Object.assign({ ref: 0 })));
+      obj.hitSlop = hitSlop;
       obj.accessibilityRole = "button";
-      const intl = callback(1114).intl;
-      obj.accessibilityLabel = intl.string(callback(1114).t.xpSHSk);
-      obj = { size: "sm", color: callback2(576).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8672).MoreHorizontalIcon, obj);
-      return callback3(closure_3, obj);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.xpSHSk);
+      obj = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
+      obj.children = jsx(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED });
+      return <Pressable size="sm" color={nativeDefault.colors.TEXT_MUTED} />;
     }
   };
   return jsx(ContextMenu.ContextMenu, {
     items,
     children(ref) {
       let obj = { ref: ref.ref };
-      const merged = Object.assign(Object.assign(ref, Object.create(null)));
-      obj.hitSlop = closure_5;
+      const merged = Object.assign(Object.assign(ref, Object.assign({ ref: 0 })));
+      obj.hitSlop = hitSlop;
       obj.accessibilityRole = "button";
-      const intl = callback(1114).intl;
-      obj.accessibilityLabel = intl.string(callback(1114).t.xpSHSk);
-      obj = { size: "sm", color: callback2(576).colors.TEXT_MUTED };
-      obj.children = callback3(callback(8672).MoreHorizontalIcon, obj);
-      return callback3(closure_3, obj);
+      const intl = util.intl;
+      obj.accessibilityLabel = intl.string(util.t.xpSHSk);
+      obj = { size: "sm", color: nativeDefault.colors.TEXT_MUTED };
+      obj.children = jsx(MoreHorizontalIcon.MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.TEXT_MUTED });
+      return <Pressable size="sm" color={nativeDefault.colors.TEXT_MUTED} />;
     }
   });
 };

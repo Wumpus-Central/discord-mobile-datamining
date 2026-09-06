@@ -1,37 +1,33 @@
-// === Module 12708: ? ===
+// === Module 12708: CreateGuildModalActionCreators ===
 
-// Module 12708
-import set from "set" /* 2 */;
+// Module 12708 (CreateGuildModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 12704 */;
-import NUXGuildTemplatesAnalytics from "NUXGuildTemplatesAnalytics" /* 6980 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import NUFActionCreators from "NUFActionCreators" /* 12704 */;
+import CreateGuildConstants from "CreateGuildConstants" /* 6980 */;
+import size from "module_2" /* 2 */;
 
-({ CreateGuildModalStates: c3, IN_APP_GUILD_TEMPLATES_MODAL_KEY: c4 } = NUXGuildTemplatesAnalytics);
-const result = set.fileFinishedImporting("modules/create_guild/native/CreateGuildModalActionCreators.tsx");
+({ CreateGuildModalStates: c3, IN_APP_GUILD_TEMPLATES_MODAL_KEY: closure_4 } = CreateGuildConstants);
+const result = size.fileFinishedImporting("modules/create_guild/native/CreateGuildModalActionCreators.tsx");
 
 export default {
   openCreateGuildModal(onSuccess) {
-    let obj = _modDef4763;
-    obj = { onSuccess };
-    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, closure_4);
+    const obj = { onSuccess };
+    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, React4);
   },
   closeCreateGuildModal() {
-    _modDef4763.popWithKey(closure_4);
+    ModalActionCreatorsDefault.popWithKey(React4);
   },
   closeCreateGuildOnboardingModal() {
-    _modDef4763.popWithKey(closure_4);
-    const obj = _modDef4763;
-    _startContactSyncForDiscoverability.nextOnboardingStep({});
+    ModalActionCreatorsDefault.popWithKey(React4);
+    NUFActionCreators.nextOnboardingStep({});
   },
   openGuildInviteScreen(channel) {
-    let obj = _modDef4763;
-    obj = { channel };
-    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, closure_4);
+    const obj = { channel };
+    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, React4);
   },
   openGuildJoinServerScreen() {
-    let obj = _modDef4763;
-    obj = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, closure_4);
+    const obj = { initialState: constants.JOIN_SERVER };
+    obj.pushLazy(asyncRequireImpl(12709, dependencyMap.paths), obj, React4);
   }
 };

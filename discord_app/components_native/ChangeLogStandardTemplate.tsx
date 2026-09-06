@@ -1,73 +1,72 @@
-// === Module 8090: LHeading ===
+// === Module 8090: ChangeLogStandardTemplate ===
 
-// Module 8090 (LHeading)
-import ThemesDefault from "Themes" /* 576 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
-import defaultRulesDefault from "defaultRules" /* 8093 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "_getSystemLocale" /* 2025 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8090 (ChangeLogStandardTemplate)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import getLocalizedLinkDefault from "getLocalizedLink" /* 4183 */;
+import LinkingDefault from "Linking" /* 4255 */;
+import _mod4257 from "module_4257" /* 4257 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4550 */;
+import ChangeLogUtilsDefault from "ChangeLogUtils" /* 8093 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
 
-const require = arg1;
+require = fn;
 function LHeading(children) {
-  obj = { style: callback2().lheading, children: null };
-  let _require = true;
+  let obj = { style: closure_13().lheading, children: null };
+  _require = true;
   let combined;
   if (null != children.className) {
     const parts = str.split(" ");
-    const mapped = parts.map((arg0) => {
-      if ("marginTop" === arg0) {
-        obj = { marginTop: 10 };
+    const mapped = parts.map((item) => {
+      if ("marginTop" === item) {
+        let obj = { marginTop: 10 };
       } else if (c0) {
         obj = { color: null };
-        obj[0] = closure_1_12[arg0];
+        obj.color = obj[item];
       } else {
         obj = { backgroundColor: null };
-        obj[0] = closure_1_12[arg0];
+        obj.backgroundColor = obj[item];
       }
       return obj;
     });
     combined = mapped.concat(tmp5);
   }
-  const items = [closure_10(_require(1178).LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
-  _require = false;
+  const items = [closure_10(require("native").LegacyText, { accessibilityRole: "header", style: combined, children: children.children }), ];
+  closure_129_0 = false;
   let combined1;
   if (null != children.className) {
     const parts1 = str.split(" ");
-    const mapped1 = parts1.map((arg0) => {
-      if ("marginTop" === arg0) {
-        obj = { marginTop: 10 };
+    const mapped1 = parts1.map((item) => {
+      if ("marginTop" === item) {
+        let obj = { marginTop: 10 };
       } else if (c0) {
         obj = { color: null };
-        obj[0] = closure_1_12[arg0];
+        obj.color = obj[item];
       } else {
         obj = { backgroundColor: null };
-        obj[0] = closure_1_12[arg0];
+        obj.backgroundColor = obj[item];
       }
       return obj;
     });
     combined1 = mapped1.concat(tmp7);
   }
   items[1] = closure_10(closure_4, { style: combined1 });
-  obj[1] = items;
+  obj.children = items;
   return closure_11(closure_4, obj);
 }
 function LinkInner(target) {
   target = target.target;
-  let changelog;
   ({ changelogId, className, children } = target);
-  obj = target(563);
-  const items = [closure_6];
+  let obj = target(563);
+  const items = [LocaleStore];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  changelog = target(8091).useChangelog(changelogId, stateFromStores).changelog;
+  const changelog = target(8091).useChangelog(changelogId, stateFromStores).changelog;
   obj = {
     accessibilityRole: "link",
     style: className,
     onPress() {
-      obj = changelog(closure_1_2[10]);
+      let obj = AnalyticsUtilsDefault;
       let date;
       if (changelog != null) {
         date = tmp3.date;
@@ -85,176 +84,178 @@ function LinkInner(target) {
         num = 1;
       }
       obj = { change_log_id: "" + date + ":" + num, cta_type: "inline_link", target };
-      obj.track(closure_1_9.CHANGE_LOG_CTA_CLICKED, obj);
-      const tmp = changelog;
-      const tmpResult = changelog(closure_1_2[11]);
-      tmpResult.openURL(target(closure_1_2[12]).sanitizeUrl(target));
+      obj.track(constants.CHANGE_LOG_CTA_CLICKED, obj);
+      const tmpResult = LinkingDefault;
+      tmpResult.openURL(_mod4257.sanitizeUrl(target));
     },
     children
   };
-  return callback(target(1178).LegacyText, obj);
+  return closure_10(target(1178).LegacyText, obj);
 }
-let c3 = importAllResult;
-({ View: c4, ScrollView: c5, StyleSheet } = get_ActivityIndicator);
-({ LocalizedLinks: error, SOCIAL_LINKS: closure_8, AnalyticEvents: c9, Fonts } = ME);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let obj = { added: ThemesDefault.unsafe_rawColors.GREEN_360, fixed: ThemesDefault.unsafe_rawColors.RED_400, progress: ThemesDefault.unsafe_rawColors.YELLOW_300, improved: ThemesDefault.unsafe_rawColors.BRAND_500 };
-obj = { flex: { flex: 1 }, container: { padding: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW }, footer: null, scrollViewContainer: null, lheading: null, lheadingText: null, lheadingLine: null, bulletPoint: null, listItem: null, listText: null };
-createCacheKey = { flexDirection: "row", justifyContent: "center", borderTopWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: ThemesDefault.colors.BORDER_STRONG, gap: ThemesDefault.space.PX_12, paddingHorizontal: 18, paddingVertical: ThemesDefault.space.PX_12 };
-obj[2] = createCacheKey;
-obj[3] = { flex: 1 };
-obj[4] = { marginBottom: 14, flexDirection: "row", alignItems: "center" };
-obj[5] = { fontSize: 16, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-obj[6] = { flexGrow: 1, flexShrink: 1, flexBasis: "auto", marginLeft: 10, height: 2 };
-let obj1 = { padding: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-obj[7] = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-obj[8] = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
-let obj3 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
-obj[9] = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
-let closure_13 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((children) => {
+get_ActivityIndicator = fn(17);
+({ View: closure_4, ScrollView: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const Constants = fn(1074);
+({ LocalizedLinks: closure_7, SOCIAL_LINKS: closure_8, AnalyticEvents: closure_9, Fonts } = Constants);
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+let components = { added: nativeDefault.unsafe_rawColors.GREEN_360, fixed: nativeDefault.unsafe_rawColors.RED_400, progress: nativeDefault.unsafe_rawColors.YELLOW_300, improved: nativeDefault.unsafe_rawColors.BRAND_500 };
+fn(4560);
+components = { flex: { flex: 1 }, container: { padding: 18, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, footer: null, scrollViewContainer: null, lheading: null, lheadingText: null, lheadingLine: null, bulletPoint: null, listItem: null, listText: null };
+const createStyles = { flexDirection: "row", justifyContent: "center", borderTopWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: nativeDefault.colors.BORDER_STRONG, gap: nativeDefault.space.PX_12, paddingHorizontal: 18, paddingVertical: nativeDefault.space.PX_12 };
+components.footer = createStyles;
+components.scrollViewContainer = { flex: 1 };
+components.lheading = { marginBottom: 14, flexDirection: "row", alignItems: "center" };
+components.lheadingText = { fontSize: 16, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+components.lheadingLine = { flexGrow: 1, flexShrink: 1, flexBasis: "auto", marginLeft: 10, height: 2 };
+let size = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
+components.bulletPoint = size;
+components.listItem = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
+let obj1 = { padding: 18, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+components.listText = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
+let closure_13 = createStyles.createStyles(components);
+const memoResult = noop.memo((children) => {
   children = children.children;
-  const tmp = callback2();
-  obj = { style: tmp.listItem, children: null };
+  const tmp = closure_13();
+  let obj = { style: tmp.listItem, children: null };
   obj = { style: tmp.bulletPoint };
-  const items = [callback(closure_4, obj), ];
+  const items = [closure_1_10(React4, obj), ];
   obj = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
-    obj1 = { style: null };
-    obj1[0] = tmp.listText;
+    const obj1 = { style: tmp.listText };
     childrenResult = children(obj1);
   }
-  obj[1] = childrenResult;
-  items[1] = callback(closure_4, obj);
-  obj[1] = items;
-  return closure_11(closure_4, obj);
+  obj.children = childrenResult;
+  items[1] = closure_1_10(React4, obj);
+  obj.children = items;
+  return closure_1_11(React4, obj);
 });
-let obj4 = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
-const memoResult1 = importAllResult.memo((video) => {
+let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
+size = fn(2);
+const result = size.fileFinishedImporting("components_native/ChangeLogStandardTemplate.tsx");
+
+export default noop.memo((video) => {
   ({ changeLog, onScroll } = video);
-  let id = onScroll;
-  const tmp = callback2();
+  const tmp = closure_13();
   const items = [onScroll];
-  obj = { style: tmp.flex, children: null };
+  let obj = { style: tmp.flex, children: null };
   obj = {
     contentContainerStyle: tmp.container,
     style: tmp.scrollViewContainer,
-    onScroll: importAllResult.useCallback((nativeEvent) => {
-      id(nativeEvent.nativeEvent);
+    onScroll: noop.useCallback((nativeEvent) => {
+      onScroll(nativeEvent.nativeEvent);
     }, items),
     scrollEventThrottle: 3,
     children: null
   };
   const items1 = [video.video, ];
-  let obj2 = get_defaultRulesDefault;
-  id = changeLog.id;
-  let obj3 = defaultRulesDefault;
+  let obj2 = MarkupUtilsDefault;
+  const id = changeLog.id;
+  let obj3 = ChangeLogUtilsDefault;
   {
     obj = { components: null };
-    obj1 = { Link: null, ListItem: null, LHeading: null, Heading: null };
-    obj1[0] = (arg0) => {
-      obj = {};
+    const obj1 = { Link: null, ListItem: null, LHeading: null, Heading: null };
+    closure_129_0 = id;
+    obj1.Link = (arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj.changelogId = id;
-      return closure_1_10(closure_1_16, obj);
+      obj.changelogId = onScroll;
+      return closure_2_10(LinkInner, obj);
     };
-    obj1[1] = closure_15;
-    obj1[2] = LHeading;
-    obj1[3] = LHeading;
-    obj[0] = obj1;
+    obj1.ListItem = ListItem;
+    obj1.LHeading = LHeading;
+    obj1.Heading = LHeading;
+    obj.components = obj1;
     const defaultRules = obj3.getDefaultRules(obj);
   }
   items1[1] = obj2.reactParserFor(defaultRules)(changeLog.body, false);
-  obj[4] = items1;
+  obj.children = items1;
   const items2 = [closure_11(closure_5, obj), ];
   obj2 = { bottom: true, style: tmp.footer, children: null };
-  obj3 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8099).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
-  const intl = id(1114).intl;
-  obj3[4] = intl.string(id(1114).t["/lXfom"]);
-  obj3[5] = function onPress() {
-    callback(4255).openURL(callback(4183)(constants.TWITTER));
+  obj3 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8099).XNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const intl = onScroll(1114).intl;
+  obj3.accessibilityLabel = intl.string(onScroll(1114).t["/lXfom"]);
+  obj3.onPress = function onPress() {
+    LinkingDefault.openURL(getLocalizedLinkDefault(constants.TWITTER));
   };
-  const items3 = [callback(id(8097).IconButton, obj3), , ];
-  const obj4 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8101).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
-  const intl2 = id(1114).intl;
-  obj4[4] = intl2.string(id(1114).t["h0or/l"]);
-  obj4[5] = function onPress() {
-    callback(4255).openURL(constants2.FACEBOOK_URL);
+  const items3 = [closure_10(onScroll(8097).IconButton, obj3), , ];
+  const obj4 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8101).FacebookNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const intl2 = onScroll(1114).intl;
+  obj4.accessibilityLabel = intl2.string(onScroll(1114).t["h0or/l"]);
+  obj4.onPress = function onPress() {
+    LinkingDefault.openURL(constants2.FACEBOOK_URL);
   };
-  items3[1] = callback(id(8097).IconButton, obj4);
-  const obj5 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: callback(id(8103).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
-  const intl3 = id(1114).intl;
-  obj5[4] = intl3.string(id(1114).t["5uVPyf"]);
-  obj5[5] = function onPress() {
-    callback(4255).openURL(constants2.INSTAGRAM_URL);
+  items3[1] = closure_10(onScroll(8097).IconButton, obj4);
+  const obj5 = { size: "sm", variant: "tertiary", accessibilityRole: "link", icon: closure_10(onScroll(8103).InstagramNeutralIcon, { size: "sm", color: "interactive-icon-default" }), accessibilityLabel: null, onPress: null };
+  const intl3 = onScroll(1114).intl;
+  obj5.accessibilityLabel = intl3.string(onScroll(1114).t["5uVPyf"]);
+  obj5.onPress = function onPress() {
+    LinkingDefault.openURL(constants2.INSTAGRAM_URL);
   };
-  items3[2] = callback(id(8097).IconButton, obj5);
-  obj2[2] = items3;
-  items2[1] = closure_11(id(7123).SafeAreaPaddingView, obj2);
-  obj[1] = items2;
+  items3[2] = closure_10(onScroll(8097).IconButton, obj5);
+  obj2.children = items3;
+  items2[1] = closure_11(onScroll(7123).SafeAreaPaddingView, obj2);
+  obj.children = items2;
   return closure_11(closure_4, obj);
 });
-const result = require("set").fileFinishedImporting("components_native/ChangeLogStandardTemplate.tsx");
-
-export default memoResult1;
 export const ListItem = memoResult;
 export const changelogRules = function changelogRules(changelogId, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  obj = defaultRulesDefault;
+  components = ChangeLogUtilsDefault;
   if (flag) {
-    obj = { components: null };
-    obj = { Link: null, ListItem: null, LHeading: null, Heading: null };
-    closure_0 = changelogId;
-    obj[0] = (arg0) => {
-      obj = {};
+    components = { components: null };
+    components = { Link: null, ListItem: null, LHeading: null, Heading: null };
+    closure_129_0 = changelogId;
+    components.Link = (arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj.changelogId = id;
-      return closure_1_10(closure_1_16, obj);
+      obj.changelogId = onScroll;
+      return closure_2_10(LinkInner, obj);
     };
-    obj[1] = closure_15;
-    obj[2] = LHeading;
-    obj[3] = LHeading;
-    obj[0] = obj;
-    let messageRules = obj.getMessageRules(obj);
+    components.ListItem = ListItem;
+    components.LHeading = LHeading;
+    components.Heading = LHeading;
+    components.components = components;
+    let messageRules = components.getMessageRules(components);
   } else {
-    obj1 = { components: null };
+    const obj1 = { components: null };
     const obj2 = { Link: null, ListItem: null, LHeading: null, Heading: null };
     closure_0 = changelogId;
-    obj2[0] = (arg0) => {
-      obj = {};
+    obj2.Link = (arg0) => {
+      const obj = {};
       const merged = Object.assign(arg0);
-      obj.changelogId = id;
-      return closure_1_10(closure_1_16, obj);
+      obj.changelogId = onScroll;
+      return closure_2_10(LinkInner, obj);
     };
-    obj2[1] = closure_15;
-    obj2[2] = LHeading;
-    obj2[3] = LHeading;
-    obj1[0] = obj2;
-    messageRules = obj.getDefaultRules(obj1);
+    obj2.ListItem = ListItem;
+    obj2.LHeading = LHeading;
+    obj2.Heading = LHeading;
+    obj1.components = obj2;
+    messageRules = components.getDefaultRules(obj1);
   }
   return messageRules;
 };
 export const getRenderChangelog = function getRenderChangelog(id) {
-  obj = get_defaultRulesDefault;
+  components = MarkupUtilsDefault;
   id = id.id;
   {
-    obj = { components: null };
-    obj = { Link: null, ListItem: null, LHeading: null, Heading: null };
-    obj[0] = (arg0) => {
-      obj = {};
-      const merged = Object.assign(arg0);
-      obj.changelogId = id;
-      return closure_1_10(closure_1_16, obj);
+    components = { components: null };
+    components = {
+      (arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.changelogId = onScroll;
+          return closure_2_10(LinkInner, obj);
+        },
+      ListItem,
+      LHeading,
+      Heading: LHeading
     };
-    obj[1] = closure_15;
-    obj[2] = LHeading;
-    obj[3] = LHeading;
-    obj[0] = obj;
-    const defaultRules = obj2.getDefaultRules(obj);
+    components.components = components;
+    const defaultRules = obj2.getDefaultRules(components);
   }
-  return obj.reactParserFor(defaultRules);
+  return components.reactParserFor(defaultRules);
 };

@@ -1,13 +1,20 @@
 // === Module 12313: GuildDirectoryMoreMenu ===
 
 // Module 12313 (GuildDirectoryMoreMenu)
-import noopAll from "noop" /* 19 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import ReportModals from "ReportModals" /* 8629 */;
 import useCanManageGuildDirectoryEntryDefault from "useCanManageGuildDirectoryEntry" /* 12307 */;
-import { jsx } from "jsxProd" /* 21 */;
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12314 */;
+import GuildDirectoryActionCreatorsAll from "GuildDirectoryActionCreators" /* 12316 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryMoreMenu.tsx");
 
 export default function GuildDirectoryMoreMenu(entry) {
   entry = entry.entry;
@@ -17,11 +24,10 @@ export default function GuildDirectoryMoreMenu(entry) {
   if (tmp2.canEdit) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1114).intl;
-    obj[0] = intl.string(entry(1114).t.XnuOvN);
-    obj[1] = entry(10250).PencilIcon;
-    obj[2] = function handleEdit() {
-      let obj = closure_1_1(closure_1_3[3]);
-      obj = { entry };
+    obj.label = intl.string(entry(1114).t.XnuOvN);
+    obj.IconComponent = entry(10250).PencilIcon;
+    obj.action = function handleEdit() {
+      const obj = { entry };
       obj.open(obj);
     };
     items.push(obj);
@@ -29,26 +35,25 @@ export default function GuildDirectoryMoreMenu(entry) {
   if (canRemove) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1114).intl;
-    obj[0] = intl2.string(entry(1114).t.KUxYWH);
-    obj[1] = entry(4518).TrashIcon;
-    obj[3] = function handleRemove() {
-      let obj = closure_1_1(closure_1_3[4]);
-      obj = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
-      const intl = entry(closure_1_3[5]).intl;
-      obj[0] = intl.string(entry(closure_1_3[5]).t.KUxYWH);
-      const intl2 = entry(closure_1_3[5]).intl;
+    obj.label = intl2.string(entry(1114).t.KUxYWH);
+    obj.IconComponent = entry(4518).TrashIcon;
+    obj.action = function handleRemove() {
+      let obj = { title: null, body: null, onConfirm: null, confirmColor: null, confirmText: null, cancelText: null, onCancel: null };
+      const intl = util.intl;
+      obj.title = intl.string(util.t.KUxYWH);
+      const intl2 = util.intl;
       obj = { guildName: entry.name };
-      obj[1] = intl2.formatToPlainString(entry(closure_1_3[5]).t["/5y0uV"], obj);
-      obj[2] = function onConfirm() {
-        const result = closure_1_2(closure_1_3[6]).removeDirectoryGuildEntry(closure_0.channelId, closure_0.guildId);
+      obj.body = intl2.formatToPlainString(util.t["/5y0uV"], obj);
+      obj.onConfirm = function onConfirm() {
+        const result = GuildDirectoryActionCreatorsAll.removeDirectoryGuildEntry(entry.channelId, entry.guildId);
       };
-      obj[3] = entry(closure_1_3[7]).ButtonColors.RED;
-      const intl3 = entry(closure_1_3[5]).intl;
-      obj[4] = intl3.string(entry(closure_1_3[5]).t.N86XcP);
-      const intl4 = entry(closure_1_3[5]).intl;
-      obj[5] = intl4.string(entry(closure_1_3[5]).t["ETE/oC"]);
-      obj[6] = function onCancel() {
-        callback(table[4]).close();
+      obj.confirmColor = native.ButtonColors.RED;
+      const intl3 = util.intl;
+      obj.confirmText = intl3.string(util.t.N86XcP);
+      const intl4 = util.intl;
+      obj.cancelText = intl4.string(util.t["ETE/oC"]);
+      obj.onCancel = function onCancel() {
+        closure_1_1(dependencyMap[4]).close();
       };
       obj.show(obj);
     };
@@ -57,30 +62,45 @@ export default function GuildDirectoryMoreMenu(entry) {
   if (!isEntryAdmin) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1114).intl;
-    obj[0] = intl3.string(entry(1114).t.Aen9eh);
-    obj[1] = entry(8664).FlagIcon;
-    obj[3] = function handleReport() {
-      const result = entry(closure_1_3[8]).showReportModalForGuildDirectoryEntry(entry);
+    obj.label = intl3.string(entry(1114).t.Aen9eh);
+    obj.IconComponent = entry(8664).FlagIcon;
+    obj.action = function handleReport() {
+      const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
     items.push(obj);
   }
   let tmp9 = null;
   if (0 !== items.length) {
-    obj1 = { items: null, children: null };
-    obj1[0] = items;
-    obj1[1] = function children(ref) {
-      const merged = Object.assign(ref, Object.create(null));
-      let obj = { ref: ref.ref };
-      const merged1 = Object.assign(merged);
-      obj.size = "sm";
-      obj.variant = "secondary";
-      const intl = entry(1114).intl;
-      obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
-      obj = { size: "sm", color: callback(576).colors.WHITE };
-      obj.icon = callback2(entry(8672).MoreHorizontalIcon, obj);
-      return callback2(entry(8097).IconButton, obj);
+    const obj1 = {
+      items,
+      children(ref) {
+          const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+          let obj = { ref: ref.ref };
+          const merged1 = Object.assign(merged);
+          obj.size = "sm";
+          obj.variant = "secondary";
+          const intl = entry(1114).intl;
+          obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
+          obj = { size: "sm", color: nativeDefault.colors.WHITE };
+          obj.icon = jsx(entry(8672).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8097).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
+        }
     };
-    tmp9 = jsx(entry(8666).ContextMenu, { items: null, children: null });
+    tmp9 = jsx(entry(8666).ContextMenu, {
+      items,
+      children(ref) {
+          const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+          let obj = { ref: ref.ref };
+          const merged1 = Object.assign(merged);
+          obj.size = "sm";
+          obj.variant = "secondary";
+          const intl = entry(1114).intl;
+          obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
+          obj = { size: "sm", color: nativeDefault.colors.WHITE };
+          obj.icon = jsx(entry(8672).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+          return jsx(entry(8097).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
+        }
+    });
   }
   return tmp9;
 };

@@ -1,34 +1,34 @@
-// === Module 9782: getGuildScheduledEventHeaderProps ===
+// === Module 9782: GuildScheduledEventHeaderUtils ===
 
-// Module 9782 (getGuildScheduledEventHeaderProps)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import getRRule from "getRRule" /* 9665 */;
-import registerAssetDefault from "registerAsset" /* 9783 */;
-import scheduledEventSort from "scheduledEventSort" /* 7526 */;
+// Module 9782 (GuildScheduledEventHeaderUtils)
+import nativeDefault from "native" /* 576 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
+import ScheduleUtils from "ScheduleUtils" /* 9665 */;
+import _modDef9783 from "module_9783" /* 9783 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
+import size from "module_2" /* 2 */;
 
-({ isGuildEventEnded: c3, isGuildScheduledEventActive: c4 } = scheduledEventSort);
-let closure_5 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventEntityTypes;
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx");
+({ isGuildEventEnded: c3, isGuildScheduledEventActive: closure_4 } = GuildScheduledEventStore);
+const constants = GuildScheduledEventsConstants.GuildScheduledEventEntityTypes;
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx");
 
 export const getGuildScheduledEventHeaderProps = function getGuildScheduledEventHeaderProps(eventTimeData) {
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
-  let obj = getRRule;
+  let obj = ScheduleUtils;
   if (null != recurrenceId) {
     let tmp5 = obj.getNextRecurrenceIdInEvent(event) === recurrenceId;
     if (tmp5) {
-      tmp5 = callback2(event);
+      tmp5 = React4(event);
     }
     let tmp4 = tmp5;
   } else {
-    tmp4 = callback2(event);
+    tmp4 = React4(event);
   }
-  const tmp7 = callback(event);
-  const ICON_SUBTLE = ThemesDefault.colors.ICON_SUBTLE;
-  let tmp8Result = registerAssetDefault;
+  const tmp7 = React3(event);
+  const ICON_SUBTLE = nativeDefault.colors.ICON_SUBTLE;
+  let tmp8Result = _modDef9783;
   if (tmp4) {
     const intl4 = tmp(1114).intl;
     let stringResult = intl4.string(tmp(1114).t["X2K3/4"]);
@@ -60,8 +60,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     if (upcomingEvent) {
       if (diffMinutes > 0) {
         const intl2 = tmp(1114).intl;
-        obj = { minutes: null };
-        obj[0] = diffMinutes;
+        obj = { minutes: diffMinutes };
         let formatToPlainStringResult = intl2.formatToPlainString(tmp(1114).t.PQlCWk, obj);
       } else {
         const intl = tmp(1114).intl;
@@ -78,7 +77,7 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
   }
   obj = { icon: tmp8Result, text: stringResult1, color: null, shouldChangeTextColor: null };
   const internal = tmp8(576).internal;
-  obj[2] = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
+  obj.color = internal.resolveSemanticColor(theme, ICON_FEEDBACK_CRITICAL);
   let tmp17 = !tmp7;
   if (!tmp7) {
     if (!tmp4) {
@@ -89,6 +88,6 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     }
     tmp17 = tmp4;
   }
-  obj[3] = tmp17;
+  obj.shouldChangeTextColor = tmp17;
   return obj;
 };

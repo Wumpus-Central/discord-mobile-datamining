@@ -1,30 +1,31 @@
 // === Module 11440: useGiftCodeErrorMessage ===
 
 // Module 11440 (useGiftCodeErrorMessage)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "map" /* 7558 */;
-import closure_4 from "updateGiftCode" /* 11429 */;
+import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
+import GiftCodeStore from "GiftCodeStore" /* 11429 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
 
 export default function useGiftCodeErrorMessage(arg0, id) {
-  const _require = arg0;
-  let items = [closure_4];
-  const tmp3 = callback(_require(first[3]).useStateFromStoresArray(items, () => {
-    const items = [closure_1_4.get(closure_0), closure_1_4.getError(closure_0)];
+  _require = arg0;
+  let items = [GiftCodeStore];
+  const tmp3 = _slicedToArray(require("initialize").useStateFromStoresArray(items, () => {
+    const items = [GiftCodeStore.get(closure_0), GiftCodeStore.getError(closure_0)];
     return items;
   }), 2);
   first = tmp3[0];
-  const obj = _require(first[3]);
-  const items1 = [closure_3];
+  const obj = require("initialize");
+  const items1 = [CollectiblesPurchaseStore];
   let userId;
-  const stateFromStores = _require(first[3]).useStateFromStores(items1, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items1, () => {
     let skuId;
     if (first != null) {
       skuId = first.skuId;
     }
-    return closure_1_3.getPurchase(skuId);
+    return CollectiblesPurchaseStore.getPurchase(skuId);
   });
   if (first != null) {
     userId = first.userId;

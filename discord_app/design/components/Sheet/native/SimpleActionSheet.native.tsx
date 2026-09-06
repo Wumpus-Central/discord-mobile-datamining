@@ -1,12 +1,11 @@
 // === Module 7197: SimpleActionSheet ===
 
 // Module 7197 (SimpleActionSheet)
-import noopAll from "noop" /* 19 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ActionSheetRow from "ActionSheetRow" /* 7200 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class SimpleActionSheet {
   constructor(arg0) {
     ({ hideActionSheet, header, options } = global);
@@ -17,52 +16,51 @@ class SimpleActionSheet {
     if (tmp5Result1) {
       tmp5 = jsx;
       obj = { leading: null, title: null, subtitle: null, trailing: null };
-      ({ icon: obj[0], title: obj[1], subtitle: obj[2] } = header);
+      ({ icon: obj.leading, title: obj.title, subtitle: obj.subtitle } = header);
       tmp5Result = null;
       if (null != header.onClose) {
         obj = { onPress: null };
-        obj[0] = header.onClose;
-        tmp5Result = tmp5(require("ActionSheetCloseButton").ActionSheetCloseButton, obj);
+        obj.onPress = header.onClose;
+        tmp5Result = tmp5(tmp2(tmp3[4]).ActionSheetCloseButton, obj);
       }
-      obj[3] = tmp5Result;
-      tmp5Result1 = tmp5(require("RedesignBottomSheetTitleHeaderBase").BottomSheetTitleHeader, obj);
+      obj.trailing = tmp5Result;
+      tmp5Result1 = tmp5(tmp2(tmp3[3]).BottomSheetTitleHeader, obj);
     }
     obj1 = { children: null };
     items = [, ];
     items[0] = tmp5Result1;
     obj2 = {
       hasIcons: global.hasIcons,
-      children: options.map((arg0, arg1) => {
-            ({ icon, IconComponent, onPress: closure_0 } = arg0);
-            ({ label, isDestructive } = arg0);
+      children: options.map((item, index) => {
+            ({ icon, IconComponent, onPress: closure_0 } = item);
+            ({ label, isDestructive } = item);
             if (null != icon) {
-              let obj = { source: null, IconComponent: null };
-              obj[0] = icon;
-              obj[1] = IconComponent;
-              const tmp = closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow.Icon, obj);
+              let obj = { source: icon, IconComponent };
+              const tmp = closure_1_2(ActionSheetRow.ActionSheetRow.Icon, obj);
             }
             obj = { icon: tmp, variant: null, label: null, onPress: null };
             let str = "default";
             if (isDestructive) {
               str = "danger";
             }
-            obj[1] = str;
-            obj[2] = label;
-            obj[3] = function onPress() {
+            obj.variant = str;
+            obj.label = label;
+            obj.onPress = function onPress() {
+              require();
               closure_1_0();
-              callback();
             };
-            return closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow, obj, arg1);
+            return closure_1_2(ActionSheetRow.ActionSheetRow, obj, index);
           })
     };
-    items[1] = jsx(require("ActionSheetRowIcon").ActionSheetRow.Group, obj2);
-    obj1[0] = items;
-    return tmp(require("ActionSheet").ActionSheet, obj1);
+    items[1] = jsx(tmp2(tmp3[5]).ActionSheetRow.Group, obj2);
+    obj1.children = items;
+    return tmp(hideActionSheet(closure_1[2]).ActionSheet, obj1);
   }
 }
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/SimpleActionSheet.native.tsx");
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/SimpleActionSheet.native.tsx");
 
 export default SimpleActionSheet;
 export { SimpleActionSheet };

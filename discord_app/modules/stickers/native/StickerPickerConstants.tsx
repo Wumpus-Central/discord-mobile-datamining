@@ -1,15 +1,15 @@
-// === Module 10273: PADDING_HORIZONTAL ===
+// === Module 10273: StickerPickerConstants ===
 
-// Module 10273 (PADDING_HORIZONTAL)
-import set from "set" /* 2 */;
-import StickerFormat from "StickerFormat" /* 5268 */;
-import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1219 */;
+// Module 10273 (StickerPickerConstants)
+import StickersTypes from "StickersTypes" /* 5268 */;
+import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
+import size from "module_2" /* 2 */;
 
-const PADDING_VERTICAL = ExpressionPickerViewType.PADDING_VERTICAL;
-({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerViewType);
+const PADDING_VERTICAL = ExpressionPickerConstants.PADDING_VERTICAL;
+({ PADDING_HORIZONTAL, MIN_MARGIN } = ExpressionPickerConstants);
 const result = 2 * PADDING_VERTICAL;
-const items = [StickerFormat.StickerFormat.GIF, StickerFormat.StickerFormat.PNG, StickerFormat.StickerFormat.APNG];
-const result1 = set.fileFinishedImporting("modules/stickers/native/StickerPickerConstants.tsx");
+const items = [StickersTypes.StickerFormat.GIF, StickersTypes.StickerFormat.PNG, StickersTypes.StickerFormat.APNG];
+const result1 = size.fileFinishedImporting("modules/stickers/native/StickerPickerConstants.tsx");
 
 export { PADDING_HORIZONTAL };
 export { PADDING_VERTICAL };

@@ -1,14 +1,11 @@
-// === Module 4784: createFromServer ===
+// === Module 4784: InteractionRecord ===
 
-// Module 4784 (createFromServer)
-import toJSDefault from "toJS" /* 1386 */;
-import closure_0 from "createdAt" /* 1385 */;
+// Module 4784 (InteractionRecord)
+import Record from "Record" /* 1386 */;
+import UserRecord from "UserRecord" /* 1385 */;
 
-toJSDefault;
-let prototype;
-prototype = function InteractionRecord(name) {
+const prototype = function InteractionRecord(name) {
   const tmp = new prototype(new.target, name, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, name: tmp.name, type: tmp.type, user: tmp.user, name_localized } = name);
   if (name_localized == null) {
     name_localized = name.name;
@@ -21,21 +18,23 @@ class prototype extends tmp2 {
 prototype["createFromServer"] = function createFromServer(user) {
   const obj = {};
   const merged = Object.assign(user);
-  let str = user.user;
-  obj.user = new closure_0(str);
-  if (typeof prototype !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  user = user.user;
+  obj.user = new UserRecord(user);
+  if (typeof prototype === "function") {
+    const tmp7 = new prototype(user, user, tmp2);
+    ({ id: tmp7.id, name: tmp7.name, type: tmp7.type, user: tmp7.user, name_localized } = obj);
+    if (name_localized == null) {
+      name_localized = obj.name;
+    }
+    tmp7.displayName = name_localized;
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp4 = new prototype(str, user, closure_0);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp4.id, name: tmp4.name, type: tmp4.type, user: tmp4.user, name_localized } = obj);
-  if (name_localized == null) {
-    name_localized = obj.name;
-  }
-  tmp4.displayName = name_localized;
-  return tmp4;
+  tmp2 = UserRecord;
+  const tmp3 = new UserRecord(user);
 };
-const result = require("set").fileFinishedImporting("records/InteractionRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/InteractionRecord.tsx");
 
 export default prototype;

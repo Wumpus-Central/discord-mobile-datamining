@@ -1,14 +1,15 @@
-// === Module 12935: inviteGuildHasPendingMemberDisabledVerification ===
+// === Module 12935: GuildVerificationUtils ===
 
-// Module 12935 (inviteGuildHasPendingMemberDisabledVerification)
-import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4384 */;
+// Module 12935 (GuildVerificationUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
 import transitionToMemberVerification from "transitionToMemberVerification" /* 5525 */;
-import openMemberVerificationModal from "openMemberVerificationModal" /* 5569 */;
-import closure_2 from "handleGatewayJoinRequestUpdate" /* 4382 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5569 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4382 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
+require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 
 export const inviteGuildHasPendingMemberDisabledVerification = function inviteGuildHasPendingMemberDisabledVerification(guild) {
   const features = guild.features;
@@ -27,12 +28,12 @@ export const inviteGuildHasPendingMemberDisabledVerification = function inviteGu
   return hasItem;
 };
 export const openVerificationModalOrTransitionToApplication = function openVerificationModalOrTransitionToApplication(id) {
-  request = request.getRequest(id);
+  const request = UserGuildJoinRequestStore.getRequest(id);
   if (null != request) {
-    if (request.applicationStatus !== MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.STARTED) {
+    if (request.applicationStatus !== MemberVerificationTypes.GuildJoinRequestApplicationStatuses.STARTED) {
       const result = transitionToMemberVerification.transitionToMemberVerification(id);
       const tmp2Result = transitionToMemberVerification;
     }
   }
-  const result1 = openMemberVerificationModal.openMemberVerificationModal(id);
+  const result1 = MemberVerificationModalActionCreators.openMemberVerificationModal(id);
 };

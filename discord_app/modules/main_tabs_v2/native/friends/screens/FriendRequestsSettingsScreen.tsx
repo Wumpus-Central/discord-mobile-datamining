@@ -1,27 +1,27 @@
 // === Module 16775: FriendRequestsSettingsScreen ===
 
 // Module 16775 (FriendRequestsSettingsScreen)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getMixedGradientColorDefault from "getMixedGradientColor" /* 5125 */;
+import nativeDefault from "native" /* 576 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
 import UserSettingsFriendRequestsDefault from "UserSettingsFriendRequests" /* 16776 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1, paddingTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsSettingsScreen.tsx");
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1, paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.container = createStyles;
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsSettingsScreen.tsx");
 
 export default function FriendRequestsSettingsScreen() {
   let obj = { children: null };
-  const items = [callback(getMixedGradientColorDefault, { absolute: true }), ];
-  obj = { style: callback3().container, children: callback(UserSettingsFriendRequestsDefault, {}) };
-  items[1] = callback(ScrollView, obj);
-  obj[0] = items;
-  return callback2(closure_4, obj);
+  const items = [React3(ThemedGradientDefault, { absolute: true }), ];
+  obj = { style: closure_6().container, children: React3(UserSettingsFriendRequestsDefault, {}) };
+  items[1] = React3(ScrollView, obj);
+  obj.children = items;
+  return hasOwnProperty(React4, obj);
 };

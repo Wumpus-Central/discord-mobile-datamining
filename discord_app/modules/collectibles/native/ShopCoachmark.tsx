@@ -1,20 +1,23 @@
-// === Module 16788: CoachmarkImg ===
+// === Module 16788: ShopCoachmark ===
 
-// Module 16788 (CoachmarkImg)
-import Button from "Button" /* 1178 */;
-import closure_3 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16788 (ShopCoachmark)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function CoachmarkImg(arg0) {
   ({ source, decorationAsset } = arg0);
-  const tmp = callback();
-  return jsx(Button.Avatar, { style: callback().image, source, avatarDecoration: { asset: decorationAsset }, size: Button.AvatarSizes.XXLARGE });
+  const tmp = closure_6();
+  return jsx(native.Avatar, { style: closure_6().image, source, avatarDecoration: { asset: decorationAsset }, size: native.AvatarSizes.XXLARGE });
 }
-let closure_6 = createCacheKey.createStyles({ image: { marginTop: 12 } });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles({ image: { marginTop: 12 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/ShopCoachmark.tsx");
 
 export default function ShopCoachmark(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -31,11 +34,11 @@ export default function ShopCoachmark(markAsDismissed) {
       title,
       description,
       onDismiss() {
-        callback(closure_1_4.USER_DISMISS);
+        markAsDismissed(avatarSrc.USER_DISMISS);
       },
       visible,
       position: "top",
-      offsetY: visible(title[5]).space.PX_12,
+      offsetY: nativeDefault.space.PX_12,
       renderImgComponent: null,
       buttonLabel: null,
       buttonVariant: "primary",
@@ -43,12 +46,12 @@ export default function ShopCoachmark(markAsDismissed) {
     };
     let fn = renderImgComponent;
     if (renderImgComponent == null) {
-      fn = () => closure_1_5(closure_1_7, { source: closure_4, decorationAsset: closure_5 });
+      fn = () => decorationAsset(renderImgComponent, { source, decorationAsset });
     }
-    obj[6] = fn;
-    const intl = markAsDismissed(tmp[6]).intl;
-    obj[7] = intl.string(markAsDismissed(title[6]).t.fYfGgK);
-    obj[9] = navigateToShop;
+    obj.renderImgComponent = fn;
+    const intl = util.intl;
+    obj.buttonLabel = intl.string(util.t.fYfGgK);
+    obj.onButtonPress = navigateToShop;
     return obj;
   }, items);
   const coachmark = markAsDismissed(title[7]).useCoachmark(markAsDismissed.buttonRef, memo);

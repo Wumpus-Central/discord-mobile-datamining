@@ -1,25 +1,26 @@
-// === Module 16725: getSearchQueryChannelIds ===
+// === Module 16725: AutocompleteScreenUtils ===
 
-// Module 16725 (getSearchQueryChannelIds)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
+// Module 16725 (AutocompleteScreenUtils)
+import util from "util" /* 1114 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
 import ForwardingIconDefault from "ForwardingIcon" /* 11688 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import closure_6 from "prototype" /* 12339 */;
-import { SearchListItemTypes } from "MessageEmbedTypes" /* 7878 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
+import SearchUtils from "SearchUtils" /* 12340 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
+import SearchQueryStore from "SearchQueryStore" /* 12339 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
+require = fn;
+const SearchListItemTypes = fn(7878).SearchListItemTypes;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
 
 export const getSearchQueryChannelIds = function getSearchQueryChannelIds(items) {
-  return new Set(store2.getChannelIds(items));
+  return new Set(SearchQueryStore.getChannelIds(items));
 };
 export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
-  const prefixTag = store2.getPrefixTag(items);
+  const prefixTag = SearchQueryStore.getPrefixTag(items);
   if (null == prefixTag) {
     const _Set2 = Set;
     const set = new Set();
@@ -29,11 +30,11 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
     const set1 = new Set(obj.getUserIds(items, prefixTag.searchTokenType));
     return set1;
   }
-  obj = store2;
+  obj = SearchQueryStore;
 };
 export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
-  const intl = getSystemLocale.intl;
-  if (intl.string(getSystemLocale.t.nrpA5E) === text) {
+  const intl = util.intl;
+  if (intl.string(util.t.nrpA5E) === text) {
     return ForwardingIconDefault;
   } else {
     const intl3 = tmp(1114).intl;
@@ -78,8 +79,8 @@ export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
   }
 };
 export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeIcon(text) {
-  const intl = getSystemLocale.intl;
-  if (intl.string(getSystemLocale.t.tPZo4p) === text) {
+  const intl = util.intl;
+  if (intl.string(util.t.tPZo4p) === text) {
     return tmp(11825).UserIcon;
   } else {
     const intl3 = tmp(1114).intl;
@@ -94,77 +95,61 @@ export const getSearchFilterAuthorTypeIcon = function getSearchFilterAuthorTypeI
   }
 };
 export const toSearchListUserItem = function toSearchListUserItem(items, user, callback2) {
-  let obj = SearchTokenTypes;
+  let obj = SearchUtils;
   const guildIdFromSearchContext = obj.getGuildIdFromSearchContext(items);
   if (null == user) {
     return null;
   } else {
     let nickname = null;
     if (null == guildIdFromSearchContext) {
-      nickname = store.getNickname(user.id);
+      nickname = RelationshipStore.getNickname(user.id);
     }
     if (nickname == null) {
-      nickname = nick.getNick(guildIdFromSearchContext, user.id);
+      nickname = GuildMemberStore.getNick(guildIdFromSearchContext, user.id);
     }
     if (nickname == null) {
-      nickname = nameFromUserDefault.getName(user);
-      const obj2 = nameFromUserDefault;
+      nickname = UserUtilsDefault.getName(user);
     }
-    obj = { type: null, props: null };
-    obj[0] = SearchListItemTypes.DM;
-    obj = { type: null, user: null, nickname: null, onPress: null, guildId: null };
-    obj[0] = RelationshipTypes.NONE;
-    obj[1] = user;
-    obj[2] = nickname;
-    obj[3] = callback2;
-    obj[4] = guildIdFromSearchContext;
-    obj[1] = obj;
-    return obj;
+    const element = { type: SearchListItemTypes.DM, props: null };
+    obj = { type: RelationshipTypes.NONE, user, nickname, onPress: callback2, guildId: guildIdFromSearchContext };
+    element.props = obj;
+    return element;
   }
 };
-export const toSearchListChannelItem = function toSearchListChannelItem(channel, closure_1_8) {
-  closure_0 = channel;
-  importDefault = closure_1_8;
+export const toSearchListChannelItem = function toSearchListChannelItem(channel, callback3) {
+  const id = channel;
   if (null == channel) {
     return null;
   } else if (channel.isDM()) {
-    user = user.getUser(channel.getRecipientId());
+    const user = UserStore.getUser(channel.getRecipientId());
     let tmp5 = null;
     if (null != user) {
-      let obj = { type: null, props: null };
-      obj[0] = SearchListItemTypes.DM;
-      obj = { type: null, user: null, nickname: null, onPress: null };
-      obj[0] = RelationshipTypes.NONE;
-      obj[1] = user;
-      let nickname = store.getNickname(user.id);
+      const element = { type: SearchListItemTypes.DM, props: null };
+      let obj = { type: RelationshipTypes.NONE, user, nickname: null, onPress: null };
+      let nickname = RelationshipStore.getNickname(user.id);
       if (nickname == null) {
-        nickname = nameFromUserDefault.getName(user);
-        const obj6 = nameFromUserDefault;
+        nickname = UserUtilsDefault.getName(user);
       }
-      obj[2] = nickname;
-      obj[3] = function onPress() {
-        return callback(id.id);
+      obj.nickname = nickname;
+      obj.onPress = function onPress() {
+        return callback3(id.id);
       };
-      obj[1] = obj;
-      tmp5 = obj;
+      element.props = obj;
+      tmp5 = element;
     }
     return tmp5;
   } else {
-    obj = { type: null, props: null };
+    const element1 = { type: null, props: null };
     if (channel.isGroupDM()) {
-      obj[0] = tmp.GROUP_DM;
-      obj1 = { channel: null, onPress: null };
-      obj1[0] = channel;
-      obj1[1] = closure_1_8;
-      obj[1] = obj1;
-      let tmp2 = obj;
+      element1.type = tmp.GROUP_DM;
+      obj = { channel, onPress: callback3 };
+      element1.props = obj;
+      let tmp2 = element1;
     } else {
-      obj[0] = tmp.GUILD_TEXT_CHANNEL;
-      const obj2 = { channel: null, onPress: null };
-      obj2[0] = channel;
-      obj2[1] = closure_1_8;
-      obj[1] = obj2;
-      tmp2 = obj;
+      element1.type = tmp.GUILD_TEXT_CHANNEL;
+      const obj1 = { channel, onPress: callback3 };
+      element1.props = obj1;
+      tmp2 = element1;
     }
     return tmp2;
   }

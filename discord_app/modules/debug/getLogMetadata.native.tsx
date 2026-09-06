@@ -1,23 +1,21 @@
 // === Module 10195: getLogMetadata ===
 
 // Module 10195 (getLogMetadata)
-import set from "set" /* 2 */;
-import getConstantsAll from "getConstants" /* 1364 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
+import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
+import DeviceUtils from "DeviceUtils" /* 4539 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
+const result = size.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
 export default function getLogMetadata() {
-  let obj = getConstantsAll;
-  const constants = obj.getConstants();
+  let obj = ClientInfoUtilsAll;
+  constants = obj.getConstants();
   obj = { logsUploaded: new Date().toISOString(), Identifier, Version, Manifest, ReleaseChannel, Build, JSBuildNumber: null, DeviceVendorID: null, DeviceInfo: null, systemVersion: null };
   ({ Identifier, Version, Manifest, ReleaseChannel, Build, DeviceVendorID } = constants);
   const date = new Date();
-  obj[6] = getConstantsAll.getBuildNumberLabel();
-  obj[7] = DeviceVendorID;
-  const obj4 = getConstantsAll;
-  obj[8] = DCDDeviceManager.getDeviceInfo();
-  const obj5 = DCDDeviceManager;
-  obj[9] = DCDDeviceManager.getSystemVersion();
+  obj.JSBuildNumber = ClientInfoUtilsAll.getBuildNumberLabel();
+  obj.DeviceVendorID = DeviceVendorID;
+  obj.DeviceInfo = DeviceUtils.getDeviceInfo();
+  obj.systemVersion = DeviceUtils.getSystemVersion();
   return obj;
 };

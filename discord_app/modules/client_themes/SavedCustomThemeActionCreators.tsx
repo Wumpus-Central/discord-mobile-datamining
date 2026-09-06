@@ -1,22 +1,22 @@
-// === Module 15264: fetchUserCustomThemes ===
+// === Module 15264: SavedCustomThemeActionCreators ===
 
-// Module 15264 (fetchUserCustomThemes)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import closure_3 from "validateSavedTheme" /* 4493 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 15264 (SavedCustomThemeActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 4493 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
+require = fn;
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
 
 export const fetchUserCustomThemes = function fetchUserCustomThemes() {
-  if (!fetching.isFetching()) {
-    let obj = dispatcherDefault;
+  if (!SavedCustomThemeStore.isFetching()) {
+    let obj = DispatcherDefault;
     obj.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
-    const HTTP = sendRequest.HTTP;
-    obj = { url: null, oldFormErrors: true, rejectWithError: true };
-    obj[0] = Endpoints.USERS_ME_CUSTOM_THEMES;
-    const value = HTTP.get(obj);
+    const HTTP = HTTPUtils.HTTP;
+    obj = { url: Endpoints.USERS_ME_CUSTOM_THEMES, oldFormErrors: true, rejectWithError: true };
+    value = HTTP.get(obj);
     value.then((body) => {
       body = body.body;
       let custom_themes;
@@ -26,10 +26,9 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
       if (custom_themes == null) {
         custom_themes = [];
       }
-      callback(573).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
+      DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
     }).catch((error) => {
-      let obj = callback(573);
-      obj = { type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error };
+      const obj = { type: "SAVED_CUSTOM_THEMES_FETCH_FAILURE", error };
       obj.dispatch(obj);
     });
     const nextPromise = value.then((body) => {
@@ -41,7 +40,7 @@ export const fetchUserCustomThemes = function fetchUserCustomThemes() {
       if (custom_themes == null) {
         custom_themes = [];
       }
-      callback(573).dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
+      DispatcherDefault.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_SUCCESS", themes: custom_themes });
     });
   }
 };

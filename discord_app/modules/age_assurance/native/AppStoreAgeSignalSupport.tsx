@@ -1,12 +1,12 @@
-// === Module 8450: MIN_AGE_GATE ===
+// === Module 8450: AppStoreAgeSignalSupport ===
 
-// Module 8450 (MIN_AGE_GATE)
-import set from "set" /* 2 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
+// Module 8450 (AppStoreAgeSignalSupport)
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import size from "module_2" /* 2 */;
 
 let c2 = 26;
 let c3 = 2;
-const result = set.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalSupport.tsx");
+const result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalSupport.tsx");
 
 export const MIN_AGE_GATE = 13;
 export const ADULT_AGE_GATE = 18;
@@ -44,5 +44,5 @@ export const isAppStoreAgeSignalSupported = function isAppStoreAgeSignalSupporte
       return tmp8;
     }
   }
-  obj = isMetaQuest;
+  obj = MetaQuestUtils;
 };

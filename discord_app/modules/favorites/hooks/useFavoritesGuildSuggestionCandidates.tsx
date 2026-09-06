@@ -1,54 +1,56 @@
-// === Module 16274: getAffineChannelId ===
+// === Module 16274: useFavoritesGuildSuggestionCandidates ===
 
-// Module 16274 (getAffineChannelId)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "map" /* 16275 */;
-import closure_5 from "recomputeAffinities" /* 7659 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import { NO_SUGGESTIONS } from "items" /* 16202 */;
-import { isAllowedType } from "ALLOWED_TYPES" /* 10982 */;
+// Module 16274 (useFavoritesGuildSuggestionCandidates)
+import sortByMatchScore from "sortByMatchScore" /* 9835 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9844 */;
+import noop from "module_19" /* 19 */;
+import ChannelAffinitiesV2Store from "ChannelAffinitiesV2Store" /* 16275 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
+require = fn;
 function getAffineChannelId(channelId) {
   return channelId.channelId;
 }
 function getAffineUserDMId(otherUserId) {
-  return dMFromUserId.getDMFromUserId(otherUserId.otherUserId);
+  return ChannelStore.getDMFromUserId(otherUserId.otherUserId);
 }
-let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
+const NO_SUGGESTIONS = fn(16202).NO_SUGGESTIONS;
+const isAllowedType = fn(10982).isAllowedType;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 
 export default function useFavoritesGuildSuggestionCandidates(arg0) {
-  let stateFromStores1 = arg0;
-  const tmp = importDefault(results[9])();
+  _require = arg0;
+  const tmp = require("useFavoritesGuildChannelFilter")();
   importDefault = tmp;
-  results = stateFromStores1(results[10]).useShareSearchResults({ channelFilter: tmp, includeFrecency: false }).results;
-  stateFromStores1 = undefined;
+  results = require("useShareSearchResults").useShareSearchResults({ channelFilter: tmp, includeFrecency: false }).results;
   const effect = memo.useEffect(() => {
-    const channelAffinitiesV2 = stateFromStores1(results[6]).fetchChannelAffinitiesV2();
+    const channelAffinitiesV2 = closure_0(results[6]).fetchChannelAffinitiesV2();
   }, []);
-  let obj = stateFromStores1(results[10]);
+  let obj = require("useShareSearchResults");
   let items = [memo1];
-  const stateFromStores = stateFromStores1(results[7]).useStateFromStores(items, () => memo1.getChannelAffinities());
-  stateFromStores1 = stateFromStores;
+  const stateFromStores = require("initialize").useStateFromStores(items, () => memo1.getChannelAffinities());
+  closure_129_0 = stateFromStores;
   const items1 = [stateFromStores];
   memo = memo.useMemo(() => {
-    const substr = stateFromStores1.slice();
+    const substr = closure_0.slice();
     return substr.sort((score, score2) => score2.score - score.score);
   }, items1);
-  stateFromStores1 = undefined;
   const effect1 = memo.useEffect(() => {
-    const userAffinitiesV2 = stateFromStores1(results[8]).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(results[8]).fetchUserAffinitiesV2();
   }, []);
-  const obj2 = stateFromStores1(results[7]);
-  const items2 = [closure_5];
-  stateFromStores1 = stateFromStores1(results[7]).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap());
+  const obj2 = require("initialize");
+  const items2 = [UserAffinitiesV2Store];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap());
+  closure_130_0 = stateFromStores1;
   const items3 = [stateFromStores1];
   memo1 = memo.useMemo(() => {
-    array = new Array(array.size);
-    c1 = 0;
-    const item = array.forEach((arg0) => {
+    const array = new Array(closure_0.size);
+    closure_1 = 0;
+    const item = closure_0.forEach((item) => {
       closure_1 = tmp + 1;
-      array[+closure_1] = arg0;
+      array[+closure_1] = item;
     });
     return array.sort((dmProbability, dmProbability2) => dmProbability2.dmProbability - dmProbability.dmProbability);
   }, items3);
@@ -56,13 +58,12 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   return memo.useMemo(() => {
     let items = [];
     const set = new Set();
-    let obj = { affinities: memo, getChannelId: closure_1_9, index: 0 };
-    obj = { affinities: memo1, getChannelId: closure_1_10, index: 0 };
+    let obj = { affinities: memo, getChannelId: getAffineChannelId, index: 0 };
+    obj = { affinities: memo1, getChannelId: getAffineUserDMId, index: 0 };
     let num = 0;
-    if (items.length < stateFromStores1) {
+    if (items.length < closure_0) {
       while (true) {
         let result = items.length % 2;
-        let tmp2 = num;
         let obj4 = obj;
         if (result === 0) {
           obj4 = obj;
@@ -75,16 +76,12 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
             if (null != tmp4) {
               let channelId = obj4.getChannelId(tmp4);
               if (null != channelId) {
-                let tmp6 = callback;
-                let tmp7 = results;
-                let tmp8 = callback(results[11])(channelId);
+                let tmp8 = createAutocompleterResultForChannelIdDefault(channelId);
                 if (null != tmp8) {
-                  let tmp9 = closure_1_8;
-                  if (closure_1_8(tmp8)) {
+                  if (isAllowedType(tmp8)) {
                     if (!set.has(tmp8.record.id)) {
-                      let tmp10 = callback;
                       tmp3 = tmp8;
-                      if (callback(tmp8, false)) {
+                      if (closure_1(tmp8, false)) {
                         break;
                       }
                     }
@@ -112,16 +109,12 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
               if (null != tmp12) {
                 let channelId1 = obj5.getChannelId(tmp12);
                 if (null != channelId1) {
-                  let tmp14 = callback;
-                  let tmp15 = results;
-                  let tmp16 = callback(results[11])(channelId1);
+                  let tmp16 = createAutocompleterResultForChannelIdDefault(channelId1);
                   if (null != tmp16) {
-                    let tmp17 = closure_1_8;
-                    if (closure_1_8(tmp16)) {
+                    if (isAllowedType(tmp16)) {
                       if (!set.has(tmp16.record.id)) {
-                        let tmp18 = callback;
                         tmp11 = tmp16;
-                        if (callback(tmp16, false)) {
+                        if (closure_1(tmp16, false)) {
                           break;
                         }
                       }
@@ -140,18 +133,14 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
         }
         let tmp19 = num;
         if (null == tmp3) {
-          let tmp30 = results;
           let tmp25 = num;
           let tmp26 = num;
           if (num < results.length) {
             while (true) {
               let tmp20 = results[tmp25];
               let sum = tmp25 + 1;
-              let arr2 = results;
               if (null != tmp20) {
-                let tmp22 = stateFromStores1;
-                let tmp23 = results;
-                if (tmp20.type !== stateFromStores1(results[12]).AutocompleterResultTypes.HEADER) {
+                if (tmp20.type !== sortByMatchScore.AutocompleterResultTypes.HEADER) {
                   let tmp24 = sum;
                   if (!set.has(tmp20.record.id)) {
                     break;
@@ -172,16 +161,15 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
         } else {
           let addResult = set.add(tmp3.record.id);
           let arr = items.push(tmp3);
-          let tmp29 = stateFromStores1;
           num = tmp19;
-          if (items.length >= stateFromStores1) {
+          if (items.length >= closure_0) {
             break;
           }
         }
       }
     }
     if (items.length <= 0) {
-      items = closure_1_7;
+      items = NO_SUGGESTIONS;
     }
     return items;
   }, items4);

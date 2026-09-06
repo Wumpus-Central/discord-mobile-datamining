@@ -1,16 +1,16 @@
-// === Module 11614: isLinkTrusted ===
+// === Module 11614: MarkupReactLinkUtils ===
 
-// Module 11614 (isLinkTrusted)
-import set from "set" /* 2 */;
-import isLinkTrusted from "isLinkTrusted" /* 8370 */;
+// Module 11614 (MarkupReactLinkUtils)
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupReactLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(target) {
   if (null == target.target) {
     return tmp;
   } else {
-    isLinkTrusted;
+    MaskedLinkUtils;
     if (null == target.title) {
       let title = tmp2(7987).astToString(target.content);
       tmp5(tmp6, title);

@@ -1,19 +1,20 @@
-// === Module 17476: _terminate ===
+// === Module 17476: RTCLatencyTestManager ===
 
-// Module 17476 (_terminate)
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 1090 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_4 from "initialize" /* 4610 */;
-import { Features } from "DesktopSources" /* 4585 */;
+// Module 17476 (RTCLatencyTestManager)
+import LoggerDefault from "Logger" /* 3 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import RTCLatencyTestActionCreators from "RTCLatencyTestActionCreators" /* 17477 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCRegionStore from "RTCRegionStore" /* 4610 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
-const SECOND = setDefault.Millis.SECOND;
-let closure_7 = 30 * setDefault.Millis.SECOND;
-let obj = new timestampDefault("RTCLatencyTestManager");
+require = fn;
+const Features = fn(4585).Features;
+const SECOND = DurationsDefault.Millis.SECOND;
+let closure_7 = 30 * DurationsDefault.Millis.SECOND;
+let obj = new LoggerDefault("RTCLatencyTestManager");
 obj.enableNativeLogger(true);
-initializeDefault;
 class RTCLatencyTestManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -28,35 +29,34 @@ class RTCLatencyTestManager extends tmp3 {
       if (closure_4.shouldPerformLatencyTest(mapped)) {
         mediaEngine = mediaEngine.getMediaEngine();
         const rankRtcRegionsResult = mediaEngine.rankRtcRegions(body);
-        mediaEngine.rankRtcRegions(body).then((url) => {
-          closure_1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
-          const result = mapped(closure_1_2[6]).completeRTCLatencyTest(url, mapped);
-        }).catch((arg0) => logger.warn(arg0));
-        const nextPromise = mediaEngine.rankRtcRegions(body).then((url) => {
-          closure_1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
-          const result = mapped(closure_1_2[6]).completeRTCLatencyTest(url, mapped);
+        mediaEngine.rankRtcRegions(body).then((result) => {
+          obj.verbose("RTC region latency test completed, ranked regions are: ", result);
+          result = applyArgumentsResult(dependencyMap[6]).completeRTCLatencyTest(result, mapped);
+        }).catch((error) => logger.warn(error));
+        const nextPromise = mediaEngine.rankRtcRegions(body).then((result) => {
+          obj.verbose("RTC region latency test completed, ranked regions are: ", result);
+          result = applyArgumentsResult(dependencyMap[6]).completeRTCLatencyTest(result, mapped);
         });
       } else {
         const _HermesInternal = HermesInternal;
-        closure_8.verbose("RTC cached ranked preferred regions are " + closure_4.getPreferredRegions());
+        logger.verbose("RTC cached ranked preferred regions are " + closure_4.getPreferredRegions());
       }
     };
     applyArgumentsResult._fetchAndScheduleRefetch = function _fetchAndScheduleRefetch() {
       let num = 1;
-      if (closure_1_3.supports(closure_1_5.PORT_AWARE_LATENCY_TESTING)) {
+      if (MediaEngineStore.supports(Features.PORT_AWARE_LATENCY_TESTING)) {
         num = 2;
       }
-      const rTCLatencyTestRegions = applyArgumentsResult(closure_1_2[6]).fetchRTCLatencyTestRegions(num);
-      obj = applyArgumentsResult(closure_1_2[6]);
-      rTCLatencyTestRegions.then((body) => closure_0._handleTestRegionsResponse(body.body)).catch((arg0) => logger.warn(arg0));
-      applyArgumentsResult.refetchTimeout = setTimeout(applyArgumentsResult._fetchAndScheduleRefetch, 360 * closure_1_1(closure_1_2[3]).Millis.MINUTE);
+      const rTCLatencyTestRegions = RTCLatencyTestActionCreators.fetchRTCLatencyTestRegions(num);
+      rTCLatencyTestRegions.then((body) => closure_1_0._handleTestRegionsResponse(body.body)).catch((error) => logger.warn(error));
+      applyArgumentsResult.refetchTimeout = setTimeout(applyArgumentsResult._fetchAndScheduleRefetch, 360 * DurationsDefault.Millis.MINUTE);
     };
     applyArgumentsResult._handleConnectionOpen = function _handleConnectionOpen() {
       if (null != window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT) {
-        if (applyArgumentsResult(closure_1_2[7]).isPlatformEmbedded) {
+        if (PlatformUtils.isPlatformEmbedded) {
           const _Math = Math;
           const _Math2 = Math;
-          const rounded = Math.floor(closure_1_6 + Math.random() * closure_1_7);
+          const rounded = Math.floor(SECOND + Math.random() * closure_7);
           if (null != applyArgumentsResult.refetchTimeout) {
             const _clearTimeout = clearTimeout;
             clearTimeout(tmp4.refetchTimeout);
@@ -76,6 +76,7 @@ RTCLatencyTestManager.prototype["_terminate"] = function _terminate() {
   }
 };
 const rTCLatencyTestManager = new RTCLatencyTestManager();
-let result = require("set").fileFinishedImporting("modules/rtc/RTCLatencyTestManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/rtc/RTCLatencyTestManager.tsx");
 
 export default rTCLatencyTestManager;

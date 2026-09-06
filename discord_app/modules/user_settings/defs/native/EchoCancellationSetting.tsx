@@ -1,25 +1,26 @@
-// === Module 15257: toggle ===
+// === Module 15257: EchoCancellationSetting ===
 
-// Module 15257 (toggle)
+// Module 15257 (EchoCancellationSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.iWTwu6);
+    const intl = util.intl;
+    return intl.string(util.t.iWTwu6);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: fn(7975).MobileUserSettings.VOICE,
   useValue: function useEchoCancellationSettingValue() {
-    const items = [closure_2];
+    const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
   },
-  onValueChange: require("handleAutomaticGainControlChange").handleEchoCancellationChange
+  onValueChange: fn(9993).handleEchoCancellationChange
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/EchoCancellationSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

@@ -1,27 +1,27 @@
 // === Module 17188: VoicePanelLockedIcon ===
 
 // Module 17188 (VoicePanelLockedIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import setDefault from "set" /* 5589 */;
-import registerAssetDefault from "registerAsset" /* 17189 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import NativeViewDefault from "NativeView" /* 5589 */;
+import _modDef17189 from "module_17189" /* 17189 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { container: null, icon: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", alignSelf: "center", width: 64, height: 64, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = {};
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { container: null, icon: null };
+let size = { alignItems: "center", justifyContent: "center", alignSelf: "center", width: 64, height: 64, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round };
+createStyles.container = size;
+createStyles.icon = {};
+let closure_4 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelLockedIcon.tsx");
 
 export default function VoicePanelLockedIcon() {
-  const tmp = callback();
+  const tmp = closure_4();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE };
-  obj[1] = jsx(Button.Icon, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
-  return jsx(setDefault, { style: tmp.icon, source: registerAssetDefault, size: Button.IconSizes.LARGE });
+  obj = { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE };
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE });
+  return jsx(NativeViewDefault, { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE });
 };

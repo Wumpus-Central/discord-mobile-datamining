@@ -1,13 +1,12 @@
-// === Module 7946: frozen ===
+// === Module 7946: renderer/EmbedUtils ===
 
-// Module 7946 (frozen)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set from "set" /* 2 */;
+// Module 7946 (renderer/EmbedUtils)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const Image = get_ActivityIndicator.Image;
-let set = new Set(["YouTube", "TikTok"]);
-const frozen = Object.freeze(set);
-const result = set.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
+const Image = _mod17.Image;
+const frozen = Object.freeze(new Set(["YouTube", "TikTok"]));
+const result = size.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");
 
 export const getAssetUriForEmbed = function getAssetUriForEmbed(Image) {
   return Image.resolveAssetSource(Image).uri;

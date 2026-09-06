@@ -1,8 +1,8 @@
 // === Module 7515: AutomodQuarantineUserMessageEmbedKeys ===
 
 // Module 7515 (AutomodQuarantineUserMessageEmbedKeys)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx");
 
 export const AutomodQuarantineUserMessageEmbedKeys = { BIO: "bio", USERNAME: "username", NICKNAME: "nickname", GLOBAL_NAME: "display_name", CLAN_TAG: "clan_tag" };

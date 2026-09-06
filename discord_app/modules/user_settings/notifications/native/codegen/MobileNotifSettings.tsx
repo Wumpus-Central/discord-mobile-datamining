@@ -1,8 +1,8 @@
 // === Module 15914: MobileNotifSettings ===
 
 // Module 15914 (MobileNotifSettings)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_settings/notifications/native/codegen/MobileNotifSettings.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/notifications/native/codegen/MobileNotifSettings.tsx");
 
 export const MobileNotifSettings = { NOTIFICATIONS_REDESIGN: "NOTIFICATIONS_REDESIGN", NOTIF_REALTIME: "NOTIF_REALTIME", NOTIF_CATEGORY_SOCIAL: "NOTIF_CATEGORY_SOCIAL", NOTIF_CATEGORY_SERVER: "NOTIF_CATEGORY_SERVER", NOTIF_CATEGORY_OTHER: "NOTIF_CATEGORY_OTHER", NOTIF_REACTIONS: "NOTIF_REACTIONS", NOTIF_MISSED_MESSAGES_LOW: "NOTIF_MISSED_MESSAGES_LOW", NOTIF_MISSED_MESSAGES_DEFAULT: "NOTIF_MISSED_MESSAGES_DEFAULT", NOTIF_VOICE_ACTIVITY_LOW: "NOTIF_VOICE_ACTIVITY_LOW", NOTIF_VOICE_ACTIVITY_DEFAULT: "NOTIF_VOICE_ACTIVITY_DEFAULT", NOTIF_GAMING_LOW: "NOTIF_GAMING_LOW", NOTIF_GAMING_DEFAULT: "NOTIF_GAMING_DEFAULT" };

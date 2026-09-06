@@ -1,71 +1,72 @@
 // === Module 16867: ContextMenuCommandNavigator ===
 
 // Module 16867 (ContextMenuCommandNavigator)
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import HeaderShared from "HeaderShared" /* 7863 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createNativeStackNavigator.createNativeStackNavigator();
-createNativeStackNavigator = { container: { flex: 1 }, content: null };
-createNativeStackNavigator = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createNativeStackNavigator[1] = createNativeStackNavigator;
-let closure_8 = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandNavigator.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+let NativeStackNavigator = fn(7913);
+const Screen = NativeStackNavigator.createNativeStackNavigator();
+const createStyles = fn(4560);
+NativeStackNavigator = { container: { flex: 1 }, content: null };
+NativeStackNavigator = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+NativeStackNavigator.content = NativeStackNavigator;
+let closure_8 = createStyles.createStyles(NativeStackNavigator);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/application_commands/native/ContextMenuCommandNavigator.tsx");
 
 export default function ContextMenuCommandNavigator() {
-  const tmp = callback3();
-  const _require = tmp;
-  const layoutEffect = React.useLayoutEffect(() => lib(7475).trackAppUIViewed(), []);
-  let obj = _require(7000);
+  const tmp = closure_8();
+  _require = tmp;
+  const layoutEffect = noop.useLayoutEffect(() => closure_0(7475).trackAppUIViewed(), []);
+  let obj = require("Navigator");
   importDefault = obj.useAccessibilityNativeStackOptions();
   const rect = useSafeAreaInsetsDefault();
-  obj = { style: items, children: null };
-  items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj = { style: null, children: null };
+  const items = [tmp.container, { paddingLeft: rect.left, paddingRight: rect.right }];
+  obj.style = items;
   obj = {
     screenOptions(navigation) {
       navigation = navigation.navigation;
       const obj = {
-        contentStyle: lib.content,
+        contentStyle: closure_0.content,
         headerShadowVisible: false,
         headerTitle(children) {
-          const merged = Object.assign(children, Object.create(null));
+          const merged = Object.assign(children, Object.assign({ children: 0 }));
           const merged1 = Object.assign(merged);
-          return callback2(callback(table[9]).GenericHeaderTitle, { title: children.children });
+          return closure_1_5(closure_1_0(dependencyMap[9]).GenericHeaderTitle, { title: children.children });
         },
         headerTitleAlign: "center",
         headerLeft: null
       };
       if (navigation.getState().routes[0].key === navigation.route.key) {
-        let renderModalCloseImage = lib(closure_1_2[9]).getRenderModalCloseImage(navigation);
-        const obj3 = lib(closure_1_2[9]);
+        let renderModalCloseImage = HeaderShared.getRenderModalCloseImage(navigation);
       } else {
-        renderModalCloseImage = lib(closure_1_2[9]).getRenderModalBackImage(navigation);
-        const obj2 = lib(closure_1_2[9]);
+        renderModalCloseImage = HeaderShared.getRenderModalBackImage(navigation);
       }
-      obj[4] = renderModalCloseImage;
+      obj.headerLeft = renderModalCloseImage;
       let merged = Object.assign(closure_1);
       return obj;
     },
     children: null
   };
-  obj1 = { name: "root", options: null, getComponent: null };
+  const obj1 = { name: "root", options: null, getComponent: null };
   let obj2 = { title: null };
   ({ Navigator, Screen } = Screen);
-  const intl = _require(1114).intl;
-  obj2[0] = intl.string(_require(1114).t.PHjkRE);
-  obj1[1] = obj2;
-  obj1[2] = function getComponent() {
-    return lib(16868).default;
+  const intl = require("util").intl;
+  obj2.title = intl.string(require("util").t.PHjkRE);
+  obj1.options = obj2;
+  obj1.getComponent = function getComponent() {
+    return closure_0(16868).default;
   };
   const items1 = [
-    callback(Screen, obj1),
-    callback(Screen.Screen, {
+    closure_5(Screen, obj1),
+    closure_5(Screen.Screen, {
       name: "app",
       options(route) {
         const section = route.route.params.section;
@@ -76,11 +77,11 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return lib(16870).default;
+        return closure_0(16870).default;
       }
     })
   ];
-  obj[1] = items1;
-  obj[1] = callback2(Navigator, obj);
-  return callback(View, obj);
+  obj.children = items1;
+  obj.children = closure_6(Navigator, obj);
+  return closure_5(View, obj);
 };

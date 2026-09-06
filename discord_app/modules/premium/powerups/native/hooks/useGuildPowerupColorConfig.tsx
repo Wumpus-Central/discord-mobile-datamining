@@ -1,18 +1,16 @@
 // === Module 12548: useGuildPowerupColorConfig ===
 
 // Module 12548 (useGuildPowerupColorConfig)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupColorConfig.tsx");
 
 export default function useGuildPowerupColorConfig(arg0) {
   if (arg0) {
-    let obj = { textColor: "text-default", iconColor: null };
-    obj[1] = ThemesDefault.colors.TEXT_DEFAULT;
+    let obj = { textColor: "text-default", iconColor: nativeDefault.colors.TEXT_DEFAULT };
   } else {
-    obj = { textColor: "text-muted", iconColor: null };
-    obj[1] = ThemesDefault.colors.TEXT_MUTED;
+    obj = { textColor: "text-muted", iconColor: nativeDefault.colors.TEXT_MUTED };
   }
   return obj;
 };

@@ -1,10 +1,10 @@
-// === Module 4220: handlePaymentSourceCreateEnd ===
+// === Module 4220: BillingInfoStore ===
 
-// Module 4220 (handlePaymentSourceCreateEnd)
-import set from "set" /* 2 */;
+// Module 4220 (BillingInfoStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function handlePaymentSourceCreateEnd() {
   c6 = false;
@@ -21,7 +21,7 @@ function handleSubscriptionUpdateStart() {
 function handleSubscriptionUpdateEnd() {
   c10 = false;
 }
-const FallbackCurrencyCountry = ME.FallbackCurrencyCountry;
+const FallbackCurrencyCountry = Constants.FallbackCurrencyCountry;
 let c6 = false;
 let c7 = false;
 let c8 = false;
@@ -77,7 +77,7 @@ Object.defineProperty(prototype, "isSubscriptionFetching", {
 });
 Object.defineProperty(prototype, "isPaymentSourceFetching", {
   get: function isPaymentSourceFetching() {
-    return null != closure_0;
+    return null != c0;
   },
   set: undefined
 });
@@ -95,37 +95,37 @@ Object.defineProperty(prototype, "removeSourceError", {
 });
 Object.defineProperty(prototype, "ipCountryCodeLoaded", {
   get: function ipCountryCodeLoaded() {
-    return undefined !== closure_1;
+    return undefined !== countryCode;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "ipCountryCode", {
   get: function ipCountryCode() {
-    return closure_1;
+    return countryCode;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "ipCountryCodeRequest", {
   get: function ipCountryCodeRequest() {
-    return closure_2;
+    return c2;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "ipLocationLoaded", {
   get: function ipLocationLoaded() {
-    return undefined !== closure_3;
+    return undefined !== c3;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "ipLocation", {
   get: function ipLocation() {
-    return closure_3;
+    return c3;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "ipLocationRequest", {
   get: function ipLocationRequest() {
-    return closure_4;
+    return c4;
   },
   set: undefined
 });
@@ -137,8 +137,8 @@ Object.defineProperty(prototype, "ipLocationHasError", {
 });
 Object.defineProperty(prototype, "ipCountryCodeWithFallback", {
   get: function ipCountryCodeWithFallback() {
-    let tmp = closure_1;
-    if (closure_1 == null) {
+    let tmp = countryCode;
+    if (countryCode == null) {
       tmp = FallbackCurrencyCountry;
     }
     return tmp;
@@ -153,12 +153,12 @@ Object.defineProperty(prototype, "ipCountryCodeHasError", {
 });
 Object.defineProperty(prototype, "paymentSourcesFetchRequest", {
   get: function paymentSourcesFetchRequest() {
-    return closure_0;
+    return c0;
   },
   set: undefined
 });
 BillingInfoStore.displayName = "BillingInfoStore";
-const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
+const billingInfoStore = new BillingInfoStore(DispatcherDefault, {
   BILLING_PAYMENT_SOURCE_CREATE_START: function handlePaymentSourceCreateStart() {
     c6 = true;
   },
@@ -214,14 +214,14 @@ const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
     countryCode = countryCode.countryCode;
   },
   BILLING_IP_COUNTRY_CODE_FAILURE: function handleIpCountryCodeFailure() {
-    c1 = null;
+    countryCode = null;
     c13 = true;
   },
   BILLING_IP_LOCATION_FETCH_START: function handleIpLocationFetchStart(request) {
     request = request.request;
   },
   BILLING_SET_IP_LOCATION: function handleSetIpLocation(location) {
-    location = location.location;
+    const _location = location.location;
   },
   BILLING_IP_LOCATION_FAILURE: function handleIpLocationFailure() {
     c3 = null;
@@ -230,7 +230,7 @@ const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     c0 = undefined;
     c2 = undefined;
-    c1 = undefined;
+    countryCode = undefined;
     c13 = false;
     c3 = undefined;
     c14 = false;
@@ -242,6 +242,6 @@ const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
     countryCode = countryCode.countryCode;
   }
 });
-const result = set.fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
+const result = size.fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
 
 export default billingInfoStore;

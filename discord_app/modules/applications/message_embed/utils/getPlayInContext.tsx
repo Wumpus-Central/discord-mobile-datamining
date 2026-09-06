@@ -1,24 +1,26 @@
-// === Module 11943: usePlayInContext ===
+// === Module 11943: getPlayInContext ===
 
-// Module 11943 (usePlayInContext)
-import closure_2 from "participantFromServer" /* 1956 */;
-import closure_3 from "handleConnectionOpen" /* 2011 */;
+// Module 11943 (getPlayInContext)
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 9582 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
 
 export const usePlayInContext = function usePlayInContext(arg0) {
-  const _require = arg0;
-  let obj = _require(stateFromStores[2]);
-  const items = [closure_3];
+  _require = arg0;
+  let obj = require("initialize");
+  const items = [SelectedChannelStore];
   stateFromStores = obj.useStateFromStores(items, () => channelId.getChannelId());
-  const items1 = [closure_2];
-  const stateFromStores1 = _require(stateFromStores[2]).useStateFromStores(items1, () => {
+  const items1 = [EmbeddedActivitiesStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     if (null == stateFromStores) {
       return null;
     } else {
-      const embeddedActivitiesForChannel = closure_1_2.getEmbeddedActivitiesForChannel(tmp);
-      const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
+      const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(tmp);
+      const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_1_0);
       let first;
       if (found.length > 0) {
         first = found[0];
@@ -35,7 +37,7 @@ export const usePlayInContext = function usePlayInContext(arg0) {
     _location = stateFromStores1.location;
   }
   let tmpResult = tmp(tmp2[2]);
-  const items2 = [closure_2];
+  const items2 = [EmbeddedActivitiesStore];
   const stateFromStores2 = tmpResult.useStateFromStores(items2, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
   tmpResult = tmp(tmp2[3]);
   const embeddedActivityLaunchability = tmpResult.useEmbeddedActivityLaunchability(stateFromStores);
@@ -48,28 +50,28 @@ export const usePlayInContext = function usePlayInContext(arg0) {
     }
     tmp10 = compositeInstanceId1 === compositeInstanceId;
   }
-  obj[3] = tmp10;
-  obj[4] = embeddedActivityLaunchability === _require(stateFromStores[3]).EmbeddedActivityLaunchability.CAN_LAUNCH;
+  obj.isCurrentlyInInstance = tmp10;
+  obj.canLaunchInChannel = embeddedActivityLaunchability === require("getEmbeddedActivityLaunchability").EmbeddedActivityLaunchability.CAN_LAUNCH;
   return obj;
 };
 export const getPlayInContext = function getPlayInContext(id, channel_id) {
-  const _require = id;
+  closure_0 = id;
   let channelId = channel_id;
   if (channel_id == null) {
-    channelId = channelId.getChannelId();
+    channelId = SelectedChannelStore.getChannelId();
   }
   if (null == channelId) {
     return { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: false, canLaunchInChannel: false };
   } else {
     if (null != channelId) {
-      let obj = _require(9582);
+      let obj = getEmbeddedActivityLaunchability;
       let NO_CHANNEL = obj.getEmbeddedActivityLaunchabilityForChannel(channelId);
-      let tmp3 = _require;
+      let tmp3 = require;
     } else {
-      tmp3 = _require;
-      NO_CHANNEL = _require(9582).EmbeddedActivityLaunchability.NO_CHANNEL;
+      tmp3 = require;
+      NO_CHANNEL = getEmbeddedActivityLaunchability.EmbeddedActivityLaunchability.NO_CHANNEL;
     }
-    embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channelId);
+    const embeddedActivitiesForChannel = EmbeddedActivitiesStore.getEmbeddedActivitiesForChannel(channelId);
     const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
     let first;
     if (found.length > 0) {
@@ -83,11 +85,8 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
     if (first != null) {
       _location = first.location;
     }
-    const currentEmbeddedActivity = embeddedActivitiesForChannel.getCurrentEmbeddedActivity();
-    obj = { currentChannelId: null, instanceId: null, instanceLocation: null, isCurrentlyInInstance: null, canLaunchInChannel: null };
-    obj[0] = channelId;
-    obj[1] = compositeInstanceId;
-    obj[2] = _location;
+    const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
+    obj = { currentChannelId: channelId, instanceId: compositeInstanceId, instanceLocation: _location, isCurrentlyInInstance: null, canLaunchInChannel: null };
     let tmp11 = null != compositeInstanceId;
     if (tmp11) {
       let compositeInstanceId1;
@@ -96,8 +95,8 @@ export const getPlayInContext = function getPlayInContext(id, channel_id) {
       }
       tmp11 = compositeInstanceId1 === compositeInstanceId;
     }
-    obj[3] = tmp11;
-    obj[4] = NO_CHANNEL === tmp3(9582).EmbeddedActivityLaunchability.CAN_LAUNCH;
+    obj.isCurrentlyInInstance = tmp11;
+    obj.canLaunchInChannel = NO_CHANNEL === tmp3(9582).EmbeddedActivityLaunchability.CAN_LAUNCH;
     return obj;
   }
 };

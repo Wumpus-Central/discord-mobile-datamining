@@ -1,11 +1,11 @@
-// === Module 5182: create ===
+// === Module 5182: DiscordImageFactory ===
 
-// Module 5182 (create)
-import set from "set" /* 2 */;
+// Module 5182 (DiscordImageFactory)
 import detectFile from "detectFile" /* 5183 */;
-import create from "create" /* 5210 */;
+import DiscordImagePng2 from "DiscordImagePng" /* 5210 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
+const result = size.fileFinishedImporting("modules/media/web/utils/DiscordImageFactory.tsx");
 const prototype = function DiscordImageFactory() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -19,7 +19,7 @@ prototype["create"] = function create(byteLength) {
   }
   obj = null;
   if ("image/png" === mimeType) {
-    const DiscordImagePng = create.DiscordImagePng;
+    const DiscordImagePng = DiscordImagePng2.DiscordImagePng;
     obj = DiscordImagePng.create(byteLength);
   }
   return obj;

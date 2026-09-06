@@ -1,9 +1,9 @@
-// === Module 5176: GUILD_PRODUCT_EDIT_MODAL_KEY ===
+// === Module 5176: GuildProductConstants ===
 
-// Module 5176 (GUILD_PRODUCT_EDIT_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 5176 (GuildProductConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_products/GuildProductConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_products/GuildProductConstants.tsx");
 
 export const GUILD_PRODUCT_EDIT_MODAL_KEY = "guild-product-edit-modal";
 export const MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES = 1073741824;

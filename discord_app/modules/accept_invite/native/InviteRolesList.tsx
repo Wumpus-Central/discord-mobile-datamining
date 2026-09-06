@@ -1,31 +1,32 @@
 // === Module 12720: InviteRolesList ===
 
 // Module 12720 (InviteRolesList)
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
+import RolePillDefault from "RolePill" /* 10947 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 } });
-const result = require("set").fileFinishedImporting("modules/accept_invite/native/InviteRolesList.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ rolesRow: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", gap: 4 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/accept_invite/native/InviteRolesList.tsx");
 
 export default function InviteRolesList(invite) {
   invite = invite.invite;
-  let guild;
-  let roles;
-  guild = invite.guild;
-  roles = invite.roles;
+  const guild = invite.guild;
+  const roles = invite.roles;
   let items = [guild, roles];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null != guild) {
       if (null != roles) {
         if (0 !== arr.length) {
           const items = [];
           HermesBuiltin.arraySpread(arr, 0);
-          const sorted = items.sort(guild(closure_1_2[4]).sortInviteRoles);
-          const mapped = sorted.map((id) => closure_1_0(closure_1_2[4]).inviteRoleToDisplayData(id.id, id));
+          const sorted = items.sort(GuildRoleUtils.sortInviteRoles);
+          const mapped = sorted.map((item) => guild(dependencyMap[4]).inviteRoleToDisplayData(id.id, item));
         }
         return [];
       }
@@ -35,18 +36,15 @@ export default function InviteRolesList(invite) {
   if (null != guild) {
     tmp2 = null;
     if (0 !== memo.length) {
-      let obj = { spacing: 4, style: null, children: null };
-      obj[1] = invite.style;
+      let obj = { spacing: 4, style: invite.style, children: null };
       obj = { variant: "text-sm/semibold", color: "text-default", children: null };
       const intl = guild(1114).intl;
-      obj[2] = intl.string(guild(1114).t.stcSfI);
-      const items1 = [callback(guild(4556).Text, obj), ];
-      obj = { style: null, children: null };
-      obj[0] = tmp.rolesRow;
-      obj[1] = memo.map((id) => closure_1_5(roles(closure_1_2[8]), { role: id, guildId: guild.id }, id.id));
-      items1[1] = callback(View, obj);
-      obj[2] = items1;
-      tmp2 = callback2(guild(4973).Stack, obj);
+      obj.children = intl.string(guild(1114).t.stcSfI);
+      const items1 = [closure_5(guild(4556).Text, obj), ];
+      obj = { style: tmp.rolesRow, children: memo.map((role) => hasOwnProperty(RolePillDefault, { role, guildId: guild.id }, role.id)) };
+      items1[1] = closure_5(View, obj);
+      obj.children = items1;
+      tmp2 = closure_6(guild(4973).Stack, obj);
     }
   }
   return tmp2;

@@ -1,14 +1,14 @@
-// === Module 500: buildQosTokenFromDerivedData ===
+// === Module 500: QosToken ===
 
-// Module 500 (buildQosTokenFromDerivedData)
-import timestampDefault from "timestamp" /* 3 */;
-import defineProperty from "defineProperty" /* 14195 */;
-import closure_2 from "initialize" /* 501 */;
+// Module 500 (QosToken)
+import LoggerDefault from "Logger" /* 3 */;
+import qos_token from "qos_token" /* 14195 */;
+import DerivedQosDataStore from "DerivedQosDataStore" /* 501 */;
 
-require = arg1;
+require = fn;
 function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   let derived;
-  const ClientProvidedQosData = defineProperty.ClientProvidedQosData;
+  const ClientProvidedQosData = qos_token.ClientProvidedQosData;
   let clientProvided = { isActive };
   clientProvided = ClientProvidedQosData.create(clientProvided);
   if (null != derivedQosData) {
@@ -22,13 +22,13 @@ function buildQosTokenFromDerivedData(derivedQosData, isActive) {
   }
   tmp2Result = tmp2(1224);
   const QosToken = tmp2(14195).QosToken;
-  return tmp2Result.protoToB64(defineProperty.QosToken, QosToken.create({ clientProvided, derived }));
+  return tmp2Result.protoToB64(qos_token.QosToken, QosToken.create({ clientProvided, derived }));
 }
-let closure_3 = new timestampDefault("QOS");
-const tmp2 = new timestampDefault("QOS");
-const result = require("set").fileFinishedImporting("modules/gateway/qos/QosToken.tsx");
+const logger = new LoggerDefault("QOS");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/qos/QosToken.tsx");
 
 export { buildQosTokenFromDerivedData };
 export const buildQosToken = function buildQosToken(userId, isUserActive) {
-  return buildQosTokenFromDerivedData(forUser.getForUser(userId), isUserActive);
+  return buildQosTokenFromDerivedData(DerivedQosDataStore.getForUser(userId), isUserActive);
 };

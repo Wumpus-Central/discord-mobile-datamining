@@ -1,9 +1,9 @@
-// === Module 1894: PermissionOverwriteType ===
+// === Module 1894: Server ===
 
-// Module 1894 (PermissionOverwriteType)
-import set from "set" /* 2 */;
+// Module 1894 (Server)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("flow/Server.tsx");
+const result = size.fileFinishedImporting("flow/Server.tsx");
 
 export const PermissionOverwriteType = { ROLE: 0, [0]: "ROLE", MEMBER: 1, [1]: "MEMBER" };
 export const GuildBoostUpsellType = { FIRST_BOOSTER: 0, [0]: "FIRST_BOOSTER" };

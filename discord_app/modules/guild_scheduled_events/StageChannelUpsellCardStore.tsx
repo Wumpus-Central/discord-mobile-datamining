@@ -1,30 +1,32 @@
-// === Module 9730: useStageChannelUpsellCardStore ===
+// === Module 9730: StageChannelUpsellCardStore ===
 
-// Module 9730 (useStageChannelUpsellCardStore)
-import set from "set" /* 2 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import isIterable from "isIterable" /* 4184 */;
-import identity from "identity" /* 1244 */;
+// Module 9730 (StageChannelUpsellCardStore)
+import Storage2 from "Storage" /* 510 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
+import _mod4184 from "module_4184" /* 4184 */;
+import identity from "module_1244" /* 1244 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = GUILD_EVENT_MAX_NAME_LENGTH.GUILD_EVENT_STAGE_UPSELL_CARD_KEY;
+let closure_2 = GuildScheduledEventsConstants.GUILD_EVENT_STAGE_UPSELL_CARD_KEY;
 let closure_3 = identity.createWithEqualityFn((arg0) => {
-  const _require = arg0;
+  _require = arg0;
   const obj = { hasSeenUpsellCard: null, markAsSeen: null };
-  let Storage = _require(510).Storage;
-  obj[0] = true === Storage.get(closure_2);
-  obj[1] = function markAsSeen() {
-    const Storage = callback(closure_1_1[2]).Storage;
-    const result = Storage.set(closure_1_2, true);
-    callback(closure_1_1[3]).batchUpdates(() => callback({ hasSeenUpsellCard: true }));
+  let Storage = require("Storage").Storage;
+  obj.hasSeenUpsellCard = true === Storage.get(closure_2);
+  obj.markAsSeen = function markAsSeen() {
+    const Storage = Storage2.Storage;
+    const result = Storage.set(closure_2, true);
+    ReactBatchUpdates.batchUpdates(() => closure_1_0({ hasSeenUpsellCard: true }));
   };
   return obj;
 });
-let result = set.fileFinishedImporting("modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx");
+let result = size.fileFinishedImporting("modules/guild_scheduled_events/StageChannelUpsellCardStore.tsx");
 
 export const useStageChannelUpsellCardStore = function useStageChannelUpsellCardStore() {
-  return callback((arg0) => {
+  return closure_3((arg0) => {
     const items = [, ];
     ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
     return items;
-  }, isIterable.shallow);
+  }, _mod4184.shallow);
 };

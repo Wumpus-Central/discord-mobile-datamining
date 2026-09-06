@@ -1,32 +1,31 @@
 // === Module 16745: RedirectUnauthenticated ===
 
 // Module 16745 (RedirectUnauthenticated)
-import noopAll from "noop" /* 19 */;
-import getAuthenticationPath from "getAuthenticationPath" /* 1083 */;
-import _extends from "_extends" /* 4392 */;
-import { Routes } from "ME" /* 1074 */;
-import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED" /* 1081 */;
-import { jsx } from "jsxProd" /* 21 */;
+import utils_PathUtils from "utils/PathUtils" /* 1083 */;
+import _mod4392 from "module_4392" /* 4392 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/auth/RedirectUnauthenticated.tsx");
+require = fn;
+const Routes = fn(1074).Routes;
+const CONFERENCE_MODE_ENABLED = fn(1081).CONFERENCE_MODE_ENABLED;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/auth/RedirectUnauthenticated.tsx");
 
 export default function RedirectUnauthenticated() {
   if (CONFERENCE_MODE_ENABLED) {
     let to = Routes.REGISTER;
   } else {
-    to = getAuthenticationPath.getLoginPath(tmp4, false);
-    const tmp2Result = getAuthenticationPath;
+    to = utils_PathUtils.getLoginPath(tmp4, false);
+    const tmp2Result = utils_PathUtils;
   }
-  return jsx(_extends.Redirect, { to });
+  return jsx(_mod4392.Redirect, { to });
 };
 export const getRedirectPath = function getRedirectPath() {
   if (CONFERENCE_MODE_ENABLED) {
     let REGISTER = Routes.REGISTER;
   } else {
-    REGISTER = getAuthenticationPath.getLoginPath(tmp, false);
-    const obj = getAuthenticationPath;
+    REGISTER = utils_PathUtils.getLoginPath(tmp, false);
   }
   return REGISTER;
 };

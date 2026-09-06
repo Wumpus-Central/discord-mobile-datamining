@@ -1,13 +1,15 @@
-// === Module 15857: apexExperiment ===
+// === Module 15857: AdTopicOptOutClientExperiment ===
 
-// Module 15857 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 15857 (AdTopicOptOutClientExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enabled: false }, 3: { enabled: true }, 4: { enabled: true }, 5: { enabled: true } };
+let obj = { kind: "user", name: "2026-08-ad-topic-opt-out-client", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null, 2: { enabled: false }, 3: { enabled: true }, 4: { enabled: true }, 5: { enabled: true } };
 obj[5] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-ad-topic-opt-out-client", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/ads/AdTopicOptOutClientExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/ads/AdTopicOptOutClientExperiment.tsx");
 
 export const AdTopicOptOutClientExperiment = apexExperiment;
 export const useIsAdTopicOptOutClientEnabled = function useIsAdTopicOptOutClientEnabled() {

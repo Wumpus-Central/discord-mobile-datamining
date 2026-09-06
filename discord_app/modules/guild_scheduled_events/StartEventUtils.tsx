@@ -1,17 +1,14 @@
-// === Module 9811: createStageChannelForEvent ===
+// === Module 9811: StartEventUtils ===
 
-// Module 9811 (createStageChannelForEvent)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { createChannelRecordFromServer as closure_4 } from "createChannelRecord" /* 1961 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import { ChannelTypes } from "ME" /* 1074 */;
+// Module 9811 (StartEventUtils)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-function createStageChannelForEvent(guild, name, arg2) {
+const require = fn;
+function createStageChannelForEvent() {
   const self = this;
-  const apply = _createStageChannelForEvent.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -19,125 +16,99 @@ function createStageChannelForEvent(guild, name, arg2) {
   }
   return applyArgumentsResult;
 }
-function _createStageChannelForEvent() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_11 = async function _createStageChannelForEvent(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let lib2 = tmp5;
-              let navigation = tmp2;
-              let items;
-              if (items === undefined) {
-                items = [];
-              }
-              navigation = undefined;
-              lib2 = undefined;
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              navigation = [];
-              const push = navigation.push;
-              const items1 = [];
-              HermesBuiltin.arraySpread(items, 0);
-              HermesBuiltin.apply(items1, navigation);
-              const obj2 = { guildId: null, type: null, name: null, permissionOverwrites: null };
-              obj2[0] = id.id;
-              obj2[1] = constants.GUILD_STAGE_VOICE;
-              obj2[2] = lib.substring(0, 100);
-              obj2[3] = navigation;
-              c5 = 2;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = lib(items[6]).createChannel(obj2);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            lib2 = arg1;
-            if (null != lib2) {
-              if (201 === lib2.status) {
-                c6 = 3;
-                obj = { value: null, done: true };
-                obj[0] = lib2(lib2.body);
-                return obj;
-              }
-            }
-            const _Error = Error;
-            error = new Error("Can't create channel for event");
-            throw error;
+          closure_4 = tmp5;
+          closure_3 = tmp2;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let items = closure_2;
+          if (closure_2 === undefined) {
+            items = [];
           }
-        } catch (tmp22) {
-          c6 = tmp;
-          throw tmp22;
+          closure_131_2 = items;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          closure_131_3 = [];
+          const push = closure_131_3.push;
+          const items1 = [];
+          HermesBuiltin.arraySpread(closure_131_2, 0);
+          HermesBuiltin.apply(items1, closure_131_3);
+          const obj2 = { guildId: closure_131_0.id, type: closure_132_9.GUILD_STAGE_VOICE, name: closure_131_1.substring(0, 100), permissionOverwrites: closure_131_3 };
+          c5 = 2;
+          c6 = 1;
+          const obj3 = { value: closure_132_1(closure_132_2[6]).createChannel(obj2), done: false };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_131_4 = value;
+        if (null != closure_131_4) {
+          if (201 === closure_131_4.status) {
+            c6 = 3;
+            obj = { value: closure_132_4(closure_131_4.body), done: true };
+            return obj;
+          }
+        }
+        const _Error = Error;
+        const error = new Error("Can't create channel for event");
+        throw error;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp22) {
+      c6 = tmp;
+      throw tmp22;
+    }
   }
-  return applyArgumentsResult;
-}
-function findOrCreateEventChannel(guild_id) {
-  guild = guild.getGuild(guild_id.guild_id);
+};
+function findOrCreateEventChannel(guild_id, arg1) {
+  const guild = GuildStore.getGuild(guild_id.guild_id);
   if (null == guild) {
     return Promise.resolve(null);
   } else {
-    channel = channel.getChannel(guild_id.channel_id);
+    const channel = ChannelStore.getChannel(guild_id.channel_id);
     if (null == channel) {
       let resolved = createStageChannelForEvent(guild, guild_id.name, arg1);
     } else {
@@ -146,228 +117,145 @@ function findOrCreateEventChannel(guild_id) {
     return resolved;
   }
 }
-function _preStartEventActions() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_13 = async function _preStartEventActions(arg0, arg1) {
+  let entity_type = arg0;
+  closure_1 = arg1;
+  c4 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_3 = tmp5;
-              const table = tmp2;
-              let entity_type;
-              if (entity_type.entity_type === closure_1_7.STAGE_INSTANCE) {
-                c4 = 1;
-                c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_12(tmp13, tmp14);
-                return obj1;
-              } else {
-                c5 = 3;
-              }
-            }
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            entity_type = arg1;
-            callback(table[7])(null != entity_type, "could not find or create channel");
-          }
-          c5 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp17) {
-          c5 = tmp;
-          throw tmp17;
-        }
-      }
-    })();
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _setEventAsActive() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c4 = 0;
-    c5 = 0;
-    const iter = (function*(arg0) {
-      if (id === 2) {
-        id = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          id = 2;
-          if (0 === name) {
-            if (arg0 === 1) {
-              id = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              id = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let entity_type = tmp5;
-              let channel_id = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = false;
-              }
-              channel_id = undefined;
-              entity_type = undefined;
-              name = undefined;
-              id = undefined;
-              let guild_id;
-              name = 1;
-              id = 1;
-              return { value: "PX_16", done: true };
-            }
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                id = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                id = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                channel_id = lib.channel_id;
-                entity_type = lib.entity_type;
-                name = lib.name;
-                id = lib.id;
-                guild_id = lib.guild_id;
-                if (constants.STAGE_INSTANCE === entity_type) {
-                  flag(channel_id[7])(null != channel_id, "channel_id is required");
-                  const obj8 = lib(channel_id[8]);
-                  name = 2;
-                  id = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = obj8.startStageInstance(channel_id, name, constants2.GUILD_ONLY, flag, id);
-                  return obj2;
-                } else if (constants.VOICE === tmp54) {
-                  flag(channel_id[7])(null != channel_id, "channel_id is required");
-                  let obj5 = flag(channel_id[9]);
-                  name = 3;
-                  id = 1;
-                  let obj3 = { value: null, done: false };
-                  obj3[0] = obj5.startEvent(id, guild_id);
-                  return obj3;
-                } else if (constants.EXTERNAL === tmp54) {
-                  obj3 = flag(channel_id[9]);
-                  name = 4;
-                  id = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = obj3.startEvent(id, guild_id);
-                  return obj4;
-                }
-              }
-            } else if (2 === tmp5) {
-              if (arg0 === 1) {
-                id = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                id = 3;
-                obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
-              }
-            } else if (3 === tmp5) {
-              if (arg0 === 1) {
-                id = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                id = 3;
-                const obj6 = { value: null, done: true };
-                obj6[0] = arg1;
-                return obj6;
-              }
-            } else if (arg0 === 1) {
-              id = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              id = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+            closure_3 = tmp5;
+            closure_2 = tmp2;
+            closure_130_0 = undefined;
+            if (entity_type.entity_type === constants.STAGE_INSTANCE) {
+              c4 = 1;
+              c5 = 1;
+              const obj1 = { value: findOrCreateEventChannel(tmp13, tmp14), done: false };
+              return obj1;
+            } else {
+              c5 = 3;
             }
-            id = 3;
-            return { value: "HermesInternal", done: null };
           }
-        } catch (tmp41) {
-          id = tmp;
-          throw tmp41;
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_130_0 = value;
+          closure_131_1(closure_131_2[7])(null != closure_130_0, "could not find or create channel");
         }
+        c5 = 3;
+        obj = { value, done: true };
+        return obj;
+      } catch (tmp17) {
+        c5 = tmp;
+        throw tmp17;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    }
+  })();
+};
+let closure_14 = async function _setEventAsActive(arg0, value) {
+  if (1 === tmp5) {
+    if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c5 = 3;
+      return { value, done: true };
+    } else {
+      const channel_id = closure_130_0.channel_id;
+      const entity_type = closure_130_0.entity_type;
+      const name = closure_130_0.name;
+      const id = closure_130_0.id;
+      const guild_id = closure_130_0.guild_id;
+      if (closure_131_7.STAGE_INSTANCE === entity_type) {
+        closure_131_1(closure_131_2[7])(null != channel_id, "channel_id is required");
+        c4 = 2;
+        c5 = 1;
+        closure_131_0(closure_131_2[8]);
+        return { value: closure_131_0(closure_131_2[8]).startStageInstance(channel_id, name, closure_131_8.GUILD_ONLY, closure_130_1, id), done: false };
+      } else if (closure_131_7.VOICE === tmp53) {
+        closure_131_1(closure_131_2[7])(null != channel_id, "channel_id is required");
+        let obj5 = closure_131_1(closure_131_2[9]);
+        c4 = 3;
+        c5 = 1;
+        let obj3 = { value: obj5.startEvent(id, guild_id), done: false };
+        return obj3;
+      } else if (closure_131_7.EXTERNAL === tmp53) {
+        obj3 = closure_131_1(closure_131_2[9]);
+        c4 = 4;
+        c5 = 1;
+        return { value: obj3.startEvent(id, guild_id), done: false };
+      }
+    }
+  } else if (2 === tmp5) {
+    if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c5 = 3;
+      obj5 = { value, done: true };
+      return obj5;
+    }
+  } else if (3 === tmp5) {
+    if (arg0 === 1) {
+      c5 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c5 = 3;
+      return { value, done: true };
+    }
+  } else if (arg0 === 1) {
+    c5 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c5 = 3;
+    return { value, done: true };
   }
-  return applyArgumentsResult;
-}
-({ GuildScheduledEventEntityTypes: error, GuildScheduledEventPrivacyLevel: closure_8 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
+  await "HermesInternal";
+  closure_2 = tmp2;
+  closure_130_0 = closure_0;
+  let flag = closure_1;
+  if (closure_1 === undefined) {
+    flag = false;
+  }
+  closure_130_1 = flag;
+  return "PX_16";
+};
+let closure_4 = fn(1961).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(1963);
+({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
 
 export { createStageChannelForEvent };
 export { findOrCreateEventChannel };
-export const preStartEventActions = function preStartEventActions(closure_0, permissionOverwrites) {
+export const preStartEventActions = function preStartEventActions() {
   const self = this;
-  const apply = _preStartEventActions.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -375,9 +263,9 @@ export const preStartEventActions = function preStartEventActions(closure_0, per
   }
   return applyArgumentsResult;
 };
-export const setEventAsActive = function setEventAsActive(closure_0, closure_1) {
+export const setEventAsActive = function setEventAsActive() {
   const self = this;
-  const apply = _setEventAsActive.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

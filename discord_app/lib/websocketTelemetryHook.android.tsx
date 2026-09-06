@@ -1,9 +1,9 @@
-// === Module 17898: installWebsocketTelemetryHook ===
+// === Module 17898: websocketTelemetryHook ===
 
-// Module 17898 (installWebsocketTelemetryHook)
-import set from "set" /* 2 */;
+// Module 17898 (websocketTelemetryHook)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
+const result = size.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
 export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
   closure_0 = arg0;
@@ -87,15 +87,15 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
       obj.type = "binary";
     }
     try {
-      callback(obj);
+      closure_0(obj);
     } catch (err) {
     }
   }
   if (typeof globalThis !== "undefined") {
     let _globalThis = globalThis;
   } else {
-    _globalThis = closure_0;
-    if (undefined === closure_0) {
+    _globalThis = global;
+    if (undefined === global) {
       let _window = window;
       _window = null;
       if (typeof window !== "undefined") {
@@ -127,12 +127,12 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
           c0 = str;
           if (typeof obj.addEventListener === "function") {
             str2 = "message";
-            listener = obj.addEventListener("message", (data) => {
-              data = undefined;
-              if (data != null) {
-                data = data.data;
+            listener = obj.addEventListener("message", (event) => {
+              let data;
+              if (event != null) {
+                data = event.data;
               }
-              closure_1_2(str, data);
+              handleMessage(str, data);
             });
           }
           return obj;

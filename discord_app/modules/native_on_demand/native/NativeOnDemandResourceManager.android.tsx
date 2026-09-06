@@ -1,12 +1,13 @@
-// === Module 17430: prototype ===
+// === Module 17430: NativeOnDemandResourceManager ===
 
-// Module 17430 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_3 from "getState" /* 1895 */;
-import { AppStates } from "ME" /* 1074 */;
+// Module 17430 (NativeOnDemandResourceManager)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
+import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 17431 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-initializeDefault;
+const AppStates = fn(1074).AppStates;
 let prototype = function NativeOnDemandResourceManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   importDefault = applyArgumentsResult;
@@ -29,8 +30,8 @@ let prototype = function NativeOnDemandResourceManager() {
   };
   applyArgumentsResult.maybeLoadKrisp = function maybeLoadKrisp() {
     if (mode.isPastConnectionOpen) {
-      if (closure_1_3.getState() === closure_1_4.ACTIVE) {
-        const obj3 = applyArgumentsResult(closure_1_1[4]);
+      if (state.getState() === constants.ACTIVE) {
+        const obj3 = applyArgumentsResult(dependencyMap[4]);
         let hasOnDemandResourceResult;
         if (obj3 != null) {
           hasOnDemandResourceResult = obj3.hasOnDemandResource("krisp");
@@ -38,26 +39,26 @@ let prototype = function NativeOnDemandResourceManager() {
         if (!hasOnDemandResourceResult) {
           if (!tmp.hasFetchedKrisp) {
             tmp.hasFetchedKrisp = true;
-            mode = closure_1_2.getMode();
-            const autoThreshold = closure_1_2.getModeOptions().autoThreshold;
+            mode = MediaEngineStore.getMode();
+            const autoThreshold = MediaEngineStore.getModeOptions().autoThreshold;
             let tmp9Result = tmp9(tmp10[5]);
             tmp9Result.setMode(mode, { autoThreshold: false });
             tmp9Result = tmp9(tmp10[4]);
             if (tmp9Result != null) {
               const onDemandResource = tmp9Result.fetchOnDemandResource("krisp");
               if (onDemandResource != null) {
-                onDemandResource.then((arg0) => {
-                  let obj = applyArgumentsResult(closure_2_1[4]);
+                onDemandResource.then((result) => {
+                  let obj = NativeOnDemandResourceModuleDefault;
                   if (obj != null) {
-                    const result = obj.isOnDemandResourcingAvailable();
+                    result = obj.isOnDemandResourcingAvailable();
                   }
-                  if (!arg0) {
+                  if (!result) {
                     if (result) {
-                      mode.hasFetchedKrisp = false;
+                      applyArgumentsResult.hasFetchedKrisp = false;
                     }
                   }
                   obj = { autoThreshold };
-                  applyArgumentsResult(closure_2_1[5]).setMode(mode, obj);
+                  AudioActionCreatorsDefault.setMode(mode, obj);
                 });
               }
             }
@@ -71,6 +72,7 @@ let prototype = function NativeOnDemandResourceManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/native_on_demand/native/NativeOnDemandResourceManager.android.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/native_on_demand/native/NativeOnDemandResourceManager.android.tsx");
 
 export default prototype;

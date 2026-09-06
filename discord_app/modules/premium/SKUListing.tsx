@@ -1,9 +1,9 @@
-// === Module 13982: set ===
+// === Module 13982: SKUListing ===
 
-// Module 13982 (set)
-import set from "set" /* 2 */;
+// Module 13982 (SKUListing)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/SKUListing.tsx");
+const result = size.fileFinishedImporting("modules/premium/SKUListing.tsx");
 
 export default function SKUListing(skuId, skuFeatures) {
   const obj = Object.create(new.target.prototype);

@@ -1,25 +1,26 @@
 // === Module 12373: useIsHubForGuild ===
 
 // Module 12373 (useIsHubForGuild)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/useIsHubForGuild.tsx");
 
 export default function useIsHubForGuild(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
+  _require = arg0;
+  const items = [GuildStore];
   const items1 = [arg0];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = closure_1_2.getGuild(tmp);
+      const guild = GuildStore.getGuild(tmp);
       let flag;
       if (guild != null) {
         const features = guild.features;
-        flag = features.has(closure_1_3.HUB);
+        flag = features.has(GuildFeatures.HUB);
       }
       if (flag == null) {
         flag = false;

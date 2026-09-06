@@ -1,15 +1,15 @@
-// === Module 7321: stopLurkingAll ===
+// === Module 7321: LurkerActionCreators ===
 
-// Module 7321 (stopLurkingAll)
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import closure_5 from "initialize" /* 4200 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 7321 (LurkerActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import LurkingStore from "LurkingStore" /* 4200 */;
 
-const require = arg1;
-function stopLurkingAll(items) {
+const require = fn;
+function stopLurkingAll() {
   const self = this;
-  const apply = _stopLurkingAll.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -17,210 +17,146 @@ function stopLurkingAll(items) {
   }
   return applyArgumentsResult;
 }
-function _stopLurkingAll() {
-  let self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c1 = 0;
-    return (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+let closure_8 = async function _stopLurkingAll(arg0, value) {
+  if (c1 === 2) {
+    c1 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c1 = 2;
+      if (0 === c2) {
         if (arg0 === 1) {
-          throw arg1;
+          c1 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c1 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              v0 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const found = closure_1_5.lurkingGuildIds().filter((arg0) => !closure_0.includes(arg0));
-              if (0 !== found.length) {
-                const _Map = Map;
-                const map = new Map(found.map((closure_0) => {
-                  const items = [closure_0, lurkingSourceForGuild.getLurkingSourceForGuild(closure_0)];
-                  return items;
-                }));
-                v0 = map;
-                obj1 = v0(table[4]);
-                obj1 = { type: "GUILD_STOP_LURKING", ignoredGuildIds: null };
-                obj1[1] = tmp19;
-                obj1.dispatch(obj1);
-                table = 1;
-                v0 = 1;
-                const obj2 = { value: null, done: false };
-                obj2[0] = Promise.all(found.map((() => {
-                  closure_0 = closure_1_3((arg0) => {
-                    closure_0 = arg0;
-                    c6 = 0;
-                    c7 = 0;
-                    c5 = 0;
-                    return (/* F125598 */ function*() { ... })();
-                  });
-                  return function() {
-                    const self = this;
-                    const apply = closure_0.apply;
-                    if (typeof apply === "unknown") {
-                      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                    } else {
-                      applyArgumentsResult = apply(self, arguments);
-                    }
-                    return applyArgumentsResult;
-                  };
-                })()));
-                return obj2;
-              }
-              const lurkingGuildIdsResult = closure_1_5.lurkingGuildIds();
-              tmp19 = closure_0;
-            }
-          } else if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+          const found = LurkingStore.lurkingGuildIds().filter((item) => !closure_0.includes(item));
+          if (0 !== found.length) {
+            const _Map = Map;
+            const map = new Map(found.map((item) => {
+              const items = [item, lurkingSourceForGuild.getLurkingSourceForGuild(item)];
+              return items;
+            }));
+            let obj1 = DispatcherDefault;
+            obj1 = { type: "GUILD_STOP_LURKING", ignoredGuildIds: tmp18 };
+            obj1.dispatch(obj1);
+            c2 = 1;
+            c1 = 1;
+            const obj2 = {
+              value: Promise.all(found.map((() => {
+                          closure_0 = closure_1_3(function*(arg0) {
+                            closure_3 = tmp3;
+                            closure_2 = tmp5;
+                            closure_130_0 = closure_0;
+                            value = _null.get(closure_0);
+                            _null = value;
+                            if (value == null) {
+                              _null = null;
+                            }
+                            closure_130_1 = _null;
+                            const HTTP = closure_0(1272).HTTP;
+                            const request = { url: closure_2_6.GUILD_LEAVE(closure_0), body: { lurking: true }, oldFormErrors: true, rejectWithError: true };
+                            yield HTTP.del(request);
+                            if (1 === tmp8) {
+                              c5 = 0;
+                              map(573).dispatch({ type: "GUILD_STOP_LURKING_FAILURE", lurkingGuildId: closure_130_0, lurkingSource: closure_130_1 });
+                              c7 = 3;
+                              map(573);
+                            } else if (arg0 === 1) {
+                              c7 = 3;
+                              throw arg1;
+                            } else if (arg0 !== 2) {
+                              c5 = 0;
+                            }
+                            return arg1;
+                          });
+                          return function() {
+                            const self = this;
+                            const apply = closure_0.apply;
+                            if (typeof apply === "unknown") {
+                              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                            } else {
+                              applyArgumentsResult = apply(self, arguments);
+                            }
+                            return applyArgumentsResult;
+                          };
+                        })())),
+              done: false
+            };
+            return obj2;
           }
-          v0 = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp13) {
-          v0 = tmp;
-          throw tmp13;
+          const lurkingGuildIdsResult = LurkingStore.lurkingGuildIds();
+          tmp18 = closure_0;
         }
+      } else if (arg0 === 1) {
+        c1 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c1 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_8 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      c1 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp13) {
+      c1 = tmp;
+      throw tmp13;
+    }
   }
-  return applyArgumentsResult;
-}
-function _stopLurking() {
-  const self = this;
-  const tmp = callback(() => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*() {
-      if (guildId === 2) {
-        guildId = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          guildId = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              guildId = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              guildId = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let table = tmp4;
-              closure_1 = 0;
-              let callback;
-              let tmp19 = callback;
-              if (callback === undefined) {
-                tmp19 = null;
-              }
-              callback = tmp19;
-              closure_1 = undefined;
-              table = undefined;
-              c3 = 1;
-              guildId = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else {
-            if (1 === tmp4) {
-              if (arg0 === 1) {
-                guildId = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                guildId = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                closure_1 = closure_5.lurkingGuildIds();
-                if (0 !== closure_1.length) {
-                  const items = [callback, guildId.getGuildId()];
-                  table = items.filter(callback(table[6]).isNotNullish);
-                  c3 = 2;
-                  guildId = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = callback2(table);
-                  return obj2;
-                }
-              }
-            } else if (arg0 === 1) {
-              guildId = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              guildId = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-            guildId = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp20) {
-          guildId = tmp;
-          throw tmp20;
-        }
+};
+let closure_9 = async function _stopLurking(arg0, value) {
+  if (1 === tmp4) {
+    if (arg0 === 1) {
+      c4 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c4 = 3;
+      return { value, done: true };
+    } else {
+      closure_129_1 = closure_130_5.lurkingGuildIds();
+      if (0 !== closure_129_1.length) {
+        const items = [closure_129_0, closure_130_4.getGuildId()];
+        closure_129_2 = items.filter(closure_130_0(closure_130_2[6]).isNotNullish);
+        c3 = 2;
+        c4 = 1;
+        return { value: closure_130_7(closure_129_2), done: false };
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    }
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c4 = 3;
+    return { value, done: true };
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
+  await "HermesInternal";
+  let tmp19 = closure_0;
+  if (closure_0 === undefined) {
+    tmp19 = null;
+  }
+  closure_129_0 = tmp19;
+  return "PX_16";
+};
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 
 export { stopLurkingAll };
-export const stopLurking = function stopLurking(guildId) {
+export const stopLurking = function stopLurking() {
   const self = this;
-  const apply = _stopLurking.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

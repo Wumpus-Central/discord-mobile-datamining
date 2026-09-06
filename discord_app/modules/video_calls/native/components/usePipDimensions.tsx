@@ -1,32 +1,32 @@
 // === Module 9492: usePipDimensions ===
 
 // Module 9492 (usePipDimensions)
-import closure_3 from "noop" /* 19 */;
+import DeviceOrientation from "DeviceOrientation" /* 8332 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 let c4 = 0.5625;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
 
 export default function usePipDimensions(channelId) {
   let forcedOrientation = channelId.forcedOrientation;
   if (forcedOrientation === undefined) {
     forcedOrientation = null;
   }
-  let isViewingActivity;
   let width;
-  let height;
-  isViewingActivity = forcedOrientation(width[1]).useIsViewingActivity({ channelId: channelId.channelId });
+  const isViewingActivity = forcedOrientation(width[1]).useIsViewingActivity({ channelId: channelId.channelId });
   const size = isViewingActivity(width[2])();
   width = size.width;
-  height = size.height;
+  let height = size.height;
   const items = [height, width, forcedOrientation, isViewingActivity];
   return height.useMemo(() => {
     let tmp3 = width > height;
-    let tmp7 = forcedOrientation === forcedOrientation(width[3]).OrientationType.LANDSCAPE;
+    let tmp7 = forcedOrientation === DeviceOrientation.OrientationType.LANDSCAPE;
     if (!tmp7) {
       let tmp8 = tmp3;
       if (tmp3) {
-        tmp8 = forcedOrientation !== forcedOrientation(width[3]).OrientationType.PORTRAIT;
+        tmp8 = forcedOrientation !== DeviceOrientation.OrientationType.PORTRAIT;
       }
       tmp7 = tmp8;
     }
@@ -37,7 +37,7 @@ export default function usePipDimensions(channelId) {
         if (!tmp7) {
           const _Math = Math;
           const bound = Math.min(0.25 * tmp2, 300);
-          width = bound * closure_1_4;
+          width = bound * c4;
           height = bound;
         }
       }
@@ -45,7 +45,7 @@ export default function usePipDimensions(channelId) {
         if (tmp7) {
           const _Math2 = Math;
           const bound1 = Math.min(0.5 * tmp, 400);
-          height = bound1 * closure_1_4;
+          height = bound1 * c4;
           width = bound1;
         }
       }
@@ -53,7 +53,7 @@ export default function usePipDimensions(channelId) {
         if (tmp7) {
           const _Math4 = Math;
           const bound2 = Math.min(0.25 * tmp, 400);
-          height = bound2 * closure_1_4;
+          height = bound2 * c4;
           width = bound2;
         }
       }
@@ -65,7 +65,7 @@ export default function usePipDimensions(channelId) {
       if (tmp3) {
         const _Math3 = Math;
         const bound3 = Math.min(0.5 * tmp2, 300);
-        width = bound3 * closure_1_4;
+        width = bound3 * c4;
         height = bound3;
       }
     }

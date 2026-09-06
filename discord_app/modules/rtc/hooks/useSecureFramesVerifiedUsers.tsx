@@ -1,13 +1,14 @@
-// === Module 15849: useSecureFramesVerifiedUserIds ===
+// === Module 15849: useSecureFramesVerifiedUsers ===
 
-// Module 15849 (useSecureFramesVerifiedUserIds)
+// Module 15849 (useSecureFramesVerifiedUsers)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "initialize" /* 9134 */;
+import VerifiedKeyStore from "VerifiedKeyStore" /* 9134 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/hooks/useSecureFramesVerifiedUsers.tsx");
 
 export const useSecureFramesVerifiedUserIds = function useSecureFramesVerifiedUserIds() {
-  const items = [closure_2];
+  const items = [VerifiedKeyStore];
   return initialize.useStateFromStoresArray(items, () => userIds.getUserIds());
 };

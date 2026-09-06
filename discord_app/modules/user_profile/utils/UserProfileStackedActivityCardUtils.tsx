@@ -1,15 +1,15 @@
-// === Module 13041: getUserProfileLiveActivities ===
+// === Module 13041: UserProfileStackedActivityCardUtils ===
 
-// Module 13041 (getUserProfileLiveActivities)
-import set from "set" /* 2 */;
-import apply from "apply" /* 12 */;
-import ME from "ME" /* 1074 */;
+// Module 13041 (UserProfileStackedActivityCardUtils)
+import _mod12 from "module_12" /* 12 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const ActivityTypes = ME.ActivityTypes;
-const result = set.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
+const ActivityTypes = Constants.ActivityTypes;
+const result = size.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export const getUserProfileLiveActivities = function getUserProfileLiveActivities(stateFromStores1) {
-  return apply.uniqWith(stateFromStores1.filter((type) => {
+  return _mod12.uniqWith(stateFromStores1.filter((type) => {
     type = type.type;
     return type !== constants.CUSTOM_STATUS && type !== constants.HANG_STATUS;
   }), (application_id, application_id2) => {
@@ -32,13 +32,11 @@ export const getUserProfileStackedActivityCards = function getUserProfileStacked
   }
   const items = [];
   if (null != stream) {
-    let obj = { type: "stream", stream: null };
-    obj[1] = stream;
+    let obj = { type: "stream", stream };
     items.push(obj);
   }
   for (const item10015 of live) {
-    obj = { type: "live", activity: null };
-    obj[1] = item10015;
+    obj = { type: "live", activity: item10015 };
     let arr = items.push(obj);
     continue;
   }
@@ -52,8 +50,7 @@ export const getUserProfileStackedActivityCards = function getUserProfileStacked
     isPrivate = null == voiceChannel;
   }
   if (!isPrivate) {
-    obj = { type: "voice", voiceChannel: null };
-    obj[1] = voiceChannel;
+    obj = { type: "voice", voiceChannel };
     items.push(obj);
   }
   return items;

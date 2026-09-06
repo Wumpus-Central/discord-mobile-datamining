@@ -1,21 +1,21 @@
-// === Module 16353: HomeDrawerAddServerRowExpandedChildren ===
+// === Module 16353: HomeDrawerAddServerRow ===
 
-// Module 16353 (HomeDrawerAddServerRowExpandedChildren)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 16305 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16353 (HomeDrawerAddServerRow)
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import HomeDrawerShared from "HomeDrawerShared" /* 16305 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/HomeDrawerAddServerRow.tsx");
 
 export const HomeDrawerAddServerRowExpandedChildren = function HomeDrawerAddServerRowExpandedChildren() {
   let obj = { title: null, subtitle: null };
   obj = { variant: "text-md/medium", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.l5WIbf);
-  obj[0] = jsx(Text.Text, { variant: "text-md/medium", color: "text-default", children: null });
-  return jsx(HomeDrawerSharedItem.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", children: null });
+  const intl = util.intl;
+  obj.children = intl.string(util.t.l5WIbf);
+  obj.title = jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: null });
+  return jsx(HomeDrawerShared.HomeDrawerSharedItem, { variant: "text-md/medium", color: "text-default", children: null });
 };

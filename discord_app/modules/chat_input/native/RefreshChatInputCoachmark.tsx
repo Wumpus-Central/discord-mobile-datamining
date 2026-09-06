@@ -1,46 +1,49 @@
 // === Module 11985: RefreshChatInputCoachmark ===
 
 // Module 11985 (RefreshChatInputCoachmark)
+import util from "util" /* 1114 */;
+import native from "native" /* 4271 */;
 import useCoachmark from "useCoachmark" /* 11127 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
+require = fn;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
 export default function RefreshChatInputCoachmark(buttonRef) {
-  const merged = Object.assign(buttonRef, Object.create(null));
+  const merged = Object.assign(buttonRef, Object.assign({ buttonRef: 0 }));
   const coachmark = useCoachmark.useCoachmark(buttonRef.buttonRef, merged);
   return null;
 };
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
-  let _require;
+  _require = undefined;
   dependencyMap = undefined;
   if (disabled.disabled) {
     let items = [];
   } else {
     items = [tmp(1943).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK];
   }
-  const tmp3 = callback(_require(7388).useSelectedDismissibleContent(items), 2);
+  const tmp3 = _slicedToArray(require("useSelectedDismissibleContent").useSelectedDismissibleContent(items), 2);
   _require = tmp4;
-  const tmp5 = tmp3[0] === _require(1943).DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
+  const tmp5 = tmp3[0] === require("dismissible_content").DismissibleContent.MOBILE_REFRESH_CHAT_INPUT_PLUS_BUTTON_COACHMARK;
   dependencyMap = tmp5;
   const items1 = [tmp5, tmp3[1]];
   let memo = null;
   if (tmp5) {
-    memo = React.useMemo(() => {
+    memo = noop.useMemo(() => {
       let obj = { title: null, description: null, position: "top", offsetY: 4, visible: null, onDismiss: null, graphic: null };
-      const intl = callback(1114).intl;
-      obj[0] = intl.string(callback(1114).t.eqI1WA);
-      const intl2 = callback(1114).intl;
-      obj[1] = intl2.string(callback(1114).t.nxO3NK);
-      obj[4] = dependencyMap;
-      obj[5] = function onDismiss() {
-        callback(closure_1_4.USER_DISMISS);
+      const intl = util.intl;
+      obj.title = intl.string(util.t.eqI1WA);
+      const intl2 = util.intl;
+      obj.description = intl2.string(util.t.nxO3NK);
+      obj.visible = visible;
+      obj.onDismiss = function onDismiss() {
+        closure_1_0(constants.USER_DISMISS);
       };
-      obj = { type: "rive", rive: callback(4271).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
-      obj[6] = obj;
+      obj = { type: "rive", rive: native.OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+      obj.graphic = obj;
       return obj;
     }, items1);
   }

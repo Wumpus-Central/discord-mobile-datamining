@@ -1,8 +1,8 @@
-// === Module 15941: StackNavigationAnimationSettings ===
+// === Module 15941: NavigationConstants ===
 
-// Module 15941 (StackNavigationAnimationSettings)
-import set from "set" /* 2 */;
+// Module 15941 (NavigationConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/NavigationConstants.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/NavigationConstants.tsx");
 
 export const StackNavigationAnimationSettings = { animation: "simple_push", duration: 250, fullScreenGestureEnabled: true };

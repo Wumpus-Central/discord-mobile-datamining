@@ -1,12 +1,13 @@
 // === Module 4421: useWindowSizeClassifier ===
 
 // Module 4421 (useWindowSizeClassifier)
-import set from "set" /* 2 */;
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4422 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
+import size from "module_2" /* 2 */;
 
-let obj = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LARGE", XLARGE: 3, [3]: "XLARGE" };
-const result = set.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
+const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
+
+const WindowSizeClassifier = { SMALL: 0, [0]: "SMALL", NORMAL: 1, [1]: "NORMAL", LARGE: 2, [2]: "LARGE", XLARGE: 3, [3]: "XLARGE" };
+const result = size.fileFinishedImporting("modules/screen/native/useWindowSizeClassifier.tsx");
 
 export default function useWindowSizeClassifier() {
   const width = useBaseAppContainerDimensionsDefault().width;
@@ -21,9 +22,9 @@ export default function useWindowSizeClassifier() {
   }
   return XLARGE;
 };
-export const WindowSizeClassifier = obj;
+export { WindowSizeClassifier };
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
-  obj = useBaseAppContainerDimensions;
+  const obj = useBaseAppContainerDimensions;
   const width = obj.getBaseAppContainerDimensions().width;
   if (width <= 360) {
     let XLARGE = obj.SMALL;

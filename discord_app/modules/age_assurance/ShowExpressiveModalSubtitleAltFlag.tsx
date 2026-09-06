@@ -1,21 +1,24 @@
-// === Module 8444: useShouldShowExpressiveModalSubtitleAlt ===
+// === Module 8444: ShowExpressiveModalSubtitleAltFlag ===
 
-// Module 8444 (useShouldShowExpressiveModalSubtitleAlt)
+// Module 8444 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
-import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 8418 */;
-import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8418 */;
+import SafetyHubStore from "SafetyHubStore" /* 8430 */;
 
-require = arg1;
+require = fn;
+fn(1433);
+let ApexExperiment = { kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: null };
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
-let closure_3 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-show-expressive-modal-subtitle-alt", defaultConfig: { enabled: false }, variations: ApexExperiment });
-const result = require("set").fileFinishedImporting("modules/age_assurance/ShowExpressiveModalSubtitleAltFlag.tsx");
+ApexExperiment.variations = ApexExperiment;
+let closure_3 = ApexExperiment.createApexExperiment(ApexExperiment);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/age_assurance/ShowExpressiveModalSubtitleAltFlag.tsx");
 
 export const useShouldShowExpressiveModalSubtitleAlt = function useShouldShowExpressiveModalSubtitleAlt(age_verification_expressive_v2_modal) {
-  let obj = parseMessageEmbedForProps;
+  let obj = SafetyHubUtils;
   const isSuspendedUser = obj.useIsSuspendedUser();
-  const items = [closure_2];
+  const items = [SafetyHubStore];
   obj = { location: age_verification_expressive_v2_modal };
   const stateFromStores = initialize.useStateFromStores(items, () => showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt());
   let enabled = closure_3.useConfig(obj).enabled;
@@ -24,13 +27,12 @@ export const useShouldShowExpressiveModalSubtitleAlt = function useShouldShowExp
   }
   return enabled;
 };
-export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiveModalSubtitleAlt(arg0) {
-  let obj = parseMessageEmbedForProps;
+export const shouldShowExpressiveModalSubtitleAlt = function shouldShowExpressiveModalSubtitleAlt(location) {
+  let obj = SafetyHubUtils;
   if (obj.isCurrentUserSuspended()) {
-    let enabled = showExpressiveModalSubtitleAlt.getShowExpressiveModalSubtitleAlt();
+    let enabled = SafetyHubStore.getShowExpressiveModalSubtitleAlt();
   } else {
-    obj = { location: null };
-    obj[0] = arg0;
+    obj = { location };
     enabled = closure_3.getConfig(obj).enabled;
   }
   return enabled;

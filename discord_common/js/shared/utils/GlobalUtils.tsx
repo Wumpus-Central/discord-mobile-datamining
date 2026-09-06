@@ -1,9 +1,9 @@
-// === Module 1357: getGlobalObject ===
+// === Module 1357: utils/GlobalUtils ===
 
-// Module 1357 (getGlobalObject)
-import set from "set" /* 2 */;
+// Module 1357 (utils/GlobalUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
 
 export const getGlobalObject = function getGlobalObject() {
   if (typeof globalThis !== "undefined") {

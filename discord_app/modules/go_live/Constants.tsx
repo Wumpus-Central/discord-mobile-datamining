@@ -1,11 +1,10 @@
-// === Module 4602: StreamIssueReportReasons ===
+// === Module 4602: Constants ===
 
-// Module 4602 (StreamIssueReportReasons)
+// Module 4602 (Constants)
 import Notifications from "Notifications" /* 4603 */;
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-let set = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
-const result = set.fileFinishedImporting("modules/go_live/Constants.tsx");
+const result = size.fileFinishedImporting("modules/go_live/Constants.tsx");
 
 export const StreamIssueReportReasons = { BLACK_SCREEN: "BLACK_SCREEN", BLURRY: "BLURRY", LAGGING: "LAGGING", OUT_OF_SYNC: "OUT_OF_SYNC", AUDIO_MISSING: "AUDIO_MISSING", AUDIO_POOR: "AUDIO_POOR", GAME_ISSUE: "GAME_ISSUE", STREAM_STOPPED: "STREAM_STOPPED", NO_ISSUE: "NO_ISSUE", OTHER: "OTHER", VIBES_OFF: "VIBES_OFF" };
 export const DARWIN_SOUNDSHARE_VERSION = ">=19.0.0";
@@ -22,4 +21,4 @@ export const WINDOWS_GRAPHICS_CAPTURE_BUILD = 22000;
 export const StreamTypes = { GUILD: "guild", CALL: "call" };
 export const STREAM_NOTIFY_GUILD_MAX_SIZE = Notifications.Notifications.StreamNotificationsGuildMaxSize;
 export const GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT = 30;
-export const BROWSER_EXECUTABLES = set;
+export const BROWSER_EXECUTABLES = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);

@@ -1,15 +1,20 @@
 // === Module 7956: transformReactions ===
 
 // Module 7956 (transformReactions)
-import set from "set" /* 2 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import ReactionUtils from "ReactionUtils" /* 4211 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
+import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 7951 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
+const result = size.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {
   ({ reactions, animateEmoji: require } = arg0);
   return reactions.flatMap((emoji) => {
     emoji = emoji.emoji;
-    const merged = Object.assign(emoji, Object.create(null));
+    const merged = Object.assign(emoji, Object.assign({ emoji: 0 }));
     const count_details = merged.count_details;
     let vote;
     if (count_details != null) {
@@ -18,39 +23,36 @@ export default function transformReactions(arg0) {
     if (null != vote) {
       return [];
     } else {
-      let animated = emoji;
-      if (emoji) {
+      let animated = closure_1_0;
+      if (closure_1_0) {
         animated = emoji.animated;
       }
       if (null == emoji.id) {
-        let obj2 = closure_1_1(closure_1_2[0]);
+        let obj2 = EmojiUtilsDefault;
         let uRL = obj2.getURL(emoji.name);
-        let tmp4 = closure_1_2;
       } else {
-        tmp4 = closure_1_2;
-        let obj = closure_1_1(closure_1_2[1]);
-        obj = { id: null, animated: null, size: 48 };
-        obj[0] = emoji.id;
-        obj[1] = animated;
+        let obj = { id: emoji.id, animated, size: 48 };
         uRL = obj.getEmojiURL(obj);
       }
-      let obj3 = closure_1_0(tmp4[2]);
-      obj = { expensive: null, cheap: null };
-      obj[0] = function expensive() {
-        return emoji(closure_1_2[3]).getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
+      let obj3 = getAccessibilityLabelOrCheapFallbackUnsafe;
+      obj = {
+        expensive() {
+            return ReactionUtils.getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
+          },
+        cheap: null
       };
       let str = emoji.name;
       if (str == null) {
         str = "";
       }
-      obj[1] = str;
+      obj.cheap = str;
       let combined = null;
       const accessibilityLabelOrCheapFallbackUnsafe = obj3.getAccessibilityLabelOrCheapFallbackUnsafe(obj);
       if (null != emoji.id) {
         const _HermesInternal = HermesInternal;
         combined = "" + emoji.id;
       }
-      obj1 = {};
+      const obj1 = {};
       const merged1 = Object.assign(merged);
       obj2 = {};
       const merged2 = Object.assign(emoji);
@@ -62,23 +64,19 @@ export default function transformReactions(arg0) {
       const _Array = Array;
       if (Array.isArray(obj1.burst_colors)) {
         if (obj1.burst_colors.length > 0) {
-          obj3 = { colors: null, shouldProcessMobileColors: null };
-          obj3[0] = obj1.burst_colors;
-          obj3[1] = tmp8(tmp4[5]).isIOS();
-          obj1.themedBurstColors = tmp8(tmp4[4]).buildPlatformedThemedEmojiColorPalette(obj3);
-          const tmp8Result = tmp8(tmp4[5]);
+          obj3 = { colors: obj1.burst_colors, shouldProcessMobileColors: tmp8(1115).isIOS() };
+          obj1.themedBurstColors = tmp8(7957).buildPlatformedThemedEmojiColorPalette(obj3);
+          const tmp8Result = tmp8(1115);
         }
       }
       return obj1;
     }
   }).map((burst_count) => {
     burst_count = burst_count.burst_count;
-    const merged = Object.assign(burst_count, Object.create(null));
+    const merged = Object.assign(burst_count, Object.assign({ burst_count: 0 }));
     let num = burst_count;
     if (null === burst_count) {
-      let obj = callback(table[6]);
-      obj = { burst_count: null };
-      obj[0] = burst_count;
+      let obj = { burst_count };
       const merged1 = Object.assign(merged);
       const _HermesInternal = HermesInternal;
       obj.captureMessage("Null burst_count while transforming reaction: " + obj);

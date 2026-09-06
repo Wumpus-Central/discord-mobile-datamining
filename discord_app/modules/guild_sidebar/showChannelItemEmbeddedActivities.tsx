@@ -1,9 +1,9 @@
 // === Module 16231: showChannelItemEmbeddedActivities ===
 
 // Module 16231 (showChannelItemEmbeddedActivities)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/showChannelItemEmbeddedActivities.tsx");
+const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelItemEmbeddedActivities.tsx");
 
 export const showChannelItemEmbeddedActivities = function showChannelItemEmbeddedActivities(arg0) {
   return arg0.length > 0;

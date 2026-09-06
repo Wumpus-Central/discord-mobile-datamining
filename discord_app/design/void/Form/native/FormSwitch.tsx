@@ -1,20 +1,20 @@
-// === Module 8605: FormSwitch ===
+// === Module 8605: Form/FormSwitch ===
 
-// Module 8605 (FormSwitch)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import { Switch } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8605 (Form/FormSwitch)
+import nativeDefault from "native" /* 576 */;
+import shared from "shared" /* 4411 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { switch: { marginVertical: -5 }, track: null };
-createCacheKey = { color: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-createCacheKey[1] = createCacheKey;
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormSwitch.tsx");
+require = fn;
+const Switch = fn(17).Switch;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { switch: { marginVertical: -5 }, track: null };
+createStyles = { color: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+createStyles.track = createStyles;
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormSwitch.tsx");
 
 export default function FormSwitch(value) {
   value = value.value;
@@ -25,15 +25,15 @@ export default function FormSwitch(value) {
   if (tmp3) {
     tmp3 = renderIosBackground;
   }
-  const tmp4 = callback();
+  const tmp4 = closure_5();
   let color = value.tintColor;
   if (color == null) {
     color = tmp4.track.color;
   }
   if (null == borderColor) {
-    let obj = AccessibilityAnnouncer;
+    let obj = shared;
     if (obj.isThemeDark(tmp7)) {
-      borderColor = ThemesDefault.unsafe_rawColors.PRIMARY_400;
+      borderColor = nativeDefault.unsafe_rawColors.PRIMARY_400;
     }
   }
   obj = { accessible, trackColor: { true: color, false: borderColor }, ios_backgroundColor: null, value: null, disabled: null, style: null, onValueChange: null, accessibilityState: null, accessibilityLabel: null, accessibilityHint: null };
@@ -43,14 +43,14 @@ export default function FormSwitch(value) {
       tmp11 = borderColor;
     }
   }
-  obj[2] = tmp11;
-  obj[3] = undefined !== value && value;
-  obj[4] = undefined !== disabled && disabled;
+  obj.ios_backgroundColor = tmp11;
+  obj.value = undefined !== value && value;
+  obj.disabled = undefined !== disabled && disabled;
   const items = [tmp4.switch, style];
-  obj[5] = items;
-  obj[6] = onValueChange;
-  obj[7] = { disabled: undefined !== disabled && disabled, selected: undefined !== value && value };
-  obj[8] = accessibilityLabel;
-  obj[9] = accessibilityHint;
+  obj.style = items;
+  obj.onValueChange = onValueChange;
+  obj.accessibilityState = { disabled: undefined !== disabled && disabled, selected: undefined !== value && value };
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.accessibilityHint = accessibilityHint;
   return <Switch accessible={accessible} trackColor={{ true: color, false: borderColor }} ios_backgroundColor={null} value={null} disabled={null} style={null} onValueChange={null} accessibilityState={null} accessibilityLabel={null} accessibilityHint={null} />;
 };

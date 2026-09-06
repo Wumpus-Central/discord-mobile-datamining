@@ -1,12 +1,14 @@
-// === Module 14400: ApexExperiment ===
+// === Module 14400: MemoryExperiment ===
 
-// Module 14400 (ApexExperiment)
-import set from "set" /* 2 */;
+// Module 14400 (MemoryExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { name: "2025-12-shadow-node-spike", kind: "user", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_2 = ApexExperiment.createApexExperiment({ name: "2025-12-shadow-node-spike", kind: "user", defaultConfig: { enabled: false }, variations: obj });
+obj.variations = obj;
+const config = ApexExperiment.createApexExperiment(obj);
 const interval = setInterval(() => {
   let tmp = enabled;
   if (undefined === enabled) {
@@ -20,4 +22,4 @@ const interval = setInterval(() => {
     clearInterval(closure_1);
   }
 }, 60000);
-const result = set.fileFinishedImporting("modules/memory/MemoryExperiment.tsx");
+const result = size.fileFinishedImporting("modules/memory/MemoryExperiment.tsx");

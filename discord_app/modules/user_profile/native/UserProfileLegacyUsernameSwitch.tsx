@@ -1,12 +1,14 @@
 // === Module 14643: UserProfileLegacyUsernameSwitch ===
 
 // Module 14643 (UserProfileLegacyUsernameSwitch)
-import noopAll from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import UserSettingsAccountActionCreators from "UserSettingsAccountActionCreators" /* 6984 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8164 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
 
 export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDisabled) {
   pendingLegacyUsernameDisabled = pendingLegacyUsernameDisabled.pendingLegacyUsernameDisabled;
@@ -19,26 +21,22 @@ export default function UserProfileLegacyUsernameSwitch(pendingLegacyUsernameDis
   }
   let obj = { value: !tmp4, label: null, subLabel: null, accessibilityLabel: null, onValueChange: null };
   const intl = tmp(1114).intl;
-  obj[1] = intl.string(setting(1114).t["3cWDuO"]);
+  obj.label = intl.string(setting(1114).t["3cWDuO"]);
   const intl2 = tmp(1114).intl;
   if (tmp4) {
     let stringResult = intl2.string(tmp(1114).t.eD6Yq0);
   } else {
-    obj = { username: null };
-    obj[0] = pendingLegacyUsernameDisabled.legacyUsername;
+    obj = { username: pendingLegacyUsernameDisabled.legacyUsername };
     stringResult = intl2.formatToPlainString(tmp(1114).t.aYhclf, obj);
   }
-  obj[2] = stringResult;
+  obj.subLabel = stringResult;
   const intl3 = tmp(1114).intl;
-  obj[3] = intl3.string(setting(1114).t["3cWDuO"]);
-  obj[4] = function onValueChange(arg0) {
+  obj.accessibilityLabel = intl3.string(setting(1114).t["3cWDuO"]);
+  obj.onValueChange = function onValueChange(arg0) {
     if (!arg0 === setting) {
-      const result = setting(closure_1_1[5]).resetPendingLegacyUsernameDisabled();
-      const obj3 = setting(closure_1_1[5]);
+      const result = UserSettingsAccountActionCreators.resetPendingLegacyUsernameDisabled();
     } else {
-      let obj = setting(closure_1_1[6]);
-      obj = { legacyUsernameDisabled: null };
-      obj[0] = !arg0;
+      const obj = { legacyUsernameDisabled: !arg0 };
       obj.setPendingChanges(obj);
     }
   };

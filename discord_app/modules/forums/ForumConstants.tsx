@@ -1,9 +1,9 @@
-// === Module 7273: FORUM_GUIDELINES_ACTION_SHEET ===
+// === Module 7273: ForumConstants ===
 
-// Module 7273 (FORUM_GUIDELINES_ACTION_SHEET)
-import set from "set" /* 2 */;
+// Module 7273 (ForumConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/forums/ForumConstants.tsx");
+const result = size.fileFinishedImporting("modules/forums/ForumConstants.tsx");
 
 export const FORUM_GUIDELINES_ACTION_SHEET = "forum-guidelines-action-sheet";
 export const MAX_FORUM_TAGS = 20;

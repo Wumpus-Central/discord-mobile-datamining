@@ -1,30 +1,29 @@
 // === Module 16179: ServerPreviewPill ===
 
 // Module 16179 (ServerPreviewPill)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { pill: null, text: null };
-createCacheKey = { paddingHorizontal: 10, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.WHITE };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: ThemesDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: ThemesDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
-const result = require("set").fileFinishedImporting("modules/lurker_mode/native/ServerPreviewPill.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { pill: null, text: null };
+createStyles = { paddingHorizontal: 10, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.WHITE };
+createStyles.pill = createStyles;
+createStyles.text = { color: nativeDefault.colors.BLACK, textTransform: "uppercase", letterSpacing: 0.5 };
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewPill.tsx");
 
 export default function ServerPreviewPill() {
-  const tmp = callback();
+  const tmp = closure_4();
   let obj = { style: tmp.pill, accessibilityRole: "text", children: null };
   obj = { variant: "text-xs/bold", style: tmp.text, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.KNhFgD);
-  obj[2] = jsx(Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
+  const intl = util.intl;
+  obj.children = intl.string(util.t.KNhFgD);
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/bold", style: tmp.text, children: null });
   return <View variant="text-xs/bold" style={tmp.text}>{null}</View>;
 };

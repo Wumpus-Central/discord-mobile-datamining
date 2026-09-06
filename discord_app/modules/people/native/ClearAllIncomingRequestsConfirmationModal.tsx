@@ -1,14 +1,13 @@
-// === Module 9048: openClearAllIncomingRequestsConfirmationModal ===
+// === Module 9048: people/ClearAllIncomingRequestsConfirmationModal ===
 
-// Module 9048 (openClearAllIncomingRequestsConfirmationModal)
-import set from "set" /* 2 */;
+// Module 9048 (people/ClearAllIncomingRequestsConfirmationModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
+const result = size.fileFinishedImporting("modules/people/native/ClearAllIncomingRequestsConfirmationModal.tsx");
 
 export default function openClearAllIncomingRequestsConfirmationModal(incomingPendingRequestCount) {
-  let obj = _modDef4763;
-  obj = { incomingPendingRequestCount };
+  const obj = { incomingPendingRequestCount };
   obj.pushLazy(asyncRequireImpl(9049, dependencyMap.paths), obj);
 };

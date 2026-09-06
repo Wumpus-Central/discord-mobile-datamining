@@ -1,14 +1,15 @@
-// === Module 5272: mergeMessage ===
+// === Module 5272: ChannelMessages ===
 
-// Module 5272 (mergeMessage)
-import set2 from "set" /* 2 */;
-import timestampDefault from "timestamp" /* 3 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
-import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4491 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
-import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 5275 */;
-import ME from "ME" /* 1074 */;
+// Module 5272 (ChannelMessages)
+import LoggerDefault from "Logger" /* 3 */;
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
+import Client from "Client" /* 4491 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4783 */;
+import SortedArrayUtilsAll from "SortedArrayUtils" /* 5274 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 5275 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function mergeMessage(self, id) {
   let messageRecord = self.get(id.id);
@@ -40,10 +41,10 @@ function mergeMessage(self, id) {
     }
     return messageRecord;
   }
-  messageRecord = createMinimalMessageRecord.createMessageRecord(id);
+  messageRecord = MessageRecordUtils.createMessageRecord(id);
 }
-({ MAX_MESSAGES_PER_CHANNEL: c4, MAX_LOADED_MESSAGES: c5, MAX_MESSAGE_CACHE_SIZE: closure_6, TRUNCATED_MESSAGE_VIEW_SIZE: error, MessageStates: closure_8 } = ME);
-let closure_9 = new timestampDefault("ChannelMessages");
+({ MAX_MESSAGES_PER_CHANNEL: closure_4, MAX_LOADED_MESSAGES: hasOwnProperty, MAX_MESSAGE_CACHE_SIZE: metroRequire, TRUNCATED_MESSAGE_VIEW_SIZE: closure_7, MessageStates: closure_8 } = Constants);
+const logger = new LoggerDefault("ChannelMessages");
 let MessageCache;
 class MessageCache {
   constructor(arg0) {
@@ -58,21 +59,23 @@ class MessageCache {
 const prototype = MessageCache.prototype;
 prototype["clone"] = function clone() {
   const self = this;
-  if (typeof MessageCache !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof MessageCache === "function") {
+    let obj = Object.create(MessageCache.prototype);
+    obj._messages = [];
+    obj._map = {};
+    obj._wasAtEdge = false;
+    obj._isCacheBefore = tmp;
+    obj = {};
+    const merged = Object.assign(self._map);
+    obj._map = obj;
+    const items = [];
+    HermesBuiltin.arraySpread(self._messages, 0);
+    obj._messages = items;
+    obj._wasAtEdge = self._wasAtEdge;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let obj = Object.create(MessageCache.prototype);
-  obj._messages = [];
-  obj._map = {};
-  obj._wasAtEdge = false;
-  obj._isCacheBefore = this._isCacheBefore;
-  obj = {};
-  const merged = Object.assign(self._map);
-  obj._map = obj;
-  const items = [...self._messages];
-  obj._messages = items;
-  obj._wasAtEdge = self._wasAtEdge;
-  return obj;
 };
 Object.defineProperty(prototype, "wasAtEdge", {
   get: function wasAtEdge() {
@@ -99,13 +102,13 @@ prototype["clear"] = function clear() {
 };
 prototype["remove"] = function remove(arg0) {
   closure_0 = arg0;
-  this._messages = applyDefault.filter(this._messages, (id) => id.id !== closure_0);
+  this._messages = _modDef12.filter(this._messages, (id) => id.id !== closure_0);
   delete tmp[tmp2];
 };
 prototype["removeMany"] = function removeMany(arg0) {
   const self = this;
   closure_0 = arg0;
-  self(12).each(arg0, (arg0) => {
+  _modDef12.each(arg0, (arg0) => {
     delete tmp2[tmp];
   });
   const _messages = this._messages;
@@ -121,10 +124,10 @@ prototype["replace"] = function replace(arg0, id) {
     _messages[_messages2.indexOf(tmp3)] = id;
   }
 };
-prototype["update"] = function update(arg0, arg1) {
+prototype["update"] = function update(arg0, fn) {
   const self = this;
   if (null != this._map[arg0]) {
-    const tmp3 = arg1(tmp);
+    const tmp3 = fn(tmp);
     self._map[tmp.id] = tmp3;
     ({ _messages: _messages2, _messages } = self);
     _messages[_messages2.indexOf(tmp)] = tmp3;
@@ -141,8 +144,7 @@ prototype["forEach"] = function forEach(arg0, arg1) {
   const item = _messages.forEach(arg0, arg1);
 };
 prototype["cache"] = function cache(_array, arg1) {
-  let self = this;
-  self = this;
+  const self = this;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -150,7 +152,7 @@ prototype["cache"] = function cache(_array, arg1) {
   if (0 === self.length) {
     self._wasAtEdge = flag;
   }
-  if (self._messages.length + _array.length > closure_6) {
+  if (self._messages.length + _array.length > timestampProducer) {
     self._wasAtEdge = false;
     if (_array.length > tmp) {
       const slice = _array.slice;
@@ -199,8 +201,7 @@ prototype["extractAll"] = function extractAll() {
   return this._messages;
 };
 prototype["extract"] = function extract(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   const _Math = Math;
   if (this._isCacheBefore) {
     const maxResult = _Math.max(self.length - arg0, 0);
@@ -214,7 +215,7 @@ prototype["extract"] = function extract(arg0) {
     const _messages3 = self._messages;
     _messages3.splice(0, arg0);
   }
-  const item = substr.forEach((arg0) => {
+  const item = substr.forEach((item) => {
     delete tmp3[tmp2];
     return tmp;
   });
@@ -223,77 +224,86 @@ prototype["extract"] = function extract(arg0) {
 let ChannelMessages;
 class ChannelMessages {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[2] = require("GuildThemeSourcePreference").JumpType.ANIMATED;
-    obj[21] = [];
+    merged = Object.assign({ ready: false, cached: false, jumpType: null, jumpTargetId: null, jumpTargetOffset: 0, jumpSequenceId: 1, jumped: false, jumpedToPresent: false, jumpFlash: true, jumpReturnTargetId: null, onJumpComplete: null, focusTargetId: null, focusSequenceId: 1, initialScrollSequenceId: 0, suppressRowAnimationSequenceId: 0, hasMoreBefore: true, hasMoreAfter: false, loadingMore: false, revealedMessageId: null, hasFetched: false, error: false, _array: null, _before: null, _after: null, _map: null });
+    merged[2] = closure_0(closure_3[4]).JumpType.ANIMATED;
+    merged[21] = [];
     tmp2 = MessageCache;
-    if (typeof MessageCache !== "function") {
+    if (typeof MessageCache === "function") {
+      obj = Object.create(tmp2.prototype);
+      obj._messages = [];
+      obj._map = {};
+      flag = false;
+      obj._wasAtEdge = false;
+      flag2 = true;
+      obj._isCacheBefore = true;
+      merged[22] = obj;
+      tmp4 = new.target;
+      if (typeof tmp2 === "function") {
+        tmp5 = global;
+        obj1 = Object.create(tmp2.prototype);
+        obj1._messages = [];
+        obj1._map = {};
+        obj1._wasAtEdge = false;
+        obj1._isCacheBefore = false;
+        merged[23] = obj1;
+        merged[24] = {};
+        merged.channelId = global;
+        return merged;
+      } else {
+        str2 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
       str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      throw new TypeError("Trying to call a non-function");
     }
-    obj1 = Object.create(tmp2.prototype);
-    obj1._messages = [];
-    obj1._map = {};
-    obj1._wasAtEdge = false;
-    obj1._isCacheBefore = true;
-    obj[22] = obj1;
-    if (typeof tmp2 !== "function") {
-      str2 = "Trying to call a non-function";
-      throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
-    }
-    obj2 = Object.create(tmp2.prototype);
-    obj2._messages = [];
-    obj2._map = {};
-    obj2._wasAtEdge = false;
-    obj2._isCacheBefore = false;
-    obj[23] = obj2;
-    obj[24] = {};
-    obj.channelId = global;
-    return obj;
   }
 }
 const prototype2 = ChannelMessages.prototype;
 ChannelMessages["forEach"] = function forEach(arg0) {
-  const item = applyDefault.forEach(ChannelMessages._channelMessages, arg0);
+  const item = _modDef12.forEach(ChannelMessages._channelMessages, arg0);
 };
 ChannelMessages["get"] = function get(arg0) {
   return ChannelMessages._channelMessages[arg0];
 };
 ChannelMessages["hasPresent"] = function hasPresent(arg0) {
-  const value = ChannelMessages.get(arg0);
+  value = ChannelMessages.get(arg0);
   return null != value && value.hasPresent();
 };
 ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
   let tmp2 = ChannelMessages._channelMessages[channelId];
   if (null == tmp2) {
-    if (typeof tmp !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof tmp === "function") {
+      const merged = Object.assign({ ready: false, cached: false, jumpType: null, jumpTargetId: null, jumpTargetOffset: 0, jumpSequenceId: 1, jumped: false, jumpedToPresent: false, jumpFlash: true, jumpReturnTargetId: null, onJumpComplete: null, focusTargetId: null, focusSequenceId: 1, initialScrollSequenceId: 0, suppressRowAnimationSequenceId: 0, hasMoreBefore: true, hasMoreAfter: false, loadingMore: false, revealedMessageId: null, hasFetched: false, error: false, _array: null, _before: null, _after: null, _map: null });
+      merged[2] = Client.JumpType.ANIMATED;
+      merged[21] = [];
+      if (typeof MessageCache === "function") {
+        let obj = Object.create(tmp6.prototype);
+        obj._messages = [];
+        obj._map = {};
+        obj._wasAtEdge = false;
+        obj._isCacheBefore = true;
+        merged[22] = obj;
+        if (typeof tmp6 === "function") {
+          obj = Object.create(tmp6.prototype);
+          obj._messages = [];
+          obj._map = {};
+          obj._wasAtEdge = false;
+          obj._isCacheBefore = false;
+          merged[23] = obj;
+          merged[24] = {};
+          merged.channelId = channelId;
+          tmp._channelMessages[channelId] = merged;
+          tmp2 = merged;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    let obj = Object.create(tmp.prototype);
-    obj[2] = GuildThemeSourcePreference.JumpType.ANIMATED;
-    obj[21] = [];
-    if (typeof MessageCache !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    obj = Object.create(tmp6.prototype);
-    obj._messages = [];
-    obj._map = {};
-    obj._wasAtEdge = false;
-    obj._isCacheBefore = true;
-    obj[22] = obj;
-    if (typeof MessageCache !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    obj1 = Object.create(MessageCache.prototype);
-    obj1._messages = [];
-    obj1._map = {};
-    obj1._wasAtEdge = false;
-    obj1._isCacheBefore = false;
-    obj[23] = obj1;
-    obj[24] = {};
-    obj.channelId = channelId;
-    tmp._channelMessages[channelId] = obj;
-    tmp2 = obj;
   }
   return tmp2;
 };
@@ -313,126 +323,130 @@ ChannelMessages["clearCache"] = function clearCache(arg0) {
 ChannelMessages["commit"] = function commit(channelId) {
   ChannelMessages._channelMessages[channelId.channelId] = channelId;
 };
-prototype2["mutate"] = function mutate(obj, flag) {
+prototype2["mutate"] = function mutate(ready, flag) {
   if (flag === undefined) {
     flag = false;
   }
   const self = this;
-  if (typeof ChannelMessages !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(ChannelMessages.prototype);
-  obj[2] = GuildThemeSourcePreference.JumpType.ANIMATED;
-  obj[21] = [];
-  if (typeof MessageCache !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj = Object.create(tmp3.prototype);
-  obj._messages = [];
-  obj._map = {};
-  obj._wasAtEdge = false;
-  obj._isCacheBefore = true;
-  obj[22] = obj;
-  if (typeof MessageCache !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  obj1 = Object.create(MessageCache.prototype);
-  obj1._messages = [];
-  obj1._map = {};
-  obj1._wasAtEdge = false;
-  obj1._isCacheBefore = false;
-  obj[23] = obj1;
-  obj[24] = {};
-  obj.channelId = this.channelId;
-  const _array = self._array;
-  if (flag) {
-    const items = [];
-    HermesBuiltin.arraySpread(_array, 0);
-    let tmp6 = items;
+  if (typeof ChannelMessages === "function") {
+    const merged = Object.assign({ ready: false, cached: false, jumpType: null, jumpTargetId: null, jumpTargetOffset: 0, jumpSequenceId: 1, jumped: false, jumpedToPresent: false, jumpFlash: true, jumpReturnTargetId: null, onJumpComplete: null, focusTargetId: null, focusSequenceId: 1, initialScrollSequenceId: 0, suppressRowAnimationSequenceId: 0, hasMoreBefore: true, hasMoreAfter: false, loadingMore: false, revealedMessageId: null, hasFetched: false, error: false, _array: null, _before: null, _after: null, _map: null });
+    merged[2] = Client.JumpType.ANIMATED;
+    merged[21] = [];
+    if (typeof MessageCache === "function") {
+      let obj = Object.create(tmp5.prototype);
+      obj._messages = [];
+      obj._map = {};
+      obj._wasAtEdge = false;
+      obj._isCacheBefore = true;
+      merged[22] = obj;
+      if (typeof tmp5 === "function") {
+        obj = Object.create(tmp5.prototype);
+        obj._messages = [];
+        obj._map = {};
+        obj._wasAtEdge = false;
+        obj._isCacheBefore = false;
+        merged[23] = obj;
+        merged[24] = {};
+        merged.channelId = tmp;
+        const _array = self._array;
+        if (flag) {
+          const items = [];
+          HermesBuiltin.arraySpread(_array, 0);
+          let tmp10 = items;
+        } else {
+          tmp10 = _array;
+        }
+        merged._array = tmp10;
+        const _map = self._map;
+        if (flag) {
+          obj = {};
+          const merged1 = Object.assign(_map);
+          let tmp14 = obj;
+        } else {
+          tmp14 = _map;
+        }
+        merged._map = tmp14;
+        const _after = self._after;
+        if (flag) {
+          let cloneResult = _after.clone();
+        } else {
+          cloneResult = _after;
+        }
+        merged._after = cloneResult;
+        const _before = self._before;
+        if (flag) {
+          let cloneResult1 = _before.clone();
+        } else {
+          cloneResult1 = _before;
+        }
+        merged._before = cloneResult1;
+        const _Function = Function;
+        if (ready instanceof Function) {
+          ({ ready: tmp2.ready, jumpType: tmp2.jumpType, jumpTargetId: tmp2.jumpTargetId, jumpTargetOffset: tmp2.jumpTargetOffset, jumpSequenceId: tmp2.jumpSequenceId, jumped: tmp2.jumped, jumpedToPresent: tmp2.jumpedToPresent, jumpFlash: tmp2.jumpFlash, jumpReturnTargetId: tmp2.jumpReturnTargetId, onJumpComplete: tmp2.onJumpComplete, focusTargetId: tmp2.focusTargetId, focusSequenceId: tmp2.focusSequenceId, hasMoreBefore: tmp2.hasMoreBefore, hasMoreAfter: tmp2.hasMoreAfter, loadingMore: tmp2.loadingMore, revealedMessageId: tmp2.revealedMessageId, cached: tmp2.cached, hasFetched: tmp2.hasFetched, error: tmp2.error, initialScrollSequenceId: tmp2.initialScrollSequenceId, suppressRowAnimationSequenceId: tmp2.suppressRowAnimationSequenceId } = self);
+          ready(merged);
+        } else if (typeof ready === "object") {
+          if (undefined !== ready.ready) {
+            ready = true === ready.ready;
+          } else {
+            ready = self.ready;
+          }
+          merged.ready = ready;
+          merged.jumpType = undefined !== ready.jumpType ? ready.jumpType : self.jumpType;
+          merged.jumpTargetId = undefined !== ready.jumpTargetId ? ready.jumpTargetId : self.jumpTargetId;
+          merged.jumpTargetOffset = undefined !== ready.jumpTargetOffset ? ready.jumpTargetOffset : self.jumpTargetOffset;
+          merged.jumpSequenceId = undefined !== ready.jumpSequenceId ? ready.jumpSequenceId : self.jumpSequenceId;
+          if (undefined !== ready.jumped) {
+            let jumped = true === ready.jumped;
+          } else {
+            jumped = self.jumped;
+          }
+          merged.jumped = jumped;
+          if (undefined !== ready.jumpedToPresent) {
+            let jumpedToPresent = true === ready.jumpedToPresent;
+          } else {
+            jumpedToPresent = self.jumpedToPresent;
+          }
+          merged.jumpedToPresent = jumpedToPresent;
+          if (undefined !== ready.jumpFlash) {
+            let jumpFlash = true === ready.jumpFlash;
+          } else {
+            jumpFlash = self.jumpFlash;
+          }
+          merged.jumpFlash = jumpFlash;
+          merged.jumpReturnTargetId = undefined !== ready.jumpReturnTargetId ? ready.jumpReturnTargetId : self.jumpReturnTargetId;
+          merged.focusTargetId = undefined !== ready.focusTargetId ? ready.focusTargetId : self.focusTargetId;
+          merged.focusSequenceId = undefined !== ready.focusSequenceId ? ready.focusSequenceId : self.focusSequenceId;
+          if (undefined !== ready.hasMoreBefore) {
+            let hasMoreBefore = true === ready.hasMoreBefore;
+          } else {
+            hasMoreBefore = self.hasMoreBefore;
+          }
+          merged.hasMoreBefore = hasMoreBefore;
+          if (undefined !== ready.hasMoreAfter) {
+            let hasMoreAfter = true === ready.hasMoreAfter;
+          } else {
+            hasMoreAfter = self.hasMoreAfter;
+          }
+          merged.hasMoreAfter = hasMoreAfter;
+          merged.loadingMore = undefined !== ready.loadingMore ? ready.loadingMore : self.loadingMore;
+          merged.revealedMessageId = undefined !== ready.revealedMessageId ? ready.revealedMessageId : self.revealedMessageId;
+          merged.cached = undefined !== ready.cached ? ready.cached : self.cached;
+          merged.hasFetched = undefined !== ready.hasFetched ? ready.hasFetched : self.hasFetched;
+          merged.error = undefined !== ready.error ? ready.error : self.error;
+          merged.onJumpComplete = undefined !== ready.onJumpComplete ? ready.onJumpComplete : self.onJumpComplete;
+          merged.initialScrollSequenceId = undefined !== ready.initialScrollSequenceId ? ready.initialScrollSequenceId : self.initialScrollSequenceId;
+          merged.suppressRowAnimationSequenceId = undefined !== ready.suppressRowAnimationSequenceId ? ready.suppressRowAnimationSequenceId : self.suppressRowAnimationSequenceId;
+        }
+        return merged;
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
   } else {
-    tmp6 = _array;
+    throw new TypeError("Trying to call a non-function");
   }
-  obj._array = tmp6;
-  const _map = self._map;
-  if (flag) {
-    obj = {};
-    const merged = Object.assign(_map);
-    let tmp10 = obj;
-  } else {
-    tmp10 = _map;
-  }
-  obj._map = tmp10;
-  const _after = self._after;
-  if (flag) {
-    let cloneResult = _after.clone();
-  } else {
-    cloneResult = _after;
-  }
-  obj._after = cloneResult;
-  const _before = self._before;
-  if (flag) {
-    let cloneResult1 = _before.clone();
-  } else {
-    cloneResult1 = _before;
-  }
-  obj._before = cloneResult1;
-  if (obj instanceof Function) {
-    ({ ready: tmp2.ready, jumpType: tmp2.jumpType, jumpTargetId: tmp2.jumpTargetId, jumpTargetOffset: tmp2.jumpTargetOffset, jumpSequenceId: tmp2.jumpSequenceId, jumped: tmp2.jumped, jumpedToPresent: tmp2.jumpedToPresent, jumpFlash: tmp2.jumpFlash, jumpReturnTargetId: tmp2.jumpReturnTargetId, onJumpComplete: tmp2.onJumpComplete, focusTargetId: tmp2.focusTargetId, focusSequenceId: tmp2.focusSequenceId, hasMoreBefore: tmp2.hasMoreBefore, hasMoreAfter: tmp2.hasMoreAfter, loadingMore: tmp2.loadingMore, revealedMessageId: tmp2.revealedMessageId, cached: tmp2.cached, hasFetched: tmp2.hasFetched, error: tmp2.error, initialScrollSequenceId: tmp2.initialScrollSequenceId, suppressRowAnimationSequenceId: tmp2.suppressRowAnimationSequenceId } = self);
-    obj(obj);
-  } else if (typeof obj === "object") {
-    if (undefined !== obj.ready) {
-      let ready = true === obj.ready;
-    } else {
-      ready = self.ready;
-    }
-    obj.ready = ready;
-    obj.jumpType = undefined !== obj.jumpType ? obj.jumpType : self.jumpType;
-    obj.jumpTargetId = undefined !== obj.jumpTargetId ? obj.jumpTargetId : self.jumpTargetId;
-    obj.jumpTargetOffset = undefined !== obj.jumpTargetOffset ? obj.jumpTargetOffset : self.jumpTargetOffset;
-    obj.jumpSequenceId = undefined !== obj.jumpSequenceId ? obj.jumpSequenceId : self.jumpSequenceId;
-    if (undefined !== obj.jumped) {
-      let jumped = true === obj.jumped;
-    } else {
-      jumped = self.jumped;
-    }
-    obj.jumped = jumped;
-    if (undefined !== obj.jumpedToPresent) {
-      let jumpedToPresent = true === obj.jumpedToPresent;
-    } else {
-      jumpedToPresent = self.jumpedToPresent;
-    }
-    obj.jumpedToPresent = jumpedToPresent;
-    if (undefined !== obj.jumpFlash) {
-      let jumpFlash = true === obj.jumpFlash;
-    } else {
-      jumpFlash = self.jumpFlash;
-    }
-    obj.jumpFlash = jumpFlash;
-    obj.jumpReturnTargetId = undefined !== obj.jumpReturnTargetId ? obj.jumpReturnTargetId : self.jumpReturnTargetId;
-    obj.focusTargetId = undefined !== obj.focusTargetId ? obj.focusTargetId : self.focusTargetId;
-    obj.focusSequenceId = undefined !== obj.focusSequenceId ? obj.focusSequenceId : self.focusSequenceId;
-    if (undefined !== obj.hasMoreBefore) {
-      let hasMoreBefore = true === obj.hasMoreBefore;
-    } else {
-      hasMoreBefore = self.hasMoreBefore;
-    }
-    obj.hasMoreBefore = hasMoreBefore;
-    if (undefined !== obj.hasMoreAfter) {
-      let hasMoreAfter = true === obj.hasMoreAfter;
-    } else {
-      hasMoreAfter = self.hasMoreAfter;
-    }
-    obj.hasMoreAfter = hasMoreAfter;
-    obj.loadingMore = undefined !== obj.loadingMore ? obj.loadingMore : self.loadingMore;
-    obj.revealedMessageId = undefined !== obj.revealedMessageId ? obj.revealedMessageId : self.revealedMessageId;
-    obj.cached = undefined !== obj.cached ? obj.cached : self.cached;
-    obj.hasFetched = undefined !== obj.hasFetched ? obj.hasFetched : self.hasFetched;
-    obj.error = undefined !== obj.error ? obj.error : self.error;
-    obj.onJumpComplete = undefined !== obj.onJumpComplete ? obj.onJumpComplete : self.onJumpComplete;
-    obj.initialScrollSequenceId = undefined !== obj.initialScrollSequenceId ? obj.initialScrollSequenceId : self.initialScrollSequenceId;
-    obj.suppressRowAnimationSequenceId = undefined !== obj.suppressRowAnimationSequenceId ? obj.suppressRowAnimationSequenceId : self.suppressRowAnimationSequenceId;
-  }
-  return obj;
 };
 Object.defineProperty(prototype2, "length", {
   get: function length() {
@@ -444,7 +458,7 @@ prototype2["toArray"] = function toArray() {
   const items = [...this._array];
   return items;
 };
-prototype2["forEach"] = function forEach(call) {
+prototype2["forEach"] = function forEach(call, arg1) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -482,7 +496,7 @@ prototype2["filter"] = function filter(arg0, arg1) {
   const _array = this._array;
   return _array.filter(arg0, arg1);
 };
-prototype2["forAll"] = function forAll(arg0) {
+prototype2["forAll"] = function forAll(arg0, arg1) {
   const _before = this._before;
   const item = _before.forEach(arg0, arg1);
   const _array = this._array;
@@ -492,7 +506,7 @@ prototype2["forAll"] = function forAll(arg0) {
 };
 prototype2["findOldest"] = function findOldest(isTermsFormField) {
   const self = this;
-  let found = applyDefault.find(this._before._messages, isTermsFormField);
+  let found = _modDef12.find(this._before._messages, isTermsFormField);
   if (found == null) {
     let tmpResult = tmp(12);
     found = tmpResult.find(self._array, isTermsFormField);
@@ -505,7 +519,7 @@ prototype2["findOldest"] = function findOldest(isTermsFormField) {
 };
 prototype2["findNewest"] = function findNewest(arg0) {
   const self = this;
-  let findLastResult = applyDefault.findLast(this._after._messages, arg0);
+  let findLastResult = _modDef12.findLast(this._after._messages, arg0);
   if (findLastResult == null) {
     let tmpResult = tmp(12);
     findLastResult = tmpResult.findLast(self._array, arg0);
@@ -520,7 +534,7 @@ prototype2["map"] = function map(arg0, arg1) {
   const _array = this._array;
   return _array.map(arg0, arg1);
 };
-prototype2["first"] = function first(closure_4, closure_2, _exports2, firstResult, arg4, _exports2, firstResult2) {
+prototype2["first"] = function first() {
   return this._array[0];
 };
 prototype2["last"] = function last() {
@@ -537,7 +551,7 @@ prototype2["get"] = function get(arg0) {
     tmp2 = tmp;
     if (flag) {
       const _before = self._before;
-      let value = _before.get(arg0);
+      value = _before.get(arg0);
       if (value == null) {
         const _after = self._after;
         value = _after.get(arg0);
@@ -552,7 +566,7 @@ prototype2["getByIndex"] = function getByIndex(arg0) {
 };
 prototype2["getAfter"] = function getAfter(id) {
   const self = this;
-  const value = this.get(id);
+  value = this.get(id);
   if (null == value) {
     return null;
   } else {
@@ -568,9 +582,9 @@ prototype2["getAfter"] = function getAfter(id) {
     return tmp3;
   }
 };
-prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, arg2) {
+prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, fn) {
   const self = this;
-  const value = this.get(arg0);
+  value = this.get(arg0);
   if (null == value) {
     return null;
   } else {
@@ -585,10 +599,9 @@ prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, arg2) {
         let tmp4 = sum;
         if (-1 === arg1) {
           while (true) {
-            let tmp5 = null == arg2;
-            let tmp6 = tmp4;
+            let tmp5 = null == fn;
             if (!tmp5) {
-              tmp5 = arg2(self._array[tmp4]);
+              tmp5 = fn(self._array[tmp4]);
             }
             if (tmp5) {
               let arr = items.push(self._array[tmp4]);
@@ -617,9 +630,9 @@ prototype2["getManyAfter"] = function getManyAfter(arg0, arg1, arg2) {
     }
   }
 };
-prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, arg2) {
+prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, fn) {
   const self = this;
-  const value = this.get(arg0);
+  value = this.get(arg0);
   if (null == value) {
     return null;
   } else {
@@ -634,10 +647,9 @@ prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, arg2) {
         let tmp4 = diff;
         if (-1 === arg1) {
           while (true) {
-            let tmp5 = null == arg2;
-            let tmp6 = tmp4;
+            let tmp5 = null == fn;
             if (!tmp5) {
-              tmp5 = arg2(self._array[tmp4]);
+              tmp5 = fn(self._array[tmp4]);
             }
             if (tmp5) {
               let arr = items.unshift(self._array[tmp4]);
@@ -666,13 +678,13 @@ prototype2["getManyBefore"] = function getManyBefore(arg0, arg1, arg2) {
     }
   }
 };
-prototype2["hasAnyAfter"] = function hasAnyAfter(id, arg1, arg2) {
+prototype2["hasAnyAfter"] = function hasAnyAfter(id, fn, arg2) {
   let num = arg2;
   if (arg2 === undefined) {
     num = -1;
   }
   const self = this;
-  const value = this.get(id);
+  value = this.get(id);
   if (null == value) {
     return false;
   } else {
@@ -685,7 +697,7 @@ prototype2["hasAnyAfter"] = function hasAnyAfter(id, arg1, arg2) {
       if (sum < self.length) {
         let tmp4 = sum;
         if (-1 === num) {
-          while (!arg1(self._array[tmp4])) {
+          while (!fn(self._array[tmp4])) {
             let sum1 = tmp4 + 1;
             if (sum1 < self.length) {
               tmp4 = sum1;
@@ -729,17 +741,17 @@ prototype2["has"] = function has(arg0) {
 };
 prototype2["indexOf"] = function indexOf(arg0) {
   closure_0 = arg0;
-  c1 = -1;
+  closure_1 = -1;
   const _array = this._array;
-  const found = _array.find((id) => {
+  const found = _array.find((id, index) => {
     let flag = id.id === closure_0;
     if (flag) {
-      closure_1 = arg1;
+      closure_1 = index;
       flag = true;
     }
     return flag;
   });
-  return c1;
+  return closure_1;
 };
 prototype2["hasPresent"] = function hasPresent() {
   const self = this;
@@ -773,11 +785,11 @@ prototype2["hasAfterCached"] = function hasAfterCached(after) {
   }
   return false;
 };
-prototype2["update"] = function update(arg0, arg1) {
+prototype2["update"] = function update(arg0, fn) {
   const self = this;
   closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = tmp;
+  closure_1 = fn;
+  const id = tmp;
   if (null == this._map[arg0]) {
     let _before = self._before;
     if (_before.has(arg0)) {
@@ -797,7 +809,7 @@ prototype2["update"] = function update(arg0, arg1) {
     }
     return mutation;
   } else {
-    closure_3 = arg1(tmp);
+    closure_3 = fn(tmp);
     return self.mutate((_map) => {
       _map._map[id.id] = closure_3;
       ({ _array: _array2, _array } = _map);
@@ -808,7 +820,7 @@ prototype2["update"] = function update(arg0, arg1) {
 prototype2["replace"] = function replace(arg0, arg1) {
   const self = this;
   closure_0 = arg0;
-  closure_1 = arg1;
+  const id = arg1;
   closure_2 = tmp;
   if (null == this._map[arg0]) {
     const _before = self._before;
@@ -835,7 +847,7 @@ prototype2["remove"] = function remove(arg0) {
   return this.mutate((_array) => {
     delete tmp2[tmp];
     _array = _array._array;
-    _array._array = _array.filter((id) => id.id !== closure_0);
+    _array._array = _array.filter((id) => id.id !== closure_1_0);
     const _before = _array._before;
     _before.remove(closure_0);
     const _after = _array._after;
@@ -843,22 +855,20 @@ prototype2["remove"] = function remove(arg0) {
   }, true);
 };
 prototype2["removeMany"] = function removeMany(arr) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_0 = arr;
   let self2 = this;
-  if (arr.some((arg0) => self.has(arg0))) {
+  if (arr.some((item) => self.has(item))) {
     self2 = self.mutate((_array) => {
-      closure_0 = _array;
-      self(closure_1_3[3]).each(closure_0, (arg0) => {
+      self(dependencyMap[3]).each(_array, (arg0) => {
         delete tmp2[tmp];
       });
       _array = _array._array;
       _array._array = _array.filter((id) => -1 === _array.indexOf(id.id));
       const _before = _array._before;
-      _before.removeMany(closure_0);
+      _before.removeMany(_array);
       const _after = _array._after;
-      _after.removeMany(closure_0);
+      _after.removeMany(_array);
     }, true);
   }
   return self2;
@@ -878,8 +888,7 @@ prototype2["merge"] = function merge(arg0) {
   }, true);
 };
 prototype2["_merge"] = function _merge(arr, flag, flag2) {
-  let self = this;
-  self = this;
+  const self = this;
   if (flag === undefined) {
     flag = false;
   }
@@ -930,26 +939,25 @@ prototype2["mergeDelta"] = function mergeDelta(new_messages, modified_messages, 
     const _after = _before._after;
     _after.clear();
     const set = new Set(items2);
-    const item = set.forEach((id) => set.add(id.id));
+    const item = items.forEach((id) => set.add(id.id));
     const item1 = items1.forEach((id) => set.add(id.id));
     const _array = _before._array;
     const found = _array.filter((id) => !set.has(id.id));
-    const mapped = set.map((message) => set(4783).createMessageRecord(message));
-    const combined = found.concat(mapped, items1.map((message) => set(4783).createMessageRecord(message)));
-    _before._array = combined.sort((id, id2) => callback(11).compare(id.id, id2.id));
+    const mapped = items.map((item) => set(4783).createMessageRecord(item));
+    const combined = found.concat(mapped, items1.map((item) => set(4783).createMessageRecord(item)));
+    _before._array = combined.sort((id, id2) => items1(11).compare(id.id, id2.id));
   });
 };
 prototype2["_clearMessages"] = function _clearMessages() {
   this._array = [];
   this._map = {};
 };
-prototype2["reset"] = function reset(arg0) {
-  closure_0 = arg0;
+prototype2["reset"] = function reset(_array) {
   return this.mutate((_before) => {
-    closure_0 = _before;
-    _before._array = closure_0;
+    _array = _before;
+    _before._array = _array;
     _before._map = {};
-    const item = closure_0.forEach((id) => {
+    const item = _array.forEach((id) => {
       _map._map[id.id] = id;
       return id;
     });
@@ -959,13 +967,12 @@ prototype2["reset"] = function reset(arg0) {
     _after.clear();
   });
 };
-prototype2["truncateTop"] = function truncateTop(closure_4, flag) {
+prototype2["truncateTop"] = function truncateTop(arg0, flag) {
   if (flag === undefined) {
     flag = true;
   }
   const self = this;
-  c0 = undefined;
-  const diff = this._array.length - closure_4;
+  const diff = this._array.length - arg0;
   c0 = diff;
   let self2 = this;
   if (diff > 0) {
@@ -990,7 +997,7 @@ prototype2["truncateTop"] = function truncateTop(closure_4, flag) {
   }
   return self2;
 };
-prototype2["truncateBottom"] = function truncateBottom(closure_4, arg1) {
+prototype2["truncateBottom"] = function truncateBottom(arg0) {
   return this;
 };
 prototype2["jumpToPresent"] = function jumpToPresent(arg0) {
@@ -1034,23 +1041,23 @@ prototype2["jumpToMessage"] = function jumpToMessage(arg0) {
   return this.mutate((jumpSequenceId) => {
     jumpSequenceId.jumped = true;
     jumpSequenceId.jumpedToPresent = false;
-    let ANIMATED = closure_4;
-    if (closure_4 == null) {
-      ANIMATED = closure_1_0(returnTargetId[4]).JumpType.ANIMATED;
+    let ANIMATED = closure_1_4;
+    if (closure_1_4 == null) {
+      ANIMATED = Client.JumpType.ANIMATED;
     }
     jumpSequenceId.jumpType = ANIMATED;
-    jumpSequenceId.jumpTargetId = closure_0;
+    jumpSequenceId.jumpTargetId = jumpTargetId;
     let num = 0;
-    if (null != closure_0) {
+    if (null != jumpTargetId) {
       num = 0;
-      if (null != closure_2) {
-        num = closure_2;
+      if (null != importAll) {
+        num = importAll;
       }
     }
     jumpSequenceId.jumpTargetOffset = num;
     jumpSequenceId.jumpSequenceId = jumpSequenceId.jumpSequenceId + 1;
-    let tmp3 = closure_5;
-    if (closure_5 == null) {
+    let tmp3 = closure_1_5;
+    if (closure_1_5 == null) {
       tmp3 = null;
     }
     jumpSequenceId.onJumpComplete = tmp3;
@@ -1061,9 +1068,9 @@ prototype2["jumpToMessage"] = function jumpToMessage(arg0) {
   }, false);
 };
 prototype2["focusOnMessage"] = function focusOnMessage(messageId) {
-  closure_0 = messageId;
+  const focusTargetId = messageId;
   return this.mutate((focusSequenceId) => {
-    focusSequenceId.focusTargetId = closure_0;
+    focusSequenceId.focusTargetId = focusTargetId;
     focusSequenceId.focusSequenceId = focusSequenceId.focusSequenceId + 1;
     focusSequenceId.ready = true;
     focusSequenceId.loadingMore = false;
@@ -1086,14 +1093,14 @@ prototype2["loadFromCache"] = function loadFromCache(arg0, limit) {
 };
 prototype2["truncate"] = function truncate(arg0, arg1) {
   const self = this;
-  if (this.length <= closure_5) {
+  if (this.length <= hasOwnProperty) {
     return self;
   } else if (arg0) {
-    let truncateBottomResult = self.truncateBottom(closure_7);
+    let truncateBottomResult = self.truncateBottom(React5);
   } else {
     truncateBottomResult = self;
     if (arg1) {
-      truncateBottomResult = self.truncateTop(closure_7);
+      truncateBottomResult = self.truncateTop(React5);
     }
   }
 };
@@ -1104,7 +1111,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
   }
   const self = this;
   let messageRecord1;
-  let value = null;
+  value = null;
   if (null != nonce.nonce) {
     value = self.get(nonce.nonce, true);
   }
@@ -1148,8 +1155,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
               ({ _array: _array2, _array } = _map);
               _array[_array2.indexOf(tmp2)] = tmp;
             } else {
-              closure_1_2(closure_1_3[7]).insert(_map._array, tmp, (id, id2) => callback(table[5]).compare(id.id, id2.id));
-              const obj = closure_1_2(closure_1_3[7]);
+              SortedArrayUtilsAll.insert(_map._array, tmp, (id, id2) => closure_1_1(closure_1_3[5]).compare(id.id, id2.id));
             }
           }, true);
         }
@@ -1163,41 +1169,39 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
         }
         return truncateTopResult;
       }
-      obj2 = DISCORD_EPOCHDefault;
-      const tmp8 = importDefault;
+      obj2 = SnowflakeUtilsDefault;
     }
     const items = [messageRecord1];
     mutation = self.merge(items);
     let obj = messageRecord1(4783);
   }
 };
-prototype2["receivePushNotification"] = function receivePushNotification(closure_1, closure_2) {
+prototype2["receivePushNotification"] = function receivePushNotification(message, isConnectedResult) {
   const self = this;
-  let value = null;
-  if (null != closure_1.nonce) {
-    value = self.get(closure_1.nonce, true);
+  value = null;
+  if (null != message.nonce) {
+    value = self.get(message.nonce, true);
   }
   if (null != value) {
     return self;
-  } else if (null != self.get(closure_1.id, true)) {
+  } else if (null != self.get(message.id, true)) {
     return self;
   } else {
-    let obj = isIOSPushNotificationRawPayloadFixExperimentEnabled;
+    let obj = IOSPushNotificationRawPayloadFixExperiment;
     const result = obj.isIOSPushNotificationRawPayloadFixExperimentEnabled();
     let tmp5 = !result;
     if (result) {
-      tmp5 = !closure_2;
+      tmp5 = !isConnectedResult;
     }
-    obj = { ready: true, cached: null };
-    obj[1] = tmp5;
+    obj = { ready: true, cached: tmp5 };
     const mutation = self.mutate(obj);
-    const items = [mergeMessage(self, closure_1)];
+    const items = [mergeMessage(self, message)];
     return mutation.merge(items);
   }
 };
 prototype2["receiveReactionInAppNotification"] = function receiveReactionInAppNotification(nonce) {
   const self = this;
-  let value = null;
+  value = null;
   if (null != nonce.nonce) {
     value = self.get(nonce.nonce, true);
   }
@@ -1219,7 +1223,7 @@ prototype2["loadStart"] = function loadStart(jump) {
   if (flag == null) {
     flag = false;
   }
-  obj[2] = flag;
+  obj.jumpedToPresent = flag;
   let messageId;
   if (jump != null) {
     messageId = jump.messageId;
@@ -1227,7 +1231,7 @@ prototype2["loadStart"] = function loadStart(jump) {
   if (messageId == null) {
     messageId = null;
   }
-  obj[3] = messageId;
+  obj.jumpTargetId = messageId;
   let num;
   if (jump != null) {
     num = jump.offset;
@@ -1235,7 +1239,7 @@ prototype2["loadStart"] = function loadStart(jump) {
   if (num == null) {
     num = 0;
   }
-  obj[4] = num;
+  obj.jumpTargetOffset = num;
   let returnMessageId;
   if (jump != null) {
     returnMessageId = jump.returnMessageId;
@@ -1243,7 +1247,7 @@ prototype2["loadStart"] = function loadStart(jump) {
   if (returnMessageId == null) {
     returnMessageId = null;
   }
-  obj[5] = returnMessageId;
+  obj.jumpReturnTargetId = returnMessageId;
   let onJumpComplete;
   if (jump != null) {
     onJumpComplete = jump.onJumpComplete;
@@ -1251,8 +1255,8 @@ prototype2["loadStart"] = function loadStart(jump) {
   if (onJumpComplete == null) {
     onJumpComplete = null;
   }
-  obj[6] = onJumpComplete;
-  obj[7] = null == jump && self.ready;
+  obj.onJumpComplete = onJumpComplete;
+  obj.ready = null == jump && self.ready;
   return this.mutate(obj);
 };
 prototype2["loadComplete"] = function loadComplete(newMessages) {
@@ -1286,9 +1290,9 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
     flag6 = false;
   }
   const self = this;
-  let obj = applyDefault(items);
+  let obj = _modDef12(items);
   const reversed = obj.reverse();
-  const valueResult = reversed.map((message) => callback(table[2]).createMessageRecord(message)).value();
+  const valueResult = reversed.map((item) => MessageRecordUtils.createMessageRecord(item)).value();
   if (flag) {
     if (null == jump) {
       if (self.ready) {
@@ -1306,10 +1310,9 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         jumpType = jump.jumpType;
       }
       if (jumpType == null) {
-        jumpType = GuildThemeSourcePreference.JumpType.ANIMATED;
+        jumpType = Client.JumpType.ANIMATED;
       }
-      obj = { ready: true, loadingMore: false, jumpType: null, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
-      obj[2] = jumpType;
+      obj = { ready: true, loadingMore: false, jumpType, jumpFlash: null, jumped: null, jumpedToPresent: null, jumpTargetId: null, jumpTargetOffset: null, jumpSequenceId: null, jumpReturnTargetId: null, onJumpComplete: null, hasMoreBefore: null, hasMoreAfter: null, cached: null, hasFetched: null, error: false, initialScrollSequenceId: null, suppressRowAnimationSequenceId: null };
       let flag8;
       if (jump != null) {
         flag8 = jump.flash;
@@ -1317,8 +1320,8 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (flag8 == null) {
         flag8 = false;
       }
-      obj[3] = flag8;
-      obj[4] = null != jump;
+      obj.jumpFlash = flag8;
+      obj.jumped = null != jump;
       let flag9;
       if (jump != null) {
         flag9 = jump.present;
@@ -1326,7 +1329,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (flag9 == null) {
         flag9 = false;
       }
-      obj[5] = flag9;
+      obj.jumpedToPresent = flag9;
       let messageId;
       if (jump != null) {
         messageId = jump.messageId;
@@ -1334,7 +1337,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       if (messageId == null) {
         messageId = null;
       }
-      obj[6] = messageId;
+      obj.jumpTargetId = messageId;
       let num = 0;
       if (null != jump) {
         num = 0;
@@ -1345,12 +1348,12 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
           }
         }
       }
-      obj[7] = num;
+      obj.jumpTargetOffset = num;
       if (null != jump) {
         if (!flag5) {
           let jumpSequenceId = mergeResult.jumpSequenceId + 1;
         }
-        obj[8] = jumpSequenceId;
+        obj.jumpSequenceId = jumpSequenceId;
         let returnMessageId;
         if (jump != null) {
           returnMessageId = jump.returnMessageId;
@@ -1358,7 +1361,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         if (returnMessageId == null) {
           returnMessageId = null;
         }
-        obj[9] = returnMessageId;
+        obj.jumpReturnTargetId = returnMessageId;
         let onJumpComplete;
         if (jump != null) {
           onJumpComplete = jump.onJumpComplete;
@@ -1366,7 +1369,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
         if (onJumpComplete == null) {
           onJumpComplete = null;
         }
-        obj[10] = onJumpComplete;
+        obj.onJumpComplete = onJumpComplete;
         let hasMoreBefore = flag3;
         if (null == jump) {
           hasMoreBefore = flag3;
@@ -1374,7 +1377,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
             hasMoreBefore = mergeResult.hasMoreBefore;
           }
         }
-        obj[11] = hasMoreBefore;
+        obj.hasMoreBefore = hasMoreBefore;
         let hasMoreAfter = flag4;
         if (null == jump) {
           hasMoreAfter = flag4;
@@ -1382,23 +1385,23 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
             hasMoreAfter = mergeResult.hasMoreAfter;
           }
         }
-        obj[12] = hasMoreAfter;
-        obj[13] = flag6;
-        obj[14] = newMessages.hasFetched;
+        obj.hasMoreAfter = hasMoreAfter;
+        obj.cached = flag6;
+        obj.hasFetched = newMessages.hasFetched;
         const initialScrollSequenceId = mergeResult.initialScrollSequenceId;
         if (cached) {
           let sum = initialScrollSequenceId + 1;
         } else {
           sum = initialScrollSequenceId;
         }
-        obj[16] = sum;
+        obj.initialScrollSequenceId = sum;
         const suppressRowAnimationSequenceId = mergeResult.suppressRowAnimationSequenceId;
         if (cached) {
           let sum1 = suppressRowAnimationSequenceId + 1;
         } else {
           sum1 = suppressRowAnimationSequenceId;
         }
-        obj[17] = sum1;
+        obj.suppressRowAnimationSequenceId = sum1;
         return mergeResult.mutate(obj);
       }
       jumpSequenceId = mergeResult.jumpSequenceId;
@@ -1443,18 +1446,14 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
   mergeResult = resetResult;
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
-  let self = this;
-  self = this;
+  const self = this;
   let obj = reversed(5276);
   const result = obj.requireSortedDescending(messages);
-  const mapped = messages.map((arg0) => closure_1_10(self, arg0));
+  const mapped = messages.map((item) => mergeMessage(self, item));
   reversed = mapped.reverse();
   const _array = this._array;
-  const found = _array.filter((arg0) => {
-    closure_0 = arg0;
-    return !closure_0.some((id) => id.id === id.id);
-  });
-  const item = found.forEach((arg0) => closure_1_2(closure_1_3[7]).insert(reversed, arg0, (id, id2) => callback(table[5]).compare(id.id, id2.id)));
+  const found = _array.filter((item) => !reversed.some((id) => id.id === item.id));
+  let item = found.forEach((item) => SortedArrayUtilsAll.insert(reversed, item, (id, id2) => self(closure_1_3[5]).compare(id.id, id2.id)));
   let cached = !stale;
   if (!stale) {
     cached = self.cached;
@@ -1466,12 +1465,11 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   } else {
     sum = initialScrollSequenceId;
   }
-  obj[3] = sum;
+  obj.initialScrollSequenceId = sum;
   return self.reset(reversed).mutate(obj);
 };
 ChannelMessages._channelMessages = {};
-let tmp3 = new timestampDefault("ChannelMessages");
-let result = set2.fileFinishedImporting("lib/ChannelMessages.tsx");
+let result = size.fileFinishedImporting("lib/ChannelMessages.tsx");
 
 export default ChannelMessages;
 export const flatMapChannelMessages = function flatMapChannelMessages(arr) {

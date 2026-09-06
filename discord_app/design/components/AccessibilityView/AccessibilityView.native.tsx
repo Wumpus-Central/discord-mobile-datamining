@@ -2,22 +2,22 @@
 
 // Module 4959 (AccessibilityView)
 import useAccessibilityViewIsModalToggleDefault from "useAccessibilityViewIsModalToggle" /* 4960 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult from "module_4296" /* 4296 */;
+import noop from "module_19" /* 19 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 
-const forwardRefResult = importAllResult.forwardRef((accessibilityViewIsModal, ref) => {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const forwardRefResult = noop.forwardRef((accessibilityViewIsModal, ref) => {
   let flag = accessibilityViewIsModal.accessibilityViewIsModal;
   if (flag === undefined) {
     flag = false;
   }
   ({ nativeID, onAccessibilityEscape } = accessibilityViewIsModal);
-  const merged = Object.assign(accessibilityViewIsModal, Object.create(null));
+  const merged = Object.assign(accessibilityViewIsModal, Object.assign({ accessibilityViewIsModal: 0, nativeID: 0, collapsable: 0, onAccessibilityEscape: 0 }));
   if (flag) {
     if (null == onAccessibilityEscape) {
       const _Error = Error;
-      error = new Error("Must have a onAccessibilityEscape callback when accessibilityViewIsModal is enabled.");
+      const error = new Error("Must have a onAccessibilityEscape callback when accessibilityViewIsModal is enabled.");
       throw error;
     }
   }
@@ -27,14 +27,15 @@ const forwardRefResult = importAllResult.forwardRef((accessibilityViewIsModal, r
   if (collapsable) {
     collapsable = accessibilityViewIsModal.collapsable;
   }
-  obj[2] = collapsable;
-  obj[3] = onAccessibilityEscape;
-  obj[4] = flag;
+  obj.collapsable = collapsable;
+  obj.onAccessibilityEscape = onAccessibilityEscape;
+  obj.accessibilityViewIsModal = flag;
   const merged1 = Object.assign(merged);
   return <View ref={arg1} nativeID={nativeID} collapsable={null} onAccessibilityEscape={null} accessibilityViewIsModal={null} />;
 });
-const animatedComponent = importDefaultResult.createAnimatedComponent(forwardRefResult);
-const result = require("set").fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
+const animatedComponent = ReanimatedRexport.createAnimatedComponent(forwardRefResult);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/AccessibilityView/AccessibilityView.native.tsx");
 
 export const AccessibilityView = forwardRefResult;
 export const AccessibilityViewAnimated = animatedComponent;

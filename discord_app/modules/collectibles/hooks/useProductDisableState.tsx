@@ -2,15 +2,16 @@
 
 // Module 8869 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
-import set from "set" /* 1077 */;
-import closure_2 from "reset" /* 4224 */;
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1077 */;
+import SubscriptionStore from "SubscriptionStore" /* 4224 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
   let obj = initialize;
-  const items = [closure_2];
+  const items = [SubscriptionStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
     let prop;
@@ -19,16 +20,15 @@ export const useProductDisableState = function useProductDisableState(skuId) {
     }
     return true === prop;
   });
-  const ALL = set.FractionalPremiumSKUsSets.ALL;
+  const ALL = FractionalPremiumSKUs.FractionalPremiumSKUsSets.ALL;
   if (ALL.has(skuId)) {
-    obj = { isDisabled: null, disabledReason: null };
-    obj[0] = stateFromStores;
+    obj = { isDisabled: stateFromStores, disabledReason: null };
     let stringResult = null;
     if (stateFromStores) {
       const intl = tmp(1114).intl;
       stringResult = intl.string(tmp(1114).t.NbveHD);
     }
-    obj[1] = stringResult;
+    obj.disabledReason = stringResult;
   } else {
     obj = { isDisabled: false, disabledReason: null };
   }

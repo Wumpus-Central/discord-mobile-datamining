@@ -1,12 +1,10 @@
-// === Module 511: parseValue ===
+// === Module 511: storage/Storage ===
 
-// Module 511 (parseValue)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_3 from "enforcing" /* 512 */;
-import set from "set" /* 2 */;
+// Module 511 (storage/Storage)
+import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import NativeCacheModule from "NativeCacheModule" /* 512 */;
 
-let set = importDefault;
 function parseValue(arg0) {
   let parsed = arg0;
   if (null != arg0) {
@@ -18,6 +16,7 @@ function parseValue(arg0) {
   }
   return parsed;
 }
+get_ActivityIndicator = fn(17);
 ({ Platform, NativeModules } = get_ActivityIndicator);
 const DCDStrongboxManager = NativeModules.DCDStrongboxManager;
 class ProxyAsyncStorage {
@@ -37,8 +36,7 @@ class ProxyAsyncStorage {
 }
 const prototype = ProxyAsyncStorage.prototype;
 prototype["refresh"] = function refresh() {
-  let self = this;
-  self = this;
+  const self = this;
   let items = arg0;
   if (arg0 === undefined) {
     items = [];
@@ -48,7 +46,7 @@ prototype["refresh"] = function refresh() {
     new Set();
   }
   self.secureKeys = new Set();
-  const items1 = [closure_3.refresh(items), ];
+  const items1 = [NativeCacheModule.refresh(items), ];
   let refreshResult;
   if (DCDStrongboxManager != null) {
     const items2 = [];
@@ -58,25 +56,22 @@ prototype["refresh"] = function refresh() {
   items1[1] = refreshResult;
   obj = DCDStrongboxManager;
   const set1 = new Set();
-  return Promise.all(items1).then((arg0) => {
-    [tmp2, tmp3] = arg0;
-    self(closure_1_1[3]).mark("\u{1F4BE}", "Storage.refresh() Promise Resolved");
+  return Promise.all(items1).then((result) => {
+    [tmp2, tmp3] = result;
+    AppStartPerformanceDefault.mark("\u{1F4BE}", "Storage.refresh() Promise Resolved");
     let num = 0;
     let num2 = 0;
     const keys = Object.keys();
     if (keys !== undefined) {
       num2 = num;
       while (keys[tmp] !== undefined) {
-        let tmp12 = tmp7;
         let length = tmp2[tmp7].length;
         let sum = num + length;
         num = sum;
         if (length <= 10000) {
           continue;
         } else {
-          let tmp8 = self;
-          let tmp9 = closure_1_1;
-          let obj2 = self(closure_1_1[3]);
+          let obj2 = AppStartPerformanceDefault;
           let addDetailResult = obj2.addDetail(tmp7, length);
           num = sum;
           continue;
@@ -84,29 +79,27 @@ prototype["refresh"] = function refresh() {
         continue;
       }
     }
-    const obj = self(closure_1_1[3]);
-    self(closure_1_1[3]).addDetail("TotalStorageSize", num2);
+    AppStartPerformanceDefault.addDetail("TotalStorageSize", num2);
     self.hasLoaded = true;
     const items = [tmp2, tmp3];
     return items;
   });
 };
 prototype["parse"] = function parse(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   [tmp, tmp2] = arg0;
-  self(513)(tmp2, (rawData) => {
+  self(513)(tmp2, (rawData, arg1) => {
     self.storage[arg1] = { parsed: false, rawData };
   });
-  self(513)(tmp, (rawData) => {
-    _self.storage[arg1] = { parsed: false, rawData };
-    const secureKeys = _self.secureKeys;
+  self(513)(tmp, (rawData, arg1) => {
+    self.storage[arg1] = { parsed: false, rawData };
+    const secureKeys = self.secureKeys;
     if (secureKeys.has(arg1)) {
-      _self = arg1;
-      const result = closure_1_4.setItem(arg1, rawData);
-      result.then((arg0) => {
-        if (arg0) {
-          closure_1_3.removeItem(closure_0);
+      closure_0 = arg1;
+      const result = DCDStrongboxManager.setItem(arg1, rawData);
+      result.then((result) => {
+        if (result) {
+          NativeCacheModule.removeItem(closure_0);
         }
       });
     }
@@ -114,14 +107,13 @@ prototype["parse"] = function parse(arg0) {
   self.parseResolve();
   return Promise.resolve();
 };
-prototype["get"] = function get(key10009) {
+prototype["get"] = function get(key10009, arg1) {
   const self = this;
   const storage = this.storage;
   if (storage.hasOwnProperty(key10009)) {
     let iter = tmp2;
     if (!self.storage[key10009].parsed) {
-      const obj = { parsed: true, value: null };
-      obj[1] = parseValue(tmp2.rawData);
+      const obj = { parsed: true, value: parseValue(tmp2.rawData) };
       self.storage[key10009] = obj;
       iter = obj;
     }
@@ -130,58 +122,54 @@ prototype["get"] = function get(key10009) {
     return arg1;
   }
 };
-prototype["getAfterRefresh"] = function getAfterRefresh(closure_1_13) {
-  closure_0 = closure_1_13;
+prototype["getAfterRefresh"] = function getAfterRefresh(arg0) {
+  closure_0 = arg0;
   const self = this;
-  return callback(function*() {
-    yield parsePromise.then(() => c1.get(c0));
+  return (async () => {
+    await self.parsePromise.then(() => closure_1_1.get(closure_1_0));
     return arg1;
   })();
 };
-prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
+prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1, arg2) {
   const self = this;
   closure_1 = ContactSyncDMListCTADismissed;
   closure_2 = arg1;
   closure_0 = arg2;
   const secureKeys = this.secureKeys;
   if (secureKeys.has(ContactSyncDMListCTADismissed)) {
-    let value = DCDStrongboxManager.getItem(ContactSyncDMListCTADismissed);
-    value.then((arg0) => {
-      if (null != arg0) {
+    value = DCDStrongboxManager.getItem(ContactSyncDMListCTADismissed);
+    value.then((result) => {
+      if (null != result) {
         const _Date = Date;
         const timestamp = Date.now();
-        const tmp7 = closure_1_5(arg0);
-        const obj = { parsed: true, value: null };
-        obj[1] = tmp7;
+        const tmp7 = parseValue(result);
+        const obj = { parsed: true, value: tmp7 };
         self.storage[tmp] = obj;
         const _Date2 = Date;
-        if (null != callback) {
-          callback(ContactSyncDMListCTADismissed[3]).mark("\u{1F4BE}", tmp10, tmp9);
-          const obj2 = callback(ContactSyncDMListCTADismissed[3]);
+        if (null != closure_0) {
+          AppStartPerformanceDefault.mark("\u{1F4BE}", tmp10, tmp9);
         }
-        callback2(tmp7);
+        closure_2(tmp7);
       } else {
-        callback2(null);
+        closure_2(null);
       }
     });
   } else {
     value = self.getItem(ContactSyncDMListCTADismissed);
-    value.then((arg0) => {
-      if (null != arg0) {
+    value.then((result) => {
+      if (null != result) {
         const _Date = Date;
         const timestamp = Date.now();
-        const tmp7 = closure_1_5(arg0);
-        const obj = { parsed: true, value: null };
-        obj[1] = tmp7;
+        const tmp7 = parseValue(result);
+        const obj = { parsed: true, value: tmp7 };
         self.storage[tmp] = obj;
         const _Date2 = Date;
-        if (null != callback) {
-          callback(ContactSyncDMListCTADismissed[3]).mark("\u{1F4BE}", tmp10, tmp9);
-          const obj2 = callback(ContactSyncDMListCTADismissed[3]);
+        if (null != closure_0) {
+          AppStartPerformanceDefault.mark("\u{1F4BE}", tmp10, tmp9);
         }
-        callback2(tmp7);
+        closure_2(tmp7);
       } else {
-        callback2(null);
+        closure_2(null);
       }
     });
   }
@@ -190,16 +178,15 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
   const self = this;
-  return self(function*() {
+  return self(function*(arg0, value) {
     if (item === 2) {
       item = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -207,53 +194,48 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
     } else {
       try {
         item = 2;
-        if (0 === secureKeys) {
+        if (0 === c2) {
           if (arg0 === 1) {
             item = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             item = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp2;
-            closure_0 = tmp5;
-            closure_0 = undefined;
-            if (null != closure_1_1) {
-              closure_1_0(closure_1_1[3]).mark("\u{1F4BE}", "Get: " + closure_1_1);
-              const obj4 = closure_1_0(closure_1_1[3]);
+            closure_128_0 = undefined;
+            if (null != tmp2) {
+              tmp5(tmp2[3]).mark("\u{1F4BE}", "Get: " + tmp2);
+              const obj4 = tmp5(tmp2[3]);
             }
-            secureKeys = secureKeys.secureKeys;
-            if (secureKeys.has(closure_1_0)) {
-              let value = closure_1_4.getItem(tmp20);
+            const secureKeys = self.secureKeys;
+            if (secureKeys.has(tmp5)) {
+              value = item2.getItem(tmp20);
             } else {
               value = item.getItem(tmp20);
             }
-            secureKeys = 1;
+            c2 = 1;
             item = 1;
           }
         } else if (arg0 === 1) {
           item = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           item = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = arg1;
+          const obj1 = { value, done: true };
           return obj1;
         } else {
-          closure_0 = arg1;
+          closure_128_0 = value;
           let tmp14 = null;
-          if (null != closure_0) {
-            if (null != closure_1) {
-              obj = closure_1_0(closure_1_1[3]);
-              obj.mark("\u{1F4BE}", "Got: " + closure_1);
+          if (null != closure_128_0) {
+            if (null != closure_129_1) {
+              obj = tmp5(tmp2[3]);
+              obj.mark("\u{1F4BE}", "Got: " + closure_129_1);
             }
-            tmp14 = closure_0;
+            tmp14 = closure_128_0;
           }
           item = 3;
-          const obj2 = { value: null, done: true };
-          obj2[0] = tmp14;
+          const obj2 = { value: tmp14, done: true };
           return obj2;
         }
       } catch (tmp25) {
@@ -283,25 +265,24 @@ prototype["set"] = function set(arg0, value) {
   this.setRaw(arg0, JSON.stringify(value));
   this.storage[arg0] = { parsed: true, value };
 };
-prototype["setRaw"] = function setRaw(str, str2) {
+prototype["setRaw"] = function setRaw(str, rawData) {
   if (typeof str !== "string") {
     const _Error2 = Error;
-    error = new Error("Key must be a string");
+    const error = new Error("Key must be a string");
     throw error;
-  } else if (typeof str2 !== "string") {
+  } else if (typeof rawData !== "string") {
     const _Error = Error;
     const error1 = new Error("value must be a string");
     throw error1;
   } else {
     const self = this;
-    const obj = { parsed: false, rawData: null };
-    obj[1] = str2;
+    const obj = { parsed: false, rawData };
     this.storage[str] = obj;
     const secureKeys = this.secureKeys;
     if (secureKeys.has(str)) {
-      const result = DCDStrongboxManager.setItem(str, str2);
+      const result = DCDStrongboxManager.setItem(str, rawData);
     } else {
-      const result1 = closure_3.setItem(str, str2);
+      const result1 = NativeCacheModule.setItem(str, rawData);
     }
   }
 };
@@ -311,26 +292,30 @@ prototype["remove"] = function remove(arg0) {
   if (secureKeys.has(arg0)) {
     DCDStrongboxManager.removeItem(arg0);
   } else {
-    closure_3.removeItem(arg0);
+    NativeCacheModule.removeItem(arg0);
   }
 };
 prototype["clear"] = function clear() {
   this.storage = {};
-  closure_3.clear();
+  NativeCacheModule.clear();
   if (DCDStrongboxManager != null) {
     const items = [];
     HermesBuiltin.arraySpread(this.secureKeys, 0);
     DCDStrongboxManager.clear(items);
   }
 };
-set = Object.create(ProxyAsyncStorage.prototype);
-set.parsePromise = new Promise((parseResolve) => {
+let size = Object.create(ProxyAsyncStorage.prototype);
+let closure_129_0 = size;
+size.parsePromise = new Promise((parseResolve) => {
   obj.parseResolve = parseResolve;
 });
-set.storage = {};
-set = new Set();
-set.secureKeys = set;
-set.hasLoaded = false;
-let result = set.fileFinishedImporting("../discord_common/js/packages/storage/native/Storage.tsx");
+size.storage = {};
+let promise = new Promise((parseResolve) => {
+  obj.parseResolve = parseResolve;
+});
+size.secureKeys = new Set();
+size.hasLoaded = false;
+size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/storage/native/Storage.tsx");
 
-export const impl = set;
+export const impl = size;

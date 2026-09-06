@@ -1,19 +1,20 @@
 // === Module 9454: trackVoiceCallTransfer ===
 
 // Module 9454 (trackVoiceCallTransfer)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "createRTCConnection" /* 4583 */;
-import closure_4 from "handleUpdate" /* 4578 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import SessionsStore from "SessionsStore" /* 4578 */;
 
-const result = require("set").fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 
-export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
-  let obj = expandEventPropertiesDefault;
+export default function trackVoiceCallTransfer(channel_id, target_platform, sessionId) {
+  let obj = AnalyticsUtilsDefault;
   let str = "discord_client";
   if (null != sessionId) {
-    sessionById = sessionById.getSessionById(sessionId);
+    const sessionById = SessionsStore.getSessionById(sessionId);
     let os;
     if (sessionById != null) {
       os = sessionById.clientInfo.os;
@@ -21,14 +22,14 @@ export default function trackVoiceCallTransfer(arg0, arg1, sessionId) {
     str = os;
   }
   obj = { source_platform: str, guild_id: null, channel_id: null, rtc_connection_id: null, target_platform: null };
-  channel = channel.getChannel(arg0);
+  const channel = ChannelStore.getChannel(channel_id);
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  obj[1] = guild_id;
-  obj[2] = arg0;
-  obj[3] = rTCConnectionId.getRTCConnectionId();
-  obj[4] = arg1;
+  obj.guild_id = guild_id;
+  obj.channel_id = channel_id;
+  obj.rtc_connection_id = RTCConnectionStore.getRTCConnectionId();
+  obj.target_platform = target_platform;
   obj.track(AnalyticEvents.VOICE_CALL_TRANSFER, obj);
 };

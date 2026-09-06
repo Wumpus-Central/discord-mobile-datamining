@@ -1,13 +1,13 @@
 // === Module 9472: isOrientationLockSupported ===
 
 // Module 9472 (isOrientationLockSupported)
-import set from "set" /* 2 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
+import DeviceUtils from "DeviceUtils" /* 4539 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");
+let result = size.fileFinishedImporting("modules/device/native/isOrientationLockSupported.tsx");
 
 export default function isOrientationLockSupported() {
-  const isIpadOSResult = DCDDeviceManager.isIpadOS();
+  const isIpadOSResult = DeviceUtils.isIpadOS();
   let result = !isIpadOSResult;
   if (!isIpadOSResult) {
     let tmpResult = tmp(1608);

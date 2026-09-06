@@ -1,22 +1,24 @@
-// === Module 6624: useKeyboardBlurring ===
+// === Module 6624: NativeTextInput ===
 
-// Module 6624 (useKeyboardBlurring)
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "subscribeToKeyboardUIStore" /* 1479 */;
-import { KeyboardThemes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 6624 (NativeTextInput)
+import noop from "module_19" /* 19 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1479 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ Pressable: c4, TextInput: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
-  const ref = importAllResult.useRef(null);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: closure_4, TextInput: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
+const KeyboardThemes = fn(1074).KeyboardThemes;
+const jsxProd = fn(21);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
+
+export const useKeyboardBlurring = function useKeyboardBlurring(ref) {
+  closure_0 = ref;
   const items = [ref];
-  const effect = importAllResult.useEffect(() => {
-    const keyboardIsOpen = ref(defaultValue[5]).getKeyboardIsOpen();
-    return closure_1_8((systemKeyboardOpen) => {
+  const effect = noop.useEffect(() => {
+    let systemKeyboardOpen = ref(defaultValue[5]).getKeyboardIsOpen();
+    return subscribeToKeyboardUIStore((systemKeyboardOpen) => {
       systemKeyboardOpen = systemKeyboardOpen.systemKeyboardOpen;
       if (!tmp) {
         const current = ref.current;
@@ -26,21 +28,34 @@ const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
       }
     });
   }, items);
-  let isScreenReaderEnabled;
-  let defaultValue;
+};
+export const NativeTextInput = noop.forwardRef((value, ref2) => {
+  const ref = noop.useRef(null);
+  const items = [ref];
+  const effect = noop.useEffect(() => {
+    let systemKeyboardOpen = ref(defaultValue[5]).getKeyboardIsOpen();
+    return subscribeToKeyboardUIStore((systemKeyboardOpen) => {
+      systemKeyboardOpen = systemKeyboardOpen.systemKeyboardOpen;
+      if (!tmp) {
+        const current = ref.current;
+        if (current != null) {
+          current.blur();
+        }
+      }
+    });
+  }, items);
   value = value.value;
-  isScreenReaderEnabled = value;
-  defaultValue = value.defaultValue;
+  importDefault = value;
+  const defaultValue = value.defaultValue;
   const items1 = [ref, value, defaultValue];
-  const effect1 = importAllResult.useEffect(() => {
+  const effect1 = noop.useEffect(() => {
     const current = ref.current;
     if (current != null) {
-      let tmp = isScreenReaderEnabled;
-      if (isScreenReaderEnabled == null) {
+      let tmp = c1;
+      if (c1 == null) {
         tmp = defaultValue;
       }
-      const obj = { text: null };
-      obj[0] = tmp;
+      const obj = { text: tmp };
       current.setNativeProps(obj);
     }
   }, items1);
@@ -48,17 +63,17 @@ const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
   const mountLayoutEffect = obj.useMountLayoutEffect(() => {
     const current = ref.current;
     if (current != null) {
-      const obj = { text: null };
-      obj[0] = isScreenReaderEnabled;
+      const obj = { text };
       current.setNativeProps(obj);
     }
   });
-  isScreenReaderEnabled = undefined;
-  obj1 = ref(defaultValue[7]);
-  isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  closure_129_0 = ref;
+  let obj1 = ref(defaultValue[7]);
+  const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
+  closure_129_1 = isScreenReaderEnabled;
   const items2 = [ref];
   const items3 = [isScreenReaderEnabled];
-  const callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     const current = ref.current;
     let focusResult;
     if (current != null) {
@@ -66,11 +81,11 @@ const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
     }
     return focusResult;
   }, items2);
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const obj = {};
-    const merged = Object.assign(closure_1_6.absoluteFillObject);
+    const merged = Object.assign(absoluteFillObject.absoluteFillObject);
     let str = "flex";
-    if (isScreenReaderEnabled) {
+    if (c1) {
       str = "none";
     }
     obj.display = str;
@@ -83,12 +98,11 @@ const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
     let tmp6Result = tmp6(tmp3[10]);
     let merged = Object.assign(tmp6Result.mergeProps(value, tmp4, obj));
     tmp6Result = tmp6(tmp3[10]);
-    obj.ref = tmp6Result.mergeRefs(ref, closure_1);
-    const tmp19 = callback(closure_5, obj);
+    obj.ref = tmp6Result.mergeRefs(ref, ref2);
+    const tmp19 = closure_10(closure_5, obj);
     let tmp21Result = tmp19;
     if (!value.multiline) {
-      obj1 = { style: null, children: null };
-      obj1[0] = { flexBasis: 0, flexGrow: 1 };
+      obj1 = { style: { flexBasis: 0, flexGrow: 1 }, children: null };
       const items4 = [tmp19, ];
       let current = ref.current;
       let isFocusedResult;
@@ -99,16 +113,10 @@ const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
       if (isFocusedResult) {
         str = "none";
       }
-      const obj2 = { pointerEvents: null, onPress: null, style: null };
-      obj2[0] = str;
-      obj2[1] = callback;
-      obj2[2] = memo;
-      items4[1] = callback(closure_4, obj2);
-      obj1[1] = items4;
+      const obj2 = { pointerEvents: str, onPress: callback, style: memo };
+      items4[1] = closure_10(closure_4, obj2);
+      obj1.children = items4;
       tmp21Result = closure_11(closure_7, obj1);
-      const tmp21 = closure_11;
-      const tmp22 = closure_7;
-      const tmp23 = closure_4;
     }
     return tmp21Result;
   } else {
@@ -116,22 +124,3 @@ const forwardRefResult = importAllResult.forwardRef((value, closure_1) => {
     const tmp6Result1 = tmp6(tmp3[10]);
   }
 });
-const result = require("set").fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
-
-export const useKeyboardBlurring = function useKeyboardBlurring(ref) {
-  closure_0 = ref;
-  const items = [ref];
-  const effect = importAllResult.useEffect(() => {
-    const keyboardIsOpen = ref(defaultValue[5]).getKeyboardIsOpen();
-    return closure_1_8((systemKeyboardOpen) => {
-      systemKeyboardOpen = systemKeyboardOpen.systemKeyboardOpen;
-      if (!tmp) {
-        const current = ref.current;
-        if (current != null) {
-          current.blur();
-        }
-      }
-    });
-  }, items);
-};
-export const NativeTextInput = forwardRefResult;

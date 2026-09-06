@@ -1,38 +1,39 @@
-// === Module 17099: VoiceControlsToggleActionSheet ===
+// === Module 17099: VoiceControlsToggleNuxActionSheet ===
 
-// Module 17099 (VoiceControlsToggleActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17099 (VoiceControlsToggleNuxActionSheet)
+import nativeDefault from "native" /* 576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const require = arg1;
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = { videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4" };
-createCacheKey = { videoContainer: null, bottomSheetWrapper: null, contentContainer: null, title: null, body: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: 24 };
-createCacheKey[2] = { flex: 1, alignItems: "center", paddingTop: 24, paddingBottom: 16 };
-createCacheKey[3] = { marginTop: 16, textAlign: "center" };
-createCacheKey[4] = { marginTop: 8, marginBottom: 24, textAlign: "center" };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/activities/native/VoiceControlsToggleNuxActionSheet.tsx");
+const require = fn;
+const View = fn(17).View;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+const src = { videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4" };
+fn(4560);
+let createStyles = { videoContainer: null, bottomSheetWrapper: null, contentContainer: null, title: null, body: null };
+createStyles = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
+createStyles.videoContainer = createStyles;
+createStyles.bottomSheetWrapper = { paddingHorizontal: 24 };
+createStyles.contentContainer = { flex: 1, alignItems: "center", paddingTop: 24, paddingBottom: 16 };
+createStyles.title = { marginTop: 16, textAlign: "center" };
+createStyles.body = { marginTop: 8, marginBottom: 24, textAlign: "center" };
+let closure_11 = createStyles.createStyles(createStyles);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/activities/native/VoiceControlsToggleNuxActionSheet.tsx");
 
 export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   importDefault = undefined;
   let isScreenLandscape;
-  const tmp = callback4();
-  [tmp3, c1] = callback(React.useState(0), 2);
+  const tmp = closure_11();
+  [tmp3, c1] = _slicedToArray(noop.useState(0), 2);
   let obj = markAsDismissed(isScreenLandscape[8]);
   isScreenLandscape = obj.useIsScreenLandscape();
-  obj1 = markAsDismissed(isScreenLandscape[9]);
-  const items = [closure_6];
+  let obj1 = markAsDismissed(isScreenLandscape[9]);
+  const items = [AccessibilityStore];
   let num = 1.5;
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (isScreenLandscape) {
@@ -41,7 +42,7 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
   obj = {
     startExpanded: true,
     onDismiss() {
-      return markAsDismissed(closure_1_7.UNKNOWN);
+      return markAsDismissed(ContentDismissActionType.UNKNOWN);
     },
     children: null
   };
@@ -54,30 +55,31 @@ export default function VoiceControlsToggleActionSheet(markAsDismissed) {
       if (isScreenLandscape) {
         result = width / 2;
       }
-      c1(result);
+      _undefined(result);
     },
     children: null
   };
-  const items1 = [callback2(importDefault(isScreenLandscape[11]), { style: tmp.videoContainer, src: closure_10, poster: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png", width: tmp3, height: tmp3 / num, muted: true, paused: stateFromStores }), , , ];
-  const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  const size = { style: tmp.videoContainer, src, poster: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.png", width: tmp3, height: tmp3 / num, muted: true, paused: stateFromStores };
+  const items1 = [closure_8(require("common/Video"), size), , , ];
+  const obj2 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp4(tmp5[13]).intl;
-  obj3[4] = intl.string(markAsDismissed(isScreenLandscape[13]).t.pT6hue);
-  items1[1] = callback2(markAsDismissed(isScreenLandscape[12]).Text, obj3);
-  const obj4 = { style: tmp.body, variant: "text-sm/normal", children: null };
+  obj2.children = intl.string(markAsDismissed(isScreenLandscape[13]).t.pT6hue);
+  items1[1] = closure_8(markAsDismissed(isScreenLandscape[12]).Text, obj2);
+  const obj3 = { style: tmp.body, variant: "text-sm/normal", children: null };
   const intl2 = tmp4(tmp5[13]).intl;
-  obj4[2] = intl2.string(markAsDismissed(isScreenLandscape[13]).t.tNm8AZ);
-  items1[2] = callback2(markAsDismissed(isScreenLandscape[12]).Text, obj4);
-  const obj5 = {
+  obj3.children = intl2.string(markAsDismissed(isScreenLandscape[13]).t.tNm8AZ);
+  items1[2] = closure_8(markAsDismissed(isScreenLandscape[12]).Text, obj3);
+  const obj4 = {
     onPress() {
-      return markAsDismissed(closure_1_7.UNKNOWN);
+      return markAsDismissed(ContentDismissActionType.UNKNOWN);
     },
     text: null
   };
   const intl3 = tmp4(tmp5[13]).intl;
-  obj5[1] = intl3.string(markAsDismissed(isScreenLandscape[13]).t["NX+WJN"]);
-  items1[3] = callback2(markAsDismissed(isScreenLandscape[14]).Button, obj5);
-  obj1[2] = items1;
-  obj[1] = callback3(View, obj1);
-  obj[2] = callback2(View, obj);
-  return callback2(markAsDismissed(isScreenLandscape[10]).BottomSheet, obj);
+  obj4.text = intl3.string(markAsDismissed(isScreenLandscape[13]).t["NX+WJN"]);
+  items1[3] = closure_8(markAsDismissed(isScreenLandscape[14]).Button, obj4);
+  obj1.children = items1;
+  obj.children = closure_9(View, obj1);
+  obj.children = closure_8(View, obj);
+  return closure_8(markAsDismissed(isScreenLandscape[10]).BottomSheet, obj);
 };

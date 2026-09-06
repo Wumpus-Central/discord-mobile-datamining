@@ -1,12 +1,12 @@
 // === Module 9674: useStageChannelConnectAction ===
 
 // Module 9674 (useStageChannelConnectAction)
-import set from "set" /* 2 */;
-import useStageChannelIsLiveDefault from "useStageChannelIsLive" /* 8396 */;
+import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 8396 */;
 import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 9670 */;
+import size from "module_2" /* 2 */;
 
-const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
-const result = set.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
+const ChannelConnectAction = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
+const result = size.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 
 export default function useStageChannelConnectAction(arg0) {
   if (!tmp) {
@@ -17,7 +17,7 @@ export default function useStageChannelConnectAction(arg0) {
   }
   NORMAL = obj.NORMAL;
 };
-export const ChannelConnectAction = obj;
+export { ChannelConnectAction };
 export const useStageChannelStartEvent = function useStageChannelStartEvent(id) {
-  return { isLive: useStageChannelIsLiveDefault(id), isModerator: useCurrentUserStageRolesDefault(id, true).moderator };
+  return { isLive: useStateChannelIsLiveDefault(id), isModerator: useCurrentUserStageRolesDefault(id, true).moderator };
 };

@@ -1,34 +1,32 @@
-// === Module 9396: handleSenderFalsePositiveFlow ===
+// === Module 9396: ExplicitMediaActionCreators ===
 
-// Module 9396 (handleSenderFalsePositiveFlow)
-import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 7600 */;
-import closure_3 from "getFpMessageInfo" /* 7293 */;
-import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY" /* 7601 */;
+// Module 9396 (ExplicitMediaActionCreators)
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7293 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");
+require = fn;
+let closure_4 = fn(7601).EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");
 
-export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveFlow(channelId, closure_1) {
-  let obj = redactionSettingToRenderedString;
-  obj = { action: redactionSettingToRenderedString.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId: closure_1, channelId };
+export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveFlow(channelId, messageId) {
+  let obj = { action: ExplicitMediaRedactionUtils.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId, channelId };
   const result = obj.trackMediaRedactionAction(obj);
-  if (closure_3.canSubmitFpReport(closure_1)) {
+  if (ExplicitMediaStore.canSubmitFpReport(messageId)) {
     let tmp4Result = tmp4(4527);
-    obj = { channelId: null, messageId: null };
-    obj[0] = channelId;
-    obj[1] = closure_1;
+    obj = { channelId, messageId };
     tmp4Result.openLazy(tmp(1896)(9398, tmp2.paths), closure_4, obj);
   } else {
     tmp4Result = tmp4(4905);
-    obj1 = { title: null, body: null, confirmText: null };
+    const obj1 = { title: null, body: null, confirmText: null };
     const intl = tmp(1114).intl;
-    obj1[0] = intl.string(tmp(1114).t["iS/eFN"]);
+    obj1.title = intl.string(tmp(1114).t["iS/eFN"]);
     const intl2 = tmp(1114).intl;
-    obj1[1] = intl2.string(tmp(1114).t.YrjcgR);
+    obj1.body = intl2.string(tmp(1114).t.YrjcgR);
     const intl3 = tmp(1114).intl;
-    obj1[2] = intl3.string(tmp(1114).t.BddRzS);
+    obj1.confirmText = intl3.string(tmp(1114).t.BddRzS);
     tmp4Result.show(obj1);
-    const result1 = tmp4(9397).disableFalsePositiveButton(channelId, closure_1);
+    const result1 = tmp4(9397).disableFalsePositiveButton(channelId, messageId);
   }
   tmp2 = dependencyMap;
 };

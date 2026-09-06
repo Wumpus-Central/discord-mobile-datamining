@@ -1,20 +1,21 @@
 // === Module 8061: useDiscountOffer ===
 
 // Module 8061 (useDiscountOffer)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "emitChanges" /* 7450 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import UserOfferStore from "UserOfferStore" /* 7450 */;
 
-const require = arg1;
-({ PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: closure_6, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: error } = GuildFeatures);
-const result = require("set").fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
+const require = fn;
+const PremiumConstants = fn(1373);
+({ PREMIUM_TIER_2_CHURN_1_MONTH_DISCOUNT_ID: metroRequire, PREMIUM_TIER_2_CHURN_3_MONTH_DISCOUNT_ID: closure_7 } = PremiumConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");
 
 export default function useDiscountOffer(arg0, arg1) {
-  const _require = arg0;
-  const items = [closure_5];
-  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () => closure_1_5.getUserDiscountOffer(closure_0));
+  _require = arg0;
+  const items = [UserOfferStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => UserOfferStore.getUserDiscountOffer(closure_0));
   let flag;
   if (stateFromStores != null) {
     flag = stateFromStores.hasExpired();
@@ -22,23 +23,21 @@ export default function useDiscountOffer(arg0, arg1) {
   if (flag == null) {
     flag = false;
   }
-  const tmp3 = first(React.useState(flag), 2);
+  const tmp3 = first(noop.useState(flag), 2);
   first = tmp3[0];
-  React = tmp3[1];
-  const obj = _require(stateFromStores[5]);
-  const obj3 = React;
-  const tmp = _require;
-  const tmp2 = stateFromStores;
-  const items1 = [closure_4];
+  noop = tmp3[1];
+  const obj = require("initialize");
+  const obj3 = noop;
+  const items1 = [UserStore];
   const items2 = [first, stateFromStores];
-  const stateFromStores1 = _require(stateFromStores[5]).useStateFromStores(items1, () => callback(stateFromStores[6]).isPremium(currentUser.getCurrentUser()));
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => closure_0(stateFromStores[6]).isPremium(currentUser.getCurrentUser()));
   const effect = obj3.useEffect(() => {
     let hasAcknowledgedResult;
     if (stateFromStores != null) {
       hasAcknowledgedResult = obj.hasAcknowledged();
     }
     if (hasAcknowledgedResult) {
-      const timeout = new callback(stateFromStores[7]).Timeout();
+      const timeout = new closure_0(stateFromStores[7]).Timeout();
       let hasAcknowledgedResult1;
       if (obj != null) {
         hasAcknowledgedResult1 = obj.hasAcknowledged();
@@ -52,13 +51,13 @@ export default function useDiscountOffer(arg0, arg1) {
           num = time - Date.now();
         }
         timeout.start(num, () => {
-          if (!closure_1_2) {
-            if (closure_1_1.hasExpired()) {
-              closure_1_3(true);
+          if (!closure_2_2) {
+            if (closure_2_1.hasExpired()) {
+              closure_2_3(true);
             }
           }
           let hasAcknowledgedResult;
-          if (closure_1_1 != null) {
+          if (closure_2_1 != null) {
             hasAcknowledgedResult = obj.hasAcknowledged();
           }
           if (hasAcknowledgedResult) {
@@ -69,15 +68,15 @@ export default function useDiscountOffer(arg0, arg1) {
               let time = expiresAt.getTime();
               num = time - Date.now();
             }
-            if (closure_0 != null) {
+            if (closure_1_0 != null) {
               obj2.start(num, () => {
-                if (!closure_1_2) {
-                  if (closure_1_1.hasExpired()) {
-                    closure_1_3(true);
+                if (!closure_2_2) {
+                  if (closure_2_1.hasExpired()) {
+                    closure_2_3(true);
                   }
                 }
                 let hasAcknowledgedResult;
-                if (closure_1_1 != null) {
+                if (closure_2_1 != null) {
                   hasAcknowledgedResult = obj.hasAcknowledged();
                 }
                 if (hasAcknowledgedResult) {
@@ -88,15 +87,15 @@ export default function useDiscountOffer(arg0, arg1) {
                     let time = expiresAt.getTime();
                     num = time - Date.now();
                   }
-                  if (closure_0 != null) {
+                  if (closure_1_0 != null) {
                     obj2.start(num, () => {
-                      if (!closure_1_2) {
-                        if (closure_1_1.hasExpired()) {
-                          closure_1_3(true);
+                      if (!closure_2_2) {
+                        if (closure_2_1.hasExpired()) {
+                          closure_2_3(true);
                         }
                       }
                       let hasAcknowledgedResult;
-                      if (closure_1_1 != null) {
+                      if (closure_2_1 != null) {
                         hasAcknowledgedResult = obj.hasAcknowledged();
                       }
                       if (hasAcknowledgedResult) {
@@ -107,18 +106,18 @@ export default function useDiscountOffer(arg0, arg1) {
                           let time = expiresAt.getTime();
                           num = time - Date.now();
                         }
-                        if (closure_0 != null) {
+                        if (closure_1_0 != null) {
                           obj2.start(num, () => { ... });
                         }
-                        obj2 = closure_0;
+                        obj2 = closure_1_0;
                       }
                     });
                   }
-                  obj2 = closure_0;
+                  obj2 = closure_1_0;
                 }
               });
             }
-            obj2 = closure_0;
+            obj2 = closure_1_0;
           }
         });
       }

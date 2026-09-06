@@ -1,9 +1,9 @@
 // === Module 16228: showChannelBadge ===
 
 // Module 16228 (showChannelBadge)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
+const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelBadge.tsx");
 
 export default function showChannelBadge(isNewChannel) {
   ({ mentionsCount, postsWithUnreadsCount, muted } = isNewChannel);

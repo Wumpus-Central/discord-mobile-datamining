@@ -1,16 +1,17 @@
 // === Module 4407: isPerModeThemingActive ===
 
 // Module 4407 (isPerModeThemingActive)
-import closure_0 from "handleThemeChange" /* 1183 */;
-import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import { SystemThemeState } from "SystemThemeState" /* 1186 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
-let result = require("set").fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
+const SystemThemeState = fn(1186).SystemThemeState;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 
 export const isPerModeThemingActive = function isPerModeThemingActive() {
-  let result = useSystemTheme.useSystemTheme === SystemThemeState.ON;
+  let result = UnsyncedUserSettingsStore.useSystemTheme === SystemThemeState.ON;
   if (result) {
-    result = sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled();
+    result = ThemeStore.isSameAsDeviceThemeEnabled();
   }
   return result;
 };

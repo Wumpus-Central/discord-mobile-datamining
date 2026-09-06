@@ -1,14 +1,15 @@
 // === Module 17097: VoicePanelAccessibilityView ===
 
 // Module 17097 (VoicePanelAccessibilityView)
-import context from "context" /* 17092 */;
-import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 17088 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17092 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_4 = importAllResult.memo(require("AccessibilityView").AccessibilityViewAnimated);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
+require = fn;
+const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
+const jsx = fn(21).jsx;
+let closure_4 = noop.memo(fn(4959).AccessibilityViewAnimated);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 
 export default function VoicePanelAccessibilityView(pointerEvents) {
   let str = pointerEvents.pointerEvents;
@@ -17,14 +18,13 @@ export default function VoicePanelAccessibilityView(pointerEvents) {
   }
   let accessibilityViewIsModal = pointerEvents.accessibilityViewIsModal;
   ({ nativeID, onAccessibilityEscape } = pointerEvents);
-  const merged = Object.assign(pointerEvents, Object.create(null));
-  let obj = context;
-  obj = { style: pointerEvents.style, pointerEvents: str, nativeID, accessibilityViewIsModal: null, onAccessibilityEscape: null };
+  const merged = Object.assign(pointerEvents, Object.assign({ style: 0, pointerEvents: 0, nativeID: 0, accessibilityViewIsModal: 0, onAccessibilityEscape: 0 }));
+  const obj = { style: pointerEvents.style, pointerEvents: str, nativeID, accessibilityViewIsModal: null, onAccessibilityEscape: null };
   if (accessibilityViewIsModal) {
     accessibilityViewIsModal = obj.usePIPState().mode !== VoicePanelPIPModes.IN_APP;
   }
-  obj[3] = accessibilityViewIsModal;
-  obj[4] = onAccessibilityEscape;
+  obj.accessibilityViewIsModal = accessibilityViewIsModal;
+  obj.onAccessibilityEscape = onAccessibilityEscape;
   const merged1 = Object.assign(merged);
   return <closure_4 style={arg0.style} pointerEvents={str} nativeID={nativeID} accessibilityViewIsModal={null} onAccessibilityEscape={null} />;
 };

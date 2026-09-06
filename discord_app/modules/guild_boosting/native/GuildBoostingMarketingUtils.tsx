@@ -1,13 +1,13 @@
-// === Module 12527: getIconForPerk ===
+// === Module 12527: GuildBoostingMarketingUtils ===
 
-// Module 12527 (getIconForPerk)
-import set from "set" /* 2 */;
-import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4454 */;
+// Module 12527 (GuildBoostingMarketingUtils)
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4454 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostingMarketingUtils.tsx");
 
 export const getIconForPerk = function getIconForPerk(perkIcon) {
-  if (getGuildTierFromGuild.PerkIcons.EMOJI === perkIcon) {
+  if (GuildBoostingUtils.PerkIcons.EMOJI === perkIcon) {
     return tmp(8757).ReactionIcon;
   } else if (tmp(4454).PerkIcons.SOUNDBOARD === perkIcon) {
     return tmp(12528).SoundboardIcon;

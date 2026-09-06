@@ -1,10 +1,11 @@
 // === Module 17103: useVoicePanelNavArrowPressed ===
 
 // Module 17103 (useVoicePanelNavArrowPressed)
-import closure_2 from "noop" /* 19 */;
-import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 12271 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
+const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 
 export default function useVoicePanelNavArrowPressed() {
   const context = dismissPanel.useContext(focused(setFocused[2]));
@@ -14,13 +15,13 @@ export default function useVoicePanelNavArrowPressed() {
   const controlsSpecs = context.controlsSpecs;
   const items = [focused, controlsSpecs, dismissPanel, setFocused];
   return dismissPanel.useCallback(() => {
-    const value = focused.get();
+    value = focused.get();
     let id;
     if (value != null) {
       id = value.id;
     }
     if (null != id) {
-      if (controlsSpecs.get().mode !== controlsSpecs.DRAWER) {
+      if (controlsSpecs.get().mode !== VoicePanelControlsModes.DRAWER) {
         setFocused(null);
         let flag = true;
       }

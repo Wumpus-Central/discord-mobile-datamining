@@ -1,30 +1,31 @@
 // === Module 16957: useNativeThemeUpdater ===
 
 // Module 16957 (useNativeThemeUpdater)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleThemeChange" /* 1183 */;
+import noop from "module_19" /* 19 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
 
 export default function useNativeThemeUpdater() {
-  closure_0 = React.useRef(theme.theme);
-  const layoutEffect = React.useLayoutEffect(() => {
-    callback(table[2]).updateVisualRefresh(true);
+  closure_0 = noop.useRef(ThemeStore.theme);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    closure_0(16958).updateVisualRefresh(true);
   }, []);
-  const layoutEffect1 = React.useLayoutEffect(() => {
-    function handleThemeUpdate(arg0) {
-      const theme = closure_1_3.theme;
+  const layoutEffect1 = noop.useLayoutEffect(() => {
+    function handleThemeUpdate() {
+      const theme = ThemeStore.theme;
       if (theme !== handleThemeUpdate.current) {
         handleThemeUpdate.current = theme;
-        handleThemeUpdate(closure_1_1[3]).updateTheme(theme);
-        const obj = handleThemeUpdate(closure_1_1[3]);
+        handleThemeUpdate(16959).updateTheme(theme);
+        const obj = handleThemeUpdate(16959);
       }
     }
-    callback(closure_1_1[3]).updateTheme(closure_1_3.theme);
-    closure_1_3.addChangeListener(handleThemeUpdate);
+    handleThemeUpdate(16959).updateTheme(ThemeStore.theme);
+    ThemeStore.addChangeListener(handleThemeUpdate);
     return () => {
-      closure_2_3.removeChangeListener(handleThemeUpdate);
+      ThemeStore.removeChangeListener(handleThemeUpdate);
     };
   }, []);
 };

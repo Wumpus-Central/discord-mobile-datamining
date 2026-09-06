@@ -1,41 +1,44 @@
 // === Module 14628: useProfileEffectSections ===
 
 // Module 14628 (useProfileEffectSections)
-import closure_2 from "_slicedToArray" /* 32 */;
-import { useMemo } from "noop" /* 19 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
-import closure_5 from "map" /* 7558 */;
+import util from "util" /* 1114 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
+import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
 
-const require = arg1;
+require = fn;
+const useMemo = fn(19).useMemo;
 let obj = { PURCHASE: "purchase", PREMIUM_PURCHASE: "premium_purchase", PREVIEW: "preview" };
 obj = { skuId: "None" };
 obj = { skuId: "Shop" };
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffectSections.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffectSections.tsx");
 
 export default function useProfileEffectSections() {
-  let items = [closure_5];
+  let items = [CollectiblesPurchaseStore];
   stateFromStores = stateFromStores(first[4]).useStateFromStores(items, () => purchases.purchases);
   obj = stateFromStores(first[4]);
-  let items1 = [closure_4];
-  const tmp2 = callback(stateFromStores(first[4]).useStateFromStoresArray(items1, () => {
+  let items1 = [CollectiblesCategoryStore];
+  const tmp2 = _slicedToArray(stateFromStores(first[4]).useStateFromStoresArray(items1, () => {
     const items = [, ];
-    ({ categories: arr[0], products: arr[1] } = closure_4);
+    ({ categories: arr[0], products: arr[1] } = CollectiblesCategoryStore);
     return items;
   }), 2);
   first = tmp2[0];
-  callback = tmp4;
+  _slicedToArray = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   return useMemo(() => {
-    obj = stateFromStores(first[5]);
+    obj = CollectiblesUtils;
     const profileEffects = obj.getProfileEffects(stateFromStores, first);
     const reduced = profileEffects.reduce((premium_purchase, skuId) => {
-      const value = closure_0.get(skuId.skuId);
+      value = closure_1_0.get(skuId.skuId);
       if (null != value) {
-        let result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesPurchase(value);
-        const obj2 = closure_1_0(closure_1_1[5]);
+        let result = stateFromStores(first[5]).isPremiumCollectiblesPurchase(value);
+        const obj2 = stateFromStores(first[5]);
       } else {
-        result = closure_1_0(closure_1_1[5]).isPremiumCollectiblesProduct(closure_2.get(skuId.skuId));
-        obj = closure_1_0(closure_1_1[5]);
+        result = stateFromStores(first[5]).isPremiumCollectiblesProduct(closure_1_2.get(skuId.skuId));
+        obj = stateFromStores(first[5]);
       }
       if (result) {
         premium_purchase = premium_purchase.premium_purchase;
@@ -49,18 +52,19 @@ export default function useProfileEffectSections() {
       }
       return premium_purchase;
     }, { purchase: [], premium_purchase: [], preview: [] });
-    obj = { section: closure_1_6.PURCHASE, items, height: 12, header: null };
-    items = [closure_1_7, closure_1_8, ...reduced.purchase];
-    const intl = stateFromStores(first[6]).intl;
-    obj[3] = intl.string(stateFromStores(first[6]).t["9x1v/p"]);
+    obj = { section: obj.PURCHASE, items: null, height: 12, header: null };
+    const items = [obj, obj, ...reduced.purchase];
+    obj.items = items;
+    const intl = util.intl;
+    obj.header = intl.string(util.t["9x1v/p"]);
     const items1 = [obj, , ];
-    obj = { section: closure_1_6.PREMIUM_PURCHASE, items: reduced.premium_purchase, height: 12, header: null };
-    const intl2 = stateFromStores(first[6]).intl;
-    obj[3] = intl2.string(stateFromStores(first[6]).t.TiLCgw);
+    obj = { section: obj.PREMIUM_PURCHASE, items: reduced.premium_purchase, height: 12, header: null };
+    const intl2 = util.intl;
+    obj.header = intl2.string(util.t.TiLCgw);
     items1[1] = obj;
-    obj1 = { section: closure_1_6.PREVIEW, items: reduced.preview, height: 12, header: null };
-    const intl3 = stateFromStores(first[6]).intl;
-    obj1[3] = intl3.string(stateFromStores(first[6]).t["1vbbee"]);
+    const obj1 = { section: obj.PREVIEW, items: reduced.preview, height: 12, header: null };
+    const intl3 = util.intl;
+    obj1.header = intl3.string(util.t["1vbbee"]);
     items1[2] = obj1;
     return items1.filter((items) => items.items.length > 0);
   }, items2);

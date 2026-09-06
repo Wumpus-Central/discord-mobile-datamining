@@ -1,13 +1,15 @@
 // === Module 13283: useRefreshSavedMessages ===
 
 // Module 13283 (useRefreshSavedMessages)
-import closure_2 from "noop" /* 19 */;
+import SavedMessagesActions from "SavedMessagesActions" /* 11705 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/useRefreshSavedMessages.tsx");
 
 export default function useRefreshSavedMessages() {
-  const effect = React.useEffect(() => {
-    const andUpdateSavedMessages = callback(table[1]).fetchAndUpdateSavedMessages();
+  const effect = noop.useEffect(() => {
+    const andUpdateSavedMessages = SavedMessagesActions.fetchAndUpdateSavedMessages();
   }, []);
 };

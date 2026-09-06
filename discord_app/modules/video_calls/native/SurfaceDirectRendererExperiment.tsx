@@ -1,23 +1,26 @@
-// === Module 9605: ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT ===
+// === Module 9605: SurfaceDirectRendererExperiment ===
 
-// Module 9605 (ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import ApexExperiment from "ApexExperiment" /* 1433 */;
+// Module 9605 (SurfaceDirectRendererExperiment)
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const require = arg1;
+const require = fn;
+fn(1433);
+let ApexExperiment = { kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: null };
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { enableSurfaceDirectRenderer: true };
-let closure_3 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: ApexExperiment });
-const result = require("set").fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
+ApexExperiment.variations = ApexExperiment;
+let closure_3 = ApexExperiment.createApexExperiment(ApexExperiment);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
 
 export const ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT = "2026-03-surface-direct-renderer";
 export const isSurfaceDirectRendererExperimentEnabled = function isSurfaceDirectRendererExperimentEnabled() {
   return closure_3.getConfig({ location: "RTCConnection_media_engine_connect" }).enableSurfaceDirectRenderer;
 };
 export const useSurfaceDirectRendererExperiment = function useSurfaceDirectRendererExperiment(userId, location) {
-  const _require = userId;
-  const items = [closure_2];
+  _require = userId;
+  const items = [AuthenticationStore];
   const items1 = [userId];
-  const obj = _require(504);
-  return null != userId && !_require(504).useStateFromStores(items, () => closure_0 === closure_1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
+  const obj = require("initialize");
+  return null != userId && !require("initialize").useStateFromStores(items, () => closure_0 === AuthenticationStore.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
 };

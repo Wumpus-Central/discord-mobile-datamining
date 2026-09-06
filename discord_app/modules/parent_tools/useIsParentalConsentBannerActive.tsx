@@ -1,11 +1,11 @@
 // === Module 14865: useIsParentalConsentBannerActive ===
 
 // Module 14865 (useIsParentalConsentBannerActive)
-import set from "set" /* 2 */;
 import useParentalConsentWarning from "useParentalConsentWarning" /* 14866 */;
-import frozen from "frozen" /* 14868 */;
+import ParentalConsentWarningTypes from "ParentalConsentWarningTypes" /* 14868 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
+const result = size.fileFinishedImporting("modules/parent_tools/useIsParentalConsentBannerActive.tsx");
 
 export const useIsParentalConsentBannerActive = function useIsParentalConsentBannerActive() {
   const parentalConsentWarning = useParentalConsentWarning.useParentalConsentWarning();
@@ -13,7 +13,7 @@ export const useIsParentalConsentBannerActive = function useIsParentalConsentBan
   if (parentalConsentWarning != null) {
     const surfaces = parentalConsentWarning.surfaces;
     if (surfaces != null) {
-      hasItem = surfaces.includes(frozen.ParentalConsentWarningSurface.BANNER);
+      hasItem = surfaces.includes(ParentalConsentWarningTypes.ParentalConsentWarningSurface.BANNER);
     }
   }
   return true === hasItem;

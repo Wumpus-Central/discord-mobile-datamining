@@ -1,18 +1,18 @@
-// === Module 14487: items ===
+// === Module 14487: activityShareLink ===
 
-// Module 14487 (items)
-import set from "set" /* 2 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
-import getPathsFromURL from "getPathsFromURL" /* 4543 */;
+// Module 14487 (activityShareLink)
+import URLUtilsDefault from "URLUtils" /* 1365 */;
+import findCodedLinks from "findCodedLinks" /* 4543 */;
+import size from "module_2" /* 2 */;
 
-const items = [getPathsFromURL.parseQuestsEmbedCode];
-const result = set.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
+const items = [findCodedLinks.parseQuestsEmbedCode];
+const result = size.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
-export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(c3, closure_14, closure_12) {
-  const _require = false;
-  const replaced = c3.replaceAll(isDiscordProxiedAssetUrlDefault.URL_REGEX, (arg0) => {
-    c0 = arg0;
-    const someResult = closure_1_3.some((arg0) => null != arg0(c0));
+export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(str, name, link) {
+  _require = false;
+  const replaced = str.replaceAll(URLUtilsDefault.URL_REGEX, (arg0) => {
+    closure_0 = arg0;
+    const someResult = items.some((fn) => null != fn(closure_0));
     if (someResult) {
       c0 = true;
     }
@@ -25,12 +25,10 @@ export const resolveActivityShareMessageContent = function resolveActivityShareM
   });
   let combined = replaced;
   if (!_require) {
-    const intl = _require(1114).intl;
-    const obj = { applicationName: null, link: null };
-    obj[0] = closure_14.name;
-    obj[1] = closure_12;
+    const intl = require("util").intl;
+    const obj = { applicationName: name.name, link };
     let _HermesInternal = HermesInternal;
-    combined = "" + replaced + "\n\n" + intl.formatToMarkdownString(_require(1114).t.dZJpdG, obj);
+    combined = "" + replaced + "\n\n" + intl.formatToMarkdownString(require("util").t.dZJpdG, obj);
   }
   return combined;
 };

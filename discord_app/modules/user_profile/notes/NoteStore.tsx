@@ -1,13 +1,13 @@
-// === Module 13053: getNote ===
+// === Module 13053: NoteStore ===
 
-// Module 13053 (getNote)
-import set2 from "set" /* 2 */;
-import identity from "identity" /* 1980 */;
-import items from "items" /* 1983 */;
-import isValueEqual from "isValueEqual" /* 1972 */;
+// Module 13053 (NoteStore)
+import LibdiscoreStore2 from "LibdiscoreStore" /* 1980 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 1983 */;
+import PlainRecord from "PlainRecord" /* 1972 */;
+import size from "module_2" /* 2 */;
 
-({ TypeTag, constructInPlace: c0 } = isValueEqual);
-const LibdiscoreStore = identity.LibdiscoreStore;
+({ TypeTag, constructInPlace: closure_0 } = PlainRecord);
+const LibdiscoreStore = LibdiscoreStore2.LibdiscoreStore;
 const Note = "Note";
 class NoteStore extends LibdiscoreStore {
   constructor() {
@@ -25,7 +25,7 @@ prototype["stateWrapper"] = function stateWrapper() {
   return this.database;
 };
 NoteStore.displayName = "NoteStore";
-const LibdiscoreBatchStoreRefactorExperiment = items.LibdiscoreBatchStoreRefactorExperiment;
+const LibdiscoreBatchStoreRefactorExperiment = libdiscoreExperiments.LibdiscoreBatchStoreRefactorExperiment;
 const noteStore = new NoteStore({
   LOGOUT(arg0, clear) {
     return clear.clear();
@@ -40,13 +40,13 @@ const noteStore = new NoteStore({
     return clear.clear();
   },
   USER_NOTE_UPDATE(note, set) {
-    const result = set.set(note.id, callback(Note, { loading: false, note: note.note }));
+    const result = set.set(note.id, React(Note, { loading: false, note: note.note }));
   },
   USER_NOTE_LOAD_START(userId, set) {
-    const result = set.set(userId.userId, callback(Note, { loading: true, note: null }));
+    const result = set.set(userId.userId, React(Note, { loading: true, note: null }));
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-let result = set2.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
+let result = size.fileFinishedImporting("modules/user_profile/notes/NoteStore.tsx");
 
 export default noteStore;
 export const NoteRecordTypeTag = "Note";

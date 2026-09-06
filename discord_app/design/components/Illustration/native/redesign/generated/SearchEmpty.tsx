@@ -1,61 +1,58 @@
-// === Module 10317: getSearchEmptySource ===
+// === Module 10317: SearchEmpty ===
 
-// Module 10317 (getSearchEmptySource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 10317 (SearchEmpty)
+import shared from "shared" /* 4411 */;
+import _mod8233 from "module_8233" /* 8233 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/SearchEmpty.tsx");
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/SearchEmpty.tsx");
 
 export const getSearchEmptySource = function getSearchEmptySource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
-      return callback(10318);
+      return require("module_10318");
     },
     darker() {
-      return callback(10319);
+      return require("module_10319");
     },
     light() {
-      return callback(10320);
+      return require("module_10320");
     }
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useSearchEmptySource = function useSearchEmptySource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
-      return callback(10318);
+      return require("module_10318");
     },
     darker() {
-      return callback(10319);
+      return require("module_10319");
     },
     light() {
-      return callback(10320);
+      return require("module_10320");
     }
   };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const SearchEmpty = function SearchEmpty(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  let obj = {
     dark() {
-      return callback(10318);
+      return require("module_10318");
     },
     darker() {
-      return callback(10319);
+      return require("module_10319");
     },
     light() {
-      return callback(10320);
+      return require("module_10320");
     }
   };
   obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

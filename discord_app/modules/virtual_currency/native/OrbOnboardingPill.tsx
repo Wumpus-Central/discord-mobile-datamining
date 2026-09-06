@@ -1,16 +1,14 @@
 // === Module 15696: OrbOnboardingPill ===
 
 // Module 15696 (OrbOnboardingPill)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
 import OrbsIcon from "OrbsIcon" /* 8837 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class OrbOnboardingPill {
   constructor(arg0) {
     flag = global.accessible;
@@ -26,25 +24,27 @@ class OrbOnboardingPill {
     if (flag) {
       str = "auto";
     }
-    obj[6] = str;
+    obj.importantForAccessibility = str;
     items = [, ];
-    items[0] = jsx(require("OrbsIcon").OrbsIcon, { size: "sm" });
+    items[0] = jsx(tmp3(tmp4[3]).OrbsIcon, { size: "sm" });
     obj = { variant: "text-sm/semibold", color: "redesign-button-tertiary-text", children: null };
-    intl = require("getSystemLocale").intl;
-    obj[2] = intl.string(require("getSystemLocale").t["9JpRfC"]);
-    items[1] = jsx(require("Text").Text, obj);
-    obj[7] = items;
-    return tmp2(require("PressableBase").PressableOpacity, obj);
+    intl = tmp3(tmp4[5]).intl;
+    obj.children = intl.string(tmp3(tmp4[5]).t["9JpRfC"]);
+    items[1] = jsx(tmp3(tmp4[4]).Text, obj);
+    obj.children = items;
+    return tmp2(closure_0(closure_1[2]).PressableOpacity, obj);
   }
 }
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
-createCacheKey = { container: null };
-createCacheKey = { height: 36, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
+fn(4560);
+let createStyles = { container: null };
+createStyles = { height: 36, borderRadius: nativeDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
+createStyles.container = createStyles;
+const React4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
 
 export default OrbOnboardingPill;
 export { OrbOnboardingPill };

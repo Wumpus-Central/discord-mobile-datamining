@@ -1,22 +1,22 @@
-// === Module 5267: getStickerPreview ===
+// === Module 5267: StickerMessagePreviewStore ===
 
-// Module 5267 (getStickerPreview)
-import set from "set" /* 2 */;
+// Module 5267 (StickerMessagePreviewStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import handleChanged from "handleChanged" /* 4901 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DraftStore from "DraftStore" /* 4901 */;
+import size from "module_2" /* 2 */;
 
-const DraftType = handleChanged.DraftType;
+const DraftType = DraftStore.DraftType;
 let closure_1 = {};
 let closure_2 = {};
 const Store = initializeDefault.Store;
 class StickerMessagePreviewStore extends Store {
 }
-StickerMessagePreviewStore.prototype["getStickerPreview"] = function getStickerPreview(channelId, ChannelMessage) {
-  return ChannelMessage === DraftType.FirstThreadMessage ? closure_2 : closure_1[channelId];
+StickerMessagePreviewStore.prototype["getStickerPreview"] = function getStickerPreview(c1, ChannelMessage) {
+  return ChannelMessage === DraftType.FirstThreadMessage ? closure_2 : closure_1[c1];
 };
 StickerMessagePreviewStore.displayName = "StickerMessagePreviewStore";
-const stickerMessagePreviewStore = new StickerMessagePreviewStore(dispatcherDefault, {
+const stickerMessagePreviewStore = new StickerMessagePreviewStore(DispatcherDefault, {
   ADD_STICKER_PREVIEW: function handleAddStickerPreview(sticker) {
     const items = [sticker.sticker];
     sticker.draftType === DraftType.FirstThreadMessage ? closure_2 : closure_1[sticker.channelId] = items;
@@ -31,6 +31,6 @@ const stickerMessagePreviewStore = new StickerMessagePreviewStore(dispatcherDefa
     closure_2 = {};
   }
 });
-const result = set.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
+const result = size.fileFinishedImporting("modules/stickers/StickerMessagePreviewStore.tsx");
 
 export default stickerMessagePreviewStore;

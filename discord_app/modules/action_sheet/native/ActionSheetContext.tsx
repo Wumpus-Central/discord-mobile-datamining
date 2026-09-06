@@ -1,9 +1,10 @@
-// === Module 7152: context ===
+// === Module 7152: ActionSheetContext ===
 
-// Module 7152 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 7152 (ActionSheetContext)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/action_sheet/native/ActionSheetContext.tsx");
+const context = noop.createContext(null);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/action_sheet/native/ActionSheetContext.tsx");
 
 export default context;

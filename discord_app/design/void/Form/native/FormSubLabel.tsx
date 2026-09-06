@@ -1,13 +1,13 @@
 // === Module 7140: FormSubLabel ===
 
 // Module 7140 (FormSubLabel)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import { jsx } from "jsxProd" /* 21 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/Form/native/FormSubLabel.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Form/native/FormSubLabel.tsx");
 
 export default function FormSubLabel(color) {
   color = color.color;
@@ -15,5 +15,5 @@ export default function FormSubLabel(color) {
   if (color === undefined) {
     color = "text-subtle";
   }
-  return jsx(Text.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
+  return jsx(Text_Text.Text, { color, variant: "text-xs/normal", lineClamp, style, accessible, children });
 };

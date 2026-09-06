@@ -1,26 +1,27 @@
-// === Module 15292: ActivityCardsItem ===
+// === Module 15292: SettingsAppearanceActivityCardsItem ===
 
-// Module 15292 (ActivityCardsItem)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15292 (SettingsAppearanceActivityCardsItem)
+import nativeDefault from "native" /* 576 */;
+import SettingsAppearanceActivityCardItemDefault from "SettingsAppearanceActivityCardItem" /* 15293 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceActivityCardsItem.tsx");
 
 export default function ActivityCardsItem(animatedStyles) {
   animatedStyles = animatedStyles.animatedStyles;
   let obj = { contentContainerStyle: null, data: null, renderItem: null, keyExtractor: null, showsHorizontalScrollIndicator: false, horizontal: true };
-  obj = { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
-  obj[0] = obj;
-  obj[1] = animatedStyles.cards;
-  obj[2] = function renderItem(item) {
+  obj = { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
+  obj.contentContainerStyle = obj;
+  obj.data = animatedStyles.cards;
+  obj.renderItem = function renderItem(item) {
     const merged = Object.assign(item.item);
-    return closure_1_3(closure_1_1(closure_1_2[4]), { animatedStyles });
+    return jsx(SettingsAppearanceActivityCardItemDefault, { animatedStyles });
   };
-  obj[3] = function keyExtractor(title) {
+  obj.keyExtractor = function keyExtractor(title) {
     return title.title;
   };
-  return jsx(animatedStyles(8874).FlashList, { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 });
+  return jsx(animatedStyles(8874).FlashList, { paddingVertical: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 });
 };

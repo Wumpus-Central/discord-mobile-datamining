@@ -1,13 +1,15 @@
-// === Module 1900: apexExperiment ===
+// === Module 1900: ZoomedInAnalyticsExperiment ===
 
-// Module 1900 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 1900 (ZoomedInAnalyticsExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2025-12-zoomed-analytics", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-12-zoomed-analytics", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/telemetry_ring/native/ZoomedInAnalyticsExperiment.tsx");
 
 export default apexExperiment;
 export const isZoomedExperimentEnabled = function isZoomedExperimentEnabled() {

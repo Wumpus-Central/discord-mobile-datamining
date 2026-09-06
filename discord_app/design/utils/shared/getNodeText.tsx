@@ -1,9 +1,9 @@
 // === Module 4265: getNodeText ===
 
 // Module 4265 (getNodeText)
-import set from "set" /* 2 */;
-import getNodeText from "getNodeText" /* 4266 */;
+import utils_getNodeText from "utils/getNodeText" /* 4266 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/utils/shared/getNodeText.tsx");
+const result = size.fileFinishedImporting("design/utils/shared/getNodeText.tsx");
 
-export const getNodeText = getNodeText.getNodeText;
+export const getNodeText = utils_getNodeText.getNodeText;

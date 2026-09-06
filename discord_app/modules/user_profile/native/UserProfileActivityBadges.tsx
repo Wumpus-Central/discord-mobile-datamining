@@ -1,26 +1,26 @@
-// === Module 13005: TimestampBadge ===
+// === Module 13005: UserProfileActivityBadges ===
 
-// Module 13005 (TimestampBadge)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 13005 (UserProfileActivityBadges)
+import nativeDefault from "native" /* 576 */;
 import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7739 */;
-import calculateTimestampDurations from "calculateTimestampDurations" /* 8135 */;
+import utils from "utils" /* 8135 */;
 import useTimestampTickedNow from "useTimestampTickedNow" /* 13006 */;
 import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 13007 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { ActivityTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
+require = fn;
+const View = fn(17).View;
+const ActivityTypes = fn(1074).ActivityTypes;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityBadges.tsx");
 
 export const TimestampBadge = function TimestampBadge(activity) {
   activity = activity.activity;
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = useTimestampTickedNow;
   const timestamps = activity.timestamps;
   let start;
@@ -66,21 +66,16 @@ export const TimestampBadge = function TimestampBadge(activity) {
       } else {
         GameControllerIcon = tmp2(9223).GameControllerIcon;
       }
-      obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj = { size: "xxs", color: null };
-      obj[1] = tmp10(576).colors.TEXT_FEEDBACK_POSITIVE;
-      const items = [callback(GameControllerIcon, obj), ];
-      obj1 = { entry: null, style: null };
-      const obj2 = { start: null, end: null, isCountDown: null };
-      obj2[0] = start;
-      obj2[1] = end;
-      obj2[2] = flag;
-      obj1[0] = obj2;
-      obj1[1] = tmp.bold;
-      items[1] = callback(tmp2(13008).ActiveTimestamp, obj1);
-      obj[1] = items;
-      return callback2(View, obj);
+      obj = { style: tmp.container, children: null };
+      obj = { size: "xxs", color: tmp10(576).colors.TEXT_FEEDBACK_POSITIVE };
+      const items = [hasOwnProperty(GameControllerIcon, obj), ];
+      const obj1 = { entry: null, style: null };
+      const obj2 = { start, end, isCountDown: flag };
+      obj1.entry = obj2;
+      obj1.style = tmp.bold;
+      items[1] = hasOwnProperty(tmp2(13008).ActiveTimestamp, obj1);
+      obj.children = items;
+      return timestampProducer(View, obj);
     }
   }
   return null;
@@ -89,19 +84,16 @@ export const PartyBadge = function PartyBadge(activity) {
   activity = activity.activity;
   if (!isEmbeddedActivityDefault(activity)) {
     if (null != activity.party) {
-      const richGameStateBadgeText = calculateTimestampDurations.getRichGameStateBadgeText(activity.state, activity.party);
+      const richGameStateBadgeText = utils.getRichGameStateBadgeText(activity.state, activity.party);
       let tmp8 = null;
       if (null != richGameStateBadgeText) {
-        let obj = { style: null, children: null };
-        obj[0] = tmp.container;
-        obj = { size: "xxs", color: null };
-        obj[1] = ThemesDefault.colors.TEXT_MUTED;
-        const items = [callback(tmp9(5089).GroupIcon, obj), ];
-        obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-        obj[2] = richGameStateBadgeText;
-        items[1] = callback(tmp9(4556).Text, obj);
-        obj[1] = items;
-        tmp8 = callback2(View, obj);
+        let obj = { style: tmp.container, children: null };
+        obj = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
+        const items = [hasOwnProperty(tmp9(5089).GroupIcon, obj), ];
+        obj = { variant: "text-sm/medium", color: "text-muted", children: richGameStateBadgeText };
+        items[1] = hasOwnProperty(tmp9(4556).Text, obj);
+        obj.children = items;
+        tmp8 = timestampProducer(View, obj);
       }
       return tmp8;
     }
@@ -109,7 +101,7 @@ export const PartyBadge = function PartyBadge(activity) {
   return null;
 };
 export const EpisodeBadge = function EpisodeBadge(activity) {
-  let obj = calculateTimestampDurations;
+  let obj = utils;
   const assets = activity.activity.assets;
   let large_text;
   if (assets != null) {
@@ -118,16 +110,13 @@ export const EpisodeBadge = function EpisodeBadge(activity) {
   const episodeBadgeText = obj.getEpisodeBadgeText(large_text);
   let tmp6 = null;
   if (null != episodeBadgeText) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { size: "xxs", color: null };
-    obj[1] = ThemesDefault.colors.TEXT_MUTED;
-    const items = [callback(tmp2(11653).TopicsIcon, obj), ];
-    obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    obj1[2] = episodeBadgeText;
-    items[1] = callback(tmp2(4556).Text, obj1);
-    obj[1] = items;
-    tmp6 = callback2(View, obj);
+    obj = { style: tmp.container, children: null };
+    obj = { size: "xxs", color: nativeDefault.colors.TEXT_MUTED };
+    const items = [hasOwnProperty(tmp2(11653).TopicsIcon, obj), ];
+    const obj1 = { variant: "text-sm/medium", color: "text-muted", children: episodeBadgeText };
+    items[1] = hasOwnProperty(tmp2(4556).Text, obj1);
+    obj.children = items;
+    tmp6 = timestampProducer(View, obj);
   }
   return tmp6;
 };

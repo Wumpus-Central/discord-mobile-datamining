@@ -1,13 +1,13 @@
 // === Module 6207: IceCreamIllocon ===
 
 // Module 6207 (IceCreamIllocon)
-import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import preloadDefault from "preload" /* 5587 */;
-import metadataDefault from "metadata" /* 6208 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import _modDef6208 from "module_6208" /* 6208 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/IceCreamIllocon.native.tsx");
+const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/IceCreamIllocon.native.tsx");
 
 export const IceCreamIllocon = function IceCreamIllocon(size) {
   let num = size.size;
@@ -16,12 +16,12 @@ export const IceCreamIllocon = function IceCreamIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
+  obj = { uri: _modDef6208 };
+  obj.source = obj;
   const items = [{ width: num, height: num }];
-  obj[2] = items;
-  obj[3] = accessible;
-  obj[4] = accessibilityLabel;
-  obj[5] = resizeMode;
-  return jsx(preloadDefault, { uri: metadataDefault });
+  obj.style = items;
+  obj.accessible = accessible;
+  obj.accessibilityLabel = accessibilityLabel;
+  obj.resizeMode = resizeMode;
+  return jsx(FastImageDefault, { uri: _modDef6208 });
 };

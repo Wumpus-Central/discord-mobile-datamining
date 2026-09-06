@@ -1,12 +1,13 @@
-// === Module 4992: useMountLayoutEffect ===
+// === Module 4992: useMountEffect ===
 
-// Module 4992 (useMountLayoutEffect)
-import set from "set" /* 2 */;
-import useMountEffect from "useMountEffect" /* 4993 */;
-import useMountEffectDefault from "useMountEffect" /* 4993 */;
+// Module 4992 (useMountEffect)
+import hooks_useMountEffect from "hooks/useMountEffect" /* 4993 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("hooks/useMountEffect.tsx");
+const hooks_useMountEffectDefault = hooks_useMountEffect;
 
-export default useMountEffectDefault;
-export const useMountLayoutEffect = useMountEffect.useMountLayoutEffect;
-export const useUnmountEffect = useMountEffect.useUnmountEffect;
+const result = size.fileFinishedImporting("hooks/useMountEffect.tsx");
+
+export default hooks_useMountEffectDefault;
+export const useMountLayoutEffect = hooks_useMountEffect.useMountLayoutEffect;
+export const useUnmountEffect = hooks_useMountEffect.useUnmountEffect;

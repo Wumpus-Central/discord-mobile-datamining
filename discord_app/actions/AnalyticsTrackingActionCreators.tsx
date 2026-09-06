@@ -1,13 +1,12 @@
-// === Module 15309: track ===
+// === Module 15309: actions/AnalyticsTrackingActionCreators ===
 
-// Module 15309 (track)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 15309 (actions/AnalyticsTrackingActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/AnalyticsTrackingActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/AnalyticsTrackingActionCreators.tsx");
 
 export const track = function track(event, properties) {
-  let obj = dispatcherDefault;
-  obj = { type: "TRACK", event, properties };
+  const obj = { type: "TRACK", event, properties };
   obj.dispatch(obj);
 };

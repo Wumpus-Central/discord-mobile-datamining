@@ -1,28 +1,29 @@
-// === Module 17840: AVErrorStreamSendLowFPSDefinition ===
+// === Module 17840: AVErrorStreamSendLowFPS ===
 
-// Module 17840 (AVErrorStreamSendLowFPSDefinition)
-import setDefault from "set" /* 1090 */;
-import isStreamKey from "isStreamKey" /* 4612 */;
-import closure_2 from "getParticipants" /* 4576 */;
-import closure_3 from "reset" /* 4582 */;
-import closure_4 from "initialize" /* 4599 */;
-import { ApplicationStreamStates } from "ME" /* 1074 */;
+// Module 17840 (AVErrorStreamSendLowFPS)
+import DurationsDefault from "Durations" /* 1090 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
 
-require = arg1;
-let closure_6 = 20 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
+require = fn;
+const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
+let closure_6 = 20 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
 
 export const AVErrorStreamSendLowFPSDefinition = {
   getActiveErrors() {
-    let obj = currentUserActiveStream;
-    currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+    let obj = ApplicationStreamingStore;
+    const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
     if (null != currentUserActiveStream) {
       if (currentUserActiveStream.state !== ApplicationStreamStates.PAUSED) {
         if (0 === obj.getViewerIds(currentUserActiveStream).length) {
           return null;
         } else {
-          const encodeStreamKeyResult = isStreamKey.encodeStreamKey(currentUserActiveStream);
-          rTCConnection = rTCConnection.getRTCConnection(encodeStreamKeyResult);
+          const encodeStreamKeyResult = StreamKeyUtils.encodeStreamKey(currentUserActiveStream);
+          const rTCConnection = StreamRTCConnectionStore.getRTCConnection(encodeStreamKeyResult);
           if (null == rTCConnection) {
             return null;
           } else {
@@ -39,7 +40,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
               if (rTCConnection.hasActiveRemoteWants()) {
                 let tmp11Result = tmp11(4612);
-                participant = participant.getParticipant(currentUserActiveStream.channelId, tmp11Result.encodeStreamKey(currentUserActiveStream));
+                const participant = ChannelRTCStore.getParticipant(currentUserActiveStream.channelId, tmp11Result.encodeStreamKey(currentUserActiveStream));
                 if (null == participant) {
                   return null;
                 } else {
@@ -52,8 +53,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
                     let tmp9 = null;
                     if (null != maxQuality) {
                       if (accumulatedStatsWithMinDatapoints.short.frameRate < tmp11Result2.getWarningFrameRate(maxQuality.maxFrameRate)) {
-                        obj = { type: null };
-                        obj[0] = tmp11(9110).AVError.STREAM_SEND_LOW_FPS;
+                        obj = { type: tmp11(9110).AVError.STREAM_SEND_LOW_FPS };
                         const tmp11Result3 = tmp11(17834);
                         const merged = Object.assign(tmp11Result3.getStreamErrorContext(tmp11(4612).encodeStreamKey(currentUserActiveStream)));
                         const items = [obj];
@@ -74,8 +74,7 @@ export const AVErrorStreamSendLowFPSDefinition = {
               }
             }
           }
-          const obj8 = isStreamKey;
-          obj9 = rTCConnection;
+          obj9 = StreamRTCConnectionStore;
         }
       }
     }

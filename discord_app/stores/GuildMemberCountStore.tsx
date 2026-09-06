@@ -1,8 +1,8 @@
-// === Module 4480: handleInviteData ===
+// === Module 4480: GuildMemberCountStore ===
 
-// Module 4480 (handleInviteData)
+// Module 4480 (GuildMemberCountStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 function handleInviteData(invite) {
   ({ guild, approximate_presence_count } = invite.invite);
@@ -17,50 +17,49 @@ function handleInviteData(invite) {
   }
   return false;
 }
-let closure_0 = {};
-let closure_1 = {};
+let obj = {};
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class GuildMemberCountStore extends Store {
 }
 const prototype = GuildMemberCountStore.prototype;
 prototype["getMemberCounts"] = function getMemberCounts() {
-  return closure_0;
+  return obj;
 };
 prototype["getMemberCount"] = function getMemberCount(arg0) {
   let tmp = null;
   if (null != arg0) {
-    tmp = dependencyMap[arg0];
+    tmp = obj[arg0];
   }
   return tmp;
 };
 prototype["getOnlineCount"] = function getOnlineCount(arg0) {
   let tmp = null;
   if (null != arg0) {
-    tmp = dependencyMap2[arg0];
+    tmp = dependencyMap[arg0];
   }
   return tmp;
 };
 GuildMemberCountStore.displayName = "GuildMemberCountStore";
-const guildMemberCountStore = new GuildMemberCountStore(dispatcherDefault, {
+obj = {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    closure_0 = {};
     const item = guilds.forEach((id) => {
-      closure_0[id.id] = id.member_count;
+      obj[id.id] = id.member_count;
     });
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(guildMemberCounts) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(guildMemberCounts.guildMemberCounts);
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
-    closure_0[guild.id] = guild.member_count;
+    obj[guild.id] = guild.member_count;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
-    if (null == dependencyMap[guild.id]) {
-      if (null == dependencyMap2[guild.id]) {
+    if (null == obj[guild.id]) {
+      if (null == dependencyMap[guild.id]) {
         return false;
       }
     }
@@ -70,12 +69,12 @@ const guildMemberCountStore = new GuildMemberCountStore(dispatcherDefault, {
   GUILD_MEMBER_LIST_UPDATE: function handleGuildMemberListUpdate(arg0) {
     ({ guildId, memberCount, onlineCount } = arg0);
     let flag = false;
-    if (dependencyMap[guildId] !== memberCount) {
-      dependencyMap[guildId] = memberCount;
+    if (obj[guildId] !== memberCount) {
+      obj[guildId] = memberCount;
       flag = true;
     }
-    if (dependencyMap2[guildId] !== onlineCount) {
-      dependencyMap2[guildId] = onlineCount;
+    if (dependencyMap[guildId] !== onlineCount) {
+      dependencyMap[guildId] = onlineCount;
       flag = true;
     }
     return flag;
@@ -91,7 +90,9 @@ const guildMemberCountStore = new GuildMemberCountStore(dispatcherDefault, {
     }
     return false;
   }
-});
-const result = require("set").fileFinishedImporting("stores/GuildMemberCountStore.tsx");
+};
+const guildMemberCountStore = new GuildMemberCountStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/GuildMemberCountStore.tsx");
 
 export default guildMemberCountStore;

@@ -1,53 +1,51 @@
-// === Module 8642: items ===
+// === Module 8642: IarSettingsUpsellsConfigScFiltersSexualMedia ===
 
-// Module 8642 (items)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import create from "create" /* 1187 */;
-import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 7298 */;
-import ReportNames from "ReportNames" /* 8630 */;
+// Module 8642 (IarSettingsUpsellsConfigScFiltersSexualMedia)
+import util from "util" /* 1114 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import SensitiveMediaExplicitRedactionSettingsUtils from "SensitiveMediaExplicitRedactionSettingsUtils" /* 7298 */;
+import MenuTypes from "MenuTypes" /* 8630 */;
+import size from "module_2" /* 2 */;
 
 let obj = {
   getTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Gtck/t"]);
+    const intl = util.intl;
+    return intl.string(util.t["Gtck/t"]);
   },
   getDisabledTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.E6UmXa);
+    const intl = util.intl;
+    return intl.string(util.t.E6UmXa);
   },
   getDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jcRSp6);
+    const intl = util.intl;
+    return intl.string(util.t.jcRSp6);
   },
   eligibleReportSubtypes: null,
   onApply: null,
   predicate: null
 };
-const items = [ReportNames.ReportSubType.SUB_CSAM, ReportNames.ReportSubType.SUB_LOLI, ReportNames.ReportSubType.SUB_NCP, ReportNames.ReportSubType.SUB_SEXUALLY_DEGRADING_CONTENT, ReportNames.ReportSubType.SUB_UNSOLICITED_PORN];
-obj[3] = items;
-obj[4] = function onApply() {
-  let obj = resolveExplicitContentSettingWithDefaults;
-  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
-  obj = {};
+const items = [MenuTypes.ReportSubType.SUB_CSAM, MenuTypes.ReportSubType.SUB_LOLI, MenuTypes.ReportSubType.SUB_NCP, MenuTypes.ReportSubType.SUB_SEXUALLY_DEGRADING_CONTENT, MenuTypes.ReportSubType.SUB_UNSOLICITED_PORN];
+obj.eligibleReportSubtypes = items;
+obj.onApply = function onApply() {
+  const explicitContentSettingOrDefault = SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();
+  const obj = {};
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
-  if (explicitContentGuilds === create.ExplicitContentRedaction.SHOW) {
+  if (explicitContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.explicitContentGuilds = tmp(1187).ExplicitContentRedaction.BLUR;
   }
-  if (explicitContentFriendDm === create.ExplicitContentRedaction.SHOW) {
+  if (explicitContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.explicitContentFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
-  if (explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW) {
+  if (explicitContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW) {
     obj.explicitContentNonFriendDm = tmp(1187).ExplicitContentRedaction.BLUR;
   }
   return obj.updateExplicitContentSetting(obj);
 };
-obj[5] = function predicate() {
-  const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
+obj.predicate = function predicate() {
+  const explicitContentSettingOrDefault = SensitiveMediaExplicitRedactionSettingsUtils.getExplicitContentSettingOrDefault();
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
-  const obj = resolveExplicitContentSettingWithDefaults;
-  return explicitContentGuilds === create.ExplicitContentRedaction.SHOW || explicitContentFriendDm === create.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
+  return explicitContentGuilds === preloaded_user_settings.ExplicitContentRedaction.SHOW || explicitContentFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === preloaded_user_settings.ExplicitContentRedaction.SHOW;
 };
-const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");
+const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");
 
 export default obj;

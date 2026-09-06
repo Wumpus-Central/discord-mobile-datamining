@@ -1,22 +1,22 @@
-// === Module 4553: MESSAGE_GROUP_SPACING ===
+// === Module 4553: MessageConstants ===
 
-// Module 4553 (MESSAGE_GROUP_SPACING)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import setDefault from "set" /* 1090 */;
-import importDefaultResult from "fails" /* 559 */;
+// Module 4553 (MessageConstants)
+import Constants from "Constants" /* 1074 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import Backoff from "Backoff" /* 559 */;
+import size from "module_2" /* 2 */;
 
-const ChannelStreamTypes = ME.ChannelStreamTypes;
+const ChannelStreamTypes = Constants.ChannelStreamTypes;
 let obj = { timeout: null, backoff: null, retries: 8 };
 obj = { response: null, deadline: null };
 const frozen = Object.freeze({ referencedAvatarProfile: false, referencedUsernameProfile: false, interactionAvatarProfile: false, interactionUsernameProfile: false, interactionData: false, avatarProfile: false, usernameProfile: false, emojiPicker: false, emojiBurstPicker: false, moreUtilities: false, contextMenu: false });
-obj[0] = 10 * setDefault.Millis.SECOND;
-obj[1] = setDefault.Millis.MINUTE;
-obj[0] = obj;
-const result = 0.5 * setDefault.Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, 60 * setDefault.Millis.SECOND);
-obj[1] = importDefaultResult;
-const result1 = set.fileFinishedImporting("modules/messages/MessageConstants.tsx");
+obj.response = 10 * DurationsDefault.Millis.SECOND;
+obj.deadline = DurationsDefault.Millis.MINUTE;
+obj.timeout = obj;
+const result = 0.5 * DurationsDefault.Millis.SECOND;
+Backoff = new Backoff(result, 60 * DurationsDefault.Millis.SECOND);
+obj.backoff = Backoff;
+const result1 = size.fileFinishedImporting("modules/messages/MessageConstants.tsx");
 
 export const MESSAGE_GROUP_SPACING = [0, 4, 8, 16, 24];
 export const DEFAULT_COZY_SPACING = 16;

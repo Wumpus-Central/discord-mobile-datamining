@@ -1,18 +1,16 @@
 // === Module 17423: setupLoadFromMessageManagerHandlers ===
 
 // Module 17423 (setupLoadFromMessageManagerHandlers)
-import set2 from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set2.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
+const result = size.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
 
-export default function setupLoadFromMessageManagerHandlers(actions) {
+export default function setupLoadFromMessageManagerHandlers(actions, arg1) {
   closure_0 = arg1;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
   }
-  let onBeforeBatch;
-  let set;
   function handleMessage(message) {
     message = message.message;
     let hasItem = null != message.channel_id;
@@ -28,7 +26,7 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
         hasItem1 = set.has(message.channel_id);
       }
       if (hasItem1) {
-        callback(message);
+        closure_0(message);
       }
     }
   }
@@ -44,7 +42,7 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
         hasItem = set.has(channel_id.channel_id);
       }
       if (hasItem) {
-        callback(channel_id);
+        closure_1_0(channel_id);
       }
     });
   }
@@ -56,12 +54,12 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
     let item = data.forEach((messages) => {
       messages = messages.messages;
       let item = messages.forEach((arr) => {
-        const item = arr.forEach((arg0) => callback(arg0));
+        const item = arr.forEach((item) => closure_1_0(item));
       });
     });
   }
-  onBeforeBatch = obj.onBeforeBatch;
-  set = new Set();
+  const onBeforeBatch = obj.onBeforeBatch;
+  const set = new Set();
   obj = {};
   const merged = Object.assign(actions.actions);
   obj.POST_CONNECTION_OPEN = function POST_CONNECTION_OPEN() {
@@ -76,14 +74,14 @@ export default function setupLoadFromMessageManagerHandlers(actions) {
     if (onBeforeBatch != null) {
       tmp();
     }
-    const item = messages.forEach((arg0) => callback(arg0));
+    const item = messages.forEach((item) => closure_1_0(item));
   };
   obj.LOAD_PINNED_MESSAGES_SUCCESS = function LOAD_PINNED_MESSAGES_SUCCESS(pins) {
     pins = pins.pins;
     if (onBeforeBatch != null) {
       tmp();
     }
-    const item = pins.forEach((message) => callback(message.message));
+    const item = pins.forEach((message) => closure_1_0(message.message));
   };
   obj.SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;
   obj.MOD_VIEW_SEARCH_MESSAGES_SUCCESS = handleSearchMessagesSuccess;

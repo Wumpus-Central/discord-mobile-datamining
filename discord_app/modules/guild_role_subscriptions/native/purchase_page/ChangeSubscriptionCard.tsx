@@ -1,75 +1,77 @@
-// === Module 16548: emphasisHook ===
+// === Module 16548: ChangeSubscriptionCard ===
 
-// Module 16548 (emphasisHook)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16548 (ChangeSubscriptionCard)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import hooksDefault from "hooks" /* 4153 */;
-import Text from "Text" /* 4556 */;
-import getRoleEmojisAll from "getRoleEmojis" /* 15227 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { SubscriptionStatusTypes } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15227 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function emphasisHook(children) {
-  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-default", children });
+  return React5(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children });
 }
-noopAll;
-({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
-createCacheKey = { container: null };
-createCacheKey = { paddingVertical: 16, paddingHorizontal: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/ChangeSubscriptionCard.tsx");
+const View = fn(17).View;
+const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = { container: null };
+createStyles = { paddingVertical: 16, paddingHorizontal: 24, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.container = createStyles;
+let closure_10 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/ChangeSubscriptionCard.tsx");
 
 export default function ChangeSubscriptionCard(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   ({ activeListingId, changeToListingId } = activeSubscription);
-  let obj = getRoleEmojisAll;
-  const first = callback(obj.useName(activeListingId), 1)[0];
-  obj1 = getRoleEmojisAll;
-  let obj2 = hooksDefault(activeSubscription.currentPeriodEnd);
-  const tmp = callback4();
-  obj = { style: items, children: null };
-  items = [tmp.container, ];
+  let obj = GuildRoleSubscriptionListingEditStateUtilsAll;
+  const first = _slicedToArray(obj.useName(activeListingId), 1)[0];
+  _modDef4153(activeSubscription.currentPeriodEnd);
+  const tmp = closure_10();
+  obj = { style: null, children: null };
+  const items = [tmp.container, ];
   obj = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
-  obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj.style = items;
+  const obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = activeSubscription(1114).intl;
-  obj1[2] = intl.format(activeSubscription(1114).t.l3uCCX, { activeListingName: first });
-  const items1 = [callback2(activeSubscription(4556).Text, obj1), callback2(activeSubscription(1178).Spacer, { size: 16 }), , ];
-  obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
+  obj1.children = intl.format(activeSubscription(1114).t.l3uCCX, { activeListingName: first });
+  const items1 = [closure_7(activeSubscription(4556).Text, obj1), closure_7(activeSubscription(1178).Spacer, { size: 16 }), , ];
+  const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = activeSubscription(1114).intl;
   const formatResult = obj2.format("MMMM Do");
   const tmp8 = View;
-  const items2 = [intl2.format(activeSubscription(1114).t.Zmtrs2, { activeListingName: first, changeToListingName: callback(obj1.useName(changeToListingId), 1)[0], billingEndDate: obj2.format("MMMM Do"), emphasisHook }), "\n\n", ];
+  const items2 = [intl2.format(activeSubscription(1114).t.Zmtrs2, { activeListingName: first, changeToListingName: _slicedToArray(obj1.useName(changeToListingId), 1)[0], billingEndDate: obj2.format("MMMM Do"), emphasisHook }), "\n\n", ];
   const intl3 = activeSubscription(1114).intl;
   items2[2] = intl3.format(activeSubscription(1114).t.KIiWca, { emphasisHook });
-  obj2[2] = items2;
-  items1[2] = callback3(activeSubscription(4556).Text, obj2);
+  obj2.children = items2;
+  items1[2] = closure_8(activeSubscription(4556).Text, obj2);
   let tmp7Result = null;
   if (activeSubscription.status !== SubscriptionStatusTypes.CANCELED) {
     const obj5 = { children: null };
     const items3 = [tmp5(tmp6(1178).Spacer, { size: 16 }), ];
     const obj6 = { text: null, onPress: null };
     const intl4 = tmp6(1114).intl;
-    obj6[0] = intl4.string(tmp6(1114).t.UwHVxr);
-    obj6[1] = function onPress() {
-      let obj = closure_1_1(closure_1_3[15]);
-      obj = { subscriptionId: activeSubscription.id };
-      obj.pushLazy(activeSubscription(closure_1_3[17])(closure_1_3[16], closure_1_3.paths), obj);
-      closure_1_1(closure_1_3[18]).hideActionSheet();
+    obj6.text = intl4.string(tmp6(1114).t.UwHVxr);
+    obj6.onPress = function onPress() {
+      const obj = { subscriptionId: activeSubscription.id };
+      obj.pushLazy(asyncRequireImpl(16549, dependencyMap.paths), obj);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     };
     items3[1] = tmp5(tmp6(16541).ArrowButton, obj6);
-    obj5[0] = items3;
+    obj5.children = items3;
     tmp7Result = tmp7(closure_9, obj5);
   }
-  const obj3 = { activeListingName: first, changeToListingName: callback(obj1.useName(changeToListingId), 1)[0], billingEndDate: obj2.format("MMMM Do"), emphasisHook };
+  const obj3 = { activeListingName: first, changeToListingName: _slicedToArray(obj1.useName(changeToListingId), 1)[0], billingEndDate: obj2.format("MMMM Do"), emphasisHook };
   const obj4 = { emphasisHook };
   items1[3] = tmp7Result;
-  obj[1] = items1;
-  return callback2(activeSubscription(7150).BottomSheet, { startExpanded: true, children: callback3(tmp8, obj) });
+  obj.children = items1;
+  return closure_7(activeSubscription(7150).BottomSheet, { startExpanded: true, children: closure_8(tmp8, obj) });
 };

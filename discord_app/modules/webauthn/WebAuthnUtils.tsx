@@ -1,17 +1,17 @@
-// === Module 6599: encodeUserIdForWebAuthn ===
+// === Module 6599: WebAuthnUtils ===
 
-// Module 6599 (encodeUserIdForWebAuthn)
-import set from "set" /* 2 */;
+// Module 6599 (WebAuthnUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
+const result = size.fileFinishedImporting("modules/webauthn/WebAuthnUtils.tsx");
 
-export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(c1) {
+export const encodeUserIdForWebAuthn = function encodeUserIdForWebAuthn(id) {
   const uint8Array = new Uint8Array(16);
   const dataView = new DataView(uint8Array.buffer);
   dataView.setUint32(0, 821232635);
   dataView.setUint16(4, 35878);
   dataView.setUint16(6, 20307);
-  dataView.setBigUint64(8, BigInt(c1));
+  dataView.setBigUint64(8, BigInt(id));
   const items = [...uint8Array];
   const str = btoa(String.fromCharCode.apply(items));
   const str2 = btoa(String.fromCharCode.apply(items)).replace(/\+/g, "-");

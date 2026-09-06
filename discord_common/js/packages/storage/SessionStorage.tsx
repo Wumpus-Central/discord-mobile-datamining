@@ -1,9 +1,9 @@
 // === Module 1346: SessionStorage ===
 
 // Module 1346 (SessionStorage)
-import set from "set" /* 2 */;
-import parseValue from "parseValue" /* 511 */;
+import storage_Storage from "storage/Storage" /* 511 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/storage/SessionStorage.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/storage/SessionStorage.tsx");
 
-export const SessionStorage = parseValue.impl;
+export const SessionStorage = storage_Storage.impl;

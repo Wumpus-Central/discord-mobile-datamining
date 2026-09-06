@@ -1,20 +1,18 @@
-// === Module 11990: dispatcher ===
+// === Module 11990: TypingActionCreators ===
 
-// Module 11990 (dispatcher)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 11990 (TypingActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("actions/TypingActionCreators.tsx");
+const result = size.fileFinishedImporting("actions/TypingActionCreators.tsx");
 
 export default {
   startTyping(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "TYPING_START_LOCAL", channelId: id };
+    const obj = { type: "TYPING_START_LOCAL", channelId: id };
     obj.dispatch(obj);
   },
   stopTyping(id) {
-    let obj = dispatcherDefault;
-    obj = { type: "TYPING_STOP_LOCAL", channelId: id };
+    const obj = { type: "TYPING_STOP_LOCAL", channelId: id };
     obj.dispatch(obj);
   }
 };

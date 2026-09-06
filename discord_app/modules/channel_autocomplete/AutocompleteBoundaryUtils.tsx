@@ -1,14 +1,14 @@
-// === Module 7683: isAutocompleteSeparatingBoundary ===
+// === Module 7683: AutocompleteBoundaryUtils ===
 
-// Module 7683 (isAutocompleteSeparatingBoundary)
-import ME from "ME" /* 1074 */;
-import regExp from "regExp" /* 5000 */;
-import set from "set" /* 2 */;
+// Module 7683 (AutocompleteBoundaryUtils)
+import Constants from "Constants" /* 1074 */;
+import ChannelAutocompleteConstants from "ChannelAutocompleteConstants" /* 5000 */;
+import size from "module_2" /* 2 */;
 
-function isAutocompleteSeparatingBoundary(c22, arg1) {
-  let isMatch = 0 === arg1;
+function isAutocompleteSeparatingBoundary(c22, selectionStart) {
+  let isMatch = 0 === selectionStart;
   if (!isMatch) {
-    isMatch = WHITESPACE_RE.test(c22[arg1 - 1]);
+    isMatch = WHITESPACE_RE.test(c22[selectionStart - 1]);
   }
   if (!isMatch) {
     let hasItem = null != tmp3;
@@ -23,14 +23,9 @@ function getAutocompleteToken(c22) {
   let num = 0;
   if (0 < c22.length) {
     while (true) {
-      let tmp = isAutocompleteSeparatingBoundary;
-      let tmp2 = num;
       if (isAutocompleteSeparatingBoundary(c22, num)) {
-        let tmp3 = closure_1;
-        let tmp4 = closure_1;
         for (const item10013 of closure_1) {
           if (arg0.startsWith(item10013, num)) {
-            let tmp6 = obj;
             let substr = arg0.slice(num);
             obj.return();
             return substr;
@@ -42,13 +37,13 @@ function getAutocompleteToken(c22) {
   }
   return c22;
 }
-({ CHANNEL_SENTINEL, COMMAND_SENTINEL, EMOJI_SENTINEL, MENTION_SENTINEL, REACTION_START_SENTINEL } = regExp);
-const WHITESPACE_RE = ME.WHITESPACE_RE;
+({ CHANNEL_SENTINEL, COMMAND_SENTINEL, EMOJI_SENTINEL, MENTION_SENTINEL, REACTION_START_SENTINEL } = ChannelAutocompleteConstants);
+const WHITESPACE_RE = Constants.WHITESPACE_RE;
 const items = [REACTION_START_SENTINEL, MENTION_SENTINEL, CHANNEL_SENTINEL, EMOJI_SENTINEL, COMMAND_SENTINEL];
 let closure_1 = items.sort((arg0, arg1) => arg1.length - arg0.length);
 const items1 = ["("];
-let set = new Set(items1);
-const result = set.fileFinishedImporting("modules/channel_autocomplete/AutocompleteBoundaryUtils.tsx");
+const set = new Set(items1);
+const result = size.fileFinishedImporting("modules/channel_autocomplete/AutocompleteBoundaryUtils.tsx");
 
 export const AUTOCOMPLETE_BOUNDARY_CHARACTERS = items1;
 export const AUTOCOMPLETE_BOUNDARY_CHARACTERS_SET = set;

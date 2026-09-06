@@ -1,23 +1,24 @@
-// === Module 16649: MessageVerticalSeparator ===
+// === Module 16649: Separators ===
 
-// Module 16649 (MessageVerticalSeparator)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16649 (Separators)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = MessageEmbedTypes);
-let closure_2 = createCacheKey.createStyles({ filesOrLinksSeparator: { height: FILES_OR_LINKS_GAP_WIDTH }, mediaSeparator: { height: MEDIA_ITEM_GAP_WIDTH }, messageSeparator: { height: 4 } });
-const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/Separators.tsx");
+const View = fn(17).View;
+const SearchConstants = fn(7878);
+({ MEDIA_ITEM_GAP_WIDTH, FILES_OR_LINKS_GAP_WIDTH } = SearchConstants);
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { filesOrLinksSeparator: { height: FILES_OR_LINKS_GAP_WIDTH }, mediaSeparator: { height: MEDIA_ITEM_GAP_WIDTH }, messageSeparator: { height: 4 } };
+let closure_2 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/search/native/components/list/rows/Separators.tsx");
 
 export const MessageVerticalSeparator = function MessageVerticalSeparator() {
-  return <View style={callback().messageSeparator} />;
+  return <View style={closure_2().messageSeparator} />;
 };
 export const MediaVerticalSeparator = function MediaVerticalSeparator() {
-  return <View style={callback().mediaSeparator} />;
+  return <View style={closure_2().mediaSeparator} />;
 };
 export const CardVerticalSeparator = function CardVerticalSeparator() {
-  return <View style={callback().filesOrLinksSeparator} />;
+  return <View style={closure_2().filesOrLinksSeparator} />;
 };

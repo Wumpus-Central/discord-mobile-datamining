@@ -1,43 +1,38 @@
-// === Module 11839: openDisableCommunication ===
+// === Module 11839: GuildDisableCommunicationActionCreators ===
 
-// Module 11839 (openDisableCommunication)
-import noopAll from "noop" /* 19 */;
+// Module 11839 (GuildDisableCommunicationActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationActionCreators.native.tsx");
 
 export const openDisableCommunication = function openDisableCommunication(userId) {
   ({ guildId, cancelButtonCallback } = userId);
-  user = user.getUser(userId.userId);
+  const user = UserStore.getUser(userId.userId);
   if (null != user) {
-    let obj = _modDef4763;
-    obj = { guildId: null, user: null, cancelButtonCallback: null };
-    obj[0] = guildId;
-    obj[1] = user;
-    obj[2] = cancelButtonCallback;
+    const obj = { guildId, user, cancelButtonCallback };
     obj.pushLazy(asyncRequireImpl(11840, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {
   ({ guildId: require, userId: importDefault, cancelButtonCallback: dependencyMap } = arg0);
-  let obj = _modDef4905;
-  obj = {
+  let obj = {
     importer() {
-      return closure_1_0(closure_1_2[5])(closure_1_2[7], closure_1_2.paths).then((arg0) => {
-        closure_0 = arg0.default;
+      return asyncRequireImpl(11843, dependencyMap.paths).then((result) => {
+        closure_0 = result.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
-          obj.guildId = closure_0;
-          obj.userId = closure_1_1;
-          obj.onCancel = closure_1_2;
-          return closure_2_4(closure_0, obj);
+          obj.guildId = guildId;
+          obj.userId = userId;
+          obj.onCancel = onCancel;
+          return <closure_0 />;
         };
       });
     }

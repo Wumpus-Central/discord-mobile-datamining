@@ -1,8 +1,8 @@
-// === Module 16464: ICYMI_CUSTOM_SCORES_MODAL_KEY ===
+// === Module 16464: ICYMICustomScoreTypes ===
 
-// Module 16464 (ICYMI_CUSTOM_SCORES_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 16464 (ICYMICustomScoreTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoreTypes.tsx");
+const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoreTypes.tsx");
 
 export const ICYMI_CUSTOM_SCORES_MODAL_KEY = "icymi-custom-scores-modal";

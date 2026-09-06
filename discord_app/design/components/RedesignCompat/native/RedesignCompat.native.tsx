@@ -1,11 +1,12 @@
-// === Module 5686: context ===
+// === Module 5686: RedesignCompat ===
 
-// Module 5686 (context)
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 5686 (RedesignCompat)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext(false);
-const result = require("set").fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");
+const jsx = fn(21).jsx;
+const context = noop.createContext(false);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/RedesignCompat/native/RedesignCompat.native.tsx");
 
 export const RedesignCompatContext = context;
 export const RedesignCompat = function RedesignCompat(children) {

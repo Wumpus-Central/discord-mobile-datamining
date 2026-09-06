@@ -1,13 +1,13 @@
 // === Module 7870: PressableNavigatorModalIcon ===
 
 // Module 7870 (PressableNavigatorModalIcon)
-import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import GenericHeaderTitle from "GenericHeaderTitle" /* 7863 */;
+import HeaderShared from "HeaderShared" /* 7863 */;
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 7866 */;
+import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
 
 export default function PressableNavigatorModalIcon(onPress) {
   let goBack = onPress.onPress;
@@ -27,7 +27,6 @@ export default function PressableNavigatorModalIcon(onPress) {
   } else {
     stringResult = string(t.cpT0Cq);
   }
-  obj = { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) };
-  obj[2] = stringResult;
-  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) });
+  obj = { isModal: true, children: tmp(HeaderShared.HeaderIconButton, obj), accessibilityLabel: stringResult };
+  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: tmp(HeaderShared.HeaderIconButton, obj), accessibilityLabel: stringResult });
 };

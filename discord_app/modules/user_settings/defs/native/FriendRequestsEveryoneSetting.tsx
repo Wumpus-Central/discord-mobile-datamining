@@ -1,29 +1,30 @@
-// === Module 14976: toggle ===
+// === Module 14976: FriendRequestsEveryoneSetting ===
 
-// Module 14976 (toggle)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14824 */;
-import closure_2 from "noop" /* 19 */;
-import ME from "ME" /* 1074 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 14976 (FriendRequestsEveryoneSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ AllFriendSourceFlags: c3, FriendSourceFlags: c4 } = ME);
-createToggle = {
+require = fn;
+const Constants = fn(1074);
+({ AllFriendSourceFlags: c3, FriendSourceFlags: closure_4 } = Constants);
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.mGr3CX);
+    const intl = util.intl;
+    return intl.string(util.t.mGr3CX);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7975).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useFriendRequestsEveryoneSettingValue() {
     const FriendSourceFlagsSetting = setting(1935).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
-    return React.useMemo(() => setting(closure_1_1[4]).computeFlags(setting), items).all;
+    return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).all;
   },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
-    const FriendSourceFlagsSetting = explicitContentFromProto.FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
     if (arg0) {
       let tmp3 = tmp;
     } else {
@@ -32,10 +33,11 @@ createToggle = {
     FriendSourceFlagsSetting.updateSetting(tmp3);
   },
   useIsDisabled() {
-    return useParentalControlledExplicitContentSettings.useIsParentallyControlled();
+    return useParentalControlSettings.useIsParentallyControlled();
   }
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FriendRequestsEveryoneSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

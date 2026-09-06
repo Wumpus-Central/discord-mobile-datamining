@@ -1,25 +1,26 @@
-// === Module 5608: createCardShadowToken ===
+// === Module 5608: CardTokens ===
 
-// Module 5608 (createCardShadowToken)
-import set from "set" /* 2 */;
+// Module 5608 (CardTokens)
+import nativeDefault from "native" /* 576 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
+const result = size.fileFinishedImporting("design/components/Card/native/CardTokens.native.tsx");
 
 export const createCardShadowToken = function createCardShadowToken(arg0) {
-  const _require = arg0;
-  return _require(4560).experimental_createToken((gradient) => {
+  _require = arg0;
+  return require("createStyles").experimental_createToken((gradient) => {
     if (null == gradient.gradient) {
       if ("none" !== closure_0) {
         if ("border" === tmp11) {
-          return closure_1_1(closure_1_2[1]).shadows.SHADOW_BORDER;
+          return nativeDefault.shadows.SHADOW_BORDER;
         } else if ("high" === tmp11) {
-          return closure_1_1(closure_1_2[1]).shadows.SHADOW_HIGH;
+          return nativeDefault.shadows.SHADOW_HIGH;
         } else if ("ledge" === tmp11) {
-          return closure_1_1(closure_1_2[1]).shadows.SHADOW_LEDGE;
+          return nativeDefault.shadows.SHADOW_LEDGE;
         } else if ("low" === tmp11) {
-          return closure_1_1(closure_1_2[1]).shadows.SHADOW_LOW;
+          return nativeDefault.shadows.SHADOW_LOW;
         } else if ("medium" === tmp11) {
-          return closure_1_1(closure_1_2[1]).shadows.SHADOW_MEDIUM;
+          return nativeDefault.shadows.SHADOW_MEDIUM;
         }
       }
     }

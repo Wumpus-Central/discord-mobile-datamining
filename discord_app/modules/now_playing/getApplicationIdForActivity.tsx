@@ -1,20 +1,20 @@
 // === Module 13748: getApplicationIdForActivity ===
 
 // Module 13748 (getApplicationIdForActivity)
-import set from "set" /* 2 */;
-import items3 from "items3" /* 1920 */;
-import _isStreamingDefault from "_isStreaming" /* 8259 */;
+import Constants from "Constants" /* 1920 */;
+import isStreamingDefault from "isStreaming" /* 8259 */;
 import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10891 */;
 import isOnXboxDefault from "isOnXbox" /* 13002 */;
-import getIconURL from "getIconURL" /* 13228 */;
-import getIconURL2 from "getIconURL" /* 13749 */;
-import getIconURL3 from "getIconURL" /* 13750 */;
+import SpotifyApplicationRecord from "SpotifyApplicationRecord" /* 13228 */;
+import TwitchApplicationRecord from "TwitchApplicationRecord" /* 13749 */;
+import XboxApplicationRecord from "XboxApplicationRecord" /* 13750 */;
+import size from "module_2" /* 2 */;
 
-const SpotifyApplication = getIconURL.SpotifyApplication;
-let closure_3 = getIconURL2.TWITCH_APPLICATION_ID_PREFIX;
-let closure_4 = getIconURL3.XBOX_APPLICATION_ID_PREFIX;
-let closure_5 = items3.XBOX_ACTIVITY_APPLICATION_ID;
-const result = set.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
+const SpotifyApplication = SpotifyApplicationRecord.SpotifyApplication;
+let closure_3 = TwitchApplicationRecord.TWITCH_APPLICATION_ID_PREFIX;
+let closure_4 = XboxApplicationRecord.XBOX_APPLICATION_ID_PREFIX;
+let closure_5 = Constants.XBOX_ACTIVITY_APPLICATION_ID;
+const result = size.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
   if (isListeningOnSpotifyDefault(party)) {
@@ -25,7 +25,7 @@ export default function getApplicationIdForActivity(party) {
       return id;
     }
   }
-  if (_isStreamingDefault(party)) {
+  if (isStreamingDefault(party)) {
     if (null != party.url) {
       id = closure_3 + party.url;
     }

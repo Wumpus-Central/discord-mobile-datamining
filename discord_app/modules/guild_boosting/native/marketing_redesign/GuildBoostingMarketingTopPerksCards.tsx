@@ -1,119 +1,107 @@
-// === Module 13600: items ===
+// === Module 13600: GuildBoostingMarketingTopPerksCards ===
 
-// Module 13600 (items)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import playDefault from "play" /* 5529 */;
-import registerAssetDefault from "registerAsset" /* 13601 */;
+// Module 13600 (GuildBoostingMarketingTopPerksCards)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import LottieAnimationViewDefault from "LottieAnimationView" /* 5529 */;
+import _modDef13601 from "module_13601" /* 13601 */;
 import _mod13602 from "module_13602" /* 13602 */;
-import registerAssetDefault2 from "registerAsset" /* 13603 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _modDef13603 from "module_13603" /* 13603 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-noopAll;
-({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: null, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 };
-createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { borderRadius: ThemesDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
-createCacheKey[5] = { marginRight: 0 };
-createCacheKey[6] = { marginBottom: 4, textAlign: "center" };
-createCacheKey[7] = { textAlign: "center" };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { wrapper: { marginTop: 50 }, heading: { marginBottom: 20, textAlign: "center" }, scrollerContent: { alignItems: "stretch", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 16, paddingBottom: 16 }, card: null, cardGraphic: null, cardLast: null, cardHeading: null, cardBody: null };
+createStyles = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 16, padding: 24, width: 324 };
+createStyles.card = createStyles;
+let size = { borderRadius: nativeDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
+createStyles.cardGraphic = size;
+createStyles.cardLast = { marginRight: 0 };
+createStyles.cardHeading = { marginBottom: 4, textAlign: "center" };
+createStyles.cardBody = { textAlign: "center" };
+let closure_8 = createStyles.createStyles(createStyles);
 let items = [
   {
     getHeadingCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.string(getSystemLocale.t.y4ft4D);
+      const intl = util.intl;
+      return intl.string(util.t.y4ft4D);
     },
     getBodyCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.string(getSystemLocale.t.HTvLGu);
+      const intl = util.intl;
+      return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: registerAssetDefault });
+      return timestampProducer(React3, { style, source: _modDef13601 });
     }
   },
   {
     getHeadingCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.string(getSystemLocale.t.PbAyub);
+      const intl = util.intl;
+      return intl.string(util.t.PbAyub);
     },
     getBodyCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.string(getSystemLocale.t.wOYbTv);
+      const intl = util.intl;
+      return intl.string(util.t.wOYbTv);
     },
-    getGraphic(arg0) {
-      const obj = { source: _mod13602, autoPlay: !useReducedMotion.useReducedMotion, style: arg0 };
-      return callback(playDefault, obj);
+    getGraphic(style) {
+      const obj = { source: _mod13602, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      return timestampProducer(LottieAnimationViewDefault, obj);
     }
   },
   {
     getHeadingCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.string(getSystemLocale.t["/bX4Jn"]);
+      const intl = util.intl;
+      return intl.string(util.t["/bX4Jn"]);
     },
     getBodyCopy() {
-      const intl = getSystemLocale.intl;
-      return intl.string(getSystemLocale.t.yCjoUC);
+      const intl = util.intl;
+      return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      return callback(closure_3, { style, source: registerAssetDefault2 });
+      return timestampProducer(React3, { style, source: _modDef13603 });
     }
   }
 ];
-const obj1 = { borderRadius: ThemesDefault.radii.xs, height: 128, marginBottom: 16, overflow: "hidden", width: 211 };
-const obj2 = {
-  getHeadingCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.y4ft4D);
-  },
-  getBodyCopy() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.HTvLGu);
-  },
-  getGraphic(style) {
-    return callback(closure_3, { style, source: registerAssetDefault });
-  }
-};
-const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTopPerksCards.tsx");
 
 export default function GuildBoostingMarketingTopPerksCards() {
-  const tmp = callback3();
-  const _require = tmp;
+  const tmp = closure_8();
+  _require = tmp;
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.heading, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  const intl = _require(1114).intl;
-  obj[3] = intl.string(_require(1114).t.aGdB3E);
-  items = [callback(_require(4556).Heading, obj), ];
+  const intl = require("util").intl;
+  obj.children = intl.string(require("util").t.aGdB3E);
+  items = [closure_6(require("Text/Text").Heading, obj), ];
   obj = {
     itemCount: items.length,
     cardWidth: 324,
     cardMarginRight: 16,
     contentContainerStyle: tmp.scrollerContent,
-    children: items.map((getGraphic) => {
-      items = [lib.card, ];
-      let cardLast = arg1 === closure_1_9.length - 1;
+    children: items.map((getGraphic, index) => {
+      items = [card.card, ];
+      let cardLast = index === items.length - 1;
       if (cardLast) {
         cardLast = tmp3.cardLast;
       }
       let obj = { style: items, children: null };
       items[1] = cardLast;
-      const items1 = [getGraphic.getGraphic(lib.cardGraphic), , ];
+      const items1 = [getGraphic.getGraphic(card.cardGraphic), , ];
       obj = { style: tmp3.cardHeading, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: getGraphic.getHeadingCopy() };
-      items1[1] = closure_1_6(lib(closure_1_2[11]).Heading, obj);
+      items1[1] = timestampProducer(Text_Text.Heading, obj);
       obj = { style: tmp3.cardBody, variant: "text-sm/normal", color: "text-default", children: getGraphic.getBodyCopy() };
-      items1[2] = closure_1_6(lib(closure_1_2[11]).Text, obj);
-      obj[1] = items1;
-      return closure_1_7(closure_1_4, obj, arg1);
+      items1[2] = timestampProducer(Text_Text.Text, obj);
+      obj.children = items1;
+      return React5(React4, obj, index);
     })
   };
-  items[1] = callback(_require(12564).MarketingCardsScroller, obj);
-  obj[1] = items;
-  return callback2(closure_4, obj);
+  items[1] = closure_6(require("MarketingCardsScroller").MarketingCardsScroller, obj);
+  obj.children = items;
+  return closure_7(closure_4, obj);
 };

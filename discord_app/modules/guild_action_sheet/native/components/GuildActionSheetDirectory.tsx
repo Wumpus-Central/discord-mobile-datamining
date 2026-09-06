@@ -1,41 +1,41 @@
 // === Module 13966: GuildActionSheetDirectory ===
 
 // Module 13966 (GuildActionSheetDirectory)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import Background from "Background" /* 7150 */;
-import HideMutedChannelsOption from "HideMutedChannelsOption" /* 13910 */;
-import CommunityPillDefault from "CommunityPill" /* 13967 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 13910 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 13967 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, actions: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: 16, gap: 24 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null, actions: null };
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createStyles.container = createStyles;
+createStyles.actions = { paddingHorizontal: 16, gap: 24 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetDirectory.tsx");
 
 export default function GuildActionSheetDirectory(arg0) {
   ({ guild, expanded } = arg0);
   if (expanded === undefined) {
     expanded = false;
   }
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = { scrollable: true, startExpanded: expanded, children: null };
   obj = { scrollsToTop: false, style: tmp.container, contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
-  const items = [callback(CommunityPillDefault, { guild }), ];
+  const items = [React4(GuildActionSheetHeaderDefault, { guild }), ];
   obj = { style: tmp.actions, children: null };
-  const items1 = [callback(HideMutedChannelsOption.GuildActionSheetDirectoryActions, { guild }), callback(HideMutedChannelsOption.GuildDeveloperOptionAction, { guild })];
-  obj[1] = items1;
-  items[1] = callback2(View, obj);
-  obj[3] = items;
-  obj[2] = callback2(BottomSheetModal.BottomSheetScrollView, obj);
-  return callback(Background.BottomSheet, obj);
+  const items1 = [React4(GuildActionSheetActions.GuildActionSheetDirectoryActions, { guild }), React4(GuildActionSheetActions.GuildDeveloperOptionAction, { guild })];
+  obj.children = items1;
+  items[1] = hasOwnProperty(View, obj);
+  obj.children = items;
+  obj.children = hasOwnProperty(BottomSheetModal.BottomSheetScrollView, obj);
+  return React4(Sheet_BottomSheet.BottomSheet, obj);
 };

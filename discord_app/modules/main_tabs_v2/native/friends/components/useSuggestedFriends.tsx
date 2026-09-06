@@ -1,13 +1,15 @@
 // === Module 16046: useSuggestedFriends ===
 
 // Module 16046 (useSuggestedFriends)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "initialize" /* 7662 */;
-import { SuggestedFriendSource } from "SuggestedFriendSource" /* 12699 */;
+import _modDef12 from "module_12" /* 12 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7662 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
+const require = fn;
+const SuggestedFriendSource = fn(12699).SuggestedFriendSource;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
 export default function useSuggestedFriends(arg0) {
   let obj = arg0;
@@ -15,32 +17,32 @@ export default function useSuggestedFriends(arg0) {
     obj = {};
   }
   let flag = obj.isConnected;
-  const items = [closure_5];
+  const items = [FriendSuggestionStore];
   stateFromStoresArray = stateFromStoresArray(flag[4]).useStateFromStoresArray(items, () => suggestions.getSuggestions());
-  const tmp = callback(React.useState([]), 2);
-  const first = tmp[0];
+  const tmp = _slicedToArray(noop.useState([]), 2);
+  const added = tmp[0];
   if (flag == null) {
     flag = true;
   }
-  const items1 = [first, stateFromStoresArray, flag];
-  const memo = React.useMemo(() => {
+  const items1 = [added, stateFromStoresArray, flag];
+  const memo = noop.useMemo(() => {
     if (flag) {
       const found = first.filter((source) => source.source === constants.USER_SUGGESTIONS);
       const mapped = stateFromStoresArray.map((user) => {
-        const obj = { user: user.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
-        name = user.name;
+        const obj = { user: user.user, friendSuggestionName: null, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
+        const name = user.name;
+        obj.friendSuggestionName = name;
         return obj;
       });
-      let obj = first(flag[5]);
-      return first(flag[5]).unionBy(found, mapped, (user) => user.user.id).sort((user, user2) => {
-        const name = callback(4404).getName(user.user);
-        const obj = callback(4404);
-        return name.localeCompare(callback(4404).getName(user2.user));
+      return _modDef12.unionBy(found, mapped, (user) => user.user.id).sort((user, user2) => {
+        const name = added(4404).getName(user.user);
+        const obj = added(4404);
+        return name.localeCompare(added(4404).getName(user2.user));
       });
     } else {
       return [];
     }
   }, items1);
-  obj = { added: first, setAdded: tmp[1], friendSuggestions: memo, numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length };
+  obj = { added, setAdded: tmp[1], friendSuggestions: memo, numFriendSuggestions: flag ? memo.length : stateFromStoresArray.length };
   return obj;
 };

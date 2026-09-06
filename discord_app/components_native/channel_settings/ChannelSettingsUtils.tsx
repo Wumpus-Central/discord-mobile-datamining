@@ -1,9 +1,9 @@
-// === Module 16814: getIsChannelNameSettingEditable ===
+// === Module 16814: ChannelSettingsUtils ===
 
-// Module 16814 (getIsChannelNameSettingEditable)
-import set from "set" /* 2 */;
+// Module 16814 (ChannelSettingsUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");
+const result = size.fileFinishedImporting("components_native/channel_settings/ChannelSettingsUtils.tsx");
 
 export const getIsChannelNameSettingEditable = function getIsChannelNameSettingEditable(arg0) {
   ({ canManageThread, canSendMessages, isForumPost, isChannelOwner } = arg0);

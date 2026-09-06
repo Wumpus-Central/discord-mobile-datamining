@@ -1,15 +1,14 @@
 // === Module 1327: convertSkemaError ===
 
 // Module 1327 (convertSkemaError)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
 const _errors = "_errors";
-const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/convertSkemaError.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/http-utils/convertSkemaError.tsx");
 
 export const convertSkemaError = function convertSkemaError(errors) {
   const obj = {};
   for (const key10007 in arg0) {
-    let tmp2 = key10007;
     let tmp3 = arg0[key10007];
     if (null == tmp3) {
       continue;

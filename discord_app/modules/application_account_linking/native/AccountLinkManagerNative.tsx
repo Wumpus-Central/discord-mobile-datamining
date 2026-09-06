@@ -1,10 +1,11 @@
 // === Module 17893: AccountLinkManagerNative ===
 
 // Module 17893 (AccountLinkManagerNative)
-import set from "set" /* 2 */;
-import _claimIncentivizedAccountLinkingReward from "_claimIncentivizedAccountLinkingReward" /* 16941 */;
+import BrowserManager from "BrowserManager" /* 4525 */;
+import AccountLinkManager2 from "AccountLinkManager" /* 16941 */;
+import size from "module_2" /* 2 */;
 
-const AccountLinkManager = _claimIncentivizedAccountLinkingReward.AccountLinkManager;
+const AccountLinkManager = AccountLinkManager2.AccountLinkManager;
 class AccountLinkManagerNative extends AccountLinkManager {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -15,8 +16,8 @@ class AccountLinkManagerNative extends AccountLinkManager {
   _initialize() {
     self = this;
     _initializeResult = super._initialize();
-    obj = require("NativeModules");
-    this.unsubscribeBrowser = obj.subscribeToIsInAppBrowserOpen((isBrowserOpen) => {
+    obj = closure_0(closure_1[1]);
+    this.unsubscribeBrowser = obj.subscribeToIsInAppBrowserOpen((isBrowserOpen, arg1) => {
       self.isBrowserOpen = isBrowserOpen;
       if (arg1) {
         self.evaluatePending();
@@ -44,6 +45,6 @@ class AccountLinkManagerNative extends AccountLinkManager {
 }
 let closure_2 = AccountLinkManagerNative.prototype;
 const accountLinkManagerNative = new AccountLinkManagerNative();
-const result = set.fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
+const result = size.fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
 
 export default accountLinkManagerNative;

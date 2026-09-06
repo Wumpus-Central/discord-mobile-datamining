@@ -1,22 +1,23 @@
-// === Module 11750: isProtocolRegistered ===
+// === Module 11750: SpotifyProtocolStore ===
 
-// Module 11750 (isProtocolRegistered)
+// Module 11750 (SpotifyProtocolStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let c0 = false;
+let isRegistered = false;
 const Store = initializeDefault.Store;
 class SpotifyProtocolStore extends Store {
 }
 SpotifyProtocolStore.prototype["isProtocolRegistered"] = function isProtocolRegistered() {
-  return c0;
+  return isRegistered;
 };
 SpotifyProtocolStore.displayName = "SpotifyProtocolStore";
-const spotifyProtocolStore = new SpotifyProtocolStore(dispatcherDefault, {
+const spotifyProtocolStore = new SpotifyProtocolStore(DispatcherDefault, {
   SPOTIFY_SET_PROTOCOL_REGISTERED: function handleSetProtocolRegistered(isRegistered) {
     isRegistered = isRegistered.isRegistered;
   }
 });
-const result = require("set").fileFinishedImporting("modules/spotify/SpotifyProtocolStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/spotify/SpotifyProtocolStore.tsx");
 
 export default spotifyProtocolStore;

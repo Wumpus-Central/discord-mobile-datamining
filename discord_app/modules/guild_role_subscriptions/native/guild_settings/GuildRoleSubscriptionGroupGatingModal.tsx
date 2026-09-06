@@ -1,29 +1,29 @@
 // === Module 17743: GuildRoleSubscriptionGroupGatingModal ===
 
 // Module 17743 (GuildRoleSubscriptionGroupGatingModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import FormGuildGatingModeSelectorDefault from "FormGuildGatingModeSelector" /* 17723 */;
-import HeaderDefault from "Header" /* 17733 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "usePriceTiers" /* 17729 */;
-import { GuildRoleSubscriptionsTierScenes as closure_5 } from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
-import { jsx } from "jsxProd" /* 21 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 17733 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 17729 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");
+require = fn;
+const constants = fn(15205).GuildRoleSubscriptionsTierScenes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildRoleSubscriptionGroupGatingModal.tsx");
 
 export default function GuildRoleSubscriptionGroupGatingModal(arg0) {
-  [tmp2, tmp3] = callback(closure_4.useGroupIsFullGateState(), 2);
+  [tmp2, tmp3] = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
-  const tmp = callback(closure_4.useGroupIsFullGateState(), 2);
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.N38nNP);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.csJWVI);
-  obj[3] = constants.GROUP;
+  const tmp = _slicedToArray(RoleTierEditStore.useGroupIsFullGateState(), 2);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.N38nNP);
+  const intl2 = util.intl;
+  obj.description = intl2.string(util.t.csJWVI);
+  obj.nextStep = constants.GROUP;
   const merged = Object.assign(arg0);
   obj.children = jsx(FormGuildGatingModeSelectorDefault, { isFullServerGating: tmp2, onChange: tmp3 });
-  return jsx(HeaderDefault, { title: null, description: null, canProceedToNextStep: true, nextStep: null });
+  return jsx(GuildRoleSubscriptionTierEditStepDefault, { title: null, description: null, canProceedToNextStep: true, nextStep: null });
 };

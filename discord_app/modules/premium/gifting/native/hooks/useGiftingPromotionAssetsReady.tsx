@@ -1,14 +1,14 @@
 // === Module 16951: useGiftingPromotionAssetsReady ===
 
 // Module 16951 (useGiftingPromotionAssetsReady)
-import set from "set" /* 2 */;
-import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10753 */;
+import MarketingComponentHooks from "MarketingComponentHooks" /* 10753 */;
 import usePreloadedAssetDefault from "usePreloadedAsset" /* 16952 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
+const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 
 export default function useGiftingPromotionAssetsReady(asset, asset2) {
-  let obj = useThemeAndReducedMotionAwareAssetUrl;
+  let obj = MarketingComponentHooks;
   asset = undefined;
   if (asset != null) {
     asset = asset.asset;
@@ -19,7 +19,7 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
-  const themeAndReducedMotionAwareAssetUrl1 = useThemeAndReducedMotionAwareAssetUrl.useThemeAndReducedMotionAwareAssetUrl(asset1);
+  const themeAndReducedMotionAwareAssetUrl1 = MarketingComponentHooks.useThemeAndReducedMotionAwareAssetUrl(asset1);
   const status2 = usePreloadedAssetDefault(themeAndReducedMotionAwareAssetUrl1).status;
   let tmp8 = "skipped" === status;
   if (!tmp8) {
@@ -30,6 +30,6 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
   if (!tmp9) {
     tmp9 = "preloaded" === status2;
   }
-  obj[1] = tmp9;
+  obj.isGiftReminderAssetReady = tmp9;
   return obj;
 };

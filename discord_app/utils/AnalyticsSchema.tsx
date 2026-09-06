@@ -1,8 +1,8 @@
-// === Module 1361: ME ===
+// === Module 1361: utils/AnalyticsSchema ===
 
-// Module 1361 (ME)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 1361 (utils/AnalyticsSchema)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("utils/AnalyticsSchema.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("utils/AnalyticsSchema.tsx");

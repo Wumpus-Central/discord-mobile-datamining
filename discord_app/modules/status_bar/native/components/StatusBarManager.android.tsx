@@ -1,15 +1,17 @@
-// === Module 9482: pushStackEntry ===
+// === Module 9482: StatusBarManager ===
 
-// Module 9482 (pushStackEntry)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 9482 (StatusBarManager)
+import _modDef12 from "module_12" /* 12 */;
+import _mod17 from "module_17" /* 17 */;
+import NativeSafeAreaInsetsModuleDefault from "NativeSafeAreaInsetsModule" /* 1623 */;
+import size from "module_2" /* 2 */;
 
-const StatusBar = get_ActivityIndicator.StatusBar;
+const StatusBar = _mod17.StatusBar;
 class StatusBarManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
-    return obj;
+    merged = Object.assign({ propsStack: null, updateImmediate: null });
+    merged[0] = [];
+    return merged;
   }
 }
 const prototype = StatusBarManager.prototype;
@@ -52,14 +54,13 @@ prototype["updatePropsStack"] = function updatePropsStack() {
   clearImmediate(this.updateImmediate);
   this.updateImmediate = setImmediate(() => {
     const items = [{ hidden: false, barStyle: "default" }, ...self.propsStack];
-    const applyResult = self(closure_1_1[1]).merge.apply(items);
-    closure_1_2.setBarStyle(applyResult.barStyle);
-    const tmp = self(closure_1_1[1]);
-    self(closure_1_1[2]).setStatusBarVisible(!applyResult.hidden);
+    const applyResult = _modDef12.merge.apply(items);
+    StatusBar.setBarStyle(applyResult.barStyle);
+    NativeSafeAreaInsetsModuleDefault.setStatusBarVisible(!applyResult.hidden);
   });
 };
-let obj = Object.create(StatusBarManager.prototype);
-obj[0] = [];
-const result = set.fileFinishedImporting("modules/status_bar/native/components/StatusBarManager.android.tsx");
+let merged = Object.assign({ propsStack: null, updateImmediate: null });
+merged[0] = [];
+const result = size.fileFinishedImporting("modules/status_bar/native/components/StatusBarManager.android.tsx");
 
-export default obj;
+export default merged;

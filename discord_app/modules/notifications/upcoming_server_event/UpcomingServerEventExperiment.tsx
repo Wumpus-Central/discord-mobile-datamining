@@ -1,13 +1,15 @@
-// === Module 15510: apexExperiment ===
+// === Module 15510: UpcomingServerEventExperiment ===
 
-// Module 15510 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 15510 (UpcomingServerEventExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { showSettingsToggle: true }, 3: { showSettingsToggle: true } };
+let obj = { kind: "user", name: "2026-04-upcoming-server-event", defaultConfig: { showSettingsToggle: false }, variations: null };
+obj = { 1: null, 2: { showSettingsToggle: true }, 3: { showSettingsToggle: true } };
 obj[3] = { showSettingsToggle: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-04-upcoming-server-event", defaultConfig: { showSettingsToggle: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/notifications/upcoming_server_event/UpcomingServerEventExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/notifications/upcoming_server_event/UpcomingServerEventExperiment.tsx");
 
 export default apexExperiment;
 export const useUpcomingServerEventExperiment = function useUpcomingServerEventExperiment(tabsV2Settings) {

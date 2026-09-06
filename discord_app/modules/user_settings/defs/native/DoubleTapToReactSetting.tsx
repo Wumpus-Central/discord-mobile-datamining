@@ -1,78 +1,45 @@
-// === Module 15889: toggle ===
+// === Module 15889: DoubleTapToReactSetting ===
 
-// Module 15889 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15889 (DoubleTapToReactSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["4qhAjx"]);
+    const intl = util.intl;
+    return intl.string(util.t["4qhAjx"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
+  parent: SettingsConstants.MobileUserSettings.CHAT,
   useValue() {
-    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
   },
   onValueChange(disableDoubleTap) {
-    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.getSetting();
-    const DoubleTapReactionEmoji2 = explicitContentFromProto.DoubleTapReactionEmoji;
+    const DoubleTapReactionEmoji2 = UserSettings.DoubleTapReactionEmoji;
     const obj = { disableDoubleTap: !disableDoubleTap, emojiId: null, emojiName: null, animated: null };
     let emojiId;
     if (setting != null) {
       emojiId = setting.emojiId;
     }
-    obj[1] = emojiId;
+    obj.emojiId = emojiId;
     let emojiName;
     if (setting != null) {
       emojiName = setting.emojiName;
     }
-    obj[2] = emojiName;
+    obj.emojiName = emojiName;
     let animated;
     if (setting != null) {
       animated = setting.animated;
     }
-    obj[3] = animated;
+    obj.animated = animated;
     DoubleTapReactionEmoji2.updateSetting(obj);
   }
 });
-let obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["4qhAjx"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CHAT,
-  useValue() {
-    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
-    return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
-  },
-  onValueChange(disableDoubleTap) {
-    const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
-    const setting = DoubleTapReactionEmoji.getSetting();
-    const DoubleTapReactionEmoji2 = explicitContentFromProto.DoubleTapReactionEmoji;
-    const obj = { disableDoubleTap: !disableDoubleTap, emojiId: null, emojiName: null, animated: null };
-    let emojiId;
-    if (setting != null) {
-      emojiId = setting.emojiId;
-    }
-    obj[1] = emojiId;
-    let emojiName;
-    if (setting != null) {
-      emojiName = setting.emojiName;
-    }
-    obj[2] = emojiName;
-    let animated;
-    if (setting != null) {
-      animated = setting.animated;
-    }
-    obj[3] = animated;
-    DoubleTapReactionEmoji2.updateSetting(obj);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/DoubleTapToReactSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DoubleTapToReactSetting.tsx");
 
 export default toggle;

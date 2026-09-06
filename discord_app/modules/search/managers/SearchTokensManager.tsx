@@ -1,24 +1,23 @@
-// === Module 17481: _initialize ===
+// === Module 17481: SearchTokensManager ===
 
-// Module 17481 (_initialize)
-import set from "set" /* 2 */;
-import _setAppLocale from "_setAppLocale" /* 2026 */;
-import initializeDefault from "initialize" /* 7118 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
+// Module 17481 (SearchTokensManager)
+import IntlLoaderStore from "IntlLoaderStore" /* 2026 */;
+import SearchUtils from "SearchUtils" /* 12340 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = _setAppLocale.subscribeToIntlLoadingSuccess;
-initializeDefault;
+let closure_2 = IntlLoaderStore.subscribeToIntlLoadingSuccess;
 class SearchTokensManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    obj = { USER_SETTINGS_PROTO_UPDATE: require("SearchTokenTypes").refreshSearchTokens, POST_CONNECTION_OPEN: require("SearchTokenTypes").refreshSearchTokens };
+    obj = { USER_SETTINGS_PROTO_UPDATE: closure_0(closure_1[2]).refreshSearchTokens, POST_CONNECTION_OPEN: closure_0(closure_1[2]).refreshSearchTokens };
     applyArgumentsResult.actions = obj;
     return applyArgumentsResult;
   }
 }
 const prototype = SearchTokensManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  this._unsubscribeIntlLoadingStore = callback(SearchTokenTypes.refreshSearchTokens);
+  this._unsubscribeIntlLoadingStore = closure_2(SearchUtils.refreshSearchTokens);
 };
 prototype["_terminate"] = function _terminate() {
   const _unsubscribeIntlLoadingStore = this._unsubscribeIntlLoadingStore;
@@ -27,6 +26,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const searchTokensManager = new SearchTokensManager();
-let result = set.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
+let result = size.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
 
 export default searchTokensManager;

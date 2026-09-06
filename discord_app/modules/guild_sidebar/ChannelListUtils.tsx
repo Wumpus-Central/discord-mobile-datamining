@@ -1,9 +1,9 @@
-// === Module 4706: hasStream ===
+// === Module 4706: ChannelListUtils ===
 
-// Module 4706 (hasStream)
-import set from "set" /* 2 */;
+// Module 4706 (ChannelListUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
 
 export const hasStream = function hasStream(voiceStates) {
   if (null == voiceStates) {

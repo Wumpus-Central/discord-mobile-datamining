@@ -1,15 +1,12 @@
 // === Module 14091: GradientBorder ===
 
 // Module 14091 (GradientBorder)
-import ThemesDefault from "Themes" /* 576 */;
-import t from "t" /* 4745 */;
+import nativeDefault from "native" /* 576 */;
+import _mod4745 from "module_4745" /* 4745 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class GradientBorder {
   constructor(arg0) {
     ({ children, borderWidth } = global);
@@ -22,14 +19,14 @@ class GradientBorder {
       tmp = closure_1;
       tmp2 = closure_2;
       num = 1;
-      borderRadius = require("Themes").radii.sm + 1;
+      borderRadius = closure_1(closure_2[5]).radii.sm + 1;
     }
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ children: 0, direction: 0, style: 0, borderWidth: 0, borderRadius: 0 }));
     tmp4 = closure_2;
-    str = require("t");
+    str = closure_0(closure_2[4]);
     match = str.match(direction);
-    withResult = match.with(closure_8.HORIZONTAL, () => closure_5);
-    withResult1 = withResult.with(closure_8.VERTICAL, () => closure_6);
+    withResult = match.with(closure_8.HORIZONTAL, () => closure_1_5);
+    withResult1 = withResult.with(closure_8.VERTICAL, () => closure_1_6);
     withResult2 = withResult1.with(closure_8.DIAGONAL, () => ({ START: { x: 0, y: 0 }, END: { x: 1, y: 1 } }));
     withResult3 = withResult2.with(closure_8.ANTI_DIAGONAL, () => ({ START: { x: 0, y: 1 }, END: { x: 1, y: 0 } }));
     exhaustiveResult = withResult3.exhaustive();
@@ -41,18 +38,18 @@ class GradientBorder {
         tmp9 = jsx;
         tmp10 = closure_1;
         obj = { start: null, end: null, style: null };
-        obj[0] = tmp6;
-        obj[1] = tmp7;
+        obj.start = tmp6;
+        obj.end = tmp7;
         items = [, ];
         items[0] = style;
         obj1 = { borderRadius: null, padding: null };
-        obj1[0] = borderRadius;
-        obj1[1] = borderWidth;
+        obj1.borderRadius = borderRadius;
+        obj1.padding = borderWidth;
         items[1] = obj1;
-        obj[2] = items;
+        obj.style = items;
         tmp12 = obj;
         tmp13 = merged;
-        tmp11 = require("LinearGradient");
+        tmp11 = closure_1(tmp4[6]);
         merged1 = Object.assign(merged);
         cloneElementResult = null;
         if (null != children) {
@@ -78,9 +75,9 @@ class GradientBorder {
           obj4 = { style: null, children: null };
           obj5 = { borderRadius: null };
           borderRadius = borderRadius - borderWidth;
-          obj5[0] = borderRadius;
-          obj4[0] = obj5;
-          obj4[1] = children;
+          obj5.borderRadius = borderRadius;
+          obj4.style = obj5;
+          obj4.children = children;
           cloneElementResult = tmp9(tmp16, obj4);
         }
         obj.children = cloneElementResult;
@@ -90,9 +87,13 @@ class GradientBorder {
     return tmp8;
   }
 }
-({ HorizontalGradient: c5, VerticalGradient: closure_6 } = ME);
-let obj = { HORIZONTAL: "horizontal", VERTICAL: "vertical", DIAGONAL: "diagonal", ANTI_DIAGONAL: "anti-diagonal" };
-GradientBorder.Direction = obj;
-const result = require("set").fileFinishedImporting("design/void/GradientBorder/native/GradientBorder.tsx");
+const View = fn(17).View;
+const Constants = fn(1074);
+({ HorizontalGradient: hasOwnProperty, VerticalGradient: metroRequire } = Constants);
+const jsx = fn(21).jsx;
+const Direction = { HORIZONTAL: "horizontal", VERTICAL: "vertical", DIAGONAL: "diagonal", ANTI_DIAGONAL: "anti-diagonal" };
+GradientBorder.Direction = Direction;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/GradientBorder/native/GradientBorder.tsx");
 
 export default GradientBorder;

@@ -1,43 +1,37 @@
-// === Module 17616: batchChannelUpdate ===
+// === Module 17616: actions/GuildActionCreators ===
 
-// Module 17616 (batchChannelUpdate)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import sendRequest from "sendRequest" /* 1272 */;
+// Module 17616 (actions/GuildActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import size from "module_2" /* 2 */;
 
-function batchChannelUpdate(closure_1_0) {
-  if (arg1.length > 0) {
+function batchChannelUpdate(guildId, body) {
+  if (body.length > 0) {
     function onEnd() {
-      return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
+      return DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
     }
-    let obj = dispatcherDefault;
-    obj.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
-    const HTTP = sendRequest.HTTP;
-    obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-    obj[0] = Endpoints.GUILD_CHANNELS(closure_1_0);
-    obj[1] = arg1;
-    HTTP.patch(obj).then(onEnd, onEnd);
-    const patchResult = HTTP.patch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.GUILD_CHANNELS(guildId), body, oldFormErrors: true, rejectWithError: true };
+    HTTP.patch(request).then(onEnd, onEnd);
+    const patchResult = HTTP.patch(request);
   }
 }
-function batchRoleUpdate(closure_1_0) {
-  if (arg1.length > 0) {
+function batchRoleUpdate(arg0, body) {
+  if (body.length > 0) {
     function onEnd() {
-      return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
+      return DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS" });
     }
-    let obj = dispatcherDefault;
-    obj.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
-    const HTTP = sendRequest.HTTP;
-    obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-    obj[0] = Endpoints.GUILD_ROLES(closure_1_0);
-    obj[1] = arg1;
-    HTTP.patch(obj).then(onEnd, onEnd);
-    const patchResult = HTTP.patch(obj);
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: Endpoints.GUILD_ROLES(arg0), body, oldFormErrors: true, rejectWithError: true };
+    HTTP.patch(request).then(onEnd, onEnd);
+    const patchResult = HTTP.patch(request);
   }
 }
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("actions/native/GuildActionCreators.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("actions/native/GuildActionCreators.tsx");
 
 export default { batchChannelUpdate, batchRoleUpdate };
 export { batchChannelUpdate };

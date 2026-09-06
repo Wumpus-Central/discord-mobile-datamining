@@ -1,21 +1,24 @@
-// === Module 17935: promise ===
+// === Module 17935: ToggleDeafen ===
 
-// Module 17935 (promise)
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
+// Module 17935 (ToggleDeafen)
+import VoiceActionUtils from "VoiceActionUtils" /* 10003 */;
+import useDeafStates from "useDeafStates" /* 10018 */;
+import HeadlessTaskUtilsDefault from "HeadlessTaskUtils" /* 17932 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/headless_tasks/android/ToggleDeafen.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/headless_tasks/android/ToggleDeafen.tsx");
 
 export default (channelId) => {
   channelId = channelId.channelId;
   return new Promise((arg0) => {
     closure_0 = arg0;
-    closure_1_1(closure_1_2[1]).awaitStorage(() => {
-      const channel = closure_2_3.getChannel(callback);
-      const deafStates = channelId(closure_2_2[2]).getDeafStates(channel);
-      const obj = channelId(closure_2_2[2]);
-      channelId(closure_2_2[3]).createDeafHandler(deafStates).onPress();
-      callback(true);
+    HeadlessTaskUtilsDefault.awaitStorage(() => {
+      const channel = ChannelStore.getChannel(channelId);
+      const deafStates = useDeafStates.getDeafStates(channel);
+      VoiceActionUtils.createDeafHandler(deafStates).onPress();
+      closure_0(true);
     });
   });
 };

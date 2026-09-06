@@ -1,25 +1,25 @@
-// === Module 7735: InviteTypes ===
+// === Module 7735: InviteTypeUtils ===
 
-// Module 7735 (InviteTypes)
-import set from "set" /* 2 */;
-import scheduledEventSort from "scheduledEventSort" /* 7526 */;
-import getEstablishedDate from "getEstablishedDate" /* 7737 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import InviteSendStates from "InviteSendStates" /* 7736 */;
+// Module 7735 (InviteTypeUtils)
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
+import GuildProfileUtils from "GuildProfileUtils" /* 7737 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import Constants from "Constants" /* 7736 */;
+import size from "module_2" /* 2 */;
 
-const isEventUpcoming = scheduledEventSort.isEventUpcoming;
-({ isGuildVocalChannelType: c3, isMultiUserDM: c4 } = createChannelRecord);
-({ InviteTargetTypes: c5, InviteTypes: closure_6 } = InviteSendStates);
-let obj = { EVENT: "event", APPLICATION: "application", PROFILE: "profile", DEFAULT: "default", VOICE_CHANNEL: "voice_channel" };
-const result = set.fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
+const isEventUpcoming = GuildScheduledEventStore.isEventUpcoming;
+({ isGuildVocalChannelType: c3, isMultiUserDM: closure_4 } = ChannelRecord);
+({ InviteTargetTypes: hasOwnProperty, InviteTypes: metroRequire } = Constants);
+const GuildInviteExtendedType = { EVENT: "event", APPLICATION: "application", PROFILE: "profile", DEFAULT: "default", VOICE_CHANNEL: "voice_channel" };
+const result = size.fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
 
-export const InviteTypes = InviteSendStates.InviteTypes;
+export const InviteTypes = Constants.InviteTypes;
 export const isGroupDMInvite = function isGroupDMInvite(invite) {
   let tmp = invite.type === constants2.GROUP_DM;
   if (!tmp) {
     let tmp3 = null != invite.channel;
     if (tmp3) {
-      tmp3 = callback2(invite.channel.type);
+      tmp3 = React4(invite.channel.type);
     }
     tmp = tmp3;
   }
@@ -54,10 +54,10 @@ export const isFriendInvite = function isFriendInvite(invite) {
 export const isEmbeddedApplicationInvite = function isEmbeddedApplicationInvite(invite) {
   return invite.target_type === constants.EMBEDDED_APPLICATION;
 };
-export const isVoiceChannelInvite = function isVoiceChannelInvite(addResult) {
-  let tmp = null != addResult.channel;
+export const isVoiceChannelInvite = function isVoiceChannelInvite(channel) {
+  let tmp = null != channel.channel;
   if (tmp) {
-    tmp = callback(addResult.channel.type);
+    tmp = React3(channel.channel.type);
   }
   return tmp;
 };
@@ -69,7 +69,7 @@ export const getInviteType = function getInviteType(body) {
     if (!tmp4) {
       let tmp2 = null != body.channel;
       if (tmp2) {
-        tmp2 = callback2(body.channel.type);
+        tmp2 = React4(body.channel.type);
       }
       tmp4 = tmp2;
     }
@@ -86,7 +86,7 @@ export const getInviteType = function getInviteType(body) {
   }
   return GROUP_DM;
 };
-export const GuildInviteExtendedType = obj;
+export { GuildInviteExtendedType };
 export const getGuildInviteExtendedType = function getGuildInviteExtendedType(invite) {
   const guild_scheduled_event = invite.guild_scheduled_event;
   let tmp = null != guild_scheduled_event;
@@ -98,13 +98,13 @@ export const getGuildInviteExtendedType = function getGuildInviteExtendedType(in
   } else if (invite.target_type === constants.EMBEDDED_APPLICATION) {
     PROFILE = obj.APPLICATION;
   } else {
-    obj = getEstablishedDate;
+    obj = GuildProfileUtils;
     if (obj.guildInviteCanEmbedProfile(invite)) {
       PROFILE = obj.PROFILE;
     } else {
       let tmp6 = null != invite.channel;
       if (tmp6) {
-        tmp6 = callback(invite.channel.type);
+        tmp6 = React3(invite.channel.type);
       }
       PROFILE = tmp6 ? tmp8.VOICE_CHANNEL : tmp8.DEFAULT;
     }

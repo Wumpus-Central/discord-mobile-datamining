@@ -1,27 +1,25 @@
-// === Module 15843: route ===
+// === Module 15843: CollectiblesShopViewAllCategoryItemsSetting ===
 
-// Module 15843 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14842 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15843 (CollectiblesShopViewAllCategoryItemsSetting)
+import Constants from "Constants" /* 1074 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14842 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
     return "";
   },
   parent: null,
-  usePredicate: useStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
+  usePredicate: useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate,
   unsearchable: true,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
-  getComponent() {
-    return require(15844) /* CollectiblesShopViewAllCategoryItemsScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS,
+    getComponent() {
+      return require("CollectiblesShopViewAllCategoryItemsScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopViewAllCategoryItemsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopViewAllCategoryItemsSetting.tsx");
 
 export default route;

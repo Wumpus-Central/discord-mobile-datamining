@@ -1,16 +1,16 @@
 // === Module 16449: ICYMINavigator ===
 
 // Module 16449 (ICYMINavigator)
-import set from "set" /* 2 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createNativeStackNavigator from "createNativeStackNavigator" /* 7913 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 7913 */;
+import size from "module_2" /* 2 */;
 
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
-const result = set.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
+({ jsx: c2, jsxs: c3 } = jsxProd);
+let closure_4 = NativeStackNavigator.createNativeStackNavigator();
+const result = size.fileFinishedImporting("modules/icymi/native/navigator/ICYMINavigator.tsx");
 
 export default function ICYMINavigator() {
-  let obj = _require(7000);
+  let obj = require("Navigator");
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
@@ -23,18 +23,18 @@ export default function ICYMINavigator() {
   obj = {
     name: "icymi-screen",
     getComponent() {
-      return callback(16450).ICYMITab;
+      return closure_0(16450).ICYMITab;
     }
   };
   const items = [
-    callback(closure_4.Screen, obj),
-    callback(closure_4.Screen, {
+    closure_2(closure_4.Screen, obj),
+    closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return callback(16401).ThemedNotificationsModal;
+        return closure_0(16401).ThemedNotificationsModal;
       }
     })
   ];
-  obj[2] = items;
-  return callback2(closure_4.Navigator, obj);
+  obj.children = items;
+  return closure_3(closure_4.Navigator, obj);
 };

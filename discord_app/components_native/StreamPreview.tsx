@@ -1,36 +1,36 @@
-// === Module 10059: render ===
+// === Module 10059: StreamPreview ===
 
-// Module 10059 (render)
+// Module 10059 (StreamPreview)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import PressableBase from "PressableBase" /* 5123 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Pressables from "Pressables" /* 5123 */;
 import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 10062 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleThemeChange" /* 1183 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-({ Image: c3, View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { wrapper: null, text: null, fallbackImage: null };
-createCacheKey = {};
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { wrapper: null, text: null, fallbackImage: null };
+createStyles = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.alignItems = "center";
-createCacheKey.justifyContent = "center";
-createCacheKey.paddingLeft = 20;
-createCacheKey.paddingRight = 20;
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
-createCacheKey[2] = { width: "100%" };
-let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const PureComponent = importAllResult.PureComponent;
+createStyles.alignItems = "center";
+createStyles.justifyContent = "center";
+createStyles.paddingLeft = 20;
+createStyles.paddingRight = 20;
+createStyles.wrapper = createStyles;
+createStyles.text = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: nativeDefault.colors.TEXT_MUTED };
+createStyles.fallbackImage = { width: "100%" };
+let closure_8 = createStyles.createLegacyClassComponentStyles(createStyles);
+const PureComponent = noop.PureComponent;
 class DefaultFallback extends PureComponent {
 }
 DefaultFallback.prototype["render"] = function render() {
-  const tmp = callback3(this.context);
+  const tmp = closure_8(this.context);
   let obj = { style: tmp.wrapper, children: null };
   obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
@@ -38,20 +38,20 @@ DefaultFallback.prototype["render"] = function render() {
   } else {
     tmp6Result = tmp6(10061);
   }
-  obj[2] = tmp6Result;
-  obj[1] = closure_6(closure_3, obj);
-  return closure_6(closure_4, obj);
+  obj.source = tmp6Result;
+  obj.children = timestampProducer(React3, obj);
+  return timestampProducer(React4, obj);
 };
-DefaultFallback.contextType = require("ManaContext").ThemeContext;
+DefaultFallback.contextType = fn(4271).ThemeContext;
+createStyles = fn(4560);
 const obj2 = { touchable: null, imageContainer: null, image: null };
-const obj3 = { flex: 1, width: "100%", height: "w", aspectRatio: true, backgroundColor: true };
-obj3[4] = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
-obj2[0] = obj3;
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.unsafe_rawColors.BLACK };
-obj2[1] = createCacheKey;
-obj2[2] = { flex: 1 };
-let closure_10 = createCacheKey.createLegacyClassComponentStyles(obj2);
-const PureComponent2 = importAllResult.PureComponent;
+let size = { flex: 1, width: "100%", height: "w", aspectRatio: true, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+obj2.touchable = size;
+let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: nativeDefault.colors.TEXT_MUTED };
+obj2.imageContainer = { flex: 1, backgroundColor: nativeDefault.unsafe_rawColors.BLACK };
+obj2.image = { flex: 1 };
+let closure_10 = createStyles.createLegacyClassComponentStyles(obj2);
+const PureComponent2 = noop.PureComponent;
 class StreamPreview extends PureComponent2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -70,7 +70,7 @@ class StreamPreview extends PureComponent2 {
   }
 }
 StreamPreview.prototype["render"] = function render() {
-  const tmp = callback4(this.context);
+  const tmp = closure_10(this.context);
   ({ url, isFetching, renderFallback, theme } = this.props);
   if (null != url) {
     if (!isFetching) {
@@ -82,27 +82,23 @@ StreamPreview.prototype["render"] = function render() {
           }
           let tmp8 = renderFallbackResult;
         }
-        let obj = { resizeMode: "contain", style: null, source: null, onLoadStart: null, onLoad: null, onError: null };
-        obj[1] = tmp.image;
-        obj = { uri: null, cache: "force-cache" };
-        obj[0] = url;
-        obj[2] = obj;
-        ({ handleLoadStart: obj[3], handleLoad: obj[4], handleError: obj[5] } = this);
-        const tmp12 = callback(closure_3, obj);
+        let obj = { resizeMode: "contain", style: tmp.image, source: null, onLoadStart: null, onLoad: null, onError: null };
+        obj = { uri: url, cache: "force-cache" };
+        obj.source = obj;
+        ({ handleLoadStart: obj.onLoadStart, handleLoad: obj.onLoad, handleError: obj.onError } = this);
+        const tmp12 = timestampProducer(React3, obj);
       }
-      obj = { accessibilityRole: "button", accessibilityLabel: null, activeOpacity: 0.6, style: null, disabled: null, onPress: null, children: null };
-      obj[1] = tmp2;
+      obj = { accessibilityRole: "button", accessibilityLabel: tmp2, activeOpacity: 0.6, style: null, disabled: null, onPress: null, children: null };
       const items = [tmp.touchable, tmp3];
-      obj[3] = items;
-      obj[4] = tmp6;
-      obj[5] = tmp5;
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp.imageContainer;
+      obj.style = items;
+      obj.disabled = tmp6;
+      obj.onPress = tmp5;
+      const obj1 = { style: tmp.imageContainer, children: null };
       const items1 = [tmp8, tmp12];
-      obj1[1] = items1;
-      const items2 = [callback2(closure_4, obj1), tmp4];
-      obj[6] = items2;
-      return callback2(PressableBase.PressableOpacity, obj);
+      obj1.children = items1;
+      const items2 = [React5(React4, obj1), tmp4];
+      obj.children = items2;
+      return React5(Pressables.PressableOpacity, obj);
     }
   }
   let renderFallbackResult1;
@@ -111,35 +107,34 @@ StreamPreview.prototype["render"] = function render() {
   }
   tmp8 = renderFallbackResult1;
 };
-StreamPreview.contextType = require("ManaContext").ThemeContext;
+StreamPreview.contextType = fn(4271).ThemeContext;
 StreamPreview.defaultProps = {
   renderFallback: function defaultRenderFallback(arg0, theme) {
     const obj = { theme, caption: null };
-    const intl = getSystemLocale.intl;
+    const intl = util.intl;
     const string = intl.string;
-    const t = getSystemLocale.t;
+    const t = util.t;
     if (arg0) {
       let stringResult = string(t.NQ7H8V);
     } else {
       stringResult = string(t.uQZTBV);
     }
-    obj[1] = stringResult;
-    return closure_6(DefaultFallback, obj);
+    obj.caption = stringResult;
+    return timestampProducer(DefaultFallback, obj);
   }
 };
-let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
-const result = require("set").fileFinishedImporting("components_native/StreamPreview.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("components_native/StreamPreview.tsx");
 
 export default function ConnectedStreamPreview(stream) {
   ({ guildId, channelId, ownerId } = stream.stream);
   ({ previewUrl, isLoading } = useFetchStreamPreviewDefault(guildId, channelId, ownerId));
-  let obj = initialize;
-  const items = [closure_5];
-  obj = {};
+  const items = [ThemeStore];
+  const obj = {};
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   const merged = Object.assign(stream);
   obj.url = previewUrl;
   obj.isFetching = isLoading;
   obj.theme = stateFromStores;
-  return callback(StreamPreview, obj);
+  return timestampProducer(StreamPreview, obj);
 };

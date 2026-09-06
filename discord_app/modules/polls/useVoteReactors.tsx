@@ -1,21 +1,23 @@
 // === Module 11723: useVoteReactors ===
 
 // Module 11723 (useVoteReactors)
-import closure_3 from "reactionKey" /* 7762 */;
-import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 1074 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
+import MessageReactionsStore from "MessageReactionsStore" /* 7762 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
+require = fn;
+let closure_4 = fn(1074).DEFAULT_NUM_REACTION_USERS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
 export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
   let obj = channelId(reaction[2]);
-  let items = [closure_3];
+  let items = [MessageReactionsStore];
   const items1 = [channelId, messageId, reaction.emoji];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const reactions = closure_1_3.getReactions(channelId, messageId, reaction.emoji, closure_1_4, channelId(reaction[3]).ReactionTypes.VOTE);
+    const reactions = MessageReactionsStore.getReactions(channelId, messageId, reaction.emoji, closure_4, MessageReactionsTypes.ReactionTypes.VOTE);
     let items;
     if (reactions != null) {
       items = reactions.values();
@@ -34,6 +36,6 @@ export default function useVoteReactors(channelId) {
   if (num == null) {
     num = 0;
   }
-  obj[1] = num > stateFromStores.length;
+  obj.hasMore = num > stateFromStores.length;
   return obj;
 };

@@ -1,30 +1,35 @@
-// === Module 9829: ? ===
+// === Module 9829: UserPlaceholderRow ===
 
-// Module 9829
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9829 (UserPlaceholderRow)
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
+import timingPresets from "timingPresets" /* 4564 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles((height) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles((height) => {
   let obj = { row: null, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
-  obj = { paddingHorizontal: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
-  obj[0] = obj;
-  obj = { marginHorizontal: ThemesDefault.space.PX_16, flex: 1 };
-  obj[1] = obj;
-  obj[2] = { alignItems: "center", flexDirection: "row" };
-  obj[3] = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  obj1 = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-  obj[4] = { height: 20, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj = { paddingHorizontal: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
+  obj.row = obj;
+  obj = { marginHorizontal: nativeDefault.space.PX_16, flex: 1 };
+  obj.rowInner = obj;
+  obj.rowHeaderWrapper = { alignItems: "center", flexDirection: "row" };
+  const size = { width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+  obj.placeholderAvatar = size;
+  obj.placeholderText = { height: 20, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
   return obj;
 });
-let closure_9 = { code: "function UserPlaceholderRowTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
+const __initData = { code: "function UserPlaceholderRowTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
+
+export default noop.memo(function UserPlaceholderRow(animate) {
   let flag = animate.animate;
   if (flag === undefined) {
     flag = true;
@@ -35,27 +40,22 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   }
   let sharedValue;
   flag = undefined;
-  const tmp3 = callback3(height);
+  const tmp3 = closure_8(height);
   let obj = sharedValue(4296);
   sharedValue = obj.useSharedValue(1);
-  obj1 = sharedValue(504);
-  const items = [closure_5];
+  let obj1 = sharedValue(504);
+  const items = [AccessibilityStore];
   if (flag) {
     flag = !obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   }
   const items1 = [flag, sharedValue];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (flag) {
-      let obj = sharedValue(closure_1_2[6]);
-      const obj2 = sharedValue(closure_1_2[6]);
-      obj = { duration: null };
-      obj[0] = 2 * sharedValue(closure_1_2[9]).timingSlowDuration;
-      const obj3 = sharedValue(closure_1_2[8]);
-      const withTimingResult = sharedValue(closure_1_2[8]).withTiming(0.3, obj);
-      obj = { duration: null };
-      obj[0] = 2 * sharedValue(closure_1_2[9]).timingSlowDuration;
-      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(closure_1_2[8]).withTiming(1, obj)), -1, true));
-      const obj5 = sharedValue(closure_1_2[8]);
+      const obj2 = ReanimatedRexport;
+      let obj = { duration: 2 * timingPresets.timingSlowDuration };
+      const withTimingResult = timing.withTiming(0.3, obj);
+      obj = { duration: 2 * timingPresets.timingSlowDuration };
+      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, timing.withTiming(1, obj)), -1, true));
     } else {
       const result1 = set(1);
     }
@@ -65,27 +65,25 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   };
   fn.__closure = { opacity: sharedValue };
   fn.__workletHash = 10137317865125;
-  fn.__initData = closure_9;
+  fn.__initData = __initData;
   const animatedStyle = sharedValue(4296).useAnimatedStyle(fn);
-  obj = { style: items2, collapsable: false, children: null };
-  items2 = [tmp3.row, animatedStyle];
+  obj = { style: null, collapsable: false, children: null };
+  const items2 = [tmp3.row, animatedStyle];
+  obj.style = items2;
   obj = { style: tmp3.placeholderAvatar };
-  const items3 = [callback(View, obj), ];
+  const items3 = [closure_6(View, obj), ];
   obj1 = { style: tmp3.rowInner, children: null };
   let obj2 = { style: tmp3.rowHeaderWrapper, children: null };
   let obj3 = { style: null };
   const items4 = [tmp3.placeholderText, ];
   const obj4 = { width: null };
   let result = 10000 * Math.sin(row);
-  obj4[0] = "" + 40 * (result - Math.floor(result)) + 40 + "%";
+  obj4.width = "" + 40 * (result - Math.floor(result)) + 40 + "%";
   items4[1] = obj4;
-  obj3[0] = items4;
-  obj2[1] = callback(View, obj3);
-  obj1[1] = callback(View, obj2);
-  items3[1] = callback(View, obj1);
-  obj[2] = items3;
-  return callback2(flag(4296).View, obj);
+  obj3.style = items4;
+  obj2.children = closure_6(View, obj3);
+  obj1.children = closure_6(View, obj2);
+  items3[1] = closure_6(View, obj1);
+  obj.children = items3;
+  return closure_7(flag(4296).View, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
-
-export default memoResult;

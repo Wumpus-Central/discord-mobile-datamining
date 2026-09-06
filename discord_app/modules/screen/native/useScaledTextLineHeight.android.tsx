@@ -1,44 +1,41 @@
-// === Module 10119: map ===
+// === Module 10119: useScaledTextLineHeight ===
 
-// Module 10119 (map)
-import set from "set" /* 2 */;
-import Text from "Text" /* 4556 */;
-import getFontScale from "getFontScale" /* 4982 */;
-import enforcingDefault from "enforcing" /* 10120 */;
+// Module 10119 (useScaledTextLineHeight)
+import Text_Text from "Text/Text" /* 4556 */;
+import useFontScale from "useFontScale" /* 4982 */;
+import NativeFontModuleDefault from "NativeFontModule" /* 10120 */;
+import size from "module_2" /* 2 */;
 
 const map = new Map();
-let result = set.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
+let result = size.fileFinishedImporting("modules/screen/native/useScaledTextLineHeight.android.tsx");
 
-export const scaleLineHeight = function scaleLineHeight(arg0, arg1) {
-  let value = map.get(arg0);
+export const scaleLineHeight = function scaleLineHeight(arg0) {
+  value = map.get(arg0);
   if (null == value) {
-    const scaledHeightForText = enforcingDefault.getScaledHeightForText(arg0);
+    const scaledHeightForText = NativeFontModuleDefault.getScaledHeightForText(arg0);
     const result = map.set(arg0, scaledHeightForText);
     value = scaledHeightForText;
-    const obj2 = enforcingDefault;
   }
   return value;
 };
 export const scaleTextLineHeight = function scaleTextLineHeight(c10, fontScale) {
-  const lineHeight = Text.TextStyleSheet[c10].lineHeight;
-  let value = map.get(lineHeight);
+  const lineHeight = Text_Text.TextStyleSheet[c10].lineHeight;
+  value = map.get(lineHeight);
   if (null == value) {
-    const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);
+    const scaledHeightForText = NativeFontModuleDefault.getScaledHeightForText(lineHeight);
     const result = map.set(lineHeight, scaledHeightForText);
     value = scaledHeightForText;
-    const obj2 = enforcingDefault;
   }
   return value;
 };
 export const useScaledTextLineHeight = function useScaledTextLineHeight(beginSearch) {
-  const fontScale = getFontScale.useFontScale();
-  const lineHeight = Text.TextStyleSheet[beginSearch].lineHeight;
-  let value = map.get(lineHeight);
+  const fontScale = useFontScale.useFontScale();
+  const lineHeight = Text_Text.TextStyleSheet[beginSearch].lineHeight;
+  value = map.get(lineHeight);
   if (null == value) {
-    const scaledHeightForText = enforcingDefault.getScaledHeightForText(lineHeight);
+    const scaledHeightForText = NativeFontModuleDefault.getScaledHeightForText(lineHeight);
     const result = map.set(lineHeight, scaledHeightForText);
     value = scaledHeightForText;
-    const obj3 = enforcingDefault;
   }
   return value;
 };

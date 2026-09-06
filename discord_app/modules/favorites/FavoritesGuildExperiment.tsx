@@ -1,16 +1,20 @@
-// === Module 10226: useFavoritesGuildConfig ===
+// === Module 10226: FavoritesGuildExperiment ===
 
-// Module 10226 (useFavoritesGuildConfig)
-import set from "set" /* 2 */;
+// Module 10226 (FavoritesGuildExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-let obj = { 1: null, 2: { enabled: true } };
+let obj = { name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null, 2: { enabled: true } };
 obj[2] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-01-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-obj = { 1: null };
-obj[1] = { enabled: true };
-let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
+obj.variations = obj;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const obj1 = { name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: null };
+const obj2 = { 1: null };
+obj2[1] = { enabled: true };
+obj1.variations = obj2;
+let closure_1 = ApexExperiment.createApexExperiment(obj1);
+const result = size.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
 
 export const useFavoritesGuildConfig = function useFavoritesGuildConfig(location) {
   const _location = location.location;

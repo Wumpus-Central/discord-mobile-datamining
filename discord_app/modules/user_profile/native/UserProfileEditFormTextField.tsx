@@ -1,14 +1,14 @@
 // === Module 14613: UserProfileEditFormTextField ===
 
 // Module 14613 (UserProfileEditFormTextField)
-import noopAll from "noop" /* 19 */;
 import TextInput from "TextInput" /* 6606 */;
 import TextArea from "TextArea" /* 7085 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditFormTextField.tsx");
 
 export default function UserProfileEditFormTextField(inputRef) {
   ({ errorMessage, numberOfLines } = inputRef);
@@ -17,25 +17,23 @@ export default function UserProfileEditFormTextField(inputRef) {
     numberOfLines = 1;
   }
   inputRef = inputRef.inputRef;
-  const merged = Object.assign(inputRef, Object.create(null));
+  const merged = Object.assign(inputRef, Object.assign({ label: 0, description: 0, errorMessage: 0, containerStyle: 0, numberOfLines: 0, inputRef: 0 }));
   let obj = { label, description, errorMessage, containerStyle, status: null };
   let str;
   if (null != errorMessage) {
     str = "error";
   }
-  obj[4] = str;
+  obj.status = str;
   const merged1 = Object.assign(merged);
   if (numberOfLines > 1) {
-    obj = { ref: null };
-    obj[0] = inputRef;
+    obj = { ref: inputRef };
     const merged2 = Object.assign(obj);
-    let tmp9 = jsx(TextArea.TextArea, { ref: null });
+    let tmp9 = jsx(TextArea.TextArea, { ref: inputRef });
   } else {
-    obj = { ref: null };
-    obj[0] = inputRef;
+    obj = { ref: inputRef };
     const merged3 = Object.assign(obj);
     obj.isClearable = true;
-    tmp9 = jsx(TextInput.TextInput, { ref: null });
+    tmp9 = jsx(TextInput.TextInput, { ref: inputRef });
   }
   return tmp9;
 };

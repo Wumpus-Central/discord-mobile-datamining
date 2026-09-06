@@ -1,9 +1,9 @@
 // === Module 1335: encodeProperties ===
 
 // Module 1335 (encodeProperties)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/encodeProperties.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/analytics-utils/encodeProperties.tsx");
 
 export const encodeProperties = function encodeProperties(arg0) {
   try {

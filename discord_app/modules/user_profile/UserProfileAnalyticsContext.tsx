@@ -1,14 +1,16 @@
-// === Module 8190: UserProfileAnalyticsProvider ===
+// === Module 8190: UserProfileAnalyticsContext ===
 
-// Module 8190 (UserProfileAnalyticsProvider)
-import contextDefault from "context" /* 7162 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8190 (UserProfileAnalyticsContext)
+import v1 from "v1" /* 1256 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
+import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8191 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-let context = importAllResult.createContext(null);
-let result = require("set").fileFinishedImporting("modules/user_profile/UserProfileAnalyticsContext.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let context = noop.createContext(null);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsContext.tsx");
 
 export const UserProfileAnalyticsProvider = (children) => {
   ({ value, openedAt } = children);
@@ -16,23 +18,20 @@ export const UserProfileAnalyticsProvider = (children) => {
   if (isLoaded === undefined) {
     isLoaded = false;
   }
-  let ref;
-  let obj;
-  closure_6 = undefined;
-  obj = isLoaded;
-  ref = isLoaded.useRef(undefined);
+  let current = isLoaded;
+  let ref = isLoaded.useRef(undefined);
   const ref1 = isLoaded.useRef(openedAt);
   if (ref1.current !== openedAt) {
     ref1.current = openedAt;
     ref.current = undefined;
   }
-  obj = { analyticsLocations: contextDefault().analyticsLocations, value };
-  closure_6 = obj.useRef(obj);
-  const effect = obj.useEffect(() => {
-    closure_6.current = obj;
+  current = { analyticsLocations: useAnalyticsLocationsDefault().analyticsLocations, value };
+  ref = current.useRef(current);
+  const effect = current.useEffect(() => {
+    closure_6.current = current;
   });
   const items = [isLoaded];
-  const effect1 = obj.useEffect(() => {
+  const effect1 = current.useEffect(() => {
     const timestamp = Date.now();
     let tmp3 = null == ref.current;
     if (tmp3) {
@@ -43,34 +42,30 @@ export const UserProfileAnalyticsProvider = (children) => {
     }
     if (isLoaded) {
       ({ analyticsLocations, value } = ref.current);
-      obj = openedAt(closure_1_2[3]);
-      obj = { action: "VIEW", analyticsLocations: null };
-      obj[1] = analyticsLocations;
+      let obj = { action: "VIEW", analyticsLocations };
       const merged = Object.assign(value);
       const result = obj.trackUserProfileAction(obj);
-      obj = { profileUi: "USER_PROFILE", timeToInteractiveMs: null, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
-      obj[1] = tmp2.current;
+      obj = { profileUi: "USER_PROFILE", timeToInteractiveMs: tmp2.current, timeToLoadMs: null, timeToFetchMs: null, viewStartedAt: null, fetchStartedAt: null, analyticsLocations: null };
       let diff;
       if (null != openedAt) {
         diff = timestamp - tmp13;
       }
-      obj[2] = diff;
+      obj.timeToLoadMs = diff;
       let diff1;
-      if (null != closure_1) {
-        if (null != closure_2) {
-          diff1 = closure_2 - tmp15;
+      if (null != importDefault) {
+        if (null != dependencyMap) {
+          diff1 = dependencyMap - tmp15;
         }
       }
-      obj[3] = diff1;
-      obj[4] = openedAt;
-      obj[5] = closure_1;
-      obj[6] = analyticsLocations;
+      obj.timeToFetchMs = diff1;
+      obj.viewStartedAt = openedAt;
+      obj.fetchStartedAt = importDefault;
+      obj.analyticsLocations = analyticsLocations;
       const merged1 = Object.assign(value);
-      const result1 = openedAt(closure_1_2[3]).maybeTrackUserProfileUiViewed(obj);
-      const obj3 = openedAt(closure_1_2[3]);
+      const result1 = UserProfileAnalyticsUtils.maybeTrackUserProfileUiViewed(obj);
     }
   }, items);
-  return ref(obj.Provider, { value, children: children.children });
+  return ref(current.Provider, { value, children: children.children });
 };
 export const useCreateUserProfileAnalyticsContext = function useCreateUserProfileAnalyticsContext(layout) {
   layout = layout.layout;
@@ -84,78 +79,68 @@ export const useCreateUserProfileAnalyticsContext = function useCreateUserProfil
   if (flag === undefined) {
     flag = true;
   }
-  let sessionId;
   const context = channelId.useContext(roleId);
-  sessionId = undefined;
+  let sessionId;
   if (context != null) {
     sessionId = context.sessionId;
   }
   const items = [sessionId, layout, userId, guildId, channelId, messageId, roleId, sourceSessionId, flag];
   return channelId.useMemo(() => {
-    const obj = { sessionId: layout(guildId[4]).v4(), sourceSessionId: null, layout: null, userId: null, guildId: null, channelId: null, messageId: null, roleId: null, showGuildProfile: null };
+    const obj = { sessionId: v1.v4(), sourceSessionId: null, layout: null, userId: null, guildId: null, channelId: null, messageId: null, roleId: null, showGuildProfile: null };
     let tmp = sourceSessionId;
     if (sourceSessionId == null) {
       tmp = sessionId;
     }
-    obj[1] = tmp;
-    obj[2] = layout;
-    obj[3] = userId;
-    obj[4] = guildId;
-    obj[5] = channelId;
-    obj[6] = messageId;
-    obj[7] = roleId;
-    obj[8] = flag;
+    obj.sourceSessionId = tmp;
+    obj.layout = layout;
+    obj.userId = userId;
+    obj.guildId = guildId;
+    obj.channelId = channelId;
+    obj.messageId = messageId;
+    obj.roleId = roleId;
+    obj.showGuildProfile = flag;
     return obj;
   }, items);
 };
 export const useUserProfileAnalyticsContext = function useUserProfileAnalyticsContext() {
-  const context = importAllResult.useContext(closure_5);
+  const context = noop.useContext(closure_5);
   analyticsLocations = analyticsLocations(7162)().analyticsLocations;
+  let obj = { context, trackUserProfileAction: null, trackUserProfileEditAction: null, trackUserProfileEditSaved: null, trackUserProfileWishlistAction: null };
   const items = [context, analyticsLocations];
+  obj.trackUserProfileAction = noop.useCallback((arg0) => {
+    if (null != context) {
+      const obj = { analyticsLocations };
+      const merged = Object.assign(tmp);
+      const merged1 = Object.assign(arg0);
+      const result = obj.trackUserProfileAction(obj);
+    }
+  }, items);
   const items1 = [context, analyticsLocations];
+  obj.trackUserProfileEditAction = noop.useCallback((arg0) => {
+    if (null != context) {
+      const obj = { analyticsLocations };
+      const merged = Object.assign(tmp);
+      const merged1 = Object.assign(arg0);
+      const result = obj.trackUserProfileEditAction(obj);
+    }
+  }, items1);
   const items2 = [context, analyticsLocations];
+  obj.trackUserProfileEditSaved = noop.useCallback((arg0) => {
+    if (null != context) {
+      const obj = { analyticsLocations };
+      const merged = Object.assign(tmp);
+      const merged1 = Object.assign(arg0);
+      const result = obj.trackUserProfileEditSaved(obj);
+    }
+  }, items2);
   const items3 = [context, analyticsLocations];
-  return {
-    context,
-    trackUserProfileAction: importAllResult.useCallback((arg0) => {
-      if (null != context) {
-        let obj = context(closure_1_2[3]);
-        obj = { analyticsLocations: null };
-        obj[0] = analyticsLocations;
-        const merged = Object.assign(tmp);
-        const merged1 = Object.assign(arg0);
-        const result = obj.trackUserProfileAction(obj);
-      }
-    }, items),
-    trackUserProfileEditAction: importAllResult.useCallback((arg0) => {
-      if (null != context) {
-        let obj = context(closure_1_2[3]);
-        obj = { analyticsLocations: null };
-        obj[0] = analyticsLocations;
-        const merged = Object.assign(tmp);
-        const merged1 = Object.assign(arg0);
-        const result = obj.trackUserProfileEditAction(obj);
-      }
-    }, items1),
-    trackUserProfileEditSaved: importAllResult.useCallback((arg0) => {
-      if (null != context) {
-        let obj = context(closure_1_2[3]);
-        obj = { analyticsLocations: null };
-        obj[0] = analyticsLocations;
-        const merged = Object.assign(tmp);
-        const merged1 = Object.assign(arg0);
-        const result = obj.trackUserProfileEditSaved(obj);
-      }
-    }, items2),
-    trackUserProfileWishlistAction: importAllResult.useCallback((arg0) => {
-      if (null != context) {
-        let obj = context(closure_1_2[3]);
-        obj = { analyticsLocations: null };
-        obj[0] = analyticsLocations;
-        const merged = Object.assign(tmp);
-        const merged1 = Object.assign(arg0);
-        const result = obj.trackUserProfileWishlistAction(obj);
-      }
-    }, items3)
-  };
+  obj.trackUserProfileWishlistAction = noop.useCallback((arg0) => {
+    if (null != context) {
+      const obj = { analyticsLocations };
+      const merged = Object.assign(tmp);
+      const merged1 = Object.assign(arg0);
+      const result = obj.trackUserProfileWishlistAction(obj);
+    }
+  }, items3);
+  return obj;
 };

@@ -1,13 +1,13 @@
 // === Module 17283: trackHttpRequest ===
 
 // Module 17283 (trackHttpRequest)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import trackZoomedInHttpRequestDefault from "trackZoomedInHttpRequest" /* 17285 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/telemetry_ring/trackHttpRequest.tsx");
 
 export default function trackHttpRequest(url) {
   let obj = {};
@@ -24,7 +24,7 @@ export default function trackHttpRequest(url) {
     obj = {};
     const merged1 = Object.assign(obj);
     obj.source = "sample";
-    expandEventPropertiesDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
-    const tmp3Result = expandEventPropertiesDefault;
+    AnalyticsUtilsDefault.track(AnalyticEvents.HTTP_REQUEST, obj);
+    const tmp3Result = AnalyticsUtilsDefault;
   }
 };

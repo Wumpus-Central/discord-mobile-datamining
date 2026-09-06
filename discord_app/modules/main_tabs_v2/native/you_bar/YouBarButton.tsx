@@ -1,15 +1,12 @@
-// === Module 16392: YouBarButtonIcon ===
+// === Module 16392: YouBarButton ===
 
-// Module 16392 (YouBarButtonIcon)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16392 (YouBarButton)
+import nativeDefault from "native" /* 576 */;
 import IconButton from "IconButton" /* 8097 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 15098 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ClipView from "ClipView" /* 8813 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class YouBarButtonIcon {
   constructor(arg0) {
     hasBadge = global.hasBadge;
@@ -17,28 +14,31 @@ class YouBarButtonIcon {
     badgeSize = undefined;
     obj = { size: YOU_BAR_BUTTON_ICON_SIZE, badgeRadius: 4, borderWidth: 2 };
     tmp = YOU_BAR_BUTTON_ICON_SIZE;
-    size = undefined;
-    badgeSize = undefined;
-    c2 = undefined;
-    c3 = undefined;
-    badgeWidth = undefined;
-    borderWidth = undefined;
+    closure_129_0 = undefined;
+    closure_129_1 = undefined;
+    closure_129_2 = undefined;
+    closure_129_3 = undefined;
+    closure_129_4 = undefined;
+    closure_129_5 = undefined;
     size = obj.size;
+    closure_129_0 = size;
     num = obj.xOffset;
     ({ icon, badgeStyle } = global);
     if (num === undefined) {
       num = 0;
     }
-    badgeSize = num;
+    closure_129_1 = num;
     num2 = obj.yOffset;
     if (num2 === undefined) {
       num2 = 0;
     }
-    c2 = num2;
+    closure_129_2 = num2;
     badgeRadius = obj.badgeRadius;
-    c3 = badgeRadius;
+    closure_129_3 = badgeRadius;
     badgeWidth = obj.badgeWidth;
+    closure_129_4 = badgeWidth;
     borderWidth = obj.borderWidth;
+    closure_129_5 = borderWidth;
     obj2 = c3;
     items = [, , , , , ];
     items[0] = badgeRadius;
@@ -48,13 +48,14 @@ class YouBarButtonIcon {
     items[4] = num2;
     items[5] = badgeWidth;
     memo = c3.useMemo(() => {
-      const sum = num4 + borderWidth;
+      const sum = num4 + hitSlop;
       const result = 2 * sum;
       let sum1 = result;
-      if (null != badgeWidth) {
+      if (null != View) {
         sum1 = tmp4 + 2 * tmp;
       }
-      return { shape: size2(num3[6]).CutoutShape.RoundedRect, x: size2 - (result - borderWidth) + badgeSize, y: size2 - (result - borderWidth) + num3, width: sum1, height: result, cornerRadius: Math.min(sum, size2 / 2, sum1 / 2) };
+      size = { shape: ClipView.CutoutShape.RoundedRect, x: size2 - (result - tmp) + badgeSize, y: size2 - (result - tmp) + num3, width: sum1, height: result, cornerRadius: Math.min(sum, size2 / 2, sum1 / 2) };
+      return size;
     }, items);
     badgeSize = memo;
     obj = { size: tmp, badgeSize: 8 };
@@ -83,7 +84,10 @@ class YouBarButtonIcon {
     items2 = [, ];
     items2[0] = memo;
     items2[1] = hasBadge;
-    memo1 = obj2.useMemo(() => ({ position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "call", bottom: "mn", padding: "fileFinishedImporting", minWidth: "accessible" }), items1);
+    memo1 = obj2.useMemo(() => {
+      const rect = { position: "absolute", left: size2 - badgeSize + num3, top: size2 - badgeSize + num4, right: "call", bottom: "mn", padding: "fileFinishedImporting", minWidth: "accessible" };
+      return rect;
+    }, items1);
     obj1 = { style: { position: "relative", height: tmp, width: tmp }, children: null };
     memo2 = obj2.useMemo(() => {
       if (size2) {
@@ -95,20 +99,20 @@ class YouBarButtonIcon {
       return items1;
     }, items2);
     tmp5 = jsxs;
-    tmp6 = badgeWidth;
+    tmp6 = View;
     tmp7 = jsx;
     tmp8 = badgeSize;
     tmp9 = c2;
     items3 = [, ];
-    items3[0] = jsx(require("SolidCutout"), { cutouts: memo2, children: icon });
+    items3[0] = jsx(badgeSize(c2[6]), { cutouts: memo2, children: icon });
     if (hasBadge) {
       obj2 = { style: null, size: 8, badgeStyle: null };
-      obj2[0] = memo1;
-      obj2[2] = badgeStyle;
-      hasBadge = tmp7(require("DEFAULT_BADGE_SIZE"), obj2);
+      obj2.style = memo1;
+      obj2.badgeStyle = badgeStyle;
+      hasBadge = tmp7(tmp8(tmp9[7]), obj2);
     }
     items3[1] = hasBadge;
-    obj1[1] = items3;
+    obj1.children = items3;
     return tmp5(tmp6, obj1);
   }
 }
@@ -118,31 +122,29 @@ class YouBarButtonContainer {
     return jsx(View, obj);
   }
 }
-let c3 = importAllResult;
-({ YOU_BAR_BUTTON_HIT_SLOP: c5, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = CONNECTION_BANNER_HEIGHT);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+const View = fn(17).View;
+const YouBarConstants = fn(15098);
+({ YOU_BAR_BUTTON_HIT_SLOP: hasOwnProperty, YOU_BAR_BUTTON_ICON_SIZE: metroRequire } = YouBarConstants);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { buttonContainer: null };
-obj = { position: "relative", borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
-obj[0] = obj;
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function YouBarButton(arg0) {
+obj = { position: "relative", borderRadius: nativeDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
+obj.buttonContainer = obj;
+const React7 = createStyles.createStyles(obj);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
+
+export default noop.memo(function YouBarButton(arg0) {
   ({ hasNameplate, icon, hasBadge, badgeStyle, onPress, onLongPress, accessibilityLabel } = arg0);
   let obj = { accessibilityLabel, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
   let str = "tertiary";
   if (hasNameplate) {
     str = "secondary-overlay";
   }
-  obj = { children: null };
-  obj[1] = str;
-  obj[3] = closure_7(YouBarButtonIcon, { icon, badgeStyle, hasBadge });
-  obj[4] = onPress;
-  obj[5] = onLongPress;
-  obj[6] = closure_5;
-  obj[0] = closure_7(IconButton.IconButton, obj);
-  return closure_7(YouBarButtonContainer, obj);
+  obj = { children: null, variant: str, icon: React5(YouBarButtonIcon, { icon, badgeStyle, hasBadge }), onPress, onLongPress, hitSlop };
+  obj.children = React5(IconButton.IconButton, obj);
+  return React5(YouBarButtonContainer, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
-
-export default memoResult;
 export { YouBarButtonIcon };
 export { YouBarButtonContainer };

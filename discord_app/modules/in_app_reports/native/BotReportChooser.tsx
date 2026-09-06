@@ -1,88 +1,81 @@
-// === Module 12991: ReportAppProfile ===
+// === Module 12991: BotReportChooser ===
 
-// Module 12991 (ReportAppProfile)
-import noopAll from "noop" /* 19 */;
+// Module 12991 (BotReportChooser)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import fetchApplication from "fetchApplication" /* 7163 */;
+import util from "util" /* 1114 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 7163 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
-import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7200 */;
-import closure_3 from "addApplication" /* 4788 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ActionSheetRow from "ActionSheetRow" /* 7200 */;
+import ReportModals from "ReportModals" /* 8629 */;
+import noop from "module_19" /* 19 */;
+import ApplicationStore from "ApplicationStore" /* 4788 */;
 
-require = arg1;
+require = fn;
 function ReportAppProfile(arg0) {
-  ({ user: require, contextualGuildId: importDefault, onSubmit: dependencyMap, appContext: closure_3 } = arg0);
+  ({ user: require, contextualGuildId: importDefault, onSubmit: dependencyMap, appContext: ApplicationStore } = arg0);
   let obj = { label: null, subLabel: null, onPress: null, arrow: true };
   obj = { variant: "heading-md/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.eyEkG1);
-  obj[0] = callback(Text.Text, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.eyEkG1);
+  obj.label = closure_4(Text_Text.Text, obj);
   obj = { variant: "text-xs/medium", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t.ptItsj);
-  obj[1] = callback(Text.Text, obj);
-  obj[2] = function onPress() {
-    closure_1_1(closure_1_2[7]).hideActionSheet(closure_1_6);
-    const obj = closure_1_1(closure_1_2[7]);
-    const result = closure_1_0(closure_1_2[8]).showReportModalForUser(closure_0, closure_1, closure_2, closure_3);
+  const intl2 = util.intl;
+  obj.children = intl2.string(util.t.ptItsj);
+  obj.subLabel = closure_4(Text_Text.Text, obj);
+  obj.onPress = function onPress() {
+    ActionSheetActionCreatorsDefault.hideActionSheet(BotReportChooser);
+    const result = ReportModals.showReportModalForUser(closure_1_0, closure_1_1, dependencyMap, ApplicationStore);
   };
-  return callback(ActionSheetRowIcon.ActionSheetRow, obj);
+  return closure_4(ActionSheetRow.ActionSheetRow, obj);
 }
 function ReportAppBehavior(arg0) {
-  ({ user: require, entrypoint: importDefault, contextualGuildId: dependencyMap, contextualChannelId: closure_3, onSubmit: closure_4, appContext: closure_5 } = arg0);
-  let data;
+  ({ user: require, entrypoint: importDefault, contextualGuildId: dependencyMap, contextualChannelId: ApplicationStore, onSubmit: closure_4, appContext: closure_5 } = arg0);
   let obj = initialize;
-  const items = [closure_3];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getAppIdForBotUserId(id.id));
-  obj1 = fetchApplication;
-  data = obj1.useApplication(stateFromStores).data;
+  const items = [ApplicationStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ApplicationStore.getAppIdForBotUserId(id.id));
+  let obj1 = ApplicationActionCreators;
+  const data = obj1.useApplication(stateFromStores).data;
   obj = { label: null, subLabel: null, onPress: null, arrow: true, disabled: null };
   obj = { variant: "heading-md/semibold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.atP0yX);
-  obj[0] = callback(Text.Text, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.atP0yX);
+  obj.label = onSubmit(Text_Text.Text, obj);
   obj1 = { variant: "text-xs/medium", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj1[1] = intl2.string(getSystemLocale.t.UGg603);
-  obj[1] = callback(Text.Text, obj1);
-  obj[2] = function onPress() {
+  const intl2 = util.intl;
+  obj1.children = intl2.string(util.t.UGg603);
+  obj.subLabel = onSubmit(Text_Text.Text, obj1);
+  obj.onPress = function onPress() {
     if (null != data) {
-      let obj = closure_1_1(closure_1_2[7]);
-      obj.hideActionSheet(data);
-      obj = { application: null, entrypoint: null, contextualGuildId: null, contextualChannelId: null, onSubmit: null, appContext: null };
-      obj[0] = tmp;
-      obj[1] = closure_1;
-      obj[2] = closure_2;
-      obj[3] = closure_3;
-      obj[4] = closure_4;
-      obj[5] = closure_5;
-      const result = closure_1_0(closure_1_2[8]).showReportModalForApp(obj);
-      const obj2 = closure_1_0(closure_1_2[8]);
+      let obj = ActionSheetActionCreatorsDefault;
+      obj.hideActionSheet(BotReportChooser);
+      obj = { application: tmp, entrypoint, contextualGuildId, contextualChannelId, onSubmit, appContext };
+      const result = ReportModals.showReportModalForApp(obj);
     }
   };
-  obj[4] = null == data;
-  return callback(ActionSheetRowIcon.ActionSheetRow, obj);
+  obj.disabled = null == data;
+  return onSubmit(ActionSheetRow.ActionSheetRow, obj);
 }
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const BotReportChooser = "BotReportChooser";
-let result = require("set").fileFinishedImporting("modules/in_app_reports/native/BotReportChooser.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/in_app_reports/native/BotReportChooser.tsx");
 
 export default function BotReportChooser(arg0) {
   let obj = { header: null, children: null };
   obj = { style: { textAlign: "center" }, variant: "redesign/heading-18/bold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.Bd10bR);
-  obj[0] = callback(Text.Text, obj);
+  const intl = util.intl;
+  obj.children = intl.string(util.t.Bd10bR);
+  obj.header = React4(Text_Text.Text, obj);
   obj = { hasIcons: false, children: null };
   const merged = Object.assign(arg0);
-  const items = [callback(ReportAppProfile, {}), ];
+  const items = [React4(ReportAppProfile, {}), ];
   const merged1 = Object.assign(arg0);
-  items[1] = callback(ReportAppBehavior, {});
-  obj[1] = items;
-  obj[1] = callback2(ActionSheetRowIcon.ActionSheetRow.Group, obj);
-  return callback(ActionSheet.ActionSheet, obj);
+  items[1] = React4(ReportAppBehavior, {});
+  obj.children = items;
+  obj.children = hasOwnProperty(ActionSheetRow.ActionSheetRow.Group, obj);
+  return React4(ActionSheet.ActionSheet, obj);
 };
 export const BOT_REPORT_CHOOSER_KEY = "BotReportChooser";

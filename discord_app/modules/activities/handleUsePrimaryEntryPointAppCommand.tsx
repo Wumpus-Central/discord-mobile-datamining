@@ -1,268 +1,221 @@
-// === Module 9548: _handleUsePrimaryEntryPointAppCommand ===
+// === Module 9548: handleUsePrimaryEntryPointAppCommand ===
 
-// Module 9548 (_handleUsePrimaryEntryPointAppCommand)
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
+// Module 9548 (handleUsePrimaryEntryPointAppCommand)
+import getCachedOrFetchActivityApplicationForLaunchDefault from "getCachedOrFetchActivityApplicationForLaunch" /* 9537 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-function _handleUsePrimaryEntryPointAppCommand() {
-  let self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c4 = 0;
-    c5 = 0;
-    c3 = 0;
-    return (function*(arg0) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+const require = fn;
+let closure_7 = async function _handleUsePrimaryEntryPointAppCommand(arg0) {
+  let targetApplicationId = arg0;
+  c4 = 0;
+  c5 = 0;
+  c3 = 0;
+  return (async (arg0, value) => {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c5 = 2;
-          if (0 === c4) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp20;
-              closure_1 = undefined;
-              closure_2 = undefined;
-              if (null == lib.targetApplicationId) {
-                c5 = 3;
-                return { value: false, done: true };
-              } else {
-                closure_2 = false;
-                dependencyMap = 1;
-                c4 = 2;
-                c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(9537)(tmp27.targetApplicationId, tmp27.channelId);
-                return obj1;
-              }
-            }
-          } else if (1 === tmp7) {
-            dependencyMap = 0;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
+          if (arg0 === 1) {
             c5 = 3;
-            return { value: false, done: true };
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            dependencyMap = 0;
             c5 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
+            obj = { value, done: true };
+            return obj;
           } else {
-            closure_1 = arg1;
-            obj = lib(9534);
-            closure_2 = obj.shouldOpenActivityInPopoutWindow();
-            dependencyMap = 0;
-            obj1 = lib(9534);
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = obj1.wrapPreemptiveActivityPopout(closure_2, () => {
-              const obj = {};
-              const merged = Object.assign(closure_0);
-              obj.targetApplication = closure_1;
-              return (function handleUsePrimaryEntryPointAppCommandInternal(arg0) {
-                const self = this;
-                const apply = closure_8.apply;
-                if (typeof apply === "unknown") {
-                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-                } else {
-                  applyArgumentsResult = apply(self, arguments);
-                }
-                return applyArgumentsResult;
-              })(obj);
-            });
-            return obj3;
+            closure_2 = tmp3;
+            const targetApplication = tmp20;
+            closure_129_0 = targetApplicationId;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            if (null == targetApplicationId.targetApplicationId) {
+              c5 = 3;
+              return { value: false, done: true };
+            } else {
+              closure_129_2 = false;
+              c3 = 1;
+              c4 = 2;
+              c5 = 1;
+              let obj1 = { value: getCachedOrFetchActivityApplicationForLaunchDefault(tmp26.targetApplicationId, tmp26.channelId), done: false };
+              return obj1;
+            }
           }
-        } catch (tmp19) {
-          if (tmp4 === dependencyMap) {
-            c5 = tmp2;
-            throw tmp19;
-          } else {
-            c4 = tmp;
-          }
-          tmp20 = dependencyMap;
-        }
-      }
-    })();
-  });
-  closure_7 = tmp;
-  let apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _handleUsePrimaryEntryPointAppCommandInternal() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
+        } else if (1 === tmp7) {
+          c3 = 0;
+          c5 = 3;
+          return { value: false, done: true };
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c3 = 0;
+          c5 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_129_1 = value;
+          obj = closure_130_0(closure_130_3[4]);
+          closure_129_2 = obj.shouldOpenActivityInPopoutWindow();
+          c3 = 0;
+          obj1 = closure_130_0(closure_130_3[4]);
+          c5 = 3;
+          const obj3 = {
+            value: obj1.wrapPreemptiveActivityPopout(closure_129_2, () => {
+                    const obj = {};
+                    const merged = Object.assign(targetApplicationId);
+                    obj.targetApplication = targetApplication;
+                    return (function handleUsePrimaryEntryPointAppCommandInternal() {
+                      const self = this;
+                      const apply = closure_1_8.apply;
+                      if (typeof apply === "unknown") {
+                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                      } else {
+                        applyArgumentsResult = apply(self, arguments);
+                      }
+                      return applyArgumentsResult;
+                    })(obj);
+                  }),
+            done: true
+          };
+          return obj3;
+        }
+      } catch (tmp19) {
+        if (tmp4 === c3) {
+          c5 = tmp2;
+          throw tmp19;
+        } else {
+          c4 = tmp;
+        }
+        tmp20 = c3;
+      }
+    }
+  })();
+};
+let closure_8 = async function _handleUsePrimaryEntryPointAppCommandInternal(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          closure_129_7 = undefined;
+          closure_129_8 = undefined;
+          closure_129_9 = undefined;
+          closure_129_10 = undefined;
+          closure_129_11 = undefined;
+          closure_129_12 = undefined;
+          ({ targetApplication: closure_129_0, locationObject: closure_129_1, channelId: closure_129_2, analyticsLocations: closure_129_3, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, source: closure_129_7, onExecutedCallback: closure_129_8, referrerId: closure_129_9, customId: closure_129_10, inviterUserId: closure_129_11, onConfirmActivityLaunchChecksAlertOpen: closure_129_12 } = closure_0);
+          closure_129_13 = undefined;
+          let currentUser;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
         }
       } else {
-        try {
-          c4 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let callback2 = tmp5;
-              let callback = tmp2;
-              let lib;
-              callback = undefined;
-              callback2 = undefined;
-              dependencyMap = undefined;
-              c4 = undefined;
-              let channel;
-              let currentUser;
-              c7 = undefined;
-              c8 = undefined;
-              c9 = undefined;
-              c10 = undefined;
-              c11 = undefined;
-              c12 = undefined;
-              ({ targetApplication: c0, locationObject: c1, channelId: c2, analyticsLocations: c3, componentId: c4, commandOrigin: c5, sectionName: c6, source: c7, onExecutedCallback: c8, referrerId: c9, customId: c10, inviterUserId: c11, onConfirmActivityLaunchChecksAlertOpen: c12 } = lib);
-              closure_13 = undefined;
-              let currentUser2;
-              dependencyMap = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj1 = { value, done: true };
+            return obj1;
           } else {
-            if (1 === tmp5) {
-              if (arg0 === 1) {
-                c4 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c4 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
-                return obj1;
-              } else {
-                closure_13 = callback(9514)();
-                currentUser2 = currentUser.getCurrentUser();
-                let tmp17 = null != callback2;
-                if (tmp17) {
-                  let tmp11 = null != channel.getChannel(callback2);
-                  if (tmp11) {
-                    let tmp14 = null != currentUser2;
-                    if (tmp14) {
-                      tmp14 = null != lib;
-                    }
-                    let tmp6 = tmp14;
-                    if (tmp14) {
-                      let obj2 = callback2(9549);
-                      obj2.markActivityUsed(lib.id);
-                      let obj3 = lib(9504);
-                      obj2 = { channelId: null, applicationId: null, isStart: true, embeddedActivitiesManager: null, componentId: null, commandOrigin: null, sectionName: null, locationObject: null, analyticsLocations: null, source: null, onExecutedCallback: null, referrerId: null, customId: null, inviterUserId: null, onConfirmActivityLaunchChecksAlertOpen: null };
-                      obj2[0] = callback2;
-                      obj2[1] = lib.id;
-                      obj2[3] = closure_13;
-                      obj2[4] = c4;
-                      obj2[5] = channel;
-                      obj2[6] = currentUser;
-                      obj2[7] = callback;
-                      obj2[8] = dependencyMap;
-                      obj2[9] = c7;
-                      obj2[10] = c8;
-                      obj2[11] = c9;
-                      obj2[12] = c10;
-                      obj2[13] = c11;
-                      obj2[14] = c12;
-                      dependencyMap = 2;
-                      c4 = 1;
-                      obj3 = { value: null, done: false };
-                      obj3[0] = obj3.runPrimaryAppCommandOrJoinEmbeddedActivity(obj2);
-                      return obj3;
-                    }
-                  }
-                  tmp17 = tmp11;
+            closure_129_13 = closure_130_1(closure_130_3[5])();
+            currentUser = closure_130_6.getCurrentUser();
+            let tmp17 = null != closure_129_2;
+            if (tmp17) {
+              let tmp11 = null != closure_130_5.getChannel(closure_129_2);
+              if (tmp11) {
+                let tmp14 = null != currentUser;
+                if (tmp14) {
+                  tmp14 = null != closure_129_0;
                 }
-                c4 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = tmp17;
-                return obj4;
+                let tmp6 = tmp14;
+                if (tmp14) {
+                  let obj2 = closure_130_2(closure_130_3[6]);
+                  obj2.markActivityUsed(closure_129_0.id);
+                  let obj3 = closure_130_0(closure_130_3[7]);
+                  obj2 = { channelId: closure_129_2, applicationId: closure_129_0.id, isStart: true, embeddedActivitiesManager: closure_129_13, componentId: closure_129_4, commandOrigin: closure_129_5, sectionName: closure_129_6, locationObject: closure_129_1, analyticsLocations: closure_129_3, source: closure_129_7, onExecutedCallback: closure_129_8, referrerId: closure_129_9, customId: closure_129_10, inviterUserId: closure_129_11, onConfirmActivityLaunchChecksAlertOpen: closure_129_12 };
+                  c3 = 2;
+                  c4 = 1;
+                  obj3 = { value: null, done: false };
+                  obj3.value = obj3.runPrimaryAppCommandOrJoinEmbeddedActivity(obj2);
+                  return obj3;
+                }
               }
-            } else if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else {
-              tmp6 = arg1;
-              if (arg0 === 2) {
-                c4 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
+              tmp17 = tmp11;
             }
-            tmp11 = tmp6;
+            c4 = 3;
+            const obj4 = { value: tmp17, done: true };
+            return obj4;
           }
-        } catch (tmp40) {
-          c4 = tmp;
-          throw tmp40;
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else {
+          tmp6 = value;
+          if (arg0 === 2) {
+            c4 = 3;
+            obj = { value, done: true };
+            return obj;
+          }
         }
+        tmp11 = tmp6;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp40) {
+      c4 = tmp;
+      throw tmp40;
+    }
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
 
 export default function handleUsePrimaryEntryPointAppCommand() {
   const self = this;
-  const apply = _handleUsePrimaryEntryPointAppCommand.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

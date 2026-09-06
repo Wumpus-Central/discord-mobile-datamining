@@ -1,36 +1,35 @@
-// === Module 12360: getSession ===
+// === Module 12360: AbstractSearchSessionAnalyticsManager ===
 
-// Module 12360 (getSession)
-import set from "set" /* 2 */;
+// Module 12360 (AbstractSearchSessionAnalyticsManager)
 import v1 from "v1" /* 1256 */;
-import SearchTokenTypes from "SearchTokenTypes" /* 12340 */;
+import SearchUtils from "SearchUtils" /* 12340 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
+let result = size.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
 class AbstractSearchSessionAnalyticsManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ sessions: null });
     map = new Map();
-    obj[0] = map;
-    return obj;
+    merged[0] = map;
+    return merged;
   }
 }
 const prototype = AbstractSearchSessionAnalyticsManager.prototype;
 prototype["getSession"] = function getSession(searchContext) {
   const sessions = this.sessions;
-  let value = sessions.get(SearchTokenTypes.getSearchContextId(searchContext));
+  value = sessions.get(SearchUtils.getSearchContextId(searchContext));
   if (value == null) {
     value = null;
   }
   return value;
 };
-prototype["setSession"] = function setSession(searchContext) {
-  let obj = SearchTokenTypes;
+prototype["setSession"] = function setSession(searchContext, arg1) {
+  let obj = SearchUtils;
   const searchContextId = obj.getSearchContextId(searchContext);
   const sessions = this.sessions;
-  let value = sessions.get(searchContextId);
+  value = sessions.get(searchContextId);
   if (value == null) {
-    obj = { sessionId: null, searchQueryId: null };
-    obj[0] = v1.v4();
+    obj = { sessionId: v1.v4(), searchQueryId: null };
     value = obj;
     const tmpResult = v1;
   }
@@ -42,7 +41,7 @@ prototype["setSession"] = function setSession(searchContext) {
 };
 prototype["deleteSession"] = function deleteSession(searchContext) {
   const sessions = this.sessions;
-  sessions.delete(SearchTokenTypes.getSearchContextId(searchContext));
+  sessions.delete(SearchUtils.getSearchContextId(searchContext));
 };
 prototype["getSessionId"] = function getSessionId(arg0) {
   const session = this.getSession(arg0);
@@ -85,11 +84,10 @@ prototype["transferSession"] = function transferSession(arg0, searchContext) {
   this._transferSession(arg0, searchContext);
   let session = this.getSession(arg0);
   const sessions = this.sessions;
-  let obj = SearchTokenTypes;
+  let obj = SearchUtils;
   const searchContextId = obj.getSearchContextId(searchContext);
   if (session == null) {
-    obj = { sessionId: null, searchQueryId: null };
-    obj[0] = v1.v4();
+    obj = { sessionId: v1.v4(), searchQueryId: null };
     session = obj;
     const tmp3Result = v1;
   }

@@ -1,20 +1,18 @@
-// === Module 509: add ===
+// === Module 509: LastFewActions ===
 
-// Module 509 (add)
-import set from "set" /* 2 */;
+// Module 509 (LastFewActions)
+import size from "module_2" /* 2 */;
 
 let closure_0 = [];
-const result = set.fileFinishedImporting("../discord_common/js/packages/flux/LastFewActions.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/flux/LastFewActions.tsx");
 
 export const add = function add(arg0) {
   let length;
-  arr = arr.push(arg0);
-  if (arr.length > 10) {
+  closure_0.push(arg0);
+  if (closure_0.length > 10) {
     do {
-      let tmp2 = arr;
-      arr = arr.shift();
-      let tmp4 = arr;
-      length = arr.length;
+      let arr = closure_0.shift();
+      length = closure_0.length;
     } while (length > 10);
   }
 };
@@ -23,12 +21,12 @@ export function clear() {
   return closure_0;
 }
 export const serialize = function serialize() {
-  return arr.join(" -> ");
+  return closure_0.join(" -> ");
 };
 export const last = function last() {
   let tmp = null;
-  if (arr.length > 0) {
-    tmp = arr[arr.length - 1];
+  if (closure_0.length > 0) {
+    tmp = closure_0[closure_0.length - 1];
   }
   return tmp;
 };

@@ -1,56 +1,54 @@
 // === Module 11083: useHandleUseNow ===
 
 // Module 11083 (useHandleUseNow)
-import closure_3 from "noop" /* 19 */;
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 11084 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11088 */;
+import noop from "module_19" /* 19 */;
 
-let require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
+require = fn;
+const RootNavigatorScreen = fn(11084).RootNavigatorScreen;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/useHandleUseNow.tsx");
 
 export const useHandleUseNow = function useHandleUseNow(analyticsLocations) {
   const product = analyticsLocations.product;
   require = product;
-  const onSuccess = analyticsLocations.onSuccess;
   const stageCollectibleChangeForEditProfile = analyticsLocations.stageCollectibleChangeForEditProfile;
-  let callback;
-  let handleUseNow;
-  closure_5 = undefined;
+  let onSuccess;
   const items = [onSuccess, stageCollectibleChangeForEditProfile];
-  callback = callback.useCallback(() => {
+  onSuccess = onSuccess.useCallback(() => {
     if (null == onSuccess) {
-      onSuccess(stageCollectibleChangeForEditProfile[2]).hideAllActionSheets();
-      const obj = onSuccess(stageCollectibleChangeForEditProfile[2]);
-      const tmp4 = stageCollectibleChangeForEditProfile;
-      onSuccess(stageCollectibleChangeForEditProfile[3]).popAll();
+      ActionSheetActionCreatorsDefault.hideAllActionSheets();
+      ModalActionCreatorsDefault.popAll();
       if (null == stageCollectibleChangeForEditProfile) {
-        const rootNavigationRef = product(tmp4[4]).getRootNavigationRef();
-        const obj3 = product(tmp4[4]);
+        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
         if (tmp9) {
-          rootNavigationRef.navigate(handleUseNow.YOU);
+          rootNavigationRef.navigate(RootNavigatorScreen.YOU);
         }
         tmp9 = null != rootNavigationRef && rootNavigationRef.isReady();
       }
-      const obj2 = onSuccess(stageCollectibleChangeForEditProfile[3]);
     } else {
       tmp();
     }
   }, items);
-  const callback1 = callback.useCallback(() => {
-    let obj = onSuccess(stageCollectibleChangeForEditProfile[5]);
-    obj = { key: "collectible shop apply error", content: null };
+  const callback1 = onSuccess.useCallback(() => {
+    onSuccess(stageCollectibleChangeForEditProfile[5]);
+    const obj = { key: "collectible shop apply error", content: null };
     const intl = product(stageCollectibleChangeForEditProfile[6]).intl;
-    obj[1] = intl.string(product(stageCollectibleChangeForEditProfile[6]).t.CKsXk3);
+    obj.content = intl.string(product(stageCollectibleChangeForEditProfile[6]).t.CKsXk3);
     obj.open(obj);
   }, []);
-  let obj = require(stageCollectibleChangeForEditProfile[7]);
-  handleUseNow = obj.useHandleUseNow({ product, onSuccess: callback, onError: callback1 });
+  let obj = require("hooks/useHandleUseNow");
+  let handleUseNow = obj.useHandleUseNow({ product, onSuccess, onError: callback1 });
   handleUseNow = handleUseNow.handleUseNow;
-  const items1 = [stageCollectibleChangeForEditProfile, product, callback, handleUseNow];
+  const items1 = [stageCollectibleChangeForEditProfile, product, onSuccess, handleUseNow];
   ({ isApplying, canUseNow } = handleUseNow);
-  const callback2 = callback.useCallback(() => {
+  const callback2 = onSuccess.useCallback(() => {
     if (null != stageCollectibleChangeForEditProfile) {
-      const result = product(stageCollectibleChangeForEditProfile[8]).commitCollectiblePreview();
-      tmp(closure_0);
+      const result = CollectiblePreviewSession.commitCollectiblePreview();
+      tmp(product);
       callback();
     } else {
       handleUseNow();
@@ -58,22 +56,16 @@ export const useHandleUseNow = function useHandleUseNow(analyticsLocations) {
   }, items1);
   const tmp5 = onSuccess(stageCollectibleChangeForEditProfile[9])({ analyticsLocations: analyticsLocations.analyticsLocations });
   closure_5 = tmp5;
-  obj = {
-    handleUseNow: callback2,
-    isApplying,
-    canUseNow,
-    handleEditProfile: callback.useCallback(() => {
-      callback();
-      if (null == onSuccess) {
-        onSuccess(stageCollectibleChangeForEditProfile[2]).hideAllActionSheets();
-        const obj = onSuccess(stageCollectibleChangeForEditProfile[2]);
-        onSuccess(stageCollectibleChangeForEditProfile[3]).popAll();
-        const obj2 = onSuccess(stageCollectibleChangeForEditProfile[3]);
-      } else {
-        tmp2();
-      }
-    }, items2)
-  };
-  items2 = [tmp5, onSuccess];
+  obj = { handleUseNow: callback2, isApplying, canUseNow, handleEditProfile: null };
+  const items2 = [tmp5, onSuccess];
+  obj.handleEditProfile = onSuccess.useCallback(() => {
+    closure_5();
+    if (null == onSuccess) {
+      ActionSheetActionCreatorsDefault.hideAllActionSheets();
+      ModalActionCreatorsDefault.popAll();
+    } else {
+      tmp2();
+    }
+  }, items2);
   return obj;
 };

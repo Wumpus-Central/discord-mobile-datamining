@@ -1,13 +1,13 @@
-// === Module 17689: passthrough ===
+// === Module 17689: useEnableMFAHook ===
 
-// Module 17689 (passthrough)
-import set from "set" /* 2 */;
+// Module 17689 (useEnableMFAHook)
+import size from "module_2" /* 2 */;
 
 function passthrough(arg0) {
   return arg0;
 }
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useEnableMFAHook.native.tsx");
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useEnableMFAHook.native.tsx");
 
-export function useEnableMFAHook(arg0) {
+export function useEnableMFAHook() {
   return passthrough;
 }

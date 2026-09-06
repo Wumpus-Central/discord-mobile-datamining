@@ -1,18 +1,18 @@
 // === Module 14118: PassthroughTouchView ===
 
 // Module 14118 (PassthroughTouchView)
-import noopAll from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 14119 */;
-import { jsx } from "jsxProd" /* 21 */;
+import PassthroughTouchNativeComponentDefault from "PassthroughTouchNativeComponent" /* 14119 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/PassthroughTouchView/native/PassthroughTouchView.tsx");
 
 export default function PassthroughTouchView(onTouchDown) {
-  const merged = Object.assign(onTouchDown, Object.create(null));
+  const merged = Object.assign(onTouchDown, Object.assign({ onTouchDown: 0 }));
   const obj = {};
   const merged1 = Object.assign(merged);
   obj.onTouchDown = onTouchDown.onTouchDown;
   obj.pointerEvents = "box-none";
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(PassthroughTouchNativeComponentDefault, {});
 };

@@ -1,52 +1,53 @@
-// === Module 15331: useRoleColorSettingValue ===
+// === Module 15331: RoleColorsSetting ===
 
-// Module 15331 (useRoleColorSettingValue)
+// Module 15331 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setFontSize from "setFontSize" /* 14437 */;
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14437 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
+require = fn;
 function useRoleColorSettingValue() {
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   return initialize.useStateFromStores(items, () => roleStyle.roleStyle);
 }
 function onRoleColorSettingValueChange(roleStyle) {
-  setFontSize.setRoleStyle(roleStyle);
+  AccessibilityActionCreators.setRoleStyle(roleStyle);
 }
 function useRoleColorSettingOptions() {
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let obj = { label: null, value: "username" };
-    const intl = callback(1114).intl;
-    obj[0] = intl.string(callback(1114).t.YEOEi6);
+    const intl = util.intl;
+    obj.label = intl.string(util.t.YEOEi6);
     const items = [obj, , ];
     obj = { label: null, value: "dot" };
-    const intl2 = callback(1114).intl;
-    obj[0] = intl2.string(callback(1114).t.mQaro3);
+    const intl2 = util.intl;
+    obj.label = intl2.string(util.t.mQaro3);
     items[1] = obj;
     obj = { label: null, value: "hidden" };
-    const intl3 = callback(1114).intl;
-    obj[0] = intl3.string(callback(1114).t.Ji2EVJ);
+    const intl3 = util.intl;
+    obj.label = intl3.string(util.t.Ji2EVJ);
     items[2] = obj;
     return items;
   }, []);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.uSOPWm);
+    const intl = util.intl;
+    return intl.string(util.t.uSOPWm);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7975).MobileUserSettings.ACCESSIBILITY,
   useValue: useRoleColorSettingValue,
   onValueChange: onRoleColorSettingValueChange,
   useOptions: useRoleColorSettingOptions
 };
-createToggle = createToggle.createRadio(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
+SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/RoleColorsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useRoleColorSettingValue };
 export { onRoleColorSettingValueChange };
 export { useRoleColorSettingOptions };

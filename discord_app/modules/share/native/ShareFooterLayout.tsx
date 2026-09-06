@@ -1,71 +1,72 @@
 // === Module 11693: ShareFooterLayout ===
 
 // Module 11693 (ShareFooterLayout)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import _modDef4296 from "module_4296" /* 4296 */;
+import nativeDefault from "native" /* 576 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import spring from "spring" /* 4974 */;
+import springPresets from "springPresets" /* 4978 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { footer: null, footerSeparator: null, warningWrapper: null, chatRow: null };
-createCacheKey = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: -ThemesDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[2] = { display: "flex", flexDirection: "column", gap: 8 };
-let obj1 = { marginHorizontal: -ThemesDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[3] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "flex-end" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let closure_8 = { code: "function ShareFooterLayoutTsx1(){const{withSpring,footerPaddingBottom,ON_PRESS_SPRING}=this.__closure;return{paddingBottom:withSpring(footerPaddingBottom,ON_PRESS_SPRING,'respect-motion-settings')};}" };
-let obj2 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "flex-end" };
-const result = require("set").fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { footer: null, footerSeparator: null, warningWrapper: null, chatRow: null };
+createStyles = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.footer = createStyles;
+createStyles.footerSeparator = { marginHorizontal: -nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.warningWrapper = { display: "flex", flexDirection: "column", gap: 8 };
+let obj1 = { marginHorizontal: -nativeDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.chatRow = { display: "flex", flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "flex-end" };
+let closure_7 = createStyles.createStyles(createStyles);
+const __initData = { code: "function ShareFooterLayoutTsx1(){const{withSpring,footerPaddingBottom,ON_PRESS_SPRING}=this.__closure;return{paddingBottom:withSpring(footerPaddingBottom,ON_PRESS_SPRING,'respect-motion-settings')};}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
 
 export default function ShareFooterLayout(arg0) {
   ({ preview, warningText } = arg0);
-  let _require;
   ({ chatInput, sendButton, avoidKeyboard } = arg0);
-  const tmp = callback2();
+  const tmp = closure_7();
   const sum = tmp.footer.paddingVertical + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false }).insets.bottom;
   _require = sum;
-  let obj = _require(4296);
+  require("ReanimatedRexport");
   const fn = function f() {
-    const obj = { paddingBottom: _undefined(closure_1_2[7]).withSpring(_undefined, _undefined(closure_1_2[8]).ON_PRESS_SPRING, "respect-motion-settings") };
+    const obj = { paddingBottom: spring.withSpring(c0, springPresets.ON_PRESS_SPRING, "respect-motion-settings") };
     return obj;
   };
-  obj = { withSpring: _require(4974).withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _require(4978).ON_PRESS_SPRING };
+  let obj = { withSpring: require("spring").withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: require("springPresets").ON_PRESS_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 2871405301293;
-  fn.__initData = closure_8;
+  fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: items, children: null };
-  items = [tmp.footer, animatedStyle];
+  obj = { style: null, children: null };
+  const items = [tmp.footer, animatedStyle];
+  obj.style = items;
   let tmp6Result = null;
   if (null != preview) {
-    obj1 = { children: null };
+    const obj1 = { children: null };
     const items1 = [preview, ];
-    const obj2 = { style: null };
-    obj2[0] = tmp.footerSeparator;
-    items1[1] = callback(View, obj2);
-    obj1[0] = items1;
+    const obj2 = { style: tmp.footerSeparator };
+    items1[1] = closure_4(View, obj2);
+    obj1.children = items1;
     tmp6Result = tmp6(closure_5, obj1);
   }
   const items2 = [tmp6Result, ];
   const obj3 = { style: tmp.warningWrapper, children: null };
+  const obj4 = { style: tmp.chatRow, children: null };
   const items3 = [chatInput, sendButton];
-  const items4 = [closure_6(View, { style: tmp.chatRow, children: items3 }), ];
+  obj4.children = items3;
+  const items4 = [closure_6(View, obj4), ];
   let tmp12 = null != warningText;
   if (tmp12) {
-    const obj5 = { variant: "text-sm/normal", color: "text-feedback-warning", children: null };
-    obj5[2] = warningText;
-    tmp12 = callback(_require(4556).Text, obj5);
+    const obj5 = { variant: "text-sm/normal", color: "text-feedback-warning", children: warningText };
+    tmp12 = closure_4(require("Text/Text").Text, obj5);
   }
   items4[1] = tmp12;
-  obj3[1] = items4;
+  obj3.children = items4;
   items2[1] = closure_6(View, obj3);
-  obj[1] = items2;
-  return closure_6(_modDef4296.View, obj);
+  obj.children = items2;
+  return closure_6(ReanimatedRexportDefault.View, obj);
 };

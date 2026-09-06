@@ -1,18 +1,18 @@
 // === Module 11465: useLaunchPadType ===
 
 // Module 11465 (useLaunchPadType)
-import set from "set" /* 2 */;
-import create from "create" /* 1187 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 11464 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11464 */;
+import size from "module_2" /* 2 */;
 
-const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
-const result = set.fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
+const LaunchPadTypes = LaunchPadConstants.LaunchPadTypes;
+const result = size.fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
 
 export default function useLaunchPadType() {
-  const LaunchPadModeSetting = explicitContentFromProto.LaunchPadModeSetting;
+  const LaunchPadModeSetting = UserSettings.LaunchPadModeSetting;
   const setting = LaunchPadModeSetting.useSetting();
-  if (create.LaunchPadMode.LAUNCH_PAD_DISABLED === setting) {
+  if (preloaded_user_settings.LaunchPadMode.LAUNCH_PAD_DISABLED === setting) {
     return LaunchPadTypes.DISABLED;
   } else if (tmp(1187).LaunchPadMode.LAUNCH_PAD_GESTURE_FULL_SCREEN === setting) {
     return LaunchPadTypes.GESTURE_FULL;

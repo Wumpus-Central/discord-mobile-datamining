@@ -1,33 +1,30 @@
 // === Module 8272: usePrevious ===
 
 // Module 8272 (usePrevious)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
+import size from "module_2" /* 2 */;
 
-({ useRef: c0, useEffect: closure_1 } = noop);
-const result = set.fileFinishedImporting("hooks/usePrevious.tsx");
+({ useRef: closure_0, useEffect: closure_1 } = noop);
+const result = size.fileFinishedImporting("hooks/usePrevious.tsx");
 
-export default function usePrevious(arg0) {
-  const callback = arg0;
-  const tmp = callback(null);
-  const callback2 = tmp;
-  const items = [arg0];
-  callback2(() => {
-    closure_1.current = closure_0;
+export default function usePrevious(current) {
+  const tmp = React(null);
+  closure_1 = tmp;
+  const items = [current];
+  framebus(() => {
+    closure_1.current = current;
   }, items);
   return tmp.current;
 };
 export const usePreviousWhen = function usePreviousWhen(value) {
   value = value.value;
-  const callback = value;
   const shouldUpdate = value.shouldUpdate;
-  closure_2 = undefined;
-  const tmp = callback(null);
+  const tmp = React(null);
   closure_2 = tmp;
   const items = [value, shouldUpdate];
-  shouldUpdate(() => {
+  framebus(() => {
     if (shouldUpdate) {
-      closure_2.current = closure_0;
+      closure_2.current = value;
     }
   }, items);
   return tmp.current;
@@ -35,11 +32,10 @@ export const usePreviousWhen = function usePreviousWhen(value) {
 export const useCurrentWhen = function useCurrentWhen(value) {
   let current = value.value;
   const shouldUpdate = value.shouldUpdate;
-  closure_2 = undefined;
-  const tmp = current(null);
+  const tmp = React(null);
   closure_2 = tmp;
   const items = [current, shouldUpdate];
-  shouldUpdate(() => {
+  framebus(() => {
     if (shouldUpdate) {
       closure_2.current = current;
     }

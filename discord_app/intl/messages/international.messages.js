@@ -1,19 +1,19 @@
-// === Module 14188: messagesProxy ===
+// === Module 14188: ? ===
 
-// Module 14188 (messagesProxy)
-import set from "set" /* 2 */;
-import loadJsonAsset from "loadJsonAsset" /* 1120 */;
-import registerAsset from "registerAsset" /* 14189 */;
+// Module 14188
+import AssetJsonUtils from "AssetJsonUtils" /* 1120 */;
+import _mod14189 from "module_14189" /* 14189 */;
 import module_1155 from "module_1155" /* 1155 */;
+import size from "module_2" /* 2 */;
 
 const loader = module_1155.createLoader({
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod14189);
+    return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
 const messagesProxy = module_1155.makeMessagesProxy(loader);
-const result = set.fileFinishedImporting("intl/messages/international.messages.js");
+const result = size.fileFinishedImporting("intl/messages/international.messages.js");
 
 export default messagesProxy;
 export const messagesLoader = loader;

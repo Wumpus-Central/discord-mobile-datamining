@@ -2,14 +2,15 @@
 
 // Module 12520 (useGetGuildPowerupBannerImage)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx");
 
-export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
+export default function useGetGuildPowerupBannerImage(animatedImageUrl, arg1, arg2) {
   initialize;
-  [][0] = closure_2;
+  [][0] = AccessibilityStore;
   if (null != animatedImageUrl) {
     if (!tmp2) {
       if (false !== arg1) {
@@ -24,19 +25,19 @@ export default function useGetGuildPowerupBannerImage(animatedImageUrl) {
     staticImageUrl = animatedImageUrl.staticImageUrl;
   }
 };
-export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(found, closure_1_4, arg2) {
-  if (null != found) {
-    if (!closure_1_4) {
+export const getGuildPowerupBannerImage = function getGuildPowerupBannerImage(arr, stateFromStores1, arg2, arg3) {
+  if (null != arr) {
+    if (!stateFromStores1) {
       if (false !== arg2) {
         if (!arg3) {
-          let staticImageUrl = found.animatedImageUrl;
+          let staticImageUrl = arr.animatedImageUrl;
           if (staticImageUrl == null) {
-            staticImageUrl = found.staticImageUrl;
+            staticImageUrl = arr.staticImageUrl;
           }
         }
         return staticImageUrl;
       }
     }
-    staticImageUrl = found.staticImageUrl;
+    staticImageUrl = arr.staticImageUrl;
   }
 };

@@ -1,14 +1,16 @@
 // === Module 10002: ChannelCallMicButton ===
 
 // Module 10002 (ChannelCallMicButton)
-import getMuteStatesDefault from "getMuteStates" /* 7345 */;
-import ActionButtonAll from "ActionButton" /* 9497 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "set" /* 4577 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useMuteStatesDefault from "useMuteStates" /* 7345 */;
+import CallBarActionAll from "CallBarAction" /* 9497 */;
+import VoicePanelRiveMicButton from "VoicePanelRiveMicButton" /* 10004 */;
+import noop from "module_19" /* 19 */;
+import GameConsoleStore from "GameConsoleStore" /* 4577 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/ChannelCallMicButton.tsx");
 
 export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   let flag = disableTint.disableTint;
@@ -18,28 +20,28 @@ export const ChannelCallMicButton = function ChannelCallMicButton(disableTint) {
   }
   let mute;
   let obj = mute(504);
-  const items = [closure_5];
+  const items = [GameConsoleStore];
   const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const tmp3 = getMuteStatesDefault(channel);
+  const tmp3 = useMuteStatesDefault(channel);
   const muteHandler = mute(10003).createMuteHandler(tmp3, stateFromStores);
   mute = muteHandler.mute;
   const items1 = [mute];
-  const memo = React.useMemo(() => closure_1_6(mute(closure_1_3[6]).VoicePanelRiveMicButton, { muted: mute }), items1);
+  const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
   obj = { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null };
   const intl = mute(1114).intl;
-  obj[1] = intl.string(mute(1114).t.B3zz0G);
-  obj[2] = muteHandler.onPress;
-  obj[3] = importDefault(mute ? 10007 : 10008);
+  obj.accessibilityLabel = intl.string(mute(1114).t.B3zz0G);
+  obj.onPress = muteHandler.onPress;
+  obj.source = importDefault(mute ? 10007 : 10008);
   if (!flag) {
     flag = mute;
   }
-  obj[4] = flag;
-  obj[5] = isSmallSize;
-  obj[6] = memo;
+  obj.isActive = flag;
+  obj.isSmallSize = isSmallSize;
+  obj.lottieComponent = memo;
   let RED_400;
   if (mute) {
     RED_400 = tmp(576).unsafe_rawColors.RED_400;
   }
-  obj[7] = RED_400;
-  return jsx(ActionButtonAll.ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });
+  obj.tintColor = RED_400;
+  return jsx(CallBarActionAll.ToggledActionButton, { appearsDisabled: stateFromStores, accessibilityLabel: null, onPress: null, source: null, isActive: null, isSmallSize: null, lottieComponent: null, tintColor: null });
 };

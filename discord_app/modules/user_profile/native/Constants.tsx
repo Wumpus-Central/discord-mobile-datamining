@@ -1,15 +1,15 @@
-// === Module 7208: ARBITRARY_LARGE_OFFSET ===
+// === Module 7208: Constants ===
 
-// Module 7208 (ARBITRARY_LARGE_OFFSET)
-import set from "set" /* 2 */;
-import Button from "Button" /* 1178 */;
-import ICON_SIZE from "ICON_SIZE" /* 6620 */;
+// Module 7208 (Constants)
+import native from "native" /* 1178 */;
+import IconSize from "IconSize" /* 6620 */;
+import size from "module_2" /* 2 */;
 
-const XXLARGE = Button.AvatarSizes.XXLARGE;
-const tmp2 = Button.AVATAR_SIZE_MAP[XXLARGE];
+const XXLARGE = native.AvatarSizes.XXLARGE;
+const tmp2 = native.AVATAR_SIZE_MAP[XXLARGE];
 const sum = tmp2 + 12;
 const result = tmp2 / 2;
-const result1 = set.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
+const result1 = size.fileFinishedImporting("modules/user_profile/native/Constants.tsx");
 
 export const ARBITRARY_LARGE_OFFSET = 250;
 export const PROFILE_SIDE_PADDING = 16;
@@ -23,7 +23,7 @@ export const PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING = 12 + result + 6;
 export const PROFILE_CONTENT_BOTTOM_PADDING = 20;
 export const CARD_PADDING = 16;
 export const CARD_ROWS_ICON_SIZE_VARIANT = "md";
-export const CARD_ROWS_ICON_SIZE = ICON_SIZE.ICON_SIZE.md;
+export const CARD_ROWS_ICON_SIZE = IconSize.ICON_SIZE.md;
 export const CARD_ROWS_COLUMN_GAP = 16;
 export const WISHLIST_SUGGESTION_CARD_GAP = 8;
 export const FLOATING_UPSELL_HEIGHT = 140;

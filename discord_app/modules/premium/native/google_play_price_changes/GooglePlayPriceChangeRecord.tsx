@@ -1,15 +1,13 @@
-// === Module 4226: createFromServer ===
+// === Module 4226: GooglePlayPriceChangeRecord ===
 
-// Module 4226 (createFromServer)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 4226 (GooglePlayPriceChangeRecord)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-const obj = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };
+const GooglePlayPriceChangeMode = { PRICE_CHANGE_MODE_UNSPECIFIED: "PRICE_CHANGE_MODE_UNSPECIFIED", PRICE_DECREASE: "PRICE_DECREASE", PRICE_INCREASE: "PRICE_INCREASE", OPT_OUT_PRICE_INCREASE: "OPT_OUT_PRICE_INCREASE" };
 let GooglePlayPriceChangeRecord;
 class GooglePlayPriceChangeRecord extends tmp2 {
   constructor(arg0) {
     tmp = new GooglePlayPriceChangeRecord(new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ userId: tmp.userId, subscriptionId: tmp.subscriptionId, oldCurrency: tmp.oldCurrency, oldPrice: tmp.oldPrice, newCurrency: tmp.newCurrency, newPrice: tmp.newPrice, priceChangeMode: tmp.priceChangeMode, expectedChargeTime: tmp.expectedChargeTime, priceChangeId: tmp.priceChangeId } = global);
     return tmp;
   }
@@ -17,22 +15,21 @@ class GooglePlayPriceChangeRecord extends tmp2 {
 const prototype = GooglePlayPriceChangeRecord.prototype;
 GooglePlayPriceChangeRecord["createFromServer"] = function createFromServer(arg0) {
   ({ user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode } = arg0);
-  ({ expected_charge_time, price_change_id } = arg0);
-  if (typeof GooglePlayPriceChangeRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof GooglePlayPriceChangeRecord === "function") {
+    const tmp8 = new GooglePlayPriceChangeRecord(tmp, tmp2, new.target, user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode);
+    tmp8.userId = user_id;
+    tmp8.subscriptionId = subscription_id;
+    tmp8.oldCurrency = old_currency;
+    tmp8.oldPrice = old_price;
+    tmp8.newCurrency = new_currency;
+    tmp8.newPrice = new_price;
+    tmp8.priceChangeMode = price_change_mode;
+    tmp8.expectedChargeTime = tmp3;
+    tmp8.priceChangeId = tmp4;
+    return tmp8;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new GooglePlayPriceChangeRecord("Trying to call a non-function", GooglePlayPriceChangeRecord, new.target, user_id, subscription_id, old_currency, old_price, new_currency, new_price, price_change_mode);
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.userId = user_id;
-  tmp2.subscriptionId = subscription_id;
-  tmp2.oldCurrency = old_currency;
-  tmp2.oldPrice = old_price;
-  tmp2.newCurrency = new_currency;
-  tmp2.newPrice = new_price;
-  tmp2.priceChangeMode = price_change_mode;
-  tmp2.expectedChargeTime = expected_charge_time;
-  tmp2.priceChangeId = price_change_id;
-  return tmp2;
 };
 Object.defineProperty(prototype, "isPriceIncrease", {
   get: function isPriceIncrease() {
@@ -58,8 +55,9 @@ Object.defineProperty(prototype, "isInFuture", {
   },
   set: undefined
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeRecord.tsx");
 
 export default GooglePlayPriceChangeRecord;
-export const GooglePlayPriceChangeMode = obj;
+export { GooglePlayPriceChangeMode };
 export { GooglePlayPriceChangeRecord };

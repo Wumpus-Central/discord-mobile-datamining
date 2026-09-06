@@ -1,13 +1,16 @@
-// === Module 4760: GUILD_ROOMS_EXPERIMENT_ID ===
+// === Module 4760: GuildRoomsExperiment ===
 
-// Module 4760 (GUILD_ROOMS_EXPERIMENT_ID)
-import closure_2 from "trackCommunicationDisabled" /* 2021 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 4760 (GuildRoomsExperiment)
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
+const require = fn;
+fn(4474);
+const createExperiment = { kind: "guild", id: "2026-06_guild_rooms", label: "Guild Rooms", defaultConfig: { enabled: false, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: false }, treatments: null };
 let items = [{ id: 1, label: "Enable Guild Rooms in this guild", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 2, label: "Enable Guild Rooms without Interactions", config: { enabled: true, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 3, label: "Enable Guild Rooms with Room Variants", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }, { id: 4, label: "Enable Guild Rooms without Postures", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: false } }, { id: 5, label: "Enable Guild Rooms with Room 2 Default and Selector", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }];
-let closure_3 = createExperiment.createExperiment({ kind: "guild", id: "2026-06_guild_rooms", label: "Guild Rooms", defaultConfig: { enabled: false, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: false }, treatments: items });
-const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
+createExperiment.treatments = items;
+let closure_3 = createExperiment.createExperiment(createExperiment);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomsExperiment.tsx");
 
 export const GUILD_ROOMS_EXPERIMENT_ID = "2026-06_guild_rooms";
 export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable) {
@@ -24,23 +27,23 @@ export const getGuildRoomsConfig = function getGuildRoomsConfig(guildId, disable
     guildId = guildId.guildId;
     let tmp3 = null != guildId;
     if (tmp3) {
-      tmp3 = !currentUserGuest.isCurrentUserGuest(guildId);
+      tmp3 = !GuildMemberStore.isCurrentUserGuest(guildId);
     }
     flag = !tmp3;
   }
   obj.disable = flag;
   return closure_3.getCurrentConfig(guildId, obj);
 };
-export const useGuildRoomsExperiment = function useGuildRoomsExperiment(guildId) {
-  const _require = guildId;
-  let obj = _require(504);
-  const items = [closure_2];
+export const useGuildRoomsExperiment = function useGuildRoomsExperiment(guildId, arg1) {
+  _require = guildId;
+  require("initialize");
+  const items = [GuildMemberStore];
   const items1 = [guildId.guildId];
-  obj = { autoTrackExposure: true };
+  const obj = { autoTrackExposure: true };
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp2 = null != guildId.guildId;
     if (tmp2) {
-      tmp2 = !closure_1_2.isCurrentUserGuest(tmp.guildId);
+      tmp2 = !GuildMemberStore.isCurrentUserGuest(tmp.guildId);
     }
     return tmp2;
   }, items1);

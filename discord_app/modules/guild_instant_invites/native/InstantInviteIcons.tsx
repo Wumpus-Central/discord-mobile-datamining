@@ -1,16 +1,16 @@
-// === Module 10937: get more ===
+// === Module 10937: InstantInviteIcons ===
 
-// Module 10937 (get more)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 10937 (InstantInviteIcons)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 const obj = {};
-Object.defineProperty(obj, "more", { get: () => require(10938) /* registerAsset */, set: undefined });
-Object.defineProperty(obj, "share", { get: () => require(10939) /* registerAsset */, set: undefined });
-Object.defineProperty(obj, "revoke", { get: () => require(10940) /* registerAsset */, set: undefined });
-Object.defineProperty(obj, "copy", { get: () => require(9860) /* registerAsset */, set: undefined });
+Object.defineProperty(obj, "more", { get: () => require("module_10938"), set: undefined });
+Object.defineProperty(obj, "share", { get: () => require("module_10939"), set: undefined });
+Object.defineProperty(obj, "revoke", { get: () => require("module_10940"), set: undefined });
+Object.defineProperty(obj, "copy", { get: () => require("module_9860"), set: undefined });
 const frozen = Object.freeze(obj);
-const result = set.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteIcons.tsx");
+const result = size.fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteIcons.tsx");
 
 export default frozen;

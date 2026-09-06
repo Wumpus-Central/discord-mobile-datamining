@@ -1,29 +1,28 @@
-// === Module 16066: getActiveTextChannels ===
+// === Module 16066: useActiveChannels ===
 
-// Module 16066 (getActiveTextChannels)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import set2 from "set" /* 1964 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_6 from "truncateOldMessageData" /* 13705 */;
+// Module 16066 (useActiveChannels)
+import Constants from "Constants" /* 1074 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import ChannelConstants from "ChannelConstants" /* 1964 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13705 */;
+import size from "module_2" /* 2 */;
 
-const isTextChannel = createChannelRecord.isTextChannel;
-const Permissions = ME.Permissions;
-const ChannelFlags = set2.ChannelFlags;
-const result = set.fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
+const isTextChannel = ChannelRecord.isTextChannel;
+const Permissions = Constants.Permissions;
+const ChannelFlags = ChannelConstants.ChannelFlags;
+const result = size.fileFinishedImporting("modules/guild_home/useActiveChannels.tsx");
 
 export const getActiveTextChannels = function getActiveTextChannels(guildId) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    let items = [closure_3, closure_4, closure_6, closure_5];
+    let items = [ChannelStore, PermissionStore, ActiveChannelsStore, UserGuildSettingsStore];
     tmp = items;
   }
   [, , obj, obj2] = tmp;
-  let mutedChannels;
   const activeChannelIds = obj.getActiveChannelIds(guildId);
   if (null != activeChannelIds) {
     const _Array = Array;
@@ -31,17 +30,17 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
   } else {
     items = [];
   }
-  mutedChannels = obj2.getMutedChannels(guildId);
-  const mapped = items.map((arg0) => store.getChannel(arg0));
-  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+  obj2.getMutedChannels(guildId);
+  const mapped = items.map((item) => require.getChannel(item));
+  const found = mapped.filter(GlobalUtils.isNotNullish);
   return found.filter((hasFlag) => {
     let hasFlagResult;
     if (hasFlag != null) {
-      hasFlagResult = hasFlag.hasFlag(closure_1_8.ACTIVE_CHANNELS_REMOVED);
+      hasFlagResult = hasFlag.hasFlag(ChannelFlags.ACTIVE_CHANNELS_REMOVED);
     }
     if (hasFlagResult) {
       return false;
-    } else if (set(hasFlag.type)) {
+    } else if (isTextChannel(hasFlag.type)) {
       if (set.has(hasFlag.id)) {
         return false;
       } else {
@@ -50,8 +49,8 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
             return false;
           }
         }
-        if (closure_1.can(closure_1_7.VIEW_CHANNEL, hasFlag)) {
-          const channel = store.getChannel(hasFlag.parent_id);
+        if (dependencyMap.can(Permissions.VIEW_CHANNEL, hasFlag)) {
+          const channel = require.getChannel(hasFlag.parent_id);
           const isThreadResult = hasFlag.isThread();
           let tmp8 = !isThreadResult;
           if (isThreadResult) {
@@ -60,7 +59,7 @@ export const getActiveTextChannels = function getActiveTextChannels(guildId) {
           if (!tmp8) {
             let hasFlagResult1;
             if (channel != null) {
-              hasFlagResult1 = channel.hasFlag(closure_1_8.ACTIVE_CHANNELS_REMOVED);
+              hasFlagResult1 = channel.hasFlag(ChannelFlags.ACTIVE_CHANNELS_REMOVED);
             }
             tmp8 = !hasFlagResult1;
           }

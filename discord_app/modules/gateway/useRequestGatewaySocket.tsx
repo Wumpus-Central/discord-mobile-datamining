@@ -1,20 +1,22 @@
 // === Module 14560: useRequestGatewaySocket ===
 
 // Module 14560 (useRequestGatewaySocket)
-import _modDef11300 from "module_11300" /* 11300 */;
-import closure_3 from "noop" /* 19 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7757 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11300 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 
 export const useRequestGatewaySocket = function useRequestGatewaySocket(arg0) {
   importDefault = arg0;
-  const canUIRequestGatewaySocket = _modDef11300.useCanUIRequestGatewaySocket();
+  const canUIRequestGatewaySocket = DiscordAppStateDefault.useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (canUIRequestGatewaySocket) {
-      canUIRequestGatewaySocket(closure_1_2[2]).setRequestedBy(closure_0);
+      RequestGatewaySocketAll.setRequestedBy(closure_0);
       return () => {
-        closure_1_1(closure_1_2[2]).stopRequest(closure_0);
+        canUIRequestGatewaySocket(dependencyMap[2]).stopRequest(closure_1_0);
       };
     }
   }, items);

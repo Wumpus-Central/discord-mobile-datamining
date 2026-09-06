@@ -1,9 +1,9 @@
-// === Module 12414: MAX_ACCOUNTS ===
+// === Module 12414: Constants ===
 
-// Module 12414 (MAX_ACCOUNTS)
-import set from "set" /* 2 */;
+// Module 12414 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/multi_account/Constants.tsx");
+const result = size.fileFinishedImporting("modules/multi_account/Constants.tsx");
 
 export const MAX_ACCOUNTS = 5;
 export const SWITCH_ACCOUNTS_MODAL_KEY = "switch-accounts-modal";

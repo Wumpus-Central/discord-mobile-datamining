@@ -1,18 +1,19 @@
-// === Module 16588: ? ===
+// === Module 16588: VibegrationsPlatformUtils ===
 
-// Module 16588
-import NativeModulesDefault from "NativeModules" /* 9687 */;
-import closure_2 from "getState" /* 1895 */;
-import { LocalNotificationTypes } from "LocalNotificationTypes" /* 13716 */;
+// Module 16588 (VibegrationsPlatformUtils)
+import PushNotificationDefault from "PushNotification" /* 9687 */;
+import AppStateStore from "AppStateStore" /* 1895 */;
 
-let result = require("set").fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
+const LocalNotificationTypes = fn(13716).LocalNotificationTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsPlatformUtils.native.tsx");
 
 export default {
   openVibegrationsAppInstallModal() {
     return Promise.resolve();
   },
   isWindowFocused() {
-    return "active" === state.getState();
+    return "active" === AppStateStore.getState();
   },
   areTurnNotificationsDisabled() {
     return false;
@@ -20,33 +21,31 @@ export default {
   presentTurnNotification(arg0) {
     ({ projectId, guildId } = arg0);
     ({ title, body } = arg0);
-    let obj = NativeModulesDefault;
-    obj = { category: "local", alertTitle: title, alertBody: body, userInfo: null };
+    let obj = { category: "local", alertTitle: title, alertBody: body, userInfo: null };
     obj = { type: LocalNotificationTypes.VIBEGRATIONS, projectId, channel_id: projectId };
     if (null != guildId) {
-      obj1 = { guildId: null };
-      obj1[0] = guildId;
+      const obj1 = { guildId };
       let obj2 = obj1;
     } else {
       obj2 = {};
     }
     const merged = Object.assign(obj2);
-    obj[3] = obj;
+    obj.userInfo = obj;
     const result = obj.presentLocalNotification(obj);
   },
-  relayPreviewCapture(closure_0, id, arg2) {
+  relayPreviewCapture() {
     return Promise.resolve({ status: "unavailable" });
   },
-  relayPreviewControl(closure_0, id, request, arg3) {
+  relayPreviewControl() {
     return Promise.resolve({ status: "unavailable" });
   },
-  releasePreviewControl(closure_0) {
+  releasePreviewControl() {
 
   },
-  beginPreviewOperation(projectId) {
+  beginPreviewOperation() {
 
   },
-  endPreviewOperation(projectId) {
+  endPreviewOperation() {
 
   }
 };

@@ -1,9 +1,9 @@
-// === Module 2010: CHANGELOG_MODAL_KEY ===
+// === Module 2010: ChangelogConstants ===
 
-// Module 2010 (CHANGELOG_MODAL_KEY)
-import set from "set" /* 2 */;
+// Module 2010 (ChangelogConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/changelog/ChangelogConstants.tsx");
+const result = size.fileFinishedImporting("modules/changelog/ChangelogConstants.tsx");
 
 export const CHANGELOG_MODAL_KEY = "CHANGELOG_MODAL";
 export const SYSTEM_UPDATES_USER_ID = "1232523165893132288";

@@ -1,19 +1,19 @@
-// === Module 13834: IS_OVERLAY_DEV_ENV ===
+// === Module 13834: OverlaySupported ===
 
-// Module 13834 (IS_OVERLAY_DEV_ENV)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
+// Module 13834 (OverlaySupported)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-let flag = set2.isPlatformEmbedded;
+let flag = PlatformUtils.isPlatformEmbedded;
 if (flag) {
-  const _module = set2;
+  const _module = PlatformUtils;
   flag = _module.isWindows() || false;
   const tmp2 = _module.isWindows() || false;
 }
 if (flag) {
   flag = false;
 }
-const result = set.fileFinishedImporting("modules/overlay/OverlaySupported.tsx");
+const result = size.fileFinishedImporting("modules/overlay/OverlaySupported.tsx");
 
 export const IS_OVERLAY_DEV_ENV = false;
 export const OVERLAY_SUPPORTED = flag;

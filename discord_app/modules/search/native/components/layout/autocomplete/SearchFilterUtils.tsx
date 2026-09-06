@@ -1,92 +1,98 @@
-// === Module 16631: getSearchTokenLabel ===
+// === Module 16631: SearchFilterUtils ===
 
-// Module 16631 (getSearchTokenLabel)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 16631 (SearchFilterUtils)
+import util from "util" /* 1114 */;
 import AtIcon from "AtIcon" /* 5090 */;
-import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 7877 */;
+import TrackingConstants from "TrackingConstants" /* 7877 */;
 import RobotIcon from "RobotIcon" /* 9435 */;
 import CalendarIcon from "CalendarIcon" /* 9785 */;
 import AttachmentIcon from "AttachmentIcon" /* 10112 */;
 import UserIcon from "UserIcon" /* 11825 */;
 import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 12338 */;
+import SearchTokens from "SearchTokens" /* 12341 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12361 */;
 import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13843 */;
 import CalendarMinusIcon from "CalendarMinusIcon" /* 16632 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import ME from "ME" /* 1074 */;
+import SearchConstants from "SearchConstants" /* 7878 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ EMPTY_SEARCH_QUERY_STRING: c3, SearchQueryTagTypes: c4 } = MessageEmbedTypes);
-const SearchFilterAddLocations = SearchEntrypointAnalyticsLocations.SearchFilterAddLocations;
-({ SEARCH_DATE_FORMAT: closure_6, SearchTokenTypes: error, SearchTypes: closure_8 } = ME);
-let result = set.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx");
+const SearchPlatformUtilsDefault = SearchPlatformUtils;
+const SearchTokensDefault = SearchTokens;
 
-export const getSearchTokenLabel = function getSearchTokenLabel(closure_0, searchTokenType) {
-  if (constants.FILTER_FROM === searchTokenType) {
-    const intl9 = getSystemLocale.intl;
-    return intl9.string(getSystemLocale.t["6iuVMn"]);
-  } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl8 = getSystemLocale.intl;
-    return intl8.string(getSystemLocale.t.DMAzx8);
-  } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t.CMKzQx);
-  } else if (tmp.FILTER_IN === searchTokenType) {
-    if (closure_0.type === constants2.DMS) {
-      const intl6 = getSystemLocale.intl;
-      let stringResult = intl6.string(getSystemLocale.t["8Fmo42"]);
+({ EMPTY_SEARCH_QUERY_STRING: c3, SearchQueryTagTypes: closure_4 } = SearchConstants);
+const SearchFilterAddLocations = TrackingConstants.SearchFilterAddLocations;
+({ SEARCH_DATE_FORMAT: metroRequire, SearchTokenTypes: closure_7, SearchTypes: closure_8 } = Constants);
+let result = size.fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterUtils.tsx");
+
+export const getSearchTokenLabel = function getSearchTokenLabel(type, item) {
+  if (constants.FILTER_FROM === item) {
+    const intl9 = util.intl;
+    return intl9.string(util.t["6iuVMn"]);
+  } else if (tmp.FILTER_HAS === item) {
+    const intl8 = util.intl;
+    return intl8.string(util.t.DMAzx8);
+  } else if (tmp.FILTER_MENTIONS === item) {
+    const intl7 = util.intl;
+    return intl7.string(util.t.CMKzQx);
+  } else if (tmp.FILTER_IN === item) {
+    if (type.type === constants2.DMS) {
+      const intl6 = util.intl;
+      let stringResult = intl6.string(util.t["8Fmo42"]);
     } else {
-      const intl5 = getSystemLocale.intl;
-      stringResult = intl5.string(getSystemLocale.t.cdPmq8);
+      const intl5 = util.intl;
+      stringResult = intl5.string(util.t.cdPmq8);
     }
     return stringResult;
-  } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.h4qGfp);
-  } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.c9qSBR);
-  } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.hcMwDW);
-  } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.C4r6xL);
+  } else if (tmp.FILTER_ON === item) {
+    const intl4 = util.intl;
+    return intl4.string(util.t.h4qGfp);
+  } else if (tmp.FILTER_BEFORE === item) {
+    const intl3 = util.intl;
+    return intl3.string(util.t.c9qSBR);
+  } else if (tmp.FILTER_AFTER === item) {
+    const intl2 = util.intl;
+    return intl2.string(util.t.hcMwDW);
+  } else if (tmp.FILTER_AUTHOR_TYPE === item) {
+    const intl = util.intl;
+    return intl.string(util.t.C4r6xL);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("[getSearchTokenLabel] Unhandled search token type: " + searchTokenType);
+    const error = new Error("[getSearchTokenLabel] Unhandled search token type: " + item);
     throw error;
   }
 };
 export const getSearchTokenSubLabel = function getSearchTokenSubLabel(searchTokenType) {
   if (constants.FILTER_FROM === searchTokenType) {
-    const intl8 = getSystemLocale.intl;
-    return intl8.string(getSystemLocale.t.kkGlww);
+    const intl8 = util.intl;
+    return intl8.string(util.t.kkGlww);
   } else if (tmp.FILTER_HAS === searchTokenType) {
-    const intl7 = getSystemLocale.intl;
-    return intl7.string(getSystemLocale.t.gUfZa2);
+    const intl7 = util.intl;
+    return intl7.string(util.t.gUfZa2);
   } else if (tmp.FILTER_IN === searchTokenType) {
-    const intl6 = getSystemLocale.intl;
-    return intl6.string(getSystemLocale.t.qDUdlT);
+    const intl6 = util.intl;
+    return intl6.string(util.t.qDUdlT);
   } else if (tmp.FILTER_MENTIONS === searchTokenType) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.ILtwK5);
+    const intl5 = util.intl;
+    return intl5.string(util.t.ILtwK5);
   } else if (tmp.FILTER_ON === searchTokenType) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.t8bWvr);
+    const intl4 = util.intl;
+    return intl4.string(util.t.t8bWvr);
   } else if (tmp.FILTER_BEFORE === searchTokenType) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.YEN3uU);
+    const intl3 = util.intl;
+    return intl3.string(util.t.YEN3uU);
   } else if (tmp.FILTER_AFTER === searchTokenType) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.hwbB7s);
+    const intl2 = util.intl;
+    return intl2.string(util.t.hwbB7s);
   } else if (tmp.FILTER_AUTHOR_TYPE === searchTokenType) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.tJPdhZ);
+    const intl = util.intl;
+    return intl.string(util.t.tJPdhZ);
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("[getSearchTokenSubLabel] Unhandled search token type: " + searchTokenType);
+    const error = new Error("[getSearchTokenSubLabel] Unhandled search token type: " + searchTokenType);
     throw error;
   }
 };
@@ -110,11 +116,12 @@ export const getSearchTokenIcon = function getSearchTokenIcon(searchTokenType) {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    error = new Error("[getSearchTokenIcon] Unhandled search token type: " + searchTokenType);
+    const error = new Error("[getSearchTokenIcon] Unhandled search token type: " + searchTokenType);
     throw error;
   }
 };
-export const getSearchTokenPressHandler = function getSearchTokenPressHandler(closure_0, token, CONTEXT_MENU) {
+export const getSearchTokenPressHandler = function getSearchTokenPressHandler(arg0, token, CONTEXT_MENU) {
+  closure_0 = arg0;
   closure_1 = token;
   closure_2 = CONTEXT_MENU;
   if (constants.FILTER_FROM !== token) {
@@ -127,29 +134,29 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
                 if (tmp.FILTER_AFTER !== token) {
                   const _Error = Error;
                   const _HermesInternal = HermesInternal;
-                  error = new Error("[getSearchTokenPressHandler] Unhandled search token type: " + token);
+                  const error = new Error("[getSearchTokenPressHandler] Unhandled search token type: " + token);
                   throw error;
                 }
               }
             }
             return () => {
-              let result = callback(CONTEXT_MENU[14]).performKeyboardAwareNavigation(() => {
-                let obj = callback2(paths[15]);
-                obj = {
+              let result = SearchPlatformUtils.performKeyboardAwareNavigation(() => {
+                searchTokenType(paths[15]);
+                let obj = {
                   onSubmit(format) {
-                    closure_0 = format.format(closure_1_6);
-                    let obj = closure_1_1(closure_1_2[13]);
-                    obj.updateSearchQuery(closure_0, (setTextInputValue) => {
-                      if (closure_1_2 === closure_2_5.SEARCH_INPUT_DROPDOWN) {
-                        setTextInputValue.setTextInputValue(closure_2_3);
+                    searchContext = format.format(closure_1_6);
+                    let obj = searchTokenType(_location[13]);
+                    obj.updateSearchQuery(searchContext, (setTextInputValue) => {
+                      if (_location === constants2.SEARCH_INPUT_DROPDOWN) {
+                        setTextInputValue.setTextInputValue(closure_3_3);
                       }
                       setTextInputValue.removePrefixTags();
-                      const obj = { type: closure_2_4.COMPLETE, text: null, searchTokenType: null, location: null };
-                      let tmp7 = closure_2_1(closure_2_2[12])[closure_1_1];
+                      const obj = { type: constants.COMPLETE, text: null, searchTokenType: null, location: null };
+                      let tmp7 = closure_1(closure_2[12])[searchTokenType];
                       if (null == tmp7) {
-                        const result = closure_2_0(tmp6[12]).rebuildSearchTokenConfigs();
-                        tmp7 = closure_2_1(tmp6[12])[str];
-                        const obj2 = closure_2_0(tmp6[12]);
+                        const result = closure_0(tmp6[12]).rebuildSearchTokenConfigs();
+                        tmp7 = closure_1(tmp6[12])[str];
+                        const obj2 = closure_0(tmp6[12]);
                       }
                       let key;
                       if (tmp7 != null) {
@@ -158,18 +165,18 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
                       if (key == null) {
                         key = str.toString();
                       }
-                      obj[1] = "" + key + " " + closure_0;
-                      obj[2] = closure_1_1;
-                      obj[3] = closure_1_2;
+                      obj.text = "" + key + " " + closure_0;
+                      obj.searchTokenType = searchTokenType;
+                      obj.location = _location;
                       setTextInputValue.addTag(obj);
                     });
-                    obj = { searchContext: closure_0, searchTokenType: closure_1, location: closure_2 };
-                    closure_1_1(closure_1_2[18]).trackSearchFilterAdd(obj);
-                    let obj2 = closure_1_1(closure_1_2[18]);
-                    const initialMessages = closure_1_1(closure_1_2[14]).fetchInitialMessages(closure_0);
+                    obj = { searchContext, searchTokenType, location: _location };
+                    searchTokenType(_location[18]).trackSearchFilterAdd(obj);
+                    let obj2 = searchTokenType(_location[18]);
+                    const initialMessages = searchTokenType(_location[14]).fetchInitialMessages(searchContext);
                   }
                 };
-                obj.openLazy(callback(paths[17])(paths[16], paths.paths), "DatePicker", obj);
+                obj.openLazy(searchContext(paths[17])(paths[16], paths.paths), "DatePicker", obj);
               });
             };
           }
@@ -178,19 +185,19 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
     }
   }
   return () => {
-    closure_0 = token;
-    token = CONTEXT_MENU;
-    token(CONTEXT_MENU[13]).updateSearchQuery(closure_0, (saveDraftTextInputValue) => {
-      if (callback2 === closure_1_5.CONTEXT_MENU) {
+    const searchTokenType = _location;
+    _location = closure_2;
+    SearchPlatformActionCreatorsDefault.updateSearchQuery(searchTokenType, (saveDraftTextInputValue) => {
+      if (_location === constants2.CONTEXT_MENU) {
         const result = saveDraftTextInputValue.saveDraftTextInputValue();
       }
-      saveDraftTextInputValue.setTextInputValue(closure_1_3);
-      const obj = { type: closure_1_4.PREFIX, searchTokenType: callback, location: callback2, text: null };
-      let tmp6 = callback2(closure_1_2[12])[callback];
+      saveDraftTextInputValue.setTextInputValue(closure_2_3);
+      const obj = { type: constants.PREFIX, searchTokenType, location: _location, text: null };
+      let tmp6 = _location(closure_2[12])[searchTokenType];
       if (null == tmp6) {
-        const result1 = callback(tmp5[12]).rebuildSearchTokenConfigs();
-        tmp6 = callback2(tmp5[12])[str];
-        const obj2 = callback(tmp5[12]);
+        const result1 = searchTokenType(tmp5[12]).rebuildSearchTokenConfigs();
+        tmp6 = _location(tmp5[12])[str];
+        const obj2 = searchTokenType(tmp5[12]);
       }
       let key;
       if (tmp6 != null) {
@@ -199,29 +206,26 @@ export const getSearchTokenPressHandler = function getSearchTokenPressHandler(cl
       if (key == null) {
         key = str.toString();
       }
-      obj[3] = key;
+      obj.text = key;
       saveDraftTextInputValue.addTag(obj);
     });
-    let obj = token(CONTEXT_MENU[13]);
-    token(CONTEXT_MENU[14]).syncAutocomplete(closure_0);
+    SearchPlatformUtilsDefault.syncAutocomplete(searchTokenType);
   };
 };
 export const getSearchFilterSuggestions = function getSearchFilterSuggestions(textInputValue) {
   closure_0 = textInputValue;
   const items = [];
   const keys = Object.keys(items(12341));
-  const item = keys.forEach((type) => {
-    let obj = textInputValue(closure_1_2[12]);
-    if (obj.isSearchFilterTokenType(type)) {
-      const plainText = items(closure_1_2[12])[type].plainText;
+  const item = keys.forEach((token) => {
+    let obj = SearchTokens;
+    if (obj.isSearchFilterTokenType(token)) {
+      const plainText = SearchTokensDefault[token].plainText;
       if (null != plainText) {
         const _RegExp = RegExp;
         const _HermesInternal = HermesInternal;
         const regExp = new RegExp("^" + plainText + "(?:: ?)?$", "i");
-        if (regExp.test(textInputValue)) {
-          obj = { token: null, text: null };
-          obj[0] = type;
-          obj[1] = plainText;
+        if (regExp.test(closure_0)) {
+          obj = { token, text: plainText };
           items.push(obj);
         }
       }

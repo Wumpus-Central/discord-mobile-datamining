@@ -1,313 +1,247 @@
-// === Module 11482: _fetchApexExperimentsMetadata ===
+// === Module 11482: ApexActionCreators ===
 
-// Module 11482 (_fetchApexExperimentsMetadata)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "initialize" /* 1236 */;
-import { Endpoints } from "ME" /* 1074 */;
+// Module 11482 (ApexActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import apex_ApexTypes from "apex/ApexTypes" /* 1436 */;
+import experiment from "experiment" /* 7893 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
-const require = arg1;
-function _fetchApexExperimentsMetadata() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0, body) {
-      dependencyMap = tmp3;
-      c4 = 1;
-      const HTTP = callback(closure_1_2[4]).HTTP;
-      obj1 = { url: null, query: null, rejectWithError: true };
-      obj1[0] = closure_1_7.APEX_EXPERIMENTS_METADATA;
-      const obj2 = { surface: null };
-      obj2[0] = callback;
-      obj1[1] = obj2;
-      yield HTTP.get(obj1);
-      if (1 === tmp7) {
-        c4 = 0;
-        const obj3 = callback2(573);
-        obj3.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" });
-        c6 = 3;
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw body;
-      } else if (arg0 !== 2) {
-        const experiments = body.body.experiments;
-        callback = experiments.map((id) => {
-          const variants = id.variants;
-          return { id: id.id, name: id.name, title: id.title, revision: id.revision, unitType: id.unit_type, variants: variants.map((id) => ({ id: id.id, label: id.label, type: id.type })) };
-        });
-        const obj = callback2(573);
-        const obj4 = { type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: null };
-        obj4[1] = callback;
-        obj.dispatch(obj4);
-        c4 = 0;
-      }
+require = fn;
+let closure_8 = async function _fetchApexExperimentsMetadata(surface) {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    closure_2 = tmp3;
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants.APEX_EXPERIMENTS_METADATA, query: { surface }, rejectWithError: true };
+    await HTTP.get(request);
+    if (1 === tmp7) {
       c4 = 0;
-      return body;
-    })();
-  });
-  closure_8 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      let obj3 = closure_130_1(closure_130_2[5]);
+      obj3.dispatch({ type: "APEX_EXPERIMENTS_METADATA_FETCH_FAILURE" });
+      c6 = 3;
+    } else if (arg0 === 1) {
+      c6 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      const experiments = value.body.experiments;
+      closure_129_0 = experiments.map((id) => {
+        const obj = { id: id.id, name: id.name, title: id.title, revision: id.revision, unitType: id.unit_type, variants: null };
+        const variants = id.variants;
+        obj.variants = variants.map((id) => ({ id: id.id, label: id.label, type: id.type }));
+        return obj;
+      });
+      obj3 = { type: "APEX_EXPERIMENTS_METADATA_FETCH_SUCCESS", experiments: closure_129_0 };
+      closure_130_1(closure_130_2[5]).dispatch(obj3);
+      c4 = 0;
+      closure_130_1(closure_130_2[5]);
+    }
+    return value;
+  })();
+};
+let closure_9 = async function _fetchUserExperimentAssignments(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchUserExperimentAssignments() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (fetching === 2) {
-        fetching = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = closure_0;
+          closure_129_1 = undefined;
+          if (!fetching.isFetching(closure_0)) {
+            if (!obj15.hasLoaded(tmp47)) {
+              let obj7 = DispatcherDefault;
+              const obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: tmp47 };
+              obj7.dispatch(obj1);
+              c4 = 1;
+              const HTTP = HTTPUtils.HTTP;
+              const request = { url: constants.APEX_EXPERIMENTS, query: null, rejectWithError: false };
+              let obj2 = { surface: experiment.Experiment_Surface.APP };
+              request.query = obj2;
+              c5 = 2;
+              c6 = 1;
+              const obj3 = { value: HTTP.get(request), done: false };
+              return obj3;
+            }
+          }
+          obj15 = fetching;
         }
       } else {
-        try {
-          fetching = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              fetching = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              fetching = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              dependencyMap = tmp3;
-              let lib = tmp7;
-              lib = undefined;
-              if (!fetching.isFetching(callback)) {
-                if (!obj15.hasLoaded(tmp48)) {
-                  let obj7 = closure_1_1(closure_1_2[5]);
-                  obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: null };
-                  obj1[1] = tmp48;
-                  obj7.dispatch(obj1);
-                  c4 = 1;
-                  const HTTP = callback(closure_1_2[4]).HTTP;
-                  let obj2 = { url: null, query: null, rejectWithError: false };
-                  obj2[0] = closure_1_7.APEX_EXPERIMENTS;
-                  const obj3 = { surface: null };
-                  obj3[0] = callback(closure_1_2[6]).Experiment_Surface.APP;
-                  obj2[1] = obj3;
-                  c5 = 2;
-                  fetching = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = HTTP.get(obj2);
-                  return obj4;
-                }
-              }
-              obj15 = fetching;
-            }
-          } else {
-            if (1 === tmp7) {
-              c4 = 0;
-              let obj5 = lib(573);
-              obj5 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: null };
-              obj5[1] = callback;
-              obj5.dispatch(obj5);
-            } else if (arg0 === 1) {
-              fetching = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib = arg1;
-              if (null != lib) {
-                if (null != lib.body) {
-                  obj = lib(573);
-                  const obj6 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: null, experiments: null };
-                  obj6[1] = callback;
-                  obj6[2] = lib.body;
-                  obj.dispatch(obj6);
-                }
-                c4 = 0;
-              }
-              obj2 = lib(573);
-              obj7 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: null };
-              obj7[1] = callback;
-              obj2.dispatch(obj7);
+        if (1 === tmp7) {
+          c4 = 0;
+          let obj5 = closure_130_1(closure_130_2[5]);
+          const obj4 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
+          obj5.dispatch(obj4);
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_1 = value;
+          if (null != closure_129_1) {
+            if (null != closure_129_1.body) {
+              obj = closure_130_1(closure_130_2[5]);
+              obj5 = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: closure_129_0, experiments: closure_129_1.body };
+              obj.dispatch(obj5);
             }
             c4 = 0;
-            fetching = 3;
-            const obj8 = { value: null, done: true };
-            obj8[0] = arg1;
-            return obj8;
           }
-          fetching = 3;
-        } catch (tmp37) {
-          closure_3 = tmp37;
-          if (tmp4 === c4) {
-            fetching = tmp2;
-            throw tmp37;
-          } else {
-            c5 = tmp;
-          }
+          obj2 = closure_130_1(closure_130_2[5]);
+          const obj6 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_129_0 };
+          obj2.dispatch(obj6);
         }
-      }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchInstallationExperiments() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
+        c4 = 0;
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+        obj7 = { value, done: true };
+        return obj7;
+      }
+      c6 = 3;
+    } catch (tmp37) {
+      closure_3 = tmp37;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp37;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
+let closure_10 = async function _fetchInstallationExperiments(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          const installation = tmp3;
+          closure_1 = tmp7;
+          closure_129_0 = undefined;
+          let body2;
+          let installation2;
+          closure_129_3 = undefined;
+          if (null == closure_0) {
+            let obj5 = ApexExperimentStore;
+            if (!ApexExperimentStore.isFetching(apex_ApexTypes.INSTALLATION_UNIT_ID)) {
+              if (!obj5.hasLoaded(apex_ApexTypes.INSTALLATION_UNIT_ID)) {
+                let obj6 = DispatcherDefault;
+                const obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: apex_ApexTypes.INSTALLATION_UNIT_ID };
+                obj6.dispatch(obj1);
+                c4 = 1;
+                const HTTP = HTTPUtils.HTTP;
+                const request = { url: constants.APEX_EXPERIMENTS, query: null, rejectWithError: false };
+                const obj2 = { surface: experiment.Experiment_Surface.APP };
+                request.query = obj2;
+                c5 = 2;
+                c6 = 1;
+                let obj3 = { value: HTTP.get(request), done: false };
+                return obj3;
+              }
+            }
+          }
         }
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let installation = tmp3;
-              let body = tmp7;
-              let lib;
-              body = undefined;
-              installation = undefined;
-              closure_3 = undefined;
-              if (null == lib) {
-                let obj5 = c6;
-                if (!c6.isFetching(lib(closure_1_2[7]).INSTALLATION_UNIT_ID)) {
-                  if (!obj5.hasLoaded(lib(closure_1_2[7]).INSTALLATION_UNIT_ID)) {
-                    let obj6 = closure_1_1(closure_1_2[5]);
-                    obj1 = { type: "APEX_EXPERIMENTS_FETCH_START", unitId: null };
-                    obj1[1] = lib(closure_1_2[7]).INSTALLATION_UNIT_ID;
-                    obj6.dispatch(obj1);
-                    let v0 = 1;
-                    const HTTP = lib(closure_1_2[4]).HTTP;
-                    const obj2 = { url: null, query: null, rejectWithError: false };
-                    obj2[0] = closure_1_7.APEX_EXPERIMENTS;
-                    let obj3 = { surface: null };
-                    obj3[0] = lib(closure_1_2[6]).Experiment_Surface.APP;
-                    obj2[1] = obj3;
-                    c5 = 2;
-                    c6 = 1;
-                    const obj4 = { value: null, done: false };
-                    obj4[0] = HTTP.get(obj2);
-                    return obj4;
-                  }
-                }
-              }
-            }
-          } else {
-            if (1 === tmp7) {
-              v0 = 0;
-              obj3 = body(installation[5]);
-              obj5 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: null };
-              obj5[1] = lib(installation[7]).INSTALLATION_UNIT_ID;
-              obj3.dispatch(obj5);
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              lib = arg1;
-              body = undefined;
-              if (lib != null) {
-                body = lib.body;
-              }
-              if (null != body) {
-                body = lib.body;
-                installation = body.installation;
-                closure_3 = v0(body, closure_3);
-                const Emitter = body(installation[8]).Emitter;
-                Emitter.batched(() => {
-                  if (installation) {
-                    let obj = body(installation[5]);
-                    obj = { type: "INSTALLATION_ID", installation: null };
-                    obj[1] = installation;
-                    obj.dispatch(obj);
-                  }
-                  obj = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: callback(installation[7]).INSTALLATION_UNIT_ID, experiments: closure_3 };
-                  body(installation[5]).dispatch(obj);
-                });
-              } else {
-                obj = body(installation[5]);
-                obj6 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: null };
-                obj6[1] = lib(installation[7]).INSTALLATION_UNIT_ID;
-                obj.dispatch(obj6);
-              }
-              v0 = 0;
-            }
-            v0 = 0;
-            c6 = 3;
-            const obj7 = { value: null, done: true };
-            obj7[0] = arg1;
-            return obj7;
-          }
+        if (1 === tmp7) {
+          c4 = 0;
+          obj3 = closure_130_1(closure_130_2[5]);
+          const obj4 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_130_0(closure_130_2[7]).INSTALLATION_UNIT_ID };
+          obj3.dispatch(obj4);
+        } else if (arg0 === 1) {
           c6 = 3;
-        } catch (tmp47) {
-          closure_3 = tmp47;
-          if (tmp4 === v0) {
-            c6 = tmp2;
-            throw tmp47;
-          } else {
-            c5 = tmp;
+          throw value;
+        } else if (arg0 !== 2) {
+          closure_129_0 = value;
+          let body;
+          if (closure_129_0 != null) {
+            body = closure_129_0.body;
           }
+          if (null != body) {
+            body2 = closure_129_0.body;
+            installation2 = body2.installation;
+            closure_129_3 = closure_130_4(body2, closure_130_3);
+            const Emitter = closure_130_1(closure_130_2[8]).Emitter;
+            Emitter.batched(() => {
+              if (installation) {
+                closure_1(installation[5]);
+                let obj = { type: "INSTALLATION_ID", installation };
+                obj.dispatch(obj);
+              }
+              obj = { type: "APEX_EXPERIMENTS_FETCH_SUCCESS", unitId: closure_0(installation[7]).INSTALLATION_UNIT_ID, experiments };
+              closure_1(installation[5]).dispatch(obj);
+            });
+          } else {
+            obj = closure_130_1(closure_130_2[5]);
+            obj5 = { type: "APEX_EXPERIMENTS_FETCH_FAILURE", unitId: closure_130_0(closure_130_2[7]).INSTALLATION_UNIT_ID };
+            obj.dispatch(obj5);
+          }
+          c4 = 0;
         }
+        c4 = 0;
+        c6 = 3;
+        obj6 = { value, done: true };
+        return obj6;
       }
-    })();
-  });
-  closure_10 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      c6 = 3;
+    } catch (tmp47) {
+      const experiments = tmp47;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp47;
+      } else {
+        c5 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 let closure_3 = ["installation"];
-const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
+const Endpoints = fn(1074).Endpoints;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/apex/ApexActionCreators.tsx");
 
-export const fetchApexExperimentsMetadata = function fetchApexExperimentsMetadata(APP) {
+export const fetchApexExperimentsMetadata = function fetchApexExperimentsMetadata() {
   const self = this;
-  const apply = _fetchApexExperimentsMetadata.apply;
+  const apply = closure_8.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -317,7 +251,7 @@ export const fetchApexExperimentsMetadata = function fetchApexExperimentsMetadat
 };
 export const fetchUserExperimentAssignments = function fetchUserExperimentAssignments() {
   const self = this;
-  const apply = _fetchUserExperimentAssignments.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -325,9 +259,9 @@ export const fetchUserExperimentAssignments = function fetchUserExperimentAssign
   }
   return applyArgumentsResult;
 };
-export const fetchInstallationExperiments = function fetchInstallationExperiments(arg0) {
+export const fetchInstallationExperiments = function fetchInstallationExperiments() {
   const self = this;
-  const apply = _fetchInstallationExperiments.apply;
+  const apply = closure_10.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

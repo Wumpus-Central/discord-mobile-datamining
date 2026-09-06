@@ -1,12 +1,13 @@
-// === Module 7291: isCurrentUserTeen ===
+// === Module 7291: SelfModUtils ===
 
-// Module 7291 (isCurrentUserTeen)
-import closure_0 from "mergeGuildAvatar" /* 1371 */;
+// Module 7291 (SelfModUtils)
+import UserStore from "UserStore" /* 1371 */;
 
-const result = require("set").fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
 
 export const isCurrentUserTeen = function isCurrentUserTeen() {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let nsfwAllowed;
   if (currentUser != null) {
     nsfwAllowed = currentUser.nsfwAllowed;

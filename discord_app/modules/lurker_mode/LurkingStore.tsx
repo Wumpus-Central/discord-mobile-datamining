@@ -1,18 +1,18 @@
-// === Module 4200: initialize ===
+// === Module 4200: LurkingStore ===
 
-// Module 4200 (initialize)
-import set2 from "set" /* 2 */;
+// Module 4200 (LurkingStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
-import closure_1 from "trackCommunicationDisabled" /* 2021 */;
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildRecord from "GuildRecord" /* 1975 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const isGuildLurker = GuildNSFWContentLevel.isGuildLurker;
-({ JoinGuildSources: c4, ME: c5 } = ME);
-let closure_6 = [];
+const isGuildLurker = GuildRecord.isGuildLurker;
+({ JoinGuildSources: closure_4, ME: hasOwnProperty } = Constants);
+let items = [];
 let closure_7 = {};
 let closure_8 = {};
 const Store = initializeDefault.Store;
@@ -20,24 +20,24 @@ class LurkingStore extends Store {
 }
 const prototype = LurkingStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_1, closure_2, closure_3);
+  this.waitFor(GuildMemberStore, GuildStore, UserStore);
 };
 prototype["lurkingGuildIds"] = function lurkingGuildIds() {
-  return closure_6;
+  return items;
 };
 prototype["mostRecentLurkedGuildId"] = function mostRecentLurkedGuildId() {
   let tmp = null;
-  if (0 !== closure_6.length) {
-    tmp = closure_6[closure_6.length - 1];
+  if (0 !== items.length) {
+    tmp = items[items.length - 1];
   }
   return tmp;
 };
 prototype["isLurking"] = function isLurking(guildId) {
-  const guild = store.getGuild(guildId);
+  const guild = GuildStore.getGuild(guildId);
   if (null == guild) {
     return false;
   } else {
-    const isCurrentUserGuestResult = currentUserGuest.isCurrentUserGuest(guildId);
+    const isCurrentUserGuestResult = GuildMemberStore.isCurrentUserGuest(guildId);
     let tmp6 = !isCurrentUserGuestResult;
     if (!isCurrentUserGuestResult) {
       tmp6 = isGuildLurker(guild);
@@ -45,10 +45,10 @@ prototype["isLurking"] = function isLurking(guildId) {
     return Boolean(tmp6);
   }
 };
-prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(closure_0) {
+prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(guildId) {
   let tmp = null;
-  if (null != closure_0) {
-    let tmp3 = table2[closure_0];
+  if (null != guildId) {
+    let tmp3 = closure_8[guildId];
     if (tmp3 == null) {
       tmp3 = null;
     }
@@ -59,22 +59,22 @@ prototype["getLurkingSourceForGuild"] = function getLurkingSourceForGuild(closur
 prototype["getLoadId"] = function getLoadId(arg0) {
   let tmp = null;
   if (null != arg0) {
-    tmp = table[arg0];
+    tmp = closure_7[arg0];
   }
   return tmp;
 };
 LurkingStore.displayName = "LurkingStore";
-const lurkingStore = new LurkingStore(dispatcherDefault, {
+const lurkingStore = new LurkingStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const guildsArray = store.getGuildsArray();
-    const found = guildsArray.filter((arg0) => callback(arg0));
-    closure_6 = found.map((id) => id.id);
+    const guildsArray = GuildStore.getGuildsArray();
+    const found = guildsArray.filter((item) => isGuildLurker(item));
+    items = found.map((id) => id.id);
     closure_8 = {};
   },
   GUILD_JOIN: function handleGuildJoin(lurker) {
     ({ guildId, source, loadId } = lurker);
     if (lurker.lurker) {
-      if (guildId !== closure_5) {
+      if (guildId !== hasOwnProperty) {
         const hasItem = items.includes(guildId);
         if (!hasItem) {
           items = [];
@@ -85,17 +85,13 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
         closure_7[guildId] = loadId;
       }
       if (constants.MOBILE_GUILD_DISCOVERY === source) {
-        let obj = { type: null };
-        obj[0] = tmp12.MOBILE_GUILD_DISCOVERY;
+        let obj = { type: tmp12.MOBILE_GUILD_DISCOVERY };
         closure_8[guildId] = obj;
       } else if (tmp12.DIRECTORY_ENTRY === source) {
-        obj = { type: null, directoryChannelId: null };
-        obj[0] = tmp12.DIRECTORY_ENTRY;
-        obj[1] = tmp3;
+        obj = { type: tmp12.DIRECTORY_ENTRY, directoryChannelId: tmp3 };
         closure_8[guildId] = obj;
       } else if (tmp12.GAME_COMMUNITY_UPSELL === source) {
-        obj = { type: null };
-        obj[0] = tmp12.GAME_COMMUNITY_UPSELL;
+        obj = { type: tmp12.GAME_COMMUNITY_UPSELL };
         closure_8[guildId] = obj;
       } else {
         delete tmp2[tmp];
@@ -111,13 +107,13 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
     if (ignoredGuildIds == null) {
       ignoredGuildIds = [];
     }
-    let items = [...ignoredGuildIds];
+    items = [...ignoredGuildIds];
     set = new Set(items);
     const items1 = [...items];
-    return items1.reduce((arg0, arg1) => {
-      let tmp4 = arg0;
-      if (!set.has(arg1)) {
-        const index = items.indexOf(arg1);
+    return items1.reduce((acc, item) => {
+      let tmp4 = acc;
+      if (!set.has(item)) {
+        const index = items.indexOf(item);
         let flag = false;
         if (index > -1) {
           items = [];
@@ -128,7 +124,7 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
           flag = true;
         }
         if (!flag) {
-          flag = arg0;
+          flag = acc;
         }
         tmp4 = flag;
       }
@@ -137,7 +133,7 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
   },
   GUILD_STOP_LURKING_FAILURE: function handleGuildStopLurkingFailure(arg0) {
     ({ lurkingGuildId, lurkingSource } = arg0);
-    if (lurkingGuildId !== closure_5) {
+    if (lurkingGuildId !== hasOwnProperty) {
       const hasItem = items.includes(lurkingGuildId);
       if (!hasItem) {
         items = [];
@@ -191,7 +187,7 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
   },
   GUILD_MEMBER_ADD: function handleGuildMemberAdd(guildId) {
     guildId = guildId.guildId;
-    currentUser = currentUser.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -216,6 +212,6 @@ const lurkingStore = new LurkingStore(dispatcherDefault, {
     return flag;
   }
 });
-const result = set2.fileFinishedImporting("modules/lurker_mode/LurkingStore.tsx");
+const result = size.fileFinishedImporting("modules/lurker_mode/LurkingStore.tsx");
 
 export default lurkingStore;

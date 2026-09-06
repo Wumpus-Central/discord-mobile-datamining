@@ -1,25 +1,26 @@
 // === Module 7217: getChannelIdForGuildTransition ===
 
 // Module 7217 (getChannelIdForGuildTransition)
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
-import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 7222 */;
-import getPrice from "getPrice" /* 7226 */;
-import closure_2 from "initializeFromUserSettings" /* 1960 */;
-import closure_3 from "shouldShowOnboarding" /* 7096 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "comparator" /* 2012 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "handleConnectionOpen" /* 2011 */;
-import closure_8 from "makeSortedChannel" /* 7218 */;
-import { ME } from "ME" /* 1074 */;
-import { StaticChannelRoute } from "set" /* 1964 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7222 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
+import FavoriteStore from "FavoriteStore" /* 1960 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7096 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7218 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
+require = fn;
+const ME = fn(1074).ME;
+const StaticChannelRoute = fn(1964).StaticChannelRoute;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/routing/getChannelIdForGuildTransition.tsx");
 
 export const getChannelIdForGuildTransition = function getChannelIdForGuildTransition(guildId) {
-  channelId = channelId.getChannelId(guildId);
-  defaultChannel = defaultChannel.getDefaultChannel(guildId);
+  const channelId = SelectedChannelStore.getChannelId(guildId);
+  const defaultChannel = GuildChannelStore.getDefaultChannel(guildId);
   let id;
   if (defaultChannel != null) {
     id = defaultChannel.id;
@@ -27,7 +28,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
   if (id == null) {
     let tmp5;
     if (guildId === ME) {
-      privateChannelIds = privateChannelIds.getPrivateChannelIds();
+      const privateChannelIds = PrivateChannelSortStore.getPrivateChannelIds();
       let first;
       if (privateChannelIds.length > 0) {
         first = privateChannelIds[0];
@@ -37,7 +38,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     id = tmp5;
   }
   if (channelId === StaticChannelRoute.GUILD_ONBOARDING) {
-    if (!closure_3.shouldShowOnboarding(guildId)) {
+    if (!GuildOnboardingStore.shouldShowOnboarding(guildId)) {
       return id;
     }
   }
@@ -45,10 +46,10 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     if (!obj.canSeeOnboardingHome(guildId)) {
       return id;
     }
-    obj = useCanSeeOnboardingHome;
+    obj = OnboardingHomeUtils;
   }
   if (channelId === StaticChannelRoute.GUILD_SPACE) {
-    if (obj5.canUseGuildSpace(guild.getGuild(guildId), "getChannelIdForGuildTransition")) {
+    if (obj5.canUseGuildSpace(GuildStore.getGuild(guildId), "getChannelIdForGuildTransition")) {
       id = channelId;
     }
     return id;
@@ -57,16 +58,16 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
       if (obj2.canSeeGameShop(guildId)) {
         return channelId;
       }
-      obj2 = getPrice;
+      obj2 = SlayerStorefrontUtils;
     }
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     if (null != channel) {
       if (!channel.isGuildVocal()) {
         let tmp17 = channelId;
         if (obj4.isFavoritesGuildId(guildId)) {
           tmp17 = channelId;
         }
-        obj4 = getFavoritesAwareGuildName;
+        obj4 = FavoritesUtils;
       }
       return tmp17;
     }

@@ -1,8 +1,9 @@
-// === Module 4474: createExperiment ===
+// === Module 4474: ? ===
 
-// Module 4474 (createExperiment)
-import importDefaultResult from "createExperiment" /* 4475 */;
+// Module 4474
+import createExperiment from "createExperiment" /* 4475 */;
 
-const result = require("set").fileFinishedImporting("modules/experiments/index.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/index.tsx");
 
-export const createExperiment = importDefaultResult;
+export { createExperiment };

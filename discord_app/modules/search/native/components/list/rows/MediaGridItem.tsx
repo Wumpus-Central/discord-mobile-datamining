@@ -1,41 +1,44 @@
-// === Module 16664: ? ===
+// === Module 16664: MediaGridItem ===
 
-// Module 16664
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import { SearchMediaTypes } from "MessageEmbedTypes" /* 7878 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16664 (MediaGridItem)
+import nativeDefault from "native" /* 576 */;
+import timing from "timing" /* 4561 */;
+import timingPresets from "timingPresets" /* 4564 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ View: c4, Pressable: c5, useWindowDimensions: closure_6 } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10 } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Pressable: hasOwnProperty, useWindowDimensions: metroRequire } = get_ActivityIndicator);
+const SearchMediaTypes = fn(7878).SearchMediaTypes;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: null, avatar: null, card: null };
-obj = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-obj[0] = obj;
-obj[1] = { position: "absolute", top: 8, right: 8 };
-obj[2] = { padding: 0 };
-let closure_11 = createCacheKey.createStyles(obj);
+obj = { borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+obj.container = obj;
+obj.avatar = { position: "absolute", top: 8, right: 8 };
+obj.card = { padding: 0 };
+let closure_11 = createStyles.createStyles(obj);
 let closure_12 = { HIDDEN: 0, [0]: "HIDDEN", VISIBLE: 1, [1]: "VISIBLE" };
-let closure_13 = { code: "function MediaGridItemTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}" };
-const memoResult = importAllResult.memo(function MediaGridItem(media) {
+const __initData = { code: "function MediaGridItemTsx1(){const{withTiming,opacity,timingStandard}=this.__closure;return{opacity:withTiming(opacity.get(),timingStandard)};}" };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/list/rows/MediaGridItem.tsx");
+
+export default noop.memo(function MediaGridItem(media) {
   media = media.media;
-  const size = media.size;
+  let size = media.size;
   const onPress = media.onPress;
   let ref;
-  let stateFromStores;
   let sharedValue;
   ({ containerStyle, animate } = media);
-  const tmp = callback2();
-  const scale = callback().scale;
+  const tmp = closure_11();
+  const scale = closure_6().scale;
   let obj = ref;
   ref = ref.useRef(null);
-  obj1 = media(onPress[7]);
-  const items = [closure_7];
-  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getChannel(media.channelId));
+  let obj1 = media(onPress[7]);
+  const items = [ChannelStore];
+  const stateFromStores = obj1.useStateFromStores(items, () => ChannelStore.getChannel(media.channelId));
   const items1 = [media.author, ];
   let guild_id;
   if (stateFromStores != null) {
@@ -51,7 +54,7 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
     return author.getAvatarSource(guild_id);
   }, items1);
   const items2 = [media, onPress];
-  callback = obj.useCallback(() => {
+  const callback = obj.useCallback(() => {
     onPress({ media, originView: ref.current });
   }, items2);
   let tmp3Result = tmp3(tmp4[8]);
@@ -59,85 +62,81 @@ const memoResult = importAllResult.memo(function MediaGridItem(media) {
   tmp3Result = tmp3(tmp4[8]);
   const fn = function f() {
     const obj = { opacity: null };
-    const value = sharedValue.get();
-    obj[0] = media(onPress[9]).withTiming(value, media(onPress[10]).timingStandard);
+    value = sharedValue.get();
+    obj.opacity = timing.withTiming(value, timingPresets.timingStandard);
     return obj;
   };
   obj = { withTiming: tmp3(tmp4[9]).withTiming, opacity: sharedValue, timingStandard: tmp3(tmp4[10]).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 9644750191833;
-  fn.__initData = closure_13;
+  fn.__initData = __initData;
   const items3 = [sharedValue];
   const animatedStyle = tmp3Result.useAnimatedStyle(fn);
   const effect = obj.useEffect(() => {
-    const result = sharedValue.set(closure_1_12.VISIBLE);
+    const result = sharedValue.set(constants.VISIBLE);
   }, items3);
   const items4 = [size];
-  const memo1 = obj.useMemo(() => ({ width: size, height: size }), items4);
-  obj = { style: items5, children: null };
-  items5 = [tmp.container, containerStyle, memo1, animatedStyle];
+  const memo1 = obj.useMemo(() => {
+    size = { width: size, height: size };
+    return size;
+  }, items4);
+  obj = { style: null, children: null };
+  const items5 = [tmp.container, containerStyle, memo1, animatedStyle];
+  obj.style = items5;
   obj1 = { ref, style: memo1, accessibilityRole: "button", onPress: callback, children: null };
   let tmp14Result = media.type === SearchMediaTypes.EMBED;
   if (tmp14Result) {
     const obj2 = { sources: null, embed: null, messageId: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
-    ({ sources: obj8[0], embed: obj8[1], messageId: obj8[2], channelId: obj8[3] } = media);
-    obj2[4] = media.author.id;
-    obj2[5] = scale;
-    obj2[6] = size;
-    obj2[7] = size;
+    ({ sources: obj8.sources, embed: obj8.embed, messageId: obj8.messageId, channelId: obj8.channelId } = media);
+    obj2.authorId = media.author.id;
+    obj2.scale = scale;
+    obj2.containerHeight = size;
+    obj2.containerWidth = size;
     tmp14Result = tmp14(tmp3(tmp4[11]).SearchEmbedMediaImage, obj2);
   }
   const items6 = [tmp14Result, , , , ];
   tmp14Result = media.type === tmp17.ATTACHMENT;
   if (tmp14Result) {
     const obj3 = { attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null };
-    ({ attachment: obj9[0], channelId: obj9[1] } = media);
-    obj3[2] = media.author.id;
-    obj3[3] = scale;
-    obj3[4] = size;
-    obj3[5] = size;
+    ({ attachment: obj9.attachment, channelId: obj9.channelId } = media);
+    obj3.authorId = media.author.id;
+    obj3.scale = scale;
+    obj3.containerHeight = size;
+    obj3.containerWidth = size;
     tmp14Result = tmp14(tmp3(tmp4[11]).SearchAttachmentMediaImage, obj3);
   }
   items6[1] = tmp14Result;
   let tmp14Result1 = media.type === tmp17.AUDIO;
   if (tmp14Result1) {
-    const obj4 = { height: null, width: null };
-    obj4[0] = size;
-    obj4[1] = size;
-    tmp14Result1 = tmp14(tmp3(tmp4[11]).SearchSoundMediaImage, obj4);
+    size = { height: null, width: null };
+    size.height = size;
+    size.width = size;
+    tmp14Result1 = tmp14(tmp3(tmp4[11]).SearchSoundMediaImage, size);
   }
   items6[2] = tmp14Result1;
   let tmp14Result2 = media.type === tmp17.COMPONENT;
   if (tmp14Result2) {
-    const obj5 = { unfurledMediaItem: null, sources: null, channelId: null, authorId: null, isBot: null, scale: null, containerHeight: null, containerWidth: null };
-    ({ unfurledMediaItem: obj11[0], sources: obj11[1], channelId: obj11[2] } = media);
-    obj5[3] = media.author.id;
-    obj5[4] = media.author.bot;
-    obj5[5] = scale;
-    obj5[6] = size;
-    obj5[7] = size;
-    tmp14Result2 = tmp14(tmp3(tmp4[11]).SearchComponentMediaImage, obj5);
+    const obj4 = { unfurledMediaItem: null, sources: null, channelId: null, authorId: null, isBot: null, scale: null, containerHeight: null, containerWidth: null };
+    ({ unfurledMediaItem: obj11.unfurledMediaItem, sources: obj11.sources, channelId: obj11.channelId } = media);
+    obj4.authorId = media.author.id;
+    obj4.isBot = media.author.bot;
+    obj4.scale = scale;
+    obj4.containerHeight = size;
+    obj4.containerWidth = size;
+    tmp14Result2 = tmp14(tmp3(tmp4[11]).SearchComponentMediaImage, obj4);
   }
   items6[3] = tmp14Result2;
   let tmp14Result3 = null != memo;
   if (tmp14Result3) {
-    const obj6 = { style: null, children: null };
-    obj6[0] = tmp.avatar;
-    const obj7 = { shadow: "low", style: null, children: null };
-    obj7[1] = tmp.card;
-    const obj8 = { source: null, size: null, avatarDecoration: null };
-    obj8[0] = memo;
-    obj8[1] = tmp3(tmp4[13]).AvatarSizes.XSMALL;
-    obj8[2] = media.author.avatarDecoration;
-    obj7[2] = tmp14(tmp3(tmp4[13]).Avatar, obj8);
-    obj6[1] = tmp14(tmp3(tmp4[12]).Card, obj7);
-    tmp14Result3 = tmp14(stateFromStores, obj6);
+    const obj5 = { style: tmp.avatar, children: null };
+    const obj6 = { shadow: "low", style: tmp.card, children: null };
+    const obj7 = { source: memo, size: tmp3(tmp4[13]).AvatarSizes.XSMALL, avatarDecoration: media.author.avatarDecoration };
+    obj6.children = tmp14(tmp3(tmp4[13]).Avatar, obj7);
+    obj5.children = tmp14(tmp3(tmp4[12]).Card, obj6);
+    tmp14Result3 = tmp14(stateFromStores, obj5);
   }
   items6[4] = tmp14Result3;
-  obj1[4] = items6;
-  obj[1] = closure_10(sharedValue, obj1);
+  obj1.children = items6;
+  obj.children = closure_10(sharedValue, obj1);
   return closure_9(size(onPress[8]).View, obj);
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/MediaGridItem.tsx");
-
-export default memoResult;

@@ -1,10 +1,10 @@
-// === Module 15214: getRoleSubscriptionPlanId ===
+// === Module 15214: subscriptionUtils ===
 
-// Module 15214 (getRoleSubscriptionPlanId)
-import set from "set" /* 2 */;
+// Module 15214 (subscriptionUtils)
 import _modDef38 from "module_38" /* 38 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/subscriptionUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/subscriptionUtils.tsx");
 
 export const getRoleSubscriptionPlanId = function getRoleSubscriptionPlanId(items) {
   items = items.items;

@@ -1,9 +1,9 @@
-// === Module 8096: smartOutput ===
+// === Module 8096: MarkupRulesUtils ===
 
-// Module 8096 (smartOutput)
-import set from "set" /* 2 */;
+// Module 8096 (MarkupRulesUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
+const result = size.fileFinishedImporting("modules/markup/MarkupRulesUtils.tsx");
 
 export const smartOutput = function smartOutput(node, output, state) {
   if (typeof node.content !== "string") {

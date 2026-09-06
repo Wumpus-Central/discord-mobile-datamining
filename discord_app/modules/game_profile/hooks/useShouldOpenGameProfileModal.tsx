@@ -1,17 +1,19 @@
 // === Module 8676: useShouldOpenGameProfileModal ===
 
 // Module 8676 (useShouldOpenGameProfileModal)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import hasFlagAll from "hasFlag" /* 1384 */;
-import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 5112 */;
+import _modDef38 from "module_38" /* 38 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import FlagUtilsAll from "FlagUtils" /* 1384 */;
+import utils from "utils" /* 5112 */;
 import GameFlags from "GameFlags" /* 8677 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGamesFromMessage" /* 1916 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import noop from "module_19" /* 19 */;
+import GameStore from "GameStore" /* 1916 */;
 
-require = arg1;
-let obj = { NoMatch: "no match", NSFW: "nsfw", Disabled: "profile disabled", Obscured: "obscured" };
-const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useShouldOpenGameProfileModal.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const RejectionReason = { NoMatch: "no match", NSFW: "nsfw", Disabled: "profile disabled", Obscured: "obscured" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_profile/hooks/useShouldOpenGameProfileModal.tsx");
 
 export default function useShouldOpenGameProfileModal(applicationId) {
   let str = applicationId.applicationId;
@@ -23,18 +25,16 @@ export default function useShouldOpenGameProfileModal(applicationId) {
   if (trackEntryPointImpression === undefined) {
     trackEntryPointImpression = true;
   }
-  importAll = undefined;
   let gameRecord;
   let isLoading;
-  let shouldOpenGameProfile;
   importAll = isLoading.useRef(false);
   gameId = trackEntryPointImpression(gameRecord[7])({ applicationId: str, gameId });
   gameRecord = gameId.gameRecord;
   isLoading = gameId.isLoading;
-  shouldOpenGameProfile = null != gameRecord;
+  let shouldOpenGameProfile = null != gameRecord;
   if (shouldOpenGameProfile) {
-    shouldOpenGameProfile = !importAll(tmp[4]).hasFlag(gameRecord.gameFlags, source(tmp[5]).GameFlags.GAME_PROFILE_DISABLED);
-    const obj2 = importAll(tmp[4]);
+    shouldOpenGameProfile = !require("FlagUtils").hasFlag(gameRecord.gameFlags, source(tmp[5]).GameFlags.GAME_PROFILE_DISABLED);
+    const obj2 = require("FlagUtils");
   }
   let items = [gameRecord, shouldOpenGameProfile, isLoading, source, trackEntryPointImpression];
   const effect = isLoading.useEffect(() => {
@@ -49,50 +49,43 @@ export default function useShouldOpenGameProfileModal(applicationId) {
       current = null == gameRecord;
     }
     if (!current) {
-      let track = trackEntryPointImpression;
-      let GAME_PROFILE_ENTRY_POINT_AVAILABLE = gameRecord;
-      trackEntryPointImpression(gameRecord[8])(null != source, "Cannot track a Game Profile Entry Point Impressions without a source.");
+      let track = importDefault;
+      let GAME_PROFILE_ENTRY_POINT_AVAILABLE = dependencyMap;
+      _modDef38(null != source, "Cannot track a Game Profile Entry Point Impressions without a source.");
       let flag = shouldOpenGameProfile;
       if (null == gameRecord) {
-        const items = [closure_1_7.NoMatch];
+        const items = [obj.NoMatch];
         let tmp11 = items;
       } else {
         const items1 = [];
-        if (obj3.hasFlag(tmp8.gameFlags, source(GAME_PROFILE_ENTRY_POINT_AVAILABLE[5]).GameFlags.GAME_PROFILE_DISABLED)) {
-          items1.push(closure_1_7.Disabled);
+        if (obj3.hasFlag(tmp8.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
+          items1.push(obj.Disabled);
         }
-        obj3 = ref(GAME_PROFILE_ENTRY_POINT_AVAILABLE[4]);
-        const tmp19 = source;
+        obj3 = FlagUtilsAll;
         tmp11 = items1;
         if (tmp19Result.isAgeRestrictedContentClassification(tmp8.contentClassification)) {
-          items1.push(closure_1_7.NSFW);
+          items1.push(obj.NSFW);
           tmp11 = items1;
         }
-        tmp19Result = source(GAME_PROFILE_ENTRY_POINT_AVAILABLE[6]);
+        tmp19Result = utils;
       }
-      track = track(GAME_PROFILE_ENTRY_POINT_AVAILABLE[3]).track;
-      GAME_PROFILE_ENTRY_POINT_AVAILABLE = closure_1_6.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
-      obj = { game_profile_available: null, application_id: null, rejection_reason: null, source: null };
-      obj[0] = flag;
-      obj[1] = gameRecord.id;
-      obj[2] = tmp11;
-      obj[3] = source;
+      track = track(1242).track;
+      GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
+      obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
       track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
       flag = true;
       ref.current = true;
-      const tmp5 = source;
-      const trackResult = track(GAME_PROFILE_ENTRY_POINT_AVAILABLE[3]);
+      const trackResult = track(1242);
     }
   }, items);
   return { shouldOpenGameProfile, gameId: gameId.gameId };
 };
-export const RejectionReason = obj;
+export { RejectionReason };
 export const trackEntryPoint = function trackEntryPoint(game_profile_available, id, items, CallTile) {
   if (items === undefined) {
     items = [];
   }
-  obj = expandEventPropertiesDefault;
-  obj = { game_profile_available, application_id: id, rejection_reason: items, source: CallTile };
+  const obj = { game_profile_available, application_id: id, rejection_reason: items, source: CallTile };
   obj.track(AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
 };
 export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
@@ -104,19 +97,18 @@ export const gameIsAcceptable = function gameIsAcceptable(gameFlags) {
     if (obj2.hasFlag(gameFlags.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(obj.Disabled);
     }
-    obj2 = hasFlagAll;
-    const tmp8 = require;
+    obj2 = FlagUtilsAll;
     arr = items1;
     if (tmp8Result.isAgeRestrictedContentClassification(gameFlags.contentClassification)) {
-      arr = items1.push(obj.NSFW);
+      items1.push(obj.NSFW);
       arr = items1;
     }
-    tmp8Result = isAgeRestrictedContentClassification;
+    tmp8Result = utils;
   }
   return 0 === arr.length;
 };
-export const gameIdIsAcceptable = function gameIdIsAcceptable(closure_0) {
-  game = game.getGame(closure_0);
+export const gameIdIsAcceptable = function gameIdIsAcceptable(gameId) {
+  const game = GameStore.getGame(gameId);
   if (null == game) {
     const items = [obj.NoMatch];
     let arr = items;
@@ -125,14 +117,13 @@ export const gameIdIsAcceptable = function gameIdIsAcceptable(closure_0) {
     if (obj2.hasFlag(game.gameFlags, GameFlags.GameFlags.GAME_PROFILE_DISABLED)) {
       arr = items1.push(obj.Disabled);
     }
-    obj2 = hasFlagAll;
-    const tmp9 = require;
+    obj2 = FlagUtilsAll;
     arr = items1;
     if (tmp9Result.isAgeRestrictedContentClassification(game.contentClassification)) {
-      arr = items1.push(obj.NSFW);
+      items1.push(obj.NSFW);
       arr = items1;
     }
-    tmp9Result = isAgeRestrictedContentClassification;
+    tmp9Result = utils;
   }
   return 0 === arr.length;
 };

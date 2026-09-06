@@ -1,35 +1,34 @@
 // === Module 12094: ViewAllRow ===
 
 // Module 12094 (ViewAllRow)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import TableRow from "TableRow" /* 5605 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = createCacheKey.createStyles({ expandCTALabelContainer: { alignItems: "center" } });
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/ViewAllRow.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ expandCTALabelContainer: { alignItems: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/ViewAllRow.tsx");
 
 export default function ViewAllRow(title) {
   title = title.title;
   let formatToPlainStringResult;
   if (null != title) {
     const intl = tmp3(1114).intl;
-    let obj = { title: null };
-    obj[0] = title;
+    let obj = { title };
     formatToPlainStringResult = intl.formatToPlainString(tmp3(1114).t["bj/2kV"], obj);
   }
   obj = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
-  obj = { style: callback().expandCTALabelContainer, children: null };
-  obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
+  obj = { style: closure_4().expandCTALabelContainer, children: null };
+  const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = tmp3(1114).intl;
-  obj1[2] = intl2.format(getSystemLocale.t.gVw57p, {});
-  obj[1] = jsx(Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
-  obj[1] = <View style={callback().expandCTALabelContainer}>{null}</View>;
-  obj[2] = title.onPress;
-  return jsx(TableRowInner.TableRow, { style: callback().expandCTALabelContainer, children: null });
+  obj1.children = intl2.format(util.t.gVw57p, {});
+  obj.children = jsx(Text_Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });
+  obj.label = <View style={closure_4().expandCTALabelContainer}>{null}</View>;
+  obj.onPress = title.onPress;
+  return jsx(TableRow.TableRow, { style: closure_4().expandCTALabelContainer, children: null });
 };

@@ -1,11 +1,13 @@
-// === Module 10101: experiment ===
+// === Module 10101: AutomodExperiment ===
 
-// Module 10101 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 10101 (AutomodExperiment)
+import createExperiment from "module_4474" /* 4474 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "guild", id: "2022-12_mention_raid_limit", label: "Automod Mention Raid Limit", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Automod Mention Raid Limit", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2022-12_mention_raid_limit", label: "Automod Mention Raid Limit", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/guild_automod/AutomodExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/guild_automod/AutomodExperiment.tsx");
 
 export const AutomodMentionRaidLimit = experiment;

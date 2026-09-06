@@ -1,18 +1,19 @@
-// === Module 14919: FamilyCenterLinkRowWrapper ===
+// === Module 14919: FamilyCenterLinkWrapper ===
 
-// Module 14919 (FamilyCenterLinkRowWrapper)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14919 (FamilyCenterLinkWrapper)
+import nativeDefault from "native" /* 576 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-createCacheKey = { container: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 14, paddingBottom: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkWrapper.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = { display: "flex", flexDirection: "row", alignItems: "center", paddingTop: 14, paddingBottom: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12 };
+createStyles.container = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCenterLinkWrapper.tsx");
 
 export default function FamilyCenterLinkRowWrapper(userId) {
   userId = userId.userId;
@@ -20,13 +21,20 @@ export default function FamilyCenterLinkRowWrapper(userId) {
   analyticsLocations = analyticsLocations(7162)().analyticsLocations;
   let tmp3 = null;
   if (undefined !== userId) {
-    const obj = { style: null, onPress: null, children: null };
-    obj[0] = tmp.container;
-    obj[1] = function onPress() {
-      analyticsLocations(closure_1_2[6])({ userId, disableCalls: true, disableMessage: true, sourceAnalyticsLocations: analyticsLocations });
+    const obj = {
+      style: tmp.container,
+      onPress() {
+          showUserProfileActionSheetDefault({ userId, disableCalls: true, disableMessage: true, sourceAnalyticsLocations: analyticsLocations });
+        },
+      children: userId.children
     };
-    obj[2] = userId.children;
-    tmp3 = jsx(userId(5123).PressableOpacity, { style: null, onPress: null, children: null });
+    tmp3 = jsx(userId(5123).PressableOpacity, {
+      style: tmp.container,
+      onPress() {
+          showUserProfileActionSheetDefault({ userId, disableCalls: true, disableMessage: true, sourceAnalyticsLocations: analyticsLocations });
+        },
+      children: userId.children
+    });
   }
   return tmp3;
 };

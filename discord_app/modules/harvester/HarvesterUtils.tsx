@@ -1,15 +1,16 @@
-// === Module 14859: harvestDisabled ===
+// === Module 14859: HarvesterUtils ===
 
-// Module 14859 (harvestDisabled)
+// Module 14859 (HarvesterUtils)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "harvestType" /* 13710 */;
-import { REQUEST_DATA_LIMIT_MS } from "REQUEST_DATA_LIMIT_DAYS" /* 14860 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import DataHarvestStore from "DataHarvestStore" /* 13710 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
+require = fn;
+const REQUEST_DATA_LIMIT_MS = fn(14860).REQUEST_DATA_LIMIT_MS;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/harvester/HarvesterUtils.tsx");
 
 export const harvestDisabled = function harvestDisabled(created_at, stateFromStores) {
   const verified = stateFromStores.verified;
@@ -33,12 +34,11 @@ export const harvestDisabled = function harvestDisabled(created_at, stateFromSto
 };
 export const useRequestHarvestStatus = function useRequestHarvestStatus() {
   let obj = initialize;
-  const items = [closure_4];
+  const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [closure_5];
+  const items1 = [DataHarvestStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => harvestType.harvestType);
-  const obj3 = initialize;
-  [tmp3, require] = callback(React.useState(() => Date.now()), 2);
+  [tmp3, require] = _slicedToArray(noop.useState(() => Date.now()), 2);
   let sum = tmp3;
   if (null != stateFromStores1) {
     const _Date = Date;
@@ -46,14 +46,14 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
     sum = date.getTime() + REQUEST_DATA_LIMIT_MS;
   }
   dependencyMap = sum;
-  callback = obj4.useRef(null);
+  _slicedToArray = obj4.useRef(null);
   const items2 = [sum];
   const effect = obj4.useEffect(() => {
-    const diff = closure_1 - Date.now();
+    const diff = sum - Date.now();
     if (diff > 0) {
       const _setTimeout = setTimeout;
       const _clearTimeout = clearTimeout;
-      const timerId = setTimeout(() => callback(Date.now()), diff);
+      const timerId = setTimeout(() => closure_1_0(Date.now()), diff);
       clearTimeout(ref.current);
       ref.current = timerId;
     }
@@ -72,7 +72,7 @@ export const useRequestHarvestStatus = function useRequestHarvestStatus() {
       obj = { allowed: false, reason: "rate_limited", nextAllowed: null };
       const _Date2 = Date;
       const date1 = new Date(sum);
-      obj[2] = date1;
+      obj.nextAllowed = date1;
     } else {
       obj = { allowed: true };
     }

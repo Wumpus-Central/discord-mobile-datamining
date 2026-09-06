@@ -1,14 +1,14 @@
-// === Module 8846: FRACTIONAL_NITRO_COIN_SIZE ===
+// === Module 8846: FractionalNitroCoinIllustration ===
 
-// Module 8846 (FRACTIONAL_NITRO_COIN_SIZE)
-import noopAll from "noop" /* 19 */;
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 1076 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 8846 (FractionalNitroCoinIllustration)
+import native from "native" /* 5692 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
+require = fn;
+const EXTERNAL_PRODUCT_SKU_IDS = fn(1076).EXTERNAL_PRODUCT_SKU_IDS;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
 
 export const FRACTIONAL_NITRO_COIN_SIZE = { CARD: 80, CHECKOUT: 45, COLLECTED_SHEET: 68 };
 export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllustration(resizeMode) {
@@ -18,9 +18,9 @@ export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllus
     resizeMode = "contain";
   }
   if (skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM_1_DAY) {
-    let NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge.NitroCoinSpotIllustration;
+    let NitroCoinStackSpotIllustration = native.NitroCoinSpotIllustration;
   } else {
-    NitroCoinStackSpotIllustration = AccountAgeTier10LargeBadge.NitroCoinStackSpotIllustration;
+    NitroCoinStackSpotIllustration = native.NitroCoinStackSpotIllustration;
   }
   return <NitroCoinStackSpotIllustration width={width} height={height} resizeMode={resizeMode} />;
 };

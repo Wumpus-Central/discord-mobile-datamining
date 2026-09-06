@@ -1,52 +1,50 @@
 // === Module 10379: GIFPickerItemView ===
 
 // Module 10379 (GIFPickerItemView)
-import ThemesDefault from "Themes" /* 576 */;
-import transformFavoriteGifUrl from "transformFavoriteGifUrl" /* 10369 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10369 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyles((height) => {
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
-  obj = { paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: ThemesDefault.radii.xs, width: "100%", height, flex: 1 };
-  obj[0] = obj;
-  obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
-  obj[1] = obj;
-  obj[2] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
+  const size = { paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: nativeDefault.radii.xs, width: "100%", height, flex: 1 };
+  obj.container = size;
+  obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.xs, flex: 1 };
+  obj.gifImage = obj;
+  obj = { borderWidth: 2, borderColor: nativeDefault.colors.BACKGROUND_BRAND };
+  obj.gifImageSelected = obj;
   return obj;
 });
-const memoResult = importAllResult.memo((height) => {
-  const tmp = callback(height.height);
-  obj = { style: tmp.container, children: <View {...obj} /> };
-  obj = { style: tmp.gifImage };
-  return <View style={tmp.gifImage} />;
-});
-let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
 
 export default function GIFPickerItemView(onPressGIF) {
   onPressGIF = onPressGIF.onPressGIF;
   const item = onPressGIF.item;
   const index = onPressGIF.index;
   const selected = onPressGIF.selected;
-  const tmp = callback(onPressGIF.height);
+  const tmp = closure_6(onPressGIF.height);
   const items = [item, index, onPressGIF];
   const items1 = [item];
-  callback = importAllResult.useCallback(() => {
+  const callback = noop.useCallback(() => {
     onPressGIF(item, index);
-    const result = onPressGIF(index[6]).dismissGlobalKeyboard();
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items);
   const items2 = [index, item.src];
-  const callback1 = importAllResult.useCallback(() => {
-    let obj = item(index[7]);
-    obj = { item };
-    obj.openLazy(onPressGIF(index[9])(index[8], index.paths), "GIFPickerItemActionSheet", obj, "stack");
-    const result = onPressGIF(index[6]).dismissGlobalKeyboard();
+  const callback1 = noop.useCallback(() => {
+    const obj = { item };
+    obj.openLazy(asyncRequireImpl(10380, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
+    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);
-  const memo = importAllResult.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const parts = item.src.split("/");
     const str2 = parts.pop();
     let first;
@@ -54,23 +52,21 @@ export default function GIFPickerItemView(onPressGIF) {
       first = str2.split(".")[0];
     }
     if (null == first) {
-      const intl = onPressGIF(index[10]).intl;
-      const obj = { index: null };
-      obj[0] = index + 1;
-      first = intl.formatToPlainString(onPressGIF(index[10]).t["5iIGZI"], obj);
+      const intl = util.intl;
+      const obj = { index: index + 1 };
+      first = intl.formatToPlainString(util.t["5iIGZI"], obj);
     }
     return first;
   }, items2);
   let obj = { style: tmp.container, accessibilityRole: "button", accessibilityLabel: memo, accessibilityState: null, onPress: null, onLongPress: null, children: null };
   let tmp7;
   if (null != selected) {
-    obj = { selected: null };
-    obj[0] = selected;
+    obj = { selected };
     tmp7 = obj;
   }
-  obj[3] = tmp7;
-  obj[4] = callback;
-  obj[5] = callback1;
+  obj.accessibilityState = tmp7;
+  obj.onPress = callback;
+  obj.onLongPress = callback1;
   if (true === selected) {
     const items3 = [, ];
     ({ gifImage: arr4[0], gifImageSelected: arr4[1] } = tmp);
@@ -78,8 +74,14 @@ export default function GIFPickerItemView(onPressGIF) {
   } else {
     gifImage = tmp.gifImage;
   }
-  obj = { uri: item.src };
-  obj[6] = jsx(item(index[12]), { style: gifImage, source: obj });
-  return jsx(onPressGIF(index[11]).PressableOpacity, { uri: item.src });
+  obj = { style: gifImage, source: { uri: item.src } };
+  obj.children = jsx(item(index[12]), { style: gifImage, source: { uri: item.src } });
+  return jsx(onPressGIF(index[11]).PressableOpacity, { style: gifImage, source: { uri: item.src } });
 };
-export const GIFPickerItemPlaceholder = memoResult;
+export const GIFPickerItemPlaceholder = noop.memo((height) => {
+  const tmp = closure_6(height.height);
+  let obj = { style: tmp.container, children: null };
+  obj = { style: tmp.gifImage };
+  obj.children = <View style={tmp.gifImage} />;
+  return <View style={tmp.gifImage} />;
+});

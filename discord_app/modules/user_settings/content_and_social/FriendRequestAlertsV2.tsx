@@ -1,13 +1,15 @@
-// === Module 10872: useIsFriendRequestAlertsV2Enabled ===
+// === Module 10872: FriendRequestAlertsV2 ===
 
-// Module 10872 (useIsFriendRequestAlertsV2Enabled)
-import set from "set" /* 2 */;
+// Module 10872 (FriendRequestAlertsV2)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "user", name: "2025-10-friend-request-alerts-v2", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = ApexExperiment.createApexExperiment({ kind: "user", name: "2025-10-friend-request-alerts-v2", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/user_settings/content_and_social/FriendRequestAlertsV2.tsx");
+obj.variations = obj;
+let closure_0 = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/user_settings/content_and_social/FriendRequestAlertsV2.tsx");
 
 export const useIsFriendRequestAlertsV2Enabled = function useIsFriendRequestAlertsV2Enabled(location) {
   return closure_0.useConfig({ location }).enabled;

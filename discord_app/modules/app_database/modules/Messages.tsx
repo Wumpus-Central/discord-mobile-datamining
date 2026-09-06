@@ -1,23 +1,25 @@
-// === Module 7477: computeUsersAndMembers ===
+// === Module 7477: modules/Messages ===
 
-// Module 7477 (computeUsersAndMembers)
-import timestampDefault from "timestamp" /* 3 */;
-import itemsDefault from "items" /* 1986 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "_handleConnectionOpen" /* 5277 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "handleSelectedChannelStoreChanged" /* 7478 */;
-import set from "set" /* 2 */;
+// Module 7477 (modules/Messages)
+import LoggerDefault from "Logger" /* 3 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
+import _mod1987 from "module_1987" /* 1987 */;
+import requireSortedDescending from "requireSortedDescending" /* 5276 */;
+import isReadableChannel from "isReadableChannel" /* 7484 */;
+import KvMessage2 from "KvMessage" /* 7487 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7478 */;
 
-let set = arg1;
-let closure_8 = new timestampDefault("Messages");
-let prototype;
-prototype = function ChannelHistory(arr) {
-  const obj = Object.create(new.target.prototype);
-  obj[1] = [];
-  obj[2] = [];
-  obj[3] = [];
+require = fn;
+let closure_8 = new LoggerDefault("Messages");
+const prototype = function ChannelHistory(arr) {
+  const merged = Object.assign({ connectionId: null, users: null, members: null, messages: null });
+  merged[1] = [];
+  merged[2] = [];
+  merged[3] = [];
   if (arr.length > 0) {
     const first = arr[0];
     let connectionId;
@@ -25,23 +27,23 @@ prototype = function ChannelHistory(arr) {
       connectionId = first.connectionId;
     }
     let everyResult = arr.length > 0;
-    [tmp6, tmp7] = callback2(prototype.computeUsersAndMembers(arr), 2);
+    [tmp6, tmp7] = _slicedToArray(prototype.computeUsersAndMembers(arr), 2);
     if (everyResult) {
       everyResult = arr.every((connectionId) => connectionId.connectionId === connectionId);
     }
     if (everyResult) {
-      obj.connectionId = connectionId;
+      merged.connectionId = connectionId;
     }
-    obj.users = tmp6;
-    obj.members = tmp7;
-    obj.messages = arr.map((message) => message.message);
-    const tmp5 = callback2(prototype.computeUsersAndMembers(arr), 2);
+    merged.users = tmp6;
+    merged.members = tmp7;
+    merged.messages = arr.map((message) => message.message);
+    const tmp5 = _slicedToArray(prototype.computeUsersAndMembers(arr), 2);
   }
-  return obj;
+  return merged;
 }.prototype;
 prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
   const self = this;
-  const result = set(5276).requireSortedDescending(arr);
+  const result = requireSortedDescending.requireSortedDescending(arr);
   const map = new Map();
   map1 = new Map();
   const iter = arr[Symbol.iterator]();
@@ -54,27 +56,23 @@ prototype["computeUsersAndMembers"] = function computeUsersAndMembers(arr) {
   const items = [Array.from(map.values()), Array.from(map1.values())];
   return items;
 };
-prototype["addIntoMap"] = function addIntoMap(map, members, arg2) {
+prototype["addIntoMap"] = function addIntoMap(map, members, fn) {
   const iter = members[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let tmp3 = arg2(nextResult);
+    let tmp3 = fn(nextResult);
     let tmp4 = tmp3;
-    let value = map.get(tmp3);
+    value = map.get(tmp3);
     let tmp7 = null == value;
     if (!tmp7) {
-      let tmp8 = value;
       let incomplete = tmp6.incomplete;
       if (incomplete) {
-        let tmp9 = nextResult;
         incomplete = !tmp2.incomplete;
       }
       tmp7 = incomplete;
     }
     if (tmp7) {
-      let tmp10 = tmp3;
-      let tmp11 = nextResult;
       let result = map.set(tmp4, tmp2);
     }
     continue;
@@ -114,33 +112,30 @@ class Messages {
   }
 }
 const prototype2 = Messages.prototype;
-prototype2["startupLoad"] = function startupLoad(arg0, arg1, arg2, closure_1_9) {
+prototype2["startupLoad"] = function startupLoad(arg0, arg1, arg2, arg3) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  const callback = closure_1_9;
-  return callback(function*() {
-    closure_1 = tmp5;
+  asyncGeneratorStep = arg3;
+  return (async () => {
     closure_0 = tmp2;
-    const obj2 = closure_1_1(table[7]);
-    closure_0 = yield obj2.messages(closure_1_0).getLatest(closure_1_1, table, c3);
-    return new closure_1_9(closure_0);
+    closure_128_0 = await tmp5(c2[7]).messages(closure_0).getLatest(tmp5, closure_2, closure_3);
+    return new prototype(closure_128_0);
   })();
 };
 prototype2["load"] = function load(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -148,52 +143,45 @@ prototype2["load"] = function load(arg0, arg1, arg2) {
     } else {
       try {
         c3 = 2;
-        if (0 === table) {
+        if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp5;
-            closure_0 = tmp2;
-            closure_0 = undefined;
-            const basicChannel = closure_1_6.getBasicChannel(closure_1_1);
-            if (null != closure_1_1) {
+            closure_128_0 = undefined;
+            basicChannel = basicChannel.getBasicChannel(tmp5);
+            if (null != tmp5) {
               if (null != basicChannel) {
-                let obj2 = closure_1_0(table[8]);
+                let obj2 = tmp2(c2[8]);
                 if (obj2.isReadableChannel(basicChannel)) {
-                  const obj5 = closure_1_1(tmp12[7]);
-                  table = 1;
+                  const obj5 = tmp5(tmp12[7]);
+                  c2 = 1;
                   c3 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_1_1(tmp12[7]).messages(closure_1_0).getLatest(basicChannel.guild_id, closure_1_1, table);
+                  const obj1 = { value: tmp5(tmp12[7]).messages(tmp2).getLatest(basicChannel.guild_id, tmp5, closure_2), done: false };
                   return obj1;
                 }
-                tmp12 = table;
+                tmp12 = c2;
               }
             }
             c3 = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = new closure_1_9([]);
+            obj2 = { value: new prototype([]), done: true };
             return obj2;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          const obj3 = { value, done: true };
           return obj3;
         } else {
-          closure_0 = arg1;
+          closure_128_0 = value;
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = new closure_1_9(closure_0);
+          obj = { value: new prototype(closure_128_0), done: true };
           return obj;
         }
       } catch (tmp18) {
@@ -214,14 +202,13 @@ prototype2["handleMessageCreate"] = function handleMessageCreate(optimistic, dat
       const self2 = this;
       this.upsertOne(optimistic.guildId, optimistic.channelId, optimistic.message, database);
     }
-    obj = set(7484);
+    obj = isReadableChannel;
   }
 };
 prototype2["handleMessageUpdate"] = function handleMessageUpdate(message, database) {
   let isReadableChannelIdResult = null != message.message.id && null != message.message.channel_id;
   if (isReadableChannelIdResult) {
-    isReadableChannelIdResult = set(7484).isReadableChannelId(message.message.channel_id);
-    const obj = set(7484);
+    isReadableChannelIdResult = isReadableChannel.isReadableChannelId(message.message.channel_id);
   }
   if (isReadableChannelIdResult) {
     message = message.message;
@@ -238,21 +225,15 @@ prototype2["handleMessagePreviewsLoaded"] = function handleMessagePreviewsLoaded
   const self = this;
   for (const item10009 of tmp) {
     let tmp2 = item10009;
-    let tmp3 = set;
-    let tmp4 = dependencyMap;
-    let obj = set(7484);
+    let obj = isReadableChannel;
     if (obj.isReadableChannelId(item10009.channel_id)) {
-      let tmp5 = item10009;
-      let tmp6 = self;
-      let tmp7 = tmp2;
-      let tmp8 = arg1;
       let insertStaleResult = self.insertStale(arg0.guildId, tmp2.channel_id, item10009, arg1);
     }
     continue;
   }
 };
 prototype2["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(channelId, database) {
-  basicChannel = basicChannel.getBasicChannel(channelId.channelId);
+  const basicChannel = ChannelStore.getBasicChannel(channelId.channelId);
   if (null != basicChannel) {
     if (obj.isReadableChannelId(channelId.channelId)) {
       const self = this;
@@ -267,30 +248,27 @@ prototype2["handleLoadMessagesSuccess"] = function handleLoadMessagesSuccess(cha
       }
       self.upsertMany(basicChannel.guild_id, channelId.channelId, channelId.messages, database);
     }
-    obj = set(7484);
+    obj = isReadableChannel;
   }
 };
-prototype2["handleMessageDelete"] = function handleMessageDelete(id) {
+prototype2["handleMessageDelete"] = function handleMessageDelete(id, arg1) {
   if (null != id.id) {
     const self = this;
     const self2 = this;
     this.deleteOne(id.guildId, id.channelId, id.id, arg1);
   }
 };
-prototype2["handleMessageDeleteBulk"] = function handleMessageDeleteBulk(guildId) {
+prototype2["handleMessageDeleteBulk"] = function handleMessageDeleteBulk(guildId, arg1) {
   const self = this;
   for (const item10008 of tmp) {
-    let tmp2 = self;
-    let tmp3 = item10008;
-    let tmp4 = arg1;
     let deleteOneResult = self.deleteOne(arg0.guildId, arg0.channelId, item10008, arg1);
     continue;
   }
 };
-prototype2["handleChannelDelete"] = function handleChannelDelete(channel) {
+prototype2["handleChannelDelete"] = function handleChannelDelete(channel, arg1) {
   this.deleteChannel(channel.channel.guild_id, channel.channel.id, arg1);
 };
-prototype2["handleGuildDelete"] = function handleGuildDelete(guild) {
+prototype2["handleGuildDelete"] = function handleGuildDelete(guild, arg1) {
   if (!guild.guild.unavailable) {
     const self = this;
     this.deleteGuild(guild.guild.id, arg1);
@@ -300,145 +278,128 @@ prototype2["resetInMemoryState"] = function resetInMemoryState() {
 
 };
 prototype2["insertStale"] = function insertStale(guildId, channel_id, item10009, database) {
-  const obj = itemsDefault;
-  const result = closure_5.lastTimeConnectedChanged();
-  const KvMessage = set(7487).KvMessage;
-  const messagesTransactionResult = itemsDefault.messagesTransaction(database);
-  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), set(1987).ConflictOptions.Skip);
+  const result = GatewayConnectionStore.lastTimeConnectedChanged();
+  const KvMessage = KvMessage2.KvMessage;
+  const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
+  messagesTransactionResult.put(guildId, channel_id, KvMessage.fromMessage(guildId, channel_id, item10009, result), _mod1987.ConflictOptions.Skip);
 };
 prototype2["upsertOne"] = function upsertOne(guildId, channelId, message, database) {
-  const messagesTransactionResult = itemsDefault.messagesTransaction(database);
-  const result = closure_5.lastTimeConnectedChanged();
-  const KvMessage = set(7487).KvMessage;
-  const obj = itemsDefault;
-  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), set(1987).ConflictOptions.Replace);
-  messagesTransactionResult.trimChannel(guildId, channelId, closure_7.saveLimit(channelId));
+  const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
+  const result = GatewayConnectionStore.lastTimeConnectedChanged();
+  const KvMessage = KvMessage2.KvMessage;
+  messagesTransactionResult.put(guildId, channelId, KvMessage.fromMessage(guildId, channelId, message, result), _mod1987.ConflictOptions.Replace);
+  messagesTransactionResult.trimChannel(guildId, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
 prototype2["upsertMany"] = function upsertMany(guild_id, channelId, messages, database) {
-  const messagesTransactionResult = itemsDefault.messagesTransaction(database);
-  const result = closure_5.lastTimeConnectedChanged();
+  const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
+  const result = GatewayConnectionStore.lastTimeConnectedChanged();
   const iter = messages[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = set;
-    let tmp4 = dependencyMap;
-    let KvMessage = set(7487).KvMessage;
-    let tmp5 = KvMessage;
-    let tmp6 = guild_id;
-    let tmp7 = channelId;
-    let tmp8 = nextResult;
-    let tmp9 = result;
+    let KvMessage = KvMessage2.KvMessage;
     let putResult = messagesTransactionResult.put(guild_id, channelId, KvMessage.fromMessage(guild_id, channelId, nextResult, result));
     continue;
   }
-  messagesTransactionResult.trimChannel(guild_id, channelId, closure_7.saveLimit(channelId));
+  messagesTransactionResult.trimChannel(guild_id, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
 prototype2["replaceChannel"] = function replaceChannel(arg0, channelId, arr, database) {
   closure_0 = arg0;
   importDefault = channelId;
-  const messagesTransactionResult = itemsDefault.messagesTransaction(database);
-  dependencyMap = closure_5.lastTimeConnectedChanged();
-  const saveLimitResult = closure_7.saveLimit(channelId);
+  const messagesTransactionResult = DatabaseDaosDefault.messagesTransaction(database);
+  dependencyMap = GatewayConnectionStore.lastTimeConnectedChanged();
+  const saveLimitResult = SaveableChannelsStore.saveLimit(channelId);
   let substr = arr;
   if (arr.length > saveLimitResult) {
     substr = arr.slice(arr.length - saveLimitResult);
   }
-  messagesTransactionResult.replaceChannel(arg0, channelId, substr.map((nextResult) => {
-    const KvMessage = callback(table[9]).KvMessage;
-    return KvMessage.fromMessage(callback, closure_1, nextResult, table);
+  messagesTransactionResult.replaceChannel(arg0, channelId, substr.map((item) => {
+    const KvMessage = KvMessage2.KvMessage;
+    return KvMessage.fromMessage(closure_0, closure_1, item, closure_2);
   }));
-  messagesTransactionResult.trimChannel(arg0, channelId, closure_7.saveLimit(channelId));
+  messagesTransactionResult.trimChannel(arg0, channelId, SaveableChannelsStore.saveLimit(channelId));
 };
 prototype2["updateOne"] = function updateOne(guildId, channel_id, message, database) {
   closure_0 = guildId;
   closure_1 = channel_id;
   closure_2 = message;
-  const callback = database;
-  return callback(function*() {
-    if (database === 2) {
-      database = 3;
-      HermesBuiltin.throwTypeError();
+  asyncGeneratorStep = database;
+  return (async (arg0, value) => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        database = 2;
-        if (0 === closure_2) {
+        c3 = 2;
+        if (0 === user) {
           if (arg0 === 1) {
-            database = 3;
-            throw arg1;
+            c3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            database = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            message = tmp5;
-            c0 = tmp2;
-            c0 = undefined;
-            message = undefined;
-            closure_2 = undefined;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
             if (null != user.id) {
-              obj1 = closure_1_1(user[7]);
+              let obj1 = tmp5(user[7]);
               const messagesResult = obj1.messages(database.database);
-              c0 = messagesResult;
-              closure_2 = 1;
-              database = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = messagesResult.get(closure_1_0, closure_1_1, user.id);
+              closure_128_0 = messagesResult;
+              user = 1;
+              c3 = 1;
+              obj1 = { value: messagesResult.get(tmp2, tmp5, user.id), done: false };
               return obj1;
             } else {
-              closure_1_8.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
-              database = 3;
+              logger.warn("updateOne: message.id is null; cannot update a message if we do not know its id.");
+              c3 = 3;
             }
           }
         } else if (arg0 === 1) {
-          database = 3;
-          throw arg1;
+          c3 = 3;
+          throw value;
         } else if (arg0 !== 2) {
-          message = arg1;
-          closure_2 = closure_1_5.lastTimeConnectedChanged();
-          if (null != message) {
-            const KvMessage = closure_1_0(user[9]).KvMessage;
+          closure_128_1 = value;
+          closure_128_2 = GatewayConnectionStore.lastTimeConnectedChanged();
+          if (null != closure_128_1) {
+            const KvMessage = tmp2(user[9]).KvMessage;
             const obj2 = {};
-            const merged = Object.assign(message.message);
-            const merged1 = Object.assign(closure_2);
-            c0.put(c0, message, KvMessage.fromMessage(c0, message, obj2, closure_2));
+            const merged = Object.assign(closure_128_1.message);
+            const merged1 = Object.assign(closure_129_2);
+            closure_128_0.put(closure_129_0, closure_129_1, KvMessage.fromMessage(closure_129_0, closure_129_1, obj2, closure_128_2));
           }
         }
-        database = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        c3 = 3;
+        obj = { value, done: true };
         return obj;
       } catch (tmp14) {
-        database = tmp;
+        c3 = tmp;
         throw tmp14;
       }
     }
   })();
 };
 prototype2["deleteOne"] = function deleteOne(arg0, arg1, arg2, database) {
-  const obj = itemsDefault;
-  itemsDefault.messagesTransaction(database).deleteMessage(arg0, arg1, arg2);
+  DatabaseDaosDefault.messagesTransaction(database).deleteMessage(arg0, arg1, arg2);
 };
 prototype2["deleteChannel"] = function deleteChannel(arg0, arg1, database) {
-  const obj = itemsDefault;
-  itemsDefault.messagesTransaction(database).deleteChannel(arg0, arg1);
+  DatabaseDaosDefault.messagesTransaction(database).deleteChannel(arg0, arg1);
 };
 prototype2["deleteGuild"] = function deleteGuild(arg0, database) {
-  const obj = itemsDefault;
-  itemsDefault.messagesTransaction(database).deleteGuild(arg0);
+  DatabaseDaosDefault.messagesTransaction(database).deleteGuild(arg0);
 };
-set = Object.create(Messages.prototype);
-set.actions = {
+let size = Object.create(Messages.prototype);
+let closure_129_0 = size;
+size.actions = {
   CHANNEL_DELETE(arg0, arg1) {
     return obj.handleChannelDelete(arg0, arg1);
   },
@@ -464,9 +425,10 @@ set.actions = {
     return obj.handleMessageUpdate(arg0, arg1);
   }
 };
-let result = set.fileFinishedImporting("modules/app_database/modules/Messages.tsx");
+size = fn(2);
+let result = size.fileFinishedImporting("modules/app_database/modules/Messages.tsx");
 
-export default set;
+export default size;
 export const ChannelHistory = prototype;
 export const isLikelyNotDelta = function isLikelyNotDelta(author) {
   return null != author.author && null != author.content && null != author.mentions && null != author.timestamp;

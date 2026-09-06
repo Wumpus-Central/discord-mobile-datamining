@@ -1,10 +1,10 @@
-// === Module 558: shallowEqual ===
+// === Module 558: discord_common/shallowEqual ===
 
-// Module 558 (shallowEqual)
-import set from "set" /* 2 */;
+// Module 558 (discord_common/shallowEqual)
+import size from "module_2" /* 2 */;
 
 let closure_0 = {};
-const result = set.fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/shallow-equal/shallowEqual.tsx");
 
 export default function shallowEqual(arg0, arg1, arr) {
   let tmp = arg3;
@@ -27,7 +27,6 @@ export default function shallowEqual(arg0, arg1, arr) {
           if (0 < keys.length) {
             while (true) {
               let tmp4 = keys[num];
-              let tmp5 = num;
               if (arg0[tmp4] !== arg1[tmp4]) {
                 if (null == arr) {
                   break;
@@ -53,5 +52,5 @@ export const areArraysShallowEqual = function areArraysShallowEqual(items, curre
     tmp = closure_0;
   }
   ({ logCallback, shouldWarnLargeObjects } = tmp);
-  return null != current && items.length === current.length && items.every((arg0, arg1) => table[arg1] === arg0);
+  return null != current && items.length === current.length && items.every((item, index) => closure_0[index] === item);
 };

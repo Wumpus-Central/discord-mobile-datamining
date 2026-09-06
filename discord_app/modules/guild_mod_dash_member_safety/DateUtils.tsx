@@ -1,22 +1,23 @@
-// === Module 7498: getJoinedAtDateFormatter ===
+// === Module 7498: guild_mod_dash_member_safety/DateUtils ===
 
-// Module 7498 (getJoinedAtDateFormatter)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 7498 (guild_mod_dash_member_safety/DateUtils)
+import util from "util" /* 1114 */;
 import getTimestampStringDefault from "getTimestampString" /* 7499 */;
+import size from "module_2" /* 2 */;
 
 function getJoinedAtDateFormatter() {
-  return { seconds: getSystemLocale.t["FsBhl/"], minutes: getSystemLocale.t["4d1mgT"], hours: getSystemLocale.t["2wkczD"], days: getSystemLocale.t["ocdS+f"], months: getSystemLocale.t["az14+h"], years: getSystemLocale.t["5Gk1ns"] };
+  const time = { seconds: util.t["FsBhl/"], minutes: util.t["4d1mgT"], hours: util.t["2wkczD"], days: util.t["ocdS+f"], months: util.t["az14+h"], years: util.t["5Gk1ns"] };
+  return time;
 }
 function getAccountAgeDateFormatter() {
-  return { hours: getSystemLocale.t.JZP2Rs, days: getSystemLocale.t["3moSHc"], months: getSystemLocale.t["0Ddwr1"], years: getSystemLocale.t.cR7lcs };
+  return { hours: util.t.JZP2Rs, days: util.t["3moSHc"], months: util.t["0Ddwr1"], years: util.t.cR7lcs };
 }
-const obj = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
-const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
+const MembersTableDateFormats = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
+const result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
 
 export const ACCOUNT_AGE_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
 export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
-export const MembersTableDateFormats = obj;
+export { MembersTableDateFormats };
 export const getMembersTableTimestampFormatter = function getMembersTableTimestampFormatter(arg0) {
   if (arg0 === obj.JOINED_AT) {
     let tmp2 = getJoinedAtDateFormatter;

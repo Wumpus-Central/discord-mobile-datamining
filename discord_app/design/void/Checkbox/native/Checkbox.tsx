@@ -1,20 +1,20 @@
-// === Module 14086: Checkbox ===
+// === Module 14086: Checkbox/Checkbox ===
 
-// Module 14086 (Checkbox)
-import noopAll from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14086 (Checkbox/Checkbox)
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/Checkbox/native/Checkbox.tsx");
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/Checkbox/native/Checkbox.tsx");
 
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };
   if (style.selected) {
-    obj[1] = tmp3(14087);
+    obj.source = tmp3(14087);
     let tmp5 = obj;
   } else {
-    obj[1] = tmp3(14088);
+    obj.source = tmp3(14088);
     tmp5 = obj;
   }
   return <Image {...tmp5} />;

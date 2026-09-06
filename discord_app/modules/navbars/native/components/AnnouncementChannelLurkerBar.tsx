@@ -1,29 +1,26 @@
 // === Module 11324: AnnouncementChannelLurkerBar ===
 
 // Module 11324 (AnnouncementChannelLurkerBar)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11325 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 class AnnouncementChannelLurkerBar {
   constructor(arg0) {
     channel = global.channel;
     tmp = closure_5();
     obj = { style: tmp.wrapper, children: null };
     obj = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
-    intl = require("getSystemLocale").intl;
-    obj[3] = intl.string(require("getSystemLocale").t.Hl0Mqh);
+    intl = channel(closure_1[6]).intl;
+    obj.children = intl.string(channel(closure_1[6]).t.Hl0Mqh);
     items = [, ];
-    items[0] = jsx(require("Text").Text, obj);
+    items[0] = jsx(channel(closure_1[5]).Text, obj);
     obj1 = {
       onPress() {
             const guildId = channel.getGuildId();
             if (null != guildId) {
-              const result = channel(closure_1_1[8]).showChannelFollowingActionSheet(channel.id, guildId);
-              const obj = channel(closure_1_1[8]);
+              const result = showChannelFollowingActionSheet.showChannelFollowingActionSheet(channel.id, guildId);
             }
           },
       text: null,
@@ -31,21 +28,24 @@ class AnnouncementChannelLurkerBar {
       variant: "secondary",
       grow: true
     };
-    intl2 = require("getSystemLocale").intl;
-    obj1[1] = intl2.string(require("getSystemLocale").t["4z5PU1"]);
-    items[1] = jsx(require("Button").Button, obj1);
-    obj[1] = items;
+    intl2 = channel(closure_1[6]).intl;
+    obj1.text = intl2.string(channel(closure_1[6]).t["4z5PU1"]);
+    items[1] = jsx(channel(closure_1[7]).Button, obj1);
+    obj.children = items;
     return jsxs(View, obj);
   }
 }
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { wrapper: null, text: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { wrapper: null, text: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
+createStyles.wrapper = createStyles;
+createStyles.text = { textAlign: "center", marginBottom: 8 };
+const hasOwnProperty = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx");
 
 export default AnnouncementChannelLurkerBar;
 export { AnnouncementChannelLurkerBar };

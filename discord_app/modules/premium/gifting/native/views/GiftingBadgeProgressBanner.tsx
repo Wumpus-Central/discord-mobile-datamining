@@ -1,32 +1,31 @@
 // === Module 10756: GiftingBadgeProgressBanner ===
 
 // Module 10756 (GiftingBadgeProgressBanner)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import messagesProxyDefault from "messagesProxy" /* 2492 */;
-import Text from "Text" /* 4556 */;
-import contextDefault from "context" /* 7162 */;
-import trackImpressionDefault from "trackImpression" /* 8768 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import _modDef2492 from "module_2492" /* 2492 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, iconContainer: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_MUTED };
-const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_8, marginInlineEnd: ThemesDefault.space.PX_8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_8, marginInlineEnd: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null, iconContainer: null };
+createStyles = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_MUTED };
+const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
+createStyles.container = createStyles;
+createStyles.iconContainer = { alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_8, marginInlineEnd: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeProgressBanner.tsx");
 
 export default function GiftingBadgeProgressBanner(arg0) {
   ({ giftsToNextTier, nextTierName, nextTierIcon, analyticsLocation } = arg0);
-  const tmp = callback();
+  const tmp = closure_6();
   if (null != analyticsLocation) {
     const items = [analyticsLocation];
     let items1 = items;
@@ -34,25 +33,24 @@ export default function GiftingBadgeProgressBanner(arg0) {
     items1 = [];
   }
   let obj = { name: null, type: null, properties: null };
-  const tmp4 = contextDefault;
-  obj[0] = encodeProperties.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER;
-  obj[1] = encodeProperties.ImpressionTypes.VIEW;
-  obj[2] = { gifts_to_next_tier: giftsToNextTier, next_tier: nextTierName, location_stack: tmp4(...items1).analyticsLocations };
-  trackImpressionDefault(obj, { trackOnInitialLoad: true });
+  const tmp4 = useAnalyticsLocationsDefault;
+  obj.name = discord_common_AnalyticsUtils.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER;
+  obj.type = discord_common_AnalyticsUtils.ImpressionTypes.VIEW;
+  obj.properties = { gifts_to_next_tier: giftsToNextTier, next_tier: nextTierName, location_stack: tmp4(...items1).analyticsLocations };
+  useTrackImpressionDefault(obj, { trackOnInitialLoad: true });
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconContainer, children: null };
   let tmp10Result = null != nextTierIcon;
   if (tmp10Result) {
-    obj1 = { icon: null, size: 24 };
-    obj1[0] = nextTierIcon;
+    const obj1 = { icon: nextTierIcon, size: 24 };
     tmp10Result = tmp10(tmp2(10749), obj1);
   }
-  obj[1] = tmp10Result;
-  const items2 = [closure_4(View, obj), ];
+  obj.children = tmp10Result;
+  const items2 = [React4(View, obj), ];
   const obj2 = { variant: "text-md/semibold", children: null };
   const intl = tmp6(1114).intl;
-  obj2[1] = intl.formatToPlainString(messagesProxyDefault["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
-  items2[1] = closure_4(Text.Text, obj2);
-  obj[1] = items2;
-  return closure_5(View, obj);
+  obj2.children = intl.formatToPlainString(_modDef2492["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
+  items2[1] = React4(Text_Text.Text, obj2);
+  obj.children = items2;
+  return hasOwnProperty(View, obj);
 };

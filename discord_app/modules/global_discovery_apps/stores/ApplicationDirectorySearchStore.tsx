@@ -1,15 +1,15 @@
-// === Module 12068: getSearchResults ===
+// === Module 12068: ApplicationDirectorySearchStore ===
 
-// Module 12068 (getSearchResults)
+// Module 12068 (ApplicationDirectorySearchStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 import privDefault from "priv" /* 1437 */;
 import SearchAppsRequestSource from "SearchAppsRequestSource" /* 12069 */;
 
-require = arg1;
+require = fn;
 let obj = { FETCHING: 0, [0]: "FETCHING", FETCHED: 1, [1]: "FETCHED", ERROR: 2, [2]: "ERROR" };
 let closure_3 = new privDefault({ max: 20 });
-let closure_4 = {};
+obj = {};
 const Store = initializeDefault.Store;
 class ApplicationDirectorySearchStore extends Store {
 }
@@ -19,14 +19,14 @@ prototype["getSearchResults"] = function getSearchResults(arg0) {
   if (source === undefined) {
     source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
   }
-  return store.get("query:'" + query + "' guildId:" + guildId + " page:" + page + " pageSize:" + pageSize + " categoryId:" + categoryId + " integrationType:" + integrationType + " minUserInstallCommandCount:" + minUserInstallCommandCount + " excludeAppsWithCustomInstallUrl:" + excludeAppsWithCustomInstallUrl + " excludeNonEmbeddedApps:" + excludeNonEmbeddedApps + " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" + excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand + " source:" + source);
+  return closure_3.get("query:'" + query + "' guildId:" + guildId + " page:" + page + " pageSize:" + pageSize + " categoryId:" + categoryId + " integrationType:" + integrationType + " minUserInstallCommandCount:" + minUserInstallCommandCount + " excludeAppsWithCustomInstallUrl:" + excludeAppsWithCustomInstallUrl + " excludeNonEmbeddedApps:" + excludeNonEmbeddedApps + " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" + excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand + " source:" + source);
 };
 prototype["getFetchState"] = function getFetchState(arg0) {
   ({ query, guildId, page, pageSize, categoryId, integrationType, minUserInstallCommandCount, excludeAppsWithCustomInstallUrl, excludeNonEmbeddedApps, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand, source } = arg0);
   if (source === undefined) {
     source = SearchAppsRequestSource.SearchAppsRequestSource.APP_DIRECTORY;
   }
-  return table["query:'" + query + "' guildId:" + guildId + " page:" + page + " pageSize:" + pageSize + " categoryId:" + categoryId + " integrationType:" + integrationType + " minUserInstallCommandCount:" + minUserInstallCommandCount + " excludeAppsWithCustomInstallUrl:" + excludeAppsWithCustomInstallUrl + " excludeNonEmbeddedApps:" + excludeNonEmbeddedApps + " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" + excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand + " source:" + source];
+  return obj["query:'" + query + "' guildId:" + guildId + " page:" + page + " pageSize:" + pageSize + " categoryId:" + categoryId + " integrationType:" + integrationType + " minUserInstallCommandCount:" + minUserInstallCommandCount + " excludeAppsWithCustomInstallUrl:" + excludeAppsWithCustomInstallUrl + " excludeNonEmbeddedApps:" + excludeNonEmbeddedApps + " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" + excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand + " source:" + source];
 };
 ApplicationDirectorySearchStore.displayName = "ApplicationDirectorySearchStore";
 obj = {
@@ -48,7 +48,7 @@ obj = {
     const combined = "query:'" + query + "' guildId:" + guildId + " page:" + page + " pageSize:" + pageSize + " categoryId:" + categoryId + " integrationType:" + integrationType + " minUserInstallCommandCount:" + minUserInstallCommandCount + " excludeAppsWithCustomInstallUrl:" + excludeAppsWithCustomInstallUrl + " excludeNonEmbeddedApps:" + excludeNonEmbeddedApps + " excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand:" + excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand + " source:" + source;
     obj = { lastFetchTimeMs: Date.now() };
     const merged = Object.assign(result);
-    result = store.set(combined, obj);
+    result = closure_3.set(combined, obj);
     obj = {};
     const merged1 = Object.assign(obj);
     obj[combined] = obj.FETCHED;
@@ -64,9 +64,9 @@ obj = {
     obj[combined] = obj.ERROR;
   }
 };
-const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(dispatcherDefault, obj);
-const tmp2 = new privDefault({ max: 20 });
-const result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx");
+const applicationDirectorySearchStore = new ApplicationDirectorySearchStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/global_discovery_apps/stores/ApplicationDirectorySearchStore.tsx");
 
 export default applicationDirectorySearchStore;
 export const FetchState = obj;

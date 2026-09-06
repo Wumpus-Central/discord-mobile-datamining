@@ -1,17 +1,17 @@
-// === Module 11086: getProfileChangesForUpdateRequest ===
+// === Module 11086: ProfileUpdateRequestUtils ===
 
-// Module 11086 (getProfileChangesForUpdateRequest)
-import set from "set" /* 2 */;
+// Module 11086 (ProfileUpdateRequestUtils)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import AssetOriginTypes from "AssetOriginTypes" /* 6989 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6989 */;
 import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 11087 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
 
-export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(closure_1_0, id) {
+export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(pendingChanges, id) {
   let obj = {};
-  if (undefined !== closure_1_0.pendingBanner) {
-    const pendingBanner = closure_1_0.pendingBanner;
+  if (undefined !== pendingChanges.pendingBanner) {
+    const pendingBanner = pendingChanges.pendingBanner;
     let imageUri;
     if (pendingBanner != null) {
       imageUri = pendingBanner.imageUri;
@@ -20,27 +20,27 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
       imageUri = null;
     }
     obj.banner = imageUri;
-    if (null !== closure_1_0.pendingBanner) {
-      let originalMd5 = closure_1_0.pendingBanner.originalMd5;
+    if (null !== pendingChanges.pendingBanner) {
+      let originalMd5 = pendingChanges.pendingBanner.originalMd5;
       if (originalMd5 == null) {
         originalMd5 = null;
       }
       obj.bannerOriginalMd5 = originalMd5;
     }
   }
-  if (null != closure_1_0.pendingBio) {
-    obj.bio = closure_1_0.pendingBio;
+  if (null != pendingChanges.pendingBio) {
+    obj.bio = pendingChanges.pendingBio;
   }
-  if (null != closure_1_0.pendingPronouns) {
-    obj.pronouns = closure_1_0.pendingPronouns;
+  if (null != pendingChanges.pendingPronouns) {
+    obj.pronouns = pendingChanges.pendingPronouns;
   }
-  if (undefined !== closure_1_0.pendingAccentColor) {
-    obj.accent_color = closure_1_0.pendingAccentColor;
+  if (undefined !== pendingChanges.pendingAccentColor) {
+    obj.accent_color = pendingChanges.pendingAccentColor;
   }
-  if (undefined !== closure_1_0.pendingThemeColors) {
-    obj.theme_colors = closure_1_0.pendingThemeColors;
+  if (undefined !== pendingChanges.pendingThemeColors) {
+    obj.theme_colors = pendingChanges.pendingThemeColors;
   }
-  ({ pendingProfileEffect, pendingProfileFrame } = closure_1_0);
+  ({ pendingProfileEffect, pendingProfileFrame } = pendingChanges);
   if (undefined === pendingProfileEffect) {
     if (undefined === pendingProfileFrame) {
       obj = {};
@@ -60,19 +60,17 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   const items = [...collectibles];
   if (undefined !== pendingProfileEffect) {
-    const found = items.filter((type) => type.type !== callback(1889).CollectiblesItemType.PROFILE_EFFECT);
+    const found = items.filter((type) => type.type !== CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT);
     let arr3 = found;
     if (null !== pendingProfileEffect) {
-      obj = { skuId: null, type: null };
-      obj[0] = pendingProfileEffect.skuId;
-      obj[1] = CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT;
+      obj = { skuId: pendingProfileEffect.skuId, type: CollectiblesItemType.CollectiblesItemType.PROFILE_EFFECT };
       found.push(obj);
       arr3 = found;
     }
   }
   let arr5 = arr3;
   if (undefined !== pendingProfileFrame) {
-    const found1 = arr3.filter((type) => type.type !== callback(1889).CollectiblesItemType.PROFILE_FRAME);
+    const found1 = arr3.filter((type) => type.type !== CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME);
     arr5 = found1;
     if (null !== pendingProfileFrame) {
       found1.push(pendingProfileFrame);
@@ -81,32 +79,32 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   obj = { collectibles_sku_ids: arr5.map((skuId) => skuId.skuId) };
 };
-export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpdateRequest(closure_1_0) {
+export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpdateRequest(pendingChanges) {
   const obj = {};
-  if (undefined !== closure_1_0.pendingGlobalName) {
-    obj.globalName = closure_1_0.pendingGlobalName;
+  if (undefined !== pendingChanges.pendingGlobalName) {
+    obj.globalName = pendingChanges.pendingGlobalName;
   }
-  if (undefined !== closure_1_0.pendingNameplate) {
-    obj.nameplate = closure_1_0.pendingNameplate;
+  if (undefined !== pendingChanges.pendingNameplate) {
+    obj.nameplate = pendingChanges.pendingNameplate;
   }
-  if (undefined !== closure_1_0.pendingAvatar) {
-    const pendingAvatar = closure_1_0.pendingAvatar;
+  if (undefined !== pendingChanges.pendingAvatar) {
+    const pendingAvatar = pendingChanges.pendingAvatar;
     if (null === pendingAvatar) {
       obj.avatar = null;
-    } else if (pendingAvatar.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+    } else if (pendingAvatar.assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
       ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);
     }
   }
-  if (undefined !== closure_1_0.pendingAvatarDecoration) {
-    obj.avatarDecoration = closure_1_0.pendingAvatarDecoration;
+  if (undefined !== pendingChanges.pendingAvatarDecoration) {
+    obj.avatarDecoration = pendingChanges.pendingAvatarDecoration;
   }
-  if (undefined !== closure_1_0.pendingDisplayNameStyles) {
-    obj.displayNameStyles = closure_1_0.pendingDisplayNameStyles;
+  if (undefined !== pendingChanges.pendingDisplayNameStyles) {
+    obj.displayNameStyles = pendingChanges.pendingDisplayNameStyles;
   }
-  if (undefined !== closure_1_0.pendingCustomTypingIndicatorStyle) {
-    obj.typingIndicatorStyle = closure_1_0.pendingCustomTypingIndicatorStyle;
+  if (undefined !== pendingChanges.pendingCustomTypingIndicatorStyle) {
+    obj.typingIndicatorStyle = pendingChanges.pendingCustomTypingIndicatorStyle;
   }
   return obj;
 };
@@ -116,7 +114,7 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
     pendingAvatar = pendingAvatar.pendingAvatar;
     if (null === pendingAvatar) {
       obj.avatar = null;
-    } else if (pendingAvatar.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
+    } else if (pendingAvatar.assetOrigin === ProfilePendingImageTypes.AssetOriginTypes.ARCHIVED_ASSET) {
       obj.avatarId = pendingAvatar.originalAsset.id;
     } else {
       ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);
@@ -140,10 +138,10 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
   }
   return obj;
 };
-export const getPrimaryGuildChangesForUpdateRequest = function getPrimaryGuildChangesForUpdateRequest(closure_1_0) {
+export const getPrimaryGuildChangesForUpdateRequest = function getPrimaryGuildChangesForUpdateRequest(pendingChanges) {
   const obj = {};
-  if (undefined !== closure_1_0.pendingPrimaryGuildId) {
-    obj.primaryGuildId = closure_1_0.pendingPrimaryGuildId;
+  if (undefined !== pendingChanges.pendingPrimaryGuildId) {
+    obj.primaryGuildId = pendingChanges.pendingPrimaryGuildId;
   }
   return obj;
 };

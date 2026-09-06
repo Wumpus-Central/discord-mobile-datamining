@@ -1,10 +1,10 @@
-// === Module 13639: DISPATCHER_STANDARD_TIMEOUT_MS ===
+// === Module 13639: DispatcherWorkConstants ===
 
-// Module 13639 (DISPATCHER_STANDARD_TIMEOUT_MS)
-import set from "set" /* 2 */;
+// Module 13639 (DispatcherWorkConstants)
+import size from "module_2" /* 2 */;
 
 let c0 = 2.0833333333333335;
-const result = set.fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
+const result = size.fileFinishedImporting("modules/gateway/DispatcherWorkConstants.tsx");
 class WorkIdleDeadline {
   constructor(arg0) {
     flag = require;
@@ -36,10 +36,11 @@ Object.defineProperty(prototype, "timeSinceExpiration", {
   set: undefined
 });
 prototype["generateDeadlineMetrics"] = function generateDeadlineMetrics() {
-  const obj = { isDeadlineNotIdeal: this._browserDeadlineMs < c0, deadlineMs: _deadlineMs.toFixed(2), timeSinceStartMs: null };
-  _deadlineMs = this._deadlineMs;
+  const obj = { isDeadlineNotIdeal: this._browserDeadlineMs < c0, deadlineMs: null, timeSinceStartMs: null };
+  const _deadlineMs = this._deadlineMs;
+  obj.deadlineMs = _deadlineMs.toFixed(2);
   const diff = performance.now() - this._startMs;
-  obj[2] = diff.toFixed(2);
+  obj.timeSinceStartMs = diff.toFixed(2);
   return obj;
 };
 

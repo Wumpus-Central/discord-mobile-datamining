@@ -1,16 +1,18 @@
-// === Module 9614: ? ===
+// === Module 9614: ZoomLayout ===
 
-// Module 9614
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9615 */;
-import importAllResult from "noop" /* 19 */;
-import { PixelRatio } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 9614 (ZoomLayout)
+import ZoomLayoutNativeComponentDefault from "ZoomLayoutNativeComponent" /* 9615 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  ref = importAllResult.useRef(null);
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
+const require = fn;
+const PixelRatio = fn(17).PixelRatio;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
+
+export default noop.forwardRef((arg0, ref) => {
+  ref = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     zoomTo(scale) {
       let num = scale.scale;
       ({ x, y } = scale);
@@ -22,10 +24,10 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         flag = true;
       }
       if (null != ref.current) {
-        const value = closure_1_4.get();
+        value = PixelRatio.get();
         const result = x * value;
         const result1 = y * value;
-        const Commands = closure_1_0(closure_1_2[3]).Commands;
+        const Commands = ref(9615).Commands;
         Commands.zoomTo(tmp.current, result / num - result, result1 / num - result1, num, flag);
       }
     },
@@ -39,7 +41,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = closure_1_0(closure_1_2[3]).Commands;
+        const Commands = ref(9615).Commands;
         Commands.unzoom(tmp.current, flag);
       }
     }
@@ -47,8 +49,5 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let obj = {};
   const merged = Object.assign(arg0);
   obj.ref = ref;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(ZoomLayoutNativeComponentDefault, {});
 });
-let result = require("set").fileFinishedImporting("modules/zoom_layout/ZoomLayout.android.tsx");
-
-export default forwardRefResult;

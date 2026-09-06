@@ -1,23 +1,23 @@
-// === Module 8826: getCachedSourceFromURI ===
+// === Module 8826: DominantColorUtils ===
 
-// Module 8826 (getCachedSourceFromURI)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 8826 (DominantColorUtils)
+import nativeDefault from "native" /* 576 */;
 import privDefault from "priv" /* 1437 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ NativeModules: c5, Image: closure_6 } = get_ActivityIndicator);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ NativeModules: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let closure_7 = new privDefault({ max: 1000 });
 let tmp3 = new privDefault({ max: 1000 });
 let closure_8 = new privDefault({ max: 1000 });
-const tmp4 = new privDefault({ max: 1000 });
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/DominantColorUtils.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/card/DominantColorUtils.tsx");
 
 export const getCachedSourceFromURI = function getCachedSourceFromURI(avatarURI) {
   let obj = closure_8;
-  let value = closure_8.get(avatarURI);
+  value = closure_8.get(avatarURI);
   if (value == null) {
     let tmp2 = avatarURI;
     if (typeof avatarURI !== "number") {
@@ -25,8 +25,7 @@ export const getCachedSourceFromURI = function getCachedSourceFromURI(avatarURI)
       if (null != avatarURI) {
         tmp3 = null;
         if ("" !== avatarURI.trim()) {
-          obj = { uri: null };
-          obj[0] = avatarURI;
+          obj = { uri: avatarURI };
           tmp3 = obj;
         }
       }
@@ -38,24 +37,24 @@ export const getCachedSourceFromURI = function getCachedSourceFromURI(avatarURI)
   return value;
 };
 export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
-  const _require = arg0;
-  importDefault = React.useRef(true);
-  const effect = React.useEffect(() => () => {
-    closure_1.current = false;
+  _require = arg0;
+  importDefault = noop.useRef(true);
+  const effect = noop.useEffect(() => () => {
+    closure_1_1.current = false;
   }, []);
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = store.get(arg0);
+    hexToRgbResult = closure_7.get(arg0);
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require(4409).hexToRgb(ThemesDefault.unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require(4409);
+    hexToRgbResult = require("ColorUtils").hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+    const obj2 = require("ColorUtils");
   }
-  const tmp7 = callback(React.useState(hexToRgbResult), 2);
+  const tmp7 = _slicedToArray(noop.useState(hexToRgbResult), 2);
   dependencyMap = tmp7[1];
   const items = [arg0];
-  const effect1 = React.useEffect(() => {
-    let value;
+  const effect1 = noop.useEffect(() => {
+    value = undefined;
     if (null != closure_0) {
       value = closure_1_7.get(str);
     }
@@ -71,8 +70,7 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
             if (null != str) {
               tmp7 = null;
               if ("" !== str.trim()) {
-                obj = { uri: null };
-                obj[0] = str;
+                obj = { uri: str };
                 tmp7 = obj;
               }
             }
@@ -89,29 +87,29 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
             const ImageManager2 = closure_1_5.ImageManager;
             dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value));
           }
-          dominantColorsLocalAsset.then((arg0) => {
-            const tmp = closure_1_3(arg0[0], 3);
+          dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            const result = closure_1_7.set(closure_0, obj);
+            result = closure_2_7.set(value, obj);
             if (ref.current) {
-              callback(obj);
+              closure_1_2(obj);
             }
           }).catch(() => {
 
           });
-          const nextPromise = dominantColorsLocalAsset.then((arg0) => {
-            const tmp = closure_1_3(arg0[0], 3);
+          const nextPromise = dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            const result = closure_1_7.set(closure_0, obj);
+            result = closure_2_7.set(value, obj);
             if (ref.current) {
-              callback(obj);
+              closure_1_2(obj);
             }
           });
         }
       } else {
-        callback((arg0) => {
-          let tmp = closure_0;
-          if (closure_0 === arg0) {
+        closure_2((arg0) => {
+          let tmp = value;
+          if (value === arg0) {
             tmp = arg0;
           }
           return tmp;
@@ -122,23 +120,23 @@ export const useDominantRGBFromImage = function useDominantRGBFromImage(arg0) {
   return tmp7[0];
 };
 export const useDominantColorFromImage = function useDominantColorFromImage(arg0) {
-  const _require = arg0;
-  importDefault = React.useRef(true);
-  const effect = React.useEffect(() => () => {
-    closure_1.current = false;
+  _require = arg0;
+  importDefault = noop.useRef(true);
+  const effect = noop.useEffect(() => () => {
+    closure_1_1.current = false;
   }, []);
   let hexToRgbResult;
   if (null != arg0) {
-    hexToRgbResult = store.get(arg0);
+    hexToRgbResult = closure_7.get(arg0);
   }
   if (hexToRgbResult == null) {
-    hexToRgbResult = _require(4409).hexToRgb(ThemesDefault.unsafe_rawColors.PRIMARY_800);
-    const obj2 = _require(4409);
+    hexToRgbResult = require("ColorUtils").hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+    const obj2 = require("ColorUtils");
   }
-  [tmp8, dependencyMap] = callback(React.useState(hexToRgbResult), 2);
+  [tmp8, dependencyMap] = _slicedToArray(noop.useState(hexToRgbResult), 2);
   const items = [arg0];
-  const effect1 = React.useEffect(() => {
-    let value;
+  const effect1 = noop.useEffect(() => {
+    value = undefined;
     if (null != closure_0) {
       value = closure_1_7.get(str);
     }
@@ -154,8 +152,7 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
             if (null != str) {
               tmp7 = null;
               if ("" !== str.trim()) {
-                obj = { uri: null };
-                obj[0] = str;
+                obj = { uri: str };
                 tmp7 = obj;
               }
             }
@@ -172,29 +169,29 @@ export const useDominantColorFromImage = function useDominantColorFromImage(arg0
             const ImageManager2 = closure_1_5.ImageManager;
             dominantColorsLocalAsset = ImageManager2.getDominantColors(closure_1_6.resolveAssetSource(value));
           }
-          dominantColorsLocalAsset.then((arg0) => {
-            const tmp = closure_1_3(arg0[0], 3);
+          dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            const result = closure_1_7.set(closure_0, obj);
+            result = closure_2_7.set(value, obj);
             if (ref.current) {
-              callback(obj);
+              closure_1_2(obj);
             }
           }).catch(() => {
 
           });
-          const nextPromise = dominantColorsLocalAsset.then((arg0) => {
-            const tmp = closure_1_3(arg0[0], 3);
+          const nextPromise = dominantColorsLocalAsset.then((result) => {
+            const tmp = _slicedToArray(result[0], 3);
             const obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
-            const result = closure_1_7.set(closure_0, obj);
+            result = closure_2_7.set(value, obj);
             if (ref.current) {
-              callback(obj);
+              closure_1_2(obj);
             }
           });
         }
       } else {
-        callback((arg0) => {
-          let tmp = closure_0;
-          if (closure_0 === arg0) {
+        closure_2((arg0) => {
+          let tmp = value;
+          if (value === arg0) {
             tmp = arg0;
           }
           return tmp;

@@ -1,11 +1,11 @@
-// === Module 8419: SafetyHubView ===
+// === Module 8419: SafetyHubConstants ===
 
-// Module 8419 (SafetyHubView)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
+// Module 8419 (SafetyHubConstants)
+import Constants from "Constants" /* 1074 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticsSections = ME.AnalyticsSections;
+const AnalyticsSections = Constants.AnalyticsSections;
 let obj = { SETTINGS: "SETTINGS", ACCOUNT_STANDING: "ACCOUNT_STANDING", GUILD_SETTINGS: "GUILD_SETTINGS", ENCRYPTION: "ENCRYPTION", CONTENT_AND_SOCIAL: "CONTENT_AND_SOCIAL", DATA_PRIVACY: "DATA_PRIVACY" };
 const items = [, , ];
 ({ SETTINGS: arr[0], ACCOUNT_STANDING: arr[1], ENCRYPTION: arr[2] } = obj);
@@ -15,9 +15,9 @@ const items1 = [, , , ];
 ({ DIDNT_VIOLATE_POLICY: arr2[0], TOO_STRICT_UNFAIR: arr2[1], DONT_AGREE_PENALTY: arr2[2], SOMETHING_ELSE: arr2[3] } = obj);
 const obj1 = { impression_group: null };
 const frozen = Object.freeze(obj);
-obj1[0] = encodeProperties.ImpressionGroups.APPEAL_INGESTION;
+obj1.impression_group = discord_common_AnalyticsUtils.ImpressionGroups.APPEAL_INGESTION;
 const obj2 = { SPEED_BUMP: "speed-bump", COLLECT_SIGNAL: "collect-signal", CONFIRM_SUBMISSION: "confirm-submission", REQUEST_SENT: "request-sent", THANKS: "thanks" };
-const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
+const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubConstants.tsx");
 const prototype = function SafetyHubLinks() {
   return Object.create(new.target.prototype);
 }.prototype;

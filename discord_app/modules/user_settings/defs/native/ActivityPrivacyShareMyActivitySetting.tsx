@@ -1,39 +1,26 @@
-// === Module 15905: toggle ===
+// === Module 15905: ActivityPrivacyShareMyActivitySetting ===
 
-// Module 15905 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import messagesProxyDefault from "messagesProxy" /* 2562 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15905 (ActivityPrivacyShareMyActivitySetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import _modDef2562 from "module_2562" /* 2562 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.WhdCGP);
+    const intl = util.intl;
+    return intl.string(_modDef2562.WhdCGP);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.UQ9RHJ);
+    const intl = util.intl;
+    return intl.string(_modDef2562.UQ9RHJ);
   },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: explicitContentFromProto.ShowCurrentGame.useSetting,
-  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: UserSettings.ShowCurrentGame.useSetting,
+  onValueChange: UserSettings.ShowCurrentGame.updateSetting
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.WhdCGP);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.UQ9RHJ);
-  },
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: explicitContentFromProto.ShowCurrentGame.useSetting,
-  onValueChange: explicitContentFromProto.ShowCurrentGame.updateSetting
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyShareMyActivitySetting.tsx");
 
 export default toggle;

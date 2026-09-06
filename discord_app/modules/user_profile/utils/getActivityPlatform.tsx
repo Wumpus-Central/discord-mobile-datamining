@@ -1,18 +1,17 @@
-// === Module 13016: PlatformTypes ===
+// === Module 13016: getActivityPlatform ===
 
-// Module 13016 (PlatformTypes)
-import ME from "ME" /* 1074 */;
+// Module 13016 (getActivityPlatform)
+import Constants from "Constants" /* 1074 */;
 import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 13015 */;
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const PlatformTypes = ME.PlatformTypes;
+const PlatformTypes = Constants.PlatformTypes;
 const items = [, , , ];
 ({ LEAGUE_OF_LEGENDS: arr[0], ROBLOX: arr[1], TWITCH: arr[2], YOUTUBE: arr[3] } = PlatformTypes);
-let set = new Set(items);
-const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityPlatform.tsx");
+const set = new Set(items);
+const result = size.fileFinishedImporting("modules/user_profile/utils/getActivityPlatform.tsx");
 
 export default function getActivityPlatform(session_id) {
-  importDefault = session_id;
   const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;

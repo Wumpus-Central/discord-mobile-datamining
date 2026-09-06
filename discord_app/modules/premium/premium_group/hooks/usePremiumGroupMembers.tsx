@@ -1,15 +1,16 @@
 // === Module 13492: usePremiumGroupMembers ===
 
 // Module 13492 (usePremiumGroupMembers)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
-import closure_4 from "handleMutationStart" /* 13489 */;
+import _mod19 from "module_19" /* 19 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PremiumGroupStore from "PremiumGroupStore" /* 13489 */;
+import size from "module_2" /* 2 */;
 
-const useEffect = noop.useEffect;
-const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
+const useEffect = _mod19.useEffect;
+const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
 
 export default function usePremiumGroupMembers(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -22,8 +23,8 @@ export default function usePremiumGroupMembers(arg0) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [closure_4];
-  const stateFromStoresObject = _require(flag2[2]).useStateFromStoresObject(items, () => ({ premiumGroupMembers: closure_4.getMembers(), isFetchingMembers: closure_4.isFetchingMembers(), isUpdatingMembers: closure_4.isUpdatingMembers() }));
+  const items = [PremiumGroupStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => ({ premiumGroupMembers: PremiumGroupStore.getMembers(), isFetchingMembers: PremiumGroupStore.isFetchingMembers(), isUpdatingMembers: PremiumGroupStore.isUpdatingMembers() }));
   let isFetchingMembers = stateFromStoresObject.isFetchingMembers;
   const items1 = [flag2, arg0, flag];
   ({ premiumGroupMembers, isUpdatingMembers } = stateFromStoresObject);
@@ -31,13 +32,11 @@ export default function usePremiumGroupMembers(arg0) {
     if (flag2) {
       let hasFetchedMembersResult = flag;
       if (flag) {
-        hasFetchedMembersResult = closure_1_4.hasFetchedMembers();
+        hasFetchedMembersResult = PremiumGroupStore.hasFetchedMembers();
       }
       if (!hasFetchedMembersResult) {
         if (null != closure_0) {
-          let obj = flag(flag2[3]);
-          obj = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: null };
-          obj[1] = tmp3;
+          const obj = { type: "PREMIUM_GROUP_MEMBERS_REQUEST", subscriptionId: tmp3 };
           obj.dispatch(obj);
         }
       }
@@ -47,6 +46,6 @@ export default function usePremiumGroupMembers(arg0) {
   if (!isFetchingMembers) {
     isFetchingMembers = isUpdatingMembers;
   }
-  obj[1] = isFetchingMembers;
+  obj.isLoading = isFetchingMembers;
   return obj;
 };

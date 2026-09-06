@@ -1,38 +1,38 @@
-// === Module 14902: getCollectibleTypeName ===
+// === Module 14902: FamilyCenterActivityPurchaseRowUtils ===
 
-// Module 14902 (getCollectibleTypeName)
-import set from "set" /* 2 */;
-import getAvatarURL from "getAvatarURL" /* 1396 */;
+// Module 14902 (FamilyCenterActivityPurchaseRowUtils)
+import AvatarUtils from "AvatarUtils" /* 1396 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
-import fromServer from "fromServer" /* 7547 */;
-import fromServer2 from "fromServer" /* 7548 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+import _modDef2396 from "module_2396" /* 2396 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7547 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7548 */;
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import size from "module_2" /* 2 */;
 
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp(1114).intl;
-    return intl5.string(messagesProxyDefault.obi47v);
+    return intl5.string(_modDef2396.obi47v);
   } else if (tmp(1889).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = tmp(1114).intl;
-    return intl4.string(messagesProxyDefault.RX8BMR);
+    return intl4.string(_modDef2396.RX8BMR);
   } else if (tmp(1889).CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = tmp(1114).intl;
-    return intl3.string(messagesProxyDefault.nNGEHk);
+    return intl3.string(_modDef2396.nNGEHk);
   } else if (tmp(1889).CollectiblesItemType.BUNDLE === type) {
     const intl2 = tmp(1114).intl;
-    return intl2.string(messagesProxyDefault.VS1fKo);
+    return intl2.string(_modDef2396.VS1fKo);
   } else if (tmp(1889).CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = tmp(1114).intl;
-    return intl.string(messagesProxyDefault.JiIY1l);
+    return intl.string(_modDef2396.JiIY1l);
   } else {
     return "";
   }
 }
-const isAvatarDecorationRecord = fromServer.isAvatarDecorationRecord;
-const isProfileEffectRecord = fromServer2.isProfileEffectRecord;
-({ PremiumSubscriptionSKUs: c5, SubscriptionPlanInfo: closure_6 } = GuildFeatures);
-const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx");
+const isAvatarDecorationRecord = AvatarDecorationRecord.isAvatarDecorationRecord;
+const isProfileEffectRecord = ProfileEffectRecord.isProfileEffectRecord;
+({ PremiumSubscriptionSKUs: hasOwnProperty, SubscriptionPlanInfo: metroRequire } = PremiumConstants);
+const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx");
 
 export const PREVIEW_SIZE = 40;
 export const NAMEPLATE_ASPECT_RATIO = 5.333333333333333;
@@ -44,11 +44,9 @@ export const getAvatarDecorationPreviewUrl = function getAvatarDecorationPreview
     const first = product.items[0];
     let avatarDecorationURL = null;
     if (isAvatarDecorationRecord(first)) {
-      let obj = getAvatarURL;
-      obj = { avatarDecoration: null, size: 40, canAnimate: true };
-      obj = { asset: null };
-      obj[0] = first.asset;
-      obj[0] = obj;
+      let obj = { avatarDecoration: null, size: 40, canAnimate: true };
+      obj = { asset: first.asset };
+      obj.avatarDecoration = obj;
       avatarDecorationURL = obj.getAvatarDecorationURL(obj);
     }
     return avatarDecorationURL;

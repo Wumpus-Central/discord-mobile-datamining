@@ -1,15 +1,15 @@
-// === Module 7680: getState ===
+// === Module 7680: PendingReplyStore ===
 
-// Module 7680 (getState)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 7680 (PendingReplyStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "reinjectEphemerals" /* 4781 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MessageStore from "MessageStore" /* 4781 */;
 
-let closure_5 = {};
-let closure_6 = {};
+const dependencyMap = {};
+const dependencyMap2 = {};
 let closure_7 = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class PendingReplyStore extends PersistedStore {
@@ -17,16 +17,12 @@ class PendingReplyStore extends PersistedStore {
 const prototype = PendingReplyStore.prototype;
 prototype["getState"] = function getState() {
   let obj = {};
-  const entries = DISCORD_EPOCHDefault.entries(closure_5);
-  const obj2 = DISCORD_EPOCHDefault;
+  const entries = SnowflakeUtilsDefault.entries(closure_5);
   while (tmp2 !== undefined) {
-    let tmp4 = callback;
-    let tmp5 = callback(tmp3, 2);
+    let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    obj = { channelId: null, messageId: null, shouldMention: null, showMentionToggle: null };
-    obj[0] = tmp6;
-    obj[1] = tmp7.message.id;
-    ({ shouldMention: obj3[2], showMentionToggle: obj3[3] } = tmp7);
+    obj = { channelId: tmp6, messageId: tmp7.message.id, shouldMention: null, showMentionToggle: null };
+    ({ shouldMention: obj3.shouldMention, showMentionToggle: obj3.showMentionToggle } = tmp7);
     obj[tmp6] = obj;
     continue;
   }
@@ -37,16 +33,17 @@ prototype["getState"] = function getState() {
 };
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
-  this.waitFor(closure_4, closure_3);
+  this.waitFor(MessageStore, ChannelStore);
   if (arg0 == null) {
     obj = {};
   }
+  closure_6 = obj;
 };
 prototype["getPendingReply"] = function getPendingReply(id) {
   return dependencyMap[id];
 };
-prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(pendingReplyActionSource) {
-  return table[pendingReplyActionSource];
+prototype["getPendingReplyActionSource"] = function getPendingReplyActionSource(arg0) {
+  return closure_7[arg0];
 };
 PendingReplyStore.displayName = "PendingReplyStore";
 PendingReplyStore.persistKey = "PendingReplyStore";
@@ -60,7 +57,7 @@ const items = [
   }
 ];
 PendingReplyStore.migrations = items;
-const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
+const pendingReplyStore = new PendingReplyStore(DispatcherDefault, {
   CREATE_PENDING_REPLY: function handleCreatePendingReply(message) {
     ({ channel, shouldMention } = message);
     if (shouldMention === undefined) {
@@ -104,9 +101,9 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
     delete tmp[tmp2];
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const keys = DISCORD_EPOCHDefault.keys(closure_6);
-    const item = keys.forEach((arg0) => {
-      if (null == channel.getChannel(arg0)) {
+    const keys = SnowflakeUtilsDefault.keys(closure_6);
+    const item = keys.forEach((item) => {
+      if (null == channel.getChannel(item)) {
         delete tmp[tmp2];
       }
     });
@@ -145,14 +142,12 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
     channelId = channelId.channelId;
     if (null != channelId) {
       if (null != dependencyMap2[channelId]) {
-        const message = store2.getMessage(channelId, tmp4.messageId);
-        const channel = store.getChannel(tmp4.channelId);
+        const message = MessageStore.getMessage(channelId, tmp4.messageId);
+        const channel = ChannelStore.getChannel(tmp4.channelId);
         if (null != message) {
           if (null != channel) {
-            const obj = { channel: null, message: null, shouldMention: null, showMentionToggle: null };
-            obj[0] = channel;
-            obj[1] = message;
-            ({ shouldMention: obj[2], showMentionToggle: obj[3] } = tmp4);
+            const obj = { channel, message, shouldMention: null, showMentionToggle: null };
+            ({ shouldMention: obj.shouldMention, showMentionToggle: obj.showMentionToggle } = tmp4);
             closure_5[channelId] = obj;
             delete tmp[tmp2];
           }
@@ -164,14 +159,12 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
     channelId = channelId.channelId;
     if (null != channelId) {
       if (null != dependencyMap2[channelId]) {
-        const message = store2.getMessage(channelId, tmp4.messageId);
-        const channel = store.getChannel(tmp4.channelId);
+        const message = MessageStore.getMessage(channelId, tmp4.messageId);
+        const channel = ChannelStore.getChannel(tmp4.channelId);
         if (null != message) {
           if (null != channel) {
-            const obj = { channel: null, message: null, shouldMention: null, showMentionToggle: null };
-            obj[0] = channel;
-            obj[1] = message;
-            ({ shouldMention: obj[2], showMentionToggle: obj[3] } = tmp4);
+            const obj = { channel, message, shouldMention: null, showMentionToggle: null };
+            ({ shouldMention: obj.shouldMention, showMentionToggle: obj.showMentionToggle } = tmp4);
             closure_5[channelId] = obj;
             delete tmp[tmp2];
           }
@@ -180,6 +173,7 @@ const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
     }
   }
 });
-const result = require("set").fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
 
 export default pendingReplyStore;

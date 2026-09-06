@@ -1,15 +1,15 @@
 // === Module 10752: useShouldShowGiftingPromotionDeco ===
 
 // Module 10752 (useShouldShowGiftingPromotionDeco)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import NativeGiftContextProvider from "NativeGiftContextProvider" /* 10699 */;
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import NativeGiftContext from "NativeGiftContext" /* 10699 */;
+import size from "module_2" /* 2 */;
 
-const PremiumTypes = GuildFeatures.PremiumTypes;
-const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
+const PremiumTypes = PremiumConstants.PremiumTypes;
+const result = size.fileFinishedImporting("modules/premium/gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx");
 
 export default function useShouldShowGiftingPromotionDeco(arg0) {
-  const nativeGiftContext = NativeGiftContextProvider.useNativeGiftContext();
+  const nativeGiftContext = NativeGiftContext.useNativeGiftContext();
   const claimableRewards = nativeGiftContext.claimableRewards;
   if (null != arg0) {
     let tmp4 = arg0 === PremiumTypes.TIER_2;

@@ -1,13 +1,14 @@
 // === Module 17578: GuildSettingsStickerCreateModal ===
 
 // Module 17578 (GuildSettingsStickerCreateModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import { jsx } from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import GuildSettingsStickerCreateDefault from "GuildSettingsStickerCreate" /* 17579 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx");
 
 export default function GuildSettingsStickerCreateModal(arg0) {
   ({ guildId: require, stickerId } = arg0);
@@ -16,16 +17,18 @@ export default function GuildSettingsStickerCreateModal(arg0) {
   ({ onGoBack: c2, ref: c3 } = stickerId(10921)());
   const tmp2 = stickerId(10921)();
   const tmp3 = c3;
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   if (null != stickerId) {
+    let tdhW5b = tmp5(1114).t.tdhW5b;
   } else {
+    tdhW5b = tmp5(1114).t["3DzNjU"];
   }
   const tmp4 = stickerId(10924);
   return tmp3(tmp4, {
     screenKey: "guild-settings-sticker-create",
-    title: intl.string(_3DzNjU),
+    title: intl.string(tdhW5b),
     render() {
-      return _undefined2(stickerId(_undefined[5]), { ref: _undefined2, guildId: closure_0, stickerId, onFinish: _undefined });
+      return jsx(GuildSettingsStickerCreateDefault, { ref, guildId, stickerId, onFinish });
     }
   });
 };

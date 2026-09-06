@@ -1,56 +1,54 @@
-// === Module 4574: handleUserSettingsProtoStoreChange ===
+// === Module 4574: ChangelogStore ===
 
-// Module 4574 (handleUserSettingsProtoStoreChange)
+// Module 4574 (ChangelogStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import closure_2 from "_getSystemLocale" /* 2025 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 2010 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
+require = fn;
 function handleUserSettingsProtoStoreChange() {
-  const LastReceivedChangelogId = explicitContentFromProto.LastReceivedChangelogId;
+  const LastReceivedChangelogId = UserSettings.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
 }
-({ AssetType: c4, ChangelogLoadState: c5 } = CHANGELOG_MODAL_KEY);
-let closure_6 = {};
-let closure_7 = {};
+const ChangelogConstants = fn(2010);
+({ AssetType: closure_4, ChangelogLoadState: hasOwnProperty } = ChangelogConstants);
+const dependencyMap = {};
+const loadedChangelogs = {};
 let c8 = null;
-let c9 = null;
+let id = null;
 let c10 = null;
 const lastChangeLogDate = "lastChangeLogDate";
-let c12 = null;
-let c13 = null;
+const lastSeenChangelogId = null;
 let set = new Set();
 const Store = initializeDefault.Store;
 class ChangelogStore extends Store {
 }
 const prototype = ChangelogStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_3);
-  const items = [closure_2];
+  this.waitFor(LocaleStore, UserSettingsProtoStore);
+  const items = [LocaleStore];
   this.syncWith(items, () => true);
-  const items1 = [closure_3];
+  const items1 = [UserSettingsProtoStore];
   this.syncWith(items1, handleUserSettingsProtoStoreChange);
   const Storage = Storage3.Storage;
-  const value = Storage.get(lastChangeLogDate);
+  value = Storage.get(lastChangeLogDate);
   if (null != value) {
     try {
       const _Date = Date;
-      const date = new Date(value);
+      date = new Date(value);
     } catch (err) {
       const Storage2 = tmp3(tmp2[3]).Storage;
       Storage2.remove(tmp4);
     }
   }
 };
-prototype["getChangelog"] = function getChangelog(closure_1_0, closure_1) {
+prototype["getChangelog"] = function getChangelog(arg0, stateFromStores) {
   let tmp2;
-  if (dependencyMap[closure_1_0] != null) {
-    tmp2 = tmp[closure_1];
+  if (dependencyMap[arg0] != null) {
+    tmp2 = tmp[stateFromStores];
   }
   if (tmp2 == null) {
     tmp2 = null;
@@ -60,10 +58,10 @@ prototype["getChangelog"] = function getChangelog(closure_1_0, closure_1) {
 prototype["latestChangelogId"] = function latestChangelogId() {
   return c8;
 };
-prototype["getChangelogLoadStatus"] = function getChangelogLoadStatus(arg0, closure_1) {
+prototype["getChangelogLoadStatus"] = function getChangelogLoadStatus(arg0, arg1) {
   let NOT_LOADED;
-  if (dependencyMap2[arg0] != null) {
-    NOT_LOADED = tmp[closure_1];
+  if (loadedChangelogs[arg0] != null) {
+    NOT_LOADED = tmp[arg1];
   }
   if (NOT_LOADED == null) {
     NOT_LOADED = constants2.NOT_LOADED;
@@ -77,22 +75,22 @@ prototype["getConfig"] = function getConfig() {
   return c10;
 };
 prototype["overrideId"] = function overrideId() {
-  return c9;
+  return id;
 };
 prototype["lastSeenChangelogId"] = function lastSeenChangelogId() {
-  return c12;
+  return closure_12;
 };
 prototype["lastSeenChangelogDate"] = function lastSeenChangelogDate() {
-  return c13;
+  return date;
 };
 prototype["getStateForDebugging"] = function getStateForDebugging() {
-  return { changelogConfig: c10, loadedChangelogs: closure_7, lastSeenChangelogId: c12, lastSeenChangelogDate: c13 };
+  return { changelogConfig, loadedChangelogs, lastSeenChangelogId, lastSeenChangelogDate: date };
 };
-prototype["isLocked"] = function isLocked(SoundButtonEmoji, arg1) {
+prototype["isLocked"] = function isLocked() {
   return set.size > 0;
 };
 ChangelogStore.displayName = "ChangelogStore";
-const changelogStore = new ChangelogStore(dispatcherDefault, {
+const changelogStore = new ChangelogStore(DispatcherDefault, {
   CHANGE_LOG_LOCK: function handleChangeLogLock(key) {
     if (set.has(key.key)) {
       return false;
@@ -126,10 +124,10 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
     }
     obj[str] = changelog.asset;
     dependencyMap[id][changelog.locale] = obj;
-    if (null == dependencyMap2[id]) {
+    if (null == loadedChangelogs[id]) {
       tmp2[id] = {};
     }
-    dependencyMap2[id][changelog.locale] = constants2.LOADED_SUCCESS;
+    loadedChangelogs[id][changelog.locale] = constants2.LOADED_SUCCESS;
   },
   CHANGE_LOG_FETCH_FAILED: function handleChangelogFetchFailed(arg0) {
     ({ id, locale } = arg0);
@@ -138,21 +136,22 @@ const changelogStore = new ChangelogStore(dispatcherDefault, {
         return false;
       }
     }
-    if (null == dependencyMap2[id]) {
+    if (null == loadedChangelogs[id]) {
       tmp[id] = {};
     }
-    dependencyMap2[id][locale] = constants2.LOADED_FAILURE;
+    loadedChangelogs[id][locale] = constants2.LOADED_FAILURE;
   },
   CHANGE_LOG_SET_OVERRIDE: function handleChangelogSetOverride(id) {
     id = id.id;
   },
   CHANGE_LOG_MARK_SEEN: function handleDismiss(changelogDate) {
     changelogDate = changelogDate.changelogDate;
-    const date = new Date(changelogDate);
+    date = new Date(changelogDate);
     const Storage = Storage3.Storage;
     const result = Storage.set(lastChangeLogDate, changelogDate);
   }
 });
-let result = set.fileFinishedImporting("modules/changelog/ChangelogStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/changelog/ChangelogStore.tsx");
 
 export default changelogStore;

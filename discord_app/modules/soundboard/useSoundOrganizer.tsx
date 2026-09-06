@@ -1,7 +1,8 @@
-// === Module 17064: sortSoundsOldestToNewestCreationDate ===
+// === Module 17064: useSoundOrganizer ===
 
-// Module 17064 (sortSoundsOldestToNewestCreationDate)
-import set from "set" /* 2 */;
+// Module 17064 (useSoundOrganizer)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import size from "module_2" /* 2 */;
 
 function sortSoundsOldestToNewestCreationDate(value2) {
   let flag = arg1;
@@ -9,7 +10,7 @@ function sortSoundsOldestToNewestCreationDate(value2) {
     flag = true;
   }
   const items = [...value2];
-  const sorted = items.sort((soundId, soundId2) => callback(table[0]).compare(soundId.soundId, soundId2.soundId));
+  const sorted = items.sort((soundId, soundId2) => SnowflakeUtilsDefault.compare(soundId.soundId, soundId2.soundId));
   let sorted1 = sorted;
   if (flag) {
     const items1 = [];
@@ -32,7 +33,7 @@ function sortSoundsOldestToNewestCreationDate(value2) {
   }
   return sorted1;
 }
-const result = set.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
+const result = size.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
 
 export { sortSoundsOldestToNewestCreationDate };
 export function useSoundOrganizer() {

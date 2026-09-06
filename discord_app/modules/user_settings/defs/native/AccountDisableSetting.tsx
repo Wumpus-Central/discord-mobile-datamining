@@ -1,32 +1,22 @@
-// === Module 14812: pressable ===
+// === Module 14812: AccountDisableSetting ===
 
-// Module 14812 (pressable)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
+// Module 14812 (AccountDisableSetting)
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
 import handleDisableAccountDefault from "handleDisableAccount" /* 14811 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const pressable = createToggle.createPressable({
+const pressable = SettingBuilders.createPressable({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jf5GGb);
+    const intl = util.intl;
+    return intl.string(util.t.jf5GGb);
   },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
+  parent: SettingsConstants.MobileUserSettings.ACCOUNT,
   onPress: function onAccountDisablePress() {
     handleDisableAccountDefault(false);
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.jf5GGb);
-  },
-  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
-  onPress: function onAccountDisablePress() {
-    handleDisableAccountDefault(false);
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountDisableSetting.tsx");
 
 export default pressable;

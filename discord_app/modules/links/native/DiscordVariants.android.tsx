@@ -1,47 +1,48 @@
-// === Module 16381: getCurrentVariant ===
+// === Module 16381: DiscordVariants ===
 
-// Module 16381 (getCurrentVariant)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 4694 */;
+// Module 16381 (DiscordVariants)
+import NativeIntentsModuleDefault from "NativeIntentsModule" /* 4694 */;
+import DiscordVariantTypes from "DiscordVariantTypes" /* 16382 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/links/native/DiscordVariants.android.tsx");
+const result = size.fileFinishedImporting("modules/links/native/DiscordVariants.android.tsx");
 
 export const getCurrentVariant = function getCurrentVariant() {
-  const _require = enforcingDefault.getCurrentDiscordVariant();
-  const DISCORD_VARIANT_LIST = _require(16382).DISCORD_VARIANT_LIST;
-  let found = DISCORD_VARIANT_LIST.find((arg0) => arg0 === closure_0);
+  const currentDiscordVariant = NativeIntentsModuleDefault.getCurrentDiscordVariant();
+  const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
+  let found = DISCORD_VARIANT_LIST.find((item) => item === closure_0);
   if (found == null) {
     found = null;
   }
   return found;
 };
-export const isVariantInstalled = function isVariantInstalled(arg0) {
-  const _require = enforcingDefault.getCurrentDiscordVariant();
-  const DISCORD_VARIANT_LIST = _require(16382).DISCORD_VARIANT_LIST;
-  let found = DISCORD_VARIANT_LIST.find((arg0) => arg0 === closure_0);
+export const isVariantInstalled = function isVariantInstalled(item) {
+  const currentDiscordVariant = NativeIntentsModuleDefault.getCurrentDiscordVariant();
+  const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
+  let found = DISCORD_VARIANT_LIST.find((item) => item === closure_0);
   if (found == null) {
     found = null;
   }
-  if (arg0 === found) {
+  if (item === found) {
     let resolved = Promise.resolve(true);
   } else {
-    resolved = Promise.resolve(enforcingDefault.isDiscordVariantInstalled(arg0));
-    const tmpResult = enforcingDefault;
+    resolved = Promise.resolve(NativeIntentsModuleDefault.isDiscordVariantInstalled(item));
+    const tmpResult = NativeIntentsModuleDefault;
   }
   return resolved;
 };
 export const launchVariant = function launchVariant(arg0) {
-  const _require = enforcingDefault.getCurrentDiscordVariant();
-  const DISCORD_VARIANT_LIST = _require(16382).DISCORD_VARIANT_LIST;
-  let found = DISCORD_VARIANT_LIST.find((arg0) => arg0 === closure_0);
+  const currentDiscordVariant = NativeIntentsModuleDefault.getCurrentDiscordVariant();
+  const DISCORD_VARIANT_LIST = DiscordVariantTypes.DISCORD_VARIANT_LIST;
+  let found = DISCORD_VARIANT_LIST.find((item) => item === closure_0);
   if (found == null) {
     found = null;
   }
   if (arg0 === found) {
     let resolved = Promise.resolve(false);
   } else {
-    resolved = Promise.resolve(enforcingDefault.launchDiscordVariant(arg0));
-    const tmpResult = enforcingDefault;
+    resolved = Promise.resolve(NativeIntentsModuleDefault.launchDiscordVariant(arg0));
+    const tmpResult = NativeIntentsModuleDefault;
   }
   return resolved;
 };

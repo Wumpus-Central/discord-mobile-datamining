@@ -1,17 +1,17 @@
-// === Module 11069: items ===
+// === Module 11069: iapProducts ===
 
-// Module 11069 (items)
-import set from "set" /* 2 */;
-import items from "items" /* 11070 */;
+// Module 11069 (iapProducts)
+import billing_iapProducts from "billing/iapProducts" /* 11070 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
+const result = size.fileFinishedImporting("utils/native/IAPUtils.mock.tsx");
 
 export default {
   loadProducts() {
-    return Promise.resolve(items.copiedIAPProducts);
+    return Promise.resolve(billing_iapProducts.copiedIAPProducts);
   },
   purchaseProduct() {
-    error = new Error("IAPUtils is mocked \u2014 purchases cannot be completed in this build.");
+    const error = new Error("IAPUtils is mocked \u2014 purchases cannot be completed in this build.");
     return Promise.reject(error);
   },
   canMakePayments() {

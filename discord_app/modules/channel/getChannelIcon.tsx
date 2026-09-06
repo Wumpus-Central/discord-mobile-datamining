@@ -1,14 +1,15 @@
-// === Module 13030: getChannelIconURL ===
+// === Module 13030: getChannelIcon ===
 
-// Module 13030 (getChannelIconURL)
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import getAvatarURLDefault from "getAvatarURL" /* 1396 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { ChannelTypes } from "ME" /* 1074 */;
+// Module 13030 (getChannelIcon)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import _slicedToArray from "module_32" /* 32 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/getChannelIcon.tsx");
+require = fn;
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 
 export const getChannelIconURL = function getChannelIconURL(type) {
   let num = arg1;
@@ -18,19 +19,18 @@ export const getChannelIconURL = function getChannelIconURL(type) {
   type = type.type;
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
-    const mapped = recipients.map(closure_4.getUser);
-    const first = callback(mapped.filter(isDiscordFrontendDevelopment.isNotNullish), 1)[0];
+    const mapped = recipients.map(UserStore.getUser);
+    const first = _slicedToArray(mapped.filter(GlobalUtils.isNotNullish), 1)[0];
     let avatarURL = null;
     if (null != first) {
       avatarURL = first.getAvatarURL(undefined, num, arg2);
     }
     return avatarURL;
   } else if (tmp.GROUP_DM === type) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, icon: null, applicationId: null, size: null };
-    ({ id: obj2[0], icon: obj2[1] } = type);
-    obj[2] = type.getApplicationId();
-    obj[3] = num;
+    const obj = { id: null, icon: null, applicationId: null, size: null };
+    ({ id: obj2.id, icon: obj2.icon } = type);
+    obj.applicationId = type.getApplicationId();
+    obj.size = num;
     return obj.getChannelIconURL(obj);
   }
 };
@@ -38,18 +38,17 @@ export const getChannelIconSource = function getChannelIconSource(type) {
   type = type.type;
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
-    const mapped = recipients.map(closure_4.getUser);
-    const first = callback(mapped.filter(isDiscordFrontendDevelopment.isNotNullish), 1)[0];
+    const mapped = recipients.map(UserStore.getUser);
+    const first = _slicedToArray(mapped.filter(GlobalUtils.isNotNullish), 1)[0];
     let avatarSource = null;
     if (null != first) {
       avatarSource = first.getAvatarSource(undefined);
     }
     return avatarSource;
   } else if (tmp.GROUP_DM === type) {
-    let obj = getAvatarURLDefault;
-    obj = { id: null, icon: null, applicationId: null, size: 128 };
-    ({ id: obj2[0], icon: obj2[1] } = type);
-    obj[2] = type.getApplicationId();
+    const obj = { id: null, icon: null, applicationId: null, size: 128 };
+    ({ id: obj2.id, icon: obj2.icon } = type);
+    obj.applicationId = type.getApplicationId();
     return obj.getChannelIconSource(obj);
   }
 };

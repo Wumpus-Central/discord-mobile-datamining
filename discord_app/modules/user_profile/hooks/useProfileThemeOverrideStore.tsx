@@ -1,33 +1,33 @@
 // === Module 8228: useProfileThemeOverrideStore ===
 
 // Module 8228 (useProfileThemeOverrideStore)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import Constants from "Constants" /* 1074 */;
+import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import getProfileTheme from "getProfileTheme" /* 8229 */;
-import keys from "keys" /* 560 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8229 */;
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-const ThemeTypes = ME.ThemeTypes;
-let tmp2 = keys.create()((arg0) => {
+const ThemeTypes = Constants.ThemeTypes;
+let tmp2 = module_560.create()((arg0) => {
   closure_0 = arg0;
   return {
     themeOverride: null,
     savedClientTheme: null,
     setThemeOverride(themeOverride) {
-      return callback({ themeOverride });
+      return closure_0({ themeOverride });
     },
     setSavedClientTheme(savedClientTheme) {
-      return callback({ savedClientTheme });
+      return closure_0({ savedClientTheme });
     }
   };
 });
 let closure_4 = tmp2;
-const result = set.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
+const result = size.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
 
 export const useProfileThemeOverrideStore = tmp2;
 export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
-  const tmp = callback((themeOverride) => themeOverride.themeOverride);
+  const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
   const tmp3 = useThemeDefault();
   if (null == tmp) {
     return null;
@@ -53,7 +53,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       if (null != first) {
         tmp8 = tmp3;
         if (null != tmp7) {
-          let obj = getProfileTheme;
+          let obj = UserProfileGradientUtils;
           let profileTheme = obj.getProfileTheme(first);
           if (profileTheme == null) {
             profileTheme = tmp3;
@@ -75,8 +75,7 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
     if (themeType !== ThemeTypes.DARK) {
       let isThemeLightResult = themeType === tmp11.DARK;
       if (isThemeLightResult) {
-        isThemeLightResult = AccessibilityAnnouncer.isThemeLight(tmp3);
-        const obj3 = AccessibilityAnnouncer;
+        isThemeLightResult = shared.isThemeLight(tmp3);
       }
       let DARKER = themeType;
       if (isThemeLightResult) {
@@ -84,17 +83,13 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
       }
     } else {
       DARKER = tmp3;
-      const obj2 = AccessibilityAnnouncer;
     }
-    obj = { theme: null, primaryColor: null, secondaryColor: null };
-    obj[0] = DARKER;
-    obj[1] = tmp5;
-    obj[2] = tmp4;
+    obj = { theme: DARKER, primaryColor: tmp5, secondaryColor: tmp4 };
     return obj;
   }
 };
 export const useIsBannerDisabledByOverride = function useIsBannerDisabledByOverride() {
-  const tmp = callback((themeOverride) => themeOverride.themeOverride);
+  const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
   let tmp2 = null != tmp;
   if (tmp2) {
     let tmp3 = "non-nitro" === tmp.mode;
@@ -106,7 +101,7 @@ export const useIsBannerDisabledByOverride = function useIsBannerDisabledByOverr
   return tmp2;
 };
 export const useHasNonNitroThemeOverride = function useHasNonNitroThemeOverride() {
-  const tmp = callback((themeOverride) => themeOverride.themeOverride);
+  const tmp = closure_4((themeOverride) => themeOverride.themeOverride);
   let tmp2 = null != tmp;
   if (tmp2) {
     tmp2 = "non-nitro" === tmp.mode;

@@ -2,18 +2,20 @@
 
 // Module 13307 (useBuyNitroExperiment)
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { usePremiumPlanPurchasedStore as closure_5 } from "usePremiumPlanPurchasedStore" /* 7421 */;
+import BuyNitroMarketingExperiment from "BuyNitroMarketingExperiment" /* 13308 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");
+require = fn;
+let closure_5 = fn(7421).usePremiumPlanPurchasedStore;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroExperiment.tsx");
 
 export const useBuyNitroExperiment = function useBuyNitroExperiment(isNitroHomeSurface) {
   isNitroHomeSurface = isNitroHomeSurface.isNitroHomeSurface;
   ({ userHasSubscription, isConfirmedNonSubscriber } = isNitroHomeSurface);
-  let canRenderRedesignUpsellEarly = useInitialValueDefault(() => callback(table[4]).getMobileNitroMarketingRedesignExperiment({ location: "PremiumMarketingPage" }));
-  const tmp3 = callback(React.useState(false), 2);
+  let canRenderRedesignUpsellEarly = useInitialValueDefault(() => BuyNitroMarketingExperiment.getMobileNitroMarketingRedesignExperiment({ location: "PremiumMarketingPage" }));
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
   const first = tmp3[0];
   let showRedesignUpsell = canRenderRedesignUpsellEarly;
   if (canRenderRedesignUpsellEarly) {

@@ -1,9 +1,9 @@
-// === Module 4375: metadata ===
+// === Module 4375: ? ===
 
-// Module 4375 (metadata)
-import set from "set" /* 2 */;
+// Module 4375
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/rive/native/ThemeAwareNitroWishlistingWumpus.riv.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/ThemeAwareNitroWishlistingWumpus.riv.js");
 
 export default "https://cdn.discordapp.com/assets/content/53eb00aa300595b54d999e60d501f621ad4399918c568561f74b536b6f37c0ab.riv";
 export const metadata = { fileBytes: 82814 };

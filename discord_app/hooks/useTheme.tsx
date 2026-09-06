@@ -1,20 +1,20 @@
 // === Module 4495: useTheme ===
 
 // Module 4495 (useTheme)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+import Constants from "Constants" /* 1074 */;
+import shared from "shared" /* 4411 */;
+import size from "module_2" /* 2 */;
 
 function useTheme() {
-  return AccessibilityAnnouncer.useThemeContext().theme;
+  return shared.useThemeContext().theme;
 }
-const ThemeTypes = ME.ThemeTypes;
-const result = set.fileFinishedImporting("hooks/useTheme.tsx");
+const ThemeTypes = Constants.ThemeTypes;
+const result = size.fileFinishedImporting("hooks/useTheme.tsx");
 
 export default useTheme;
 export { useTheme };
 export const useThemeIndex = function useThemeIndex() {
-  const theme = AccessibilityAnnouncer.useThemeContext().theme;
+  const theme = shared.useThemeContext().theme;
   let num = 0;
   if (ThemeTypes.DARK !== theme) {
     if (ThemeTypes.LIGHT === theme) {

@@ -1,18 +1,17 @@
 // === Module 4272: AccessibilityAnnouncer ===
 
 // Module 4272 (AccessibilityAnnouncer)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import updateAccessibilityAnnouncerLiveRegionMessage from "updateAccessibilityAnnouncerLiveRegionMessage" /* 4273 */;
+import _mod17 from "module_17" /* 17 */;
+import AccessibilityAnnouncerLiveRegion from "AccessibilityAnnouncerLiveRegion" /* 4273 */;
+import size from "module_2" /* 2 */;
 
-const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;
-let result = set.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx");
+const AccessibilityInfo = _mod17.AccessibilityInfo;
+let result = size.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx");
 
 export const AccessibilityAnnouncer = {
   announce(intl, polite) {
     if ("polite" === polite) {
-      const result = updateAccessibilityAnnouncerLiveRegionMessage.updateAccessibilityAnnouncerLiveRegionMessage(intl);
-      const obj = updateAccessibilityAnnouncerLiveRegionMessage;
+      const result = AccessibilityAnnouncerLiveRegion.updateAccessibilityAnnouncerLiveRegionMessage(intl);
     } else {
       const result1 = AccessibilityInfo.announceForAccessibility(intl);
     }

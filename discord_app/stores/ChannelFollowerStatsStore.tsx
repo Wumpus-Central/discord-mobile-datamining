@@ -1,19 +1,19 @@
-// === Module 11672: getFollowerStatsForChannel ===
+// === Module 11672: ChannelFollowerStatsStore ===
 
-// Module 11672 (getFollowerStatsForChannel)
+// Module 11672 (ChannelFollowerStatsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-let closure_0 = { FAILED: "failed", SUCCEEDED: "succeeded" };
+const constants = { FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_1 = {};
 const Store = initializeDefault.Store;
 class ChannelFollowerStatsStore extends Store {
 }
-ChannelFollowerStatsStore.prototype["getFollowerStatsForChannel"] = function getFollowerStatsForChannel(closure_0) {
-  return table[closure_0];
+ChannelFollowerStatsStore.prototype["getFollowerStatsForChannel"] = function getFollowerStatsForChannel(arg0) {
+  return closure_1[arg0];
 };
 ChannelFollowerStatsStore.displayName = "ChannelFollowerStatsStore";
-const channelFollowerStatsStore = new ChannelFollowerStatsStore(dispatcherDefault, {
+const channelFollowerStatsStore = new ChannelFollowerStatsStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_1 = {};
   },
@@ -28,6 +28,7 @@ const channelFollowerStatsStore = new ChannelFollowerStatsStore(dispatcherDefaul
     closure_1[channelId.channelId] = { loadingStatus: constants.FAILED, lastFetched: Date.now(), channelsFollowing: 0, guildMembers: 0, guildsFollowing: 0, usersSeenEver: 0, subscribersGainedSinceLastPost: 0, subscribersLostSinceLastPost: 0 };
   }
 });
-const result = require("set").fileFinishedImporting("stores/ChannelFollowerStatsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/ChannelFollowerStatsStore.tsx");
 
 export default channelFollowerStatsStore;

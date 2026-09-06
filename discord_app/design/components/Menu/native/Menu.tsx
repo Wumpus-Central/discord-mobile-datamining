@@ -1,44 +1,47 @@
-// === Module 14130: NOOP ===
+// === Module 14130: Menu ===
 
-// Module 14130 (NOOP)
-import ThemesDefault from "Themes" /* 576 */;
-import _mod4296 from "module_4296" /* 4296 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14130 (Menu)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import timing from "timing" /* 4561 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4971 */;
+import spring from "spring" /* 4974 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c4 = importAllResult;
-({ ScrollView: c5, StyleSheet } = get_ActivityIndicator);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ScrollView: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const NOOP = fn(1074).NOOP;
+const jsx = fn(21).jsx;
 let closure_8 = { mass: 1, stiffness: 300, damping: 25, restSpeedThreshold: 0.01, restDisplacementThreshold: 0.01 };
-let obj = { duration: 250, easing: require("STANDARD_EASING").STANDARD_EASING };
-obj = { backdrop: null, menu: null };
+let __closure = { duration: 250, easing: fn(14120).STANDARD_EASING };
+fn(4560);
+__closure = { backdrop: null, menu: null };
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.zIndex = 1;
-obj[0] = obj1;
-createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, width: 220 };
-obj[1] = createCacheKey;
-let closure_10 = createCacheKey.createStyles(obj);
-const context = importAllResult.createContext({ menuClose: NOOP, menuDismiss: NOOP });
+__closure.backdrop = obj1;
+const createStyles = { position: "absolute", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, width: 220 };
+__closure.menu = createStyles;
+let closure_10 = createStyles.createStyles(__closure);
+const context = noop.createContext({ menuClose: NOOP, menuDismiss: NOOP });
 function measureButtonRef(arg0, arg1) {
-  const measureResult = _mod4296.measure(arg0);
+  const measureResult = ReanimatedRexport.measure(arg0);
   if (null != measureResult) {
-    _mod4296.runOnJS(arg1)(measureResult);
-    const tmpResult = _mod4296;
+    ReanimatedRexport.runOnJS(arg1)(measureResult);
+    const tmpResult = ReanimatedRexport;
   }
 }
-measureButtonRef.__closure = { measure: require("module_4296").measure, runOnJS: require("module_4296").runOnJS };
+measureButtonRef.__closure = { measure: fn(4296).measure, runOnJS: fn(4296).runOnJS };
 measureButtonRef.__workletHash = 15651320687527;
 measureButtonRef.__initData = { code: "function measureButtonRef_MenuTsx1(ref,setDimensions){const{measure,runOnJS}=this.__closure;const measurements=measure(ref);if(measurements==null)return;runOnJS(setDimensions)(measurements);}" };
 let closure_13 = { code: "function MenuTsx2(){const{runOnJS,openMenuCallback}=this.__closure;return runOnJS(openMenuCallback)();}" };
 let closure_14 = { code: "function MenuTsx3(){const{runOnJS,closeMenuCallback}=this.__closure;return runOnJS(closeMenuCallback)();}" };
-let closure_15 = { code: "function MenuTsx4(){const{visible,useReducedMotion,interpolate,dirX,size,offsetAnimated,dirY}=this.__closure;var _offsetAnimated,_offsetAnimated$get,_offsetAnimated2,_offsetAnimated$get2;return{opacity:visible.get(),transform:useReducedMotion?[]:[{translateX:interpolate(visible.get(),[0,1],[(dirX==='left'?-1:1)*size.get().width/4,((_offsetAnimated=offsetAnimated)===null||_offsetAnimated===void 0||(_offsetAnimated=_offsetAnimated.get())===null||_offsetAnimated===void 0?void 0:_offsetAnimated.x)!=null?(_offsetAnimated$get=offsetAnimated.get())===null||_offsetAnimated$get===void 0?void 0:_offsetAnimated$get.x:0])},{translateY:interpolate(visible.get(),[0,1],[(dirY==='top'?-1:1)*size.get().height/4,((_offsetAnimated2=offsetAnimated)===null||_offsetAnimated2===void 0||(_offsetAnimated2=_offsetAnimated2.get())===null||_offsetAnimated2===void 0?void 0:_offsetAnimated2.y)!=null?(_offsetAnimated$get2=offsetAnimated.get())===null||_offsetAnimated$get2===void 0?void 0:_offsetAnimated$get2.y:0])},{scale:visible.get()/2+0.5}]};}" };
-let obj3 = { measure: require("module_4296").measure, runOnJS: require("module_4296").runOnJS };
-let result = require("set").fileFinishedImporting("design/components/Menu/native/Menu.tsx");
+const __initData = { code: "function MenuTsx4(){const{visible,useReducedMotion,interpolate,dirX,size,offsetAnimated,dirY}=this.__closure;var _offsetAnimated,_offsetAnimated$get,_offsetAnimated2,_offsetAnimated$get2;return{opacity:visible.get(),transform:useReducedMotion?[]:[{translateX:interpolate(visible.get(),[0,1],[(dirX==='left'?-1:1)*size.get().width/4,((_offsetAnimated=offsetAnimated)===null||_offsetAnimated===void 0||(_offsetAnimated=_offsetAnimated.get())===null||_offsetAnimated===void 0?void 0:_offsetAnimated.x)!=null?(_offsetAnimated$get=offsetAnimated.get())===null||_offsetAnimated$get===void 0?void 0:_offsetAnimated$get.x:0])},{translateY:interpolate(visible.get(),[0,1],[(dirY==='top'?-1:1)*size.get().height/4,((_offsetAnimated2=offsetAnimated)===null||_offsetAnimated2===void 0||(_offsetAnimated2=_offsetAnimated2.get())===null||_offsetAnimated2===void 0?void 0:_offsetAnimated2.y)!=null?(_offsetAnimated$get2=offsetAnimated.get())===null||_offsetAnimated$get2===void 0?void 0:_offsetAnimated$get2.y:0])},{scale:visible.get()/2+0.5}]};}" };
+let size = fn(2);
+let result = size.fileFinishedImporting("design/components/Menu/native/Menu.tsx");
 
 export const MENU_OFFSET = 10;
 export const MenuContext = context;
@@ -54,37 +57,33 @@ export const Menu = function Menu(toggleButtonRef) {
   }
   ({ offset, offsetAnimated } = toggleButtonRef);
   let enabled;
-  let callback;
   let size2;
-  closure_5 = undefined;
-  let sharedValue;
-  let sharedValue1;
   onClose = undefined;
-  let callback2;
-  let redux;
+  closure_10 = undefined;
+  redux = undefined;
   function openMenuCallback() {
-    obj = toggleButtonRef(enabled[12]);
+    let obj = PlatformUtils;
     if (obj.isAndroid()) {
-      const AccessibilityAnnouncer = tmp(tmp2[13]).AccessibilityAnnouncer;
-      const intl = tmp(tmp2[14]).intl;
-      AccessibilityAnnouncer.announce(intl.string(tmp(tmp2[14]).t.ZqK0uI));
+      const AccessibilityAnnouncer = tmp(4272).AccessibilityAnnouncer;
+      const intl = tmp(1114).intl;
+      AccessibilityAnnouncer.announce(intl.string(tmp(1114).t.ZqK0uI));
     }
-    obj = { ref: closure_3 };
-    const result = toggleButtonRef(enabled[15]).setAccessibilityFocus(obj);
+    obj = { ref };
+    const result = setAccessibilityFocus.setAccessibilityFocus(obj);
   }
   ({ style, children } = toggleButtonRef);
-  let tmp = callback2();
+  let tmp = closure_10();
   enabled = size2.useContext(toggleButtonRef(enabled[9]).AccessibilityPreferencesContext).reducedMotion.enabled;
   const rect = offsetAnimated(enabled[10])();
-  const size = offsetAnimated(enabled[11])();
-  callback = size2.useRef(null);
-  const tmp7 = callback(size2.useState(null), 2);
+  let size = offsetAnimated(enabled[11])();
+  _slicedToArray = size2.useRef(null);
+  const tmp7 = _slicedToArray(size2.useState(null), 2);
   size2 = tmp7[0];
   closure_5 = tmp7[1];
-  obj = toggleButtonRef(enabled[8]);
-  sharedValue = obj.useSharedValue(0);
-  obj1 = toggleButtonRef(enabled[8]);
-  sharedValue1 = obj1.useSharedValue({ width: 0, height: 0 });
+  __closure = toggleButtonRef(enabled[8]);
+  const sharedValue = __closure.useSharedValue(0);
+  let obj1 = toggleButtonRef(enabled[8]);
+  const sharedValue1 = obj1.useSharedValue({ width: 0, height: 0 });
   let items = [toggleButtonRef, size2];
   const layoutEffect = size2.useLayoutEffect(() => {
     let current;
@@ -96,8 +95,7 @@ export const Menu = function Menu(toggleButtonRef) {
       tmp3 = null == size2;
     }
     if (tmp3) {
-      toggleButtonRef(enabled[8]).runOnUI(closure_1_12)(tmp, closure_5);
-      obj = toggleButtonRef(enabled[8]);
+      ReanimatedRexport.runOnUI(measureButtonRef)(tmp, closure_5);
     }
   }, items);
   if (onClose == null) {
@@ -139,9 +137,7 @@ export const Menu = function Menu(toggleButtonRef) {
       sum3 = sum1 + num4;
       tmp16 = sum2;
     }
-    point = { x: null, y: null };
-    point[0] = tmp16;
-    point[1] = sum3;
+    point = { x: tmp16, y: sum3 };
   }
   const height = size.height;
   if ("left" === position) {
@@ -183,36 +179,34 @@ export const Menu = function Menu(toggleButtonRef) {
     sum5 = tmp19 + num6;
   }
   function handleDismiss() {
-    obj = toggleButtonRef(enabled[15]);
-    obj = { ref: toggleButtonRef };
-    const result = obj.setAccessibilityFocus(obj);
+    __closure = { ref: toggleButtonRef };
+    const result = __closure.setAccessibilityFocus(__closure);
     const fn = function t() {
-      return closure_1_0(closure_1_2[8]).runOnJS(closure_9)();
+      return toggleButtonRef(enabled[8]).runOnJS(onClose)();
     };
-    obj = { runOnJS: toggleButtonRef(enabled[8]).runOnJS, closeMenuCallback: onClose };
-    fn.__closure = obj;
+    __closure = { runOnJS: ReanimatedRexport.runOnJS, closeMenuCallback: onClose };
+    fn.__closure = __closure;
     fn.__workletHash = 5879184549724;
-    fn.__initData = closure_1_14;
-    const result1 = sharedValue.set(toggleButtonRef(enabled[16]).withTiming(0, onClose, "respect-motion-settings", fn));
+    fn.__initData = __initData2;
+    const result1 = sharedValue.set(timing.withTiming(0, __closure, "respect-motion-settings", fn));
   }
-  obj = {};
-  obj[str9] = sum4;
-  obj[str12] = sum5;
-  obj.maxHeight = height - sum5 - ("top" === str12 ? rect.bottom : rect.top) - 12;
-  let items1 = [obj, str9, str12];
+  __closure = {};
+  __closure[str9] = sum4;
+  __closure[str12] = sum5;
+  __closure.maxHeight = height - sum5 - ("top" === str12 ? rect.bottom : rect.top) - 12;
+  let items1 = [__closure, str9, str12];
   function handleClose() {
-    obj = toggleButtonRef(enabled[16]);
     const fn = function t() {
-      return closure_1_0(closure_1_2[8]).runOnJS(closure_9)();
+      return toggleButtonRef(enabled[8]).runOnJS(onClose)();
     };
-    obj = { runOnJS: toggleButtonRef(enabled[8]).runOnJS, closeMenuCallback: onClose };
-    fn.__closure = obj;
+    __closure = { runOnJS: ReanimatedRexport.runOnJS, closeMenuCallback: onClose };
+    fn.__closure = __closure;
     fn.__workletHash = 5879184549724;
-    fn.__initData = closure_1_14;
-    const result = sharedValue.set(obj.withTiming(0, onClose, "respect-motion-settings", fn));
+    fn.__initData = __initData2;
+    const result = sharedValue.set(__closure.withTiming(0, __closure, "respect-motion-settings", fn));
   }
-  const tmp6Result = callback(items1, 3);
-  callback2 = tmp23;
+  const tmp6Result = _slicedToArray(items1, 3);
+  closure_10 = tmp23;
   redux = tmp24;
   tmp3Result = tmp3(tmp4[8]);
   class P {
@@ -222,9 +216,9 @@ export const Menu = function Menu(toggleButtonRef) {
       if (enabled) {
         items = [];
       } else {
-        tmp = toggleButtonRef;
-        tmp2 = enabled;
-        obj3 = toggleButtonRef(enabled[8]);
+        tmp = closure_0;
+        tmp2 = closure_2;
+        obj3 = closure_0(closure_2[8]);
         tmp4 = closure_10;
         num = 1;
         str = "left";
@@ -257,7 +251,7 @@ export const Menu = function Menu(toggleButtonRef) {
         }
         obj = { translateX: null };
         items1[1] = num4;
-        obj[0] = obj3.interpolate(value, [0, 1], items1);
+        obj.translateX = obj3.interpolate(value, [0, 1], items1);
         items = [, , ];
         items[0] = obj;
         tmpResult = tmp(tmp2[8]);
@@ -287,65 +281,62 @@ export const Menu = function Menu(toggleButtonRef) {
         }
         obj1 = { translateY: null };
         items2[1] = num5;
-        obj1[0] = tmpResult.interpolate(value3, [0, 1], items2);
+        obj1.translateY = tmpResult.interpolate(value3, [0, 1], items2);
         items[1] = obj1;
         obj2 = { scale: null };
         num6 = 2;
         num7 = 0.5;
-        obj2[0] = obj2.get() / 2 + 0.5;
+        obj2.scale = obj2.get() / 2 + 0.5;
         items[2] = obj2;
       }
-      obj[1] = items;
+      obj.transform = items;
       return obj;
     }
   }
-  obj = { visible: sharedValue, useReducedMotion: enabled, interpolate: tmp3(tmp4[8]).interpolate, dirX: tmp23, size: sharedValue1, offsetAnimated, dirY: tmp24 };
-  P.__closure = obj;
+  __closure = { visible: sharedValue, useReducedMotion: enabled, interpolate: tmp3(tmp4[8]).interpolate, dirX: tmp23, size: sharedValue1, offsetAnimated, dirY: tmp24 };
+  P.__closure = __closure;
   P.__workletHash = 7884133597410;
-  P.__initData = closure_15;
+  P.__initData = __initData;
   const animatedStyle = tmp3Result.useAnimatedStyle(P);
-  obj1 = { style: items2, accessibilityViewIsModal: true, importantForAccessibility: "yes", onTouchDown: handleDismiss, onAccessibilityEscape: handleDismiss, children: null };
-  items2 = [tmp.backdrop];
+  obj1 = { style: null, accessibilityViewIsModal: true, importantForAccessibility: "yes", onTouchDown: handleDismiss, onAccessibilityEscape: handleDismiss, children: null };
+  let items2 = [tmp.backdrop];
+  obj1.style = items2;
   const obj2 = {
     accessibilityRole: "list",
-    style: items3,
+    style: null,
     onLayout(nativeEvent) {
-      obj = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
-      const result = sharedValue1.set(obj);
+      const size = { width: nativeEvent.nativeEvent.layout.width, height: nativeEvent.nativeEvent.layout.height };
+      const result = sharedValue1.set(size);
       const fn = function n() {
-        return closure_1_0(closure_1_2[8]).runOnJS(closure_8)();
+        return toggleButtonRef(enabled[8]).runOnJS(openMenuCallback)();
       };
-      obj = { runOnJS: toggleButtonRef(enabled[8]).runOnJS, openMenuCallback };
-      fn.__closure = obj;
+      __closure = { runOnJS: ReanimatedRexport.runOnJS, openMenuCallback };
+      fn.__closure = __closure;
       fn.__workletHash = 14966618105405;
-      fn.__initData = closure_1_13;
-      const result1 = sharedValue.set(toggleButtonRef(enabled[19]).withSpring(1, openMenuCallback, "respect-motion-settings", fn));
+      fn.__initData = __initData;
+      const result1 = sharedValue.set(spring.withSpring(1, closure_8, "respect-motion-settings", fn));
     },
     children: null
   };
-  items3 = [tmp.menu, boxShadowStyle, tmp6Result[0], animatedStyle, style];
+  const items3 = [tmp.menu, boxShadowStyle, tmp6Result[0], animatedStyle, style];
+  obj2.style = items3;
   let obj3 = { children: null };
-  let tmp2 = size2;
-  const tmp5Result = offsetAnimated(enabled[18]);
-  const tmp6 = callback;
-  const Children = tmp2.Children;
-  obj3[0] = sharedValue1(redux.Provider, {
-    value: { menuClose: handleClose, menuDismiss: handleDismiss },
-    children: Children.map(children, (icon) => {
-      let cloneElementResult = icon;
-      if (0 === arg1) {
-        obj = size2;
-        cloneElementResult = icon;
-        if (size2.isValidElement(icon)) {
-          obj = { ref: null };
-          obj[0] = closure_3;
-          cloneElementResult = obj.cloneElement(icon, obj);
-        }
+  let obj4 = { value: { menuClose: handleClose, menuDismiss: handleDismiss }, children: null };
+  const Children = size2.Children;
+  obj4.children = Children.map(children, (icon, arg1) => {
+    let cloneElementResult = icon;
+    if (0 === arg1) {
+      let obj = noop;
+      cloneElementResult = icon;
+      if (noop.isValidElement(icon)) {
+        obj = { ref };
+        cloneElementResult = obj.cloneElement(icon, obj);
       }
-      return cloneElementResult;
-    })
+    }
+    return cloneElementResult;
   });
-  obj2[3] = sharedValue1(closure_5, obj3);
-  obj1[5] = sharedValue1(offsetAnimated(enabled[8]).View, obj2);
-  return sharedValue1(tmp5Result, obj1);
+  obj3.children = sharedValue1(redux.Provider, obj4);
+  obj2.children = sharedValue1(closure_5, obj3);
+  obj1.children = sharedValue1(offsetAnimated(enabled[8]).View, obj2);
+  return sharedValue1(offsetAnimated(enabled[18]), obj1);
 };

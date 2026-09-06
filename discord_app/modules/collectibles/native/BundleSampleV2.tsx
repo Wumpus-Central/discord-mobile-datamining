@@ -1,21 +1,17 @@
-// === Module 8797: BundleStaticPreviewContent ===
+// === Module 8797: BundleSampleV2 ===
 
-// Module 8797 (BundleStaticPreviewContent)
-import noopAll from "noop" /* 19 */;
+// Module 8797 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getNameplateData from "getNameplateData" /* 1886 */;
+import nativeDefault from "native" /* 576 */;
+import utils from "utils" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import preloadDefault from "preload" /* 5587 */;
-import ProfileEffectSampleDefault from "ProfileEffectSample" /* 8799 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8799 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG from "NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG" /* 8817 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { BUNDLE_PREVIEW_CONFIG } from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8798 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 8817 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function BundleStaticPreviewContent(mutedBackground) {
   ({ previewAssets, disableBackground, targetSize } = mutedBackground);
   ({ bgStatic, fgStatic } = previewAssets);
@@ -26,7 +22,7 @@ function BundleStaticPreviewContent(mutedBackground) {
       combined = bgStatic;
       if (bgStatic.startsWith("https://cdn.discordapp.com")) {
         const _Math = Math;
-        const bound = Math.min(store.get(), 2);
+        const bound = Math.min(React3.get(), 2);
         const _Math2 = Math;
         const rounded = Math.round(targetSize.width * bound);
         const _Math3 = Math;
@@ -40,13 +36,10 @@ function BundleStaticPreviewContent(mutedBackground) {
       }
     }
     let obj = { source: null, style: null, resizeMode: "cover", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-    obj = { uri: null };
-    obj[0] = combined;
-    obj[0] = obj;
-    obj[1] = closure_9.bgImage;
-    tmp = closure_6(preloadDefault, obj);
-    const tmp2 = closure_6;
-    const tmp5 = preloadDefault;
+    obj = { uri: combined };
+    obj.source = obj;
+    obj.style = closure_9.bgImage;
+    tmp = timestampProducer(FastImageDefault, obj);
   }
   obj = { style: closure_9.container, children: null };
   let tmp21Result = !disableBackground;
@@ -54,29 +47,25 @@ function BundleStaticPreviewContent(mutedBackground) {
     tmp21Result = null != tmp;
   }
   if (tmp21Result) {
-    obj1 = { style: null, pointerEvents: "none", children: null };
-    obj1[0] = tmp19.bgBleedClip;
+    const obj1 = { style: tmp19.bgBleedClip, pointerEvents: "none", children: null };
     tmp21Result = tmp;
     if (mutedBackground.mutedBackground) {
-      const obj2 = { style: null, pointerEvents: "none", children: null };
-      obj2[0] = tmp19.bgMutedWrap;
-      obj2[2] = tmp;
+      const obj2 = { style: tmp19.bgMutedWrap, pointerEvents: "none", children: tmp };
       tmp21Result = tmp21(tmp18, obj2);
     }
-    obj1[2] = tmp21Result;
+    obj1.children = tmp21Result;
     tmp21Result = tmp21(tmp18, obj1);
   }
   const items = [tmp21Result, ];
   let tmp24Result = null != fgStatic;
   if (tmp24Result) {
-    const obj3 = { style: null, pointerEvents: "none", children: null };
-    obj3[0] = tmp19.fgClip;
+    const obj3 = { style: tmp19.fgClip, pointerEvents: "none", children: null };
     let combined1 = fgStatic;
     if (null != targetSize) {
       combined1 = fgStatic;
       if (fgStatic.startsWith("https://cdn.discordapp.com")) {
         const _Math4 = Math;
-        const bound1 = Math.min(store.get(), 2);
+        const bound1 = Math.min(React3.get(), 2);
         const _Math5 = Math;
         const rounded2 = Math.round(targetSize.width * bound1);
         const _Math6 = Math;
@@ -90,123 +79,121 @@ function BundleStaticPreviewContent(mutedBackground) {
       }
     }
     const obj4 = { source: null, style: null, resizeMode: "cover", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-    const obj5 = { uri: null };
-    obj5[0] = combined1;
-    obj4[0] = obj5;
-    obj4[1] = tmp19.fgImage;
-    obj3[2] = closure_6(preloadDefault, obj4);
+    const obj5 = { uri: combined1 };
+    obj4.source = obj5;
+    obj4.style = tmp19.fgImage;
+    obj3.children = timestampProducer(FastImageDefault, obj4);
     tmp24Result = tmp24(tmp18, obj3);
-    const tmp27 = preloadDefault;
   }
   items[1] = tmp24Result;
-  obj[1] = items;
-  return closure_7(closure_4, obj);
+  obj.children = items;
+  return React5(React4, obj);
 }
 function BundleSampleV2Composed(arg0) {
   ({ deco, pfx, nameplate, size } = arg0);
   if (size === undefined) {
     size = "small";
   }
-  const tmp = callback2(size);
+  const tmp = closure_10(size);
   let nameplateData;
   if (null != nameplate) {
     _modDef38(nameplate.type === CollectiblesItemType.CollectiblesItemType.NAMEPLATE, "Item must be Nameplate");
-    let obj = getNameplateData;
+    let obj = utils;
     nameplateData = obj.getNameplateData(nameplate);
-    const tmp5 = _modDef38;
   }
   obj = { style: tmp.bundle, children: null };
   let tmp12 = null != pfx;
   if (tmp12) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.pfx;
-    obj1 = { item: null };
-    obj1[0] = pfx;
-    obj[1] = callback(ProfileEffectSampleDefault, obj1);
-    tmp12 = callback(tmp11, obj);
+    obj = { style: tmp.pfx, children: null };
+    const obj1 = { item: pfx };
+    obj.children = timestampProducer(ProfileEffectSampleV2Default, obj1);
+    tmp12 = timestampProducer(tmp11, obj);
   }
   const items = [tmp12, , ];
   if (null == deco) {
     items[1] = tmp16;
     if (null == nameplateData) {
       items[2] = null;
-      obj[1] = items;
-      return closure_7(tmp11, obj);
+      obj.children = items;
+      return React5(tmp11, obj);
     } else {
-      const obj2 = { style: null, children: null };
-      obj2[0] = tmp.nameplate;
+      const obj2 = { style: tmp.nameplate, children: null };
       let AvatarSizes = dependencyMap;
-      let obj3 = { width: null, avatarSize: null, nameplate: null };
-      obj3[0] = tmp8.nameplatePreviewWidth;
+      let obj3 = { width: tmp8.nameplatePreviewWidth, avatarSize: null, nameplate: null };
       if ("large" === size) {
         AvatarSizes = tmp23(1178).AvatarSizes;
         let XSMALL_20 = AvatarSizes.NORMAL;
       } else {
         XSMALL_20 = tmp23(1178).AvatarSizes.XSMALL_20;
       }
-      obj3[1] = XSMALL_20;
-      obj3[2] = nameplateData;
-      obj3 = tmp22(NAMEPLATE_DUMMY_USER_PREVIEW_CONFIG.NameplateDummyUserPreview, obj3);
-      obj2[1] = obj3;
-      callback(tmp11, obj2);
+      obj3.avatarSize = XSMALL_20;
+      obj3.nameplate = nameplateData;
+      obj3 = tmp22(NameplateDummyUserPreview.NameplateDummyUserPreview, obj3);
+      obj2.children = obj3;
+      timestampProducer(tmp11, obj2);
     }
   } else {
     const obj4 = { style: null, children: null };
     const items1 = [null != nameplateData ? tmp.avatarWithNameplate : tmp.avatar];
-    obj4[0] = items1;
-    const obj5 = { item: null, size: null, threeTierBundle: null };
-    obj5[0] = deco;
-    obj5[1] = tmp9;
-    obj5[2] = null != nameplateData;
-    obj4[1] = callback(AvatarDecorationSampleV2Default, obj5);
-    callback(tmp11, obj4);
+    obj4.style = items1;
+    const obj5 = { item: deco, size: tmp9, threeTierBundle: null != nameplateData };
+    obj4.children = timestampProducer(AvatarDecorationSampleV2Default, obj5);
+    timestampProducer(tmp11, obj4);
   }
 }
-noopAll;
-({ PixelRatio: c3, StyleSheet, View: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
+const BUNDLE_PREVIEW_CONFIG = fn(8798).BUNDLE_PREVIEW_CONFIG;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let obj = { container: null, bgBleedClip: null, bgMutedWrap: null, bgImage: null, fgClip: null, fgImage: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.overflow = "hidden";
-obj[0] = obj;
+obj.container = obj;
 obj = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj.overflow = "hidden";
 obj.justifyContent = "center";
 obj.alignItems = "center";
-obj[1] = obj;
+obj.bgBleedClip = obj;
 let obj1 = {};
 const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 obj1.opacity = 0.8;
-obj[2] = obj1;
-obj[3] = { width: "100%", height: "100%" };
+obj.bgMutedWrap = obj1;
+obj.bgImage = { width: "100%", height: "100%" };
 let obj2 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
 obj2.overflow = "hidden";
 obj2.justifyContent = "center";
 obj2.alignItems = "center";
-obj[4] = obj2;
+obj.fgClip = obj2;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
-obj[5] = {};
+obj.fgImage = {};
 const styles = StyleSheet.create(obj);
-let closure_10 = createCacheKey.createStyles((arg0) => {
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles((arg0) => {
   let obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
-  obj = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: ThemesDefault.radii.xs };
-  obj[0] = obj;
-  obj = { position: "absolute", top: tmp.pfxTop, left: tmp.pfxLeft, width: tmp.pfxWidth, height: tmp.pfxHeight, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, transform: items, zIndex: 0, overflow: "hidden", borderRadius: ThemesDefault.radii.xs };
-  items = [{ rotate: "-8deg" }];
-  obj[1] = obj;
+  const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };
+  obj.bundle = size;
+  const size1 = { position: "absolute", top: tmp.pfxTop, left: tmp.pfxLeft, width: tmp.pfxWidth, height: tmp.pfxHeight, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, transform: null, zIndex: 0, overflow: "hidden", borderRadius: nativeDefault.radii.xs };
+  const items = [{ rotate: "-8deg" }];
+  size1.transform = items;
+  obj.pfx = size1;
+  const rect = { position: "absolute", top: tmp.avatarTop, right: tmp.avatarRight, transform: null, zIndex: 1, alignItems: "center", justifyContent: "center" };
   const items1 = [{ rotate: "8deg" }];
-  obj[2] = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight, transform: items1, zIndex: 1, alignItems: "center", justifyContent: "center" };
+  rect.transform = items1;
+  obj.avatar = rect;
+  const rect1 = { position: "absolute", top: tmp.avatarWithNameplateTop, right: tmp.avatarWithNameplateRight, transform: null, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
   const items2 = [{ rotate: "8deg" }];
-  obj[3] = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
-  obj1 = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarRight, transform: items1, zIndex: 1, alignItems: "center", justifyContent: "center" };
-  const obj2 = { position: "absolute", top: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateTop, right: BUNDLE_PREVIEW_CONFIG[arg0].avatarWithNameplateRight, transform: items2, zIndex: 1, alignItems: "center", justifyContent: "center", shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
-  obj[4] = { position: "absolute", bottom: BUNDLE_PREVIEW_CONFIG[arg0].nameplateBottom, marginHorizontal: 10, width: "90%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, zIndex: 2, borderRadius: ThemesDefault.radii.sm, shadowColor: ThemesDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
+  rect1.transform = items2;
+  obj.avatarWithNameplate = rect1;
+  obj = { position: "absolute", bottom: tmp.nameplateBottom, marginHorizontal: 10, width: "90%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, zIndex: 2, borderRadius: nativeDefault.radii.sm, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.5, shadowRadius: 4 };
+  obj.nameplate = obj;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/BundleSampleV2.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/BundleSampleV2.tsx");
 
 export default function BundleSampleV2(size) {
   let str = size.size;
@@ -227,19 +214,11 @@ export default function BundleSampleV2(size) {
     fgStatic = previewAssets.fgStatic;
   }
   if (null != fgStatic) {
-    let obj = { previewAssets: null, disableBackground: null, mutedBackground: null, targetSize: null };
-    obj[0] = previewAssets;
-    obj[1] = disableStaticBackground;
-    obj[2] = flag;
-    obj[3] = size.targetSize;
-    let tmp4 = callback(BundleStaticPreviewContent, obj);
+    let obj = { previewAssets, disableBackground: disableStaticBackground, mutedBackground: flag, targetSize: size.targetSize };
+    let tmp4 = timestampProducer(BundleStaticPreviewContent, obj);
   } else {
-    obj = { deco: null, pfx: null, nameplate: null, size: null };
-    obj[0] = deco;
-    obj[1] = pfx;
-    obj[2] = nameplate;
-    obj[3] = str;
-    tmp4 = callback(BundleSampleV2Composed, obj);
+    obj = { deco, pfx, nameplate, size: str };
+    tmp4 = timestampProducer(BundleSampleV2Composed, obj);
   }
   return tmp4;
 };

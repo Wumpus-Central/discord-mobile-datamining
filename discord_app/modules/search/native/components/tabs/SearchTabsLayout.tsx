@@ -1,94 +1,90 @@
-// === Module 16637: NoSearchResultsScreen ===
+// === Module 16637: SearchTabsLayout ===
 
-// Module 16637 (NoSearchResultsScreen)
-import _modDef12358 from "module_12358" /* 12358 */;
-import _modDef16638 from "module_16638" /* 16638 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "handleReaction" /* 7281 */;
-import closure_6 from "prototype" /* 12339 */;
-import closure_7 from "handleSearchQuery" /* 12362 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import { ComponentActions } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import apply from "apply" /* 12 */;
+// Module 16637 (SearchTabsLayout)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
+import SearchUtils from "SearchUtils" /* 12340 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12347 */;
+import SearchTabsFetchManagerDefault from "SearchTabsFetchManager" /* 12348 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12358 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 12359 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12361 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 16638 */;
+import SearchTabsPageDefault from "SearchTabsPage" /* 16639 */;
+import noop from "module_19" /* 19 */;
+import SearchMessageStore from "SearchMessageStore" /* 7281 */;
+import SearchQueryStore from "SearchQueryStore" /* 12339 */;
+import SearchTabsLayoutStore from "SearchTabsLayoutStore" /* 12362 */;
 
-const require = arg1;
+const SearchPlatformUtilsDefault = tmp(12338);
+require = fn;
 function NoSearchResultsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const items = [searchContext];
-  const effect = importAllResult.useEffect(() => {
-    let obj = closure_1_1(closure_1_2[10]);
-    obj = { searchContext };
+  const effect = noop.useEffect(() => {
+    const obj = { searchContext };
     const result = obj.trackSearchEmptyResult(obj);
   }, items);
   let obj = { text: null };
   const intl = searchContext(1114).intl;
-  obj[0] = intl.string(searchContext(1114).t.V6nAfF);
-  return callback(_modDef16638, obj);
+  obj.text = intl.string(searchContext(1114).t.V6nAfF);
+  return closure_12(pages_ErrorScreenDefault, obj);
 }
-let c3 = importAllResult;
-({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: c9, SearchTabs: c10 } = MessageEmbedTypes);
+const View = fn(17).View;
+const SearchConstants = fn(7878);
+({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: closure_9, SearchTabs: c10 } = SearchConstants);
+const ComponentActions = fn(1074).ComponentActions;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-let closure_15 = createCacheKey.createStyles({ controls: { flex: 0, minHeight: 32 }, pages: { flex: 1 } });
+const createStyles = fn(4560);
+let closure_15 = createStyles.createStyles({ controls: { flex: 0, minHeight: 32 }, pages: { flex: 1 } });
+const apply = fn(12);
 let closure_16 = apply.debounce((searchContext) => {
-  let obj = _modDef12358;
-  obj = { searchContext };
+  const obj = { searchContext };
   return obj.trackSearchTabSelected(obj);
 }, 500);
-let closure_18 = { code: "function SearchTabsLayoutTsx1({contentOffset:contentOffset}){const{isDragging,disallowMemberListGesture}=this.__closure;var _disallowMemberListGe;isDragging.set(true);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}" };
-let closure_19 = { code: "function SearchTabsLayoutTsx2(){const{isDragging,disallowMemberListGesture}=this.__closure;var _disallowMemberListGe;isDragging.set(false);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(false);}" };
-let closure_20 = { code: "function SearchTabsLayoutTsx3({contentOffset:contentOffset}){const{isDragging,disallowMemberListGesture}=this.__closure;if(isDragging.get()){var _disallowMemberListGe;(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}}" };
-let closure_21 = importAllResult.memo((searchContext) => {
+const __initData = { code: "function SearchTabsLayoutTsx1({contentOffset:contentOffset}){const{isDragging,disallowMemberListGesture}=this.__closure;var _disallowMemberListGe;isDragging.set(true);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}" };
+const __initData2 = { code: "function SearchTabsLayoutTsx2(){const{isDragging,disallowMemberListGesture}=this.__closure;var _disallowMemberListGe;isDragging.set(false);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(false);}" };
+const __initData3 = { code: "function SearchTabsLayoutTsx3({contentOffset:contentOffset}){const{isDragging,disallowMemberListGesture}=this.__closure;if(isDragging.get()){var _disallowMemberListGe;(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}}" };
+let closure_21 = noop.memo((searchContext) => {
   searchContext = searchContext.searchContext;
-  let visibleTabs = searchContext;
-  visibleTabs = searchContext.visibleTabs;
-  let setActiveIndex = visibleTabs;
+  const visibleTabs = searchContext.visibleTabs;
   const visibleTabCounts = searchContext.visibleTabCounts;
-  dependencyMap = visibleTabCounts;
   const width = searchContext.width;
   selectedTab = undefined;
-  setActiveIndex = undefined;
-  let callback1;
-  let context;
   let gesture;
   let disallowGesture;
   let channelId;
   let screenIndex;
   let sharedValue;
   let callback5;
-  let tmp = callback2();
-  let obj = width;
+  let tmp = closure_15();
   let items = [visibleTabCounts, visibleTabs, searchContext, width];
   const items1 = [searchContext];
   const memo = width.useMemo(() => {
     const items = [];
-    const item = setActiveIndex.forEach((tab) => {
-      let obj = { label: visibleTabs(12340).getTabTitle(tab), id: tab, page: null, count: null };
-      obj = { tab, searchContext: items, width: closure_1_3 };
-      obj[2] = sharedValue(setActiveIndex(16639), obj);
+    const item = visibleTabs.forEach((id) => {
+      let obj = { label: SearchUtils.getTabTitle(id), id, page: null, count: null };
+      obj = { tab: id, searchContext, width };
+      obj.page = closure_3_12(SearchTabsPageDefault, obj);
       let tmp2;
-      if (closure_1_2 != null) {
-        tmp2 = closure_1_2[tab];
+      if (visibleTabCounts != null) {
+        tmp2 = visibleTabCounts[id];
       }
-      obj[3] = tmp2;
+      obj.count = tmp2;
       items.push(obj);
     });
     return items;
   }, items);
   const callback = width.useCallback((arg0) => {
-    setActiveIndex(ref[15]).setSelectedTab(visibleTabs, arg0);
-    closure_1_16(visibleTabs);
-    const queryString = callback1.getQueryString(visibleTabs);
-    const obj = setActiveIndex(ref[15]);
-    const tmp = setActiveIndex;
-    const tmp2 = ref;
-    const tmp3 = visibleTabs;
-    const searchTabFetchId = visibleTabs(ref[13]).getSearchTabFetchId(visibleTabs, disallowGesture, queryString);
-    const isFetching = setActiveIndex.getIsFetching(searchTabFetchId);
-    const isInitialFetchComplete = setActiveIndex.getIsInitialFetchComplete(searchTabFetchId);
-    const hasItem = gesture.has(arg0);
+    SearchSessionAnalyticsManagerDefault.setSelectedTab(searchContext, arg0);
+    closure_16(searchContext);
+    const queryString = SearchQueryStore.getQueryString(searchContext);
+    const tmp3 = searchContext;
+    const searchTabFetchId = SearchUtils.getSearchTabFetchId(searchContext, React7, queryString);
+    const isFetching = SearchMessageStore.getIsFetching(searchTabFetchId);
+    const isInitialFetchComplete = SearchMessageStore.getIsInitialFetchComplete(searchTabFetchId);
+    const hasItem = set.has(arg0);
     let tmp11 = !hasItem;
     if (hasItem) {
       tmp11 = isInitialFetchComplete;
@@ -97,28 +93,30 @@ let closure_21 = importAllResult.memo((searchContext) => {
       tmp11 = isFetching;
     }
     if (!tmp11) {
-      const initialMessagesDebounced = tmp(tmp2[16]).fetchInitialMessagesDebounced(tmp3);
-      const tmpResult = tmp(tmp2[16]);
+      const initialMessagesDebounced = SearchPlatformUtilsDefault.fetchInitialMessagesDebounced(tmp3);
+      const tmpResult = SearchPlatformUtilsDefault;
     }
   }, items1);
-  obj1 = visibleTabs(16717);
+  let obj1 = searchContext(visibleTabCounts[17]);
   const searchSegmentedControlState = obj1.useSearchSegmentedControlState({ items: memo, visibleTabs, onSelectedTabChange: callback, width });
   ({ segmentedControlState, selectedTab } = searchSegmentedControlState);
-  setActiveIndex = segmentedControlState.setActiveIndex;
-  dependencyMap = width.useRef(() => {
-    setActiveIndex(visibleTabs.findIndex((arg0) => arg0 === constants.MEDIA));
+  const setActiveIndex = segmentedControlState.setActiveIndex;
+  closure_129_0 = visibleTabs;
+  closure_129_1 = setActiveIndex;
+  closure_129_2 = width.useRef(() => {
+    visibleTabs(searchContext.findIndex((item) => item === constants.MEDIA));
   });
   const items2 = [visibleTabs, setActiveIndex];
   const effect = width.useEffect(() => {
-    closure_2.current = () => {
-      callback(closure_0.findIndex((arg0) => arg0 === constants.MEDIA));
+    visibleTabCounts.current = () => {
+      visibleTabs(searchContext.findIndex((item) => item === constants.MEDIA));
     };
   }, items2);
-  callback1 = width.useCallback(() => ref.current(), []);
+  const callback1 = width.useCallback(() => visibleTabCounts.current(), []);
   const items3 = [callback1, selectedTab];
   const memo1 = width.useMemo(() => ({ selectedTab, selectMediaTab: callback1 }), items3);
-  context = width.useContext(visibleTabs(16623).SwipeForMemberListContext);
-  obj = context;
+  const context = width.useContext(searchContext(visibleTabCounts[18]).SwipeForMemberListContext);
+  let obj = context;
   if (context == null) {
     obj = {};
   }
@@ -129,11 +127,11 @@ let closure_21 = importAllResult.memo((searchContext) => {
   const items4 = [gesture];
   const memo2 = obj.useMemo(() => {
     if (null != gesture) {
-      const Gesture = visibleTabs(ref[19]).Gesture;
+      const Gesture = LegacyBaseButton.Gesture;
       return Gesture.Native().simultaneousWithExternalGesture(tmp);
     }
   }, items4);
-  sharedValue = visibleTabs(4296).useSharedValue(false);
+  sharedValue = searchContext(visibleTabCounts[20]).useSharedValue(false);
   class D {
     constructor(arg0) {
       result = closure_12.set(true);
@@ -147,7 +145,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
   }
   D.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
   D.__workletHash = 766628353255;
-  D.__initData = closure_18;
+  D.__initData = __initData;
   const items5 = [disallowGesture, sharedValue];
   class G {
     constructor() {
@@ -161,9 +159,9 @@ let closure_21 = importAllResult.memo((searchContext) => {
   }
   G.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
   G.__workletHash = 5683301645106;
-  G.__initData = closure_19;
+  G.__initData = __initData2;
   const items6 = [disallowGesture, sharedValue];
-  callback2 = obj.useCallback(D, items5);
+  const callback2 = obj.useCallback(D, items5);
   class A {
     constructor(arg0) {
       if (closure_12.get()) {
@@ -179,106 +177,91 @@ let closure_21 = importAllResult.memo((searchContext) => {
   }
   A.__closure = { isDragging: sharedValue, disallowMemberListGesture: disallowGesture };
   A.__workletHash = 229712012692;
-  A.__initData = closure_20;
+  A.__initData = __initData3;
   const items7 = [disallowGesture, sharedValue];
   const callback3 = obj.useCallback(G, items6);
   const items8 = [searchContext];
   const callback4 = obj.useCallback(A, items7);
   callback5 = obj.useCallback(() => {
-    setActiveIndex(ref[21]).deleteSearchQuery(visibleTabs);
-    const obj = setActiveIndex(ref[21]);
-    const result = setActiveIndex(ref[22]).clearAllSearchMesssages();
-    const obj2 = setActiveIndex(ref[22]);
-    const result1 = setActiveIndex(ref[22]).clearSearchRecentMessages();
-    const obj3 = setActiveIndex(ref[22]);
-    const searchContextId = visibleTabs(ref[13]).getSearchContextId(visibleTabs);
-    const obj4 = visibleTabs(ref[13]);
-    setActiveIndex(ref[23]).cleanUp(searchContextId);
+    SearchPlatformActionCreatorsDefault.deleteSearchQuery(searchContext);
+    const result = SearchActionCreatorsDefault.clearAllSearchMesssages();
+    const result1 = SearchActionCreatorsDefault.clearSearchRecentMessages();
+    const searchContextId = SearchUtils.getSearchContextId(searchContext);
+    SearchTabsFetchManagerDefault.cleanUp(searchContextId);
   }, items8);
   const items9 = [context, callback5];
-  const effect1 = obj.useEffect(() => null == context ? (() => callback()) : undefined, items9);
+  const effect1 = obj.useEffect(() => null == context ? (() => callback5()) : undefined, items9);
   const items10 = [channelId, screenIndex, setActiveIndex, context, callback5];
   const effect2 = obj.useEffect(() => {
     function handleChannelDetailsHidden(channelId) {
-      let tmp2 = channelId.channelId === closure_10;
+      let tmp2 = channelId.channelId === channelId;
       if (tmp2) {
-        tmp2 = tmp === closure_11;
+        tmp2 = tmp === screenIndex;
       }
       if (tmp2) {
-        callback(0, false, true);
-        callback2();
+        setActiveIndex(0, false, true);
+        callback5();
       }
     }
     if (null != context) {
-      let ComponentDispatch = visibleTabs(ref[24]).ComponentDispatch;
+      let ComponentDispatch = searchContext(visibleTabCounts[24]).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(screenIndex.CHANNEL_DETAILS_HIDDEN, handleChannelDetailsHidden);
       return () => {
-        const ComponentDispatch = visibleTabs(table[24]).ComponentDispatch;
-        ComponentDispatch.unsubscribe(screenIndex.CHANNEL_DETAILS_HIDDEN, handleChannelDetailsHidden);
+        const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+        ComponentDispatch.unsubscribe(ComponentActions.CHANNEL_DETAILS_HIDDEN, handleChannelDetailsHidden);
       };
     }
   }, items10);
   if (0 === segmentedControlState.items.length) {
-    obj = { searchContext: null };
-    obj[0] = searchContext;
+    obj = { searchContext };
     let tmp25Result = sharedValue(NoSearchResultsScreen, obj);
   } else {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.controls;
-    let obj2 = { state: null };
-    obj2[0] = segmentedControlState;
-    const items11 = [sharedValue(setActiveIndex(16718), obj2), ];
-    let obj3 = { state: null };
-    obj3[0] = segmentedControlState;
-    items11[1] = sharedValue(setActiveIndex(16719), obj3);
-    obj1[1] = items11;
+    obj1 = { style: tmp.controls, children: null };
+    let obj2 = { state: segmentedControlState };
+    const items11 = [sharedValue(visibleTabs(tmp5[25]), obj2), ];
+    let obj3 = { state: segmentedControlState };
+    items11[1] = sharedValue(visibleTabs(tmp5[26]), obj3);
+    obj1.children = items11;
     const items12 = [callback5(selectedTab, obj1), ];
-    let obj4 = { style: null, children: null };
-    obj4[0] = tmp.pages;
-    const obj5 = { value: null, children: null };
-    obj5[0] = memo1;
-    const obj6 = { state: null, bounces: null, nativeGesture: null, onBeginDragWorklet: null, onEndDragWorklet: null, onScrollWorklet: null };
-    obj6[0] = segmentedControlState;
-    obj6[1] = null == context;
-    obj6[2] = memo2;
+    let obj4 = { style: tmp.pages, children: null };
+    const obj5 = { value: memo1, children: null };
+    const obj6 = { state: segmentedControlState, bounces: null == context, nativeGesture: memo2, onBeginDragWorklet: null, onEndDragWorklet: null, onScrollWorklet: null };
     let tmp19;
     if (null != context) {
       tmp19 = callback2;
     }
-    obj6[3] = tmp19;
+    obj6.onBeginDragWorklet = tmp19;
     let tmp20;
     if (null != context) {
       tmp20 = callback3;
     }
-    obj6[4] = tmp20;
+    obj6.onEndDragWorklet = tmp20;
     let tmp21;
     if (null != context) {
       tmp21 = callback4;
     }
     const obj7 = { children: null };
-    obj6[5] = tmp21;
-    obj5[1] = sharedValue(tmp4(12616).SegmentedControlPages, obj6);
-    obj4[1] = sharedValue(tmp4(16639).SearchTabsPageContext.Provider, obj5);
+    obj6.onScrollWorklet = tmp21;
+    obj5.children = sharedValue(tmp4(tmp5[27]).SegmentedControlPages, obj6);
+    obj4.children = sharedValue(tmp4(tmp5[14]).SearchTabsPageContext.Provider, obj5);
     items12[1] = sharedValue(selectedTab, obj4);
-    obj7[0] = items12;
+    obj7.children = items12;
     tmp25Result = callback5(closure_14, obj7);
-    const tmp25 = callback5;
-    const tmp26 = closure_14;
-    const tmp27 = selectedTab;
   }
   return tmp25Result;
 });
-let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsLayout.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/native/components/tabs/SearchTabsLayout.tsx");
 
 export default function ConnectedSearchTabsLayout(width) {
   const searchContext = width.searchContext;
   candidateTabs = undefined;
-  const items = [closure_7];
+  const items = [SearchTabsLayoutStore];
   const items1 = [searchContext];
-  const stateFromStoresObject = searchContext(504).useStateFromStoresObject(items, () => ({ visibleTabs: closure_1_7.getVisibleTabs(searchContext), visibleTabCounts: closure_1_7.getVisibleTabCounts(searchContext), candidateTabs: closure_1_7.getCandidateTabs(searchContext) }), items1);
+  const stateFromStoresObject = searchContext(504).useStateFromStoresObject(items, () => ({ visibleTabs: SearchTabsLayoutStore.getVisibleTabs(searchContext), visibleTabCounts: SearchTabsLayoutStore.getVisibleTabCounts(searchContext), candidateTabs: SearchTabsLayoutStore.getCandidateTabs(searchContext) }), items1);
   ({ visibleTabs, visibleTabCounts, candidateTabs } = stateFromStoresObject);
   const items2 = [candidateTabs];
-  const memo = importAllResult.useMemo(() => new Set(candidateTabs), items2);
+  const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
   const autoSearchGuildChannelTab = searchContext(16720).useAutoSearchGuildChannelTab(searchContext, !memo.has(constants.GUILD_CHANNELS));
   const obj3 = searchContext(16720);
@@ -287,5 +270,5 @@ export default function ConnectedSearchTabsLayout(width) {
   const autoSearchPeopleTab = searchContext(16722).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
   const obj5 = searchContext(16722);
   const autoTrackSearchTabCountsViewedAnalytics = searchContext(16723).useAutoTrackSearchTabCountsViewedAnalytics({ searchContext, visibleTabCounts, visibleTabs });
-  return callback(closure_21, { searchContext, visibleTabs, visibleTabCounts, width: width.width });
+  return closure_12(closure_21, { searchContext, visibleTabs, visibleTabCounts, width: width.width });
 };

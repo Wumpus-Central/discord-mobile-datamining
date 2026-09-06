@@ -1,24 +1,23 @@
-// === Module 17470: handleChange ===
+// === Module 17470: ProximitySensorManager ===
 
-// Module 17470 (handleChange)
-import set2 from "set" /* 1115 */;
-import initializeDefault from "initialize" /* 7118 */;
-import RouteTypes from "RouteTypes" /* 9084 */;
-import enforcingDefault from "enforcing" /* 17471 */;
-import closure_2 from "participantFromServer" /* 1956 */;
-import closure_3 from "reset" /* 4582 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import closure_5 from "handleAudioRouteChanged" /* 9083 */;
-import set from "set" /* 1115 */;
+// Module 17470 (ProximitySensorManager)
+import PlatformUtils2 from "PlatformUtils" /* 1115 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9084 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 17471 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import AudioRouteStore from "AudioRouteStore" /* 9083 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
+require = fn;
 function handleChange() {
-  currentRouteType = currentRouteType.getCurrentRouteType();
-  const tmp3 = null != currentEmbeddedActivity.getCurrentEmbeddedActivity();
-  const isConnectedResult = connected.isConnected();
-  let tmp8 = currentRouteType === RouteTypes.RouteTypes.RECEIVER && isConnectedResult;
+  const currentRouteType = AudioRouteStore.getCurrentRouteType();
+  const tmp3 = null != EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
+  const isConnectedResult = RTCConnectionStore.isConnected();
+  let tmp8 = currentRouteType === VoiceCallTypes.RouteTypes.RECEIVER && isConnectedResult;
   if (tmp8) {
-    let isIOSResult = set2.isIOS();
+    let isIOSResult = PlatformUtils2.isIOS();
     if (!isIOSResult) {
       let tmp10 = !tmp3;
       if (!tmp3) {
@@ -27,25 +26,26 @@ function handleChange() {
       isIOSResult = tmp10;
     }
     tmp8 = isIOSResult;
-    const tmp6Result = set2;
+    const tmp6Result = PlatformUtils2;
   }
   const result = ProximitySensorManager.setProximityMonitoringEnabled(tmp8);
 }
-if (set.isIOS()) {
-  let ProximitySensorManager = require("get ActivityIndicator").NativeModules.ProximitySensorManager;
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isIOS()) {
+  let ProximitySensorManager = fn(17).NativeModules.ProximitySensorManager;
 } else {
-  ProximitySensorManager = enforcingDefault;
+  ProximitySensorManager = NativeProximitySensorManagerModuleDefault;
 }
-initializeDefault;
 let prototype = function ProximitySensorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const result = new Map().set(closure_5, handleChange);
-  applyArgumentsResult.stores = result.set(closure_4, handleChange);
+  const result = new Map().set(AudioRouteStore, handleChange);
+  applyArgumentsResult.stores = result.set(RTCConnectionStore, handleChange);
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_calls/native/ProximitySensorManager.tsx");
 
 export default prototype;

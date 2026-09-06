@@ -1,9 +1,9 @@
-// === Module 17862: isNavigationTTIEnabled ===
+// === Module 17862: navigationTTIEnabled ===
 
-// Module 17862 (isNavigationTTIEnabled)
-import set from "set" /* 2 */;
+// Module 17862 (navigationTTIEnabled)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/tti_analytics/native/navigation/navigationTTIEnabled.tsx");
+const result = size.fileFinishedImporting("modules/tti_analytics/native/navigation/navigationTTIEnabled.tsx");
 
 export function isNavigationTTIEnabled() {
   return false;

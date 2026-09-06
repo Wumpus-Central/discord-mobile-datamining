@@ -1,20 +1,22 @@
 // === Module 9646: subscribeToSafeAreaInsets ===
 
 // Module 9646 (subscribeToSafeAreaInsets)
-import set from "set" /* 2 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1480 */;
+import SafeAreaStoreDefault from "SafeAreaStore" /* 1612 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
+const result = size.fileFinishedImporting("modules/safe_area/subscribeToSafeAreaInsets.native.tsx");
 
 export default function subscribeToSafeAreaInsets(arg0) {
-  const _require = arg0;
+  closure_0 = arg0;
   let DEFAULT_APP_ENTRY_KEY = arg1;
   if (arg1 === undefined) {
-    DEFAULT_APP_ENTRY_KEY = _require(1480).DEFAULT_APP_ENTRY_KEY;
+    DEFAULT_APP_ENTRY_KEY = AppEntryKeyContext.DEFAULT_APP_ENTRY_KEY;
   }
-  return DEFAULT_APP_ENTRY_KEY(1612).subscribe((arg0, arg1) => {
+  return SafeAreaStoreDefault.subscribe((arg0, arg1) => {
     const safeAreaInsets = arg0.byAppEntry[DEFAULT_APP_ENTRY_KEY].safeAreaInsets;
     if (safeAreaInsets !== arg1.byAppEntry[DEFAULT_APP_ENTRY_KEY].safeAreaInsets) {
-      callback(safeAreaInsets);
+      closure_0(safeAreaInsets);
     }
   });
 };

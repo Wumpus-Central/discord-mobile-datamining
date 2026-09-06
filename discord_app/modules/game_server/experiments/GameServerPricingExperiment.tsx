@@ -1,17 +1,19 @@
-// === Module 12509: experiment ===
+// === Module 12509: GameServerPricingExperiment ===
 
-// Module 12509 (experiment)
-import set from "set" /* 2 */;
-import experiment2 from "experiment" /* 4473 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 12509 (GameServerPricingExperiment)
+import GameServerExperiment from "GameServerExperiment" /* 4473 */;
+import createExperiment from "module_4474" /* 4474 */;
+import size from "module_2" /* 2 */;
 
+let obj = { kind: "guild", id: "2026-03_game_server_pricing", label: "Game Server Pricing", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enable Game Server Pricing", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-03_game_server_pricing", label: "Game Server Pricing", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/game_server/experiments/GameServerPricingExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/game_server/experiments/GameServerPricingExperiment.tsx");
 
 export const GameServerPricingExperiment = experiment;
 export const useIsGameServerPricingEnabled = function useIsGameServerPricingEnabled(guildId, useGuildPowerupsChannelListPopout) {
-  let obj = experiment2;
+  let obj = GameServerExperiment;
   let enabled = obj.useGameServerEnabled(guildId, useGuildPowerupsChannelListPopout);
   obj = { guildId, location: useGuildPowerupsChannelListPopout };
   if (enabled) {

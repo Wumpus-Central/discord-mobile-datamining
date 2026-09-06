@@ -1,12 +1,12 @@
 // === Module 13086: useCardGridLayout ===
 
 // Module 13086 (useCardGridLayout)
-import set from "set" /* 2 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
+import Constants from "Constants" /* 7208 */;
+import size from "module_2" /* 2 */;
 
-const PROFILE_SIDE_PADDING = ARBITRARY_LARGE_OFFSET.PROFILE_SIDE_PADDING;
-let result = set.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
+const PROFILE_SIDE_PADDING = Constants.PROFILE_SIDE_PADDING;
+let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useCardGridLayout.tsx");
 
 export default function useCardGridLayout() {
   let obj = arg0;
@@ -62,14 +62,9 @@ export default function useCardGridLayout() {
   const bound1 = Math.min(Math.max(tmp4, num), num2);
   const diff2 = num4 - 1;
   if (diff < bound1 * num4 + num3 * diff2) {
-    obj = { columns: 1, cardWidth: "Array", rowWidth: "padding", gap: "unicodeVersion" };
-    obj[3] = num3;
+    obj = { columns: 1, cardWidth: "Array", rowWidth: "padding", gap: num3 };
   } else {
-    obj = { columns: null, cardWidth: null, rowWidth: null, gap: null };
-    obj[0] = num4;
-    obj[1] = bound1;
-    obj[2] = bound1 * num4 + num3 * diff2;
-    obj[3] = num3;
+    obj = { columns: num4, cardWidth: bound1, rowWidth: bound1 * num4 + num3 * diff2, gap: num3 };
   }
   return obj;
 };

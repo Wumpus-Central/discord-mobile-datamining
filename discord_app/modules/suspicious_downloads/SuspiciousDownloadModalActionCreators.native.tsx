@@ -1,16 +1,15 @@
-// === Module 12946: ? ===
+// === Module 12946: SuspiciousDownloadModalActionCreators ===
 
-// Module 12946
-import set from "set" /* 2 */;
+// Module 12946 (SuspiciousDownloadModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx");
+const result = size.fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadModalActionCreators.native.tsx");
 
 export default {
   show(href) {
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { href };
+    const obj = { href };
     obj.openLazy(asyncRequireImpl(12947, dependencyMap.paths), "suspicious-download", obj);
   }
 };

@@ -1,9 +1,9 @@
-// === Module 9473: PIP_GESTURE_ACTIVE_OFFSET ===
+// === Module 9473: Constants ===
 
-// Module 9473 (PIP_GESTURE_ACTIVE_OFFSET)
-import set from "set" /* 2 */;
+// Module 9473 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
+const result = size.fileFinishedImporting("modules/video_calls/native/components/Constants.tsx");
 
 export const PIP_GESTURE_ACTIVE_OFFSET = 2;
 export const SWIPE_TO_CHAT_ACTIVE_OFFSET = 16;

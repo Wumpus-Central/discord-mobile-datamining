@@ -1,15 +1,14 @@
-// === Module 17891: isLikelyControl ===
+// === Module 17891: SentryExperimentFeatureFlagManager ===
 
-// Module 17891 (isLikelyControl)
-import _modDef1232 from "module_1232" /* 1232 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "getHash" /* 4476 */;
-import closure_3 from "initialize" /* 1236 */;
-import closure_4 from "handleConnectionOpen" /* 4381 */;
-import set from "set" /* 2 */;
+// Module 17891 (SentryExperimentFeatureFlagManager)
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-function isLikelyControl(defaultConfig, variantId2) {
-  if (null == defaultConfig) {
+function isLikelyControl(registeredExperiments, variantId2) {
+  if (null == registeredExperiments) {
     return true;
   } else {
     let tmp3 = null == tmp2;
@@ -17,7 +16,7 @@ function isLikelyControl(defaultConfig, variantId2) {
       const _JSON = JSON;
       const _JSON2 = JSON;
       const json = JSON.stringify(tmp2);
-      tmp3 = json === JSON.stringify(defaultConfig.defaultConfig);
+      tmp3 = json === JSON.stringify(registeredExperiments.defaultConfig);
     }
     return tmp3;
   }
@@ -27,13 +26,10 @@ function flushFlags(items, set) {
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp4 = importDefault;
-    let tmp5 = dependencyMap;
     let tmp3 = nextResult;
-    let obj = _modDef1232;
+    let obj = SentryUtilsDefault;
     let addFeatureFlagResult = obj.addFeatureFlag(nextResult, true);
     if (set != null) {
-      let tmp7 = nextResult;
       let addResult = set.add(tmp3);
     }
     continue;
@@ -42,22 +38,19 @@ function flushFlags(items, set) {
 function syncAllExperimentFlags() {
   (function resetGuildFlags() {
     while (tmp2 !== undefined) {
-      let tmp4 = callback;
-      let tmp5 = table;
-      let obj = callback(table[3]);
+      let obj = SentryUtilsDefault;
       let addFeatureFlagResult = obj.addFeatureFlag(tmp3, false);
       continue;
     }
-    lib.clear();
+    set.clear();
   })();
   const items = [];
   const items1 = [];
   const items2 = [];
   const items3 = [];
-  guildId = guildId.getGuildId();
-  allExperimentAssignments = allExperimentAssignments.getAllExperimentAssignments();
+  const guildId = SelectedGuildStore.getGuildId();
+  const allExperimentAssignments = ExperimentStore.getAllExperimentAssignments();
   for (const key10027 in allExperimentAssignments) {
-    let tmp39 = key10027;
     let tmp40 = allExperimentAssignments[key10027];
     let tmp4 = null == tmp40;
     if (!tmp4) {
@@ -89,41 +82,34 @@ function syncAllExperimentFlags() {
     }
     continue;
   }
-  let registeredExperiments = store.getRegisteredExperiments();
+  let registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
   const tmp9 = (function getHashToName() {
-    const registeredExperiments = store.getRegisteredExperiments();
+    const registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
     const obj = {};
     for (const key10006 in registeredExperiments) {
-      let tmp2 = key10006;
-      let tmp3 = store;
-      obj[store.getHash(key10006)] = key10006;
+      obj[ApexExperimentStore.getHash(key10006)] = key10006;
       continue;
     }
     return obj;
   })();
-  const evaluatedExperiments = store.getState().evaluatedExperiments;
+  const evaluatedExperiments = ApexExperimentStore.getState().evaluatedExperiments;
   const items4 = ["user", "installation"];
   for (const item10060 of items4) {
     let tmp10 = item10060;
     let tmp11;
     if (evaluatedExperiments != null) {
-      let tmp12 = item10060;
       tmp11 = evaluatedExperiments[tmp10];
     }
-    let tmp13 = tmp11;
     for (const key10068 in tmp11) {
-      let tmp42 = item10060;
       let tmp43 = evaluatedExperiments[tmp10];
       let obj;
       if (tmp43 != null) {
-        let tmp14 = key10068;
         obj = tmp43[tmp41];
       }
       if (obj == null) {
         obj = {};
       }
       let assignments = obj.assignments;
-      let tmp16 = assignments;
       let tmp15 = assignments;
       let keys = Object.keys();
       if (keys === undefined) {
@@ -136,23 +122,17 @@ function syncAllExperimentFlags() {
           if (null == tmp46) {
             continue;
           } else {
-            let tmp19 = assignments;
-            let tmp20 = tmp44;
             let variantId = tmp15[tmp45].variantId;
             let tmp21 = variantId;
             if (null == variantId) {
               continue;
             } else {
-              let tmp22 = tmp46;
-              let tmp23 = variantId;
               let _HermesInternal4 = HermesInternal;
               let combined = "" + tmp47 + ":" + tmp21;
-              let tmp25 = isLikelyControl;
               let arr6 = items3;
               if (isLikelyControl(registeredExperiments[tmp47], tmp21)) {
                 arr6 = items2;
               }
-              let tmp26 = combined;
               let arr1 = arr6.push(combined);
               continue;
             }
@@ -179,7 +159,6 @@ function syncAllExperimentFlags() {
     }
     if (null != tmp29) {
       for (const key10101 in tmp29.assignments) {
-        let tmp48 = key10101;
         let tmp49 = tmp9[key10101];
         if (null == tmp49) {
           continue;
@@ -189,7 +168,6 @@ function syncAllExperimentFlags() {
             continue;
           } else {
             let _HermesInternal5 = HermesInternal;
-            let tmp31 = isLikelyControl;
             let combined1 = "" + tmp49 + ":" + variantId2;
             let arr9 = items6;
             if (isLikelyControl(registeredExperiments[tmp49], variantId2)) {
@@ -211,18 +189,18 @@ function syncAllExperimentFlags() {
   flushFlags(items3);
   flushFlags(items6, set);
 }
-let set = new Set();
-initializeDefault;
+const set = new Set();
 let prototype = function SentryExperimentFeatureFlagManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const result = new Map().set(closure_2, syncAllExperimentFlags);
-  const result1 = result.set(closure_3, syncAllExperimentFlags);
-  applyArgumentsResult.stores = result1.set(closure_4, syncAllExperimentFlags);
+  const result = new Map().set(ExperimentStore, syncAllExperimentFlags);
+  const result1 = result.set(ApexExperimentStore, syncAllExperimentFlags);
+  applyArgumentsResult.stores = result1.set(SelectedGuildStore, syncAllExperimentFlags);
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = set.fileFinishedImporting("modules/sentry/SentryExperimentFeatureFlagManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/sentry/SentryExperimentFeatureFlagManager.tsx");
 
 export default prototype;

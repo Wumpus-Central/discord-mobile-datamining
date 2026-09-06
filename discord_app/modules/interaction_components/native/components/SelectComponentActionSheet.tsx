@@ -1,35 +1,32 @@
-// === Module 11822: SelectionHeader ===
+// === Module 11822: SelectComponentActionSheet ===
 
-// Module 11822 (SelectionHeader)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "handleConnectionOpen" /* 2011 */;
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_7 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 7151 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 11822 (SelectComponentActionSheet)
+import nativeDefault from "native" /* 576 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import TableRow from "TableRow" /* 5605 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const require = arg1;
+require = fn;
 function SelectionHeader(renderIcon) {
   renderIcon = renderIcon.renderIcon;
   ({ selectionActionComponent, labelComponent, selectButtonDisabled, selectedOptions } = renderIcon);
-  ({ onPressOptionItem: dependencyMap, onRemoveOptionItem: closure_3, onQueryChange } = renderIcon);
-  closure_5 = undefined;
-  closure_6 = undefined;
-  let tmp = callback();
+  ({ onPressOptionItem: dependencyMap, onRemoveOptionItem: noop, onQueryChange } = renderIcon);
+  let tmp = closure_11();
   closure_5 = tmp;
-  closure_6 = React.useRef(null);
+  noop.useRef(null);
   const items = [selectedOptions, tmp, renderIcon];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let mapped;
     if (selectedOptions != null) {
       mapped = selectedOptions.map((id) => {
         let obj = { id: id.value, text: id.label, icon: null };
-        obj = { style: closure_5.tagListIconWrapper, children: null };
-        obj = { style: closure_5.tagListIcon, children: callback(id) };
-        obj[1] = closure_1_8(closure_1_4, obj);
-        obj[2] = closure_1_8(closure_1_4, obj);
+        obj = { style: closure_1_5.tagListIconWrapper, children: null };
+        obj = { style: closure_1_5.tagListIcon, children: renderIcon(id) };
+        obj.children = closure_2_8(onQueryChange, obj);
+        obj.icon = closure_2_8(onQueryChange, obj);
         return obj;
       });
     }
@@ -54,56 +51,51 @@ function SelectionHeader(renderIcon) {
   if (selectionActionComponent.maxValues > 1) {
     if (selectionActionComponent.minValues > 0) {
       const intl2 = tmp6(1114).intl;
-      obj = { count: null };
-      obj[0] = selectionActionComponent.minValues;
+      obj = { count: selectionActionComponent.minValues };
       formatToPlainStringResult = intl2.formatToPlainString(tmp6(1114).t.Jmwzdx, obj);
     }
   }
-  obj[1] = formatToPlainStringResult;
+  obj.subtitle = formatToPlainStringResult;
   let tmp5Result;
   if (selectionActionComponent.maxValues > 1) {
     let str = "primary";
     if (selectButtonDisabled) {
       str = "secondary";
     }
-    obj = { size: "sm", variant: null, disabled: null, onPress: null, text: null };
-    obj[1] = str;
-    obj[2] = selectButtonDisabled;
-    obj[3] = renderIcon.submitSelection;
+    obj = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
     const intl3 = tmp6(1114).intl;
-    obj[4] = intl3.string(tmp6(1114).t.XqMe3N);
+    obj.text = intl3.string(tmp6(1114).t.XqMe3N);
     tmp5Result = tmp5(tmp6(4975).Button, obj);
   }
-  obj[2] = tmp5Result;
+  obj.trailing = tmp5Result;
   const children = [closure_8(renderIcon(7149).BottomSheetTitleHeader, obj), ];
   let tmp5Result1 = null;
   if (null != onQueryChange) {
     tmp5Result1 = null;
     if (null != memo) {
-      obj1 = { inActionSheet: true, style: null, icon: null, tags: null, onRemove: null, onChangeText: null };
-      obj1[1] = tmp.textInputWrapper;
+      const obj1 = { inActionSheet: true, style: tmp.textInputWrapper, icon: null, tags: null, onRemove: null, onChangeText: null };
       tmp5Result = undefined;
       if (tmp2) {
         if (0 !== memo.length) {
           tmp5Result = tmp5(onQueryChange, {});
         }
       }
-      obj1[2] = tmp5Result;
-      obj1[3] = memo;
-      obj1[4] = function onRemove(arg0) {
+      obj1.icon = tmp5Result;
+      obj1.tags = memo;
+      obj1.onRemove = function onRemove(arg0) {
         let tmp;
         if (selectedOptions != null) {
           tmp = selectedOptions[arg0];
         }
         if (null != tmp) {
-          let tmp2 = closure_3;
-          if (null == closure_3) {
-            tmp2 = closure_2;
+          let tmp2 = noop;
+          if (null == noop) {
+            tmp2 = dependencyMap;
           }
           tmp2(arg0, tmp);
         }
       };
-      obj1[5] = function onChangeText(arg0) {
+      obj1.onChangeText = function onChangeText(arg0) {
         const current = ref.current;
         if (current != null) {
           current.scrollTo({ y: 0, animated: false });
@@ -121,18 +113,18 @@ function SelectionOptionItem(item) {
   item = item.item;
   ({ onPressOptionItem: importDefault, selected, disabled, index: dependencyMap, itemAccessibilityLabel, renderDescription, renderOptionSuffix } = item);
   ({ clearable, start, end, iconContainerStyle, skipIcon, multi, renderIcon } = item);
-  let obj = item(4277);
+  let obj = useA11yRolesNative;
   let flag = selected;
   if (selected == null) {
     flag = false;
   }
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: flag, disabled });
-  const tmp = callback();
+  const tmp = closure_11();
   let flag2 = selected;
   if (selected == null) {
     flag2 = false;
   }
-  let radioA11yNative = item(4277).useRadioA11yNative({ selected: flag2, disabled });
+  let radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: flag2, disabled });
   if (multi) {
     radioA11yNative = checkboxA11yNative;
   }
@@ -141,30 +133,30 @@ function SelectionOptionItem(item) {
   if (itemAccessibilityLabel != null) {
     result = itemAccessibilityLabel(item);
   }
-  obj[1] = result;
-  obj[2] = radioA11yNative.accessibilityState;
-  obj[3] = start;
-  obj[4] = end;
-  obj[5] = disabled;
+  obj.accessibilityLabel = result;
+  obj.accessibilityState = radioA11yNative.accessibilityState;
+  obj.start = start;
+  obj.end = end;
+  obj.disabled = disabled;
   let tmp6Result = null;
   if (!skipIcon) {
     obj = { style: null, children: null };
     const items = [tmp.selectionOptionItemIconWrapper, iconContainerStyle];
-    obj[0] = items;
-    obj[1] = renderIcon(item);
+    obj.style = items;
+    obj.children = renderIcon(item);
     tmp6Result = tmp6(View, obj);
   }
-  obj[6] = tmp6Result;
-  obj[7] = item.label;
+  obj.icon = tmp6Result;
+  obj.label = item.label;
   let renderDescriptionResult;
   if (renderDescription != null) {
     renderDescriptionResult = renderDescription(item);
   }
-  obj[9] = renderDescriptionResult;
-  obj[11] = function onPress() {
-    return callback(closure_2, item);
+  obj.subLabel = renderDescriptionResult;
+  obj.onPress = function onPress() {
+    return importDefault(dependencyMap, item);
   };
-  obj1 = { style: { flexDirection: "row" }, children: null };
+  const obj1 = { style: { flexDirection: "row" }, children: null };
   let renderOptionSuffixResult;
   if (renderOptionSuffix != null) {
     renderOptionSuffixResult = renderOptionSuffix(item);
@@ -174,8 +166,7 @@ function SelectionOptionItem(item) {
     if (!selected) {
       selected = false;
     }
-    const obj2 = { checked: null };
-    obj2[0] = selected;
+    const obj2 = { checked: selected };
     tmp6Result = tmp6(tmp2(5617).FormCheckbox, obj2);
   } else {
     tmp6Result = null;
@@ -184,23 +175,28 @@ function SelectionOptionItem(item) {
     }
   }
   items1[1] = tmp6Result;
-  obj1[1] = items1;
-  obj[12] = closure_10(View, obj1);
-  return closure_8(item(5605).TableRow, obj);
+  obj1.children = items1;
+  obj.trailing = closure_1_10(View, obj1);
+  return React6(TableRow.TableRow, obj);
 }
-({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
-createCacheKey = { selectionOptionItemIconWrapper: null, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
-createCacheKey = { width: ThemesDefault.space.PX_32, alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_16 };
-let obj1 = { width: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_16 };
+const View = fn(17).View;
+let closure_7 = fn(7151).ACTION_SHEET_START_HEIGHT_RATIO;
+const jsxProd = fn(21);
+({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
+fn(4560);
+let createStyles = { selectionOptionItemIconWrapper: null, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
+createStyles = { width: nativeDefault.space.PX_32, alignItems: "center" };
+createStyles.selectionOptionItemIconWrapper = createStyles;
+let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
+createStyles.tagListIconWrapper = size;
+const rect = { transform: null, top: -nativeDefault.space.PX_4, left: -nativeDefault.space.PX_4 };
 let items = [{ scale: 0.75 }];
-createCacheKey[2] = { transform: items, top: -ThemesDefault.space.PX_4, left: -ThemesDefault.space.PX_4 };
-let obj2 = { transform: items, top: -ThemesDefault.space.PX_4, left: -ThemesDefault.space.PX_4 };
-createCacheKey[3] = { paddingHorizontal: ThemesDefault.space.PX_4, marginTop: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16 };
-let closure_11 = createCacheKey.createStyles(createCacheKey);
-const obj3 = { paddingHorizontal: ThemesDefault.space.PX_4, marginTop: ThemesDefault.space.PX_16, marginHorizontal: ThemesDefault.space.PX_16 };
-let result = require("set").fileFinishedImporting("modules/interaction_components/native/components/SelectComponentActionSheet.tsx");
+rect.transform = items;
+createStyles.tagListIcon = rect;
+createStyles.textInputWrapper = { paddingHorizontal: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_16, marginHorizontal: nativeDefault.space.PX_16 };
+let closure_11 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/interaction_components/native/components/SelectComponentActionSheet.tsx");
 
 export default function SelectComponentActionSheet(selectionActionComponent) {
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
@@ -217,9 +213,6 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
   const itemAccessibilityLabel = selectionActionComponent.itemAccessibilityLabel;
   const channelId = selectionActionComponent.channelId;
   const allowEmpty = selectionActionComponent.allowEmpty;
-  let stateFromStores;
-  let channel;
-  let memo1;
   ({ labelComponent, selectedOptions, onQueryChange, submitSelection, expanded, onRemoveOptionItem } = selectionActionComponent);
   const effect = renderIcon.useEffect(() => {
     const AccessibilityAnnouncer = selectionActionComponent(selectedCount[17]).AccessibilityAnnouncer;
@@ -233,8 +226,8 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
   }, []);
   let obj = selectionActionComponent(selectedCount[21]);
   const items = [renderDescription];
-  stateFromStores = obj.useStateFromStores(items, () => renderDescription.getChannelId());
-  channel = skipIcon.getChannel(channelId);
+  const stateFromStores = obj.useStateFromStores(items, () => renderDescription.getChannelId());
+  const channel = skipIcon.getChannel(channelId);
   const items1 = [stateFromStores, channelId, channel];
   const effect1 = renderIcon.useEffect(() => {
     let isGuildVoiceResult;
@@ -248,12 +241,11 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
       isGuildVoiceResult = stateFromStores === channelId;
     }
     if (!isGuildVoiceResult) {
-      onPressOptionItem(selectedCount[22]).hideActionSheet();
-      const obj2 = onPressOptionItem(selectedCount[22]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items1);
   const items2 = [selectionActionComponent];
-  memo1 = renderIcon.useMemo(() => selectionActionComponent.maxValues > 1, items2);
+  const memo1 = renderIcon.useMemo(() => selectionActionComponent.maxValues > 1, items2);
   const items3 = [isSelected, memo1, allowEmpty, selectionActionComponent.maxValues, itemStyle, selectedCount, options.length, onPressOptionItem, renderIcon, iconContainerStyle, skipIcon, renderDescription, renderOptionSuffix, itemAccessibilityLabel];
   const callback = renderIcon.useCallback((arg0) => {
     ({ item, index } = arg0);
@@ -263,8 +255,8 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
     if (!memo1) {
       tmp5 = allowEmpty;
     }
-    obj[5] = tmp5;
-    obj[6] = tmp;
+    obj.clearable = tmp5;
+    obj.selected = tmp;
     let tmp6 = tmp4;
     if (memo1) {
       tmp6 = selectedCount >= selectionActionComponent.maxValues;
@@ -282,47 +274,49 @@ export default function SelectComponentActionSheet(selectionActionComponent) {
       }
       tmp6 = tmp9;
     }
-    obj[7] = tmp6;
-    obj[8] = onPressOptionItem;
-    obj[9] = iconContainerStyle;
-    obj[10] = skipIcon;
-    obj[11] = renderDescription;
-    obj[12] = renderIcon;
-    obj[13] = renderOptionSuffix;
-    obj[14] = itemAccessibilityLabel;
-    obj[15] = memo1;
-    return options(allowEmpty, obj);
+    obj.disabled = tmp6;
+    obj.onPressOptionItem = onPressOptionItem;
+    obj.iconContainerStyle = iconContainerStyle;
+    obj.skipIcon = skipIcon;
+    obj.renderDescription = renderDescription;
+    obj.renderIcon = renderIcon;
+    obj.renderOptionSuffix = renderOptionSuffix;
+    obj.itemAccessibilityLabel = itemAccessibilityLabel;
+    obj.multi = memo1;
+    return React6(SelectionOptionItem, obj);
   }, items3);
   obj = { scrollable: true, ref: renderIcon.useRef(null), startHeight: memo, startExpanded: expanded, header: null, children: null };
   obj = { selectionActionComponent, labelComponent, selectButtonDisabled: null, selectedOptions: null, submitSelection: null, onQueryChange: null, onPressOptionItem: null, onRemoveOptionItem: null, renderIcon: null };
   if (selectedCount > selectionActionComponent.maxValues) {
-    obj[2] = tmp15;
-    obj[3] = selectedOptions;
-    obj[4] = submitSelection;
-    obj[5] = onQueryChange;
-    obj[6] = onPressOptionItem;
-    obj[7] = onRemoveOptionItem;
+    obj.selectButtonDisabled = tmp15;
+    obj.selectedOptions = selectedOptions;
+    obj.submitSelection = submitSelection;
+    obj.onQueryChange = onQueryChange;
+    obj.onPressOptionItem = onPressOptionItem;
+    obj.onRemoveOptionItem = onRemoveOptionItem;
     if (renderHeaderIcon == null) {
       renderHeaderIcon = renderIcon;
     }
-    obj[8] = renderHeaderIcon;
-    obj[4] = tmp12(tmp14, obj);
-    obj1 = { keyExtractor: null, data: null, renderItem: null, contentContainerStyle: null, keyboardShouldPersistTaps: "always", accessibilityRole: null };
-    obj1[0] = function keyExtractor(arg0, arg1) {
-      return "" + arg1;
+    obj.renderIcon = renderHeaderIcon;
+    obj.header = tmp12(tmp14, obj);
+    const obj1 = {
+      keyExtractor(arg0, arg1) {
+          return "" + arg1;
+        },
+      data: options,
+      renderItem: callback,
+      contentContainerStyle: null,
+      keyboardShouldPersistTaps: "always",
+      accessibilityRole: null
     };
-    obj1[1] = options;
-    obj1[2] = callback;
-    let obj2 = { paddingHorizontal: null, paddingBottom: null };
-    obj2[0] = tmp(tmp2[7]).space.PX_16;
-    obj2[1] = tmp(tmp2[7]).space.PX_16 + onPressOptionItem(selectedCount[16])({ isKeyboardAwareOnAndroid: false }).insets.bottom;
-    obj1[3] = obj2;
+    let obj2 = { paddingHorizontal: tmp(tmp2[7]).space.PX_16, paddingBottom: tmp(tmp2[7]).space.PX_16 + onPressOptionItem(selectedCount[16])({ isKeyboardAwareOnAndroid: false }).insets.bottom };
+    obj1.contentContainerStyle = obj2;
     let str = "radiogroup";
     if (memo1) {
       str = "none";
     }
-    obj1[5] = str;
-    obj[5] = tmp12(selectionActionComponent(tmp2[24]).BottomSheetFlatList, obj1);
+    obj1.accessibilityRole = str;
+    obj.children = tmp12(selectionActionComponent(tmp2[24]).BottomSheetFlatList, obj1);
     return tmp12(tmp13, obj);
   } else if (0 === selectedCount) {
     let tmp16 = !allowEmpty;

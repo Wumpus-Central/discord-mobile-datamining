@@ -1,11 +1,11 @@
-// === Module 9733: useGuildEligibleForMediaChannels ===
+// === Module 9733: MediaChannelExperimentUtils ===
 
-// Module 9733 (useGuildEligibleForMediaChannels)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 9733 (MediaChannelExperimentUtils)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/media_channel/MediaChannelExperimentUtils.tsx");
 
 export const useGuildEligibleForMediaChannels = function useGuildEligibleForMediaChannels(stateFromStores) {
   let id;

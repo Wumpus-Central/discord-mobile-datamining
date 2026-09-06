@@ -1,21 +1,21 @@
-// === Module 5268: StickerFormat ===
+// === Module 5268: StickersTypes ===
 
-// Module 5268 (StickerFormat)
-import set from "set" /* 2 */;
-import TypeTag2 from "TypeTag" /* 1973 */;
-import MetaStickerType from "MetaStickerType" /* 5269 */;
+// Module 5268 (StickersTypes)
+import js_shim_PlainRecord from "js_shim/PlainRecord" /* 1973 */;
+import StickerTypes from "StickerTypes" /* 5269 */;
+import size from "module_2" /* 2 */;
 
-const TypeTag = TypeTag2.TypeTag;
-const result = set.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
+const TypeTag = js_shim_PlainRecord.TypeTag;
+const result = size.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 
-export const StickerFormat = MetaStickerType.StickerFormat;
-export const MetaStickerType = MetaStickerType.MetaStickerType;
+export const StickerFormat = StickerTypes.StickerFormat;
+export const MetaStickerType = StickerTypes.MetaStickerType;
 export const StickerExtensions = { PNG: "png", APNG: "png", LOTTIE: "json", WEBP: "webp", GIF: "gif" };
 export const isAnimatedSticker = function isAnimatedSticker(arg0) {
-  return arg0 !== MetaStickerType.StickerFormat.PNG;
+  return arg0 !== StickerTypes.StickerFormat.PNG;
 };
 export const isCustomSticker = function isCustomSticker(arg0) {
-  return arg0 !== MetaStickerType.MetaStickerType.STANDARD;
+  return arg0 !== StickerTypes.MetaStickerType.STANDARD;
 };
 export const StickerGridItemTypes = { STICKER: 0, [0]: "STICKER", CREATE_STICKER: 1, [1]: "CREATE_STICKER" };
 export const StickerCategoryTypes = { PACK: "PACK", FAVORITE: "FAVORITE", RECENT: "RECENT", SEARCH_RESULTS: "SEARCH_RESULTS", SEARCH_SUGGESTIONS: "SEARCH_SUGGESTIONS", GUILD: "GUILD", EMPTY_GUILD_UPSELL: "EMPTY_GUILD_UPSELL", CREATE_STICKER: "CREATE_STICKER" };

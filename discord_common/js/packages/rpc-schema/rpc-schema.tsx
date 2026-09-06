@@ -1,12 +1,13 @@
 // === Module 14476: CONTEXT_MENU_ICON_NAMES ===
 
 // Module 14476 (CONTEXT_MENU_ICON_NAMES)
-import set from "set" /* 2 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 14479 */;
+import helpers from "helpers" /* 14478 */;
+import contextMenuIcons from "contextMenuIcons" /* 14479 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
-export const CONTEXT_MENU_ICON_NAMES = CONTEXT_MENU_ICON_NAMES.CONTEXT_MENU_ICON_NAMES;
+export const CONTEXT_MENU_ICON_NAMES = contextMenuIcons.CONTEXT_MENU_ICON_NAMES;
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
   dependencyMap = undefined;
@@ -20,8 +21,7 @@ export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   if (null != request) {
     obj.validation = (object) => {
       if (null == closure_1) {
-        closure_1 = request(_null[1]).joiReqObj(object.object(request(object)));
-        const obj = request(_null[1]);
+        closure_1 = helpers.joiReqObj(object.object(request(object)));
       }
       return closure_1;
     };

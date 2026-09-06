@@ -1,40 +1,42 @@
 // === Module 12249: PremiumAnimatedGiftButton ===
 
 // Module 12249 (PremiumAnimatedGiftButton)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { useRef } from "noop" /* 19 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const require = arg1;
-let closure_7 = createCacheKey.createStyles((width, marginHorizontal) => {
-  let obj = { containerRefresh: null, animationRefresh: null };
-  obj = { width, height: width, borderRadius: ThemesDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
-  obj[0] = obj;
-  obj[1] = { width: 24, height: 24 };
+require = fn;
+const useRef = fn(19).useRef;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
+  const obj = { containerRefresh: null, animationRefresh: null };
+  const size = { width, height: width, borderRadius: nativeDefault.radii.sm, marginHorizontal, display: "flex", alignItems: "center", justifyContent: "center" };
+  obj.containerRefresh = size;
+  obj.animationRefresh = { width: 24, height: 24 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx");
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumAnimatedGiftButton.tsx");
 
 export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0) {
   ({ active, disabled, accessibilityState } = arg0);
   ({ style, activeStyle, channelId, animationDataUrl, onAnimationFinished, loop } = arg0);
-  let obj = _require(4262);
+  let obj = require("useToken");
   const token = obj.useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  obj1 = _require(4262);
+  let obj1 = require("useToken");
   const token1 = obj1.useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
-  let obj2 = _require(4262);
+  let obj2 = require("useToken");
   const token2 = obj2.useToken(stateFromStores(576).modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
-  const tmp7 = callback(token, token1);
+  const tmp7 = closure_7(token, token1);
   const bound = Math.max(0, (token2 - token) / 2);
   const tmp9 = useRef(null);
   _require = tmp9;
-  const items = [closure_5];
-  stateFromStores = _require(504).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const items = [AccessibilityStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [channelId, stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!stateFromStores) {
       if (obj.isIOS()) {
         if (ref != null) {
@@ -50,7 +52,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
           current2.play();
         }
       }
-      obj = ref(closure_1_2[7]);
+      obj = PlatformUtils;
     }
   }, items1);
   let FadeOut;
@@ -71,13 +73,13 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   if (bound > 0) {
     tmp14 = bound;
   }
-  obj[1] = tmp14;
+  obj.hitSlop = tmp14;
   obj1 = { disabled };
   const merged = Object.assign(accessibilityState);
-  obj[3] = obj1;
+  obj.accessibilityState = obj1;
   const merged1 = Object.assign(arg0);
   obj2 = { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished };
   obj.children = jsx(stateFromStores(5529), { ref: tmp9, style: tmp7.animationRefresh, source: { uri: animationDataUrl }, loop, autoPlay: false, onAnimationFinish: onAnimationFinished });
-  obj[1] = jsx(_require(5123).PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
+  obj.children = jsx(require("Pressables").PressableOpacity, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
   return jsx(stateFromStores(4296).View, { style: items2, hitSlop: null, accessibilityRole: "button", accessibilityState: null });
 };

@@ -1,10 +1,10 @@
 // === Module 11388: InappropriateConversationBlockAndReportAlert ===
 
 // Module 11388 (InappropriateConversationBlockAndReportAlert)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11370 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 class InappropriateConversationBlockAndReportAlert {
   constructor(arg0) {
     channelId = global.channelId;
@@ -23,8 +23,7 @@ class InappropriateConversationBlockAndReportAlert {
     items[2] = senderId;
     items[3] = warningType;
     callback = senderId.useCallback((cta) => {
-      let obj = channelId(warningType[2]);
-      obj = { channelId, warningId, senderId, warningType, cta };
+      const obj = { channelId, warningId, senderId, warningType, cta };
       obj.trackCtaEvent(obj);
     }, items);
     closure_8 = callback;
@@ -55,13 +54,15 @@ class InappropriateConversationBlockAndReportAlert {
       callback(analyticsBlockAndReportContext);
     }, items3);
     obj = { userId: senderId, channelId, onClose: global.onClose, onCancel: callback1, onBlock: callback2, onBlockAndReport: callback3, blockButtonVariant: "primary", description: null };
-    tmp5 = require("ConfirmBlockUserAlert");
-    intl = require("getSystemLocale").intl;
-    obj[7] = intl.string(require("getSystemLocale").t["5NhTvu"]);
+    tmp5 = warningId(warningType[3]);
+    intl = channelId(warningType[4]).intl;
+    obj.description = intl.string(channelId(warningType[4]).t["5NhTvu"]);
     return analyticsBlockContext(tmp5, obj);
   }
 }
-const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
 
 export default InappropriateConversationBlockAndReportAlert;
 export { InappropriateConversationBlockAndReportAlert };

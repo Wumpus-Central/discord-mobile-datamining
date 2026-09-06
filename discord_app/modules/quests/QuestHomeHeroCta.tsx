@@ -1,25 +1,23 @@
-// === Module 11303: questHomeHeroCtaFromServer ===
+// === Module 11303: QuestHomeHeroCta ===
 
-// Module 11303 (questHomeHeroCtaFromServer)
-import set from "set" /* 2 */;
+// Module 11303 (QuestHomeHeroCta)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
+const result = size.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
 export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {
   let obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };
   let tmp;
   if (null != cta.android) {
-    obj = { androidAppId: null };
-    obj[0] = cta.android.android_app_id;
+    obj = { androidAppId: cta.android.android_app_id };
     tmp = obj;
   }
-  obj[2] = tmp;
+  obj.android = tmp;
   let tmp2;
   if (null != cta.ios) {
-    obj = { iosAppId: null };
-    obj[0] = cta.ios.ios_app_id;
+    obj = { iosAppId: cta.ios.ios_app_id };
     tmp2 = obj;
   }
-  obj[3] = tmp2;
+  obj.ios = tmp2;
   return obj;
 };

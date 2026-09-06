@@ -1,41 +1,47 @@
-// === Module 17200: MobilePhoneShareIcon ===
+// === Module 17200: VoicePanelScreenshareButton ===
 
-// Module 17200 (MobilePhoneShareIcon)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 17200 (VoicePanelScreenshareButton)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import useAlertStore from "useAlertStore" /* 4906 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13262 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-if (isMetaQuest.isMetaQuest()) {
-  let MobilePhoneShareIcon = require("ScreenArrowIcon").ScreenArrowIcon;
+const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
+
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+let MetaQuestUtils = fn(1608);
+if (MetaQuestUtils.isMetaQuest()) {
+  let MobilePhoneShareIcon = fn(12532).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = require("MobilePhoneShareIcon").MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(17201).MobilePhoneShareIcon;
 }
-isMetaQuest = { circle: null, iconContainer: null };
-isMetaQuest = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
-isMetaQuest[0] = isMetaQuest;
-isMetaQuest[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
-let closure_9 = createCacheKey.createStyles(isMetaQuest);
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
+const createStyles = fn(4560);
+MetaQuestUtils = { circle: null, iconContainer: null };
+let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
+MetaQuestUtils.circle = size;
+MetaQuestUtils.iconContainer = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
+let closure_9 = createStyles.createStyles(MetaQuestUtils);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelScreenshareButton.tsx");
 
 export default function ScreenshareButton(arg0) {
-  let channelId;
   let isActive;
   let isFeatureEnabled;
   let onPress;
   closure_4 = undefined;
   ({ props, wrapperSpecs } = arg0);
-  channelId = onPress.useContext(isActive(isFeatureEnabled[9])).channelId;
-  const tmp3 = callback2();
+  const channelId = onPress.useContext(isActive(isFeatureEnabled[9])).channelId;
+  const tmp3 = closure_9();
   let obj = channelId(isFeatureEnabled[10]);
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
   const items = [closure_4];
-  const stateFromStores = channelId(isFeatureEnabled[11]).useStateFromStores(items, () => channel.getChannel(channelId));
+  const stateFromStores = channelId(isFeatureEnabled[11]).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   isActive(isFeatureEnabled[12])(null != stateFromStores, "null channel in VoicePanelScreenshareButton");
   const tmp8 = isActive(isFeatureEnabled[13])(stateFromStores);
   isActive = tmp8.isActive;
@@ -49,16 +55,13 @@ export default function ScreenshareButton(arg0) {
   const callback = onPress.useCallback(() => {
     if (closure_4) {
       let obj = { title: null };
-      const obj3 = channelId(isFeatureEnabled[15]);
-      const intl = channelId(isFeatureEnabled[17]).intl;
-      obj[0] = intl.string(channelId(isFeatureEnabled[17]).t.GFr0GR);
-      obj3.openAlert(channelId(isFeatureEnabled[16]).VOICE_PANEL_VIDEO_GUARD_ERROR_KEY, closure_1_6(isActive(isFeatureEnabled[16]), obj));
-      const tmp15 = isActive(isFeatureEnabled[16]);
+      const obj3 = useAlertStore;
+      const intl = util.intl;
+      obj.title = intl.string(util.t.GFr0GR);
+      obj3.openAlert(VoicePanelVideoGuardErrorAlert.VOICE_PANEL_VIDEO_GUARD_ERROR_KEY, timestampProducer(VoicePanelVideoGuardErrorAlertDefault, obj));
     } else if (isFeatureEnabled) {
-      obj = isActive(isFeatureEnabled[18]);
-      obj = { source: "connected button", was_active: null };
-      obj[1] = isActive;
-      obj.track(closure_1_5.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj);
+      obj = { source: "connected button", was_active: isActive };
+      obj.track(AnalyticEvents.VOICE_PANEL_SCREENSHARE_BUTTON_TAPPED, obj);
       onPress();
     }
   }, items1);
@@ -83,7 +86,7 @@ export default function ScreenshareButton(arg0) {
   } else {
     MobilePhoneDenyIcon = tmp4(tmp2[19]).MobilePhoneDenyIcon;
   }
-  obj = { onPress: callback, disabled: tmp11, props, accessibilityLabel: null, style: null, children: null };
+  const element = { onPress: callback, disabled: tmp11, props, accessibilityLabel: null, style: null, children: null };
   let tmpResult = tmp(tmp2[20]);
   let intl = tmp4(tmp2[17]).intl;
   const string = intl.string;
@@ -93,18 +96,20 @@ export default function ScreenshareButton(arg0) {
   } else {
     stringResult = string(t.fjBNo1);
   }
-  obj[3] = stringResult;
+  element.accessibilityLabel = stringResult;
   let iconBgSelected;
   if (isActive) {
     iconBgSelected = voicePanelButtonStyles.iconBgSelected;
   }
-  obj[4] = iconBgSelected;
+  element.style = iconBgSelected;
+  obj = { style: null };
   const items2 = [tmp3.circle, { backgroundColor }];
-  const items3 = [callback(isActive(isFeatureEnabled[21]), { style: items2 }), ];
+  obj.style = items2;
+  const items3 = [closure_6(isActive(isFeatureEnabled[21]), obj), ];
   obj = { style: tmp3.iconContainer, children: null };
   tmpResult = tmp(tmp2[21]);
-  obj[1] = callback(MobilePhoneDenyIcon, { color });
-  items3[1] = callback(tmpResult, obj);
-  obj[5] = items3;
-  return closure_7(tmpResult, obj);
+  obj.children = closure_6(MobilePhoneDenyIcon, { color });
+  items3[1] = closure_6(tmpResult, obj);
+  element.children = items3;
+  return closure_7(tmpResult, element);
 };

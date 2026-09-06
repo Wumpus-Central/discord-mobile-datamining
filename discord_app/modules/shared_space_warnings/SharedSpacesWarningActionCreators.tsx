@@ -1,18 +1,18 @@
-// === Module 13738: dismissGdmBlockedUserWarning ===
+// === Module 13738: SharedSpacesWarningActionCreators ===
 
-// Module 13738 (dismissGdmBlockedUserWarning)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13734 */;
+// Module 13738 (SharedSpacesWarningActionCreators)
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import SharedSpacesWarningStore from "SharedSpacesWarningStore" /* 13734 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = useSharedSpacesWarningStore.setDismissalTimeForChannel;
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
+let closure_2 = SharedSpacesWarningStore.setDismissalTimeForChannel;
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
 
 export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarning(channelId) {
-  callback(channelId);
-  const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.CHANNEL_BLOCKED_USER_WARNING_ACK(channelId), rejectWithError: sendRequest.rejectWithMigratedError() };
+  closure_2(channelId);
+  const HTTP = HTTPUtils.HTTP;
+  const obj = { url: Endpoints.CHANNEL_BLOCKED_USER_WARNING_ACK(channelId), rejectWithError: HTTPUtils.rejectWithMigratedError() };
   return HTTP.post(obj);
 };

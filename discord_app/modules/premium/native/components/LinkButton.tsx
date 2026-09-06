@@ -1,17 +1,17 @@
 // === Module 7408: LinkButton ===
 
 // Module 7408 (LinkButton)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import PressableBase from "PressableBase" /* 5123 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Pressables from "Pressables" /* 5123 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = createCacheKey.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
-const result = require("set").fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
 
 export const LinkButton = function LinkButton(textColor) {
   ({ disabled, variant } = textColor);
@@ -23,7 +23,7 @@ export const LinkButton = function LinkButton(textColor) {
   if (str === undefined) {
     str = "text-link";
   }
-  const tmp = callback2();
+  const tmp = closure_4();
   const items = [tmp.defaultContainerStyle, , ];
   let disabledContainerStyle = disabled;
   if (disabled) {
@@ -32,7 +32,7 @@ export const LinkButton = function LinkButton(textColor) {
   const obj = { style: items, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", activeOpacity: 0.2, disabled, onPress, children: null };
   items[1] = disabledContainerStyle;
   items[2] = containerStyle;
-  const items1 = [callback(Text.Text, { style: textStyle, variant, color: str, children: text }), textColor.iconRight];
-  obj[6] = items1;
-  return closure_3(PressableBase.PressableOpacity, obj);
+  const items1 = [React2(Text_Text.Text, { style: textStyle, variant, color: str, children: text }), textColor.iconRight];
+  obj.children = items1;
+  return React3(Pressables.PressableOpacity, obj);
 };

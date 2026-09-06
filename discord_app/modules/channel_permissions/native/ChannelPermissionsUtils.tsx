@@ -1,30 +1,30 @@
-// === Module 11608: openAddMembersActionSheet ===
+// === Module 11608: channel_permissions/ChannelPermissionsUtils ===
 
-// Module 11608 (openAddMembersActionSheet)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 11608 (channel_permissions/ChannelPermissionsUtils)
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/channel_permissions/native/ChannelPermissionsUtils.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/channel_permissions/native/ChannelPermissionsUtils.tsx");
 
-export const openAddMembersActionSheet = function openAddMembersActionSheet(closure_0) {
+export const openAddMembersActionSheet = function openAddMembersActionSheet(stateFromStores) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = expandEventPropertiesDefault;
+  let obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
-  const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
-  obj = { channel: closure_0, canSkip: flag };
-  obj2.openLazy(asyncRequireImpl(9750, dependencyMap.paths), "channel-add-members-" + closure_0.id, obj);
+  const obj2 = ActionSheetActionCreatorsDefault;
+  obj = { channel: stateFromStores, canSkip: flag };
+  obj2.openLazy(asyncRequireImpl(9750, dependencyMap.paths), "channel-add-members-" + stateFromStores.id, obj);
 };
 export const openChannelMembersActionSheet = function openChannelMembersActionSheet(id, guild_id) {
-  let obj = expandEventPropertiesDefault;
+  let obj = AnalyticsUtilsDefault;
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Manage Channel Access" });
-  const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
+  const obj2 = ActionSheetActionCreatorsDefault;
   obj = { channelId: id, guildId: guild_id };
   obj2.openLazy(asyncRequireImpl(11609, dependencyMap.paths), "channel-members-" + id, obj);
 };

@@ -1,18 +1,20 @@
 // === Module 17137: useCameraEncodeError ===
 
 // Module 17137 (useCameraEncodeError)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "isAVErrorContextOfType" /* 9596 */;
+import AVError from "AVError" /* 9110 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import AVErrorStore from "AVErrorStore" /* 9596 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/hooks/useCameraEncodeError.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/hooks/useCameraEncodeError.tsx");
 
 export default function useCameraEncodeError(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    if (closure_1_2.getId() === callback) {
-      const first = closure_1_3.getActiveErrorsOfType(callback(closure_1_1[3]).AVError.CAMERA_SEND_LOW_FPS)[0];
+  _require = arg0;
+  const items = [AVErrorStore, AuthenticationStore];
+  return require("initialize").useStateFromStores(items, () => {
+    if (AuthenticationStore.getId() === closure_0) {
+      const first = AVErrorStore.getActiveErrorsOfType(AVError.AVError.CAMERA_SEND_LOW_FPS)[0];
       let type;
       if (first != null) {
         type = first.type;

@@ -1,83 +1,82 @@
-// === Module 16574: MembersPruneActionSheetContent ===
+// === Module 16574: MembersPruneActionSheet ===
 
-// Module 16574 (MembersPruneActionSheetContent)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import CACHE_TTL_MS from "CACHE_TTL_MS" /* 16575 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import closure_9 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 16574 (MembersPruneActionSheet)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7265 */;
+import PruneGuildModalActionCreatorsDefault from "PruneGuildModalActionCreators" /* 16576 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+require = fn;
 function MembersPruneActionSheetContent(guild) {
   guild = guild.guild;
-  let id;
-  let first;
-  let callback;
+  _slicedToArray = undefined;
   let num;
-  id = guild.id;
-  let tmp = callback(num.useState(7), 2);
-  first = tmp[0];
-  callback = tmp[1];
-  const tmp3 = callback2(guild.id, first, []);
+  const id = guild.id;
+  let tmp = _slicedToArray(num.useState(7), 2);
+  const days = tmp[0];
+  _slicedToArray = tmp[1];
+  const tmp3 = closure_5(guild.id, days, []);
   num = tmp3.count;
-  const items = [guild.id, first];
+  const items = [guild.id, days];
   const effect = num.useEffect(() => {
     function handlePruneUpdate(guildId) {
       if (guildId.guildId === handlePruneUpdate.id) {
         if (guildId.prune.isPreview) {
           const _Number = Number;
-          closure_1_6(guildId.guildId, guildId.prune.days, guildId.prune.includeRoles, Number(guildId.prune.pruneCount), guildId.prune.isFinished);
+          closure_2_6(guildId.guildId, guildId.prune.days, guildId.prune.includeRoles, Number(guildId.prune.pruneCount), guildId.prune.isFinished);
         }
       }
     }
     const subscription = id(first[7]).subscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
     return () => {
-      id(first[7]).unsubscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
+      DispatcherDefault.unsubscribe("GUILD_PRUNE_UPDATE", handlePruneUpdate);
     };
   }, items);
-  const items1 = [guild.id, first, num];
+  const items1 = [guild.id, days, num];
   const effect1 = num.useEffect(() => {
     if (null == num) {
-      id(first[8]).updateEstimateV2(guild.id, first);
-      const obj = id(first[8]);
+      PruneGuildModalActionCreatorsDefault.updateEstimateV2(guild.id, first);
     }
   }, items1);
   let obj = { header: null, children: null };
   obj = { title: null };
-  const intl = guild(first[11]).intl;
-  obj[0] = intl.string(guild(first[11]).t.zbyz7p);
-  obj[0] = callback3(guild(first[10]).BottomSheetTitleHeader, obj);
+  const intl = guild(days[11]).intl;
+  obj.title = intl.string(guild(days[11]).t.zbyz7p);
+  obj.header = closure_11(guild(days[10]).BottomSheetTitleHeader, obj);
   obj = { title: null, defaultValue: null, onChange: null, hasIcons: false, children: null };
-  const intl2 = guild(first[11]).intl;
-  obj[0] = intl2.string(guild(first[11]).t.YccTvK);
-  obj[1] = first;
-  obj[2] = function onChange(arg0) {
+  const intl2 = guild(days[11]).intl;
+  obj.title = intl2.string(guild(days[11]).t.YccTvK);
+  obj.defaultValue = days;
+  obj.onChange = function onChange(arg0) {
     let tmp = first !== arg0;
     if (tmp) {
       tmp = null != id;
     }
     if (tmp) {
-      callback(arg0);
+      closure_3(arg0);
     }
   };
-  obj1 = { value: 7, label: null };
-  const intl3 = guild(first[11]).intl;
-  obj1[1] = intl3.formatToPlainString(guild(first[11]).t.FM1dHS, { days: 7 });
-  const items2 = [callback3(guild(first[13]).TableRadioRow, obj1), ];
+  const obj1 = { value: 7, label: null };
+  const intl3 = guild(days[11]).intl;
+  obj1.label = intl3.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 7 });
+  const items2 = [closure_11(guild(days[13]).TableRadioRow, obj1), ];
   let obj2 = { value: 30, label: null };
-  const intl4 = guild(first[11]).intl;
-  obj2[1] = intl4.formatToPlainString(guild(first[11]).t.FM1dHS, { days: 30 });
-  items2[1] = callback3(guild(first[13]).TableRadioRow, obj2);
-  obj[4] = items2;
-  const items3 = [callback4(guild(first[12]).TableRadioGroup, obj), , ];
-  const intl5 = guild(first[11]).intl;
-  const t = guild(first[11]).t;
+  const intl4 = guild(days[11]).intl;
+  obj2.label = intl4.formatToPlainString(guild(days[11]).t.FM1dHS, { days: 30 });
+  items2[1] = closure_11(guild(days[13]).TableRadioRow, obj2);
+  obj.children = items2;
+  const items3 = [closure_12(guild(days[12]).TableRadioGroup, obj), , ];
+  const intl5 = guild(days[11]).intl;
+  const t = guild(days[11]).t;
   if (num == null) {
     num = -1;
   }
-  items3[1] = callback3(guild(first[14]).Text, { variant: "text-sm/medium", children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days: first }) });
+  items3[1] = closure_11(guild(days[14]).Text, { variant: "text-sm/medium", children: intl5.format(tmp3.isLoading ? t["98cHOp"] : t.f13az9, { members: num, days }) });
   const obj4 = {
     variant: "destructive",
     onPress() {
@@ -86,47 +85,45 @@ function MembersPruneActionSheetContent(guild) {
         tmp2 = null != first;
       }
       if (tmp2) {
-        id(first[8]).prune(id, first);
-        const obj = id(first[8]);
-        id(first[16]).hideActionSheet();
-        closure_1_7();
-        const obj2 = id(first[16]);
+        PruneGuildModalActionCreatorsDefault.prune(id, first);
+        ActionSheetActionCreatorsDefault.hideActionSheet();
+        React5();
       }
     },
     text: null
   };
   const intl6 = tmp7(tmp8[11]).intl;
-  obj4[2] = intl6.string(guild(first[11]).t["2mIlKQ"]);
-  items3[2] = callback3(guild(first[15]).Button, obj4);
-  obj[1] = items3;
-  return callback4(guild(first[9]).ActionSheet, obj);
+  obj4.text = intl6.string(guild(days[11]).t["2mIlKQ"]);
+  items3[2] = closure_11(guild(days[15]).Button, obj4);
+  obj.children = items3;
+  return closure_12(guild(days[9]).ActionSheet, obj);
 }
-({ usePrunePreview: c5, setPrunePreview: closure_6, clearAllPrunePreviews: error } = CACHE_TTL_MS);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/guild_settings/native/MembersPruneActionSheet.tsx");
+const PrunePreviewStore = fn(16575);
+({ usePrunePreview: hasOwnProperty, setPrunePreview: metroRequire, clearAllPrunePreviews: closure_7 } = PrunePreviewStore);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/native/MembersPruneActionSheet.tsx");
 
 export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
-  let stateFromStores;
   let obj = guild(504);
-  const items = [closure_8, closure_9, closure_10];
+  const items = [GuildStore, PermissionStore, UserStore];
   const items1 = [guild];
-  stateFromStores = obj.useStateFromStores(items, () => {
-    guild = closure_1_8.getGuild(guild.id);
-    return guild(closure_1_2[18]).canPruneGuildMembers(guild, closure_1_10.getCurrentUser(), closure_1_9);
+  const stateFromStores = obj.useStateFromStores(items, () => {
+    guild = GuildStore.getGuild(guild.id);
+    return MemberSafetyPermissionsUtils.canPruneGuildMembers(guild, UserStore.getCurrentUser(), PermissionStore);
   }, items1);
   const items2 = [stateFromStores];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!stateFromStores) {
-      stateFromStores(closure_1_2[16]).hideActionSheet();
-      const obj = stateFromStores(closure_1_2[16]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     }
   }, items2);
   let tmp3 = null;
   if (stateFromStores) {
-    obj = { guild: null };
-    obj[0] = guild;
-    tmp3 = callback3(MembersPruneActionSheetContent, obj);
+    obj = { guild };
+    tmp3 = closure_11(MembersPruneActionSheetContent, obj);
   }
   return tmp3;
 };

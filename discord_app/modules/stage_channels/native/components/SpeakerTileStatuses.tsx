@@ -1,38 +1,38 @@
-// === Module 10050: VoiceStatus ===
+// === Module 10050: SpeakerTileStatuses ===
 
-// Module 10050 (VoiceStatus)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import registerAssetDefault from "registerAsset" /* 6969 */;
-import registerAssetDefault2 from "registerAsset" /* 10052 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_5 from "updateVoiceState" /* 4579 */;
-import closure_6 from "buildStageChannelUserRoles" /* 5421 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10050 (SpeakerTileStatuses)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import _modDef6969 from "module_6969" /* 6969 */;
+import _modDef10052 from "module_10052" /* 10052 */;
+import noop from "module_19" /* 19 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5421 */;
 
-require = arg1;
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
-obj = { position: "absolute", top: 4, left: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-obj[0] = obj;
-createCacheKey = { position: "absolute", top: 4, right: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-obj[1] = createCacheKey;
-obj[2] = { marginEnd: ThemesDefault.space.PX_4 };
-let closure_8 = createCacheKey.createStyles(obj);
-const obj2 = { marginEnd: ThemesDefault.space.PX_4 };
-const memoResult = importAllResult.memo((userId) => {
+let size = { position: "absolute", top: 4, left: 4, backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+obj.voiceStatusWrapper = size;
+const size1 = { position: "absolute", top: 4, right: 4, backgroundColor: nativeDefault.colors.WHITE, borderRadius: nativeDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+obj.moderatorStatusWrapper = size1;
+obj = { marginEnd: nativeDefault.space.PX_4 };
+obj.restricted = obj;
+let closure_8 = createStyles.createStyles(obj);
+const memoResult = noop.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
   let obj = userId(504);
-  const items = [closure_4];
+  const items = [MediaEngineStore];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isLocalMute(userId), items1);
-  const tmp = callback();
-  const items2 = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => MediaEngineStore.isLocalMute(userId), items1);
+  const tmp = closure_8();
+  const items2 = [VoiceStateStore];
   const items3 = [channelId, userId];
-  const stateFromStores1 = userId(504).useStateFromStores(items2, () => closure_1_5.getVoiceStateForChannel(channelId, userId), items3);
+  const stateFromStores1 = userId(504).useStateFromStores(items2, () => VoiceStateStore.getVoiceStateForChannel(channelId, userId), items3);
   let flag;
   if (stateFromStores1 != null) {
     flag = stateFromStores1.isVoiceMuted();
@@ -64,50 +64,43 @@ const memoResult = importAllResult.memo((userId) => {
   if (null != tmp5) {
     obj = { style: null, children: null };
     const items4 = [tmp.voiceStatusWrapper, userId.style];
-    obj[0] = items4;
-    obj = { source: null, size: null, color: null, disableColor: null };
-    obj[0] = tmp5;
-    obj[1] = tmp2(1178).Icon.Sizes.SMALL;
-    obj[2] = channelId(576).unsafe_rawColors.BLACK;
-    obj[3] = flag3;
-    obj[1] = jsx(tmp2(1178).Icon, { source: null, size: null, color: null, disableColor: null });
-    tmp9 = <View source={null} size={null} color={null} disableColor={null} />;
+    obj.style = items4;
+    obj = { source: tmp5, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 };
+    obj.children = jsx(tmp2(1178).Icon, { source: tmp5, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK, disableColor: flag3 });
+    tmp9 = <View source={tmp5} size={tmp2(1178).Icon.Sizes.SMALL} color={channelId(576).unsafe_rawColors.BLACK} disableColor={flag3} />;
   }
   return tmp9;
 });
-const memoResult1 = importAllResult.memo((userId) => {
+size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
+
+export const VoiceStatus = memoResult;
+export const ModeratorStatus = noop.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
   let obj = userId(504);
-  const items = [closure_6];
+  const items = [StageChannelRoleStore];
   const items1 = [channelId, userId];
   let tmp4;
-  if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
+  if (obj.useStateFromStores(items, () => StageChannelRoleStore.isModerator(userId, channelId), items1)) {
     tmp4 = channelId(10051);
   }
   let tmp6 = null;
   if (null != tmp4) {
     obj = { style: null, children: null };
     const items2 = [tmp.moderatorStatusWrapper, userId.style];
-    obj[0] = items2;
-    obj = { source: null, size: null, color: null };
-    obj[0] = tmp4;
-    obj[1] = tmp2(1178).Icon.Sizes.SMALL;
-    obj[2] = channelId(576).unsafe_rawColors.BLACK;
-    obj[1] = jsx(tmp2(1178).Icon, { source: null, size: null, color: null });
-    tmp6 = <View source={null} size={null} color={null} />;
+    obj.style = items2;
+    obj = { source: tmp4, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK };
+    obj.children = jsx(tmp2(1178).Icon, { source: tmp4, size: tmp2(1178).Icon.Sizes.SMALL, color: channelId(576).unsafe_rawColors.BLACK });
+    tmp6 = <View source={tmp4} size={tmp2(1178).Icon.Sizes.SMALL} color={channelId(576).unsafe_rawColors.BLACK} />;
   }
   return tmp6;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
-
-export const VoiceStatus = memoResult;
-export const ModeratorStatus = memoResult1;
 export const BlockedStatus = function BlockedStatus() {
-  const tmp = callback();
-  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault2, size: Button.Icon.Sizes.EXTRA_SMALL, color: ThemesDefault.unsafe_rawColors.RED_400 });
+  const tmp = closure_8();
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef10052, size: native.Icon.Sizes.EXTRA_SMALL, color: nativeDefault.unsafe_rawColors.RED_400 });
 };
 export const IgnoredStatus = function IgnoredStatus() {
-  const tmp = callback();
-  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault, size: Button.Icon.Sizes.EXTRA_SMALL });
+  const tmp = closure_8();
+  return jsx(native.Icon, { style: closure_8().restricted, source: _modDef6969, size: native.Icon.Sizes.EXTRA_SMALL });
 };

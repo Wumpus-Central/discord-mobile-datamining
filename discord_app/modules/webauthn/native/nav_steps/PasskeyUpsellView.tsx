@@ -1,80 +1,84 @@
 // === Module 14661: PasskeyUpsellView ===
 
 // Module 14661 (PasskeyUpsellView)
-import ThemesDefault from "Themes" /* 576 */;
-import combinedDefault from "combined" /* 2024 */;
-import registerAssetDefault from "registerAsset" /* 14666 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { WebAuthnScreens } from "WebAuthnScreens" /* 14657 */;
-import { HelpdeskArticles } from "ME" /* 1074 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6949 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14662 */;
+import _modDef14666 from "module_14666" /* 14666 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, scrollViewContainer: null, headerContainer: null, headerImage: null, headerText: null, circleIcon: null, listContainer: null, row: null, text: null, buttonContainer: null };
-createCacheKey = { flex: 1, flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1, justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_16 };
-let obj1 = { flexGrow: 1, justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[3] = { height: 190, width: 220, resizeMode: "contain" };
-createCacheKey[4] = { textAlign: "center" };
-let obj2 = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_16 };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round };
-let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.round };
-createCacheKey[6] = { gap: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 };
-let obj4 = { gap: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[7] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center" };
-createCacheKey[8] = { flex: 1 };
-let obj5 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center" };
-createCacheKey[9] = { gap: ThemesDefault.space.PX_16, alignItems: "center" };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { gap: ThemesDefault.space.PX_16, alignItems: "center" };
-let result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/PasskeyUpsellView.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
+const WebAuthnScreens = fn(14657).WebAuthnScreens;
+const HelpdeskArticles = fn(1074).HelpdeskArticles;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, scrollViewContainer: null, headerContainer: null, headerImage: null, headerText: null, circleIcon: null, listContainer: null, row: null, text: null, buttonContainer: null };
+createStyles = { flex: 1, flexDirection: "column", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.container = createStyles;
+createStyles.scrollViewContainer = { flexGrow: 1, justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_16 };
+let obj1 = { flexGrow: 1, justifyContent: "space-between", paddingHorizontal: nativeDefault.space.PX_16 };
+createStyles.headerContainer = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 };
+createStyles.headerImage = { height: 190, width: 220, resizeMode: "contain" };
+createStyles.headerText = { textAlign: "center" };
+let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, width: nativeDefault.space.PX_32, height: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.round };
+createStyles.circleIcon = size;
+let obj2 = { alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16 };
+createStyles.listContainer = { gap: nativeDefault.space.PX_24, marginLeft: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 };
+let obj3 = { gap: nativeDefault.space.PX_24, marginLeft: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 };
+createStyles.row = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
+createStyles.text = { flex: 1 };
+let obj4 = { flexDirection: "row", gap: nativeDefault.space.PX_8, alignItems: "center" };
+createStyles.buttonContainer = { gap: nativeDefault.space.PX_16, alignItems: "center" };
+let closure_13 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/native/nav_steps/PasskeyUpsellView.tsx");
 
 export default function PasskeyUpsellView() {
-  function onRegisterSuccess(onCancel, arg1) {
+  function onRegisterSuccess(onCancel) {
     const obj = {};
     const merged = Object.assign(onCancel);
-    const intl = navigation(closure_1_2[10]).intl;
-    obj.name = intl.string(navigation(closure_1_2[10]).t["8H5RmH"]);
-    navigation.push(closure_1_8.NAME, obj);
+    const intl = util.intl;
+    obj.name = intl.string(util.t["8H5RmH"]);
+    navigation.push(WebAuthnScreens.NAME, obj);
   }
   function onCancel() {
-    callback(14662).markDismissed(constants.USER_DISMISS);
-    const obj = callback(14662);
-    const result = callback(14663).closePasskeyUpsellModal();
+    setError(setRegistering[11]).markDismissed(constants.USER_DISMISS);
+    const obj = setError(setRegistering[11]);
+    const result = setError(setRegistering[12]).closePasskeyUpsellModal();
   }
   let obj = navigation(1483);
   navigation = obj.useNavigation();
-  const tmp4 = callback2();
+  const tmp4 = closure_13();
   [r10018, importDefault] = onRegisterSuccess(onCancel.useState(""), 2);
   const tmp5 = onRegisterSuccess(onCancel.useState(""), 2);
   [tmp7, dependencyMap] = onRegisterSuccess(onCancel.useState(false), 2);
   const items = [navigation];
   const layoutEffect = onCancel.useLayoutEffect(() => {
-    const obj = { headerLeft: navigation(closure_1_2[13]).getHeaderCloseButton(onCancel) };
+    const obj = { headerLeft: NavigatorHeader.getHeaderCloseButton(onCancel) };
     navigation.setOptions(obj);
   }, items);
-  obj1 = combinedDefault;
+  let obj1 = HelpdeskUtilsDefault;
   const articleURL = obj1.getArticleURL(HelpdeskArticles.SETTING_UP_TWO_FACTOR);
   obj = { bottom: true, style: tmp4.container, children: null };
   obj = { contentContainerStyle: tmp4.scrollViewContainer, children: null };
   obj1 = { style: tmp4.headerContainer, children: null };
   const tmp6 = onRegisterSuccess(onCancel.useState(false), 2);
-  const items1 = [callback(closure_6, { source: registerAssetDefault, style: tmp4.headerImage }), , ];
+  const items1 = [closure_11(closure_6, { source: _modDef14666, style: tmp4.headerImage }), , ];
   const obj3 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.headerText, children: null };
   let intl = navigation(1114).intl;
-  obj3[4] = intl.string(navigation(1114).t.CjleBl);
-  items1[1] = callback(navigation(4556).Text, obj3);
+  obj3.children = intl.string(navigation(1114).t.CjleBl);
+  items1[1] = closure_11(navigation(4556).Text, obj3);
   const obj4 = { variant: "heading-md/normal", color: "text-default", style: tmp4.headerText, children: null };
   let obj8 = navigation(1115);
-  const obj2 = { source: registerAssetDefault, style: tmp4.headerImage };
+  const obj2 = { source: _modDef14666, style: tmp4.headerImage };
   const tmp12 = closure_7;
   const intl2 = navigation(1114).intl;
   const string = intl2.string;
@@ -84,21 +88,21 @@ export default function PasskeyUpsellView() {
   } else {
     stringResult = string(t.d6uxJy);
   }
-  obj4[3] = stringResult;
-  items1[2] = callback(navigation(4556).Text, obj4);
-  obj1[1] = items1;
+  obj4.children = stringResult;
+  items1[2] = closure_11(navigation(4556).Text, obj4);
+  obj1.children = items1;
   const items2 = [closure_12(closure_5, obj1), , ];
   const obj5 = { style: tmp4.listContainer, children: null };
   const obj6 = { style: tmp4.row, children: null };
-  const items3 = [callback(closure_5, { style: tmp4.circleIcon }), ];
+  const items3 = [closure_11(closure_5, { style: tmp4.circleIcon }), ];
   obj8 = { variant: "heading-md/normal", color: "text-default", style: tmp4.text, children: null };
   const intl3 = tmp(1114).intl;
-  obj8[3] = intl3.string(navigation(1114).t.HtqVkj);
-  items3[1] = callback(navigation(4556).Text, obj8);
-  obj6[1] = items3;
+  obj8.children = intl3.string(navigation(1114).t.HtqVkj);
+  items3[1] = closure_11(navigation(4556).Text, obj8);
+  obj6.children = items3;
   const items4 = [closure_12(closure_5, obj6), ];
   const obj9 = { style: tmp4.row, children: null };
-  const items5 = [callback(closure_5, { style: tmp4.circleIcon }), ];
+  const items5 = [closure_11(closure_5, { style: tmp4.circleIcon }), ];
   const obj11 = { variant: "heading-md/normal", color: "text-default", style: tmp4.text, children: null };
   isIOSResult = obj8.isIOS();
   const obj10 = { style: tmp4.circleIcon };
@@ -112,17 +116,17 @@ export default function PasskeyUpsellView() {
   } else {
     string2Result = string2(t2.uYfqlo);
   }
-  obj11[3] = string2Result;
-  items5[1] = callback(navigation(4556).Text, obj11);
-  obj9[1] = items5;
+  obj11.children = string2Result;
+  items5[1] = closure_11(navigation(4556).Text, obj11);
+  obj9.children = items5;
   items4[1] = closure_12(closure_5, obj9);
-  obj5[1] = items4;
+  obj5.children = items4;
   items2[1] = closure_12(closure_5, obj5);
   const obj12 = { style: tmp4.buttonContainer, children: null };
   const obj13 = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl5 = tmp(1114).intl;
-  obj13[2] = intl5.format(navigation(1114).t.OeGXVv, { learnMoreLink: articleURL });
-  const items6 = [callback(navigation(4556).Text, obj13), , ];
+  obj13.children = intl5.format(navigation(1114).t.OeGXVv, { learnMoreLink: articleURL });
+  const items6 = [closure_11(navigation(4556).Text, obj13), , ];
   const intl6 = tmp(1114).intl;
   const string3 = intl6.string;
   const t3 = tmp(1114).t;
@@ -131,13 +135,13 @@ export default function PasskeyUpsellView() {
   } else {
     string3Result = string3(t3.NIFmCJ);
   }
-  items6[1] = callback(navigation(4975).Button, {
+  items6[1] = closure_11(navigation(4975).Button, {
     text: string3Result,
     onPress() {
-      let obj = closure_1_1(closure_1_2[11]);
-      obj.markDismissed(closure_1_10.TAKE_ACTION);
-      obj = { setRegistering: closure_2, setError: closure_1, onRegisterSuccess };
-      closure_1_1(closure_1_2[20]).registerPasskey(obj);
+      let obj = PasskeyUpsellManagerDefault;
+      obj.markDismissed(ContentDismissActionType.TAKE_ACTION);
+      obj = { setRegistering, setError, onRegisterSuccess };
+      NativeCeremoniesDefault.registerPasskey(obj);
     },
     size: "lg",
     disabled: tmp7,
@@ -152,10 +156,10 @@ export default function PasskeyUpsellView() {
   } else {
     string4Result = string4(t4["7J6/nG"]);
   }
-  items6[2] = callback(navigation(4975).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
-  obj12[1] = items6;
+  items6[2] = closure_11(navigation(4975).Button, { text: string4Result, onPress: onCancel, size: "lg", variant: "secondary", grow: true });
+  obj12.children = items6;
   items2[2] = closure_12(closure_5, obj12);
-  obj[1] = items2;
-  obj[2] = closure_12(tmp12, obj);
-  return callback(navigation(7123).SafeAreaPaddingView, obj);
+  obj.children = items2;
+  obj.children = closure_12(tmp12, obj);
+  return closure_11(navigation(7123).SafeAreaPaddingView, obj);
 };

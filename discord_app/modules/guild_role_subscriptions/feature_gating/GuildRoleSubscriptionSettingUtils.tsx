@@ -1,12 +1,12 @@
-// === Module 7260: computeGuildRoleSubscriptionSettingsVisibility ===
+// === Module 7260: GuildRoleSubscriptionSettingUtils ===
 
-// Module 7260 (computeGuildRoleSubscriptionSettingsVisibility)
-import set from "set" /* 2 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
-import set2 from "set" /* 7261 */;
-import closure_3 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+// Module 7260 (GuildRoleSubscriptionSettingUtils)
+import GuildRecord from "GuildRecord" /* 1975 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7261 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import UserStore from "UserStore" /* 1371 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function computeGuildRoleSubscriptionSettingsVisibility(guild) {
   const features = guild.guild.features;
@@ -49,50 +49,46 @@ function computeGuildRoleSubscriptionSettingsVisibility(guild) {
   return NONE;
 }
 function useGuildRoleSubscriptionSettingsVisibility(stateFromStores) {
-  const _require = stateFromStores;
-  obj = _require(504);
-  const items = [closure_3];
+  _require = stateFromStores;
+  closure_129_0 = stateFromStores;
+  let obj = require("initialize");
+  const items = [PermissionStore];
   const items1 = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);
+      canResult = PermissionStore.can(constants2.ADMINISTRATOR, tmp);
     }
     return canResult;
   }, items1);
-  const items2 = [closure_4];
-  const stateFromStores1 = _require(504).useStateFromStores(items2, () => {
+  const items2 = [UserStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
-      tmp3 = closure_1_2(tmp2, tmp);
+      tmp3 = isGuildOwner(tmp2, tmp);
     }
     return tmp3;
   });
-  const obj2 = _require(504);
-  const isUserInCreatorMonetizationEligibleCountry = _require(7261).useIsUserInCreatorMonetizationEligibleCountry();
-  _require(7253);
+  const obj2 = require("initialize");
+  const isUserInCreatorMonetizationEligibleCountry = require("CreatorMonetizationEligibilityExperimentUtils").useIsUserInCreatorMonetizationEligibleCountry();
+  require("CreatorMonetizationRestrictionsHooks");
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
   if (null == stateFromStores) {
     let NONE = obj.NONE;
   } else {
-    obj = { guild: null, isOwner: null, canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-    obj[0] = stateFromStores;
-    obj[1] = stateFromStores1;
-    obj[2] = stateFromStores;
-    obj[3] = isUserInCreatorMonetizationEligibleCountry;
-    obj[4] = tmp5;
+    obj = { guild: stateFromStores, isOwner: stateFromStores1, canManageGuildRoleSubscriptions: stateFromStores, isUserInCreatorMonetizationEligibleCountry, shouldRestrictUpdatingRoleSubscriptionSettings: tmp5 };
     NONE = computeGuildRoleSubscriptionSettingsVisibility(obj);
   }
   return NONE;
 }
-const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
-({ GuildFeatures: c5, Permissions: closure_6 } = ME);
-let obj = { NONE: 0, [0]: "NONE", VISIBLE: 1, [1]: "VISIBLE" };
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx");
+const isGuildOwner = GuildRecord.isGuildOwner;
+({ GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);
+const GuildRoleSubscriptionSettingsVisibility = { NONE: 0, [0]: "NONE", VISIBLE: 1, [1]: "VISIBLE" };
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/GuildRoleSubscriptionSettingUtils.tsx");
 
-export const GuildRoleSubscriptionSettingsVisibility = obj;
+export { GuildRoleSubscriptionSettingsVisibility };
 export const canSeeGuildRoleSubscriptionSettingsContent = function canSeeGuildRoleSubscriptionSettingsContent(canManageGuildRoleSubscriptions) {
   ({ guild, isOwner, shouldRestrictUpdatingRoleSubscriptionSettings } = canManageGuildRoleSubscriptions);
   let prop = canManageGuildRoleSubscriptions.canManageGuildRoleSubscriptions;
@@ -136,18 +132,16 @@ export const getGuildRoleSubscriptionSettingsVisibility = function getGuildRoleS
   if (null == guild) {
     return obj.NONE;
   } else {
-    obj = { guild: null, isOwner: null, canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
-    obj[0] = guild;
-    obj[1] = isGuildOwner(guild, currentUser.getCurrentUser());
+    obj = { guild, isOwner: isGuildOwner(guild, UserStore.getCurrentUser()), canManageGuildRoleSubscriptions: null, isUserInCreatorMonetizationEligibleCountry: null, shouldRestrictUpdatingRoleSubscriptionSettings: null };
     let canResult = null != guild;
     if (canResult) {
-      canResult = closure_3.can(constants2.ADMINISTRATOR, guild);
+      canResult = PermissionStore.can(constants2.ADMINISTRATOR, guild);
     }
-    obj[2] = canResult;
-    obj = set2;
-    obj[3] = obj.isUserInCreatorMonetizationEligibleCountry();
+    obj.canManageGuildRoleSubscriptions = canResult;
+    obj = CreatorMonetizationEligibilityExperimentUtils;
+    obj.isUserInCreatorMonetizationEligibleCountry = obj.isUserInCreatorMonetizationEligibleCountry();
     const features = guild.features;
-    obj[4] = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
+    obj.shouldRestrictUpdatingRoleSubscriptionSettings = features.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
     return computeGuildRoleSubscriptionSettingsVisibility(obj);
   }
 };
@@ -155,13 +149,13 @@ export const useCanSeeGuildRoleSubscriptionSettings = function useCanSeeGuildRol
   return useGuildRoleSubscriptionSettingsVisibility(guild) !== obj.NONE;
 };
 export const useCanManageGuildRoleSubscriptions = function useCanManageGuildRoleSubscriptions(guild) {
-  const _require = guild;
-  const items = [closure_3];
+  _require = guild;
+  const items = [PermissionStore];
   const items1 = [guild];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = closure_1_3.can(closure_1_6.ADMINISTRATOR, tmp);
+      canResult = PermissionStore.can(constants2.ADMINISTRATOR, tmp);
     }
     return canResult;
   }, items1);
@@ -169,7 +163,7 @@ export const useCanManageGuildRoleSubscriptions = function useCanManageGuildRole
 export const canManageGuildRoleSubscriptions = function canManageGuildRoleSubscriptions(stateFromStores) {
   let canResult = null != stateFromStores;
   if (canResult) {
-    canResult = closure_3.can(constants2.ADMINISTRATOR, stateFromStores);
+    canResult = PermissionStore.can(constants2.ADMINISTRATOR, stateFromStores);
   }
   return canResult;
 };

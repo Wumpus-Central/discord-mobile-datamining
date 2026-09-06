@@ -1,29 +1,31 @@
 // === Module 13164: HeadlessCollectiblesPurchaseFlow ===
 
 // Module 13164 (HeadlessCollectiblesPurchaseFlow)
-import noopAll from "noop" /* 19 */;
-import set from "set" /* 1115 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 8842 */;
-import apexExperiment from "apexExperiment" /* 9365 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8176 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8842 */;
+import ACOMExperiments from "ACOMExperiments" /* 9365 */;
 import NativeCheckoutStoreProviderDefault from "NativeCheckoutStoreProvider" /* 10804 */;
-import NativePaymentContextProvider from "NativePaymentContextProvider" /* 10822 */;
+import NativePaymentContext from "NativePaymentContext" /* 10822 */;
 import useCollectiblesExternalGatewayFacetDefault from "useCollectiblesExternalGatewayFacet" /* 11009 */;
 import HeadlessCollectiblesPurchaseRunner from "HeadlessCollectiblesPurchaseRunner" /* 13165 */;
-import { COLLECTIBLES_APPLICATION_ID as closure_3 } from "ME" /* 1074 */;
-import { PaymentGateways } from "sum" /* 1085 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let result = require("set").fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx");
+require = fn;
+const application_id = fn(1074).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1085).PaymentGateways;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/native/headless_components/HeadlessCollectiblesPurchaseFlow.tsx");
 
 export default function HeadlessCollectiblesPurchaseFlow(arg0) {
   ({ product, analyticsLocations } = arg0);
   ({ attempt, onBuy, onBuySettled, stageCollectibleChangeForEditProfile } = arg0);
-  const OTPACOMOrderExperiment = apexExperiment.OTPACOMOrderExperiment;
-  let obj = getProductPurchaseState;
+  const OTPACOMOrderExperiment = ACOMExperiments.OTPACOMOrderExperiment;
+  let obj = useProductPurchaseState;
   const isPurchased = obj.useProductPurchaseState(product).isPurchased;
-  obj1 = set;
+  let obj1 = PlatformUtils;
   if (obj1.isIOS()) {
     let GOOGLE = tmp5.APPLE_ADVANCED_COMMERCE;
     let tmp6 = tmp5;
@@ -49,47 +51,48 @@ export default function HeadlessCollectiblesPurchaseFlow(arg0) {
     headless: true,
     paymentGateway: GOOGLE,
     orderRequired: tmp7,
-    skuIds: items,
+    skuIds: null,
     isGift: false,
     activeSubscription: null,
     initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
     onOrderRetryCancellation() {
-      return callback2(4527).hideActionSheet(callback(8176).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return ActionSheetActionCreatorsDefault.hideActionSheet(openProductDetailsActionSheet.PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
-    checkoutAnalyticsFields: obj1,
+    checkoutAnalyticsFields: null,
     children: null
   };
-  items = [product.skuId];
-  obj1 = { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id: closure_3 };
-  const tmp3 = importDefault;
+  const items = [product.skuId];
+  obj.skuIds = items;
+  obj1 = { is_gift: false, location_stack: analyticsLocations, payment_type: "sku", sku_id: product.skuId, application_id };
+  obj.checkoutAnalyticsFields = obj1;
   const tmp4 = useCollectiblesExternalGatewayFacetDefault(product);
-  obj[9] = jsx(HeadlessCollectiblesPurchaseRunner.HeadlessCollectiblesPurchaseRunner, { product, attempt, analyticsLocations, onBuy, onBuySettled, stageCollectibleChangeForEditProfile });
-  obj[2] = jsx(NativeCheckoutStoreProviderDefault, {
+  obj.children = jsx(HeadlessCollectiblesPurchaseRunner.HeadlessCollectiblesPurchaseRunner, { product, attempt, analyticsLocations, onBuy, onBuySettled, stageCollectibleChangeForEditProfile });
+  obj.children = jsx(NativeCheckoutStoreProviderDefault, {
     headless: true,
     paymentGateway: GOOGLE,
     orderRequired: tmp7,
-    skuIds: items,
+    skuIds: null,
     isGift: false,
     activeSubscription: null,
     initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
     onOrderRetryCancellation() {
-      return callback2(4527).hideActionSheet(callback(8176).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return ActionSheetActionCreatorsDefault.hideActionSheet(openProductDetailsActionSheet.PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
-    checkoutAnalyticsFields: obj1,
+    checkoutAnalyticsFields: null,
     children: null
   }, product.skuId);
-  return jsx(NativePaymentContextProvider.NativePaymentContextProvider, {
+  return jsx(NativePaymentContext.NativePaymentContextProvider, {
     headless: true,
     paymentGateway: GOOGLE,
     orderRequired: tmp7,
-    skuIds: items,
+    skuIds: null,
     isGift: false,
     activeSubscription: null,
     initialExternalGatewayFacet: useCollectiblesExternalGatewayFacetDefault(product),
     onOrderRetryCancellation() {
-      return callback2(4527).hideActionSheet(callback(8176).PRODUCT_DETAILS_ACTION_SHEET_KEY);
+      return ActionSheetActionCreatorsDefault.hideActionSheet(openProductDetailsActionSheet.PRODUCT_DETAILS_ACTION_SHEET_KEY);
     },
-    checkoutAnalyticsFields: obj1,
+    checkoutAnalyticsFields: null,
     children: null
   });
 };

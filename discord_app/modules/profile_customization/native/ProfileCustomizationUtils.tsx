@@ -1,21 +1,18 @@
-// === Module 8247: useUserProfileBannerBackgroundColor ===
+// === Module 8247: profile_customization/ProfileCustomizationUtils ===
 
-// Module 8247 (useUserProfileBannerBackgroundColor)
-import set from "set" /* 2 */;
-import int2hslRaw from "int2hslRaw" /* 1091 */;
-import getAvatarURL2 from "getAvatarURL" /* 1396 */;
-import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8248 */;
+// Module 8247 (profile_customization/ProfileCustomizationUtils)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import AvatarUtils from "AvatarUtils" /* 1396 */;
+import VideoBackground from "VideoBackground" /* 8248 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
+const result = size.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
 export const useUserProfileBannerBackgroundColor = function useUserProfileBannerBackgroundColor(arg0) {
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
-    const obj3 = useDominantRGBFromImage;
-    const memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(null);
-    const obj4 = int2hslRaw;
+    const memoizedImageSourceResult = VideoBackground.memoizedImageSource(null);
     let primaryColor;
-    const obj5 = useDominantRGBFromImage;
     if (displayProfile != null) {
       primaryColor = displayProfile.primaryColor;
     }
@@ -26,24 +23,22 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   } else if (null == pendingAvatarSrc) {
     pendingAvatarSrc = user.getAvatarURL(tmp, 80);
   } else if (pendingAvatarSrc == null) {
-    let obj = getAvatarURL2;
-    obj = {};
+    const obj = {};
     const merged = Object.assign(user);
     obj.avatar = null;
     pendingAvatarSrc = obj.getUserAvatarURL(obj);
   }
 };
-export const getAvatarSource = function getAvatarSource(getAvatarURL) {
+export const getAvatarSource = function getAvatarSource(getAvatarURL, arg1, arg2, arg3) {
   if (null == getAvatarURL) {
     return null;
   } else {
     let userAvatarURL = arg2;
     if (undefined === arg2) {
-      let memoizedImageSourceResult = useDominantRGBFromImage.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
-      const obj4 = useDominantRGBFromImage;
+      let memoizedImageSourceResult = VideoBackground.memoizedImageSource(getAvatarURL.getAvatarURL(arg1, 80, !arg3));
       const tmp2 = !arg3;
     } else {
-      let obj = useDominantRGBFromImage;
+      let obj = VideoBackground;
       if (userAvatarURL == null) {
         obj = {};
         const merged = Object.assign(getAvatarURL);

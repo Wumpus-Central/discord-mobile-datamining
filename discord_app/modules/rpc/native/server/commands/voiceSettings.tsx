@@ -1,22 +1,22 @@
-// === Module 14516: items ===
+// === Module 14516: voiceSettings ===
 
-// Module 14516 (items)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4465 */;
-import set2 from "set" /* 8339 */;
-import validateSocketClient from "validateSocketClient" /* 9558 */;
+// Module 14516 (voiceSettings)
+import Constants from "Constants" /* 1074 */;
+import Constants2 from "Constants" /* 4465 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8339 */;
+import NativeRPCHelpers from "NativeRPCHelpers" /* 9558 */;
+import size from "module_2" /* 2 */;
 
 let obj = {};
 obj = { scope: null, handler: null };
 obj = {};
-const items = [set2.OAuth2Scopes.RPC, set2.OAuth2Scopes.RPC_VOICE_READ];
-obj[RPC_SCOPE_CONFIG.RPC_SCOPE_CONFIG.ANY] = items;
-obj[0] = obj;
-obj[1] = function handler() {
-  return validateSocketClient.getDeprecatedVoiceSettings();
+const items = [OAuth2Scopes.OAuth2Scopes.RPC, OAuth2Scopes.OAuth2Scopes.RPC_VOICE_READ];
+obj[Constants2.RPC_SCOPE_CONFIG.ANY] = items;
+obj.scope = obj;
+obj.handler = function handler() {
+  return NativeRPCHelpers.getDeprecatedVoiceSettings();
 };
-obj[ME.RPCCommands.GET_VOICE_SETTINGS] = obj;
-const result = set.fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");
+obj[Constants.RPCCommands.GET_VOICE_SETTINGS] = obj;
+const result = size.fileFinishedImporting("modules/rpc/native/server/commands/voiceSettings.tsx");
 
 export default obj;

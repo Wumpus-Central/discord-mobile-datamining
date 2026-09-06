@@ -1,9 +1,9 @@
-// === Module 4547: set ===
+// === Module 4547: RegexUtils ===
 
-// Module 4547 (set)
-import set from "set" /* 2 */;
+// Module 4547 (RegexUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/RegexUtils.tsx");
+const result = size.fileFinishedImporting("utils/RegexUtils.tsx");
 
 export default {
   escape(str) {

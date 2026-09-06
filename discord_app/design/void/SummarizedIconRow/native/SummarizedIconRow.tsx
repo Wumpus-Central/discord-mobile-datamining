@@ -1,89 +1,118 @@
-// === Module 14097: OverflowSquircle ===
+// === Module 14097: SummarizedIconRow ===
 
-// Module 14097 (OverflowSquircle)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14097 (SummarizedIconRow)
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function OverflowSquircle(arg0) {
   ({ overflow, style } = arg0);
-  const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.overflowSquircleWrap, style];
+  const tmp = closure_4();
+  let obj = { style: null, children: null };
+  const items = [tmp.overflowSquircleWrap, style];
+  obj.style = items;
   obj = { style: tmp.overflowSquircle, children: null };
   obj = { variant: "text-xs/medium", children: "+" + overflow };
-  obj[1] = jsx(Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
-  obj[1] = <View variant="text-xs/medium">{"+" + overflow}</View>;
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
+  obj.children = <View variant="text-xs/medium">{"+" + overflow}</View>;
   return <View variant="text-xs/medium">{"+" + overflow}</View>;
 }
-noopAll;
-createCacheKey = { container: { flexDirection: "row", alignItems: "center" }, iconWrapper: { alignItems: "center", justifyContent: "center" }, overflowSquircleWrap: null, overflowSquircle: null, overflowTextOnly: null, overflowCircleWrap: null, overflowCircle: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md };
-createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
-let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
-createCacheKey[4] = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-let obj2 = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
-const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
-createCacheKey[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, margin: 2, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 15 };
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, margin: 2, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 15 };
-const result = require("set").fileFinishedImporting("design/void/SummarizedIconRow/native/SummarizedIconRow.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: { flexDirection: "row", alignItems: "center" }, iconWrapper: { alignItems: "center", justifyContent: "center" }, overflowSquircleWrap: null, overflowSquircle: null, overflowTextOnly: null, overflowCircleWrap: null, overflowCircle: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
+createStyles.overflowSquircleWrap = createStyles;
+createStyles.overflowSquircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
+let obj1 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 3, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 10 };
+createStyles.overflowTextOnly = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj2 = { margin: 2, paddingHorizontal: 8, height: 32, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+createStyles.overflowCircleWrap = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
+const obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: 17 };
+createStyles.overflowCircle = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, margin: 2, paddingHorizontal: 8, height: 30, alignItems: "center", justifyContent: "center", borderRadius: 15 };
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/SummarizedIconRow/native/SummarizedIconRow.tsx");
 
-export default function SummarizedIconRow(items) {
-  items = items.items;
-  let num = items.max;
+export default function SummarizedIconRow(max) {
+  let items = max.items;
+  let num = max.max;
   if (num === undefined) {
     num = 8;
   }
-  ({ renderItem: View, offsetAmount: jsx, iconWrapperStyle: closure_4, overflowStyle: OverflowSquircle, overflowComponent, style } = items);
+  ({ renderItem: View, offsetAmount: jsx, iconWrapperStyle: closure_4, overflowStyle: OverflowSquircle, overflowComponent, style } = max);
   if (overflowComponent === undefined) {
     overflowComponent = OverflowSquircle;
   }
-  closure_7 = undefined;
-  closure_8 = undefined;
-  const tmp = callback();
-  closure_7 = tmp;
+  const tmp = closure_4();
   closure_8 = Math.max(items.length - num, 0);
+  let obj = {
+    style: null,
+    children: items.map((item, index) => {
+      if (index < num) {
+        if (index === num - 1) {
+          if (closure_8 > 0) {
+            let obj = { style: null, overflow: null };
+            obj = { marginLeft };
+            items = [obj, OverflowSquircle];
+            obj.style = items;
+            obj.overflow = tmp2 + 1;
+            let tmp7 = <overflowComponent key={arg1} marginLeft={marginLeft} />;
+          }
+          return tmp7;
+        }
+        const _Math = Math;
+        tmp7 = null;
+        if (item) {
+          let items1 = [iconWrapper.iconWrapper, closure_1_4, ];
+          if (0 !== index) {
+            const obj1 = { marginLeft };
+            obj = obj1;
+          } else {
+            obj = {};
+          }
+          const obj2 = { style: null, children: null };
+          items1[2] = obj;
+          obj2.style = items1;
+          items1 = closure_1_2(item, index === tmp6);
+          obj2.children = items1;
+          <View key={arg1} style={null}>{null}</View>;
+        }
+      }
+    })
+  };
   let items1 = [tmp.container, style];
-  return <View style={items1}>{items.map((arg0, arg1) => {
-    if (arg1 < num) {
-      if (arg1 === num - 1) {
+  obj.style = items1;
+  return <View style={null}>{items.map((item, index) => {
+    if (index < num) {
+      if (index === num - 1) {
         if (closure_8 > 0) {
           let obj = { style: null, overflow: null };
-          obj = { marginLeft: null };
-          obj[0] = closure_3;
-          items = [obj, closure_5];
-          obj[0] = items;
-          obj[1] = tmp2 + 1;
-          let tmp7 = closure_1_3(overflowComponent, obj, arg1);
+          obj = { marginLeft };
+          items = [obj, OverflowSquircle];
+          obj.style = items;
+          obj.overflow = tmp2 + 1;
+          let tmp7 = <overflowComponent key={arg1} marginLeft={marginLeft} />;
         }
         return tmp7;
       }
       const _Math = Math;
       tmp7 = null;
-      if (arg0) {
-        let items1 = [iconWrapper.iconWrapper, closure_4, ];
-        if (0 !== arg1) {
-          obj1 = { marginLeft: null };
-          obj1[0] = closure_3;
+      if (item) {
+        let items1 = [iconWrapper.iconWrapper, closure_1_4, ];
+        if (0 !== index) {
+          const obj1 = { marginLeft };
           obj = obj1;
         } else {
           obj = {};
         }
         const obj2 = { style: null, children: null };
         items1[2] = obj;
-        obj2[0] = items1;
-        items1 = callback(arg0, arg1 === tmp6);
-        obj2[1] = items1;
-        closure_1_3(closure_1_2, obj2, arg1);
-        const tmp8 = closure_1_3;
-        const tmp9 = closure_1_2;
+        obj2.style = items1;
+        items1 = closure_1_2(item, index === tmp6);
+        obj2.children = items1;
+        <View key={arg1} style={null}>{null}</View>;
       }
     }
   })}</View>;
@@ -91,29 +120,30 @@ export default function SummarizedIconRow(items) {
 export const OverflowText = function OverflowText(arg0) {
   ({ overflow, style } = arg0);
   let obj = { style: null, children: null };
-  const items = [callback().overflowTextOnly, style];
-  obj[0] = items;
+  const items = [closure_4().overflowTextOnly, style];
+  obj.style = items;
   obj = { variant: "text-xs/medium", children: "+" + overflow };
-  obj[1] = jsx(Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
   return <View variant="text-xs/medium">{"+" + overflow}</View>;
 };
 export const OverflowTextSmall = function OverflowTextSmall(arg0) {
   ({ overflow, style } = arg0);
   let obj = { style: null, children: null };
-  const items = [callback().overflowTextOnly, style];
-  obj[0] = items;
+  const items = [closure_4().overflowTextOnly, style];
+  obj.style = items;
   obj = { variant: "text-xxs/medium", children: "+" + overflow };
-  obj[1] = jsx(Text.Text, { variant: "text-xxs/medium", children: "+" + overflow });
+  obj.children = jsx(Text_Text.Text, { variant: "text-xxs/medium", children: "+" + overflow });
   return <View variant="text-xxs/medium">{"+" + overflow}</View>;
 };
 export const OverflowCircle = function OverflowCircle(arg0) {
   ({ overflow, style } = arg0);
-  const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.overflowCircleWrap, style];
+  const tmp = closure_4();
+  let obj = { style: null, children: null };
+  const items = [tmp.overflowCircleWrap, style];
+  obj.style = items;
   obj = { style: tmp.overflowCircle, children: null };
   obj = { variant: "text-xs/medium", children: "+" + overflow };
-  obj[1] = jsx(Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
-  obj[1] = <View variant="text-xs/medium">{"+" + overflow}</View>;
+  obj.children = jsx(Text_Text.Text, { variant: "text-xs/medium", children: "+" + overflow });
+  obj.children = <View variant="text-xs/medium">{"+" + overflow}</View>;
   return <View variant="text-xs/medium">{"+" + overflow}</View>;
 };

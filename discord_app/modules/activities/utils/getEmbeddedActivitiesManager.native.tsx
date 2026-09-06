@@ -1,10 +1,10 @@
 // === Module 9514: getEmbeddedActivitiesManager ===
 
 // Module 9514 (getEmbeddedActivitiesManager)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getEmbeddedActivitiesManager.native.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getEmbeddedActivitiesManager.native.tsx");
 
 export default function getEmbeddedActivitiesManager() {
-  return importDefault(9515);
+  return require("EmbeddedActivitiesNativeManager");
 };

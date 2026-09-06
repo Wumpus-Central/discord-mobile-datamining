@@ -1,73 +1,77 @@
 // === Module 10164: NotificationSettingsMockChannels ===
 
 // Module 10164 (NotificationSettingsMockChannels)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { UnreadSetting } from "ReadStateTypes" /* 4742 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import TextIcon from "TextIcon" /* 5080 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 10165 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { card: null, channel: null, channelName: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, paddingVertical: 8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: 4, justifyContent: "space-between", paddingRight: 12 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMockChannels.tsx");
+require = fn;
+const View = fn(17).View;
+const UnreadSetting = fn(4742).UnreadSetting;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { card: null, channel: null, channelName: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, paddingVertical: 8 };
+createStyles.card = createStyles;
+createStyles.channel = { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: 4, justifyContent: "space-between", paddingRight: 12 };
+createStyles.channelName = { display: "flex", flexDirection: "row", alignItems: "center" };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMockChannels.tsx");
 
 export default function NotificationSettingsMockChannels(unreadSetting) {
-  const tmp = callback2();
-  const _require = tmp;
+  const tmp = closure_7();
+  _require = tmp;
   let obj = { badged: true, unread: true, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, name: null };
-  const intl = _require(1114).intl;
-  obj[3] = intl.string(_require(1114).t.EjLobP);
+  const intl = require("util").intl;
+  obj.name = intl.string(require("util").t.EjLobP);
   let items = [obj, , ];
   obj = { badged: false, unread: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-  const intl2 = _require(1114).intl;
-  obj[3] = intl2.string(_require(1114).t.Wgpwpp);
+  const intl2 = require("util").intl;
+  obj.name = intl2.string(require("util").t.Wgpwpp);
   items[1] = obj;
   obj = { badged: false, unread: false, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-  const intl3 = _require(1114).intl;
-  obj[3] = intl3.string(_require(1114).t.g9VImh);
+  const intl3 = require("util").intl;
+  obj.name = intl3.string(require("util").t.g9VImh);
   items[2] = obj;
   if (unreadSetting.unreadSetting === UnreadSetting.ALL_MESSAGES) {
     items[1].resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;
   }
-  return callback(View, {
+  return closure_5(View, {
     style: tmp.card,
     children: items.map((unread) => {
-      let obj = { style: lib.channel, children: null };
-      obj = { style: lib.channelName, children: null };
+      let obj = { style: closure_0.channel, children: null };
+      obj = { style: closure_0.channelName, children: null };
       obj = { unread: unread.unread, resolvedUnreadSetting: unread.resolvedUnreadSetting };
-      const items = [closure_1_5(closure_1_1(closure_1_2[7]), obj), , ];
-      obj1 = { style: { marginLeft: 12 }, size: "xs", color: null };
+      const items = [hasOwnProperty(StaticChannelIndicatorDefault, obj), , ];
+      const obj1 = { style: { marginLeft: 12 }, size: "xs", color: null };
       let str;
-      if (unread.resolvedUnreadSetting === closure_1_4.ONLY_MENTIONS) {
+      if (unread.resolvedUnreadSetting === UnreadSetting.ONLY_MENTIONS) {
         str = "text-muted";
       }
-      obj1[2] = str;
-      items[1] = closure_1_5(lib(closure_1_2[8]).TextIcon, obj1);
+      obj1.color = str;
+      items[1] = hasOwnProperty(TextIcon.TextIcon, obj1);
       const obj2 = { style: { marginLeft: 4 }, variant: "text-sm/semibold", color: null, children: null };
       let str2;
-      if (unread.resolvedUnreadSetting === closure_1_4.ONLY_MENTIONS) {
+      if (unread.resolvedUnreadSetting === UnreadSetting.ONLY_MENTIONS) {
         str2 = "text-muted";
       }
-      obj2[2] = str2;
-      obj2[3] = unread.name;
-      items[2] = closure_1_5(lib(closure_1_2[9]).Text, obj2);
-      obj[1] = items;
-      const items1 = [closure_1_6(closure_1_3, obj), ];
+      obj2.color = str2;
+      obj2.children = unread.name;
+      items[2] = hasOwnProperty(Text_Text.Text, obj2);
+      obj.children = items;
+      const items1 = [timestampProducer(View, obj), ];
       let num = 0;
       if (unread.badged) {
         num = 1;
       }
-      items1[1] = closure_1_5(lib(closure_1_2[10]).Badge, { value: num });
-      obj[1] = items1;
-      return closure_1_6(closure_1_3, obj, unread.name);
+      items1[1] = hasOwnProperty(native.Badge, { value: num });
+      obj.children = items1;
+      return timestampProducer(View, obj, unread.name);
     })
   });
 };

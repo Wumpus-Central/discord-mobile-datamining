@@ -1,17 +1,19 @@
-// === Module 14719: useAlwaysShow ===
+// === Module 14719: DismissibleBadgeUtils ===
 
-// Module 14719 (useAlwaysShow)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 14719 (DismissibleBadgeUtils)
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14718 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 function useAlwaysShow() {
   return true;
 }
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
 let closure_7 = [];
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DismissibleBadgeUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DismissibleBadgeUtils.tsx");
 
 export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS, useShouldShowTinyBroncoAccountStatus) {
   closure_0 = TINY_BRONCO_SETTINGS;
@@ -21,48 +23,48 @@ export function createDismissibleBadgePreNavigationAction(TINY_BRONCO_SETTINGS, 
   }
   closure_1 = tmp;
   return () => {
-    const tmp = callback();
+    const tmp = closure_1();
     if (tmp) {
       const items = [first];
       let tmp2 = items;
     } else {
       tmp2 = closure_1_7;
     }
-    const tmp4 = closure_1_3(CUSTOM_APP_ICONS_NEW_BADGE(closure_1_2[4]).useSelectedDismissibleContent(tmp2), 2);
+    const tmp4 = _slicedToArray(dismissibleContent(dependencyMap[4]).useSelectedDismissibleContent(tmp2), 2);
     first = tmp4[0];
-    callback = tmp6;
+    closure_1 = tmp6;
     const items1 = [first, tmp4[1]];
-    return closure_1_4.useCallback(() => {
-      if (first === first) {
-        callback(closure_2_5.TAKE_ACTION);
+    return React.useCallback(() => {
+      if (first === closure_0) {
+        closure_1(ContentDismissActionType.TAKE_ACTION);
       }
       return true;
     }, items1);
   };
 }
 export function createDismissibleBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
-  closure_0 = CUSTOM_APP_ICONS_NEW_BADGE;
-  closure_0 = CUSTOM_APP_ICONS_NEW_BADGE;
-  closure_1 = useAlwaysShow;
+  const dismissibleContent = CUSTOM_APP_ICONS_NEW_BADGE;
+  closure_129_0 = CUSTOM_APP_ICONS_NEW_BADGE;
+  closure_129_1 = useAlwaysShow;
   return {
     useTrailing() {
-      return closure_1_6(callback(closure_1_2[5]), { dismissibleContent: closure_0, newPremiumStyle: true });
+      return jsx(DismissiblePremiumNewBadgeDefault, { dismissibleContent, newPremiumStyle: true });
     },
     usePreNavigationAction: () => {
-      const tmp = callback();
+      const tmp = closure_1();
       if (tmp) {
         const items = [first];
         let tmp2 = items;
       } else {
         tmp2 = closure_1_7;
       }
-      const tmp4 = closure_1_3(CUSTOM_APP_ICONS_NEW_BADGE(closure_1_2[4]).useSelectedDismissibleContent(tmp2), 2);
+      const tmp4 = _slicedToArray(dismissibleContent(dependencyMap[4]).useSelectedDismissibleContent(tmp2), 2);
       first = tmp4[0];
-      callback = tmp6;
+      closure_1 = tmp6;
       const items1 = [first, tmp4[1]];
-      return closure_1_4.useCallback(() => {
-        if (first === first) {
-          callback(closure_2_5.TAKE_ACTION);
+      return React.useCallback(() => {
+        if (first === closure_0) {
+          closure_1(ContentDismissActionType.TAKE_ACTION);
         }
         return true;
       }, items1);

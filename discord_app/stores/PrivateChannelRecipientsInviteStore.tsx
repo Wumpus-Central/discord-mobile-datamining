@@ -1,38 +1,35 @@
-// === Module 13754: performQuery ===
+// === Module 13754: PrivateChannelRecipientsInviteStore ===
 
-// Module 13754 (performQuery)
+// Module 13754 (PrivateChannelRecipientsInviteStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isNullOrEmpty from "isNullOrEmpty" /* 1925 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import getTransformedUserDefault from "getTransformedUser" /* 9839 */;
-import closure_4 from "getHash" /* 4476 */;
-import closure_5 from "recomputeAffinities" /* 7659 */;
-import { PrivateChannelRecord } from "createChannelRecord" /* 1961 */;
-import closure_7 from "ensureGuildLoaded" /* 1957 */;
-import closure_8 from "hasConsented" /* 6595 */;
-import closure_9 from "handleChannelSelect" /* 5509 */;
-import closure_10 from "trackCommunicationDisabled" /* 2021 */;
-import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "markAllUserIdListsStale" /* 4209 */;
-import closure_13 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import StringUtils from "StringUtils" /* 1925 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9839 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import ConsentStore from "ConsentStore" /* 6595 */;
+import FrecencyStore from "FrecencyStore" /* 5509 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function performQuery() {
   if (c15) {
-    channel = channel.getChannel(c22);
-    if (0 === _var.trim().length) {
+    const channel = ChannelStore.getChannel(channelId);
+    if (0 === query.trim().length) {
       if (null != closure_3) {
         closure_3.clearQuery();
       }
-      closure_0 = channel;
-      let arr = authStore;
-      const currentUser = authStore.getCurrentUser();
-      obj1 = currentUser;
+      closure_129_0 = channel;
+      let arr = UserStore;
+      const currentUser = UserStore.getCurrentUser();
+      closure_129_1 = currentUser;
       const items = [];
-      HermesBuiltin.arraySpread(store.getFriendIDs(), 0);
+      HermesBuiltin.arraySpread(RelationshipStore.getFriendIDs(), 0);
       let isStaffResult;
       if (currentUser != null) {
         isStaffResult = currentUser.isStaff();
@@ -60,13 +57,13 @@ function performQuery() {
       }
       let found1 = arr;
       if (isGroupDMResult) {
-        found1 = arr.filter((arg0) => {
+        found1 = arr.filter((item) => {
           recipients = recipients.recipients;
-          return !recipients.includes(arg0);
+          return !recipients.includes(item);
         });
       }
-      const reduced = found1.reduce((arr) => {
-        const user = closure_1_13.getUser(arg1);
+      const reduced = found1.reduce((arr, item) => {
+        const user = UserStore.getUser(item);
         if (null != user) {
           if (!user.isProvisional) {
             if (user.bot) {
@@ -78,9 +75,7 @@ function performQuery() {
                 obj2 = obj1;
               }
             }
-            const obj = { user: null, comparator: null };
-            obj[0] = user;
-            obj[1] = obj1(closure_1_2[12]).getName(user);
+            const obj = { user, comparator: UserUtilsDefault.getName(user) };
             arr.push(obj);
             return arr;
           }
@@ -93,7 +88,7 @@ function performQuery() {
       }
       return true;
     } else {
-      const currentUser1 = authStore.getCurrentUser();
+      const currentUser1 = UserStore.getCurrentUser();
       let flag2;
       if (currentUser1 != null) {
         flag2 = currentUser1.isStaff();
@@ -102,36 +97,32 @@ function performQuery() {
         flag2 = false;
       }
       if (null != closure_3) {
-        let obj = { query: null, filters: null, blacklist: null, boosters: null };
-        obj[0] = _var;
-        obj = { friends: true, staff: null, provisional: false };
-        obj[1] = flag2;
-        obj[1] = obj;
-        obj[2] = tmp4;
-        closure_0 = undefined;
-        obj1 = undefined;
-        frequentlyWithoutFetchingLatest = frequentlyWithoutFetchingLatest.getFrequentlyWithoutFetchingLatest();
-        const found2 = frequentlyWithoutFetchingLatest.filter((isDM) => isDM instanceof closure_6 && isDM.isDM());
+        let obj = { query, filters: null, blacklist: null, boosters: null };
+        obj = { friends: true, staff: flag2, provisional: false };
+        obj.filters = obj;
+        obj.blacklist = tmp4;
+        const frequentlyWithoutFetchingLatest = FrecencyStore.getFrequentlyWithoutFetchingLatest();
+        const found2 = frequentlyWithoutFetchingLatest.filter((isDM) => isDM instanceof PrivateChannelRecord && isDM.isDM());
         const _Math = Math;
         const items2 = [];
         HermesBuiltin.arraySpread(found2.map((id) => scoreWithoutFetchingLatest.getScoreWithoutFetchingLatest(id.id)), 0);
         const _Math2 = Math;
-        closure_0 = HermesBuiltin.apply(items2, Math);
-        obj1 = {};
+        let recipients = HermesBuiltin.apply(items2, Math);
+        const obj1 = {};
         const item = found2.forEach((id) => {
-          const scoreWithoutFetchingLatest = closure_1_9.getScoreWithoutFetchingLatest(id.id);
+          scoreWithoutFetchingLatest = FrecencyStore.getScoreWithoutFetchingLatest(id.id);
           const recipientId = id.getRecipientId();
           let num = 0;
-          if (closure_1_12.isFriend(recipientId)) {
+          if (RelationshipStore.isFriend(recipientId)) {
             num = 0.2;
           }
           let num2 = 0;
-          if (null != closure_1_7.getDMFromUserId(recipientId)) {
+          if (null != ChannelStore.getDMFromUserId(recipientId)) {
             num2 = 0.1;
           }
           obj1[recipientId] = 1 + scoreWithoutFetchingLatest / closure_0 + num + num2;
         });
-        obj[3] = obj1;
+        obj.boosters = obj1;
         closure_3.setQuery(obj);
       }
       return false;
@@ -142,7 +133,7 @@ function performQuery() {
 }
 function updateHasFriends() {
   if (c15) {
-    const tmp3 = store.getFriendCount() > 0;
+    const tmp3 = RelationshipStore.getFriendCount() > 0;
     closure_19 = tmp3;
     return tmp3 !== closure_19;
   } else {
@@ -150,125 +141,116 @@ function updateHasFriends() {
   }
 }
 function sortUserList(user, user2) {
-  const obj = isNullOrEmpty;
-  const name = nameFromUserDefault.getName(user.user);
-  const obj2 = nameFromUserDefault;
+  const obj = StringUtils;
+  const name = UserUtilsDefault.getName(user.user);
   const stripDiacriticsResult = obj.stripDiacritics(name.toLocaleLowerCase());
-  const obj5 = isNullOrEmpty;
-  const name1 = nameFromUserDefault.getName(user2.user);
+  const obj5 = StringUtils;
+  const name1 = UserUtilsDefault.getName(user2.user);
   return stripDiacriticsResult.localeCompare(obj5.stripDiacritics(name1.toLocaleLowerCase()));
 }
 function parseUserResults(results) {
   results = results.results;
   if (c15) {
     if ("" !== c16) {
-      const currentUser = authStore.getCurrentUser();
+      const currentUser = UserStore.getCurrentUser();
       const items = [];
       const iter = results[Symbol.iterator]();
       while (iter !== undefined) {
         ({ id, comparator } = nextResult);
         if (null == currentUser) {
-          let tmp6 = authStore;
-          let tmp7 = id;
-          let user = authStore.getUser(id);
+          let user = UserStore.getUser(id);
           let obj = user;
           if (null != user) {
-            let tmp9 = user;
             if (!obj.isProvisional) {
-              let tmp10 = user;
               if (!obj.bot) {
                 obj = { user: null, comparator: null };
-                let tmp13 = user;
-                obj[0] = obj;
-                let tmp14 = comparator;
-                obj[1] = comparator;
+                obj.user = obj;
+                obj.comparator = comparator;
                 let arr = items.push(obj);
-              } else {
-                let tmp11 = user;
-                if (obj.isStaff()) {
-                  let isStaffResult;
-                  if (currentUser != null) {
-                    isStaffResult = currentUser.isStaff();
-                  }
+              } else if (obj.isStaff()) {
+                let isStaffResult;
+                if (currentUser != null) {
+                  isStaffResult = currentUser.isStaff();
                 }
               }
             }
           }
-        } else {
-          let tmp5 = id;
         }
         continue;
       }
+      closure_18 = items;
       privateChannelRecipientsInviteStoreClass.emitChange();
       nextResult = iter.next();
     }
   }
 }
 function handleModalActionSheetOpen(key) {
-  if (key.key !== closure_14) {
+  if (key.key !== closure_1_14) {
     return false;
   } else {
     c15 = true;
-    closure_19 = store.getFriendCount() > 0;
+    closure_19 = RelationshipStore.getFriendCount() > 0;
     if (null != userSearchContext) {
       userSearchContext.destroy();
       userSearchContext = null;
     }
-    userSearchContext = getTransformedUserDefault.getUserSearchContext(parseUserResults, 1000);
-    c22 = null;
+    userSearchContext = UserSearchManagerDefault.getUserSearchContext(parseUserResults, 1000);
+    channelId = null;
     c16 = "";
-    c17 = 0;
+    row = 0;
     performQuery();
   }
 }
 function handleActionSheetDismiss(key) {
-  if (key.key !== closure_14) {
+  if (key.key !== closure_1_14) {
     return false;
   } else {
-    if (null != c3) {
-      c3.destroy();
-      c3 = null;
+    if (null != closure_3) {
+      closure_3.destroy();
+      closure_3 = null;
     }
     c16 = "";
-    c17 = 0;
+    row = 0;
     closure_18 = [];
     const _Set = Set;
     set = new Set();
     c15 = false;
-    c22 = null;
+    channelId = null;
     c20 = false;
   }
 }
 function performQueryOnAffinityChange() {
   return false;
 }
-({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = ME);
+const PrivateChannelRecord = fn(1961).PrivateChannelRecord;
+const Constants = fn(1074);
+({ NEW_GROUP_DM_POPOUT_ID: closure_14, Consents } = Constants);
 let c15 = false;
 let c16 = "";
-let c17 = 0;
-let closure_18 = [];
-let c19 = false;
+let row = 0;
+let results = [];
+const hasFriends = false;
 let c20 = false;
 let set = new Set();
-let c22 = null;
+let channelId = null;
 const Store = initializeDefault.Store;
 class PrivateChannelRecipientsInviteStoreClass extends Store {
 }
 const prototype = PrivateChannelRecipientsInviteStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_7, closure_8, closure_4, closure_9, closure_10, closure_11, closure_12, closure_5, closure_13);
-  const items = [closure_13, closure_7];
+  this.waitFor(ChannelStore, ConsentStore, ExperimentStore, FrecencyStore, GuildMemberStore, GuildStore, RelationshipStore, UserAffinitiesV2Store, UserStore);
+  const items = [UserStore, ChannelStore];
   this.syncWith(items, performQuery);
-  const items1 = [closure_5];
+  const items1 = [UserAffinitiesV2Store];
   this.syncWith(items1, performQueryOnAffinityChange);
-  const items2 = [closure_12];
+  const items2 = [RelationshipStore];
   this.syncWith(items2, updateHasFriends);
 };
 prototype["getResults"] = function getResults() {
   return closure_18;
 };
 prototype["hasFriends"] = function hasFriends() {
-  return c19;
+  return closure_19;
 };
 prototype["getSelectedUsers"] = function getSelectedUsers() {
   return set;
@@ -277,17 +259,17 @@ prototype["getQuery"] = function getQuery() {
   return c16;
 };
 prototype["getState"] = function getState() {
-  return { query: c16, selectedRow: c17, selectedUsers: set, results: closure_18, hasFriends: c19, isLoading: c20 };
+  return { query, selectedRow: row, selectedUsers: set, results, hasFriends, isLoading };
 };
 PrivateChannelRecipientsInviteStoreClass.displayName = "PrivateChannelRecipientsInviteStore";
-const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInviteStoreClass(dispatcherDefault, {
+const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInviteStoreClass(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     c16 = "";
-    c17 = 0;
+    row = 0;
     closure_18 = [];
     set = new Set();
     c15 = false;
-    c22 = null;
+    channelId = null;
     c20 = false;
   },
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch() {
@@ -301,12 +283,12 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
       return false;
     } else {
       c16 = "";
-      c17 = 0;
+      row = 0;
       closure_18 = [];
       const _Set = Set;
       set = new Set();
       c20 = false;
-      c22 = tmp;
+      channelId = tmp;
       return performQuery();
     }
   },
@@ -314,35 +296,35 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
   SHOW_ACTION_SHEET: handleModalActionSheetOpen,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function handleInviteOpen(channelId) {
     c15 = true;
-    closure_19 = store.getFriendCount() > 0;
+    closure_19 = RelationshipStore.getFriendCount() > 0;
     if (null != userSearchContext) {
       userSearchContext.destroy();
       userSearchContext = null;
     }
-    userSearchContext = getTransformedUserDefault.getUserSearchContext(parseUserResults, 1000);
+    userSearchContext = UserSearchManagerDefault.getUserSearchContext(parseUserResults, 1000);
     channelId = channelId.channelId;
     c16 = "";
-    c17 = 0;
+    row = 0;
     performQuery();
   },
   MODAL_POP: handleActionSheetDismiss,
   HIDE_ACTION_SHEET: handleActionSheetDismiss,
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: function handleClose() {
-    if (null != c3) {
-      c3.destroy();
-      c3 = null;
+    if (null != closure_3) {
+      closure_3.destroy();
+      closure_3 = null;
     }
     c16 = "";
-    c17 = 0;
+    row = 0;
     closure_18 = [];
     set = new Set();
     c15 = false;
-    c22 = null;
+    channelId = null;
     c20 = false;
   },
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function handleQuery(arg0) {
-    ({ channelId: c22, query: c16 } = arg0);
-    c17 = 0;
+    ({ channelId, query: c16 } = arg0);
+    row = 0;
     performQuery();
   },
   PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function handleSelect(row) {
@@ -357,6 +339,7 @@ const privateChannelRecipientsInviteStoreClass = new PrivateChannelRecipientsInv
     set = new Set(set);
   }
 });
-const result = set.fileFinishedImporting("stores/PrivateChannelRecipientsInviteStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/PrivateChannelRecipientsInviteStore.tsx");
 
 export default privateChannelRecipientsInviteStoreClass;

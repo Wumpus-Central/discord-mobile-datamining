@@ -1,17 +1,17 @@
 // === Module 10980: useTrackFavoritesGuildAddModalOpened ===
 
 // Module 10980 (useTrackFavoritesGuildAddModalOpened)
-import closure_2 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");
 
-export default function useTrackFavoritesGuildAddModalOpened(arg0) {
-  closure_0 = arg0;
-  const items = [arg0];
-  const effect = React.useEffect(() => {
-    let obj = callback(closure_1_1[2]);
-    obj = { source: callback };
-    obj.track(closure_1_3.FAVORITES_GUILD_ADD_MODAL_OPENED, obj);
+export default function useTrackFavoritesGuildAddModalOpened(source) {
+  const items = [source];
+  const effect = noop.useEffect(() => {
+    const obj = { source };
+    obj.track(AnalyticEvents.FAVORITES_GUILD_ADD_MODAL_OPENED, obj);
   }, items);
 };

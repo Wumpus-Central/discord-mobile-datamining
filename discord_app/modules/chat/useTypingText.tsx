@@ -1,11 +1,13 @@
 // === Module 11979: useTypingText ===
 
 // Module 11979 (useTypingText)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import _slicedToArray from "module_32" /* 32 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/chat/useTypingText.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/useTypingText.tsx");
 
 export default function useTypingText(channelId) {
   channelId = channelId.channelId;
@@ -13,21 +15,15 @@ export default function useTypingText(channelId) {
   const typingUserIds = channelId.typingUserIds;
   let lJ9sZX = channelId;
   let obj = typingUserIds;
-  let items = [closure_4];
+  let items = [UserStore];
   const items1 = [channelId, guildId, typingUserIds];
   const obj2 = channelId(typingUserIds[2]);
-  [tmp2, tmp3, tmp4] = callback(channelId(typingUserIds[2]).useStateFromStoresArray(items, () => {
+  [tmp2, tmp3, tmp4] = _slicedToArray(channelId(typingUserIds[2]).useStateFromStoresArray(items, () => {
     const items = [];
     while (tmp2 !== undefined) {
-      let tmp4 = closure_1_4;
-      let user = closure_1_4.getUser(tmp3);
+      let user = UserStore.getUser(tmp3);
       if (null != user) {
-        let tmp7 = guildId;
-        let tmp8 = typingUserIds;
-        let obj = guildId(typingUserIds[3]);
-        let tmp9 = guildId;
-        let tmp10 = channelId;
-        let tmp11 = user;
+        let obj = NicknameUtilsDefault;
         let arr = items.push(obj.getName(guildId, channelId, tmp6));
       }
       continue;
@@ -39,21 +35,15 @@ export default function useTypingText(channelId) {
   } else if (null == tmp3) {
     const intl4 = lJ9sZX(obj[4]).intl;
     lJ9sZX = lJ9sZX(obj[4]).t.lJ9sZX;
-    obj = { a: null };
-    obj[0] = tmp2;
+    obj = { a: tmp2 };
     let formatResult = intl4.format(lJ9sZX, obj);
   } else if (null == tmp4) {
     const intl3 = lJ9sZX(obj[4]).intl;
-    obj = { a: null, b: null };
-    obj[0] = tmp2;
-    obj[1] = tmp3;
+    obj = { a: tmp2, b: tmp3 };
     formatResult = intl3.format(lJ9sZX(obj[4]).t.rB0CUa, obj);
   } else if (null == tmp5) {
     const intl2 = lJ9sZX(obj[4]).intl;
-    obj = { a: null, b: null, c: null };
-    obj[0] = tmp2;
-    obj[1] = tmp3;
-    obj[2] = tmp4;
+    obj = { a: tmp2, b: tmp3, c: tmp4 };
     formatResult = intl2.format(lJ9sZX(obj[4]).t.StKThj, obj);
   } else {
     const intl = lJ9sZX(obj[4]).intl;

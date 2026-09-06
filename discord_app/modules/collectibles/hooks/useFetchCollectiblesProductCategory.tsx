@@ -1,20 +1,21 @@
 // === Module 11082: useFetchCollectiblesProductCategory ===
 
 // Module 11082 (useFetchCollectiblesProductCategory)
-import setDefault from "set" /* 10735 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "updateCategoriesAndProducts" /* 7542 */;
+import useMaybeFetchCollectiblesCategoriesDefault from "useMaybeFetchCollectiblesCategories" /* 10735 */;
+import _slicedToArray from "module_32" /* 32 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProductCategory.tsx");
 
 export const useFetchCollectiblesProductCategory = function useFetchCollectiblesProductCategory(skuId) {
-  const _require = skuId;
-  setDefault();
-  let obj = _require(563);
-  let items = [closure_4];
-  const tmp2 = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [closure_1_4.isFetchingCategories, closure_1_4.getCategoryForProduct(closure_0)];
+  _require = skuId;
+  useMaybeFetchCollectiblesCategoriesDefault();
+  let obj = require("useStateFromStores");
+  let items = [CollectiblesCategoryStore];
+  const tmp2 = _slicedToArray(obj.useStateFromStoresArray(items, () => {
+    const items = [CollectiblesCategoryStore.isFetchingCategories, CollectiblesCategoryStore.getCategoryForProduct(closure_0)];
     return items;
   }), 2);
   obj = { isFetching: tmp2[0], category: tmp2[1] };

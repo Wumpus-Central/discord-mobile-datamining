@@ -1,20 +1,20 @@
-// === Module 13968: initialize ===
+// === Module 13968: GuildPopoutStore ===
 
-// Module 13968 (initialize)
+// Module 13968 (GuildPopoutStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import _startLurking from "_startLurking" /* 7341 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7341 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-require = arg1;
-let closure_3 = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };
+require = fn;
+const constants = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_4 = { guilds: {} };
 const Store = initializeDefault.Store;
 class GuildPopoutStore extends Store {
 }
 const prototype = GuildPopoutStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(AuthenticationStore);
 };
 prototype["isFetchingGuild"] = function isFetchingGuild(arg0) {
   let tmp2 = null != tmp;
@@ -38,7 +38,7 @@ prototype["hasFetchFailed"] = function hasFetchFailed(arg0) {
   return tmp2;
 };
 GuildPopoutStore.displayName = "GuildPopoutStore";
-const guildPopoutStore = new GuildPopoutStore(dispatcherDefault, {
+const guildPopoutStore = new GuildPopoutStore(DispatcherDefault, {
   GUILD_POPOUT_FETCH_START: function handleFetchStart(guildId) {
     guildId = guildId.guildId;
     const obj = {};
@@ -48,8 +48,7 @@ const guildPopoutStore = new GuildPopoutStore(dispatcherDefault, {
   },
   GUILD_POPOUT_FETCH_SUCCESS: function handleFetchSuccess(guildId) {
     guildId = guildId.guildId;
-    let obj = _startLurking;
-    obj = {};
+    const obj = {};
     const discoverableGuild = obj.makeDiscoverableGuild(guildId.guild);
     const merged = Object.assign(closure_4.guilds[guildId]);
     obj.guild = discoverableGuild;
@@ -64,6 +63,7 @@ const guildPopoutStore = new GuildPopoutStore(dispatcherDefault, {
     closure_4.guilds[guildId] = obj;
   }
 });
-const result = require("set").fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
 
 export default guildPopoutStore;

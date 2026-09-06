@@ -1,45 +1,42 @@
 // === Module 16796: MobileShopButtonCoachmark ===
 
 // Module 16796 (MobileShopButtonCoachmark)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-createCacheKey = { image: null };
-createCacheKey = { height: 80, width: 80, marginTop: ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
+require = fn;
+const Image = fn(17).Image;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { image: null };
+let size = { height: 80, width: 80, marginTop: nativeDefault.space.PX_8, marginBottom: -nativeDefault.space.PX_16 };
+createStyles.image = size;
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
 
 export default function MobileShopButtonCoachmark(marketing) {
   marketing = marketing.marketing;
   const navigateToShop = marketing.navigateToShop;
   const visible = marketing.visible;
   const onDismiss = marketing.onDismiss;
-  closure_4 = undefined;
-  let assetLight;
-  let callback;
-  callback = undefined;
-  let callback1;
-  closure_9 = undefined;
-  const tmp = callback();
+  closure_6 = undefined;
+  const tmp = closure_6();
   closure_4 = tmp;
-  assetLight = marketing.assetLight;
-  callback = visible.useRef(false);
+  const assetLight = marketing.assetLight;
+  closure_6 = visible.useRef(false);
   const items = [onDismiss, navigateToShop];
-  callback = visible.useCallback(() => {
+  const onButtonPress = visible.useCallback(() => {
     closure_6.current = true;
-    onDismiss(constants.TAKE_ACTION);
+    onDismiss(ContentDismissActionType.TAKE_ACTION);
     navigateToShop();
   }, items);
   const items1 = [onDismiss];
-  callback1 = visible.useCallback(() => {
+  const callback1 = visible.useCallback(() => {
     closure_6.current = true;
-    onDismiss(constants.USER_DISMISS);
+    onDismiss(ContentDismissActionType.USER_DISMISS);
   }, items1);
   closure_9 = visible.useRef(onDismiss);
   const effect = visible.useEffect(() => {
@@ -47,7 +44,7 @@ export default function MobileShopButtonCoachmark(marketing) {
   });
   const effect1 = visible.useEffect(() => () => {
     if (!ref.current) {
-      ref2.current(closure_1_4.AUTO_DISMISS);
+      ref2.current(constants.AUTO_DISMISS);
     }
   }, []);
   const items2 = [, , , , , , , ];
@@ -55,7 +52,7 @@ export default function MobileShopButtonCoachmark(marketing) {
   items2[3] = visible;
   items2[4] = assetLight;
   items2[5] = tmp.image;
-  items2[6] = callback;
+  items2[6] = onButtonPress;
   items2[7] = callback1;
   const memo = visible.useMemo(() => {
     let obj = {
@@ -64,9 +61,10 @@ export default function MobileShopButtonCoachmark(marketing) {
       visible,
       position: "top",
       renderImgComponent() {
-        obj = { style: image.image, source: obj };
-        obj = { uri: closure_5 };
-        return closure_1_5(closure_1_3, obj);
+        let obj = { style: image.image, source: null };
+        obj = { uri };
+        obj.source = obj;
+        return assetLight(onDismiss, obj);
       },
       buttonLabel: null,
       buttonVariant: "secondary",
@@ -75,12 +73,12 @@ export default function MobileShopButtonCoachmark(marketing) {
     };
     let buttonLabel = marketing.buttonLabel;
     if (buttonLabel == null) {
-      const intl = marketing(navigateToShop[6]).intl;
-      buttonLabel = intl.string(marketing(navigateToShop[6]).t.fYfGgK);
+      const intl = util.intl;
+      buttonLabel = intl.string(util.t.fYfGgK);
     }
-    obj[5] = buttonLabel;
-    obj[7] = callback;
-    obj[8] = callback1;
+    obj.buttonLabel = buttonLabel;
+    obj.onButtonPress = onButtonPress;
+    obj.onDismiss = callback1;
     return obj;
   }, items2);
   const coachmark = marketing(navigateToShop[7]).useCoachmark(marketing.shopButtonRef, memo);

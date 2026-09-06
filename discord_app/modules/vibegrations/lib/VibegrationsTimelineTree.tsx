@@ -1,11 +1,11 @@
-// === Module 16603: buildTimelineTree ===
+// === Module 16603: VibegrationsTimelineTree ===
 
-// Module 16603 (buildTimelineTree)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3547 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+// Module 16603 (VibegrationsTimelineTree)
+import util from "util" /* 1114 */;
+import _modDef3547 from "module_3547" /* 3547 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
 function buildTimelineTree(steps, arg1) {
   obj = arg1;
   if (arg1 === undefined) {
@@ -15,54 +15,37 @@ function buildTimelineTree(steps, arg1) {
   if (flag === undefined) {
     flag = true;
   }
-  c0 = undefined;
-  let map;
-  map1 = undefined;
-  c4 = undefined;
-  let segmentOf;
-  closure_7 = undefined;
+  let task;
   c8 = undefined;
   c9 = undefined;
-  function ensure(steps) {
+  function ensure(taskId, id, arg2, segment) {
     if ("task" !== arg2) {
-      if ("task" !== arg1) {
-        let str = steps;
-        if (steps == null) {
+      if ("task" !== id) {
+        let str = taskId;
+        if (taskId == null) {
           str = "";
         }
         const _HermesInternal = HermesInternal;
-        const combined = "" + str + " " + arg1;
+        const combined = "" + str + " " + id;
         obj = map1;
-        let value = map1.get(combined);
+        value = map1.get(combined);
         if (null != value) {
           return value;
         } else {
-          obj = { id: null, kind: "step", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
-          obj[0] = arg1;
-          obj[2] = [];
-          obj[3] = [];
-          obj[5] = [];
-          obj[6] = [];
-          obj[8] = arg3;
+          obj = { id, kind: "step", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
           const result = obj.set(combined, obj);
-          if (null != steps) {
-            obj1 = map;
-            value = map.get(steps);
+          if (null != taskId) {
+            let obj1 = map;
+            value = map.get(taskId);
             if (null == value) {
-              obj = { taskId: null, task: null, steps: null };
-              obj[0] = steps;
-              obj1 = { id: "task", kind: "task", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
-              obj1[2] = [];
-              obj1[3] = [];
-              obj1[5] = [];
-              obj1[6] = [];
-              obj1[8] = arg3;
-              obj[1] = obj1;
-              obj[2] = [];
-              const result1 = obj1.set(steps, obj);
+              obj = { taskId, task: null, steps: null };
+              obj1 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+              obj.task = obj1;
+              obj.steps = [];
+              const result1 = obj1.set(taskId, obj);
               value = obj;
             }
-            steps = value.steps;
+            const steps = value.steps;
             steps.push(obj);
           } else {
             items.push(obj);
@@ -71,68 +54,50 @@ function buildTimelineTree(steps, arg1) {
         }
       }
     }
-    if (null != steps) {
-      let value1 = map.get(steps);
+    if (null != taskId) {
+      let value1 = map.get(taskId);
       if (null == value1) {
-        const obj2 = { taskId: null, task: null, steps: null };
-        obj2[0] = steps;
-        const obj3 = { id: "task", kind: "task", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
-        obj3[2] = [];
-        obj3[3] = [];
-        obj3[5] = [];
-        obj3[6] = [];
-        obj3[8] = arg3;
-        obj2[1] = obj3;
-        obj2[2] = [];
-        const result2 = obj6.set(steps, obj2);
+        const obj2 = { taskId, task: null, steps: null };
+        const obj3 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
+        obj2.task = obj3;
+        obj2.steps = [];
+        const result2 = obj6.set(taskId, obj2);
         value1 = obj2;
       }
-      let task = value1.task;
+      task = value1.task;
       obj6 = map;
     } else if (task == null) {
-      const obj4 = { id: "task", kind: "task", detail: null, detailDrivenBy: null, status: "running", screenshots: null, attachments: null, touched: 0, segment: null };
-      obj4[2] = [];
-      obj4[3] = [];
-      obj4[5] = [];
-      obj4[6] = [];
-      obj4[8] = arg3;
+      const obj4 = { id: "task", kind: "task", detail: [], detailDrivenBy: [], status: "running", screenshots: [], attachments: [], touched: 0, segment };
       task = obj4;
     }
     return task;
   }
   let items = [];
-  map = new Map();
+  const map = new Map();
   map1 = new Map();
-  c4 = 0;
-  segmentOf = ensure(steps).segmentOf;
-  closure_7 = (function cancelledLaneIds(steps) {
+  let sum1 = 0;
+  const segmentOf = scanTurnColumn(steps).segmentOf;
+  const size = (function cancelledLaneIds(steps) {
     const set = new Set();
     const iter = steps[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp2 = nextResult;
       if ("node" === nextResult.kind) {
-        let tmp3 = nextResult;
         if (null != tmp2.node) {
-          let tmp4 = nextResult;
           let task_id = tmp2.task_id;
           let tmp5 = task_id;
           let tmp6 = null != task_id;
           if (tmp6) {
-            let tmp7 = task_id;
             tmp6 = "" !== tmp5;
           }
           if (tmp6) {
-            let tmp8 = nextResult;
             let tmp9 = "task" !== tmp2.node.node_kind;
             if (tmp9) {
-              let tmp10 = nextResult;
               tmp9 = "task" !== tmp2.node.id;
             }
             if (!tmp9) {
-              let tmp11 = nextResult;
               if ("cancelled" === tmp2.node.status) {
-                let tmp12 = task_id;
                 let addResult = set.add(tmp5);
               }
             }
@@ -206,11 +171,11 @@ function buildTimelineTree(steps, arg1) {
               driven_by = null;
             }
             items = [];
-            let arraySpreadResult = HermesBuiltin.arraySpread(node.append_detail, HermesBuiltin.arraySpread(tmp14Result.detail, 0));
+            HermesBuiltin.arraySpread(node.append_detail, HermesBuiltin.arraySpread(tmp14Result.detail, 0));
             tmp14Result.detail = items;
             const items1 = [];
             const append_detail = node.append_detail;
-            arraySpreadResult = HermesBuiltin.arraySpread(tmp14Result.detailDrivenBy, 0);
+            const arraySpreadResult = HermesBuiltin.arraySpread(tmp14Result.detailDrivenBy, 0);
             HermesBuiltin.arraySpread(append_detail.map(() => driven_by), arraySpreadResult);
             tmp14Result.detailDrivenBy = items1;
           }
@@ -247,8 +212,7 @@ function buildTimelineTree(steps, arg1) {
   }
   const entries = steps.entries();
   while (tmp3 !== undefined) {
-    let tmp5 = map1;
-    let tmp6 = map1(tmp4, 2);
+    let tmp6 = _slicedToArray(tmp4, 2);
     [c8, c9] = tmp6;
     let _loopResult = _loop();
     continue;
@@ -260,20 +224,17 @@ function buildTimelineTree(steps, arg1) {
     let tmp9 = nextResult;
     let tmp10 = flag;
     if (!flag) {
-      let tmp11 = nextResult;
       tmp10 = "running" !== tmp9.task.status;
     }
     if (!tmp10) {
-      let tmp12 = nextResult;
       tmp9.task.status = "incomplete";
     }
     continue;
   }
   obj = { steps: items, tasks: items1 };
-  if (null != c0) {
-    obj = { turn: null };
-    obj[0] = c0;
-    obj1 = obj;
+  if (null != task) {
+    obj = { turn: task };
+    let obj1 = obj;
   } else {
     obj1 = {};
   }
@@ -288,8 +249,7 @@ function scanTurnColumn(arr) {
   let num = 0;
   const entries = arr.entries();
   while (tmp4 !== undefined) {
-    let tmp6 = callback;
-    let tmp7 = callback(tmp5, 2);
+    let tmp7 = _slicedToArray(tmp5, 2);
     [tmp8, tmp9] = tmp7;
     let tmp10 = tmp9;
     let segment = tmp9.segment;
@@ -298,62 +258,41 @@ function scanTurnColumn(arr) {
       segment = num;
     }
     arr = segmentOf.push(segment);
-    let tmp13 = tmp9;
     if ("thinking" !== tmp10.kind) {
-      let tmp38 = isTurnWorkFrame;
-      let tmp39 = tmp9;
       if (!isTurnWorkFrame(tmp10)) {
-        let tmp14 = tmp9;
         if ("todos" !== tmp10.kind) {
-          let tmp25 = tmp9;
           if ("assistant_delta" === tmp10.kind) {
-            let tmp41 = tmp9;
             if (null == tmp10.task_id) {
-              let tmp27 = tmp9;
               let str = tmp10.message;
               if (str == null) {
                 str = "";
               }
               let tmp28 = str;
               if ("" !== str) {
-                let tmp29 = tmp;
                 if (null == tmp) {
-                  let tmp32 = num;
                   num = num + 1;
                   let tmp33 = tmp11;
                   if (tmp11 == null) {
                     tmp33 = num;
                   }
-                  let tmp34 = tmp8;
                   segmentOf[tmp8] = tmp33;
                   obj = { type: "message", key: null, segment: null, content: null };
                   let _HermesInternal2 = HermesInternal;
-                  obj[1] = "message-" + tmp8;
-                  obj[2] = tmp33;
-                  let tmp35 = str;
-                  obj[3] = tmp28;
+                  obj.key = "message-" + tmp8;
+                  obj.segment = tmp33;
+                  obj.content = tmp28;
                   tmp = obj;
                   arr = items.push(obj);
                 } else {
-                  let tmp30 = tmp;
-                  let tmp31 = str;
                   tmp.content = tmp28;
                 }
               }
-              let tmp37 = tmp9;
               if (true === tmp10.message_finished) {
                 tmp = null;
               }
-            } else {
-              let tmp26 = tmp9;
             }
           }
         } else {
-          let tmp40 = tmp9;
-          if (null != tmp10.task_id) {
-            let tmp15 = tmp9;
-          }
-          let tmp16 = tmp9;
           let items2 = tmp10.items;
           if (items2 == null) {
             items2 = [];
@@ -361,27 +300,20 @@ function scanTurnColumn(arr) {
           let tmp17 = items2;
           if (0 === items2.length) {
             continue;
+          } else if (null != tmp2) {
+            tmp2.todos = tmp17;
           } else {
-            let tmp18 = tmp2;
-            if (null != tmp2) {
-              let tmp23 = tmp2;
-              let tmp24 = items2;
-              tmp2.todos = tmp17;
-            } else {
-              obj = { type: "todos", key: null, segment: null, todos: null };
-              let tmp19 = tmp8;
-              let _HermesInternal = HermesInternal;
-              obj[1] = "todos-" + tmp8;
-              let tmp20 = tmp11;
-              if (tmp11 == null) {
-                tmp20 = num;
-              }
-              obj[2] = tmp20;
-              let tmp21 = items2;
-              obj[3] = tmp17;
-              tmp2 = obj;
-              let arr1 = items.push(obj);
+            obj = { type: "todos", key: null, segment: null, todos: null };
+            let _HermesInternal = HermesInternal;
+            obj.key = "todos-" + tmp8;
+            let tmp20 = tmp11;
+            if (tmp11 == null) {
+              tmp20 = num;
             }
+            obj.segment = tmp20;
+            obj.todos = tmp17;
+            tmp2 = obj;
+            let arr1 = items.push(obj);
           }
         }
         continue;
@@ -392,28 +324,23 @@ function scanTurnColumn(arr) {
   }
   return { items, segmentOf };
 }
-function segmentDurations(steps) {
+function segmentDurations(arr) {
   const map = new Map();
-  const iter = steps[Symbol.iterator]();
+  const iter = arr[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
     if ("segment_settled" === nextResult.kind) {
-      let tmp3 = nextResult;
       let tmp4 = null != tmp2.task_id;
       if (tmp4) {
-        let tmp5 = nextResult;
         tmp4 = "" !== tmp2.task_id;
       }
       if (!tmp4) {
-        let tmp6 = nextResult;
         let tmp7 = null != tmp2.segment;
         if (tmp7) {
-          let tmp8 = nextResult;
           tmp7 = null != tmp2.duration;
         }
         if (tmp7) {
-          let tmp9 = nextResult;
           let result = map.set(tmp2.segment, tmp2.duration);
         }
       }
@@ -448,8 +375,9 @@ function isTurnWorkFrame(task_id) {
   }
   return tmp;
 }
-let obj = { assembling: messagesProxyDefault["9G3ZmA"], installing_deps: messagesProxyDefault.VZuRug, building: messagesProxyDefault["s+ylXP"], bundling: messagesProxyDefault.rEQlMx, committing: messagesProxyDefault.Yvyw1H, built: messagesProxyDefault.hOcVAj, build_error: messagesProxyDefault["6L9Vwt"], healthchecking: messagesProxyDefault.sz8yAj, awaiting_auth: messagesProxyDefault["orD+xo"], healthcheck_passed: messagesProxyDefault["x+sqTG"], healthcheck_failed: messagesProxyDefault.FUWbq1, deploying: messagesProxyDefault.wcXX8Z, preview_ready: messagesProxyDefault["78YNh7"], working: messagesProxyDefault.nv6pUM, error: messagesProxyDefault.j3hBoA };
-let result = require("set").fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
+let obj = { assembling: _modDef3547["9G3ZmA"], installing_deps: _modDef3547.VZuRug, building: _modDef3547["s+ylXP"], bundling: _modDef3547.rEQlMx, committing: _modDef3547.Yvyw1H, built: _modDef3547.hOcVAj, build_error: _modDef3547["6L9Vwt"], healthchecking: _modDef3547.sz8yAj, awaiting_auth: _modDef3547["orD+xo"], healthcheck_passed: _modDef3547["x+sqTG"], healthcheck_failed: _modDef3547.FUWbq1, deploying: _modDef3547.wcXX8Z, preview_ready: _modDef3547["78YNh7"], working: _modDef3547.nv6pUM, error: _modDef3547.j3hBoA };
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
 
 export const describeNode = function describeNode(labelText) {
   if (null != labelText.labelText) {
@@ -461,41 +389,38 @@ export const describeNode = function describeNode(labelText) {
   if (null != labelText.labelKey) {
     nv6pUM = obj[labelText.labelKey];
   }
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   if (nv6pUM == null) {
-    nv6pUM = messagesProxyDefault.nv6pUM;
+    nv6pUM = _modDef3547.nv6pUM;
   }
   return intl.string(nv6pUM);
 };
 export const describeTaskStatus = function describeTaskStatus(status) {
   if ("running" === status) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(messagesProxyDefault["fW7T+d"]);
+    const intl5 = util.intl;
+    return intl5.string(_modDef3547["fW7T+d"]);
   } else if ("done" === status) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(messagesProxyDefault.X3c4hc);
+    const intl4 = util.intl;
+    return intl4.string(_modDef3547.X3c4hc);
   } else if ("failed" === status) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(messagesProxyDefault.LK4Wsd);
+    const intl3 = util.intl;
+    return intl3.string(_modDef3547.LK4Wsd);
   } else if ("cancelled" === status) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(messagesProxyDefault.msWvKA);
+    const intl2 = util.intl;
+    return intl2.string(_modDef3547.msWvKA);
   } else if ("incomplete" === status) {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.esfcU6);
+    const intl = util.intl;
+    return intl.string(_modDef3547.esfcU6);
   }
 };
 export { buildTimelineTree };
-export const currentStep = function currentStep(arg0) {
+export const currentStep = function currentStep(productId) {
   let tmp;
-  const iter = arg0[Symbol.iterator]();
+  const iter = productId[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp4 = tmp;
     let tmp5 = null == tmp;
     if (!tmp5) {
-      let tmp6 = nextResult;
-      let tmp7 = tmp;
       tmp5 = tmp3.touched > tmp.touched;
     }
     if (tmp5) {
@@ -509,11 +434,10 @@ export const streamedContent = function streamedContent(arr) {
   return scanTurnColumn(arr).items;
 };
 export { segmentDurations };
-export const turnSegments = function turnSegments(steps) {
+export const turnSegments = function turnSegments(arr) {
   let hasItem;
   let tmp19;
-  let value;
-  let arr = arg1;
+  arr = arg1;
   if (arg1 === undefined) {
     arr = {};
   }
@@ -521,16 +445,15 @@ export const turnSegments = function turnSegments(steps) {
   if (flag === undefined) {
     flag = true;
   }
-  const items = scanTurnColumn(steps).items;
-  buildTimelineTree(steps, { turnActive: flag });
-  obj1 = segmentDurations(steps);
+  const items = scanTurnColumn(arr).items;
+  buildTimelineTree(arr, { turnActive: flag });
+  let obj1 = segmentDurations(arr);
   const map = new Map();
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
     if ("message" === nextResult.type) {
-      let tmp4 = nextResult;
       let result = map.set(tmp3.segment, tmp3);
     }
     continue;
@@ -566,7 +489,6 @@ export const turnSegments = function turnSegments(steps) {
       value = map.get(num);
       hasItem = set.has(num);
       let tmp17 = null != value;
-      let tmp18 = num;
       if (!tmp17) {
         tmp17 = hasItem;
       }
@@ -588,12 +510,9 @@ export const turnSegments = function turnSegments(steps) {
       const _HermesInternal = HermesInternal;
       key = "work-" + num;
     }
-    arr = { key: null, index: null };
-    arr[0] = key;
-    arr[1] = num;
+    arr = { key, index: num };
     if (null != value) {
-      obj = { prose: null };
-      obj[0] = value;
+      obj = { prose: value };
       obj1 = obj;
     } else {
       obj1 = {};
@@ -602,8 +521,7 @@ export const turnSegments = function turnSegments(steps) {
     arr.hasWork = hasItem;
     arr.hasTodos = tmp19;
     if (obj1.has(num)) {
-      const obj2 = { durationMs: null };
-      obj2[0] = obj1.get(num);
+      const obj2 = { durationMs: obj1.get(num) };
       let obj3 = obj2;
     } else {
       obj3 = {};
@@ -633,15 +551,13 @@ export const turnLifecycle = function turnLifecycle(arr, turnActive) {
     }
   }
   if (null != index) {
-    obj = { lastWork: null };
-    obj[0] = index;
+    obj = { lastWork: index };
   } else {
     obj = {};
   }
   const merged = Object.assign(obj);
   if (null != tmp4) {
-    const obj2 = { open: null };
-    obj2[0] = tmp4;
+    const obj2 = { open: tmp4 };
     let obj3 = obj2;
   } else {
     obj3 = {};
@@ -654,7 +570,7 @@ export const streamedMessages = function streamedMessages(steps) {
   return items.flatMap((type) => {
     if ("message" === type.type) {
       obj = { key: null, content: null, segment: null };
-      ({ key: obj[0], content: obj[1], segment: obj[2] } = type);
+      ({ key: obj.key, content: obj.content, segment: obj.segment } = type);
       const items = [obj];
       let items1 = items;
     } else {
@@ -668,7 +584,6 @@ export const endsWithStreamedMessage = function endsWithStreamedMessage(arg0) {
   if (0 <= diff) {
     while (true) {
       let tmp2 = arg0[diff];
-      let tmp3 = diff;
       if (null != tmp2) {
         if ("assistant_delta" === tmp2.kind) {
           if (null != tmp2.message) {
@@ -694,14 +609,14 @@ export const endsWithStreamedMessage = function endsWithStreamedMessage(arg0) {
   return false;
 };
 export const announcementNotes = function announcementNotes(steps) {
-  return steps.flatMap((kind) => {
+  return steps.flatMap((kind, index) => {
     if ("announcement" === kind.kind) {
       if (null != kind.message) {
         if ("" !== kind.message) {
           obj = { key: null, content: null };
           const _HermesInternal = HermesInternal;
-          obj[0] = "note-" + arg1;
-          obj[1] = kind.message;
+          obj.key = "note-" + index;
+          obj.content = kind.message;
           const items = [obj];
         }
         return [];
@@ -715,7 +630,6 @@ export const latestTodos = function latestTodos(steps) {
   if (0 <= diff) {
     while (true) {
       tmp2 = steps[diff];
-      let tmp3 = diff;
       let kind;
       if (tmp2 != null) {
         kind = tmp2.kind;

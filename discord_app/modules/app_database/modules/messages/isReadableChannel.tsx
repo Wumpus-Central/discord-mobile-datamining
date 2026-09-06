@@ -1,16 +1,16 @@
 // === Module 7484: isReadableChannel ===
 
 // Module 7484 (isReadableChannel)
-import set from "set" /* 2 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import closure_1 from "ensureGuildLoaded" /* 1957 */;
-import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
-import ME from "ME" /* 1074 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const isTextChannel = createChannelRecord.isTextChannel;
-({ ChannelTypes: c3, BasicPermissions } = ME);
+const isTextChannel = ChannelRecord.isTextChannel;
+({ ChannelTypes: c3, BasicPermissions } = Constants);
 let closure_4 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
-const result = set.fileFinishedImporting("modules/app_database/modules/messages/isReadableChannel.tsx");
+const result = size.fileFinishedImporting("modules/app_database/modules/messages/isReadableChannel.tsx");
 
 export const isReadableChannel = function isReadableChannel(basicChannel) {
   let tmp = null != basicChannel;
@@ -19,7 +19,7 @@ export const isReadableChannel = function isReadableChannel(basicChannel) {
     if (!tmp3) {
       let canBasicChannelResult = isTextChannel(basicChannel.type);
       if (canBasicChannelResult) {
-        canBasicChannelResult = closure_2.canBasicChannel(closure_4, basicChannel);
+        canBasicChannelResult = PermissionStore.canBasicChannel(closure_4, basicChannel);
       }
       tmp3 = canBasicChannelResult;
     }
@@ -30,14 +30,14 @@ export const isReadableChannel = function isReadableChannel(basicChannel) {
 export const isReadableChannelId = function isReadableChannelId(channelId) {
   let tmp = null != channelId;
   if (tmp) {
-    basicChannel = basicChannel.getBasicChannel(channelId);
+    const basicChannel = ChannelStore.getBasicChannel(channelId);
     let tmp4 = null != basicChannel;
     if (tmp4) {
       let tmp6 = basicChannel.type === constants.DM || basicChannel.type === tmp5.GROUP_DM;
       if (!tmp6) {
         let canBasicChannelResult = isTextChannel(basicChannel.type);
         if (canBasicChannelResult) {
-          canBasicChannelResult = closure_2.canBasicChannel(closure_4, basicChannel);
+          canBasicChannelResult = PermissionStore.canBasicChannel(closure_4, basicChannel);
         }
         tmp6 = canBasicChannelResult;
       }

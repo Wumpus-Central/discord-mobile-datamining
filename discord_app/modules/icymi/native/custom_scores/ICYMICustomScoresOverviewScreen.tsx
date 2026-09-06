@@ -1,51 +1,48 @@
 // === Module 16456: ICYMICustomScoresOverviewScreen ===
 
 // Module 16456 (ICYMICustomScoresOverviewScreen)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "insertUnsortedGuilds" /* 5438 */;
-import closure_7 from "filterStaffGuild" /* 8335 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SortedGuildStore from "SortedGuildStore" /* 5438 */;
+import ICYMIStore from "ICYMIStore" /* 8335 */;
 
-const require = arg1;
-createCacheKey = { container: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_12 };
-createCacheKey[0] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx");
+const require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null };
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 };
+createStyles.container = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresOverviewScreen.tsx");
 
 export default function ICYMICustomScoresOverviewScreen(navigation) {
   navigation = navigation.navigation;
-  let stateFromStores;
   let stateFromStores1;
-  let React;
-  closure_4 = undefined;
   let obj = navigation(stateFromStores1[8]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => guilds.getGuilds());
-  obj1 = navigation(stateFromStores1[8]);
-  const items1 = [closure_6];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => flattenedGuildIds.getFlattenedGuildIds());
-  const items2 = [closure_7];
-  React = navigation(stateFromStores1[8]).useStateFromStores(items2, () => customGuildScores.getCustomGuildScores());
+  const items = [GuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => guilds.getGuilds());
+  const items1 = [SortedGuildStore];
+  stateFromStores1 = navigation(stateFromStores1[8]).useStateFromStores(items1, () => flattenedGuildIds.getFlattenedGuildIds());
+  const obj2 = navigation(stateFromStores1[8]);
+  const items2 = [ICYMIStore];
+  noop = navigation(stateFromStores1[8]).useStateFromStores(items2, () => customGuildScores.getCustomGuildScores());
   const items3 = [stateFromStores1, stateFromStores];
-  const memo = React.useMemo(() => stateFromStores1.map((arg0) => table[arg0]), items3);
+  const memo = noop.useMemo(() => stateFromStores1.map((item) => stateFromStores[item]), items3);
   const obj3 = navigation(stateFromStores1[8]);
   const items4 = [navigation];
-  closure_4 = React.useCallback((guildId) => navigation.navigate("guild", { guildId }), items4);
-  obj = { showsVerticalScrollIndicator: false, style: callback().container, contentInset: null, children: null };
-  obj = { bottom: stateFromStores(stateFromStores1[9])().bottom, top: stateFromStores(stateFromStores1[7]).space.PX_12 };
-  obj[2] = obj;
-  obj1 = {
+  closure_4 = noop.useCallback((guildId) => navigation.navigate("guild", { guildId }), items4);
+  obj = { showsVerticalScrollIndicator: false, style: closure_9().container, contentInset: null, children: null };
+  const rect = { bottom: stateFromStores(stateFromStores1[9])().bottom, top: stateFromStores(stateFromStores1[7]).space.PX_12 };
+  obj.contentInset = rect;
+  obj = {
     hasIcons: true,
     children: memo.map((guild) => {
-      closure_0 = guild;
       let obj = {
         onPress() {
-          return closure_1_4(guild.id);
+          return closure_4(guild.id);
         },
         icon: null,
         label: null,
@@ -53,30 +50,29 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
         arrow: true
       };
       obj = { guild };
-      obj[1] = closure_1_8(stateFromStores(stateFromStores1[12]), obj);
-      obj[2] = guild.name;
+      obj.icon = jsx(stateFromStores(stateFromStores1[12]), { guild });
+      obj.label = guild.name;
       let tmpResult;
-      if (null != table[guild.id]) {
+      if (null != closure_3[guild.id]) {
         const tmp2Result = tmp2(tmp3[13]);
         if (numberToCustomScoreResult === tmp2(tmp3[13]).ICYMICustomScore.MUTED) {
           obj = { text: null };
           const intl = tmp2(tmp3[14]).intl;
-          obj[0] = intl.string(tmp2(tmp3[14]).t.lhPHmz);
+          obj.text = intl.string(tmp2(tmp3[14]).t.lhPHmz);
           tmpResult = tmp(tmp2(tmp3[11]).TableRow.TrailingText, obj);
         }
         numberToCustomScoreResult = tmp2(tmp3[13]).numberToCustomScore(tmp4[guild.id]);
       }
-      obj[3] = tmpResult;
-      return closure_1_8(navigation(stateFromStores1[11]).TableRow, obj, guild.id);
+      obj.trailing = tmpResult;
+      return jsx(navigation(stateFromStores1[11]).TableRow, { guild }, guild.id);
     })
   };
-  obj[3] = jsx(navigation(stateFromStores1[10]).TableRowGroup, {
+  obj.children = jsx(navigation(stateFromStores1[10]).TableRowGroup, {
     hasIcons: true,
     children: memo.map((guild) => {
-      closure_0 = guild;
       let obj = {
         onPress() {
-          return closure_1_4(guild.id);
+          return closure_4(guild.id);
         },
         icon: null,
         label: null,
@@ -84,22 +80,48 @@ export default function ICYMICustomScoresOverviewScreen(navigation) {
         arrow: true
       };
       obj = { guild };
-      obj[1] = closure_1_8(stateFromStores(stateFromStores1[12]), obj);
-      obj[2] = guild.name;
+      obj.icon = jsx(stateFromStores(stateFromStores1[12]), { guild });
+      obj.label = guild.name;
       let tmpResult;
-      if (null != table[guild.id]) {
+      if (null != closure_3[guild.id]) {
         const tmp2Result = tmp2(tmp3[13]);
         if (numberToCustomScoreResult === tmp2(tmp3[13]).ICYMICustomScore.MUTED) {
           obj = { text: null };
           const intl = tmp2(tmp3[14]).intl;
-          obj[0] = intl.string(tmp2(tmp3[14]).t.lhPHmz);
+          obj.text = intl.string(tmp2(tmp3[14]).t.lhPHmz);
           tmpResult = tmp(tmp2(tmp3[11]).TableRow.TrailingText, obj);
         }
         numberToCustomScoreResult = tmp2(tmp3[13]).numberToCustomScore(tmp4[guild.id]);
       }
-      obj[3] = tmpResult;
-      return closure_1_8(navigation(stateFromStores1[11]).TableRow, obj, guild.id);
+      obj.trailing = tmpResult;
+      return jsx(navigation(stateFromStores1[11]).TableRow, { guild }, guild.id);
     })
   });
-  return <closure_4 bottom={stateFromStores(stateFromStores1[9])().bottom} top={stateFromStores(stateFromStores1[7]).space.PX_12} />;
+  return <closure_4 hasIcons>{memo.map((guild) => {
+    let obj = {
+      onPress() {
+        return closure_4(guild.id);
+      },
+      icon: null,
+      label: null,
+      trailing: null,
+      arrow: true
+    };
+    obj = { guild };
+    obj.icon = jsx(stateFromStores(stateFromStores1[12]), { guild });
+    obj.label = guild.name;
+    let tmpResult;
+    if (null != closure_3[guild.id]) {
+      const tmp2Result = tmp2(tmp3[13]);
+      if (numberToCustomScoreResult === tmp2(tmp3[13]).ICYMICustomScore.MUTED) {
+        obj = { text: null };
+        const intl = tmp2(tmp3[14]).intl;
+        obj.text = intl.string(tmp2(tmp3[14]).t.lhPHmz);
+        tmpResult = tmp(tmp2(tmp3[11]).TableRow.TrailingText, obj);
+      }
+      numberToCustomScoreResult = tmp2(tmp3[13]).numberToCustomScore(tmp4[guild.id]);
+    }
+    obj.trailing = tmpResult;
+    return jsx(navigation(stateFromStores1[11]).TableRow, { guild }, guild.id);
+  })}</closure_4>;
 };

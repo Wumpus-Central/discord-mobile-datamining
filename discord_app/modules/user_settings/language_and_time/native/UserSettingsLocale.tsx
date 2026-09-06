@@ -1,19 +1,18 @@
-// === Module 15423: handleLanguageChange ===
+// === Module 15423: UserSettingsLocale ===
 
-// Module 15423 (handleLanguageChange)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { setAppLocale } from "_setAppLocale" /* 2026 */;
-import closure_7 from "_getSystemLocale" /* 2025 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 15423 (UserSettingsLocale)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import TableRadioRow from "TableRadioRow" /* 5688 */;
+import flags from "flags" /* 15424 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
 
-const require = arg1;
+require = fn;
 function handleLanguageChange() {
   const self = this;
-  const apply = _handleLanguageChange.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -21,106 +20,91 @@ function handleLanguageChange() {
   }
   return applyArgumentsResult;
 }
-function _handleLanguageChange() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_11 = async function _handleLanguageChange(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c4 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c4 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp5;
+          closure_1 = tmp2;
+          closure_129_0 = closure_0;
+          c3 = 1;
+          c4 = 1;
+          const obj1 = { value: setAppLocale(closure_0), done: false };
+          return obj1;
         }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
       } else {
-        try {
-          c4 = 2;
-          if (0 === c3) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              const table = tmp5;
-              const callback = tmp2;
-              c3 = 1;
-              c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_6(closure_0);
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            obj = callback(table[8]);
-            obj.updateLocale(closure_0);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp14) {
-          c4 = tmp;
-          throw tmp14;
-        }
+        obj = closure_130_1(closure_130_2[8]);
+        obj.updateLocale(closure_129_0);
+        c4 = 3;
+        return { value: "HermesInternal", done: null };
       }
-    })();
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp14) {
+      c4 = tmp;
+      throw tmp14;
+    }
   }
-  return applyArgumentsResult;
-}
-({ Image: c4, ScrollView: c5 } = get_ActivityIndicator);
+};
+get_ActivityIndicator = fn(17);
+({ Image: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
+const setAppLocale = fn(2026).setAppLocale;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { content: null, flagImage: null };
-obj = { padding: ThemesDefault.space.PX_16 };
-obj[0] = obj;
-obj[1] = { width: 27, height: 18 };
-let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function UserSettingsLocale() {
-  const tmp = callback2();
-  const _require = tmp;
-  let obj = _require(504);
-  const items = [closure_7];
-  obj = { contentContainerStyle: tmp.content, children: null };
+obj = { padding: nativeDefault.space.PX_16 };
+obj.content = obj;
+obj.flagImage = { width: 27, height: 18 };
+let closure_9 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");
+
+export default noop.memo(function UserSettingsLocale() {
+  const tmp = closure_9();
+  _require = tmp;
+  require("initialize");
+  const items = [LocaleStore];
+  let obj = { contentContainerStyle: tmp.content, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   obj = { bottom: true, children: null };
-  obj1 = { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null };
-  const availableLocales = _require(1114).getAvailableLocales();
-  obj1[3] = availableLocales.map((localizedName) => {
+  const obj1 = { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null };
+  const availableLocales = require("util").getAvailableLocales();
+  obj1.children = availableLocales.map((localizedName) => {
     ({ name, value } = localizedName);
     let obj = { value, label: name, subLabel: null, icon: null };
-    const intl = lib(closure_1_2[12]).intl;
-    obj[2] = intl.string(localizedName.localizedName);
-    obj = { style: lib.flagImage, source: lib(closure_1_2[14]).flags[value] };
-    obj[3] = closure_1_8(closure_1_4, obj);
-    return closure_1_8(lib(closure_1_2[13]).TableRadioRow, obj, name);
+    const intl = util.intl;
+    obj.subLabel = intl.string(localizedName.localizedName);
+    obj = { style: flagImage.flagImage, source: flags.flags[value] };
+    obj.icon = <React4 style={flagImage.flagImage} source={flags.flags[value]} />;
+    return jsx(TableRadioRow.TableRadioRow, { style: flagImage.flagImage, source: flags.flags[value] }, name);
   });
-  obj[1] = jsx(_require(5685).TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
-  obj[1] = jsx(_require(7123).SafeAreaPaddingView, { bottom: true, children: null });
+  obj.children = jsx(require("TableRadioGroup").TableRadioGroup, { defaultValue: stateFromStores, onChange: handleLanguageChange, hasIcons: true, children: null });
+  obj.children = jsx(require("common/SafeAreaView").SafeAreaPaddingView, { bottom: true, children: null });
   return <closure_5 bottom>{null}</closure_5>;
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/language_and_time/native/UserSettingsLocale.tsx");
-
-export default memoResult;

@@ -1,8 +1,8 @@
-// === Module 4182: set ===
+// === Module 4182: DiscordNative ===
 
-// Module 4182 (set)
-import set from "set" /* 2 */;
+// Module 4182 (DiscordNative)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/DiscordNative.tsx");
+const result = size.fileFinishedImporting("lib/DiscordNative.tsx");
 
 export default window.DiscordNative;

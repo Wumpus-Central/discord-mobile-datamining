@@ -1,57 +1,59 @@
 // === Module 14698: useSettingSearchResults ===
 
 // Module 14698 (useSettingSearchResults)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "zustandStore" /* 14691 */;
-import closure_6 from "zustandStore" /* 14583 */;
+import debounceDefault from "debounce" /* 551 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14691 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 14583 */;
 
-const require = arg1;
+const require = fn;
 let closure_7 = [];
-const result = require("set").fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/search/hooks/useSettingSearchResults.tsx");
 
 export const useSettingSearchResults = function useSettingSearchResults() {
   const memo = memo1.useMemo(() => {
-    let tmp = callback(14699);
+    let tmp = closure_1(14699);
     tmp = new tmp(memo(14693).getSettingSearchableTitles());
     return tmp;
   }, []);
-  const settings = callback(memo1.useState(closure_7), 2);
+  const settings = _slicedToArray(memo1.useState(closure_7), 2);
   closure_1 = settings[1];
-  const isLoading = callback(memo1.useState(false), 2);
-  closure_2 = isLoading[1];
-  const placeholderCount = callback(memo1.useState(10), 2);
-  callback = placeholderCount[1];
+  const isLoading = _slicedToArray(memo1.useState(false), 2);
+  dependencyMap = isLoading[1];
+  const placeholderCount = _slicedToArray(memo1.useState(10), 2);
+  _slicedToArray = placeholderCount[1];
   const items = [memo];
-  memo1 = memo1.useMemo(() => callback(551)((arg0) => {
-    let scoredSearchResults = closure_1_6.getField("blocklist");
+  memo1 = memo1.useMemo(() => debounceDefault((arg0) => {
+    const field2 = field.getField("blocklist");
     scoredSearchResults = scoredSearchResults.getScoredSearchResults(arg0);
     const found = scoredSearchResults.filter((setting) => {
       setting = setting.setting;
-      const isBlockedResult = closure_1_1(closure_1_2[4]).isBlocked(setting, callback);
+      const isBlockedResult = closure_2_1(14694).isBlocked(setting, closure_0);
       let tmp3 = !isBlockedResult;
       if (!isBlockedResult) {
-        tmp3 = !callback(closure_1_2[5]).SETTING_RENDERER_CONFIG[setting].unsearchable;
+        tmp3 = !scoredSearchResults(14584).SETTING_RENDERER_CONFIG[setting].unsearchable;
       }
       return tmp3;
     });
-    callback(found);
-    callback3(Math.max(Math.min(found.length, 10), 5));
-    callback2(false);
+    closure_1_1(found);
+    closure_1_3(Math.max(Math.min(found.length, 10), 5));
+    dependencyMap(false);
   }, 350), items);
   const items1 = [memo1];
   const effect = memo1.useEffect(() => {
-    closure_0 = closure_1_5.subscribe((query) => query.query.trim(), (arg0) => {
+    closure_0 = UserSettingSearchStore.subscribe((query) => query.query.trim(), (arg0) => {
       if ("" === arg0) {
-        const cancel = lib.cancel;
+        const cancel = memo1.cancel;
         if (cancel != null) {
           cancel();
         }
-        callback2(closure_1_7);
-        callback3(false);
+        closure_1_1(closure_2_7);
+        dependencyMap(false);
       } else {
-        callback3(true);
-        lib(arg0);
+        dependencyMap(true);
+        memo1(arg0);
       }
     }, {
       equalityFn(arg0, arg1) {
@@ -59,8 +61,8 @@ export const useSettingSearchResults = function useSettingSearchResults() {
       }
     });
     return () => {
-      callback();
-      const cancel = closure_1_4.cancel;
+      closure_0();
+      const cancel = memo1.cancel;
       if (cancel != null) {
         cancel();
       }

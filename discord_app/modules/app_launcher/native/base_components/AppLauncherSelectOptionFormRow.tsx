@@ -1,31 +1,32 @@
 // === Module 12176: AppLauncherSelectOptionFormRow ===
 
 // Module 12176 (AppLauncherSelectOptionFormRow)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import Form from "Form" /* 8593 */;
 import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12169 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { formRow: null };
-createCacheKey = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", flex: 1 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherSelectOptionFormRow.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { formRow: null };
+createStyles = { flexDirection: "row", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", flex: 1 };
+createStyles.formRow = createStyles;
+let closure_4 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherSelectOptionFormRow.tsx");
 
 export default function AppLauncherSelectOptionFormRow(arg0) {
   ({ selected, selectedItemName: require, unselectedSubLabel } = arg0);
   ({ style, option, autoFocus } = arg0);
-  const merged = Object.assign(arg0, Object.create(null));
+  const merged = Object.assign(arg0, Object.assign({ style: 0, option: 0, selected: 0, selectedItemName: 0, unselectedSubLabel: 0, autoFocus: 0 }));
   let obj = useAnimationDelayedAutoFocus;
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, merged.onPress);
-  obj = { start: true, end: true, style: items, label: null, subLabel: null, trailing: null };
-  items = [callback().formRow, style];
+  obj = { start: true, end: true, style: null, label: null, subLabel: null, trailing: null };
+  const items = [closure_4().formRow, style];
+  obj.style = items;
   let str = "text-md/medium";
   if (selected) {
     str = "text-sm/medium";
@@ -35,20 +36,20 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   if (selected) {
     str2 = "interactive-text-default";
   }
-  obj[1] = str2;
-  obj[3] = option.displayName;
-  obj[3] = jsx(Text.Text, { variant: str, color: null, lineClamp: 1, children: null });
+  obj.color = str2;
+  obj.children = option.displayName;
+  obj.label = jsx(Text_Text.Text, { variant: str, color: null, lineClamp: 1, children: null });
   if (selected) {
-    let fn = () => closure_1_3(closure_1_0(closure_1_2[6]).Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: closure_0 });
+    let fn = () => jsx(Text_Text.Text, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children });
   } else {
     fn = null;
     if (null != unselectedSubLabel) {
-      fn = () => closure_1_3(closure_1_0(closure_1_2[6]).Text, { variant: "text-sm/normal", color: "text-muted", lineClamp: 1, children: unselectedSubLabel });
+      fn = () => jsx(Text_Text.Text, { variant: "text-sm/normal", color: "text-muted", lineClamp: 1, children: unselectedSubLabel });
     }
   }
-  obj[4] = fn;
-  const tmp2 = callback();
-  obj[5] = jsx(Button.Icon, { source: unselectedSubLabel(7142), size: Button.IconSizes.SMALL_20 });
+  obj.subLabel = fn;
+  const tmp2 = closure_4();
+  obj.trailing = jsx(native.Icon, { source: unselectedSubLabel(7142), size: native.IconSizes.SMALL_20 });
   const merged1 = Object.assign(merged);
   return jsx(Form.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
 };

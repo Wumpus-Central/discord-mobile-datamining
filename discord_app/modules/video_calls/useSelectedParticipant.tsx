@@ -1,13 +1,14 @@
 // === Module 9470: useSelectedParticipant ===
 
 // Module 9470 (useSelectedParticipant)
-import closure_2 from "getParticipants" /* 4576 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/video_calls/useSelectedParticipant.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/useSelectedParticipant.tsx");
 
 export default function useSelectedParticipant(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => closure_1_2.getSelectedParticipant(id.id));
+  _require = arg0;
+  const items = [ChannelRTCStore];
+  return require("initialize").useStateFromStores(items, () => ChannelRTCStore.getSelectedParticipant(id.id));
 };

@@ -1,10 +1,11 @@
 // === Module 15964: useFocusRefOnNavigation ===
 
 // Module 15964 (useFocusRefOnNavigation)
-import closure_2 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useFocusRefOnNavigation.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useFocusRefOnNavigation.tsx");
 
 export default function useFocusRefOnNavigation(inputRef) {
   inputRef = inputRef.inputRef;
@@ -12,14 +13,13 @@ export default function useFocusRefOnNavigation(inputRef) {
   if (flag === undefined) {
     flag = true;
   }
-  let isFocused;
-  isFocused = inputRef(flag[1]).useIsFocused();
+  const isFocused = inputRef(flag[1]).useIsFocused();
   const items = [flag, inputRef, isFocused];
   const effect = isFocused.useEffect(() => {
-    closure_0 = inputRef(flag[2]).runAfterInteractions(() => {
-      let tmp = closure_1;
-      if (closure_1) {
-        tmp = closure_2;
+    inputRef(flag[2]).runAfterInteractions(() => {
+      let tmp = flag;
+      if (flag) {
+        tmp = isFocused;
       }
       if (tmp) {
         const current = ref.current;

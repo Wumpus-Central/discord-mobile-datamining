@@ -1,43 +1,45 @@
 // === Module 7862: ForLaterModal ===
 
 // Module 7862 (ForLaterModal)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import keyExtractorDefault from "keyExtractor" /* 13281 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import HeaderShared from "HeaderShared" /* 7863 */;
+import ForLaterScreenDefault from "ForLaterScreen" /* 13281 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { modal: null, headerLeftContainer: null, headerRightContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingLeft: ThemesDefault.space.PX_16 };
-const obj1 = { paddingLeft: ThemesDefault.space.PX_16 };
-createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { paddingRight: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterModal.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { modal: null, headerLeftContainer: null, headerRightContainer: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderBottomWidth: 0, shadowColor: "transparent", height: "100%" };
+createStyles.modal = createStyles;
+createStyles.headerLeftContainer = { paddingLeft: nativeDefault.space.PX_16 };
+const obj1 = { paddingLeft: nativeDefault.space.PX_16 };
+createStyles.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterModal.tsx");
 
 export default function ForLaterModal(type) {
   type = type.type;
-  let _require;
-  const tmp = callback();
-  const intl = _require(1114).intl;
-  if (type === _require(7860).SavedMessageSortTypes.REMINDER) {
+  _require = undefined;
+  const tmp = closure_6();
+  const intl = require("util").intl;
+  if (type === require("SavedMessagesTypes").SavedMessageSortTypes.REMINDER) {
+    let aUXxzT = tmp4(1114).t.aUXxzT;
   } else {
+    aUXxzT = tmp4(1114).t["2pAkDA"];
   }
-  const stringResult = intl.string(_2pAkDA);
+  const stringResult = intl.string(aUXxzT);
   _require = stringResult;
   let obj = { style: tmp.modal, children: null };
   obj = {
     title: stringResult,
     headerTitle() {
-      return closure_1_4(_undefined(closure_1_2[9]).GenericHeaderTitle, { title: _undefined });
+      return React4(HeaderShared.GenericHeaderTitle, { title });
     },
     headerTitleAlign: "center",
     headerStatusBarHeight: null,
@@ -50,13 +52,13 @@ export default function ForLaterModal(type) {
   if (!tmp4Result.isIOS()) {
     num = useSafeAreaInsetsDefault().top;
   }
-  obj[3] = num + ThemesDefault.space.PX_8;
+  obj.headerStatusBarHeight = num + nativeDefault.space.PX_8;
   tmp4Result = tmp4(5624);
-  obj[4] = tmp4Result.getHeaderCloseButton(_modDef4763.pop);
-  ({ headerLeftContainer: obj2[5], headerRightContainer: obj2[6] } = tmp);
-  const items = [closure_4(_require(5631).Header, obj), ];
-  obj = { type, onClose: _modDef4763.pop };
-  items[1] = closure_4(keyExtractorDefault, obj, type);
-  obj[1] = items;
+  obj.headerLeft = tmp4Result.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
+  ({ headerLeftContainer: obj2.headerLeftContainerStyle, headerRightContainer: obj2.headerRightContainerStyle } = tmp);
+  const items = [closure_4(require("module_5631").Header, obj), ];
+  obj = { type, onClose: ModalActionCreatorsDefault.pop };
+  items[1] = closure_4(ForLaterScreenDefault, obj, type);
+  obj.children = items;
   return closure_5(View, obj);
 };

@@ -1,61 +1,58 @@
-// === Module 12604: getNoMutualServersSource ===
+// === Module 12604: NoMutualServers ===
 
-// Module 12604 (getNoMutualServersSource)
-import noopAll from "noop" /* 19 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getIllustrationSource from "getIllustrationSource" /* 8233 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12604 (NoMutualServers)
+import shared from "shared" /* 4411 */;
+import _mod8233 from "module_8233" /* 8233 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoMutualServers.tsx");
+require = fn;
+const Image = fn(17).Image;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Illustration/native/redesign/generated/NoMutualServers.tsx");
 
 export const getNoMutualServersSource = function getNoMutualServersSource(theme) {
-  let obj = getIllustrationSource;
-  obj = {
+  const obj = {
     dark() {
-      return callback(12605);
+      return require("module_12605");
     },
     darker() {
-      return callback(12606);
+      return require("module_12606");
     },
     light() {
-      return callback(12607);
+      return require("module_12607");
     }
   };
   return obj.getIllustrationSource(theme, obj);
 };
 export const useNoMutualServersSource = function useNoMutualServersSource() {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  const obj = {
     dark() {
-      return callback(12605);
+      return require("module_12605");
     },
     darker() {
-      return callback(12606);
+      return require("module_12606");
     },
     light() {
-      return callback(12607);
+      return require("module_12607");
     }
   };
-  return getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const NoMutualServers = function NoMutualServers(arg0) {
-  let obj = AccessibilityAnnouncer;
-  obj = {
+  let obj = {
     dark() {
-      return callback(12605);
+      return require("module_12605");
     },
     darker() {
-      return callback(12606);
+      return require("module_12606");
     },
     light() {
-      return callback(12607);
+      return require("module_12607");
     }
   };
   obj = {};
-  const illustrationSource = getIllustrationSource.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

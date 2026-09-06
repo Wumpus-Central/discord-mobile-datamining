@@ -1,12 +1,14 @@
-// === Module 12989: experiment ===
+// === Module 12989: SafetyExperienceIarUserReportingExperiment ===
 
-// Module 12989 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 12989 (SafetyExperienceIarUserReportingExperiment)
+import createExperiment from "module_4474" /* 4474 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enabled", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "user", id: "2023-09_iar_user_reporting", label: "Safety Experience IAR User Reporting", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/in_app_reports/SafetyExperienceIarUserReportingExperiment.tsx");
 
 export default experiment;
 export const useIsIarUserReportingEnabled = function useIsIarUserReportingEnabled(location) {

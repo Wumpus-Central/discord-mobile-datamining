@@ -1,110 +1,99 @@
-// === Module 10744: fetchAndReconcileGiftIntentDismissals ===
+// === Module 10744: PremiumGiftingIntentActionCreators ===
 
-// Module 10744 (fetchAndReconcileGiftIntentDismissals)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import closure_3 from "recomputeAffinities" /* 7659 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "reinjectEphemerals" /* 4781 */;
-import { GiftIntentType } from "GuildFeatures" /* 1373 */;
-import ME from "ME" /* 1074 */;
+// Module 10744 (PremiumGiftingIntentActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import MessageStore from "MessageStore" /* 4781 */;
 
-require = arg1;
-({ AnalyticEvents: error, Endpoints: closure_8 } = ME);
-const result = require("set").fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
+require = fn;
+const GiftIntentType = fn(1373).GiftIntentType;
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
 
 export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileGiftIntentDismissals(serverDismissalTimestampMs) {
-  const _require = serverDismissalTimestampMs;
-  const id2 = id.getId();
-  const HTTP = _require(1272).HTTP;
-  const value = HTTP.get({ url: constants2.GIFT_INTENT_DISMISSALS, oldFormErrors: true, rejectWithError: true });
+  _require = serverDismissalTimestampMs;
+  const id = AuthenticationStore.getId();
+  const HTTP = require("HTTPUtils").HTTP;
+  value = HTTP.get({ url: constants2.GIFT_INTENT_DISMISSALS, oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
-    if (closure_1_4.getId() === callback) {
+    if (AuthenticationStore.getId() === closure_1) {
       let dismissals = body.body.dismissals;
       if (dismissals == null) {
         dismissals = [];
       }
-      let obj = { type: "GIFT_INTENT_DISMISSALS_FETCH_SUCCESS", dismissals: null, settingsTimestampMs: null };
-      obj[1] = dismissals.map((targetId) => ({ targetId: targetId.target_id, dismissedAtMs: Number(targetId.dismissed_at_ms) }));
-      obj[2] = closure_0;
-      callback(closure_1_2[6]).dispatch(obj);
-      const obj2 = callback(closure_1_2[6]);
+      let obj = { type: "GIFT_INTENT_DISMISSALS_FETCH_SUCCESS", dismissals: dismissals.map((targetId) => ({ targetId: targetId.target_id, dismissedAtMs: Number(targetId.dismissed_at_ms) })), settingsTimestampMs };
+      DispatcherDefault.dispatch(obj);
     } else {
-      obj = callback(closure_1_2[6]);
+      obj = DispatcherDefault;
       obj.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     }
   }, (arg0) => {
-    callback(1232).captureException(arg0, { tags: { feature: "gift_intent" } });
-    const obj = callback(1232);
-    callback(573).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+    closure_1(1232).captureException(arg0, { tags: { feature: "gift_intent" } });
+    const obj = closure_1(1232);
+    closure_1(573).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
   });
 };
 export const logFriendsListGiftIntentsShown = function logFriendsListGiftIntentsShown() {
-  dispatcherDefault.dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
+  DispatcherDefault.dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
 };
 export const logMessageGiftIntentShown = function logMessageGiftIntentShown(recipientUserId) {
   let FRIEND_ANNIVERSARY = arg1;
   if (arg1 === undefined) {
     FRIEND_ANNIVERSARY = GiftIntentType.FRIEND_ANNIVERSARY;
   }
-  let obj = dispatcherDefault;
-  obj = { type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId };
+  let obj = { type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId };
   obj.dispatch(obj);
-  let obj2 = expandEventPropertiesDefault;
   obj = { gift_intent_type: FRIEND_ANNIVERSARY, dismiss_type: "shown", affinity: null };
-  const userAffinity = authStore.getUserAffinity(recipientUserId);
+  const userAffinity = UserAffinitiesV2Store.getUserAffinity(recipientUserId);
   let dmProbability;
   if (userAffinity != null) {
     dmProbability = userAffinity.dmProbability;
   }
-  obj[2] = dmProbability;
-  obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
+  obj.affinity = dmProbability;
+  AnalyticsUtilsDefault.track(constants.GIFT_INTENT_DISMISSED, obj);
   if (FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED) {
-    const HTTP = sendRequest.HTTP;
-    obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-    obj1[0] = constants2.GIFT_INTENTS_DISMISS;
-    obj2 = { intent_type: null, target_id: null };
-    obj2[0] = FRIEND_ANNIVERSARY;
-    obj2[1] = recipientUserId;
-    obj1[1] = obj2;
-    HTTP.post(obj1).catch((arg0) => {
-      callback(table[7]).captureException(arg0, { tags: { feature: "gift_intent" } });
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants2.GIFT_INTENTS_DISMISS, body: null, oldFormErrors: true, rejectWithError: true };
+    const obj1 = { intent_type: FRIEND_ANNIVERSARY, target_id: recipientUserId };
+    request.body = obj1;
+    HTTP.post(request).catch((error) => {
+      SentryUtilsDefault.captureException(error, { tags: { feature: "gift_intent" } });
     });
-    const postResult = HTTP.post(obj1);
+    const postResult = HTTP.post(request);
   }
 };
 export const logGiftIntentMessageDismissed = function logGiftIntentMessageDismissed(channel_id, id) {
-  message = message.getMessage(channel_id, id);
+  const message = MessageStore.getMessage(channel_id, id);
   let giftingPrompt;
   if (message != null) {
     giftingPrompt = message.giftingPrompt;
   }
   if (null != giftingPrompt) {
     ({ giftIntentType, recipientUserId } = giftingPrompt);
-    let obj = { gift_intent_type: null, dismiss_type: "explicit", affinity: null };
-    obj[0] = giftIntentType;
-    const userAffinity = authStore.getUserAffinity(recipientUserId);
+    let obj = { gift_intent_type: giftIntentType, dismiss_type: "explicit", affinity: null };
+    const userAffinity = UserAffinitiesV2Store.getUserAffinity(recipientUserId);
     let dmProbability;
     if (userAffinity != null) {
       dmProbability = userAffinity.dmProbability;
     }
-    obj[2] = dmProbability;
-    expandEventPropertiesDefault.track(constants.GIFT_INTENT_DISMISSED, obj);
+    obj.affinity = dmProbability;
+    AnalyticsUtilsDefault.track(constants.GIFT_INTENT_DISMISSED, obj);
     if (giftIntentType !== GiftIntentType.UNSPECIFIED) {
-      const HTTP = sendRequest.HTTP;
-      obj = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-      obj[0] = constants2.GIFT_INTENTS_DISMISS;
-      obj = { intent_type: null, target_id: null };
-      obj[0] = giftIntentType;
-      obj[1] = recipientUserId;
-      obj[1] = obj;
-      HTTP.post(obj).catch((arg0) => {
-        callback(table[7]).captureException(arg0, { tags: { feature: "gift_intent" } });
+      const HTTP = HTTPUtils.HTTP;
+      const request = { url: constants2.GIFT_INTENTS_DISMISS, body: null, oldFormErrors: true, rejectWithError: true };
+      obj = { intent_type: giftIntentType, target_id: recipientUserId };
+      request.body = obj;
+      HTTP.post(request).catch((error) => {
+        SentryUtilsDefault.captureException(error, { tags: { feature: "gift_intent" } });
       });
-      const postResult = HTTP.post(obj);
+      const postResult = HTTP.post(request);
     }
-    const obj3 = expandEventPropertiesDefault;
   }
 };
 export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchasedGift(recipientUserId) {
@@ -112,29 +101,24 @@ export const logGiftIntentFlowPurchasedGift = function logGiftIntentFlowPurchase
   if (arg1 === undefined) {
     FRIEND_ANNIVERSARY = GiftIntentType.FRIEND_ANNIVERSARY;
   }
-  let obj = dispatcherDefault;
-  obj = { type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId };
+  let obj = { type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId };
   obj.dispatch(obj);
-  let obj2 = expandEventPropertiesDefault;
   obj = { gift_intent_type: FRIEND_ANNIVERSARY, dismiss_type: "gift_sent", affinity: null };
-  const userAffinity = authStore.getUserAffinity(recipientUserId);
+  const userAffinity = UserAffinitiesV2Store.getUserAffinity(recipientUserId);
   let dmProbability;
   if (userAffinity != null) {
     dmProbability = userAffinity.dmProbability;
   }
-  obj[2] = dmProbability;
-  obj2.track(constants.GIFT_INTENT_DISMISSED, obj);
+  obj.affinity = dmProbability;
+  AnalyticsUtilsDefault.track(constants.GIFT_INTENT_DISMISSED, obj);
   if (FRIEND_ANNIVERSARY !== GiftIntentType.UNSPECIFIED) {
-    const HTTP = sendRequest.HTTP;
-    obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-    obj1[0] = constants2.GIFT_INTENTS_DISMISS;
-    obj2 = { intent_type: null, target_id: null };
-    obj2[0] = FRIEND_ANNIVERSARY;
-    obj2[1] = recipientUserId;
-    obj1[1] = obj2;
-    HTTP.post(obj1).catch((arg0) => {
-      callback(table[7]).captureException(arg0, { tags: { feature: "gift_intent" } });
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: constants2.GIFT_INTENTS_DISMISS, body: null, oldFormErrors: true, rejectWithError: true };
+    const obj1 = { intent_type: FRIEND_ANNIVERSARY, target_id: recipientUserId };
+    request.body = obj1;
+    HTTP.post(request).catch((error) => {
+      SentryUtilsDefault.captureException(error, { tags: { feature: "gift_intent" } });
     });
-    const postResult = HTTP.post(obj1);
+    const postResult = HTTP.post(request);
   }
 };

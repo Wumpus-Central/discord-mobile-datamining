@@ -1,10 +1,10 @@
-// === Module 4563: mutable ===
+// === Module 4563: reanimated/AccessibilityPreferencesSharedValue ===
 
-// Module 4563 (mutable)
-import set from "set" /* 2 */;
-import module_4296 from "module_4296" /* 4296 */;
+// Module 4563 (reanimated/AccessibilityPreferencesSharedValue)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import size from "module_2" /* 2 */;
 
-const mutable = module_4296.makeMutable({ reduceMotion: false, prefersCrossfades: false, screenReaderEnabled: false });
-const result = set.fileFinishedImporting("design/animation/reanimated/AccessibilityPreferencesSharedValue.native.tsx");
+const mutable = ReanimatedRexport.makeMutable({ reduceMotion: false, prefersCrossfades: false, screenReaderEnabled: false });
+const result = size.fileFinishedImporting("design/animation/reanimated/AccessibilityPreferencesSharedValue.native.tsx");
 
 export const accessibilityPreferencesSharedValue = mutable;

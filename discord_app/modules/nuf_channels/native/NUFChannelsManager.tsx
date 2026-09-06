@@ -1,20 +1,20 @@
-// === Module 13767: _initialize ===
+// === Module 13767: NUFChannelsManager ===
 
-// Module 13767 (_initialize)
+// Module 13767 (NUFChannelsManager)
 import Storage3 from "Storage" /* 510 */;
-import getRootNavigationRef from "getRootNavigationRef" /* 4418 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "handleConnectionOpen" /* 4381 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import UserStore from "UserStore" /* 1371 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
+require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const GuildMemberFlags = fn(4187).GuildMemberFlags;
 let c9 = "2020_02_nuf_channels";
 let c10 = "2020_02_nuf_voice_channels";
-initializeDefault;
 class NUFChannelsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -26,28 +26,28 @@ class NUFChannelsManager extends tmp2 {
     };
     applyArgumentsResult.handleNavigationStateChanged = function handleNavigationStateChanged() {
       if ("guilds" === obj.getCurrentNavigationRouteName()) {
-        const guildId = closure_1_5.getGuildId();
-        const guild = closure_1_4.getGuild(guildId);
+        const guildId = SelectedGuildStore.getGuildId();
+        const guild = GuildStore.getGuild(guildId);
         let tmp5 = null != guildId;
         if (tmp5) {
           let hasItem;
           if (guild != null) {
             const features = guild.features;
-            hasItem = features.has(closure_1_7.HUB);
+            hasItem = features.has(GuildFeatures.HUB);
           }
           tmp5 = !hasItem;
         }
         let selfMember = null;
         if (null != guild) {
-          selfMember = closure_1_3.getSelfMember(guild.id);
+          selfMember = GuildMemberStore.getSelfMember(guild.id);
         }
         let hasItem1 = null != guild;
         if (hasItem1) {
           const features2 = guild.features;
-          hasItem1 = features2.has(closure_1_7.GUILD_ONBOARDING);
+          hasItem1 = features2.has(GuildFeatures.GUILD_ONBOARDING);
         }
         if (hasItem1) {
-          let tmpResult = tmp(tmp2[11]);
+          let tmpResult = tmp(1384);
           let num;
           if (selfMember != null) {
             num = selfMember.flags;
@@ -55,10 +55,10 @@ class NUFChannelsManager extends tmp2 {
           if (num == null) {
             num = 0;
           }
-          hasItem1 = tmpResult.hasFlag(num, closure_1_8.STARTED_ONBOARDING);
+          hasItem1 = tmpResult.hasFlag(num, GuildMemberFlags.STARTED_ONBOARDING);
         }
         if (hasItem1) {
-          tmpResult = tmp(tmp2[11]);
+          tmpResult = tmp(1384);
           let num2;
           if (selfMember != null) {
             num2 = selfMember.flags;
@@ -66,33 +66,32 @@ class NUFChannelsManager extends tmp2 {
           if (num2 == null) {
             num2 = 0;
           }
-          hasItem1 = !tmpResult.hasFlag(num2, closure_1_8.COMPLETED_ONBOARDING);
+          hasItem1 = !tmpResult.hasFlag(num2, GuildMemberFlags.COMPLETED_ONBOARDING);
         }
         if (tmp5) {
           tmp5 = !hasItem1;
         }
         if (tmp5) {
-          const Storage = tmp(tmp2[6]).Storage;
-          const value = Storage.get(closure_1_9);
+          const Storage = tmp(510).Storage;
+          value = Storage.get(c9);
           let isNewUserResult = !value;
           if (!value) {
-            isNewUserResult = tmp(tmp2[7]).isNewUser(closure_1_6.getCurrentUser());
-            const tmpResult1 = tmp(tmp2[7]);
+            isNewUserResult = tmp(4404).isNewUser(UserStore.getCurrentUser());
+            const tmpResult1 = tmp(4404);
           }
           if (isNewUserResult) {
-            closure_1_1(tmp2[12]).openLazy(tmp(tmp2[14])(tmp2[13], tmp2.paths), "NUFChannelsActionSheet");
-            const Storage2 = tmp(tmp2[6]).Storage;
+            ActionSheetActionCreatorsDefault.openLazy(tmp(1896)(13768, dependencyMap.paths), "NUFChannelsActionSheet");
+            const Storage2 = tmp(510).Storage;
             const result = Storage2.set(tmp12, true);
-            const obj5 = closure_1_1(tmp2[12]);
           }
           applyArgumentsResult.terminate();
-          tmp12 = closure_1_9;
+          tmp12 = c9;
         }
       }
     };
     applyArgumentsResult.requiresVoiceChannelsOnboard = function requiresVoiceChannelsOnboard() {
       const Storage = applyArgumentsResult(510).Storage;
-      const value = Storage.get(closure_10);
+      value = Storage.get(closure_1_10);
       let isNewUserResult = !value;
       if (!value) {
         isNewUserResult = applyArgumentsResult(4404).isNewUser(currentUser.getCurrentUser());
@@ -102,13 +101,13 @@ class NUFChannelsManager extends tmp2 {
     };
     applyArgumentsResult.handleVoiceChannelsOnboard = function handleVoiceChannelsOnboard() {
       const Storage = applyArgumentsResult(510).Storage;
-      const result = Storage.set(closure_10, true);
+      const result = Storage.set(closure_1_10, true);
     };
     applyArgumentsResult.clear = function clear() {
       const Storage = applyArgumentsResult(510).Storage;
-      Storage.remove(closure_9);
+      Storage.remove(closure_1_9);
       const Storage2 = applyArgumentsResult(510).Storage;
-      Storage2.remove(closure_10);
+      Storage2.remove(closure_1_10);
     };
     return applyArgumentsResult;
   }
@@ -116,11 +115,11 @@ class NUFChannelsManager extends tmp2 {
 const prototype = NUFChannelsManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const Storage = Storage3.Storage;
-  const value = Storage.get(c9);
+  value = Storage.get(c9);
   let isNewUserResult = !value;
   if (!value) {
     let tmpResult = tmp(4404);
-    isNewUserResult = tmpResult.isNewUser(currentUser.getCurrentUser());
+    isNewUserResult = tmpResult.isNewUser(UserStore.getCurrentUser());
   }
   if (isNewUserResult) {
     tmpResult = tmp(4418);
@@ -132,13 +131,14 @@ prototype["_initialize"] = function _initialize() {
   }
 };
 prototype["_terminate"] = function _terminate() {
-  const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
+  const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
   if (rootNavigationRef != null) {
     const self = this;
     rootNavigationRef.removeListener("state", this.handleNavigationStateChanged);
   }
 };
 const nUFChannelsManager = new NUFChannelsManager();
-let result = require("set").fileFinishedImporting("modules/nuf_channels/native/NUFChannelsManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/nuf_channels/native/NUFChannelsManager.tsx");
 
 export default nUFChannelsManager;

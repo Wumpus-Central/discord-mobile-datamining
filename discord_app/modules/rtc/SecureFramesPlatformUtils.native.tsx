@@ -1,85 +1,76 @@
-// === Module 9154: ? ===
+// === Module 9154: SecureFramesPlatformUtils ===
 
-// Module 9154
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 9154 (SecureFramesPlatformUtils)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import _modDef4905 from "module_4905" /* 4905 */;
-import _safeTransitionToDefault from "_safeTransitionTo" /* 7244 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9152 */;
-import ME from "ME" /* 1074 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import safeTransitionToDefault from "safeTransitionTo" /* 7244 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-require = arg1;
-({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: c5, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: error } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
-({ ME: closure_8, Routes: c9 } = ME);
-const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils.native.tsx");
+require = fn;
+const SecureFramesConstants = fn(9152);
+({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: hasOwnProperty, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: metroRequire, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: closure_7 } = SecureFramesConstants);
+const Constants = fn(1074);
+({ ME: closure_8, Routes: closure_9 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils.native.tsx");
 
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
-    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-    obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9166, dependencyMap.paths), closure_6, obj);
+    const obj = { streamKey, channelId };
+    obj.openLazy(asyncRequireImpl(9166, dependencyMap.paths), timestampProducer, obj);
   },
-  openSecureFramesUserVerificationModal(id, id2, arg2) {
-    if (arg2()) {
-      let obj = _modDef4763;
-      obj = { userId: null, channelId: null };
-      obj[0] = id;
-      obj[1] = id2;
-      obj.pushLazy(asyncRequireImpl(9155, dependencyMap.paths), obj, closure_7);
+  openSecureFramesUserVerificationModal(id, id2, fn) {
+    if (fn()) {
+      const obj = { userId: id, channelId: id2 };
+      obj.pushLazy(asyncRequireImpl(9155, dependencyMap.paths), obj, React5);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
     confirmText = confirmText.confirmText;
     ({ title, subtitle } = confirmText);
     if (confirmText === undefined) {
-      const intl = onConfirm(1114).intl;
-      confirmText = intl.string(onConfirm(1114).t["cY+Oob"]);
+      const intl = util.intl;
+      confirmText = intl.string(util.t["cY+Oob"]);
     }
-    onConfirm = confirmText.onConfirm;
-    let obj = _modDef4905;
-    obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
-    const intl2 = onConfirm(1114).intl;
-    obj[3] = intl2.string(onConfirm(1114).t["ETE/oC"]);
-    obj[4] = onConfirm(1178).ButtonColors.RED;
-    obj.confirm(obj).then((arg0) => {
-      if (arg0) {
+    const onConfirm = confirmText.onConfirm;
+    const obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
+    const intl2 = util.intl;
+    obj.cancelText = intl2.string(util.t["ETE/oC"]);
+    obj.confirmColor = native.ButtonColors.RED;
+    obj.confirm(obj).then((result) => {
+      if (result) {
         onConfirm();
       }
     });
   },
   handleSecureFramesUserVerificationLink(arg0) {
     ({ userId, fingerprint } = arg0);
-    channelId = channelId.getChannelId();
-    channel = channel.getChannel(channelId);
+    const channelId = RTCConnectionStore.getChannelId();
+    const channel = ChannelStore.getChannel(channelId);
     let guildId;
     if (channel != null) {
       guildId = channel.getGuildId();
     }
     if (guildId == null) {
-      guildId = closure_8;
+      guildId = React6;
     }
     if (null != channelId) {
       if (null != channel) {
-        _safeTransitionToDefault(closure_9.CHANNEL(guildId, channelId));
-        const tmp6 = _safeTransitionToDefault;
-        let obj = { userId: null, channelId: null, guildId: null, fingerprint: null };
-        obj[0] = userId;
-        obj[1] = channelId;
-        obj[2] = guildId;
-        obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9169, dependencyMap.paths), closure_5, obj);
-        const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
+        safeTransitionToDefault(React7.CHANNEL(guildId, channelId));
+        let obj = { userId, channelId, guildId, fingerprint };
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9169, dependencyMap.paths), hasOwnProperty, obj);
       }
     }
     obj = { title: null, body: null };
-    const intl = getSystemLocale.intl;
-    obj[0] = intl.string(getSystemLocale.t["5ICxE6"]);
-    const intl2 = getSystemLocale.intl;
-    obj[1] = intl2.string(getSystemLocale.t["v1eXp/"]);
-    _modDef4905.show(obj);
+    const intl = util.intl;
+    obj.title = intl.string(util.t["5ICxE6"]);
+    const intl2 = util.intl;
+    obj.body = intl2.string(util.t["v1eXp/"]);
+    actions_AlertActionCreatorsDefault.show(obj);
   }
 };

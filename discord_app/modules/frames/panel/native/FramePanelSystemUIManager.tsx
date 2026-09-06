@@ -1,18 +1,17 @@
-// === Module 17047: ? ===
+// === Module 17047: FramePanelSystemUIManager ===
 
-// Module 17047
-import BaseActivityPanelSystemUIManager from "BaseActivityPanelSystemUIManager" /* 17038 */;
-import contextDefault from "context" /* 17041 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 17047 (FramePanelSystemUIManager)
+import ActivityPanelSystemUIManager from "ActivityPanelSystemUIManager" /* 17038 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17041 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(() => {
-  const context = importAllResult.useContext(contextDefault);
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelSystemUIManager.tsx");
+
+export default noop.memo(() => {
+  const context = noop.useContext(FramePanelStateContextDefault);
   ({ mode, wrapperDimensions } = context);
-  return jsx(BaseActivityPanelSystemUIManager.BaseActivityPanelSystemUIManager, { mode, isWindowLandscape: wrapperDimensions.isWindowLandscape });
+  return jsx(ActivityPanelSystemUIManager.BaseActivityPanelSystemUIManager, { mode, isWindowLandscape: wrapperDimensions.isWindowLandscape });
 });
-const result = require("set").fileFinishedImporting("modules/frames/panel/native/FramePanelSystemUIManager.tsx");
-
-export default memoResult;

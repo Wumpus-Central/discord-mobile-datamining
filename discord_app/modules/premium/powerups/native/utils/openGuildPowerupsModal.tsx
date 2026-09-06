@@ -1,15 +1,15 @@
 // === Module 12479: openGuildPowerupsModal ===
 
 // Module 12479 (openGuildPowerupsModal)
-import set from "set" /* 2 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import size from "module_2" /* 2 */;
 
 let c3 = 0;
-const result = set.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/native/utils/openGuildPowerupsModal.tsx");
 
 export default function openGuildPowerupsModal(navigationParams) {
-  const merged = Object.assign(navigationParams, Object.create(null));
+  const merged = Object.assign(navigationParams, Object.assign({ navigationParams: 0 }));
   let tmp2 = merged;
   if (null != merged.autoOpenPerkId) {
     const obj = {};
@@ -19,5 +19,5 @@ export default function openGuildPowerupsModal(navigationParams) {
     obj.autoOpenRequestId = sum;
     tmp2 = obj;
   }
-  _modDef4763.pushLazy(asyncRequireImpl(12480, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(12480, dependencyMap.paths), tmp2, "guild_powerups_modal_key", navigationParams.navigationParams);
 };

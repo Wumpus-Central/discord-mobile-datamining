@@ -1,12 +1,12 @@
-// === Module 12445: set ===
+// === Module 12445: useIsStricterMessageRequests ===
 
-// Module 12445 (set)
-import set2 from "set" /* 12419 */;
-import set from "set" /* 2 */;
+// Module 12445 (useIsStricterMessageRequests)
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12419 */;
+import size from "module_2" /* 2 */;
 
-let set = new Set(["GB"]);
-const result = set.fileFinishedImporting("modules/message_request/hooks/useIsStricterMessageRequests.tsx");
+const set = new Set(["GB"]);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useIsStricterMessageRequests.tsx");
 
 export default function useIsStricterMessageRequests() {
-  return set2.useIsTeenInCountrySet(set);
+  return RegionalTeenUtils.useIsTeenInCountrySet(set);
 };

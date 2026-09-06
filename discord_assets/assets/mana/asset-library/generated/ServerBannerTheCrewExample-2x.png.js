@@ -1,9 +1,9 @@
-// === Module 6414: metadata ===
+// === Module 6414: ? ===
 
-// Module 6414 (metadata)
-import set from "set" /* 2 */;
+// Module 6414
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerTheCrewExample-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ServerBannerTheCrewExample-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/99a58f46224bfd37be0a27f0b60666b3db3fdb3d53a3576e21cc937a260c259e.png";
 export const metadata = { fileBytes: 148393 };

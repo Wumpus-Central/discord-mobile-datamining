@@ -1,32 +1,32 @@
-// === Module 13725: NetworkTtlCacheStatus ===
+// === Module 13725: NetworkTtlCache ===
 
-// Module 13725 (NetworkTtlCacheStatus)
-import set from "set" /* 2 */;
+// Module 13725 (NetworkTtlCache)
+import size from "module_2" /* 2 */;
 
-let closure_0 = { IDLE: "idle", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
-let obj = { IDLE: "idle", LOADING: "loading", VALID: "valid", STALE: "stale", ERROR: "error" };
-const result = set.fileFinishedImporting("lib/NetworkTtlCache.tsx");
+const React = { IDLE: "idle", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
+const NetworkTtlCacheStatus = { IDLE: "idle", LOADING: "loading", VALID: "valid", STALE: "stale", ERROR: "error" };
+const result = size.fileFinishedImporting("lib/NetworkTtlCache.tsx");
 class NetworkTtlCache {
   constructor() {
     obj = global;
     if (global === undefined) {
       obj = {};
     }
-    obj = Object.create(new.target.prototype);
-    obj[1] = closure_0.IDLE;
+    merged = Object.assign({ value: null, fetchState: null, fetchedAt: null });
+    merged[1] = closure_0.IDLE;
     ttlMs = obj.ttlMs;
     if (ttlMs == null) {
       ttlMs = null;
     }
-    obj.ttlMs = ttlMs;
-    return obj;
+    merged.ttlMs = ttlMs;
+    return merged;
   }
 }
 const prototype = NetworkTtlCache.prototype;
-prototype["setTtl"] = function setTtl(ttlMs) {
-  this.ttlMs = ttlMs;
+prototype["setTtl"] = function setTtl(c6) {
+  this.ttlMs = c6;
 };
-prototype["setLoading"] = function setLoading(arg0) {
+prototype["setLoading"] = function setLoading() {
   this.fetchState = constants.LOADING;
 };
 prototype["setValue"] = function setValue(value) {
@@ -108,8 +108,8 @@ prototype["serialize"] = function serialize() {
   if (null != this.value) {
     tmp = null;
     if (null != self.fetchedAt) {
-      obj = { value: null, fetchedAt: null };
-      ({ value: obj[0], fetchedAt: obj[1] } = self);
+      const obj = { value: null, fetchedAt: null };
+      ({ value: obj.value, fetchedAt: obj.fetchedAt } = self);
       tmp = obj;
     }
   }
@@ -123,5 +123,5 @@ prototype["restore"] = function restore(arg0) {
   }
 };
 
-export const NetworkTtlCacheStatus = obj;
+export { NetworkTtlCacheStatus };
 export { NetworkTtlCache };

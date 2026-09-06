@@ -1,44 +1,44 @@
-// === Module 13756: initialize ===
+// === Module 13756: StatusPageStore ===
 
-// Module 13756 (initialize)
+// Module 13756 (StatusPageStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
-require = arg1;
+require = fn;
 const MaintenanceStore = "MaintenanceStore";
-let c3 = null;
-let c4 = null;
-let c5 = null;
+let incident = null;
+let maintenance = null;
+let id = null;
 const Store = initializeDefault.Store;
 class MaintenanceStore extends Store {
 }
 const prototype = MaintenanceStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage2.Storage;
-  closure_5 = Storage.get(MaintenanceStore);
+  id = Storage.get(MaintenanceStore);
 };
 prototype["getIncident"] = function getIncident() {
-  return c3;
+  return incident;
 };
 prototype["getScheduledMaintenance"] = function getScheduledMaintenance() {
   let scheduled_until;
-  if (_null != null) {
-    scheduled_until = _null.scheduled_until;
+  if (maintenance != null) {
+    scheduled_until = maintenance.scheduled_until;
   }
   if (scheduled_until == null) {
     let scheduled_for;
-    if (_null != null) {
-      scheduled_for = _null.scheduled_for;
+    if (maintenance != null) {
+      scheduled_for = maintenance.scheduled_for;
     }
     scheduled_until = scheduled_for;
   }
   let tmp3 = null;
-  if (null != _null) {
+  if (null != maintenance) {
     tmp3 = null;
-    if (_null.id !== c5) {
+    if (maintenance.id !== id) {
       if (null == scheduled_until) {
-        tmp3 = _null;
+        tmp3 = maintenance;
       } else {
         const _Date = Date;
         const _Date2 = Date;
@@ -51,9 +51,9 @@ prototype["getScheduledMaintenance"] = function getScheduledMaintenance() {
   return tmp3;
 };
 MaintenanceStore.displayName = "MaintenanceStore";
-const maintenanceStore = new MaintenanceStore(dispatcherDefault, {
+const maintenanceStore = new MaintenanceStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    c3 = null;
+    incident = null;
   },
   STATUS_PAGE_INCIDENT: function handleIncident(incident) {
     incident = incident.incident;
@@ -62,15 +62,16 @@ const maintenanceStore = new MaintenanceStore(dispatcherDefault, {
     maintenance = maintenance.maintenance;
   },
   STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function handleScheduledMaintenanceAck() {
-    if (null == _null) {
+    if (null == maintenance) {
       return false;
     } else {
-      const id = _null.id;
+      id = maintenance.id;
       const Storage = Storage2.Storage;
       const result = Storage.set(MaintenanceStore, id);
     }
   }
 });
-let result = require("set").fileFinishedImporting("stores/StatusPageStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/StatusPageStore.tsx");
 
 export default maintenanceStore;

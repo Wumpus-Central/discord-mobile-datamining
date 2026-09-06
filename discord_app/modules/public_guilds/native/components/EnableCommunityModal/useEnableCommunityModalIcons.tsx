@@ -1,18 +1,18 @@
-// === Module 17666: safetyCheck ===
+// === Module 17666: useEnableCommunityModalIcons ===
 
-// Module 17666 (safetyCheck)
+// Module 17666 (useEnableCommunityModalIcons)
 import useThemeDefault from "useTheme" /* 4495 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { ThemeTypes } from "sum" /* 1085 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
+const ThemeTypes = fn(1085).ThemeTypes;
 class EnableCommunityModalIcons {
   constructor(arg0) {
-    obj = Object.create(new.target.prototype);
-    obj[0] = ThemeTypes.LIGHT;
-    obj.theme = global;
-    return obj;
+    merged = Object.assign({ theme: null });
+    merged[0] = ThemeTypes.LIGHT;
+    merged.theme = global;
+    return merged;
   }
 }
 const prototype = EnableCommunityModalIcons.prototype;
@@ -29,7 +29,7 @@ Object.defineProperty(prototype, "safetyCheck", {
 });
 Object.defineProperty(prototype, "channelSetup", {
   get: function channelSetup() {
-    return require(17669) /* getChannelSetupSource */.getChannelSetupSource(this.theme);
+    return require("ChannelSetup").getChannelSetupSource(this.theme);
   },
   set: undefined
 });
@@ -46,21 +46,23 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require(6992) /* registerAsset */;
+    return require("module_6992");
   },
   set: undefined
 });
-const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx");
 
 export default function useEnableCommunityModalIcons() {
   closure_0 = useThemeDefault();
-  return callback(React.useState(() => {
-    if (typeof closure_1_6 !== "function") {
-      HermesBuiltin.throwTypeError();
+  return _slicedToArray(noop.useState(() => {
+    if (typeof EnableCommunityModalIcons === "function") {
+      const merged = Object.assign({ theme: null });
+      merged[0] = ThemeTypes.LIGHT;
+      merged.theme = tmp;
+      return merged;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = Object.create(closure_1_6.prototype);
-    obj[0] = closure_1_5.LIGHT;
-    obj.theme = closure_0;
-    return obj;
   }), 1)[0];
 };

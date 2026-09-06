@@ -1,8 +1,8 @@
-// === Module 17306: ExistingUserAgeGateScreens ===
+// === Module 17306: ExistingUserAgeGateConstants ===
 
-// Module 17306 (ExistingUserAgeGateScreens)
-import set from "set" /* 2 */;
+// Module 17306 (ExistingUserAgeGateConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/age_gate/native/ExistingUserAgeGateConstants.tsx");
+const result = size.fileFinishedImporting("modules/age_gate/native/ExistingUserAgeGateConstants.tsx");
 
 export const ExistingUserAgeGateScreens = { AgeGate: "AgeGate", AgeGateConfirm: "AgeGateConfirm", Blocked: "Blocked", NSFWBlocked: "NSFWBlocked", NSFWGateGuild: "NSFWGateGuild", Pawtect: "Pawtect" };

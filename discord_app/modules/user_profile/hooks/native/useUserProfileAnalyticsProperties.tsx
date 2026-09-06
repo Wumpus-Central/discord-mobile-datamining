@@ -1,10 +1,11 @@
 // === Module 8199: useUserProfileAnalyticsProperties ===
 
 // Module 8199 (useUserProfileAnalyticsProperties)
-import closure_0 from "noop" /* 19 */;
-import { UserProfileAnalyticsTypes } from "USER_PROFILE_TOOLTIP_DELAY" /* 8183 */;
+import noop from "module_19" /* 19 */;
 
-let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
+const UserProfileAnalyticsTypes = fn(8183).UserProfileAnalyticsTypes;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileAnalyticsProperties.tsx");
 
 export default function useUserProfileAnalyticsProperties(userId) {
   userId = userId.userId;
@@ -33,7 +34,7 @@ export default function useUserProfileAnalyticsProperties(userId) {
   memo = userId.useMemo(() => {
     let USER_SHEET = type;
     if (type == null) {
-      USER_SHEET = user.USER_SHEET;
+      USER_SHEET = UserProfileAnalyticsTypes.USER_SHEET;
     }
     const obj = { type: USER_SHEET, other_user_id: userId, channel_id: channelId, guild_id: guildId, profile_has_nitro_customization: null, profile_has_theme_color_customized: null, profile_has_theme_animation: null, has_avatar_decoration: null, has_profile_effect: null };
     let tmp2 = null != displayProfile;
@@ -44,13 +45,13 @@ export default function useUserProfileAnalyticsProperties(userId) {
       }
       tmp2 = result;
     }
-    obj[4] = tmp2;
-    obj[5] = null != displayProfile && displayProfile.hasThemeColors();
+    obj.profile_has_nitro_customization = tmp2;
+    obj.profile_has_theme_color_customized = null != displayProfile && displayProfile.hasThemeColors();
     let prop;
     if (displayProfile != null) {
       prop = obj2.popoutAnimationParticleType;
     }
-    obj[6] = null != prop;
+    obj.profile_has_theme_animation = null != prop;
     let avatarDecoration;
     if (guildMember != null) {
       avatarDecoration = guildMember.avatarDecoration;
@@ -63,8 +64,8 @@ export default function useUserProfileAnalyticsProperties(userId) {
       }
       BooleanResult = Boolean(avatarDecoration1);
     }
-    obj[7] = BooleanResult;
-    obj[8] = null != profileEffectSkuId;
+    obj.has_avatar_decoration = BooleanResult;
+    obj.has_profile_effect = null != profileEffectSkuId;
     return obj;
   }, items);
   const items1 = [displayProfile, guildMember];
@@ -78,17 +79,17 @@ export default function useUserProfileAnalyticsProperties(userId) {
     if (guildMember != null) {
       avatar = tmp.avatar;
     }
-    obj[1] = Boolean(avatar);
+    obj.has_guild_member_avatar = Boolean(avatar);
     let result;
     if (displayProfile != null) {
       result = obj2.isUsingGuildMemberBanner();
     }
-    obj[2] = result;
+    obj.has_guild_member_banner = result;
     let result1;
     if (displayProfile != null) {
       result1 = obj2.isUsingGuildMemberBio();
     }
-    obj[3] = result1;
+    obj.has_guild_member_bio = result1;
     return obj;
   }, items1);
   const items2 = [guildId, memo, memo1];

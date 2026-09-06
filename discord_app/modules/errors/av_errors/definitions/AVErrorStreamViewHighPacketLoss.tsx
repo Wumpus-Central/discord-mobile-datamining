@@ -1,20 +1,22 @@
-// === Module 17838: AVErrorStreamViewHighPacketLossDefinition ===
+// === Module 17838: AVErrorStreamViewHighPacketLoss ===
 
-// Module 17838 (AVErrorStreamViewHighPacketLossDefinition)
-import closure_2 from "reset" /* 4582 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "initialize" /* 4599 */;
+// Module 17838 (AVErrorStreamViewHighPacketLoss)
+import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewHighPacketLoss.tsx");
 
 export const AVErrorStreamViewHighPacketLossDefinition = {
   getActiveErrors() {
     let reduced = null;
     if (obj.getReportInboundErrors()) {
-      allActiveStreams = allActiveStreams.getAllActiveStreams();
+      const allActiveStreams = ApplicationStreamingStore.getAllActiveStreams();
       reduced = allActiveStreams.reduce((arr, ownerId) => {
-        let obj = callback(table[4]);
+        let obj = StreamKeyUtils;
         rTCConnection = rTCConnection.getRTCConnection(obj.encodeStreamKey(ownerId));
         let mediaEngineConnectionId;
         if (rTCConnection != null) {
@@ -29,8 +31,7 @@ export const AVErrorStreamViewHighPacketLossDefinition = {
           const accumulatedStatsWithMinDatapoints = tmpResult.getAccumulatedStatsWithMinDatapoints(mediaEngineConnectionId, ownerId.ownerId);
           if (null != accumulatedStatsWithMinDatapoints) {
             if (10 < 100 * accumulatedStatsWithMinDatapoints.short.packetLossRate) {
-              obj = { type: null };
-              obj[0] = tmp(tmp2[5]).AVError.STREAM_VIEW_HIGH_PACKET_LOSS;
+              obj = { type: tmp(tmp2[5]).AVError.STREAM_VIEW_HIGH_PACKET_LOSS };
               tmpResult = tmp(tmp2[6]);
               const merged = Object.assign(tmpResult.getStreamErrorContext(tmp(tmp2[4]).encodeStreamKey(ownerId)));
               arr.push(obj);

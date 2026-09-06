@@ -1,25 +1,27 @@
 // === Module 11127: useCoachmark ===
 
 // Module 11127 (useCoachmark)
-import closure_2 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import AnimatedCoachmark from "AnimatedCoachmark" /* 11134 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Coachmark/native/useCoachmark.native.tsx");
 
 export const useCoachmark = function useCoachmark(targetRef, memo) {
-  const _require = memo;
+  _require = memo;
   let context;
-  let obj = _require(context[2]);
-  context = React.useContext(_require(context[4]).LayerContext);
+  let obj = require("v1");
+  context = noop.useContext(require("LayerContext").LayerContext);
   const items = [context, memo];
-  const callback = React.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
+  const callback = noop.useCallback((arg0, targetMeasurements, surfaceMeasurements) => {
     const obj = {};
-    const merged = Object.assign(memo);
+    const merged = Object.assign(closure_0);
     obj.targetMeasurements = targetMeasurements;
     obj.surfaceMeasurements = surfaceMeasurements;
-    context.add(arg0, closure_1_3(memo(context[5]).AnimatedCoachmark, obj));
+    context.add(arg0, jsx(AnimatedCoachmark.AnimatedCoachmark, {}));
   }, items);
-  const ref = React.useRef(_require(context[2]).v4());
-  return _require(context[3]).useTooltipHelper(ref, targetRef, callback);
+  const ref = noop.useRef(require("v1").v4());
+  return require("useTooltip").useTooltipHelper(ref, targetRef, callback);
 };

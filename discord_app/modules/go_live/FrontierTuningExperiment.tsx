@@ -1,13 +1,13 @@
-// === Module 4699: ? ===
+// === Module 4699: FrontierTuningExperiment ===
 
-// Module 4699
-import set from "set" /* 2 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
-import importDefaultResult from "getUnitId" /* 1434 */;
+// Module 4699 (FrontierTuningExperiment)
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4607 */;
+import ApexExperiment from "apex/ApexExperiment" /* 1434 */;
+import size from "module_2" /* 2 */;
 
 let obj = { maxBitrate: null, maxResolution: null, maxFPS: null, maskReportedQuality: false };
 obj = {};
-({ ApplicationStreamFPS, ApplicationStreamResolutions } = RESOLUTION_720);
+({ ApplicationStreamFPS, ApplicationStreamResolutions } = StreamSettingsConstants);
 const merged = Object.assign(obj);
 obj.maxResolution = ApplicationStreamResolutions.RESOLUTION_1080;
 obj.maxFPS = ApplicationStreamFPS.FPS_30;
@@ -31,8 +31,7 @@ const obj5 = {};
 const merged4 = Object.assign(obj);
 obj5.maxBitrate = 5000000;
 obj1[4] = obj5;
-obj[3] = obj1;
-const importDefaultResultResult = importDefaultResult(obj);
-const result = set.fileFinishedImporting("modules/go_live/FrontierTuningExperiment.tsx");
+obj.variations = obj1;
+const result = size.fileFinishedImporting("modules/go_live/FrontierTuningExperiment.tsx");
 
-export default importDefaultResultResult;
+export default ApexExperiment(obj);

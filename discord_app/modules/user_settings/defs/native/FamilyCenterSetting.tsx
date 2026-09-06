@@ -1,24 +1,23 @@
-// === Module 14864: route ===
+// === Module 14864: FamilyCenterSetting ===
 
-// Module 14864 (route)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2396 */;
+// Module 14864 (FamilyCenterSetting)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef2396 from "module_2396" /* 2396 */;
 import useIsParentalConsentBannerActive from "useIsParentalConsentBannerActive" /* 14865 */;
 import useParentalConsentWarning from "useParentalConsentWarning" /* 14866 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createToggle from "createToggle" /* 11468 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createToggle = {
+require = fn;
+const jsx = fn(21).jsx;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.RZqaJn);
+    const intl = util.intl;
+    return intl.string(_modDef2396.RZqaJn);
   },
   parent: null,
-  IconComponent: require("GroupIcon").GroupIcon,
+  IconComponent: fn(5089).GroupIcon,
   useTrailing: function useFamilyCenterTrailing() {
     let obj = useIsParentalConsentBannerActive;
     const isParentalConsentBannerActive = obj.useIsParentalConsentBannerActive();
@@ -36,25 +35,24 @@ createToggle = {
       if (null != daysRemaining) {
         tmp6 = null;
         if (daysRemaining >= 0) {
-          obj = { size: "sm", color: null, accessible: true, accessibilityLabel: null };
-          obj[1] = ThemesDefault.colors.ICON_FEEDBACK_WARNING;
+          obj = { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null };
           const intl = tmp(1114).intl;
-          obj[3] = intl.string(messagesProxyDefault.wucWfE);
-          tmp6 = jsx(tmp(8588).WarningIcon, { size: "sm", color: null, accessible: true, accessibilityLabel: null });
+          obj.accessibilityLabel = intl.string(_modDef2396.wucWfE);
+          tmp6 = jsx(tmp(8588).WarningIcon, { size: "sm", color: nativeDefault.colors.ICON_FEEDBACK_WARNING, accessible: true, accessibilityLabel: null });
         }
       }
     }
     return tmp6;
   },
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.FAMILY_CENTER,
-  getComponent() {
-    return require(14869) /* FamilyCenterLoading */.default;
+  screen: {
+    route: fn(1074).UserSettingsSections.FAMILY_CENTER,
+    getComponent() {
+      return require("UserSettingsFamilyCenter").default;
+    }
   }
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FamilyCenterSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

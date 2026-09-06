@@ -1,11 +1,11 @@
-// === Module 15022: isSourceError ===
+// === Module 15022: AdsVideoUtils ===
 
-// Module 15022 (isSourceError)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
+// Module 15022 (AdsVideoUtils)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
 let closure_2 = [-1000, -1003, -1004, -1008];
-const result = set.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
+const result = size.fileFinishedImporting("modules/quests/native/AdsVideoUtils.tsx");
 
 export const isSourceError = function isSourceError(error) {
   if (error != null) {
@@ -21,7 +21,7 @@ export const isSourceError = function isSourceError(error) {
     }
     let isIOSResult = hasItem;
   } else {
-    isIOSResult = set2.isIOS();
+    isIOSResult = PlatformUtils.isIOS();
     if (isIOSResult) {
       let hasItem1 = null != code;
       if (hasItem1) {
@@ -29,7 +29,7 @@ export const isSourceError = function isSourceError(error) {
       }
       isIOSResult = hasItem1;
     }
-    const tmpResult = set2;
+    const tmpResult = PlatformUtils;
   }
   return isIOSResult;
 };

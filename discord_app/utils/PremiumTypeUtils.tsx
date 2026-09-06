@@ -1,8 +1,8 @@
-// === Module 1885: isPremiumAtLeast ===
+// === Module 1885: PremiumTypeUtils ===
 
-// Module 1885 (isPremiumAtLeast)
-import set from "set" /* 2 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
+// Module 1885 (PremiumTypeUtils)
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import size from "module_2" /* 2 */;
 
 function isPremiumAtLeast(premiumType, TIER_2) {
   let tmp = null == TIER_2;
@@ -15,7 +15,7 @@ function isPremiumAtLeast(premiumType, TIER_2) {
   }
   return tmp;
 }
-function isPremium(premiumType) {
+function isPremium(premiumType, arg1) {
   let tmp = null != premiumType && null != premiumType.premiumType;
   if (tmp) {
     premiumType = premiumType.premiumType;
@@ -38,8 +38,8 @@ function isPremiumExactly(currentUser, TIER_2) {
   }
   return tmp;
 }
-const PremiumTypeOrder = GuildFeatures.PremiumTypeOrder;
-const result = set.fileFinishedImporting("utils/PremiumTypeUtils.tsx");
+const PremiumTypeOrder = PremiumConstants.PremiumTypeOrder;
+const result = size.fileFinishedImporting("utils/PremiumTypeUtils.tsx");
 
 export default { isPremiumAtLeast, isPremium, isPremiumExactly };
 export { isPremiumAtLeast };

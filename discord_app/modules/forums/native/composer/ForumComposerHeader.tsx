@@ -1,64 +1,65 @@
 // === Module 10266: ForumComposerHeader ===
 
 // Module 10266 (ForumComposerHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import computeChannelNameDefault from "computeChannelName" /* 4713 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import useChannelNameDefault from "useChannelName" /* 4713 */;
 import ForumIcon from "ForumIcon" /* 5088 */;
-import PressableBase from "PressableBase" /* 5123 */;
+import Pressables from "Pressables" /* 5123 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let closure_7 = createCacheKey.createStyles((height) => {
-  obj = { headerBar: obj, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: null, headerBarSeparator: null, button: null };
+require = fn;
+get_ActivityIndicator = fn(17);
+({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles((height) => {
+  let obj = { headerBar: null, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: null, headerBarSeparator: null, button: null };
   obj = { height, flexDirection: "row", alignItems: "center" };
-  obj = { marginHorizontal: ThemesDefault.space.PX_16 };
-  obj[2] = obj;
-  obj1 = {};
-  const merged = Object.assign(closure_3.absoluteFillObject);
-  obj1.height = closure_3.hairlineWidth;
-  obj1.backgroundColor = ThemesDefault.colors.BORDER_SUBTLE;
+  obj.headerBar = obj;
+  obj = { marginHorizontal: nativeDefault.space.PX_16 };
+  obj.headerBarText = obj;
+  const obj1 = {};
+  const merged = Object.assign(React3.absoluteFillObject);
+  obj1.height = React3.hairlineWidth;
+  obj1.backgroundColor = nativeDefault.colors.BORDER_SUBTLE;
   obj1.top = undefined;
-  obj[3] = obj1;
-  obj[4] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+  obj.headerBarSeparator = obj1;
+  obj.button = { paddingHorizontal: nativeDefault.space.PX_16 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/forums/native/composer/ForumComposerHeader.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/composer/ForumComposerHeader.tsx");
 
 export default function ForumComposerHeader(height) {
   ({ title, channel, onClose: require } = height);
   ({ submitting, onGuidelinesPress } = height);
-  const tmp = callback2(height.height);
+  const tmp = closure_7(height.height);
   let obj = { style: tmp.headerBar, children: null };
   obj = { style: tmp.button, accessibilityRole: "button", accessibilityLabel: null, disabled: null, onPress: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
-  obj[3] = submitting;
-  obj[4] = function onPress() {
-    return callback(false);
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj.disabled = submitting;
+  obj.onPress = function onPress() {
+    return require(false);
   };
-  obj[5] = callback(XSmallIcon.XSmallIcon, {});
-  const items = [callback(PressableBase.PressableOpacity, obj), , , ];
+  obj.children = hasOwnProperty(XSmallIcon.XSmallIcon, {});
+  const items = [hasOwnProperty(Pressables.PressableOpacity, obj), , , ];
   obj = { style: tmp.headerBarContent, children: null };
-  const items1 = [callback(ForumIcon.ForumIcon, { size: "sm" }), ];
-  obj1 = { style: tmp.headerBarText, children: null };
+  const items1 = [hasOwnProperty(ForumIcon.ForumIcon, { size: "sm" }), ];
+  const obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
     const intl2 = tmp7(1114).intl;
     title = intl2.string(tmp7(1114).t["7EjFCk"]);
   }
-  const items2 = [callback(Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelNameDefault(channel) })];
-  obj1[1] = items2;
-  items1[1] = closure_6(closure_4, obj1);
-  obj[1] = items1;
-  items[1] = closure_6(closure_4, obj);
+  const items2 = [hasOwnProperty(Text_Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-xs/medium", color: "text-default", children: useChannelNameDefault(channel) })];
+  obj1.children = items2;
+  items1[1] = timestampProducer(React4, obj1);
+  obj.children = items1;
+  items[1] = timestampProducer(React4, obj);
   let length;
   if (channel != null) {
     length = channel.topic.length;
@@ -67,14 +68,14 @@ export default function ForumComposerHeader(height) {
   if (length > 0) {
     const obj2 = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl3 = tmp7(1114).intl;
-    obj2[1] = intl3.string(tmp7(1114).t.yR6HwZ);
-    obj2[2] = tmp.button;
-    obj2[3] = onGuidelinesPress;
-    obj2[4] = tmp6(tmp7(5075).BookCheckIcon, {});
+    obj2.accessibilityLabel = intl3.string(tmp7(1114).t.yR6HwZ);
+    obj2.style = tmp.button;
+    obj2.onPress = onGuidelinesPress;
+    obj2.children = tmp6(tmp7(5075).BookCheckIcon, {});
     tmp6Result = tmp6(tmp7(5123).PressableOpacity, obj2);
   }
   items[2] = tmp6Result;
-  items[3] = callback(closure_4, { style: tmp.headerBarSeparator });
-  obj[1] = items;
-  return closure_6(closure_4, obj);
+  items[3] = hasOwnProperty(React4, { style: tmp.headerBarSeparator });
+  obj.children = items;
+  return timestampProducer(React4, obj);
 };

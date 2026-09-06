@@ -1,25 +1,24 @@
-// === Module 8245: ? ===
+// === Module 8245: VisualEffectViewThemed ===
 
-// Module 8245
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+// Module 8245 (VisualEffectViewThemed)
+import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import isBlurDisabledDefault from "isBlurDisabled" /* 4965 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 4965 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef(function VisualEffectViewThemed(arg0, ref) {
-  let obj = AccessibilityAnnouncer;
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewThemed.tsx");
+
+export default noop.forwardRef(function VisualEffectViewThemed(arg0, ref) {
+  let obj = shared;
   let str = "dark";
   if (obj.isThemeLight(tmp3)) {
     str = "light";
   }
   obj = { ref, blurTheme: str };
-  const tmp = importDefault;
   tmp3 = useThemeDefault();
   const merged = Object.assign(arg0);
-  return jsx(isBlurDisabledDefault, { ref, blurTheme: str });
+  return jsx(VisualEffectViewDefault, { ref, blurTheme: str });
 });
-const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewThemed.tsx");
-
-export default forwardRefResult;

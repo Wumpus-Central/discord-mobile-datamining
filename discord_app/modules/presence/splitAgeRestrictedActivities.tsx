@@ -1,49 +1,40 @@
 // === Module 13760: splitAgeRestrictedActivities ===
 
 // Module 13760 (splitAgeRestrictedActivities)
-import set from "set" /* 2 */;
-import isAgeRestrictedClassificationReference from "isAgeRestrictedClassificationReference" /* 9480 */;
-import apexExperiment from "apexExperiment" /* 13761 */;
+import ContentClassificationReference from "ContentClassificationReference" /* 9480 */;
+import ContentClassificationPresenceFilterExperiment2 from "ContentClassificationPresenceFilterExperiment" /* 13761 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
+const result = size.fileFinishedImporting("modules/presence/splitAgeRestrictedActivities.tsx");
 
-export default function splitAgeRestrictedActivities(arg0, arg1) {
-  const ContentClassificationPresenceFilterExperiment = apexExperiment.ContentClassificationPresenceFilterExperiment;
+export default function splitAgeRestrictedActivities(activities, hiddenActivities) {
+  const ContentClassificationPresenceFilterExperiment = ContentClassificationPresenceFilterExperiment2.ContentClassificationPresenceFilterExperiment;
   if (ContentClassificationPresenceFilterExperiment.getConfig({ location: "presence_filtering" }).enabled) {
     const items = [];
     const items1 = [];
-    const iter = arg0[Symbol.iterator]();
+    const iter = activities[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp5 = nextResult;
-      let tmp6 = require;
-      let tmp7 = dependencyMap;
-      let obj2 = isAgeRestrictedClassificationReference;
+      let obj2 = ContentClassificationReference;
       if (obj2.isAgeRestrictedClassificationReference(nextResult.content_classification)) {
-        let tmp10 = nextResult;
         let arr = items1.push(tmp5);
       } else {
-        let tmp8 = nextResult;
         arr = items.push(tmp5);
       }
       continue;
     }
     if (0 === items1.length) {
-      let obj = { activities: null, hiddenActivities: null };
-      obj[0] = arg0;
-      obj[1] = arg1;
+      let obj = { activities, hiddenActivities };
     } else {
-      obj = { activities: null, hiddenActivities: null };
-      obj[0] = items;
+      obj = { activities: items, hiddenActivities: null };
       const items2 = [];
-      HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(arg1, 0));
-      obj[1] = items2;
+      HermesBuiltin.arraySpread(items1, HermesBuiltin.arraySpread(hiddenActivities, 0));
+      obj.hiddenActivities = items2;
     }
     return obj;
   } else {
-    obj = { activities: null, hiddenActivities: null };
-    obj[0] = arg0;
-    obj[1] = arg1;
+    obj = { activities, hiddenActivities };
     return obj;
   }
 };

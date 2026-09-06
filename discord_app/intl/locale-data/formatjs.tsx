@@ -1,10 +1,10 @@
-// === Module 4120: formatjsLocales ===
+// === Module 4120: formatjs ===
 
-// Module 4120 (formatjsLocales)
-import set from "set" /* 2 */;
+// Module 4120 (formatjs)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("intl/locale-data/formatjs.tsx");
+const result = size.fileFinishedImporting("intl/locale-data/formatjs.tsx");
 
 export const formatjsLocales = {
   bg() {

@@ -1,70 +1,68 @@
-// === Module 11838: ? ===
+// === Module 11838: GuildSettingsModalMembersActionCreators ===
 
-// Module 11838
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import sendRequest from "sendRequest" /* 1272 */;
-import ME from "ME" /* 1074 */;
+// Module 11838 (GuildSettingsModalMembersActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ Endpoints: c3, ME: c4 } = ME);
-const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx");
+({ Endpoints: c3, ME: closure_4 } = Constants);
+const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersActionCreators.tsx");
 
 export default {
   startEditingRoles(id, id2) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 };
+    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING", guildId: id, userId: id2 };
     obj.dispatch(obj);
   },
   stopEditingRoles() {
-    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING" });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_STOP_EDITING" });
   },
   toggleRole(roleId, state) {
-    let obj = dispatcherDefault;
-    obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state };
+    const obj = { type: "GUILD_SETTINGS_MODAL_MEMBERS_TOGGLE_ROLE", roleId, state };
     obj.dispatch(obj);
   },
-  updateMemberRoles(guildId, closure_1_1, roles) {
+  updateMemberRoles(guildId, userId, roles) {
     function onEnd() {
-      return callback(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE_COMPLETE" });
+      return DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE_COMPLETE" });
     }
-    let obj = dispatcherDefault;
+    let obj = DispatcherDefault;
     obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_ROLES_SAVE" });
-    const HTTP = sendRequest.HTTP;
-    obj = { url: closure_3.GUILD_MEMBER(guildId, closure_1_1), body: obj, oldFormErrors: true, rejectWithError: true };
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: React3.GUILD_MEMBER(guildId, userId), body: null, oldFormErrors: true, rejectWithError: true };
     obj = { roles };
-    HTTP.patch(obj).then(onEnd, onEnd);
+    request.body = obj;
+    HTTP.patch(request).then(onEnd, onEnd);
   },
   startEditingNickname() {
-    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING_NICKNAME" });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING_NICKNAME" });
   },
-  changeNickname(guildId, closure_1_1, nick) {
-    const _require = closure_1_1;
-    if (null == closure_1_1) {
+  changeNickname(guildId, userId, nick) {
+    _require = userId;
+    if (null == userId) {
       let GUILD_MEMBER_NICKResult = closure_3.GUILD_MEMBER_NICK(guildId, closure_4);
     } else {
-      GUILD_MEMBER_NICKResult = closure_3.GUILD_MEMBER(guildId, closure_1_1);
+      GUILD_MEMBER_NICKResult = closure_3.GUILD_MEMBER(guildId, userId);
     }
-    let obj = dispatcherDefault;
-    obj.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME" });
-    const HTTP = _require(1272).HTTP;
-    obj = { url: GUILD_MEMBER_NICKResult, body: obj, oldFormErrors: true, rejectWithError: null };
-    obj = { nick };
-    obj[3] = _require(1272).rejectWithMigratedError();
-    const obj4 = _require(1272);
-    HTTP.patch(obj).then(() => {
-      callback2(table[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
+    DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME" });
+    const HTTP = require("HTTPUtils").HTTP;
+    const request = { url: GUILD_MEMBER_NICKResult, body: { nick }, oldFormErrors: true, rejectWithError: null };
+    request.rejectWithError = require("HTTPUtils").rejectWithMigratedError();
+    const obj3 = require("HTTPUtils");
+    HTTP.patch(request).then(() => {
+      DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_SUCCESS" });
     }, (status) => {
-      const intl = callback(closure_1_2[3]).intl;
-      let stringResult = intl.string(callback(closure_1_2[3]).t["5LO/Ss"]);
-      if (null != callback) {
-        const intl2 = tmp(tmp2[3]).intl;
-        stringResult = intl2.string(tmp(tmp2[3]).t.rJfW6S);
+      const intl = util.intl;
+      let stringResult = intl.string(util.t["5LO/Ss"]);
+      if (null != closure_0) {
+        const intl2 = tmp(1114).intl;
+        stringResult = intl2.string(tmp(1114).t.rJfW6S);
       }
       if (403 === status.status) {
-        const intl3 = tmp(tmp2[3]).intl;
-        stringResult = intl3.formatToMarkdownString(tmp(tmp2[3]).t.Izf9jO, {});
+        const intl3 = tmp(1114).intl;
+        stringResult = intl3.formatToMarkdownString(tmp(1114).t.Izf9jO, {});
       }
-      closure_1_1(closure_1_2[1]).dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE", error: stringResult });
+      DispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_MEMBERS_CHANGE_NICKNAME_FAILURE", error: stringResult });
     });
   }
 };

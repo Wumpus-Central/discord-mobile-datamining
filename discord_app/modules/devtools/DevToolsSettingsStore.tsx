@@ -1,11 +1,11 @@
-// === Module 7719: initialize ===
+// === Module 7719: DevToolsSettingsStore ===
 
-// Module 7719 (initialize)
+// Module 7719 (DevToolsSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "init" /* 7720 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7720 */;
 
-let closure_3 = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
+let obj = { sidebarWidth: 460, lastOpenTabId: null, lastOpenSubTabId: null, displayTools: false, showDevWidget: false, devWidgetPosition: { x: 0, y: 0 }, sortedScreenKeys: [] };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class DevToolsSettingsStore extends DeviceSettingsStore {
 }
@@ -23,16 +23,16 @@ prototype["initialize"] = function initialize(arg0) {
   obj = {};
   const merged = Object.assign(obj);
   obj.sortedScreenKeys = sortedScreenKeys;
-  dispatcherDefault.actionLogger.persist = closure_2.isDeveloper;
+  DispatcherDefault.actionLogger.persist = DeveloperExperimentStore.isDeveloper;
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return closure_3;
+  return obj;
 };
 Object.defineProperty(prototype, "sidebarWidth", {
   get: function sidebarWidth() {
     let num = 0;
     if (this.displayTools) {
-      num = closure_3.sidebarWidth;
+      num = obj.sidebarWidth;
     }
     return num;
   },
@@ -40,7 +40,7 @@ Object.defineProperty(prototype, "sidebarWidth", {
 });
 Object.defineProperty(prototype, "lastOpenTabId", {
   get: function lastOpenTabId() {
-    let lastOpenTabId = closure_3.lastOpenTabId;
+    let lastOpenTabId = obj.lastOpenTabId;
     if (lastOpenTabId == null) {
       lastOpenTabId = null;
     }
@@ -50,7 +50,7 @@ Object.defineProperty(prototype, "lastOpenTabId", {
 });
 Object.defineProperty(prototype, "lastOpenSubTabId", {
   get: function lastOpenSubTabId() {
-    let lastOpenSubTabId = closure_3.lastOpenSubTabId;
+    let lastOpenSubTabId = obj.lastOpenSubTabId;
     if (lastOpenSubTabId == null) {
       lastOpenSubTabId = null;
     }
@@ -60,19 +60,19 @@ Object.defineProperty(prototype, "lastOpenSubTabId", {
 });
 Object.defineProperty(prototype, "displayTools", {
   get: function displayTools() {
-    let displayTools = closure_2.isDeveloper;
+    let displayTools = DeveloperExperimentStore.isDeveloper;
     if (displayTools) {
-      displayTools = closure_3.displayTools;
+      displayTools = obj.displayTools;
     }
     return displayTools;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "showDevWidget", {
-  get: function showDevWidget(arg0) {
-    let showDevWidget = closure_2.isDeveloper;
+  get: function showDevWidget() {
+    let showDevWidget = DeveloperExperimentStore.isDeveloper;
     if (showDevWidget) {
-      showDevWidget = closure_3.showDevWidget;
+      showDevWidget = obj.showDevWidget;
     }
     return showDevWidget;
   },
@@ -80,28 +80,30 @@ Object.defineProperty(prototype, "showDevWidget", {
 });
 Object.defineProperty(prototype, "devWidgetPosition", {
   get: function devWidgetPosition() {
-    return closure_3.devWidgetPosition;
+    return obj.devWidgetPosition;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "sortedScreenKeys", {
-  get: function sortedScreenKeys(arg0) {
-    return closure_3.sortedScreenKeys;
+  get: function sortedScreenKeys() {
+    return obj.sortedScreenKeys;
   },
   set: undefined
 });
 DevToolsSettingsStore.displayName = "DevToolsSettingsStore";
 DevToolsSettingsStore.persistKey = "DevToolsSettingsStore";
-const devToolsSettingsStore = new DevToolsSettingsStore(dispatcherDefault, {
+obj = {
   DEV_TOOLS_SETTINGS_UPDATE: function handleDevToolsSettingsUpdate(settings) {
-    if (closure_2.isDeveloper) {
-      const obj = {};
+    if (DeveloperExperimentStore.isDeveloper) {
+      obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(settings.settings);
     }
   }
-});
-const result = require("set").fileFinishedImporting("modules/devtools/DevToolsSettingsStore.tsx");
+};
+const devToolsSettingsStore = new DevToolsSettingsStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/devtools/DevToolsSettingsStore.tsx");
 
 export default devToolsSettingsStore;
 export const DEVTOOLS_SIDEBAR_MIN_WIDTH = 460;

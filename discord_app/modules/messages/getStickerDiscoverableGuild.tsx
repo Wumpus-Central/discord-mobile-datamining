@@ -1,16 +1,17 @@
 // === Module 10406: getStickerDiscoverableGuild ===
 
 // Module 10406 (getStickerDiscoverableGuild)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import sendRequest from "sendRequest" /* 1272 */;
+import Constants from "Constants" /* 1074 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7341 */;
+import size from "module_2" /* 2 */;
 
-const Endpoints = ME.Endpoints;
-const result = set.fileFinishedImporting("modules/messages/getStickerDiscoverableGuild.tsx");
+const Endpoints = Constants.Endpoints;
+const result = size.fileFinishedImporting("modules/messages/getStickerDiscoverableGuild.tsx");
 
 export default function getStickerDiscoverableGuild(arg0) {
-  const HTTP = sendRequest.HTTP;
-  const value = HTTP.get({ url: Endpoints.STICKER_GUILD_DATA(arg0), oldFormErrors: true, rejectWithError: true });
+  const HTTP = HTTPUtils.HTTP;
+  value = HTTP.get({ url: Endpoints.STICKER_GUILD_DATA(arg0), oldFormErrors: true, rejectWithError: true });
   let obj = { url: Endpoints.STICKER_GUILD_DATA(arg0), oldFormErrors: true, rejectWithError: true };
   return value.then((body) => {
     body = undefined;
@@ -19,8 +20,7 @@ export default function getStickerDiscoverableGuild(arg0) {
     }
     let discoverableGuild = null;
     if (null != body) {
-      discoverableGuild = callback(table[2]).makeDiscoverableGuild(body.body);
-      const obj = callback(table[2]);
+      discoverableGuild = GuildDiscoveryUtils.makeDiscoverableGuild(body.body);
     }
     return discoverableGuild;
   }).catch(() => null);

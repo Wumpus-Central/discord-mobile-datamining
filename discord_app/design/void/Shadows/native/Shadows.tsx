@@ -1,27 +1,22 @@
-// === Module 14124: generateBoxShadowStyle ===
+// === Module 14124: Shadows ===
 
-// Module 14124 (generateBoxShadowStyle)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
+// Module 14124 (Shadows)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
+const result = size.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
 export const generateBoxShadowStyle = (arg0) => {
   ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
-  let obj = set2;
+  let obj = PlatformUtils;
   if (obj.isAndroid()) {
-    obj = { elevation: null, shadowColor: null };
-    obj[0] = elevation;
-    obj[1] = shadowColorAndroid;
+    obj = { elevation, shadowColor: shadowColorAndroid };
   } else {
-    obj = { shadowColor: null, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
-    obj[0] = shadowColorIos;
-    obj1 = { width: null, height: null };
-    obj1[0] = xOffset;
-    obj1[1] = yOffset;
-    obj[1] = obj1;
-    obj[2] = shadowOpacity;
-    obj[3] = shadowRadius;
+    obj = { shadowColor: shadowColorIos, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
+    const size = { width: xOffset, height: yOffset };
+    obj.shadowOffset = size;
+    obj.shadowOpacity = shadowOpacity;
+    obj.shadowRadius = shadowRadius;
   }
   return obj;
 };

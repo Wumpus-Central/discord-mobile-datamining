@@ -1,28 +1,30 @@
 // === Module 11510: AppStoreOverlayMediaModalWrapper ===
 
 // Module 11510 (AppStoreOverlayMediaModalWrapper)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "setContent" /* 4251 */;
-import { MEDIA_MODAL_KEY } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import noop from "module_19" /* 19 */;
+import ActionSheetStore from "ActionSheetStore" /* 4251 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
+const require = fn;
+const MEDIA_MODAL_KEY = fn(1074).MEDIA_MODAL_KEY;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
 
 export default function AppStoreOverlayMediaModalWrapper(onCloseCallback) {
   onCloseCallback = onCloseCallback.onCloseCallback;
-  const merged = Object.assign(onCloseCallback, Object.create(null));
-  const effect = React.useEffect(() => () => {
-    const result = callback(table[4]).clearMediaModalFooterAction();
+  const merged = Object.assign(onCloseCallback, Object.assign({ onCloseCallback: 0 }));
+  const effect = noop.useEffect(() => () => {
+    const result = onCloseCallback(closure_1_2[4]).clearMediaModalFooterAction();
   }, []);
   const items = [onCloseCallback];
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (onCloseCallback != null) {
       tmp();
     }
-    closure_1_1(closure_1_2[5]).popWithKey(closure_1_5);
+    ModalActionCreatorsDefault.popWithKey(MEDIA_MODAL_KEY);
   }, items);
-  if (open.isOpen()) {
+  if (ActionSheetStore.isOpen()) {
     let obj = {};
     let tmp5Result = tmp5(8288);
     const merged1 = Object.assign(merged);

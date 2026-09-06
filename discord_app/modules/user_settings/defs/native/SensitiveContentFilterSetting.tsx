@@ -1,44 +1,42 @@
-// === Module 14813: route ===
+// === Module 14813: SensitiveContentFilterSetting ===
 
-// Module 14813 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 14813 (SensitiveContentFilterSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["Hj/But"]);
+    const intl = util.intl;
+    return intl.string(util.t["Hj/But"]);
   },
   IconComponent: ImageWarningIcon.ImageWarningIcon,
-  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  screen: obj,
+  parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  screen: {
+    route: Constants.UserSettingsSections.SENSITIVE_MEDIA_FILTERS,
+    getComponent() {
+      return require("SensitiveContentFiltersScreen").default;
+    }
+  },
   useSearchTerms() {
-    const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.uEz8JF), , , , , ];
-    const intl2 = getSystemLocale.intl;
-    items[1] = intl2.string(getSystemLocale.t["N/oRI+"]);
-    const intl3 = getSystemLocale.intl;
-    items[2] = intl3.string(getSystemLocale.t.QVdYsK);
-    const intl4 = getSystemLocale.intl;
-    items[3] = intl4.string(getSystemLocale.t["aWD+tu"]);
-    const intl5 = getSystemLocale.intl;
-    items[4] = intl5.string(getSystemLocale.t["5mnTa7"]);
-    const intl6 = getSystemLocale.intl;
-    items[5] = intl6.string(getSystemLocale.t["K0OWP+"]);
+    const intl = util.intl;
+    const items = [intl.string(util.t.uEz8JF), , , , , ];
+    const intl2 = util.intl;
+    items[1] = intl2.string(util.t["N/oRI+"]);
+    const intl3 = util.intl;
+    items[2] = intl3.string(util.t.QVdYsK);
+    const intl4 = util.intl;
+    items[3] = intl4.string(util.t["aWD+tu"]);
+    const intl5 = util.intl;
+    items[4] = intl5.string(util.t["5mnTa7"]);
+    const intl6 = util.intl;
+    items[5] = intl6.string(util.t["K0OWP+"]);
     return items;
   }
-};
-obj = {
-  route: ME.UserSettingsSections.SENSITIVE_MEDIA_FILTERS,
-  getComponent() {
-    return require(14814) /* UserSettingsSensitiveContentFilters */.default;
-  }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SensitiveContentFilterSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SensitiveContentFilterSetting.tsx");
 
 export default route;

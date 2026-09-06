@@ -1,28 +1,30 @@
 // === Module 8226: useProfileEffect ===
 
 // Module 8226 (useProfileEffect)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "updateCategoriesAndProducts" /* 7542 */;
-import closure_4 from "map" /* 7558 */;
-import { isProfileEffectRecord } from "fromServer" /* 7548 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
+import noop from "module_19" /* 19 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
+require = fn;
+const isProfileEffectRecord = fn(7548).isProfileEffectRecord;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
 
 export default function useProfileEffect(arg0) {
-  const _require = arg0;
-  const items = [closure_3, closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [CollectiblesCategoryStore, CollectiblesPurchaseStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
-      const product = closure_1_3.getProduct(tmp);
+      const product = CollectiblesCategoryStore.getProduct(tmp);
       let first;
       if (product != null) {
         first = product.items[0];
       }
-      if (closure_1_5(first)) {
+      if (isProfileEffectRecord(first)) {
         return product.items[0];
       } else {
-        const purchase = closure_1_4.getPurchase(tmp);
+        const purchase = CollectiblesPurchaseStore.getPurchase(tmp);
         let first1;
         if (purchase != null) {
           first1 = purchase.items[0];
@@ -37,10 +39,9 @@ export default function useProfileEffect(arg0) {
   });
   dependencyMap = tmp2;
   const items1 = [null != arg0 && null == stateFromStores, arg0];
-  const effect = React.useEffect(() => {
-    if (table) {
-      const result = callback(table[5]).maybeFetchCollectiblesProduct(callback);
-      const obj = callback(table[5]);
+  const effect = noop.useEffect(() => {
+    if (closure_1) {
+      const result = CollectiblesActionCreators.maybeFetchCollectiblesProduct(closure_0);
     }
   }, items1);
   return stateFromStores;

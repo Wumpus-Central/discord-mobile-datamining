@@ -1,8 +1,8 @@
-// === Module 9247: OAuth2Prompts ===
+// === Module 9247: types ===
 
-// Module 9247 (OAuth2Prompts)
-import set from "set" /* 2 */;
+// Module 9247 (types)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/oauth2/types.tsx");
+const result = size.fileFinishedImporting("modules/oauth2/types.tsx");
 
 export const OAuth2Prompts = { NONE: "none", CONSENT: "consent" };

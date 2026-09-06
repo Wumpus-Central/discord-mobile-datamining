@@ -1,35 +1,36 @@
-// === Module 15864: route ===
+// === Module 15864: DataAndPrivacySetting ===
 
-// Module 15864 (route)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "noop" /* 19 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15864 (DataAndPrivacySetting)
+import util from "util" /* 1114 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14855 */;
+import RequestYourDataSetting from "RequestYourDataSetting" /* 14858 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OAuOHD);
+    const intl = util.intl;
+    return intl.string(util.t.OAuOHD);
   },
   parent: null,
-  IconComponent: require("ShieldLockIcon").ShieldLockIcon,
-  screen: createToggle,
+  IconComponent: fn(9212).ShieldLockIcon,
+  screen: {
+    route: fn(1074).UserSettingsSections.DATA_AND_PRIVACY,
+    getComponent() {
+      return require("DataAndPrivacyScreen").default;
+    }
+  },
   usePreNavigationAction() {
-    return React.useCallback(() => {
-      const consents = callback(14855).fetchConsents();
-      const obj = callback(14855);
-      const harvestStatus = callback(14858).fetchHarvestStatus();
+    return noop.useCallback(() => {
+      const consents = ConsentActionCreators.fetchConsents();
+      const harvestStatus = RequestYourDataSetting.fetchHarvestStatus();
       return true;
     }, []);
   }
 };
-createToggle = {
-  route: require("ME").UserSettingsSections.DATA_AND_PRIVACY,
-  getComponent() {
-    return require(15865) /* DataAndPrivacySettings */.default;
-  }
-};
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/DataAndPrivacySetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

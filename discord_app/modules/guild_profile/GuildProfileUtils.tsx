@@ -1,14 +1,14 @@
-// === Module 7737: getEstablishedDate ===
+// === Module 7737: GuildProfileUtils ===
 
-// Module 7737 (getEstablishedDate)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
-import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1971 */;
+// Module 7737 (GuildProfileUtils)
+import Constants from "Constants" /* 1074 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = createChannelRecord.createChannelRecordFromInvite;
-const GuildFeatures = ME.GuildFeatures;
-const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
+let closure_2 = ChannelRecord.createChannelRecordFromInvite;
+const GuildFeatures = Constants.GuildFeatures;
+const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
 export const getEstablishedDate = function getEstablishedDate(tmpResult1, locale) {
   if (null != tmpResult1) {
@@ -33,7 +33,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
   if (null == guild.guild) {
     return false;
   } else {
-    const features = fromGuildPropertiesWithAdditionalFields.fromInviteGuild(guild.guild).features;
+    const features = GuildRecordUtils.fromInviteGuild(guild.guild).features;
     if (features.has(GuildFeatures.HUB)) {
       return false;
     } else {
@@ -43,7 +43,7 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       let tmp2 = null;
       if (null != channel) {
-        tmp2 = callback(guild.channel);
+        tmp2 = closure_2(guild.channel);
       }
       let isGuildVoiceOrThreadResult;
       if (tmp2 != null) {
@@ -51,6 +51,5 @@ export const guildInviteCanEmbedProfile = function guildInviteCanEmbedProfile(gu
       }
       return !isGuildVoiceOrThreadResult;
     }
-    const obj = fromGuildPropertiesWithAdditionalFields;
   }
 };

@@ -2,12 +2,13 @@
 
 // Module 14870 (useUserAgeGroup)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "freshTeenActivityWithMap" /* 7537 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useUserAgeGroup.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/parent_tools/hooks/useUserAgeGroup.tsx");
 
 export default function useUserAgeGroup() {
-  const items = [closure_2];
+  const items = [FamilyCenterStore];
   return initialize.useStateFromStores(items, () => ageGroup.getAgeGroup());
 };

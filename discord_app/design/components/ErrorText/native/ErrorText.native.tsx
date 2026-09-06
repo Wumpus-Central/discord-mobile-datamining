@@ -1,12 +1,14 @@
 // === Module 6609: ErrorText ===
 
 // Module 6609 (ErrorText)
-import closure_2 from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
+import shared from "shared" /* 4411 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("set").fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
 
 export const ErrorText = function ErrorText(children) {
   children = children.children;
@@ -14,18 +16,18 @@ export const ErrorText = function ErrorText(children) {
   let obj = nodeText(4264);
   nodeText = obj.getNodeText(children);
   const items = [nodeText];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp2 = null != nodeText;
     if (tmp2) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);
   obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
-  const items1 = [callback(nodeText(6610).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), callback(nodeText(4556).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
-  obj[4] = items1;
-  return callback2(nodeText(4973).Stack, obj);
+  const items1 = [closure_3(nodeText(6610).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }), closure_3(nodeText(4556).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })];
+  obj.children = items1;
+  return closure_4(nodeText(4973).Stack, obj);
 };

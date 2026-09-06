@@ -1,10 +1,10 @@
 // === Module 5142: requestPermissionCore ===
 
 // Module 5142 (requestPermissionCore)
-import set from "set" /* 2 */;
-import requestAuthorization from "requestAuthorization" /* 5143 */;
+import NativePermissionBaseUtils2 from "NativePermissionBaseUtils" /* 5143 */;
+import size from "module_2" /* 2 */;
 
-const NativePermissionBaseUtils = requestAuthorization.NativePermissionBaseUtils;
+const NativePermissionBaseUtils = NativePermissionBaseUtils2.NativePermissionBaseUtils;
 class NativePermissionDesktopNullUtils extends NativePermissionBaseUtils {
 }
 const prototype = NativePermissionDesktopNullUtils.prototype;
@@ -24,6 +24,6 @@ prototype["openAlertModal"] = function openAlertModal() {
 
 };
 const nativePermissionDesktopNullUtils = new NativePermissionDesktopNullUtils();
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
 
 export default nativePermissionDesktopNullUtils;

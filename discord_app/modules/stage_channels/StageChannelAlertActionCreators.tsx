@@ -1,11 +1,11 @@
-// === Module 12929: openStageChannelAudienceNoticeModal ===
+// === Module 12929: StageChannelAlertActionCreators ===
 
-// Module 12929 (openStageChannelAudienceNoticeModal)
-import set from "set" /* 2 */;
-import openStageChannelSettingsAll from "openStageChannelSettings" /* 8394 */;
+// Module 12929 (StageChannelAlertActionCreators)
+import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8394 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
+let result = size.fileFinishedImporting("modules/stage_channels/StageChannelAlertActionCreators.tsx");
 
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(arg0) {
-  const result = openStageChannelSettingsAll.openStageChannelAudienceNoticeModal(arg0);
+  const result = StageChannelActionCreatorExtrasAll.openStageChannelAudienceNoticeModal(arg0);
 };

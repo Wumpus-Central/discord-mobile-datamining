@@ -1,8 +1,8 @@
-// === Module 8751: MAX_VISIBLE_ANNOUNCEMENTS ===
+// === Module 8751: GameProfileConstants ===
 
-// Module 8751 (MAX_VISIBLE_ANNOUNCEMENTS)
-import set from "set" /* 2 */;
+// Module 8751 (GameProfileConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_profile/GameProfileConstants.tsx");
+const result = size.fileFinishedImporting("modules/game_profile/GameProfileConstants.tsx");
 
 export const MAX_VISIBLE_ANNOUNCEMENTS = 8;

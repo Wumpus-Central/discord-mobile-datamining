@@ -1,9 +1,9 @@
-// === Module 1387: isUserPrimaryGuildEqual ===
+// === Module 1387: PrimaryGuildUtils ===
 
-// Module 1387 (isUserPrimaryGuildEqual)
-import set from "set" /* 2 */;
+// Module 1387 (PrimaryGuildUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
+const result = size.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
 
 export const isUserPrimaryGuildEqual = function isUserPrimaryGuildEqual(primaryGuild, primary_guild) {
   if (null != primaryGuild) {
@@ -21,7 +21,7 @@ export const ensureUserPrimaryGuild = function ensureUserPrimaryGuild(primary_gu
     return primary_guild;
   } else {
     const obj = { identityGuildId: null, identityEnabled: null, tag: null, badge: null };
-    ({ identity_guild_id: obj[0], identity_enabled: obj[1], tag: obj[2], badge: obj[3] } = primary_guild);
+    ({ identity_guild_id: obj.identityGuildId, identity_enabled: obj.identityEnabled, tag: obj.tag, badge: obj.badge } = primary_guild);
     return obj;
   }
 };

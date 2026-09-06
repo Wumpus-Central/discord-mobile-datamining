@@ -1,9 +1,10 @@
-// === Module 15182: context ===
+// === Module 15182: QuestDockVisibilityContext ===
 
-// Module 15182 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 15182 (QuestDockVisibilityContext)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext({ isRendered: false, isVisibleToUser: false });
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockVisibilityContext.tsx");
+const context = noop.createContext({ isRendered: false, isVisibleToUser: false });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockVisibilityContext.tsx");
 
 export default context;

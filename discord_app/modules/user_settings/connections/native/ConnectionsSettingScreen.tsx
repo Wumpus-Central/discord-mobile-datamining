@@ -1,17 +1,19 @@
-// === Module 14956: onPress ===
+// === Module 14956: ConnectionsSettingScreen ===
 
-// Module 14956 (onPress)
+// Module 14956 (ConnectionsSettingScreen)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import importAllResult from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function onPress() {
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14957, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14957, dependencyMap.paths), "AddConnection");
 }
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
+
+export default noop.memo(function ConnectionsSettingScreen() {
   stackNavigation = stackNavigation(1483).useStackNavigation();
   let obj = stackNavigation(1483);
   const tmp = stackNavigation;
@@ -21,20 +23,17 @@ const memoResult = importAllResult.memo(function ConnectionsSettingScreen() {
     selectedPlatformType = params.selectedPlatformType;
   }
   const items = [stackNavigation];
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  const layoutEffect = noop.useLayoutEffect(() => {
     stackNavigation.setOptions({
       headerRight(arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
-        obj.onPress = closure_5;
-        const intl = callback(1114).intl;
-        obj.label = intl.string(callback(1114).t.OYkgVk);
-        return callback2(callback(7863).HeaderTextButton, obj);
+        obj.onPress = onPress;
+        const intl = stackNavigation(1114).intl;
+        obj.label = intl.string(stackNavigation(1114).t.OYkgVk);
+        return closure_1_4(stackNavigation(7863).HeaderTextButton, obj);
       }
     });
   }, items);
   return jsx(tmp(14958).UserSettingsConnections, { selectedPlatformType });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectionsSettingScreen.tsx");
-
-export default memoResult;

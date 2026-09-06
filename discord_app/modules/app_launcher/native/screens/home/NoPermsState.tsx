@@ -1,42 +1,41 @@
-// === Module 12113: EmptyState ===
+// === Module 12113: NoPermsState ===
 
-// Module 12113 (EmptyState)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
+// Module 12113 (NoPermsState)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
-import Text from "Text" /* 4556 */;
-import handleApplicationSelected from "handleApplicationSelected" /* 12051 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12051 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: null, textContainer: null, image: null };
-createCacheKey = { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexShrink: 1 };
-createCacheKey[2] = { width: 64, height: 64 };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/NoPermsState.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: null, textContainer: null, image: null };
+createStyles = { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" };
+createStyles.container = createStyles;
+createStyles.textContainer = { flexShrink: 1 };
+createStyles.image = { width: 64, height: 64 };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/home/NoPermsState.tsx");
 
 export default function EmptyState() {
-  const tmp = callback3();
-  let obj = AccessibilityAnnouncer;
-  const tmp4 = importDefault;
+  const tmp = closure_7();
+  let obj = shared;
   const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12114 : 12115);
-  const logAppLauncherEmptyStateView = handleApplicationSelected.useLogAppLauncherEmptyStateView(tmp2(9409).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
+  const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(tmp2(9409).AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };
-  const items = [callback(closure_4, obj), ];
-  obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
+  const items = [hasOwnProperty(React4, obj), ];
+  const obj1 = { style: tmp.textContainer, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = tmp2(1114).intl;
-  obj1[3] = intl.string(getSystemLocale.t.uDnXXj);
-  items[1] = callback(Text.Text, obj1);
-  obj[1] = items;
-  return callback2(closure_3, obj);
+  obj1.children = intl.string(util.t.uDnXXj);
+  items[1] = hasOwnProperty(Text_Text.Text, obj1);
+  obj.children = items;
+  return timestampProducer(React3, obj);
 };

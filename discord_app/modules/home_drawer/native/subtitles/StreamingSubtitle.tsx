@@ -1,21 +1,21 @@
 // === Module 16321: StreamingSubtitle ===
 
 // Module 16321 (StreamingSubtitle)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import getNicknameDefault from "getNickname" /* 4712 */;
-import { jsx } from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/StreamingSubtitle.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/home_drawer/native/subtitles/StreamingSubtitle.tsx");
 
 export default function StreamingSubtitle(arg0) {
   ({ guildId, streamingUser } = arg0);
   let obj = { variant: "text-xs/medium", color: "text-voice-connected", lineClamp: 1, children: null };
-  const intl = getSystemLocale.intl;
-  obj = { username: getNicknameDefault.getName(guildId, null, streamingUser) };
-  obj[3] = intl.format(getSystemLocale.t.k5IKep, obj);
-  return jsx(Text.Text, { username: getNicknameDefault.getName(guildId, null, streamingUser) });
+  const intl = util.intl;
+  obj = { username: NicknameUtilsDefault.getName(guildId, null, streamingUser) };
+  obj.children = intl.format(util.t.k5IKep, obj);
+  return jsx(Text_Text.Text, { username: NicknameUtilsDefault.getName(guildId, null, streamingUser) });
 };

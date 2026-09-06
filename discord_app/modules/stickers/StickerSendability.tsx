@@ -1,23 +1,20 @@
-// === Module 7337: getStickerSendability ===
+// === Module 7337: StickerSendability ===
 
-// Module 7337 (getStickerSendability)
-import applyOverwritesAll from "applyOverwrites" /* 4204 */;
-import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4218 */;
-import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4899 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import closure_5 from "parseServerPackSticker" /* 5504 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 7337 (StickerSendability)
+import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
+import StickersUtils from "StickersUtils" /* 4899 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import StickersPackStore from "StickersPackStore" /* 5504 */;
 
-require = arg1;
-function getStickerSendability(stickerById, closure_1_3, channel) {
-  if (null == closure_1_3) {
+require = fn;
+function getStickerSendability(stickerById, currentUser, channel) {
+  if (null == currentUser) {
     return obj.NONSENDABLE;
   } else {
-    const result = getPremiumPlanItemDefault.canUseCustomStickersEverywhere(closure_1_3);
-    const obj4 = getPremiumPlanItemDefault;
-    const tmp22 = require;
+    const result = PremiumUtilsDefault.canUseCustomStickersEverywhere(currentUser);
     if (obj5.isStandardSticker(stickerById)) {
-      if (null == stickerPack.getStickerPack(stickerById.pack_id)) {
+      if (null == StickersPackStore.getStickerPack(stickerById.pack_id)) {
         let SENDABLE2 = obj.NONSENDABLE;
       } else {
         SENDABLE2 = obj.SENDABLE;
@@ -25,7 +22,7 @@ function getStickerSendability(stickerById, closure_1_3, channel) {
     } else {
       if (tmp22Result.isGuildSticker(stickerById)) {
         if (null != channel) {
-          if (null == selfMember.getSelfMember(stickerById.guild_id)) {
+          if (null == GuildMemberStore.getSelfMember(stickerById.guild_id)) {
             let SENDABLE_WITH_BOOSTED_GUILD = obj.NONSENDABLE;
           } else if (stickerById.available) {
             if (null != channel.guild_id) {
@@ -34,14 +31,11 @@ function getStickerSendability(stickerById, closure_1_3, channel) {
               }
             }
             if (null != channel.guild_id) {
-              obj = { permission: null, user: null, context: null };
-              obj[0] = Permissions.USE_EXTERNAL_STICKERS;
-              obj[1] = closure_1_3;
-              obj[2] = channel;
+              obj = { permission: Permissions.USE_EXTERNAL_STICKERS, user: currentUser, context: channel };
               if (!obj2.can(obj)) {
                 const NONSENDABLE = obj.NONSENDABLE;
               }
-              obj2 = applyOverwritesAll;
+              obj2 = PermissionUtilsAll;
             }
           } else {
             SENDABLE_WITH_BOOSTED_GUILD = obj.SENDABLE_WITH_BOOSTED_GUILD;
@@ -50,13 +44,15 @@ function getStickerSendability(stickerById, closure_1_3, channel) {
       }
       return obj.NONSENDABLE;
     }
-    obj5 = getStickerExtensionFromFormatType;
+    obj5 = StickersUtils;
   }
 }
-let obj = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };
-let result = require("set").fileFinishedImporting("modules/stickers/StickerSendability.tsx");
+const Permissions = fn(1074).Permissions;
+const StickerSendability = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stickers/StickerSendability.tsx");
 
-export const StickerSendability = obj;
+export { StickerSendability };
 export { getStickerSendability };
 export const isSendableSticker = function isSendableSticker(id, currentUser, channel) {
   return getStickerSendability(id, currentUser, channel) === obj.SENDABLE;

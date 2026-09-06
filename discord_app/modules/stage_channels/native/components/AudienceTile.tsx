@@ -1,20 +1,18 @@
-// === Module 10069: RaisedHandIcon ===
+// === Module 10069: AudienceTile ===
 
-// Module 10069 (RaisedHandIcon)
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
+// Module 10069 (AudienceTile)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8393 */;
+import noop from "module_19" /* 19 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-require = arg1;
+require = fn;
 function RaisedHandIcon(rtsState) {
   const tmp = styles();
   let activeBackground = rtsState.rtsState === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-  const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
+  const unsafe_rawColors = nativeDefault.unsafe_rawColors;
   if (activeBackground) {
     let PRIMARY_800 = unsafe_rawColors.WHITE;
     let tmp5 = tmp4;
@@ -29,22 +27,28 @@ function RaisedHandIcon(rtsState) {
   let obj = { style: items, children: null };
   items[1] = activeBackground;
   obj = { style: tmp.raisedHand, source: tmp5(8616), color: PRIMARY_800 };
-  obj[1] = closure_5(Button.Icon, obj);
-  return closure_5(View, obj);
+  obj.children = hasOwnProperty(native.Icon, obj);
+  return hasOwnProperty(View, obj);
 }
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
 let obj = { touchableContainer: { overflow: "visible" }, container: { alignItems: "center" }, avatarContainer: { position: "relative", padding: 8, paddingTop: 0, paddingBottom: 4 }, raisedHandContainer: null, activeBackground: null, raisedHand: null, nameplateContainer: null, usernameText: null, faded: null };
-obj = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: ThemesDefault.colors.WHITE };
-obj[3] = obj;
-createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
-obj[4] = createCacheKey;
-obj[5] = { height: 13, width: 13, alignItems: "center", justifyContent: "center", resizeMode: "contain" };
-obj[6] = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
-obj[7] = { fontSize: 14, color: ThemesDefault.colors.WHITE };
-obj[8] = { opacity: 0.5 };
-const styles = createCacheKey.createStyles(obj);
-let obj2 = { fontSize: 14, color: ThemesDefault.colors.WHITE };
-const memoResult = importAllResult.memo((channel) => {
+let size = { position: "absolute", top: -8, right: 0, height: 24, width: 24, alignItems: "center", justifyContent: "center", borderRadius: 12, borderWidth: 2, borderColor: nativeDefault.unsafe_rawColors.PRIMARY_800, backgroundColor: nativeDefault.colors.WHITE };
+obj.raisedHandContainer = size;
+obj = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
+obj.activeBackground = obj;
+obj.raisedHand = { height: 13, width: 13, alignItems: "center", justifyContent: "center", resizeMode: "contain" };
+obj.nameplateContainer = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
+const createStyles = { fontSize: 14, color: nativeDefault.colors.WHITE };
+obj.usernameText = createStyles;
+obj.faded = { opacity: 0.5 };
+const styles = createStyles.createStyles(obj);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/native/components/AudienceTile.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
   const participant = channel.participant;
   const user = participant.user;
@@ -55,12 +59,12 @@ const memoResult = importAllResult.memo((channel) => {
   const diff = user(guildId[9])().width - 46;
   guildId = channel.getGuildId();
   let obj = channel(guildId[10]);
-  const items = [closure_4];
+  const items = [GuildMemberStore];
   const items1 = [guildId, user.id];
   let stateFromStores = obj.useStateFromStores(items, () => {
     let tmp2 = null != guildId;
     if (tmp2) {
-      const member = closure_1_4.getMember(tmp, user.id);
+      const member = GuildMemberStore.getMember(tmp, user.id);
       let premiumSince;
       if (member != null) {
         premiumSince = member.premiumSince;
@@ -69,7 +73,7 @@ const memoResult = importAllResult.memo((channel) => {
     }
     return Boolean(tmp2);
   }, items1);
-  obj1 = channel(guildId[11]);
+  let obj1 = channel(guildId[11]);
   let result = obj1.isRequestedToSpeakAll(rtsState);
   let obj2 = user(guildId[12]);
   const name = obj2.getName(guildId, channel.id, user);
@@ -80,14 +84,13 @@ const memoResult = importAllResult.memo((channel) => {
   const result1 = diff / 4;
   obj = { accessibilityLabel: null, style: null, accessibilityRole: "button", onPress: null, children: null };
   const intl = tmp6(tmp3[14]).intl;
-  obj[0] = intl.formatToPlainString(channel(guildId[14]).t.QLMGhv, { name });
+  obj.accessibilityLabel = intl.formatToPlainString(channel(guildId[14]).t.QLMGhv, { name });
   const items2 = [, , ];
   ({ touchableContainer: arr3[0], container: arr3[1] } = tmp);
   items2[2] = { width: result1 };
-  obj[1] = items2;
-  obj[3] = function onPress() {
-    let obj = channel(guildId[15]);
-    obj = { userId: user.id, channelId: channel.id };
+  obj.style = items2;
+  obj.onPress = function onPress() {
+    const obj = { userId: user.id, channelId: channel.id };
     obj.showUserProfile(obj);
   };
   obj = { style: tmp.avatarContainer, children: null };
@@ -96,18 +99,18 @@ const memoResult = importAllResult.memo((channel) => {
   if (tmp10) {
     faded = tmp.faded;
   }
-  obj1[3] = faded;
+  obj1.style = faded;
   const items3 = [closure_5(channel(guildId[7]).CutoutableAvatarImage, obj1), ];
   if (result) {
-    obj2 = { rtsState: null };
-    obj2[0] = rtsState;
+    obj2 = { rtsState };
     result = tmp14(RaisedHandIcon, obj2);
   }
   items3[1] = result;
-  obj[1] = items3;
+  obj.children = items3;
   const items4 = [closure_6(View, obj), ];
-  const obj3 = { style: items5, children: null };
-  items5 = [tmp.nameplateContainer];
+  const obj3 = { style: null, children: null };
+  const items5 = [tmp.nameplateContainer];
+  obj3.style = items5;
   if (blocked) {
     blocked = tmp14(tmp6(tmp3[16]).BlockedStatus, {});
   }
@@ -129,41 +132,34 @@ const memoResult = importAllResult.memo((channel) => {
         num2 = 2;
       }
     }
-    const obj4 = { maxWidth: null };
-    obj4[0] = result1 - 18 * num2;
+    const obj4 = { maxWidth: result1 - 18 * num2 };
     tmp16 = obj4;
   }
   items7[1] = tmp16;
   if (null == theme) {
     const obj5 = { style: null, numberOfLines: 1, children: null };
     items7[2] = tmp17;
-    obj5[0] = items7;
-    obj5[2] = name;
+    obj5.style = items7;
+    obj5.children = name;
     items6[2] = tmp14(tmp6(tmp3[7]).LegacyText, obj5);
     if (stateFromStores) {
-      const obj6 = { source: null, size: null, color: null };
-      obj6[0] = tmp2(tmp3[18]);
-      obj6[1] = tmp6(tmp3[7]).Icon.Sizes.SMALL;
-      obj6[2] = tmp2(tmp3[5]).unsafe_rawColors.GUILD_BOOSTING_PINK;
+      const obj6 = { source: tmp2(tmp3[18]), size: tmp6(tmp3[7]).Icon.Sizes.SMALL, color: tmp2(tmp3[5]).unsafe_rawColors.GUILD_BOOSTING_PINK };
       stateFromStores = tmp14(tmp6(tmp3[7]).Icon, obj6);
     }
     items6[3] = stateFromStores;
-    obj3[1] = items6;
+    obj3.children = items6;
     items4[1] = tmp12(tmp13, obj3);
-    obj[4] = items4;
+    obj.children = items4;
     return tmp12(tmp6(tmp3[13]).LegacyPressable, obj);
   } else {
     const tmp6Result = tmp6(tmp3[17]);
-    let unsafe_rawColors = tmp2(tmp3[5]).unsafe_rawColors;
+    tmp2(tmp3[5]).unsafe_rawColors;
     const isThemeDarkResult = tmp6(tmp3[17]).isThemeDark(theme);
-    unsafe_rawColors = { color: null };
-    unsafe_rawColors[0] = tmp6(tmp3[17]).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
+    const unsafe_rawColors = { color: null };
+    unsafe_rawColors.color = tmp6(tmp3[17]).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
     const tmp19 = tmp6(tmp3[17]).isThemeDark(theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
   }
 });
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/AudienceTile.tsx");
-
-export default memoResult;
 export const useAudienceTileStyles = styles;
 export const getTileWidthStyle = function getTileWidthStyle(arg0) {
   return (arg0 - 46) / 4;

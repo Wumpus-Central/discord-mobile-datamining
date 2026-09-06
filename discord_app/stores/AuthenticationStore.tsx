@@ -1,36 +1,37 @@
-// === Module 502: fetchFingerprint ===
+// === Module 502: AuthenticationStore ===
 
-// Module 502 (fetchFingerprint)
-import timestampDefault from "timestamp" /* 3 */;
+// Module 502 (AuthenticationStore)
+import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
-import setSecondaryTokenAll from "setSecondaryToken" /* 1099 */;
-import transitionTo from "transitionTo" /* 1100 */;
-import _modDef1232 from "module_1232" /* 1232 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import extractId from "extractId" /* 1255 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
-import prototypeDefault from "prototype" /* 4462 */;
+import TokenManagerAll from "TokenManager" /* 1099 */;
+import router_utils from "router_utils" /* 1100 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import FingerprintUtils from "FingerprintUtils" /* 1255 */;
+import Server from "Server" /* 1894 */;
+import APIErrorDefault from "APIError" /* 4462 */;
 import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 6948 */;
-import getToken from "getToken" /* 7668 */;
-import isStaffDefault from "isStaff" /* 12415 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7668 */;
+import ApexActionCreators from "ApexActionCreators" /* 11482 */;
+import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 12415 */;
 import fetchExperiments from "fetchExperiments" /* 14190 */;
-import closure_6 from "initialize" /* 503 */;
-import closure_7 from "clearAll" /* 1073 */;
-import ME from "ME" /* 1074 */;
-import result from "result" /* 1098 */;
-import importDefaultResult from "dispatcher" /* 573 */;
+import awaitExperiments from "awaitExperiments" /* 14191 */;
+import ClientStateStoreStorage from "ClientStateStoreStorage" /* 14193 */;
+import BrowserHandoffStore from "BrowserHandoffStore" /* 503 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
+import Dispatcher from "Dispatcher" /* 573 */;
 
-require = arg1;
+require = fn;
 function fetchFingerprint(arg0) {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
   }
   const Storage = Storage6.Storage;
-  closure_21 = Storage.get(fingerprint);
+  _null = Storage.get(fingerprint);
   const Storage2 = Storage6.Storage;
-  let value = Storage2.get(analytics_installation);
+  value = Storage2.get(analytics_installation);
   if (null == value) {
     const Storage3 = tmp(510).Storage;
     value = Storage3.get("analytics_installation");
@@ -45,41 +46,39 @@ function fetchFingerprint(arg0) {
     }
     value = tmp4;
   }
-  c23 = value;
-  if (null != nextPromise) {
-    return nextPromise;
+  installation = value;
+  if (null != closure_33) {
+    return closure_33;
   } else {
-    if (null != closure_21) {
-      let token = closure_21;
+    if (null != _null) {
+      let token = _null;
     } else {
-      let obj = setSecondaryTokenAll;
+      let obj = TokenManagerAll;
       token = obj.getToken();
     }
     let tmpResult = tmp(1100);
     if (tmpResult.isValidFingerprintRoute()) {
       if (flag) {
-        if (!handoffAvailable.isHandoffAvailable()) {
+        if (!BrowserHandoffStore.isHandoffAvailable()) {
           obj = {};
-          const superPropertiesBase64 = expandEventPropertiesDefault.getSuperPropertiesBase64();
+          const superPropertiesBase64 = AnalyticsUtilsDefault.getSuperPropertiesBase64();
           if (null != superPropertiesBase64) {
             obj["X-Super-Properties"] = superPropertiesBase64;
           }
-          if (null != closure_21) {
-            obj["X-Fingerprint"] = closure_21;
+          if (null != _null) {
+            obj["X-Fingerprint"] = _null;
           }
-          if (null != c23) {
-            obj["X-Installation-ID"] = c23;
+          if (null != installation) {
+            obj["X-Installation-ID"] = installation;
           }
           tmpResult = tmp(14190);
-          obj = { withGuildExperiments: null, headers: null, context: null };
-          obj[0] = true;
-          obj[1] = obj;
-          obj1 = { location: null };
-          const obj4 = expandEventPropertiesDefault;
-          obj1[0] = tmp(1100).getFingerprintLocation();
-          obj[2] = obj1;
+          obj = { withGuildExperiments: true, headers: null, context: null };
+          obj.headers = obj;
+          const obj1 = { location: null };
+          obj1.location = tmp(1100).getFingerprintLocation();
+          obj.context = obj1;
           const experiments = tmpResult.fetchExperiments(obj);
-          nextPromise = experiments.then((body) => {
+          let nextPromise = experiments.then((body) => {
             body = body.body;
             ({ fingerprint, installation } = body);
             let tmp = null != installation;
@@ -88,25 +87,21 @@ function fetchFingerprint(arg0) {
               tmp = installation.length > 0;
             }
             if (tmp) {
-              let obj = callback2(573);
-              obj = { type: "INSTALLATION_ID", installation: null };
-              obj[1] = installation;
+              let obj = { type: "INSTALLATION_ID", installation };
               obj.dispatch(obj);
             }
             if (fingerprint) {
-              obj = { type: "FINGERPRINT", fingerprint: null };
-              obj[1] = fingerprint;
-              callback2(573).dispatch(obj);
-              const obj3 = callback2(573);
+              obj = { type: "FINGERPRINT", fingerprint };
+              Dispatcher.dispatch(obj);
             }
-            callback2(573).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
+            Dispatcher.dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
             c33 = null;
-            const obj5 = callback2(573);
-            callback(14191).onExperimentsLoaded();
+            awaitExperiments.onExperimentsLoaded();
           }, () => {
             c33 = null;
-            callback2(573).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
+            Dispatcher.dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
           });
+          closure_33 = nextPromise;
           const tmpResult1 = tmp(1100);
         }
         return nextPromise;
@@ -116,20 +111,17 @@ function fetchFingerprint(arg0) {
   }
 }
 function handleLogout(isSwitchingAccount) {
-  let obj = setSecondaryTokenAll;
+  let obj = TokenManagerAll;
   const Storage = Storage6.Storage;
-  obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
+  obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_1_12) };
   closure_13.verbose("handleLogout called.", obj);
   const tmp2 = null != obj.getToken();
-  const obj3 = setSecondaryTokenAll;
   const Storage2 = Storage6.Storage;
-  obj = { tokenManagerHasToken: null != setSecondaryTokenAll.getToken(), storageHasToken: null != Storage2.get(closure_12) };
+  obj = { tokenManagerHasToken: null != TokenManagerAll.getToken(), storageHasToken: null != Storage2.get(closure_1_12) };
   closure_13.verbose("removeAuthToken called.", obj);
-  const tmp5 = null != setSecondaryTokenAll.getToken();
-  setSecondaryTokenAll.removeAnalyticsToken();
-  const obj5 = setSecondaryTokenAll;
+  const tmp5 = null != TokenManagerAll.getToken();
+  TokenManagerAll.removeAnalyticsToken();
   let flag;
-  const obj6 = setSecondaryTokenAll;
   if (isSwitchingAccount != null) {
     flag = isSwitchingAccount.isSwitchingAccount;
   }
@@ -146,7 +138,7 @@ function handleLogout(isSwitchingAccount) {
     fetchFingerprint();
   }
   const PersistedStore = initializeDefault.PersistedStore;
-  obj1 = { omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore", "LayoutStore", "OverlaySettingsStore", "ApexExperimentStore", "AccessibilityStore", "DerivedQosDataStore"], type: null };
+  const obj1 = { omit: ["InstallationManagerStore", "AgeGateStore", "NativePermissionsStore", "MultiAccountStore", "DraftStore", "OverlayStoreV2", "StreamerModeStore", "LoginRequiredActionStore", "LayoutStore", "OverlaySettingsStore", "ApexExperimentStore", "AccessibilityStore", "DerivedQosDataStore"], type: null };
   isSwitchingAccount = undefined;
   if (isSwitchingAccount != null) {
     isSwitchingAccount = isSwitchingAccount.isSwitchingAccount;
@@ -155,28 +147,28 @@ function handleLogout(isSwitchingAccount) {
   if (isSwitchingAccount) {
     str = "user-data-only";
   }
-  obj1[1] = str;
+  obj1.type = str;
   PersistedStore.clearAll(obj1);
   const Store = tmp14(504).Store;
   const result = Store.removeAllConditionalListeners();
-  closure_7.clearAll();
-  removeTokenResult = setSecondaryTokenAll.removeToken();
-  _modDef1232.clearUser();
+  MobileCacheSnapshotStore.clearAll();
+  removeTokenResult = TokenManagerAll.removeToken();
+  SentryUtilsDefault.clearUser();
   const Storage4 = tmp3(510).Storage;
   Storage4.remove(user_id_cache);
-  c17 = null;
-  c18 = null;
+  id = null;
+  sessionId = null;
   let isSwitchingAccount1;
   if (isSwitchingAccount != null) {
     isSwitchingAccount1 = isSwitchingAccount.isSwitchingAccount;
   }
-  closure_25 = isSwitchingAccount1 ? tmp22.LOGGING_IN : tmp22.NONE;
+  NONE = isSwitchingAccount1 ? tmp22.LOGGING_IN : tmp22.NONE;
   c28 = "";
   c30 = null;
   c29 = false;
   c35 = false;
-  c36 = false;
-  const items = [];
+  closure_36 = false;
+  items = [];
   if (c31) {
     items.push({ type: "totp" });
   }
@@ -187,43 +179,45 @@ function handleLogout(isSwitchingAccount) {
     items.push({ type: "sms" });
   }
 }
-({ AnalyticEvents: closure_8, LoginStates } = ME);
-({ Platforms: c10, Routes: unpackModuleId, TOKEN_KEY: closure_12 } = ME);
-({ EXISTING_USER_AGE_GATE_MODAL_KEY, NEW_USER_AGE_GATE_MODAL_KEY } = result);
-let closure_13 = new timestampDefault("AuthenticationStore");
+const Constants = fn(1074);
+({ AnalyticEvents: closure_8, LoginStates } = Constants);
+({ Platforms: c10, Routes: closure_11, TOKEN_KEY: closure_12 } = Constants);
+const AgeGateConstants = fn(1098);
+({ EXISTING_USER_AGE_GATE_MODAL_KEY, NEW_USER_AGE_GATE_MODAL_KEY } = AgeGateConstants);
+let closure_13 = new LoggerDefault("AuthenticationStore");
 let fingerprint = "fingerprint";
 const analytics_installation = "analytics_installation";
 const user_id_cache = "user_id_cache";
-let c17 = null;
-let c18 = null;
-let c19 = null;
-let c20 = null;
+let id = null;
+let sessionId = null;
+let authSessionIdHash = null;
+const staticAuthSessionId = null;
 let c21 = null;
-let c22 = null;
-let c23 = null;
-let c24 = null;
+let closure_22 = null;
+let installation = null;
+let analyticsToken = null;
 let NONE = LoginStates.NONE;
 let c26 = false;
-let closure_27 = [];
+let authenticator_types = [];
 let c28 = "";
 let c29 = false;
 let c30 = null;
 let c31 = false;
 let c32 = false;
-let c33 = null;
+let closure_33 = null;
 let c34 = null;
 let c35 = false;
-let c36 = false;
-let closure_37 = [];
+let closure_36 = false;
+let items = [];
 let Store = initializeDefault.Store;
 class AuthenticationStore extends Store {
 }
 const prototype = AuthenticationStore.prototype;
 prototype["initialize"] = function initialize() {
   const Storage = Storage6.Storage;
-  closure_17 = Storage.get(user_id_cache);
+  id = Storage.get(user_id_cache);
   const Storage2 = Storage6.Storage;
-  let value = Storage2.get(analytics_installation);
+  value = Storage2.get(analytics_installation);
   if (null == value) {
     const Storage3 = tmp(510).Storage;
     value = Storage3.get("analytics_installation");
@@ -238,42 +232,42 @@ prototype["initialize"] = function initialize() {
     }
     value = tmp4;
   }
-  const _null = value;
+  installation = value;
   if (null == obj.getToken()) {
-    let tmp7 = null == _null;
+    let tmp7 = null == installation;
     if (!tmp7) {
-      tmp7 = 0 === _null.length;
+      tmp7 = 0 === installation.length;
     }
     if (tmp7) {
       function fireApex() {
-        const installationExperiments = callback(11482).fetchInstallationExperiments(null);
+        const installationExperiments = ApexActionCreators.fetchInstallationExperiments(null);
       }
       promise.then(fireApex, fireApex);
     }
     promise = fetchFingerprint();
   }
-  this.addChangeListener(() => callback(14193).setClientState(closure_17));
+  this.addChangeListener(() => ClientStateStoreStorage.setClientState(id));
 };
 prototype["getLoginStatus"] = function getLoginStatus() {
   return NONE;
 };
 prototype["getId"] = function getId() {
-  return c17;
+  return id;
 };
 prototype["getSessionId"] = function getSessionId() {
-  return c18;
+  return sessionId;
 };
 prototype["getAuthSessionIdHash"] = function getAuthSessionIdHash() {
-  return c19;
+  return authSessionIdHash;
 };
 prototype["getStaticAuthSessionId"] = function getStaticAuthSessionId() {
-  return c20;
+  return staticAuthSessionId;
 };
 prototype["getToken"] = function getToken() {
-  return getToken.getToken();
+  return AuthenticationUtils.getToken();
 };
 prototype["isAuthenticated"] = function isAuthenticated() {
-  return getToken.isAuthenticated();
+  return AuthenticationUtils.isAuthenticated();
 };
 prototype["getFingerprint"] = function getFingerprint() {
   return c21;
@@ -281,15 +275,13 @@ prototype["getFingerprint"] = function getFingerprint() {
 prototype["getInstallationForTracking"] = function getInstallationForTracking() {
   let tmp = null;
   if (obj.canUseInstallationId()) {
-    tmp = c23;
+    tmp = installation;
   }
   return tmp;
 };
 prototype["getAnalyticsToken"] = function getAnalyticsToken() {
-  let analyticsToken = c24;
-  if (c24 == null) {
-    analyticsToken = setSecondaryTokenAll.getAnalyticsToken();
-    const obj = setSecondaryTokenAll;
+  if (analyticsToken == null) {
+    analyticsToken = TokenManagerAll.getAnalyticsToken();
   }
   return analyticsToken;
 };
@@ -297,21 +289,21 @@ prototype["getMFATicket"] = function getMFATicket() {
   return c28;
 };
 prototype["getMFAMethods"] = function getMFAMethods() {
-  return closure_37;
+  return items;
 };
 prototype["getLoginInstanceId"] = function getLoginInstanceId() {
-  return closure_5;
+  return c5;
 };
 prototype["hasTOTPEnabled"] = function hasTOTPEnabled() {
-  return closure_27.includes(PermissionOverwriteType.AuthenticatorType.TOTP);
+  return authenticator_types.includes(Server.AuthenticatorType.TOTP);
 };
 prototype["getCredentials"] = function getCredentials() {
-  if (null == closure_4) {
+  if (null == c4) {
     const _Error = Error;
-    error = new Error("no credentials");
+    const error = new Error("no credentials");
     throw error;
   } else {
-    return closure_4;
+    return c4;
   }
 };
 prototype["allowLogoutRedirect"] = function allowLogoutRedirect() {
@@ -324,31 +316,28 @@ prototype["getIsPasswordlessActive"] = function getIsPasswordlessActive() {
   return c35;
 };
 prototype["attemptedPasswordLogin"] = function attemptedPasswordLogin() {
-  return c36;
+  return closure_36;
 };
 AuthenticationStore.displayName = "AuthenticationStore";
-let tmp4 = new timestampDefault("AuthenticationStore");
-const authenticationStore = new AuthenticationStore(importDefaultResult, {
+const authenticationStore = new AuthenticationStore(Dispatcher, {
   CONNECTION_OPEN: function handleConnectionOpen(arg0) {
     ({ user, analyticsToken, auth, apexExperiments } = arg0);
     ({ sessionId, authSessionIdHash, staticAuthSessionId } = arg0);
-    let obj = setSecondaryTokenAll;
+    let obj = TokenManagerAll;
     const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
+    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_1_12) };
     closure_13.verbose("handleConnectionOpen called", obj);
-    const tmp = importAll;
     const tmp3 = null != obj.getToken();
     ({ id, username, email } = user);
-    _modDef1232.setUser(id, username, email, isStaffDefault(user));
-    const obj3 = _modDef1232;
-    setSecondaryTokenAll.setAnalyticsToken(analyticsToken);
+    SentryUtilsDefault.setUser(id, username, email, isStaffFromRawUserDefault(user));
+    TokenManagerAll.setAnalyticsToken(analyticsToken);
     id = user.id;
     if (undefined !== auth) {
-      const authenticator_types = auth.authenticator_types;
+      authenticator_types = auth.authenticator_types;
     }
     const Storage2 = tmp4(510).Storage;
     const result = Storage2.set(user_id_cache, user.id);
-    let installation;
+    installation = undefined;
     if (apexExperiments != null) {
       installation = apexExperiments.installation;
     }
@@ -365,8 +354,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     const Storage4 = tmp4(510).Storage;
     if (Storage4.get(constants.APP_FIRST_LOGIN, true)) {
       tmp6Result = tmp6(1242);
-      obj = { platform: null };
-      obj[0] = constants2.IOS;
+      obj = { platform: constants2.IOS };
       tmp6Result.track(tmp15.APP_FIRST_LOGIN, obj);
       const Storage5 = tmp4(510).Storage;
       const result2 = Storage5.set(tmp15.APP_FIRST_LOGIN, false);
@@ -375,14 +363,12 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
     ({ user, analyticsToken } = arg0);
     ({ sessionId, token } = arg0);
-    let obj = _modDef1232;
+    let obj = SentryUtilsDefault;
     ({ id, username, email } = user);
-    obj.setUser(id, username, email, isStaffDefault(user));
+    obj.setUser(id, username, email, isStaffFromRawUserDefault(user));
     const id2 = user.id;
-    const obj2 = setSecondaryTokenAll;
-    const tmp = importDefault;
     const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != setSecondaryTokenAll.getToken(), storageHasToken: null != Storage.get(closure_12) };
+    obj = { tokenManagerHasToken: null != TokenManagerAll.getToken(), storageHasToken: null != Storage.get(closure_1_12) };
     closure_13.verbose("setAuthToken called.", obj);
     let tmp8 = null != id2;
     if (tmp8) {
@@ -409,26 +395,25 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   CONNECTION_CLOSED: function handleConnectionClosed(code) {
     code = code.code;
     const combined = "handleConnectionClosed called with code " + code + ".";
-    let obj = setSecondaryTokenAll;
+    let obj = TokenManagerAll;
     const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
+    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_1_12) };
     closure_13.verbose(combined, obj);
     if (4004 === code) {
       if (c26) {
         c26 = true;
         handleLogout();
-        importDefaultResult.wait(() => {
-          callback(1100).transitionTo(constants.REGISTER);
+        Dispatcher.wait(() => {
+          router_utils.transitionTo(constants.REGISTER);
         });
       } else {
         obj = { user_id: null };
         const Storage2 = Storage6.Storage;
-        obj[0] = Storage2.get(user_id_cache);
-        expandEventPropertiesDefault.track(constants.APP_USER_DEAUTHENTICATED, obj);
+        obj.user_id = Storage2.get(user_id_cache);
+        AnalyticsUtilsDefault.track(constants.APP_USER_DEAUTHENTICATED, obj);
         handleLogout();
         const _setImmediate = setImmediate;
-        setImmediate(() => callback(1100).transitionTo(constants.DEFAULT_LOGGED_OUT));
-        const obj3 = expandEventPropertiesDefault;
+        setImmediate(() => router_utils.transitionTo(constants.DEFAULT_LOGGED_OUT));
       }
     }
   },
@@ -436,7 +421,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     authSessionIdHash = authSessionIdHash.authSessionIdHash;
   },
   LOGIN: function handleLogin(arg0) {
-    const LOGGING_IN = LoginStates.LOGGING_IN;
+    NONE = LoginStates.LOGGING_IN;
     let tmp2 = closure_36;
     if (!closure_36) {
       tmp2 = true === tmp;
@@ -445,14 +430,13 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   },
   LOGIN_SUCCESS: function handleLoginSuccess(token) {
     NONE = LoginStates.NONE;
-    let obj = setSecondaryTokenAll;
+    let obj = TokenManagerAll;
     const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
+    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_1_12) };
     closure_13.verbose("setAuthToken called.", obj);
     const tmp = null != obj.getToken();
-    setSecondaryTokenAll.removeAnalyticsToken();
-    const obj3 = setSecondaryTokenAll;
-    setSecondaryTokenAll.setToken(token.token, undefined);
+    TokenManagerAll.removeAnalyticsToken();
+    TokenManagerAll.setToken(token.token, undefined);
     closure_22 = c21;
     c21 = null;
     const Storage2 = Storage6.Storage;
@@ -461,7 +445,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     c29 = false;
     c30 = null;
     c5 = null;
-    const items = [];
+    items = [];
     if (c31) {
       items.push({ type: "totp" });
     }
@@ -478,7 +462,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     c29 = false;
     c30 = null;
     c5 = null;
-    const items = [];
+    items = [];
     if (c31) {
       items.push({ type: "totp" });
     }
@@ -497,17 +481,18 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   LOGIN_MFA_STEP: function handleLoginMFAStep(arg0) {
     ({ ticket, webauthn } = arg0);
     if (null != ticket) {
+      c28 = ticket;
       c29 = tmp;
       if (webauthn == null) {
         webauthn = null;
       }
+      challenge = webauthn;
       c32 = tmp2;
       c31 = tmp3;
-      closure_5 = tmp4;
-      const items = [];
+      c5 = tmp4;
+      items = [];
       if (null != webauthn) {
-        const obj = { type: "webauthn", challenge: null };
-        obj[1] = webauthn;
+        const obj = { type: "webauthn", challenge };
         items.push(obj);
       }
       if (c31) {
@@ -520,25 +505,25 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
         items.push({ type: "sms" });
       }
     }
-    const MFA_STEP = LoginStates.MFA_STEP;
+    NONE = LoginStates.MFA_STEP;
   },
   LOGIN_MFA: function handleLoginMFA() {
-    const LOGGING_IN_MFA = LoginStates.LOGGING_IN_MFA;
+    NONE = LoginStates.LOGGING_IN_MFA;
   },
   LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: function handleLoginAccountPendingDeletion(credentials) {
-    closure_25 = LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION;
+    NONE = LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION;
     credentials = credentials.credentials;
   },
   LOGIN_ACCOUNT_DISABLED: function handleLoginAccountDisabled(credentials) {
-    const ACCOUNT_DISABLED = LoginStates.ACCOUNT_DISABLED;
+    NONE = LoginStates.ACCOUNT_DISABLED;
     credentials = credentials.credentials;
   },
   LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: function handleLoginPasswordRecoveryPhoneVerification(credentials) {
-    closure_25 = LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION;
+    NONE = LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION;
     credentials = credentials.credentials;
   },
   LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: function handleLoginPhoneIPAuthorizationRequired(credentials) {
-    const PHONE_IP_AUTHORIZATION = LoginStates.PHONE_IP_AUTHORIZATION;
+    NONE = LoginStates.PHONE_IP_AUTHORIZATION;
     credentials = credentials.credentials;
   },
   LOGIN_RESET: function handleLoginReset(isMultiAccount) {
@@ -549,7 +534,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     c5 = null;
     c4 = null;
     if (!isMultiAccount.isMultiAccount) {
-      const items = [];
+      items = [];
       if (c31) {
         items.push({ type: "totp" });
       }
@@ -559,18 +544,15 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
       if (c29) {
         items.push({ type: "sms" });
       }
-      let obj = setSecondaryTokenAll;
       const Storage = Storage6.Storage;
-      obj = { tokenManagerHasToken: null, storageHasToken: null };
-      obj[0] = null != obj.getToken();
-      obj[1] = null != Storage.get(closure_12);
+      const obj = { tokenManagerHasToken: null, storageHasToken: null };
+      obj.tokenManagerHasToken = null != obj.getToken();
+      obj.storageHasToken = null != Storage.get(closure_1_12);
       closure_13.verbose("removeAuthToken called.", obj);
       const tmp9 = null != obj.getToken();
-      setSecondaryTokenAll.removeAnalyticsToken();
-      const obj3 = setSecondaryTokenAll;
-      setSecondaryTokenAll.removeToken();
+      TokenManagerAll.removeAnalyticsToken();
+      TokenManagerAll.removeToken();
       fetchFingerprint(false);
-      const obj4 = setSecondaryTokenAll;
     }
   },
   LOGIN_STATUS_RESET: function handleLoginStatusReset() {
@@ -579,42 +561,37 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   LOGIN_SUSPENDED_USER: function handleSuspendedUserLogin(suspendedUserToken) {
     c35 = false;
     suspendedUserToken = suspendedUserToken.suspendedUserToken;
-    setImmediate(() => callback(table[7]).transitionTo(constants.ACCOUNT_STANDING));
+    setImmediate(() => router_utils.transitionTo(constants.ACCOUNT_STANDING));
   },
   LOGOUT: handleLogout,
   FINGERPRINT: function handleFingerprint(fingerprint) {
     fingerprint = fingerprint.fingerprint;
-    if (null == fingerprint) {
+    if (null == c21) {
       if (null != fingerprint) {
         let extractIdResult = null;
-        if (null != fingerprint) {
-          extractIdResult = extractId.extractId(fingerprint);
-          const obj6 = extractId;
+        if (null != closure_22) {
+          extractIdResult = FingerprintUtils.extractId(closure_22);
         }
-        let obj = { old_fingerprint: null, new_fingerprint: null };
-        obj[0] = extractIdResult;
-        const obj5 = expandEventPropertiesDefault;
-        obj[1] = extractId.extractId(fingerprint);
+        let obj = { old_fingerprint: extractIdResult, new_fingerprint: null };
+        const obj5 = AnalyticsUtilsDefault;
+        obj.new_fingerprint = FingerprintUtils.extractId(fingerprint);
         obj5.track(constants.USER_FINGERPRINT_CHANGED, obj);
+        c21 = fingerprint;
+        closure_22 = fingerprint;
         const Storage = Storage6.Storage;
-        const result = Storage.set(fingerprint, fingerprint);
-        const obj8 = extractId;
+        const result = Storage.set(fingerprint, c21);
       } else {
         fetchFingerprint();
       }
     } else {
       let tmp2 = null != fingerprint;
       if (tmp2) {
-        tmp2 = fingerprint !== fingerprint;
+        tmp2 = c21 !== fingerprint;
       }
       if (tmp2) {
-        obj = expandEventPropertiesDefault;
-        obj = { fingerprint: null, dropped_fingerprint: null };
-        obj[0] = extractId.extractId(fingerprint);
-        const obj3 = extractId;
-        obj[1] = extractId.extractId(fingerprint);
+        obj = { fingerprint: FingerprintUtils.extractId(c21), dropped_fingerprint: null };
+        obj.dropped_fingerprint = FingerprintUtils.extractId(fingerprint);
         obj.track(constants.EXTERNAL_FINGERPRINT_DROPPED, obj);
-        const obj4 = extractId;
       }
     }
   },
@@ -631,40 +608,37 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     }
   },
   REGISTER_SUCCESS: function handleRegisterSuccess(token) {
-    let obj = setSecondaryTokenAll;
+    let obj = TokenManagerAll;
     const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
+    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_1_12) };
     closure_13.verbose("setAuthToken called.", obj);
     const tmp = null != obj.getToken();
-    setSecondaryTokenAll.removeAnalyticsToken();
-    const obj3 = setSecondaryTokenAll;
-    setSecondaryTokenAll.setToken(token.token, undefined);
+    TokenManagerAll.removeAnalyticsToken();
+    TokenManagerAll.setToken(token.token, undefined);
     closure_22 = c21;
     c21 = null;
     const Storage2 = Storage6.Storage;
     Storage2.remove(fingerprint);
   },
   FORGOT_PASSWORD_REQUEST: function handleForgotPasswordRequest() {
-    const FORGOT_PASSWORD = LoginStates.FORGOT_PASSWORD;
+    NONE = LoginStates.FORGOT_PASSWORD;
   },
   FORGOT_PASSWORD_SENT: function handleForgotPasswordSent() {
     NONE = LoginStates.NONE;
   },
   UPDATE_TOKEN: function handleUpdateToken(userId) {
     userId = userId.userId;
-    let obj = setSecondaryTokenAll;
+    let obj = TokenManagerAll;
     const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
+    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_1_12) };
     closure_13.verbose("handleUpdateToken called", obj);
     const tmp3 = null != obj.getToken();
-    const tmp4 = require;
-    const obj3 = setSecondaryTokenAll;
     const Storage2 = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != setSecondaryTokenAll.getToken(), storageHasToken: null != Storage2.get(closure_12) };
+    obj = { tokenManagerHasToken: null != TokenManagerAll.getToken(), storageHasToken: null != Storage2.get(closure_1_12) };
     closure_13.verbose("setAuthToken called.", obj);
     let tmp8 = null != userId;
     if (tmp8) {
-      tmp8 = userId === c17;
+      tmp8 = userId === id;
     }
     if (!tmp8) {
       let tmpResult = tmp(1099);
@@ -679,22 +653,21 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   },
   EXPERIMENTS_FETCH(withGuildExperiments) {
     let obj = {};
-    const superPropertiesBase64 = expandEventPropertiesDefault.getSuperPropertiesBase64();
+    const superPropertiesBase64 = AnalyticsUtilsDefault.getSuperPropertiesBase64();
     if (null != superPropertiesBase64) {
       obj["X-Super-Properties"] = superPropertiesBase64;
     }
-    if (null != c21) {
-      obj["X-Fingerprint"] = c21;
+    if (null != _null) {
+      obj["X-Fingerprint"] = _null;
     }
-    if (null != c23) {
-      obj["X-Installation-ID"] = c23;
+    if (null != installation) {
+      obj["X-Installation-ID"] = installation;
     }
-    const obj2 = expandEventPropertiesDefault;
     obj = { withGuildExperiments: withGuildExperiments.withGuildExperiments, headers: obj, context: null };
     obj = { location: null };
     let obj3 = fetchExperiments;
-    obj[0] = transitionTo.getFingerprintLocation();
-    obj[2] = obj;
+    obj.location = router_utils.getFingerprintLocation();
+    obj.context = obj;
     const experiments = obj3.fetchExperiments(obj);
     closure_33 = experiments.then((body) => {
       body = body.body;
@@ -705,31 +678,26 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
         tmp = installation.length > 0;
       }
       if (tmp) {
-        let obj = callback2(573);
-        obj = { type: "INSTALLATION_ID", installation: null };
-        obj[1] = installation;
+        let obj = { type: "INSTALLATION_ID", installation };
         obj.dispatch(obj);
       }
       if (fingerprint) {
-        obj = { type: "FINGERPRINT", fingerprint: null };
-        obj[1] = fingerprint;
-        callback2(573).dispatch(obj);
-        const obj3 = callback2(573);
+        obj = { type: "FINGERPRINT", fingerprint };
+        Dispatcher.dispatch(obj);
       }
-      callback2(573).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
+      Dispatcher.dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
       c33 = null;
-      const obj5 = callback2(573);
-      callback(14191).onExperimentsLoaded();
+      awaitExperiments.onExperimentsLoaded();
     }, () => {
       c33 = null;
-      callback2(573).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
+      Dispatcher.dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
     });
   },
   CURRENT_USER_UPDATE: function handleUserUpdate(user) {
     user = user.user;
-    const id = user.id;
+    id = user.id;
     if (undefined !== user.authenticator_types) {
-      const authenticator_types = user.authenticator_types;
+      authenticator_types = user.authenticator_types;
     }
     const Storage = Storage6.Storage;
     const result = Storage.set(user_id_cache, user.id);
@@ -737,15 +705,15 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: function handleAgeGateUnderage() {
     c26 = true;
     handleLogout();
-    importDefaultResult.wait(() => {
-      callback(1100).transitionTo(constants.REGISTER);
+    Dispatcher.wait(() => {
+      router_utils.transitionTo(constants.REGISTER);
     });
   },
   CLOSE_SUSPENDED_USER: function handleSuspendedUserClosed() {
     c34 = null;
     NONE = LoginStates.NONE;
     handleLogout();
-    setImmediate(() => callback(table[7]).transitionTo(constants.DEFAULT_LOGGED_OUT));
+    setImmediate(() => router_utils.transitionTo(constants.DEFAULT_LOGGED_OUT));
   },
   PASSWORDLESS_FAILURE: function handlePasswordlessFailure(error) {
     error = error.error;
@@ -754,7 +722,7 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
     c30 = null;
     c35 = false;
     c5 = null;
-    if (error instanceof prototypeDefault) {
+    if (error instanceof APIErrorDefault) {
       if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
         NONE = LoginStates.LOGIN_AGE_GATE;
       } else {
@@ -768,448 +736,8 @@ const authenticationStore = new AuthenticationStore(importDefaultResult, {
   PASSWORDLESS_START: function handlePasswordlessStart() {
     c35 = true;
   }
-}, require("dispatcher").DispatchBand.Early);
-let obj = {
-  CONNECTION_OPEN: function handleConnectionOpen(arg0) {
-    ({ user, analyticsToken, auth, apexExperiments } = arg0);
-    ({ sessionId, authSessionIdHash, staticAuthSessionId } = arg0);
-    let obj = setSecondaryTokenAll;
-    const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
-    closure_13.verbose("handleConnectionOpen called", obj);
-    const tmp = importAll;
-    const tmp3 = null != obj.getToken();
-    ({ id, username, email } = user);
-    _modDef1232.setUser(id, username, email, isStaffDefault(user));
-    const obj3 = _modDef1232;
-    setSecondaryTokenAll.setAnalyticsToken(analyticsToken);
-    id = user.id;
-    if (undefined !== auth) {
-      const authenticator_types = auth.authenticator_types;
-    }
-    const Storage2 = tmp4(510).Storage;
-    const result = Storage2.set(user_id_cache, user.id);
-    let installation;
-    if (apexExperiments != null) {
-      installation = apexExperiments.installation;
-    }
-    if (null != installation) {
-      installation = apexExperiments.installation;
-      if (null == installation) {
-        let tmp6Result = tmp6(14192);
-        if (tmp6Result.canUseInstallationId()) {
-          const Storage3 = tmp4(510).Storage;
-          const result1 = Storage3.set(analytics_installation, installation);
-        }
-      }
-    }
-    const Storage4 = tmp4(510).Storage;
-    if (Storage4.get(constants.APP_FIRST_LOGIN, true)) {
-      tmp6Result = tmp6(1242);
-      obj = { platform: null };
-      obj[0] = constants2.IOS;
-      tmp6Result.track(tmp15.APP_FIRST_LOGIN, obj);
-      const Storage5 = tmp4(510).Storage;
-      const result2 = Storage5.set(tmp15.APP_FIRST_LOGIN, false);
-    }
-  },
-  OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
-    ({ user, analyticsToken } = arg0);
-    ({ sessionId, token } = arg0);
-    let obj = _modDef1232;
-    ({ id, username, email } = user);
-    obj.setUser(id, username, email, isStaffDefault(user));
-    const id2 = user.id;
-    const obj2 = setSecondaryTokenAll;
-    const tmp = importDefault;
-    const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != setSecondaryTokenAll.getToken(), storageHasToken: null != Storage.get(closure_12) };
-    closure_13.verbose("setAuthToken called.", obj);
-    let tmp8 = null != id2;
-    if (tmp8) {
-      tmp8 = id2 === id;
-    }
-    if (!tmp8) {
-      let tmp4Result = tmp4(1099);
-      tmp4Result.removeAnalyticsToken();
-    }
-    tmp4Result = tmp4(1099);
-    tmp4Result.setToken(token, id2);
-    if (null != analyticsToken) {
-      tmp4(1099).setAnalyticsToken(analyticsToken);
-      const tmp4Result1 = tmp4(1099);
-    }
-    closure_22 = c21;
-    c21 = null;
-    const Storage2 = tmp6(510).Storage;
-    Storage2.remove(fingerprint);
-    id = user.id;
-    const Storage3 = tmp6(510).Storage;
-    const result = Storage3.set(user_id_cache, user.id);
-  },
-  CONNECTION_CLOSED: function handleConnectionClosed(code) {
-    code = code.code;
-    const combined = "handleConnectionClosed called with code " + code + ".";
-    let obj = setSecondaryTokenAll;
-    const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
-    closure_13.verbose(combined, obj);
-    if (4004 === code) {
-      if (c26) {
-        c26 = true;
-        handleLogout();
-        importDefaultResult.wait(() => {
-          callback(1100).transitionTo(constants.REGISTER);
-        });
-      } else {
-        obj = { user_id: null };
-        const Storage2 = Storage6.Storage;
-        obj[0] = Storage2.get(user_id_cache);
-        expandEventPropertiesDefault.track(constants.APP_USER_DEAUTHENTICATED, obj);
-        handleLogout();
-        const _setImmediate = setImmediate;
-        setImmediate(() => callback(1100).transitionTo(constants.DEFAULT_LOGGED_OUT));
-        const obj3 = expandEventPropertiesDefault;
-      }
-    }
-  },
-  AUTH_SESSION_CHANGE: function handleAuthSessionChange(authSessionIdHash) {
-    authSessionIdHash = authSessionIdHash.authSessionIdHash;
-  },
-  LOGIN: function handleLogin(arg0) {
-    const LOGGING_IN = LoginStates.LOGGING_IN;
-    let tmp2 = closure_36;
-    if (!closure_36) {
-      tmp2 = true === tmp;
-    }
-    closure_36 = tmp2;
-  },
-  LOGIN_SUCCESS: function handleLoginSuccess(token) {
-    NONE = LoginStates.NONE;
-    let obj = setSecondaryTokenAll;
-    const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
-    closure_13.verbose("setAuthToken called.", obj);
-    const tmp = null != obj.getToken();
-    setSecondaryTokenAll.removeAnalyticsToken();
-    const obj3 = setSecondaryTokenAll;
-    setSecondaryTokenAll.setToken(token.token, undefined);
-    closure_22 = c21;
-    c21 = null;
-    const Storage2 = Storage6.Storage;
-    Storage2.remove(fingerprint);
-    c28 = "";
-    c29 = false;
-    c30 = null;
-    c5 = null;
-    const items = [];
-    if (c31) {
-      items.push({ type: "totp" });
-    }
-    if (c32) {
-      items.push({ type: "backup" });
-    }
-    if (c29) {
-      items.push({ type: "sms" });
-    }
-    c35 = false;
-  },
-  LOGIN_FAILURE: function handleLoginFailure(error) {
-    c28 = "";
-    c29 = false;
-    c30 = null;
-    c5 = null;
-    const items = [];
-    if (c31) {
-      items.push({ type: "totp" });
-    }
-    if (c32) {
-      items.push({ type: "backup" });
-    }
-    if (c29) {
-      items.push({ type: "sms" });
-    }
-    if (null != obj.getAuthenticationErrorsFromV6OrEarlierAPIError(error.error).date_of_birth) {
-      NONE = LoginStates.LOGIN_AGE_GATE;
-    } else {
-      NONE = LoginStates.NONE;
-    }
-  },
-  LOGIN_MFA_STEP: function handleLoginMFAStep(arg0) {
-    ({ ticket, webauthn } = arg0);
-    if (null != ticket) {
-      c29 = tmp;
-      if (webauthn == null) {
-        webauthn = null;
-      }
-      c32 = tmp2;
-      c31 = tmp3;
-      closure_5 = tmp4;
-      const items = [];
-      if (null != webauthn) {
-        const obj = { type: "webauthn", challenge: null };
-        obj[1] = webauthn;
-        items.push(obj);
-      }
-      if (c31) {
-        items.push({ type: "totp" });
-      }
-      if (c32) {
-        items.push({ type: "backup" });
-      }
-      if (c29) {
-        items.push({ type: "sms" });
-      }
-    }
-    const MFA_STEP = LoginStates.MFA_STEP;
-  },
-  LOGIN_MFA: function handleLoginMFA() {
-    const LOGGING_IN_MFA = LoginStates.LOGGING_IN_MFA;
-  },
-  LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: function handleLoginAccountPendingDeletion(credentials) {
-    closure_25 = LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION;
-    credentials = credentials.credentials;
-  },
-  LOGIN_ACCOUNT_DISABLED: function handleLoginAccountDisabled(credentials) {
-    const ACCOUNT_DISABLED = LoginStates.ACCOUNT_DISABLED;
-    credentials = credentials.credentials;
-  },
-  LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: function handleLoginPasswordRecoveryPhoneVerification(credentials) {
-    closure_25 = LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION;
-    credentials = credentials.credentials;
-  },
-  LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: function handleLoginPhoneIPAuthorizationRequired(credentials) {
-    const PHONE_IP_AUTHORIZATION = LoginStates.PHONE_IP_AUTHORIZATION;
-    credentials = credentials.credentials;
-  },
-  LOGIN_RESET: function handleLoginReset(isMultiAccount) {
-    NONE = LoginStates.NONE;
-    c28 = "";
-    c29 = false;
-    c30 = null;
-    c5 = null;
-    c4 = null;
-    if (!isMultiAccount.isMultiAccount) {
-      const items = [];
-      if (c31) {
-        items.push({ type: "totp" });
-      }
-      if (c32) {
-        items.push({ type: "backup" });
-      }
-      if (c29) {
-        items.push({ type: "sms" });
-      }
-      let obj = setSecondaryTokenAll;
-      const Storage = Storage6.Storage;
-      obj = { tokenManagerHasToken: null, storageHasToken: null };
-      obj[0] = null != obj.getToken();
-      obj[1] = null != Storage.get(closure_12);
-      closure_13.verbose("removeAuthToken called.", obj);
-      const tmp9 = null != obj.getToken();
-      setSecondaryTokenAll.removeAnalyticsToken();
-      const obj3 = setSecondaryTokenAll;
-      setSecondaryTokenAll.removeToken();
-      fetchFingerprint(false);
-      const obj4 = setSecondaryTokenAll;
-    }
-  },
-  LOGIN_STATUS_RESET: function handleLoginStatusReset() {
-    NONE = LoginStates.NONE;
-  },
-  LOGIN_SUSPENDED_USER: function handleSuspendedUserLogin(suspendedUserToken) {
-    c35 = false;
-    suspendedUserToken = suspendedUserToken.suspendedUserToken;
-    setImmediate(() => callback(table[7]).transitionTo(constants.ACCOUNT_STANDING));
-  },
-  LOGOUT: handleLogout,
-  FINGERPRINT: function handleFingerprint(fingerprint) {
-    fingerprint = fingerprint.fingerprint;
-    if (null == fingerprint) {
-      if (null != fingerprint) {
-        let extractIdResult = null;
-        if (null != fingerprint) {
-          extractIdResult = extractId.extractId(fingerprint);
-          const obj6 = extractId;
-        }
-        let obj = { old_fingerprint: null, new_fingerprint: null };
-        obj[0] = extractIdResult;
-        const obj5 = expandEventPropertiesDefault;
-        obj[1] = extractId.extractId(fingerprint);
-        obj5.track(constants.USER_FINGERPRINT_CHANGED, obj);
-        const Storage = Storage6.Storage;
-        const result = Storage.set(fingerprint, fingerprint);
-        const obj8 = extractId;
-      } else {
-        fetchFingerprint();
-      }
-    } else {
-      let tmp2 = null != fingerprint;
-      if (tmp2) {
-        tmp2 = fingerprint !== fingerprint;
-      }
-      if (tmp2) {
-        obj = expandEventPropertiesDefault;
-        obj = { fingerprint: null, dropped_fingerprint: null };
-        obj[0] = extractId.extractId(fingerprint);
-        const obj3 = extractId;
-        obj[1] = extractId.extractId(fingerprint);
-        obj.track(constants.EXTERNAL_FINGERPRINT_DROPPED, obj);
-        const obj4 = extractId;
-      }
-    }
-  },
-  INSTALLATION_ID: function handleInstallationId(installation) {
-    installation = installation.installation;
-    if (null != installation) {
-      if (installation.length > 0) {
-        return false;
-      }
-    }
-    if (obj.canUseInstallationId()) {
-      const Storage = Storage6.Storage;
-      const result = Storage.set(analytics_installation, installation);
-    }
-  },
-  REGISTER_SUCCESS: function handleRegisterSuccess(token) {
-    let obj = setSecondaryTokenAll;
-    const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
-    closure_13.verbose("setAuthToken called.", obj);
-    const tmp = null != obj.getToken();
-    setSecondaryTokenAll.removeAnalyticsToken();
-    const obj3 = setSecondaryTokenAll;
-    setSecondaryTokenAll.setToken(token.token, undefined);
-    closure_22 = c21;
-    c21 = null;
-    const Storage2 = Storage6.Storage;
-    Storage2.remove(fingerprint);
-  },
-  FORGOT_PASSWORD_REQUEST: function handleForgotPasswordRequest() {
-    const FORGOT_PASSWORD = LoginStates.FORGOT_PASSWORD;
-  },
-  FORGOT_PASSWORD_SENT: function handleForgotPasswordSent() {
-    NONE = LoginStates.NONE;
-  },
-  UPDATE_TOKEN: function handleUpdateToken(userId) {
-    userId = userId.userId;
-    let obj = setSecondaryTokenAll;
-    const Storage = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != obj.getToken(), storageHasToken: null != Storage.get(closure_12) };
-    closure_13.verbose("handleUpdateToken called", obj);
-    const tmp3 = null != obj.getToken();
-    const tmp4 = require;
-    const obj3 = setSecondaryTokenAll;
-    const Storage2 = Storage6.Storage;
-    obj = { tokenManagerHasToken: null != setSecondaryTokenAll.getToken(), storageHasToken: null != Storage2.get(closure_12) };
-    closure_13.verbose("setAuthToken called.", obj);
-    let tmp8 = null != userId;
-    if (tmp8) {
-      tmp8 = userId === c17;
-    }
-    if (!tmp8) {
-      let tmpResult = tmp(1099);
-      tmpResult.removeAnalyticsToken();
-    }
-    tmpResult = tmp(1099);
-    tmpResult.setToken(userId.token, userId);
-    closure_22 = c21;
-    c21 = null;
-    const Storage3 = Storage6.Storage;
-    Storage3.remove(fingerprint);
-  },
-  EXPERIMENTS_FETCH(withGuildExperiments) {
-    let obj = {};
-    const superPropertiesBase64 = expandEventPropertiesDefault.getSuperPropertiesBase64();
-    if (null != superPropertiesBase64) {
-      obj["X-Super-Properties"] = superPropertiesBase64;
-    }
-    if (null != c21) {
-      obj["X-Fingerprint"] = c21;
-    }
-    if (null != c23) {
-      obj["X-Installation-ID"] = c23;
-    }
-    const obj2 = expandEventPropertiesDefault;
-    obj = { withGuildExperiments: withGuildExperiments.withGuildExperiments, headers: obj, context: null };
-    obj = { location: null };
-    let obj3 = fetchExperiments;
-    obj[0] = transitionTo.getFingerprintLocation();
-    obj[2] = obj;
-    const experiments = obj3.fetchExperiments(obj);
-    closure_33 = experiments.then((body) => {
-      body = body.body;
-      ({ fingerprint, installation } = body);
-      let tmp = null != installation;
-      ({ assignments, guild_experiments } = body);
-      if (tmp) {
-        tmp = installation.length > 0;
-      }
-      if (tmp) {
-        let obj = callback2(573);
-        obj = { type: "INSTALLATION_ID", installation: null };
-        obj[1] = installation;
-        obj.dispatch(obj);
-      }
-      if (fingerprint) {
-        obj = { type: "FINGERPRINT", fingerprint: null };
-        obj[1] = fingerprint;
-        callback2(573).dispatch(obj);
-        const obj3 = callback2(573);
-      }
-      callback2(573).dispatch({ type: "EXPERIMENTS_FETCH_SUCCESS", fingerprint, experiments: assignments, guildExperiments: guild_experiments });
-      c33 = null;
-      const obj5 = callback2(573);
-      callback(14191).onExperimentsLoaded();
-    }, () => {
-      c33 = null;
-      callback2(573).dispatch({ type: "EXPERIMENTS_FETCH_FAILURE" });
-    });
-  },
-  CURRENT_USER_UPDATE: function handleUserUpdate(user) {
-    user = user.user;
-    const id = user.id;
-    if (undefined !== user.authenticator_types) {
-      const authenticator_types = user.authenticator_types;
-    }
-    const Storage = Storage6.Storage;
-    const result = Storage.set(user_id_cache, user.id);
-  },
-  AGE_GATE_LOGOUT_UNDERAGE_NEW_USER: function handleAgeGateUnderage() {
-    c26 = true;
-    handleLogout();
-    importDefaultResult.wait(() => {
-      callback(1100).transitionTo(constants.REGISTER);
-    });
-  },
-  CLOSE_SUSPENDED_USER: function handleSuspendedUserClosed() {
-    c34 = null;
-    NONE = LoginStates.NONE;
-    handleLogout();
-    setImmediate(() => callback(table[7]).transitionTo(constants.DEFAULT_LOGGED_OUT));
-  },
-  PASSWORDLESS_FAILURE: function handlePasswordlessFailure(error) {
-    error = error.error;
-    c28 = "";
-    c29 = false;
-    c30 = null;
-    c35 = false;
-    c5 = null;
-    if (error instanceof prototypeDefault) {
-      if (null != obj.getAuthenticationErrorsFromAPIError(error).date_of_birth) {
-        NONE = LoginStates.LOGIN_AGE_GATE;
-      } else {
-        NONE = LoginStates.NONE;
-      }
-      obj = getAuthenticationErrorsFromAPIError;
-    } else {
-      NONE = LoginStates.NONE;
-    }
-  },
-  PASSWORDLESS_START: function handlePasswordlessStart() {
-    c35 = true;
-  }
-};
-result = require("set").fileFinishedImporting("stores/AuthenticationStore.tsx");
+}, fn(573).DispatchBand.Early);
+const size = fn(2);
+let result = size.fileFinishedImporting("stores/AuthenticationStore.tsx");
 
 export default authenticationStore;

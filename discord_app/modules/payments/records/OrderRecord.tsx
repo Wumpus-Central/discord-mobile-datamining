@@ -1,18 +1,16 @@
-// === Module 7425: createFromOrder ===
+// === Module 7425: OrderRecord ===
 
-// Module 7425 (createFromOrder)
-import toJSDefault from "toJS" /* 1386 */;
-import { BaseInvoiceRecord } from "createFromServer" /* 4227 */;
-import closure_1 from "createFromServer" /* 7426 */;
-import closure_2 from "createFromServer" /* 7427 */;
-import { PaymentGateways } from "sum" /* 1085 */;
+// Module 7425 (OrderRecord)
+import Record from "Record" /* 1386 */;
+import CheckoutContextRecord from "CheckoutContextRecord" /* 7426 */;
+import SubscriptionFacetRecord from "SubscriptionFacetRecord" /* 7427 */;
 
-toJSDefault;
+const BaseInvoiceRecord = fn(4227).BaseInvoiceRecord;
+const PaymentGateways = fn(1085).PaymentGateways;
 let BillingFacetRecord;
 class BillingFacetRecord extends tmp2 {
   constructor(arg0) {
     tmp = new BillingFacetRecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({ paymentGateway: tmp.paymentGateway, paymentSourceId } = global);
     if (paymentSourceId == null) {
       paymentSourceId = null;
@@ -33,7 +31,7 @@ class BillingFacetRecord extends tmp2 {
 }
 BillingFacetRecord["createFromOrder"] = function createFromOrder(billing_facet) {
   billing_facet = billing_facet.billing_facet;
-  let tmp = null;
+  let tmp2 = null;
   if (null != billing_facet) {
     ({ payment_gateway, payment_source_id } = billing_facet);
     if (payment_source_id == null) {
@@ -44,27 +42,27 @@ BillingFacetRecord["createFromOrder"] = function createFromOrder(billing_facet) 
       currency = null;
     }
     let invoiceFromOrder = BaseInvoiceRecord.createInvoiceFromOrder(billing_facet);
-    if (typeof BillingFacetRecord !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof BillingFacetRecord === "function") {
+      const tmp11 = new BillingFacetRecord(tmp, billing_facet, tmp3, new.target, payment_gateway, payment_source_id, currency, invoiceFromOrder);
+      tmp11.paymentGateway = payment_gateway;
+      if (payment_source_id == null) {
+        payment_source_id = null;
+      }
+      tmp11.paymentSourceId = payment_source_id;
+      if (currency == null) {
+        currency = null;
+      }
+      tmp11.currency = currency;
+      if (invoiceFromOrder == null) {
+        invoiceFromOrder = null;
+      }
+      tmp11.invoicePreview = invoiceFromOrder;
+      tmp2 = tmp11;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp10 = new BillingFacetRecord("Trying to call a non-function", billing_facet, BillingFacetRecord, new.target, payment_gateway, payment_source_id, currency, invoiceFromOrder);
-    // ThrowIfThisInitialized (0x7c)
-    tmp10.paymentGateway = payment_gateway;
-    if (payment_source_id == null) {
-      payment_source_id = null;
-    }
-    tmp10.paymentSourceId = payment_source_id;
-    if (currency == null) {
-      currency = null;
-    }
-    tmp10.currency = currency;
-    if (invoiceFromOrder == null) {
-      invoiceFromOrder = null;
-    }
-    tmp10.invoicePreview = invoiceFromOrder;
-    tmp = tmp10;
   }
-  return tmp;
+  return tmp2;
 };
 Object.defineProperty(BillingFacetRecord.prototype, "fiatCurrency", {
   get: function fiatCurrency() {
@@ -80,7 +78,6 @@ let OrderRecord;
 class OrderRecord extends tmp2 {
   constructor(arg0) {
     tmp = new OrderRecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, status: tmp.status, revision: tmp.revision, orderLineItems } = global);
     if (orderLineItems == null) {
       orderLineItems = [];
@@ -126,19 +123,19 @@ OrderRecord["createFromServer"] = function createFromServer(id) {
   if (prop == null) {
     prop = null;
   }
-  obj[5] = prop;
+  obj.externalGatewayFacet = prop;
   let gifting_facet = id.gifting_facet;
   if (gifting_facet == null) {
     gifting_facet = null;
   }
-  obj[6] = gifting_facet;
-  obj[7] = closure_1.createFromOrder(id);
-  ({ created_at: obj[8], unsatisfied_constraints } = id);
+  obj.giftingFacet = gifting_facet;
+  obj.checkoutContextRecord = CheckoutContextRecord.createFromOrder(id);
+  ({ created_at: obj.createdAt, unsatisfied_constraints } = id);
   if (unsatisfied_constraints == null) {
     unsatisfied_constraints = [];
   }
-  obj[9] = unsatisfied_constraints;
-  obj[10] = closure_2.createFromServer(id.subscription_facet);
+  obj.unsatisfiedConstraints = unsatisfied_constraints;
+  obj.subscriptionFacet = SubscriptionFacetRecord.createFromServer(id.subscription_facet);
   return new OrderRecord(obj);
 };
 prototype["getInvoicePreview"] = function getInvoicePreview() {
@@ -155,7 +152,8 @@ prototype["firstUnsatisfiedConstraintReasonCode"] = function firstUnsatisfiedCon
   }
   return reason_code;
 };
-const result = require("set").fileFinishedImporting("modules/payments/records/OrderRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/payments/records/OrderRecord.tsx");
 
 export default OrderRecord;
 export { BillingFacetRecord };

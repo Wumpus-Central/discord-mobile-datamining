@@ -1,13 +1,13 @@
-// === Module 15699: ? ===
+// === Module 15699: BillingFlows ===
 
-// Module 15699
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 15699 (BillingFlows)
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
+const View = _mod17.View;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("modules/billing/native/smoke/BillingFlows.android.tsx");
+const result = size.fileFinishedImporting("modules/billing/native/smoke/BillingFlows.android.tsx");
 
 export default {
   RunAllFlows() {

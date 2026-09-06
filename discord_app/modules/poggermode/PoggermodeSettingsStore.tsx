@@ -1,16 +1,16 @@
-// === Module 7678: initialize ===
+// === Module 7678: PoggermodeSettingsStore ===
 
-// Module 7678 (initialize)
-import set from "set" /* 2 */;
+// Module 7678 (PoggermodeSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ConfettiLocation from "ConfettiLocation" /* 7679 */;
-import apply from "apply" /* 12 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import PoggermodeConstants from "PoggermodeConstants" /* 7679 */;
+import apply from "module_12" /* 12 */;
+import size from "module_2" /* 2 */;
 
-({ ShakeLocation, ConfettiLocation } = ConfettiLocation);
+({ ShakeLocation, ConfettiLocation } = PoggermodeConstants);
 let c0 = false;
-let obj = { settingsVisible: false, enabled: false, combosEnabled: true, combosRequiredCount: 5, comboSoundsEnabled: true, screenshakeEnabled: true, screenshakeEnabledLocations: { [ShakeLocation.CHAT_INPUT]: true, [ShakeLocation.VOICE_USER]: false, [ShakeLocation.MENTION]: false }, shakeIntensity: 1, confettiEnabled: true, confettiEnabledLocations: { [ConfettiLocation.CHAT_INPUT]: true, [ConfettiLocation.REACTION]: true, [ConfettiLocation.MEMBER_USER]: true, [ConfettiLocation.CALL_TILE]: true }, confettiSize: 16, confettiCount: 5, warningSeen: false };
-let closure_1 = apply.cloneDeep(obj);
+let initialState = { settingsVisible: false, enabled: false, combosEnabled: true, combosRequiredCount: 5, comboSoundsEnabled: true, screenshakeEnabled: true, screenshakeEnabledLocations: { [ShakeLocation.CHAT_INPUT]: true, [ShakeLocation.VOICE_USER]: false, [ShakeLocation.MENTION]: false }, shakeIntensity: 1, confettiEnabled: true, confettiEnabledLocations: { [ConfettiLocation.CHAT_INPUT]: true, [ConfettiLocation.REACTION]: true, [ConfettiLocation.MEMBER_USER]: true, [ConfettiLocation.CALL_TILE]: true }, confettiSize: 16, confettiCount: 5, warningSeen: false };
+initialState = apply.cloneDeep(initialState);
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class PoggermodeSettingsStore extends DeviceSettingsStore {
 }
@@ -21,11 +21,11 @@ prototype["initialize"] = function initialize(arg0) {
   const merged1 = Object.assign(arg0);
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
-  return closure_1;
+  return obj;
 };
 Object.defineProperty(prototype, "settingsVisible", {
   get: function settingsVisible() {
-    return closure_1.settingsVisible;
+    return obj.settingsVisible;
   },
   set: undefined
 });
@@ -37,17 +37,17 @@ prototype["isEnabled"] = function isEnabled() {
   ({ confettiLocation, shakeLocation } = obj);
   let tmp = null == confettiLocation;
   if (!tmp) {
-    let confettiEnabled = closure_1.confettiEnabled;
+    let confettiEnabled = obj.confettiEnabled;
     if (confettiEnabled) {
-      confettiEnabled = closure_1.confettiEnabledLocations[confettiLocation];
+      confettiEnabled = obj.confettiEnabledLocations[confettiLocation];
     }
     tmp = confettiEnabled;
   }
   let tmp4 = null == shakeLocation;
   if (!tmp4) {
-    let screenshakeEnabled = closure_1.screenshakeEnabled;
+    let screenshakeEnabled = obj.screenshakeEnabled;
     if (screenshakeEnabled) {
-      screenshakeEnabled = closure_1.screenshakeEnabledLocations[shakeLocation];
+      screenshakeEnabled = obj.screenshakeEnabledLocations[shakeLocation];
     }
     tmp4 = screenshakeEnabled;
   }
@@ -56,7 +56,7 @@ prototype["isEnabled"] = function isEnabled() {
     enabled = !c0;
   }
   if (enabled) {
-    enabled = closure_1.enabled;
+    enabled = obj.enabled;
   }
   if (enabled) {
     enabled = tmp;
@@ -70,7 +70,7 @@ Object.defineProperty(prototype, "shakeIntensity", {
   get: function shakeIntensity() {
     let num = 0;
     if (this.isEnabled()) {
-      num = closure_1.shakeIntensity;
+      num = obj.shakeIntensity;
     }
     return num;
   },
@@ -80,7 +80,7 @@ Object.defineProperty(prototype, "combosRequiredCount", {
   get: function combosRequiredCount() {
     let num = 0;
     if (this.isEnabled()) {
-      num = closure_1.combosRequiredCount;
+      num = obj.combosRequiredCount;
     }
     return num;
   },
@@ -88,31 +88,31 @@ Object.defineProperty(prototype, "combosRequiredCount", {
 });
 Object.defineProperty(prototype, "screenshakeEnabled", {
   get: function screenshakeEnabled() {
-    return closure_1.screenshakeEnabled;
+    return obj.screenshakeEnabled;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "screenshakeEnabledLocations", {
   get: function screenshakeEnabledLocations() {
-    return closure_1.screenshakeEnabledLocations;
+    return obj.screenshakeEnabledLocations;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "combosEnabled", {
   get: function combosEnabled() {
-    return closure_1.combosEnabled;
+    return obj.combosEnabled;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "comboSoundsEnabled", {
   get: function comboSoundsEnabled() {
-    return closure_1.comboSoundsEnabled;
+    return obj.comboSoundsEnabled;
   },
   set: undefined
 });
 PoggermodeSettingsStore.displayName = "PoggermodeSettingsStore";
 PoggermodeSettingsStore.persistKey = "PoggermodeSettingsStore";
-obj = {
+initialState = {
   POGGERMODE_SETTINGS_UPDATE: function handlePoggermodeSettingsUpdate(settings) {
     const obj = {};
     const merged = Object.assign(obj);
@@ -122,8 +122,8 @@ obj = {
     c0 = true;
   }
 };
-const poggermodeSettingsStore = new PoggermodeSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");
+const poggermodeSettingsStore = new PoggermodeSettingsStore(DispatcherDefault, initialState);
+const result = size.fileFinishedImporting("modules/poggermode/PoggermodeSettingsStore.tsx");
 
 export default poggermodeSettingsStore;
-export const initialState = obj;
+export { initialState };

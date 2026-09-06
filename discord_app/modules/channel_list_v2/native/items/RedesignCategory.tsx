@@ -1,17 +1,23 @@
-// === Module 16106: renderCategoryItem ===
+// === Module 16106: RedesignCategory ===
 
-// Module 16106 (renderCategoryItem)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 7531 */;
-import closure_6 from "incrementVersion" /* 7117 */;
-import closure_7 from "updateUserGuildSettingsInternal" /* 4741 */;
-import hairlineWidth from "hairlineWidth" /* 10118 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16106 (RedesignCategory)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useChannelNameDefault from "useChannelName" /* 4713 */;
+import CircleXIcon from "CircleXIcon" /* 6616 */;
+import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7113 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7196 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
+import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 10975 */;
+import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11558 */;
+import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 16107 */;
+import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 16108 */;
+import noop from "module_19" /* 19 */;
+import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7531 */;
+import CategoryCollapseStore from "CategoryCollapseStore" /* 7117 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-const require = arg1;
+require = fn;
 function renderCategoryItem(muted) {
   ({ name, icon, note, noteAlignment } = muted);
   if (noteAlignment === undefined) {
@@ -33,7 +39,7 @@ function renderCategoryItem(muted) {
   if (withMarginTop) {
     num = closure_9;
   }
-  let obj = { paddingLeft: 16, marginTop: num, marginBottom: closure_8 };
+  let obj = { paddingLeft: 16, marginTop: num, marginBottom };
   items[1] = obj;
   let tmp34Result = name;
   if (typeof name === "string") {
@@ -41,19 +47,13 @@ function renderCategoryItem(muted) {
     if (flag) {
       str = "text-muted";
     }
-    obj = { experimental_useNativeText: true, variant: "text-sm/semibold", color: null, lineClamp: 1, style: null, children: null };
-    obj[2] = str;
-    obj[4] = styles.categoryText;
-    obj[5] = name;
-    tmp34Result = callback(trailingAction(4556).Text, obj);
-    const tmp34 = callback;
+    obj = { experimental_useNativeText: true, variant: "text-sm/semibold", color: str, lineClamp: 1, style: styles.categoryText, children: name };
+    tmp34Result = closure_11(trailingAction(4556).Text, obj);
   }
   let tmp3 = null;
   if (null != icon) {
-    obj = { style: null, children: null };
-    obj[0] = styles.iconWrapperStyles;
-    obj[1] = icon;
-    tmp3 = callback(View, obj);
+    obj = { style: styles.iconWrapperStyles, children: icon };
+    tmp3 = closure_11(View, obj);
   }
   let Icon;
   if (trailingAction != null) {
@@ -69,39 +69,34 @@ function renderCategoryItem(muted) {
       items1[1] = null;
       items1[2] = tmp3;
       items1[3] = null;
-      obj1[0] = items1;
+      obj1.children = items1;
       const tmp18Result = tmp18(tmp19, obj1);
       const items2 = [];
       if (null != trailingAction) {
-        let obj2 = { name: null, label: null };
-        obj2[0] = c17;
-        obj2[1] = trailingAction.label;
+        let obj2 = { name, label: trailingAction.label };
         items2.push(obj2);
       }
       if (null != longPressAction) {
-        const obj3 = { name: null, label: null };
-        obj3[0] = c18;
-        obj3[1] = longPressAction.label;
+        const obj3 = { name: name2, label: longPressAction.label };
         items2.push(obj3);
       }
       if (tmp) {
-        const obj4 = { accessibilityRole: "header", accessibilityState: null, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onLongPress: null, style: null, children: null };
-        obj4[1] = accessibilityState;
+        const obj4 = { accessibilityRole: "header", accessibilityState, accessibilityActions: null, onAccessibilityAction: null, onPress: null, onLongPress: null, style: null, children: null };
         let tmp33;
         if (items2.length > 0) {
           tmp33 = items2;
         }
-        obj4[2] = tmp33;
+        obj4.accessibilityActions = tmp33;
         let handleAccessibilityAction;
         if (items2.length > 0) {
           handleAccessibilityAction = function handleAccessibilityAction(nativeEvent) {
             const actionName = nativeEvent.nativeEvent.actionName;
-            if (closure_1_17 === actionName) {
+            if (c17 === actionName) {
               if (trailingAction != null) {
                 obj2.perform();
               }
               obj2 = trailingAction;
-            } else if (closure_1_18 === actionName) {
+            } else if (c18 === actionName) {
               if (longPressAction != null) {
                 obj.perform();
               }
@@ -109,123 +104,122 @@ function renderCategoryItem(muted) {
             }
           };
         }
-        obj4[3] = handleAccessibilityAction;
-        obj4[4] = onPress;
-        obj4[5] = onLongPress;
-        obj4[6] = items;
-        obj4[7] = tmp18Result;
+        obj4.onAccessibilityAction = handleAccessibilityAction;
+        obj4.onPress = onPress;
+        obj4.onLongPress = onLongPress;
+        obj4.style = items;
+        obj4.children = tmp18Result;
         let tmp28Result = tmp28(trailingAction(5123).PressableHighlight, obj4);
       } else {
-        const obj5 = { accessibilityRole: "header", style: null, children: null };
-        obj5[1] = items;
-        obj5[2] = tmp18Result;
+        const obj5 = { accessibilityRole: "header", style: items, children: tmp18Result };
         tmp28Result = tmp28(View, obj5);
       }
       return tmp28Result;
     } else {
       styles = { style: null, children: null };
-      styles[0] = "end" === noteAlignment ? styles.endAlignedWrapper : styles.noteWrapper;
-      styles[1] = note;
-      callback(View, styles);
+      styles.style = "end" === noteAlignment ? styles.endAlignedWrapper : styles.noteWrapper;
+      styles.children = note;
+      closure_11(View, styles);
       const tmp21 = "end" === noteAlignment ? styles.endAlignedWrapper : styles.noteWrapper;
     }
   } else {
-    const obj6 = { style: null, children: null };
-    obj6[0] = styles.endAlignedWrapper;
-    let obj7 = { accessible: null, accessibilityRole: null, accessibilityLabel: null, onPress: null, hitSlop: null, androidRippleConfig: null, children: null };
-    obj7[0] = !tmp;
-    obj7[1] = "button";
+    const obj6 = { style: styles.endAlignedWrapper, children: null };
+    let obj7 = { accessible: !tmp, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, androidRippleConfig: null, children: null };
     let label;
     if (!tmp) {
       label = trailingAction.label;
     }
-    obj7[2] = label;
-    obj7[3] = trailingAction.perform;
-    obj7[4] = closure_15;
-    obj7[5] = closure_16;
+    obj7.accessibilityLabel = label;
+    obj7.onPress = trailingAction.perform;
+    obj7.hitSlop = hitSlop;
+    obj7.androidRippleConfig = androidRippleConfig;
     let colors = longPressAction(576).colors;
-    const obj8 = { size: "xxs", color: null };
-    obj8[1] = flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE;
+    const obj8 = { size: "xxs", color: flag ? colors.ICON_MUTED : colors.TEXT_SUBTLE };
     colors = tmp9(Icon, obj8);
-    obj7[6] = colors;
+    obj7.children = colors;
     obj7 = tmp9(trailingAction(5123).PressableOpacity, obj7);
-    obj6[1] = obj7;
-    callback(View, obj6);
-    const tmp10 = View;
+    obj6.children = obj7;
+    closure_11(View, obj6);
   }
 }
-({ CATEGORY_MARGIN_BOTTOM: closure_8, CATEGORY_MARGIN_TOP: c9, CATEGORY_VERTICAL_PADDING: c10 } = hairlineWidth);
-({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
-const styles = createCacheKey.createStyles(() => {
-  obj = { categoryWrapper: obj, categoryText: null, noteWrapper: null, iconWrapperStyles: null, endAlignedWrapper: null };
-  obj = { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: closure_10, paddingRight: 16 };
+const View = fn(17).View;
+const RedesignChannelListConstants = fn(10118);
+({ CATEGORY_MARGIN_BOTTOM: closure_8, CATEGORY_MARGIN_TOP: closure_9, CATEGORY_VERTICAL_PADDING: c10 } = RedesignChannelListConstants);
+const jsxProd = fn(21);
+({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
+let createStyles = fn(4560);
+const styles = createStyles.createStyles(() => {
+  let obj = { categoryWrapper: null, categoryText: null, noteWrapper: null, iconWrapperStyles: null, endAlignedWrapper: null };
+  obj = { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical, paddingRight: 16 };
+  obj.categoryWrapper = obj;
   let num = 0;
   if (obj3.isAndroid()) {
     num = -1;
   }
-  obj[1] = { flexShrink: 1, marginTop: num };
-  obj[2] = { marginLeft: 4 };
-  obj[3] = { marginLeft: 4 };
-  obj = { paddingLeft: ThemesDefault.space.PX_8, marginLeft: "auto" };
-  obj[4] = obj;
+  obj.categoryText = { flexShrink: 1, marginTop: num };
+  obj.noteWrapper = { marginLeft: 4 };
+  obj.iconWrapperStyles = { marginLeft: 4 };
+  obj = { paddingLeft: nativeDefault.space.PX_8, marginLeft: "auto" };
+  obj.endAlignedWrapper = obj;
   return obj;
 });
-let closure_15 = { top: 16, bottom: 16, left: 16, right: 16 };
-let closure_16 = { borderless: true, radius: 16 };
+const hitSlop = { top: 16, bottom: 16, left: 16, right: 16 };
+const androidRippleConfig = { borderless: true, radius: 16 };
 let c17 = "add-to-category";
 let c18 = "category-actions";
-createCacheKey = { flexShrink: 0, flexGrow: 0 };
-createCacheKey = {};
-createCacheKey = Object.assign(createCacheKey);
+createStyles = { flexShrink: 0, flexGrow: 0 };
+createStyles = {};
+createStyles = Object.assign(createStyles);
 let items = [{ rotate: "-90deg" }];
-createCacheKey.transform = items;
+createStyles.transform = items;
 let obj1 = {};
-createCacheKey = Object.assign(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/RedesignCategory.tsx");
+createStyles = Object.assign(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/RedesignCategory.tsx");
 
 export const useCategoryStyles = styles;
 export { renderCategoryItem };
 export const useCategoryPressEvents = function useCategoryPressEvents(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
+  const obj = { onPress: null, onLongPress: null };
   const items = [arg0, arg1];
+  obj.onPress = noop.useCallback(() => {
+    const obj = CategoryCollapseActionCreators;
+    if (importDefault) {
+      obj.categoryExpand(channel);
+    } else {
+      obj.categoryCollapse(channel);
+    }
+  }, items);
   const items1 = [arg0];
-  return {
-    onPress: React.useCallback(() => {
-      const obj = id(closure_1_2[14]);
-      if (collapsed) {
-        obj.categoryExpand(id);
-      } else {
-        obj.categoryCollapse(id);
-      }
-    }, items),
-    onLongPress: React.useCallback(() => id(closure_1_2[15]).openChannelLongPressActionSheet(id), items1)
-  };
+  obj.onLongPress = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel), items1);
+  return obj;
 };
 export const CategoryChannel = function CategoryChannel(channel) {
   channel = channel.channel;
-  let id = channel;
-  let obj = id(504);
-  const items = [closure_6, closure_7];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ collapsed: closure_1_6.isCollapsed(id.id), muted: closure_1_7.isChannelMuted(id.getGuildId(), id.id) }));
+  let obj = channel(504);
+  const items = [CategoryCollapseStore, UserGuildSettingsStore];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ collapsed: CategoryCollapseStore.isCollapsed(channel.id), muted: UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id) }));
   const collapsed = stateFromStoresObject.collapsed;
-  id = channel.id;
+  const id = channel.id;
+  closure_129_0 = id;
+  closure_129_1 = collapsed;
   const items1 = [id, collapsed];
   const items2 = [id];
-  const callback = React.useCallback(() => {
-    const obj = id(closure_1_2[14]);
-    if (collapsed) {
-      obj.categoryExpand(id);
+  const callback = noop.useCallback(() => {
+    const obj = CategoryCollapseActionCreators;
+    if (importDefault) {
+      obj.categoryExpand(channel);
     } else {
-      obj.categoryCollapse(id);
+      obj.categoryCollapse(channel);
     }
   }, items1);
-  const callback1 = React.useCallback(() => id(closure_1_2[15]).openChannelLongPressActionSheet(id), items2);
-  const tmp8 = collapsed(4713)(channel);
+  const callback1 = noop.useCallback(() => openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel), items2);
+  const tmp8 = useChannelNameDefault(channel);
   const tmp = styles();
-  const tmp7 = collapsed;
-  const tmp10 = collapsed(16107)(channel, tmp8);
-  const tmp11 = collapsed(16108)(channel);
+  const tmp10 = useFavoritesGuildCategoryFullNoticeDefault(channel, tmp8);
+  const tmp11 = useFavoritesGuildCategoryLongPressDefault(channel);
   obj = { name: tmp8, muted: stateFromStoresObject.muted, collapsed, onPress: callback, onLongPress: null, withMarginTop: null, styles: null, note: null, trailingAction: null, longPressAction: null };
   let perform;
   if (tmp11 != null) {
@@ -234,48 +228,47 @@ export const CategoryChannel = function CategoryChannel(channel) {
   if (perform == null) {
     perform = callback1;
   }
-  obj[4] = perform;
-  obj[5] = channel.withMarginTop;
-  obj[6] = tmp;
+  obj.onLongPress = perform;
+  obj.withMarginTop = channel.withMarginTop;
+  obj.styles = tmp;
   let tmp13 = null;
   if (null != tmp10) {
     obj = { variant: "text-xs/medium", color: "text-muted", accessibilityLabel: null, children: null };
-    ({ tooltip: obj3[2], label: obj3[3] } = tmp10);
-    tmp13 = callback(tmp2(4556).Text, obj);
+    ({ tooltip: obj3.accessibilityLabel, label: obj3.children } = tmp10);
+    tmp13 = closure_11(tmp2(4556).Text, obj);
   }
-  obj[7] = tmp13;
-  obj[8] = collapsed(10975)(channel);
-  obj[9] = tmp11;
+  obj.note = tmp13;
+  obj.trailingAction = useFavoritesGuildCategoryAddActionDefault(channel);
+  obj.longPressAction = tmp11;
   const collapsed2 = obj.collapsed;
-  const merged = Object.assign(obj, Object.create(null));
-  const colors = tmp7(576).colors;
+  const merged = Object.assign(obj, Object.assign({ collapsed: 0 }));
+  const colors = nativeDefault.colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = callback(id(11153).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createCacheKey : obj1 });
+  obj1.icon = closure_11(channel(11153).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createStyles : obj1 });
   obj1.accessibilityState = { expanded: !collapsed2 };
   return renderCategoryItem(obj1);
 };
 export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   guildId = guildId.guildId;
-  let stateFromStores;
   let obj = guildId(504);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isCollapsed(guildId));
+  const items = [RecentlyActiveCollapseStore];
+  const stateFromStores = obj.useStateFromStores(items, () => RecentlyActiveCollapseStore.isCollapsed(guildId));
   const items1 = [guildId, stateFromStores];
   obj = { name: null, collapsed: null, onPress: null, withMarginTop: null, styles: null };
-  const callback = React.useCallback(() => guildId(closure_1_2[21]).setRecentlyActiveCollapsed(guildId, !stateFromStores), items1);
+  const callback = noop.useCallback(() => OptInChannelsActionCreators.setRecentlyActiveCollapsed(guildId, !stateFromStores), items1);
   const intl = guildId(1114).intl;
-  obj[0] = intl.string(guildId(1114).t.uZyspD);
-  obj[1] = stateFromStores;
-  obj[2] = callback;
-  obj[3] = guildId.withMarginTop;
-  obj[4] = styles();
+  obj.name = intl.string(guildId(1114).t.uZyspD);
+  obj.collapsed = stateFromStores;
+  obj.onPress = callback;
+  obj.withMarginTop = guildId.withMarginTop;
+  obj.styles = styles();
   const collapsed = obj.collapsed;
-  const merged = Object.assign(obj, Object.create(null));
+  const merged = Object.assign(obj, Object.assign({ collapsed: 0 }));
   const colors = stateFromStores(576).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = callback(guildId(11153).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createCacheKey : obj1 });
+  obj.icon = closure_11(guildId(11153).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createStyles : obj1 });
   obj.accessibilityState = { expanded: !collapsed };
   return renderCategoryItem(obj);
 };
@@ -284,24 +277,23 @@ export const SuggestedCategory = function SuggestedCategory(guildId) {
   const channelIds = guildId.channelIds;
   let items = [guildId, channelIds];
   let obj = { name: null, onPress: null, withMarginTop: null, styles: null };
-  const callback = React.useCallback(() => {
-    let obj = guildId(closure_1_2[23]);
-    obj = { key: "REDESIGN_SUGGESTED_CHANNELS_CLEAR", options: null, hasIcons: true };
+  const callback = noop.useCallback(() => {
+    let obj = { key: "REDESIGN_SUGGESTED_CHANNELS_CLEAR", options: null, hasIcons: true };
     obj = { label: null, onPress: null, IconComponent: null };
-    const intl = guildId(closure_1_2[22]).intl;
-    obj[0] = intl.string(guildId(closure_1_2[22]).t.VkKicb);
-    obj[1] = function onPress() {
-      closure_1_0(closure_1_2[24]).clearRecentChannels(closure_0, closure_1);
+    const intl = util.intl;
+    obj.label = intl.string(util.t.VkKicb);
+    obj.onPress = function onPress() {
+      guildId(dependencyMap[24]).clearRecentChannels(closure_1_0, channelIds);
     };
-    obj[2] = guildId(closure_1_2[25]).CircleXIcon;
+    obj.IconComponent = CircleXIcon.CircleXIcon;
     const items = [obj];
-    obj[1] = items;
+    obj.options = items;
     const result = obj.showSimpleActionSheet(obj);
   }, items);
   let intl = guildId(1114).intl;
-  obj[0] = intl.string(guildId(1114).t.HbJ7eD);
-  obj[1] = callback;
-  obj[2] = guildId.withMarginTop;
-  obj[3] = styles();
+  obj.name = intl.string(guildId(1114).t.HbJ7eD);
+  obj.onPress = callback;
+  obj.withMarginTop = guildId.withMarginTop;
+  obj.styles = styles();
   return renderCategoryItem(obj);
 };

@@ -1,44 +1,47 @@
-// === Module 16489: AnnouncementMessageRowWrapper ===
+// === Module 16489: AnnouncementMessageRow ===
 
-// Module 16489 (AnnouncementMessageRowWrapper)
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "updateUserGuildSettingsInternal" /* 4741 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import { ITEM_PADDING } from "ITEM_PADDING" /* 16490 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createICYMIStyles from "createICYMIStyles" /* 16452 */;
+// Module 16489 (AnnouncementMessageRow)
+import nativeDefault from "native" /* 576 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11657 */;
+import ICYMIShared from "ICYMIShared" /* 16491 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let closure_13 = createICYMIStyles.createICYMIStyles((inset) => {
-  obj = { pressable: obj, footer: null };
-  obj = { flex: 1, paddingLeft: inset.inset };
-  obj = { marginVertical: inset.margin, gap: ThemesDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: inset.inset };
-  obj[1] = obj;
+require = fn;
+const View = fn(17).View;
+const ITEM_PADDING = fn(16490).ITEM_PADDING;
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const createICYMIStyles = fn(16452);
+let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
+  let obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: null };
+  obj = { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset };
+  obj.footer = obj;
   return obj;
 });
-let closure_14 = importAllResult.memo((message) => {
+let closure_14 = noop.memo((message) => {
   message = message.message;
   const guild = message.guild;
   const channel = message.channel;
   ({ unread, visible } = message);
   let obj = message(channel[11]);
-  let items = [closure_8];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.isChannelMuted(channel.getGuildId(), channel.id));
-  const tmp4 = callback3();
-  obj1 = importAllResult;
+  let items = [UserGuildSettingsStore];
+  const stateFromStores = obj.useStateFromStores(items, () => UserGuildSettingsStore.isChannelMuted(channel.getGuildId(), channel.id));
+  const tmp4 = closure_13();
+  let obj1 = noop;
   let id;
   if (guild != null) {
     id = guild.id;
   }
   const items1 = [id, message.author.id];
-  const effect = importAllResult.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let id;
     if (guild != null) {
       id = tmp.id;
@@ -48,88 +51,83 @@ let closure_14 = importAllResult.memo((message) => {
       if (tmp != null) {
         id1 = tmp.id;
       }
-      const membersById = guild(channel[12]).requestMembersById(id1, message.author.id);
-      const obj = guild(channel[12]);
+      const membersById = GuildActionCreatorsDefault.requestMembersById(id1, message.author.id);
     }
   }, items1);
   const items2 = [channel.id, message.id];
   const items3 = [channel, message];
   const callback = obj1.useCallback(() => {
-    let obj = guild(channel[13]);
+    let obj = ICYMIActionCreatorsDefault;
     obj.itemInteracted(message.id, "announcement", "long_press_channel");
     obj = { itemId: message.id, itemType: "announcement", actionParameters: { actionGestureType: "long_press", actionTargetElement: "item_header", actionIntentType: "open", actionDestinationType: "channel" } };
-    guild(channel[13]).feedItemActioned(obj);
-    const obj2 = guild(channel[13]);
-    const result = message(channel[14]).openChannelLongPressActionSheet(channel.id);
+    ICYMIActionCreatorsDefault.feedItemActioned(obj);
+    const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items2);
   const items4 = [message, channel.id, guild.id];
   const callback1 = obj1.useCallback(() => {
-    let obj = guild(channel[13]);
+    let obj = ICYMIActionCreatorsDefault;
     obj.itemInteracted(message.id, "announcement", "long_press_message");
     obj = { itemId: message.id, itemType: "announcement", actionParameters: { actionGestureType: "long_press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: "channel" } };
-    guild(channel[13]).feedItemActioned(obj);
-    const user = closure_1_9.getUser(message.author.id);
-    const obj2 = guild(channel[13]);
+    ICYMIActionCreatorsDefault.feedItemActioned(obj);
+    const user = UserStore.getUser(message.author.id);
     obj = { channel, message, user };
-    const result = message(channel[15]).showLongPressMessageActionSheet(obj);
+    const result = showLongPressMessageActionSheet.showLongPressMessageActionSheet(obj);
   }, items3);
   const callback2 = obj1.useCallback(() => {
-    let obj = guild(channel[13]);
+    let obj = ICYMIActionCreatorsDefault;
     obj.itemInteracted(message.id, "announcement", "press_message");
     obj = { itemId: message.id, itemType: "announcement", actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "navigate", actionDestinationType: "channel" } };
-    guild(channel[13]).feedItemActioned(obj);
+    ICYMIActionCreatorsDefault.feedItemActioned(obj);
     if (null != message) {
-      obj = { id: null, timestamp: null };
-      obj[0] = tmp3.id;
+      obj = { id: tmp3.id, timestamp: null };
       const _Date = Date;
-      obj[1] = Date.now();
+      obj.timestamp = Date.now();
       const items = [obj];
-      guild(tmp2[13]).ackGravityItems(items);
-      const tmpResult = guild(tmp2[13]);
-      message(tmp2[16]).navigateToPost(channel.id, guild.id, tmp3.id);
-      const obj6 = message(tmp2[16]);
+      ICYMIActionCreatorsDefault.ackGravityItems(items);
+      const tmpResult = ICYMIActionCreatorsDefault;
+      ICYMIShared.navigateToPost(channel.id, guild.id, tmp3.id);
     }
   }, items4);
   let tmpResult = tmp(tmp2[17]);
   const gravityMessage = tmpResult.useGravityMessage(message);
   obj = { actionLabel: null, id: null, interactionType: "announcement", channelId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, message: null, shouldFeatureUser: true, children: null };
   const intl = tmp(tmp2[19]).intl;
-  obj[0] = intl.string(message(channel[19]).t["8P08G9"]);
-  obj[1] = message.id;
-  obj[3] = channel.id;
+  obj.actionLabel = intl.string(message(channel[19]).t["8P08G9"]);
+  obj.id = message.id;
+  obj.channelId = channel.id;
   const tmp11 = guild(channel[18]);
-  obj[4] = guild(channel[20]).extractTimestamp(message.id);
-  obj[5] = callback2;
-  obj[6] = callback;
-  obj[7] = gravityMessage;
+  obj.timestamp = guild(channel[20]).extractTimestamp(message.id);
+  obj.onHeaderPress = callback2;
+  obj.onHeaderLongPress = callback;
+  obj.message = gravityMessage;
   obj = { onPress: callback2, onLongPress: callback1, accessibilityRole: "button", accessibilityLabel: guild(tmp2[22])({ channel, unread }), accessibilityHint: null, unstable_pressDelay: 130, style: null, children: null };
   tmpResult = tmp(tmp2[22]);
-  obj[4] = tmpResult.getChannelA11yHint({ channel, muted: stateFromStores });
-  obj[6] = tmp4.pressable;
-  obj[7] = callback(message(channel[23]).MessageRowContent, { message, channel, guild, lineClamp: 5, visible });
-  const items5 = [callback(message(channel[21]).PressableHighlight, obj), ];
-  obj1 = { style: tmp4.footer, children: callback(guild(tmp2[24]), obj2) };
-  items5[1] = callback(View, obj1);
-  obj[9] = items5;
-  return callback2(tmp11, obj);
+  obj.accessibilityHint = tmpResult.getChannelA11yHint({ channel, muted: stateFromStores });
+  obj.style = tmp4.pressable;
+  obj.children = closure_11(message(channel[23]).MessageRowContent, { message, channel, guild, lineClamp: 5, visible });
+  const items5 = [closure_11(message(channel[21]).PressableHighlight, obj), ];
+  obj1 = { style: tmp4.footer, children: closure_11(guild(channel[24]), { message, channel, guild, backgroundVariant: "base", id: message.id, itemType: "announcement" }) };
+  items5[1] = closure_11(View, obj1);
+  obj.children = items5;
+  return closure_12(tmp11, obj);
 });
-let result = require("set").fileFinishedImporting("modules/icymi/native/AnnouncementMessageRow.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/AnnouncementMessageRow.tsx");
 
 export default function AnnouncementMessageRowWrapper(message) {
   message = message.message;
-  let stateFromStores;
   let author;
   ({ unread, visible } = message);
   let obj = message(author[11]);
-  const items = [closure_5];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(message.getChannelId()));
-  const items1 = [closure_6];
+  const items = [ChannelStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(message.getChannelId()));
+  const items1 = [GuildStore];
   const stateFromStores1 = message(author[11]).useStateFromStores(items1, () => {
     let guild_id;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
-    return closure_1_6.getGuild(guild_id);
+    return GuildStore.getGuild(guild_id);
   });
   const obj2 = message(author[11]);
   const tmp = message;
@@ -140,7 +138,7 @@ export default function AnnouncementMessageRowWrapper(message) {
     author = gravityMessage.author;
   }
   tmp(tmp2[11]);
-  [][0] = closure_7;
+  [][0] = RelationshipStore;
   let tmp9 = null;
   if (null != stateFromStores) {
     tmp9 = null;
@@ -151,13 +149,8 @@ export default function AnnouncementMessageRowWrapper(message) {
         if (null != author) {
           tmp9 = null;
           if (!tmp8) {
-            obj = { unread: null, message: null, channel: null, guild: null, visible: null };
-            obj[0] = unread;
-            obj[1] = gravityMessage;
-            obj[2] = stateFromStores;
-            obj[3] = stateFromStores1;
-            obj[4] = visible;
-            tmp9 = callback(closure_14, obj);
+            obj = { unread, message: gravityMessage, channel: stateFromStores, guild: stateFromStores1, visible };
+            tmp9 = closure_11(closure_14, obj);
           }
         }
       }

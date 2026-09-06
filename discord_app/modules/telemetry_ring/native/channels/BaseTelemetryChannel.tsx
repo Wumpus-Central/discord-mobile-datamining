@@ -1,9 +1,9 @@
-// === Module 1902: append ===
+// === Module 1902: BaseTelemetryChannel ===
 
-// Module 1902 (append)
-import set from "set" /* 2 */;
+// Module 1902 (BaseTelemetryChannel)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");
+const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryChannel.tsx");
 class BaseTelemetryChannel {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

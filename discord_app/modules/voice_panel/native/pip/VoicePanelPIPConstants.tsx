@@ -1,9 +1,9 @@
-// === Module 17088: VoicePanelPIPModes ===
+// === Module 17088: VoicePanelPIPConstants ===
 
-// Module 17088 (VoicePanelPIPModes)
-import set from "set" /* 2 */;
+// Module 17088 (VoicePanelPIPConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
+const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPConstants.tsx");
 
 export const VoicePanelPIPModes = { IN_APP: "IN_APP", IN_PANEL: "IN_PANEL" };
 export const PIP_OFFSET_BOTTOM = 44;

@@ -1,15 +1,15 @@
 // === Module 11746: canEditMessage ===
 
 // Module 11746 (canEditMessage)
-import set from "set" /* 2 */;
-import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4783 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4783 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
-let result = set.fileFinishedImporting("modules/messages/canEditMessage.tsx");
+({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
+let result = size.fileFinishedImporting("modules/messages/canEditMessage.tsx");
 
-export default function canEditMessage(author) {
+export default function canEditMessage(author, arg1) {
   let tmp = null != arg1;
   if (tmp) {
     let tmp3 = author.author.id === arg1;
@@ -19,7 +19,7 @@ export default function canEditMessage(author) {
         const tmp8 = isSystemMessageDefault(author);
         let tmp9 = !tmp8;
         if (!tmp8) {
-          let result = createMinimalMessageRecord.canEditMessageWithStickers(author);
+          let result = MessageRecordUtils.canEditMessageWithStickers(author);
           if (result) {
             const hasFlagResult = author.hasFlag(constants.IS_VOICE_MESSAGE);
             let tmp14 = !hasFlagResult;
@@ -43,7 +43,6 @@ export default function canEditMessage(author) {
             result = tmp14;
           }
           tmp9 = result;
-          const obj = createMinimalMessageRecord;
         }
         tmp5 = tmp9;
         tmp6 = importDefault;

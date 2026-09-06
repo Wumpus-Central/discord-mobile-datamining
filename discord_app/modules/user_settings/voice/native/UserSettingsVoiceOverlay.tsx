@@ -1,33 +1,33 @@
 // === Module 9990: UserSettingsVoiceOverlay ===
 
 // Module 9990 (UserSettingsVoiceOverlay)
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import util from "util" /* 1114 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import UserSettingsVoice from "UserSettingsVoice" /* 9979 */;
-import dispatcherDefault from "dispatcher" /* 9991 */;
-import closure_3 from "getUserAgnosticState" /* 9980 */;
-import { jsx } from "jsxProd" /* 21 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9991 */;
+import noop from "module_19" /* 19 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9980 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOverlay.tsx");
 
 export default function UserSettingsVoiceOverlay() {
-  let obj = defaultAreStatesEqual;
-  const items = [closure_3];
+  let obj = useStateFromStores;
+  const items = [MobileVoiceOverlayStore];
   const stateFromStores = obj.useStateFromStores(items, () => enabled.getEnabled());
   obj = { title: null, hasIcons: false, children: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t.bNqkD9);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.bNqkD9);
   obj = { label: null, subLabel: null, value: null, onValueChange: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t["9CSZJm"]);
-  const intl3 = getSystemLocale.intl;
-  obj[1] = intl3.string(getSystemLocale.t.Wfoivk);
-  obj[2] = stateFromStores;
-  obj[3] = dispatcherDefault.setEnabled;
-  obj[2] = jsx(TableSwitchRow.TableSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null });
+  const intl2 = util.intl;
+  obj.label = intl2.string(util.t["9CSZJm"]);
+  const intl3 = util.intl;
+  obj.subLabel = intl3.string(util.t.Wfoivk);
+  obj.value = stateFromStores;
+  obj.onValueChange = MobileVoiceOverlayActionCreatorsDefault.setEnabled;
+  obj.children = jsx(TableSwitchRow.TableSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null });
   return jsx(UserSettingsVoice.UserSettingsTableRowGroup, { label: null, subLabel: null, value: null, onValueChange: null });
 };

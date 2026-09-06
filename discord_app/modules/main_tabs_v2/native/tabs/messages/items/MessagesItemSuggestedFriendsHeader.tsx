@@ -1,33 +1,39 @@
-// === Module 16097: sum ===
+// === Module 16097: MessagesItemSuggestedFriendsHeader ===
 
-// Module 16097 (sum)
-import ThemesDefault from "Themes" /* 576 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16097 (MessagesItemSuggestedFriendsHeader)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const sum = require("Text").TextStyleSheet["text-md/semibold"].lineHeight + ThemesDefault.space.PX_24;
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, StyleSheet } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+const sum = fn(4556).TextStyleSheet["text-md/semibold"].lineHeight + nativeDefault.space.PX_24;
+fn(4560);
 let obj = { headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" }, stickyOverlay: null, headerText: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.backgroundColor = ThemesDefault.colors.PANEL_BG;
-obj[1] = obj;
-createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
-obj[2] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = { code: "function MessagesItemSuggestedFriendsHeaderTsx1(){const{stickyAt,scrollPosition}=this.__closure;return stickyAt!=null&&scrollPosition.get()>=stickyAt;}" };
-const memoResult = importAllResult.memo(function MessagesItemSuggestedFriendsHeader(stickyAt) {
+obj.backgroundColor = nativeDefault.colors.PANEL_BG;
+obj.stickyOverlay = obj;
+const createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
+obj.headerText = createStyles;
+let closure_8 = createStyles.createStyles(obj);
+const __initData = { code: "function MessagesItemSuggestedFriendsHeaderTsx1(){const{stickyAt,scrollPosition}=this.__closure;return stickyAt!=null&&scrollPosition.get()>=stickyAt;}" };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx");
+
+export default noop.memo(function MessagesItemSuggestedFriendsHeader(stickyAt) {
   stickyAt = stickyAt.stickyAt;
   const scrollPosition = stickyAt.scrollPosition;
   const stickyLeft = stickyAt.stickyLeft;
   const stickyTop = stickyAt.stickyTop;
-  const tmp = callback2();
-  let obj = stickyAt(stickyLeft[6]);
+  const tmp = closure_8();
+  let obj = ReanimatedRexport;
   const fn = function x() {
     let tmp2 = null != stickyAt;
     if (tmp2) {
@@ -37,31 +43,26 @@ const memoResult = importAllResult.memo(function MessagesItemSuggestedFriendsHea
   };
   fn.__closure = { stickyAt, scrollPosition };
   fn.__workletHash = 895751186732;
-  fn.__initData = closure_9;
+  fn.__initData = __initData;
   const derivedValue = obj.useDerivedValue(fn);
   const items = [stickyLeft, stickyTop];
   obj = { style: tmp.headerContainer, collapsable: false, children: null };
   let tmp8Result = null;
   if (tmp6) {
     obj = { children: null };
-    obj1 = { absolute: true, wide: true, componentStyles: null, tall: true, mix: true };
-    obj1[2] = tmp7;
-    const items1 = [callback(scrollPosition(tmp3[8]), obj1), ];
-    const obj2 = { style: null };
-    obj2[0] = tmp.stickyOverlay;
-    items1[1] = callback(tmp9, obj2);
-    obj[0] = items1;
-    tmp8Result = tmp8(closure_6, obj);
+    const obj1 = { absolute: true, wide: true, componentStyles: tmp7, tall: true, mix: true };
+    const items1 = [hasOwnProperty(ThemedGradientDefault, obj1), ];
+    const obj2 = { style: tmp.stickyOverlay };
+    items1[1] = hasOwnProperty(tmp9, obj2);
+    obj.children = items1;
+    tmp8Result = tmp8(timestampProducer, obj);
   }
   const items2 = [tmp8Result, ];
   const obj3 = { style: tmp.headerText, maxFontSizeMultiplier: 2, lineClamp: 1, accessibilityRole: "header", variant: "text-md/semibold", color: "text-default", children: null };
-  const intl = tmp2(tmp3[9]).intl;
-  obj3[6] = intl.string(stickyAt(stickyLeft[9]).t["1uAmCw"]);
-  items2[1] = callback(stickyAt(stickyLeft[3]).Text, obj3);
-  obj[2] = items2;
-  return closure_7(closure_4, obj);
+  const intl = tmp2(1114).intl;
+  obj3.children = intl.string(util.t["1uAmCw"]);
+  items2[1] = hasOwnProperty(Text_Text.Text, obj3);
+  obj.children = items2;
+  return React5(React4, obj);
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx");
-
-export default memoResult;
 export const MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT = sum;

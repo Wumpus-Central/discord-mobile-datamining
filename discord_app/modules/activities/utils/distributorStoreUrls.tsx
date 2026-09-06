@@ -1,12 +1,12 @@
-// === Module 8685: XBOX_DISCORD_OCID ===
+// === Module 8685: distributorStoreUrls ===
 
-// Module 8685 (XBOX_DISCORD_OCID)
-import set from "set" /* 2 */;
+// Module 8685 (distributorStoreUrls)
+import size from "module_2" /* 2 */;
 
 const discord7937464 = "discord7937464";
 let c1 = "www.xbox.com";
 const msxbox = "msxbox";
-const result = set.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/distributorStoreUrls.tsx");
 
 export const XBOX_DISCORD_OCID = "discord7937464";
 export const XBOX_GAME_PASS_STORE_HOSTNAME = "www.xbox.com";

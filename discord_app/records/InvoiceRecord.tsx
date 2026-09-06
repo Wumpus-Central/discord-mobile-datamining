@@ -1,16 +1,14 @@
-// === Module 4227: createFromServer ===
+// === Module 4227: InvoiceRecord ===
 
-// Module 4227 (createFromServer)
-import toJSDefault from "toJS" /* 1386 */;
-import coalesceInvoiceItems from "coalesceInvoiceItems" /* 4228 */;
+// Module 4227 (InvoiceRecord)
+import PremiumSubscriptionInvoiceItem from "PremiumSubscriptionInvoiceItem" /* 4228 */;
+import Record from "Record" /* 1386 */;
 
-require = arg1;
-toJSDefault;
+require = fn;
 let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
   constructor(arg0) {
     tmp = new BaseInvoiceRecord(new.target, new.target, global);
-    // ThrowIfThisInitialized (0x7c)
     ({ total: tmp.total, subtotal: tmp.subtotal, tax: tmp.tax, currency: tmp.currency, invoiceItems } = global);
     if (invoiceItems == null) {
       invoiceItems = [];
@@ -23,23 +21,23 @@ const prototype = BaseInvoiceRecord.prototype;
 BaseInvoiceRecord["createFromServer"] = function createFromServer(currency) {
   ({ total, subtotal, tax, invoice_items } = currency);
   let mapped = invoice_items.map((skuId) => ({ skuId: skuId.sku_id, quantity: skuId.quantity, description: skuId.description }));
-  if (typeof BaseInvoiceRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof BaseInvoiceRecord === "function") {
+    const tmp6 = new BaseInvoiceRecord(tmp, invoice_items, tmp2, new.target, total, subtotal, tax);
+    tmp6.total = total;
+    tmp6.subtotal = subtotal;
+    tmp6.tax = tax;
+    tmp6.currency = currency.currency;
+    if (mapped == null) {
+      mapped = [];
+    }
+    tmp6.invoiceItems = mapped;
+    return tmp6;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = new BaseInvoiceRecord("Trying to call a non-function", invoice_items, BaseInvoiceRecord, new.target, total, subtotal, tax);
-  // ThrowIfThisInitialized (0x7c)
-  tmp2.total = total;
-  tmp2.subtotal = subtotal;
-  tmp2.tax = tax;
-  tmp2.currency = currency.currency;
-  if (mapped == null) {
-    mapped = [];
-  }
-  tmp2.invoiceItems = mapped;
-  return tmp2;
+  tmp2 = BaseInvoiceRecord;
 };
 BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(billing_facet) {
-  closure_0 = billing_facet;
   billing_facet = billing_facet.billing_facet;
   let invoice_preview = null;
   if (null != billing_facet) {
@@ -55,33 +53,30 @@ BaseInvoiceRecord["createInvoiceFromOrder"] = function createInvoiceFromOrder(bi
       const found = order_line_items.find((id) => id.id === unit_price.ref_order_line_item_id);
       let tmp2 = null;
       if (null != found) {
-        let obj = { skuId: null, unitPrice: null, quantity: null };
-        obj[0] = found.sku_id;
-        obj = { amount: null, currency: null };
-        obj[0] = unit_price.unit_price;
-        obj[1] = invoice_preview.currency;
-        obj[1] = obj;
-        obj[2] = unit_price.quantity;
+        let obj = { skuId: found.sku_id, unitPrice: null, quantity: null };
+        obj = { amount: unit_price.unit_price, currency: invoice_preview.currency };
+        obj.unitPrice = obj;
+        obj.quantity = unit_price.quantity;
         tmp2 = obj;
       }
       return tmp2;
     });
-    let found = mapped.filter((arg0) => null != arg0);
+    let found = mapped.filter((item) => null != item);
     ({ total, subtotal, tax, currency } = invoice_preview);
-    if (typeof BaseInvoiceRecord !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof BaseInvoiceRecord === "function") {
+      const tmp6 = new BaseInvoiceRecord(tmp, tmp8, new.target, total, subtotal, tax, currency, found);
+      tmp6.total = total;
+      tmp6.subtotal = subtotal;
+      tmp6.tax = tax;
+      tmp6.currency = currency;
+      if (found == null) {
+        found = [];
+      }
+      tmp6.invoiceItems = found;
+      return tmp6;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp5 = new BaseInvoiceRecord("Trying to call a non-function", BaseInvoiceRecord, new.target, total, subtotal, tax, currency, found);
-    // ThrowIfThisInitialized (0x7c)
-    tmp5.total = total;
-    tmp5.subtotal = subtotal;
-    tmp5.tax = tax;
-    tmp5.currency = currency;
-    if (found == null) {
-      found = [];
-    }
-    tmp5.invoiceItems = found;
-    return tmp5;
   }
 };
 prototype["getInvoicePreviewLineItemForSku"] = function getInvoicePreviewLineItemForSku(arg0) {
@@ -108,7 +103,6 @@ let InvoiceRecord;
 class InvoiceRecord extends BaseInvoiceRecord {
   constructor(arg0) {
     tmp = new InvoiceRecord(global, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp.id, invoiceItems } = global);
     if (invoiceItems == null) {
       invoiceItems = [];
@@ -124,57 +118,59 @@ InvoiceRecord["createInvoiceFromServer"] = function createInvoiceFromServer(body
   const invoice_items = body.invoice_items;
   let mapped;
   if (invoice_items != null) {
-    mapped = invoice_items.map(coalesceInvoiceItems.createInvoiceItemFromServer);
+    mapped = invoice_items.map(PremiumSubscriptionInvoiceItem.createInvoiceItemFromServer);
     const tmp3 = require;
   }
-  obj[1] = mapped;
-  ({ total: obj[2], subtotal: obj[3], currency: obj[4], tax: obj[5], tax_inclusive: obj[6] } = body);
-  obj[7] = new Date(body.subscription_period_start);
+  obj.invoiceItems = mapped;
+  ({ total: obj.total, subtotal: obj.subtotal, currency: obj.currency, tax: obj.tax, tax_inclusive: obj.taxInclusive } = body);
+  obj.subscriptionPeriodStart = new Date(body.subscription_period_start);
   const date = new Date(body.subscription_period_start);
   const tmp = InvoiceRecord;
   const tmp6 = new.target;
-  obj[8] = new Date(body.subscription_period_end);
-  ({ status: obj[9], orbs_reward: obj[10], checkout_context: obj[11] } = body);
-  if (typeof tmp !== "function") {
-    HermesBuiltin.throwTypeError();
+  obj.subscriptionPeriodEnd = new Date(body.subscription_period_end);
+  ({ status: obj.status, orbs_reward: obj.orbsReward, checkout_context: obj.checkoutContext } = body);
+  if (typeof tmp === "function") {
+    const tmp12 = new InvoiceRecord(obj, tmp3, Date, Date, tmp6);
+    ({ id: tmp12.id, invoiceItems } = obj);
+    if (invoiceItems == null) {
+      invoiceItems = [];
+    }
+    tmp12.invoiceItems = invoiceItems;
+    ({ taxInclusive: tmp12.taxInclusive, subscriptionPeriodStart: tmp12.subscriptionPeriodStart, subscriptionPeriodEnd: tmp12.subscriptionPeriodEnd, status: tmp12.status, orbsReward: tmp12.orbsReward, checkoutContext: tmp12.checkoutContext } = obj);
+    return tmp12;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp8 = new InvoiceRecord(obj, tmp3, Date, Date, tmp6);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp8.id, invoiceItems } = obj);
-  if (invoiceItems == null) {
-    invoiceItems = [];
-  }
-  tmp8.invoiceItems = invoiceItems;
-  ({ taxInclusive: tmp8.taxInclusive, subscriptionPeriodStart: tmp8.subscriptionPeriodStart, subscriptionPeriodEnd: tmp8.subscriptionPeriodEnd, status: tmp8.status, orbsReward: tmp8.orbsReward, checkoutContext: tmp8.checkoutContext } = obj);
-  return tmp8;
+  const date1 = new Date(body.subscription_period_end);
 };
 InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(invoice_items) {
   invoice_items = invoice_items.invoice_items;
   let mapped;
   if (invoice_items != null) {
-    mapped = invoice_items.map(coalesceInvoiceItems.createInvoiceItemFromServer);
+    mapped = invoice_items.map(PremiumSubscriptionInvoiceItem.createInvoiceItemFromServer);
     const tmp3 = require;
   }
   const obj = { id: "", invoiceItems: mapped, total: invoice_items.amount, subtotal: invoice_items.subtotal, currency: invoice_items.currency, tax: invoice_items.tax, taxInclusive: invoice_items.tax_inclusive, subscriptionPeriodStart: new Date(0), subscriptionPeriodEnd: null, orbsReward: null, checkoutContext: null };
   const date = new Date(0);
   const tmp5 = new.target;
   const tmp7 = new.target;
-  obj[8] = new Date(0);
+  obj.subscriptionPeriodEnd = new Date(0);
   const orbs_reward = invoice_items.orbs_reward;
-  obj[9] = orbs_reward;
-  obj[10] = invoice_items.checkout_context;
-  if (typeof InvoiceRecord !== "function") {
-    HermesBuiltin.throwTypeError();
+  obj.orbsReward = orbs_reward;
+  obj.checkoutContext = invoice_items.checkout_context;
+  if (typeof InvoiceRecord === "function") {
+    const tmp13 = new InvoiceRecord(obj, tmp3, tmp5, tmp7, orbs_reward, tmp);
+    ({ id: tmp13.id, invoiceItems } = obj);
+    if (invoiceItems == null) {
+      invoiceItems = [];
+    }
+    tmp13.invoiceItems = invoiceItems;
+    ({ taxInclusive: tmp13.taxInclusive, subscriptionPeriodStart: tmp13.subscriptionPeriodStart, subscriptionPeriodEnd: tmp13.subscriptionPeriodEnd, status: tmp13.status, orbsReward: tmp13.orbsReward, checkoutContext: tmp13.checkoutContext } = obj);
+    return tmp13;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp9 = new InvoiceRecord(obj, tmp3, tmp5, tmp7, orbs_reward, InvoiceRecord);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp9.id, invoiceItems } = obj);
-  if (invoiceItems == null) {
-    invoiceItems = [];
-  }
-  tmp9.invoiceItems = invoiceItems;
-  ({ taxInclusive: tmp9.taxInclusive, subscriptionPeriodStart: tmp9.subscriptionPeriodStart, subscriptionPeriodEnd: tmp9.subscriptionPeriodEnd, status: tmp9.status, orbsReward: tmp9.orbsReward, checkoutContext: tmp9.checkoutContext } = obj);
-  return tmp9;
+  const date1 = new Date(0);
 };
 prototype2["findInvoiceItemByPlanId"] = function findInvoiceItemByPlanId(id) {
   closure_0 = id;
@@ -197,7 +193,8 @@ prototype2["getDiscountIdIfExists"] = function getDiscountIdIfExists() {
     }
   }
 };
-const result = require("set").fileFinishedImporting("records/InvoiceRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/InvoiceRecord.tsx");
 
 export default InvoiceRecord;
 export { BaseInvoiceRecord };

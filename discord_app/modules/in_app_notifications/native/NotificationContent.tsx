@@ -1,42 +1,40 @@
 // === Module 10171: NotificationContent ===
 
 // Module 10171 (NotificationContent)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import LocationText from "LocationText" /* 10172 */;
-import LocationTextDefault from "LocationText" /* 10172 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import MessageNotificationHeader from "MessageNotificationHeader" /* 10172 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { body: { flex: 1 }, iconContainer: null, contentContainer: null, headerContainer: null, labelContainer: null };
-createCacheKey = { marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { padding: ThemesDefault.space.PX_12, flexDirection: "row" };
-createCacheKey[3] = { flex: 1 };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { padding: ThemesDefault.space.PX_12, flexDirection: "row" };
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/NotificationContent.tsx");
+const MessageNotificationHeaderDefault = MessageNotificationHeader;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { body: { flex: 1 }, iconContainer: null, contentContainer: null, headerContainer: null, labelContainer: null };
+createStyles = { marginRight: nativeDefault.space.PX_8 };
+createStyles.iconContainer = createStyles;
+createStyles.contentContainer = { padding: nativeDefault.space.PX_12, flexDirection: "row" };
+createStyles.headerContainer = { flex: 1 };
+createStyles.labelContainer = { flexDirection: "row", alignItems: "center" };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/NotificationContent.tsx");
 
 export default function NotificationContent(arg0) {
   ({ icon, accessoryLabelNode, header } = arg0);
   ({ children, rightAccessory } = arg0);
-  const tmp = callback2();
+  const tmp = closure_6();
   let obj = { style: tmp.contentContainer, children: null };
   let tmp4 = null;
   if (null != icon) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.iconContainer;
-    obj[1] = icon;
-    tmp4 = callback(tmp3, obj);
+    obj = { style: tmp.iconContainer, children: icon };
+    tmp4 = React4(tmp3, obj);
   }
   const items = [tmp4, , ];
   obj = { style: tmp.body, children: null };
-  obj1 = { style: tmp.labelContainer, children: null };
+  const obj1 = { style: tmp.labelContainer, children: null };
   let tmp6 = null;
   if (null != accessoryLabelNode) {
     tmp6 = accessoryLabelNode;
@@ -46,20 +44,19 @@ export default function NotificationContent(arg0) {
   if ("message" === header.type) {
     const obj3 = {};
     const merged = Object.assign(header);
-    let tmp7Result = tmp7(LocationTextDefault, obj3);
-    const tmp16 = LocationTextDefault;
+    let tmp7Result = tmp7(MessageNotificationHeaderDefault, obj3);
   } else {
     const obj4 = {};
     const merged1 = Object.assign(header);
-    tmp7Result = tmp7(LocationText.SimpleNotificationHeader, obj4);
+    tmp7Result = tmp7(MessageNotificationHeader.SimpleNotificationHeader, obj4);
   }
-  obj2[1] = tmp7Result;
-  items1[1] = callback(View, obj2);
-  obj1[1] = items1;
-  const items2 = [closure_5(View, obj1), children];
-  obj[1] = items2;
-  items[1] = closure_5(View, obj);
+  obj2.children = tmp7Result;
+  items1[1] = React4(View, obj2);
+  obj1.children = items1;
+  const items2 = [hasOwnProperty(View, obj1), children];
+  obj.children = items2;
+  items[1] = hasOwnProperty(View, obj);
   items[2] = rightAccessory;
-  obj[1] = items;
-  return closure_5(View, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

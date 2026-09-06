@@ -1,17 +1,15 @@
-// === Module 4466: _getMessageFromRateLimit ===
+// === Module 4466: AppliedGuildBoostError ===
 
-// Module 4466 (_getMessageFromRateLimit)
-import setDefault from "set" /* 1090 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import prototypeDefault from "prototype" /* 4241 */;
-import resetCache from "resetCache" /* 4242 */;
+// Module 4466 (AppliedGuildBoostError)
+import DurationsDefault from "Durations" /* 1090 */;
+import util from "util" /* 1114 */;
+import DateUtils from "DateUtils" /* 4242 */;
+import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4241 */;
 
-require = arg1;
-prototypeDefault;
+require = fn;
 class AppliedGuildBoostError extends tmp2 {
   constructor(arg0, arg1) {
-    tmp = new tmp(global, arg1, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
+    tmp = new tmp(global, fn, new.target, tmp);
     if (429 === tmp.status) {
       tmp.message = tmp._getMessageFromRateLimit(global);
     }
@@ -19,11 +17,11 @@ class AppliedGuildBoostError extends tmp2 {
   }
 }
 AppliedGuildBoostError.prototype["_getMessageFromRateLimit"] = function _getMessageFromRateLimit(body) {
-  let obj = resetCache;
-  const diffAsUnitsResult = obj.diffAsUnits(0, body.body.retry_after * setDefault.Millis.SECOND);
-  obj = { days: getSystemLocale.t["iXc/Ib"], hours: getSystemLocale.t.WW9P57, minutes: getSystemLocale.t.I7rYev };
-  return resetCache.unitsAsStrings(diffAsUnitsResult, obj);
+  const diffAsUnitsResult = DateUtils.diffAsUnits(0, body.body.retry_after * DurationsDefault.Millis.SECOND);
+  const time = { days: util.t["iXc/Ib"], hours: util.t.WW9P57, minutes: util.t.I7rYev };
+  return DateUtils.unitsAsStrings(diffAsUnitsResult, time);
 };
-const result = require("set").fileFinishedImporting("errors/AppliedGuildBoostError.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("errors/AppliedGuildBoostError.tsx");
 
 export default AppliedGuildBoostError;

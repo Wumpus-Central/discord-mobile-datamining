@@ -1,10 +1,11 @@
-// === Module 7497: result ===
+// === Module 7497: MemberSafetyElasticSearchQueryTypes ===
 
-// Module 7497 (result)
-import setDefault from "set" /* 1090 */;
+// Module 7497 (MemberSafetyElasticSearchQueryTypes)
+import DurationsDefault from "Durations" /* 1090 */;
 
-const result = 2 * setDefault.Millis.DAY;
-const result1 = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx");
+const result = 2 * DurationsDefault.Millis.DAY;
+const size = fn(2);
+const result1 = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx");
 
 export const UNUSUAL_DM_COMPARISON_DELTA = result;
 export const createMemberSearchCursor = function createMemberSearchCursor(joinedAt) {
@@ -14,8 +15,8 @@ export const createMemberSearchCursor = function createMemberSearchCursor(joined
     const obj = { guild_joined_at: null, user_id: null };
     const _Date = Date;
     const date = new Date(joinedAt);
-    obj[0] = date.getTime();
-    obj[1] = tmp;
+    obj.guild_joined_at = date.getTime();
+    obj.user_id = tmp;
     tmp2 = obj;
   }
   return tmp2;

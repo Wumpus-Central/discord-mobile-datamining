@@ -1,18 +1,21 @@
 // === Module 7050: SearchField ===
 
 // Module 7050 (SearchField)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import TextField from "TextField" /* 6613 */;
 import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
+
+export const SearchField = noop.forwardRef((arg0, ref) => {
   const obj = { placeholder: null, returnKeyType: "search", ref: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["5h0QOP"]);
-  obj[2] = arg1;
+  const intl = util.intl;
+  obj.placeholder = intl.string(util.t["5h0QOP"]);
+  obj.ref = ref;
   const merged = Object.assign(arg0);
   obj.autoCorrect = false;
   obj.autoCapitalize = "none";
@@ -21,6 +24,3 @@ const forwardRefResult = importAllResult.forwardRef((arg0, arg1) => {
   obj.isClearable = true;
   return jsx(TextField.TextField, { placeholder: null, returnKeyType: "search", ref: null });
 });
-const result = require("set").fileFinishedImporting("design/components/TextField/native/SearchField.native.tsx");
-
-export const SearchField = forwardRefResult;

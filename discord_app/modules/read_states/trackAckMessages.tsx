@@ -1,30 +1,31 @@
 // === Module 13838: trackAckMessages ===
 
 // Module 13838 (trackAckMessages)
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "updateGuildUnreadSentinel" /* 7636 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "updateUserGuildSettingsInternal" /* 4741 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/read_states/trackAckMessages.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/read_states/trackAckMessages.tsx");
 
-export default function trackAckMessages(channel_id) {
-  channel = channel.getChannel(channel_id);
+export default function trackAckMessages(channel_id, location) {
+  const channel = ChannelStore.getChannel(channel_id);
   const obj = { channel_id, guild_id: null, location: null, guild_unread_statuses: null };
   let guildId;
   if (null != channel) {
     guildId = channel.getGuildId();
   }
-  obj[1] = guildId;
-  obj[2] = arg1;
-  guildsArray = guildsArray.getGuildsArray();
-  obj[3] = guildsArray.map((id) => {
-    const mentionCount = closure_3.getMentionCount(id.id);
-    const hasUnreadResult = closure_3.hasUnread(id.id);
-    return "" + id.id + "," + hasUnreadResult + "," + mentionCount + "," + closure_5.isMuted(id.id) + "," + closure_5.resolveGuildUnreadSetting(id);
+  obj.guild_id = guildId;
+  obj.location = location;
+  const guildsArray = GuildStore.getGuildsArray();
+  obj.guild_unread_statuses = guildsArray.map((id) => {
+    const mentionCount = GuildReadStateStore.getMentionCount(id.id);
+    const hasUnreadResult = GuildReadStateStore.hasUnread(id.id);
+    return "" + id.id + "," + hasUnreadResult + "," + mentionCount + "," + UserGuildSettingsStore.isMuted(id.id) + "," + UserGuildSettingsStore.resolveGuildUnreadSetting(id);
   });
-  collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.ACK_MESSAGES, obj);
 };

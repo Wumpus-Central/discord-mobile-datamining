@@ -1,17 +1,17 @@
-// === Module 5575: map ===
+// === Module 5575: InitialMemberVerificationStore ===
 
-// Module 5575 (map)
+// Module 5575 (InitialMemberVerificationStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 const map = new Map();
 const Store = initializeDefault.Store;
 class InitialMemberVerificationStore extends Store {
 }
-InitialMemberVerificationStore.prototype["getInitialVerificationState"] = function getInitialVerificationState(closure_0) {
+InitialMemberVerificationStore.prototype["getInitialVerificationState"] = function getInitialVerificationState(arg0) {
   let tmp = null;
-  if (null != closure_0) {
-    let value = map.get(closure_0);
+  if (null != arg0) {
+    value = map.get(arg0);
     if (value == null) {
       value = null;
     }
@@ -20,7 +20,7 @@ InitialMemberVerificationStore.prototype["getInitialVerificationState"] = functi
   return tmp;
 };
 InitialMemberVerificationStore.displayName = "InitialMemberVerificationStore";
-const initialMemberVerificationStore = new InitialMemberVerificationStore(dispatcherDefault, {
+const initialMemberVerificationStore = new InitialMemberVerificationStore(DispatcherDefault, {
   SET_INITIAL_MEMBER_VERIFICATION: function handleSetInitialState(guildId) {
     guildId = guildId.guildId;
     if (!map.has(guildId)) {
@@ -28,11 +28,11 @@ const initialMemberVerificationStore = new InitialMemberVerificationStore(dispat
     }
   }
 });
-let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/InitialMemberVerificationStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_member_verification/native/InitialMemberVerificationStore.tsx");
 
 export default initialMemberVerificationStore;
 export const setInitialVerification = function setInitialVerification(guildId, state) {
-  let obj = dispatcherDefault;
-  obj = { type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state };
+  const obj = { type: "SET_INITIAL_MEMBER_VERIFICATION", guildId, state };
   obj.dispatch(obj);
 };

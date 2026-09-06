@@ -1,73 +1,69 @@
-// === Module 13385: openBuyNitroPerkDetails ===
+// === Module 13385: BuyNitroPerkDetails ===
 
-// Module 13385 (openBuyNitroPerkDetails)
-import ThemesDefault from "Themes" /* 576 */;
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7182 */;
-import PremiumTypes from "PremiumTypes" /* 13358 */;
+// Module 13385 (BuyNitroPerkDetails)
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4527 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import useBuyNitroPlanSelection from "useBuyNitroPlanSelection" /* 13358 */;
 import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13387 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
+
+require = fn;
+const Image = fn(17).Image;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const BuyNitroPerkDetailsActionSheet = "BuyNitroPerkDetailsActionSheet";
-let closure_7 = createCacheKey.createStyles({ illustration: { width: "100%", height: 180 } });
-let closure_8 = importAllResult.memo((perk) => {
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ illustration: { width: "100%", height: 180 } });
+let closure_8 = noop.memo((perk) => {
   perk = perk.perk;
   ({ selectedTier, selectedProductId, analyticsLocations, applicationId, onPaymentSuccess, onPaymentDismiss } = perk);
-  let obj = PremiumTypes;
+  let obj = useBuyNitroPlanSelection;
   const buyNitroPlanSelection = obj.useBuyNitroPlanSelection({ tier: selectedTier, productId: selectedProductId });
   const detail = perk.detail;
   let tmp6Result = null;
   if (null != detail) {
-    obj = { title: null, description: null, illustration: null, actions: null };
-    obj[0] = perk.label;
+    obj = { title: perk.label, description: null, illustration: null, actions: null };
     const intl = tmp2(1114).intl;
-    obj[1] = intl.string(detail.description);
-    obj = { source: null, style: null, resizeMode: "contain" };
-    obj[0] = detail.image;
-    obj[1] = tmp.illustration;
-    obj[2] = callback(Image, obj);
-    obj1 = { spacing: null, children: null };
-    obj1[0] = ThemesDefault.space.PX_12;
+    obj.description = intl.string(detail.description);
+    obj = { source: detail.image, style: tmp.illustration, resizeMode: "contain" };
+    obj.illustration = React4(Image, obj);
+    const obj1 = { spacing: nativeDefault.space.PX_12, children: null };
     tmp6Result = null != buyNitroPlanSelection.selection.item;
     if (tmp6Result) {
-      const obj2 = { planSelection: null, item: null, centered: true };
-      obj2[0] = buyNitroPlanSelection;
-      obj2[1] = buyNitroPlanSelection.selection.item;
+      const obj2 = { planSelection: buyNitroPlanSelection, item: buyNitroPlanSelection.selection.item, centered: true };
       tmp6Result = tmp6(tmp9(13386), obj2);
     }
     const items = [tmp6Result, ];
-    const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
-    obj3[0] = buyNitroPlanSelection;
-    obj3[1] = QUICK_SWITCHERDefault.PREMIUM_MARKETING_PERK_CARD;
-    obj3[2] = analyticsLocations;
-    obj3[3] = applicationId;
-    obj3[4] = function onHostSheetClose() {
-      return callback(table[12]).hideActionSheet(closure_6);
+    const obj3 = {
+      planSelection: buyNitroPlanSelection,
+      location: AnalyticsLocationDefault.PREMIUM_MARKETING_PERK_CARD,
+      sourceAnalyticsLocations: analyticsLocations,
+      applicationId,
+      onHostSheetClose() {
+          return ActionSheetActionCreatorsDefault.hideActionSheet(BuyNitroPerkDetailsActionSheet);
+        },
+      onPaymentSuccess,
+      onPaymentDismiss
     };
-    obj3[5] = onPaymentSuccess;
-    obj3[6] = onPaymentDismiss;
-    items[1] = callback(BuyNitroPurchaseButtonDefault, obj3);
-    obj1[1] = items;
-    obj[3] = closure_5(tmp2(4973).Stack, obj1);
+    items[1] = React4(BuyNitroPurchaseButtonDefault, obj3);
+    obj1.children = items;
+    obj.actions = hasOwnProperty(tmp2(4973).Stack, obj1);
     tmp6Result = tmp6(tmp2(10230).PromoSheet, obj);
-    const tmp8 = closure_5;
     const tmp9Result = BuyNitroPurchaseButtonDefault;
   }
   return tmp6Result;
 });
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
 
 export const openBuyNitroPerkDetails = function openBuyNitroPerkDetails(perk, arg1) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
-  obj = { content: null, key: null };
+  let obj = { content: null, key: null };
   obj = { perk };
   const merged = Object.assign(arg1);
-  obj[0] = callback(closure_8, obj);
-  obj[1] = BuyNitroPerkDetailsActionSheet;
+  obj.content = React4(closure_8, obj);
+  obj.key = BuyNitroPerkDetailsActionSheet;
   obj.showActionSheet(obj);
 };

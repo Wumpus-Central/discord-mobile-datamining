@@ -1,37 +1,40 @@
-// === Module 14167: getItemKey ===
+// === Module 14167: ContextMenuContainer ===
 
-// Module 14167 (getItemKey)
-import ContextMenuDivider from "ContextMenuDivider" /* 14168 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14167 (ContextMenuContainer)
+import OverlayViewDefault from "OverlayView" /* 4911 */;
+import Dialog from "Dialog" /* 4958 */;
+import ContextMenuPopout from "ContextMenuPopout" /* 14168 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function getItemKey(key) {
   return key.key;
 }
-({ StyleSheet, View: c4 } = get_ActivityIndicator);
-createCacheKey = { overlayView: null, wrapperView: null };
-createCacheKey = {};
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { overlayView: null, wrapperView: null };
+createStyles = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.zIndex = 99999;
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = StyleSheet.absoluteFillObject;
-let closure_6 = createCacheKey.createStyles(createCacheKey);
+createStyles.zIndex = 99999;
+createStyles.overlayView = createStyles;
+createStyles.wrapperView = StyleSheet.absoluteFillObject;
+let closure_6 = createStyles.createStyles(createStyles);
 let closure_7 = [];
 function EMPTY_CALLBACK() {
 
 }
 function renderItem(arg0, menu, transitionState, cleanUp) {
-  return jsx(ContextMenuDivider.ContextMenuPopout, { menu, transitionState, cleanUp }, arg0);
+  return jsx(ContextMenuPopout.ContextMenuPopout, { menu, transitionState, cleanUp }, arg0);
 }
-const result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuContainer.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuContainer.native.tsx");
 
 export const ContextMenuContainer = function ContextMenuContainer() {
-  const tmp = callback();
-  const _require = tmp;
-  let obj = _require(callback[5]);
+  const tmp = closure_6();
+  _require = tmp;
+  let obj = require("ContextMenuState");
   const activeContextMenu = obj.useActiveContextMenu();
   if (null != activeContextMenu) {
     const items = [activeContextMenu];
@@ -46,49 +49,49 @@ export const ContextMenuContainer = function ContextMenuContainer() {
   if (requestClose == null) {
     requestClose = EMPTY_CALLBACK;
   }
-  const effect = React.useEffect(() => {
-    const KeyboardEvents = lib(callback[6]).KeyboardEvents;
-    lib = KeyboardEvents.addListener("keyboardDidHide", () => {
-      const ContextMenuStore = lib(table[5]).ContextMenuStore;
+  const effect = noop.useEffect(() => {
+    const KeyboardEvents = closure_0(callback[6]).KeyboardEvents;
+    closure_0 = KeyboardEvents.addListener("keyboardDidHide", () => {
+      const ContextMenuStore = closure_0(onDismiss[5]).ContextMenuStore;
       const menu = ContextMenuStore.getState().menu;
       let ignoreKeyboardHide;
       if (menu != null) {
         ignoreKeyboardHide = menu.ignoreKeyboardHide;
       }
       if (true !== ignoreKeyboardHide) {
-        lib(table[5]).hideContextMenu();
-        const tmpResult = lib(table[5]);
+        closure_0(onDismiss[5]).hideContextMenu();
+        const tmpResult = closure_0(onDismiss[5]);
       }
     });
     return () => {
-      lib.remove();
+      closure_0.remove();
     };
   }, []);
   const items1 = [requestClose];
-  callback = React.useCallback(() => {
+  onDismiss = noop.useCallback(() => {
     requestClose(true);
   }, items1);
   let ignoreKeyboardHide;
   if (activeContextMenu != null) {
     ignoreKeyboardHide = activeContextMenu.ignoreKeyboardHide;
   }
-  requestClose(callback[7])(() => {
+  requestClose(onDismiss[7])(() => {
     callback();
     return true;
   }, true === ignoreKeyboardHide);
-  const items2 = [callback, , ];
+  const items2 = [onDismiss, , ];
   ({ overlayView: arr3[1], wrapperView: arr3[2] } = tmp);
-  const callback1 = React.useCallback((children) => {
-    let obj = { style: lib.overlayView, children: null };
+  const callback1 = noop.useCallback((children, arg1) => {
+    let obj = { style: closure_0.overlayView, children: null };
     let str = "auto";
     if (0 === arg1.length) {
       str = "none";
     }
-    obj = { pointerEvents: str, style: lib.wrapperView, children: tmp(lib(callback[9]).Dialog, obj) };
-    obj = { onDismiss: callback, children };
-    obj[1] = closure_1_5(closure_1_4, obj);
-    return closure_1_5(requestClose(callback[8]), obj);
+    obj = { pointerEvents: str, style: closure_0.wrapperView, children: tmp(React4, obj) };
+    obj = { onDismiss, children };
+    obj.children = jsx(Dialog.Dialog, { onDismiss, children });
+    return jsx(OverlayViewDefault, { onDismiss, children });
   }, items2);
   obj = { wrapChildren: callback1, items: tmp5, renderItem, getItemKey };
-  return jsx(_require(callback[10]).TransitionGroup, { wrapChildren: callback1, items: tmp5, renderItem, getItemKey });
+  return jsx(require("native").TransitionGroup, { wrapChildren: callback1, items: tmp5, renderItem, getItemKey });
 };

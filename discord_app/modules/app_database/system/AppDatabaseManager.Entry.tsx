@@ -1,9 +1,9 @@
 // === Module 7646: actions ===
 
 // Module 7646 (actions)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
+const result = size.fileFinishedImporting("modules/app_database/system/AppDatabaseManager.Entry.tsx");
 class Entry {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);

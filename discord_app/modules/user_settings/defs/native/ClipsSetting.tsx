@@ -1,28 +1,26 @@
-// === Module 14971: route ===
+// === Module 14971: ClipsSetting ===
 
-// Module 14971 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 14971 (ClipsSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import ClipsIcon from "ClipsIcon" /* 14972 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.z2jK6X);
+    const intl = util.intl;
+    return intl.string(util.t.z2jK6X);
   },
   parent: null,
   IconComponent: ClipsIcon.ClipsIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.CLIPS,
-  getComponent() {
-    return require(14974) /* ClipsSettingsScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.CLIPS,
+    getComponent() {
+      return require("SettingsClipsScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/ClipsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/ClipsSetting.tsx");
 
 export default route;

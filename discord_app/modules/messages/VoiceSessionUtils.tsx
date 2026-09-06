@@ -1,29 +1,32 @@
-// === Module 8071: getSortedVoiceSessionParticipants ===
+// === Module 8071: VoiceSessionUtils ===
 
-// Module 8071 (getSortedVoiceSessionParticipants)
+// Module 8071 (VoiceSessionUtils)
+import useMessageAuthor from "useMessageAuthor" /* 4793 */;
 import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7980 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "recomputeAffinities" /* 7659 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8072 */;
+import noop from "module_19" /* 19 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx");
 
 export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionParticipants(message) {
-  const _require = message;
+  _require = message;
   const call = message.call;
   let reduced;
   if (call != null) {
     const participants = call.participants;
-    reduced = participants.reduce((arg0, arg1) => {
-      const user = closure_1_6.getUser(arg1);
-      let tmp2 = arg0;
+    reduced = participants.reduce((acc, item) => {
+      const user = UserStore.getUser(item);
+      let tmp2 = acc;
       if (null != user) {
-        tmp2 = arg0;
-        if (user.id !== channel_id.author.id) {
+        tmp2 = acc;
+        if (user.id !== author.author.id) {
           const items = [];
-          items[HermesBuiltin.arraySpread(arg0, 0)] = user;
+          items[HermesBuiltin.arraySpread(acc, 0)] = user;
           tmp2 = items;
         }
       }
@@ -33,12 +36,12 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
   if (reduced == null) {
     reduced = [];
   }
-  const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  return _require(8072).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  const userAffinitiesMap = UserAffinitiesV2Store.getUserAffinitiesMap();
+  return require("maybeSortByProbability").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
 };
 export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionParticipants(author) {
-  let stateFromStoresArray = author;
-  const items = [closure_6];
+  closure_129_0 = author;
+  const items = [UserStore];
   const items1 = [author.author.id, author.call];
   stateFromStoresArray = stateFromStoresArray(504).useStateFromStoresArray(items, () => {
     const call = stateFromStoresArray.call;
@@ -48,8 +51,8 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
     }
     if (null != participants) {
       const participants1 = stateFromStoresArray.call.participants;
-      const mapped = participants1.map((arg0) => user.getUser(arg0));
-      const found = mapped.filter((arg0) => null != arg0);
+      const mapped = participants1.map((item) => user.getUser(item));
+      const found = mapped.filter((item) => null != item);
       let found1 = found.filter((id) => id.id !== author.author.id);
     } else {
       found1 = [];
@@ -57,29 +60,29 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
     return found1;
   }, items1);
   const obj = stateFromStoresArray(504);
-  const items2 = [closure_4];
+  const items2 = [UserAffinitiesV2Store];
   const stateFromStores = stateFromStoresArray(504).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap(), []);
   const items3 = [stateFromStoresArray, stateFromStores];
-  return React.useMemo(() => stateFromStoresArray(closure_1_2[4]).maybeSortByProbability(stateFromStoresArray, stateFromStores, "VoiceSessionUtils - participants"), items3);
+  return noop.useMemo(() => maybeSortByProbability.maybeSortByProbability(stateFromStoresArray, stateFromStores, "VoiceSessionUtils - participants"), items3);
 };
 export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
-  let _require = channel.getChannel(channel_id.channel_id);
+  _require = ChannelStore.getChannel(channel_id.channel_id);
   let tmp2 = getHumanizedCallDurationDefault(channel_id);
-  let obj = _require(4793);
+  let obj = require("useMessageAuthor");
   const messageAuthor = obj.getMessageAuthor(channel_id);
-  _require = channel_id;
+  closure_129_0 = channel_id;
   const call = channel_id.call;
   let reduced;
   if (call != null) {
     const participants = call.participants;
-    reduced = participants.reduce((arg0, arg1) => {
-      const user = closure_1_6.getUser(arg1);
-      let tmp2 = arg0;
+    reduced = participants.reduce((acc, item) => {
+      const user = UserStore.getUser(item);
+      let tmp2 = acc;
       if (null != user) {
-        tmp2 = arg0;
-        if (user.id !== channel_id.author.id) {
+        tmp2 = acc;
+        if (user.id !== author.author.id) {
           const items = [];
-          items[HermesBuiltin.arraySpread(arg0, 0)] = user;
+          items[HermesBuiltin.arraySpread(acc, 0)] = user;
           tmp2 = items;
         }
       }
@@ -89,39 +92,34 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
   if (reduced == null) {
     reduced = [];
   }
-  const userAffinitiesMap = authStore.getUserAffinitiesMap();
-  const result = _require(8072).maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
+  const userAffinitiesMap = UserAffinitiesV2Store.getUserAffinitiesMap();
+  const result = require("maybeSortByProbability").maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
   const mapped = result.map((user) => {
-    const obj = { user, messageAuthor: channel_id(closure_1_2[7]).getUserAuthor(user, channel_id) };
+    const obj = { user, messageAuthor: useMessageAuthor.getUserAuthor(user, closure_0) };
     return obj;
   });
   if (null == tmp2) {
     const intl = tmp3(1114).intl;
-    obj = { username: null, usernameOnClick: null };
-    obj[0] = messageAuthor.nick;
-    obj[1] = tmp3(12).identity;
+    obj = { username: messageAuthor.nick, usernameOnClick: tmp3(12).identity };
     let formatToPlainStringResult = intl.formatToPlainString(tmp3(1114).t.HzBfIN, obj);
   } else {
     const intl2 = tmp3(1114).intl;
-    obj = { userCount: null, username: null, usernameOnClick: null, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
-    obj[0] = mapped.length + 1;
-    obj[1] = messageAuthor.nick;
-    obj[2] = tmp3(12).identity;
+    obj = { userCount: mapped.length + 1, username: messageAuthor.nick, usernameOnClick: tmp3(12).identity, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
     const first = mapped[0];
     let nick;
     if (first != null) {
       nick = first.messageAuthor.nick;
     }
-    obj[3] = nick;
-    obj[4] = tmp3(12).identity;
+    obj.username2 = nick;
+    obj.username2OnClick = tmp3(12).identity;
     let nick1;
     if (mapped[1] != null) {
       nick1 = tmp7.messageAuthor.nick;
     }
-    obj[5] = nick1;
-    obj[6] = tmp3(12).identity;
-    obj[7] = mapped.length - 1;
-    obj[8] = tmp2;
+    obj.username3 = nick1;
+    obj.username3OnClick = tmp3(12).identity;
+    obj.otherCount = mapped.length - 1;
+    obj.duration = tmp2;
     formatToPlainStringResult = intl2.formatToPlainString(tmp3(1114).t.atbXuX, obj);
   }
   return formatToPlainStringResult;

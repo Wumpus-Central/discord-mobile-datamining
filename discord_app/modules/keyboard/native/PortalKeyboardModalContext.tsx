@@ -1,13 +1,13 @@
-// === Module 10322: context ===
+// === Module 10322: PortalKeyboardModalContext ===
 
-// Module 10322 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 10322 (PortalKeyboardModalContext)
+import noop from "module_19" /* 19 */;
 
-let c0 = importAllResult;
-const context = importAllResult.createContext(false);
-const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardModalContext.tsx");
+const context = noop.createContext(false);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/keyboard/native/PortalKeyboardModalContext.tsx");
 
 export const PortalKeyboardInModalContext = context;
 export const useIsPortalKeyboardInModal = function useIsPortalKeyboardInModal() {
-  return importAllResult.useContext(context);
+  return noop.useContext(context);
 };

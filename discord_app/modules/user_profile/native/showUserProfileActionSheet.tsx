@@ -1,27 +1,26 @@
 // === Module 8179: showUserProfileActionSheet ===
 
 // Module 8179 (showUserProfileActionSheet)
-import timestampDefault from "timestamp" /* 3 */;
+import LoggerDefault from "Logger" /* 3 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "markAllUserIdListsStale" /* 4209 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-require = arg1;
+require = fn;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   let str = arg1;
   const timestamp = Date.now();
-  const IgnoreProfileSpeedbumpDisabled = explicitContentFromProto.IgnoreProfileSpeedbumpDisabled;
+  const IgnoreProfileSpeedbumpDisabled = UserSettings.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
-    const isBlockedResult = closure_5.isBlocked(ignoreBlockedSpeedBump.userId);
-    const isIgnoredResult = closure_5.isIgnored(ignoreBlockedSpeedBump.userId);
+    const isBlockedResult = RelationshipStore.isBlocked(ignoreBlockedSpeedBump.userId);
+    const isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
       const tmp8 = tmp2(1896)(8182, tmp3.paths);
-      let obj = ACTION_SHEET_HEIGHT_HALFDefault;
       const _HermesInternal = HermesInternal;
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
-      obj = {};
+      let obj = {};
       const merged = Object.assign(ignoreBlockedSpeedBump);
       let str3 = "ignore";
       if (isBlockedResult) {
@@ -40,12 +39,12 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   if (str == null) {
     str = "replaceAll";
   }
-  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp20, combined1, obj, str);
+  ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj, str);
 }
-require("processCallbacks").addPostConnectionCallback;
-let closure_6 = new timestampDefault("showUserProfileActionSheet");
-const tmp2 = new timestampDefault("showUserProfileActionSheet");
-const result = require("set").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
+fn(5558).addPostConnectionCallback;
+let closure_6 = new LoggerDefault("showUserProfileActionSheet");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
 
 export default showUserProfileActionSheet;
 export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(userId) {
@@ -59,16 +58,15 @@ export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProf
 };
 export const showUserProfileActionSheetPostConnection = function showUserProfileActionSheetPostConnection(arg0) {
   closure_0 = arg0;
-  addPostConnectionCallback(callback(function*() {
+  addPostConnectionCallback(asyncGeneratorStep(async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -79,89 +77,82 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            let getUser = tmp3;
-            let authStore = tmp7;
-            authStore = undefined;
-            getUser = undefined;
+            closure_1 = tmp3;
+            closure_0 = tmp7;
+            closure_128_0 = undefined;
+            let getUser;
             c4 = 1;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(closure_1_2[5])(closure_1_2[4], closure_1_2.paths);
+            const obj1 = { value: closure_0(tmp40[5])(tmp40[4], tmp40.paths), done: false };
             return obj1;
           }
         } else {
           if (1 === tmp7) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
+              const obj2 = { value, done: true };
               return obj2;
             } else {
-              authStore = arg1.default;
-              if (null == authStore.getUser(authStore.userId)) {
-                let obj3 = closure_1_0(closure_1_2[6]);
+              closure_128_0 = value.default;
+              if (null == closure_128_0.getUser(closure_129_0.userId)) {
+                let obj3 = closure_0(tmp40[6]);
                 if (obj3.getIsUserProfileLinkFetchEnabled("showUserProfileActionSheet")) {
                   c3 = 1;
                   c4 = 3;
                   c5 = 1;
-                  obj3 = { value: null, done: false };
-                  obj3[0] = closure_1_0(closure_1_2[5])(closure_1_2[7], closure_1_2.paths);
+                  obj3 = { value: closure_0(tmp40[5])(tmp40[7], tmp40.paths), done: false };
                   return obj3;
                 }
               }
             }
           } else if (2 === tmp7) {
             c3 = 0;
+            closure_128_2 = tmp40;
             const _HermesInternal = HermesInternal;
-            closure_1_6.log("Failed to fetch user " + authStore.userId + ":", closure_2);
+            logger.log("Failed to fetch user " + closure_129_0.userId + ":", closure_128_2);
           } else if (3 === tmp7) {
             if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
+              const obj4 = { value, done: true };
               return obj4;
             } else {
-              getUser = arg1.getUser;
+              getUser = value.getUser;
               c4 = 4;
               c5 = 1;
-              const obj5 = { value: null, done: false };
-              obj5[0] = getUser(authStore.userId);
+              const obj5 = { value: getUser(closure_129_0.userId), done: false };
               return obj5;
             }
           } else if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 0;
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             c3 = 0;
           }
-          if (null != authStore.getUser(closure_1_0.userId)) {
-            closure_1_7(closure_1_0);
+          if (null != closure_128_0.getUser(closure_129_0.userId)) {
+            showUserProfileActionSheet(closure_129_0);
           }
           c5 = 3;
           return { value: "HermesInternal", done: null };
         }
       } catch (tmp40) {
-        closure_2 = tmp40;
         if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp40;

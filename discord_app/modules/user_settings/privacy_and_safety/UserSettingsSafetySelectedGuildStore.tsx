@@ -1,28 +1,28 @@
-// === Module 15869: GUILD_SELECT_ALL_SERVERS_OPTION_ID ===
+// === Module 15869: UserSettingsSafetySelectedGuildStore ===
 
-// Module 15869 (GUILD_SELECT_ALL_SERVERS_OPTION_ID)
-import set from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 15869 (UserSettingsSafetySelectedGuildStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
 let closure_0 = { selectedGuildId: "0" };
-let obj = keys.create((arg0) => {
+const useUserSafetySettingsSelectedGuildStore = module_560.create((arg0) => {
   closure_0 = arg0;
-  obj = {};
+  const obj = {};
   const merged = Object.assign(closure_0);
   obj.setSelectedGuildId = function setSelectedGuildId(selectedGuildId) {
-    callback({ selectedGuildId });
+    closure_0({ selectedGuildId });
   };
   obj.reset = function reset() {
-    callback(callback);
+    closure_0(closure_0);
   };
   return obj;
 });
-const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/privacy_and_safety/UserSettingsSafetySelectedGuildStore.tsx");
 
 export const GUILD_SELECT_ALL_SERVERS_OPTION_ID = "0";
-export const useUserSafetySettingsSelectedGuildStore = obj;
+export { useUserSafetySettingsSelectedGuildStore };
 export const setSelectedGuildId = function setSelectedGuildId(selectedGuildId) {
-  obj = { selectedGuildId };
+  const obj = { selectedGuildId };
   return obj.setState(obj);
 };
 export const getSelectedGuildId = function getSelectedGuildId() {

@@ -1,16 +1,16 @@
 // === Module 1338: getSystemLocale ===
 
 // Module 1338 (getSystemLocale)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import enforcing from "enforcing" /* 1117 */;
+import _mod17 from "module_17" /* 17 */;
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1117 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
 
 export const getSystemLocale = function getSystemLocale() {
-  const tmp3 = get_ActivityIndicator;
+  const tmp3 = _mod17;
   if ("android" === tmp3.Platform.OS) {
-    let LocalizationManager = enforcing.default;
+    let LocalizationManager = NativeDeviceLocaleModule.default;
   } else {
     LocalizationManager = tmp3.NativeModules.LocalizationManager;
   }

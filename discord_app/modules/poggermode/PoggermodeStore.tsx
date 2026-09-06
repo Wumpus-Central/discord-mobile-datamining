@@ -1,29 +1,24 @@
-// === Module 7831: updateCombo ===
+// === Module 7831: PoggermodeStore ===
 
-// Module 7831 (updateCombo)
+// Module 7831 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getComboShakeIntensity from "getComboShakeIntensity" /* 7832 */;
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "handleConnectionOpen" /* 2011 */;
-import closure_4 from "initialize" /* 7678 */;
-import ConfettiLocation from "ConfettiLocation" /* 7679 */;
-import { ComponentActions } from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 7832 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7678 */;
 
-require = arg1;
+require = fn;
 function updateCombo(userId) {
-  let flag;
-  flag = true;
-  let obj;
-  obj = secondaryIndexMap;
+  const flag = true;
   const iter = secondaryIndexMap.get("" + userId.userId + "-" + userId.channelId);
-  obj = {};
+  let obj = {};
   let merged = Object.assign(iter);
   let merged1 = Object.assign(userId);
   let num = userId.value;
   if (num == null) {
-    let value;
+    value = undefined;
     if (iter != null) {
       value = iter.value;
     }
@@ -58,15 +53,15 @@ function updateCombo(userId) {
     decayInterval = obj.decayInterval;
     if (decayInterval != null) {
       decayInterval.start(1000, () => {
-        const iter2 = closure_1_9.get("" + obj.userId + "-" + obj.channelId);
+        const iter2 = secondaryIndexMap.get("" + obj.userId + "-" + obj.channelId);
         if (null != iter2) {
           if (iter2.value > 0) {
             if (!tmp) {
               obj = {};
               const merged = Object.assign(iter2);
               obj.value = iter2.value - 1;
-              closure_1_11(obj);
-              closure_1_12.emitChange();
+              updateCombo(obj);
+              poggermodeStore.emitChange();
             }
           }
           const decayInterval = iter2.decayInterval;
@@ -78,8 +73,8 @@ function updateCombo(userId) {
             const merged1 = Object.assign(iter2);
             obj.value = 0;
             obj.multiplier = 1;
-            closure_1_11(obj);
-            closure_1_12.emitChange();
+            updateCombo(obj);
+            poggermodeStore.emitChange();
           }
           tmp = iter.multiplier !== iter2.multiplier && iter.value !== iter2.value;
         }
@@ -87,14 +82,16 @@ function updateCombo(userId) {
     }
   }
 }
-({ ShakeLevel: c5, ShakeLocation: closure_6 } = ConfettiLocation);
-let set = new Set();
-const secondaryIndexMap = new require("version").SecondaryIndexMap((arg0) => {
+const PoggermodeConstants = fn(7679);
+({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
+const ComponentActions = fn(1074).ComponentActions;
+const set = new Set();
+const secondaryIndexMap = new fn(4195).SecondaryIndexMap((arg0) => {
   const items = [, ];
   ({ userId: arr[0], channelId: arr[1] } = arg0);
   return items;
 }, (channelId) => "" + channelId.channelId + "-" + channelId.userId);
-const secondaryIndexMap1 = new require("version").SecondaryIndexMap((combo) => {
+const secondaryIndexMap1 = new fn(4195).SecondaryIndexMap((combo) => {
   const items = [, , ];
   ({ messageId: arr[0], channelId: arr[1] } = combo);
   items[2] = combo.combo.userId;
@@ -105,25 +102,24 @@ class PoggermodeStore extends Store {
 }
 const prototype = PoggermodeStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2, closure_4, closure_3);
+  this.waitFor(AuthenticationStore, PoggermodeSettingsStore, SelectedChannelStore);
 };
 prototype["getComboScore"] = function getComboScore(arg0, arg1) {
-  const value = secondaryIndexMap.get("" + arg0 + "-" + arg1);
+  value = secondaryIndexMap.get("" + arg0 + "-" + arg1);
   let num = 0;
   if (null != value) {
-    num = getComboShakeIntensity.getComboScore(value);
-    const obj = getComboShakeIntensity;
+    num = PoggermodeUtils.getComboScore(value);
   }
   return num;
 };
-prototype["getUserCombo"] = function getUserCombo(id, closure_1_0) {
-  return secondaryIndexMap.get("" + id + "-" + closure_1_0);
+prototype["getUserCombo"] = function getUserCombo(id, channelId) {
+  return secondaryIndexMap.get("" + id + "-" + channelId);
 };
-prototype["isComboing"] = function isComboing(id, closure_1_0) {
-  const iter = this.getUserCombo(id, closure_1_0);
+prototype["isComboing"] = function isComboing(id, channelId) {
+  const iter = this.getUserCombo(id, channelId);
   let tmp = null != iter;
   if (tmp) {
-    tmp = iter.value >= closure_4.combosRequiredCount;
+    tmp = iter.value >= PoggermodeSettingsStore.combosRequiredCount;
   }
   if (tmp) {
     let tmp3 = null != iter;
@@ -143,7 +139,7 @@ prototype["isComboing"] = function isComboing(id, closure_1_0) {
   return tmp;
 };
 prototype["getMessageCombo"] = function getMessageCombo(arg0) {
-  const value = secondaryIndexMap1.get(arg0);
+  value = secondaryIndexMap1.get(arg0);
   let combo;
   if (value != null) {
     combo = value.combo;
@@ -154,20 +150,19 @@ prototype["getMostRecentMessageCombo"] = function getMostRecentMessageCombo(arg0
   const values = secondaryIndexMap1.values(arg0);
   return values[values.length - 1];
 };
-prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id, closure_1_0, arg2, LEVEL_4) {
-  const userCombo = this.getUserCombo(id, closure_1_0);
+prototype["getUserComboShakeIntensity"] = function getUserComboShakeIntensity(id, channelId, arg2, LEVEL_4) {
+  const userCombo = this.getUserCombo(id, channelId);
   let num = 0;
   if (null != userCombo) {
-    num = getComboShakeIntensity.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
-    const obj = getComboShakeIntensity;
+    num = PoggermodeUtils.getComboShakeIntensity(userCombo, LEVEL_4) * arg2;
   }
   return num;
 };
 PoggermodeStore.displayName = "PoggermodeStore";
-const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
+const poggermodeStore = new PoggermodeStore(DispatcherDefault, {
   POGGERMODE_UPDATE_COMBO: function handleComboing(arg0) {
-    const merged = Object.assign(arg0, Object.create(null));
-    if (closure_4.isEnabled()) {
+    const merged = Object.assign(arg0, Object.assign({ type: 0 }));
+    if (PoggermodeSettingsStore.isEnabled()) {
       updateCombo(merged);
     } else {
       return false;
@@ -175,7 +170,7 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
   },
   POGGERMODE_UPDATE_MESSAGE_COMBO: function handleUpdateMessageCombo(comboMessage) {
     comboMessage = comboMessage.comboMessage;
-    if (closure_4.isEnabled()) {
+    if (PoggermodeSettingsStore.isEnabled()) {
       const result = secondaryIndexMap1.set(comboMessage.messageId, comboMessage);
     } else {
       return false;
@@ -184,8 +179,8 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
   MESSAGE_CREATE: function handleIncomingMessage(message) {
     ({ mentions, author, nonce } = message.message);
     let id;
-    if (closure_4.isEnabled()) {
-      id = id.getId();
+    if (PoggermodeSettingsStore.isEnabled()) {
+      id = AuthenticationStore.getId();
       let id1;
       if (author != null) {
         id1 = author.id;
@@ -209,25 +204,23 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
           str = "???";
         }
         const _HermesInternal = HermesInternal;
-        const value = secondaryIndexMap.get("" + str + "-" + message.channelId);
+        value = secondaryIndexMap.get("" + str + "-" + message.channelId);
         if (tmp.screenshakeEnabled) {
           if (tmp.screenshakeEnabledLocations[constants.MENTION]) {
             if (null != mentions) {
               if (null != mentions.find((id) => id.id === id)) {
                 if (null != value) {
-                  let num2 = id(7832).getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
+                  let num2 = PoggermodeUtils.getComboShakeIntensity(value, LEVEL_4.LEVEL_4);
                   if (num2 == null) {
                     num2 = 0.001;
                   }
                   let result = num2;
-                  const obj2 = id(7832);
                 } else {
                   const _Math = Math;
                   result = 4 * Math.random();
                 }
-                const ComponentDispatch = id(1109).ComponentDispatch;
-                obj = { duration: 1000, intensity: null };
-                obj[1] = result;
+                const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
+                obj = { duration: 1000, intensity: result };
                 ComponentDispatch.dispatch(ComponentActions.SHAKE_APP, obj);
                 return true;
               }
@@ -243,7 +236,8 @@ const poggermodeStore = new PoggermodeStore(dispatcherDefault, {
     }
   }
 });
-let result = set.fileFinishedImporting("modules/poggermode/PoggermodeStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/poggermode/PoggermodeStore.tsx");
 
 export default poggermodeStore;
 export const isComboing = function isComboing(value) {

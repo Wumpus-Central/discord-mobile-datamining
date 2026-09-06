@@ -1,15 +1,15 @@
-// === Module 16470: getPrimaryCategories ===
+// === Module 16470: GuildDiscoveryCategoryStore ===
 
-// Module 16470 (getPrimaryCategories)
-import set from "set" /* 2 */;
-import applyDefault from "apply" /* 12 */;
+// Module 16470 (GuildDiscoveryCategoryStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import DEFAULT_DISCOVERY_CATEGORY_ID from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 9066 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9066 */;
+import size from "module_2" /* 2 */;
 
-({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: c4, DISCOVERY_ALL_CATEGORIES_ID: c5, DISCOVERY_SIDEBAR_CATEGORIES: closure_6 } = DEFAULT_DISCOVERY_CATEGORY_ID);
+({ DEFAULT_DISCOVERY_CATEGORY_ID: c3, OTHER_DISCOVERY_CATEGORY_ID: closure_4, DISCOVERY_ALL_CATEGORIES_ID: hasOwnProperty, DISCOVERY_SIDEBAR_CATEGORIES: metroRequire } = GlobalDiscoveryServersConstants);
 let c7 = null;
 let closure_8 = [];
 let closure_9 = [];
@@ -22,26 +22,26 @@ prototype["getPrimaryCategories"] = function getPrimaryCategories() {
   return closure_8;
 };
 prototype["getDiscoveryCategories"] = function getDiscoveryCategories() {
-  const mapped = closure_6.map((arg0) => {
-    closure_0 = arg0;
-    return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
+  const mapped = timestampProducer.map((item) => {
+    closure_0 = item;
+    return closure_1_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
-  const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.Ym2Ri6);
+  const obj = { categoryId, name: null };
+  const found = mapped.filter(GlobalUtils.isNotNullish);
+  const intl = util.intl;
+  obj.name = intl.string(util.t.Ym2Ri6);
   const items = [obj, ...found];
   return items;
 };
 prototype["getClanDiscoveryCategories"] = function getClanDiscoveryCategories() {
-  const mapped = closure_6.map((arg0) => {
-    closure_0 = arg0;
-    return closure_9.find((categoryId) => categoryId.categoryId === closure_0);
+  const mapped = timestampProducer.map((item) => {
+    closure_0 = item;
+    return closure_1_9.find((categoryId) => categoryId.categoryId === closure_0);
   });
-  const obj = { categoryId: closure_5, name: null };
-  const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.QToH29);
+  const obj = { categoryId, name: null };
+  const found = mapped.filter(GlobalUtils.isNotNullish);
+  const intl = util.intl;
+  obj.name = intl.string(util.t.QToH29);
   const items = [obj, ...found];
   return items;
 };
@@ -52,19 +52,19 @@ prototype["getFetchedLocale"] = function getFetchedLocale() {
   return c7;
 };
 prototype["getCategoryName"] = function getCategoryName(arg0) {
-  if (arg0 === closure_5) {
-    const intl = getSystemLocale.intl;
-    let stringResult = intl.string(getSystemLocale.t.Ym2Ri6);
+  if (arg0 === categoryId) {
+    const intl = util.intl;
+    let stringResult = intl.string(util.t.Ym2Ri6);
   } else {
-    stringResult = table[arg0];
+    stringResult = closure_10[arg0];
   }
   return stringResult;
 };
 GuildDiscoveryCategoryStore.displayName = "GuildDiscoveryCategoryStore";
-const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(dispatcherDefault, {
+const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(DispatcherDefault, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function handleCategoryFetchSuccess(categories) {
     categories = categories.categories;
-    c0 = undefined;
+    let obj;
     const items = [];
     const items1 = [];
     const sorted = categories.sort((name, name2) => {
@@ -74,51 +74,43 @@ const guildDiscoveryCategoryStore = new GuildDiscoveryCategoryStore(dispatcherDe
       }
       return num;
     });
-    const item = sorted.forEach((arg0) => {
-      ({ id, name } = arg0);
-      if (id !== closure_1_3) {
-        if (id !== closure_1_4) {
+    const item = sorted.forEach((item) => {
+      ({ id, name } = item);
+      if (id !== React3) {
+        if (id !== React4) {
           if (true === tmp) {
-            let obj = { categoryId: null, name: null };
-            obj[0] = id;
-            obj[1] = name;
+            obj = { categoryId: id, name };
             items.push(obj);
           }
-          obj = { categoryId: null, name: null };
-          obj[0] = id;
-          obj[1] = name;
+          obj = { categoryId: id, name };
           items1.push(obj);
-          closure_1_10[id] = name;
+          closure_10[id] = name;
         } else {
-          obj = { categoryId: null, name: null };
-          obj[0] = id;
-          obj[1] = name;
+          obj = { categoryId: id, name };
         }
       }
     });
-    if (null != c0) {
-      ({ categoryId, name } = c0);
-      let obj = { categoryId: null, name: null };
-      obj[0] = categoryId;
-      obj[1] = name;
+    if (null != obj) {
+      ({ categoryId, name } = obj);
+      obj = { categoryId, name };
       items.push(obj);
       closure_10[categoryId] = name;
     }
-    const locale = categories.locale;
+    locale = categories.locale;
   }
 });
-const result = set.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
+const result = size.fileFinishedImporting("modules/global_discovery_servers/GuildDiscoveryCategoryStore.tsx");
 
 export default guildDiscoveryCategoryStore;
 export const areDiscoveryCategoriesEqual = function areDiscoveryCategoriesEqual(arr, arr2) {
-  const mapped = arr.map((arg0) => {
+  const mapped = arr.map((item) => {
     const items = [, ];
-    ({ categoryId: arr[0], name: arr[1] } = arg0);
+    ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   });
-  return applyDefault.isEqual(mapped, arr2.map((arg0) => {
+  return _modDef12.isEqual(mapped, arr2.map((item) => {
     const items = [, ];
-    ({ categoryId: arr[0], name: arr[1] } = arg0);
+    ({ categoryId: arr[0], name: arr[1] } = item);
     return items;
   }));
 };

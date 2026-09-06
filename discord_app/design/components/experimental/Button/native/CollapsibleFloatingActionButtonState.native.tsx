@@ -1,15 +1,16 @@
-// === Module 8910: useCollapsibleFloatingActionButtonState ===
+// === Module 8910: CollapsibleFloatingActionButtonState ===
 
-// Module 8910 (useCollapsibleFloatingActionButtonState)
-import _mod4296 from "module_4296" /* 4296 */;
-import closure_2 from "noop" /* 19 */;
+// Module 8910 (CollapsibleFloatingActionButtonState)
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_3 = { code: "function CollapsibleFloatingActionButtonStateNativeTsx1({nativeEvent:nativeEvent}){const{initialScrollStart,previousOffset,MINIMUM_SCROLL_DISTANCE_TO_CLOSE,collapseText,SCROLL_OFFSET_THRESHOLD}=this.__closure;if(nativeEvent==null)return;const{contentOffset:{y:currentOffset},contentSize:{height:contentHeight},layoutMeasurement:{height:layoutHeight}}=nativeEvent;if(currentOffset<initialScrollStart)return;const contentHeightAsOffset=currentOffset+layoutHeight;if(contentHeightAsOffset>contentHeight)return;const offsetChanged=currentOffset-previousOffset.get();if(currentOffset<MINIMUM_SCROLL_DISTANCE_TO_CLOSE){collapseText.set(0);}else{if(Math.abs(offsetChanged)>SCROLL_OFFSET_THRESHOLD){collapseText.set(offsetChanged<0?0:1);}}previousOffset.set(currentOffset);}" };
-let result = require("set").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
+require = fn;
+const __initData = { code: "function CollapsibleFloatingActionButtonStateNativeTsx1({nativeEvent:nativeEvent}){const{initialScrollStart,previousOffset,MINIMUM_SCROLL_DISTANCE_TO_CLOSE,collapseText,SCROLL_OFFSET_THRESHOLD}=this.__closure;if(nativeEvent==null)return;const{contentOffset:{y:currentOffset},contentSize:{height:contentHeight},layoutMeasurement:{height:layoutHeight}}=nativeEvent;if(currentOffset<initialScrollStart)return;const contentHeightAsOffset=currentOffset+layoutHeight;if(contentHeightAsOffset>contentHeight)return;const offsetChanged=currentOffset-previousOffset.get();if(currentOffset<MINIMUM_SCROLL_DISTANCE_TO_CLOSE){collapseText.set(0);}else{if(Math.abs(offsetChanged)>SCROLL_OFFSET_THRESHOLD){collapseText.set(offsetChanged<0?0:1);}}previousOffset.set(currentOffset);}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButtonState.native.tsx");
 
 export const useCollapsibleFloatingActionButtonState = function useCollapsibleFloatingActionButtonState() {
-  const obj = { collapseText: _mod4296.useSharedValue(0) };
+  const obj = { collapseText: ReanimatedRexport.useSharedValue(0) };
   return obj;
 };
 export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleFloatingActionButtonScroll(collapsibleFloatingActionButtonState, UNDETERMINED) {
@@ -18,8 +19,7 @@ export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleF
   if (UNDETERMINED === undefined) {
     num = 0;
   }
-  let sharedValue;
-  sharedValue = collapseText(num[1]).useSharedValue(num);
+  const sharedValue = ReanimatedRexport.useSharedValue(num);
   const fn = function s(nativeEvent) {
     nativeEvent = nativeEvent.nativeEvent;
     if (null != nativeEvent) {
@@ -40,14 +40,13 @@ export const useCollapsibleFloatingActionButtonScroll = function useCollapsibleF
             }
           }
           const result2 = sharedValue.set(y);
-          const obj = sharedValue;
         }
       }
     }
   };
   fn.__closure = { initialScrollStart: num, previousOffset: sharedValue, MINIMUM_SCROLL_DISTANCE_TO_CLOSE: 10, collapseText, SCROLL_OFFSET_THRESHOLD: 10 };
   fn.__workletHash = 10435259247914;
-  fn.__initData = closure_3;
+  fn.__initData = __initData;
   const items = [num, sharedValue, collapseText];
-  return sharedValue.useCallback(fn, items);
+  return noop.useCallback(fn, items);
 };

@@ -1,21 +1,21 @@
-// === Module 13569: render ===
+// === Module 13569: PremiumUnverifiedWarning ===
 
-// Module 13569 (render)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import importDefaultResult from "mergeGuildAvatar" /* 1371 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
-import importDefaultResult1 from "initialize" /* 504 */;
+// Module 13569 (PremiumUnverifiedWarning)
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import initialize from "initialize" /* 504 */;
 
-require = arg1;
-createCacheKey = { warning: null };
-createCacheKey = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
-createCacheKey[0] = createCacheKey;
-let closure_4 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
-const PureComponent = importAllResult.PureComponent;
+require = fn;
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { warning: null };
+createStyles = { color: nativeDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
+createStyles.warning = createStyles;
+let closure_4 = createStyles.createLegacyClassComponentStyles(createStyles);
+const PureComponent = noop.PureComponent;
 class PremiumUnverifiedWarning extends PureComponent {
 }
 PremiumUnverifiedWarning.prototype["render"] = function render() {
@@ -23,17 +23,20 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
   if (!this.props.verified) {
     const obj = { style: null, children: null };
     const items = [tmp.warning, tmp2];
-    obj[0] = items;
-    const intl = getSystemLocale.intl;
-    obj[1] = intl.string(getSystemLocale.t["0LgOKH"]);
-    tmp3 = jsx(Button.LegacyText, { style: null, children: null });
+    obj.style = items;
+    const intl = util.intl;
+    obj.children = intl.string(util.t["0LgOKH"]);
+    tmp3 = jsx(native.LegacyText, { style: null, children: null });
   }
   return tmp3;
 };
-PremiumUnverifiedWarning.contextType = require("ManaContext").ThemeContext;
-let items = [importDefaultResult];
-const tmp4 = importDefaultResult1.connectStores(items, () => {
-  const currentUser = importDefaultResult.getCurrentUser();
+PremiumUnverifiedWarning.contextType = fn(4271).ThemeContext;
+let items = [UserStore];
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/premium/PremiumUnverifiedWarning.tsx");
+
+export default initialize.connectStores(items, () => {
+  const currentUser = UserStore.getCurrentUser();
   let verified;
   if (currentUser != null) {
     verified = currentUser.verified;
@@ -43,6 +46,3 @@ const tmp4 = importDefaultResult1.connectStores(items, () => {
   }
   return { verified };
 })(PremiumUnverifiedWarning);
-const result = require("set").fileFinishedImporting("components_native/premium/PremiumUnverifiedWarning.tsx");
-
-export default tmp4;

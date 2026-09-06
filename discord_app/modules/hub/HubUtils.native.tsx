@@ -1,19 +1,19 @@
-// === Module 12934: ? ===
+// === Module 12934: HubUtils ===
 
-// Module 12934
-import _modDef12743 from "module_12743" /* 12743 */;
-import closure_2 from "updateInvite" /* 4544 */;
-import importDefaultResult from "apply" /* 12 */;
+// Module 12934 (HubUtils)
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 12743 */;
+import InviteStore from "InviteStore" /* 4544 */;
+import apply from "module_12" /* 12 */;
 
-let closure_3 = importDefaultResult.throttle((code) => {
-  invite = invite.getInvite(code.code);
-  _modDef12743.open({ invite });
+let closure_3 = apply.throttle((code) => {
+  const invite = InviteStore.getInvite(code.code);
+  HubEmailConnectionModalActionCreatorsDefault.open({ invite });
 }, 1000, { trailing: false });
-const obj = {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/HubUtils.native.tsx");
+
+export default {
   onOpenHubInvite(invite) {
-    callback(invite);
+    closure_3(invite);
   }
 };
-const result = require("set").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
-
-export default obj;

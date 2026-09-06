@@ -1,27 +1,27 @@
-// === Module 6595: hasConsented ===
+// === Module 6595: ConsentStore ===
 
-// Module 6595 (hasConsented)
+// Module 6595 (ConsentStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let c0 = false;
 let c1 = false;
-let closure_2 = {};
+let obj = {};
 let c3 = null;
 const Store = initializeDefault.Store;
 class ConsentStore extends Store {
 }
 const prototype = ConsentStore.prototype;
 prototype["hasConsented"] = function hasConsented(arg0) {
-  let consented = null != dependencyMap[arg0];
+  let consented = null != obj[arg0];
   if (consented) {
-    consented = dependencyMap[arg0].consented;
+    consented = obj[arg0].consented;
   }
   return consented;
 };
 Object.defineProperty(prototype, "consents", {
   get: function consents() {
-    return closure_2;
+    return obj;
   },
   set: undefined
 });
@@ -41,23 +41,23 @@ prototype["getAuthenticationConsentRequired"] = function getAuthenticationConsen
   return c3;
 };
 ConsentStore.displayName = "ConsentStore";
-const consentStore = new ConsentStore(dispatcherDefault, {
+obj = {
   CONNECTION_OPEN: function handleConnectionOpen(consents) {
     consents = consents.consents;
     if (null != consents) {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(obj);
       const merged1 = Object.assign(consents);
       c1 = true;
     }
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(consents) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(consents.consents);
     c0 = true;
   },
   UPDATE_CONSENTS: function handleUpdateConsents(consents) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(consents.consents);
     c0 = true;
   },
@@ -67,7 +67,9 @@ const consentStore = new ConsentStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     c3 = null;
   }
-});
-const result = require("set").fileFinishedImporting("stores/ConsentStore.tsx");
+};
+const consentStore = new ConsentStore(DispatcherDefault, obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/ConsentStore.tsx");
 
 export default consentStore;

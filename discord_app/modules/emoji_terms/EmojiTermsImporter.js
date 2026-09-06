@@ -1,10 +1,10 @@
-// === Module 5469: emojiTermsImporter ===
+// === Module 5469: EmojiTermsImporter ===
 
-// Module 5469 (emojiTermsImporter)
-import set from "set" /* 2 */;
+// Module 5469 (EmojiTermsImporter)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
+const result = size.fileFinishedImporting("modules/emoji_terms/EmojiTermsImporter.js");
 
 export const emojiTermsImporter = {
   bg() {

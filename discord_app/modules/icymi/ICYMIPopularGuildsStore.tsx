@@ -1,11 +1,11 @@
-// === Module 16483: initialize ===
+// === Module 16483: ICYMIPopularGuildsStore ===
 
-// Module 16483 (initialize)
+// Module 16483 (ICYMIPopularGuildsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = [];
 let closure_4 = [];
 let c5 = 0;
@@ -14,7 +14,7 @@ class ICYMIPopularGuildsStore extends Store {
 }
 const prototype = ICYMIPopularGuildsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_2);
+  this.waitFor(GuildStore);
 };
 prototype["getOnboardingCategoryIds"] = function getOnboardingCategoryIds() {
   return closure_3;
@@ -26,7 +26,7 @@ prototype["getCurrentOnboardingGuildOffset"] = function getCurrentOnboardingGuil
   return c5;
 };
 ICYMIPopularGuildsStore.displayName = "ICYMIPopularGuildsStore";
-const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
+const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(DispatcherDefault, {
   LOAD_ICYMI_POPULAR_GUILDS: function loadOnboardingPopularGuilds(categoryIds) {
     ({ guilds, offset } = categoryIds);
     let set;
@@ -37,10 +37,10 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
       offset = 0;
     }
     set = new Set(items.map((id) => id.id));
-    set1 = new Set(guildIds.getGuildIds());
-    const mapped = guilds.map((body) => {
+    set1 = new Set(GuildStore.getGuildIds());
+    const mapped = guilds.map((item) => {
       const obj = set(set1[1]);
-      return obj.fromClientDiscoverableGuild(set(set1[2]).makeDiscoverableGuild(body));
+      return obj.fromClientDiscoverableGuild(set(set1[2]).makeDiscoverableGuild(item));
     });
     const found = mapped.filter((id) => {
       const hasItem = set1.has(id.id);
@@ -58,6 +58,7 @@ const iCYMIPopularGuildsStore = new ICYMIPopularGuildsStore(dispatcherDefault, {
     c5 = 0;
   }
 });
-const result = require("set").fileFinishedImporting("modules/icymi/ICYMIPopularGuildsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/ICYMIPopularGuildsStore.tsx");
 
 export default iCYMIPopularGuildsStore;

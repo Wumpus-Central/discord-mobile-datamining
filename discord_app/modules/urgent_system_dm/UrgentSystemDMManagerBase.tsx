@@ -1,30 +1,28 @@
-// === Module 17496: maybeShowUrgentMessageModal ===
+// === Module 17496: UrgentSystemDMManagerBase ===
 
-// Module 17496 (maybeShowUrgentMessageModal)
-import initializeDefault from "initialize" /* 7118 */;
-import _fetchProfileAll from "_fetchProfile" /* 8181 */;
-import closure_2 from "ensureGuildLoaded" /* 1957 */;
-import closure_3 from "handleConnectionOpen" /* 2011 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import { SYSTEM_USER } from "SYSTEM_USER" /* 17497 */;
-import { UserFlags } from "ME" /* 1074 */;
+// Module 17496 (UrgentSystemDMManagerBase)
+import UserActionCreatorsAll from "UserActionCreators" /* 8181 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import UserStore from "UserStore" /* 1371 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-function maybeShowUrgentMessageModal(arg0) {
-  const currentUser = authStore2.getCurrentUser();
+function maybeShowUrgentMessageModal(handleShowUrgentMessageAlert) {
+  const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
-    channelId = channelId.getChannelId();
-    const dMFromUserId = authStore.getDMFromUserId(SYSTEM_USER);
+    const channelId = SelectedChannelStore.getChannelId();
+    const dMFromUserId = ChannelStore.getDMFromUserId(SYSTEM_USER);
     if (currentUser.hasUrgentMessages()) {
       if (dMFromUserId !== channelId) {
         if (!c7) {
           c7 = true;
-          arg0();
+          handleShowUrgentMessageAlert();
         }
       }
     }
-    const currentUser1 = authStore2.getCurrentUser();
+    const currentUser1 = UserStore.getCurrentUser();
     let hasUrgentMessagesResult = null != currentUser1;
-    const dMFromUserId1 = authStore.getDMFromUserId(SYSTEM_USER);
+    const dMFromUserId1 = ChannelStore.getDMFromUserId(SYSTEM_USER);
     if (hasUrgentMessagesResult) {
       hasUrgentMessagesResult = currentUser1.hasUrgentMessages();
     }
@@ -33,15 +31,14 @@ function maybeShowUrgentMessageModal(arg0) {
     }
     if (hasUrgentMessagesResult) {
       c7 = false;
-      _fetchProfileAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
-      const obj5 = _fetchProfileAll;
+      UserActionCreatorsAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
     }
   }
 }
 function maybeClearUrgentMessage(channelId) {
-  const currentUser = authStore2.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   let hasUrgentMessagesResult = null != currentUser;
-  const dMFromUserId = authStore.getDMFromUserId(SYSTEM_USER);
+  const dMFromUserId = ChannelStore.getDMFromUserId(SYSTEM_USER);
   if (hasUrgentMessagesResult) {
     hasUrgentMessagesResult = currentUser.hasUrgentMessages();
   }
@@ -50,22 +47,21 @@ function maybeClearUrgentMessage(channelId) {
   }
   if (hasUrgentMessagesResult) {
     c7 = false;
-    _fetchProfileAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
-    const obj2 = _fetchProfileAll;
+    UserActionCreatorsAll.setFlag(UserFlags.HAS_UNREAD_URGENT_MESSAGES, false);
   }
 }
+const SYSTEM_USER = fn(17497).SYSTEM_USER;
+const UserFlags = fn(1074).UserFlags;
 let c7 = false;
-initializeDefault;
 const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAlert) {
   const tmp2 = new prototype(tmp, new.target);
-  // ThrowIfThisInitialized (0x7c)
   closure_0 = tmp2;
   tmp2.actions = {
     POST_CONNECTION_OPEN() {
-      closure_1_8(closure_0.handleShowUrgentMessageAlert);
+      maybeShowUrgentMessageModal(closure_0.handleShowUrgentMessageAlert);
     },
     MESSAGE_CREATE() {
-      closure_1_8(closure_0.handleShowUrgentMessageAlert);
+      maybeShowUrgentMessageModal(closure_0.handleShowUrgentMessageAlert);
     },
     CHANNEL_SELECT: maybeClearUrgentMessage
   };
@@ -74,6 +70,7 @@ const prototype = function UrgentSystemDMManagerBase(handleShowUrgentMessageAler
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("set").fileFinishedImporting("modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/urgent_system_dm/UrgentSystemDMManagerBase.tsx");
 
 export default prototype;

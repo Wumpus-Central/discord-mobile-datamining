@@ -1,60 +1,61 @@
 // === Module 12150: CommandListSortActionSheet ===
 
 // Module 12150 (CommandListSortActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import context from "context" /* 5685 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import TableRadioGroup from "TableRadioGroup" /* 5685 */;
+import TableRadioRow from "TableRadioRow" /* 5688 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 12151 */;
-import { CommandListSortOrder } from "CommandListSortOrder" /* 12135 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");
+require = fn;
+const CommandListSortOrder = fn(12135).CommandListSortOrder;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");
 
 export default function CommandListSortActionSheet(sortOrder) {
   ({ onClose: require, onSortOptionPress: importDefault } = sortOrder);
   let obj = { startExpanded: true, header: null, children: null };
   obj = { leading: null, title: null };
-  obj = { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT };
-  obj[0] = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.yeYaHf);
-  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
-  obj1 = {
+  obj = { size: "sm", color: nativeDefault.colors.TEXT_DEFAULT };
+  obj.leading = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: nativeDefault.colors.TEXT_DEFAULT });
+  const intl = util.intl;
+  obj.title = intl.string(util.t.yeYaHf);
+  obj.header = jsx(BottomSheetTitleHeader.BottomSheetTitleHeader, { size: "sm", color: nativeDefault.colors.TEXT_DEFAULT });
+  const obj1 = {
     hasIcons: false,
     value: sortOrder.sortOrder,
     onChange(arg0) {
-      callback2(arg0);
-      callback();
+      importDefault(arg0);
+      require();
     },
     children: null
   };
   const obj2 = { label: null, value: null };
-  const intl2 = getSystemLocale.intl;
-  obj2[0] = intl2.string(getSystemLocale.t.SzxiqK);
-  obj2[1] = CommandListSortOrder.POPULAR;
+  const intl2 = util.intl;
+  obj2.label = intl2.string(util.t.SzxiqK);
+  obj2.value = CommandListSortOrder.POPULAR;
   const items = [obj2, ];
   const obj3 = { label: null, value: null };
-  const intl3 = getSystemLocale.intl;
-  obj3[0] = intl3.string(getSystemLocale.t.m8xsti);
-  obj3[1] = CommandListSortOrder.ALPHABETICAL;
+  const intl3 = util.intl;
+  obj3.label = intl3.string(util.t.m8xsti);
+  obj3.value = CommandListSortOrder.ALPHABETICAL;
   items[1] = obj3;
-  obj1[3] = items.map((label) => {
-    const value = label.value;
-    return callback3(callback(table[9]).TableRadioRow, { label: label.label, value }, value);
+  obj1.children = items.map((label) => {
+    value = label.value;
+    return jsx(TableRadioRow.TableRadioRow, { label: label.label, value }, value);
   });
-  obj[2] = jsx(context.TableRadioGroup, {
+  obj.children = jsx(TableRadioGroup.TableRadioGroup, {
     hasIcons: false,
     value: sortOrder.sortOrder,
     onChange(arg0) {
-      callback2(arg0);
-      callback();
+      importDefault(arg0);
+      require();
     },
     children: null
   });
-  return jsx(Background.BottomSheet, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
+  return jsx(Sheet_BottomSheet.BottomSheet, { size: "sm", color: nativeDefault.colors.TEXT_DEFAULT });
 };

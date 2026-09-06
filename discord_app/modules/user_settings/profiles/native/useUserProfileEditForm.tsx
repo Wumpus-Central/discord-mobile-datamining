@@ -1,543 +1,420 @@
 // === Module 14604: useUserProfileEditForm ===
 
 // Module 14604 (useUserProfileEditForm)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "asyncGeneratorStep" /* 5 */;
-import closure_6 from "noop" /* 19 */;
-import closure_7 from "handleFormOpen" /* 8160 */;
-import closure_8 from "createUserWidgetFromServer" /* 7621 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import { FormStates } from "ME" /* 1074 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8160 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
-let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
+const FormStates = fn(1074).FormStates;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
 
 export default function useUserProfileEditForm() {
   let obj = pendingChanges(504);
-  const items = [closure_7];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ pendingChanges: store.getPendingChanges(), tryItOutChanges: store.getTryItOutChanges(), errors: store.getErrors() }));
+  const items = [UserProfileSettingsStore];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ pendingChanges: UserProfileSettingsStore.getPendingChanges(), tryItOutChanges: UserProfileSettingsStore.getTryItOutChanges(), errors: UserProfileSettingsStore.getErrors() }));
   pendingChanges = stateFromStoresObject.pendingChanges;
   ({ tryItOutChanges, errors } = stateFromStoresObject);
-  const items1 = [closure_8, closure_7];
-  const stateFromStores = pendingChanges(504).useStateFromStores(items1, () => {
-    let isSubmitting = store.getFormState() === constants.SUBMITTING;
+  const items1 = [UserProfileStore, UserProfileSettingsStore];
+  let stateFromStores = pendingChanges(504).useStateFromStores(items1, () => {
+    isSubmitting = UserProfileSettingsStore.getFormState() === constants.SUBMITTING;
     if (!isSubmitting) {
       isSubmitting = isSubmitting.isSubmitting;
     }
     return isSubmitting;
   });
-  const effect = React.useEffect(() => () => callback2(573).wait(callback(6984).resetAllPending), []);
+  const effect = noop.useEffect(() => () => stateFromStores(573).wait(pendingChanges(6984).resetAllPending), []);
   const items2 = [stateFromStores, pendingChanges];
-  callback = React.useCallback(callback(() => {
-    c6 = 0;
-    let bannerOriginalMd5 = 0;
-    closure_5 = 0;
-    return (function*() {
-      if (c7 === 2) {
-        c7 = 3;
-        throwTypeErrorResult = HermesBuiltin.throwTypeError();
+  const callback = noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        throwTypeErrorResult = arg1;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp5;
-        throwTypeErrorResult = globalThis;
-        throwTypeErrorResult = null;
-        if (tmp6 === 3) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
           if (arg0 === 1) {
-            throw arg1;
+            c7 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            c7 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
+            closure_3 = tmp193;
+            closure_131_0 = undefined;
+            let profileChangesForUpdateRequest;
+            let primaryGuildChangesForUpdateRequest;
+            closure_131_3 = undefined;
+            closure_131_4 = undefined;
+            closure_131_5 = undefined;
+            let body3;
+            let bannerOriginalMd5;
+            closure_131_8 = undefined;
+            closure_131_9 = undefined;
+            let firstFieldErrorMessage;
+            closure_131_11 = undefined;
+            closure_131_12 = undefined;
+            closure_131_13 = undefined;
+            let primaryGuildId;
+            closure_131_15 = undefined;
+            let firstFieldErrorMessage2;
+            if (stateFromStores) {
+              c7 = 3;
+              return { value: "HermesInternal", done: null };
+            } else {
+              const accountUpdateForUpdateRequest = pendingChanges(11086).getAccountUpdateForUpdateRequest(pendingChanges);
+              closure_131_0 = accountUpdateForUpdateRequest;
+              const obj26 = pendingChanges(11086);
+              profileChangesForUpdateRequest = pendingChanges(11086).getProfileChangesForUpdateRequest(pendingChanges);
+              const obj27 = pendingChanges(11086);
+              primaryGuildChangesForUpdateRequest = pendingChanges(11086).getPrimaryGuildChangesForUpdateRequest(pendingChanges);
+              closure_131_3 = true;
+              closure_131_4 = false;
+              const _Object = Object;
+              if (Object.keys(accountUpdateForUpdateRequest).length > 0) {
+                c6 = 1;
+                c7 = 1;
+                let obj1 = { value: pendingChanges(6984).saveProfileAndAccountChanges(accountUpdateForUpdateRequest), done: false };
+                return obj1;
+              } else {
+                const _Object2 = Object;
+                if (Object.keys(profileChangesForUpdateRequest).length > 0) {
+                  bannerOriginalMd5 = profileChangesForUpdateRequest.bannerOriginalMd5;
+                  closure_131_8 = tmp2(profileChangesForUpdateRequest, closure_3);
+                  c6 = 2;
+                  c7 = 1;
+                  let obj2 = { value: pendingChanges(8167).saveProfileChanges(closure_131_8, undefined, bannerOriginalMd5), done: false };
+                  return obj2;
+                } else {
+                  if (undefined === closure_132_0.pendingBadgeDisplayOrder) {
+                    if (undefined === closure_132_0.pendingBadgeHiddenBadges) {
+                      if (undefined !== closure_132_0.pendingLegacyUsernameDisabled) {
+                        c5 = 1;
+                        const LegacyUsernameDisabled = pendingChanges(1935).LegacyUsernameDisabled;
+                        c6 = 7;
+                        c7 = 1;
+                        const obj3 = { value: LegacyUsernameDisabled.updateSetting(closure_132_0.pendingLegacyUsernameDisabled), done: false };
+                        return obj3;
+                      }
+                    }
+                  }
+                  const _Object4 = Object;
+                  let tmp162 = 0 === Object.keys(closure_131_0).length;
+                  if (tmp162) {
+                    const _Object5 = Object;
+                    tmp162 = 0 === Object.keys(profileChangesForUpdateRequest).length;
+                  }
+                  if (tmp162) {
+                    const _Object6 = Object;
+                    tmp162 = 0 === Object.keys(primaryGuildChangesForUpdateRequest).length;
+                  }
+                  if (tmp162) {
+                    tmp162 = undefined === closure_132_0.pendingLegacyUsernameDisabled;
+                  }
+                  closure_131_11 = tmp162;
+                  if (closure_131_11) {
+                    stateFromStores(573).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
+                    const obj34 = stateFromStores(573);
+                  }
+                  let obj4 = { displayOrder: closure_132_0.pendingBadgeDisplayOrder, hiddenBadges: closure_132_0.pendingBadgeHiddenBadges };
+                  c6 = 3;
+                  c7 = 1;
+                  const obj5 = { value: pendingChanges(14606).updateBadgeSettings(obj4), done: false };
+                  return obj5;
+                }
+              }
+              const obj28 = pendingChanges(11086);
+            }
+          }
+        } else if (1 === tmp7) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            let obj6 = { value, done: true };
+            return obj6;
+          } else {
+            closure_131_5 = value;
+            let ok;
+            if (closure_131_5 != null) {
+              ok = closure_131_5.ok;
+            }
+            if (ok) {
+              body3 = closure_131_5.body;
+              if (undefined !== closure_132_0.pendingAvatar) {
+                const obj7 = { avatarHash: body3.avatar, avatarId: closure_131_0.avatarId, avatarAssetOrigin: null };
+                const pendingAvatar = closure_132_0.pendingAvatar;
+                let assetOrigin;
+                if (pendingAvatar != null) {
+                  assetOrigin = pendingAvatar.assetOrigin;
+                }
+                obj7.avatarAssetOrigin = assetOrigin;
+                const result = pendingChanges(6988).trackUserAvatarUpdated(obj7);
+                const obj22 = pendingChanges(6988);
+              }
+              const result1 = pendingChanges(6984).resetPendingAccountChanges();
+              const obj24 = pendingChanges(6984);
+            } else {
+              let username;
+              if (closure_131_5 != null) {
+                const body = closure_131_5.body;
+                if (body != null) {
+                  username = body.username;
+                }
+              }
+              if (null != username) {
+                const result2 = pendingChanges(6991).showInvalidUsernameToast();
+                closure_131_4 = true;
+                const obj21 = pendingChanges(6991);
+              } else {
+                let avatar;
+                if (closure_131_5 != null) {
+                  const body2 = closure_131_5.body;
+                  if (body2 != null) {
+                    avatar = body2.avatar;
+                  }
+                }
+                if (null != avatar) {
+                  const result3 = pendingChanges(14605).showGenericProfileUpdateFailureToast(closure_131_5.body.avatar);
+                  closure_131_4 = true;
+                  const obj44 = pendingChanges(14605);
+                }
+              }
+            }
+            let tmp115 = closure_131_3;
+            if (closure_131_3) {
+              let ok1;
+              if (closure_131_5 != null) {
+                ok1 = closure_131_5.ok;
+              }
+              pendingChanges = ok1;
+              if (ok1 == null) {
+                pendingChanges = false;
+              }
+              tmp115 = pendingChanges;
+            }
+            closure_131_3 = tmp115;
+          }
+        } else if (2 === tmp7) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            const obj8 = { value, done: true };
+            return obj8;
+          } else {
+            closure_131_9 = value;
+            let ok2;
+            if (closure_131_9 != null) {
+              ok2 = closure_131_9.ok;
+            }
+            if (ok2) {
+              let obj18 = pendingChanges(8167);
+              const result4 = obj18.resetPendingProfileChanges();
+            } else {
+              const aPIError = new pendingChanges(4461).APIError(closure_131_9);
+              firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
+              if (null != firstFieldErrorMessage) {
+                let obj17 = pendingChanges(14605);
+                const result5 = obj17.showGenericProfileUpdateFailureToast(firstFieldErrorMessage);
+                closure_131_4 = true;
+              }
+            }
+            let tmp85 = closure_131_3;
+            if (closure_131_3) {
+              let ok3;
+              if (closure_131_9 != null) {
+                ok3 = closure_131_9.ok;
+              }
+              stateFromStores = ok3;
+              if (ok3 == null) {
+                stateFromStores = false;
+              }
+              tmp85 = stateFromStores;
+            }
+            closure_131_3 = tmp85;
           }
         } else {
-          try {
-            c7 = 2;
-            if (0 === user) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let _true = tmp2;
-                c3 = throwTypeErrorResult;
-                c0 = undefined;
-                let profileChangesForUpdateRequest;
-                let primaryGuildId;
-                c3 = undefined;
-                _true = undefined;
-                c5 = undefined;
-                user = undefined;
-                c7 = undefined;
-                c8 = undefined;
-                c9 = undefined;
-                c10 = undefined;
-                c11 = undefined;
-                c12 = undefined;
-                c13 = undefined;
-                primaryGuildId = undefined;
-                let ok;
-                let firstFieldErrorMessage2;
-                throwTypeErrorResult = closure_1_1;
-                if (closure_1_1) {
-                  c7 = 3;
-                  return { value: "HermesInternal", done: null };
-                } else {
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_2;
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_0(closure_1_2[10]).getAccountUpdateForUpdateRequest(closure_1_0);
-                  c0 = throwTypeErrorResult;
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_2;
-                  const obj26 = closure_1_0(closure_1_2[10]);
-                  throwTypeErrorResult = closure_1_0;
-                  profileChangesForUpdateRequest = closure_1_0(closure_1_2[10]).getProfileChangesForUpdateRequest(closure_1_0);
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_2;
-                  const obj27 = closure_1_0(closure_1_2[10]);
-                  throwTypeErrorResult = closure_1_0;
-                  primaryGuildId = closure_1_0(closure_1_2[10]).getPrimaryGuildChangesForUpdateRequest(closure_1_0);
-                  c3 = true;
-                  _true = false;
-                  const _Object = Object;
-                  if (Object.keys(throwTypeErrorResult).length > 0) {
-                    throwTypeErrorResult = closure_1_0;
-                    throwTypeErrorResult = closure_1_2;
-                    user = 1;
-                    c7 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = closure_1_0(closure_1_2[9]).saveProfileAndAccountChanges(throwTypeErrorResult);
-                    return obj1;
-                  } else {
-                    throwTypeErrorResult = c3;
-                    const _Object2 = Object;
-                    throwTypeErrorResult = profileChangesForUpdateRequest;
-                    if (Object.keys(profileChangesForUpdateRequest).length > 0) {
-                      throwTypeErrorResult = c3;
-                      throwTypeErrorResult = _true;
-                      throwTypeErrorResult = closure_1_1;
-                      bannerOriginalMd5 = closure_1_1.bannerOriginalMd5;
-                      throwTypeErrorResult = _true;
-                      throwTypeErrorResult = closure_1_1;
-                      throwTypeErrorResult = closure_3;
-                      closure_8 = _true(closure_1_1, closure_3);
-                      throwTypeErrorResult = closure_1_0;
-                      throwTypeErrorResult = closure_1_2;
-                      throwTypeErrorResult = closure_8;
-                      throwTypeErrorResult = bannerOriginalMd5;
-                      user = 2;
-                      c7 = 1;
-                      let obj2 = { value: null, done: false };
-                      obj2[0] = closure_1_0(closure_1_2[14]).saveProfileChanges(closure_8, undefined, bannerOriginalMd5);
-                      return obj2;
-                    } else {
-                      throwTypeErrorResult = _true;
-                      throwTypeErrorResult = c0;
-                      if (undefined === c0.pendingBadgeDisplayOrder) {
-                        throwTypeErrorResult = _true;
-                        throwTypeErrorResult = c0;
-                        if (undefined === c0.pendingBadgeHiddenBadges) {
-                          throwTypeErrorResult = _true;
-                          throwTypeErrorResult = c0;
-                          if (undefined !== c0.pendingLegacyUsernameDisabled) {
-                            throwTypeErrorResult = _true;
-                            c5 = 1;
-                            throwTypeErrorResult = closure_1_0;
-                            throwTypeErrorResult = closure_1_2;
-                            const LegacyUsernameDisabled = closure_1_0(closure_1_2[20]).LegacyUsernameDisabled;
-                            throwTypeErrorResult = closure_1_0;
-                            user = 7;
-                            c7 = 1;
-                            const obj3 = { value: null, done: false };
-                            obj3[0] = LegacyUsernameDisabled.updateSetting(closure_1_0.pendingLegacyUsernameDisabled);
-                            return obj3;
-                          }
-                        }
-                      }
-                      throwTypeErrorResult = c3;
-                      const _Object4 = Object;
-                      throwTypeErrorResult = closure_1_0;
-                      throwTypeErrorResult = 0 === Object.keys(closure_1_0).length;
-                      if (throwTypeErrorResult) {
-                        throwTypeErrorResult = c3;
-                        const _Object5 = Object;
-                        throwTypeErrorResult = closure_1_1;
-                        throwTypeErrorResult = 0 === Object.keys(closure_1_1).length;
-                      }
-                      if (throwTypeErrorResult) {
-                        throwTypeErrorResult = c3;
-                        const _Object6 = Object;
-                        throwTypeErrorResult = closure_1_2;
-                        throwTypeErrorResult = 0 === Object.keys(closure_1_2).length;
-                      }
-                      if (throwTypeErrorResult) {
-                        throwTypeErrorResult = _true;
-                        throwTypeErrorResult = closure_1_0;
-                        throwTypeErrorResult = undefined === closure_1_0.pendingLegacyUsernameDisabled;
-                      }
-                      throwTypeErrorResult = c3;
-                      if (throwTypeErrorResult) {
-                        throwTypeErrorResult = _true;
-                        throwTypeErrorResult = closure_1_1;
-                        throwTypeErrorResult = closure_1_2;
-                        throwTypeErrorResult = closure_1_1(closure_1_2[8]).dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT" });
-                        const obj34 = closure_1_1(closure_1_2[8]);
-                      }
-                      throwTypeErrorResult = _true;
-                      throwTypeErrorResult = closure_1_0;
-                      throwTypeErrorResult = closure_1_2;
-                      let obj4 = { displayOrder: null, hiddenBadges: null };
-                      throwTypeErrorResult = c0;
-                      obj4[0] = c0.pendingBadgeDisplayOrder;
-                      throwTypeErrorResult = c0;
-                      obj4[1] = c0.pendingBadgeHiddenBadges;
-                      user = 3;
-                      c7 = 1;
-                      const obj5 = { value: null, done: false };
-                      obj5[0] = closure_1_0(closure_1_2[16]).updateBadgeSettings(obj4);
-                      return obj5;
-                    }
-                  }
-                  const obj28 = closure_1_0(closure_1_2[10]);
-                }
-              }
-            } else if (1 === tmp7) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                let obj6 = { value: null, done: true };
-                obj6[0] = arg1;
-                return obj6;
-              } else {
-                throwTypeErrorResult = c3;
-                closure_5 = arg1;
-                ok = undefined;
-                if (closure_5 != null) {
-                  ok = closure_5.ok;
-                }
-                if (ok) {
-                  user = c5.body;
-                  throwTypeErrorResult = closure_1_0;
-                  if (undefined !== closure_1_0.pendingAvatar) {
-                    throwTypeErrorResult = c3;
-                    throwTypeErrorResult = _true;
-                    throwTypeErrorResult = closure_1_0;
-                    throwTypeErrorResult = closure_1_2;
-                    const obj7 = { avatarHash: null, avatarId: null, avatarAssetOrigin: null };
-                    throwTypeErrorResult = user;
-                    obj7[0] = user.avatar;
-                    throwTypeErrorResult = c0;
-                    obj7[1] = c0.avatarId;
-                    throwTypeErrorResult = c0;
-                    const pendingAvatar = c0.pendingAvatar;
-                    throwTypeErrorResult = undefined;
-                    if (pendingAvatar != null) {
-                      throwTypeErrorResult = pendingAvatar.assetOrigin;
-                    }
-                    obj7[2] = throwTypeErrorResult;
-                    throwTypeErrorResult = closure_1_0(closure_1_2[11]).trackUserAvatarUpdated(obj7);
-                    const obj22 = closure_1_0(closure_1_2[11]);
-                  }
-                  throwTypeErrorResult = _true;
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_2;
-                  throwTypeErrorResult = closure_1_0(closure_1_2[9]).resetPendingAccountChanges();
-                  const obj24 = closure_1_0(closure_1_2[9]);
-                } else {
-                  let username;
-                  if (c5 != null) {
-                    const body = c5.body;
-                    if (body != null) {
-                      username = body.username;
-                    }
-                  }
-                  if (null != username) {
-                    const result = closure_1_0(closure_1_2[12]).showInvalidUsernameToast();
-                    _true = true;
-                    const obj21 = closure_1_0(closure_1_2[12]);
-                  } else {
-                    let avatar;
-                    if (closure_5 != null) {
-                      const body2 = closure_5.body;
-                      if (body2 != null) {
-                        avatar = body2.avatar;
-                      }
-                    }
-                    if (null != avatar) {
-                      throwTypeErrorResult = c3;
-                      throwTypeErrorResult = _true;
-                      throwTypeErrorResult = closure_1_0;
-                      throwTypeErrorResult = closure_1_2;
-                      throwTypeErrorResult = closure_5;
-                      throwTypeErrorResult = closure_1_0(closure_1_2[13]).showGenericProfileUpdateFailureToast(closure_5.body.avatar);
-                      _true = true;
-                      const obj44 = closure_1_0(closure_1_2[13]);
-                    }
-                  }
-                }
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = closure_3;
-                if (closure_3) {
-                  throwTypeErrorResult = undefined;
-                  if (closure_5 != null) {
-                    throwTypeErrorResult = closure_5.ok;
-                  }
-                  c0 = throwTypeErrorResult;
-                  if (throwTypeErrorResult == null) {
-                    c0 = false;
-                  }
-                  throwTypeErrorResult = c0;
-                }
-                throwTypeErrorResult = c3;
-                closure_3 = throwTypeErrorResult;
-              }
-            } else if (2 === tmp7) {
-              if (arg0 === 1) {
-                c7 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c7 = 3;
-                const obj8 = { value: null, done: true };
-                obj8[0] = arg1;
-                return obj8;
-              } else {
-                throwTypeErrorResult = c3;
-                let currentUser = arg1;
-                let ok1;
+          if (3 === tmp7) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              let obj9 = { value, done: true };
+              return obj9;
+            } else {
+              closure_131_12 = value;
+              if (closure_131_12) {
+                currentUser = currentUser.getCurrentUser();
+                let id;
                 if (currentUser != null) {
-                  ok1 = currentUser.ok;
+                  id = currentUser.id;
                 }
-                if (ok1) {
-                  let obj18 = closure_1_0(closure_1_2[14]);
-                  const result1 = obj18.resetPendingProfileChanges();
-                } else {
-                  const aPIError = new closure_1_0(closure_1_2[15]).APIError(currentUser);
-                  const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("banner");
-                  if (null != firstFieldErrorMessage) {
-                    let obj17 = closure_1_0(closure_1_2[13]);
-                    const result2 = obj17.showGenericProfileUpdateFailureToast(firstFieldErrorMessage);
-                    _true = true;
-                  }
-                }
-                let tmp85 = closure_3;
-                if (closure_3) {
-                  let ok2;
-                  if (currentUser != null) {
-                    ok2 = currentUser.ok;
-                  }
-                  profileChangesForUpdateRequest = ok2;
-                  if (ok2 == null) {
-                    profileChangesForUpdateRequest = false;
-                  }
-                  tmp85 = profileChangesForUpdateRequest;
-                }
-                closure_3 = tmp85;
-              }
-            } else {
-              if (3 === tmp7) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  let obj9 = { value: null, done: true };
-                  obj9[0] = arg1;
-                  return obj9;
-                } else {
-                  throwTypeErrorResult = c3;
-                  closure_12 = arg1;
-                  throwTypeErrorResult = closure_12;
-                  if (closure_12) {
-                    currentUser = currentUser.getCurrentUser();
-                    id = undefined;
-                    if (currentUser != null) {
-                      id = currentUser.id;
-                    }
-                    if (null != id) {
-                      let obj13 = closure_1_0(closure_1_2[17]);
-                      const profile = obj13.fetchProfile(id);
-                      user = 4;
-                      c7 = 1;
-                      const obj10 = { value: null, done: false };
-                      obj10[0] = profile.catch(() => {
+                closure_131_13 = id;
+                if (null != closure_131_13) {
+                  let obj13 = pendingChanges(8181);
+                  const profile = obj13.fetchProfile(closure_131_13);
+                  c6 = 4;
+                  c7 = 1;
+                  const obj10 = {
+                    value: profile.catch(() => {
 
-                      });
-                      return obj10;
-                    }
-                  } else if (!throwTypeErrorResult) {
-                    let tmp49 = closure_3;
-                    if (closure_3) {
-                      tmp49 = closure_12;
-                    }
-                    closure_3 = tmp49;
-                  } else {
-                    obj9 = closure_1_1(closure_1_2[8]);
-                    if (closure_12) {
-                      let obj11 = { type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" };
-                    } else {
-                      obj11 = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: null };
-                      obj11[1] = {};
-                    }
-                    obj9.dispatch(obj11);
-                  }
+                                  }),
+                    done: false
+                  };
+                  return obj10;
                 }
-              } else if (4 === tmp7) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  const obj12 = { value: null, done: true };
-                  obj12[0] = arg1;
-                  return obj12;
+              } else if (!closure_131_11) {
+                let tmp49 = closure_131_3;
+                if (closure_131_3) {
+                  tmp49 = closure_131_12;
                 }
-              } else if (5 === tmp7) {
-                if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  obj13 = { value: null, done: true };
-                  obj13[0] = arg1;
-                  return obj13;
-                } else {
-                  obj6 = closure_1_0(closure_1_2[19]);
-                  const result3 = obj6.resetPendingBadgeSettings();
-                }
-              } else if (6 === tmp7) {
-                c5 = 0;
-                closure_3 = false;
+                closure_131_3 = tmp49;
               } else {
-                if (7 === tmp7) {
-                  if (arg0 === 1) {
-                    c7 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c5 = 0;
-                    c7 = 3;
-                    const obj14 = { value: null, done: true };
-                    obj14[0] = arg1;
-                    return obj14;
-                  } else {
-                    obj4 = closure_1_0(closure_1_2[9]);
-                    const result4 = obj4.resetPendingLegacyUsernameDisabled();
-                    c5 = 0;
-                  }
-                } else if (arg0 === 1) {
-                  c7 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c7 = 3;
-                  const obj15 = { value: null, done: true };
-                  obj15[0] = arg1;
-                  return obj15;
+                obj9 = stateFromStores(573);
+                if (closure_131_12) {
+                  let obj11 = { type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" };
                 } else {
-                  throwTypeErrorResult = c3;
-                  ok = arg1;
-                  let ok3;
-                  if (ok != null) {
-                    ok3 = ok.ok;
-                  }
-                  if (ok3) {
-                    obj2 = closure_1_0(closure_1_2[9]);
-                    const result5 = obj2.resetPendingPrimaryGuildChanges();
-                  } else {
-                    const aPIError1 = new closure_1_0(closure_1_2[15]).APIError(ok);
-                    firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
-                    if (null != firstFieldErrorMessage2) {
-                      obj1 = closure_1_0(closure_1_2[13]);
-                      const result6 = obj1.showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
-                      _true = true;
-                    }
-                  }
-                  let tmp29 = closure_3;
-                  if (closure_3) {
-                    let ok4;
-                    if (closure_1_15 != null) {
-                      ok4 = closure_1_15.ok;
-                    }
-                    primaryGuildId = ok4;
-                    if (ok4 == null) {
-                      primaryGuildId = false;
-                    }
-                    tmp29 = primaryGuildId;
-                  }
-                  closure_3 = tmp29;
+                  obj11 = { type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", errors: {} };
                 }
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = c3;
-                if (!c3) {
-                  throwTypeErrorResult = _true;
-                }
-                if (!throwTypeErrorResult) {
-                  throwTypeErrorResult = _true;
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_2;
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_2;
-                  const intl = closure_1_0(closure_1_2[22]).intl;
-                  throwTypeErrorResult = closure_1_0;
-                  throwTypeErrorResult = closure_1_2;
-                  throwTypeErrorResult = closure_1_0(closure_1_2[13]).showGenericProfileUpdateFailureToast(intl.string(closure_1_0(closure_1_2[22]).t["84MExs"]));
-                  const obj29 = closure_1_0(closure_1_2[13]);
-                }
-                throwTypeErrorResult = c3;
-                c7 = 3;
-                const obj16 = { value: null, done: true };
-                obj16[0] = closure_3;
-                return obj16;
-              }
-              obj11 = closure_1_0(closure_1_2[18]);
-              user = 5;
-              c7 = 1;
-              obj17 = { value: null, done: false };
-              obj17[0] = obj11.fetchBadgeDirectory();
-              return obj17;
-            }
-            throwTypeErrorResult = c3;
-            const _Object3 = Object;
-            throwTypeErrorResult = primaryGuildId;
-            if (Object.keys(primaryGuildId).length > 0) {
-              throwTypeErrorResult = c3;
-              throwTypeErrorResult = primaryGuildId;
-              primaryGuildId = primaryGuildId.primaryGuildId;
-              throwTypeErrorResult = primaryGuildId;
-              if (undefined !== primaryGuildId) {
-                throwTypeErrorResult = c3;
-                throwTypeErrorResult = _true;
-                throwTypeErrorResult = closure_1_0;
-                throwTypeErrorResult = closure_1_2;
-                throwTypeErrorResult = closure_1_14;
-                throwTypeErrorResult = closure_1_14;
-                user = 8;
-                c7 = 1;
-                obj18 = { value: null, done: false };
-                obj18[0] = closure_1_0(closure_1_2[21]).adoptGuildIdentity(closure_1_14, null !== closure_1_14);
-                return obj18;
+                obj9.dispatch(obj11);
               }
             }
-          } catch (throwTypeErrorResult) {
-            throwTypeErrorResult = c5;
-            if (tmp3 === c5) {
-              c7 = throwTypeErrorResult;
-              throw throwTypeErrorResult;
+          } else if (4 === tmp7) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj12 = { value, done: true };
+              return obj12;
+            }
+          } else if (5 === tmp7) {
+            if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              obj13 = { value, done: true };
+              return obj13;
             } else {
-              user = tmp4;
+              obj6 = pendingChanges(13067);
+              const result6 = obj6.resetPendingBadgeSettings();
             }
+          } else if (6 === tmp7) {
+            c5 = 0;
+            closure_131_3 = false;
+          } else {
+            if (7 === tmp7) {
+              if (arg0 === 1) {
+                c7 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                c5 = 0;
+                c7 = 3;
+                const obj14 = { value, done: true };
+                return obj14;
+              } else {
+                obj4 = pendingChanges(6984);
+                const result7 = obj4.resetPendingLegacyUsernameDisabled();
+                c5 = 0;
+              }
+            } else if (arg0 === 1) {
+              c7 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c7 = 3;
+              const obj15 = { value, done: true };
+              return obj15;
+            } else {
+              closure_131_15 = value;
+              let ok4;
+              if (closure_131_15 != null) {
+                ok4 = closure_131_15.ok;
+              }
+              if (ok4) {
+                obj2 = pendingChanges(6984);
+                const result8 = obj2.resetPendingPrimaryGuildChanges();
+              } else {
+                const aPIError1 = new pendingChanges(4461).APIError(closure_131_15);
+                firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
+                if (null != firstFieldErrorMessage2) {
+                  obj1 = pendingChanges(14605);
+                  const result9 = obj1.showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
+                  closure_131_4 = true;
+                }
+              }
+              let tmp29 = closure_131_3;
+              if (closure_131_3) {
+                let ok5;
+                if (closure_131_15 != null) {
+                  ok5 = closure_131_15.ok;
+                }
+                dependencyMap = ok5;
+                if (ok5 == null) {
+                  dependencyMap = false;
+                }
+                tmp29 = dependencyMap;
+              }
+              closure_131_3 = tmp29;
+            }
+            let tmp140 = closure_131_3;
+            if (!closure_131_3) {
+              tmp140 = closure_131_4;
+            }
+            if (!tmp140) {
+              const intl = pendingChanges(1114).intl;
+              const result10 = pendingChanges(14605).showGenericProfileUpdateFailureToast(intl.string(pendingChanges(1114).t["84MExs"]));
+              const obj29 = pendingChanges(14605);
+            }
+            c7 = 3;
+            const obj16 = { value: closure_131_3, done: true };
+            return obj16;
+          }
+          obj11 = pendingChanges(8197);
+          c6 = 5;
+          c7 = 1;
+          obj17 = { value: obj11.fetchBadgeDirectory(), done: false };
+          return obj17;
+        }
+        const _Object3 = Object;
+        if (Object.keys(primaryGuildChangesForUpdateRequest).length > 0) {
+          primaryGuildId = primaryGuildChangesForUpdateRequest.primaryGuildId;
+          if (undefined !== primaryGuildId) {
+            c6 = 8;
+            c7 = 1;
+            obj18 = { value: pendingChanges(13914).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId), done: false };
+            return obj18;
           }
         }
+      } catch (tmp192) {
+        if (tmp3 === c5) {
+          c7 = tmp;
+          throw tmp192;
+        } else {
+          c6 = tmp4;
+        }
+        tmp193 = c5;
       }
-    })();
+    }
   }), items2);
   const items3 = [stateFromStores, pendingChanges.pendingAvatarDecoration];
   obj = {
@@ -545,16 +422,15 @@ export default function useUserProfileEditForm() {
     errors,
     isSubmitting: stateFromStores,
     handleSubmit: callback,
-    handleSubmitAvatarDecoration: React.useCallback(callback(function*() {
+    handleSubmitAvatarDecoration: noop.useCallback(asyncGeneratorStep(async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -565,46 +441,42 @@ export default function useUserProfileEditForm() {
           if (0 === dependencyMap) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_1 = tmp2;
-              let ok = tmp5;
-              ok = undefined;
-              if (closure_1_1) {
+              closure_128_0 = undefined;
+              if (stateFromStores) {
                 c3 = 3;
               } else {
-                let obj2 = closure_1_0(6984);
-                obj1 = { avatarDecoration: null };
-                obj1[0] = closure_1_0.pendingAvatarDecoration;
+                let obj2 = tmp5(6984);
+                const obj1 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
                 dependencyMap = 1;
                 c3 = 1;
                 obj2 = { value: null, done: false };
-                obj2[0] = obj2.saveProfileAndAccountChanges(obj1);
+                obj2.value = obj2.saveProfileAndAccountChanges(obj1);
                 return obj2;
               }
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            ok = arg1;
-            ok = undefined;
-            if (ok != null) {
-              ok = ok.ok;
+            closure_128_0 = value;
+            let ok;
+            if (closure_128_0 != null) {
+              ok = closure_128_0.ok;
             }
             if (ok) {
-              obj = closure_1_0(6984);
+              obj = tmp5(6984);
               const result = obj.resetPendingAccountChanges();
             }
           }
           c3 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
+          const obj3 = { value, done: true };
           return obj3;
         } catch (tmp16) {
           c3 = tmp;

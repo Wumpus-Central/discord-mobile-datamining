@@ -1,24 +1,24 @@
 // === Module 11116: getRandomCustomStatusPrompt ===
 
 // Module 11116 (getRandomCustomStatusPrompt)
-import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 11115 */;
+import Constants from "Constants" /* 11115 */;
+import size from "module_2" /* 2 */;
 
-({ CustomStatusPrompts: obj1, CustomStatusPromptValues: c3 } = StatusTypes);
-const result = set.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");
+({ CustomStatusPrompts: c2, CustomStatusPromptValues: c3 } = Constants);
+const result = size.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");
 
 export default function getRandomCustomStatusPrompt(size) {
-  closure_0 = size;
   if (null != size) {
     if (size.size > 0) {
       let found = closure_2.filter((value) => !size.has(value.value));
     }
     if (0 === found.length) {
-      const obj = { value: null, label: null };
-      obj[0] = constants.ADD_STATUS;
-      obj[1] = function label() {
-        const intl = size(1114).intl;
-        return intl.string(size(1114).t.Vq4UmS);
+      const obj = {
+        value: constants.ADD_STATUS,
+        label() {
+              const intl = size(1114).intl;
+              return intl.string(size(1114).t.Vq4UmS);
+            }
       };
       let tmp3 = obj;
     } else {

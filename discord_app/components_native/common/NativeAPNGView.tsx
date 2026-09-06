@@ -1,15 +1,16 @@
-// === Module 10177: ? ===
+// === Module 10177: NativeAPNGView ===
 
-// Module 10177
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10178 */;
-import set from "set" /* 1115 */;
+// Module 10177 (NativeAPNGView)
+import _mod17 from "module_17" /* 17 */;
+import APNGStickerNativeComponent from "APNGStickerNativeComponent" /* 10178 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-if (set.isAndroid()) {
-  let _default = __INTERNAL_VIEW_CONFIG.default;
+if (PlatformUtils.isAndroid()) {
+  let _default = APNGStickerNativeComponent.default;
 } else {
-  _default = get_ActivityIndicator.requireNativeComponent("APNGStickerView");
+  _default = _mod17.requireNativeComponent("APNGStickerView");
 }
-const result = set.fileFinishedImporting("components_native/common/NativeAPNGView.tsx");
+const result = size.fileFinishedImporting("components_native/common/NativeAPNGView.tsx");
 
 export default _default;

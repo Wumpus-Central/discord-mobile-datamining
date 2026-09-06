@@ -1,15 +1,15 @@
-// === Module 14193: setClientState ===
+// === Module 14193: ClientStateStoreStorage ===
 
-// Module 14193 (setClientState)
-import set from "set" /* 2 */;
-import enforcingDefault from "enforcing" /* 13637 */;
+// Module 14193 (ClientStateStoreStorage)
+import NativeFastConnectModuleDefault from "NativeFastConnectModule" /* 13637 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
+const result = size.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
 
-export const setClientState = function setClientState(closure_17, arg1) {
+export const setClientState = function setClientState(arg0) {
   let str;
-  if (closure_17 != null) {
-    str = closure_17.toString();
+  if (arg0 != null) {
+    str = arg0.toString();
   }
-  enforcingDefault.setClientState(str, undefined);
+  NativeFastConnectModuleDefault.setClientState(str, undefined);
 };

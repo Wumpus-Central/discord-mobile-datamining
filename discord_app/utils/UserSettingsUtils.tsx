@@ -1,99 +1,97 @@
-// === Module 6995: getSanitizedRestrictedGuilds ===
+// === Module 6995: UserSettingsUtils ===
 
-// Module 6995 (getSanitizedRestrictedGuilds)
-import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 4740 */;
-import getSearchSessionIdDefault from "getSearchSessionId" /* 6996 */;
-import closure_3 from "handleConnectionOpen" /* 4902 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import ME from "ME" /* 1074 */;
+// Module 6995 (UserSettingsUtils)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
+import SettingSearchSessionAnalyticsManagerDefault from "SettingSearchSessionAnalyticsManager" /* 6996 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4902 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
-({ AnalyticEvents: c5, FriendSourceFlags: closure_6, AllFriendSourceFlags: error, ComponentActions: closure_8 } = ME);
-let obj = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1, [1]: "OPTIN", OPTOUT: 2, [2]: "OPTOUT" };
-const result = require("set").fileFinishedImporting("utils/UserSettingsUtils.tsx");
+require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, FriendSourceFlags: metroRequire, AllFriendSourceFlags: closure_7, ComponentActions: closure_8 } = Constants);
+const NonSpamRetrainingOptInOptions = { UNDECIDED: 0, [0]: "UNDECIDED", OPTIN: 1, [1]: "OPTIN", OPTOUT: 2, [2]: "OPTOUT" };
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/UserSettingsUtils.tsx");
 
 export const getSanitizedRestrictedGuilds = function getSanitizedRestrictedGuilds() {
-  const RestrictedGuildIds = explicitContentFromProto.RestrictedGuildIds;
+  const RestrictedGuildIds = UserSettings.RestrictedGuildIds;
   const setting = RestrictedGuildIds.getSetting();
   let found = setting;
-  if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+  if (0 === GuildAvailabilityStore.totalUnavailableGuilds) {
+    found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
 export const getSanitizedMessageRequestRestrictedGuilds = function getSanitizedMessageRequestRestrictedGuilds() {
-  const MessageRequestRestrictedGuildIds = explicitContentFromProto.MessageRequestRestrictedGuildIds;
+  const MessageRequestRestrictedGuildIds = UserSettings.MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.getSetting();
   let found = setting;
-  if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+  if (0 === GuildAvailabilityStore.totalUnavailableGuilds) {
+    found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
 export const getSanitizedActivityRestrictedGuilds = function getSanitizedActivityRestrictedGuilds() {
-  const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
+  const ActivityRestrictedGuilds = UserSettings.ActivityRestrictedGuilds;
   const setting = ActivityRestrictedGuilds.getSetting();
   let found = setting;
-  if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+  if (0 === GuildAvailabilityStore.totalUnavailableGuilds) {
+    found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
 export const getSanitizedActivityJoiningRestrictedGuilds = function getSanitizedActivityJoiningRestrictedGuilds() {
-  const ActivityJoiningRestrictedGuilds = explicitContentFromProto.ActivityJoiningRestrictedGuilds;
+  const ActivityJoiningRestrictedGuilds = UserSettings.ActivityJoiningRestrictedGuilds;
   const setting = ActivityJoiningRestrictedGuilds.getSetting();
   let found = setting;
-  if (0 === closure_3.totalUnavailableGuilds) {
-    found = setting.filter((arg0) => null != guild.getGuild(arg0));
+  if (0 === GuildAvailabilityStore.totalUnavailableGuilds) {
+    found = setting.filter((item) => null != guild.getGuild(item));
   }
   return new Set(found);
 };
 export const computeFlags = function computeFlags(setting) {
-  if ((setting & closure_7) === closure_7) {
-    obj = { all: true, mutualFriends: true, mutualGuilds: true };
+  if ((setting & React5) === React5) {
+    let obj = { all: true, mutualFriends: true, mutualGuilds: true };
   } else {
-    obj = { all: false, mutualFriends: null, mutualGuilds: null };
-    obj[1] = (setting & constants2.MUTUAL_FRIENDS) === constants2.MUTUAL_FRIENDS;
-    obj[2] = (setting & constants2.MUTUAL_GUILDS) === constants2.MUTUAL_GUILDS;
+    obj = { all: false, mutualFriends: (setting & constants2.MUTUAL_FRIENDS) === constants2.MUTUAL_FRIENDS, mutualGuilds: (setting & constants2.MUTUAL_GUILDS) === constants2.MUTUAL_GUILDS };
   }
   return obj;
 };
 export const trackUserSettingsPaneViewed = function trackUserSettingsPaneViewed(arg0) {
   ({ destinationPane, originPane, source, subsection, locationStack, applicationId } = arg0);
-  obj = collectGuildAnalyticsMetadataDefault;
-  obj = { settings_type: "user", origin_pane: originPane, destination_pane: destinationPane, location_stack: locationStack, source, subsection, application_id: applicationId, search_session_id: getSearchSessionIdDefault.getSearchSessionId() };
+  const obj = { settings_type: "user", origin_pane: originPane, destination_pane: destinationPane, location_stack: locationStack, source, subsection, application_id: applicationId, search_session_id: SettingSearchSessionAnalyticsManagerDefault.getSearchSessionId() };
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
-export const NonSpamRetrainingOptInOptions = obj;
-export const NonSpamRetrainingOptInOptionsToValue = { [obj.UNDECIDED]: undefined, [obj.OPTIN]: true, [obj.OPTOUT]: false };
+export { NonSpamRetrainingOptInOptions };
+export const NonSpamRetrainingOptInOptionsToValue = { [NonSpamRetrainingOptInOptions.UNDECIDED]: undefined, [NonSpamRetrainingOptInOptions.OPTIN]: true, [NonSpamRetrainingOptInOptions.OPTOUT]: false };
 export const generateNonSpamRetrainingOptInSettingOptions = function generateNonSpamRetrainingOptInSettingOptions() {
-  obj = { name: null, desc: null, value: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["/yLMRQ"]);
-  const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(getSystemLocale.t["3fzkPq"]);
-  obj[2] = obj.OPTIN;
+  let obj = { name: null, desc: null, value: null };
+  const intl = util.intl;
+  obj.name = intl.string(util.t["/yLMRQ"]);
+  const intl2 = util.intl;
+  obj.desc = intl2.string(util.t["3fzkPq"]);
+  obj.value = obj.OPTIN;
   const items = [obj, , ];
   obj = { name: null, desc: null, value: null };
-  const intl3 = getSystemLocale.intl;
-  obj[0] = intl3.string(getSystemLocale.t["21fP2b"]);
-  const intl4 = getSystemLocale.intl;
-  obj[1] = intl4.string(getSystemLocale.t.ggJ9jR);
-  obj[2] = obj.OPTOUT;
+  const intl3 = util.intl;
+  obj.name = intl3.string(util.t["21fP2b"]);
+  const intl4 = util.intl;
+  obj.desc = intl4.string(util.t.ggJ9jR);
+  obj.value = obj.OPTOUT;
   items[1] = obj;
   obj = { name: null, desc: null, value: null };
-  const intl5 = getSystemLocale.intl;
-  obj[0] = intl5.string(getSystemLocale.t.OWIo8w);
-  const intl6 = getSystemLocale.intl;
-  obj[1] = intl6.string(getSystemLocale.t.HqYXpw);
-  obj[2] = obj.UNDECIDED;
+  const intl5 = util.intl;
+  obj.name = intl5.string(util.t.OWIo8w);
+  const intl6 = util.intl;
+  obj.desc = intl6.string(util.t.HqYXpw);
+  obj.value = obj.UNDECIDED;
   items[2] = obj;
   return items;
 };
 export const shakeUserSettings = function shakeUserSettings(arg0) {
-  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(constants3.SHAKE_SETTINGS_MODAL, arg0);
 };

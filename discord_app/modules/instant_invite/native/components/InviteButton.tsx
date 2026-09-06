@@ -1,23 +1,26 @@
-// === Module 9896: ? ===
+// === Module 9896: InviteButton ===
 
-// Module 9896
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 4975 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { InviteSendStates } from "InviteSendStates" /* 7736 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 9896 (InviteButton)
+import util from "util" /* 1114 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_5 = createCacheKey.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
-const memoResult = importAllResult.memo(function InviteButton(onPress) {
+require = fn;
+const View = fn(17).View;
+const InviteSendStates = fn(7736).InviteSendStates;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
+
+export default noop.memo(function InviteButton(onPress) {
   ({ sendState, disabled } = onPress);
   if (disabled === undefined) {
     disabled = false;
   }
-  const intl = getSystemLocale.intl;
-  intl.string(getSystemLocale.t.jYnGPG);
+  const intl = util.intl;
+  intl.string(util.t.jYnGPG);
   if (InviteSendStates.SENDING === sendState) {
     const intl5 = tmp2(1114).intl;
     let stringResult1 = intl5.string(tmp2(1114).t.jYnGPG);
@@ -38,15 +41,12 @@ const memoResult = importAllResult.memo(function InviteButton(onPress) {
     stringResult1 = intl2.string(tmp2(1114).t.jYnGPG);
     flag = false;
   }
-  let obj = { style: callback().buttonWrapper, children: null };
+  let obj = { style: closure_5().buttonWrapper, children: null };
   obj = { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true };
   if (!disabled) {
     disabled = flag;
   }
-  obj[5] = disabled;
-  obj[1] = jsx(Button.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
+  obj.disabled = disabled;
+  obj.children = jsx(components_Button_Button.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
   return <View accessibilityRole="none" size="sm" variant="secondary" text={stringResult1} onPress={arg0.onPressSend} disabled={null} grow />;
 });
-const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
-
-export default memoResult;

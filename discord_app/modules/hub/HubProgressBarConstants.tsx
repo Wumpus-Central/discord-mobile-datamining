@@ -1,11 +1,11 @@
-// === Module 9831: items ===
+// === Module 9831: HubProgressBarConstants ===
 
-// Module 9831 (items)
-import set from "set" /* 2 */;
-import create from "create" /* 1187 */;
+// Module 9831 (HubProgressBarConstants)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import size from "module_2" /* 2 */;
 
-const items = [create.HubProgressStep.JOIN_GUILD, create.HubProgressStep.INVITE_USER, create.HubProgressStep.CONTACT_SYNC];
-const result = set.fileFinishedImporting("modules/hub/HubProgressBarConstants.tsx");
+const items = [preloaded_user_settings.HubProgressStep.JOIN_GUILD, preloaded_user_settings.HubProgressStep.INVITE_USER, preloaded_user_settings.HubProgressStep.CONTACT_SYNC];
+const result = size.fileFinishedImporting("modules/hub/HubProgressBarConstants.tsx");
 
 export const HUB_PROGRESS_STEP_ORDER = items;
 export const HUB_PROGRESS_NUM_TOTAL_STEPS = items.length;

@@ -1,14 +1,14 @@
-// === Module 15231: getBenefitKey ===
+// === Module 15231: GuildRoleSubscriptionTypeUtils ===
 
-// Module 15231 (getBenefitKey)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import GuildFeatures from "GuildFeatures" /* 1373 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+// Module 15231 (GuildRoleSubscriptionTypeUtils)
+import util from "util" /* 1114 */;
+import PremiumConstants from "PremiumConstants" /* 1373 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15205 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = MAX_SUBSCRIPTION_TIERS.GuildRoleSubscriptionBenefitTypes;
-const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx");
+const constants = GuildRoleSubscriptionsConstants.GuildRoleSubscriptionBenefitTypes;
+const SubscriptionIntervalTypes = PremiumConstants.SubscriptionIntervalTypes;
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx");
 
 export const getBenefitKey = function getBenefitKey(id) {
   if ("roles" in id) {
@@ -22,7 +22,7 @@ export const getBenefitKey = function getBenefitKey(id) {
 };
 export const formatPlanInterval = function formatPlanInterval(first2) {
   const interval = first2.interval;
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   if (SubscriptionIntervalTypes.DAY === interval) {
     let cuSp8Q = tmp(1114).t["3rUmPQ"];
   } else if (tmp3.MONTH === interval) {
@@ -37,27 +37,23 @@ export const formatPlanIntervalDuration = function formatPlanIntervalDuration(in
   if (SubscriptionIntervalTypes.DAY === interval) {
     if (interval_count > 0) {
       if (interval_count % 7 === 0) {
-        const intl4 = getSystemLocale.intl;
-        let obj = { weeks: null };
-        obj[0] = interval_count / 7;
-        let formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.iVZYyl, obj);
+        const intl4 = util.intl;
+        let obj = { weeks: interval_count / 7 };
+        let formatToPlainStringResult = intl4.formatToPlainString(util.t.iVZYyl, obj);
       }
       return formatToPlainStringResult;
     }
-    const intl3 = getSystemLocale.intl;
-    obj = { days: null };
-    obj[0] = interval_count;
-    formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.jzH70Z, obj);
+    const intl3 = util.intl;
+    obj = { days: interval_count };
+    formatToPlainStringResult = intl3.formatToPlainString(util.t.jzH70Z, obj);
   } else if (tmp.MONTH === interval) {
-    const intl2 = getSystemLocale.intl;
-    obj1 = { months: null };
-    obj1[0] = interval_count;
-    return intl2.formatToPlainString(getSystemLocale.t.erUSmA, obj1);
+    const intl2 = util.intl;
+    const obj1 = { months: interval_count };
+    return intl2.formatToPlainString(util.t.erUSmA, obj1);
   } else if (tmp.YEAR === interval) {
-    const intl = getSystemLocale.intl;
-    obj = { years: null };
-    obj[0] = interval_count;
-    return intl.formatToPlainString(getSystemLocale.t.IfYQVC, obj);
+    const intl = util.intl;
+    obj = { years: interval_count };
+    return intl.formatToPlainString(util.t.IfYQVC, obj);
   }
 };
 export const isChannelBenefit = function isChannelBenefit(ref_type) {

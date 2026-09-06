@@ -1,8 +1,8 @@
-// === Module 4442: CREATE_THREAD_SCREEN_KEY ===
+// === Module 4442: Types ===
 
-// Module 4442 (CREATE_THREAD_SCREEN_KEY)
-import set from "set" /* 2 */;
+// Module 4442 (Types)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/main_tabs_v2/Types.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/Types.tsx");
 
 export const CREATE_THREAD_SCREEN_KEY = "new-thread";

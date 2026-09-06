@@ -1,20 +1,20 @@
 // === Module 14098: ThemedIcon ===
 
 // Module 14098 (ThemedIcon)
-import noopAll from "noop" /* 19 */;
-import map from "map" /* 4262 */;
-import IconSizesDefault from "IconSizes" /* 4977 */;
-import { jsx } from "jsxProd" /* 21 */;
+import useToken from "useToken" /* 4262 */;
+import IconDefault from "Icon" /* 4977 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/void/ThemedIcon/native/ThemedIcon.tsx");
 
 export default function ThemedIcon(themedColor) {
-  const merged = Object.assign(themedColor, Object.create(null));
-  let obj = map;
+  const merged = Object.assign(themedColor, Object.assign({ themedColor: 0 }));
+  let obj = useToken;
   const token = obj.useToken(themedColor.themedColor);
   obj = { color: token };
   const merged1 = Object.assign(merged);
-  return jsx(IconSizesDefault, { color: token });
+  return jsx(IconDefault, { color: token });
 };

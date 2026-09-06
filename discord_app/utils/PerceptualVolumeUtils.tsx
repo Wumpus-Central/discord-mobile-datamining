@@ -1,10 +1,10 @@
-// === Module 5015: perceptualToAmplitude ===
+// === Module 5015: PerceptualVolumeUtils ===
 
-// Module 5015 (perceptualToAmplitude)
-import set from "set" /* 2 */;
-import perceptualToAmplitude from "perceptualToAmplitude" /* 5016 */;
+// Module 5015 (PerceptualVolumeUtils)
+import perceptual_volume_PerceptualVolumeUtils from "perceptual_volume/PerceptualVolumeUtils" /* 5016 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/PerceptualVolumeUtils.tsx");
+const result = size.fileFinishedImporting("utils/PerceptualVolumeUtils.tsx");
 
-export const perceptualToAmplitude = perceptualToAmplitude.perceptualToAmplitude;
-export const amplitudeToPerceptual = perceptualToAmplitude.amplitudeToPerceptual;
+export const perceptualToAmplitude = perceptual_volume_PerceptualVolumeUtils.perceptualToAmplitude;
+export const amplitudeToPerceptual = perceptual_volume_PerceptualVolumeUtils.amplitudeToPerceptual;

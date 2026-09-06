@@ -1,21 +1,21 @@
-// === Module 10118: hairlineWidth ===
+// === Module 10118: RedesignChannelListConstants ===
 
-// Module 10118 (hairlineWidth)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import map from "map" /* 10119 */;
-import PlatformTypes from "PlatformTypes" /* 1116 */;
+// Module 10118 (RedesignChannelListConstants)
+import _mod17 from "module_17" /* 17 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+import size from "module_2" /* 2 */;
 
 let c2 = "text-xs/medium";
 let num = 20;
-if (PlatformTypes.isIOS()) {
+if (PlatformUtils.isIOS()) {
   num = 22;
 }
 let c4 = "text-sm/semibold";
 let c5 = "text-sm/semibold";
-const hairlineWidth = get_ActivityIndicator.StyleSheet.hairlineWidth;
+const hairlineWidth = _mod17.StyleSheet.hairlineWidth;
 const frozen = Object.freeze({ waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 25 });
-const result = set.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
+const result = size.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
 
 export const CHANNEL_SUBTITLE_TEXT_VARIANT = "text-xs/medium";
 export const CHANNEL_PADDING_VERTICAL = 8;
@@ -44,16 +44,16 @@ export const CATEGORY_MARGIN_TOP = 12;
 export const CATEGORY_MARGIN_BOTTOM = 4;
 export const CATEGORY_VERTICAL_PADDING = 4;
 export const getScaledChannelSubtitleHeight = function getScaledChannelSubtitleHeight(fontScale) {
-  return map.scaleTextLineHeight(c2, fontScale);
+  return useScaledTextLineHeight.scaleTextLineHeight(c2, fontScale);
 };
 export const getScaledCategoryRowHeight = function getScaledCategoryRowHeight(fontScale) {
-  return map.scaleTextLineHeight(c5, fontScale) + 8 + 4;
+  return useScaledTextLineHeight.scaleTextLineHeight(c5, fontScale) + 8 + 4;
 };
 export const getScaledChannelRowHeight = function getScaledChannelRowHeight(arg0) {
   const sum = 8 + hairlineWidth;
-  return 2 * sum + map.scaleLineHeight(num, arg0);
+  return 2 * sum + useScaledTextLineHeight.scaleLineHeight(num, arg0);
 };
 export const getScaledSearchBarHeight = function getScaledSearchBarHeight(fontScale) {
-  return 24 + map.scaleTextLineHeight(c4, fontScale);
+  return 24 + useScaledTextLineHeight.scaleTextLineHeight(c4, fontScale);
 };
 export const VIEWABILITY_CONFIG = frozen;

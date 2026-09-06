@@ -1,77 +1,75 @@
-// === Module 15209: GuildRoleSubscriptionsSectionHeader ===
+// === Module 15209: UserSettingsGuildRoleSubscriptions ===
 
-// Module 15209 (GuildRoleSubscriptionsSectionHeader)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Text from "Text" /* 4556 */;
+// Module 15209 (UserSettingsGuildRoleSubscriptions)
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useRestorePurchasesDefault from "useRestorePurchases" /* 15210 */;
 import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15211 */;
-import useFetchListingsForGuild from "useFetchListingsForGuild" /* 15212 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15212 */;
 import LoadingIndicatorDefault from "LoadingIndicator" /* 15215 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15216 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function GuildRoleSubscriptionsSectionHeader() {
-  const tmp = callback3();
+  const tmp = closure_8();
   let obj = { style: tmp.sectionHeader, children: null };
   obj = { variant: "eyebrow", color: "text-default", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t["KzCF/6"]);
-  const items = [callback(Text.Text, obj), ];
+  const intl = util.intl;
+  obj.children = intl.string(util.t["KzCF/6"]);
+  const items = [hasOwnProperty(Text_Text.Text, obj), ];
   obj = { style: tmp.sectionSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(getSystemLocale.t["Y+ucR7"]);
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(closure_3, obj);
+  const intl2 = util.intl;
+  obj.children = intl2.string(util.t["Y+ucR7"]);
+  items[1] = hasOwnProperty(Text_Text.Text, obj);
+  obj.children = items;
+  return timestampProducer(React3, obj);
 }
 function renderSectionHeader(section) {
   let tmp = null;
   if (section.section.key === c7) {
-    tmp = callback(GuildRoleSubscriptionsSectionHeader, {});
+    tmp = hasOwnProperty(GuildRoleSubscriptionsSectionHeader, {});
   }
   return tmp;
 }
 function ItemSeparator() {
-  return callback(Button.Spacer, { size: 8 });
+  return hasOwnProperty(native.Spacer, { size: 8 });
 }
-noopAll;
-({ View: c3, SectionList: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
+get_ActivityIndicator = fn(17);
+({ View: c3, SectionList: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "role-subscriptions";
-let closure_8 = createCacheKey.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ container: { flex: 1 }, list: { flex: 1 }, listContentContainer: { paddingHorizontal: 16 }, sectionHeader: { paddingVertical: 24 }, sectionSubtitle: { marginTop: 4 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/manage_subscriptions/UserSettingsGuildRoleSubscriptions.tsx");
 
 export default function UserSettingsGuildRoleSubscriptions() {
-  const tmp = callback3();
+  const tmp = closure_8();
   useRestorePurchasesDefault({ forceRestore: true });
   const tmp5 = useActiveGuildSubscriptionsDefault({ ensureFresh: true });
-  let obj = useFetchListingsForGuild;
+  let obj = GuildRoleSubscriptionsHooks;
   if (obj.useFetchListingsForSubscriptions(tmp5).loading) {
     let tmp6Result = tmp6(LoadingIndicatorDefault, {});
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj = { style: tmp.container, children: null };
     obj = { contentContainerStyle: null, style: null, sections: null, stickySectionHeadersEnabled: false, keyExtractor: null, renderSectionHeader: null, renderItem: null, ItemSeparatorComponent: null };
-    ({ listContentContainer: obj3[0], list: obj3[1] } = tmp);
-    obj1 = { key: null, data: null };
-    obj1[0] = c7;
-    obj1[1] = tmp5;
+    ({ listContentContainer: obj3.contentContainerStyle, list: obj3.style } = tmp);
+    const obj1 = { key, data: tmp5 };
     const items = [obj1];
-    obj[2] = items;
-    obj[4] = function keyExtractor(id) {
+    obj.sections = items;
+    obj.keyExtractor = function keyExtractor(id) {
       return id.id;
     };
-    obj[5] = renderSectionHeader;
-    obj[6] = function renderItem(subscription) {
-      return callback2(callback(table[11]), { subscription: subscription.item });
+    obj.renderSectionHeader = renderSectionHeader;
+    obj.renderItem = function renderItem(subscription) {
+      return closure_1_5(ManageSubscriptionCardDefault, { subscription: subscription.item });
     };
-    obj[7] = ItemSeparator;
-    obj[1] = tmp6(closure_4, obj);
-    tmp6Result = tmp6(closure_3, obj);
+    obj.ItemSeparatorComponent = ItemSeparator;
+    obj.children = tmp6(React4, obj);
+    tmp6Result = tmp6(React3, obj);
   }
   return tmp6Result;
 };

@@ -1,37 +1,40 @@
-// === Module 5687: TableRowGroupTitle ===
+// === Module 5687: TableRowGroup ===
 
-// Module 5687 (TableRowGroupTitle)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import Text from "Text" /* 4556 */;
-import context from "context" /* 5606 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 5687 (TableRowGroup)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import TableRowDivider from "TableRowDivider" /* 5602 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 5606 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class TableRowGroupTitle {
   constructor(arg0) {
     ({ title, style, lineClamp } = global);
     tmp = closure_8();
+    obj = { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: null, lineClamp, children: title };
     items = [, ];
     items[0] = tmp.title;
     items[1] = style;
-    return jsx(require("Text").Text, { accessibilityRole: "header", variant: "text-md/medium", color: "text-subtle", style: items, lineClamp, children });
+    obj.style = items;
+    return jsx(closure_0(closure_2[5]).Text, obj);
   }
 }
-({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: { flexShrink: 0 }, content: null, title: null, description: null, hasTrailingText: null, helperText: null };
-createCacheKey = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginBottom: 8 };
-createCacheKey[3] = { marginBottom: 8 };
-createCacheKey[4] = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
-createCacheKey[5] = { marginTop: 8 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
-const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: { flexShrink: 0 }, content: null, title: null, description: null, hasTrailingText: null, helperText: null };
+createStyles = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
+createStyles.content = createStyles;
+createStyles.title = { marginBottom: 8 };
+createStyles.description = { marginBottom: 8 };
+createStyles.hasTrailingText = { borderBottomLeftRadius: nativeDefault.radii.none, borderBottomRightRadius: nativeDefault.radii.none };
+createStyles.helperText = { marginTop: 8 };
+const React6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
 export { TableRowGroupTitle };
 export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
@@ -43,40 +46,34 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   if (str === undefined) {
     str = "none";
   }
-  importDefault = undefined;
-  const tmp = callback2();
-  let obj = map;
+  const tmp = closure_8();
+  let obj = useToken;
   importDefault = false;
-  const Children = React.Children;
-  const token = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
+  const Children = noop.Children;
+  const token = obj.useToken(nativeDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
   const mapped = Children.map(accessibilityLabel.children, (arg0) => {
     if (null == arg0) {
       return null;
     } else if (c1) {
       let obj = { children: null };
-      obj = { adjustSpacingForIcon: null };
-      obj[0] = closure_0;
-      const items = [closure_1_5(closure_1_0(closure_1_2[7]).TableRowDivider, obj), arg0];
-      obj[0] = items;
-      let tmp2 = closure_1_7(closure_1_6, obj);
+      obj = { adjustSpacingForIcon };
+      const items = [hasOwnProperty(TableRowDivider.TableRowDivider, obj), arg0];
+      obj.children = items;
+      const tmp2 = React5(timestampProducer, obj);
     } else {
       c1 = true;
-      tmp2 = arg0;
     }
   });
   obj = { style: tmp.container, children: null };
   let tmp6Result = null != title;
   if (tmp6Result) {
-    obj = { title: null };
-    obj[0] = title;
+    obj = { title };
     tmp6Result = tmp6(TableRowGroupTitle, obj);
   }
   let items = [tmp6Result, , , ];
   tmp6Result = null != description;
   if (tmp6Result) {
-    obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
-    obj1[2] = tmp.description;
-    obj1[3] = description;
+    const obj1 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.description, children: description };
     tmp6Result = tmp6(tmp2(4556).Text, obj1);
   }
   items[1] = tmp6Result;
@@ -89,13 +86,10 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   items[2] = closure_5(View, { style: items1, accessibilityRole: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: mapped });
   let tmp6Result1 = null != helperText;
   if (tmp6Result1) {
-    const obj2 = { variant: null, color: "text-muted", style: null, children: null };
-    obj2[0] = token;
-    obj2[2] = tmp.helperText;
-    obj2[3] = helperText;
+    const obj2 = { variant: token, color: "text-muted", style: tmp.helperText, children: helperText };
     tmp6Result1 = tmp6(tmp2(4556).Text, obj2);
   }
   items[3] = tmp6Result1;
-  obj[1] = items;
-  return closure_5(context.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
+  obj.children = items;
+  return closure_5(TableRowGroupContext.TableRowGroupContext.Provider, { value: true, children: closure_7(View, obj) });
 };

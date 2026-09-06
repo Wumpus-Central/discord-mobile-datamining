@@ -1,15 +1,15 @@
-// === Module 7760: set ===
+// === Module 7760: SentMessageIntentsHandler ===
 
-// Module 7760 (set)
-import set from "set" /* 2 */;
+// Module 7760 (SentMessageIntentsHandler)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");
+const result = size.fileFinishedImporting("modules/messages/SentMessageIntentsHandler.android.tsx");
 
 export default {
   init() {
 
   },
-  donateSentMessage(closure_0, closure_02) {
+  donateSentMessage() {
 
   },
   deleteAllInteractions() {

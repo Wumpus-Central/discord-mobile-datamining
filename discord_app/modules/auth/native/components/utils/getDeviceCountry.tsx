@@ -1,17 +1,17 @@
 // === Module 15965: getDeviceCountry ===
 
 // Module 15965 (getDeviceCountry)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import set2 from "set" /* 1115 */;
-import enforcing from "enforcing" /* 1117 */;
+import _mod17 from "module_17" /* 17 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import size from "module_2" /* 2 */;
 
-const NativeModules = get_ActivityIndicator.NativeModules;
-const result = set.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
+const NativeDeviceLocaleModule = tmp(1117);
+const NativeModules = _mod17.NativeModules;
+const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 
 export const getDeviceCountry = function getDeviceCountry() {
   if (obj.isAndroid()) {
-    let LocalizationManager = enforcing.default;
+    let LocalizationManager = NativeDeviceLocaleModule.default;
   } else {
     LocalizationManager = NativeModules.LocalizationManager;
   }
@@ -26,10 +26,8 @@ export const getDeviceCountry = function getDeviceCountry() {
     let formatted = null;
     if (parts.length >= 2) {
       formatted = parts[parts.length - 1].toUpperCase();
-      const str2 = parts[parts.length - 1];
     }
     return formatted;
   }
-  obj = set2;
-  const tmp = require;
+  obj = PlatformUtils;
 };

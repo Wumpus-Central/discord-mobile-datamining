@@ -1,8 +1,8 @@
-// === Module 12206: PollMediaUploadAttachmentStatus ===
+// === Module 12206: PollTypes ===
 
-// Module 12206 (PollMediaUploadAttachmentStatus)
-import set from "set" /* 2 */;
+// Module 12206 (PollTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/polls/PollTypes.tsx");
+const result = size.fileFinishedImporting("modules/polls/PollTypes.tsx");
 
 export const PollMediaUploadAttachmentStatus = { PREPARING: "PREPARING", READY_TO_UPLOAD: "READY_TO_UPLOAD", ERROR: "ERROR" };

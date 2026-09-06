@@ -1,24 +1,24 @@
-// === Module 5413: recomputeGuild ===
+// === Module 5413: GuildVerificationStore ===
 
-// Module 5413 (recomputeGuild)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 5413 (GuildVerificationStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1975 */;
-import GuildMemberFlags2 from "GuildMemberFlags" /* 4187 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import closure_5 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildRecord from "GuildRecord" /* 1975 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4187 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function recomputeGuild(guildId) {
-  const _require = guildId;
+  _require = guildId;
   clearGuild(guildId);
   set.add(guildId);
-  guild = guild.getGuild(guildId);
-  const currentUser = authStore.getCurrentUser();
+  const guild = GuildStore.getGuild(guildId);
+  const currentUser = UserStore.getCurrentUser();
   let tmp4 = null != guild;
   if (tmp4) {
     tmp4 = guild.verificationLevel !== constants.NONE;
@@ -27,7 +27,7 @@ function recomputeGuild(guildId) {
     if (null != currentUser) {
       if (tmp4) {
         if (!isGuildOwner(guild, currentUser)) {
-          member = member.getMember(guild.id, currentUser.id);
+          const member = GuildMemberStore.getMember(guild.id, currentUser.id);
           if (null == member) {
             let tmp13 = tmp6;
             if (tmp6) {
@@ -41,7 +41,7 @@ function recomputeGuild(guildId) {
             }
             let role;
             if (tmp13) {
-              role = store.getRole(guild.id, guild.verificationRoleId);
+              role = GuildRoleStore.getRole(guild.id, guild.verificationRoleId);
             }
             let num3 = 0;
             let num4 = 0;
@@ -65,16 +65,13 @@ function recomputeGuild(guildId) {
                   set = new Set();
                   const roles2 = member.roles;
                   for (const item10071 of roles2) {
-                    let tmp23 = store;
                     let tmp22 = item10071;
-                    let role1 = store.getRole(guild.id, item10071);
+                    let role1 = GuildRoleStore.getRole(guild.id, item10071);
                     let managed = null == role1;
                     if (!managed) {
-                      let tmp26 = role1;
                       managed = tmp25.managed;
                     }
                     if (!managed) {
-                      let tmp27 = item10071;
                       let addResult1 = set.add(tmp22);
                     }
                     continue;
@@ -160,19 +157,11 @@ function recomputeGuild(guildId) {
               HermesBuiltin.arraySpread(items, 0);
               const _Math2 = Math;
               timerId = setTimeout(() => {
-                let obj = closure_1_1(closure_1_2[8]);
-                obj = { type: "GUILD_VERIFICATION_CHECK", guildId: closure_0 };
+                const obj = { type: "GUILD_VERIFICATION_CHECK", guildId };
                 return obj.dispatch(obj);
               }, HermesBuiltin.apply(items1, Math));
             }
-            let obj = { notClaimed: null, notEmailVerified: null, notPhoneVerified: null, newAccount: null, newMember: null, missingVerificationRole: null, verificationRole: null, canChat: null, accountDeadline: null, memberDeadline: null, timeoutRef: null };
-            obj[0] = flag6;
-            obj[1] = flag5;
-            obj[2] = flag4;
-            obj[3] = flag3;
-            obj[4] = flag2;
-            obj[5] = flag;
-            obj[6] = role;
+            let obj = { notClaimed: flag6, notEmailVerified: flag5, notPhoneVerified: flag4, newAccount: flag3, newMember: flag2, missingVerificationRole: flag, verificationRole: role, canChat: null, accountDeadline: null, memberDeadline: null, timeoutRef: null };
             if (!flag6) {
               flag6 = flag5;
             }
@@ -188,24 +177,23 @@ function recomputeGuild(guildId) {
             if (!flag6) {
               flag6 = flag;
             }
-            obj[7] = !flag6;
+            obj.canChat = !flag6;
             const _Date5 = Date;
             const _Date6 = Date;
             const date2 = new Date(Date.now() + num4);
-            obj[8] = date2;
+            obj.accountDeadline = date2;
             const _Date7 = Date;
             const _Date8 = Date;
             const date3 = new Date(Date.now() + num3);
-            obj[9] = date3;
-            obj[10] = timerId;
+            obj.memberDeadline = date3;
+            obj.timeoutRef = timerId;
             closure_14[guildId] = obj;
-            const tmp64 = closure_14;
           } else {
             let num = member.flags;
             if (num == null) {
               num = 0;
             }
-            const obj2 = _require(1384);
+            const obj2 = require("FlagUtils");
           }
         }
       }
@@ -223,18 +211,18 @@ function handleCreateOrUpdateGuild(guild) {
   set.delete(guild.guild.id);
   recomputeGuild(guild.guild.id);
 }
-const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
-({ VerificationLevels: closure_8, VerificationCriteria: c9, GuildFeatures: c10 } = ME);
-const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
+const isGuildOwner = GuildRecord.isGuildOwner;
+({ VerificationLevels: closure_8, VerificationCriteria: closure_9, GuildFeatures: c10 } = Constants);
+const GuildMemberFlags = GuildMemberConstants.GuildMemberFlags;
 let closure_12 = { notClaimed: false, notEmailVerified: false, notPhoneVerified: false, newAccount: false, newMember: false, missingVerificationRole: false, canChat: true };
 let set = new Set();
-let closure_14 = {};
+const dependencyMap = {};
 const Store = initializeDefault.Store;
 class GuildVerificationStore extends Store {
 }
 const prototype = GuildVerificationStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5, closure_6, closure_7);
+  this.waitFor(GuildMemberStore, GuildRoleStore, GuildStore, UserStore);
 };
 prototype["getCheck"] = function getCheck(guild_id) {
   if (null == guild_id) {
@@ -254,12 +242,10 @@ prototype["canChatInGuild"] = function canChatInGuild(guild_id) {
   return this.getCheck(guild_id).canChat;
 };
 GuildVerificationStore.displayName = "GuildVerificationStore";
-const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {
+const guildVerificationStore = new GuildVerificationStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     set.clear();
     for (const key10008 in closure_14) {
-      let tmp5 = key10008;
-      let tmp6 = dependencyMap;
       let tmp7 = dependencyMap[key10008];
       if (null != tmp7) {
         let _clearTimeout = clearTimeout;
@@ -270,7 +256,7 @@ const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {
     }
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    const keys = DISCORD_EPOCHDefault.keys(closure_14);
+    const keys = SnowflakeUtilsDefault.keys(closure_14);
     const item = keys.forEach(clearGuild);
   },
   CURRENT_USER_UPDATE: function handleCurrentUserUpdate() {
@@ -287,7 +273,7 @@ const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {
   },
   GUILD_MEMBER_UPDATE: function handleGuildMemberUpdate(guildId) {
     guildId = guildId.guildId;
-    const currentUser = authStore.getCurrentUser();
+    const currentUser = UserStore.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -303,6 +289,6 @@ const guildVerificationStore = new GuildVerificationStore(dispatcherDefault, {
     recomputeGuild(guildId.guildId);
   }
 });
-let result = set.fileFinishedImporting("stores/GuildVerificationStore.tsx");
+let result = size.fileFinishedImporting("stores/GuildVerificationStore.tsx");
 
 export default guildVerificationStore;

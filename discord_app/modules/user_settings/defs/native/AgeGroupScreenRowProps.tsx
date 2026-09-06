@@ -1,43 +1,42 @@
-// === Module 14757: AGE_GROUP_CONFIRM_ROW_PROPS ===
+// === Module 14757: AgeGroupScreenRowProps ===
 
-// Module 14757 (AGE_GROUP_CONFIRM_ROW_PROPS)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2946 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
-import useIsTinyBroncoSettingsEnabled from "useIsTinyBroncoSettingsEnabled" /* 14682 */;
+// Module 14757 (AgeGroupScreenRowProps)
+import util from "util" /* 1114 */;
+import _modDef2946 from "module_2946" /* 2946 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 14682 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/AgeGroupScreenRowProps.tsx");
 
 export const AGE_GROUP_CONFIRM_ROW_PROPS = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.SH6Tcv);
+    const intl = util.intl;
+    return intl.string(_modDef2946.SH6Tcv);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.rJiO86);
+    const intl = util.intl;
+    return intl.string(_modDef2946.rJiO86);
   },
   onPress: function onAgeGroupConfirmPress() {
-    let obj = openIncodeAgeVerificationModalDefault;
-    obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+    const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
   withArrow: true
 };
 export const useShowAssignedAdultAgeGroupRow = function useShowAssignedAdultAgeGroupRow() {
-  let showAssignedAgeGroupSettings = useAgeVerificationRunner.useShowAssignedAgeGroupSettings();
-  useIsTinyBroncoSettingsEnabled;
+  let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
+  TinyBroncoSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === false;
   }
   return showAssignedAgeGroupSettings;
 };
 export const useShowAccountStatusAgeGroupRow = function useShowAccountStatusAgeGroupRow() {
-  let showAssignedAgeGroupSettings = useAgeVerificationRunner.useShowAssignedAgeGroupSettings();
-  useIsTinyBroncoSettingsEnabled;
+  let showAssignedAgeGroupSettings = AgeVerificationUtils.useShowAssignedAgeGroupSettings();
+  TinyBroncoSettingsPredicate;
   if (showAssignedAgeGroupSettings) {
     showAssignedAgeGroupSettings = tmp3 === true;
   }

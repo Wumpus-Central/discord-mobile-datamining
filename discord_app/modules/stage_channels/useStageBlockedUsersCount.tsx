@@ -1,59 +1,60 @@
 // === Module 8620: useStageBlockedUsersCount ===
 
 // Module 8620 (useStageBlockedUsersCount)
-import sortKey from "sortKey" /* 5425 */;
-import closure_2 from "getActiveStageChannelIds" /* 5418 */;
+import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5418 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/useStageBlockedUsersCount.tsx");
 
 export const useStageBlockedUsersCount = function useStageBlockedUsersCount(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let num = 0;
-    if (null != id) {
-      num = closure_1_2.getParticipantCount(tmp, id(closure_1_1[2]).StageChannelParticipantNamedIndex.BLOCKED);
+    if (null != closure_0) {
+      num = StageChannelParticipantStore.getParticipantCount(tmp, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED);
     }
     return num;
   }, items1);
 };
 export const useStageIgnoredUsersCount = function useStageIgnoredUsersCount(id1) {
-  const _require = id1;
-  const items = [closure_2];
+  _require = id1;
+  const items = [StageChannelParticipantStore];
   const items1 = [id1];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     let num = 0;
-    if (null != id1) {
-      num = closure_1_2.getParticipantCount(tmp, id1(closure_1_1[2]).StageChannelParticipantNamedIndex.IGNORED);
+    if (null != closure_0) {
+      num = StageChannelParticipantStore.getParticipantCount(tmp, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED);
     }
     return num;
   }, items1);
 };
 export const getStageBlockedUsersCount = function getStageBlockedUsersCount(id) {
-  let num = store.getParticipantCount(id, sortKey.StageChannelParticipantNamedIndex.BLOCKED);
+  let num = StageChannelParticipantStore.getParticipantCount(id, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED);
   if (num == null) {
     num = 0;
   }
   return num;
 };
 export const getStageIgnoredUsersCount = function getStageIgnoredUsersCount(id) {
-  let num = store.getParticipantCount(id, sortKey.StageChannelParticipantNamedIndex.IGNORED);
+  let num = StageChannelParticipantStore.getParticipantCount(id, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED);
   if (num == null) {
     num = 0;
   }
   return num;
 };
 export const useStageBlockedUsers = function useStageBlockedUsers(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => closure_1_2.getMutableParticipants(id, id(closure_1_1[2]).StageChannelParticipantNamedIndex.BLOCKED), items1);
+  return require("initialize").useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.BLOCKED), items1);
 };
 export const useStageIgnoredUsers = function useStageIgnoredUsers(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [StageChannelParticipantStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => closure_1_2.getMutableParticipants(id, id(closure_1_1[2]).StageChannelParticipantNamedIndex.IGNORED), items1);
+  return require("initialize").useStateFromStores(items, () => StageChannelParticipantStore.getMutableParticipants(closure_0, StageChannelParticipants.StageChannelParticipantNamedIndex.IGNORED), items1);
 };

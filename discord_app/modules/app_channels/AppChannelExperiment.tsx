@@ -1,12 +1,14 @@
-// === Module 9734: apexExperiment ===
+// === Module 9734: AppChannelExperiment ===
 
-// Module 9734 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 9734 (AppChannelExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { kind: "guild", name: "2026-07-app-channels", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ kind: "guild", name: "2026-07-app-channels", defaultConfig: { enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/app_channels/AppChannelExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/app_channels/AppChannelExperiment.tsx");
 
 export default apexExperiment;

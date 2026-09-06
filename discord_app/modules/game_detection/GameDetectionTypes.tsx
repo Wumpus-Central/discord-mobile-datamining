@@ -1,15 +1,14 @@
-// === Module 1934: GameTheme ===
+// === Module 1934: GameDetectionTypes ===
 
-// Module 1934 (GameTheme)
-import toJSDefault from "toJS" /* 1386 */;
-import { createExecutable } from "createExecutable" /* 1918 */;
+// Module 1934 (GameDetectionTypes)
+import Record from "Record" /* 1386 */;
 
-toJSDefault;
-const result = require("set").fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
+const createExecutable = fn(1918).createExecutable;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_detection/GameDetectionTypes.tsx");
 class DetectableGameRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new DetectableGameRecord(tmp2, new.target, new.target, tmp);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp3.id, name: tmp3.name, description: tmp3.description, icon: tmp3.icon, icon_hash: tmp3.icon_hash } = global);
     tmp3.aliases = global.aliases || [];
     ({ cover_image_hash: tmp3.cover_image_hash, executables } = global);

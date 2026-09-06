@@ -1,22 +1,22 @@
-// === Module 7241: getOrbPriceFromPrices ===
+// === Module 7241: OrbCheckoutUtils ===
 
-// Module 7241 (getOrbPriceFromPrices)
-import set from "set" /* 2 */;
-import items2 from "items" /* 1076 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ConstraintReasonCode2 from "ConstraintReasonCode" /* 7242 */;
-import _signOrder from "_signOrder" /* 7243 */;
-import ME from "ME" /* 1074 */;
+// Module 7241 (OrbCheckoutUtils)
+import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
+import util from "util" /* 1114 */;
+import OrderConstants from "OrderConstants" /* 7242 */;
+import OrderActionCreators from "OrderActionCreators" /* 7243 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-({ CurrencyCodes: obj1, MarketingURLs: c3, PriceSetAssignmentPurchaseTypes: c4 } = ME);
-const EXTERNAL_PRODUCT_SKU_IDS = items2.EXTERNAL_PRODUCT_SKU_IDS;
-const ConstraintReasonCode = ConstraintReasonCode2.ConstraintReasonCode;
-const result = set.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutUtils.tsx");
+({ CurrencyCodes: c2, MarketingURLs: c3, PriceSetAssignmentPurchaseTypes: closure_4 } = Constants);
+const EXTERNAL_PRODUCT_SKU_IDS = CollectiblesShopConstants.EXTERNAL_PRODUCT_SKU_IDS;
+const ConstraintReasonCode = OrderConstants.ConstraintReasonCode;
+const result = size.fileFinishedImporting("modules/virtual_currency/checkout/OrbCheckoutUtils.tsx");
 
 export const getOrbPriceFromPrices = function getOrbPriceFromPrices(prices, memo1) {
   if (memo1) {
-    if (null != prices[closure_4.PREMIUM_TIER_2]) {
-      let tmp2 = prices[closure_4.PREMIUM_TIER_2];
+    if (null != prices[React4.PREMIUM_TIER_2]) {
+      let tmp2 = prices[React4.PREMIUM_TIER_2];
     }
     let substr;
     if (tmp2 != null) {
@@ -37,16 +37,16 @@ export const getOrbPriceFromPrices = function getOrbPriceFromPrices(prices, memo
     }
     return found;
   }
-  tmp2 = prices[closure_4.DEFAULT];
+  tmp2 = prices[React4.DEFAULT];
 };
 export const getOrbCheckoutDisclaimerMessage = function getOrbCheckoutDisclaimerMessage(skuId) {
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const obj = { buyButtonLabel: null, paidServiceTermURL: null, virtualGoodsURL: null };
-  const intl2 = getSystemLocale.intl;
-  obj[0] = intl2.string(getSystemLocale.t["zLch/S"]);
-  ({ PAID_TERMS: obj[1], PAID_TERMS_VIRTUAL_GOODS: obj[2] } = closure_3);
-  const intl3 = getSystemLocale.intl;
-  let stringResult = intl3.string(getSystemLocale.t["Sxed/G"]);
+  const intl2 = util.intl;
+  obj.buyButtonLabel = intl2.string(util.t["zLch/S"]);
+  ({ PAID_TERMS: obj.paidServiceTermURL, PAID_TERMS_VIRTUAL_GOODS: obj.virtualGoodsURL } = React3);
+  const intl3 = util.intl;
+  let stringResult = intl3.string(util.t["Sxed/G"]);
   if (skuId === EXTERNAL_PRODUCT_SKU_IDS.ORB_PROFILE_BADGE) {
     const intl5 = tmp(1114).intl;
     stringResult = intl5.string(tmp(1114).t.APcKRo);
@@ -54,15 +54,15 @@ export const getOrbCheckoutDisclaimerMessage = function getOrbCheckoutDisclaimer
     const intl4 = tmp(1114).intl;
     stringResult = intl4.string(tmp(1114).t.FhJ74j);
   }
-  const items = [intl.format(getSystemLocale.t["5qdUrO"], obj), " ", stringResult];
+  const items = [intl.format(util.t["5qdUrO"], obj), " ", stringResult];
   return items;
 };
-export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMessage(code) {
+export const resolveOrbCheckoutErrorMessage = function resolveOrbCheckoutErrorMessage(code, arg1) {
   if (null == code) {
     return null;
   } else {
     let keFvXM = dependencyMap;
-    let OrderSigningFailedWithConstraintsError = _signOrder.OrderSigningFailedWithConstraintsError;
+    let OrderSigningFailedWithConstraintsError = OrderActionCreators.OrderSigningFailedWithConstraintsError;
     if (!(code instanceof OrderSigningFailedWithConstraintsError)) {
       if (code instanceof tmp(7243).OrderProcessingPendingError) {
         const intl5 = tmp(1114).intl;

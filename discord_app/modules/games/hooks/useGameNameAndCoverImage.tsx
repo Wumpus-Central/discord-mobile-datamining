@@ -1,13 +1,13 @@
 // === Module 8920: useGameNameAndCoverImage ===
 
 // Module 8920 (useGameNameAndCoverImage)
-import set from "set" /* 2 */;
-import importDefaultResult1 from "importDefaultResult1" /* 7309 */;
+import useGame from "useGame" /* 7309 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
+const result = size.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, arg1, size) {
-  let obj = importDefaultResult1;
+  let obj = useGame;
   const game = obj.useGame(arg0);
   const data = game.data;
   let coverURL;
@@ -26,7 +26,7 @@ export default function useGameNameAndCoverImage(arg0, arg1, size) {
     const intl = tmp(1114).intl;
     name = intl.string(tmp(1114).t.GIWFlF);
   }
-  obj[1] = name;
-  obj[2] = game.isLoading;
+  obj.gameName = name;
+  obj.isLoading = game.isLoading;
   return obj;
 };

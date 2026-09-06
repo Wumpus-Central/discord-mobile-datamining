@@ -1,11 +1,13 @@
-// === Module 7268: experiment ===
+// === Module 7268: GuildOfficialMessagesExperiment ===
 
-// Module 7268 (experiment)
-import set from "set" /* 2 */;
-import createExperiment from "createExperiment" /* 4474 */;
+// Module 7268 (GuildOfficialMessagesExperiment)
+import createExperiment from "module_4474" /* 4474 */;
+import size from "module_2" /* 2 */;
 
+const obj = { kind: "guild", id: "2026-03_guild_official_messages", label: "Guild Official Messages", defaultConfig: { enabled: false }, treatments: null };
 const items = [{ id: 1, label: "Enable official messages", config: { enabled: true } }];
-const experiment = createExperiment.createExperiment({ kind: "guild", id: "2026-03_guild_official_messages", label: "Guild Official Messages", defaultConfig: { enabled: false }, treatments: items });
-const result = set.fileFinishedImporting("modules/messages/GuildOfficialMessagesExperiment.tsx");
+obj.treatments = items;
+const experiment = createExperiment.createExperiment(obj);
+const result = size.fileFinishedImporting("modules/messages/GuildOfficialMessagesExperiment.tsx");
 
 export default experiment;

@@ -1,88 +1,87 @@
-// === Module 11988: ? ===
+// === Module 11988: ChatInputNativeCommands ===
 
-// Module 11988
-import set2 from "set" /* 2 */;
-import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11989 */;
+// Module 11988 (ChatInputNativeCommands)
+import createNonce from "createNonce" /* 7753 */;
+import ChatInputNativeComponent from "ChatInputNativeComponent" /* 11989 */;
+import size from "module_2" /* 2 */;
 
-let result = set2.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
+let result = size.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
 
 export default {
   backspace(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.backspace(arg0);
     }
   },
   blur(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.blur(arg0);
     }
   },
   closeCustomKeyboard(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.closeCustomKeyboard(arg0);
     }
   },
   flushText(arg0, arg1) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.flushText(arg0, arg1);
     }
   },
-  getText(arg0, set) {
-    const _require = set;
-    dependencyMap = arg2;
+  getText(arg0, set, arg2) {
+    closure_1 = arg2;
     if (null == arg0) {
       return null;
     } else {
-      const nonce = _require(7753).createNonce();
+      const nonce = createNonce.createNonce();
       const result = set.set(nonce, (arg0) => {
         set.delete(nonce);
-        callback(arg0);
+        closure_1(arg0);
       });
-      const Commands = _require(11989).Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.flushText(arg0, nonce);
     }
   },
   focus(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.focus(arg0);
     }
   },
   openCustomKeyboard(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.openCustomKeyboard(arg0);
     }
   },
   openSystemKeyboard(arg0) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.openSystemKeyboard(arg0);
     }
   },
   setText(arg0, arg1) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.setText(arg0, arg1);
     }
   },
   setSelectedRange(arg0, arg1, arg2) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       Commands.setSelectedRange(arg0, arg1, arg2);
     }
   },
   updateTextBlocks(arg0, arg1, arg2) {
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       const _JSON = JSON;
       const json = JSON.stringify(arg1);
       Commands.updateTextBlocks(arg0, json, arg2);
-      const tmp2 = arg2;
     }
   },
   replaceRange(arg0, keepCursorPosition) {
@@ -96,7 +95,7 @@ export default {
     }
     const editId = keepCursorPosition.editId;
     if (null != arg0) {
-      const Commands = __INTERNAL_VIEW_CONFIG.Commands;
+      const Commands = ChatInputNativeComponent.Commands;
       const _JSON = JSON;
       Commands.replaceRange(arg0, _location, length, text, JSON.stringify(nodes), flag, editId);
     }

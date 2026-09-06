@@ -1,9 +1,9 @@
 // === Module 4472: gameServerResponseToInstance ===
 
 // Module 4472 (gameServerResponseToInstance)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
+const result = size.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");
 
 export default function gameServerResponseToInstance(id) {
   const obj = { id: id.id, name: id.name, regionId: id.region_id, regionName: id.region_name, planId: id.sku_id, planName: id.plan_name, onlineConnectionsCount: null, maxConnectionsCount: null, serverIP: null, port: null, entitlementId: null, subscriptionId: null, providerType: null, gameServerPanelUrl: null, status: null, gameId: null, gameConfig: null };
@@ -11,7 +11,7 @@ export default function gameServerResponseToInstance(id) {
   if (num == null) {
     num = 0;
   }
-  obj[6] = num;
-  ({ max_players_count: obj[7], ip: obj[8], port: obj[9], entitlement_id: obj[10], subscription_id: obj[11], provider_type: obj[12], provider_url: obj[13], status: obj[14], game_id: obj[15], game_config: obj[16] } = id);
+  obj.onlineConnectionsCount = num;
+  ({ max_players_count: obj.maxConnectionsCount, ip: obj.serverIP, port: obj.port, entitlement_id: obj.entitlementId, subscription_id: obj.subscriptionId, provider_type: obj.providerType, provider_url: obj.gameServerPanelUrl, status: obj.status, game_id: obj.gameId, game_config: obj.gameConfig } = id);
   return obj;
 };

@@ -1,17 +1,18 @@
-// === Module 11591: GroupDMNitroAcquisitionStrategy ===
+// === Module 11591: GroupDMNitroUpsellModel ===
 
-// Module 11591 (GroupDMNitroAcquisitionStrategy)
+// Module 11591 (GroupDMNitroUpsellModel)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import isPremiumAtLeast from "isPremiumAtLeast" /* 1885 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import { MAX_GROUP_DM_PARTICIPANTS } from "ME" /* 1074 */;
-import { PremiumTypes } from "GuildFeatures" /* 1373 */;
+import util from "util" /* 1114 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
+const MAX_GROUP_DM_PARTICIPANTS = fn(1074).MAX_GROUP_DM_PARTICIPANTS;
+const PremiumTypes = fn(1373).PremiumTypes;
 let obj = { MARKETING: "marketing", CHECKOUT: "checkout" };
 obj = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
-const result = require("set").fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellModel.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/group_dm/native/GroupDMNitroUpsellModel.tsx");
 
 export const GroupDMNitroAcquisitionStrategy = obj;
 export const GroupDMNitroUpsellRoute = obj;
@@ -30,12 +31,12 @@ export const getGroupDMNitroAudience = function getGroupDMNitroAudience(premiumT
       str2 = str3;
     }
     str = str2;
-    obj = isPremiumAtLeast;
+    obj = PremiumTypeUtils;
   }
   return str;
 };
 export const useGroupDMNitroAudience = function useGroupDMNitroAudience() {
-  const items = [closure_2];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     if (currentUser != null) {
@@ -62,7 +63,7 @@ export const useGroupDMNitroAudience = function useGroupDMNitroAudience() {
         str2 = str3;
       }
       str = str2;
-      obj2 = callback(table[3]);
+      obj2 = PremiumTypeUtils;
     }
     return str;
   });
@@ -83,11 +84,11 @@ export const shouldUseGroupDMParticipantLimitUI = function shouldUseGroupDMParti
 };
 export const getGroupDMNitroCapCTAMessage = function getGroupDMNitroCapCTAMessage(groupDMNitroAudience) {
   if ("upgrade" === groupDMNitroAudience) {
-    let yZOtoD = getSystemLocale.t.KfitWs;
+    let yZOtoD = util.t.KfitWs;
   } else if ("acquire" === groupDMNitroAudience) {
-    yZOtoD = getSystemLocale.t.Sqrz1V;
+    yZOtoD = util.t.Sqrz1V;
   } else {
-    yZOtoD = getSystemLocale.t.yZOtoD;
+    yZOtoD = util.t.yZOtoD;
   }
   return yZOtoD;
 };

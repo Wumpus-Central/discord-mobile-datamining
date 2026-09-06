@@ -1,9 +1,9 @@
-// === Module 5168: getTimeFormat ===
+// === Module 5168: utils/TimeUtils ===
 
-// Module 5168 (getTimeFormat)
-import set from "set" /* 2 */;
+// Module 5168 (utils/TimeUtils)
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("utils/native/TimeUtils.tsx");
+let result = size.fileFinishedImporting("utils/native/TimeUtils.tsx");
 
 export const getTimeFormat = function getTimeFormat(playableDuration, padMinutes) {
   padMinutes = undefined;

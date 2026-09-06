@@ -1,215 +1,210 @@
 // === Module 14611: ProfileGIFSelectActionSheet ===
 
 // Module 14611 (ProfileGIFSelectActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import _modDef10364 from "module_10364" /* 10364 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import GIFPickerDefault from "GIFPicker" /* 10364 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-createCacheKey = { titleWrapper: { flex: 0 }, titleContainer: { justifyContent: "flex-start" }, gifPicker: null };
-createCacheKey = { flex: 1, marginTop: ThemesDefault.space.PX_4, marginLeft: ThemesDefault.space.PX_8, marginRight: ThemesDefault.space.PX_8 };
-createCacheKey[2] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(createCacheKey);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+fn(4560);
+let createStyles = { titleWrapper: { flex: 0 }, titleContainer: { justifyContent: "flex-start" }, gifPicker: null };
+createStyles = { flex: 1, marginTop: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_8, marginRight: nativeDefault.space.PX_8 };
+createStyles.gifPicker = createStyles;
+let closure_9 = createStyles.createStyles(createStyles);
 let obj1 = { AVATAR: 0, [0]: "AVATAR", BANNER: 1, [1]: "BANNER" };
 let obj2 = { PROFILE_EDIT: 0, [0]: "PROFILE_EDIT", PROFILE_TRY_IT_OUT: 1, [1]: "PROFILE_TRY_IT_OUT" };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/ProfileGIFSelectActionSheet.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/ProfileGIFSelectActionSheet.tsx");
 
 export default function ProfileGIFSelectActionSheet(arg0) {
   ({ profileAssetType: require, selectionContext: importDefault, guildId: dependencyMap } = arg0);
-  function _onPressGIF() {
-    const self = this;
-    const tmp = closure_1_4((arg0) => {
-      closure_0 = arg0;
-      c4 = 0;
-      c5 = 0;
-      return (function*(arg0) {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
+  closure_3 = async function _onPressGIF(arg0, value) {
+    if (c5 === 2) {
+      c5 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c5 = 2;
+        if (0 === c4) {
           if (arg0 === 1) {
-            throw arg1;
+            c5 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            c5 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === dependencyMap) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_3 = tmp5;
-                closure_2 = tmp2;
-                let lib;
-                let src;
-                closure_2 = undefined;
-                closure_3 = undefined;
-                dependencyMap = undefined;
-                c5 = undefined;
-                closure_6 = undefined;
-                closure_7 = undefined;
-                closure_8 = undefined;
-                const gifSrc = lib.gifSrc;
-                src = gifSrc;
-                if (gifSrc == null) {
-                  src = lib.src;
-                }
-                const _fetch = fetch;
-                dependencyMap = 1;
-                c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = fetch(src);
-                return obj1;
-              }
-            } else if (1 === tmp5) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                const lib2 = arg1;
-                dependencyMap = 2;
-                c5 = 1;
-                let obj3 = { value: null, done: false };
-                obj3[0] = lib2.blob();
-                return obj3;
-              }
-            } else if (2 === tmp5) {
-              if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                const obj4 = { value: null, done: true };
-                obj4[0] = arg1;
-                return obj4;
-              } else {
-                closure_2 = arg1;
-                lib = closure_2;
-                const promise = new Promise((closure_0) => {
-                  const fileReader = new FileReader();
-                  fileReader.onload = function onload() { ... };
-                  const asDataURL = fileReader.readAsDataURL(closure_0);
-                });
-                const items = [promise, ];
-                const obj22 = lib2(closure_1_2[7]);
-                items[1] = lib2(closure_1_2[7]).fromBlob(closure_2).catch(() => null);
-                dependencyMap = 3;
-                c5 = 1;
-                let obj5 = { value: null, done: false };
-                obj5[0] = Promise.all(items);
-                return obj5;
-              }
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              let obj6 = { value: null, done: true };
-              obj6[0] = arg1;
-              return obj6;
-            } else {
-              closure_3 = arg1;
-              dependencyMap = closure_1_3(closure_3, 2);
-              c5 = 32;
-              closure_6 = 5;
-              if (closure_1_10.AVATAR === lib) {
-                obj3 = lib(closure_1_2[8]);
-                const obj7 = { imageUri: null, description: null, originalMd5: null };
-                obj7[0] = c5;
-                obj5 = lib(closure_1_2[9]);
-                obj7[1] = obj5.generateAvatarDescription();
-                obj7[2] = closure_6;
-                closure_7 = obj3.createPendingImage(obj7);
-                if (lib2 === closure_1_11.PROFILE_TRY_IT_OUT) {
-                  let obj9 = lib(closure_1_2[10]);
-                  obj9.setTryItOutAvatar(closure_1_7);
-                } else {
-                  obj6 = lib(closure_1_2[11]);
-                  let obj8 = { guildId: null, avatar: null };
-                  obj8[0] = closure_2;
-                  obj8[1] = closure_7;
-                  obj6.setPendingChanges(obj8);
-                  obj8 = lib(closure_1_2[12]);
-                  let result = obj8.announcePendingAvatarChange("set");
-                }
-              } else {
-                if (closure_1_10.BANNER === tmp65) {
-                  obj9 = { assetOrigin: null, imageUri: null, description: "", originalAsset: "Array", originalMd5: "text-sm/normal" };
-                  obj9[0] = lib(closure_1_2[13]).AssetOriginTypes.NEW_ASSET;
-                  obj9[1] = c5;
-                  obj9[4] = closure_6;
-                  closure_8 = lib(closure_1_2[8]).createPendingImage(obj9);
-                  if (src !== closure_1_11.PROFILE_TRY_IT_OUT) {
-                    obj = lib(closure_1_2[11]);
-                    let obj10 = { guildId: null, banner: null };
-                    obj10[0] = closure_2;
-                    obj10[1] = closure_8;
-                    obj.setPendingChanges(obj10);
-                  }
-                  const obj20 = lib(closure_1_2[8]);
-                }
-                obj2 = lib(closure_1_2[10]);
-                obj2.setTryItOutBanner(closure_1_8);
-              }
-              obj10 = lib2(closure_1_2[14]);
-              obj10.hideActionSheet();
-              c5 = 3;
+            closure_3 = tmp5;
+            closure_130_0 = undefined;
+            closure_130_1 = undefined;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            closure_130_4 = undefined;
+            closure_130_5 = undefined;
+            closure_130_6 = undefined;
+            closure_130_7 = undefined;
+            closure_130_8 = undefined;
+            const gifSrc = closure_0.gifSrc;
+            let src = gifSrc;
+            if (gifSrc == null) {
+              src = closure_0.src;
             }
-          } catch (tmp53) {
-            c5 = tmp;
-            throw tmp53;
+            const _fetch = fetch;
+            c4 = 1;
+            c5 = 1;
+            obj1 = { value: fetch(src), done: false };
+            return obj1;
           }
+        } else if (1 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            obj2 = { value, done: true };
+            return obj2;
+          } else {
+            closure_130_1 = value;
+            c4 = 2;
+            c5 = 1;
+            let obj3 = { value: closure_130_1.blob(), done: false };
+            return obj3;
+          }
+        } else if (2 === tmp5) {
+          if (arg0 === 1) {
+            c5 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c5 = 3;
+            const obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_130_2 = value;
+            closure_130_0 = closure_130_2;
+            const promise = new Promise((arg0) => {
+              closure_0 = arg0;
+              const fileReader = new FileReader();
+              fileReader.onload = (target) => {
+                target = target.target;
+                let result;
+                if (target != null) {
+                  result = target.result;
+                }
+                let str = "";
+                if (typeof result === "string") {
+                  str = result;
+                }
+                closure_0(str);
+              };
+              const asDataURL = fileReader.readAsDataURL(closure_1_0);
+            });
+            const items = [promise, ];
+            const obj22 = src(tmp2[7]);
+            items[1] = src(tmp2[7]).fromBlob(closure_130_2).catch(() => null);
+            c4 = 3;
+            c5 = 1;
+            let obj5 = { value: Promise.all(items), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          let obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_130_3 = value;
+          closure_130_4 = closure_3(closure_130_3, 2);
+          closure_130_5 = closure_130_4[0];
+          closure_130_6 = closure_130_4[1];
+          if (constants.AVATAR === closure_131_0) {
+            obj3 = closure_0(tmp2[8]);
+            const obj7 = { imageUri: closure_130_5, description: null, originalMd5: null };
+            obj5 = closure_0(tmp2[9]);
+            obj7.description = obj5.generateAvatarDescription();
+            obj7.originalMd5 = closure_130_6;
+            closure_130_7 = obj3.createPendingImage(obj7);
+            if (closure_131_1 === constants2.PROFILE_TRY_IT_OUT) {
+              let obj9 = closure_0(tmp2[10]);
+              obj9.setTryItOutAvatar(closure_130_7);
+            } else {
+              obj6 = closure_0(tmp2[11]);
+              let obj8 = { guildId: closure_131_2, avatar: closure_130_7 };
+              obj6.setPendingChanges(obj8);
+              obj8 = closure_0(tmp2[12]);
+              let result = obj8.announcePendingAvatarChange("set");
+            }
+          } else {
+            if (constants.BANNER === tmp64) {
+              obj9 = { assetOrigin: closure_0(tmp2[13]).AssetOriginTypes.NEW_ASSET, imageUri: closure_130_5, description: "", originalAsset: "Array", originalMd5: closure_130_6 };
+              closure_130_8 = closure_0(tmp2[8]).createPendingImage(obj9);
+              if (closure_131_1 !== constants2.PROFILE_TRY_IT_OUT) {
+                obj = closure_0(tmp2[11]);
+                let obj10 = { guildId: closure_131_2, banner: closure_130_8 };
+                obj.setPendingChanges(obj10);
+              }
+              const obj20 = closure_0(tmp2[8]);
+            }
+            obj2 = closure_0(tmp2[10]);
+            obj2.setTryItOutBanner(closure_130_8);
+          }
+          obj10 = src(tmp2[14]);
+          obj10.hideActionSheet();
+          c5 = 3;
         }
-      })();
-    });
-    closure_3 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
+      } catch (tmp53) {
+        c5 = tmp;
+        throw tmp53;
+      }
     }
-    return applyArgumentsResult;
-  }
-  let tmp = callback3();
-  const ref = React.useRef(null);
+  };
+  const tmp = closure_9();
+  const ref = noop.useRef(null);
   let obj = { ref, scrollable: true, startExpanded: true, children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["xsC+/y"]);
-  obj[1] = callback(NitroWheelIcon.NitroWheelIcon, {});
-  ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
-  let items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), ];
-  obj = { style: tmp.gifPicker, children: callback(_modDef10364, obj1) };
-  items[1] = callback(View, obj);
-  obj[3] = items;
-  return callback2(Background.BottomSheet, obj);
+  const intl = util.intl;
+  obj.title = intl.string(util.t["xsC+/y"]);
+  obj.trailing = closure_7(NitroWheelIcon.NitroWheelIcon, {});
+  ({ titleWrapper: obj2.titleWrapperStyle, titleContainer: obj2.titleContainerStyle } = tmp);
+  let items = [closure_7(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), ];
+  obj = {
+    style: tmp.gifPicker,
+    children: closure_7(GIFPickerDefault, {
+      bottomSheetRef: ref,
+      onPressGIF(arg0) {
+        const self = this;
+        const apply = closure_3.apply;
+        if (typeof apply === "unknown") {
+          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        } else {
+          applyArgumentsResult = apply(self, arguments);
+        }
+        return applyArgumentsResult;
+      }
+    })
+  };
+  items[1] = closure_7(View, obj);
+  obj.children = items;
+  return closure_8(Sheet_BottomSheet.BottomSheet, obj);
 };
 export const ProfileAssetType = obj1;
 export const GIFSelectionContext = obj2;

@@ -1,31 +1,34 @@
 // === Module 8911: ActionSheetDragHandle ===
 
 // Module 8911 (ActionSheetDragHandle)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import _modDef4296 from "module_4296" /* 4296 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import PX_4 from "PX_4" /* 8903 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ TouchableWithoutFeedback: c3, View: c4 } = get_ActivityIndicator);
-({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = PX_4);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ TouchableWithoutFeedback: c3, View: closure_4 } = get_ActivityIndicator);
+const ActionSheetDragHandleConstants = fn(8903);
+({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = ActionSheetDragHandleConstants);
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
 let obj = { container: { height: DRAG_HANDLE_HEIGHT }, containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, handle: { alignItems: "center", paddingVertical: DRAG_HANDLE_PADDING }, bar: null };
-obj = { backgroundColor: ThemesDefault.colors.ICON_MUTED, borderRadius: ThemesDefault.radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
-obj[3] = obj;
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo((accessibilityLabel) => {
+let size = { backgroundColor: nativeDefault.colors.ICON_MUTED, borderRadius: nativeDefault.radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
+obj.bar = size;
+let closure_6 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx");
+
+export const ActionSheetDragHandle = noop.memo((accessibilityLabel) => {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   ({ onPress, overlay } = accessibilityLabel);
   if (accessibilityLabel === undefined) {
-    const intl = getSystemLocale.intl;
-    accessibilityLabel = intl.string(getSystemLocale.t.WAI6xu);
+    const intl = util.intl;
+    accessibilityLabel = intl.string(util.t.WAI6xu);
   }
   const animatedBarStyles = accessibilityLabel.animatedBarStyles;
-  const tmp3 = callback();
+  const tmp3 = closure_6();
   const items = [tmp3.container, ];
   let containerOverlay = null;
   if (null != overlay) {
@@ -37,17 +40,13 @@ const memoResult = importAllResult.memo((accessibilityLabel) => {
   if (null != animatedBarStyles) {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
-    obj[0] = items1;
-    let tmp4Result = tmp4(_modDef4296.View, obj);
+    obj.style = items1;
+    let tmp4Result = tmp4(ReanimatedRexportDefault.View, obj);
   } else {
-    obj1 = { style: null };
-    obj1[0] = tmp3.bar;
+    const obj1 = { style: tmp3.bar };
     tmp4Result = tmp4(tmp7, obj1);
   }
-  obj[1] = tmp4Result;
-  obj[5] = <closure_4 style={tmp3.handle}>{null}</closure_4>;
-  return <closure_3 style={tmp3.handle}>{null}</closure_3>;
+  obj.children = tmp4Result;
+  obj.children = <React4 style={tmp3.handle}>{null}</React4>;
+  return <React3 style={tmp3.handle}>{null}</React3>;
 });
-const result = require("set").fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx");
-
-export const ActionSheetDragHandle = memoResult;

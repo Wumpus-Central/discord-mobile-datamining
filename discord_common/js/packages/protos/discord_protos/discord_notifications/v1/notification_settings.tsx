@@ -1,14 +1,14 @@
-// === Module 13681: create ===
+// === Module 13681: notification_settings ===
 
-// Module 13681 (create)
+// Module 13681 (notification_settings)
 import _mod1188 from "module_1188" /* 1188 */;
-import create2 from "create" /* 1216 */;
-import defineProperty from "defineProperty" /* 1218 */;
-import create3 from "create" /* 13682 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import { MessageType, MessageType as MessageType2, MessageType as MessageType3, MessageType as MessageType4, MessageType as MessageType5, MessageType as MessageType6, MessageType as MessageType7 } from "module_1188" /* 1188 */;
+import user_settings_shared from "user_settings_shared" /* 1216 */;
+import wrappers from "wrappers" /* 1218 */;
+import mute from "mute" /* 13682 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
+require = fn;
+const MessageType = fn(1188).MessageType;
 class UserNotificationSettings$Type extends MessageType {
   constructor() {
     items = [, , , , , ];
@@ -18,7 +18,7 @@ class UserNotificationSettings$Type extends MessageType {
       name: "email_settings",
       kind: "message",
       T() {
-            return closure_3;
+            return closure_1_3;
           }
     };
     items[2] = {
@@ -26,18 +26,18 @@ class UserNotificationSettings$Type extends MessageType {
       name: "flags",
       kind: "message",
       T() {
-            return callback(table[2]).UInt64Value;
+            return require("wrappers").UInt64Value;
           }
     };
     obj = { no: 4, name: "guilds", kind: "map", K: 6, V: null };
     obj = { kind: "message", T: null };
     class T {
       constructor() {
-        return closure_7;
+        return closure_1_7;
       }
     }
-    obj[1] = T;
-    obj[4] = obj;
+    obj.T = T;
+    obj.V = obj;
     items[3] = obj;
     items[4] = { no: 5, name: "version", kind: "scalar", T: 13 };
     items[5] = {
@@ -45,11 +45,10 @@ class UserNotificationSettings$Type extends MessageType {
       name: "data",
       kind: "message",
       T() {
-            return closure_4;
+            return items1;
           }
     };
     tmp = new tmp("discord_protos.discord_notifications.v1.UserNotificationSettings", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -65,7 +64,7 @@ prototype["create"] = function create(arr) {
   }
   return obj;
 };
-prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -74,35 +73,21 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let str4 = pos.fixed64();
         obj.userId = str4.toString();
       } else if (2 === tmp5) {
-        let tmp32 = closure_3;
-        let tmp33 = closure_3;
-        let tmp34 = pos;
-        let tmp35 = readUnknownField;
         obj.emailSettings = closure_3.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.emailSettings);
       } else if (6 === tmp5) {
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let UInt64Value = defineProperty.UInt64Value;
-        let tmp29 = UInt64Value;
-        let tmp30 = pos;
-        let tmp31 = readUnknownField;
+        let UInt64Value = wrappers.UInt64Value;
         obj.flags = UInt64Value.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.flags);
       } else if (4 === tmp5) {
         let binaryReadMap4Result = self.binaryReadMap4(obj.guilds, pos, readUnknownField);
       } else if (5 === tmp5) {
         obj.version = pos.uint32();
       } else if (7 === tmp5) {
-        let tmp22 = items1;
-        let tmp23 = items1;
-        let tmp24 = pos;
-        let tmp25 = readUnknownField;
         obj.data = items1.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.data);
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -113,25 +98,16 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -146,10 +122,8 @@ prototype["binaryReadMap4"] = function binaryReadMap4(guilds, pos, readUnknownFi
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       str = tmp3;
       if (1 === tmp7) {
         let str3 = pos.fixed64();
@@ -158,7 +132,6 @@ prototype["binaryReadMap4"] = function binaryReadMap4(guilds, pos, readUnknownFi
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = declarativeNotifSettingType;
         internalBinaryReadResult = declarativeNotifSettingType.internalBinaryRead(pos, pos.uint32(), readUnknownField);
       }
       tmp2 = internalBinaryReadResult;
@@ -166,7 +139,7 @@ prototype["binaryReadMap4"] = function binaryReadMap4(guilds, pos, readUnknownFi
       obj = internalBinaryReadResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.UserNotificationSettings.guilds");
+    const error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.UserNotificationSettings.guilds");
     throw error;
   }
   if (str == null) {
@@ -188,7 +161,7 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, wri
     const internalBinaryWriteResult = closure_3.internalBinaryWrite(userId.emailSettings, tag.tag(2, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (userId.flags) {
-    const UInt64Value = defineProperty.UInt64Value;
+    const UInt64Value = wrappers.UInt64Value;
     const tagResult2 = tag.tag(6, _mod1188.WireType.LengthDelimited);
     const joined1 = UInt64Value.internalBinaryWrite(userId.flags, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult1 = UInt64Value.internalBinaryWrite(userId.flags, tag.tag(6, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -197,15 +170,12 @@ prototype["internalBinaryWrite"] = function internalBinaryWrite(userId, tag, wri
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp13 = require;
-    let tmp14 = dependencyMap;
     let tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult3.fork();
     let tagResult4 = forkResult.tag(1, _mod1188.WireType.Bit64);
     let fixed64Result1 = tagResult4.fixed64(nextResult);
     let tagResult5 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult5.fork();
-    let tmp17 = declarativeNotifSettingType;
     let internalBinaryWriteResult2 = declarativeNotifSettingType.internalBinaryWrite(userId.guilds[nextResult], tag, writeUnknownFields);
     let joined2 = tag.join();
     let joined3 = joined2.join();
@@ -237,7 +207,7 @@ let items = [
     name: "email_settings",
     kind: "message",
     T() {
-      return closure_3;
+      return closure_1_3;
     }
   },
   {
@@ -245,7 +215,7 @@ let items = [
     name: "flags",
     kind: "message",
     T() {
-      return callback(table[2]).UInt64Value;
+      return require("wrappers").UInt64Value;
     }
   },
 ,
@@ -253,29 +223,34 @@ let items = [
 
 ];
 let obj = {
-  kind: "message",
-  T() {
-    return closure_7;
+  no: 4,
+  name: "guilds",
+  kind: "map",
+  K: 6,
+  V: {
+    kind: "message",
+    T() {
+      return declarativeNotifSettingType;
+    }
   }
 };
-items[3] = { no: 4, name: "guilds", kind: "map", K: 6, V: obj };
+items[3] = obj;
 items[4] = { no: 5, name: "version", kind: "scalar", T: 13 };
 obj = { no: 7, name: "data", kind: "message", T: null };
 class T {
   constructor() {
-    return closure_4;
+    return closure_1_4;
   }
 }
-obj[3] = T;
+obj.T = T;
 items[5] = obj;
 let tmp6 = new "binaryReadMap4"("discord_protos.discord_notifications.v1.UserNotificationSettings", items, tmp4, tmp3);
-// ThrowIfThisInitialized (0x7c)
+const MessageType2 = fn(1188).MessageType;
 class EmailNotificationSettings$Type extends MessageType2 {
   constructor() {
     items = [];
     items[0] = { no: 1, name: "categories", kind: "map", K: 9, V: { kind: "scalar", T: 8 } };
     tmp = new tmp("discord_protos.discord_notifications.v1.EmailNotificationSettings", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -291,7 +266,7 @@ prototype2["create"] = function create(arr) {
   }
   return obj;
 };
-prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -300,8 +275,7 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.categories, pos, readUnknownField);
@@ -314,25 +288,16 @@ prototype2["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -347,10 +312,8 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp4 = callback;
-      let tmp5 = callback(pos.tag(), 2);
+      let tmp5 = _slicedToArray(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
-      let tmp7 = tmp2;
       let stringResult = tmp3;
       if (1 === tmp6) {
         stringResult = pos.string();
@@ -366,7 +329,7 @@ prototype2["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       str = stringResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.EmailNotificationSettings.categories");
+    const error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.EmailNotificationSettings.categories");
     throw error;
   }
   if (str == null) {
@@ -382,8 +345,6 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(categories, tag
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.LengthDelimited);
@@ -405,8 +366,8 @@ prototype2["internalBinaryWrite"] = function internalBinaryWrite(categories, tag
 };
 let items1 = [{ no: 1, name: "categories", kind: "map", K: 9, V: { kind: "scalar", T: 8 } }];
 const t = new T("discord_protos.discord_notifications.v1.EmailNotificationSettings", items1, tmp4, tmp3, "create", tmp2);
-// ThrowIfThisInitialized (0x7c)
 let closure_3 = t;
+const MessageType3 = fn(1188).MessageType;
 class UserNotificationSettingsData$Type extends MessageType3 {
   constructor() {
     items = [, ];
@@ -416,11 +377,10 @@ class UserNotificationSettingsData$Type extends MessageType3 {
       name: "declarative_settings",
       kind: "message",
       T() {
-            return closure_5;
+            return items11;
           }
     };
     tmp = new tmp("discord_protos.discord_notifications.v1.UserNotificationSettingsData", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -436,7 +396,7 @@ prototype3["create"] = function create(arr) {
   }
   return obj;
 };
-prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -445,16 +405,11 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let binaryReadMap1Result = self.binaryReadMap1(obj.mutedGames, pos, readUnknownField);
       } else if (2 === tmp5) {
-        let tmp22 = items11;
-        let tmp23 = items11;
-        let tmp24 = pos;
-        let tmp25 = readUnknownField;
         obj.declarativeSettings = items11.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.declarativeSettings);
       } else {
         let onRead = readUnknownField.readUnknownField;
@@ -465,25 +420,16 @@ prototype3["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -498,10 +444,8 @@ prototype3["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
   let str;
   if (pos.pos < sum) {
     while (true) {
-      let tmp4 = callback;
-      let tmp5 = callback(pos.tag(), 2);
+      let tmp5 = _slicedToArray(pos.tag(), 2);
       [tmp6, r10019] = tmp5;
-      let tmp7 = tmp2;
       str = tmp3;
       if (1 === tmp6) {
         let str3 = pos.fixed64();
@@ -517,7 +461,7 @@ prototype3["binaryReadMap1"] = function binaryReadMap1(arg0, pos) {
       flag = boolResult;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.UserNotificationSettingsData.muted_games");
+    const error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.UserNotificationSettingsData.muted_games");
     throw error;
   }
   if (str == null) {
@@ -533,8 +477,6 @@ prototype3["internalBinaryWrite"] = function internalBinaryWrite(mutedGames, tag
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp3 = require;
-    let tmp4 = dependencyMap;
     let tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult.fork();
     let tagResult1 = forkResult.tag(1, _mod1188.WireType.Bit64);
@@ -566,12 +508,12 @@ const items2 = [
     name: "declarative_settings",
     kind: "message",
     T() {
-      return closure_5;
+      return items11;
     }
   }
 ];
 items1 = new items1("discord_protos.discord_notifications.v1.UserNotificationSettingsData", items2, tmp4, tmp3, "create");
-// ThrowIfThisInitialized (0x7c)
+const MessageType4 = fn(1188).MessageType;
 class DeclarativeSettings$Type extends MessageType4 {
   constructor() {
     obj = {
@@ -579,7 +521,7 @@ class DeclarativeSettings$Type extends MessageType4 {
       name: "versions",
       kind: "message",
       T() {
-            return callback(table[3]).Versions;
+            return require("user_settings_shared").Versions;
           }
     };
     items = [, ];
@@ -588,14 +530,13 @@ class DeclarativeSettings$Type extends MessageType4 {
     obj1 = { kind: "message", T: null };
     class T {
       constructor() {
-        return closure_6;
+        return closure_1_6;
       }
     }
-    obj1[1] = T;
-    obj[4] = obj1;
+    obj1.T = T;
+    obj.V = obj1;
     items[1] = obj;
     tmp = new tmp("discord_protos.discord_notifications.v1.DeclarativeSettings", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -611,7 +552,7 @@ prototype4["create"] = function create(arr) {
   }
   return obj;
 };
-prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -620,16 +561,10 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
-        let tmp23 = require;
-        let tmp24 = dependencyMap;
-        let Versions = create2.Versions;
-        let tmp25 = Versions;
-        let tmp26 = pos;
-        let tmp27 = readUnknownField;
+        let Versions = user_settings_shared.Versions;
         obj.versions = Versions.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.versions);
       } else if (2 === tmp5) {
         let binaryReadMap2Result = self.binaryReadMap2(obj.values, pos, readUnknownField);
@@ -642,25 +577,16 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -669,16 +595,14 @@ prototype4["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   }
   return obj;
 };
-prototype4["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
+prototype4["binaryReadMap2"] = function binaryReadMap2(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
   let obj;
   let num;
   if (pos.pos < sum) {
     while (true) {
-      let tmp5 = callback;
-      let tmp6 = callback(pos.tag(), 2);
+      let tmp6 = _slicedToArray(pos.tag(), 2);
       [tmp7, r10020] = tmp6;
-      let tmp8 = tmp2;
       let uint32Result = tmp3;
       if (1 === tmp7) {
         uint32Result = pos.uint32();
@@ -686,7 +610,6 @@ prototype4["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
       } else if (2 !== tmp7) {
         break;
       } else {
-        let tmp15 = declarativeSettingsType;
         internalBinaryReadResult = declarativeSettingsType.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
@@ -695,7 +618,7 @@ prototype4["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
       num = uint32Result;
     }
     const _globalThis = globalThis;
-    error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.DeclarativeSettings.values");
+    const error = new Error("unknown map entry field for field discord_protos.discord_notifications.v1.DeclarativeSettings.values");
     throw error;
   }
   if (num == null) {
@@ -708,7 +631,7 @@ prototype4["binaryReadMap2"] = function binaryReadMap2(arg0, pos) {
 };
 prototype4["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, writeUnknownFields) {
   if (versions.versions) {
-    const Versions = create2.Versions;
+    const Versions = user_settings_shared.Versions;
     const tagResult = tag.tag(1, _mod1188.WireType.LengthDelimited);
     const joined = Versions.internalBinaryWrite(versions.versions, tag.tag(1, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = Versions.internalBinaryWrite(versions.versions, tag.tag(1, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -717,8 +640,6 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, 
   const iter = keys[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp6 = require;
-    let tmp7 = dependencyMap;
     let tagResult1 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult = tagResult1.fork();
     let tagResult2 = forkResult.tag(1, _mod1188.WireType.Varint);
@@ -726,7 +647,6 @@ prototype4["internalBinaryWrite"] = function internalBinaryWrite(versions, tag, 
     let uint32Result = tagResult2.uint32(parseInt(nextResult));
     let tagResult3 = tag.tag(2, _mod1188.WireType.LengthDelimited);
     let forkResult1 = tagResult3.fork();
-    let tmp10 = declarativeSettingsType;
     let internalBinaryWriteResult1 = declarativeSettingsType.internalBinaryWrite(versions.values[nextResult], tag, writeUnknownFields);
     let joined1 = tag.join();
     let joined2 = joined1.join();
@@ -747,7 +667,7 @@ obj = {
   name: "versions",
   kind: "message",
   T() {
-    return callback(table[3]).Versions;
+    return require("user_settings_shared").Versions;
   }
 };
 const items3 = [obj, ];
@@ -755,21 +675,20 @@ const obj1 = { no: 2, name: "values", kind: "map", K: 13, V: null };
 const obj2 = { kind: "message", T: null };
 class T {
   constructor() {
-    return closure_6;
+    return closure_1_6;
   }
 }
-obj2[1] = T;
-obj1[4] = obj2;
+obj2.T = T;
+obj1.V = obj2;
 items3[1] = obj1;
-const items11 = new items1("discord_protos.discord_notifications.v1.DeclarativeSettings", items3, tmp4, tmp3, "create", T, "internalBinaryRead", "internalBinaryWrite", DeclarativeSettings$Type, undefined, tmp, arg1, dependencyMap);
-// ThrowIfThisInitialized (0x7c)
+const items11 = new items1("discord_protos.discord_notifications.v1.DeclarativeSettings", items3, tmp4, tmp3, "create", T, "internalBinaryRead", "internalBinaryWrite", DeclarativeSettings$Type, undefined, tmp, fn, dependencyMap);
+const MessageType5 = fn(1188).MessageType;
 class DeclarativeNotifSetting$Type extends MessageType5 {
   constructor() {
     items = [, ];
     items[0] = { no: 1, name: "toggle", kind: "scalar", T: 8 };
     items[1] = { no: 2, name: "radio", kind: "scalar", T: 13 };
     tmp = new tmp("discord_protos.discord_notifications.v1.DeclarativeNotifSetting", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -785,7 +704,7 @@ prototype5["create"] = function create(arr) {
   }
   return obj;
 };
-prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -794,8 +713,7 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         obj.toggle = pos.bool();
@@ -810,25 +728,16 @@ prototype5["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -857,8 +766,8 @@ prototype5["internalBinaryWrite"] = function internalBinaryWrite(toggle, tag, wr
   return tag;
 };
 const items4 = [{ no: 1, name: "toggle", kind: "scalar", T: 8 }, { no: 2, name: "radio", kind: "scalar", T: 13 }];
-const declarativeSettingsType = new DeclarativeSettings$Type("discord_protos.discord_notifications.v1.DeclarativeNotifSetting", items4, tmp4, tmp3, "create", DeclarativeNotifSetting$Type, "internalBinaryRead", "internalBinaryWrite", DeclarativeSettings$Type, undefined, tmp, arg1, dependencyMap, new.target, tmp6, t);
-// ThrowIfThisInitialized (0x7c)
+const declarativeSettingsType = new DeclarativeSettings$Type("discord_protos.discord_notifications.v1.DeclarativeNotifSetting", items4, tmp4, tmp3, "create", DeclarativeNotifSetting$Type, "internalBinaryRead", "internalBinaryWrite", DeclarativeSettings$Type, undefined, tmp, fn, dependencyMap, new.target, tmp6, t);
+const MessageType6 = fn(1188).MessageType;
 class GuildNotificationSettings$Type extends MessageType6 {
   constructor() {
     items = [, , , , , , , , , ];
@@ -868,10 +777,10 @@ class GuildNotificationSettings$Type extends MessageType6 {
     obj = { no: 4, name: "mute", kind: "message", T: null };
     class T {
       constructor() {
-        return require("create").MuteNotificationSettings;
+        return closure_1_0(closure_1_1[4]).MuteNotificationSettings;
       }
     }
-    obj[3] = T;
+    obj.T = T;
     items[3] = obj;
     items[4] = {
       no: 5,
@@ -879,7 +788,7 @@ class GuildNotificationSettings$Type extends MessageType6 {
       kind: "message",
       repeat: 1,
       T() {
-            return closure_8;
+            return closure_1_8;
           }
     };
     items[5] = { no: 6, name: "suppress_roles", kind: "scalar", T: 8 };
@@ -888,7 +797,6 @@ class GuildNotificationSettings$Type extends MessageType6 {
     items[8] = { no: 9, name: "mute_scheduled_events", kind: "scalar", T: 8 };
     items[9] = { no: 10, name: "notify_highlights", kind: "scalar", T: 13 };
     tmp = new tmp("discord_protos.discord_notifications.v1.GuildNotificationSettings", items, T);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -904,15 +812,15 @@ prototype6["create"] = function create(arr) {
   }
   return obj;
 };
-prototype6["internalBinaryRead"] = function internalBinaryRead(pos) {
+prototype6["internalBinaryRead"] = function internalBinaryRead(pos, arg1, arg2, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
     obj = self.create();
   }
-  const sum = pos.pos + arg1;
-  if (pos.pos < sum) {
-    obj.notifyHighlights = pos.uint32();
+  if (pos.pos < pos.pos + arg1) {
+    [r10019, r10020] = _slicedToArray(pos.tag(), 2);
+    const tmp3 = _slicedToArray(pos.tag(), 2);
   }
   return obj;
 };
@@ -931,7 +839,7 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(suppressEveryon
     const tagResult2 = tag.tag(3, _mod1188.WireType.Varint);
   }
   if (suppressEveryone.mute) {
-    const MuteNotificationSettings = create3.MuteNotificationSettings;
+    const MuteNotificationSettings = mute.MuteNotificationSettings;
     const tagResult3 = tag.tag(4, _mod1188.WireType.LengthDelimited);
     const joined = MuteNotificationSettings.internalBinaryWrite(suppressEveryone.mute, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = MuteNotificationSettings.internalBinaryWrite(suppressEveryone.mute, tag.tag(4, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -939,9 +847,6 @@ prototype6["internalBinaryWrite"] = function internalBinaryWrite(suppressEveryon
   let num5 = 0;
   if (0 < suppressEveryone.channelOverrides.length) {
     do {
-      let tmp13 = closure_8;
-      let tmp14 = require;
-      let tmp15 = dependencyMap;
       let tagResult4 = tag.tag(5, _mod1188.WireType.LengthDelimited);
       let internalBinaryWriteResult1 = closure_8.internalBinaryWrite(suppressEveryone.channelOverrides[num5], tagResult4.fork(), writeUnknownFields);
       let joined1 = internalBinaryWriteResult1.join();
@@ -988,7 +893,7 @@ const items5 = [
     name: "mute",
     kind: "message",
     T() {
-      return callback(table[4]).MuteNotificationSettings;
+      return require("mute").MuteNotificationSettings;
     }
   },
   {
@@ -997,7 +902,7 @@ const items5 = [
     kind: "message",
     repeat: 1,
     T() {
-      return closure_8;
+      return closure_1_8;
     }
   },
   { no: 6, name: "suppress_roles", kind: "scalar", T: 8 },
@@ -1006,8 +911,8 @@ const items5 = [
   { no: 9, name: "mute_scheduled_events", kind: "scalar", T: 8 },
   { no: 10, name: "notify_highlights", kind: "scalar", T: 13 }
 ];
-const declarativeNotifSettingType = new DeclarativeNotifSetting$Type("discord_protos.discord_notifications.v1.GuildNotificationSettings", items5, tmp4, GuildNotificationSettings$Type, "create", DeclarativeNotifSetting$Type, "internalBinaryRead", "internalBinaryWrite", items5, undefined, tmp, arg1, dependencyMap, new.target, tmp6, t, items1, items11);
-// ThrowIfThisInitialized (0x7c)
+const declarativeNotifSettingType = new DeclarativeNotifSetting$Type("discord_protos.discord_notifications.v1.GuildNotificationSettings", items5, tmp4, GuildNotificationSettings$Type, "create", DeclarativeNotifSetting$Type, "internalBinaryRead", "internalBinaryWrite", items5, undefined, tmp, fn, dependencyMap, new.target, tmp6, t, items1, items11);
+const MessageType7 = fn(1188).MessageType;
 class ChannelNotificationSettings$Type extends MessageType7 {
   constructor() {
     items = [, , , ];
@@ -1018,12 +923,11 @@ class ChannelNotificationSettings$Type extends MessageType7 {
       name: "mute",
       kind: "message",
       T() {
-            return callback(table[4]).MuteNotificationSettings;
+            return require("mute").MuteNotificationSettings;
           }
     };
     items[3] = { no: 4, name: "collapsed", kind: "scalar", T: 8 };
     tmp = new tmp("discord_protos.discord_notifications.v1.ChannelNotificationSettings", items, new.target);
-    // ThrowIfThisInitialized (0x7c)
     return tmp;
   }
 }
@@ -1039,7 +943,7 @@ prototype7["create"] = function create(arr) {
   }
   return obj;
 };
-prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
+prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField, arg3) {
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -1048,8 +952,7 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
   const sum = pos.pos + arg1;
   if (pos.pos < sum) {
     do {
-      let tmp3 = callback;
-      let tmp4 = callback(pos.tag(), 2);
+      let tmp4 = _slicedToArray(pos.tag(), 2);
       [tmp5, tmp6] = tmp4;
       if (1 === tmp5) {
         let str4 = pos.fixed64();
@@ -1057,12 +960,7 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
       } else if (7 === tmp5) {
         obj.messageNotifications = pos.uint32();
       } else if (3 === tmp5) {
-        let tmp22 = require;
-        let tmp23 = dependencyMap;
-        let MuteNotificationSettings = create3.MuteNotificationSettings;
-        let tmp24 = MuteNotificationSettings;
-        let tmp25 = pos;
-        let tmp26 = readUnknownField;
+        let MuteNotificationSettings = mute.MuteNotificationSettings;
         obj.mute = MuteNotificationSettings.internalBinaryRead(pos, pos.uint32(), readUnknownField, obj.mute);
       } else if (4 === tmp5) {
         obj.collapsed = pos.bool();
@@ -1075,25 +973,16 @@ prototype7["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUn
           let str = ") for ";
           let str2 = " (wire type ";
           let str3 = "Unknown field ";
-          let tmp16 = tmp5;
-          let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
-          let tmp21 = error;
+          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           throw error;
         } else {
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              let tmp8 = require;
-              let tmp9 = dependencyMap;
               onRead = _mod1188.UnknownFieldHandler.onRead;
             }
-            let tmp10 = obj;
-            let tmp11 = tmp5;
-            let tmp12 = tmp6;
-            let tmp13 = skipResult;
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
         }
@@ -1112,7 +1001,7 @@ prototype7["internalBinaryWrite"] = function internalBinaryWrite(channelId, tag,
     const tagResult1 = tag.tag(7, _mod1188.WireType.Varint);
   }
   if (channelId.mute) {
-    const MuteNotificationSettings = create3.MuteNotificationSettings;
+    const MuteNotificationSettings = mute.MuteNotificationSettings;
     const tagResult2 = tag.tag(3, _mod1188.WireType.LengthDelimited);
     const joined = MuteNotificationSettings.internalBinaryWrite(channelId.mute, tag.tag(3, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields).join();
     const internalBinaryWriteResult = MuteNotificationSettings.internalBinaryWrite(channelId.mute, tag.tag(3, _mod1188.WireType.LengthDelimited).fork(), writeUnknownFields);
@@ -1139,15 +1028,15 @@ const items6 = [
     name: "mute",
     kind: "message",
     T() {
-      return callback(table[4]).MuteNotificationSettings;
+      return require("mute").MuteNotificationSettings;
     }
   },
   { no: 4, name: "collapsed", kind: "scalar", T: 8 }
 ];
-let tmp12 = new "internalBinaryRead"("discord_protos.discord_notifications.v1.ChannelNotificationSettings", items6, tmp4, GuildNotificationSettings$Type, "create", ChannelNotificationSettings$Type, "internalBinaryRead", items6, new.target, undefined, tmp, arg1, dependencyMap, new.target, tmp6, t);
-// ThrowIfThisInitialized (0x7c)
+let tmp12 = new "internalBinaryRead"("discord_protos.discord_notifications.v1.ChannelNotificationSettings", items6, tmp4, GuildNotificationSettings$Type, "create", ChannelNotificationSettings$Type, "internalBinaryRead", items6, new.target, undefined, tmp, fn, dependencyMap, new.target, tmp6, t);
 let closure_8 = tmp12;
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_notifications/v1/notification_settings.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/discord_notifications/v1/notification_settings.tsx");
 
 export const UserNotificationSettings = tmp6;
 export const EmailNotificationSettings = t;

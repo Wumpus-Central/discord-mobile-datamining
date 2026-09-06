@@ -2,20 +2,21 @@
 
 // Module 16107 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
-import closure_3 from "initializeFromUserSettings" /* 1960 */;
-import { FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME as closure_4 } from "date" /* 1970 */;
-import { ChannelTypes } from "ME" /* 1074 */;
+import _modDef3225 from "module_3225" /* 3225 */;
+import FavoritesHooks from "FavoritesHooks" /* 10224 */;
+import FavoriteStore from "FavoriteStore" /* 1960 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
+require = fn;
+let closure_4 = fn(1970).FAVORITES_AUTO_ADDED_THREADS_CATEGORY_NAME;
+const ChannelTypes = fn(1074).ChannelTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildCategoryFullNotice.tsx");
 
 export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
   let obj = initialize;
-  const items = [closure_3];
+  const items = [FavoriteStore];
   const stateFromStores = obj.useStateFromStores(items, () => autoAddJoinedThreads.autoAddJoinedThreads);
-  useFavoritesAccess;
+  FavoritesHooks;
   let tmp6 = null;
   if (stateFromStores) {
     tmp6 = null;
@@ -31,9 +32,9 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             if (formatted === closure_4.toLowerCase()) {
               obj = { label: null, tooltip: null };
               const intl = tmp(1114).intl;
-              obj[0] = intl.string(messagesProxyDefault.WsUrMD);
+              obj.label = intl.string(_modDef3225.WsUrMD);
               const intl2 = tmp(1114).intl;
-              obj[1] = intl2.string(messagesProxyDefault.dW9Kov);
+              obj.tooltip = intl2.string(_modDef3225.dW9Kov);
               tmp6 = obj;
             }
             str = str.trim();

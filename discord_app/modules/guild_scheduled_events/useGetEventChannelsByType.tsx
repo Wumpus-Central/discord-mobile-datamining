@@ -1,18 +1,16 @@
-// === Module 9726: getEventChannelsByType ===
+// === Module 9726: useGetEventChannelsByType ===
 
-// Module 9726 (getEventChannelsByType)
-import canManageResource from "canManageResource" /* 9671 */;
-import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import closure_3 from "comparator" /* 2012 */;
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 2012 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import VIEW_CHANNEL from "VIEW_CHANNEL" /* 9672 */;
+// Module 9726 (useGetEventChannelsByType)
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9671 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-require = arg1;
-function getEventChannelsByType(id, channelTypeFromEntity) {
-  let tmp = arg2;
-  if (arg2 === undefined) {
-    const items = [closure_3];
+require = fn;
+function getEventChannelsByType(id, channelTypeFromEntity, items) {
+  let tmp = items;
+  if (items === undefined) {
+    items = [GuildChannelStore];
     tmp = items;
   }
   [obj] = tmp;
@@ -24,24 +22,18 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
     for (const item10016 of tmp17) {
       let channel = item10016.channel;
       let obj2 = channel;
-      let tmp4 = require;
-      let tmp5 = dependencyMap;
-      let obj3 = canManageResource;
+      let obj3 = useManageResourcePermissions;
       let manageResourcePermissions = obj3.getManageResourcePermissions(channel);
       let canManageAllEvents = manageResourcePermissions.canCreateGuildEvent;
       if (!canManageAllEvents) {
         canManageAllEvents = manageResourcePermissions.canManageAllEvents;
       }
-      let tmp7 = canManageAllEvents;
-      let tmp8 = channel;
       if (obj2.type === arg1) {
-        let tmp9 = channel;
         let isGuildVoiceResult = obj2.isGuildVoice();
         if (isGuildVoiceResult) {
           isGuildVoiceResult = canManageAllEvents;
         }
         if (!isGuildVoiceResult) {
-          let tmp11 = channel;
           let isGuildStageVoiceResult = obj2.isGuildStageVoice();
           if (isGuildStageVoiceResult) {
             isGuildStageVoiceResult = canManageAllEvents;
@@ -49,7 +41,6 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
           isGuildVoiceResult = isGuildStageVoiceResult;
         }
         if (isGuildVoiceResult) {
-          let tmp13 = channel;
           let arr = items1.push(obj2);
         }
       }
@@ -58,17 +49,20 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
     return items1;
   }
 }
-({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_6, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: error } = VIEW_CHANNEL);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
+const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
+const PermissionsConstants = fn(9672);
+({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: metroRequire, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_7 } = PermissionsConstants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
 
 export const useCanCreateEventInStageChannel = function useCanCreateEventInStageChannel(isGuildStageVoice) {
-  const _require = isGuildStageVoice;
-  const items = [closure_5];
+  _require = isGuildStageVoice;
+  const items = [PermissionStore];
   const items1 = [isGuildStageVoice];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_5.can(closure_1_7, closure_0), items1);
-  const obj = _require(504);
-  const items2 = [closure_2];
-  const stateFromStores1 = _require(504).useStateFromStores(items2, () => closure_1_2.getStageInstanceByChannel(isGuildStageVoice.id));
+  const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(React5, closure_0), items1);
+  const obj = require("initialize");
+  const items2 = [StageInstanceStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => StageInstanceStore.getStageInstanceByChannel(isGuildStageVoice.id));
   let tmp3 = isGuildStageVoice.isGuildStageVoice() && stateFromStores;
   if (tmp3) {
     tmp3 = null == stateFromStores1;
@@ -76,21 +70,21 @@ export const useCanCreateEventInStageChannel = function useCanCreateEventInStage
   return tmp3;
 };
 export const useCanCreateEventInVoiceChannel = function useCanCreateEventInVoiceChannel(isGuildVoice) {
-  const _require = isGuildVoice;
-  const items = [closure_5];
+  _require = isGuildVoice;
+  const items = [PermissionStore];
   const items1 = [isGuildVoice];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_5.can(closure_1_6, closure_0), items1);
-  const obj = _require(504);
+  const stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(timestampProducer, closure_0), items1);
+  const obj = require("initialize");
   return isGuildVoice.isGuildVoice() && stateFromStores;
 };
 export { getEventChannelsByType };
 export const useGetEventChannelsByType = function useGetEventChannelsByType(id, channelType) {
-  const _require = id;
+  _require = id;
   dependencyMap = channelType;
-  let items = [closure_3];
+  let items = [GuildChannelStore];
   const items1 = [id, channelType];
-  return _require(504).useStateFromStoresArray(items, () => {
-    const items = [closure_1_3];
-    return closure_1_8(closure_0, closure_1, items);
+  return require("initialize").useStateFromStoresArray(items, () => {
+    const items = [GuildChannelStore];
+    return getEventChannelsByType(closure_0, closure_1, items);
   }, items1);
 };

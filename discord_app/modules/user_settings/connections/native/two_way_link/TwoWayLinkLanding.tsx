@@ -1,34 +1,36 @@
 // === Module 9225: TwoWayLinkLanding ===
 
 // Module 9225 (TwoWayLinkLanding)
-import noopAll from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "set" /* 5281 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import TableRow from "TableRow" /* 5605 */;
+import noop from "module_19" /* 19 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 
-const require = arg1;
-noopAll;
-({ Image: obj1, View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles({ image: { marginBottom: 32 }, valueProps: { marginTop: 24, maxWidth: "100%" } });
-const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkLanding.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ image: { marginBottom: 32 }, valueProps: { marginTop: 24, maxWidth: "100%" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkLanding.tsx");
 
 export const TwoWayLinkLanding = function TwoWayLinkLanding(learnMoreLink) {
   ({ platformType: require, imgStyle, headerConnect, headerReconnect, valueProps } = learnMoreLink);
   learnMoreLink = learnMoreLink.learnMoreLink;
   ({ img, body, onNext } = learnMoreLink);
-  const tmp = callback();
-  let obj = require(valueProps[5]);
+  const tmp = closure_8();
+  let obj = require("TwoWayLinkStyles");
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj1 = require(valueProps[6]);
-  const items = [closure_5];
+  require("initialize");
+  const items = [ConnectedAccountsStore];
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
-  obj1 = { source: img, style: null };
+  const obj1 = { source: img, style: null };
   const items1 = [tmp.image, ];
   const stateFromStores = obj1.useStateFromStores(items, () => {
-    const account = closure_1_5.getAccount(null, closure_0);
+    const account = ConnectedAccountsStore.getAccount(null, require);
     let twoWayLink;
     if (account != null) {
       twoWayLink = account.twoWayLink;
@@ -39,7 +41,7 @@ export const TwoWayLinkLanding = function TwoWayLinkLanding(learnMoreLink) {
     imgStyle = false;
   }
   items1[1] = imgStyle;
-  obj1[1] = items1;
+  obj1.style = items1;
   const items2 = [closure_6(closure_2, obj1), , , ];
   const obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, accessibilityRole: "header", children: null };
   let tmp11 = headerConnect;
@@ -49,27 +51,25 @@ export const TwoWayLinkLanding = function TwoWayLinkLanding(learnMoreLink) {
       tmp11 = headerReconnect;
     }
   }
-  obj2[4] = tmp11;
-  items2[1] = closure_6(require(valueProps[7]).Text, obj2);
-  items2[2] = closure_6(require(valueProps[7]).Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body });
+  obj2.children = tmp11;
+  items2[1] = closure_6(require("Text/Text").Text, obj2);
+  items2[2] = closure_6(require("Text/Text").Text, { variant: "text-md/medium", color: "text-default", style: twoWayLinkStyles.body, children: body });
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
-    children: valueProps.map((label) => {
+    children: valueProps.map((label, index) => {
       label = label.label;
       ({ subLabel, icon } = label);
-      return closure_1_6(closure_1_0(valueProps[8]).TableRow, { start: 0 === arg1, end: arg1 === valueProps.length - 1, subLabel, label: closure_1_6(closure_1_0(valueProps[7]).Text, { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: label }), icon: closure_1_6(closure_1_0(valueProps[8]).TableRow.Icon, { IconComponent: icon }) }, label);
+      return timestampProducer(TableRow.TableRow, { start: 0 === index, end: index === valueProps.length - 1, subLabel, label: timestampProducer(Text_Text.Text, { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: label }), icon: timestampProducer(TableRow.TableRow.Icon, { IconComponent: icon }) }, label);
     })
   });
-  obj[1] = items2;
+  obj.children = items2;
   const items3 = [closure_7(closure_3, obj), ];
   let tmp9Result = null;
   if (null != learnMoreLink) {
-    const obj5 = { variant: "text-md/normal", color: "text-default", style: null, children: null };
-    obj5[2] = twoWayLinkStyles.body;
+    const obj5 = { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: null };
     const intl = tmp2(tmp3[9]).intl;
-    const obj6 = { helpCenterLink: null };
-    obj6[0] = learnMoreLink;
-    obj5[3] = intl.format(tmp2(tmp3[9]).t["/l3n+1"], obj6);
+    const obj6 = { helpCenterLink: learnMoreLink };
+    obj5.children = intl.format(tmp2(tmp3[9]).t["/l3n+1"], obj6);
     tmp9Result = tmp9(tmp2(tmp3[7]).Text, obj5);
   }
   items3[1] = tmp9Result;
@@ -78,11 +78,11 @@ export const TwoWayLinkLanding = function TwoWayLinkLanding(learnMoreLink) {
   const obj8 = { spacing: 8, direction: "vertical", style: twoWayLinkStyles.footerButton, children: null };
   const obj9 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl2 = tmp2(tmp3[9]).intl;
-  obj9[2] = intl2.string(require(valueProps[9]).t.LhlgY9);
-  obj9[3] = onNext;
-  obj8[3] = closure_6(require(valueProps[12]).Button, obj9);
-  obj7[2] = closure_6(require(valueProps[11]).Stack, obj8);
-  items4[1] = closure_6(require(valueProps[10]).SafeAreaPaddingView, obj7);
-  obj[1] = items4;
+  obj9.text = intl2.string(require("util").t.LhlgY9);
+  obj9.onPress = onNext;
+  obj8.children = closure_6(require("components/Button/Button").Button, obj9);
+  obj7.children = closure_6(require("Stack/Stack").Stack, obj8);
+  items4[1] = closure_6(require("common/SafeAreaView").SafeAreaPaddingView, obj7);
+  obj.children = items4;
   return closure_7(closure_3, obj);
 };

@@ -1,8 +1,8 @@
-// === Module 16498: thumbHashToRGBA ===
+// === Module 16498: ThumbhashUtils ===
 
-// Module 16498 (thumbHashToRGBA)
-import set from "set" /* 2 */;
+// Module 16498 (ThumbhashUtils)
 import thumbHashToRGBA2 from "thumbHashToRGBA" /* 15194 */;
+import size from "module_2" /* 2 */;
 
 function thumbHashToRGBA(arg0) {
   let obj = arg1;
@@ -17,7 +17,7 @@ function thumbHashToRGBA(arg0) {
   if (num2 === undefined) {
     num2 = 1;
   }
-  let diff1 = arg0[0] | arg0[1] << 8 | arg0[2] << 16;
+  const tmp3 = (arg0[0] | arg0[1] << 8 | arg0[2] << 16) >> 23;
   if ((arg0[3] | arg0[4] << 8) >> 15) {
     let num3 = 7;
     if (tmp3) {
@@ -38,12 +38,12 @@ function thumbHashToRGBA(arg0) {
   }
   const maxResult1 = max(3, num4);
   let num5 = 1;
-  if (diff1 >> 23) {
+  if (tmp3) {
     num5 = (15 & arg0[5]) / 15;
   }
   let num6 = 5;
   const result = (arg0[5] >> 4) / 15;
-  if (diff1 >> 23) {
+  if (tmp3) {
     num6 = 6;
   }
   const items = [];
@@ -52,8 +52,6 @@ function thumbHashToRGBA(arg0) {
   let num9 = 0;
   if (0 < maxResult1) {
     do {
-      let tmp10 = num7;
-      let tmp11 = num8;
       let num10 = 1;
       if (num8) {
         num10 = 0;
@@ -80,8 +78,6 @@ function thumbHashToRGBA(arg0) {
   const items1 = [];
   let num11 = 0;
   do {
-    let tmp20 = num9;
-    let tmp21 = num11;
     let num12 = 1;
     if (num11) {
       num12 = 0;
@@ -106,8 +102,6 @@ function thumbHashToRGBA(arg0) {
   const items2 = [];
   let num13 = 0;
   do {
-    let tmp30 = tmp24;
-    let tmp31 = num13;
     let num14 = 1;
     if (num13) {
       num14 = 0;
@@ -130,11 +124,9 @@ function thumbHashToRGBA(arg0) {
     tmp24 = tmp34;
   } while (num13 < 3);
   const items3 = [];
-  if (diff1 >> 23) {
+  if (tmp3) {
     let num15 = 0;
     do {
-      let tmp40 = tmp34;
-      let tmp41 = num15;
       let num16 = 1;
       if (num15) {
         num16 = 0;
@@ -173,19 +165,16 @@ function thumbHashToRGBA(arg0) {
   const h = round(num18);
   const rgba = new Uint8Array(w * h * 4);
   const items4 = [];
-  const result10 = (63 & diff1) / 63;
+  const result10 = (63 & tmp) / 63;
   let num19 = 0;
   let num20 = 0;
   if (0 < h) {
     do {
-      let sum14 = num19;
-      let tmp58 = num20;
+      let sum16 = num19;
       let num21 = 0;
       let tmp59 = num19;
       if (0 < w) {
         do {
-          let tmp60 = num21;
-          let tmp61 = sum14;
           let num22 = 3;
           if (tmp3) {
             num22 = 5;
@@ -208,9 +197,6 @@ function thumbHashToRGBA(arg0) {
           let tmp66 = result10;
           if (0 < maxResult1) {
             do {
-              let tmp67 = num26;
-              let tmp68 = num27;
-              let tmp69 = tmp65;
               let num28 = 1;
               if (num27) {
                 num28 = 0;
@@ -222,9 +208,6 @@ function thumbHashToRGBA(arg0) {
               if (num28 * maxResult1 < maxResult * (maxResult1 - num27)) {
                 do {
                   let tmp75 = num28 > num;
-                  let tmp76 = num28;
-                  let tmp77 = sum10;
-                  let tmp78 = tmp72;
                   if (!tmp75) {
                     tmp75 = num27 > num;
                   }
@@ -251,10 +234,6 @@ function thumbHashToRGBA(arg0) {
           let tmp81 = tmp54;
           let tmp82 = tmp53;
           do {
-            let tmp83 = num29;
-            let tmp84 = num30;
-            let tmp85 = tmp81;
-            let tmp86 = tmp82;
             let num31 = 1;
             if (num30) {
               num31 = 0;
@@ -289,40 +268,39 @@ function thumbHashToRGBA(arg0) {
           let tmp97 = num5;
           if (tmp3) {
             do {
-              let tmp98 = num32;
-              let tmp99 = num33;
-              diff1 = tmp96;
               let num34 = 1;
               if (num33) {
                 num34 = 0;
               }
-              diff1 = 5 - num33;
-              diff1 = num32;
-              diff1 = tmp96;
-              diff1 = num32;
-              diff1 = tmp96;
+              let diff1 = 5 - num33;
+              let sum15 = num32;
+              let sum14 = tmp96;
+              let tmp105 = num32;
+              let tmp106 = tmp96;
               if (num34 < diff1) {
                 do {
-                  diff1 = diff1 + tmp39[diff1] * items4[num34] * diff1;
+                  sum14 = sum14 + tmp39[sum15] * items4[num34] * tmp101;
                   num34 = num34 + 1;
-                  diff1 = diff1 + 1;
+                  sum15 = sum15 + 1;
+                  tmp105 = sum15;
+                  tmp106 = sum14;
                 } while (num34 < diff1);
               }
               num33 = num33 + 1;
-              num32 = diff1;
-              tmp96 = diff1;
-              tmp97 = diff1;
+              num32 = tmp105;
+              tmp96 = tmp106;
+              tmp97 = tmp106;
             } while (num33 < 5);
           }
-          diff1 = tmp66 - 0.6666666666666666 * tmp94;
-          diff1 = (3 * tmp66 - diff1 + tmp93) / 2;
-          rgba[sum14] = max(0, 255 * min(1, diff1));
-          rgba[sum14 + 1] = max(0, 255 * min(1, diff1 - tmp93));
-          rgba[sum14 + 2] = max(0, 255 * min(1, diff1));
-          rgba[sum14 + 3] = max(0, 255 * min(1, tmp97));
+          let diff2 = tmp66 - 0.6666666666666666 * tmp94;
+          let result12 = (3 * tmp66 - diff2 + tmp93) / 2;
+          rgba[sum16] = max(0, 255 * min(1, result12));
+          rgba[sum16 + 1] = max(0, 255 * min(1, result12 - tmp93));
+          rgba[sum16 + 2] = max(0, 255 * min(1, diff2));
+          rgba[sum16 + 3] = max(0, 255 * min(1, tmp97));
           num21 = num21 + 1;
-          sum14 = sum14 + 4;
-          tmp59 = sum14;
+          sum16 = sum16 + 4;
+          tmp59 = sum16;
         } while (num21 < w);
       }
       num20 = num20 + 1;
@@ -331,7 +309,7 @@ function thumbHashToRGBA(arg0) {
   }
   return { w, h, rgba };
 }
-let result = set.fileFinishedImporting("modules/thumbhash/ThumbhashUtils.tsx");
+let result = size.fileFinishedImporting("modules/thumbhash/ThumbhashUtils.tsx");
 
 export const createThumbhashImageFromPlaceholder = function createThumbhashImageFromPlaceholder(placeholder) {
   const tmp = thumbHashToRGBA(Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0)), { detail: 1, pop: 1.1 });

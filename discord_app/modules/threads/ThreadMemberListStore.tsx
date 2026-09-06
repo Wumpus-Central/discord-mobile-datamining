@@ -1,22 +1,21 @@
-// === Module 9837: handleUserUpdate ===
+// === Module 9837: ThreadMemberListStore ===
 
-// Module 9837 (handleUserUpdate)
-import applyDefault from "apply" /* 12 */;
+// Module 9837 (ThreadMemberListStore)
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import applyOverwritesAll from "applyOverwrites" /* 4204 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import closure_7 from "handleConnectionOpenOrResumed" /* 7278 */;
-import closure_8 from "sortActivity" /* 4600 */;
-import closure_9 from "filterPlayingActivities" /* 5279 */;
-import closure_10 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildSubscriptionsStore from "GuildSubscriptionsStore" /* 7278 */;
+import PresenceStore from "PresenceStore" /* 4600 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function handleUserUpdate(user) {
   const id = user.user.id;
   let flag = false;
@@ -27,8 +26,6 @@ function handleUserUpdate(user) {
     if (keys !== undefined) {
       flag3 = flag2;
       while (keys[tmp] !== undefined) {
-        let tmp6 = tmp5;
-        let tmp7 = dependencyMap;
         let obj = dependencyMap[tmp5];
         if (!obj.updateUserId(id)) {
           continue;
@@ -50,12 +47,9 @@ function handleGuildRoleUpdateOrDelete(arg0) {
   if (keys !== undefined) {
     flag2 = flag;
     while (keys[tmp] !== undefined) {
-      let tmp8 = tmp5;
-      let tmp9 = dependencyMap;
       if (dependencyMap[tmp5].guildId !== tmp2) {
         continue;
       } else {
-        let tmp6 = dependencyMap;
         let obj = dependencyMap[tmp5];
         let rebuildResult = obj.rebuild();
         flag = true;
@@ -66,24 +60,24 @@ function handleGuildRoleUpdateOrDelete(arg0) {
   }
   return flag2;
 }
-({ StatusTypes: unpackModuleId, Permissions: closure_12 } = ME);
-let closure_13 = {};
+const Constants = fn(1074);
+({ StatusTypes: closure_11, Permissions: closure_12 } = Constants);
+const dependencyMap = {};
 class MemberList {
   constructor(arg0, arg1, arg2) {
-    obj = Object.create(new.target.prototype);
-    obj[1] = {};
+    merged = Object.assign({ version: 0, sections: null, allUserIds: null });
+    merged[1] = {};
     set = new Set();
-    obj[2] = set;
-    obj.guildId = global;
-    obj.parentId = arg1;
-    obj.threadId = importDefault;
-    return obj;
+    merged[2] = set;
+    merged.guildId = global;
+    merged.parentId = fn;
+    merged.threadId = importDefault;
+    return merged;
   }
 }
 const prototype = MemberList.prototype;
 prototype["rebuild"] = function rebuild(items) {
-  let self = this;
-  self = this;
+  const self = this;
   this.version = this.version + 1;
   this.sections = {};
   if (null != items) {
@@ -91,32 +85,31 @@ prototype["rebuild"] = function rebuild(items) {
     const set = new Set(items);
     self.allUserIds = set;
   }
-  const channel = store.getChannel(self.parentId);
+  const channel = ChannelStore.getChannel(self.parentId);
   const tmp7 = self(12);
   const mapped = self(12)(Array.from(self.allUserIds)).map((userId) => {
-    const tmp = closure_1_4(self.calculateNewState(userId, closure_0), 3);
+    const tmp = _slicedToArray(self.calculateNewState(userId, closure_0), 3);
     return { userId, sectionId: tmp[0], displayName: tmp[1], canViewChannel: tmp[2] };
   });
-  const sorted = mapped.sort((userId, userId2) => self(table[9]).compare(userId.userId, userId2.userId));
+  const sorted = mapped.sort((userId, userId2) => self(dependencyMap[9]).compare(userId.userId, userId2.userId));
   const tmp7Result = self(12)(Array.from(self.allUserIds));
   const item = sorted.sortBy((displayName) => displayName.displayName).forEach((userId) => {
     self.addUser(userId.userId, userId.sectionId, userId.displayName, userId.canViewChannel, true);
   });
 };
 prototype["updateMultipleUserIds"] = function updateMultipleUserIds(mapped, guildId) {
-  let self = this;
-  self = this;
+  const self = this;
   if (!(null == guildId || self.guildId === guildId)) {
     return tmp;
   } else {
-    const found = mapped.filter((arg0) => {
+    const found = mapped.filter((item) => {
       const allUserIds = self.allUserIds;
-      return allUserIds.has(arg0);
+      return allUserIds.has(item);
     });
     let flag = 0 !== found.length;
     if (flag) {
       if (found.length <= 50) {
-        const item = found.forEach((id) => self.updateUserId(id));
+        const item = found.forEach((item) => self.updateUserId(item));
         flag = true;
       }
     }
@@ -128,9 +121,9 @@ prototype["updateUserId"] = function updateUserId(id) {
   const self = this;
   const allUserIds = this.allUserIds;
   if (allUserIds.has(id)) {
-    const tmp2 = callback(self.findOldState(id), 3);
+    const tmp2 = _slicedToArray(self.findOldState(id), 3);
     const first = tmp2[0];
-    [tmp6, tmp7, tmp8] = callback(self.calculateNewState(id, store.getChannel(self.parentId)), 3);
+    [tmp6, tmp7, tmp8] = _slicedToArray(self.calculateNewState(id, ChannelStore.getChannel(self.parentId)), 3);
     let flag2 = first !== tmp6 || tmp2[1] !== tmp7 || tmp2[2] !== tmp8;
     if (flag2) {
       self.removeUserId(id, first);
@@ -143,20 +136,19 @@ prototype["updateUserId"] = function updateUserId(id) {
   }
 };
 prototype["addUserId"] = function addUserId(userId) {
-  const tmp = callback(this.calculateNewState(userId, store.getChannel(this.parentId)), 3);
+  const tmp = _slicedToArray(this.calculateNewState(userId, ChannelStore.getChannel(this.parentId)), 3);
   this.addUser(userId, tmp[0], tmp[1], tmp[2]);
 };
-prototype["removeUserId"] = function removeUserId(id, first) {
+prototype["removeUserId"] = function removeUserId(item, key10011) {
   const self = this;
   const allUserIds = this.allUserIds;
-  allUserIds.delete(id);
-  if (null != first) {
-    if (self.removeUserIdFromSection(id, first)) {
+  allUserIds.delete(item);
+  if (null != key10011) {
+    if (self.removeUserIdFromSection(item, key10011)) {
       return true;
     }
   }
   for (const key10011 in self.sections) {
-    let tmp2 = key10011;
     if (!self.removeUserIdFromSection(arg0, key10011)) {
       continue;
     } else {
@@ -166,56 +158,49 @@ prototype["removeUserId"] = function removeUserId(id, first) {
   }
   return false;
 };
-prototype["addUser"] = function addUser(arg0, arg1, arg2, arg3, arg4) {
+prototype["addUser"] = function addUser(userId, sectionId, displayName, canViewChannel, arg4) {
   const self = this;
   const allUserIds = this.allUserIds;
-  allUserIds.add(arg0);
-  const user = authStore.getUser(arg0);
+  allUserIds.add(userId);
+  const user = UserStore.getUser(userId);
   if (null != user) {
     if ("" !== user.username) {
-      if (!(arg1 in self.sections)) {
-        let obj = { sectionId: null, usersById: null, userIds: null };
-        obj[0] = arg1;
-        obj[1] = {};
-        obj[2] = [];
-        self.sections[arg1] = obj;
+      if (!(sectionId in self.sections)) {
+        let obj = { sectionId, usersById: {}, userIds: [] };
+        self.sections[sectionId] = obj;
       }
-      let sum = self.sections[arg1];
-      obj = { userId: null, displayName: null, canViewChannel: null };
-      obj[0] = arg0;
-      obj[1] = arg2;
-      obj[2] = arg3;
-      sum.usersById[arg0] = obj;
+      let sum = self.sections[sectionId];
+      obj = { userId, displayName, canViewChannel };
+      sum.usersById[userId] = obj;
       if (arg4) {
         const userIds = sum.userIds;
-        userIds.push(arg0);
+        userIds.push(userId);
       } else {
         const userIds1 = sum.userIds;
-        userIds1.splice(self.findUserIdSortedPosition(sum, arg0, arg2), 0, arg0);
+        userIds1.splice(self.findUserIdSortedPosition(sum, userId, displayName), 0, userId);
       }
       sum = self.version + 1;
       self.version = sum;
     }
   }
 };
-prototype["findUserIdSortedPosition"] = function findUserIdSortedPosition(sum, arg1, arg2) {
+prototype["findUserIdSortedPosition"] = function findUserIdSortedPosition(sum, userId, displayName) {
   const userIds = sum.userIds;
   let num = 0;
   if (0 < userIds.length) {
     while (true) {
       let tmp2 = userIds[num];
-      let displayName = tmp[tmp2].displayName;
-      let tmp3 = num;
-      if (displayName === arg2) {
-        if (arg1 < tmp2) {
+      displayName = tmp[tmp2].displayName;
+      if (displayName === displayName) {
+        if (userId < tmp2) {
           return num;
         }
       } else if (null == displayName) {
-        if (null != arg2) {
+        if (null != displayName) {
           return num;
         }
-      } else if (null != arg2) {
-        if (arg2 < displayName) {
+      } else if (null != displayName) {
+        if (displayName < displayName) {
           break;
         }
       }
@@ -225,17 +210,17 @@ prototype["findUserIdSortedPosition"] = function findUserIdSortedPosition(sum, a
   }
   return userIds.length;
 };
-prototype["removeUserIdFromSection"] = function removeUserIdFromSection(id, key10011) {
+prototype["removeUserIdFromSection"] = function removeUserIdFromSection(item, key10011) {
   const self = this;
-  closure_0 = id;
+  closure_0 = item;
   let tmp4 = null != key10011;
   if (tmp4) {
-    let flag = id in tmp3.usersById;
+    let flag = item in tmp3.usersById;
     if (flag) {
       const usersById = tmp3.usersById;
       delete tmp[tmp2];
       const userIds = tmp3.userIds;
-      tmp3.userIds = userIds.filter((arg0) => arg0 !== closure_0);
+      tmp3.userIds = userIds.filter((item) => item !== closure_0);
       self.version = self.version + 1;
       flag = true;
     }
@@ -245,7 +230,6 @@ prototype["removeUserIdFromSection"] = function removeUserIdFromSection(id, key1
 };
 prototype["findOldState"] = function findOldState(id) {
   for (const key10004 in this.sections) {
-    let tmp2 = key10004;
     let tmp3 = tmp.sections[key10004];
     if (!(arg0 in tmp3.usersById)) {
       continue;
@@ -259,9 +243,9 @@ prototype["findOldState"] = function findOldState(id) {
   return items1;
 };
 prototype["calculateNewState"] = function calculateNewState(userId, channel) {
-  member = member.getMember(this.guildId, userId);
-  const user = authStore.getUser(userId);
-  const currentUser = authStore.getCurrentUser();
+  const member = GuildMemberStore.getMember(this.guildId, userId);
+  const user = UserStore.getUser(userId);
+  const currentUser = UserStore.getCurrentUser();
   let id;
   if (user != null) {
     id = user.id;
@@ -271,17 +255,13 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
     id1 = currentUser.id;
   }
   if (id === id1) {
-    let status = status2.getStatus();
+    let status = SelfPresenceStore.getStatus();
   } else {
-    status = status.getStatus(userId, this.guildId);
+    status = PresenceStore.getStatus(userId, this.guildId);
   }
   let canResult = null != user && null != channel;
   if (canResult) {
-    let obj = applyOverwritesAll;
-    obj = { permission: null, user: null, context: null };
-    obj[0] = constants2.VIEW_CHANNEL;
-    obj[1] = user;
-    obj[2] = channel;
+    const obj = { permission: constants2.VIEW_CHANNEL, user, context: channel };
     canResult = obj.can(obj);
   }
   let str = "offline";
@@ -303,8 +283,7 @@ prototype["calculateNewState"] = function calculateNewState(userId, channel) {
     nick = member.nick;
   }
   if (nick == null) {
-    nick = nameFromUserDefault.getName(user);
-    const obj3 = nameFromUserDefault;
+    nick = UserUtilsDefault.getName(user);
   }
   const items = [str, , ];
   let formatted;
@@ -320,8 +299,8 @@ class ThreadMemberListStore extends Store {
 }
 const prototype2 = ThreadMemberListStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_6, closure_7, closure_8, closure_9, closure_10);
-  const items = [closure_7];
+  this.waitFor(ChannelStore, GuildMemberStore, GuildSubscriptionsStore, PresenceStore, SelfPresenceStore, UserStore);
+  const items = [GuildSubscriptionsStore];
   this.syncWith(items, () => {
     subscribedThreadIds = subscribedThreadIds.getSubscribedThreadIds();
     let flag = false;
@@ -330,11 +309,9 @@ prototype2["initialize"] = function initialize() {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp8 = tmp6;
         if (subscribedThreadIds.has(tmp6)) {
           continue;
         } else {
-          let tmp7 = closure_13;
           delete tmp2[tmp3];
           flag = true;
           continue;
@@ -344,7 +321,7 @@ prototype2["initialize"] = function initialize() {
     }
     return flag2;
   });
-  const items1 = [closure_9];
+  const items1 = [SelfPresenceStore];
   this.syncWith(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
@@ -359,9 +336,7 @@ prototype2["initialize"] = function initialize() {
       if (keys !== undefined) {
         flag3 = flag2;
         while (keys[tmp] !== undefined) {
-          let tmp8 = tmp7;
-          let tmp9 = table;
-          let obj = table[tmp7];
+          let obj = dependencyMap[tmp7];
           if (!obj.updateUserId(id)) {
             continue;
           } else {
@@ -376,16 +351,16 @@ prototype2["initialize"] = function initialize() {
     return flag;
   });
 };
-prototype2["getMemberListVersion"] = function getMemberListVersion(closure_0) {
+prototype2["getMemberListVersion"] = function getMemberListVersion(arg0) {
   let version;
-  if (dependencyMap[closure_0] != null) {
+  if (dependencyMap[arg0] != null) {
     version = tmp.version;
   }
   return version;
 };
-prototype2["getMemberListSections"] = function getMemberListSections(closure_0) {
+prototype2["getMemberListSections"] = function getMemberListSections(thread) {
   let sections;
-  if (dependencyMap[closure_0] != null) {
+  if (dependencyMap[thread] != null) {
     sections = tmp.sections;
   }
   return sections;
@@ -409,20 +384,20 @@ prototype2["canUserViewChannel"] = function canUserViewChannel(arg0, arg1, arg2)
   }
 };
 ThreadMemberListStore.displayName = "ThreadMemberListStore";
-const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
+const threadMemberListStore = new ThreadMemberListStore(DispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     closure_13 = {};
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(id) {
-    closure_0 = id;
-    if (id.id in closure_13) {
+    const user = id;
+    if (id.id in dependencyMap) {
       const addedMembers = id.addedMembers;
       if (addedMembers != null) {
-        const item = addedMembers.forEach((userId) => closure_1_13[user.id].addUserId(userId.userId));
+        const item = addedMembers.forEach((userId) => dependencyMap[user.id].addUserId(userId.userId));
       }
       const removedMemberIds = id.removedMemberIds;
       if (removedMemberIds != null) {
-        const item1 = removedMemberIds.forEach((id) => closure_1_13[user.id].removeUserId(id));
+        const item1 = removedMemberIds.forEach((item) => dependencyMap[user.id].removeUserId(item));
       }
     } else {
       return false;
@@ -460,12 +435,9 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp7 = tmp4;
-        let tmp8 = dependencyMap;
         if (!set.has(dependencyMap[tmp4].parentId)) {
           continue;
         } else {
-          let tmp5 = dependencyMap;
           let obj2 = dependencyMap[tmp4];
           let rebuildResult = obj2.rebuild();
           flag = true;
@@ -478,28 +450,26 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(guildId) {
     ({ threadId, members } = guildId);
-    const channel = store.getChannel(threadId);
+    const channel = ChannelStore.getChannel(threadId);
     let parent_id;
     if (channel != null) {
       parent_id = channel.parent_id;
     }
     if (null != parent_id) {
-      if (typeof MemberList !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof MemberList === "function") {
+        const merged = Object.assign({ version: 0, sections: null, allUserIds: null });
+        merged[1] = {};
+        const _Set = Set;
+        const set = new Set();
+        merged[2] = set;
+        merged.guildId = guildId.guildId;
+        merged.parentId = parent_id;
+        merged.threadId = threadId;
+        tmp11[threadId] = merged;
+        dependencyMap[threadId].rebuild(members.map((user_id) => user_id.user_id));
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      let obj = Object.create(MemberList.prototype);
-      obj[1] = {};
-      const _Set = Set;
-      const set = new Set();
-      obj[2] = set;
-      obj.guildId = guildId.guildId;
-      obj.parentId = parent_id;
-      obj.threadId = threadId;
-      dependencyMap[threadId] = obj;
-      obj = dependencyMap[threadId];
-      obj.rebuild(members.map((user_id) => user_id.user_id));
-      const tmp11 = dependencyMap;
-      const tmp12 = MemberList;
     }
   },
   USER_UPDATE: handleUserUpdate,
@@ -515,9 +485,7 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
         if (keys !== undefined) {
           flag3 = flag2;
           while (keys[tmp] !== undefined) {
-            let tmp6 = tmp5;
-            let tmp7 = table;
-            let obj = table[tmp5];
+            let obj = dependencyMap[tmp5];
             if (!obj.updateUserId(id)) {
               continue;
             } else {
@@ -531,13 +499,13 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
       }
       return flag;
     });
-    return mapped.some((arg0) => arg0);
+    return mapped.some((item) => item);
   },
   GUILD_MEMBER_ADD: handleUserUpdate,
   GUILD_MEMBER_UPDATE: handleUserUpdate,
   GUILD_MEMBER_REMOVE: handleUserUpdate,
   PRESENCES_REPLACE: function handlePresenceReplace(presences) {
-    const mapped = applyDefault(presences.presences).map((user) => {
+    const mapped = _modDef12(presences.presences).map((user) => {
       user = user.user;
       let id;
       if (user != null) {
@@ -545,8 +513,8 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
       }
       return id;
     });
-    const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
-    const arr = applyDefault(presences.presences);
+    const found = mapped.filter(GlobalUtils.isNotNullish);
+    const arr = _modDef12(presences.presences);
     let flag = false;
     let flag2 = false;
     const iter = found.uniq();
@@ -554,8 +522,6 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
     if (keys !== undefined) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
-        let tmp6 = tmp5;
-        let tmp7 = dependencyMap;
         let obj2 = dependencyMap[tmp5];
         if (!obj2.updateMultipleUserIds(valueResult)) {
           continue;
@@ -573,13 +539,8 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
     for (const item10009 of tmp) {
       ({ guildId, members } = item10009);
       let mapped = members.map((user) => user.user.id);
-      let tmp3 = dependencyMap;
       for (const key10018 in closure_13) {
-        let tmp4 = key10018;
-        let tmp5 = dependencyMap;
         let obj = dependencyMap[key10018];
-        let tmp6 = mapped;
-        let tmp7 = guildId;
         if (!obj.updateMultipleUserIds(mapped, guildId)) {
           continue;
         } else {
@@ -596,7 +557,7 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
   GUILD_ROLE_DELETE: handleGuildRoleUpdateOrDelete,
   PASSIVE_UPDATE_V2: function handlePassiveUpdateV2(members) {
     members = members.members;
-    return members.reduce((arg0, user) => {
+    return members.reduce((acc, user) => {
       const id = user.user.id;
       let flag = false;
       if (null != id) {
@@ -606,9 +567,7 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
         if (keys !== undefined) {
           flag3 = flag2;
           while (keys[tmp] !== undefined) {
-            let tmp6 = tmp5;
-            let tmp7 = table;
-            let obj = table[tmp5];
+            let obj = dependencyMap[tmp5];
             if (!obj.updateUserId(id)) {
               continue;
             } else {
@@ -621,12 +580,13 @@ const threadMemberListStore = new ThreadMemberListStore(dispatcherDefault, {
         flag = flag3;
       }
       if (!flag) {
-        flag = arg0;
+        flag = acc;
       }
       return flag;
     }, false);
   }
 });
-const result = require("set").fileFinishedImporting("modules/threads/ThreadMemberListStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadMemberListStore.tsx");
 
 export default threadMemberListStore;

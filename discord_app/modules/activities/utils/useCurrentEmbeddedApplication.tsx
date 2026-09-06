@@ -3,9 +3,10 @@
 // Module 9632 (useCurrentEmbeddedApplication)
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
 import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 9633 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedApplication.tsx");
 
 export default function useCurrentEmbeddedApplication() {
   let obj = arg0;
@@ -22,6 +23,6 @@ export default function useCurrentEmbeddedApplication() {
   } else {
     items = [tmp.applicationId];
   }
-  const first = callback(useGetOrFetchApplicationsDefault(items, flag), 1)[0];
+  const first = _slicedToArray(useGetOrFetchApplicationsDefault(items, flag), 1)[0];
   return first;
 };

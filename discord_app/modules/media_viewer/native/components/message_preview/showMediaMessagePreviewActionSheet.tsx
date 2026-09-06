@@ -2,26 +2,22 @@
 
 // Module 12974 (showMediaMessagePreviewActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4527 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_viewer/native/components/message_preview/showMediaMessagePreviewActionSheet.tsx");
 
 export default function showMediaMessagePreviewActionSheet(message) {
   message = message.message;
-  channel = channel.getChannel(message.channelId);
+  const channel = ChannelStore.getChannel(message.channelId);
   if (null != channel) {
     if (null != message) {
-      user = user.getUser(message.author.id);
+      const user = UserStore.getUser(message.author.id);
       if (null != user) {
-        let obj = ACTION_SHEET_HEIGHT_HALFDefault;
-        obj = { channel: null, message: null, user: null, closeMediaModal: null };
-        obj[0] = channel;
-        obj[1] = message;
-        obj[2] = user;
-        obj[3] = message.closeMediaModal;
+        const obj = { channel, message, user, closeMediaModal: message.closeMediaModal };
         obj.openLazy(asyncRequireImpl(12975, dependencyMap.paths), "MediaMessagePreviewActionSheet", obj);
       }
     }

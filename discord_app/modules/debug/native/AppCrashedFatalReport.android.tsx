@@ -1,11 +1,11 @@
-// === Module 17926: init ===
+// === Module 17926: AppCrashedFatalReport ===
 
-// Module 17926 (init)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 17926 (AppCrashedFatalReport)
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const CrashReportingManager = get_ActivityIndicator.NativeModules.CrashReportingManager;
-const result = set.fileFinishedImporting("modules/debug/native/AppCrashedFatalReport.android.tsx");
+const CrashReportingManager = _mod17.NativeModules.CrashReportingManager;
+const result = size.fileFinishedImporting("modules/debug/native/AppCrashedFatalReport.android.tsx");
 
 export const init = function init() {
   CrashReportingManager.initializeManager();

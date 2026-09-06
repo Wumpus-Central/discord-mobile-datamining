@@ -1,26 +1,26 @@
 // === Module 9787: EditGuildScheduledEventResetWarningAlert ===
 
 // Module 9787 (EditGuildScheduledEventResetWarningAlert)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import { jsx } from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildScheduledEventResetWarningAlert.tsx");
 
 export default function EditGuildScheduledEventResetWarningAlert(arg0) {
   ({ onClose, onConfirm } = arg0);
   const obj = { onClose, onConfirm, title: null, body: null, confirmText: null, confirmColor: null, cancelText: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.aNCYas);
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.format(getSystemLocale.t.RWBa5X, {});
-  const intl3 = getSystemLocale.intl;
-  obj[4] = intl3.string(getSystemLocale.t["cY+Oob"]);
-  obj[5] = componentDidMountDefault.Colors.GREEN;
-  const intl4 = getSystemLocale.intl;
-  obj[6] = intl4.string(getSystemLocale.t["ETE/oC"]);
-  return jsx(componentDidMountDefault, { onClose, onConfirm, title: null, body: null, confirmText: null, confirmColor: null, cancelText: null });
+  const intl = util.intl;
+  obj.title = intl.string(util.t.aNCYas);
+  const intl2 = util.intl;
+  obj.body = intl2.format(util.t.RWBa5X, {});
+  const intl3 = util.intl;
+  obj.confirmText = intl3.string(util.t["cY+Oob"]);
+  obj.confirmColor = common_AlertDefault.Colors.GREEN;
+  const intl4 = util.intl;
+  obj.cancelText = intl4.string(util.t["ETE/oC"]);
+  return jsx(common_AlertDefault, { onClose, onConfirm, title: null, body: null, confirmText: null, confirmColor: null, cancelText: null });
 };

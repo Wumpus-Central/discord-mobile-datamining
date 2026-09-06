@@ -1,24 +1,24 @@
 // === Module 7499: getTimestampString ===
 
 // Module 7499 (getTimestampString)
-import set from "set" /* 2 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
 let c3 = 2592000;
 let c4 = 31104000;
-const result = set.fileFinishedImporting("modules/threads/getTimestampString.tsx");
+const result = size.fileFinishedImporting("modules/threads/getTimestampString.tsx");
 
-export default function getTimestampString(arg0, arg1) {
+export default function getTimestampString(arg0, fn) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
   }
   importDefault = undefined;
-  let obj;
-  obj = importDefault(obj[1])();
-  const diffResult = obj.diff(importDefault(obj[1])(arg0), "s");
+  let time;
+  const diffResult = require("module_4153")().diff(require("module_4153")(arg0), "s");
   let tmp4;
-  if (null != arg1) {
-    tmp4 = arg1();
+  if (null != fn) {
+    tmp4 = fn();
   }
   function formatString(minutes, diffResult) {
     if (tmp3) {
@@ -47,9 +47,8 @@ export default function getTimestampString(arg0, arg1) {
     if (null != tmp4) {
       let formatToPlainStringResult = tmp4;
       if (typeof tmp4 !== "string") {
-        const intl = flag(obj[0]).intl;
-        obj = { count: null };
-        obj[0] = diffResult;
+        const intl = util.intl;
+        const obj = { count: diffResult };
         formatToPlainStringResult = intl.formatToPlainString(tmp4, obj);
       }
       tmp7 = formatToPlainStringResult;
@@ -57,7 +56,7 @@ export default function getTimestampString(arg0, arg1) {
     return tmp7;
   }
   importDefault = tmp4;
-  obj = { seconds: flag(tmp2[0]).t.sMPmtq, minutes: flag(tmp2[0]).t.N9M4N1, hours: flag(tmp2[0]).t.p0KedC, days: flag(tmp2[0]).t.gjK5av, months: flag(tmp2[0]).t.kHo4Or, years: flag(tmp2[0]).t.KjKr2P };
+  time = { seconds: flag(tmp2[0]).t.sMPmtq, minutes: flag(tmp2[0]).t.N9M4N1, hours: flag(tmp2[0]).t.p0KedC, days: flag(tmp2[0]).t.gjK5av, months: flag(tmp2[0]).t.kHo4Or, years: flag(tmp2[0]).t.KjKr2P };
   if (diffResult < 60) {
     let seconds;
     if (tmp4 != null) {
@@ -95,7 +94,7 @@ export default function getTimestampString(arg0, arg1) {
   }
   if (diffResult < c4) {
     const _Math4 = Math;
-    const formatStringResult4 = formatString("months", Math.floor(diffResult / c3));
+    const formatStringResult4 = formatString("months", Math.floor(diffResult / tmp11));
     if (null != formatStringResult4) {
       return formatStringResult4;
     }
@@ -113,5 +112,7 @@ export default function getTimestampString(arg0, arg1) {
       }
     }
   }
-  return importDefault(obj[1])(arg0).format("LL");
+  let obj = require("module_4153")();
+  tmp11 = c3;
+  return require("module_4153")(arg0).format("LL");
 };

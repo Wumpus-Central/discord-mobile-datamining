@@ -1,14 +1,15 @@
 // === Module 11365: useIsSpamMessageRequest ===
 
 // Module 11365 (useIsSpamMessageRequest)
-import closure_2 from "processChannel" /* 7220 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7220 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useIsSpamMessageRequest.tsx");
 
 export const useIsSpamMessageRequest = function useIsSpamMessageRequest(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [SpamMessageRequestStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => closure_1_2.isSpam(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => SpamMessageRequestStore.isSpam(closure_0), items1);
 };

@@ -3,10 +3,11 @@
 // Module 8056 (useIsEligibleSenderForReferralProgram)
 import initialize from "initialize" /* 504 */;
 import useMaybeFetchReferralsRemaining from "useMaybeFetchReferralsRemaining" /* 8057 */;
-import closure_2 from "emitChanges" /* 7452 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7452 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/referral_program/hooks/useIsEligibleSenderForReferralProgram.tsx");
 
 export const useIsEligibleSenderForReferralProgram = function useIsEligibleSenderForReferralProgram(result) {
   let flag = result;
@@ -14,7 +15,6 @@ export const useIsEligibleSenderForReferralProgram = function useIsEligibleSende
     flag = false;
   }
   const maybeFetchReferralsRemaining = useMaybeFetchReferralsRemaining.useMaybeFetchReferralsRemaining(flag);
-  const obj = useMaybeFetchReferralsRemaining;
-  const items = [closure_2];
+  const items = [ReferralTrialStore];
   return initialize.useStateFromStores(items, () => isEligibleToSendReferrals.getIsEligibleToSendReferrals());
 };

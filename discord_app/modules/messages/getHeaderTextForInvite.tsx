@@ -1,17 +1,17 @@
 // === Module 13210: getHeaderTextForInvite ===
 
 // Module 13210 (getHeaderTextForInvite)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
+const result = size.fileFinishedImporting("modules/messages/getHeaderTextForInvite.tsx");
 
 export const getHeaderTextForInvite = function getHeaderTextForInvite(arg0) {
   ({ isOwnInvite, isGuest, isStage, isStream } = arg0);
   ({ isVoiceChannel, isHubGuild } = arg0);
-  const intl = getSystemLocale.intl;
+  const intl = util.intl;
   const string = intl.string;
-  let N85DCl = getSystemLocale.t;
+  let N85DCl = util.t;
   if (isVoiceChannel) {
     if (!isOwnInvite) {
       if (isStream) {

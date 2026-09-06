@@ -1,30 +1,31 @@
 // === Module 17145: ActivitiesDebugOverlay ===
 
 // Module 17145 (ActivitiesDebugOverlay)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text from "Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import useThermalState from "useThermalState" /* 9565 */;
-import useThermalStateDefault from "useThermalState" /* 9565 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import hexToRgba from "hexToRgba" /* 4409 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsxs: c4, jsx: c5 } = jsxProd);
-createCacheKey = { container: null, row: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
-createCacheKey[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.7);
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row" };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
+const useThermalStateDefault = useThermalState;
+
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsxs: closure_4, jsx: hasOwnProperty } = jsxProd);
+fn(4560);
+const createStyles = { container: null, row: null };
+let rect = { position: "absolute", top: 0, left: 0, backgroundColor: null, paddingRight: 16, paddingBottom: 16 };
+const ColorUtils = fn(4409);
+rect.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
+createStyles.container = rect;
+createStyles.row = { flexDirection: "row" };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/native/ActivitiesDebugOverlay.tsx");
 
 export default function ActivitiesDebugOverlay() {
-  const tmp = callback3();
+  const tmp = closure_6();
   const tmp4 = useThermalStateDefault();
   let str = "text-overlay-light";
   let str2 = "";
@@ -47,13 +48,14 @@ export default function ActivitiesDebugOverlay() {
     }
   }
   const rect = useSafeAreaInsetsDefault();
-  let obj = { style: items, pointerEvents: "none", children: null };
-  items = [tmp.container, ];
+  let obj = { style: null, pointerEvents: "none", children: null };
+  const items = [tmp.container, ];
   obj = { paddingTop: rect.top + 16, paddingLeft: rect.left + 16 };
   items[1] = obj;
+  obj.style = items;
   obj = { style: tmp.row, children: null };
-  const items1 = [callback(Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), callback2(Text.Text, { variant: "text-md/normal", color: str, children: str2 })];
-  obj[1] = items1;
-  obj[2] = callback(View, obj);
-  return callback2(View, obj);
+  const items1 = [React4(Text_Text.Text, { variant: "text-md/normal", color: "text-overlay-light", children: ["thermal state:", " "] }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: str, children: str2 })];
+  obj.children = items1;
+  obj.children = React4(View, obj);
+  return hasOwnProperty(View, obj);
 };

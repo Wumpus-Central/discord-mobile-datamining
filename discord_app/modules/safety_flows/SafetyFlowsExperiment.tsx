@@ -1,11 +1,12 @@
-// === Module 17507: isEligibleForSafetyFlowsExperiment ===
+// === Module 17507: SafetyFlowsExperiment ===
 
-// Module 17507 (isEligibleForSafetyFlowsExperiment)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 17507 (SafetyFlowsExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-const tmp2 = getUnitIdDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
+const tmp2 = apex_ApexExperimentDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 let closure_0 = tmp2;
-const result = require("set").fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_flows/SafetyFlowsExperiment.tsx");
 
 export default tmp2;
 export const isEligibleForSafetyFlowsExperiment = function isEligibleForSafetyFlowsExperiment(location) {

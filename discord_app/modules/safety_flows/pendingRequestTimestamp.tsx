@@ -1,25 +1,25 @@
-// === Module 17886: SENT_TIMESTAMP_FORMATTER ===
+// === Module 17886: pendingRequestTimestamp ===
 
-// Module 17886 (SENT_TIMESTAMP_FORMATTER)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2690 */;
-import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 7593 */;
+// Module 17886 (pendingRequestTimestamp)
+import util from "util" /* 1114 */;
+import _modDef2690 from "module_2690" /* 2690 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7593 */;
+import size from "module_2" /* 2 */;
 
 function SENT_TIMESTAMP_FORMATTER() {
-  const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxyDefault.M4NOO3);
-  obj[1] = messagesProxyDefault["9nem85"];
-  obj[2] = messagesProxyDefault.sJjWRY;
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(messagesProxyDefault["7SxW32"]);
-  obj[4] = messagesProxyDefault.tVHevX;
-  obj[5] = messagesProxyDefault.q6jzya;
-  return obj;
+  const time = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
+  const intl = util.intl;
+  time.seconds = intl.string(_modDef2690.M4NOO3);
+  time.minutes = _modDef2690["9nem85"];
+  time.hours = _modDef2690.sJjWRY;
+  const intl2 = util.intl;
+  time.yesterday = intl2.string(_modDef2690["7SxW32"]);
+  time.days = _modDef2690.tVHevX;
+  time.date = _modDef2690.q6jzya;
+  return time;
 }
-const result = set.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
+const result = size.fileFinishedImporting("modules/safety_flows/pendingRequestTimestamp.tsx");
 
 export const formatPendingRequestSentText = function formatPendingRequestSentText(created_at) {
-  return getEmptyActivityFormatter.formatLinkTimestamp(Date.parse(created_at), SENT_TIMESTAMP_FORMATTER);
+  return FamilyCenterUtils.formatLinkTimestamp(Date.parse(created_at), SENT_TIMESTAMP_FORMATTER);
 };

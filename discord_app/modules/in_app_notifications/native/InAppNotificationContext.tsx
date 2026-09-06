@@ -1,18 +1,18 @@
-// === Module 10141: context ===
+// === Module 10141: InAppNotificationContext ===
 
-// Module 10141 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 10141 (InAppNotificationContext)
+import noop from "module_19" /* 19 */;
 
-let c0 = importAllResult;
-let context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationContext.tsx");
+let context = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationContext.tsx");
 
 export const InAppNotificationContext = context;
 export const useInAppNotificationContext = function useInAppNotificationContext() {
-  context = importAllResult.useContext(context);
+  context = noop.useContext(context);
   if (null == context) {
     const _Error = Error;
-    error = new Error("useInAppNotificationContext must be used within provider of InAppNotificationContext");
+    const error = new Error("useInAppNotificationContext must be used within provider of InAppNotificationContext");
     throw error;
   } else {
     return context;

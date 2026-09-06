@@ -1,24 +1,23 @@
-// === Module 17483: handleChange ===
+// === Module 17483: SelfPresenceStoreManager ===
 
-// Module 17483 (handleChange)
-import dispatcherDefault from "dispatcher" /* 573 */;
-import initializeDefault from "initialize" /* 7118 */;
-import closure_2 from "filterPlayingActivities" /* 5279 */;
+// Module 17483 (SelfPresenceStoreManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 function handleChange() {
-  let obj = dispatcherDefault;
-  obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: store.getStatus(), activities: store.getActivities(true), hiddenActivities: store.getHiddenActivities() };
+  const obj = { type: "SELF_PRESENCE_STORE_UPDATE", status: SelfPresenceStore.getStatus(), activities: SelfPresenceStore.getActivities(true), hiddenActivities: SelfPresenceStore.getHiddenActivities() };
   obj.dispatch(obj);
 }
-initializeDefault;
 let prototype = function SelfPresenceStoreManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.stores = new Map().set(closure_2, handleChange);
+  applyArgumentsResult.stores = new Map().set(SelfPresenceStore, handleChange);
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("set").fileFinishedImporting("stores/SelfPresenceStoreManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/SelfPresenceStoreManager.tsx");
 
 export default prototype;

@@ -1,12 +1,13 @@
 // === Module 4765: getDeprecatedModalData ===
 
 // Module 4765 (getDeprecatedModalData)
-import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { ModalAnimation } from "ME" /* 1074 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const result = require("set").fileFinishedImporting("utils/getDeprecatedModalData.tsx");
+const ModalAnimation = fn(1074).ModalAnimation;
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/getDeprecatedModalData.tsx");
 
-export default function getDeprecatedModalData(modal, key) {
+export default function getDeprecatedModalData(modal, key, props) {
   let tmp = arg3;
   if (arg3 === undefined) {
     tmp = null;
@@ -21,40 +22,40 @@ export default function getDeprecatedModalData(modal, key) {
   const obj = { key: str, modal, animation: null, shouldPersistUnderModals: null, props: null, backdropStyle: null, backdropInstant: null, disableAnimation: null, closable: null, label: null, callbacks: null };
   const animation = key.animation;
   if (animation != null) {
-    obj[2] = animation;
+    obj.animation = animation;
     let flag = key.shouldPersistUnderModals;
     if (flag == null) {
       flag = false;
     }
-    obj[3] = flag;
-    obj[4] = arg2;
+    obj.shouldPersistUnderModals = flag;
+    obj.props = props;
     let backdropStyle = key.backdropStyle;
     if (backdropStyle == null) {
       backdropStyle = null;
     }
-    obj[5] = backdropStyle;
+    obj.backdropStyle = backdropStyle;
     let flag2 = key.backdropInstant;
     if (flag2 == null) {
       flag2 = false;
     }
-    obj[6] = flag2;
+    obj.backdropInstant = flag2;
     let flag3 = key.disableAnimation;
     if (flag3 == null) {
       flag3 = false;
     }
-    obj[7] = flag3;
+    obj.disableAnimation = flag3;
     const closable = key.closable;
     let closable2 = typeof closable !== "boolean";
     if (typeof closable === "boolean") {
       closable2 = key.closable;
     }
-    obj[8] = closable2;
+    obj.closable = closable2;
     let str2 = key.label;
     if (str2 == null) {
       str2 = "";
     }
-    obj[9] = str2;
-    obj[10] = {};
+    obj.label = str2;
+    obj.callbacks = {};
     return obj;
   }
 };

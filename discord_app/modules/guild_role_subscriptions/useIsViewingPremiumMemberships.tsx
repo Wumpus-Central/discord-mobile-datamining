@@ -1,17 +1,17 @@
 // === Module 12776: useIsViewingPremiumMemberships ===
 
 // Module 12776 (useIsViewingPremiumMemberships)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import set2 from "set" /* 1964 */;
-import _extends from "_extends" /* 4392 */;
-import RouteParam2 from "RouteParam" /* 4399 */;
+import Constants from "Constants" /* 1074 */;
+import ChannelConstants from "ChannelConstants" /* 1964 */;
+import _mod4392 from "module_4392" /* 4392 */;
+import RouteUtils from "RouteUtils" /* 4399 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-const StaticChannelRoute = set2.StaticChannelRoute;
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx");
+const Routes = Constants.Routes;
+const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useIsViewingPremiumMemberships.tsx");
 
 export default function useIsViewingPremiumMemberships() {
-  const RouteParam = RouteParam2.RouteParam;
-  return null != _extends.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
+  const RouteParam = RouteUtils.RouteParam;
+  return null != _mod4392.useRouteMatch(Routes.CHANNEL(RouteParam.guildId(), StaticChannelRoute.ROLE_SUBSCRIPTIONS));
 };

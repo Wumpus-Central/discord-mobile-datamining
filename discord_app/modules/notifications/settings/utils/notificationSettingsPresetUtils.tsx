@@ -1,22 +1,22 @@
-// === Module 4744: Presets ===
+// === Module 4744: notificationSettingsPresetUtils ===
 
-// Module 4744 (Presets)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import ReadStateTypes from "ReadStateTypes" /* 4742 */;
-import t from "t" /* 4745 */;
+// Module 4744 (notificationSettingsPresetUtils)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import ReadStateConstants from "ReadStateConstants" /* 4742 */;
+import _mod4745 from "module_4745" /* 4745 */;
+import size from "module_2" /* 2 */;
 
-const UserNotificationSettings = ME.UserNotificationSettings;
-const UnreadSetting = ReadStateTypes.UnreadSetting;
-const obj = { ALL_MESSAGES: "all_messages", MENTIONS: "mentions", NOTHING: "nothing", CUSTOM: "custom" };
-const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetUtils.tsx");
+const UserNotificationSettings = Constants.UserNotificationSettings;
+const UnreadSetting = ReadStateConstants.UnreadSetting;
+const Presets = { ALL_MESSAGES: "all_messages", MENTIONS: "mentions", NOTHING: "nothing", CUSTOM: "custom" };
+const result = size.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetUtils.tsx");
 
-export const Presets = obj;
-export const presetFromSettings = function presetFromSettings(unreadSetting, messageNotifications) {
-  const items = [messageNotifications, unreadSetting];
-  const match = t.match(items);
+export { Presets };
+export const presetFromSettings = function presetFromSettings(unreadSetting, UserGuildSettingsStore) {
+  const items = [UserGuildSettingsStore, unreadSetting];
+  const match = _mod4745.match(items);
   const items1 = [UserNotificationSettings.ALL_MESSAGES, UnreadSetting.ALL_MESSAGES];
-  const str = t;
   const items2 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.UNSET];
   const withResult = match.with(items1, () => constants.ALL_MESSAGES);
   const items3 = [UserNotificationSettings.ONLY_MENTIONS, UnreadSetting.ONLY_MENTIONS];
@@ -28,41 +28,40 @@ export const presetFromSettings = function presetFromSettings(unreadSetting, mes
   return match.with(items1, () => constants.ALL_MESSAGES).with(items2, () => constants.MENTIONS).with(items3, () => constants.MENTIONS).with(items4, () => constants.NOTHING).with(items5, () => constants.NOTHING).otherwise(() => constants.CUSTOM);
 };
 export const presetName = function presetName(tmp4Result) {
-  const match = t.match(tmp4Result);
-  const str = t;
+  const match = _mod4745.match(tmp4Result);
   const withResult = match.with(obj.ALL_MESSAGES, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t.hZrr6k);
+    const intl = util.intl;
+    return intl.string(util.t.hZrr6k);
   });
   const withResult1 = match.with(obj.ALL_MESSAGES, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t.hZrr6k);
+    const intl = util.intl;
+    return intl.string(util.t.hZrr6k);
   }).with(obj.MENTIONS, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t.y59NJm);
+    const intl = util.intl;
+    return intl.string(util.t.y59NJm);
   });
   const withResult2 = match.with(obj.ALL_MESSAGES, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t.hZrr6k);
+    const intl = util.intl;
+    return intl.string(util.t.hZrr6k);
   }).with(obj.MENTIONS, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t.y59NJm);
+    const intl = util.intl;
+    return intl.string(util.t.y59NJm);
   }).with(obj.NOTHING, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t["pGn/bJ"]);
+    const intl = util.intl;
+    return intl.string(util.t["pGn/bJ"]);
   });
   return match.with(obj.ALL_MESSAGES, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t.hZrr6k);
+    const intl = util.intl;
+    return intl.string(util.t.hZrr6k);
   }).with(obj.MENTIONS, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t.y59NJm);
+    const intl = util.intl;
+    return intl.string(util.t.y59NJm);
   }).with(obj.NOTHING, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t["pGn/bJ"]);
+    const intl = util.intl;
+    return intl.string(util.t["pGn/bJ"]);
   }).with(obj.CUSTOM, () => {
-    const intl = callback(1114).intl;
-    return intl.string(callback(1114).t["32yow9"]);
+    const intl = util.intl;
+    return intl.string(util.t["32yow9"]);
   }).exhaustive();
 };
 export const arePresetSettingsUnset = function arePresetSettingsUnset(arg0, arg1) {

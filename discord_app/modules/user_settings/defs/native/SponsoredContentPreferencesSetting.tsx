@@ -1,31 +1,29 @@
-// === Module 15859: route ===
+// === Module 15859: SponsoredContentPreferencesSetting ===
 
-// Module 15859 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2070 */;
+// Module 15859 (SponsoredContentPreferencesSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import _modDef2070 from "module_2070" /* 2070 */;
 import QuestsIcon from "QuestsIcon" /* 14994 */;
-import apexExperiment from "apexExperiment" /* 15857 */;
-import createToggle from "createToggle" /* 11468 */;
+import AdTopicOptOutClientExperiment from "AdTopicOptOutClientExperiment" /* 15857 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.XUj46U);
+    const intl = util.intl;
+    return intl.string(_modDef2070.XUj46U);
   },
   parent: null,
   IconComponent: QuestsIcon.QuestsIcon,
-  usePredicate: apexExperiment.useIsAdTopicOptOutClientEnabled,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.SPONSORED_CONTENT_PREFERENCES,
-  getComponent() {
-    return require(15860) /* SponsoredContentPreferencesScreen */.default;
+  usePredicate: AdTopicOptOutClientExperiment.useIsAdTopicOptOutClientEnabled,
+  screen: {
+    route: Constants.UserSettingsSections.SPONSORED_CONTENT_PREFERENCES,
+    getComponent() {
+      return require("SponsoredContentPreferencesScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/SponsoredContentPreferencesSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/SponsoredContentPreferencesSetting.tsx");
 
 export default route;

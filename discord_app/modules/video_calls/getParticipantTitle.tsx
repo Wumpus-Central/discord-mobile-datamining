@@ -1,13 +1,13 @@
 // === Module 10048: getParticipantTitle ===
 
 // Module 10048 (getParticipantTitle)
-import set from "set" /* 2 */;
-import ParticipantTypes2 from "ParticipantTypes" /* 4581 */;
-import getNicknameDefault from "getNickname" /* 4712 */;
+import CallConstants from "CallConstants" /* 4581 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import useIsGuestOrLurker from "useIsGuestOrLurker" /* 10049 */;
+import size from "module_2" /* 2 */;
 
-const ParticipantTypes = ParticipantTypes2.ParticipantTypes;
-let result = set.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
+const ParticipantTypes = CallConstants.ParticipantTypes;
+let result = size.fileFinishedImporting("modules/video_calls/getParticipantTitle.tsx");
 
 export default function getParticipantTitle(guild_id, type, name) {
   if (type.type === ParticipantTypes.ACTIVITY) {
@@ -26,9 +26,8 @@ export default function getParticipantTitle(guild_id, type, name) {
       id = user.id;
     }
     const result = useIsGuestOrLurker.isGuestOrLurkerInGuild(guild_id.guild_id, id);
-    const obj2 = useIsGuestOrLurker;
     let str = "";
-    const name1 = getNicknameDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
+    const name1 = NicknameUtilsDefault.getName(guild_id.getGuildId(), guild_id.id, type.user);
     if (result) {
       const intl = tmp10(1114).intl;
       const _HermesInternal = HermesInternal;

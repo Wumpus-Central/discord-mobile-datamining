@@ -1,9 +1,9 @@
-// === Module 11196: MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN ===
+// === Module 11196: ContentImpressionTrackerConstants ===
 
-// Module 11196 (MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN)
-import set from "set" /* 2 */;
+// Module 11196 (ContentImpressionTrackerConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx");
+const result = size.fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerConstants.tsx");
 
 export const MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN = 100;
 export const HEARTBEAT_SECONDS = 60;

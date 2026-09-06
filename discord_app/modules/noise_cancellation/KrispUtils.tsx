@@ -1,9 +1,9 @@
-// === Module 13810: getKrispModel ===
+// === Module 13810: KrispUtils ===
 
-// Module 13810 (getKrispModel)
-import set from "set" /* 2 */;
-import getKrispModel from "getKrispModel" /* 13811 */;
+// Module 13810 (KrispUtils)
+import noise_cancellation_KrispUtils from "noise_cancellation/KrispUtils" /* 13811 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/noise_cancellation/KrispUtils.tsx");
+const result = size.fileFinishedImporting("modules/noise_cancellation/KrispUtils.tsx");
 
-export default getKrispModel;
+export default noise_cancellation_KrispUtils;

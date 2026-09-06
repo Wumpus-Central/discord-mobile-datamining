@@ -1,56 +1,61 @@
 // === Module 14687: SafetySettingsNotice ===
 
 // Module 14687 (SafetySettingsNotice)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { SafetySettingsNoticeAction as closure_4 } from "SafetyToastType" /* 8399 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 14688 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { blockedIgnoredRedirect: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
+require = fn;
+const View = fn(17).View;
+let closure_4 = fn(8399).SafetySettingsNoticeAction;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { blockedIgnoredRedirect: null };
+createStyles = { display: "flex", flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xs, borderColor: nativeDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO };
+createStyles.blockedIgnoredRedirect = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
 
 export default function SafetySettingsNotice(noticeType) {
   ({ label, labelHook } = noticeType);
   noticeType = noticeType.noticeType;
   const count = noticeType.count;
-  let React;
+  noop = undefined;
   const items = [noticeType];
-  const effect = React.useEffect(() => {
-    const result = labelHook(noticeType[6]).trackSafetySettingsNoticeAnalytics(noticeType, closure_1_4.VIEWED);
+  const effect = noop.useEffect(() => {
+    const result = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.VIEWED);
   }, items);
   const items1 = [noticeType, labelHook];
-  React = React.useCallback(() => {
+  noop = noop.useCallback(() => {
     labelHook();
-    const result = labelHook(noticeType[6]).trackSafetySettingsNoticeAnalytics(noticeType, closure_1_4.LEARN_MORE);
+    const result = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.LEARN_MORE);
   }, items1);
-  let obj = { style: callback2().blockedIgnoredRedirect, children: null };
-  const items2 = [callback(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" }), ];
+  let obj = { style: closure_7().blockedIgnoredRedirect, children: null };
+  const items2 = [closure_5(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" }), ];
   obj = { style: { flexShrink: 1 }, variant: "heading-sm/medium", children: null };
   if (null != count) {
     const intl2 = tmp6(tmp7[9]).intl;
-    obj = { hook: null, count: null };
-    obj[0] = function hook(children) {
-      return closure_1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: closure_2, children });
+    obj = {
+      hook(children) {
+          return hasOwnProperty(Text_Text.Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress, children });
+        },
+      count
     };
-    obj[1] = count;
     let formatResult = intl2.format(label, obj);
   } else {
     const intl = tmp6(tmp7[9]).intl;
-    obj1 = { hook: null };
-    obj1[0] = function hook(children) {
-      return closure_1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: closure_2, children });
+    const obj1 = {
+      hook(children) {
+          return hasOwnProperty(Text_Text.Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress, children });
+        }
     };
     formatResult = intl.format(label, obj1);
   }
-  obj[2] = formatResult;
-  items2[1] = callback(labelHook(noticeType[8]).Text, obj);
-  obj[1] = items2;
+  obj.children = formatResult;
+  items2[1] = closure_5(labelHook(noticeType[8]).Text, obj);
+  obj.children = items2;
   return closure_6(View, obj);
 };

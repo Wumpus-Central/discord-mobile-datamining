@@ -1,13 +1,14 @@
-// === Module 16946: deriveProfileFramesMarketing ===
+// === Module 16946: useProfileFramesMarketing ===
 
-// Module 16946 (deriveProfileFramesMarketing)
-import set from "set" /* 2 */;
-import apexExperimentDefault from "apexExperiment" /* 8212 */;
+// Module 16946 (useProfileFramesMarketing)
+import CollectiblesProfileFramesExperimentDefault from "CollectiblesProfileFramesExperiment" /* 8212 */;
 import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
-import apexExperiment from "apexExperiment" /* 8831 */;
-import apexExperimentDefault2 from "apexExperiment" /* 8831 */;
+import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8831 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
+const CollectiblesProfileFramesPurchaseExperimentDefault = CollectiblesProfileFramesPurchaseExperiment;
+
+const result = size.fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
 
 export const deriveProfileFramesMarketing = function deriveProfileFramesMarketing(arg0) {
   ({ canViewProfileFramesInCollectiblesShop, isEarlyAccess } = arg0);
@@ -18,7 +19,6 @@ export const deriveProfileFramesMarketing = function deriveProfileFramesMarketin
 };
 export const useProfileFramesMarketing = function useProfileFramesMarketing(CollectiblesMobileAnnouncementActionSheet) {
   const canViewProfileFramesInCollectiblesShop = useCanPurchaseFrames.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
-  const obj = useCanPurchaseFrames;
   const isEarlyAccess = useCanPurchaseFrames.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
   let isAnnouncementEligible = canViewProfileFramesInCollectiblesShop;
   if (canViewProfileFramesInCollectiblesShop) {
@@ -27,17 +27,16 @@ export const useProfileFramesMarketing = function useProfileFramesMarketing(Coll
   return { isAnnouncementEligible, isEarlyAccess, showGiftingMarketing: isAnnouncementEligible };
 };
 export const getProfileFramesMarketing = function getProfileFramesMarketing(location) {
-  let obj = apexExperimentDefault;
-  obj = { location };
+  let obj = { location };
   let isEarlyAccess = obj.getConfig(obj).enableProfileFrames;
   obj = { location };
-  const bucket = apexExperimentDefault2.getConfig(obj).bucket;
+  const bucket = CollectiblesProfileFramesPurchaseExperimentDefault.getConfig(obj).bucket;
   let isAnnouncementEligible = isEarlyAccess;
   if (isEarlyAccess) {
-    isAnnouncementEligible = bucket !== apexExperiment.ProfileFramesPurchaseBucket.CONTROL;
+    isAnnouncementEligible = bucket !== CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.CONTROL;
   }
   if (isEarlyAccess) {
-    isEarlyAccess = bucket === apexExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+    isEarlyAccess = bucket === CollectiblesProfileFramesPurchaseExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   if (isAnnouncementEligible) {
     isAnnouncementEligible = !isEarlyAccess;

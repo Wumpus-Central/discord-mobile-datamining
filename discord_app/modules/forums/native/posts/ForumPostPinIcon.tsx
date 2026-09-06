@@ -1,29 +1,30 @@
 // === Module 12003: ForumPostPinIcon ===
 
 // Module 12003 (ForumPostPinIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import registerAssetDefault from "registerAsset" /* 12004 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import _modDef12004 from "module_12004" /* 12004 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-createCacheKey = { pin: null, pinIcon: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, width: 23, height: 23, marginEnd: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 14, width: 14, tintColor: ThemesDefault.colors.WHITE };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { height: 14, width: 14, tintColor: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostPinIcon.tsx");
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+fn(4560);
+const createStyles = { pin: null, pinIcon: null };
+let size = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, width: 23, height: 23, marginEnd: 4, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
+createStyles.pin = size;
+const size1 = { height: 14, width: 14, tintColor: nativeDefault.colors.WHITE };
+createStyles.pinIcon = size1;
+let closure_5 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/posts/ForumPostPinIcon.tsx");
 
 export default function ForumPostPinIcon(containerStyle) {
-  const tmp = callback();
-  let obj = { style: items, children: null };
-  items = [tmp.pin, containerStyle.containerStyle];
-  obj = { source: registerAssetDefault, style: tmp.pinIcon };
-  obj[1] = jsx(Button.Icon, { source: registerAssetDefault, style: tmp.pinIcon });
-  return <View source={registerAssetDefault} style={tmp.pinIcon} />;
+  const tmp = closure_5();
+  let obj = { style: null, children: null };
+  const items = [tmp.pin, containerStyle.containerStyle];
+  obj.style = items;
+  obj = { source: _modDef12004, style: tmp.pinIcon };
+  obj.children = jsx(native.Icon, { source: _modDef12004, style: tmp.pinIcon });
+  return <View source={_modDef12004} style={tmp.pinIcon} />;
 };

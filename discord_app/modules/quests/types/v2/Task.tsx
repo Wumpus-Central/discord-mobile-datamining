@@ -1,9 +1,10 @@
-// === Module 7712: _firstPartyTasksFromServer ===
+// === Module 7712: Task ===
 
-// Module 7712 (_firstPartyTasksFromServer)
-import set from "set" /* 2 */;
+// Module 7712 (Task)
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5452 */;
 import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7713 */;
 import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7715 */;
+import size from "module_2" /* 2 */;
 
 function _firstPartyTasksFromServer(tasks) {
   let obj = {};
@@ -14,10 +15,8 @@ function _firstPartyTasksFromServer(tasks) {
     let tmp4 = tasks[nextResult];
     let tmp5 = tmp4;
     if (null != tmp4) {
-      let tmp6 = nextResult;
       obj = { eventName: null, target: null, externalIds: null };
-      let tmp7 = tmp4;
-      ({ event_name: obj2[0], target: obj2[1], external_ids: obj2[2] } = tmp5);
+      ({ event_name: obj2.eventName, target: obj2.target, external_ids: obj2.externalIds } = tmp5);
       obj[tmp3] = obj;
     }
     continue;
@@ -33,31 +32,24 @@ function _thirdPartyTasksFromServer(tasks) {
     let tmp4 = tasks[nextResult];
     let tmp5 = tmp4;
     if (null != tmp4) {
-      let tmp6 = nextResult;
       obj = { eventName: null, title: null, target: null, description: null };
-      let tmp7 = tmp4;
-      ({ event_name: obj2[0], title: obj2[1], target: obj2[2], description: obj2[3] } = tmp5);
+      ({ event_name: obj2.eventName, title: obj2.title, target: obj2.target, description: obj2.description } = tmp5);
       obj[tmp3] = obj;
     }
     continue;
   }
   return obj;
 }
-const result = set.fileFinishedImporting("modules/quests/types/v2/Task.tsx");
+const result = size.fileFinishedImporting("modules/quests/types/v2/Task.tsx");
 
 export const questTaskConfigFromServer = function questTaskConfigFromServer(type) {
   type = type.type;
   if (QuestTaskConfigTypes.QuestTaskConfigTypes.FIRST_PARTY === type) {
-    let obj = { type: null, tasks: null, joinOperator: null };
-    obj[0] = tmp(7713).QuestTaskConfigTypes.FIRST_PARTY;
-    obj[1] = _firstPartyTasksFromServer(type.tasks);
-    obj[2] = type.join_operator;
+    let obj = { type: tmp(7713).QuestTaskConfigTypes.FIRST_PARTY, tasks: _firstPartyTasksFromServer(type.tasks), joinOperator: type.join_operator };
     return obj;
   } else if (tmp(7713).QuestTaskConfigTypes.THIRD_PARTY === type) {
-    obj = { type: null, tasks: null, enrollmentUrl: null, developerApplicationId: null, joinOperator: null };
-    obj[0] = tmp(7713).QuestTaskConfigTypes.THIRD_PARTY;
-    obj[1] = _thirdPartyTasksFromServer(type.tasks);
-    ({ enrollment_url: obj[2], developer_application_id: obj[3], join_operator: obj[4] } = type);
+    obj = { type: tmp(7713).QuestTaskConfigTypes.THIRD_PARTY, tasks: _thirdPartyTasksFromServer(type.tasks), enrollmentUrl: null, developerApplicationId: null, joinOperator: null };
+    ({ enrollment_url: obj.enrollmentUrl, developer_application_id: obj.developerApplicationId, join_operator: obj.joinOperator } = type);
     return obj;
   }
 };
@@ -65,74 +57,58 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
   try {
     const _Object = Object;
     const entries = Object.entries(task_config_v2.tasks);
-    const mapped = entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    const mapped = entries.map((item) => {
+      [tmp, tmp2] = item;
       const items = [tmp, ];
       const type = tmp2.type;
-      if (callback(table[1]).FirstPartyQuestTaskTypes.WATCH_VIDEO === type) {
-        let obj = { type: null, target: null, assets: null, messages: null };
-        obj[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.WATCH_VIDEO;
-        obj[1] = tmp2.target;
+      if (FirstPartyQuestTaskTypes.FirstPartyQuestTaskTypes.WATCH_VIDEO === type) {
+        let obj = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.WATCH_VIDEO, target: tmp2.target, assets: null, messages: null };
         let tmp3Result = tmp3(tmp4[2]);
-        obj[2] = tmp3Result.desktopVideoAssetsFromServer(tmp2.assets);
+        obj.assets = tmp3Result.desktopVideoAssetsFromServer(tmp2.assets);
         tmp3Result = tmp3(tmp4[2]);
-        obj[3] = tmp3Result.desktopVideoMessagesFromServer(tmp2.messages);
+        obj.messages = tmp3Result.desktopVideoMessagesFromServer(tmp2.messages);
         let tmp5 = obj;
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE === type) {
-        obj = { type: null, target: null, assets: null, messages: null };
-        obj[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE;
-        obj[1] = tmp2.target;
-        obj[2] = tmp3(tmp4[2]).mobileVideoAssetsFromServer(tmp2.assets);
+        obj = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE, target: tmp2.target, assets: tmp3(tmp4[2]).mobileVideoAssetsFromServer(tmp2.assets), messages: null };
         const tmp3Result1 = tmp3(tmp4[2]);
-        obj[3] = tmp3(tmp4[2]).mobileVideoMessagesFromServer(tmp2.messages);
+        obj.messages = tmp3(tmp4[2]).mobileVideoMessagesFromServer(tmp2.messages);
         tmp5 = obj;
         const tmp3Result2 = tmp3(tmp4[2]);
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === type) {
-        obj1 = { type: null, target: null, applications: null };
-        obj1[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP;
-        ({ target: obj7[1], applications: obj7[2] } = tmp2);
+        const obj1 = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, target: null, applications: null };
+        ({ target: obj7.target, applications: obj7.applications } = tmp2);
         tmp5 = obj1;
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP === type) {
-        const obj2 = { type: null, target: null, applications: null };
-        obj2[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP;
-        ({ target: obj6[1], applications: obj6[2] } = tmp2);
+        const obj2 = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, target: null, applications: null };
+        ({ target: obj6.target, applications: obj6.applications } = tmp2);
         tmp5 = obj2;
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY === type) {
-        const obj3 = { type: null, target: null, applications: null };
-        obj3[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY;
-        ({ target: obj5[1], applications: obj5[2] } = tmp2);
+        const obj3 = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ACTIVITY, target: null, applications: null };
+        ({ target: obj5.target, applications: obj5.applications } = tmp2);
         tmp5 = obj3;
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_XBOX === type) {
-        const obj4 = { type: null, target: null, externalIds: null, applications: null };
-        obj4[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_XBOX;
-        ({ target: obj4[1], external_ids: obj4[2], applications: obj4[3] } = tmp2);
+        const obj4 = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_XBOX, target: null, externalIds: null, applications: null };
+        ({ target: obj4.target, external_ids: obj4.externalIds, applications: obj4.applications } = tmp2);
         tmp5 = obj4;
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION === type) {
-        const obj5 = { type: null, target: null, externalIds: null, applications: null };
-        obj5[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION;
-        ({ target: obj3[1], external_ids: obj3[2], applications: obj3[3] } = tmp2);
+        const obj5 = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, target: null, externalIds: null, applications: null };
+        ({ target: obj3.target, external_ids: obj3.externalIds, applications: obj3.applications } = tmp2);
         tmp5 = obj5;
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME === type) {
-        obj = { type: null, target: null, eventName: null, messages: null, applications: null, accountLinkInstructions: null };
-        obj[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME;
-        ({ target: obj[1], event_name: obj[2] } = tmp2);
-        const obj6 = { taskTitle: null, taskDescription: null };
-        obj6[0] = tmp2.messages.task_title;
-        obj6[1] = tmp2.messages.task_description;
-        obj[3] = obj6;
-        ({ applications: obj[4], account_link_instructions: obj[5] } = tmp2);
+        obj = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_GAME, target: null, eventName: null, messages: null, applications: null, accountLinkInstructions: null };
+        ({ target: obj.target, event_name: obj.eventName } = tmp2);
+        const obj6 = { taskTitle: tmp2.messages.task_title, taskDescription: tmp2.messages.task_description };
+        obj.messages = obj6;
+        ({ applications: obj.applications, account_link_instructions: obj.accountLinkInstructions } = tmp2);
         tmp5 = obj;
       } else {
         tmp5 = null;
         if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY === type) {
-          const obj7 = { type: null, target: null, eventName: null, messages: null, applications: null };
-          obj7[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY;
-          ({ target: obj14[1], event_name: obj14[2] } = tmp2);
-          const obj8 = { taskTitle: null, taskDescription: null };
-          obj8[0] = tmp2.messages.task_title;
-          obj8[1] = tmp2.messages.task_description;
-          obj7[3] = obj8;
-          obj7[4] = tmp2.applications;
+          const obj7 = { type: tmp3(tmp4[1]).FirstPartyQuestTaskTypes.ACHIEVEMENT_IN_ACTIVITY, target: null, eventName: null, messages: null, applications: null };
+          ({ target: obj14.target, event_name: obj14.eventName } = tmp2);
+          const obj8 = { taskTitle: tmp2.messages.task_title, taskDescription: tmp2.messages.task_description };
+          obj7.messages = obj8;
+          obj7.applications = tmp2.applications;
           tmp5 = obj7;
         }
       }
@@ -141,16 +117,14 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
     });
     let obj = { tasks: null, joinOperator: null };
     const _Object2 = Object;
-    obj[0] = Object.fromEntries(mapped.filter((arg0) => {
-      [, tmp] = arg0;
+    obj.tasks = Object.fromEntries(mapped.filter((item) => {
+      [, tmp] = item;
       return null !== tmp;
     }));
-    obj[1] = task_config_v2.join_operator;
+    obj.joinOperator = task_config_v2.join_operator;
     return obj;
   } catch (err) {
-    obj = { tasks: null, joinOperator: null };
-    obj[0] = {};
-    obj[1] = QuestTaskJoinOperator.QuestTaskJoinOperator.OR;
+    obj = { tasks: {}, joinOperator: QuestTaskJoinOperator.QuestTaskJoinOperator.OR };
     return obj;
   }
 };

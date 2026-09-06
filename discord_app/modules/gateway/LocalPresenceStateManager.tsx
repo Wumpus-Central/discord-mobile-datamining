@@ -1,29 +1,27 @@
-// === Module 13670: getInitialState ===
+// === Module 13670: LocalPresenceStateManager ===
 
-// Module 13670 (getInitialState)
-import shouldCommitDefault from "shouldCommit" /* 13671 */;
+// Module 13670 (LocalPresenceStateManager)
 import rateLimitDefault from "rateLimit" /* 13672 */;
-import closure_2 from "filterPlayingActivities" /* 5279 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
+import StateManager from "StateManager" /* 13671 */;
 
-shouldCommitDefault;
 class LocalPresenceStateManager extends tmp2 {
   constructor(arg0) {
     tmp3 = new LocalPresenceStateManager(false, tmp2, tmp, new.target, new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp3.switchingAccounts = false;
     emitPresenceUpdate = tmp3.emitPresenceUpdate;
-    tmp4 = require("rateLimit");
-    tmp3.didCommit = require("module_5");
+    tmp4 = closure_0(closure_1[2]);
+    tmp3.didCommit = tmp4(5, 20000, emitPresenceUpdate.bind(tmp3));
     tmp3.socket = global;
     return tmp3;
   }
 }
 const prototype = LocalPresenceStateManager.prototype;
 prototype["getInitialState"] = function getInitialState() {
-  return store.getLocalPresence();
+  return SelfPresenceStore.getLocalPresence();
 };
 prototype["getNextState"] = function getNextState() {
-  return store.getLocalPresence();
+  return SelfPresenceStore.getLocalPresence();
 };
 prototype["shouldCommit"] = function shouldCommit() {
   const socket = this.socket;
@@ -42,6 +40,7 @@ prototype["handleAccountSwitch"] = function handleAccountSwitch() {
   this.reset();
   this.emitPresenceUpdate(this.getState());
 };
-const result = require("set").fileFinishedImporting("modules/gateway/LocalPresenceStateManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/gateway/LocalPresenceStateManager.tsx");
 
 export default LocalPresenceStateManager;

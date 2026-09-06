@@ -1,16 +1,16 @@
-// === Module 12642: ? ===
+// === Module 12642: ChannelSafeAreaBottom ===
 
-// Module 12642
-import set from "set" /* 2 */;
-import _modDef12643 from "module_12643" /* 12643 */;
-import _modDef12644 from "module_12644" /* 12644 */;
-import apexExperiment from "apexExperiment" /* 11350 */;
+// Module 12642 (ChannelSafeAreaBottom)
+import ChannelSafeAreaBottomNoopDefault from "ChannelSafeAreaBottomNoop" /* 12643 */;
+import ChannelSafeAreaBottomAnimatedDefault from "ChannelSafeAreaBottomAnimated" /* 12644 */;
+import AnimatedKeyboardExperiment from "AnimatedKeyboardExperiment" /* 11350 */;
+import size from "module_2" /* 2 */;
 
-if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = _modDef12643;
+if (AnimatedKeyboardExperiment.isAnimatedAndroidKeyboard()) {
+  let importDefaultResult = ChannelSafeAreaBottomNoopDefault;
 } else {
-  importDefaultResult = _modDef12644;
+  importDefaultResult = ChannelSafeAreaBottomAnimatedDefault;
 }
-const result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 
 export default importDefaultResult;

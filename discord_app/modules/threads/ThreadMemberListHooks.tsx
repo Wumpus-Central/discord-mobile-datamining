@@ -1,73 +1,74 @@
-// === Module 16687: useThreadMemberListSections ===
+// === Module 16687: ThreadMemberListHooks ===
 
-// Module 16687 (useThreadMemberListSections)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_5 from "handleUserUpdate" /* 9837 */;
-import { StatusTypes } from "sum" /* 1085 */;
+// Module 16687 (ThreadMemberListHooks)
+import util from "util" /* 1114 */;
+import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7286 */;
+import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7312 */;
+import noop from "module_19" /* 19 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 9837 */;
 
-const require = arg1;
+require = fn;
+const StatusTypes = fn(1085).StatusTypes;
 let closure_7 = [];
-const result = require("set").fileFinishedImporting("modules/threads/ThreadMemberListHooks.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/threads/ThreadMemberListHooks.tsx");
 
 export const useThreadMemberListSections = function useThreadMemberListSections(channelId, stateFromStores) {
-  const _require = channelId;
+  _require = channelId;
   importDefault = stateFromStores;
-  importDefault(stateFromStores[4])(() => {
+  require("useMountEffect")(() => {
     let id;
     if (closure_1 != null) {
       id = tmp.id;
     }
     if (null != id) {
-      channelId(stateFromStores[5]).subscribeChannel(tmp.id, channelId, channelId(stateFromStores[6]).DEFAULT_RANGES);
-      const obj = channelId(stateFromStores[5]);
+      GuildSubscriptionsActionCreators.subscribeChannel(tmp.id, closure_0, GuildChannelSubscriptions.DEFAULT_RANGES);
     }
   });
   const items = [closure_4];
-  stateFromStores = _require(stateFromStores[7]).useStateFromStores(items, () => {
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
     if (null != closure_1) {
-      sortedRoles = sortedRoles.getSortedRoles(tmp.id);
+      let sortedRoles = GuildRoleStore.getSortedRoles(tmp.id);
     } else {
       sortedRoles = [];
     }
     return sortedRoles;
   });
-  let obj = _require(stateFromStores[7]);
-  const items1 = [closure_5];
-  const stateFromStoresObject = _require(stateFromStores[7]).useStateFromStoresObject(items1, () => ({ version: closure_1_5.getMemberListVersion(closure_0), members: closure_1_5.getMemberListSections(closure_0) }));
+  let obj = require("initialize");
+  const items1 = [ThreadMemberListStore];
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items1, () => ({ version: ThreadMemberListStore.getMemberListVersion(closure_0), members: ThreadMemberListStore.getMemberListSections(closure_0) }));
   const members = stateFromStoresObject.members;
   closure_4 = tmp4;
   const items2 = [stateFromStores, members, stateFromStoresObject.version, null == stateFromStores];
   let memo = members.useMemo(() => {
     if (closure_4) {
-      return closure_1_7;
+      return closure_7;
     } else {
       const found = stateFromStores.filter((hoist) => hoist.hoist);
       const mapped = found.map((id) => ({ id: id.id, label: id.name }));
-      let obj = { id: null, label: null };
-      obj[0] = closure_1_6.ONLINE;
-      const intl = channelId(stateFromStores[8]).intl;
-      obj[1] = intl.string(channelId(stateFromStores[8]).t.WbGtnH);
-      obj = { id: null, label: null };
-      obj[0] = closure_1_6.OFFLINE;
-      const intl2 = channelId(stateFromStores[8]).intl;
-      obj[1] = intl2.string(channelId(stateFromStores[8]).t.Vv0abJ);
+      let obj = { id: StatusTypes.ONLINE, label: null };
+      const intl = util.intl;
+      obj.label = intl.string(util.t.WbGtnH);
+      obj = { id: StatusTypes.OFFLINE, label: null };
+      const intl2 = util.intl;
+      obj.label = intl2.string(util.t.Vv0abJ);
       mapped.push(obj, obj);
       return mapped.map((id) => {
         id = id.id;
         const obj = { label: id.label, userIds: null, id: null, roleId: null };
         let userIds;
-        if (table != null) {
-          if (table[id] != null) {
+        if (members != null) {
+          if (members[id] != null) {
             userIds = tmp.userIds;
           }
         }
         if (userIds == null) {
           userIds = [];
         }
-        obj[1] = userIds;
-        obj[2] = id;
-        obj[3] = id;
+        obj.userIds = userIds;
+        obj.id = id;
+        obj.roleId = id;
         return obj;
       });
     }

@@ -1,19 +1,16 @@
-// === Module 8778: fromServer ===
+// === Module 8778: WishlistRecord ===
 
-// Module 8778 (fromServer)
-import toJSDefault from "toJS" /* 1386 */;
-import closure_0 from "createExecutable" /* 1918 */;
-import closure_1 from "fromServer" /* 8779 */;
-import closure_2 from "createCollectiblesItemFromServerResponse" /* 8780 */;
-import closure_3 from "fromServer" /* 8781 */;
-import closure_4 from "fromServer" /* 8782 */;
-import { SKUProductLines } from "ME" /* 1074 */;
+// Module 8778 (WishlistRecord)
+import Record from "Record" /* 1386 */;
+import ApplicationRecord from "ApplicationRecord" /* 1918 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8779 */;
+import CollectiblesWishlistItemRecord from "CollectiblesWishlistItemRecord" /* 8780 */;
+import PremiumWishlistItemRecord from "PremiumWishlistItemRecord" /* 8781 */;
+import SKUWishlistItemRecord from "SKUWishlistItemRecord" /* 8782 */;
 
-toJSDefault;
-let prototype;
-prototype = function WishlistRecord(arg0) {
+const SKUProductLines = fn(1074).SKUProductLines;
+const prototype = function WishlistRecord(arg0) {
   const tmp = new prototype(new.target, new.target, arg0);
-  // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, userId: tmp.userId, items: tmp.items, applications } = arg0);
   tmp.applications = applications;
   return tmp;
@@ -22,49 +19,49 @@ class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   ({ user_id, wishlist_items } = arg0);
-  let obj = Object.create(null);
-  const merged = Object.assign(arg0, obj);
-  obj = {};
-  let str = obj;
+  const merged = Object.assign({ user_id: 0, wishlist_items: 0 });
+  const merged1 = Object.assign(arg0, merged);
+  const obj = {};
   const mapped = wishlist_items.map((sku_product_line) => {
     sku_product_line = sku_product_line.sku_product_line;
     if (constants.COLLECTIBLES === sku_product_line) {
-      return closure_2.fromServer(sku_product_line);
+      return CollectiblesWishlistItemRecord.fromServer(sku_product_line);
     } else if (tmp.SOCIAL_LAYER_GAME_ITEM === sku_product_line) {
-      return closure_4.fromServer(sku_product_line);
+      return SKUWishlistItemRecord.fromServer(sku_product_line);
     } else if (tmp.PREMIUM === sku_product_line) {
-      return closure_3.fromServer(sku_product_line);
+      return PremiumWishlistItemRecord.fromServer(sku_product_line);
     } else {
-      return closure_1.fromServer(sku_product_line);
+      return BaseWishlistItemRecord.fromServer(sku_product_line);
     }
   });
-  const merged1 = Object.assign(merged);
+  const merged2 = Object.assign(merged1);
   obj.userId = user_id;
   obj.items = mapped;
-  applications = merged.applications;
+  applications = merged1.applications;
   let mapped1;
   if (applications != null) {
-    mapped1 = applications.map((arg0) => closure_0.createFromServer(arg0));
+    mapped1 = applications.map((item) => ApplicationRecord.createFromServer(item));
   }
   obj.applications = mapped1;
-  if (typeof prototype !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  if (typeof tmp4 === "function") {
+    const tmp10 = new prototype(obj, merged1, merged, applications, user_id);
+    ({ id: tmp10.id, userId: tmp10.userId, items: tmp10.items, applications } = obj);
+    tmp10.applications = applications;
+    return tmp10;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp7 = new prototype(str, merged, obj, applications, user_id);
-  // ThrowIfThisInitialized (0x7c)
-  ({ id: tmp7.id, userId: tmp7.userId, items: tmp7.items, applications } = obj);
-  tmp7.applications = applications;
-  return tmp7;
+  tmp4 = prototype;
 };
-const result = require("set").fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
 
 export default prototype;
 export const getWishlistSkuIds = function getWishlistSkuIds(items) {
   items = items.items;
   return items.map((skuId) => skuId.skuId);
 };
-export const wishlistHasSkuId = function wishlistHasSkuId(items) {
+export const wishlistHasSkuId = function wishlistHasSkuId(items, arg1) {
   closure_0 = arg1;
   items = items.items;
   return items.some((skuId) => skuId.skuId === closure_0);

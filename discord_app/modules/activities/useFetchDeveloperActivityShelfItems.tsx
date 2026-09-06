@@ -1,19 +1,21 @@
 // === Module 12118: useFetchDeveloperActivityShelfItems ===
 
 // Module 12118 (useFetchDeveloperActivityShelfItems)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "initialize" /* 8855 */;
-import { DevShelfFetchState } from "initialize" /* 8855 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9504 */;
+import noop from "module_19" /* 19 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8855 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
+require = fn;
+const DevShelfFetchState = fn(8855).DevShelfFetchState;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
 export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperActivityShelfItems() {
   isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(setting[2]).useIsActivitiesEnabledForCurrentPlatform();
   const DeveloperMode = isActivitiesEnabledForCurrentPlatform(setting[3]).DeveloperMode;
   setting = DeveloperMode.getSetting();
   let obj = isActivitiesEnabledForCurrentPlatform(setting[2]);
-  const items = [closure_3];
+  const items = [DeveloperActivityShelfStore];
   const stateFromStores = isActivitiesEnabledForCurrentPlatform(setting[4]).useStateFromStores(items, () => fetchState.getFetchState(), []);
   const items1 = [isActivitiesEnabledForCurrentPlatform, stateFromStores, setting];
   const effect = stateFromStores.useEffect(() => {
@@ -22,11 +24,10 @@ export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperAct
       tmp = setting;
     }
     if (tmp) {
-      tmp = stateFromStores === closure_1_4.INITIALIZED;
+      tmp = stateFromStores === DevShelfFetchState.INITIALIZED;
     }
     if (tmp) {
-      const developerApplications = isActivitiesEnabledForCurrentPlatform(setting[5]).fetchDeveloperApplications();
-      const obj = isActivitiesEnabledForCurrentPlatform(setting[5]);
+      const developerApplications = EmbeddedActivitiesActionCreators.fetchDeveloperApplications();
     }
   }, items1);
   return null;

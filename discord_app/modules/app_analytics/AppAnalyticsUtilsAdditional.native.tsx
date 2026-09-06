@@ -1,9 +1,9 @@
-// === Module 4743: getVoiceAnalyticsMetadataAdditional ===
+// === Module 4743: AppAnalyticsUtilsAdditional ===
 
-// Module 4743 (getVoiceAnalyticsMetadataAdditional)
-import set from "set" /* 2 */;
+// Module 4743 (AppAnalyticsUtilsAdditional)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx");
+const result = size.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx");
 
 export function getVoiceAnalyticsMetadataAdditional() {
   return { game_name: null, game_id: null };

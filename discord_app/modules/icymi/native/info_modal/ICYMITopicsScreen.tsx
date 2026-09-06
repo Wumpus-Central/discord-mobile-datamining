@@ -1,193 +1,203 @@
-// === Module 16476: WordTopic ===
+// === Module 16476: ICYMITopicsScreen ===
 
-// Module 16476 (WordTopic)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 16476 (ICYMITopicsScreen)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import closure_5 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_8 from "getPrimaryCategories" /* 16470 */;
-import { GuildPrimaryCategory } from "GuildPrimaryCategory" /* 16477 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import BookCheckIcon from "BookCheckIcon" /* 5075 */;
+import ForumIcon from "ForumIcon" /* 5088 */;
+import ICYMIAnalytics2 from "ICYMIAnalytics" /* 8359 */;
+import GameControllerIcon from "GameControllerIcon" /* 9223 */;
+import RobotIcon from "RobotIcon" /* 9435 */;
+import MusicIcon from "MusicIcon" /* 9911 */;
+import FoodIcon from "FoodIcon" /* 10352 */;
+import BicycleIcon from "BicycleIcon" /* 10354 */;
+import TvIcon from "TvIcon" /* 10883 */;
+import PencilSparkleIcon from "PencilSparkleIcon" /* 11243 */;
+import PiggyBankIcon from "PiggyBankIcon" /* 11924 */;
+import PaintPaletteIcon from "PaintPaletteIcon" /* 13378 */;
+import ScienceIcon from "ScienceIcon" /* 16478 */;
+import MedalIcon from "MedalIcon" /* 16479 */;
+import PaintbrushThinIcon from "PaintbrushThinIcon" /* 16481 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildDiscoveryCategoryStore from "GuildDiscoveryCategoryStore" /* 16470 */;
 
-const require = arg1;
+require = fn;
 function WordTopic(categoryid) {
   categoryid = categoryid.categoryid;
   ({ selected, handlePress: importDefault } = categoryid);
   if (GuildPrimaryCategory.GAMING === categoryid) {
-    let tmp2 = callback2(categoryid(9223).GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    let tmp2 = closure_1_10(GameControllerIcon.GameControllerIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.ENTERTAINMENT === categoryid) {
-    tmp2 = callback2(categoryid(10883).TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(TvIcon.TvIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.GENERAL_CHATTING === categoryid) {
-    tmp2 = callback2(categoryid(5088).ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(ForumIcon.ForumIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.SCIENCE_AND_TECH === categoryid) {
-    tmp2 = callback2(categoryid(16478).ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(ScienceIcon.ScienceIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.MUSIC === categoryid) {
-    tmp2 = callback2(categoryid(9911).MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(MusicIcon.MusicIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.EDUCATION === categoryid) {
-    tmp2 = callback2(categoryid(5075).BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(BookCheckIcon.BookCheckIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.CREATIVE_ARTS === categoryid) {
-    tmp2 = callback2(categoryid(13378).PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PaintPaletteIcon.PaintPaletteIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.FINANCE === categoryid) {
-    tmp2 = callback2(categoryid(11924).PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PiggyBankIcon.PiggyBankIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.BOTS === categoryid) {
-    tmp2 = callback2(categoryid(9435).RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(RobotIcon.RobotIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.SPORTS === categoryid) {
-    tmp2 = callback2(categoryid(16479).MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(MedalIcon.MedalIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.TRAVEL_AND_FOOD === categoryid) {
-    tmp2 = callback2(categoryid(10352).FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(FoodIcon.FoodIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.FASHION_AND_BEAUTY === categoryid) {
-    tmp2 = callback2(categoryid(16481).PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PaintbrushThinIcon.PaintbrushThinIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (tmp.FITNESS_AND_HEALTH === categoryid) {
-    tmp2 = callback2(categoryid(10354).BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(BicycleIcon.BicycleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   } else if (16 === categoryid) {
-    tmp2 = callback2(categoryid(11243).PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
+    tmp2 = closure_1_10(PencilSparkleIcon.PencilSparkleIcon, { size: "md", color: "redesign-button-tertiary-text" });
   }
-  let obj = categoryid(4277);
+  let obj = useA11yRolesNative;
   const checkboxA11yNative = obj.useCheckboxA11yNative({ checked: selected });
   let tmp48Result = null;
   if (null != tmp2) {
-    obj = { accessibilityRole: null, accessibilityState: null, variant: null, text: null, onPress: null, icon: null };
-    obj[0] = tmp45;
-    obj[1] = tmp46;
+    obj = { accessibilityRole: tmp45, accessibilityState: tmp46, variant: null, text: null, onPress: null, icon: null };
     let str = "tertiary";
     if (selected) {
       str = "primary";
     }
-    obj[2] = str;
-    obj[3] = categoryid.topic;
-    obj[4] = function onPress() {
-      return callback(categoryid);
+    obj.variant = str;
+    obj.text = categoryid.topic;
+    obj.onPress = function onPress() {
+      return importDefault(categoryid);
     };
-    obj[5] = tmp2;
-    tmp48Result = callback2(categoryid(4975).Button, obj);
-    const tmp48 = callback2;
+    obj.icon = tmp2;
+    tmp48Result = closure_1_10(components_Button_Button.Button, obj);
   }
   return tmp48Result;
 }
-({ View: closure_6, ScrollView: error, StyleSheet } = get_ActivityIndicator);
-({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-createCacheKey = { container: null, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
-let obj1 = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
-createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
-let obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
-createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_24 };
-let obj3 = { marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_24 };
-createCacheKey[4] = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-let obj4 = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
-createCacheKey[5] = { flex: 1, marginHorizontal: ThemesDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: ThemesDefault.space.PX_12 };
-let obj5 = { flex: 1, marginHorizontal: ThemesDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: ThemesDefault.space.PX_12 };
-createCacheKey[6] = { paddingTop: ThemesDefault.space.PX_24 };
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-let obj6 = { paddingTop: ThemesDefault.space.PX_24 };
-let result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
+const GuildPrimaryCategory = fn(16477).GuildPrimaryCategory;
+const jsxProd = fn(21);
+({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
+createStyles.container = createStyles;
+const rect = { position: "absolute", bottom: 0, left: nativeDefault.space.PX_24, right: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_8 };
+createStyles.footer = rect;
+createStyles.title = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+let obj1 = { marginTop: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_24 };
+createStyles.subtitle = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
+let size = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
+createStyles.separator = size;
+let obj2 = { marginBottom: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_24 };
+createStyles.topicsContainer = { flex: 1, marginHorizontal: nativeDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: nativeDefault.space.PX_12 };
+let obj3 = { flex: 1, marginHorizontal: nativeDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: nativeDefault.space.PX_12 };
+createStyles.scrollContentContainer = { paddingTop: nativeDefault.space.PX_24 };
+let closure_13 = createStyles.createStyles(createStyles);
+size = fn(2);
+let result = size.fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
 
 export default function ICYMITopicsScreen() {
-  const tmp = callback3();
+  const tmp = closure_13();
   const bottom = useSafeAreaInsetsDefault().bottom;
-  const tmp4 = callback(React.useState(new Set()), 2);
+  const tmp4 = _slicedToArray(noop.useState(new Set()), 2);
   const first = tmp4[0];
   importDefault = tmp4[1];
-  const tmp6 = callback(React.useState(false), 2);
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
   dependencyMap = tmp6[1];
   let obj = first(1483);
   const navigation = obj.useNavigation();
   const items = [navigation, first];
-  callback = React.useCallback(navigation(function*() {
-    if (arr === 2) {
-      arr = 3;
-      HermesBuiltin.throwTypeError();
+  const callback = noop.useCallback(navigation(function*(arg0, value) {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        arr = 2;
-        if (0 === v0) {
+        c3 = 2;
+        if (0 === v2) {
           if (arg0 === 1) {
-            arr = 3;
-            throw arg1;
+            c3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            arr = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            c3 = 3;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp4;
             closure_0 = tmp4;
-            v0(true);
-            v0 = 1;
-            arr = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_0(v0[28])(v0[27], v0.paths);
+            v2(true);
+            v2 = 1;
+            c3 = 1;
+            const obj1 = { value: closure_0(v2[28])(v2[27], v2.paths), done: false };
             return obj1;
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
-            arr = 3;
-            throw arg1;
+            c3 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            arr = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            c3 = 3;
+            const obj2 = { value, done: true };
             return obj2;
           } else {
-            let obj3 = closure_1_1(v0[29]);
+            let obj3 = closure_1(v2[29]);
             const _Array = Array;
-            v0 = 2;
-            arr = 1;
+            v2 = 2;
+            c3 = 1;
             obj3 = { value: null, done: false };
-            obj3[0] = obj3.fetchPopularGuildsFromCategories(Array.from(closure_0), 0);
+            obj3.value = obj3.fetchPopularGuildsFromCategories(Array.from(closure_129_0), 0);
             return obj3;
           }
         } else if (arg0 === 1) {
-          arr = 3;
-          throw arg1;
+          c3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          arr = 3;
-          const obj4 = { value: null, done: true };
-          obj4[0] = arg1;
+          c3 = 3;
+          const obj4 = { value, done: true };
           return obj4;
         } else {
-          if (arg1) {
-            arr = arr.push("join_guilds");
+          if (value) {
+            closure_129_3.push("join_guilds");
           } else {
-            obj = closure_1_1(v0[30]);
+            obj = closure_1(v2[30]);
             const obj5 = { key: "ICYMIInfoModal", content: null };
-            const intl = closure_1_0(v0[31]).intl;
-            obj5[1] = intl.string(closure_1_0(v0[31]).t.CG4Hks);
+            const intl = closure_0(v2[31]).intl;
+            obj5.content = intl.string(closure_0(v2[31]).t.CG4Hks);
             obj.open(obj5);
           }
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => v2(false), 500);
-          arr = 3;
+          c3 = 3;
         }
       } catch (tmp28) {
-        arr = tmp;
+        c3 = tmp;
         throw tmp28;
       }
     }
   }), items);
-  obj1 = first(504);
-  const items1 = [closure_8];
+  let obj1 = first(504);
+  const items1 = [GuildDiscoveryCategoryStore];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items1, () => allCategories.getAllCategories());
   const items2 = [first];
-  callback = React.useCallback((categoryId) => {
-    const ICYMIAnalytics = first(table[33]).ICYMIAnalytics;
-    const result = ICYMIAnalytics.trackFeedOnboardingCategoryToggled({ categoryId, toggled: !categoryId.has(categoryId) });
-    if (categoryId.has(categoryId)) {
+  _slicedToArray = noop.useCallback((categoryId) => {
+    closure_0 = categoryId;
+    const ICYMIAnalytics = ICYMIAnalytics2.ICYMIAnalytics;
+    const result = ICYMIAnalytics.trackFeedOnboardingCategoryToggled({ categoryId, toggled: !first.has(categoryId) });
+    if (first.has(categoryId)) {
       tmp2((items) => {
         items.delete(closure_0);
         return new Set(items);
@@ -201,35 +211,33 @@ export default function ICYMITopicsScreen() {
   }, items2);
   obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1114).intl;
-  obj[3] = intl.string(first(1114).t.Y5d99L);
-  const children = [callback2(first(4556).Text, obj), , , , ];
+  obj.children = intl.string(first(1114).t.Y5d99L);
+  const children = [closure_10(first(4556).Text, obj), , , , ];
   obj = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1114).intl;
-  obj[3] = intl2.string(first(1114).t.MGZsfv);
-  children[1] = callback2(first(4556).Text, obj);
+  obj.children = intl2.string(first(1114).t.MGZsfv);
+  children[1] = closure_10(first(4556).Text, obj);
   obj1 = { style: tmp.separator };
-  children[2] = callback2(closure_6, obj1);
-  let obj2 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: obj3, children: null };
-  obj3 = { bottom: 72 + bottom };
+  children[2] = closure_10(closure_6, obj1);
+  let obj2 = { showsVerticalScrollIndicator: false, style: tmp.container, contentContainerStyle: tmp.scrollContentContainer, contentInset: { bottom: 72 + bottom }, children: null };
+  let obj3 = { bottom: 72 + bottom };
   const set = new Set();
   const tmp10 = closure_12;
   const tmp11 = closure_11;
   const tmp13 = closure_6;
-  obj2[4] = callback2(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => closure_1_10(closure_1_14, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress: closure_4 }, categoryId.categoryId)) });
-  children[3] = callback2(closure_7, obj2);
+  obj2.children = closure_10(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => closure_2_10(WordTopic, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress }, categoryId.categoryId)) });
+  children[3] = closure_10(closure_7, obj2);
   let tmp12Result = first.size > 0;
   if (tmp12Result) {
     let obj5 = { style: null, children: null };
-    const obj6 = { marginBottom: null };
-    obj6[0] = bottom;
+    const obj6 = { marginBottom: bottom };
     const items4 = [obj6, tmp.footer];
-    obj5[0] = items4;
-    const obj7 = { loading: null, size: "lg", text: null, onPress: null };
-    obj7[0] = tmp6[0];
+    obj5.style = items4;
+    const obj7 = { loading: tmp6[0], size: "lg", text: null, onPress: null };
     const intl3 = tmp7(1114).intl;
-    obj7[2] = intl3.string(tmp7(1114).t.PDTjLN);
-    obj7[3] = callback;
-    obj5[1] = tmp12(tmp7(4975).Button, obj7);
+    obj7.text = intl3.string(tmp7(1114).t.PDTjLN);
+    obj7.onPress = callback;
+    obj5.children = tmp12(tmp7(4975).Button, obj7);
     tmp12Result = tmp12(tmp13, obj5);
   }
   children[4] = tmp12Result;

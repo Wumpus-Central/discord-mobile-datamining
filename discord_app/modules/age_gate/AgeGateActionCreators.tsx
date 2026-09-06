@@ -1,42 +1,42 @@
-// === Module 15960: submitDateOfBirth ===
+// === Module 15960: AgeGateActionCreators ===
 
-// Module 15960 (submitDateOfBirth)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import result2 from "result" /* 1098 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
+// Module 15960 (AgeGateActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AgeGateConstants from "AgeGateConstants" /* 1098 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15959 */;
-import ME from "ME" /* 1074 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const AgeGateAnalyticAction = result2.AgeGateAnalyticAction;
-({ AnalyticEvents: c4, Endpoints: c5 } = ME);
-const result = set.fileFinishedImporting("modules/age_gate/AgeGateActionCreators.tsx");
+const AgeGateAnalyticAction = AgeGateConstants.AgeGateAnalyticAction;
+({ AnalyticEvents: closure_4, Endpoints: hasOwnProperty } = Constants);
+const result = size.fileFinishedImporting("modules/age_gate/AgeGateActionCreators.tsx");
 
-export const submitDateOfBirth = function submitDateOfBirth(c0, closure_1_2) {
-  const _require = closure_1_2;
-  trackAgeGateSubmittedDefault(c0, closure_1_2);
-  let obj = expandEventPropertiesDefault;
-  obj = { source: closure_1_2, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
+export const submitDateOfBirth = function submitDateOfBirth(format, source) {
+  _require = source;
+  trackAgeGateSubmittedDefault(format, source);
+  let obj = { source, action: AgeGateAnalyticAction.AGE_GATE_SUBMITTED };
   obj.track(constants.AGE_GATE_ACTION, obj);
-  const HTTP = _require(1272).HTTP;
-  obj = { url: constants2.ME, oldFormErrors: true, body: { date_of_birth: c0.format("YYYY-MM-DD") }, rejectWithError: false };
-  obj1 = { date_of_birth: c0.format("YYYY-MM-DD") };
-  return HTTP.patch(obj).then((user) => {
-    let obj = closure_1_1(closure_1_2[5]);
+  const HTTP = require("HTTPUtils").HTTP;
+  const request = { url: constants2.ME, oldFormErrors: true, body: null, rejectWithError: false };
+  obj = { date_of_birth: format.format("YYYY-MM-DD") };
+  request.body = obj;
+  return HTTP.patch(request).then((user) => {
+    let obj = DispatcherDefault;
     obj.dispatch({ type: "CURRENT_USER_UPDATE", user: user.body });
-    obj = { source: closure_0, action: closure_1_3.AGE_GATE_SUCCESS };
-    closure_1_1(closure_1_2[3]).track(closure_1_4.AGE_GATE_ACTION, obj);
+    obj = { source, action: AgeGateAnalyticAction.AGE_GATE_SUCCESS };
+    AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, obj);
   });
 };
 export const preventUnderageRegistration = function preventUnderageRegistration(REGISTER) {
-  let obj = dispatcherDefault;
+  let obj = DispatcherDefault;
   obj.dispatch({ type: "AGE_GATE_PREVENT_UNDERAGE_REGISTRATION" });
   obj = { source: REGISTER, action: AgeGateAnalyticAction.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION };
-  expandEventPropertiesDefault.track(constants.AGE_GATE_ACTION, obj);
+  AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, obj);
 };
 export const logoutUnderageNewUser = function logoutUnderageNewUser(source) {
-  let obj = dispatcherDefault;
+  let obj = DispatcherDefault;
   obj.dispatch({ type: "AGE_GATE_LOGOUT_UNDERAGE_NEW_USER" });
   obj = { source, action: AgeGateAnalyticAction.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER };
-  expandEventPropertiesDefault.track(constants.AGE_GATE_ACTION, obj);
+  AnalyticsUtilsDefault.track(constants.AGE_GATE_ACTION, obj);
 };

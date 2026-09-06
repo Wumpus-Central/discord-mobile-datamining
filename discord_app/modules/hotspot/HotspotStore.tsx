@@ -1,15 +1,15 @@
-// === Module 7214: set ===
+// === Module 7214: hotspot/HotspotStore ===
 
-// Module 7214 (set)
+// Module 7214 (hotspot/HotspotStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import CONFERENCE_MODE_ENABLED2 from "CONFERENCE_MODE_ENABLED" /* 1081 */;
-import get from "get" /* 5141 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ConferenceModeConstants from "ConferenceModeConstants" /* 1081 */;
+import ProcessArgs2 from "ProcessArgs" /* 5141 */;
+import size from "module_2" /* 2 */;
 
-const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED;
+const CONFERENCE_MODE_ENABLED = ConferenceModeConstants.CONFERENCE_MODE_ENABLED;
 let set = new Set();
-let closure_4 = {};
+let hotspotOverrides = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class HotspotStore extends PersistedStore {
 }
@@ -22,7 +22,7 @@ prototype["initialize"] = function initialize(hiddenHotspots) {
       set = new Set(hiddenHotspots.hiddenHotspots);
     }
     if (null != hiddenHotspots.hotspotOverrides) {
-      const hotspotOverrides = hiddenHotspots.hotspotOverrides;
+      hotspotOverrides = hiddenHotspots.hotspotOverrides;
     }
   }
 };
@@ -33,11 +33,11 @@ prototype["hasHotspot"] = function hasHotspot(LIVE_STAGE_NOTIFICATION_BADGE) {
   }
   let tmp = !flag;
   if (!flag) {
-    tmp = dependencyMap[LIVE_STAGE_NOTIFICATION_BADGE];
+    tmp = hotspotOverrides[LIVE_STAGE_NOTIFICATION_BADGE];
   }
   let tmp3 = !CONFERENCE_MODE_ENABLED;
   if (!CONFERENCE_MODE_ENABLED) {
-    const ProcessArgs = get.ProcessArgs;
+    const ProcessArgs = ProcessArgs2.ProcessArgs;
     const isDisallowPopupsSetResult = ProcessArgs.isDisallowPopupsSet();
     let tmp7 = !isDisallowPopupsSetResult;
     if (!isDisallowPopupsSetResult) {
@@ -54,10 +54,10 @@ prototype["hasHiddenHotspot"] = function hasHiddenHotspot(HUB_SECOND_EMAIL_CONNE
   return set.has(HUB_SECOND_EMAIL_CONNECTION_UPSELL);
 };
 prototype["getHotspotOverride"] = function getHotspotOverride(arg0) {
-  return dependencyMap[arg0];
+  return hotspotOverrides[arg0];
 };
 prototype["getState"] = function getState() {
-  return { hiddenHotspots: set, hotspotOverrides: closure_4 };
+  return { hiddenHotspots: set, hotspotOverrides };
 };
 HotspotStore.displayName = "HotspotStore";
 HotspotStore.persistKey = "hotspots";
@@ -71,7 +71,7 @@ const items = [
   }
 ];
 HotspotStore.migrations = items;
-const hotspotStore = new HotspotStore(dispatcherDefault, {
+const hotspotStore = new HotspotStore(DispatcherDefault, {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(hiddenHotspots) {
     set = new Set(hiddenHotspots.hiddenHotspots);
   },
@@ -84,16 +84,16 @@ const hotspotStore = new HotspotStore(dispatcherDefault, {
     }
   },
   HOTSPOT_OVERRIDE_SET: function handleSetHotspotOverride(location) {
-    closure_4[location.location] = location.enabled;
+    hotspotOverrides[location.location] = location.enabled;
   },
   HOTSPOT_OVERRIDE_CLEAR: function handleClearHotspotOverride(arg0) {
-    if (null == dependencyMap[arg0.location]) {
+    if (null == hotspotOverrides[arg0.location]) {
       return false;
     } else {
       delete tmp[tmp2];
     }
   }
 });
-const result = set.fileFinishedImporting("modules/hotspot/HotspotStore.tsx");
+const result = size.fileFinishedImporting("modules/hotspot/HotspotStore.tsx");
 
 export default hotspotStore;

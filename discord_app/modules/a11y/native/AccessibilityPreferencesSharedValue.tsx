@@ -1,12 +1,12 @@
-// === Module 14436: A11Y_FEATURE_MAP ===
+// === Module 14436: AccessibilityPreferencesSharedValue ===
 
-// Module 14436 (A11Y_FEATURE_MAP)
-import set from "set" /* 2 */;
-import AccessibilityFeatureFlags2 from "AccessibilityFeatureFlags" /* 1349 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 14128 */;
+// Module 14436 (AccessibilityPreferencesSharedValue)
+import AccessibilityConstants from "AccessibilityConstants" /* 1349 */;
+import native from "native" /* 14128 */;
+import size from "module_2" /* 2 */;
 
-const AccessibilityFeatureFlags = AccessibilityFeatureFlags2.AccessibilityFeatureFlags;
-const result = set.fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesSharedValue.tsx");
+const AccessibilityFeatureFlags = AccessibilityConstants.AccessibilityFeatureFlags;
+const result = size.fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesSharedValue.tsx");
 
 export const A11Y_FEATURE_MAP = { [AccessibilityFeatureFlags.REDUCED_MOTION]: "reduceMotion", [AccessibilityFeatureFlags.REDUCED_MOTION_PREFERS_CROSSFADES]: "prefersCrossfades", [AccessibilityFeatureFlags.SCREENREADER]: "screenReaderEnabled" };
-export const accessibilityPreferencesSharedValue = AccessibilityAnnouncer.accessibilityPreferencesSharedValue;
+export const accessibilityPreferencesSharedValue = native.accessibilityPreferencesSharedValue;

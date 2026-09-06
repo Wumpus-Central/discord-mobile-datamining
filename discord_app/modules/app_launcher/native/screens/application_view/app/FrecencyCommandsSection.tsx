@@ -1,52 +1,50 @@
 // === Module 12147: FrecencyCommandsSection ===
 
 // Module 12147 (FrecencyCommandsSection)
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9409 */;
+import AppDetailContent from "AppDetailContent" /* 12129 */;
 import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12148 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { container: null, header: null };
-createCacheKey = { marginBottom: require("PlaceholderCommandRow").BETWEEN_SECTIONS_MARGIN };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
+require = fn;
+const View = fn(17).View;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, header: null };
+createStyles = { marginBottom: fn(12129).BETWEEN_SECTIONS_MARGIN };
+createStyles.container = createStyles;
+createStyles.header = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/FrecencyCommandsSection.tsx");
 
 export default function FrecencyCommandsSection(commands) {
   const context = commands.context;
-  ({ onPressCommand: importDefault, section: dependencyMap, onExecuteCommand: closure_3, installOnDemand: View, sectionName } = commands);
-  let arr;
-  const tmp = callback2();
-  arr = useFilterAndSortToOnlyFrecentCommandsDefault({ context, commands: commands.allCommands, limit: 5 });
+  ({ onPressCommand: importDefault, section: dependencyMap, onExecuteCommand: noop, installOnDemand: View, sectionName } = commands);
+  const tmp = closure_8();
+  const arr = useFilterAndSortToOnlyFrecentCommandsDefault({ context, commands: commands.allCommands, limit: 5 });
   const items = [arr.length, sectionName];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (0 !== arr.length) {
-      let obj = context(closure_1_2[7]);
-      obj = { num: null, section_name: null, location: null };
-      obj[0] = arr.length;
-      obj[1] = sectionName;
-      obj[2] = context(closure_1_2[8]).AppLauncherLocations.APP_DETAIL;
-      obj.trackWithMetadata(sectionName.APP_LAUNCHER_FRECENTS_SEEN, obj);
+      const obj = { num: arr.length, section_name: sectionName, location: AppLauncherTypes.AppLauncherLocations.APP_DETAIL };
+      obj.trackWithMetadata(AnalyticEvents.APP_LAUNCHER_FRECENTS_SEEN, obj);
     }
   }, items);
   let tmp4 = null;
   if (0 !== arr.length) {
-    let obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj = { style: null, children: null };
-    obj[0] = tmp.header;
+    let obj = { style: tmp.container, children: null };
+    obj = { style: tmp.header, children: null };
     obj = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = context(1114).intl;
-    obj[2] = intl.string(context(1114).t.acSE0h);
-    obj[1] = arr(context(4556).Heading, obj);
-    const items1 = [arr(View, obj), arr.map((command) => arr(context(closure_1_2[5]).CommandRow, { command, onPressCommand: closure_1, isFirstRow: 0 === arg1, isLastRow: arg1 === arr.length - 1, context, onExecuteCommand: closure_3, installOnDemand: closure_4, section: closure_2, location: context(closure_1_2[11]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
-    obj[1] = items1;
-    tmp4 = callback(View, obj);
+    obj.children = intl.string(context(1114).t.acSE0h);
+    obj.children = arr(context(4556).Heading, obj);
+    const items1 = [arr(View, obj), arr.map((command, index) => timestampProducer(AppDetailContent.CommandRow, { command, onPressCommand, isFirstRow: 0 === index, isLastRow: index === arr.length - 1, context, onExecuteCommand, installOnDemand, section, location: ApplicationCommandTypes.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, sectionName }, command.id))];
+    obj.children = items1;
+    tmp4 = closure_7(View, obj);
   }
   return tmp4;
 };

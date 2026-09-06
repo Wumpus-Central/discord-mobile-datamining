@@ -1,120 +1,40 @@
-// === Module 12321: _onAddDirectoryGuildEntry ===
+// === Module 12321: directory_channels/GuildDirectoryUtils ===
 
-// Module 12321 (_onAddDirectoryGuildEntry)
-import noopAll from "noop" /* 19 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 12321 (directory_channels/GuildDirectoryUtils)
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-function _onAddDirectoryGuildEntry() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c3 = 0;
-    c4 = 0;
-    const iter = (function*(arg0) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let lib = tmp5;
-              let callback = tmp2;
-              c0 = undefined;
-              callback = undefined;
-              lib = undefined;
-              dependencyMap = undefined;
-              c4 = undefined;
-              let callback2;
-              ({ directoryChannelId: c0, directoryGuildName: c1, guild: c2, description: c3, category: c4, onClose: c5 } = c0);
-              dependencyMap = 1;
-              c4 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
-            } else {
-              let obj3 = lib(12316);
-              dependencyMap = 2;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = obj3.addDirectoryGuildEntry(c0, lib.id, dependencyMap, c4);
-              return obj2;
-            }
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            callback2();
-            obj = callback(4905);
-            const obj4 = { importer: null };
-            obj4[0] = function importer() {
-              return _undefined(paths[6])(paths[5], paths.paths).then((arg0) => {
-                closure_0 = arg0.default;
-                return () => { ... };
-              });
-            };
-            obj.openLazy(obj4);
-            c4 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp22) {
-          c4 = tmp;
-          throw tmp22;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
+const require = fn;
+let closure_6 = async function _onAddDirectoryGuildEntry() {
+  await closure_130_2(closure_130_3[3]).addDirectoryGuildEntry(closure_129_0, closure_129_2.id, closure_129_3, closure_129_4);
+  closure_129_5();
+  closure_130_2(closure_130_3[3]);
+  closure_130_1(closure_130_3[4]).openLazy({
+    importer() {
+      return closure_0(paths[6])(paths[5], paths.paths).then((result) => {
+        closure_0 = result.default;
+        return (arg0) => {
+          const obj = {};
+          const merged = Object.assign(arg0);
+          obj.guild = guild;
+          obj.directoryGuildName = directoryGuildName;
+          return closure_3_5(closure_0, obj);
+        };
+      });
+    }
   });
-  closure_6 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-noopAll;
-const result = require("set").fileFinishedImporting("modules/directory_channels/native/GuildDirectoryUtils.tsx");
+  await "HermesInternal";
+  closure_1 = tmp2;
+  ({ directoryChannelId: closure_129_0, directoryGuildName: closure_129_1, guild: closure_129_2, description: closure_129_3, category: closure_129_4, onClose: closure_129_5 } = closure_0);
+  return "PX_16";
+};
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryUtils.tsx");
 
-export const onAddDirectoryGuildEntry = function onAddDirectoryGuildEntry(arg0) {
+export const onAddDirectoryGuildEntry = function onAddDirectoryGuildEntry() {
   const self = this;
-  const apply = _onAddDirectoryGuildEntry.apply;
+  const apply = closure_6.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

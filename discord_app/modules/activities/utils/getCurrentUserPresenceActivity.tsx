@@ -1,11 +1,11 @@
 // === Module 11761: getCurrentUserPresenceActivity ===
 
 // Module 11761 (getCurrentUserPresenceActivity)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
 
-export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2) {
+export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2, arg2) {
   closure_0 = arg2;
   let tmp = null;
   if (null != arg2) {

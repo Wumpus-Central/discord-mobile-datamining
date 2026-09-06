@@ -1,29 +1,27 @@
-// === Module 14440: handleBackPress ===
+// === Module 14440: BackPressManager ===
 
-// Module 14440 (handleBackPress)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 14440 (BackPressManager)
+import _mod17 from "module_17" /* 17 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import initializeDefault from "initialize" /* 1898 */;
 import useKeyboardType from "useKeyboardType" /* 4427 */;
-import updateContextMenuState from "updateContextMenuState" /* 8667 */;
+import ContextMenuState from "ContextMenuState" /* 8667 */;
+import LifecycleManager from "LifecycleManager" /* 1898 */;
+import size from "module_2" /* 2 */;
 
 function handleBackPress() {
-  let obj = updateContextMenuState;
+  let obj = ContextMenuState;
   obj.hideContextMenu();
   const keyboardType = useKeyboardType.getKeyboardType();
   let flag = keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
   if (flag) {
-    obj = { type: null };
-    obj[0] = tmp(1609).KeyboardTypes.SYSTEM;
+    obj = { type: tmp(1609).KeyboardTypes.SYSTEM };
     tmp(1481).setKeyboardType(obj);
     flag = true;
     const tmpResult = tmp(1481);
   }
   return flag;
 }
-get_ActivityIndicator.BackHandler;
-initializeDefault;
+_mod17.BackHandler;
 class BackPressManager extends tmp2 {
 }
 const prototype = BackPressManager.prototype;
@@ -43,6 +41,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const backPressManager = new BackPressManager();
-let result = set.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
+let result = size.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
 
 export default backPressManager;

@@ -1,17 +1,18 @@
-// === Module 11659: handleSelectedGuildChange ===
+// === Module 11659: ReportToModStore ===
 
-// Module 11659 (handleSelectedGuildChange)
+// Module 11659 (ReportToModStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_0 from "handleConnectionOpen" /* 4381 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
 
 function handleSelectedGuildChange() {
-  lastSelectedGuildId = lastSelectedGuildId.getLastSelectedGuildId();
-  if (lastSelectedGuildId !== lastSelectedGuildId) {
+  let lastSelectedGuildId = SelectedGuildStore.getLastSelectedGuildId();
+  if (lastSelectedGuildId !== c1) {
     c2 = null;
     if (lastSelectedGuildId == null) {
       lastSelectedGuildId = null;
     }
+    c1 = lastSelectedGuildId;
   }
 }
 let c1 = null;
@@ -26,22 +27,22 @@ prototype["initialize"] = function initialize(reportedMessages) {
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(reportedMessages.reportedMessages);
-    closure_3.reportedMessages = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    closure_3.reportedMessages = Object.fromEntries(entries.map((item) => {
+      [tmp, tmp2] = item;
       const items = [tmp, new Set(tmp2)];
       return items;
     }));
   }
-  let items = [closure_0];
+  let items = [SelectedGuildStore];
   this.syncWith(items, handleSelectedGuildChange);
 };
 prototype["getState"] = function getState() {
   return closure_3;
 };
 prototype["isUserBanned"] = function isUserBanned(arg0) {
-  let value;
-  if (c2 != null) {
-    value = c2.get(arg0);
+  value = undefined;
+  if (_null != null) {
+    value = _null.get(arg0);
   }
   if (value == null) {
     value = null;
@@ -76,7 +77,7 @@ let items = [
   }
 ];
 ReportToModStore.migrations = items;
-const reportToModStore = new ReportToModStore(dispatcherDefault, {
+const reportToModStore = new ReportToModStore(DispatcherDefault, {
   REPORT_TO_MOD_REPORT_MESSAGE_SUCCESS: function handleMessageReportSuccess(channelId) {
     channelId = channelId.channelId;
     if (null == closure_3.reportedMessages[channelId]) {
@@ -121,19 +122,19 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
         userIds = [];
       }
       const set1 = new Set(userIds);
-      const found = Array.from(set1).filter((arg0) => !set.has(arg0));
+      const found = Array.from(set1).filter((item) => !set.has(item));
       if (null == map) {
         const _Map = Map;
         map = new Map();
       }
-      const item = set.forEach((arg0) => {
+      const item = set.forEach((item) => {
         if (map != null) {
-          const result = map.set(arg0, true);
+          const result = map.set(item, true);
         }
       });
-      const item1 = found.forEach((arg0) => {
+      const item1 = found.forEach((item) => {
         if (map != null) {
-          const result = map.set(arg0, false);
+          const result = map.set(item, false);
         }
       });
       const arr = Array.from(set1);
@@ -145,6 +146,7 @@ const reportToModStore = new ReportToModStore(dispatcherDefault, {
     closure_3.reportedMessages = {};
   }
 });
-let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/report_to_mod/ReportToModStore.tsx");
 
 export default reportToModStore;

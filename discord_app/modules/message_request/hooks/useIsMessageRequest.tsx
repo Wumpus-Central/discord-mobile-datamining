@@ -1,27 +1,28 @@
 // === Module 11366: useIsMessageRequest ===
 
 // Module 11366 (useIsMessageRequest)
-import closure_2 from "processChannel" /* 7219 */;
-import closure_3 from "processChannel" /* 7220 */;
+import MessageRequestStore from "MessageRequestStore" /* 7219 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7220 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/message_request/hooks/useIsMessageRequest.tsx");
 
 export const useIsMessageRequest = function useIsMessageRequest(id) {
-  const _require = id;
-  const items = [closure_2];
+  _require = id;
+  const items = [MessageRequestStore];
   const items1 = [id];
-  return _require(504).useStateFromStores(items, () => closure_1_2.isMessageRequest(closure_0), items1);
+  return require("initialize").useStateFromStores(items, () => MessageRequestStore.isMessageRequest(closure_0), items1);
 };
 export const useIsEitherTypeOfMessageRequest = function useIsEitherTypeOfMessageRequest(arg0) {
-  const _require = arg0;
-  const items = [closure_2, closure_3];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [MessageRequestStore, SpamMessageRequestStore];
+  return require("initialize").useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let isMessageRequestResult = closure_1_2.isMessageRequest(tmp);
+      let isMessageRequestResult = MessageRequestStore.isMessageRequest(tmp);
       if (!isMessageRequestResult) {
-        isMessageRequestResult = closure_1_3.isSpam(tmp);
+        isMessageRequestResult = SpamMessageRequestStore.isSpam(tmp);
       }
       tmp2 = isMessageRequestResult;
     }

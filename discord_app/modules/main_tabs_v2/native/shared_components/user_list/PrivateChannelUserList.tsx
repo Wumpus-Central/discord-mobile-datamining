@@ -1,20 +1,28 @@
-// === Module 12186: ? ===
+// === Module 12186: PrivateChannelUserList ===
 
-// Module 12186
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 12186 (PrivateChannelUserList)
+import _modDef12 from "module_12" /* 12 */;
+import util from "util" /* 1114 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12188 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c4 = importAllResult;
-({ RelationshipTypes: c9, MAX_GROUP_DM_PARTICIPANTS: c10 } = ME);
-({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const memoResult = importAllResult.memo(function PrivateChannelUserList(channelId) {
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ RelationshipTypes: closure_9, MAX_GROUP_DM_PARTICIPANTS: c10 } = Constants);
+const jsxProd = fn(21);
+({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
+
+export default noop.memo(function PrivateChannelUserList(channelId) {
   channelId = channelId.channelId;
   let flag = channelId.headerShown;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);
@@ -28,12 +36,8 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
     opensUserProfileOnUserPress = true;
   }
   const listHeaderContent = channelId.listHeaderContent;
-  let analyticsLocations;
   let stateFromStores;
-  let stateFromStoresArray;
   let renderListHeader;
-  let listHeaderSize;
-  let flag2;
   let ownerId;
   closure_12 = undefined;
   let token;
@@ -42,18 +46,18 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   c16 = undefined;
   let height;
   let callback2;
-  analyticsLocations = hideTitle(onUserPress[8])().analyticsLocations;
+  const analyticsLocations = hideTitle(onUserPress[8])().analyticsLocations;
   let obj = channelId(onUserPress[9]);
   let items = [stateFromStores];
-  stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getChannel(channelId));
+  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const items1 = [renderListHeader];
   const items2 = [stateFromStores];
-  stateFromStoresArray = channelId(onUserPress[9]).useStateFromStoresArray(items1, () => {
+  const stateFromStoresArray = channelId(onUserPress[9]).useStateFromStoresArray(items1, () => {
     if (null != stateFromStores) {
-      const mapped = hideTitle(onUserPress[10])(tmp.recipients).map(renderListHeader.getUser);
-      const arr2 = hideTitle(onUserPress[10])(tmp.recipients);
-      const found = mapped.unshift(renderListHeader.getCurrentUser()).filter(channelId(onUserPress[11]).isNotNullish);
-      const arr = mapped.unshift(renderListHeader.getCurrentUser());
+      const mapped = _modDef12(tmp.recipients).map(UserStore.getUser);
+      const arr2 = _modDef12(tmp.recipients);
+      const found = mapped.unshift(UserStore.getCurrentUser()).filter(GlobalUtils.isNotNullish);
+      const arr = mapped.unshift(UserStore.getCurrentUser());
       let items = found.sortBy((username) => username.username.toLowerCase()).value();
       const iter = found.sortBy((username) => username.username.toLowerCase());
     } else {
@@ -64,8 +68,8 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   obj = { channel: stateFromStores, disable: !flag };
   const tmp5 = hideTitle(onUserPress[12])(obj);
   renderListHeader = tmp5.listActionRenderer;
-  listHeaderSize = tmp5.listActionHeight;
-  flag2 = undefined;
+  let listHeaderSize = tmp5.listActionHeight;
+  let flag2;
   if (stateFromStores != null) {
     flag2 = stateFromStores.isMultiUserDM();
   }
@@ -110,9 +114,9 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   const items5 = [stateFromStoresArray, flag2, tmp6, onUserPress, opensUserProfileOnUserPress, analyticsLocations, channelId];
   const getSectionProps = listHeaderContent.useCallback(() => {
     let obj = { title: null, hideTitle: null };
-    const intl = channelId(onUserPress[18]).intl;
-    obj[0] = "" + intl.string(channelId(onUserPress[18]).t["9Oq93m"]) + " \u2014 " + stateFromStoresArray.length;
-    obj[1] = hideTitle;
+    const intl = util.intl;
+    obj.title = "" + intl.string(util.t["9Oq93m"]) + " \u2014 " + stateFromStoresArray.length;
+    obj.hideTitle = hideTitle;
     let tmp3 = closure_12;
     if (closure_12) {
       let str = "xxs";
@@ -120,59 +124,51 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
         str = "xs";
       }
       obj = { titleLeading: null, onTitlePress: null, colorOverride: null };
-      obj = { size: null, color: null, accessible: false };
-      obj[0] = str;
-      obj[1] = token1;
-      obj[0] = ownerId(channelId(tmp2[19]).NitroWheelIcon, obj);
-      obj[1] = hideTitle(tmp2[20]);
-      obj[2] = token;
+      obj = { size: str, color: token1, accessible: false };
+      obj.titleLeading = closure_2_11(NitroWheelIcon.NitroWheelIcon, obj);
+      obj.onTitlePress = openGroupDMNitroCapInfoActionSheetDefault;
+      obj.colorOverride = token;
       tmp3 = obj;
-      const tmp4 = ownerId;
     }
-    obj1 = { type: "section", props: null };
+    const element = { type: "section", props: null };
     const merged = Object.assign(tmp3);
-    obj1[1] = obj;
-    return obj1;
+    element.props = obj;
+    return element;
   }, items4);
-  const getItemProps = listHeaderContent.useCallback((arg0, arg1) => {
-    closure_0 = arg1;
-    if (null != stateFromStoresArray[arg1]) {
+  const getItemProps = listHeaderContent.useCallback((arg0, index) => {
+    if (null != stateFromStoresArray[index]) {
       let tmp4 = flag2;
       if (flag2) {
         tmp4 = tmp3.id === ownerId;
       }
-      let obj = { type: "user", props: null };
-      obj = { type: null, user: null, nickname: null, isNameplatedRow: true, onPress: null, isOwner: null, start: null, end: null, canShowDisplayNameStyles: true };
-      obj[0] = listHeaderSize.NONE;
-      obj[1] = tmp3;
-      obj[2] = stateFromStoresArray.getNickname(tmp3.id);
-      obj[4] = function onPress(id) {
-        if (closure_1_2 != null) {
-          let obj = { user: null, index: null };
-          obj[0] = id;
-          obj[1] = closure_0;
-          tmp(obj);
-        }
-        if (closure_1_3) {
-          obj = { userId: null, sourceAnalyticsLocations: null, channelId: null };
-          obj[0] = id.id;
-          obj[1] = closure_1_5;
-          obj[2] = closure_0;
-          hideTitle(onUserPress[21])(obj);
-        }
+      const element = { type: "user", props: null };
+      let obj = {
+        type: listHeaderSize.NONE,
+        user: tmp3,
+        nickname: stateFromStoresArray.getNickname(tmp3.id),
+        isNameplatedRow: true,
+        onPress(user) {
+            if (onUserPress != null) {
+              let obj = { user, index };
+              tmp(obj);
+            }
+            if (opensUserProfileOnUserPress) {
+              obj = { userId: user.id, sourceAnalyticsLocations: analyticsLocations, channelId };
+              showUserProfileActionSheetDefault(obj);
+            }
+          },
+        isOwner: tmp4,
+        start: tmp,
+        end: tmp2,
+        canShowDisplayNameStyles: true
       };
-      obj[5] = tmp4;
-      obj[6] = tmp;
-      obj[7] = tmp2;
-      obj[1] = obj;
-      return obj;
+      element.props = obj;
+      return element;
     } else {
-      obj = { type: "placeholder", props: null };
-      obj1 = { start: null, end: null };
-      obj1[0] = tmp;
-      obj1[1] = tmp2;
-      obj[1] = obj1;
-      return obj;
+      const element1 = { type: "placeholder", props: null };
+      obj = { start: tmp, end: tmp2 };
+      element1.props = obj;
+      return element1;
     }
   }, items5);
   const tmp3Result1 = channelId(onUserPress[15]);
@@ -194,10 +190,8 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
       if (arg0 != null) {
         channelId = tmp.channelId;
       }
-      if (channelId !== height) {
-        const obj = { channelId: null, height: null };
-        obj[0] = tmp3;
-        obj[1] = height;
+      if (channelId !== channelId) {
+        const obj = { channelId: tmp3, height };
         tmp = obj;
       }
       return tmp;
@@ -213,8 +207,8 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
       tmp3 = renderListHeader();
     }
     items[1] = tmp3;
-    obj[1] = items;
-    return closure_12(analyticsLocations, obj, channelId);
+    obj.children = items;
+    return closure_2_12(View, obj, channelId);
   }, items7);
   const callback4 = obj7.useCallback(() => {
     let num = height;
@@ -238,6 +232,3 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   }
   return ownerId(channelId(onUserPress[22]).UsersFastList, { sections, getItemProps, getSectionProps, listHeaderSize, renderListHeader, disableStickySections, disableBackgroundOverlay: true, listStyleOverride, disableBottomSafeZone, insetEnd, inActionSheet });
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
-
-export default memoResult;

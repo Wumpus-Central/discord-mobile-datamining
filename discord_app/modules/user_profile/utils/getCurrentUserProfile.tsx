@@ -1,19 +1,20 @@
 // === Module 11087: getCurrentUserProfile ===
 
 // Module 11087 (getCurrentUserProfile)
-import closure_0 from "mergeGuildAvatar" /* 1371 */;
-import closure_1 from "createUserWidgetFromServer" /* 7621 */;
+import UserStore from "UserStore" /* 1371 */;
+import UserProfileStore from "UserProfileStore" /* 7621 */;
 
-const result = require("set").fileFinishedImporting("modules/user_profile/utils/getCurrentUserProfile.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/utils/getCurrentUserProfile.tsx");
 
 export default function getCurrentUserProfile(guildId) {
-  let id = currentUser.getCurrentUser();
+  let id = UserStore.getCurrentUser();
   if (null == id) {
     return null;
   } else if (null != guildId) {
     id = id.id;
-    let guildMemberProfile = authStore.getGuildMemberProfile(id, guildId);
+    let guildMemberProfile = UserProfileStore.getGuildMemberProfile(id, guildId);
   } else {
-    guildMemberProfile = authStore.getUserProfile(id.id);
+    guildMemberProfile = UserProfileStore.getUserProfile(id.id);
   }
 };

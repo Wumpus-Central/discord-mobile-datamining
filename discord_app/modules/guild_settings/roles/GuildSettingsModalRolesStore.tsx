@@ -1,58 +1,59 @@
-// === Module 17604: handleGuildRoleCreateOrUpdate ===
+// === Module 17604: GuildSettingsModalRolesStore ===
 
-// Module 17604 (handleGuildRoleCreateOrUpdate)
+// Module 17604 (GuildSettingsModalRolesStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import fromStringAll from "fromString" /* 1086 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import AccessibilityAnnouncer3 from "AccessibilityAnnouncer" /* 4411 */;
-import calculatePositionDeltasDefault from "calculatePositionDeltas" /* 12416 */;
-import closure_4 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import { FormStates } from "ME" /* 1074 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import util from "util" /* 1114 */;
+import shared from "shared" /* 4411 */;
+import DragAndDropUtilsDefault from "DragAndDropUtils" /* 12416 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
+require = fn;
 function handleGuildRoleCreateOrUpdate(arg0) {
   if (c8) {
-    const sortedRoles = store.getSortedRoles(tmp);
-    closure_9 = sortedRoles.map((id) => id.id);
+    const sortedRoles = GuildRoleStore.getSortedRoles(tmp);
+    c9 = sortedRoles.map((id) => id.id);
   }
 }
-let CLOSED = FormStates.CLOSED;
+const FormStates = fn(1074).FormStates;
+let OPEN = FormStates.CLOSED;
 let c8 = false;
 let c9 = null;
 let c10 = null;
 let c11 = null;
-let c12 = null;
-let c13 = null;
+let closure_12 = null;
+let closure_13 = null;
 let c14 = false;
-let c15 = null;
+let closure_15 = null;
 let c16 = false;
 const Store = initializeDefault.Store;
 class GuildSettingsModalRolesStore extends Store {
 }
 const prototype = GuildSettingsModalRolesStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_4);
+  this.waitFor(GuildStore, GuildRoleStore);
 };
 Object.defineProperty(prototype, "submitting", {
-  get: function submitting(arg0) {
-    return CLOSED === FormStates.SUBMITTING;
+  get: function submitting() {
+    return OPEN === FormStates.SUBMITTING;
   },
   set: undefined
 });
 prototype["getUpdates"] = function getUpdates() {
   if (null != c9) {
     if (null != _null2) {
-      let obj = calculatePositionDeltasDefault;
-      obj = { oldOrdering: null, newOrdering: null, idGetter: null, existingPositionGetter: null, ascending: false };
-      obj[0] = store.getSortedRoles(_null2.id);
-      obj[1] = store.getManyRoles(_null2.id, c9);
-      obj[2] = function idGetter(id) {
-        return id.id;
-      };
-      obj[3] = function existingPositionGetter(position) {
-        return position.position;
+      const obj = {
+        oldOrdering: GuildRoleStore.getSortedRoles(_null2.id),
+        newOrdering: GuildRoleStore.getManyRoles(_null2.id, c9),
+        idGetter(id) {
+              return id.id;
+            },
+        existingPositionGetter(position) {
+              return position.position;
+            },
+        ascending: false
       };
       const result = obj.calculatePositionDeltas(obj);
     }
@@ -72,14 +73,14 @@ Object.defineProperty(prototype, "guild", {
   set: undefined
 });
 Object.defineProperty(prototype, "role", {
-  get: function role(key10, oldValue10, newValue10) {
+  get: function role() {
     return c11;
   },
   set: undefined
 });
 Object.defineProperty(prototype, "permissions", {
-  get: function permissions(arg0) {
-    return c13;
+  get: function permissions() {
+    return closure_13;
   },
   set: undefined
 });
@@ -90,14 +91,14 @@ Object.defineProperty(prototype, "hasPermissionChanges", {
   set: undefined
 });
 GuildSettingsModalRolesStore.displayName = "GuildSettingsModalRolesStore";
-const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcherDefault, {
+const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(DispatcherDefault, {
   GUILD_SETTINGS_MODAL_ROLES_START_REORDER: function handleStartReorder(guildId) {
     guildId = guildId.guildId;
     c8 = true;
-    const sortedRoles = store.getSortedRoles(guildId);
-    closure_9 = sortedRoles.map((id) => id.id);
-    const guild = store2.getGuild(guildId);
-    clearTimeout(c15);
+    const sortedRoles = GuildRoleStore.getSortedRoles(guildId);
+    c9 = sortedRoles.map((id) => id.id);
+    const guild = GuildStore.getGuild(guildId);
+    clearTimeout(closure_15);
   },
   GUILD_SETTINGS_MODAL_ROLES_STOP_REORDER: function handleStopReorder() {
     c8 = false;
@@ -111,19 +112,17 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcher
     if (null == _null) {
       return false;
     } else {
-      const moveItemFromToResult = calculatePositionDeltasDefault.moveItemFromTo(_null, from, to);
+      const moveItemFromToResult = DragAndDropUtilsDefault.moveItemFromTo(_null, from, to);
       _null = moveItemFromToResult;
       if (moveItemFromToResult[from] !== _null[from]) {
-        const AccessibilityAnnouncer2 = AccessibilityAnnouncer3.AccessibilityAnnouncer;
-        const intl2 = getSystemLocale.intl;
-        const obj = { from: null, to: null };
-        obj[0] = from + 1;
-        obj[1] = to + 1;
-        AccessibilityAnnouncer2.announce(intl2.formatToPlainString(getSystemLocale.t["+tmElp"], obj));
+        const AccessibilityAnnouncer2 = shared.AccessibilityAnnouncer;
+        const intl2 = util.intl;
+        const obj = { from: from + 1, to: to + 1 };
+        AccessibilityAnnouncer2.announce(intl2.formatToPlainString(util.t["+tmElp"], obj));
       } else {
-        const AccessibilityAnnouncer = AccessibilityAnnouncer3.AccessibilityAnnouncer;
-        const intl = getSystemLocale.intl;
-        AccessibilityAnnouncer.announce(intl.string(getSystemLocale.t.WaxXjc));
+        const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
+        const intl = util.intl;
+        AccessibilityAnnouncer.announce(intl.string(util.t.WaxXjc));
       }
     }
   },
@@ -142,64 +141,68 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcher
     }
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_START_EDITING: function handleStartEditingPermissions(guildId) {
-    const guild = store2.getGuild(guildId.guildId);
+    const guild = GuildStore.getGuild(guildId.guildId);
+    _null2 = guild;
     let role;
     if (null != guild) {
-      role = store.getRole(guild.id, guildId.roleId);
+      role = GuildRoleStore.getRole(_null2.id, guildId.roleId);
     }
+    _null3 = role;
     if (null != role) {
-      const permissions = role.permissions;
+      const permissions = _null3.permissions;
+      closure_13 = permissions;
+      closure_12 = permissions;
     }
-    const OPEN = FormStates.OPEN;
+    OPEN = FormStates.OPEN;
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_STOP_EDITING: function handleStopEditingPermissions() {
-    c13 = null;
-    c12 = null;
+    closure_13 = null;
+    closure_12 = null;
     c11 = null;
     c10 = null;
     c14 = false;
-    CLOSED = FormStates.CLOSED;
+    OPEN = FormStates.CLOSED;
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_CANCEL: function handleCancelEditingPermissions() {
     if (null != closure_13) {
-      if (closure_13 !== c12) {
-        closure_13 = c12;
+      if (closure_13 !== closure_12) {
+        closure_13 = closure_12;
         c14 = false;
       }
     }
     return false;
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSION_ALLOW: function handleAllowPermission(arg0) {
-    if (null == c13) {
+    if (null == closure_13) {
       return false;
     } else {
-      const addResult = fromStringAll.add(c13, tmp);
-      c13 = addResult;
-      closure_14 = c12 !== addResult;
+      const addResult = BigFlagUtilsAll.add(closure_13, tmp);
+      closure_13 = addResult;
+      c14 = closure_12 !== addResult;
     }
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSION_DENY: function handleDenyPermission(arg0) {
-    if (null == c13) {
+    if (null == closure_13) {
       return false;
     } else {
-      const removeResult = fromStringAll.remove(c13, tmp);
-      c13 = removeResult;
-      closure_14 = c12 !== removeResult;
+      const removeResult = BigFlagUtilsAll.remove(closure_13, tmp);
+      closure_13 = removeResult;
+      c14 = closure_12 !== removeResult;
     }
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING: function handleSubmitPermissions() {
-    const SUBMITTING = FormStates.SUBMITTING;
+    OPEN = FormStates.SUBMITTING;
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_SUCCESS: function handleSubmitPermissionsSuccess() {
-    const OPEN = FormStates.OPEN;
-    closure_12 = c13;
-    closure_14 = c13 !== c13;
+    OPEN = FormStates.OPEN;
+    closure_12 = closure_13;
+    c14 = closure_13 !== closure_13;
   },
   GUILD_SETTINGS_MODAL_ROLES_PERMISSIONS_SUBMITTING_FAILURE: function handleSubmitPermissionsFailure() {
-    const OPEN = FormStates.OPEN;
+    OPEN = FormStates.OPEN;
     if (null != closure_13) {
-      if (closure_13 !== c12) {
-        closure_13 = c12;
+      if (closure_13 !== closure_12) {
+        closure_13 = closure_12;
         c14 = false;
       }
     }
@@ -215,6 +218,7 @@ const guildSettingsModalRolesStore = new GuildSettingsModalRolesStore(dispatcher
     }, 400);
   }
 });
-let result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesStore.tsx");
 
 export default guildSettingsModalRolesStore;

@@ -1,14 +1,17 @@
 // === Module 14708: useUsernameLiveCheck ===
 
 // Module 14708 (useUsernameLiveCheck)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "isRateLimited" /* 14709 */;
+import _mod12 from "module_12" /* 12 */;
+import UniqueUsernamesUtils from "UniqueUsernamesUtils" /* 14711 */;
+import noop from "module_19" /* 19 */;
+import UniqueUsernamesStore from "UniqueUsernamesStore" /* 14709 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
 
 export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, flag2) {
-  const _require = arg0;
+  _require = arg0;
   if (flag === undefined) {
     flag = true;
   }
@@ -20,21 +23,19 @@ export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, fl
     flag3 = false;
   }
   let stateFromStores;
-  let stateFromStores1;
-  let memo;
   const items = [stateFromStores];
   const items1 = [arg0];
-  stateFromStores = _require(flag2[2]).useStateFromStores(items, () => stateFromStores.validate(closure_0), items1);
-  let obj = _require(flag2[2]);
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => UniqueUsernamesStore.validate(closure_0), items1);
+  let obj = require("useStateFromStores");
   const items2 = [stateFromStores];
-  stateFromStores1 = _require(flag2[2]).useStateFromStores(items2, () => stateFromStores.isRateLimited());
+  const stateFromStores1 = require("useStateFromStores").useStateFromStores(items2, () => stateFromStores.isRateLimited());
   const items3 = [flag2, flag3];
-  memo = flag3.useMemo(() => callback(flag2[3]).debounce((arg0) => {
+  const memo = flag3.useMemo(() => _mod12.debounce((arg0) => {
     let str = "modal";
-    if (closure_2) {
+    if (closure_1_2) {
       str = "registration";
     }
-    return closure_1_1(closure_1_2[4]).attemptUsername(arg0, str, closure_2, closure_3);
+    return flag(flag2[4]).attemptUsername(arg0, str, closure_1_2, flag3);
   }, 800), items3);
   const items4 = [flag, stateFromStores1, stateFromStores, arg0, memo];
   const effect = flag3.useEffect(() => {
@@ -56,8 +57,7 @@ export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, fl
   return flag3.useMemo(() => {
     let result;
     if (null != stateFromStores) {
-      result = callback(flag2[5]).formatUsernameLiveCheckValidation(tmp);
-      const obj = callback(flag2[5]);
+      result = UniqueUsernamesUtils.formatUsernameLiveCheckValidation(tmp);
     }
     return result;
   }, items5);

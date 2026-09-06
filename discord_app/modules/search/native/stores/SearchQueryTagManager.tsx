@@ -1,25 +1,25 @@
-// === Module 12352: isComplete ===
+// === Module 12352: SearchQueryTagManager ===
 
-// Module 12352 (isComplete)
-import set2 from "set" /* 2 */;
-import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 7877 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
+// Module 12352 (SearchQueryTagManager)
+import TrackingConstants from "TrackingConstants" /* 7877 */;
+import SearchConstants from "SearchConstants" /* 7878 */;
+import size from "module_2" /* 2 */;
 
 function isComplete(type) {
   return type.type === SearchQueryTagTypes.COMPLETE;
 }
-let SearchQueryTagTypes = MessageEmbedTypes.SearchQueryTagTypes;
-const SearchFilterAddLocations = SearchEntrypointAnalyticsLocations.SearchFilterAddLocations;
-const result = set2.fileFinishedImporting("modules/search/native/stores/SearchQueryTagManager.tsx");
+const SearchQueryTagTypes = SearchConstants.SearchQueryTagTypes;
+const SearchFilterAddLocations = TrackingConstants.SearchFilterAddLocations;
+const result = size.fileFinishedImporting("modules/search/native/stores/SearchQueryTagManager.tsx");
 class SearchQueryTagManager {
   constructor() {
-    obj = Object.create(new.target.prototype);
-    obj[0] = [];
+    merged = Object.assign({ tags: null, ids: null, channelIds: null, version: 0 });
+    merged[0] = [];
     set = new Set();
-    obj[1] = set;
+    merged[1] = set;
     set1 = new Set();
-    obj[2] = set1;
-    return obj;
+    merged[2] = set1;
+    return merged;
   }
 }
 const prototype = SearchQueryTagManager.prototype;
@@ -29,7 +29,7 @@ prototype["markChanged"] = function markChanged() {
   const tags = this.tags;
   const item = tags.forEach((text) => {
     set.add(text.text);
-    let tmp2 = text.type === set.COMPLETE;
+    let tmp2 = text.type === SearchQueryTagTypes.COMPLETE;
     if (tmp2) {
       tmp2 = null != text.channelId;
     }
@@ -42,14 +42,14 @@ prototype["markChanged"] = function markChanged() {
   this.version = this.version + 1;
 };
 prototype["mergeTag"] = function mergeTag(location, channelId) {
-  SearchQueryTagTypes = location;
+  closure_0 = location;
   closure_1 = channelId;
   const tags = this.tags;
   const items = [];
-  items[HermesBuiltin.arraySpread(tags.filter((arg0) => {
-    let tmp = arg0 !== closure_0;
+  items[HermesBuiltin.arraySpread(tags.filter((item) => {
+    let tmp = item !== closure_0;
     if (tmp) {
-      tmp = arg0 !== closure_1;
+      tmp = item !== closure_1;
     }
     return tmp;
   }), 0)] = { type: SearchQueryTagTypes.COMPLETE, text: "" + location.text + " " + channelId.text, location: location.location, searchTokenType: location.searchTokenType, channelId: channelId.channelId, userId: channelId.userId };
@@ -59,9 +59,9 @@ prototype["replaceTag"] = function replaceTag(arg0, type) {
   closure_0 = arg0;
   closure_1 = type;
   const tags = this.tags;
-  this.tags = tags.map((arg0) => {
-    let tmp = arg0;
-    if (arg0 === closure_0) {
+  this.tags = tags.map((item) => {
+    let tmp = item;
+    if (item === closure_0) {
       tmp = closure_1;
     }
     return tmp;
@@ -79,9 +79,9 @@ prototype["getUserIds"] = function getUserIds(arg0) {
   const set = new Set();
   const tags = this.tags;
   const item = tags.forEach((type) => {
-    if (type.type === constants.COMPLETE) {
+    if (type.type === SearchQueryTagTypes.COMPLETE) {
       const userId = type.userId;
-      let tmp2 = type.searchTokenType === constants;
+      let tmp2 = type.searchTokenType === closure_0;
       if (tmp2) {
         tmp2 = null != userId;
       }
@@ -129,7 +129,7 @@ prototype["getQueryString"] = function getQueryString() {
   const tags = this.tags;
   const found = tags.filter((type) => {
     let tmp2 = !tmp;
-    if (type.type === flag.PREFIX) {
+    if (type.type === SearchQueryTagTypes.PREFIX) {
       tmp2 = flag;
     }
     return tmp2;
@@ -167,10 +167,10 @@ prototype["removeAnyPrefixTags"] = function removeAnyPrefixTags() {
   this.tags = tags.filter((type) => type.type !== constants.PREFIX);
   this.markChanged();
 };
-prototype["removeAtIndex"] = function removeAtIndex(closure_0) {
-  closure_0 = this.tags[closure_0];
+prototype["removeAtIndex"] = function removeAtIndex(arg0) {
+  closure_0 = this.tags[arg0];
   const tags = this.tags;
-  this.tags = tags.filter((arg0) => arg0 !== closure_0);
+  this.tags = tags.filter((item) => item !== closure_0);
   this.markChanged();
 };
 

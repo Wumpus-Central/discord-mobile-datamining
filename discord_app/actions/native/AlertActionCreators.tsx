@@ -1,17 +1,20 @@
-// === Module 4905: ? ===
+// === Module 4905: actions/AlertActionCreators ===
 
-// Module 4905
-import noopAll from "noop" /* 19 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 4905 (actions/AlertActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import util from "util" /* 1114 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import useAlertStore from "useAlertStore" /* 4906 */;
-import jsxProd from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = null;
 let c7 = 0;
-const result = require("set").fileFinishedImporting("actions/native/AlertActionCreators.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("actions/native/AlertActionCreators.tsx");
 
 export default {
   openLazy(hideActionSheet) {
@@ -25,20 +28,19 @@ export default {
     }
     return hideActionSheet.importer().then((alert) => {
       if (flag) {
-        let obj = flag2(closure_1_2[2]);
+        let obj = ActionSheetActionCreatorsDefault;
         obj.hideActionSheet();
       }
       obj = { type: "ALERT_OPEN", alert, isDismissable: flag2 };
-      flag2(closure_1_2[3]).dispatch(obj);
+      DispatcherDefault.dispatch(obj);
     });
   },
   close() {
     if (null != c6) {
       c6 = null;
       useAlertStore.dismissAlert(tmp);
-      const obj = useAlertStore;
     }
-    dispatcherDefault.dispatch({ type: "ALERT_CLOSE" });
+    DispatcherDefault.dispatch({ type: "ALERT_CLOSE" });
   },
   show(hideActionSheet) {
     let flag = hideActionSheet.hideActionSheet;
@@ -50,9 +52,9 @@ export default {
       const intl = confirmText(1114).intl;
       confirmText = intl.string(confirmText(1114).t.BddRzS);
     }
-    let merged = Object.assign(hideActionSheet, Object.create(null));
+    let merged = Object.assign(hideActionSheet, Object.assign({ hideActionSheet: 0, isDismissable: 0, confirmText: 0 }));
     dependencyMap = undefined;
-    let callback;
+    c3 = undefined;
     c4 = undefined;
     c5 = undefined;
     let obj = {};
@@ -136,43 +138,41 @@ export default {
       c5 = false;
       ({ title, body: body2, children, confirmColor } = merged);
       const obj7 = confirmText(4906);
-      obj = { title: null, content: null, extraContent: null, actions: null };
-      obj[0] = title;
-      obj[1] = body2;
-      obj[2] = children;
+      obj = { title, content: body2, extraContent: children, actions: null };
       obj = { variant: null, text: null, onPress: null };
       const obj6 = merged(573);
       const tmp29 = confirmText;
       const tmp31 = c5;
       const tmp32 = c4;
-      obj[0] = confirmText(4994).getAlertButtonVariant(confirmColor);
-      obj[1] = confirmText;
-      obj[2] = function onPress() {
+      obj.variant = confirmText(4994).getAlertButtonVariant(confirmColor);
+      obj.text = confirmText;
+      obj.onPress = function onPress() {
         c5 = true;
         if (c3 != null) {
           tmp();
         }
       };
-      const items = [callback(confirmText(4910).AlertActionButton, obj), ];
+      const items = [c3(confirmText(4910).AlertActionButton, obj), ];
       let tmp30Result = null;
       if (null != cancelText) {
-        obj1 = { variant: "secondary", text: null, onPress: null };
-        obj1[1] = cancelText;
-        obj1[2] = function onPress() {
-          c5 = true;
-          if (c4 != null) {
-            tmp();
-          }
+        let obj1 = {
+          variant: "secondary",
+          text: cancelText,
+          onPress() {
+                c5 = true;
+                if (c4 != null) {
+                  tmp();
+                }
+              }
         };
         tmp30Result = tmp30(tmp29(4910).AlertActionButton, obj1);
       }
       const obj2 = { children: null };
       items[1] = tmp30Result;
-      obj2[0] = items;
-      obj[3] = tmp31(tmp32, obj2);
-      obj3 = { dismissable: null };
-      obj3[0] = true === isDismissable;
-      obj7.openAlert(text, callback(confirmText(4910).AlertModal, obj), () => {
+      obj2.children = items;
+      obj.actions = tmp31(tmp32, obj2);
+      obj3 = { dismissable: true === isDismissable };
+      obj7.openAlert(text, c3(confirmText(4910).AlertModal, obj), () => {
         if (!c5) {
           if (c4 != null) {
             tmp();
@@ -190,21 +190,22 @@ export default {
         c6 = null;
       }
       const self = this;
-      obj4 = { importer: null, hideActionSheet: null, isDismissable: null };
-      obj4[0] = function importer() {
-        return confirmText(_undefined[9])(_undefined[8], _undefined.paths).then((arg0) => {
-          closure_0 = arg0.default;
-          return (arg0) => {
-            const obj = {};
-            merged = Object.assign(arg0);
-            const merged1 = Object.assign(closure_1_1);
-            obj.confirmText = closure_0;
-            return closure_2_3(closure_0, obj);
-          };
-        });
+      obj4 = {
+        importer() {
+            return asyncRequireImpl(4994, dependencyMap.paths).then((result) => {
+              closure_0 = result.default;
+              return (arg0) => {
+                const obj = {};
+                merged = Object.assign(arg0);
+                const merged1 = Object.assign(merged);
+                obj.confirmText = confirmText;
+                return c3(closure_0, obj);
+              };
+            });
+          },
+        hideActionSheet: flag,
+        isDismissable
       };
-      obj4[1] = flag;
-      obj4[2] = isDismissable;
       this.openLazy(obj4);
     }
   },
@@ -212,20 +213,20 @@ export default {
     const self = this;
     closure_0 = arg0;
     return new Promise((arg0) => {
-      const callback = arg0;
+      closure_0 = arg0;
       const obj = {
         onConfirm() {
-          callback(true);
+          closure_0(true);
         },
         cancelText: null,
         onCancel: null
       };
-      const intl = callback(closure_1_2[5]).intl;
-      obj[1] = intl.string(callback(closure_1_2[5]).t["ETE/oC"]);
-      obj[2] = function onCancel() {
-        callback(false);
+      const intl = util.intl;
+      obj.cancelText = intl.string(util.t["ETE/oC"]);
+      obj.onCancel = function onCancel() {
+        closure_0(false);
       };
-      const merged = Object.assign(callback);
+      const merged = Object.assign(closure_0);
       self.show(obj);
     });
   }

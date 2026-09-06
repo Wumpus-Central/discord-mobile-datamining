@@ -1,67 +1,62 @@
-// === Module 9717: ActionSheetHeader ===
+// === Module 9717: DatePickerActionSheet ===
 
-// Module 9717 (ActionSheetHeader)
-import ThemesDefault from "Themes" /* 576 */;
-import set from "set" /* 1115 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 9717 (DatePickerActionSheet)
+import nativeDefault from "native" /* 576 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import native from "native" /* 1178 */;
+import _modDef4153 from "module_4153" /* 4153 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import timing from "timing" /* 4561 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4971 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 7149 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function ActionSheetHeader(handleSubmit) {
   ({ title, handleCancel } = handleSubmit);
-  let obj = set;
-  const BottomSheetTitleHeader = RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader;
+  let obj = PlatformUtils;
+  const BottomSheetTitleHeader = BottomSheetTitleHeader2.BottomSheetTitleHeader;
   if (isAndroidResult) {
-    obj = { title: null, trailing: null };
-    obj[0] = title;
-    obj = { onPress: null };
-    obj[0] = handleCancel;
-    obj[1] = tmp4(tmp(7199).ActionSheetCloseButton, obj);
+    obj = { title, trailing: null };
+    obj = { onPress: handleCancel };
+    obj.trailing = tmp4(tmp(7199).ActionSheetCloseButton, obj);
     let tmp4Result = tmp4(BottomSheetTitleHeader, obj);
   } else {
-    obj1 = { title: null, leading: null, trailing: null };
-    obj1[0] = title;
-    const obj2 = { onPress: null, label: null };
-    obj2[0] = handleCancel;
+    const obj1 = { title, leading: null, trailing: null };
+    const obj2 = { onPress: handleCancel, label: null };
     const intl = tmp(1114).intl;
-    obj2[1] = intl.string(tmp(1114).t["ETE/oC"]);
-    obj1[1] = tmp4(tmp(9718).ActionSheetHeaderPressableText, obj2);
-    const obj3 = { onPress: null, label: null };
-    obj3[0] = handleSubmit.handleSubmit;
+    obj2.label = intl.string(tmp(1114).t["ETE/oC"]);
+    obj1.leading = tmp4(tmp(9718).ActionSheetHeaderPressableText, obj2);
+    const obj3 = { onPress: handleSubmit.handleSubmit, label: null };
     const intl2 = tmp(1114).intl;
-    obj3[1] = intl2.string(tmp(1114).t["R3BPH+"]);
-    obj1[2] = tmp4(tmp(9718).ActionSheetHeaderPressableText, obj3);
+    obj3.label = intl2.string(tmp(1114).t["R3BPH+"]);
+    obj1.trailing = tmp4(tmp(9718).ActionSheetHeaderPressableText, obj3);
     tmp4Result = tmp4(BottomSheetTitleHeader, obj1);
   }
   return tmp4Result;
 }
 function DateRangeError(children) {
   const show = children.show;
-  let ref;
-  const tmp = callback3();
-  ref = React.useRef(null);
+  const tmp = closure_8();
+  const ref = noop.useRef(null);
   const items = [show];
-  const effect = React.useEffect(() => {
-    let obj = show(closure_1_2[12]);
-    obj = { ref, delay: 200 };
+  const effect = noop.useEffect(() => {
+    const obj = { ref, delay: 200 };
     const result = obj.setAccessibilityFocus(obj);
   }, items);
   let obj = show(4296);
   class A {
     constructor() {
-      obj = { easing: show(closure_1_2[14]).STANDARD_EASING, duration: null };
-      tmp = show;
-      tmp2 = closure_1_2;
+      obj = { easing: closure_0(closure_2[14]).STANDARD_EASING, duration: null };
+      tmp = closure_0;
+      tmp2 = closure_2;
       tmp3 = show;
       num = 150;
       if (show) {
         num = 200;
       }
-      obj[1] = num;
+      obj.duration = num;
       tmpResult = tmp(tmp2[15]);
       num2 = 0;
       if (tmp3) {
@@ -73,74 +68,78 @@ function DateRangeError(children) {
       if (tmp3) {
         num3 = 500;
       }
-      obj[1] = tmpResult1.withTiming(num3, obj);
+      obj.maxHeight = tmpResult1.withTiming(num3, obj);
       tmpResult2 = tmp(tmp2[15]);
       num4 = 0;
       if (tmp3) {
         num4 = 12;
       }
-      obj[2] = tmpResult2.withTiming(num4, obj);
+      obj.paddingVertical = tmpResult2.withTiming(num4, obj);
       return obj;
     }
   }
   obj = { STANDARD_EASING: show(1178).STANDARD_EASING, show, withTiming: show(4561).withTiming };
   A.__closure = obj;
   A.__workletHash = 11991491746736;
-  A.__initData = closure_11;
+  A.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(A);
-  obj = { style: items1, accessibilityElementsHidden: !show, importantForAccessibility: null, children: null };
-  items1 = [tmp.rangeErrorContainer, animatedStyle];
+  obj = { style: null, accessibilityElementsHidden: !show, importantForAccessibility: null, children: null };
+  const items1 = [tmp.rangeErrorContainer, animatedStyle];
+  obj.style = items1;
   let str = "no-hide-descendants";
   if (show) {
     str = "auto";
   }
-  obj[2] = str;
-  obj[3] = closure_6(View, { ref, accessible: true, accessibilityRole: "alert", style: tmp.rangeError, children: closure_6(show(4556).Text, { variant: "text-md/medium", color: "text-feedback-critical", children: children.errorText }) });
+  obj.importantForAccessibility = str;
+  obj.children = closure_6(View, { ref, accessible: true, accessibilityRole: "alert", style: tmp.rangeError, children: closure_6(show(4556).Text, { variant: "text-md/medium", color: "text-feedback-critical", children: children.errorText }) });
   return closure_6(ref(4296).View, obj);
 }
 function ActionSheetFooter(arg0) {
   ({ handleCancel, handleSubmit, canSubmit } = arg0);
-  const tmp = callback4();
-  let obj = set;
+  const tmp = closure_9();
+  let obj = PlatformUtils;
   let tmp4 = null;
   if (obj.isAndroid()) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.footer;
+    obj = { style: tmp.footer, children: null };
     obj = { shrink: true, size: "md", variant: "secondary", textElement: null, accessibilityLabel: null, style: null, onPress: null };
-    obj1 = { variant: "text-md/semibold", children: null };
+    const obj1 = { variant: "text-md/semibold", children: null };
     const intl = tmp2(1114).intl;
-    obj1[1] = intl.string(tmp2(1114).t["ETE/oC"]);
-    obj[3] = callback(tmp2(4556).Text, obj1);
+    obj1.children = intl.string(tmp2(1114).t["ETE/oC"]);
+    obj.textElement = timestampProducer(tmp2(4556).Text, obj1);
     const intl2 = tmp2(1114).intl;
-    obj[4] = intl2.string(tmp2(1114).t["ETE/oC"]);
-    obj[5] = tmp.actionButton;
-    obj[6] = handleCancel;
-    const items = [callback(tmp2(4976).BaseTextButton, obj), ];
-    const obj2 = { shrink: true, disabled: null, size: "md", variant: "secondary", textElement: null, accessibilityLabel: null, style: null, onPress: null };
-    obj2[1] = !canSubmit;
+    obj.accessibilityLabel = intl2.string(tmp2(1114).t["ETE/oC"]);
+    obj.style = tmp.actionButton;
+    obj.onPress = handleCancel;
+    const items = [timestampProducer(tmp2(4976).BaseTextButton, obj), ];
+    const obj2 = { shrink: true, disabled: !canSubmit, size: "md", variant: "secondary", textElement: null, accessibilityLabel: null, style: null, onPress: null };
     const obj3 = { variant: "text-md/semibold", children: null };
     const intl3 = tmp2(1114).intl;
-    obj3[1] = intl3.string(tmp2(1114).t["cY+Oob"]);
-    obj2[4] = callback(tmp2(4556).Text, obj3);
+    obj3.children = intl3.string(tmp2(1114).t["cY+Oob"]);
+    obj2.textElement = timestampProducer(tmp2(4556).Text, obj3);
     const intl4 = tmp2(1114).intl;
-    obj2[5] = intl4.string(tmp2(1114).t["cY+Oob"]);
-    obj2[6] = tmp.actionButton;
-    obj2[7] = handleSubmit;
-    items[1] = callback(tmp2(4976).BaseTextButton, obj2);
-    obj[1] = items;
-    tmp4 = callback2(View, obj);
+    obj2.accessibilityLabel = intl4.string(tmp2(1114).t["cY+Oob"]);
+    obj2.style = tmp.actionButton;
+    obj2.onPress = handleSubmit;
+    items[1] = timestampProducer(tmp2(4976).BaseTextButton, obj2);
+    obj.children = items;
+    tmp4 = React5(View, obj);
   }
   return tmp4;
 }
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { rangeErrorContainer: { justifyContent: "flex-start" }, rangeError: null, datetimePickerContainer: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, padding: 12, marginHorizontal: 12, borderRadius: ThemesDefault.radii.sm };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", alignItems: "center" };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let closure_9 = createCacheKey.createStyles({ footer: { marginVertical: 6, paddingHorizontal: 12, display: "flex", flexDirection: "row", justifyContent: "flex-end" }, actionButton: { marginLeft: 24 } });
-let closure_11 = { code: "function DatePickerActionSheetTsx1(){const{STANDARD_EASING,show,withTiming}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:show?200:150};return{opacity:withTiming(show?1:0,animationSettings),maxHeight:withTiming(show?500:0,animationSettings),paddingVertical:withTiming(show?12:0,animationSettings)};}" };
-let result = require("set").fileFinishedImporting("components_native/DatePickerActionSheet.tsx");
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { rangeErrorContainer: { justifyContent: "flex-start" }, rangeError: null, datetimePickerContainer: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, padding: 12, marginHorizontal: 12, borderRadius: nativeDefault.radii.sm };
+createStyles.rangeError = createStyles;
+createStyles.datetimePickerContainer = { display: "flex", alignItems: "center" };
+let closure_8 = createStyles.createStyles(createStyles);
+createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ footer: { marginVertical: 6, paddingHorizontal: 12, display: "flex", flexDirection: "row", justifyContent: "flex-end" }, actionButton: { marginLeft: 24 } });
+const __initData = { code: "function DatePickerActionSheetTsx1(){const{STANDARD_EASING,show,withTiming}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:show?200:150};return{opacity:withTiming(show?1:0,animationSettings),maxHeight:withTiming(show?500:0,animationSettings),paddingVertical:withTiming(show?12:0,animationSettings)};}" };
+const size = fn(2);
+let result = size.fileFinishedImporting("components_native/DatePickerActionSheet.tsx");
 
 export default function DatePickerActionSheet(mode) {
   let str = mode.mode;
@@ -156,32 +155,32 @@ export default function DatePickerActionSheet(mode) {
   const minimumDate = mode.minimumDate;
   ({ onSubmit: dependencyMap, onCancel } = mode);
   startDate = undefined;
-  let first;
-  let callback;
+  let date;
+  closure_6 = undefined;
   let first1;
-  let callback3;
+  closure_8 = undefined;
   c9 = undefined;
   c10 = undefined;
   c11 = undefined;
-  closure_12 = undefined;
+  let ref;
   if (startDate == null) {
     const _Date = Date;
     startDate = new Date();
   }
   let obj = startDate;
   const tmp7 = onCancel(startDate.useState(startDate), 2);
-  first = tmp7[0];
-  callback = tmp7[1];
+  date = tmp7[0];
+  closure_6 = tmp7[1];
   const tmp8 = onCancel(startDate.useState(!mode.requireDateChanged), 2);
   first1 = tmp8[0];
-  callback3 = tmp8[1];
-  let tmp3 = callback3();
+  closure_8 = tmp8[1];
+  let tmp3 = closure_8();
   [c9, c10] = onCancel(startDate.useState(true), 2);
   const tmp10 = onCancel(startDate.useState(true), 2);
   [tmp12, c11] = onCancel(startDate.useState(false), 2);
   const tmp11 = onCancel(startDate.useState(false), 2);
-  closure_12 = startDate.useRef(first);
-  let date;
+  ref = startDate.useRef(date);
+  date = undefined;
   if (null != maximumDate) {
     const _Date2 = Date;
     date = new Date(maximumDate.getFullYear() + 1, 0, 1, 0, -1);
@@ -191,16 +190,16 @@ export default function DatePickerActionSheet(mode) {
     const _Date3 = Date;
     date1 = new Date(minimumDate.getFullYear(), 0, 1, 0);
   }
-  const items = [first];
+  const items = [date];
   const effect = obj.useEffect(() => {
-    closure_12.current = first;
+    closure_12.current = current;
   }, items);
   const tmp25 = minimumDate(6964)(() => {
     closure_12.current = startDate;
     if (onCancel != null) {
       tmp();
     }
-    minimumDate(closure_1_2[6]).hideActionSheet();
+    ActionSheetActionCreatorsDefault.hideActionSheet();
   });
   const tmp26 = minimumDate(6964)(() => {
     let tmp = first1;
@@ -208,22 +207,21 @@ export default function DatePickerActionSheet(mode) {
       tmp = c9;
     }
     if (tmp) {
-      callback(minimumDate(closure_1_2[20])(ref.current));
+      dependencyMap(_modDef4153(ref.current));
     }
     if (c9) {
-      minimumDate(closure_1_2[6]).hideActionSheet();
-      const obj = minimumDate(closure_1_2[6]);
+      ActionSheetActionCreatorsDefault.hideActionSheet();
     } else {
       _undefined(true);
     }
   });
   const tmp15 = minimumDate(4495)();
-  obj = { onDismiss: onCancel, header: callback(c10, { title, handleCancel: tmp25, handleSubmit: tmp26 }), children: null };
+  obj = { onDismiss: onCancel, header: closure_6(c10, { title, handleCancel: tmp25, handleSubmit: tmp26 }), children: null };
   let tmp32 = tmp12;
   if (tmp12) {
     let tmp33 = null == minimumDate;
     if (!tmp33) {
-      let time = first.getTime();
+      let time = date.getTime();
       tmp33 = time >= minimumDate.getTime();
     }
     tmp32 = !tmp33;
@@ -257,44 +255,43 @@ export default function DatePickerActionSheet(mode) {
           tmp4 = tmp6;
           obj = maximumDate;
         }
-        c10(tmp4);
-        const tmp3 = c10;
+        _undefined(tmp4);
       }
       _undefined(false);
-      callback3(true);
-      callback2(getTime);
+      closure_8(true);
+      closure_6(getTime);
     }
   });
   const tmp28 = first1;
-  obj[1] = intl2.formatToPlainString(maximumDate(1114).t.FsJO55, { minDate: obj4.format(str3) });
-  const items1 = [callback(closure_12, obj), , , ];
+  obj.errorText = intl2.formatToPlainString(maximumDate(1114).t.FsJO55, { minDate: obj4.format(str3) });
+  const items1 = [closure_6(ref, obj), , , ];
   if (tmp12) {
     let tmp36 = null == maximumDate;
     if (!tmp36) {
-      let time1 = first.getTime();
+      let time1 = date.getTime();
       tmp36 = time1 <= maximumDate.getTime();
     }
   }
   const obj2 = { show: tmp12, errorText: null };
   const intl3 = tmp29(1114).intl;
-  obj1 = { minDate: obj4.format(str3) };
+  const obj1 = { minDate: obj4.format(str3) };
   if ("date" === str) {
     str2 = "L";
   }
   const obj8 = minimumDate(4153)(maximumDate);
-  obj2[1] = intl3.formatToPlainString(maximumDate(1114).t.R7r9VN, { maxDate: minimumDate(4153)(maximumDate).format(str2) });
-  items1[1] = callback(closure_12, obj2);
+  obj2.errorText = intl3.formatToPlainString(maximumDate(1114).t.R7r9VN, { maxDate: minimumDate(4153)(maximumDate).format(str2) });
+  items1[1] = closure_6(ref, obj2);
   obj4 = { style: tmp3.datetimePickerContainer, children: null };
   const obj3 = { maxDate: minimumDate(4153)(maximumDate).format(str2) };
-  const tmp38 = first;
+  const tmp38 = date;
   const tmp13Result = minimumDate(9719);
   let str4 = "dark";
   if (tmp29Result.isThemeLight(tmp15)) {
     str4 = "light";
   }
-  obj4[1] = callback(tmp13Result, { theme: str4, date: first, onDateChange: tmp27, maximumDate: date, minimumDate: date1, mode: str });
-  items1[2] = callback(tmp38, obj4);
-  items1[3] = callback(ActionSheetFooter, { handleCancel: tmp25, handleSubmit: tmp26, canSubmit: first1 });
-  obj[2] = items1;
+  obj4.children = closure_6(tmp13Result, { theme: str4, date, onDateChange: tmp27, maximumDate: date, minimumDate: date1, mode: str });
+  items1[2] = closure_6(tmp38, obj4);
+  items1[3] = closure_6(ActionSheetFooter, { handleCancel: tmp25, handleSubmit: tmp26, canSubmit: first1 });
+  obj.children = items1;
   return tmp28(maximumDate(7150).BottomSheet, obj);
 };

@@ -1,18 +1,19 @@
-// === Module 16317: useIsHomeDrawerChannelMuted ===
+// === Module 16317: isHomeDrawerChannelMuted ===
 
-// Module 16317 (useIsHomeDrawerChannelMuted)
+// Module 16317 (isHomeDrawerChannelMuted)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "storeThread" /* 4201 */;
-import { isThread } from "createChannelRecord" /* 1961 */;
-import closure_4 from "updateUserGuildSettingsInternal" /* 4741 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
+require = fn;
+const isThread = fn(1961).isThread;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelMuted.tsx");
 
 export const useIsHomeDrawerChannelMuted = function useIsHomeDrawerChannelMuted() {
-  const items = [closure_2, closure_4];
+  const items = [JoinedThreadsStore, UserGuildSettingsStore];
   return initialize.useStateFromStores(items, () => (type) => {
-    const tmp = callback(type.type);
+    const tmp = closure_1_3(type.type);
     if (tmp) {
       if (muted.isMuted(type.id)) {
         return true;

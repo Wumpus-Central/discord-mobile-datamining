@@ -1,40 +1,35 @@
-// === Module 8074: createFriendRequestAcceptedSystemMessage ===
+// === Module 8074: FriendRequestAcceptedSystemMessage ===
 
-// Module 8074 (createFriendRequestAcceptedSystemMessage)
-import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 7960 */;
+// Module 8074 (FriendRequestAcceptedSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import registerAssetDefault from "registerAsset" /* 8075 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
+import _modDef8075 from "module_8075" /* 8075 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");
 
 export const createFriendRequestAcceptedSystemMessage = function createFriendRequestAcceptedSystemMessage(message) {
   message = message.message;
-  channel = channel.getChannel(message.channel_id);
+  const channel = ChannelStore.getChannel(message.channel_id);
   if (null != channel) {
     if (channel.isDM()) {
       const recipientId = channel.getRecipientId();
-      const user = authStore.getUser(recipientId);
-      const currentUser = authStore.getCurrentUser();
+      const user = UserStore.getUser(recipientId);
+      const currentUser = UserStore.getCurrentUser();
       if (null != user) {
         if (null != currentUser) {
-          let colorString = getMessageAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
-          let obj = { userId: null, message: null, author: null, roleStyle: null };
-          obj[0] = recipientId;
-          obj[1] = message;
-          obj[2] = colorString;
-          obj[3] = message.roleStyle;
-          obj = { username: null, usernameOnClick: null };
-          obj[0] = colorString.nick;
-          obj[1] = formatUsernameOnClickDefault(obj);
+          let colorString = useAuthorWithProcessedColor.getUserAuthorWithProcessedColor(user, channel);
+          let obj = { userId: recipientId, message, author: colorString, roleStyle: message.roleStyle };
+          obj = { username: colorString.nick, usernameOnClick: null };
+          obj.usernameOnClick = formatUsernameOnClickDefault(obj);
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
               let tmp15Result = tmp15(4560);
-              obj1 = { baseTextColor: null };
-              obj1[0] = tmp17(576).colors.TEXT_SUBTLE;
+              const obj1 = { baseTextColor: tmp17(576).colors.TEXT_SUBTLE };
               const intl2 = tmp15(1114).intl;
               const formatToParts2 = intl2.formatToParts;
               let t = tmp15(1114).t;
@@ -44,15 +39,14 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
                 t.note = content;
                 content = { colorString: null };
                 colorString = colorString.colorString;
-                content[0] = colorString;
+                content.colorString = colorString;
                 t.formattedNote = content;
                 let formatToParts2Result = formatToParts2(t["6pQebO"], t);
               } else {
                 const obj2 = {};
                 const merged = Object.assign(obj);
                 obj2.note = content;
-                const obj3 = { colorString: null };
-                obj3[0] = colorString.colorString;
+                const obj3 = { colorString: colorString.colorString };
                 obj2.formattedNote = obj3;
                 formatToParts2Result = formatToParts2(t.bNrwDM, obj2);
               }
@@ -67,11 +61,10 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           } else {
             formatToPartsResult = formatToParts(t.hyPOTm, obj);
           }
-          const obj4 = { content: null, iconUrl: null, textColor: null };
-          obj4[0] = formatToPartsResult;
+          const obj4 = { content: formatToPartsResult, iconUrl: null, textColor: null };
           tmp15Result = tmp15(7946);
-          obj4[1] = tmp15Result.getAssetUriForEmbed(registerAssetDefault);
-          obj4[2] = undefined;
+          obj4.iconUrl = tmp15Result.getAssetUriForEmbed(_modDef8075);
+          obj4.textColor = undefined;
           const merged1 = Object.assign(tmp17(7964)(message));
           return obj4;
         }

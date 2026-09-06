@@ -1,8 +1,8 @@
-// === Module 13884: innerContent ===
+// === Module 13884: ActivateDeviceSharedStyles ===
 
-// Module 13884 (innerContent)
-import set from "set" /* 2 */;
+// Module 13884 (ActivateDeviceSharedStyles)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSharedStyles.tsx");
+const result = size.fileFinishedImporting("modules/activate_device/native/ActivateDeviceSharedStyles.tsx");
 
 export default { innerContent: { flexDirection: "column", gap: 8, alignItems: "center" }, centerText: { textAlign: "center" } };

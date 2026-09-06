@@ -1,27 +1,27 @@
-// === Module 13995: bitrate ===
+// === Module 13995: BitRateStore ===
 
-// Module 13995 (bitrate)
-import set from "set" /* 2 */;
+// Module 13995 (BitRateStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 4585 */;
+import size from "module_2" /* 2 */;
 
-const DEFAULT_VOICE_BITRATE = DesktopSources.DEFAULT_VOICE_BITRATE;
+let bitrate = Constants.DEFAULT_VOICE_BITRATE;
 const Store = initializeDefault.Store;
 class BitRateStore extends Store {
 }
 Object.defineProperty(BitRateStore.prototype, "bitrate", {
   get: function bitrate() {
-    return DEFAULT_VOICE_BITRATE;
+    return bitrate;
   },
   set: undefined
 });
 BitRateStore.displayName = "BitRateStore";
-const bitRateStore = new BitRateStore(dispatcherDefault, {
+const bitRateStore = new BitRateStore(DispatcherDefault, {
   SET_CHANNEL_BITRATE: function handleSetChannelBitrate(bitrate) {
     bitrate = bitrate.bitrate;
   }
 });
-const result = set.fileFinishedImporting("stores/BitRateStore.tsx");
+const result = size.fileFinishedImporting("stores/BitRateStore.tsx");
 
 export default bitRateStore;

@@ -1,43 +1,41 @@
-// === Module 15354: dismissibleBadgeRouteProps ===
+// === Module 15354: TypingIndicatorSetting ===
 
-// Module 15354 (dismissibleBadgeRouteProps)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import messagesProxyDefault from "messagesProxy" /* 3549 */;
-import apexExperiment from "apexExperiment" /* 11967 */;
+// Module 15354 (TypingIndicatorSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import dismissible_content from "dismissible_content" /* 1943 */;
+import _modDef3549 from "module_3549" /* 3549 */;
+import CustomTypingIndicatorExperiment from "CustomTypingIndicatorExperiment" /* 11967 */;
 import ChatDotsIcon from "ChatDotsIcon" /* 15355 */;
-import SettingsBadgeType from "SettingsBadgeType" /* 15406 */;
-import useAlwaysShow from "useAlwaysShow" /* 14719 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingRendererTypes from "SettingRendererTypes" /* 15406 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 14719 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const dismissibleBadgeRouteProps = useAlwaysShow.createDismissibleBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE);
+const dismissibleBadgeRouteProps = DismissibleBadgeUtils.createDismissibleBadgeRouteProps(dismissible_content.DismissibleContent.CUSTOM_TYPING_INDICATOR_MOBILE_NEW_BADGE_PROFILE_PAGE);
 ({ useTrailing, usePreNavigationAction } = dismissibleBadgeRouteProps);
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["pT+BVM"]);
+    const intl = util.intl;
+    return intl.string(_modDef3549["pT+BVM"]);
   },
   parent: null,
   IconComponent: ChatDotsIcon.ChatDotsIcon,
   useTrailing,
   usePreNavigationAction,
   usePredicate() {
-    return "settings" === apexExperiment.useCustomTypingIndicatorConfig("TypingIndicatorSetting").entryPoint;
+    return "settings" === CustomTypingIndicatorExperiment.useCustomTypingIndicatorConfig("TypingIndicatorSetting").entryPoint;
   },
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.TYPING_INDICATOR,
-  getComponent() {
-    return require(15357) /* CustomTypingIndicatorEditScreen */.default;
-  },
-  usePersistentBadge() {
-    return { badgeType: SettingsBadgeType.SettingsBadgeType.BETA };
+  screen: {
+    route: Constants.UserSettingsSections.TYPING_INDICATOR,
+    getComponent() {
+      return require("CustomTypingIndicatorEditScreen").default;
+    },
+    usePersistentBadge() {
+      return { badgeType: SettingRendererTypes.SettingsBadgeType.BETA };
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/TypingIndicatorSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/TypingIndicatorSetting.tsx");
 
 export default route;

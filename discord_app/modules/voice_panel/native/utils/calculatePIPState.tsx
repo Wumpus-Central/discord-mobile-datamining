@@ -1,20 +1,21 @@
 // === Module 17086: calculatePIPState ===
 
 // Module 17086 (calculatePIPState)
-import isStreamKey from "isStreamKey" /* 4612 */;
-import PIPReferenceDimensions from "PIPReferenceDimensions" /* 17087 */;
-import closure_2 from "getParticipants" /* 4576 */;
-import closure_3 from "reset" /* 4582 */;
-import { VoicePanelModes } from "VoicePanelModes" /* 12273 */;
-import { ParticipantTypes } from "ParticipantTypes" /* 4581 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17087 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
+require = fn;
+const VoicePanelModes = fn(12273).VoicePanelModes;
+const ParticipantTypes = fn(4581).ParticipantTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
 export default function calculatePIPState(channelId, getTargetDimensions, lastParticipantId, speakingUserId, focusedId) {
   let tmp = null != focusedId.focusedId;
   if (tmp) {
-    participant = participant.getParticipant(channelId, focusedId.focusedId);
+    const participant = ChannelRTCStore.getParticipant(channelId, focusedId.focusedId);
     let type;
     if (participant != null) {
       type = participant.type;
@@ -22,17 +23,16 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
     tmp = type === ParticipantTypes.ACTIVITY;
   }
   const set = new Set();
-  currentUserActiveStream = currentUserActiveStream.getCurrentUserActiveStream();
+  const currentUserActiveStream = ApplicationStreamingStore.getCurrentUserActiveStream();
   if (null != currentUserActiveStream) {
-    set.add(isStreamKey.encodeStreamKey(currentUserActiveStream));
-    const obj2 = isStreamKey;
+    set.add(StreamKeyUtils.encodeStreamKey(currentUserActiveStream));
   }
   let tmp10 = focusedId.mode === VoicePanelModes.PANEL;
   if (tmp11) {
     set.add(focusedId.focusedId);
   }
   let obj = { channelId, lastParticipantId, speakingUserId, focusedParticipantId: focusedId.focusedId, blockList: set, panelMode: focusedId.mode, showSecondaryPIP: focusedId.showSecondaryPIP };
-  const pIPParticipantToShow = PIPReferenceDimensions.computePIPParticipantToShow(obj);
+  const pIPParticipantToShow = VoicePanelPIPUtils.computePIPParticipantToShow(obj);
   let type1;
   if (pIPParticipantToShow != null) {
     type1 = pIPParticipantToShow.type;
@@ -56,7 +56,6 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
     }
     tmp18 = tmp20;
   }
-  const obj3 = PIPReferenceDimensions;
   tmp11 = null != focusedId.focusedId && tmp10;
   let id1;
   if (pIPParticipantToShow != null) {
@@ -69,6 +68,6 @@ export default function calculatePIPState(channelId, getTargetDimensions, lastPa
   if (tmp10) {
     tmp10 = tmp;
   }
-  obj = { participant: pIPParticipantToShow, dimensions: PIPReferenceDimensions.computePIPSize(SquarePIPReferenceDimensions, tmp18, tmp10, focusedId.showSecondaryPIP) };
+  obj = { participant: pIPParticipantToShow, dimensions: VoicePanelPIPUtils.computePIPSize(SquarePIPReferenceDimensions, tmp18, tmp10, focusedId.showSecondaryPIP) };
   return obj;
 };

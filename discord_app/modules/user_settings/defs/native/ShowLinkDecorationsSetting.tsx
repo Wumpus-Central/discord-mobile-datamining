@@ -1,32 +1,33 @@
-// === Module 15410: useShowLinkDecorationsSettingValue ===
+// === Module 15410: ShowLinkDecorationsSetting ===
 
-// Module 15410 (useShowLinkDecorationsSettingValue)
+// Module 15410 (ShowLinkDecorationsSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import setFontSize from "setFontSize" /* 14437 */;
-import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14437 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
+require = fn;
 function useShowLinkDecorationsSettingValue() {
-  const items = [closure_2];
-  return initialize.useStateFromStores(items, () => obj.alwaysShowLinkDecorations);
+  const items = [AccessibilityStore];
+  return initialize.useStateFromStores(items, () => AccessibilityStore.alwaysShowLinkDecorations);
 }
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
-  const result = setFontSize.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
+  const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.OLZFB8);
+    const intl = util.intl;
+    return intl.string(util.t.OLZFB8);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7975).MobileUserSettings.ACCESSIBILITY,
   useValue: useShowLinkDecorationsSettingValue,
   onValueChange: onShowLinkDecorationsValueChange
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/ShowLinkDecorationsSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useShowLinkDecorationsSettingValue };
 export { onShowLinkDecorationsValueChange };

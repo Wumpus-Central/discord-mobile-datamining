@@ -1,37 +1,38 @@
 // === Module 10974: useFavoritesGuildChannelActions ===
 
 // Module 10974 (useFavoritesGuildChannelActions)
-import closure_2 from "fetchFingerprint" /* 502 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import closure_4 from "initializeFromUserSettings" /* 1960 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import FavoriteStore from "FavoriteStore" /* 1960 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
-  const _require = channelId;
-  let obj = _require(10224);
+  _require = channelId;
+  let obj = require("FavoritesHooks");
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildActionSheet);
   ({ hasAccess, isExperimentEnabled } = favoritesAccess);
-  let isFavoritableChannelResult = _require(1982).isFavoritableChannel(channelId);
-  const obj2 = _require(1982);
+  let isFavoritableChannelResult = require("FavoritesUtils").isFavoritableChannel(channelId);
+  const obj2 = require("FavoritesUtils");
   const tmp = _require;
-  const items = [closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
-  const obj3 = _require(504);
-  const isFavoritesGuildSelected = _require(10224).useIsFavoritesGuildSelected();
-  const obj4 = _require(10224);
-  const items1 = [closure_3, closure_2];
+  const items = [FavoriteStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => FavoriteStore.isFavorite(channelId.id));
+  const obj3 = require("initialize");
+  const isFavoritesGuildSelected = require("FavoritesHooks").useIsFavoritesGuildSelected();
+  const obj4 = require("FavoritesHooks");
+  const items1 = [GuildMemberStore, AuthenticationStore];
   if (isFavoritableChannelResult) {
     isFavoritableChannelResult = obj5.useStateFromStores(items1, () => {
       let isMemberResult = null == channelId.guild_id;
       if (!isMemberResult) {
-        isMemberResult = closure_1_3.isMember(tmp.guild_id, closure_1_2.getId());
+        isMemberResult = GuildMemberStore.isMember(tmp.guild_id, AuthenticationStore.getId());
       }
       return isMemberResult;
     });
   }
-  obj5 = _require(504);
+  obj5 = require("initialize");
   let tmp7 = hasAccess;
   if (hasAccess) {
     tmp7 = isFavoritableChannelResult;

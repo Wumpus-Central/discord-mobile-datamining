@@ -1,13 +1,13 @@
 // === Module 1220: getSystemTheme ===
 
 // Module 1220 (getSystemTheme)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import SystemThemeState from "SystemThemeState" /* 1186 */;
+import _mod17 from "module_17" /* 17 */;
+import ThemeConstants from "ThemeConstants" /* 1186 */;
+import size from "module_2" /* 2 */;
 
-const Appearance = get_ActivityIndicator.Appearance;
-const SystemTheme = SystemThemeState.SystemTheme;
-const result = set.fileFinishedImporting("modules/themes/getSystemTheme.native.tsx");
+const Appearance = _mod17.Appearance;
+const SystemTheme = ThemeConstants.SystemTheme;
+const result = size.fileFinishedImporting("modules/themes/getSystemTheme.native.tsx");
 
 export default function getSystemTheme() {
   const colorScheme = Appearance.getColorScheme();

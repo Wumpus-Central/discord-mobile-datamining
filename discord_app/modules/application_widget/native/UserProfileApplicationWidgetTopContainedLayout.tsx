@@ -1,37 +1,36 @@
 // === Module 9017: UserProfileApplicationWidgetTopContainedLayout ===
 
 // Module 9017 (UserProfileApplicationWidgetTopContainedLayout)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
-import formatDurationNarrow from "formatDurationNarrow" /* 9013 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9013 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Image: obj1, View: c3 } = get_ActivityIndicator);
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { contentRow: null, text: null, imageContainer: null, image: null, imageSkeleton: null };
-createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "center" };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, gap: ThemesDefault.space.PX_4 };
-obj1 = { flex: 1, gap: ThemesDefault.space.PX_4 };
-createCacheKey[2] = { width: 96, height: 96, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[3] = { width: "100%", height: "100%" };
-let obj2 = { width: 96, height: 96, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[4] = { width: 96, height: 96, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-let obj3 = { width: 96, height: 96, marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16 };
-const result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Image: c2, View: c3 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { contentRow: null, text: null, imageContainer: null, image: null, imageSkeleton: null };
+createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
+createStyles.contentRow = createStyles;
+createStyles.text = { flex: 1, gap: nativeDefault.space.PX_4 };
+let size = { width: 96, height: 96, marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+createStyles.imageContainer = size;
+createStyles.image = { width: "100%", height: "100%" };
+const size1 = { width: 96, height: 96, marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_16 };
+createStyles.imageSkeleton = size1;
+let closure_6 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetTopContainedLayout.tsx");
 
 export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   ({ topConfig, resolveFieldValue, numberFormat } = header);
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = resolvedValuesFromUserApplicationIdentityProfile;
   const textComponentValues = obj.resolveTextComponentValues(topConfig.components.title, resolveFieldValue, numberFormat, true);
-  obj1 = resolvedValuesFromUserApplicationIdentityProfile;
+  let obj1 = resolvedValuesFromUserApplicationIdentityProfile;
   const textComponentValues1 = obj1.resolveTextComponentValues(topConfig.components.subtitle_1, resolveFieldValue, numberFormat);
   let obj2 = resolvedValuesFromUserApplicationIdentityProfile;
   const textComponentValues2 = obj2.resolveTextComponentValues(topConfig.components.subtitle_2, resolveFieldValue, numberFormat);
@@ -47,28 +46,25 @@ export default function UserProfileApplicationWidgetTopContainedLayout(header) {
   const items1 = [header.header, ];
   obj = { style: tmp.contentRow, children: null };
   obj = { style: tmp.text, children: null };
-  const items2 = [callback(formatDurationNarrow.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), callback(formatDurationNarrow.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), callback(formatDurationNarrow.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), callback(formatDurationNarrow.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
-  obj[1] = items2;
-  const items3 = [callback2(closure_3, obj), ];
+  const items2 = [React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues, variant: "text-lg/medium", color: "text-default" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues1, variant: "text-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues2, variant: "text-sm/normal", color: "text-muted" }), React4(UserProfileApplicationWidgetFieldUtils.FieldText, { field: textComponentValues3, variant: "text-sm/normal", color: "text-muted" })];
+  obj.children = items2;
+  const items3 = [hasOwnProperty(React3, obj), ];
   if (null != fieldValue) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.imageContainer;
+    obj1 = { style: tmp.imageContainer, children: null };
     obj2 = { source: null, style: null, resizeMode: "contain" };
-    obj3 = { uri: null };
-    obj3[0] = fieldValue.media.url;
-    obj2[0] = obj3;
-    obj2[1] = tmp.image;
-    obj1[1] = tmp12(closure_2, obj2);
+    obj3 = { uri: fieldValue.media.url };
+    obj2.source = obj3;
+    obj2.style = tmp.image;
+    obj1.children = tmp12(React2, obj2);
     let tmp12Result = tmp12(tmp11, obj1);
   } else {
-    const obj4 = { style: null };
-    obj4[0] = tmp.imageSkeleton;
+    const obj4 = { style: tmp.imageSkeleton };
     tmp12Result = tmp12(tmp2(9014).ImageSkeleton, obj4);
   }
   const obj5 = { children: null };
   items3[1] = tmp12Result;
-  obj[1] = items3;
-  items1[1] = callback2(closure_3, obj);
-  obj5[0] = items1;
-  return callback2(closure_3, obj5);
+  obj.children = items3;
+  items1[1] = hasOwnProperty(React3, obj);
+  obj5.children = items1;
+  return hasOwnProperty(React3, obj5);
 };

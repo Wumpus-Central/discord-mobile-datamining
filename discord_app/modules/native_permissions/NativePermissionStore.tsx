@@ -1,27 +1,26 @@
-// === Module 5144: initialize ===
+// === Module 5144: NativePermissionStore ===
 
-// Module 5144 (initialize)
-import set from "set" /* 2 */;
+// Module 5144 (NativePermissionStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import NativePermissionStatus from "NativePermissionStatus" /* 4770 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import NativePermissionConstants from "NativePermissionConstants" /* 4770 */;
+import size from "module_2" /* 2 */;
 
-const NativePermissionStates = NativePermissionStatus.NativePermissionStates;
-const AnalyticEvents = ME.AnalyticEvents;
-let closure_4 = { permissionStates: {} };
+const NativePermissionStates = NativePermissionConstants.NativePermissionStates;
+const AnalyticEvents = Constants.AnalyticEvents;
+let permissionStates = { permissionStates: {} };
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class NativePermissionStore extends DeviceSettingsStore {
   constructor() {
     closure_0 = undefined;
     obj = {
       SET_NATIVE_PERMISSION(arg0) {
-            return obj.handleSetNativePermission(arg0);
+            return closure_0.handleSetNativePermission(arg0);
           }
     };
-    tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
+    tmp2 = new tmp2(closure_0(closure_1[3]), obj, new.target, tmp2, tmp, new.target);
     closure_0 = tmp2;
     return tmp2;
   }
@@ -46,23 +45,20 @@ prototype["hasPermission"] = function hasPermission(arg0) {
 };
 prototype["handleSetNativePermission"] = function handleSetNativePermission(arg0) {
   ({ state, permissionType } = arg0);
-  const permissionStates = closure_4.permissionStates;
+  permissionStates = permissionStates.permissionStates;
   let NONE = permissionStates[permissionType];
   permissionStates[permissionType] = state;
   if (NONE !== state) {
-    let obj = expandEventPropertiesDefault;
-    obj = { type: null, action: null, previous_action: null };
-    obj[0] = permissionType;
-    obj[1] = state;
+    const obj = { type: permissionType, action: state, previous_action: null };
     if (NONE == null) {
       NONE = NativePermissionStates.NONE;
     }
-    obj[2] = NONE;
+    obj.previous_action = NONE;
     obj.track(AnalyticEvents.PERMISSIONS_ACKED, obj);
   }
 };
 NativePermissionStore.displayName = "NativePermissionStore";
 NativePermissionStore.persistKey = "NativePermissionsStore";
-const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionStore.tsx");
+const result = size.fileFinishedImporting("modules/native_permissions/NativePermissionStore.tsx");
 
 export default NativePermissionStore;

@@ -1,13 +1,13 @@
-// === Module 12643: ? ===
+// === Module 12643: ChannelSafeAreaBottomNoop ===
 
-// Module 12643
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+// Module 12643 (ChannelSafeAreaBottomNoop)
+import noop from "module_19" /* 19 */;
 
-const memoResult = importAllResult.memo(function ChannelSafeAreaNoop() {
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx");
+
+export default noop.memo(function ChannelSafeAreaNoop() {
   return <View />;
 });
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx");
-
-export default memoResult;

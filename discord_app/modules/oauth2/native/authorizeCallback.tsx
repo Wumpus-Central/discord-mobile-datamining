@@ -1,24 +1,24 @@
 // === Module 9575: authorizeCallback ===
 
 // Module 9575 (authorizeCallback)
-import set from "set" /* 2 */;
-import keys from "keys" /* 1093 */;
-import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1365 */;
+import ConstantsIOS from "ConstantsIOS" /* 1093 */;
+import URLUtilsDefault from "URLUtils" /* 1365 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4255 from "module_4255" /* 4255 */;
-import NativeModules from "NativeModules" /* 4525 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 9574 */;
+import LinkingDefault from "Linking" /* 4255 */;
+import BrowserManager from "BrowserManager" /* 4525 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import Constants from "Constants" /* 9574 */;
+import size from "module_2" /* 2 */;
 
-({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: c4 } = OAUTH2_AUTHORIZE_MODAL_KEY);
+({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: closure_4 } = Constants);
 const re5 = /oauth2\/authorized/;
 const re6 = /oauth2\/error/;
-const result = set.fileFinishedImporting("modules/oauth2/native/authorizeCallback.tsx");
+const result = size.fileFinishedImporting("modules/oauth2/native/authorizeCallback.tsx");
 
 export default function authorizeCallback(arg0) {
   ({ location: _location, canceled, wasDeepLink } = arg0);
   if (null != _location) {
-    let toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(_location);
+    let toURLSafeResult = URLUtilsDefault.toURLSafe(_location);
     if (toURLSafeResult == null) {
       toURLSafeResult = {};
     }
@@ -27,13 +27,11 @@ export default function authorizeCallback(arg0) {
       let tmp8Result = tmp8(1365);
       if (tmp8Result.isDiscordHostname(host)) {
         if (null != pathname) {
-          if (null != pathname.match(closure_5)) {
+          if (null != pathname.match(re5)) {
             tmp8Result = tmp8(4763);
-            let obj = { application: null, guild: null };
-            obj[0] = tmp;
-            obj[1] = tmp2;
-            tmp8Result.pushLazy(asyncRequireImpl(9576, tmp9.paths), obj, closure_3);
-          } else if (null != pathname.match(closure_6)) {
+            let obj = { application: tmp, guild: tmp2 };
+            tmp8Result.pushLazy(asyncRequireImpl(9576, tmp9.paths), obj, React3);
+          } else if (null != pathname.match(re6)) {
             if (!canceled) {
               let str;
               const tmp8Result1 = tmp8(4763);
@@ -54,9 +52,8 @@ export default function authorizeCallback(arg0) {
                 }
                 str = str1;
               }
-              obj = { error: null };
-              obj[0] = str;
-              tmp8Result1.pushLazy(asyncRequireImpl(9249, tmp9.paths), obj, closure_4);
+              obj = { error: str };
+              tmp8Result1.pushLazy(asyncRequireImpl(9249, tmp9.paths), obj, React4);
               const tmp17 = asyncRequireImpl(9249, tmp9.paths);
             }
           }
@@ -64,19 +61,17 @@ export default function authorizeCallback(arg0) {
       }
     }
     if (wasDeepLink) {
-      const browserManagerSelectedBrowser = NativeModules.getBrowserManagerSelectedBrowser();
-      wasDeepLink = browserManagerSelectedBrowser === keys.WebBrowserType.IN_APP;
-      const obj5 = NativeModules;
+      const browserManagerSelectedBrowser = BrowserManager.getBrowserManagerSelectedBrowser();
+      wasDeepLink = browserManagerSelectedBrowser === ConstantsIOS.WebBrowserType.IN_APP;
     }
-    const obj2 = isDiscordProxiedAssetUrlDefault;
     let SAFARI;
     if (wasDeepLink) {
-      SAFARI = keys.WebBrowserType.SAFARI;
+      SAFARI = ConstantsIOS.WebBrowserType.SAFARI;
     }
-    _modDef4255.openURL(_location, SAFARI);
-    const tmp8Result2 = _modDef4255;
+    LinkingDefault.openURL(_location, SAFARI);
+    const tmp8Result2 = LinkingDefault;
   } else if (!canceled) {
-    obj = _modDef4763;
-    obj.pushLazy(asyncRequireImpl(9249, dependencyMap.paths), undefined, closure_4);
+    obj = ModalActionCreatorsDefault;
+    obj.pushLazy(asyncRequireImpl(9249, dependencyMap.paths), undefined, React4);
   }
 };

@@ -1,93 +1,80 @@
-// === Module 13137: PX_8 ===
+// === Module 13137: CollectiblesItemMiniPreview ===
 
-// Module 13137 (PX_8)
-import ThemesDefault from "Themes" /* 576 */;
-import getNameplateData from "getNameplateData" /* 1886 */;
-import preloadDefault from "preload" /* 5587 */;
-import StaticEffectDefault from "StaticEffect" /* 8801 */;
+// Module 13137 (CollectiblesItemMiniPreview)
+import nativeDefault from "native" /* 576 */;
+import utils from "utils" /* 1886 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import ProfileEffectDefault from "ProfileEffect" /* 8801 */;
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import NameplateInnerDefault from "NameplateInner" /* 8818 */;
-import filterLayerDefault from "filterLayer" /* 8822 */;
-import metadataDefault from "metadata" /* 8823 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 7547 */;
-import { PROFILE_FRAME_ASPECT_RATIO as closure_8 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8222 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import NameplateDefault from "Nameplate" /* 8818 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8822 */;
+import _modDef8823 from "module_8823" /* 8823 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c9, jsxs: c10 } = jsxProd);
-const PX_8 = ThemesDefault.space.PX_8;
+require = fn;
+const View = fn(17).View;
+const isAvatarDecorationRecord = fn(7547).isAvatarDecorationRecord;
+const isNameplateRecord = fn(1887).isNameplateRecord;
+const isProfileEffectRecord = fn(7548).isProfileEffectRecord;
+const isProfileFrameRecord = fn(7549).isProfileFrameRecord;
+let closure_8 = fn(8222).PROFILE_FRAME_ASPECT_RATIO;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10 } = jsxProd);
+const PX_8 = nativeDefault.space.PX_8;
+const createStyles = fn(4560);
 let obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
-obj = { overflow: "hidden", width: "100%", height: "100%", borderRadius: ThemesDefault.radii.sm };
-obj[2] = obj;
-obj[3] = { aspectRatio: require("SAMPLE_PROFILE_ASPECT_RATIO").SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
-createCacheKey = { overflow: "hidden", borderTopRightRadius: ThemesDefault.radii.xs, borderBottomRightRadius: ThemesDefault.radii.xs };
-obj[4] = createCacheKey;
-obj[5] = { alignItems: "flex-start" };
-obj[6] = { width: "90%", aspectRatio: 1.6, position: "relative" };
-let closure_12 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function CollectiblesItemMiniPreview(arg0) {
+let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
+obj.profileEffect = size;
+obj.sampleProfile = { aspectRatio: fn(8798).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj = { overflow: "hidden", borderTopRightRadius: nativeDefault.radii.xs, borderBottomRightRadius: nativeDefault.radii.xs };
+obj.nameplate = obj;
+obj.nameplateTile = { alignItems: "flex-start" };
+obj.nameplateStrip = { width: "90%", aspectRatio: 1.6, position: "relative" };
+let closure_12 = createStyles.createStyles(obj);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesItemMiniPreview.tsx");
+
+export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
   ({ item, size } = arg0);
-  const tmp = callback3();
+  const tmp = closure_12();
   const items = [tmp.tile, { width: size, height: size }];
   if (isAvatarDecorationRecord(item)) {
-    let obj = { style: null, children: null };
-    obj[0] = items;
-    obj = { item: null, size: null };
-    obj[0] = item;
-    obj[1] = 0.75 * size;
-    obj[1] = callback(AvatarDecorationSampleV2Default, obj);
-    return callback(View, obj);
+    let obj = { style: items, children: null };
+    obj = { item, size: 0.75 * size };
+    obj.children = React7(AvatarDecorationSampleV2Default, obj);
+    return React7(View, obj);
   } else if (isProfileFrameRecord(item)) {
-    obj1 = { style: null, children: null };
-    obj1[0] = items;
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp.framePreview;
-    const obj3 = { profileFrame: null, previewWidth: null, previewHeight: null, profileBackgroundColor: null };
-    obj3[0] = item;
-    obj3[1] = size * closure_8;
-    obj3[2] = size - 2 * PX_8;
-    obj3[3] = ThemesDefault.colors.BACKGROUND_BASE_LOW;
-    obj2[1] = callback(filterLayerDefault, obj3);
-    obj1[1] = callback(View, obj2);
-    return callback(View, obj1);
+    const obj1 = { style: items, children: null };
+    const obj2 = { style: tmp.framePreview, children: null };
+    const obj3 = { profileFrame: item, previewWidth: size * closure_8, previewHeight: size - 2 * PX_8, profileBackgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+    obj2.children = React7(ProfileFrameSamplePreviewDefault, obj3);
+    obj1.children = React7(View, obj2);
+    return React7(View, obj1);
   } else if (isProfileEffectRecord(item)) {
-    const obj4 = { style: null, children: null };
-    obj4[0] = items;
-    const obj5 = { style: null, accessible: false, importantForAccessibility: "no", children: null };
-    obj5[0] = tmp.profileEffect;
+    const obj4 = { style: items, children: null };
+    const obj5 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj6 = { source: null, style: null, resizeMode: "cover" };
-    const obj7 = { uri: null };
-    obj7[0] = metadataDefault;
-    obj6[0] = obj7;
-    obj6[1] = tmp.sampleProfile;
-    const items1 = [callback(preloadDefault, obj6), ];
-    const obj8 = { skuId: null, bannerAdjustment: 0, useThumbnail: true };
-    obj8[0] = item.skuId;
-    items1[1] = callback(StaticEffectDefault, obj8);
-    obj5[3] = items1;
-    obj4[1] = callback2(View, obj5);
-    return callback(View, obj4);
+    const obj7 = { uri: _modDef8823 };
+    obj6.source = obj7;
+    obj6.style = tmp.sampleProfile;
+    const items1 = [React7(FastImageDefault, obj6), ];
+    const obj8 = { skuId: item.skuId, bannerAdjustment: 0, useThumbnail: true };
+    items1[1] = React7(ProfileEffectDefault, obj8);
+    obj5.children = items1;
+    obj4.children = closure_1_10(View, obj5);
+    return React7(View, obj4);
   } else if (isNameplateRecord(item)) {
-    obj = getNameplateData;
+    obj = utils;
     const obj9 = { style: null, children: null };
     const items2 = [items, tmp.nameplateTile];
-    obj9[0] = items2;
-    const obj10 = { style: null, children: null };
-    obj10[0] = tmp.nameplateStrip;
+    obj9.style = items2;
+    const obj10 = { style: tmp.nameplateStrip, children: null };
     const nameplateData = obj.getNameplateData(item);
-    const obj11 = { nameplate: null, fullOpacity: true, style: null };
-    obj11[0] = nameplateData;
-    obj11[2] = tmp.nameplate;
-    obj10[1] = callback(NameplateInnerDefault, obj11);
-    obj9[1] = callback(View, obj10);
-    return callback(View, obj9);
+    const obj11 = { nameplate: nameplateData, fullOpacity: true, style: tmp.nameplate };
+    obj10.children = React7(NameplateDefault, obj11);
+    obj9.children = React7(View, obj10);
+    return React7(View, obj9);
   } else {
     return null;
   }
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesItemMiniPreview.tsx");
-
-export default memoResult;

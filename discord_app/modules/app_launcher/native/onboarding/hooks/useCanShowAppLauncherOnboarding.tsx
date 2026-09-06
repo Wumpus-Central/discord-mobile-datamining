@@ -1,38 +1,38 @@
-// === Module 12043: result ===
+// === Module 12043: useCanShowAppLauncherOnboarding ===
 
-// Module 12043 (result)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import setDefault from "set" /* 1090 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "handleInviteData" /* 4480 */;
-import closure_6 from "mergeGuildAvatar" /* 1371 */;
-import closure_7 from "initialize" /* 12044 */;
-import closure_8 from "initialize" /* 12045 */;
-import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 4999 */;
+// Module 12043 (useCanShowAppLauncherOnboarding)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
+import UserStore from "UserStore" /* 1371 */;
+import AppLauncherOnboardingPersistedStore from "AppLauncherOnboardingPersistedStore" /* 12044 */;
+import AppLauncherOnboardingStore from "AppLauncherOnboardingStore" /* 12045 */;
 
-const require = arg1;
-let result = 5 * setDefault.Millis.SECOND;
+const require = fn;
+const BuiltInSectionId = fn(4999).BuiltInSectionId;
+let result = 5 * DurationsDefault.Millis.SECOND;
 let c10 = result;
-let closure_11 = 5 * setDefault.Millis.SECOND;
-let closure_12 = 14 * setDefault.Millis.DAY;
-const HOUR = setDefault.Millis.HOUR;
-const DAY = setDefault.Millis.DAY;
-let result1 = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useCanShowAppLauncherOnboarding.tsx");
+let closure_11 = 5 * DurationsDefault.Millis.SECOND;
+let closure_12 = 14 * DurationsDefault.Millis.DAY;
+const HOUR = DurationsDefault.Millis.HOUR;
+const DAY = DurationsDefault.Millis.DAY;
+const size = fn(2);
+let result1 = size.fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useCanShowAppLauncherOnboarding.tsx");
 
 export default function useCanShowAppLauncherOnboarding(channelId) {
   channelId = channelId.channelId;
-  let guild_id = channelId;
   const timestamp = Date.now();
-  let obj = guild_id(504);
-  const items = [closure_4];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(guild_id));
-  guild_id = undefined;
+  let obj = channelId(504);
+  const items = [ChannelStore];
+  const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
   let tmp2Result = tmp2(504);
-  const items1 = [closure_6];
+  const items1 = [UserStore];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let createdAt;
   if (stateFromStores1 != null) {
@@ -42,18 +42,18 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   if (tmp8) {
     const _Date = Date;
     const timestamp1 = Date.now();
-    tmp8 = timestamp1 < DISCORD_EPOCHDefault.extractTimestamp(stateFromStores1.id) + closure_12;
-    const obj3 = DISCORD_EPOCHDefault;
+    tmp8 = timestamp1 < SnowflakeUtilsDefault.extractTimestamp(stateFromStores1.id) + closure_12;
   }
+  closure_129_0 = guild_id;
   tmp2Result = tmp2(504);
-  const items2 = [closure_5];
-  const stateFromStores2 = tmp2Result.useStateFromStores(items2, () => closure_1_5.getMemberCount(guild_id));
+  const items2 = [GuildMemberCountStore];
+  const stateFromStores2 = tmp2Result.useStateFromStores(items2, () => GuildMemberCountStore.getMemberCount(channelId));
   let tmp13 = null != stateFromStores2;
   if (tmp13) {
     tmp13 = stateFromStores2 < 200;
   }
-  const items3 = [closure_7];
-  const stateFromStores3 = guild_id(504).useStateFromStores(items3, () => store.getLastSeenTimeMs());
+  const items3 = [AppLauncherOnboardingPersistedStore];
+  const stateFromStores3 = channelId(504).useStateFromStores(items3, () => AppLauncherOnboardingPersistedStore.getLastSeenTimeMs());
   let tmp16 = null != stateFromStores3;
   if (tmp16) {
     tmp16 = timestamp < stateFromStores3 + HOUR;
@@ -62,15 +62,15 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   if (!tmp16) {
     items4.push(tmp2(1943).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING);
   }
-  const tmp14 = closure_7;
-  const tmp2Result1 = guild_id(504);
-  const tmp2Result2 = guild_id(7388);
-  const items5 = [closure_8];
-  const stateFromStoresObject = guild_id(504).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: store2.getRecentMessageMetadata(), recentApplicationCommandMetadata: store2.getRecentApplicationCommandMetadata() }));
+  const tmp14 = AppLauncherOnboardingPersistedStore;
+  const tmp2Result1 = channelId(504);
+  const tmp2Result2 = channelId(7388);
+  const items5 = [AppLauncherOnboardingStore];
+  const stateFromStoresObject = channelId(504).useStateFromStoresObject(items5, () => ({ recentMessageMetadata: AppLauncherOnboardingStore.getRecentMessageMetadata(), recentApplicationCommandMetadata: AppLauncherOnboardingStore.getRecentApplicationCommandMetadata() }));
   ({ recentMessageMetadata, recentApplicationCommandMetadata } = stateFromStoresObject);
-  const tmp2Result3 = guild_id(504);
+  const tmp2Result3 = channelId(504);
   const items6 = [tmp14];
-  const stateFromStores4 = guild_id(504).useStateFromStores(items6, () => store.getTriggeredOnboardingContentMetadata());
+  const stateFromStores4 = channelId(504).useStateFromStores(items6, () => AppLauncherOnboardingPersistedStore.getTriggeredOnboardingContentMetadata());
   let tmp21 = null != recentMessageMetadata;
   if (tmp21) {
     tmp21 = timestamp < recentMessageMetadata.timeMs + closure_10;
@@ -96,13 +96,13 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
   if (recentApplicationCommandMetadata != null) {
     const applicationId = recentApplicationCommandMetadata.applicationId;
   }
-  const tmp2Result4 = guild_id(504);
-  result = guild_id(4380).useIsDismissibleContentDismissed_UNSAFE(tmp2(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
-  const tmp2Result5 = guild_id(4380);
-  let result1 = guild_id(4380).useIsDismissibleContentDismissed_UNSAFE(tmp2(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
-  const tmp2Result6 = guild_id(4380);
+  const tmp2Result4 = channelId(504);
+  result = channelId(4380).useIsDismissibleContentDismissed_UNSAFE(tmp2(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
+  const tmp2Result5 = channelId(4380);
+  let result1 = channelId(4380).useIsDismissibleContentDismissed_UNSAFE(tmp2(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
+  const tmp2Result6 = channelId(4380);
   let tmp30 = null != stateFromStores4;
-  const result2 = guild_id(4380).useIsDismissibleContentDismissed_UNSAFE(tmp2(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
+  const result2 = channelId(4380).useIsDismissibleContentDismissed_UNSAFE(tmp2(1943).DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);
   if (tmp30) {
     tmp30 = stateFromStores4.channelId === channelId;
   }
@@ -144,7 +144,7 @@ export default function useCanShowAppLauncherOnboarding(channelId) {
       obj.canShowOnboarding = true;
       obj.canShowAppsOrActivitiesBanner = true;
     }
-    if (callback(tmp2Result2.useSelectedDismissibleContent(items4), 1)[0] === tmp2(1943).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
+    if (_slicedToArray(tmp2Result2.useSelectedDismissibleContent(items4), 1)[0] === tmp2(1943).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING) {
       obj.willShowGlobalSearchOnboarding = true;
       obj.canShowOnboarding = true;
     }

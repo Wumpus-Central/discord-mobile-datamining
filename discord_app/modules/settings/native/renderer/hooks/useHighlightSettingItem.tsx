@@ -1,11 +1,12 @@
 // === Module 14695: useHighlightSettingItem ===
 
 // Module 14695 (useHighlightSettingItem)
-import closure_0 from "zustandStore" /* 14691 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14691 */;
 
-const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");
 
 export const useHighlightSettingItem = function useHighlightSettingItem(setting) {
-  const React = setting;
-  return React.useState((selected) => selected.selected === closure_0);
+  closure_0 = setting;
+  return UserSettingSearchStore.useState((selected) => selected.selected === closure_0);
 };

@@ -1,12 +1,12 @@
 // === Module 7843: logMessageSendFailure ===
 
 // Module 7843 (logMessageSendFailure)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 4740 */;
+import Constants from "Constants" /* 1074 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
+import size from "module_2" /* 2 */;
 
-const AnalyticEvents = ME.AnalyticEvents;
-const result = set.fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");
+const AnalyticEvents = Constants.AnalyticEvents;
+const result = size.fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");
 
 export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
   if (null != fileItems.fileItems) {
@@ -23,7 +23,7 @@ export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
   }
   const errorMessage = fileItems.errorMessage;
   const failureCode = fileItems.failureCode;
-  collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.SEND_MESSAGE_FAILURE, { failure_code: failureCode, error_message: errorMessage, attachment_mimetypes: mapped });
+  AppAnalyticsUtils.trackWithMetadata(AnalyticEvents.SEND_MESSAGE_FAILURE, { failure_code: failureCode, error_message: errorMessage, attachment_mimetypes: mapped });
 };
 export const getAttachmentMimeTypes = function getAttachmentMimeTypes(items) {
   return items.map((mimeType) => {

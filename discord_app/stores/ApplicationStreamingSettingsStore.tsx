@@ -1,41 +1,42 @@
-// === Module 4606: ApplicationStreamPresets ===
+// === Module 4606: ApplicationStreamingSettingsStore ===
 
-// Module 4606 (ApplicationStreamPresets)
-import set from "set" /* 2 */;
+// Module 4606 (ApplicationStreamingSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
-import RESOLUTION_720 from "RESOLUTION_720" /* 4607 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 4585 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 4607 */;
+import size from "module_2" /* 2 */;
 
-const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
-({ ApplicationStreamResolutions, ApplicationStreamFPS } = RESOLUTION_720);
-const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
-let PRESET_VIDEO = ApplicationStreamPresets.PRESET_VIDEO;
-RESOLUTION_720 = ApplicationStreamResolutions.RESOLUTION_720;
-const FPS_30 = ApplicationStreamFPS.FPS_30;
-let c5 = true;
+const ApplicationStreamPresets = StreamSettingsConstants.ApplicationStreamPresets;
+({ ApplicationStreamResolutions, ApplicationStreamFPS } = StreamSettingsConstants);
+const MediaEngineContextTypes = Constants.MediaEngineContextTypes;
+let preset = ApplicationStreamPresets.PRESET_VIDEO;
+let resolution = ApplicationStreamResolutions.RESOLUTION_720;
+let frameRate = ApplicationStreamFPS.FPS_30;
+const soundshareEnabled = true;
 const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationStreamingSettingsStore extends PersistedStore {
 }
 const prototype = ApplicationStreamingSettingsStore.prototype;
 prototype["initialize"] = function initialize(preset) {
   if (null != preset) {
-    PRESET_VIDEO = preset.preset;
+    let PRESET_VIDEO = preset.preset;
     if (PRESET_VIDEO == null) {
       PRESET_VIDEO = ApplicationStreamPresets.PRESET_VIDEO;
     }
-    ({ resolution: RESOLUTION_720, fps: FPS_30, soundshareEnabled } = preset);
+    preset = PRESET_VIDEO;
+    ({ resolution, fps: frameRate, soundshareEnabled } = preset);
     if (soundshareEnabled == null) {
       soundshareEnabled = true;
     }
   }
 };
 prototype["getState"] = function getState() {
-  return { preset: PRESET_VIDEO, resolution: RESOLUTION_720, fps: FPS_30, soundshareEnabled: c5 };
+  return { preset, resolution, fps: frameRate, soundshareEnabled };
 };
 ApplicationStreamingSettingsStore.displayName = "ApplicationStreamingSettingsStore";
 ApplicationStreamingSettingsStore.persistKey = "ApplicationStreamingSettingStore";
-const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(dispatcherDefault, {
+const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(DispatcherDefault, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function handleSetGoLiveSource(settings) {
     settings = settings.settings;
     let context;
@@ -100,6 +101,6 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
     return flag;
   }
 });
-const result = set.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
+const result = size.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
 
 export default applicationStreamingSettingsStore;

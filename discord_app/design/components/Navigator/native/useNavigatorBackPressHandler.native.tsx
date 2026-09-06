@@ -1,23 +1,24 @@
 // === Module 5630: useNavigatorBackPressHandler ===
 
 // Module 5630 (useNavigatorBackPressHandler)
-import closure_2 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-require("get ActivityIndicator").BackHandler;
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
+const require = fn;
+fn(17).BackHandler;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorBackPressHandler.native.tsx");
 
 export const useNavigatorBackPressHandler = function useNavigatorBackPressHandler(callback) {
-  const _require = callback;
-  dependencyMap = React.useRef(callback);
-  const layoutEffect = React.useLayoutEffect(() => {
-    closure_1.current = closure_0;
+  _require = callback;
+  dependencyMap = noop.useRef(callback);
+  const layoutEffect = noop.useLayoutEffect(() => {
+    closure_1.current = current;
   });
-  const focusEffect = _require(1484).useFocusEffect(React.useCallback(() => {
+  const focusEffect = require("Link").useFocusEffect(noop.useCallback(() => {
     if (!obj.isIOS()) {
-      callback = closure_1_3.addEventListener("hardwareBackPress", () => ref.current());
+      current = BackHandler.addEventListener("hardwareBackPress", () => ref.current());
       return () => closure_0.remove();
     }
-    obj = callback(table[3]);
+    obj = current(ref[3]);
   }, []));
 };

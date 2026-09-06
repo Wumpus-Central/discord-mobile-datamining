@@ -1,13 +1,15 @@
-// === Module 13260: VIDEO_GUARD_BLOG_POST_URL ===
+// === Module 13260: VideoGuardExperiment ===
 
-// Module 13260 (VIDEO_GUARD_BLOG_POST_URL)
-import set from "set" /* 2 */;
+// Module 13260 (VideoGuardExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { videoEnabled: false } };
+let obj = { name: "2026-08-video-guard", kind: "user", defaultConfig: { videoEnabled: true }, variations: null };
+obj = { 1: null, 2: { videoEnabled: false } };
 obj[2] = { videoEnabled: false };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-08-video-guard", kind: "user", defaultConfig: { videoEnabled: true }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/VideoGuardExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/VideoGuardExperiment.tsx");
 
 export const VIDEO_GUARD_BLOG_POST_URL = "https://discord.com/blog/a-letter-to-the-discord-community-in-brazil";
 export const VideoGuardExperiment = apexExperiment;

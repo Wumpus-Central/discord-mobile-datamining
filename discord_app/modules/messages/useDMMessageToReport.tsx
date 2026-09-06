@@ -1,21 +1,23 @@
 // === Module 12592: useDMMessageToReport ===
 
 // Module 12592 (useDMMessageToReport)
-import set from "set" /* 2 */;
+import useIsRelationshipTypeSpamReportable from "useIsRelationshipTypeSpamReportable" /* 12593 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
+const result = size.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
 export const useDMMessageToReport = function useDMMessageToReport(channel, id, arg2) {
-  let isReportable = arg2;
+  let isRelationshipTypeSpamReportable = arg2;
+  let obj = useIsRelationshipTypeSpamReportable;
   if (!arg2) {
-    isReportable = obj.useIsRelationshipTypeSpamReportable(id);
+    isRelationshipTypeSpamReportable = obj.useIsRelationshipTypeSpamReportable(id);
   }
   let tmp2Result = tmp2(12450);
   const longestChannelMessageBeforeReply = tmp2Result.useLongestChannelMessageBeforeReply(channel.id, id);
   tmp2Result = tmp2(12594);
-  const messageRequestPreview = tmp2Result.useMessageRequestPreview(channel, { enabled: isReportable });
-  let message = messageRequestPreview.message;
-  message = longestChannelMessageBeforeReply;
+  const messageRequestPreview = tmp2Result.useMessageRequestPreview(channel, { enabled: isRelationshipTypeSpamReportable });
+  const message = messageRequestPreview.message;
+  let tmp6 = longestChannelMessageBeforeReply;
   ({ loaded, error } = messageRequestPreview);
   if (longestChannelMessageBeforeReply == null) {
     id = undefined;
@@ -29,8 +31,8 @@ export const useDMMessageToReport = function useDMMessageToReport(channel, id, a
     if (id === id) {
       tmp8 = message;
     }
-    message = tmp8;
+    tmp6 = tmp8;
   }
-  const isLoaded = null != message || loaded || error;
-  return { message, isReportable, isLoaded };
+  obj = { message: tmp6, isReportable: isRelationshipTypeSpamReportable, isLoaded: null != tmp6 || loaded || error };
+  return obj;
 };

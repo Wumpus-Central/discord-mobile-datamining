@@ -1,15 +1,16 @@
 // === Module 17924: libDiscoreSmokeTest ===
 
 // Module 17924 (libDiscoreSmokeTest)
-import timestampDefault from "timestamp" /* 3 */;
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import LoggerDefault from "Logger" /* 3 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import initLibdiscore from "initLibdiscore" /* 1355 */;
+import libdiscoreExperiments from "libdiscoreExperiments" /* 1983 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = fn;
 function libDiscoreSmokeTest() {
   const self = this;
-  const apply = _libDiscoreSmokeTest.apply;
+  const apply = closure_7.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -17,104 +18,89 @@ function libDiscoreSmokeTest() {
   }
   return applyArgumentsResult;
 }
-function _libDiscoreSmokeTest() {
-  const self = this;
-  const tmp = callback(function*() {
-    if (logger === 2) {
-      logger = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp6 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+let closure_7 = async function _libDiscoreSmokeTest(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        logger = 2;
-        let tmp7 = c4;
-        if (0 === c4) {
-          if (arg0 === 1) {
-            logger = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            logger = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            closure_1 = tmp3;
-            let callback = tmp7;
-            callback = undefined;
-            tmp7 = closure_1_6;
-            if (!closure_1_6) {
-              c3 = 1;
-              let obj2 = closure_1_0(closure_1_2[3]);
-              c4 = 2;
-              logger = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj2.initLibdiscore();
-              return obj1;
-            }
-          }
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      let tmp7 = c4;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          if (1 === tmp7) {
-            c3 = 0;
-            callback3(table);
-          } else if (arg0 === 1) {
-            logger = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            logger = 3;
-            obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            obj = callback(table[4]);
-            callback = obj.rustMultiply(6, 7);
-            logger.info("The answer for life the universe and everything is:", callback);
-            callback2();
-            c3 = 0;
+          closure_1 = tmp3;
+          closure_0 = tmp7;
+          closure_128_0 = undefined;
+          tmp7 = timestampProducer;
+          if (!timestampProducer) {
+            c3 = 1;
+            let obj2 = initLibdiscore;
+            c4 = 2;
+            c5 = 1;
+            const obj1 = { value: obj2.initLibdiscore(), done: false };
+            return obj1;
           }
-          tmp7 = closure_1;
-          c6 = true;
         }
-        logger = 3;
-      } catch (tmp24) {
-        table = tmp24;
-        if (tmp4 === c3) {
-          logger = tmp2;
-          throw tmp24;
+      } else {
+        if (1 === tmp7) {
+          c3 = 0;
+          closure_129_9(closure_2);
+        } else if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 0;
+          c5 = 3;
+          obj2 = { value, done: true };
+          return obj2;
         } else {
-          c4 = tmp;
+          obj = closure_129_0(closure_129_2[4]);
+          closure_128_0 = obj.rustMultiply(6, 7);
+          closure_129_5.info("The answer for life the universe and everything is:", closure_128_0);
+          closure_129_8();
+          c3 = 0;
         }
+        tmp7 = closure_1;
+        closure_129_6 = true;
+      }
+      c5 = 3;
+    } catch (tmp24) {
+      closure_2 = tmp24;
+      if (tmp4 === c3) {
+        c5 = tmp2;
+        throw tmp24;
+      } else {
+        c4 = tmp;
       }
     }
-  });
-  closure_7 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
   }
-  return applyArgumentsResult;
-}
+};
 function trackLibdiscoreSuccess() {
   const items = [];
-  const prop = items(1983).ALL_LIBDISCORE_EXPERIMENTS;
+  const prop = libdiscoreExperiments.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((getEnabledFeatureName) => {
     const enabledFeatureName = getEnabledFeatureName.getEnabledFeatureName();
     if (null != enabledFeatureName) {
       items.push(enabledFeatureName);
     }
   });
-  expandEventPropertiesDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
+  AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: true, experimental_features: items });
 }
 function trackLibdiscoreFailure(arg0) {
   logger.error("Failed to execute smoke test:", arg0);
@@ -137,12 +123,13 @@ function trackLibdiscoreFailure(arg0) {
     const _HermesInternal = HermesInternal;
     combined = "" + name + ": " + text;
   }
-  expandEventPropertiesDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
+  AnalyticsUtilsDefault.track(AnalyticEvents.LIBDISCORE_LOADED, { success: false, error: combined });
 }
-let closure_5 = new timestampDefault("libdiscore");
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const logger = new LoggerDefault("libdiscore");
 let c6 = false;
-const tmp2 = new timestampDefault("libdiscore");
-const result = require("set").fileFinishedImporting("modules/libdiscore/libDiscoreSmokeTest.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/libdiscore/libDiscoreSmokeTest.tsx");
 
 export default libDiscoreSmokeTest;
 export { libDiscoreSmokeTest };

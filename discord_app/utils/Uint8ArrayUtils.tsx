@@ -1,15 +1,15 @@
-// === Module 1942: hasBit ===
+// === Module 1942: Uint8ArrayUtils ===
 
-// Module 1942 (hasBit)
-import set from "set" /* 2 */;
+// Module 1942 (Uint8ArrayUtils)
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
+let result = size.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
 
-export const hasBit = function hasBit(dismissedContents, closure_0) {
+export const hasBit = function hasBit(dismissedContents, CHANNEL_NOTICE_INVITE) {
   let tmp = 0 !== dismissedContents.length;
   if (tmp) {
     const _Math = Math;
-    tmp = dismissedContents[Math.floor(Math, closure_0 / 8)] & 1 << closure_0 % 8;
+    tmp = dismissedContents[Math.floor(Math, CHANNEL_NOTICE_INVITE / 8)] & 1 << CHANNEL_NOTICE_INVITE % 8;
   }
   return tmp;
 };
@@ -41,10 +41,10 @@ export const removeBit = function removeBit(dismissedContents, arg1) {
 export const isUint8Array = function isUint8Array(arg0) {
   return arg0 instanceof Uint8Array;
 };
-export const isSerializedUint8Array = function isSerializedUint8Array(obj) {
-  let tmp = null != obj && typeof obj === "object";
+export const isSerializedUint8Array = function isSerializedUint8Array(__tag__) {
+  let tmp = null != __tag__ && typeof __tag__ === "object";
   if (tmp) {
-    tmp = "uint8array" === obj.__tag__;
+    tmp = "uint8array" === __tag__.__tag__;
   }
   return tmp;
 };

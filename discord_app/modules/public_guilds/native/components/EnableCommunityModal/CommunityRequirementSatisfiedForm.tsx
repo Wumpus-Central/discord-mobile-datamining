@@ -1,14 +1,15 @@
 // === Module 17675: CommunityRequirementSatisfiedForm ===
 
 // Module 17675 (CommunityRequirementSatisfiedForm)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import ToastUtils from "ToastUtils" /* 4258 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
@@ -18,17 +19,18 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   const items = [formSwitchDisabled.children, ];
   let tmp6 = null;
   if (formSwitchDisabled) {
-    obj = { accessibilityRole: "button", style: null, onPress: null };
-    obj[1] = enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable;
-    obj[2] = function onPress() {
-      if (formSwitchDisabled) {
-        const result = formSwitchDisabled(closure_1_1[3]).communityRequirementSatisfied();
-        const obj = formSwitchDisabled(closure_1_1[3]);
-      }
+    obj = {
+      accessibilityRole: "button",
+      style: enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable,
+      onPress() {
+          if (formSwitchDisabled) {
+            const result = ToastUtils.communityRequirementSatisfied();
+          }
+        }
     };
-    tmp6 = callback(formSwitchDisabled(5123).PressableOpacity, obj);
+    tmp6 = closure_3(formSwitchDisabled(5123).PressableOpacity, obj);
   }
   items[1] = tmp6;
-  obj[1] = items;
+  obj.children = items;
   return closure_4(View, obj);
 };

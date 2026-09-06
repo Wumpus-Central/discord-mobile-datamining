@@ -1,18 +1,18 @@
-// === Module 14161: items ===
+// === Module 14161: NitroGem24Lottie ===
 
-// Module 14161 (items)
+// Module 14161 (NitroGem24Lottie)
 import LottieIcon from "LottieIcon" /* 9948 */;
-import registerAsset from "registerAsset" /* 14162 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import _mod14162 from "module_14162" /* 14162 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_3 = ["G"];
+require = fn;
+const jsx = fn(21).jsx;
+const layers = ["G"];
 const items = [{ name: "all", start: 0, duration: 71 }];
-const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: registerAsset, animation: "all", ref, layers: closure_3, markers: items });
-});
-const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/generated/NitroGem24Lottie.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/LottieIcon/native/generated/NitroGem24Lottie.tsx");
 
-export const NitroGem24Lottie = forwardRefResult;
+export const NitroGem24Lottie = noop.forwardRef((arg0, ref) => {
+  const merged = Object.assign(arg0);
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod14162, animation: "all", ref, layers, markers: items });
+});

@@ -1,19 +1,18 @@
-// === Module 4210: hasFlag ===
+// === Module 4210: MessageRecord ===
 
-// Module 4210 (hasFlag)
-import hasFlag from "hasFlag" /* 1384 */;
-import toJSDefault from "toJS" /* 1386 */;
+// Module 4210 (MessageRecord)
+import FlagUtils from "FlagUtils" /* 1384 */;
+import ReactionUtils from "ReactionUtils" /* 4211 */;
 import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
 import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
-import ME from "ME" /* 1074 */;
+import Record from "Record" /* 1386 */;
 
-require = arg1;
-toJSDefault;
-({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
+require = fn;
+const Constants = fn(1074);
+({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
 class MinimalMessageRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new MinimalMessageRecord(tmp, new.target);
-    // ThrowIfThisInitialized (0x7c)
     DEFAULT = global.type;
     if (DEFAULT == null) {
       tmp3 = MessageTypes;
@@ -86,12 +85,11 @@ class MinimalMessageRecord extends tmp2 {
   }
 }
 MinimalMessageRecord.prototype["hasFlag"] = function hasFlag(arg0) {
-  return hasFlag.hasFlag(this.flags, arg0);
+  return FlagUtils.hasFlag(this.flags, arg0);
 };
 class MessageRecord extends MinimalMessageRecord {
   constructor(arg0) {
     tmp2 = new MessageRecord(global, new.target, tmp, global, new.target);
-    // ThrowIfThisInitialized (0x7c)
     ({ id: tmp2.id, channel_id: tmp2.channel_id, author: tmp2.author, customRenderedContent: tmp2.customRenderedContent } = global);
     tmp2.mentions = global.mentions || [];
     tmp2.mentionRoles = global.mentionRoles || [];
@@ -179,7 +177,7 @@ prototype["getChannelId"] = function getChannelId() {
 prototype["getReaction"] = function getReaction(arg0) {
   closure_0 = arg0;
   const reactions = this.reactions;
-  return reactions.find((emoji) => callback(closure_1_2[3]).emojiEquals(emoji.emoji, callback));
+  return reactions.find((emoji) => ReactionUtils.emojiEquals(emoji.emoji, closure_0));
 };
 prototype["getContentMessage"] = function getContentMessage() {
   let self = this;
@@ -193,7 +191,7 @@ prototype["userHasReactedWithEmoji"] = function userHasReactedWithEmoji(arg0, ar
   closure_1 = arg1;
   const reactions = this.reactions;
   return reactions.some((emoji) => {
-    if (obj.emojiEquals(emoji.emoji, callback)) {
+    if (obj.emojiEquals(emoji.emoji, closure_0)) {
       let me = closure_1;
       if (closure_1) {
         me = emoji.me;
@@ -207,11 +205,11 @@ prototype["userHasReactedWithEmoji"] = function userHasReactedWithEmoji(arg0, ar
       }
       return me;
     }
-    obj = callback(closure_1_2[3]);
+    obj = ReactionUtils;
   });
 };
-prototype["addReaction"] = function addReaction(arg0) {
-  const _require = arg0;
+prototype["addReaction"] = function addReaction(emoji) {
+  _require = emoji;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -220,28 +218,27 @@ prototype["addReaction"] = function addReaction(arg0) {
   if (arg2 === undefined) {
     obj = {};
   }
-  let colors;
   let NORMAL;
   closure_4 = undefined;
-  c5 = undefined;
-  colors = obj.colors;
+  closure_5 = undefined;
+  let colors = obj.colors;
   if (undefined === colors) {
     colors = [];
   }
   NORMAL = obj.reactionType;
   if (undefined === NORMAL) {
-    NORMAL = _require(colors[5]).ReactionTypes.NORMAL;
+    NORMAL = require("MessageReactionsTypes").ReactionTypes.NORMAL;
   }
   const isDMChannel = obj.isDMChannel;
   const self = this;
   closure_4 = undefined !== isDMChannel && isDMChannel;
-  c5 = -1;
+  closure_5 = -1;
   const reactions = this.reactions;
-  const mapped = reactions.map((emoji) => {
-    let obj = callback(colors[3]);
+  const mapped = reactions.map((emoji, index) => {
+    let obj = ReactionUtils;
     let tmp3 = emoji;
-    if (obj.emojiEquals(emoji.emoji, callback)) {
-      closure_5 = arg1;
+    if (obj.emojiEquals(emoji.emoji, closure_0)) {
+      closure_5 = index;
       if (closure_4) {
         if (!flag) {
           let num = 0;
@@ -270,7 +267,7 @@ prototype["addReaction"] = function addReaction(arg0) {
           return emoji;
         }
       }
-      if (NORMAL === tmp(tmp2[5]).ReactionTypes.BURST) {
+      if (NORMAL === tmp(7763).ReactionTypes.BURST) {
         if (flag) {
           if (emoji.me_burst) {
             return emoji;
@@ -294,7 +291,7 @@ prototype["addReaction"] = function addReaction(arg0) {
         }
         burst_colors = colors;
         tmp28 = flag;
-      } else if (tmp12 === tmp(tmp2[5]).ReactionTypes.VOTE) {
+      } else if (tmp12 === tmp(7763).ReactionTypes.VOTE) {
         const count_details2 = emoji.count_details;
         let num7;
         if (count_details2 != null) {
@@ -308,7 +305,7 @@ prototype["addReaction"] = function addReaction(arg0) {
         } else {
           sum1 = num7;
         }
-        obj1 = {};
+        const obj1 = {};
         const merged2 = Object.assign(emoji);
         const obj2 = {};
         const merged3 = Object.assign(emoji.count_details);
@@ -316,7 +313,6 @@ prototype["addReaction"] = function addReaction(arg0) {
         obj1.count_details = obj2;
         obj1.me_vote = flag || emoji.me_vote;
         tmp3 = obj1;
-        const tmp21 = flag;
       } else {
         if (flag) {
           if (emoji.me) {
@@ -333,33 +329,20 @@ prototype["addReaction"] = function addReaction(arg0) {
         obj3.count_details = obj4;
         obj3.me = flag || emoji.me;
         tmp3 = obj3;
-        const tmp13 = flag;
       }
       tmp12 = NORMAL;
     }
     return tmp3;
   });
-  if (-1 === c5) {
-    if (NORMAL === _require(colors[5]).ReactionTypes.BURST) {
-      obj = { emoji: null, me: false, me_burst: null, count: 0, count_details: null, burst_count: 1, burst_colors: null };
-      obj[0] = arg0;
-      obj[2] = flag;
-      obj[4] = { burst: 1, normal: 0 };
-      obj[6] = colors;
+  if (-1 === closure_5) {
+    if (NORMAL === require("MessageReactionsTypes").ReactionTypes.BURST) {
+      obj = { emoji, me: false, me_burst: flag, count: 0, count_details: { burst: 1, normal: 0 }, burst_count: 1, burst_colors: colors };
       mapped.push(obj);
     } else if (NORMAL === tmp7(tmp8[5]).ReactionTypes.VOTE) {
-      obj = { emoji: null, me: false, me_burst: false, me_vote: null, count: 0, count_details: null, burst_count: 0, burst_colors: null };
-      obj[0] = arg0;
-      obj[3] = flag;
-      obj[5] = { burst: 0, normal: 0, vote: 1 };
-      obj[7] = [];
+      obj = { emoji, me: false, me_burst: false, me_vote: flag, count: 0, count_details: { burst: 0, normal: 0, vote: 1 }, burst_count: 0, burst_colors: [] };
       mapped.push(obj);
     } else {
-      obj1 = { emoji: null, me: null, me_burst: false, count: 1, count_details: null, burst_count: 0, burst_colors: null };
-      obj1[0] = arg0;
-      obj1[1] = flag;
-      obj1[4] = { burst: 0, normal: 1 };
-      obj1[6] = [];
+      let obj1 = { emoji, me: flag, me_burst: false, count: 1, count_details: { burst: 0, normal: 1 }, burst_count: 0, burst_colors: [] };
       mapped.push(obj1);
     }
     tmp7 = _require;
@@ -369,31 +352,31 @@ prototype["addReaction"] = function addReaction(arg0) {
 };
 prototype["addReactionBatch"] = function addReactionBatch(reactions, id) {
   closure_0 = id;
-  return reactions.reduce((arg0, arg1) => {
-    ({ users, emoji: closure_0, reactionType: closure_1 } = arg1);
-    return users.reduce((addReaction) => addReaction.addReaction(closure_0, arg1 === closure_1_0, { reactionType: closure_1 }), arg0);
+  return reactions.reduce((acc, item) => {
+    ({ users, emoji: closure_0, reactionType: closure_1 } = item);
+    return users.reduce((addReaction, item) => addReaction.addReaction(id, item === closure_0, { reactionType }), acc);
   }, this);
 };
 prototype["removeReaction"] = function removeReaction(arg0) {
-  const _require = arg0;
+  _require = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   let NORMAL = arg2;
   if (arg2 === undefined) {
-    NORMAL = _require(NORMAL[5]).ReactionTypes.NORMAL;
+    NORMAL = require("MessageReactionsTypes").ReactionTypes.NORMAL;
   }
   const self = this;
-  c3 = -1;
+  closure_3 = -1;
   const reactions = this.reactions;
-  const mapped = reactions.map((emoji) => {
+  const mapped = reactions.map((emoji, index) => {
     let merged1 = emoji;
-    let obj = callback(NORMAL[3]);
-    if (!obj.emojiEquals(emoji.emoji, callback)) {
+    let obj = ReactionUtils;
+    if (!obj.emojiEquals(emoji.emoji, closure_0)) {
       return merged1;
     } else {
-      if (NORMAL === tmp2(tmp3[5]).ReactionTypes.BURST) {
+      if (NORMAL === tmp2(7763).ReactionTypes.BURST) {
         if (flag) {
           if (!merged1.me_burst) {
             let burst_count = merged1.burst_count;
@@ -410,11 +393,11 @@ prototype["removeReaction"] = function removeReaction(arg0) {
           merged1 = Object.assign(merged1.count_details);
           obj.burst = burst_count;
           obj.count_details = obj;
-          obj1 = obj;
-          closure_3 = arg1;
+          let obj1 = obj;
+          closure_3 = index;
         }
         burst_count = merged1.burst_count - 1;
-      } else if (tmp4 !== tmp2(tmp3[5]).ReactionTypes.VOTE) {
+      } else if (tmp4 !== tmp2(7763).ReactionTypes.VOTE) {
         if (flag) {
           if (!merged1.me) {
             let count = merged1.count;
@@ -462,12 +445,12 @@ prototype["removeReaction"] = function removeReaction(arg0) {
       tmp4 = NORMAL;
     }
   });
-  let obj = mapped[c3];
+  let obj = mapped[closure_3];
   if (obj == null) {
     obj = {};
   }
   let count_details = obj.count_details;
-  let tmp4 = -1 !== c3;
+  let tmp4 = -1 !== closure_3;
   if (tmp4) {
     tmp4 = tmp3 <= 0;
   }
@@ -505,14 +488,14 @@ prototype["removeReaction"] = function removeReaction(arg0) {
     tmp4 = num7 <= 0;
   }
   if (tmp4) {
-    mapped.splice(c3, 1);
+    mapped.splice(closure_3, 1);
   }
   return self.set("reactions", mapped);
 };
 prototype["removeReactionsForEmoji"] = function removeReactionsForEmoji(emoji) {
   closure_0 = emoji;
   ({ reactions, set } = this);
-  return set("reactions", reactions.filter((emoji) => !emoji(closure_1_2[3]).emojiEquals(emoji.emoji, emoji)));
+  return set("reactions", reactions.filter((emoji) => !ReactionUtils.emojiEquals(emoji.emoji, closure_0)));
 };
 prototype["isSystemDM"] = function isSystemDM() {
   const author = this.author;
@@ -574,10 +557,10 @@ prototype["isFirstMessageInForumPost"] = function isFirstMessageInForumPost(chan
   }
   return isForumPostResult;
 };
-const result = require("set").fileFinishedImporting("records/MessageRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("records/MessageRecord.tsx");
 const prototype2 = function MessageSnapshotRecord(message) {
   const tmp3 = new prototype2(tmp2, new.target, new.target, tmp);
-  // ThrowIfThisInitialized (0x7c)
   tmp3.message = new MinimalMessageRecord(message.message);
   let moderator_report = message.moderator_report;
   if (moderator_report == null) {
@@ -597,5 +580,5 @@ export const ModeratorReport = function ModeratorReport(arg0) {
 }.prototype;
 export const MessageSnapshotRecord = prototype2;
 export const isMessageComponentsV2 = function isMessageComponentsV2(contentMessage) {
-  return hasFlag.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
+  return FlagUtils.hasFlag(contentMessage.flags, IS_COMPONENTS_V2.IS_COMPONENTS_V2);
 };

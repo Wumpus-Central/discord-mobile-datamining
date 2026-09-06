@@ -1,467 +1,324 @@
-// === Module 7341: _startLurking ===
+// === Module 7341: GuildDiscoveryUtils ===
 
-// Module 7341 (_startLurking)
-import expandEventPropertiesDefault from "expandEventProperties" /* 1242 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "initialize" /* 4200 */;
-import closure_5 from "handleInviteData" /* 4480 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import ME from "ME" /* 1074 */;
+// Module 7341 (GuildDiscoveryUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import _modDef1471 from "module_1471" /* 1471 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import LurkingStore from "LurkingStore" /* 4200 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-function _startLurking() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c7 = 0;
-    c8 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (shouldNavigate === 2) {
-        shouldNavigate = 3;
-        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
-      } else {
-        throwTypeErrorResult = arg1;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp3;
-        if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            shouldNavigate = 2;
-            if (0 === loadId) {
-              if (arg0 === 1) {
-                shouldNavigate = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                shouldNavigate = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let joinSource = tmp5;
-                let onSuccess = tmp2;
-                obj1 = undefined;
-                let length;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = lib;
-                if (obj1 === undefined) {
-                  obj1 = {};
-                }
-                throwTypeErrorResult = length;
-                let page;
-                onSuccess = undefined;
-                joinSource = undefined;
-                loadId = undefined;
-                shouldNavigate = undefined;
-                closure_9 = undefined;
-                let history;
-                let joinedAt;
-                let obj3;
-                closure_13 = undefined;
-                loadId = 1;
-                shouldNavigate = 1;
-                return { value: "PX_16", done: true };
-              }
+require = fn;
+let closure_11 = async function _startLurking(arg0, value) {
+  if (1 === tmp5) {
+    if (arg0 === 1) {
+      c8 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c8 = 3;
+      return { value, done: true };
+    } else {
+      const channelId = closure_133_2.channelId;
+      const onSuccess = closure_133_2.onSuccess;
+      const joinSource = closure_133_2.joinSource;
+      const loadId = closure_133_2.loadId;
+      const shouldNavigate = closure_133_2.shouldNavigate;
+      let tmp24 = undefined === shouldNavigate;
+      if (!tmp24) {
+        tmp24 = shouldNavigate;
+      }
+      closure_133_9 = tmp24;
+      let obj6 = closure_134_0(closure_134_2[5]);
+      const history = obj6.getHistory();
+      const guild = closure_134_6.getGuild(closure_133_0);
+      const obj3 = { sourceLocationStack: closure_133_3, state: null };
+      obj3.state = { analyticsSource: closure_133_1 };
+      closure_133_12 = obj3;
+      if (null != guild) {
+        if (null != guild.joinedAt) {
+          if (closure_133_9) {
+            if (null == channelId) {
+              closure_134_0(closure_134_2[6]).transitionToGuild(closure_133_0, closure_133_12);
+              closure_134_0(closure_134_2[6]);
             } else {
-              if (1 === tmp5) {
-                if (arg0 === 1) {
-                  shouldNavigate = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  shouldNavigate = 3;
-                  const obj2 = { value: null, done: true };
-                  obj2[0] = arg1;
-                  return obj2;
-                } else {
-                  throwTypeErrorResult = onSuccess;
-                  throwTypeErrorResult = obj1;
-                  page = obj1.channelId;
-                  throwTypeErrorResult = obj1;
-                  onSuccess = obj1.onSuccess;
-                  throwTypeErrorResult = obj1;
-                  joinSource = obj1.joinSource;
-                  throwTypeErrorResult = obj1;
-                  loadId = obj1.loadId;
-                  throwTypeErrorResult = obj1;
-                  shouldNavigate = obj1.shouldNavigate;
-                  throwTypeErrorResult = shouldNavigate;
-                  let tmp24 = undefined === shouldNavigate;
-                  if (!tmp24) {
-                    tmp24 = shouldNavigate;
-                  }
-                  closure_9 = tmp24;
-                  let obj6 = callback(obj1[5]);
-                  history = obj6.getHistory();
-                  joinedAt = joinSource.getGuild(callback);
-                  obj3 = { sourceLocationStack: null, state: null };
-                  obj3[0] = length;
-                  const obj4 = { analyticsSource: null };
-                  obj4[0] = lib;
-                  obj3[1] = obj4;
-                  if (null != joinedAt) {
-                    if (null != joinedAt.joinedAt) {
-                      if (closure_9) {
-                        if (null == page) {
-                          throwTypeErrorResult = callback(obj1[6]).transitionToGuild(callback, obj3);
-                          const obj17 = callback(obj1[6]);
-                        } else {
-                          const obj5 = {};
-                          const tmp84 = lib(obj1[7]);
-                          const merged = Object.assign(obj3);
-                          obj5.navigationReplace = true;
-                          obj5.openChannel = true;
-                          tmp84(history.CHANNEL(callback, page, obj1.messageId), obj5);
-                          const CHANNELResult = history.CHANNEL(callback, page, obj1.messageId);
-                        }
-                      }
-                    }
-                  }
-                  if (null != joinedAt) {
-                    if (page.isLurking(callback)) {
-                      if (closure_9) {
-                        let obj12 = lib(obj1[8]);
-                        obj6 = {};
-                        const merged1 = Object.assign(obj3);
-                        obj6.welcomeModalChannelId = page;
-                        obj6.navigationReplace = null != page;
-                        obj6.openChannel = null != page;
-                        obj6.search = history.location.search;
-                        loadId = 2;
-                        shouldNavigate = 1;
-                        const obj7 = { value: null, done: false };
-                        obj7[0] = obj12.transitionToGuildSync(callback, obj6, page, obj1.messageId);
-                        return obj7;
-                      }
-                    }
-                  }
-                  let tmp45;
-                  if (length != null) {
-                    tmp45 = tmp44[length.length - 1];
-                  }
-                  page = tmp45;
-                  if (tmp45 == null) {
-                    page = undefined;
-                    if (lib != null) {
-                      page = lib.page;
-                    }
-                  }
-                  closure_13 = page;
-                  let obj9 = lib(obj1[8]);
-                  const obj8 = { lurker: true, source: null, loadId: null, lurkLocation: null };
-                  obj8[1] = joinSource;
-                  obj8[2] = loadId;
-                  obj8[3] = closure_13;
-                  loadId = 3;
-                  shouldNavigate = 1;
-                  obj9 = { value: null, done: false };
-                  obj9[0] = obj9.joinGuild(callback, obj8);
-                  return obj9;
-                }
-              } else if (2 === tmp5) {
-                if (arg0 === 1) {
-                  shouldNavigate = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  shouldNavigate = 3;
-                  const obj10 = { value: null, done: true };
-                  obj10[0] = arg1;
-                  return obj10;
-                }
-              } else if (3 === tmp5) {
-                if (arg0 === 1) {
-                  shouldNavigate = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  shouldNavigate = 3;
-                  const obj11 = { value: null, done: true };
-                  obj11[0] = arg1;
-                  return obj11;
-                } else {
-                  throwTypeErrorResult = onSuccess;
-                  throwTypeErrorResult = closure_9;
-                  if (closure_9) {
-                    obj1 = lib(obj1[8]);
-                    obj12 = {};
-                    const merged2 = Object.assign(obj3);
-                    obj12.welcomeModalChannelId = page;
-                    obj12.navigationReplace = null != page;
-                    obj12.openChannel = null != page;
-                    obj12.search = history.location.search;
-                    loadId = 4;
-                    shouldNavigate = 1;
-                    const obj13 = { value: null, done: false };
-                    obj13[0] = obj1.transitionToGuildSync(callback, obj12, page, obj1.messageId);
-                    return obj13;
-                  }
-                }
-              } else if (arg0 === 1) {
-                shouldNavigate = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                shouldNavigate = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-              throwTypeErrorResult = onSuccess;
-              throwTypeErrorResult = null;
-              if (onSuccess != null) {
-                throwTypeErrorResult = throwTypeErrorResult();
-              }
-              shouldNavigate = 3;
-              return { value: "HermesInternal", done: null };
+              const obj5 = {};
+              const merged = Object.assign(closure_133_12);
+              obj5.navigationReplace = true;
+              obj5.openChannel = true;
+              closure_134_1(closure_134_2[7])(closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId), obj5);
+              closure_134_10.CHANNEL(closure_133_0, channelId, closure_133_2.messageId);
+              closure_134_1(closure_134_2[7]);
             }
-          } catch (throwTypeErrorResult) {
-            shouldNavigate = throwTypeErrorResult;
-            throw throwTypeErrorResult;
           }
         }
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_11 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      if (null != guild) {
+        if (closure_134_4.isLurking(closure_133_0)) {
+          if (closure_133_9) {
+            let obj12 = closure_134_1(closure_134_2[8]);
+            obj6 = {};
+            const merged1 = Object.assign(closure_133_12);
+            obj6.welcomeModalChannelId = channelId;
+            obj6.navigationReplace = null != channelId;
+            obj6.openChannel = null != channelId;
+            obj6.search = history.location.search;
+            c7 = 2;
+            c8 = 1;
+            return { value: obj12.transitionToGuildSync(closure_133_0, obj6, channelId, closure_133_2.messageId), done: false };
+          }
+        }
+      }
+      let tmp45;
+      if (closure_133_3 != null) {
+        tmp45 = tmp44[closure_133_3.length - 1];
+      }
+      let page = tmp45;
+      if (tmp45 == null) {
+        page = undefined;
+        if (closure_133_1 != null) {
+          page = closure_133_1.page;
+        }
+      }
+      closure_133_13 = page;
+      closure_134_1(closure_134_2[8]);
+      c7 = 3;
+      c8 = 1;
+      const obj9 = { value: null, done: false };
+      obj9.value = obj9.joinGuild(closure_133_0, { lurker: true, source: joinSource, loadId, lurkLocation: closure_133_13 });
+      return obj9;
+    }
+  } else if (2 === tmp5) {
+    if (arg0 === 1) {
+      c8 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c8 = 3;
+      return { value, done: true };
+    }
+  } else if (3 === tmp5) {
+    if (arg0 === 1) {
+      c8 = 3;
+      throw value;
+    } else if (arg0 === 2) {
+      c8 = 3;
+      return { value, done: true };
+    } else if (closure_133_9) {
+      let obj1 = closure_134_1(closure_134_2[8]);
+      obj12 = {};
+      const merged2 = Object.assign(closure_133_12);
+      obj12.welcomeModalChannelId = channelId;
+      obj12.navigationReplace = null != channelId;
+      obj12.openChannel = null != channelId;
+      obj12.search = history.location.search;
+      c7 = 4;
+      c8 = 1;
+      return { value: obj1.transitionToGuildSync(closure_133_0, obj12, channelId, closure_133_2.messageId), done: false };
+    }
+  } else if (arg0 === 1) {
+    c8 = 3;
+    throw value;
+  } else if (arg0 === 2) {
+    c8 = 3;
+    return { value, done: true };
   }
-  return applyArgumentsResult;
-}
+  if (onSuccess != null) {
+    tmp102();
+  }
+  await "HermesInternal";
+  closure_5 = tmp2;
+  closure_133_0 = closure_0;
+  closure_133_1 = closure_1;
+  obj1 = closure_2;
+  if (closure_2 === undefined) {
+    obj1 = {};
+  }
+  closure_133_2 = obj1;
+  closure_133_3 = closure_3;
+  return "PX_16";
+};
 function makeDiscoverableGuild(body) {
   const obj = { id: body.id, name: body.name, description: body.description, splash: body.splash, banner: body.banner, icon: body.icon, features: new Set(body.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: null, preferredLocale: null, discoverySplash: null, emojis: null, emojiCount: null, stickers: null, stickerCount: null, keywords: null };
-  ({ approximate_presence_count: obj[7], approximate_member_count: obj[8], premium_subscription_count: obj[9], preferred_locale: obj[10], discovery_splash: obj[11], emojis: obj[12], emoji_count: obj[13], stickers: obj[14], sticker_count: obj[15], keywords: obj[16] } = body);
+  ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, premium_subscription_count: obj.premiumSubscriptionCount, preferred_locale: obj.preferredLocale, discovery_splash: obj.discoverySplash, emojis: obj.emojis, emoji_count: obj.emojiCount, stickers: obj.stickers, sticker_count: obj.stickerCount, keywords: obj.keywords } = body);
   return obj;
 }
-function _getDiscoverableGuild() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_13 = async function _getDiscoverableGuild(guild_ids) {
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
+  return (async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              let first = tmp7;
-              let lib;
-              first = undefined;
-              c4 = 1;
-              const HTTP = lib(closure_1_2[10]).HTTP;
-              obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-              obj1[0] = closure_1_9.GUILD_DISCOVERY;
-              const obj2 = { guild_ids: null };
-              obj2[0] = lib;
-              obj1[1] = closure_1_1(closure_1_2[11]).stringify(obj2);
-              c5 = 2;
-              c6 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = HTTP.get(obj1);
-              return obj3;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c4 = 0;
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            lib = arg1;
-            const body = lib.body;
-            first = undefined;
-            if (body != null) {
-              const guilds = body.guilds;
-              if (guilds != null) {
-                first = guilds[0];
-              }
-            }
-            if (null != first) {
-              callback(first);
-            }
-            c4 = 0;
-            c6 = 3;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            c4 = 1;
+            const HTTP = HTTPUtils.HTTP;
+            const request = { url: constants.GUILD_DISCOVERY, query: null, oldFormErrors: true, rejectWithError: true };
+            const obj1 = { guild_ids };
+            request.query = _modDef1471.stringify(obj1);
+            c5 = 2;
+            c6 = 1;
+            const obj2 = { value: HTTP.get(request), done: false };
+            return obj2;
           }
-        } catch (tmp21) {
-          closure_3 = tmp21;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp21;
-          } else {
-            c5 = tmp;
-          }
-        }
-      }
-    })();
-  });
-  closure_13 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _fetchPublicDiscoveryGuild() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c4 = 0;
-    c3 = 0;
-    return (function*(arg0, body) {
-      if (c4 === 2) {
-        c4 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
-        if (arg0 === 1) {
-          throw body;
+        } else if (1 === tmp7) {
+          c4 = 0;
+          c6 = 3;
+          return { value: null, done: true };
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = body;
+          c4 = 0;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_129_0 = value;
+          const body = closure_129_0.body;
+          let first;
+          if (body != null) {
+            const guilds = body.guilds;
+            if (guilds != null) {
+              first = guilds[0];
+            }
+          }
+          closure_129_1 = first;
+          if (null != closure_129_1) {
+            closure_130_12(closure_129_1);
+          }
+          c4 = 0;
+          c6 = 3;
         }
-      } else {
-        try {
-          c4 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c4 = 3;
-              throw body;
-            } else if (arg0 === 2) {
-              c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = body;
-              return obj;
-            } else {
-              closure_1 = tmp6;
-              body = undefined;
-              c3 = 1;
-              const HTTP = callback(table[10]).HTTP;
-              obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-              const _String = String;
-              obj1[0] = closure_1_9.GUILD_DISCOVERY_SLUG(String(body));
-              table = 2;
-              c4 = 1;
-              const obj2 = { value: null, done: false };
-              obj2[0] = HTTP.get(obj1);
-              return obj2;
-            }
-          } else if (1 === tmp6) {
-            c3 = 0;
-            c4 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c4 = 3;
-            throw body;
-          } else if (arg0 === 2) {
-            c3 = 0;
-            c4 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = body;
-            return obj3;
-          } else {
-            body = body.body;
-            let guild;
-            if (body != null) {
-              guild = body.guild;
-            }
-            let tmp8 = null;
-            if (null != guild) {
-              let slug;
-              if (body != null) {
-                slug = body.slug;
-              }
-              tmp8 = null;
-              if (null != slug) {
-                obj = { guild: null, slug: null };
-                obj[0] = body.guild;
-                obj[1] = body.slug;
-                tmp8 = obj;
-              }
-            }
-            c3 = 0;
-            c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = tmp8;
-            return obj4;
-          }
-        } catch (tmp14) {
-          if (tmp3 === c3) {
-            c4 = tmp2;
-            throw tmp14;
-          } else {
-            table = tmp;
-          }
+      } catch (tmp21) {
+        closure_3 = tmp21;
+        if (tmp4 === c4) {
+          c6 = tmp2;
+          throw tmp21;
+        } else {
+          c5 = tmp;
         }
       }
-    })();
-  });
-  closure_14 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    }
+  })();
+};
+let closure_14 = async function _fetchPublicDiscoveryGuild(arg0, value) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c4 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_1 = tmp6;
+          let body;
+          c3 = 1;
+          const HTTP = HTTPUtils.HTTP;
+          const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+          const _String = String;
+          obj1.url = React7.GUILD_DISCOVERY_SLUG(String(closure_0));
+          c2 = 2;
+          c4 = 1;
+          const obj2 = { value: HTTP.get(obj1), done: false };
+          return obj2;
+        }
+      } else if (1 === tmp6) {
+        c3 = 0;
+        c4 = 3;
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 0;
+        c4 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        body = value.body;
+        let guild;
+        if (body != null) {
+          guild = body.guild;
+        }
+        let tmp8 = null;
+        if (null != guild) {
+          let slug;
+          if (body != null) {
+            slug = body.slug;
+          }
+          tmp8 = null;
+          if (null != slug) {
+            obj = { guild: body.guild, slug: body.slug };
+            tmp8 = obj;
+          }
+        }
+        c3 = 0;
+        c4 = 3;
+        const obj4 = { value: tmp8, done: true };
+        return obj4;
+      }
+    } catch (tmp14) {
+      if (tmp3 === c3) {
+        c4 = tmp2;
+        throw tmp14;
+      } else {
+        c2 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ AnalyticEvents: error, SearchTypes: closure_8, Endpoints: c9, Routes: c10 } = ME);
-const result = require("set").fileFinishedImporting("utils/GuildDiscoveryUtils.tsx");
+};
+const Constants = fn(1074);
+({ AnalyticEvents: closure_7, SearchTypes: closure_8, Endpoints: closure_9, Routes: c10 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/GuildDiscoveryUtils.tsx");
 
 export const AnalyticsContexts = { SEARCH: "Search", RECOMMENDED: "Recommended", POPULAR: "Popular", RECOMMENDED_E3: "Recommended - E3", HEADER: "Header", GLOBAL_DISCOVERY: "Global Discovery", FORWARD_BREADCRUMB: "Forward Breadcrumb" };
 export const IOS_MINIMUM_MEMBER_COUNT = ">1000";
 export const MINIMUM_MEMBER_COUNT = ">200";
-export const startLurking = function startLurking(id, c4, arg2, c42) {
+export const startLurking = function startLurking() {
   const self = this;
-  const apply = _startLurking.apply;
+  const apply = closure_11.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -475,13 +332,11 @@ export const trackDiscoveryExited = function trackDiscoveryExited(load_id, guild
   if (arg2 === undefined) {
     tmp = null;
   }
-  let obj = expandEventPropertiesDefault;
-  obj = { load_id, guild_ids_viewed, recommendations_source: tmp };
+  const obj = { load_id, guild_ids_viewed, recommendations_source: tmp };
   obj.track(constants.GUILD_DISCOVERY_EXITED, obj);
 };
 export const trackSearchClosed = function trackSearchClosed(load_id) {
-  let obj = expandEventPropertiesDefault;
-  obj = { load_id };
+  const obj = { load_id };
   obj.track(constants.SEARCH_CLOSED, obj);
 };
 export const trackSearchStarted = function trackSearchStarted(load_id, category_id) {
@@ -490,50 +345,47 @@ export const trackSearchStarted = function trackSearchStarted(load_id, category_
     obj = {};
   }
   obj = { search_type: constants2.GUILD_DISCOVERY, load_id, location: obj.location, category_id };
-  expandEventPropertiesDefault.track(constants.SEARCH_STARTED, obj);
+  AnalyticsUtilsDefault.track(constants.SEARCH_STARTED, obj);
 };
 export const trackGuildDiscoverySearchStart = function trackGuildDiscoverySearchStart(arg0) {
   ({ withCounts, offset } = arg0);
-  expandEventPropertiesDefault.track(constants.GUILD_DISCOVERY_SEARCH_START, { with_counts: withCounts, offset });
+  AnalyticsUtilsDefault.track(constants.GUILD_DISCOVERY_SEARCH_START, { with_counts: withCounts, offset });
 };
 export const trackSearchFailed = function trackSearchFailed(error) {
   error = error.error;
   ({ categoryId, willRequestRetry, isRequestRetry } = error);
-  let obj = expandEventPropertiesDefault;
-  obj = { category_id: categoryId, request_status: error.status, request_error_code: error.code, will_request_retry: willRequestRetry, is_request_retry: isRequestRetry };
+  const obj = { category_id: categoryId, request_status: error.status, request_error_code: error.code, will_request_retry: willRequestRetry, is_request_retry: isRequestRetry };
   obj.track(constants.GUILD_DISCOVERY_SEARCH_FAILED, obj);
 };
 export const trackGuildDiscoveryGetFeaturedGuildsFailed = function trackGuildDiscoveryGetFeaturedGuildsFailed(category_id) {
-  expandEventPropertiesDefault.track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: category_id.categoryId });
+  AnalyticsUtilsDefault.track(constants.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: category_id.categoryId });
 };
 export const trackSearchResultsViewed = function trackSearchResultsViewed(guildResults) {
   ({ loadId, searchId, query, analyticsContext, categoryId, isTagSearch } = guildResults);
-  let obj = expandEventPropertiesDefault;
-  obj = { search_type: isTagSearch ? tmp.GUILD_DISCOVERY_TAG : tmp.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
+  const obj = { search_type: isTagSearch ? tmp.GUILD_DISCOVERY_TAG : tmp.GUILD_DISCOVERY, load_id: loadId, search_id: searchId, total_results: null, guild_ids: null, query: null, location: null, category_id: null };
   let length = null;
   if (undefined !== guildResults.guildResults) {
     length = guildResults.length;
   }
-  obj[3] = length;
+  obj.total_results = length;
   let mapped = null;
   if (undefined !== guildResults.guildResults) {
     mapped = guildResults.map((id) => id.id);
   }
-  obj[4] = mapped;
-  obj[5] = query;
-  obj[6] = analyticsContext.location;
-  obj[7] = categoryId;
+  obj.guild_ids = mapped;
+  obj.query = query;
+  obj.location = analyticsContext.location;
+  obj.category_id = categoryId;
   obj.track(constants.SEARCH_RESULT_VIEWED, obj);
 };
-export const trackGuildJoinClicked = function trackGuildJoinClicked(guild_id) {
-  loadId = loadId.getLoadId(guild_id);
-  let obj = expandEventPropertiesDefault;
-  obj = { guild_id, load_id: loadId, guild_size: memberCount.getMemberCount(guild_id) };
+export const trackGuildJoinClicked = function trackGuildJoinClicked(guildId) {
+  const loadId = LurkingStore.getLoadId(guildId);
+  const obj = { guild_id: guildId, load_id: loadId, guild_size: GuildMemberCountStore.getMemberCount(guildId) };
   obj.track(constants.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, obj);
 };
 export const getDiscoverableGuild = function getDiscoverableGuild() {
   const self = this;
-  const apply = _getDiscoverableGuild.apply;
+  const apply = closure_13.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -543,7 +395,7 @@ export const getDiscoverableGuild = function getDiscoverableGuild() {
 };
 export const fetchPublicDiscoveryGuild = function fetchPublicDiscoveryGuild() {
   const self = this;
-  const apply = _fetchPublicDiscoveryGuild.apply;
+  const apply = closure_14.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

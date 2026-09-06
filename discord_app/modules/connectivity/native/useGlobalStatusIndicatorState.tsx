@@ -3,34 +3,33 @@
 // Module 9679 (useGlobalStatusIndicatorState)
 import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9215 */;
 import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9678 */;
-import useMyCurrentStageChannelDefault from "useMyCurrentStageChannel" /* 9682 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
-import { RTC_PANEL_HEIGHT } from "RTC_PANEL_HEIGHT" /* 9680 */;
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 1074 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");
+const useMyCurrentStageChannelDefault = tmp4(9682);
+const require = fn;
+const RTC_PANEL_HEIGHT = fn(9680).RTC_PANEL_HEIGHT;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/connectivity/native/useGlobalStatusIndicatorState.tsx");
 
 export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorState(flag) {
   if (flag === undefined) {
     flag = false;
   }
   let stateFromStores;
-  importDefault = undefined;
   let obj = stateFromStores(9490);
   let hasPipParticipant = obj.useHasPipParticipant({ isActivityViewFocused: false });
   const tmp5 = useVoiceStateForRemoteSessionDefault();
-  const items = [closure_4];
+  const items = [RTCConnectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () => channelId.getChannelId());
   const tmp7 = useIsInvitedToSpeakDefault();
   importDefault = tmp7;
   const obj2 = stateFromStores(504);
-  const tmp4 = importDefault;
-  const items1 = [closure_3];
+  const items1 = [ChannelStore];
   const items2 = [stateFromStores, tmp7];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
-    const channel = closure_1_3.getChannel(stateFromStores);
+    const channel = ChannelStore.getChannel(stateFromStores);
     let isGuildStageVoiceResult;
     if (channel != null) {
       isGuildStageVoiceResult = channel.isGuildStageVoice();
@@ -90,6 +89,6 @@ export const useGlobalStatusIndicatorState = function useGlobalStatusIndicatorSt
   if (tmp18) {
     tmp18 = !stateFromStores1;
   }
-  obj[2] = tmp18;
+  obj.isCustomBackground = tmp18;
   return obj;
 };

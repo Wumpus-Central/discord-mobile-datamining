@@ -1,16 +1,17 @@
-// === Module 10933: canUnlinkLobbyChannel ===
+// === Module 10933: LobbyUtils ===
 
-// Module 10933 (canUnlinkLobbyChannel)
-import closure_2 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 10933 (LobbyUtils)
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/lobbies/LobbyUtils.tsx");
+const require = fn;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lobbies/LobbyUtils.tsx");
 
-export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(channel, closure_0) {
-  let obj = closure_0;
-  if (closure_0 === undefined) {
-    obj = closure_2;
+export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(channel, arg1) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = PermissionStore;
   }
   let tmp = null != channel;
   if (tmp) {
@@ -29,21 +30,21 @@ export const canUnlinkLobbyChannel = function canUnlinkLobbyChannel(channel, clo
   return tmp;
 };
 export const useCanUnlinkLobbyChannel = function useCanUnlinkLobbyChannel(channel) {
-  const _require = channel;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    if (closure_1_2 !== undefined) {
+  _require = channel;
+  const items = [PermissionStore];
+  return require("initialize").useStateFromStores(items, () => {
+    if (PermissionStore !== undefined) {
       let tmp3 = null != tmp;
       if (tmp3) {
         let canResult = null != tmp.linkedLobby;
         if (canResult) {
-          canResult = obj.can(closure_1_3.MANAGE_CHANNELS, tmp);
+          canResult = obj.can(Permissions.MANAGE_CHANNELS, tmp);
         }
         if (canResult) {
-          canResult = obj.can(closure_1_3.VIEW_CHANNEL, tmp);
+          canResult = obj.can(Permissions.VIEW_CHANNEL, tmp);
         }
         if (canResult) {
-          canResult = obj.can(closure_1_3.SEND_MESSAGES, tmp);
+          canResult = obj.can(Permissions.SEND_MESSAGES, tmp);
         }
         tmp3 = canResult;
       }

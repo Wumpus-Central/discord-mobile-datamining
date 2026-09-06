@@ -1,25 +1,22 @@
-// === Module 8094: ChangeLogLink ===
+// === Module 8094: utils/ChangeLogUtils ===
 
-// Module 8094 (ChangeLogLink)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import tDefault from "t" /* 4257 */;
-import Text from "Text" /* 4556 */;
-import apexExperiment from "apexExperiment" /* 8095 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult1 from "createRules" /* 4995 */;
+// Module 8094 (utils/ChangeLogUtils)
+import nativeDefault from "native" /* 576 */;
+import _modDef4257 from "module_4257" /* 4257 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
+import noop from "module_19" /* 19 */;
+import CustomMarkup from "CustomMarkup" /* 4995 */;
 
-require = arg1;
+require = fn;
 function ChangeLogLink(arg0) {
   ({ node, state } = arg0);
   ({ output, styling } = arg0);
-  let obj = { className: callback().link, target: node.target, children: null };
+  let obj = { className: closure_6().link, target: node.target, children: null };
   obj = {};
   const merged = Object.assign(state);
   obj.inLink = true;
-  obj[2] = output(node.content, obj);
+  obj.children = output(node.content, obj);
   return jsx(styling.components.Link, {}, state.key);
 }
 function ChangeLogList(styling) {
@@ -29,43 +26,41 @@ function ChangeLogList(styling) {
   if (!List) {
     List = closure_3;
   }
-  const tmp = callback();
+  let obj = { style: closure_6().list, children: null };
   let items = styling.node.items;
-  return <List key={state.key} style={callback().list}>{items.map((arg0, arg1) => {
-    closure_0 = arg0;
-    return closure_1_5(styling.components.ListItem, {
-      children(arg0) {
-        closure_1 = closure_1_1;
-        closure_2 = arg0;
-        const items = [];
-        let length = [];
-        const item = closure_0.forEach((type) => {
-          if ("list" === type.type) {
-            if (arr.length > 0) {
-              let obj = { variant: "text-sm/normal" };
-              const merged = Object.assign(table);
-              obj.children = callback(arr, closure_1);
-              arr = items.push(closure_1_5(callback(table[7]).Text, obj, -1));
-              arr = [];
-            }
-            obj = { children: null };
-            obj[0] = callback(type, closure_1);
-            arr = items.push(closure_1_5(items, obj, arg1));
-          } else {
-            arr.push(type);
+  obj.children = items.map((item, index) => jsx(styling.components.ListItem, {
+    children(arg0) {
+      item = closure_2_0;
+      closure_1 = state;
+      closure_2 = arg0;
+      const items = [];
+      length = [];
+      item = item.forEach((type, index) => {
+        if ("list" === type.type) {
+          if (closure_4.length > 0) {
+            let obj = { variant: "text-sm/normal" };
+            const merged = Object.assign(closure_2);
+            obj.children = closure_0(closure_4, closure_1);
+            items.push(closure_2_5(closure_0(styling[7]).Text, obj, -1));
+            closure_4 = [];
           }
-        });
-        if (length.length > 0) {
-          let obj = { variant: "text-sm/normal" };
-          let merged = Object.assign(arg0);
-          obj.children = closure_0(length, closure_1_1);
-          items.push(closure_2_5(closure_2_0(styling[7]).Text, obj, -1));
-          length = [];
+          obj = { children: closure_0(type, closure_1) };
+          items.push(closure_2_5(closure_2_3, obj, index));
+        } else {
+          closure_4.push(type);
         }
-        return items;
+      });
+      if (length.length > 0) {
+        let obj = { variant: "text-sm/normal" };
+        let merged = Object.assign(arg0);
+        obj.children = closure_2_0(length, state);
+        items.push(jsx(Text_Text.Text, { variant: "text-sm/normal" }, -1));
+        length = [];
       }
-    }, arg1);
-  })}</List>;
+      return items;
+    }
+  }, index));
+  return <List key={state.key} style={closure_6().list}>{null}</List>;
 }
 function ChangeLogParagraph(state) {
   state = state.state;
@@ -76,14 +71,14 @@ function ChangeLogParagraph(state) {
     Paragraph = components.Paragraph;
   }
   if (Paragraph == null) {
-    Paragraph = Text.Text;
+    Paragraph = Text_Text.Text;
   }
-  const tmp = callback();
-  return <Paragraph key={state.key} variant="text-sm/normal" style={callback().text}>{output(node.content, state)}</Paragraph>;
+  const tmp = closure_6();
+  return <Paragraph key={state.key} variant="text-sm/normal" style={closure_6().text}>{output(node.content, state)}</Paragraph>;
 }
 function ChangeLogStrong(arg0) {
   ({ node, output, state } = arg0);
-  let obj = apexExperiment;
+  let obj = ManaTypeConsolidationExperiment;
   if (obj.useManaTypeConsolidationExperiment("ChangeLogStrong")) {
     let str;
     if (state != null) {
@@ -92,11 +87,8 @@ function ChangeLogStrong(arg0) {
     if (str == null) {
       str = "text-default";
     }
-    obj = { variant: "experimental/body-sm/semibold", color: null, children: null };
-    obj[1] = str;
-    obj[2] = tmp(8096).smartOutput(node, output, state);
-    let reactResult = jsx(tmp(4556).Text, { variant: "experimental/body-sm/semibold", color: null, children: null });
-    const tmp5 = jsx;
+    obj = { variant: "experimental/body-sm/semibold", color: str, children: tmp(8096).smartOutput(node, output, state) };
+    let reactResult = jsx(tmp(4556).Text, { variant: "experimental/body-sm/semibold", color: str, children: tmp(8096).smartOutput(node, output, state) });
     const tmpResult = tmp(8096);
   } else {
     const strong = rules.strong;
@@ -106,94 +98,88 @@ function ChangeLogStrong(arg0) {
 }
 function ChangeLogImage(arg0) {
   ({ node, state } = arg0);
-  let obj = { style: callback().image, source: null };
-  obj = { uri: tDefault.sanitizeUrl(node.target) };
-  obj[1] = obj;
-  return <closure_4 key={state.key} uri={tDefault.sanitizeUrl(node.target)} />;
+  let obj = { style: closure_6().image, source: null };
+  obj = { uri: _modDef4257.sanitizeUrl(node.target) };
+  obj.source = obj;
+  return <React4 key={state.key} uri={_modDef4257.sanitizeUrl(node.target)} />;
 }
 function ChangeLogBlockQuote(state) {
   state = state.state;
   ({ node, output } = state);
-  const tmp = callback();
+  const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
   obj = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
-  obj[1] = jsx(Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) });
-  return <closure_3 key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</closure_3>;
+  obj.children = jsx(Text_Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) });
+  return <React3 key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</React3>;
 }
-noopAll;
-({ View: c3, Image: c4 } = get_ActivityIndicator);
-createCacheKey = { link: null, list: null, image: null, container: null, text: null };
-createCacheKey = { color: ThemesDefault.colors.TEXT_LINK };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: 10 };
-createCacheKey[2] = { alignSelf: "center", flex: 1 };
-createCacheKey[3] = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-const obj1 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-createCacheKey[4] = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: ThemesDefault.colors.TEXT_MUTED };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj2 = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: ThemesDefault.colors.TEXT_MUTED };
-const rules = importAllResult1.createRules({});
-const obj3 = {
-  link(uri) {
-    closure_0 = uri;
-    return {
-      react(node, output, state) {
-        return closure_1_5(closure_1_8, { accessibilityRole: "link", node, output, state, styling: closure_0 });
-      }
-    };
-  },
-  lheading(uri) {
-    closure_0 = uri;
-    return {
-      react(className, arg1, key) {
-        return closure_1_5(uri.components.LHeading, { className: className.className, children: arg1(className.content, key) }, key.key);
-      }
-    };
-  },
-  heading(uri) {
-    closure_0 = uri;
-    return {
-      react(className, arg1, key) {
-        return closure_1_5(uri.components.Heading, { className: className.className, level: className.level, children: arg1(className.content, key) }, key.key);
-      }
-    };
-  },
-  list(arg0) {
-    closure_0 = arg0;
-    return {
-      react(node, output, state) {
-        return closure_1_5(closure_1_9, { node, output, state, styling: closure_0 });
-      }
-    };
-  },
-  image: obj4,
-  blockQuote: obj5,
-  strong: obj6,
-  paragraph(uri) {
-    closure_0 = uri;
-    return {
-      react(node, output, state) {
-        return closure_1_5(closure_1_10, { node, output, state, styling: closure_0 });
-      }
-    };
-  }
-};
-obj4 = {
-  react(node, output, state) {
-    return <ChangeLogImage node={arg0} output={arg1} state={arg2} />;
-  }
-};
-obj5 = {
-  react(node, output, state) {
-    return <ChangeLogBlockQuote node={arg0} output={arg1} state={arg2} />;
-  }
-};
-obj6 = {
-  react(node, output, key) {
-    return <ChangeLogStrong key={arg2.key} node={arg0} output={arg1} state={arg2} />;
-  }
-};
-const result = require("set").fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
+get_ActivityIndicator = fn(17);
+({ View: c3, Image: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { link: null, list: null, image: null, container: null, text: null };
+createStyles = { color: nativeDefault.colors.TEXT_LINK };
+createStyles.link = createStyles;
+createStyles.list = { marginBottom: 10 };
+createStyles.image = { alignSelf: "center", flex: 1 };
+createStyles.container = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5441).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+const obj1 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: fn(5441).DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
+createStyles.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
+let closure_6 = createStyles.createStyles(createStyles);
+const rules = CustomMarkup.createRules({});
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
 
 export const baseRules = rules;
-export const customRules = obj3;
+export const customRules = {
+  link(inlineStoreParams) {
+    const styling = inlineStoreParams;
+    return {
+      react(node, output, state) {
+        return <ChangeLogLink accessibilityRole="link" node={arg0} output={arg1} state={arg2} styling={styling} />;
+      }
+    };
+  },
+  lheading(dependencyMap) {
+    return {
+      react(className, fn, key) {
+        return jsx(dependencyMap.components.LHeading, { className: className.className, children: fn(className.content, key) }, key.key);
+      }
+    };
+  },
+  heading(dependencyMap) {
+    return {
+      react(className, fn, key) {
+        return jsx(dependencyMap.components.Heading, { className: className.className, level: className.level, children: fn(className.content, key) }, key.key);
+      }
+    };
+  },
+  list(styling) {
+    return {
+      react(node, output, state) {
+        return <ChangeLogList node={arg0} output={arg1} state={arg2} styling={styling} />;
+      }
+    };
+  },
+  image: {
+    react(node, output, state) {
+      return <ChangeLogImage node={arg0} output={arg1} state={arg2} />;
+    }
+  },
+  blockQuote: {
+    react(node, output, state) {
+      return <ChangeLogBlockQuote node={arg0} output={arg1} state={arg2} />;
+    }
+  },
+  strong: {
+    react(node, output, state) {
+      return <ChangeLogStrong key={arg2.key} node={arg0} output={arg1} state={arg2} />;
+    }
+  },
+  paragraph(dependencyMap) {
+    return {
+      react(node, output, state) {
+        return <ChangeLogParagraph node={arg0} output={arg1} state={arg2} styling={dependencyMap} />;
+      }
+    };
+  }
+};

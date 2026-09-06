@@ -1,12 +1,14 @@
 // === Module 11387: InappropriateConversationWarningBanner ===
 
 // Module 11387 (InappropriateConversationWarningBanner)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import { SafetyWarningTypes } from "handleConnectionOpen" /* 10915 */;
-import { jsx } from "jsxProd" /* 21 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11370 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11371 */;
+import SafetyToolsActionCreators from "SafetyToolsActionCreators" /* 11391 */;
+import noop from "module_19" /* 19 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-const require = arg1;
+require = fn;
 class InappropriateConversationWarningBanner {
   constructor(arg0) {
     channelId = global.channelId;
@@ -19,8 +21,7 @@ class InappropriateConversationWarningBanner {
     items[1] = warningId;
     items[2] = senderId;
     effect = closure_3.useEffect(() => {
-      let obj = channelId(senderId[4]);
-      obj = { channelId, warningId, senderId, warningType: closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2, viewName: channelId(senderId[4]).ViewNameTypes.SAFETY_WARNING_BANNER };
+      const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2, viewName: SafetyWarningUtils.ViewNameTypes.SAFETY_WARNING_BANNER };
       obj.trackNamedViewEvent(obj);
     }, items);
     items1 = [, , ];
@@ -28,14 +29,13 @@ class InappropriateConversationWarningBanner {
     items1[1] = warningId;
     items1[2] = senderId;
     callback = closure_3.useCallback((cta) => {
-      let obj = channelId(senderId[4]);
-      obj = { channelId, warningId, senderId, warningType: closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2, cta };
+      const obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2, cta };
       obj.trackCtaEvent(obj);
     }, items1);
     closure_3 = callback;
     tmp3 = channelId;
     tmp4 = senderId;
-    obj = require("initialize");
+    obj = channelId(senderId[5]);
     items2 = [];
     items2[0] = closure_4;
     items3 = [];
@@ -43,10 +43,10 @@ class InappropriateConversationWarningBanner {
     items4 = [, ];
     items4[0] = channelId;
     items4[1] = warningId;
-    stateFromStores = obj.useStateFromStores(items2, () => callback1.isBlocked(senderId), items3);
+    stateFromStores = obj.useStateFromStores(items2, () => RelationshipStore.isBlocked(senderId), items3);
     callback1 = closure_3.useCallback(() => {
       const items = [warningId];
-      const result = channelId(senderId[6]).dismissChannelSafetyWarnings(channelId, items);
+      const result = ChannelSafetyWarningsActionCreators.dismissChannelSafetyWarnings(channelId, items);
     }, items4);
     closure_4 = callback1;
     items5 = [, , , ];
@@ -60,23 +60,22 @@ class InappropriateConversationWarningBanner {
     items6[2] = senderId;
     items6[3] = callback;
     callback2 = closure_3.useCallback(() => {
-      let obj = warningId(senderId[7]);
-      obj = {
+      let obj = {
         importer() {
-          return closure_1_0(closure_1_2[9])(closure_1_2[8], closure_1_2.paths).then((arg0) => {
-            closure_0 = arg0.default;
+          return channelId(senderId[9])(senderId[8], senderId.paths).then((result) => {
+            closure_0 = result.default;
             return (arg0) => {
               const obj = {};
               const merged = Object.assign(arg0);
-              obj.channelId = closure_0;
-              obj.warningId = closure_1_1;
-              obj.warningType = closure_2_5.INAPPROPRIATE_CONVERSATION_TIER_2;
-              obj.senderId = closure_1_2;
-              obj.analyticsBlockContext = closure_2_0(closure_2_2[4]).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
-              obj.analyticsBlockAndReportContext = closure_2_0(closure_2_2[4]).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
-              obj.analyticsCancelContext = closure_2_0(closure_2_2[4]).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
-              obj.onDismiss = closure_1_4;
-              return closure_2_6(closure_0, obj);
+              obj.channelId = channelId;
+              obj.warningId = warningId;
+              obj.warningType = closure_3_5.INAPPROPRIATE_CONVERSATION_TIER_2;
+              obj.senderId = senderId;
+              obj.analyticsBlockContext = closure_3_0(11370).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
+              obj.analyticsBlockAndReportContext = closure_3_0(11370).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
+              obj.analyticsCancelContext = closure_3_0(11370).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
+              obj.onDismiss = onDismiss;
+              return closure_3_6(closure_0, obj);
             };
           });
         }
@@ -84,39 +83,42 @@ class InappropriateConversationWarningBanner {
       obj.openLazy(obj);
     }, items5);
     callback3 = closure_3.useCallback(() => {
-      const result = channelId(senderId[10]).openSafetyToolsActionSheet(channelId, senderId, warningId, closure_1_5.INAPPROPRIATE_CONVERSATION_TIER_2);
-      callback(channelId(senderId[4]).CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS);
+      const result = SafetyToolsActionCreators.openSafetyToolsActionSheet(channelId, senderId, warningId, SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2);
+      callback(SafetyWarningUtils.CtaEventTypes.USER_BANNER_OPEN_SAFETY_TOOLS);
     }, items6);
     tmp9 = jsx;
     obj = { channelId, warningId, senderId, warningType: SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2, header: null, description: null, onDismiss: null, buttons: null };
-    tmp10 = require("SafetyWarningBanner");
-    intl = require("getSystemLocale").intl;
-    obj[4] = intl.string(require("getSystemLocale").t.ZzlB5p);
-    intl2 = require("getSystemLocale").intl;
-    obj[5] = intl2.string(require("getSystemLocale").t["D1aU+h"]);
-    obj[6] = callback1;
+    tmp10 = warningId(senderId[11]);
+    intl = channelId(senderId[12]).intl;
+    obj.header = intl.string(channelId(senderId[12]).t.ZzlB5p);
+    intl2 = channelId(senderId[12]).intl;
+    obj.description = intl2.string(channelId(senderId[12]).t["D1aU+h"]);
+    obj.onDismiss = callback1;
     obj1 = { text: null, variant: "primary", onpress: null };
-    intl3 = require("getSystemLocale").intl;
-    obj1[0] = intl3.string(require("getSystemLocale").t.Qyu4UK);
-    obj1[2] = callback3;
+    intl3 = channelId(senderId[12]).intl;
+    obj1.text = intl3.string(channelId(senderId[12]).t.Qyu4UK);
+    obj1.onpress = callback3;
     items7 = [];
     items7[0] = obj1;
     if (stateFromStores) {
       items8 = [];
     } else {
       obj2 = { text: null, variant: "secondary", onpress: null };
-      intl4 = require("getSystemLocale").intl;
-      obj2[0] = intl4.string(require("getSystemLocale").t["7q0bNY"]);
-      obj2[2] = callback2;
+      intl4 = tmp3(tmp4[12]).intl;
+      obj2.text = intl4.string(tmp3(tmp4[12]).t["7q0bNY"]);
+      obj2.onpress = callback2;
       items8 = [];
       items8[0] = obj2;
     }
     arraySpreadResult = HermesBuiltin.arraySpread(items8, 1);
-    obj[7] = items7;
+    obj.buttons = items7;
     return tmp9(tmp10, obj);
   }
 }
-let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx");
+const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/components/InappropriateConversationWarningBanner.tsx");
 
 export default InappropriateConversationWarningBanner;
 export { InappropriateConversationWarningBanner };

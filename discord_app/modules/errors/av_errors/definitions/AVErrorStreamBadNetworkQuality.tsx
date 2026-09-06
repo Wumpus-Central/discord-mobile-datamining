@@ -1,28 +1,29 @@
-// === Module 17841: AVErrorStreamBadNetworkQualityDefinition ===
+// === Module 17841: AVErrorStreamBadNetworkQuality ===
 
-// Module 17841 (AVErrorStreamBadNetworkQualityDefinition)
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1369 */;
-import closure_2 from "initialize" /* 4599 */;
-import { RTCConnectionQuality } from "ME" /* 1074 */;
+// Module 17841 (AVErrorStreamBadNetworkQuality)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import AVError from "AVError" /* 9110 */;
+import AVErrorContext from "AVErrorContext" /* 17834 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
+require = fn;
+const RTCConnectionQuality = fn(1074).RTCConnectionQuality;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
 
 export const AVErrorStreamBadNetworkQualityDefinition = {
   getActiveErrors() {
-    allActiveStreamKeys = allActiveStreamKeys.getAllActiveStreamKeys();
-    const mapped = allActiveStreamKeys.map((streamKey) => {
+    const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
+    const mapped = allActiveStreamKeys.map((item) => {
       let tmp = null;
-      if (quality.getQuality(streamKey) === constants.BAD) {
-        const obj = { type: null };
-        obj[0] = callback(9110).AVError.STREAM_BAD_NETWORK_QUALITY;
-        const merged = Object.assign(callback(17834).getStreamErrorContext(streamKey));
+      if (quality.getQuality(item) === constants.BAD) {
+        const obj = { type: AVError.AVError.STREAM_BAD_NETWORK_QUALITY };
+        const merged = Object.assign(AVErrorContext.getStreamErrorContext(item));
         tmp = obj;
-        const obj2 = callback(17834);
       }
       return tmp;
     });
-    return mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
+    return mapped.filter(GlobalUtils.isNotNullish);
   },
   makeErrorContextKey(streamKey) {
     return "" + streamKey.streamKey + ":" + streamKey.mediaSessionId;

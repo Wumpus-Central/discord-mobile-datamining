@@ -1,22 +1,22 @@
-// === Module 508: logger ===
+// === Module 508: flux/Emitter ===
 
-// Module 508 (logger)
-import log from "log" /* 4 */;
-import addAll from "add" /* 509 */;
-import set from "set" /* 2 */;
+// Module 508 (flux/Emitter)
+import logger_Logger from "logger/Logger" /* 4 */;
+import LastFewActionsAll from "LastFewActions" /* 509 */;
+import size from "module_2" /* 2 */;
 
-const logger = new log.Logger("Flux");
-function batchEmitChanges(arg0) {
-  return arg0();
-}
+const logger = new logger_Logger.Logger("Flux");
+let global = function batchEmitChanges(fn) {
+  return fn();
+};
 class Emitter {
   constructor() {
-    obj = Object.create(new.target.prototype);
+    merged = Object.assign({ changedStores: null, reactChangedStores: null, changeSentinel: 0, isBatchEmitting: false, isDispatching: false, isPaused: false, pauseTimer: null });
     set = new Set();
-    obj[0] = set;
+    merged[0] = set;
     set1 = new Set();
-    obj[1] = set1;
-    return obj;
+    merged[1] = set1;
+    return merged;
   }
 }
 const prototype = Emitter.prototype;
@@ -25,16 +25,15 @@ prototype["destroy"] = function destroy() {
   changedStores.clear();
   const reactChangedStores = this.reactChangedStores;
   reactChangedStores.clear();
-  batchEmitChanges = function batchEmitChanges(arg0) {
-    return arg0();
+  global = function batchEmitChanges(fn) {
+    return fn();
   };
 };
 prototype["injectBatchEmitChanges"] = function injectBatchEmitChanges(batchUpdates) {
-  closure_3 = batchUpdates;
+  global = batchUpdates;
 };
 prototype["pause"] = function pause() {
-  let self = this;
-  self = this;
+  const self = this;
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = null;
@@ -53,8 +52,7 @@ prototype["pause"] = function pause() {
   }
 };
 prototype["resume"] = function resume() {
-  let self = this;
-  self = this;
+  const self = this;
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -72,16 +70,16 @@ prototype["resume"] = function resume() {
     }
   }
 };
-prototype["batched"] = function batched(closure_1) {
+prototype["batched"] = function batched(fn) {
   const self = this;
   if (this.isPaused) {
-    return closure_1();
+    return fn();
   } else {
     try {
       self.isPaused = true;
       self.resume(false);
       self.emit();
-      return closure_1();
+      return fn();
     } catch (tmp4) {
       obj.resume(false);
       obj.emit();
@@ -92,7 +90,7 @@ prototype["batched"] = function batched(closure_1) {
 prototype["emit"] = function emit() {
   const self = this;
   if (!tmp) {
-    batchEmitChanges(() => {
+    global(() => {
       try {
         let tmp2 = self;
         self.isBatchEmitting = true;
@@ -105,13 +103,11 @@ prototype["emit"] = function emit() {
           const sum = num2 + 1;
           num2 = sum;
           while (100 >= sum) {
-            let tmp31 = self;
             tmp2 = self;
-            let tmp32 = set;
-            let tmp33 = set1;
             let emitNonReactOnceResult = self.emitNonReactOnce(set, tmp11);
           }
-          closure_1_2.error("LastFewActions", self(closure_1_1[1]).serialize());
+          const serializer2 = LastFewActionsAll;
+          logger.error("LastFewActions", serializer2.serialize());
           const _Error2 = Error;
           throw Error("change emit loop detected, aborting");
         }
@@ -119,11 +115,11 @@ prototype["emit"] = function emit() {
           const sum1 = num2 + 1;
           num2 = sum1;
           while (100 >= sum1) {
-            let tmp17 = self;
             tmp2 = self;
             let emitReactOnceResult = self.emitReactOnce();
           }
-          closure_1_2.error("LastFewActions", self(closure_1_1[1]).serialize());
+          const serializer = LastFewActionsAll;
+          logger.error("LastFewActions", serializer.serialize());
           const _Error = Error;
           throw Error("react change emit loop detected, aborting");
         }
@@ -161,11 +157,11 @@ prototype["markChanged"] = function markChanged(_changeCallbacks) {
 };
 prototype["emitNonReactOnce"] = function emitNonReactOnce(arg0, arg1) {
   const self = this;
-  dependencyMap = arg0;
-  importAll = arg1;
+  closure_1 = arg0;
   const timestamp = Date.now();
   let changedStores = this.changedStores;
-  this.changedStores = new Set();
+  const set = new Set();
+  this.changedStores = set;
   let item = changedStores.forEach((_changeCallbacks) => {
     set.add(_changeCallbacks);
     _changeCallbacks._changeCallbacks.invokeAll();
@@ -174,14 +170,14 @@ prototype["emitNonReactOnce"] = function emitNonReactOnce(arg0, arg1) {
   });
   const item1 = changedStores.forEach((_syncWiths) => {
     _syncWiths = _syncWiths._syncWiths;
-    const item = _syncWiths.forEach((arg0) => {
-      ({ func, store } = arg0);
+    const item = _syncWiths.forEach((item) => {
+      ({ func, store } = item);
       if (!set2.has(func)) {
         set2.add(func);
         if (false !== func()) {
           if (!set.has(store)) {
             obj2.add(store);
-            closure_2.markChanged(store);
+            self.markChanged(store);
           }
           obj2 = set;
         }
@@ -192,8 +188,8 @@ prototype["emitNonReactOnce"] = function emitNonReactOnce(arg0, arg1) {
   if (timestamp1 - timestamp > 100) {
     const _HermesInternal = HermesInternal;
     const combined = "Slow batch emitChanges took " + timestamp1 - timestamp + "ms recentActions:";
-    self.verbose(combined, addAll.serialize());
-    const obj = addAll;
+    const serializer = LastFewActionsAll;
+    logger.verbose(combined, serializer.serialize());
   }
 };
 prototype["emitReactOnce"] = function emitReactOnce() {
@@ -210,14 +206,14 @@ prototype["emitReactOnce"] = function emitReactOnce() {
   if (timestamp1 - timestamp > 100) {
     const _HermesInternal = HermesInternal;
     const combined = "Slow batch emitReactChanges took " + timestamp1 - timestamp + "ms recentActions:";
-    logger.verbose(combined, self(509).serialize());
-    const obj = self(509);
+    const serializer = LastFewActionsAll;
+    logger.verbose(combined, serializer.serialize());
   }
 };
-let obj = Object.create(Emitter.prototype);
+let merged = Object.assign({ changedStores: null, reactChangedStores: null, changeSentinel: 0, isBatchEmitting: false, isDispatching: false, isPaused: false, pauseTimer: null });
+merged[0] = new Set();
 let set = new Set();
-obj[0] = set;
-obj[1] = new Set();
-const result = set.fileFinishedImporting("../discord_common/js/packages/flux/Emitter.tsx");
+merged[1] = new Set();
+const result = size.fileFinishedImporting("../discord_common/js/packages/flux/Emitter.tsx");
 
-export default obj;
+export default merged;

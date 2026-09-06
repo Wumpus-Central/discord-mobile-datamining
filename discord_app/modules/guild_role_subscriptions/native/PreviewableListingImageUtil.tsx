@@ -1,17 +1,16 @@
-// === Module 17721: getSource ===
+// === Module 17721: PreviewableListingImageUtil ===
 
-// Module 17721 (getSource)
-import set from "set" /* 2 */;
-import getSourceAll from "getSource" /* 17722 */;
+// Module 17721 (PreviewableListingImageUtil)
+import ListingImageUtilAll from "ListingImageUtil" /* 17722 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/PreviewableListingImageUtil.tsx");
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/PreviewableListingImageUtil.tsx");
 
 export const getSource = function getSource(imageLocal) {
   if (null != imageLocal.imageLocal) {
     imageLocal = imageLocal.imageLocal;
   } else {
-    imageLocal = getSourceAll.getSource(imageLocal);
-    const obj = getSourceAll;
+    imageLocal = ListingImageUtilAll.getSource(imageLocal);
   }
   return imageLocal;
 };

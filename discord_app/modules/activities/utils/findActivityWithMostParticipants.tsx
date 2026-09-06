@@ -1,9 +1,10 @@
 // === Module 16063: findActivityWithMostParticipants ===
 
 // Module 16063 (findActivityWithMostParticipants)
-import closure_0 from "markAllUserIdListsStale" /* 4209 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");
 
 export default function findActivityWithMostParticipants(arr) {
   if (0 === arr.length) {
@@ -29,15 +30,15 @@ export const findActivityWithMostNonBlockedOrIgnoredParticipants = function find
     let items = [embeddedActivitiesForChannel[0], ];
     const items1 = [];
     HermesBuiltin.arraySpread(embeddedActivitiesForChannel[0].userIds, 0);
-    items[1] = items1.map((id) => !blockedOrIgnored.isBlockedOrIgnored(id)).length;
-    [closure_0, closure_1] = items;
+    items[1] = items1.map((item) => !embeddedActivitiesForChannel.isBlockedOrIgnored(item)).length;
+    [closure_0, length] = items;
     const item = embeddedActivitiesForChannel.forEach((userIds) => {
       const items = [...userIds.userIds];
-      const length = items.filter((id) => !userIds.isBlockedOrIgnored(id)).length;
+      length = items.filter((item) => !blockedOrIgnored.isBlockedOrIgnored(item)).length;
       if (length > length) {
-        closure_0 = userIds;
+        const blockedOrIgnored = userIds;
       }
     });
-    return closure_0;
+    return embeddedActivitiesForChannel;
   }
 };

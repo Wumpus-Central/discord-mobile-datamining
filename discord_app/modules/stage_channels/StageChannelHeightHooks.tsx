@@ -1,10 +1,10 @@
-// === Module 9676: CALL_ACTION_BAR_HEIGHT ===
+// === Module 9676: StageChannelHeightHooks ===
 
-// Module 9676 (CALL_ACTION_BAR_HEIGHT)
-import set from "set" /* 2 */;
+// Module 9676 (StageChannelHeightHooks)
 import useStageBlockedUsersCount from "useStageBlockedUsersCount" /* 8620 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
+const result = size.fileFinishedImporting("modules/stage_channels/StageChannelHeightHooks.tsx");
 
 export const CALL_ACTION_BAR_HEIGHT = 112;
 export const useGetStageRTCPanelHeight = function useGetStageRTCPanelHeight(stateFromStores) {

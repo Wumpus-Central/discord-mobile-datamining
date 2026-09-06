@@ -1,12 +1,11 @@
-// === Module 14185: _defaultMessages ===
+// === Module 14185: defaultMessageProxy ===
 
-// Module 14185 (_defaultMessages)
-import set from "set" /* 2 */;
-import messagesProxyDefault from "messagesProxy" /* 14186 */;
+// Module 14185 (defaultMessageProxy)
+import _modDef14186 from "module_14186" /* 14186 */;
 import module_1155 from "module_1155" /* 1155 */;
-import importDefaultResult from "messagesProxy" /* 1119 */;
+import messagesProxy from "module_1119" /* 1119 */;
+import size from "module_2" /* 2 */;
 
-const chainMessagesObjectsResult = module_1155.chainMessagesObjects(importDefaultResult, messagesProxyDefault);
-const result = set.fileFinishedImporting("intl/defaultMessageProxy.tsx");
+const result = size.fileFinishedImporting("intl/defaultMessageProxy.tsx");
 
-export const _defaultMessages = chainMessagesObjectsResult;
+export const _defaultMessages = module_1155.chainMessagesObjects(messagesProxy, _modDef14186);

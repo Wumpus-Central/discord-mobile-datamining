@@ -1,21 +1,24 @@
 // === Module 12672: HubProgressHeader ===
 
 // Module 12672 (HubProgressHeader)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import items from "items" /* 9831 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ HUB_PROGRESS_ACTION_SHEET_ID: c4, HUB_PROGRESS_NUM_TOTAL_STEPS: c5 } = items);
-createCacheKey = { container: { overflow: "hidden", height: require("GuildDirectoryCreate").GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: null };
-createCacheKey = { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[2] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressHeader.tsx");
+require = fn;
+const View = fn(17).View;
+const HubProgressBarConstants = fn(9831);
+({ HUB_PROGRESS_ACTION_SHEET_ID: closure_4, HUB_PROGRESS_NUM_TOTAL_STEPS: hasOwnProperty } = HubProgressBarConstants);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: { overflow: "hidden", height: fn(12310).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: null };
+createStyles = { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles.innerContainer = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressHeader.tsx");
 
 export default function HubProgressHeader(guild) {
   guild = guild.guild;
@@ -24,10 +27,10 @@ export default function HubProgressHeader(guild) {
     flag = false;
   }
   let nextHubProgressStep;
-  let tmp = callback();
+  let tmp = closure_7();
   let obj = guild(nextHubProgressStep[7]);
   const hubProgressBarCompletedSteps = obj.useHubProgressBarCompletedSteps(guild);
-  obj1 = guild(nextHubProgressStep[7]);
+  let obj1 = guild(nextHubProgressStep[7]);
   nextHubProgressStep = obj1.getNextHubProgressStep(hubProgressBarCompletedSteps);
   if (null == nextHubProgressStep) {
     return null;
@@ -41,38 +44,35 @@ export default function HubProgressHeader(guild) {
       const intl2 = tmp2(tmp3[9]).intl;
       obj = { number: null, total: null };
       const _HermesInternal = HermesInternal;
-      obj[0] = "" + size;
-      obj[1] = tmp7;
+      obj.number = "" + size;
+      obj.total = tmp7;
       let formatToPlainStringResult = intl2.formatToPlainString(tmp2(tmp3[9]).t["9j7xDu"], obj);
     } else {
       const intl = tmp2(tmp3[9]).intl;
       formatToPlainStringResult = intl.string(tmp2(tmp3[9]).t["+Gyklt"]);
     }
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj = { style: tmp.container, children: null };
     obj1 = { style: null, iconStyle: null, onPress: null, iconSource: null, title: null, subtitle: null, trailing: null };
-    ({ innerContainer: obj6[0], icon: obj6[1] } = tmp);
-    obj1[2] = function onPress() {
+    ({ innerContainer: obj6.style, icon: obj6.iconStyle } = tmp);
+    obj1.onPress = function onPress() {
       let tmp = flag;
       if (flag) {
-        tmp = nextHubProgressStep === guild(nextHubProgressStep[8]).HubProgressStep.JOIN_GUILD;
+        tmp = nextHubProgressStep === preloaded_user_settings.HubProgressStep.JOIN_GUILD;
       }
       if (!tmp) {
-        let obj = flag(nextHubProgressStep[11]);
-        obj = { guild: null, analyticsSource: "Directory Channel Header" };
-        obj[0] = guild;
-        obj.openLazy(guild(nextHubProgressStep[13])(nextHubProgressStep[12], nextHubProgressStep.paths), closure_1_4, obj);
+        const obj = { guild, analyticsSource: "Directory Channel Header" };
+        obj.openLazy(asyncRequireImpl(12673, dependencyMap.paths), React4, obj);
       }
     };
-    obj1[3] = flag(tmp3[14]);
-    obj1[4] = hubProgressTitleForStep;
-    obj1[5] = formatToPlainStringResult;
+    obj1.iconSource = flag(tmp3[14]);
+    obj1.title = hubProgressTitleForStep;
+    obj1.subtitle = formatToPlainStringResult;
     let tmp10Result;
     if (flag) {
       tmp10Result = tmp10(tmp11, {});
     }
-    obj1[6] = tmp10Result;
-    obj[1] = jsx(tmp2(tmp3[10]).FormCTA, { style: null, iconStyle: null, onPress: null, iconSource: null, title: null, subtitle: null, trailing: null });
-    return <View style={null}>{null}</View>;
+    obj1.trailing = tmp10Result;
+    obj.children = jsx(tmp2(tmp3[10]).FormCTA, { style: null, iconStyle: null, onPress: null, iconSource: null, title: null, subtitle: null, trailing: null });
+    return <View style={tmp.container}>{null}</View>;
   }
 };

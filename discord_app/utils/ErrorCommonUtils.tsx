@@ -1,11 +1,11 @@
-// === Module 14083: getUpdatedOptions ===
+// === Module 14083: ErrorCommonUtils ===
 
-// Module 14083 (getUpdatedOptions)
-import set from "set" /* 2 */;
-import add from "add" /* 509 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 14083 (ErrorCommonUtils)
+import LastFewActions from "LastFewActions" /* 509 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
+const result = size.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {
   let obj = {};
@@ -16,16 +16,16 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   }
   obj = {};
   const merged1 = Object.assign(extra);
-  if (null != dispatcherDefault._currentDispatchActionType) {
-    obj = { currentAction: null };
-    obj[0] = dispatcherDefault._currentDispatchActionType;
-    obj1 = obj;
+  if (null != DispatcherDefault._currentDispatchActionType) {
+    obj = { currentAction: DispatcherDefault._currentDispatchActionType };
+    let obj1 = obj;
   } else {
     obj1 = {};
   }
   const obj2 = {};
   const merged2 = Object.assign(obj1);
-  obj2.lastFewActions = add.serialize();
+  const serializer = LastFewActions;
+  obj2.lastFewActions = serializer.serialize();
   const merged3 = Object.assign(obj2);
   obj.extra = obj;
   return obj;

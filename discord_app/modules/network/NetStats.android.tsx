@@ -1,66 +1,68 @@
-// === Module 7459: receiveNetworkInfoformation ===
+// === Module 7459: NetStats ===
 
-// Module 7459 (receiveNetworkInfoformation)
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 1090 */;
+// Module 7459 (NetStats)
+import LoggerDefault from "Logger" /* 3 */;
+import DurationsDefault from "Durations" /* 1090 */;
 import configure from "configure" /* 1463 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_5 from "_handleConnectionOpen" /* 5277 */;
-import closure_6 from "result" /* 7460 */;
-import closure_7 from "createGuildRecordFromRust" /* 1979 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import importDefaultResult from "notifyListeners" /* 1462 */;
-import importDefaultResult2 from "dispatcher" /* 573 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 4424 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 7474 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7460 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import NetworkUtils from "utils/NetworkUtils" /* 1462 */;
+import Dispatcher from "Dispatcher" /* 573 */;
 
-require = arg1;
-function receiveNetworkInfoformation(arg0) {
-  closure_12 = arg0;
-  if (null == closure_13) {
-    closure_13 = arg0;
+require = fn;
+function receiveNetworkInfoformation(result) {
+  global = result;
+  if (null == global) {
+    global = result;
   }
-  const SystemResourceManager = closure_4.SystemResourceManager;
+  const SystemResourceManager = React4.SystemResourceManager;
   const getNetworkUsage = SystemResourceManager.getNetworkUsage;
   if (getNetworkUsage != null) {
     const networkUsage = getNetworkUsage((arg0) => {
-      closure_10 = arg0;
+      nativeStats = arg0;
       if (null == closure_11) {
         closure_11 = arg0;
       }
-      obj = { state: closure_12, nativeStats: closure_10, rtc: callback(table[9]).getRTCTotalBytes() };
-      closure_9.fileOnly("Updating Network Info", obj);
+      const obj = { state, nativeStats, rtc: RTCBandwidthMonitor.getRTCTotalBytes() };
+      closure_1_9.fileOnly("Updating Network Info", obj);
     });
   }
 }
 function updateNetworkUsage() {
-  const SystemResourceManager = closure_4.SystemResourceManager;
+  const SystemResourceManager = React4.SystemResourceManager;
   const getNetworkUsage = SystemResourceManager.getNetworkUsage;
   if (getNetworkUsage != null) {
     const networkUsage = getNetworkUsage((arg0) => {
-      closure_10 = arg0;
+      nativeStats = arg0;
       if (null == closure_11) {
         closure_11 = arg0;
       }
-      obj = { state: closure_12, nativeStats: closure_10, rtc: callback(table[9]).getRTCTotalBytes() };
-      closure_9.fileOnly("Updating Network Info", obj);
+      const obj = { state, nativeStats, rtc: RTCBandwidthMonitor.getRTCTotalBytes() };
+      closure_1_9.fileOnly("Updating Network Info", obj);
     });
   }
 }
-({ NativeModules: c4, AppState } = get_ActivityIndicator);
-let closure_9 = new timestampDefault("NetStats");
+get_ActivityIndicator = fn(17);
+({ NativeModules: closure_4, AppState } = get_ActivityIndicator);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+let closure_9 = new LoggerDefault("NetStats");
 let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
 let c11 = null;
-let obj = { type: require("configure").NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
-let c13 = null;
+const tmp3 = new LoggerDefault("NetStats");
+let global = { type: fn(1463).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+global = null;
 let closure_14 = "active" === AppState.currentState;
-let c15 = 0;
-let c16 = 0;
-let c17 = 0;
-let c18 = 0;
-const tmp3 = new timestampDefault("NetStats");
-importDefaultResult.addChangeCallback(receiveNetworkInfoformation);
-const networkInformation = importDefaultResult.getNetworkInformation();
-networkInformation.then(receiveNetworkInfoformation);
+let closure_15 = 0;
+let closure_16 = 0;
+let closure_17 = 0;
+let closure_18 = 0;
+NetworkUtils.addChangeCallback(receiveNetworkInfoformation);
+NetworkUtils = NetworkUtils.getNetworkInformation();
+NetworkUtils.then(receiveNetworkInfoformation);
 class EventTracker {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -72,7 +74,7 @@ class EventTracker {
       tmp2 = closure_1;
       tmp3 = closure_2;
       num2 = 1;
-      num = setTimeout(() => obj.track(), require("set").Millis.MINUTE);
+      num = setTimeout(() => obj.track(), closure_1(closure_2[10]).Millis.MINUTE);
     }
     obj.trackTimeout = num;
     num3 = 0;
@@ -82,12 +84,12 @@ class EventTracker {
       tmp5 = closure_1;
       tmp6 = closure_2;
       num4 = 5;
-      num3 = setInterval(() => obj.writeExistingEventStorage(), 5 * require("set").Millis.SECOND);
+      num3 = setInterval(() => obj.writeExistingEventStorage(), 5 * closure_1(closure_2[10]).Millis.SECOND);
     }
     obj.flushStorageInterval = num3;
     obj.didEverTrack = false;
     tmp7 = closure_2;
-    Storage = require("Storage").Storage;
+    Storage = closure_0(closure_2[11]).Storage;
     value = Storage.get("previousNetStatsEvents");
     if (value == null) {
       value = [];
@@ -95,20 +97,20 @@ class EventTracker {
     obj.existingEvents = value;
     obj.trackExistingEvents = function trackExistingEvents() {
       if (obj.existingEvents.length > 0) {
-        let result = closure_1_6.submitEventsImmediately(tmp.existingEvents);
+        let result = AnalyticsTrackingStore.submitEventsImmediately(tmp.existingEvents);
         result.then(() => {
-          closure_1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
-          closure_0.existingEvents = [];
-          const result = closure_0.writeExistingEventStorage();
-        }).catch((status) => {
+          closure_2_9.fileOnly("Successfully logged existing network usage events", obj.existingEvents);
+          obj.existingEvents = [];
+          const result = obj.writeExistingEventStorage();
+        }).catch((error) => {
           if (tmp) {
-            closure_1_9.error("Failed to log log existing network usage events", closure_0.existingEvents, status);
+            closure_2_9.error("Failed to log log existing network usage events", obj.existingEvents, error);
           }
         });
         const nextPromise = result.then(() => {
-          closure_1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
-          closure_0.existingEvents = [];
-          const result = closure_0.writeExistingEventStorage();
+          closure_2_9.fileOnly("Successfully logged existing network usage events", obj.existingEvents);
+          obj.existingEvents = [];
+          const result = obj.writeExistingEventStorage();
         });
       }
     };
@@ -116,7 +118,7 @@ class EventTracker {
       trackExistingEventsResult = obj.trackExistingEvents();
     } else {
       tmp8 = closure_1;
-      obj2 = require("dispatcher");
+      obj2 = closure_1(tmp7[12]);
       str = "CONNECTION_OPEN";
       subscription = obj2.subscribe("CONNECTION_OPEN", obj.trackExistingEvents);
     }
@@ -125,14 +127,13 @@ class EventTracker {
 }
 const prototype = EventTracker.prototype;
 prototype["handleAppStateChange"] = function handleAppStateChange(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   if (!this.didEverTrack) {
     if (arg0) {
       if (!tmp2) {
         c14 = true;
         const _setTimeout = setTimeout;
-        self.trackTimeout = setTimeout(() => closure_20.track(), setDefault.Millis.MINUTE);
+        self.trackTimeout = setTimeout(() => closure_1_20.track(), DurationsDefault.Millis.MINUTE);
         const _setInterval = setInterval;
         self.flushStorageInterval = setInterval(() => self.writeExistingEventStorage(), 5000);
       }
@@ -143,16 +144,15 @@ prototype["handleAppStateChange"] = function handleAppStateChange(arg0) {
 };
 prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
   const self = this;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp5 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -163,47 +163,44 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         if (0 === dependencyMap) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            let length = tmp2;
-            let items = tmp3;
-            items = undefined;
-            length = undefined;
-            if (!closure_1_0.didEverTrack) {
+            closure_1 = tmp2;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            if (!self.didEverTrack) {
               if (closure_1_14) {
                 dependencyMap = 1;
                 c3 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_0.getQueuedEvent();
+                const obj1 = { value: self.getQueuedEvent(), done: false };
                 return obj1;
               }
             }
-            items = [];
+            let items = [];
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
-          items = [arg1];
+          items = [value];
         }
-        const existingEvents = closure_1_0.existingEvents;
-        length = existingEvents.concat(items);
-        if (0 === length.length) {
-          const Storage2 = closure_1_0(510).Storage;
+        closure_128_0 = items;
+        const existingEvents = closure_129_0.existingEvents;
+        closure_128_1 = existingEvents.concat(closure_128_0);
+        if (0 === closure_128_1.length) {
+          const Storage2 = tmp3(510).Storage;
           Storage2.remove("previousNetStatsEvents");
         } else {
-          const Storage = closure_1_0(510).Storage;
-          const result = Storage.set("previousNetStatsEvents", length);
+          const Storage = tmp3(510).Storage;
+          const result = Storage.set("previousNetStatsEvents", closure_128_1);
         }
         c3 = 3;
       } catch (tmp24) {
@@ -215,16 +212,15 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
 };
 prototype["track"] = function track() {
   const self = this;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -235,17 +231,16 @@ prototype["track"] = function track() {
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp5;
-            let items = tmp2;
-            items = undefined;
-            if (closure_1_0.didEverTrack) {
+            closure_0 = tmp2;
+            closure_128_0 = undefined;
+            if (self.didEverTrack) {
               c3 = 3;
             } else {
               obj5.didEverTrack = true;
@@ -255,36 +250,35 @@ prototype["track"] = function track() {
               clearInterval(obj5.flushStorageInterval);
               c2 = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = obj5.getQueuedEvent();
+              const obj1 = { value: obj5.getQueuedEvent(), done: false };
               return obj1;
             }
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
-          items = [arg1];
-          let result = closure_1_6.submitEventsImmediately(items);
+          const items = [value];
+          closure_128_0 = items;
+          let result = AnalyticsTrackingStore.submitEventsImmediately(closure_128_0);
           result.then(() => {
-            closure_2_9.fileOnly("Successfully tracked latest network usage", items);
-            const result = items.writeExistingEventStorage();
-          }).catch((status) => {
+            closure_3_9.fileOnly("Successfully tracked latest network usage", closure_1_0);
+            const result = closure_0.writeExistingEventStorage();
+          }).catch((error) => {
             if (!tmp) {
-              closure_2_9.error("Failed to track latest network usage", items, status);
+              closure_3_9.error("Failed to track latest network usage", closure_1_0, error);
             }
-            const existingEvents = items.existingEvents;
-            existingEvents.push(items[0]);
-            const result = items.writeExistingEventStorage();
+            const existingEvents = closure_0.existingEvents;
+            existingEvents.push(closure_1_0[0]);
+            const result = closure_0.writeExistingEventStorage();
           });
           const nextPromise = result.then(() => {
-            closure_2_9.fileOnly("Successfully tracked latest network usage", items);
-            const result = items.writeExistingEventStorage();
+            closure_3_9.fileOnly("Successfully tracked latest network usage", closure_1_0);
+            const result = closure_0.writeExistingEventStorage();
           });
         }
         c3 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } catch (tmp14) {
         c3 = tmp;
@@ -294,105 +288,102 @@ prototype["track"] = function track() {
   })();
 };
 prototype["getQueuedEvent"] = function getQueuedEvent() {
-  return callback(function*() {
+  return (async () => {
     closure_4 = tmp2;
-    closure_1_19();
-    const obj7 = closure_1_1(closure_1_2[13]);
-    let callback = yield obj7.getAppFirstVisibleTimestamp();
-    const obj4 = callback(7461);
-    let lib = yield obj4.getSession();
-    const obj5 = { type: null, properties: null };
-    obj5[0] = constants.APP_NETWORK_USAGE;
+    updateNetworkUsage();
+    closure_132_0 = await NativeTTIManagerModuleDefault.getAppFirstVisibleTimestamp();
+    NativeTTIManagerModuleDefault;
+    closure_132_1 = await closure_133_0(closure_133_2[14]).getSession();
+    const obj5 = { type: closure_133_8.APP_NETWORK_USAGE, properties: null };
     const obj6 = {};
-    const merged = Object.assign(callback(7475).getDeviceMetadata());
+    const merged = Object.assign(closure_133_0(closure_133_2[15]).getDeviceMetadata());
     const _Date = Date;
     obj6.client_track_timestamp = Date.now();
-    if (lib != null) {
-      const uuid = lib.uuid;
+    if (closure_132_1 != null) {
+      const uuid = closure_132_1.uuid;
     }
     obj6.client_heartbeat_session_id = uuid;
-    obj = callback(7475);
-    obj6.load_id = obj.currentLoadId();
-    obj6.num_guilds = guildCount.getGuildCount();
-    obj6.was_authenticated = lib(9).wasAuthenticated;
-    obj6.did_background_app = lib(9).didBackgroundApp;
-    obj6.headless_task_ran = lib(9).extraProperties.headless_task_ran;
-    const ready = lib(9).ready;
-    obj6.ready_payload_duration_ms = ready.serializeEnd(callback);
-    if (signalStrengthLevel != null) {
-      signalStrengthLevel = signalStrengthLevel.signalStrengthLevel;
+    closure_133_0(closure_133_2[14]);
+    obj6.load_id = closure_133_0(closure_133_2[15]).currentLoadId();
+    obj6.num_guilds = closure_133_7.getGuildCount();
+    obj6.was_authenticated = closure_133_1(closure_133_2[16]).wasAuthenticated;
+    obj6.did_background_app = closure_133_1(closure_133_2[16]).didBackgroundApp;
+    obj6.headless_task_ran = closure_133_1(closure_133_2[16]).extraProperties.headless_task_ran;
+    const ready = closure_133_1(closure_133_2[16]).ready;
+    obj6.ready_payload_duration_ms = ready.serializeEnd(closure_132_0);
+    if (closure_133_11 != null) {
+      let signalStrengthLevel = closure_133_11.signalStrengthLevel;
     }
-    callback = signalStrengthLevel;
+    let initial_signal_strength_level = signalStrengthLevel;
     if (signalStrengthLevel == null) {
-      callback = undefined;
+      initial_signal_strength_level = undefined;
     }
-    obj6.initial_signal_strength_level = callback;
-    signalStrengthLevel = closure_10.signalStrengthLevel;
-    lib = signalStrengthLevel;
+    obj6.initial_signal_strength_level = initial_signal_strength_level;
+    signalStrengthLevel = closure_133_10.signalStrengthLevel;
+    let final_signal_strength_level = signalStrengthLevel;
     if (signalStrengthLevel == null) {
-      lib = undefined;
+      final_signal_strength_level = undefined;
     }
-    obj6.final_signal_strength_level = lib;
-    if (closure_13 != null) {
-      const type = closure_13.type;
+    obj6.final_signal_strength_level = final_signal_strength_level;
+    if (closure_133_13 != null) {
+      const type = closure_133_13.type;
     }
-    dependencyMap = type;
+    let initial_network_type = type;
     if (type == null) {
-      dependencyMap = undefined;
+      initial_network_type = undefined;
     }
-    obj6.initial_network_type = dependencyMap;
-    obj6.final_network_type = closure_12.type;
-    if (closure_13 != null) {
-      const effectiveSpeed = closure_13.effectiveSpeed;
+    obj6.initial_network_type = initial_network_type;
+    obj6.final_network_type = closure_133_12.type;
+    if (closure_133_13 != null) {
+      const effectiveSpeed = closure_133_13.effectiveSpeed;
     }
-    c3 = effectiveSpeed;
+    let initial_cellular_generation = effectiveSpeed;
     if (effectiveSpeed == null) {
-      c3 = undefined;
+      initial_cellular_generation = undefined;
     }
-    obj6.initial_cellular_generation = c3;
-    obj6.final_cellular_generation = closure_12.effectiveSpeed;
-    obj6.is_network_roaming = closure_10.isNetworkRoaming;
-    obj6.cellular_receive_bytes = closure_10.cellularReceiveBytes;
-    obj6.cellular_send_bytes = closure_10.cellularSendBytes;
-    obj6.total_receive_bytes = closure_10.totalReceiveBytes;
-    obj6.total_send_bytes = closure_10.totalSendBytes;
-    obj6.uid_receive_bytes = closure_10.uidReceiveBytes;
-    obj6.uid_send_bytes = closure_10.uidSendBytes;
-    obj6.socket_bytes_received = closure_10.socketBytesReceived;
-    obj6.ota_bytes_received = closure_10.otaBytesReceived;
-    obj6.ota_num_requests = closure_10.otaNumRequests;
-    obj6.xhr_bytes_received = closure_10.xhrBytesReceived;
-    obj6.xhr_num_requests = closure_10.xhrNumRequests;
-    obj6.fresco_bytes_received = closure_10.frescoBytesReceived;
-    obj6.fresco_num_requests = closure_10.frescoNumRequests;
-    obj6.download_bytes_received = closure_10.downloadBytesReceived;
-    obj6.download_num_requests = closure_10.downloadNumRequests;
-    obj6.media_player_bytes_received = closure_10.mediaPlayerBytesReceived;
-    obj1 = callback(7474);
-    obj6.rtc_bytes = obj1.getRTCTotalBytes();
-    obj6.num_message_sends = closure_15;
-    if (0 !== closure_15) {
-      const tmp56 = closure_16;
+    obj6.initial_cellular_generation = initial_cellular_generation;
+    obj6.final_cellular_generation = closure_133_12.effectiveSpeed;
+    obj6.is_network_roaming = closure_133_10.isNetworkRoaming;
+    obj6.cellular_receive_bytes = closure_133_10.cellularReceiveBytes;
+    obj6.cellular_send_bytes = closure_133_10.cellularSendBytes;
+    obj6.total_receive_bytes = closure_133_10.totalReceiveBytes;
+    obj6.total_send_bytes = closure_133_10.totalSendBytes;
+    obj6.uid_receive_bytes = closure_133_10.uidReceiveBytes;
+    obj6.uid_send_bytes = closure_133_10.uidSendBytes;
+    obj6.socket_bytes_received = closure_133_10.socketBytesReceived;
+    obj6.ota_bytes_received = closure_133_10.otaBytesReceived;
+    obj6.ota_num_requests = closure_133_10.otaNumRequests;
+    obj6.xhr_bytes_received = closure_133_10.xhrBytesReceived;
+    obj6.xhr_num_requests = closure_133_10.xhrNumRequests;
+    obj6.fresco_bytes_received = closure_133_10.frescoBytesReceived;
+    obj6.fresco_num_requests = closure_133_10.frescoNumRequests;
+    obj6.download_bytes_received = closure_133_10.downloadBytesReceived;
+    obj6.download_num_requests = closure_133_10.downloadNumRequests;
+    obj6.media_player_bytes_received = closure_133_10.mediaPlayerBytesReceived;
+    closure_133_0(closure_133_2[15]);
+    obj6.rtc_bytes = closure_133_0(closure_133_2[9]).getRTCTotalBytes();
+    obj6.num_message_sends = closure_133_15;
+    if (0 !== closure_133_15) {
+      const tmp56 = closure_133_16;
     }
     obj6.max_message_send_duration = tmp56;
-    if (0 !== closure_15) {
-      const tmp60 = closure_17;
+    if (0 !== closure_133_15) {
+      const tmp60 = closure_133_17;
     }
     obj6.max_message_queue_length = tmp60;
-    obj6.num_message_send_fails = closure_18;
-    obj6.num_identifies = socket.getSocket().identifyCount;
-    const renderLatestMessages = lib(9).renderLatestMessages;
-    obj6.render_latest_messages_duration_ms = renderLatestMessages.serialize(callback);
-    obj5[1] = obj6;
+    obj6.num_message_send_fails = closure_133_18;
+    obj6.num_identifies = closure_133_5.getSocket().identifyCount;
+    const renderLatestMessages = closure_133_1(closure_133_2[16]).renderLatestMessages;
+    obj6.render_latest_messages_duration_ms = renderLatestMessages.serialize(closure_132_0);
+    obj5.properties = obj6;
     return obj5;
   })();
 };
 let closure_20 = new EventTracker();
-const importDefaultResult1 = importDefaultResult;
-let subscription = importDefaultResult2.subscribe("APP_STATE_UPDATE", (state) => {
+let subscription = Dispatcher.subscribe("APP_STATE_UPDATE", (state) => {
   closure_20.handleAppStateChange("active" === state.state);
 });
-const subscription1 = importDefaultResult2.subscribe("MESSAGE_CREATE", (sendMessageOptions) => {
+const subscription1 = Dispatcher.subscribe("MESSAGE_CREATE", (sendMessageOptions) => {
   sendMessageOptions = sendMessageOptions.sendMessageOptions;
   let sendAnalytics;
   if (sendMessageOptions != null) {
@@ -406,22 +397,21 @@ const subscription1 = importDefaultResult2.subscribe("MESSAGE_CREATE", (sendMess
     closure_17 = Math.max(closure_17, sendMessageOptions.sendMessageOptions.sendAnalytics.queueSize);
   }
 });
-const importDefaultResult3 = importDefaultResult2;
-const subscription2 = importDefaultResult2.subscribe("MESSAGE_SEND_FAILED", (arg0) => {
+const subscription2 = Dispatcher.subscribe("MESSAGE_SEND_FAILED", (arg0) => {
   closure_18 = closure_18 + 1;
 });
-const importDefaultResult4 = importDefaultResult2;
-let result = require("set").fileFinishedImporting("modules/network/NetStats.android.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/network/NetStats.android.tsx");
 
 export const isSlowNetwork = function isSlowNetwork() {
-  let tmp = obj.type === configure.NetInfoStateType.cellular;
+  let tmp = global.type === configure.NetInfoStateType.cellular;
   if (tmp) {
     let isNetworkRoaming = null != closure_10.signalStrengthLevel;
     if (isNetworkRoaming) {
       isNetworkRoaming = closure_10.signalStrengthLevel <= 2;
     }
     if (!isNetworkRoaming) {
-      isNetworkRoaming = "2g" === obj.effectiveSpeed;
+      isNetworkRoaming = "2g" === global.effectiveSpeed;
     }
     if (!isNetworkRoaming) {
       isNetworkRoaming = closure_10.isNetworkRoaming;

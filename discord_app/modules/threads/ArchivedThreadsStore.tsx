@@ -1,18 +1,20 @@
-// === Module 7766: listKey ===
+// === Module 7766: ArchivedThreadsStore ===
 
-// Module 7766 (listKey)
-import applyDefault from "apply" /* 12 */;
+// Module 7766 (ArchivedThreadsStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import set from "set" /* 1966 */;
-import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7767 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { ALL_CHANNEL_TYPES } from "createChannelRecord" /* 1961 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "generateOldThreadCutoff" /* 4575 */;
-import closure_7 from "storeThread" /* 4201 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ThreadSortOrder from "ThreadSortOrder" /* 1966 */;
+import ThreadSearchTagSetting from "ThreadSearchTagSetting" /* 1968 */;
+import ForumUtils from "ForumUtils" /* 7307 */;
+import tracking_Tracking from "tracking/Tracking" /* 7767 */;
+import _slicedToArray from "module_32" /* 32 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
 
-require = arg1;
+require = fn;
 function listKey(channelId, sortOrder, tagFilter, tagSetting) {
   let iter = tagFilter;
   const combined = "" + channelId + "|" + sortOrder + "|" + tagSetting + "|";
@@ -28,9 +30,9 @@ function listKey(channelId, sortOrder, tagFilter, tagSetting) {
     const arr = Array.from(iter);
   }
 }
-function getSortValue(id) {
-  if (arg1 === set.ThreadSortOrder.LATEST_ACTIVITY) {
-    id = closure_6.lastMessageId(id.id);
+function getSortValue(id, sortOrder) {
+  if (sortOrder === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
+    id = ReadStateStore.lastMessageId(id.id);
   } else {
     id = id.id;
   }
@@ -38,55 +40,51 @@ function getSortValue(id) {
 }
 function resortListState(value) {
   const sortOrder = value.sortOrder;
-  ({ tagFilter: importDefault, tagSetting: dependencyMap, hasMore: closure_3 } = value);
-  let id = store.getChannel(value.threads[value.threads.length - 1]);
+  ({ tagFilter: importDefault, tagSetting: dependencyMap, hasMore: _slicedToArray } = value);
+  let id = ChannelStore.getChannel(value.threads[value.threads.length - 1]);
   if (null == id) {
     c4 = null;
-    let tmp7 = applyDefault;
-    const found = applyDefault(store.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) => isArchivedThread.isArchivedThread());
+    const found = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId)).filter((isArchivedThread) => isArchivedThread.isArchivedThread());
     const found1 = found.filter((appliedTags) => {
       if (0 !== size.size) {
-        if (sortOrder(closure_1_2[8]).ThreadSearchTagSetting.MATCH_SOME === closure_2) {
+        if (ThreadSearchTagSetting.ThreadSearchTagSetting.MATCH_SOME === dependencyMap) {
           const appliedTags2 = appliedTags.appliedTags;
           let someResult;
           if (appliedTags2 != null) {
-            someResult = appliedTags2.some((arg0) => set.has(arg0));
+            someResult = appliedTags2.some((item) => set.has(item));
           }
           if (true !== someResult) {
             return false;
           }
-        } else if (tmp20(closure_1_2[8]).ThreadSearchTagSetting.MATCH_ALL === tmp19) {
+        } else if (tmp20(1968).ThreadSearchTagSetting.MATCH_ALL === tmp19) {
           const values = size.values();
           const iter = values[Symbol.iterator]();
           while (iter !== undefined) {
             appliedTags = appliedTags.appliedTags;
             let hasItem;
             if (appliedTags != null) {
-              let tmp7 = nextResult;
               hasItem = appliedTags.includes(tmp5);
             }
             if (true !== hasItem) {
-              let tmp8 = iter;
               iter.return();
               let flag = false;
               return false;
             }
           }
-          nextResult = iter.next();
+          const nextResult = iter.next();
         }
-        tmp19 = closure_2;
-        tmp20 = sortOrder;
+        tmp19 = dependencyMap;
+        tmp20 = require;
       }
-      if (closure_3) {
+      if (_slicedToArray) {
         if (null != c4) {
           let tmp13 = null;
           if (null != appliedTags) {
-            tmp13 = closure_1_10(appliedTags, sortOrder);
+            tmp13 = getSortValue(appliedTags, sortOrder);
           }
           let tmp16 = null != tmp13;
           if (tmp16) {
-            tmp16 = closure_1_1(closure_1_2[9]).compare(tmp13, tmp11) >= 0;
-            const obj2 = closure_1_1(closure_1_2[9]);
+            tmp16 = SnowflakeUtilsDefault.compare(tmp13, tmp11) >= 0;
           }
           return tmp16;
         }
@@ -94,28 +92,29 @@ function resortListState(value) {
       return true;
     });
     const sorted = found1.sort((id, id2) => {
-      if (sortOrder === sortOrder(closure_1_2[5]).ThreadSortOrder.LATEST_ACTIVITY) {
-        id = closure_1_6.lastMessageId(id.id);
+      if (sortOrder === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
+        id = ReadStateStore.lastMessageId(id.id);
       } else {
         id = id.id;
       }
-      if (sortOrder === sortOrder(closure_1_2[5]).ThreadSortOrder.LATEST_ACTIVITY) {
-        id2 = closure_1_6.lastMessageId(id2.id);
+      if (sortOrder === ThreadSortOrder.ThreadSortOrder.LATEST_ACTIVITY) {
+        id2 = ReadStateStore.lastMessageId(id2.id);
       } else {
         id2 = id2.id;
       }
-      return closure_1_1(closure_1_2[9]).compare(id, id2);
+      return SnowflakeUtilsDefault.compare(id, id2);
     });
     const mapped = sorted.map((id) => id.id);
-    const tmp7Result = applyDefault(store.getAllThreadsForParent(value.channelId));
+    const tmp7Result = _modDef12(ChannelStore.getAllThreadsForParent(value.channelId));
     value.threads = mapped.reverse().value();
   } else if (sortOrder === sortOrder(1966).ThreadSortOrder.LATEST_ACTIVITY) {
     id = id.id;
-    let id2 = closure_6.lastMessageId(id);
+    let id2 = ReadStateStore.lastMessageId(id);
   } else {
     id2 = id.id;
   }
 }
+const ALL_CHANNEL_TYPES = fn(1961).ALL_CHANNEL_TYPES;
 const map = new Map();
 let closure_12 = [];
 const Store = initializeDefault.Store;
@@ -123,13 +122,13 @@ class ArchivedThreadsStore extends Store {
 }
 const prototype = ArchivedThreadsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_5, closure_7, closure_6);
+  this.waitFor(ChannelStore, JoinedThreadsStore, ReadStateStore);
 };
-prototype["getCanLoadMore"] = function getCanLoadMore(id, closure_1, closure_2, closure_3) {
-  let iter = closure_2;
-  const combined = "" + id + "|" + closure_1 + "|" + closure_3 + "|";
-  if (0 === closure_2.size) {
-    const value = map.get(combined);
+prototype["getCanLoadMore"] = function getCanLoadMore(id, arg1, size, arg3) {
+  let iter = size;
+  const combined = "" + id + "|" + arg1 + "|" + arg3 + "|";
+  if (0 === size.size) {
+    value = map.get(combined);
     let tmp7 = null != value;
     if (tmp7) {
       tmp7 = value.hasMore && !value.loading && !value.failed;
@@ -146,11 +145,11 @@ prototype["getCanLoadMore"] = function getCanLoadMore(id, closure_1, closure_2, 
     const arr = Array.from(iter);
   }
 };
-prototype["getNextOffset"] = function getNextOffset(id, closure_1, closure_2, closure_3) {
-  let iter = closure_2;
-  const combined = "" + id + "|" + closure_1 + "|" + closure_3 + "|";
-  if (0 === closure_2.size) {
-    const value = map.get(combined);
+prototype["getNextOffset"] = function getNextOffset(id, arg1, size, arg3) {
+  let iter = size;
+  const combined = "" + id + "|" + arg1 + "|" + arg3 + "|";
+  if (0 === size.size) {
+    value = map.get(combined);
     let num2;
     if (value != null) {
       num2 = value.nextOffset;
@@ -169,11 +168,11 @@ prototype["getNextOffset"] = function getNextOffset(id, closure_1, closure_2, cl
     const arr = Array.from(iter);
   }
 };
-prototype["getIsInitialLoad"] = function getIsInitialLoad(id, closure_1, closure_2, closure_3) {
-  let iter = closure_2;
-  const combined = "" + id + "|" + closure_1 + "|" + closure_3 + "|";
-  if (0 === closure_2.size) {
-    const value = map.get(combined);
+prototype["getIsInitialLoad"] = function getIsInitialLoad(id, arg1, size, arg3) {
+  let iter = size;
+  const combined = "" + id + "|" + arg1 + "|" + arg3 + "|";
+  if (0 === size.size) {
+    value = map.get(combined);
     let flag;
     if (value != null) {
       flag = value.isInitialLoad;
@@ -192,11 +191,11 @@ prototype["getIsInitialLoad"] = function getIsInitialLoad(id, closure_1, closure
     const arr = Array.from(iter);
   }
 };
-prototype["isLoading"] = function isLoading(arg0, arg1, size) {
+prototype["isLoading"] = function isLoading(arg0, arg1, size, arg3) {
   let iter = size;
   const combined = "" + arg0 + "|" + arg1 + "|" + arg3 + "|";
   if (0 === size.size) {
-    const value = map.get(combined);
+    value = map.get(combined);
     let flag;
     if (value != null) {
       flag = value.loading;
@@ -215,11 +214,11 @@ prototype["isLoading"] = function isLoading(arg0, arg1, size) {
     const arr = Array.from(iter);
   }
 };
-prototype["getThreads"] = function getThreads(id, closure_1, closure_2, closure_3) {
-  let iter = closure_2;
-  const combined = "" + id + "|" + closure_1 + "|" + closure_3 + "|";
-  if (0 === closure_2.size) {
-    const value = map.get(combined);
+prototype["getThreads"] = function getThreads(id, arg1, size, arg3) {
+  let iter = size;
+  const combined = "" + id + "|" + arg1 + "|" + arg3 + "|";
+  if (0 === size.size) {
+    value = map.get(combined);
     let threads;
     if (value != null) {
       threads = value.threads;
@@ -239,7 +238,7 @@ prototype["getThreads"] = function getThreads(id, closure_1, closure_2, closure_
   }
 };
 ArchivedThreadsStore.displayName = "ArchivedThreadsStore";
-const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
+const archivedThreadsStore = new ArchivedThreadsStore(DispatcherDefault, {
   CONNECTION_OPEN: function resetAll() {
     map.clear();
   },
@@ -247,16 +246,15 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     if (!(function removeThreadIdFromAllLists(id) {
       closure_0 = id;
       let flag = false;
-      const values = closure_8.values();
+      const values = map.values();
       const iter = values[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp3 = nextResult;
         let threads = nextResult.threads;
         if (threads.indexOf(id) >= 0) {
-          let tmp4 = nextResult;
           let threads1 = tmp3.threads;
-          tmp3.threads = threads1.filter((arg0) => arg0 !== closure_0);
+          tmp3.threads = threads1.filter((item) => item !== closure_0);
           flag = true;
         }
         continue;
@@ -277,14 +275,12 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
         let tmp7 = nextResult;
         let tmp8 = nextResult.channelId === channel.parent_id;
         if (tmp8) {
-          let tmp9 = nextResult;
           let threads = tmp7.threads;
           tmp8 = threads.indexOf(channel.id) >= 0;
         }
         if (tmp8) {
-          let tmp10 = nextResult;
           let threads1 = tmp7.threads;
-          tmp7.threads = threads1.filter((arg0) => arg0 !== channel.id);
+          tmp7.threads = threads1.filter((item) => item !== channel.id);
           flag = true;
         }
         continue;
@@ -293,17 +289,14 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     } else {
       return false;
     }
-    obj = channel(7307);
+    obj = ForumUtils;
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
     let flag = false;
     while (tmp2 !== undefined) {
-      let tmp4 = callback;
-      let tmp5 = callback(tmp3, 2);
+      let tmp5 = _slicedToArray(tmp3, 2);
       let first = tmp5[0];
       if (tmp5[1].channelId === channel.channel.id) {
-        let tmp7 = map;
-        let tmp8 = first;
         let deleteResult = map.delete(first);
         flag = true;
       }
@@ -330,7 +323,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     }
     const combined = "" + tagFilter.channelId + "|" + tagFilter.sortOrder + "|" + tagFilter.tagSetting + "|";
     if (0 === iter.size) {
-      const value = map.get(combined);
+      value = map.get(combined);
       if (null == value) {
         return false;
       } else {
@@ -338,17 +331,16 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
         const found = threads.filter((type) => set.has(type.type));
         threads = value.threads;
         value.threads = threads.concat(found.map((id) => id.id));
-        const channel = store.getChannel(value.channelId);
+        const channel = ChannelStore.getChannel(value.channelId);
         if (tmp9) {
           const obj = { guildId: null, channelId: null, numArchivedThreads: null, hasMoreThreads: null, filterTagIds: null, sortOrder: null };
-          ({ guild_id: obj4[0], id: obj4[1] } = channel);
-          obj[2] = value.threads.length;
-          obj[3] = tagFilter.hasMore;
+          ({ guild_id: obj4.guildId, id: obj4.channelId } = channel);
+          obj.numArchivedThreads = value.threads.length;
+          obj.hasMoreThreads = tagFilter.hasMore;
           const _Array2 = Array;
-          obj[4] = Array.from(tagFilter.tagFilter);
-          obj[5] = tagFilter.sortOrder;
-          const result = trackForumChannelSeenBatch.trackForumMorePostsLoaded(obj);
-          const obj3 = trackForumChannelSeenBatch;
+          obj.filterTagIds = Array.from(tagFilter.tagFilter);
+          obj.sortOrder = tagFilter.sortOrder;
+          const result = tracking_Tracking.trackForumMorePostsLoaded(obj);
         }
         resortListState(value);
         value.hasMore = tagFilter.hasMore;
@@ -375,7 +367,7 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     }
     const combined = "" + tagFilter.channelId + "|" + tagFilter.sortOrder + "|" + tagFilter.tagSetting + "|";
     if (0 === iter.size) {
-      const value = map.get(combined);
+      value = map.get(combined);
       if (null == value) {
         return false;
       } else {
@@ -402,12 +394,9 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
       let tmp3 = nextResult;
       let tmp4 = null != channelId.channelId;
       if (tmp4) {
-        let tmp5 = nextResult;
         tmp4 = tmp3.channelId !== channelId.channelId;
       }
       if (!tmp4) {
-        let tmp6 = resortListState;
-        let tmp7 = nextResult;
         let tmp8 = resortListState(tmp3);
         flag = true;
       }
@@ -416,7 +405,8 @@ const archivedThreadsStore = new ArchivedThreadsStore(dispatcherDefault, {
     return flag ? undefined : false;
   }
 });
-let result = require("set").fileFinishedImporting("modules/threads/ArchivedThreadsStore.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/ArchivedThreadsStore.tsx");
 
 export default archivedThreadsStore;
 export const PAGE_SIZE = 25;

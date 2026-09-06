@@ -1,36 +1,40 @@
 // === Module 11075: PremiumGiftingGoGoSuccessActions ===
 
 // Module 11075 (PremiumGiftingGoGoSuccessActions)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createEmptyPromotionsByType" /* 10665 */;
-import { AnalyticsSections } from "ME" /* 1074 */;
-import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 1076 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
+import showShareActionSheet from "showShareActionSheet" /* 8361 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10662 */;
+import noop from "module_19" /* 19 */;
+import PromotionsStore from "PromotionsStore" /* 10665 */;
 
-const require = arg1;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles(() => {
+require = fn;
+const AnalyticsSections = fn(1074).AnalyticsSections;
+let closure_6 = fn(1076).CollectiblesMobileShopScreen;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles(() => {
   let obj = { promoDetails: null };
-  obj = { marginBottom: ThemesDefault.space.PX_6, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-  obj[0] = obj;
+  obj = { marginBottom: nativeDefault.space.PX_6, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+  obj.promoDetails = obj;
   return obj;
 });
-let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingGoGoSuccessActions.tsx");
 
 export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   giftCode = giftCode.giftCode;
   let onClose;
-  let prePurchaseGiftingBadgeProgress;
   let navigation;
   let enabled;
   let giftCodeURL;
   let obj = onClose(navigation[7]);
   const nativeGiftContext = obj.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
-  prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  obj1 = onClose(navigation[8]);
+  const prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
+  let obj1 = onClose(navigation[8]);
   let items = [giftCodeURL];
   const stateFromStores = obj1.useStateFromStores(items, () => {
     const marketingComponentByType = giftCodeURL.getMarketingComponentByType(onClose(navigation[9]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER);
@@ -51,7 +55,7 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   const themeAndReducedMotionAwareAssetUrl = obj2.useThemeAndReducedMotionAwareAssetUrl(asset);
   let tmp2Result = tmp2(tmp3[11]);
   navigation = tmp2Result.useNavigation();
-  const tmp = callback2();
+  const tmp = closure_10();
   enabled = prePurchaseGiftingBadgeProgress(navigation[12]).useConfig({ location: "PremiumGiftSuccessActions" }).enabled;
   tmp2Result = tmp2(tmp3[13]);
   giftCodeURL = tmp2Result.getGiftCodeURL(giftCode);
@@ -60,47 +64,41 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   const callback = enabled.useCallback(() => {
     if (enabled) {
       if (null != prePurchaseGiftingBadgeProgress) {
-        const obj = { currentProgress: null };
-        obj[0] = tmp;
-        navigation.navigate(onClose(navigation[14]).PremiumGiftScreens.GIFTING_BADGE, obj);
+        const obj = { currentProgress: tmp };
+        navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
       }
     }
     onClose();
   }, items1);
   const items3 = [onClose];
   const callback1 = enabled.useCallback(() => {
-    let obj = onClose(navigation[15]);
-    obj = { url: giftCodeURL };
-    obj.showShareActionSheet(obj, closure_1_5.PREMIUM_GIFT_SUCCESS_MODAL);
+    let obj = { url: giftCodeURL };
+    obj.showShareActionSheet(obj, AnalyticsSections.PREMIUM_GIFT_SUCCESS_MODAL);
     let tmp4 = enabled;
     if (enabled) {
       tmp4 = null != prePurchaseGiftingBadgeProgress;
     }
     if (tmp4) {
-      obj = { currentProgress: null };
-      obj[0] = prePurchaseGiftingBadgeProgress;
-      navigation.navigate(onClose(navigation[14]).PremiumGiftScreens.GIFTING_BADGE, obj);
+      obj = { currentProgress: prePurchaseGiftingBadgeProgress };
+      navigation.navigate(PremiumGiftModal.PremiumGiftScreens.GIFTING_BADGE, obj);
     }
   }, items2);
   let tmp16 = null != stateFromStores;
-  callback2 = enabled.useCallback(() => {
+  const callback2 = enabled.useCallback(() => {
     onClose();
-    let obj = onClose(navigation[16]);
-    obj = { analyticsSource: prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
-    const items = [prePurchaseGiftingBadgeProgress(navigation[17]).PREMIUM_GIFT_SUCCESS_MODAL];
-    obj[1] = items;
-    obj[2] = closure_1_6.ORBS;
+    const obj = { analyticsSource: AnalyticsLocationDefault.PREMIUM_GIFT_SUCCESS_MODAL, analyticsLocations: null, screen: null };
+    const items = [AnalyticsLocationDefault.PREMIUM_GIFT_SUCCESS_MODAL];
+    obj.analyticsLocations = items;
+    obj.screen = constants.ORBS;
     const result = obj.openCollectiblesShopMobile(obj);
   }, items3);
   if (tmp16) {
-    obj = { style: null, imageUrl: null, title: null, subtitle: null };
-    obj[0] = tmp.promoDetails;
-    obj[1] = themeAndReducedMotionAwareAssetUrl;
+    obj = { style: tmp.promoDetails, imageUrl: themeAndReducedMotionAwareAssetUrl, title: null, subtitle: null };
     const intl = tmp2(tmp3[19]).intl;
-    obj[2] = intl.string(tmp9(tmp3[20])["ZME/HA"]);
+    obj.title = intl.string(tmp9(tmp3[20])["ZME/HA"]);
     const intl2 = tmp2(tmp3[19]).intl;
-    obj[3] = intl2.string(tmp9(tmp3[20]).aMeOMj);
-    tmp16 = callback(tmp9(tmp3[18]), obj);
+    obj.subtitle = intl2.string(tmp9(tmp3[20]).aMeOMj);
+    tmp16 = closure_7(tmp9(tmp3[18]), obj);
     const tmp9Result = tmp9(tmp3[18]);
   }
   const items4 = [tmp16, , ];
@@ -108,9 +106,9 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   if (tmp19) {
     obj = { variant: "primary", text: null, onPress: null };
     const intl3 = tmp2(tmp3[19]).intl;
-    obj[1] = intl3.string(tmp2(tmp3[19]).t.RDE0Sc);
-    obj[2] = callback1;
-    tmp19 = callback(tmp2(tmp3[21]).Button, obj);
+    obj.text = intl3.string(tmp2(tmp3[19]).t.RDE0Sc);
+    obj.onPress = callback1;
+    tmp19 = closure_7(tmp2(tmp3[21]).Button, obj);
   }
   items4[1] = tmp19;
   if (enabled) {
@@ -119,16 +117,15 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
       if (null == giftCode) {
         str2 = "primary";
       }
-      obj1 = { variant: null, text: null, onPress: null };
-      obj1[0] = str2;
+      obj1 = { variant: str2, text: null, onPress: null };
       const intl5 = tmp2(tmp3[19]).intl;
-      obj1[1] = intl5.string(tmp2(tmp3[19]).t.cpT0Cq);
-      obj1[2] = callback;
+      obj1.text = intl5.string(tmp2(tmp3[19]).t.cpT0Cq);
+      obj1.onPress = callback;
       let obj3 = obj1;
     }
     obj2 = { children: null };
-    items4[2] = callback(tmp22, obj3);
-    obj2[0] = items4;
+    items4[2] = closure_7(tmp22, obj3);
+    obj2.children = items4;
     return closure_9(closure_8, obj2);
   }
   let str = "secondary";
@@ -137,6 +134,6 @@ export default function PremiumGiftingGoGoSuccessActions(giftCode) {
   }
   obj3 = { grow: true, variant: str, text: null, onPress: null };
   const intl4 = tmp2(tmp3[19]).intl;
-  obj3[2] = intl4.string(onClose(navigation[19]).t.fYfGgK);
-  obj3[3] = callback2;
+  obj3.text = intl4.string(onClose(navigation[19]).t.fYfGgK);
+  obj3.onPress = callback2;
 };

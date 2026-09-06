@@ -1,14 +1,14 @@
-// === Module 1915: initialize ===
+// === Module 1915: RunningGameStore ===
 
-// Module 1915 (initialize)
+// Module 1915 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 13989 */;
-import closure_2 from "createGamesFromMessage" /* 1916 */;
-import closure_3 from "gameFromServer" /* 1931 */;
-import closure_4 from "setLibraryApplications" /* 7397 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import OverlayTypes from "OverlayTypes" /* 13989 */;
+import GameStore from "GameStore" /* 1916 */;
+import DetectableGameStore from "DetectableGameStore" /* 1931 */;
+import LibraryApplicationStore from "LibraryApplicationStore" /* 7397 */;
 
-require = arg1;
+require = fn;
 const Store = initializeDefault.Store;
 class RunningGameStore extends Store {
 }
@@ -46,7 +46,7 @@ prototype["getRunningDiscordApplicationIds"] = function getRunningDiscordApplica
 prototype["getRunningVerifiedApplicationIds"] = function getRunningVerifiedApplicationIds() {
   return [];
 };
-prototype["getGameForPID"] = function getGameForPID(pid) {
+prototype["getGameForPID"] = function getGameForPID() {
   return null;
 };
 prototype["getGameForName"] = function getGameForName() {
@@ -64,7 +64,7 @@ prototype["getOverlayOptionsForPID"] = function getOverlayOptionsForPID() {
 prototype["shouldElevateProcessForPID"] = function shouldElevateProcessForPID() {
   return false;
 };
-prototype["shouldContinueWithoutElevatedProcessForPID"] = function shouldContinueWithoutElevatedProcessForPID(closure_0) {
+prototype["shouldContinueWithoutElevatedProcessForPID"] = function shouldContinueWithoutElevatedProcessForPID() {
   return false;
 };
 prototype["canCollectExecutableFingerprintsForRunningGames"] = function canCollectExecutableFingerprintsForRunningGames() {
@@ -79,13 +79,13 @@ prototype["isGamesSeenLoaded"] = function isGamesSeenLoaded() {
 prototype["isGameSeen"] = function isGameSeen() {
   return false;
 };
-prototype["getGamesSeen"] = function getGamesSeen(arg0, arg1) {
+prototype["getGamesSeen"] = function getGamesSeen() {
   return [];
 };
 prototype["getSeenGameByName"] = function getSeenGameByName() {
   return null;
 };
-prototype["isObservedAppRunning"] = function isObservedAppRunning(name) {
+prototype["isObservedAppRunning"] = function isObservedAppRunning() {
   return false;
 };
 prototype["getOverlayEnabledForGame"] = function getOverlayEnabledForGame() {
@@ -94,13 +94,13 @@ prototype["getOverlayEnabledForGame"] = function getOverlayEnabledForGame() {
 prototype["getOverrides"] = function getOverrides() {
   return [];
 };
-prototype["getOverrideForGame"] = function getOverrideForGame(arg0) {
+prototype["getOverrideForGame"] = function getOverrideForGame() {
   return null;
 };
 prototype["getGameOverlayStatus"] = function getGameOverlayStatus() {
   return null;
 };
-prototype["getObservedAppNameForWindow"] = function getObservedAppNameForWindow(sourceId) {
+prototype["getObservedAppNameForWindow"] = function getObservedAppNameForWindow() {
   return null;
 };
 Object.defineProperty(prototype, "canShowAdminWarning", {
@@ -122,8 +122,9 @@ prototype["isSystemServiceInitialized"] = function isSystemServiceInitialized() 
   return false;
 };
 RunningGameStore.displayName = "RunningGameStore";
-const runningGameStore = new RunningGameStore(dispatcherDefault, {});
-const result = require("set").fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
+const runningGameStore = new RunningGameStore(DispatcherDefault, {});
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
 
 export default runningGameStore;
 export function gameKey() {
@@ -131,9 +132,9 @@ export function gameKey() {
 }
 export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
-    const items = [closure_3, closure_4, closure_2];
+    const items = [DetectableGameStore, LibraryApplicationStore, GameStore];
   }
-  return { source: DevToolsFocusedPidsTrackMode.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: DevToolsFocusedPidsTrackMode.OverlayMethod.Disabled, reason: "Dummy implementation" };
+  return { source: OverlayTypes.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: OverlayTypes.OverlayMethod.Disabled, reason: "Dummy implementation" };
 };
 export function isDetectionEnabled() {
   return false;

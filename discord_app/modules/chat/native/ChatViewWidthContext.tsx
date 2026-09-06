@@ -1,9 +1,10 @@
-// === Module 11529: context ===
+// === Module 11529: ChatViewWidthContext ===
 
-// Module 11529 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 11529 (ChatViewWidthContext)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext(null);
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatViewWidthContext.tsx");
+const context = noop.createContext(null);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/ChatViewWidthContext.tsx");
 
 export default context;

@@ -1,34 +1,34 @@
 // === Module 14617: GummyStripes ===
 
 // Module 14617 (GummyStripes)
-import noopAll from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, Fragment: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
-const result = require("set").fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, Fragment: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");
 
 export default function GummyStripes(colors) {
   colors = colors.colors;
-  closure_0 = undefined;
-  closure_0 = callback2();
-  return callback(closure_4, {
-    children: colors.map((color) => {
-      const items = [lib.stripe, , ];
-      let stripeOverlap = arg1 > 0;
+  closure_0 = closure_5();
+  return closure_3(closure_4, {
+    children: colors.map((item, index) => {
+      const items = [closure_0.stripe, , ];
+      let stripeOverlap = index > 0;
       if (stripeOverlap) {
-        stripeOverlap = lib.stripeOverlap;
+        stripeOverlap = closure_0.stripeOverlap;
       }
       let obj = { style: null };
       items[1] = stripeOverlap;
-      obj = { backgroundColor: lib(closure_1_1[4]).int2hex(color) };
+      obj = { backgroundColor: utils_ColorUtils.int2hex(item) };
       items[2] = obj;
-      obj[0] = items;
-      return closure_1_3(closure_1_2, obj, arg1);
+      obj.style = items;
+      return React3(View, obj, index);
     })
   });
 };

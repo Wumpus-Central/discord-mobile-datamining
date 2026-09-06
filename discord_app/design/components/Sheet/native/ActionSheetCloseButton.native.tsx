@@ -1,32 +1,32 @@
 // === Module 7199: ActionSheetCloseButton ===
 
 // Module 7199 (ActionSheetCloseButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import PressableBase from "PressableBase" /* 5123 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Pressables from "Pressables" /* 5123 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-let closure_4 = Object.freeze({ radius: 12 });
-let closure_5 = Object.freeze({ top: 8, right: 8, bottom: 8, left: 8 });
-const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+const androidRippleConfig = Object.freeze({ radius: 12 });
+const hitSlop = Object.freeze({ top: 8, right: 8, bottom: 8, left: 8 });
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
 
 export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
   ({ onPress, variant } = arg0);
   const obj = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.cpT0Cq);
-  obj[2] = closure_5;
-  obj[3] = closure_4;
-  obj[4] = onPress;
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
+  obj.hitSlop = hitSlop;
+  obj.androidRippleConfig = androidRippleConfig;
+  obj.onPress = onPress;
   if ("overlay" === variant) {
-    let ICON_STRONG = ThemesDefault.colors.WHITE;
+    let ICON_STRONG = nativeDefault.colors.WHITE;
   } else {
-    ICON_STRONG = ThemesDefault.colors.ICON_STRONG;
+    ICON_STRONG = nativeDefault.colors.ICON_STRONG;
   }
-  obj[5] = jsx(XSmallIcon.XSmallIcon, { color: ICON_STRONG });
-  return jsx(PressableBase.PressableOpacity, { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null });
+  obj.children = jsx(XSmallIcon.XSmallIcon, { color: ICON_STRONG });
+  return jsx(Pressables.PressableOpacity, { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null });
 };

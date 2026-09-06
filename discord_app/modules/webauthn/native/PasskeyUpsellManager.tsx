@@ -1,20 +1,19 @@
-// === Module 14662: handlePasskeyUpsellShow ===
+// === Module 14662: PasskeyUpsellManager ===
 
-// Module 14662 (handlePasskeyUpsellShow)
-import DismissibleContent from "DismissibleContent" /* 1943 */;
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4380 */;
-import _crypto from "_crypto" /* 6951 */;
-import initializeDefault from "initialize" /* 7118 */;
-import _modDef14663 from "module_14663" /* 14663 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "hasFetchedCredentials" /* 14656 */;
-import { LoginStates } from "ME" /* 1074 */;
+// Module 14662 (PasskeyUpsellManager)
+import dismissible_content from "dismissible_content" /* 1943 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
+import MFAUtils from "MFAUtils" /* 6951 */;
+import PasskeyUpsellActionCreatorsDefault from "PasskeyUpsellActionCreators" /* 14663 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import UserStore from "UserStore" /* 1371 */;
+import WebAuthnStore from "WebAuthnStore" /* 14656 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-require = arg1;
+require = fn;
+const LoginStates = fn(1074).LoginStates;
 let c7 = false;
 let c8 = false;
-initializeDefault;
 class PasskeyUpsellManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -29,19 +28,18 @@ class PasskeyUpsellManager extends tmp2 {
 const prototype = PasskeyUpsellManager.prototype;
 prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
   if (c8) {
-    if (_crypto.hasWebAuthn) {
-      if (loginStatus.getLoginStatus() === LoginStates.NONE) {
+    if (MFAUtils.hasWebAuthn) {
+      if (AuthenticationStore.getLoginStatus() === LoginStates.NONE) {
         if (obj.attemptedPasswordLogin()) {
           let tmpResult = tmp(4380);
           if (!tmpResult.UNSAFE_isDismissibleContentDismissed(tmp(1943).DismissibleContent.PASSWORDLESS_UPSELL)) {
-            if (!closure_5.hasFetchedCredentials()) {
+            if (!WebAuthnStore.hasFetchedCredentials()) {
               tmpResult = tmp(4417);
               if (!tmpResult.isModalOpen()) {
-                currentUser = currentUser.getCurrentUser();
+                const currentUser = UserStore.getCurrentUser();
                 if (tmp6) {
                   if (obj3.hasFetchedCredentials()) {
-                    _modDef14663.openPasskeyUpsell();
-                    const obj6 = _modDef14663;
+                    PasskeyUpsellActionCreatorsDefault.openPasskeyUpsell();
                   } else if (!c7) {
                     c7 = true;
                     const webAuthnCredentials = tmp(6597).fetchWebAuthnCredentials();
@@ -54,7 +52,7 @@ prototype["handlePasskeyUpsellShow"] = function handlePasskeyUpsellShow() {
           }
         }
       }
-      obj = loginStatus;
+      obj = AuthenticationStore;
     }
   }
 };
@@ -66,11 +64,11 @@ prototype["handleLogout"] = function handleLogout() {
   c8 = false;
 };
 prototype["markDismissed"] = function markDismissed(USER_DISMISS) {
-  let obj = UNSAFE_isDismissibleContentDismissed;
-  obj = { dismissAction: USER_DISMISS, forceTrack: true };
-  return obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PASSWORDLESS_UPSELL, obj);
+  const obj = { dismissAction: USER_DISMISS, forceTrack: true };
+  return obj.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.PASSWORDLESS_UPSELL, obj);
 };
 const passkeyUpsellManager = new PasskeyUpsellManager();
-let result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellManager.tsx");
 
 export default passkeyUpsellManager;

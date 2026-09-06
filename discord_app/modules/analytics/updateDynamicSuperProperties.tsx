@@ -1,17 +1,17 @@
 // === Module 17281: updateDynamicSuperProperties ===
 
 // Module 17281 (updateDynamicSuperProperties)
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import trackHeartbeat from "trackHeartbeat" /* 7461 */;
-import _modDef11300 from "module_11300" /* 11300 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import SessionHeartbeatScheduler from "SessionHeartbeatScheduler" /* 7461 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11300 */;
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+let result = size.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
-  let obj = trackHeartbeat;
+  let obj = SessionHeartbeatScheduler;
   const activeSessionUnsafe = obj.getActiveSessionUnsafe();
-  const superProperties = encodeProperties.getSuperProperties();
+  const superProperties = discord_common_AnalyticsUtils.getSuperProperties();
   let uuid;
   if (activeSessionUnsafe != null) {
     uuid = activeSessionUnsafe.uuid;
@@ -24,9 +24,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   if (uuid !== prop) {
     obj.client_heartbeat_session_id = uuid;
   }
-  const obj2 = encodeProperties;
-  const tmp = require;
-  const state = _modDef11300.getState();
+  const state = DiscordAppStateDefault.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;
@@ -35,7 +33,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
     obj.client_app_state = state;
   }
   if (Object.keys(obj).length > 0) {
-    const result = encodeProperties.extendSuperProperties(obj);
-    const tmpResult = encodeProperties;
+    const result = discord_common_AnalyticsUtils.extendSuperProperties(obj);
+    const tmpResult = discord_common_AnalyticsUtils;
   }
 };

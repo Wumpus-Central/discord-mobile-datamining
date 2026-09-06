@@ -1,14 +1,15 @@
 // === Module 8249: useGetIsMounted ===
 
 // Module 8249 (useGetIsMounted)
-import closure_0 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("hooks/useGetIsMounted.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("hooks/useGetIsMounted.tsx");
 
 export default function useGetIsMounted() {
-  React = React.useRef(true);
-  const effect = React.useEffect(() => () => {
-    closure_0.current = false;
+  noop.useRef(true);
+  const effect = noop.useEffect(() => () => {
+    ref.current = false;
   }, []);
-  return React.useCallback(() => ref.current, []);
+  return noop.useCallback(() => ref.current, []);
 };

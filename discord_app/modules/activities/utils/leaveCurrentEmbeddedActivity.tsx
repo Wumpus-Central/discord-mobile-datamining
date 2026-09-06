@@ -2,16 +2,17 @@
 
 // Module 9513 (leaveCurrentEmbeddedActivity)
 import getEmbeddedActivitiesManagerDefault from "getEmbeddedActivitiesManager" /* 9514 */;
-import closure_2 from "participantFromServer" /* 1956 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/activities/utils/leaveCurrentEmbeddedActivity.tsx");
 
 export const leaveCurrentEmbeddedActivity = function leaveCurrentEmbeddedActivity() {
-  currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+  const currentEmbeddedActivity = EmbeddedActivitiesStore.getCurrentEmbeddedActivity();
   if (null != currentEmbeddedActivity) {
-    let obj = getEmbeddedActivitiesManagerDefault();
-    obj = { location: null, applicationId: null, showFeedback: false };
-    ({ location: obj2[0], applicationId: obj2[1] } = currentEmbeddedActivity);
+    getEmbeddedActivitiesManagerDefault();
+    const obj = { location: null, applicationId: null, showFeedback: false };
+    ({ location: obj2.location, applicationId: obj2.applicationId } = currentEmbeddedActivity);
     obj.leaveActivity(obj);
   }
 };

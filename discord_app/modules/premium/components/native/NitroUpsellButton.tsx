@@ -1,16 +1,19 @@
-// === Module 9970: ? ===
+// === Module 9970: NitroUpsellButton ===
 
-// Module 9970
+// Module 9970 (NitroUpsellButton)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 4975 */;
+import nativeDefault from "native" /* 576 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
 import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-const memoResult = importAllResult.memo(function NitroUpsellButton(shiny) {
+require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
+
+export default noop.memo(function NitroUpsellButton(shiny) {
   let flag = shiny.shiny;
   ({ loading, onPress, text } = shiny);
   if (flag === undefined) {
@@ -21,17 +24,14 @@ const memoResult = importAllResult.memo(function NitroUpsellButton(shiny) {
     str = "lg";
   }
   let obj = initialize;
-  const items = [closure_3];
+  const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
-  obj = { color: ThemesDefault.colors.WHITE, size: "sm" };
-  obj[4] = jsx(NitroWheelIcon.NitroWheelIcon, { color: ThemesDefault.colors.WHITE, size: "sm" });
+  obj = { color: nativeDefault.colors.WHITE, size: "sm" };
+  obj.icon = jsx(NitroWheelIcon.NitroWheelIcon, { color: nativeDefault.colors.WHITE, size: "sm" });
   if (flag) {
     flag = !stateFromStores;
   }
-  obj[6] = flag;
-  return jsx(Button.Button, { color: ThemesDefault.colors.WHITE, size: "sm" });
+  obj.shiny = flag;
+  return jsx(components_Button_Button.Button, { color: nativeDefault.colors.WHITE, size: "sm" });
 });
-const result = require("set").fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
-
-export default memoResult;

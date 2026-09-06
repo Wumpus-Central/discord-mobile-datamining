@@ -1,16 +1,17 @@
 // === Module 16038: usePrivateChannelWaveEligible ===
 
 // Module 16038 (usePrivateChannelWaveEligible)
-import closure_3 from "reinjectEphemerals" /* 4781 */;
-import closure_4 from "markAllUserIdListsStale" /* 4209 */;
-import { ChannelFlags } from "set" /* 1964 */;
-import { MessageTypes } from "ME" /* 1074 */;
+import MessageStore from "MessageStore" /* 4781 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
+const require = fn;
+const ChannelFlags = fn(1964).ChannelFlags;
+const MessageTypes = fn(1074).MessageTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel/usePrivateChannelWaveEligible.tsx");
 
 export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligible(isDM, arg1) {
-  const _require = isDM;
+  _require = isDM;
   let tmp = isDM.isDM() && !isDM.isSystemDM();
   if (tmp) {
     const rawRecipients = isDM.rawRecipients;
@@ -20,27 +21,27 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   if (tmp) {
     recipientId = isDM.getRecipientId();
   }
-  const items = [closure_4];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
+  const items = [RelationshipStore];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let isFriendResult = null != recipientId;
     if (isFriendResult) {
-      isFriendResult = closure_1_4.isFriend(tmp);
+      isFriendResult = RelationshipStore.isFriend(tmp);
     }
     return isFriendResult;
   });
-  const obj = _require(504);
-  const items1 = [closure_4];
-  const stateFromStores1 = _require(504).useStateFromStores(items1, () => {
+  const obj = require("initialize");
+  const items1 = [RelationshipStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     let isIgnoredResult = null != recipientId;
     if (isIgnoredResult) {
-      isIgnoredResult = closure_1_4.isIgnored(tmp);
+      isIgnoredResult = RelationshipStore.isIgnored(tmp);
     }
     return isIgnoredResult;
   });
-  const obj2 = _require(504);
-  const items2 = [closure_3];
-  const stateFromStores2 = _require(504).useStateFromStores(items2, () => {
-    const messages = closure_1_3.getMessages(isDM.id);
+  const obj2 = require("initialize");
+  const items2 = [MessageStore];
+  const stateFromStores2 = require("initialize").useStateFromStores(items2, () => {
+    const messages = MessageStore.getMessages(isDM.id);
     let tmp = 1 === messages.length;
     if (tmp) {
       const firstResult = messages.first();
@@ -48,21 +49,21 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
       if (firstResult != null) {
         type = firstResult.type;
       }
-      tmp = type === closure_1_6.FRIEND_REQUEST_ACCEPTED;
+      tmp = type === MessageTypes.FRIEND_REQUEST_ACCEPTED;
     }
     return tmp;
   });
   let hasFlagResult = isDM.hasFlag(ChannelFlags.HAS_ONLY_SYSTEM_MESSAGES);
-  const obj3 = _require(504);
-  const items3 = [closure_3];
-  const stateFromStores3 = _require(504).useStateFromStores(items3, () => closure_1_3.hasCurrentUserSentWaveBlockingMessage(isDM.id));
-  const obj4 = _require(504);
+  const obj3 = require("initialize");
+  const items3 = [MessageStore];
+  const stateFromStores3 = require("initialize").useStateFromStores(items3, () => MessageStore.hasCurrentUserSentWaveBlockingMessage(isDM.id));
+  const obj4 = require("initialize");
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
-  const obj6 = _require(4242);
+  const obj6 = require("DateUtils");
   const tmp9 = recipientId(4153)();
   const isWithinIntervalResult = obj6.isWithinInterval(recipientId(4153)(), recipientId(4153)(extractTimestampResult), 1814400000);
-  const strangerDangerWarning = _require(11364).useStrangerDangerWarning(isDM.id);
+  const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);
   if (tmp) {
     tmp = stateFromStores;
   }

@@ -1,14 +1,13 @@
-// === Module 7551: fromServer ===
+// === Module 7551: CollectiblesStoreListingRecord ===
 
-// Module 7551 (fromServer)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 7551 (CollectiblesStoreListingRecord)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import tinycolorDefault from "tinycolor" /* 7552 */;
+import Record from "Record" /* 1386 */;
 
-const require = arg1;
-toJSDefault;
-let prototype;
-prototype = function CollectiblesStoreListingRecord(styles) {
+require = fn;
+const prototype = function CollectiblesStoreListingRecord(styles) {
   const tmp2 = new prototype(tmp, new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ storeListingId: tmp2.storeListingId, skuId: tmp2.skuId, name: tmp2.name, summary } = styles);
   let trimmed;
   if (summary != null) {
@@ -23,49 +22,49 @@ class prototype extends tmp2 {
 prototype["fromServer"] = function fromServer(styles) {
   styles = styles.styles;
   ({ store_listing_id, sku_id } = styles);
-  let obj = Object.create(null);
-  const merged = Object.assign(styles, obj);
-  obj = {};
-  let str = obj;
-  const merged1 = Object.assign(merged);
+  const merged = Object.assign({ store_listing_id: 0, sku_id: 0, styles: 0 });
+  const merged1 = Object.assign(styles, merged);
+  let obj = {};
+  const merged2 = Object.assign(merged1);
   obj.storeListingId = store_listing_id;
   obj.skuId = sku_id;
   let tmp5 = styles;
   if (null != styles) {
     obj = { backgroundColors: null, buttonColors: null, confettiColors: null };
     const background_colors = styles.background_colors;
-    obj[0] = background_colors.map((color) => {
-      const tmp = callback2(7552);
-      return tmp(callback(1091).int2hex(color));
+    obj.backgroundColors = background_colors.map((item) => {
+      const tmp = tinycolorDefault;
+      return tmp(utils_ColorUtils.int2hex(item));
     });
     const button_colors = styles.button_colors;
-    obj[1] = button_colors.map((color) => {
-      const tmp = callback2(7552);
-      return tmp(callback(1091).int2hex(color));
+    obj.buttonColors = button_colors.map((item) => {
+      const tmp = tinycolorDefault;
+      return tmp(utils_ColorUtils.int2hex(item));
     });
     const confetti_colors = styles.confetti_colors;
-    obj[2] = confetti_colors.map((color) => {
-      const tmp = callback2(7552);
-      return tmp(callback(1091).int2hex(color));
+    obj.confettiColors = confetti_colors.map((item) => {
+      const tmp = tinycolorDefault;
+      return tmp(utils_ColorUtils.int2hex(item));
     });
     tmp5 = obj;
   }
   obj.styles = tmp5;
-  if (typeof prototype !== "function") {
-    str = "Trying to call a non-function";
-    HermesBuiltin.throwTypeError();
+  if (typeof tmp3 === "function") {
+    const tmp9 = new prototype(obj, merged1, merged);
+    ({ storeListingId: tmp9.storeListingId, skuId: tmp9.skuId, name: tmp9.name, summary } = obj);
+    let trimmed;
+    if (summary != null) {
+      trimmed = summary.trim();
+    }
+    tmp9.summary = trimmed;
+    tmp9.styles = obj.styles;
+    return tmp9;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp6 = new prototype(str, merged, obj);
-  // ThrowIfThisInitialized (0x7c)
-  ({ storeListingId: tmp6.storeListingId, skuId: tmp6.skuId, name: tmp6.name, summary } = obj);
-  let trimmed;
-  if (summary != null) {
-    trimmed = summary.trim();
-  }
-  tmp6.summary = trimmed;
-  tmp6.styles = obj.styles;
-  return tmp6;
+  tmp3 = prototype;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingRecord.tsx");
 
 export default prototype;

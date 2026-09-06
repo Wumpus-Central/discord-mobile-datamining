@@ -1,15 +1,16 @@
-// === Module 10733: useFetchClaimableGiftingPromotionRewardSkuIds ===
+// === Module 10733: GiftingPromotionUtils ===
 
-// Module 10733 (useFetchClaimableGiftingPromotionRewardSkuIds)
-import apexExperiment from "apexExperiment" /* 10740 */;
-import apexExperiment2 from "apexExperiment" /* 10741 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "createEmptyPromotionsByType" /* 10665 */;
-import { SubscriptionPlans } from "GuildFeatures" /* 1373 */;
+// Module 10733 (GiftingPromotionUtils)
+import PremiumGiftingGogoPromotionExperiment2 from "PremiumGiftingGogoPromotionExperiment" /* 10740 */;
+import GiftPromotionReminderExperiment2 from "GiftPromotionReminderExperiment" /* 10741 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import PromotionsStore from "PromotionsStore" /* 10665 */;
 
-require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
+require = fn;
+const SubscriptionPlans = fn(1373).SubscriptionPlans;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const tmp = stateFromStoresArray(purchases.useState(), 2);
@@ -22,14 +23,14 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   const fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  closure_6 = purchases.useRef(false);
+  purchases.useRef(false);
   const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
   const effect = purchases.useEffect(() => {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
           if (null == fetchPurchasesError) {
-            let found = arr.filter((arg0) => null == closure_3.get(arg0));
+            let found = arr.filter((item) => null == purchases.get(item));
           } else {
             found = [];
           }
@@ -40,15 +41,14 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
       }
     }
   }, items1);
-  const someResult = stateFromStoresArray.some((arg0) => arg0 === first(10738).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
-  closure_7 = someResult;
+  const someResult = stateFromStoresArray.some((item) => item === first(10738).GiftingPromotionRewardSKUIds.SUMMER_2026_GOGO_FAKE_SKU_ID);
   const obj3 = first(10734);
   const fetchSummer2026GogoPromoEligibility = first(10739).useFetchSummer2026GogoPromoEligibility(someResult);
   const isEligible = fetchSummer2026GogoPromoEligibility.isEligible;
   const hasFetched = fetchSummer2026GogoPromoEligibility.hasFetched;
   const items2 = [first, isEligible, hasFetched, someResult];
   return purchases.useMemo(() => {
-    if (closure_7) {
+    if (someResult) {
       if (!isEligible) {
         let items = [];
       }
@@ -62,7 +62,7 @@ export const getRewardAssetIdMap = function getRewardAssetIdMap(arr) {
   const item = arr.forEach((skuId) => map.set(skuId.skuId, skuId.assetId));
   return map;
 };
-export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSkuStep(id) {
+export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSkuStep(id, arg1, arg2) {
   const items = [, ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
@@ -75,7 +75,7 @@ export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSk
     tmp3 = arg2.length >= 1;
   }
   let tmp4 = arg1;
-  const PremiumGiftingGogoPromotionExperiment = apexExperiment.PremiumGiftingGogoPromotionExperiment;
+  const PremiumGiftingGogoPromotionExperiment = PremiumGiftingGogoPromotionExperiment2.PremiumGiftingGogoPromotionExperiment;
   if (arg1) {
     tmp4 = hasItem;
   }
@@ -87,7 +87,7 @@ export const useShouldShowSelectFreeSkuStep = function useShouldShowSelectFreeSk
   }
   return tmp4;
 };
-export const useShouldAutoSelectGiftingPromotionReward = function useShouldAutoSelectGiftingPromotionReward(id) {
+export const useShouldAutoSelectGiftingPromotionReward = function useShouldAutoSelectGiftingPromotionReward(id, arg1, arg2) {
   const items = [, ];
   ({ PREMIUM_YEAR_TIER_2: arr[0], PREMIUM_MONTH_TIER_2: arr[1] } = SubscriptionPlans);
   id = undefined;
@@ -116,7 +116,7 @@ export const useIsPlanEligibleForGiftingPromotion = function useIsPlanEligibleFo
   }
   return items.includes(id);
 };
-export const createGradientStyle = function createGradientStyle(gradient) {
+export const createGradientStyle = function createGradientStyle(gradient, arg1) {
   if (null != gradient) {
     let obj = arg1;
     if (arg1 == null) {
@@ -146,14 +146,14 @@ export const createGradientStyle = function createGradientStyle(gradient) {
       result = (angle + 180) % 360;
     }
     if (null != colorStops) {
-      const mapped = gradient.map((arg0, arg1) => "" + arg0 + " " + colorStops[arg1] + "%");
+      const mapped = gradient.map((item, index) => "" + item + " " + colorStops[index] + "%");
       let joined = mapped.join(", ");
     } else {
       joined = gradient.join(", ");
     }
     obj = { background: null };
     const _HermesInternal = HermesInternal;
-    obj[0] = "linear-gradient(" + result + "deg, " + joined + ")";
+    obj.background = "linear-gradient(" + result + "deg, " + joined + ")";
     return obj;
   }
 };
@@ -161,7 +161,7 @@ export const createBackgroundStyle = function createBackgroundStyle(arg0) {
   if (null != arg0) {
     const obj = { backgroundImage: null, backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" };
     const _HermesInternal = HermesInternal;
-    obj[0] = "url(" + arg0 + ")";
+    obj.backgroundImage = "url(" + arg0 + ")";
     return obj;
   }
 };
@@ -192,9 +192,9 @@ export const combinePromotionStyles = function combinePromotionStyles(background
   return tmp;
 };
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
-  const GiftPromotionReminderExperiment = apexExperiment2.GiftPromotionReminderExperiment;
+  const GiftPromotionReminderExperiment = GiftPromotionReminderExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
-    if (null == marketingComponentByType.getMarketingComponentByType(tmp(10742).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
+    if (null == PromotionsStore.getMarketingComponentByType(tmp(10742).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;
     } else {
       const giftPromotion = obj.getGiftPromotion();
@@ -214,7 +214,7 @@ export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftProm
       }
       return tmp5;
     }
-    obj = marketingComponentByType;
+    obj = PromotionsStore;
   } else {
     return false;
   }

@@ -1,14 +1,14 @@
 // === Module 4696: getReportedStreamResolution ===
 
 // Module 4696 (getReportedStreamResolution)
-import set from "set" /* 2 */;
-import DesktopSources from "DesktopSources" /* 4585 */;
+import Constants from "Constants" /* 4585 */;
 import getReportedPresetResolutionDefault from "getReportedPresetResolution" /* 4697 */;
+import size from "module_2" /* 2 */;
 
-const ResolutionTypes = DesktopSources.ResolutionTypes;
-const result = set.fileFinishedImporting("modules/go_live/utils/getReportedStreamResolution.tsx");
+const ResolutionTypes = Constants.ResolutionTypes;
+const result = size.fileFinishedImporting("modules/go_live/utils/getReportedStreamResolution.tsx");
 
-export default function getReportedStreamResolution(arg0, arg1, type) {
+export default function getReportedStreamResolution(arg0, arg1, type, arg3) {
   if (type.type !== ResolutionTypes.FIXED) {
     return type;
   } else {

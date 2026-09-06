@@ -1,9 +1,9 @@
-// === Module 9505: ActivityPanelModes ===
+// === Module 9505: ActivityPanelConstants ===
 
-// Module 9505 (ActivityPanelModes)
-import set from "set" /* 2 */;
+// Module 9505 (ActivityPanelConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");
+const result = size.fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");
 
 export const ActivityPanelModes = { DISCONNECTED: "disconnected", LAUNCHING_WITH_ORIENTATION_CHANGE: "launching_with_orientation_change", PANEL: "panel", PIP: "pip", ACTIVITY_POPOUT_WINDOW: "activity_popout_window" };
 export const SCREEN_HEADER_HEIGHT = 64;

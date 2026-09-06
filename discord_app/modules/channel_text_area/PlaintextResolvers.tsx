@@ -1,26 +1,25 @@
-// === Module 9415: resolvePlaintextInlineVoid ===
+// === Module 9415: PlaintextResolvers ===
 
-// Module 9415 (resolvePlaintextInlineVoid)
-import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4213 */;
-import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4217 */;
-import createEmptyState from "createEmptyState" /* 7686 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getEmojiToGroupId" /* 5459 */;
-import closure_5 from "rebuild" /* 5506 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "comparator" /* 2012 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 2012 */;
-import closure_9 from "trackCommunicationDisabled" /* 2021 */;
-import closure_10 from "createGuildRoleRecordFromRust" /* 2015 */;
-import closure_11 from "createGuildRecordFromRust" /* 1979 */;
-import closure_12 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_13 from "markAllUserIdListsStale" /* 4209 */;
-import closure_14 from "mergeGuildAvatar" /* 1371 */;
-import { Permissions } from "ME" /* 1074 */;
-import { EmojiIntention } from "set" /* 1374 */;
+// Module 9415 (PlaintextResolvers)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
+import useChannelName from "useChannelName" /* 4713 */;
+import SlateUtils from "SlateUtils" /* 7686 */;
+import _slicedToArray from "module_32" /* 32 */;
+import EmojiStore from "EmojiStore" /* 5459 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5506 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildRoleStore from "GuildRoleStore" /* 2015 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceIncludeExternalGuilds) {
+require = fn;
+function resolvePlaintextInlineVoid(text, id, id2, forceIncludeExternalGuilds) {
   let obj = forceIncludeExternalGuilds;
   if (forceIncludeExternalGuilds == null) {
     obj = {};
@@ -29,37 +28,34 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
   const allowRoles = obj.allowRoles;
   let first = text[0];
   if ("@" === first) {
-    return (function resolveUserOrRole(arr, throwTypeErrorResult, id, arg3, arg4) {
-      let tmp = callback3(arr.slice(1).split("#", 2), 2);
+    return (function resolveUserOrRole(arr, id, id2, arg3, arg4) {
+      let tmp = closure_3(arr.slice(1).split("#", 2), 2);
       const first = tmp[0];
       closure_1 = tmp3;
-      let guild = null;
-      if (null != throwTypeErrorResult) {
-        guild = guild.getGuild(throwTypeErrorResult);
+      guild = null;
+      if (null != id) {
+        guild = guild.getGuild(id);
       }
       if (arg4) {
         if (null == tmp3) {
           if (null != guild) {
             sortedRoles = sortedRoles.getSortedRoles(guild.id);
             for (const item10028 of sortedRoles) {
-              let tmp10 = item10028;
               if (first === item10028.name) {
-                let obj = { type: "roleMention", roleId: null, children: null };
-                obj[1] = item10028.id;
+                let element = { type: "roleMention", roleId: item10028.id, children: null };
                 let items = [{ text: "" }];
-                obj[2] = items;
-                let tmp11 = obj;
+                element.children = items;
                 obj.return();
-                return obj;
+                return element;
               }
             }
           }
         }
       }
       if (arg3) {
-        let channel = null;
-        if (null != id) {
-          channel = channel.getChannel(id);
+        channel = null;
+        if (null != id2) {
+          channel = channel.getChannel(id2);
         }
         if (null == channel) {
           return null;
@@ -67,10 +63,10 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
           if (channel.isPrivate()) {
             let recipients = channel.recipients;
           } else {
-            members = members.getMembers(throwTypeErrorResult);
+            members = members.getMembers(id);
             recipients = members.map((userId) => userId.userId);
           }
-          const mapped = recipients.map((arg0) => user.getUser(arg0));
+          const mapped = recipients.map((item) => user.getUser(item));
           const found = mapped.filter((username) => {
             let tmp = undefined !== username;
             if (tmp) {
@@ -101,76 +97,68 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceInclude
           });
           if (1 === found.length) {
             const first1 = found[0];
-            if (callback4(first, tmp3, first1, { requireExact: true })) {
-              obj = { type: "userMention", userId: null, children: null };
-              obj[1] = first1.id;
+            if (closure_18(first, tmp3, first1, { requireExact: true })) {
+              const element1 = { type: "userMention", userId: first1.id, children: null };
               const items1 = [{ text: "" }];
-              obj[2] = items1;
-              return obj;
+              element1.children = items1;
+              return element1;
             }
           }
         }
       }
       return null;
-    })(text, throwTypeErrorResult, id, tmp, tmp2);
+    })(text, id, id2, tmp, tmp2);
   } else if (":" === first) {
-    const EMOJI_NAME_RE = parseRawEmojiObjectDefault.EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = UnicodeEmojisDefault.EMOJI_NAME_RE;
     const match = EMOJI_NAME_RE.exec(text);
     let tmp7 = null;
     if (null != match) {
-      disambiguatedEmojiContext = disambiguatedEmojiContext.getDisambiguatedEmojiContext(throwTypeErrorResult);
+      const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(id);
       const customEmoji = disambiguatedEmojiContext.getCustomEmoji();
-      let obj2 = customEmoji.get(match[1]);
+      let obj1 = customEmoji.get(match[1]);
       let channel = null;
-      if (null != id) {
-        channel = channel.getChannel(id);
+      if (null != id2) {
+        channel = ChannelStore.getChannel(id2);
       }
       tmp7 = null;
-      if (null != obj2) {
-        obj = { emoji: null, channel: null, intention: null };
-        obj[0] = obj2;
-        obj[1] = channel;
-        obj[2] = EmojiIntention.CHAT;
+      if (null != obj1) {
+        obj = { emoji: obj1, channel, intention: EmojiIntention.CHAT };
         tmp7 = null;
         if (!tmp4Result.isEmojiFiltered(obj)) {
-          obj = { emojiId: null, name: null, animated: null, jumboable: false };
-          obj[0] = obj2.id;
-          if (!("require_colons" in obj2)) {
-            obj1 = { type: "customEmoji", emoji: null, children: null };
-            obj[1] = obj2.name;
-            obj[2] = true === obj2.animated;
-            obj1[1] = obj;
+          obj = { emojiId: obj1.id, name: null, animated: null, jumboable: false };
+          if (!("require_colons" in obj1)) {
+            let element = { type: "customEmoji", emoji: null, children: null };
+            obj.name = obj1.name;
+            obj.animated = true === obj1.animated;
+            element.emoji = obj;
             obj = [];
-            obj2 = { text: "" };
-            obj[0] = obj2;
-            obj1[2] = obj;
+            obj1 = { text: "" };
+            obj[0] = obj1;
+            element.children = obj;
           }
           const _HermesInternal = HermesInternal;
-          const combined = ":" + obj2.name + ":";
+          const combined = ":" + obj1.name + ":";
         }
-        tmp4Result = getEmojiUnavailableReasonDefault;
+        tmp4Result = EmojiUtilsDefault;
       }
     }
     return tmp7;
   } else if ("#" === first) {
-    return (function resolveChannel(arr, throwTypeErrorResult) {
-      if (null == throwTypeErrorResult) {
+    return (function resolveChannel(arr, id) {
+      if (null == id) {
         return null;
       } else {
         if (arr.length > 3) {
           if ("\"" === arr[1]) {
-            let num = 1;
-            textChannelNameDisambiguations = textChannelNameDisambiguations.getTextChannelNameDisambiguations(throwTypeErrorResult);
-            num = callback2(11).keys(textChannelNameDisambiguations);
+            textChannelNameDisambiguations = textChannelNameDisambiguations.getTextChannelNameDisambiguations(id);
+            const num = SnowflakeUtilsDefault.keys(textChannelNameDisambiguations);
             num[Symbol.iterator]();
-            const obj2 = callback2(11);
           }
-          callback(4713).unescapeChannelName(arr.slice(2, arr.length - num));
-          const obj = callback(4713);
+          useChannelName.unescapeChannelName(arr.slice(2, arr.length - num));
         }
         const substr = arr.slice(1);
       }
-    })(text, throwTypeErrorResult);
+    })(text, id);
   } else {
     return null;
   }
@@ -199,15 +187,18 @@ function matchesUser(arg0, arg1, username, requireExact) {
   }
   return tmp;
 }
-const result = require("set").fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
+let closure_8 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1074).Permissions;
+const EmojiIntention = fn(1374).EmojiIntention;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 
 export { resolvePlaintextInlineVoid };
-export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, throwTypeErrorResult, id, forceIncludeExternalGuilds) {
-  const tmp = resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, forceIncludeExternalGuilds);
+export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, id, id2, forceIncludeExternalGuilds) {
+  const tmp = resolvePlaintextInlineVoid(text, id, id2, forceIncludeExternalGuilds);
   let voidToOptionValueResult = null;
   if (null != tmp) {
-    voidToOptionValueResult = createEmptyState.voidToOptionValue(tmp);
-    const obj = createEmptyState;
+    voidToOptionValueResult = SlateUtils.voidToOptionValue(tmp);
   }
   return voidToOptionValueResult;
 };

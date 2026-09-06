@@ -1,43 +1,29 @@
-// === Module 15324: toggle ===
+// === Module 15324: FavoritesGuildToggleSetting ===
 
-// Module 15324 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3225 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import getNextPositionFromChannels from "getNextPositionFromChannels" /* 10223 */;
-import useFavoritesAccess from "useFavoritesAccess" /* 10224 */;
-import computeIsFavoritesGuildVisibleDefault from "computeIsFavoritesGuildVisible" /* 15325 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15324 (FavoritesGuildToggleSetting)
+import util from "util" /* 1114 */;
+import _modDef3225 from "module_3225" /* 3225 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10223 */;
+import FavoritesHooks from "FavoritesHooks" /* 10224 */;
+import useIsFavoritesGuildVisibleDefault from "useIsFavoritesGuildVisible" /* 15325 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.OT1NK5);
+    const intl = util.intl;
+    return intl.string(_modDef3225.OT1NK5);
   },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
+  parent: SettingsConstants.MobileUserSettings.APPEARANCE,
   usePredicate() {
-    return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
+    return FavoritesHooks.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },
   useValue() {
-    return computeIsFavoritesGuildVisibleDefault(false);
+    return useIsFavoritesGuildVisibleDefault(false);
   },
-  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings
+  onValueChange: FavoritesActionCreators.setFavoritesGuildVisibilityFromSettings
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.OT1NK5);
-  },
-  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
-  usePredicate() {
-    return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
-  },
-  useValue() {
-    return computeIsFavoritesGuildVisibleDefault(false);
-  },
-  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx");
 
 export default toggle;

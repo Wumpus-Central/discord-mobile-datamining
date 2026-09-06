@@ -1,11 +1,11 @@
 // === Module 13207: createActivityMessageEmbed ===
 
 // Module 13207 (createActivityMessageEmbed)
-import set from "set" /* 2 */;
 import createAppMessageEmbed from "createAppMessageEmbed" /* 11940 */;
-import fetchCustomActivityLink from "fetchCustomActivityLink" /* 12940 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
+const CustomActivityLinkUtils = tmp(12940);
+const result = size.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
   app = app.app;
@@ -19,7 +19,7 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
     if (null == linkId) {
       return appMessageEmbed;
     } else {
-      const orFetchCustomActivityLink = fetchCustomActivityLink.getOrFetchCustomActivityLink(app.id, linkId);
+      const orFetchCustomActivityLink = CustomActivityLinkUtils.getOrFetchCustomActivityLink(app.id, linkId);
       let tmp8 = null;
       if (null != orFetchCustomActivityLink) {
         obj = {};
@@ -38,5 +38,4 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       return tmp8;
     }
   }
-  const tmp = require;
 };

@@ -1,9 +1,9 @@
 // === Module 13672: rateLimit ===
 
 // Module 13672 (rateLimit)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/rateLimit.tsx");
+const result = size.fileFinishedImporting("lib/rateLimit.tsx");
 
 export default function rateLimit(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -18,13 +18,13 @@ export default function rateLimit(arg0, arg1, arg2) {
       clearTimeout(timeout);
       timeout = null;
     }
-    let arr2 = arr;
-    if (arr.length > 0) {
+    let arr2 = closure_4;
+    if (closure_4.length > 0) {
       arr2 = tmp4;
       if (tmp4[0] <= timestamp) {
-        arr = arr.shift();
-        arr2 = arr;
-        while (arr.length > 0) {
+        closure_4.shift();
+        arr2 = closure_4;
+        while (closure_4.length > 0) {
           arr2 = tmp5;
           if (tmp5[0] > timestamp) {
             break;
@@ -33,13 +33,13 @@ export default function rateLimit(arg0, arg1, arg2) {
       }
     }
     if (arr2.length < items) {
-      arr = arr2.push(timestamp + closure_1);
+      arr2.push(timestamp + closure_1);
       const items1 = [];
       HermesBuiltin.arraySpread(items, 0);
       HermesBuiltin.apply(items1, undefined);
     } else {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(() => closure_1_5(...items), arr2[0] - timestamp);
+      timeout = setTimeout(() => wrapper(...items), arr2[0] - timestamp);
     }
   }
   return wrapper;

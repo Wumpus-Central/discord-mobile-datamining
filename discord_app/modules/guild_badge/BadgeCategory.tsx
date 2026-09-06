@@ -1,13 +1,13 @@
 // === Module 8742: BadgeCategory ===
 
 // Module 8742 (BadgeCategory)
-import set from "set" /* 2 */;
-import GuildVisibility from "GuildVisibility" /* 8743 */;
+import GuildTraits from "GuildTraits" /* 8743 */;
+import size from "module_2" /* 2 */;
 
-const obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
-const result = set.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
+const BadgeCategory = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
+const result = size.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
 
-export const BadgeCategory = obj;
+export { BadgeCategory };
 export const getBadgeCategory = function getBadgeCategory(guildTraits) {
   if (guildTraits.staff) {
     let DISCOVERABLE = obj.STAFF;
@@ -23,7 +23,7 @@ export const getBadgeCategory = function getBadgeCategory(guildTraits) {
       DISCOVERABLE = obj.PARTNERED;
     } else {
       if (guildTraits.community) {
-        if (guildTraits.visibility === GuildVisibility.GuildVisibility.PUBLIC) {
+        if (guildTraits.visibility === GuildTraits.GuildVisibility.PUBLIC) {
           DISCOVERABLE = obj.DISCOVERABLE;
         }
       }

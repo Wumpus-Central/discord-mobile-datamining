@@ -1,41 +1,41 @@
 // === Module 17855: StreamFullAlert ===
 
 // Module 17855 (StreamFullAlert)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import mapped from "mapped" /* 9110 */;
-import registerAssetDefault from "registerAsset" /* 17856 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import AVError from "AVError" /* 9110 */;
+import _modDef17856 from "module_17856" /* 17856 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+require = fn;
+const Image = fn(17).Image;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = { image: { alignSelf: "center", marginTop: 32 }, body: { marginTop: 16 } };
-const result = require("set").fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
 
 export default function StreamFullAlert(arg0) {
-  let obj = mapped;
-  const errorInfo = obj.getErrorInfo(mapped.AVError.STREAM_FULL);
+  let obj = AVError;
+  const errorInfo = obj.getErrorInfo(AVError.AVError.STREAM_FULL);
   let errorCode;
   if (errorInfo != null) {
     errorCode = errorInfo.errorCode;
   }
   const intl = tmp(1114).intl;
   obj = {};
-  const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t.ejOT95, { errorCode });
+  const formatToPlainStringResult = intl.formatToPlainString(util.t.ejOT95, { errorCode });
   const merged = Object.assign(arg0);
   const intl2 = tmp(1114).intl;
-  obj.title = intl2.string(getSystemLocale.t.GzjdO5);
+  obj.title = intl2.string(util.t.GzjdO5);
   obj = { variant: "text-md/normal", style: closure_6.body, children: null };
   const intl3 = tmp(1114).intl;
-  obj[2] = intl3.string(getSystemLocale.t.VVZDBL);
-  const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
-  obj1 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
-  const tmp6 = componentDidMountDefault;
-  items[2] = callback(Image, { source: registerAssetDefault, style: closure_6.image });
+  obj.children = intl3.string(util.t.VVZDBL);
+  const items = [React4(Text_Text.Text, obj), React4(Text_Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
+  const obj1 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
+  const tmp6 = common_AlertDefault;
+  items[2] = React4(Image, { source: _modDef17856, style: closure_6.image });
   obj.children = items;
-  return callback2(tmp6, obj);
+  return hasOwnProperty(tmp6, obj);
 };

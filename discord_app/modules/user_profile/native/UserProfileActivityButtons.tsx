@@ -1,52 +1,60 @@
-// === Module 13032: JoinActivityButton ===
+// === Module 13032: UserProfileActivityButtons ===
 
-// Module 13032 (JoinActivityButton)
-import noopAll from "noop" /* 19 */;
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Button from "Button" /* 1178 */;
-import Button2 from "Button" /* 4975 */;
-import contextDefault from "context" /* 7162 */;
-import _isStreamingDefault from "_isStreaming" /* 8259 */;
+// Module 13032 (UserProfileActivityButtons)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import native from "native" /* 1178 */;
+import LinkingDefault from "Linking" /* 4255 */;
+import RootNavigationRef from "RootNavigationRef" /* 4418 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
+import isStreamingDefault from "isStreaming" /* 8259 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
+import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 9533 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11765 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 13033 */;
+import getActivityJoinabilityDefault from "getActivityJoinability" /* 13034 */;
 import getStreamURLDefault from "getStreamURL" /* 13036 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "participantFromServer" /* 1956 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "set" /* 5281 */;
-import closure_7 from "handleInviteData" /* 4480 */;
-import closure_8 from "createGuildRecordFromRust" /* 1979 */;
-import closure_9 from "updateActivities" /* 11457 */;
-import closure_10 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_11 from "markAllUserIdListsStale" /* 4209 */;
-import closure_12 from "handleConnectionOpen" /* 2011 */;
-import closure_13 from "filterPlayingActivities" /* 5279 */;
-import closure_14 from "updateVoiceState" /* 4579 */;
-import ME from "ME" /* 1074 */;
-import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 8340 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import LocalActivityStore from "LocalActivityStore" /* 11457 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
+import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
-require = arg1;
-noopAll;
-({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = ME);
-({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SPOTIFY_APP_PROTOCOL);
-createCacheKey = { icon: null };
-createCacheKey = { tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
-createCacheKey[0] = createCacheKey;
-let closure_20 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityButtons.tsx");
+require = fn;
+const Constants = fn(1074);
+({ PlatformTypes: closure_15, UserSettingsSections: closure_16 } = Constants);
+const SpotifyConstants = fn(8340);
+({ SpotifyEndpoints: closure_17, SpotifyResourceTypes: closure_18 } = SpotifyConstants);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { icon: null };
+createStyles = { tintColor: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT };
+createStyles.icon = createStyles;
+let closure_20 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileActivityButtons.tsx");
 
 export const JoinActivityButton = function JoinActivityButton(user) {
   user = user.user;
   ({ currentUser: importDefault, activity } = user);
   const application = user.application;
   const onAction = user.onAction;
-  let analyticsLocations;
-  let embeddedActivityLocationChannelId;
+  let channelId;
   closure_7 = undefined;
   let JOINED = activity;
-  analyticsLocations = importDefault(activity[18])().analyticsLocations;
+  const analyticsLocations = require("useAnalyticsLocations")().analyticsLocations;
   let id;
   if (application != null) {
     id = application.id;
@@ -57,14 +65,14 @@ export const JoinActivityButton = function JoinActivityButton(user) {
   if (embeddedActivityForUserId != null) {
     _location = embeddedActivityForUserId.location;
   }
-  embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
+  channelId = obj.getEmbeddedActivityLocationChannelId(_location);
   let tmp5Result = tmp5(JOINED[20]);
-  closure_7 = tmp5Result.useStateFromStores([], () => closure_1_1(activity[21])({ channelId: closure_6, userId: user.id, activity }));
+  closure_7 = tmp5Result.useStateFromStores([], () => getActivityChannelIdDefault({ channelId, userId: user.id, activity }));
   tmp5Result = tmp5(JOINED[20]);
-  const items = [analyticsLocations, closure_8, closure_7, closure_11, closure_12, closure_14, closure_10, closure_9, closure_13, onAction];
-  const stateFromStores = tmp5Result.useStateFromStores(items, () => closure_1_1(activity[22])({ isEmbedded: true, user, currentUser: closure_1, activity, application, channelId: closure_7, ChannelStore: analyticsLocations, GuildStore: closure_1_8, GuildMemberCountStore: closure_7, RelationshipStore: closure_1_11, SelectedChannelStore: closure_1_12, VoiceStateStore: closure_1_14, PermissionStore: closure_1_10, LocalActivityStore: closure_1_9, SelfPresenceStore: closure_1_13, EmbeddedActivitiesStore: onAction }));
+  const items = [analyticsLocations, GuildStore, closure_7, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, onAction];
+  const stateFromStores = tmp5Result.useStateFromStores(items, () => getActivityJoinabilityDefault({ isEmbedded: true, user, currentUser, activity, application, channelId, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore }));
   let tmp8 = null;
-  if (importDefault(JOINED[23])(activity)) {
+  if (require("isEmbeddedActivity")(activity)) {
     tmp8 = null;
     if (null != application) {
       tmp8 = null;
@@ -76,17 +84,15 @@ export const JoinActivityButton = function JoinActivityButton(user) {
           const intl = tmp5(JOINED[25]).intl;
           stringResult = intl.string(tmp5(JOINED[25]).t["4i2vj+"]);
         }
-        obj = { text: null, icon: null, variant: "active", disabled: null, onPress: null };
-        obj[0] = stringResult;
-        obj[1] = jsx(tmp5(JOINED[26]).AppsIcon, { size: "sm", color: "white" });
+        obj = { text: stringResult, icon: jsx(tmp5(JOINED[26]).AppsIcon, { size: "sm", color: "white" }), variant: "active", disabled: null, onPress: null };
         JOINED = tmp5(JOINED[22]).ActivityJoinability.JOINED;
-        obj[3] = stateFromStores === JOINED;
-        obj[4] = function onPress() {
+        obj.disabled = stateFromStores === JOINED;
+        obj.onPress = function onPress() {
           onAction({ action: "PRESS_JOIN_BUTTON" });
-          closure_1_1(activity[27])({ applicationId: application.id, activityChannelId: closure_7, locationObject: {}, analyticsLocations });
-          closure_1_1(activity[28]).hideAllActionSheets();
+          handleJoinEmbeddedActivityDefault({ applicationId: application.id, activityChannelId, locationObject: {}, analyticsLocations });
+          ActionSheetActionCreatorsDefault.hideAllActionSheets();
         };
-        jsx(tmp5(JOINED[24]).Button, { text: null, icon: null, variant: "active", disabled: null, onPress: null });
+        jsx(tmp5(JOINED[24]).Button, { text: stringResult, icon: jsx(tmp5(JOINED[26]).AppsIcon, { size: "sm", color: "white" }), variant: "active", disabled: null, onPress: null });
       }
     }
   }
@@ -95,14 +101,13 @@ export const JoinActivityButton = function JoinActivityButton(user) {
 export const JoinGameActivityButton = function JoinGameActivityButton(onAction) {
   ({ user: require, currentUser: importDefault, activity: dependencyMap, application } = onAction);
   onAction = onAction.onAction;
-  let analyticsLocations;
-  closure_6 = undefined;
+  application = undefined;
   let JOINED = dependencyMap;
-  analyticsLocations = contextDefault().analyticsLocations;
-  closure_6 = { id: application.id, deeplink_uri: application.deepLinkUri };
-  let obj = defaultAreStatesEqual;
-  const items = [analyticsLocations, closure_8, closure_7, closure_11, closure_12, closure_14, closure_10, closure_9, closure_13, onAction];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_1(closure_1_2[22])({ user: closure_0, currentUser: closure_1, activity: closure_2, application, channelId: null, isEmbedded: false, ChannelStore: analyticsLocations, GuildStore: closure_1_8, GuildMemberCountStore: closure_1_7, RelationshipStore: closure_1_11, SelectedChannelStore: closure_1_12, VoiceStateStore: closure_1_14, PermissionStore: closure_1_10, LocalActivityStore: closure_1_9, SelfPresenceStore: closure_1_13, EmbeddedActivitiesStore: onAction }));
+  const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
+  application = { id: application.id, deeplink_uri: application.deepLinkUri };
+  let obj = useStateFromStores;
+  const items = [analyticsLocations, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, onAction];
+  const stateFromStores = obj.useStateFromStores(items, () => getActivityJoinabilityDefault({ user, currentUser, activity: session_id, application, channelId: null, isEmbedded: false, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, PermissionStore, LocalActivityStore, SelfPresenceStore, EmbeddedActivitiesStore }));
   let tmp3 = null;
   if (null != application) {
     tmp3 = null;
@@ -114,51 +119,42 @@ export const JoinGameActivityButton = function JoinGameActivityButton(onAction) 
         const intl = tmp(1114).intl;
         stringResult = intl.string(tmp(1114).t.VJlc0S);
       }
-      obj = { text: null, variant: "active", disabled: null, onPress: null };
-      obj[0] = stringResult;
+      obj = { text: stringResult, variant: "active", disabled: null, onPress: null };
       JOINED = tmp(13034).ActivityJoinability.JOINED;
-      obj[2] = stateFromStores === JOINED;
-      obj[3] = function onPress() {
+      obj.disabled = stateFromStores === JOINED;
+      obj.onPress = function onPress() {
         onAction({ action: "PRESS_JOIN_BUTTON" });
-        let obj = closure_1_1(closure_1_2[29]);
-        obj = { userId: id.id, sessionId: session_id.session_id, application: closure_6, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations };
+        const obj = { userId: user.id, sessionId: session_id.session_id, application, channelId: null, messageId: null, applicationActivity: session_id, source: "UserProfile", analyticsLocations };
         const joined = obj.join(obj);
-        closure_1_1(closure_1_2[28]).hideAllActionSheets();
+        ActionSheetActionCreatorsDefault.hideAllActionSheets();
       };
-      jsx(tmp(4975).Button, { text: null, variant: "active", disabled: null, onPress: null });
-      const tmp6 = jsx;
+      jsx(tmp(4975).Button, { text: stringResult, variant: "active", disabled: null, onPress: null });
     }
   }
   return tmp3;
 };
 export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
-  let sync_id;
-  sync_id = activity.sync_id;
+  const sync_id = activity.sync_id;
   let tmp4 = null;
   if (sync_id(10891)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };
-      const intl = getSystemLocale.intl;
-      obj = { platform: null };
-      obj[0] = activity.name;
-      obj[0] = intl.formatToPlainString(getSystemLocale.t.LEgD7t, obj);
-      obj = { size: null, source: null, disableColor: true, style: null };
-      obj[0] = Button.Icon.Sizes.SMALL;
-      obj[1] = sync_id(8142);
-      obj[3] = tmp.icon;
-      obj[1] = jsx(Button.Icon, { size: null, source: null, disableColor: true, style: null });
-      obj[3] = callback(function*() {
+      const intl = util.intl;
+      obj = { platform: activity.name };
+      obj.text = intl.formatToPlainString(util.t.LEgD7t, obj);
+      obj = { size: native.Icon.Sizes.SMALL, source: sync_id(8142), disableColor: true, style: tmp.icon };
+      obj.icon = jsx(native.Icon, { size: native.Icon.Sizes.SMALL, source: sync_id(8142), disableColor: true, style: tmp.icon });
+      obj.onPress = asyncGeneratorStep(async (arg0, value) => {
         if (c5 === 2) {
           c5 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp6 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            let obj = { value, done: true };
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
@@ -169,23 +165,20 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
             if (0 === c4) {
               if (arg0 === 1) {
                 c5 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
-                closure_1 = tmp3;
                 closure_0 = tmp7;
-                closure_0 = undefined;
-                closure_1_0({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" });
+                closure_128_0 = undefined;
+                require({ action: "PRESS_PLAY_ON_SPOTIFY_BUTTON" });
                 c3 = 1;
-                let obj2 = closure_1_0(closure_1_2[33]);
+                let obj2 = closure_0(tmp22[33]);
                 c4 = 2;
                 c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj2.canOpenSpotifyUrl();
+                const obj1 = { value: obj2.canOpenSpotifyUrl(), done: false };
                 return obj1;
               }
             } else if (1 === tmp7) {
@@ -194,28 +187,26 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
               return { value: "HermesInternal", done: null };
             } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              obj2 = { value: null, done: true };
-              obj2[0] = arg1;
+              obj2 = { value, done: true };
               return obj2;
             } else {
-              closure_0 = arg1;
-              const obj7 = closure_1_0(closure_1_2[33]);
-              if (closure_0) {
-                obj7.openUrl(closure_0, closure_1_18.TRACK, closure_1);
+              closure_128_0 = value;
+              const obj7 = closure_0(tmp22[33]);
+              if (closure_128_0) {
+                obj7.openUrl(closure_128_0, constants2.TRACK, closure_129_1);
               } else {
                 obj7.attributeInstall();
-                obj = closure_1_1(closure_1_2[34]);
-                obj.openURL(closure_1_17.APP_STORE);
+                obj = tmp3(tmp22[34]);
+                obj.openURL(constants.APP_STORE);
               }
               c3 = 0;
               c5 = 3;
             }
           } catch (tmp22) {
-            closure_2 = tmp22;
             if (tmp4 === c3) {
               c5 = tmp2;
               throw tmp22;
@@ -225,28 +216,27 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
           }
         }
       });
-      tmp4 = jsx(Button2.Button, { size: null, source: null, disableColor: true, style: null });
+      tmp4 = jsx(components_Button_Button.Button, { size: native.Icon.Sizes.SMALL, source: sync_id(8142), disableColor: true, style: tmp.icon });
     }
   }
   return tmp4;
 };
 export const WatchActivityButton = function WatchActivityButton(arg0) {
   ({ activity, onAction: require } = arg0);
-  importDefault = undefined;
   const tmp2 = getStreamURLDefault(activity);
   importDefault = tmp2;
   let tmp3 = null;
-  if (_isStreamingDefault(activity)) {
+  if (isStreamingDefault(activity)) {
     tmp3 = null;
     if (null != tmp2) {
       const obj = { text: null, variant: "secondary", onPress: null };
-      const intl = getSystemLocale.intl;
-      obj[0] = intl.string(getSystemLocale.t.I6JG46);
-      obj[2] = function onPress() {
-        callback({ action: "PRESS_WATCH_BUTTON" });
-        callback2(closure_1_2[34]).openURL(callback2);
+      const intl = util.intl;
+      obj.text = intl.string(util.t.I6JG46);
+      obj.onPress = function onPress() {
+        require({ action: "PRESS_WATCH_BUTTON" });
+        LinkingDefault.openURL(closure_1);
       };
-      tmp3 = jsx(Button2.Button, { text: null, variant: "secondary", onPress: null });
+      tmp3 = jsx(components_Button_Button.Button, { text: null, variant: "secondary", onPress: null });
     }
   }
   return tmp3;
@@ -255,17 +245,17 @@ export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
   channel = channel.channel;
   ({ isInChannel, onAction: importDefault } = channel);
   let newestAnalyticsLocation;
-  c3 = undefined;
-  newestAnalyticsLocation = importDefault(newestAnalyticsLocation[18])().newestAnalyticsLocation;
+  let v7hwn2A = newestAnalyticsLocation;
+  newestAnalyticsLocation = require("useAnalyticsLocations")().newestAnalyticsLocation;
   const isGuildStageVoiceResult = channel.isGuildStageVoice();
   c3 = isGuildStageVoiceResult;
   const isDMResult = channel.isDM();
   if (isInChannel) {
     if (!isDMResult) {
       if (!channel.isGroupDM()) {
-        const intl3 = tmp3(_7hwn2A[25]).intl;
+        const intl3 = tmp4(v7hwn2A[25]).intl;
         const string2 = intl3.string;
-        const t2 = tmp3(_7hwn2A[25]).t;
+        const t2 = tmp4(v7hwn2A[25]).t;
         if (isGuildStageVoiceResult) {
           let string2Result = string2(t2.Acqcot);
         } else {
@@ -273,34 +263,32 @@ export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
         }
       }
     }
-    const intl4 = tmp3(_7hwn2A[25]).intl;
-    string2Result = intl4.string(_7hwn2A);
+    const intl4 = tmp4(v7hwn2A[25]).intl;
+    v7hwn2A = tmp4(v7hwn2A[25]).t["7hwn2A"];
+    string2Result = intl4.string(v7hwn2A);
   } else {
     if (!isDMResult) {
       if (!channel.isGroupDM()) {
-        const intl = tmp3(_7hwn2A[25]).intl;
+        const intl = tmp4(v7hwn2A[25]).intl;
         const string = intl.string;
-        const t = tmp3(_7hwn2A[25]).t;
+        const t = tmp4(v7hwn2A[25]).t;
         if (isGuildStageVoiceResult) {
           let stringResult = string(t["7vb2cc"]);
         } else {
           stringResult = string(t["96ANUN"]);
         }
       }
-      let obj = { text: null, variant: null, grow: true, onPress: null };
-      obj[0] = stringResult;
+      let obj = { text: stringResult, variant: null, grow: true, onPress: null };
       let str = "active";
       if (isInChannel) {
         str = "secondary";
       }
-      obj[1] = str;
-      obj[3] = function onPress() {
-        callback({ action: "PRESS_JOIN_CALL_BUTTON" });
-        closure_1_1(newestAnalyticsLocation[28]).hideAllActionSheets();
-        const obj = closure_1_1(newestAnalyticsLocation[28]);
-        closure_1_1(newestAnalyticsLocation[37]).popAll();
-        const obj2 = closure_1_1(newestAnalyticsLocation[37]);
-        const rootNavigationRef = channel(newestAnalyticsLocation[38]).getRootNavigationRef();
+      obj.variant = str;
+      obj.onPress = function onPress() {
+        closure_1_1({ action: "PRESS_JOIN_CALL_BUTTON" });
+        ActionSheetActionCreatorsDefault.hideAllActionSheets();
+        ModalActionCreatorsDefault.popAll();
+        const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
         let isReadyResult;
         if (rootNavigationRef != null) {
           isReadyResult = rootNavigationRef.isReady();
@@ -318,17 +306,17 @@ export const VoiceChannelButtons = function VoiceChannelButtons(channel) {
           rootNavigationRef.goBack();
         }
         if (c3) {
-          let tmp5Result = tmp5(tmp2[39]);
+          let tmp5Result = tmp5(8393);
           tmp5Result.connectAndOpen(channel);
         } else {
-          tmp5Result = tmp5(tmp2[40]);
+          tmp5Result = tmp5(4767);
           tmp5Result.openGuildVoiceModal(channel, newestAnalyticsLocation);
         }
       };
-      return jsx(channel(newestAnalyticsLocation[24]).Button, { text: null, variant: null, grow: true, onPress: null });
+      return jsx(channel(newestAnalyticsLocation[24]).Button, { text: stringResult, variant: null, grow: true, onPress: null });
     }
-    const intl2 = tmp3(_7hwn2A[25]).intl;
-    stringResult = intl2.string(tmp3(_7hwn2A[25]).t.ozoE2A);
+    const intl2 = tmp4(v7hwn2A[25]).intl;
+    stringResult = intl2.string(tmp4(v7hwn2A[25]).t.ozoE2A);
   }
 };
 export const ConnectPlatformButton = function ConnectPlatformButton(type) {
@@ -338,42 +326,40 @@ export const ConnectPlatformButton = function ConnectPlatformButton(type) {
   c3 = undefined;
   newestAnalyticsLocation = onAction(newestAnalyticsLocation[18])().newestAnalyticsLocation;
   let obj = type(newestAnalyticsLocation[20]);
-  const items = [closure_6];
-  if (obj.useStateFromStores(items, () => null != closure_1_6.getAccount(null, type))) {
+  const items = [ConnectedAccountsStore];
+  if (obj.useStateFromStores(items, () => null != ConnectedAccountsStore.getAccount(null, type))) {
     return null;
   } else {
-    const value = tmp2(tmp3[41]).get(type);
+    value = tmp2(tmp3[41]).get(type);
     c3 = value;
     obj = { text: null, icon: null, variant: "secondary", onPress: null };
     const intl = tmp4(tmp3[25]).intl;
-    obj = { platform: null };
-    obj[0] = value.name;
-    obj[0] = intl.formatToPlainString(tmp4(tmp3[25]).t.XWSHTb, obj);
-    obj1 = { size: null, source: null, disableColor: true, style: null };
-    obj1[0] = tmp4(tmp3[31]).Icon.Sizes.SMALL;
+    obj = { platform: value.name };
+    obj.text = intl.formatToPlainString(tmp4(tmp3[25]).t.XWSHTb, obj);
+    const obj1 = { size: tmp4(tmp3[31]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null };
     const tmp2Result = tmp2(tmp3[41]);
-    obj1[1] = tmp4(tmp3[42]).makeSource(value.icon.whitePNG);
-    obj1[3] = tmp.icon;
-    obj[1] = jsx(tmp4(tmp3[31]).Icon, { size: null, source: null, disableColor: true, style: null });
-    obj[3] = function onPress() {
+    obj1.source = tmp4(tmp3[42]).makeSource(value.icon.whitePNG);
+    obj1.style = tmp.icon;
+    obj.icon = jsx(tmp4(tmp3[31]).Icon, { size: tmp4(tmp3[31]).Icon.Sizes.SMALL, source: null, disableColor: true, style: null });
+    obj.onPress = function onPress() {
       let str = "PRESS_CONNECT_XBOX_BUTTON";
-      if (type === closure_1_15.PLAYSTATION) {
+      if (type === constants.PLAYSTATION) {
         str = "PRESS_CONNECT_PLAYSTATION_BUTTON";
       }
       onAction({ action: str });
-      onAction(newestAnalyticsLocation[43])({
+      authorizeConnectionDefault({
         platformType: _undefined.type,
         location: newestAnalyticsLocation,
         onClose() {
-          let obj = callback(table[44]);
-          obj = { screen: constants.CONNECTIONS };
+          type(newestAnalyticsLocation[44]);
+          const obj = { screen: constants.CONNECTIONS };
           return obj.openUserSettings(obj);
         }
       });
     };
-    return jsx(tmp4(tmp3[24]).Button, { platform: null });
+    return jsx(tmp4(tmp3[24]).Button, { platform: value.name });
   }
-  tmp = callback2();
+  tmp = closure_20();
   tmp2 = onAction;
 };
 export const CustomActivityButton = function CustomActivityButton(index) {
@@ -391,119 +377,224 @@ export const CustomActivityButton = function CustomActivityButton(index) {
       } else {
         stringResult = activity.buttons[index];
       }
-      obj = { text: null, variant: "secondary", onPress: null };
-      obj[0] = stringResult;
-      obj[2] = onAction(function*() {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp6 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
+      obj = {
+        text: stringResult,
+        variant: "secondary",
+        onPress: onAction(function*(arg0, value) {
+              if (c5 === 2) {
                 c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp3;
-                closure_0 = tmp7;
-                closure_0 = undefined;
-                closure_1 = undefined;
-                closure_2 = undefined;
-                let v0;
-                v0({ action: "PRESS_CUSTOM_BUTTON" });
-                v0 = 1;
-                c4 = 2;
-                c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_0(closure_1_2[46]).getMetadata(closure_1_1, closure_1_0.id);
-                return obj1;
-              }
-            } else {
-              if (1 === tmp7) {
-                v0 = 0;
-                c5 = 3;
-              } else if (arg0 === 1) {
-                c5 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v0 = 0;
-                c5 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
-                return obj2;
-              } else {
-                closure_0 = arg1;
-                if (closure_0.button_urls.length <= closure_2) {
-                  v0 = 0;
-                  c5 = 3;
-                  return { value: "HermesInternal", done: null };
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp6 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  let obj = { value, done: true };
+                  return obj;
                 } else {
-                  closure_1 = closure_0.button_urls[closure_2];
-                  if (typeof closure_1 !== "string") {
-                    v0 = 0;
+                  return { value: "HermesInternal", done: null };
+                }
+              } else {
+                try {
+                  c5 = 2;
+                  if (0 === c4) {
+                    if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c5 = 3;
+                      obj = { value, done: true };
+                      return obj;
+                    } else {
+                      id = tmp7;
+                      closure_128_0 = undefined;
+                      closure_128_1 = undefined;
+                      closure_128_2 = undefined;
+                      closure_128_3 = undefined;
+                      onAction({ action: "PRESS_CUSTOM_BUTTON" });
+                      c3 = 1;
+                      c4 = 2;
+                      c5 = 1;
+                      let obj1 = { value: id(tmp20[46]).getMetadata(activity, id.id), done: false };
+                      return obj1;
+                    }
+                  } else {
+                    if (1 === tmp7) {
+                      c3 = 0;
+                      c5 = 3;
+                    } else if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 0;
+                      c5 = 3;
+                      const obj2 = { value, done: true };
+                      return obj2;
+                    } else {
+                      closure_128_0 = value;
+                      if (closure_128_0.button_urls.length <= closure_129_2) {
+                        c3 = 0;
+                        c5 = 3;
+                        return { value: "HermesInternal", done: null };
+                      } else {
+                        closure_128_1 = closure_128_0.button_urls[closure_129_2];
+                        if (typeof closure_128_1 !== "string") {
+                          c3 = 0;
+                          c5 = 3;
+                          return { value: "HermesInternal", done: null };
+                        } else {
+                          closure_128_2 = tmp3(tmp20[47]).safeParseWithQuery(closure_128_1);
+                          let protocol;
+                          if (closure_128_2 != null) {
+                            protocol = closure_128_2.protocol;
+                          }
+                          if (null != protocol) {
+                            let hostname;
+                            if (closure_128_2 != null) {
+                              hostname = closure_128_2.hostname;
+                            }
+                            if (null != hostname) {
+                              obj = tmp3(tmp20[47]);
+                              closure_128_3 = obj.format(closure_128_2);
+                              obj1 = id(tmp20[48]);
+                              const obj3 = {
+                                href: closure_128_3,
+                                onConfirm() {
+                                                  return closure_1(closure_2[34]).openURL(closure_1_3);
+                                                },
+                                trusted: false
+                              };
+                              obj1.handleClick(obj3);
+                              c3 = 0;
+                            }
+                          }
+                          const obj8 = tmp3(tmp20[47]);
+                        }
+                      }
+                    }
+                    c3 = 0;
                     c5 = 3;
                     return { value: "HermesInternal", done: null };
+                  }
+                } catch (tmp20) {
+                  if (tmp4 === c3) {
+                    c5 = tmp2;
+                    throw tmp20;
                   } else {
-                    closure_2 = closure_1_1(closure_1_2[47]).safeParseWithQuery(closure_1);
-                    let protocol;
-                    if (closure_2 != null) {
-                      protocol = closure_2.protocol;
-                    }
-                    if (null != protocol) {
-                      let hostname;
-                      if (closure_2 != null) {
-                        hostname = closure_2.hostname;
-                      }
-                      if (null != hostname) {
-                        obj = closure_1_1(closure_1_2[47]);
-                        v0 = obj.format(closure_2);
-                        obj1 = closure_1_0(closure_1_2[48]);
-                        const obj3 = { href: null, onConfirm: null, trusted: false };
-                        obj3[0] = v0;
-                        obj3[1] = function onConfirm() {
-                          return callback(tmp20[34]).openURL(c3);
-                        };
-                        obj1.handleClick(obj3);
-                        v0 = 0;
-                      }
-                    }
-                    const obj8 = closure_1_1(closure_1_2[47]);
+                    c4 = tmp;
                   }
                 }
               }
-              v0 = 0;
-              c5 = 3;
-              return { value: "HermesInternal", done: null };
-            }
-          } catch (tmp20) {
-            closure_2 = tmp20;
-            if (tmp4 === v0) {
-              c5 = tmp2;
-              throw tmp20;
-            } else {
-              c4 = tmp;
-            }
-          }
-        }
+            })
+      };
+      jsx(require("components/Button/Button").Button, {
+        text: stringResult,
+        variant: "secondary",
+        onPress: onAction(function*(arg0, value) {
+              if (c5 === 2) {
+                c5 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp6 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  let obj = { value, done: true };
+                  return obj;
+                } else {
+                  return { value: "HermesInternal", done: null };
+                }
+              } else {
+                try {
+                  c5 = 2;
+                  if (0 === c4) {
+                    if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c5 = 3;
+                      obj = { value, done: true };
+                      return obj;
+                    } else {
+                      id = tmp7;
+                      closure_128_0 = undefined;
+                      closure_128_1 = undefined;
+                      closure_128_2 = undefined;
+                      closure_128_3 = undefined;
+                      onAction({ action: "PRESS_CUSTOM_BUTTON" });
+                      c3 = 1;
+                      c4 = 2;
+                      c5 = 1;
+                      let obj1 = { value: id(tmp20[46]).getMetadata(activity, id.id), done: false };
+                      return obj1;
+                    }
+                  } else {
+                    if (1 === tmp7) {
+                      c3 = 0;
+                      c5 = 3;
+                    } else if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 0;
+                      c5 = 3;
+                      const obj2 = { value, done: true };
+                      return obj2;
+                    } else {
+                      closure_128_0 = value;
+                      if (closure_128_0.button_urls.length <= closure_129_2) {
+                        c3 = 0;
+                        c5 = 3;
+                        return { value: "HermesInternal", done: null };
+                      } else {
+                        closure_128_1 = closure_128_0.button_urls[closure_129_2];
+                        if (typeof closure_128_1 !== "string") {
+                          c3 = 0;
+                          c5 = 3;
+                          return { value: "HermesInternal", done: null };
+                        } else {
+                          closure_128_2 = tmp3(tmp20[47]).safeParseWithQuery(closure_128_1);
+                          let protocol;
+                          if (closure_128_2 != null) {
+                            protocol = closure_128_2.protocol;
+                          }
+                          if (null != protocol) {
+                            let hostname;
+                            if (closure_128_2 != null) {
+                              hostname = closure_128_2.hostname;
+                            }
+                            if (null != hostname) {
+                              obj = tmp3(tmp20[47]);
+                              closure_128_3 = obj.format(closure_128_2);
+                              obj1 = id(tmp20[48]);
+                              const obj3 = {
+                                href: closure_128_3,
+                                onConfirm() {
+                                                  return closure_1(closure_2[34]).openURL(closure_1_3);
+                                                },
+                                trusted: false
+                              };
+                              obj1.handleClick(obj3);
+                              c3 = 0;
+                            }
+                          }
+                          const obj8 = tmp3(tmp20[47]);
+                        }
+                      }
+                    }
+                    c3 = 0;
+                    c5 = 3;
+                    return { value: "HermesInternal", done: null };
+                  }
+                } catch (tmp20) {
+                  if (tmp4 === c3) {
+                    c5 = tmp2;
+                    throw tmp20;
+                  } else {
+                    c4 = tmp;
+                  }
+                }
+              }
+            })
       });
-      jsx(require(index[24]).Button, { text: null, variant: "secondary", onPress: null });
-      const tmp2 = jsx;
     }
   }
   return tmp;

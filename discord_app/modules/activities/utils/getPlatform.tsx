@@ -1,17 +1,17 @@
 // === Module 9410: getPlatform ===
 
 // Module 9410 (getPlatform)
-import set from "set" /* 2 */;
-import PermissionOverwriteType from "PermissionOverwriteType" /* 1894 */;
+import Server from "Server" /* 1894 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getPlatform.tsx");
 
 export default function getPlatform(arg0) {
   if ("android" === arg0) {
-    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.ANDROID;
+    return Server.EmbeddedActivitySupportedPlatforms.ANDROID;
   } else if ("ios" === arg0) {
-    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS;
+    return Server.EmbeddedActivitySupportedPlatforms.IOS;
   } else {
-    return PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB;
+    return Server.EmbeddedActivitySupportedPlatforms.WEB;
   }
 };

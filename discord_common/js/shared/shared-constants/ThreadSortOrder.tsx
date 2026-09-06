@@ -1,12 +1,10 @@
-// === Module 1966: set ===
+// === Module 1966: ThreadSortOrder ===
 
-// Module 1966 (set)
-import set from "set" /* 2 */;
+// Module 1966 (ThreadSortOrder)
+import size from "module_2" /* 2 */;
 
-const obj = { ALL: null };
-let set = new Set([0, 1]);
-obj[0] = set;
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx");
+const obj = { ALL: new Set([0, 1]) };
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx");
 
 export const ThreadSortOrder = { LATEST_ACTIVITY: 0, [0]: "LATEST_ACTIVITY", CREATION_DATE: 1, [1]: "CREATION_DATE" };
 export const ThreadSortOrderSets = obj;

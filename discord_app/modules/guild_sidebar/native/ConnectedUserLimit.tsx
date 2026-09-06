@@ -1,13 +1,13 @@
 // === Module 16119: ConnectedUserLimit ===
 
 // Module 16119 (ConnectedUserLimit)
-import noopAll from "noop" /* 19 */;
 import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9088 */;
-import _modDef16120 from "module_16120" /* 16120 */;
-import { jsx } from "jsxProd" /* 21 */;
+import VoiceChannelUserLimitDefault from "VoiceChannelUserLimit" /* 16120 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
 
 export const ConnectedUserLimit = function ConnectedUserLimit(users) {
   ({ channel, video } = users);
@@ -31,5 +31,5 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     videoLimit = num < 0 || limit < num;
     const tmp4 = num < 0 || limit < num;
   }
-  return jsx(_modDef16120, { users: users.userCount, total, videoLimit });
+  return jsx(VoiceChannelUserLimitDefault, { users: users.userCount, total, videoLimit });
 };

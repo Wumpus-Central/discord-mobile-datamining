@@ -1,17 +1,19 @@
 // === Module 16452: createICYMIStyles ===
 
 // Module 16452 (createICYMIStyles)
-import closure_2 from "noop" /* 19 */;
+import ICYMIContext from "ICYMIContext" /* 16453 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/icymi/native/createICYMIStyles.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/icymi/native/createICYMIStyles.tsx");
 
-export const createICYMIStyles = function createICYMIStyles(createCacheKey) {
-  _require = _require(4560).createStyles(createCacheKey);
+export const createICYMIStyles = function createICYMIStyles(createStyles) {
+  _require = require("createStyles").createStyles(createStyles);
   return () => {
     const items = [...arguments];
-    const useContext = closure_1_2.useContext;
-    const items1 = [useContext(callback(closure_1_1[2]).ICYMIContext), ...items];
-    return callback(...items);
+    const useContext = noop.useContext;
+    const items1 = [useContext(ICYMIContext.ICYMIContext), ...items];
+    return closure_0(...items);
   };
 };

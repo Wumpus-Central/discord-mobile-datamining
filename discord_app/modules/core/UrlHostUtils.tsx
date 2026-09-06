@@ -1,9 +1,9 @@
-// === Module 1930: getHostWithoutPort ===
+// === Module 1930: UrlHostUtils ===
 
-// Module 1930 (getHostWithoutPort)
-import set from "set" /* 2 */;
+// Module 1930 (UrlHostUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/core/UrlHostUtils.tsx");
+const result = size.fileFinishedImporting("modules/core/UrlHostUtils.tsx");
 
 export const getHostWithoutPort = function getHostWithoutPort(arg0) {
   let first;

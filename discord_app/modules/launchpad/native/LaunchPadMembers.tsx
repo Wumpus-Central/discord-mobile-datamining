@@ -1,43 +1,41 @@
-// === Module 16995: ? ===
+// === Module 16995: LaunchPadMembers ===
 
-// Module 16995
-import defaultAreStatesEqual from "defaultAreStatesEqual" /* 563 */;
-import _modDef11588 from "module_11588" /* 11588 */;
-import _modDef12186 from "module_12186" /* 12186 */;
-import _modDef16686 from "module_16686" /* 16686 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "handleConnectionOpen" /* 2011 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+// Module 16995 (LaunchPadMembers)
+import useStateFromStores from "useStateFromStores" /* 563 */;
+import GuildChannelUserListDefault from "GuildChannelUserList" /* 11588 */;
+import PrivateChannelUserListDefault from "PrivateChannelUserList" /* 12186 */;
+import ThreadChannelUserListDefault from "ThreadChannelUserList" /* 16686 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-require = arg1;
-let closure_7 = createCacheKey.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
-const memoResult = importAllResult.memo(function LaunchPadMembers() {
-  const tmp = callback();
-  let obj = defaultAreStatesEqual;
-  const items = [closure_5, closure_4];
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_7 = createStyles.createStyles({ wrapper: { minHeight: 16 }, listStyle: { flex: 0 }, emptyWrapper: { padding: 20 }, emptyText: { textAlign: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
+
+export default noop.memo(function LaunchPadMembers() {
+  const tmp = closure_7();
+  let obj = useStateFromStores;
+  const items = [SelectedChannelStore, ChannelStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     currentlySelectedChannelId = currentlySelectedChannelId.getCurrentlySelectedChannelId();
     channel = channel.getChannel(currentlySelectedChannelId);
     if (null != currentlySelectedChannelId) {
       if (null != channel) {
         if (channel.isPrivate()) {
-          let obj = { channelId: null, type: "private" };
-          obj[0] = currentlySelectedChannelId;
+          let obj = { channelId: currentlySelectedChannelId, type: "private" };
           return obj;
         } else {
           const guild_id = channel.guild_id;
           if (channel.isThread()) {
-            obj = { channelId: null, guildId: null, type: "thread" };
-            obj[0] = currentlySelectedChannelId;
-            obj[1] = guild_id;
-            obj1 = obj;
+            obj = { channelId: currentlySelectedChannelId, guildId: guild_id, type: "thread" };
+            let obj1 = obj;
           } else {
-            obj1 = { channelId: null, guildId: null, type: "guild" };
-            obj1[0] = currentlySelectedChannelId;
-            obj1[1] = guild_id;
+            obj1 = { channelId: currentlySelectedChannelId, guildId: guild_id, type: "guild" };
           }
           return obj1;
         }
@@ -46,41 +44,31 @@ const memoResult = importAllResult.memo(function LaunchPadMembers() {
     return { channelId: "call", type: "143" };
   });
   if ("private" === stateFromStoresObject.type) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.wrapper;
-    obj = { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
-    obj[0] = stateFromStoresObject.channelId;
-    obj[1] = tmp.listStyle;
-    obj[1] = jsx(_modDef12186, { channelId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
-    let tmp8 = <View channelId={null} listStyleOverride={null} disableBottomSafeZone insetEnd={20} />;
+    obj = { style: tmp.wrapper, children: null };
+    obj = { channelId: stateFromStoresObject.channelId, listStyleOverride: tmp.listStyle, disableBottomSafeZone: true, insetEnd: 20 };
+    obj.children = jsx(PrivateChannelUserListDefault, { channelId: stateFromStoresObject.channelId, listStyleOverride: tmp.listStyle, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    let tmp8 = <View channelId={stateFromStoresObject.channelId} listStyleOverride={tmp.listStyle} disableBottomSafeZone insetEnd={20} />;
   } else if ("thread" === stateFromStoresObject.type) {
-    obj1 = { style: null, children: null };
-    obj1[0] = tmp.wrapper;
+    let obj1 = { style: tmp.wrapper, children: null };
     const obj2 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
-    ({ channelId: obj5[0], guildId: obj5[1] } = stateFromStoresObject);
-    obj2[2] = tmp.listStyle;
-    obj1[1] = jsx(_modDef16686, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
-    tmp8 = <View style={null}>{null}</View>;
+    ({ channelId: obj5.channelId, guildId: obj5.guildId } = stateFromStoresObject);
+    obj2.listStyleOverride = tmp.listStyle;
+    obj1.children = jsx(ThreadChannelUserListDefault, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    tmp8 = <View style={tmp.wrapper}>{null}</View>;
   } else if ("guild" === stateFromStoresObject.type) {
-    const obj3 = { style: null, children: null };
-    obj3[0] = tmp.wrapper;
+    const obj3 = { style: tmp.wrapper, children: null };
     const obj4 = { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 };
-    ({ channelId: obj3[0], guildId: obj3[1] } = stateFromStoresObject);
-    obj4[2] = tmp.listStyle;
-    obj3[1] = jsx(_modDef11588, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
-    tmp8 = <View style={null}>{null}</View>;
+    ({ channelId: obj3.channelId, guildId: obj3.guildId } = stateFromStoresObject);
+    obj4.listStyleOverride = tmp.listStyle;
+    obj3.children = jsx(GuildChannelUserListDefault, { channelId: null, guildId: null, listStyleOverride: null, disableBottomSafeZone: true, insetEnd: 20 }, stateFromStoresObject.channelId);
+    tmp8 = <View style={tmp.wrapper}>{null}</View>;
   } else {
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp.emptyWrapper;
-    const obj6 = { style: null, variant: "text-md/semibold", children: null };
-    obj6[0] = tmp.emptyText;
+    const obj5 = { style: tmp.emptyWrapper, children: null };
+    const obj6 = { style: tmp.emptyText, variant: "text-md/semibold", children: null };
     const intl = tmp2(1114).intl;
-    obj6[2] = intl.string(tmp2(1114).t["+7wtJq"]);
-    obj5[1] = jsx(tmp2(4556).Text, { style: null, variant: "text-md/semibold", children: null });
-    tmp8 = <View style={null}>{null}</View>;
+    obj6.children = intl.string(tmp2(1114).t["+7wtJq"]);
+    obj5.children = jsx(tmp2(4556).Text, { style: tmp.emptyText, variant: "text-md/semibold", children: null });
+    tmp8 = <View style={tmp.emptyWrapper}>{null}</View>;
   }
   return tmp8;
 });
-const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadMembers.tsx");
-
-export default memoResult;

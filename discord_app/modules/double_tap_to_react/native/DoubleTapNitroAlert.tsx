@@ -1,53 +1,54 @@
 // === Module 7974: DoubleTapNitroAlert ===
 
 // Module 7974 (DoubleTapNitroAlert)
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getAlertModalItemKey from "getAlertModalItemKey" /* 4910 */;
+import util from "util" /* 1114 */;
+import AlertModal from "AlertModal" /* 4910 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import closure_2 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { NITRO_UPSELL_ALERT_KEY } from "NITRO_UPSELL_ALERT_KEY" /* 7969 */;
-import { UserSettingsSections } from "ME" /* 1074 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import openUserSettings from "openUserSettings" /* 7382 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
-let closure_10 = createCacheKey.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
-const result = require("set").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
+require = fn;
+const View = fn(17).View;
+const NITRO_UPSELL_ALERT_KEY = fn(7969).NITRO_UPSELL_ALERT_KEY;
+const UserSettingsSections = fn(1074).UserSettingsSections;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsxProd = fn(21);
+({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
+const createStyles = fn(4560);
+let closure_10 = createStyles.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapNitroAlert.tsx");
 
 export default function DoubleTapNitroAlert(emojiName) {
-  const callback = React.useCallback(() => {
-    let obj = callback(7382);
-    obj = { screen: constants.TEXT, params: obj };
+  const callback = noop.useCallback(() => {
+    let obj = { screen: constants.TEXT, params: null };
     obj = { initialSetting: constants2.DOUBLE_TAP_EMOJI };
+    obj.params = obj;
     obj.openUserSettings(obj);
   }, []);
-  const callback1 = React.useCallback(() => {
-    let obj = callback(7382);
-    obj = { screen: constants.PREMIUM };
+  const callback1 = noop.useCallback(() => {
+    const obj = { screen: constants.PREMIUM };
     obj.openUserSettings(obj, () => {
-      callback(table[8]).dismissAlert(closure_4);
+      closure_1_0(dependencyMap[8]).dismissAlert(closure_1_4);
     });
   }, []);
   let obj = { header: null, title: null, content: null, actions: null };
-  obj = { style: callback3().icon, children: callback(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
-  obj[0] = callback(View, obj);
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.string(getSystemLocale.t.HRAWfC);
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.format(getSystemLocale.t["3u/Je4"], { emojiName: emojiName.emojiName, onRenewNitro: callback1 });
+  obj = { style: closure_10().icon, children: React5(CircleErrorIcon.CircleErrorIcon, { size: "custom", style: { width: 40, height: 40 } }) };
+  obj.header = React5(View, obj);
+  const intl = util.intl;
+  obj.title = intl.string(util.t.HRAWfC);
+  const intl2 = util.intl;
+  obj.content = intl2.format(util.t["3u/Je4"], { emojiName: emojiName.emojiName, onRenewNitro: callback1 });
   obj = { children: null };
-  obj1 = { onPress: callback, text: null };
-  const intl3 = getSystemLocale.intl;
-  obj1[1] = intl3.string(getSystemLocale.t.LIIHRy);
-  const items = [callback(getAlertModalItemKey.AlertActionButton, obj1, "confirm"), ];
+  const obj1 = { onPress: callback, text: null };
+  const intl3 = util.intl;
+  obj1.text = intl3.string(util.t.LIIHRy);
+  const items = [React5(AlertModal.AlertActionButton, obj1, "confirm"), ];
   const obj2 = { variant: "secondary", text: null };
-  const intl4 = getSystemLocale.intl;
-  obj2[1] = intl4.string(getSystemLocale.t["Nr6v2+"]);
-  items[1] = callback(getAlertModalItemKey.AlertActionButton, obj2, "cancel");
-  obj[0] = items;
-  obj[3] = callback2(closure_8, obj);
-  return callback(getAlertModalItemKey.AlertModal, obj);
+  const intl4 = util.intl;
+  obj2.text = intl4.string(util.t["Nr6v2+"]);
+  items[1] = React5(AlertModal.AlertActionButton, obj2, "cancel");
+  obj.children = items;
+  obj.actions = React7(React6, obj);
+  return React5(AlertModal.AlertModal, obj);
 };

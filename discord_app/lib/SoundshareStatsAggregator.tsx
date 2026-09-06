@@ -1,9 +1,9 @@
-// === Module 4611: traceEvent ===
+// === Module 4611: SoundshareStatsAggregator ===
 
-// Module 4611 (traceEvent)
-import set2 from "set" /* 2 */;
+// Module 4611 (SoundshareStatsAggregator)
+import size from "module_2" /* 2 */;
 
-const result = set2.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
+const result = size.fileFinishedImporting("lib/SoundshareStatsAggregator.tsx");
 class SoundshareStatsAggregator {
   constructor() {
     obj = Object.create(new.target.prototype);

@@ -1,21 +1,20 @@
-// === Module 12483: handleGameServerUpsert ===
+// === Module 12483: OwnedGameServersStore ===
 
-// Module 12483 (handleGameServerUpsert)
-import set from "set" /* 2 */;
+// Module 12483 (OwnedGameServersStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import str11 from "str11" /* 4451 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GameServerConstants from "GameServerConstants" /* 4451 */;
+import size from "module_2" /* 2 */;
 
 function handleGameServerUpsert(gameServer) {
-  gameServer = gameServer.gameServer;
   gameServer = undefined;
   if (null == gameServer.guildId) {
-    if (-1 === mapped.findIndex((id) => id.id === gameServer.id)) {
+    if (-1 === closure_1.findIndex((id) => id.id === gameServer.id)) {
       const items = [];
-      items[HermesBuiltin.arraySpread(mapped, 0)] = gameServer;
-      mapped = items;
+      items[HermesBuiltin.arraySpread(closure_1, 0)] = gameServer;
+      let mapped = items;
     } else {
-      mapped = mapped.map((id) => {
+      mapped = closure_1.map((id) => {
         let tmp2 = id;
         if (id.id === gameServer.id) {
           let tmp4 = tmp;
@@ -37,10 +36,12 @@ function handleGameServerUpsert(gameServer) {
         return tmp2;
       });
     }
+    closure_1 = mapped;
   }
 }
-const GAME_SERVER_SHOP_MAX_INSTANCES = str11.GAME_SERVER_SHOP_MAX_INSTANCES;
+const GAME_SERVER_SHOP_MAX_INSTANCES = GameServerConstants.GAME_SERVER_SHOP_MAX_INSTANCES;
 let closure_1 = [];
+let maxServers = GAME_SERVER_SHOP_MAX_INSTANCES;
 const Store = initializeDefault.Store;
 class OwnedGameServersStore extends Store {
 }
@@ -49,19 +50,18 @@ prototype["getGameServers"] = function getGameServers() {
   return closure_1;
 };
 prototype["getMaxServers"] = function getMaxServers() {
-  return GAME_SERVER_SHOP_MAX_INSTANCES;
+  return maxServers;
 };
 OwnedGameServersStore.displayName = "OwnedGameServersStore";
-const ownedGameServersStore = new OwnedGameServersStore(dispatcherDefault, {
+const ownedGameServersStore = new OwnedGameServersStore(DispatcherDefault, {
   LOGOUT: function handleReset() {
     closure_1 = [];
-    closure_2 = GAME_SERVER_SHOP_MAX_INSTANCES;
+    maxServers = GAME_SERVER_SHOP_MAX_INSTANCES;
   },
   GAME_SERVER_FETCH_MY_SERVERS_SUCCESS: function handleFetchMyServersSuccess(arg0) {
     ({ gameServers, maxServers } = arg0);
     closure_1 = gameServers.map((subscription_id) => {
-      closure_0 = subscription_id;
-      const found = closure_1.find((id) => id.id === subscription_id.id);
+      const found = closure_1_1.find((id) => id.id === subscription_id.id);
       let tmp2 = subscription_id;
       if (null == subscription_id.subscription_id) {
         subscription_id = undefined;
@@ -91,6 +91,6 @@ const ownedGameServersStore = new OwnedGameServersStore(dispatcherDefault, {
     }
   }
 });
-const result = set.fileFinishedImporting("modules/game_server/OwnedGameServersStore.tsx");
+const result = size.fileFinishedImporting("modules/game_server/OwnedGameServersStore.tsx");
 
 export default ownedGameServersStore;

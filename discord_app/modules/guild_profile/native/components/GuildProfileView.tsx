@@ -1,103 +1,101 @@
-// === Module 9190: GuildProfileBackground ===
+// === Module 9190: GuildProfileView ===
 
-// Module 9190 (GuildProfileBackground)
-import ThemesDefault from "Themes" /* 576 */;
+// Module 9190 (GuildProfileView)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import map from "map" /* 4262 */;
-import isThemeLight from "isThemeLight" /* 4269 */;
-import ManaContext from "ManaContext" /* 4271 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
+import useToken from "useToken" /* 4262 */;
+import themes from "themes" /* 4269 */;
+import native from "native" /* 4271 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import useProfilePrimaryColor from "useProfilePrimaryColor" /* 9192 */;
-import stylesDefault from "styles" /* 9193 */;
-import ClickableGameIconDefault from "ClickableGameIcon" /* 9195 */;
-import TraitEmojiDefault from "TraitEmoji" /* 9202 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import guild_profile_GuildProfileUtils from "guild_profile/GuildProfileUtils" /* 9192 */;
+import GuildProfileHeaderDefault from "GuildProfileHeader" /* 9193 */;
+import GuildProfileGamesDefault from "GuildProfileGames" /* 9195 */;
+import GuildProfileTraitsDefault from "GuildProfileTraits" /* 9202 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
+require = fn;
 function GuildProfileBackground(guildProfile) {
   guildProfile = guildProfile.guildProfile;
   let obj = guildProfile(504);
-  const items = [closure_6];
+  const items = [GuildStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    let guild = closure_1_6.getGuild(guildProfile.id);
+    let guild = GuildStore.getGuild(guildProfile.id);
     if (guild == null) {
-      guild = guildProfile(closure_1_2[10]).fromGuildProfile(guildProfile);
-      const obj = guildProfile(closure_1_2[10]);
+      guild = GuildRecordUtils.fromGuildProfile(guildProfile);
     }
     const features = guild.features;
-    return features.has(closure_1_7.DISCOVERABLE);
+    return features.has(GuildFeatures.DISCOVERABLE);
   });
   if (stateFromStores) {
     if (null != guildProfile.customBanner) {
       obj = { id: null, splash: null, size: null };
-      ({ id: obj3[0], customBanner: obj3[1] } = guildProfile);
-      obj[2] = tmp3(9191)() * useWindowDimensionsDefault().width;
-      obj = { style: null, source: null };
-      obj[0] = tmp4.imageBanner;
-      obj[1] = tmp3(1396).getGuildDiscoverySplashSource(obj);
-      return callback(closure_5, obj);
+      ({ id: obj3.id, customBanner: obj3.splash } = guildProfile);
+      obj.size = tmp3(9191)() * useWindowDimensionsDefault().width;
+      obj = { style: tmp4.imageBanner, source: null };
+      obj.source = tmp3(1396).getGuildDiscoverySplashSource(obj);
+      return closure_8(closure_5, obj);
     }
   }
-  return callback(GuildProfileGradient, { guildProfile });
+  return closure_8(GuildProfileGradient, { guildProfile });
 }
 function GuildProfileGradient(guildProfile) {
-  const tmp = createCacheKey();
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOWEST);
+  const tmp = createStyles();
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
   const tmp2 = useThemeDefault();
-  const profilePrimaryColor = useProfilePrimaryColor.useProfilePrimaryColor(guildProfile.guildProfile, token);
+  const profilePrimaryColor = guild_profile_GuildProfileUtils.useProfilePrimaryColor(guildProfile.guildProfile, token);
   obj = { style: tmp.colorBanner, start: frozen.START, end: frozen.END, colors: null };
   const items = [profilePrimaryColor, ];
-  const obj2 = useProfilePrimaryColor;
-  const tmp5 = closure_8;
+  const tmp5 = React6;
   const tmp6 = LinearGradientDefault;
-  const obj4 = isThemeLight;
-  const obj5 = ManaContext;
+  const obj5 = native;
   if (isThemeDarkResult) {
     let brightenColorResult = obj5.brightenColor(profilePrimaryColor, 0.8);
   } else {
     brightenColorResult = obj5.darkenColor(profilePrimaryColor, 0.8);
   }
   items[1] = brightenColorResult;
-  obj[3] = items;
+  obj.colors = items;
   return tmp5(tmp6, obj);
 }
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
-createCacheKey = { container: null, colorBanner: null, imageBanner: null, body: null, error: null, buttonContainer: null, header: null, avatarBackground: null, restrictedAcronym: null };
-createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 140, width: "100%" };
-createCacheKey[2] = { height: 140, width: "100%", objectFit: "cover" };
-createCacheKey[3] = { marginTop: 12, paddingHorizontal: 16, gap: 16 };
-createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
-createCacheKey[5] = { marginTop: 160 };
-createCacheKey[6] = { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 };
-createCacheKey[7] = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
-createCacheKey[8] = { fontSize: 24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+const GuildFeatures = fn(1074).GuildFeatures;
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, colorBanner: null, imageBanner: null, body: null, error: null, buttonContainer: null, header: null, avatarBackground: null, restrictedAcronym: null };
+createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.container = createStyles;
+createStyles.colorBanner = { height: 140, width: "100%" };
+createStyles.imageBanner = { height: 140, width: "100%", objectFit: "cover" };
+createStyles.body = { marginTop: 12, paddingHorizontal: 16, gap: 16 };
+createStyles.error = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8 };
+createStyles.buttonContainer = { marginTop: 160 };
+createStyles.header = { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 };
+let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+createStyles.avatarBackground = size;
+createStyles.restrictedAcronym = { fontSize: 24 };
+createStyles = createStyles.createStyles(createStyles);
 const frozen = Object.freeze({ START: { x: 0, y: 1 }, END: { x: 1.5, y: 0 } });
-const obj1 = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
-const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileView.tsx");
+size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_profile/native/components/GuildProfileView.tsx");
 
 export default function GuildProfileView(guildProfile) {
   guildProfile = guildProfile.guildProfile;
-  let tmp = createCacheKey();
+  let tmp = createStyles();
   const items = [guildProfile];
   let obj = { style: tmp.container, children: null };
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     if (null == guildProfile) {
       return null;
     } else {
-      let obj = closure_1_1(closure_1_2[12]);
-      obj = { id: null, icon: null, size: 96, canAnimate: true };
-      ({ id: obj2[0], icon: obj2[1] } = tmp);
+      const obj = { id: null, icon: null, size: 96, canAnimate: true };
+      ({ id: obj2.id, icon: obj2.icon } = tmp);
       const guildIconSource = obj.getGuildIconSource(obj);
       let uri = null;
       if (typeof guildIconSource !== "number") {
@@ -107,27 +105,25 @@ export default function GuildProfileView(guildProfile) {
     }
     tmp = guildProfile;
   }, items);
-  const items1 = [callback(GuildProfileBackground, { guildProfile }), callback(stylesDefault, { profile: guildProfile, guildIconSource: memo }), ];
+  const items1 = [closure_8(GuildProfileBackground, { guildProfile }), closure_8(GuildProfileHeaderDefault, { profile: guildProfile, guildIconSource: memo }), ];
   obj = { style: tmp.body, children: null };
   let tmp5Result = null != guildProfile.description;
   if (tmp5Result) {
     tmp5Result = guildProfile.description.length > 0;
   }
   if (tmp5Result) {
-    obj = { variant: "text-md/medium", color: "text-subtle", children: null };
-    obj[2] = guildProfile.description;
+    obj = { variant: "text-md/medium", color: "text-subtle", children: guildProfile.description };
     tmp5Result = tmp5(guildProfile(4556).Text, obj);
   }
-  const items2 = [tmp5Result, callback(ClickableGameIconDefault, { profile: guildProfile }), callback(TraitEmojiDefault, { profile: guildProfile })];
-  obj[1] = items2;
+  const items2 = [tmp5Result, closure_8(GuildProfileGamesDefault, { profile: guildProfile }), closure_8(GuildProfileTraitsDefault, { profile: guildProfile })];
+  obj.children = items2;
   items1[2] = closure_9(closure_4, obj);
-  obj[1] = items1;
+  obj.children = items1;
   return closure_9(closure_4, obj);
 };
-export const getBackgroundForProfile = function getBackgroundForProfile(closure_2, token) {
+export const getBackgroundForProfile = function getBackgroundForProfile(theme, token) {
   const items = [token, ];
-  const obj = isThemeLight;
-  const obj2 = ManaContext;
+  const obj2 = native;
   if (isThemeDarkResult) {
     let brightenColorResult = obj2.brightenColor(token, 0.8);
   } else {
@@ -136,5 +132,5 @@ export const getBackgroundForProfile = function getBackgroundForProfile(closure_
   items[1] = brightenColorResult;
   return items;
 };
-export const useStyles = createCacheKey;
+export const useStyles = createStyles;
 export const DiagonalGradient = frozen;

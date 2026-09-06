@@ -1,12 +1,12 @@
-// === Module 16275: map ===
+// === Module 16275: ChannelAffinitiesV2Store ===
 
-// Module 16275 (map)
-import set from "set" /* 2 */;
+// Module 16275 (ChannelAffinitiesV2Store)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import result2 from "result" /* 16276 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ChannelAffinitiesV2Constants from "ChannelAffinitiesV2Constants" /* 16276 */;
+import size from "module_2" /* 2 */;
 
-const CHANNEL_AFFINITY_V2_TTL = result2.CHANNEL_AFFINITY_V2_TTL;
+const CHANNEL_AFFINITY_V2_TTL = ChannelAffinitiesV2Constants.CHANNEL_AFFINITY_V2_TTL;
 let map = new Map();
 let c2 = false;
 const frozen = Object.freeze({ channelAffinities: [], lastFetched: 0 });
@@ -47,7 +47,7 @@ prototype["getChannelAffinity"] = function getChannelAffinity(arg0) {
   return map.get(arg0);
 };
 prototype["compare"] = function compare(arg0, arg1) {
-  let value = map.get(arg1);
+  value = map.get(arg1);
   let num;
   if (value != null) {
     num = value.score;
@@ -94,7 +94,7 @@ obj = {
     c2 = false;
   }
 };
-const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
+const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
 
 export default channelAffinitiesV2Store;

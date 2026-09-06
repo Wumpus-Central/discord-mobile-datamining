@@ -1,8 +1,8 @@
 // === Module 569: u ===
 
 // Module 569 (u)
-import set from "set" /* 2 */;
-import u from "u" /* 570 */;
+import _mod2 from "module_2" /* 2 */;
+import u from "module_570" /* 570 */;
 
 try {
   let _Date = Date;
@@ -38,8 +38,7 @@ try {
   })();
   if (null == global.performance.timing) {
     try {
-      const obj = { navigationStart: null };
-      obj[0] = tmp4;
+      const obj = { navigationStart: tmp4 };
       global.performance.timing = obj;
     } catch (err) {
     }
@@ -50,7 +49,7 @@ try {
     } catch (err) {
     }
   }
-  const _module1 = set;
+  const _module1 = _mod2;
   const result = _module1.fileFinishedImporting("../discord_common/js/packages/performance-utils/index.js");
   exports.navigationStart = tmp4;
   exports.timeOrigin = tmp5;

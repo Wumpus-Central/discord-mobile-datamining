@@ -1,20 +1,22 @@
-// === Module 8290: ? ===
+// === Module 8290: AppFreezeStore ===
 
-// Module 8290
-import set2 from "set" /* 2 */;
-import keys from "keys" /* 560 */;
+// Module 8290 (AppFreezeStore)
+import module_560 from "module_560" /* 560 */;
+import size from "module_2" /* 2 */;
 
-let obj = keys.create((arg0) => {
+const result = size.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
+
+export default module_560.create((arg0) => {
   closure_0 = arg0;
   let obj = {
     lockKeys: new Set(),
     requestFreezeLock(arg0) {
       ({ key: closure_0, lockEnabled: closure_1 } = arg0);
-      callback(closure_1_1[1]).batchUpdates(() => {
-        closure_1_0((lockKeys) => {
+      closure_0(dependencyMap[1]).batchUpdates(() => {
+        closure_0((lockKeys) => {
           lockKeys = lockKeys.lockKeys;
-          const hasItem = lockKeys.has(closure_0);
-          if (closure_1) {
+          const hasItem = lockKeys.has(closure_1_0);
+          if (closure_1_1) {
             let tmp12 = lockKeys;
             if (!hasItem) {
               let obj = {};
@@ -45,6 +47,3 @@ let obj = keys.create((arg0) => {
   };
   return obj;
 });
-const result = set2.fileFinishedImporting("modules/panels/morphable/AppFreezeStore.tsx");
-
-export default obj;

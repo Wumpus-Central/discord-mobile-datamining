@@ -1,50 +1,43 @@
-// === Module 16686: ? ===
+// === Module 16686: ThreadChannelUserList ===
 
-// Module 16686
-import importAllResult from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "trackCommunicationDisabled" /* 2021 */;
-import closure_6 from "createGuildRecordFromRust" /* 1979 */;
-import closure_7 from "mergeGuildAvatar" /* 1371 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 16686 (ThreadChannelUserList)
+import throttleDefault from "throttle" /* 550 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function ThreadChannelUserList(channelId) {
+const require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const jsx = fn(21).jsx;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx");
+
+export default noop.memo(function ThreadChannelUserList(channelId) {
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   const onUserPress = channelId.onUserPress;
-  let analyticsLocations;
-  let threadMemberListSections;
-  let stateFromStores1;
   closure_6 = undefined;
-  closure_7 = undefined;
-  closure_8 = undefined;
-  let memo;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);
-  analyticsLocations = guildId(onUserPress[7])().analyticsLocations;
+  const analyticsLocations = guildId(onUserPress[7])().analyticsLocations;
   let obj = channelId(onUserPress[8]);
   const items = [closure_6];
-  const stateFromStores = obj.useStateFromStores(items, () => guild.getGuild(guildId));
-  threadMemberListSections = channelId(onUserPress[9]).useThreadMemberListSections(channelId, stateFromStores);
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  const threadMemberListSections = channelId(onUserPress[9]).useThreadMemberListSections(channelId, stateFromStores);
   const obj2 = channelId(onUserPress[9]);
   const items1 = [threadMemberListSections];
-  stateFromStores1 = channelId(onUserPress[8]).useStateFromStores(items1, () => threadMemberListSections.getChannel(channelId));
+  const stateFromStores1 = channelId(onUserPress[8]).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const tmp3 = guildId(onUserPress[10])();
   closure_6 = tmp3;
   closure_7 = analyticsLocations.useRef(0);
   closure_8 = analyticsLocations.useRef(0);
   const items2 = [channelId, guildId, tmp3];
-  memo = analyticsLocations.useMemo(() => guildId(onUserPress[11])(() => {
-    if (null != closure_1_4.getChannel(closure_0)) {
-      let obj = closure_1_0(closure_1_2[12]);
-      obj = { guildId: null, channelId: null, y: null, height: null, rowHeight: null };
-      obj[0] = closure_1;
-      obj[1] = closure_0;
-      obj[2] = ref2.current;
-      obj[3] = ref.current;
-      obj[4] = closure_6;
+  const memo = analyticsLocations.useMemo(() => throttleDefault(() => {
+    if (null != threadMemberListSections.getChannel(channelId)) {
+      channelId(onUserPress[12]);
+      const obj = { guildId, channelId, y: ref2.current, height: ref.current, rowHeight };
       const result = obj.subscribeChannelDimensions(obj);
     }
   }, 50), items2);
@@ -71,68 +64,60 @@ const memoResult = importAllResult.memo(function ThreadChannelUserList(channelId
       const label = tmp.label;
       if (null != label) {
         if (0 !== length) {
-          let obj = { type: "section", props: null };
-          obj = { title: null };
+          const element = { type: "section", props: null };
+          const obj = { title: null };
           const _HermesInternal = HermesInternal;
-          obj[0] = "" + label + " \u2014 " + length;
-          obj[1] = obj;
-          return obj;
+          obj.title = "" + label + " \u2014 " + length;
+          element.props = obj;
+          return element;
         }
       }
     }
   }, items6);
   const callback3 = analyticsLocations.useCallback((arg0, arg1) => {
     const userIds = threadMemberListSections[arg0].userIds;
-    user = user.getUser(userIds[arg1]);
+    const user = UserStore.getUser(userIds[arg1]);
     if (null != user) {
-      const member = stateFromStores1.getMember(guildId, user.id);
+      const member = GuildMemberStore.getMember(guildId, user.id);
     }
     if (null != user) {
-      let obj = { type: null, user: null, guildId: null, nickname: null, usernameColor: null, roleColors: null, isNameplatedRow: true, canShowDisplayNameStylesFont: true, onPress: null, start: null, end: null };
-      obj[0] = constants.NONE;
-      obj[1] = user;
-      obj[2] = guildId;
+      let obj = { type: RelationshipTypes.NONE, user, guildId, nickname: null, usernameColor: null, roleColors: null, isNameplatedRow: true, canShowDisplayNameStylesFont: true, onPress: null, start: null, end: null };
       let nick;
       if (member != null) {
         nick = member.nick;
       }
       if (nick == null) {
-        nick = guildId(onUserPress[13]).getGlobalName(user);
-        const obj4 = guildId(onUserPress[13]);
+        nick = UserUtilsDefault.getGlobalName(user);
       }
-      obj[3] = nick;
+      obj.nickname = nick;
       let colorString;
       if (member != null) {
         colorString = member.colorString;
       }
-      obj[4] = colorString;
+      obj.usernameColor = colorString;
       let colorStrings;
       if (member != null) {
         colorStrings = member.colorStrings;
       }
-      obj = { type: "user", props: null };
-      obj[5] = colorStrings;
-      obj[8] = function onPress(id) {
-        if (closure_2 != null) {
+      const element = { type: "user", props: null };
+      obj.roleColors = colorStrings;
+      obj.onPress = function onPress(id) {
+        if (closure_1_2 != null) {
           tmp();
         }
-        closure_1_1(closure_1_2[14])({ userId: id.id, sourceAnalyticsLocations: closure_3, channelId: closure_0 });
+        guildId(onUserPress[14])({ userId: id.id, sourceAnalyticsLocations, channelId });
       };
-      obj[9] = tmp5;
-      obj[10] = tmp6;
-      obj[1] = obj;
+      obj.start = tmp5;
+      obj.end = tmp6;
+      element.props = obj;
+      let element1 = element;
     } else {
-      obj = { type: "placeholder", props: null };
-      obj1 = { start: null, end: null };
-      obj1[0] = tmp5;
-      obj1[1] = tmp6;
-      obj[1] = obj1;
+      element1 = { type: "placeholder", props: null };
+      obj = { start: tmp5, end: tmp6 };
+      element1.props = obj;
     }
-    return obj;
+    return element1;
   }, items7);
   obj = { sections: threadMemberListSections.map((userIds) => userIds.userIds.length), getItemProps: callback3, getSectionProps: callback2, onLayout: callback, onScroll: callback1, disableStickySections, disableBackgroundOverlay: true, listStyleOverride, disableBottomSafeZone, insetEnd };
   return memo(channelId(onUserPress[15]).UsersFastList, obj);
 });
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/ThreadChannelUserList.tsx");
-
-export default memoResult;

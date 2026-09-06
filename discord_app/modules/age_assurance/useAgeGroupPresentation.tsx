@@ -1,20 +1,20 @@
-// === Module 14716: AgeGroupState ===
+// === Module 14716: useAgeGroupPresentation ===
 
-// Module 14716 (AgeGroupState)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import combinedDefault from "combined" /* 2024 */;
-import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4773 */;
-import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 8411 */;
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 8413 */;
+// Module 14716 (useAgeGroupPresentation)
+import Constants from "Constants" /* 1074 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
+import size from "module_2" /* 2 */;
 
-const HelpdeskArticles = ME.HelpdeskArticles;
-let obj = { ADULT: "adult", TEEN: "teen", UNVERIFIED: "unverified" };
-let result = set.fileFinishedImporting("modules/age_assurance/useAgeGroupPresentation.tsx");
+const HelpdeskArticles = Constants.HelpdeskArticles;
+const AgeGroupState = { ADULT: "adult", TEEN: "teen", UNVERIFIED: "unverified" };
+let result = size.fileFinishedImporting("modules/age_assurance/useAgeGroupPresentation.tsx");
 
-export const AgeGroupState = obj;
+export { AgeGroupState };
 export const useAgeGroupState = function useAgeGroupState() {
-  obj = useAgeVerificationRunner;
+  const obj = AgeVerificationUtils;
   const isAgeVerified = obj.useIsAgeVerified();
   if (obj2.useIsVerifiedTeen()) {
     let TEEN = tmp2.TEEN;
@@ -24,16 +24,15 @@ export const useAgeGroupState = function useAgeGroupState() {
   return TEEN;
 };
 export const handleOpenAgeGatedContentArticle = function handleOpenAgeGatedContentArticle() {
-  obj = openIncodeAgeVerificationModalDefault;
-  obj.openUrl(combinedDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
+  const obj = AgeVerificationActionCreatorsDefault;
+  obj.openUrl(HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.TIGGER_PAWTECT_LEARN_MORE));
 };
 export const handleShowAgeVerification = function handleShowAgeVerification() {
-  obj = openIncodeAgeVerificationModalDefault;
-  obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
+  const obj = { entryPoint: AgeVerificationAnalyticsUtils.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
   const result = obj.showAgeVerificationGetStartedModal(obj);
 };
 export const useAgeGroupValueLabel = function useAgeGroupValueLabel() {
-  obj = useAgeVerificationRunner;
+  const obj = AgeVerificationUtils;
   const isAgeVerified = obj.useIsAgeVerified();
   if (obj2.useIsVerifiedTeen()) {
     let UNVERIFIED = tmp4.TEEN;
@@ -55,5 +54,5 @@ export const useAgeGroupValueLabel = function useAgeGroupValueLabel() {
     const intl = tmp(1114).intl;
     return intl.string(tmp(1114).t.lKDPGA);
   }
-  obj2 = useAgeVerificationRunner;
+  obj2 = AgeVerificationUtils;
 };

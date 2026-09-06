@@ -1,9 +1,9 @@
-// === Module 1882: parseSkuIdFromServerData ===
+// === Module 1882: mappers ===
 
-// Module 1882 (parseSkuIdFromServerData)
-import set from "set" /* 2 */;
+// Module 1882 (mappers)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/utils/mappers.tsx");
 
 export const parseSkuIdFromServerData = function parseSkuIdFromServerData(skuId) {
   if (typeof skuId.skuId !== "string") {
@@ -52,9 +52,8 @@ export const parseServerUserCollectibles = function parseServerUserCollectibles(
                       if ("palette" in nameplate) {
                         tmp6 = null;
                         if (typeof nameplate.palette === "string") {
-                          let obj = { skuId: null, label: null, palette: null };
-                          obj[0] = StringResult;
-                          ({ label: obj2[1], palette: obj2[2] } = nameplate);
+                          let obj = { skuId: StringResult, label: null, palette: null };
+                          ({ label: obj2.label, palette: obj2.palette } = nameplate);
                           if (tmp7) {
                             obj.asset = nameplate.asset;
                           }
@@ -79,8 +78,7 @@ export const parseServerUserCollectibles = function parseServerUserCollectibles(
               StringResult = String(nameplate.skuId);
             }
           }
-          obj = { nameplate: null };
-          obj[0] = tmp6;
+          obj = { nameplate: tmp6 };
           tmp2 = obj;
         }
       }

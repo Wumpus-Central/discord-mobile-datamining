@@ -1,23 +1,19 @@
-// === Module 9305: getIsPrivate ===
+// === Module 9305: ThreadCreationHooks ===
 
-// Module 9305 (getIsPrivate)
-import useCanStartPrivateThread from "useCanStartPrivateThread" /* 7269 */;
-import rebuildDefault from "rebuild" /* 7682 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "noop" /* 19 */;
-import closure_6 from "maybeRebuildState" /* 7305 */;
-import closure_7 from "fetchFingerprint" /* 502 */;
-import closure_8 from "ensureGuildLoaded" /* 1957 */;
-import closure_9 from "handleChanged" /* 4901 */;
-import { DraftType } from "handleChanged" /* 4901 */;
-import closure_11 from "reinjectEphemerals" /* 4781 */;
-import { SlowmodeType } from "setCooldown" /* 7687 */;
-import AbortCodes from "AbortCodes" /* 1113 */;
-import ME from "ME" /* 1074 */;
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+// Module 9305 (ThreadCreationHooks)
+import HTTPUtils from "HTTPUtils" /* 1272 */;
+import ThreadHooks from "ThreadHooks" /* 7269 */;
+import MessageParserDefault from "MessageParser" /* 7682 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import noop from "module_19" /* 19 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7305 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import DraftStore from "DraftStore" /* 4901 */;
+import MessageStore from "MessageStore" /* 4781 */;
 
-require = arg1;
+require = fn;
 function getIsPrivate(threadSettingsDraft, privateThreadMode) {
   let tmp = privateThreadMode === obj.PrivateOnly;
   if (!tmp) {
@@ -32,7 +28,7 @@ function getIsPrivate(threadSettingsDraft, privateThreadMode) {
 function getDefaultThreadName(stateFromStores, parentMessageId) {
   let message = null;
   if (null != parentMessageId) {
-    message = message.getMessage(stateFromStores.id, parentMessageId);
+    message = MessageStore.getMessage(stateFromStores.id, parentMessageId);
   }
   let contentMessage;
   if (message != null) {
@@ -84,9 +80,8 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     if (str3 == null) {
       str3 = "";
     }
-    obj = rebuildDefault;
     const tmp17 = importDefault;
-    const str4 = rebuildDefault.unparse(str3, stateFromStores.id, true);
+    const str4 = MessageParserDefault.unparse(str3, stateFromStores.id, true);
     const tmp17Result = tmp17(7274);
     let str7 = tmp17(7274)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
@@ -95,17 +90,17 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
       if (null == match.index) {
         break;
       } else {
-        let arr = items.push(str7.substring(0, match.index));
-        arr = items.push(match[0]);
+        items.push(str7.substring(0, match.index));
+        let arr = items.push(match[0]);
         str7 = str7.substring(match.index + match[0].length);
         continue;
       }
     }
-    let arr1 = items.push(str7);
+    items.push(str7);
     const first1 = items[0];
     let num4 = 1;
     let tmp12 = first1;
-    arr1 = first1;
+    let arr1 = first1;
     if (1 < items.length) {
       const sum = tmp12 + items[num4];
       arr1 = tmp12;
@@ -125,9 +120,9 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     return text2;
   }
 }
-function createThread_(channel, arg1, arg2, arg3) {
+function createThread_() {
   const self = this;
-  const apply = _createThread_.apply;
+  const apply = closure_27.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -135,426 +130,304 @@ function createThread_(channel, arg1, arg2, arg3) {
   }
   return applyArgumentsResult;
 }
-function _createThread_() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c10 = 0;
-    c11 = 0;
-    c9 = 0;
-    return (function*(arg0, body) {
-      let id = tmp3;
-      closure_6 = tmp6;
-      let throwTypeErrorResult = lib;
-      throwTypeErrorResult = callback;
-      throwTypeErrorResult = dependencyMap;
-      throwTypeErrorResult = lib2;
-      c4 = lib.isForumLikeChannel();
-      c9 = 1;
-      yield lib2();
-      if (1 === tmp9) {
-        c9 = 0;
-        body = throwTypeErrorResult.body;
-        let code;
-        if (body != null) {
-          code = body.code;
-        }
-        if (code === constants.TOO_MANY_THREADS) {
-          throwTypeErrorResult = closure_6;
-          throwTypeErrorResult = id;
-          throwTypeErrorResult = callback;
-          throwTypeErrorResult = dependencyMap;
-          throwTypeErrorResult = c4;
-          throwTypeErrorResult = id;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          const intl9 = lib(1114).intl;
-          const string2 = intl9.string;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          const t2 = lib(1114).t;
-          if (c4) {
-            throwTypeErrorResult = string2(t2.vWNFkx);
-          } else {
-            throwTypeErrorResult = string2(t2["1KEdvB"]);
-          }
-          let obj2 = { title: null, body: null };
-          throwTypeErrorResult = closure_6;
-          obj2[0] = throwTypeErrorResult;
-          throwTypeErrorResult = c4;
-          throwTypeErrorResult = id;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          const intl10 = lib(1114).intl;
-          const string3 = intl10.string;
-          throwTypeErrorResult = lib;
-          throwTypeErrorResult = dependencyMap;
-          let KGaiEK = lib(1114).t;
-          if (c4) {
-            KGaiEK = KGaiEK.KGaiEK;
-            throwTypeErrorResult = string3(KGaiEK);
-          } else {
-            throwTypeErrorResult = string3(KGaiEK.P0wT5S);
-          }
-          obj2[1] = throwTypeErrorResult;
-          obj2 = callback(4904).show(obj2);
-          const obj18 = callback(4904);
+let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
+  let forumLikeChannel = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
+  c10 = 0;
+  c11 = 0;
+  c9 = 0;
+  return (async (arg0, value, arg2, arg3) => {
+    closure_7 = tmp3;
+    closure_6 = tmp6;
+    closure_134_0 = forumLikeChannel;
+    closure_134_1 = closure_1;
+    closure_134_2 = closure_2;
+    closure_134_4 = forumLikeChannel.isForumLikeChannel();
+    await body();
+    if (1 === tmp9) {
+      c9 = 0;
+      closure_134_8 = closure_8;
+      body = closure_134_8.body;
+      let code;
+      if (body != null) {
+        code = body.code;
+      }
+      if (code === closure_135_15.TOO_MANY_THREADS) {
+        const intl9 = closure_135_0(closure_135_2[15]).intl;
+        const string2 = intl9.string;
+        const t2 = closure_135_0(closure_135_2[15]).t;
+        if (closure_134_4) {
+          let string2Result = string2(t2.vWNFkx);
         } else {
-          throwTypeErrorResult = closure_6;
-          const body7 = throwTypeErrorResult.body;
-          let code1;
-          if (body7 != null) {
-            code1 = body7.code;
+          string2Result = string2(t2["1KEdvB"]);
+        }
+        let obj2 = { title: string2Result, body: null };
+        const intl10 = closure_135_0(closure_135_2[15]).intl;
+        const string3 = intl10.string;
+        let KGaiEK = closure_135_0(closure_135_2[15]).t;
+        if (closure_134_4) {
+          KGaiEK = KGaiEK.KGaiEK;
+          let string3Result = string3(KGaiEK);
+        } else {
+          string3Result = string3(KGaiEK.P0wT5S);
+        }
+        obj2.body = string3Result;
+        obj2 = closure_135_1(closure_135_2[28]).show(obj2);
+        closure_135_1(closure_135_2[28]);
+      } else {
+        const body7 = closure_134_8.body;
+        let code1;
+        if (body7 != null) {
+          code1 = body7.code;
+        }
+        if (code1 === closure_135_15.TOO_MANY_ANNOUNCEMENT_THREADS) {
+          const obj3 = { title: null, body: null };
+          const intl7 = closure_135_0(closure_135_2[15]).intl;
+          obj3.title = intl7.string(closure_135_0(closure_135_2[15]).t["1KEdvB"]);
+          const intl8 = closure_135_0(closure_135_2[15]).intl;
+          obj3.body = intl8.string(closure_135_0(closure_135_2[15]).t.jDMxz2);
+          closure_135_1(closure_135_2[28]).show(obj3);
+          closure_135_1(closure_135_2[28]);
+        } else {
+          const body8 = closure_134_8.body;
+          let code2;
+          if (body8 != null) {
+            code2 = body8.code;
           }
-          if (code1 === constants.TOO_MANY_ANNOUNCEMENT_THREADS) {
-            throwTypeErrorResult = id;
-            throwTypeErrorResult = callback;
-            throwTypeErrorResult = dependencyMap;
-            const obj15 = callback(4904);
-            const obj3 = { title: null, body: null };
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const intl7 = lib(1114).intl;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            obj3[0] = intl7.string(lib(1114).t["1KEdvB"]);
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const intl8 = lib(1114).intl;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            obj3[1] = intl8.string(lib(1114).t.jDMxz2);
-            throwTypeErrorResult = obj15.show(obj3);
-          } else {
-            throwTypeErrorResult = closure_6;
-            const body8 = throwTypeErrorResult.body;
-            let code2;
-            if (body8 != null) {
-              code2 = body8.code;
+          if (code2 === closure_135_15.SLOWMODE_RATE_LIMITED) {
+            const retry_after = closure_134_8.body.retry_after;
+            c4 = retry_after;
+            if (retry_after == null) {
+              c4 = 0;
             }
-            if (code2 === constants.SLOWMODE_RATE_LIMITED) {
-              throwTypeErrorResult = closure_6;
-              const retry_after = throwTypeErrorResult.body.retry_after;
-              c4 = retry_after;
-              if (retry_after == null) {
-                c4 = 0;
-              }
-              throwTypeErrorResult = closure_6;
-              throwTypeErrorResult = c4;
-              closure_5 = c4;
-              throwTypeErrorResult = closure_5;
-              if (closure_5 > 0) {
-                throwTypeErrorResult = closure_6;
-                throwTypeErrorResult = id;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj4 = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
-                throwTypeErrorResult = lib;
-                obj4[1] = lib.id;
-                throwTypeErrorResult = closure_12;
-                obj4[2] = closure_12.CreateThread;
-                throwTypeErrorResult = closure_5;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                obj4[3] = closure_5 * callback(1090).Millis.SECOND;
-                throwTypeErrorResult = callback(573).dispatch(obj4);
-                const obj29 = callback(573);
-              }
+            closure_134_5 = c4;
+            if (closure_134_5 > 0) {
+              let obj4 = { type: "SLOWMODE_SET_COOLDOWN", channelId: closure_134_0.id, slowmodeType: closure_135_12.CreateThread, cooldownMs: closure_134_5 * closure_135_1(closure_135_2[31]).Millis.SECOND };
+              closure_135_1(closure_135_2[29]).dispatch(obj4);
+              closure_135_1(closure_135_2[29]);
+            }
+          } else if (429 === closure_134_8.status) {
+            let obj13 = closure_135_1(closure_135_2[28]);
+            const intl5 = closure_135_0(closure_135_2[15]).intl;
+            const string = intl5.string;
+            const t = closure_135_0(closure_135_2[15]).t;
+            if (closure_134_4) {
+              let stringResult = string(t.vWNFkx);
             } else {
-              throwTypeErrorResult = closure_6;
-              if (429 === throwTypeErrorResult.status) {
-                throwTypeErrorResult = closure_6;
-                throwTypeErrorResult = id;
-                throwTypeErrorResult = callback;
-                throwTypeErrorResult = dependencyMap;
-                let obj13 = callback(4904);
-                throwTypeErrorResult = c4;
-                throwTypeErrorResult = id;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                const intl5 = lib(1114).intl;
-                const string = intl5.string;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                const t = lib(1114).t;
-                if (c4) {
-                  throwTypeErrorResult = string(t.vWNFkx);
-                } else {
-                  throwTypeErrorResult = string(t["1KEdvB"]);
+              stringResult = string(t["1KEdvB"]);
+            }
+            const obj5 = { title: stringResult, body: null };
+            const intl6 = closure_135_0(closure_135_2[15]).intl;
+            obj5.body = intl6.string(closure_135_0(closure_135_2[15]).t.Whhv4w);
+            obj13.show(obj5);
+          } else {
+            const body9 = closure_134_8.body;
+            let code3;
+            if (body9 != null) {
+              code3 = body9.code;
+            }
+            if (closure_135_13.has(code3)) {
+              throw tmp47;
+            } else {
+              const body2 = tmp47.body;
+              let code4;
+              if (body2 != null) {
+                code4 = body2.code;
+              }
+              if (code4 === closure_135_15.INVALID_FORM_BODY) {
+                const body3 = closure_134_8.body;
+                let name;
+                if (body3 != null) {
+                  const errors = body3.errors;
+                  if (errors != null) {
+                    name = errors.name;
+                  }
                 }
-                const obj5 = { title: null, body: null };
-                throwTypeErrorResult = id;
-                obj5[0] = throwTypeErrorResult;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                const intl6 = lib(1114).intl;
-                throwTypeErrorResult = lib;
-                throwTypeErrorResult = dependencyMap;
-                obj5[1] = intl6.string(lib(1114).t.Whhv4w);
-                throwTypeErrorResult = obj13.show(obj5);
-              } else {
-                throwTypeErrorResult = closure_6;
-                throwTypeErrorResult = id;
-                const body9 = throwTypeErrorResult.body;
-                let code3;
-                throwTypeErrorResult = set;
-                if (body9 != null) {
-                  code3 = body9.code;
+                if (null != name) {
+                  throw closure_134_8;
                 }
-                if (set.has(code3)) {
-                  throw tmp47;
-                } else {
-                  const body2 = tmp47.body;
-                  let code4;
-                  if (body2 != null) {
-                    code4 = body2.code;
-                  }
-                  if (code4 === constants.INVALID_FORM_BODY) {
-                    const body3 = throwTypeErrorResult.body;
-                    let name;
-                    if (body3 != null) {
-                      const errors = body3.errors;
-                      if (errors != null) {
-                        name = errors.name;
-                      }
+              }
+              const body4 = closure_134_8.body;
+              let code5;
+              if (body4 != null) {
+                code5 = body4.code;
+              }
+              if (closure_135_14.has(code5)) {
+                if (null == closure_134_2) {
+                  new Promise((arg0, fn) => {
+                    closure_0 = arg0;
+                    closure_1 = fn;
+                    if (null == closure_1_8.body) {
+                      fn();
                     }
-                    if (null != name) {
-                      throwTypeErrorResult = closure_6;
-                      throw throwTypeErrorResult;
-                    }
-                  }
-                  const body4 = throwTypeErrorResult.body;
-                  let code5;
-                  if (body4 != null) {
-                    code5 = body4.code;
-                  }
-                  if (set2.has(code5)) {
-                    if (null == dependencyMap) {
-                      throwTypeErrorResult = closure_6;
-                      throwTypeErrorResult = new.target;
-                      throwTypeErrorResult = new.target;
-                      throwTypeErrorResult = new Promise((arg0, arg1) => {
-                        closure_0 = arg0;
-                        closure_1 = arg1;
-                        if (null == throwTypeErrorResult.body) {
-                          arg1();
-                        }
-                        const result = closure_6.addConditionalChangeListener(() => {
-                          const andDeleteMostRecentUserCreatedThreadId = closure_1_6.getAndDeleteMostRecentUserCreatedThreadId();
-                          if (null != andDeleteMostRecentUserCreatedThreadId) {
-                            const channel = closure_1_8.getChannel(andDeleteMostRecentUserCreatedThreadId);
-                            callback(closure_1_2[29]).wait(() => { ... });
-                            return false;
+                    const result = andDeleteMostRecentUserCreatedThreadId.addConditionalChangeListener(() => {
+                      andDeleteMostRecentUserCreatedThreadId = andDeleteMostRecentUserCreatedThreadId.getAndDeleteMostRecentUserCreatedThreadId();
+                      if (null != andDeleteMostRecentUserCreatedThreadId) {
+                        const channel2 = channel.getChannel(andDeleteMostRecentUserCreatedThreadId);
+                        closure_1(closure_1_2[29]).wait(() => {
+                          if (null == closure_0) {
+                            closure_1();
+                          } else {
+                            closure_0(tmp);
                           }
                         });
-                      });
-                      c11 = 3;
-                    } else {
-                      throwTypeErrorResult = closure_6;
-                      const body10 = throwTypeErrorResult.body;
-                      let code6;
-                      if (body10 != null) {
-                        code6 = body10.code;
+                        return false;
                       }
-                      if (code6 !== constants.EXPLICIT_CONTENT) {
-                        throwTypeErrorResult = closure_6;
-                        throwTypeErrorResult = id;
-                        throwTypeErrorResult = lib;
-                        throwTypeErrorResult = dependencyMap;
-                        const obj6 = { file: null, guildId: null, analyticsLocations: null, code: null, reason: null };
-                        throwTypeErrorResult = dependencyMap;
-                        obj6[0] = dependencyMap;
-                        throwTypeErrorResult = lib;
-                        obj6[1] = lib.getGuildId();
-                        throwTypeErrorResult = callback;
-                        closure_5 = callback;
-                        if (callback == null) {
-                          closure_5 = [];
-                        }
-                        obj6[2] = closure_5;
-                        const body5 = throwTypeErrorResult.body;
-                        let code7;
-                        if (body5 != null) {
-                          code7 = body5.code;
-                        }
-                        obj6[3] = code7;
-                        const body6 = throwTypeErrorResult.body;
-                        let reason;
-                        if (body6 != null) {
-                          reason = body6.reason;
-                        }
-                        obj6[4] = reason;
-                        let result = lib(9309).handleUploadMessageAttachmentsErrors(obj6);
-                        const obj27 = lib(9309);
-                      }
+                    });
+                  });
+                  c11 = 3;
+                } else {
+                  const body10 = closure_134_8.body;
+                  let code6;
+                  if (body10 != null) {
+                    code6 = body10.code;
+                  }
+                  if (code6 !== closure_135_15.EXPLICIT_CONTENT) {
+                    const obj6 = { file: closure_134_2, guildId: closure_134_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
+                    analyticsLocations = closure_134_1;
+                    if (closure_134_1 == null) {
+                      analyticsLocations = [];
                     }
-                    let obj10 = lib(7753);
-                    closure_6 = obj10.createNonce();
-                    let tmp89 = null != throwTypeErrorResult.body.attachments;
-                    if (tmp89) {
-                      tmp89 = throwTypeErrorResult.body.attachments.length > 0;
+                    obj6.analyticsLocations = analyticsLocations;
+                    const body5 = closure_134_8.body;
+                    let code7;
+                    if (body5 != null) {
+                      code7 = body5.code;
                     }
-                    if (tmp89) {
-                      let obj11 = callback(573);
-                      const obj7 = { type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: null, channelId: null, attachments: null };
-                      obj7[1] = closure_6;
-                      obj7[2] = lib.id;
-                      obj7[3] = throwTypeErrorResult.body.attachments;
-                      obj11.dispatch(obj7);
-                      throwTypeErrorResult = callback;
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = lib;
-                      throwTypeErrorResult = closure_6;
-                      throwTypeErrorResult = callback(9394)(lib.id, closure_6);
+                    obj6.code = code7;
+                    const body6 = closure_134_8.body;
+                    let reason;
+                    if (body6 != null) {
+                      reason = body6.reason;
                     }
-                  } else {
-                    let obj8 = callback(4904);
-                    obj8 = { title: null, body: null };
-                    const intl3 = lib(1114).intl;
-                    obj8[0] = intl3.string(lib(1114).t.j2d6Km);
-                    const intl4 = lib(1114).intl;
-                    obj8[1] = intl4.string(lib(1114).t.fEptJP);
-                    obj8.show(obj8);
+                    obj6.reason = reason;
+                    let result = closure_135_0(closure_135_2[24]).handleUploadMessageAttachmentsErrors(obj6);
+                    closure_135_0(closure_135_2[24]);
                   }
                 }
+                let obj10 = closure_135_0(closure_135_2[32]);
+                closure_134_6 = obj10.createNonce();
+                let tmp89 = null != closure_134_8.body.attachments;
+                if (tmp89) {
+                  tmp89 = closure_134_8.body.attachments.length > 0;
+                }
+                if (tmp89) {
+                  let obj11 = closure_135_1(closure_135_2[29]);
+                  obj11.dispatch({ type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: closure_134_6, channelId: closure_134_0.id, attachments: closure_134_8.body.attachments });
+                  closure_135_1(closure_135_2[33])(closure_134_0.id, closure_134_6);
+                }
+              } else {
+                closure_135_1(closure_135_2[28]);
+                const obj8 = { title: null, body: null };
+                const intl3 = closure_135_0(closure_135_2[15]).intl;
+                obj8.title = intl3.string(closure_135_0(closure_135_2[15]).t.j2d6Km);
+                const intl4 = closure_135_0(closure_135_2[15]).intl;
+                obj8.body = intl4.string(closure_135_0(closure_135_2[15]).t.fEptJP);
+                obj8.show(obj8);
               }
             }
           }
-          throwTypeErrorResult = closure_6;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new.target;
-          throwTypeErrorResult = new Promise((arg0, arg1) => {
-            closure_0 = arg0;
-            if (null == body.body) {
-              arg1();
-            }
-            const result = throwTypeErrorResult.addConditionalChangeListener(() => {
-              const channel = throwTypeErrorResult.getChannel(closure_1_3.body.id);
-              if (null != channel) {
-                callback(table[29]).wait(() => { ... });
-                return false;
-              }
-            });
-          });
-          c10 = 2;
-          c11 = 1;
         }
-      } else if (2 === tmp9) {
-        if (arg0 === 1) {
-          c11 = 3;
-          throw body;
-        } else if (arg0 === 2) {
-          c11 = 3;
-          const obj9 = { value: null, done: true };
-          obj9[0] = body;
-          return obj9;
-        } else {
-          id = body;
-          c9 = 2;
-          obj4 = callback(7456);
-          obj10 = { channelId: null, limit: null };
-          obj10[0] = id.id;
-          obj10[1] = closure_20;
-          c10 = 5;
-          c11 = 1;
-          obj11 = { value: null, done: false };
-          obj11[0] = obj4.fetchMessages(obj10);
-          return obj11;
-        }
-      } else if (3 === tmp9) {
-        if (arg0 === 1) {
-          c11 = 3;
-          throw body;
-        } else if (arg0 !== 2) {
-          throwTypeErrorResult = closure_6;
-          lib2 = body;
+        new Promise((arg0, fn) => {
+          closure_0 = arg0;
           if (null == body.body) {
-            obj1 = callback(4904);
-            const obj12 = { title: null, body: null };
-            const intl = lib(1114).intl;
-            obj12[0] = intl.string(lib(1114).t.j2d6Km);
-            const intl2 = lib(1114).intl;
-            obj12[1] = intl2.string(lib(1114).t.fEptJP);
-            obj1.show(obj12);
-          } else {
-            throwTypeErrorResult = closure_6;
-            throwTypeErrorResult = id;
-            throwTypeErrorResult = callback;
-            throwTypeErrorResult = dependencyMap;
-            obj13 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: null, channelId: null };
-            throwTypeErrorResult = closure_12;
-            obj13[1] = closure_12.CreateThread;
-            throwTypeErrorResult = lib;
-            obj13[2] = lib.id;
-            throwTypeErrorResult = callback(573).dispatch(obj13);
-            throwTypeErrorResult = callback;
-            throwTypeErrorResult = dependencyMap;
-            const obj23 = callback(573);
-            const obj14 = { type: "THREAD_CREATE_LOCAL", channelId: null };
-            throwTypeErrorResult = lib2;
-            obj14[1] = lib2.body.id;
-            throwTypeErrorResult = callback(573).dispatch(obj14);
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const AccessibilityAnnouncer = lib(4411).AccessibilityAnnouncer;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const intl11 = lib(1114).intl;
-            throwTypeErrorResult = c4;
-            throwTypeErrorResult = id;
-            throwTypeErrorResult = lib;
-            throwTypeErrorResult = dependencyMap;
-            const t3 = lib(1114).t;
-            if (c4) {
-              let XkUoBb = t3.zDAG2N;
-            } else {
-              XkUoBb = t3.XkUoBb;
-            }
-            AccessibilityAnnouncer.announce(intl11.string(XkUoBb));
-            const obj25 = callback(573);
+            fn();
           }
-          c9 = 0;
-        }
+          const result = closure_1_8.addConditionalChangeListener(() => {
+            const channel = closure_2_8.getChannel(body.body.id);
+            if (null != channel) {
+              closure_2_1(closure_2_2[29]).wait(() => {
+                channel(channel);
+              });
+              return false;
+            }
+          });
+        });
+        c10 = 2;
+        c11 = 1;
+      }
+    } else if (2 === tmp9) {
+      if (arg0 === 1) {
+        c11 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c11 = 3;
+        return { value, done: true };
       } else {
-        if (4 === tmp9) {
-          c9 = 0;
-          c11 = 3;
-        } else if (arg0 === 1) {
-          c11 = 3;
-          throw body;
-        } else if (arg0 !== 2) {
-          c9 = 0;
+        closure_134_7 = value;
+        c9 = 2;
+        obj4 = closure_135_1(closure_135_2[27]);
+        obj10 = { channelId: closure_134_7.id, limit: closure_135_20 };
+        c10 = 5;
+        c11 = 1;
+        obj11 = { value: obj4.fetchMessages(obj10), done: false };
+        return obj11;
+      }
+    } else if (3 === tmp9) {
+      if (arg0 === 1) {
+        c11 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        closure_134_3 = value;
+        if (null == value.body) {
+          const obj12 = { title: null, body: null };
+          const intl = closure_135_0(closure_135_2[15]).intl;
+          obj12.title = intl.string(closure_135_0(closure_135_2[15]).t.j2d6Km);
+          const intl2 = closure_135_0(closure_135_2[15]).intl;
+          obj12.body = intl2.string(closure_135_0(closure_135_2[15]).t.fEptJP);
+          closure_135_1(closure_135_2[28]).show(obj12);
+          closure_135_1(closure_135_2[28]);
+        } else {
+          obj13 = { type: "SLOWMODE_RESET_COOLDOWN", slowmodeType: closure_135_12.CreateThread, channelId: closure_134_0.id };
+          closure_135_1(closure_135_2[29]).dispatch(obj13);
+          closure_135_1(closure_135_2[29]);
+          closure_135_1(closure_135_2[29]).dispatch({ type: "THREAD_CREATE_LOCAL", channelId: closure_134_3.body.id });
+          const AccessibilityAnnouncer = closure_135_0(closure_135_2[30]).AccessibilityAnnouncer;
+          const intl11 = closure_135_0(closure_135_2[15]).intl;
+          const t3 = closure_135_0(closure_135_2[15]).t;
+          if (closure_134_4) {
+            let XkUoBb = t3.zDAG2N;
+          } else {
+            XkUoBb = t3.XkUoBb;
+          }
+          AccessibilityAnnouncer.announce(intl11.string(XkUoBb));
+          closure_135_1(closure_135_2[29]);
         }
         c9 = 0;
+      }
+    } else {
+      if (4 === tmp9) {
+        c9 = 0;
         c11 = 3;
-        obj = { value: null, done: true };
-        obj[0] = body;
-        return obj;
+      } else if (arg0 === 1) {
+        c11 = 3;
+        throw value;
+      } else if (arg0 !== 2) {
+        c9 = 0;
       }
       c9 = 0;
-      return body;
-    })();
-  });
-  closure_27 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-({ FORUM_POST_CREATION_AUTOMOD_ERRORS: map1, FORUM_POST_CREATION_UPLOAD_ERRORS: closure_14 } = AbortCodes);
-({ AbortCodes: closure_15, AnalyticEvents: closure_16, ChannelTypes: closure_17, Endpoints: closure_18, LoggingInviteTypes: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, MessageFlags: closure_21 } = ME);
-let obj = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
-let result = require("set").fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
+      c11 = 3;
+      return { value, done: true };
+    }
+    return value;
+  })();
+};
+const DraftType = fn(4901).DraftType;
+const SlowmodeType = fn(7687).SlowmodeType;
+const ThreadConstants = fn(1113);
+({ FORUM_POST_CREATION_AUTOMOD_ERRORS: map1, FORUM_POST_CREATION_UPLOAD_ERRORS: closure_14 } = ThreadConstants);
+const Constants = fn(1074);
+({ AbortCodes: closure_15, AnalyticEvents: closure_16, ChannelTypes: closure_17, Endpoints: closure_18, LoggingInviteTypes: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, MessageFlags: closure_21 } = Constants);
+const MessageSendLocation = fn(4553).MessageSendLocation;
+const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
 
-export const PrivateThreadMode = obj;
+export { PrivateThreadMode };
 export const usePrivateThreadMode = function usePrivateThreadMode(parentChannel) {
-  obj = useCanStartPrivateThread;
+  obj = ThreadHooks;
   const canStartPublicThread = obj.useCanStartPublicThread(parentChannel);
   if (!obj2.useCanStartPrivateThread(parentChannel)) {
     return tmp2.Disabled;
@@ -564,7 +437,6 @@ export { getIsPrivate };
 export { getDefaultThreadName };
 export const useCreateThreadCommon = function useCreateThreadCommon(parentChannel) {
   parentChannel = parentChannel.parentChannel;
-  closure_0 = parentChannel;
   const parentMessageId = parentChannel.parentMessageId;
   const threadSettings = parentChannel.threadSettings;
   const privateThreadMode = parentChannel.privateThreadMode;
@@ -572,156 +444,156 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
   const onThreadCreated = parentChannel.onThreadCreated;
   const useDefaultThreadName = parentChannel.useDefaultThreadName;
   const uploadHandler = parentChannel.uploadHandler;
-  closure_0 = undefined;
   closure_0 = _location((arg0, arg1, arg2) => {
     closure_0 = arg0;
     closure_1 = arg1;
-    closure_2 = arg2;
+    let name = arg2;
     c6 = 0;
     c7 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (draft === 2) {
-        draft = 3;
-        HermesBuiltin.throwTypeError();
+    return (function*(arg0, value, arg2) {
+      if (c7 === 2) {
+        c7 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp5 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
         }
       } else {
         try {
-          draft = 2;
-          if (0 === channel) {
+          c7 = 2;
+          if (0 === c6) {
             if (arg0 === 1) {
-              draft = 3;
-              throw arg1;
+              c7 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              draft = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              c7 = 3;
+              obj = { value, done: true };
               return obj;
             } else {
-              let autoArchiveDuration = tmp3;
+              const auto_archive_duration = tmp3;
               closure_4 = tmp2;
-              c3 = undefined;
-              closure_4 = undefined;
-              autoArchiveDuration = undefined;
-              channel = undefined;
-              draft = undefined;
-              closure_8 = undefined;
-              closure_9 = undefined;
-              c3 = closure_2_24(name, closure_1_3);
+              closure_132_0 = closure_0;
+              closure_132_1 = closure_1;
+              closure_132_2 = name;
+              closure_132_3 = undefined;
+              closure_132_4 = undefined;
+              let autoArchiveDuration;
+              let channel2;
+              let draft2;
+              closure_132_8 = undefined;
+              closure_132_9 = undefined;
+              closure_132_3 = getIsPrivate(name, c3);
               name = name.name;
               c3 = name;
               if (name == null) {
                 c3 = "";
               }
-              closure_4 = c3;
+              closure_132_4 = c3;
               if ("" === c3) {
-                if (channel) {
-                  let stringResult = closure_2_25(lib, closure_1);
+                if (c6) {
+                  let stringResult = getDefaultThreadName(closure_0, closure_1);
                   if ("" === stringResult) {
-                    const intl = lib(threadSettings[15]).intl;
-                    stringResult = intl.string(lib(threadSettings[15]).t["7Xm5QI"]);
+                    const intl = closure_0(threadSettings[15]).intl;
+                    stringResult = intl.string(closure_0(threadSettings[15]).t["7Xm5QI"]);
                   }
-                  closure_4 = stringResult;
+                  closure_132_4 = stringResult;
                 }
               }
-              autoArchiveDuration = lib(threadSettings[16]).getAutoArchiveDuration(lib);
-              let obj4 = lib(threadSettings[16]);
-              channel = closure_2_8.getChannel(parentMessageId(threadSettings[17]).castMessageIdAsChannelId(closure_1));
-              draft = closure_2_9.getDraft(lib.id, closure_2_10.FirstThreadMessage);
-              channel = 1;
-              draft = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_2_26(lib, [], undefined, () => {
-                if (null != closure_1) {
-                  let result = closure_2_18.CHANNEL_MESSAGE_THREADS(lib.id, tmp);
-                  let tmp3 = lib;
-                } else {
-                  tmp3 = lib;
-                  result = closure_2_18.CHANNEL_THREADS(lib.id);
-                }
-                const HTTP = lib(1272).HTTP;
-                obj = { url: result, body: null, rejectWithError: null };
-                obj = { name: closure_4, type: null, auto_archive_duration: null, location: null };
-                if (c3) {
-                  let PRIVATE_THREAD = closure_2_17.PRIVATE_THREAD;
-                } else {
-                  PRIVATE_THREAD = tmp3.type === closure_2_17.GUILD_ANNOUNCEMENT ? tmp9.ANNOUNCEMENT_THREAD : tmp9.PUBLIC_THREAD;
-                }
-                obj[1] = PRIVATE_THREAD;
-                obj[2] = closure_5;
-                obj[3] = stringResult;
-                obj[1] = obj;
-                obj[2] = lib(1272).rejectWithMigratedError();
-                return HTTP.post(obj);
-              });
+              autoArchiveDuration = closure_0(threadSettings[16]).getAutoArchiveDuration(closure_0);
+              let obj4 = closure_0(threadSettings[16]);
+              channel2 = channel.getChannel(parentMessageId(threadSettings[17]).castMessageIdAsChannelId(closure_1));
+              draft2 = draft.getDraft(closure_0.id, DraftType.FirstThreadMessage);
+              c6 = 1;
+              c7 = 1;
+              let obj1 = {
+                value: createThread_(closure_0, [], undefined, () => {
+                          if (null != closure_1) {
+                            let result = closure_3_18.CHANNEL_MESSAGE_THREADS(closure_0.id, tmp);
+                            let tmp3 = closure_0;
+                          } else {
+                            tmp3 = closure_0;
+                            result = closure_3_18.CHANNEL_THREADS(closure_0.id);
+                          }
+                          const HTTP = closure_0(threadSettings[18]).HTTP;
+                          const request = { url: result, body: null, rejectWithError: null };
+                          const body = { name, type: null, auto_archive_duration: null, location: null };
+                          if (closure_1_3) {
+                            let PRIVATE_THREAD = constants.PRIVATE_THREAD;
+                          } else {
+                            PRIVATE_THREAD = tmp3.type === constants.GUILD_ANNOUNCEMENT ? tmp9.ANNOUNCEMENT_THREAD : tmp9.PUBLIC_THREAD;
+                          }
+                          body.type = PRIVATE_THREAD;
+                          body.auto_archive_duration = auto_archive_duration;
+                          body.location = location;
+                          request.body = body;
+                          request.rejectWithError = closure_0(threadSettings[18]).rejectWithMigratedError();
+                          return HTTP.post(request);
+                        }),
+                done: false
+              };
               return obj1;
             }
           } else if (arg0 === 1) {
-            draft = 3;
-            throw arg1;
+            c7 = 3;
+            throw value;
           } else if (arg0 === 2) {
-            draft = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            c7 = 3;
+            const obj2 = { value, done: true };
             return obj2;
           } else {
-            closure_8 = arg1;
-            if (closure_8 !== channel) {
-              closure_9 = draft.trim();
-              parentMessageId(threadSettings[19]).clearDraft(lib.id, closure_2_10.ThreadSettings);
+            closure_132_8 = value;
+            if (closure_132_8 !== channel2) {
+              closure_132_9 = draft2.trim();
+              parentMessageId(threadSettings[19]).clearDraft(closure_0.id, DraftType.ThreadSettings);
               const obj9 = parentMessageId(threadSettings[19]);
-              parentMessageId(threadSettings[19]).clearDraft(lib.id, closure_2_10.FirstThreadMessage);
-              let tmp10 = "" !== closure_9;
+              parentMessageId(threadSettings[19]).clearDraft(closure_0.id, DraftType.FirstThreadMessage);
+              let tmp10 = "" !== closure_132_9;
               if (tmp10) {
-                tmp10 = closure_2_9 !== lib.trim();
+                tmp10 = closure_132_9 !== closure_132_0.trim();
               }
               if (tmp10) {
                 obj = parentMessageId(threadSettings[19]);
-                obj.saveDraft(closure_2_8.id, uploadHandler, closure_2_10.ChannelMessage);
+                obj.saveDraft(closure_132_8.id, draft2, DraftType.ChannelMessage);
               }
-              if (closure_1_5 != null) {
-                tmp20(closure_1_8);
+              if (auto_archive_duration != null) {
+                tmp20(closure_132_8);
               }
-              (function sendMessage(closure_1_8, closure_0, closure_1, closure_2, c7) {
+              (function sendMessage(id, arg1, items1, arg3, c7) {
                 if (null != c7) {
-                  if (null != closure_2) {
-                    if (closure_2.length > 0) {
-                      c7(closure_1_8, closure_2, closure_0, closure_1);
+                  if (null != arg3) {
+                    if (arg3.length > 0) {
+                      c7(id, arg3, arg1, items1);
                     }
                   }
                 }
-                if (null != closure_1) {
-                  if (closure_1.length > 0) {
-                    const obj4 = callback(7456);
-                    const id = closure_1_8.id;
-                    obj = { location: null };
-                    obj[0] = constants.THREAD_CREATION;
-                    let sendStickersResult = obj4.sendStickers(id, closure_1, callback(7682).parse(closure_1_8, closure_0), obj);
-                    const obj5 = callback(7682);
+                if (null != items1) {
+                  if (items1.length > 0) {
+                    const obj4 = closure_1_1(7456);
+                    id = id.id;
+                    obj = { location: constants.THREAD_CREATION };
+                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7682).parse(id, arg1), obj);
+                    const obj5 = closure_1_1(7682);
                   }
                   return sendStickersResult;
                 }
-                obj = callback(7456);
+                closure_1_1(7456);
                 obj = { location: constants.THREAD_CREATION };
-                sendStickersResult = obj.sendMessage(closure_1_8.id, callback(7682).parse(closure_1_8, closure_0), undefined, obj);
-              })(closure_1_8, lib, closure_1, name, draft);
+                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7682).parse(id, arg1), undefined, obj);
+              })(closure_132_8, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj10 = parentMessageId(threadSettings[19]);
             }
             obj1 = parentMessageId(threadSettings[20]);
-            obj1.clearAll(lib.id, closure_2_10.FirstThreadMessage);
-            draft = 3;
+            obj1.clearAll(closure_0.id, DraftType.FirstThreadMessage);
+            c7 = 3;
             return { value: "HermesInternal", done: null };
           }
         } catch (tmp60) {
-          draft = tmp;
+          c7 = tmp;
           throw tmp60;
         }
       }
@@ -739,49 +611,42 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
     return applyArgumentsResult;
   }, items);
 };
-export const createThread = function createThread(channel, closure_2, PUBLIC_THREAD, autoArchiveDuration, arg4) {
-  closure_0 = channel;
-  closure_1 = closure_2;
-  closure_2 = PUBLIC_THREAD;
-  closure_3 = autoArchiveDuration;
-  closure_4 = arg4;
-  return createThread_(channel, [], undefined, () => {
-    const HTTP = channel(PUBLIC_THREAD[18]).HTTP;
-    obj = { url: closure_1_18.CHANNEL_THREADS(channel.id), body: obj, rejectWithError: null };
-    obj = { name: closure_1, type: PUBLIC_THREAD, auto_archive_duration: closure_3, location: closure_4 };
-    obj[2] = channel(PUBLIC_THREAD[18]).rejectWithMigratedError();
-    return HTTP.post(obj);
+export const createThread = function createThread(arg0, name, PUBLIC_THREAD, autoArchiveDuration, _location) {
+  const id = arg0;
+  const type = PUBLIC_THREAD;
+  const auto_archive_duration = autoArchiveDuration;
+  return createThread_(arg0, [], undefined, () => {
+    const HTTP = HTTPUtils.HTTP;
+    const request = { url: collapsedCategories.CHANNEL_THREADS(id.id), body: null, rejectWithError: HTTPUtils.rejectWithMigratedError() };
+    const body = { name, type, auto_archive_duration, location: _location };
+    request.body = body;
+    return HTTP.post(request);
   });
 };
 export const useCreateForumPostCommon = function useCreateForumPostCommon(parentChannel) {
   parentChannel = parentChannel.parentChannel;
-  closure_0 = parentChannel;
-  const name = parentChannel.name;
+  let name = parentChannel.name;
   const appliedTags = parentChannel.appliedTags;
-  const analyticsLocations = parentChannel.analyticsLocations;
+  let analyticsLocations = parentChannel.analyticsLocations;
   const onThreadCreated = parentChannel.onThreadCreated;
   const upload = parentChannel.upload;
   const activityAction = parentChannel.activityAction;
-  const applicationId = parentChannel.applicationId;
-  const voiceChatEnabled = parentChannel.voiceChatEnabled;
-  closure_0 = undefined;
-  closure_0 = onThreadCreated((arg0, arg1, arg2) => {
+  let applicationId = parentChannel.applicationId;
+  let voiceChatEnabled = parentChannel.voiceChatEnabled;
+  closure_0 = onThreadCreated((arg0, name, applied_tags) => {
     closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_8 = 0;
-    closure_9 = 0;
-    let reason = 0;
-    return (function*(arg0, arg1, arg2) {
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
+    return (function*(arg0, value, arg2) {
       if (c9 === 2) {
         c9 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -789,58 +654,46 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
       } else {
         try {
           c9 = 2;
-          if (0 === c8) {
+          if (0 === voiceChatEnabled) {
             if (arg0 === 1) {
               c9 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              c5 = tmp3;
-              c4 = tmp5;
-              let trackWithMetadataResult = uploaderFile;
-              uploaderFile = undefined;
-              closure_1 = undefined;
-              obj1 = undefined;
-              closure_3 = undefined;
-              c4 = undefined;
-              c5 = undefined;
-              c6 = undefined;
-              c7 = undefined;
-              c8 = undefined;
-              trackWithMetadataResult = name;
-              trackWithMetadataResult = appliedTags;
-              trackWithMetadataResult = closure_1;
-              trackWithMetadataResult = analyticsLocations;
-              trackWithMetadataResult = analyticsLocations(name(appliedTags[21])(uploaderFile), 2);
+              closure_4 = tmp5;
+              let uploaderFile;
+              closure_132_1 = undefined;
+              closure_132_2 = undefined;
+              closure_132_3 = undefined;
+              closure_132_4 = undefined;
+              let file;
+              let code;
+              let reason;
+              closure_132_8 = undefined;
               let num7 = 0;
-              let tmp41 = uploaderFile;
-              if (trackWithMetadataResult[0]) {
-                let obj5 = store(appliedTags[22]);
-                num7 = obj5.addFlag(0, closure_2_21.SUPPRESS_NOTIFICATIONS);
-                tmp41 = trackWithMetadataResult;
+              let tmp41 = closure_0;
+              if (tmp111[0]) {
+                let obj5 = closure_0(appliedTags[22]);
+                num7 = obj5.addFlag(0, constants3.SUPPRESS_NOTIFICATIONS);
+                tmp41 = tmp112;
               }
-              let obj6 = store(appliedTags[16]);
-              const autoArchiveDuration = obj6.getAutoArchiveDuration(store, null);
-              closure_1 = closure_2_18.CHANNEL_THREADS(store.id) + "?use_nested_fields=true";
-              obj1 = { name: null, auto_archive_duration: null, applied_tags: null, message: null };
-              obj1[0] = closure_1;
-              obj1[1] = autoArchiveDuration;
-              obj1[2] = closure_2;
-              const obj2 = { content: null, sticker_ids: null, flags: null };
-              obj2[0] = tmp41;
-              obj2[1] = trackWithMetadataResult;
+              let obj6 = closure_0(appliedTags[16]);
+              const autoArchiveDuration = obj6.getAutoArchiveDuration(closure_0, null);
+              closure_132_1 = closure_2_18.CHANNEL_THREADS(closure_0.id) + "?use_nested_fields=true";
+              const obj1 = { name, auto_archive_duration: autoArchiveDuration, applied_tags, message: null };
+              const obj2 = { content: tmp41, sticker_ids: name, flags: null };
               let tmp50;
               if (0 !== num7) {
                 tmp50 = num7;
               }
-              obj2[2] = tmp50;
-              obj1[3] = obj2;
+              obj2.flags = tmp50;
+              obj1.message = obj2;
+              closure_132_2 = obj1;
               let tmp52 = null;
-              if (null != code) {
+              if (null != closure_6) {
                 tmp52 = (function buildMessageActivity(activity) {
                   let session_id = activity.activity.session_id;
                   if (null == session_id) {
@@ -848,16 +701,13 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
                   }
                   let tmp2 = null;
                   if (null != session_id) {
-                    obj = { type: null, session_id: null, target_user_id: null, party_id: null };
-                    obj[0] = activity.type;
-                    obj[1] = session_id;
-                    obj[2] = activity.targetUserId;
+                    obj = { type: activity.type, session_id, target_user_id: activity.targetUserId, party_id: null };
                     const party = activity.activity.party;
                     let id;
                     if (party != null) {
                       id = party.id;
                     }
-                    obj[3] = id;
+                    obj.party_id = id;
                     tmp2 = obj;
                   }
                   return tmp2;
@@ -871,115 +721,92 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
                 obj1.message.application_id = tmp51.activity.application_id;
                 obj1.message.activity = tmp52;
               }
-              if (null != obj1) {
+              if (null != applied_tags) {
                 if (arr2.length > 0) {
-                  c7 = 1;
-                  c8 = 3;
+                  applicationId = 1;
+                  voiceChatEnabled = 3;
                   c9 = 1;
-                  let obj3 = { value: null, done: false };
-                  obj3[0] = file(arr2);
+                  let obj3 = { value: tmp3(arr2), done: false };
                   return obj3;
                 }
               }
-              closure_2_26(store, closure_1_3, uploaderFile, () => {
-                const HTTP = uploaderFile(obj1[18]).HTTP;
-                obj = { url: closure_1, body: obj1, rejectWithError: uploaderFile(obj1[18]).rejectWithMigratedError() };
-                return HTTP.post(obj);
+              createThread_(closure_0, analyticsLocations, uploaderFile, () => {
+                const HTTP = closure_0(body[18]).HTTP;
+                const request = { url, body, rejectWithError: closure_0(body[18]).rejectWithMigratedError() };
+                return HTTP.post(request);
               });
-              c8 = 2;
+              voiceChatEnabled = 2;
               c9 = 1;
+              tmp111 = analyticsLocations(name(appliedTags[21])(closure_0), 2);
             }
           } else if (1 === tmp8) {
-            c7 = 0;
-            closure_9 = c6;
-            closure_4 = closure_9;
-            file = closure_4.file;
-            code = closure_4.code;
-            reason = closure_4.reason;
-            obj3 = store(appliedTags[24]);
-            const obj4 = { file: null, guildId: null, analyticsLocations: null, code: null, reason: null };
-            obj4[0] = file;
-            obj4[1] = store.getGuildId();
-            closure_3 = closure_1_3;
-            if (closure_1_3 == null) {
-              closure_3 = [];
+            applicationId = 0;
+            closure_132_9 = closure_6;
+            closure_132_4 = closure_132_9;
+            file = closure_132_4.file;
+            code = closure_132_4.code;
+            reason = closure_132_4.reason;
+            obj3 = closure_0(appliedTags[24]);
+            const obj4 = { file, guildId: closure_0.getGuildId(), analyticsLocations: null, code: null, reason: null };
+            if (analyticsLocations == null) {
+              analyticsLocations = [];
             }
-            obj4[2] = closure_3;
-            obj4[3] = code;
-            obj4[4] = reason;
+            obj4.analyticsLocations = analyticsLocations;
+            obj4.code = code;
+            obj4.reason = reason;
             const result = obj3.handleUploadMessageAttachmentsErrors(obj4);
-            throw closure_9;
+            throw closure_132_9;
           } else if (2 === tmp8) {
             if (arg0 === 1) {
               c9 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c9 = 3;
-              obj5 = { value: null, done: true };
-              obj5[0] = arg1;
+              obj5 = { value, done: true };
               return obj5;
             } else {
-              const user = arg1;
-              name(appliedTags[19]).clearDraft(store.id, closure_2_10.ThreadSettings);
+              closure_132_8 = value;
+              name(appliedTags[19]).clearDraft(closure_0.id, DraftType.ThreadSettings);
               const obj13 = name(appliedTags[19]);
-              name(appliedTags[19]).clearDraft(store.id, closure_2_10.FirstThreadMessage);
+              name(appliedTags[19]).clearDraft(closure_0.id, DraftType.FirstThreadMessage);
               const obj14 = name(appliedTags[19]);
-              name(appliedTags[20]).clearAll(store.id, closure_2_10.FirstThreadMessage);
+              name(appliedTags[20]).clearAll(closure_0.id, DraftType.FirstThreadMessage);
               const obj15 = name(appliedTags[20]);
-              obj6 = { guildId: null, channelId: null, postId: null, applicationId: null, voiceChatEnabled: null };
-              obj6[0] = store.guild_id;
-              obj6[1] = store.id;
-              obj6[2] = user.id;
-              obj6[3] = reason;
-              obj6[4] = user;
-              const result1 = store(appliedTags[25]).trackForumPostCreated(obj6);
-              if (null != closure_2.message.application_id) {
-                const obj7 = { location: null, invite_type: null, application_id: null, guild_id: null, channel_id: null, message_id: null };
-                trackWithMetadataResult = closure_2_22;
-                obj7[0] = closure_2_22.THREAD_CREATION;
-                trackWithMetadataResult = closure_2_19;
-                obj7[1] = closure_2_19.APPLICATION;
-                trackWithMetadataResult = closure_2;
-                obj7[2] = closure_2.message.application_id;
-                trackWithMetadataResult = store;
-                obj7[3] = store.getGuildId();
-                trackWithMetadataResult = user;
-                obj7[4] = user.id;
-                trackWithMetadataResult = user;
-                obj7[5] = user.id;
-                trackWithMetadataResult = name(appliedTags[26]).trackWithMetadata(closure_2_16.INVITE_SENT, obj7);
+              obj6 = { guildId: closure_0.guild_id, channelId: closure_0.id, postId: closure_132_8.id, applicationId, voiceChatEnabled };
+              const result1 = closure_0(appliedTags[25]).trackForumPostCreated(obj6);
+              if (null != closure_132_2.message.application_id) {
+                const obj7 = { location: constants4.THREAD_CREATION, invite_type: constants2.APPLICATION, application_id: closure_132_2.message.application_id, guild_id: closure_0.getGuildId(), channel_id: closure_132_8.id, message_id: closure_132_8.id };
+                name(appliedTags[26]).trackWithMetadata(constants.INVITE_SENT, obj7);
                 const obj18 = name(appliedTags[26]);
               }
               if (closure_4 != null) {
-                tmp14(user);
+                tmp14(closure_132_8);
               }
               c9 = 3;
-              const obj8 = { value: null, done: true };
-              obj8[0] = user;
+              const obj8 = { value: closure_132_8, done: true };
               return obj8;
             }
           } else if (arg0 === 1) {
             c9 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 !== 2) {
-            closure_3 = arg1;
-            uploaderFile = closure_3.uploaderFile;
-            const files = closure_3.files;
-            obj1.message.attachments = files.map((closure_0, closure_1) => uploaderFile(obj1[23]).getAttachmentPayload(closure_0, closure_1));
-            c7 = 0;
+            closure_132_3 = value;
+            uploaderFile = closure_132_3.uploaderFile;
+            const files = closure_132_3.files;
+            closure_132_2.message.attachments = files.map((item, index) => closure_1_0(body[23]).getAttachmentPayload(item, index));
+            applicationId = 0;
           }
-          c7 = 0;
+          applicationId = 0;
           c9 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } catch (tmp62) {
-          c6 = tmp62;
-          if (tmp4 === c7) {
+          closure_6 = tmp62;
+          if (tmp4 === applicationId) {
             c9 = tmp2;
             throw tmp62;
           } else {
-            c8 = trackWithMetadataResult;
+            voiceChatEnabled = tmp;
           }
         }
       }

@@ -1,21 +1,22 @@
-// === Module 17846: AVErrorAudioCaptureSampleRateMismatchDefinition ===
+// === Module 17846: AVErrorAudioCaptureSampleRateMismatch ===
 
-// Module 17846 (AVErrorAudioCaptureSampleRateMismatchDefinition)
-import setDefault from "set" /* 1090 */;
-import mapped from "mapped" /* 9110 */;
-import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17834 */;
-import closure_2 from "updateAveragedStatsHelper" /* 4598 */;
-import closure_3 from "_detectH265HardwareDecode" /* 1908 */;
-import closure_4 from "createRTCConnection" /* 4583 */;
+// Module 17846 (AVErrorAudioCaptureSampleRateMismatch)
+import DurationsDefault from "Durations" /* 1090 */;
+import AVError from "AVError" /* 9110 */;
+import AVErrorContext from "AVErrorContext" /* 17834 */;
+import MediaEngineStatsStore from "MediaEngineStatsStore" /* 4598 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
-require = arg1;
-let closure_5 = 10 * setDefault.Millis.SECOND;
-const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx");
+require = fn;
+let closure_5 = 10 * DurationsDefault.Millis.SECOND;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx");
 
 export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
   getActiveErrors() {
-    let obj = rTCConnection;
-    rTCConnection = rTCConnection.getRTCConnection();
+    let obj = RTCConnectionStore;
+    const rTCConnection = RTCConnectionStore.getRTCConnection();
     let num;
     if (rTCConnection != null) {
       num = rTCConnection.getDurationSeconds();
@@ -25,13 +26,13 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
     }
     if (num >= 30) {
       const _performance = performance;
-      if (nowResult - lastAudioInputDeviceChangeTimestamp.getLastAudioInputDeviceChangeTimestamp() >= closure_5) {
+      if (nowResult - MediaEngineStore.getLastAudioInputDeviceChangeTimestamp() >= closure_5) {
         const rTCConnection1 = obj.getRTCConnection();
         let mediaEngineConnectionId;
         if (rTCConnection1 != null) {
           mediaEngineConnectionId = rTCConnection1.getMediaEngineConnectionId();
         }
-        connectionStats = connectionStats.getConnectionStats(mediaEngineConnectionId);
+        const connectionStats = MediaEngineStatsStore.getConnectionStats(mediaEngineConnectionId);
         let num2;
         if (connectionStats != null) {
           const outbound = connectionStats.stats.rtp.outbound;
@@ -46,13 +47,10 @@ export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
         const _Math = Math;
         let tmp5;
         if (Math.abs(num2) > 30) {
-          obj = { type: null, audioCaptureSampleRateMismatchPercent: null };
-          obj[0] = mapped.AVError.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH;
-          obj[1] = num2;
-          const merged = Object.assign(getVoiceChannelErrorContext.getVoiceChannelErrorContext());
+          obj = { type: AVError.AVError.AUDIO_CAPTURE_SAMPLE_RATE_MISMATCH, audioCaptureSampleRateMismatchPercent: num2 };
+          const merged = Object.assign(AVErrorContext.getVoiceChannelErrorContext());
           const items = [obj];
           tmp5 = items;
-          const obj4 = getVoiceChannelErrorContext;
         }
         return tmp5;
       }

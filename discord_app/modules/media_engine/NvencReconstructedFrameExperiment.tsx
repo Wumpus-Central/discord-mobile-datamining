@@ -1,12 +1,15 @@
-// === Module 14076: getNvencReconstructedFrameExperimentConfig ===
+// === Module 14076: NvencReconstructedFrameExperiment ===
 
-// Module 14076 (getNvencReconstructedFrameExperimentConfig)
-import getUnitIdDefault from "getUnitId" /* 1434 */;
+// Module 14076 (NvencReconstructedFrameExperiment)
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
-let obj = { 1: null };
+let obj = { kind: "user", name: "2026-07-nvenc-reconstructed-frames", defaultConfig: { enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { enabled: true };
-let closure_0 = getUnitIdDefault({ kind: "user", name: "2026-07-nvenc-reconstructed-frames", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/media_engine/NvencReconstructedFrameExperiment.tsx");
+obj.variations = obj;
+let closure_0 = apex_ApexExperimentDefault(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/media_engine/NvencReconstructedFrameExperiment.tsx");
 
 export const getNvencReconstructedFrameExperimentConfig = function getNvencReconstructedFrameExperimentConfig(disable) {
   let flag = disable.disable;
@@ -17,8 +20,7 @@ export const getNvencReconstructedFrameExperimentConfig = function getNvencRecon
   if (flag) {
     let defaultConfig = obj.definition.defaultConfig;
   } else {
-    obj = { location: null };
-    obj[0] = disable.location;
+    obj = { location: disable.location };
     defaultConfig = obj.getConfig(obj);
   }
   return defaultConfig;

@@ -1,9 +1,9 @@
-// === Module 7326: GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD ===
+// === Module 7326: GuildTemplatesConstants ===
 
-// Module 7326 (GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD)
-import set from "set" /* 2 */;
+// Module 7326 (GuildTemplatesConstants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
+const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
 
 export const GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD = 50;
 export const GuildTemplateStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", EXPIRED: "EXPIRED", ACCEPTED: "ACCEPTED", ACCEPTING: "ACCEPTING" };

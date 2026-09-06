@@ -1,24 +1,24 @@
-// === Module 14714: pressable ===
+// === Module 14714: AccountPhoneSetting ===
 
-// Module 14714 (pressable)
+// Module 14714 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import ChangePhoneReason from "ChangePhoneReason" /* 7045 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY" /* 7043 */;
-import createToggle from "createToggle" /* 11468 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import PhoneActionCreators from "PhoneActionCreators" /* 7045 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+let closure_4 = fn(7043).PHONE_VERIFICATION_MODAL_KEY;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dEYpSt);
+    const intl = util.intl;
+    return intl.string(util.t.dEYpSt);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: fn(7975).MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
-    const items = [closure_3];
+    const items = [UserStore];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let phone;
@@ -29,13 +29,13 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = _modDef4763;
-    obj = { allowDeletePhone: true, reason: ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE };
+    const obj = { allowDeletePhone: true, reason: PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE };
     obj.pushLazy(asyncRequireImpl(7042, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };
-createToggle = createToggle.createPressable(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
+SettingBuilders = SettingBuilders.createPressable(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

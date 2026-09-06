@@ -1,26 +1,26 @@
 // === Module 7204: VerifiedRoleIcon ===
 
 // Module 7204 (VerifiedRoleIcon)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
+import nativeDefault from "native" /* 576 */;
 import LinkIcon from "LinkIcon" /* 4503 */;
-import useRoleIcon from "useRoleIcon" /* 7186 */;
+import RoleIconUtils from "RoleIconUtils" /* 7186 */;
 import getHigherContrastColor from "getHigherContrastColor" /* 7205 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ DEFAULT_ROLE_COLOR_HEX: c3, EMPTY_STRING_SNOWFLAKE_ID: c4 } = ME);
-const WHITE = ThemesDefault.unsafe_rawColors.WHITE;
-const PRIMARY_630 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
-createCacheKey = { iconContainer: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/connections/native/VerifiedRoleIcon.tsx");
+require = fn;
+const View = fn(17).View;
+const Constants = fn(1074);
+({ DEFAULT_ROLE_COLOR_HEX: c3, EMPTY_STRING_SNOWFLAKE_ID: closure_4 } = Constants);
+const jsx = fn(21).jsx;
+const WHITE = nativeDefault.unsafe_rawColors.WHITE;
+const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
+fn(4560);
+let createStyles = { iconContainer: null };
+createStyles = { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round };
+createStyles.iconContainer = createStyles;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/connections/native/VerifiedRoleIcon.tsx");
 
 export default function VerifiedRoleIcon(arg0) {
   ({ role, roleId, roleColor, size } = arg0);
@@ -33,13 +33,14 @@ export default function VerifiedRoleIcon(arg0) {
     roleColor = colorString;
   }
   if (roleColor == null) {
-    roleColor = closure_3;
+    roleColor = React3;
   }
-  let obj = getHigherContrastColor;
+  let obj = { backgroundColor: roleColor, colors: null };
   const items = [WHITE, PRIMARY_630];
+  obj.colors = items;
   const diff = size - size / 8 * 2;
-  const higherContrastColor = obj.getHigherContrastColor({ backgroundColor: roleColor, colors: items });
-  obj1 = useRoleIcon;
+  const higherContrastColor = obj.getHigherContrastColor(obj);
+  let obj2 = RoleIconUtils;
   obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -49,22 +50,21 @@ export default function VerifiedRoleIcon(arg0) {
     roleId = id;
   }
   if (roleId == null) {
-    roleId = closure_4;
+    roleId = React4;
   }
-  obj[1] = roleId;
-  obj[2] = diff;
-  let roleIcon = obj1.useRoleIcon(obj);
-  obj = { style: items1, children: null };
-  items1 = [style, callback().iconContainer, { width: size, height: size, backgroundColor: roleColor }];
+  obj.roleId = roleId;
+  obj.size = diff;
+  let roleIcon = obj2.useRoleIcon(obj);
+  const obj1 = { style: null, children: null };
+  const items1 = [style, closure_8().iconContainer, { width: size, height: size, backgroundColor: roleColor }];
+  obj1.style = items1;
   if (false === displayRoleIcon) {
-    obj1 = { style: null, size: "custom", color: null };
-    const obj2 = { width: null, height: null };
-    obj2[0] = diff;
-    obj2[1] = diff;
-    obj1[0] = obj2;
-    obj1[2] = higherContrastColor;
-    roleIcon = tmp9(LinkIcon.LinkIcon, obj1);
+    obj2 = { style: null, size: "custom", color: null };
+    size = { width: diff, height: diff };
+    obj2.style = size;
+    obj2.color = higherContrastColor;
+    roleIcon = tmp9(LinkIcon.LinkIcon, obj2);
   }
-  obj[1] = roleIcon;
-  return <View style={items1}>{null}</View>;
+  obj1.children = roleIcon;
+  return <View style={null}>{null}</View>;
 };

@@ -2,60 +2,49 @@
 
 // Module 12250 (GiftIconTrinketsAnimation)
 import initialize from "initialize" /* 504 */;
-import ThemesDefault from "Themes" /* 576 */;
-import set from "set" /* 1115 */;
-import map from "map" /* 4262 */;
-import preloadDefault from "preload" /* 5587 */;
-import useAPNGPlayerControls from "useAPNGPlayerControls" /* 8808 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-let closure_6 = createCacheKey.createStyles((width) => {
-  const containerRefresh = { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 };
-  return { containerRefresh, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } };
-});
-const memoResult = importAllResult.memo((trinketsAnimationUrl) => {
+const PlatformUtils = APNGPlayer(1115);
+const FastImageDefault = tmp(5587);
+const APNGPlayer2 = APNGPlayer(8808);
+require = fn;
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_6 = createStyles.createStyles((width) => ({ containerRefresh: { position: "absolute", top: 0, left: 0, width, height: width, overflow: "visible", marginLeft: 0, zIndex: 0 }, trinketsRefresh: { zIndex: 4, position: "absolute", pointerEvents: "none", width: "175%", height: "175%", top: "-37.5%", left: "-37.5%" } }));
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat_input/native/GiftIconTrinketsAnimation.tsx");
+
+export const GiftIconTrinketsAnimation = noop.memo((trinketsAnimationUrl) => {
   trinketsAnimationUrl = trinketsAnimationUrl.trinketsAnimationUrl;
   let APNGPlayer = require;
   let obj = dependencyMap;
-  obj1 = map;
-  const tmp2 = callback(obj1.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
-  const items = [closure_4];
+  let obj1 = useToken;
+  const tmp2 = closure_6(obj1.useToken(nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE));
+  const items = [AccessibilityStore];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const trinketsRefresh = tmp2.trinketsRefresh;
-  const obj3 = initialize;
-  const tmp = importDefault;
   if (obj4.isNullOrEmpty(trinketsAnimationUrl)) {
     return null;
   } else {
-    obj = { style: null, pointerEvents: "none", children: null };
-    obj[0] = tmp2.containerRefresh;
+    obj = { style: tmp2.containerRefresh, pointerEvents: "none", children: null };
     if (APNGPlayerResult.isAndroid()) {
-      APNGPlayer = useAPNGPlayerControls.APNGPlayer;
-      obj = { url: null, autoplay: null, style: null };
-      obj[0] = trinketsAnimationUrl;
-      obj[1] = !stateFromStores;
-      obj[2] = trinketsRefresh;
+      APNGPlayer = APNGPlayer2.APNGPlayer;
+      obj = { url: trinketsAnimationUrl, autoplay: !stateFromStores, style: trinketsRefresh };
       let tmp4Result = tmp4(APNGPlayer, obj);
     } else {
       obj = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      obj1 = { uri: null };
-      obj1[0] = trinketsAnimationUrl;
-      obj[0] = obj1;
-      obj[1] = trinketsRefresh;
-      obj[3] = !stateFromStores;
-      tmp4Result = tmp4(preloadDefault, obj);
+      obj1 = { uri: trinketsAnimationUrl };
+      obj.source = obj1;
+      obj.style = trinketsRefresh;
+      obj.enableAnimation = !stateFromStores;
+      tmp4Result = tmp4(FastImageDefault, obj);
     }
-    obj[2] = tmp4Result;
+    obj.children = tmp4Result;
     tmp4Result = tmp4(View, obj);
-    APNGPlayerResult = set;
-    const tmp5 = View;
+    APNGPlayerResult = PlatformUtils;
   }
 });
-const result = require("set").fileFinishedImporting("modules/chat_input/native/GiftIconTrinketsAnimation.tsx");
-
-export const GiftIconTrinketsAnimation = memoResult;

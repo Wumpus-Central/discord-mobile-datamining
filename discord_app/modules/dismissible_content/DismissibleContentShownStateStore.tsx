@@ -1,17 +1,16 @@
-// === Module 1949: withContent ===
+// === Module 1949: DismissibleContentShownStateStore ===
 
-// Module 1949 (withContent)
+// Module 1949 (DismissibleContentShownStateStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import batchUpdates from "batchUpdates" /* 1249 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 1948 */;
 import isActionRequiredDefault from "isActionRequired" /* 1953 */;
-import closure_3 from "handleUpdateUser" /* 1950 */;
-import closure_4 from "handleRequiredAction" /* 1951 */;
-import identity from "identity" /* 1244 */;
+import LoginRequiredActionStore from "LoginRequiredActionStore" /* 1950 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
 
-require = arg1;
+require = fn;
 function withContent(currentlyShown, content) {
-  const _require = content;
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -22,7 +21,7 @@ function withContent(currentlyShown, content) {
     currentlyShown = currentlyShown.currentlyShown;
     currentlyShown.add(content.content);
     const recentlyShown = currentlyShown.recentlyShown;
-    const found = recentlyShown.filter((arg0) => arg0 !== content.content);
+    const found = recentlyShown.filter((item) => item !== content.content);
     found.unshift(content.content);
     found.splice(5);
     currentlyShown.recentlyShown = found;
@@ -30,7 +29,7 @@ function withContent(currentlyShown, content) {
       const currentlyShownGroup = currentlyShown.currentlyShownGroup;
       currentlyShownGroup.add(content.groupName);
     }
-    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1948).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+    const CONTENT_TYPES_WITH_BYPASS_FATIGUE = DismissibleContentFatigueConfig.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
     if (!CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content)) {
       currentlyShown.shownFatigableCandidate = content;
       const prevFatigableCandidate = currentlyShown.prevFatigableCandidate;
@@ -70,22 +69,22 @@ function withUpdateWinner(candidates) {
     if (hasItem) {
       if (!tmp2) {
         taskRunner.unschedule();
-        let value;
+        value = undefined;
         if (null != candidates.prevFatigableCandidate) {
           let candidates2 = candidates.candidates;
           value = candidates2.get(candidates.prevFatigableCandidate.content);
         }
-        require = value;
+        const require = value;
         let candidates3 = candidates.candidates;
         let items = [];
         HermesBuiltin.arraySpread(candidates3.keys(), 0);
         let shownFatigableCandidate = candidates.shownFatigableCandidate;
-        let found = items.filter((arg0) => {
+        let found = items.filter((item) => {
           let content;
           if (obj != null) {
             content = obj.content;
           }
-          return arg0 !== content;
+          return item !== content;
         });
         if (null != shownFatigableCandidate) {
           if (null != shownFatigableCandidate.content) {
@@ -106,7 +105,6 @@ function withUpdateWinner(candidates) {
           }
         }
         withContent(candidates, value, found);
-        const tmp9 = withContent;
       }
       return candidates;
     }
@@ -123,7 +121,7 @@ function withUpdateWinner(candidates) {
       }
       if (!scheduledResult) {
         obj.schedule(() => {
-          value(table[5]).batchUpdates(() => {
+          value(dependencyMap[5]).batchUpdates(() => {
             state.setState((candidates) => {
               let obj = {};
               const merged = Object.assign(candidates);
@@ -144,13 +142,13 @@ function withUpdateWinner(candidates) {
               }
               let found = items;
               if (hasItem) {
-                found = items.filter((arg0) => {
+                found = items.filter((item) => {
                   const prevFatigableCandidate = obj.prevFatigableCandidate;
                   let content;
                   if (prevFatigableCandidate != null) {
                     content = prevFatigableCandidate.content;
                   }
-                  return arg0 !== content;
+                  return item !== content;
                 });
               }
               const candidates3 = obj.candidates;
@@ -159,12 +157,12 @@ function withUpdateWinner(candidates) {
               const candidates4 = obj.candidates;
               const items1 = [...candidates4.keys()];
               const shownFatigableCandidate = obj.shownFatigableCandidate;
-              const found1 = items1.filter((arg0) => {
+              const found1 = items1.filter((item) => {
                 let content;
                 if (obj != null) {
                   content = obj.content;
                 }
-                return arg0 !== content;
+                return item !== content;
               });
               if (null != shownFatigableCandidate) {
                 if (null != shownFatigableCandidate.content) {
@@ -184,7 +182,7 @@ function withUpdateWinner(candidates) {
                   obj.shownFatigableCandidate = null;
                 }
               }
-              closure_8(obj, value, found1);
+              closure_1_8(obj, value, found1);
               return obj;
             });
           });
@@ -194,39 +192,40 @@ function withUpdateWinner(candidates) {
     }
   }
 }
-const taskRunner = new require("schedule").TaskRunner();
+const taskRunner = new fn(1952).TaskRunner();
+let identity = fn(1244);
 let closure_6 = identity.createWithEqualityFn(function initState() {
   const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
-  obj[4] = new Set();
+  obj.currentlyShown = new Set();
   const set = new Set();
-  obj[5] = new Set();
+  obj.currentlyShownGroup = new Set();
   return obj;
 });
-let c7 = false;
+let closure_7 = false;
 const Store = initializeDefault.Store;
 class DismissibleContentShownStateStore extends Store {
 }
 const prototype = DismissibleContentShownStateStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  this.waitFor(closure_3, closure_4);
-  const items = [closure_3, closure_4];
+  this.waitFor(LoginRequiredActionStore, UserRequiredActionStore);
+  const items = [LoginRequiredActionStore, UserRequiredActionStore];
   this.syncWith(items, () => self.setHasRequiredAction());
 };
 prototype["setHasRequiredAction"] = function setHasRequiredAction() {
-  closure_7 = isActionRequiredDefault(closure_3, closure_4);
+  closure_7 = isActionRequiredDefault(LoginRequiredActionStore, UserRequiredActionStore);
 };
 DismissibleContentShownStateStore.displayName = "DismissibleContentShownStateStore";
 identity = {
   CONNECTION_OPEN() {
-    batchUpdates.batchUpdates(() => {
+    ReactBatchUpdates.batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
-        obj[4] = new Set();
+        obj.currentlyShown = new Set();
         const set = new Set();
-        obj[5] = new Set();
+        obj.currentlyShownGroup = new Set();
         obj.postConnectionOpen = true;
         return obj;
       });
@@ -234,13 +233,13 @@ identity = {
     taskRunner.unschedule();
   },
   LOGOUT() {
-    batchUpdates.batchUpdates(() => {
+    ReactBatchUpdates.batchUpdates(() => {
       state.setState(() => {
         const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
-        obj[4] = new Set();
+        obj.currentlyShown = new Set();
         const set = new Set();
-        obj[5] = new Set();
+        obj.currentlyShownGroup = new Set();
         obj.postConnectionOpen = true;
         return obj;
       });
@@ -248,14 +247,15 @@ identity = {
     taskRunner.unschedule();
   }
 };
-const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(dispatcherDefault, identity);
-let result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
+const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(DispatcherDefault, identity);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
 
 export default function useDismissibleContentShownStateStore(arg0, arg1) {
-  return store(arg0, arg1);
+  return closure_6(arg0, arg1);
 };
 export const isInCooldown = function isInCooldown() {
-  const state = store.getState();
+  const state = closure_6.getState();
   new Date();
   let tmp4 = null == state.shownFatigableCandidate;
   if (tmp4) {
@@ -272,11 +272,11 @@ export const isStateInCooldown = function isStateInCooldown(shownFatigableCandid
   return tmp3;
 };
 export const addCandidateContent = function addCandidateContent(content) {
-  const _require = content;
-  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _require(1948).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+  _require = content;
+  const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
   closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
-  _require(1249).batchUpdates(() => {
-    closure_1_6.setState((candidates) => {
+  require("ReactBatchUpdates").batchUpdates(() => {
+    state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
       obj.candidates = new Map(candidates.candidates);
@@ -284,13 +284,13 @@ export const addCandidateContent = function addCandidateContent(content) {
       obj.currentlyShown = new Set(candidates.currentlyShown);
       const set = new Set(candidates.currentlyShown);
       obj.currentlyShownGroup = new Set(candidates.currentlyShownGroup);
-      if (!closure_1_7) {
-        if (closure_1) {
-          closure_1_8(obj, content);
+      if (!closure_2_7) {
+        if (closure_1_1) {
+          withContent(obj, content);
         } else {
           candidates = obj.candidates;
           const result = candidates.set(content.content, content);
-          closure_1_9(obj);
+          withUpdateWinner(obj);
         }
       }
       return obj;
@@ -298,10 +298,10 @@ export const addCandidateContent = function addCandidateContent(content) {
   });
 };
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   closure_1 = arg1;
-  _require(1249).batchUpdates(() => {
-    closure_1_6.setState((candidates) => {
+  require("ReactBatchUpdates").batchUpdates(() => {
+    state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
       obj.candidates = new Map(candidates.candidates);
@@ -309,10 +309,10 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
       obj.currentlyShown = new Set(candidates.currentlyShown);
       const set = new Set(candidates.currentlyShown);
       obj.currentlyShownGroup = new Set(candidates.currentlyShownGroup);
-      if (closure_1) {
+      if (closure_1_1) {
         const candidates2 = obj.candidates;
-        candidates2.delete(closure_0.content);
-        if (null != closure_0) {
+        candidates2.delete(closure_1_0.content);
+        if (null != closure_1_0) {
           if (null != tmp12.content) {
             const currentlyShown2 = obj.currentlyShown;
             currentlyShown2.delete(tmp12.content);
@@ -330,12 +330,11 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
             obj.shownFatigableCandidate = null;
           }
         }
-        closure_1_9(obj);
-        const tmp11 = closure_1_9;
+        withUpdateWinner(obj);
       } else {
         candidates = obj.candidates;
-        candidates.delete(closure_0.content);
-        if (null != closure_0) {
+        candidates.delete(closure_1_0.content);
+        if (null != closure_1_0) {
           if (null != tmp5.content) {
             const currentlyShown = obj.currentlyShown;
             currentlyShown.delete(tmp5.content);
@@ -359,14 +358,14 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
   });
 };
 export const getLastShownDismissibleContent = function getLastShownDismissibleContent() {
-  let first = store.getState().recentlyShown[0];
+  let first = closure_6.getState().recentlyShown[0];
   if (first == null) {
     first = null;
   }
   return first;
 };
 export const getCurrentFatigableWinner = function getCurrentFatigableWinner() {
-  const shownFatigableCandidate = store.getState().shownFatigableCandidate;
+  const shownFatigableCandidate = closure_6.getState().shownFatigableCandidate;
   let content;
   if (shownFatigableCandidate != null) {
     content = shownFatigableCandidate.content;
@@ -377,49 +376,49 @@ export const getCurrentFatigableWinner = function getCurrentFatigableWinner() {
   return content;
 };
 export const isContentShown = function isContentShown(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL) {
-  const currentlyShown = store.getState().currentlyShown;
+  const currentlyShown = closure_6.getState().currentlyShown;
   return currentlyShown.has(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
 };
 export const useIsContentShown = function useIsContentShown(USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS) {
   closure_0 = USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS;
-  return store((currentlyShown) => {
+  return closure_6((currentlyShown) => {
     currentlyShown = currentlyShown.currentlyShown;
     return currentlyShown.has(closure_0);
   });
 };
 export const useIsAnyContentShown = function useIsAnyContentShown(arg0) {
   closure_0 = arg0;
-  return store((arg0) => {
-    closure_0 = arg0;
-    return closure_0.some((arg0) => {
+  return closure_6((arg0) => {
+    let currentlyShown = arg0;
+    return currentlyShown.some((item) => {
       currentlyShown = currentlyShown.currentlyShown;
-      return currentlyShown.has(arg0);
+      return currentlyShown.has(item);
     });
   });
 };
 export const isAnyContentShown = function isAnyContentShown(arr) {
-  const currentlyShown = store.getState().currentlyShown;
-  return arr.find((arg0) => currentlyShown.has(arg0));
+  const currentlyShown = closure_6.getState().currentlyShown;
+  return arr.find((item) => currentlyShown.has(item));
 };
 export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
   const items = [...closure_6.getState().currentlyShown];
   const items1 = [
-    store.getState().currentlyShown.size,
-    items.filter((arg0) => {
-      const CONTENT_TYPES_WITH_BYPASS_FATIGUE = callback(table[4]).CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-      return !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(arg0);
+    closure_6.getState().currentlyShown.size,
+    items.filter((item) => {
+      const CONTENT_TYPES_WITH_BYPASS_FATIGUE = require("DismissibleContentFatigueConfig").CONTENT_TYPES_WITH_BYPASS_FATIGUE;
+      return !CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(item);
     }).length
   ];
   return items1;
 };
 export const reset = function reset() {
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState(() => {
       const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
       const map = new Map();
-      obj[4] = new Set();
+      obj.currentlyShown = new Set();
       const set = new Set();
-      obj[5] = new Set();
+      obj.currentlyShownGroup = new Set();
       obj.postConnectionOpen = true;
       return obj;
     });
@@ -427,7 +426,7 @@ export const reset = function reset() {
   taskRunner.unschedule();
 };
 export const resetFatigueCooldown = function resetFatigueCooldown() {
-  batchUpdates.batchUpdates(() => {
+  ReactBatchUpdates.batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
@@ -443,6 +442,6 @@ export const resetFatigueCooldown = function resetFatigueCooldown() {
   });
 };
 export const isPostConnectionOpen = function isPostConnectionOpen() {
-  return store.getState().postConnectionOpen;
+  return closure_6.getState().postConnectionOpen;
 };
 export { dismissibleContentShownStateStore };

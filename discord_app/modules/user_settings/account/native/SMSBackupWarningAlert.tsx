@@ -1,40 +1,41 @@
 // === Module 7077: SMSBackupWarningAlert ===
 
 // Module 7077 (SMSBackupWarningAlert)
-import noopAll from "noop" /* 19 */;
-import componentDidMountDefault from "componentDidMount" /* 4994 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
+import common_AlertDefault from "common/Alert" /* 4994 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ title: { textAlign: "center" }, body: { marginTop: 8, textAlign: "center", lineHeight: 18 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
+const require = fn;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ title: { textAlign: "center" }, body: { marginTop: 8, textAlign: "center", lineHeight: 18 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/account/native/SMSBackupWarningAlert.tsx");
 
 export default function SMSBackupWarningAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
-  const tmp = callback3();
+  const tmp = closure_5();
   let obj = { cancelText: null, confirmText: null, onConfirm: null, onCancel: null, children: null };
   const intl = onConfirm(1114).intl;
-  obj[0] = intl.string(onConfirm(1114).t["ETE/oC"]);
+  obj.cancelText = intl.string(onConfirm(1114).t["ETE/oC"]);
   const intl2 = onConfirm(1114).intl;
-  obj[1] = intl2.string(onConfirm(1114).t.N86XcP);
-  obj[2] = function onConfirm() {
+  obj.confirmText = intl2.string(onConfirm(1114).t.N86XcP);
+  obj.onConfirm = function onConfirm() {
     onConfirm();
-    closure_1_1(closure_1_2[5]).close();
+    actions_AlertActionCreatorsDefault.close();
   };
-  obj[3] = function onCancel() {
-    return callback(table[5]).close();
+  obj.onCancel = function onCancel() {
+    return actions_AlertActionCreatorsDefault.close();
   };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl3 = onConfirm(1114).intl;
-  obj[4] = intl3.string(onConfirm(1114).t.Ed4XQB);
-  const items = [callback(onConfirm(4556).Text, obj), ];
+  obj.children = intl3.string(onConfirm(1114).t.Ed4XQB);
+  const items = [closure_3(onConfirm(4556).Text, obj), ];
   obj = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl4 = onConfirm(1114).intl;
-  obj[3] = intl4.string(onConfirm(1114).t.EDU2Eg);
-  items[1] = callback(onConfirm(4556).Text, obj);
-  obj[4] = items;
-  return callback2(componentDidMountDefault, obj);
+  obj.children = intl4.string(onConfirm(1114).t.EDU2Eg);
+  items[1] = closure_3(onConfirm(4556).Text, obj);
+  obj.children = items;
+  return closure_4(common_AlertDefault, obj);
 };

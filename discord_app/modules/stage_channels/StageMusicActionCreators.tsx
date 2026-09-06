@@ -1,18 +1,16 @@
-// === Module 9913: updateStageMusicMuted ===
+// === Module 9913: StageMusicActionCreators ===
 
-// Module 9913 (updateStageMusicMuted)
-import set from "set" /* 2 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+// Module 9913 (StageMusicActionCreators)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
+const result = size.fileFinishedImporting("modules/stage_channels/StageMusicActionCreators.tsx");
 
 export const updateStageMusicMuted = function updateStageMusicMuted(muted) {
-  let obj = dispatcherDefault;
-  obj = { type: "STAGE_MUSIC_MUTE", muted };
+  const obj = { type: "STAGE_MUSIC_MUTE", muted };
   obj.dispatch(obj);
 };
 export const updateStageMusicShouldPlay = function updateStageMusicShouldPlay(play) {
-  let obj = dispatcherDefault;
-  obj = { type: "STAGE_MUSIC_PLAY", play };
+  const obj = { type: "STAGE_MUSIC_PLAY", play };
   obj.dispatch(obj);
 };

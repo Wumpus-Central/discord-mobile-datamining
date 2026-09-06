@@ -1,16 +1,17 @@
-// === Module 11117: ClearAfterValues ===
+// === Module 11117: computeInitialClearAfter ===
 
-// Module 11117 (ClearAfterValues)
-import set from "set" /* 2 */;
-import StatusTypes from "StatusTypes" /* 11115 */;
+// Module 11117 (computeInitialClearAfter)
+import UserSettings from "UserSettings" /* 1935 */;
+import Constants from "Constants" /* 11115 */;
+import size from "module_2" /* 2 */;
 
-const ClearAfterValues = StatusTypes.ClearAfterValues;
+const ClearAfterValues = Constants.ClearAfterValues;
 const items = [, , ];
 ({ MINUTES_30: arr[0], HOURS_1: arr[1], HOURS_4: arr[2] } = ClearAfterValues);
-const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
+const result = size.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
-  const CustomStatusSetting = _require(1935).CustomStatusSetting;
+  const CustomStatusSetting = UserSettings.CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
   if (null != setting) {
     if ("" !== setting.expiresAtMs) {
@@ -39,8 +40,8 @@ export default function computeInitialClearAfter() {
         if (tmp3) {
           const _Number = Number;
           const _Date = Date;
-          _require = Number(NumberResult) - Date.now();
-          let TODAY = items.find((arg0) => closure_0 <= arg0);
+          closure_0 = Number(NumberResult) - Date.now();
+          let TODAY = items.find((item) => closure_0 <= item);
           if (TODAY == null) {
             TODAY = ClearAfterValues.TODAY;
           }

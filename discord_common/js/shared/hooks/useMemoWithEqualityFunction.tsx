@@ -1,21 +1,21 @@
 // === Module 16127: useMemoWithEqualityFunction ===
 
 // Module 16127 (useMemoWithEqualityFunction)
-import set from "set" /* 2 */;
-import noop from "noop" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 import useInitRefDefault from "useInitRef" /* 16128 */;
+import size from "module_2" /* 2 */;
 
-const useRef = noop.useRef;
+const useRef = _mod19.useRef;
 let closure_3 = Symbol();
-const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/useMemoWithEqualityFunction.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/hooks/useMemoWithEqualityFunction.tsx");
 
-export default function useMemoWithEqualityFunction(arg0, current) {
-  const tmp = useInitRefDefault(arg0);
+export default function useMemoWithEqualityFunction(fn, current, fn2) {
+  const tmp = useInitRefDefault(fn);
   const tmp2 = useRef(closure_3);
   if (tmp2.current === closure_3) {
     tmp2.current = current;
-  } else if (!arg2(tmp2.current, current)) {
-    tmp.current = arg0();
+  } else if (!fn2(tmp2.current, current)) {
+    tmp.current = fn();
     tmp2.current = current;
   }
   return tmp.current;

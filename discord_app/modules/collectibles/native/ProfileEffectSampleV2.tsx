@@ -1,33 +1,33 @@
-// === Module 8799: ProfileEffectSample ===
+// === Module 8799: ProfileEffectSampleV2 ===
 
-// Module 8799 (ProfileEffectSample)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
-import preloadDefault from "preload" /* 5587 */;
-import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 8798 */;
-import metadataDefault from "metadata" /* 8800 */;
-import StaticEffectDefault from "StaticEffect" /* 8801 */;
+// Module 8799 (ProfileEffectSampleV2)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
+import FastImageDefault from "FastImage" /* 5587 */;
+import CollectiblesPreviewConstants from "CollectiblesPreviewConstants" /* 8798 */;
+import _modDef8800 from "module_8800" /* 8800 */;
+import ProfileEffectDefault from "ProfileEffect" /* 8801 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
-const View = get_ActivityIndicator.View;
-({ jsx: c3, jsxs: c4 } = jsxProd);
+const View = _mod17.View;
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = { profileContainer: { position: "absolute", display: "flex", height: "100%", width: "100%" }, profileBackground: null, sampleProfileImage: null, profileBorder: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
-obj[1] = obj;
-obj[2] = { aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO.SAMPLE_PROFILE_ASPECT_RATIO };
-obj[3] = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-let closure_5 = createCacheKey.createStyles(obj);
-let obj1 = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
-const result = set.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj.profileBackground = obj;
+obj.sampleProfileImage = { aspectRatio: CollectiblesPreviewConstants.SAMPLE_PROFILE_ASPECT_RATIO };
+let size = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+obj.profileBorder = size;
+let closure_5 = createStyles.createStyles(obj);
+const result = size.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
 
 export default function ProfileEffectSample(hideBackground) {
   let flag = hideBackground.hideBackground;
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = callback2();
+  const tmp = closure_5();
   const items = [tmp.profileContainer, ];
   let profileBackground = !flag;
   if (!flag) {
@@ -35,19 +35,19 @@ export default function ProfileEffectSample(hideBackground) {
   }
   let obj = { style: items, children: null };
   items[1] = profileBackground;
-  obj = { style: items1, source: null, accessible: false, resizeMode: "cover" };
-  items1 = [tmp.sampleProfileImage];
-  obj = { uri: metadataDefault };
-  obj[1] = obj;
-  const items2 = [callback(preloadDefault, obj), , ];
+  obj = { style: null, source: null, accessible: false, resizeMode: "cover" };
+  const items1 = [tmp.sampleProfileImage];
+  obj.style = items1;
+  obj = { uri: _modDef8800 };
+  obj.source = obj;
+  const items2 = [React3(FastImageDefault, obj), , ];
   let tmp4Result = !flag;
   if (!flag) {
-    obj1 = { style: null };
-    obj1[0] = tmp.profileBorder;
+    const obj1 = { style: tmp.profileBorder };
     tmp4Result = tmp4(tmp3, obj1);
   }
   items2[1] = tmp4Result;
-  items2[2] = callback(StaticEffectDefault, { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
-  obj[1] = items2;
-  return closure_4(View, obj);
+  items2[2] = React3(ProfileEffectDefault, { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
+  obj.children = items2;
+  return React4(View, obj);
 };

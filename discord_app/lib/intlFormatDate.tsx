@@ -1,9 +1,9 @@
-// === Module 4248: makeIntlFormatter ===
+// === Module 4248: intlFormatDate ===
 
-// Module 4248 (makeIntlFormatter)
-import closure_2 from "_getSystemLocale" /* 2025 */;
+// Module 4248 (intlFormatDate)
+import LocaleStore from "LocaleStore" /* 2025 */;
 
-const require = arg1;
+const require = fn;
 function makeIntlFormatter(locale, arg1) {
   try {
     const _Intl = Intl;
@@ -13,14 +13,15 @@ function makeIntlFormatter(locale, arg1) {
     return Intl.DateTimeFormat(undefined, tmp).format;
   }
 }
-const result = require("set").fileFinishedImporting("lib/intlFormatDate.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("lib/intlFormatDate.tsx");
 
 export const makeFormatter = function makeFormatter(arg0) {
-  locale = locale.locale;
+  locale = LocaleStore.locale;
   let tmp = (function tryMakeNativeFormatter(locale, arg1) {
-    const callback = locale;
-    const table = arg1;
-    if (null == callback(table[1]).makeFormatter) {
+    closure_0 = locale;
+    closure_1 = arg1;
+    if (null == closure_0(closure_1[1]).makeFormatter) {
       return null;
     } else {
       try {
@@ -40,15 +41,15 @@ export const makeFormatter = function makeFormatter(arg0) {
         if (null == formatter) {
           return null;
         } else {
-          c3 = null;
+          closure_3 = null;
           return (arg0) => {
             try {
               return formatter(arg0);
             } catch (err) {
-              if (null == _null) {
-                _null = _null(closure_0, closure_1);
+              if (null == closure_3) {
+                closure_3 = makeIntlFormatter(closure_0, closure_1);
               }
-              return _null(tmp);
+              return closure_3(tmp);
             }
           };
         }

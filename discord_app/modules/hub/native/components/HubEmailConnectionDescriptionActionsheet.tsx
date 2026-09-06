@@ -1,35 +1,35 @@
 // === Module 12733: HubEmailConnectionDescriptionActionsheet ===
 
 // Module 12733 (HubEmailConnectionDescriptionActionsheet)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 7149 */;
-import Background from "Background" /* 7150 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: obj1, jsxs: c3 } = jsxProd);
-let closure_4 = createCacheKey.createStyles({ description: { marginBottom: 8 } });
-const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
+require = fn;
+const jsxProd = fn(21);
+({ jsx: c2, jsxs: c3 } = jsxProd);
+const createStyles = fn(4560);
+let closure_4 = createStyles.createStyles({ description: { marginBottom: 8 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
 
 export default function HubEmailConnectionDescriptionActionsheet() {
-  const tmp = callback3();
+  const tmp = closure_4();
   let obj = { children: null };
   obj = { title: null };
-  const intl = getSystemLocale.intl;
-  obj[0] = intl.string(getSystemLocale.t["48kg+O"]);
-  const items = [callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj), , ];
+  const intl = util.intl;
+  obj.title = intl.string(util.t["48kg+O"]);
+  const items = [React2(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), , ];
   obj = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(getSystemLocale.t.O1k9XX);
-  items[1] = callback(Text.Text, obj);
-  obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl3 = getSystemLocale.intl;
-  obj1[3] = intl3.string(getSystemLocale.t.FV5dvh);
-  items[2] = callback(Text.Text, obj1);
-  obj[0] = items;
-  return callback2(Background.BottomSheet, obj);
+  const intl2 = util.intl;
+  obj.children = intl2.string(util.t.O1k9XX);
+  items[1] = React2(Text_Text.Text, obj);
+  const obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  const intl3 = util.intl;
+  obj1.children = intl3.string(util.t.FV5dvh);
+  items[2] = React2(Text_Text.Text, obj1);
+  obj.children = items;
+  return React3(Sheet_BottomSheet.BottomSheet, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 4282: set ===
+// === Module 4282: MotionTypes ===
 
-// Module 4282 (set)
-import set from "set" /* 2 */;
+// Module 4282 (MotionTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/design/animation/MotionTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/design/animation/MotionTypes.tsx");

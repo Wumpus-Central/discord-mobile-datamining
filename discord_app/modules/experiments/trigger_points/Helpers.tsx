@@ -1,15 +1,16 @@
-// === Module 10809: registeredExperimentIds ===
+// === Module 10809: Helpers ===
 
-// Module 10809 (registeredExperimentIds)
-import closure_0 from "initialize" /* 1236 */;
-import { CommonTriggerPoints } from "ExperimentBuckets" /* 4477 */;
+// Module 10809 (Helpers)
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
-let result = require("set").fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
+const CommonTriggerPoints = fn(4477).CommonTriggerPoints;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
     obj.experiments = global;
-    obj.triggerPoint = arg1;
+    obj.triggerPoint = fn;
     obj.params = importDefault;
     return obj;
   }
@@ -24,7 +25,7 @@ prototype["trigger"] = function trigger() {
   if (arg0 === undefined) {
     obj = {};
   }
-  const result = obj.trackCommonTriggerPointExposures(this.params.location);
+  const result = ApexExperimentStore.trackCommonTriggerPointExposures(this.params.location);
   ({ triggerPoint, experiments } = this);
   obj = {};
   const merged = Object.assign(this.params);

@@ -1,23 +1,25 @@
-// === Module 10371: useFrecencySettings ===
+// === Module 10371: FrecencyUserSettingsHooks ===
 
-// Module 10371 (useFrecencySettings)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
+// Module 10371 (FrecencyUserSettingsHooks)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
+import noop from "module_19" /* 19 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/FrecencyUserSettingsHooks.tsx");
 
 export const useFrecencySettings = function useFrecencySettings(flag) {
   if (flag === undefined) {
     flag = true;
   }
   const items = [flag];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (flag) {
-      const FrecencyUserSettingsActionCreators = flag(closure_1_1[2]).FrecencyUserSettingsActionCreators;
+      const FrecencyUserSettingsActionCreators = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;
       const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     }
   }, items);
-  const items1 = [closure_3];
-  return flag(504).useStateFromStores(items1, () => obj.frecencyWithoutFetchingLatest);
+  const items1 = [UserSettingsProtoStore];
+  return flag(504).useStateFromStores(items1, () => UserSettingsProtoStore.frecencyWithoutFetchingLatest);
 };

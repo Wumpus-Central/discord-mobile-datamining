@@ -1,57 +1,61 @@
-// === Module 15526: items ===
+// === Module 15526: AppIconRow ===
 
-// Module 15526 (items)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15526 (AppIconRow)
+import _modDef12 from "module_12" /* 12 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
+import AppIconTypes from "AppIconTypes" /* 9324 */;
+import AppIconDefault from "AppIcon" /* 15523 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
 const items = [
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["EgWTY+"]);
+    const intl = util.intl;
+    return intl.string(util.t["EgWTY+"]);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.umBn5f);
+    const intl = util.intl;
+    return intl.string(util.t.umBn5f);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.dG1wD1);
+    const intl = util.intl;
+    return intl.string(util.t.dG1wD1);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.SesI4S);
+    const intl = util.intl;
+    return intl.string(util.t.SesI4S);
   },
   () => {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.RnMLvl);
+    const intl = util.intl;
+    return intl.string(util.t.RnMLvl);
   }
 ];
-createCacheKey = { icon: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md };
-createCacheKey[0] = createCacheKey;
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
+fn(4560);
+let createStyles = { icon: null };
+createStyles = { borderRadius: nativeDefault.radii.md };
+createStyles.icon = createStyles;
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
 
 export default function AppIconRow(arg0) {
   ({ icon, onSelect: require, onLongPress: importDefault } = arg0);
-  let id;
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
-  id = icon.id;
-  if (id === require(id[6]).PremiumAppIconIds.PIRATE) {
-    let obj = importDefault(tmp4[7]);
+  const id = icon.id;
+  if (id === AppIconTypes.PremiumAppIconIds.PIRATE) {
+    let obj = _modDef12;
     let name = items[obj.random(obj, 0, items.length - 1)]();
   } else {
     name = icon.name;
   }
-  const tmp = callback2();
-  const radioA11yNative = require(id[8]).useRadioA11yNative({ selected: tmp7 });
+  const tmp = closure_7();
+  const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: tmp7 });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
-  if (id === require(id[6]).PremiumAppIconIds.BRAND_INVERTED) {
+  if (id === AppIconTypes.PremiumAppIconIds.BRAND_INVERTED) {
     if (!showEasterEgg) {
       let tmp10Result = null;
     }
@@ -60,28 +64,25 @@ export default function AppIconRow(arg0) {
   tmp10Result = null;
   if (!icon.isHidden) {
     obj = { icon: null, label: null, onLongPress: null, onPress: null, accessibilityRole: null, accessibilityState: null, trailing: null };
-    obj = { id: null, style: null };
-    obj[0] = id;
-    obj[1] = tmp.icon;
-    obj[0] = jsx(importDefault(tmp4[10]), { id: null, style: null });
-    obj[1] = callback(React.useState(name), 1)[0];
-    obj[2] = function onLongPress() {
-      return callback2(id);
+    obj = { id, style: tmp.icon };
+    obj.icon = jsx(AppIconDefault, { id, style: tmp.icon });
+    obj.label = _slicedToArray(noop.useState(name), 1)[0];
+    obj.onLongPress = function onLongPress() {
+      return importDefault(id);
     };
-    obj[3] = function onPress() {
-      return callback(id);
+    obj.onPress = function onPress() {
+      return require(id);
     };
-    obj[4] = accessibilityRole;
-    obj[5] = accessibilityState;
+    obj.accessibilityRole = accessibilityRole;
+    obj.accessibilityState = accessibilityState;
     if (!tmp7) {
       if (icon.isPremium) {
         tmp10Result = null;
       }
-      obj[6] = tmp10Result;
-      tmp10Result = tmp10(tmp3(tmp4[9]).TableRow, obj, id);
+      obj.trailing = tmp10Result;
+      tmp10Result = tmp10(tmp3(5605).TableRow, obj, id);
     }
-    obj1 = { selected: null };
-    obj1[0] = tmp7;
-    tmp10Result = tmp10(tmp3(tmp4[11]).FormRadio, obj1);
+    const obj1 = { selected: tmp7 };
+    tmp10Result = tmp10(tmp3(5689).FormRadio, obj1);
   }
 };

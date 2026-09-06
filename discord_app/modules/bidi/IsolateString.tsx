@@ -1,9 +1,9 @@
-// === Module 7685: FSI ===
+// === Module 7685: IsolateString ===
 
-// Module 7685 (FSI)
-import set from "set" /* 2 */;
+// Module 7685 (IsolateString)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/bidi/IsolateString.tsx");
+const result = size.fileFinishedImporting("modules/bidi/IsolateString.tsx");
 
 export const FSI = "\u2068";
 export const PDI = "\u2069";

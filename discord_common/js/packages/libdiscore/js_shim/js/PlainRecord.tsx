@@ -1,9 +1,8 @@
-// === Module 1973: TypeTag ===
+// === Module 1973: js_shim/PlainRecord ===
 
-// Module 1973 (TypeTag)
-import set from "set" /* 2 */;
+// Module 1973 (js_shim/PlainRecord)
+import size from "module_2" /* 2 */;
 
-const forResult = Symbol.for("PlainRecord.TypeTag");
-const result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/PlainRecord.tsx");
 
-export const TypeTag = forResult;
+export const TypeTag = Symbol.for("PlainRecord.TypeTag");

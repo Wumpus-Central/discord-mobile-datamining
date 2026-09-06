@@ -1,21 +1,22 @@
 // === Module 4746: hasPendingMemberAction ===
 
 // Module 4746 (hasPendingMemberAction)
-import hasFlagAll from "hasFlag" /* 1384 */;
+import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import guildHasOnboardingHomeDefault from "guildHasOnboardingHome" /* 4749 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "trackCommunicationDisabled" /* 2021 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "handleSettingsLoadSuccess" /* 4747 */;
-import closure_7 from "set" /* 4748 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 4747 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 4748 */;
 
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
+const GuildFeatures = fn(1074).GuildFeatures;
+const GuildMemberFlags = fn(4187).GuildMemberFlags;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/hasPendingMemberAction.tsx");
 
 export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, selectedChannelId) {
-  guild = guild.getGuild(guild_id);
-  channel = channel.getChannel(selectedChannelId);
+  const guild = GuildStore.getGuild(guild_id);
+  const channel = ChannelStore.getChannel(selectedChannelId);
   let hasItem = null != guild && null != channel;
   if (hasItem) {
     hasItem = guildHasOnboardingHomeDefault(guild);
@@ -25,7 +26,7 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
     hasItem = features.has(GuildFeatures.GUILD_SERVER_GUIDE);
   }
   if (hasItem) {
-    selfMember = selfMember.getSelfMember(guild.id);
+    const selfMember = GuildMemberStore.getSelfMember(guild.id);
     let num;
     if (selfMember != null) {
       num = selfMember.flags;
@@ -33,14 +34,13 @@ export const hasPendingMemberAction = function hasPendingMemberAction(guild_id, 
     if (num == null) {
       num = 0;
     }
-    hasItem = !hasFlagAll.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
-    const obj = hasFlagAll;
+    hasItem = !FlagUtilsAll.hasFlag(num, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
   }
   if (hasItem) {
-    hasItem = closure_6.hasMemberAction(guild.id, channel.id);
+    hasItem = GuildOnboardingHomeSettingsStore.hasMemberAction(guild.id, channel.id);
   }
   if (hasItem) {
-    hasItem = !closure_7.hasCompletedActionForChannel(guild.id, channel.id);
+    hasItem = !GuildOnboardingMemberActionStore.hasCompletedActionForChannel(guild.id, channel.id);
   }
   return hasItem;
 };

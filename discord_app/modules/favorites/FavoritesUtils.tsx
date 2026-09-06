@@ -1,14 +1,14 @@
-// === Module 1982: getFavoritesAwareGuildName ===
+// === Module 1982: FavoritesUtils ===
 
-// Module 1982 (getFavoritesAwareGuildName)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import date from "date" /* 1970 */;
+// Module 1982 (FavoritesUtils)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import FavoritesConstants from "FavoritesConstants" /* 1970 */;
+import size from "module_2" /* 2 */;
 
-const FAVORITES_RAW_GUILD_ID = date.FAVORITES_RAW_GUILD_ID;
-const FAVORITES = ME.FAVORITES;
-const result = set.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
+const FAVORITES_RAW_GUILD_ID = FavoritesConstants.FAVORITES_RAW_GUILD_ID;
+const FAVORITES = Constants.FAVORITES;
+const result = size.fileFinishedImporting("modules/favorites/FavoritesUtils.tsx");
 
 export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(guild) {
   if (null != guild) {
@@ -18,8 +18,8 @@ export const getFavoritesAwareGuildName = function getFavoritesAwareGuildName(gu
       tmp2 = id === FAVORITES;
     }
     if (tmp2) {
-      const intl = getSystemLocale.intl;
-      let name = intl.string(getSystemLocale.t.wMWyci);
+      const intl = util.intl;
+      let name = intl.string(util.t.wMWyci);
     } else {
       name = guild.name;
     }
@@ -33,8 +33,8 @@ export function isFavoritesGuildId(guildId) {
   }
   return tmp;
 }
-export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(closure_0) {
-  return "" !== closure_0.trim();
+export const isFavoritesGuildCategoryNameValid = function isFavoritesGuildCategoryNameValid(str) {
+  return "" !== str.trim();
 };
 export const isFavoritableChannel = function isFavoritableChannel(record) {
   return !record.isCategory();

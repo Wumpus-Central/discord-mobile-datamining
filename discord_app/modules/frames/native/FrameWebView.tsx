@@ -1,30 +1,31 @@
 // === Module 16618: FrameWebView ===
 
 // Module 16618 (FrameWebView)
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9507 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/frames/native/FrameWebView.tsx");
+const require = fn;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/native/FrameWebView.tsx");
 
 export default function FrameWebView(applicationId) {
   const frameId = applicationId.frameId;
-  const merged = Object.assign(applicationId, Object.create(null));
-  let hasInvalidUrlError;
+  const merged = Object.assign(applicationId, Object.assign({ applicationId: 0, frameId: 0 }));
   let hadInvalidUrlError;
   let obj = frameId(hadInvalidUrlError[2]);
   const hasInvalidUrlErrorState = obj.useHasInvalidUrlErrorState();
-  hasInvalidUrlError = hasInvalidUrlErrorState.hasInvalidUrlError;
+  const hasInvalidUrlError = hasInvalidUrlErrorState.hasInvalidUrlError;
   hadInvalidUrlError = hasInvalidUrlErrorState.hadInvalidUrlError;
   const items = [hasInvalidUrlError, hadInvalidUrlError, frameId];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     let tmp = !hadInvalidUrlError;
     if (!hadInvalidUrlError) {
       tmp = hasInvalidUrlError;
     }
     if (tmp) {
-      hasInvalidUrlError(hadInvalidUrlError[3]).leaveFrame(frameId);
-      const obj = hasInvalidUrlError(hadInvalidUrlError[3]);
+      FramesNativeManagerDefault.leaveFrame(frameId);
     }
   }, items);
   obj = {
@@ -38,10 +39,10 @@ export default function FrameWebView(applicationId) {
       return hasInvalidUrlError(hadInvalidUrlError[3]).releaseIframeId();
     },
     onIframeMount(iframeId) {
-      return hasInvalidUrlError(hadInvalidUrlError[4]).attachFrameIframe(frameId, iframeId);
+      return FramesActionCreatorsDefault.attachFrameIframe(frameId, iframeId);
     },
     onIframeUnmount(iframeId) {
-      return hasInvalidUrlError(hadInvalidUrlError[4]).detachFrameIframe(frameId, iframeId);
+      return FramesActionCreatorsDefault.detachFrameIframe(frameId, iframeId);
     },
     hasInvalidUrlError,
     setHasInvalidUrlError: hasInvalidUrlErrorState.setHasInvalidUrlError,
@@ -60,10 +61,10 @@ export default function FrameWebView(applicationId) {
       return hasInvalidUrlError(hadInvalidUrlError[3]).releaseIframeId();
     },
     onIframeMount(iframeId) {
-      return hasInvalidUrlError(hadInvalidUrlError[4]).attachFrameIframe(frameId, iframeId);
+      return FramesActionCreatorsDefault.attachFrameIframe(frameId, iframeId);
     },
     onIframeUnmount(iframeId) {
-      return hasInvalidUrlError(hadInvalidUrlError[4]).detachFrameIframe(frameId, iframeId);
+      return FramesActionCreatorsDefault.detachFrameIframe(frameId, iframeId);
     },
     hasInvalidUrlError,
     setHasInvalidUrlError: hasInvalidUrlErrorState.setHasInvalidUrlError,

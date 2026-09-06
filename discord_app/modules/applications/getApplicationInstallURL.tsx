@@ -1,11 +1,11 @@
-// === Module 12132: getActivityLaunchURL ===
+// === Module 12132: getApplicationInstallURL ===
 
-// Module 12132 (getActivityLaunchURL)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
+// Module 12132 (getApplicationInstallURL)
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const Routes = ME.Routes;
-let result = set.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
+const Routes = Constants.Routes;
+let result = size.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
   ({ customId, referrerId, linkId } = applicationId);

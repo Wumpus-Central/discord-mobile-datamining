@@ -1,30 +1,31 @@
 // === Module 10049: useIsGuestOrLurker ===
 
 // Module 10049 (useIsGuestOrLurker)
-import closure_2 from "trackCommunicationDisabled" /* 2021 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_member/useIsGuestOrLurker.tsx");
 
 export default function useIsGuestOrLurker(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  const items = [closure_3, closure_2];
+  const items = [GuildStore, GuildMemberStore];
   const items1 = [arg0, arg1];
-  return _require(504).useStateFromStores(items, () => {
-    const guild = closure_1_3.getGuild(closure_0);
+  return require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(closure_1_4.CONFERENCE);
+      hasItem = features.has(GuildFeatures.CONFERENCE);
     }
-    return true !== hasItem && closure_1_2.isGuestOrLurker(closure_0, closure_1);
+    return true !== hasItem && GuildMemberStore.isGuestOrLurker(closure_0, closure_1);
   }, items1);
 };
 export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, id) {
-  guild = guild.getGuild(guild_id);
+  const guild = GuildStore.getGuild(guild_id);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
@@ -32,7 +33,7 @@ export const isGuestOrLurkerInGuild = function isGuestOrLurkerInGuild(guild_id, 
   }
   let isGuestOrLurkerResult = true !== hasItem;
   if (isGuestOrLurkerResult) {
-    isGuestOrLurkerResult = closure_2.isGuestOrLurker(guild_id, id);
+    isGuestOrLurkerResult = GuildMemberStore.isGuestOrLurker(guild_id, id);
   }
   return isGuestOrLurkerResult;
 };

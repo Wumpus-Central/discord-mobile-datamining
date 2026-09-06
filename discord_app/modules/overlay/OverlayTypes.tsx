@@ -1,9 +1,9 @@
-// === Module 13989: DevToolsFocusedPidsTrackMode ===
+// === Module 13989: OverlayTypes ===
 
-// Module 13989 (DevToolsFocusedPidsTrackMode)
-import set from "set" /* 2 */;
+// Module 13989 (OverlayTypes)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
+const result = size.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");
 
 export const DevToolsFocusedPidsTrackMode = { TRACK_FOCUS: "track_focus", UNTRACK_FOCUS: "untrack_focus" };
 export const OverlayForcedRenderMode = { UNSET: "UNSET", IN_PROCESS_V2: "IN_PROCESS_V2", OUT_OF_PROCESS_V3: "OUT_OF_PROCESS_V3", OUT_OF_PROCESS_V3_LIMITED_INTERACTION: "OUT_OF_PROCESS_V3_LIMITED_INTERACTION" };

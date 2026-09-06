@@ -1,19 +1,19 @@
-// === Module 3481: messagesProxy ===
+// === Module 3481: ? ===
 
-// Module 3481 (messagesProxy)
-import set from "set" /* 2 */;
-import loadJsonAsset from "loadJsonAsset" /* 1120 */;
-import registerAsset from "registerAsset" /* 3482 */;
+// Module 3481
+import AssetJsonUtils from "AssetJsonUtils" /* 1120 */;
+import _mod3482 from "module_3482" /* 3482 */;
 import module_1155 from "module_1155" /* 1155 */;
+import size from "module_2" /* 2 */;
 
 const loader = module_1155.createLoader({
   () => {
-    const jsonAsset = loadJsonAsset.loadJsonAsset(registerAsset);
-    return jsonAsset.then((arg0) => ({ default: arg0 }));
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod3482);
+    return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
 const messagesProxy = module_1155.makeMessagesProxy(loader);
-const result = set.fileFinishedImporting("modules/spatial_audio/SpatialAudio.messages.js");
+const result = size.fileFinishedImporting("modules/spatial_audio/SpatialAudio.messages.js");
 
 export default messagesProxy;
 export const messagesLoader = loader;

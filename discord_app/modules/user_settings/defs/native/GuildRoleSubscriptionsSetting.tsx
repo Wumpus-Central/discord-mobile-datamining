@@ -1,35 +1,33 @@
-// === Module 15204: route ===
+// === Module 15204: GuildRoleSubscriptionsSetting ===
 
-// Module 15204 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 15205 */;
+// Module 15204 (GuildRoleSubscriptionsSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import GuildRoleSubscriptionsConstants from "GuildRoleSubscriptionsConstants" /* 15205 */;
 import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 15206 */;
 import TicketIcon from "TicketIcon" /* 15207 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-let closure_3 = MAX_SUBSCRIPTION_TIERS.UserGuildRoleSubscriptionRelationship;
-obj = {
+const constants = GuildRoleSubscriptionsConstants.UserGuildRoleSubscriptionRelationship;
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.trSpHX);
+    const intl = util.intl;
+    return intl.string(util.t.trSpHX);
   },
-  parent: MobileUserSettings.MobileUserSettings.PREMIUM,
+  parent: SettingsConstants.MobileUserSettings.PREMIUM,
   IconComponent: TicketIcon.TicketIcon,
   usePredicate: function useHasGuildRoleSubscriptionsSetting() {
     return useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   },
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
-  getComponent() {
-    return require(15209) /* GuildRoleSubscriptionsSectionHeader */.default;
+  screen: {
+    route: Constants.UserSettingsSections.GUILD_ROLE_SUBSCRIPTIONS,
+    getComponent() {
+      return require("UserSettingsGuildRoleSubscriptions").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/GuildRoleSubscriptionsSetting.tsx");
 
 export default route;

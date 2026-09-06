@@ -1,21 +1,22 @@
 // === Module 7251: useIsCreatorMonetizationEnabledGuild ===
 
 // Module 7251 (useIsCreatorMonetizationEnabledGuild)
-import closure_2 from "createGuildRecordFromRust" /* 1979 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx");
+const require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx");
 
 export default function useIsCreatorMonetizationEnabledGuild(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  return _require(504).useStateFromStores(items, () => {
-    const guild = closure_1_2.getGuild(closure_0);
+  _require = arg0;
+  const items = [GuildStore];
+  return require("initialize").useStateFromStores(items, () => {
+    const guild = GuildStore.getGuild(closure_0);
     let tmp2 = null != guild;
     if (tmp2) {
       const features = guild.features;
-      const hasItem = features.has(closure_1_3.CREATOR_MONETIZABLE_DISABLED);
+      const hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_DISABLED);
       let tmp5 = !hasItem;
       if (!hasItem) {
         const features2 = guild.features;

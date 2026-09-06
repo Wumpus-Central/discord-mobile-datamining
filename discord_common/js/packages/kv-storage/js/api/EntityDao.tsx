@@ -1,9 +1,9 @@
-// === Module 1997: prefix ===
+// === Module 1997: EntityDao ===
 
-// Module 1997 (prefix)
-import set from "set" /* 2 */;
-import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1991 */;
+// Module 1997 (EntityDao)
+import Table from "Table" /* 1991 */;
 import TableId from "TableId" /* 1993 */;
+import size from "module_2" /* 2 */;
 
 let EntityDao;
 class EntityDao {
@@ -16,7 +16,7 @@ class EntityDao {
     obj.originalPrefix = global;
     items = [];
     items[0] = global;
-    table = new require("fromDatabaseTransaction").Table(items, require, importDefault, flag);
+    table = new closure_0(closure_1[0]).Table(items, require, importDefault, flag);
     obj.table = table;
     return obj;
   }
@@ -30,15 +30,18 @@ Object.defineProperty(prototype, "prefix", {
 });
 prototype["withoutLogging"] = function withoutLogging() {
   const originalPrefix = this.originalPrefix;
-  if (typeof EntityDao !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableId = this.table.tableId;
+  const database = this.table.database;
+  if (typeof EntityDao === "function") {
+    const obj = Object.create(EntityDao.prototype);
+    obj.originalPrefix = originalPrefix;
+    const items = [originalPrefix];
+    const table = new Table.Table(items, tableId, database, false);
+    obj.table = table;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(EntityDao.prototype);
-  obj.originalPrefix = originalPrefix;
-  const items = [originalPrefix];
-  const table = new fromDatabaseTransaction.Table(items, this.table.tableId, this.table.database, false);
-  obj.table = table;
-  return obj;
 };
 prototype["get"] = function get(arg0) {
   const table = this.table;
@@ -73,18 +76,18 @@ prototype["getParentId"] = function getParentId(arg0) {
   return table.getParentId(items);
 };
 prototype["put"] = function put(arg0) {
-  const _require = arg0;
+  closure_0 = arg0;
   let Replace = arg1;
   if (arg1 === undefined) {
-    Replace = _require(Replace[1]).ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   return this.transaction((put) => put.put(closure_0, Replace), "" + this.prefix + " put");
 };
 prototype["putAll"] = function putAll(arg0) {
-  const _require = arg0;
+  closure_0 = arg0;
   let Replace = arg1;
   if (arg1 === undefined) {
-    Replace = _require(Replace[1]).ConflictOptions.Replace;
+    Replace = TableId.ConflictOptions.Replace;
   }
   return this.transaction((putAll) => putAll.putAll(closure_0, Replace), "" + this.prefix + " putAll");
 };
@@ -100,22 +103,24 @@ prototype["transaction"] = function transaction(arg0, arg1) {
   closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof closure_1_3 !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof EntityDaoTransaction === "function") {
+      const obj = Object.create(tmp2.prototype);
+      obj.transaction = transaction;
+      return tmp(obj);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = Object.create(closure_1_3.prototype);
-    obj.transaction = transaction;
-    return closure_0(obj);
   }, arg1);
 };
 prototype["upgradeTransaction"] = function upgradeTransaction(arg0) {
-  const table = this.table;
-  if (typeof EntityDaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof EntityDaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.transaction = tmp2;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(EntityDaoTransaction.prototype);
-  obj.transaction = table.upgradeTransaction(arg0);
-  return obj;
+  tmp = EntityDaoTransaction;
 };
 prototype["getManySyncUnsafe"] = function getManySyncUnsafe(arg0) {
   const table = this.table;
@@ -126,8 +131,10 @@ prototype["getMapEntriesSyncUnsafe"] = function getMapEntriesSyncUnsafe() {
   return table.getMapEntriesSyncUnsafe();
 };
 EntityDao["cell"] = function cell(data, generation) {
+  const obj = { key: null, data, generation };
   const items = [data.id];
-  return { key: items, data, generation };
+  obj.key = items;
+  return obj;
 };
 let EntityDaoTransaction;
 class EntityDaoTransaction {
@@ -139,13 +146,15 @@ class EntityDaoTransaction {
 }
 const prototype2 = EntityDaoTransaction.prototype;
 EntityDaoTransaction["fromDatabaseTransaction"] = function fromDatabaseTransaction(prefix, tableId, transaction) {
-  const tableTransaction = new fromDatabaseTransaction.TableTransaction(prefix, tableId, transaction);
-  if (typeof EntityDaoTransaction !== "function") {
-    HermesBuiltin.throwTypeError();
+  const tableTransaction = new Table.TableTransaction(prefix, tableId, transaction);
+  if (typeof EntityDaoTransaction === "function") {
+    const obj = Object.create(tmp.prototype);
+    obj.transaction = tableTransaction;
+    return obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const obj = Object.create(EntityDaoTransaction.prototype);
-  obj.transaction = tableTransaction;
-  return obj;
+  tmp = EntityDaoTransaction;
 };
 prototype2["put"] = function put(arg0) {
   let Replace = arg1;
@@ -161,7 +170,7 @@ prototype2["putAll"] = function putAll(arr) {
     Replace = TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  return transaction.putAll(arr.map((arg0) => closure_2.cell(arg0, null)), Replace);
+  return transaction.putAll(arr.map((item) => EntityDao.cell(item, null)), Replace);
 };
 prototype2["replaceAll"] = function replaceAll(arg0) {
   this.delete();
@@ -183,7 +192,7 @@ prototype2["deleteAllExcept"] = function deleteAllExcept(arg0) {
   const transaction = this.transaction;
   transaction.deleteAllExcept([], arg0);
 };
-const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/EntityDao.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/EntityDao.tsx");
 
 export { EntityDao };
 export { EntityDaoTransaction };

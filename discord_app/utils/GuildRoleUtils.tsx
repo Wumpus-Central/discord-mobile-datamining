@@ -1,19 +1,18 @@
-// === Module 2019: compareGuildRoles ===
+// === Module 2019: GuildRoleUtils ===
 
-// Module 2019 (compareGuildRoles)
-import set from "set" /* 2 */;
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import int2hslRaw from "int2hslRaw" /* 1091 */;
-import fromServerArrayAll from "fromServerArray" /* 2017 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 2018 */;
+// Module 2019 (GuildRoleUtils)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2017 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
+import size from "module_2" /* 2 */;
 
 function compareGuildRoles(guildId, id) {
   guildId = guildId.guildId;
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      num2 = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-      const obj2 = DISCORD_EPOCHDefault;
+      num2 = SnowflakeUtilsDefault.compare(guildId.id, id.id);
     }
     let num = num2;
   } else {
@@ -22,14 +21,13 @@ function compareGuildRoles(guildId, id) {
       if (guildId.position !== id.position) {
         let diff = id.position - guildId.position;
       } else {
-        diff = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-        const obj = DISCORD_EPOCHDefault;
+        diff = SnowflakeUtilsDefault.compare(guildId.id, id.id);
       }
     }
   }
   return num;
 }
-let result = set.fileFinishedImporting("utils/GuildRoleUtils.tsx");
+let result = size.fileFinishedImporting("utils/GuildRoleUtils.tsx");
 
 export const sortGuildRoleRecords = function sortGuildRoleRecords(arr) {
   const sorted = arr.sort(compareGuildRoles);
@@ -41,8 +39,7 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
   if (guildId.id === guildId) {
     let num2 = 1;
     if (id.id === guildId) {
-      num2 = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-      const obj2 = DISCORD_EPOCHDefault;
+      num2 = SnowflakeUtilsDefault.compare(guildId.id, id.id);
     }
     let num = num2;
   } else {
@@ -51,8 +48,7 @@ export const doesRoleSortHigher = function doesRoleSortHigher(guildId, id) {
       if (guildId.position !== id.position) {
         let diff = id.position - guildId.position;
       } else {
-        diff = DISCORD_EPOCHDefault.compare(guildId.id, id.id);
-        const obj = DISCORD_EPOCHDefault;
+        diff = SnowflakeUtilsDefault.compare(guildId.id, id.id);
       }
     }
   }
@@ -62,8 +58,7 @@ export const sortInviteRoles = function sortInviteRoles(position, position2) {
   if (position.position !== position2.position) {
     let diff = position2.position - position.position;
   } else {
-    diff = DISCORD_EPOCHDefault.compare(position.id, position2.id);
-    const obj = DISCORD_EPOCHDefault;
+    diff = SnowflakeUtilsDefault.compare(position.id, position2.id);
   }
   return diff;
 };
@@ -71,26 +66,24 @@ export const inviteRoleToDisplayData = function inviteRoleToDisplayData(id, id) 
   const obj = { id: id.id, name: id.name, guildId: id, colorString: null, colorStrings: null, icon: null, unicodeEmoji: null };
   let int2hexResult = null;
   if (0 !== id.color) {
-    int2hexResult = int2hslRaw.int2hex(id.color);
-    const obj2 = int2hslRaw;
+    int2hexResult = utils_ColorUtils.int2hex(id.color);
   }
-  obj[3] = int2hexResult;
+  obj.colorString = int2hexResult;
   let result = null;
   if (null != id.colors) {
-    result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
-    const obj3 = extractColorStringsFromServerColors;
+    result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
   }
-  obj[4] = result;
+  obj.colorStrings = result;
   let icon = id.icon;
   if (icon == null) {
     icon = null;
   }
-  obj[5] = icon;
+  obj.icon = icon;
   let unicode_emoji = id.unicode_emoji;
   if (unicode_emoji == null) {
     unicode_emoji = null;
   }
-  obj[6] = unicode_emoji;
+  obj.unicodeEmoji = unicode_emoji;
   return obj;
 };
 export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRoles, roles, deleted_role_ids) {
@@ -114,9 +107,7 @@ export const filterRoleDeletes = function filterRoleDeletes(id, unsafeMutableRol
       }
     }
     for (const item10018 of items) {
-      let tmp7 = importAll;
-      let tmp8 = dependencyMap;
-      obj = fromServerArrayAll;
+      obj = GuildRoleRecordUtilsAll;
       obj[item10018.id] = obj.fromServer(arg0, item10018);
       continue;
     }

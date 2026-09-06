@@ -1,31 +1,28 @@
-// === Module 12028: getCommandContext ===
+// === Module 12028: useCommandContext ===
 
-// Module 12028 (getCommandContext)
-import closure_0 from "noop" /* 19 */;
-import closure_1 from "createGuildRecordFromRust" /* 1979 */;
+// Module 12028 (useCommandContext)
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
 
 export const getCommandContext = function getCommandContext(type) {
   if ("contextless" === type.type) {
     let obj = { channel: "hash", guild: "call" };
   } else {
-    obj = { channel: null, guild: null };
-    obj[0] = type.channel;
-    obj[1] = guild.getGuild(type.channel.guild_id);
+    obj = { channel: type.channel, guild: GuildStore.getGuild(type.channel.guild_id) };
   }
   return obj;
 };
 export const useCommandContext = function useCommandContext(context) {
-  const React = context;
+  noop = context;
   const items = [context];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     if ("contextless" === type.type) {
       let obj = { channel: "hash", guild: "call" };
     } else {
-      obj = { channel: null, guild: null };
-      obj[0] = tmp.channel;
-      obj[1] = closure_1_1.getGuild(tmp.channel.guild_id);
+      obj = { channel: tmp.channel, guild: GuildStore.getGuild(tmp.channel.guild_id) };
     }
     return obj;
   }, items);

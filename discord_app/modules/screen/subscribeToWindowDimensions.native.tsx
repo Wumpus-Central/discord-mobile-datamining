@@ -1,17 +1,17 @@
 // === Module 12034: subscribeToWindowDimensions ===
 
 // Module 12034 (subscribeToWindowDimensions)
-import closure_0 from "getDimensionsStoreStateForEntry" /* 1478 */;
+import DimensionsStore from "DimensionsStore" /* 1478 */;
 
-const result = require("set").fileFinishedImporting("modules/screen/subscribeToWindowDimensions.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/screen/subscribeToWindowDimensions.native.tsx");
 
 export default function subscribeToWindowDimensions(arg0) {
   closure_0 = arg0;
-  let str = arg1;
   if (arg1 === undefined) {
-    str = "main";
+    const str = "main";
   }
-  return closure_0.subscribe((arg0) => {
-    callback(arg0.byAppEntry[str].windowDimensions, arg0.byAppEntry[str].windowDimensionsIgnoringKeyboard);
+  return DimensionsStore.subscribe((arg0) => {
+    closure_0(arg0.byAppEntry[str].windowDimensions, arg0.byAppEntry[str].windowDimensionsIgnoringKeyboard);
   });
 };

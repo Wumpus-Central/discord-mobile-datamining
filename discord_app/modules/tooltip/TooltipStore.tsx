@@ -1,23 +1,23 @@
-// === Module 9693: set ===
+// === Module 9693: TooltipStore ===
 
-// Module 9693 (set)
+// Module 9693 (TooltipStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
-const StorageKeys = ME.StorageKeys;
-let set = new Set();
-const set1 = new Set();
+const StorageKeys = Constants.StorageKeys;
+new Set();
+const set = new Set();
 const Store = initializeDefault.Store;
 class TooltipStore extends Store {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    applyArgumentsResult.canShowTooltip = function canShowTooltip(closure_0) {
-      let hasItem = set.has(closure_0);
+    applyArgumentsResult.canShowTooltip = function canShowTooltip(arg0) {
+      let hasItem = set.has(arg0);
       if (hasItem) {
-        hasItem = !set2.has(closure_0);
+        hasItem = !set2.has(arg0);
       }
       return hasItem;
     };
@@ -36,18 +36,18 @@ TooltipStore.prototype["initialize"] = function initialize() {
   closure_4 = Set(...items);
 };
 TooltipStore.displayName = "TooltipStore";
-const tooltipStore = new TooltipStore(dispatcherDefault, {
+const tooltipStore = new TooltipStore(DispatcherDefault, {
   TOOLTIP_ACKNOWLEDGE: function handleTooltipAcknowledge(tooltip) {
-    if (set1 != null) {
-      set1.add(tooltip.tooltip);
+    if (set != null) {
+      set.add(tooltip.tooltip);
     }
     const Storage = Storage2.Storage;
-    const result = Storage.set(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, Array(set1));
+    const result = Storage.set(StorageKeys.ACKNOWLEDGED_TOOLTIPS_KEY, Array(set));
   },
   TOOLTIP_SHOW_ATTEMPT: function hasAttemptedToShowTooltip(arg0) {
     ({ tooltip, ignoreMaxShownLimit } = arg0);
     if (!set.has(tooltip)) {
-      if (!set1.has(tooltip)) {
+      if (!set.has(tooltip)) {
         if (!ignoreMaxShownLimit) {
           ignoreMaxShownLimit = obj.size < 1;
         }
@@ -59,6 +59,6 @@ const tooltipStore = new TooltipStore(dispatcherDefault, {
     return false;
   }
 });
-let result = set.fileFinishedImporting("modules/tooltip/TooltipStore.tsx");
+let result = size.fileFinishedImporting("modules/tooltip/TooltipStore.tsx");
 
 export default tooltipStore;

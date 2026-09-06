@@ -1,32 +1,38 @@
-// === Module 15580: jsx ===
+// === Module 15580: DevToolsBuildOverrideScreen ===
 
-// Module 15580 (jsx)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "getCurrentBuildOverride" /* 11425 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 15580 (DevToolsBuildOverrideScreen)
+import nativeDefault from "native" /* 576 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ToastUtils from "ToastUtils" /* 4258 */;
+import ClipboardUtils from "ClipboardUtils" /* 7190 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11789 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11425 */;
 
-const require = arg1;
-let c4 = importAllResult;
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
 const jsx = jsxProd.jsx;
 const jsxs = jsxProd.jsxs;
+fn(4560);
 let obj = { content: null, contentContainer: null };
-obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
-obj[0] = obj;
-createCacheKey = { padding: ThemesDefault.space.PX_16 };
-obj[1] = createCacheKey;
-let closure_9 = createCacheKey.createStyles(obj);
-let items = [{ label: "Branch Name", value: "branch", icon: jsx(require("TagIcon").TagIcon, {}) }, ];
-let obj2 = { label: "Branch Name", value: "branch", icon: jsx(require("TagIcon").TagIcon, {}) };
-items[1] = { label: "Commit SHA", value: "id", icon: jsx(require("HashmarkIcon").HashmarkIcon, {}) };
-let obj3 = { label: "Commit SHA", value: "id", icon: jsx(require("HashmarkIcon").HashmarkIcon, {}) };
-const memoResult = importAllResult.memo(() => {
-  let tmp = callback2();
+obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj.content = obj;
+const createStyles = { padding: nativeDefault.space.PX_16 };
+obj.contentContainer = createStyles;
+let closure_9 = createStyles.createStyles(obj);
+let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(8862).TagIcon, {}) }, ];
+let obj2 = { label: "Branch Name", value: "branch", icon: jsx(fn(8862).TagIcon, {}) };
+items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(15581).HashmarkIcon, {}) };
+let obj3 = { label: "Commit SHA", value: "id", icon: jsx(fn(15581).HashmarkIcon, {}) };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
+
+export default noop.memo(() => {
+  let tmp = closure_9();
   let obj = first(504);
-  items = [closure_6];
+  items = [BuildOverrideStore];
   const stateFromStores = obj.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
@@ -35,19 +41,17 @@ const memoResult = importAllResult.memo(() => {
     }
     return tmp;
   });
-  first = stateFromStores;
-  const tmp5 = callback(importAllResult.useState({ type: "branch", id: "" }), 2);
+  const tmp5 = _slicedToArray(noop.useState({ type: "branch", id: "" }), 2);
   first = tmp5[0];
   dependencyMap = tmp5[1];
   obj = { style: tmp.content, contentContainerStyle: null, children: null };
   obj = {};
   let merged = Object.assign(tmp.contentContainer);
   obj.paddingBottom = tmp.contentContainer.padding + first(6981)({ includeKeyboardHeight: true }).insets.bottom;
-  obj[1] = obj;
+  obj.contentContainerStyle = obj;
   let tmp10Result = null;
   if (null != stateFromStores) {
-    obj1 = { icon: null, label: null, subLabel: null, onPress: null };
-    obj1[0] = tmp7(tmp3(4507).CopyIcon, {});
+    const obj1 = { icon: tmp7(tmp3(4507).CopyIcon, {}), label: null, subLabel: null, onPress: null };
     first = stateFromStores;
     const found = items.find((value) => value.value === first.type);
     let label;
@@ -55,23 +59,18 @@ const memoResult = importAllResult.memo(() => {
       label = found.label;
     }
     let obj2 = { title: "Current Override", hasIcons: true, children: null };
-    obj1[1] = label;
-    obj1[2] = stateFromStores.id;
-    obj1[3] = function onPress() {
-      first(7190).copy(first.id);
-      const obj = first(7190);
-      const result = first(4258).presentCopiedToClipboard();
+    obj1.label = label;
+    obj1.subLabel = stateFromStores.id;
+    obj1.onPress = function onPress() {
+      ClipboardUtils.copy(first.id);
+      const result = ToastUtils.presentCopiedToClipboard();
     };
     const items1 = [tmp7(tmp3(5605).TableRow, obj1), , ];
-    let obj3 = { icon: null, label: "Refresh Override", onPress: null, arrow: true };
-    obj3[0] = tmp7(tmp3(15158).RefreshIcon, {});
-    obj3[2] = tmp3(11789).refreshBuildOverride;
+    let obj3 = { icon: tmp7(tmp3(15158).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11789).refreshBuildOverride, arrow: true };
     items1[1] = tmp7(tmp3(5605).TableRow, obj3);
-    const obj4 = { icon: null, label: "Clear Override", variant: "danger", onPress: null, arrow: true };
-    obj4[0] = tmp7(tmp3(4518).TrashIcon, { color: "text-feedback-critical" });
-    obj4[3] = tmp3(11789).clearBuildOverride;
+    const obj4 = { icon: tmp7(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11789).clearBuildOverride, arrow: true };
     items1[2] = tmp7(tmp3(5605).TableRow, obj4);
-    obj2[2] = items1;
+    obj2.children = items1;
     tmp10Result = tmp10(tmp3(5687).TableRowGroup, obj2);
   }
   const items2 = [tmp10Result, , , ];
@@ -89,7 +88,7 @@ const memoResult = importAllResult.memo(() => {
     children: items.map((value) => {
       value = value.value;
       ({ icon, label } = value);
-      return callback(first(5688).TableRadioRow, { value, label, icon }, value);
+      return jsx(first(5688).TableRadioRow, { value, label, icon }, value);
     })
   });
   const found1 = items.find((value) => value.value === first.type);
@@ -120,11 +119,10 @@ const memoResult = importAllResult.memo(() => {
     children: items.map((value) => {
       value = value.value;
       ({ icon, label } = value);
-      return callback(first(5688).TableRadioRow, { value, label, icon }, value);
+      return jsx(first(5688).TableRadioRow, { value, label, icon }, value);
     })
   };
-  const tmp8 = ScrollView;
-  obj7[1] = jsx(first(6606).TextInput, {
+  obj7.label = jsx(first(6606).TextInput, {
     size: "md",
     placeholder: "Enter " + label2,
     onChange(id) {
@@ -138,7 +136,7 @@ const memoResult = importAllResult.memo(() => {
     autoComplete: "off",
     isClearable: true
   });
-  obj6[2] = jsx(first(5605).TableRow, { icon, label: null });
+  obj6.children = jsx(first(5605).TableRow, { icon, label: null });
   items2[2] = jsx(first(5687).TableRowGroup, { title: label1, hasIcons: true, children: null });
   items2[3] = jsx(first(4975).Button, {
     text: "Apply Build Override",
@@ -146,21 +144,15 @@ const memoResult = importAllResult.memo(() => {
     onPress() {
       const type = first.type;
       if ("branch" === type) {
-        const result = first(11789).setBuildOverrideForBranch(tmp.id);
-        const obj3 = first(11789);
+        const result = build_overrides_BuildOverrideUtils.setBuildOverrideForBranch(tmp.id);
       } else if ("id" === type) {
-        const result1 = first(11789).setBuildOverrideForId(tmp.id);
-        const obj2 = first(11789);
+        const result1 = build_overrides_BuildOverrideUtils.setBuildOverrideForId(tmp.id);
       } else {
-        first(1369).assertNever(tmp.type);
-        const obj = first(1369);
+        GlobalUtils.assertNever(tmp.type);
       }
     }
   });
-  obj8[1] = items2;
-  obj[2] = jsxs(first(4973).Stack, { spacing: 16, children: null });
+  obj8.children = items2;
+  obj.children = jsxs(first(4973).Stack, { spacing: 16, children: null });
   return <tmp8 />;
 });
-let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
-
-export default memoResult;

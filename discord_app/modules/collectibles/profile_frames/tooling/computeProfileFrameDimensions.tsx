@@ -1,13 +1,13 @@
 // === Module 8210: computeProfileFrameDimensions ===
 
 // Module 8210 (computeProfileFrameDimensions)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
+const result = size.fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
 
-export const computeProfileFrameDimensions = function computeProfileFrameDimensions(closure_4) {
+export const computeProfileFrameDimensions = function computeProfileFrameDimensions(arr) {
   innerWidth = innerWidth(8211).DefaultProfileFrameDimensions.INNER_WIDTH;
-  const mapped = closure_4.map((dims) => Math.round(Math.max(0, (dims.dims.width - innerWidth) / 2)));
+  const mapped = arr.map((dims) => Math.round(Math.max(0, (dims.dims.width - innerWidth) / 2)));
   let overflowHorizontal = 0;
   if (mapped.length > 0) {
     const _Math = Math;
@@ -16,7 +16,7 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
     const _Math2 = Math;
     overflowHorizontal = HermesBuiltin.apply(items, Math);
   }
-  const found = closure_4.filter((layer) => {
+  const found = arr.filter((layer) => {
     layer = layer.layer;
     let tmp3 = layer.type === innerWidth(8208).ProfileFrameLayerType.STAPLE;
     if (tmp3) {
@@ -33,7 +33,7 @@ export const computeProfileFrameDimensions = function computeProfileFrameDimensi
     const _Math4 = Math;
     overflowTop = HermesBuiltin.apply(items1, Math);
   }
-  const found1 = closure_4.filter((layer) => {
+  const found1 = arr.filter((layer) => {
     layer = layer.layer;
     let tmp3 = layer.type === innerWidth(8208).ProfileFrameLayerType.STAPLE;
     if (tmp3) {

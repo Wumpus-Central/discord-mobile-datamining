@@ -1,8 +1,8 @@
 // === Module 7713: QuestTaskConfigTypes ===
 
 // Module 7713 (QuestTaskConfigTypes)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskConfigTypes.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestTaskConfigTypes.tsx");
 
 export const QuestTaskConfigTypes = { FIRST_PARTY: 1, [1]: "FIRST_PARTY", THIRD_PARTY: 2, [2]: "THIRD_PARTY" };

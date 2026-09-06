@@ -1,9 +1,9 @@
-// === Module 13987: getNewestBadgeableVersion ===
+// === Module 13987: AppLauncherBadgeUtils ===
 
-// Module 13987 (getNewestBadgeableVersion)
-import set from "set" /* 2 */;
+// Module 13987 (AppLauncherBadgeUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
+const result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
 
 export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0) {
   ({ storeState, surface } = arg0);

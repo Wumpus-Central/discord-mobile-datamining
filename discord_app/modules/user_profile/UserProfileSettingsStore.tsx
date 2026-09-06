@@ -1,54 +1,53 @@
-// === Module 8160: handleFormOpen ===
+// === Module 8160: UserProfileSettingsStore ===
 
-// Module 8160 (handleFormOpen)
+// Module 8160 (UserProfileSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import INVITE from "INVITE" /* 1075 */;
-import date from "date" /* 1970 */;
-import ANALYTICS_NAME from "ANALYTICS_NAME" /* 8161 */;
-import useBioMaxLength from "useBioMaxLength" /* 8162 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import RouteConstants from "RouteConstants" /* 1075 */;
+import FavoritesConstants from "FavoritesConstants" /* 1970 */;
+import NotificationsInboxConstants from "NotificationsInboxConstants" /* 8161 */;
+import BioMaxLengthExperiment from "BioMaxLengthExperiment" /* 8162 */;
+import Constants from "Constants" /* 1074 */;
+import size from "module_2" /* 2 */;
 
 function handleFormOpen() {
-  const OPEN = FormStates.OPEN;
+  OPEN = FormStates.OPEN;
   closure_13 = {};
 }
 function handleReset() {
   closure_9 = {};
   closure_13 = {};
-  closure_10 = obj;
-  CLOSED = FormStates.CLOSED;
+  OPEN = FormStates.CLOSED;
   closure_13 = {};
 }
-const FormStates = ME.FormStates;
-({ ME: c3, UserSettingsSections: c4 } = ME);
+const FormStates = Constants.FormStates;
+({ ME: c3, UserSettingsSections: closure_4 } = Constants);
 let closure_5 = {};
 let obj = {};
 let closure_7 = {};
-let items = [...INVITE.PSEUDO_GUILD_IDS, date.FAVORITES_RAW_GUILD_ID, ANALYTICS_NAME.NOTIFICATIONS_INBOX_RAW_GUILD_ID];
-let set = new Set(items);
-let closure_9 = {};
-let c11;
-let CLOSED = FormStates.CLOSED;
+let items = [...RouteConstants.PSEUDO_GUILD_IDS, FavoritesConstants.FAVORITES_RAW_GUILD_ID, NotificationsInboxConstants.NOTIFICATIONS_INBOX_RAW_GUILD_ID];
+const set = new Set(items);
+const dependencyMap = {};
+let guildId;
+let OPEN = FormStates.CLOSED;
 let closure_13 = {};
 const Store = initializeDefault.Store;
 class UserProfileSettingsStore extends Store {
 }
 const prototype = UserProfileSettingsStore.prototype;
 Object.defineProperty(prototype, "selectedGuildId", {
-  get: function selectedGuildId(arg0) {
-    return c11;
+  get: function selectedGuildId() {
+    return guildId;
   },
   set: undefined
 });
 prototype["getFormState"] = function getFormState() {
-  return CLOSED;
+  return OPEN;
 };
 prototype["getErrors"] = function getErrors(arg0) {
   let tmp = arg0;
   if (arg0 == null) {
-    tmp = closure_3;
+    tmp = React3;
   }
   let tmp3 = closure_13[tmp];
   if (tmp3 == null) {
@@ -56,12 +55,12 @@ prototype["getErrors"] = function getErrors(arg0) {
   }
   return tmp3;
 };
-prototype["getPendingChanges"] = function getPendingChanges(closure_0) {
-  let tmp = closure_0;
-  if (closure_0 == null) {
-    tmp = closure_3;
+prototype["getPendingChanges"] = function getPendingChanges(guildId) {
+  let tmp = guildId;
+  if (guildId == null) {
+    tmp = React3;
   }
-  let tmp3 = closure_9[tmp];
+  let tmp3 = dependencyMap[tmp];
   if (tmp3 == null) {
     tmp3 = closure_5;
   }
@@ -72,36 +71,34 @@ prototype["getTryItOutChanges"] = function getTryItOutChanges() {
 };
 prototype["hasTryItOutChanges"] = function hasTryItOutChanges() {
   const values = Object.values(obj);
-  return values.some((arg0) => undefined !== arg0);
+  return values.some((item) => undefined !== item);
 };
 prototype["hasUnsavedChanges"] = function hasUnsavedChanges() {
   let values = Object.values(closure_9);
-  return values.some((arg0) => {
-    const values = Object.values(arg0);
-    return values.some((arg0) => undefined !== arg0);
+  return values.some((item) => {
+    const values = Object.values(item);
+    return values.some((item) => undefined !== item);
   });
 };
 prototype["showNotice"] = function showNotice() {
   const self = this;
-  let values = Object.values(this.getPendingChanges(closure_3));
-  let someResult = values.some((arg0) => undefined !== arg0);
+  let values = Object.values(this.getPendingChanges(React3));
+  let someResult = values.some((item) => undefined !== item);
   if (!someResult) {
     const _Object = Object;
-    values = Object.values(self.getPendingChanges(c11));
-    someResult = values.some((arg0) => undefined !== arg0);
+    values = Object.values(self.getPendingChanges(guildId));
+    someResult = values.some((item) => undefined !== item);
   }
   return someResult;
 };
 prototype["canSubmit"] = function canSubmit() {
   const self = this;
-  useBioMaxLength;
-  const items = [closure_3, c11];
+  BioMaxLengthExperiment;
+  const items = [React3, guildId];
   for (const item10016 of items) {
     let pendingChanges = self.getPendingChanges(item10016);
     if (undefined !== pendingChanges.pendingBio) {
-      let tmp5 = pendingChanges;
       if (tmp4.pendingBio.length > tmp2) {
-        let tmp6 = obj;
         obj.return();
         let flag = false;
         return false;
@@ -119,7 +116,7 @@ obj = {
     if (section.section !== constants.ACCOUNT) {
       return false;
     } else {
-      const OPEN = FormStates.OPEN;
+      OPEN = FormStates.OPEN;
       closure_13 = {};
     }
   },
@@ -132,7 +129,7 @@ obj = {
       }
     }
     guildId = tmp;
-    const OPEN = FormStates.OPEN;
+    OPEN = FormStates.OPEN;
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SET_GUILD: function handleSetGuild(guildId) {
@@ -147,12 +144,12 @@ obj = {
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_CLOSE: function handleFormClose() {
-    CLOSED = FormStates.CLOSED;
+    OPEN = FormStates.CLOSED;
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: handleReset,
   USER_PROFILE_SETTINGS_SUBMIT: function handleFormSubmit() {
-    const SUBMITTING = FormStates.SUBMITTING;
+    OPEN = FormStates.SUBMITTING;
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function handleFormSubmitSuccess(guildId) {
@@ -162,7 +159,7 @@ obj = {
     } else {
       OPEN = tmp.OPEN;
       if (guildId == null) {
-        guildId = closure_3;
+        guildId = React3;
       }
       closure_13[guildId] = closure_7;
     }
@@ -174,7 +171,7 @@ obj = {
     } else {
       OPEN = tmp.OPEN;
       if (guildId == null) {
-        guildId = closure_3;
+        guildId = React3;
       }
       if (errors == null) {
         errors = closure_7;
@@ -184,17 +181,17 @@ obj = {
   },
   USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function handleSetPendingChanges(arg0) {
     ({ type, guildId } = arg0);
-    const merged = Object.assign(arg0, Object.create(null));
+    const merged = Object.assign(arg0, Object.assign({ type: 0, guildId: 0 }));
     let tmp3 = guildId;
     if (guildId == null) {
-      tmp3 = closure_3;
+      tmp3 = React3;
     }
     if (guildId == null) {
-      guildId = closure_3;
+      guildId = React3;
     }
-    const merged1 = Object.assign(closure_9[guildId]);
+    const merged1 = Object.assign(dependencyMap[guildId]);
     const merged2 = Object.assign(merged);
-    closure_9[tmp3] = {};
+    dependencyMap[tmp3] = {};
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function handleSetTryItOutAvatar(avatar) {
     obj = {};
@@ -249,8 +246,8 @@ obj = {
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function handleResetPendingAccountChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    closure_9 = Object.fromEntries(entries.map((item) => {
+      [tmp, tmp2] = item;
       const items = [tmp, ];
       obj = {};
       const merged = Object.assign(tmp2);
@@ -267,8 +264,8 @@ obj = {
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function handleResetPendingProfileChanges() {
     const entries = Object.entries(closure_9);
-    closure_9 = Object.fromEntries(entries.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    closure_9 = Object.fromEntries(entries.map((item) => {
+      [tmp, tmp2] = item;
       const items = [tmp, ];
       obj = {};
       const merged = Object.assign(tmp2);
@@ -288,10 +285,10 @@ obj = {
     closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: function handleResetTryItOutChanges() {
-    closure_10 = obj;
+
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function handleResetPendingLegacyUsernameDisabled() {
-    obj = dependencyMap[closure_3];
+    obj = dependencyMap[React3];
     if (obj == null) {
       obj = {};
     }
@@ -309,7 +306,7 @@ obj = {
     }
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function handleResetPendingPrimaryGuildChanges() {
-    obj = dependencyMap[closure_3];
+    obj = dependencyMap[React3];
     if (obj == null) {
       obj = {};
     }
@@ -328,9 +325,9 @@ obj = {
   },
   USER_PROFILE_UPDATE_FAILURE: function handleProfileUpdateFailure(arg0) {
     ({ guildId, errors } = arg0);
-    const OPEN = FormStates.OPEN;
+    OPEN = FormStates.OPEN;
     if (guildId == null) {
-      guildId = closure_3;
+      guildId = React3;
     }
     if (errors == null) {
       errors = closure_7;
@@ -339,8 +336,8 @@ obj = {
   },
   LOGOUT: handleReset
 };
-const userProfileSettingsStore = new UserProfileSettingsStore(dispatcherDefault, obj);
-const result = set.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");
+const userProfileSettingsStore = new UserProfileSettingsStore(DispatcherDefault, obj);
+const result = size.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");
 
 export default userProfileSettingsStore;
 export const IGNORE_GUILD_IDS = set;

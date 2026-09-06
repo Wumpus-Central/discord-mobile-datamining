@@ -1,11 +1,12 @@
-// === Module 9616: ? ===
+// === Module 9616: DCDVideoRenderer ===
 
-// Module 9616
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 9617 */;
-import importDefaultResult from "map" /* 4968 */;
+// Module 9616 (DCDVideoRenderer)
+import VideoRendererNativeComponentDefault from "VideoRendererNativeComponent" /* 9617 */;
+import requireNativeComponentOrDefault from "requireNativeComponentOrDefault" /* 4968 */;
 
-const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: __INTERNAL_VIEW_CONFIGDefault };
-const importDefaultResultResult = importDefaultResult(obj);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
+const obj = { componentName: "DCDVideoRenderer", componentFoundInstance: null };
+obj.componentFoundInstance = VideoRendererNativeComponentDefault;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/video_calls/native/components/DCDVideoRenderer.tsx");
 
-export default importDefaultResultResult;
+export default requireNativeComponentOrDefault(obj);

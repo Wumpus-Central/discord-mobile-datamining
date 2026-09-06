@@ -1,9 +1,10 @@
-// === Module 4797: context ===
+// === Module 4797: GuildIDContext ===
 
-// Module 4797 (context)
-import importAllResult from "noop" /* 19 */;
+// Module 4797 (GuildIDContext)
+import noop from "module_19" /* 19 */;
 
-const context = importAllResult.createContext(undefined);
-const result = require("set").fileFinishedImporting("modules/guild/GuildIDContext.tsx");
+const context = noop.createContext(undefined);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/GuildIDContext.tsx");
 
 export default context;

@@ -1,15 +1,15 @@
-// === Module 7728: getQuestContentName ===
+// === Module 7728: AnalyticsTypes ===
 
-// Module 7728 (getQuestContentName)
-import set from "set" /* 2 */;
-import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 5447 */;
+// Module 7728 (AnalyticsTypes)
+import QuestTypes from "QuestTypes" /* 5447 */;
+import size from "module_2" /* 2 */;
 
-let closure_2 = Object.keys(QuestsVisibleMessagesChangedSource.QuestContent);
-const result = set.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
+let closure_2 = Object.keys(QuestTypes.QuestContent);
+const result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsTypes.tsx");
 
 export const getQuestContentName = function getQuestContentName(questContent) {
   closure_0 = questContent;
-  let str = closure_2.find((arg0) => questContent(closure_1_1[0]).QuestContent[arg0] === questContent);
+  let str = closure_2.find((item) => QuestTypes.QuestContent[item] === closure_0);
   if (str == null) {
     str = "";
   }
@@ -48,13 +48,13 @@ export const getQuestStatus = function getQuestStatus(quest) {
 export const getContentProperties = function getContentProperties(questContent, questContentPosition, questContentRowIndex) {
   const obj = { content_id: questContent, content_name: null, content_position: null, row_index: null };
   closure_0 = questContent;
-  let str = closure_2.find((arg0) => questContent(closure_1_1[0]).QuestContent[arg0] === questContent);
+  let str = closure_2.find((item) => QuestTypes.QuestContent[item] === closure_0);
   if (str == null) {
     str = "";
   }
-  obj[1] = str;
-  obj[2] = questContentPosition;
-  obj[3] = questContentRowIndex;
+  obj.content_name = str;
+  obj.content_position = questContentPosition;
+  obj.row_index = questContentRowIndex;
   return obj;
 };
 export const BountyScrollingType = { AUTO: "AUTO", MANUAL: "MANUAL" };

@@ -1,12 +1,14 @@
-// === Module 14447: apexExperiment ===
+// === Module 14447: NotifSettingsExperiments ===
 
-// Module 14447 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 14447 (NotifSettingsExperiments)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null, 2: { enabled: true, clearDeclarative: false } };
+let obj = { name: "2026-04-declarative-notif-settings", kind: "user", defaultConfig: { enabled: false, clearDeclarative: false }, variations: null };
+obj = { 1: null, 2: { enabled: true, clearDeclarative: false } };
 obj[2] = { enabled: false, clearDeclarative: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-04-declarative-notif-settings", kind: "user", defaultConfig: { enabled: false, clearDeclarative: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/notifications/native/NotifSettingsExperiments.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/notifications/native/NotifSettingsExperiments.tsx");
 
 export const declarativeNotifSettingsExperiment = apexExperiment;

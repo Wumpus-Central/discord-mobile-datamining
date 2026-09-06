@@ -1,35 +1,36 @@
 // === Module 12950: URLCallout ===
 
 // Module 12950 (URLCallout)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import useUrlParts from "useUrlParts" /* 12951 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import SharedStateUtils from "SharedStateUtils" /* 12951 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsxs: c3, jsx: c4 } = jsxProd);
-createCacheKey = { linkCalloutContainer: null, linkCalloutContainerText: null };
-createCacheKey = { maxHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: ThemesDefault.radii.md };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
-let closure_5 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
-const result = require("set").fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
+require = fn;
+const ScrollView = fn(17).ScrollView;
+const jsxProd = fn(21);
+({ jsxs: c3, jsx: closure_4 } = jsxProd);
+fn(4560);
+let createStyles = { linkCalloutContainer: null, linkCalloutContainerText: null };
+createStyles = { maxHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: nativeDefault.radii.md };
+createStyles.linkCalloutContainer = createStyles;
+createStyles.linkCalloutContainerText = { padding: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, textAlign: "center" };
+let closure_5 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
 
 export const URLCallout = function URLCallout(url) {
-  const tmp = callback3();
-  let obj = useUrlParts;
+  const tmp = closure_5();
+  let obj = SharedStateUtils;
   const urlParts = obj.useUrlParts(url.url);
   obj = { style: tmp.linkCalloutContainer, children: null };
   ({ protocol, hostname, theRestOfTheUrl } = urlParts);
   obj = { style: tmp.linkCalloutContainerText, variant: "text-md/normal", children: null };
+  const obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
   const items = [protocol, "//"];
-  const items1 = [callback(Text.Text, { variant: "text-md/normal", color: "text-muted", children: items }), callback2(Text.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }), callback2(Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl })];
-  obj[2] = items1;
-  obj[1] = callback(Text.Text, obj);
-  return callback2(ScrollView, obj);
+  obj1.children = items;
+  const items1 = [React3(Text_Text.Text, obj1), React4(Text_Text.Text, { variant: "text-md/semibold", color: "text-default", children: hostname }), React4(Text_Text.Text, { variant: "text-md/normal", color: "text-muted", children: theRestOfTheUrl })];
+  obj.children = items1;
+  obj.children = React3(Text_Text.Text, obj);
+  return React4(ScrollView, obj);
 };

@@ -1,9 +1,9 @@
 // === Module 6957: getError ===
 
 // Module 6957 (getError)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/auth/native/getError.tsx");
+const result = size.fileFinishedImporting("modules/auth/native/getError.tsx");
 
 export default function getError(arg0, arg1) {
   let tmp2 = null;

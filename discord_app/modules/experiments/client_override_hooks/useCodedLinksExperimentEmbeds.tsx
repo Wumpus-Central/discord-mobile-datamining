@@ -1,29 +1,32 @@
-// === Module 11479: canSeeExperimentEmbeds ===
+// === Module 11479: useCodedLinksExperimentEmbeds ===
 
-// Module 11479 (canSeeExperimentEmbeds)
+// Module 11479 (useCodedLinksExperimentEmbeds)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "getHash" /* 4476 */;
-import closure_6 from "initialize" /* 1236 */;
+import useLegacyExperiments from "useLegacyExperiments" /* 11480 */;
+import useApexExperiments from "useApexExperiments" /* 11481 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import ExperimentStore from "ExperimentStore" /* 4476 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 
-require = arg1;
+require = fn;
 let closure_7 = {};
 let closure_8 = {};
 let closure_9 = {};
 let closure_10 = {};
 let closure_11 = {};
 let closure_12 = { legacyExperiments: {}, legacyOverridesInfo: {}, apexExperiments: {}, apexOverridesInfo: {} };
-const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
 
 export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [closure_4];
+    const items = [UserStore];
     tmp = items;
   }
-  const first = callback(tmp, 1)[0];
+  const first = _slicedToArray(tmp, 1)[0];
   const currentUser = first.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
@@ -40,7 +43,7 @@ export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
   return isStaffResult;
 };
 export const useCanSeeExperimentEmbeds = function useCanSeeExperimentEmbeds() {
-  const items = [closure_4];
+  const items = [UserStore];
   return initialize.useStateFromStores(items, () => {
     const items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
@@ -84,9 +87,9 @@ export const useCodedLinksExperimentEmbeds = function useCodedLinksExperimentEmb
   const items1 = [stateFromStores3];
   stateFromStoresObject = stateFromStores(stateFromStoresObject[5]).useStateFromStoresObject(items1, () => {
     if (stateFromStores) {
-      let registeredExperiments = stateFromStores3.getRegisteredExperiments();
+      let registeredExperiments = ExperimentStore.getRegisteredExperiments();
     } else {
-      registeredExperiments = closure_1_7;
+      registeredExperiments = closure_7;
     }
     return registeredExperiments;
   });
@@ -94,57 +97,52 @@ export const useCodedLinksExperimentEmbeds = function useCodedLinksExperimentEmb
   const items2 = [stateFromStores3];
   const stateFromStoresObject1 = stateFromStores(stateFromStoresObject[5]).useStateFromStoresObject(items2, () => {
     if (stateFromStores) {
-      let allExperimentOverrideDescriptors = stateFromStores3.getAllExperimentOverrideDescriptors();
+      let allExperimentOverrideDescriptors = ExperimentStore.getAllExperimentOverrideDescriptors();
     } else {
-      allExperimentOverrideDescriptors = closure_1_8;
+      allExperimentOverrideDescriptors = closure_8;
     }
     return allExperimentOverrideDescriptors;
   });
   let obj3 = stateFromStores(stateFromStoresObject[5]);
-  const items3 = [closure_6];
+  const items3 = [ApexExperimentStore];
   const stateFromStores1 = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items3, () => {
     if (stateFromStores) {
-      let experimentsMetadata = closure_1_6.getExperimentsMetadata();
+      let experimentsMetadata = ApexExperimentStore.getExperimentsMetadata();
     } else {
-      experimentsMetadata = closure_1_9;
+      experimentsMetadata = closure_9;
     }
     return experimentsMetadata;
   });
   let obj4 = stateFromStores(stateFromStoresObject[5]);
-  const items4 = [closure_6];
+  const items4 = [ApexExperimentStore];
   stateFromStores2 = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items4, () => {
     if (stateFromStores) {
-      let registeredExperiments = closure_1_6.getRegisteredExperiments();
+      let registeredExperiments = ApexExperimentStore.getRegisteredExperiments();
     } else {
-      registeredExperiments = closure_1_10;
+      registeredExperiments = closure_10;
     }
     return registeredExperiments;
   });
   let obj5 = stateFromStores(stateFromStoresObject[5]);
-  const items5 = [closure_6];
+  const items5 = [ApexExperimentStore];
   stateFromStores3 = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items5, () => {
     if (stateFromStores) {
-      let clientOverrides = closure_1_6.getClientOverrides();
+      let clientOverrides = ApexExperimentStore.getClientOverrides();
     } else {
-      clientOverrides = closure_1_11;
+      clientOverrides = closure_11;
     }
     return clientOverrides;
   });
   const items6 = [stateFromStores, stateFromStoresObject, stateFromStoresObject1, stateFromStores1, stateFromStores2, stateFromStores3];
   return stateFromStores1.useMemo(() => {
     if (stateFromStores) {
-      const obj = { legacyExperiments: null, legacyOverridesInfo: null, apexExperiments: null, apexOverridesInfo: null };
-      obj[0] = stateFromStores(stateFromStoresObject[6]).parseRegisteredExperiments(stateFromStoresObject);
-      const obj2 = stateFromStores(stateFromStoresObject[6]);
-      obj[1] = stateFromStores(stateFromStoresObject[6]).getLegacyOverridesInfo(stateFromStoresObject1);
-      const obj3 = stateFromStores(stateFromStoresObject[6]);
-      obj[2] = stateFromStores(stateFromStoresObject[7]).mergeApexExperiments(stateFromStores1, stateFromStores2);
-      const obj4 = stateFromStores(stateFromStoresObject[7]);
-      obj[3] = stateFromStores(stateFromStoresObject[7]).getApexExperimentOverridesInfo(stateFromStores3);
+      const obj = { legacyExperiments: useLegacyExperiments.parseRegisteredExperiments(stateFromStoresObject), legacyOverridesInfo: null, apexExperiments: null, apexOverridesInfo: null };
+      obj.legacyOverridesInfo = useLegacyExperiments.getLegacyOverridesInfo(stateFromStoresObject1);
+      obj.apexExperiments = useApexExperiments.mergeApexExperiments(stateFromStores1, stateFromStores2);
+      obj.apexOverridesInfo = useApexExperiments.getApexExperimentOverridesInfo(stateFromStores3);
       let tmp = obj;
-      const obj5 = stateFromStores(stateFromStoresObject[7]);
     } else {
-      tmp = closure_1_12;
+      tmp = closure_12;
     }
     return tmp;
   }, items6);

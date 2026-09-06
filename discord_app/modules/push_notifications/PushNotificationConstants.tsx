@@ -1,20 +1,20 @@
-// === Module 6596: str2 ===
+// === Module 6596: PushNotificationConstants ===
 
-// Module 6596 (str2)
-import set from "set" /* 2 */;
-import set2 from "set" /* 1115 */;
-import getConstants from "getConstants" /* 1364 */;
-import isMetaQuest from "isMetaQuest" /* 1608 */;
+// Module 6596 (PushNotificationConstants)
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
+import size from "module_2" /* 2 */;
 
-getConstants = getConstants.getConstants();
+ClientInfoUtils = ClientInfoUtils.getConstants();
 let str;
-if (getConstants != null) {
-  str = getConstants.Identifier;
+if (ClientInfoUtils != null) {
+  str = ClientInfoUtils.Identifier;
 }
 if (str == null) {
   str = "";
 }
-isMetaQuest = isMetaQuest.isQuestRelease();
+MetaQuestUtils = MetaQuestUtils.isQuestRelease();
 const startsWithResult = str.startsWith("com.discord.kodiak");
 const startsWithResult1 = str.startsWith("com.hammerandchisel.discord.local");
 const meta_horizon = "meta_horizon";
@@ -34,23 +34,23 @@ if (!startsWithResult) {
   }
   str4 = str5;
 }
-const result = set.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
+const result = size.fileFinishedImporting("modules/push_notifications/PushNotificationConstants.tsx");
 
 export const BUNDLE_ID = str;
-export const IS_QUEST_RELEASE = isMetaQuest;
+export const IS_QUEST_RELEASE = MetaQuestUtils;
 export const DEVICE_PUSH_PROVIDER_ANDROID = "gcm";
 export const DEVICE_PUSH_PROVIDER_META_HORIZON = "meta_horizon";
 export const DEVICE_PUSH_PROVIDER_IOS = str2;
 export const DEVICE_PUSH_VOIP_PROVIDER = str4;
 export const getDevicePushProvider = function getDevicePushProvider() {
-  if (isMetaQuest) {
+  if (MetaQuestUtils) {
     let str = meta_horizon;
   } else {
     str = "gcm";
     if (!obj.isAndroid()) {
       str = str2;
     }
-    obj = set2;
+    obj = PlatformUtils;
   }
   return str;
 };

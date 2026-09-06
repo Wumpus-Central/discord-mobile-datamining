@@ -1,20 +1,21 @@
-// === Module 4965: isBlurDisabled ===
+// === Module 4965: VisualEffectView ===
 
-// Module 4965 (isBlurDisabled)
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
-import MODERN_ANDROID_BLURRING_AVAILABLE from "MODERN_ANDROID_BLURRING_AVAILABLE" /* 4970 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { useVisualEffectViewOverrides as closure_4 } from "useVisualEffectViewOverrides" /* 4966 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
-import importAllResult from "noop" /* 19 */;
+// Module 4965 (VisualEffectView)
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
+import VisualEffectViewAndroid from "VisualEffectViewAndroid" /* 4970 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let closure_6 = set.isAndroid();
-const result = set.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectView.tsx");
+require = fn;
+const View = fn(17).View;
+let closure_4 = fn(4966).useVisualEffectViewOverrides;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1115);
+let closure_6 = PlatformUtils.isAndroid();
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectView.tsx");
 
-export default importAllResult.forwardRef(function VisualEffectView(blurAmount) {
+export default noop.forwardRef(function VisualEffectView(blurAmount, ref) {
   ({ blurTheme, blurStyle } = blurAmount);
   if (blurStyle === undefined) {
     blurStyle = "default";
@@ -27,20 +28,19 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
   if (android_softwareBlurDisabled === undefined) {
     android_softwareBlurDisabled = false;
   }
-  const merged = Object.assign(blurAmount, Object.create(null));
-  ({ blurAmountOverride, tintColorOverride, blurEffectNameOverride } = callback());
-  let obj = map;
-  const token = obj.useToken(ThemesDefault.colors.LEGACY_BLUR_FALLBACK_DEFAULT, blurTheme);
-  obj1 = map;
-  let token1 = obj1.useToken(ThemesDefault.colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, blurTheme);
+  const merged = Object.assign(blurAmount, Object.assign({ blurTheme: 0, blurStyle: 0, blurAmount: 0, tintColor: 0, android_fallbackColor: 0, android_blurTargetViewNativeId: 0, android_softwareBlurDisabled: 0 }));
+  ({ blurAmountOverride, tintColorOverride, blurEffectNameOverride } = closure_4());
+  let obj = useToken;
+  const token = obj.useToken(nativeDefault.colors.LEGACY_BLUR_FALLBACK_DEFAULT, blurTheme);
+  let obj1 = useToken;
+  let token1 = obj1.useToken(nativeDefault.colors.LEGACY_BLUR_FALLBACK_ULTRA_THIN, blurTheme);
   if ("default" === blurStyle) {
     token1 = token;
   }
   const items = [{ backgroundColor: token1 }, merged.style, ];
   let tmp8;
   if (null != android_fallbackColor) {
-    obj = { backgroundColor: null };
-    obj[0] = android_fallbackColor;
+    obj = { backgroundColor: android_fallbackColor };
     tmp8 = obj;
   }
   items[2] = tmp8;
@@ -63,14 +63,12 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
     tmp12 = tmp13;
   }
   if (tmp12) {
-    obj = { ref: null };
-    obj[0] = arg1;
+    obj = { ref };
     const merged1 = Object.assign(merged);
     obj.style = items;
     let tmp14Result = tmp14(View, obj);
   } else if (closure_6) {
-    obj1 = { ref: null, blurAmount: null, blurTintIOSParityCompensationColor: null, tintColor: null, blurTargetViewNativeId: null };
-    obj1[0] = arg1;
+    obj1 = { ref, blurAmount: null, blurTintIOSParityCompensationColor: null, tintColor: null, blurTargetViewNativeId: null };
     if (blurAmountOverride == null) {
       if (null == num) {
         let num2 = 1;
@@ -81,31 +79,30 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
       }
       blurAmountOverride = num;
     }
-    obj1[1] = blurAmountOverride;
-    obj1[2] = token3;
+    obj1.blurAmount = blurAmountOverride;
+    obj1.blurTintIOSParityCompensationColor = token3;
     if (tintColorOverride == null) {
       tintColorOverride = tintColor;
     }
-    obj1[3] = tintColorOverride;
-    obj1[4] = android_blurTargetViewNativeId;
+    obj1.tintColor = tintColorOverride;
+    obj1.blurTargetViewNativeId = android_blurTargetViewNativeId;
     const merged2 = Object.assign(merged);
     tmp14Result = tmp14(tmp5(4970), obj1);
     const tmp5Result = tmp5(4970);
   } else {
-    const obj2 = { ref: null, blurEffectName: null, blurAmount: null, tintColor: null };
-    obj2[0] = arg1;
+    const obj2 = { ref, blurEffectName: null, blurAmount: null, tintColor: null };
     if (blurEffectNameOverride != null) {
-      obj2[1] = blurEffectNameOverride;
+      obj2.blurEffectName = blurEffectNameOverride;
       let tmp17 = blurAmountOverride;
       if (blurAmountOverride == null) {
         tmp17 = num;
       }
-      obj2[2] = tmp17;
+      obj2.blurAmount = tmp17;
       let tmp18 = tintColorOverride;
       if (tintColorOverride == null) {
         tmp18 = tintColor;
       }
-      obj2[3] = tmp18;
+      obj2.tintColor = tmp18;
       const merged3 = Object.assign(merged);
       tmp14Result = tmp14(tmp15, obj2);
     } else {
@@ -119,7 +116,6 @@ export default importAllResult.forwardRef(function VisualEffectView(blurAmount) 
       if ("light" === blurTheme) {
         str4 = "UIBlurEffectStyleSystemUltraThinMaterialLight";
       }
-      str2 = str4;
     }
   }
   return tmp14Result;
@@ -131,7 +127,7 @@ export const isBlurDisabled = function isBlurDisabled(merged) {
     let tmp4 = null == tmp;
     if (!tmp4) {
       if (android_softwareBlurDisabled) {
-        android_softwareBlurDisabled = !MODERN_ANDROID_BLURRING_AVAILABLE.MODERN_ANDROID_BLURRING_AVAILABLE;
+        android_softwareBlurDisabled = !VisualEffectViewAndroid.MODERN_ANDROID_BLURRING_AVAILABLE;
       }
       tmp4 = true === android_softwareBlurDisabled;
     }

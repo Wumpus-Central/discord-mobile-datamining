@@ -1,32 +1,33 @@
-// === Module 7524: items ===
+// === Module 7524: GuildMemberSafetyPagination ===
 
-// Module 7524 (items)
-import result2 from "result" /* 7497 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
+// Module 7524 (GuildMemberSafetyPagination)
+import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes" /* 7497 */;
+import _slicedToArray from "module_32" /* 32 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-require = arg1;
+require = fn;
 let items = [12, 25, 50, 100];
-let closure_5 = { FORWARD: 1, [1]: "FORWARD", BACKWARD: -1, [-1]: "BACKWARD" };
-let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPagination.tsx");
+const constants = { FORWARD: 1, [1]: "FORWARD", BACKWARD: -1, [-1]: "BACKWARD" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPagination.tsx");
 class GuildMemberSafetyPagination {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    obj._reduceMemberIdsToPaginationChunks = function _reduceMemberIdsToPaginationChunks(arg0, userId, arg2) {
-      const sum = Math.floor(arg2 / obj._paginationState.pageSize) + 1;
-      if (null == arg0[sum]) {
-        arg0[sum] = [];
+    obj._reduceMemberIdsToPaginationChunks = function _reduceMemberIdsToPaginationChunks(acc, userId, index) {
+      const sum = Math.floor(index / obj._paginationState.pageSize) + 1;
+      if (null == acc[sum]) {
+        acc[sum] = [];
       }
-      let arr = arg0[sum];
+      let arr = acc[sum];
       arr = arr.push(userId);
-      return arg0;
+      return acc;
     };
     obj.guildId = global;
-    obj = { pageSize: closure_4[0], currentPage: 1, continuationToken: null, sort: require("result").OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
+    obj = { pageSize: closure_4[0], currentPage: 1, continuationToken: null, sort: closure_0(closure_1[2]).OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
     obj._paginationState = obj;
     obj._version = 0;
-    tmp = closure_2(obj._initPaginationFromRawMembers(arg1), 2);
+    tmp = closure_2(obj._initPaginationFromRawMembers(fn), 2);
     [obj._sortedMemberIds, obj._cachedPaginationChunks] = tmp;
     obj._version = obj._version + 1;
     return obj;
@@ -34,7 +35,7 @@ class GuildMemberSafetyPagination {
 }
 const prototype = GuildMemberSafetyPagination.prototype;
 prototype["reset"] = function reset() {
-  this._paginationState = { pageSize: items[0], currentPage: 1, continuationToken: null, sort: result2.OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
+  this._paginationState = { pageSize: items[0], currentPage: 1, continuationToken: null, sort: MemberSafetyElasticSearchQueryTypes.OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
   this._sortedMemberIds = [];
   this._cachedPaginationChunks = {};
   this._version = this._version + 1;
@@ -55,8 +56,8 @@ prototype["_initPaginationFromRawMembers"] = function _initPaginationFromRawMemb
   items = [];
   const items1 = [
     items,
-    arr.reduce((arg0, userId) => {
-      const result = self._reduceMemberIdsToPaginationChunks(arg0, userId.userId, arg2);
+    arr.reduce((acc, userId, index) => {
+      const result = self._reduceMemberIdsToPaginationChunks(acc, userId.userId, index);
       items.push(userId.userId);
       return result;
     }, {})
@@ -119,8 +120,8 @@ prototype["updatePaginationState"] = function updatePaginationState(pageSize) {
   items = [true, flag];
   return items;
 };
-prototype["updateSortedMembers"] = function updateSortedMembers(_members) {
-  [this._sortedMemberIds, this._cachedPaginationChunks] = callback(this._initPaginationFromRawMembers(_members), 2);
+prototype["updateSortedMembers"] = function updateSortedMembers(arr) {
+  [this._sortedMemberIds, this._cachedPaginationChunks] = _slicedToArray(this._initPaginationFromRawMembers(arr), 2);
   this._version = this._version + 1;
   return true;
 };
@@ -139,7 +140,7 @@ prototype["_findMember"] = function _findMember(arg0) {
   if (arg0 < this._sortedMemberIds.length) {
     diff = self._sortedMemberIds.length - 1;
   }
-  const member = store.getMember(self.guildId, self._sortedMemberIds[arg0]);
+  const member = GuildMemberStore.getMember(self.guildId, self._sortedMemberIds[arg0]);
   let tmp4 = member;
   if (null == member) {
     let sum = arg0 + BACKWARD;
@@ -148,9 +149,7 @@ prototype["_findMember"] = function _findMember(arg0) {
       tmp4 = member;
       if (sum < self._sortedMemberIds.length) {
         while (true) {
-          let tmp5 = store;
-          let member1 = store.getMember(self.guildId, self._sortedMemberIds[sum]);
-          let tmp7 = sum;
+          let member1 = GuildMemberStore.getMember(self.guildId, self._sortedMemberIds[sum]);
           let joinedAt;
           if (member1 != null) {
             joinedAt = member1.joinedAt;
@@ -201,7 +200,7 @@ export const MAX_VISIBLE_PAGES = 7;
 export const MAX_FORWARD_PAGE_SKIP = 5;
 export const DEFAULT_SEARCH_CHUNK_LIMIT = 250;
 export const createDefaultMemberSafetyPaginationState = function createDefaultMemberSafetyPaginationState() {
-  return { pageSize: items[0], currentPage: 1, continuationToken: null, sort: result2.OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
+  return { pageSize: items[0], currentPage: 1, continuationToken: null, sort: MemberSafetyElasticSearchQueryTypes.OrderBy.ORDER_BY_UNSPECIFIED, elasticSearchCursor: null };
 };
 export const getSearchChunkLimit = function getSearchChunkLimit(paginationState) {
   return Math.max(5 * paginationState.pageSize, 250);

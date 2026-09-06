@@ -1,23 +1,23 @@
 // === Module 13674: isClipsEnabled ===
 
 // Module 13674 (isClipsEnabled)
-import apexExperiment from "apexExperiment" /* 13675 */;
-import closure_2 from "_migrateDefaultStorage" /* 1914 */;
+import ClipsExperiment from "ClipsExperiment" /* 13675 */;
+import ClipsStore from "ClipsStore" /* 1914 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
 
 export const isClipsEnabled = function isClipsEnabled() {
-  let clipsEnabled = apexExperiment.areClipsAvailable();
+  let clipsEnabled = ClipsExperiment.areClipsAvailable();
   if (clipsEnabled) {
-    clipsEnabled = state.getState().clipsSettings.clipsEnabled;
+    clipsEnabled = ClipsStore.getState().clipsSettings.clipsEnabled;
   }
   return clipsEnabled;
 };
 export const useIsClipsEnabled = function useIsClipsEnabled() {
-  let isClipsAvailable = apexExperiment.useIsClipsAvailable();
-  const obj = apexExperiment;
-  const items = [closure_2];
+  let isClipsAvailable = ClipsExperiment.useIsClipsAvailable();
+  const items = [ClipsStore];
   if (isClipsAvailable) {
     isClipsAvailable = obj2.useStateFromStores(items, () => state.getState().clipsSettings.clipsEnabled);
   }

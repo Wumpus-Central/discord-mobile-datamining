@@ -1,16 +1,16 @@
-// === Module 1: ? ===
+// === Module 1: logAppStart ===
 
-// Module 1
-import timestamp from "timestamp" /* 3 */;
-import serialize from "serialize" /* 9 */;
-import set from "set" /* 2 */;
+// Module 1 (logAppStart)
+import Logger from "Logger" /* 3 */;
+import TTITracker from "TTITracker" /* 9 */;
+import size from "module_2" /* 2 */;
 
-set = set.clear();
-new timestamp.default("app").log("Initializing app");
-const loadIndex = serialize.default.loadIndex;
+size.clear();
+new Logger.default("app").log("Initializing app");
+const loadIndex = TTITracker.default.loadIndex;
 loadIndex.recordStart();
-const loadImports = serialize.default.loadImports;
+const loadImports = TTITracker.default.loadImports;
 loadImports.recordStart();
-const result = set.fileFinishedImporting("modules/debug/logAppStart.tsx");
+const result = size.fileFinishedImporting("modules/debug/logAppStart.tsx");
 
 export default null;

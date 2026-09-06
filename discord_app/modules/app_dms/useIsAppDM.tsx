@@ -1,21 +1,22 @@
 // === Module 12145: useIsAppDM ===
 
 // Module 12145 (useIsAppDM)
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
+import UserStore from "UserStore" /* 1371 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_dms/useIsAppDM.tsx");
 
 export default function useIsAppDM(arg0) {
-  const _require = arg0;
-  const items = [closure_2];
-  return _require(563).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [UserStore];
+  return require("useStateFromStores").useStateFromStores(items, () => {
     let tmp = null != closure_0 && obj.isDM();
     if (tmp) {
       tmp = 1 === obj.recipients.length;
     }
     if (tmp) {
-      const user = closure_1_2.getUser(obj.recipients[0]);
+      const user = UserStore.getUser(obj.recipients[0]);
       let bot;
       if (user != null) {
         bot = user.bot;

@@ -1,20 +1,22 @@
-// === Module 16741: useSendMessageChannelCount ===
+// === Module 16741: usePostableChannelCount ===
 
-// Module 16741 (useSendMessageChannelCount)
-import closure_3 from "comparator" /* 2012 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_4 } from "comparator" /* 2012 */;
-import closure_5 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "ME" /* 1074 */;
+// Module 16741 (usePostableChannelCount)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");
+const require = fn;
+let closure_4 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1074).Permissions;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild/usePostableChannelCount.tsx");
 
 export default function useSendMessageChannelCount(arg0) {
-  const _require = arg0;
-  let items = [closure_3];
+  _require = arg0;
+  let items = [GuildChannelStore];
   const items1 = [arg0];
-  const stateFromStores = _require(504).useStateFromStores(items, () => {
-    let items = closure_1_3.getChannels(closure_0)[closure_1_4];
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
+    let items = GuildChannelStore.getChannels(closure_0)[closure_4];
     if (items == null) {
       items = [];
     }
@@ -22,7 +24,7 @@ export default function useSendMessageChannelCount(arg0) {
   }, items1);
   let num = 0;
   if (0 !== stateFromStores.length) {
-    num = stateFromStores.filter((channel) => closure_5.can(callback(table[4]).combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL), channel.channel)).length;
+    num = stateFromStores.filter((channel) => PermissionStore.can(BigFlagUtilsAll.combine(constants.SEND_MESSAGES, constants.VIEW_CHANNEL), channel.channel)).length;
   }
   return num;
 };

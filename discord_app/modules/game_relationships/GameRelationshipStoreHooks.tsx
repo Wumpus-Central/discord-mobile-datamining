@@ -1,60 +1,61 @@
-// === Module 13063: useGameRelationshipsByType ===
+// === Module 13063: GameRelationshipStoreHooks ===
 
-// Module 13063 (useGameRelationshipsByType)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "recountRelationshipTypes" /* 7658 */;
-import { RelationshipTypes } from "ME" /* 1074 */;
+// Module 13063 (GameRelationshipStoreHooks)
+import _slicedToArray from "module_32" /* 32 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
+const require = fn;
+const RelationshipTypes = fn(1074).RelationshipTypes;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/game_relationships/GameRelationshipStoreHooks.tsx");
 
 export const useGameRelationshipsByType = function useGameRelationshipsByType(FRIEND) {
-  const _require = FRIEND;
-  let items = [closure_3];
+  _require = FRIEND;
+  let items = [GameRelationshipStore];
   const items1 = [FRIEND];
-  return callback(_require(504).useStateFromStores(items, () => {
-    const items = [closure_1_3.getGameRelationshipsByType(closure_0), closure_1_3.getGameRelationshipsVersion()];
+  return _slicedToArray(require("initialize").useStateFromStores(items, () => {
+    const items = [GameRelationshipStore.getGameRelationshipsByType(closure_0), GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5432).isVersionEqual), 1)[0];
+  }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 };
 export const useGameFriendsForUser = function useGameFriendsForUser(id) {
   const FRIEND = RelationshipTypes.FRIEND;
-  const _require = id;
-  const items = [closure_3];
+  _require = id;
+  const items = [GameRelationshipStore];
   const items1 = [FRIEND, id];
-  return callback(_require(FRIEND[3]).useStateFromStores(items, () => {
-    const items = [closure_1_3.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), closure_1_3.getGameRelationshipsVersion()];
+  return _slicedToArray(require("initialize").useStateFromStores(items, () => {
+    const items = [GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(FRIEND[4]).isVersionEqual), 1)[0];
+  }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 };
 export const useIncomingGameRelationshipsForUser = function useIncomingGameRelationshipsForUser(id) {
   const PENDING_INCOMING = RelationshipTypes.PENDING_INCOMING;
-  const _require = id;
-  let items = [closure_3];
+  _require = id;
+  let items = [GameRelationshipStore];
   const items1 = [PENDING_INCOMING, id];
-  return callback(_require(PENDING_INCOMING[3]).useStateFromStores(items, () => {
-    const items = [closure_1_3.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), closure_1_3.getGameRelationshipsVersion()];
+  return _slicedToArray(require("initialize").useStateFromStores(items, () => {
+    const items = [GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, PENDING_INCOMING), GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(PENDING_INCOMING[4]).isVersionEqual), 1)[0];
+  }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 };
 export const useHasGameRelationshipsForUser = function useHasGameRelationshipsForUser(arg0) {
-  const _require = arg0;
-  let items = [closure_3];
+  _require = arg0;
+  let items = [GameRelationshipStore];
   const items1 = [arg0];
-  return callback(_require(504).useStateFromStores(items, () => {
-    const gameRelationshipsForUser = closure_1_3.getGameRelationshipsForUser(closure_0);
-    const items = [gameRelationshipsForUser.length > 0, closure_1_3.getGameRelationshipsVersion()];
+  return _slicedToArray(require("initialize").useStateFromStores(items, () => {
+    const gameRelationshipsForUser = GameRelationshipStore.getGameRelationshipsForUser(closure_0);
+    const items = [gameRelationshipsForUser.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5432).isVersionEqual), 1)[0];
+  }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 };
 export const useHasGameRelationshipsForUserByType = function useHasGameRelationshipsForUserByType(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  let items = [closure_3];
+  let items = [GameRelationshipStore];
   const items1 = [arg1, arg0];
-  return callback(_require(504).useStateFromStores(items, () => {
-    const gameRelationshipsForUserByType = closure_1_3.getGameRelationshipsForUserByType(closure_0, closure_1);
-    const items = [gameRelationshipsForUserByType.length > 0, closure_1_3.getGameRelationshipsVersion()];
+  return _slicedToArray(require("initialize").useStateFromStores(items, () => {
+    const gameRelationshipsForUserByType = GameRelationshipStore.getGameRelationshipsForUserByType(closure_0, closure_1);
+    const items = [gameRelationshipsForUserByType.length > 0, GameRelationshipStore.getGameRelationshipsVersion()];
     return items;
-  }, items1, _require(5432).isVersionEqual), 1)[0];
+  }, items1, require("SecondaryIndexMapUtils").isVersionEqual), 1)[0];
 };

@@ -1,19 +1,19 @@
 // === Module 15241: useEmojiByIdOrName ===
 
 // Module 15241 (useEmojiByIdOrName)
-import closure_2 from "getEmojiToGroupId" /* 5459 */;
+import EmojiStore from "EmojiStore" /* 5459 */;
 
-const require = arg1;
+const require = fn;
 function useEmojiByIdOrName(guildId, emojiId) {
-  const _require = guildId;
+  _require = guildId;
   dependencyMap = emojiId;
-  const items = [closure_2];
+  const items = [EmojiStore];
   const items1 = [guildId, emojiId];
-  return _require(504).useStateFromStores(items, () => {
+  return require("initialize").useStateFromStores(items, () => {
     if (null == closure_1) {
       return null;
     } else {
-      const disambiguatedEmojiContext = closure_1_2.getDisambiguatedEmojiContext(closure_0);
+      const disambiguatedEmojiContext = EmojiStore.getDisambiguatedEmojiContext(closure_0);
       let byId = disambiguatedEmojiContext.getById(tmp);
       if (byId == null) {
         byId = disambiguatedEmojiContext.getByName(tmp);
@@ -22,7 +22,8 @@ function useEmojiByIdOrName(guildId, emojiId) {
     }
   }, items1);
 }
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useEmojiByIdOrName.tsx");
 
 export default useEmojiByIdOrName;
 export { useEmojiByIdOrName };

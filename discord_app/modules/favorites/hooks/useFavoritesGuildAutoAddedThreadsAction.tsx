@@ -1,17 +1,19 @@
 // === Module 16140: useFavoritesGuildAutoAddedThreadsAction ===
 
 // Module 16140 (useFavoritesGuildAutoAddedThreadsAction)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "mergeGuildAvatar" /* 1371 */;
-import closure_5 from "initializeFromUserSettings" /* 1960 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10223 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
+import FavoriteStore from "FavoriteStore" /* 1960 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
   let obj = hasAccess(10224);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
-  const items = [closure_4];
+  const items = [UserStore];
   if (hasAccess) {
     hasAccess = obj2.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
@@ -26,20 +28,19 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
     });
   }
   obj2 = hasAccess(504);
-  const items1 = [closure_5];
+  const items1 = [FavoriteStore];
   const stateFromStores = hasAccess(504).useStateFromStores(items1, () => autoAddJoinedThreads.autoAddJoinedThreads);
   const items2 = [hasAccess, stateFromStores];
   obj = { isAvailable: hasAccess, isEnabled: stateFromStores, label: null, subLabel: null, toggle: null };
-  const callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (hasAccess) {
-      const result = hasAccess(closure_1_2[5]).setFavoritesAutoAddJoinedThreads(!stateFromStores);
-      const obj = hasAccess(closure_1_2[5]);
+      const result = FavoritesActionCreators.setFavoritesAutoAddJoinedThreads(!stateFromStores);
     }
   }, items2);
   const intl = tmp(1114).intl;
-  obj[2] = intl.string(stateFromStores(3225).DIyQIF);
+  obj.label = intl.string(stateFromStores(3225).DIyQIF);
   const intl2 = tmp(1114).intl;
-  obj[3] = intl2.string(stateFromStores(3225).g2vHYJ);
-  obj[4] = callback;
+  obj.subLabel = intl2.string(stateFromStores(3225).g2vHYJ);
+  obj.toggle = callback;
   return obj;
 };

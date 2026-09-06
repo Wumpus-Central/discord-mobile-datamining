@@ -1,12 +1,8 @@
-// === Module 8225: OverrideProfileFrameLayer ===
+// === Module 8225: FramePreviewOverrideFrame ===
 
-// Module 8225 (OverrideProfileFrameLayer)
-import closure_2 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8222 */;
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7208 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 8225 (FramePreviewOverrideFrame)
+import FastImageDefault from "FastImage" /* 5587 */;
+import noop from "module_19" /* 19 */;
 
 function OverrideProfileFrameLayer(layer) {
   layer = layer.layer;
@@ -15,9 +11,7 @@ function OverrideProfileFrameLayer(layer) {
   const overflowBottom = layer.overflowBottom;
   const overflowHorizontal = layer.overflowHorizontal;
   ({ containerWidth, containerHeight } = layer);
-  c5 = undefined;
-  c6 = undefined;
-  const tmp = callback();
+  const tmp = closure_8();
   const sum = containerWidth + 2 * overflowHorizontal;
   c5 = sum;
   const result = layer.ratio * sum;
@@ -28,11 +22,11 @@ function OverrideProfileFrameLayer(layer) {
   items[4] = overflowBottom;
   items[5] = overflowHorizontal;
   const memo = overflowTop.useMemo(() => {
-    let obj = { left: -overflowHorizontal, right: -overflowHorizontal, zIndex: _undefined[layer.order] };
+    const rect = { left: -overflowHorizontal, right: -overflowHorizontal, zIndex: hasOwnProperty[layer.order] };
     const type = layer.type;
     if ("staple" === type) {
-      obj = {};
-      const merged = Object.assign(obj);
+      let obj = {};
+      const merged = Object.assign(rect);
       let tmp12;
       if ("top" === tmp2.anchor) {
         tmp12 = -overflowTop;
@@ -46,7 +40,7 @@ function OverrideProfileFrameLayer(layer) {
       return obj;
     } else if ("rail" === type) {
       obj = {};
-      const merged1 = Object.assign(obj);
+      const merged1 = Object.assign(rect);
       let str2 = "center";
       if ("center" !== tmp2.anchor) {
         let str3 = "flex-end";
@@ -58,8 +52,8 @@ function OverrideProfileFrameLayer(layer) {
       obj.justifyContent = str2;
       return obj;
     } else {
-      obj1 = {};
-      const merged2 = Object.assign(obj);
+      const obj1 = {};
+      const merged2 = Object.assign(rect);
       obj1.left = -tmp;
       return obj1;
     }
@@ -83,30 +77,27 @@ function OverrideProfileFrameLayer(layer) {
               const _Math = Math;
               let obj = { style: null, children: null };
               const items1 = [tmp.layer, memo];
-              obj[0] = items1;
+              obj.style = items1;
               const _Array = Array;
-              obj = { length: null };
-              obj[0] = Math.ceil(containerHeight / result);
-              obj[1] = Array.from(obj, (arg0, arg1) => {
-                obj = { source: obj, resizeMode: "cover", width: c5, height: c6 };
-                obj = { uri };
-                return closure_1_7(layer(uri[6]), obj, arg1);
+              obj = { length: Math.ceil(containerHeight / result) };
+              obj.children = Array.from(obj, (arg0, arg1) => {
+                const size = { source: { uri }, resizeMode: "cover", width, height };
+                return jsx(FastImageDefault, { source: { uri }, resizeMode: "cover", width, height }, arg1);
               });
-              return <overflowBottom length={null} />;
+              return <overflowBottom length={Math.ceil(containerHeight / result)} />;
             }
           }
           return null;
         } else {
           obj = { style: null, children: null };
           const items2 = [tmp.layer, memo];
-          obj[0] = items2;
-          obj1 = { source: null, resizeMode: "cover", width: null, height: null };
-          const obj2 = { uri: null };
-          obj2[0] = uri;
-          obj1[0] = obj2;
-          obj1[2] = sum;
-          obj1[3] = result;
-          obj[1] = jsx(layer(uri[6]), { source: null, resizeMode: "cover", width: null, height: null });
+          obj.style = items2;
+          let size = { source: null, resizeMode: "cover", width: null, height: null };
+          let obj1 = { uri };
+          size.source = obj1;
+          size.width = sum;
+          size.height = result;
+          obj.children = jsx(layer(uri[6]), { source: null, resizeMode: "cover", width: null, height: null });
           return <overflowBottom style={null}>{null}</overflowBottom>;
         }
       }
@@ -114,43 +105,49 @@ function OverrideProfileFrameLayer(layer) {
   }
   return null;
 }
+get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: c4, PROFILE_FRAME_Z_INDEX: c5 } = PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO);
-createCacheKey = { container: null, layer: null };
-createCacheKey = {};
+const ProfileFrameConstants = fn(8222);
+({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: closure_4, PROFILE_FRAME_Z_INDEX: hasOwnProperty } = ProfileFrameConstants);
+const UserProfileThemeTypes = fn(7208).UserProfileThemeTypes;
+let jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { container: null, layer: null };
+createStyles = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.pointerEvents = "none";
-createCacheKey[0] = createCacheKey;
+createStyles.pointerEvents = "none";
+createStyles.container = createStyles;
 let obj1 = {};
 let merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj1.alignItems = "center";
 obj1.overflow = "hidden";
-createCacheKey[1] = obj1;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx");
+createStyles.layer = obj1;
+let closure_8 = createStyles.createStyles(createStyles);
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx");
 
 export default function FramePreviewOverrideFrame(override) {
   override = override.override;
   const containerWidth = override.containerWidth;
-  ({ containerHeight: closure_2, profileThemeType } = override);
+  ({ containerHeight: noop, profileThemeType } = override);
   const frameOrder = override.frameOrder;
   const filterLayer = override.filterLayer;
-  closure_6 = undefined;
+  let overflowTop;
   jsx = undefined;
-  let callback;
+  let overflowHorizontal;
   const items = [override.layers, frameOrder, profileThemeType, filterLayer];
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     const layers = override.layers;
     return layers.filter((order) => {
-      let tmp2 = null == closure_4 || tmp === order.order;
+      let tmp2 = null == frameOrder || tmp === order.order;
       if (tmp2) {
-        let tmp4 = null != closure_5;
+        let tmp4 = null != filterLayer;
         if (tmp4) {
           tmp4 = !tmp3(order);
         }
         let tmp5 = !tmp4;
         if (!tmp4) {
-          let tmp8 = closure_3 === closure_1_6.PREVIEW;
+          let tmp8 = profileThemeType === constants.PREVIEW;
           if (!tmp8) {
             let tmp9 = "top" === order.anchor;
             if (tmp9) {
@@ -168,37 +165,62 @@ export default function FramePreviewOverrideFrame(override) {
   if (0 !== memo.length) {
     if (0 !== containerWidth) {
       const result = containerWidth / override.innerWidth;
-      closure_6 = override.overflowTop * result;
+      overflowTop = override.overflowTop * result;
       jsx = override.overflowBottom * result;
-      callback = override.overflowHorizontal * result;
-      let obj = { style: null, children: null };
-      obj[0] = tmp.container;
-      obj[1] = memo.map((id) => {
-        const obj = { layer: id, uri: null, ratio: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null, containerWidth: null, containerHeight: null };
+      overflowHorizontal = override.overflowHorizontal * result;
+      let obj = {
+        style: tmp.container,
+        children: memo.map((layer) => {
+              const obj = { layer, uri: null, ratio: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null, containerWidth: null, containerHeight: null };
+              let uri;
+              if (override.layerAssetById[layer.id] != null) {
+                uri = tmp.uri;
+              }
+              if (uri == null) {
+                uri = null;
+              }
+              obj.uri = uri;
+              let num;
+              if (override.layerAssetById[layer.id] != null) {
+                num = tmp.ratio;
+              }
+              if (num == null) {
+                num = 0;
+              }
+              obj.ratio = num;
+              obj.overflowTop = overflowTop;
+              obj.overflowBottom = overflowBottom;
+              obj.overflowHorizontal = overflowHorizontal;
+              obj.containerWidth = containerWidth;
+              obj.containerHeight = containerHeight;
+              return <OverrideProfileFrameLayer key={arg0.id} layer={arg0} uri={null} ratio={null} overflowTop={null} overflowBottom={null} overflowHorizontal={null} containerWidth={null} containerHeight={null} />;
+            })
+      };
+      return <profileThemeType style={tmp.container}>{memo.map((layer) => {
+        const obj = { layer, uri: null, ratio: null, overflowTop: null, overflowBottom: null, overflowHorizontal: null, containerWidth: null, containerHeight: null };
         let uri;
-        if (override.layerAssetById[id.id] != null) {
+        if (override.layerAssetById[layer.id] != null) {
           uri = tmp.uri;
         }
         if (uri == null) {
           uri = null;
         }
-        obj[1] = uri;
+        obj.uri = uri;
         let num;
-        if (override.layerAssetById[id.id] != null) {
+        if (override.layerAssetById[layer.id] != null) {
           num = tmp.ratio;
         }
         if (num == null) {
           num = 0;
         }
-        obj[2] = num;
-        obj[3] = closure_6;
-        obj[4] = closure_7;
-        obj[5] = closure_8;
-        obj[6] = containerWidth;
-        obj[7] = closure_2;
-        return closure_7(closure_1_9, obj, id.id);
-      });
-      return <profileThemeType style={null}>{null}</profileThemeType>;
+        obj.ratio = num;
+        obj.overflowTop = overflowTop;
+        obj.overflowBottom = overflowBottom;
+        obj.overflowHorizontal = overflowHorizontal;
+        obj.containerWidth = containerWidth;
+        obj.containerHeight = containerHeight;
+        return <OverrideProfileFrameLayer key={arg0.id} layer={arg0} uri={null} ratio={null} overflowTop={null} overflowBottom={null} overflowHorizontal={null} containerWidth={null} containerHeight={null} />;
+      })}</profileThemeType>;
     }
   }
   return null;

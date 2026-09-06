@@ -1,14 +1,14 @@
 // === Module 9502: useIsActivitiesEnabledForCurrentPlatform ===
 
 // Module 9502 (useIsActivitiesEnabledForCurrentPlatform)
-import set from "set" /* 2 */;
-import isTablet from "isTablet" /* 4801 */;
+import shared_PlatformUtils from "shared/PlatformUtils" /* 4801 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
+const result = size.fileFinishedImporting("modules/activities/useIsActivitiesEnabledForCurrentPlatform.tsx");
 
 export const useIsActivitiesEnabledForCurrentPlatform = function useIsActivitiesEnabledForCurrentPlatform() {
-  return !isTablet.isTablet;
+  return !shared_PlatformUtils.isTablet;
 };
 export const getIsActivitiesEnabledForCurrentPlatform = function getIsActivitiesEnabledForCurrentPlatform() {
-  return !isTablet.isTablet;
+  return !shared_PlatformUtils.isTablet;
 };

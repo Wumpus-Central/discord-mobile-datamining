@@ -1,35 +1,38 @@
-// === Module 13972: ? ===
+// === Module 13972: GuildActionSheet ===
 
-// Module 13972
-import ThemesDefault from "Themes" /* 576 */;
+// Module 13972 (GuildActionSheet)
+import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import Background from "Background" /* 7150 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7154 */;
 import useBottomSheetRef from "useBottomSheetRef" /* 8170 */;
-import HideMutedChannelsOption from "HideMutedChannelsOption" /* 13910 */;
-import CommunityPillDefault from "CommunityPill" /* 13967 */;
+import GuildActionSheetActions from "GuildActionSheetActions" /* 13910 */;
+import GuildActionSheetHeaderDefault from "GuildActionSheetHeader" /* 13967 */;
 import GuildActionSheetTabItemsDefault from "GuildActionSheetTabItems" /* 13973 */;
 import GuildActionSheetProgressDefault from "GuildActionSheetProgress" /* 13974 */;
 import GuildActionSheetEmojiSectionDefault from "GuildActionSheetEmojiSection" /* 13977 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+const createStyles = fn(4560);
 let obj = { container: null, actions: null };
-obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-obj[0] = obj;
-obj[1] = { paddingHorizontal: 16, gap: 24 };
-let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = importAllResult.memo(function GuildActionSheet(arg0) {
+obj = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj.container = obj;
+obj.actions = { paddingHorizontal: 16, gap: 24 };
+let closure_6 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheet.tsx");
+
+export default noop.memo(function GuildActionSheet(arg0) {
   ({ guild, expanded } = arg0);
   if (expanded === undefined) {
     expanded = false;
   }
-  const tmp = callback();
+  const tmp = closure_6();
   let obj = useBottomSheetRef;
   bottomSheetRef = obj.useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
@@ -39,17 +42,14 @@ const memoResult = importAllResult.memo(function GuildActionSheet(arg0) {
   if (obj4.isAndroid()) {
     num = 16;
   }
-  obj[2] = { paddingBottom: useSafeAreaInsetsDefault().bottom + num };
-  const items = [closure_4(CommunityPillDefault, { guild }), closure_4(GuildActionSheetTabItemsDefault, { guild }), , ];
-  obj1 = { style: tmp.actions, children: null };
-  const items1 = [closure_4(HideMutedChannelsOption.GuildUnreadAction, { guild }), closure_4(GuildActionSheetProgressDefault, { guild }), closure_4(HideMutedChannelsOption.GuildActionSheetPrimaryActions, { guild }), closure_4(HideMutedChannelsOption.GuildActionSheetSecondaryActions, { guild }), closure_4(HideMutedChannelsOption.GuildDeveloperOptionAction, { guild }), closure_4(GuildActionSheetEmojiSectionDefault, { guildId: guild.id })];
-  obj1[1] = items1;
-  items[2] = closure_5(View, obj1);
-  items[3] = closure_4(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose });
-  obj[3] = items;
-  obj[5] = closure_5(BottomSheetModal.BottomSheetScrollView, obj);
-  return closure_4(Background.BottomSheet, obj);
+  obj.contentContainerStyle = { paddingBottom: useSafeAreaInsetsDefault().bottom + num };
+  const items = [React4(GuildActionSheetHeaderDefault, { guild }), React4(GuildActionSheetTabItemsDefault, { guild }), , ];
+  const obj1 = { style: tmp.actions, children: null };
+  const items1 = [React4(GuildActionSheetActions.GuildUnreadAction, { guild }), React4(GuildActionSheetProgressDefault, { guild }), React4(GuildActionSheetActions.GuildActionSheetPrimaryActions, { guild }), React4(GuildActionSheetActions.GuildActionSheetSecondaryActions, { guild }), React4(GuildActionSheetActions.GuildDeveloperOptionAction, { guild }), React4(GuildActionSheetEmojiSectionDefault, { guildId: guild.id })];
+  obj1.children = items1;
+  items[2] = hasOwnProperty(View, obj1);
+  items[3] = React4(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose });
+  obj.children = items;
+  obj.children = hasOwnProperty(BottomSheetModal.BottomSheetScrollView, obj);
+  return React4(Sheet_BottomSheet.BottomSheet, obj);
 });
-const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheet.tsx");
-
-export default memoResult;

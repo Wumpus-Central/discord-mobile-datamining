@@ -1,17 +1,15 @@
-// === Module 1984: ensureValidMode ===
+// === Module 1984: BridgedStore ===
 
-// Module 1984 (ensureValidMode)
-import set from "set" /* 2 */;
-import fluxApi from "fluxApi" /* 1985 */;
+// Module 1984 (BridgedStore)
+import FluxApi from "FluxApi" /* 1985 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
+const result = size.fileFinishedImporting("modules/libdiscore/stores/BridgedStore.tsx");
 
-export const ensureValidMode = function ensureValidMode(arg0) {
+export const ensureValidMode = function ensureValidMode(typescript) {
   let str = "typescript";
-  if ("typescript" === arg0) {
-    str = arg0;
-  } else {
-    const obj = fluxApi;
+  if ("typescript" === typescript) {
+    str = typescript;
   }
   return str;
 };

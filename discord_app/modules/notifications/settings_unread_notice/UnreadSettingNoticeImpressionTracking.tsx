@@ -1,15 +1,15 @@
 // === Module 11418: UnreadSettingNoticeImpressionTracking ===
 
 // Module 11418 (UnreadSettingNoticeImpressionTracking)
-import set from "set" /* 2 */;
-import encodeProperties from "encodeProperties" /* 1250 */;
-import trackImpressionDefault from "trackImpression" /* 8768 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeImpressionTracking.tsx");
+const result = size.fileFinishedImporting("modules/notifications/settings_unread_notice/UnreadSettingNoticeImpressionTracking.tsx");
 
 export default function UnreadSettingNoticeImpressionTracking(id) {
-  const obj = { type: encodeProperties.ImpressionTypes.VIEW, name: encodeProperties.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE };
+  const obj = { type: discord_common_AnalyticsUtils.ImpressionTypes.VIEW, name: discord_common_AnalyticsUtils.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE };
   const items = [id.id];
-  trackImpressionDefault(obj, undefined, items);
+  useTrackImpressionDefault(obj, undefined, items);
   return null;
 };

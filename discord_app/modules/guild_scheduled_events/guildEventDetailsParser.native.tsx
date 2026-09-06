@@ -1,10 +1,10 @@
 // === Module 9771: guildEventDetailsParser ===
 
 // Module 9771 (guildEventDetailsParser)
-import importDefaultResult from "get defaultRules" /* 4550 */;
+import MarkupUtils from "MarkupUtils" /* 4550 */;
 
-const reactParserForResult = importDefaultResult.reactParserFor(importDefaultResult.guildEventLocationRules);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/guildEventDetailsParser.native.tsx");
 
-export const guildEventDetailsParser = importDefaultResult.parseGuildEventDescription;
-export const guildEventLocationParser = reactParserForResult;
+export const guildEventDetailsParser = MarkupUtils.parseGuildEventDescription;
+export const guildEventLocationParser = MarkupUtils.reactParserFor(MarkupUtils.guildEventLocationRules);

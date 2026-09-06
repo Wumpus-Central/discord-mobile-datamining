@@ -1,11 +1,11 @@
-// === Module 4269: isThemeLight ===
+// === Module 4269: themes ===
 
-// Module 4269 (isThemeLight)
-import set from "set" /* 2 */;
-import sum from "sum" /* 1085 */;
+// Module 4269 (themes)
+import Constants from "Constants" /* 1085 */;
+import size from "module_2" /* 2 */;
 
-const ThemeTypes = sum.ThemeTypes;
-const result = set.fileFinishedImporting("design/utils/shared/themes.tsx");
+const ThemeTypes = Constants.ThemeTypes;
+const result = size.fileFinishedImporting("design/utils/shared/themes.tsx");
 
 export const isThemeLight = function isThemeLight(arg0) {
   return arg0 === ThemeTypes.LIGHT;

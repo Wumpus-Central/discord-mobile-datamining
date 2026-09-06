@@ -1,12 +1,12 @@
-// === Module 4255: ? ===
+// === Module 4255: Linking ===
 
-// Module 4255
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import sanitizeURLPart from "sanitizeURLPart" /* 4250 */;
+// Module 4255 (Linking)
+import _mod17 from "module_17" /* 17 */;
+import handleURL from "handleURL" /* 4250 */;
+import size from "module_2" /* 2 */;
 
-const Linking = get_ActivityIndicator.Linking;
-const result = set.fileFinishedImporting("lib/native/Linking.tsx");
+const Linking = _mod17.Linking;
+const result = size.fileFinishedImporting("lib/native/Linking.tsx");
 
 export default {
   openURL(arg0, arg1) {
@@ -14,10 +14,10 @@ export default {
     if (arg2 === undefined) {
       flag = true;
     }
-    sanitizeURLPart.default(arg0, arg1, { allowExternal: flag });
+    handleURL.default(arg0, arg1, { allowExternal: flag });
   },
   openURLExternally(href, SAFARI) {
-    sanitizeURLPart.default(href, SAFARI, { forceExternalBrowser: true });
+    handleURL.default(href, SAFARI, { forceExternalBrowser: true });
   },
   performURLNavigation(href) {
     Linking.openURL(href).catch(() => {

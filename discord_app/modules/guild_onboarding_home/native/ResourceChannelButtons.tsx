@@ -1,90 +1,79 @@
 // === Module 12282: ResourceChannelButtons ===
 
 // Module 12282 (ResourceChannelButtons)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12284 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
-createCacheKey = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { width: 8 };
-createCacheKey[3] = { color: ThemesDefault.colors.WHITE };
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.colors.WHITE };
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+let createStyles = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
+createStyles = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
+createStyles.wrapper = createStyles;
+createStyles.buttonWrapper = { flex: 1 };
+createStyles.spacer = { width: 8 };
+createStyles.iconColor = { color: nativeDefault.colors.WHITE };
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
 
 export default function ResourceChannelButtons(channel) {
   channel = channel.channel;
-  let navigation;
   let first;
-  let callback;
-  let React;
+  _slicedToArray = undefined;
+  noop = undefined;
   let obj = channel(first[6]);
-  navigation = obj.useNavigation();
-  const tmp4 = callback3();
-  obj1 = channel(first[7]);
-  const tmp5 = callback(obj1.usePreviousAndNextResourceChannel(channel.guild_id, channel.id), 2);
+  const navigation = obj.useNavigation();
+  const tmp4 = closure_8();
+  let obj1 = channel(first[7]);
+  const tmp5 = _slicedToArray(obj1.usePreviousAndNextResourceChannel(channel.guild_id, channel.id), 2);
   first = tmp5[0];
-  callback = tmp7;
+  _slicedToArray = tmp7;
   const items = [channel.guild_id, navigation];
-  React = React.useCallback((channelId) => {
+  noop = noop.useCallback((channelId) => {
     navigation.goBack();
-    const homeResourceChannel = channel(first[8]).selectHomeResourceChannel(channel.guild_id, channelId);
+    const homeResourceChannel = GuildOnboardingHomeActionCreators.selectHomeResourceChannel(channel.guild_id, channelId);
   }, items);
   if (null != first) {
-    obj = { style: null, children: null };
-    obj[0] = tmp4.wrapper;
+    obj = { style: tmp4.wrapper, children: null };
     let tmp11 = null != first;
     if (tmp11) {
-      obj = { style: null, children: null };
-      obj[0] = tmp4.buttonWrapper;
-      obj1 = { variant: "secondary", text: null, icon: null, onPress: null, grow: true };
-      obj1[1] = first.title;
-      const obj2 = { color: null, source: null };
-      obj2[0] = tmp4.iconColor.color;
-      obj2[1] = navigation(tmp2[11]);
-      obj1[2] = callback2(tmp(tmp2[10]).Icon, obj2);
-      obj1[3] = function onPress() {
-        return callback(first.channelId);
+      obj = { style: tmp4.buttonWrapper, children: null };
+      obj1 = { variant: "secondary", text: first.title, icon: null, onPress: null, grow: true };
+      const obj2 = { color: tmp4.iconColor.color, source: navigation(tmp2[11]) };
+      obj1.icon = closure_6(tmp(tmp2[10]).Icon, obj2);
+      obj1.onPress = function onPress() {
+        return closure_4(first.channelId);
       };
-      obj[1] = callback2(tmp(tmp2[9]).Button, obj1);
-      tmp11 = callback2(tmp10, obj);
+      obj.children = closure_6(tmp(tmp2[9]).Button, obj1);
+      tmp11 = closure_6(tmp10, obj);
     }
     const items1 = [tmp11, , ];
     let tmp14 = null != first && null != tmp7;
     if (tmp14) {
-      const obj3 = { style: null };
-      obj3[0] = tmp4.spacer;
-      tmp14 = callback2(tmp10, obj3);
+      const obj3 = { style: tmp4.spacer };
+      tmp14 = closure_6(tmp10, obj3);
     }
     items1[1] = tmp14;
     let tmp16 = null != tmp7;
     if (tmp16) {
-      const obj4 = { style: null, children: null };
-      obj4[0] = tmp4.buttonWrapper;
-      const obj5 = { text: null, icon: null, iconPosition: "end", onPress: null, grow: true };
-      obj5[0] = tmp7.title;
-      const obj6 = { color: null, source: null };
-      obj6[0] = tmp4.iconColor.color;
-      obj6[1] = navigation(tmp2[12]);
-      obj5[1] = callback2(tmp(tmp2[10]).Icon, obj6);
-      obj5[3] = function onPress() {
-        return callback(channelId.channelId);
+      const obj4 = { style: tmp4.buttonWrapper, children: null };
+      const obj5 = { text: tmp7.title, icon: null, iconPosition: "end", onPress: null, grow: true };
+      const obj6 = { color: tmp4.iconColor.color, source: navigation(tmp2[12]) };
+      obj5.icon = closure_6(tmp(tmp2[10]).Icon, obj6);
+      obj5.onPress = function onPress() {
+        return closure_4(channelId.channelId);
       };
-      obj4[1] = callback2(tmp(tmp2[9]).Button, obj5);
-      tmp16 = callback2(tmp10, obj4);
+      obj4.children = closure_6(tmp(tmp2[9]).Button, obj5);
+      tmp16 = closure_6(tmp10, obj4);
     }
     items1[2] = tmp16;
-    obj[1] = items1;
+    obj.children = items1;
     let tmp9Result = closure_7(tmp10, obj);
-    const tmp9 = closure_7;
   } else {
     tmp9Result = null;
   }

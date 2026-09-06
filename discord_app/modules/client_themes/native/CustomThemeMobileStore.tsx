@@ -1,21 +1,20 @@
-// === Module 1228: reset ===
+// === Module 1228: CustomThemeMobileStore ===
 
-// Module 1228 (reset)
+// Module 1228 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import create from "create" /* 1187 */;
-import getThemeForColor from "getThemeForColor" /* 1229 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
 import isPerModeThemingActive from "isPerModeThemingActive" /* 4407 */;
-import closure_6 from "initialize" /* 1184 */;
-import closure_7 from "handleThemeChange" /* 1183 */;
-import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1185 */;
-import closure_9 from "handleConnectionClosedOrResumed" /* 1221 */;
-import { UserSettingsTypes } from "MAX_FAVORITES" /* 1084 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
-require = arg1;
+require = fn;
 function reset() {
-  c3 = undefined;
-  c4 = undefined;
+  closure_3 = undefined;
+  prop = undefined;
   c5 = undefined;
 }
 function handleSyncedModeChange() {
@@ -25,45 +24,42 @@ function handleSameAsDeviceThemeToggle() {
   return true;
 }
 function loadFromProtoSettings() {
-  if (closure_6.shouldSync("appearance")) {
-    const appearance = closure_9.settings.appearance;
+  if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
+    const appearance = UserSettingsProtoStore.settings.appearance;
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = create.Theme.UNSET;
+        UNSET = preloaded_user_settings.Theme.UNSET;
       }
-      const baseTheme = getThemeForColor.getBaseTheme(UNSET);
+      const baseTheme = ClientThemesUtils.getBaseTheme(UNSET);
       const clientThemeSettings = appearance.clientThemeSettings;
-      let prop;
+      prop = undefined;
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      const obj = getThemeForColor;
-      dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcherDefault;
+      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
     }
   }
 }
 function handleSelectivelySyncedUserSettingsUpdate() {
-  if (closure_6.shouldSync("appearance")) {
-    const appearance = closure_9.settings.appearance;
+  if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
+    const appearance = UserSettingsProtoStore.settings.appearance;
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
-        UNSET = create.Theme.UNSET;
+        UNSET = preloaded_user_settings.Theme.UNSET;
       }
-      const baseTheme = getThemeForColor.getBaseTheme(UNSET);
+      const baseTheme = ClientThemesUtils.getBaseTheme(UNSET);
       const clientThemeSettings = appearance.clientThemeSettings;
-      let prop;
+      prop = undefined;
       if (clientThemeSettings != null) {
         prop = clientThemeSettings.customUserThemeSettings;
       }
-      const obj = getThemeForColor;
-      dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcherDefault;
+      DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
     }
   }
 }
+const UserSettingsTypes = fn(1084).UserSettingsTypes;
 const PersistedStore = initializeDefault.PersistedStore;
 class CustomThemeMobileStore extends PersistedStore {
 }
@@ -73,13 +69,14 @@ prototype["initialize"] = function initialize(arg0) {
   if (null == arg0) {
     const self = this;
     const self2 = this;
-    this.waitFor(closure_6, closure_7, closure_8, closure_9);
-    const items = [closure_6];
+    this.waitFor(SelectivelySyncedUserSettingsStore, ThemeStore, UnsyncedUserSettingsStore, UserSettingsProtoStore);
+    const items = [SelectivelySyncedUserSettingsStore];
     this.syncWith(items, handleSelectivelySyncedUserSettingsUpdate);
   } else {
     if (null == customTheme.theme) {
       const theme = customTheme.theme;
       customTheme = customTheme.customTheme;
+      prop = customTheme;
     } else {
       const customTheme2 = customTheme.customTheme;
       let tmp = null != customTheme.theme && null != customTheme2;
@@ -87,19 +84,16 @@ prototype["initialize"] = function initialize(arg0) {
         tmp = customTheme2.colors.length > 0;
       }
     }
-    const customThemeBaseTheme = getThemeForColor.getCustomThemeBaseTheme(customTheme.theme);
-    const obj = getThemeForColor;
+    const customThemeBaseTheme = ClientThemesUtils.getCustomThemeBaseTheme(customTheme.theme);
   }
 };
 prototype["getState"] = function getState() {
-  let tmp2 = null != closure_3 && null != tmp;
+  let tmp2 = null != theme && null != tmp;
   if (tmp2) {
     tmp2 = tmp.colors.length > 0;
   }
   if (tmp2) {
-    let obj = { theme: null, customTheme: null };
-    obj[0] = closure_3;
-    obj[1] = closure_4;
+    let obj = { theme, customTheme: prop };
   } else {
     obj = { theme: "hash", customTheme: "call" };
   }
@@ -108,25 +102,21 @@ prototype["getState"] = function getState() {
 prototype["getCustomTheme"] = function getCustomTheme() {
   let obj = isPerModeThemingActive;
   if (obj.isPerModeThemingActive()) {
-    obj = store;
-    const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
-    let prop;
+    obj = ThemeStore;
+    const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
+    prop = undefined;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null == prop) {
       let theme = obj.theme;
     } else {
-      theme = getThemeForColor.getCustomThemeBaseTheme(obj.theme);
-      const tmpResult = getThemeForColor;
+      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+      const tmpResult = ClientThemesUtils;
     }
-    obj = { baseTheme: null, customTheme: null };
-    obj[0] = theme;
-    obj[1] = prop;
+    obj = { baseTheme: theme, customTheme: prop };
   } else {
-    obj = { baseTheme: null, customTheme: null };
-    obj[0] = closure_3;
-    obj[1] = closure_4;
+    obj = { baseTheme, customTheme: prop };
     let customTheme = obj.customTheme;
     let tmp10 = null != obj.baseTheme && null != customTheme;
     if (tmp10) {
@@ -142,31 +132,27 @@ prototype["getCustomTheme"] = function getCustomTheme() {
 prototype["getBaseTheme"] = function getBaseTheme() {
   let obj = isPerModeThemingActive;
   if (obj.isPerModeThemingActive()) {
-    obj = store;
-    const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
-    let prop;
+    obj = ThemeStore;
+    const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
+    prop = undefined;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null == prop) {
       let theme = obj.theme;
     } else {
-      theme = getThemeForColor.getCustomThemeBaseTheme(obj.theme);
-      const tmpResult = getThemeForColor;
+      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+      const tmpResult = ClientThemesUtils;
     }
-    obj = { baseTheme: null, customTheme: null };
-    obj[0] = theme;
-    obj[1] = prop;
+    obj = { baseTheme: theme, customTheme: prop };
   } else {
-    obj = { baseTheme: null, customTheme: null };
-    obj[0] = closure_3;
-    obj[1] = closure_4;
+    obj = { baseTheme, customTheme: prop };
     const customTheme = obj.customTheme;
     let tmp10 = null != obj.baseTheme && null != customTheme;
     if (tmp10) {
       tmp10 = customTheme.colors.length > 0;
     }
-    let baseTheme;
+    baseTheme = undefined;
     if (tmp10) {
       baseTheme = obj.baseTheme;
     }
@@ -174,16 +160,16 @@ prototype["getBaseTheme"] = function getBaseTheme() {
   }
 };
 prototype["getPreviewTheme"] = function getPreviewTheme() {
-  return closure_5;
+  return c5;
 };
 prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySettings() {
-  if (undefined !== closure_5) {
-    return closure_5;
+  if (undefined !== c5) {
+    return c5;
   } else {
     if (obj5.isPerModeThemingActive()) {
-      let obj = store;
-      const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
-      let prop;
+      let obj = ThemeStore;
+      const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
+      prop = undefined;
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.customUserThemeSettings;
       }
@@ -193,13 +179,9 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
         theme = tmp10(1229).getCustomThemeBaseTheme(obj.theme);
         const tmp10Result = tmp10(1229);
       }
-      obj = { baseTheme: null, customTheme: null };
-      obj[0] = theme;
-      obj[1] = prop;
+      obj = { baseTheme: theme, customTheme: prop };
     } else {
-      obj = { baseTheme: null, customTheme: null };
-      obj[0] = closure_3;
-      obj[1] = closure_4;
+      obj = { baseTheme, customTheme: prop };
       const customTheme = obj.customTheme;
       let tmp8 = null != obj.baseTheme && null != customTheme;
       if (tmp8) {
@@ -208,7 +190,7 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
       let tmp9;
       if (tmp8) {
         obj = { baseTheme: null, customTheme: null };
-        ({ baseTheme: obj4[0], customTheme: obj4[1] } = obj);
+        ({ baseTheme: obj4.baseTheme, customTheme: obj4.customTheme } = obj);
         tmp9 = obj;
       }
       return tmp9;
@@ -220,25 +202,21 @@ prototype["getCustomThemeDisplaySettings"] = function getCustomThemeDisplaySetti
 prototype["hasCustomTheme"] = function hasCustomTheme() {
   let obj = isPerModeThemingActive;
   if (obj.isPerModeThemingActive()) {
-    obj = store;
-    const syncedClientTheme = store.getSyncedClientTheme(store.systemTheme);
-    let prop;
+    obj = ThemeStore;
+    const syncedClientTheme = ThemeStore.getSyncedClientTheme(ThemeStore.systemTheme);
+    prop = undefined;
     if (syncedClientTheme != null) {
       prop = syncedClientTheme.customUserThemeSettings;
     }
     if (null == prop) {
       let theme = obj.theme;
     } else {
-      theme = getThemeForColor.getCustomThemeBaseTheme(obj.theme);
-      const tmpResult = getThemeForColor;
+      theme = ClientThemesUtils.getCustomThemeBaseTheme(obj.theme);
+      const tmpResult = ClientThemesUtils;
     }
-    obj = { baseTheme: null, customTheme: null };
-    obj[0] = theme;
-    obj[1] = prop;
+    obj = { baseTheme: theme, customTheme: prop };
   } else {
-    obj = { baseTheme: null, customTheme: null };
-    obj[0] = closure_3;
-    obj[1] = closure_4;
+    obj = { baseTheme, customTheme: prop };
     const customTheme = obj.customTheme;
     let tmp10 = null != obj.baseTheme && null != customTheme;
     if (tmp10) {
@@ -249,10 +227,10 @@ prototype["hasCustomTheme"] = function hasCustomTheme() {
 };
 CustomThemeMobileStore.displayName = "CustomThemeMobileStore";
 CustomThemeMobileStore.persistKey = "CustomThemeMobileStore";
-const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
+const customThemeMobileStore = new CustomThemeMobileStore(DispatcherDefault, {
   UPDATE_CUSTOM_THEME: function handleUpdateCustomTheme(customTheme) {
-    customTheme = customTheme.customTheme;
-    const customThemeBaseTheme = getThemeForColor.getCustomThemeBaseTheme(customTheme.theme);
+    prop = customTheme.customTheme;
+    const customThemeBaseTheme = ClientThemesUtils.getCustomThemeBaseTheme(customTheme.theme);
   },
   SYSTEM_THEME_CHANGE: handleSyncedModeChange,
   UPDATE_SYNCED_CLIENT_THEME: handleSyncedModeChange,
@@ -263,7 +241,8 @@ const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
     previewCustomTheme = previewCustomTheme.previewCustomTheme;
     const obj = {};
     const merged = Object.assign(previewCustomTheme);
-    obj.baseTheme = getThemeForColor.getCustomThemeBaseTheme(previewCustomTheme.baseTheme);
+    obj.baseTheme = ClientThemesUtils.getCustomThemeBaseTheme(previewCustomTheme.baseTheme);
+    c5 = obj;
   },
   CLEAR_PREVIEW_CUSTOM_THEME: function clearPreviewTheme() {
     c5 = undefined;
@@ -273,7 +252,7 @@ const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
   POST_CONNECTION_OPEN: loadFromProtoSettings,
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     settings = settings.settings;
-    if (closure_6.shouldSync("appearance")) {
+    if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
       let tmp3 = null;
       if (settings.type === UserSettingsTypes.PRELOADED_USER_SETTINGS) {
         const proto = settings.proto;
@@ -286,22 +265,21 @@ const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
       if (null != tmp3) {
         let UNSET = tmp3.theme;
         if (UNSET == null) {
-          UNSET = create.Theme.UNSET;
+          UNSET = preloaded_user_settings.Theme.UNSET;
         }
-        const baseTheme = getThemeForColor.getBaseTheme(UNSET);
+        const baseTheme = ClientThemesUtils.getBaseTheme(UNSET);
         const clientThemeSettings = tmp3.clientThemeSettings;
-        let prop;
+        prop = undefined;
         if (clientThemeSettings != null) {
           prop = clientThemeSettings.customUserThemeSettings;
         }
-        const obj = getThemeForColor;
-        dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-        const obj2 = dispatcherDefault;
+        DispatcherDefault.wait(() => DispatcherDefault.dispatch({ type: "REFRESH_THEME" }));
       }
     }
   },
   LOGOUT: reset
 });
-const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
 
 export default customThemeMobileStore;

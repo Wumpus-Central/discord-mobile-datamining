@@ -1,10 +1,10 @@
-// === Module 4709: MAX_THUMBNAIL_COUNT ===
+// === Module 4709: MediaPostThumbnailUtils ===
 
-// Module 4709 (MAX_THUMBNAIL_COUNT)
-import set from "set" /* 2 */;
-import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4710 */;
+// Module 4709 (MediaPostThumbnailUtils)
+import MediaFormatTesters from "MediaFormatTesters" /* 4710 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
+const result = size.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;
 export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
@@ -32,7 +32,7 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
     let combined = "" + coverImage + "?format=webp";
   } else {
     combined = coverImage;
-    const tmpResult = urlMatchesFileExtension;
+    const tmpResult = MediaFormatTesters;
   }
   return combined;
 };
@@ -49,7 +49,7 @@ export const getThumbnailImage = function getThumbnailImage(thumbnail) {
           combined = "" + proxy_url + "?format=webp";
         }
         tmp = combined;
-        obj = urlMatchesFileExtension;
+        obj = MediaFormatTesters;
       }
     }
     return tmp;

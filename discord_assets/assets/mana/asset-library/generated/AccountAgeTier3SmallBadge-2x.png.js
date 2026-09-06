@@ -1,9 +1,9 @@
-// === Module 5708: vanityUrl ===
+// === Module 5708: ? ===
 
-// Module 5708 (vanityUrl)
-import set from "set" /* 2 */;
+// Module 5708
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier3SmallBadge-2x.png.js");
+const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AccountAgeTier3SmallBadge-2x.png.js");
 
 export default "https://cdn.discordapp.com/assets/content/6b7f16e83971733765318a59d82cd4d4b802514631b876a39d77ba9573259161.png";
 export const vanityUrl = "https://cdn.discordapp.com/assets/mana/asset-library/generated/AccountAgeTier3SmallBadge-2x.png";

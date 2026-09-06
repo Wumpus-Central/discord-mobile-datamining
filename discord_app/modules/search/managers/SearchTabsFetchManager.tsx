@@ -1,15 +1,15 @@
-// === Module 12348: createRequestPayload ===
+// === Module 12348: SearchTabsFetchManager ===
 
-// Module 12348 (createRequestPayload)
-import fetch from "fetch" /* 12350 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import MessageEmbedTypes from "MessageEmbedTypes" /* 7878 */;
-import { SearchTypes } from "ME" /* 1074 */;
-import { AbstractSearchFetchManager } from "cleanUp" /* 12349 */;
+// Module 12348 (SearchTabsFetchManager)
+import SearchFetcher from "SearchFetcher" /* 12350 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
-require = arg1;
+require = fn;
 let closure_2 = ["include_nsfw", "channel_id"];
-({ SEARCH_FILTERS_BY_TAB: c4, SEARCH_QUERY_BY_SEARCH_FILTER: c5, SEARCH_QUERY_DEFAULT_FILTERS: closure_6 } = MessageEmbedTypes);
+const SearchConstants = fn(7878);
+({ SEARCH_FILTERS_BY_TAB: closure_4, SEARCH_QUERY_BY_SEARCH_FILTER: hasOwnProperty, SEARCH_QUERY_DEFAULT_FILTERS: metroRequire } = SearchConstants);
+const SearchTypes = fn(1074).SearchTypes;
+const AbstractSearchFetchManager = fn(12349).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {
 }
 const prototype = SearchTabsFetchManager.prototype;
@@ -20,19 +20,19 @@ prototype["createRequestPayload"] = function createRequestPayload(trackExactTota
   ({ include_nsfw, channel_id } = searchQuery);
   closure_2 = obj(searchQuery, closure_2);
   obj = { include_nsfw, channel_ids: channel_id, tabs: {}, track_exact_total_hits: trackExactTotalHits.trackExactTotalHits };
-  const item = searchTabs.forEach((arg0) => {
-    if (null != closure_1_4[arg0]) {
-      obj = closure_1_5[tmp2];
+  const item = searchTabs.forEach((item) => {
+    if (null != React4[item]) {
+      obj = hasOwnProperty[tmp2];
     } else {
       obj = {};
     }
     obj = {};
-    const merged = Object.assign(closure_1_6);
+    const merged = Object.assign(timestampProducer);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(closure_2);
-    const merged3 = Object.assign(closure_1);
-    obj.limit = callback(arg0);
-    obj.tabs[arg0] = obj;
+    const merged3 = Object.assign(dependencyMap);
+    obj.limit = require(item);
+    obj.tabs[item] = obj;
   });
   return obj;
 };
@@ -44,21 +44,21 @@ prototype["createWithPayload"] = function createWithPayload(searchTabs) {
     if (tmp2.GUILD_CHANNEL !== type) {
       if (tmp2.THREAD !== type) {
         if (tmp2.CHANNEL === type) {
-          const searchTabFetcherImpl = new fetch.SearchTabFetcherImpl(searchContext.channelId, searchContext.type, searchQuery, requestPayload);
+          const searchTabFetcherImpl = new SearchFetcher.SearchTabFetcherImpl(searchContext.channelId, searchContext.type, searchQuery, requestPayload);
           return searchTabFetcherImpl;
         } else if (tmp2.DMS === type) {
-          const searchTabFetcherImpl1 = new fetch.SearchTabFetcherImpl(searchContext.type, searchContext.type, searchQuery, requestPayload);
+          const searchTabFetcherImpl1 = new SearchFetcher.SearchTabFetcherImpl(searchContext.type, searchContext.type, searchQuery, requestPayload);
           return searchTabFetcherImpl1;
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          error = new Error("[SearchFetchManager] Unsupported search context type: " + searchContext.type);
+          const error = new Error("[SearchFetchManager] Unsupported search context type: " + searchContext.type);
           throw error;
         }
       }
     }
   }
-  const searchTabFetcherImpl2 = new fetch.SearchTabFetcherImpl(searchContext.guildId, searchContext.type, searchQuery, requestPayload);
+  const searchTabFetcherImpl2 = new SearchFetcher.SearchTabFetcherImpl(searchContext.guildId, searchContext.type, searchQuery, requestPayload);
   return searchTabFetcherImpl2;
 };
 prototype["create"] = function create(arg0) {
@@ -69,6 +69,7 @@ prototype["create"] = function create(arg0) {
   return withPayload;
 };
 const searchTabsFetchManager = new SearchTabsFetchManager();
-let result = require("set").fileFinishedImporting("modules/search/managers/SearchTabsFetchManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/search/managers/SearchTabsFetchManager.tsx");
 
 export default searchTabsFetchManager;

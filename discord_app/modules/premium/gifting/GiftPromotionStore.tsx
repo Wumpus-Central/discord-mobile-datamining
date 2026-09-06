@@ -1,8 +1,8 @@
-// === Module 7420: initialize ===
+// === Module 7420: GiftPromotionStore ===
 
-// Module 7420 (initialize)
+// Module 7420 (GiftPromotionStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
 
 let closure_0 = { giftOptionsReceiptMap: {} };
 const PersistedStore = initializeDefault.PersistedStore;
@@ -32,15 +32,14 @@ const items = [
       if (prop == null) {
         prop = null;
       }
-      const obj = { giftOptionsReceiptMap: null };
-      obj[0] = prop;
+      const obj = { giftOptionsReceiptMap: prop };
       tmp = obj;
     }
     return tmp;
   }
 ];
 GiftPromotionStore.migrations = items;
-const giftPromotionStore = new GiftPromotionStore(dispatcherDefault, {
+const giftPromotionStore = new GiftPromotionStore(DispatcherDefault, {
   LOGOUT: function handleLogout() {
     closure_0 = { giftOptionsReceiptMap: {} };
   },
@@ -51,6 +50,7 @@ const giftPromotionStore = new GiftPromotionStore(dispatcherDefault, {
     delete tmp[tmp2];
   }
 });
-const result = require("set").fileFinishedImporting("modules/premium/gifting/GiftPromotionStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/gifting/GiftPromotionStore.tsx");
 
 export default giftPromotionStore;

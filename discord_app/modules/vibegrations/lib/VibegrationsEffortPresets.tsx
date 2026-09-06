@@ -1,16 +1,17 @@
-// === Module 16599: items ===
+// === Module 16599: VibegrationsEffortPresets ===
 
-// Module 16599 (items)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 3547 */;
+// Module 16599 (VibegrationsEffortPresets)
+import util from "util" /* 1114 */;
+import _modDef3547 from "module_3547" /* 3547 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16600 */;
+import size from "module_2" /* 2 */;
 
 let obj = {
   model: "gpt-5.6-luna",
   thinking: "high",
   summary() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.Mo0a1m);
+    const intl = util.intl;
+    return intl.string(_modDef3547.Mo0a1m);
   }
 };
 const items = [
@@ -19,16 +20,16 @@ const items = [
     model: "gpt-5.6-sol",
     thinking: "high",
     summary() {
-      const intl = getSystemLocale.intl;
-      return intl.string(messagesProxyDefault.dkt78K);
+      const intl = util.intl;
+      return intl.string(_modDef3547.dkt78K);
     }
   },
   {
     model: "claude-fable-5-1",
     thinking: "high",
     summary() {
-      const intl = getSystemLocale.intl;
-      return intl.string(messagesProxyDefault.Ly6zYL);
+      const intl = util.intl;
+      return intl.string(_modDef3547.Ly6zYL);
     }
   }
 ];
@@ -42,22 +43,22 @@ function vibegrationsSettingsForTier(arg0) {
   let obj = { main: null, subagent: null };
   obj = {};
   const merged = Object.assign(arg0);
-  obj[0] = obj;
+  obj.main = obj;
   obj = {};
   const merged1 = Object.assign(arg0);
-  obj[1] = obj;
+  obj.subagent = obj;
   return obj;
 }
 let merged = Object.assign(obj);
-obj1[0] = {};
+obj1.main = {};
 let merged1 = Object.assign(obj);
-obj1[1] = {};
-const result = set.fileFinishedImporting("modules/vibegrations/lib/VibegrationsEffortPresets.tsx");
+obj1.subagent = {};
+const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsEffortPresets.tsx");
 
 export const VIBEGRATIONS_EFFORT_PRESETS = items;
 export const VIBEGRATIONS_DEFAULT_MODEL_SETTINGS = obj1;
 export const matchVibegrationsEffortPreset = function matchVibegrationsEffortPreset(arg0) {
-  closure_0 = arg0;
+  const main = arg0;
   return items.findIndex((model) => main.main.model === model.model && main.main.thinking === model.thinking && main.subagent.model === model.model && main.subagent.thinking === model.thinking);
 };
 export { vibegrationsSettingsForTier };
@@ -73,7 +74,7 @@ export const describeVibegrationsModelSettings = function describeVibegrationsMo
   if (label == null) {
     label = model;
   }
-  let tmp3 = model(16600).THINKING_LABELS[thinking];
+  let tmp3 = VibegrationsModelLabels.THINKING_LABELS[thinking];
   if (tmp3 == null) {
     tmp3 = thinking;
   }

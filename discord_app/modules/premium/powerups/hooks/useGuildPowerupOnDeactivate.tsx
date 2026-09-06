@@ -1,13 +1,17 @@
 // === Module 12541: useGuildPowerupOnDeactivate ===
 
 // Module 12541 (useGuildPowerupOnDeactivate)
-import closure_2 from "noop" /* 19 */;
+import useGuildPowerupOnToggleDefault from "useGuildPowerupOnToggle" /* 12536 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx");
 
 export default function useGuildPowerupOnDeactivate(arg0, arg1) {
-  const tmp = onToggle(12536)(arg0, arg1);
-  onToggle = tmp.onToggle;
+  const tmp = useGuildPowerupOnToggleDefault(arg0, arg1);
+  const onToggle = tmp.onToggle;
+  const obj = { isLoading: tmp.isLoading, error: tmp.error, onDeactivate: null };
   const items = [onToggle];
-  return { isLoading: tmp.isLoading, error: tmp.error, onDeactivate: React.useCallback(() => onToggle(false), items) };
+  obj.onDeactivate = noop.useCallback(() => onToggle(false), items);
+  return obj;
 };

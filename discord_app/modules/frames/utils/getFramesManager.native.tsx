@@ -1,10 +1,10 @@
 // === Module 9567: getFramesManager ===
 
 // Module 9567 (getFramesManager)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/frames/utils/getFramesManager.native.tsx");
+const result = size.fileFinishedImporting("modules/frames/utils/getFramesManager.native.tsx");
 
 export default function getFramesManager() {
-  return importDefault(9568);
+  return require("FramesNativeManager");
 };

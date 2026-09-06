@@ -1,27 +1,27 @@
 // === Module 17427: AccountSwitchingSpinnerModal ===
 
 // Module 17427 (AccountSwitchingSpinnerModal)
-import noopAll from "noop" /* 19 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import ActivityIndicator from "ActivityIndicator" /* 5577 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import util from "util" /* 1114 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5577 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class AccountSwitchingSpinnerModal {
   constructor() {
     obj = { style: closure_4().switchingSpinnerContainer, accessible: true, accessibilityLabel: null, children: null };
-    intl = require("getSystemLocale").intl;
-    obj[2] = intl.string(require("getSystemLocale").t.n8qMH0);
-    obj[3] = jsx(require("ActivityIndicator").ActivityIndicator, {});
+    intl = closure_0(closure_1[4]).intl;
+    obj.accessibilityLabel = intl.string(closure_0(closure_1[4]).t.n8qMH0);
+    obj.children = jsx(closure_0(closure_1[5]).ActivityIndicator, {});
     return jsx(View, obj);
   }
 }
-noopAll;
-let closure_4 = createCacheKey.createStyles({ switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" } });
-createCacheKey = { animation: require("keys").ModalAnimation.FADE, closable: false };
-AccountSwitchingSpinnerModal.modalConfig = createCacheKey;
-const result = require("set").fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
+const View = fn(17).View;
+const jsx = fn(21).jsx;
+let createStyles = fn(4560);
+const React4 = createStyles.createStyles({ switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" } });
+createStyles = { animation: fn(1093).ModalAnimation.FADE, closable: false };
+AccountSwitchingSpinnerModal.modalConfig = createStyles;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 
 export default AccountSwitchingSpinnerModal;

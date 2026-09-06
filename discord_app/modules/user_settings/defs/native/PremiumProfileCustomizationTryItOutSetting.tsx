@@ -1,28 +1,26 @@
-// === Module 15802: route ===
+// === Module 15802: PremiumProfileCustomizationTryItOutSetting ===
 
-// Module 15802 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15802 (PremiumProfileCustomizationTryItOutSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.gMlDNd);
+    const intl = util.intl;
+    return intl.string(util.t.gMlDNd);
   },
-  parent: MobileUserSettings.MobileUserSettings.PREMIUM,
+  parent: SettingsConstants.MobileUserSettings.PREMIUM,
   unsearchable: true,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
-  getComponent() {
-    return require(15803) /* ProfileCustomizationTryItOutSettingScreen */.default;
+  screen: {
+    route: Constants.UserSettingsSections.PROFILE_CUSTOMIZATION_TRY_IT_OUT,
+    getComponent() {
+      return require("ProfileCustomizationTryItOutSettingScreen").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumProfileCustomizationTryItOutSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumProfileCustomizationTryItOutSetting.tsx");
 
 export default route;

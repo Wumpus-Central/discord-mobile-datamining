@@ -1,9 +1,9 @@
 // === Module 12493: getExpiringGuildEntitlements ===
 
 // Module 12493 (getExpiringGuildEntitlements)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/premium/powerups/utils/getExpiringGuildEntitlements.tsx");
+const result = size.fileFinishedImporting("modules/premium/powerups/utils/getExpiringGuildEntitlements.tsx");
 
 export const getExpiringGuildEntitlements = function getExpiringGuildEntitlements(items) {
   const found = items.filter((ends_at) => null != ends_at.ends_at);

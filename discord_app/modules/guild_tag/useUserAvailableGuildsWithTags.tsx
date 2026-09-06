@@ -2,19 +2,20 @@
 
 // Module 14641 (useUserAvailableGuildsWithTags)
 import initialize from "initialize" /* 504 */;
-import closure_2 from "trackCommunicationDisabled" /* 2021 */;
-import closure_3 from "createGuildRecordFromRust" /* 1979 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
-  const items = [closure_3, closure_2];
+  const items = [GuildStore, GuildMemberStore];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {
       selfMember = selfMember.getSelfMember(id.id);
-      let guildSupportsTagsResult = callback(table[3]).guildSupportsTags(id);
+      let guildSupportsTagsResult = closure_1_0(closure_1_1[3]).guildSupportsTags(id);
       if (guildSupportsTagsResult) {
         let joinedAt;
         if (selfMember != null) {

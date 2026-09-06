@@ -1,124 +1,123 @@
-// === Module 2017: fromServerArray ===
+// === Module 2017: GuildRoleRecordUtils ===
 
-// Module 2017 (fromServerArray)
-import set from "set" /* 2 */;
-import fromStringAll from "fromString" /* 1086 */;
-import int2hslRaw from "int2hslRaw" /* 1091 */;
-import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 2016 */;
-import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 2018 */;
-import isValueEqual from "isValueEqual" /* 1972 */;
+// Module 2017 (GuildRoleRecordUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 2016 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
+import PlainRecord from "PlainRecord" /* 1972 */;
+import size from "module_2" /* 2 */;
 
 function fromServerArray(id, roles) {
   const obj = {};
   const iter = roles[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp2 = fromServer;
     obj[nextResult.id] = fromServer(id, nextResult);
     continue;
   }
   return obj;
 }
 function fromServer(guildId, id) {
-  const obj = { id: id.id, name: id.name, guildId, permissions: fromStringAll.deserialize(id.permissions), mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
-  ({ mentionable: obj[4], position: obj[5], color: obj[6] } = id);
+  const obj = { id: id.id, name: id.name, guildId, permissions: null, mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
+  const deserializer = BigFlagUtilsAll;
+  obj.permissions = deserializer.deserialize(id.permissions);
+  ({ mentionable: obj.mentionable, position: obj.position, color: obj.color } = id);
   let int2hexResult = null;
   if (0 !== id.color) {
-    int2hexResult = int2hslRaw.int2hex(id.color);
-    const obj3 = int2hslRaw;
+    int2hexResult = utils_ColorUtils.int2hex(id.color);
   }
-  obj[7] = int2hexResult;
+  obj.colorString = int2hexResult;
   let colors = id.colors;
   if (colors == null) {
     colors = null;
   }
-  obj[8] = colors;
+  obj.colors = colors;
   let result = null;
   if (null != id.colors) {
-    result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
-    const obj4 = extractColorStringsFromServerColors;
+    result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
   }
-  obj[9] = result;
-  ({ hoist: obj[10], managed } = id);
+  obj.colorStrings = result;
+  ({ hoist: obj.hoist, managed } = id);
   if (managed == null) {
     managed = false;
   }
-  obj[11] = managed;
+  obj.managed = managed;
   let tags = id.tags;
   if (tags == null) {
     tags = {};
   }
-  obj[12] = tags;
-  ({ icon: obj[13], unicode_emoji: obj[14], flags } = id);
+  obj.tags = tags;
+  ({ icon: obj.icon, unicode_emoji: obj.unicodeEmoji, flags } = id);
   if (flags == null) {
     flags = 0;
   }
-  obj[15] = flags;
+  obj.flags = flags;
   let description = id.description;
   if (description == null) {
     description = null;
   }
-  obj[16] = description;
-  obj[17] = id.version;
-  return callback(GuildRoleRecordTypeTag, obj);
+  obj.description = description;
+  obj.version = id.version;
+  return React3(GuildRoleRecordTypeTag, obj);
 }
 function fromSerialized(guildId, id) {
-  const obj = { id: id.id, name: id.name, guildId, permissions: fromStringAll.deserialize(id.permissions), mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
-  ({ mentionable: obj[4], position: obj[5], color: obj[6] } = id);
+  const obj = { id: id.id, name: id.name, guildId, permissions: null, mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
+  const deserializer = BigFlagUtilsAll;
+  obj.permissions = deserializer.deserialize(id.permissions);
+  ({ mentionable: obj.mentionable, position: obj.position, color: obj.color } = id);
   let int2hexResult = null;
   if (null != id.color) {
     int2hexResult = null;
     if (0 !== id.color) {
-      int2hexResult = int2hslRaw.int2hex(id.color);
-      const obj3 = int2hslRaw;
+      int2hexResult = utils_ColorUtils.int2hex(id.color);
     }
   }
-  obj[7] = int2hexResult;
+  obj.colorString = int2hexResult;
   let colors = id.colors;
   if (colors == null) {
     colors = null;
   }
-  obj[8] = colors;
+  obj.colors = colors;
   let result = null;
   if (null != id.colors) {
-    result = extractColorStringsFromServerColors.extractColorStringsFromServerColors(id.colors);
-    const obj4 = extractColorStringsFromServerColors;
+    result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
   }
-  obj[9] = result;
-  ({ hoist: obj[10], managed } = id);
+  obj.colorStrings = result;
+  ({ hoist: obj.hoist, managed } = id);
   if (managed == null) {
     managed = false;
   }
-  obj[11] = managed;
+  obj.managed = managed;
   let tags = id.tags;
   if (tags == null) {
     tags = {};
   }
-  obj[12] = tags;
-  ({ icon: obj[13], unicodeEmoji: obj[14], flags } = id);
+  obj.tags = tags;
+  ({ icon: obj.icon, unicodeEmoji: obj.unicodeEmoji, flags } = id);
   if (flags == null) {
     flags = 0;
   }
-  obj[15] = flags;
+  obj.flags = flags;
   let description = id.description;
   if (description == null) {
     description = null;
   }
-  obj[16] = description;
-  obj[17] = id.version;
-  return callback(GuildRoleRecordTypeTag, obj);
+  obj.description = description;
+  obj.version = id.version;
+  return React3(GuildRoleRecordTypeTag, obj);
 }
-({ constructInPlace: c3, objectIsPlainRecordOfType: c4 } = isValueEqual);
-const GuildRoleRecordTypeTag = GuildRoleRecordTypeTag2.GuildRoleRecordTypeTag;
-let result = set.fileFinishedImporting("utils/GuildRoleRecordUtils.tsx");
+({ constructInPlace: c3, objectIsPlainRecordOfType: closure_4 } = PlainRecord);
+const GuildRoleRecordTypeTag = GuildRoleRecord.GuildRoleRecordTypeTag;
+let result = size.fileFinishedImporting("utils/GuildRoleRecordUtils.tsx");
 
 export const isGuildRoleRecord = function isGuildRoleRecord(arg0) {
-  return callback2(GuildRoleRecordTypeTag, arg0);
+  return React4(GuildRoleRecordTypeTag, arg0);
 };
 export { fromServerArray };
 export { fromServer };
 export const constructGuildRoleInPlace = function constructGuildRoleInPlace(arg0) {
-  return callback(GuildRoleRecordTypeTag, arg0);
+  return React3(GuildRoleRecordTypeTag, arg0);
 };
 export { fromSerialized };
 export const fromSyncOperation = function fromSyncOperation(id, roles, partition) {
@@ -134,7 +133,6 @@ export const fromSyncOperation = function fromSyncOperation(id, roles, partition
     }
     const writes = roles.writes;
     for (const item10020 of writes) {
-      let tmp10 = fromServer;
       obj[item10020.id] = fromServer(arg0, item10020);
       continue;
     }
@@ -144,8 +142,6 @@ export const fromSyncOperation = function fromSyncOperation(id, roles, partition
 export const fromSerializedPartition = function fromSerializedPartition(id, roles) {
   const obj = {};
   for (const key10006 in arg1) {
-    let tmp = key10006;
-    let tmp2 = fromSerialized;
     obj[key10006] = fromSerialized(arg0, arg1[key10006]);
     continue;
   }
@@ -154,11 +150,8 @@ export const fromSerializedPartition = function fromSerializedPartition(id, role
 export const toSerializedPartition = function toSerializedPartition(unsafeMutableRoles) {
   let obj = {};
   for (const key10004 in arg0) {
-    let tmp = key10004;
     let tmp2 = arg0[key10004];
     obj = {};
-    let tmp3 = obj;
-    let tmp4 = tmp2;
     let merged = Object.assign(tmp2);
     let str = tmp2.permissions;
     obj.permissions = str.toString();

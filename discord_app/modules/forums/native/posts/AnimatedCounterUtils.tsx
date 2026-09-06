@@ -1,9 +1,9 @@
-// === Module 11317: defaultFormatter ===
+// === Module 11317: AnimatedCounterUtils ===
 
-// Module 11317 (defaultFormatter)
-import set from "set" /* 2 */;
+// Module 11317 (AnimatedCounterUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/forums/native/posts/AnimatedCounterUtils.tsx");
+const result = size.fileFinishedImporting("modules/forums/native/posts/AnimatedCounterUtils.tsx");
 
 export const defaultFormatter = function defaultFormatter(arg0) {
   return "" + arg0;

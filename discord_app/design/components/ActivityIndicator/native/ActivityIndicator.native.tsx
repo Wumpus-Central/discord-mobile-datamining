@@ -1,15 +1,15 @@
-// === Module 5577: ActivityIndicator ===
+// === Module 5577: ActivityIndicator/ActivityIndicator ===
 
-// Module 5577 (ActivityIndicator)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+// Module 5577 (ActivityIndicator/ActivityIndicator)
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
-import ThemesDefault from "Themes" /* 576 */;
-import map from "map" /* 4262 */;
+import nativeDefault from "native" /* 576 */;
+import useToken from "useToken" /* 4262 */;
+import size from "module_2" /* 2 */;
 
-const ActivityIndicator = get_ActivityIndicator.ActivityIndicator;
+const ActivityIndicator = _mod17.ActivityIndicator;
 const jsx = jsxProd.jsx;
-const result = set.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
+const result = size.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
 
 export const ActivityIndicator = function ActivityIndicator(size) {
   let str = size.size;
@@ -20,11 +20,11 @@ export const ActivityIndicator = function ActivityIndicator(size) {
   if (flag === undefined) {
     flag = true;
   }
-  const merged = Object.assign(size, Object.create(null));
-  let obj = map;
+  const merged = Object.assign(size, Object.assign({ size: 0, animating: 0 }));
+  let obj = useToken;
   let color = merged.color;
   if (color == null) {
-    color = obj.useToken(ThemesDefault.colors.BACKGROUND_BRAND);
+    color = obj.useToken(nativeDefault.colors.BACKGROUND_BRAND);
   }
   obj = {};
   const merged1 = Object.assign(merged);

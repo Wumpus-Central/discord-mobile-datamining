@@ -1,22 +1,21 @@
 // === Module 12635: PortalAccessibilityWorkaroundView ===
 
 // Module 12635 (PortalAccessibilityWorkaroundView)
-import noopAll from "noop" /* 19 */;
-import set2 from "set" /* 1115 */;
-import { View as _default } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import set from "set" /* 1115 */;
+import PlatformUtils2 from "PlatformUtils" /* 1115 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-if (set.isIOS()) {
-  _default = require("__INTERNAL_VIEW_CONFIG").default;
+require = fn;
+let _default = fn(17).View;
+const jsx = fn(21).jsx;
+const PlatformUtils = fn(1115);
+if (PlatformUtils.isIOS()) {
+  _default = fn(12636).default;
 }
-const result = set.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
 
 export default function PortalAccessibilityWorkaroundView(arg0) {
-  let obj = set2;
-  obj = null;
+  let obj = null;
   if (obj.isIOS()) {
     obj = { accessibilityLabel: " ", accessible: false };
   }

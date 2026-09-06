@@ -1,20 +1,21 @@
-// === Module 4901: handleChanged ===
+// === Module 4901: DraftStore ===
 
-// Module 4901 (handleChanged)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
-import applyDefault from "apply" /* 12 */;
+// Module 4901 (DraftStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import isDraftCommandValidForText from "isDraftCommandValidForText" /* 4903 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "handleConnectionOpen" /* 4902 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import DraftCommand from "DraftCommand" /* 4903 */;
+import _slicedToArray from "module_32" /* 32 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4902 */;
 
-require = arg1;
+require = fn;
 function handleChanged(type) {
   ({ channelId, draft, draftType, command } = type);
-  const channel = store2.getChannel(channelId);
+  const channel = ChannelStore.getChannel(channelId);
   let template;
   if (channel != null) {
     template = channel.template;
@@ -22,8 +23,8 @@ function handleChanged(type) {
   if (draft === template) {
     draft = "";
   }
-  obj = store;
-  const id = store.getId();
+  let obj = AuthenticationStore;
+  const id = AuthenticationStore.getId();
   if (null != id) {
     if (null != draft) {
       if ("" !== draft) {
@@ -57,7 +58,7 @@ function handleChanged(type) {
             tmp22 = command1;
           }
           command = tmp22;
-          obj5 = isDraftCommandValidForText;
+          obj5 = DraftCommand;
         }
         draft = undefined;
         if (tmp15[draftType] != null) {
@@ -69,15 +70,14 @@ function handleChanged(type) {
           if (tmp18 != null) {
             command2 = tmp18.command;
           }
-          isEqualResult = applyDefault.isEqual(command, command2);
-          const obj6 = applyDefault;
+          isEqualResult = _modDef12.isEqual(command, command2);
         }
         if (!isEqualResult) {
-          obj1 = { timestamp: null, draft: null, command: null };
+          const obj1 = { timestamp: null, draft: null, command: null };
           const _Date = Date;
-          obj1[0] = Date.now();
-          obj1[1] = substr;
-          obj1[2] = command;
+          obj1.timestamp = Date.now();
+          obj1.draft = substr;
+          obj1.command = command;
           tmp15[draftType] = obj1;
         }
       }
@@ -97,21 +97,21 @@ function handleChanged(type) {
       if (obj8.isEmpty(tmp11)) {
         delete tmp[tmp3];
       }
-      obj8 = applyDefault;
+      obj8 = _modDef12;
     }
   }
 }
 function deleteDraft(arg0, arg1) {
   let id = arg2;
   if (arg2 === undefined) {
-    id = store.getId();
+    id = AuthenticationStore.getId();
   }
   if (null == id) {
     return false;
   } else {
     let tmp8 = dependencyMap[id];
     if (null == tmp8) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
       tmp8 = obj;
     }
@@ -126,60 +126,49 @@ function deleteDraft(arg0, arg1) {
   }
 }
 function handleChannelDelete(arg0) {
-  const id = store.getId();
+  const id = AuthenticationStore.getId();
   if (null != id) {
     if (null == dependencyMap[id]) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
     }
     delete tmp[tmp2];
   }
   return false;
 }
-let closure_7 = require("ME").MAX_MESSAGE_LENGTH_PREMIUM + 500;
-let obj = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal", ScheduledMessage: 8, [8]: "ScheduledMessage" };
-let closure_9 = {};
+let closure_7 = fn(1074).MAX_MESSAGE_LENGTH_PREMIUM + 500;
+let DraftType = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal", ScheduledMessage: 8, [8]: "ScheduledMessage" };
+const dependencyMap = {};
 const PersistedStore = initializeDefault.PersistedStore;
 class DraftStore extends PersistedStore {
 }
 const prototype = DraftStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  obj = arg0;
+  let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
+  closure_9 = obj;
   (function pruneEmptyDrafts() {
-    obj = callback(11);
-    const entries = obj.entries(obj);
+    const entries = SnowflakeUtilsDefault.entries(closure_1_9);
     while (tmp2 !== undefined) {
-      let tmp4 = callback2;
-      let tmp5 = callback2(tmp3, 2);
+      let tmp5 = _slicedToArray(tmp3, 2);
       let first = tmp5[0];
-      let tmp7 = callback;
-      let tmp8 = dependencyMap;
-      let obj2 = callback(11);
+      let obj2 = SnowflakeUtilsDefault;
       let entries1 = obj2.entries(tmp5[1]);
-      let tmp10 = entries1;
-      let tmp11 = entries1;
       for (const item10033 of entries1) {
-        let tmp12 = callback2;
-        let tmp13 = callback2(item10033, 2);
+        let tmp13 = _slicedToArray(item10033, 2);
         let first1 = tmp13[0];
         let tmp16 = tmp13[1][ChannelMessage.ChannelMessage];
         let tmp17 = tmp16;
         if (null != tmp16) {
-          let tmp18 = tmp16;
           let tmp19 = "" !== tmp17.draft;
           if (tmp19) {
-            let tmp20 = tmp16;
             let str = tmp17.draft;
             tmp19 = "" !== str.trim();
           }
           if (!tmp19) {
-            let tmp21 = callback3;
-            let tmp22 = first1;
-            let tmp23 = first;
-            let tmp24 = callback3(first1, tmp15.ChannelMessage, first);
+            let tmp24 = deleteDraft(first1, tmp15.ChannelMessage, first);
           }
         }
         continue;
@@ -187,26 +176,25 @@ prototype["initialize"] = function initialize(arg0) {
       continue;
     }
   })();
-  this.waitFor(closure_4, closure_5, closure_6);
+  this.waitFor(AuthenticationStore, ChannelStore, GuildAvailabilityStore);
 };
 prototype["getState"] = function getState() {
   return closure_9;
 };
 prototype["getThreadDraftWithParentMessageId"] = function getThreadDraftWithParentMessageId(arg0) {
-  let self = this;
-  self = this;
+  const self = this;
   closure_0 = arg0;
-  const id = store.getId();
+  const id = AuthenticationStore.getId();
   if (null != id) {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    const keys = self(11).keys(tmp3);
-    const found = keys.find((channelId) => {
-      const threadSettings = self.getThreadSettings(channelId);
+    const keys = SnowflakeUtilsDefault.keys(tmp3);
+    const found = keys.find((item) => {
+      const threadSettings = self.getThreadSettings(item);
       let parentMessageId;
       if (threadSettings != null) {
         parentMessageId = threadSettings.parentMessageId;
@@ -221,60 +209,60 @@ prototype["getThreadDraftWithParentMessageId"] = function getThreadDraftWithPare
   }
 };
 prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelMessage) {
-  const _require = ChannelMessage;
-  const id = store.getId();
+  closure_0 = ChannelMessage;
+  const id = AuthenticationStore.getId();
   if (null == id) {
     return [];
   } else {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    const obj2 = applyDefault(tmp3);
-    const mapValuesResult = applyDefault(tmp3).mapValues((arg0) => {
+    const obj2 = _modDef12(tmp3);
+    const mapValuesResult = _modDef12(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
     });
-    const pickByResult = applyDefault(tmp3).mapValues((arg0) => {
+    const pickByResult = _modDef12(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1369).isNotNullish);
-    const mapped = applyDefault(tmp3).mapValues((arg0) => {
+    }).pickBy(GlobalUtils.isNotNullish);
+    const mapped = _modDef12(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1369).isNotNullish).toPairs().map((arg0) => {
-      [tmp, ] = arg0;
+    }).pickBy(GlobalUtils.isNotNullish).toPairs().map((item) => {
+      [tmp, ] = item;
       return { channelId, timestamp, draft };
     });
-    const toPairsResult = applyDefault(tmp3).mapValues((arg0) => {
+    const toPairsResult = _modDef12(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
-    }).pickBy(_require(1369).isNotNullish).toPairs();
+    }).pickBy(GlobalUtils.isNotNullish).toPairs();
     return mapped.sortBy((timestamp) => -timestamp.timestamp).value();
   }
 };
 prototype["getDraft"] = function getDraft(id, ChannelMessage) {
-  id = store.getId();
+  id = AuthenticationStore.getId();
   if (null == id) {
     return "";
   } else {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -287,11 +275,11 @@ prototype["getDraft"] = function getDraft(id, ChannelMessage) {
   }
 };
 prototype["getDraftCommand"] = function getDraftCommand(id, ChannelMessage) {
-  id = store.getId();
+  id = AuthenticationStore.getId();
   if (null != id) {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -305,13 +293,13 @@ prototype["getDraftCommand"] = function getDraftCommand(id, ChannelMessage) {
   }
 };
 prototype["getThreadSettings"] = function getThreadSettings(channelId) {
-  const id = store.getId();
+  const id = AuthenticationStore.getId();
   if (null == id) {
     return null;
   } else {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -323,11 +311,11 @@ prototype["getThreadSettings"] = function getThreadSettings(channelId) {
   }
 };
 prototype["getScheduledMessage"] = function getScheduledMessage(id) {
-  id = store.getId();
+  id = AuthenticationStore.getId();
   if (null != id) {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      obj = {};
+      const obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -346,12 +334,10 @@ const items = [
       return {};
     } else {
       for (const key10005 in arg0) {
-        let tmp3 = key10005;
         if (!("timestamp" in arg0[key10005])) {
           continue;
         } else {
           obj = {};
-          let tmp2 = obj;
           obj[obj.ChannelMessage] = arg0[key10005];
           arg0[key10005] = obj;
           continue;
@@ -362,14 +348,13 @@ const items = [
     }
   },
   (obj) => {
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     if (null != obj) {
       if (null != id) {
         obj = {};
         obj = {};
         obj[id] = obj;
         for (const key10009 in arg0) {
-          let tmp3 = key10009;
           obj[key10009] = arg0[key10009];
           continue;
         }
@@ -380,16 +365,16 @@ const items = [
   }
 ];
 DraftStore.migrations = items;
-obj = {
+DraftType = {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    obj = store;
-    const id = store.getId();
+    let obj = AuthenticationStore;
+    const id = AuthenticationStore.getId();
     if (!(id in dependencyMap)) {
       dependencyMap[id] = {};
     }
     const id1 = obj.getId();
     if (null != id1) {
-      if (closure_6.totalUnavailableGuilds <= 0) {
+      if (GuildAvailabilityStore.totalUnavailableGuilds <= 0) {
         let tmp8 = dependencyMap[id1];
         if (null == tmp8) {
           obj = {};
@@ -397,9 +382,7 @@ obj = {
           tmp8 = obj;
         }
         for (const key10019 in tmp8) {
-          let tmp11 = key10019;
-          let tmp12 = store2;
-          if (null != store2.getChannel(key10019)) {
+          if (null != ChannelStore.getChannel(key10019)) {
             continue;
           } else {
             delete tmp[tmp2];
@@ -423,19 +406,17 @@ obj = {
     }
   },
   GUILD_DELETE: function handleGuildDelete() {
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     if (null != id) {
-      if (closure_6.totalUnavailableGuilds <= 0) {
+      if (GuildAvailabilityStore.totalUnavailableGuilds <= 0) {
         let tmp6 = dependencyMap[id];
         if (null == tmp6) {
-          obj = {};
+          const obj = {};
           dependencyMap[id] = obj;
           tmp6 = obj;
         }
         for (const key10013 in tmp6) {
-          let tmp9 = key10013;
-          let tmp10 = store2;
-          if (null != store2.getChannel(key10013)) {
+          if (null != ChannelStore.getChannel(key10013)) {
             continue;
           } else {
             delete tmp[tmp2];
@@ -451,8 +432,8 @@ obj = {
   THREAD_DELETE: handleChannelDelete,
   THREAD_CREATE: function handleThreadCreate(channel) {
     channel = channel.channel;
-    obj = store;
-    const id = store.getId();
+    let obj = AuthenticationStore;
+    const id = AuthenticationStore.getId();
     if (null != id) {
       if (channel.ownerId !== id) {
         let tmp10 = dependencyMap[id];
@@ -480,10 +461,10 @@ obj = {
             }
             if ("" !== str) {
               obj = {};
-              obj1 = { timestamp: null, draft: null };
+              const obj1 = { timestamp: null, draft: null };
               const _Date = Date;
-              obj1[0] = Date.now();
-              obj1[1] = str;
+              obj1.timestamp = Date.now();
+              obj1.draft = str;
               obj[tmp24.ChannelMessage] = obj1;
               tmp10[channel.id] = obj;
             }
@@ -522,7 +503,7 @@ obj = {
               }
             }
           }
-          obj9 = DISCORD_EPOCHDefault;
+          obj9 = SnowflakeUtilsDefault;
         }
       }
     }
@@ -531,12 +512,12 @@ obj = {
   DRAFT_SAVE: handleChanged,
   DRAFT_CHANGE: handleChanged,
   DRAFT_CLEAR: function handleDraftClear(arg0) {
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     let flag = false;
     if (null != id) {
       let tmp7 = dependencyMap[id];
       if (null == tmp7) {
-        obj = {};
+        const obj = {};
         dependencyMap[id] = obj;
         tmp7 = obj;
       }
@@ -546,20 +527,20 @@ obj = {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = applyDefault;
+        obj2 = _modDef12;
       }
     }
     return flag;
   },
   DRAFT_COMMAND_CLEAR: function handleDraftCommandClear(arg0) {
     ({ channelId, draftType } = arg0);
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     if (null == id) {
       return false;
     } else {
       let tmp3 = dependencyMap[id];
       if (null == tmp3) {
-        obj = {};
+        const obj = {};
         dependencyMap[id] = obj;
         tmp3 = obj;
       }
@@ -579,11 +560,11 @@ obj = {
   },
   THREAD_SETTINGS_DRAFT_CHANGE: function handleThreadSettingsDraftChanged(arg0) {
     ({ channelId, draft } = arg0);
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     if (null != id) {
       let tmp3 = dependencyMap[id];
       if (null == tmp3) {
-        obj = {};
+        let obj = {};
         dependencyMap[id] = obj;
         tmp3 = obj;
       }
@@ -595,7 +576,7 @@ obj = {
       }
       obj = { timestamp: null };
       const _Date = Date;
-      obj[0] = Date.now();
+      obj.timestamp = Date.now();
       const merged = Object.assign(tmp5[obj.ThreadSettings]);
       const merged1 = Object.assign(draft);
       obj.parentChannelId = channelId;
@@ -604,11 +585,11 @@ obj = {
   },
   SCHEDULED_MESSAGE_DRAFT_CHANGE: function handleScheduledMessageDraftChanged(arg0) {
     ({ channelId, draft } = arg0);
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     if (null != id) {
       let tmp3 = dependencyMap[id];
       if (null == tmp3) {
-        obj = {};
+        let obj = {};
         dependencyMap[id] = obj;
         tmp3 = obj;
       }
@@ -627,12 +608,12 @@ obj = {
     }
   },
   SCHEDULED_MESSAGES_CREATE_SUCCESS: function handleScheduledMessageCreateSuccess(arg0) {
-    const id = store.getId();
+    const id = AuthenticationStore.getId();
     let flag = false;
     if (null != id) {
       let tmp7 = dependencyMap[id];
       if (null == tmp7) {
-        obj = {};
+        const obj = {};
         dependencyMap[id] = obj;
         tmp7 = obj;
       }
@@ -642,14 +623,15 @@ obj = {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = applyDefault;
+        obj2 = _modDef12;
       }
     }
     return flag;
   }
 };
-const draftStore = new DraftStore(dispatcherDefault, obj);
-const result = require("set").fileFinishedImporting("stores/DraftStore.tsx");
+const draftStore = new DraftStore(DispatcherDefault, DraftType);
+const size = fn(2);
+const result = size.fileFinishedImporting("stores/DraftStore.tsx");
 
 export default draftStore;
-export const DraftType = obj;
+export { DraftType };

@@ -1,22 +1,21 @@
-// === Module 13852: ? ===
+// === Module 13852: AddFriendModalActionCreators ===
 
-// Module 13852
+// Module 13852 (AddFriendModalActionCreators)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4763 from "module_4763" /* 4763 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("components_native/add_friend/AddFriendModalActionCreators.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("components_native/add_friend/AddFriendModalActionCreators.tsx");
 
 export default {
   openAddFriendModalDeeplink() {
-    _modDef4763.pushLazy(asyncRequireImpl(13853, dependencyMap.paths));
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13853, dependencyMap.paths));
   },
-  openAddFriendModal(arg0) {
-    if (null != currentUser.getCurrentUser()) {
-      let obj = _modDef4763;
-      obj = { sourceMetadata: null };
-      obj[0] = arg0;
+  openAddFriendModal(sourceMetadata) {
+    if (null != UserStore.getCurrentUser()) {
+      const obj = { sourceMetadata };
       obj.pushLazy(asyncRequireImpl(13853, dependencyMap.paths), obj);
     }
   }

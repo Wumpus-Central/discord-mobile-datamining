@@ -1,16 +1,17 @@
-// === Module 11912: shouldRenderReportFalsePositiveButton ===
+// === Module 11912: useShouldRenderReportFalsePositiveButton ===
 
-// Module 11912 (shouldRenderReportFalsePositiveButton)
-import closure_2 from "getFpMessageInfo" /* 7293 */;
+// Module 11912 (useShouldRenderReportFalsePositiveButton)
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7293 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/hooks/useShouldRenderReportFalsePositiveButton.tsx");
 
 export const shouldRenderReportFalsePositiveButton = function shouldRenderReportFalsePositiveButton(id) {
-  return null != fpMessageInfo.getFpMessageInfo(id);
+  return null != ExplicitMediaStore.getFpMessageInfo(id);
 };
 export const useShouldRenderReportFalsePositiveButton = function useShouldRenderReportFalsePositiveButton(id) {
-  const _require = id;
-  const items = [closure_2];
-  return null != _require(563).useStateFromStores(items, () => closure_1_2.getFpMessageInfo(closure_0));
+  _require = id;
+  const items = [ExplicitMediaStore];
+  return null != require("useStateFromStores").useStateFromStores(items, () => ExplicitMediaStore.getFpMessageInfo(closure_0));
 };

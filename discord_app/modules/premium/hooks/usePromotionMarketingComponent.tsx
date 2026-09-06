@@ -1,41 +1,43 @@
 // === Module 13352: usePromotionMarketingComponent ===
 
 // Module 13352 (usePromotionMarketingComponent)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "emitChanges" /* 7450 */;
-import closure_5 from "createEmptyPromotionsByType" /* 10665 */;
+import constants from "constants" /* 10697 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import UserOfferStore from "UserOfferStore" /* 7450 */;
+import PromotionsStore from "PromotionsStore" /* 10665 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
+require = fn;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/premium/hooks/usePromotionMarketingComponent.tsx");
 
 export const usePromotionMarketingComponent = function usePromotionMarketingComponent(PREMIUM_TAB) {
-  const _require = PREMIUM_TAB;
-  const effect = React.useEffect(() => {
+  _require = PREMIUM_TAB;
+  const effect = noop.useEffect(() => {
     const result = PREMIUM_TAB(stateFromStores[4]).maybeFetchActivePromotions();
   }, []);
-  const items = [closure_5, closure_4];
-  stateFromStores = _require(stateFromStores[5]).useStateFromStores(items, () => {
-    const marketingComponentByType = closure_1_5.getMarketingComponentByType(PREMIUM_TAB);
+  const items = [PromotionsStore, ref];
+  stateFromStores = require("initialize").useStateFromStores(items, () => {
+    const marketingComponentByType = PromotionsStore.getMarketingComponentByType(closure_0);
     if (null == marketingComponentByType) {
       return null;
     } else {
-      const promotionByTypeAndId = obj.getPromotionByTypeAndId(PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
+      const promotionByTypeAndId = obj.getPromotionByTypeAndId(constants.PromotionTypes.MARKETING_MOMENT, marketingComponentByType.promotionId);
       let trialId;
       if (promotionByTypeAndId != null) {
         trialId = promotionByTypeAndId.trialId;
       }
       if (null != trialId) {
-        const userTrialOffer = ref.getUserTrialOffer(promotionByTypeAndId.trialId);
+        const userTrialOffer = UserOfferStore.getUserTrialOffer(promotionByTypeAndId.trialId);
         return null;
       }
       return marketingComponentByType;
     }
-    obj = closure_1_5;
+    obj = PromotionsStore;
   });
-  const obj2 = _require(stateFromStores[5]);
-  const items1 = [closure_5];
-  const stateFromStores1 = _require(stateFromStores[5]).useStateFromStores(items1, () => {
+  const obj2 = require("initialize");
+  const items1 = [PromotionsStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items1, () => {
     let str;
     if (stateFromStores != null) {
       str = stateFromStores.promotionId;
@@ -43,15 +45,15 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
     if (str == null) {
       str = "";
     }
-    return closure_1_5.getPromotionByTypeAndId(PREMIUM_TAB(stateFromStores[6]).PromotionTypes.MARKETING_MOMENT, str);
+    return PromotionsStore.getPromotionByTypeAndId(constants.PromotionTypes.MARKETING_MOMENT, str);
   });
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
   }
-  const obj3 = _require(stateFromStores[5]);
-  [tmp6, closure_3] = endDate(React.useState(false), 2);
-  closure_4 = obj.useRef(null);
+  const obj3 = require("initialize");
+  [tmp6, noop] = endDate(noop.useState(false), 2);
+  const tmp5 = endDate(noop.useState(false), 2);
   const items2 = [endDate];
   const effect1 = obj.useEffect(() => {
     if (null != endDate) {
@@ -60,12 +62,12 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
       const diff = time - Date.now();
       if (diff > 0) {
         if (diff < 86400000) {
-          callback(false);
+          noop(false);
           const _clearTimeout2 = clearTimeout;
           clearTimeout(ref.current);
           const _setTimeout = setTimeout;
           ref.current = setTimeout(() => {
-            callback(true);
+            closure_1_3(true);
           }, diff);
         }
         return () => {
@@ -73,10 +75,10 @@ export const usePromotionMarketingComponent = function usePromotionMarketingComp
         };
       }
       if (diff <= 0) {
-        callback(true);
+        noop(true);
       }
     } else {
-      callback(false);
+      noop(false);
       const _clearTimeout = clearTimeout;
       clearTimeout(ref.current);
     }

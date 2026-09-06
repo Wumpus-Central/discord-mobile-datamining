@@ -1,38 +1,38 @@
 // === Module 15763: UserSettingsDesignSystemRowButton ===
 
 // Module 15763 (UserSettingsDesignSystemRowButton)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
-import registerAssetDefault from "registerAsset" /* 7381 */;
+import nativeDefault from "native" /* 576 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
+import _modDef7381 from "module_7381" /* 7381 */;
 import Form from "Form" /* 8593 */;
-import RowButtonWrapper from "RowButtonWrapper" /* 8595 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import RowButton from "RowButton" /* 8595 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemRowButton.tsx");
 
 export default function UserSettingsDesignSystemRowButton() {
   let obj = { children: null };
   obj = { title: "Row Buttons", description: null, children: null };
-  obj = { style: { padding: ThemesDefault.space.PX_16 }, children: null };
-  const items = [callback(Text.Text, { variant: "text-sm/normal", children: "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page." }), callback(Text.Text, { variant: "text-sm/normal", children: "Only stack up to 2 Row Buttons in a row to to prevent decision fatigue." })];
-  obj[1] = items;
-  obj[1] = callback2(Stack.Stack, obj);
-  obj[2] = callback(closure_3, {});
-  const items1 = [callback(Form.FormSection, obj), ];
+  obj = { style: { padding: nativeDefault.space.PX_16 }, children: null };
+  const items = [hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", children: "Row Button Row Buttons are full-width, high-emphasis buttons that are used as primary CTAs in a page." }), hasOwnProperty(Text_Text.Text, { variant: "text-sm/normal", children: "Only stack up to 2 Row Buttons in a row to to prevent decision fatigue." })];
+  obj.children = items;
+  obj.description = timestampProducer(Stack_Stack.Stack, obj);
+  obj.children = hasOwnProperty(React3, {});
+  const items1 = [hasOwnProperty(Form.FormSection, obj), ];
   const obj2 = { style: { padding: 16 }, children: null };
   const obj3 = { children: null };
-  obj1 = { padding: ThemesDefault.space.PX_16 };
+  const obj1 = { padding: nativeDefault.space.PX_16 };
   const items2 = [
-    callback(RowButtonWrapper.RowButton, {
+    hasOwnProperty(RowButton.RowButton, {
       variant: "primary",
-      icon: registerAssetDefault,
+      icon: _modDef7381,
       label: "Primary Row Button",
       onPress() {
 
@@ -47,15 +47,15 @@ export default function UserSettingsDesignSystemRowButton() {
   ];
   const obj4 = {
     variant: "primary",
-    icon: registerAssetDefault,
+    icon: _modDef7381,
     label: "Primary Row Button",
     onPress() {
 
     }
   };
-  items2[1] = callback(RowButtonWrapper.RowButton, {
+  items2[1] = hasOwnProperty(RowButton.RowButton, {
     variant: "primary",
-    icon: registerAssetDefault,
+    icon: _modDef7381,
     label: "Primary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {
@@ -64,16 +64,16 @@ export default function UserSettingsDesignSystemRowButton() {
   });
   const obj5 = {
     variant: "primary",
-    icon: registerAssetDefault,
+    icon: _modDef7381,
     label: "Primary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {
 
     }
   };
-  items2[2] = callback(RowButtonWrapper.RowButton, {
+  items2[2] = hasOwnProperty(RowButton.RowButton, {
     variant: "secondary",
-    icon: registerAssetDefault,
+    icon: _modDef7381,
     label: "Secondary Row Button",
     onPress() {
 
@@ -81,14 +81,14 @@ export default function UserSettingsDesignSystemRowButton() {
   });
   const obj6 = {
     variant: "secondary",
-    icon: registerAssetDefault,
+    icon: _modDef7381,
     label: "Secondary Row Button",
     onPress() {
 
     }
   };
-  items2[3] = callback(RowButtonWrapper.RowButton, {
-    icon: registerAssetDefault,
+  items2[3] = hasOwnProperty(RowButton.RowButton, {
+    icon: _modDef7381,
     label: "Secondary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {
@@ -96,15 +96,15 @@ export default function UserSettingsDesignSystemRowButton() {
     }
   });
   const obj7 = {
-    icon: registerAssetDefault,
+    icon: _modDef7381,
     label: "Secondary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {
 
     }
   };
-  items2[4] = callback(RowButtonWrapper.RowButton, {
-    icon: registerAssetDefault,
+  items2[4] = hasOwnProperty(RowButton.RowButton, {
+    icon: _modDef7381,
     label: "Secondary Row Button",
     subLabel: "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
     onPress() {
@@ -113,21 +113,21 @@ export default function UserSettingsDesignSystemRowButton() {
   });
   const obj9 = { icon: null, label: "Row Button", subLabel: "With a custom RowButton.Icon", onPress: null };
   const obj8 = {
-    icon: registerAssetDefault,
+    icon: _modDef7381,
     label: "Secondary Row Button",
     subLabel: "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
     onPress() {
 
     }
   };
-  obj9[0] = callback(RowButtonWrapper.RowButton.Icon, { source: registerAssetDefault });
-  obj9[3] = function onPress() {
+  obj9.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7381 });
+  obj9.onPress = function onPress() {
 
   };
-  items2[5] = callback(RowButtonWrapper.RowButton, obj9);
-  const obj10 = { source: registerAssetDefault };
-  items2[6] = callback(RowButtonWrapper.RowButton, {
-    icon: registerAssetDefault,
+  items2[5] = hasOwnProperty(RowButton.RowButton, obj9);
+  const obj10 = { source: _modDef7381 };
+  items2[6] = hasOwnProperty(RowButton.RowButton, {
+    icon: _modDef7381,
     label: "Row Button",
     subLabel: "I am disabled",
     onPress() {
@@ -135,9 +135,9 @@ export default function UserSettingsDesignSystemRowButton() {
     },
     disabled: true
   });
-  obj3[0] = items2;
-  obj2[1] = callback2(Stack.Stack, obj3);
-  items1[1] = callback(closure_3, obj2);
-  obj[0] = items1;
-  return callback2(closure_4, obj);
+  obj3.children = items2;
+  obj2.children = timestampProducer(Stack_Stack.Stack, obj3);
+  items1[1] = hasOwnProperty(React3, obj2);
+  obj.children = items1;
+  return timestampProducer(React4, obj);
 };

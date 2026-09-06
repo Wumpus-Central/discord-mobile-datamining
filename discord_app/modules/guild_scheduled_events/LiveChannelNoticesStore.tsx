@@ -1,27 +1,27 @@
-// === Module 16185: initialize ===
+// === Module 16185: LiveChannelNoticesStore ===
 
-// Module 16185 (initialize)
-import set from "set" /* 2 */;
+// Module 16185 (LiveChannelNoticesStore)
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import GuildScheduledEventsConstants from "GuildScheduledEventsConstants" /* 1963 */;
+import size from "module_2" /* 2 */;
 
-const GuildScheduledEventStatus = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventStatus;
-let closure_1 = { hiddenEventsAndStages: [] };
+const GuildScheduledEventStatus = GuildScheduledEventsConstants.GuildScheduledEventStatus;
+let global = { hiddenEventsAndStages: [] };
 const PersistedStore = initializeDefault.PersistedStore;
 class LiveChannelNoticesStore extends PersistedStore {
 }
 const prototype = LiveChannelNoticesStore.prototype;
 prototype["initialize"] = function initialize(hiddenEventsAndStages) {
   if (tmp) {
-    closure_1 = hiddenEventsAndStages;
+    global = hiddenEventsAndStages;
   }
 };
 prototype["isLiveChannelNoticeHidden"] = function isLiveChannelNoticeHidden(arg0) {
   ({ eventId, stageId } = arg0);
   let tmp = null == stageId;
   if (!tmp) {
-    const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
+    const hiddenEventsAndStages = global.hiddenEventsAndStages;
     const _HermesInternal = HermesInternal;
     tmp = !hiddenEventsAndStages.includes("stage-" + stageId);
   }
@@ -29,7 +29,7 @@ prototype["isLiveChannelNoticeHidden"] = function isLiveChannelNoticeHidden(arg0
   if (tmp) {
     let hasItem = null != eventId;
     if (hasItem) {
-      const hiddenEventsAndStages2 = closure_1.hiddenEventsAndStages;
+      const hiddenEventsAndStages2 = global.hiddenEventsAndStages;
       const _HermesInternal2 = HermesInternal;
       hasItem = hiddenEventsAndStages2.includes("event-" + eventId);
     }
@@ -38,58 +38,55 @@ prototype["isLiveChannelNoticeHidden"] = function isLiveChannelNoticeHidden(arg0
   return tmp4;
 };
 prototype["getState"] = function getState() {
-  return closure_1;
+  return global;
 };
 LiveChannelNoticesStore.displayName = "LiveChannelNoticesStore";
 LiveChannelNoticesStore.persistKey = "liveChannelNotices_v2";
-const liveChannelNoticesStore = new LiveChannelNoticesStore(dispatcherDefault, {
+const liveChannelNoticesStore = new LiveChannelNoticesStore(DispatcherDefault, {
   LIVE_CHANNEL_NOTICE_HIDE: function handleHideNotice(arg0) {
     ({ eventId, stageId } = arg0);
     if (null != eventId) {
-      const prop = closure_1.hiddenEventsAndStages;
+      const prop = global.hiddenEventsAndStages;
       const _HermesInternal2 = HermesInternal;
       prop.push("event-" + eventId);
     } else if (null != stageId) {
-      const prop1 = closure_1.hiddenEventsAndStages;
+      const prop1 = global.hiddenEventsAndStages;
       const _HermesInternal = HermesInternal;
       prop1.push("stage-" + stageId);
     }
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function handleEventUpdate(guildScheduledEvent) {
     guildScheduledEvent = guildScheduledEvent.guildScheduledEvent;
-    let combined;
-    combined = "event-" + guildScheduledEvent.id;
-    const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
+    const combined = "event-" + guildScheduledEvent.id;
+    const hiddenEventsAndStages = global.hiddenEventsAndStages;
     const hasItem = hiddenEventsAndStages.includes(combined);
     let tmp3 = !hasItem;
     if (hasItem) {
-      tmp3 = guildScheduledEvent.status !== combined.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
-      const tmp5 = guildScheduledEvent.status !== combined.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
+      tmp3 = guildScheduledEvent.status !== GuildScheduledEventStatus.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
+      const tmp5 = guildScheduledEvent.status !== GuildScheduledEventStatus.CANCELED && guildScheduledEvent.status !== tmp4.COMPLETED;
     }
     if (!tmp3) {
-      const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
+      const prop = global.hiddenEventsAndStages;
+      global.hiddenEventsAndStages = prop.filter((item) => item !== combined);
     }
   },
   GUILD_SCHEDULED_EVENT_DELETE: function handleEventDelete(guildScheduledEvent) {
-    let combined;
-    combined = "event-" + guildScheduledEvent.guildScheduledEvent.id;
-    const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
+    const combined = "event-" + guildScheduledEvent.guildScheduledEvent.id;
+    const hiddenEventsAndStages = global.hiddenEventsAndStages;
     if (hiddenEventsAndStages.includes(combined)) {
-      const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
+      const prop = global.hiddenEventsAndStages;
+      global.hiddenEventsAndStages = prop.filter((item) => item !== combined);
     }
   },
   STAGE_INSTANCE_DELETE: function handleStageUpdate(instance) {
-    let combined;
-    combined = "stage-" + instance.instance.id;
-    const hiddenEventsAndStages = closure_1.hiddenEventsAndStages;
+    const combined = "stage-" + instance.instance.id;
+    const hiddenEventsAndStages = global.hiddenEventsAndStages;
     if (hiddenEventsAndStages.includes(combined)) {
-      const prop = closure_1.hiddenEventsAndStages;
-      closure_1.hiddenEventsAndStages = prop.filter((arg0) => arg0 !== combined);
+      const prop = global.hiddenEventsAndStages;
+      global.hiddenEventsAndStages = prop.filter((item) => item !== combined);
     }
   }
 });
-const result = set.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
 
 export default liveChannelNoticesStore;

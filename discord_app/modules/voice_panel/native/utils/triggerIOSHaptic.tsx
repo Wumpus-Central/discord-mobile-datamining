@@ -1,16 +1,15 @@
-// === Module 17094: triggerIOSHaptic ===
+// === Module 17094: utils/triggerIOSHaptic ===
 
-// Module 17094 (triggerIOSHaptic)
-import set from "set" /* 2 */;
-import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4528 */;
-import VoicePanelModes from "VoicePanelModes" /* 12273 */;
+// Module 17094 (utils/triggerIOSHaptic)
+import HapticUtils from "HapticUtils" /* 4528 */;
+import VoicePanelConstants from "VoicePanelConstants" /* 12273 */;
+import size from "module_2" /* 2 */;
 
-const IS_IOS = VoicePanelModes.IS_IOS;
-let result = set.fileFinishedImporting("modules/voice_panel/native/utils/triggerIOSHaptic.tsx");
+const IS_IOS = VoicePanelConstants.IS_IOS;
+let result = size.fileFinishedImporting("modules/voice_panel/native/utils/triggerIOSHaptic.tsx");
 
 export default function triggerIOSHaptic() {
   if (IS_IOS) {
-    const result = HapticFeedbackTypes.triggerHapticFeedback(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_MEDIUM);
-    const obj = HapticFeedbackTypes;
+    const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
   }
 };

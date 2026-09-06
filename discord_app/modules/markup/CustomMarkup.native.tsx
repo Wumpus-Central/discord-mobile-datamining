@@ -1,39 +1,40 @@
-// === Module 4995: createRules ===
+// === Module 4995: CustomMarkup ===
 
-// Module 4995 (createRules)
-import set from "set" /* 2 */;
-import tDefault from "t" /* 4257 */;
-import get_defaultRulesDefault from "get defaultRules" /* 4550 */;
-import MarkupText from "MarkupText" /* 4551 */;
-import MarkupTextDefault from "MarkupText" /* 4551 */;
-import AST_KEY from "AST_KEY" /* 4996 */;
+// Module 4995 (CustomMarkup)
+import _modDef4257 from "module_4257" /* 4257 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4550 */;
+import MarkupReactRules from "MarkupReactRules" /* 4551 */;
+import MarkupTypes from "MarkupTypes" /* 4996 */;
 import combineMarkupRulesDefault from "combineMarkupRules" /* 4997 */;
-import parseLinkDefault from "parseLink" /* 4998 */;
+import MarkupRulesDefault from "MarkupRules" /* 4998 */;
+import size from "module_2" /* 2 */;
+
+const MarkupReactRulesDefault = MarkupReactRules;
 
 function createRules(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  const tmp = MarkupTextDefault(arg0, obj);
-  items = [get_defaultRulesDefault.defaultRules, tmp, ];
+  const tmp = MarkupReactRulesDefault(arg0, obj);
+  items = [MarkupUtilsDefault.defaultRules, tmp, ];
   obj = {};
   obj = {};
-  const merged = Object.assign(tDefault.defaultRules.link);
-  obj.react = tmp[AST_KEY.AST_KEY.LINK].react;
-  obj[AST_KEY.AST_KEY.LINK] = obj;
-  obj1 = {};
-  const merged1 = Object.assign(tDefault.defaultRules.url);
-  obj1.react = tmp[AST_KEY.AST_KEY.URL].react;
-  obj[AST_KEY.AST_KEY.URL] = obj1;
+  const merged = Object.assign(_modDef4257.defaultRules.link);
+  obj.react = tmp[MarkupTypes.AST_KEY.LINK].react;
+  obj[MarkupTypes.AST_KEY.LINK] = obj;
+  const obj1 = {};
+  const merged1 = Object.assign(_modDef4257.defaultRules.url);
+  obj1.react = tmp[MarkupTypes.AST_KEY.URL].react;
+  obj[MarkupTypes.AST_KEY.URL] = obj1;
   const obj2 = {};
-  const merged2 = Object.assign(tDefault.defaultRules.autolink);
-  obj2.react = tmp[AST_KEY.AST_KEY.AUTOLINK].react;
-  obj[AST_KEY.AST_KEY.AUTOLINK] = obj2;
+  const merged2 = Object.assign(_modDef4257.defaultRules.autolink);
+  obj2.react = tmp[MarkupTypes.AST_KEY.AUTOLINK].react;
+  obj[MarkupTypes.AST_KEY.AUTOLINK] = obj2;
   const obj3 = {};
-  const merged3 = Object.assign(tDefault.defaultRules.blockQuote);
-  obj3.react = tmp[AST_KEY.AST_KEY.BLOCK_QUOTE].react;
-  obj[AST_KEY.AST_KEY.BLOCK_QUOTE] = obj3;
+  const merged3 = Object.assign(_modDef4257.defaultRules.blockQuote);
+  obj3.react = tmp[MarkupTypes.AST_KEY.BLOCK_QUOTE].react;
+  obj[MarkupTypes.AST_KEY.BLOCK_QUOTE] = obj3;
   items[2] = obj;
   return combineMarkupRulesDefault(items);
 }
@@ -50,27 +51,27 @@ function createRulesWithoutLinks(arg0, arg1) {
   }
   return obj;
 }
-function createNotifCenterV2MessagePreviewRules(closure_28, closure_28, roleStyle) {
-  const tmp = MarkupTextDefault(closure_28, closure_28, roleStyle);
-  items = [get_defaultRulesDefault.notifCenterV2MessagePreviewRules, ];
+function createNotifCenterV2MessagePreviewRules(arg0, arg1, roleStyle) {
+  const tmp = MarkupReactRulesDefault(arg0, arg1, roleStyle);
+  items = [MarkupUtilsDefault.notifCenterV2MessagePreviewRules, ];
   let obj = {};
   obj = {};
-  const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
-  obj.react = tmp[AST_KEY.AST_KEY.MENTION].react;
-  obj[AST_KEY.AST_KEY.MENTION] = obj;
+  const merged = Object.assign(MarkupRulesDefault.RULES[MarkupTypes.AST_KEY.MENTION]);
+  obj.react = tmp[MarkupTypes.AST_KEY.MENTION].react;
+  obj[MarkupTypes.AST_KEY.MENTION] = obj;
   obj = {};
-  const merged1 = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.CHANNEL_MENTION]);
-  obj.react = tmp[AST_KEY.AST_KEY.CHANNEL_MENTION].react;
-  obj[AST_KEY.AST_KEY.CHANNEL_MENTION] = obj;
-  obj1 = {};
-  const merged2 = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.ITALICS]);
-  obj1.react = tmp[AST_KEY.AST_KEY.ITALICS].react;
-  obj[AST_KEY.AST_KEY.ITALICS] = obj1;
+  const merged1 = Object.assign(MarkupRulesDefault.RULES[MarkupTypes.AST_KEY.CHANNEL_MENTION]);
+  obj.react = tmp[MarkupTypes.AST_KEY.CHANNEL_MENTION].react;
+  obj[MarkupTypes.AST_KEY.CHANNEL_MENTION] = obj;
+  const obj1 = {};
+  const merged2 = Object.assign(MarkupRulesDefault.RULES[MarkupTypes.AST_KEY.ITALICS]);
+  obj1.react = tmp[MarkupTypes.AST_KEY.ITALICS].react;
+  obj[MarkupTypes.AST_KEY.ITALICS] = obj1;
   items[1] = obj;
   return combineMarkupRulesDefault(items);
 }
-let items = [AST_KEY.AST_KEY.URL, AST_KEY.AST_KEY.AUTOLINK, AST_KEY.AST_KEY.LINK, "mailto", "tel"];
-const result = set.fileFinishedImporting("modules/markup/CustomMarkup.native.tsx");
+let items = [MarkupTypes.AST_KEY.URL, MarkupTypes.AST_KEY.AUTOLINK, MarkupTypes.AST_KEY.LINK, "mailto", "tel"];
+const result = size.fileFinishedImporting("modules/markup/CustomMarkup.native.tsx");
 
 export { createRules };
 export const getParser = function getParser(arg0) {
@@ -82,7 +83,7 @@ export const getParser = function getParser(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  return get_defaultRulesDefault.reactParserFor(createRules(obj, obj));
+  return MarkupUtilsDefault.reactParserFor(createRules(obj, obj));
 };
 export { createRulesWithoutLinks };
 export const getParserWithoutLinks = function getParserWithoutLinks(arg0) {
@@ -94,46 +95,45 @@ export const getParserWithoutLinks = function getParserWithoutLinks(arg0) {
   if (arg1 === undefined) {
     obj = {};
   }
-  return get_defaultRulesDefault.reactParserFor(createRulesWithoutLinks(obj, obj));
+  return MarkupUtilsDefault.reactParserFor(createRulesWithoutLinks(obj, obj));
 };
 export { createNotifCenterV2MessagePreviewRules };
-export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(arg0, closure_28, roleStyle) {
+export const getNotifCenterV2MessagePreviewParser = function getNotifCenterV2MessagePreviewParser(arg0, arg1, roleStyle) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = closure_28;
-  if (closure_28 === undefined) {
+  obj = arg1;
+  if (arg1 === undefined) {
     obj = {};
   }
-  return get_defaultRulesDefault.reactParserFor(createNotifCenterV2MessagePreviewRules(obj, obj, roleStyle));
+  return MarkupUtilsDefault.reactParserFor(createNotifCenterV2MessagePreviewRules(obj, obj, roleStyle));
 };
 export const createWidgetMessageRules = function createWidgetMessageRules() {
-  items = [get_defaultRulesDefault.lockscreenWidgetMessageRules, ];
+  items = [MarkupUtilsDefault.lockscreenWidgetMessageRules, ];
   let obj = {};
   obj = {};
-  const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
-  obj.react = MarkupText.plainMentionRenderer;
-  obj[AST_KEY.AST_KEY.MENTION] = obj;
+  const merged = Object.assign(MarkupRulesDefault.RULES[MarkupTypes.AST_KEY.MENTION]);
+  obj.react = MarkupReactRules.plainMentionRenderer;
+  obj[MarkupTypes.AST_KEY.MENTION] = obj;
   obj = {};
-  const merged1 = Object.assign(parseLinkDefault.RULES.spoiler);
-  obj.react = MarkupText.plainSpoilerRenderer;
-  obj[AST_KEY.AST_KEY.SPOILER] = obj;
+  const merged1 = Object.assign(MarkupRulesDefault.RULES.spoiler);
+  obj.react = MarkupReactRules.plainSpoilerRenderer;
+  obj[MarkupTypes.AST_KEY.SPOILER] = obj;
   items[1] = obj;
   return combineMarkupRulesDefault(items);
 };
 export const getWidgetMessageRules = function getWidgetMessageRules() {
-  let obj = get_defaultRulesDefault;
-  items = [get_defaultRulesDefault.lockscreenWidgetMessageRules, ];
+  items = [MarkupUtilsDefault.lockscreenWidgetMessageRules, ];
+  let obj = {};
   obj = {};
-  obj = {};
-  const merged = Object.assign(parseLinkDefault.RULES[AST_KEY.AST_KEY.MENTION]);
-  obj.react = MarkupText.plainMentionRenderer;
-  obj[AST_KEY.AST_KEY.MENTION] = obj;
-  obj1 = {};
-  const merged1 = Object.assign(parseLinkDefault.RULES.spoiler);
-  obj1.react = MarkupText.plainSpoilerRenderer;
-  obj[AST_KEY.AST_KEY.SPOILER] = obj1;
+  const merged = Object.assign(MarkupRulesDefault.RULES[MarkupTypes.AST_KEY.MENTION]);
+  obj.react = MarkupReactRules.plainMentionRenderer;
+  obj[MarkupTypes.AST_KEY.MENTION] = obj;
+  const obj1 = {};
+  const merged1 = Object.assign(MarkupRulesDefault.RULES.spoiler);
+  obj1.react = MarkupReactRules.plainSpoilerRenderer;
+  obj[MarkupTypes.AST_KEY.SPOILER] = obj1;
   items[1] = obj;
   return obj.reactParserFor(combineMarkupRulesDefault(items));
 };

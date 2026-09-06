@@ -1,8 +1,8 @@
-// === Module 14074: apexExperiment ===
+// === Module 14074: SilenceWarningExperiment ===
 
-// Module 14074 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 14074 (SilenceWarningExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
 let obj = { resetSilenceWarningOnDeviceChange: false, resetSilenceWarningAfterNMinutes: "PX_16", enableHardwareSilenceWarning: true };
 obj = { name: "2026-02-silence-warning-aggression", kind: "user", defaultConfig: obj, variations: null };
@@ -19,8 +19,8 @@ const obj3 = {};
 const merged2 = Object.assign(obj);
 obj3.enableHardwareSilenceWarning = true;
 obj[3] = obj3;
-obj[3] = obj;
+obj.variations = obj;
 const apexExperiment = ApexExperiment.createApexExperiment(obj);
-const result = set.fileFinishedImporting("modules/media_engine/SilenceWarningExperiment.tsx");
+const result = size.fileFinishedImporting("modules/media_engine/SilenceWarningExperiment.tsx");
 
 export default apexExperiment;

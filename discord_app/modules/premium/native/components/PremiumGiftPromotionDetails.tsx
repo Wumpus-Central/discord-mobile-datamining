@@ -1,23 +1,23 @@
-// === Module 10754: PremiumGiftPromotionDetailsBase ===
+// === Module 10754: PremiumGiftPromotionDetails ===
 
-// Module 10754 (PremiumGiftPromotionDetailsBase)
-import ThemesDefault from "Themes" /* 576 */;
-import Text from "Text" /* 4556 */;
-import CollectiblesPreview from "CollectiblesPreview" /* 8772 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 10754 (PremiumGiftPromotionDetails)
+import nativeDefault from "native" /* 576 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import SKUPreview from "SKUPreview" /* 8772 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
+require = fn;
 function PremiumGiftPromotionDetailsBase(arg0) {
   ({ titleVariant, titleColor, subtitleVariant, subtitleColor } = arg0);
   ({ style, graphic, title, subtitle } = arg0);
-  const tmp = callback2();
-  let obj = { style: items, children: null };
-  items = [tmp.container, style];
+  const tmp = closure_10();
+  let obj = { style: null, children: null };
+  const items = [tmp.container, style];
+  obj.style = items;
   const items1 = [graphic, ];
   obj = { style: tmp.textContainer, children: null };
   if (titleVariant == null) {
@@ -27,54 +27,53 @@ function PremiumGiftPromotionDetailsBase(arg0) {
   if (titleColor == null) {
     titleColor = "text-default";
   }
-  obj[1] = titleColor;
-  obj[2] = title;
-  const items2 = [closure_7(Text.Text, obj), ];
+  obj.color = titleColor;
+  obj.children = title;
+  const items2 = [React5(Text_Text.Text, obj), ];
   if (subtitleVariant == null) {
     subtitleVariant = "text-sm/medium";
   }
-  obj1 = { variant: subtitleVariant, color: null, children: null };
+  const obj1 = { variant: subtitleVariant, color: null, children: null };
   if (subtitleColor == null) {
     subtitleColor = "text-subtle";
   }
-  obj1[1] = subtitleColor;
-  obj1[2] = subtitle;
-  items2[1] = closure_7(Text.Text, obj1);
-  obj[1] = items2;
-  items1[1] = closure_8(View, obj);
-  obj[1] = items1;
-  return closure_8(View, obj);
+  obj1.color = subtitleColor;
+  obj1.children = subtitle;
+  items2[1] = React5(Text_Text.Text, obj1);
+  obj.children = items2;
+  items1[1] = React6(View, obj);
+  obj.children = items1;
+  return React6(View, obj);
 }
 function AnimatedImage(arg0) {
   ({ imageUrl, style, shouldAnimate } = arg0);
   if (shouldAnimate === undefined) {
     shouldAnimate = true;
   }
-  let stateFromStores;
   let aPNGPlayerControls;
   let first;
-  let React;
+  noop = undefined;
   let obj = shouldAnimate(aPNGPlayerControls[8]);
-  const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const items = [AccessibilityStore];
+  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let num = null;
-  const ref = React.useRef(null);
+  const ref = noop.useRef(null);
   aPNGPlayerControls = shouldAnimate(aPNGPlayerControls[9]).useAPNGPlayerControls(ref);
-  const tmp6 = first(React.useState(false), 2);
+  const tmp6 = first(noop.useState(false), 2);
   first = tmp6[0];
-  React = tmp6[1];
+  noop = tmp6[1];
   const items1 = [shouldAnimate, aPNGPlayerControls, stateFromStores];
-  const effect = React.useEffect(() => {
-    let isAndroidResult = shouldAnimate(aPNGPlayerControls[10]).isAndroid();
+  const effect = noop.useEffect(() => {
+    let isAndroidResult = utils_PlatformUtils.isAndroid();
     if (isAndroidResult) {
       isAndroidResult = !stateFromStores;
     }
     if (isAndroidResult) {
       if (shouldAnimate) {
         aPNGPlayerControls.seek(0);
-        callback(true);
+        closure_4(true);
       } else {
-        callback(false);
+        closure_4(false);
         aPNGPlayerControls.stop();
       }
     }
@@ -92,79 +91,75 @@ function AnimatedImage(arg0) {
   const tmp10 = stateFromStores(aPNGPlayerControls[11]);
   if (tmpResult.isAndroid()) {
     if (!stateFromStores) {
-      obj = { ref: null, url: null, autoplay: false, style: null };
-      obj[0] = ref;
-      obj[1] = imageUrl;
-      obj[3] = style;
-      let tmp13 = callback(tmp(tmp2[9]).APNGPlayer, obj);
+      obj = { ref, url: imageUrl, autoplay: false, style };
+      let tmp13 = closure_7(tmp(tmp2[9]).APNGPlayer, obj);
     }
     return tmp13;
   }
-  tmp13 = callback(tmp9(tmp2[12]), { style, resizeMode: "contain", source: { uri: imageUrl } });
+  obj = { style, resizeMode: "contain", source: { uri: imageUrl } };
+  tmp13 = closure_7(tmp9(tmp2[12]), obj);
 }
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-const PX_40 = ThemesDefault.space.PX_40;
-let closure_10 = createCacheKey.createStyles(() => {
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const PX_40 = nativeDefault.space.PX_40;
+let createStyles = fn(4560);
+let closure_10 = createStyles.createStyles(() => {
   let obj = { container: null, image: null, textContainer: null };
-  obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
-  obj[0] = obj;
-  obj = { width: PX_40, height: PX_40, borderRadius: ThemesDefault.radii.xs };
-  obj[1] = obj;
-  obj[2] = { flex: 1 };
+  obj = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
+  obj.container = obj;
+  const size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs };
+  obj.image = size;
+  obj.textContainer = { flex: 1 };
   return obj;
 });
-createCacheKey = { preview: null };
-createCacheKey = { width: PX_40, height: PX_40, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, border: null, overflow: "hidden" };
-createCacheKey = { borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
-createCacheKey[4] = createCacheKey;
-createCacheKey[0] = createCacheKey;
-let closure_13 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
+fn(4560);
+createStyles = { preview: null };
+let size = { width: PX_40, height: PX_40, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, border: null, overflow: "hidden" };
+createStyles = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
+size.border = createStyles;
+createStyles.preview = size;
+let closure_13 = createStyles.createStyles(createStyles);
+size = fn(2);
+const result = size.fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
 
 export default function PremiumGiftPromotionDetails(imageUrl) {
   imageUrl = imageUrl.imageUrl;
-  const merged = Object.assign(imageUrl, Object.create(null));
+  const merged = Object.assign(imageUrl, Object.assign({ imageUrl: 0, shouldAnimate: 0 }));
   let tmp3Result = null != imageUrl;
   if (tmp3Result) {
-    let obj = { style: null, imageUrl: null, shouldAnimate: null };
-    obj[0] = tmp2.image;
-    obj[1] = imageUrl;
-    obj[2] = imageUrl.shouldAnimate;
+    let obj = { style: tmp2.image, imageUrl, shouldAnimate: imageUrl.shouldAnimate };
     tmp3Result = tmp3(AnimatedImage, obj);
   }
   obj = { graphic: tmp3Result };
   const merged1 = Object.assign(merged);
-  return closure_7(PremiumGiftPromotionDetailsBase, obj);
+  return React5(PremiumGiftPromotionDetailsBase, obj);
 };
 export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGiftPromotionCollectibleRewardDetails(product) {
   product = product.product;
   require = product;
-  const merged = Object.assign(product, Object.create(null));
+  const merged = Object.assign(product, Object.assign({ product: 0 }));
   const items = [product];
-  const memo = React.useMemo(() => {
-    if (null != closure_0) {
+  const memo = noop.useMemo(() => {
+    if (null != product) {
       if (0 !== tmp.items.length) {
-        if (tmp.type === product(closure_1_2[13]).CollectiblesItemType.BUNDLE) {
+        if (tmp.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
           let obj = { type: "bundle", items: null, previewAssets: null };
-          ({ items: obj2[1], previewAssets: obj2[2] } = tmp);
+          ({ items: obj2.items, previewAssets: obj2.previewAssets } = tmp);
         } else {
-          obj = { type: "single", item: null };
-          obj[1] = tmp.items[0];
+          obj = { type: "single", item: tmp.items[0] };
         }
         return obj;
       }
     }
   }, items);
   if (null == memo) {
-    let obj = { graphic: null };
-    obj[0] = tmp6;
+    let obj = { graphic: tmp6 };
     const merged1 = Object.assign(merged);
     return tmp4(tmp5, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp2.preview;
-    obj = { collectiblesItemData: null, size: null };
-    obj[0] = memo;
+    obj = { style: tmp2.preview, children: null };
+    obj = { collectiblesItemData: memo, size: null };
     if ("bundle" === memo.type) {
       const _Math2 = Math;
       let rounded = Math.floor(1.2 * tmp10);
@@ -175,11 +170,10 @@ export const PremiumGiftPromotionCollectibleRewardDetails = function PremiumGift
         rounded = Math.floor(1.5 * tmp10);
       }
     }
-    obj[1] = rounded;
-    obj = tmp4(CollectiblesPreview.CollectiblesPreview, obj);
-    obj[1] = obj;
+    obj.size = rounded;
+    obj = tmp4(SKUPreview.CollectiblesPreview, obj);
+    obj.children = obj;
     tmp4(View, obj);
-    const tmp7 = View;
     tmp8 = require;
   }
 };

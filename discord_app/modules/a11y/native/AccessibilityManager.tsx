@@ -1,62 +1,60 @@
-// === Module 14434: ? ===
+// === Module 14434: AccessibilityManager ===
 
-// Module 14434
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setSystemTheme from "setSystemTheme" /* 4408 */;
-import uDefault from "u" /* 11354 */;
-import AccessibilityFeatureFlagsDefault from "AccessibilityFeatureFlags" /* 14435 */;
-import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 14436 */;
+// Module 14434 (AccessibilityManager)
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import ThemeActionCreators from "ThemeActionCreators" /* 4408 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11354 */;
+import AccessibilitySystemFeaturesDefault from "AccessibilitySystemFeatures" /* 14435 */;
+import AccessibilityPreferencesSharedValue from "AccessibilityPreferencesSharedValue" /* 14436 */;
 import updateSaturation from "updateSaturation" /* 14438 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import { SystemTheme } from "SystemThemeState" /* 1186 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
-({ AccessibilityInfo: c4, Appearance: c5 } = get_ActivityIndicator);
-let result = require("set").fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ AccessibilityInfo: closure_4, Appearance: hasOwnProperty } = get_ActivityIndicator);
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const SystemTheme = fn(1186).SystemTheme;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 
 export default {
   init() {
     const self = this;
-    AccessibilityFeatureFlagsDefault.init();
+    AccessibilitySystemFeaturesDefault.init();
     this.updateNativeColors();
     this.updateMotionSettings();
-    closure_6.addChangeListener(this.updateNativeColors);
-    closure_6.addChangeListener(this.updateMotionSettings);
-    let obj = AccessibilityFeatureFlagsDefault;
-    const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
+    AccessibilityStore.addChangeListener(this.updateNativeColors);
+    AccessibilityStore.addChangeListener(this.updateMotionSettings);
+    const subscription = DispatcherDefault.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
     closure_5.addChangeListener(this.updateSystemAppearance);
-    const listener = closure_4.addEventListener("screenReaderChanged", (arg0) => {
-      const result = self.updateScreenReaderEnabled(arg0);
+    const listener = closure_4.addEventListener("screenReaderChanged", (event) => {
+      const result = self.updateScreenReaderEnabled(event);
     });
-    const obj2 = dispatcherDefault;
-    const subscription1 = dispatcherDefault.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-      let obj = callback(table[7]);
-      obj = { colorblind_enabled: colorblindMode.colorblindMode };
+    const subscription1 = DispatcherDefault.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
+      const obj = { colorblind_enabled: colorblindMode.colorblindMode };
       obj.track(constants.LOCAL_SETTINGS_UPDATED, obj);
     });
     let result = this.startAnnouncementQueue();
   },
   updateNativeColors() {
-    updateSaturation.updateSaturation(closure_6.saturation);
+    updateSaturation.updateSaturation(AccessibilityStore.saturation);
   },
   updateMotionSettings() {
-    uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { reduceMotion: closure_6.useReducedMotion, prefersCrossfades: closure_6.systemPrefersCrossfades });
+    updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, { reduceMotion: AccessibilityStore.useReducedMotion, prefersCrossfades: AccessibilityStore.systemPrefersCrossfades });
   },
   checkScreenreaderEnabled() {
     const self = this;
-    return callback(function*() {
+    return (async (arg0, value) => {
       if (c3 === 2) {
         c3 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          let obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -67,33 +65,30 @@ export default {
           if (0 === c2) {
             if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_1 = tmp5;
               closure_0 = tmp2;
-              closure_0 = undefined;
+              closure_128_0 = undefined;
               c2 = 1;
               c3 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_4.isScreenReaderEnabled();
+              const obj1 = { value: screenReaderEnabled.isScreenReaderEnabled(), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_0 = arg1;
-            const result = closure_0.updateScreenReaderEnabled(closure_0);
+            closure_128_0 = value;
+            const result = closure_129_0.updateScreenReaderEnabled(closure_128_0);
             c3 = 3;
             return { value: "HermesInternal", done: null };
           }
@@ -105,7 +100,7 @@ export default {
     })();
   },
   updateScreenReaderEnabled(screenReaderEnabled) {
-    uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { screenReaderEnabled });
+    updateSharedValueIfChangedDefault(AccessibilityPreferencesSharedValue.accessibilityPreferencesSharedValue, { screenReaderEnabled });
   },
   updateSystemAppearance(colorScheme) {
     let DARK = SystemTheme.NO_PREFERENCE;
@@ -115,22 +110,22 @@ export default {
     } else if ("dark" === colorScheme) {
       DARK = tmp.DARK;
     }
-    setSystemTheme.setSystemTheme(DARK);
+    ThemeActionCreators.setSystemTheme(DARK);
   },
   startAnnouncementQueue() {
     const set = new Set();
-    const listener = closure_4.addEventListener("announcementFinished", (success) => {
-      if (!success.success) {
-        if (!set.has(success.announcement)) {
-          set.add(success.announcement);
+    const listener = closure_4.addEventListener("announcementFinished", (event) => {
+      if (!event.success) {
+        if (!set.has(event.announcement)) {
+          set.add(event.announcement);
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const AccessibilityAnnouncer = success(closure_1_2[12]).AccessibilityAnnouncer;
-            AccessibilityAnnouncer.announce(success.announcement);
+            const AccessibilityAnnouncer = set(dependencyMap[12]).AccessibilityAnnouncer;
+            AccessibilityAnnouncer.announce(event.announcement);
           }, 150);
         }
       }
-      success.delete(success.announcement);
+      set.delete(event.announcement);
     });
   }
 };

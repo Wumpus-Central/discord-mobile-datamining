@@ -1,13 +1,12 @@
-// === Module 7221: FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID ===
+// === Module 7221: FakePlaceholderPrivateChannel ===
 
-// Module 7221 (FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import createChannelRecord from "createChannelRecord" /* 1961 */;
+// Module 7221 (FakePlaceholderPrivateChannel)
+import Constants from "Constants" /* 1074 */;
+import ChannelRecord from "ChannelRecord" /* 1961 */;
+import size from "module_2" /* 2 */;
 
-const channelRecord = createChannelRecord.createChannelRecord({ id: "131", type: ME.ChannelTypes.DM, name: "Placeholder Channel" });
-const obj = { id: "131", type: ME.ChannelTypes.DM, name: "Placeholder Channel" };
-const result = set.fileFinishedImporting("modules/channel/FakePlaceholderPrivateChannel.tsx");
+const channelRecord = ChannelRecord.createChannelRecord({ id: "131", type: Constants.ChannelTypes.DM, name: "Placeholder Channel" });
+const result = size.fileFinishedImporting("modules/channel/FakePlaceholderPrivateChannel.tsx");
 
 export const FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID = "131";
 export const FAKE_PLACEHOLDER_PRIVATE_CHANNEL = channelRecord;

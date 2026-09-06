@@ -1,52 +1,52 @@
 // === Module 10702: useOrderContext ===
 
 // Module 10702 (useOrderContext)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const result = require("set").fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
 
-export const useOrderContext = function useOrderContext(initialOrder, NativeGiftContext) {
-  let tmp = first(React.useState(initialOrder), 2);
-  first = tmp[0];
-  React = tmp3;
-  const callback = React.useCallback((arg0) => {
-    closure_0 = arg0;
-    callback((arg0) => {
+export const useOrderContext = function useOrderContext(initialOrder) {
+  let tmp = _slicedToArray(noop.useState(initialOrder), 2);
+  let order = tmp[0];
+  const setOrder = tmp3;
+  const setRevision = noop.useCallback((revision) => {
+    setOrder((arg0) => {
       let tmp = arg0;
       if (null != arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
-        obj.revision = closure_0;
+        obj.revision = revision;
         tmp = obj;
       }
       return tmp;
     });
   }, []);
-  const items = [first, tmp[1], callback];
-  return React.useMemo(() => {
-    const obj = { order: first, setOrder: closure_1, setRevision: callback, orderId: null, orderLineItemId: null, revision: null };
+  const items = [order, tmp[1], setRevision];
+  return noop.useMemo(() => {
+    const obj = { order, setOrder, setRevision, orderId: null, orderLineItemId: null, revision: null };
     let id;
-    if (first != null) {
+    if (order != null) {
       id = tmp.id;
     }
-    obj[3] = id;
+    obj.orderId = id;
     let id1;
-    if (first != null) {
+    if (order != null) {
       const order_line_items = tmp.order_line_items;
       if (order_line_items != null) {
-        first = order_line_items[0];
-        if (first != null) {
-          id1 = first.id;
+        order = order_line_items[0];
+        if (order != null) {
+          id1 = order.id;
         }
       }
     }
-    obj[4] = id1;
+    obj.orderLineItemId = id1;
     let revision;
-    if (first != null) {
+    if (order != null) {
       revision = tmp.revision;
     }
-    obj[5] = revision;
+    obj.revision = revision;
     return obj;
   }, items);
 };

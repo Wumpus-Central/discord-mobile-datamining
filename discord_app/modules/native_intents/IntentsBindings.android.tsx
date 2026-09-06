@@ -1,9 +1,9 @@
-// === Module 17860: set ===
+// === Module 17860: IntentsBindings ===
 
-// Module 17860 (set)
-import set from "set" /* 2 */;
+// Module 17860 (IntentsBindings)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
+const result = size.fileFinishedImporting("modules/native_intents/IntentsBindings.android.tsx");
 
 export default {
   hasSearch() {
@@ -15,19 +15,19 @@ export default {
   clearSearchIndex() {
 
   },
-  deleteSearchDomains(items) {
+  deleteSearchDomains() {
 
   },
-  deleteSearchItems(items) {
+  deleteSearchItems() {
 
   },
-  indexDomains(items) {
+  indexDomains() {
 
   },
   resignActivity() {
 
   },
-  setActivity(arg0) {
+  setActivity() {
 
   }
 };

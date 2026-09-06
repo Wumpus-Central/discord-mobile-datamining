@@ -1,11 +1,11 @@
 // === Module 17282: getTimeZone ===
 
 // Module 17282 (getTimeZone)
-import set from "set" /* 2 */;
-import DCDDeviceManager from "DCDDeviceManager" /* 4539 */;
+import DeviceUtils from "DeviceUtils" /* 4539 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("lib/getTimeZone.native.tsx");
+const result = size.fileFinishedImporting("lib/getTimeZone.native.tsx");
 
 export default function getTimeZone() {
-  return DCDDeviceManager.getTimeZone();
+  return DeviceUtils.getTimeZone();
 };

@@ -1,14 +1,14 @@
 // === Module 12573: useMultiPerkStatusValues ===
 
 // Module 12573 (useMultiPerkStatusValues)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2428 */;
-import BoostedGuildTiers from "BoostedGuildTiers" /* 4450 */;
+import _modDef2428 from "module_2428" /* 2428 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4450 */;
 import usePowerupActiveStatus from "usePowerupActiveStatus" /* 12499 */;
+import size from "module_2" /* 2 */;
 
-const PowerupActiveStatusType = BoostedGuildTiers.PowerupActiveStatusType;
-const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
+const util = tmp(1114);
+const PowerupActiveStatusType = GuildPowerupsConstants.PowerupActiveStatusType;
+const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
 
 export default function useMultiPerkStatusValues(powerups) {
   powerups = powerups.powerups;
@@ -18,37 +18,36 @@ export default function useMultiPerkStatusValues(powerups) {
   if (powerups.length <= 0) {
     return null;
   } else {
-    const reduced = powerupsActiveStatuses.reduce((arg0, sourceEntitlement) => {
+    const reduced = powerupsActiveStatuses.reduce((acc, sourceEntitlement) => {
       sourceEntitlement = sourceEntitlement.sourceEntitlement;
       let ends_at;
       if (sourceEntitlement != null) {
         ends_at = sourceEntitlement.ends_at;
       }
-      let tmp2 = arg0;
+      let tmp2 = acc;
       if (null != ends_at) {
-        if (null == arg0) {
+        if (null == acc) {
           let tmp3 = ends_at;
         } else {
-          tmp3 = arg0;
+          tmp3 = acc;
         }
         tmp2 = tmp3;
       }
       return tmp2;
     }, undefined);
     if (null != reduced) {
-      obj = { type: "expiring", expiringAt: null };
-      obj[1] = reduced;
+      obj = { type: "expiring", expiringAt: reduced };
       let tmp4 = obj;
     } else if (someResult) {
       obj = { type: "active", statusText: null };
-      const intl = getSystemLocale.intl;
-      obj[1] = intl.string(messagesProxyDefault.FFLkmx);
+      const intl = util.intl;
+      obj.statusText = intl.string(_modDef2428.FFLkmx);
       tmp4 = obj;
     }
-    const reduced1 = powerupsActiveStatuses.reduce((arg0, type) => {
-      let sum = arg0;
+    const reduced1 = powerupsActiveStatuses.reduce((acc, type) => {
+      let sum = acc;
       if (type.type === constants.POWERUP_ACTIVATED) {
-        sum = arg0 + type.powerup.cost;
+        sum = acc + type.powerup.cost;
       }
       return sum;
     }, 0);
@@ -63,7 +62,7 @@ export default function useMultiPerkStatusValues(powerups) {
     if (num == null) {
       num = 0;
     }
-    const reduced2 = powerupsActiveStatuses.reduce((arg0, powerup) => {
+    const reduced2 = powerupsActiveStatuses.reduce((acc, powerup) => {
       powerup = powerup.powerup;
       let num;
       if (powerup != null) {
@@ -72,8 +71,8 @@ export default function useMultiPerkStatusValues(powerups) {
       if (num == null) {
         num = 0;
       }
-      let tmp = arg0;
-      if (arg0 >= num) {
+      let tmp = acc;
+      if (acc >= num) {
         let num2;
         if (powerup != null) {
           num2 = powerup.cost;
@@ -85,7 +84,7 @@ export default function useMultiPerkStatusValues(powerups) {
       }
       return tmp;
     }, num);
-    const reduced3 = powerupsActiveStatuses.reduce((arg0, powerup) => {
+    const reduced3 = powerupsActiveStatuses.reduce((acc, powerup) => {
       powerup = powerup.powerup;
       let num;
       if (powerup != null) {
@@ -94,28 +93,24 @@ export default function useMultiPerkStatusValues(powerups) {
       if (num == null) {
         num = 0;
       }
-      return arg0 + num;
+      return acc + num;
     }, 0);
     let tmp10 = reduced2;
     if (someResult) {
       tmp10 = reduced1;
     }
-    obj1 = { isActive: null, status: null, cost: null, costDecorator: null, expiringAt: null, activeCost: null, minCost: null, totalCost: null };
-    obj1[0] = someResult;
-    obj1[1] = tmp4;
-    obj1[2] = tmp10;
+    const obj1 = { isActive: someResult, status: tmp4, cost: tmp10, costDecorator: null, expiringAt: null, activeCost: null, minCost: null, totalCost: null };
     let str;
     if (!someResult) {
       if (reduced3 > tmp10) {
         str = "+";
       }
     }
-    obj1[3] = str;
-    obj1[4] = reduced;
-    obj1[5] = reduced1;
-    obj1[6] = reduced2;
-    obj1[7] = reduced3;
+    obj1.costDecorator = str;
+    obj1.expiringAt = reduced;
+    obj1.activeCost = reduced1;
+    obj1.minCost = reduced2;
+    obj1.totalCost = reduced3;
     return obj1;
   }
-  let tmp = require;
 };

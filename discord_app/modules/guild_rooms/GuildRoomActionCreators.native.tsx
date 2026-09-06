@@ -1,89 +1,45 @@
-// === Module 4716: _guildRoomConnect ===
+// === Module 4716: GuildRoomActionCreators ===
 
-// Module 4716 (_guildRoomConnect)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 4716 (GuildRoomActionCreators)
+import _guildRoomConnectAll from "_guildRoomConnect" /* 4717 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function _guildRoomConnect() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c5 = 0;
-    c4 = 0;
+let closure_3 = async function _guildRoomConnect(arg0, arg1) {
+  await _guildRoomConnectAll.guildRoomConnect(closure_0, closure_1, closure_2, closure_3);
+  if (1 === tmp6) {
     c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
-      c7 = 1;
-      obj1 = callback(table[1]);
-      yield obj1.guildRoomConnect(callback, table, closure_2, closure_3);
-      if (1 === tmp6) {
-        c7 = 0;
-        c4 = 3;
-      } else if (arg0 === 1) {
-        c4 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c7 = 0;
-      }
-      c7 = 0;
-      return arg1;
-    })();
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    c4 = 3;
+  } else if (arg0 === 1) {
+    c4 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    c7 = 0;
   }
-  return applyArgumentsResult;
-}
-function _guildRoomUpdate() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c4 = 0;
-    c3 = 0;
+  return arg1;
+};
+let closure_4 = async function _guildRoomUpdate(arg0, arg1) {
+  await _guildRoomConnectAll.guildRoomUpdate(closure_0, closure_1, closure_2);
+  if (1 === tmp6) {
     c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      c6 = 1;
-      obj1 = callback(table[1]);
-      yield obj1.guildRoomUpdate(callback, table, closure_2);
-      if (1 === tmp6) {
-        c6 = 0;
-        c3 = 3;
-      } else if (arg0 === 1) {
-        c3 = 3;
-        throw arg1;
-      } else if (arg0 !== 2) {
-        c6 = 0;
-      }
-      c6 = 0;
-      return arg1;
-    })();
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    c3 = 3;
+  } else if (arg0 === 1) {
+    c3 = 3;
+    throw arg1;
+  } else if (arg0 !== 2) {
+    c6 = 0;
   }
-  return applyArgumentsResult;
-}
-const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.native.tsx");
+  return arg1;
+};
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.native.tsx");
 for (const key10024 in require("_guildRoomConnect")) {
-  let tmp3 = key10024;
   arg5[key10024] = require("_guildRoomConnect")[key10024];
   continue;
 }
 
 export const guildRoomConnect = function guildRoomConnect() {
   const self = this;
-  const apply = _guildRoomConnect.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -93,7 +49,7 @@ export const guildRoomConnect = function guildRoomConnect() {
 };
 export const guildRoomUpdate = function guildRoomUpdate() {
   const self = this;
-  const apply = _guildRoomUpdate.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

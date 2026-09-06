@@ -1,33 +1,34 @@
-// === Module 15407: useValue ===
+// === Module 15407: DisplayNameStylesAccessibilitySetting ===
 
-// Module 15407 (useValue)
+// Module 15407 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import messagesProxyDefault from "messagesProxy" /* 2786 */;
-import setFontSize from "setFontSize" /* 14437 */;
-import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import _modDef2786 from "module_2786" /* 2786 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14437 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-require = arg1;
+require = fn;
 function useValue() {
-  const items = [closure_3];
-  return initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
+  const items = [AccessibilityStore];
+  return initialize.useStateFromStores(items, () => AccessibilityStore.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
-  const result = setFontSize.setDisplayNameStylesEnabled(enabled);
+  const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-createToggle = {
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["2gFUEw"]);
+    const intl = util.intl;
+    return intl.string(_modDef2786["2gFUEw"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
+  parent: fn(7975).MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange
 };
-createToggle = createToggle.createToggle(createToggle);
-let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;
 export { useValue };
 export { onValueChange };

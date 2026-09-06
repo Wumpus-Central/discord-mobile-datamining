@@ -1,17 +1,17 @@
-// === Module 14627: EditProfileEffectInner ===
+// === Module 14627: EditProfileEffectActionSheet ===
 
-// Module 14627 (EditProfileEffectInner)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_6 from "map" /* 7558 */;
-import { isProfileEffectRecord } from "fromServer" /* 7548 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 14627 (EditProfileEffectActionSheet)
+import nativeDefault from "native" /* 576 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
+import useShopProductItems from "useShopProductItems" /* 8171 */;
+import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8187 */;
+import EditProfileEffectSection from "EditProfileEffectSection" /* 14629 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
 
-const require = arg1;
+require = fn;
 function EditProfileEffectInner(user) {
   user = user.user;
   ({ selectedProfileEffect, setSelectedProfileEffect } = user);
@@ -22,8 +22,8 @@ function EditProfileEffectInner(user) {
   }
   let obj = user(guildId[21]);
   const getOrFetchCollectiblesCategoriesAndPurchases = obj.useGetOrFetchCollectiblesCategoriesAndPurchases();
-  obj1 = user(guildId[22]);
-  const items = [closure_6];
+  let obj1 = user(guildId[22]);
+  const items = [CollectiblesPurchaseStore];
   const stateFromStores = obj1.useStateFromStores(items, () => isFetching.isFetching);
   const tmp7 = setSelectedProfileEffect(guildId[9])(user.id, guildId);
   let obj2 = user(guildId[24]);
@@ -35,7 +35,7 @@ function EditProfileEffectInner(user) {
       profileEffect = _userProfile.profileEffect;
     }
   }
-  obj[1] = profileEffect;
+  obj.userValue = profileEffect;
   let profileEffect1;
   if (tmp7 != null) {
     const _guildMemberProfile = tmp7._guildMemberProfile;
@@ -43,21 +43,20 @@ function EditProfileEffectInner(user) {
       profileEffect1 = _guildMemberProfile.profileEffect;
     }
   }
-  obj[2] = profileEffect1;
-  obj[3] = guildId;
+  obj.guildValue = profileEffect1;
+  obj.guildId = guildId;
   const profilePreviewValue = obj2.getProfilePreviewValue(obj);
   const items1 = [user];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (!tmp) {
-      setSelectedProfileEffect(guildId[25])(obj.id, obj.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
-      const tmp4 = setSelectedProfileEffect(guildId[25]);
+      maybeFetchUserProfileDefault(obj.id, obj.getAvatarURL(null, 80), { withMutualGuilds: true, dispatchWait: true });
     }
   }, items1);
   const items2 = [setSelectedProfileEffect, guildId, flag];
   let skuId;
-  const callback = React.useCallback((arg0) => {
+  const callback = noop.useCallback((arg0) => {
     ({ items, size, selectedSkuId } = arg0);
-    return closure_1_9(user(guildId[26]).EditProfileEffectRow, { items, size, selectedSkuId, setSelectedProfileEffect, guildId, isTryItOut: flag });
+    return React7(EditProfileEffectSection.EditProfileEffectRow, { items, size, selectedSkuId, setSelectedProfileEffect, guildId, isTryItOut: flag });
   }, items2);
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -67,17 +66,15 @@ function EditProfileEffectInner(user) {
   let skuId1;
   const tmp13 = closure_10;
   const tmp14 = closure_11;
-  const tmp16 = ProfileEffectSectionPreview;
-  const tmp5 = setSelectedProfileEffect;
   const tmp6 = setSelectedProfileEffect(guildId[23])();
   if (profilePreviewValue != null) {
     skuId1 = profilePreviewValue.skuId;
   }
-  obj[1] = skuId1;
+  obj.previewSkuId = skuId1;
   const intl = tmp(tmp2[19]).intl;
-  obj[2] = intl.string(user(guildId[19]).t.pertpd);
+  obj.nitroJoinCTA = intl.string(user(guildId[19]).t.pertpd);
   const intl2 = tmp(tmp2[19]).intl;
-  obj[3] = intl2.string(user(guildId[19]).t["5eotIZ"]);
+  obj.nitroUpgradeCTA = intl2.string(user(guildId[19]).t["5eotIZ"]);
   items3[1] = closure_9(setSelectedProfileEffect(guildId[27]), obj);
   obj1 = { sections: tmp6, selectedSkuId: null, renderRow: null, isFetching: null };
   let skuId2;
@@ -85,25 +82,24 @@ function EditProfileEffectInner(user) {
     skuId2 = selectedProfileEffect.skuId;
   }
   obj2 = { children: null };
-  obj1[1] = skuId2;
-  obj1[2] = callback;
-  obj1[3] = stateFromStores;
+  obj1.selectedSkuId = skuId2;
+  obj1.renderRow = callback;
+  obj1.isFetching = stateFromStores;
   items3[2] = closure_9(user(guildId[28]).EditCollectiblesPickerList, obj1);
-  obj2[0] = items3;
+  obj2.children = items3;
   return tmp13(tmp14, obj2);
 }
 function ProfileEffectSectionPreview(arg0) {
-  c0 = undefined;
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
-  const tmp = callback3();
+  const tmp = closure_12();
   const tmp2 = purchase(8173)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
   purchase = tmp2.purchase;
   const items = [purchase, product];
   let obj = { style: tmp.previewContainer, children: null };
-  const memo = React.useMemo(() => {
+  const memo = noop.useMemo(() => {
     let first;
     if (_undefined != null) {
       first = _undefined.items[0];
@@ -116,58 +112,63 @@ function ProfileEffectSectionPreview(arg0) {
       first = first1;
     }
     let tmp3 = null;
-    if (closure_1_7(first)) {
+    if (isProfileEffectRecord(first)) {
       tmp3 = first;
     }
     return tmp3;
   }, items);
-  const items1 = [callback(purchase(11108), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
+  const items1 = [closure_9(purchase(11108), { user, guildId, profileEffect: memo, maxWidth: 250 }), ];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
-  obj[3] = items2;
-  items1[1] = callback(purchase(4987), obj);
-  obj[1] = items1;
-  return callback2(closure_5, obj);
+  obj.colors = items2;
+  items1[1] = closure_9(purchase(4987), obj);
+  obj.children = items1;
+  return closure_10(closure_5, obj);
 }
-({ View: c5, StyleSheet } = get_ActivityIndicator);
-({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-createCacheKey = { container: null, bounceOffset: null, title: null, previewContainer: null, previewGradient: null };
-createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", top: -250, height: 250, right: 0, left: 0 };
-createCacheKey[2] = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
-createCacheKey[3] = { overflow: "hidden", height: 300, alignItems: "center" };
+get_ActivityIndicator = fn(17);
+({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
+const isProfileEffectRecord = fn(7548).isProfileEffectRecord;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const jsxProd = fn(21);
+({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
+fn(4560);
+let createStyles = { container: null, bounceOffset: null, title: null, previewContainer: null, previewGradient: null };
+createStyles = { flex: 1, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createStyles.container = createStyles;
+createStyles.bounceOffset = { position: "absolute", top: -250, height: 250, right: 0, left: 0 };
+createStyles.title = { alignSelf: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
+createStyles.previewContainer = { overflow: "hidden", height: 300, alignItems: "center" };
 let obj2 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.bottom = -1;
-obj2.color = ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
-createCacheKey[4] = obj2;
-let closure_12 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
-let result = require("set").fileFinishedImporting("modules/user_profile/native/EditProfileEffectActionSheet.tsx");
+obj2.color = nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
+createStyles.previewGradient = obj2;
+let closure_12 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/user_profile/native/EditProfileEffectActionSheet.tsx");
 
 export default function EditProfileEffectActionSheet(isTryItOut) {
   ({ user, currentProfileEffect, guildId } = isTryItOut);
   isTryItOut = isTryItOut.isTryItOut;
   dependencyMap = undefined;
-  let first;
+  let selectedProfileEffect;
   let memo;
-  let tmp = callback3();
+  let tmp = closure_12();
   let str = user.id;
   if (str == null) {
     str = "";
   }
   const tmp4Result = isTryItOut(8186)(str);
   dependencyMap = tmp4Result;
-  const tmp6 = first(memo.useState(currentProfileEffect), 2);
-  first = tmp6[0];
-  let obj = guildId(8170);
+  const tmp6 = selectedProfileEffect(memo.useState(currentProfileEffect), 2);
+  selectedProfileEffect = tmp6[0];
+  guildId(8170);
   let tmp2Result = tmp2(7162);
   const analyticsLocations = tmp2Result(tmp2(7182).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
   const items = [guildId, tmp4Result];
   memo = memo.useMemo(() => {
-    const obj = { type: isTryItOut(7182).EDIT_PROFILE_EFFECT_SHEET, guild_id: guildId, profile_has_nitro_customization: null };
-    let tmp = null != dependencyMap;
+    const obj = { type: AnalyticsLocationDefault.EDIT_PROFILE_EFFECT_SHEET, guild_id: guildId, profile_has_nitro_customization: null };
+    let tmp = null != closure_2;
     if (tmp) {
       let result;
       if (obj2 != null) {
@@ -175,21 +176,20 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
       }
       tmp = result;
     }
-    obj[2] = tmp;
+    obj.profile_has_nitro_customization = tmp;
     return obj;
   }, items);
   const items1 = [memo];
-  const items2 = [first, guildId, isTryItOut];
+  const items2 = [selectedProfileEffect, guildId, isTryItOut];
   const callback = memo.useCallback(() => {
-    let obj = isTryItOut(1242);
-    obj = {};
+    const obj = {};
     const merged = Object.assign(memo);
     obj.is_fullscreen = true;
-    obj.track(closure_1_8.OPEN_POPOUT, obj);
+    obj.track(AnalyticEvents.OPEN_POPOUT, obj);
   }, items1);
-  const callback1 = memo.useCallback((items) => {
-    let obj = guildId(8171);
-    let purchasedItem = obj.getPurchasedItem(items, "firstProfileEffect");
+  const callback1 = memo.useCallback((arg0) => {
+    let obj = useShopProductItems;
+    let purchasedItem = obj.getPurchasedItem(arg0, "firstProfileEffect");
     if (purchasedItem == null) {
       purchasedItem = first;
     }
@@ -201,41 +201,39 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
       const result = tmpResult.setTryItOutProfileEffect(purchasedItem);
     } else {
       tmpResult = tmp(8164);
-      obj = { guildId: null, profileEffect: null };
-      obj[0] = guildId;
-      obj[1] = purchasedItem;
+      obj = { guildId, profileEffect: purchasedItem };
       tmpResult.setPendingChanges(obj);
     }
   }, items2);
-  obj = { value: analyticsLocations, children: null };
+  let obj = { value: analyticsLocations, children: null };
   obj = { scrollable: true, ref: obj.useBottomSheetRef().bottomSheetRef, onExpand: callback, startExpanded: true, children: null };
-  obj1 = { style: tmp.container, children: null };
-  const items3 = [callback(closure_5, { style: tmp.bounceOffset }), , ];
+  const obj1 = { style: tmp.container, children: null };
+  const items3 = [closure_9(closure_5, { style: tmp.bounceOffset }), , ];
   const obj3 = { variant: "redesign/heading-18/bold", style: tmp.title, accessibilityRole: "header", children: null };
   const intl = guildId(1114).intl;
-  obj3[3] = intl.string(guildId(1114).t["/6nv6N"]);
-  items3[1] = callback(guildId(4556).Text, obj3);
-  items3[2] = callback(EditProfileEffectInner, { user, selectedProfileEffect: first, setSelectedProfileEffect: tmp6[1], guildId, isTryItOut });
-  obj1[1] = items3;
-  const items4 = [callback2(closure_5, obj1), ];
+  obj3.children = intl.string(guildId(1114).t["/6nv6N"]);
+  items3[1] = closure_9(guildId(4556).Text, obj3);
+  items3[2] = closure_9(EditProfileEffectInner, { user, selectedProfileEffect, setSelectedProfileEffect: tmp6[1], guildId, isTryItOut });
+  obj1.children = items3;
+  const items4 = [closure_10(closure_5, obj1), ];
   const obj4 = { user, currentSkuId: null, selectedSkuId: null, isTryItOut: null, onApply: null, analyticsLocations: null, analyticsSource: null };
   let skuId;
   tmp2Result = tmp2(8172);
   if (currentProfileEffect != null) {
     skuId = currentProfileEffect.skuId;
   }
-  obj4[1] = skuId;
+  obj4.currentSkuId = skuId;
   let skuId1;
-  if (first != null) {
-    skuId1 = first.skuId;
+  if (selectedProfileEffect != null) {
+    skuId1 = selectedProfileEffect.skuId;
   }
-  obj4[2] = skuId1;
-  obj4[3] = isTryItOut;
-  obj4[4] = callback1;
-  obj4[5] = analyticsLocations;
-  obj4[6] = isTryItOut(7182).EDIT_PROFILE_EFFECT_SHEET;
-  items4[1] = callback(tmp2Result, obj4);
-  obj[4] = items4;
-  obj[1] = callback2(guildId(7150).BottomSheet, obj);
-  return callback(guildId(7162).AnalyticsLocationProvider, obj);
+  obj4.selectedSkuId = skuId1;
+  obj4.isTryItOut = isTryItOut;
+  obj4.onApply = callback1;
+  obj4.analyticsLocations = analyticsLocations;
+  obj4.analyticsSource = isTryItOut(7182).EDIT_PROFILE_EFFECT_SHEET;
+  items4[1] = closure_9(tmp2Result, obj4);
+  obj.children = items4;
+  obj.children = closure_10(guildId(7150).BottomSheet, obj);
+  return closure_9(guildId(7162).AnalyticsLocationProvider, obj);
 };

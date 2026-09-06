@@ -1,31 +1,29 @@
-// === Module 9563: send ===
+// === Module 9563: PostMessageProxySocket ===
 
-// Module 9563 (send)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import HANDSHAKEDefault from "HANDSHAKE" /* 9553 */;
-import prototypeDefault from "prototype" /* 9554 */;
-import checkRpcVersionDefault from "checkRpcVersion" /* 9564 */;
+// Module 9563 (PostMessageProxySocket)
+import Constants from "Constants" /* 1074 */;
+import RPCOpcodesDefault from "RPCOpcodes" /* 9553 */;
+import RPCErrorDefault from "RPCError" /* 9554 */;
+import BaseSocket from "BaseSocket" /* 9564 */;
+import size from "module_2" /* 2 */;
 
-const RPCCloseCodes = ME.RPCCloseCodes;
-checkRpcVersionDefault;
+const RPCCloseCodes = Constants.RPCCloseCodes;
 class WindowProxySocket extends tmp2 {
   constructor(arg0) {
     ({ postMessageToRPCClient, encoding, logger } = global);
     ({ postClose, onSendingToRPCClient } = global);
     tmp3 = new WindowProxySocket(global.source, global.version, encoding, tmp2, tmp, new.target, new.target, postMessageToRPCClient, logger);
-    // ThrowIfThisInitialized (0x7c)
     items = ["etf", "json"];
     if (-1 === items.indexOf(encoding)) {
       tmp13 = closure_0;
       tmp14 = closure_1;
       obj = { closeCode: null };
       tmp16 = RPCCloseCodes;
-      obj[0] = RPCCloseCodes.INVALID_ENCODING;
+      obj.closeCode = RPCCloseCodes.INVALID_ENCODING;
       tmp17 = globalThis;
       _HermesInternal = HermesInternal;
       str3 = "Invalid Encoding: ";
-      tmp15 = require("prototype");
+      tmp15 = closure_0(closure_1[2]);
       tmp18 = new.target;
       tmp19 = new.target;
       tmp20 = obj;
@@ -39,12 +37,12 @@ class WindowProxySocket extends tmp2 {
         tmp6 = closure_1;
         obj = { closeCode: null };
         tmp7 = RPCCloseCodes;
-        obj[0] = RPCCloseCodes.INVALID_ENCODING;
+        obj.closeCode = RPCCloseCodes.INVALID_ENCODING;
         tmp8 = new.target;
         str2 = "Erlpack cannot be used on this client";
         tmp9 = new.target;
         tmp10 = obj;
-        tmp11 = new require("prototype")(obj, "Erlpack cannot be used on this client");
+        tmp11 = new closure_0(closure_1[2])(obj, "Erlpack cannot be used on this client");
         tmp12 = tmp11;
         throw tmp11;
       } else {
@@ -67,19 +65,17 @@ prototype["send"] = function send(arg0) {
   if (onSendingToRPCClient != null) {
     onSendingToRPCClient(arg0, self.id);
   }
-  const items = [HANDSHAKEDefault.FRAME, arg0];
+  const items = [RPCOpcodesDefault.FRAME, arg0];
   const result = self.postMessageToRPCClient(items, self.source.origin);
 };
-prototype["close"] = function close(arg0, arg1) {
+prototype["close"] = function close(code, message) {
   const self = this;
   if (!this.closed) {
-    const obj = { code: null, message: null };
-    obj[0] = arg0;
-    obj[1] = arg1;
+    const obj = { code, message };
     self.postClose(self.source, obj, self.postMessageToRPCClient);
   }
   self.closed = true;
 };
-let result = set.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
+let result = size.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
 
 export default WindowProxySocket;

@@ -1,10 +1,10 @@
 // === Module 17715: useCreatorMonetizationIneligibleReasons ===
 
 // Module 17715 (useCreatorMonetizationIneligibleReasons)
-import set from "set" /* 2 */;
 import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 17687 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
+const result = size.fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationIneligibleReasons.tsx");
 
 export const useCreatorMonetizationIneligibleReasons = function useCreatorMonetizationIneligibleReasons(eligibility) {
   const obj = useCreatorMonetizationEligibilityItemsDefault(eligibility);

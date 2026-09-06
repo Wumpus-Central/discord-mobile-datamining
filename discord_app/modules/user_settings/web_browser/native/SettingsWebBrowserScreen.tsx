@@ -1,21 +1,25 @@
-// === Module 15477: ? ===
+// === Module 15477: SettingsWebBrowserScreen ===
 
-// Module 15477
-import _modDef14689 from "module_14689" /* 14689 */;
-import importAllResult from "noop" /* 19 */;
-import { MobileUserSettings } from "MobileUserSettings" /* 7975 */;
-import { jsx } from "jsxProd" /* 21 */;
+// Module 15477 (SettingsWebBrowserScreen)
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingLayoutDefault from "SettingLayout" /* 14689 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let c3 = importAllResult;
-const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
-  const node = importAllResult.useMemo(() => {
+require = fn;
+const MobileUserSettings = fn(7975).MobileUserSettings;
+const jsx = fn(21).jsx;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
+
+export default noop.memo(function SettingsWebBrowserScreen() {
+  const node = noop.useMemo(() => {
+    let obj = { sections: null };
+    obj = { settings: null };
     const items = [constants.SELECT_WEB_BROWSER];
-    const sections = [{ settings: items }];
-    return callback(table[3]).createList({ sections });
+    obj.settings = items;
+    const items1 = [obj];
+    obj.sections = items1;
+    return obj.createList(obj);
   }, []);
-  return jsx(_modDef14689, { node });
+  return jsx(SettingLayoutDefault, { node });
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
-
-export default memoResult;

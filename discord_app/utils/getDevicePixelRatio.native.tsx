@@ -1,11 +1,11 @@
 // === Module 1878: getDevicePixelRatio ===
 
 // Module 1878 (getDevicePixelRatio)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
+import size from "module_2" /* 2 */;
 
-const PixelRatio = get_ActivityIndicator.PixelRatio;
-const result = set.fileFinishedImporting("utils/getDevicePixelRatio.native.tsx");
+const PixelRatio = _mod17.PixelRatio;
+const result = size.fileFinishedImporting("utils/getDevicePixelRatio.native.tsx");
 
 export default function getDevicePixelRatio() {
   let num = PixelRatio.get();

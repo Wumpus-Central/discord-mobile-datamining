@@ -1,76 +1,64 @@
-// === Module 10074: ? ===
+// === Module 10074: ActiveSpeakerTooltip ===
 
-// Module 10074
-import ThemesDefault from "Themes" /* 576 */;
+// Module 10074 (ActiveSpeakerTooltip)
+import nativeDefault from "native" /* 576 */;
 import UserSummaryItemDefault from "UserSummaryItem" /* 10054 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4576 */;
-import importAllResult from "noop" /* 19 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 10045 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 
-const require = arg1;
-({ useActiveSpeakerPillScrollHandler: closure_6, useActiveSpeakerPillState: error } = require("useActiveSpeakerPillScrollHandler"));
-({ jsx: closure_8, jsxs: c9 } = jsxProd);
+const require = fn;
+const View = fn(17).View;
+const StageChannelListStore = fn(10045);
+({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+fn(4560);
 let obj = { container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" }, participantItemContainer: null, participantAvatarContainer: null, participantAvatarText: null, participantNameplateContainer: null, participantNameplateSpeakingText: null };
-obj = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round };
-obj[1] = obj;
-obj[2] = { alignItems: "center", justifyContent: "center" };
-createCacheKey = { fontSize: 12, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
-obj[3] = createCacheKey;
-obj[4] = { paddingHorizontal: 3, flexDirection: "row", alignItems: "center", justifyContent: "center" };
-obj[5] = { lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE };
-let closure_10 = createCacheKey.createStyles(obj);
-let obj2 = { lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE };
-const memoResult = importAllResult.memo((channel) => {
+obj = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round };
+obj.participantItemContainer = obj;
+obj.participantAvatarContainer = { alignItems: "center", justifyContent: "center" };
+const createStyles = { fontSize: 12, fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, lineHeight: 18 };
+obj.participantAvatarText = createStyles;
+obj.participantNameplateContainer = { paddingHorizontal: 3, flexDirection: "row", alignItems: "center", justifyContent: "center" };
+obj.participantNameplateSpeakingText = { lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE };
+let closure_10 = createStyles.createStyles(obj);
+let obj2 = { lineHeight: 18, color: nativeDefault.colors.TEXT_SUBTLE };
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx");
+
+export default noop.memo((channel) => {
   channel = channel.channel;
-  const tmp = callback5();
+  const tmp = closure_10();
   let obj = channel(504);
-  let items = [closure_5];
+  let items = [ChannelRTCStore];
   const items1 = [channel.id];
-  const first = callback(obj.useStateFromStores(items, () => {
-    const speakingParticipants = closure_1_5.getSpeakingParticipants(channel.id);
-    const items = [speakingParticipants.map((user) => user.user), closure_1_5.getParticipantsVersion(channel.id)];
+  const first = _slicedToArray(obj.useStateFromStores(items, () => {
+    const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
+    const items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
     return items;
   }, items1, channel(5432).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
-    if (callback(callback2(), 1)[0]) {
-      obj = { accessibilityRole: "button", style: null, onPress: null, children: null };
-      obj[1] = tmp.container;
-      obj[2] = tmp4;
-      obj = { style: null, children: null };
-      obj[0] = tmp.participantItemContainer;
-      obj1 = { style: null, children: null };
-      obj1[0] = tmp.participantAvatarContainer;
-      const obj2 = { namesStyle: null, users: null, withNames: true, channelId: null, guildId: null };
-      obj2[0] = tmp.participantAvatarText;
-      obj2[1] = first;
-      obj2[3] = channel.id;
-      obj2[4] = channel.getGuildId();
-      obj1[1] = callback3(UserSummaryItemDefault, obj2);
-      const items2 = [callback3(View, obj1), ];
-      const obj3 = { style: null, children: null };
-      obj3[0] = tmp.participantNameplateContainer;
-      const obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
-      obj4[0] = tmp.participantNameplateSpeakingText;
+    if (_slicedToArray(closure_7(), 1)[0]) {
+      obj = { accessibilityRole: "button", style: tmp.container, onPress: tmp4, children: null };
+      obj = { style: tmp.participantItemContainer, children: null };
+      const obj1 = { style: tmp.participantAvatarContainer, children: null };
+      const obj2 = { namesStyle: tmp.participantAvatarText, users: first, withNames: true, channelId: channel.id, guildId: channel.getGuildId() };
+      obj1.children = closure_8(UserSummaryItemDefault, obj2);
+      const items2 = [closure_8(View, obj1), ];
+      const obj3 = { style: tmp.participantNameplateContainer, children: null };
+      const obj4 = { style: tmp.participantNameplateSpeakingText, variant: "text-xs/medium", color: "text-default", children: null };
       const intl = tmp2(1114).intl;
-      const obj5 = { count: null };
-      obj5[0] = first.length;
-      obj4[3] = intl.format(tmp2(1114).t["+dia6l"], obj5);
-      obj3[1] = callback3(tmp2(4556).Text, obj4);
-      items2[1] = callback3(View, obj3);
-      obj[1] = items2;
-      obj[3] = callback4(View, obj);
-      tmp5 = callback3(tmp2(5123).PressableOpacity, obj);
-      const tmp10 = UserSummaryItemDefault;
+      const obj5 = { count: first.length };
+      obj4.children = intl.format(tmp2(1114).t["+dia6l"], obj5);
+      obj3.children = closure_8(tmp2(4556).Text, obj4);
+      items2[1] = closure_8(View, obj3);
+      obj.children = items2;
+      obj.children = closure_9(View, obj);
+      tmp5 = closure_8(tmp2(5123).PressableOpacity, obj);
     }
   }
   return tmp5;
 });
-const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ActiveSpeakerTooltip.tsx");
-
-export default memoResult;

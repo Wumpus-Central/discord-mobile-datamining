@@ -1,9 +1,9 @@
-// === Module 17275: FORMAT_RE ===
+// === Module 17275: Constants ===
 
-// Module 17275 (FORMAT_RE)
-import set from "set" /* 2 */;
+// Module 17275 (Constants)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");
+const result = size.fileFinishedImporting("../discord_common/js/packages/i18n/Constants.tsx");
 
 export const FORMAT_RE = /\{.+?\}/;
 export const MARKDOWN_RE = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/;

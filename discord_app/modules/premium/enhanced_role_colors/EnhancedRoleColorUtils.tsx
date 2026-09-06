@@ -1,33 +1,31 @@
-// === Module 2018: extractColorStringsFromServerColors ===
+// === Module 2018: EnhancedRoleColorUtils ===
 
-// Module 2018 (extractColorStringsFromServerColors)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import int2hslRaw from "int2hslRaw" /* 1091 */;
+// Module 2018 (EnhancedRoleColorUtils)
+import Constants from "Constants" /* 1074 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import size from "module_2" /* 2 */;
 
-const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;
-const result = set.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
+const DEFAULT_ROLE_COLOR_HEX = Constants.DEFAULT_ROLE_COLOR_HEX;
+const result = size.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
 
 export const extractColorStringsFromServerColors = function extractColorStringsFromServerColors(colors) {
   if (0 === colors.primary_color) {
     let int2hexResult = DEFAULT_ROLE_COLOR_HEX;
   } else {
-    let obj = int2hslRaw;
+    let obj = utils_ColorUtils;
     int2hexResult = obj.int2hex(colors.primary_color);
   }
   obj = { primaryColor: int2hexResult, secondaryColor: null, tertiaryColor: null };
   let int2hexResult1 = null;
   if (null != colors.secondary_color) {
-    int2hexResult1 = int2hslRaw.int2hex(colors.secondary_color);
-    const obj3 = int2hslRaw;
+    int2hexResult1 = utils_ColorUtils.int2hex(colors.secondary_color);
   }
-  obj[1] = int2hexResult1;
+  obj.secondaryColor = int2hexResult1;
   let int2hexResult2 = null;
   if (null != colors.tertiary_color) {
-    int2hexResult2 = int2hslRaw.int2hex(colors.tertiary_color);
-    const obj4 = int2hslRaw;
+    int2hexResult2 = utils_ColorUtils.int2hex(colors.tertiary_color);
   }
-  obj[2] = int2hexResult2;
+  obj.tertiaryColor = int2hexResult2;
   return obj;
 };
 export const getAuthorHasGradientRole = function getAuthorHasGradientRole(colorStrings) {

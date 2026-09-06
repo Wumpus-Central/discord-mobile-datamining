@@ -1,16 +1,16 @@
 // === Module 15240: EmojiIcon ===
 
 // Module 15240 (EmojiIcon)
-import noopAll from "noop" /* 19 */;
-import preloadDefault from "preload" /* 5587 */;
+import FastImageDefault from "FastImage" /* 5587 */;
 import EmojiDefault from "Emoji" /* 7130 */;
-import registerAssetDefault from "registerAsset" /* 10302 */;
+import _modDef10302 from "module_10302" /* 10302 */;
 import useEmojiByIdOrName from "useEmojiByIdOrName" /* 15241 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
+require = fn;
+const jsx = fn(21).jsx;
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
 
 export default function EmojiIcon(size) {
   let num = size.size;
@@ -32,29 +32,21 @@ export default function EmojiIcon(size) {
     let tmp4 = null;
     if (flag) {
       obj = { resizeMode: "contain", style: null, source: null };
-      obj = { width: null, height: null };
-      obj[0] = num;
-      obj[1] = num;
-      obj[1] = obj;
-      obj[2] = registerAssetDefault;
-      tmp4 = jsx(preloadDefault, { width: null, height: null });
-      const tmp7 = preloadDefault;
+      size = { width: num, height: num };
+      obj.style = size;
+      obj.source = _modDef10302;
+      tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
     }
     let tmp8Result = tmp4;
   } else {
-    obj1 = { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
-    obj1[0] = size.style;
-    const obj2 = { width: null, height: null };
-    obj2[0] = num;
-    obj2[1] = num;
-    obj1[1] = obj2;
+    obj = { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+    const size1 = { width: num, height: num };
+    obj.fastImageStyle = size1;
     if (fontSize == null) {
       fontSize = num;
     }
-    const obj3 = { fontSize: null, lineHeight: null };
-    obj3[0] = fontSize;
-    obj3[1] = lineHeight;
-    obj1[2] = obj3;
+    const obj1 = { fontSize, lineHeight };
+    obj.textEmojiStyle = obj1;
     if (null != emojiByIdOrName.id) {
       let str = emojiByIdOrName.name;
     } else {
@@ -66,20 +58,18 @@ export default function EmojiIcon(size) {
         str = "";
       }
     }
-    obj1[3] = str;
+    obj.name = str;
     if (null != emojiByIdOrName.id) {
-      const obj4 = { id: null, animated: null, size: null };
-      ({ id: obj4[0], animated: obj4[1] } = emojiByIdOrName);
-      obj4[2] = num;
-      let url = tmp9(1396).getEmojiURL(obj4);
+      const obj2 = { id: null, animated: null, size: null };
+      ({ id: obj4.id, animated: obj4.animated } = emojiByIdOrName);
+      obj2.size = num;
+      let url = tmp9(1396).getEmojiURL(obj2);
       const tmp9Result = tmp9(1396);
     } else {
       url = emojiByIdOrName.url;
     }
-    obj1[4] = url;
-    tmp8Result = jsx(EmojiDefault, { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
-    const tmp10 = EmojiDefault;
-    const tmp8 = jsx;
+    obj.src = url;
+    tmp8Result = jsx(EmojiDefault, { style: size.style, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
     tmp9 = importDefault;
   }
   return tmp8Result;

@@ -1,32 +1,32 @@
-// === Module 15265: route ===
+// === Module 15265: AppearanceThemePickerSetting ===
 
-// Module 15265 (route)
+// Module 15265 (AppearanceThemePickerSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "handleThemeChange" /* 1183 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import ThemeStore from "ThemeStore" /* 1183 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.Ksh3ik);
+    const intl = util.intl;
+    return intl.string(util.t.Ksh3ik);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: fn(7975).MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
-    const items = [closure_2];
+    const items = [ThemeStore];
     return !initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
-  useTrailing: require("useAppearanceSettingTrailing").useAppearanceSettingTrailing,
-  screen: createToggle
-};
-createToggle = {
-  route: require("ME").UserSettingsSections.APPEARANCE_THEME_PICKER,
-  getComponent() {
-    return require(15266) /* ThemeTypes */.default;
+  useTrailing: fn(15261).useAppearanceSettingTrailing,
+  screen: {
+    route: fn(1074).UserSettingsSections.APPEARANCE_THEME_PICKER,
+    getComponent() {
+      return require("SettingsAppearanceThemePickerScreen").default;
+    }
   }
 };
-createToggle = createToggle.createRoute(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
+SettingBuilders = SettingBuilders.createRoute(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

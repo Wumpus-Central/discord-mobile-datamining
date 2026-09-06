@@ -1,215 +1,169 @@
-// === Module 2006: _tryLoadAsync ===
+// === Module 2006: TryLoad ===
 
-// Module 2006 (_tryLoadAsync)
-import timestampDefault from "timestamp" /* 3 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+// Module 2006 (TryLoad)
+import LoggerDefault from "Logger" /* 3 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function _tryLoadAsync() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    c4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
+let closure_4 = async function _tryLoadAsync(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
+        if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp3;
+          closure_1 = tmp7;
+          c4 = 1;
+          c5 = 2;
+          c6 = 1;
+          const obj1 = { value: importDefault(), done: false };
+          return obj1;
+        }
+      } else if (1 === tmp7) {
+        c4 = 0;
+        closure_129_0 = closure_3;
+        closure_130_3.log("database load failed.", closure_129_0);
         c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c6 = 3;
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        c4 = 0;
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp16) {
+      closure_3 = tmp16;
+      if (tmp4 === c4) {
+        c6 = tmp2;
+        throw tmp16;
+      } else {
+        c5 = tmp;
+      }
+    }
+  }
+};
+let closure_5 = async function _tryLoadOrResetCacheGatewayAsync(arg0, value) {
+  if (c9 === 2) {
+    c9 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c9 = 2;
+      if (0 === c8) {
         if (arg0 === 1) {
-          throw arg1;
+          c9 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c9 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_5 = tmp3;
+          closure_4 = tmp5;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_2;
+          c7 = 1;
+          c8 = 2;
+          c9 = 1;
+          const obj1 = { value: dependencyMap(), done: false };
+          return obj1;
         }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_2 = tmp3;
-              closure_1 = tmp7;
-              c4 = 1;
-              c5 = 2;
-              c6 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = callback();
-              return obj1;
-            }
-          } else if (1 === tmp7) {
-            c4 = 0;
-            callback = logger;
-            logger.log("database load failed.", callback);
-            c6 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
-            return obj2;
-          } else {
-            c4 = 0;
-            c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp16) {
-          logger = tmp16;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp16;
-          } else {
-            c5 = tmp;
-          }
+      } else if (1 === tmp8) {
+        c7 = 0;
+        closure_132_2 = closure_6;
+        const _HermesInternal = HermesInternal;
+        closure_133_3.log("" + closure_132_0 + ": exception thrown, resetting socket.", closure_132_2, closure_132_2.stack);
+        let obj2 = closure_133_0(closure_133_1[2]);
+        obj2 = { error: closure_132_2, action: null, metricAction: null };
+        const _HermesInternal2 = HermesInternal;
+        obj2.action = "tryLoadOrResetCacheGatewayAsync (" + closure_132_0 + ")";
+        closure_3 = closure_132_1;
+        if (closure_132_1 == null) {
+          closure_3 = closure_132_0;
         }
-      }
-    })();
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _tryLoadOrResetCacheGatewayAsync() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c8 = 0;
-    c9 = 0;
-    c7 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c9 === 2) {
+        const obj3 = { type: "RESET_SOCKET", args: null };
+        const _HermesInternal3 = HermesInternal;
+        obj2.metricAction = "tryLoadOrResetCacheGatewayAsync (" + closure_3 + ")";
+        obj3.args = obj2;
+        obj2.dispatch(obj3);
         c9 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+        return { value: null, done: true };
+      } else if (arg0 === 1) {
+        c9 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 0;
+        c9 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
       } else {
-        try {
-          c9 = 2;
-          if (0 === c8) {
-            if (arg0 === 1) {
-              c9 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c9 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_5 = tmp3;
-              closure_4 = tmp5;
-              dependencyMap = stack;
-              c7 = 1;
-              c8 = 2;
-              c9 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = dependencyMap();
-              return obj1;
-            }
-          } else if (1 === tmp8) {
-            c7 = 0;
-            stack = closure_6;
-            const _HermesInternal = HermesInternal;
-            logger.log("" + callback + ": exception thrown, resetting socket.", stack, stack.stack);
-            let obj2 = callback(573);
-            obj2 = { error: null, action: null, metricAction: null };
-            obj2[0] = stack;
-            const _HermesInternal2 = HermesInternal;
-            obj2[1] = "tryLoadOrResetCacheGatewayAsync (" + callback + ")";
-            logger = dependencyMap;
-            if (dependencyMap == null) {
-              logger = callback;
-            }
-            const obj3 = { type: "RESET_SOCKET", args: null };
-            const _HermesInternal3 = HermesInternal;
-            obj2[2] = "tryLoadOrResetCacheGatewayAsync (" + logger + ")";
-            obj3[1] = obj2;
-            obj2.dispatch(obj3);
-            c9 = 3;
-            return { value: null, done: true };
-          } else if (arg0 === 1) {
-            c9 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 0;
-            c9 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
-            return obj4;
-          } else {
-            c7 = 0;
-            c9 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          }
-        } catch (tmp29) {
-          closure_6 = tmp29;
-          if (tmp4 === c7) {
-            c9 = tmp2;
-            throw tmp29;
-          } else {
-            c8 = tmp;
-          }
-        }
+        c7 = 0;
+        c9 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_5 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp29) {
+      closure_6 = tmp29;
+      if (tmp4 === c7) {
+        c9 = tmp2;
+        throw tmp29;
+      } else {
+        c8 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-let closure_3 = new timestampDefault("TryLoad");
-const tmp2 = new timestampDefault("TryLoad");
-const result = require("set").fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
+};
+const logger = new LoggerDefault("TryLoad");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
 
-export const tryLoad = function tryLoad(arg0) {
+export const tryLoad = function tryLoad(fn) {
   try {
-    return arg0();
+    return fn();
   } catch (tmp2) {
     logger.log("database load failed.", tmp2);
     return null;
   }
 };
-export const tryLoadAsync = function tryLoadAsync(arg0) {
+export const tryLoadAsync = function tryLoadAsync() {
   const self = this;
-  const apply = _tryLoadAsync.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -217,32 +171,31 @@ export const tryLoadAsync = function tryLoadAsync(arg0) {
   }
   return applyArgumentsResult;
 };
-export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(arg0, arg1, ensureGuildLoaded) {
+export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(arg0, fn, ensureGuildLoaded) {
   try {
-    return arg1();
+    return fn();
   } catch (tmp2) {
     let tmp4 = ensureGuildLoaded;
     const _HermesInternal = HermesInternal;
     logger.log("" + arg0 + ": exception thrown, resetting socket.", tmp2, tmp2.stack);
-    let obj = dispatcherDefault;
-    obj = { error: null, action: null, metricAction: null };
-    obj[0] = tmp2;
+    let obj = DispatcherDefault;
+    obj = { error: tmp2, action: null, metricAction: null };
     const _HermesInternal2 = HermesInternal;
-    obj[1] = "tryLoadOrResetCacheGateway (" + arg0 + ")";
+    obj.action = "tryLoadOrResetCacheGateway (" + arg0 + ")";
     if (ensureGuildLoaded == null) {
       tmp4 = arg0;
     }
     obj = { type: "RESET_SOCKET", args: null };
     const _HermesInternal3 = HermesInternal;
-    obj[2] = "tryLoadOrResetCacheGateway (" + tmp4 + ")";
-    obj[1] = obj;
+    obj.metricAction = "tryLoadOrResetCacheGateway (" + tmp4 + ")";
+    obj.args = obj;
     obj.dispatch(obj);
     return null;
   }
 };
-export const tryLoadOrResetCacheGatewayAsync = function tryLoadOrResetCacheGatewayAsync(loadChannels, arg1) {
+export const tryLoadOrResetCacheGatewayAsync = function tryLoadOrResetCacheGatewayAsync() {
   const self = this;
-  const apply = _tryLoadOrResetCacheGatewayAsync.apply;
+  const apply = closure_5.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

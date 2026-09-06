@@ -1,35 +1,33 @@
 // === Module 10856: LockedRecipientField ===
 
 // Module 10856 (LockedRecipientField)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import nameFromUserDefault from "nameFromUser" /* 4404 */;
-import Text from "Text" /* 4556 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import UserUtilsDefault from "UserUtils" /* 4404 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { container: null, avatar: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_16 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginEnd: ThemesDefault.space.PX_8 };
-let closure_6 = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginEnd: ThemesDefault.space.PX_8 };
-const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/LockedRecipientField.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+fn(4560);
+let createStyles = { container: null, avatar: null };
+createStyles = { flexDirection: "row", alignItems: "center", marginLeft: nativeDefault.space.PX_16 };
+createStyles.container = createStyles;
+createStyles.avatar = { marginEnd: nativeDefault.space.PX_8 };
+let closure_6 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/checkout/native/gifting/LockedRecipientField.tsx");
 
 export default function LockedRecipientField(user) {
   user = user.user;
-  const tmp = callback3();
+  const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.avatar, user, guildId: "Array", size: false };
-  obj[3] = Button.AvatarSizes.NORMAL;
-  const items = [callback(Button.Avatar, obj), ];
-  obj = { variant: "text-md/semibold", children: nameFromUserDefault.getName(user) };
-  items[1] = callback(Text.Text, obj);
-  obj[1] = items;
-  return callback2(View, obj);
+  obj = { style: tmp.avatar, user, guildId: "Array", size: native.AvatarSizes.NORMAL };
+  const items = [React4(native.Avatar, obj), ];
+  obj = { variant: "text-md/semibold", children: UserUtilsDefault.getName(user) };
+  items[1] = React4(Text_Text.Text, obj);
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 };

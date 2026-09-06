@@ -1,79 +1,72 @@
 // === Module 9805: EndEventActionSheet ===
 
 // Module 9805 (EndEventActionSheet)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1963 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import CallsUtils from "CallsUtils" /* 9082 */;
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9703 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopAll;
-({ jsx: c5, jsxs: closure_6 } = jsxProd);
-createCacheKey = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: null, subtitle: null, cancelButtonContainer: null, confirmButtonContainer: null };
-createCacheKey = { fontSize: 24, fontFamily: require("ME").Fonts.PRIMARY_BOLD, textAlign: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginTop: 8, textAlign: "center" };
-createCacheKey[3] = { marginTop: 24, alignSelf: "stretch" };
-createCacheKey[4] = { marginTop: 8, alignSelf: "stretch" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EndEventActionSheet.tsx");
+require = fn;
+const View = fn(17).View;
+let closure_4 = fn(1963).EXPLICIT_END_EVENT_SHEET_KEY;
+const jsxProd = fn(21);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+fn(4560);
+let createStyles = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: null, subtitle: null, cancelButtonContainer: null, confirmButtonContainer: null };
+createStyles = { fontSize: 24, fontFamily: fn(1074).Fonts.PRIMARY_BOLD, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createStyles.title = createStyles;
+createStyles.subtitle = { marginTop: 8, textAlign: "center" };
+createStyles.cancelButtonContainer = { marginTop: 24, alignSelf: "stretch" };
+createStyles.confirmButtonContainer = { marginTop: 8, alignSelf: "stretch" };
+let closure_7 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EndEventActionSheet.tsx");
 
 export default function EndEventActionSheet(channel) {
   channel = channel.channel;
-  let activeEvent;
-  const tmp = callback3();
+  const tmp = closure_7();
   let obj = channel(9662);
-  activeEvent = obj.useActiveEvent(channel.id);
+  const activeEvent = obj.useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
   } else {
     function handleClose() {
-      activeEvent(closure_1_2[8]).hideActionSheet(closure_1_4);
-      const obj = activeEvent(closure_1_2[8]);
-      channel(closure_1_2[9]).handleDisconnect(channel);
+      ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
+      CallsUtils.handleDisconnect(channel);
     }
     obj = { children: null };
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
-    obj1 = { style: null, accessibilityRole: "header", children: null };
-    obj1[0] = tmp.title;
+    obj = { style: tmp.container, children: null };
+    const obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
     const intl = tmp2(1114).intl;
-    obj1[2] = intl.string(tmp2(1114).t["4Ao8LC"]);
-    const items = [callback(tmp2(1178).LegacyText, obj1), , , ];
-    let obj2 = { style: null, variant: "text-md/medium", color: "text-default", children: null };
-    obj2[0] = tmp.subtitle;
+    obj1.children = intl.string(tmp2(1114).t["4Ao8LC"]);
+    const items = [closure_5(tmp2(1178).LegacyText, obj1), , , ];
+    let obj2 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
     const intl2 = tmp2(1114).intl;
-    obj2[3] = intl2.string(tmp2(1114).t["0I0B8f"]);
-    items[1] = callback(tmp2(4556).Text, obj2);
-    let obj3 = { style: null, children: null };
-    obj3[0] = tmp.cancelButtonContainer;
+    obj2.children = intl2.string(tmp2(1114).t["0I0B8f"]);
+    items[1] = closure_5(tmp2(4556).Text, obj2);
+    let obj3 = { style: tmp.cancelButtonContainer, children: null };
     const obj4 = { text: null, grow: true, onPress: null };
     const intl3 = tmp2(1114).intl;
-    obj4[0] = intl3.string(tmp2(1114).t.P60OAX);
-    obj4[2] = handleClose;
-    obj3[1] = callback(tmp2(4975).Button, obj4);
-    items[2] = callback(View, obj3);
-    const obj5 = { style: null, children: null };
-    obj5[0] = tmp.confirmButtonContainer;
+    obj4.text = intl3.string(tmp2(1114).t.P60OAX);
+    obj4.onPress = handleClose;
+    obj3.children = closure_5(tmp2(4975).Button, obj4);
+    items[2] = closure_5(View, obj3);
+    const obj5 = { style: tmp.confirmButtonContainer, children: null };
     const obj6 = { text: null, variant: "destructive", grow: true, onPress: null };
     const intl4 = tmp2(1114).intl;
-    obj6[0] = intl4.string(tmp2(1114).t.mjB9pd);
-    obj6[3] = function onPress() {
+    obj6.text = intl4.string(tmp2(1114).t.mjB9pd);
+    obj6.onPress = function onPress() {
       if (null != activeEvent) {
-        activeEvent(closure_1_2[15]).endEvent(tmp.id, tmp.guild_id);
-        const obj = activeEvent(closure_1_2[15]);
-        activeEvent(closure_1_2[8]).hideActionSheet(closure_1_4);
-        const obj2 = activeEvent(closure_1_2[8]);
-        channel(closure_1_2[9]).handleDisconnect(channel);
-        const obj3 = channel(closure_1_2[9]);
+        GuildScheduledEventsActionCreatorsDefault.endEvent(tmp.id, tmp.guild_id);
+        ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
+        CallsUtils.handleDisconnect(channel);
       }
     };
-    obj5[1] = callback(tmp2(4975).Button, obj6);
-    items[3] = callback(View, obj5);
-    obj[1] = items;
-    obj[0] = callback2(View, obj);
-    return callback(activeEvent(8591), obj);
+    obj5.children = closure_5(tmp2(4975).Button, obj6);
+    items[3] = closure_5(View, obj5);
+    obj.children = items;
+    obj.children = closure_6(View, obj);
+    return closure_5(activeEvent(8591), obj);
   }
 };

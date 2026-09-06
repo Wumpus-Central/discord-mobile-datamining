@@ -1,26 +1,27 @@
-// === Module 15471: toggle ===
+// === Module 15471: TextAndMediaSyncSetting ===
 
-// Module 15471 (toggle)
+// Module 15471 (TextAndMediaSyncSetting)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import saveGuildFoldersDefault from "saveGuildFolders" /* 9358 */;
-import closure_2 from "initialize" /* 1184 */;
-import createToggle from "createToggle" /* 11468 */;
+import util from "util" /* 1114 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9358 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 
-require = arg1;
-createToggle = {
+require = fn;
+fn(11468);
+let SettingBuilders = {
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["3340dY"]);
+    const intl = util.intl;
+    return intl.string(util.t["3340dY"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: fn(7975).MobileUserSettings.CHAT,
   useValue: function useTextAndMediaSyncSettingValue() {
-    const items = [closure_2];
-    return initialize.useStateFromStores(items, () => closure_2.shouldSync("text"));
+    const items = [SelectivelySyncedUserSettingsStore];
+    return initialize.useStateFromStores(items, () => SelectivelySyncedUserSettingsStore.shouldSync("text"));
   },
-  onValueChange: saveGuildFoldersDefault.setShouldSyncTextSettings
+  onValueChange: UserSettingsActionCreatorsDefault.setShouldSyncTextSettings
 };
-createToggle = createToggle.createToggle(createToggle);
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx");
+SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/TextAndMediaSyncSetting.tsx");
 
-export default createToggle;
+export default SettingBuilders;

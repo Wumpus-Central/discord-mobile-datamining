@@ -1,39 +1,38 @@
 // === Module 13876: useActivateDeviceStepTracking ===
 
 // Module 13876 (useActivateDeviceStepTracking)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import usePreviousDefault from "usePrevious" /* 8272 */;
-import closure_3 from "noop" /* 19 */;
-import { AnalyticEvents } from "ME" /* 1074 */;
+import ActivateDeviceUtils from "ActivateDeviceUtils" /* 13877 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let result = require("set").fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
+require = fn;
+const AnalyticEvents = fn(1074).AnalyticEvents;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/activate_device/useActivateDeviceStepTracking.tsx");
 
-export const useActivateDeviceStepTracking = function useActivateDeviceStepTracking(first) {
-  closure_0 = first;
-  const tmp = usePreviousDefault(first);
+export const useActivateDeviceStepTracking = function useActivateDeviceStepTracking(arg0) {
+  closure_0 = arg0;
+  const tmp = usePreviousDefault(arg0);
   importDefault = tmp;
-  const items = [tmp, first];
-  const effect = React.useEffect(() => {
-    if (callback !== callback2) {
+  const items = [tmp, arg0];
+  const effect = noop.useEffect(() => {
+    if (closure_0 !== closure_1) {
       let tmp3 = "user-code-input" !== tmp.type;
       if (tmp3) {
         tmp3 = "handoff" !== tmp.type;
       }
       let result = null;
       if (tmp3) {
-        let obj = callback(closure_1_2[3]);
+        let obj = ActivateDeviceUtils;
         result = obj.clientIdToActivateDevicePlatform(tmp.userCodeData.clientId);
       }
       let type;
       if (tmp2 != null) {
         type = tmp2.type;
       }
-      obj = { previous_step: null, current_step: null, platform_type: null };
-      obj[0] = type;
-      obj[1] = tmp.type;
-      obj[2] = result;
-      callback2(closure_1_2[4]).track(closure_1_4.DEVICE_LINK_STEP, obj);
-      const obj2 = callback2(closure_1_2[4]);
+      obj = { previous_step: type, current_step: tmp.type, platform_type: result };
+      AnalyticsUtilsDefault.track(AnalyticEvents.DEVICE_LINK_STEP, obj);
     }
   }, items);
 };

@@ -1,35 +1,37 @@
 // === Module 11220: NameplatePreview ===
 
 // Module 11220 (NameplatePreview)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_6 from "trackCommunicationDisabled" /* 2021 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles((arg0) => {
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
-    num = ThemesDefault.radii.sm;
+    num = nativeDefault.radii.sm;
   }
   let obj = { container: null, nameplate: null, avatar: null, content: null };
-  obj = { borderRadius: num, padding: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
-  obj[0] = obj;
+  obj = { borderRadius: num, padding: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center", width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
+  obj.container = obj;
   let num2 = 0;
   if (arg0) {
     num2 = tmp3(576).radii.sm;
   }
-  obj[1] = { borderRadius: num2 };
+  obj.nameplate = { borderRadius: num2 };
   obj = { borderRadius: tmp3(576).radii.round, marginRight: tmp3(576).space.PX_8 };
-  obj[2] = obj;
-  obj[3] = { flex: 1, paddingRight: ThemesDefault.space.PX_40 };
+  obj.avatar = obj;
+  obj.content = { flex: 1, paddingRight: nativeDefault.space.PX_40 };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplatePreview.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/nameplates/native/NameplatePreview.tsx");
 
 export const NameplatePreview = function NameplatePreview(aria_hidden) {
   ({ nameplate, nameplateData, user } = aria_hidden);
@@ -43,29 +45,28 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   }
   const guildId = aria_hidden.guildId;
   ({ pendingDisplayNameStyles, pendingGlobalName } = aria_hidden);
-  dependencyMap = undefined;
   let stateFromStores;
   let pendingAvatarDecoration;
-  const tmp = callback2(flag);
+  const tmp = closure_9(flag);
   dependencyMap = tmp;
   if (null != nameplate) {
     let obj = user(1886);
     nameplateData = obj.getNameplateData(nameplate);
   }
-  obj1 = user(8217);
+  let obj1 = user(8217);
   const avatarDecoration = obj1.useAvatarDecoration(user, guildId);
   pendingAvatarDecoration = guildId(8159)({ guildId }).pendingAvatarDecoration;
   let obj2 = user(504);
-  const items = [closure_5];
+  const items = [AccessibilityStore];
   stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj3 = user(504);
-  const items1 = [closure_6];
+  const items1 = [GuildMemberStore];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => {
     let member = null;
     if (null != guildId) {
       member = null;
       if (null != user) {
-        member = closure_1_6.getMember(tmp, tmp3.id);
+        member = GuildMemberStore.getMember(tmp, tmp3.id);
       }
     }
     return member;
@@ -99,33 +100,27 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   const tmp15 = guildId(4794)(obj);
   const items2 = [tmp.avatar, user, guildId, tmp14, stateFromStores];
   obj = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
-  const memo = stateFromStores.useMemo(() => closure_1_7(user(user[13]).Avatar, { style: user.avatar, user, guildId, size: user(user[13]).AvatarSizes.NORMAL, avatarDecoration: pendingAvatarDecoration, animate: !stateFromStores, autoStatusCutout: true, "aria-hidden": true }), items2);
+  const memo = stateFromStores.useMemo(() => React5(native.Avatar, { style: user.avatar, user, guildId, size: native.AvatarSizes.NORMAL, avatarDecoration: pendingAvatarDecoration, animate: !stateFromStores, autoStatusCutout: true, "aria-hidden": true }), items2);
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
-  const items3 = [callback(guildId(8818), obj1), , ];
+  const items3 = [closure_7(guildId(8818), obj1), , ];
   obj2 = { style: tmp.avatar, children: memo };
-  items3[1] = callback(pendingAvatarDecoration, obj2);
+  items3[1] = closure_7(pendingAvatarDecoration, obj2);
   obj3 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
-    obj4 = { userId: null, guildId: null, userName: null, variant: "text-md/semibold", effectDisplayType: null, lineClamp: 1, pendingDisplayNameStyles: null };
-    obj4[0] = user.id;
-    obj4[1] = guildId;
-    obj4[2] = pendingGlobalName;
-    obj4[4] = tmp4(10900).EffectDisplayType.STATIC;
-    obj4[6] = pendingDisplayNameStyles;
+    obj4 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: tmp4(10900).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
     tmp19Result = tmp19(tmp7(10899), obj4);
     const tmp7Result = tmp7(10899);
   }
   const items4 = [tmp19Result, ];
   tmp19Result = null == tmp15;
   if (tmp19Result) {
-    const obj5 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-    obj5[3] = pendingGlobalName;
+    const obj5 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: pendingGlobalName };
     tmp19Result = tmp19(tmp4(4556).Text, obj5);
   }
   items4[1] = tmp19Result;
-  obj3[1] = items4;
+  obj3.children = items4;
   items3[2] = closure_8(pendingAvatarDecoration, obj3);
-  obj[2] = items3;
+  obj.children = items3;
   return closure_8(pendingAvatarDecoration, obj);
 };

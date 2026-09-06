@@ -1,23 +1,23 @@
-// === Module 15493: toggle ===
+// === Module 15493: AndroidNotificationVibrationsSetting ===
 
-// Module 15493 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import set2 from "set" /* 1115 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import hasAndroidNotificationChannels from "hasAndroidNotificationChannels" /* 15482 */;
-import _initializeAndroidNotificationSettingsStore from "_initializeAndroidNotificationSettingsStore" /* 15480 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15493 (AndroidNotificationVibrationsSetting)
+import util from "util" /* 1114 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15480 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-({ useAndroidNotificationVibrationsEnabled: obj1, setAndroidNotificationVibrationsEnabled } = _initializeAndroidNotificationSettingsStore);
-const toggle = createToggle.createToggle({
+const SettingsNotificationUtils = tmp2(15482);
+({ useAndroidNotificationVibrationsEnabled: c2, setAndroidNotificationVibrationsEnabled } = AndroidNotificationSettingsStore);
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["lFg/O1"]);
+    const intl = util.intl;
+    return intl.string(util.t["lFg/O1"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  parent: SettingsConstants.MobileUserSettings.NOTIFICATIONS,
   useValue: function useAndroidNotificationVibrationsSettingValue() {
-    let flag = callback();
+    let flag = React2();
     if (flag == null) {
       flag = false;
     }
@@ -25,13 +25,12 @@ const toggle = createToggle.createToggle({
   },
   onValueChange: setAndroidNotificationVibrationsEnabled,
   usePredicate: function useHasAndroidNotificationVibrationsSetting() {
-    const tmp = callback();
-    const tmp2 = require;
-    const isIOSResult = set2.isIOS();
+    const tmp = React2();
+    const isIOSResult = PlatformUtils.isIOS();
     let tmp5 = !isIOSResult;
     if (!isIOSResult) {
-      tmp5 = !hasAndroidNotificationChannels.hasAndroidNotificationChannels();
-      const tmp2Result = hasAndroidNotificationChannels;
+      tmp5 = !SettingsNotificationUtils.hasAndroidNotificationChannels();
+      const tmp2Result = SettingsNotificationUtils;
     }
     if (tmp5) {
       tmp5 = null != tmp;
@@ -39,35 +38,6 @@ const toggle = createToggle.createToggle({
     return tmp5;
   }
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["lFg/O1"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
-  useValue: function useAndroidNotificationVibrationsSettingValue() {
-    let flag = callback();
-    if (flag == null) {
-      flag = false;
-    }
-    return flag;
-  },
-  onValueChange: setAndroidNotificationVibrationsEnabled,
-  usePredicate: function useHasAndroidNotificationVibrationsSetting() {
-    const tmp = callback();
-    const tmp2 = require;
-    const isIOSResult = set2.isIOS();
-    let tmp5 = !isIOSResult;
-    if (!isIOSResult) {
-      tmp5 = !hasAndroidNotificationChannels.hasAndroidNotificationChannels();
-      const tmp2Result = hasAndroidNotificationChannels;
-    }
-    if (tmp5) {
-      tmp5 = null != tmp;
-    }
-    return tmp5;
-  }
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationVibrationsSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/AndroidNotificationVibrationsSetting.tsx");
 
 export default toggle;

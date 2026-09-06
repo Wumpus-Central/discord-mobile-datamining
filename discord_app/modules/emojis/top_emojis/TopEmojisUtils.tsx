@@ -1,27 +1,27 @@
-// === Module 10278: maybeFetchTopEmojisByGuild ===
+// === Module 10278: TopEmojisUtils ===
 
-// Module 10278 (maybeFetchTopEmojisByGuild)
-import fetchTopEmojis from "fetchTopEmojis" /* 10279 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import closure_3 from "getEmojiToGroupId" /* 5459 */;
-import closure_4 from "initialize" /* 5462 */;
+// Module 10278 (TopEmojisUtils)
+import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10279 */;
+import UserStore from "UserStore" /* 1371 */;
+import EmojiStore from "EmojiStore" /* 5459 */;
+import TopEmojiStore from "TopEmojiStore" /* 5462 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
 
 export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(guildId) {
   if (null != guildId) {
-    if (null != currentUser.getCurrentUser()) {
-      topEmojisMetadata = topEmojisMetadata.getTopEmojisMetadata(guildId);
+    if (null != UserStore.getCurrentUser()) {
+      const topEmojisMetadata = EmojiStore.getTopEmojisMetadata(guildId);
       if (null != topEmojisMetadata) {
         const topEmojisTTL = topEmojisMetadata.topEmojisTTL;
         if (null != topEmojisTTL) {
           const _Date = Date;
         }
       }
-      if (!isFetching.getIsFetching(guildId)) {
-        const topEmojis = fetchTopEmojis.fetchTopEmojis(guildId);
-        const obj = fetchTopEmojis;
+      if (!TopEmojiStore.getIsFetching(guildId)) {
+        const topEmojis = TopEmojisActionCreators.fetchTopEmojis(guildId);
       }
     }
   }

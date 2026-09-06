@@ -1,28 +1,26 @@
-// === Module 14991: route ===
+// === Module 14991: PremiumGuildBoostingSetting ===
 
-// Module 14991 (route)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+// Module 14991 (PremiumGuildBoostingSetting)
+import Constants from "Constants" /* 1074 */;
+import util from "util" /* 1114 */;
 import BoostGemIcon from "BoostGemIcon" /* 9375 */;
-import createToggle from "createToggle" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-obj = {
+const route = SettingBuilders.createRoute({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t["+CbP2v"]);
+    const intl = util.intl;
+    return intl.string(util.t["+CbP2v"]);
   },
   parent: null,
   IconComponent: BoostGemIcon.BoostGemIcon,
-  screen: obj
-};
-obj = {
-  route: ME.UserSettingsSections.GUILD_BOOSTING,
-  getComponent() {
-    return require(13500) /* componentDidMount */.default;
+  screen: {
+    route: Constants.UserSettingsSections.GUILD_BOOSTING,
+    getComponent() {
+      return require("UserSettingsPremiumGuildSubscriptions").default;
+    }
   }
-};
-const route = createToggle.createRoute(obj);
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
+});
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
 
 export default route;

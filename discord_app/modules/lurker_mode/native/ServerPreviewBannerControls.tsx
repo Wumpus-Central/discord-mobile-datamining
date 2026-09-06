@@ -1,34 +1,36 @@
 // === Module 16178: ServerPreviewBannerControls ===
 
 // Module 16178 (ServerPreviewBannerControls)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import registerAssetDefault from "registerAsset" /* 5629 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import _modDef5629 from "module_5629" /* 5629 */;
+import transitionToGuild from "transitionToGuild" /* 7342 */;
 import IconButton from "IconButton" /* 8097 */;
 import ServerPreviewPillDefault from "ServerPreviewPill" /* 16179 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import { MOBILE_GUILD_UPSELL_LIST } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: closure_6, jsxs: error } = jsxProd);
-createCacheKey = { row: null };
-createCacheKey = { position: "absolute", top: ThemesDefault.space.PX_16, left: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
-createCacheKey[0] = createCacheKey;
-let closure_8 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
+require = fn;
+const View = fn(17).View;
+const MOBILE_GUILD_UPSELL_LIST = fn(1074).MOBILE_GUILD_UPSELL_LIST;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+fn(4560);
+const createStyles = { row: null };
+const rect = { position: "absolute", top: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
+createStyles.row = rect;
+let closure_8 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/lurker_mode/native/ServerPreviewBannerControls.tsx");
 
 export default function ServerPreviewBannerControls() {
-  let obj = { style: callback3().row, children: null };
-  const callback = React.useCallback(() => {
-    callback(table[6]).transitionToGuild(closure_5);
+  let obj = { style: closure_8().row, children: null };
+  const callback = noop.useCallback(() => {
+    transitionToGuild.transitionToGuild(MOBILE_GUILD_UPSELL_LIST);
   }, []);
-  obj = { size: "md", variant: "secondary-overlay", icon: registerAssetDefault, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
-  const intl = getSystemLocale.intl;
-  obj[4] = intl.string(getSystemLocale.t["13/7kX"]);
-  const items = [callback(IconButton.IconButton, obj), callback(ServerPreviewPillDefault, {})];
-  obj[1] = items;
-  return callback2(View, obj);
+  obj = { size: "md", variant: "secondary-overlay", icon: _modDef5629, onPress: callback, accessibilityLabel: null, maxFontSizeMultiplier: 1.5 };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.string(util.t["13/7kX"]);
+  const items = [timestampProducer(IconButton.IconButton, obj), timestampProducer(ServerPreviewPillDefault, {})];
+  obj.children = items;
+  return React5(View, obj);
 };

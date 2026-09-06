@@ -1,22 +1,21 @@
-// === Module 17347: handleAppStateUpdate ===
+// === Module 17347: KvBackgroundManager ===
 
-// Module 17347 (handleAppStateUpdate)
-import timestampDefault from "timestamp" /* 3 */;
-import setDefault from "set" /* 1090 */;
-import initializeDefault from "initialize" /* 7118 */;
+// Module 17347 (KvBackgroundManager)
+import LoggerDefault from "Logger" /* 3 */;
+import DurationsDefault from "Durations" /* 1090 */;
 import reportMalformedStorageValuesDefault from "reportMalformedStorageValues" /* 17348 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "initialize" /* 12413 */;
-import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 7478 */;
-import closure_8 from "handleSelectedChannelStoreChanged" /* 7478 */;
-import closure_9 from "result" /* 7479 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import MultiAccountStore from "MultiAccountStore" /* 12413 */;
+import SaveableChannelsStore from "SaveableChannelsStore" /* 7478 */;
+import FileSystemStore from "FileSystemStore" /* 7479 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
-({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: error } = handleSelectedChannelStoreChanged);
-let closure_10 = 5 * setDefault.Millis.MINUTE;
-let closure_11 = new timestampDefault("KvBackgroundManager");
-initializeDefault;
+let require = fn;
+let SaveableChannelsStore = fn(7478);
+({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: metroRequire, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: closure_7 } = SaveableChannelsStore);
+let closure_10 = 5 * DurationsDefault.Millis.MINUTE;
+let closure_11 = new LoggerDefault("KvBackgroundManager");
 class KvBackgroundManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -37,18 +36,17 @@ class KvBackgroundManager extends tmp4 {
           }
     };
     applyArgumentsResult.steps = {
-      trimOrphanedChannels(closure_1_0) {
-            closure_0 = closure_1_0;
-            return callback(function*() {
+      trimOrphanedChannels(arg0) {
+            closure_0 = arg0;
+            return closure_4(function*(arg0, value) {
               if (c0 === 2) {
                 c0 = 3;
-                HermesBuiltin.throwTypeError();
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp3 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   return { value: "HermesInternal", done: null };
@@ -56,52 +54,52 @@ class KvBackgroundManager extends tmp4 {
               } else {
                 try {
                   c0 = 2;
-                  if (0 === v0) {
+                  if (0 === v1) {
                     if (arg0 === 1) {
                       c0 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      obj = { value, done: true };
                       return obj;
                     } else {
-                      c0 = v0(closure_1_2[11]).channels(c0);
-                      const obj5 = v0(closure_1_2[11]);
-                      const obj6 = c0;
-                      v0 = v0(closure_1_2[11]).messages(c0);
-                      const obj7 = v0(closure_1_2[11]);
-                      closure_2 = v0(closure_1_2[11]).channelsTemp(c0);
+                      prefix = v1(1986).channels(prefix);
+                      const obj5 = v1(1986);
+                      const obj6 = prefix;
+                      closure_1 = v1(1986).messages(prefix);
+                      const obj7 = v1(1986);
+                      closure_2 = v1(1986).channelsTemp(prefix);
                       if (closure_1_8.canEvictOrphans()) {
-                        v0 = 1;
+                        v1 = 1;
                         c0 = 1;
-                        obj1 = { value: null, done: false };
-                        obj1[0] = obj6.transaction((arg0) => {
-                          const upgradeTransactionResult = c1.upgradeTransaction(arg0);
-                          const upgradeTransactionResult1 = closure_2.upgradeTransaction(arg0);
-                          const saveableChannels = closure_1_8.getSaveableChannels();
-                          const iter = saveableChannels[Symbol.iterator]();
-                          const nextResult = iter.next();
-                          while (iter !== undefined) {
-                            let putResult = upgradeTransactionResult1.put(nextResult.guildId, nextResult.channelId, null);
-                            continue;
-                          }
-                          upgradeTransactionResult.trimOrphans(prefix.prefix);
-                          upgradeTransactionResult.trimChannelsIn(closure_2.prefix, closure_1_7);
-                          upgradeTransactionResult.trimChannelsNotIn(closure_2.prefix, closure_1_6);
-                          upgradeTransactionResult1.delete();
-                        }, "trimOrphanedChannels");
+                        const obj1 = {
+                          value: obj6.transaction((arg0) => {
+                                      const upgradeTransactionResult = closure_1.upgradeTransaction(arg0);
+                                      const upgradeTransactionResult1 = closure_2.upgradeTransaction(arg0);
+                                      saveableChannels = saveableChannels.getSaveableChannels();
+                                      const iter = saveableChannels[Symbol.iterator]();
+                                      const nextResult = iter.next();
+                                      while (iter !== undefined) {
+                                        let putResult = upgradeTransactionResult1.put(nextResult.guildId, nextResult.channelId, null);
+                                        continue;
+                                      }
+                                      upgradeTransactionResult.trimOrphans(prefix.prefix);
+                                      upgradeTransactionResult.trimChannelsIn(closure_2.prefix, closure_2_7);
+                                      upgradeTransactionResult.trimChannelsNotIn(closure_2.prefix, closure_2_6);
+                                      upgradeTransactionResult1.delete();
+                                    }, "trimOrphanedChannels"),
+                          done: false
+                        };
                         return obj1;
                       }
-                      const obj8 = v0(closure_1_2[11]);
+                      const obj8 = v1(1986);
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    obj = { value, done: true };
                     return obj;
                   }
                   c0 = 3;
@@ -113,17 +111,17 @@ class KvBackgroundManager extends tmp4 {
               }
             })();
           },
-      deleteDeprecatedKeyspaces(closure_0) {
-            return callback(function*() {
+      deleteDeprecatedKeyspaces(arg0) {
+            closure_0 = arg0;
+            return closure_4(function*(arg0, value) {
               if (c0 === 2) {
                 c0 = 3;
-                HermesBuiltin.throwTypeError();
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp3 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   return { value: "HermesInternal", done: null };
@@ -134,45 +132,39 @@ class KvBackgroundManager extends tmp4 {
                   if (0 === c1) {
                     if (arg0 === 1) {
                       c0 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      obj = { value, done: true };
                       return obj;
                     } else {
                       c1 = 1;
                       c0 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = c0.transaction((arg0) => {
-                        while (tmp !== undefined) {
-                          let tmp3 = closure_1_3;
-                          let tmp4 = closure_1_3(tmp2, 2);
-                          let tmp7 = v3;
-                          let tmp8 = closure_1_2;
-                          [tmp5, tmp6] = tmp4;
-                          let items = [tmp6];
-                          let tmp9 = v3;
-                          let tmp10 = new.target;
-                          let tmp11 = new.target;
-                          let tmp12 = items;
-                          let flag = true;
-                          let table = new v3(closure_1_2[12]).Table(items, tmp5, v3, true);
-                          let tmp13 = table;
-                          let upgradeTransactionResult = table.upgradeTransaction(arg0);
-                          let deleteResult = upgradeTransactionResult.delete();
-                          continue;
-                        }
-                      }, "deleteDeprecatedKeyspaces");
+                      const obj1 = {
+                        value: closure_0.transaction((arg0) => {
+                                  while (tmp !== undefined) {
+                                    let tmp4 = closure_2_3(tmp2, 2);
+                                    [tmp5, tmp6] = tmp4;
+                                    let items = [tmp6];
+                                    let tmp10 = new.target;
+                                    let tmp11 = new.target;
+                                    let flag = true;
+                                    let table = new c0(1987).Table(items, tmp5, closure_1_0, true);
+                                    let upgradeTransactionResult = table.upgradeTransaction(arg0);
+                                    let deleteResult = upgradeTransactionResult.delete();
+                                    continue;
+                                  }
+                                }, "deleteDeprecatedKeyspaces"),
+                        done: false
+                      };
                       return obj1;
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    obj = { value, done: true };
                     return obj;
                   } else {
                     c0 = 3;
@@ -185,17 +177,17 @@ class KvBackgroundManager extends tmp4 {
               }
             })();
           },
-      trimLowDisk(closure_0) {
-            return callback(function*() {
+      trimLowDisk(arg0) {
+            closure_0 = arg0;
+            return closure_4(function*(arg0, value) {
               if (c0 === 2) {
                 c0 = 3;
-                HermesBuiltin.throwTypeError();
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp3 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   return { value: "HermesInternal", done: null };
@@ -206,26 +198,23 @@ class KvBackgroundManager extends tmp4 {
                   if (0 === c1) {
                     if (arg0 === 1) {
                       c0 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
                       c0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      obj = { value, done: true };
                       return obj;
-                    } else if (closure_1_9.isLowDisk) {
+                    } else if (isLowDisk.isLowDisk) {
                       c1 = 1;
                       c0 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = c0.incrementalVacuum().catch((arg0) => logger.warn(arg0));
+                      const obj1 = { value: closure_0.incrementalVacuum().catch((error) => logger.warn(error)), done: false };
                       return obj1;
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    obj = { value, done: true };
                     return obj;
                   }
                   c0 = 3;
@@ -238,163 +227,126 @@ class KvBackgroundManager extends tmp4 {
             })();
           },
       deleteExtraDatabases() {
-            return closure_1_4(function*() {
+            return (async (arg0, value) => {
               if (c7 === 2) {
                 c7 = 3;
-                HermesBuiltin.throwTypeError();
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp4 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
               } else {
                 while (true) {
-                  let num = 2;
                   c7 = 2;
                   if (0 === c6) {
                     if (arg0 === 1) {
-                      let num6 = 3;
                       c7 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
-                      let num5 = 3;
                       c7 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      obj = { value, done: true };
                       return obj;
                     } else {
                       closure_3 = tmp;
-                      closure_2 = tmp2;
-                      let set;
-                      closure_1 = undefined;
-                      let tmp30 = users;
+                      closure_130_1 = undefined;
                       users = users.getUsers();
                       let _Set = Set;
+                      let tmp30 = new.target;
                       let tmp31 = new.target;
-                      let tmp32 = new.target;
-                      set = new Set(users.map((id) => callback(tmp2[13]).databaseName(id.id)));
-                      let tmp34 = set;
-                      let tmp35 = closure_1_0;
-                      let tmp36 = closure_1_2;
-                      let Kv = closure_1_0(closure_1_2[12]).Kv;
+                      let set = new Set(users.map((id) => closure_1_1(closure_1_2[13]).databaseName(id.id)));
+                      closure_130_0 = set;
+                      let Kv = closure_0(tmp2[12]).Kv;
                       c6 = 1;
-                      let num12 = 1;
                       c7 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = Kv.databases();
+                      let obj1 = { value: Kv.databases(), done: false };
                       return obj1;
                     }
                   } else if (1 === tmp5) {
                     if (arg0 === 1) {
-                      let num4 = 3;
                       c7 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 === 2) {
-                      let num3 = 3;
                       c7 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      obj = { value, done: true };
                       return obj;
                     } else {
-                      closure_1 = arg1;
-                      let tmp26 = arg1;
-                      closure_1 = arg1;
-                      set = arg1[Symbol.iterator]();
-                      let tmp9 = closure_1;
-                      let tmp10 = set;
-                      while (set !== undefined) {
-                        let tmp27 = closure_2;
+                      closure_1 = value;
+                      closure_0 = value[Symbol.iterator]();
+                      while (closure_0 !== undefined) {
                         users = 1;
-                        closure_1 = tmp11;
-                        let tmp28 = set;
-                        let tmp29 = closure_1;
-                        if (!set.has(closure_1)) {
-                          let tmp12 = closure_2;
-                          let tmp13 = closure_3;
-                          let tmp14 = closure_1_11;
-                          let tmp15 = closure_1;
+                        closure_130_1 = tmp11;
+                        if (!closure_130_0.has(closure_130_1)) {
                           let _HermesInternal = HermesInternal;
-                          let logResult = closure_1_11.log("deleting orphaned database: " + closure_1);
-                          let tmp17 = closure_1_0;
-                          let tmp18 = closure_1_2;
-                          let Database = closure_1_0(closure_1_2[12]).Database;
-                          let tmp19 = closure_1;
-                          let deleteResult = Database.delete(closure_1);
+                          let logResult = logger.log("deleting orphaned database: " + closure_130_1);
+                          let Database = closure_0(tmp2[12]).Database;
+                          let deleteResult = Database.delete(closure_130_1);
                           let catchPromise = deleteResult.catch(() => null);
                         }
                         users = 0;
                         continue;
                       }
-                      let num2 = 3;
                       c7 = 3;
                       return { value: "HermesInternal", done: null };
                     }
                   } else {
-                    let tmp6 = closure_4;
-                    let tmp7 = closure_4;
                     users = 0;
-                    let tmp8 = set;
-                    set.return();
-                    throw closure_4;
+                    closure_0.return();
+                    throw closure_1_4;
                   }
                 }
               }
             })();
           },
       optimize() {
-            return closure_1_4(function*() {
-              if (v0 === 2) {
-                v0 = 3;
-                HermesBuiltin.throwTypeError();
+            return (async (arg0, value) => {
+              if (v3 === 2) {
+                v3 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
               } else if (tmp3 === 3) {
                 if (arg0 === 1) {
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
-                  let obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  let obj = { value, done: true };
                   return obj;
                 } else {
                   return { value: "HermesInternal", done: null };
                 }
               } else {
                 try {
-                  v0 = 2;
+                  v3 = 2;
                   if (0 === c1) {
                     if (arg0 === 1) {
-                      v0 = 3;
-                      throw arg1;
+                      v3 = 3;
+                      throw value;
                     } else if (arg0 === 2) {
-                      v0 = 3;
-                      obj = { value: null, done: true };
-                      obj[0] = arg1;
+                      v3 = 3;
+                      obj = { value, done: true };
                       return obj;
                     } else {
-                      const Kv = v0(closure_1_2[12]).Kv;
+                      const Kv = v3(closure_1_2[12]).Kv;
                       c1 = 1;
-                      v0 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = Kv.optimize(true);
+                      v3 = 1;
+                      const obj1 = { value: Kv.optimize(true), done: false };
                       return obj1;
                     }
                   } else if (arg0 === 1) {
-                    v0 = 3;
-                    throw arg1;
+                    v3 = 3;
+                    throw value;
                   } else if (arg0 === 2) {
-                    v0 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    v3 = 3;
+                    obj = { value, done: true };
                     return obj;
                   } else {
-                    v0 = 3;
+                    v3 = 3;
                     return { value: "HermesInternal", done: null };
                   }
                 } catch (tmp7) {
-                  v0 = tmp;
+                  v3 = tmp;
                   throw tmp7;
                 }
               }
@@ -427,16 +379,15 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
 };
 prototype["maybeCleanup"] = function maybeCleanup() {
   const self = this;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp7 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -447,30 +398,28 @@ prototype["maybeCleanup"] = function maybeCleanup() {
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            let isLowDisk = tmp3;
-            let timestamp = tmp5;
-            timestamp = undefined;
-            isLowDisk = undefined;
-            c2 = undefined;
-            if (closure_1_0.hasConnected) {
-              if (!closure_1_0.isCleaning) {
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            if (self.hasConnected) {
+              if (!self.isCleaning) {
                 const _Date = Date;
-                timestamp = Date.now();
-                isLowDisk = closure_1_9.isLowDisk;
+                const timestamp = Date.now();
+                closure_128_0 = timestamp;
+                isLowDisk = isLowDisk.isLowDisk;
                 if (!isLowDisk) {
-                  isLowDisk = timestamp - closure_1_0.lastDeepClean >= closure_1_10;
+                  isLowDisk = timestamp - self.lastDeepClean >= closure_1_10;
                 }
+                closure_128_1 = isLowDisk;
                 c4 = 1;
                 c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = closure_1_1(7755).startBackgroundTask();
+                let obj1 = { value: tmp3(tmp70[9]).startBackgroundTask(), done: false };
                 return obj1;
               }
             }
@@ -479,70 +428,65 @@ prototype["maybeCleanup"] = function maybeCleanup() {
         } else if (1 === tmp8) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            let obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            let obj2 = { value, done: true };
             return obj2;
           } else {
-            dependencyMap = arg1;
+            closure_128_2 = value;
             if (obj10.isIOS()) {
-              if (dependencyMap === closure_1_1(7755).backgroundTaskIdentifierInvalid) {
+              if (closure_128_2 === tmp3(tmp70[9]).backgroundTaskIdentifierInvalid) {
                 c5 = 3;
                 return { value: "HermesInternal", done: null };
               }
             }
             c3 = 1;
-            closure_1_0.isCleaning = true;
+            closure_129_0.isCleaning = true;
             c4 = 3;
             c5 = 1;
-            const obj3 = { value: null, done: false };
-            obj3[0] = closure_1_0.cleanupAsync(closure_1_1);
+            const obj3 = { value: closure_129_0.cleanupAsync(closure_128_1), done: false };
             return obj3;
           }
         } else if (2 === tmp8) {
           c3 = 0;
-          timestamp.isCleaning = false;
-          if (closure_1_1) {
-            let lastDeepClean3 = closure_1_0;
+          closure_129_0.isCleaning = false;
+          if (closure_128_1) {
+            let lastDeepClean3 = closure_128_0;
           } else {
-            lastDeepClean3 = closure_1_0.lastDeepClean;
+            lastDeepClean3 = closure_129_0.lastDeepClean;
           }
-          timestamp.lastDeepClean = lastDeepClean3;
-          obj2 = closure_1_1(7755);
-          obj2.endBackgroundTask(dependencyMap);
-          throw c2;
+          closure_129_0.lastDeepClean = lastDeepClean3;
+          obj2 = tmp3(tmp70[9]);
+          obj2.endBackgroundTask(closure_128_2);
+          throw tmp70;
         } else if (arg0 === 1) {
           c5 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 !== 2) {
           c3 = 0;
-          timestamp.isCleaning = false;
-          if (isLowDisk) {
-            let lastDeepClean = timestamp;
+          closure_129_0.isCleaning = false;
+          if (closure_128_1) {
+            let lastDeepClean = closure_128_0;
           } else {
-            lastDeepClean = timestamp.lastDeepClean;
+            lastDeepClean = closure_129_0.lastDeepClean;
           }
-          timestamp.lastDeepClean = lastDeepClean;
-          obj = closure_1_1(7755);
-          obj.endBackgroundTask(c2);
-          const tmp12 = timestamp;
+          closure_129_0.lastDeepClean = lastDeepClean;
+          obj = tmp3(tmp70[9]);
+          obj.endBackgroundTask(closure_128_2);
         }
         c3 = 0;
-        closure_1_0.isCleaning = false;
-        if (isLowDisk) {
-          let lastDeepClean2 = timestamp;
+        closure_129_0.isCleaning = false;
+        if (closure_128_1) {
+          let lastDeepClean2 = closure_128_0;
         } else {
-          lastDeepClean2 = timestamp.lastDeepClean;
+          lastDeepClean2 = closure_129_0.lastDeepClean;
         }
-        closure_1_0.lastDeepClean = lastDeepClean2;
-        obj1 = closure_1_1(7755);
-        obj1.endBackgroundTask(c2);
+        closure_129_0.lastDeepClean = lastDeepClean2;
+        obj1 = tmp3(tmp70[9]);
+        obj1.endBackgroundTask(closure_128_2);
         c5 = 3;
-        const tmp26 = closure_1_0;
       } catch (tmp70) {
-        c2 = tmp70;
         if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp70;
@@ -553,97 +497,89 @@ prototype["maybeCleanup"] = function maybeCleanup() {
     }
   })();
 };
-prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
-  closure_0 = closure_1_1;
+prototype["cleanupAsync"] = function cleanupAsync(arg0) {
+  closure_0 = arg0;
   const self = this;
-  return callback(function*() {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
+  return (async (arg0, value) => {
+    if (dependencyMap === 2) {
+      dependencyMap = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
       }
     } else {
       try {
-        table = 2;
-        if (0 === v0) {
+        dependencyMap = 2;
+        if (0 === v2) {
           if (arg0 === 1) {
-            table = 3;
-            throw arg1;
+            dependencyMap = 3;
+            throw value;
           } else if (arg0 === 2) {
-            table = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            dependencyMap = 3;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_0 = tmp4;
             const _HermesInternal = HermesInternal;
-            closure_1_11.verbose("performing cleanup (deep: " + closure_1_0 + ")");
-            const databaseResult = v0(table[11]).database();
+            closure_1_11.verbose("performing cleanup (deep: " + closure_0 + ")");
+            const databaseResult = v2(dependencyMap[11]).database();
             if (null != databaseResult) {
-              v0 = 1;
-              table = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = v0.cleanDatabaseAsync(databaseResult, tmp17);
+              v2 = 1;
+              dependencyMap = 1;
+              const obj1 = { value: self.cleanDatabaseAsync(databaseResult, tmp16), done: false };
               return obj1;
             }
-            const obj9 = v0(table[11]);
-            tmp17 = closure_1_0;
+            const obj9 = v2(dependencyMap[11]);
+            tmp16 = closure_0;
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
-            table = 3;
-            throw arg1;
+            dependencyMap = 3;
+            throw value;
           } else if (arg0 === 2) {
-            table = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = arg1;
+            dependencyMap = 3;
+            const obj2 = { value, done: true };
             return obj2;
           }
         } else if (2 === tmp4) {
           if (arg0 === 1) {
-            table = 3;
-            throw arg1;
+            dependencyMap = 3;
+            throw value;
           } else if (arg0 === 2) {
-            table = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
+            dependencyMap = 3;
+            const obj3 = { value, done: true };
             return obj3;
           } else {
-            const steps = v0.steps;
-            v0 = 3;
-            table = 1;
-            const obj4 = { value: null, done: false };
-            obj4[0] = steps.deleteExtraDatabases();
+            const steps = closure_128_1.steps;
+            v2 = 3;
+            dependencyMap = 1;
+            const obj4 = { value: steps.deleteExtraDatabases(), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
-          table = 3;
-          throw arg1;
+          dependencyMap = 3;
+          throw value;
         } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          dependencyMap = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          table = 3;
+          dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
-        const steps2 = v0.steps;
-        v0 = 2;
-        table = 1;
-        const obj5 = { value: null, done: false };
-        obj5[0] = steps2.optimize();
+        const steps2 = closure_128_1.steps;
+        v2 = 2;
+        dependencyMap = 1;
+        const obj5 = { value: steps2.optimize(), done: false };
         return obj5;
       } catch (tmp10) {
-        table = tmp;
+        dependencyMap = tmp;
         throw tmp10;
       }
     }
@@ -653,16 +589,15 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
   closure_0 = databaseResult;
   closure_1 = arg1;
   const self = this;
-  return callback(function*() {
+  return (async (arg0, value) => {
     if (c5 === 2) {
       c5 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp6 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -673,76 +608,69 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
         if (0 === c4) {
           if (arg0 === 1) {
             c5 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c5 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             closure_1 = tmp3;
             closure_0 = tmp7;
             c3 = 1;
-            const steps3 = closure_1_2.steps;
+            const steps3 = self.steps;
             c4 = 2;
             c5 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = steps3.trimOrphanedChannels(closure_1_0);
+            const obj1 = { value: steps3.trimOrphanedChannels(closure_0), done: false };
             return obj1;
           }
         } else {
           if (1 === tmp7) {
             c3 = 0;
-            closure_0 = closure_2;
-            closure_1_11.warn("couldn't clean database:", closure_0);
+            closure_128_0 = closure_2;
+            logger.warn("couldn't clean database:", closure_128_0);
             c5 = 3;
           } else {
             if (2 === tmp7) {
               if (arg0 === 1) {
                 c5 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                const obj2 = { value: null, done: true };
-                obj2[0] = arg1;
+                const obj2 = { value, done: true };
                 return obj2;
               }
             } else if (3 === tmp7) {
               if (arg0 === 1) {
                 c5 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 0;
                 c5 = 3;
-                const obj3 = { value: null, done: true };
-                obj3[0] = arg1;
+                const obj3 = { value, done: true };
                 return obj3;
               } else {
-                const steps = closure_2.steps;
+                const steps = closure_129_2.steps;
                 c4 = 4;
                 c5 = 1;
-                const obj4 = { value: null, done: false };
-                obj4[0] = steps.trimLowDisk(closure_0);
+                const obj4 = { value: steps.trimLowDisk(closure_129_0), done: false };
                 return obj4;
               }
             } else if (arg0 === 1) {
               c5 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 0;
               c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             }
             c3 = 0;
           }
-          const steps2 = closure_2.steps;
+          const steps2 = closure_129_2.steps;
           c4 = 3;
           c5 = 1;
-          const obj5 = { value: null, done: false };
-          obj5[0] = steps2.deleteDeprecatedKeyspaces(closure_0);
+          const obj5 = { value: steps2.deleteDeprecatedKeyspaces(closure_129_0), done: false };
           return obj5;
         }
       } catch (tmp24) {
@@ -758,7 +686,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
   })();
 };
 const kvBackgroundManager = new KvBackgroundManager();
-let tmp3 = new timestampDefault("KvBackgroundManager");
-const result = require("set").fileFinishedImporting("modules/app_database/managers/native/KvBackgroundManager.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/app_database/managers/native/KvBackgroundManager.tsx");
 
 export default kvBackgroundManager;

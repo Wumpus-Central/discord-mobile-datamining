@@ -1,18 +1,18 @@
 // === Module 17776: ActionableNotice ===
 
 // Module 17776 (ActionableNotice)
-import noopAll from "noop" /* 19 */;
-import Text from "Text" /* 4556 */;
-import Button from "Button" /* 4975 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import components_Button_Button from "components/Button/Button" /* 4975 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ jsx: c3, jsxs: c4 } = jsxProd);
-let closure_5 = createCacheKey.createStyles({ container: { flexDirection: "row", paddingVertical: 12, alignItems: "center" }, message: { marginEnd: 27, flex: 3 }, actionButton: { flexGrow: 0, alignSelf: "center" } });
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ActionableNotice.tsx");
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
+let closure_5 = createStyles.createStyles({ container: { flexDirection: "row", paddingVertical: 12, alignItems: "center" }, message: { marginEnd: 27, flex: 3 }, actionButton: { flexGrow: 0, alignSelf: "center" } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/ActionableNotice.tsx");
 
 export default function ActionableNotice(arg0) {
   ({ submitting, disabled } = arg0);
@@ -20,20 +20,21 @@ export default function ActionableNotice(arg0) {
   if (disabled === undefined) {
     disabled = false;
   }
-  const tmp = callback2();
-  let obj = { style: items, children: null };
-  items = [style, tmp.container];
+  const tmp = closure_5();
+  let obj = { style: null, children: null };
+  const items = [style, tmp.container];
+  obj.style = items;
   obj = { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message };
-  const items1 = [callback(Text.Text, obj), ];
+  const items1 = [React3(Text_Text.Text, obj), ];
   obj = { style: tmp.actionButton, children: null };
-  obj1 = { size: "sm", onPress: onClick, disabled: null, text: null };
+  const obj1 = { size: "sm", onPress: onClick, disabled: null, text: null };
   if (!submitting) {
     submitting = disabled;
   }
-  obj1[2] = submitting;
-  obj1[3] = ctaMessage;
-  obj[1] = callback(Button.Button, obj1);
-  items1[1] = callback(View, obj);
-  obj[1] = items1;
-  return closure_4(View, obj);
+  obj1.disabled = submitting;
+  obj1.text = ctaMessage;
+  obj.children = React3(components_Button_Button.Button, obj1);
+  items1[1] = React3(View, obj);
+  obj.children = items1;
+  return React4(View, obj);
 };

@@ -1,12 +1,11 @@
 // === Module 8114: LimitedMap ===
 
 // Module 8114 (LimitedMap)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
 class LimitedMap extends Map {
   constructor(arg0) {
     tmp = new LimitedMap(new.target);
-    // ThrowIfThisInitialized (0x7c)
     tmp.maxSize = global;
     return tmp;
   }
@@ -20,6 +19,6 @@ class LimitedMap extends Map {
   }
 }
 let closure_0 = LimitedMap.prototype;
-const result = set.fileFinishedImporting("lib/LimitedMap.tsx");
+const result = size.fileFinishedImporting("lib/LimitedMap.tsx");
 
 export default LimitedMap;

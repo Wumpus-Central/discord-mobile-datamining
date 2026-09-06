@@ -1,38 +1,45 @@
-// === Module 11534: handleTapShowAltText ===
+// === Module 11534: MessagesRenderer ===
 
-// Module 11534 (handleTapShowAltText)
-import shallowEqualDefault from "shallowEqual" /* 558 */;
-import getVisibleMessages from "getVisibleMessages" /* 11252 */;
+// Module 11534 (MessagesRenderer)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
+import _modDef12 from "module_12" /* 12 */;
+import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
+import PlatformUtils from "PlatformUtils" /* 1115 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import KeyboardTypes from "KeyboardTypes" /* 1609 */;
+import Client from "Client" /* 4491 */;
+import CodedLink from "CodedLink" /* 4548 */;
+import QuestTypes from "QuestTypes" /* 5447 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
+import computeScrollData from "computeScrollData" /* 11270 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11271 */;
+import ChatChangesetUpdateTracker from "ChatChangesetUpdateTracker" /* 11273 */;
 import openMediaModalOverlayAltTextSheetDefault from "openMediaModalOverlayAltTextSheet" /* 11535 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import { updateShouldShowJumpToPresentButton as closure_6 } from "updateChatInputContainerHeight" /* 9485 */;
-import { getUserCommunicationDisabledVersion as closure_7 } from "trackCommunicationDisabled" /* 2021 */;
-import closure_8 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_9 from "generateOldThreadCutoff" /* 4575 */;
-import closure_10 from "addSku" /* 5510 */;
-import { Changeset } from "Changeset" /* 7933 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
+import MessagesHandlers from "MessagesHandlers" /* 11543 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11547 */;
+import MessagesUtilsDefault from "MessagesUtils" /* 11956 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
+import SKUStore from "SKUStore" /* 5510 */;
 
-require = arg1;
+require = fn;
 function handleTapShowAltText(description) {
   openMediaModalOverlayAltTextSheetDefault({ description: description.nativeEvent.description });
 }
 function handleMediaPlayFinishedAnalytics(nativeEvent) {
-  const result = getVisibleMessages.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
+  const result = messages_MessagesUtils.handleMediaPlayFinishedAnalytics(nativeEvent.nativeEvent);
 }
 function isLoadingAtTop(arg0, arg1) {
   if (arg1) {
     const iter = arg0[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
-      let tmp6 = nextResult;
-      let tmp7 = Changeset;
       if (nextResult.changeType === Changeset.INSERT) {
-        let num = 1;
-        let tmp9 = iter;
         let tmp8 = nextResult.index <= 1;
         iter.return();
         return tmp8;
@@ -43,178 +50,154 @@ function isLoadingAtTop(arg0, arg1) {
     return false;
   }
 }
-let c5 = importAllResult;
-({ ActivityActionTypes: closure_12, MAX_MESSAGES_PER_CHANNEL: map1, MessageFlags: closure_14, MessageTypes: closure_15, Permissions: closure_16 } = ME);
+let closure_6 = fn(9485).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(2021).getUserCommunicationDisabledVersion;
+const Changeset = fn(7933).Changeset;
+const Constants = fn(1074);
+({ ActivityActionTypes: closure_12, MAX_MESSAGES_PER_CHANNEL: map1, MessageFlags: closure_14, MessageTypes: closure_15, Permissions: closure_16 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
-  const _require = messages;
+const forwardRefResult = noop.forwardRef((messages, ref) => {
+  _require = messages;
   function handleVisibleMessagesChange(arg0) {
     ({ firstVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessageRowIndex, lastVisibleMessagePercentVisible, source } = arg0);
-    let obj = messages(closure_1_2[13]);
-    obj = { firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, chatManager: first, channelId: messages.channelId };
+    let obj = { firstVisibleMessageRowIndex, lastVisibleMessageRowIndex, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible, chatManager: first, channelId: messages.channelId };
     const visibleMessages = obj.getVisibleMessages(obj);
     if (visibleMessages.length > 0) {
-      let tmpResult = tmp(tmp2[22]);
-      obj = { visibleMessages: null, source: null };
-      obj[0] = visibleMessages;
-      obj[1] = source;
+      let tmpResult = tmp(11276);
+      obj = { visibleMessages, source };
       const result = tmpResult.questsVisibleMobileMessagesChanged(obj);
-      tmpResult = tmp(tmp2[23]);
+      tmpResult = tmp(11304);
       const result1 = tmpResult.handleAnnouncementMessageViewTracking(visibleMessages, tmp3.shouldTrackAnnouncementMessageViews, tmp3.guildId, tmp3.channel);
-      const tmpResult1 = tmp(tmp2[23]);
+      const tmpResult1 = tmp(11304);
       const result2 = tmpResult1.handleOfficialMessageViewTracking(visibleMessages, tmp3.shouldTrackOfficialMessageViews, tmp3.guildId, tmp3.channel);
-      const tmpResult2 = tmp(tmp2[23]);
+      const tmpResult2 = tmp(11304);
       const result3 = tmpResult2.handleRichPresenceInviteEmbedViewTracking(visibleMessages, tmp3.shouldTrackRichPresenceInviteEmbedViews, tmp3.guildId, tmp3.channel);
-      const tmpResult3 = tmp(tmp2[23]);
+      const tmpResult3 = tmp(11304);
       const result4 = tmpResult3.handleVoiceInviteEmbedViewTracking(visibleMessages, tmp3.shouldTrackVoiceInviteEmbedViews, tmp3.guildId, tmp3.channel);
     }
   }
-  function findMessageIndex(ChatTTITracker, arg1) {
+  function findMessageIndex(ChatTTITracker) {
     if (null != ChatTTITracker) {
-      return messages(closure_1_2[24]).findMessageRowIndex(first.getPreviousRows(), ChatTTITracker);
+      return computeScrollData.findMessageRowIndex(first.getPreviousRows(), ChatTTITracker);
     }
   }
-  function _handleTapNavBar() {
-    const self = this;
-    const tmp = closure_1_3(function*() {
-      if (table === 2) {
-        table = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  closure_28 = async function _handleTapNavBar(arg0, value) {
+    if (hasJumpedToOriginalPost === 2) {
+      hasJumpedToOriginalPost = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          table = 2;
-          if (0 === v0) {
-            if (arg0 === 1) {
-              table = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              table = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              useReducedMotion = tmp2;
-              useReducedMotion = undefined;
-              ({ channel, useReducedMotion } = closure_1_0);
-              if (channel.isForumPost()) {
-                if (!closure_1_21.current) {
-                  obj1 = v0(table[20]);
-                  if (null == closure_1_13(obj1.castChannelIdAsMessageId(channel.id))) {
-                    let tmp11Result = tmp11(tmp12[26]);
-                    obj1 = { channelId: null, jump: null, limit: null };
-                    obj1[0] = channel.id;
-                    const obj2 = { messageId: null, flash: false };
-                    obj2[0] = channel.id;
-                    obj1[1] = obj2;
-                    obj1[2] = closure_1_13;
-                    v0 = 1;
-                    table = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = tmp11Result.fetchMessages(obj1);
-                    return obj3;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        hasJumpedToOriginalPost = 2;
+        if (0 === v1) {
+          if (arg0 === 1) {
+            hasJumpedToOriginalPost = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            hasJumpedToOriginalPost = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_0 = tmp2;
+            closure_128_0 = undefined;
+            ({ channel, useReducedMotion } = messages);
+            closure_128_0 = useReducedMotion;
+            if (channel.isForumPost()) {
+              if (!ref2.current) {
+                let obj1 = v1(hasJumpedToOriginalPost[20]);
+                if (null == callback2(obj1.castChannelIdAsMessageId(channel.id))) {
+                  let tmp11Result = tmp11(tmp12[26]);
+                  obj1 = { channelId: channel.id, jump: null, limit: null };
+                  const obj2 = { messageId: channel.id, flash: false };
+                  obj1.jump = obj2;
+                  obj1.limit = limit;
+                  v1 = 1;
+                  hasJumpedToOriginalPost = 1;
+                  const obj3 = { value: tmp11Result.fetchMessages(obj1), done: false };
+                  return obj3;
+                } else {
+                  tmp11Result = tmp11(tmp12[20]);
+                  const tmp26 = findMessageIndex(tmp11Result.castChannelIdAsMessageId(channel.id));
+                  if (null == tmp26) {
+                    hasJumpedToOriginalPost = 3;
+                    return { value: "HermesInternal", done: null };
                   } else {
-                    tmp11Result = tmp11(tmp12[20]);
-                    const tmp27 = closure_1_17(tmp11Result.castChannelIdAsMessageId(channel.id));
-                    if (null == tmp27) {
-                      table = 3;
-                      return { value: "HermesInternal", done: null };
-                    } else {
-                      const obj4 = { animated: null };
-                      obj4[0] = !useReducedMotion;
-                      tmp11(tmp12[17]).scrollTo(closure_1_11.current, tmp27, obj4);
-                      const _setTimeout2 = setTimeout;
-                      const timerId = setTimeout(() => closure_1_25(!useReducedMotion), 10 * tmp27);
-                      const tmp11Result1 = tmp11(tmp12[17]);
-                    }
+                    const obj4 = { animated: !useReducedMotion };
+                    tmp11(tmp12[17]).scrollTo(ref.current, tmp26, obj4);
+                    const _setTimeout2 = setTimeout;
+                    const timerId = setTimeout(() => closure_2_25(!closure_1_0), 10 * tmp26);
+                    const tmp11Result1 = tmp11(tmp12[17]);
                   }
                 }
               }
-              table = 3;
             }
-          } else if (arg0 === 1) {
-            table = 3;
-            throw arg1;
-          } else if (arg0 !== 2) {
-            const _setTimeout = setTimeout;
-            const timerId1 = setTimeout(() => closure_1_25(!useReducedMotion), 50);
+            hasJumpedToOriginalPost = 3;
           }
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } catch (tmp19) {
-          table = tmp;
-          throw tmp19;
+        } else if (arg0 === 1) {
+          hasJumpedToOriginalPost = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          const _setTimeout = setTimeout;
+          const timerId1 = setTimeout(() => closure_2_25(!closure_1_0), 50);
         }
+        hasJumpedToOriginalPost = 3;
+        obj = { value, done: true };
+        return obj;
+      } catch (tmp19) {
+        hasJumpedToOriginalPost = tmp;
+        throw tmp19;
       }
-    });
-    closure_28 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
+  };
   function scrollToBottom() {
     let flag = arg0;
     if (arg0 === undefined) {
       flag = true;
     }
-    callback4({ eventTimestamp: Date.now(), isAtBottom: true });
+    closure_1_26({ eventTimestamp: Date.now(), isAtBottom: true });
     const obj = { eventTimestamp: Date.now(), isAtBottom: true };
     if (flag) {
       flag = !messages.useReducedMotion;
     }
-    first(closure_1_2[17]).scrollToBottom(ref5.current, flag);
+    NativeChatUtilsDefault.scrollToBottom(ref5.current, flag);
   }
   function jumpToPresent() {
     ({ messages, channel } = closure_0);
     if (null == messages.jumpReturnTargetId) {
       if (!messages.loadingMore) {
         if (messages.hasMoreAfter) {
-          let obj = { channelId: null, limit: null, jump: null };
-          obj[0] = channel.id;
-          obj[1] = callback2;
-          obj[2] = { present: true };
-          messages = first(closure_1_2[26]).fetchMessages(obj);
-          const obj5 = first(closure_1_2[26]);
+          let obj = { channelId: channel.id, limit, jump: { present: true } };
+          messages = MessageActionCreatorsDefault.fetchMessages(obj);
         } else {
           obj = { eventTimestamp: null, isAtBottom: true };
           const _Date = Date;
-          obj[0] = Date.now();
-          callback4(obj);
-          first(closure_1_2[17]).scrollToBottom(ref5.current, !tmp.useReducedMotion);
-          const obj4 = first(closure_1_2[17]);
+          obj.eventTimestamp = Date.now();
+          closure_1_26(obj);
+          NativeChatUtilsDefault.scrollToBottom(ref5.current, !tmp.useReducedMotion);
         }
       }
     } else {
-      obj = first(closure_1_2[26]);
-      obj1 = { channelId: null, messageId: null, flash: true };
-      obj1[0] = channel.id;
-      obj1[1] = jumpReturnTargetId;
+      obj = MessageActionCreatorsDefault;
+      const obj1 = { channelId: channel.id, messageId: jumpReturnTargetId, flash: true };
       obj.jumpToMessage(obj1);
     }
   }
   function scrollToNewMessages() {
-    let id = ref3.ackMessageId(messages.channel.id);
-    let obj = first(closure_1_2[26]);
-    obj = { channelId: messages.channel.id, messageId: null, offset: 1, context: "Mark As Read" };
+    let id = ReadStateStore.ackMessageId(messages.channel.id);
+    const obj = { channelId: messages.channel.id, messageId: null, offset: 1, context: "Mark As Read" };
     if (id == null) {
       id = messages.channel.id;
     }
-    obj[1] = id;
+    obj.messageId = id;
     obj.jumpToMessage(obj);
   }
   function getChatRef() {
@@ -222,12 +205,12 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
   }
   function clearRowsState(reason) {
     ref.current = false;
-    closure_18.current = false;
-    closure_20.current = false;
-    closure_19.current = false;
-    closure_21.current = false;
-    closure_22.current = false;
-    closure_23.current = false;
+    closure_1_18.current = false;
+    handleTapShowAltText.current = false;
+    closure_1_19.current = false;
+    handleMediaPlayFinishedAnalytics.current = false;
+    isLoadingAtTop.current = false;
+    closure_1_23.current = false;
     ref1.current = false;
     ref2.current = [];
     ref4.current = false;
@@ -236,47 +219,48 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     const length2 = first.getPreviousRows().length;
     first.clear();
     chatUpdatesQueue.clear();
-    let obj = first(closure_1_2[17]);
+    let obj = NativeChatUtilsDefault;
     obj.clearRows(ref5.current);
     obj = { category: "chat.queue.clear", message: "clearRows (" + reason + "): queue=" + length + " blockers=" + size + " jsRows=" + length2, data: null };
     obj = { reason, changesetUpdateId: null, queueLength: null, blockers: null, chatManagerRows: null };
-    const obj2 = first(closure_1_2[30]);
-    obj[1] = messages(closure_1_2[31]).getChangesetIdForChat(ref5.current);
-    obj[2] = chatUpdatesQueue.queue.length;
-    obj[3] = size;
-    obj[4] = length2;
-    obj[2] = obj;
+    const obj2 = SentryUtilsDefault;
+    obj.changesetUpdateId = ChatChangesetUpdateTracker.getChangesetIdForChat(ref5.current);
+    obj.queueLength = chatUpdatesQueue.queue.length;
+    obj.blockers = size;
+    obj.chatManagerRows = length2;
+    obj.data = obj;
     obj2.addBreadcrumb(obj);
   }
   function clearRows() {
     clearRowsState("channel-change");
-    ref(messages.channelId, messages.screenIndex, false);
+    closure_6(messages.channelId, messages.screenIndex, false);
   }
-  let first = first1(importAllResult.useState(() => new first(11538)()), 1)[0];
-  [dependencyMap, closure_3] = first1(importAllResult.useState(false), 2);
-  let tmp3 = first1(importAllResult.useState(false), 2);
+  let first = first1(noop.useState(() => new first(hasJumpedToOriginalPost[15])()), 1)[0];
+  [dependencyMap, asyncGeneratorStep] = first1(noop.useState(false), 2);
+  let tmp3 = first1(noop.useState(false), 2);
   first1 = tmp3[0];
-  ref = importAllResult.useRef(false);
-  const ref1 = importAllResult.useRef(false);
-  const ref2 = importAllResult.useRef([]);
-  const ref3 = importAllResult.useRef(null);
-  const ref4 = importAllResult.useRef(false);
-  const ref5 = importAllResult.useRef(null);
-  let callback = importAllResult.useCallback((rows) => {
+  noop = tmp3[1];
+  ref = noop.useRef(false);
+  const ref1 = noop.useRef(false);
+  let ref2 = noop.useRef([]);
+  const ref3 = noop.useRef(null);
+  const ref4 = noop.useRef(false);
+  const ref5 = noop.useRef(null);
+  const callback = noop.useCallback((rows) => {
     ({ rows, hasMoreMessagesAfter, scrollData, HACK_iOSForceAnimations, forceReload, isAnimated } = rows);
-    const tmp = closure_1_22(rows.rows, ref1.current);
-    first(closure_1_2[17]).updateRows(ref5.current, { rows, isLoadingAtTop: tmp, scrollData, HACK_iOSForceAnimations, forceReload, isAnimated });
+    const tmp = isLoadingAtTop(rows.rows, ref1.current);
+    NativeChatUtilsDefault.updateRows(ref5.current, { rows, isLoadingAtTop: tmp, scrollData, HACK_iOSForceAnimations, forceReload, isAnimated });
     ref1.current = hasMoreMessagesAfter;
   }, []);
-  let obj = _require(11476);
+  let obj = require("MessagesHooks");
   const chatUpdatesQueue = obj.useChatUpdatesQueue(ref5, callback);
   let items = [, ];
   ({ canChat: arr[0], channel: arr[1] } = messages);
   const items1 = [messages.messages];
-  const callback1 = importAllResult.useCallback(() => {
+  const callback1 = noop.useCallback(() => {
     let canChat = messages.canChat;
     if (canChat) {
-      canChat = ref2.can(handleVisibleMessagesChange.ADD_REACTIONS, tmp.channel);
+      canChat = PermissionStore.can(constants4.ADD_REACTIONS, tmp.channel);
     }
     if (!canChat) {
       const channel = tmp.channel;
@@ -284,20 +268,19 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     }
     return canChat;
   }, items);
-  let callback2 = importAllResult.useCallback((arg0) => {
+  const callback2 = noop.useCallback((arg0) => {
     messages = arg0;
     messages = messages.messages;
-    return first(closure_1_2[19]).find(messages.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
+    return _modDef12.find(messages.toArray(), (id) => id.id === closure_0 || id.nonce === closure_0);
   }, items1);
   const items2 = [, , ];
   ({ channel: arr3[0], channelId: arr3[1] } = messages);
   items2[2] = messages.messages.jumpTargetId;
-  let callback3 = importAllResult.useCallback((arg0) => {
+  let callback3 = noop.useCallback((arg0) => {
     const channel = messages.channel;
     let isForumPostResult = channel.isForumPost();
     if (isForumPostResult) {
-      isForumPostResult = first(closure_1_2[20]).castChannelIdAsMessageId(tmp.channelId) === tmp.messages.jumpTargetId;
-      const obj = first(closure_1_2[20]);
+      isForumPostResult = SnowflakeUtilsDefault.castChannelIdAsMessageId(tmp.channelId) === tmp.messages.jumpTargetId;
     }
     if (isForumPostResult) {
       isForumPostResult = !arg0;
@@ -305,7 +288,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
     return isForumPostResult;
   }, items2);
   obj = { channelId: messages.channelId, jumpTargetId: messages.messages.jumpTargetId, oldestUnreadMessageId: messages.oldestUnreadMessageId, shouldJumpToOriginalPost: callback3 };
-  let tmp2 = first1(importAllResult.useState(false), 2);
+  let tmp2 = first1(noop.useState(false), 2);
   ({ startOrCancelLatestMessagesLoad: closure_15, channelLatestMessageLoadingStatsManager } = first(11540)(obj));
   obj = {
     chatRef: ref5,
@@ -320,16 +303,14 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
         hasMoreBefore = !messages.loadingMore;
       }
       if (hasMoreBefore) {
-        let obj = first(closure_1_2[26]);
-        obj = { channelId: null, before: null, limit: null };
-        obj[0] = messages.channelId;
+        const obj = { channelId: messages.channelId, before: null, limit: null };
         const firstResult = messages.first();
         let id;
         if (firstResult != null) {
           id = firstResult.id;
         }
-        obj[1] = id;
-        obj[2] = callback2;
+        obj.before = id;
+        obj.limit = limit;
         messages = obj.fetchMessages(obj);
       }
     },
@@ -340,16 +321,14 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
         hasMoreAfter = !messages.loadingMore;
       }
       if (hasMoreAfter) {
-        let obj = first(closure_1_2[26]);
-        obj = { channelId: null, after: null, limit: null };
-        obj[0] = messages.channelId;
+        const obj = { channelId: messages.channelId, after: null, limit: null };
         const lastResult = messages.last();
         let id;
         if (lastResult != null) {
           id = lastResult.id;
         }
-        obj[1] = id;
-        obj[2] = callback2;
+        obj.after = id;
+        obj.limit = limit;
         messages = obj.fetchMessages(obj);
       }
     },
@@ -366,38 +345,37 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
   };
   let tmp16 = first(11540)(obj);
   ({ hasHandledScrollRef: closure_18, isAtBottomRef: closure_19, isNearBottomRef: handleTapShowAltText, isNearTopRef: handleMediaPlayFinishedAnalytics, deceleratingRef: isLoadingAtTop, draggingRef: closure_23, firstIgnoredScrollEventTimestampRef: closure_24, scrollToTop: closure_25, handleScrollCallbacks: closure_26, loadMoreBefore, loadMoreAfter, scrollToTopMessage, updateNativeRows, handleScrollPosition } = first(11542)(obj));
-  const ref6 = importAllResult.useRef(null);
+  const ref6 = noop.useRef(null);
   ref6.current = { getMessage: callback2, chatInputRef: messages.chatInputRef, selectedChannelId: messages.channelId, revealedMessageId: messages.messages.revealedMessageId, uploads: messages.uploads, paymentsBlocked: messages.paymentsBlocked, loadMoreBefore, loadMoreAfter };
-  const first2 = first1(importAllResult.useState(() => new messages(closure_1_2[27]).MessagesHandlers(() => ref.current)), 1)[0];
-  const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({ scrollToBottom, jumpToPresent, scrollToNewMessages, getChatRef }));
+  const first2 = first1(noop.useState(() => new MessagesHandlers.MessagesHandlers(() => ref.current)), 1)[0];
+  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ scrollToBottom, jumpToPresent, scrollToNewMessages, getChatRef }));
   let tmp17 = first(11542)(obj);
-  obj1 = { chatManager: first, rowGenerator: first1(tmp3[1].useState(() => new first(7932)()), 1)[0], animatingStickerMessageIdRef: ref3, canAddNewReactions: callback1, channel: messages.channel, messages: messages.messages, isMessagesReady: messages.isMessagesReady, uploads: messages.uploads, roleStyle: messages.roleStyle, oldestUnreadMessageId: messages.oldestUnreadMessageId, replyingMessageId: messages.replyingMessageId, inlineAttachmentMedia: messages.inlineAttachmentMedia, inlineEmbedMedia: messages.inlineEmbedMedia, renderEmbeds: messages.renderEmbeds, renderReactions: messages.renderReactions, animateEmoji: messages.animateEmoji, gifAutoPlay: messages.gifAutoPlay, timestampHourCycle: messages.timestampHourCycle, currentUserId: messages.currentUserId, renderCommunicationDisabled: messages.renderCommunicationDisabled, selectedSummary: messages.selectedSummary, enableSwipeActions: messages.enableSwipeActions, isResourceChannel: messages.isResourceChannel, shouldObscureSpoiler: messages.shouldObscureSpoiler, shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents, unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds, containerWidth: messages.containerWidth, chatRef: ref5, loadedRef: ref4, animatedRef: ref, hasMoreMessagesAfterForLastUpdateRef: ref1, updateNativeRows, isLoadingAtTop, channelLatestMessageLoadingStatsManager, channelId: messages.channelId, isMessagesCached: messages.isMessagesCached, chatUpdatesQueue, shouldJumpToOriginalPost: callback3, findMessageIndex, scrollToTopMessage, useReducedMotion: messages.useReducedMotion };
-  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11950)({ chatManager: first, rowGenerator: first1(tmp3[1].useState(() => new first(7932)()), 1)[0], animatingStickerMessageIdRef: ref3, canAddNewReactions: callback1, channel: messages.channel, messages: messages.messages, isMessagesReady: messages.isMessagesReady, uploads: messages.uploads, roleStyle: messages.roleStyle, oldestUnreadMessageId: messages.oldestUnreadMessageId, replyingMessageId: messages.replyingMessageId, inlineAttachmentMedia: messages.inlineAttachmentMedia, inlineEmbedMedia: messages.inlineEmbedMedia, renderEmbeds: messages.renderEmbeds, renderReactions: messages.renderReactions, animateEmoji: messages.animateEmoji, gifAutoPlay: messages.gifAutoPlay, timestampHourCycle: messages.timestampHourCycle, currentUserId: messages.currentUserId, renderCommunicationDisabled: messages.renderCommunicationDisabled, selectedSummary: messages.selectedSummary, enableSwipeActions: messages.enableSwipeActions, isResourceChannel: messages.isResourceChannel, shouldObscureSpoiler: messages.shouldObscureSpoiler, shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents, unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds, containerWidth: messages.containerWidth, chatRef: ref5, loadedRef: ref4, animatedRef: ref, hasMoreMessagesAfterForLastUpdateRef: ref1, updateNativeRows, isLoadingAtTop, channelLatestMessageLoadingStatsManager, channelId: messages.channelId, isMessagesCached: messages.isMessagesCached, chatUpdatesQueue, shouldJumpToOriginalPost: callback3, findMessageIndex, scrollToTopMessage, useReducedMotion: messages.useReducedMotion }));
-  const effect = importAllResult.useEffect(() => {
+  let obj1 = { chatManager: first, rowGenerator: first1(noop.useState(() => new first(hasJumpedToOriginalPost[16])()), 1)[0], animatingStickerMessageIdRef: ref3, canAddNewReactions: callback1, channel: messages.channel, messages: messages.messages, isMessagesReady: messages.isMessagesReady, uploads: messages.uploads, roleStyle: messages.roleStyle, oldestUnreadMessageId: messages.oldestUnreadMessageId, replyingMessageId: messages.replyingMessageId, inlineAttachmentMedia: messages.inlineAttachmentMedia, inlineEmbedMedia: messages.inlineEmbedMedia, renderEmbeds: messages.renderEmbeds, renderReactions: messages.renderReactions, animateEmoji: messages.animateEmoji, gifAutoPlay: messages.gifAutoPlay, timestampHourCycle: messages.timestampHourCycle, currentUserId: messages.currentUserId, renderCommunicationDisabled: messages.renderCommunicationDisabled, selectedSummary: messages.selectedSummary, enableSwipeActions: messages.enableSwipeActions, isResourceChannel: messages.isResourceChannel, shouldObscureSpoiler: messages.shouldObscureSpoiler, shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents, unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds, containerWidth: messages.containerWidth, chatRef: ref5, loadedRef: ref4, animatedRef: ref, hasMoreMessagesAfterForLastUpdateRef: ref1, updateNativeRows, isLoadingAtTop, channelLatestMessageLoadingStatsManager, channelId: messages.channelId, isMessagesCached: messages.isMessagesCached, chatUpdatesQueue, shouldJumpToOriginalPost: callback3, findMessageIndex, scrollToTopMessage, useReducedMotion: messages.useReducedMotion };
+  ({ updateRows: closure_33, scrollToMessageId: closure_34 } = first(11950)({ chatManager: first, rowGenerator: first1(noop.useState(() => new first(hasJumpedToOriginalPost[16])()), 1)[0], animatingStickerMessageIdRef: ref3, canAddNewReactions: callback1, channel: messages.channel, messages: messages.messages, isMessagesReady: messages.isMessagesReady, uploads: messages.uploads, roleStyle: messages.roleStyle, oldestUnreadMessageId: messages.oldestUnreadMessageId, replyingMessageId: messages.replyingMessageId, inlineAttachmentMedia: messages.inlineAttachmentMedia, inlineEmbedMedia: messages.inlineEmbedMedia, renderEmbeds: messages.renderEmbeds, renderReactions: messages.renderReactions, animateEmoji: messages.animateEmoji, gifAutoPlay: messages.gifAutoPlay, timestampHourCycle: messages.timestampHourCycle, currentUserId: messages.currentUserId, renderCommunicationDisabled: messages.renderCommunicationDisabled, selectedSummary: messages.selectedSummary, enableSwipeActions: messages.enableSwipeActions, isResourceChannel: messages.isResourceChannel, shouldObscureSpoiler: messages.shouldObscureSpoiler, shouldDisableInteractiveComponents: messages.shouldDisableInteractiveComponents, unloadableContentEntryMessageIds: messages.unloadableContentEntryMessageIds, containerWidth: messages.containerWidth, chatRef: ref5, loadedRef: ref4, animatedRef: ref, hasMoreMessagesAfterForLastUpdateRef: ref1, updateNativeRows, isLoadingAtTop, channelLatestMessageLoadingStatsManager, channelId: messages.channelId, isMessagesCached: messages.isMessagesCached, chatUpdatesQueue, shouldJumpToOriginalPost: callback3, findMessageIndex, scrollToTopMessage, useReducedMotion: messages.useReducedMotion }));
+  const effect = noop.useEffect(() => {
     messages = messages.messages;
     const oldestUnreadMessageId = messages.oldestUnreadMessageId;
     if (messages.isMessagesReady) {
       let obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null, hasJumpedToOriginalPost: null };
-      ({ jumpTargetId: obj2[0], jumpTargetId: obj2[1] } = messages);
-      obj[2] = messages(closure_1_2[29]).JumpType.INSTANT;
-      obj[3] = messages.focusTargetId;
-      obj[4] = closure_2;
+      ({ jumpTargetId: obj2.scrollToMessageId, jumpTargetId: obj2.jumpTargetId } = messages);
+      obj.jumpType = messages(hasJumpedToOriginalPost[29]).JumpType.INSTANT;
+      obj.focusTargetId = messages.focusTargetId;
+      obj.hasJumpedToOriginalPost = hasJumpedToOriginalPost;
       tmp2(obj);
       if (null != messages.jumpTargetId) {
         obj = { scrollToMessageId: null, jumpTargetId: null, jumpType: null, hasJumpedToOriginalPost: null };
-        ({ jumpTargetId: obj3[0], jumpTargetId: obj3[1] } = messages);
-        obj[2] = tmp5(closure_1_2[29]).JumpType.INSTANT;
-        obj[3] = tmp7;
-        callback6(obj);
+        ({ jumpTargetId: obj3.scrollToMessageId, jumpTargetId: obj3.jumpTargetId } = messages);
+        obj.jumpType = tmp5(hasJumpedToOriginalPost[29]).JumpType.INSTANT;
+        obj.hasJumpedToOriginalPost = tmp7;
+        closure_34(obj);
       } else if (null != oldestUnreadMessageId) {
         const _setTimeout = setTimeout;
-        const timerId = setTimeout(() => closure_1_34({ scrollToMessageId: oldestUnreadMessageId, jumpTargetId: messages.jumpTargetId, jumpType: messages(closure_2_2[29]).JumpType.INSTANT, hasJumpedToOriginalPost: closure_1_2 }), 50);
+        const timerId = setTimeout(() => closure_2_34({ scrollToMessageId: oldestUnreadMessageId, jumpTargetId: messages.jumpTargetId, jumpType: Client.JumpType.INSTANT, hasJumpedToOriginalPost }), 50);
       }
       tmp5 = messages;
-      tmp7 = closure_2;
+      tmp7 = hasJumpedToOriginalPost;
     } else {
-      obj = { hasJumpedToOriginalPost: null };
-      obj[0] = closure_2;
+      obj = { hasJumpedToOriginalPost };
       tmp2(obj);
     }
     ({ channelId, messages: messages2 } = messages);
@@ -407,55 +385,49 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       hasFetched = messages2.ready && !messages2.cached;
       const tmp17 = messages2.ready && !messages2.cached;
     }
-    first(closure_1_2[11]).recordMessageRender(channelId, mapped, hasFetched, messages2.hasMoreAfter);
+    first(hasJumpedToOriginalPost[11]).recordMessageRender(channelId, mapped, hasFetched, messages2.hasMoreAfter);
     ({ channelId: channelId2, messages: messages3 } = messages);
-    const obj4 = first(closure_1_2[11]);
-    const tmp15 = first;
+    const obj4 = first(hasJumpedToOriginalPost[11]);
     const mapped1 = messages3.map((id) => id.id);
     let hasFetched2 = messages3.hasFetched;
     if (!hasFetched2) {
       hasFetched2 = messages3.ready && !messages3.cached;
       const tmp20 = messages3.ready && !messages3.cached;
     }
-    first(closure_1_2[11]).recordMessageRender(channelId2, mapped1, hasFetched2, messages3.hasMoreAfter);
+    first(hasJumpedToOriginalPost[11]).recordMessageRender(channelId2, mapped1, hasFetched2, messages3.hasMoreAfter);
     return () => {
-      callback("unmount");
+      clearRowsState("unmount");
     };
   }, []);
   const items3 = [, ];
   ({ channelId: arr4[0], screenIndex: arr4[1] } = messages);
-  const effect1 = importAllResult.useEffect(() => () => {
-    closure_1_6(closure_0.channelId, closure_0.screenIndex, false);
+  const effect1 = noop.useEffect(() => () => {
+    ref(messages.channelId, messages.screenIndex, false);
   }, items3);
-  closure_37 = importAllResult.useRef({ props: messages, shouldForceRender: first1 });
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
+  ref2 = noop.useRef({ props: messages, shouldForceRender: first1 });
+  const layoutEffect = noop.useLayoutEffect(() => {
     const props = ref2.current.props;
-    let obj = { props, shouldForceRender: closure_4 };
+    let obj = { props, shouldForceRender };
     const tmp2 = props;
     ref2.current = obj;
     if (null != props.currentUserId) {
       const messages4 = tmp2.messages;
       const messages5 = props.messages;
-      let recordMessageRenderResult1 = props.channelId !== tmp2.channelId;
-      if (recordMessageRenderResult1) {
-        callback(false);
+      if (props.channelId !== tmp2.channelId) {
+        closure_3(false);
       }
-      let tmp6 = !recordMessageRenderResult1;
-      if (!recordMessageRenderResult1) {
+      let tmp6 = !tmp106;
+      if (props.channelId === tmp2.channelId) {
         tmp6 = closure_2;
       }
       const channelId = tmp2.channelId;
-      obj = { clearRows: null, startOrCancelChannelLatestMessagesLoad: null, hasJumpedToOriginalPost: null, firstIgnoredScrollEventTimestampRef: null };
-      obj[0] = clearRows;
-      obj[1] = closure_15;
-      obj[2] = tmp6;
-      obj[3] = closure_24;
+      obj = { clearRows, startOrCancelChannelLatestMessagesLoad, hasJumpedToOriginalPost: tmp6, firstIgnoredScrollEventTimestampRef };
       if (props.channelId !== channelId) {
         obj.clearRows();
-        const result = first(closure_1_2[14]).clearChannelDimensions(channelId);
+        const result = first(hasJumpedToOriginalPost[14]).clearChannelDimensions(channelId);
         const result1 = obj.startOrCancelChannelLatestMessagesLoad(obj.hasJumpedToOriginalPost);
         obj.firstIgnoredScrollEventTimestampRef.current = undefined;
-        let obj3 = first(closure_1_2[14]);
+        let obj3 = first(hasJumpedToOriginalPost[14]);
       }
       const isMessagesAckable = props.isMessagesAckable;
       let isMessagesAckable2 = !isMessagesAckable;
@@ -471,10 +443,8 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
           tmp18(true);
         }
       }
-      obj = { isAtBottom: null, hasPreviousMessages: null };
-      obj[0] = ref.current;
-      obj[1] = null != previousMessages.getPreviousMessages();
-      const tmp24Result = first(closure_1_2[32])(tmp2, obj, props);
+      obj = { isAtBottom: ref.current, hasPreviousMessages: null != previousMessages.getPreviousMessages() };
+      const tmp24Result = first(hasJumpedToOriginalPost[32])(tmp2, obj, props);
       ({ jumpTargetId, focusTargetId } = tmp24Result);
       let tmp28 = props.theme !== tmp2.theme;
       ({ scrollToMessageId, jumpType, minimizeScrolling, shouldInitialScroll } = tmp24Result);
@@ -483,18 +453,18 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       }
       let tmp29 = props.theme !== tmp2.theme || props.saturation !== tmp2.saturation || props.inlineAttachmentMedia !== tmp2.inlineAttachmentMedia || props.inlineEmbedMedia !== tmp2.inlineEmbedMedia || props.renderEmbeds !== tmp2.renderEmbeds || props.renderReactions !== tmp2.renderReactions || props.animateEmoji !== tmp2.animateEmoji || props.animateStickers !== tmp2.animateStickers || props.gifAutoPlay !== tmp2.gifAutoPlay || props.timestampHourCycle !== tmp2.timestampHourCycle || props.containerWidth !== tmp2.containerWidth || props.guildSystemChannelFlags !== tmp2.guildSystemChannelFlags || props.userSettingsLocale !== tmp2.userSettingsLocale || props.roleStyle !== tmp2.roleStyle || props.officialMessageStyle !== tmp2.officialMessageStyle || props.canSendMessages !== tmp2.canSendMessages || props.showPushFeedback !== tmp2.showPushFeedback || props.selectedSummary !== tmp2.selectedSummary || props.shouldObscureSpoiler !== tmp2.shouldObscureSpoiler || props.explicitMediaFalsePositiveInfo !== tmp2.explicitMediaFalsePositiveInfo || props.familyCenterPendingConnection !== tmp2.familyCenterPendingConnection || props.isStaff !== tmp2.isStaff || props.isAgeVerified !== tmp2.isAgeVerified;
       if (!tmp29) {
-        tmp29 = recordMessageRenderResult1 !== tmp3 && tmp3;
-        const tmp30 = recordMessageRenderResult1 !== tmp3 && tmp3;
+        tmp29 = tmp !== tmp3 && tmp3;
+        const tmp30 = tmp !== tmp3 && tmp3;
       }
       if (!tmp29) {
         tmp29 = props.displayNameStylesEnabled !== tmp2.displayNameStylesEnabled;
       }
       previousMessages = tmp31;
-      const tmp34 = first(closure_1_2[33])(props.interactionStates, tmp2.interactionStates);
+      const tmp34 = first(hasJumpedToOriginalPost[33])(props.interactionStates, tmp2.interactionStates);
       closure_2 = !tmp34;
-      callback = tmp35;
-      closure_4 = tmp36;
-      callback2 = tmp37;
+      closure_3 = tmp35;
+      shouldForceRender = tmp36;
+      closure_5 = tmp37;
       closure_6 = props.shouldDisableInteractiveComponents !== tmp2.shouldDisableInteractiveComponents;
       closure_7 = tmp38;
       closure_8 = tmp39;
@@ -507,16 +477,16 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       closure_13 = tmp44;
       callback3 = tmp45;
       const tmp46 = props.activityInstanceIds !== tmp2.activityInstanceIds || props.activityParticipants !== tmp2.activityParticipants || props.applicationAssetFetchingIds !== tmp2.applicationAssetFetchingIds || props.activityInstancePresenceDetails !== tmp2.activityInstancePresenceDetails || props.messagesWithActivitiesLaunching !== tmp2.messagesWithActivitiesLaunching || props.invalidApplicationIds !== tmp2.invalidApplicationIds;
-      closure_15 = tmp46;
+      startOrCancelChannelLatestMessagesLoad = tmp46;
       tmp15 = closure_18;
       tmp17 = closure_25;
-      tmp18 = callback;
+      tmp18 = closure_3;
       let tmp21 = tmp2.isMessagesReady && !tmp2.isMessagesCached && props.isMessagesCached;
-      const tmp24 = first(closure_1_2[32]);
-      const result2 = messages(closure_1_2[33]).areArraysShallowEqual(props.activityInviteMessageIds, tmp2.activityInviteMessageIds);
+      const tmp24 = first(hasJumpedToOriginalPost[32]);
+      const result2 = messages(hasJumpedToOriginalPost[33]).areArraysShallowEqual(props.activityInviteMessageIds, tmp2.activityInviteMessageIds);
       closure_16 = !result2;
-      let obj5 = messages(closure_1_2[33]);
-      const result3 = messages(closure_1_2[33]).areArraysShallowEqual(props.resolvedReferralTrialOfferIds, tmp2.resolvedReferralTrialOfferIds);
+      let obj5 = messages(hasJumpedToOriginalPost[33]);
+      const result3 = messages(hasJumpedToOriginalPost[33]).areArraysShallowEqual(props.resolvedReferralTrialOfferIds, tmp2.resolvedReferralTrialOfferIds);
       let tmp52 = !result3;
       if (result3) {
         tmp52 = props.referralTrialOfferId !== tmp2.referralTrialOfferId;
@@ -540,8 +510,8 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       if (currentUserDisplayNameStyles2 != null) {
         fontId1 = currentUserDisplayNameStyles2.fontId;
       }
-      closure_24 = tmp62;
-      let tmp47Result = tmp47(closure_1_2[33]);
+      firstIgnoredScrollEventTimestampRef = tmp62;
+      let tmp47Result = tmp47(hasJumpedToOriginalPost[33]);
       const result4 = tmp47Result.areArraysShallowEqual(props.fetchingSkuIds, tmp2.fetchingSkuIds);
       closure_25 = !result4;
       closure_26 = tmp65;
@@ -610,7 +580,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                                                                                                                                   if (!tmp65) {
                                                                                                                                     if (result4) {
                                                                                                                                       ({ channelId: channelId2, messages } = tmp2);
-                                                                                                                                      let obj8 = first(closure_1_2[11]);
+                                                                                                                                      let obj8 = first(hasJumpedToOriginalPost[11]);
                                                                                                                                       const mapped = messages.map((id) => id.id);
                                                                                                                                       let hasFetched = messages.hasFetched;
                                                                                                                                       if (!hasFetched) {
@@ -717,7 +687,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
           }
           let voiceChannelIdChangedAuthorIds = null;
           if (tmp56) {
-            tmp47Result = tmp47(closure_1_2[13]);
+            tmp47Result = tmp47(hasJumpedToOriginalPost[13]);
             let prop = props.voiceStateChannelIdSummaryForGuild;
             if (prop == null) {
               prop = null;
@@ -731,12 +701,10 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
           messages = tmp2.messages;
           const item = messages.forEach((author) => {
             if (closure_21) {
-              let addResult = null;
               if (null != voiceChannelIdChangedAuthorIds) {
                 if (null != author.author) {
                   if (obj.has(author.author.id)) {
-                    addResult = set;
-                    addResult = set.add(author.id);
+                    set.add(author.id);
                   }
                 }
               }
@@ -748,74 +716,54 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
               if (activity != null) {
                 type = activity.type;
               }
-              if (type === chatUpdatesQueue.STREAM_REQUEST) {
-                addResult = set;
-                addResult = set.add(author.id);
+              if (type === constants.STREAM_REQUEST) {
+                set.add(author.id);
               }
             }
             if (closure_31) {
-              if (author.type === closure_2_15.USER_JOIN) {
-                addResult = set;
-                addResult = set.add(author.id);
+              if (author.type === constants3.USER_JOIN) {
+                set.add(author.id);
               }
             }
             if (closure_30) {
-              if (author.type === closure_2_15.REPLY) {
+              if (author.type === constants3.REPLY) {
                 const messageReference = author.messageReference;
                 if (null != messageReference) {
                   const repliedIds = props.repliedIds;
                   if (repliedIds.has(messageReference.message_id)) {
-                    addResult = set;
-                    addResult = set.add(author.id);
+                    set.add(author.id);
                   }
                 }
               }
             }
             if (closure_28) {
-              if (author.hasFlag(callback3.HAS_THREAD)) {
-                addResult = set;
-                addResult = set.add(author.id);
+              if (author.hasFlag(constants2.HAS_THREAD)) {
+                set.add(author.id);
               }
             }
             if (closure_29) {
               if (author.codedLinks.length > 0) {
-                addResult = set;
-                addResult = set.add(author.id);
+                set.add(author.id);
               }
             }
             if (closure_26) {
               if (author.codedLinks.length > 0) {
                 const codedLinks = author.codedLinks;
-                addResult = codedLinks;
                 const iter = codedLinks[Symbol.iterator]();
-                addResult = null;
                 const nextResult = iter.next();
                 while (iter !== undefined) {
                   let code = nextResult.code;
-                  let tmp13 = props;
-                  let tmp14 = closure_2_2;
-                  if (nextResult.type === props(closure_2_2[34]).CodedLinkType.INVITE) {
-                    addResult = props;
+                  if (nextResult.type === CodedLink.CodedLinkType.INVITE) {
                     let invites = props.invites;
-                    addResult = code;
-                    addResult = invites.get(code);
-                    if (null != addResult) {
-                      let tmp15 = addResult;
-                      if (null != addResult.channel) {
-                        let tmp16 = props;
-                        let tmp17 = closure_2_2;
-                        let obj2 = props(closure_2_2[35]);
-                        let tmp18 = addResult;
-                        if (obj2.isVoiceChannelInvite(addResult)) {
-                          let tmp19 = addResult;
-                          let id = addResult.channel.id;
-                          let tmp20 = props;
-                          let tmp21 = props;
-                          let tmp22 = props;
+                    value = invites.get(code);
+                    let tmp194 = value;
+                    if (null != value) {
+                      if (null != tmp194.channel) {
+                        let obj2 = InviteTypeUtils;
+                        if (obj2.isVoiceChannelInvite(tmp194)) {
+                          let id = tmp194.channel.id;
                           if (props.voiceInviteDataByChannelId[id] !== props.voiceInviteDataByChannelId[id]) {
-                            let tmp23 = set;
-                            let addResult1 = set.add(author.id);
-                            let tmp25 = iter;
+                            let addResult6 = set.add(author.id);
                             iter.return();
                           }
                         }
@@ -829,45 +777,38 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
             if (!closure_10) {
               if (closure_8) {
                 if (null != props.guildId) {
-                  const messageAuthorMemberUserIds = props(closure_2_2[13]).getMessageAuthorMemberUserIds(author);
-                  if (messageAuthorMemberUserIds.some((arg0) => closure_1_0.messageAuthorMembers[arg0] !== messageAuthorMembers.messageAuthorMembers[arg0])) {
-                    addResult = set;
-                    addResult = set.add(author.id);
+                  const messageAuthorMemberUserIds = messages_MessagesUtils.getMessageAuthorMemberUserIds(author);
+                  if (messageAuthorMemberUserIds.some((item) => props.messageAuthorMembers[item] !== messageAuthorMembers.messageAuthorMembers[item])) {
+                    set.add(author.id);
                   }
-                  const obj3 = props(closure_2_2[13]);
                 }
               }
               if (closure_9) {
                 if (author.author.id === props.currentUserId) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               if (closure_2) {
                 if (props.interactionStates[author.id] !== props.interactionStates[author.id]) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               if (closure_5) {
                 const interactionComponentStates = props.interactionComponentStates;
                 const interactionComponentStates2 = props.interactionComponentStates;
-                const value = interactionComponentStates.get(author.id);
+                value = interactionComponentStates.get(author.id);
                 if (value !== interactionComponentStates2.get(author.id)) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               if (closure_6) {
                 if (0 !== author.components.length) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               if (closure_3) {
                 if (props.channelPolls[author.id] !== props.channelPolls[author.id]) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               if (closure_4) {
@@ -878,8 +819,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                 }
                 if (null != message_id) {
                   if (props.messageReferencePolls[message_id] !== props.messageReferencePolls[message_id]) {
-                    addResult = set;
-                    addResult = set.add(author.id);
+                    set.add(author.id);
                   }
                 }
               }
@@ -888,24 +828,21 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                 const unloadedContentEntryMessageIds2 = props.unloadedContentEntryMessageIds;
                 const hasItem = unloadedContentEntryMessageIds.has(author.id);
                 if (hasItem !== unloadedContentEntryMessageIds2.has(author.id)) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               const channel = props.channel;
               if (channel.isForumPost()) {
                 if (closure_11) {
                   if (author.id === obj5.castChannelIdAsMessageId(props.channelId)) {
-                    addResult = set;
-                    addResult = set.add(author.id);
+                    set.add(author.id);
                   }
-                  obj5 = first(closure_2_2[20]);
+                  obj5 = SnowflakeUtilsDefault;
                 }
               }
               if (closure_15) {
                 if (null != author.activityInstance) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               let tmp72 = closure_16;
@@ -922,8 +859,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
               }
               if (closure_23) {
                 if (null != author.application) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               if (closure_24) {
@@ -933,202 +869,147 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
                   id = author.id;
                 }
                 if (id === props.currentUserId) {
-                  addResult = set;
-                  addResult = set.add(author.id);
+                  set.add(author.id);
                 }
               }
               if (closure_25) {
                 if (author.codedLinks.length > 0) {
                   const codedLinks2 = author.codedLinks;
-                  addResult = codedLinks2;
                   const iter2 = codedLinks2[Symbol.iterator]();
-                  addResult = null;
                   while (iter2 !== undefined) {
                     ({ type, code: code2 } = nextResult1);
-                    let tmp89 = props;
-                    let tmp90 = closure_2_2;
-                    let tmp88 = type;
-                    if (type === props(closure_2_2[34]).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
-                      let tmp94 = code2;
-                      let tmp95 = first1;
-                      first = first1(code2.split("-"), 1)[0];
+                    if (type === CodedLink.CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+                      let first = _slicedToArray(code2.split("-"), 1)[0];
                       let fetchingSkuIds = props.fetchingSkuIds;
                       let tmp97 = first;
-                      let tmp98 = props;
                       let tmp99 = props;
                       if (fetchingSkuIds.includes(first)) {
-                        addResult = set;
-                        addResult = set.add(author.id);
-                        addResult = iter2;
+                        let addResult20 = set.add(author.id);
                         iter2.return();
                       } else {
-                        addResult = ref4;
-                        addResult = first;
-                        addResult = ref4.get(tmp97);
-                        if (null != addResult) {
-                          addResult = tmp98;
+                        let value1 = SKUStore.get(tmp97);
+                        if (null != value1) {
                           let invalidApplicationIds = tmp99.invalidApplicationIds;
-                          if (invalidApplicationIds.includes(addResult.applicationId)) {
-                            addResult = set;
-                            addResult = set.add(author.id);
-                            addResult = iter2;
+                          if (invalidApplicationIds.includes(tmp103.applicationId)) {
+                            let addResult21 = set.add(author.id);
                             iter2.return();
                           }
                         }
                       }
-                    } else {
-                      let tmp91 = type;
-                      let tmp92 = props;
-                      let tmp93 = closure_2_2;
                     }
                     continue;
                   }
                   nextResult1 = iter2.next();
                 }
               }
-              addResult = null;
               if (null != author.author) {
-                addResult = first;
-                addResult = closure_2_2;
-                addResult = props;
-                addResult = props;
-                addResult = props;
                 if (!obj9.messageAuthorActivitiesChanged(author, props, props)) {
-                  addResult = first;
-                  addResult = closure_2_2;
-                  addResult = props;
-                  if (!obj6.codedLinksChanged(author, addResult, props)) {
-                    addResult = closure_1;
+                  if (!obj6.codedLinksChanged(author, tmp200, props)) {
                     if (!closure_1) {
-                      addResult = first;
-                      addResult = closure_2_2;
-                      addResult = props;
-                      if (!obj8.mediaPostPreviewEmbedsChanged(author, addResult, props)) {
-                        addResult = cacheStoreLoaded2;
+                      if (!obj8.mediaPostPreviewEmbedsChanged(author, tmp200, props)) {
+                        let tmp126 = cacheStoreLoaded2;
                         if (cacheStoreLoaded2) {
-                          addResult = author.embeds.length > 0;
+                          tmp126 = author.embeds.length > 0;
                         }
-                        if (addResult) {
-                          addResult = set;
-                          addResult = set.add(author.id);
+                        if (tmp126) {
+                          set.add(author.id);
                         }
-                        addResult = closure_2_15;
-                        addResult = author.type === closure_2_15.THREAD_STARTER_MESSAGE;
-                        if (addResult) {
-                          addResult = props;
-                          addResult = addResult.threadStartingReferenceMessage !== props.threadStartingReferenceMessage;
+                        let tmp130 = author.type === constants3.THREAD_STARTER_MESSAGE;
+                        if (tmp130) {
+                          tmp130 = tmp200.threadStartingReferenceMessage !== props.threadStartingReferenceMessage;
                         }
-                        if (addResult) {
-                          addResult = set;
-                          addResult = set.add(author.id);
+                        if (tmp130) {
+                          set.add(author.id);
                         }
-                        addResult = closure_14;
+                        let hasItem1 = closure_14;
                         if (closure_14) {
-                          addResult = null != author.applicationId;
+                          hasItem1 = null != author.applicationId;
                         }
-                        if (addResult) {
-                          const invalidApplicationIds2 = addResult.invalidApplicationIds;
-                          addResult = invalidApplicationIds2.includes(author.applicationId);
+                        if (hasItem1) {
+                          const invalidApplicationIds2 = tmp199.invalidApplicationIds;
+                          hasItem1 = invalidApplicationIds2.includes(author.applicationId);
                         }
-                        if (addResult) {
-                          addResult = set;
-                          addResult = set.add(author.id);
+                        if (hasItem1) {
+                          set.add(author.id);
                         }
-                        addResult = closure_17;
                         if (closure_17) {
                           const referralTrialOfferId = author.referralTrialOfferId;
-                          addResult = null != referralTrialOfferId;
-                          if (addResult) {
-                            addResult = props;
+                          let hasItem2 = null != referralTrialOfferId;
+                          if (hasItem2) {
                             const resolvedReferralTrialOfferIds = props.resolvedReferralTrialOfferIds;
-                            addResult = resolvedReferralTrialOfferIds.includes(referralTrialOfferId);
+                            hasItem2 = resolvedReferralTrialOfferIds.includes(referralTrialOfferId);
                           }
-                          if (addResult) {
-                            addResult = set;
-                            addResult = set.add(author.id);
+                          if (hasItem2) {
+                            set.add(author.id);
                           }
                         }
-                        addResult = closure_18;
+                        let tmp143 = closure_18;
                         if (closure_18) {
-                          addResult = author.codedLinks.length > 0;
+                          tmp143 = author.codedLinks.length > 0;
                         }
-                        if (addResult) {
-                          addResult = set;
-                          addResult = set.add(author.id);
+                        if (tmp143) {
+                          set.add(author.id);
                         }
-                        addResult = closure_19;
+                        let tmp146 = closure_19;
                         if (!closure_19) {
-                          addResult = closure_22;
+                          tmp146 = closure_22;
                         }
-                        if (addResult) {
+                        if (tmp146) {
                           const activity3 = author.activity;
-                          addResult = undefined;
+                          let party_id1;
                           if (activity3 != null) {
-                            addResult = activity3.party_id;
+                            party_id1 = activity3.party_id;
                           }
-                          addResult = null != addResult;
+                          tmp146 = null != party_id1;
                         }
-                        if (addResult) {
-                          addResult = set;
-                          addResult = set.add(author.id);
+                        if (tmp146) {
+                          set.add(author.id);
                         }
                       }
-                      obj8 = first(closure_2_2[36]);
-                    } else {
-                      addResult = first;
-                      addResult = closure_2_2;
-                      addResult = props;
-                      const obj7 = first(closure_2_2[36]);
+                      obj8 = MessagesUtilsDefault;
                     }
                   }
-                  obj6 = first(closure_2_2[36]);
+                  obj6 = MessagesUtilsDefault;
                 }
-                addResult = set;
-                addResult = set.add(author.id);
-                obj9 = first(closure_2_2[36]);
+                set.add(author.id);
+                obj9 = MessagesUtilsDefault;
               }
             }
-            addResult = set.add(author.id);
+            set.add(author.id);
           });
-          obj1 = { forceRender: null, forceReload: null, updateMessageIds: null, scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null, ignoreEmbedDescriptionCache: null, messagesNewlyLoaded: null, shouldInitialScroll: null, minimizeScrolling: null, isAnimated: null, hasJumpedToOriginalPost: null };
-          obj1[0] = tmp29;
+          const obj1 = { forceRender: tmp29, forceReload: null, updateMessageIds: null, scrollToMessageId: null, jumpTargetId: null, jumpType: null, focusTargetId: null, ignoreEmbedDescriptionCache: null, messagesNewlyLoaded: null, shouldInitialScroll: null, minimizeScrolling: null, isAnimated: null, hasJumpedToOriginalPost: null };
           if (!tmp28) {
-            tmp28 = recordMessageRenderResult1;
+            tmp28 = tmp106;
           }
-          obj1[1] = tmp28;
-          obj1[2] = set;
-          obj1[3] = scrollToMessageId;
-          obj1[4] = jumpTargetId;
-          obj1[5] = jumpType;
-          obj1[6] = focusTargetId;
-          obj1[7] = cacheStoreLoaded2;
-          obj1[8] = tmp21;
-          obj1[9] = shouldInitialScroll;
-          obj1[10] = minimizeScrolling;
-          obj1[11] = props.channelId !== tmp2.channelId || messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId;
-          obj1[12] = tmp6;
+          obj1.forceReload = tmp28;
+          obj1.updateMessageIds = set;
+          obj1.scrollToMessageId = scrollToMessageId;
+          obj1.jumpTargetId = jumpTargetId;
+          obj1.jumpType = jumpType;
+          obj1.focusTargetId = focusTargetId;
+          obj1.ignoreEmbedDescriptionCache = cacheStoreLoaded2;
+          obj1.messagesNewlyLoaded = tmp21;
+          obj1.shouldInitialScroll = shouldInitialScroll;
+          obj1.minimizeScrolling = minimizeScrolling;
+          obj1.isAnimated = props.channelId !== tmp2.channelId || messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId;
+          obj1.hasJumpedToOriginalPost = tmp6;
           cacheStoreLoaded2(obj1);
-          callback2(false);
+          closure_5(false);
           ({ channelId: channelId3, messages: messages3 } = tmp2);
-          const obj13 = first(closure_1_2[11]);
+          const obj13 = first(hasJumpedToOriginalPost[11]);
           const mapped1 = messages3.map((id) => id.id);
           let hasFetched2 = messages3.hasFetched;
           if (!hasFetched2) {
-            recordMessageRenderResult1 = messages3.ready && !messages3.cached;
-            hasFetched2 = recordMessageRenderResult1;
+            hasFetched2 = messages3.ready && !messages3.cached;
+            let tmp100 = messages3.ready && !messages3.cached;
           }
-          recordMessageRenderResult1 = obj13;
-          recordMessageRenderResult1 = channelId3;
-          recordMessageRenderResult1 = mapped1;
-          recordMessageRenderResult1 = hasFetched2;
-          recordMessageRenderResult1 = obj13.recordMessageRender(channelId3, mapped1, hasFetched2, messages3.hasMoreAfter);
+          obj13.recordMessageRender(channelId3, mapped1, hasFetched2, messages3.hasMoreAfter);
           let tmp92 = props.channelId !== tmp2.channelId || messages5.suppressRowAnimationSequenceId === messages4.suppressRowAnimationSequenceId;
-          let tmp93 = cacheStoreLoaded2;
         }
       }
-      let obj6 = messages(closure_1_2[33]);
+      let obj6 = messages(hasJumpedToOriginalPost[33]);
       const messages2 = tmp2.messages;
-      const arr = first(closure_1_2[19]);
+      const arr = first(hasJumpedToOriginalPost[19]);
       const found = arr.find(messages2.toArray().reverse(), (type) => type.type === constants.CALL);
       if (null != found) {
         set.add(found.id);
@@ -1163,8 +1044,8 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       onTapUsername: first2.handleTapUsername,
       onLongPressUsername: first2.handleLongPressUsername,
       onTapSticker: first2.handleOpenSticker,
-      onLongPressSticker: function handleLongPressSticker(closure_0) {
-        const messageId = messages(closure_1_2[38]).getNativeSyntheticEventData(closure_0).messageId;
+      onLongPressSticker: function handleLongPressSticker(nativeEvent) {
+        const messageId = MessageDataSnowflakeUtils.getNativeSyntheticEventData(nativeEvent).messageId;
         const current = ref3.current;
         const items = [messageId];
         const set = new Set(items);
@@ -1176,7 +1057,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
           tmp3 = messageId;
         }
         ref3.current = tmp3;
-        callback5({ forceRender: true, updateMessageIds: set });
+        closure_1_33({ forceRender: true, updateMessageIds: set });
       },
       onLongPressMessage: first2.handleLongPressMessage,
       onInitiateReply: first2.handleInitiateReply,
@@ -1222,7 +1103,7 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       onTapReactionOverflow: first2.handleTapReactionOverflow,
       onTapNavBar: function handleTapNavBar() {
         const self = this;
-        const apply = _handleTapNavBar.apply;
+        const apply = closure_28.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -1261,9 +1142,9 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       children: messages.children,
       HACK_fixModalInteraction: messages.HACK_fixModalInteraction,
       onTapTableView: function handleTapTableView() {
-        let isIOSResult = messages(closure_1_2[39]).isIOS();
+        let isIOSResult = PlatformUtils.isIOS();
         if (isIOSResult) {
-          isIOSResult = messages.keyboardType !== messages(closure_1_2[40]).KeyboardTypes.SYSTEM;
+          isIOSResult = messages.keyboardType !== KeyboardTypes.KeyboardTypes.SYSTEM;
         }
         if (isIOSResult) {
           const current = messages.chatInputRef.current;
@@ -1274,21 +1155,21 @@ const forwardRefResult = importAllResult.forwardRef((messages, ref) => {
       },
       onFirstLayout: function handleFirstLayout(nativeEvent) {
         nativeEvent = nativeEvent.nativeEvent;
-        handleVisibleMessagesChange({ firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex, lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex, firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible, source: messages(closure_1_2[41]).QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
+        handleVisibleMessagesChange({ firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex, lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex, firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible, source: QuestTypes.QuestsVisibleMessagesChangedSource.FIRST_LAYOUT });
       },
       onMediaPlayFinishedAnalytics: handleMediaPlayFinishedAnalytics,
       onMessageVisibilityChanged: function handleMessageVisibilityChanged(nativeEvent) {
         nativeEvent = nativeEvent.nativeEvent;
-        handleVisibleMessagesChange({ firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex, lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex, firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible, source: messages(closure_1_2[41]).QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
+        handleVisibleMessagesChange({ firstVisibleMessageRowIndex: nativeEvent.firstVisibleMessageIndex, lastVisibleMessageRowIndex: nativeEvent.lastVisibleMessageIndex, firstVisibleMessagePercentVisible: nativeEvent.firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible: nativeEvent.lastVisibleMessagePercentVisible, source: QuestTypes.QuestsVisibleMessagesChangedSource.VISIBILITY_CHANGED });
       }
     }),
-    findMessageIndex(_require(11957).ChatTTITracker, { messages: messages.messages })
+    findMessageIndex(require("ChatTTITracker").ChatTTITracker, { messages: messages.messages })
   ];
-  obj3[0] = items4;
-  return callback(closure_18, obj3);
+  obj3.children = items4;
+  return ref(closure_18, obj3);
 });
 forwardRefResult.displayName = "Messages";
-const memoResult = importAllResult.memo(forwardRefResult, (interactionStates, interactionStates2) => shallowEqualDefault(interactionStates, interactionStates2, ["interactionStates"], { shouldWarnLargeObjects: false }) && shallowEqualDefault(interactionStates.interactionStates, interactionStates2.interactionStates));
-let result = require("set").fileFinishedImporting("modules/messages/native/MessagesRenderer.tsx");
+let size = fn(2);
+let result = size.fileFinishedImporting("modules/messages/native/MessagesRenderer.tsx");
 
-export default memoResult;
+export default noop.memo(forwardRefResult, (interactionStates, interactionStates2) => discord_common_shallowEqualDefault(interactionStates, interactionStates2, ["interactionStates"], { shouldWarnLargeObjects: false }) && discord_common_shallowEqualDefault(interactionStates.interactionStates, interactionStates2.interactionStates));

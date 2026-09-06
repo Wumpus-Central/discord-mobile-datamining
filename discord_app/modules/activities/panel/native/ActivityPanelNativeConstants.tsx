@@ -1,13 +1,13 @@
-// === Module 17018: DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG ===
+// === Module 17018: ActivityPanelNativeConstants ===
 
-// Module 17018 (DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG)
-import set from "set" /* 2 */;
-import ActivityPanelModes from "ActivityPanelModes" /* 9505 */;
+// Module 17018 (ActivityPanelNativeConstants)
+import ActivityPanelConstants from "ActivityPanelConstants" /* 9505 */;
+import size from "module_2" /* 2 */;
 
 let obj = { top: null };
-obj = { disable: false, override: ActivityPanelModes.ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT };
-obj[0] = obj;
-const result = set.fileFinishedImporting("modules/activities/panel/native/ActivityPanelNativeConstants.tsx");
+obj = { disable: false, override: ActivityPanelConstants.ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT };
+obj.top = obj;
+const result = size.fileFinishedImporting("modules/activities/panel/native/ActivityPanelNativeConstants.tsx");
 
 export const DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG = obj;
 export const DEFAULT_PORTRAIT_LETTERBOX_CONFIG = { top: { disable: true }, bottom: { disable: true } };

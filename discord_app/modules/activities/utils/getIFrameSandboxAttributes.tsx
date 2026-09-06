@@ -1,10 +1,10 @@
 // === Module 9647: getIFrameSandboxAttributes ===
 
 // Module 9647 (getIFrameSandboxAttributes)
-import set from "set" /* 2 */;
+import size from "module_2" /* 2 */;
 
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-const result = set.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
+const result = size.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
 
 export default function getIFrameSandboxAttributes(allowPopups) {
   let obj = closure_0;

@@ -1,18 +1,19 @@
 // === Module 9243: useIsSocialLayerParentApplication ===
 
 // Module 9243 (useIsSocialLayerParentApplication)
-import getApplicationFlags from "getApplicationFlags" /* 8856 */;
-import closure_2 from "noop" /* 19 */;
-import { ApplicationFlags } from "ME" /* 1074 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8856 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");
+require = fn;
+const ApplicationFlags = fn(1074).ApplicationFlags;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/applications/useIsSocialLayerParentApplication.tsx");
 
 export default function useIsSocialLayerParentApplication(arg0) {
   closure_0 = arg0;
   const items = [arg0];
-  return React.useMemo(() => callback(closure_1_1[2]).hasApplicationFlag(callback, closure_1_3.PARENT), items);
+  return noop.useMemo(() => ApplicationFlagUtils.hasApplicationFlag(closure_0, ApplicationFlags.PARENT), items);
 };
 export const getIsSocialLayerParentApplication = function getIsSocialLayerParentApplication(application) {
-  return getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.PARENT);
+  return ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.PARENT);
 };

@@ -1,87 +1,83 @@
-// === Module 15799: Radio ===
+// === Module 15799: UserSettingsDesignSystemFormPrimitives ===
 
-// Module 15799 (Radio)
-import Text from "Text" /* 4556 */;
-import Stack from "Stack" /* 4973 */;
+// Module 15799 (UserSettingsDesignSystemFormPrimitives)
+import Text_Text from "Text/Text" /* 4556 */;
+import Stack_Stack from "Stack/Stack" /* 4973 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
-import TableRowInner from "TableRowInner" /* 5605 */;
-import context from "context" /* 5685 */;
-import TableRowGroupTitle from "TableRowGroupTitle" /* 5687 */;
+import TableRow from "TableRow" /* 5605 */;
+import TableRadioGroup from "TableRadioGroup" /* 5685 */;
+import TableRowGroup from "TableRowGroup" /* 5687 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
+import TableSwitchRow from "TableSwitchRow" /* 7201 */;
+import Checkbox from "Checkbox" /* 9429 */;
 import VoiceXIcon from "VoiceXIcon" /* 9987 */;
 import Slider from "Slider" /* 14178 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { ScrollView } from "get ActivityIndicator" /* 17 */;
-import { NOOP } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function Radio() {
   let obj = { children: null };
-  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Radio" }), callback2(Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Radio" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
   obj = { title: "Role Colors", hasIcons: false, defaultValue: "color-in-names", onChange: NOOP, children: null };
-  const items1 = [callback2(TableRadioRow.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }), callback2(TableRadioRow.TableRadioRow, { label: "Show role colors next to names", value: "color-next-to-names" }), callback2(TableRadioRow.TableRadioRow, { label: "Don't show role colors", value: "no-color" }), callback2(TableRadioRow.TableRadioRow, { label: "Disabled Item", subLabel: "This should not be selectable", value: "option4", disabled: true })];
-  obj[4] = items1;
-  items[2] = callback3(context.TableRadioGroup, obj);
-  obj[0] = items;
-  return callback3(closure_8, obj);
+  const items1 = [timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors in names", value: "color-in-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Show role colors next to names", value: "color-next-to-names" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Don't show role colors", value: "no-color" }), timestampProducer(TableRadioRow.TableRadioRow, { label: "Disabled Item", subLabel: "This should not be selectable", value: "option4", disabled: true })];
+  obj.children = items1;
+  items[2] = React5(TableRadioGroup.TableRadioGroup, obj);
+  obj.children = items;
+  return React5(React6, obj);
 }
 function Switch() {
-  [tmp2, c0] = callback(React.useState(true), 2);
+  [tmp2, c0] = _slicedToArray(noop.useState(true), 2);
   let obj = {
     value: tmp2,
-    onValueChange: React.useCallback((arg0) => {
+    onValueChange: noop.useCallback((arg0) => {
       _undefined(arg0);
     }, [])
   };
-  let _require;
-  const tmp = callback(React.useState(true), 2);
-  [tmp4, c0] = callback(React.useState(false), 2);
+  const tmp = _slicedToArray(noop.useState(true), 2);
+  [tmp4, c0] = _slicedToArray(noop.useState(false), 2);
   obj = {
     value: tmp4,
-    onValueChange: React.useCallback((arg0) => {
+    onValueChange: noop.useCallback((arg0) => {
       _undefined(arg0);
     }, [])
   };
-  _require = undefined;
-  const tmp3 = callback(React.useState(false), 2);
-  [tmp6, c0] = callback(React.useState(true), 2);
+  const tmp3 = _slicedToArray(noop.useState(false), 2);
+  [tmp6, c0] = _slicedToArray(noop.useState(true), 2);
   obj = {
     value: tmp6,
-    onValueChange: React.useCallback((arg0) => {
+    onValueChange: noop.useCallback((arg0) => {
       _undefined(arg0);
     }, [])
   };
-  _require = undefined;
-  const tmp5 = callback(React.useState(true), 2);
-  [tmp8, c0] = callback(React.useState(false), 2);
-  const tmp7 = callback(React.useState(false), 2);
+  c0 = undefined;
+  const tmp5 = _slicedToArray(noop.useState(true), 2);
+  [tmp8, c0] = _slicedToArray(noop.useState(false), 2);
+  const tmp7 = _slicedToArray(noop.useState(false), 2);
   const obj2 = { children: null };
-  const items = [callback2(_require(4556).Text, { variant: "heading-lg/bold", children: "Switch" }), callback2(_require(4556).Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Switch" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Toggle the state of a single setting on or off, immediately" }), , ];
   const obj3 = { title: "Emoji", hasIcons: false, children: null };
   const merged = Object.assign(obj);
-  obj3[2] = callback2(_require(7201).TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
-  items[2] = callback2(_require(5687).TableRowGroup, obj3);
+  obj3.children = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "Show emoji reactions on messages", subLabel: "Show more information in less space" });
+  items[2] = timestampProducer(TableRowGroup.TableRowGroup, obj3);
   const obj5 = { title: "Display images, videos, and lolcats", hasIcons: false, children: null };
   const merged1 = Object.assign(obj);
-  const items1 = [callback2(_require(7201).TableSwitchRow, { label: "When posted as links to chat" }), , , ];
+  const items1 = [timestampProducer(TableSwitchRow.TableSwitchRow, { label: "When posted as links to chat" }), , , ];
   const merged2 = Object.assign(obj);
-  items1[1] = callback2(_require(7201).TableSwitchRow, { label: "When uploaded directly to Discord" });
+  items1[1] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "When uploaded directly to Discord" });
   const merged3 = Object.assign({
     value: tmp8,
-    onValueChange: React.useCallback((arg0) => {
+    onValueChange: noop.useCallback((arg0) => {
       _undefined(arg0);
     }, [])
   });
-  items1[2] = callback2(_require(7201).TableSwitchRow, { label: "With image descriptions" });
-  items1[3] = callback2(_require(7201).TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
-  obj5[2] = items1;
-  items[3] = callback3(_require(5687).TableRowGroup, obj5);
-  obj2[0] = items;
-  return callback3(closure_8, obj2);
+  items1[2] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "With image descriptions" });
+  items1[3] = timestampProducer(TableSwitchRow.TableSwitchRow, { label: "Disabled switch item", subLabel: "This should not be switchable", disabled: true, value: false, onValueChange: NOOP });
+  obj5.children = items1;
+  items[3] = React5(TableRowGroup.TableRowGroup, obj5);
+  obj2.children = items;
+  return React5(React6, obj2);
 }
 function InlineCheckbox(startChecked) {
   let flag = startChecked.startChecked;
@@ -92,49 +88,54 @@ function InlineCheckbox(startChecked) {
   if (flag === undefined) {
     flag = true;
   }
-  let _require;
-  [tmp2, c0] = callback(React.useState(flag), 2);
-  const onToggle = React.useCallback((arg0) => {
+  c0 = undefined;
+  [tmp2, c0] = _slicedToArray(noop.useState(flag), 2);
+  const onToggle = noop.useCallback((arg0) => {
     _undefined(arg0);
   }, []);
-  return callback2(_require(9429).Checkbox, { label, description, required, checked, onToggle });
+  return timestampProducer(Checkbox.Checkbox, { label, description, required, checked, onToggle });
 }
 function InlineCheckboxDemo() {
   const obj = { children: null };
-  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }), callback2(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), callback2(InlineCheckbox, { label: "Trust google.com links from now on" }), callback2(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
-  obj[0] = items;
-  return callback3(closure_8, obj);
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Inline Checkbox" }), timestampProducer(InlineCheckbox, { label: "Checkbox label", description: "This is a description", startChecked: true }), timestampProducer(InlineCheckbox, { label: "Trust google.com links from now on" }), timestampProducer(InlineCheckbox, { label: "I agree to the Terms of Service", required: true })];
+  obj.children = items;
+  return React5(React6, obj);
 }
 function CheckboxRowDemo() {
   let obj = { children: null };
-  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }), callback2(Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Checkbox" }), timestampProducer(Text_Text.Text, { variant: "text-md/normal", children: "Select one or more options from a short list of options" }), ];
   obj = { title: "Who can send you a friend request?", hasIcons: false, children: null };
   obj = { label: "Everyone", subLabel: "Anyone can send you a friend request", checked: false, onPress: NOOP };
-  const items1 = [callback2(TableCheckboxRow.TableCheckboxRow, obj), callback2(TableCheckboxRow.TableCheckboxRow, { label: "Friends of Friends", subLabel: "Anyone who is friends with your friends can send you a friend request", checked: true, onPress: NOOP }), callback2(TableCheckboxRow.TableCheckboxRow, { label: "Server Members", subLabel: "Anyone who is in a server with you can send you a friend request", checked: true, onPress: NOOP })];
-  obj[2] = items1;
-  items[2] = callback3(TableRowGroupTitle.TableRowGroup, obj);
-  obj[0] = items;
-  return callback3(closure_8, obj);
+  const items1 = [timestampProducer(TableCheckboxRow.TableCheckboxRow, obj), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Friends of Friends", subLabel: "Anyone who is friends with your friends can send you a friend request", checked: true, onPress: NOOP }), timestampProducer(TableCheckboxRow.TableCheckboxRow, { label: "Server Members", subLabel: "Anyone who is in a server with you can send you a friend request", checked: true, onPress: NOOP })];
+  obj.children = items1;
+  items[2] = React5(TableRowGroup.TableRowGroup, obj);
+  obj.children = items;
+  return React5(React6, obj);
 }
 function SliderDemo() {
   let obj = { children: null };
-  const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
+  const items = [timestampProducer(Text_Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
   obj = { start: true, end: true, label: "Volume", subLabel: null };
-  obj = { startIcon: callback2(VoiceXIcon.VoiceXIcon, {}), endIcon: callback2(VoiceNormalIcon.VoiceNormalIcon, {}), onValueChange: NOOP };
-  obj[3] = callback2(Slider.Slider, obj);
-  items[1] = callback2(TableRowInner.TableRow, obj);
-  obj[0] = items;
-  return callback3(closure_8, obj);
+  obj = { startIcon: timestampProducer(VoiceXIcon.VoiceXIcon, {}), endIcon: timestampProducer(VoiceNormalIcon.VoiceNormalIcon, {}), onValueChange: NOOP };
+  obj.subLabel = timestampProducer(Slider.Slider, obj);
+  items[1] = timestampProducer(TableRow.TableRow, obj);
+  obj.children = items;
+  return React5(React6, obj);
 }
-({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
-let closure_9 = createCacheKey.createStyles({ container: { padding: 16, paddingBottom: 32 } });
-const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
+const ScrollView = fn(17).ScrollView;
+const NOOP = fn(1074).NOOP;
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
+const createStyles = fn(4560);
+let closure_9 = createStyles.createStyles({ container: { padding: 16, paddingBottom: 32 } });
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
 
 export default function UserSettingsDesignSystemFormPrimitives() {
   let obj = { children: null };
-  obj = { spacing: 24, style: callback4().container, children: null };
-  const items = [callback2(Radio, {}), callback2(Switch, {}), callback2(CheckboxRowDemo, {}), callback2(InlineCheckboxDemo, {}), callback2(SliderDemo, {})];
-  obj[2] = items;
-  obj[0] = callback3(Stack.Stack, obj);
-  return callback2(ScrollView, obj);
+  obj = { spacing: 24, style: closure_9().container, children: null };
+  const items = [timestampProducer(Radio, {}), timestampProducer(Switch, {}), timestampProducer(CheckboxRowDemo, {}), timestampProducer(InlineCheckboxDemo, {}), timestampProducer(SliderDemo, {})];
+  obj.children = items;
+  obj.children = React5(Stack_Stack.Stack, obj);
+  return timestampProducer(ScrollView, obj);
 };

@@ -1,14 +1,13 @@
-// === Module 7562: fromServer ===
+// === Module 7562: CollectiblesStoreListingStylesRecord ===
 
-// Module 7562 (fromServer)
-import toJSDefault from "toJS" /* 1386 */;
+// Module 7562 (CollectiblesStoreListingStylesRecord)
+import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
+import tinycolorDefault from "tinycolor" /* 7552 */;
+import Record from "Record" /* 1386 */;
 
-const require = arg1;
-toJSDefault;
-let prototype;
-prototype = function CollectiblesStoreListingStylesRecord(arg0) {
+require = fn;
+const prototype = function CollectiblesStoreListingStylesRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
-  // ThrowIfThisInitialized (0x7c)
   ({ backgroundColors: tmp.backgroundColors, buttonColors: tmp.buttonColors, confettiColors: tmp.confettiColors } = arg0);
   return tmp;
 }.prototype;
@@ -16,28 +15,26 @@ class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
   ({ background_colors, button_colors, confetti_colors } = arg0);
-  const mapped = background_colors.map((color) => {
-    const tmp = callback2(7552);
-    return tmp(callback(1091).int2hex(color));
+  const mapped = background_colors.map((item) => {
+    const tmp = tinycolorDefault;
+    return tmp(utils_ColorUtils.int2hex(item));
   });
-  const mapped1 = button_colors.map((color) => {
-    const tmp = callback2(7552);
-    return tmp(callback(1091).int2hex(color));
+  const mapped1 = button_colors.map((item) => {
+    const tmp = tinycolorDefault;
+    return tmp(utils_ColorUtils.int2hex(item));
   });
-  const mapped2 = confetti_colors.map((color) => {
-    const tmp = callback2(7552);
-    return tmp(callback(1091).int2hex(color));
-  });
-  if (typeof prototype !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof prototype === "function") {
+    const tmp9 = new prototype(tmp, confetti_colors, tmp2, new.target);
+    tmp9.backgroundColors = mapped;
+    tmp9.buttonColors = mapped1;
+    tmp9.confettiColors = tmp5;
+    return tmp9;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const tmp5 = new prototype("Trying to call a non-function", confetti_colors, prototype, new.target);
-  // ThrowIfThisInitialized (0x7c)
-  tmp5.backgroundColors = mapped;
-  tmp5.buttonColors = mapped1;
-  tmp5.confettiColors = mapped2;
-  return tmp5;
+  tmp2 = prototype;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");
 
 export default prototype;

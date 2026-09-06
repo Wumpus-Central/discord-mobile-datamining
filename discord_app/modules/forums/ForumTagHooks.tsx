@@ -1,24 +1,27 @@
-// === Module 7275: useAvailableTags ===
+// === Module 7275: ForumTagHooks ===
 
-// Module 7275 (useAvailableTags)
-import closure_2 from "noop" /* 19 */;
-import closure_3 from "ensureGuildLoaded" /* 1957 */;
-import closure_4 from "getUncachedChannelPermissions" /* 4199 */;
-import { Permissions } from "sum" /* 1085 */;
+// Module 7275 (ForumTagHooks)
+import GlobalUtils from "GlobalUtils" /* 1369 */;
+import ReportToModUtils from "ReportToModUtils" /* 7276 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
 
-const require = arg1;
+require = fn;
+const Permissions = fn(1085).Permissions;
 let closure_6 = [];
-let result = require("set").fileFinishedImporting("modules/forums/ForumTagHooks.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/forums/ForumTagHooks.tsx");
 
 export const useAvailableTags = function useAvailableTags(parent_id) {
   parent_id = undefined;
   if (parent_id != null) {
     parent_id = parent_id.parent_id;
   }
-  const items = [closure_3];
+  const items = [ChannelStore];
   const items1 = [parent_id];
   return parent_id(504).useStateFromStoresObject(items, () => {
-    const channel = closure_1_3.getChannel(parent_id);
+    const channel = ChannelStore.getChannel(closure_0);
     let availableTags;
     if (channel != null) {
       availableTags = channel.availableTags;
@@ -26,24 +29,25 @@ export const useAvailableTags = function useAvailableTags(parent_id) {
     if (availableTags == null) {
       availableTags = [];
     }
-    return availableTags.reduce((arg0, id) => {
+    return availableTags.reduce((acc, id) => {
       const obj = {};
-      const merged = Object.assign(arg0);
+      const merged = Object.assign(acc);
       obj[id.id] = id;
       return obj;
     }, {});
   }, items1);
 };
 export const useAppliedTags = function useAppliedTags(thread) {
-  let parent_id = thread;
-  parent_id = undefined;
+  _require = thread;
+  let parent_id;
   if (thread != null) {
     parent_id = thread.parent_id;
   }
-  const items = [closure_3];
+  closure_129_0 = parent_id;
+  const items = [ChannelStore];
   const items1 = [parent_id];
-  stateFromStoresObject = parent_id(stateFromStoresObject[4]).useStateFromStoresObject(items, () => {
-    const channel = closure_1_3.getChannel(parent_id);
+  stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+    const channel = ChannelStore.getChannel(closure_0);
     let availableTags;
     if (channel != null) {
       availableTags = channel.availableTags;
@@ -51,36 +55,35 @@ export const useAppliedTags = function useAppliedTags(thread) {
     if (availableTags == null) {
       availableTags = [];
     }
-    return availableTags.reduce((arg0, id) => {
+    return availableTags.reduce((acc, id) => {
       const obj = {};
-      const merged = Object.assign(arg0);
+      const merged = Object.assign(acc);
       obj[id.id] = id;
       return obj;
     }, {});
   }, items1);
   const items2 = [stateFromStoresObject, thread];
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let found;
-    if (parent_id != null) {
+    if (closure_0 != null) {
       const appliedTags = obj.appliedTags;
       if (appliedTags != null) {
-        const mapped = appliedTags.map((arg0) => table[arg0]);
+        const mapped = appliedTags.map((item) => memo[item]);
         if (mapped != null) {
-          found = mapped.filter(parent_id(memo[5]).isNotNullish);
+          found = mapped.filter(GlobalUtils.isNotNullish);
         }
       }
     }
     if (found == null) {
-      found = closure_1_6;
+      found = closure_6;
     }
     let result;
-    if (parent_id != null) {
+    if (closure_0 != null) {
       result = obj.isModeratorReportChannel();
     }
     let result1 = found;
     if (result) {
-      result1 = parent_id(memo[6]).sortedModeratorReportTags(found);
-      const obj2 = parent_id(memo[6]);
+      result1 = ReportToModUtils.sortedModeratorReportTags(found);
     }
     return result1;
   }, items2);
@@ -90,19 +93,18 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
   if (arg1 === undefined) {
     num = 1;
   }
-  let parent_id = num;
+  _require = thread;
   let memo;
-  parent_id = thread;
-  memo = undefined;
-  parent_id = undefined;
-  parent_id = undefined;
+  closure_129_0 = undefined;
+  let parent_id;
   if (thread != null) {
     parent_id = thread.parent_id;
   }
-  let items = [closure_3];
+  closure_129_0 = parent_id;
+  let items = [ChannelStore];
   const items1 = [parent_id];
-  const stateFromStoresObject = parent_id(memo[4]).useStateFromStoresObject(items, () => {
-    const channel = closure_1_3.getChannel(parent_id);
+  const stateFromStoresObject = require("initialize").useStateFromStoresObject(items, () => {
+    const channel = ChannelStore.getChannel(closure_0);
     let availableTags;
     if (channel != null) {
       availableTags = channel.availableTags;
@@ -110,87 +112,86 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
     if (availableTags == null) {
       availableTags = [];
     }
-    return availableTags.reduce((arg0, id) => {
+    return availableTags.reduce((acc, id) => {
       const obj = {};
-      const merged = Object.assign(arg0);
+      const merged = Object.assign(acc);
       obj[id.id] = id;
       return obj;
     }, {});
   }, items1);
-  memo = stateFromStoresObject;
   const items2 = [stateFromStoresObject, thread];
-  memo = React.useMemo(() => {
+  memo = noop.useMemo(() => {
     let found;
-    if (parent_id != null) {
+    if (closure_0 != null) {
       const appliedTags = obj.appliedTags;
       if (appliedTags != null) {
-        const mapped = appliedTags.map((arg0) => table[arg0]);
+        const mapped = appliedTags.map((item) => memo[item]);
         if (mapped != null) {
-          found = mapped.filter(parent_id(memo[5]).isNotNullish);
+          found = mapped.filter(GlobalUtils.isNotNullish);
         }
       }
     }
     if (found == null) {
-      found = closure_1_6;
+      found = closure_6;
     }
     let result;
-    if (parent_id != null) {
+    if (closure_0 != null) {
       result = obj.isModeratorReportChannel();
     }
     let result1 = found;
     if (result) {
-      result1 = parent_id(memo[6]).sortedModeratorReportTags(found);
-      const obj2 = parent_id(memo[6]);
+      result1 = ReportToModUtils.sortedModeratorReportTags(found);
     }
     return result1;
   }, items2);
   const items3 = [memo, num];
-  return React.useMemo(() => {
-    const items = [memo.slice(0, parent_id), Math.max(0, memo.length - parent_id)];
+  return noop.useMemo(() => {
+    const items = [memo.slice(0, closure_0), Math.max(0, memo.length - closure_0)];
     return items;
   }, items3);
 };
 export const useVisibleForumTags = function useVisibleForumTags(parentChannel) {
-  const _require = parentChannel;
-  const items = [closure_4];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores));
+  _require = parentChannel;
+  const items = [PermissionStore];
+  stateFromStores = require("initialize").useStateFromStores(items, () => PermissionStore.can(Permissions.MANAGE_THREADS, closure_0));
   const items1 = [stateFromStores, ];
   let availableTags;
   if (parentChannel != null) {
     availableTags = parentChannel.availableTags;
   }
   items1[1] = availableTags;
-  return React.useMemo(() => {
+  return noop.useMemo(() => {
     let availableTags;
-    if (stateFromStores != null) {
-      availableTags = stateFromStores.availableTags;
+    if (moderatorReportChannel != null) {
+      availableTags = moderatorReportChannel.availableTags;
     }
     if (availableTags == null) {
       availableTags = [];
     }
     const items = [...availableTags];
-    if (!stateFromStores1) {
+    if (!closure_1) {
       const found = items.filter((moderated) => !moderated.moderated);
     }
     return found;
   }, items1);
 };
 export const useVisibleAppliedForumTags = function useVisibleAppliedForumTags(arg0, arg1) {
-  let stateFromStores = arg0;
-  let stateFromStores1 = arg1;
-  let items = [closure_3];
+  _require = arg0;
+  dependencyMap = arg1;
+  let items = [ChannelStore];
   const items1 = [arg0];
-  stateFromStores = stateFromStores(stateFromStores1[4]).useStateFromStores(items, () => {
+  const stateFromStores = require("initialize").useStateFromStores(items, () => {
     let parent_id;
-    if (stateFromStores != null) {
-      parent_id = stateFromStores.parent_id;
+    if (moderatorReportChannel != null) {
+      parent_id = moderatorReportChannel.parent_id;
     }
-    return closure_1_3.getChannel(parent_id);
+    return ChannelStore.getChannel(parent_id);
   }, items1);
-  stateFromStores1 = undefined;
-  const obj = stateFromStores(stateFromStores1[4]);
-  const items2 = [closure_4];
-  stateFromStores1 = stateFromStores(stateFromStores1[4]).useStateFromStores(items2, () => closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores));
+  closure_129_0 = stateFromStores;
+  const obj = require("initialize");
+  const items2 = [PermissionStore];
+  const stateFromStores1 = require("initialize").useStateFromStores(items2, () => PermissionStore.can(Permissions.MANAGE_THREADS, closure_0));
+  closure_129_1 = stateFromStores1;
   const items3 = [stateFromStores1, ];
   let availableTags;
   if (stateFromStores != null) {
@@ -199,29 +200,28 @@ export const useVisibleAppliedForumTags = function useVisibleAppliedForumTags(ar
   items3[1] = availableTags;
   memo = memo.useMemo(() => {
     let availableTags;
-    if (stateFromStores != null) {
-      availableTags = stateFromStores.availableTags;
+    if (moderatorReportChannel != null) {
+      availableTags = moderatorReportChannel.availableTags;
     }
     if (availableTags == null) {
       availableTags = [];
     }
     const items = [...availableTags];
-    if (!stateFromStores1) {
+    if (!closure_1) {
       const found = items.filter((moderated) => !moderated.moderated);
     }
     return found;
   }, items3);
   const items4 = [arg1, memo, arg0];
   return memo.useMemo(() => {
-    const found = stateFromStores1.filter((arg0) => closure_2.includes(arg0));
+    const found = closure_1.filter((item) => memo.includes(item));
     let result;
-    if (stateFromStores != null) {
-      result = stateFromStores.isModeratorReportChannel();
+    if (moderatorReportChannel != null) {
+      result = moderatorReportChannel.isModeratorReportChannel();
     }
     let result1 = found;
     if (result) {
-      result1 = stateFromStores(stateFromStores1[6]).sortedModeratorReportTags(found);
-      const obj2 = stateFromStores(stateFromStores1[6]);
+      result1 = ReportToModUtils.sortedModeratorReportTags(found);
     }
     return result1;
   }, items4);

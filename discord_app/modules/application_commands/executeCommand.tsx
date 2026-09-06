@@ -1,1407 +1,800 @@
-// === Module 9411: _executeCommand ===
+// === Module 9411: executeCommand ===
 
-// Module 9411 (_executeCommand)
-import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 7523 */;
-import _fetchMessageInteractionDataAll from "_fetchMessageInteractionData" /* 8117 */;
-import closure_4 from "asyncGeneratorStep" /* 5 */;
-import closure_5 from "getEmojiToGroupId" /* 5459 */;
-import closure_6 from "_getSystemLocale" /* 2025 */;
-import closure_7 from "createGuildRecordFromRust" /* 1979 */;
-import closure_8 from "map" /* 4900 */;
-import closure_9 from "mergeGuildAvatar" /* 1371 */;
-import closure_10 from "handleInit" /* 7780 */;
-import ME from "ME" /* 1074 */;
-import { DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE as closure_15 } from "MESSAGE_GROUP_SPACING" /* 4553 */;
+// Module 9411 (executeCommand)
+import UploadUtils from "UploadUtils" /* 5129 */;
+import FileUtils from "FileUtils" /* 5134 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
+import MessageQueue from "MessageQueue" /* 7834 */;
+import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8117 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 9416 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import EmojiStore from "EmojiStore" /* 5459 */;
+import LocaleStore from "LocaleStore" /* 2025 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
+import UserStore from "UserStore" /* 1371 */;
+import ApplicationCommandStore from "ApplicationCommandStore" /* 7780 */;
 
-require = arg1;
-function _executeCommand() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c15 = 0;
-    c16 = 0;
-    c13 = 0;
-    const iter = (function*(arg0, interactionLifecycleOptions) {
-      if (channelId === 2) {
-        channelId = 3;
-        let throwTypeErrorResult = HermesBuiltin.throwTypeError();
-      } else {
-        throwTypeErrorResult = interactionLifecycleOptions;
-        throwTypeErrorResult = arg0;
-        throwTypeErrorResult = tmp2;
-        throwTypeErrorResult = null;
-        throwTypeErrorResult = globalThis;
-        if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw interactionLifecycleOptions;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = interactionLifecycleOptions;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+require = fn;
+let closure_16 = async function _executeCommand(arg0, value) {
+  if (c16 === 2) {
+    c16 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    while (true) {
+      c16 = 2;
+      let tmp4 = c15;
+      if (0 === c15) {
+        if (arg0 === 1) {
+          c16 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c16 = 3;
+          obj = { value, done: true };
+          return obj;
         } else {
-          while (true) {
-            let num = 2;
-            channelId = 2;
-            let tmp4 = c15;
-            if (0 === c15) {
-              if (arg0 === 1) {
-                let num13 = 3;
-                channelId = 3;
-                throw interactionLifecycleOptions;
-              } else if (arg0 === 2) {
-                let num12 = 3;
-                channelId = 3;
-                obj = { value: null, done: true };
-                obj[0] = interactionLifecycleOptions;
-                return obj;
-              } else {
-                let arr = throwTypeErrorResult;
-                let items = tmp4;
-                let lib;
-                dependencyMap = undefined;
-                let lib2;
-                closure_3 = undefined;
-                options = undefined;
-                c5 = undefined;
-                closure_6 = undefined;
-                let id;
-                let untranslatedName;
-                throwTypeErrorResult = lib;
-                ({ command: c0, optionValues: closure_1, context: closure_2, commandTargetId: closure_3, maxSizeCallback: options, commandOrigin } = lib);
-                if (commandOrigin === undefined) {
-                  throwTypeErrorResult = lib;
-                  throwTypeErrorResult = closure_1_3;
-                  commandOrigin = lib(closure_1_3[9]).CommandOrigin.CHAT;
-                }
-                c5 = commandOrigin;
-                ({ sectionName: closure_6, interactionLifecycleOptionsFactory } = throwTypeErrorResult);
-                if (interactionLifecycleOptionsFactory === undefined) {
-                  interactionLifecycleOptionsFactory = closure_1_19;
-                }
-                id = interactionLifecycleOptionsFactory;
-                untranslatedName = throwTypeErrorResult.source;
-                let obj12;
-                let store;
-                items = undefined;
-                arr = undefined;
-                let commandAttachmentDraftType;
-                let user;
-                c15 = undefined;
-                channelId = undefined;
-                let length;
-                closure_18 = undefined;
-                closure_19 = undefined;
-                closure_20 = undefined;
-                let lib3;
-                closure_22 = undefined;
-                closure_23 = undefined;
-                closure_24 = undefined;
-                let upload;
-                length = undefined;
-                closure_27 = undefined;
-                closure_28 = undefined;
-                closure_29 = undefined;
-                let name;
-                let obj11;
-                c15 = 1;
-                let num11 = 1;
-                channelId = 1;
-                return { value: "PX_16", done: true };
-              }
-            } else {
-              if (1 === tmp4) {
-                if (arg0 === 1) {
-                  let num10 = 3;
-                  channelId = 3;
-                  throw interactionLifecycleOptions;
-                } else if (arg0 === 2) {
-                  let num9 = 3;
-                  channelId = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = interactionLifecycleOptions;
-                  return obj1;
-                } else {
-                  throwTypeErrorResult = items;
-                  throwTypeErrorResult = lib2;
-                  if (null != lib2.channel) {
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = arr;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = lib2;
-                    throwTypeErrorResult = store.getSource(lib2.channel.id);
-                    dependencyMap = throwTypeErrorResult;
-                    if (throwTypeErrorResult == null) {
-                      throwTypeErrorResult = items;
-                      throwTypeErrorResult = untranslatedName;
-                      dependencyMap = untranslatedName;
-                    }
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = arr;
-                    throwTypeErrorResult = dependencyMap;
-                    obj12 = dependencyMap;
-                    throwTypeErrorResult = store;
-                    throwTypeErrorResult = lib2;
-                    throwTypeErrorResult = store.getCommandOrigin(lib2.channel.id);
-                    lib2 = throwTypeErrorResult;
-                    if (throwTypeErrorResult == null) {
-                      throwTypeErrorResult = items;
-                      throwTypeErrorResult = c5;
-                      lib2 = c5;
-                    }
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = lib2;
-                    store = lib2;
-                    throwTypeErrorResult = lib2;
-                    if (null == lib2.autocomplete) {
-                      throwTypeErrorResult = items;
-                      throwTypeErrorResult = arr;
-                      throwTypeErrorResult = dependencyMap;
-                      throwTypeErrorResult = closure_3;
-                      let obj24 = dependencyMap(closure_3[10]);
-                      let obj2 = { type: "APPLICATION_COMMAND_USED", context: null, command: null, commandOrigin: null };
-                      throwTypeErrorResult = lib2;
-                      obj2[1] = lib2;
-                      throwTypeErrorResult = lib;
-                      obj2[2] = lib;
-                      throwTypeErrorResult = store;
-                      obj2[3] = store;
-                      throwTypeErrorResult = obj24.dispatch(obj2);
-                    }
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = arr;
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_3;
-                    let obj26 = dependencyMap(closure_3[11]);
-                    throwTypeErrorResult = lib2;
-                    c15 = 2;
-                    let num8 = 1;
-                    channelId = 1;
-                    let obj3 = { value: null, done: false };
-                    obj3[0] = obj26.unarchiveThreadIfNecessary(lib2.channel.id);
-                    return obj3;
-                  } else {
-                    let num7 = 3;
-                    channelId = 3;
-                  }
-                }
-              } else if (2 === tmp4) {
-                if (arg0 === 1) {
-                  let num6 = 3;
-                  channelId = 3;
-                  throw interactionLifecycleOptions;
-                } else if (arg0 === 2) {
-                  let num5 = 3;
-                  channelId = 3;
-                  let obj4 = { value: null, done: true };
-                  obj4[0] = interactionLifecycleOptions;
-                  return obj4;
-                } else {
-                  throwTypeErrorResult = items;
-                  throwTypeErrorResult = arr;
-                  items = [];
-                  arr = [];
-                  throwTypeErrorResult = lib;
-                  throwTypeErrorResult = closure_3;
-                  let obj31 = lib(closure_3[12]);
-                  throwTypeErrorResult = store;
-                  commandAttachmentDraftType = obj31.getCommandAttachmentDraftType(store);
-                  throwTypeErrorResult = lib;
-                  if (null != lib.options) {
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = lib;
-                    options = lib.options;
-                    throwTypeErrorResult = options;
-                    closure_3 = options[Symbol.iterator]();
-                    let tmp11 = options;
-                    let tmp12 = closure_3;
-                    while (closure_3 !== undefined) {
-                      throwTypeErrorResult = items;
-                      throwTypeErrorResult = arr;
-                      commandAttachmentDraftType = 1;
-                      user = tmp13;
-                      throwTypeErrorResult = user;
-                      throwTypeErrorResult = lib;
-                      throwTypeErrorResult = closure_3;
-                      if (user.type !== lib(closure_3[13]).ApplicationCommandOptionType.SUB_COMMAND) {
-                        throwTypeErrorResult = items;
-                        throwTypeErrorResult = arr;
-                        throwTypeErrorResult = user;
-                        throwTypeErrorResult = lib;
-                        throwTypeErrorResult = closure_3;
-                        if (user.type !== lib(closure_3[13]).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
-                          throwTypeErrorResult = items;
-                          throwTypeErrorResult = user;
-                          throwTypeErrorResult = dependencyMap;
-                          if (user.name in dependencyMap) {
-                            let tmp14 = items;
-                            let tmp15 = lib2;
-                            let autocomplete = lib2.autocomplete;
-                            name = undefined;
-                            if (autocomplete != null) {
-                              name = autocomplete.name;
+          closure_12 = tmp;
+          closure_11 = tmp4;
+          closure_139_0 = undefined;
+          closure_139_1 = undefined;
+          closure_139_2 = undefined;
+          closure_139_3 = undefined;
+          closure_139_4 = undefined;
+          closure_139_5 = undefined;
+          closure_139_6 = undefined;
+          closure_139_7 = undefined;
+          let source2;
+          let tmp585 = closure_0;
+          ({ command: closure_139_0, optionValues: closure_139_1, context: closure_139_2, commandTargetId: closure_139_3, maxSizeCallback: closure_139_4, commandOrigin } = closure_0);
+          if (commandOrigin === undefined) {
+            commandOrigin = ApplicationCommandTypes.CommandOrigin.CHAT;
+          }
+          closure_139_5 = commandOrigin;
+          ({ sectionName: closure_139_6, interactionLifecycleOptionsFactory } = tmp585);
+          if (interactionLifecycleOptionsFactory === undefined) {
+            interactionLifecycleOptionsFactory = displayInteractionLifecycleInChat;
+          }
+          closure_139_7 = interactionLifecycleOptionsFactory;
+          source2 = tmp585.source;
+          closure_139_9 = undefined;
+          closure_139_10 = undefined;
+          closure_139_11 = undefined;
+          closure_139_12 = undefined;
+          let commandAttachmentDraftType;
+          closure_139_14 = undefined;
+          closure_139_15 = undefined;
+          let channelId;
+          closure_139_17 = undefined;
+          closure_139_18 = undefined;
+          closure_139_19 = undefined;
+          closure_139_20 = undefined;
+          closure_139_21 = undefined;
+          closure_139_22 = undefined;
+          closure_139_23 = undefined;
+          closure_139_24 = undefined;
+          let upload;
+          closure_139_26 = undefined;
+          closure_139_27 = undefined;
+          closure_139_28 = undefined;
+          closure_139_29 = undefined;
+          let name2;
+          closure_139_31 = undefined;
+          c15 = 1;
+          c16 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else {
+        if (1 === tmp4) {
+          if (arg0 === 1) {
+            c16 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c16 = 3;
+            let obj1 = { value, done: true };
+            return obj1;
+          } else if (null != closure_139_2.channel) {
+            let source = closure_140_10.getSource(closure_139_2.channel.id);
+            closure_1 = source;
+            if (source == null) {
+              closure_1 = source2;
+            }
+            closure_139_9 = closure_1;
+            commandOrigin = closure_140_10.getCommandOrigin(closure_139_2.channel.id);
+            closure_2 = commandOrigin;
+            if (commandOrigin == null) {
+              closure_2 = closure_139_5;
+            }
+            closure_139_10 = closure_2;
+            if (null == closure_139_2.autocomplete) {
+              let obj24 = closure_140_1(closure_140_3[10]);
+              let obj2 = { type: "APPLICATION_COMMAND_USED", context: null, command: null, commandOrigin: null };
+              obj2.context = closure_139_2;
+              obj2.command = closure_139_0;
+              obj2.commandOrigin = closure_139_10;
+              let dispatchResult = obj24.dispatch(obj2);
+            }
+            let obj26 = closure_140_1(closure_140_3[11]);
+            c15 = 2;
+            c16 = 1;
+            let obj3 = { value: obj26.unarchiveThreadIfNecessary(closure_139_2.channel.id), done: false };
+            return obj3;
+          } else {
+            c16 = 3;
+          }
+        } else if (2 === tmp4) {
+          if (arg0 === 1) {
+            c16 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c16 = 3;
+            let obj4 = { value, done: true };
+            return obj4;
+          } else {
+            closure_139_11 = [];
+            closure_139_12 = [];
+            let obj31 = closure_140_0(closure_140_3[12]);
+            commandAttachmentDraftType = obj31.getCommandAttachmentDraftType(closure_139_10);
+            if (null != closure_139_0.options) {
+              let options = closure_139_0.options;
+              dependencyMap = options[Symbol.iterator]();
+              while (dependencyMap !== undefined) {
+                c13 = 1;
+                closure_139_14 = tmp13;
+                if (closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND) {
+                  if (closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.SUB_COMMAND_GROUP) {
+                    if (closure_139_14.name in closure_139_1) {
+                      let autocomplete = closure_139_2.autocomplete;
+                      let name;
+                      if (autocomplete != null) {
+                        name = autocomplete.name;
+                      }
+                      let tmp19 = name === closure_139_14.name || undefined;
+                      closure_139_15 = tmp19;
+                      channelId = undefined;
+                      if (closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.STRING) {
+                        if (closure_139_14.type !== closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ATTACHMENT) {
+                          let obj5 = closure_140_2(closure_140_3[14]);
+                          closure_139_17 = obj5.filterEmpty(closure_139_1[closure_139_14.name]);
+                          let tmp102 = null != closure_139_2.autocomplete;
+                          let tmp100 = closure_140_1(closure_140_3[16]);
+                          if (!tmp102) {
+                            tmp102 = 1 === closure_139_17.length;
+                          }
+                          let _HermesInternal2 = HermesInternal;
+                          let tmp100Result = tmp100(tmp102, "Option \"" + closure_139_14.name + "\" expects a single option type");
+                          if (null != closure_139_17[0]) {
+                            let first = closure_139_17[0];
+                            closure_6 = first;
+                            if (first == null) {
+                              closure_6 = { type: "text", text: "" };
                             }
-                            let tmp17 = items;
-                            let tmp18 = user;
-                            let tmp19 = name === user.name || undefined;
-                            let tmp20 = items;
-                            let tmp21 = arr;
-                            c15 = tmp19;
-                            channelId = undefined;
-                            let tmp22 = user;
-                            let tmp23 = lib;
-                            let tmp24 = closure_3;
-                            if (user.type !== lib(closure_3[13]).ApplicationCommandOptionType.STRING) {
-                              let tmp76 = items;
-                              let tmp77 = arr;
-                              let tmp78 = user;
-                              let tmp79 = lib;
-                              let tmp80 = closure_3;
-                              if (user.type !== lib(closure_3[13]).ApplicationCommandOptionType.ATTACHMENT) {
-                                let tmp92 = items;
-                                let tmp93 = arr;
-                                let tmp94 = lib2;
-                                let tmp95 = closure_3;
-                                let obj5 = lib2(closure_3[14]);
-                                let tmp96 = dependencyMap;
-                                let tmp97 = user;
-                                length = obj5.filterEmpty(dependencyMap[user.name]);
-                                let tmp98 = dependencyMap;
-                                let tmp99 = closure_3;
-                                throwTypeErrorResult = lib2;
-                                throwTypeErrorResult = null != lib2.autocomplete;
-                                throwTypeErrorResult = dependencyMap(closure_3[16]);
-                                if (!throwTypeErrorResult) {
-                                  throwTypeErrorResult = items;
-                                  throwTypeErrorResult = length;
-                                  throwTypeErrorResult = 1 === length.length;
-                                }
-                                throwTypeErrorResult = items;
-                                throwTypeErrorResult = user;
-                                let _HermesInternal2 = HermesInternal;
-                                throwTypeErrorResult = throwTypeErrorResult(throwTypeErrorResult, "Option \"" + user.name + "\" expects a single option type");
-                                throwTypeErrorResult = length;
-                                if (null != length[0]) {
-                                  throwTypeErrorResult = items;
-                                  throwTypeErrorResult = length;
-                                  throwTypeErrorResult = length[0];
-                                  closure_6 = throwTypeErrorResult;
-                                  if (throwTypeErrorResult == null) {
-                                    closure_6 = { type: "text", text: "" };
-                                  }
-                                  throwTypeErrorResult = items;
-                                  throwTypeErrorResult = arr;
-                                  throwTypeErrorResult = closure_6;
-                                  closure_18 = closure_6;
-                                  throwTypeErrorResult = user;
-                                  let type = user.type;
-                                  throwTypeErrorResult = lib;
-                                  throwTypeErrorResult = closure_3;
-                                  if (lib(closure_3[13]).ApplicationCommandOptionType.CHANNEL === type) {
-                                    throwTypeErrorResult = items;
-                                    throwTypeErrorResult = closure_18;
-                                    if ("channelMention" === closure_18.type) {
-                                      throwTypeErrorResult = items;
-                                      throwTypeErrorResult = closure_18;
-                                      channelId = closure_18.channelId;
-                                    } else {
-                                      throwTypeErrorResult = items;
-                                      throwTypeErrorResult = closure_18;
-                                      if ("text" === closure_18.type) {
-                                        throwTypeErrorResult = items;
-                                        throwTypeErrorResult = arr;
-                                        throwTypeErrorResult = lib;
-                                        throwTypeErrorResult = closure_3;
-                                        let obj38 = lib(closure_3[12]);
-                                        throwTypeErrorResult = closure_18;
-                                        throwTypeErrorResult = items;
-                                        if (obj38.isSnowflake(closure_18.text)) {
-                                          throwTypeErrorResult = closure_18;
-                                          let str4 = closure_18.text;
-                                          channelId = str4.trim();
-                                        } else {
-                                          throwTypeErrorResult = arr;
-                                          throwTypeErrorResult = lib;
-                                          throwTypeErrorResult = closure_3;
-                                          let obj15 = lib(closure_3[17]);
-                                          throwTypeErrorResult = closure_18;
-                                          throwTypeErrorResult = lib2;
-                                          let guild7 = lib2.guild;
-                                          throwTypeErrorResult = undefined;
-                                          if (guild7 != null) {
-                                            throwTypeErrorResult = guild7.id;
-                                          }
-                                          throwTypeErrorResult = items;
-                                          throwTypeErrorResult = arr;
-                                          throwTypeErrorResult = lib2;
-                                          closure_19 = obj15.resolveApplicationCommandOption(closure_18.text, throwTypeErrorResult, lib2.channel.id);
-                                          throwTypeErrorResult = dependencyMap;
-                                          throwTypeErrorResult = closure_3;
-                                          throwTypeErrorResult = undefined;
-                                          throwTypeErrorResult = dependencyMap(closure_3[16]);
-                                          if (closure_19 != null) {
-                                            throwTypeErrorResult = closure_19.type;
-                                          }
-                                          throwTypeErrorResult = items;
-                                          throwTypeErrorResult = closure_18;
-                                          let _HermesInternal7 = HermesInternal;
-                                          throwTypeErrorResult = throwTypeErrorResult("channelMention" === throwTypeErrorResult, "Failed to resolve " + closure_18.text);
-                                          throwTypeErrorResult = closure_19;
-                                          channelId = closure_19.channelId;
-                                        }
-                                      }
-                                    }
-                                  } else {
-                                    throwTypeErrorResult = arr;
-                                    throwTypeErrorResult = lib;
-                                    throwTypeErrorResult = closure_3;
-                                    if (lib(closure_3[13]).ApplicationCommandOptionType.ROLE === type) {
-                                      throwTypeErrorResult = items;
-                                      throwTypeErrorResult = closure_18;
-                                      if ("roleMention" === closure_18.type) {
-                                        throwTypeErrorResult = items;
-                                        throwTypeErrorResult = closure_18;
-                                        channelId = closure_18.roleId;
-                                      } else {
-                                        throwTypeErrorResult = items;
-                                        throwTypeErrorResult = closure_18;
-                                        if ("text" === closure_18.type) {
-                                          throwTypeErrorResult = items;
-                                          throwTypeErrorResult = arr;
-                                          throwTypeErrorResult = lib;
-                                          throwTypeErrorResult = closure_3;
-                                          obj12 = lib(closure_3[12]);
-                                          throwTypeErrorResult = closure_18;
-                                          throwTypeErrorResult = items;
-                                          if (obj12.isSnowflake(closure_18.text)) {
-                                            throwTypeErrorResult = closure_18;
-                                            let str3 = closure_18.text;
-                                            channelId = str3.trim();
-                                          } else {
-                                            throwTypeErrorResult = arr;
-                                            throwTypeErrorResult = lib;
-                                            throwTypeErrorResult = closure_3;
-                                            let obj13 = lib(closure_3[17]);
-                                            throwTypeErrorResult = closure_18;
-                                            let text2 = closure_18.text;
-                                            throwTypeErrorResult = lib2;
-                                            let guild6 = lib2.guild;
-                                            throwTypeErrorResult = undefined;
-                                            if (guild6 != null) {
-                                              throwTypeErrorResult = guild6.id;
-                                            }
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = arr;
-                                            throwTypeErrorResult = lib2;
-                                            throwTypeErrorResult = obj13;
-                                            throwTypeErrorResult = text2;
-                                            closure_20 = obj13.resolveApplicationCommandOption(text2, throwTypeErrorResult, lib2.channel.id, { allowUsers: false });
-                                            throwTypeErrorResult = dependencyMap;
-                                            throwTypeErrorResult = closure_3;
-                                            throwTypeErrorResult = undefined;
-                                            throwTypeErrorResult = dependencyMap(closure_3[16]);
-                                            if (closure_20 != null) {
-                                              throwTypeErrorResult = closure_20.type;
-                                            }
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = closure_18;
-                                            let _HermesInternal6 = HermesInternal;
-                                            throwTypeErrorResult = throwTypeErrorResult("roleMention" === throwTypeErrorResult, "Failed to resolve " + closure_18.text);
-                                            throwTypeErrorResult = closure_20;
-                                            channelId = closure_20.roleId;
-                                          }
-                                        } else {
-                                          throwTypeErrorResult = items;
-                                          throwTypeErrorResult = closure_18;
-                                          throwTypeErrorResult = "textMention" === closure_18.type;
-                                          if (throwTypeErrorResult) {
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = closure_18;
-                                            throwTypeErrorResult = "@everyone" === closure_18.text;
-                                          }
-                                          if (throwTypeErrorResult) {
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = lib2;
-                                            let guild5 = lib2.guild;
-                                            throwTypeErrorResult = undefined;
-                                            if (guild5 != null) {
-                                              throwTypeErrorResult = guild5.id;
-                                            }
-                                            throwTypeErrorResult = items;
-                                            channelId = throwTypeErrorResult;
-                                          }
-                                        }
-                                      }
-                                    } else {
-                                      throwTypeErrorResult = arr;
-                                      throwTypeErrorResult = lib;
-                                      throwTypeErrorResult = closure_3;
-                                      if (lib(closure_3[13]).ApplicationCommandOptionType.USER === type) {
-                                        throwTypeErrorResult = items;
-                                        throwTypeErrorResult = closure_18;
-                                        if ("userMention" === closure_18.type) {
-                                          throwTypeErrorResult = items;
-                                          throwTypeErrorResult = closure_18;
-                                          channelId = closure_18.userId;
-                                        } else {
-                                          throwTypeErrorResult = items;
-                                          throwTypeErrorResult = closure_18;
-                                          if ("text" === closure_18.type) {
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = arr;
-                                            throwTypeErrorResult = lib;
-                                            throwTypeErrorResult = closure_3;
-                                            let obj37 = lib(closure_3[12]);
-                                            throwTypeErrorResult = closure_18;
-                                            throwTypeErrorResult = items;
-                                            if (obj37.isSnowflake(closure_18.text)) {
-                                              throwTypeErrorResult = closure_18;
-                                              let str2 = closure_18.text;
-                                              channelId = str2.trim();
-                                            } else {
-                                              throwTypeErrorResult = arr;
-                                              throwTypeErrorResult = lib;
-                                              throwTypeErrorResult = closure_3;
-                                              obj11 = lib(closure_3[17]);
-                                              throwTypeErrorResult = closure_18;
-                                              let text = closure_18.text;
-                                              throwTypeErrorResult = lib2;
-                                              let guild4 = lib2.guild;
-                                              throwTypeErrorResult = undefined;
-                                              if (guild4 != null) {
-                                                throwTypeErrorResult = guild4.id;
-                                              }
-                                              throwTypeErrorResult = items;
-                                              throwTypeErrorResult = arr;
-                                              throwTypeErrorResult = lib2;
-                                              throwTypeErrorResult = obj11;
-                                              throwTypeErrorResult = text;
-                                              lib3 = obj11.resolveApplicationCommandOption(text, throwTypeErrorResult, lib2.channel.id, { allowRoles: false });
-                                              throwTypeErrorResult = dependencyMap;
-                                              throwTypeErrorResult = closure_3;
-                                              throwTypeErrorResult = undefined;
-                                              throwTypeErrorResult = dependencyMap(closure_3[16]);
-                                              if (lib3 != null) {
-                                                throwTypeErrorResult = lib3.type;
-                                              }
-                                              throwTypeErrorResult = items;
-                                              throwTypeErrorResult = closure_18;
-                                              let _HermesInternal5 = HermesInternal;
-                                              throwTypeErrorResult = throwTypeErrorResult("userMention" === throwTypeErrorResult, "Failed to resolve " + closure_18.text);
-                                              throwTypeErrorResult = lib3;
-                                              channelId = lib3.userId;
-                                            }
-                                          }
-                                        }
-                                      } else {
-                                        throwTypeErrorResult = arr;
-                                        throwTypeErrorResult = lib;
-                                        throwTypeErrorResult = closure_3;
-                                        if (lib(closure_3[13]).ApplicationCommandOptionType.MENTIONABLE === type) {
-                                          throwTypeErrorResult = items;
-                                          throwTypeErrorResult = closure_18;
-                                          if ("userMention" === closure_18.type) {
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = closure_18;
-                                            channelId = closure_18.userId;
-                                          } else {
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = closure_18;
-                                            if ("roleMention" === closure_18.type) {
-                                              throwTypeErrorResult = items;
-                                              throwTypeErrorResult = closure_18;
-                                              channelId = closure_18.roleId;
-                                            } else {
-                                              throwTypeErrorResult = items;
-                                              throwTypeErrorResult = closure_18;
-                                              if ("textMention" === closure_18.type) {
-                                                throwTypeErrorResult = items;
-                                                throwTypeErrorResult = closure_18;
-                                                if ("@everyone" === closure_18.text) {
-                                                  throwTypeErrorResult = items;
-                                                  throwTypeErrorResult = lib2;
-                                                  let guild3 = lib2.guild;
-                                                  throwTypeErrorResult = undefined;
-                                                  if (guild3 != null) {
-                                                    throwTypeErrorResult = guild3.id;
-                                                  }
-                                                  throwTypeErrorResult = items;
-                                                  channelId = throwTypeErrorResult;
-                                                }
-                                              }
-                                              throwTypeErrorResult = items;
-                                              throwTypeErrorResult = closure_18;
-                                              if ("text" === closure_18.type) {
-                                                throwTypeErrorResult = items;
-                                                throwTypeErrorResult = arr;
-                                                throwTypeErrorResult = lib;
-                                                throwTypeErrorResult = closure_3;
-                                                let obj36 = lib(closure_3[12]);
-                                                throwTypeErrorResult = closure_18;
-                                                throwTypeErrorResult = items;
-                                                if (obj36.isSnowflake(closure_18.text)) {
-                                                  throwTypeErrorResult = closure_18;
-                                                  let str = closure_18.text;
-                                                  channelId = str.trim();
-                                                } else {
-                                                  throwTypeErrorResult = arr;
-                                                  throwTypeErrorResult = lib;
-                                                  throwTypeErrorResult = closure_3;
-                                                  let obj10 = lib(closure_3[17]);
-                                                  throwTypeErrorResult = closure_18;
-                                                  throwTypeErrorResult = lib2;
-                                                  let guild = lib2.guild;
-                                                  throwTypeErrorResult = undefined;
-                                                  if (guild != null) {
-                                                    throwTypeErrorResult = guild.id;
-                                                  }
-                                                  throwTypeErrorResult = items;
-                                                  throwTypeErrorResult = lib2;
-                                                  closure_22 = obj10.resolveApplicationCommandOption(closure_18.text, throwTypeErrorResult, lib2.channel.id);
-                                                  throwTypeErrorResult = undefined;
-                                                  if (closure_22 != null) {
-                                                    throwTypeErrorResult = closure_22.type;
-                                                  }
-                                                  if ("userMention" === throwTypeErrorResult) {
-                                                    throwTypeErrorResult = items;
-                                                    throwTypeErrorResult = closure_22;
-                                                    channelId = closure_22.userId;
-                                                  } else {
-                                                    throwTypeErrorResult = items;
-                                                    throwTypeErrorResult = undefined;
-                                                    if (closure_22 != null) {
-                                                      throwTypeErrorResult = closure_22.type;
-                                                    }
-                                                    if ("roleMention" === throwTypeErrorResult) {
-                                                      throwTypeErrorResult = items;
-                                                      throwTypeErrorResult = closure_22;
-                                                      channelId = closure_22.roleId;
-                                                    } else {
-                                                      throwTypeErrorResult = items;
-                                                      throwTypeErrorResult = undefined;
-                                                      if (closure_22 != null) {
-                                                        throwTypeErrorResult = closure_22.type;
-                                                      }
-                                                      if ("textMention" === throwTypeErrorResult) {
-                                                        throwTypeErrorResult = items;
-                                                        throwTypeErrorResult = closure_22;
-                                                        if ("@everyone" === closure_22.text) {
-                                                          throwTypeErrorResult = items;
-                                                          throwTypeErrorResult = lib2;
-                                                          let guild2 = lib2.guild;
-                                                          throwTypeErrorResult = undefined;
-                                                          if (guild2 != null) {
-                                                            throwTypeErrorResult = guild2.id;
-                                                          }
-                                                          throwTypeErrorResult = items;
-                                                          channelId = throwTypeErrorResult;
-                                                        }
-                                                      }
-                                                      throwTypeErrorResult = items;
-                                                      throwTypeErrorResult = arr;
-                                                      throwTypeErrorResult = dependencyMap;
-                                                      throwTypeErrorResult = closure_3;
-                                                      throwTypeErrorResult = closure_18;
-                                                      let _HermesInternal4 = HermesInternal;
-                                                      throwTypeErrorResult = dependencyMap(closure_3[16]);
-                                                      throwTypeErrorResult = throwTypeErrorResult(false, "Failed to resolve " + closure_18.text);
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        } else {
-                                          throwTypeErrorResult = arr;
-                                          throwTypeErrorResult = lib;
-                                          throwTypeErrorResult = closure_3;
-                                          if (lib(closure_3[13]).ApplicationCommandOptionType.BOOLEAN === type) {
-                                            throwTypeErrorResult = items;
-                                            throwTypeErrorResult = closure_18;
-                                            if ("text" === closure_18.type) {
-                                              throwTypeErrorResult = items;
-                                              throwTypeErrorResult = arr;
-                                              throwTypeErrorResult = lib;
-                                              throwTypeErrorResult = closure_3;
-                                              let obj35 = lib(closure_3[15]);
-                                              throwTypeErrorResult = closure_18;
-                                              let str23 = closure_18.text;
-                                              channelId = obj35.toChoiceBooleanValue(str23.trim());
-                                            }
-                                          } else {
-                                            throwTypeErrorResult = arr;
-                                            throwTypeErrorResult = lib;
-                                            throwTypeErrorResult = closure_3;
-                                            if (lib(closure_3[13]).ApplicationCommandOptionType.INTEGER === type) {
-                                              throwTypeErrorResult = items;
-                                              throwTypeErrorResult = closure_18;
-                                              if ("text" === closure_18.type) {
-                                                throwTypeErrorResult = items;
-                                                throwTypeErrorResult = closure_18;
-                                                let str22 = closure_18.text;
-                                                closure_23 = str22.trim();
-                                                throwTypeErrorResult = user;
-                                                if (null != user.choices) {
-                                                  throwTypeErrorResult = items;
-                                                  throwTypeErrorResult = arr;
-                                                  throwTypeErrorResult = lib;
-                                                  throwTypeErrorResult = closure_3;
-                                                  let obj9 = lib(closure_3[15]);
-                                                  throwTypeErrorResult = user;
-                                                  throwTypeErrorResult = closure_23;
-                                                  channelId = obj9.findChoiceNumberValue(user.choices, closure_23);
-                                                } else {
-                                                  throwTypeErrorResult = items;
-                                                  throwTypeErrorResult = user;
-                                                  if (user.autocomplete) {
-                                                    throwTypeErrorResult = items;
-                                                    throwTypeErrorResult = lib2;
-                                                    if (null != lib2.autocomplete) {
-                                                      throwTypeErrorResult = items;
-                                                      throwTypeErrorResult = c15;
-                                                      if (c15) {
-                                                        throwTypeErrorResult = lib2;
-                                                        throwTypeErrorResult = items;
-                                                        channelId = lib2.autocomplete.query;
-                                                      }
-                                                    }
-                                                    throwTypeErrorResult = items;
-                                                    throwTypeErrorResult = arr;
-                                                    throwTypeErrorResult = lib;
-                                                    throwTypeErrorResult = closure_3;
-                                                    let obj8 = lib(closure_3[15]);
-                                                    throwTypeErrorResult = lib2;
-                                                    throwTypeErrorResult = user;
-                                                    throwTypeErrorResult = closure_23;
-                                                    throwTypeErrorResult = obj8.findAutocompleteChoiceNumberValue(lib2.channel.id, user.name, closure_23);
-                                                  }
-                                                }
-                                                throwTypeErrorResult = items;
-                                                throwTypeErrorResult = channelId;
-                                                if (null == channelId) {
-                                                  throwTypeErrorResult = items;
-                                                  throwTypeErrorResult = arr;
-                                                  let _Number2 = Number;
-                                                  throwTypeErrorResult = lib2;
-                                                  throwTypeErrorResult = closure_3;
-                                                  let obj34 = lib2(closure_3[14]);
-                                                  throwTypeErrorResult = closure_6;
-                                                  throwTypeErrorResult = closure_23;
-                                                  channelId = Number(obj34.normalizeNumericString(closure_6.locale, closure_23));
-                                                }
-                                              }
-                                            } else {
-                                              throwTypeErrorResult = arr;
-                                              throwTypeErrorResult = lib;
-                                              throwTypeErrorResult = closure_3;
-                                              if (lib(closure_3[13]).ApplicationCommandOptionType.NUMBER === type) {
-                                                throwTypeErrorResult = items;
-                                                throwTypeErrorResult = closure_18;
-                                                if ("text" === closure_18.type) {
-                                                  throwTypeErrorResult = items;
-                                                  throwTypeErrorResult = closure_18;
-                                                  let str21 = closure_18.text;
-                                                  closure_24 = str21.trim();
-                                                  throwTypeErrorResult = user;
-                                                  if (null != user.choices) {
-                                                    throwTypeErrorResult = items;
-                                                    throwTypeErrorResult = arr;
-                                                    throwTypeErrorResult = lib;
-                                                    throwTypeErrorResult = closure_3;
-                                                    let obj7 = lib(closure_3[15]);
-                                                    throwTypeErrorResult = user;
-                                                    throwTypeErrorResult = closure_24;
-                                                    channelId = obj7.findChoiceNumberValue(user.choices, closure_24);
-                                                  } else {
-                                                    throwTypeErrorResult = items;
-                                                    throwTypeErrorResult = user;
-                                                    if (user.autocomplete) {
-                                                      throwTypeErrorResult = items;
-                                                      throwTypeErrorResult = lib2;
-                                                      if (null != lib2.autocomplete) {
-                                                        throwTypeErrorResult = items;
-                                                        throwTypeErrorResult = c15;
-                                                        if (c15) {
-                                                          throwTypeErrorResult = lib2;
-                                                          throwTypeErrorResult = items;
-                                                          channelId = lib2.autocomplete.query;
-                                                        }
-                                                      }
-                                                      throwTypeErrorResult = items;
-                                                      throwTypeErrorResult = arr;
-                                                      throwTypeErrorResult = lib;
-                                                      throwTypeErrorResult = closure_3;
-                                                      let obj6 = lib(closure_3[15]);
-                                                      throwTypeErrorResult = lib2;
-                                                      throwTypeErrorResult = user;
-                                                      throwTypeErrorResult = closure_24;
-                                                      throwTypeErrorResult = obj6.findAutocompleteChoiceNumberValue(lib2.channel.id, user.name, closure_24);
-                                                    }
-                                                  }
-                                                  throwTypeErrorResult = items;
-                                                  throwTypeErrorResult = channelId;
-                                                  if (null == channelId) {
-                                                    throwTypeErrorResult = items;
-                                                    throwTypeErrorResult = arr;
-                                                    let _Number = Number;
-                                                    throwTypeErrorResult = lib2;
-                                                    throwTypeErrorResult = closure_3;
-                                                    let obj33 = lib2(closure_3[14]);
-                                                    throwTypeErrorResult = closure_6;
-                                                    throwTypeErrorResult = closure_24;
-                                                    channelId = Number(obj33.normalizeNumericString(closure_6.locale, closure_24));
-                                                  }
-                                                }
-                                              } else {
-                                                throwTypeErrorResult = items;
-                                                let _Error = Error;
-                                                throwTypeErrorResult = user;
-                                                let _HermesInternal3 = HermesInternal;
-                                                throwTypeErrorResult = new.target;
-                                                throwTypeErrorResult = new.target;
-                                                throwTypeErrorResult = new Error("Unsupported option type: " + user.type);
-                                                throw throwTypeErrorResult;
-                                              }
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                  throwTypeErrorResult = items;
-                                  throwTypeErrorResult = channelId;
-                                  throwTypeErrorResult = "" !== channelId;
-                                  if (!throwTypeErrorResult) {
-                                    throwTypeErrorResult = lib2;
-                                    throwTypeErrorResult = null == lib2.autocomplete;
-                                  }
-                                  if (!throwTypeErrorResult) {
-                                    throwTypeErrorResult = items;
-                                    throwTypeErrorResult = c15;
-                                  }
-                                  if (throwTypeErrorResult) {
-                                    throwTypeErrorResult = items;
-                                    throwTypeErrorResult = arr;
-                                    throwTypeErrorResult = dependencyMap;
-                                    throwTypeErrorResult = closure_3;
-                                    throwTypeErrorResult = lib2;
-                                    throwTypeErrorResult = null != lib2.autocomplete;
-                                    throwTypeErrorResult = dependencyMap(closure_3[16]);
-                                    if (!throwTypeErrorResult) {
-                                      throwTypeErrorResult = items;
-                                      throwTypeErrorResult = channelId;
-                                      throwTypeErrorResult = null != channelId;
-                                    }
-                                    throwTypeErrorResult = items;
-                                    throwTypeErrorResult = user;
-                                    let _HermesInternal8 = HermesInternal;
-                                    throwTypeErrorResult = throwTypeErrorResult(throwTypeErrorResult, "Unexpected value for option \"" + user.name + "\"");
-                                    throwTypeErrorResult = channelId;
-                                    if (null != channelId) {
-                                      throwTypeErrorResult = items;
-                                      throwTypeErrorResult = items;
-                                      obj5 = { type: null, name: null, value: null, focused: null };
-                                      throwTypeErrorResult = user;
-                                      obj5[0] = user.type;
-                                      throwTypeErrorResult = user;
-                                      obj5[1] = user.name;
-                                      throwTypeErrorResult = channelId;
-                                      obj5[2] = channelId;
-                                      throwTypeErrorResult = c15;
-                                      obj5[3] = c15;
-                                      throwTypeErrorResult = items.push(obj5);
-                                    }
-                                  }
+                            closure_139_18 = closure_6;
+                            let type = closure_139_14.type;
+                            if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.CHANNEL === type) {
+                              if ("channelMention" === closure_139_18.type) {
+                                channelId = closure_139_18.channelId;
+                              } else if ("text" === closure_139_18.type) {
+                                let obj38 = closure_140_0(closure_140_3[12]);
+                                if (obj38.isSnowflake(closure_139_18.text)) {
+                                  let str4 = closure_139_18.text;
+                                  channelId = str4.trim();
                                 } else {
-                                  throwTypeErrorResult = items;
-                                  throwTypeErrorResult = c15;
+                                  let obj15 = closure_140_0(closure_140_3[17]);
+                                  let guild7 = closure_139_2.guild;
+                                  let id;
+                                  if (guild7 != null) {
+                                    id = guild7.id;
+                                  }
+                                  closure_139_19 = obj15.resolveApplicationCommandOption(closure_139_18.text, id, closure_139_2.channel.id);
+                                  type = undefined;
+                                  let tmp297 = closure_140_1(closure_140_3[16]);
+                                  if (closure_139_19 != null) {
+                                    type = closure_139_19.type;
+                                  }
+                                  let _HermesInternal7 = HermesInternal;
+                                  let tmp297Result = tmp297("channelMention" === type, "Failed to resolve " + closure_139_18.text);
+                                  channelId = closure_139_19.channelId;
+                                }
+                              }
+                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.ROLE === type) {
+                              if ("roleMention" === closure_139_18.type) {
+                                channelId = closure_139_18.roleId;
+                              } else if ("text" === closure_139_18.type) {
+                                let obj12 = closure_140_0(closure_140_3[12]);
+                                if (obj12.isSnowflake(closure_139_18.text)) {
+                                  let str3 = closure_139_18.text;
+                                  channelId = str3.trim();
+                                } else {
+                                  let obj13 = closure_140_0(closure_140_3[17]);
+                                  let text2 = closure_139_18.text;
+                                  let guild6 = closure_139_2.guild;
+                                  let id1;
+                                  if (guild6 != null) {
+                                    id1 = guild6.id;
+                                  }
+                                  closure_139_20 = obj13.resolveApplicationCommandOption(text2, id1, closure_139_2.channel.id, { allowUsers: false });
+                                  let type1;
+                                  let tmp275 = closure_140_1(closure_140_3[16]);
+                                  if (closure_139_20 != null) {
+                                    type1 = closure_139_20.type;
+                                  }
+                                  let _HermesInternal6 = HermesInternal;
+                                  let tmp275Result = tmp275("roleMention" === type1, "Failed to resolve " + closure_139_18.text);
+                                  channelId = closure_139_20.roleId;
                                 }
                               } else {
-                                throwTypeErrorResult = items;
-                                throwTypeErrorResult = lib2;
-                                if (null != lib2.autocomplete) {
-                                  commandAttachmentDraftType = 0;
-                                  continue;
+                                let tmp248 = "textMention" === closure_139_18.type;
+                                if (tmp248) {
+                                  tmp248 = "@everyone" === closure_139_18.text;
+                                }
+                                if (tmp248) {
+                                  let guild5 = closure_139_2.guild;
+                                  let id2;
+                                  if (guild5 != null) {
+                                    id2 = guild5.id;
+                                  }
+                                  channelId = id2;
+                                }
+                              }
+                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.USER === type) {
+                              if ("userMention" === closure_139_18.type) {
+                                channelId = closure_139_18.userId;
+                              } else if ("text" === closure_139_18.type) {
+                                let obj37 = closure_140_0(closure_140_3[12]);
+                                if (obj37.isSnowflake(closure_139_18.text)) {
+                                  let str2 = closure_139_18.text;
+                                  channelId = str2.trim();
                                 } else {
-                                  throwTypeErrorResult = items;
-                                  throwTypeErrorResult = arr;
-                                  throwTypeErrorResult = untranslatedName;
-                                  throwTypeErrorResult = lib2;
-                                  throwTypeErrorResult = user;
-                                  throwTypeErrorResult = commandAttachmentDraftType;
-                                  upload = untranslatedName.getUpload(lib2.channel.id, user.name, commandAttachmentDraftType);
-                                  throwTypeErrorResult = upload;
-                                  if (null == upload) {
-                                    commandAttachmentDraftType = 0;
-                                    continue;
-                                  } else {
-                                    let tmp81 = items;
-                                    let tmp82 = arr;
-                                    length = arr.length;
-                                    let tmp83 = arr;
-                                    let tmp84 = upload;
-                                    arr = arr.push(upload);
-                                    let tmp86 = items;
-                                    obj6 = { type: null, name: null, value: null, focused: null };
-                                    let tmp87 = user;
-                                    obj6[0] = user.type;
-                                    let tmp88 = user;
-                                    obj6[1] = user.name;
-                                    let tmp89 = length;
-                                    obj6[2] = length;
-                                    let tmp90 = c15;
-                                    obj6[3] = c15;
-                                    arr = items.push(obj6);
+                                  let obj11 = closure_140_0(closure_140_3[17]);
+                                  let text = closure_139_18.text;
+                                  let guild4 = closure_139_2.guild;
+                                  let id3;
+                                  if (guild4 != null) {
+                                    id3 = guild4.id;
+                                  }
+                                  closure_139_21 = obj11.resolveApplicationCommandOption(text, id3, closure_139_2.channel.id, { allowRoles: false });
+                                  let type2;
+                                  let tmp235 = closure_140_1(closure_140_3[16]);
+                                  if (closure_139_21 != null) {
+                                    type2 = closure_139_21.type;
+                                  }
+                                  let _HermesInternal5 = HermesInternal;
+                                  let tmp235Result = tmp235("userMention" === type2, "Failed to resolve " + closure_139_18.text);
+                                  channelId = closure_139_21.userId;
+                                }
+                              }
+                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.MENTIONABLE === type) {
+                              if ("userMention" === closure_139_18.type) {
+                                channelId = closure_139_18.userId;
+                              } else if ("roleMention" === closure_139_18.type) {
+                                channelId = closure_139_18.roleId;
+                              } else {
+                                if ("textMention" === closure_139_18.type) {
+                                  if ("@everyone" === closure_139_18.text) {
+                                    let guild3 = closure_139_2.guild;
+                                    let id4;
+                                    if (guild3 != null) {
+                                      id4 = guild3.id;
+                                    }
+                                    channelId = id4;
                                   }
                                 }
-                                continue;
+                                if ("text" === closure_139_18.type) {
+                                  let obj36 = closure_140_0(closure_140_3[12]);
+                                  if (obj36.isSnowflake(closure_139_18.text)) {
+                                    let str = closure_139_18.text;
+                                    channelId = str.trim();
+                                  } else {
+                                    let obj10 = closure_140_0(closure_140_3[17]);
+                                    let guild = closure_139_2.guild;
+                                    let id5;
+                                    if (guild != null) {
+                                      id5 = guild.id;
+                                    }
+                                    closure_139_22 = obj10.resolveApplicationCommandOption(closure_139_18.text, id5, closure_139_2.channel.id);
+                                    let type3;
+                                    if (closure_139_22 != null) {
+                                      type3 = closure_139_22.type;
+                                    }
+                                    if ("userMention" === type3) {
+                                      channelId = closure_139_22.userId;
+                                    } else {
+                                      let type4;
+                                      if (closure_139_22 != null) {
+                                        type4 = closure_139_22.type;
+                                      }
+                                      if ("roleMention" === type4) {
+                                        channelId = closure_139_22.roleId;
+                                      } else {
+                                        let type5;
+                                        if (closure_139_22 != null) {
+                                          type5 = closure_139_22.type;
+                                        }
+                                        if ("textMention" === type5) {
+                                          if ("@everyone" === closure_139_22.text) {
+                                            let guild2 = closure_139_2.guild;
+                                            let id6;
+                                            if (guild2 != null) {
+                                              id6 = guild2.id;
+                                            }
+                                            channelId = id6;
+                                          }
+                                        }
+                                        let _HermesInternal4 = HermesInternal;
+                                        let tmp199 = closure_140_1(closure_140_3[16]);
+                                        let tmp199Result = tmp199(false, "Failed to resolve " + closure_139_18.text);
+                                      }
+                                    }
+                                  }
+                                }
                               }
+                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.BOOLEAN === type) {
+                              if ("text" === closure_139_18.type) {
+                                let obj35 = closure_140_0(closure_140_3[15]);
+                                let str23 = closure_139_18.text;
+                                channelId = obj35.toChoiceBooleanValue(str23.trim());
+                              }
+                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.INTEGER === type) {
+                              if ("text" === closure_139_18.type) {
+                                let str22 = closure_139_18.text;
+                                closure_139_23 = str22.trim();
+                                if (null != closure_139_14.choices) {
+                                  let obj9 = closure_140_0(closure_140_3[15]);
+                                  channelId = obj9.findChoiceNumberValue(closure_139_14.choices, closure_139_23);
+                                } else if (closure_139_14.autocomplete) {
+                                  if (null != closure_139_2.autocomplete) {
+                                    if (closure_139_15) {
+                                      channelId = closure_139_2.autocomplete.query;
+                                    }
+                                  }
+                                  let obj8 = closure_140_0(closure_140_3[15]);
+                                  let result = obj8.findAutocompleteChoiceNumberValue(closure_139_2.channel.id, closure_139_14.name, closure_139_23);
+                                }
+                                if (null == channelId) {
+                                  let _Number2 = Number;
+                                  let obj34 = closure_140_2(closure_140_3[14]);
+                                  channelId = Number(obj34.normalizeNumericString(closure_140_6.locale, closure_139_23));
+                                }
+                              }
+                            } else if (closure_140_0(closure_140_3[13]).ApplicationCommandOptionType.NUMBER === type) {
+                              if ("text" === closure_139_18.type) {
+                                let str21 = closure_139_18.text;
+                                closure_139_24 = str21.trim();
+                                if (null != closure_139_14.choices) {
+                                  let obj7 = closure_140_0(closure_140_3[15]);
+                                  channelId = obj7.findChoiceNumberValue(closure_139_14.choices, closure_139_24);
+                                } else if (closure_139_14.autocomplete) {
+                                  if (null != closure_139_2.autocomplete) {
+                                    if (closure_139_15) {
+                                      channelId = closure_139_2.autocomplete.query;
+                                    }
+                                  }
+                                  let obj6 = closure_140_0(closure_140_3[15]);
+                                  let result1 = obj6.findAutocompleteChoiceNumberValue(closure_139_2.channel.id, closure_139_14.name, closure_139_24);
+                                }
+                                if (null == channelId) {
+                                  let _Number = Number;
+                                  let obj33 = closure_140_2(closure_140_3[14]);
+                                  channelId = Number(obj33.normalizeNumericString(closure_140_6.locale, closure_139_24));
+                                }
+                              }
+                            } else {
+                              let _Error = Error;
+                              let _HermesInternal3 = HermesInternal;
+                              let tmp122 = new.target;
+                              let tmp123 = new.target;
+                              let error = new Error("Unsupported option type: " + closure_139_14.type);
+                              throw error;
+                            }
+                            let tmp308 = "" !== channelId;
+                            if (!tmp308) {
+                              tmp308 = null == closure_139_2.autocomplete;
+                            }
+                            if (!tmp308) {
+                              tmp308 = closure_139_15;
+                            }
+                            if (tmp308) {
+                              let tmp317 = null != closure_139_2.autocomplete;
+                              let tmp315 = closure_140_1(closure_140_3[16]);
+                              if (!tmp317) {
+                                tmp317 = null != channelId;
+                              }
+                              let _HermesInternal8 = HermesInternal;
+                              let tmp315Result = tmp315(tmp317, "Unexpected value for option \"" + closure_139_14.name + "\"");
+                              if (null != channelId) {
+                                obj5 = { type: null, name: null, value: null, focused: null };
+                                obj5.type = closure_139_14.type;
+                                obj5.name = closure_139_14.name;
+                                obj5.value = channelId;
+                                obj5.focused = closure_139_15;
+                                let arr = closure_139_11.push(obj5);
+                              }
+                            }
+                          }
+                        } else {
+                          if (null != closure_139_2.autocomplete) {
+                            c13 = 0;
+                            continue;
+                          } else {
+                            upload = closure_140_8.getUpload(closure_139_2.channel.id, closure_139_14.name, commandAttachmentDraftType);
+                            if (null == upload) {
+                              c13 = 0;
                               continue;
                             } else {
-                              throwTypeErrorResult = items;
-                              throwTypeErrorResult = arr;
-                              throwTypeErrorResult = lib2;
-                              throwTypeErrorResult = closure_3;
-                              let obj32 = lib2(closure_3[14]);
-                              throwTypeErrorResult = dependencyMap;
-                              throwTypeErrorResult = user;
-                              let str20 = obj32.getOptionalString(dependencyMap, user.name);
-                              let trimmed;
-                              if (str20 != null) {
-                                trimmed = str20.trim();
-                              }
-                              c5 = trimmed;
-                              if (trimmed == null) {
-                                c5 = "";
-                              }
-                              let tmp26 = items;
-                              let tmp27 = c5;
-                              closure_27 = c5;
-                              let tmp28 = user;
-                              if (null != user.choices) {
-                                let tmp43 = items;
-                                let tmp44 = arr;
-                                let tmp45 = lib;
-                                let tmp46 = closure_3;
-                                obj2 = lib(closure_3[15]);
-                                let tmp47 = user;
-                                let tmp48 = closure_27;
-                                channelId = obj2.findChoiceStringValue(user.choices, closure_27);
-                              } else {
-                                throwTypeErrorResult = items;
-                                throwTypeErrorResult = user;
-                                if (user.autocomplete) {
-                                  let tmp29 = items;
-                                  let tmp30 = lib2;
-                                  if (null != lib2.autocomplete) {
-                                    let tmp31 = items;
-                                    let tmp32 = c15;
-                                    if (c15) {
-                                      let tmp41 = lib2;
-                                      let tmp42 = items;
-                                      channelId = lib2.autocomplete.query;
-                                    }
-                                  }
-                                  let tmp33 = items;
-                                  let tmp34 = arr;
-                                  let tmp35 = lib;
-                                  let tmp36 = closure_3;
-                                  obj1 = lib(closure_3[15]);
-                                  let tmp37 = lib2;
-                                  let tmp38 = user;
-                                  let tmp39 = closure_27;
-                                  let result = obj1.findAutocompleteChoiceStringValue(lib2.channel.id, user.name, closure_27);
-                                }
-                              }
-                              let tmp49 = items;
-                              let tmp50 = channelId;
-                              if (null == channelId) {
-                                let tmp51 = items;
-                                let tmp52 = closure_27;
-                                channelId = closure_27;
-                              }
-                              let tmp53 = items;
-                              let tmp54 = channelId;
-                              if ("" === channelId) {
-                                let tmp55 = lib2;
-                                if (null != lib2.autocomplete) {
-                                  let tmp56 = items;
-                                  let tmp57 = c15;
-                                  if (!c15) {
-                                    commandAttachmentDraftType = 0;
-                                    continue;
-                                  }
-                                  continue;
-                                }
-                              }
-                              let tmp58 = items;
-                              let tmp59 = arr;
-                              let tmp60 = dependencyMap;
-                              let tmp61 = closure_3;
-                              let tmp63 = lib2;
-                              let tmp64 = null != lib2.autocomplete;
-                              let tmp62 = dependencyMap(closure_3[16]);
-                              if (!tmp64) {
-                                let tmp65 = items;
-                                let tmp66 = channelId;
-                                tmp64 = null != channelId;
-                              }
-                              let tmp67 = items;
-                              let tmp68 = user;
-                              let _HermesInternal = HermesInternal;
-                              let tmp62Result = tmp62(tmp64, "Option \"" + user.name + "\" expects a value");
-                              let tmp70 = items;
-                              obj7 = { type: null, name: null, value: null, focused: null };
-                              let tmp71 = user;
-                              obj7[0] = user.type;
-                              let tmp72 = user;
-                              obj7[1] = user.name;
-                              let tmp73 = channelId;
-                              obj7[2] = channelId;
-                              let tmp74 = c15;
-                              obj7[3] = c15;
-                              let arr1 = items.push(obj7);
+                              closure_139_26 = closure_139_12.length;
+                              arr = closure_139_12.push(upload);
+                              obj6 = { type: null, name: null, value: null, focused: null };
+                              obj6.type = closure_139_14.type;
+                              obj6.name = closure_139_14.name;
+                              obj6.value = closure_139_26;
+                              obj6.focused = closure_139_15;
+                              let arr1 = closure_139_11.push(obj6);
                             }
                           }
                           continue;
                         }
-                      }
-                      commandAttachmentDraftType = 0;
-                      continue;
-                    }
-                  }
-                  throwTypeErrorResult = items;
-                  throwTypeErrorResult = lib;
-                  if (null != lib.subCommandPath) {
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = lib;
-                    closure_28 = lib.subCommandPath.length - 1;
-                    throwTypeErrorResult = closure_28;
-                    if (closure_28 >= 0) {
-                      do {
-                        throwTypeErrorResult = items;
-                        throwTypeErrorResult = lib;
-                        throwTypeErrorResult = closure_28;
-                        closure_29 = lib.subCommandPath[closure_28];
-                        throwTypeErrorResult = closure_29;
-                        name = closure_29.name;
-                        obj8 = { type: null, name: null, options: null };
-                        throwTypeErrorResult = closure_29;
-                        obj8[0] = closure_29.type;
-                        throwTypeErrorResult = name;
-                        obj8[1] = name;
-                        throwTypeErrorResult = items;
-                        obj8[2] = items;
-                        items = [obj8];
-                        throwTypeErrorResult = items;
-                        throwTypeErrorResult = closure_28;
-                        closure_28 = closure_28 - 1;
-                        throwTypeErrorResult = closure_28;
-                      } while (closure_28 >= 0);
-                    }
-                  }
-                  throwTypeErrorResult = items;
-                  throwTypeErrorResult = lib;
-                  if (null != lib.execute) {
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = arr;
-                    throwTypeErrorResult = dependencyMap;
-                    throwTypeErrorResult = closure_3;
-                    let obj20 = dependencyMap(closure_3[18]);
-                    throwTypeErrorResult = arr;
-                    obj9 = { command_id: null, application_id: null, command_type: null, location: null, source: null };
-                    throwTypeErrorResult = lib;
-                    obj9[0] = lib.id;
-                    throwTypeErrorResult = lib;
-                    obj9[1] = lib.applicationId;
-                    throwTypeErrorResult = lib;
-                    obj9[2] = lib.type;
-                    throwTypeErrorResult = lib3;
-                    throwTypeErrorResult = store;
-                    obj9[3] = lib3(store);
-                    throwTypeErrorResult = obj12;
-                    obj9[4] = obj12;
-                    throwTypeErrorResult = obj20.trackWithMetadata(arr.APPLICATION_COMMAND_USED, obj9);
-                    throwTypeErrorResult = lib;
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = lib2;
-                    let num4 = 3;
-                    channelId = 3;
-                    obj10 = { value: null, done: true };
-                    obj10[0] = lib.execute(items, lib2);
-                    return obj10;
-                  } else {
-                    throwTypeErrorResult = items;
-                    throwTypeErrorResult = arr;
-                    throwTypeErrorResult = lib;
-                    throwTypeErrorResult = lib;
-                    throwTypeErrorResult = closure_3;
-                    if (lib.inputType !== lib(closure_3[9]).ApplicationCommandInputType.BUILT_IN) {
-                      throwTypeErrorResult = items;
-                      throwTypeErrorResult = arr;
-                      throwTypeErrorResult = lib;
-                      throwTypeErrorResult = lib;
-                      throwTypeErrorResult = closure_3;
-                      if (lib.inputType !== lib(closure_3[9]).ApplicationCommandInputType.BUILT_IN_TEXT) {
-                        throwTypeErrorResult = items;
-                        throwTypeErrorResult = arr;
-                        throwTypeErrorResult = lib;
-                        throwTypeErrorResult = lib;
-                        throwTypeErrorResult = closure_3;
-                        if (lib.inputType !== lib(closure_3[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION) {
-                          throwTypeErrorResult = items;
-                          obj11 = { version: null, id: null, guild_id: null, name: null, type: null, options: null, application_command: null };
-                          throwTypeErrorResult = lib;
-                          obj11[0] = lib.version;
-                          throwTypeErrorResult = lib;
-                          let rootCommand2 = lib.rootCommand;
-                          throwTypeErrorResult = undefined;
-                          if (rootCommand2 != null) {
-                            throwTypeErrorResult = rootCommand2.id;
+                        continue;
+                      } else {
+                        let obj32 = closure_140_2(closure_140_3[14]);
+                        let str20 = obj32.getOptionalString(closure_139_1, closure_139_14.name);
+                        let trimmed;
+                        if (str20 != null) {
+                          trimmed = str20.trim();
+                        }
+                        c5 = trimmed;
+                        if (trimmed == null) {
+                          c5 = "";
+                        }
+                        closure_139_27 = c5;
+                        if (null != closure_139_14.choices) {
+                          obj2 = closure_140_0(closure_140_3[15]);
+                          channelId = obj2.findChoiceStringValue(closure_139_14.choices, closure_139_27);
+                        } else if (closure_139_14.autocomplete) {
+                          if (null != closure_139_2.autocomplete) {
+                            if (closure_139_15) {
+                              channelId = closure_139_2.autocomplete.query;
+                            }
                           }
-                          id = throwTypeErrorResult;
-                          if (throwTypeErrorResult == null) {
-                            throwTypeErrorResult = items;
-                            throwTypeErrorResult = lib;
-                            id = lib.id;
-                          }
-                          throwTypeErrorResult = items;
-                          throwTypeErrorResult = id;
-                          obj11[1] = id;
-                          throwTypeErrorResult = lib;
-                          obj11[2] = lib.guildId;
-                          throwTypeErrorResult = lib;
-                          let rootCommand = lib.rootCommand;
-                          throwTypeErrorResult = undefined;
-                          if (rootCommand != null) {
-                            throwTypeErrorResult = rootCommand.name;
-                          }
-                          untranslatedName = throwTypeErrorResult;
-                          if (throwTypeErrorResult == null) {
-                            throwTypeErrorResult = items;
-                            throwTypeErrorResult = lib;
-                            untranslatedName = lib.untranslatedName;
-                          }
-                          throwTypeErrorResult = items;
-                          throwTypeErrorResult = untranslatedName;
-                          obj11[3] = untranslatedName;
-                          throwTypeErrorResult = lib;
-                          obj11[4] = lib.type;
-                          throwTypeErrorResult = items;
-                          obj11[5] = items;
-                          throwTypeErrorResult = lib;
-                          obj11[6] = lib.rootCommand;
-                          throwTypeErrorResult = closure_3;
-                          if (null != closure_3) {
-                            throwTypeErrorResult = items;
-                            throwTypeErrorResult = obj11;
-                            throwTypeErrorResult = closure_3;
-                            obj11.target_id = closure_3;
-                          }
-                          throwTypeErrorResult = items;
-                          throwTypeErrorResult = lib2;
-                          if (null != lib2.autocomplete) {
-                            throwTypeErrorResult = items;
-                            throwTypeErrorResult = arr;
-                            throwTypeErrorResult = lib;
-                            throwTypeErrorResult = closure_3;
-                            let obj19 = lib(closure_3[19]);
-                            throwTypeErrorResult = lib;
-                            throwTypeErrorResult = lib2;
-                            throwTypeErrorResult = obj11;
-                            throwTypeErrorResult = obj19.performAutocomplete(lib, lib2, obj11);
-                          } else {
-                            throwTypeErrorResult = items;
-                            throwTypeErrorResult = arr;
-                            throwTypeErrorResult = dependencyMap;
-                            throwTypeErrorResult = closure_3;
-                            let obj40 = dependencyMap(closure_3[20]);
-                            throwTypeErrorResult = lib2;
-                            throwTypeErrorResult = commandAttachmentDraftType;
-                            throwTypeErrorResult = obj40.clearAll(lib2.channel.id, commandAttachmentDraftType);
-                            throwTypeErrorResult = closure_18;
-                            store = closure_18;
-                            obj12 = {};
-                            throwTypeErrorResult = lib;
-                            obj12.applicationId = lib.applicationId;
-                            throwTypeErrorResult = obj11;
-                            obj12.data = obj11;
-                            throwTypeErrorResult = lib2;
-                            obj12.context = lib2;
-                            throwTypeErrorResult = arr;
-                            obj12.attachments = arr;
-                            throwTypeErrorResult = options;
-                            obj12.maxSizeCallback = options;
-                            obj12.onMessageSuccess = function onMessageSuccess(arg0) {
-                              const values = Object.values(callback);
-                              const flatMapResult = values.flatMap((arr) => {
-                                const mapped = arr.map(() => { ... });
-                                return mapped.filter(callback(table[22]).isNotNullish);
-                              });
-                              if (flatMapResult.length > 0) {
-                                let obj = { type: "EMOJI_TRACK_USAGE", emojiUsed: null };
-                                obj[1] = flatMapResult;
-                                callback(table[10]).dispatch(obj);
-                                const obj2 = callback(table[10]);
-                              }
-                            };
-                            throwTypeErrorResult = lib3;
-                            throwTypeErrorResult = store;
-                            obj12.analytics_location = lib3(store);
-                            throwTypeErrorResult = closure_6;
-                            obj12.sectionName = closure_6;
-                            throwTypeErrorResult = obj12;
-                            obj12.source = obj12;
-                            throwTypeErrorResult = id;
-                            throwTypeErrorResult = lib;
-                            throwTypeErrorResult = lib2;
-                            throwTypeErrorResult = obj11;
-                            c15 = 4;
-                            let num20 = 1;
-                            channelId = 1;
-                            obj13 = { value: null, done: false };
-                            obj13[0] = id(lib, lib2, obj11);
-                            return obj13;
+                          obj1 = closure_140_0(closure_140_3[15]);
+                          let result2 = obj1.findAutocompleteChoiceStringValue(closure_139_2.channel.id, closure_139_14.name, closure_139_27);
+                        }
+                        if (null == channelId) {
+                          channelId = closure_139_27;
+                        }
+                        if ("" === channelId) {
+                          if (null != closure_139_2.autocomplete) {
+                            if (!closure_139_15) {
+                              c13 = 0;
+                              continue;
+                            }
+                            continue;
                           }
                         }
+                        let tmp64 = null != closure_139_2.autocomplete;
+                        let tmp62 = closure_140_1(closure_140_3[16]);
+                        if (!tmp64) {
+                          tmp64 = null != channelId;
+                        }
+                        let _HermesInternal = HermesInternal;
+                        let tmp62Result = tmp62(tmp64, "Option \"" + closure_139_14.name + "\" expects a value");
+                        obj7 = { type: null, name: null, value: null, focused: null };
+                        obj7.type = closure_139_14.type;
+                        obj7.name = closure_139_14.name;
+                        obj7.value = channelId;
+                        obj7.focused = closure_139_15;
+                        let arr2 = closure_139_11.push(obj7);
                       }
                     }
+                    continue;
                   }
                 }
-              } else if (3 === tmp4) {
-                let tmp8 = user;
-                let tmp9 = user;
-                commandAttachmentDraftType = 0;
-                let tmp10 = closure_3;
-                closure_3.return();
-                throw user;
-              } else if (arg0 === 1) {
-                let num3 = 3;
-                channelId = 3;
-                throw interactionLifecycleOptions;
-              } else if (arg0 !== 2) {
-                let tmp5 = obj12;
-                let tmp6 = store;
-                obj12.interactionLifecycleOptions = interactionLifecycleOptions;
-                let tmp7 = store(obj12);
+                c13 = 0;
+                continue;
               }
-              let num2 = 3;
-              channelId = 3;
-              obj = { value: null, done: true };
-              obj[0] = interactionLifecycleOptions;
-              return obj;
+            }
+            if (null != closure_139_0.subCommandPath) {
+              closure_139_28 = closure_139_0.subCommandPath.length - 1;
+              if (closure_139_28 >= 0) {
+                do {
+                  closure_139_29 = closure_139_0.subCommandPath[closure_139_28];
+                  name2 = closure_139_29.name;
+                  obj8 = { type: null, name: null, options: null };
+                  obj8.type = closure_139_29.type;
+                  obj8.name = name2;
+                  obj8.options = closure_139_11;
+                  let items = [obj8];
+                  closure_139_11 = items;
+                  closure_139_28 = closure_139_28 - 1;
+                } while (closure_139_28 >= 0);
+              }
+            }
+            if (null != closure_139_0.execute) {
+              let obj20 = closure_140_1(closure_140_3[18]);
+              obj9 = { command_id: null, application_id: null, command_type: null, location: null, source: null };
+              obj9.command_id = closure_139_0.id;
+              obj9.application_id = closure_139_0.applicationId;
+              obj9.command_type = closure_139_0.type;
+              obj9.location = closure_140_21(closure_139_10);
+              obj9.source = closure_139_9;
+              let trackWithMetadataResult = obj20.trackWithMetadata(closure_140_12.APPLICATION_COMMAND_USED, obj9);
+              c16 = 3;
+              obj10 = { value: closure_139_0.execute(closure_139_11, closure_139_2), done: true };
+              return obj10;
+            } else if (closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN) {
+              if (closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_TEXT) {
+                if (closure_139_0.inputType !== closure_140_0(closure_140_3[9]).ApplicationCommandInputType.BUILT_IN_INTEGRATION) {
+                  obj11 = { version: null, id: null, guild_id: null, name: null, type: null, options: null, application_command: null };
+                  obj11.version = closure_139_0.version;
+                  let rootCommand2 = closure_139_0.rootCommand;
+                  let id7;
+                  if (rootCommand2 != null) {
+                    id7 = rootCommand2.id;
+                  }
+                  id = id7;
+                  if (id7 == null) {
+                    id = closure_139_0.id;
+                  }
+                  obj11.id = id;
+                  obj11.guild_id = closure_139_0.guildId;
+                  let rootCommand = closure_139_0.rootCommand;
+                  let name1;
+                  if (rootCommand != null) {
+                    name1 = rootCommand.name;
+                  }
+                  let untranslatedName = name1;
+                  if (name1 == null) {
+                    untranslatedName = closure_139_0.untranslatedName;
+                  }
+                  obj11.name = untranslatedName;
+                  obj11.type = closure_139_0.type;
+                  obj11.options = closure_139_11;
+                  obj11.application_command = closure_139_0.rootCommand;
+                  closure_139_31 = obj11;
+                  if (null != closure_139_3) {
+                    closure_139_31.target_id = closure_139_3;
+                  }
+                  if (null != closure_139_2.autocomplete) {
+                    let obj19 = closure_140_0(closure_140_3[19]);
+                    let performAutocompleteResult = obj19.performAutocomplete(closure_139_0, closure_139_2, closure_139_31);
+                  } else {
+                    let obj40 = closure_140_1(closure_140_3[20]);
+                    let clearAllResult = obj40.clearAll(closure_139_2.channel.id, commandAttachmentDraftType);
+                    ApplicationCommandStore = closure_140_18;
+                    obj12 = {};
+                    obj12.applicationId = closure_139_0.applicationId;
+                    obj12.data = closure_139_31;
+                    obj12.context = closure_139_2;
+                    obj12.attachments = closure_139_12;
+                    obj12.maxSizeCallback = closure_139_4;
+                    obj12.onMessageSuccess = function onMessageSuccess() {
+                      const values = Object.values(closure_1_1);
+                      const flatMapResult = values.flatMap((arr) => {
+                        const mapped = arr.map((type) => {
+                          if ("emoji" === type.type) {
+                            const obj = { names: null, surrogates: "", unicodeVersion: 6 };
+                            const name = type.name;
+                            const items = [name.replaceAll(":", "")];
+                            obj.names = items;
+                            let emoji = new closure_1_0(closure_1_3[21]).Emoji(obj);
+                          } else {
+                            emoji = null;
+                            if ("customEmoji" === type.type) {
+                              emoji = customEmojiById.getCustomEmojiById(type.emojiId);
+                            }
+                          }
+                          return emoji;
+                        });
+                        return mapped.filter(closure_1_0(dependencyMap[22]).isNotNullish);
+                      });
+                      if (flatMapResult.length > 0) {
+                        let obj = { type: "EMOJI_TRACK_USAGE", emojiUsed: flatMapResult };
+                        closure_1(dependencyMap[10]).dispatch(obj);
+                        const obj2 = closure_1(dependencyMap[10]);
+                      }
+                    };
+                    obj12.analytics_location = closure_140_21(closure_139_10);
+                    obj12.sectionName = closure_139_6;
+                    obj12.source = closure_139_9;
+                    c15 = 4;
+                    c16 = 1;
+                    obj13 = { value: closure_139_7(closure_139_0, closure_139_2, closure_139_31), done: false };
+                    return obj13;
+                  }
+                }
+              }
             }
           }
+        } else if (3 === tmp4) {
+          c13 = 0;
+          dependencyMap.return();
+          throw closure_1_14;
+        } else if (arg0 === 1) {
+          c16 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          obj12.interactionLifecycleOptions = value;
+          let tmp7 = ApplicationCommandStore(obj12);
         }
+        c16 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_16 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    }
   }
-  return applyArgumentsResult;
-}
-function _retryCommandMessage() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    return (function*(arg0, interactionLifecycleOptions) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw interactionLifecycleOptions;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = interactionLifecycleOptions;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+};
+let closure_17 = async function _retryCommandMessage(arg0, arg1, arg2) {
+  let commandType = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  c5 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw interactionLifecycleOptions;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = interactionLifecycleOptions;
-              return obj;
-            } else {
-              if (commandType.isCommandType()) {
-                if (null != tmp19.interactionData) {
-                  if (null != tmp21.command) {
-                    obj1 = { channel: null, guild: null };
-                    obj1[0] = tmp20;
-                    let guild = null;
-                    if (null != tmp20.guild_id) {
-                      guild = closure_1_7.getGuild(tmp20.guild_id);
-                    }
-                    obj1[1] = guild;
-                    const callback = closure_1_18;
-                    const obj2 = { applicationId: tmp21.command.applicationId, data: tmp19.interactionData, context: obj1 };
-                    c5 = 1;
-                    c6 = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = closure_1_19(tmp21.command, obj1, tmp19.interactionData);
-                    return obj3;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            if (commandType.isCommandType()) {
+              if (null != tmp18.interactionData) {
+                if (null != tmp20.command) {
+                  const obj1 = { channel: tmp19, guild: null };
+                  guild = null;
+                  if (null != tmp19.guild_id) {
+                    guild = guild.getGuild(tmp19.guild_id);
                   }
+                  obj1.guild = guild;
+                  closure_4 = enqueueCommandInteraction;
+                  obj2 = { applicationId: tmp20.command.applicationId, data: tmp18.interactionData, context: obj1 };
+                  c5 = 1;
+                  c6 = 1;
+                  const obj3 = { value: displayInteractionLifecycleInChat(tmp20.command, obj1, tmp18.interactionData), done: false };
+                  return obj3;
                 }
               }
-              c6 = 3;
             }
-          } else if (arg0 === 1) {
             c6 = 3;
-            throw interactionLifecycleOptions;
-          } else if (arg0 !== 2) {
-            obj2.interactionLifecycleOptions = interactionLifecycleOptions;
-            callback(obj2);
           }
+        } else if (arg0 === 1) {
           c6 = 3;
-          obj = { value: null, done: true };
-          obj[0] = interactionLifecycleOptions;
-          return obj;
-        } catch (tmp13) {
-          c6 = tmp;
-          throw tmp13;
+          throw value;
+        } else if (arg0 !== 2) {
+          obj2.interactionLifecycleOptions = value;
+          closure_4(obj2);
         }
+        c6 = 3;
+        obj = { value, done: true };
+        return obj;
+      } catch (tmp13) {
+        c6 = tmp;
+        throw tmp13;
       }
-    })();
-  });
-  closure_17 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
 function enqueueCommandInteraction(interactionLifecycleOptions) {
   ({ applicationId, context, attachments, maxSizeCallback, onMessageSuccess } = interactionLifecycleOptions);
-  let obj = onMessageSuccess;
   interactionLifecycleOptions = interactionLifecycleOptions.interactionLifecycleOptions;
-  onMessageSuccess = undefined;
+  let message;
   if (null != context.channel) {
     const guild = context.guild;
-    let id = context.channel.id;
-    id = undefined;
+    let id;
     if (guild != null) {
       id = guild.id;
     }
-    obj = { applicationId: null, channelId: null, guildId: null, data: null, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
-    obj[0] = applicationId;
-    obj[1] = id;
-    obj[2] = id;
-    obj[3] = tmp;
+    message = { applicationId, channelId: id, guildId: id, data: tmp, nonce: null, attachments: null, maxSizeCallback: null, analytics_location: null, sectionName: null, source: null };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      obj1 = obj(7753);
+      let obj1 = onMessageSuccess(7753);
       nonce = obj1.createNonce();
     }
-    obj[4] = nonce;
-    obj[5] = attachments;
-    obj[6] = maxSizeCallback;
-    obj[7] = tmp2;
-    obj[8] = tmp3;
-    obj[9] = tmp4;
-    onMessageSuccess = obj;
-    obj = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
-    ({ messageId: obj4[0], onCreate: obj4[1], onSuccess: obj4[2], onFailure: obj4[3] } = interactionLifecycleOptions);
-    obj = { interactionType: null, applicationId: null, channelId: null };
-    obj[0] = obj(1894).InteractionTypes.APPLICATION_COMMAND;
-    obj[1] = applicationId;
-    obj[2] = id;
-    obj[4] = obj;
-    _fetchMessageInteractionDataAll.addQueued(obj.nonce, obj);
+    message.nonce = nonce;
+    message.attachments = attachments;
+    message.maxSizeCallback = maxSizeCallback;
+    message.analytics_location = tmp2;
+    message.sectionName = tmp3;
+    message.source = tmp4;
+    message = { messageId: null, onCreate: null, onSuccess: null, onFailure: null, data: null };
+    ({ messageId: obj4.messageId, onCreate: obj4.onCreate, onSuccess: obj4.onSuccess, onFailure: obj4.onFailure } = interactionLifecycleOptions);
+    message = { interactionType: onMessageSuccess(1894).InteractionTypes.APPLICATION_COMMAND, applicationId, channelId: id };
+    message.data = message;
+    InteractionActionCreatorsAll.addQueued(message.nonce, message);
     if (null != attachments) {
       if (attachments.length > 0) {
-        (function stageAttachments(attachments, nonce, id, maxSizeCallback) {
+        (function stageAttachments() {
           const self = this;
-          const apply = closure_24.apply;
+          const apply = closure_1_24.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })(attachments, obj.nonce, id, maxSizeCallback).then((arg0) => {
-          if (arg0) {
-            closure_0 = closure_1;
-            closure_1 = closure_0;
-            obj = onMessageSuccess(closure_1_3[25]);
-            obj = { type: null, message: null };
-            obj[0] = obj(closure_1_3[25]).MessageDataType.COMMAND;
-            obj[1] = closure_1;
-            obj.enqueue(obj, (ok) => {
-              ({ nonce, applicationId, channelId, guildId } = callback);
+        })(attachments, message.nonce, id, maxSizeCallback).then((result) => {
+          if (result) {
+            closure_0 = message;
+            closure_1 = onMessageSuccess;
+            message = { type: MessageQueue.MessageDataType.COMMAND, message: null };
+            message.message = message;
+            message.enqueue(message, (ok) => {
+              ({ nonce, applicationId, channelId, guildId } = closure_0);
               if (guildId == null) {
                 guildId = null;
               }
-              const result = callback(closure_1_3[26]).handleInteractionResponse(nonce, ok, applicationId, channelId, guildId);
+              const result = onMessageSuccess(dependencyMap[26]).handleInteractionResponse(nonce, ok, applicationId, channelId, guildId);
               ok = ok.ok;
               if (ok) {
-                ok = null != callback2;
+                ok = null != closure_1;
               }
               if (ok) {
-                callback2();
+                closure_1();
               }
             });
           }
         });
-        const promise = (function stageAttachments(attachments, nonce, id, maxSizeCallback) {
+        const promise = (function stageAttachments() {
           const self = this;
-          const apply = closure_24.apply;
+          const apply = closure_1_24.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })(attachments, obj.nonce, id, maxSizeCallback);
+        })(attachments, message.nonce, id, maxSizeCallback);
       }
     }
-    const obj3 = _fetchMessageInteractionDataAll;
-    const tmp10 = obj;
-    obj1 = { type: null, message: null };
-    obj1[0] = tmp10(7834).MessageDataType.COMMAND;
-    obj1[1] = obj;
-    onMessageSuccess(7834).enqueue(obj1, (ok) => {
-      ({ nonce, applicationId, channelId, guildId } = callback);
+    closure_129_0 = message;
+    closure_129_1 = onMessageSuccess;
+    const tmp10 = onMessageSuccess;
+    obj1 = { type: tmp10(7834).MessageDataType.COMMAND, message };
+    message(7834).enqueue(obj1, (ok) => {
+      ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
       }
-      const result = callback(closure_1_3[26]).handleInteractionResponse(nonce, ok, applicationId, channelId, guildId);
+      const result = onMessageSuccess(dependencyMap[26]).handleInteractionResponse(nonce, ok, applicationId, channelId, guildId);
       ok = ok.ok;
       if (ok) {
-        ok = null != callback2;
+        ok = null != closure_1;
       }
       if (ok) {
-        callback2();
+        closure_1();
       }
     });
-    const obj6 = onMessageSuccess(7834);
+    const obj6 = message(7834);
   }
 }
 function displayInteractionLifecycleInChat() {
   const self = this;
-  const apply = _displayInteractionLifecycleInChat.apply;
+  const apply = closure_20.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1409,188 +802,160 @@ function displayInteractionLifecycleInChat() {
   }
   return applyArgumentsResult;
 }
-function _displayInteractionLifecycleInChat() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_20 = async function _displayInteractionLifecycleInChat(arg0, arg1, arg2) {
+  closure_0 = arg0;
+  let channel = arg1;
+  closure_2 = arg2;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
+  return (async (arg0, value, arg2) => {
+    if (c8 === 2) {
+      c8 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c8 = 2;
-          if (0 === c7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let obj7 = tmp3;
-              let bot = tmp5;
-              let obj6;
-              bot = undefined;
-              obj7 = undefined;
-              if (null == lib2.channel) {
-                c8 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = {};
-                return obj1;
-              } else {
-                let obj2 = { channel: null, type: "channel" };
-                obj2[0] = tmp64.channel;
-                const cachedApplicationSection = lib3(closure_1_3[27]).getCachedApplicationSection(obj2, tmp65.type, tmp63.applicationId);
-                obj6 = cachedApplicationSection;
-                if (null == cachedApplicationSection) {
-                  c8 = 3;
-                  let obj3 = { value: null, done: true };
-                  obj3[0] = {};
-                  return obj3;
-                } else {
-                  const application = cachedApplicationSection.application;
-                  bot = undefined;
-                  if (application != null) {
-                    bot = application.bot;
-                  }
-                  if (null == bot) {
-                    if (null != cachedApplicationSection.botId) {
-                      c6 = 1;
-                      c7 = 2;
-                      c8 = 1;
-                      const obj4 = { value: null, done: false };
-                      obj4[0] = tmp66(closure_1_3[28]).getUser(cachedApplicationSection.botId);
-                      return obj4;
-                    }
-                  }
-                }
-                const obj17 = lib3(closure_1_3[27]);
-                tmp66 = lib3;
-              }
-            }
-          } else if (1 === tmp8) {
-            c6 = 0;
-          } else if (arg0 === 1) {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c8 = 2;
+        if (0 === c7) {
+          if (arg0 === 1) {
             c8 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c6 = 0;
             c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            c6 = 0;
-          }
-          let obj5 = { channelId: null, content: "", type: null, author: null };
-          obj5[0] = lib2.channel.id;
-          if (lib3.type === lib(obj6[13]).ApplicationCommandType.CHAT) {
-            let CONTEXT_MENU_COMMAND = constants.CHAT_INPUT_COMMAND;
-          } else {
-            CONTEXT_MENU_COMMAND = constants.CONTEXT_MENU_COMMAND;
-          }
-          obj5[2] = CONTEXT_MENU_COMMAND;
-          obj6 = bot;
-          if (bot == null) {
-            obj6 = { id: null, username: null, discriminator: null, avatar: null, bot: true };
-            obj6[0] = obj6.id;
-            obj6[1] = obj6.name;
-            obj6[2] = closure_14;
-          }
-          obj7 = {};
-          obj5[3] = obj6;
-          const merged = Object.assign(lib2(obj6[29])(obj5));
-          obj7.application = obj6.application;
-          const obj8 = { id: null, name: null, name_localized: null, type: null, user: null };
-          obj8[0] = lib3.id;
-          obj8[1] = lib3.name;
-          obj8[2] = lib.displayName;
-          obj8[3] = lib(obj6[13]).InteractionTypes.APPLICATION_COMMAND;
-          obj5 = lib(obj6[29]);
-          obj8[4] = obj5.userRecordToServer(currentUser.getCurrentUser());
-          obj7.interaction = obj8;
-          obj7.interaction_data = lib3;
-          obj6 = lib2(obj6[30]);
-          const obj9 = { applicationId: null, command: null };
-          obj9[0] = lib.applicationId;
-          obj9[1] = lib;
-          obj6.receiveMessage(lib2.channel.id, obj7, true, obj9);
-          const obj10 = {};
-          Object.defineProperty(obj10, "messageId", { get: () => obj7.id, set: undefined });
-          Object.defineProperty(obj10, "nonce", { get: () => obj7.id, set: undefined });
-          obj10.onCreate = function onCreate(id) {
-            if (null != obj7.interaction) {
-              obj7.interaction.id = id;
-            }
-          };
-          obj10.onSuccess = function onSuccess() {
-
-          };
-          obj10.onFailure = function onFailure(code, arg1, arg2, reason) {
-            if (null != lib2.channel) {
-              let result = arg1;
-              if (tmp2) {
-                let obj = lib2(obj6[30]);
-                obj.sendClydeError(tmp.channel.id, code);
+            const user = tmp3;
+            closure_4 = tmp5;
+            closure_132_0 = closure_0;
+            closure_132_1 = channel;
+            closure_132_2 = closure_2;
+            closure_132_3 = undefined;
+            closure_132_4 = undefined;
+            closure_132_5 = undefined;
+            if (null == channel.channel) {
+              c8 = 3;
+              const obj1 = { value: {}, done: true };
+              return obj1;
+            } else {
+              let obj2 = { channel: tmp63.channel, type: "channel" };
+              const cachedApplicationSection = ApplicationCommandQueryApiAll.getCachedApplicationSection(obj2, tmp64.type, tmp62.applicationId);
+              closure_132_3 = cachedApplicationSection;
+              if (null == cachedApplicationSection) {
+                c8 = 3;
+                let obj3 = { value: {}, done: true };
+                return obj3;
+              } else {
+                const application = cachedApplicationSection.application;
+                let bot;
+                if (application != null) {
+                  bot = application.bot;
+                }
+                closure_132_4 = bot;
+                if (null == bot) {
+                  if (null != cachedApplicationSection.botId) {
+                    c6 = 1;
+                    c7 = 2;
+                    c8 = 1;
+                    const obj4 = { value: tmp65(8181).getUser(cachedApplicationSection.botId), done: false };
+                    return obj4;
+                  }
+                }
               }
-              if (tmp7) {
-                result = lib(obj6[26]).interactionCallbackErrorReason(reason, lib.applicationId);
-                const obj2 = lib(obj6[26]);
-              }
-              obj = { type: "MESSAGE_SEND_FAILED", messageId: null, channelId: null, reason: null };
-              obj[1] = obj7.id;
-              obj[2] = tmp.channel.id;
-              obj[3] = result;
-              lib2(obj6[10]).dispatch(obj);
-              const obj3 = lib2(obj6[10]);
-              tmp2 = null == arg1 && null != code;
-              tmp7 = null == result && null != reason;
+              tmp65 = importAll;
             }
-          };
+          }
+        } else if (1 === tmp8) {
+          c6 = 0;
+        } else if (arg0 === 1) {
           c8 = 3;
-          const obj11 = { value: null, done: true };
-          obj11[0] = obj10;
-          return obj11;
-        } catch (tmp55) {
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp55;
-          } else {
-            c7 = tmp;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 0;
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          c6 = 0;
+        }
+        let obj5 = { channelId: closure_132_1.channel.id, content: "", type: null, author: null };
+        if (closure_132_2.type === closure_133_0(closure_133_3[13]).ApplicationCommandType.CHAT) {
+          let CONTEXT_MENU_COMMAND = closure_133_13.CHAT_INPUT_COMMAND;
+        } else {
+          CONTEXT_MENU_COMMAND = closure_133_13.CONTEXT_MENU_COMMAND;
+        }
+        obj5.type = CONTEXT_MENU_COMMAND;
+        obj6 = closure_132_4;
+        if (closure_132_4 == null) {
+          obj6 = { id: closure_132_3.id, username: closure_132_3.name, discriminator: closure_133_14, avatar: null, bot: true };
+        }
+        const obj7 = {};
+        obj5.author = obj6;
+        const merged = Object.assign(closure_133_1(closure_133_3[29])(obj5));
+        obj7.application = closure_132_3.application;
+        const obj8 = { id: closure_132_2.id, name: closure_132_2.name, name_localized: closure_132_0.displayName, type: closure_133_0(closure_133_3[13]).InteractionTypes.APPLICATION_COMMAND, user: null };
+        obj5 = closure_133_0(closure_133_3[29]);
+        obj8.user = obj5.userRecordToServer(closure_133_9.getCurrentUser());
+        obj7.interaction = obj8;
+        obj7.interaction_data = closure_132_2;
+        closure_132_5 = obj7;
+        obj6 = closure_133_1(closure_133_3[30]);
+        const obj9 = { applicationId: closure_132_0.applicationId, command: closure_132_0 };
+        obj6.receiveMessage(closure_132_1.channel.id, closure_132_5, true, obj9);
+        const obj10 = {};
+        Object.defineProperty(obj10, "messageId", { get: () => user.id, set: undefined });
+        Object.defineProperty(obj10, "nonce", { get: () => user.id, set: undefined });
+        obj10.onCreate = function onCreate(id) {
+          if (null != user.interaction) {
+            user.interaction.id = id;
           }
+        };
+        obj10.onSuccess = function onSuccess() {
+
+        };
+        obj10.onFailure = function onFailure(code, arg1, arg2, reason) {
+          if (null != channel.channel) {
+            let result = arg1;
+            if (tmp2) {
+              let obj = closure_1(obj6[30]);
+              obj.sendClydeError(tmp.channel.id, code);
+            }
+            if (tmp7) {
+              result = closure_0(obj6[26]).interactionCallbackErrorReason(reason, closure_1_0.applicationId);
+              const obj2 = closure_0(obj6[26]);
+            }
+            obj = { type: "MESSAGE_SEND_FAILED", messageId: user.id, channelId: tmp.channel.id, reason: result };
+            closure_1(obj6[10]).dispatch(obj);
+            const obj3 = closure_1(obj6[10]);
+            tmp2 = null == arg1 && null != code;
+            tmp7 = null == result && null != reason;
+          }
+        };
+        c8 = 3;
+        const obj11 = { value: obj10, done: true };
+        return obj11;
+      } catch (tmp55) {
+        if (tmp4 === c6) {
+          c8 = tmp2;
+          throw tmp55;
+        } else {
+          c7 = tmp;
         }
       }
-    })();
-  });
-  closure_20 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+    }
+  })();
+};
 function getAnalyticsLocationFromCommandOrigin(arg0) {
-  if (ApplicationCommandSectionType.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
+  if (ApplicationCommandTypes.CommandOrigin.APPLICATION_LAUNCHER === arg0) {
     return tmp(7523).ApplicationCommandTriggerLocations.APP_LAUNCHER;
   } else if (tmp(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW === arg0) {
     return tmp(7523).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW;
@@ -1614,7 +979,7 @@ function getAnalyticsLocationFromCommandOrigin(arg0) {
 }
 function getMaxAndTotalFileSize() {
   const self = this;
-  const apply = _getMaxAndTotalFileSize.apply;
+  const apply = closure_23.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1622,314 +987,240 @@ function getMaxAndTotalFileSize() {
   }
   return applyArgumentsResult;
 }
-function _getMaxAndTotalFileSize() {
-  const self = this;
-  const tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c9 = 0;
-    c10 = 0;
-    c8 = 0;
-    return (function*(arg0, arg1) {
-      if (c10 === 2) {
-        c10 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+let closure_23 = async function _getMaxAndTotalFileSize(arg0, arg1) {
+  dependencyMap = arg0;
+  closure_1 = arg1;
+  c9 = 0;
+  c10 = 0;
+  c8 = 0;
+  return (async (arg0, value) => {
+    if (c10 === 2) {
+      c10 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
       } else {
-        while (true) {
-          let num = 2;
-          c10 = 2;
-          if (0 === c9) {
-            if (arg0 === 1) {
-              let num7 = 3;
-              c10 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              let num6 = 3;
-              c10 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_5 = tmp;
-              let tmp30 = dependencyMap;
-              let tmp31 = closure_1;
-              dependencyMap = closure_1;
-              closure_3 = undefined;
-              closure_4 = undefined;
-              closure_1 = 0;
-              closure_2 = 0;
-              closure_3 = dependencyMap;
-              let tmp32 = dependencyMap;
-              closure_3 = dependencyMap;
-              closure_2 = dependencyMap[Symbol.iterator]();
-              let tmp9 = closure_3;
-              let tmp10 = closure_2;
-              if (closure_2 === undefined) {
-                let tmp23 = closure_5;
-                obj1 = { totalSize: null, largestUploadedFileSize: null };
-                let tmp24 = closure_1;
-                obj1[0] = closure_1;
-                let tmp25 = closure_2;
-                obj1[1] = closure_2;
-                let num5 = 3;
-                c10 = 3;
-                let obj2 = { value: null, done: true };
-                obj2[0] = obj1;
-                return obj2;
-              } else {
-                let tmp33 = closure_5;
-                c8 = 1;
-                closure_3 = tmp11;
-                let tmp34 = dependencyMap;
-                let obj7 = closure_3;
-                if (dependencyMap) {
-                  let currentSize = obj7.currentSize;
-                  closure_4 = currentSize;
-                  let tmp12 = null;
-                  if (currentSize == null) {
-                    closure_4 = 0;
-                  }
-                  let tmp13 = closure_4;
-                  closure_6 = closure_4;
-                } else {
-                  c9 = 2;
-                  let num4 = 1;
-                  c10 = 1;
-                  let obj3 = { value: null, done: false };
-                  obj3[0] = obj7.getSize();
-                  return obj3;
-                }
-              }
-            }
-          } else if (1 === tmp4) {
-            let tmp6 = closure_7;
-            let tmp7 = closure_7;
-            c8 = 0;
-            let tmp8 = closure_2;
-            closure_2.return();
-            throw closure_7;
-          } else if (arg0 === 1) {
-            let num3 = 3;
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      while (true) {
+        c10 = 2;
+        if (0 === c9) {
+          if (arg0 === 1) {
             c10 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            c8 = 0;
-            let tmp5 = closure_2;
-            closure_2.return();
-            let num2 = 3;
             c10 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_6 = arg1;
-          }
-          let tmp14 = closure_5;
-          let tmp15 = closure_6;
-          closure_4 = closure_6;
-          let tmp16 = closure_4;
-          let tmp17 = closure_2;
-          if (closure_4 > closure_2) {
-            let tmp18 = closure_5;
-            let tmp19 = closure_4;
-            closure_2 = closure_4;
-          }
-          let tmp20 = closure_5;
-          let tmp21 = closure_1;
-          let tmp22 = closure_4;
-          closure_1 = closure_1 + closure_4;
-          c8 = 0;
-        }
-      }
-    })();
-  });
-  closure_23 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-function _stageAttachments() {
-  const self = this;
-  const tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c8 = 2;
-          if (0 === totalSize) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let handleUploadsTooLarge = tmp3;
-              let maxTotalAttachmentSize = tmp5;
-              const callback2 = dependencyMap;
-              dependencyMap = undefined;
-              maxTotalAttachmentSize = undefined;
-              c6 = undefined;
-              totalSize = undefined;
-              c8 = undefined;
-              closure_9 = undefined;
-              handleUploadsTooLarge = function handleUploadsTooLarge(arg0) {
-                if (callback2 != null) {
-                  tmp(dependencyMap, arg0);
-                }
-                let obj = callback2(8117);
-                const intl = callback(1114).intl;
-                obj = { maxSize: callback(5134).sizeString(dependencyMap) };
-                obj.setFailed(closure_1, closure_1_11.ENTITY_TOO_LARGE, intl.formatToPlainString(callback(1114).t.fxEKdS, obj));
-              };
-              dependencyMap = lib(5134).maxFileSize(callback2);
-              const obj11 = lib(5134);
-              maxTotalAttachmentSize = lib(5129).getMaxTotalAttachmentSize({ location: "executeCommand.stageAttachments" });
-              totalSize = 1;
-              c8 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = closure_1_22(lib, false);
-              return obj1;
-            }
-          } else if (1 === tmp8) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
+            closure_5 = tmp;
+            closure_133_0 = closure_1;
+            closure_133_3 = undefined;
+            closure_133_4 = undefined;
+            closure_133_1 = 0;
+            closure_133_2 = 0;
+            closure_3 = dependencyMap;
+            closure_2 = dependencyMap[Symbol.iterator]();
+            if (closure_2 === undefined) {
+              let obj1 = { totalSize: null, largestUploadedFileSize: null };
+              obj1.totalSize = closure_133_1;
+              obj1.largestUploadedFileSize = closure_133_2;
+              c10 = 3;
+              let obj2 = { value: obj1, done: true };
               return obj2;
             } else {
-              c6 = arg1;
-              totalSize = c6.totalSize;
-              c8 = c6.largestUploadedFileSize;
-              const _Math = Math;
-              if (c8 <= Math.max(dependencyMap, closure_1_15)) {
-                if (c7 <= closure_1_4) {
-                  c6 = 1;
-                  totalSize = 4;
-                  c8 = 1;
-                  let obj3 = { value: null, done: false };
-                  obj3[0] = callback(7842)(lib);
-                  return obj3;
-                }
-              }
-              closure_1_5(c8);
-              c8 = 3;
-              return { value: false, done: true };
-            }
-          } else {
-            if (2 === tmp8) {
-              c6 = 0;
-              obj3 = callback2(8117);
-              let intl = lib(1114).intl;
-              const obj4 = { count: null };
-              obj4[0] = lib.length;
-              obj3.setFailed(callback, undefined, intl.formatToPlainString(lib(1114).t["9h1/1p"], obj4));
-              callback3(lib, true);
-              totalSize = 3;
               c8 = 1;
-            } else if (3 === tmp8) {
-              if (arg0 === 1) {
-                c8 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                c8 = 3;
-                const obj5 = { value: null, done: true };
-                obj5[0] = arg1;
-                return obj5;
+              closure_133_3 = tmp11;
+              let obj7 = closure_133_3;
+              if (closure_133_0) {
+                let currentSize = obj7.currentSize;
+                c4 = currentSize;
+                if (currentSize == null) {
+                  c4 = 0;
+                }
+                closure_6 = c4;
               } else {
-                closure_9 = arg1;
-                totalSize = closure_9.totalSize;
-                c8 = closure_9.largestUploadedFileSize;
-                let someResult = lib.some((error) => error.error === constants.ENTITY_TOO_LARGE);
-                if (!someResult) {
-                  someResult = totalSize > maxTotalAttachmentSize;
-                }
-                let flag = !someResult;
-                if (someResult) {
-                  closure_1_5(c8);
-                  flag = false;
-                }
-                c8 = 3;
-                const obj6 = { value: null, done: true };
-                obj6[0] = flag;
-                return obj6;
+                c9 = 2;
+                c10 = 1;
+                let obj3 = { value: obj7.getSize(), done: false };
+                return obj3;
               }
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              c6 = 0;
             }
-            c6 = 0;
-            c8 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
           }
-        } catch (tmp45) {
-          if (tmp4 === c6) {
-            c8 = tmp2;
-            throw tmp45;
-          } else {
-            totalSize = tmp;
-          }
+        } else if (1 === tmp4) {
+          c8 = 0;
+          closure_2.return();
+          throw closure_1_7;
+        } else if (arg0 === 1) {
+          c10 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 0;
+          closure_2.return();
+          c10 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_6 = value;
         }
+        closure_133_4 = closure_6;
+        if (closure_133_4 > closure_133_2) {
+          closure_133_2 = closure_133_4;
+        }
+        closure_133_1 = closure_133_1 + closure_133_4;
+        c8 = 0;
       }
-    })();
-  });
-  closure_24 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+    }
+  })();
+};
+let closure_24 = async function _stageAttachments(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp7 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_5 = tmp3;
+          closure_4 = tmp5;
+          closure_132_0 = closure_0;
+          closure_132_1 = closure_1;
+          closure_132_2 = dependencyMap;
+          closure_132_3 = undefined;
+          let maxTotalAttachmentSize;
+          closure_132_6 = undefined;
+          let totalSize;
+          closure_132_8 = undefined;
+          closure_132_9 = undefined;
+          closure_132_5 = function handleUploadsTooLarge(arg0) {
+            if (closure_1_2 != null) {
+              tmp(dependencyMap, arg0);
+            }
+            closure_2(8117);
+            const intl = closure_0(1114).intl;
+            const obj = { maxSize: closure_0(5134).sizeString(dependencyMap) };
+            obj.setFailed(closure_1_1, constants.ENTITY_TOO_LARGE, intl.formatToPlainString(closure_0(1114).t.fxEKdS, obj));
+          };
+          closure_132_3 = FileUtils.maxFileSize(closure_2);
+          maxTotalAttachmentSize = UploadUtils.getMaxTotalAttachmentSize({ location: "executeCommand.stageAttachments" });
+          c7 = 1;
+          c8 = 1;
+          const obj1 = { value: getMaxAndTotalFileSize(closure_0, false), done: false };
+          return obj1;
+        }
+      } else if (1 === tmp8) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_132_6 = value;
+          totalSize = closure_132_6.totalSize;
+          closure_132_8 = closure_132_6.largestUploadedFileSize;
+          const _Math = Math;
+          if (closure_132_8 <= Math.max(closure_132_3, closure_133_15)) {
+            if (totalSize <= maxTotalAttachmentSize) {
+              c6 = 1;
+              c7 = 4;
+              c8 = 1;
+              let obj3 = { value: closure_133_1(closure_133_3[34])(closure_132_0), done: false };
+              return obj3;
+            }
+          }
+          closure_132_5(closure_132_8);
+          c8 = 3;
+          return { value: false, done: true };
+        }
+      } else {
+        if (2 === tmp8) {
+          c6 = 0;
+          obj3 = closure_133_2(closure_133_3[24]);
+          let intl = closure_133_0(closure_133_3[33]).intl;
+          const obj4 = { count: closure_132_0.length };
+          obj3.setFailed(closure_132_1, undefined, intl.formatToPlainString(closure_133_0(closure_133_3[33]).t["9h1/1p"], obj4));
+          closure_133_22(closure_132_0, true);
+          c7 = 3;
+          c8 = 1;
+        } else if (3 === tmp8) {
+          if (arg0 === 1) {
+            c8 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c8 = 3;
+            const obj5 = { value, done: true };
+            return obj5;
+          } else {
+            closure_132_9 = value;
+            totalSize = closure_132_9.totalSize;
+            closure_132_8 = closure_132_9.largestUploadedFileSize;
+            let someResult = closure_132_0.some((error) => error.error === constants.ENTITY_TOO_LARGE);
+            if (!someResult) {
+              someResult = totalSize > maxTotalAttachmentSize;
+            }
+            let flag = !someResult;
+            if (someResult) {
+              closure_132_5(closure_132_8);
+              flag = false;
+            }
+            c8 = 3;
+            const obj6 = { value: flag, done: true };
+            return obj6;
+          }
+        } else if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 !== 2) {
+          c6 = 0;
+        }
+        c6 = 0;
+        c8 = 3;
+        obj = { value, done: true };
+        return obj;
+      }
+    } catch (tmp45) {
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp45;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-({ AbortCodes: unpackModuleId, AnalyticEvents: closure_12, MessageTypes: map1, NON_USER_BOT_DISCRIMINATOR: closure_14 } = ME);
-let result = require("set").fileFinishedImporting("modules/application_commands/executeCommand.tsx");
+};
+const Constants = fn(1074);
+({ AbortCodes: closure_11, AnalyticEvents: closure_12, MessageTypes: map1, NON_USER_BOT_DISCRIMINATOR: closure_14 } = Constants);
+let closure_15 = fn(4553).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 
 export default function executeCommand() {
   const self = this;
-  const apply = _executeCommand.apply;
+  const apply = closure_16.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1937,9 +1228,9 @@ export default function executeCommand() {
   }
   return applyArgumentsResult;
 };
-export const retryCommandMessage = function retryCommandMessage(id2, id, arg2) {
+export const retryCommandMessage = function retryCommandMessage() {
   const self = this;
-  const apply = _retryCommandMessage.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

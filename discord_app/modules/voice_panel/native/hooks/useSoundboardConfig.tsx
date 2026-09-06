@@ -1,56 +1,56 @@
 // === Module 17199: useSoundboardConfig ===
 
 // Module 17199 (useSoundboardConfig)
+import canChannelUseSoundboardDefault from "canChannelUseSoundboard" /* 7375 */;
 import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 17037 */;
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import closure_5 from "_detectH265HardwareDecode" /* 1908 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 17059 */;
+import noop from "module_19" /* 19 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
-const require = arg1;
-let obj = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useSoundboardConfig.tsx");
+require = fn;
+const SoundboardButtonLocation = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useSoundboardConfig.tsx");
 
-export default function useSoundboardConfig(arg0, arg1) {
-  const _require = arg0;
-  importDefault = arg1;
+export default function useSoundboardConfig(arg0, analyticsSource) {
+  _require = arg0;
+  importDefault = analyticsSource;
   let tmp2 = useIsConnectedToVoiceChannelDefault(arg0);
-  obj = _require(504);
-  const items = [closure_5];
+  let obj = require("initialize");
+  const items = [MediaEngineStore];
   const stateFromStores = obj.useStateFromStores(items, () => deaf.isDeaf());
-  const obj2 = _require(4380);
+  const obj2 = require("DismissibleContentUnsafeUtils");
   if (tmp2) {
-    if (obj.VOICE_CONTROLS === arg1) {
+    if (obj.VOICE_CONTROLS === analyticsSource) {
       let flag = true;
     } else {
       flag = false;
     }
     tmp2 = flag;
   }
-  const items1 = [arg0, arg1];
+  const items1 = [arg0, analyticsSource];
   const items2 = [arg0];
-  const callback = React.useCallback(() => {
-    const channel = closure_1_4.getChannel(callback);
+  const callback = noop.useCallback(() => {
+    const channel = ChannelStore.getChannel(closure_0);
     if (null != channel) {
-      obj = callback(closure_1_2[7]);
-      obj = { channel: null, analyticsSource: null };
-      obj[0] = channel;
-      obj[1] = closure_1;
+      const obj = { channel, analyticsSource };
       const result = obj.showSoundboardSoundPickerActionSheet(obj);
     }
   }, items1);
   obj = { visible: tmp2, handlePress: callback, disabled: null, disabledAccessibilityHint: null, showIndicator: null };
   let tmp8 = stateFromStores;
   if (!stateFromStores) {
-    tmp8 = !React.useMemo(() => callback2(closure_1_2[8])(closure_1_4.getChannel(closure_0)), items2);
+    tmp8 = !noop.useMemo(() => canChannelUseSoundboardDefault(ChannelStore.getChannel(closure_0)), items2);
   }
-  obj[2] = tmp8;
+  obj.disabled = tmp8;
   let stringResult;
   if (stateFromStores) {
     const intl = tmp3(1114).intl;
     stringResult = intl.string(tmp3(1114).t.X1lQli);
   }
-  obj[3] = stringResult;
-  obj[4] = !_require(4380).useIsDismissibleContentDismissed_UNSAFE(_require(1943).DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
+  obj.disabledAccessibilityHint = stringResult;
+  obj.showIndicator = !require("DismissibleContentUnsafeUtils").useIsDismissibleContentDismissed_UNSAFE(require("dismissible_content").DismissibleContent.SOUNDBOARD_MOBILE_NEW_BADGE);
   return obj;
 };
-export const SoundboardButtonLocation = obj;
+export { SoundboardButtonLocation };

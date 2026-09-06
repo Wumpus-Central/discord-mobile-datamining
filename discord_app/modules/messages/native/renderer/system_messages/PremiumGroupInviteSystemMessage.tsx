@@ -1,25 +1,26 @@
-// === Module 8046: createPremiumGroupInviteSystemMessage ===
+// === Module 8046: PremiumGroupInviteSystemMessage ===
 
-// Module 8046 (createPremiumGroupInviteSystemMessage)
-import ThemesDefault from "Themes" /* 576 */;
-import frozen from "frozen" /* 7946 */;
+// Module 8046 (PremiumGroupInviteSystemMessage)
+import nativeDefault from "native" /* 576 */;
 import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 8047 */;
-import registerAssetDefault from "registerAsset" /* 8051 */;
-import closure_3 from "fetchFingerprint" /* 502 */;
-import closure_4 from "ensureGuildLoaded" /* 1957 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import PremiumGroupInviteEmbed from "PremiumGroupInviteEmbed" /* 8047 */;
+import _modDef8051 from "module_8051" /* 8051 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
 
-require = arg1;
-createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
-let closure_5 = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
+const renderer_EmbedUtils = tmp3(7946);
+require = fn;
+fn(4560);
+const createStyles = { iconTintColor: nativeDefault.colors.ICON_STRONG, iconDividerColor: nativeDefault.colors.ICON_STRONG };
+let closure_5 = createStyles.createNativeStyleProperties(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
 
 export const createPremiumGroupInviteSystemMessage = function createPremiumGroupInviteSystemMessage(message) {
   ({ message, theme } = message);
-  channel = channel.getChannel(message.getChannelId());
-  id = id.getId();
-  let obj = createPremiumGroupInviteEmbed;
+  const channel = ChannelStore.getChannel(message.getChannelId());
+  const id = AuthenticationStore.getId();
+  let obj = PremiumGroupInviteEmbed;
   const premiumGroupInviteEmbed = obj.createPremiumGroupInviteEmbed(message, theme, id, channel);
   if (null == premiumGroupInviteEmbed) {
     return null;
@@ -27,10 +28,9 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     obj = {};
     const merged = Object.assign(createCommonMessageDefault(message));
     obj.premiumGroupInviteInfo = premiumGroupInviteEmbed;
-    const tmp7 = callback(theme);
-    obj.iconUrl = frozen.getAssetUriForEmbed(registerAssetDefault);
+    const tmp7 = closure_5(theme);
+    obj.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8051);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }
-  const tmp3 = require;
 };

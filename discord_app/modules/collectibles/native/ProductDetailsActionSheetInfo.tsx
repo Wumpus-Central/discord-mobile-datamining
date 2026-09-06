@@ -1,92 +1,84 @@
-// === Module 13145: ProductNameAndDescription ===
+// === Module 13145: ProductDetailsActionSheetInfo ===
 
-// Module 13145 (ProductNameAndDescription)
-import set from "set" /* 2 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import ThemesDefault from "Themes" /* 576 */;
+// Module 13145 (ProductDetailsActionSheetInfo)
+import _mod17 from "module_17" /* 17 */;
+import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import Text from "Text" /* 4556 */;
-import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 7554 */;
-import getProductPurchaseState from "getProductPurchaseState" /* 8842 */;
-import getBundleDescription from "getBundleDescription" /* 13146 */;
-import PriceTagDefault from "PriceTag" /* 13147 */;
+import Text_Text from "Text/Text" /* 4556 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8842 */;
+import useProductDescription from "useProductDescription" /* 13146 */;
+import InlinePriceTagDefault from "InlinePriceTag" /* 13147 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import createStyles from "createStyles" /* 4560 */;
+import size from "module_2" /* 2 */;
 
 function ProductNameAndDescription(product) {
   product = product.product;
-  const tmp = callback3();
-  let obj = getBundleDescription;
-  obj = { style: tmp.description, children: null };
+  const tmp = closure_6();
+  let obj = { style: tmp.description, children: null };
   const productDescription = obj.useProductDescription(product);
   obj = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, accessibilityRole: "header", children: product.name };
-  const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
-  obj[1] = items;
-  return callback2(View, obj);
+  const items = [React4(Text_Text.Text, obj), React4(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: productDescription })];
+  obj.children = items;
+  return hasOwnProperty(View, obj);
 }
 function ProductPurchaseStatus(product) {
   product = product.product;
-  let obj = getItemRecordsFromPurchases;
+  let obj = CollectiblesUtils;
   const result = obj.isPremiumCollectiblesProduct(product);
-  obj1 = getProductPurchaseState;
+  let obj1 = useProductPurchaseState;
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
     const intl2 = tmp(1114).intl;
-    obj[2] = intl2.string(tmp(1114).t["6cfuDj"]);
+    obj.children = intl2.string(tmp(1114).t["6cfuDj"]);
     let children = tmp6(tmp(4556).Text, obj);
   } else if (tmp5) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
     const intl = tmp(1114).intl;
-    obj[2] = intl.string(tmp(1114).t.BEjTij);
+    obj.children = intl.string(tmp(1114).t.BEjTij);
     children = tmp6(tmp(4556).Text, obj);
   } else {
     children = !result;
     if (!result) {
-      obj1 = { product: null, onTrackPress: null };
-      obj1[0] = product;
-      obj1[1] = product.onTrackPress;
-      children = tmp6(PriceTagDefault, obj1);
+      obj1 = { product, onTrackPress: product.onTrackPress };
+      children = tmp6(InlinePriceTagDefault, obj1);
     }
   }
-  return closure_4(View, { children });
+  return React4(View, { children });
 }
 function BundleProductDetailsActionSheetInfo(arg0) {
   ({ product, onTrackPress } = arg0);
-  const tmp = callback3();
+  const obj = { style: null, children: React4(ProductPurchaseStatus, { product, onTrackPress }) };
   const items = [, ];
-  ({ body: arr[0], bundleBody: arr[1] } = tmp);
-  return callback(View, { style: items, children: callback(ProductPurchaseStatus, { product, onTrackPress }) });
+  ({ body: arr[0], bundleBody: arr[1] } = closure_6());
+  obj.style = items;
+  return React4(View, obj);
 }
-const View = get_ActivityIndicator.View;
-({ jsx: c4, jsxs: c5 } = jsxProd);
+const View = _mod17.View;
+({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let obj = { title: { marginBottom: 2 }, body: null, bundleBody: null, description: null };
-obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, flexDirection: "column", gap: 20 };
-obj[1] = obj;
-obj[2] = { marginTop: 0 };
-obj[3] = { flexDirection: "column", gap: 6 };
-let closure_6 = createCacheKey.createStyles(obj);
-let result = set.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
+obj = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, flexDirection: "column", gap: 20 };
+obj.body = obj;
+obj.bundleBody = { marginTop: 0 };
+obj.description = { flexDirection: "column", gap: 6 };
+let closure_6 = createStyles.createStyles(obj);
+let result = size.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
 
 export default function ProductDetailsActionSheetInfo(arg0) {
   ({ product, onTrackPress } = arg0);
   if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
-    let obj = { product: null, onTrackPress: null };
-    obj[0] = product;
-    obj[1] = onTrackPress;
-    let tmp7 = callback(BundleProductDetailsActionSheetInfo, obj);
+    let obj = { product, onTrackPress };
+    let tmp7 = React4(BundleProductDetailsActionSheetInfo, obj);
   } else {
-    obj = { style: null, children: null };
-    obj[0] = tmp.body;
-    obj = { product: null };
-    obj[0] = product;
-    const items = [callback(ProductNameAndDescription, obj), ];
-    obj1 = { product: null, onTrackPress: null };
-    obj1[0] = product;
-    obj1[1] = onTrackPress;
-    items[1] = callback(ProductPurchaseStatus, obj1);
-    obj[1] = items;
-    tmp7 = callback2(View, obj);
+    obj = { style: tmp.body, children: null };
+    obj = { product };
+    const items = [React4(ProductNameAndDescription, obj), ];
+    const obj1 = { product, onTrackPress };
+    items[1] = React4(ProductPurchaseStatus, obj1);
+    obj.children = items;
+    tmp7 = hasOwnProperty(View, obj);
   }
   return tmp7;
 };

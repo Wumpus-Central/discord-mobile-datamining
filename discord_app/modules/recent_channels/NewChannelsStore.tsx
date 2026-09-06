@@ -1,44 +1,39 @@
-// === Module 7532: guildHasCommunity ===
+// === Module 7532: NewChannelsStore ===
 
-// Module 7532 (guildHasCommunity)
-import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+// Module 7532 (NewChannelsStore)
+import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
-import dispatcherDefault from "dispatcher" /* 573 */;
-import setDefault from "set" /* 1090 */;
-import SidebarType from "SidebarType" /* 7282 */;
-import closure_3 from "handleConnectionClosedOrResumed" /* 1221 */;
-import closure_4 from "fetchFingerprint" /* 502 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "comparator" /* 2012 */;
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 2012 */;
-import closure_8 from "trackCommunicationDisabled" /* 2021 */;
-import closure_9 from "createGuildRecordFromRust" /* 1979 */;
-import closure_10 from "generateOldThreadCutoff" /* 4575 */;
-import closure_11 from "updateUserGuildSettingsInternal" /* 4741 */;
-import ME from "ME" /* 1074 */;
-import set from "set" /* 2 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import DurationsDefault from "Durations" /* 1090 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7110 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7282 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
+import AuthenticationStore from "AuthenticationStore" /* 502 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import GuildChannelStore from "GuildChannelStore" /* 2012 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import ReadStateStore from "ReadStateStore" /* 4575 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
-require = arg1;
+require = fn;
 function guildHasCommunity(nextResult) {
-  const guild = store.getGuild(nextResult);
+  const guild = GuildStore.getGuild(nextResult);
   let hasItem;
   if (guild != null) {
     const features = guild.features;
-    hasItem = features.has(constants.COMMUNITY);
+    hasItem = features.has(constants3.COMMUNITY);
   }
   return true === hasItem;
 }
 function seedCommunityBaseline() {
   set1.clear();
-  const guildIds = store.getGuildIds();
+  const guildIds = GuildStore.getGuildIds();
   const iter = guildIds[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp5 = guildHasCommunity;
     let tmp4 = nextResult;
     if (guildHasCommunity(nextResult)) {
-      let tmp6 = set1;
-      let tmp7 = nextResult;
       let addResult = set1.add(tmp4);
     }
     continue;
@@ -49,16 +44,16 @@ function maybeAckViewedChannel(guildId, channelId) {
   closure_0 = channelId;
   let tmp = null != obj && null != channelId && obj.has(channelId);
   if (tmp) {
-    const guild = store.getGuild(guildId);
+    const guild = GuildStore.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(constants.COMMUNITY);
+      hasItem = features.has(constants3.COMMUNITY);
     }
     tmp = true === hasItem;
   }
   if (tmp) {
-    channel = channel.getChannel(channelId);
+    const channel = ChannelStore.getChannel(channelId);
     let isThreadResult;
     if (channel != null) {
       isThreadResult = channel.isThread();
@@ -66,26 +61,24 @@ function maybeAckViewedChannel(guildId, channelId) {
     tmp = !isThreadResult;
   }
   if (tmp) {
-    tmp = null == store2.ackMessageId(channelId);
+    tmp = null == ReadStateStore.ackMessageId(channelId);
   }
   if (tmp) {
-    tmp = 0 === store2.getMentionCount(channelId);
+    tmp = 0 === ReadStateStore.getMentionCount(channelId);
   }
   if (tmp) {
-    dispatcherDefault.wait(() => {
-      let obj = channelId(closure_1_2[12]);
-      obj = { object: closure_1_12.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: closure_1_13.ACK_AUTOMATIC };
-      return obj.ack(channelId, obj, true, true, closure_1_1(closure_1_2[13]).atPreviousMillisecond(channelId));
+    DispatcherDefault.wait(() => {
+      const obj = { object: constants.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED, objectType: constants2.ACK_AUTOMATIC };
+      return obj.ack(closure_0, obj, true, true, SnowflakeUtilsDefault.atPreviousMillisecond(closure_0));
     });
-    const obj3 = dispatcherDefault;
   }
 }
 function initializeNewChannels(guildId) {
   closure_0 = guildId;
   if (null == dependencyMap[guildId]) {
     let joinedAt;
-    const mapped = channels.getChannels(guildId)[closure_7].map((channel) => channel.channel.id);
-    member = member.getMember(guildId, id.getId());
+    const mapped = GuildChannelStore.getChannels(guildId)[closure_7].map((channel) => channel.channel.id);
+    const member = GuildMemberStore.getMember(guildId, AuthenticationStore.getId());
     if (member != null) {
       joinedAt = member.joinedAt;
     }
@@ -98,22 +91,22 @@ function initializeNewChannels(guildId) {
       const time = date.getTime();
       if (0 !== mapped.length) {
         const _Set = Set;
-        set1 = new Set(mapped.filter((channelId) => {
-          const extractTimestampResult = callback(closure_1_2[13]).extractTimestamp(channelId);
-          let tmp4 = null == closure_1_10.getTrackedAckMessageId(channelId);
+        set1 = new Set(mapped.filter((item) => {
+          const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(item);
+          let tmp4 = null == ReadStateStore.getTrackedAckMessageId(item);
           if (tmp4) {
             const _Date = Date;
             const timestamp = Date.now();
-            tmp4 = extractTimestampResult > timestamp - callback(closure_1_2[9]).Millis.WEEK;
+            tmp4 = extractTimestampResult > timestamp - DurationsDefault.Millis.WEEK;
           }
           if (tmp4) {
-            tmp4 = extractTimestampResult > closure_1_3.getGuildRecentsDismissedAt(closure_0);
+            tmp4 = extractTimestampResult > UserSettingsProtoStore.getGuildRecentsDismissedAt(closure_0);
           }
           if (tmp4) {
-            tmp4 = extractTimestampResult > callback;
+            tmp4 = extractTimestampResult > closure_1;
           }
           if (tmp4) {
-            tmp4 = !closure_1_11.isChannelOrParentOptedIn(closure_0, channelId);
+            tmp4 = !UserGuildSettingsStore.isChannelOrParentOptedIn(closure_0, item);
           }
           return tmp4;
         }));
@@ -122,20 +115,22 @@ function initializeNewChannels(guildId) {
         closure_17[guildId] = Date.now();
       }
     }
-    const arr = channels.getChannels(guildId)[closure_7];
+    const arr = GuildChannelStore.getChannels(guildId)[closure_7];
   }
 }
 function pruneNewChannels() {
-  const keys = DISCORD_EPOCHDefault.keys(closure_16);
-  const item = keys.forEach((arg0) => {
-    closure_0 = arg0;
-    const items = [...closure_16[arg0]];
-    table[arg0] = new Set(items.filter((channelId) => !closure_1_11.isChannelOrParentOptedIn(closure_0, channelId)));
+  const keys = SnowflakeUtilsDefault.keys(closure_16);
+  const item = keys.forEach((item) => {
+    closure_0 = item;
+    const items = [...closure_16[item]];
+    closure_16[item] = new Set(items.filter((item) => !channelOrParentOptedIn.isChannelOrParentOptedIn(closure_0, item)));
   });
 }
-({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = ME);
+let closure_7 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1074);
+({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();
-let closure_16 = {};
+const dependencyMap = {};
 let closure_17 = {};
 let set1 = new Set();
 const Store = initializeDefault.Store;
@@ -143,8 +138,8 @@ class NewChannelsStore extends Store {
 }
 const prototype = NewChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_4, closure_5, closure_6, closure_8, closure_9, closure_10, closure_11, closure_3);
-  const items = [closure_11];
+  this.waitFor(AuthenticationStore, ChannelStore, GuildChannelStore, GuildMemberStore, GuildStore, ReadStateStore, UserGuildSettingsStore, UserSettingsProtoStore);
+  const items = [UserGuildSettingsStore];
   this.syncWith(items, pruneNewChannels);
 };
 prototype["getNewChannelIds"] = function getNewChannelIds(id) {
@@ -170,11 +165,11 @@ prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_
   if (null == guild_id) {
     return false;
   } else {
-    const guild = store.getGuild(guild_id);
+    const guild = GuildStore.getGuild(guild_id);
     let tmp2 = null == guild;
     if (!tmp2) {
       const features = guild.features;
-      tmp2 = !features.has(constants.COMMUNITY);
+      tmp2 = !features.has(constants3.COMMUNITY);
     }
     let tmp3 = !tmp2;
     if (!tmp2) {
@@ -190,7 +185,7 @@ prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_
         hasItem = obj.has(id);
       }
       if (hasItem) {
-        hasItem = null == store2.getTrackedAckMessageId(id);
+        hasItem = null == ReadStateStore.getTrackedAckMessageId(id);
       }
       tmp3 = hasItem;
     }
@@ -198,14 +193,14 @@ prototype["shouldIndicateNewChannel"] = function shouldIndicateNewChannel(guild_
   }
 };
 NewChannelsStore.displayName = "NewChannelsStore";
-const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
+const newChannelsStore = new NewChannelsStore(DispatcherDefault, {
   BULK_CLEAR_RECENTS: function handleBulkClearRecents(guildId) {
     guildId = guildId.guildId;
     const channelIds = guildId.channelIds;
     if (null == dependencyMap[guildId]) {
       return false;
     } else {
-      const item = channelIds.forEach((arg0) => closure_1_16[guildId].delete(arg0));
+      const item = channelIds.forEach((item) => closure_16[guildId].delete(item));
       if (0 === tmp3[guildId].size) {
         delete tmp[tmp2];
       }
@@ -223,7 +218,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
       if (!tmp2) {
         const _Date = Date;
         const timestamp = Date.now();
-        tmp2 = table[guildId] < timestamp - setDefault.Millis.HOUR;
+        tmp2 = closure_17[guildId] < timestamp - DurationsDefault.Millis.HOUR;
       }
       let flag = false;
       if (tmp2) {
@@ -240,7 +235,7 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
     guildId = guildId.guildId;
     let tmp2 = null == guildId;
     if (!tmp2) {
-      tmp2 = tmp !== SidebarType.SidebarType.VIEW_CHANNEL;
+      tmp2 = tmp !== SidebarActionTypes.SidebarType.VIEW_CHANNEL;
     }
     if (!tmp2) {
       maybeAckViewedChannel(guildId, guildId.channelId);
@@ -258,11 +253,11 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
   CACHE_LOADED: seedCommunityBaseline,
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
-    guild = store.getGuild(guild.id);
+    guild = GuildStore.getGuild(guild.id);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(constants.COMMUNITY);
+      hasItem = features.has(constants3.COMMUNITY);
     }
     if (true === hasItem) {
       set1.add(guild.id);
@@ -272,30 +267,28 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
   GUILD_UPDATE: function handleGuildUpdate(guild) {
     guild = guild.guild;
     let hasItem;
-    closure_0 = undefined;
     set = undefined;
-    guild = store.getGuild(guild.id);
+    guild = GuildStore.getGuild(guild.id);
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(constants.COMMUNITY);
+      hasItem = features.has(constants3.COMMUNITY);
     }
     if (true === hasItem) {
       if (!set1.has(guild.id)) {
         obj2.add(guild.id);
-        closure_0 = tmp7;
-        const guild1 = store.getGuild(guild.id);
+        const guild1 = GuildStore.getGuild(guild.id);
         const _Set = Set;
         set = new Set();
         if (tmp14) {
           const items = [, ];
           ({ rulesChannelId: arr[0], publicUpdatesChannelId: arr[1] } = guild1);
-          const item = items.forEach((arg0) => {
-            let hasItem = null != arg0;
+          const item = items.forEach((item) => {
+            let hasItem = null != item;
             if (hasItem) {
-              hasItem = set.has(arg0);
+              hasItem = set.has(item);
             }
             if (hasItem) {
-              set.add(arg0);
+              set.add(item);
             }
           });
         }
@@ -325,10 +318,10 @@ const newChannelsStore = new NewChannelsStore(dispatcherDefault, {
       }
       dependencyMap[channel.guild_id] = set;
       dependencyMap[channel.guild_id].add(channel.id);
-      const obj = dependencyMap[channel.guild_id];
     }
   }
 });
-const result = set.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/recent_channels/NewChannelsStore.tsx");
 
 export default newChannelsStore;

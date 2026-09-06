@@ -1,70 +1,72 @@
 // === Module 7086: TextAreaField ===
 
 // Module 7086 (TextAreaField)
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import getNodeText from "getNodeText" /* 4264 */;
-import Text from "Text" /* 4556 */;
-import useTextFieldState from "useTextFieldState" /* 6614 */;
-import useInputStyles from "useInputStyles" /* 6621 */;
-import useKeyboardBlurring from "useKeyboardBlurring" /* 6624 */;
-import useCharacterLimitAnnouncement from "useCharacterLimitAnnouncement" /* 7087 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
-import importAllResult from "noop" /* 19 */;
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 4264 */;
+import useTextField from "useTextField" /* 6614 */;
+import InputFieldContainer from "InputFieldContainer" /* 6621 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ jsx: c3, jsxs: c4 } = jsxProd);
+const util = prop(1114);
+const Text_Text = prop(4556);
+const NativeTextInput = prop(6624);
+const useCharacterLimitAnnouncement = prop(7087);
+require = fn;
+const View = fn(17).View;
+const jsxProd = fn(21);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
+const createStyles = fn(4560);
 let obj = { area: { height: 128, textAlignVertical: "top" }, maxLengthIndicator: null };
-obj = { position: "absolute", bottom: ThemesDefault.space.PX_4, right: ThemesDefault.space.PX_16 };
-obj[1] = obj;
-let closure_5 = createCacheKey.createStyles(obj);
-const forwardRefResult = importAllResult.forwardRef((isDisabled, ref) => {
-  let obj = dependencyMap;
-  obj1 = useInputStyles;
-  obj = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
+const rect = { position: "absolute", bottom: nativeDefault.space.PX_4, right: nativeDefault.space.PX_16 };
+obj.maxLengthIndicator = rect;
+let closure_5 = createStyles.createStyles(obj);
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/TextField/native/TextAreaField.native.tsx");
+
+export const TextAreaField = noop.forwardRef((isDisabled, ref) => {
+  let prop = require;
+  let obj1 = InputFieldContainer;
+  let obj = { size: "lg", isRound: false, isDisabled: isDisabled.isDisabled };
   const inputStyles = obj1.useInputStyles(obj);
-  const tmp2 = callback2();
+  const tmp3 = closure_5();
   const maxLength = isDisabled.maxLength;
-  let obj3 = useTextFieldState;
+  let obj3 = useTextField;
   const textField = obj3.useTextField(isDisabled, ref);
   ({ state, inputProps, innerRef } = textField);
-  let obj4 = getNodeText;
+  let obj4 = native;
   const focus = obj4.useFocus();
   let diff;
   ({ focusProps, isFocused } = focus);
   if (null != maxLength) {
     diff = maxLength - state.value.length;
   }
-  const result = getNodeText;
-  const nodeText = result.getNodeText(isDisabled.label);
-  const result1 = useCharacterLimitAnnouncement;
+  const nodeText = native.getNodeText(isDisabled.label);
+  const propResult = native;
   obj = { currentLength: state.value.length, maxLength, message: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.c2Jqed);
-  const characterLimitAnnouncement = result1.useCharacterLimitAnnouncement(obj);
+  const intl = util.intl;
+  obj.message = intl.string(util.t.c2Jqed);
+  const characterLimitAnnouncement = useCharacterLimitAnnouncement.useCharacterLimitAnnouncement(obj);
   obj1 = {};
   const merged = Object.assign(isDisabled);
   obj1.isFocused = isFocused;
   const obj2 = {};
-  const result2 = getNodeText;
-  const merged1 = Object.assign(result2.mergeProps(inputProps, focusProps));
+  const propResult1 = useCharacterLimitAnnouncement;
+  const tmp9 = React4;
+  const merged1 = Object.assign(native.mergeProps(inputProps, focusProps));
   obj2.ref = innerRef;
   const items = [, , ];
   ({ padding: arr[0], text: arr[1] } = inputStyles);
-  items[2] = tmp2.area;
+  items[2] = tmp3.area;
   obj2.style = items;
   obj2.placeholderTextColor = inputStyles.placeholderText.color;
   obj2.multiline = true;
-  const items1 = [callback(useKeyboardBlurring.NativeTextInput, obj2), ];
+  const items1 = [React3(NativeTextInput.NativeTextInput, obj2), ];
   if (null == diff) {
     items1[1] = null;
     obj1.children = items1;
-    return closure_4(useInputStyles.InputFieldContainer, obj1);
+    return tmp9(InputFieldContainer.InputFieldContainer, obj1);
   } else {
-    obj3 = { style: null, children: null };
-    obj3[0] = tmp2.maxLengthIndicator;
+    obj3 = { style: tmp3.maxLengthIndicator, children: null };
     let str3 = "text-muted";
     let str = "text-muted";
     if (null != maxLength) {
@@ -80,28 +82,21 @@ const forwardRefResult = importAllResult.forwardRef((isDisabled, ref) => {
         str = str2;
       }
     }
-    obj4 = { variant: "text-xs/semibold", color: null, accessibilityLabel: null, children: null };
-    obj4[1] = str;
+    obj4 = { variant: "text-xs/semibold", color: str, accessibilityLabel: null, children: null };
     if (null != nodeText) {
-      const intl3 = getSystemLocale.intl;
-      obj = { label: null, remainingCharacters: null };
-      obj[0] = nodeText;
-      obj[1] = diff;
-      let formatToPlainStringResult = intl3.formatToPlainString(_8Q_k1s, obj);
+      const intl3 = util.intl;
+      prop = util.t["8Q+k1s"];
+      obj = { label: nodeText, remainingCharacters: diff };
+      let formatToPlainStringResult = intl3.formatToPlainString(prop, obj);
     } else {
-      const intl2 = getSystemLocale.intl;
-      const obj5 = { remainingCharacters: null };
-      obj5[0] = diff;
-      formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t.fR1cof, obj5);
+      const intl2 = util.intl;
+      const obj5 = { remainingCharacters: diff };
+      formatToPlainStringResult = intl2.formatToPlainString(util.t.fR1cof, obj5);
     }
-    obj4[2] = formatToPlainStringResult;
-    obj4[3] = diff;
-    obj4 = tmp10(Text.Text, obj4);
-    obj3[1] = obj4;
-    tmp10(View, obj3);
-    const tmp14 = View;
+    obj4.accessibilityLabel = formatToPlainStringResult;
+    obj4.children = diff;
+    obj4 = tmp11(Text_Text.Text, obj4);
+    obj3.children = obj4;
+    tmp11(View, obj3);
   }
 });
-let result = require("set").fileFinishedImporting("design/components/TextField/native/TextAreaField.native.tsx");
-
-export const TextAreaField = forwardRefResult;

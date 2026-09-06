@@ -1,45 +1,45 @@
 // === Module 11038: WishlistViewMoreCard ===
 
 // Module 11038 (WishlistViewMoreCard)
-import noopAll from "noop" /* 19 */;
-import ThemesDefault from "Themes" /* 576 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import Text from "Text" /* 4556 */;
+import nativeDefault from "native" /* 576 */;
+import util from "util" /* 1114 */;
+import Text_Text from "Text/Text" /* 4556 */;
 import WishlistItemCardDefault from "WishlistItemCard" /* 11033 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-noopAll;
-({ Pressable: c3, StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = createCacheKey.createStyles(() => {
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: c3, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles(() => {
   let obj = { moreOverlay: null };
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.borderRadius = ThemesDefault.radii.lg;
-  obj.backgroundColor = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+  obj.borderRadius = nativeDefault.radii.lg;
+  obj.backgroundColor = nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
   obj.justifyContent = "center";
   obj.alignItems = "center";
-  obj[0] = obj;
+  obj.moreOverlay = obj;
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/wishlists/native/WishlistViewMoreCard.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/wishlists/native/WishlistViewMoreCard.tsx");
 
 export default function WishlistViewMoreCard(recipientName) {
   recipientName = recipientName.recipientName;
   ({ sku, size, overflowCount, onPress } = recipientName);
   let obj = { onPress, accessibilityLabel: null, children: null };
-  const intl = getSystemLocale.intl;
-  obj[1] = intl.formatToPlainString(getSystemLocale.t["8uYD+I"], { username: recipientName });
-  const items = [callback(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName }), ];
-  obj = { style: callback3().moreOverlay, children: null };
+  const intl = util.intl;
+  obj.accessibilityLabel = intl.formatToPlainString(util.t["8uYD+I"], { username: recipientName });
+  const items = [timestampProducer(WishlistItemCardDefault, { accessibilityHidden: true, sku, size, recipientName }), ];
+  obj = { style: closure_8().moreOverlay, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: null };
-  const intl2 = getSystemLocale.intl;
-  obj[2] = intl2.format(getSystemLocale.t.F6iMs4, { count: overflowCount });
-  obj[1] = callback(Text.Text, obj);
-  items[1] = callback(closure_5, obj);
-  obj[2] = items;
-  return callback2(closure_3, obj);
+  const intl2 = util.intl;
+  obj.children = intl2.format(util.t.F6iMs4, { count: overflowCount });
+  obj.children = timestampProducer(Text_Text.Text, obj);
+  items[1] = timestampProducer(hasOwnProperty, obj);
+  obj.children = items;
+  return React5(React3, obj);
 };

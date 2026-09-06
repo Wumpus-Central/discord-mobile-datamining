@@ -1,20 +1,22 @@
 // === Module 11888: useEmitAppealIngestionEvent ===
 
 // Module 11888 (useEmitAppealIngestionEvent)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 8430 */;
-import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 8419 */;
-import ME from "ME" /* 1074 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import noop from "module_19" /* 19 */;
+import SafetyHubStore from "SafetyHubStore" /* 8430 */;
 
-const require = arg1;
-({ EMPTY_STRING_SNOWFLAKE_ID: closure_6, AnalyticEvents: error } = ME);
-const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
+const require = fn;
+let closure_5 = fn(8419).SafetyHubAnalyticsActionSource;
+const Constants = fn(1074);
+({ EMPTY_STRING_SNOWFLAKE_ID: metroRequire, AnalyticEvents: closure_7 } = Constants);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
 
 export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent() {
-  let items = [closure_4];
-  stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () => store.getAppealClassificationId());
+  let items = [SafetyHubStore];
+  stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () => SafetyHubStore.getAppealClassificationId());
   let obj = stateFromStores(safetyHubAccountStanding[4]);
-  const tmp3 = closure_4;
+  const tmp3 = SafetyHubStore;
   let tmp5 = stateFromStores;
   if (stateFromStores == null) {
     tmp5 = closure_6;
@@ -24,21 +26,20 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
   safetyHubAccountStanding = tmpResult.useSafetyHubAccountStanding();
   tmpResult = tmp(tmp2[4]);
   const items1 = [tmp3];
-  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => store.getIsDsaEligible());
+  const stateFromStores1 = tmpResult.useStateFromStores(items1, () => SafetyHubStore.getIsDsaEligible());
   const items2 = [safetyHubAccountStanding.state, stateFromStores, safetyHubClassification, stateFromStores1];
   return stateFromStores1.useCallback((action) => {
-    let obj = safetyHubClassification(safetyHubAccountStanding[7]);
-    obj = { action, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_dsa_eligible: null, violation_type: null };
+    const obj = { action, account_standing: safetyHubAccountStanding.state, classification_ids: null, source: null, is_dsa_eligible: null, violation_type: null };
     let tmp2 = null;
     if (null != stateFromStores) {
       const _Number = Number;
       const items = [Number(tmp)];
       tmp2 = items;
     }
-    obj[2] = tmp2;
-    obj[3] = closure_1_5.AppealIngestion;
-    obj[4] = stateFromStores1;
-    obj[5] = safetyHubClassification.violationType;
-    obj.track(closure_1_7.SAFETY_HUB_ACTION, obj);
+    obj.classification_ids = tmp2;
+    obj.source = AppealIngestion.AppealIngestion;
+    obj.is_dsa_eligible = stateFromStores1;
+    obj.violation_type = safetyHubClassification.violationType;
+    obj.track(constants.SAFETY_HUB_ACTION, obj);
   }, items2);
 };

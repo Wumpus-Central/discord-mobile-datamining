@@ -1,41 +1,42 @@
-// === Module 16977: getLayoutStyle ===
+// === Module 16977: getLayoutStyles ===
 
-// Module 16977 (getLayoutStyle)
-import set from "set" /* 2 */;
-import ThemesDefault from "Themes" /* 576 */;
-import Button from "Button" /* 1178 */;
-import GuildIconSizes from "GuildIconSizes" /* 5584 */;
+// Module 16977 (getLayoutStyles)
+import nativeDefault from "native" /* 576 */;
+import native from "native" /* 1178 */;
+import GuildIcon from "GuildIcon" /* 5584 */;
 import GameIcon from "GameIcon" /* 7172 */;
+import size from "module_2" /* 2 */;
 
-let obj = { layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
-obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 } };
-obj[1] = obj;
-obj[2] = { height: 36, margin: { marginLeft: 60 } };
-obj = { size: 24, avatarSize: Button.AvatarSizes.XSMALL };
-obj[3] = obj;
-obj[4] = { height: 20, text: { variant: "redesign/channel-title/semibold" } };
-obj[5] = { messageTypeIconSize: Button.IconSizes.EXTRA_SMALL, messageTypeIconSizeNew: "xxs", height: 16, text: { variant: "text-xs/medium" }, margin: { marginTop: 0 } };
-obj[6] = { text: { variant: "text-xs/medium" } };
-obj[7] = { text: { variant: "text-sm/semibold" } };
-const obj1 = { messageTypeIconSize: Button.IconSizes.EXTRA_SMALL, messageTypeIconSizeNew: "xxs", height: 16, text: { variant: "text-xs/medium" }, margin: { marginTop: 0 } };
-obj[8] = { avatarSize: Button.AvatarSizes.REFRESH_MEDIUM_32, guildIconSize: GuildIconSizes.GuildIconSizes.SMALL_32, guildBadgeIconSize: GuildIconSizes.GuildIconSizes.XXSMALL_12, wrapper: { size: 32 }, channelIcon: { size: 16 }, margin: { marginRight: 8 }, emoji: { size: 16, lineHeight: 24 } };
-obj[9] = { size: 8, position: { left: -12 } };
-obj[10] = { position: { top: 28 } };
-obj[11] = { height: 30, margin: { marginTop: 16 }, text: { size: 14 } };
-const obj2 = { avatarSize: Button.AvatarSizes.REFRESH_MEDIUM_32, guildIconSize: GuildIconSizes.GuildIconSizes.SMALL_32, guildBadgeIconSize: GuildIconSizes.GuildIconSizes.XXSMALL_12, wrapper: { size: 32 }, channelIcon: { size: 16 }, margin: { marginRight: 8 }, emoji: { size: 16, lineHeight: 24 } };
-obj[12] = { position: { top: 3, left: 3 }, typingIndicator: { position: { top: 20, left: 10 } }, avatarSize: Button.AvatarSizes.REFRESH_MEDIUM_32 };
-obj[13] = { text: { variant: "text-xs/bold" } };
+let voiceOrStageSummaryRow = { layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
+voiceOrStageSummaryRow = { borderRadius: nativeDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 } };
+voiceOrStageSummaryRow.container = voiceOrStageSummaryRow;
+voiceOrStageSummaryRow.voiceUsers = { height: 36, margin: { marginLeft: 60 } };
+voiceOrStageSummaryRow = { size: 24, avatarSize: native.AvatarSizes.XSMALL };
+voiceOrStageSummaryRow.voiceOrStageSummaryRow = voiceOrStageSummaryRow;
+voiceOrStageSummaryRow.channelName = { height: 20, text: { variant: "redesign/channel-title/semibold" } };
+voiceOrStageSummaryRow.messagePreview = { messageTypeIconSize: native.IconSizes.EXTRA_SMALL, messageTypeIconSizeNew: "xxs", height: 16, text: { variant: "text-xs/medium" }, margin: { marginTop: 0 } };
+voiceOrStageSummaryRow.timestamp = { text: { variant: "text-xs/medium" } };
+voiceOrStageSummaryRow.inviteRow = { text: { variant: "text-sm/semibold" } };
+const obj1 = { messageTypeIconSize: native.IconSizes.EXTRA_SMALL, messageTypeIconSizeNew: "xxs", height: 16, text: { variant: "text-xs/medium" }, margin: { marginTop: 0 } };
+voiceOrStageSummaryRow.icon = { avatarSize: native.AvatarSizes.REFRESH_MEDIUM_32, guildIconSize: GuildIcon.GuildIconSizes.SMALL_32, guildBadgeIconSize: GuildIcon.GuildIconSizes.XXSMALL_12, wrapper: { size: 32 }, channelIcon: { size: 16 }, margin: { marginRight: 8 }, emoji: { size: 16, lineHeight: 24 } };
+voiceOrStageSummaryRow.unreadBadge = { size: 8, position: { left: -12 } };
+voiceOrStageSummaryRow.mentionBadge = { position: { top: 28 } };
+voiceOrStageSummaryRow.category = { height: 30, margin: { marginTop: 16 }, text: { size: 14 } };
+const obj2 = { avatarSize: native.AvatarSizes.REFRESH_MEDIUM_32, guildIconSize: GuildIcon.GuildIconSizes.SMALL_32, guildBadgeIconSize: GuildIcon.GuildIconSizes.XXSMALL_12, wrapper: { size: 32 }, channelIcon: { size: 16 }, margin: { marginRight: 8 }, emoji: { size: 16, lineHeight: 24 } };
+voiceOrStageSummaryRow.typing = { position: { top: 3, left: 3 }, typingIndicator: { position: { top: 20, left: 10 } }, avatarSize: native.AvatarSizes.REFRESH_MEDIUM_32 };
+voiceOrStageSummaryRow.activeThreadCount = { text: { variant: "text-xs/bold" } };
 const obj4 = { text: { variant: "text-xs/bold" }, layout: { paddingVertical: 4, paddingRight: 8, paddingLeft: 8, height: 24 }, icon: null };
-const obj3 = { position: { top: 3, left: 3 }, typingIndicator: { position: { top: 20, left: 10 } }, avatarSize: Button.AvatarSizes.REFRESH_MEDIUM_32 };
-obj4[2] = { size: Button.IconSizes.EXTRA_SMALL, gameSize: GameIcon.GameIconSizes.SIZE_24 };
-obj[14] = obj4;
+const obj3 = { position: { top: 3, left: 3 }, typingIndicator: { position: { top: 20, left: 10 } }, avatarSize: native.AvatarSizes.REFRESH_MEDIUM_32 };
+obj4.icon = { size: native.IconSizes.EXTRA_SMALL, gameSize: GameIcon.GameIconSizes.SIZE_24 };
+voiceOrStageSummaryRow.joinVoiceButton = obj4;
+const obj6 = { left: 38, startAndEndHeight: 15, transform: null, topOffset: -2 };
 const items = [{ translateY: 10 }];
-obj[15] = { left: 38, startAndEndHeight: 15, transform: items, topOffset: -2 };
-obj[16] = { margin: { marginTop: 16, marginBottom: 16 } };
-obj[17] = { margin: { marginVertical: 12 } };
-obj[18] = { margin: { marginHorizontal: 12 } };
-const obj5 = { size: Button.IconSizes.EXTRA_SMALL, gameSize: GameIcon.GameIconSizes.SIZE_24 };
-const result = set.fileFinishedImporting("modules/launchpad/native/shared/getLayoutStyles.tsx");
+obj6.transform = items;
+voiceOrStageSummaryRow.threadSpine = obj6;
+voiceOrStageSummaryRow.happeningNow = { margin: { marginTop: 16, marginBottom: 16 } };
+voiceOrStageSummaryRow.separator = { margin: { marginVertical: 12 } };
+voiceOrStageSummaryRow.searchButton = { margin: { marginHorizontal: 12 } };
+const result = size.fileFinishedImporting("modules/launchpad/native/shared/getLayoutStyles.tsx");
 
 export default function getLayoutStyle() {
   return obj;

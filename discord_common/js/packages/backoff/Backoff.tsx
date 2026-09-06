@@ -1,9 +1,9 @@
-// === Module 559: fails ===
+// === Module 559: Backoff ===
 
-// Module 559 (fails)
-import set from "set" /* 2 */;
+// Module 559 (Backoff)
+import size from "module_2" /* 2 */;
 
-let result = set.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
 class Backoff {
   constructor() {
     num = global;
@@ -24,17 +24,17 @@ class Backoff {
       str = "Backoff min value must be greater than zero or backoff will never back-off.";
       throw Error("Backoff min value must be greater than zero or backoff will never back-off.");
     } else {
-      obj = Object.create(tmp2);
-      obj.min = num;
+      merged = Object.assign({ _fails: 0 });
+      merged.min = num;
       tmp4 = null;
       if (null == result) {
         num2 = 10;
         result = 10 * num;
       }
-      obj.max = result;
-      obj.jitter = flag;
-      obj._current = num;
-      return obj;
+      merged.max = result;
+      merged.jitter = flag;
+      merged._current = num;
+      return merged;
     }
   }
 }
@@ -46,7 +46,7 @@ Object.defineProperty(prototype, "fails", {
   set: undefined
 });
 Object.defineProperty(prototype, "current", {
-  get: function current(AUTO_DISMISS, current, arg2) {
+  get: function current() {
     return this._current;
   },
   set: undefined
@@ -62,9 +62,8 @@ prototype["succeed"] = function succeed() {
   this._fails = 0;
   this._current = this.min;
 };
-prototype["fail"] = function fail(_callback) {
-  let self = this;
-  self = this;
+prototype["fail"] = function fail(_callback, arg1) {
+  const self = this;
   closure_0 = _callback;
   this._fails = this._fails + 1;
   const result = 2 * this._current;
@@ -82,7 +81,7 @@ prototype["fail"] = function fail(_callback) {
     if (null != self._timeoutId) {
       if (self._callback !== _callback) {
         const _Error = Error;
-        error = new Error("callback already pending");
+        const error = new Error("callback already pending");
         throw error;
       } else {
         self.cancel();

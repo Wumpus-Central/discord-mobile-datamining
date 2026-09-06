@@ -1,27 +1,31 @@
 // === Module 16771: ContactSuggestionRow ===
 
 // Module 16771 (ContactSuggestionRow)
-import closure_3 from "noop" /* 19 */;
-import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import ME from "ME" /* 1074 */;
-import { jsx } from "jsxProd" /* 21 */;
+import util from "util" /* 1114 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16044 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
-const require = arg1;
-({ AnalyticEvents: c5, InstantInviteSources: closure_6, RelationshipTypes: error } = ME);
+require = fn;
+const Constants = fn(1074);
+({ AnalyticEvents: hasOwnProperty, InstantInviteSources: metroRequire, RelationshipTypes: closure_7 } = Constants);
+const jsx = fn(21).jsx;
 let closure_9 = { ADD: "add" };
-let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
 
 export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFriend) {
   suggestedFriend = suggestedFriend.suggestedFriend;
   const added = suggestedFriend.added;
   const onAddSuggestion = suggestedFriend.onAddSuggestion;
-  const merged = Object.assign(suggestedFriend, Object.create(null));
+  const merged = Object.assign(suggestedFriend, Object.assign({ suggestedFriend: 0, added: 0, onAddSuggestion: 0 }));
   let sharedValue;
   if (null != suggestedFriend.friendSuggestionName) {
     if (suggestedFriend.friendSuggestionName.length > 0) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
-    obj1 = suggestedFriend(onAddSuggestion[5]);
+    let obj1 = suggestedFriend(onAddSuggestion[5]);
     sharedValue = obj1.useSharedValue(false);
     let items = [added, sharedValue];
     const effect = merged.useEffect(() => {
@@ -32,10 +36,9 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
       if (added) {
         let items = [];
       } else {
-        const obj = { name: null, label: null };
-        obj[0] = closure_1_9.ADD;
-        const intl = suggestedFriend(onAddSuggestion[6]).intl;
-        obj[1] = intl.string(suggestedFriend(onAddSuggestion[6]).t["ed99+i"]);
+        const obj = { name: constants.ADD, label: null };
+        const intl = util.intl;
+        obj.label = intl.string(util.t["ed99+i"]);
         items = [obj];
       }
       return items;
@@ -46,10 +49,10 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
     const items3 = [sharedValue, onAddSuggestion, suggestedFriend.user];
     let mutualFriendsCount;
     const callback = merged.useCallback((nativeEvent) => {
-      if (nativeEvent.nativeEvent.actionName === closure_1_9.ADD) {
+      if (nativeEvent.nativeEvent.actionName === constants.ADD) {
         const result = sharedValue.set(true);
         onAddSuggestion(suggestedFriend.user);
-        return suggestedFriend(onAddSuggestion[8]).addContactSuggestion(suggestedFriend.user);
+        return AddFriendsScreenUtils.addContactSuggestion(suggestedFriend.user);
       }
     }, items3);
     if (suggestedFriend != null) {
@@ -78,15 +81,13 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
     const tmp2Result = suggestedFriend(onAddSuggestion[9]);
     const merged1 = Object.assign(merged);
     obj.user = suggestedFriend.user;
-    obj.type = constants.SUGGESTION;
+    obj.type = constants3.SUGGESTION;
     obj.accessibilityActions = memo;
     obj.onAccessibilityAction = callback;
     obj.labelLineClamp = 1;
     obj.subLabelLineClamp = 1;
     obj.label = friendSuggestionName;
-    obj = { actioned: null, label: null, secondaryLabel: null, actionStatus: null, animate: null };
-    obj[0] = sharedValue;
-    obj[1] = combined;
+    obj = { actioned: sharedValue, label: combined, secondaryLabel: null, actionStatus: null, animate: null };
     let formatToPlainStringResult;
     if (tmp12) {
       let intl = tmp2(tmp3[6]).intl;
@@ -97,32 +98,45 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
       if (str3 == null) {
         str3 = "";
       }
-      obj1 = { count: null };
-      obj1[0] = str3;
+      obj1 = { count: str3 };
       formatToPlainStringResult = intl.formatToPlainString(tmp2(tmp3[6]).t.z7y34b, obj1);
     }
-    obj[2] = formatToPlainStringResult;
+    obj.secondaryLabel = formatToPlainStringResult;
     const intl2 = tmp2(tmp3[6]).intl;
-    obj[3] = intl2.string(suggestedFriend(onAddSuggestion[6]).t.Kzyxm9);
-    obj[4] = !stateFromStores;
-    obj.subLabel = jsx(suggestedFriend(onAddSuggestion[11]).ActionStatusSubLabel, { actioned: null, label: null, secondaryLabel: null, actionStatus: null, animate: null });
-    obj2 = { user: null, added: null, onAddSuggestion: null, animate: null };
-    obj2[0] = suggestedFriend.user;
-    obj2[1] = sharedValue;
-    obj2[2] = function onAddSuggestion(id) {
-      let obj = added(onAddSuggestion[13]);
-      obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
-      let ADD_FRIENDS_MODAL = merged.location;
-      if (ADD_FRIENDS_MODAL == null) {
-        ADD_FRIENDS_MODAL = closure_1_6.ADD_FRIENDS_MODAL;
-      }
-      obj[2] = ADD_FRIENDS_MODAL;
-      obj.track(closure_1_5.FRIEND_SUGGESTION_ADDED, obj);
-      onAddSuggestion(id);
+    obj.actionStatus = intl2.string(suggestedFriend(onAddSuggestion[6]).t.Kzyxm9);
+    obj.animate = !stateFromStores;
+    obj.subLabel = jsx(suggestedFriend(onAddSuggestion[11]).ActionStatusSubLabel, { actioned: sharedValue, label: combined, secondaryLabel: null, actionStatus: null, animate: null });
+    obj2 = {
+      user: suggestedFriend.user,
+      added: sharedValue,
+      onAddSuggestion(id) {
+          const obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
+          let ADD_FRIENDS_MODAL = merged.location;
+          if (ADD_FRIENDS_MODAL == null) {
+            ADD_FRIENDS_MODAL = constants2.ADD_FRIENDS_MODAL;
+          }
+          obj.location = ADD_FRIENDS_MODAL;
+          obj.track(constants.FRIEND_SUGGESTION_ADDED, obj);
+          onAddSuggestion(id);
+        },
+      animate: !stateFromStores
     };
-    obj2[3] = !stateFromStores;
-    obj.trailing = jsx(suggestedFriend(onAddSuggestion[12]).ContactSuggestionActions, { user: null, added: null, onAddSuggestion: null, animate: null });
-    return jsx(tmp15(onAddSuggestion[10]), { actioned: null, label: null, secondaryLabel: null, actionStatus: null, animate: null });
+    obj.trailing = jsx(suggestedFriend(onAddSuggestion[12]).ContactSuggestionActions, {
+      user: suggestedFriend.user,
+      added: sharedValue,
+      onAddSuggestion(id) {
+          const obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
+          let ADD_FRIENDS_MODAL = merged.location;
+          if (ADD_FRIENDS_MODAL == null) {
+            ADD_FRIENDS_MODAL = constants2.ADD_FRIENDS_MODAL;
+          }
+          obj.location = ADD_FRIENDS_MODAL;
+          obj.track(constants.FRIEND_SUGGESTION_ADDED, obj);
+          onAddSuggestion(id);
+        },
+      animate: !stateFromStores
+    });
+    return jsx(tmp15(onAddSuggestion[10]), { actioned: sharedValue, label: combined, secondaryLabel: null, actionStatus: null, animate: null });
   }
   obj = added(onAddSuggestion[4]);
   friendSuggestionName = obj.getName(suggestedFriend.user);

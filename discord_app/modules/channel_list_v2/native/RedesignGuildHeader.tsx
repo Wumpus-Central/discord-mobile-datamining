@@ -1,109 +1,113 @@
-// === Module 16133: GuildInfoHeader ===
+// === Module 16133: RedesignGuildHeader ===
 
-// Module 16133 (GuildInfoHeader)
-import ThemesDefault from "Themes" /* 576 */;
-import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1982 */;
-import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 4411 */;
-import getFontScale from "getFontScale" /* 4982 */;
+// Module 16133 (RedesignGuildHeader)
+import nativeDefault from "native" /* 576 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
+import FavoritesUtils from "FavoritesUtils" /* 1982 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 4297 */;
+import shared from "shared" /* 4411 */;
+import spring from "spring" /* 4974 */;
+import springPresets from "springPresets" /* 4978 */;
+import useFontScale from "useFontScale" /* 4982 */;
+import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
-import map from "map" /* 10119 */;
-import tDefault from "t" /* 10993 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10993 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13907 */;
 import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16104 */;
 import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16134 */;
-import importAllResult from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4552 */;
-import closure_8 from "setContent" /* 4251 */;
-import hairlineWidth from "hairlineWidth" /* 10118 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16135 */;
+import noop from "module_19" /* 19 */;
+import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import ActionSheetStore from "ActionSheetStore" /* 4251 */;
 
-require = arg1;
+require = fn;
 function GuildInfoHeader(bannerHeight) {
   ({ guild, scrollPosition } = bannerHeight);
   bannerHeight = bannerHeight.bannerHeight;
-  let obj = scrollPosition(4296);
+  let obj = ReanimatedRexport;
   const fn = function s() {
     let obj = { transform: null };
     obj = { translateY: Math.max(0, scrollPosition.get() - bannerHeight) };
     const items = [obj];
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
   fn.__closure = { scrollPosition, bannerHeight };
   fn.__workletHash = 6302330113586;
-  fn.__initData = closure_18;
+  fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj1 = scrollPosition(4296);
+  let obj1 = ReanimatedRexport;
   const fn2 = function u() {
     let obj = { transform: null };
     obj = { translateY: Math.min(0, scrollPosition.get() - bannerHeight) };
     const items = [obj];
-    obj[0] = items;
+    obj.transform = items;
     return obj;
   };
   fn2.__closure = { scrollPosition, bannerHeight };
   fn2.__workletHash = 16710117141903;
-  fn2.__initData = closure_19;
+  fn2.__initData = __initData2;
   const animatedStyle1 = obj1.useAnimatedStyle(fn2);
-  let obj2 = scrollPosition(1982);
+  let obj2 = FavoritesUtils;
   const isFavoritesGuildIdResult = obj2.isFavoritesGuildId(guild.id);
-  obj = { style: items, children: null };
-  items = [animatedStyle, { overflow: "hidden" }];
-  const tmp = callback5();
+  obj = { style: null, children: null };
+  let items = [animatedStyle, { overflow: "hidden" }];
+  obj.style = items;
+  const tmp = closure_17();
   obj = { style: animatedStyle1, children: null };
-  const tmp5 = bannerHeight(4297);
-  obj[1] = callback(bannerHeight(5125), { absolute: true, tall: true });
-  const items1 = [callback(bannerHeight(4297), obj), ];
-  obj1 = { style: tmp.headerWrapper, children: callback(bannerHeight(16135), obj2) };
+  const tmp5 = REAWorkaroundViewDefault;
+  obj.children = map1(ThemedGradientDefault, { absolute: true, tall: true });
+  const items1 = [map1(REAWorkaroundViewDefault, obj), ];
+  obj1 = { style: tmp.headerWrapper, children: null };
   obj2 = { guild, showExtraButtons: !isFavoritesGuildIdResult, canOpenGuildActionSheet: !isFavoritesGuildIdResult, showCoachmarks: !isFavoritesGuildIdResult };
-  items1[1] = callback(closure_5, obj1);
-  obj[1] = items1;
-  return callback2(tmp5, obj);
+  obj1.children = map1(ChannelListStickyHeaderDefault, obj2);
+  items1[1] = map1(hasOwnProperty, obj1);
+  obj.children = items1;
+  return closure_1_14(tmp5, obj);
 }
 function ReanimatedGuildBanner(guild) {
   guild = guild.guild;
   const scrollPosition = guild.scrollPosition;
-  let bannerHeight = guild.bannerHeight;
   const bannerWidth = guild.bannerWidth;
   const onPress = guild.onPress;
-  closure_5 = undefined;
-  bannerHeight = undefined;
+  let bannerHeight;
   let sharedValue;
-  const tmp3 = callback4(scrollPosition(bannerHeight[24])().height);
-  closure_5 = tmp3;
+  const tmp3 = closure_16(scrollPosition(bannerHeight[24])().height);
+  const guildBanner = tmp3;
   let obj = guild(bannerHeight[25]);
-  let items = [closure_8, sharedValue];
+  let items = [ActionSheetStore, sharedValue];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ actionSheetOpen: null != key.getKey(), useReducedMotion: sharedValue.useReducedMotion }));
   ({ useReducedMotion, actionSheetOpen } = stateFromStoresObject);
   let tmp17Result = scrollPosition(bannerHeight[13])(guild.id);
-  obj1 = guild(bannerHeight[26]);
+  let obj1 = guild(bannerHeight[26]);
   const isFocused = obj1.useIsFocused();
   let obj2 = guild(bannerHeight[20]);
   sharedValue = obj2.useSharedValue(0);
   let items1 = [sharedValue];
   let items2 = [sharedValue];
   const callback = bannerWidth.useCallback(() => {
-    const result = sharedValue.set(guild(bannerHeight[27]).withSpring(1, guild(bannerHeight[28]).springStandard, "animate-always"));
+    const result = sharedValue.set(spring.withSpring(1, springPresets.springStandard, "animate-always"));
   }, items1);
   let items3 = [guild, onPress];
   const callback1 = bannerWidth.useCallback(() => {
-    const result = sharedValue.set(guild(bannerHeight[27]).withSpring(0, guild(bannerHeight[28]).springStandard, "animate-always"));
+    const result = sharedValue.set(spring.withSpring(0, springPresets.springStandard, "animate-always"));
   }, items2);
   const callback2 = bannerWidth.useCallback(() => {
     if (onPress != null) {
       tmp();
     }
-    scrollPosition(bannerHeight[29])(guild);
+    openGuildActionSheetDefault(guild);
   }, items3);
   let obj3 = guild(bannerHeight[20]);
   const fn = function p() {
-    const value = scrollPosition.get();
-    const obj = { opacity: guild(bannerHeight[20]).interpolate(value, items, [1, 0], "clamp"), transform: null };
-    items = [0, bannerHeight];
+    value = scrollPosition.get();
+    const obj = { opacity: null, transform: null };
+    const items = [0, bannerHeight];
+    obj.opacity = ReanimatedRexport.interpolate(value, items, [1, 0], "clamp");
     if (value >= 0) {
-      const tmp2Result = guild(bannerHeight[20]);
+      const tmp2Result = ReanimatedRexport;
       const items1 = [0, bannerHeight];
       const items2 = [0, -bannerHeight];
       let interpolateResult = tmp2Result.interpolate(-value, items1, items2, "clamp");
@@ -116,26 +120,26 @@ function ReanimatedGuildBanner(guild) {
       num2 = (bannerHeight - value) / bannerHeight;
     }
     items3[1] = { scale: num2 };
-    obj[1] = items3;
+    obj.transform = items3;
     return obj;
   };
   obj = { scrollPosition, interpolate: guild(bannerHeight[20]).interpolate, maxScrollPosition: bannerHeight, bannerHeight };
   fn.__closure = obj;
   fn.__workletHash = 16532496584630;
-  fn.__initData = closure_21;
+  fn.__initData = __initData3;
   const animatedStyle = obj3.useAnimatedStyle(fn);
   class H {
     constructor() {
       obj = { opacity: null };
-      obj2 = guild(bannerHeight[20]);
-      obj[0] = obj2.interpolate(closure_7.get(), [0, 1], [0, 0.3]);
+      obj2 = closure_0(closure_2[20]);
+      obj.opacity = obj2.interpolate(closure_7.get(), [0, 1], [0, 0.3]);
       return obj;
     }
   }
   obj = { interpolate: guild(bannerHeight[20]).interpolate, pressed: sharedValue };
   H.__closure = obj;
   H.__workletHash = 13777976622560;
-  H.__initData = closure_22;
+  H.__initData = __initData4;
   const items4 = [tmp3, bannerWidth, bannerHeight];
   const animatedStyle1 = guild(bannerHeight[20]).useAnimatedStyle(H);
   if (null == guild.banner) {
@@ -153,93 +157,90 @@ function ReanimatedGuildBanner(guild) {
       hasItem = features.has(GuildFeatures.ANIMATED_BANNER);
     }
     const animatableSourceWithFallback = tmp(tmp2[30]).getAnimatableSourceWithFallback(hasItem, (hasItem) => {
-      let obj = scrollPosition(bannerHeight[30]);
-      obj = { id: guild.id, banner: guild.banner };
+      const obj = { id: guild.id, banner: guild.banner };
       return obj.getGuildBannerSource(obj, hasItem);
     });
-    obj1 = { style: null, children: null };
-    obj1[0] = animatedStyle;
-    obj2 = { style: null, onPress: null, onPressIn: null, onPressOut: null, children: null };
-    obj2[0] = tmp3.bannerWrapper;
-    obj2[1] = callback2;
-    obj2[2] = callback;
-    obj2[3] = callback1;
-    obj3 = { style: null, source: null };
-    obj3[0] = tmp13;
-    obj3[1] = animatableSourceWithFallback;
-    const items5 = [callback(tmp(tmp2[31]), obj3), , ];
+    obj1 = { style: animatedStyle, children: null };
+    obj2 = { style: tmp3.bannerWrapper, onPress: callback2, onPressIn: callback, onPressOut: callback1, children: null };
+    obj3 = { style: tmp13, source: animatableSourceWithFallback };
+    const items5 = [closure_13(tmp(tmp2[31]), obj3), , ];
     const obj4 = { style: null };
     const items6 = [tmp3.bannerOverlay, animatedStyle1];
-    obj4[0] = items6;
-    items5[1] = callback(tmp(tmp2[20]).View, obj4);
+    obj4.style = items6;
+    items5[1] = closure_13(tmp(tmp2[20]).View, obj4);
     if (tmp17Result) {
       tmp17Result = tmp17(tmp(tmp2[32]), {});
     }
     items5[2] = tmp17Result;
-    obj2[4] = items5;
-    obj1[1] = closure_14(bannerHeight, obj2);
-    return callback(tmp(tmp2[20]).View, obj1);
+    obj2.children = items5;
+    obj1.children = closure_14(bannerHeight, obj2);
+    return closure_13(tmp(tmp2[20]).View, obj1);
   }
   const obj6 = guild(bannerHeight[20]);
 }
-let c3 = importAllResult;
-({ StyleSheet: c4, View: c5, Pressable: closure_6 } = get_ActivityIndicator);
-({ STICKY_BANNER_ASPECT_RATIO: c9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: unpackModuleId } = hairlineWidth);
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
+const RedesignChannelListConstants = fn(10118);
+({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
+const GuildFeatures = fn(1074).GuildFeatures;
+const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let closure_15 = createCacheKey.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
-let closure_16 = createCacheKey.createStyles((arg0) => {
-  obj = { bannerWrapper: obj, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
-  obj = { width: "100%", maxHeight: arg0 * closure_10, aspectRatio: closure_9, overflow: "hidden" };
+let createStyles = fn(4560);
+let closure_15 = createStyles.createStyles(() => ({ guildHeaderWrapper: { zIndex: 5 } }));
+createStyles = fn(4560);
+let closure_16 = createStyles.createStyles((arg0) => {
+  let obj = { bannerWrapper: null, guildBanner: { left: "50%", top: "50%" }, bannerOverlay: null };
+  obj = { width: "100%", maxHeight: arg0 * closure_1_10, aspectRatio, overflow: "hidden" };
+  obj.bannerWrapper = obj;
   obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
-  obj.backgroundColor = ThemesDefault.colors.BLACK;
-  obj[2] = obj;
+  obj.backgroundColor = nativeDefault.colors.BLACK;
+  obj.bannerOverlay = obj;
   return obj;
 });
-let result = createCacheKey.experimental_createToken((gradient) => {
+createStyles = fn(4560);
+let result = createStyles.experimental_createToken((gradient) => {
   if (null != gradient.gradient) {
-    let PANEL_BG = ThemesDefault.colors.BACKGROUND_BASE_LOW;
+    let PANEL_BG = nativeDefault.colors.BACKGROUND_BASE_LOW;
   } else {
-    PANEL_BG = ThemesDefault.colors.PANEL_BG;
+    PANEL_BG = nativeDefault.colors.PANEL_BG;
   }
   return PANEL_BG;
 });
-let closure_17 = createCacheKey.createStyles({ headerWrapper: { backgroundColor: result } });
-let closure_18 = { code: "function RedesignGuildHeaderTsx1(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};}" };
-let closure_19 = { code: "function RedesignGuildHeaderTsx2(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.min(0,scrollPosition.get()-bannerHeight)}]};}" };
-let closure_21 = { code: "function RedesignGuildHeaderTsx3(){const{scrollPosition,interpolate,maxScrollPosition,bannerHeight}=this.__closure;const scrollPosValue=scrollPosition.get();return{opacity:interpolate(scrollPosValue,[0,maxScrollPosition],[1,0],'clamp'),transform:[{translateY:scrollPosValue>=0?interpolate(-scrollPosValue,[0,bannerHeight],[0,-bannerHeight],'clamp'):scrollPosValue/2},{scale:scrollPosValue>=0?1:(bannerHeight-scrollPosValue)/bannerHeight}]};}" };
-let closure_22 = { code: "function RedesignGuildHeaderTsx4(){const{interpolate,pressed}=this.__closure;return{opacity:interpolate(pressed.get(),[0,1],[0,0.3])};}" };
-const memoResult = importAllResult.memo(function RedesignGuildHeader(bannerWidth) {
+createStyles = fn(4560);
+let closure_17 = createStyles.createStyles({ headerWrapper: { backgroundColor: result } });
+const __initData = { code: "function RedesignGuildHeaderTsx1(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.max(0,scrollPosition.get()-bannerHeight)}]};}" };
+const __initData2 = { code: "function RedesignGuildHeaderTsx2(){const{scrollPosition,bannerHeight}=this.__closure;return{transform:[{translateY:Math.min(0,scrollPosition.get()-bannerHeight)}]};}" };
+const __initData3 = { code: "function RedesignGuildHeaderTsx3(){const{scrollPosition,interpolate,maxScrollPosition,bannerHeight}=this.__closure;const scrollPosValue=scrollPosition.get();return{opacity:interpolate(scrollPosValue,[0,maxScrollPosition],[1,0],'clamp'),transform:[{translateY:scrollPosValue>=0?interpolate(-scrollPosValue,[0,bannerHeight],[0,-bannerHeight],'clamp'):scrollPosValue/2},{scale:scrollPosValue>=0?1:(bannerHeight-scrollPosValue)/bannerHeight}]};}" };
+const __initData4 = { code: "function RedesignGuildHeaderTsx4(){const{interpolate,pressed}=this.__closure;return{opacity:interpolate(pressed.get(),[0,1],[0,0.3])};}" };
+let size = fn(2);
+const result1 = size.fileFinishedImporting("modules/channel_list_v2/native/RedesignGuildHeader.tsx");
+
+export default noop.memo(function RedesignGuildHeader(bannerWidth) {
   ({ guild, scrollPosition, bannerHeight } = bannerWidth);
-  let obj = { style: callback3().guildHeaderWrapper, preventClipping: true, children: null };
-  const items = [callback(ReanimatedGuildBanner, { guild, scrollPosition, bannerHeight, bannerWidth: bannerWidth.bannerWidth }), ];
+  let obj = { style: closure_15().guildHeaderWrapper, preventClipping: true, children: null };
+  const items = [map1(ReanimatedGuildBanner, { guild, scrollPosition, bannerHeight, bannerWidth: bannerWidth.bannerWidth }), ];
   obj = { guild, scrollPosition, bannerHeight: null };
   let num = 0;
   if (null != guild.banner) {
     num = bannerHeight;
   }
-  obj[2] = num;
-  items[1] = callback(GuildInfoHeader, obj);
-  obj[2] = items;
-  return closure_14(closure_5, obj);
+  obj.bannerHeight = num;
+  items[1] = map1(GuildInfoHeader, obj);
+  obj.children = items;
+  return closure_1_14(hasOwnProperty, obj);
 });
-const result1 = require("set").fileFinishedImporting("modules/channel_list_v2/native/RedesignGuildHeader.tsx");
-
-export default memoResult;
 export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeight(id) {
   const tmp3 = useIsUsingClientThemeDefault();
   let isThemeDarkResult = tmp3;
   if (!tmp3) {
-    isThemeDarkResult = AccessibilityAnnouncer.isThemeDark(tmp4);
-    const obj = AccessibilityAnnouncer;
+    isThemeDarkResult = shared.isThemeDark(tmp4);
   }
-  const fontScale = getFontScale.useFontScale();
-  const obj2 = getFontScale;
+  const fontScale = useFontScale.useFontScale();
   const tmp9 = null != useStickyServerHeaderSubtitleDefault(id);
-  const isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(id.id);
-  const obj3 = getFavoritesAwareGuildName;
+  const isFavoritesGuildIdResult = FavoritesUtils.isFavoritesGuildId(id.id);
   const tmp11 = useIsGameCommunityServerPreviewDefault(id.id);
-  const scaleTextLineHeightResult = map.scaleTextLineHeight("redesign/heading-18/bold", fontScale);
+  const scaleTextLineHeightResult = useScaledTextLineHeight.scaleTextLineHeight("redesign/heading-18/bold", fontScale);
   let num = 0;
   if (isThemeDarkResult) {
     num = 1;
@@ -248,7 +249,7 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
   let num2 = 0;
   const token = tmp7Result.useToken(tmp(576).modules.mobile.CHANNEL_LIST_SUBTITLE_TEXT_STYLE);
   if (!isFavoritesGuildIdResult) {
-    num2 = tmp7(4980).SMALL_BUTTON_HEIGHT + closure_11;
+    num2 = tmp7(4980).SMALL_BUTTON_HEIGHT + closure_1_11;
   }
   let num3 = 0;
   if (tmp11) {
@@ -268,5 +269,5 @@ export const useRedesignGuildHeaderHeight = function useRedesignGuildHeaderHeigh
     const _Math = Math;
     bound = Math.max(scaleTextLineHeightResult, tmp7(4980).SMALL_BUTTON_HEIGHT);
   }
-  return tDefault(16 + bound + num6 + num2 + num3 + num5 + num);
+  return roundToNearestPixelDefault(16 + bound + num6 + num2 + num3 + num5 + num);
 };

@@ -1,28 +1,29 @@
-// === Module 16801: CoachmarkImage ===
+// === Module 16801: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 16801 (CoachmarkImage)
-import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5692 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "mergeGuildAvatar" /* 1371 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+// Module 16801 (DisplayNameStylesFlywheelProfileCoachmark)
+import native from "native" /* 5692 */;
+import noop from "module_19" /* 19 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function CoachmarkImage() {
-  return <View style={callback().coachmarkImageContainer}>{jsx(AccountAgeTier10LargeBadge.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>;
+  return <View style={closure_8().coachmarkImageContainer}>{jsx(native.DisplayNameLockeAbstractUI, { width: 160, height: 68, resizeMode: "contain" })}</View>;
 }
-let closure_8 = createCacheKey.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
-let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
+const View = fn(17).View;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsx = fn(21).jsx;
+const createStyles = fn(4560);
+let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelProfileCoachmark.tsx");
 
 export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   visible = visible.visible;
   const markAsDismissed = visible.markAsDismissed;
   dependencyMap = undefined;
-  let React;
-  let callback;
-  const items = [closure_5];
+  noop = undefined;
+  let onDismiss;
+  const items = [UserStore];
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
@@ -44,20 +45,20 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
   } else {
     string2Result = string2(tmp4Result.dluV0R);
   }
-  React = string2Result;
+  noop = string2Result;
   const items1 = [markAsDismissed];
-  callback = React.useCallback(() => {
-    markAsDismissed(closure_1_6.USER_DISMISS);
+  onDismiss = noop.useCallback(() => {
+    markAsDismissed(ContentDismissActionType.USER_DISMISS);
   }, items1);
-  const items2 = [stringResult, string2Result, visible, callback];
-  const memo = React.useMemo(() => ({
-    title: c2,
-    description: c3,
+  const items2 = [stringResult, string2Result, visible, onDismiss];
+  const memo = noop.useMemo(() => ({
+    title,
+    description,
     visible,
     position: "bottom",
-    onDismiss: callback,
+    onDismiss,
     renderImgComponent() {
-      return callback(closure_9, {});
+      return closure_1_7(closure_1_9, {});
     }
   }), items2);
   const obj2 = markAsDismissed(4218);

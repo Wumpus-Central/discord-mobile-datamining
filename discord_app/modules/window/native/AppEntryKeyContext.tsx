@@ -1,16 +1,15 @@
-// === Module 1480: context ===
+// === Module 1480: AppEntryKeyContext ===
 
-// Module 1480 (context)
-import timestampDefault from "timestamp" /* 3 */;
-import importAllResult from "noop" /* 19 */;
+// Module 1480 (AppEntryKeyContext)
+import LoggerDefault from "Logger" /* 3 */;
+import noop from "module_19" /* 19 */;
 
-let c0 = importAllResult;
-let closure_1 = new timestampDefault("AppEntryKeyContext");
+let closure_1 = new LoggerDefault("AppEntryKeyContext");
 const main = "main";
-let context = importAllResult.createContext(undefined);
+let context = noop.createContext(undefined);
 let c4 = false;
-const tmp2 = new timestampDefault("AppEntryKeyContext");
-const result = require("set").fileFinishedImporting("modules/window/native/AppEntryKeyContext.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/window/native/AppEntryKeyContext.tsx");
 
 export const DEFAULT_APP_ENTRY_KEY = "main";
 export const AppEntryKeyContext = context;
@@ -20,7 +19,7 @@ export const useAppEntryKey = function useAppEntryKey() {
   const effect = context.useEffect(() => {
     if (!tmp) {
       c4 = true;
-      closure_1_1.warn("AppEntryKey context was not provided; falling back to default entry key \"main\".");
+      logger.warn("AppEntryKey context was not provided; falling back to default entry key \"main\".");
     }
   }, items);
   if (context == null) {

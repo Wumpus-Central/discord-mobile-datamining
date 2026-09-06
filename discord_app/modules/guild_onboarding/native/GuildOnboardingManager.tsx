@@ -1,17 +1,17 @@
-// === Module 17372: prototype ===
+// === Module 17372: GuildOnboardingManager ===
 
-// Module 17372 (prototype)
-import initializeDefault from "initialize" /* 7118 */;
-import closure_3 from "trackCommunicationDisabled" /* 2021 */;
-import closure_4 from "createGuildRecordFromRust" /* 1979 */;
-import closure_5 from "handleConnectionOpen" /* 4381 */;
-import { GuildFeatures } from "ME" /* 1074 */;
-import { GuildMemberFlags } from "GuildMemberFlags" /* 4187 */;
+// Module 17372 (GuildOnboardingManager)
+import doGuildOnboardingDefault from "doGuildOnboarding" /* 7095 */;
+import GuildMemberStore from "GuildMemberStore" /* 2021 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
-let require = arg1;
-let c8 = null;
-let c9 = null;
-initializeDefault;
+let require = fn;
+const GuildFeatures = fn(1074).GuildFeatures;
+const GuildMemberFlags = fn(4187).GuildMemberFlags;
+let guildId = null;
+const channelId = null;
 let prototype = function GuildOnboardingManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -28,7 +28,7 @@ let prototype = function GuildOnboardingManager() {
   };
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
     if (guildId == null) {
-      guildId = closure_1_5.getGuildId();
+      guildId = SelectedGuildStore.getGuildId();
     }
     if (guildId == null) {
       guildId = null;
@@ -82,9 +82,8 @@ let prototype = function GuildOnboardingManager() {
           const obj2 = applyArgumentsResult(1384);
         }
         if (hasFlagResult) {
-          obj = { guildId: null };
-          obj[0] = guildId;
-          callback(7095)(obj);
+          obj = { guildId };
+          doGuildOnboardingDefault(obj);
         }
       }
     }
@@ -94,6 +93,7 @@ let prototype = function GuildOnboardingManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingManager.tsx");
 
 export default prototype;

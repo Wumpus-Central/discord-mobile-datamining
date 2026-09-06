@@ -1,14 +1,14 @@
 // === Module 9508: closeVoicePanels ===
 
 // Module 9508 (closeVoicePanels)
-import set from "set" /* 2 */;
-import ME from "ME" /* 1074 */;
-import ComponentDispatcher from "ComponentDispatcher" /* 1109 */;
+import Constants from "Constants" /* 1074 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
+import size from "module_2" /* 2 */;
 
-const ComponentActions = ME.ComponentActions;
-const result = set.fileFinishedImporting("modules/voice_panel/native/utils/closeVoicePanels.tsx");
+const ComponentActions = Constants.ComponentActions;
+const result = size.fileFinishedImporting("modules/voice_panel/native/utils/closeVoicePanels.tsx");
 
 export default function closeVoicePanels() {
-  const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
+  const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;
   ComponentDispatch.dispatch(ComponentActions.VOICE_PANEL_CLOSE);
 };

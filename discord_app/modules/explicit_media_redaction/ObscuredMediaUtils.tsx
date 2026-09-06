@@ -1,22 +1,23 @@
-// === Module 7292: getEligibleHarmTypesConfigsForContext ===
+// === Module 7292: ObscuredMediaUtils ===
 
-// Module 7292 (getEligibleHarmTypesConfigsForContext)
-import create from "create" /* 1187 */;
-import ContentHarmType from "ContentHarmType" /* 7295 */;
-import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 7297 */;
+// Module 7292 (ObscuredMediaUtils)
+import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
+import HarmTypeConfiguration from "HarmTypeConfiguration" /* 7295 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7297 */;
 import isForwardMessage from "isForwardMessage" /* 7302 */;
-import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "getUserAgnosticState" /* 4559 */;
-import closure_5 from "ensureGuildLoaded" /* 1957 */;
-import closure_6 from "reinjectEphemerals" /* 4781 */;
-import closure_7 from "markAllUserIdListsStale" /* 4209 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "getFpMessageInfo" /* 7293 */;
+import _slicedToArray from "module_32" /* 32 */;
+import DevSettingsStore from "DevSettingsStore" /* 4559 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import MessageStore from "MessageStore" /* 4781 */;
+import RelationshipStore from "RelationshipStore" /* 4209 */;
+import UserStore from "UserStore" /* 1371 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7293 */;
 
-require = arg1;
+const isForwardMessageDefault = isForwardMessage;
+
+require = fn;
 function getEligibleHarmTypesConfigsForContext() {
-  const values = Object.values(ContentHarmType.CONTENT_SCAN_TYPE_REGISTRY);
+  const values = Object.values(HarmTypeConfiguration.CONTENT_SCAN_TYPE_REGISTRY);
   return values.filter((isEligible) => {
     let tmp = null == isEligible.isEligible;
     if (!tmp) {
@@ -38,20 +39,20 @@ function getEnabledHarmTypesForMessage(message) {
     }
     return NONE;
   }
-  NONE = ContentHarmType.ContentHarmTypeBitMask.NONE;
+  NONE = HarmTypeConfiguration.ContentHarmTypeBitMask.NONE;
 }
 function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
-  const currentUser = authStore.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   if (null != currentUser) {
     if (id !== currentUser.id) {
-      const items = [closure_5, closure_7];
+      const items = [ChannelStore, RelationshipStore];
       const tmp10 = getChannelTypeById(channelId, id, items);
       if (null == tmp10) {
-        let NONE = _require(7295).ContentHarmTypeBitMask.NONE;
+        let NONE = require("HarmTypeConfiguration").ContentHarmTypeBitMask.NONE;
       } else {
         _require = tmp10;
         const _Object = Object;
-        const values = Object.values(_require(7295).CONTENT_SCAN_TYPE_REGISTRY);
+        const values = Object.values(require("HarmTypeConfiguration").CONTENT_SCAN_TYPE_REGISTRY);
         const found = values.filter((isEligible) => {
           let tmp = null == isEligible.isEligible;
           if (!tmp) {
@@ -68,10 +69,10 @@ function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
           NONE = tmp12(7295).ContentHarmTypeBitMask.NONE;
         } else {
           const mapped = found.map((harmType) => {
-            const tmp = harmType.getUserSettingsWithDefaults()[GUILD];
+            const tmp = harmType.getUserSettingsWithDefaults()[closure_0];
             let hasItem = null != tmp;
             if (hasItem) {
-              const items = [GUILD(closure_1_2[13]).ExplicitContentRedaction.BLOCK, GUILD(closure_1_2[13]).ExplicitContentRedaction.BLUR];
+              const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK, preloaded_user_settings.ExplicitContentRedaction.BLUR];
               hasItem = items.includes(tmp);
             }
             harmType = null;
@@ -86,26 +87,26 @@ function getEnabledHarmTypesForChannelAndAuthorId(channelId, id) {
       return NONE;
     }
   }
-  return _require(7295).ContentHarmTypeBitMask.NONE;
+  return require("HarmTypeConfiguration").ContentHarmTypeBitMask.NONE;
 }
 function messageHasObscurableMediaForBitmask(firstMessage, EXPLICIT) {
-  const _require = EXPLICIT;
-  if (EXPLICIT !== _require(7295).ContentHarmTypeBitMask.NONE) {
+  _require = EXPLICIT;
+  if (EXPLICIT !== require("HarmTypeConfiguration").ContentHarmTypeBitMask.NONE) {
     if (null != firstMessage) {
       const attachments = firstMessage.attachments;
       let someResult;
       if (attachments != null) {
         someResult = attachments.some((media) => {
-          const obj = { type: EXPLICIT(closure_1_2[9]).ObscuredMediaTypes.Attachment, media };
-          if (obj === EXPLICIT(closure_1_2[7]).ContentHarmTypeBitMask.NONE) {
+          const obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media };
+          if (closure_0 === HarmTypeConfiguration.ContentHarmTypeBitMask.NONE) {
             let items = [];
           } else {
-            const arr = closure_1_18(obj);
+            const arr = getHarmTypeFromBitmask(closure_0);
             if (0 === arr.length) {
               items = [];
             } else {
-              const found = arr.filter((arg0) => closure_1_16(arg0, obj));
-              items = found.map((arg0) => obj(table[7]).CONTENT_SCAN_TYPE_REGISTRY[arg0].obscureReason);
+              const found = arr.filter((item) => isMediaFlaggedForHarmType(item, obj));
+              items = found.map((item) => obj(closure_1_2[7]).CONTENT_SCAN_TYPE_REGISTRY[item].obscureReason);
             }
           }
           return items.length > 0;
@@ -118,16 +119,16 @@ function messageHasObscurableMediaForBitmask(firstMessage, EXPLICIT) {
         let someResult1;
         if (embeds != null) {
           someResult1 = embeds.some((media) => {
-            const obj = { type: EXPLICIT(closure_1_2[9]).ObscuredMediaTypes.Embed, media };
-            if (obj === EXPLICIT(closure_1_2[7]).ContentHarmTypeBitMask.NONE) {
+            const obj = { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media };
+            if (closure_0 === HarmTypeConfiguration.ContentHarmTypeBitMask.NONE) {
               let items = [];
             } else {
-              const arr = closure_1_18(obj);
+              const arr = getHarmTypeFromBitmask(closure_0);
               if (0 === arr.length) {
                 items = [];
               } else {
-                const found = arr.filter((arg0) => closure_1_16(arg0, obj));
-                items = found.map((arg0) => obj(table[7]).CONTENT_SCAN_TYPE_REGISTRY[arg0].obscureReason);
+                const found = arr.filter((item) => isMediaFlaggedForHarmType(item, obj));
+                items = found.map((item) => obj(closure_1_2[7]).CONTENT_SCAN_TYPE_REGISTRY[item].obscureReason);
               }
             }
             return items.length > 0;
@@ -147,9 +148,7 @@ function messageHasObscurableMediaForBitmask(firstMessage, EXPLICIT) {
           if (null != messageSnapshots) {
             if (0 !== messageSnapshots.length) {
               for (const item10026 of messageSnapshots) {
-                let tmp6 = messageHasObscurableMediaForBitmask;
                 if (messageHasObscurableMediaForBitmask(item10026.message, arg1)) {
-                  let tmp7 = obj;
                   obj.return();
                   let flag = true;
                   return true;
@@ -173,7 +172,7 @@ function findComponentMedia(components) {
   }
   return obj.flatMap((type) => {
     type = type.type;
-    if (callback(1894).ComponentType.MEDIA_GALLERY === type) {
+    if (require("Server").ComponentType.MEDIA_GALLERY === type) {
       const items = type.items;
       return items.map((media) => media.media);
     } else if (tmp(1894).ComponentType.THUMBNAIL === type) {
@@ -189,38 +188,38 @@ function findComponentMedia(components) {
         }
       }
       const components = type.components;
-      return components.flatMap(closure_14);
+      return components.flatMap(findComponentMedia);
     }
-  }).map((media) => {
-    let toUnfurledMediaItemResult = media;
-    if ("proxy_url" in media) {
-      toUnfurledMediaItemResult = callback(4791).toUnfurledMediaItem(media);
-      const obj = callback(4791);
+  }).map((item) => {
+    let toUnfurledMediaItemResult = item;
+    if ("proxy_url" in item) {
+      toUnfurledMediaItemResult = require("MediaTypes").toUnfurledMediaItem(item);
+      const obj = require("MediaTypes");
     }
     return toUnfurledMediaItemResult;
   });
 }
-function isMediaScanPending(type, enabledContentHarmTypeFlags) {
-  if (enabledContentHarmTypeFlags === media(7295).ContentHarmTypeBitMask.NONE) {
+function isMediaScanPending(type, NONE) {
+  if (NONE === media(7295).ContentHarmTypeBitMask.NONE) {
     return false;
-  } else if (store.get("explicit_media_redaction_ignore_pending_scan")) {
+  } else if (DevSettingsStore.get("explicit_media_redaction_ignore_pending_scan")) {
     return false;
   } else {
-    const arr = getHarmTypeFromBitmask(enabledContentHarmTypeFlags);
+    const arr = getHarmTypeFromBitmask(NONE);
     if (0 === arr.length) {
       return false;
     } else {
       type = type.type;
       if (tmp(7297).ObscuredMediaTypes.Embed === type) {
         const media3 = type.media;
-        media = media3;
+        closure_130_0 = media3;
         let flag3 = false;
         if (0 !== arr.length) {
           let tmp31 = null;
           flag3 = false;
           if (null != media3) {
             flag3 = false;
-            if (0 !== arr.filter((arg0) => !closure_1_16(arg0, { type: media(closure_1_2[9]).ObscuredMediaTypes.Embed, media })).length) {
+            if (0 !== arr.filter((item) => !isMediaFlaggedForHarmType(item, { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media })).length) {
               if ("video" in media3) {
                 if (tmp31 != media3.video) {
                   const video = media3.video;
@@ -288,11 +287,10 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
                 } else {
                   if (!arr.includes(tmp(7295).ContentHarmType.GORE)) {
                     if (!arr.includes(tmp(7295).ContentHarmType.SELF_HARM)) {
-                      let tmp30 = tmp31 == content_scan_version;
+                      const tmp30 = tmp31 == content_scan_version;
                     }
                   }
                   tmp31 = tmp31 == content_scan_version || content_scan_version < tmp28;
-                  tmp30 = tmp31;
                 }
               } else {
                 const images = media3.images;
@@ -317,10 +315,10 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
         return flag3;
       } else if (tmp(7297).ObscuredMediaTypes.Attachment === type) {
         const media2 = type.media;
-        media = media2;
+        closure_129_0 = media2;
         let tmp11 = 0 !== arr.length;
         if (tmp11) {
-          let tmp12 = 0 !== arr.filter((arg0) => !closure_1_16(arg0, { type: media(closure_1_2[9]).ObscuredMediaTypes.Attachment, media })).length;
+          let tmp12 = 0 !== arr.filter((item) => !isMediaFlaggedForHarmType(item, { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media })).length;
           if (tmp12) {
             let contentScanVersion = media2.content_scan_version;
             let tmp13 = null;
@@ -332,11 +330,10 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
             } else {
               if (!arr.includes(tmp(7295).ContentHarmType.GORE)) {
                 if (!arr.includes(tmp(7295).ContentHarmType.SELF_HARM)) {
-                  let tmp17 = tmp13 == contentScanVersion;
+                  const tmp17 = tmp13 == contentScanVersion;
                 }
               }
               tmp13 = tmp13 == contentScanVersion || contentScanVersion < tmp15;
-              tmp17 = tmp13;
             }
           }
           tmp11 = tmp12;
@@ -347,7 +344,7 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
         let flag2 = false;
         if (0 !== arr.length) {
           flag2 = false;
-          if (0 !== arr.filter((arg0) => !closure_1_16(arg0, { type: media(closure_1_2[9]).ObscuredMediaTypes.GenericMedia, media })).length) {
+          if (0 !== arr.filter((item) => !isMediaFlaggedForHarmType(item, { type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media })).length) {
             const contentScanMetadata = media.contentScanMetadata;
             let tmp9 = null;
             let version;
@@ -359,11 +356,10 @@ function isMediaScanPending(type, enabledContentHarmTypeFlags) {
             } else {
               if (!arr.includes(tmp(7295).ContentHarmType.GORE)) {
                 if (!arr.includes(tmp(7295).ContentHarmType.SELF_HARM)) {
-                  let tmp8 = tmp9 == version;
+                  const tmp8 = tmp9 == version;
                 }
               }
               tmp9 = tmp9 == version || version < tmp6;
-              tmp8 = tmp9;
             }
           }
         }
@@ -378,14 +374,14 @@ function isMediaFlaggedForHarmType(EXPLICIT, type) {
   if (null == EXPLICIT) {
     return false;
   } else {
-    const tmp5 = ContentHarmType.CONTENT_SCAN_TYPE_REGISTRY[EXPLICIT];
+    const tmp5 = HarmTypeConfiguration.CONTENT_SCAN_TYPE_REGISTRY[EXPLICIT];
     if (null != tmp5.devSettingKey) {
-      if (store.get(tmp5.devSettingKey)) {
+      if (DevSettingsStore.get(tmp5.devSettingKey)) {
         return true;
       }
     }
     type = type.type;
-    if (ContentHarmTypeChannel.ObscuredMediaTypes.Embed === type) {
+    if (ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed === type) {
       let tmp3Result = tmp3(1384);
       let num3 = type.media.flags;
       if (num3 == null) {
@@ -414,45 +410,25 @@ function isMediaFlaggedForHarmType(EXPLICIT, type) {
     }
   }
 }
-function contentHarmTypesToFlags(mapped) {
-  let NONE = ContentHarmType.ContentHarmTypeBitMask.NONE;
-  const iter = mapped[Symbol.iterator]();
+function contentHarmTypesToFlags(memo) {
+  let NONE = HarmTypeConfiguration.ContentHarmTypeBitMask.NONE;
+  const iter = memo[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
-    let tmp2 = require;
     let tmp3 = require;
-    let tmp4 = dependencyMap;
-    let tmp5 = dependencyMap;
-    if (ContentHarmType.ContentHarmType.EXPLICIT === nextResult) {
-      let tmp14 = NONE;
-      let tmp15 = tmp2;
-      let tmp16 = tmp4;
+    if (HarmTypeConfiguration.ContentHarmType.EXPLICIT === nextResult) {
       NONE = NONE | tmp3(7295).ContentHarmTypeBitMask.EXPLICIT;
-    } else {
-      let tmp17 = tmp2;
-      let tmp18 = tmp4;
-      if (tmp3(7295).ContentHarmType.GORE === nextResult) {
-        let tmp11 = NONE;
-        let tmp12 = tmp2;
-        let tmp13 = tmp4;
-        NONE = NONE | tmp3(7295).ContentHarmTypeBitMask.GORE;
-      } else {
-        let tmp6 = tmp2;
-        let tmp7 = tmp4;
-        if (tmp3(7295).ContentHarmType.SELF_HARM === nextResult) {
-          let tmp8 = NONE;
-          let tmp9 = tmp2;
-          let tmp10 = tmp4;
-          NONE = NONE | tmp3(7295).ContentHarmTypeBitMask.SELF_HARM;
-        }
-      }
+    } else if (tmp3(7295).ContentHarmType.GORE === nextResult) {
+      NONE = NONE | tmp3(7295).ContentHarmTypeBitMask.GORE;
+    } else if (tmp3(7295).ContentHarmType.SELF_HARM === nextResult) {
+      NONE = NONE | tmp3(7295).ContentHarmTypeBitMask.SELF_HARM;
     }
     continue;
   }
   return NONE;
 }
 function getHarmTypeFromBitmask(enabledHarmTypesForMessage) {
-  if (enabledHarmTypesForMessage === ContentHarmType.ContentHarmTypeBitMask.NONE) {
+  if (enabledHarmTypesForMessage === HarmTypeConfiguration.ContentHarmTypeBitMask.NONE) {
     return [];
   } else {
     const items = [];
@@ -461,7 +437,6 @@ function getHarmTypeFromBitmask(enabledHarmTypesForMessage) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       if ((enabledHarmTypesForMessage & nextResult.bitmask) > 0) {
-        let tmp8 = nextResult;
         let arr = items.push(tmp7.harmType);
       }
       continue;
@@ -469,33 +444,33 @@ function getHarmTypeFromBitmask(enabledHarmTypesForMessage) {
     return items;
   }
 }
-function getChannelTypeById(closure_0, closure_1, items) {
+function getChannelTypeById(channelId, id, items) {
   let tmp = items;
   if (items === undefined) {
-    items = [closure_9, ];
+    items = [ExplicitMediaStore, ];
     items[1] = globalThis.p;
     tmp = items;
   }
-  [obj, obj2] = callback(tmp, 2);
-  const channel = obj.getChannel(closure_0);
-  const currentUser = authStore.getCurrentUser();
+  [obj, obj2] = _slicedToArray(tmp, 2);
+  const channel = obj.getChannel(channelId);
+  const currentUser = UserStore.getCurrentUser();
   let tmp6 = null;
   if (null != currentUser) {
     tmp6 = null;
-    if (closure_1 !== currentUser.id) {
+    if (id !== currentUser.id) {
       tmp6 = null;
       if (null != channel) {
         if (!channel.isDM()) {
           if (!channel.isGroupDM()) {
-            const GUILD = ContentHarmTypeChannel.ContentHarmTypeChannel.GUILD;
+            const GUILD = ExplicitMediaRedactionModels.ContentHarmTypeChannel.GUILD;
           }
         }
-        if (null == closure_1) {
-          const NON_FRIEND_DM = ContentHarmTypeChannel.ContentHarmTypeChannel.NON_FRIEND_DM;
+        if (null == id) {
+          const NON_FRIEND_DM = ExplicitMediaRedactionModels.ContentHarmTypeChannel.NON_FRIEND_DM;
         } else {
           const friendIDs = obj2.getFriendIDs();
         }
-        const FRIEND_DM = ContentHarmTypeChannel.ContentHarmTypeChannel.FRIEND_DM;
+        const FRIEND_DM = ExplicitMediaRedactionModels.ContentHarmTypeChannel.FRIEND_DM;
       }
     }
   }
@@ -520,16 +495,15 @@ function getChannelIdAndAuthorIdFromMessage(message) {
     } else {
       items2 = [];
     }
-    const tmp7 = callback(items2, 2);
+    const tmp7 = _slicedToArray(items2, 2);
     const first = tmp7[0];
     if (null != first) {
       if (tmp7[1]) {
         if (null == first.message_id) {
-          obj = { channelId: null, authorId: null };
-          obj[0] = channel_id;
+          obj = { channelId: channel_id, authorId: null };
           return obj;
         } else {
-          message = message.getMessage(first.channel_id, first.message_id);
+          message = MessageStore.getMessage(first.channel_id, first.message_id);
           let author_id = null;
           if (null != message) {
             const author2 = message.author;
@@ -541,9 +515,7 @@ function getChannelIdAndAuthorIdFromMessage(message) {
           }
         }
       }
-      obj = { channelId: null, authorId: null };
-      obj[0] = channel_id;
-      obj[1] = author_id;
+      obj = { channelId: channel_id, authorId: author_id };
       return obj;
     }
     if ("author" in message) {
@@ -561,20 +533,21 @@ function getChannelIdAndAuthorIdFromMessage(message) {
     }
   }
 }
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ObscuredMediaUtils.tsx");
-function hasUnscannedMedia(message, arg1) {
-  let tmp = arg1;
-  if (arg1 == null) {
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/explicit_media_redaction/ObscuredMediaUtils.tsx");
+function hasUnscannedMedia(message, enabledHarmTypesForMessage) {
+  let tmp = enabledHarmTypesForMessage;
+  if (enabledHarmTypesForMessage == null) {
     tmp = getEnabledHarmTypesForMessage(message);
   }
-  const _require = tmp;
-  if (tmp === _require(7295).ContentHarmTypeBitMask.NONE) {
+  _require = tmp;
+  if (tmp === require("HarmTypeConfiguration").ContentHarmTypeBitMask.NONE) {
     return false;
   } else {
     const attachments = message.attachments;
     let someResult;
     if (attachments != null) {
-      someResult = attachments.some((media) => closure_1_15({ type: callback(closure_1_2[9]).ObscuredMediaTypes.Attachment, media }, callback));
+      someResult = attachments.some((media) => isMediaScanPending({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media }, closure_0));
     }
     if (someResult) {
       return true;
@@ -582,13 +555,13 @@ function hasUnscannedMedia(message, arg1) {
       const embeds = message.embeds;
       let someResult1;
       if (embeds != null) {
-        someResult1 = embeds.some((media) => closure_1_15({ type: callback(closure_1_2[9]).ObscuredMediaTypes.Embed, media }, callback));
+        someResult1 = embeds.some((media) => isMediaScanPending({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media }, closure_0));
       }
       if (someResult1) {
         return true;
       } else {
         if (null != message.components) {
-          if (obj.some((media) => closure_1_15({ type: callback(closure_1_2[9]).ObscuredMediaTypes.GenericMedia, media }, callback))) {
+          if (obj.some((media) => isMediaScanPending({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.GenericMedia, media }, closure_0))) {
             return true;
           }
           obj = findComponentMedia(message.components);
@@ -604,9 +577,7 @@ function hasUnscannedMedia(message, arg1) {
         if (null != messageSnapshots) {
           if (0 !== messageSnapshots.length) {
             for (const item10037 of messageSnapshots) {
-              let tmp9 = hasUnscannedMedia;
               if (hasUnscannedMedia(item10037.message, tmp)) {
-                let tmp10 = obj2;
                 obj2.return();
                 let flag = true;
                 return true;
@@ -625,8 +596,8 @@ export { getEligibleHarmTypesConfigsForContext };
 export { getEnabledHarmTypesForMessage };
 export { getEnabledHarmTypesForChannelAndAuthorId };
 export const getEnabledHarmTypesBitmaskForChannelType = function getEnabledHarmTypesBitmaskForChannelType(GUILD) {
-  const _require = GUILD;
-  const values = Object.values(_require(7295).CONTENT_SCAN_TYPE_REGISTRY);
+  _require = GUILD;
+  const values = Object.values(require("HarmTypeConfiguration").CONTENT_SCAN_TYPE_REGISTRY);
   const found = values.filter((isEligible) => {
     let tmp = null == isEligible.isEligible;
     if (!tmp) {
@@ -643,10 +614,10 @@ export const getEnabledHarmTypesBitmaskForChannelType = function getEnabledHarmT
     let NONE = tmp(7295).ContentHarmTypeBitMask.NONE;
   } else {
     const mapped = found.map((harmType) => {
-      const tmp = harmType.getUserSettingsWithDefaults()[GUILD];
+      const tmp = harmType.getUserSettingsWithDefaults()[closure_0];
       let hasItem = null != tmp;
       if (hasItem) {
-        const items = [GUILD(closure_1_2[13]).ExplicitContentRedaction.BLOCK, GUILD(closure_1_2[13]).ExplicitContentRedaction.BLUR];
+        const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK, preloaded_user_settings.ExplicitContentRedaction.BLUR];
         hasItem = items.includes(tmp);
       }
       harmType = null;
@@ -667,7 +638,7 @@ export const messageHasObscurableMedia = function messageHasObscurableMedia(mess
     }
     return messageHasObscurableMediaForBitmask(message, NONE);
   }
-  NONE = ContentHarmType.ContentHarmTypeBitMask.NONE;
+  NONE = HarmTypeConfiguration.ContentHarmTypeBitMask.NONE;
 };
 export { messageHasObscurableMediaForBitmask };
 export { hasUnscannedMedia };
@@ -683,7 +654,7 @@ export const isEligibleForScanning = function isEligibleForScanning(components) 
     }
     const mapped = obj.flatMap((type) => {
       type = type.type;
-      if (callback(1894).ComponentType.MEDIA_GALLERY === type) {
+      if (require("Server").ComponentType.MEDIA_GALLERY === type) {
         const items = type.items;
         return items.map((media) => media.media);
       } else if (tmp(1894).ComponentType.THUMBNAIL === type) {
@@ -699,20 +670,20 @@ export const isEligibleForScanning = function isEligibleForScanning(components) 
           }
         }
         const components = type.components;
-        return components.flatMap(closure_14);
+        return components.flatMap(findComponentMedia);
       }
-    }).map((media) => {
-      let toUnfurledMediaItemResult = media;
-      if ("proxy_url" in media) {
-        toUnfurledMediaItemResult = callback(4791).toUnfurledMediaItem(media);
-        const obj = callback(4791);
+    }).map((item) => {
+      let toUnfurledMediaItemResult = item;
+      if ("proxy_url" in item) {
+        toUnfurledMediaItemResult = require("MediaTypes").toUnfurledMediaItem(item);
+        const obj = require("MediaTypes");
       }
       return toUnfurledMediaItemResult;
     });
-    tmp = !mapped.some((loadingState) => loadingState.loadingState === callback(1894).UnfurledMediaLoadingState.LOADING);
+    tmp = !mapped.some((loadingState) => loadingState.loadingState === require("Server").UnfurledMediaLoadingState.LOADING);
     const flatMapResult = obj.flatMap((type) => {
       type = type.type;
-      if (callback(1894).ComponentType.MEDIA_GALLERY === type) {
+      if (require("Server").ComponentType.MEDIA_GALLERY === type) {
         const items = type.items;
         return items.map((media) => media.media);
       } else if (tmp(1894).ComponentType.THUMBNAIL === type) {
@@ -728,7 +699,7 @@ export const isEligibleForScanning = function isEligibleForScanning(components) 
           }
         }
         const components = type.components;
-        return components.flatMap(closure_14);
+        return components.flatMap(findComponentMedia);
       }
     });
   }
@@ -741,20 +712,18 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
       let NONE = getEnabledHarmTypesForChannelAndAuthorId(channelId, tmp2);
     }
     if (NONE === NONE(7295).ContentHarmTypeBitMask.NONE) {
-      let obj = { attachmentIds: null, embedIds: null };
-      obj[0] = [];
-      obj[1] = [];
+      let obj = { attachmentIds: [], embedIds: [] };
       return obj;
     } else {
       const attachments = message.attachments;
       let found;
       if (attachments != null) {
-        found = attachments.filter((media) => closure_1_15({ type: NONE(closure_1_2[9]).ObscuredMediaTypes.Attachment, media }, NONE));
+        found = attachments.filter((media) => isMediaScanPending({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Attachment, media }, NONE));
       }
       const embeds = message.embeds;
       let found1;
       if (embeds != null) {
-        found1 = embeds.filter((media) => closure_1_15({ type: NONE(closure_1_2[9]).ObscuredMediaTypes.Embed, media }, NONE));
+        found1 = embeds.filter((media) => isMediaScanPending({ type: ExplicitMediaRedactionModels.ObscuredMediaTypes.Embed, media }, NONE));
       }
       let found2;
       if (found != null) {
@@ -765,45 +734,44 @@ export const getUnscannedMediaIds = function getUnscannedMediaIds(message) {
       if (found2 == null) {
         found2 = [];
       }
-      obj = { attachmentIds: null, embedIds: null };
-      obj[0] = found2;
+      obj = { attachmentIds: found2, embedIds: null };
       let found3;
       if (found1 != null) {
-        const mapped1 = found1.map((arg0, arg1) => "embed_" + arg1);
+        const mapped1 = found1.map((item, index) => "embed_" + index);
         const _Boolean2 = Boolean;
         found3 = mapped1.filter(Boolean);
       }
       if (found3 == null) {
         found3 = [];
       }
-      obj[1] = found3;
+      obj.embedIds = found3;
       return obj;
     }
   }
   NONE = NONE(7295).ContentHarmTypeBitMask.NONE;
 };
 export const getMediaObscuredReasonFromBitmask = function getMediaObscuredReasonFromBitmask(arg0, enabledContentHarmTypeFlags) {
-  const _require = arg0;
-  if (enabledContentHarmTypeFlags === _require(7295).ContentHarmTypeBitMask.NONE) {
+  _require = arg0;
+  if (enabledContentHarmTypeFlags === require("HarmTypeConfiguration").ContentHarmTypeBitMask.NONE) {
     return [];
   } else {
     const arr = getHarmTypeFromBitmask(enabledContentHarmTypeFlags);
     if (0 === arr.length) {
       let items = [];
     } else {
-      const found = arr.filter((arg0) => closure_1_16(arg0, obj));
-      items = found.map((arg0) => obj(table[7]).CONTENT_SCAN_TYPE_REGISTRY[arg0].obscureReason);
+      const found = arr.filter((item) => isMediaFlaggedForHarmType(item, obj));
+      items = found.map((item) => obj(closure_1_2[7]).CONTENT_SCAN_TYPE_REGISTRY[item].obscureReason);
     }
     return items;
   }
 };
 export const isMediaObscuredForHarmTypes = function isMediaObscuredForHarmTypes(arg0, enabledHarmTypesForMessage) {
-  const _require = arg0;
-  if (enabledHarmTypesForMessage === _require(7295).ContentHarmTypeBitMask.NONE) {
+  _require = arg0;
+  if (enabledHarmTypesForMessage === require("HarmTypeConfiguration").ContentHarmTypeBitMask.NONE) {
     return false;
   } else {
     const arr = getHarmTypeFromBitmask(enabledHarmTypesForMessage);
-    return 0 !== arr.length && arr.filter((arg0) => closure_1_16(arg0, closure_0)).length > 0;
+    return 0 !== arr.length && arr.filter((item) => isMediaFlaggedForHarmType(item, closure_0)).length > 0;
   }
 };
 export { isMediaScanPending };
@@ -814,7 +782,7 @@ export { getChannelTypeById };
 export const shouldRedactForSettingValue = function shouldRedactForSettingValue(arg0) {
   let hasItem = null != arg0;
   if (hasItem) {
-    const items = [create.ExplicitContentRedaction.BLOCK, create.ExplicitContentRedaction.BLUR];
+    const items = [preloaded_user_settings.ExplicitContentRedaction.BLOCK, preloaded_user_settings.ExplicitContentRedaction.BLUR];
     hasItem = items.includes(arg0);
   }
   return hasItem;

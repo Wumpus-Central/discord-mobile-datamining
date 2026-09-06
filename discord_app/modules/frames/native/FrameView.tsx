@@ -1,15 +1,15 @@
-// === Module 16615: FrameViewInner ===
+// === Module 16615: FrameView ===
 
-// Module 16615 (FrameViewInner)
+// Module 16615 (FrameView)
 import initialize from "initialize" /* 504 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import importAllResult from "noop" /* 19 */;
-import closure_5 from "map" /* 9510 */;
-import FrameLayoutModes from "FrameLayoutModes" /* 9511 */;
-import { ActivityPlatform } from "items3" /* 1920 */;
-import { jsx } from "jsxProd" /* 21 */;
+import DispatcherDefault from "Dispatcher" /* 573 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 16616 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import FramesStore from "FramesStore" /* 9510 */;
 
-require = arg1;
+require = fn;
 function FrameViewInner(frame) {
   frame = frame.frame;
   const layoutMode = frame.layoutMode;
@@ -18,21 +18,20 @@ function FrameViewInner(frame) {
   let obj = frame(setIsResetting[6]);
   const data = obj.useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
-  const tmp3 = callback(importAllResult.useState(true), 2);
+  const tmp3 = _slicedToArray(noop.useState(true), 2);
   let first = tmp3[0];
   const items = [layoutMode, , ];
   ({ applicationId: arr[1], id: arr[2] } = frame);
-  const layoutEffect = importAllResult.useLayoutEffect(() => {
-    let obj = layoutMode(setIsResetting[7]);
-    obj = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
+  const layoutEffect = noop.useLayoutEffect(() => {
+    const obj = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
     obj.dispatch(obj);
   }, items);
   const items1 = [frame.id];
   const items2 = [frame.id];
-  callback = importAllResult.useCallback(() => {
-    layoutMode(setIsResetting[8]).leaveFrame(frame.id);
+  const callback = noop.useCallback(() => {
+    FramesNativeManagerDefault.leaveFrame(frame.id);
   }, items1);
-  const callback1 = importAllResult.useCallback((arg0, arg1) => frame(setIsResetting[9]).setOrientationLockState(frame.id, arg0, arg1), items2);
+  const callback1 = noop.useCallback((arg0, arg1) => frames_getDefaultOrientationLockState.setOrientationLockState(frame.id, arg0, arg1), items2);
   if (!first) {
     first = null == data;
   }
@@ -43,10 +42,10 @@ function FrameViewInner(frame) {
   ({ isResetting, isLandscape } = baseActivityView);
   const merged = Object.assign(layoutMode(tmp2[11])(frame.data));
   obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
-  obj1 = {
+  const obj1 = {
     onActivityCrash() {
       setIsResetting(true);
-      const timerId = setTimeout(() => callback(false), 0);
+      const timerId = setTimeout(() => setIsResetting(false), 0);
     },
     applicationId: frame.applicationId,
     frameId: frame.id,
@@ -60,17 +59,17 @@ function FrameViewInner(frame) {
     safeAreasConfig: null
   };
   tmpResult = tmp(tmp2[13]);
-  obj1[6] = tmpResult.allowPopups(data);
-  obj1[8] = layoutMode === constants.PIP;
-  obj1[9] = frame(setIsResetting[8]).FRAME_WEB_VIEW_KEY;
+  obj1.allowPopups = tmpResult.allowPopups(data);
+  obj1.isPipOrGridMode = layoutMode === constants.PIP;
+  obj1.webViewKey = frame(setIsResetting[8]).FRAME_WEB_VIEW_KEY;
   if (isLandscape) {
     landscapeSafeAreasConfig = frame.landscapeSafeAreasConfig;
   }
-  obj1[10] = landscapeSafeAreasConfig;
-  obj[3] = jsx(layoutMode(setIsResetting[12]), {
+  obj1.safeAreasConfig = landscapeSafeAreasConfig;
+  obj.children = jsx(layoutMode(setIsResetting[12]), {
     onActivityCrash() {
       setIsResetting(true);
-      const timerId = setTimeout(() => callback(false), 0);
+      const timerId = setTimeout(() => setIsResetting(false), 0);
     },
     applicationId: frame.applicationId,
     frameId: frame.id,
@@ -85,37 +84,38 @@ function FrameViewInner(frame) {
   });
   return jsx(frame(setIsResetting[10]).BaseActivityView, { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null });
 }
-let c4 = importAllResult;
-({ asLaunched: closure_6, FrameLayoutModes: error } = FrameLayoutModes);
-const memoResult = importAllResult.memo(function FrameViewGate(arg0) {
+const FramesConstants = fn(9511);
+({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
+const ActivityPlatform = fn(1920).ActivityPlatform;
+const jsx = fn(21).jsx;
+const memoResult = noop.memo(function FrameViewGate(arg0) {
   let obj = initialize;
-  const items = [closure_5];
-  const stateFromStores = obj.useStateFromStores(items, () => callback(mainFrame.getMainFrame()));
+  const items = [FramesStore];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6(mainFrame.getMainFrame()));
   let tmp2 = null;
   if (null != stateFromStores) {
-    obj = { frame: null };
-    obj[0] = stateFromStores;
+    obj = { frame: stateFromStores };
     const merged = Object.assign(arg0);
-    tmp2 = <FrameViewInner frame={null} />;
+    tmp2 = <FrameViewInner frame={stateFromStores} />;
   }
   return tmp2;
 });
-const result = require("set").fileFinishedImporting("modules/frames/native/FrameView.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default memoResult;
 export const InlineFrameView = function InlineFrameView(frameId) {
   frameId = frameId.frameId;
   let tmp = null;
-  const merged = Object.assign(frameId, Object.create(null));
+  const merged = Object.assign(frameId, Object.assign({ frameId: 0 }));
   let obj = frameId(504);
-  const items = [closure_5];
+  const items = [FramesStore];
   const items1 = [frameId];
-  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6(closure_1_5.getFrame(frameId)), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => timestampProducer(FramesStore.getFrame(frameId)), items1);
   if (null != stateFromStores) {
-    obj = { frame: null };
-    obj[0] = stateFromStores;
+    obj = { frame: stateFromStores };
     const merged1 = Object.assign(merged);
-    tmp = <FrameViewInner frame={null} />;
+    tmp = <FrameViewInner frame={stateFromStores} />;
   }
   return tmp;
 };

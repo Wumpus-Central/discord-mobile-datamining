@@ -1,11 +1,11 @@
 // === Module 7873: useIsUsingClientTheme ===
 
 // Module 7873 (useIsUsingClientTheme)
-import set from "set" /* 2 */;
-import useActiveThemeType from "useActiveThemeType" /* 7874 */;
+import useActiveTheme from "useActiveTheme" /* 7874 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
+const result = size.fileFinishedImporting("modules/client_themes/native/useIsUsingClientTheme.tsx");
 
 export default function useIsUsingClientTheme() {
-  return useActiveThemeType.useIsClientThemeOrCustomThemeActive();
+  return useActiveTheme.useIsClientThemeOrCustomThemeActive();
 };

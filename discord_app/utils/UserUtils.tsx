@@ -1,13 +1,12 @@
-// === Module 4404: nameFromUser ===
+// === Module 4404: UserUtils ===
 
-// Module 4404 (nameFromUser)
+// Module 4404 (UserUtils)
 import initialize from "initialize" /* 504 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import closure_2 from "initialize" /* 4405 */;
-import closure_3 from "mergeGuildAvatar" /* 1371 */;
-import ME from "ME" /* 1074 */;
+import util from "util" /* 1114 */;
+import StreamerModeStore from "StreamerModeStore" /* 4405 */;
+import UserStore from "UserStore" /* 1371 */;
 
-require = arg1;
+require = fn;
 function nameFromUser(primary1) {
   const global_name = primary1.global_name;
   let tmp = null != global_name;
@@ -37,7 +36,7 @@ function nameFromUser(primary1) {
 }
 function getName(username) {
   if (null != username) {
-    let hidePersonalInformation = closure_2.hidePersonalInformation;
+    let hidePersonalInformation = StreamerModeStore.hidePersonalInformation;
     const obj = nameFromUser(username);
     if (hidePersonalInformation) {
       username = username.username;
@@ -60,8 +59,8 @@ function getName(username) {
   }
 }
 function useName(username) {
-  const items = [closure_2];
-  let stateFromStores = initialize.useStateFromStores(items, () => obj.hidePersonalInformation);
+  const items = [StreamerModeStore];
+  let stateFromStores = initialize.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation);
   if (null != username) {
     const obj2 = nameFromUser(username);
     if (stateFromStores) {
@@ -83,7 +82,6 @@ function useName(username) {
     }
     return combined;
   }
-  const obj = initialize;
 }
 function getGlobalName(user) {
   if (null != user) {
@@ -121,10 +119,9 @@ function getFormattedName(inviter, arg1) {
       const merged1 = Object.assign(undefined);
       let hidePersonalInformation = "auto" !== obj.identifiable;
       if (!hidePersonalInformation) {
-        hidePersonalInformation = closure_2.hidePersonalInformation;
+        hidePersonalInformation = StreamerModeStore.hidePersonalInformation;
       }
       let username = presentUserTag(inviter, obj, hidePersonalInformation);
-      const tmp9 = presentUserTag;
     } else {
       username = inviter.username;
       if (username == null) {
@@ -169,9 +166,9 @@ function humanizeStatus(DND, arg1) {
   const isMobile = obj.isMobile;
   const isVR = obj.isVR;
   if (constants.ONLINE === DND) {
-    const intl6 = getSystemLocale.intl;
+    const intl6 = util.intl;
     const string = intl6.string;
-    const t = getSystemLocale.t;
+    const t = util.t;
     if (tmp2) {
       let stringResult = string(t.SWnU0R);
     } else if (tmp) {
@@ -181,20 +178,20 @@ function humanizeStatus(DND, arg1) {
     }
     return stringResult;
   } else if (tmp3.OFFLINE === DND) {
-    const intl5 = getSystemLocale.intl;
-    return intl5.string(getSystemLocale.t.Vv0abJ);
+    const intl5 = util.intl;
+    return intl5.string(util.t.Vv0abJ);
   } else if (tmp3.IDLE === DND) {
-    const intl4 = getSystemLocale.intl;
-    return intl4.string(getSystemLocale.t.qWbtVU);
+    const intl4 = util.intl;
+    return intl4.string(util.t.qWbtVU);
   } else if (tmp3.DND === DND) {
-    const intl3 = getSystemLocale.intl;
-    return intl3.string(getSystemLocale.t.jaNpQH);
+    const intl3 = util.intl;
+    return intl3.string(util.t.jaNpQH);
   } else if (tmp3.INVISIBLE === DND) {
-    const intl2 = getSystemLocale.intl;
-    return intl2.string(getSystemLocale.t.bg24HO);
+    const intl2 = util.intl;
+    return intl2.string(util.t.bg24HO);
   } else if (tmp3.STREAMING === DND) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.XKYej5);
+    const intl = util.intl;
+    return intl.string(util.t.XKYej5);
   } else {
     const UNKNOWN = tmp3.UNKNOWN;
     return null;
@@ -204,8 +201,8 @@ function humanizeStatus(DND, arg1) {
 }
 function presentUserTag(username, identifiable, arg2) {
   if (null == username) {
-    const intl = getSystemLocale.intl;
-    return intl.string(getSystemLocale.t.sKdZ6U);
+    const intl = util.intl;
+    return intl.string(util.t.sKdZ6U);
   } else {
     username = username.username;
     let tmp = null != username;
@@ -221,7 +218,7 @@ function presentUserTag(username, identifiable, arg2) {
         }
       }
       if ("0" !== username.discriminator) {
-        if (username.discriminator !== closure_4) {
+        if (username.discriminator !== React4) {
           if ("username" !== identifiable.mode) {
             if (!flag) {
               const _HermesInternal3 = HermesInternal;
@@ -256,26 +253,26 @@ function getUserTag(user, arg1) {
   const merged1 = Object.assign(arg1);
   let hidePersonalInformation = "auto" !== obj.identifiable;
   if (!hidePersonalInformation) {
-    hidePersonalInformation = closure_2.hidePersonalInformation;
+    hidePersonalInformation = StreamerModeStore.hidePersonalInformation;
   }
   return presentUserTag(user, obj, hidePersonalInformation);
 }
-function useUserTag(user) {
+function useUserTag(user, arg1) {
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
-  const items = [closure_2];
-  return presentUserTag(user, {}, initialize.useStateFromStores(items, () => obj.hidePersonalInformation));
+  const items = [StreamerModeStore];
+  return presentUserTag(user, {}, initialize.useStateFromStores(items, () => StreamerModeStore.hidePersonalInformation));
 }
 function useDirectMessageRecipient(arg0) {
-  const _require = arg0;
-  const items = [closure_3];
-  return _require(504).useStateFromStores(items, () => {
+  _require = arg0;
+  const items = [UserStore];
+  return require("initialize").useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
       if (obj.isPrivate()) {
         user = null;
         if (obj.isDM()) {
-          user = closure_1_3.getUser(obj.getRecipientId());
+          user = UserStore.getUser(obj.getRecipientId());
         }
       }
       return user;
@@ -283,14 +280,16 @@ function useDirectMessageRecipient(arg0) {
   });
 }
 function getUserIsStaff() {
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   return null != currentUser && currentUser.isStaff();
 }
-({ NON_USER_BOT_DISCRIMINATOR: c4, StatusTypes: c5 } = ME);
+const Constants = fn(1074);
+({ NON_USER_BOT_DISCRIMINATOR: closure_4, StatusTypes: hasOwnProperty } = Constants);
 let c6 = 86400000;
 let c7 = "???";
 let closure_8 = { mode: "full", decoration: "never", identifiable: "auto" };
-const result = require("set").fileFinishedImporting("utils/UserUtils.tsx");
+const size = fn(2);
+const result = size.fileFinishedImporting("utils/UserUtils.tsx");
 
 export default {
   getName,
@@ -316,7 +315,7 @@ export { useName };
 export { getGlobalName };
 export { getFormattedName };
 export { humanizeStatus };
-export const accountAgeInRange = function accountAgeInRange(createdAt) {
+export const accountAgeInRange = function accountAgeInRange(createdAt, arg1) {
   ({ maxDaysOld, minDaysOld } = arg1);
   if (minDaysOld === undefined) {
     minDaysOld = 0;

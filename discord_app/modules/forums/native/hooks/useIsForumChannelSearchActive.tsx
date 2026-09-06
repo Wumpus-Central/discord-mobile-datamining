@@ -1,15 +1,16 @@
 // === Module 13274: useIsForumChannelSearchActive ===
 
 // Module 13274 (useIsForumChannelSearchActive)
-import closure_2 from "initialize" /* 7768 */;
+import ForumSearchStore from "ForumSearchStore" /* 7768 */;
 
-const require = arg1;
-const result = require("set").fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
+const require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/forums/native/hooks/useIsForumChannelSearchActive.tsx");
 
 export const useIsForumChannelSearchActive = function useIsForumChannelSearchActive(channelId) {
-  const _require = channelId;
-  let canSearchForumPostsByChannelId = _require(13258).useCanSearchForumPostsByChannelId(channelId);
-  _require(504);
+  _require = channelId;
+  let canSearchForumPostsByChannelId = require("useCanSearchForumPostsByChannelId").useCanSearchForumPostsByChannelId(channelId);
+  require("initialize");
   [][0] = channelId;
   if (canSearchForumPostsByChannelId) {
     canSearchForumPostsByChannelId = null != tmp3;

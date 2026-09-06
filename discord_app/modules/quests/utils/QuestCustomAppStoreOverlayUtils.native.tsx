@@ -1,9 +1,9 @@
-// === Module 15018: fetchCustomAppStoreOverlayContent ===
+// === Module 15018: QuestCustomAppStoreOverlayUtils ===
 
-// Module 15018 (fetchCustomAppStoreOverlayContent)
-import set from "set" /* 2 */;
+// Module 15018 (QuestCustomAppStoreOverlayUtils)
 import apexExperiment from "apexExperiment" /* 11489 */;
-import supportedConsoles from "supportedConsoles" /* 11496 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11496 */;
+import size from "module_2" /* 2 */;
 
 function fetchCustomAppStoreOverlayContent(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
@@ -30,14 +30,14 @@ function fetchCustomAppStoreOverlayContent(cta) {
   }
   return resolved;
 }
-const result = set.fileFinishedImporting("modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx");
+const result = size.fileFinishedImporting("modules/quests/utils/QuestCustomAppStoreOverlayUtils.native.tsx");
 
 export const canOpenCustomAppStoreOverlayFromCta = function canOpenCustomAppStoreOverlayFromCta(cta) {
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    enabled = null != supportedConsoles.getInlineStoreParamsFromCta(cta);
-    const tmpResult = supportedConsoles;
+    enabled = null != QuestPlatformUtils.getInlineStoreParamsFromCta(cta);
+    const tmpResult = QuestPlatformUtils;
   }
   return enabled;
 };
@@ -46,8 +46,8 @@ export const prefetchCustomAppStoreOverlayContent = function prefetchCustomAppSt
   const CustomAppStoreOverlayExperiment = apexExperiment.CustomAppStoreOverlayExperiment;
   let enabled = CustomAppStoreOverlayExperiment.getConfig({ location: "quest_open_game_link" }).enabled;
   if (enabled) {
-    enabled = null != supportedConsoles.getInlineStoreParamsFromCta(cta);
-    const tmpResult = supportedConsoles;
+    enabled = null != QuestPlatformUtils.getInlineStoreParamsFromCta(cta);
+    const tmpResult = QuestPlatformUtils;
   }
   if (enabled) {
     fetchCustomAppStoreOverlayContent(cta).catch(() => {

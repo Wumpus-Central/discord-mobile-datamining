@@ -1,9 +1,9 @@
-// === Module 13632: getErlpackEncoding ===
+// === Module 13632: GatewayEncodingErlpackEncoding ===
 
-// Module 13632 (getErlpackEncoding)
-import set from "set" /* 2 */;
+// Module 13632 (GatewayEncodingErlpackEncoding)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/gateway/GatewayEncodingErlpackEncoding.native.tsx");
+const result = size.fileFinishedImporting("modules/gateway/GatewayEncodingErlpackEncoding.native.tsx");
 
 export function getErlpackEncoding() {
 

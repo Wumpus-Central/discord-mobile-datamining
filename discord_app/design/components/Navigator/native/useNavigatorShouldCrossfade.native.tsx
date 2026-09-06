@@ -1,14 +1,15 @@
 // === Module 7001: useNavigatorShouldCrossfade ===
 
 // Module 7001 (useNavigatorShouldCrossfade)
-import context2 from "context" /* 4279 */;
-import closure_2 from "noop" /* 19 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4279 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
 
 export const useNavigatorShouldCrossfade = function useNavigatorShouldCrossfade() {
-  const context = React.useContext(context2.AccessibilityPreferencesContext);
+  const context = noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext);
   let enabled = context.prefersCrossfades;
   if (obj.isAndroid()) {
     enabled = context.reducedMotion.enabled;

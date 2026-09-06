@@ -1,43 +1,43 @@
 // === Module 17602: GuildSettingsModalSecurity ===
 
 // Module 17602 (GuildSettingsModalSecurity)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel" /* 1975 */;
-import closure_7 from "createGuildRecordFromRust" /* 1979 */;
-import closure_8 from "mergeGuildAvatar" /* 1371 */;
-import closure_9 from "handleFormInit" /* 9064 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import UserStore from "UserStore" /* 1371 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
 
-const require = arg1;
-({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ GuildFeatures: c10, MFALevels: unpackModuleId } = ME);
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
+let closure_6 = fn(1975).isGuildOwnerWithRequiredMfaLevel;
+const Constants = fn(1074);
+({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-createCacheKey = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: null, label: null, image: null, infoWrapper: null, button: null };
-createCacheKey = { alignItems: "center", flexDirection: "column", paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { textAlign: "center", marginBottom: 8 };
-createCacheKey[3] = { width: 295, height: 142, marginHorizontal: 35 };
-createCacheKey[4] = { marginBottom: 40 };
-createCacheKey[5] = { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 };
-let closure_15 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
+fn(4560);
+let createStyles = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: null, label: null, image: null, infoWrapper: null, button: null };
+createStyles = { alignItems: "center", flexDirection: "column", paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
+createStyles.center = createStyles;
+createStyles.label = { textAlign: "center", marginBottom: 8 };
+createStyles.image = { width: 295, height: 142, marginHorizontal: 35 };
+createStyles.infoWrapper = { marginBottom: 40 };
+createStyles.button = { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 };
+let closure_15 = createStyles.createStyles(createStyles);
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
 
 export default function GuildSettingsModalSecurity(guildId) {
   guildId = guildId.guildId;
-  let stateFromStores;
-  dependencyMap = undefined;
-  const tmp = callback3();
+  const tmp = closure_15();
   let obj = guildId(504);
-  const items = [closure_7];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(guildId));
-  obj1 = guildId(504);
-  const items1 = [closure_9];
+  const items = [GuildStore];
+  const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guildId));
+  let obj1 = guildId(504);
+  const items1 = [GuildSettingsStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => props.getProps().mfaLevel);
-  currentUser = currentUser.getCurrentUser();
+  const currentUser = UserStore.getCurrentUser();
   dependencyMap = tmp7;
   let mfaEnabled;
   if (currentUser != null) {
@@ -45,7 +45,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   }
   let tmp9 = true === mfaEnabled && null != stateFromStores;
   if (tmp9) {
-    tmp9 = callback(stateFromStores, currentUser);
+    tmp9 = closure_6(stateFromStores, currentUser);
   }
   if (tmp9) {
     let tmp11 = !tmp7;
@@ -56,22 +56,20 @@ export default function GuildSettingsModalSecurity(guildId) {
     tmp9 = tmp11;
   }
   const items2 = [stateFromStores, stateFromStores1 === constants2.ELEVATED];
-  obj = { style: items3, children: null };
-  items3 = [tmp.wrapper, guildId.contentContainerStyle];
+  obj = { style: null, children: null };
+  const items3 = [tmp.wrapper, guildId.contentContainerStyle];
+  obj.style = items3;
   obj = { style: tmp.center, children: null };
-  callback = React.useCallback(() => {
+  const callback = noop.useCallback(() => {
     if (null != stateFromStores) {
-      let updateMFALevelResult = stateFromStores(table[11]);
-      updateMFALevelResult = { guildId: null, level: null };
-      updateMFALevelResult[0] = tmp.id;
-      updateMFALevelResult[1] = table ? closure_1_11.NONE : closure_1_11.ELEVATED;
+      let updateMFALevelResult = { guildId: tmp.id, level: closure_2 ? constants2.NONE : constants2.ELEVATED };
       updateMFALevelResult = updateMFALevelResult.updateMFALevel(updateMFALevelResult);
     }
   }, items2);
   obj1 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
-  obj1[3] = intl.string(guildId(1114).t.Wi9LEV);
-  const items4 = [callback2(guildId(4556).Text, obj1), , ];
+  obj1.children = intl.string(guildId(1114).t.Wi9LEV);
+  const items4 = [closure_12(guildId(4556).Text, obj1), , ];
   const obj2 = { style: tmp.button, children: null };
   const intl2 = tmp2(1114).intl;
   const string = intl2.string;
@@ -86,10 +84,10 @@ export default function GuildSettingsModalSecurity(guildId) {
   if (stateFromStores1 === constants2.ELEVATED) {
     str = "destructive";
   }
-  obj3[2] = str;
-  obj3[3] = callback;
-  obj2[1] = callback2(guildId(4975).Button, obj3);
-  items4[1] = callback2(closure_4, obj2);
+  obj3.variant = str;
+  obj3.onPress = callback;
+  obj2.children = closure_12(guildId(4975).Button, obj3);
+  items4[1] = closure_12(closure_4, obj2);
   let hasItem;
   if (stateFromStores != null) {
     const features2 = stateFromStores.features;
@@ -99,25 +97,25 @@ export default function GuildSettingsModalSecurity(guildId) {
   if (hasItem) {
     const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1114).intl;
-    obj4[2] = intl3.string(tmp2(1114).t["KG1V/E"]);
+    obj4.children = intl3.string(tmp2(1114).t["KG1V/E"]);
     tmp17Result = tmp17(tmp2(4556).Text, obj4);
   }
   const obj5 = { children: null };
   items4[2] = tmp17Result;
-  obj[1] = items4;
+  obj.children = items4;
   const items5 = [closure_13(closure_4, obj), ];
   const obj6 = { style: tmp.center, children: null };
-  const items6 = [callback2(closure_5, { source: stateFromStores(14792), style: tmp.image, resizeMode: "contain" }), ];
+  const items6 = [closure_12(closure_5, { source: stateFromStores(14792), style: tmp.image, resizeMode: "contain" }), ];
   const obj8 = { style: tmp.infoWrapper, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1114).intl;
-  obj9[2] = intl4.format(guildId(1114).t["FK0+iX"], {});
-  obj8[1] = callback2(guildId(4556).Text, obj9);
-  items6[1] = callback2(closure_4, obj8);
-  obj6[1] = items6;
+  obj9.children = intl4.format(guildId(1114).t["FK0+iX"], {});
+  obj8.children = closure_12(guildId(4556).Text, obj9);
+  items6[1] = closure_12(closure_4, obj8);
+  obj6.children = items6;
   items5[1] = closure_13(closure_4, obj6);
-  obj[1] = items5;
-  const items7 = [closure_13(closure_4, obj), callback2(guildId(7040).NavScrim, {})];
-  obj5[0] = items7;
+  obj.children = items5;
+  const items7 = [closure_13(closure_4, obj), closure_12(guildId(7040).NavScrim, {})];
+  obj5.children = items7;
   return closure_13(closure_14, obj5);
 };

@@ -1,16 +1,16 @@
-// === Module 16605: set ===
+// === Module 16605: vibegrationsMessageAuthors ===
 
-// Module 16605 (set)
-import _fetchProfileAll from "_fetchProfile" /* 8181 */;
-import closure_2 from "mergeGuildAvatar" /* 1371 */;
-import set from "set" /* 2 */;
+// Module 16605 (vibegrationsMessageAuthors)
+import UserActionCreatorsAll from "UserActionCreators" /* 8181 */;
+import UserStore from "UserStore" /* 1371 */;
 
-let set = new Set();
+const set = new Set();
 const map = new Map();
-let result = set.fileFinishedImporting("modules/vibegrations/lib/vibegrationsMessageAuthors.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/vibegrations/lib/vibegrationsMessageAuthors.tsx");
 
-export const resolveMessageAuthor = function resolveMessageAuthor(arg0, user, currentUser) {
-  if (null == arg0) {
+export const resolveMessageAuthor = function resolveMessageAuthor(userId, user, currentUser) {
+  if (null == userId) {
     let tmp2 = currentUser;
     if (currentUser == null) {
       tmp2 = null;
@@ -28,7 +28,7 @@ export const requestMessageAuthor = function requestMessageAuthor(userId) {
   importAll = userId;
   if (null != userId) {
     if (!set.has(userId)) {
-      if (null == user.getUser(userId)) {
+      if (null == UserStore.getUser(userId)) {
         let num = map.get(userId);
         if (num == null) {
           num = 0;
@@ -36,12 +36,11 @@ export const requestMessageAuthor = function requestMessageAuthor(userId) {
         if (num < 3) {
           const result = obj3.set(userId, num + 1);
           obj2.add(userId);
-          user = _fetchProfileAll.getUser(userId);
-          const obj = _fetchProfileAll;
-          user.finally(() => closure_1_3.delete(closure_0)).catch(() => {
+          const user = UserActionCreatorsAll.getUser(userId);
+          user.finally(() => set.delete(closure_0)).catch(() => {
 
           });
-          const cleanupPromise = user.finally(() => closure_1_3.delete(closure_0));
+          const cleanupPromise = user.finally(() => set.delete(closure_0));
         }
         obj3 = map;
       }

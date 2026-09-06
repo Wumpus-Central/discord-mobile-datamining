@@ -1,51 +1,54 @@
-// === Module 14665: PasswordlessUpsellPromoSheet ===
+// === Module 14665: PasskeyUpsellPromoSheet ===
 
-// Module 14665 (PasswordlessUpsellPromoSheet)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import { Image } from "get ActivityIndicator" /* 17 */;
-import { ContentDismissActionType } from "ContentDismissActionType" /* 1954 */;
-import jsxProd from "jsxProd" /* 21 */;
+// Module 14665 (PasskeyUpsellPromoSheet)
+import NativeCeremoniesDefault from "NativeCeremonies" /* 6949 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14662 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ jsx: error, jsxs: closure_8 } = jsxProd);
-let result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
+const require = fn;
+const Image = fn(17).Image;
+const ContentDismissActionType = fn(1954).ContentDismissActionType;
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
 
 export default function PasswordlessUpsellPromoSheet() {
-  function onRegisterSuccess(closure_0) {
-    const result = callback(onRegisterSuccess[6]).closePasskeyUpsellPromoSheet();
-    const obj = callback(onRegisterSuccess[6]);
-    const result1 = callback(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(closure_0);
+  function onRegisterSuccess(merged) {
+    const result = setRegistering(onRegisterSuccess[6]).closePasskeyUpsellPromoSheet();
+    const obj = setRegistering(onRegisterSuccess[6]);
+    const result1 = setRegistering(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(merged);
   }
-  let obj = { source: require(onRegisterSuccess[5]), style: { height: 190, width: 220, resizeMode: "contain" } };
-  const tmp4 = callback2(Image, obj);
-  [r10018, require] = callback(React.useState(""), 2);
-  const tmp5 = callback(React.useState(""), 2);
-  [tmp7, importDefault] = callback(React.useState(false), 2);
+  let obj = { source: require("module_14666"), style: { height: 190, width: 220, resizeMode: "contain" } };
+  const tmp4 = closure_7(Image, obj);
+  [r10018, require] = _slicedToArray(noop.useState(""), 2);
+  const tmp5 = _slicedToArray(noop.useState(""), 2);
+  [tmp7, importDefault] = _slicedToArray(noop.useState(false), 2);
   obj = { illustration: tmp4, title: null, description: null, onDismiss: null, actions: null };
-  const intl = require(onRegisterSuccess[8]).intl;
-  obj[1] = intl.string(require(onRegisterSuccess[8]).t.CjleBl);
-  let obj2 = require(onRegisterSuccess[9]);
-  const tmp6 = callback(React.useState(false), 2);
-  const intl2 = require(onRegisterSuccess[8]).intl;
+  const intl = require("util").intl;
+  obj.title = intl.string(require("util").t.CjleBl);
+  let obj2 = require("PlatformUtils");
+  const tmp6 = _slicedToArray(noop.useState(false), 2);
+  const intl2 = require("util").intl;
   const string = intl2.string;
-  const t = require(onRegisterSuccess[8]).t;
+  const t = require("util").t;
   if (isIOSResult) {
     let stringResult = string(t["7yxR9t"]);
   } else {
     stringResult = string(t.d6uxJy);
   }
-  obj[2] = stringResult;
-  obj[3] = function onDismiss() {
-    return callback(onRegisterSuccess[10]).markDismissed(constants.USER_DISMISS);
+  obj.description = stringResult;
+  obj.onDismiss = function onDismiss() {
+    return setRegistering(onRegisterSuccess[10]).markDismissed(constants.USER_DISMISS);
   };
   obj = {
     size: "lg",
     onPress() {
-      let obj = closure_1_1(onRegisterSuccess[10]);
-      obj.markDismissed(closure_1_6.TAKE_ACTION);
-      obj = { setRegistering: closure_1, setError: closure_0, onRegisterSuccess };
-      closure_1_1(onRegisterSuccess[13]).registerPasskey(obj);
+      let obj = PasskeyUpsellManagerDefault;
+      obj.markDismissed(ContentDismissActionType.TAKE_ACTION);
+      obj = { setRegistering, setError, onRegisterSuccess };
+      NativeCeremoniesDefault.registerPasskey(obj);
     },
     text: null,
     loading: null,
@@ -59,17 +62,17 @@ export default function PasswordlessUpsellPromoSheet() {
   } else {
     string2Result = string2(t2.NIFmCJ);
   }
-  obj[2] = string2Result;
-  obj[3] = tmp7;
-  obj[4] = tmp7;
-  const items = [callback2(require(onRegisterSuccess[12]).Button, obj), ];
-  obj1 = {
+  obj.text = string2Result;
+  obj.loading = tmp7;
+  obj.disabled = tmp7;
+  const items = [closure_7(require("components/Button/Button").Button, obj), ];
+  const obj1 = {
     size: "lg",
     variant: "secondary",
     onPress() {
-      callback(onRegisterSuccess[10]).markDismissed(constants.USER_DISMISS);
-      const obj = callback(onRegisterSuccess[10]);
-      const result = callback(onRegisterSuccess[6]).closePasskeyUpsellPromoSheet();
+      setRegistering(onRegisterSuccess[10]).markDismissed(constants.USER_DISMISS);
+      const obj = setRegistering(onRegisterSuccess[10]);
+      const result = setRegistering(onRegisterSuccess[6]).closePasskeyUpsellPromoSheet();
     },
     text: null,
     disabled: null
@@ -83,11 +86,11 @@ export default function PasswordlessUpsellPromoSheet() {
     string3Result = string3(t3["7J6/nG"]);
   }
   obj2 = { children: null };
-  obj1[3] = string3Result;
-  obj1[4] = tmp7;
-  items[1] = callback2(require(onRegisterSuccess[12]).Button, obj1);
-  obj2[0] = items;
-  obj[4] = closure_8(require(onRegisterSuccess[11]).ButtonGroup, obj2);
-  return callback2(require(onRegisterSuccess[7]).PromoSheet, obj);
+  obj1.text = string3Result;
+  obj1.disabled = tmp7;
+  items[1] = closure_7(require("components/Button/Button").Button, obj1);
+  obj2.children = items;
+  obj.actions = closure_8(require("ButtonGroup").ButtonGroup, obj2);
+  return closure_7(require("PromoSheet").PromoSheet, obj);
 };
 export const PASSWORDLESS_UPSELL_MODAL_KEY = "PASSWORDLESS_UPSELL_MODAL_KEY";

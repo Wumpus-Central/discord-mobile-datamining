@@ -1,30 +1,32 @@
 // === Module 10337: useEmojiAndSource ===
 
 // Module 10337 (useEmojiAndSource)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import closure_5 from "createGuildRecordFromRust" /* 1979 */;
-import closure_6 from "getEmojiToGroupId" /* 5459 */;
-import getEmojiSourceData from "getEmojiSourceData" /* 5585 */;
-import { GuildFeatures } from "ME" /* 1074 */;
+import EmojiTypes from "EmojiTypes" /* 4216 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
+import GuildStore from "GuildStore" /* 1979 */;
+import EmojiStore from "EmojiStore" /* 5459 */;
 
-const require = arg1;
-({ ExpressionSourceGuildRecord: error, EmojiSourceDataTypes: closure_8, getEmojiSourceData: c9 } = getEmojiSourceData);
-const result = require("set").fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
+require = fn;
+const ExpressionSourceRecord = fn(5585);
+({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
+const GuildFeatures = fn(1074).GuildFeatures;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
 
 export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   emojiId = emojiId.emojiId;
   const refreshPositionKey = emojiId.refreshPositionKey;
   closure_2 = undefined;
-  let callback;
-  let React;
+  _slicedToArray = undefined;
+  noop = undefined;
   c5 = undefined;
   c6 = undefined;
-  closure_7 = undefined;
+  let ref;
   const items = [c6, c5];
   const emoji = emojiId(refreshPositionKey[8]).useStateFromStoresObject(items, () => {
-    let obj = c6;
+    let obj = EmojiStore;
     let customEmojiById = null;
     if (null != emojiId) {
       customEmojiById = obj.getCustomEmojiById(tmp);
@@ -33,14 +35,13 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
     if (customEmojiById != null) {
       type = customEmojiById.type;
     }
-    if (type === emojiId(refreshPositionKey[7]).EmojiTypes.GUILD) {
-      obj = { emoji: null, joinedEmojiSourceGuildRecord: null };
-      obj[0] = customEmojiById;
+    if (type === EmojiTypes.EmojiTypes.GUILD) {
+      obj = { emoji: customEmojiById, joinedEmojiSourceGuildRecord: null };
       let guildId;
       if (customEmojiById != null) {
         guildId = customEmojiById.guildId;
       }
-      obj[1] = c5.getGuild(guildId);
+      obj.joinedEmojiSourceGuildRecord = GuildStore.getGuild(guildId);
     } else {
       obj = { emoji: null, joinedEmojiSourceGuildRecord: null };
     }
@@ -62,108 +63,93 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   }
   closure_2 = tmp5;
   let obj = emojiId(refreshPositionKey[8]);
-  [tmp8, c3] = callback(React.useState(tmp5), 2);
-  const sourceType = callback(React.useState(null), 2);
-  React = sourceType[1];
+  [tmp8, c3] = _slicedToArray(noop.useState(tmp5), 2);
+  const sourceType = _slicedToArray(noop.useState(null), 2);
+  noop = sourceType[1];
   let fromGuildRecord = null;
   if (null != joinedEmojiSourceGuildRecord) {
-    fromGuildRecord = closure_7.createFromGuildRecord(joinedEmojiSourceGuildRecord);
+    fromGuildRecord = ref.createFromGuildRecord(joinedEmojiSourceGuildRecord);
   }
   let tmp6Result = tmp6(obj2.useState(fromGuildRecord), 2);
   [tmp13, c5] = tmp6Result;
   tmp6Result = tmp6(obj2.useState(null), 2);
   [tmp15, c6] = tmp6Result;
-  closure_7 = obj2.useRef(refreshPositionKey);
+  ref = obj2.useRef(refreshPositionKey);
   const effect = obj2.useEffect(() => {
     closure_7.current = refreshPositionKey;
   });
   const items1 = [emojiId, tmp5];
   const effect1 = obj2.useEffect(() => {
-    function _fetch() {
-      const self = this;
-      const tmp = callback(function*() {
-        if (v0 === 2) {
-          v0 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp4 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+    closure_0 = async function _fetch(arg0, value) {
+      if (v3 === 2) {
+        v3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp4 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          let obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            v0 = 2;
-            if (0 === c2) {
-              if (arg0 === 1) {
-                v0 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                closure_1 = tmp5;
-                closure_0 = tmp2;
-                closure_0 = undefined;
-                let tmp6 = null;
-                if (null != closure_1_0) {
-                  c2 = 1;
-                  v0 = 1;
-                  obj1 = { value: null, done: false };
-                  obj1[0] = closure_2_9(tmp33);
-                  return obj1;
-                }
-              }
-            } else if (arg0 === 1) {
-              v0 = 3;
-              throw arg1;
-            } else {
-              tmp6 = arg1;
-              if (arg0 === 2) {
-                v0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              }
-            }
-            closure_0 = tmp6;
-            if (null != closure_0) {
-              closure_1_4(closure_0.type);
-              const type = closure_0.type;
-              if (closure_2_8.APPLICATION === type) {
-                closure_1_6(closure_0.application);
-              } else if (closure_2_8.GUILD === type) {
-                closure_1_5(closure_0.guild);
-              }
-            }
-            v0(false);
-            const current = closure_1_7.current;
-            if (current != null) {
-              current();
-            }
-            v0 = 3;
-            return { value: "HermesInternal", done: null };
-          } catch (tmp27) {
-            v0 = tmp;
-            throw tmp27;
-          }
+          return { value: "HermesInternal", done: null };
         }
-      });
-      closure_0 = tmp;
-      const apply = tmp.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
-        applyArgumentsResult = apply(self, arguments);
+        try {
+          v3 = 2;
+          if (0 === c2) {
+            if (arg0 === 1) {
+              v3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              v3 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_1 = tmp5;
+              closure_0 = tmp2;
+              closure_128_0 = undefined;
+              let tmp6 = null;
+              if (null != closure_0) {
+                c2 = 1;
+                v3 = 1;
+                const obj1 = { value: closure_2_9(tmp32), done: false };
+                return obj1;
+              }
+            }
+          } else if (arg0 === 1) {
+            v3 = 3;
+            throw value;
+          } else {
+            tmp6 = value;
+            if (arg0 === 2) {
+              v3 = 3;
+              obj = { value, done: true };
+              return obj;
+            }
+          }
+          closure_128_0 = tmp6;
+          if (null != closure_128_0) {
+            closure_1_4(closure_128_0.type);
+            const type = closure_128_0.type;
+            if (constants.APPLICATION === type) {
+              closure_1_6(closure_128_0.application);
+            } else if (constants.GUILD === type) {
+              closure_1_5(closure_128_0.guild);
+            }
+          }
+          v3(false);
+          const current = ref.current;
+          if (current != null) {
+            current();
+          }
+          v3 = 3;
+          return { value: "HermesInternal", done: null };
+        } catch (tmp27) {
+          v3 = tmp;
+          throw tmp27;
+        }
       }
-      return applyArgumentsResult;
-    }
+    };
     let current = ref.current;
     if (current != null) {
       current();
@@ -171,7 +157,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
     if (closure_2) {
       (function fetch() {
         const self = this;
-        const apply = _fetch.apply;
+        const apply = closure_0.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {

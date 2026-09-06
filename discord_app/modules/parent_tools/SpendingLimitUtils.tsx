@@ -1,9 +1,9 @@
-// === Module 14827: spendingLimitEqual ===
+// === Module 14827: SpendingLimitUtils ===
 
-// Module 14827 (spendingLimitEqual)
-import set from "set" /* 2 */;
+// Module 14827 (SpendingLimitUtils)
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
+const result = size.fileFinishedImporting("modules/parent_tools/SpendingLimitUtils.tsx");
 
 export const spendingLimitEqual = function spendingLimitEqual(amount, amount2) {
   let tmp = null == amount && null == amount2;
@@ -26,8 +26,7 @@ export const getNextRenewalDateLabel = function getNextRenewalDateLabel() {
 export const getCurrencySymbol = function getCurrencySymbol(formatted) {
   try {
     const _Intl = Intl;
-    const obj = { style: "currency", currency: null };
-    obj[1] = formatted.toUpperCase();
+    const obj = { style: "currency", currency: formatted.toUpperCase() };
     formatted = undefined;
     const numberFormat = new Intl.NumberFormat(undefined, obj);
     const iter = numberFormat.formatToParts(0).find((type) => "currency" === type.type);

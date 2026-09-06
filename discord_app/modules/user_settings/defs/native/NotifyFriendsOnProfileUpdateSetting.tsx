@@ -1,40 +1,27 @@
-// === Module 15911: toggle ===
+// === Module 15911: NotifyFriendsOnProfileUpdateSetting ===
 
-// Module 15911 (toggle)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
-import explicitContentFromProto from "explicitContentFromProto" /* 1935 */;
-import messagesProxyDefault from "messagesProxy" /* 2594 */;
-import MobileUserSettings from "MobileUserSettings" /* 7975 */;
-import onNotifyFriendsOnProfileUpdateSettingsChanged from "onNotifyFriendsOnProfileUpdateSettingsChanged" /* 15912 */;
-import createToggle from "createToggle" /* 11468 */;
+// Module 15911 (NotifyFriendsOnProfileUpdateSetting)
+import util from "util" /* 1114 */;
+import UserSettings from "UserSettings" /* 1935 */;
+import _modDef2594 from "module_2594" /* 2594 */;
+import SettingsConstants from "SettingsConstants" /* 7975 */;
+import NotifyFriendsOnProfileUpdateUtils from "NotifyFriendsOnProfileUpdateUtils" /* 15912 */;
+import SettingBuilders from "SettingBuilders" /* 11468 */;
+import size from "module_2" /* 2 */;
 
-const toggle = createToggle.createToggle({
+const toggle = SettingBuilders.createToggle({
   useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.F3llsQ);
+    const intl = util.intl;
+    return intl.string(_modDef2594.F3llsQ);
   },
   useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["6goWcz"]);
+    const intl = util.intl;
+    return intl.string(_modDef2594["6goWcz"]);
   },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
-  onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged
+  parent: SettingsConstants.MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: UserSettings.NotifyFriendsOnProfileUpdate.useSetting,
+  onValueChange: NotifyFriendsOnProfileUpdateUtils.onNotifyFriendsOnProfileUpdateSettingsChanged
 });
-const obj = {
-  useTitle() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault.F3llsQ);
-  },
-  useDescription() {
-    const intl = getSystemLocale.intl;
-    return intl.string(messagesProxyDefault["6goWcz"]);
-  },
-  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
-  onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged
-};
-const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
+const result = size.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
 
 export default toggle;

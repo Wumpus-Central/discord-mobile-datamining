@@ -1,12 +1,14 @@
-// === Module 13813: apexExperiment ===
+// === Module 13813: ServerLadderExperiment ===
 
-// Module 13813 (apexExperiment)
-import set from "set" /* 2 */;
+// Module 13813 (ServerLadderExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
+import size from "module_2" /* 2 */;
 
-const obj = { 1: null };
+let obj = { name: "2026-06-server-ladder", kind: "user", defaultConfig: { bitrate: 9000000, enabled: false }, variations: null };
+obj = { 1: null };
 obj[1] = { bitrate: 3500000, enabled: true };
-const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-06-server-ladder", kind: "user", defaultConfig: { bitrate: 9000000, enabled: false }, variations: obj });
-const result = set.fileFinishedImporting("modules/media_engine/ServerLadderExperiment.tsx");
+obj.variations = obj;
+const apexExperiment = ApexExperiment.createApexExperiment(obj);
+const result = size.fileFinishedImporting("modules/media_engine/ServerLadderExperiment.tsx");
 
 export const ServerLadderExperiment = apexExperiment;

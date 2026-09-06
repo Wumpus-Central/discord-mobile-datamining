@@ -1,12 +1,12 @@
 // === Module 4183: getLocalizedLink ===
 
 // Module 4183 (getLocalizedLink)
-import set from "set" /* 2 */;
-import getSystemLocale from "getSystemLocale" /* 1114 */;
+import util from "util" /* 1114 */;
+import size from "module_2" /* 2 */;
 
-const result = set.fileFinishedImporting("modules/links/getLocalizedLink.tsx");
+const result = size.fileFinishedImporting("modules/links/getLocalizedLink.tsx");
 
 export default function getLocalizedLink(arg0) {
-  const formatted = getSystemLocale.intl.currentLocale.toLowerCase();
+  const formatted = util.intl.currentLocale.toLowerCase();
   return formatted in arg0 ? arg0[formatted] : arg0.default;
 };

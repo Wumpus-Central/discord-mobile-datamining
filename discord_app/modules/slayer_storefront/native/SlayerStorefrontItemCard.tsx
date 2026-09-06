@@ -1,21 +1,24 @@
 // === Module 8825: SlayerStorefrontItemCard ===
 
 // Module 8825 (SlayerStorefrontItemCard)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
+import tinycolorDefault from "tinycolor" /* 7552 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ ImageBackground: c4, View: c5 } = get_ActivityIndicator);
-createCacheKey = { cardContainer: null, cardImageBackground: null, cardImage: null };
-createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 };
-createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" };
-createCacheKey[2] = { width: "100%", height: "100%", resizeMode: "cover" };
-let closure_7 = createCacheKey.createStyles(createCacheKey);
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx");
+require = fn;
+get_ActivityIndicator = fn(17);
+({ ImageBackground: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+fn(4560);
+let createStyles = { cardContainer: null, cardImageBackground: null, cardImage: null };
+createStyles = { borderRadius: nativeDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 };
+createStyles.cardContainer = createStyles;
+createStyles.cardImageBackground = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" };
+createStyles.cardImage = { width: "100%", height: "100%", resizeMode: "cover" };
+let closure_7 = createStyles.createStyles(createStyles);
+let size = fn(2);
+const result = size.fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx");
 
 export default function SlayerStorefrontItemCard(sku) {
   sku = sku.sku;
@@ -25,30 +28,25 @@ export default function SlayerStorefrontItemCard(sku) {
   }
   let bound;
   let dominantColorFromImage;
-  let cardImage = callback();
+  let cardImage = closure_7();
   let size = num;
   if (typeof num !== "object") {
-    let obj = { width: null, height: null };
-    obj[0] = num;
-    obj[1] = num;
-    size = obj;
+    size = { width: num, height: num };
   }
   bound = Math.max(size.width, size.height);
   let items = [sku, bound];
-  let str = React.useMemo(() => {
-    let obj = sku(dominantColorFromImage[5]);
-    obj = { size: bound };
+  noop.useMemo(() => {
+    const obj = { size: bound };
     return obj.getCardImageURL(sku, obj);
   }, items);
   let items1 = [sku, bound];
-  const str2 = React.useMemo(() => {
-    let obj = sku(dominantColorFromImage[5]);
-    obj = { size: bound };
+  const str2 = noop.useMemo(() => {
+    const obj = { size: bound };
     return obj.getCardBackgroundImageURL(sku, obj);
   }, items1);
   let tmp7Result = dominantColorFromImage;
-  obj = sku(dominantColorFromImage[6]);
-  str = undefined;
+  let obj = sku(dominantColorFromImage[6]);
+  let str;
   if (str != null) {
     str = str.toString();
   }
@@ -60,42 +58,35 @@ export default function SlayerStorefrontItemCard(sku) {
     if (null != str) {
       obj = { style: null, children: null };
       const items2 = [cardImage.cardContainer, size, sku.containerStyle];
-      obj[0] = items2;
+      obj.style = items2;
       if (null != str2) {
-        obj1 = { source: null, style: null, children: null };
-        const obj2 = { uri: null };
-        obj2[0] = str2.toString();
-        obj1[0] = obj2;
-        obj1[1] = cardImage.cardImageBackground;
-        const obj3 = { source: null, style: null };
-        const obj4 = { uri: null };
-        obj4[0] = str.toString();
-        obj3[0] = obj4;
+        obj = { source: null, style: null, children: null };
+        const obj1 = { uri: str2.toString() };
+        obj.source = obj1;
+        obj.style = cardImage.cardImageBackground;
+        const obj2 = { source: null, style: null };
+        const obj3 = { uri: str.toString() };
+        obj2.source = obj3;
         cardImage = cardImage.cardImage;
-        obj3[1] = cardImage;
-        tmp7Result = tmp7(bound(tmp7Result[8]), obj3);
-        obj1[2] = tmp7Result;
-        tmp7Result = tmp7(closure_4, obj1);
+        obj2.style = cardImage;
+        tmp7Result = tmp7(bound(tmp7Result[8]), obj2);
+        obj.children = tmp7Result;
+        tmp7Result = tmp7(closure_4, obj);
         const tmp11 = bound(tmp7Result[8]);
       } else {
-        let obj5 = { colors: null, start: null, end: null, style: null, children: null };
-        obj5[0] = tmp5;
-        obj5[1] = { x: 0, y: 0 };
-        obj5[2] = { x: 1, y: 1 };
-        obj5[3] = cardImage.cardImageBackground;
-        const obj6 = { source: null, style: null };
-        const obj7 = { uri: null };
+        const obj4 = { colors: tmp5, start: { x: 0, y: 0 }, end: { x: 1, y: 1 }, style: cardImage.cardImageBackground, children: null };
+        let obj5 = { source: null, style: null };
+        const obj6 = { uri: null };
         const tmp15 = bound(tmp7Result[9]);
-        obj7[0] = str.toString();
-        obj6[0] = obj7;
-        obj6[1] = cardImage.cardImage;
-        obj5[4] = tmp7(bound(tmp7Result[8]), obj6);
-        tmp7Result = tmp7(tmp15, obj5);
+        obj6.uri = str.toString();
+        obj5.source = obj6;
+        obj5.style = cardImage.cardImage;
+        obj4.children = tmp7(bound(tmp7Result[8]), obj5);
+        tmp7Result = tmp7(tmp15, obj4);
         const tmp16 = bound(tmp7Result[8]);
       }
-      obj[1] = tmp7Result;
+      obj.children = tmp7Result;
       <closure_5 style={null}>{null}</closure_5>;
-      const tmp8 = closure_5;
     }
   }
   return tmp6;

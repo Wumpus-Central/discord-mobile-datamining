@@ -1,60 +1,63 @@
 // === Module 8621: StageSettingsActionSheet ===
 
 // Module 8621 (StageSettingsActionSheet)
-import ThemesDefault from "Themes" /* 576 */;
-import closure_3 from "noop" /* 19 */;
-import { View } from "get ActivityIndicator" /* 17 */;
-import closure_5 from "getParticipants" /* 4576 */;
-import closure_6 from "ensureGuildLoaded" /* 1957 */;
-import closure_7 from "getUncachedChannelPermissions" /* 4199 */;
-import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1962 */;
-import { STAGE_SETTINGS_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 5414 */;
-import ME from "ME" /* 1074 */;
-import jsxProd from "jsxProd" /* 21 */;
-import createCacheKey from "createCacheKey" /* 4560 */;
+import nativeDefault from "native" /* 576 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8394 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8625 */;
+import ReportModals from "ReportModals" /* 8629 */;
+import noop from "module_19" /* 19 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+import ChannelStore from "ChannelStore" /* 1957 */;
+import PermissionStore from "PermissionStore" /* 4199 */;
+import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
-const require = arg1;
-({ ChannelSettingsSections: c10, UserSettingsSections: unpackModuleId } = ME);
+require = fn;
+const View = fn(17).View;
+const STAGE_SETTINGS_SHEET_KEY = fn(5414).STAGE_SETTINGS_SHEET_KEY;
+const Constants = fn(1074);
+({ ChannelSettingsSections: c10, UserSettingsSections: closure_11 } = Constants);
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-createCacheKey = { container: { marginTop: 8 }, icon: null, warning: null };
-createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let closure_14 = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
-let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageSettingsActionSheet.tsx");
+fn(4560);
+let createStyles = { container: { marginTop: 8 }, icon: null, warning: null };
+createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createStyles.icon = createStyles;
+createStyles.warning = { color: nativeDefault.unsafe_rawColors.RED_400 };
+let closure_14 = createStyles.createStyles(createStyles);
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/stage_channels/native/components/StageSettingsActionSheet.tsx");
 
 export default function StageSettingsActionSheet(channelId) {
   channelId = channelId.channelId;
   const onOpenRTCDebugOverlay = channelId.onOpenRTCDebugOverlay;
   let stateFromStores;
-  const tmp = callback();
+  const tmp = closure_14();
   let obj = channelId(stateFromStores[12]);
-  const items = [closure_6];
-  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
-  obj1 = channelId(stateFromStores[12]);
-  const items1 = [closure_7];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.can(channelId(stateFromStores[13]).MODERATE_STAGE_CHANNEL_PERMISSIONS, stateFromStores));
+  const items = [ChannelStore];
+  stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
+  let obj1 = channelId(stateFromStores[12]);
+  const items1 = [PermissionStore];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, stateFromStores));
   let obj2 = channelId(stateFromStores[14]);
   const isStageSpeakingDisabledForCurrentUser = obj2.useIsStageSpeakingDisabledForCurrentUser();
   let obj3 = channelId(stateFromStores[12]);
-  const items2 = [closure_5];
+  const items2 = [ChannelRTCStore];
   const items3 = [channelId];
-  const stateFromStores2 = obj3.useStateFromStores(items2, () => closure_1_5.getSelectedParticipant(channelId), items3);
+  const stateFromStores2 = obj3.useStateFromStores(items2, () => ChannelRTCStore.getSelectedParticipant(channelId), items3);
   let obj4 = channelId(stateFromStores[12]);
-  const items4 = [closure_8];
+  const items4 = [StageInstanceStore];
   const items5 = [stateFromStores];
-  const stateFromStores3 = obj4.useStateFromStores(items4, () => closure_1_8.getStageInstanceByChannel(channelId));
-  const effect = React.useEffect(() => {
+  const stateFromStores3 = obj4.useStateFromStores(items4, () => StageInstanceStore.getStageInstanceByChannel(channelId));
+  const effect = noop.useEffect(() => {
     if (null == stateFromStores) {
-      onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(closure_1_9);
-      const obj = onOpenRTCDebugOverlay(stateFromStores[11]);
+      ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
     }
   }, items5);
   let tmp11Result1 = null;
   if (null != stateFromStores) {
-    obj = { style: null, children: null };
-    obj[0] = tmp.container;
+    obj = { style: tmp.container, children: null };
     let tmp14 = null;
     if (stateFromStores1) {
       tmp14 = null;
@@ -68,18 +71,13 @@ export default function StageSettingsActionSheet(channelId) {
             const intl = tmp2(tmp3[17]).intl;
             stringResult = intl.string(tmp2(tmp3[17]).t.s8mM8A);
           }
-          obj = { label: null, leading: null, onPress: null };
-          obj[0] = stringResult;
-          obj1 = { source: null, color: null };
-          obj1[0] = onOpenRTCDebugOverlay(tmp3[19]);
-          obj1[1] = tmp.icon.color;
-          obj[1] = tmp11(tmp2(tmp3[18]).Icon, obj1);
-          obj[2] = function onPress() {
+          obj = { label: stringResult, leading: null, onPress: null };
+          obj1 = { source: onOpenRTCDebugOverlay(tmp3[19]), color: tmp.icon.color };
+          obj.leading = tmp11(tmp2(tmp3[18]).Icon, obj1);
+          obj.onPress = function onPress() {
             if (null != stateFromStores) {
-              const result = channelId(stateFromStores[20]).openStageChannelSettings(tmp);
-              const obj = channelId(stateFromStores[20]);
-              onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(closure_1_9);
-              const obj2 = onOpenRTCDebugOverlay(stateFromStores[11]);
+              const result = StageChannelActionCreatorExtras.openStageChannelSettings(tmp);
+              ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
             }
           };
           let tmp11Result = tmp11(tmp2(tmp3[16]).FormRow, obj);
@@ -89,33 +87,26 @@ export default function StageSettingsActionSheet(channelId) {
     const items6 = [tmp14, , , , ];
     obj2 = { label: null, leading: null, onPress: null };
     const intl3 = tmp2(tmp3[17]).intl;
-    obj2[0] = intl3.string(tmp2(tmp3[17]).t.NiTd0e);
-    obj3 = { source: null, color: null };
-    obj3[0] = onOpenRTCDebugOverlay(tmp3[21]);
-    obj3[1] = tmp.icon.color;
-    obj2[1] = closure_12(tmp2(tmp3[18]).Icon, obj3);
-    obj2[2] = function onPress() {
-      let obj = channelId(stateFromStores[22]);
-      obj = { screen: constants.VOICE };
+    obj2.label = intl3.string(tmp2(tmp3[17]).t.NiTd0e);
+    obj3 = { source: onOpenRTCDebugOverlay(tmp3[21]), color: tmp.icon.color };
+    obj2.leading = closure_12(tmp2(tmp3[18]).Icon, obj3);
+    obj2.onPress = function onPress() {
+      channelId(stateFromStores[22]);
+      const obj = { screen: constants.VOICE };
       obj.openUserSettings(obj);
-      onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(closure_9);
+      onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
     };
     items6[1] = closure_12(tmp2(tmp3[16]).FormRow, obj2);
     obj4 = { label: null, leading: null, onPress: null };
     const intl4 = tmp2(tmp3[17]).intl;
-    obj4[0] = intl4.string(tmp2(tmp3[17]).t.h850Ss);
-    const obj5 = { source: null, color: null };
-    obj5[0] = onOpenRTCDebugOverlay(tmp3[23]);
-    obj5[1] = tmp.icon.color;
-    obj4[1] = closure_12(tmp2(tmp3[18]).Icon, obj5);
-    obj4[2] = function onPress() {
+    obj4.label = intl4.string(tmp2(tmp3[17]).t.h850Ss);
+    const obj5 = { source: onOpenRTCDebugOverlay(tmp3[23]), color: tmp.icon.color };
+    obj4.leading = closure_12(tmp2(tmp3[18]).Icon, obj5);
+    obj4.onPress = function onPress() {
       if (null != stateFromStores) {
-        onOpenRTCDebugOverlay(stateFromStores[24]).setSection(closure_1_10.NOTIFICATIONS);
-        const obj = onOpenRTCDebugOverlay(stateFromStores[24]);
-        onOpenRTCDebugOverlay(stateFromStores[24]).open(tmp.id);
-        const obj2 = onOpenRTCDebugOverlay(stateFromStores[24]);
-        onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(closure_1_9);
-        const obj3 = onOpenRTCDebugOverlay(stateFromStores[11]);
+        ChannelSettingsActionCreatorsDefault.setSection(constants.NOTIFICATIONS);
+        ChannelSettingsActionCreatorsDefault.open(tmp.id);
+        ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
       }
     };
     items6[2] = closure_12(tmp2(tmp3[16]).FormRow, obj4);
@@ -123,16 +114,14 @@ export default function StageSettingsActionSheet(channelId) {
     if (tmp11Result) {
       const obj6 = { label: null, leading: null, onPress: null };
       const intl5 = tmp2(tmp3[17]).intl;
-      obj6[0] = intl5.string(tmp2(tmp3[17]).t.X8bCMe);
-      const obj7 = { source: null, color: null };
-      obj7[0] = tmp18(tmp3[25]);
-      obj7[1] = tmp.icon.color;
-      obj6[1] = tmp11(tmp2(tmp3[18]).Icon, obj7);
-      obj6[2] = function onPress() {
+      obj6.label = intl5.string(tmp2(tmp3[17]).t.X8bCMe);
+      const obj7 = { source: tmp18(tmp3[25]), color: tmp.icon.color };
+      obj6.leading = tmp11(tmp2(tmp3[18]).Icon, obj7);
+      obj6.onPress = function onPress() {
         if (onOpenRTCDebugOverlay != null) {
           tmp();
         }
-        onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(closure_1_9);
+        ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
       };
       tmp11Result = tmp11(tmp2(tmp3[16]).FormRow, obj6);
     }
@@ -141,27 +130,21 @@ export default function StageSettingsActionSheet(channelId) {
     const obj9 = { label: null, leading: null, onPress: null };
     const obj10 = { text: null, style: null };
     const intl6 = tmp2(tmp3[17]).intl;
-    obj10[0] = intl6.string(tmp2(tmp3[17]).t["+78Pfm"]);
-    obj10[1] = tmp.warning;
-    obj9[0] = closure_12(tmp2(tmp3[16]).FormLabel, obj10);
-    const obj11 = { color: null, source: null };
-    obj11[0] = onOpenRTCDebugOverlay(tmp3[10]).unsafe_rawColors.RED_400;
-    obj11[1] = onOpenRTCDebugOverlay(tmp3[26]);
-    obj9[1] = closure_12(tmp2(tmp3[18]).Icon, obj11);
-    obj9[2] = function onPress() {
+    obj10.text = intl6.string(tmp2(tmp3[17]).t["+78Pfm"]);
+    obj10.style = tmp.warning;
+    obj9.label = closure_12(tmp2(tmp3[16]).FormLabel, obj10);
+    const obj11 = { color: onOpenRTCDebugOverlay(tmp3[10]).unsafe_rawColors.RED_400, source: onOpenRTCDebugOverlay(tmp3[26]) };
+    obj9.leading = closure_12(tmp2(tmp3[18]).Icon, obj11);
+    obj9.onPress = function onPress() {
       if (null != stateFromStores) {
-        const result = channelId(stateFromStores[27]).showReportModalForStageChannel(tmp);
-        const obj = channelId(stateFromStores[27]);
-        onOpenRTCDebugOverlay(stateFromStores[11]).hideActionSheet(closure_1_9);
-        const obj2 = onOpenRTCDebugOverlay(stateFromStores[11]);
+        const result = ReportModals.showReportModalForStageChannel(tmp);
+        ActionSheetActionCreatorsDefault.hideActionSheet(STAGE_SETTINGS_SHEET_KEY);
       }
     };
     items6[4] = closure_12(tmp2(tmp3[16]).FormRow, obj9);
-    obj[1] = items6;
-    obj8[1] = closure_13(View, obj);
+    obj.children = items6;
+    obj8.children = closure_13(View, obj);
     tmp11Result1 = tmp11(tmp2(tmp3[15]).ActionSheet, obj8);
-    const tmp12 = closure_13;
-    const tmp13 = View;
   }
   return tmp11Result1;
 };

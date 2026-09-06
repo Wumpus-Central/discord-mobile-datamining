@@ -2,20 +2,22 @@
 
 // Module 11527 (useChatWidth)
 import useChatLayout from "useChatLayout" /* 4420 */;
-import useChatLayoutDefault from "useChatLayout" /* 4420 */;
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4422 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
-import sum from "sum" /* 11528 */;
-import contextDefault from "context" /* 11529 */;
-import closure_3 from "noop" /* 19 */;
+import useDrawerWidth from "useDrawerWidth" /* 11528 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11529 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const result = require("set").fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
+const useChatLayoutDefault = useChatLayout;
+const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
+
+require = fn;
+const size = fn(2);
+const result = size.fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
 
 export default function useChatWidth(arg0) {
-  let context = React.useContext(contextDefault);
+  let context = noop.useContext(ChatViewWidthContextDefault);
   const width = useBaseAppContainerDimensionsDefault().width;
-  sum;
+  useDrawerWidth;
   if (null == context) {
     if (null == arg0) {
       let diff = width;
@@ -32,13 +34,12 @@ export default function useChatWidth(arg0) {
 };
 export const getChatWidth = function getChatWidth(arg0) {
   const obj = useChatLayout;
-  const tmp = require;
   const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
   if (null == arg0) {
     let diff = width;
     if (obj.getChatLayout().isChatLockedOpen) {
-      diff = width - sum.getDrawerWidth();
-      const tmpResult = sum;
+      diff = width - useDrawerWidth.getDrawerWidth();
+      const tmpResult = useDrawerWidth;
     }
     let tmp3 = diff;
   } else {
