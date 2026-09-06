@@ -287,11 +287,11 @@ function _decompress(size, img, width, height) {
     (Math.ceil((width * ([1, null, 3, 1, 2, null, 4][size.ctype] * size.depth)) / 8) + 1 + size.interlace) * height,
   );
   if (size.tabs.CgBI) {
-    let tmp3Result = tmp3(img, uint8Array);
+    let tmp3Result = v(img, uint8Array);
   } else {
     const _Uint8Array = Uint8Array;
     const uint8Array1 = new Uint8Array(img.buffer, 2, img.length - 6);
-    tmp3Result = tmp3(uint8Array1, uint8Array);
+    tmp3Result = v(uint8Array1, uint8Array);
   }
   const timestamp1 = Date.now();
   if (0 == size.interlace) {
@@ -3505,14 +3505,13 @@ let closure_130_12 = function getNearest(left, arg1, arg2, arg3, arg4) {
     if (tmp7.tdst <= diff4 * diff4) {
       return tmp7;
     } else {
-      const tmpResult = tmp(left, arg1, arg2, arg3, arg4);
+      const tmpResult = closure_1_12(left, arg1, arg2, arg3, arg4);
       let tmp14 = tmp7;
       if (tmpResult.tdst < tmp7.tdst) {
         tmp14 = tmpResult;
       }
       return tmp14;
     }
-    tmp = closure_1_12;
   }
 };
 let closure_130_13 = function vecDot(arg0, arg1, arg2) {

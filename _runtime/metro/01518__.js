@@ -33,7 +33,7 @@ export const EnsureSingleNavigator = function EnsureSingleNavigator(children) {
         [],
       )}
     >
-      {arg0.children}
+      {children.children}
     </context.Provider>
   );
 };

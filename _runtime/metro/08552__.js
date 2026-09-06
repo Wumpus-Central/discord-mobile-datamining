@@ -70,6 +70,7 @@ class TSpan {
         const root = closure_0.root;
         root.setNativeProps(propsAndStylesResult);
       }
+      const obj2 = TSpan(8469);
     };
     return tmp3Result;
   }

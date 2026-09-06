@@ -59,10 +59,10 @@ function withSequence(withTimingResult) {
               obj.finished = true;
               const sum = animationIndex.animationIndex + 1;
               let tmp3 = sum;
-              if (sum < arr.length - 1) {
+              if (sum < mapped.length - 1) {
                 let tmp4 = sum;
                 tmp3 = sum;
-                if (arr[sum].reduceMotion) {
+                if (mapped[sum].reduceMotion) {
                   const sum1 = tmp4 + 1;
                   tmp3 = sum1;
                   while (sum1 < mapped.length - 1) {
@@ -75,8 +75,13 @@ function withSequence(withTimingResult) {
                 }
               }
               animationIndex.animationIndex = tmp3;
-              if (animationIndex.animationIndex < arr.length) {
-                arr[animationIndex.animationIndex].onStart(arr[animationIndex.animationIndex], obj.current, arg1, obj);
+              if (animationIndex.animationIndex < mapped.length) {
+                mapped[animationIndex.animationIndex].onStart(
+                  mapped[animationIndex.animationIndex],
+                  obj.current,
+                  arg1,
+                  obj,
+                );
                 return false;
               } else {
                 return true;
@@ -96,7 +101,7 @@ function withSequence(withTimingResult) {
             if (0 < mapped.length - 1) {
               let num2 = 0;
               num = 0;
-              if (arr[0].reduceMotion) {
+              if (mapped[0].reduceMotion) {
                 const sum = num2 + 1;
                 num = sum;
                 while (sum < mapped.length - 1) {
@@ -111,7 +116,7 @@ function withSequence(withTimingResult) {
             let tmp3 = arg3;
             arg0.animationIndex = num;
             if (undefined === arg3) {
-              tmp3 = arr[arr.length - 1];
+              tmp3 = mapped[mapped.length - 1];
             }
             mapped[arg0.animationIndex].onStart(mapped[arg0.animationIndex], arg1, arg2, tmp3);
           },

@@ -2,6 +2,7 @@
 import extractOpacityDefault from "../08459_extractOpacity.js";
 import extractResponderDefault from "../08460_extractResponder.js";
 import _modDef8465 from "08465__.js";
+import reducedDefault from "../08466_reduced.js";
 import _modDef8467 from "08467__.js";
 import _modDef8477 from "08477__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
@@ -214,7 +215,7 @@ const entry = {
     obj.ref = function ref(arg0) {
       return self.refMethod(arg0);
     };
-    const merged4 = Object.assign(tmp21(8466)({ viewBox, preserveAspectRatio }));
+    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
     obj.children = jsx(_modDef8467, {
       children,
       style: merged2,

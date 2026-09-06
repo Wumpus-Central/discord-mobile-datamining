@@ -1,9 +1,9 @@
 // _runtime/metro/00366__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import result1Default from "../00357_result1.js";
 import _assertNativeAnimatedModuleDefault from "../00367__assertNativeAnimatedModule.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _get from "00096__get.js";
 import _inherits from "../00098__inherits.js";
@@ -26,6 +26,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 const connectAnimatedNodes = result1Default.API.connectAnimatedNodes;
 const disconnectAnimatedNodes = result1Default.API.disconnectAnimatedNodes;
 class AnimatedWithChildren {

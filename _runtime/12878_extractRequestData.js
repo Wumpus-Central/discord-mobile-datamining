@@ -1,5 +1,6 @@
 // _runtime/12878_extractRequestData.js
 import _mod12796 from "metro/12796__.js";
+import _mod12797 from "metro/12797__.js";
 import _mod12803 from "metro/12803__.js";
 import _mod12804 from "metro/12804__.js";
 import _mod12806 from "metro/12806__.js";
@@ -47,13 +48,12 @@ function extractRequestData(headers, arg1) {
         headers = tmp28.headers;
         delete tmp2[tmp];
       }
-      if (!obj5.includes("ip")) {
+      if (!include.includes("ip")) {
         const ipHeaderNames = _mod12880.ipHeaderNames;
         item = ipHeaderNames.forEach((item) => {
           delete tmp2[tmp];
         });
       }
-      obj5 = include;
       tmp28 = obj;
     } else if ("method" === item) {
       obj.method = method;
@@ -133,7 +133,6 @@ function extractRequestData(headers, arg1) {
   return obj;
 }
 function winterCGHeadersToDict(arr) {
-  const obj = {};
   try {
     const item = arr.forEach((item, index) => {
       if (typeof item === "string") {
@@ -143,14 +142,13 @@ function winterCGHeadersToDict(arr) {
     return obj;
   } catch (err) {
     if (_mod12796.DEBUG_BUILD) {
-      const logger = tmp3(12797).logger;
+      const logger = _mod12797.logger;
       logger.warn("Sentry failed extracting headers from a request object. If you see this, please file an issue.");
     }
-    tmp3 = require;
   }
+  obj = {};
 }
 function headersToDict(arg0) {
-  const obj = Object.create(null);
   try {
     const _Object = Object;
     const entries = Object.entries(arg0);
@@ -163,11 +161,11 @@ function headersToDict(arg0) {
     return obj;
   } catch (err) {
     if (_mod12796.DEBUG_BUILD) {
-      const logger = tmp4(12797).logger;
+      const logger = _mod12797.logger;
       logger.warn("Sentry failed extracting headers from a request object. If you see this, please file an issue.");
     }
-    tmp4 = require;
   }
+  obj = Object.create(null);
 }
 function extractQueryParamsFromUrl(arg0) {
   if (arg0) {
@@ -275,7 +273,6 @@ export const addNormalizedRequestDataToEvent = function addNormalizedRequestData
       if (obj8.isPlainObject(user.user)) {
         user = obj.user;
         user = user.user;
-        const obj2 = {};
         const _Array3 = Array;
         if (!Array.isArray(user)) {
           user = items;
@@ -283,13 +280,14 @@ export const addNormalizedRequestDataToEvent = function addNormalizedRequestData
         const item1 = user.forEach((item) => {
           let tmp2 = user;
           if (user) {
-            tmp2 = item in tmp;
+            tmp2 = item in user;
           }
           if (tmp2) {
-            obj1[item] = tmp[item];
+            obj1[item] = user[item];
           }
         });
-        let obj4 = obj2;
+        let obj4 = {};
+        const obj2 = {};
       }
       const _Object = Object;
       if (Object.keys(obj4).length) {
@@ -351,7 +349,6 @@ export const addRequestDataToEvent = function addRequestDataToEvent(request, req
       let obj3 = _mod12804;
       if (obj3.isPlainObject(request.user)) {
         let user = request.user;
-        const obj1 = {};
         const _Array2 = Array;
         if (!Array.isArray(user)) {
           user = items;
@@ -359,13 +356,14 @@ export const addRequestDataToEvent = function addRequestDataToEvent(request, req
         const item = user.forEach((item) => {
           let tmp2 = user;
           if (user) {
-            tmp2 = item in tmp;
+            tmp2 = item in user;
           }
           if (tmp2) {
-            obj1[item] = tmp[item];
+            obj1[item] = user[item];
           }
         });
-        obj3 = obj1;
+        obj3 = {};
+        const obj1 = {};
       }
       const _Object = Object;
       if (Object.keys(obj3).length) {

@@ -1,15 +1,22 @@
 // _runtime/00633_baseIsEqualDeep.js
 import _mod514 from "metro/00514__.js";
+import _mod536 from "metro/00536__.js";
+import _mod538 from "metro/00538__.js";
+import _mod634 from "metro/00634__.js";
+import Stack from "00639_Stack.js";
+import equalArrays from "00645_equalArrays.js";
+import valueOf from "00651_valueOf.js";
+import equalObjects from "00655_equalObjects.js";
 
-export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
+export default function baseIsEqualDeep(value, value2, arr, height, fn, arg5) {
   const tmp3 = _mod514(value);
   let str = "[object Array]";
   let str2 = "[object Array]";
   if (!tmp3) {
-    str2 = tmp(634)(value);
+    str2 = _mod634(value);
   }
   if (!tmp4) {
-    str = tmp(634)(value2);
+    str = _mod634(value2);
   }
   if (str2 == "[object Arguments]") {
     str2 = "[object Object]";
@@ -22,10 +29,10 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
   if (str2 == str) {
     flag = tmp5;
     flag2 = tmp3;
-    if (tmp(536)(value)) {
+    if (_mod536(value)) {
       flag2 = true;
       flag = false;
-      if (!tmp(536)(value2)) {
+      if (!_mod536(value2)) {
         return false;
       }
     }
@@ -35,18 +42,18 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
     if (!flag) {
       let tmp9 = tmp8;
       if (!tmp8) {
-        tmp9 = new tmp(639)();
+        tmp9 = new Stack();
       }
       if (!flag2) {
-        if (!tmp(538)(value)) {
-          let tmp19 = tmp(651)(value, value2, str2, arg2, arg3, fn, tmp9);
+        if (!_mod538(value)) {
+          let tmp19 = valueOf(value, value2, str2, arr, height, fn, tmp9);
         }
         return tmp19;
       }
-      tmp19 = tmp(645)(value, value2, arg2, arg3, fn, tmp9);
+      tmp19 = equalArrays(value, value2, arr, height, fn, tmp9);
     }
   }
-  if (!(1 & arg2)) {
+  if (!(1 & arr)) {
     if (!flag) {
       if (!tmp6) {
         let valueResult = value;
@@ -59,34 +66,32 @@ export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
         }
         let tmp34 = tmp8;
         if (!tmp8) {
-          tmp34 = new tmp(639)();
+          tmp34 = new Stack();
         }
-        return fn(valueResult, valueResult, arg2, arg3, tmp34);
+        return fn(valueResult, valueResult, arr, height, tmp34);
       } else {
         const call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
-          let call2Result = tmp29("__wrapped__");
+          let call2Result = hasOwnProperty("__wrapped__");
         } else {
           call2Result = call2(value2, "__wrapped__");
         }
-        tmp29 = hasOwnProperty;
       }
     } else {
       const call = hasOwnProperty.call;
       if (typeof call === "unknown") {
-        let callResult = tmp26("__wrapped__");
+        let callResult = hasOwnProperty("__wrapped__");
       } else {
         callResult = call(value, "__wrapped__");
       }
-      tmp26 = hasOwnProperty;
     }
   }
   let tmp42 = tmp7;
   if (tmp42) {
     if (!tmp8) {
-      tmp8 = new tmp(639)();
+      tmp8 = new Stack();
     }
-    tmp42 = tmp(655)(value, value2, arg2, arg3, fn, tmp8);
+    tmp42 = equalObjects(value, value2, arr, height, fn, tmp8);
   }
   return tmp42;
 }

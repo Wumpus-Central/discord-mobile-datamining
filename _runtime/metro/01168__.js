@@ -1,8 +1,8 @@
 // _runtime/metro/01168__.js
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _mod1169 from "01169__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
@@ -36,6 +36,7 @@ function formatToMarkdownString(_1Ww0Hi, arg1) {
   }
   return first;
 }
+_possibleConstructorReturn;
 const dependencyMap = {
   $b(join) {
     return "**" + join.join("") + "**";

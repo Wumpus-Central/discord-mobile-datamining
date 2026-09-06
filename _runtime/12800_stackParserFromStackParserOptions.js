@@ -18,10 +18,9 @@ function createStackParser() {
       while (true) {
         let arr3 = parts[num];
         if (arr3.length <= 1024) {
-          let tmp10 = re0;
           str = arr3;
           if (re0.test(arr3)) {
-            str = arr3.replace(tmp10, "$1");
+            str = arr3.replace(re0, "$1");
           }
           if (!str.match(/\S*Error: /)) {
             for (const item10026 of closure_0) {

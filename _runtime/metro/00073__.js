@@ -1,5 +1,6 @@
 // _runtime/metro/00073__.js
 import defineLazyObjectProperty from "../00049_defineLazyObjectProperty.js";
+import _mod76 from "00076__.js";
 import UIManager from "../00074_UIManager.js";
 
 require = arg1;
@@ -15,23 +16,22 @@ function getViewManagerConfig(arg0) {
   if (undefined === dependencyMap[arg0]) {
     if (require("UIManager").getConstantsForViewManager) {
       try {
-        tmp3[arg0] = tmp4(74).getConstantsForViewManager(arg0);
-        const tmp4Result = tmp4(74);
+        dependencyMap[arg0] = require("UIManager").getConstantsForViewManager(arg0);
+        const tmp4Result = require("UIManager");
       } catch (tmp6) {
         const _console = console;
         console.error("NativeUIManager.getConstantsForViewManager('" + tmp2 + "') threw an exception.", tmp6);
         tmp[tmp2] = null;
       }
     }
-    tmp4 = importDefault;
   }
   if (dependencyMap[arg0]) {
     return tmp10;
   } else if (global.nativeCallSyncHook) {
     if (require("UIManager").lazilyLoadView) {
       if (!set.has(arg0)) {
-        const tmp15 = tmp12(70)(tmp12(74).lazilyLoadView)(arg0);
-        obj2.add(arg0);
+        const tmp15 = require("nullthrows")(require("UIManager").lazilyLoadView)(arg0);
+        set.add(arg0);
         if (tmp18) {
           getConstants()[arg0] = tmp15.viewConfig;
           (function lazifyViewManagerConfig(arg0) {
@@ -86,12 +86,11 @@ function getViewManagerConfig(arg0) {
             }
           })(arg0);
         }
-        const tmp12Result = tmp12(70);
+        const tmp12Result = require("nullthrows");
         tmp18 = null != tmp15 && null != tmp15.viewConfig;
       }
-      obj2 = set;
     }
-    return tmp3[arg0];
+    return dependencyMap[arg0];
   } else {
     return tmp10;
   }
@@ -170,6 +169,7 @@ if (!global.nativeCallSyncHook) {
       defineLazyObjectProperty.default(require("UIManager"), item, obj);
       const tmpResult = defineLazyObjectProperty;
     }
+    _default = _mod76.default;
   });
 }
 

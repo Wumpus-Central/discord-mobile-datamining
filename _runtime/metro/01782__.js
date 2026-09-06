@@ -30,14 +30,14 @@ isAnimated.__workletHash = 4296700641760;
 isAnimated.__initData = {
   code: "function isAnimated_Pnpm_utilsTs1(prop){const isAnimated_Pnpm_utilsTs1=this._recur;if(Array.isArray(prop)){return prop.some(isAnimated_Pnpm_utilsTs1);}else if(typeof prop==='object'&&prop!==null){if(prop.onFrame!==undefined){return true;}else{return Object.values(prop).some(isAnimated_Pnpm_utilsTs1);}}return false;}",
 };
-function shallowEqual(arg0, arg1) {
-  const keys = Object.keys(arg0);
+function shallowEqual(c8, arg1) {
+  const keys = Object.keys(c8);
   if (keys.length !== Object.keys(arg1).length) {
     return false;
   } else {
     let num = 0;
     if (0 < keys.length) {
-      while (arg0[keys[num]] === arg1[keys[num]]) {
+      while (c8[keys[num]] === arg1[keys[num]]) {
         num = num + 1;
       }
       return false;
@@ -84,7 +84,7 @@ export const buildDependencies = function buildDependencies(arr, memoizedGesture
   if (arr) {
     const _Object = Object;
     values = Object.values(found);
-    arr.push(values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
+    arr = arr.push(values.reduce((acc, __workletHash) => acc + __workletHash.__workletHash.toString(), ""));
     tmp2 = arr;
   }
   return tmp2;
@@ -134,13 +134,12 @@ export const areDependenciesEqual = function areDependenciesEqual(dependencies, 
                 break;
               }
             } else {
-              let tmp5 = require;
               let obj = _mod1661;
               flag = false;
               if (!obj.isWorkletFunction(tmp2)) {
                 break;
               } else {
-                let tmp5Result = tmp5(1661);
+                let tmp5Result = _mod1661;
                 flag = false;
                 if (!tmp5Result.isWorkletFunction(tmp3)) {
                   break;

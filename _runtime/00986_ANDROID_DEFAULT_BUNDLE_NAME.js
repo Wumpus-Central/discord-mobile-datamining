@@ -32,12 +32,12 @@ export const createReactNativeRewriteFrames = function createReactNativeRewriteF
                 if (isHermesEnabledResult) {
                   platform.colno = platform.colno + 1;
                 }
-                let tmp9Result = tmp9(tmp10[2]);
+                let tmp9Result = _mod867;
                 if (tmp9Result.isExpo()) {
                   platform.filename = filename;
                   return platform;
                 } else {
-                  tmp9Result = tmp9(tmp10[2]);
+                  tmp9Result = _mod867;
                   tmp9Result.isExpo();
                   if ("/InternalBytecode.js" === platform.filename) {
                     platform.in_app = false;

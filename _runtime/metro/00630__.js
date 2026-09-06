@@ -7,14 +7,14 @@ const _mod519 = tmp(519);
 const baseIsArguments = tmp(533);
 const _mod543 = tmp(543);
 
-export default function hasPath(arg0, arg1, fn) {
+export default function hasPath(value, arg1, fn) {
   let tmp4;
-  const arr = castPath(arg1, arg0);
+  const arr = castPath(arg1, value);
   let num = 0;
-  let tmp3 = arg0;
+  let tmp3 = value;
   let flag = false;
   let num2 = 0;
-  let arr2 = arg0;
+  let arr2 = value;
   if (0 < arr.length) {
     while (true) {
       let tmp7 = _mod589(arr[num]);

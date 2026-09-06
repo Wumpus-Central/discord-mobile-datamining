@@ -61,12 +61,12 @@ function pTimeout(arg0, arg1, arg2) {
           const timeout = setTimeout(() => {
             if (typeof closure_2 !== "function") {
               const _Error = Error;
-              if (tmp instanceof Error) {
-                let tmp8 = tmp;
+              if (closure_2 instanceof Error) {
+                let tmp8 = closure_2;
               } else {
                 tmp8 = _moduleResult;
-                if (typeof tmp === "string") {
-                  let combined = tmp;
+                if (typeof closure_2 === "string") {
+                  let combined = closure_2;
                 } else {
                   const _HermesInternal = HermesInternal;
                   combined = "Promise timed out after " + closure_1 + " milliseconds";
@@ -74,13 +74,12 @@ function pTimeout(arg0, arg1, arg2) {
                 tmp8 = new tmp8(combined);
               }
               if (typeof closure_0.cancel === "function") {
-                obj.cancel();
+                closure_0.cancel();
               }
               closure_1(tmp8);
-              obj = closure_0;
             } else {
               try {
-                closure_0(tmp());
+                closure_0(closure_2());
               } catch (tmp4) {
                 closure_1(tmp4);
               }

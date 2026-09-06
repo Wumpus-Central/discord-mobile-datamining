@@ -82,7 +82,7 @@ export const createStandardNavigationFactories = function createStandardNavigati
       ),
       createScreen: null,
     };
-    const obj2 = require("BaseNavigationContainer");
+    let obj2 = require("BaseNavigationContainer");
     obj.createScreen = require("BaseNavigationContainer").createScreenFactory();
     return obj;
   }

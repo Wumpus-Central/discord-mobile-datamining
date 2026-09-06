@@ -123,15 +123,14 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
           }
         });
         if (_mod937.DEBUG_BUILD) {
-          const debug = tmp5(682).debug;
+          const debug = registerSpanErrorInstrumentation.debug;
           let _HermesInternal = HermesInternal;
           debug.log("Global Handler attached: " + "onerror");
         }
-        tmp5 = require;
       }
-      if (obj.onunhandledrejection) {
+      if (tmp.onunhandledrejection) {
         closure_0 = arg0;
-        const result1 = registerSpanErrorInstrumentation.addGlobalUnhandledRejectionInstrumentationHandler((arg0) => {
+        const result1 = registerSpanErrorInstrumentation.addGlobalUnhandledRejectionInstrumentationHandler((reason) => {
           let captureEvent = obj;
           obj = obj(682);
           const client = obj.getClient();
@@ -151,7 +150,7 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
           ({ stackParser, attachStacktrace } = options);
           if (captureEventResult.getClient() === closure_0) {
             if (!captureEventResult1.shouldIgnoreOnError()) {
-              let obj4 = _getUnhandledRejectionError(arg0);
+              let obj4 = _getUnhandledRejectionError(reason);
               if (captureEventResult2.isPrimitive(obj4)) {
                 obj = { exception: null };
                 const obj1 = { values: null };
@@ -184,14 +183,15 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
             }
             captureEventResult1 = captureEvent(893);
           }
+          captureEventResult = captureEvent(682);
         });
         if (_mod937.DEBUG_BUILD) {
-          const debug2 = tmp12(682).debug;
+          const debug2 = registerSpanErrorInstrumentation.debug;
           const _HermesInternal2 = HermesInternal;
           debug2.log("Global Handler attached: " + "onunhandledrejection");
         }
-        tmp12 = require;
       }
+      tmp = obj;
     },
   };
   return obj;

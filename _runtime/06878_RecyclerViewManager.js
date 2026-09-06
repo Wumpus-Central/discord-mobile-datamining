@@ -631,6 +631,7 @@ const items = [
         const _console = console;
         console.warn(RecyclerViewManager(6897).WarningMessages.keyExtractorNotDefinedForMVCP);
       }
+      tmp = this.propsRef.onStartReached && !this.propsRef.keyExtractor;
     },
   },
 ];

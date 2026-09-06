@@ -6,7 +6,7 @@ export const initUnique = function initUnique(visibilityWatcher, InteractionMana
   try {
     if (!weakMap.get(visibilityWatcher)) {
       const tmp5 = new InteractionManager();
-      const result = obj.set(visibilityWatcher, tmp5);
+      const result = weakMap.set(visibilityWatcher, tmp5);
     }
     return weakMap.get(visibilityWatcher);
   } catch (err) {

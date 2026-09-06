@@ -71,7 +71,7 @@ class KeyboardAvoidingView {
       const result = closure_0._updateBottomIfNecessary();
     };
     closure_0 = undefined;
-    closure_0 = closure_4(async (arg0, value) => {
+    closure_0 = closure_4(async (arg0) => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -158,7 +158,7 @@ class KeyboardAvoidingView {
         obj.setState(obj);
       }
     };
-    tmp3Result._updateBottomIfNecessary = closure_4(async (arg0, value) => {
+    tmp3Result._updateBottomIfNecessary = closure_4(async () => {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -258,9 +258,9 @@ _inherits(KeyboardAvoidingView, noop.Component);
 const entry = { key: "_relativeKeyboardHeight", value: null };
 dependencyMap = asyncGeneratorStep(async function (arg0) {
   const self = this;
-  closure_1 = arg0;
+  const screenY = arg0;
   c3 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -287,13 +287,13 @@ dependencyMap = asyncGeneratorStep(async function (arg0) {
           let sum = self;
           let num6 = self._frame;
           if (num6) {
-            if (tmp17) {
+            if (screenY) {
               const keyboardVerticalOffset = sum.props.keyboardVerticalOffset;
               c2 = keyboardVerticalOffset;
               if (keyboardVerticalOffset == null) {
                 c2 = 0;
               }
-              let diff = tmp17.screenY - c2;
+              let diff = screenY.screenY - c2;
               if ("height" === sum.props.behavior) {
                 const _Math2 = Math;
                 sum = sum.state.bottom + num6.y;
@@ -354,11 +354,12 @@ let items = [
         self._keyboardEvent = null;
         self._setBottom(0);
       }
-      let tmpResult = tmp(343);
+      let tmpResult = KeyboardAvoidingView(343);
       const items = [tmpResult.addListener("keyboardDidHide", self._onKeyboardHide)];
-      tmpResult = tmp(343);
+      tmpResult = KeyboardAvoidingView(343);
       items[1] = tmpResult.addListener("keyboardDidShow", self._onKeyboardChange);
       self._subscriptions = items;
+      obj = KeyboardAvoidingView(343);
     },
   },
   {

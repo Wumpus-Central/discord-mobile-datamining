@@ -1,5 +1,7 @@
 // _runtime/12887_extraErrorDataIntegration.js
+import _mod12803 from "metro/12803__.js";
 import _mod12804 from "metro/12804__.js";
+import _mod12842 from "metro/12842__.js";
 import setupIntegration from "metro/12853__.js";
 
 export const extraErrorDataIntegration = setupIntegration.defineIntegration(() => {
@@ -27,7 +29,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
       if (obj.originalException) {
         tmp3 = contexts;
         if (obj2.isError(obj.originalException)) {
-          const tmp7 = (function _extractErrorData(originalException, arg1, maxValueLength) {
+          const tmp7 = (function _extractErrorData(originalException, dependencyMap, maxValueLength) {
             try {
               const items = [
                 "name",
@@ -66,8 +68,8 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
                   truncateResult = tmp16Result.truncate("" + tmp13, maxValueLength);
                 }
               }
-              let tmp24 = arg1;
-              if (arg1) {
+              let tmp24 = dependencyMap;
+              if (dependencyMap) {
                 tmp24 = undefined !== originalException.cause;
               }
               if (!tmp24) {
@@ -111,11 +113,11 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
           if (tmp7) {
             obj = {};
             const merged = Object.assign(contexts.contexts);
-            const normalizer = tmp4(12842);
+            const normalizer = _mod12842;
             const normalizeResult = normalizer.normalize(tmp7, num);
-            let tmp4Result = tmp4(12804);
+            let tmp4Result = _mod12804;
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              tmp4Result = tmp4(12803);
+              tmp4Result = _mod12803;
               const result = tmp4Result.addNonEnumerableProperty(
                 normalizeResult,
                 "__sentry_skip_normalization__",

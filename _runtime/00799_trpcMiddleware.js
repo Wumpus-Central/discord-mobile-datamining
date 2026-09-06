@@ -5,7 +5,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_3 = { mechanism: { handled: false, type: "auto.rpc.trpc.middleware" } };
 
 export const trpcMiddleware = function trpcMiddleware() {
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -107,7 +107,7 @@ export const trpcMiddleware = function trpcMiddleware() {
             },
             forceTransaction: closure_1_0.forceTransaction,
           };
-          closure_0 = closure_2(function* (arg0, value) {
+          closure_0 = closure_2(function* (arg0) {
             if (c6 === 2) {
               c6 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");

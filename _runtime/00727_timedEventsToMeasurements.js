@@ -1,6 +1,7 @@
 // _runtime/00727_timedEventsToMeasurements.js
 import spanToJSON from "00684_spanToJSON.js";
 import _mod688 from "metro/00688__.js";
+import consoleSandbox from "00689_consoleSandbox.js";
 import SEMANTIC_ATTRIBUTE_CACHE_HIT from "00704_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
 
 require = arg1;
@@ -8,8 +9,8 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  let activeSpan = arg3;
-  if (arg3 === undefined) {
+  let activeSpan = _getSpanForScopeResult;
+  if (_getSpanForScopeResult === undefined) {
     let obj = spanToJSON;
     activeSpan = obj.getActiveSpan();
   }
@@ -19,7 +20,7 @@ export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
   }
   if (rootSpan) {
     if (_mod688.DEBUG_BUILD) {
-      const debug = tmp9(689).debug;
+      const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
       debug.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
     }

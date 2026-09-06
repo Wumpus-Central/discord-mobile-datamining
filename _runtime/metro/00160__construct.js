@@ -1,7 +1,6 @@
 // _runtime/metro/00160__construct.js
+import _setPrototypeOf from "../00099__setPrototypeOf.js";
 import _mod161 from "00161__.js";
-
-const _setPrototypeOf = tmp(99);
 
 export default function _construct(bind, arg1, arg2) {
   if (_mod161()) {

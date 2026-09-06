@@ -77,10 +77,10 @@ const items = [
       start2.assign("month", tmp9);
       if (index[3]) {
         const start4 = parsingResult.start;
-        start4.assign("year", tmp7(10561).parseYear(index[3]));
+        start4.assign("year", RUMonthNameParser(10561).parseYear(index[3]));
       } else {
         const start3 = parsingResult.start;
-        start3.imply("year", tmp7(10433).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
+        start3.imply("year", RUMonthNameParser(10433).findYearClosestToRef(createParsingResult.refDate, 1, tmp9));
       }
       return parsingResult;
     },

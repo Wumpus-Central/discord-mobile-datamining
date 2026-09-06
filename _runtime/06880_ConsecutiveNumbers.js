@@ -124,7 +124,7 @@ const entry = {
     const self = this;
     c3 = 0;
     c4 = 0;
-    return (function* value(arg0, value) {
+    return (function* value(arg0) {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

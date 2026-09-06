@@ -16,7 +16,7 @@ export const Header = noop.memo(function Header(navigation) {
   } else if (back) {
     headerBackTitle = back.title;
   }
-  let tmpResult = tmp(tmp2[3]);
+  let tmpResult = route(tmp2[3]);
   const items = [navigation, route.key];
   const callback = noop.useCallback(
     tmpResult.throttle(() => {
@@ -28,10 +28,11 @@ export const Header = noop.memo(function Header(navigation) {
         obj.source = route.key;
         obj.dispatch(obj);
       }
+      tmp = navigation.isFocused() && obj.canGoBack();
     }, 50),
     items,
   );
-  const context = noop.useContext(tmp(tmp2[5]).ModalPresentationContext);
+  const context = noop.useContext(route(tmp2[5]).ModalPresentationContext);
   if (undefined !== options.headerStatusBarHeight) {
     let num = options.headerStatusBarHeight;
   } else {
@@ -45,7 +46,7 @@ export const Header = noop.memo(function Header(navigation) {
   }
   obj = {};
   let merged = Object.assign(options);
-  tmpResult = tmp(tmp2[6]);
+  tmpResult = route(tmp2[6]);
   obj.title = tmpResult.getHeaderTitle(options, route.name);
   obj.progress = progress;
   obj.layout = layout;

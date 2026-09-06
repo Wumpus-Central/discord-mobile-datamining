@@ -2,7 +2,7 @@
 import _nullishCoalesce from "12921__nullishCoalesce.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-let closure_3 = async function _asyncNullishCoalesce2(arg0, value) {
+let closure_3 = async function _asyncNullishCoalesce2(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

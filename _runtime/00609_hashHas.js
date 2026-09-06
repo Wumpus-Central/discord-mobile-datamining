@@ -1,13 +1,13 @@
 // _runtime/00609_hashHas.js
 import _mod600 from "metro/00600__.js";
 
-export default function hashHas(arg0) {
+export default function hashHas(View) {
   const __data__ = this.__data__;
   if (_mod600) {
-    let tmp2 = undefined !== __data__[arg0];
+    let tmp2 = undefined !== __data__[View];
   } else {
     const call = hasOwnProperty.call;
-    tmp2 = typeof call === "unknown" ? hasOwnProperty(arg0) : call(__data__, arg0);
+    tmp2 = typeof call === "unknown" ? hasOwnProperty(View) : call(__data__, View);
   }
   return tmp2;
 }

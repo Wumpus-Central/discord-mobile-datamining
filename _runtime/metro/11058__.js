@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 get_ActivityIndicator = fn(17);
 ({ Linking: c2, NativeModules } = get_ActivityIndicator);
 ({ RNIapModule: c3, RNIapModule } = NativeModules);
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -76,7 +76,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-let closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_129_0 = asyncGeneratorStep(async (arg0) => {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -63,15 +63,15 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
     return items;
   }
 };
-export function createEnvelope(arg0) {
-  let items = arg1;
-  if (arg1 === undefined) {
+export function createEnvelope(eventEnvelopeHeaders) {
+  let items = items1;
+  if (items1 === undefined) {
     items = [];
   }
-  const items1 = [arg0, items];
+  items1 = [eventEnvelopeHeaders, items];
   return items1;
 }
-export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, arg3) {
+export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
   let obj = { event_id: event_id.event_id, sent_at: new Date().toISOString() };
   let tmp2 = sdk;
   if (sdk) {
@@ -79,9 +79,9 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
     tmp2 = obj;
   }
   const merged = Object.assign(tmp2);
-  let tmp4 = arg2 && arg3;
+  let tmp4 = arg2 && url;
   if (tmp4) {
-    obj = { dsn: _mod12844.dsnToString(arg3) };
+    obj = { dsn: _mod12844.dsnToString(url) };
     tmp4 = obj;
   }
   const merged1 = Object.assign(tmp4);
@@ -127,8 +127,8 @@ export const parseEnvelope = function parseEnvelope(arr) {
       const subarrayResult = closure_0.subarray(0, length);
       closure_0 = closure_0.subarray(length + 1);
       if (_mod12798.GLOBAL_OBJ.__SENTRY__) {
-        if (tmp3(12798).GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
-          const __SENTRY__ = tmp3(12798).GLOBAL_OBJ.__SENTRY__;
+        if (_mod12798.GLOBAL_OBJ.__SENTRY__.decodePolyfill) {
+          const __SENTRY__ = _mod12798.GLOBAL_OBJ.__SENTRY__;
           let decodePolyfillResult = __SENTRY__.decodePolyfill(subarrayResult);
         }
         return JSON.parse(decodePolyfillResult);
@@ -170,7 +170,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
     encodeResult = encodePolyfill(arr);
   }
 };
-export const serializeEnvelope = function serializeEnvelope(arg0) {
+export const serializeEnvelope = function serializeEnvelope(dependencyMap) {
   function append(json) {
     let arr = sum;
     if (typeof sum === "string") {
@@ -178,8 +178,8 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
         sum = arr + json;
       } else {
         if (_mod12798.GLOBAL_OBJ.__SENTRY__) {
-          if (tmp14(12798).GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
-            const __SENTRY__2 = tmp14(12798).GLOBAL_OBJ.__SENTRY__;
+          if (_mod12798.GLOBAL_OBJ.__SENTRY__.encodePolyfill) {
+            const __SENTRY__2 = _mod12798.GLOBAL_OBJ.__SENTRY__;
             let encodePolyfillResult = __SENTRY__2.encodePolyfill(arr);
           }
           sum = [encodePolyfillResult, json];
@@ -203,7 +203,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       encodeResult = encodePolyfill(json);
     }
   }
-  const tmp4 = _slicedToArray(arg0, 2);
+  const tmp4 = _slicedToArray(dependencyMap, 2);
   const require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = require;
@@ -243,4 +243,5 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     }
     append(tmp8[1]);
   }
+  tmp5 = tmp4[1][Symbol.iterator]();
 };

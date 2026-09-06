@@ -82,7 +82,7 @@ export const spotlightIntegration = function spotlightIntegration(arg0) {
             stealthXhr.setRequestHeader("Content-Type", "application/x-sentry-envelope");
             stealthXhr.onreadystatechange = () => {
               if (stealthXhr.readyState === stealthXhr(dependencyMap[1]).XHR_READYSTATE_DONE) {
-                const status = tmp.status;
+                const status = stealthXhr.status;
                 let tmp4 = 0 === status;
                 if (!tmp4) {
                   let tmp5 = status >= 200;
@@ -94,7 +94,7 @@ export const spotlightIntegration = function spotlightIntegration(arg0) {
                 if (!tmp4) {
                   const debug = stealthXhr(dependencyMap[0]).debug;
                   const _Error = Error;
-                  const error = new Error(tmp.statusText);
+                  const error = new Error(stealthXhr.statusText);
                   debug.error(
                     "[Spotlight] Sentry SDK can't connect to Spotlight is it running? See https://spotlightjs.com to download it.",
                     error,
@@ -102,12 +102,13 @@ export const spotlightIntegration = function spotlightIntegration(arg0) {
                 }
               }
             };
-            stealthXhr.send(tmp(tmp2[0]).serializeEnvelope(items));
-            const tmpResult = tmp(tmp2[0]);
+            stealthXhr.send(sidecarUrl(dependencyMap[0]).serializeEnvelope(items));
+            const tmpResult = sidecarUrl(dependencyMap[0]);
           } else {
-            let debug = tmp(tmp2[0]).debug;
+            let debug = sidecarUrl(dependencyMap[0]).debug;
             debug.error("[Spotlight] Sentry SDK can not create XHR object");
           }
+          const obj = sidecarUrl(dependencyMap[1]);
         });
       }
     },

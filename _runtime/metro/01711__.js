@@ -47,11 +47,11 @@ validateConfig.__initData = {
 const __initData = {
   code: "function pnpm_decayTs3(){const{userConfig,isValidRubberBandConfig,rubberBandDecay,rigidDecay,validateConfig,callback,getReduceMotionForAnimation}=this.__closure;var _config$velocity;const config={deceleration:0.998,velocityFactor:1,velocity:0,rubberBandFactor:0.6};if(userConfig){Object.keys(userConfig).forEach(function(key){return config[key]=userConfig[key];});}const decay=isValidRubberBandConfig(config)?function(animation,now){return rubberBandDecay(animation,now,config);}:function(animation,now){return rigidDecay(animation,now,config);};function onStart(animation,value,now){const initialVelocity=config.velocity;animation.current=value;animation.lastTimestamp=now;animation.startTimestamp=now;animation.initialVelocity=initialVelocity;animation.velocity=initialVelocity;validateConfig(config);if(animation.reduceMotion&&config.clamp){if(value<config.clamp[0]){animation.current=config.clamp[0];}else if(value>config.clamp[1]){animation.current=config.clamp[1];}}}return{onFrame:decay,onStart:onStart,callback:callback,velocity:(_config$velocity=config.velocity)!==null&&_config$velocity!==void 0?_config$velocity:0,initialVelocity:0,current:undefined,lastTimestamp:0,startTimestamp:0,reduceMotion:getReduceMotionForAnimation(config.reduceMotion)};}",
 };
-fn = function n(userConfig, callback) {
+fn = function n(userConfig, fn) {
   _require = userConfig;
-  dependencyMap = callback;
+  dependencyMap = fn;
   require("01676__.js");
-  const fn = function c() {
+  fn = function c() {
     let obj = { deceleration: 0.998, velocityFactor: 1, velocity: 0, rubberBandFactor: 0.6 };
     if (obj) {
       const _Object = Object;
@@ -80,12 +80,13 @@ fn = function n(userConfig, callback) {
         reduceMotion.velocity = velocity;
         validateConfig(obj);
         if (tmp3) {
-          if (current < tmp.clamp[0]) {
-            reduceMotion.current = tmp.clamp[0];
-          } else if (current > tmp.clamp[1]) {
-            reduceMotion.current = tmp.clamp[1];
+          if (current < obj.clamp[0]) {
+            reduceMotion.current = obj.clamp[0];
+          } else if (current > obj.clamp[1]) {
+            reduceMotion.current = obj.clamp[1];
           }
         }
+        tmp3 = reduceMotion.reduceMotion && obj.clamp;
       },
       callback,
       velocity: null,
@@ -110,7 +111,7 @@ fn = function n(userConfig, callback) {
     rubberBandDecay: require("rubberBandDecay").rubberBandDecay,
     rigidDecay: require("rigidDecay").rigidDecay,
     validateConfig,
-    callback,
+    callback: fn,
     getReduceMotionForAnimation: require("01676__.js").getReduceMotionForAnimation,
   };
   fn.__closure = obj;

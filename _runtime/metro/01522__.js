@@ -11,12 +11,12 @@ const jsx = fn(21).jsx;
 const memoResult = noop.memo((component) => {
   let obj = _mod1523;
   obj = { route: obj.useRoute() };
-  return noop.createElement(component.component, { route: obj.useRoute() });
+  return <component.component route={obj.useRoute()} />;
 });
 memoResult.displayName = "Memo(Screen)";
-function getItemsFromScreens(arg0, arg1) {
-  closure_0 = arg0;
-  const entries = Object.entries(arg1);
+function getItemsFromScreens(merged, screens) {
+  closure_0 = merged;
+  const entries = Object.entries(screens);
   return entries.map((item) => {
     [tmp, obj] = item;
     let _if;
@@ -271,9 +271,9 @@ export const createComponentForStaticNavigation = function createComponentForSta
             obj = {};
             const merged = Object.assign(screenListeners);
             if (typeof screenOptions.screenListeners === "function") {
-              let screenListeners2 = obj3.screenListeners(arg0);
+              let screenListeners2 = screenOptions.screenListeners(arg0);
             } else {
-              screenListeners2 = obj3.screenListeners;
+              screenListeners2 = screenOptions.screenListeners;
             }
             const merged1 = Object.assign(screenListeners2);
             return obj;
@@ -462,7 +462,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
             }
             if (!tmp34) {
               if (null != obj.path) {
-                if (!tmp15) {
+                if (!closure_2) {
                   if ("" === obj.path) {
                     obj = undefined;
                     c3 = true;
@@ -486,8 +486,8 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
                   }
                 }
               } else {
-                let tmp36 = tmp15;
-                if (!tmp15) {
+                let tmp36 = closure_2;
+                if (!closure_2) {
                   tmp36 = !tmp18;
                 }
                 if (!tmp36) {
@@ -534,6 +534,7 @@ export const createPathConfigForStaticNavigation = function createPathConfigForS
         if (tmp27) {
           tmp26 = createPathConfigForTree(tmp.screen, tmp9, tmp16, tmp19);
         }
+        tmp2 = "linking" in tmp && undefined !== tmp.linking;
       });
       return Object.fromEntries(
         mapped.filter((item) => {

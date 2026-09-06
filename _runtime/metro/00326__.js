@@ -205,7 +205,7 @@ class VirtualizedSectionList {
       const _subExtractorResult = closure_0._subExtractor(index.index);
       if (_subExtractorResult) {
         const keyExtractor = _subExtractorResult.section.keyExtractor;
-        let keyExtractor2 = tmp3.props.keyExtractor;
+        let keyExtractor2 = closure_0.props.keyExtractor;
         if (!keyExtractor2) {
           keyExtractor2 = VirtualizedSectionList(313).keyExtractor;
         }
@@ -227,17 +227,16 @@ class VirtualizedSectionList {
       } else {
         return null;
       }
-      tmp3 = closure_0;
     };
     tmp3Result._onViewableItemsChanged = (arg0) => {
       ({ viewableItems, changed } = arg0);
       const onViewableItemsChanged = closure_0.props.onViewableItemsChanged;
       if (null != onViewableItemsChanged) {
         const obj = { viewableItems: null, changed: null };
-        const mapped = viewableItems.map(tmp._convertViewable, tmp);
+        const mapped = viewableItems.map(closure_0._convertViewable, closure_0);
         const _Boolean = Boolean;
         obj.viewableItems = mapped.filter(Boolean);
-        const mapped1 = changed.map(tmp._convertViewable, tmp);
+        const mapped1 = changed.map(closure_0._convertViewable, closure_0);
         const _Boolean2 = Boolean;
         obj.changed = mapped1.filter(Boolean);
         const result = onViewableItemsChanged(obj);
@@ -442,7 +441,6 @@ let items = [
       const tmp = _objectWithoutProperties(props, closure_3);
       const obj = {};
       const _renderItemResult = self._renderItem(num2);
-      const tmp12 = closure_1_12;
       const merged = Object.assign(tmp);
       obj.keyExtractor = self._keyExtractor;
       obj.stickyHeaderIndices = items;
@@ -460,7 +458,7 @@ let items = [
       }
       obj.onViewableItemsChanged = prop;
       obj.ref = self._captureRef;
-      return tmp12(_modDef314, obj);
+      return closure_1_12(_modDef314, obj);
     },
   },
   {

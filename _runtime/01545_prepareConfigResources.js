@@ -7,7 +7,7 @@ import _slicedToArray from "metro/00032__.js";
 
 require = arg1;
 function prepareConfigResources(screens) {
-  let initialRoutes = (function getInitialRoutes(initialRouteName) {
+  const initialRoutes = (function getInitialRoutes(initialRouteName) {
     initialRouteName = undefined;
     if (initialRouteName != null) {
       initialRouteName = initialRouteName.initialRouteName;
@@ -23,7 +23,7 @@ function prepareConfigResources(screens) {
   if (screens != null) {
     screens = screens.screens;
   }
-  const configs = (function getSortedNormalizedConfigs(initialRoutes, screens) {
+  const configs = (function getSortedNormalizedConfigs(initialRoutes) {
     let obj = screens;
     if (screens === undefined) {
       obj = {};
@@ -44,12 +44,12 @@ function prepareConfigResources(screens) {
             let num10 = segments.routeNames.length - segments2.routeNames.length || segments.order - segments2.order;
             const tmp10 = segments.routeNames.length - segments2.routeNames.length || segments.order - segments2.order;
           } else {
-            let tmpResult = tmp(tmp2[3]);
+            initialRoutes(dependencyMap[3]);
             num10 = 1;
           }
           let num9 = num10;
         } else {
-          tmpResult = tmp(tmp2[3]);
+          initialRoutes(dependencyMap[3]);
           num9 = -1;
         }
         return num9;
@@ -125,11 +125,11 @@ function prepareConfigResources(screens) {
             }
             return segments.segments.length - segments2.segments.length;
           }
-          tmpResult2 = tmp(tmp2[3]);
+          tmpResult2 = initialRoutes(dependencyMap[3]);
         }
-        tmpResult1 = tmp(tmp2[3]);
+        tmpResult1 = initialRoutes(dependencyMap[3]);
       }
-      obj = initialRoutes(closure_1_3[2]);
+      obj = initialRoutes(dependencyMap[2]);
     });
   })(initialRoutes, screens);
   let replaced;
@@ -252,17 +252,16 @@ function matchAgainstConfigs(arg0, arg1, arg2, configs, configsByScreen) {
                 let items1 = [];
                 let params = tmp15.params;
                 for (const item10051 of params) {
-                  let tmp20 = item10051;
                   if (item10051.screen === tmp12) {
                     let _HermesInternal = HermesInternal;
-                    let tmp55 = match.groups["param_" + tmp20.index];
+                    let tmp55 = match.groups["param_" + item10051.index];
                     let tmp56 = tmp55;
                     if (null != tmp55) {
                       let _decodeURIComponent = decodeURIComponent;
                       let decodeURIComponentResult = decodeURIComponent(tmp56);
-                      if (tmp20.regex) {
+                      if (item10051.regex) {
                         if (tmp56 !== decodeURIComponentResult) {
-                          let regex = tmp20.regex;
+                          let regex = item10051.regex;
                           if (!regex.test(decodeURIComponentResult)) {
                             flag = true;
                             obj.return();
@@ -273,9 +272,9 @@ function matchAgainstConfigs(arg0, arg1, arg2, configs, configsByScreen) {
                       let parse = tmp15.parse;
                       let tmp34;
                       if (parse != null) {
-                        tmp34 = parse[tmp20.name];
+                        tmp34 = parse[item10051.name];
                       }
-                      let items2 = [tmp20.name, ];
+                      let items2 = [item10051.name, ];
                       if (tmp34) {
                         let tmp36Result = tmp36(decodeURIComponentResult);
                       } else {
@@ -284,7 +283,7 @@ function matchAgainstConfigs(arg0, arg1, arg2, configs, configsByScreen) {
                       items2[1] = tmp36Result;
                       items2 = items1.push(items2);
                     } else {
-                      let items3 = [tmp20.name, undefined];
+                      let items3 = [item10051.name, undefined];
                       let arr = items1.push(items3);
                     }
                   }
@@ -340,8 +339,7 @@ function matchAgainstConfigs(arg0, arg1, arg2, configs, configsByScreen) {
         iter.return();
         break;
       }
-      let obj = { routes: null, remainingPath: null, config: null };
-      obj.routes = items;
+      let obj = { routes: items, remainingPath: null, config: null };
       obj.remainingPath = remainingPath;
       obj.config = config;
       return obj;
@@ -377,7 +375,7 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
   closure_3 = arr3;
   let items = [];
   arr3.push(screen);
-  parentScreens.push(screen);
+  arr = parentScreens.push(screen);
   if (typeof arg1[screen] === "string") {
     let obj = { screen, path: tmp3 };
     arr2.push(obj);
@@ -385,7 +383,7 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
     HermesBuiltin.arraySpread(arr3, 0);
     let items2 = [];
     HermesBuiltin.arraySpread(arr2, 0);
-    items.push(createConfigItem(screen, items1, items2));
+    arr2 = items.push(createConfigItem(screen, items1, items2));
   } else if (typeof tmp3 === "object") {
     const screens = tmp3.screens;
     if (typeof tmp3.path === "string") {
@@ -401,33 +399,30 @@ function createNormalizedConfigs(screen, arg1, arr, arr2, parentScreens, arr3) {
       if (tmp3.alias) {
         let alias = tmp3.alias;
         for (const item10023 of alias) {
-          let tmp8 = item10023;
           if (typeof item10023 === "string") {
             let items4 = [];
             let arraySpreadResult1 = HermesBuiltin.arraySpread(arg5, 0);
             let items5 = [];
-            obj = { screen: arg0, path: null };
-            obj.path = tmp8;
+            obj = { screen: arg0, path: item10023 };
             items5[HermesBuiltin.arraySpread(arg3, 0)] = obj;
             arr3 = items3.push(createConfigItem(arg0, items4, items5, tmp3.parse, tmp5));
-          } else if (typeof tmp8 === "object") {
+          } else if (typeof item10023 === "object") {
             let items6 = [];
-            let tmp78 = createConfigItem;
             let arraySpreadResult2 = HermesBuiltin.arraySpread(arg5, 0);
             obj = { screen: null, path: null };
             let items7 = [];
-            if (tmp8.exact) {
+            if (item10023.exact) {
               obj.screen = arg0;
-              obj.path = tmp8.path;
+              obj.path = item10023.path;
               items7[0] = obj;
               let tmp12 = items7;
             } else {
               obj.screen = arg0;
-              obj.path = tmp8.path;
+              obj.path = item10023.path;
               items7[HermesBuiltin.arraySpread(arg3, 0)] = obj;
               tmp12 = items7;
             }
-            let arr4 = items3.push(tmp78(arg0, items6, tmp12, tmp8.parse, tmp5));
+            let arr4 = items3.push(createConfigItem(arg0, items6, tmp12, item10023.parse, tmp5));
           }
           continue;
         }
@@ -567,23 +562,21 @@ function createConfigItem(screen, items1, items2, parse, arg4) {
   while (tmp9 !== undefined) {
     let tmp12 = _slicedToArray(tmp10, 2);
     [tmp13, tmp14] = tmp12;
-    let tmp15 = tmp14;
     if (tmp14.param) {
-      let obj = { index: null, screen: null, name: null, regex: null };
-      obj.index = tmp13;
-      ({ screen: obj3.screen, param: obj3.name } = tmp15);
+      let obj = { index: tmp13, screen: null, name: null, regex: null };
+      ({ screen: obj3.screen, param: obj3.name } = tmp14);
       let regExp1;
-      if (tmp15.regex) {
+      if (tmp14.regex) {
         let _RegExp2 = RegExp;
         let _HermesInternal2 = HermesInternal;
         let tmp20 = new.target;
         let tmp21 = new.target;
-        regExp1 = new RegExp("^(?:" + tmp15.regex + ")$");
+        regExp1 = new RegExp("^(?:" + tmp14.regex + ")$");
       }
       obj.regex = regExp1;
       let arr = items1.push(obj);
-      if (tmp15.screen === screen) {
-        let addResult = set.add(tmp15.param);
+      if (tmp14.screen === screen) {
+        let addResult = set.add(tmp14.param);
       }
     }
     continue;
@@ -721,7 +714,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
         }
       }
       const findFocusedRouteResult = findFocusedRoute.findFocusedRoute(obj);
-      findFocusedRouteResult.path = str.replace(/\/$/, "");
+      findFocusedRouteResult.path = "".replace(/\/$/, "");
       let parse;
       if (config != null) {
         parse = config.parse;
@@ -738,7 +731,7 @@ function createNestedStateObject(str, items, initialRoutes, config) {
       if (config != null) {
         hasNestedScreens = config.hasNestedScreens;
       }
-      const tmp31Result = parseQueryParams(str, parse, pathParamNames, explicitParamNames, hasNestedScreens, findFocusedRouteResult.params);
+      const tmp31Result = parseQueryParams("", parse, pathParamNames, explicitParamNames, hasNestedScreens, findFocusedRouteResult.params);
       if (tmp31Result) {
         const obj18 = {};
         const merged4 = Object.assign(findFocusedRouteResult.params);
@@ -751,10 +744,10 @@ function createNestedStateObject(str, items, initialRoutes, config) {
     throw new TypeError("Trying to call a non-function");
   }
 }
-function parseQueryParams(arr, arg1) {
-  closure_0 = arg1;
-  let set = arg2;
-  if (arg2 === undefined) {
+function parseQueryParams(arr, parse) {
+  closure_0 = parse;
+  let set = pathParamNames;
+  if (pathParamNames === undefined) {
     const _Set = Set;
     set = new Set();
   }
@@ -780,10 +773,9 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
         return value;
       } else {
         const tmp4 = prepareConfigResources(screens);
-        const result = obj.set(screens, tmp4);
+        const result = weakMap.set(screens, tmp4);
         return tmp4;
       }
-      obj = weakMap;
     } else {
       return prepareConfigResources();
     }
@@ -792,6 +784,7 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
   if (screens != null) {
     screens = screens.screens;
   }
+  str = str.replace(/\/+/g, "/");
   const tmp = (function getConfigResources(screens) {
     if (screens) {
       value = weakMap.get(screens);
@@ -799,17 +792,15 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
         return value;
       } else {
         const tmp4 = prepareConfigResources(screens);
-        const result = obj.set(screens, tmp4);
+        const result = weakMap.set(screens, tmp4);
         return tmp4;
       }
-      obj = weakMap;
     } else {
       return prepareConfigResources();
     }
   })(screens);
-  str = str.replace(/\/+/g, "/");
-  const str2 = str.replace(/\/+/g, "/").replace(/^\//, "");
-  const replaced = str.replace(/\/+/g, "/").replace(/^\//, "").replace(/\?.*$/, "").replace(/%[0-9a-f]{2}/gi, (str) => str.toUpperCase());
+  const str2 = str.replace(/^\//, "");
+  const replaced = str.replace(/^\//, "").replace(/\?.*$/, "").replace(/%[0-9a-f]{2}/gi, (str) => str.toUpperCase());
   let str4 = replaced;
   if (!replaced.endsWith("/")) {
     const _HermesInternal = HermesInternal;
@@ -866,7 +857,9 @@ export const getStateFromPath = function getStateFromPath(str, screens) {
           return createNestedStateObject(str, routes, initialRoutes, config);
         }
       }
+      const tmp15 = matchAgainstConfigs(str5, decodeURIComponentResult, first, configs, configsByScreen);
     } catch (err) {
     }
   }
+  const str3 = str.replace(/^\//, "").replace(/\?.*$/, "");
 };

@@ -57,7 +57,7 @@ export default {
         throw new TypeError("Trying to call a non-function");
       }
     } else if (typeof dateLongFormatter === "function") {
-      if ("P" === str) {
+      if ("P" === "P") {
         let dateResult1 = dateTime.date({ width: "short" });
       } else if ("PP" === str) {
         dateResult1 = dateTime.date({ width: "medium" });

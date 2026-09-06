@@ -16,7 +16,7 @@ export const useAutoPlay = function useAutoPlay(autoPlay) {
     if (!ref2.current) {
       if (ref.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp.current);
+        clearTimeout(ref.current);
       }
       const _setTimeout = setTimeout;
       ref.current = setTimeout(() => {

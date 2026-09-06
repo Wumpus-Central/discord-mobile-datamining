@@ -4,8 +4,8 @@ import linear from "01688_linear.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export const JumpingTransition = function JumpingTransition(name, arg1) {
-  ({ translateX, translateY, scaleX, scaleY } = arg1);
+export const JumpingTransition = function JumpingTransition(name, translateX) {
+  ({ translateX, translateY, scaleX, scaleY } = translateX);
   const absolute = Math.abs(translateX);
   const result = Math.max(absolute, Math.abs(translateY)) / 2;
   if (translateY <= 0) {

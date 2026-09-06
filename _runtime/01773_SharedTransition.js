@@ -85,7 +85,7 @@ const items = [
   },
   {
     key: "registerTransition",
-    value: function registerTransition(componentViewTag, sharedTransitionTag, flag) {
+    value: function registerTransition(componentViewTag, sharedTransitionTag) {
       if (flag === undefined) {
         flag = false;
       }
@@ -119,18 +119,21 @@ const items = [
         _progressTransitionManager = SharedTransition._progressTransitionManager;
         _progressTransitionManager.addProgressAnimation(componentViewTag, progressAnimation);
       }
+      obj2 = require("metro/01676__.js");
     },
   },
   {
     key: "unregisterTransition",
-    value: function unregisterTransition(componentViewTag, flag) {
+    value: function unregisterTransition(componentViewTag) {
       if (flag === undefined) {
         flag = false;
       }
       if (this._defaultTransitionType === require("metro/01661__.js").SharedTransitionType.ANIMATION) {
-        let SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1661).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+        let SHARED_ELEMENT_TRANSITION_PROGRESS =
+          require("metro/01661__.js").LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
       } else {
-        SHARED_ELEMENT_TRANSITION_PROGRESS = tmp(1661).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
+        SHARED_ELEMENT_TRANSITION_PROGRESS =
+          require("metro/01661__.js").LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS;
       }
       const result = require("metro/01750__.js").updateLayoutAnimations(
         componentViewTag,
@@ -141,6 +144,7 @@ const items = [
       );
       const _progressTransitionManager = SharedTransition._progressTransitionManager;
       const result1 = _progressTransitionManager.removeProgressAnimation(componentViewTag, flag);
+      const tmpResult = require("metro/01750__.js");
     },
   },
   {
@@ -206,9 +210,7 @@ const items = [
             let str3 = nextResult;
             if ("transform" === nextResult) {
               let obj4 = _mod1708;
-              obj = { reduceMotion: null, duration: null };
-              obj.reduceMotion = _reduceMotion;
-              obj.duration = _transitionDuration;
+              obj = { reduceMotion: _reduceMotion, duration: _transitionDuration };
               obj.transformMatrix = obj4.withTiming(targetTransformMatrix.targetTransformMatrix, obj);
             } else {
               let str4 = str3.charAt(0);
@@ -216,9 +218,7 @@ const items = [
               let _HermesInternal = HermesInternal;
               let combined = "target" + formatted + str3.slice(1);
               let obj1 = _mod1708;
-              obj = { reduceMotion: null, duration: null };
-              obj.reduceMotion = _reduceMotion;
-              obj.duration = _transitionDuration;
+              obj = { reduceMotion: _reduceMotion, duration: _transitionDuration };
               obj[str3] = obj1.withTiming(targetTransformMatrix[combined], obj);
             }
             continue;

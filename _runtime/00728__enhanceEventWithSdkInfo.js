@@ -1,5 +1,6 @@
 // _runtime/00728__enhanceEventWithSdkInfo.js
 import spanToJSON2 from "00684_spanToJSON.js";
+import _mod702 from "metro/00702__.js";
 import logIgnoredSpan from "00724_logIgnoredSpan.js";
 import forEachEnvelopeItem from "00729_forEachEnvelopeItem.js";
 
@@ -64,7 +65,7 @@ function _enhanceEventWithSdkInfo(sdk, name) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export { _enhanceEventWithSdkInfo };
-export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk, arg3) {
+export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
   const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";
   if (type.type) {
@@ -78,17 +79,17 @@ export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk,
     sdk = sdk.sdk;
   }
   _enhanceEventWithSdkInfo(type, sdk);
-  let tmp3Result = tmp3(729);
-  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, arg1);
+  let tmp3Result = forEachEnvelopeItem;
+  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
   delete tmp[tmp2];
   const items = [{ type: str }, type];
-  tmp3Result = tmp3(729);
+  tmp3Result = forEachEnvelopeItem;
   const items1 = [items];
   return tmp3Result.createEnvelope(eventEnvelopeHeaders, items1);
 };
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, arg2, arg3) {
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, sdk, arg3) {
   let obj = forEachEnvelopeItem;
-  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(arg2);
+  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdk);
   obj = { sent_at: new Date().toISOString() };
   let tmp4 = sdkMetadataForEnvelopeHeader;
   if (sdkMetadataForEnvelopeHeader) {
@@ -99,7 +100,7 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1
   let tmp6 = arg3 && arg1;
   if (tmp6) {
     const obj1 = { dsn: null };
-    let tmpResult = tmp(702);
+    let tmpResult = _mod702;
     obj1.dsn = tmpResult.dsnToString(arg1);
     tmp6 = obj1;
   }
@@ -110,7 +111,7 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1
   } else {
     items1 = [{ type: "session" }, toJSON.toJSON()];
   }
-  tmpResult = tmp(729);
+  tmpResult = forEachEnvelopeItem;
   const items2 = [items1];
   return tmpResult.createEnvelope(obj, items2);
 };

@@ -22,11 +22,11 @@ export default function extractStroke(arg0, arg1, arr) {
     vectorEffect,
   } = arg1);
   if (null != stroke) {
-    arr.push("stroke");
+    arr = arr.push("stroke");
     arg0.stroke = extractBrushDefault(stroke);
   }
   if (null != strokeWidth) {
-    arr.push("strokeWidth");
+    arr = arr.push("strokeWidth");
     arg0.strokeWidth = strokeWidth;
   }
   if (null != strokeOpacity) {

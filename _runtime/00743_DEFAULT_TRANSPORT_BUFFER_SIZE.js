@@ -1,6 +1,9 @@
 // _runtime/00743_DEFAULT_TRANSPORT_BUFFER_SIZE.js
+import _mod688 from "metro/00688__.js";
+import consoleSandbox from "00689_consoleSandbox.js";
 import forEachEnvelopeItem from "00729_forEachEnvelopeItem.js";
 import SENTRY_BUFFER_FULL_ERROR from "00742_SENTRY_BUFFER_FULL_ERROR.js";
+import disabledUntil from "00744_disabledUntil.js";
 
 require = arg1;
 let dependencyMap = arg6;
@@ -30,13 +33,14 @@ export const createTransport = function createTransport(bufferSize, arg1) {
         } else {
           items.push(arg0);
         }
+        obj2 = disabledUntil;
       });
       if (0 === items.length) {
         return Promise.resolve({});
       } else {
-        dependencyMap = tmp(tmp2[1]).createEnvelope(arg0[0], items);
+        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
         function recordEnvelopeLoss(arg0) {}
-        let tmpResult = tmp(tmp2[1]);
+        let tmpResult = bufferSize(tmp2[1]);
         return recordEnvelopeLoss
           .add(() => {
             const obj = { body: forEachEnvelopeItem.serializeEnvelope(dependencyMap) };
@@ -65,22 +69,22 @@ export const createTransport = function createTransport(bufferSize, arg1) {
                 if (typeof recordEnvelopeLoss === "function") {
                   const network_error = "network_error";
                   if (obj.envelopeContainsItemType(dependencyMap, ["client_report"])) {
-                    if (tmp(688).DEBUG_BUILD) {
-                      const debug = tmp(689).debug;
+                    if (closure_0(688).DEBUG_BUILD) {
+                      const debug = closure_0(689).debug;
                       const _HermesInternal = HermesInternal;
                       debug.warn("Dropping client report. Will not send outcomes (reason: " + "network_error" + ").");
                     }
                   } else {
-                    tmp(729).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                    closure_0(729).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
                       closure_2_0.recordDroppedEvent(
                         network_error,
                         items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
                       );
                     });
-                    const tmpResult = tmp(729);
+                    const tmpResult = closure_0(729);
                   }
                   if (closure_0(688).DEBUG_BUILD) {
-                    const debug2 = tmp(689).debug;
+                    const debug2 = closure_0(689).debug;
                     debug2.error("Encountered error running transport request:", arg0);
                   }
                   throw arg0;
@@ -94,21 +98,21 @@ export const createTransport = function createTransport(bufferSize, arg1) {
             (result) => result,
             (arg0) => {
               if (arg0 === SENTRY_BUFFER_FULL_ERROR.SENTRY_BUFFER_FULL_ERROR) {
-                if (tmp(688).DEBUG_BUILD) {
-                  const debug = tmp(689).debug;
+                if (_mod688.DEBUG_BUILD) {
+                  const debug = consoleSandbox.debug;
                   debug.error("Skipped sending event because buffer is full.");
                 }
                 if (typeof recordEnvelopeLoss === "function") {
                   const queue_overflow = "queue_overflow";
-                  let tmpResult = tmp(729);
+                  let tmpResult = forEachEnvelopeItem;
                   if (tmpResult.envelopeContainsItemType(closure_1, ["client_report"])) {
-                    if (tmp(688).DEBUG_BUILD) {
-                      const debug2 = tmp(689).debug;
+                    if (_mod688.DEBUG_BUILD) {
+                      const debug2 = consoleSandbox.debug;
                       const _HermesInternal = HermesInternal;
                       debug2.warn("Dropping client report. Will not send outcomes (reason: " + "queue_overflow" + ").");
                     }
                   } else {
-                    tmpResult = tmp(729);
+                    tmpResult = forEachEnvelopeItem;
                     tmpResult.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
                       closure_2_0.recordDroppedEvent(
                         network_error,
@@ -127,7 +131,6 @@ export const createTransport = function createTransport(bufferSize, arg1) {
           );
       }
       let obj = bufferSize(dependencyMap[1]);
-      tmp = bufferSize;
       tmp2 = dependencyMap;
     },
     flush(arg0) {

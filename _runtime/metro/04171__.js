@@ -194,3 +194,19 @@ obj = {
   invalidDate: "Data inv\u00E1lida",
 };
 moment.defineLocale("pt-br", obj);
+const obj1 = {
+  sameDay: "[Hoje \u00E0s] LT",
+  nextDay: "[Amanh\u00E3 \u00E0s] LT",
+  nextWeek: "dddd [\u00E0s] LT",
+  lastDay: "[Ontem \u00E0s] LT",
+  lastWeek() {
+    const self = this;
+    if (0 === this.day()) {
+      let str = "[\u00DAltimo] dddd [\u00E0s] LT";
+    } else {
+      str = "[\u00DAltima] dddd [\u00E0s] LT";
+    }
+    return str;
+  },
+  sameElse: "L",
+};

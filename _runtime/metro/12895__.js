@@ -1,5 +1,7 @@
 // _runtime/metro/12895__.js
+import _mod12797 from "12797__.js";
 import _mod12824 from "12824__.js";
+import _mod12825 from "12825__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -13,8 +15,8 @@ export const profiler = {
         if (tmp6) {
           const _profiler = integrationByName._profiler;
           _profiler.start();
-        } else if (tmp(12825).DEBUG_BUILD) {
-          const logger3 = tmp(12797).logger;
+        } else if (_mod12825.DEBUG_BUILD) {
+          const logger3 = _mod12797.logger;
           logger3.warn("Profiler is not available on profiling integration.");
         }
         tmp6 =
@@ -22,12 +24,12 @@ export const profiler = {
           undefined !== integrationByName._profiler &&
           typeof integrationByName._profiler.start === "function" &&
           typeof integrationByName._profiler.stop === "function";
-      } else if (tmp(12825).DEBUG_BUILD) {
-        const logger2 = tmp(12797).logger;
+      } else if (_mod12825.DEBUG_BUILD) {
+        const logger2 = _mod12797.logger;
         logger2.warn("ProfilingIntegration is not available");
       }
-    } else if (tmp(12825).DEBUG_BUILD) {
-      const logger = tmp(12797).logger;
+    } else if (_mod12825.DEBUG_BUILD) {
+      const logger = _mod12797.logger;
       logger.warn("No Sentry client available, profiling is not started");
     }
   },
@@ -39,8 +41,8 @@ export const profiler = {
         if (tmp6) {
           const _profiler = integrationByName._profiler;
           _profiler.stop();
-        } else if (tmp(12825).DEBUG_BUILD) {
-          const logger3 = tmp(12797).logger;
+        } else if (_mod12825.DEBUG_BUILD) {
+          const logger3 = _mod12797.logger;
           logger3.warn("Profiler is not available on profiling integration.");
         }
         tmp6 =
@@ -48,12 +50,12 @@ export const profiler = {
           undefined !== integrationByName._profiler &&
           typeof integrationByName._profiler.start === "function" &&
           typeof integrationByName._profiler.stop === "function";
-      } else if (tmp(12825).DEBUG_BUILD) {
-        const logger2 = tmp(12797).logger;
+      } else if (_mod12825.DEBUG_BUILD) {
+        const logger2 = _mod12797.logger;
         logger2.warn("ProfilingIntegration is not available");
       }
-    } else if (tmp(12825).DEBUG_BUILD) {
-      const logger = tmp(12797).logger;
+    } else if (_mod12825.DEBUG_BUILD) {
+      const logger = _mod12797.logger;
       logger.warn("No Sentry client available, profiling is not started");
     }
   },

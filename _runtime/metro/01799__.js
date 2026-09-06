@@ -48,8 +48,8 @@ export const useScrollViewOffset = module_1639.isWeb() ? (function useScrollView
   closure_2 = tmp3;
   const items1 = [animatedRef, tmp3];
   closure_3(() => {
-    if (closure_0) {
-      return obj.observe((arg0) => {
+    if (animatedRef) {
+      return animatedRef.observe((arg0) => {
         if (arg0) {
           current = scrollableNode.current;
           scrollableNode = undefined;
@@ -69,7 +69,6 @@ export const useScrollViewOffset = module_1639.isWeb() ? (function useScrollView
         }
       });
     }
-    obj = closure_0;
   }, items1);
   return current;
 }) : (function useScrollViewOffsetNative(arg0, arg1) {
@@ -95,7 +94,7 @@ export const useScrollViewOffset = module_1639.isWeb() ? (function useScrollView
   const items = [arg0, event];
   closure_3(() => {
     if (closure_0) {
-      return obj.observe((arg0) => {
+      return closure_0.observe((arg0) => {
         closure_0 = arg0;
         if (arg0) {
           workletEventHandler.workletEventHandler.registerForEvents(arg0);
@@ -108,7 +107,6 @@ export const useScrollViewOffset = module_1639.isWeb() ? (function useScrollView
         }
       });
     }
-    obj = closure_0;
   }, items);
   return current;
 });

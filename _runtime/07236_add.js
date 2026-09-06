@@ -404,12 +404,11 @@ function ln(s, arg1) {
           const text1 = `${tmp7}.`;
           const constructor4 = new constructor(`${tmp7}.` + str.slice(num));
           const timesResult1 = constructor3.times("" + tmp10);
-          const tmp56 = round;
           const plusResult = ln(constructor4, sum - 10).plus(timesResult1);
           constructor.precision = precision;
           if (tmp4) {
             c2 = true;
-            tmp56(plusResult, precision);
+            round(plusResult, precision);
           }
           return plusResult;
         }
@@ -477,7 +476,7 @@ function parseDecimal(d, arr) {
     if (sum1 < diff1) {
       if (sum1) {
         d = d.d;
-        d.push(+substr1.slice(0, sum1));
+        arr = d.push(+substr1.slice(0, sum1));
       }
       const diff3 = diff1 - 7;
       let tmp19 = sum1;
@@ -522,7 +521,7 @@ function parseDecimal(d, arr) {
   }
   return d;
 }
-function round(d, arg1, arg2) {
+function round(d, exponent, arg2) {
   let tmp32;
   d = d.d;
   let first = d[0];
@@ -535,13 +534,13 @@ function round(d, arg1, arg2) {
       num2 = num;
     } while (10 <= first);
   }
-  const diff = arg1 - num2;
+  const diff = exponent - num2;
   if (diff < 0) {
     let sum = diff + 7;
     let first1 = d[0];
     let num6 = 0;
     let num5 = num2;
-    let sum1 = arg1;
+    let sum1 = exponent;
   } else {
     const _Math = Math;
     const rounded = Math.ceil((diff + 1) / 7);
@@ -565,7 +564,7 @@ function round(d, arg1, arg2) {
     }
   }
   if (undefined === arg2) {
-    if (arg1 >= 1) {
+    if (exponent >= 1) {
       if (d[0]) {
         if (0 === sum) {
           d.length = num6;
@@ -576,8 +575,8 @@ function round(d, arg1, arg2) {
           num14 = pow(10, 7 - sum);
           let num15 = 0;
           if (sum1 > 0) {
-            const result1 = first1 / tmp20(10, num5 - sum1);
-            num15 = ((result1 % tmp20(10, sum1)) | 0) * num14;
+            const result1 = first1 / pow(10, num5 - sum1);
+            num15 = ((result1 % pow(10, sum1)) | 0) * num14;
           }
           d[num6] = num15;
           diff1 = num6;
@@ -637,7 +636,7 @@ function round(d, arg1, arg2) {
         } while (10 <= first3);
       }
       d.length = 1;
-      const diff4 = arg1 - tmp42 - 1;
+      const diff4 = exponent - tmp42 - 1;
       d[0] = pow(10, (7 - (diff4 % 7)) % 7);
       d.e = floor(-diff4 / 7) || 0;
       const tmp46 = floor(-diff4 / 7) || 0;
@@ -652,7 +651,7 @@ function round(d, arg1, arg2) {
     let tmp14 = pow;
     const tmp47 = pow(10, num5 - sum1 - 1);
     let tmp17 = ((first1 / tmp47) % 10) | 0;
-    const tmp9 = arg1 < 0 || undefined !== d[num6 + 1] || first1 % tmp47;
+    const tmp9 = exponent < 0 || undefined !== d[num6 + 1] || first1 % tmp47;
     if (arg2 < 4) {
       if (!tmp17) {
         tmp17 = tmp9;
@@ -1688,7 +1687,7 @@ const fn26 = function (arg0) {
         return constructor1;
       } else {
         const precision = constructor.precision;
-        if (constructor.eq(tmp12)) {
+        if (constructor.eq(Decimal)) {
           round(constructor1, precision);
           return constructor1;
         } else {
@@ -1702,7 +1701,7 @@ const fn26 = function (arg0) {
             }
             diff = tmp15;
             if (tmp15 <= 9007199254740991) {
-              const constructor2 = new constructor(tmp12);
+              const constructor2 = new constructor(Decimal);
               const _Math2 = Math;
               const rounded = Math.ceil(precision / 7 + 4);
               c2 = false;
@@ -1981,12 +1980,11 @@ const f111132 = (s, s2, arg2, arg3) => {
             if (sum1) {
               while (true) {
                 let num41 = d[num40];
-                let tmp104 = c9;
                 let tmp105 = diff2;
                 if (!num41) {
                   num41 = 0;
                 }
-                let sum2 = num39 * tmp104 + num41;
+                let sum2 = num39 * c9 + num41;
                 items[num40] = (sum2 / first2) | 0;
                 let tmp109 = (sum2 % first2) | 0;
                 let sum3 = num40 + 1;

@@ -1,6 +1,7 @@
 // _runtime/metro/12915__.js
 import stackParserFromStackParserOptions from "../12800_stackParserFromStackParserOptions.js";
 import _mod12803 from "12803__.js";
+import _mod12913 from "12913__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -28,8 +29,8 @@ export const callFrameToStackFrame = function callFrameToStackFrame(location, st
   };
   let filenameIsInAppResult;
   if (replaced) {
-    filenameIsInAppResult = tmp4(12913).filenameIsInApp(replaced);
-    const tmp4Result = tmp4(12913);
+    filenameIsInAppResult = _mod12913.filenameIsInApp(replaced);
+    const tmp4Result = _mod12913;
   }
   obj.in_app = filenameIsInAppResult;
   return obj.dropUndefinedKeys(obj);

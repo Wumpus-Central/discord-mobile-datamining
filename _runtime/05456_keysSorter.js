@@ -84,6 +84,7 @@ export const parse = (str, arg1) => {
           tmp3 = decodeComponents(joined);
         }
         dependencyMap(decodeComponents(parts.shift()), tmp3, obj);
+        const arr = parts.shift();
       });
       let _Object = Object;
       let keys = Object.keys(obj);
@@ -152,25 +153,25 @@ export const stringify = (arg0, arg1) => {
         }
       } else if (!closure_0.encode) {
         const items1 = [arg0, "[", , ,];
-        if (!tmp26.encode) {
+        if (!closure_0.encode) {
           items1[2] = arg2;
           items1[3] = "]=";
-          if (!tmp26.encode) {
+          if (!closure_0.encode) {
             items1[4] = arg1;
             joined = items1.join("");
-          } else if (tmp26.strict) {
+          } else if (closure_0.strict) {
             let encodeURIComponentResult1 = _mod5457(arg1);
           } else {
             const _encodeURIComponent3 = encodeURIComponent;
             encodeURIComponentResult1 = encodeURIComponent(arg1);
           }
-        } else if (tmp26.strict) {
+        } else if (closure_0.strict) {
           let encodeURIComponentResult2 = _mod5457(arg2);
         } else {
           const _encodeURIComponent2 = encodeURIComponent;
           encodeURIComponentResult2 = encodeURIComponent(arg2);
         }
-      } else if (tmp26.strict) {
+      } else if (closure_0.strict) {
         let encodeURIComponentResult3 = _mod5457(arg0);
       } else {
         const _encodeURIComponent = encodeURIComponent;
@@ -193,16 +194,16 @@ export const stringify = (arg0, arg1) => {
               }
             } else if (!closure_0.encode) {
               const items = [arg0, "[]="];
-              if (!tmp20.encode) {
+              if (!closure_0.encode) {
                 items[2] = arg1;
                 joined = items.join("");
-              } else if (tmp20.strict) {
+              } else if (closure_0.strict) {
                 let encodeURIComponentResult1 = _mod5457(arg1);
               } else {
                 const _encodeURIComponent2 = encodeURIComponent;
                 encodeURIComponentResult1 = encodeURIComponent(arg1);
               }
-            } else if (tmp20.strict) {
+            } else if (closure_0.strict) {
               let encodeURIComponentResult2 = _mod5457(arg0);
             } else {
               const _encodeURIComponent = encodeURIComponent;
@@ -222,16 +223,16 @@ export const stringify = (arg0, arg1) => {
               }
             } else if (!closure_0.encode) {
               const items = [arg0, "="];
-              if (!tmp20.encode) {
+              if (!closure_0.encode) {
                 items[2] = arg1;
                 joined = items.join("");
-              } else if (tmp20.strict) {
+              } else if (closure_0.strict) {
                 let encodeURIComponentResult1 = _mod5457(arg1);
               } else {
                 const _encodeURIComponent2 = encodeURIComponent;
                 encodeURIComponentResult1 = encodeURIComponent(arg1);
               }
-            } else if (tmp20.strict) {
+            } else if (closure_0.strict) {
               let encodeURIComponentResult2 = _mod5457(arg0);
             } else {
               const _encodeURIComponent = encodeURIComponent;

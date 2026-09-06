@@ -2,12 +2,14 @@
 import _mod514 from "metro/00514__.js";
 import baseForOwn from "00516_baseForOwn.js";
 import baseIteratee from "00584_baseIteratee.js";
+import arrayReduce from "04682_arrayReduce.js";
+import baseReduce from "04683_baseReduce.js";
 
 export default function reduce(arg0, arg1, arg2) {
   if (_mod514(arg0)) {
-    let tmpResult = tmp(4682);
+    let tmpResult = arrayReduce;
   } else {
-    tmpResult = tmp(4683);
+    tmpResult = baseReduce;
   }
   return tmpResult(arg0, baseIteratee(arg1, 4), arg2, arguments.length < 3, baseForOwn);
 }

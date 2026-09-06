@@ -37,7 +37,7 @@ function variadic(apply, get, fn) {
 }
 function strategyDefault(c165, cache) {
   cache = cache.cache;
-  return 1 === c165.length ? monadic : variadic.bind(this, c165, cache.create(), cache.serializer);
+  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
 }
 function serializerDefault() {
   return JSON.stringify(arguments);

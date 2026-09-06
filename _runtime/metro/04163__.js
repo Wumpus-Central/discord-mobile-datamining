@@ -126,7 +126,8 @@ const fn = function n(moment) {
     },
     meridiemParse: /de|du/i,
     isPM(str) {
-      return "u" === str.charAt(1).toLowerCase();
+      str = str.charAt(1);
+      return "u" === str.toLowerCase();
     },
     meridiem(arg0, arg1, arg2) {
       if (arg0 < 12) {

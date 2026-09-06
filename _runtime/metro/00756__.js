@@ -215,7 +215,7 @@ let items = [
           const sdkMetadata = self.getSdkMetadata();
           const checkInEnvelope = tmp7Result.createCheckInEnvelope(obj, tmp11, sdkMetadata, tunnel, self.getDsn());
           if (ServerRuntimeClient(688).DEBUG_BUILD) {
-            const debug2 = tmp7(689).debug;
+            const debug2 = ServerRuntimeClient(689).debug;
             debug2.log("Sending checkin:", checkInId.monitorSlug, checkInId.status);
           }
           self.sendEnvelope(checkInEnvelope);

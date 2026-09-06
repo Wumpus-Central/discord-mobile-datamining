@@ -162,7 +162,7 @@ let items = [
         obj1.strokeWidth = backgroundWidth;
         obj1.strokeLinecap = lineCap;
         obj1.strokeDasharray = mapped1;
-        tmp23Result = tmp23(tmp24(8453).Path, obj1);
+        tmp23Result = timestampProducer(CircularProgress(8453).Path, obj1);
       }
       const items = [tmp23Result, ,];
       tmp23Result = fill > 0;
@@ -175,7 +175,7 @@ let items = [
           strokeDasharray: mapped,
           fill: "transparent",
         };
-        tmp23Result = tmp23(tmp24(8453).Path, obj2);
+        tmp23Result = timestampProducer(CircularProgress(8453).Path, obj2);
       }
       items[1] = tmp23Result;
       items[2] = renderCapResult;
@@ -185,7 +185,7 @@ let items = [
       let tmp23Result1 = children;
       if (children) {
         const obj3 = { style: size, children: children(fill) };
-        tmp23Result1 = tmp23(tmp22, obj3);
+        tmp23Result1 = timestampProducer(hasOwnProperty, obj3);
       }
       items1[1] = tmp23Result1;
       obj.children = items1;

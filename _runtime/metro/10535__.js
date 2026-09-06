@@ -100,12 +100,12 @@ const items = [
             }
             obj = {};
             obj[tmp4] = -1;
-            const ParsingComponents = tmp2(10435).ParsingComponents;
+            const ParsingComponents = NLRelativeDateFormatParser(10435).ParsingComponents;
             return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
           }
         }
       }
-      const ParsingComponents2 = tmp2(10435).ParsingComponents;
+      const ParsingComponents2 = NLRelativeDateFormatParser(10435).ParsingComponents;
       return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp4]: 1 });
     },
   },

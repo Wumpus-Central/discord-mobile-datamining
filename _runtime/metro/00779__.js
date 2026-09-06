@@ -26,12 +26,10 @@ export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, 
                       const _Object = Object;
                       const keys = Object.keys(closure_1_0(686).GLOBAL_OBJ._sentryModuleMetadata);
                       for (const item10026 of keys) {
-                        let tmp11 = item10026;
                         let tmp16 = closure_1_0(686).GLOBAL_OBJ._sentryModuleMetadata[item10026];
-                        let obj = set;
                         if (!set.has(item10026)) {
-                          let addResult = obj.add(tmp11);
-                          let obj2 = arg0(tmp11);
+                          let addResult = set.add(item10026);
+                          let obj2 = arg0(item10026);
                           let reversed = obj2.reverse();
                           for (const item10050 of reversed) {
                             if (item10050.filename) {
@@ -89,12 +87,10 @@ export const getMetadataForUrl = function getMetadataForUrl(fn, arg1) {
       const _Object = Object;
       const keys = Object.keys(closure_1_0(686).GLOBAL_OBJ._sentryModuleMetadata);
       for (const item10026 of keys) {
-        let tmp11 = item10026;
         let tmp16 = closure_1_0(686).GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        let obj = set;
         if (!set.has(item10026)) {
-          let addResult = obj.add(tmp11);
-          let obj2 = arg0(tmp11);
+          let addResult = set.add(item10026);
+          let obj2 = arg0(item10026);
           let reversed = obj2.reverse();
           for (const item10050 of reversed) {
             if (item10050.filename) {

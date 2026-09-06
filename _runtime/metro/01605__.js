@@ -14,7 +14,7 @@ export const useScrollToTop = function useScrollToTop(ref) {
     throw error;
   } else {
     let items = [context, ref, route.key];
-    const effect = obj.useEffect(() => {
+    const effect = noop.useEffect(() => {
       const items = [];
       for (let parent = closure_1; parent; parent = parent.getParent()) {
         if ("tab" === parent.getState().type) {
@@ -28,7 +28,7 @@ export const useScrollToTop = function useScrollToTop(ref) {
             focused = focused.isFocused();
             let hasItem = ref.includes(focused);
             if (!hasItem) {
-              hasItem = focused.getState().routes[0].key === key.key;
+              hasItem = obj.getState().routes[0].key === key.key;
             }
             const animationFrame = requestAnimationFrame(() => {
               if (null == ref.current) {
@@ -54,15 +54,15 @@ export const useScrollToTop = function useScrollToTop(ref) {
                   }
                 }
               } else {
-                if (!("scrollToTop" in tmp.current)) {
-                  if (!("scrollTo" in tmp.current)) {
-                    if (!("scrollToOffset" in tmp.current)) {
-                      if (!("scrollResponderScrollTo" in tmp.current)) {
-                        const current = tmp.current;
-                        if ("getScrollResponder" in tmp.current) {
+                if (!("scrollToTop" in ref.current)) {
+                  if (!("scrollTo" in ref.current)) {
+                    if (!("scrollToOffset" in ref.current)) {
+                      if (!("scrollResponderScrollTo" in ref.current)) {
+                        const current = ref.current;
+                        if ("getScrollResponder" in ref.current) {
                           let current3 = current.getScrollResponder();
                         } else {
-                          const current2 = tmp.current;
+                          const current2 = ref.current;
                           if ("getNode" in current) {
                             current3 = current2.getNode();
                           } else {
@@ -73,9 +73,10 @@ export const useScrollToTop = function useScrollToTop(ref) {
                     }
                   }
                 }
-                current3 = tmp.current;
+                current3 = ref.current;
               }
             });
+            obj = focused;
           }),
         );
         return () => {
@@ -84,5 +85,4 @@ export const useScrollToTop = function useScrollToTop(ref) {
       }
     }, items);
   }
-  obj = noop;
 };

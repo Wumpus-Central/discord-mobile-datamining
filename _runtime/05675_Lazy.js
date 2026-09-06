@@ -39,4 +39,5 @@ export const Lazy = function Lazy(arg0) {
   if (tmp3) {
     tmp7 = children;
   }
+  const tmp2 = _slicedToArray(noop.useState(tmp), 2);
 };

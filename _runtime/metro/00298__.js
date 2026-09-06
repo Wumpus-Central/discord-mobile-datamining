@@ -56,16 +56,16 @@ function useTextPressability(textPressabilityProps) {
               tmp2(arg0);
             }
           },
-        onClick: tmp.onClick,
+        onClick: closure_12.onClick,
         onResponderTerminationRequest: null,
         onStartShouldSetResponder: null
       };
       if (null == onResponderTerminationRequest) {
-        onResponderTerminationRequest = tmp.onResponderTerminationRequest;
+        onResponderTerminationRequest = closure_12.onResponderTerminationRequest;
       }
       obj.onResponderTerminationRequest = onResponderTerminationRequest;
       if (null == onStartShouldSetResponder) {
-        onStartShouldSetResponder = tmp.onStartShouldSetResponder;
+        onStartShouldSetResponder = closure_12.onStartShouldSetResponder;
       }
       obj.onStartShouldSetResponder = onStartShouldSetResponder;
       tmp2 = obj;

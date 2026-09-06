@@ -3,7 +3,11 @@ import CanonicalizeLocaleList from "14201_CanonicalizeLocaleList.js";
 import CoerceOptionsToObject from "14203_CoerceOptionsToObject.js";
 import _mod14206 from "metro/14206__.js";
 import GetOption from "14211_GetOption.js";
+import GetStringOrBooleanOption from "14213_GetStringOrBooleanOption.js";
+import CurrencyDigits from "14226_CurrencyDigits.js";
 import LookupSupportedLocales from "14238_LookupSupportedLocales.js";
+import SetNumberFormatUnitOptions from "14252_SetNumberFormatUnitOptions.js";
+import SetNumberFormatDigitOptions from "14253_SetNumberFormatDigitOptions.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -39,7 +43,7 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
   const internalSlots = getInternalSlots(arg0);
   ({ locale: tmp11.locale, dataLocale: tmp11.dataLocale, nu: tmp11.numberingSystem } = ResolveLocaleResult);
   internalSlots.dataLocaleData = localeData[ResolveLocaleResult.dataLocale];
-  const result2 = tmp(14252).SetNumberFormatUnitOptions(internalSlots, result1);
+  const result2 = SetNumberFormatUnitOptions.SetNumberFormatUnitOptions(internalSlots, result1);
   const style = internalSlots.style;
   const GetOptionResult1 = GetOption.GetOption(
     result1,
@@ -52,13 +56,19 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
   if ("currency" === style) {
     if ("standard" === GetOptionResult1) {
       obj = { currencyDigitsData };
-      let num2 = tmp(14226).CurrencyDigits(internalSlots.currency, obj);
+      let num2 = CurrencyDigits.CurrencyDigits(internalSlots.currency, obj);
       let num3 = num2;
     }
-    const result3 = tmp(14253).SetNumberFormatDigitOptions(internalSlots, result1, num3, num2, GetOptionResult1);
+    const result3 = SetNumberFormatDigitOptions.SetNumberFormatDigitOptions(
+      internalSlots,
+      result1,
+      num3,
+      num2,
+      GetOptionResult1,
+    );
     let str6 = "auto";
     if ("compact" === GetOptionResult1) {
-      internalSlots.compactDisplay = tmp(14211).GetOption(
+      internalSlots.compactDisplay = GetOption.GetOption(
         result1,
         "compactDisplay",
         "string",
@@ -67,7 +77,7 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
       );
       str6 = "min2";
     }
-    internalSlots.useGrouping = tmp(14213).GetStringOrBooleanOption(
+    internalSlots.useGrouping = GetStringOrBooleanOption.GetStringOrBooleanOption(
       result1,
       "useGrouping",
       ["min2", "auto", "always"],
@@ -75,7 +85,7 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
       false,
       str6,
     );
-    internalSlots.signDisplay = tmp(14211).GetOption(
+    internalSlots.signDisplay = GetOption.GetOption(
       result1,
       "signDisplay",
       "string",
@@ -89,4 +99,5 @@ export const InitializeNumberFormat = function InitializeNumberFormat(arg0, arg1
     num2 = 0;
   }
   num3 = 0;
+  const tmp9 = !localeData[ResolveLocaleResult.dataLocale];
 };

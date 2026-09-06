@@ -11,31 +11,31 @@ class InternetReachability {
     this._currentTimeoutHandle = null;
     this._setIsInternetReachable = (_isInternetReachable) => {
       if (self._isInternetReachable !== _isInternetReachable) {
-        obj._isInternetReachable = _isInternetReachable;
-        obj._listener(obj._isInternetReachable);
+        self._isInternetReachable = _isInternetReachable;
+        self._listener(self._isInternetReachable);
       }
     };
     this._setExpectsConnection = (arg0) => {
       if (null !== self._currentInternetReachabilityCheckHandler) {
-        obj._currentInternetReachabilityCheckHandler.cancel();
-        obj._currentInternetReachabilityCheckHandler = null;
-        const _currentInternetReachabilityCheckHandler = obj._currentInternetReachabilityCheckHandler;
+        self._currentInternetReachabilityCheckHandler.cancel();
+        self._currentInternetReachabilityCheckHandler = null;
+        const _currentInternetReachabilityCheckHandler = self._currentInternetReachabilityCheckHandler;
       }
       if (null !== self._currentTimeoutHandle) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(obj._currentTimeoutHandle);
-        obj._currentTimeoutHandle = null;
+        clearTimeout(self._currentTimeoutHandle);
+        self._currentTimeoutHandle = null;
       }
       if (arg0) {
-        const _configuration = obj._configuration;
+        const _configuration = self._configuration;
         if (_configuration.reachabilityShouldRun()) {
-          if (!obj._isInternetReachable) {
-            const result = obj._setIsInternetReachable(null);
+          if (!self._isInternetReachable) {
+            const result = self._setIsInternetReachable(null);
           }
-          obj._currentInternetReachabilityCheckHandler = obj._checkInternetReachability();
+          self._currentInternetReachabilityCheckHandler = self._checkInternetReachability();
         }
       }
-      const result1 = obj._setIsInternetReachable(false);
+      const result1 = self._setIsInternetReachable(false);
     };
     this._checkInternetReachability = () => {
       const abortController = new AbortController();
@@ -131,14 +131,14 @@ class InternetReachability {
     this.currentState = () => self._isInternetReachable;
     this.tearDown = () => {
       if (null !== self._currentInternetReachabilityCheckHandler) {
-        tmp._currentInternetReachabilityCheckHandler.cancel();
-        tmp._currentInternetReachabilityCheckHandler = null;
-        const _currentInternetReachabilityCheckHandler = tmp._currentInternetReachabilityCheckHandler;
+        self._currentInternetReachabilityCheckHandler.cancel();
+        self._currentInternetReachabilityCheckHandler = null;
+        const _currentInternetReachabilityCheckHandler = self._currentInternetReachabilityCheckHandler;
       }
       if (null !== self._currentTimeoutHandle) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp._currentTimeoutHandle);
-        tmp._currentTimeoutHandle = null;
+        clearTimeout(self._currentTimeoutHandle);
+        self._currentTimeoutHandle = null;
       }
     };
     this._configuration = global;

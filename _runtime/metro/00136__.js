@@ -1,6 +1,7 @@
 // _runtime/metro/00136__.js
 import renderElement from "../00114_renderElement.js";
 import _mod137 from "00137__.js";
+import ReactNativeDocumentElementInstanceHandleImpl from "../00138_ReactNativeDocumentElementInstanceHandleImpl.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -80,11 +81,13 @@ export const getNativeNodeReference = function getNativeNodeReference(target) {
 export const getNativeElementReference = function getNativeElementReference(c5) {
   if (obj.isReactNativeDocumentElementInstanceHandle(c5[closure_4])) {
     let nativeElementReferenceFromReactNativeDocumentElementInstanceHandle =
-      tmp2(138).getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(tmp);
-    const tmp2Result = tmp2(138);
+      ReactNativeDocumentElementInstanceHandleImpl.getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(
+        tmp,
+      );
+    const tmp2Result = ReactNativeDocumentElementInstanceHandleImpl;
   } else {
     if (null == closure_2) {
-      closure_2 = tmp2(114).getNodeFromInternalInstanceHandle;
+      closure_2 = renderElement.getNodeFromInternalInstanceHandle;
     }
     nativeElementReferenceFromReactNativeDocumentElementInstanceHandle = closure_2(tmp);
   }

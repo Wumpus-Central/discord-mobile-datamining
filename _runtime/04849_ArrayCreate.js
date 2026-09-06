@@ -1,24 +1,28 @@
 // _runtime/04849_ArrayCreate.js
 import _mod1282 from "metro/01282__.js";
 import _mod1283 from "metro/01283__.js";
+import _mod1302 from "metro/01302__.js";
+import _mod1304 from "metro/01304__.js";
 import _mod4846 from "metro/04846__.js";
+import _mod4850 from "metro/04850__.js";
+import _mod4851 from "metro/04851__.js";
 
 let closure_2 = _mod1282("%Array.prototype%");
 
 export default function ArrayCreate(arg0) {
   if (_mod4846(arg0)) {
     if (arg0 >= 0) {
-      if (arg0 > tmp(4850)) {
-        const tmp12 = new tmp(1302)("length is greater than (2**32 - 1)");
+      if (arg0 > _mod4850) {
+        const tmp12 = new _mod1302("length is greater than (2**32 - 1)");
         throw tmp12;
       } else {
         const tmp3 = arguments.length > 1 ? arguments[1] : closure_2;
         const items = [];
         if (tmp3 !== closure_2) {
-          if (tmp(4851)) {
-            tmp(4851)(items, tmp3);
+          if (_mod4851) {
+            _mod4851(items, tmp3);
           } else {
-            const tmp7 = new tmp(1304)(
+            const tmp7 = new _mod1304(
               "ArrayCreate: a `proto` argument that is not `Array.prototype` is not supported in an environment that does not support setting the [[Prototype]]",
             );
             throw tmp7;

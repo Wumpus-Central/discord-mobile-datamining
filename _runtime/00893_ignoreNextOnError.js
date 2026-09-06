@@ -9,7 +9,7 @@ function ignoreNextOnError() {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_2 = 0;
-function wrap(__sentry_wrapped__, extra) {
+function wrap(__sentry_wrapped__) {
   _require = __sentry_wrapped__;
   let tmp2;
   if (extra === undefined) {
@@ -65,7 +65,6 @@ function wrap(__sentry_wrapped__, extra) {
           }
           try {
             for (const key10019 in arg0) {
-              let tmp17 = key10019;
               let _Object = Object;
               hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
@@ -77,7 +76,7 @@ function wrap(__sentry_wrapped__, extra) {
               if (!hasOwnPropertyResult) {
                 continue;
               } else {
-                sentryWrapped[tmp17] = arg0[tmp17];
+                sentryWrapped[key10019] = arg0[key10019];
                 continue;
               }
               continue;

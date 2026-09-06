@@ -279,7 +279,7 @@ const items = [
               if (!start.isCertain("meridiem")) {
                 if (num7 == AbstractTimeExpressionParser(10437).Meridiem.AM) {
                   const start4 = start.start;
-                  start4.imply("meridiem", tmp20(10437).Meridiem.AM);
+                  start4.imply("meridiem", AbstractTimeExpressionParser(10437).Meridiem.AM);
                   const start5 = start.start;
                   tmp10 = num7;
                   tmp11 = tmp16;
@@ -291,7 +291,7 @@ const items = [
                   }
                 } else {
                   const start2 = start.start;
-                  start2.imply("meridiem", tmp20(10437).Meridiem.PM);
+                  start2.imply("meridiem", AbstractTimeExpressionParser(10437).Meridiem.PM);
                   const start3 = start.start;
                   tmp10 = num7;
                   tmp11 = tmp16;

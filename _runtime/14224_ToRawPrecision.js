@@ -16,7 +16,6 @@ export const ToRawPrecision = function ToRawPrecision(
   let ceilResult1;
   let floorResult;
   let timesResult;
-  let tmp4;
   if (ZERO.isZero()) {
     let repeatResult = _mod14206.repeat("0", maximumSignificantDigits);
     let roundedNumber = TEN.ZERO;
@@ -32,14 +31,13 @@ export const ToRawPrecision = function ToRawPrecision(
     const plusResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits);
     let ceilResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits).minus(1).ceil();
     while (true) {
-      tmp4 = digitsToString;
       let _default3 = digitsToString.default;
       let minusResult1 = ceilResult.minus(maximumSignificantDigits);
       let divResult1 = ZERO.div(_default3.pow(10, minusResult1.plus(1)));
       floorResult = divResult1.floor();
       if (floorResult.lessThan(powResult)) {
         if (floorResult.greaterThanOrEqualTo(powResult1)) {
-          let _default4 = tmp4.default;
+          let _default4 = digitsToString.default;
           let minusResult2 = ceilResult.minus(maximumSignificantDigits);
           timesResult = floorResult.times(_default4.pow(10, minusResult2.plus(1)));
           if (timesResult.lessThanOrEqualTo(ZERO)) {
@@ -50,24 +48,23 @@ export const ToRawPrecision = function ToRawPrecision(
       ceilResult = ceilResult.minus(1);
       continue;
     }
-    const powResult2 = tmp4.default.pow(10, maximumSignificantDigits);
-    const _default5 = tmp4.default;
-    const _default6 = tmp4.default;
+    const powResult2 = digitsToString.default.pow(10, maximumSignificantDigits);
+    const _default5 = digitsToString.default;
+    const _default6 = digitsToString.default;
     const minusResult = ZERO.div(powResult1).log(10).plus(maximumSignificantDigits).minus(1);
-    const powResult3 = tmp4.default.pow(10, maximumSignificantDigits - 1);
+    const powResult3 = digitsToString.default.pow(10, maximumSignificantDigits - 1);
     const divResult2 = ZERO.div(powResult2);
     const logResult1 = ZERO.div(powResult2).log(10);
     const plusResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits);
     let floorResult1 = ZERO.div(powResult2).log(10).plus(maximumSignificantDigits).minus(1).floor();
     while (true) {
       let _default7 = digitsToString.default;
-      let tmp8 = digitsToString;
       let minusResult4 = floorResult1.minus(maximumSignificantDigits);
       let divResult3 = ZERO.div(_default7.pow(10, minusResult4.plus(1)));
       ceilResult1 = divResult3.ceil();
       if (ceilResult1.lessThan(powResult2)) {
         if (ceilResult1.greaterThanOrEqualTo(powResult3)) {
-          let _default8 = tmp8.default;
+          let _default8 = digitsToString.default;
           let minusResult5 = floorResult1.minus(maximumSignificantDigits);
           roundedNumber = ceilResult1.times(_default8.pow(10, minusResult5.plus(1)));
           if (roundedNumber.greaterThanOrEqualTo(ZERO)) {

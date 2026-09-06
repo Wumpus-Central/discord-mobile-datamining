@@ -146,7 +146,7 @@ class FlatList {
               let tmp8 = null;
               if (null != tmp2Result) {
                 obj = { children: tmp2Result };
-                tmp8 = < key={arg1}>{tmp2Result}</>;
+                tmp8 = < key={index}>{tmp2Result}</>;
               }
               return tmp8;
             } else {
@@ -318,15 +318,16 @@ let items = [
       }
       FlatList(38)(tmp4, "FlatList does not support custom data formats.");
       if (num > 1) {
-        tmp(38)(!horizontal, "numColumns does not support horizontal.");
+        FlatList(38)(!horizontal, "numColumns does not support horizontal.");
       } else {
-        tmp(38)(!columnWrapperStyle, "columnWrapperStyle not supported for single column lists");
+        FlatList(38)(!columnWrapperStyle, "columnWrapperStyle not supported for single column lists");
       }
       const tmp3 = FlatList(38);
       if (onViewableItemsChanged) {
         onViewableItemsChanged = viewabilityConfigCallbackPairs;
       }
       FlatList(38)(!onViewableItemsChanged, "FlatList does not support setting both onViewableItemsChanged and viewabilityConfigCallbackPairs.");
+      const tmpResult = FlatList(38);
     }
   },
   {
@@ -393,14 +394,13 @@ let items = [
       const tmp = undefined !== strictMode && strictMode;
       const tmp2 = _objectWithoutProperties(props, closure_4);
       const tmp3 = undefined !== strictMode && strictMode ? self._memoizedRenderer : self._renderer;
-      const tmp4 = jsx;
       const result = _modAll27.shouldUseRemoveClippedSubviewsAsDefaultOnIOS();
       if (removeClippedSubviews == null) {
         removeClippedSubviews = true;
       }
       obj.removeClippedSubviews = removeClippedSubviews;
       const merged1 = Object.assign(tmp3(self.props.ListItemComponent, self.props.renderItem, columnWrapperStyle, numColumns, self.props.extraData));
-      return tmp4(get_VirtualizedListDefault.VirtualizedList, obj);
+      return jsx(get_VirtualizedListDefault.VirtualizedList, {});
     }
   }
 ];

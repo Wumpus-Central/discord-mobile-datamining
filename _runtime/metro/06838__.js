@@ -14,7 +14,7 @@ export const useBottomSheetTimingConfigs = (arg0) => {
       ANIMATION_EASING = GESTURE_SOURCE.ANIMATION_EASING;
     }
     const obj = { easing: ANIMATION_EASING, duration: null, reduceMotion: null };
-    let ANIMATION_DURATION = tmp.duration;
+    let ANIMATION_DURATION = easing.duration;
     if (!ANIMATION_DURATION) {
       ANIMATION_DURATION = GESTURE_SOURCE.ANIMATION_DURATION;
     }

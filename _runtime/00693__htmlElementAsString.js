@@ -23,7 +23,7 @@ function _htmlElementAsString(tagName, arr) {
         }
       }
     }
-    items.push(tagName.tagName.toLowerCase());
+    arr = items.push(tagName.tagName.toLowerCase());
     let length;
     if (arr != null) {
       length = arr.length;
@@ -47,7 +47,7 @@ function _htmlElementAsString(tagName, arr) {
     } else {
       if (tagName.id) {
         const _HermesInternal = HermesInternal;
-        items.push("#" + tagName.id);
+        arr = items.push("#" + tagName.id);
       }
       if (tagName.className) {
         if (tmp2Result.isString(str4)) {
@@ -165,7 +165,7 @@ export const htmlTreeAsString = function htmlTreeAsString(arg0) {
                   } else {
                     if (sum <= 1) {
                       continue;
-                    } else if (num2 + 3 * items.length + arr2.length >= tmp5) {
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
                       break;
                     }
                     continue;

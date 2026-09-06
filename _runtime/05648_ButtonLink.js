@@ -43,14 +43,13 @@ function ButtonBase(variant) {
   } else if ("filled" === str) {
     let str4 = "white";
     if (!obj11.isDark()) {
-      let obj1 = tmp9(5640)(color);
+      let obj1 = ColorDefault(color);
       str4 = obj1.darken(0.71).string();
       const darkenResult = obj1.darken(0.71);
     }
     tmp5 = str4;
     str3 = color;
     obj11 = ColorDefault(color);
-    tmp9 = importDefault;
   }
   obj = {};
   const merged1 = Object.assign(merged);

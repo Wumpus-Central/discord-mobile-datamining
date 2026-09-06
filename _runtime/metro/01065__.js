@@ -87,7 +87,7 @@ let items = [
         }
       }
       const merged2 = Object.assign(merged1, triggerButton);
-      let tmpResult = tmp(1067);
+      let tmpResult = FeedbackButton(1067);
       const styles2 = self.props.styles;
       let triggerText;
       const merged3 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerText);
@@ -97,7 +97,7 @@ let items = [
         }
       }
       const style = Object.assign(merged3, triggerText);
-      tmpResult = tmp(1067);
+      tmpResult = FeedbackButton(1067);
       const styles3 = self.props.styles;
       let triggerIcon;
       const merged5 = Object.assign({}, tmpResult.defaultButtonStyles(theme).triggerIcon);
@@ -111,7 +111,7 @@ let items = [
       obj.onPress = FeedbackButton(1062).showFeedbackWidget;
       obj.accessibilityLabel = merged.triggerAriaLabel;
       obj = { source: null, style: null };
-      obj1 = { uri: tmp(1068).feedbackIcon };
+      obj1 = { uri: FeedbackButton(1068).feedbackIcon };
       obj.source = obj1;
       obj.style = merged6;
       const element = <React5 source={null} style={null} />;

@@ -21,9 +21,9 @@ export default function isArguments(callee) {
     if (!tmp4) {
       tmp3 = tmp4;
     } else {
-      const call2 = tmp.call;
+      const call2 = toString.call;
       const str2 = "[object Function]";
-      const tmp6 = typeof call2 === "unknown" ? tmp() : call2(str2);
+      const tmp6 = typeof call2 === "unknown" ? toString() : call2(str2);
     }
   }
   return tmp3;

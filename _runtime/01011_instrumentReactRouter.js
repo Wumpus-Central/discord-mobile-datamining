@@ -4,14 +4,14 @@ import feedbackAsyncIntegration from "00889_feedbackAsyncIntegration.js";
 import _slicedToArray from "metro/00032__.js";
 import noop from "metro/00019__.js";
 
-function instrumentReactRouter(f108154, arg1, arg2, location, reactrouter_v4, arg5, arg6) {
+function instrumentReactRouter(f108154, arg1, arg2, location, reactrouter_v4) {
   _require = f108154;
   dependencyMap = reactrouter_v4;
-  let items = arg5;
-  if (arg5 === undefined) {
+  let items = _slicedToArray;
+  if (_slicedToArray === undefined) {
     items = [];
   }
-  closure_3 = arg6;
+  closure_3 = noop;
   function normalizeTransactionName(pathname) {
     if (0 !== items.length) {
       if (closure_3) {

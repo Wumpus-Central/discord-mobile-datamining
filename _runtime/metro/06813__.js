@@ -55,7 +55,7 @@ const memoResult = memo(function BottomSheetBodyComponent(children) {
       }, items1)}
       collapsable
     >
-      {arg0.children}
+      {children.children}
     </View>
   );
 });

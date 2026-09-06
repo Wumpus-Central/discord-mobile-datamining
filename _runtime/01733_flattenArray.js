@@ -23,28 +23,28 @@ export const flattenArray = function flattenArray(style) {
                             throw new TypeError("Trying to call a non-function");
                           }
                         } else {
-                          closure_1_0.push(arr);
+                          arr = closure_1_0.push(arr);
                         }
                       });
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
                   } else {
-                    closure_1_0.push(arr);
+                    arr = closure_1_0.push(arr);
                   }
                 });
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
             } else {
-              closure_1_0.push(arr);
+              arr = closure_1_0.push(arr);
             }
           });
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       } else {
-        closure_1_0.push(arr);
+        arr = closure_1_0.push(arr);
       }
     });
     return items;

@@ -1,4 +1,5 @@
 // _runtime/00935__onInp.js
+import _mod682 from "metro/00682__.js";
 import _mod899 from "metro/00899__.js";
 import _mod904 from "metro/00904__.js";
 
@@ -37,8 +38,7 @@ let closure_5 = {
   input: "press",
 };
 function _onInp(metric) {
-  const iter = metric.metric;
-  if (null != iter.value) {
+  if (null != metric.metric.value) {
     const msToSecResult = iter(924).msToSec(iter.value);
     if (msToSecResult <= 60) {
       const entries = iter.entries;
@@ -124,11 +124,11 @@ export const registerInpInteractionListener = function registerInpInteractionLis
         captureElementFromEvent(682).htmlTreeAsString(target),
       );
       if (map1.size > 50) {
-        value = obj2.keys().next().value;
+        value = map1.keys().next().value;
         if (undefined !== value) {
-          obj2.delete(value);
+          map1.delete(value);
         }
-        const iter = obj2.keys();
+        const iter = map1.keys();
       }
       const htmlTreeAsStringResult = captureElementFromEvent(682).htmlTreeAsString(target);
     }
@@ -146,8 +146,8 @@ export const registerInpInteractionListener = function registerInpInteractionLis
     const activeSpan = rootSpan(682).getActiveSpan();
     rootSpan = activeSpan;
     if (activeSpan) {
-      rootSpan = rootSpan(682).getRootSpan(activeSpan);
-      let tmpResult = rootSpan(682);
+      rootSpan = tmp(682).getRootSpan(activeSpan);
+      let tmpResult = tmp(682);
     }
     const item = entries.forEach((interactionId) => {
       let obj = captureElementFromEvent(899);
@@ -189,17 +189,20 @@ export const registerInpInteractionListener = function registerInpInteractionLis
         }
       }
     });
+    let obj = rootSpan(682);
+    tmp = rootSpan;
   }
   let tmpResult = tmp(899);
   let result = tmpResult.addPerformanceInstrumentationHandler("event", handleEntries);
   tmpResult = tmp(899);
   const result1 = tmpResult.addPerformanceInstrumentationHandler("first-input", handleEntries);
+  obj = captureElementFromEvent(682);
 };
 export const startTrackingINP = function startTrackingINP() {
   if (obj.getBrowserPerformanceAPI()) {
-    let tmpResult = tmp(682);
+    let tmpResult = _mod682;
     if (tmpResult.browserPerformanceTimeOrigin()) {
-      tmpResult = tmp(899);
+      tmpResult = _mod899;
       closure_0 = tmpResult.addInpInstrumentationHandler(_onInp);
       return () => {
         closure_0();

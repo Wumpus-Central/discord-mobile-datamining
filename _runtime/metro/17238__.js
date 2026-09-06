@@ -286,7 +286,7 @@ obj = {
                   }
                 }
                 if (str8 !== tmp57) {
-                  tmp80Result = tmp80();
+                  tmp80Result = peg$parse_();
                   if (tmp80Result !== tmp57) {
                     if (str5.substr(closure_70, 6) === number) {
                       closure_70 = closure_70 + 6;
@@ -340,7 +340,7 @@ obj = {
                       }
                     }
                     if (tmp95 !== tmp57) {
-                      if (tmp80() !== tmp57) {
+                      if (peg$parse_() !== tmp57) {
                         if (num5 === str5.charCodeAt(closure_70)) {
                           let tmp123 = c11;
                           closure_70 = closure_70 + 1;
@@ -360,7 +360,7 @@ obj = {
                         }
                         let tmp129 = tmp57;
                         if (tmp123 !== tmp57) {
-                          tmp80Result = tmp80();
+                          tmp80Result = peg$parse_();
                           tmp129 = tmp57;
                           if (tmp80Result !== tmp57) {
                             let tmp134 = peg$parsechar();
@@ -457,7 +457,7 @@ obj = {
                                       }
                                     }
                                     if (tmp152 !== tmp119) {
-                                      if (tmp148() !== tmp119) {
+                                      if (peg$parse_() !== tmp119) {
                                         const tmp159 = peg$parsepluralStyle();
                                         if (tmp159 !== tmp119) {
                                           if (typeof peg$c24 === "function") {
@@ -507,7 +507,7 @@ obj = {
                                                     }
                                                   }
                                                   if (tmp173 !== tmp119) {
-                                                    if (tmp169() !== tmp119) {
+                                                    if (peg$parse_() !== tmp119) {
                                                       const tmp180 = peg$parsepluralStyle();
                                                       if (tmp180 !== tmp119) {
                                                         if (typeof peg$c27 === "function") {
@@ -560,7 +560,7 @@ obj = {
                                                                   }
                                                                 }
                                                                 if (tmp195 !== tmp119) {
-                                                                  if (tmp192() !== tmp119) {
+                                                                  if (peg$parse_() !== tmp119) {
                                                                     let tmp201 = peg$parseoptionalFormatPattern();
                                                                     if (tmp201 !== tmp119) {
                                                                       const items8 = [];
@@ -599,7 +599,6 @@ obj = {
                                                               } else {
                                                                 closure_70 = tmp240;
                                                               }
-                                                              tmp192 = peg$parse_;
                                                             } else {
                                                               closure_70 = tmp240;
                                                             }
@@ -613,7 +612,6 @@ obj = {
                                                   closure_70 = tmp237;
                                                   tmp170 = obj;
                                                 }
-                                                tmp169 = peg$parse_;
                                               }
                                               closure_70 = tmp237;
                                               tmp170 = obj;
@@ -629,7 +627,6 @@ obj = {
                                     closure_70 = tmp234;
                                     tmp149 = obj;
                                   }
-                                  tmp148 = peg$parse_;
                                 }
                                 closure_70 = tmp234;
                                 tmp149 = obj;
@@ -767,7 +764,7 @@ obj = {
             tmp18 = tmp19;
           }
           if (substr !== tmp3) {
-            if (tmp2() !== tmp3) {
+            if (peg$parse_() !== tmp3) {
               if (123 === str.charCodeAt(closure_70)) {
                 let tmp28 = c8;
                 closure_70 = closure_70 + 1;
@@ -786,7 +783,7 @@ obj = {
                 }
               }
               if (tmp28 !== tmp3) {
-                if (tmp2() !== tmp3) {
+                if (peg$parse_() !== tmp3) {
                   const items2 = [];
                   let tmp35 = peg$parsemessageFormatElement();
                   if (tmp35 !== tmp18) {
@@ -806,8 +803,8 @@ obj = {
                     }
                   }
                   if (tmp38 !== tmp3) {
-                    if (tmp2() !== tmp3) {
-                      if (125 === obj2.charCodeAt(closure_70)) {
+                    if (peg$parse_() !== tmp3) {
+                      if (125 === str.charCodeAt(closure_70)) {
                         let tmp42 = c13;
                         closure_70 = closure_70 + 1;
                       } else {
@@ -841,7 +838,6 @@ obj = {
               }
               closure_70 = tmp;
               tmp4 = obj;
-              obj2 = str;
             }
           }
           closure_70 = tmp;
@@ -938,41 +934,39 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === diff) {
-          charAtResult = tmp;
+          charAtResult = obj;
           if (closure_70 >= closure_71) {
             if (tmp5 > closure_71) {
               closure_71 = tmp5;
               closure_72 = [];
             }
             closure_72.push(tmp4);
-            charAtResult = tmp;
+            charAtResult = obj;
           }
         }
       }
       if (charAtResult !== obj) {
         const items = [];
         let tmp12 = items;
-        let tmp13 = tmp10;
+        let tmp13 = obj;
         if (tmp11) {
           do {
             let arr = items.push(charAtResult);
-            let str2 = str;
             if (re40.test(str.charAt(closure_70))) {
-              charAtResult1 = str2.charAt(closure_70);
+              charAtResult1 = str.charAt(closure_70);
               closure_70 = closure_70 + 1;
             } else {
-              let tmp17 = obj;
               charAtResult1 = obj;
               if (0 === diff) {
                 let tmp21 = closure_70;
-                charAtResult1 = tmp17;
+                charAtResult1 = obj;
                 if (closure_70 >= closure_71) {
                   if (tmp21 > closure_71) {
                     closure_71 = tmp21;
                     closure_72 = [];
                   }
                   let arr1 = closure_72.push(tmp20);
-                  charAtResult1 = tmp17;
+                  charAtResult1 = obj;
                 }
               }
             }
@@ -983,7 +977,7 @@ obj = {
         }
       } else {
         tmp12 = obj;
-        tmp13 = tmp10;
+        tmp13 = obj;
       }
       diff = diff - 1;
       if (tmp12 === tmp13) {
@@ -1018,8 +1012,8 @@ obj = {
       if (items === tmp3) {
         if (0 === diff) {
           if (closure_70 >= closure_71) {
-            if (tmp10 > closure_71) {
-              closure_71 = tmp10;
+            if (closure_70 > closure_71) {
+              closure_71 = closure_70;
               closure_72 = [];
             }
             closure_72.push(tmp9);
@@ -1036,14 +1030,14 @@ obj = {
       } else {
         tmp3 = obj;
         if (0 === diff) {
-          tmp3 = tmp;
+          tmp3 = obj;
           if (closure_70 >= closure_71) {
             if (tmp5 > closure_71) {
               closure_71 = tmp5;
               closure_72 = [];
             }
             closure_72.push(tmp4);
-            tmp3 = tmp;
+            tmp3 = obj;
           }
         }
       }
@@ -1053,66 +1047,64 @@ obj = {
           let charAtResult = str.charAt(closure_70);
           closure_70 = closure_70 + 1;
         } else {
-          charAtResult = tmp9;
+          charAtResult = obj;
           if (0 === diff) {
-            charAtResult = tmp9;
+            charAtResult = obj;
             if (closure_70 >= closure_71) {
               if (tmp14 > closure_71) {
                 closure_71 = tmp14;
                 closure_72 = [];
               }
               closure_72.push(tmp13);
-              charAtResult = tmp9;
+              charAtResult = obj;
             }
           }
         }
-        if (charAtResult !== tmp9) {
+        if (charAtResult !== obj) {
           if (re43.test(str.charAt(closure_70))) {
             let charAtResult1 = str.charAt(closure_70);
             closure_70 = closure_70 + 1;
           } else {
-            charAtResult1 = tmp9;
+            charAtResult1 = obj;
             if (0 === diff) {
-              charAtResult1 = tmp9;
+              charAtResult1 = obj;
               if (closure_70 >= closure_71) {
                 if (tmp26 > closure_71) {
                   closure_71 = tmp26;
                   closure_72 = [];
                 }
                 closure_72.push(tmp25);
-                charAtResult1 = tmp9;
+                charAtResult1 = obj;
               }
             }
           }
           const items = [];
           let tmp31 = str;
-          let tmp32 = tmp9;
-          if (charAtResult1 !== tmp9) {
+          let tmp32 = obj;
+          if (charAtResult1 !== obj) {
             do {
               let arr2 = items.push(charAtResult1);
-              let str3 = str;
               if (re43.test(str.charAt(closure_70))) {
-                charAtResult2 = str3.charAt(closure_70);
+                charAtResult2 = str.charAt(closure_70);
                 closure_70 = closure_70 + 1;
               } else {
-                let tmp36 = obj;
                 charAtResult2 = obj;
                 if (0 === diff) {
                   let tmp40 = closure_70;
-                  charAtResult2 = tmp36;
+                  charAtResult2 = obj;
                   if (closure_70 >= closure_71) {
                     if (tmp40 > closure_71) {
                       closure_71 = tmp40;
                       closure_72 = [];
                     }
                     let arr3 = closure_72.push(tmp39);
-                    charAtResult2 = tmp36;
+                    charAtResult2 = obj;
                   }
                 }
               }
               tmp32 = obj;
               charAtResult1 = charAtResult2;
-              tmp31 = str3;
+              tmp31 = str;
             } while (charAtResult2 !== obj);
           }
           if (items !== tmp32) {
@@ -1130,7 +1122,7 @@ obj = {
           closure_70 = tmp49;
           substr = obj;
           str2 = str;
-          tmp20 = tmp9;
+          tmp20 = obj;
         }
         if (substr !== tmp20) {
           substr = str2.substring(tmp49, closure_70);
@@ -1154,217 +1146,217 @@ obj = {
         let charAtResult = str.charAt(closure_70);
         closure_70 = closure_70 + 1;
       } else {
-        charAtResult = obj;
+        charAtResult = re45;
         if (0 === diff) {
-          charAtResult = tmp;
+          charAtResult = re45;
           if (closure_70 >= closure_71) {
             if (tmp5 > closure_71) {
               closure_71 = tmp5;
               closure_72 = [];
             }
             closure_72.push(tmp4);
-            charAtResult = tmp;
+            charAtResult = re45;
           }
         }
       }
-      if (charAtResult === obj) {
+      if (charAtResult === re45) {
         if (str.substr(closure_70, 2) === c54) {
           closure_70 = closure_70 + 2;
           let str2 = tmp88;
         } else {
-          str2 = tmp10;
+          str2 = re45;
           if (0 === diff) {
-            str2 = tmp10;
+            str2 = re45;
             if (closure_70 >= closure_71) {
               if (tmp13 > closure_71) {
                 closure_71 = tmp13;
                 closure_72 = [];
               }
               closure_72.push(tmp12);
-              str2 = tmp10;
+              str2 = re45;
             }
           }
         }
-        if (str2 !== tmp10) {
+        if (str2 !== re45) {
           str2 = "\\";
           if (typeof peg$c55 !== "function") {
             throw new TypeError("Trying to call a non-function");
           }
         }
-        if (str2 === tmp10) {
+        if (str2 === re45) {
           if (str.substr(closure_70, 2) === c57) {
             closure_70 = closure_70 + 2;
             let str3 = tmp90;
           } else {
-            str3 = tmp10;
+            str3 = re45;
             if (0 === diff) {
-              str3 = tmp10;
+              str3 = re45;
               if (closure_70 >= closure_71) {
                 if (tmp20 > closure_71) {
                   closure_71 = tmp20;
                   closure_72 = [];
                 }
                 closure_72.push(tmp19);
-                str3 = tmp10;
+                str3 = re45;
               }
             }
           }
-          if (str3 !== tmp10) {
+          if (str3 !== re45) {
             str3 = "\\#";
             if (typeof peg$c58 !== "function") {
               throw new TypeError("Trying to call a non-function");
             }
           }
-          if (str3 === tmp10) {
+          if (str3 === re45) {
             if (str.substr(closure_70, 2) === c60) {
               closure_70 = closure_70 + 2;
               let str4 = tmp92;
             } else {
-              str4 = tmp10;
+              str4 = re45;
               if (0 === diff) {
-                str4 = tmp10;
+                str4 = re45;
                 if (closure_70 >= closure_71) {
                   if (tmp27 > closure_71) {
                     closure_71 = tmp27;
                     closure_72 = [];
                   }
                   closure_72.push(tmp26);
-                  str4 = tmp10;
+                  str4 = re45;
                 }
               }
             }
-            if (str4 !== tmp10) {
+            if (str4 !== re45) {
               str4 = "{";
               if (typeof peg$c61 !== "function") {
                 throw new TypeError("Trying to call a non-function");
               }
             }
-            if (str4 === tmp10) {
+            if (str4 === re45) {
               if (str.substr(closure_70, 2) === c63) {
                 closure_70 = closure_70 + 2;
                 let str5 = tmp94;
               } else {
-                str5 = tmp10;
+                str5 = re45;
                 if (0 === diff) {
-                  str5 = tmp10;
+                  str5 = re45;
                   if (closure_70 >= closure_71) {
                     if (tmp34 > closure_71) {
                       closure_71 = tmp34;
                       closure_72 = [];
                     }
                     closure_72.push(tmp33);
-                    str5 = tmp10;
+                    str5 = re45;
                   }
                 }
               }
-              if (str5 !== tmp10) {
+              if (str5 !== re45) {
                 str5 = "}";
                 if (typeof peg$c64 !== "function") {
                   throw new TypeError("Trying to call a non-function");
                 }
               }
-              if (str5 !== tmp10) {
+              if (str5 !== re45) {
                 str4 = str5;
               } else {
                 if (str.substr(closure_70, 2) === c66) {
                   closure_70 = closure_70 + 2;
                   let tmp40 = tmp97;
                 } else {
-                  tmp40 = tmp10;
+                  tmp40 = re45;
                   if (0 === diff) {
-                    tmp40 = tmp10;
+                    tmp40 = re45;
                     if (closure_70 >= closure_71) {
                       if (tmp42 > closure_71) {
                         closure_71 = tmp42;
                         closure_72 = [];
                       }
                       closure_72.push(tmp41);
-                      tmp40 = tmp10;
+                      tmp40 = re45;
                     }
                   }
                 }
-                if (tmp40 === tmp10) {
+                if (tmp40 === re45) {
                   closure_70 = tmp95;
                 }
                 if (re45.test(str.charAt(closure_70))) {
                   let charAtResult1 = str.charAt(closure_70);
                   closure_70 = closure_70 + 1;
                 } else {
-                  charAtResult1 = tmp10;
+                  charAtResult1 = re45;
                   if (0 === diff) {
-                    charAtResult1 = tmp10;
+                    charAtResult1 = re45;
                     if (closure_70 >= closure_71) {
                       if (tmp51 > closure_71) {
                         closure_71 = tmp51;
                         closure_72 = [];
                       }
                       closure_72.push(tmp50);
-                      charAtResult1 = tmp10;
+                      charAtResult1 = re45;
                     }
                   }
                 }
-                if (charAtResult1 !== tmp10) {
-                  if (obj.test(str.charAt(closure_70))) {
+                if (charAtResult1 !== re45) {
+                  if (re45.test(str.charAt(closure_70))) {
                     let charAtResult2 = str.charAt(closure_70);
                     closure_70 = closure_70 + 1;
                   } else {
-                    charAtResult2 = tmp10;
+                    charAtResult2 = re45;
                     if (0 === diff) {
-                      charAtResult2 = tmp10;
+                      charAtResult2 = re45;
                       if (closure_70 >= closure_71) {
                         if (tmp59 > closure_71) {
                           closure_71 = tmp59;
                           closure_72 = [];
                         }
                         closure_72.push(tmp58);
-                        charAtResult2 = tmp10;
+                        charAtResult2 = re45;
                       }
                     }
                   }
-                  if (charAtResult2 !== tmp10) {
-                    if (obj.test(str.charAt(closure_70))) {
+                  if (charAtResult2 !== re45) {
+                    if (re45.test(str.charAt(closure_70))) {
                       let charAtResult3 = str.charAt(closure_70);
                       closure_70 = closure_70 + 1;
                     } else {
-                      charAtResult3 = tmp10;
+                      charAtResult3 = re45;
                       if (0 === diff) {
-                        charAtResult3 = tmp10;
+                        charAtResult3 = re45;
                         if (closure_70 >= closure_71) {
                           if (tmp67 > closure_71) {
                             closure_71 = tmp67;
                             closure_72 = [];
                           }
                           closure_72.push(tmp66);
-                          charAtResult3 = tmp10;
+                          charAtResult3 = re45;
                         }
                       }
                     }
-                    if (charAtResult3 !== tmp10) {
-                      if (obj.test(str.charAt(closure_70))) {
+                    if (charAtResult3 !== re45) {
+                      if (re45.test(str.charAt(closure_70))) {
                         let charAtResult4 = str.charAt(closure_70);
                         closure_70 = closure_70 + 1;
                       } else {
-                        charAtResult4 = tmp10;
+                        charAtResult4 = re45;
                         if (0 === diff) {
-                          charAtResult4 = tmp10;
+                          charAtResult4 = re45;
                           if (closure_70 >= closure_71) {
                             if (tmp75 > closure_71) {
                               closure_71 = tmp75;
                               closure_72 = [];
                             }
                             closure_72.push(tmp74);
-                            charAtResult4 = tmp10;
+                            charAtResult4 = re45;
                           }
                         }
                       }
-                      if (charAtResult4 !== tmp10) {
+                      if (charAtResult4 !== re45) {
                         const items = [charAtResult1, charAtResult2, charAtResult3, charAtResult4];
                         let substr = items;
                       }
-                      if (substr !== tmp10) {
+                      if (substr !== re45) {
                         substr = str.substring(tmp46, closure_70);
                       }
-                      if (substr !== tmp10) {
+                      if (substr !== re45) {
                         if (typeof peg$c67 === "function") {
                           const _String = String;
                           const _parseInt = parseInt;
@@ -1374,13 +1366,13 @@ obj = {
                         }
                       } else {
                         closure_70 = tmp95;
-                        fromCharCodeResult = obj;
+                        fromCharCodeResult = re45;
                       }
                     }
                   }
                 }
                 closure_70 = tmp46;
-                substr = obj;
+                substr = re45;
               }
             }
             str3 = str4;
@@ -1495,6 +1487,7 @@ obj = {
         peg$parsestart = obj[tmp.startRule];
       } else {
         const _Error = Error;
+        str = "Can't start parsing from rule \"";
         const error = new Error("Can't start parsing from rule \"" + tmp.startRule + '".');
         throw error;
       }
@@ -1638,7 +1631,7 @@ obj = {
         .replace(/\r/g, "\\r")
         .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
           str = str.charCodeAt(0);
-          return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+          return "\\x0" + str.toString(16).toUpperCase();
         });
       const str24 = charAtResult1
         .replace(/\\/g, "\\\\")
@@ -1650,11 +1643,11 @@ obj = {
         .replace(/\r/g, "\\r")
         .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
           str = str.charCodeAt(0);
-          return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+          return "\\x0" + str.toString(16).toUpperCase();
         })
         .replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
           str = str.charCodeAt(0);
-          return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+          return "\\x" + str.toString(16).toUpperCase();
         });
       str9 = `${
         '"' +
@@ -1668,19 +1661,19 @@ obj = {
           .replace(/\r/g, "\\r")
           .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
             str = str.charCodeAt(0);
-            return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+            return "\\x0" + str.toString(16).toUpperCase();
           })
           .replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
             str = str.charCodeAt(0);
-            return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+            return "\\x" + str.toString(16).toUpperCase();
           })
           .replace(/[\u0180-\u0FFF]/g, (str) => {
             str = str.charCodeAt(0);
-            return "\\u0" + str.charCodeAt(0).toString(16).toUpperCase();
+            return "\\u0" + str.toString(16).toUpperCase();
           })
           .replace(/[\u1080-\uFFFF]/g, (str) => {
             str = str.charCodeAt(0);
-            return "\\u" + str.charCodeAt(0).toString(16).toUpperCase();
+            return "\\u" + str.toString(16).toUpperCase();
           })
       }"`;
       const str25 = charAtResult1
@@ -1693,15 +1686,15 @@ obj = {
         .replace(/\r/g, "\\r")
         .replace(/[\x00-\x07\x0B\x0E\x0F]/g, (str) => {
           str = str.charCodeAt(0);
-          return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+          return "\\x0" + str.toString(16).toUpperCase();
         })
         .replace(/[\x10-\x1F\x80-\xFF]/g, (str) => {
           str = str.charCodeAt(0);
-          return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+          return "\\x" + str.toString(16).toUpperCase();
         })
         .replace(/[\u0180-\u0FFF]/g, (str) => {
           str = str.charCodeAt(0);
-          return "\\u0" + str.charCodeAt(0).toString(16).toUpperCase();
+          return "\\u0" + str.toString(16).toUpperCase();
         });
     }
     const combined = text1 + " but " + str9 + " found.";

@@ -1,5 +1,9 @@
 // _runtime/metro/12836__.js
+import _mod12797 from "12797__.js";
+import _mod12824 from "12824__.js";
+import _mod12825 from "12825__.js";
 import _mod12829 from "12829__.js";
+import _mod12837 from "12837__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -7,7 +11,7 @@ const dependencyMap = arg6;
 export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
   let obj = _mod12829;
   if (obj.hasTracingEnabled(tracesSampler)) {
-    let tmpResult = tmp(12824);
+    let tmpResult = _mod12824;
     const isolationScope = tmpResult.getIsolationScope();
     obj = {};
     const merged = Object.assign(normalizedRequest);
@@ -23,11 +27,11 @@ export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) 
         num = tracesSampler.tracesSampleRate;
       }
     }
-    tmpResult = tmp(12837);
+    tmpResult = _mod12837;
     const parseSampleRateResult = tmpResult.parseSampleRate(num);
     if (undefined === parseSampleRateResult) {
-      if (tmp(12825).DEBUG_BUILD) {
-        const logger3 = tmp(12797).logger;
+      if (_mod12825.DEBUG_BUILD) {
+        const logger3 = _mod12797.logger;
         logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
       }
       const items = [false];
@@ -38,8 +42,8 @@ export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) 
         const items1 = [true, parseSampleRateResult];
         let items2 = items1;
       } else {
-        if (tmp(12825).DEBUG_BUILD) {
-          const logger2 = tmp(12797).logger;
+        if (_mod12825.DEBUG_BUILD) {
+          const logger2 = _mod12797.logger;
           const _Number = Number;
           const _HermesInternal = HermesInternal;
           logger2.log(
@@ -51,8 +55,8 @@ export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) 
         items2 = [false, parseSampleRateResult];
       }
     } else {
-      if (tmp(12825).DEBUG_BUILD) {
-        const logger = tmp(12797).logger;
+      if (_mod12825.DEBUG_BUILD) {
+        const logger = _mod12797.logger;
         let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
         if (typeof tracesSampler.tracesSampler === "function") {
           str = "tracesSampler returned 0 or false";

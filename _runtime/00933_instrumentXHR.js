@@ -36,13 +36,13 @@ function instrumentXHR() {
             }
             onreadystatechangeHandler = function onreadystatechangeHandler() {
               if (onreadystatechange[__sentry_xhr_v3__]) {
-                if (4 === tmp.readyState) {
+                if (4 === onreadystatechange.readyState) {
                   try {
-                    tmp2.status_code = tmp.status;
+                    tmp2.status_code = onreadystatechange.status;
                     const obj = {
                       endTimestamp: 1000 * _mod682.timestampInSeconds(),
                       startTimestamp,
-                      xhr: tmp,
+                      xhr: onreadystatechange,
                       virtualError: error,
                     };
                     _mod682.triggerHandlers("xhr", obj);

@@ -14,11 +14,10 @@ const items = [
   "X-Vercel-Forwarded-For",
 ];
 
-export const getClientIPAddress = function getClientIPAddress(arg0) {
-  closure_0 = arg0;
+export const getClientIPAddress = function getClientIPAddress(headers) {
   let mapped = items.map((item) => {
     let str = obj;
-    if (Array.isArray(closure_0[item])) {
+    if (Array.isArray(headers[item])) {
       str = obj.join(";");
     }
     if ("Forwarded" === item) {

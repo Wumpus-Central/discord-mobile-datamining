@@ -6,11 +6,11 @@ function prepareMenu(arg0, arg1, arg2) {
 
 }
 
-export const prepareHeaderBarButtonItems = (arr, arg1) => {
-  closure_0 = arg1;
+export const prepareHeaderBarButtonItems = (headerLeftBarButtonItems, left) => {
+  closure_0 = left;
   let mapped;
-  if (arr != null) {
-    mapped = arr.map((type, index) => {
+  if (headerLeftBarButtonItems != null) {
+    mapped = headerLeftBarButtonItems.map((type, index) => {
       if ("spacing" === type.type) {
         return type;
       } else {

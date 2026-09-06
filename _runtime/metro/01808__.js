@@ -37,7 +37,7 @@ const fn2 = function n(arg0) {
       result = 12.92 * r;
     }
     const obj = { r: result, g: null, b: null, alpha: null };
-    if (typeof tmp2 === "function") {
+    if (typeof fn === "function") {
       if (g === undefined) {
         g = 0;
       }
@@ -52,7 +52,7 @@ const fn2 = function n(arg0) {
         result1 = 12.92 * g;
       }
       obj.g = result1;
-      if (typeof tmp2 === "function") {
+      if (typeof fn === "function") {
         if (b === undefined) {
           b = 0;
         }
@@ -124,7 +124,7 @@ const fn4 = function o(arg0) {
       const tmp5 = Math.sign(r) || 1;
     }
     const obj = { r: result, g: null, b: null, alpha: null };
-    if (typeof tmp2 === "function") {
+    if (typeof fn3 === "function") {
       if (g === undefined) {
         g = 0;
       }
@@ -139,7 +139,7 @@ const fn4 = function o(arg0) {
         const tmp9 = Math.sign(g) || 1;
       }
       obj.g = result1;
-      if (typeof tmp2 === "function") {
+      if (typeof fn3 === "function") {
         if (b === undefined) {
           b = 0;
         }

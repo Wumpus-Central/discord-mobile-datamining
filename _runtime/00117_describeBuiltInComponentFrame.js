@@ -81,7 +81,7 @@ function describeNativeComponentFrame(type, arg1) {
                             throw Error();
                           }
                         }
-                        if (typeof tmp2.call === "unknown") {
+                        if (typeof Fake.call === "unknown") {
                           class Fake {
                             constructor() {
                               throw Error();
@@ -94,7 +94,7 @@ function describeNativeComponentFrame(type, arg1) {
                             }
                           }
                         }
-                        const prototype = tmp2.prototype;
+                        const prototype = Fake.prototype;
                         if (typeof closure_0.call === "unknown") {
                           class Fake {
                             constructor() {
@@ -562,7 +562,7 @@ function recordTouchEnd(identifier) {
     obj1.mostRecentTimeStamp = timestamp;
   }
 }
-function accumulateDirectionalDispatches$1(stateNode, arg1, _dispatchListeners) {
+function accumulateDirectionalDispatches$1(stateNode, bubbled, _dispatchListeners) {
   stateNode = stateNode.stateNode;
   let tmp2 = null;
   if (null !== stateNode) {
@@ -766,7 +766,7 @@ function accumulateTwoPhaseDispatchesSingleSkipTarget(dispatchConfig) {
       let diff = tmp7 - 1;
       if (0 < +items.length) {
         do {
-          let tmp3Result = tmp3(items[diff], "captured", dispatchConfig);
+          let tmp3Result = accumulateDirectionalDispatches$1(items[diff], "captured", dispatchConfig);
           tmp10 = +diff;
           diff = tmp10 - 1;
         } while (0 < tmp10);
@@ -774,7 +774,7 @@ function accumulateTwoPhaseDispatchesSingleSkipTarget(dispatchConfig) {
       let num4 = 0;
       if (0 < items.length) {
         do {
-          tmp3Result = tmp3(items[num4], "bubbled", dispatchConfig);
+          tmp3Result = accumulateDirectionalDispatches$1(items[num4], "bubbled", dispatchConfig);
           num4 = num4 + 1;
           length = items.length;
         } while (num4 < length);
@@ -812,7 +812,7 @@ function accumulateTwoPhaseDispatchesSingle$1(dispatchConfig) {
     let diff = tmp5 - 1;
     if (0 < +items.length) {
       do {
-        let tmpResult = tmp(items[diff], "captured", dispatchConfig);
+        let tmpResult = accumulateDirectionalDispatches$1(items[diff], "captured", dispatchConfig);
         tmp8 = +diff;
         diff = tmp8 - 1;
       } while (0 < tmp8);
@@ -820,14 +820,14 @@ function accumulateTwoPhaseDispatchesSingle$1(dispatchConfig) {
     let num4 = 0;
     if (0 < items.length) {
       do {
-        tmpResult = tmp(items[num4], "bubbled", dispatchConfig);
+        tmpResult = accumulateDirectionalDispatches$1(items[num4], "bubbled", dispatchConfig);
         num4 = num4 + 1;
         length = items.length;
       } while (num4 < length);
     }
   }
 }
-function accumulateDirectionalDispatches(stateNode, arg1, _dispatchListeners) {
+function accumulateDirectionalDispatches(stateNode, bubbled, _dispatchListeners) {
   stateNode = stateNode.stateNode;
   let tmp2 = null;
   if (null !== stateNode) {
@@ -932,7 +932,7 @@ function accumulateTwoPhaseDispatchesSingle(dispatchConfig) {
     let diff = tmp5 - 1;
     if (0 < +items.length) {
       do {
-        let tmpResult = tmp(items[diff], "captured", dispatchConfig);
+        let tmpResult = accumulateDirectionalDispatches(items[diff], "captured", dispatchConfig);
         tmp8 = +diff;
         diff = tmp8 - 1;
       } while (0 < tmp8);
@@ -940,7 +940,7 @@ function accumulateTwoPhaseDispatchesSingle(dispatchConfig) {
     let num4 = 0;
     if (0 < items.length) {
       do {
-        tmpResult = tmp(items[num4], "bubbled", dispatchConfig);
+        tmpResult = accumulateDirectionalDispatches(items[num4], "bubbled", dispatchConfig);
         num4 = num4 + 1;
         length = items.length;
       } while (num4 < length);
@@ -1034,8 +1034,8 @@ function accumulateDirectDispatchesSingle(dispatchConfig) {
     }
   }
 }
-function batchedUpdatesImpl(fn, arg1) {
-  return fn(arg1);
+function batchedUpdatesImpl(fn, value) {
+  return fn(value);
 }
 function executeDispatchesAndReleaseTopLevel(isPropagationStopped) {
   if (isPropagationStopped) {
@@ -1071,15 +1071,15 @@ function setIsStrictModeForDevtools(arg0) {
     const tmpResult = peek;
   }
   if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-    if (typeof obj.setStrictMode === "function") {
+    if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__2.setStrictMode === "function") {
       try {
-        obj.setStrictMode(closure_72, arg0);
+        __REACT_DEVTOOLS_GLOBAL_HOOK__2.setStrictMode(closure_72, arg0);
       } catch (err) {
       }
     }
   }
 }
-function getNextLanes(pendingLanes, arg1, arg2) {
+function getNextLanes(pendingLanes, c280, arg2) {
   pendingLanes = pendingLanes.pendingLanes;
   if (0 === pendingLanes) {
     return 0;
@@ -1561,13 +1561,13 @@ function getNextLanes(pendingLanes, arg1, arg2) {
     let num80 = 0;
     if (0 !== num14) {
       let tmp8 = num14;
-      if (0 !== arg1) {
+      if (0 !== c280) {
         tmp8 = num14;
-        if (arg1 !== num14) {
+        if (c280 !== num14) {
           tmp8 = num14;
-          if (!(arg1 & suspendedLanes)) {
-            if ((num14 & -num14) >= (arg1 & -arg1)) {
-              tmp8 = arg1;
+          if (!(c280 & suspendedLanes)) {
+            if ((num14 & -num14) >= (c280 & -c280)) {
+              tmp8 = c280;
             } else {
               tmp8 = num14;
               if (32 === tmp9) {
@@ -1639,27 +1639,27 @@ function createCapturedValueAtFiber(value, current) {
 function pushHostContainer(current, containerInfo) {
   sum = closure_86 + 1;
   closure_86 = sum;
-  closure_85[sum] = closure_95.current;
+  dependencyMap3[sum] = closure_95.current;
   closure_95.current = containerInfo;
   const sum1 = closure_86 + 1;
   closure_86 = sum1;
-  closure_85[sum1] = closure_94.current;
+  dependencyMap3[sum1] = closure_94.current;
   closure_94.current = current;
   const sum2 = closure_86 + 1;
   closure_86 = sum2;
-  closure_85[sum2] = closure_93.current;
+  dependencyMap3[sum2] = closure_93.current;
   closure_93.current = null;
   let tmp7 = closure_86;
   if (0 <= closure_86) {
-    tmp4.current = tmp2[closure_86];
-    tmp2[closure_86] = null;
+    closure_93.current = dependencyMap3[closure_86];
+    dependencyMap3[closure_86] = null;
     const diff = closure_86 - 1;
     closure_86 = diff;
     tmp7 = diff;
   }
   const sum3 = tmp7 + 1;
   closure_86 = sum3;
-  closure_85[sum3] = closure_93.current;
+  dependencyMap3[sum3] = closure_93.current;
   closure_93.current = current;
 }
 function popHostContainer() {
@@ -1980,12 +1980,11 @@ function flushSyncWorkAcrossRoots_impl(arg0, arg1) {
             if (!arg1) {
               {
                 let num9 = 0;
-                let tmp24 = getNextLanes;
                 if (iter === c278) {
                   num9 = c280;
                 }
                 let tmp6 = null !== iter.cancelPendingCommit || -1 !== iter.timeoutHandle;
-                let tmp24Result = tmp24(iter, num9, tmp6);
+                let tmp24Result = getNextLanes(iter, num9, tmp6);
                 let tmp8 = 3 & tmp24Result;
                 let tmp9 = !tmp8;
                 if (tmp8) {
@@ -2289,9 +2288,8 @@ function shallowEqual(obj, obj2) {
               if (0 < keys.length) {
                 while (true) {
                   let tmp = keys[num];
-                  let tmp2 = hasOwnProperty;
                   let call = hasOwnProperty.call;
-                  if (!(typeof call === "unknown" ? tmp2(tmp) : call(obj2, tmp))) {
+                  if (!(typeof call === "unknown" ? hasOwnProperty(tmp) : call(obj2, tmp))) {
                     break;
                   } else if (!is(obj[tmp], obj2[tmp])) {
                     break;
@@ -2356,13 +2354,13 @@ function trackUsedThenable(items, items2, c139) {
       iter.status = "pending";
       iter.then((value) => {
         if ("pending" === closure_0.status) {
-          tmp.status = "fulfilled";
-          tmp.value = value;
+          closure_0.status = "fulfilled";
+          closure_0.value = value;
         }
       }, (reason) => {
         if ("pending" === closure_0.status) {
-          tmp.status = "rejected";
-          tmp.reason = reason;
+          closure_0.status = "rejected";
+          closure_0.reason = reason;
         }
       });
     }
@@ -3045,27 +3043,30 @@ function finishRenderingHooks(dependencies) {
   if (tmp) {
     const _Error = Error;
     throw Error("Rendered fewer hooks than expected. This may be caused by an accidental early return statement.");
-  } else if (!tmp3) {
-    dependencies = dependencies.dependencies;
-    let tmp4 = null !== dependencies;
-    if (tmp4) {
-      iter = dependencies.firstContext;
-      let flag = false;
-      if (null !== iter) {
-        flag = true;
-        while (is(iter.context._currentValue2, iter.memoizedValue)) {
-          iter = iter.next;
-          flag = false;
-          if (null === iter) {
-            break;
+  } else {
+    if (!tmp3) {
+      dependencies = dependencies.dependencies;
+      let tmp4 = null !== dependencies;
+      if (tmp4) {
+        iter = dependencies.firstContext;
+        let flag = false;
+        if (null !== iter) {
+          flag = true;
+          while (is(iter.context._currentValue2, iter.memoizedValue)) {
+            iter = iter.next;
+            flag = false;
+            if (null === iter) {
+              break;
+            }
           }
         }
+        tmp4 = flag;
       }
-      tmp4 = flag;
+      if (tmp4) {
+        c222 = true;
+      }
     }
-    if (tmp4) {
-      c222 = true;
-    }
+    tmp3 = null === dependencies || c222;
   }
   tmp = null !== _null2 && null !== _null2.next;
 }
@@ -3084,7 +3085,7 @@ function TransitionAwareHostComponent() {
     const tmp5 = trackUsedThenable(tmp3, first, closure_171);
     tmp2 = tmp5;
     if (null === (null === obj ? _null.memoizedState : obj.next)) {
-      const alternate = tmp6.alternate;
+      const alternate = _null.alternate;
       if (null !== alternate) {
         if (null !== alternate.memoizedState) {
           let tmp7 = obj7;
@@ -3184,9 +3185,9 @@ function useThenable(items2) {
     tmp2 = items;
   }
   if (null !== (null === obj ? _null.memoizedState : obj.next)) {
-    return trackUsedThenable(tmp2, items2, closure_171);
+    return trackUsedThenable(tmp2, items2, tmp);
   } else {
-    const alternate = tmp3.alternate;
+    const alternate = _null.alternate;
     if (null !== alternate) {
       if (null !== alternate.memoizedState) {
         let tmp5 = obj7;
@@ -3195,11 +3196,12 @@ function useThenable(items2) {
     }
     tmp5 = closure_210;
   }
+  tmp = closure_171;
 }
-function basicStateReducer(arg0, fn) {
+function basicStateReducer(baseState, fn) {
   let tmp = fn;
   if (typeof fn === "function") {
-    tmp = fn(arg0);
+    tmp = fn(baseState);
   }
   return tmp;
 }
@@ -3352,9 +3354,8 @@ function subscribeToStore(arg0, arg1, fn) {
     if (checkIfSnapshotChanged(closure_1)) {
       const tmp3 = enqueueConcurrentRenderForLane(closure_0, 2);
       if (null !== tmp3) {
-        scheduleUpdateOnFiber(tmp3, tmp, 2);
+        scheduleUpdateOnFiber(tmp3, closure_0, 2);
       }
-      tmp = closure_0;
     }
   });
 }
@@ -3375,13 +3376,12 @@ function mountStateImpl(fn) {
       setIsStrictModeForDevtools(true);
       try {
         fn();
-        tmp5(false);
+        setIsStrictModeForDevtools(false);
         tmp4 = tmp11;
       } catch (tmp9) {
         tmp(false);
         throw tmp9;
       }
-      tmp5 = setIsStrictModeForDevtools;
     }
   }
   tmp3.baseState = tmp4;
@@ -3443,7 +3443,7 @@ function runActionStateAction(state, next) {
     __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = obj;
     try {
       const actionResult = action(state, payload);
-      const S = tmp13.S;
+      const S = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S;
       if (null !== S) {
         tmp15(obj, actionResult);
       }
@@ -3455,7 +3455,7 @@ function runActionStateAction(state, next) {
       if (tmp25) {
         T.types = obj.types;
       }
-      tmp13.T = T;
+      __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = T;
     } catch (tmp28) {
       let tmp31 = null !== tmp;
       if (tmp31) {
@@ -3497,11 +3497,11 @@ function handleActionReturnValue(pending, listeners, actionResult) {
           pending.state = value;
           if (null !== pending.pending) {
             if (iter.next === iter) {
-              tmp.pending = null;
+              pending.pending = null;
             } else {
               const next = iter2.next;
               iter.next = next;
-              runActionStateAction(tmp, next);
+              runActionStateAction(pending, next);
             }
           }
         }, (reason) => {
@@ -3788,7 +3788,7 @@ function startTransition(alternate, pending, action, action, fn) {
   dispatchOptimisticSetState(alternate, false, pending, action);
   try {
     const promise = fn();
-    const S = tmp6.S;
+    const S = __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.S;
     if (null !== S) {
       tmp9(obj, promise);
     }
@@ -3880,7 +3880,7 @@ function startTransition(alternate, pending, action, action, fn) {
         if (tmp31) {
           T.types = obj.types;
         }
-        tmp6.T = T;
+        __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = T;
       }
     }
     dispatchSetStateInternal(alternate, pending, action, requestUpdateLane(alternate));
@@ -4123,10 +4123,9 @@ function checkShouldComponentUpdate(stateNode, defaultProps, obj, memoizedProps,
                   if (0 < keys.length) {
                     while (true) {
                       let tmp4 = keys[num];
-                      let tmp5 = hasOwnProperty;
                       let call = hasOwnProperty.call;
                       flag = false;
-                      if (!(typeof call === "unknown" ? tmp5(tmp4) : call(memoizedProps, tmp4))) {
+                      if (!(typeof call === "unknown" ? hasOwnProperty(tmp4) : call(memoizedProps, tmp4))) {
                         break;
                       } else {
                         flag = false;
@@ -4171,10 +4170,9 @@ function checkShouldComponentUpdate(stateNode, defaultProps, obj, memoizedProps,
                     if (0 < keys1.length) {
                       while (true) {
                         let tmp12 = keys1[num3];
-                        let tmp13 = hasOwnProperty;
                         let call2 = hasOwnProperty.call;
                         flag2 = false;
-                        if (!(typeof call2 === "unknown" ? tmp13(tmp12) : call2(memoizedState2, tmp12))) {
+                        if (!(typeof call2 === "unknown" ? hasOwnProperty(tmp12) : call2(memoizedState2, tmp12))) {
                           break;
                         } else {
                           flag2 = false;
@@ -4215,14 +4213,14 @@ function constructClassInstance(_reactInternals, type3, memoizedProps) {
     const _currentValue2 = contextType._currentValue2;
     obj = { context: contextType, memoizedValue: _currentValue2, next: null };
     if (null === obj) {
-      if (null === tmp3) {
+      if (null === require) {
         const _Error = Error;
         throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
       } else {
         obj = { lanes: 0, firstContext: null };
         obj.firstContext = obj;
-        tmp3.dependencies = obj;
-        tmp3.flags = tmp3.flags | 524288;
+        require.dependencies = obj;
+        require.flags = require.flags | 524288;
         tmp = _currentValue2;
       }
     } else {
@@ -4256,14 +4254,14 @@ function mountClassInstance(baseState, type3, props, current) {
       const _currentValue2 = contextType._currentValue2;
       obj = { context: contextType, memoizedValue: _currentValue2, next: null };
       if (null === obj) {
-        if (null === tmp2) {
+        if (null === require) {
           const _Error = Error;
           throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
         } else {
           obj = { lanes: 0, firstContext: null };
           obj.firstContext = obj;
-          tmp2.dependencies = obj;
-          tmp2.flags = tmp2.flags | 524288;
+          require.dependencies = obj;
+          require.flags = require.flags | 524288;
           let tmp = _currentValue2;
         }
       } else {
@@ -4532,10 +4530,9 @@ function updateSimpleMemoComponent(memoizedProps, ref, type, pendingProps, curre
                 if (0 < keys.length) {
                   while (true) {
                     let tmp2 = keys[num];
-                    let tmp3 = hasOwnProperty;
                     let call = hasOwnProperty.call;
                     flag = false;
-                    if (!(typeof call === "unknown" ? tmp3(tmp2) : call(pendingProps, tmp2))) {
+                    if (!(typeof call === "unknown" ? hasOwnProperty(tmp2) : call(pendingProps, tmp2))) {
                       break;
                     } else {
                       flag = false;
@@ -4781,7 +4778,7 @@ function deferHiddenOffscreenComponent(memoizedState, stateNode, baseLanes, curr
   if (null !== memoizedState) {
     sum = closure_86 + 1;
     closure_86 = sum;
-    ({ current: closure_85[tmp7], current: tmp.current } = tmp);
+    ({ current: closure_85[tmp7], current: tmp.current } = closure_128);
   }
   const sum1 = closure_86 + 1;
   closure_86 = sum1;
@@ -5190,12 +5187,10 @@ function updateClassComponent(updateQueue, dependencies, defaultProps, memoizedP
           if (null !== updateQueue) {
             if (null !== updateQueue.dependencies) {
               iter = updateQueue.dependencies.firstContext;
-              let flag2 = false;
               if (null !== iter) {
-                flag2 = true;
                 while (is(iter.context._currentValue2, iter.memoizedValue)) {
                   iter = iter.next;
-                  flag2 = false;
+                  let flag2 = false;
                   if (null === iter) {
                     break;
                   }
@@ -5339,12 +5334,12 @@ function finishClassComponent(updateQueue, ref, type3, flag3, arg4, current) {
     }
   }
   let state = ref.stateNode;
-  if (!(128 & ref.flags)) {
+  if (!(128 & ref.ref.flags)) {
     let renderResult = state.render();
   } else {
     renderResult = null;
   }
-  ref.flags = ref.flags | 1;
+  ref.ref.flags = ref.ref.flags | 1;
   if (null === tmp) {
     if (null === tmp) {
       let tmp13 = closure_141(ref, null, renderResult, current);
@@ -5357,8 +5352,8 @@ function finishClassComponent(updateQueue, ref, type3, flag3, arg4, current) {
     const child = ref.child;
   }
   tmp = closure_140(ref, tmp.child, null, current);
-  ref.child = tmp;
-  ref.child = closure_140(ref, null, renderResult, current);
+  ref.ref.child = tmp;
+  ref.ref.child = closure_140(ref.ref, null, renderResult, current);
 }
 function updateSuspenseComponent(memoizedState, pendingProps, lanes) {
   pendingProps = pendingProps.pendingProps;
@@ -6794,8 +6789,8 @@ function beginWork(alternate, _return, current) {
         const sum20 = closure_86 + 1;
         closure_86 = sum20;
         closure_85[sum20] = closure_101.current;
-        closure_101.current = tmp78._currentValue2;
-        tmp78._currentValue2 = pooledCache;
+        closure_101.current = context._currentValue2;
+        context._currentValue2 = pooledCache;
       } else {
         if (alternate.lanes & current) {
           const updateQueue = alternate.updateQueue;
@@ -6822,17 +6817,17 @@ function beginWork(alternate, _return, current) {
           const sum21 = closure_86 + 1;
           closure_86 = sum21;
           closure_85[sum21] = closure_101.current;
-          closure_101.current = tmp78._currentValue2;
-          tmp78._currentValue2 = _currentValue2;
+          closure_101.current = context._currentValue2;
+          context._currentValue2 = _currentValue2;
         } else {
           const cache = tmp89.cache;
           const sum22 = closure_86 + 1;
           closure_86 = sum22;
           closure_85[sum22] = closure_101.current;
-          closure_101.current = tmp78._currentValue2;
-          tmp78._currentValue2 = cache;
+          closure_101.current = context._currentValue2;
+          context._currentValue2 = cache;
           if (cache !== memoizedState3.cache) {
-            items1 = [tmp78];
+            items1 = [context];
             propagateContextChanges(_return, items1, current, true);
           }
         }
@@ -7144,14 +7139,14 @@ function beginWork(alternate, _return, current) {
                 }
               }
               let num36 = 0;
-              if (!(num34 & (tmp149.suspendedLanes | current))) {
+              if (!(num34 & (_null4.suspendedLanes | current))) {
                 num36 = num34;
               }
               if (0 !== num36) {
                 if (num36 !== memoizedState6.retryLane) {
                   memoizedState6.retryLane = num36;
                   enqueueConcurrentRenderForLane(alternate, num36);
-                  scheduleUpdateOnFiber(tmp149, alternate, num36);
+                  scheduleUpdateOnFiber(_null4, alternate, num36);
                   throw closure_221;
                 }
               }
@@ -7161,7 +7156,7 @@ function beginWork(alternate, _return, current) {
             if (!c283) {
               let tmp153 = (4194048 & c280) !== c280;
               if (tmp153) {
-                tmp153 = null !== tmp137.current;
+                tmp153 = null !== closure_159.current;
               }
               tmp150 = tmp153;
             }
@@ -7180,7 +7175,6 @@ function beginWork(alternate, _return, current) {
             }
             tmp132 = retryActivityComponentWithoutHydrating(alternate, _return, current);
           }
-          tmp137 = closure_159;
         } else {
           ({ mode: obj7.mode, children: obj7.children } = pendingProps);
           tmp132 = createWorkInProgress(alternate.child, { mode: null, children: null });
@@ -7743,23 +7737,23 @@ function commitHostPortalContainerChildren(stateNode, c302, childSet) {
   try {
     completeRoot(tmp.containerTag, childSet);
   } catch (tmp5) {
-    captureCommitPhaseError(c302, c302.return, tmp5);
+    captureCommitPhaseError(_null5, _null5.return, tmp5);
   }
 }
 function commitLayoutEffectOnFiber(arg0, alternate, c302) {
-  const flags = c302.flags;
-  switch (c302.tag) {
+  const flags = _null5.flags;
+  switch (_null5.tag) {
     case 0:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       let tmp68 = 4 & flags;
       if (tmp68) {
-        commitHookEffectListMount(5, c302);
+        commitHookEffectListMount(5, _null5);
       }
     break;
     case 1:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       if (4 & flags) {
-        const stateNode2 = c302.stateNode;
+        const stateNode2 = _null5.stateNode;
         if (null === alternate) {
           try {
             stateNode2.componentDidMount();
@@ -7775,32 +7769,32 @@ function commitLayoutEffectOnFiber(arg0, alternate, c302) {
         }
       }
       if (64 & flags) {
-        commitClassCallbacks(c302);
+        commitClassCallbacks(_null5);
       }
       if (512 & flags) {
-        safelyAttachRef(c302, c302.return);
+        safelyAttachRef(_null5, _null5.return);
       }
     break;
     case 2:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 3:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       if (64 & flags) {
-        const updateQueue = c302.updateQueue;
+        const updateQueue = _null5.updateQueue;
         if (null !== updateQueue) {
           stateNode = null;
-          if (null !== c302.child) {
-            const tag = c302.child.tag;
+          if (null !== _null5.child) {
+            const tag = _null5.child.tag;
             if (27 !== tag) {
               if (5 !== tag) {
                 stateNode = null;
                 if (1 === tag) {
-                  stateNode = c302.child.stateNode;
+                  stateNode = _null5.child.stateNode;
                 }
               }
             }
-            stateNode = getPublicInstance(c302.child.stateNode);
+            stateNode = getPublicInstance(_null5.child.stateNode);
           }
           try {
             commitCallbacks(updateQueue, stateNode);
@@ -7811,101 +7805,101 @@ function commitLayoutEffectOnFiber(arg0, alternate, c302) {
       }
     break;
     case 4:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 5:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       if (null === alternate) {
         let tmp26 = 4 & flags;
         if (tmp26) {
-          commitHostMount(c302);
+          commitHostMount(_null5);
         } else {
           let tmp27 = 64 & flags;
           if (tmp27) {
-            ({ type, memoizedProps, stateNode } = c302);
+            ({ type, memoizedProps, stateNode } = _null5);
             try {
               shim$1();
             } catch (tmp30) {
-              captureCommitPhaseError(c302, c302.return, tmp30);
+              captureCommitPhaseError(_null5, _null5.return, tmp30);
             }
           }
         }
       }
       let tmp35 = 512 & flags;
       if (tmp35) {
-        safelyAttachRef(c302, c302.return);
+        safelyAttachRef(_null5, _null5.return);
       }
     break;
     case 6:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 7:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 8:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 9:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 10:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 11:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       tmp68 = 4 & flags;
       if (tmp68) {
-        commitHookEffectListMount(5, c302);
+        commitHookEffectListMount(5, _null5);
       }
     break;
     case 12:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 13:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       if (64 & flags) {
-        memoizedState = c302.memoizedState;
+        memoizedState = _null5.memoizedState;
         let tmp18 = null !== memoizedState;
         if (tmp18) {
           tmp18 = null !== memoizedState.dehydrated;
         }
         if (tmp18) {
-          retryDehydratedSuspenseBoundary.bind(null, c302);
+          retryDehydratedSuspenseBoundary.bind(null, _null5);
           shim$1();
         }
       }
     break;
     case 14:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 15:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       tmp68 = 4 & flags;
       if (tmp68) {
-        commitHookEffectListMount(5, c302);
+        commitHookEffectListMount(5, _null5);
       }
     break;
     case 16:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 17:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 18:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 19:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 20:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 21:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 22:
-      if (1 & c302.mode) {
-        let tmp7 = null !== c302.memoizedState;
+      if (1 & _null5.mode) {
+        let tmp7 = null !== _null5.memoizedState;
         if (!tmp7) {
           tmp7 = closure_249;
         }
@@ -7921,85 +7915,85 @@ function commitLayoutEffectOnFiber(arg0, alternate, c302) {
           closure_250 = tmp8;
           if (tmp8) {
             if (!tmp10) {
-              recursivelyTraverseReappearLayoutEffects(arg0, c302, 8772 & c302.subtreeFlags);
+              recursivelyTraverseReappearLayoutEffects(arg0, _null5, 8772 & _null5.subtreeFlags);
             }
             closure_249 = tmp9;
             closure_250 = tmp10;
           }
-          recursivelyTraverseLayoutEffects(arg0, c302);
+          recursivelyTraverseLayoutEffects(arg0, _null5);
         }
       } else {
-        recursivelyTraverseLayoutEffects(arg0, c302);
+        recursivelyTraverseLayoutEffects(arg0, _null5);
       }
     break;
     case 23:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 24:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 25:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 26:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       if (null === alternate) {
         tmp26 = 4 & flags;
         if (tmp26) {
-          commitHostMount(c302);
+          commitHostMount(_null5);
         } else {
           tmp27 = 64 & flags;
           if (tmp27) {
-            ({ type, memoizedProps, stateNode } = c302);
+            ({ type, memoizedProps, stateNode } = _null5);
             try {
               shim$1();
             } catch (tmp30) {
-              captureCommitPhaseError(c302, c302.return, tmp30);
+              captureCommitPhaseError(_null5, _null5.return, tmp30);
             }
           }
         }
       }
       tmp35 = 512 & flags;
       if (tmp35) {
-        safelyAttachRef(c302, c302.return);
+        safelyAttachRef(_null5, _null5.return);
       }
     break;
     case 27:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
       if (null === alternate) {
         tmp26 = 4 & flags;
         if (tmp26) {
-          commitHostMount(c302);
+          commitHostMount(_null5);
         } else {
           tmp27 = 64 & flags;
           if (tmp27) {
-            ({ type, memoizedProps, stateNode } = c302);
+            ({ type, memoizedProps, stateNode } = _null5);
             try {
               shim$1();
             } catch (tmp30) {
-              captureCommitPhaseError(c302, c302.return, tmp30);
+              captureCommitPhaseError(_null5, _null5.return, tmp30);
             }
           }
         }
       }
       tmp35 = 512 & flags;
       if (tmp35) {
-        safelyAttachRef(c302, c302.return);
+        safelyAttachRef(_null5, _null5.return);
       }
     break;
     case 28:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 29:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     case 30:
     break;
     case 31:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
     break;
     default:
-      recursivelyTraverseLayoutEffects(arg0, c302);
+      recursivelyTraverseLayoutEffects(arg0, _null5);
   }
 }
 function detachFiberAfterEffects(alternate) {
@@ -8031,9 +8025,9 @@ function recursivelyTraverseDeletionEffects(c301, deletions, child) {
 }
 function commitDeletionEffectsOnFiber(c301, deletions, sibling) {
   if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-    if (typeof obj.onCommitFiberUnmount === "function") {
+    if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__2.onCommitFiberUnmount === "function") {
       try {
-        obj.onCommitFiberUnmount(closure_72, sibling);
+        __REACT_DEVTOOLS_GLOBAL_HOOK__2.onCommitFiberUnmount(closure_72, sibling);
       } catch (err) {
       }
     }
@@ -8235,21 +8229,21 @@ function recursivelyTraverseMutationEffects(c301, deletions) {
   }
 }
 function commitMutationEffectsOnFiber(c302, c301) {
-  ({ alternate, flags } = c302);
-  switch (c302.tag) {
+  ({ alternate, flags } = _null5);
+  switch (_null5.tag) {
     case 0:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       let tmp78 = 4 & flags;
       if (tmp78) {
-        commitHookEffectListUnmount(3, c302, c302.return);
-        commitHookEffectListMount(3, c302);
-        commitHookEffectListUnmount(5, c302, c302.return);
+        commitHookEffectListUnmount(3, _null5, _null5.return);
+        commitHookEffectListMount(3, _null5);
+        commitHookEffectListUnmount(5, _null5, _null5.return);
       }
     break;
     case 1:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       if (512 & flags) {
         let tmp67 = closure_250;
         if (!closure_250) {
@@ -8264,7 +8258,7 @@ function commitMutationEffectsOnFiber(c302, c301) {
         tmp71 = closure_249;
       }
       if (tmp71) {
-        const updateQueue4 = c302.updateQueue;
+        const updateQueue4 = _null5.updateQueue;
         if (null !== updateQueue4) {
           const callbacks = updateQueue4.callbacks;
           if (null !== callbacks) {
@@ -8278,12 +8272,12 @@ function commitMutationEffectsOnFiber(c302, c301) {
       }
     break;
     case 2:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 3:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       if (4 & flags) {
         try {
           completeRoot(tmp46.containerTag, tmp47);
@@ -8293,15 +8287,15 @@ function commitMutationEffectsOnFiber(c302, c301) {
       }
     break;
     case 4:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       if (4 & flags) {
-        commitHostPortalContainerChildren(c302.stateNode, c302, c302.stateNode.pendingChildren);
+        commitHostPortalContainerChildren(_null5.stateNode, _null5, _null5.stateNode.pendingChildren);
       }
     break;
     case 5:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       let tmp57 = 512 & flags;
       if (tmp57) {
         let tmp58 = closure_250;
@@ -8312,54 +8306,54 @@ function commitMutationEffectsOnFiber(c302, c301) {
           safelyDetachRef(alternate, alternate.return);
         }
       }
-      if (null !== c302.alternate) {
-        ({ alternate: alternate2, stateNode: stateNode2 } = c302);
+      if (null !== _null5.alternate) {
+        ({ alternate: alternate2, stateNode: stateNode2 } = _null5);
         alternate2.stateNode = stateNode2;
       }
     break;
     case 6:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 7:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 8:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 9:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 10:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 11:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       tmp78 = 4 & flags;
       if (tmp78) {
-        commitHookEffectListUnmount(3, c302, c302.return);
-        commitHookEffectListMount(3, c302);
-        commitHookEffectListUnmount(5, c302, c302.return);
+        commitHookEffectListUnmount(3, _null5, _null5.return);
+        commitHookEffectListMount(3, _null5);
+        commitHookEffectListUnmount(5, _null5, _null5.return);
       }
     break;
     case 12:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 13:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
-      if (8192 & c302.child.flags) {
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
+      if (8192 & _null5.child.flags) {
         let tmp25 = null !== alternate;
         if (tmp25) {
           tmp25 = null !== alternate.memoizedState;
         }
-        let tmp26 = null === c302.memoizedState;
+        let tmp26 = null === _null5.memoizedState;
         if (!tmp26) {
           tmp26 = tmp25;
         }
@@ -8368,60 +8362,60 @@ function commitMutationEffectsOnFiber(c302, c301) {
         }
       }
       if (4 & flags) {
-        const updateQueue2 = c302.updateQueue;
+        const updateQueue2 = _null5.updateQueue;
         if (null !== updateQueue2) {
-          c302.updateQueue = null;
-          attachSuspenseRetryListeners(c302, updateQueue2);
+          _null5.updateQueue = null;
+          attachSuspenseRetryListeners(_null5, updateQueue2);
         }
       }
     break;
     case 14:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       tmp78 = 4 & flags;
       if (tmp78) {
-        commitHookEffectListUnmount(3, c302, c302.return);
-        commitHookEffectListMount(3, c302);
-        commitHookEffectListUnmount(5, c302, c302.return);
+        commitHookEffectListUnmount(3, _null5, _null5.return);
+        commitHookEffectListMount(3, _null5);
+        commitHookEffectListUnmount(5, _null5, _null5.return);
       }
     break;
     case 15:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       tmp78 = 4 & flags;
       if (tmp78) {
-        commitHookEffectListUnmount(3, c302, c302.return);
-        commitHookEffectListMount(3, c302);
-        commitHookEffectListUnmount(5, c302, c302.return);
+        commitHookEffectListUnmount(3, _null5, _null5.return);
+        commitHookEffectListMount(3, _null5);
+        commitHookEffectListUnmount(5, _null5, _null5.return);
       }
     break;
     case 16:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 17:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 18:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 19:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       let tmp34 = 4 & flags;
       if (tmp34) {
-        let updateQueue3 = c302.updateQueue;
+        let updateQueue3 = _null5.updateQueue;
         if (null !== updateQueue3) {
-          c302.updateQueue = null;
-          attachSuspenseRetryListeners(c302, updateQueue3);
+          _null5.updateQueue = null;
+          attachSuspenseRetryListeners(_null5, updateQueue3);
         }
       }
     break;
     case 20:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 21:
     break;
@@ -8430,7 +8424,7 @@ function commitMutationEffectsOnFiber(c302, c301) {
       if (tmp4) {
         tmp4 = null !== alternate.memoizedState;
       }
-      if (1 & c302.mode) {
+      if (1 & _null5.mode) {
         let tmp10 = closure_249;
         if (!closure_249) {
           tmp10 = tmp5;
@@ -8441,14 +8435,14 @@ function commitMutationEffectsOnFiber(c302, c301) {
           tmp11 = tmp4;
         }
         closure_250 = tmp11;
-        recursivelyTraverseMutationEffects(c301, c302);
+        recursivelyTraverseMutationEffects(c301, _null5);
         closure_250 = tmp9;
       } else {
-        recursivelyTraverseMutationEffects(c301, c302);
+        recursivelyTraverseMutationEffects(c301, _null5);
       }
-      commitReconciliationEffects(c302);
+      commitReconciliationEffects(_null5);
       if (8192 & flags) {
-        const stateNode = c302.stateNode;
+        const stateNode = _null5.stateNode;
         const _visibility = stateNode._visibility;
         if (tmp5) {
           let tmp16 = -2 & _visibility;
@@ -8468,38 +8462,38 @@ function commitMutationEffectsOnFiber(c302, c301) {
             tmp17 = closure_250;
           }
           if (!tmp17) {
-            if (1 & c302.mode) {
-              recursivelyTraverseDisappearLayoutEffects(c302);
+            if (1 & _null5.mode) {
+              recursivelyTraverseDisappearLayoutEffects(_null5);
             }
           }
         }
       }
       if (4 & flags) {
-        const updateQueue = c302.updateQueue;
+        const updateQueue = _null5.updateQueue;
         if (null !== updateQueue) {
           const retryQueue = updateQueue.retryQueue;
           if (null !== retryQueue) {
             updateQueue.retryQueue = null;
-            attachSuspenseRetryListeners(c302, retryQueue);
+            attachSuspenseRetryListeners(_null5, retryQueue);
           }
         }
       }
     break;
     case 23:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 24:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 25:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 26:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       tmp57 = 512 & flags;
       if (tmp57) {
         tmp58 = closure_250;
@@ -8510,14 +8504,14 @@ function commitMutationEffectsOnFiber(c302, c301) {
           safelyDetachRef(alternate, alternate.return);
         }
       }
-      if (null !== c302.alternate) {
-        ({ alternate: alternate2, stateNode: stateNode2 } = c302);
+      if (null !== _null5.alternate) {
+        ({ alternate: alternate2, stateNode: stateNode2 } = _null5);
         alternate2.stateNode = stateNode2;
       }
     break;
     case 27:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       tmp57 = 512 & flags;
       if (tmp57) {
         tmp58 = closure_250;
@@ -8528,36 +8522,36 @@ function commitMutationEffectsOnFiber(c302, c301) {
           safelyDetachRef(alternate, alternate.return);
         }
       }
-      if (null !== c302.alternate) {
-        ({ alternate: alternate2, stateNode: stateNode2 } = c302);
+      if (null !== _null5.alternate) {
+        ({ alternate: alternate2, stateNode: stateNode2 } = _null5);
         alternate2.stateNode = stateNode2;
       }
     break;
     case 28:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 29:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
     break;
     case 30:
     break;
     case 31:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
       tmp34 = 4 & flags;
       if (tmp34) {
-        updateQueue3 = c302.updateQueue;
+        updateQueue3 = _null5.updateQueue;
         if (null !== updateQueue3) {
-          c302.updateQueue = null;
-          attachSuspenseRetryListeners(c302, updateQueue3);
+          _null5.updateQueue = null;
+          attachSuspenseRetryListeners(_null5, updateQueue3);
         }
       }
     break;
     default:
-      recursivelyTraverseMutationEffects(c301, c302);
-      commitReconciliationEffects(c302);
+      recursivelyTraverseMutationEffects(c301, _null5);
+      commitReconciliationEffects(_null5);
   }
 }
 function commitReconciliationEffects(flags) {
@@ -8838,6 +8832,8 @@ function commitOffscreenPassiveMountEffects(alternate, sibling) {
       }
     }
   }
+  tmp = null !== alternate && null !== alternate.memoizedState && null !== alternate.memoizedState.cachePool;
+  tmp3 = null !== sibling.memoizedState && null !== sibling.memoizedState.cachePool;
 }
 function commitCachePassiveMountEffect(arg0, alternate) {
   let cache = null;
@@ -9038,9 +9034,9 @@ function commitPassiveMountOnFiber(arg0, current, arg2, arg3) {
       recursivelyTraversePassiveMountEffects(arg0, current, arg2, arg3);
   }
 }
-function recursivelyTraverseReconnectPassiveEffects(arg0, subtreeFlags, arg2, arg3, arg4) {
-  let tmp = arg4;
-  if (arg4) {
+function recursivelyTraverseReconnectPassiveEffects(arg0, subtreeFlags, arg2, arg3, flag) {
+  let tmp = flag;
+  if (flag) {
     tmp = 10256 & subtreeFlags.subtreeFlags || false;
     const tmp2 = 10256 & subtreeFlags.subtreeFlags || false;
   }
@@ -9546,7 +9542,7 @@ function requestUpdateLane(_reactInternals) {
         }
       }
     }
-    const num2 = tmp2 & -tmp2;
+    const num2 = c280 & -c280;
   }
 }
 function scheduleUpdateOnFiber(cancelPendingCommit, _reactInternals, lane) {
@@ -9642,7 +9638,7 @@ function performWorkOnRoot(iter, tmp24Result, arg2) {
     }
     if (tmp3) {
       (function renderRootConcurrent(iter, tmp24Result) {
-        closure_0 = iter;
+        const next = iter;
         let tmp3 = tmp24Result;
         closure_277 = closure_277 | 2;
         if (c278 === iter) {
@@ -9748,19 +9744,18 @@ function performWorkOnRoot(iter, tmp24Result, arg2) {
                         tmp2 = 9 !== tmp;
                       }
                       if (!tmp2) {
-                        tmp2 = _null4 !== closure_0;
+                        tmp2 = _null4 !== next;
                       }
                       if (!tmp2) {
                         c281 = 7;
                       }
-                      iter = closure_0;
-                      let tmp5 = closure_0 !== iter;
+                      let tmp5 = next !== next;
                       if (tmp5) {
-                        tmp5 = null === iter.next;
+                        tmp5 = null === next.next;
                       }
                       if (tmp5) {
-                        if (null !== iter) {
-                          tmp7.next = iter;
+                        if (null !== next) {
+                          tmp7.next = next;
                         }
                       }
                       c113 = true;
@@ -9794,8 +9789,9 @@ function performWorkOnRoot(iter, tmp24Result, arg2) {
         c298 = null;
         tmp4 = closure_277;
         tmp5 = closure_318();
-        closure_297 = closure_0(287).unstable_now() + 500;
+        closure_297 = next(287).unstable_now() + 500;
         closure_316(iter, tmp3);
+        obj = next(287);
       })(iter, tmp24Result);
     } else {
       renderRootSync(iter, tmp24Result, true);
@@ -10209,10 +10205,10 @@ function isRenderConsistentWithExternalStores(arg0) {
   return false;
 }
 function markRootSuspended(c278, c280, arg2, arg3) {
-  c278.suspendedLanes = c278.suspendedLanes | c280 & ~closure_290 & ~c289;
-  c278.pingedLanes = c278.pingedLanes & ~c280 & ~closure_290 & ~c289;
+  _null4.suspendedLanes = _null4.suspendedLanes | c280 & ~closure_290 & ~c289;
+  _null4.pingedLanes = _null4.pingedLanes & ~c280 & ~closure_290 & ~c289;
   if (arg3) {
-    c278.warmLanes = c278.warmLanes | tmp;
+    _null4.warmLanes = _null4.warmLanes | tmp;
   }
   let tmp3 = tmp;
   if (0 < (c280 & ~closure_290 & ~c289)) {
@@ -10223,11 +10219,11 @@ function markRootSuspended(c278, c280, arg2, arg3) {
     } while (0 < tmp3);
   }
   if (0 !== arg2) {
-    c278.pendingLanes = c278.pendingLanes | arg2;
-    c278.suspendedLanes = c278.suspendedLanes & ~arg2;
+    _null4.pendingLanes = _null4.pendingLanes | arg2;
+    _null4.suspendedLanes = _null4.suspendedLanes & ~arg2;
     const diff1 = 31 - clz32Fallback(arg2);
-    c278.entangledLanes = c278.entangledLanes | arg2;
-    c278.entanglements[diff1] = 1073741824 | c278.entanglements[diff1] | 261930 & tmp;
+    _null4.entangledLanes = _null4.entangledLanes | arg2;
+    _null4.entanglements[diff1] = 1073741824 | _null4.entanglements[diff1] | 261930 & tmp;
   }
 }
 function resetWorkInProgressStack() {
@@ -10397,11 +10393,10 @@ function handleThrow(current, arg1) {
       value = weakMap.get(promise);
       if (undefined === value) {
         obj = { value: promise, source: current, stack: getStackByFiberInDevAndProd(current) };
-        const result = obj2.set(promise, obj);
+        const result = weakMap.set(promise, obj);
         value = obj;
       }
       obj = value;
-      obj2 = weakMap;
     }
   }
   if (null === c137) {
@@ -10451,7 +10446,7 @@ function renderRootSync(shellSuspendCounter, tmp24Result, arg2) {
                 if (6 !== tmp13) {
                   c281 = 0;
                   c282 = null;
-                  throwAndUnwindWorkLoop(shellSuspendCounter, tmp43, tmp44, tmp13);
+                  throwAndUnwindWorkLoop(shellSuspendCounter, _return, tmp44, tmp13);
                 }
               }
             }
@@ -10461,7 +10456,7 @@ function renderRootSync(shellSuspendCounter, tmp24Result, arg2) {
           }
           c281 = 0;
           c282 = null;
-          throwAndUnwindWorkLoop(shellSuspendCounter, tmp43, tmp44, c281);
+          throwAndUnwindWorkLoop(shellSuspendCounter, _return, tmp44, c281);
           if (arg2) {
             if (closure_284) {
               num3 = 0;
@@ -10488,6 +10483,7 @@ function renderRootSync(shellSuspendCounter, tmp24Result, arg2) {
   } catch (tmp39) {
     handleThrow(tmp2, tmp39);
   }
+  tmp5 = pushAsyncDispatcher();
 }
 function workLoopSync() {
   if (null !== _return) {
@@ -10612,7 +10608,7 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
           ErrorResult = cache;
           if (typeof cache.then === "function") {
             if (null !== flags.alternate) {
-              closure_105(0, flags, c280, true);
+              closure_105(0, flags, lanes, true);
             }
             const tag = flags.tag;
             let tmp6 = 1 & flags.mode;
@@ -10682,10 +10678,10 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                             value = set3;
                           }
                         }
-                        if (!value.has(c280)) {
+                        if (!value.has(lanes)) {
                           c285 = true;
-                          value.add(c280);
-                          const bindResult = closure_335.bind(null, pingCache, cache, c280);
+                          value.add(lanes);
+                          const bindResult = closure_335.bind(null, pingCache, cache, lanes);
                           cache.then(bindResult, bindResult);
                         }
                       }
@@ -10701,8 +10697,8 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                   c287 = 4;
                   let tmp103 = closure_283;
                   if (!closure_283) {
-                    tmp103 = (4194048 & closure_280) !== closure_280 && null !== tmp8.current;
-                    const tmp106 = (4194048 & closure_280) !== closure_280 && null !== tmp8.current;
+                    tmp103 = (4194048 & closure_280) !== closure_280 && null !== ref.current;
+                    const tmp106 = (4194048 & closure_280) !== closure_280 && null !== ref.current;
                   }
                   if (!tmp103) {
                     c284 = true;
@@ -10730,7 +10726,7 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
               current.flags = current.flags & -257;
               if (1 & current.mode) {
                 current.flags = current.flags | 65536;
-                current.lanes = c280;
+                current.lanes = lanes;
               } else if (current === _return) {
                 current.flags = current.flags | 65536;
               } else {
@@ -10782,10 +10778,10 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                       value = set6;
                     }
                   }
-                  if (!value.has(c280)) {
+                  if (!value.has(lanes)) {
                     c285 = true;
-                    value.add(c280);
-                    const bindResult1 = closure_335.bind(null, pingCache, cache, c280);
+                    value.add(lanes);
+                    const bindResult1 = closure_335.bind(null, pingCache, cache, lanes);
                     cache.then(bindResult1, bindResult1);
                   }
                 }
@@ -10809,17 +10805,17 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
                   value1 = set8;
                 }
               }
-              if (!value1.has(c280)) {
+              if (!value1.has(lanes)) {
                 c285 = true;
-                value1.add(c280);
-                const bindResult2 = closure_335.bind(null, pingCache, cache, c280);
+                value1.add(lanes);
+                const bindResult2 = closure_335.bind(null, pingCache, cache, lanes);
                 cache.then(bindResult2, bindResult2);
               }
               c287 = 4;
               let tmp46 = closure_283;
               if (!closure_283) {
-                tmp46 = (4194048 & closure_280) !== closure_280 && null !== tmp8.current;
-                const tmp49 = (4194048 & closure_280) !== closure_280 && null !== tmp8.current;
+                tmp46 = (4194048 & closure_280) !== closure_280 && null !== ref.current;
+                const tmp49 = (4194048 & closure_280) !== closure_280 && null !== ref.current;
               }
               if (!tmp46) {
                 c284 = true;
@@ -10872,10 +10868,9 @@ function throwAndUnwindWorkLoop(current, memoizedState, value, c281) {
           let value3 = closure_91.get(ErrorResult);
           if (undefined === value3) {
             obj3 = { value: ErrorResult, source: flags, stack: closure_11(flags) };
-            const result7 = obj5.set(ErrorResult, obj3);
+            const result7 = closure_91.set(ErrorResult, obj3);
             value3 = obj3;
           }
-          obj5 = closure_91;
         }
       }
       obj = { value: ErrorResult1, source: flags, stack: closure_11(flags) };
@@ -11357,12 +11352,11 @@ function completeUnitOfWork(pendingProps) {
                 let tmp177 = bubbleProperties(tmp);
                 let flag6 = false;
                 if (!flag6) {
-                  let tmp178 = closure_159;
                   let tmp179 = closure_86;
                   if (256 & tmp.flags) {
                     let tmp188 = tmp179;
                     if (0 <= tmp179) {
-                      tmp178.current = dependencyMap3[tmp179];
+                      closure_159.current = dependencyMap3[tmp179];
                       dependencyMap3[closure_86] = null;
                       let diff = closure_86 - 1;
                       closure_86 = diff;
@@ -11381,7 +11375,7 @@ function completeUnitOfWork(pendingProps) {
                   } else {
                     let tmp180 = tmp179;
                     if (0 <= tmp179) {
-                      tmp178.current = dependencyMap3[tmp179];
+                      closure_159.current = dependencyMap3[tmp179];
                       dependencyMap3[closure_86] = null;
                       let diff1 = closure_86 - 1;
                       closure_86 = diff1;
@@ -11968,7 +11962,6 @@ function completeUnitOfWork(pendingProps) {
             obj2 = peek;
             memoizedState.renderingStartTime = obj2.unstable_now();
             tail.sibling = null;
-            let tmp145 = closure_162;
             let sum2 = 1 & closure_162.current;
             if (flag2) {
               let tmp147 = sum2 | 2;
@@ -11977,8 +11970,8 @@ function completeUnitOfWork(pendingProps) {
             }
             sum2 = closure_86 + 1;
             closure_86 = sum2;
-            dependencyMap3[sum2] = tmp145.current;
-            tmp145.current = tmp147;
+            dependencyMap3[sum2] = closure_162.current;
+            closure_162.current = tmp147;
           } else {
             let tmp141 = bubbleProperties(tmp);
             child = null;
@@ -12543,12 +12536,11 @@ function completeUnitOfWork(pendingProps) {
               throw Error("Client rendering an Activity suspended it again. This is a bug in React.");
             }
           } else {
-            let tmp231 = closure_159;
             let tmp232 = closure_86;
             if (256 & flags) {
               let tmp241 = tmp232;
               if (0 <= tmp232) {
-                tmp231.current = dependencyMap3[tmp232];
+                closure_159.current = dependencyMap3[tmp232];
                 dependencyMap3[closure_86] = null;
                 let diff8 = closure_86 - 1;
                 closure_86 = diff8;
@@ -12567,7 +12559,7 @@ function completeUnitOfWork(pendingProps) {
             } else {
               let tmp233 = tmp232;
               if (0 <= tmp232) {
-                tmp231.current = dependencyMap3[tmp232];
+                closure_159.current = dependencyMap3[tmp232];
                 dependencyMap3[closure_86] = null;
                 let diff9 = closure_86 - 1;
                 closure_86 = diff9;
@@ -12614,7 +12606,7 @@ function flushMutationEffects() {
       __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = null;
       closure_277 = closure_277 | 4;
       try {
-        commitMutationEffectsOnFiber(tmp14, tmp13);
+        commitMutationEffectsOnFiber(_null5, c301);
         closure_277 = tmp9;
         tmp5.T = tmp6;
       } catch (tmp12) {
@@ -12634,7 +12626,7 @@ function flushLayoutEffects() {
       __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = null;
       closure_277 = closure_277 | 4;
       try {
-        commitLayoutEffectOnFiber(tmp13, tmp14.alternate, tmp14);
+        commitLayoutEffectOnFiber(tmp13, _null5.alternate, _null5);
         closure_277 = tmp9;
         tmp5.T = tmp6;
       } catch (tmp12) {
@@ -12659,29 +12651,29 @@ function flushSpawnedWork() {
       _null5 = null;
       releaseRootPooledCache(tmp5, tmp5.pendingLanes);
     }
-    lanesToEventPriority(tmp7);
+    lanesToEventPriority(c303);
     const stateNode = tmp6.stateNode;
     if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-      if (typeof obj2.onCommitFiberRoot === "function") {
+      if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__2.onCommitFiberRoot === "function") {
         try {
-          obj2.onCommitFiberRoot(closure_72, stateNode, undefined, !(128 & ~stateNode.current.flags));
+          __REACT_DEVTOOLS_GLOBAL_HOOK__2.onCommitFiberRoot(closure_72, stateNode, undefined, !(128 & ~stateNode.current.flags));
         } catch (err) {
         }
       }
     }
-    if (null !== arr) {
+    if (null !== _null3) {
       __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = null;
       try {
         const onRecoverableError = tmp5.onRecoverableError;
         let num4 = 0;
-        if (0 < arr.length) {
+        if (0 < _null3.length) {
           do {
-            iter = arr[num4];
+            iter = _null3[num4];
             obj = { componentStack: iter.stack };
             let onRecoverableErrorResult = onRecoverableError(iter.value, obj);
             sum = num4 + 1;
             num4 = sum;
-            length = arr.length;
+            length = _null3.length;
           } while (sum < length);
         }
         __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = tmp20;
@@ -12694,7 +12686,7 @@ function flushSpawnedWork() {
       flushPendingEffects();
     }
     ensureRootIsScheduled(tmp5);
-    if (!(261930 & tmp7)) {
+    if (!(261930 & c303)) {
       c307 = 0;
       tmp5 = flushSyncWorkAcrossRoots_impl(0, false);
     }
@@ -12709,11 +12701,11 @@ function flushSpawnedWork() {
   c300 = 5;
 }
 function releaseRootPooledCache(c301, c304) {
-  c301.pooledCacheLanes = c301.pooledCacheLanes & c304;
-  if (0 == (c301.pooledCacheLanes & c304)) {
-    const pooledCache = c301.pooledCache;
+  _null2.pooledCacheLanes = _null2.pooledCacheLanes & c304;
+  if (0 == (_null2.pooledCacheLanes & c304)) {
+    const pooledCache = _null2.pooledCache;
     if (null != pooledCache) {
-      c301.pooledCache = null;
+      _null2.pooledCache = null;
       pooledCache.refCount = pooledCache.refCount - 1;
       if (0 === pooledCache.refCount) {
         const result = peek.unstable_scheduleCallback(peek.unstable_NormalPriority, () => {
@@ -12737,7 +12729,7 @@ function flushPassiveEffects() {
     c304 = 0;
     const tmp35 = lanesToEventPriority(c303);
     try {
-      tmp36.T = null;
+      __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = null;
       c305 = null;
       c300 = 0;
       c301 = null;
@@ -12753,14 +12745,14 @@ function flushPassiveEffects() {
         closure_277 = tmp12;
         flushSyncWorkAcrossRoots_impl(0, false);
         if (__REACT_DEVTOOLS_GLOBAL_HOOK__2) {
-          if (typeof obj.onPostCommitFiberRoot === "function") {
+          if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__2.onPostCommitFiberRoot === "function") {
             try {
-              const result = obj.onPostCommitFiberRoot(closure_72, tmp10);
+              const result = __REACT_DEVTOOLS_GLOBAL_HOOK__2.onPostCommitFiberRoot(closure_72, tmp10);
             } catch (err) {
             }
           }
         }
-        tmp36.T = tmp37;
+        __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.T = tmp37;
         releaseRootPooledCache(tmp31, tmp32);
         return true;
       }
@@ -12779,11 +12771,10 @@ function captureCommitPhaseErrorOnRoot(_return, source, value) {
       value = weakMap.get(value);
       if (undefined === value) {
         obj = { value, source, stack: getStackByFiberInDevAndProd(source) };
-        const result = obj2.set(value, obj);
+        const result = weakMap.set(value, obj);
         value = obj;
       }
       obj = value;
-      obj2 = weakMap;
     }
     const stateNode = _return.stateNode;
     obj = {
@@ -12837,16 +12828,13 @@ function captureCommitPhaseError(tag, sibling2, value) {
       while (3 !== _return.tag) {
         if (1 === _return.tag) {
           let stateNode = _return.stateNode;
-          if (typeof _return.type.getDerivedStateFromError !== "function") {
-          }
           if (typeof value === "object") {
             if (null !== value) {
-              obj2 = weakMap;
               value = weakMap.get(value);
               if (undefined === value) {
                 obj = { value, source: tag, stack: null };
                 obj.stack = getStackByFiberInDevAndProd(tag);
-                let result = obj2.set(value, obj);
+                let result = weakMap.set(value, obj);
                 value = obj;
               }
               obj = value;
@@ -12942,6 +12930,9 @@ function pingSuspendedRoot(pingCache, arg1, arg2) {
       }
     } else {
       if (3 === tmp5) {
+        if ((62914560 & c280) === c280) {
+          peek;
+        }
       }
       closure_290 = closure_290 | arg2;
     }
@@ -12973,6 +12964,7 @@ function pingSuspendedRoot(pingCache, arg1, arg2) {
       const result = peek.unstable_scheduleCallback(peek.unstable_ImmediatePriority, processRootScheduleInImmediateTask);
     }
   }
+  tmp17 = pingCache !== iter && null === pingCache.next;
 }
 function retryDehydratedSuspenseBoundary(memoizedState) {
   memoizedState = memoizedState.memoizedState;
@@ -13860,7 +13852,6 @@ let items = ["topTouchStart"];
 let items1 = ["topTouchMove"];
 let items2 = ["topTouchCancel", "topTouchEnd"];
 let items3 = [];
-let obj1 = { touchBank: items3, numberActiveTouches: 0, indexOfSingleActiveTouch: -1, mostRecentTimeStamp: 0 };
 let closure_49 = {
   instrument(arg0) {
     global = arg0;
@@ -13900,16 +13891,15 @@ let closure_49 = {
       }
     }
   },
-  touchHistory: obj1
+  touchHistory: { touchBank: items3, numberActiveTouches: 0, indexOfSingleActiveTouch: -1, mostRecentTimeStamp: 0 }
 };
 let c50 = null;
 let closure_51 = 0;
-let obj2 = { startShouldSetResponder: { phasedRegistrationNames: { bubbled: "onStartShouldSetResponder", captured: "onStartShouldSetResponderCapture" }, dependencies: items }, scrollShouldSetResponder: { phasedRegistrationNames: { bubbled: "onScrollShouldSetResponder", captured: "onScrollShouldSetResponderCapture" }, dependencies: ["topScroll"] }, selectionChangeShouldSetResponder: { phasedRegistrationNames: { bubbled: "onSelectionChangeShouldSetResponder", captured: "onSelectionChangeShouldSetResponderCapture" }, dependencies: ["topSelectionChange"] }, moveShouldSetResponder: { phasedRegistrationNames: { bubbled: "onMoveShouldSetResponder", captured: "onMoveShouldSetResponderCapture" }, dependencies: items1 }, responderStart: { registrationName: "onResponderStart", dependencies: items }, responderMove: { registrationName: "onResponderMove", dependencies: items1 }, responderEnd: { registrationName: "onResponderEnd", dependencies: items2 }, responderRelease: { registrationName: "onResponderRelease", dependencies: items2 }, responderTerminationRequest: { registrationName: "onResponderTerminationRequest", dependencies: [] }, responderGrant: { registrationName: "onResponderGrant", dependencies: [] }, responderReject: { registrationName: "onResponderReject", dependencies: [] }, responderTerminate: { registrationName: "onResponderTerminate", dependencies: [] } };
 let obj3 = {
   _getResponder() {
     return c50;
   },
-  eventTypes: obj2,
+  eventTypes: { startShouldSetResponder: { phasedRegistrationNames: { bubbled: "onStartShouldSetResponder", captured: "onStartShouldSetResponderCapture" }, dependencies: items }, scrollShouldSetResponder: { phasedRegistrationNames: { bubbled: "onScrollShouldSetResponder", captured: "onScrollShouldSetResponderCapture" }, dependencies: ["topScroll"] }, selectionChangeShouldSetResponder: { phasedRegistrationNames: { bubbled: "onSelectionChangeShouldSetResponder", captured: "onSelectionChangeShouldSetResponderCapture" }, dependencies: ["topSelectionChange"] }, moveShouldSetResponder: { phasedRegistrationNames: { bubbled: "onMoveShouldSetResponder", captured: "onMoveShouldSetResponderCapture" }, dependencies: items1 }, responderStart: { registrationName: "onResponderStart", dependencies: items }, responderMove: { registrationName: "onResponderMove", dependencies: items1 }, responderEnd: { registrationName: "onResponderEnd", dependencies: items2 }, responderRelease: { registrationName: "onResponderRelease", dependencies: items2 }, responderTerminationRequest: { registrationName: "onResponderTerminationRequest", dependencies: [] }, responderGrant: { registrationName: "onResponderGrant", dependencies: [] }, responderReject: { registrationName: "onResponderReject", dependencies: [] }, responderTerminate: { registrationName: "onResponderTerminate", dependencies: [] } },
   extractEvents(arg0, arg1, responderIgnoreScroll, arg3) {
     let _return1;
     let diff;
@@ -13934,13 +13924,13 @@ let obj3 = {
         }
       }
       if (tmp) {
-        let scrollShouldSetResponder = obj2.startShouldSetResponder;
+        let scrollShouldSetResponder = closure_41.startShouldSetResponder;
       } else if ("topTouchMove" === arg0) {
-        scrollShouldSetResponder = obj2.moveShouldSetResponder;
+        scrollShouldSetResponder = closure_41.moveShouldSetResponder;
       } else if ("topSelectionChange" === arg0) {
-        scrollShouldSetResponder = obj2.selectionChangeShouldSetResponder;
+        scrollShouldSetResponder = closure_41.selectionChangeShouldSetResponder;
       } else {
-        scrollShouldSetResponder = obj2.scrollShouldSetResponder;
+        scrollShouldSetResponder = closure_41.scrollShouldSetResponder;
       }
       let tmp12 = arg1;
       if (c50) {
@@ -14124,15 +14114,15 @@ let obj3 = {
       if (tmp55) {
         tmp5 = null;
         if (tmp55 !== c50) {
-          const pooled1 = closure_41.getPooled(obj2.responderGrant, tmp55, responderIgnoreScroll, arg3);
+          const pooled1 = closure_41.getPooled(closure_41.responderGrant, tmp55, responderIgnoreScroll, arg3);
           pooled1.touchHistory = closure_49.touchHistory;
           const _Array7 = Array;
           if (Array.isArray(pooled1)) {
-            const item1 = pooled1.forEach(tmp148, undefined);
+            const item1 = pooled1.forEach(accumulateDirectDispatchesSingle$1, undefined);
           } else if (pooled1) {
-            const call2 = tmp148.call;
+            const call2 = accumulateDirectDispatchesSingle$1.call;
             if (typeof call2 === "unknown") {
-              tmp148(pooled1);
+              accumulateDirectDispatchesSingle$1(pooled1);
             } else {
               call2(undefined, pooled1);
             }
@@ -14155,15 +14145,15 @@ let obj3 = {
             pooled1._dispatchListeners = null;
             pooled1._dispatchInstances = null;
             if (c50) {
-              const pooled2 = obj2.getPooled(tmp142.responderTerminationRequest, c50, responderIgnoreScroll, arg3);
-              pooled2.touchHistory = tmp147.touchHistory;
+              const pooled2 = closure_41.getPooled(closure_41.responderTerminationRequest, c50, responderIgnoreScroll, arg3);
+              pooled2.touchHistory = closure_49.touchHistory;
               const _Array2 = Array;
               if (Array.isArray(pooled2)) {
-                const item2 = pooled2.forEach(tmp148, undefined);
+                const item2 = pooled2.forEach(accumulateDirectDispatchesSingle$1, undefined);
               } else if (pooled2) {
-                const call3 = tmp148.call;
+                const call3 = accumulateDirectDispatchesSingle$1.call;
                 if (typeof call3 === "unknown") {
-                  tmp148(pooled2);
+                  accumulateDirectDispatchesSingle$1(pooled2);
                 } else {
                   call3(undefined, pooled2);
                 }
@@ -14172,7 +14162,7 @@ let obj3 = {
               let tmp75 = !_dispatchListeners3;
               if (_dispatchListeners3) {
                 ({ _dispatchListeners: _dispatchListeners4, _dispatchInstances: _dispatchInstances3 } = pooled2);
-                if (tmp62(_dispatchListeners4)) {
+                if (isArray(_dispatchListeners4)) {
                   const _Error4 = Error;
                   throw Error("Invalid `event`.");
                 } else {
@@ -14195,17 +14185,17 @@ let obj3 = {
                 const constructor2 = pooled2.constructor;
                 constructor2.release(pooled2);
               }
-              const getPooled = obj2.getPooled;
+              const getPooled = closure_41.getPooled;
               if (tmp75) {
-                const pooled3 = getPooled(tmp142.responderTerminate, c50, responderIgnoreScroll, arg3);
-                pooled3.touchHistory = tmp147.touchHistory;
+                const pooled3 = getPooled(closure_41.responderTerminate, c50, responderIgnoreScroll, arg3);
+                pooled3.touchHistory = closure_49.touchHistory;
                 const _Array4 = Array;
                 if (Array.isArray(pooled3)) {
-                  const item3 = pooled3.forEach(tmp148, undefined);
+                  const item3 = pooled3.forEach(accumulateDirectDispatchesSingle$1, undefined);
                 } else if (pooled3) {
-                  const call5 = tmp148.call;
+                  const call5 = accumulateDirectDispatchesSingle$1.call;
                   if (typeof call5 === "unknown") {
-                    tmp148(pooled3);
+                    accumulateDirectDispatchesSingle$1(pooled3);
                   } else {
                     call5(undefined, pooled3);
                   }
@@ -14219,15 +14209,15 @@ let obj3 = {
                   const GlobalResponderHandler = obj3.GlobalResponderHandler;
                 }
               } else {
-                const pooled4 = getPooled(tmp142.responderReject, tmp55, responderIgnoreScroll, arg3);
-                pooled4.touchHistory = tmp147.touchHistory;
+                const pooled4 = getPooled(closure_41.responderReject, tmp55, responderIgnoreScroll, arg3);
+                pooled4.touchHistory = closure_49.touchHistory;
                 const _Array3 = Array;
                 if (Array.isArray(pooled4)) {
-                  const item4 = pooled4.forEach(tmp148, undefined);
+                  const item4 = pooled4.forEach(accumulateDirectDispatchesSingle$1, undefined);
                 } else if (pooled4) {
-                  const call4 = tmp148.call;
+                  const call4 = accumulateDirectDispatchesSingle$1.call;
                   if (typeof call4 === "unknown") {
-                    tmp148(pooled4);
+                    accumulateDirectDispatchesSingle$1(pooled4);
                   } else {
                     call4(undefined, pooled4);
                   }
@@ -14251,7 +14241,6 @@ let obj3 = {
               }
             }
           }
-          tmp62 = isArray;
         }
       }
     }
@@ -14272,13 +14261,13 @@ let obj3 = {
       tmp94 = tmp97;
     }
     if (tmp95) {
-      let responderStart = obj2.responderStart;
+      let responderStart = closure_41.responderStart;
     } else if (tmp96) {
-      responderStart = obj2.responderMove;
+      responderStart = closure_41.responderMove;
     } else {
       responderStart = null;
       if (tmp94) {
-        responderStart = obj2.responderEnd;
+        responderStart = closure_41.responderEnd;
       }
     }
     obj = tmp5;
@@ -14287,11 +14276,11 @@ let obj3 = {
       pooled5.touchHistory = closure_49.touchHistory;
       const _Array5 = Array;
       if (Array.isArray(pooled5)) {
-        const item5 = pooled5.forEach(tmp109, undefined);
+        const item5 = pooled5.forEach(accumulateDirectDispatchesSingle$1, undefined);
       } else if (pooled5) {
-        const call6 = tmp109.call;
+        const call6 = accumulateDirectDispatchesSingle$1.call;
         if (typeof call6 === "unknown") {
-          tmp109(pooled5);
+          accumulateDirectDispatchesSingle$1(pooled5);
         } else {
           call6(undefined, pooled5);
         }
@@ -14301,16 +14290,13 @@ let obj3 = {
         throw Error("Accumulated items must not be null or undefined.");
       } else if (null == tmp5) {
         obj = pooled5;
+      } else if (isArray(tmp5)) {
+        let combined = tmp5.concat(pooled5);
+      } else if (isArray(pooled5)) {
+        items1 = [tmp5];
+        combined = items1.concat(pooled5);
       } else {
-        if (isArray(tmp5)) {
-          let combined = tmp5.concat(pooled5);
-        } else if (tmp113(pooled5)) {
-          items1 = [tmp5];
-          combined = items1.concat(pooled5);
-        } else {
-          combined = [tmp5, pooled5];
-        }
-        tmp113 = isArray;
+        combined = [tmp5, pooled5];
       }
     }
     let flag2 = c50;
@@ -14400,11 +14386,11 @@ let obj3 = {
       }
     }
     if (tmp115) {
-      let responderTerminate = obj2.responderTerminate;
+      let responderTerminate = closure_41.responderTerminate;
     } else {
       responderTerminate = null;
       if (flag2) {
-        responderTerminate = obj2.responderRelease;
+        responderTerminate = closure_41.responderRelease;
       }
     }
     let tmp125 = obj;
@@ -14413,11 +14399,11 @@ let obj3 = {
       pooled6.touchHistory = closure_49.touchHistory;
       const _Array6 = Array;
       if (Array.isArray(pooled6)) {
-        const item6 = pooled6.forEach(tmp133, undefined);
+        const item6 = pooled6.forEach(accumulateDirectDispatchesSingle$1, undefined);
       } else if (pooled6) {
-        const call7 = tmp133.call;
+        const call7 = accumulateDirectDispatchesSingle$1.call;
         if (typeof call7 === "unknown") {
-          tmp133(pooled6);
+          accumulateDirectDispatchesSingle$1(pooled6);
         } else {
           call7(undefined, pooled6);
         }
@@ -14433,16 +14419,13 @@ let obj3 = {
           tmp125 = pooled6;
           const GlobalResponderHandler2 = obj3.GlobalResponderHandler;
         }
+      } else if (isArray(obj)) {
+        let combined1 = obj.concat(pooled6);
+      } else if (isArray(pooled6)) {
+        const items2 = [obj];
+        combined1 = items2.concat(pooled6);
       } else {
-        if (isArray(obj)) {
-          let combined1 = obj.concat(pooled6);
-        } else if (tmp137(pooled6)) {
-          const items2 = [obj];
-          combined1 = items2.concat(pooled6);
-        } else {
-          combined1 = [obj, pooled6];
-        }
-        tmp137 = isArray;
+        combined1 = [obj, pooled6];
       }
     }
     return tmp125;
@@ -14486,7 +14469,6 @@ function recomputePluginOrdering() {
             let tmp7 = keys[tmp2];
             while (tmp7 !== undefined) {
               let tmp26 = eventTypes[tmp7];
-              let tmp27 = closure_61;
               if (closure_61.hasOwnProperty(tmp7)) {
                 let tmp17 = globalThis;
                 let _Error5 = Error;
@@ -14494,7 +14476,7 @@ function recomputePluginOrdering() {
                 let str11 = "`.";
                 throw Error("EventPluginRegistry: More than one plugin attempted to publish the same event name, `" + tmp7 + "`.");
               } else {
-                tmp27[tmp7] = tmp26;
+                closure_61[tmp7] = tmp26;
                 let phasedRegistrationNames = tmp26.phasedRegistrationNames;
                 if (phasedRegistrationNames) {
                   let flag = true;
@@ -14616,7 +14598,7 @@ let obj5 = {
                   let diff = tmp21 - 1;
                   if (0 < +items.length) {
                     do {
-                      let tmp17Result = tmp17(items[diff], "captured", pooled);
+                      let tmp17Result = accumulateDirectionalDispatches(items[diff], "captured", pooled);
                       tmp24 = +diff;
                       diff = tmp24 - 1;
                     } while (0 < tmp24);
@@ -14628,11 +14610,11 @@ let obj5 = {
           }
           const _Array2 = Array;
           if (Array.isArray(pooled)) {
-            const item = pooled.forEach(tmp13, undefined);
+            const item = pooled.forEach(accumulateTwoPhaseDispatchesSingle, undefined);
           } else if (pooled) {
-            const call2 = tmp13.call;
+            const call2 = accumulateTwoPhaseDispatchesSingle.call;
             if (typeof call2 === "unknown") {
-              tmp13(pooled);
+              accumulateTwoPhaseDispatchesSingle(pooled);
             } else {
               call2(undefined, pooled);
             }
@@ -14640,11 +14622,11 @@ let obj5 = {
         } else if (tmp30) {
           const _Array = Array;
           if (Array.isArray(pooled)) {
-            const item1 = pooled.forEach(tmp9, undefined);
+            const item1 = pooled.forEach(accumulateDirectDispatchesSingle, undefined);
           } else if (pooled) {
-            const call = tmp9.call;
+            const call = accumulateDirectDispatchesSingle.call;
             if (typeof call === "unknown") {
-              tmp9(pooled);
+              accumulateDirectDispatchesSingle(pooled);
             } else {
               call(undefined, pooled);
             }
@@ -14775,14 +14757,14 @@ function readContext(_currentValue2) {
   _currentValue2 = _currentValue2._currentValue2;
   obj = { context: _currentValue2, memoizedValue: _currentValue2, next: null };
   if (null === obj) {
-    if (null === tmp) {
+    if (null === require) {
       const _Error = Error;
       throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
     } else {
       obj = { lanes: 0, firstContext: null };
       obj.firstContext = obj;
-      tmp.dependencies = obj;
-      tmp.flags = tmp.flags | 524288;
+      require.dependencies = obj;
+      require.flags = require.flags | 524288;
     }
   } else {
     tmp2.next = obj;
@@ -14859,6 +14841,7 @@ function createChildReconciler(arg0) {
     obj.implementation = implementation;
     obj.stateNode = obj;
     obj.return = dependencies;
+    const tmp4 = null !== implementation.children ? implementation.children : [];
   }
   function updateFragment(children, tag, children2, lanes, key) {
     if (null !== tag) {
@@ -15233,7 +15216,7 @@ function createChildReconciler(arg0) {
         if (closure_1_13 === $$typeof) {
           if (null !== sibling) {
             while (sibling.key !== tmp219) {
-              if (closure_0) {
+              if (deletions) {
                 deletions = deletions.deletions;
                 if (null === deletions) {
                   items = [sibling];
@@ -15249,10 +15232,10 @@ function createChildReconciler(arg0) {
             if (type === closure_1_15) {
               if (7 === sibling.tag) {
                 let sibling16 = sibling.sibling;
-                if (closure_0) {
+                if (deletions) {
                   if (null !== sibling16) {
                     do {
-                      if (closure_0) {
+                      if (deletions) {
                         let deletions1 = deletions.deletions;
                         if (null === deletions1) {
                           items1 = [sibling16];
@@ -15272,8 +15255,8 @@ function createChildReconciler(arg0) {
                 tmp247.return = deletions;
                 let tmp229 = tmp247;
               }
-              let tmp248 = closure_0;
-              if (closure_0) {
+              let tmp248 = deletions;
+              if (deletions) {
                 tmp248 = null === tmp229.alternate;
               }
               if (tmp248) {
@@ -15282,10 +15265,10 @@ function createChildReconciler(arg0) {
               return tmp229;
             } else if (sibling.elementType === type) {
               let sibling14 = sibling.sibling;
-              if (closure_0) {
+              if (deletions) {
                 if (null !== sibling14) {
                   do {
-                    if (closure_0) {
+                    if (deletions) {
                       let deletions2 = deletions.deletions;
                       if (null === deletions2) {
                         let items2 = [sibling14];
@@ -15309,11 +15292,11 @@ function createChildReconciler(arg0) {
               tmp229.ref = tmp230;
               tmp229.return = deletions;
             }
-            if (closure_0) {
+            if (deletions) {
               let sibling15 = sibling;
               if (null !== sibling) {
                 do {
-                  if (closure_0) {
+                  if (deletions) {
                     let deletions3 = deletions.deletions;
                     if (null === deletions3) {
                       items3 = [sibling15];
@@ -15346,7 +15329,7 @@ function createChildReconciler(arg0) {
           let sibling11 = sibling;
           if (null !== sibling) {
             while (sibling11.key !== tmp200) {
-              if (closure_0) {
+              if (deletions) {
                 let deletions4 = deletions.deletions;
                 if (null === deletions4) {
                   let items4 = [sibling11];
@@ -15362,10 +15345,10 @@ function createChildReconciler(arg0) {
               if (sibling11.stateNode.containerInfo === children.containerInfo) {
                 if (sibling11.stateNode.implementation === children.implementation) {
                   let sibling13 = sibling11.sibling;
-                  if (closure_0) {
+                  if (deletions) {
                     if (null !== sibling13) {
                       do {
-                        if (closure_0) {
+                        if (deletions) {
                           let deletions5 = deletions.deletions;
                           if (null === deletions5) {
                             let items5 = [sibling13];
@@ -15386,8 +15369,8 @@ function createChildReconciler(arg0) {
                   obj2 = tmp217;
                   const tmp215 = children.children || [];
                 }
-                let tmp218 = closure_0;
-                if (closure_0) {
+                let tmp218 = deletions;
+                if (deletions) {
                   tmp218 = null === obj2.alternate;
                 }
                 if (tmp218) {
@@ -15396,11 +15379,11 @@ function createChildReconciler(arg0) {
                 return obj2;
               }
             }
-            if (closure_0) {
+            if (deletions) {
               let sibling12 = sibling11;
               if (null !== sibling11) {
                 do {
-                  if (closure_0) {
+                  if (deletions) {
                     let deletions6 = deletions.deletions;
                     if (null === deletions6) {
                       let items6 = [sibling12];
@@ -15455,9 +15438,9 @@ function createChildReconciler(arg0) {
                 if (null === tmp135) {
                   break;
                 } else {
-                  let tmp266 = closure_0;
-                  let tmp136 = closure_0;
-                  if (closure_0) {
+                  let tmp266 = deletions;
+                  let tmp136 = deletions;
+                  if (deletions) {
                     tmp136 = tmp130;
                   }
                   if (tmp136) {
@@ -15531,11 +15514,11 @@ function createChildReconciler(arg0) {
           }
           if (num26 === children.length) {
             let tmp174 = tmp124;
-            if (closure_0) {
+            if (deletions) {
               tmp174 = tmp124;
               if (null !== sibling8) {
                 do {
-                  if (closure_0) {
+                  if (deletions) {
                     let deletions8 = deletions.deletions;
                     if (null === deletions8) {
                       let items8 = [sibling8];
@@ -15561,7 +15544,7 @@ function createChildReconciler(arg0) {
                 let tmp186 = num27;
                 if (null !== tmp179) {
                   tmp179.index = num26;
-                  if (closure_0) {
+                  if (deletions) {
                     let index6 = tmp179.alternate;
                     if (null !== index6) {
                       index6 = index6.index;
@@ -15618,9 +15601,9 @@ function createChildReconciler(arg0) {
                 let tmp165 = tmp151;
                 let tmp166 = tmp152;
                 if (null !== tmp159) {
-                  let tmp167 = closure_0;
-                  let tmp271 = closure_0;
-                  if (closure_0) {
+                  let tmp167 = deletions;
+                  let tmp271 = deletions;
+                  if (deletions) {
                     tmp167 = null !== tmp159.alternate;
                   }
                   if (tmp167) {
@@ -15663,14 +15646,14 @@ function createChildReconciler(arg0) {
               }
             }
             tmp174 = tmp153;
-            if (closure_0) {
+            if (deletions) {
               const item = map.forEach((item) => {
-                if (closure_0) {
-                  deletions = tmp.deletions;
+                if (deletions) {
+                  deletions = deletions.deletions;
                   if (null === deletions) {
                     items = [item];
-                    tmp.deletions = items;
-                    tmp.flags = tmp.flags | 16;
+                    deletions.deletions = items;
+                    deletions.flags = deletions.flags | 16;
                   } else {
                     deletions.push(item);
                   }
@@ -15725,7 +15708,6 @@ function createChildReconciler(arg0) {
             } else {
               const call2 = tmp45.call;
               iter = typeof call2 === "unknown" ? tmp45() : call2(children);
-              closure_0 = deletions;
               if (null == iter) {
                 const _Error3 = Error;
                 throw Error("An iterable object provided no iterator.");
@@ -15763,9 +15745,9 @@ function createChildReconciler(arg0) {
                       if (null === tmp59) {
                         break;
                       } else {
-                        let tmp259 = closure_0;
-                        let tmp60 = closure_0;
-                        if (closure_0) {
+                        let tmp259 = deletions;
+                        let tmp60 = deletions;
+                        if (deletions) {
                           tmp60 = tmp54;
                         }
                         if (tmp60) {
@@ -15845,11 +15827,11 @@ function createChildReconciler(arg0) {
                 }
                 if (iter3.done) {
                   let tmp100 = tmp68;
-                  if (closure_0) {
+                  if (deletions) {
                     tmp100 = tmp68;
                     if (null !== sibling6) {
                       do {
-                        if (closure_0) {
+                        if (deletions) {
                           let deletions10 = deletions.deletions;
                           if (null === deletions10) {
                             let items10 = [sibling6];
@@ -15875,7 +15857,7 @@ function createChildReconciler(arg0) {
                       let tmp112 = num14;
                       if (null !== tmp105) {
                         tmp105.index = num13;
-                        if (closure_0) {
+                        if (deletions) {
                           let index3 = tmp105.alternate;
                           if (null !== index3) {
                             index3 = index3.index;
@@ -15935,9 +15917,9 @@ function createChildReconciler(arg0) {
                       let tmp91 = tmp77;
                       let tmp92 = tmp78;
                       if (null !== tmp85) {
-                        let tmp93 = closure_0;
-                        let tmp264 = closure_0;
-                        if (closure_0) {
+                        let tmp93 = deletions;
+                        let tmp264 = deletions;
+                        if (deletions) {
                           tmp93 = null !== tmp85.alternate;
                         }
                         if (tmp93) {
@@ -15982,14 +15964,14 @@ function createChildReconciler(arg0) {
                     }
                   }
                   tmp100 = tmp79;
-                  if (closure_0) {
+                  if (deletions) {
                     const item1 = map1.forEach((item) => {
-                      if (closure_0) {
-                        deletions = tmp.deletions;
+                      if (deletions) {
+                        deletions = deletions.deletions;
                         if (null === deletions) {
                           items = [item];
-                          tmp.deletions = items;
-                          tmp.flags = tmp.flags | 16;
+                          deletions.deletions = items;
+                          deletions.flags = deletions.flags | 16;
                         } else {
                           deletions.push(item);
                         }
@@ -16055,12 +16037,12 @@ function createChildReconciler(arg0) {
       if (typeof children !== "number") {
         if (typeof children !== "bigint") {
           let tmp4 = null;
-          if (closure_0) {
+          if (deletions) {
             let sibling2 = sibling;
             tmp4 = null;
             if (null !== sibling) {
               do {
-                if (closure_0) {
+                if (deletions) {
                   let deletions11 = deletions.deletions;
                   if (null === deletions11) {
                     let items12 = [sibling2];
@@ -16083,13 +16065,13 @@ function createChildReconciler(arg0) {
     if (null !== sibling) {
       if (6 === sibling.tag) {
         let sibling4 = sibling.sibling;
-        let tmp16 = closure_0;
-        let tmp17 = closure_0;
-        if (closure_0) {
+        let tmp16 = deletions;
+        let tmp17 = deletions;
+        if (deletions) {
           if (null !== sibling4) {
             do {
-              let tmp18 = closure_0;
-              if (closure_0) {
+              let tmp18 = deletions;
+              if (deletions) {
                 let deletions12 = deletions.deletions;
                 if (null === deletions12) {
                   let items13 = [sibling4];
@@ -16121,14 +16103,14 @@ function createChildReconciler(arg0) {
         tmp4 = obj;
       }
     }
-    let tmp10 = closure_0;
-    tmp11 = closure_0;
-    if (closure_0) {
+    let tmp10 = deletions;
+    tmp11 = deletions;
+    if (deletions) {
       let sibling3 = sibling;
       if (tmp9) {
         do {
-          let tmp12 = closure_0;
-          if (closure_0) {
+          let tmp12 = deletions;
+          if (deletions) {
             let deletions13 = deletions.deletions;
             if (null === deletions13) {
               let items14 = [sibling3];
@@ -16182,7 +16164,7 @@ function use($$typeof) {
         if (null !== (null === obj ? _null.memoizedState : obj.next)) {
           return trackUsedThenable(tmp5, $$typeof, tmp4);
         } else {
-          const alternate = tmp7.alternate;
+          const alternate = _null.alternate;
           if (null !== alternate) {
             if (null !== alternate.memoizedState) {
               let tmp9 = obj7;
@@ -16196,14 +16178,14 @@ function use($$typeof) {
         const _currentValue2 = $$typeof._currentValue2;
         obj = { context: $$typeof, memoizedValue: _currentValue2, next: null };
         if (null === obj) {
-          if (null === tmp) {
+          if (null === require) {
             const _Error = Error;
             throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
           } else {
             obj = { lanes: 0, firstContext: null };
             obj.firstContext = obj;
-            tmp.dependencies = obj;
-            tmp.flags = tmp.flags | 524288;
+            require.dependencies = obj;
+            require.flags = require.flags | 524288;
           }
         } else {
           tmp2.next = obj;
@@ -16288,7 +16270,7 @@ function updateSyncExternalStore(serializer, getSnapshot) {
     return tmp3;
   }
   _null.flags = _null.flags | 2048;
-  obj = { tag: 9, create: updateStoreInstance.bind(null, tmp, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "Array" }, next: null };
+  obj = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "Array" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
     obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16307,7 +16289,7 @@ function updateSyncExternalStore(serializer, getSnapshot) {
     const _Error = Error;
     throw Error("Expected a work-in-progress root. This is a bug in React. Please file an issue.");
   } else if (!(127 & c164)) {
-    tmp.flags = tmp.flags | 16384;
+    _null.flags = _null.flags | 16384;
     obj = { getSnapshot, value: tmp3 };
     const updateQueue2 = _null.updateQueue;
     if (null === updateQueue2) {
@@ -16363,8 +16345,8 @@ function rerenderActionState(memoizedState) {
   if (null !== c166) {
     return updateActionStateImpl(tmp2, tmp3, memoizedState);
   } else {
-    tmp();
-    const tmpResult = tmp();
+    updateWorkInProgressHook();
+    const tmpResult = updateWorkInProgressHook();
     tmpResult.memoizedState = memoizedState;
     items = [tmp2.memoizedState, tmpResult.queue.dispatch, false];
     return items;
@@ -16486,12 +16468,11 @@ function updateMemo(fn, arg1) {
     setIsStrictModeForDevtools(true);
     try {
       fn();
-      tmp7(false);
+      setIsStrictModeForDevtools(false);
     } catch (tmp11) {
       tmp(false);
       throw tmp11;
     }
-    tmp7 = setIsStrictModeForDevtools;
   }
   items = [tmp6, tmp4];
   tmp3.memoizedState = items;
@@ -16501,14 +16482,14 @@ function useHostTransitionStatus() {
   const _currentValue2 = context2._currentValue2;
   obj = { context: context2, memoizedValue: _currentValue2, next: null };
   if (null === obj) {
-    if (null === tmp) {
+    if (null === require) {
       const _Error = Error;
       throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
     } else {
       obj = { lanes: 0, firstContext: null };
       obj.firstContext = obj;
-      tmp.dependencies = obj;
-      tmp.flags = tmp.flags | 524288;
+      require.dependencies = obj;
+      require.flags = require.flags | 524288;
     }
   } else {
     tmp2.next = obj;
@@ -16680,33 +16661,33 @@ let c170 = false;
 let closure_171 = 0;
 items1 = null;
 let closure_173 = 0;
-let obj6 = { readContext, use, useCallback: throwInvalidHookError, useContext: throwInvalidHookError, useEffect: throwInvalidHookError, useImperativeHandle: throwInvalidHookError, useLayoutEffect: throwInvalidHookError, useInsertionEffect: throwInvalidHookError, useMemo: throwInvalidHookError, useReducer: throwInvalidHookError, useRef: throwInvalidHookError, useState: throwInvalidHookError, useDebugValue: throwInvalidHookError, useDeferredValue: throwInvalidHookError, useTransition: throwInvalidHookError, useSyncExternalStore: throwInvalidHookError, useId: throwInvalidHookError, useHostTransitionStatus: throwInvalidHookError, useFormState: throwInvalidHookError, useActionState: throwInvalidHookError, useOptimistic: throwInvalidHookError, useMemoCache: throwInvalidHookError, useCacheRefresh: throwInvalidHookError, useEffectEvent: throwInvalidHookError };
+{ readContext, use, useCallback: throwInvalidHookError, useContext: throwInvalidHookError, useEffect: throwInvalidHookError, useImperativeHandle: throwInvalidHookError, useLayoutEffect: throwInvalidHookError, useInsertionEffect: throwInvalidHookError, useMemo: throwInvalidHookError, useReducer: throwInvalidHookError, useRef: throwInvalidHookError, useState: throwInvalidHookError, useDebugValue: throwInvalidHookError, useDeferredValue: throwInvalidHookError, useTransition: throwInvalidHookError, useSyncExternalStore: throwInvalidHookError, useId: throwInvalidHookError, useHostTransitionStatus: throwInvalidHookError, useFormState: throwInvalidHookError, useActionState: throwInvalidHookError, useOptimistic: throwInvalidHookError, useMemoCache: throwInvalidHookError, useCacheRefresh: throwInvalidHookError }.useEffectEvent = throwInvalidHookError;
 let closure_210 = {
   readContext,
   use,
-  useCallback(fn, items) {
+  useCallback(arg0, arg1) {
     obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     if (null === obj) {
       c165.memoizedState = obj;
     } else {
       tmp.next = obj;
     }
-    items = [fn, ];
+    items = [arg0, ];
     let tmp4 = null;
-    if (undefined !== items) {
-      tmp4 = items;
+    if (undefined !== arg1) {
+      tmp4 = arg1;
     }
     items[1] = tmp4;
     obj.memoizedState = items;
-    return fn;
+    return arg0;
   },
   useContext: readContext,
   useEffect: mountEffect,
-  useImperativeHandle(ref, chatInputRefObjectCallback, items) {
+  useImperativeHandle(cache, c165, arr) {
     let combined = null;
-    if (null != items) {
-      items = [ref];
-      combined = items.concat(items);
+    if (null != arr) {
+      items = [cache];
+      combined = arr.concat(items);
     }
     obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     if (null === obj) {
@@ -16719,7 +16700,7 @@ let closure_210 = {
     if (undefined !== combined) {
       tmp6 = combined;
     }
-    obj = { tag: 5, create: imperativeHandleEffect.bind(null, chatInputRefObjectCallback, ref), deps: tmp6, inst: { destroy: "Array" }, next: null };
+    obj = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16735,8 +16716,9 @@ let closure_210 = {
       updateQueue.lastEffect = obj;
     }
     obj.memoizedState = obj;
+    const bindResult = imperativeHandleEffect.bind(null, c165, cache);
   },
-  useLayoutEffect(create, items) {
+  useLayoutEffect(create, arg1) {
     obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     if (null === obj) {
       _null.memoizedState = obj;
@@ -16745,8 +16727,8 @@ let closure_210 = {
     }
     _null.flags = _null.flags | 4194308;
     let tmp4 = null;
-    if (undefined !== items) {
-      tmp4 = items;
+    if (undefined !== arg1) {
+      tmp4 = arg1;
     }
     obj = { tag: 5, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
@@ -16765,7 +16747,7 @@ let closure_210 = {
     }
     obj.memoizedState = obj;
   },
-  useInsertionEffect(create, items) {
+  useInsertionEffect(create, arg1) {
     obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     if (null === obj) {
       _null.memoizedState = obj;
@@ -16774,8 +16756,8 @@ let closure_210 = {
     }
     _null.flags = _null.flags | 4;
     let tmp4 = null;
-    if (undefined !== items) {
-      tmp4 = items;
+    if (undefined !== arg1) {
+      tmp4 = arg1;
     }
     obj = { tag: 3, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
@@ -16794,44 +16776,42 @@ let closure_210 = {
     }
     obj.memoizedState = obj;
   },
-  useMemo(getNextRenewalDateLabel, items) {
+  useMemo(fn, arg1) {
     let tmp4 = null;
-    if (undefined !== items) {
-      tmp4 = items;
+    if (undefined !== arg1) {
+      tmp4 = arg1;
     }
-    const tmp5 = getNextRenewalDateLabel();
+    const tmp5 = fn();
     if (c170) {
       setIsStrictModeForDevtools(true);
       try {
-        getNextRenewalDateLabel();
-        tmp6(false);
+        fn();
+        setIsStrictModeForDevtools(false);
       } catch (tmp10) {
         tmp(false);
         throw tmp10;
       }
-      tmp6 = setIsStrictModeForDevtools;
     }
     items = [tmp5, tmp4];
     mountWorkInProgressHook().memoizedState = items;
     return tmp5;
   },
-  useReducer(lastRenderedReducer, arg1, fn) {
+  useReducer(lastRenderedReducer, value, fn) {
     const tmp3 = mountWorkInProgressHook();
-    let tmp4 = arg1;
+    let tmp4 = value;
     if (undefined !== fn) {
-      const tmp5 = fn(arg1);
+      const tmp5 = fn(value);
       tmp4 = tmp5;
       if (c170) {
         setIsStrictModeForDevtools(true);
         try {
-          fn(arg1);
-          tmp7(false);
+          fn(value);
+          setIsStrictModeForDevtools(false);
           tmp4 = tmp5;
         } catch (tmp12) {
           tmp(false);
           throw tmp12;
         }
-        tmp7 = setIsStrictModeForDevtools;
       }
     }
     tmp3.baseState = tmp4;
@@ -16843,8 +16823,8 @@ let closure_210 = {
     items = [tmp3.memoizedState, bindResult];
     return items;
   },
-  useRef(set) {
-    obj = { current: set };
+  useRef(current) {
+    obj = { current };
     obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     if (null === obj) {
       c165.memoizedState = obj;
@@ -16909,21 +16889,21 @@ let closure_210 = {
     items = [false, bindResult];
     return items;
   },
-  useSyncExternalStore(subscribe, get) {
+  useSyncExternalStore(serializer, getSnapshot) {
     obj = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
     if (null === obj) {
-      tmp.memoizedState = obj;
+      _null.memoizedState = obj;
     } else {
       tmp2.next = obj;
     }
-    const tmp4 = get();
+    const tmp4 = getSnapshot();
     if (null === c278) {
       const _Error = Error;
       throw Error("Expected a work-in-progress root. This is a bug in React. Please file an issue.");
     } else {
       if (!(127 & c280)) {
-        tmp.flags = tmp.flags | 16384;
-        obj = { getSnapshot: get, value: tmp4 };
+        _null.flags = _null.flags | 16384;
+        obj = { getSnapshot, value: tmp4 };
         const updateQueue = _null.updateQueue;
         if (null === updateQueue) {
           obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16941,9 +16921,9 @@ let closure_210 = {
         }
       }
       tmp3.memoizedState = tmp4;
-      obj1 = { value: tmp4, getSnapshot: get };
+      obj1 = { value: tmp4, getSnapshot };
       tmp3.queue = obj1;
-      const items2 = [subscribe];
+      const items2 = [serializer];
       obj2 = { memoizedState: null, baseState: null, baseQueue: null, queue: null, next: null };
       if (null === obj) {
         obj = obj2;
@@ -16953,7 +16933,7 @@ let closure_210 = {
         obj = obj2;
       }
       _null.flags = _null.flags | 8390656;
-      obj3 = { tag: 9, create: subscribeToStore.bind(null, tmp, obj1, subscribe), deps: items2, inst: { destroy: "Array" }, next: null };
+      obj3 = { tag: 9, create: subscribeToStore.bind(null, _null, obj1, serializer), deps: items2, inst: { destroy: "Array" }, next: null };
       let updateQueue2 = _null.updateQueue;
       if (null === updateQueue2) {
         obj4 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16969,8 +16949,8 @@ let closure_210 = {
         updateQueue2.lastEffect = obj3;
       }
       obj.memoizedState = obj3;
-      tmp.flags = tmp.flags | 2048;
-      const obj5 = { tag: 9, create: updateStoreInstance.bind(null, tmp, obj1, tmp4, get), deps: null, inst: { destroy: "Array" }, next: null };
+      _null.flags = _null.flags | 2048;
+      const obj5 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj1, tmp4, getSnapshot), deps: null, inst: { destroy: "Array" }, next: null };
       let updateQueue3 = _null.updateQueue;
       if (null === updateQueue3) {
         obj6 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -17057,7 +17037,7 @@ let closure_210 = {
     };
   }
 };
-let obj7 = {
+{
   readContext,
   use,
   useCallback: updateCallback,
@@ -17090,7 +17070,7 @@ let obj7 = {
       const tmp5 = trackUsedThenable(tmp3, first, closure_171);
       tmp2 = tmp5;
       if (null === (null === obj ? _null.memoizedState : obj.next)) {
-        const alternate = tmp6.alternate;
+        const alternate = _null.alternate;
         if (null !== alternate) {
           if (null !== alternate.memoizedState) {
             let tmp8 = obj7;
@@ -17118,10 +17098,9 @@ let obj7 = {
     return updateReducerImpl(tmp2, c166, tmp);
   },
   useMemoCache,
-  useCacheRefresh: updateRefresh,
-  useEffectEvent: updateEvent
-};
-let obj8 = {
+  useCacheRefresh: updateRefresh
+}.useEffectEvent = updateEvent;
+{
   readContext,
   use,
   useCallback: updateCallback,
@@ -17141,7 +17120,7 @@ let obj8 = {
       const _Error = Error;
       throw Error("Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)");
     } else {
-      queue.lastRenderedReducer = tmp;
+      queue.lastRenderedReducer = basicStateReducer;
       memoizedState = tmp2.memoizedState;
       let tmp7 = memoizedState;
       if (null !== queue.pending) {
@@ -17170,11 +17149,10 @@ let obj8 = {
       items = [tmp7, queue.dispatch];
       return items;
     }
-    tmp = basicStateReducer;
   },
   useDebugValue: mountDebugValue,
-  useDeferredValue(memoizedState, arg1) {
-    let tmp = arg1;
+  useDeferredValue(memoizedState, memoizedState3) {
+    let tmp = memoizedState3;
     const tmp2 = updateWorkInProgressHook();
     if (null === c166) {
       if (undefined !== tmp) {
@@ -17213,7 +17191,7 @@ let obj8 = {
       const _Error = Error;
       throw Error("Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)");
     } else {
-      queue.lastRenderedReducer = tmp;
+      queue.lastRenderedReducer = basicStateReducer;
       memoizedState = tmp2.memoizedState;
       let tmp7 = memoizedState;
       if (null !== queue.pending) {
@@ -17252,7 +17230,7 @@ let obj8 = {
         const tmp13 = trackUsedThenable(tmp11, first, closure_171);
         tmp10 = tmp13;
         if (null === (null === obj ? _null.memoizedState : obj.next)) {
-          const alternate = tmp14.alternate;
+          const alternate = _null.alternate;
           if (null !== alternate) {
             if (null !== alternate.memoizedState) {
               let tmp16 = obj7;
@@ -17265,7 +17243,6 @@ let obj8 = {
       const items2 = [tmp10, updateWorkInProgressHook().memoizedState];
       return items2;
     }
-    tmp = basicStateReducer;
   },
   useSyncExternalStore: updateSyncExternalStore,
   useId: updateId,
@@ -17288,9 +17265,8 @@ let obj8 = {
     return items;
   },
   useMemoCache,
-  useCacheRefresh: updateRefresh,
-  useEffectEvent: updateEvent
-};
+  useCacheRefresh: updateRefresh
+}.useEffectEvent = updateEvent;
 const updater = {
   enqueueSetState(_reactInternals, payload, callback) {
     _reactInternals = _reactInternals._reactInternals;
@@ -17396,14 +17372,14 @@ A = {
     const _currentValue2 = context._currentValue2;
     obj = { context, memoizedValue: _currentValue2, next: null };
     if (null === obj) {
-      if (null === tmp) {
+      if (null === require) {
         const _Error = Error;
         throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
       } else {
         obj = { lanes: 0, firstContext: null };
         obj.firstContext = obj;
-        tmp.dependencies = obj;
-        tmp.flags = tmp.flags | 524288;
+        require.dependencies = obj;
+        require.flags = require.flags | 524288;
       }
     } else {
       tmp2.next = obj;
@@ -17422,14 +17398,14 @@ A = {
     const _currentValue2 = context._currentValue2;
     obj = { context, memoizedValue: _currentValue2, next: null };
     if (null === obj) {
-      if (null === tmp) {
+      if (null === require) {
         const _Error = Error;
         throw Error("Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().");
       } else {
         obj = { lanes: 0, firstContext: null };
         obj.firstContext = obj;
-        tmp.dependencies = obj;
-        tmp.flags = tmp.flags | 524288;
+        require.dependencies = obj;
+        require.flags = require.flags | 524288;
       }
     } else {
       tmp2.next = obj;
@@ -17552,11 +17528,11 @@ if (globalThis.nativeFabricUIManager.registerEventHandler) {
       let tmp5 = null;
       if (0 < length.length) {
         while (true) {
-          obj2 = arr[num];
+          obj2 = length[num];
           let extractEventsResult = obj2;
           let tmp9 = obj2;
           if (obj2) {
-            extractEventsResult = obj2.extractEvents(eventName, closure_0, nativeEvent, tmp3);
+            extractEventsResult = obj2.extractEvents(eventName, closure_0, nativeEvent, publicInstance);
             tmp9 = extractEventsResult;
           }
           let tmp15 = tmp4;
@@ -17622,9 +17598,9 @@ if (globalThis.nativeFabricUIManager.registerEventHandler) {
       if (c70) {
         const _Array = Array;
         if (Array.isArray(arr7)) {
-          const item = arr7.forEach(tmp24, undefined);
+          const item = arr7.forEach(executeDispatchesAndReleaseTopLevel, undefined);
         } else if (arr7) {
-          const call = tmp24.call;
+          const call = executeDispatchesAndReleaseTopLevel.call;
           if (typeof call === "unknown") {
             if (arr7) {
               ({ _dispatchListeners, _dispatchInstances } = arr7);
@@ -17748,7 +17724,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
   let _Error2 = Error;
   throw Error("Expected ReactFiberErrorDialog.showErrorDialog to be a function.");
 } else {
-  batchedUpdatesImpl = function batchedUpdatesImpl(fn, arg1) {
+  batchedUpdatesImpl = function batchedUpdatesImpl(fn, value) {
     closure_277 = closure_277 | 1;
     try {
       closure_277 = tmp2;
@@ -17756,7 +17732,7 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
         closure_297 = peek.unstable_now() + 500;
         flushSyncWorkAcrossRoots_impl(0, true);
       }
-      return fn(arg1);
+      return fn(value);
     } catch (tmp10) {
       closure_277 = tmp;
       if (0 === tmp) {
@@ -17767,7 +17743,6 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
     }
   };
   let _Map = Map;
-  let map = new Map();
   let obj11 = { bundleType: 0, version: "19.2.3", rendererPackageName: "react-native-renderer", currentDispatcherRef: __CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, reconcilerVersion: "19.2.3", rendererConfig: obj9 };
   if (typeof globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined") {
     __REACT_DEVTOOLS_GLOBAL_HOOK__2 = globalThis.__REACT_DEVTOOLS_GLOBAL_HOOK__;
@@ -18062,10 +18037,9 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
       if (null != nodeFromPublicInstance) {
         const result = globalThis.nativeFabricUIManager.sendAccessibilityEvent(nodeFromPublicInstance, arg1);
       } else {
-        const result1 = tmp4(272).legacySendAccessibilityEvent(_nativeTag, arg1);
-        const tmp4Result = tmp4(272);
+        const result1 = get_BatchedBridge.legacySendAccessibilityEvent(_nativeTag, arg1);
+        const tmp4Result = get_BatchedBridge;
       }
-      tmp4 = require;
     }
   };
   exports.stopSurface = (arg0) => {
@@ -18082,7 +18056,9 @@ if (typeof get_BatchedBridge.ReactFiberErrorDialog.showErrorDialog !== "function
   exports.unmountComponentAtNode = function(arg0) {
     this.stopSurface(arg0);
   };
+  let map = new Map();
 }
+let obj1 = { touchBank: items3, numberActiveTouches: 0, indexOfSingleActiveTouch: -1, mostRecentTimeStamp: 0 };
 let obj10 = {
   onChange(stateNode, stateNode2, arg2) {
     if (stateNode) {
@@ -18106,4 +18082,236 @@ let obj10 = {
       globalThis.nativeFabricUIManager.setIsJSResponder(stateNode2.stateNode.node, true, flag);
     }
   }
+};
+let obj2 = { startShouldSetResponder: { phasedRegistrationNames: { bubbled: "onStartShouldSetResponder", captured: "onStartShouldSetResponderCapture" }, dependencies: items }, scrollShouldSetResponder: { phasedRegistrationNames: { bubbled: "onScrollShouldSetResponder", captured: "onScrollShouldSetResponderCapture" }, dependencies: ["topScroll"] }, selectionChangeShouldSetResponder: { phasedRegistrationNames: { bubbled: "onSelectionChangeShouldSetResponder", captured: "onSelectionChangeShouldSetResponderCapture" }, dependencies: ["topSelectionChange"] }, moveShouldSetResponder: { phasedRegistrationNames: { bubbled: "onMoveShouldSetResponder", captured: "onMoveShouldSetResponderCapture" }, dependencies: items1 }, responderStart: { registrationName: "onResponderStart", dependencies: items }, responderMove: { registrationName: "onResponderMove", dependencies: items1 }, responderEnd: { registrationName: "onResponderEnd", dependencies: items2 }, responderRelease: { registrationName: "onResponderRelease", dependencies: items2 }, responderTerminationRequest: { registrationName: "onResponderTerminationRequest", dependencies: [] }, responderGrant: { registrationName: "onResponderGrant", dependencies: [] }, responderReject: { registrationName: "onResponderReject", dependencies: [] }, responderTerminate: { registrationName: "onResponderTerminate", dependencies: [] } };
+let obj6 = { readContext, use, useCallback: throwInvalidHookError, useContext: throwInvalidHookError, useEffect: throwInvalidHookError, useImperativeHandle: throwInvalidHookError, useLayoutEffect: throwInvalidHookError, useInsertionEffect: throwInvalidHookError, useMemo: throwInvalidHookError, useReducer: throwInvalidHookError, useRef: throwInvalidHookError, useState: throwInvalidHookError, useDebugValue: throwInvalidHookError, useDeferredValue: throwInvalidHookError, useTransition: throwInvalidHookError, useSyncExternalStore: throwInvalidHookError, useId: throwInvalidHookError, useHostTransitionStatus: throwInvalidHookError, useFormState: throwInvalidHookError, useActionState: throwInvalidHookError, useOptimistic: throwInvalidHookError, useMemoCache: throwInvalidHookError, useCacheRefresh: throwInvalidHookError };
+let obj7 = {
+  readContext,
+  use,
+  useCallback: updateCallback,
+  useContext: readContext,
+  useEffect: updateEffect,
+  useImperativeHandle: updateImperativeHandle,
+  useInsertionEffect: updateInsertionEffect,
+  useLayoutEffect: updateLayoutEffect,
+  useMemo: updateMemo,
+  useReducer: updateReducer,
+  useRef: updateRef,
+  useState() {
+    return updateReducerImpl(updateWorkInProgressHook(), c166, basicStateReducer);
+  },
+  useDebugValue: mountDebugValue,
+  useDeferredValue(memoizedState, memoizedState) {
+    return updateDeferredValueImpl(updateWorkInProgressHook(), _null2.memoizedState, memoizedState, memoizedState);
+  },
+  useTransition() {
+    const first = updateReducerImpl(updateWorkInProgressHook(), c166, basicStateReducer)[0];
+    let tmp2 = first;
+    if (typeof first !== "boolean") {
+      closure_171 = closure_171 + 1;
+      let tmp3 = items1;
+      if (null === items1) {
+        items = [];
+        items1 = items;
+        tmp3 = items;
+      }
+      const tmp5 = trackUsedThenable(tmp3, first, closure_171);
+      tmp2 = tmp5;
+      if (null === (null === obj ? _null.memoizedState : obj.next)) {
+        const alternate = _null.alternate;
+        if (null !== alternate) {
+          if (null !== alternate.memoizedState) {
+            let tmp8 = obj7;
+          }
+          tmp7.H = tmp8;
+        }
+        tmp8 = closure_210;
+      }
+    }
+    items1 = [tmp2, updateWorkInProgressHook().memoizedState];
+    return items1;
+  },
+  useSyncExternalStore: updateSyncExternalStore,
+  useId: updateId,
+  useHostTransitionStatus,
+  useFormState: updateActionState,
+  useActionState: updateActionState,
+  useOptimistic(baseState, fn) {
+    let tmp = fn;
+    const tmp2 = updateWorkInProgressHook();
+    tmp2.baseState = baseState;
+    if (typeof fn !== "function") {
+      tmp = basicStateReducer;
+    }
+    return updateReducerImpl(tmp2, c166, tmp);
+  },
+  useMemoCache,
+  useCacheRefresh: updateRefresh
+};
+let obj8 = {
+  readContext,
+  use,
+  useCallback: updateCallback,
+  useContext: readContext,
+  useEffect: updateEffect,
+  useImperativeHandle: updateImperativeHandle,
+  useInsertionEffect: updateInsertionEffect,
+  useLayoutEffect: updateLayoutEffect,
+  useMemo: updateMemo,
+  useReducer: rerenderReducer,
+  useRef: updateRef,
+  useState() {
+    let actionResult;
+    const tmp2 = updateWorkInProgressHook();
+    const queue = tmp2.queue;
+    if (null === queue) {
+      const _Error = Error;
+      throw Error("Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)");
+    } else {
+      queue.lastRenderedReducer = basicStateReducer;
+      memoizedState = tmp2.memoizedState;
+      let tmp7 = memoizedState;
+      if (null !== queue.pending) {
+        queue.pending = null;
+        const next = iter2.next;
+        iter = next;
+        do {
+          let action = iter.action;
+          actionResult = action;
+          if (typeof action === "function") {
+            actionResult = action(memoizedState);
+          }
+          iter = iter.next;
+          memoizedState = actionResult;
+        } while (iter !== next);
+        if (!is(actionResult, tmp2.memoizedState)) {
+          c222 = true;
+        }
+        tmp2.memoizedState = actionResult;
+        if (null === tmp2.baseQueue) {
+          tmp2.baseState = actionResult;
+        }
+        queue.lastRenderedState = actionResult;
+        tmp7 = actionResult;
+      }
+      items = [tmp7, queue.dispatch];
+      return items;
+    }
+  },
+  useDebugValue: mountDebugValue,
+  useDeferredValue(memoizedState, memoizedState3) {
+    let tmp = memoizedState3;
+    const tmp2 = updateWorkInProgressHook();
+    if (null === c166) {
+      if (undefined !== tmp) {
+        if (!(1073741824 & c164)) {
+          tmp2.memoizedState = tmp;
+          if (0 === closure_291) {
+            if (536870912 & c280) {
+              closure_291 = 536870912;
+            } else {
+              c79 = tmp12;
+              if (!(3932160 & c79 << 1)) {
+                c79 = 262144;
+              }
+              closure_291 = c79;
+            }
+          }
+          current = closure_159.current;
+          if (null !== current) {
+            current.flags = current.flags | 32;
+          }
+          _null.lanes = _null.lanes | closure_291;
+          closure_288 = closure_288 | closure_291;
+        }
+      }
+      tmp2.memoizedState = memoizedState;
+      tmp = memoizedState;
+    } else {
+      return updateDeferredValueImpl(tmp2, tmp3.memoizedState, memoizedState, tmp);
+    }
+  },
+  useTransition() {
+    let actionResult;
+    const tmp2 = updateWorkInProgressHook();
+    const queue = tmp2.queue;
+    if (null === queue) {
+      const _Error = Error;
+      throw Error("Should have a queue. You are likely calling Hooks conditionally, which is not allowed. (https://react.dev/link/invalid-hook-call)");
+    } else {
+      queue.lastRenderedReducer = basicStateReducer;
+      memoizedState = tmp2.memoizedState;
+      let tmp7 = memoizedState;
+      if (null !== queue.pending) {
+        queue.pending = null;
+        const next = iter2.next;
+        iter = next;
+        do {
+          let action = iter.action;
+          actionResult = action;
+          if (typeof action === "function") {
+            actionResult = action(memoizedState);
+          }
+          iter = iter.next;
+          memoizedState = actionResult;
+        } while (iter !== next);
+        if (!is(actionResult, tmp2.memoizedState)) {
+          c222 = true;
+        }
+        tmp2.memoizedState = actionResult;
+        if (null === tmp2.baseQueue) {
+          tmp2.baseState = actionResult;
+        }
+        queue.lastRenderedState = actionResult;
+        tmp7 = actionResult;
+      }
+      items = [tmp7, queue.dispatch];
+      const first = items[0];
+      let tmp10 = first;
+      if (typeof first !== "boolean") {
+        closure_171 = closure_171 + 1;
+        let tmp11 = items1;
+        if (null === items1) {
+          items1 = [];
+          tmp11 = items1;
+        }
+        const tmp13 = trackUsedThenable(tmp11, first, closure_171);
+        tmp10 = tmp13;
+        if (null === (null === obj ? _null.memoizedState : obj.next)) {
+          const alternate = _null.alternate;
+          if (null !== alternate) {
+            if (null !== alternate.memoizedState) {
+              let tmp16 = obj7;
+            }
+            tmp15.H = tmp16;
+          }
+          tmp16 = closure_210;
+        }
+      }
+      const items2 = [tmp10, updateWorkInProgressHook().memoizedState];
+      return items2;
+    }
+  },
+  useSyncExternalStore: updateSyncExternalStore,
+  useId: updateId,
+  useHostTransitionStatus,
+  useFormState: rerenderActionState,
+  useActionState: rerenderActionState,
+  useOptimistic(baseState, fn) {
+    const tmp = updateWorkInProgressHook();
+    if (null !== c166) {
+      let tmp2 = fn;
+      tmp.baseState = baseState;
+      if (typeof fn !== "function") {
+        tmp2 = basicStateReducer;
+      }
+      items = updateReducerImpl(tmp, c166, tmp2);
+    } else {
+      tmp.baseState = baseState;
+      items = [baseState, tmp.queue.dispatch];
+    }
+    return items;
+  },
+  useMemoCache,
+  useCacheRefresh: updateRefresh
 };

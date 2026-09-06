@@ -311,7 +311,6 @@ class IntersectionObserver {
                     throw syntaxError;
                   } else {
                     for (const item10005 of parts) {
-                      let tmp2 = item10005;
                       if (obj2.test(item10005)) {
                         continue;
                       } else {
@@ -324,7 +323,7 @@ class IntersectionObserver {
                         let tmp6 = new.target;
                         let syntaxError1 = new SyntaxError(
                           "Failed to construct 'IntersectionObserver': Failed to parse rootMargin: '" +
-                            tmp2 +
+                            item10005 +
                             "' is not a valid length. Only 'px' and '%' units are allowed.",
                         );
                         throw syntaxError1;
@@ -457,11 +456,10 @@ let items = [
             const _observationTargets2 = self._observationTargets;
             _observationTargets2.delete(arg0);
             if (0 === self._observationTargets.size) {
-              tmp10(264).unregisterObserver(_intersectionObserverId);
+              _modAll264.unregisterObserver(_intersectionObserverId);
               self._intersectionObserverId = null;
-              const tmp10Result = tmp10(264);
+              const tmp10Result = _modAll264;
             }
-            tmp10 = importAll;
           } else {
             const _console = console;
             console.error(
@@ -510,7 +508,7 @@ let items = [
     },
   },
 ];
-let tmp2 = _createClassDefault(IntersectionObserver, items);
+const tmp2 = _createClassDefault(IntersectionObserver, items);
 const module_126 = fn(126);
 module_126.setPlatformObject(tmp2);
 

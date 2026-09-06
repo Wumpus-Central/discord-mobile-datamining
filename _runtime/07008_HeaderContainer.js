@@ -148,12 +148,16 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
               } else {
                 const obj4 = {};
                 const merged = Object.assign(obj);
-                headerResult = tmp35(require("Header").Header, obj4);
+                headerResult = jsx(require("Header").Header, {});
               }
               obj3.children = headerResult;
-              obj2.children = tmp35(tmp38, obj3);
-              obj1.children = tmp35(tmp38, obj2);
-              return tmp35(require("Link").NavigationProvider, obj1, descriptor.descriptor.route.key);
+              obj2.children = (
+                <closure_1_3 pointerEvents="box-none" onLayout={fn}>
+                  {null}
+                </closure_1_3>
+              );
+              obj1.children = <closure_1_3 {...obj2} />;
+              return jsx(require("Link").NavigationProvider, obj1, descriptor.descriptor.route.key);
             }
             const items = [closure_5.absolute];
             let tmp41 = null;
@@ -176,7 +180,7 @@ export const HeaderContainer = function HeaderContainer(getFocusedRoute) {
     return null;
   });
   return (
-    <minHeight pointerEvents="box-none" style={arg0.style}>
+    <minHeight pointerEvents="box-none" style={getFocusedRoute.style}>
       {null}
     </minHeight>
   );

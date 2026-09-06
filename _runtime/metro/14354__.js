@@ -1,5 +1,8 @@
 // _runtime/metro/14354__.js
+import _mod14298 from "14298__.js";
 import _mod14323 from "14323__.js";
+import _mod14351 from "14351__.js";
+import _mod14355 from "14355__.js";
 
 export default (arg0, arg1, value, arg3) => {
   let obj = arg3;
@@ -12,13 +15,13 @@ export default (arg0, arg1, value, arg3) => {
     name = obj.name;
   }
   if (_mod14323(value)) {
-    tmp3(14355)(value, name, obj);
+    _mod14355(value, name, obj);
   }
   if (obj.global) {
     if (flag) {
       arg0[arg1] = value;
     } else {
-      tmp3(14298)(arg1, value);
+      _mod14298(arg1, value);
     }
   } else {
     try {
@@ -35,8 +38,8 @@ export default (arg0, arg1, value, arg3) => {
         obj = { value, enumerable: false, configurable: null, writable: null };
         obj.configurable = !obj.nonConfigurable;
         obj.writable = !obj.nonWritable;
-        tmp3(14351).f(arg0, arg1, obj);
-        const tmp3Result = tmp3(14351);
+        _mod14351.f(arg0, arg1, obj);
+        const tmp3Result = _mod14351;
       }
     } catch (err) {}
   }

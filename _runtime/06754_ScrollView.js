@@ -38,9 +38,8 @@ class ScrollView {
         if (!tmp) {
           closure_2(handlerTag);
           if (require != null) {
-            require(tmp4);
+            require(handlerTag);
           }
-          tmp4 = handlerTag;
         }
       });
     };
@@ -88,9 +87,8 @@ export const FlatList = (ref) => {
       if (!tmp) {
         closure_2(handlerTag);
         if (require != null) {
-          require(tmp4);
+          require(handlerTag);
         }
-        tmp4 = handlerTag;
       }
     });
   }
@@ -130,4 +128,5 @@ export const FlatList = (ref) => {
     }
     noop.cloneElement(refreshControl, obj2);
   }
+  let tmp = _objectWithoutProperties(ref, obj);
 };

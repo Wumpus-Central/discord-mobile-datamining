@@ -77,8 +77,8 @@ getChangeEventCalculator.__workletHash = 1165584403675;
 getChangeEventCalculator.__initData = {
   code: "function getChangeEventCalculator_Pnpm_eventUtilsTs6(diffCalculator){return function(current,previous){'worklet';const currentEventData=current.handlerData;const previousEventData=previous?previous.handlerData:null;const changePayload=diffCalculator(currentEventData,previousEventData);current.handlerData={...currentEventData,...changePayload};return current;};}",
 };
-function isTouchEvent(arg0) {
-  return "allTouches" in arg0;
+function isTouchEvent(result) {
+  return "allTouches" in result;
 }
 isTouchEvent.__closure = {};
 isTouchEvent.__workletHash = 14798108877298;
@@ -109,7 +109,6 @@ export const checkMappingForChangeProperties = function checkMappingForChangePro
       if ("nativeEvent" in tmp2) {
         if ("handlerData" in tmp2.nativeEvent) {
           for (const key10023 in tmp2.nativeEvent.handlerData) {
-            let tmp15 = key10023;
             if (!key10023.startsWith("change")) {
               continue;
             } else {
@@ -121,7 +120,7 @@ export const checkMappingForChangeProperties = function checkMappingForChangePro
               let str2 = "";
               let tmp10 = new.target;
               let tmp11 = new.target;
-              let error = new Error(obj.tagMessage("" + tmp15 + " is not available when using Animated.Event."));
+              let error = new Error(obj.tagMessage("" + key10023 + " is not available when using Animated.Event."));
               throw error;
             }
           }

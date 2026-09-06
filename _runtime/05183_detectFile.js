@@ -56,6 +56,7 @@ if (self2) {
     const _Object4 = Object;
     const fnResult = fn(_mod5184);
     module.exports = Object.assign(Object.assign({}, fnResult), fn(_mod5188));
+    const fnResult1 = fn(_mod5188);
   } else {
     const _Object2 = Object;
   }

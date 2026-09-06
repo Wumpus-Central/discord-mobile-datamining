@@ -230,13 +230,13 @@ function mapIntoArray(element, items, arg2, arg3, fn) {
                 tmp2.status = "pending";
                 tmp2.then((value) => {
                   if ("pending" === _null.status) {
-                    tmp.status = "fulfilled";
-                    tmp.value = value;
+                    _null.status = "fulfilled";
+                    _null.value = value;
                   }
                 }, (reason) => {
                   if ("pending" === _null.status) {
-                    tmp.status = "rejected";
-                    tmp.reason = reason;
+                    _null.status = "rejected";
+                    _null.reason = reason;
                   }
                 });
               }
@@ -272,20 +272,20 @@ function lazyInitializer(_status) {
     _resultResult.then((_result) => {
       let tmp2 = 0 !== _status._status;
       if (tmp2) {
-        tmp2 = -1 !== tmp._status;
+        tmp2 = -1 !== _status._status;
       }
       if (!tmp2) {
-        tmp._status = 1;
-        tmp._result = _result;
+        _status._status = 1;
+        _status._result = _result;
       }
     }, (_result) => {
       let tmp2 = 0 !== _status._status;
       if (tmp2) {
-        tmp2 = -1 !== tmp._status;
+        tmp2 = -1 !== _status._status;
       }
       if (!tmp2) {
-        tmp._status = 2;
-        tmp._result = _result;
+        _status._status = 2;
+        _status._result = _result;
       }
     });
     if (-1 === _status._status) {
@@ -487,13 +487,13 @@ export (arg0) => {
   };
 }
 export () => null
-export const cloneElement = (props, key, children) => {
-  if (null == props) {
+export const cloneElement = (onlyResult, key, children) => {
+  if (null == onlyResult) {
     const _Error = Error;
-    throw Error("The argument must be a React element, but you passed " + props + ".");
+    throw Error("The argument must be a React element, but you passed " + onlyResult + ".");
   } else {
-    const tmp18 = assign({}, props.props);
-    key = props.key;
+    const tmp18 = assign({}, onlyResult.props);
+    key = onlyResult.key;
     let tmp3 = key;
     if (null != key) {
       if (undefined !== key.key) {
@@ -504,9 +504,8 @@ export const cloneElement = (props, key, children) => {
       if (keys !== undefined) {
         tmp3 = key;
         while (keys[tmp] !== undefined) {
-          let tmp20 = hasOwnProperty;
           let call = hasOwnProperty.call;
-          let tmp6 = typeof call === "unknown" ? tmp20(tmp5) : call(key, tmp5);
+          let tmp6 = typeof call === "unknown" ? hasOwnProperty(tmp5) : call(key, tmp5);
           let tmp7 = !tmp6;
           if (tmp6) {
             tmp7 = "key" === tmp5;
@@ -546,7 +545,7 @@ export const cloneElement = (props, key, children) => {
       }
       tmp18.children = ArrayResult;
     }
-    const element = { $$typeof: _typeof, type: props.type, key: tmp3, ref: null, props: null };
+    const element = { $$typeof: _typeof, type: onlyResult.type, key: tmp3, ref: null, props: null };
     let tmp14 = null;
     if (undefined !== tmp18.ref) {
       tmp14 = ref;
@@ -556,32 +555,31 @@ export const cloneElement = (props, key, children) => {
     return element;
   }
 };
-export const createContext = (_currentValue) => {
-  Consumer = { $$typeof: _typeof3, _currentValue, _currentValue2: _currentValue, _threadCount: 0, Provider: Consumer, Consumer: null };
+export const createContext = (fakeSharedValue) => {
+  Consumer = { $$typeof: _typeof3, _currentValue: fakeSharedValue, _currentValue2: fakeSharedValue, _threadCount: 0, Provider: Consumer, Consumer: null };
   Consumer = { $$typeof: _typeof2, _context: Consumer };
   Consumer.Consumer = Consumer;
   return Consumer;
 };
-export const createElement = (defaultProps, key, children) => {
+export const createElement = (div, merged, element) => {
   const props = {};
   let tmp2 = null;
-  if (null != key) {
+  if (null != merged) {
     let text = null;
-    if (undefined !== key.key) {
-      text = `${key.key}`;
+    if (undefined !== merged.key) {
+      text = `${merged.key}`;
     }
     tmp2 = text;
     const keys = Object.keys();
     if (keys !== undefined) {
       tmp2 = text;
       while (keys[tmp] !== undefined) {
-        let tmp17 = hasOwnProperty;
         let call = hasOwnProperty.call;
-        let tmp7 = (typeof call === "unknown" ? tmp17(tmp6) : call(key, tmp6)) && "key" !== tmp6 && "__self" !== tmp6 && "__source" !== tmp6;
+        let tmp7 = (typeof call === "unknown" ? hasOwnProperty(tmp6) : call(merged, tmp6)) && "key" !== tmp6 && "__self" !== tmp6 && "__source" !== tmp6;
         if (!tmp7) {
           continue;
         } else {
-          props[tmp6] = key[tmp6];
+          props[tmp6] = merged[tmp6];
           continue;
         }
         continue;
@@ -590,7 +588,7 @@ export const createElement = (defaultProps, key, children) => {
   }
   const diff = arguments.length - 2;
   if (1 === diff) {
-    props.children = children;
+    props.children = element;
   } else if (1 < diff) {
     const _Array = Array;
     const ArrayResult = Array(diff);
@@ -603,9 +601,9 @@ export const createElement = (defaultProps, key, children) => {
     }
     props.children = ArrayResult;
   }
-  if (defaultProps) {
-    if (defaultProps.defaultProps) {
-      defaultProps = defaultProps.defaultProps;
+  if (div) {
+    if (div.defaultProps) {
+      const defaultProps = div.defaultProps;
       const keys1 = Object.keys();
       if (keys1 !== undefined) {
         while (keys1[1] !== undefined) {
@@ -620,7 +618,7 @@ export const createElement = (defaultProps, key, children) => {
       }
     }
   }
-  const element = { $$typeof: _typeof, type: defaultProps, key: tmp2, ref: null, props: null };
+  element = { $$typeof: _typeof, type: div, key: tmp2, ref: null, props: null };
   let tmp15 = null;
   if (undefined !== props.ref) {
     tmp15 = ref;
@@ -638,8 +636,8 @@ export (_result) => {
   _payload._payload = _payload;
   return _payload;
 }
-export (type, arg1) => {
-  obj = { $$typeof: _typeof5, type, compare: null };
+export (noop, arg1) => {
+  obj = { $$typeof: _typeof5, type: noop, compare: null };
   let tmp = null;
   if (undefined !== arg1) {
     tmp = arg1;
@@ -698,13 +696,13 @@ export const useActionState = (arg0, arg1, arg2) => {
   const H = obj.H;
   return H.useActionState(arg0, arg1, arg2);
 };
-export const useCallback = (fn, items) => {
+export const useCallback = (arg0, arg1) => {
   const H = obj.H;
-  return H.useCallback(fn, items);
+  return H.useCallback(arg0, arg1);
 };
-export const useContext = (context) => {
+export const useContext = (arg0) => {
   const H = obj.H;
-  return H.useContext(context);
+  return H.useContext(arg0);
 };
 export () => {
 
@@ -713,53 +711,53 @@ export const useDeferredValue = (arg0, arg1) => {
   const H = obj.H;
   return H.useDeferredValue(arg0, arg1);
 };
-export const useEffect = (arg0, arg1) => {
+export const useEffect = (arg0, items) => {
   const H = obj.H;
-  return H.useEffect(arg0, arg1);
+  return H.useEffect(arg0, items);
 };
-export const useEffectEvent = (impl) => {
+export const useEffectEvent = (arg0) => {
   const H = obj.H;
-  return H.useEffectEvent(impl);
+  return H.useEffectEvent(arg0);
 };
 export const useId = () => {
   const H = obj.H;
   return H.useId();
 };
-export const useImperativeHandle = (ref, chatInputRefObjectCallback, items) => {
+export const useImperativeHandle = (arg0, arg1, arg2) => {
   const H = obj.H;
-  return H.useImperativeHandle(ref, chatInputRefObjectCallback, items);
+  return H.useImperativeHandle(arg0, arg1, arg2);
 };
-export const useInsertionEffect = (create, items) => {
+export const useInsertionEffect = (arg0, arg1) => {
   const H = obj.H;
-  return H.useInsertionEffect(create, items);
+  return H.useInsertionEffect(arg0, arg1);
 };
-export const useLayoutEffect = (create, items) => {
+export const useLayoutEffect = (arg0, arg1) => {
   const H = obj.H;
-  return H.useLayoutEffect(create, items);
+  return H.useLayoutEffect(arg0, arg1);
 };
-export const useMemo = (getNextRenewalDateLabel, items) => {
+export const useMemo = (arg0, arg1) => {
   const H = obj.H;
-  return H.useMemo(getNextRenewalDateLabel, items);
+  return H.useMemo(arg0, arg1);
 };
 export const useOptimistic = (arg0, arg1) => {
   const H = obj.H;
   return H.useOptimistic(arg0, arg1);
 };
-export const useReducer = (lastRenderedReducer, arg1, fn) => {
+export const useReducer = (arg0, arg1, arg2) => {
   const H = obj.H;
-  return H.useReducer(lastRenderedReducer, arg1, fn);
+  return H.useReducer(arg0, arg1, arg2);
 };
-export const useRef = (set) => {
+export const useRef = (arg0) => {
   const H = obj.H;
-  return H.useRef(set);
+  return H.useRef(arg0);
 };
 export const useState = (arg0) => {
   const H = obj.H;
   return H.useState(arg0);
 };
-export const useSyncExternalStore = (subscribe, get, get2) => {
+export const useSyncExternalStore = (arg0, arg1, arg2) => {
   const H = obj.H;
-  return H.useSyncExternalStore(subscribe, get, get2);
+  return H.useSyncExternalStore(arg0, arg1, arg2);
 };
 export const useTransition = () => {
   const H = obj.H;

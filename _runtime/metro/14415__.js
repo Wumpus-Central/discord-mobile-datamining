@@ -90,7 +90,7 @@ class ReactotronImpl {
       const defaultResult = serialize.default(action, self.options.proxyHack);
       if (self.isReady) {
         try {
-          const socket = tmp4.socket;
+          const socket = self.socket;
           socket.send(defaultResult);
         } catch (err) {
           tmp2.isReady = false;
@@ -98,7 +98,7 @@ class ReactotronImpl {
           _console.log("An error occurred communicating with reactotron. Please reload your app");
         }
       } else {
-        const sendQueue = tmp4.sendQueue;
+        const sendQueue = self.sendQueue;
         sendQueue.push(defaultResult);
       }
     };
@@ -230,12 +230,12 @@ const items1 = [
           return onCommand;
         });
         if ("custom" === action.type) {
-          const customCommands = tmp4.customCommands;
+          const customCommands = self.customCommands;
           const found = customCommands.filter((command) => {
             if (typeof action.payload === "string") {
-              let tmp2 = command.command === tmp.payload;
+              let tmp2 = command.command === action.payload;
             } else {
-              tmp2 = command.command === tmp.payload.command;
+              tmp2 = command.command === action.payload.command;
             }
             return tmp2;
           });
@@ -248,10 +248,10 @@ const items1 = [
           });
         } else {
           if (tmp6) {
-            const options = tmp4.options;
+            const options = self.options;
             options.setClientId(action.payload);
           }
-          tmp6 = "setClientId" === action.type && tmp4.options.setClientId;
+          tmp6 = "setClientId" === action.type && self.options.setClientId;
         }
       }
       if ("on" in socket) {

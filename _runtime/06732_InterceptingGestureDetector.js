@@ -113,7 +113,7 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
   register(() => {
     let prop;
     if (gesture != null) {
-      const config = tmp.config;
+      const config = gesture.config;
       if (config != null) {
         prop = config.dispatchesAnimatedEvents;
       }
@@ -122,8 +122,8 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       closure_7.setMode(_mod6733.InterceptingDetectorMode.ANIMATED);
     } else {
       let prop1;
-      if (tmp != null) {
-        const config2 = tmp.config;
+      if (gesture != null) {
+        const config2 = gesture.config;
         if (config2 != null) {
           prop1 = config2.shouldUseReanimatedDetector;
         }
@@ -166,10 +166,10 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
       const items = [];
       let tmp2;
       if (gesture != null) {
-        tmp2 = tmp.detectorCallbacks[arg0];
+        tmp2 = gesture.detectorCallbacks[arg0];
       }
       if (tmp2) {
-        items.push(tmp.detectorCallbacks[arg0]);
+        items.push(gesture.detectorCallbacks[arg0]);
       }
       const item = first.forEach((item) => {
         if (item.methods[closure_0]) {
@@ -193,10 +193,10 @@ export const InterceptingGestureDetector = function InterceptingGestureDetector(
     const items6 = [gesture];
     const tmp8Result1 = tmp8(() => {
       if (gesture) {
-        if (obj.isComposedGesture(tmp)) {
-          let handlerTags = tmp.handlerTags;
+        if (obj.isComposedGesture(gesture)) {
+          let handlerTags = gesture.handlerTags;
         } else {
-          handlerTags = [tmp.handlerTag];
+          handlerTags = [gesture.handlerTag];
         }
         obj = _mod6722;
       } else {

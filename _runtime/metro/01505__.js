@@ -11,9 +11,8 @@ if (typeof document !== "undefined") {
   useEffect = noop.useEffect;
 }
 
-export default function useLatestCallback(set) {
-  let current = set;
-  noop.useRef(set);
+export default function useLatestCallback(current) {
+  noop.useRef(current);
   useEffect(() => {
     closure_1.current = current;
   });

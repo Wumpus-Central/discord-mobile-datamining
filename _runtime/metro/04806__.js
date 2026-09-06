@@ -1,6 +1,7 @@
 // _runtime/metro/04806__.js
 import _mod1282 from "01282__.js";
 import requirePromise from "../04804_requirePromise.js";
+import PromiseResolve from "../04880_PromiseResolve.js";
 import callBind from "../01454_callBind.js";
 
 requirePromise();
@@ -25,6 +26,7 @@ export default function allSettled(arg0) {
         } catch (tmp3) {
           return closure_3(tmp, tmp3);
         }
+        promise = PromiseResolve(self, arg0);
       }),
     );
   }

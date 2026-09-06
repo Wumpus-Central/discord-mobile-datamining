@@ -1,8 +1,8 @@
 // _runtime/00811_extractPromptResultAttributes.js
 import validateMcpServerInstance from "00801_validateMcpServerInstance.js";
+import CLIENT_ADDRESS_ATTRIBUTE from "00805_CLIENT_ADDRESS_ATTRIBUTE.js";
 import _slicedToArray from "metro/00032__.js";
 
-const CLIENT_ADDRESS_ATTRIBUTE = tmp(805);
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const extractPromptResultAttributes = function extractPromptResultAttributes(protocolVersion, recordOutputs) {
@@ -28,12 +28,12 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
               const _HermesInternal = HermesInternal;
               str = "mcp.prompt.result." + _slicedToArray;
             }
-            const role = tmp3.role;
+            const role = closure_1_3.role;
             if (typeof role !== "string") {
-              if (tmpResult.isValidContentItem(tmp3.content)) {
-                let text = tmp3.content;
+              if (tmpResult.isValidContentItem(closure_1_3.content)) {
+                let text = closure_1_3.content;
                 if (typeof text.text === "string") {
-                  if (1 === arr.length) {
+                  if (1 === messages.length) {
                     const _HermesInternal5 = HermesInternal;
                     let combined = "" + str + ".message_content";
                   } else {
@@ -44,8 +44,9 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
                   obj[combined] = text;
                 }
               }
+              tmpResult = validateMcpServerInstance;
             } else {
-              if (1 === arr.length) {
+              if (1 === messages.length) {
                 const _HermesInternal3 = HermesInternal;
                 let combined1 = "" + str + ".message_" + "role";
               } else {
@@ -90,35 +91,35 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
               const _HermesInternal = HermesInternal;
               str = "mcp.tool.result." + closure_1_3;
             }
-            if (typeof tmp3.type === "string") {
+            if (typeof closure_1_4.type === "string") {
               const _HermesInternal2 = HermesInternal;
-              obj["" + str + ".content_type"] = tmp3.type;
+              obj["" + str + ".content_type"] = closure_1_4.type;
             }
             if (closure_1) {
-              const mimeType = tmp3.mimeType;
+              const mimeType = closure_1_4.mimeType;
               if (typeof mimeType === "string") {
                 const _HermesInternal3 = HermesInternal;
                 obj["" + str + "." + "mime_type"] = mimeType;
               }
-              const uri = tmp3.uri;
+              const uri = closure_1_4.uri;
               if (typeof uri === "string") {
                 const _HermesInternal4 = HermesInternal;
                 obj["" + str + "." + "uri"] = uri;
               }
-              const name = tmp3.name;
+              const name = closure_1_4.name;
               if (typeof name === "string") {
                 const _HermesInternal5 = HermesInternal;
                 obj["" + str + "." + "name"] = name;
               }
-              if (typeof tmp3.text === "string") {
+              if (typeof closure_1_4.text === "string") {
                 const _HermesInternal6 = HermesInternal;
-                obj["" + str + ".content"] = tmp3.text;
+                obj["" + str + ".content"] = closure_1_4.text;
               }
-              if (typeof tmp3.data === "string") {
+              if (typeof closure_1_4.data === "string") {
                 const _HermesInternal7 = HermesInternal;
-                obj["" + str + ".data_size"] = tmp3.data.length;
+                obj["" + str + ".data_size"] = closure_1_4.data.length;
               }
-              const resource = tmp3.resource;
+              const resource = closure_1_4.resource;
               if (tmpResult.isValidContentItem(resource)) {
                 const uri2 = resource.uri;
                 if (typeof uri2 === "string") {
@@ -131,13 +132,11 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
                   obj["" + str + "." + "resource_mime_type"] = mimeType2;
                 }
               }
-              tmpResult = tmp(tmp2[2]);
+              tmpResult = validateMcpServerInstance;
             }
           } else {
             return 1;
           }
-          tmp = require;
-          tmp2 = dependencyMap;
         }
         const entries = content.entries();
         while (tmp2 !== undefined) {

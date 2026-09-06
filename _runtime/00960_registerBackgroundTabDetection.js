@@ -1,6 +1,7 @@
 // _runtime/00960_registerBackgroundTabDetection.js
 import _mod682 from "metro/00682__.js";
 import ignoreNextOnError from "00893_ignoreNextOnError.js";
+import _mod937 from "metro/00937__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -8,24 +9,24 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const registerBackgroundTabDetection = function registerBackgroundTabDetection() {
   if (ignoreNextOnError.WINDOW.document) {
-    const _document = tmp(893).WINDOW.document;
+    const _document = ignoreNextOnError.WINDOW.document;
     const listener = _document.addEventListener("visibilitychange", () => {
       let obj = _mod682;
       const activeSpan = obj.getActiveSpan();
       if (activeSpan) {
-        let tmpResult = tmp(tmp2[1]);
+        let tmpResult = _mod682;
         const rootSpan = tmpResult.getRootSpan(activeSpan);
-        if (tmp(tmp2[0]).WINDOW.document.hidden) {
+        if (ignoreNextOnError.WINDOW.document.hidden) {
           if (rootSpan) {
-            tmpResult = tmp(tmp2[1]);
+            tmpResult = _mod682;
             ({ op, status } = tmpResult.spanToJSON(rootSpan));
-            if (tmp(tmp2[2]).DEBUG_BUILD) {
-              const debug = tmp(tmp2[1]).debug;
+            if (_mod937.DEBUG_BUILD) {
+              const debug = _mod682.debug;
               const _HermesInternal = HermesInternal;
               debug.log("[Tracing] Transaction: " + "cancelled" + " -> since tab moved to the background, op: " + op);
             }
             if (!status) {
-              obj = { code: tmp(tmp2[1]).SPAN_STATUS_ERROR, message: "cancelled" };
+              obj = { code: _mod682.SPAN_STATUS_ERROR, message: "cancelled" };
               rootSpan.setStatus(obj);
             }
             const attr = rootSpan.setAttribute("sentry.cancellation_reason", "document.hidden");
@@ -35,8 +36,8 @@ export const registerBackgroundTabDetection = function registerBackgroundTabDete
         }
       }
     });
-  } else if (tmp(937).DEBUG_BUILD) {
-    let debug = tmp(682).debug;
+  } else if (_mod937.DEBUG_BUILD) {
+    let debug = _mod682.debug;
     debug.warn("[Tracing] Could not set up background tab detection due to lack of global document");
   }
 };

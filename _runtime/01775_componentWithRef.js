@@ -19,7 +19,7 @@ export const isReactRendering = function isReactRendering() {
     }
   }
   if (!owner) {
-    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = tmp.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = noop.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     let current;
     if (__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED != null) {
       const ReactCurrentOwner = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner;
@@ -31,7 +31,7 @@ export const isReactRendering = function isReactRendering() {
   }
   if (!owner) {
     const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE =
-      tmp.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      noop.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     let current1;
     if (__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
       const ReactCurrentOwner2 = __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.ReactCurrentOwner;
@@ -57,7 +57,7 @@ export const isFirstReactRender = function isFirstReactRender() {
     }
   }
   if (!owner) {
-    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = tmp.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+    const __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = noop.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     let current;
     if (__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED != null) {
       const ReactCurrentOwner = __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner;
@@ -69,7 +69,7 @@ export const isFirstReactRender = function isFirstReactRender() {
   }
   if (!owner) {
     const __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE =
-      tmp.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
+      noop.__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE;
     let current1;
     if (__SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE != null) {
       const ReactCurrentOwner2 = __SERVER_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE.ReactCurrentOwner;
@@ -89,11 +89,12 @@ export const isFirstReactRender = function isFirstReactRender() {
   }
   return tmp5;
 };
-export const componentWithRef = function componentWithRef(BottomSheet) {
+export const componentWithRef = function componentWithRef(arg0) {
+  closure_0 = arg0;
   if (closure_2) {
-    let fn = (ref) => BottomSheet(Object.assign(ref, Object.assign({ ref: 0 })), ref.ref);
+    let fn = (ref) => closure_0(Object.assign(ref, Object.assign({ ref: 0 })), ref.ref);
   } else {
-    fn = forwardRef(BottomSheet);
+    fn = forwardRef(arg0);
   }
   return fn;
 };

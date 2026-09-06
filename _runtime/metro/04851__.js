@@ -1,9 +1,9 @@
 // _runtime/metro/04851__.js
+import _mod1283 from "01283__.js";
 import _mod4852 from "04852__.js";
 import _mod4853 from "04853__.js";
 import _mod4854 from "04854__.js";
 
-const _mod1283 = tmp(1283);
 if (_mod4852) {
   function setProto(arg0, arg1) {
     if (_mod4852(arg0, arg1)) {

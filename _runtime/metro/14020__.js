@@ -163,7 +163,7 @@ const combined1 =
   ")\\.(" +
   items2[obj.NUMERICIDENTIFIER] +
   ")";
-let tmp10 = ((items2) => {
+const tmp10 = ((items2) => {
   let str = items2;
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);

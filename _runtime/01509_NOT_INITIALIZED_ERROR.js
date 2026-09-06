@@ -68,7 +68,7 @@ export const createNavigationContainerRef = function createNavigationContainerRe
           if (typeof removeListener === "function") {
             first = tmp18;
             if (item[tmp17]) {
-              tmp20[tmp17] = tmp20[tmp17].filter((item) => item !== closure_0);
+              item[tmp17] = item[tmp17].filter((item) => item !== closure_0);
             }
             if (closure_1 != null) {
               obj.removeListener(tmp17, tmp18);
@@ -81,19 +81,19 @@ export const createNavigationContainerRef = function createNavigationContainerRe
           const items1 = [];
           HermesBuiltin.arraySpread(items, 0);
           return HermesBuiltin.apply(items1, closure_1);
-        } else if ("addListener" === tmp) {
+        } else if ("addListener" === item) {
           first = items[0];
           closure_1 = tmp6;
           item[first] = item[first] || [];
           item[first].push(items[1]);
           return () => {
             if (typeof removeListener === "function") {
-              closure_0 = tmp2;
-              if (closure_0[tmp]) {
-                tmp3[tmp] = tmp3[tmp].filter((item) => item !== closure_0);
+              closure_0 = closure_1;
+              if (closure_0[first]) {
+                tmp3[first] = tmp3[first].filter((item) => item !== closure_0);
               }
               if (ready != null) {
-                ready.removeListener(tmp, tmp2);
+                ready.removeListener(first, closure_1);
               }
             } else {
               throw new TypeError("Trying to call a non-function");

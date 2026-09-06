@@ -117,7 +117,7 @@ let items = [
             value = value.value;
             if (null != value) {
               const result = _self.__onAnimatedValueUpdateReceived(value, tmp2);
-              const result1 = obj.__findAnimatedPropsNodes(_self);
+              const result1 = self.__findAnimatedPropsNodes(_self);
               const item = result1.forEach((update) => update.update());
             }
           });

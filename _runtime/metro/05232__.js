@@ -1,4 +1,5 @@
 // _runtime/metro/05232__.js
+import _mod5213 from "05213__.js";
 import _modDef5218 from "05218__.js";
 import get0thIfdOffset from "../05233_get0thIfdOffset.js";
 import IFD_TYPE_0TH from "../05234_IFD_TYPE_0TH.js";
@@ -24,43 +25,42 @@ export default {
     );
     let objectAssignResult = ifd;
     if (undefined !== ifd[c3]) {
-      tmp3(5213);
-      const tmp3Result = tmp3(5233);
+      const tmp3Result = get0thIfdOffset;
       objectAssignResult = tmp3Result.objectAssign(
         ifd,
-        tmp3Result.readIfd(getUint16, tmp3(5234).IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
+        tmp3Result.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2),
       );
     }
     if (undefined !== objectAssignResult[c4]) {
-      const tmp3Result2 = tmp3(5233);
-      objectAssignResult = tmp3(5213).objectAssign(
+      const tmp3Result2 = get0thIfdOffset;
+      objectAssignResult = _mod5213.objectAssign(
         objectAssignResult,
         tmp3Result2.readIfd(
           getUint16,
-          tmp3(5234).IFD_TYPE_GPS,
+          IFD_TYPE_0TH.IFD_TYPE_GPS,
           c5,
           c5 + objectAssignResult[tmp12].value,
           byteOrder,
           arg2,
         ),
       );
-      const tmp3Result1 = tmp3(5213);
+      const tmp3Result1 = _mod5213;
     }
     let objectAssignResult1 = objectAssignResult;
     if (undefined !== objectAssignResult[c5]) {
-      const tmp3Result4 = tmp3(5233);
-      objectAssignResult1 = tmp3(5213).objectAssign(
+      const tmp3Result4 = get0thIfdOffset;
+      objectAssignResult1 = _mod5213.objectAssign(
         objectAssignResult,
         tmp3Result4.readIfd(
           getUint16,
-          tmp3(5234).IFD_TYPE_INTEROPERABILITY,
+          IFD_TYPE_0TH.IFD_TYPE_INTEROPERABILITY,
           c5,
           c5 + objectAssignResult[tmp19].value,
           byteOrder,
           arg2,
         ),
       );
-      const tmp3Result3 = tmp3(5213);
+      const tmp3Result3 = _mod5213;
     }
     return { tags: objectAssignResult1, byteOrder };
   },

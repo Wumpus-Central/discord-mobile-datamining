@@ -76,12 +76,11 @@ let items = [
         _list.splice(0);
         const query = basicURLParseResult.query;
         if (null !== query) {
-          self._query._list = tmp(14377).parseUrlencoded(query);
-          const tmpResult = tmp(14377);
+          self._query._list = URLImpl(14377).parseUrlencoded(query);
+          const tmpResult = URLImpl(14377);
         }
       }
       const obj = URLImpl(14374);
-      tmp = URLImpl;
     },
   },
   {
@@ -111,6 +110,7 @@ let items = [
         URLImpl(14374).setTheUsername(this._url, arg0);
         const tmpResult = URLImpl(14374);
       }
+      obj = URLImpl(14374);
     },
   },
   {
@@ -123,6 +123,7 @@ let items = [
         URLImpl(14374).setThePassword(this._url, arg0);
         const tmpResult = URLImpl(14374);
       }
+      obj = URLImpl(14374);
     },
   },
   {
@@ -238,7 +239,7 @@ let items = [
         self._query._list = [];
       } else {
         let substr = str;
-        if ("?" === str[0]) {
+        if ("?" === "?"[0]) {
           substr = str.substring(1);
         }
         _url.query = "";
@@ -246,6 +247,7 @@ let items = [
         const obj = { url: _url, stateOverride: "query" };
         obj.basicURLParse(substr, obj);
         self._query._list = URLImpl(14377).parseUrlencoded(substr);
+        const obj3 = URLImpl(14377);
       }
     },
   },
@@ -272,7 +274,7 @@ let items = [
       const self = this;
       if ("" !== str) {
         let substr = str;
-        if ("#" === str[0]) {
+        if ("#" === "#"[0]) {
           substr = str.substring(1);
         }
         self._url.fragment = "";

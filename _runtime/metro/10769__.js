@@ -16,13 +16,13 @@ export const useLayoutConfig = function useLayoutConfig(size) {
     const mode = size.mode;
     if ("parallax" === mode) {
       const Layouts4 = Layouts5.Layouts;
-      return Layouts4.parallax(obj, tmp.modeConfig);
+      return Layouts4.parallax(obj, size.modeConfig);
     } else if ("horizontal-stack" === mode) {
       const Layouts3 = Layouts5.Layouts;
-      return Layouts3.horizontalStack(tmp.modeConfig);
+      return Layouts3.horizontalStack(size.modeConfig);
     } else if ("vertical-stack" === mode) {
       const Layouts2 = Layouts5.Layouts;
-      return Layouts2.verticalStack(tmp.modeConfig);
+      return Layouts2.verticalStack(size.modeConfig);
     } else {
       const Layouts = Layouts5.Layouts;
       return Layouts.normal(obj);

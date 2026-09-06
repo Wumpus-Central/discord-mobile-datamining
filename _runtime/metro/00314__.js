@@ -5,6 +5,7 @@ import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.
 import ListMetricsAggregatorDefault from "../00315_ListMetricsAggregator.js";
 import ChildListCollectionDefault from "../00316_ChildListCollection.js";
 import InfoDefault from "../00318_Info.js";
+import ViewabilityHelperDefault from "../00319_ViewabilityHelper.js";
 import _modDef321 from "00321__.js";
 import clampDefault from "../00323_clamp.js";
 import _modDef325 from "00325__.js";
@@ -15,7 +16,6 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import "module_19";
 
-const ViewabilityHelperDefault = tmp6(319);
 let VirtualizedList = fn;
 function _isNativeReflectConstruct() {
   try {
@@ -85,7 +85,6 @@ class VirtualizedList {
       _nestedChildLists.add(ref.ref, ref.cellKey);
       if (closure_0._hasInteracted) {
         ref.ref.recordInteraction();
-        ref = ref.ref;
       }
     };
     tmp3Result._unregisterAsNestedChild = (ref) => {
@@ -197,10 +196,11 @@ class VirtualizedList {
     tmp3Result._onCellFocusCapture = (_lastFocusedCellKey) => {
       closure_0._lastFocusedCellKey = _lastFocusedCellKey;
       if (obj2.deferFlatListFocusChangeRenderUpdate()) {
-        const result = obj._scheduleCellsToRenderUpdate();
+        const result = closure_0._scheduleCellsToRenderUpdate();
       } else {
-        obj._updateCellsToRender();
+        closure_0._updateCellsToRender();
       }
+      obj2 = c2(27);
     };
     tmp3Result._onCellUnmount = (arg0) => {
       delete tmp[tmp2];
@@ -209,16 +209,16 @@ class VirtualizedList {
     };
     tmp3Result._onLayout = (nativeEvent) => {
       if (closure_0._isNestedWithSameOrientation()) {
-        const result = obj.measureLayoutRelativeToContainingList();
+        const result = closure_0.measureLayoutRelativeToContainingList();
       } else {
-        obj._scrollMetrics.visibleLength = obj._selectLength(nativeEvent.nativeEvent.layout);
+        closure_0._scrollMetrics.visibleLength = closure_0._selectLength(nativeEvent.nativeEvent.layout);
       }
       if (closure_0.props.onLayout) {
-        const props = obj.props;
+        const props = closure_0.props;
         props.onLayout(nativeEvent);
       }
-      const result1 = obj._scheduleCellsToRenderUpdate();
-      const result2 = obj._maybeCallOnEdgeReached();
+      const result1 = closure_0._scheduleCellsToRenderUpdate();
+      const result2 = closure_0._maybeCallOnEdgeReached();
     };
     tmp3Result._onLayoutEmpty = (arg0) => {
       if (closure_0.props.onLayout) {
@@ -417,20 +417,20 @@ class VirtualizedList {
     };
     tmp3Result._getNonViewportRenderRegions = (getItemCount) => {
       if (closure_0._lastFocusedCellKey) {
-        if (tmp._cellRefs[tmp._lastFocusedCellKey]) {
-          const index = tmp._cellRefs[tmp._lastFocusedCellKey].props.index;
+        if (closure_0._cellRefs[closure_0._lastFocusedCellKey]) {
+          const index = closure_0._cellRefs[closure_0._lastFocusedCellKey].props.index;
           const itemCount = getItemCount.getItemCount(getItemCount.data);
           if (index < itemCount) {
-            if (VirtualizedList._getItemKey(getItemCount, index) === tmp._lastFocusedCellKey) {
+            if (VirtualizedList._getItemKey(getItemCount, index) === closure_0._lastFocusedCellKey) {
               let diff = index - 1;
               let tmp5 = index;
-              let tmp6 = tmp;
+              let tmp6 = closure_0;
               if (0 <= diff) {
                 let num = 0;
                 let tmp4 = index;
                 tmp5 = index;
-                tmp6 = tmp;
-                if (0 < tmp._scrollMetrics.visibleLength) {
+                tmp6 = closure_0;
+                if (0 < closure_0._scrollMetrics.visibleLength) {
                   const diff1 = tmp4 - 1;
                   const _listMetrics = closure_0._listMetrics;
                   const sum = num + _listMetrics.getCellMetricsApprox(diff, getItemCount).length;
@@ -441,9 +441,9 @@ class VirtualizedList {
                     diff = diff2;
                     tmp4 = diff1;
                     tmp5 = diff1;
-                    tmp6 = tmp8;
+                    tmp6 = closure_0;
                     num = sum;
-                    if (sum >= tmp8._scrollMetrics.visibleLength) {
+                    if (sum >= closure_0._scrollMetrics.visibleLength) {
                       break;
                     }
                   }
@@ -466,11 +466,10 @@ class VirtualizedList {
                     tmp14 = sum2;
                     tmp13 = sum2;
                     num2 = sum3;
-                    if (sum3 >= tmp16._scrollMetrics.visibleLength) {
+                    if (sum3 >= closure_0._scrollMetrics.visibleLength) {
                       break;
                     }
                   }
-                  tmp16 = closure_0;
                 }
               }
               const obj = { first: tmp5, last: tmp13 };
@@ -624,6 +623,7 @@ let items = [
       }
       obj = { offset: bound - viewOffset, animated: animated.animated };
       self.scrollToOffset(obj);
+      const tmp10 = index < getItemCount(data);
     },
   },
   {
@@ -833,6 +833,7 @@ let items = [
         console.warn('initialScrollIndex "' + initialScrollIndex + '" is not valid (list has ' + itemCount + " items)");
         self._hasWarned.initialScrollIndex = true;
       }
+      const obj = VirtualizedList(320);
     },
   },
   {
@@ -850,7 +851,7 @@ let items = [
           if (onEndReachedThreshold.disableVirtualization) {
             let num = 0;
             if (tmp5 < result * visibleLength) {
-              let tmpResult = tmp(320);
+              let tmpResult = VirtualizedList(320);
               num = tmpResult.maxToRenderPerBatchOrDefault(onEndReachedThreshold.maxToRenderPerBatch);
             }
             obj = { first: 0, last: null };
@@ -865,18 +866,20 @@ let items = [
             }
             return result1;
           } else {
-            tmpResult = tmp(313);
-            const result2 = tmp(320).maxToRenderPerBatchOrDefault(onEndReachedThreshold.maxToRenderPerBatch);
-            const tmpResult1 = tmp(320);
+            tmpResult = VirtualizedList(313);
+            const result2 = VirtualizedList(320).maxToRenderPerBatchOrDefault(
+              onEndReachedThreshold.maxToRenderPerBatch,
+            );
+            const tmpResult1 = VirtualizedList(320);
             windowedRenderLimits = tmpResult.computeWindowedRenderLimits(
               onEndReachedThreshold,
               result2,
-              tmp(320).windowSizeOrDefault(onEndReachedThreshold.windowSize),
+              VirtualizedList(320).windowSizeOrDefault(onEndReachedThreshold.windowSize),
               cellsAroundViewport,
               self._listMetrics,
               self._scrollMetrics,
             );
-            const tmpResult2 = tmp(320);
+            const tmpResult2 = VirtualizedList(320);
             _modDef38(
               windowedRenderLimits.last < getItemCount(data),
               "computeWindowedRenderLimits() should return range in-bounds",
@@ -976,70 +979,67 @@ let items = [
       const diff = getItemCount(data) - 1;
       const bound = Math.min(diff, arg4);
       let tmp5 = sum;
-      if (sum <= bound) {
-        do {
-          value = getItem(data, sum);
-          let _keyExtractorResult = VirtualizedList._keyExtractor(value, sum, self.props);
-          self = _keyExtractorResult;
-          let _indicesToKeys = self._indicesToKeys;
-          let result = _indicesToKeys.set(sum, _keyExtractorResult);
-          if (set.has(sum + num)) {
-            let arr = items1.push(items.length);
-          }
-          let enabledResult = null == getItemLayout || debug;
-          if (!enabledResult) {
-            let _fillRateHelper = self._fillRateHelper;
-            enabledResult = _fillRateHelper.enabled();
-          }
-          let tmp15 = collapsedCategories;
-          let obj = {
-            CellRendererComponent,
-            ItemSeparatorComponent: null,
-            ListItemComponent: null,
-            cellKey: null,
-            horizontal: null,
-            index: null,
-            inversionStyle: null,
-            item: null,
-            prevCellKey: null,
-            onUpdateSeparators: null,
-            onCellFocusCapture: null,
-            onUnmount: null,
-            ref: null,
-            renderItem: null,
-          };
-          let tmp19;
-          let tmp18 = _modDef321;
-          if (sum < diff) {
-            tmp19 = ItemSeparatorComponent;
-          }
-          obj.ItemSeparatorComponent = tmp19;
-          obj.ListItemComponent = ListItemComponent;
-          obj.cellKey = _keyExtractorResult;
-          obj.horizontal = horizontal;
-          obj.index = sum;
-          obj.inversionStyle = inversionStyle;
-          obj.item = value;
-          obj.prevCellKey = tmp4;
-          ({
-            _onUpdateSeparators: obj.onUpdateSeparators,
-            _onCellFocusCapture: obj.onCellFocusCapture,
-            _onCellUnmount: obj.onUnmount,
-          } = self);
-          obj.ref = function ref(arg0) {
-            VirtualizedList._cellRefs[self] = arg0;
-          };
-          obj.renderItem = renderItem;
-          if (enabledResult) {
-            obj = { onCellLayout: self._onCellLayout };
-            enabledResult = obj;
-          }
-          let merged = Object.assign(enabledResult);
-          arr = items.push(tmp15(tmp18, obj, _keyExtractorResult));
-          sum = tmp5 + 1;
-          tmp4 = _keyExtractorResult;
-          tmp5 = sum;
-        } while (sum <= bound);
+      while (sum <= bound) {
+        value = getItem(data, sum);
+        let _keyExtractorResult = VirtualizedList._keyExtractor(value, sum, self.props);
+        self = _keyExtractorResult;
+        let _indicesToKeys = self._indicesToKeys;
+        let result = _indicesToKeys.set(sum, _keyExtractorResult);
+        if (set.has(sum + num)) {
+          let arr = items1.push(items.length);
+        }
+        let enabledResult = null == getItemLayout || debug;
+        if (!enabledResult) {
+          let _fillRateHelper = self._fillRateHelper;
+          enabledResult = _fillRateHelper.enabled();
+        }
+        let obj = {
+          CellRendererComponent,
+          ItemSeparatorComponent: null,
+          ListItemComponent: null,
+          cellKey: null,
+          horizontal: null,
+          index: null,
+          inversionStyle: null,
+          item: null,
+          prevCellKey: null,
+          onUpdateSeparators: null,
+          onCellFocusCapture: null,
+          onUnmount: null,
+          ref: null,
+          renderItem: null,
+        };
+        let tmp19;
+        let tmp18 = _modDef321;
+        if (sum < diff) {
+          tmp19 = ItemSeparatorComponent;
+        }
+        obj.ItemSeparatorComponent = tmp19;
+        obj.ListItemComponent = ListItemComponent;
+        obj.cellKey = _keyExtractorResult;
+        obj.horizontal = horizontal;
+        obj.index = sum;
+        obj.inversionStyle = inversionStyle;
+        obj.item = value;
+        obj.prevCellKey = tmp4;
+        ({
+          _onUpdateSeparators: obj.onUpdateSeparators,
+          _onCellFocusCapture: obj.onCellFocusCapture,
+          _onCellUnmount: obj.onUnmount,
+        } = self);
+        obj.ref = function ref(arg0) {
+          VirtualizedList._cellRefs[self] = arg0;
+        };
+        obj.renderItem = renderItem;
+        if (enabledResult) {
+          obj = { onCellLayout: self._onCellLayout };
+          enabledResult = obj;
+        }
+        let merged = Object.assign(enabledResult);
+        arr = items.push(collapsedCategories(tmp18, obj, _keyExtractorResult));
+        sum = tmp5 + 1;
+        tmp4 = _keyExtractorResult;
+        tmp5 = sum;
       }
     },
   },
@@ -1342,11 +1342,14 @@ let items = [
               const result1 = _convertParentScrollMetrics(context.getScrollMetrics());
               if (tmp4) {
                 ({ visibleLength: tmp._scrollMetrics.visibleLength, offset: tmp._scrollMetrics.offset } = result1);
-                const _nestedChildLists = tmp._nestedChildLists;
+                const _nestedChildLists = self._nestedChildLists;
                 const item = _nestedChildLists.forEach((measureLayoutRelativeToContainingList) => {
                   const result = measureLayoutRelativeToContainingList.measureLayoutRelativeToContainingList();
                 });
               }
+              tmp4 =
+                self._scrollMetrics.visibleLength !== result1.visibleLength ||
+                self._scrollMetrics.offset !== result1.offset;
             },
             (arg0) => {
               console.warn(
@@ -1794,12 +1797,12 @@ let items1 = [
   },
   {
     key: "_ensureClosestStickyHeader",
-    value: function _ensureClosestStickyHeader(ListHeaderComponent, set, addCells, arg3) {
+    value: function _ensureClosestStickyHeader(ListHeaderComponent, set, addCells, _initialRenderRegionResult) {
       let num = 0;
       if (ListHeaderComponent.ListHeaderComponent) {
         num = 1;
       }
-      let diff = arg3 - 1;
+      let diff = _initialRenderRegionResult - 1;
       if (0 <= diff) {
         while (!set.has(diff + num)) {
           diff = diff - 1;

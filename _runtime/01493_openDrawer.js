@@ -118,7 +118,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
         let tmp6 = obj;
         if (Boolean(someResult)) {
           if (typeof removeDrawerFromHistory === "function") {
-            if (typeof tmp28 === "function") {
+            if (typeof isDrawerInHistory === "function") {
               const history2 = obj.history;
               let someResult1;
               if (history2 != null) {
@@ -133,7 +133,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
                 tmp9 = obj;
               }
               if (typeof addDrawerToHistory === "function") {
-                if (typeof tmp28 === "function") {
+                if (typeof isDrawerInHistory === "function") {
                   const history3 = tmp9.history;
                   let someResult2;
                   if (history3 != null) {
@@ -244,7 +244,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
         }
         if (Boolean(someResult2)) {
           if (typeof removeDrawerFromHistory === "function") {
-            if (typeof tmp19 === "function") {
+            if (typeof isDrawerInHistory === "function") {
               const history5 = history.history;
               let someResult3;
               if (history5 != null) {
@@ -266,7 +266,7 @@ export const DrawerRouter = function DrawerRouter(defaultStatus) {
             throw new TypeError("Trying to call a non-function");
           }
         } else if (typeof addDrawerToHistory === "function") {
-          if (typeof tmp19 === "function") {
+          if (typeof isDrawerInHistory === "function") {
             const history4 = history.history;
             let someResult4;
             if (history4 != null) {

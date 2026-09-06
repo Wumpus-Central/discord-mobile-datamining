@@ -20,7 +20,7 @@ export const useChildListeners = function useChildListeners() {
         }
         if (tmp4) {
           c2 = true;
-          current[tmp2].splice(index, 1);
+          current[closure_0].splice(index, 1);
         }
       };
     }, items),

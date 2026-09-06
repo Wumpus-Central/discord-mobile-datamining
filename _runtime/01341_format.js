@@ -18,10 +18,9 @@ const fn = function () {
   }
   function forOwn(obj, fn) {
     for (const key10005 in arg0) {
-      let tmp4 = hasOwnProperty;
       let call = hasOwnProperty.call;
       if (typeof call === "unknown") {
-        let callResult = tmp4(key10005);
+        let callResult = hasOwnProperty(key10005);
       } else {
         callResult = call(arg0, key10005);
       }
@@ -51,10 +50,10 @@ const fn = function () {
   function qualify(arg0) {
     return String(arg0).replace(/([ -])(?!$)/g, "$1?");
   }
-  function reduce(arg0, fn) {
+  function reduce(height, fn) {
     let num = 0;
-    if (arg0) {
-      num = arg0.length;
+    if (height) {
+      num = height.length;
     }
     if (typeof num === "number") {
       if (num > -1) {
@@ -64,7 +63,7 @@ const fn = function () {
           let tmp4 = null;
           if (0 < num) {
             do {
-              tmp11 = fn(tmp11, arg0[num3], num3, arg0);
+              tmp11 = fn(tmp11, height[num3], num3, height);
               num3 = num3 + 1;
               tmp4 = tmp11;
             } while (num3 < num);
@@ -79,13 +78,12 @@ const fn = function () {
     if (keys !== undefined) {
       tmp4 = tmp3;
       while (keys[tmp] !== undefined) {
-        let tmp16 = hasOwnProperty;
         let call = hasOwnProperty.call;
         let tmp15 = tmp7;
-        if (!(typeof call === "unknown" ? tmp16(tmp7) : call(arg0, tmp7))) {
+        if (!(typeof call === "unknown" ? hasOwnProperty(tmp7) : call(height, tmp7))) {
           continue;
         } else {
-          tmp3 = fn(tmp6, arg0[tmp7], tmp15, arg0);
+          tmp3 = fn(tmp6, height[tmp7], tmp15, height);
           continue;
         }
         continue;
@@ -220,12 +218,12 @@ const fn = function () {
             let match = RegExp(`\\b${pattern} *\\d+[.\\w_]*`, "i").exec(closure_1_0);
             if (!match) {
               const _RegExp2 = RegExp;
-              match = RegExp(`\\b${pattern} *\\w+-[\\w]*`, "i").exec(tmp5);
+              match = RegExp(`\\b${pattern} *\\w+-[\\w]*`, "i").exec(closure_1_0);
               const RegExpResult1 = RegExp(`\\b${pattern} *\\w+-[\\w]*`, "i");
             }
             if (!match) {
               const _RegExp3 = RegExp;
-              match = RegExp(`\\b${pattern}(?:; *(?:[a-z]+[_-])?[a-z]+\\d+|[^ ();-]*)`, "i").exec(tmp5);
+              match = RegExp(`\\b${pattern}(?:; *(?:[a-z]+[_-])?[a-z]+\\d+|[^ ();-]*)`, "i").exec(closure_1_0);
               const RegExpResult2 = RegExp(`\\b${pattern}(?:; *(?:[a-z]+[_-])?[a-z]+\\d+|[^ ();-]*)`, "i");
             }
             tmp3 = match;
@@ -997,7 +995,7 @@ const fn = function () {
                   tmp120 = runtime;
                 } else {
                   const phantom = obj.phantom;
-                  if (tmp117(phantom) == str5) {
+                  if (getClassOf(phantom) == str5) {
                     text1 = "PhantomJS";
                     let text5 = tmp135;
                     if (phantom.version || null) {
@@ -1058,7 +1056,6 @@ const fn = function () {
                     }
                   }
                 }
-                tmp117 = getClassOf;
               }
               let tmp156 = str132;
               if (str132) {
@@ -1665,7 +1662,6 @@ const fn = function () {
                   str194 = tmp198;
                   tmp249 = tmp220;
                 }
-                const obj52 = /\b(?:Android|Firefox OS|KaiOS)\b/;
                 const obj69 = /\bAppleWebKit\/([\d.]+\+?)/i;
                 const obj75 = /\bSRWare Iron\b/;
                 const tmp218 = /\bAppleWebKit\/([\d.]+\+?)/i.exec(tmp9) || 0;
@@ -1702,18 +1698,11 @@ const fn = function () {
                 }
               } else {
                 if (obj54.test(text1)) {
-                  if ("Windows CE" != tmp113) {
-                    const obj97 = /Mobi/i;
-                  }
                   text1 = `${tmp30} Mobile`;
                   str159 = tmp113;
                   tmp198 = manufacturer;
                   arr12 = str93;
                   items12 = tmp114;
-                } else if (`${tmp30} Mobile`) {
-                  if (!str93) {
-                    const obj55 = /Browser|Mobi/;
-                  }
                 }
                 if ("IE" == text1) {
                   if (isMatch9) {
@@ -1758,8 +1747,6 @@ const fn = function () {
                     const obj67 = /BB10/;
                   }
                   const tmp177 = RegExp(`${str93.replace(/ +/g, " *")}/([.\\d]+)`, "i").exec(tmp9) || 0;
-                } else {
-                  const obj57 = /\bBB10\b/;
                 }
                 const self = this;
                 let name = this != forOwn && "Wii" != str93;
@@ -1879,12 +1866,11 @@ const fn = function () {
                   const tmp195 =
                     typeof call === "unknown"
                       ? parse(`${tmp9.replace(obj5, "")};`)
-                      : call(tmp179, `${tmp9.replace(obj5, "")};`);
+                      : call(forOwn, `${tmp9.replace(obj5, "")};`);
                   test = test(tmp195);
                 }
                 obj54 = /^(?:Chrome|IE|Opera)$/;
                 obj56 = /\bBlackBerry\b/;
-                tmp179 = forOwn;
               }
               obj53 = /\bXbox\b/i;
             }
@@ -1952,12 +1938,7 @@ const fn = function () {
         } else if ("Konqueror" != text1) {
           if (tmp32) {
             if ("Google" != tmp32) {
-              if (!obj15.test(text1)) {
-                const obj17 = /\bVita\b/;
-              } else {
-                const obj16 = /\bMobile Safari\b/i;
-              }
-              obj15 = /Chrome/;
+              const obj15 = /Chrome/;
             }
             text1 = "Android Browser";
             let str107 = "Android";
@@ -1970,10 +1951,7 @@ const fn = function () {
             obj32 = /\bAndroid\b/;
           }
           if (obj18.test(tmp33)) {
-            if (obj19.test(text1)) {
-              const obj20 = /\bVersion\//i;
-            }
-            obj19 = /^Chrome/;
+            const obj19 = /^Chrome/;
           }
           if ("Silk" == text1) {
             let str104 = tmp33;
@@ -2108,7 +2086,6 @@ const fn = function () {
         } else {
           manufacturer = tmp32;
           str93 = tmp47;
-          const obj14 = /^Linux\b/i;
         }
         obj10 = /\bSimulator\b/i;
         obj13 = /^iP/;
@@ -2131,6 +2108,7 @@ const fn = function () {
       const obj7 = /\bAndroid\b/;
     }
     prop = getClassOf(tmp20);
+    const obj4 = /\bJava/;
   }
   const parsed = parse();
   if (typeof globalThis.define === "function") {

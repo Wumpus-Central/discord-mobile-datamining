@@ -31,11 +31,11 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   const tmp5 = closure_3(() => {
     if (closure_1) {
       const _Array = Array;
-      let applyResult = tmp;
-      if (Array.isArray(tmp)) {
+      let applyResult = closure_1;
+      if (Array.isArray(closure_1)) {
         compose = compose.compose;
         const items = [];
-        HermesBuiltin.arraySpread(tmp, 0);
+        HermesBuiltin.arraySpread(closure_1, 0);
         applyResult = HermesBuiltin.apply(items, compose);
       }
       let obj = applyResult;
@@ -49,10 +49,10 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
   const tmp6 = closure_3(() => {
     if (closure_0) {
       let num = 0;
-      if (tmp) {
+      if (closure_5) {
         num = 0;
-        if (typeof tmp === "object") {
-          ({ paddingBottom, padding, paddingVertical } = tmp);
+        if (typeof closure_5 === "object") {
+          ({ paddingBottom, padding, paddingVertical } = closure_5);
           if (undefined === paddingBottom) {
             if (undefined === paddingVertical) {
               num = 0;
@@ -68,12 +68,12 @@ export const useBottomSheetContentContainerStyle = function useBottomSheetConten
           }
         }
       }
-      const items = [tmp];
+      const items = [closure_5];
       const obj = { paddingBottom: num + first, overflow: "visible" };
       items[1] = obj;
       return items;
     } else {
-      return tmp;
+      return closure_5;
     }
   }, items1);
   class H {

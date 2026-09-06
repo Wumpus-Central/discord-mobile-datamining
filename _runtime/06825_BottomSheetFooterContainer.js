@@ -1,8 +1,8 @@
 // _runtime/06825_BottomSheetFooterContainer.js
 import _mod19 from "metro/00019__.js";
+import GESTURE_SOURCE from "06628_GESTURE_SOURCE.js";
 import DEFAULT_HANDLE_HEIGHT from "06631_DEFAULT_HANDLE_HEIGHT.js";
 
-const GESTURE_SOURCE = tmp2(6628);
 let closure_2 = {
   code: "function pnpm_BottomSheetFooterContainerTsx1(){const{animatedHandleHeight,INITIAL_HANDLE_HEIGHT,animatedKeyboardHeightInContainer,animatedContainerHeight,animatedPosition,animatedKeyboardState,animatedFooterHeight,KEYBOARD_STATE}=this.__closure;const handleHeight=animatedHandleHeight.get();if(handleHeight===INITIAL_HANDLE_HEIGHT){return 0;}const keyboardHeight=animatedKeyboardHeightInContainer.get();const containerHeight=animatedContainerHeight.get();const position=animatedPosition.get();const keyboardState=animatedKeyboardState.get();const footerHeight=animatedFooterHeight.get();let footerTranslateY=Math.max(0,containerHeight-position);if(keyboardState===KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-keyboardHeight;}footerTranslateY=footerTranslateY-footerHeight-handleHeight;return footerTranslateY;}",
 };

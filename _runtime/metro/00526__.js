@@ -11,9 +11,9 @@ export default function getRawTag(arg0) {
   let tmp = React;
   const call = React.call;
   if (typeof call === "unknown") {
-    tmp(tmp2);
+    tmp(toStringTag);
   } else {
-    call(arg0, tmp2);
+    call(arg0, toStringTag);
   }
-  tmp = arg0[tmp2];
+  tmp = arg0[toStringTag];
 }

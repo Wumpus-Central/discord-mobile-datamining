@@ -5,9 +5,9 @@ import extractTargetInfo from "../00807_extractTargetInfo.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function getNotificationAttributes(arg0, requestId, arg2) {
+function getNotificationAttributes(method, requestId, recordInputs) {
   const obj = {};
-  if ("notifications/cancelled" === arg0) {
+  if ("notifications/cancelled" === method) {
     requestId = undefined;
     if (requestId != null) {
       requestId = requestId.requestId;
@@ -24,7 +24,7 @@ function getNotificationAttributes(arg0, requestId, arg2) {
       const _String8 = String;
       obj["mcp.cancelled.reason"] = String(requestId.reason);
     }
-  } else if ("notifications/message" === arg0) {
+  } else if ("notifications/message" === method) {
     let level;
     if (requestId != null) {
       level = requestId.level;
@@ -47,18 +47,17 @@ function getNotificationAttributes(arg0, requestId, arg2) {
     }
     if (undefined !== data) {
       obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_LOGGING_DATA_TYPE_ATTRIBUTE] = typeof requestId.data;
-      if (arg2) {
+      if (recordInputs) {
         data = requestId.data;
         let json = data;
         if (typeof data !== "string") {
           const _JSON = JSON;
           json = JSON.stringify(data);
         }
-        obj[tmp33(805).MCP_LOGGING_MESSAGE_ATTRIBUTE] = json;
+        obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_LOGGING_MESSAGE_ATTRIBUTE] = json;
       }
-      tmp33 = require;
     }
-  } else if ("notifications/progress" === arg0) {
+  } else if ("notifications/progress" === method) {
     let progressToken;
     if (requestId != null) {
       progressToken = requestId.progressToken;
@@ -96,7 +95,7 @@ function getNotificationAttributes(arg0, requestId, arg2) {
       const _String4 = String;
       obj["mcp.progress.message"] = String(requestId.message);
     }
-  } else if ("notifications/resources/updated" === arg0) {
+  } else if ("notifications/resources/updated" === method) {
     let uri;
     if (requestId != null) {
       uri = requestId.uri;
@@ -108,15 +107,14 @@ function getNotificationAttributes(arg0, requestId, arg2) {
       const result = _mod765.parseStringToURLObject(String(requestId.uri));
       let tmp7 = result;
       if (result) {
-        tmp7 = !tmp3(765).isURLObjectRelative(result);
-        const tmp3Result = tmp3(765);
+        tmp7 = !_mod765.isURLObjectRelative(result);
+        const tmp3Result = _mod765;
       }
       if (tmp7) {
         obj["mcp.resource.protocol"] = result.protocol.replace(":", "");
       }
-      tmp3 = require;
     }
-  } else if ("notifications/initialized" === arg0) {
+  } else if ("notifications/initialized" === method) {
     obj["mcp.lifecycle.phase"] = "initialization_complete";
     obj["mcp.protocol.ready"] = 1;
   }
@@ -140,7 +138,7 @@ export const buildTypeSpecificAttributes = function buildTypeSpecificAttributes(
     if (tmp5) {
       obj = {};
       const _String = String;
-      obj[tmp2(805).MCP_REQUEST_ID_ATTRIBUTE] = String(message.id);
+      obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_REQUEST_ID_ATTRIBUTE] = String(message.id);
       tmp5 = obj;
     }
     const obj1 = {};
@@ -150,8 +148,8 @@ export const buildTypeSpecificAttributes = function buildTypeSpecificAttributes(
       if (!obj) {
         obj = {};
       }
-      let requestArguments = tmp2(807).getRequestArguments(message.method, obj);
-      const tmp2Result = tmp2(807);
+      let requestArguments = extractTargetInfo.getRequestArguments(message.method, obj);
+      const tmp2Result = extractTargetInfo;
     } else {
       requestArguments = {};
     }

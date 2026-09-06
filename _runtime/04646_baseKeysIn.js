@@ -1,9 +1,11 @@
 // _runtime/04646_baseKeysIn.js
 import _mod521 from "metro/00521__.js";
+import _mod545 from "metro/00545__.js";
+import nativeKeysIn from "04647_nativeKeysIn.js";
 
 export default function baseKeysIn(obj) {
   if (_mod521(obj)) {
-    const tmp3 = tmp(545)(obj);
+    const tmp3 = _mod545(obj);
     const items = [];
     for (const key10017 in arg0) {
       let tmp8 = "constructor" != key10017;
@@ -11,10 +13,9 @@ export default function baseKeysIn(obj) {
         if (tmp3) {
           tmp8 = !tmp3;
         } else {
-          let tmp5 = hasOwnProperty;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {
-            let callResult = tmp5(key10017);
+            let callResult = hasOwnProperty(key10017);
           } else {
             callResult = call(arg0, key10017);
           }
@@ -30,6 +31,6 @@ export default function baseKeysIn(obj) {
     }
     return items;
   } else {
-    return tmp(4647)(obj);
+    return nativeKeysIn(obj);
   }
 }

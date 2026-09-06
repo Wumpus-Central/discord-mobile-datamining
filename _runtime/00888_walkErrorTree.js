@@ -1,15 +1,17 @@
 // _runtime/00888_walkErrorTree.js
 import _mod682 from "metro/00682__.js";
+import NativeModules from "00866_NativeModules.js";
+import feedbackAsyncIntegration from "00889_feedbackAsyncIntegration.js";
 
 require = arg1;
 const dependencyMap = arg6;
 function walkErrorTree(stackParser, arg1, originalException, arg3) {
-  let exceptions = arg4;
-  if (arg4 === undefined) {
+  let exceptions = items2;
+  if (items2 === undefined) {
     exceptions = [];
   }
-  let debugImages = arg5;
-  if (arg5 === undefined) {
+  let debugImages = items3;
+  if (items3 === undefined) {
     debugImages = [];
   }
   if (originalException[arg3]) {
@@ -20,7 +22,7 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
       } else if ("stackElements" in tmp) {
         let tmp8 = nativePackageName;
         if (null === nativePackageName) {
-          const NATIVE2 = tmp28(866).NATIVE;
+          const NATIVE2 = NativeModules.NATIVE;
           nativePackageName = NATIVE2.fetchNativePackageName();
           tmp8 = nativePackageName;
         }
@@ -56,7 +58,7 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
         obj.stacktrace = obj1;
         exceptionFromErrorResult = obj;
       } else if ("stackReturnAddresses" in tmp) {
-        const NATIVE = tmp28(866).NATIVE;
+        const NATIVE = NativeModules.NATIVE;
         const nativeStackFramesBy = NATIVE.fetchNativeStackFramesBy(tmp.stackReturnAddresses);
         const obj2 = { type: null, value: null, stacktrace: null };
         ({ name: obj6.type, message: obj6.value } = tmp);
@@ -80,10 +82,10 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
         let items4 = debugMetaImages;
         exceptionFromErrorResult = obj2;
       } else {
-        let tmp28Result = tmp28(682);
+        let tmp28Result = _mod682;
         const _Error = Error;
         if (tmp28Result.isInstanceOf(tmp, Error)) {
-          tmp28Result = tmp28(889);
+          tmp28Result = feedbackAsyncIntegration;
           exceptionFromErrorResult = tmp28Result.exceptionFromError(stackParser, originalException[arg3]);
         } else {
           if (tmp28Result1.isPlainObject(tmp)) {
@@ -101,12 +103,12 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
             const obj4 = { exceptions, debugImages };
             return obj4;
           }
-          tmp28Result1 = tmp28(682);
+          tmp28Result1 = _mod682;
         }
       }
-      const items2 = [];
+      items2 = [];
       items2[HermesBuiltin.arraySpread(exceptions, 0)] = exceptionFromErrorResult;
-      const items3 = [];
+      items3 = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(debugImages, 0);
       if (!items4) {
         items4 = [];
@@ -143,9 +145,9 @@ export const nativeLinkedErrorsIntegration = () => {
           if (obj.isInstanceOf(originalException.originalException, Error)) {
             ({ exceptions, debugImages } = walkErrorTree(
               getOptions.getOptions().stackParser,
-              tmp,
+              closure_1,
               originalException.originalException,
-              tmp2,
+              closure_0,
             ));
             const items = [];
             HermesBuiltin.arraySpread(exceptions, HermesBuiltin.arraySpread(exception.exception.values, 0));
@@ -166,9 +168,9 @@ export const nativeLinkedErrorsIntegration = () => {
             HermesBuiltin.apply(items1, images1);
             const tmp12 = walkErrorTree(
               getOptions.getOptions().stackParser,
-              tmp,
+              closure_1,
               originalException.originalException,
-              tmp2,
+              closure_0,
             );
           }
           obj = _mod682;

@@ -26,7 +26,7 @@ export function makeOfflineTransport(arg0) {
         clearTimeout(timerId);
       }
       timerId = setTimeout(
-        asyncGeneratorStep(async (arg0, value) => {
+        asyncGeneratorStep(async () => {
           if (c3 === 2) {
             c3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -105,7 +105,7 @@ export function makeOfflineTransport(arg0) {
         }
         const _setTimeout = setTimeout;
         timerId = setTimeout(
-          asyncGeneratorStep(async (arg0, value) => {
+          asyncGeneratorStep(async () => {
             if (c3 === 2) {
               c3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -189,7 +189,7 @@ export function makeOfflineTransport(arg0) {
       }
       return applyArgumentsResult;
     }
-    closure_8 = async function _send(arg0, value) {
+    closure_8 = async function _send(arg0) {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -302,12 +302,12 @@ export function makeOfflineTransport(arg0) {
               if (closure_130_1) {
                 c6 = 7;
                 c7 = 1;
-                const obj8 = { value: arr.unshift(closure_130_0), done: false };
+                const obj8 = { value: closure_131_3.unshift(closure_130_0), done: false };
                 return obj8;
               } else {
                 c6 = 6;
                 c7 = 1;
-                const obj9 = { value: arr.push(closure_130_0), done: false };
+                const obj9 = { value: closure_131_3.push(closure_130_0), done: false };
                 return obj9;
               }
             } else {
@@ -397,7 +397,7 @@ export function makeOfflineTransport(arg0) {
           }
           let _setTimeout = setTimeout;
           timerId = setTimeout(
-            asyncGeneratorStep(async (arg0, value) => {
+            asyncGeneratorStep(async () => {
               if (c3 === 2) {
                 c3 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -482,7 +482,7 @@ export function makeOfflineTransport(arg0) {
             }
             const _setTimeout = setTimeout;
             timerId = setTimeout(
-              asyncGeneratorStep(async (arg0, value) => {
+              asyncGeneratorStep(async () => {
                 if (c3 === 2) {
                   c3 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");

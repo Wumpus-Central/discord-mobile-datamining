@@ -10,7 +10,7 @@ function appendTransformProps(arg0) {
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
   append.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
 }
-function universal2axis(num, arg1, arg2, arg3) {
+function universal2axis(num, originX, originY, arg3) {
   let num2 = num;
   if (typeof num !== "number") {
     if (typeof num === "string") {
@@ -37,10 +37,10 @@ function universal2axis(num, arg1, arg2, arg3) {
       }
     }
   }
-  if (!isNaN(+arg1)) {
+  if (!isNaN(+originX)) {
     num2 = tmp3;
   }
-  if (!isNaN(+arg2)) {
+  if (!isNaN(+originY)) {
     num = tmp4;
   }
   if (!num2) {
@@ -150,8 +150,8 @@ function props2transform(transform) {
       }
       translateY = first1;
     }
-    tmp6(translate, translateX, translateY);
-    const tmp6Result = tmp6(origin, originX, originY);
+    universal2axis(translate, translateX, translateY);
+    const tmp6Result = universal2axis(origin, originX, originY);
     const tmp6Result1 = universal2axis(scale, scaleX, scaleY, 1);
     let num4 = 0;
     if (null != rotation) {
@@ -192,7 +192,7 @@ function transformToMatrix(arg0, arr) {
     const _Array = Array;
     if (Array.isArray(arr)) {
       if (typeof arr[0] === "number") {
-        let tmp3Result = tmp3(8462);
+        let tmp3Result = append;
         tmp3Result.append(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5]);
       } else {
         const tmp24 = props2transform(transformsArrayToProps(arr));
@@ -202,9 +202,9 @@ function transformToMatrix(arg0, arr) {
       }
     } else if (typeof arr === "string") {
       try {
-        tmp3Result = tmp3(8463);
+        tmp3Result = peg$SyntaxError;
         const parsed = tmp3Result.parse(arr);
-        const tmp3Result1 = tmp3(8462);
+        const tmp3Result1 = append;
         tmp3Result1.append(parsed[0], parsed[3], parsed[1], parsed[4], parsed[2], parsed[5]);
       } catch (tmp14) {
         const _console = tmp.console;

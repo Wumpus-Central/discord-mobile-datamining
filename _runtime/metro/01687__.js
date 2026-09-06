@@ -15,7 +15,7 @@ fn = function t(toValue, userConfig, callback) {
     current.easing = Easing.inOut(toValue(userConfig[1]).Easing.quad);
     if (userConfig) {
       const _Object = Object;
-      const keys = Object.keys(tmp3);
+      const keys = Object.keys(userConfig);
       const item = keys.forEach((item) => {
         obj[item] = dependencyMap[item];
         return dependencyMap[item];
@@ -44,10 +44,10 @@ fn = function t(toValue, userConfig, callback) {
               }
               arg0.current = current;
               if (typeof obj.easing === "object") {
-                const easing = tmp2.easing;
+                const easing = obj.easing;
                 arg0.easing = easing.factory();
               } else {
-                arg0.easing = tmp2.easing;
+                arg0.easing = obj.easing;
               }
             }
           }
@@ -68,7 +68,7 @@ fn = function t(toValue, userConfig, callback) {
     };
     let reduceMotion;
     if (userConfig != null) {
-      reduceMotion = tmp3.reduceMotion;
+      reduceMotion = userConfig.reduceMotion;
     }
     current.reduceMotion = toValue(userConfig[0]).getReduceMotionForAnimation(reduceMotion);
     return current;

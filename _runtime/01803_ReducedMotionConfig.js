@@ -12,14 +12,14 @@ export const ReducedMotionConfig = function ReducedMotionConfig(mode) {
   useEffect(() => {
     const jsValue = _mod1677.ReducedMotionManager.jsValue;
     if (_mod1661.ReduceMotion.System === mode) {
-      const ReducedMotionManager3 = tmp(1677).ReducedMotionManager;
-      ReducedMotionManager3.setEnabled(tmp(1677).isReducedMotionEnabledInSystem());
-      const tmpResult = tmp(1677);
-    } else if (tmp(1661).ReduceMotion.Always === tmp3) {
-      const ReducedMotionManager2 = tmp(1677).ReducedMotionManager;
+      const ReducedMotionManager3 = _mod1677.ReducedMotionManager;
+      ReducedMotionManager3.setEnabled(_mod1677.isReducedMotionEnabledInSystem());
+      const tmpResult = _mod1677;
+    } else if (_mod1661.ReduceMotion.Always === mode) {
+      const ReducedMotionManager2 = _mod1677.ReducedMotionManager;
       ReducedMotionManager2.setEnabled(true);
-    } else if (tmp(1661).ReduceMotion.Never === tmp3) {
-      let ReducedMotionManager = tmp(1677).ReducedMotionManager;
+    } else if (_mod1661.ReduceMotion.Never === mode) {
+      let ReducedMotionManager = _mod1677.ReducedMotionManager;
       ReducedMotionManager.setEnabled(false);
     }
     return () => {

@@ -1,9 +1,10 @@
 // _runtime/metro/06819__.js
 import jsxProd from "../react/00021_jsxProd.js";
+import GESTURE_SOURCE from "../06628_GESTURE_SOURCE.js";
 import DEFAULT_HANDLE_HEIGHT from "../06631_DEFAULT_HANDLE_HEIGHT.js";
+import normalizeSnapPoint from "../06644_normalizeSnapPoint.js";
 import noop from "00019__.js";
 
-const GESTURE_SOURCE = tmp2(6628);
 ({ useMemo: c3, memo } = noop);
 const jsx = jsxProd.jsx;
 let closure_5 = {

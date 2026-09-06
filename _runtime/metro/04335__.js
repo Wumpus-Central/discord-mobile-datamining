@@ -8,7 +8,6 @@ const noop = fn(19);
 
 export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, arg2) {
   closure_0 = startAnimation;
-  closure_1 = instance;
   let obj = arg2;
   if (arg2 == null) {
     obj = {};
@@ -22,10 +21,9 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   const items = [instance, startAnimation];
   const disposableMemo = _mod4330.useDisposableMemo(
     () => {
-      if (closure_1) {
-        return obj.triggerProperty(closure_0);
+      if (instance) {
+        return instance.triggerProperty(closure_0);
       }
-      obj = closure_1;
     },
     (dispose) => {
       let disposeResult;
@@ -62,7 +60,7 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
   const items3 = [disposableMemo];
   React4(() => {
     if (disposableMemo) {
-      closure_0 = obj.addListener(() => {
+      closure_0 = disposableMemo.addListener(() => {
         const current = ref.current;
         if (current != null) {
           current();
@@ -74,7 +72,6 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
         } catch (err) {}
       };
     }
-    obj = disposableMemo;
   }, items3);
   obj = { trigger: null, error: tmp5[0] };
   const items4 = [startAnimation];
@@ -88,13 +85,16 @@ export const useRiveTrigger = function useRiveTrigger(startAnimation, instance, 
       if (ref2.current) {
         warn(
           concat(
-            tmp3,
+            closure_0,
             "') called after dispose. The property has been cleaned up \u2014 this is likely a stale closure from an async callback that fired after unmount.",
           ),
         );
       } else {
         warn(
-          concat(tmp3, "') called but the property is not available yet. The viewModelInstance may still be loading."),
+          concat(
+            closure_0,
+            "') called but the property is not available yet. The viewModelInstance may still be loading.",
+          ),
         );
       }
     }

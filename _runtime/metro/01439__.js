@@ -59,11 +59,10 @@ class PseudoMap {
         const call = closure_0.call;
         value = this._data[item].value;
         if (typeof call === "unknown") {
-          tmp(value, key);
+          closure_0(value, key);
         } else {
           call(tmp2, value, key);
         }
-        tmp = closure_0;
         tmp2 = self;
       }
     }, self);

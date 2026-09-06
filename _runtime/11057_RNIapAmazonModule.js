@@ -2,7 +2,7 @@
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 const RNIapAmazonModule = fn(17).NativeModules.RNIapAmazonModule;
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -90,7 +90,7 @@ asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async () => {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -128,7 +128,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
   const isAmazonDevice = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

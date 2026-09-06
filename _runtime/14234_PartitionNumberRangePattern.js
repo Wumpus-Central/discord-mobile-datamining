@@ -1,6 +1,9 @@
 // _runtime/14234_PartitionNumberRangePattern.js
 import _mod14206 from "metro/14206__.js";
+import CollapseNumberRange from "14219_CollapseNumberRange.js";
+import FormatApproximately from "14230_FormatApproximately.js";
 import FormatNumeric from "14231_FormatNumeric.js";
+import PartitionNumberPattern from "14232_PartitionNumberPattern.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -14,10 +17,10 @@ export const PartitionNumberRangePattern = function PartitionNumberRangePattern(
   }
   _mod14206.invariant(tmp4, "Input must be a number", RangeError);
   const internalSlots = getInternalSlots(arg0);
-  const result = tmp(14232).PartitionNumberPattern(internalSlots, isNaN);
-  const result1 = tmp(14232).PartitionNumberPattern(internalSlots, isNaN2);
+  const result = PartitionNumberPattern.PartitionNumberPattern(internalSlots, isNaN);
+  const result1 = PartitionNumberPattern.PartitionNumberPattern(internalSlots, isNaN2);
   if (FormatNumericResult === FormatNumeric.FormatNumeric(internalSlots, isNaN2)) {
-    const FormatApproximatelyResult = tmp(14230).FormatApproximately(internalSlots, result);
+    const FormatApproximatelyResult = FormatApproximately.FormatApproximately(internalSlots, result);
     const item = FormatApproximatelyResult.forEach((item) => {
       item.source = "shared";
     });
@@ -39,7 +42,7 @@ export const PartitionNumberRangePattern = function PartitionNumberRangePattern(
       items.push(item);
     });
     obj = { getInternalSlots };
-    return tmp(14219).CollapseNumberRange(arg0, items, obj);
+    return CollapseNumberRange.CollapseNumberRange(arg0, items, obj);
   }
   FormatNumericResult = FormatNumeric.FormatNumeric(internalSlots, isNaN);
 };

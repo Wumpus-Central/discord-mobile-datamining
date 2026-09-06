@@ -1,8 +1,8 @@
 // _runtime/metro/01169__.js
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _mod1159 from "01159__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
@@ -32,6 +32,7 @@ function formatToPlainString(k2UNz_, time) {
   }
   return first;
 }
+_possibleConstructorReturn;
 class StringBuilder {
   constructor() {
     self = this;

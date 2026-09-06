@@ -29,13 +29,13 @@ export const ApplyUnsignedRoundingMode = function ApplyUnsignedRoundingMode(
       } else if (minusResult1.lessThan(minusResult)) {
         return roundedNumber;
       } else {
-        tmp2(14206).invariant(minusResult.eq(minusResult1), "d1 should be equal to d2");
+        _mod14206.invariant(minusResult.eq(minusResult1), "d1 should be equal to d2");
         if ("half-zero" === formattedString) {
           return timesResult;
         } else if ("half-infinity" === formattedString) {
           return roundedNumber;
         } else {
-          tmp2(14206).invariant("half-even" === formattedString, "unsignedRoundingMode should be half-even");
+          _mod14206.invariant("half-even" === formattedString, "unsignedRoundingMode should be half-even");
           const divResult = timesResult.div(roundedNumber.minus(timesResult));
           return timesResult.div(roundedNumber.minus(timesResult)).mod(2).isZero() ? timesResult : roundedNumber;
         }

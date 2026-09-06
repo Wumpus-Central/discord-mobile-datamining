@@ -83,9 +83,9 @@ class ErrorBoundary {
 _inherits(ErrorBoundary, noop.Component);
 const entry = {
   key: "componentDidCatch",
-  value: function componentDidCatch(arg0, componentStack) {
+  value: function componentDidCatch(error, componentStack) {
     const self = this;
-    dependencyMap = arg0;
+    dependencyMap = error;
     closure_2 = componentStack;
     componentStack = componentStack.componentStack;
     ({
@@ -96,7 +96,7 @@ const entry = {
     } = this.props);
     ErrorBoundary(889).withScope((arg0) => {
       if (_getPrototypeOf) {
-        tmp(arg0, closure_1, componentStack);
+        tmp(arg0, error, componentStack);
       }
       let obj = self;
       if (null != self.props.handled) {
@@ -106,9 +106,9 @@ const entry = {
       }
       let obj1 = ErrorBoundary(1002);
       obj = { mechanism: { handled, type: "auto.function.react.error_boundary" } };
-      const result = obj1.captureReactException(closure_1, closure_2, obj);
+      const result = obj1.captureReactException(error, closure_2, obj);
       if (_isNativeReflectConstruct) {
-        tmp10(tmp8, componentStack, result);
+        tmp10(error, componentStack, result);
       }
       if (noop) {
         obj._lastEventId = result;
@@ -120,7 +120,7 @@ const entry = {
           const tmp6Result = ErrorBoundary(889);
         }
       }
-      obj1 = { error: tmp8, componentStack, eventId: result };
+      obj1 = { error, componentStack, eventId: result };
       obj.setState(obj1);
     });
   },

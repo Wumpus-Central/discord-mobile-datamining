@@ -76,10 +76,10 @@ let items = [
       if (null != diff) {
         return diff;
       } else if (NativePerformanceCxx.timeOrigin) {
-        tmp = obj == tmp;
+        tmp = NativePerformanceCxx == tmp;
         let timeOriginResult;
         if (!tmp) {
-          timeOriginResult = obj.timeOrigin();
+          timeOriginResult = NativePerformanceCxx.timeOrigin();
         }
         diff = timeOriginResult;
       } else {
@@ -327,7 +327,7 @@ let items = [
               } else {
                 if (undefined !== arg2) {
                   if (typeof tmp40 === "function") {
-                    const tmp41Result = tmp41(arg2);
+                    const tmp41Result = closure_1_10(arg2);
                     if (null == tmp41Result) {
                       const _HermesInternal4 = HermesInternal;
                       let tmp49 = _modDef157;
@@ -349,7 +349,6 @@ let items = [
                 currentTimeStamp = diff1;
                 num3 = tmp42;
               }
-              tmp41 = closure_1_10;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -368,8 +367,8 @@ let items = [
                 throw tmp35;
               } else {
                 if (undefined !== arg2) {
-                  if (typeof tmp140 === "function") {
-                    const tmp20Result = tmp20(arg2);
+                  if (typeof getMarkTimeForMeasure === "function") {
+                    const tmp20Result = closure_1_10(arg2);
                     if (null == tmp20Result) {
                       const _HermesInternal2 = HermesInternal;
                       let tmp28 = _modDef157;
@@ -391,11 +390,9 @@ let items = [
                 currentTimeStamp = diff2;
                 num3 = tmp21;
               }
-              tmp20 = closure_1_10;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
-            tmp140 = getMarkTimeForMeasure;
           }
         } else {
           if (undefined !== arg2) {
@@ -457,6 +454,7 @@ let items = [
       }
       const entriesByType = NativePerformanceCxx.getEntriesByType(Performance(170).performanceEntryTypeToRaw(type));
       items = entriesByType.map(Performance(170).rawToPerformanceEntry);
+      const obj = Performance(170);
     },
   },
   {

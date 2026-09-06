@@ -44,11 +44,10 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
   const tmp11 = first1(1505)((arg0, arg1, arg2) => {
     closure_0 = arg1;
     if (arg2) {
-      if (null != closure_4) {
-        let everyResult;
-        if (obj != null) {
-          const routes = obj.getState().routes;
-          everyResult = routes.every((key) => key.key !== closure_0);
+      if (null != state) {
+        if (state != null) {
+          const routes = state.getState().routes;
+          routes.every((key) => key.key !== closure_0);
         }
       }
       const _Error = Error;
@@ -103,11 +102,11 @@ export const PreventRemoveProvider = function PreventRemoveProvider(children) {
   const insertionEffect = obj.useInsertionEffect(() => {
     let key;
     if (context != null) {
-      key = tmp.key;
+      key = context.key;
     }
     if (undefined !== key) {
       if (undefined !== setPreventRemove) {
-        tmp3(first, tmp.key, closure_10);
+        tmp3(first, context.key, closure_10);
         return () => {
           setPreventRemove(first, key.key, false);
         };

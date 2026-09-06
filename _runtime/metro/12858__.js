@@ -6,7 +6,7 @@ import _mod12844 from "12844__.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, sdk, arg3, arg4) {
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
   let obj = { sent_at: new Date().toISOString() };
   if (sdk) {
     sdk = sdk.sdk;
@@ -17,13 +17,13 @@ export const createCheckInEnvelope = function createCheckInEnvelope(arg0, arg1, 
   }
   let tmp = arg3;
   if (arg3) {
-    tmp = arg4;
+    tmp = url;
   }
   if (tmp) {
-    obj.dsn = _mod12844.dsnToString(arg4);
+    obj.dsn = _mod12844.dsnToString(url);
   }
-  if (arg1) {
-    obj.trace = _mod12803.dropUndefinedKeys(arg1);
+  if (contexts) {
+    obj.trace = _mod12803.dropUndefinedKeys(contexts);
   }
   const items = [{ type: "check_in" }, arg0];
   const date = new Date();

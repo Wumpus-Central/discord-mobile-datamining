@@ -94,6 +94,7 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       () => c4 === closure_0,
     );
     timeout = setTimeout(discardLatestNavigationSpan.bind(c3), closure_0);
+    const obj8 = flag2(reactNativeTracingIntegration[2]);
   }
   let result = navigation.events().registerCommandListener(startIdleNavigationSpan);
   if (flag) {

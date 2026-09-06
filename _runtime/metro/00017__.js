@@ -176,8 +176,8 @@ Object.defineProperty(obj, "Systrace", { get: () => require("00046__.js"), set: 
 Object.defineProperty(obj, "ToastAndroid", { get: () => require("SHORT").default, set: undefined });
 Object.defineProperty(obj, "TurboModuleRegistry", { get: () => require("00030__.js"), set: undefined });
 Object.defineProperty(obj, "UIManager", { get: () => require("measure").default, set: undefined });
-obj.unstable_batchedUpdates = function unstable_batchedUpdates(fn, arg1) {
-  fn(arg1);
+obj.unstable_batchedUpdates = function unstable_batchedUpdates(fn, value) {
+  fn(value);
 };
 Object.defineProperty(obj, "useAnimatedValue", { get: () => require("00491__.js").default, set: undefined });
 Object.defineProperty(obj, "useAnimatedValueXY", { get: () => require("00492__.js").default, set: undefined });

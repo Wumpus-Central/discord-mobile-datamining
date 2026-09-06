@@ -7,16 +7,16 @@ import _modDef370 from "metro/00370__.js";
 import _modDef371 from "metro/00371__.js";
 import _modDef372 from "metro/00372__.js";
 import _modDef373 from "metro/00373__.js";
+import _modDef374 from "metro/00374__.js";
 import AnimatedEvent from "00384_AnimatedEvent.js";
 import _modDef386 from "metro/00386__.js";
 
-const _modDef374 = tmp(374);
 require = fn;
 importDefault = fn2;
 const dependencyMap = arg6;
 function _combineCallbacks(arg0, arg1) {}
-function maybeVectorAnim(arg0, obj, timingImpl) {
-  if (arg0 instanceof _modDef373) {
+function maybeVectorAnim(g, obj, timingImpl) {
+  if (g instanceof _modDef373) {
     obj = {};
     const merged = Object.assign(obj);
     obj = {};
@@ -36,7 +36,7 @@ function maybeVectorAnim(arg0, obj, timingImpl) {
       }
       continue;
     }
-    const items = [timingImpl(arg0.x, obj), timingImpl(arg0.y, obj)];
+    const items = [timingImpl(g.x, obj), timingImpl(g.y, obj)];
     if (typeof parallelImpl === "function") {
       let items1 = items;
       c1 = 0;
@@ -122,8 +122,8 @@ function maybeVectorAnim(arg0, obj, timingImpl) {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    const tmp30 = timingImpl(arg0.x, obj);
-  } else if (arg0 instanceof _modDef374) {
+    const tmp30 = timingImpl(g.x, obj);
+  } else if (g instanceof _modDef374) {
     obj = {};
     const merged2 = Object.assign(obj);
     const obj2 = {};
@@ -155,9 +155,9 @@ function maybeVectorAnim(arg0, obj, timingImpl) {
       }
       continue;
     }
-    const tmp18 = timingImpl(arg0.r, obj);
-    const tmp19 = timingImpl(arg0.g, obj2);
-    items1 = [tmp18, tmp19, timingImpl(arg0.b, obj3), timingImpl(arg0.a, obj4)];
+    const tmp18 = timingImpl(g.r, obj);
+    const tmp19 = timingImpl(g.g, obj2);
+    items1 = [tmp18, tmp19, timingImpl(g.b, obj3), timingImpl(g.a, obj4)];
     if (typeof parallelImpl === "function") {
       c1 = 0;
       closure_2 = {};
@@ -241,13 +241,13 @@ function maybeVectorAnim(arg0, obj, timingImpl) {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    const tmp20 = timingImpl(arg0.b, obj3);
+    const tmp20 = timingImpl(g.b, obj3);
   } else {
     return null;
   }
 }
-function springImpl(arg0, arg1) {
-  closure_0 = arg0;
+function springImpl(g, arg1) {
+  closure_0 = g;
   closure_1 = arg1;
   function start(stopTracking, onComplete, arg2) {
     if (typeof _combineCallbacks === "function") {
@@ -273,11 +273,11 @@ function springImpl(arg0, arg1) {
         }
         stopTracking.stopTracking();
         if (onComplete.toValue instanceof closure_1(start[8])) {
-          let tmp4Result = tmp4(tmp5[9]);
-          tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, tmp4(tmp5[10]), onComplete, fn);
+          let tmp4Result = tmp4(start[9]);
+          tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, tmp4(start[10]), onComplete, fn);
           stopTracking.track(tmp4Result);
         } else {
-          const tmp9 = new tmp4(tmp5[10])(onComplete);
+          const tmp9 = new tmp4(start[10])(onComplete);
           stopTracking.animate(tmp9, fn);
         }
       }
@@ -288,7 +288,7 @@ function springImpl(arg0, arg1) {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  let tmp = maybeVectorAnim(arg0, arg1, springImpl);
+  let tmp = maybeVectorAnim(g, arg1, springImpl);
   if (!tmp) {
     let obj = {
       start(arg0) {
@@ -314,8 +314,8 @@ function springImpl(arg0, arg1) {
   }
   return tmp;
 }
-function timingImpl(arg0, arg1) {
-  closure_0 = arg0;
+function timingImpl(g, arg1) {
+  closure_0 = g;
   closure_1 = arg1;
   function start(stopTracking, onComplete, arg2) {
     if (typeof closure_1_3 === "function") {
@@ -341,11 +341,11 @@ function timingImpl(arg0, arg1) {
         }
         stopTracking.stopTracking();
         if (onComplete.toValue instanceof v0(start[8])) {
-          let tmp4Result = tmp4(tmp5[9]);
-          tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, tmp4(tmp5[11]), onComplete, fn);
+          let tmp4Result = v0(start[9]);
+          tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
           stopTracking.track(tmp4Result);
         } else {
-          const tmp9 = new tmp4(tmp5[11])(onComplete);
+          const tmp9 = new v0(start[11])(onComplete);
           stopTracking.animate(tmp9, fn);
         }
       }
@@ -356,7 +356,7 @@ function timingImpl(arg0, arg1) {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  let tmp = maybeVectorAnim(arg0, arg1, timingImpl);
+  let tmp = maybeVectorAnim(g, arg1, timingImpl);
   if (!tmp) {
     const obj = {
       start(arg0, isLooping) {
@@ -385,10 +385,10 @@ function timingImpl(arg0, arg1) {
   }
   return tmp;
 }
-function decayImpl(arg0, arg1) {
-  closure_0 = arg0;
+function decayImpl(g, arg1) {
+  closure_0 = g;
   const useNativeDriver = arg1;
-  let tmp = maybeVectorAnim(arg0, arg1, decayImpl);
+  let tmp = maybeVectorAnim(g, arg1, decayImpl);
   if (!tmp) {
     let obj = {
       start(arg0) {
@@ -435,9 +435,9 @@ function decayImpl(arg0, arg1) {
         const merged = Object.assign(closure_1);
         obj.iterations = iterations;
         if (typeof _combineCallbacks === "function") {
-          obj2.stopTracking();
+          closure_0.stopTracking();
           const tmp8 = new _modDef386(obj);
-          obj2.animate(tmp8, obj.onComplete);
+          closure_0.animate(tmp8, obj.onComplete);
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -618,11 +618,11 @@ function delayImpl(delay) {
           }
           stopTracking.stopTracking();
           if (onComplete.toValue instanceof v0(start[8])) {
-            let tmp4Result = tmp4(tmp5[9]);
-            tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, tmp4(tmp5[11]), onComplete, fn);
+            let tmp4Result = v0(start[9]);
+            tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
             stopTracking.track(tmp4Result);
           } else {
-            const tmp9 = new tmp4(tmp5[11])(onComplete);
+            const tmp9 = new v0(start[11])(onComplete);
             stopTracking.animate(tmp9, fn);
           }
         }
@@ -633,7 +633,7 @@ function delayImpl(delay) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let tmp5 = maybeVectorAnim(tmp2, obj, tmp);
+    let tmp5 = maybeVectorAnim(tmp2, obj, timingImpl);
     if (!tmp5) {
       obj = {
         start(arg0, isLooping) {
@@ -664,7 +664,6 @@ function delayImpl(delay) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = timingImpl;
 }
 
 export default {
@@ -731,11 +730,11 @@ export default {
                   }
                   stopTracking.stopTracking();
                   if (onComplete.toValue instanceof v0(start[8])) {
-                    let tmp4Result = tmp4(tmp5[9]);
-                    tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, tmp4(tmp5[11]), onComplete, fn);
+                    let tmp4Result = v0(start[9]);
+                    tmp4Result = new tmp4Result(stopTracking, onComplete.toValue, v0(start[11]), onComplete, fn);
                     stopTracking.track(tmp4Result);
                   } else {
-                    const tmp9 = new tmp4(tmp5[11])(onComplete);
+                    const tmp9 = new v0(start[11])(onComplete);
                     stopTracking.animate(tmp9, fn);
                   }
                 }
@@ -746,7 +745,7 @@ export default {
                 throw new TypeError("Trying to call a non-function");
               }
             }
-            let tmp11 = maybeVectorAnim(tmp8, obj, tmp3);
+            let tmp11 = maybeVectorAnim(tmp8, obj, timingImpl);
             if (!tmp11) {
               obj = {
                 start(arg0, isLooping) {
@@ -834,7 +833,6 @@ export default {
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          tmp3 = timingImpl;
         } else {
           throw new TypeError("Trying to call a non-function");
         }

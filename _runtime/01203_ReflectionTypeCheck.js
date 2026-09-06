@@ -117,9 +117,8 @@ let items = [
                   }
                   let fields = self.fields;
                   for (const item10026 of fields) {
-                    let tmp8 = item10026;
                     if (undefined === item10026.oneof) {
-                      if (!self.field(arg0[tmp8.localName], item10026, flag, arg1)) {
+                      if (!self.field(arg0[item10026.localName], item10026, flag, arg1)) {
                         obj.return();
                         let flag3 = false;
                         return false;
@@ -255,20 +254,20 @@ let items = [
     key: "scalar",
     value: function scalar(flag, arg1, arg2) {
       if (ReflectionTypeCheck(1201).ScalarType.UINT64 !== arg1) {
-        if (tmp(1201).ScalarType.FIXED64 !== arg1) {
-          if (tmp(1201).ScalarType.INT64 !== arg1) {
-            if (tmp(1201).ScalarType.SFIXED64 !== arg1) {
-              if (tmp(1201).ScalarType.SINT64 !== arg1) {
-                if (tmp(1201).ScalarType.BOOL === arg1) {
+        if (ReflectionTypeCheck(1201).ScalarType.FIXED64 !== arg1) {
+          if (ReflectionTypeCheck(1201).ScalarType.INT64 !== arg1) {
+            if (ReflectionTypeCheck(1201).ScalarType.SFIXED64 !== arg1) {
+              if (ReflectionTypeCheck(1201).ScalarType.SINT64 !== arg1) {
+                if (ReflectionTypeCheck(1201).ScalarType.BOOL === arg1) {
                   return typeof flag === "boolean";
-                } else if (tmp(1201).ScalarType.STRING === arg1) {
+                } else if (ReflectionTypeCheck(1201).ScalarType.STRING === arg1) {
                   return typeof flag === "string";
-                } else if (tmp(1201).ScalarType.BYTES === arg1) {
+                } else if (ReflectionTypeCheck(1201).ScalarType.BYTES === arg1) {
                   const _Uint8Array = Uint8Array;
                   return flag instanceof Uint8Array;
                 } else {
-                  if (tmp(1201).ScalarType.DOUBLE !== arg1) {
-                    if (tmp(1201).ScalarType.FLOAT !== arg1) {
+                  if (ReflectionTypeCheck(1201).ScalarType.DOUBLE !== arg1) {
+                    if (ReflectionTypeCheck(1201).ScalarType.FLOAT !== arg1) {
                       let isIntegerResult = typeof flag === "number";
                       if (typeof flag === "number") {
                         const _Number = Number;
@@ -291,7 +290,7 @@ let items = [
       }
       if (ReflectionTypeCheck(1201).LongType.BIGINT === arg2) {
         return typeof flag === "bigint";
-      } else if (tmp(1201).LongType.NUMBER === arg2) {
+      } else if (ReflectionTypeCheck(1201).LongType.NUMBER === arg2) {
         let tmp6 = typeof flag === "number";
         if (typeof flag === "number") {
           const _isNaN2 = isNaN;
@@ -339,11 +338,11 @@ let items = [
       const self = this;
       const keys = Object.keys(arg0);
       if (ReflectionTypeCheck(1201).ScalarType.INT32 !== INT32) {
-        if (tmp(1201).ScalarType.FIXED32 !== INT32) {
-          if (tmp(1201).ScalarType.SFIXED32 !== INT32) {
-            if (tmp(1201).ScalarType.SINT32 !== INT32) {
-              if (tmp(1201).ScalarType.UINT32 !== INT32) {
-                if (tmp(1201).ScalarType.BOOL === INT32) {
+        if (ReflectionTypeCheck(1201).ScalarType.FIXED32 !== INT32) {
+          if (ReflectionTypeCheck(1201).ScalarType.SFIXED32 !== INT32) {
+            if (ReflectionTypeCheck(1201).ScalarType.SINT32 !== INT32) {
+              if (ReflectionTypeCheck(1201).ScalarType.UINT32 !== INT32) {
+                if (ReflectionTypeCheck(1201).ScalarType.BOOL === INT32) {
                   const substr = keys.slice(0, arg2);
                   return self.scalars(
                     substr.map((item) => {
@@ -358,7 +357,7 @@ let items = [
                     arg2,
                   );
                 } else {
-                  return self.scalars(keys, INT32, arg2, tmp(1201).LongType.STRING);
+                  return self.scalars(keys, INT32, arg2, ReflectionTypeCheck(1201).LongType.STRING);
                 }
               }
             }

@@ -4,11 +4,11 @@ import byteLength from "00206_byteLength.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export default function binaryToBase64(arg0) {
-  let uint8Array = arg0;
-  if (arg0 instanceof ArrayBuffer) {
+export default function binaryToBase64(string) {
+  let uint8Array = string;
+  if (string instanceof ArrayBuffer) {
     const _Uint8Array = Uint8Array;
-    uint8Array = new Uint8Array(arg0);
+    uint8Array = new Uint8Array(string);
   }
   if (uint8Array instanceof Uint8Array) {
     return byteLength.fromByteArray(uint8Array);

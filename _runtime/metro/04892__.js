@@ -178,14 +178,14 @@ function loadStripe() {
     return catchPromise.then((version) => {
       let tmp3 = null;
       if (null !== version) {
-        let match = tmp[0].match(/^pk_test/);
+        let match = array[0].match(/^pk_test/);
         version = version.version;
         let str = "v3";
         if (3 !== version) {
           str = version;
         }
         if (match) {
-          match = str !== tmp4;
+          match = str !== basil;
         }
         if (match) {
           const _console = console;
@@ -194,12 +194,12 @@ function loadStripe() {
           const combined1 = combined.concat("7.3.1", " expected Stripe.js@");
           console.warn(
             combined1.concat(
-              tmp4,
+              basil,
               ". This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning",
             ),
           );
         }
-        const applyResult = version.apply(undefined, tmp);
+        const applyResult = version.apply(undefined, array);
         let _registerWrapper = applyResult;
         if (applyResult) {
           _registerWrapper = applyResult._registerWrapper;

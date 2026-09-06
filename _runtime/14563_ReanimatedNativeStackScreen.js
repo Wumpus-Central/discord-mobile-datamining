@@ -35,9 +35,9 @@ const forwardRefResult = noop.forwardRef((children, ref) => {
   }
   const sum = 56 + y;
   ref = noop.useRef(sum);
-  let tmp2Result = tmp2(1636);
+  let tmp2Result = cancelAnimation2;
   const sharedValue = tmp2Result.useSharedValue(sum);
-  tmp2Result = tmp2(1636);
+  tmp2Result = cancelAnimation2;
   const sharedValue1 = tmp2Result.useSharedValue(0);
   const sharedValue2 = cancelAnimation2.useSharedValue(0);
   const tmp2Result1 = cancelAnimation2;
@@ -86,11 +86,7 @@ const forwardRefResult = noop.forwardRef((children, ref) => {
   });
   return (
     <closure_7 value={sharedValue}>
-      {jsx(_modDef14564.Provider, {
-        ref: arg1,
-        onTransitionProgressReanimated: null,
-        onHeaderHeightChangeReanimated: null,
-      })}
+      {jsx(_modDef14564.Provider, { ref, onTransitionProgressReanimated: null, onHeaderHeightChangeReanimated: null })}
     </closure_7>
   );
 });

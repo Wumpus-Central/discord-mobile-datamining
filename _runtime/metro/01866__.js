@@ -3,15 +3,15 @@ import cancelAnimation from "../01636_cancelAnimation.js";
 
 require = fn;
 const dependencyMap = arg6;
-fn = function t(arg0, arg1, arg2) {
-  let interpolateResult = arg0;
-  if (0 !== arg2) {
-    interpolateResult = arg0;
-    if (0 !== arg1) {
-      const items = [0, arg1];
+fn = function t(height, value, offset) {
+  let interpolateResult = height;
+  if (0 !== offset) {
+    interpolateResult = height;
+    if (0 !== value) {
+      const items = [0, value];
       const _Math = Math;
-      const items1 = [0, Math.max(arg1 - arg2, 0)];
-      interpolateResult = cancelAnimation.interpolate(arg0, items, items1);
+      const items1 = [0, Math.max(value - offset, 0)];
+      interpolateResult = cancelAnimation.interpolate(height, items, items1);
     }
   }
   return interpolateResult;
@@ -21,15 +21,15 @@ fn.__workletHash = 1787304919616;
 fn.__initData = {
   code: "function pnpm_helpersTs1(height,targetKeyboardHeight,offset){const{interpolate}=this.__closure;if(offset===0||targetKeyboardHeight===0){return height;}return interpolate(height,[0,targetKeyboardHeight],[0,Math.max(targetKeyboardHeight-offset,0)]);}",
 };
-const fn2 = function n(arg0, arg1, arg2) {
-  let flag = arg3;
-  if (arg3 === undefined) {
+const fn2 = function n(value, height, height2) {
+  let flag = inverted;
+  if (inverted === undefined) {
     flag = false;
   }
   if (flag) {
-    let tmp3 = arg0 <= 20;
+    let tmp3 = value <= 20;
   } else {
-    tmp3 = arg0 + arg1 >= arg2 - 20;
+    tmp3 = value + height >= height2 - 20;
   }
   return tmp3;
 };
@@ -38,13 +38,13 @@ fn2.__workletHash = 3738364082991;
 fn2.__initData = {
   code: "function pnpm_helpersTs2(scrollOffset,layoutHeight,contentHeight,inverted=false){const{AT_END_THRESHOLD}=this.__closure;if(inverted){return scrollOffset<=AT_END_THRESHOLD;}return scrollOffset+layoutHeight>=contentHeight-AT_END_THRESHOLD;}",
 };
-const fn3 = function o(arg0, arg1) {
-  if ("always" !== arg0) {
-    if ("persistent" !== arg0) {
-      if ("never" === arg0) {
+const fn3 = function o(keyboardLiftBehavior, isScrollAtEndResult) {
+  if ("always" !== keyboardLiftBehavior) {
+    if ("persistent" !== keyboardLiftBehavior) {
+      if ("never" === keyboardLiftBehavior) {
         return false;
-      } else if ("whenAtEnd" === arg0) {
-        return arg1;
+      } else if ("whenAtEnd" === keyboardLiftBehavior) {
+        return isScrollAtEndResult;
       }
     }
   }
@@ -55,17 +55,17 @@ fn3.__workletHash = 14230532945867;
 fn3.__initData = {
   code: 'function pnpm_helpersTs3(behavior,isAtEnd){switch(behavior){case"always":return true;case"never":return false;case"whenAtEnd":return isAtEnd;case"persistent":return true;}}',
 };
-const fn4 = function l(arg0, arg1, arg2, arg3, arg4) {
-  if (arg3 <= 0) {
+const fn4 = function l(value, height, height2, value2, inverted) {
+  if (value2 <= 0) {
     return 0;
-  } else if (arg4) {
+  } else if (inverted) {
     const _Math3 = Math;
     const _Math4 = Math;
-    return Math.max(0, Math.min(1, -arg0 / arg3));
+    return Math.max(0, Math.min(1, -value / value2));
   } else {
     const _Math = Math;
     const _Math2 = Math;
-    return Math.max(0, Math.min(1, (arg0 + arg1 - arg2) / arg3));
+    return Math.max(0, Math.min(1, (value + height - height2) / value2));
   }
 };
 fn4.__closure = {};
@@ -73,29 +73,29 @@ fn4.__workletHash = 10144434118496;
 fn4.__initData = {
   code: "function pnpm_helpersTs4(scrollOffset,layoutHeight,contentHeight,blankSpace,inverted){if(blankSpace<=0){return 0;}if(inverted){return Math.max(0,Math.min(1,-scrollOffset/blankSpace));}const pastContentEnd=scrollOffset+layoutHeight-contentHeight;return Math.max(0,Math.min(1,pastContentEnd/blankSpace));}",
 };
-const fn5 = function c(arg0, arg1) {
-  return Math.max(0, arg0 - arg1);
+const fn5 = function c(value, value2) {
+  return Math.max(0, value - value2);
 };
 fn5.__closure = {};
 fn5.__workletHash = 7722221146206;
 fn5.__initData = {
   code: "function pnpm_helpersTs5(blankSpace,extraContentPadding){return Math.max(0,blankSpace-extraContentPadding);}",
 };
-const fn6 = function h(arg0, arg1) {
-  return Math.max(0, arg0 - arg1);
+const fn6 = function h(effectiveHeight, minimumPaddingAbsorbed) {
+  return Math.max(0, effectiveHeight - minimumPaddingAbsorbed);
 };
 fn6.__closure = {};
 fn6.__workletHash = 8723258054557;
 fn6.__initData = {
   code: "function pnpm_helpersTs6(rawEffective,minimumPaddingAbsorbed){return Math.max(0,rawEffective-minimumPaddingAbsorbed);}",
 };
-const fn7 = function s(arg0, arg1, arg2, arg3, arg4) {
-  let tmp = arg1;
-  if (undefined !== arg4) {
-    tmp = arg4;
+const fn7 = function s(value, scrollEffective1, height, height2, bound3) {
+  let tmp = scrollEffective1;
+  if (undefined !== bound3) {
+    tmp = bound3;
   }
-  const bound = Math.max(arg2 - arg3 + tmp, 0);
-  return Math.min(Math.max(arg0 + arg1, 0), bound);
+  const bound = Math.max(height - height2 + tmp, 0);
+  return Math.min(Math.max(value + scrollEffective1, 0), bound);
 };
 fn7.__closure = {};
 fn7.__workletHash = 16148763282691;

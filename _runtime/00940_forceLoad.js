@@ -2,6 +2,7 @@
 import _mod682 from "metro/00682__.js";
 import _mod895 from "metro/00895__.js";
 import _mod897 from "metro/00897__.js";
+import extractSafariExtensionDetails from "00938_extractSafariExtensionDetails.js";
 import _wrapTimeFunction from "00941__wrapTimeFunction.js";
 import breadcrumbsIntegration from "00942_breadcrumbsIntegration.js";
 import _getUnhandledRejectionError from "00943__getUnhandledRejectionError.js";
@@ -60,14 +61,14 @@ export const init = function init() {
   obj.enabled = enabled;
   let defaultStackParser = obj.stackParser;
   if (!defaultStackParser) {
-    defaultStackParser = tmp7(938).defaultStackParser;
+    defaultStackParser = extractSafariExtensionDetails.defaultStackParser;
   }
   obj.stackParser = _mod682.stackParserFromStackParserOptions(defaultStackParser);
-  let tmp7Result = tmp7(682);
+  let tmp7Result = _mod682;
   obj = { integrations: obj.integrations, defaultIntegrations };
   obj.integrations = tmp7Result.getIntegrationsToSetup(obj);
   obj.transport = obj.transport || _mod897.makeFetchTransport;
-  tmp7Result = tmp7(682);
+  tmp7Result = _mod682;
   return tmp7Result.initAndBind(_mod895.BrowserClient, obj);
 };
 export const onLoad = function onLoad(fn) {

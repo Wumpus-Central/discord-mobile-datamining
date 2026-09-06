@@ -103,6 +103,7 @@ let items = [
         const _captureAppStartResult1 = _captureAppStart(1018);
         tmp4 = null === addIntegration || undefined === addIntegration;
       }
+      const obj = ReactNativeProfiler(1000);
     },
   },
 ];

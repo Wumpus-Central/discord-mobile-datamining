@@ -1,5 +1,6 @@
 // _runtime/13661_InflateState.js
 import _mod13651 from "metro/13651__.js";
+import adler32 from "13657_adler32.js";
 import _mod13658 from "metro/13658__.js";
 import inflate_table from "13662_inflate_table.js";
 import inflate_fast from "13663_inflate_fast.js";
@@ -163,7 +164,7 @@ function updatewindow(state, output3, length, length2) {
     obj.arraySet(state.window, output3, length - length2, diff, state.wnext);
     const diff1 = length2 - diff;
     if (diff1) {
-      const tmp8Result = tmp8(13651);
+      const tmp8Result = _mod13651;
       tmp8Result.arraySet(state.window, output3, length - diff1, diff1, 0);
       state.wnext = diff1;
       state.whave = state.wsize;
@@ -176,7 +177,6 @@ function updatewindow(state, output3, length, length2) {
         state.whave = state.whave + diff;
       }
     }
-    tmp8 = require;
   }
   return 0;
 }
@@ -935,12 +935,11 @@ export const inflate = function inflate(state, arg1) {
                                                                       continue;
                                                                     }
                                                                   } else {
-                                                                    let tmp41 = require;
                                                                     let tmp42 = dependencyMap;
                                                                     if (state.flags) {
                                                                       tmp42 = 13658;
                                                                       let check2 = state.check;
-                                                                      let tmp46 = tmp41(tmp42)(
+                                                                      let tmp46 = require(tmp42)(
                                                                         check2,
                                                                         tmp15,
                                                                         diff12,
@@ -948,7 +947,7 @@ export const inflate = function inflate(state, arg1) {
                                                                       );
                                                                     } else {
                                                                       let check = state.check;
-                                                                      tmp46 = tmp41(13657)(
+                                                                      tmp46 = adler32(
                                                                         check,
                                                                         tmp15,
                                                                         diff12,
@@ -1609,7 +1608,6 @@ export const inflate = function inflate(state, arg1) {
                                               } else {
                                                 state.lenbits = 9;
                                                 let obj = { bits: state.lenbits };
-                                                let tmp639 = require;
                                                 let lens5 = state.lens;
                                                 let tmp643 = inflate_table(
                                                   1,
@@ -1641,7 +1639,7 @@ export const inflate = function inflate(state, arg1) {
                                                   state.distcode = state.distdyn;
                                                   obj = { bits: null };
                                                   ({ distbits: obj2.bits, lens: lens2 } = state);
-                                                  let tmp191 = tmp639(13662)(
+                                                  let tmp191 = inflate_table(
                                                     2,
                                                     lens2,
                                                     state.nlen,
@@ -2417,16 +2415,15 @@ export const inflate = function inflate(state, arg1) {
             }
             return num61;
           } else {
-            let tmp578 = require;
             let next_out3 = dependencyMap;
             if (state.flags) {
               let check12 = state.check;
-              let tmp578Result = tmp578(13658);
+              let tmp578Result = _mod13658;
               next_out3 = state.next_out;
               let tmp578ResultResult = tmp578Result(check12, tmp15, diff53, next_out3 - diff53);
             } else {
               let check11 = state.check;
-              tmp578ResultResult = tmp578(13657)(check11, tmp15, diff53, state.next_out - diff53);
+              tmp578ResultResult = adler32(check11, tmp15, diff53, state.next_out - diff53);
             }
             state.check = tmp578ResultResult;
             state.adler = tmp578ResultResult;

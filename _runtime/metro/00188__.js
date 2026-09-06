@@ -4,9 +4,8 @@ import _mod184 from "00184__.js";
 import _mod189 from "00189__.js";
 
 if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
-  const _default = _mod189.default;
   let closure_1 = _mod184.default;
-  const result = _default.installConsoleErrorReporter();
+  const result = _mod189.default.installConsoleErrorReporter();
   if (!global.__fbDisableExceptionsManager) {
     _mod47.default.setGlobalHandler((arg0, arg1) => {
       try {
@@ -19,4 +18,5 @@ if (true !== global.RN$useAlwaysAvailableJSErrorHandling) {
     });
     const _default2 = _mod47.default;
   }
+  const _default = _mod189.default;
 }

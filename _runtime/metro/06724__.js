@@ -1,4 +1,5 @@
 // _runtime/metro/06724__.js
+import tagMessage from "../06660_tagMessage.js";
 import _mod6698 from "06698__.js";
 import hash from "../06712_hash.js";
 import allowedNativeProps2 from "../06713_allowedNativeProps.js";
@@ -64,16 +65,15 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(ar
     let first = tmp15[0];
     let tmp17 = first;
     let iter = tmp15[1];
-    let tmp19 = require;
     let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
     if (!allowedNativeProps.has(first)) {
       if (!EMPTY_WHITE_LIST.has(tmp17)) {
-        let PropsToFilter = tmp19(6713).PropsToFilter;
+        let PropsToFilter = allowedNativeProps2.PropsToFilter;
         if (PropsToFilter.has(tmp17)) {
           continue;
         } else {
           let _console = console;
-          let tmp19Result = tmp19(6660);
+          let tmp19Result = tagMessage;
           let _HermesInternal = HermesInternal;
           let str = "";
           let str2 = " is not a valid property for ";
@@ -86,7 +86,7 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(ar
         continue;
       }
     }
-    let Reanimated = tmp19(6698).Reanimated;
+    let Reanimated = _mod6698.Reanimated;
     let isSharedValueResult;
     if (Reanimated != null) {
       isSharedValueResult = Reanimated.isSharedValue(iter);
@@ -95,11 +95,7 @@ export const prepareConfigForNativeSide = function prepareConfigForNativeSide(ar
   }
   return obj;
 };
-export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(
-  gestureHandlerProps,
-  map,
-  transformHoverProps,
-) {
+export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps) {
   closure_0 = gestureHandlerProps;
   let tmp = map;
   if (map === undefined) {
@@ -113,15 +109,14 @@ export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(
   closure_2 = tmp2;
   const items = [gestureHandlerProps, tmp, tmp2];
   return useMemo(() => {
-    const obj = {};
     const merged = Object.assign(closure_0);
     const item = closure_1.forEach((item, index) => {
       if (index in obj) {
-        tmp3[item] = tmp3[index];
+        obj[item] = obj[index];
         delete tmp[tmp2];
       }
     });
-    const tmp3 = closure_2(obj);
+    const tmp3 = closure_2({});
     let useAnimated = tmp3.useAnimated;
     if (!useAnimated) {
       useAnimated = _mod6725.isNativeAnimatedEvent(tmp3.onUpdate);

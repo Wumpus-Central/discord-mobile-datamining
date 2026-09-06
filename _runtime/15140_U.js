@@ -106,25 +106,25 @@ let fn = function X(arg0) {
   }
   return fn(arg0);
 };
-fn = function De(arg0, key10009, arg2) {
+fn = function De(D, key10009, D2) {
   if (typeof Reflect !== "undefined") {
     const _Reflect2 = Reflect;
     if (Reflect.get) {
       const _Reflect = Reflect;
       fn = Reflect.get;
     }
-    let tmp2 = arg2;
-    if (!arg2) {
-      tmp2 = arg0;
+    let tmp2 = D2;
+    if (!D2) {
+      tmp2 = D;
     }
-    return fn(arg0, key10009, tmp2);
+    return fn(D, key10009, tmp2);
   }
-  fn = (arg0, key10009, arg2) => {
+  fn = (D, key10009, D) => {
     hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
-    let tmp = arg0;
-    if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-      let tmp3 = fn(arg0);
+    let tmp = D;
+    if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(D, key10009))) {
+      let tmp3 = fn(D);
       tmp = tmp3;
       if (null !== tmp3) {
         while (true) {
@@ -147,11 +147,11 @@ fn = function De(arg0, key10009, arg2) {
       const _Object2 = Object;
       const iter = Object.getOwnPropertyDescriptor(tmp, key10009);
       if (iter.get) {
-        let tmp7 = arg2;
+        let tmp7 = D;
         const get = iter.get;
         const call3 = get.call;
-        if (!arg2) {
-          tmp7 = arg0;
+        if (!D) {
+          tmp7 = D;
         }
         typeof call3 === "unknown" ? get() : call3(tmp7);
       } else {
@@ -226,9 +226,9 @@ function ue(arg0) {
       if (item in closure_0) {
         const _Object = Object;
         const obj = { value: tmp2, enumerable: true, configurable: true, writable: true };
-        Object.defineProperty(tmp, item, obj);
+        Object.defineProperty(closure_0, item, obj);
       } else {
-        tmp[item] = tmp2;
+        closure_0[item] = tmp2;
       }
     });
   }
@@ -266,19 +266,16 @@ let closure_131_0 = (arg0, arg1) => {
       tmp = items;
     }
     const call = slice.call;
-    let arr2 = typeof call === "unknown" ? slice() : call(tmp);
+    const arr2 = typeof call === "unknown" ? slice() : call(tmp);
     if (arr2.length) {
       const arr = arr2.shift();
       const tmp4 = fn(arr);
       while (!tmp4) {
         let tmp5 = arr.childNodes && arr.childNodes.length;
-        if (!tmp5) {
-          arr2 = arr3;
-        } else {
-          let tmp7 = slice;
+        if (tmp5) {
           let call2 = slice.call;
           let concat = arr.childNodes;
-          let tmp8 = typeof call2 === "unknown" ? tmp7() : call2(concat);
+          let tmp8 = typeof call2 === "unknown" ? slice() : call2(concat);
           concat = tmp8.concat;
           let combined = concat(arr2);
         }
@@ -296,9 +293,9 @@ let closure_132_0 = (arg0, arg1) => {
     const self = this;
     if (typeof Symbol !== "undefined") {
       const _Symbol3 = Symbol;
-      if (tmp[Symbol.hasInstance]) {
+      if (v0[Symbol.hasInstance]) {
         const _Symbol2 = Symbol;
-        let tmp2 = tmp[Symbol.hasInstance](self);
+        let tmp2 = v0[Symbol.hasInstance](self);
       }
       let tmp4 = arg1;
       if (tmp2) {
@@ -310,18 +307,18 @@ let closure_132_0 = (arg0, arg1) => {
         }
         self.ownerDocument = tmp4;
       } else {
-        const tmpResult = tmp(data, tmp4);
+        const tmpResult = v0(data, tmp4);
         return tmpResult;
       }
     }
     if (typeof Symbol !== "undefined") {
       const _Symbol4 = Symbol;
-      if (tmp[Symbol.hasInstance]) {
+      if (v0[Symbol.hasInstance]) {
         const _Symbol = Symbol;
-        tmp2 = tmp[Symbol.hasInstance](self);
+        tmp2 = v0[Symbol.hasInstance](self);
       }
     }
-    tmp2 = U(self, tmp);
+    tmp2 = U(self, v0);
   }
   c0 = ve;
   if (typeof f98883 === "function") {
@@ -350,9 +347,9 @@ let closure_133_0 = (arg0, arg1) => {
     const self = this;
     if (typeof Symbol !== "undefined") {
       const _Symbol3 = Symbol;
-      if (tmp[Symbol.hasInstance]) {
+      if (v0[Symbol.hasInstance]) {
         const _Symbol2 = Symbol;
-        let tmp2 = tmp[Symbol.hasInstance](self);
+        let tmp2 = v0[Symbol.hasInstance](self);
       }
       if (tmp2) {
         let str = arg0;
@@ -367,18 +364,18 @@ let closure_133_0 = (arg0, arg1) => {
         }
         self.ownerDocument = tmp6;
       } else {
-        const tmpResult = tmp(arg0);
+        const tmpResult = v0(arg0);
         return tmpResult;
       }
     }
     if (typeof Symbol !== "undefined") {
       const _Symbol4 = Symbol;
-      if (tmp[Symbol.hasInstance]) {
+      if (v0[Symbol.hasInstance]) {
         const _Symbol = Symbol;
-        tmp2 = tmp[Symbol.hasInstance](self);
+        tmp2 = v0[Symbol.hasInstance](self);
       }
     }
-    tmp2 = U(self, tmp);
+    tmp2 = U(self, v0);
   }
   c0 = ae;
   if (typeof f98883 === "function") {
@@ -424,9 +421,9 @@ let closure_134_0 = (arg0, arg1) => {
       return arr.forEach((handleEvent) => {
         closure_0.currentTarget = self;
         if (typeof handleEvent === "function") {
-          handleEvent(tmp);
+          handleEvent(closure_0);
         } else {
-          handleEvent.handleEvent(tmp);
+          handleEvent.handleEvent(closure_0);
         }
       });
     } else if (self.parentNode) {
@@ -780,7 +777,6 @@ let closure_138_0 = (arg0, arg1) => {
       return;
     }
   }
-  closure_3 = I;
   if (typeof f98883 === "function") {
     class I {
       constructor(arg0, arg1, arg2) {
@@ -3186,7 +3182,6 @@ let closure_139_0 = (arg0, arg1) => {
       return;
     }
   }
-  closure_0 = K;
   if (typeof f98883 === "function") {
     class K {
       constructor(arg0) {
@@ -5479,9 +5474,9 @@ let fn2 = function r() {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_listeners" in self) {
@@ -5498,12 +5493,12 @@ let fn2 = function r() {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry = {
   key: "on",
@@ -5642,9 +5637,9 @@ let fn3 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_playbackHeartbeatInterval" in self) {
@@ -5705,9 +5700,9 @@ let fn3 = function r(pm) {
       pm.on("adbreakend", _stopPlaybackHeartbeatInterval8.bind(self));
       pm.on("seeked", () => {
         if (pm.data.player_is_paused) {
-          const result = obj._stopPlaybackHeartbeatInterval();
+          const result = self._stopPlaybackHeartbeatInterval();
         } else {
-          const result1 = obj._startPlaybackHeartbeatInterval();
+          const result1 = self._startPlaybackHeartbeatInterval();
         }
       });
       pm.on("timeupdate", () => {
@@ -5717,10 +5712,10 @@ let fn3 = function r(pm) {
       });
       pm.on("devicesleep", (arg0, viewer_time) => {
         if (null !== self._playbackHeartbeatInterval) {
-          closure_58.default.clearInterval(tmp._playbackHeartbeatInterval);
+          closure_58.default.clearInterval(self._playbackHeartbeatInterval);
           const obj = { viewer_time: viewer_time.viewer_time };
           pm.emit("playbackheartbeatend", obj);
-          tmp._playbackHeartbeatInterval = null;
+          self._playbackHeartbeatInterval = null;
           const _default = closure_58.default;
         }
       });
@@ -5732,12 +5727,12 @@ let fn3 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry1 = {
   key: "_startPlaybackHeartbeatInterval",
@@ -5776,9 +5771,9 @@ let fn4 = function r(on) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn4[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn4[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("viewErrored" in self) {
@@ -5800,27 +5795,27 @@ let fn4 = function r(on) {
             if (!player_error_code) {
               player_error_code = player_error_code.player_error_code;
             }
-            tmp3.data.player_error_code = player_error_code;
+            on.data.player_error_code = player_error_code;
             let player_error_message = tmp5.player_error_message;
             if (!player_error_message) {
               player_error_message = player_error_code.player_error_message;
             }
-            tmp3.data.player_error_message = player_error_message;
+            on.data.player_error_message = player_error_message;
             let player_error_context = tmp5.player_error_context;
             if (!player_error_context) {
               player_error_context = player_error_code.player_error_context;
             }
-            tmp3.data.player_error_context = player_error_context;
+            on.data.player_error_context = player_error_context;
             let player_error_severity = tmp5.player_error_severity;
             if (!player_error_severity) {
               player_error_severity = player_error_code.player_error_severity;
             }
-            tmp3.data.player_error_severity = player_error_severity;
+            on.data.player_error_severity = player_error_severity;
             let player_error_business_exception = errorTranslatorResult.player_error_business_exception;
             if (!player_error_business_exception) {
               player_error_business_exception = player_error_code.player_error_business_exception;
             }
-            tmp3.data.player_error_business_exception = player_error_business_exception;
+            on.data.player_error_business_exception = player_error_business_exception;
             self.viewErrored = true;
           }
         } catch (tmp16) {
@@ -5838,7 +5833,7 @@ let fn4 = function r(on) {
         if (!tmp5) {
           delete tmp3[tmp2];
         }
-        const data2 = tmp4.data;
+        const data2 = on.data;
         let tmp6 = null === data2;
         if (!tmp6) {
           tmp6 = undefined === data2;
@@ -5846,7 +5841,7 @@ let fn4 = function r(on) {
         if (!tmp6) {
           delete tmp3[tmp2];
         }
-        const data3 = tmp4.data;
+        const data3 = on.data;
         let tmp7 = null === data3;
         if (!tmp7) {
           tmp7 = undefined === data3;
@@ -5854,7 +5849,7 @@ let fn4 = function r(on) {
         if (!tmp7) {
           delete tmp3[tmp2];
         }
-        const data4 = tmp4.data;
+        const data4 = on.data;
         let tmp8 = null === data4;
         if (!tmp8) {
           tmp8 = undefined === data4;
@@ -5862,7 +5857,7 @@ let fn4 = function r(on) {
         if (!tmp8) {
           delete tmp3[tmp2];
         }
-        const data5 = tmp4.data;
+        const data5 = on.data;
         let tmp9 = null === data5;
         if (!tmp9) {
           tmp9 = undefined === data5;
@@ -5879,20 +5874,20 @@ let fn4 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn4[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn4[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn4);
 };
 let fn5 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_watchTimeTrackerLastCheckedTime" in self) {
@@ -5921,12 +5916,12 @@ let fn5 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry2 = {
   key: "_updateWatchTime",
@@ -5961,9 +5956,9 @@ let fn6 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_playbackTimeTrackerLastPlayheadPosition" in self) {
@@ -6047,12 +6042,12 @@ let fn6 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry3 = {
   key: "_startPlaybackTimeTracking",
@@ -6131,9 +6126,9 @@ let fn7 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("pm" in self) {
@@ -6160,12 +6155,12 @@ let fn7 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry4 = {
   key: "_updateMaxPlayheadPosition",
@@ -6217,9 +6212,9 @@ let fn8 = function r(disableRebufferTracking) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn8[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn8[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if (!disableRebufferTracking.disableRebufferTracking) {
@@ -6239,17 +6234,18 @@ let fn8 = function r(disableRebufferTracking) {
             data.view_rebuffer_duration = data.view_rebuffer_duration + diff;
             viewer_time = viewer_time.viewer_time;
             if (disableRebufferTracking.data.view_rebuffer_duration > c64) {
-              obj.emit("viewend");
-              obj.send("viewend");
-              const log = obj.mux.log;
+              disableRebufferTracking.emit("viewend");
+              disableRebufferTracking.send("viewend");
+              const log = disableRebufferTracking.mux.log;
               const concat = "Ending view after rebuffering for longer than ".concat;
               log.warn("Ending view after rebuffering for longer than ".concat(tmp4, "ms, future events will be ignored unless a programchange or videochange occurs."));
             }
           }
           if (tmp9) {
-            tmp8.data.view_rebuffer_frequency = tmp8.data.view_rebuffer_count / tmp8.data.view_watch_time;
-            tmp8.data.view_rebuffer_percentage = tmp8.data.view_rebuffer_duration / tmp8.data.view_watch_time;
+            disableRebufferTracking.data.view_rebuffer_frequency = disableRebufferTracking.data.view_rebuffer_count / disableRebufferTracking.data.view_watch_time;
+            disableRebufferTracking.data.view_rebuffer_percentage = disableRebufferTracking.data.view_rebuffer_duration / disableRebufferTracking.data.view_watch_time;
           }
+          tmp9 = disableRebufferTracking.data.view_watch_time >= 0 && disableRebufferTracking.data.view_rebuffer_count > 0;
         }
         disableRebufferTracking.on("playbackheartbeat", (arg0, arg1) => {
           a(arg1);
@@ -6277,20 +6273,20 @@ let fn8 = function r(disableRebufferTracking) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn8[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn8[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn8);
 };
 const fn9 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_lastCheckedTime" in self) {
@@ -6349,12 +6345,12 @@ const fn9 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry5 = {
   key: "_checkIfRebuffering",
@@ -6451,9 +6447,9 @@ const fn10 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("pm" in self) {
@@ -6507,12 +6503,12 @@ const fn10 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry6 = {
   key: "_inPrerollPosition",
@@ -6548,9 +6544,9 @@ const fn11 = function r(on) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn11[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn11[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_lastPlayerHeight" in self) {
@@ -6591,16 +6587,16 @@ const fn11 = function r(on) {
         on.on(item, () => {
           if (self._lastPlayheadPosition >= 0) {
             if (data.data.player_playhead_time >= 0) {
-              if (tmp._lastPlayerWidth >= 0) {
-                if (tmp._lastSourceWidth > 0) {
-                  if (tmp._lastPlayerHeight >= 0) {
-                    if (tmp._lastSourceHeight > 0) {
-                      const diff = tmp4.data.player_playhead_time - tmp._lastPlayheadPosition;
+              if (self._lastPlayerWidth >= 0) {
+                if (self._lastSourceWidth > 0) {
+                  if (self._lastPlayerHeight >= 0) {
+                    if (self._lastSourceHeight > 0) {
+                      const diff = tmp4.data.player_playhead_time - self._lastPlayheadPosition;
                       if (diff < 0) {
-                        tmp._lastPlayheadPosition = -1;
+                        self._lastPlayheadPosition = -1;
                       } else {
                         const _Math = Math;
-                        const bound = Math.min(tmp._lastPlayerWidth / tmp._lastSourceWidth, tmp._lastPlayerHeight / tmp._lastSourceHeight);
+                        const bound = Math.min(self._lastPlayerWidth / self._lastSourceWidth, self._lastPlayerHeight / self._lastSourceHeight);
                         const _Math2 = Math;
                         const bound1 = Math.max(0, bound - 1);
                         const _Math3 = Math;
@@ -6662,20 +6658,20 @@ const fn11 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn11[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn11[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn11);
 };
 const fn12 = function r(on) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn12[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn12[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("isSeeking" in self) {
@@ -6703,25 +6699,25 @@ const fn12 = function r(on) {
             if (!viewer_time) {
               tmp8 = nowResult;
             }
-            const diff = (obj.data.viewer_time || nowResult) - tmp8;
-            const data = obj.data;
+            const diff = (on.data.viewer_time || nowResult) - tmp8;
+            const data = on.data;
             data.view_seek_duration = data.view_seek_duration || 0;
             data.view_seek_duration = data.view_seek_duration + diff;
-            let num2 = obj.data.view_max_seek_time;
+            let num2 = on.data.view_max_seek_time;
             if (!num2) {
               num2 = 0;
             }
-            obj.data.view_max_seek_time = Math.max(num2, diff);
-            tmp2.isSeeking = false;
+            on.data.view_max_seek_time = Math.max(num2, diff);
+            self.isSeeking = false;
             viewer_time = -1;
-            const tmp7 = obj.data.viewer_time || nowResult;
+            const tmp7 = on.data.viewer_time || nowResult;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
         }
         self.isSeeking = true;
         viewer_time = viewer_time.viewer_time;
-        const data2 = obj.data;
+        const data2 = on.data;
         data2.view_seek_count = data2.view_seek_count || 0;
         data2.view_seek_count = data2.view_seek_count + 1;
         on.send("seeking");
@@ -6734,16 +6730,17 @@ const fn12 = function r(on) {
             tmp5 = nowResult;
           }
           const diff = (on.data.viewer_time || nowResult) - tmp5;
-          const data = tmp3.data;
+          const data = on.data;
           data.view_seek_duration = data.view_seek_duration || 0;
           data.view_seek_duration = data.view_seek_duration + diff;
-          let num = tmp3.data.view_max_seek_time;
+          let num = on.data.view_max_seek_time;
           if (!num) {
             num = 0;
           }
           on.data.view_max_seek_time = Math.max(num, diff);
           self.isSeeking = false;
           c2 = -1;
+          const tmp4 = on.data.viewer_time || nowResult;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -6757,15 +6754,15 @@ const fn12 = function r(on) {
               tmp6 = nowResult;
             }
             const diff = (on.data.viewer_time || nowResult) - tmp6;
-            const data = obj.data;
+            const data = on.data;
             data.view_seek_duration = data.view_seek_duration || 0;
             data.view_seek_duration = data.view_seek_duration + diff;
-            let num = obj.data.view_max_seek_time;
+            let num = on.data.view_max_seek_time;
             if (!num) {
               num = 0;
             }
             on.data.view_max_seek_time = Math.max(num, diff);
-            tmp.isSeeking = false;
+            self.isSeeking = false;
             c2 = -1;
             on.send("seeked");
             const tmp5 = on.data.viewer_time || nowResult;
@@ -6784,12 +6781,12 @@ const fn12 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn12[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn12[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn12);
 };
 function Xt(arg0, arg1) {
 
@@ -6799,9 +6796,9 @@ const fn13 = function r(pm) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = f98876[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_adHasPlayed" in self) {
@@ -6892,10 +6889,10 @@ const fn13 = function r(pm) {
           const data = pm.data;
           data.view_ad_request_count = data.view_ad_request_count || 0;
           data.view_ad_request_count = data.view_ad_request_count + 1;
-          if (obj.inPrerollPosition()) {
-            tmp5.data.view_preroll_requested = true;
-            if (!obj._adHasPlayed) {
-              const data2 = tmp5.data;
+          if (self.inPrerollPosition()) {
+            pm.data.view_preroll_requested = true;
+            if (!self._adHasPlayed) {
+              const data2 = pm.data;
               data2.view_preroll_request_count = data2.view_preroll_request_count || 0;
               data2.view_preroll_request_count = data2.view_preroll_request_count + 1;
             }
@@ -6912,7 +6909,7 @@ const fn13 = function r(pm) {
         if (typeof Xt === "function") {
           _adResponses.push(merged);
           const sorted = _adResponses.sort((viewer_time, viewer_time2) => viewer_time.viewer_time - viewer_time2.viewer_time);
-          const findAdRequestResult = obj2.findAdRequest(merged.ad_request_id);
+          const findAdRequestResult = self.findAdRequest(merged.ad_request_id);
           if (findAdRequestResult) {
             const data = pm.data;
             const _Math = Math;
@@ -6927,31 +6924,30 @@ const fn13 = function r(pm) {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        obj2 = self;
       });
       pm.on("adplay", (arg0, viewer_time) => {
         self._adHasPlayed = true;
         if (self._wouldBeNewAdPlay) {
-          obj._wouldBeNewAdPlay = false;
+          self._wouldBeNewAdPlay = false;
           const data = pm.data;
           data.view_ad_played_count = data.view_ad_played_count || 0;
           data.view_ad_played_count = data.view_ad_played_count + 1;
         }
-        let inPrerollPositionResult = obj.inPrerollPosition();
+        let inPrerollPositionResult = self.inPrerollPosition();
         if (inPrerollPositionResult) {
           inPrerollPositionResult = !pm.data.view_preroll_played;
         }
         if (inPrerollPositionResult) {
           pm.data.view_preroll_played = true;
-          if (obj._adRequests.length > 0) {
+          if (self._adRequests.length > 0) {
             const _Math = Math;
-            tmp5.data.view_preroll_request_time = Math.max(0, viewer_time.viewer_time - obj._adRequests[0].viewer_time);
+            pm.data.view_preroll_request_time = Math.max(0, viewer_time.viewer_time - self._adRequests[0].viewer_time);
           }
           if (pm.data.view_start) {
             const _Math2 = Math;
-            tmp5.data.view_startup_preroll_request_time = Math.max(0, viewer_time.viewer_time - tmp5.data.view_start);
+            pm.data.view_startup_preroll_request_time = Math.max(0, viewer_time.viewer_time - pm.data.view_start);
           }
-          obj._prerollPlayTime = viewer_time.viewer_time;
+          self._prerollPlayTime = viewer_time.viewer_time;
         }
       });
       pm.on("adplaying", (arg0, viewer_time) => {
@@ -6960,11 +6956,11 @@ const fn13 = function r(pm) {
           inPrerollPositionResult = undefined === pm.data.view_preroll_load_time;
         }
         if (inPrerollPositionResult) {
-          inPrerollPositionResult = undefined !== tmp._prerollPlayTime;
+          inPrerollPositionResult = undefined !== self._prerollPlayTime;
         }
         if (inPrerollPositionResult) {
-          pm.data.view_preroll_load_time = viewer_time.viewer_time - tmp._prerollPlayTime;
-          pm.data.view_startup_preroll_load_time = viewer_time.viewer_time - tmp._prerollPlayTime;
+          pm.data.view_preroll_load_time = viewer_time.viewer_time - self._prerollPlayTime;
+          pm.data.view_startup_preroll_load_time = viewer_time.viewer_time - self._prerollPlayTime;
         }
       });
       pm.on("adclicked", (arg0, arg1) => {
@@ -6995,12 +6991,12 @@ const fn13 = function r(pm) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (f98876[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = f98876[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, f98876);
 };
 const entry7 = {
   key: "inPrerollPosition",
@@ -7326,6 +7322,7 @@ const items9 = [
         }
         self.pm.data.ad_type = ad_type;
       }
+      tmp30 = null != ad_tag_url && ad_tag_url.ad_type;
     }
   }
 ];
@@ -7334,9 +7331,9 @@ const fn14 = function r(one) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn14[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn14[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("lastWallClockTime" in self) {
@@ -7381,12 +7378,12 @@ const fn14 = function r(one) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn14[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn14[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn14);
 };
 let closure_74 = G(obj2.exports);
 const fn15 = function e(arg0) {
@@ -7409,7 +7406,7 @@ const fn15 = function e(arg0) {
             tmp2 = json;
           }
           if (closure_0.write) {
-            let writeResult = obj5.write(tmp2, arg0);
+            let writeResult = closure_0.write(tmp2, arg0);
           } else {
             const _encodeURIComponent = encodeURIComponent;
             const _String = String;
@@ -7421,7 +7418,6 @@ const fn15 = function e(arg0) {
           const _String2 = String;
           const _decodeURIComponent4 = decodeURIComponent;
           obj4 = /^[\{\[]/;
-          obj5 = closure_0;
           const str9 = encodeURIComponent(String(arg0));
           const _escape = escape;
           items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
@@ -7477,9 +7473,9 @@ const fn15 = function e(arg0) {
             const _decodeURIComponent = decodeURIComponent;
             const replaced = parts1[0].replace(tmp4, decodeURIComponent);
             if (closure_0.read) {
-              let readResult = obj3.read(substr1, replaced);
+              let readResult = closure_0.read(substr1, replaced);
             } else {
-              readResult = obj3(substr1, replaced);
+              readResult = closure_0(substr1, replaced);
               if (!readResult) {
                 const _decodeURIComponent2 = decodeURIComponent;
                 readResult = substr1.replace(tmp4, decodeURIComponent);
@@ -7509,9 +7505,9 @@ const fn15 = function e(arg0) {
     }
   };
   withConverter.set = withConverter;
-  withConverter.get = (arg0) => {
+  withConverter.get = (D) => {
     const call = fn.call;
-    return typeof call === "unknown" ? fn(arg0) : call(fn, arg0);
+    return typeof call === "unknown" ? fn(D) : call(fn, D);
   };
   withConverter.getJSON = () => {
     const slice = [].slice;
@@ -7563,7 +7559,7 @@ const fn16 = function i(arg0, arg1, arg2) {
           tmp2 = json;
         }
         if (closure_0.write) {
-          let writeResult = obj5.write(tmp2, arg0);
+          let writeResult = closure_0.write(tmp2, arg0);
         } else {
           const _encodeURIComponent = encodeURIComponent;
           const _String = String;
@@ -7575,7 +7571,6 @@ const fn16 = function i(arg0, arg1, arg2) {
         const _String2 = String;
         const _decodeURIComponent4 = decodeURIComponent;
         obj4 = /^[\{\[]/;
-        obj5 = closure_0;
         const str9 = encodeURIComponent(String(arg0));
         const _escape = escape;
         items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
@@ -7631,9 +7626,9 @@ const fn16 = function i(arg0, arg1, arg2) {
           const _decodeURIComponent = decodeURIComponent;
           const replaced = parts1[0].replace(tmp4, decodeURIComponent);
           if (closure_0.read) {
-            let readResult = obj3.read(substr1, replaced);
+            let readResult = closure_0.read(substr1, replaced);
           } else {
-            readResult = obj3(substr1, replaced);
+            readResult = closure_0(substr1, replaced);
             if (!readResult) {
               const _decodeURIComponent2 = decodeURIComponent;
               readResult = substr1.replace(tmp4, decodeURIComponent);
@@ -7664,9 +7659,9 @@ const fn16 = function i(arg0, arg1, arg2) {
 };
 create = fn16;
 fn16.set = fn16;
-fn16.get = (arg0) => {
+fn16.get = (D) => {
   const call = fn.call;
-  return typeof call === "unknown" ? fn(arg0) : call(fn, arg0);
+  return typeof call === "unknown" ? fn(D) : call(fn, D);
 };
 fn16.getJSON = () => {
   const slice = [].slice;
@@ -7983,7 +7978,6 @@ function sr() {
 }
 or.getConnectionFromAPI = sr;
 const point = { a: "env", b: "beacon", c: "custom", d: "ad", e: "event", f: "experiment", i: "internal", m: "mux", n: "response", p: "player", q: "request", r: "retry", s: "session", t: "timestamp", u: "viewer", v: "video", w: "page", x: "view", y: "sub" };
-let obj4 = {};
 for (const key10232 in point) {
   if (!point.hasOwnProperty(key10232)) {
     continue;
@@ -7994,7 +7988,6 @@ for (const key10232 in point) {
   continue;
 }
 let obj5 = { ad: "ad", af: "affiliate", ag: "aggregate", ap: "api", al: "application", ao: "audio", ar: "architecture", as: "asset", au: "autoplay", av: "average", bi: "bitrate", bn: "brand", br: "break", bw: "browser", by: "bytes", bz: "business", ca: "cached", cb: "cancel", cc: "codec", cd: "code", cg: "category", ch: "changed", ci: "client", ck: "clicked", cl: "canceled", cm: "cmcd", cn: "config", co: "count", ce: "counter", cp: "complete", cq: "creator", cr: "creative", cs: "captions", ct: "content", cu: "current", cv: "cumulative", cx: "connection", cz: "context", da: "data", dg: "downscaling", dm: "domain", dn: "cdn", do: "downscale", dr: "drm", dp: "dropped", du: "duration", dv: "device", dy: "dynamic", eb: "enabled", ec: "encoding", ed: "edge", en: "end", eg: "engine", em: "embed", er: "error", ep: "experiments", es: "errorcode", et: "errortext", ee: "event", ev: "events", ex: "expires", ez: "exception", fa: "failed", fi: "first", fm: "family", ft: "format", fp: "fps", fq: "frequency", fr: "frame", fs: "fullscreen", ha: "has", hb: "holdback", he: "headers", ho: "host", hn: "hostname", ht: "height", id: "id", ii: "init", in: "instance", ip: "ip", is: "is", ke: "key", la: "language", lb: "labeled", le: "level", li: "live", ld: "loaded", lo: "load", ls: "lists", lt: "latency", ma: "max", md: "media", me: "message", mf: "manifest", mi: "mime", ml: "midroll", mm: "min", mn: "manufacturer", mo: "model", mp: "mode", ms: "ms", mx: "mux", ne: "newest", nm: "name", no: "number", on: "on", or: "origin", os: "os", pa: "paused", pb: "playback", pd: "producer", pe: "percentage", pf: "played", pg: "program", ph: "playhead", pi: "plugin", pl: "preroll", pn: "playing", po: "poster", pp: "pip", pr: "preload", ps: "position", pt: "part", pv: "previous", py: "property", px: "pop", pz: "plan", ra: "rate", rd: "requested", re: "rebuffer", rf: "rendition", rg: "range", rm: "remote", ro: "ratio", rp: "response", rq: "request", rs: "requests", sa: "sample", sd: "skipped", se: "session", sh: "shift", sk: "seek", sm: "stream", so: "source", sq: "sequence", sr: "series", ss: "status", st: "start", su: "startup", sv: "server", sw: "software", sy: "severity", ta: "tag", tc: "tech", te: "text", tg: "target", th: "throughput", ti: "time", tl: "total", to: "to", tt: "title", ty: "type", ug: "upscaling", un: "universal", up: "upscale", ur: "url", us: "user", va: "variant", vd: "viewed", vi: "video", ve: "version", vw: "view", vr: "viewer", wd: "width", wa: "watch", wt: "waiting" };
-let obj6 = {};
 for (const key10238 in obj5) {
   if (!obj5.hasOwnProperty(key10238)) {
     continue;
@@ -8017,9 +8010,9 @@ const fn17 = (arg0, arg1) => {
       if (typeof document !== "undefined") {
         _document = document;
       } else {
-        _document = tmp["__GLOBAL_DOCUMENT_CACHE@4"];
+        _document = f98876["__GLOBAL_DOCUMENT_CACHE@4"];
         if (!_document) {
-          tmp["__GLOBAL_DOCUMENT_CACHE@4"] = _exports;
+          f98876["__GLOBAL_DOCUMENT_CACHE@4"] = _exports;
           _document = _exports;
         }
       }
@@ -8139,7 +8132,7 @@ class $ {
         closure_0 = item;
         c1 = false;
         if (obj.hasOwnProperty(item)) {
-          if (undefined !== tmp[item]) {
+          if (undefined !== obj[item]) {
             const parts = item.split("_");
             const first = parts[0];
             closure_2 = tmp12;
@@ -8165,9 +8158,9 @@ class $ {
               }
             });
             if (c1) {
-              obj2[closure_2] = tmp[item];
+              obj2[closure_2] = obj[item];
             } else {
-              obj1[closure_2] = tmp[item];
+              obj1[closure_2] = obj[item];
             }
             const spliceResult = parts.splice(1);
           }
@@ -8204,13 +8197,13 @@ class $ {
       num2 = 0;
       tmp5 = Mr(self._beaconUrl, _createPayloadResult, false, (arg0, arg1) => {
         if (arg1) {
-          tmp._eventQueue = substr.concat(tmp._eventQueue);
-          tmp._failureCount = tmp._failureCount + 1;
+          self._eventQueue = substr.concat(self._eventQueue);
+          self._failureCount = self._failureCount + 1;
           logger.info(`Error sending beacon: ${arg1}`);
-          let obj = tmp;
+          let obj = self;
         } else {
-          tmp._failureCount = 0;
-          obj = tmp;
+          self._failureCount = 0;
+          obj = self;
         }
         obj._roundTripTime = obj3.now() - closure_2;
         obj._postInFlight = false;
@@ -8248,7 +8241,7 @@ class $ {
       _default2 = tmp.default;
       self._sendTimeout = _default2.setTimeout(() => {
         if (self._eventQueue.length) {
-          obj._sendBeaconQueue();
+          self._sendBeaconQueue();
         }
         self._startBeaconSending();
       }, self._getNextBeaconTime());
@@ -8380,9 +8373,9 @@ const fn18 = function r(mux, envKey) {
     const _Symbol = Symbol;
     if (typeof Symbol !== "undefined") {
       const _Symbol5 = Symbol;
-      if (tmp2[Symbol.hasInstance]) {
+      if (f98876[Symbol.hasInstance]) {
         const _Symbol4 = Symbol;
-        let tmp5 = tmp2[Symbol.hasInstance](self);
+        let tmp5 = f98876[Symbol.hasInstance](self);
       }
       if (tmp5) {
         if ("mux" in self) {
@@ -8605,8 +8598,8 @@ const fn18 = function r(mux, envKey) {
             obj.viewer_connection_type = str18;
             let href;
             if (null !== closure_2_74.default) {
-              if (undefined !== tmp43.default) {
-                const _location = tmp43.default.location;
+              if (undefined !== closure_2_74.default) {
+                const _location = closure_2_74.default.location;
                 if (null !== _location) {
                   if (undefined !== _location) {
                     href = _location.href;
@@ -8651,12 +8644,12 @@ const fn18 = function r(mux, envKey) {
     const _Symbol2 = Symbol;
     if (typeof Symbol !== "undefined") {
       const _Symbol6 = Symbol;
-      if (tmp2[Symbol.hasInstance]) {
+      if (f98876[Symbol.hasInstance]) {
         const _Symbol3 = Symbol;
-        tmp5 = tmp2[Symbol.hasInstance](self);
+        tmp5 = f98876[Symbol.hasInstance](self);
       }
     }
-    tmp5 = U(self, tmp2);
+    tmp5 = U(self, f98876);
   }
 };
 const entry8 = {
@@ -8669,8 +8662,8 @@ const entry8 = {
           if (this.respectDoNotTrack) {
             let doNotTrack = closure_39.default.doNotTrack;
             if (!doNotTrack) {
-              doNotTrack = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
-              const tmp7 = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
+              doNotTrack = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
+              const tmp7 = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
             }
             if ("1" === doNotTrack) {
               return logger.info("Not sending `" + event + "` because Do Not Track is enabled");
@@ -8748,14 +8741,13 @@ const entry8 = {
               const result = self._deduplicateBeaconData(event, obj);
               obj = result;
               obj1 = {};
-              const obj2 = {};
               const _Object7 = Object;
               const keys1 = Object.keys(result);
               const item1 = keys1.forEach((item) => {
                 closure_0 = item;
                 c1 = false;
                 if (obj.hasOwnProperty(item)) {
-                  if (undefined !== tmp[item]) {
+                  if (undefined !== obj[item]) {
                     const parts = item.split("_");
                     const first = parts[0];
                     closure_2 = tmp12;
@@ -8781,16 +8773,16 @@ const entry8 = {
                       }
                     });
                     if (c1) {
-                      obj2[closure_2] = tmp[item];
+                      obj2[closure_2] = obj[item];
                     } else {
-                      obj1[closure_2] = tmp[item];
+                      obj1[closure_2] = obj[item];
                     }
                     const spliceResult = parts.splice(1);
                   }
                 }
               });
               const _Object8 = Object;
-              const merged = Object.assign(obj1, obj2);
+              const merged = Object.assign(obj1, {});
               const utils = self.mux.utils;
               self.lastEventTime = utils.now();
               if (tmp26) {
@@ -8827,7 +8819,7 @@ const entry8 = {
                         closure_0 = item;
                         c1 = false;
                         if (obj.hasOwnProperty(item)) {
-                          if (undefined !== tmp[item]) {
+                          if (undefined !== obj[item]) {
                             const parts = item.split("_");
                             const first = parts[0];
                             closure_2 = tmp12;
@@ -8853,9 +8845,9 @@ const entry8 = {
                               }
                             });
                             if (c1) {
-                              obj2[closure_2] = tmp[item];
+                              obj2[closure_2] = obj[item];
                             } else {
-                              obj1[closure_2] = tmp[item];
+                              obj1[closure_2] = obj[item];
                             }
                             const spliceResult = parts.splice(1);
                           }
@@ -8864,16 +8856,16 @@ const entry8 = {
                       const _Object10 = Object;
                       const eventQueue4 = self.eventQueue;
                       eventQueue4.queueEvent(obj.event, Object.assign(obj3, obj4));
-                      return obj6.error("Beaconing disabled due to rate limit.");
+                      return logger.error("Beaconing disabled due to rate limit.");
                     }
                   }
                   if (closure_93.indexOf(event) >= 0) {
                     const eventQueue2 = self.eventQueue;
                     eventQueue2.flushEvents();
                   }
-                  obj6 = logger;
                 }
               }
+              const obj2 = {};
               tmp26 = num4 >= self.sampleRate;
             }
           }
@@ -9014,21 +9006,21 @@ const items10 = [
                     [tmp7, tmp8] = tmp;
                     previousBeaconData = self.previousBeaconData;
                     if (previousBeaconData) {
-                      let eventRequiresKeyResult = tmp8 !== obj.previousBeaconData[tmp7];
+                      let eventRequiresKeyResult = tmp8 !== self.previousBeaconData[tmp7];
                       if (!eventRequiresKeyResult) {
                         eventRequiresKeyResult = closure_90.indexOf(tmp7) > -1;
                       }
                       if (!eventRequiresKeyResult) {
-                        eventRequiresKeyResult = obj.objectHasChanged(closure_3, tmp7, tmp8, obj.previousBeaconData[tmp7]);
+                        eventRequiresKeyResult = self.objectHasChanged(closure_3, tmp7, tmp8, self.previousBeaconData[tmp7]);
                       }
                       if (!eventRequiresKeyResult) {
-                        eventRequiresKeyResult = obj.eventRequiresKey(closure_0, tmp7);
+                        eventRequiresKeyResult = self.eventRequiresKey(closure_0, tmp7);
                       }
                       previousBeaconData = eventRequiresKeyResult;
                     }
                     if (previousBeaconData) {
-                      obj[tmp7] = tmp8;
-                      obj.previousBeaconData[tmp7] = tmp8;
+                      self[tmp7] = tmp8;
+                      self.previousBeaconData[tmp7] = tmp8;
                     }
                   } else {
                     const _TypeError = TypeError;
@@ -9107,9 +9099,9 @@ const fn19 = function r(on) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn19[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn19[Symbol.hasInstance](self);
     }
     if (tmp2) {
       closure_1 = 0;
@@ -9160,12 +9152,12 @@ const fn19 = function r(on) {
               on.data.view_request_count = view_request_count;
               if (tmp2 > 0) {
                 closure_1 = closure_1 + tmp2;
-                let num6 = tmp14.data.view_max_request_latency;
+                let num6 = on.data.view_max_request_latency;
                 if (!num6) {
                   num6 = 0;
                 }
-                tmp14.data.view_max_request_latency = Math.max(num6, tmp2);
-                tmp14.data.view_average_request_latency = closure_1 / closure_5;
+                on.data.view_max_request_latency = Math.max(num6, tmp2);
+                on.data.view_average_request_latency = closure_1 / closure_5;
               }
             }
           }
@@ -9191,20 +9183,20 @@ const fn19 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn19[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn19[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn19);
 };
 const fn20 = function r(on) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn20[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn20[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_lastEventTime" in self) {
@@ -9215,7 +9207,7 @@ const fn20 = function r(on) {
       }
       on.on("before*", (type, viewer_time) => {
         viewer_time = viewer_time.viewer_time;
-        const nowResult = obj3.now();
+        const nowResult = on.now();
         const _lastEventTime = self._lastEventTime;
         self._lastEventTime = nowResult;
         if (_lastEventTime) {
@@ -9253,10 +9245,10 @@ const fn20 = function r(on) {
             }
             if (_playheadShouldBeProgressing) {
               obj = { viewer_time };
-              obj3.emit("play", obj);
+              on.emit("play", obj);
               if ("playing" !== type.type) {
                 obj = { viewer_time };
-                obj3.emit("playing", obj);
+                on.emit("playing", obj);
               }
             }
           }
@@ -9270,20 +9262,20 @@ const fn20 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn20[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn20[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn20);
 };
 const fn21 = function r(on) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn21[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn21[Symbol.hasInstance](self);
     }
     if (tmp2) {
       function t(arg0) {
@@ -9397,20 +9389,20 @@ const fn21 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn21[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn21[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn21);
 };
 const fn22 = function r(on) {
   const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn22[Symbol.hasInstance]) {
       const _Symbol2 = Symbol;
-      let tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp2 = fn22[Symbol.hasInstance](self);
     }
     if (tmp2) {
       if ("_emittingAutomaticEvent" in self) {
@@ -9427,10 +9419,10 @@ const fn22 = function r(on) {
       }
       on.on("viewstart", () => {
         if (!self._hasInitialized) {
-          tmp._hasInitialized = true;
-          tmp._emittingAutomaticEvent = true;
+          self._hasInitialized = true;
+          self._emittingAutomaticEvent = true;
           on.emit("playbackmodechange", { player_playback_mode: "standard", player_playback_mode_data: "{}" });
-          tmp._emittingAutomaticEvent = false;
+          self._emittingAutomaticEvent = false;
         }
       });
       on.on("viewend", () => {
@@ -9468,15 +9460,15 @@ const fn22 = function r(on) {
   }
   if (typeof Symbol !== "undefined") {
     const _Symbol4 = Symbol;
-    if (tmp[Symbol.hasInstance]) {
+    if (fn22[Symbol.hasInstance]) {
       const _Symbol = Symbol;
-      tmp2 = tmp[Symbol.hasInstance](self);
+      tmp2 = fn22[Symbol.hasInstance](self);
     }
   }
-  tmp2 = U(self, tmp);
+  tmp2 = U(self, fn22);
 };
 let closure_99 = ["viewstart", "ended", "loadstart", "pause", "play", "playing", "ratechange", "waiting", "adplay", "adpause", "adended", "aderror", "adplaying", "adrequest", "adresponse", "adbreakstart", "adbreakend", "adfirstquartile", "admidpoint", "adthirdquartile", "rebufferstart", "rebufferend", "seeked", "error", "hb", "requestcompleted", "requestfailed", "requestcanceled", "renditionchange", "cdnchange", "playbackmodechange"];
-const set = new Set(["requestcompleted", "requestfailed", "requestcanceled"]);
+new Set(["requestcompleted", "requestfailed", "requestcanceled"]);
 f98876 = undefined;
 class t {
   constructor(arg0, arg1, arg2) {
@@ -10786,13 +10778,13 @@ const items11 = [
       const items1 = ["player_source_url", "video_source_url"];
       const item1 = items1.forEach((item) => {
         if (self.data[item]) {
-          const formatted = tmp.data[item].toLowerCase();
+          const formatted = self.data[item].toLowerCase();
           let tmp2 = 0 === formatted.indexOf("data:");
           if (!tmp2) {
             tmp2 = 0 === formatted.indexOf("blob:");
           }
           if (tmp2) {
-            tmp.data[item] = "MSE style URL";
+            self.data[item] = "MSE style URL";
           }
         }
       });
@@ -11130,13 +11122,13 @@ const items11 = [
                                 }
                               }
                               obj.request_response_headers = tmp31;
-                              obj.video_holdback = details.holdBack && tmp22(details.holdBack);
-                              const tmp33 = details.holdBack && tmp22(details.holdBack);
-                              obj.video_part_holdback = details.partHoldBack && tmp22(details.partHoldBack);
-                              const tmp34 = details.partHoldBack && tmp22(details.partHoldBack);
-                              obj.video_part_target_duration = details.partTarget && tmp22(details.partTarget);
-                              const tmp35 = details.partTarget && tmp22(details.partTarget);
-                              obj.video_target_duration = details.targetduration && tmp22(details.targetduration);
+                              obj.video_holdback = details.holdBack && secondsToMs(details.holdBack);
+                              const tmp33 = details.holdBack && secondsToMs(details.holdBack);
+                              obj.video_part_holdback = details.partHoldBack && secondsToMs(details.partHoldBack);
+                              const tmp34 = details.partHoldBack && secondsToMs(details.partHoldBack);
+                              obj.video_part_target_duration = details.partTarget && secondsToMs(details.partTarget);
+                              const tmp35 = details.partTarget && secondsToMs(details.partTarget);
+                              obj.video_target_duration = details.targetduration && secondsToMs(details.targetduration);
                               obj.video_source_is_live = details.live;
                               const _isNaN = isNaN;
                               let tmp37;
@@ -11149,7 +11141,7 @@ const items11 = [
                               } else {
                                 throw new TypeError("Trying to call a non-function");
                               }
-                              const tmp36 = details.targetduration && tmp22(details.targetduration);
+                              const tmp36 = details.targetduration && secondsToMs(details.targetduration);
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
@@ -11501,18 +11493,18 @@ const items11 = [
                         }
                         obj.request_id = tmp13;
                         let str6 = "media";
-                        if (details !== tmp5.ErrorDetails.FRAG_LOAD_ERROR) {
+                        if (details !== closure_3.ErrorDetails.FRAG_LOAD_ERROR) {
                           str6 = "media";
-                          if (details !== tmp5.ErrorDetails.FRAG_LOAD_TIMEOUT) {
+                          if (details !== closure_3.ErrorDetails.FRAG_LOAD_TIMEOUT) {
                             let str7 = "audio";
-                            if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_ERROR) {
+                            if (details !== closure_3.ErrorDetails.AUDIO_TRACK_LOAD_ERROR) {
                               str7 = "audio";
-                              if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT) {
+                              if (details !== closure_3.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT) {
                                 let str9 = "subtitle";
-                                if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_ERROR) {
+                                if (details !== closure_3.ErrorDetails.SUBTITLE_LOAD_ERROR) {
                                   str9 = "subtitle";
-                                  if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_TIMEOUT) {
-                                    if (details === tmp5.ErrorDetails.KEY_LOAD_ERROR) {
+                                  if (details !== closure_3.ErrorDetails.SUBTITLE_LOAD_TIMEOUT) {
+                                    if (details === closure_3.ErrorDetails.KEY_LOAD_ERROR) {
                                       let str10 = "encryption";
                                     } else {
                                       str10 = "manifest";
@@ -11622,6 +11614,7 @@ const items11 = [
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
+                tmp6 = details === closure_3.ErrorDetails.MANIFEST_LOAD_ERROR || details === closure_3.ErrorDetails.MANIFEST_LOAD_TIMEOUT || details === closure_3.ErrorDetails.FRAG_LOAD_ERROR || details === closure_3.ErrorDetails.FRAG_LOAD_TIMEOUT || details === closure_3.ErrorDetails.LEVEL_LOAD_ERROR || details === closure_3.ErrorDetails.LEVEL_LOAD_TIMEOUT || details === closure_3.ErrorDetails.AUDIO_TRACK_LOAD_ERROR || details === closure_3.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT || details === closure_3.ErrorDetails.SUBTITLE_LOAD_ERROR || details === closure_3.ErrorDetails.SUBTITLE_LOAD_TIMEOUT || details === closure_3.ErrorDetails.KEY_LOAD_ERROR || details === closure_3.ErrorDetails.KEY_LOAD_TIMEOUT;
               };
               hlsjs.on(tmp.Events.ERROR, fn6);
               fn7 = function w(request_event_type, frag) {
@@ -11682,12 +11675,11 @@ const items11 = [
                           videoCodec = tmp.videoCodec;
                         }
                         obj.video_source_codec = videoCodec;
-                        if (typeof tmp7 === "function") {
+                        if (typeof u === "function") {
                           mux.emit(closure_1, "renditionchange", obj);
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
-                        tmp7 = u;
                       } else {
                         log.warn("missing BANDWIDTH from HLS manifest parsed by HLS.js");
                       }
@@ -11925,7 +11917,7 @@ const items11 = [
                     }
                   });
                 }
-                const video = { video: "Array", audio: "call", totalBitrate: "o" };
+                closure_10 = { video: "Array", audio: "call", totalBitrate: "o" };
                 fn4 = function x(newQuality, arg1, arg2) {
                   let obj = newQuality;
                   if (typeof newQuality.newQuality === "number") {
@@ -11960,20 +11952,20 @@ const items11 = [
                               Object.defineProperty(obj2, item, Object.getOwnPropertyDescriptor(obj3, item));
                             });
                           }
-                          video[mediaType] = obj;
+                          closure_10[mediaType] = obj;
                           let tmp6;
-                          if (video.video) {
-                            if (typeof tmp22.video.bitrate === "number") {
-                              if (tmp22.video.width) {
-                                if (tmp22.video.height) {
-                                  const bitrate = tmp22.video.bitrate;
+                          if (closure_10.video) {
+                            if (typeof closure_10.video.bitrate === "number") {
+                              if (closure_10.video.width) {
+                                if (closure_10.video.height) {
+                                  const bitrate = closure_10.video.bitrate;
                                   let sum = bitrate;
                                   if (tmp9) {
-                                    sum = bitrate + tmp22.audio.bitrate;
+                                    sum = bitrate + closure_10.audio.bitrate;
                                   }
-                                  if (sum !== tmp22.totalBitrate) {
-                                    tmp22.totalBitrate = sum;
-                                    const obj1 = { video_source_bitrate: sum, video_source_height: tmp22.video.height, video_source_width: tmp22.video.width, video_source_codec: null };
+                                  if (sum !== closure_10.totalBitrate) {
+                                    closure_10.totalBitrate = sum;
+                                    const obj1 = { video_source_bitrate: sum, video_source_height: closure_10.video.height, video_source_width: closure_10.video.width, video_source_codec: null };
                                     if (typeof pa === "function") {
                                       const match = str7.match(/.*codecs\*?="(.*)"/);
                                       let tmp13;
@@ -11987,9 +11979,9 @@ const items11 = [
                                     } else {
                                       throw new TypeError("Trying to call a non-function");
                                     }
-                                    str7 = tmp22.video.codec;
+                                    str7 = closure_10.video.codec;
                                   }
-                                  tmp9 = tmp22.audio && typeof tmp22.audio.bitrate === "number";
+                                  tmp9 = closure_10.audio && typeof closure_10.audio.bitrate === "number";
                                 }
                               }
                               log2.warn("have bitrate info for video but missing width/height");
@@ -12132,12 +12124,11 @@ const items11 = [
                     }
                     obj.player_error_message = message;
                     obj.player_error_context = sum;
-                    if (typeof tmp14 === "function") {
+                    if (typeof o === "function") {
                       mux.emit(closure_1, "error", obj);
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
-                    tmp14 = o;
                   }
                   let status;
                   if (null != response) {
@@ -12350,6 +12341,7 @@ class Ve {
                                   obj.VALUE = parts[1 - num];
                                 }
                               }
+                              const str = item.replace(/['"]+/g, "");
                             });
                             obj = { data: null };
                             obj.data = obj;
@@ -12776,8 +12768,8 @@ let merged = Object.assign(ne, {
                         const obj = { player_is_paused: defineProperty.paused, player_width: parseInt(getComputedStyle(defineProperty, "width")), player_height: parseInt(getComputedStyle(defineProperty, "height")), player_autoplay_on: defineProperty.autoplay, player_preload_on: defineProperty.preload, player_language_code: defineProperty.lang, player_is_fullscreen: null, video_poster_url: null, video_source_url: null, video_source_duration: null, video_source_height: null, video_source_width: null, view_dropped_frame_count: null };
                         let _default = closure_102.default;
                         if (_default) {
-                          _default = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
-                          const tmp7 = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
+                          _default = closure_102.default.fullscreenElement || closure_102.default.webkitFullscreenElement || closure_102.default.mozFullScreenElement || closure_102.default.msFullscreenElement;
+                          const tmp7 = closure_102.default.fullscreenElement || closure_102.default.webkitFullscreenElement || closure_102.default.mozFullScreenElement || closure_102.default.msFullscreenElement;
                         }
                         obj.player_is_fullscreen = _default;
                         obj.video_poster_url = defineProperty.poster;
@@ -13010,6 +13002,7 @@ let merged = Object.assign(ne, {
                       log = first.log;
                       return log.error("No element was found with the `" + `The element of \`${tmp18}` + "` query selector.");
                     }
+                    tmp19 = tmp11[2];
                   } else {
                     const _TypeError = TypeError;
                     const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -13274,14 +13267,16 @@ let merged = Object.assign(ne, {
   init(arg0, respectDoNotTrack) {
     let doNotTrack = closure_39.default.doNotTrack;
     if (!doNotTrack) {
-      doNotTrack = tmp.default.navigator && tmp.default.navigator.doNotTrack;
-      const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
+      doNotTrack = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
+      const tmp2 = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
     }
     if (tmp3) {
       logger.info("The browser's Do Not Track flag is enabled - Mux beaconing is disabled.");
     }
     const tmp6 = J(arg0);
     closure_122[tmp6] = t(ne, tmp6, respectDoNotTrack);
+    tmp3 = "1" === doNotTrack && respectDoNotTrack && respectDoNotTrack.respectDoNotTrack;
+    const tmp7 = t(ne, tmp6, respectDoNotTrack);
   },
   emit(arg0, arg1, arg2) {
     const tmp3 = J(arg0);
@@ -13329,8 +13324,8 @@ let merged = Object.assign(ne, {
   checkDoNotTrack: function ce() {
     let doNotTrack = closure_39.default.doNotTrack;
     if (!doNotTrack) {
-      doNotTrack = tmp.default.navigator && tmp.default.navigator.doNotTrack;
-      const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
+      doNotTrack = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
+      const tmp2 = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
     }
     return "1" === doNotTrack;
   },
@@ -13364,23 +13359,23 @@ let merged = Object.assign(ne, {
           str = "";
           if (GResult1.default) {
             str = "";
-            if (typeof tmp2.default.getComputedStyle === "function") {
+            if (typeof GResult1.default.getComputedStyle === "function") {
               let hasItem = weakMap;
               if (weakMap) {
-                hasItem = obj.has(arg0);
+                hasItem = weakMap.has(arg0);
               }
               value = undefined;
               if (hasItem) {
-                value = obj.get(arg0);
+                value = weakMap.get(arg0);
               }
               if (!value) {
-                const computedStyle = tmp2.default.getComputedStyle(arg0, null);
+                const computedStyle = GResult1.default.getComputedStyle(arg0, null);
                 value = computedStyle;
-                if (obj) {
-                  const result = obj.set(arg0, computedStyle);
+                if (weakMap) {
+                  const result = weakMap.set(arg0, computedStyle);
                   value = computedStyle;
                 }
-                const _default = tmp2.default;
+                const _default = GResult1.default;
               }
               str = value.getPropertyValue(arg1);
             }
@@ -13451,5 +13446,954 @@ if (tmp34) {
   }, false);
   let _default = GResult.default;
 }
+const obj10 = {
+  loaded: obj3.now(),
+  NAME: "mux-embed",
+  VERSION: "5.13.0",
+  API_VERSION: "2.1",
+  PLAYER_TRACKED: false,
+  monitor(videoElement, arg1) {
+    let obj = ne;
+    closure_0 = ne;
+    let merged = arg1;
+    if (typeof se === "function") {
+      if (videoElement) {
+        if (undefined !== videoElement.nodeName) {
+          let tmp6 = J(videoElement);
+          let element = videoElement;
+        }
+        let str2 = "";
+        if (element) {
+          str2 = "";
+          if (element.nodeName) {
+            str2 = element.nodeName.toLowerCase();
+          }
+        }
+        items = [element, tmp6, str2];
+        let _Array = Array;
+        let tmp9;
+        if (Array.isArray(items)) {
+          tmp9 = items;
+        }
+        if (!tmp9) {
+          tmp9 = (function vt(items, arg1) {
+            let tmp6 = null;
+            if (null != items) {
+              const _Symbol = Symbol;
+              let prop = typeof Symbol !== "undefined";
+              if (typeof Symbol !== "undefined") {
+                const _Symbol2 = Symbol;
+                prop = items[Symbol.iterator];
+              }
+              if (!prop) {
+                prop = items[Symbol.iterator];
+              }
+              tmp6 = prop;
+            }
+            if (null != tmp6) {
+              let flag2 = false;
+              try {
+                items = [];
+                try {
+                  const call = tmp9.call;
+                  if (typeof call === "unknown") {
+                    let iter = tmp9();
+                  } else {
+                    iter = call(items);
+                  }
+                  const iter3 = iter.next();
+                  const done = iter3.done;
+                  let tmp11 = done;
+                  if (!done) {
+                    items.push(iter4.value);
+                    if (!arg1) {
+                      const iter5 = iter2.next();
+                      const done2 = iter5.done;
+                      tmp11 = done2;
+                      while (!done2) {
+                        let arr = items.push(iter6.value);
+                        if (!arg1) {
+                          continue;
+                        } else if (items.length === arg1) {
+                          break;
+                        }
+                        continue;
+                      }
+                    }
+                  }
+                  try {
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
+                    }
+                    if (tmp19) {
+                      iter2.return();
+                    }
+                    if (flag2) {
+                      throw tmp5;
+                    } else {
+                      return items;
+                    }
+                  } catch (tmp25) {
+                    if (tmp2) {
+                      throw tmp;
+                    } else {
+                      throw tmp25;
+                    }
+                  }
+                } catch (tmp5) {
+                  flag2 = true;
+                }
+              } catch (tmp28) {
+                try {
+                  let tmp30 = !tmp3;
+                  if (!tmp3) {
+                    tmp30 = tmp4 != obj.return;
+                  }
+                  if (tmp30) {
+                    obj.return();
+                  }
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp28;
+                  }
+                } catch (tmp36) {
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp36;
+                  }
+                }
+              }
+            }
+          })(items, 3);
+        }
+        if (!tmp9) {
+          tmp9 = Pe(items, 3);
+        }
+        if (tmp9) {
+          [defineProperty, tmp15] = tmp9;
+          getOwnPropertyDescriptor = tmp15;
+          let log = obj.log;
+          const getComputedStyle = obj.utils.getComputedStyle;
+          const secondsToMs = obj.utils.secondsToMs;
+          if (defineProperty) {
+            if ("video" !== tmp16) {
+              if ("audio" !== tmp16) {
+                let errorResult = log.error(`The element of \`${tmp15}\` was not a media element.`);
+              }
+            }
+            if (tmp17.mux) {
+              let mux = defineProperty.mux;
+              mux.destroy();
+              delete tmp2[tmp];
+              log.warn("Already monitoring this video element, replacing existing event listeners");
+            }
+            obj = {
+              getPlayheadTime() {
+                        return secondsToMs(defineProperty.currentTime);
+                      },
+              getStateData() {
+                        const self = this;
+                        const getPlayheadTime = this.getPlayheadTime;
+                        let tmp;
+                        if (null !== getPlayheadTime) {
+                          if (undefined !== getPlayheadTime) {
+                            const call = getPlayheadTime.call;
+                            typeof call === "unknown" ? getPlayheadTime() : call(self);
+                          }
+                        }
+                        if (!tmp) {
+                          tmp = secondsToMs(defineProperty.currentTime);
+                        }
+                        let currentSrc = self.hlsjs && self.hlsjs.url;
+                        let source = self.dashjs && typeof self.dashjs.getSource === "function";
+                        if (source) {
+                          const dashjs = self.dashjs;
+                          source = dashjs.getSource();
+                        }
+                        const obj = { player_is_paused: defineProperty.paused, player_width: parseInt(getComputedStyle(defineProperty, "width")), player_height: parseInt(getComputedStyle(defineProperty, "height")), player_autoplay_on: defineProperty.autoplay, player_preload_on: defineProperty.preload, player_language_code: defineProperty.lang, player_is_fullscreen: null, video_poster_url: null, video_source_url: null, video_source_duration: null, video_source_height: null, video_source_width: null, view_dropped_frame_count: null };
+                        let _default = closure_102.default;
+                        if (_default) {
+                          _default = closure_102.default.fullscreenElement || closure_102.default.webkitFullscreenElement || closure_102.default.mozFullScreenElement || closure_102.default.msFullscreenElement;
+                          const tmp7 = closure_102.default.fullscreenElement || closure_102.default.webkitFullscreenElement || closure_102.default.mozFullScreenElement || closure_102.default.msFullscreenElement;
+                        }
+                        obj.player_is_fullscreen = _default;
+                        obj.video_poster_url = defineProperty.poster;
+                        if (!currentSrc) {
+                          currentSrc = source;
+                        }
+                        if (!currentSrc) {
+                          currentSrc = defineProperty.currentSrc;
+                        }
+                        obj.video_source_url = currentSrc;
+                        obj.video_source_duration = secondsToMs(defineProperty.duration);
+                        obj.video_source_height = defineProperty.videoHeight;
+                        obj.video_source_width = defineProperty.videoWidth;
+                        if (null != defineProperty) {
+                          const getVideoPlaybackQuality = defineProperty.getVideoPlaybackQuality;
+                          if (null !== getVideoPlaybackQuality) {
+                            if (undefined !== getVideoPlaybackQuality) {
+                              const call2 = getVideoPlaybackQuality.call;
+                              const droppedVideoFrames = typeof call2 === "unknown" ? getVideoPlaybackQuality() : call2(defineProperty).droppedVideoFrames;
+                            }
+                          }
+                        }
+                        obj.view_dropped_frame_count = undefined;
+                        if (defineProperty.getStartDate) {
+                          if (tmp > 0) {
+                            const startDate = defineProperty.getStartDate();
+                            if (startDate) {
+                              if (typeof startDate.getTime === "function") {
+                                if (startDate.getTime()) {
+                                  const time = startDate.getTime();
+                                  obj.player_program_time = time + tmp;
+                                  if (defineProperty.seekable.length > 0) {
+                                    const seekable = defineProperty.seekable;
+                                    obj.player_live_edge_program_time = time + seekable.end(defineProperty.seekable.length - 1);
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                        return obj;
+                      }
+            };
+            let _Object = Object;
+            merged = Object.assign({ automaticErrorTracking: true }, arg1, obj);
+            let _Object2 = Object;
+            obj = { player_software: "HTML5 Video Element", player_mux_plugin_name: "VideoElementMonitor", player_mux_plugin_version: null };
+            obj.player_mux_plugin_version = obj.VERSION;
+            merged.data = Object.assign(obj, merged.data);
+            mux = defineProperty.mux;
+            if (!mux) {
+              mux = {};
+            }
+            defineProperty.mux = mux;
+            defineProperty.mux.deleted = false;
+            defineProperty.mux.emit = (arg0, arg1) => {
+              closure_0.emit(closure_3, arg0, arg1);
+            };
+            defineProperty.mux.updateData = (arg0) => {
+              const mux = defineProperty.mux;
+              mux.emit("hb", arg0);
+            };
+            function h() {
+              log.error("The monitor for this video element has already been destroyed.");
+            }
+            defineProperty.mux.destroy = () => {
+              const keys = Object.keys(defineProperty.mux.listeners);
+              const item = keys.forEach((item) => {
+                const removed = closure_1_2.removeEventListener(item, closure_1_2.mux.listeners[item], false);
+              });
+              delete tmp2[tmp];
+              defineProperty.mux.destroy = h;
+              defineProperty.mux.swapElement = h;
+              defineProperty.mux.emit = h;
+              defineProperty.mux.addHLSJS = h;
+              defineProperty.mux.addDashJS = h;
+              defineProperty.mux.removeHLSJS = h;
+              defineProperty.mux.removeDashJS = h;
+              defineProperty.mux.updateData = h;
+              defineProperty.mux.setEmitTranslator = h;
+              defineProperty.mux.setStateDataTranslator = h;
+              defineProperty.mux.setGetPlayheadTime = h;
+              defineProperty.mux.deleted = true;
+              closure_0.emit(closure_3, "destroy");
+            };
+            defineProperty.mux.swapElement = (nodeName) => {
+              if (typeof se === "function") {
+                if (nodeName) {
+                  if (undefined !== nodeName.nodeName) {
+                    let tmp8 = closure_1_30(nodeName);
+                    let element = nodeName;
+                  }
+                  let str2 = "";
+                  if (element) {
+                    str2 = "";
+                    if (element.nodeName) {
+                      str2 = element.nodeName.toLowerCase();
+                    }
+                  }
+                  items = [element, tmp8, str2];
+                  const _Array = Array;
+                  let tmp11;
+                  if (Array.isArray(items)) {
+                    tmp11 = items;
+                  }
+                  if (!tmp11) {
+                    tmp11 = (function vt(items, arg1) {
+                      let tmp6 = null;
+                      if (null != items) {
+                        const _Symbol = Symbol;
+                        let prop = typeof Symbol !== "undefined";
+                        if (typeof Symbol !== "undefined") {
+                          const _Symbol2 = Symbol;
+                          prop = items[Symbol.iterator];
+                        }
+                        if (!prop) {
+                          prop = items[Symbol.iterator];
+                        }
+                        tmp6 = prop;
+                      }
+                      if (null != tmp6) {
+                        let flag2 = false;
+                        try {
+                          items = [];
+                          try {
+                            const call = tmp9.call;
+                            if (typeof call === "unknown") {
+                              let iter = tmp9();
+                            } else {
+                              iter = call(items);
+                            }
+                            const iter3 = iter.next();
+                            const done = iter3.done;
+                            let tmp11 = done;
+                            if (!done) {
+                              items.push(iter4.value);
+                              if (!arg1) {
+                                const iter5 = iter2.next();
+                                const done2 = iter5.done;
+                                tmp11 = done2;
+                                while (!done2) {
+                                  let arr = items.push(iter6.value);
+                                  if (!arg1) {
+                                    continue;
+                                  } else if (items.length === arg1) {
+                                    break;
+                                  }
+                                  continue;
+                                }
+                              }
+                            }
+                            try {
+                              let tmp19 = !tmp11;
+                              if (!tmp11) {
+                                tmp19 = null != iter2.return;
+                              }
+                              if (tmp19) {
+                                iter2.return();
+                              }
+                              if (flag2) {
+                                throw tmp5;
+                              } else {
+                                return items;
+                              }
+                            } catch (tmp25) {
+                              if (tmp2) {
+                                throw tmp;
+                              } else {
+                                throw tmp25;
+                              }
+                            }
+                          } catch (tmp5) {
+                            flag2 = true;
+                          }
+                        } catch (tmp28) {
+                          try {
+                            let tmp30 = !tmp3;
+                            if (!tmp3) {
+                              tmp30 = tmp4 != obj.return;
+                            }
+                            if (tmp30) {
+                              obj.return();
+                            }
+                            if (tmp2) {
+                              throw tmp;
+                            } else {
+                              throw tmp28;
+                            }
+                          } catch (tmp36) {
+                            if (tmp2) {
+                              throw tmp;
+                            } else {
+                              throw tmp36;
+                            }
+                          }
+                        }
+                      }
+                    })(items, 3);
+                  }
+                  if (!tmp11) {
+                    tmp11 = Pe(items, 3);
+                  }
+                  if (tmp11) {
+                    const first = tmp11[0];
+                    let text = tmp11[1];
+                    if (first) {
+                      if ("video" === tmp19) {
+                        first.muxId = first.muxId;
+                        delete tmp4[tmp3];
+                        first.mux = first.mux || {};
+                        const _Object = Object;
+                        first.mux.listeners = Object.assign({}, first.mux.listeners);
+                        const mux = first.mux;
+                        delete tmp4[tmp3];
+                        const _Object2 = Object;
+                        const keys = Object.keys(first.mux.listeners);
+                        const item = keys.forEach((item) => {
+                          const removed = defineProperty.removeEventListener(item, first.mux.listeners[item], false);
+                          const listener = first.addEventListener(item, first.mux.listeners[item], false);
+                        });
+                        first.mux.swapElement = first.mux.swapElement;
+                        first.mux.destroy = first.mux.destroy;
+                        delete tmp2[tmp];
+                        let errorResult;
+                      }
+                      const log2 = first.log;
+                      text = `The element of \`${tmp18}`;
+                      errorResult = log2.error(`${`The element of \`${tmp18}`}\` was not a media element.`);
+                    } else {
+                      log = first.log;
+                      return log.error("No element was found with the `" + `The element of \`${tmp18}` + "` query selector.");
+                    }
+                    tmp19 = tmp11[2];
+                  } else {
+                    const _TypeError = TypeError;
+                    const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+                    throw typeError;
+                  }
+                }
+                const _document = document;
+                element = document.querySelector(nodeName);
+                tmp8 = nodeName;
+              } else {
+                throw new TypeError("Trying to call a non-function");
+              }
+            };
+            defineProperty.mux.addHLSJS = (merged) => {
+              closure_0.addHLSJS(closure_3, merged);
+            };
+            defineProperty.mux.addDashJS = (merged) => {
+              closure_0.addDashJS(closure_3, merged);
+            };
+            defineProperty.mux.removeHLSJS = () => {
+              closure_0.removeHLSJS(closure_3);
+            };
+            defineProperty.mux.removeDashJS = () => {
+              closure_0.removeDashJS(closure_3);
+            };
+            defineProperty.mux.setEmitTranslator = (emitTranslator) => {
+              closure_0.setEmitTranslator(closure_3, emitTranslator);
+            };
+            defineProperty.mux.setStateDataTranslator = (stateDataTranslator) => {
+              const result = closure_0.setStateDataTranslator(closure_3, stateDataTranslator);
+            };
+            defineProperty.mux.setGetPlayheadTime = (getPlayheadTime) => {
+              if (!getPlayheadTime) {
+                getPlayheadTime = merged.getPlayheadTime;
+              }
+              closure_0.setGetPlayheadTime(closure_3, getPlayheadTime);
+            };
+            obj.init(tmp15, merged);
+            obj.emit(tmp15, "playerready");
+            if (!defineProperty.paused) {
+              obj.emit(tmp15, "play");
+              if (defineProperty.readyState > 2) {
+                obj.emit(tmp15, "playing");
+              }
+            }
+            defineProperty.mux.listeners = {};
+            let item = closure_103.forEach((item) => {
+              let tmp = "error" === item;
+              if (tmp) {
+                tmp = !merged.automaticErrorTracking;
+              }
+              if (!tmp) {
+                closure_2.mux.listeners[item] = () => {
+                  const obj = {};
+                  if ("error" === item) {
+                    if (defineProperty.error) {
+                      if (1 !== defineProperty.error.code) {
+                        obj.player_error_code = defineProperty.error.code;
+                        let message = closure_104[defineProperty.error.code];
+                        if (!message) {
+                          message = defineProperty.error.message;
+                        }
+                        obj.player_error_message = message;
+                      }
+                    }
+                  }
+                  item.emit(closure_3, item, obj);
+                };
+                const listener = closure_2.addEventListener(item, closure_2.mux.listeners[item], false);
+              }
+            });
+          } else {
+            errorResult = log.error(`No element was found with the \`${tmp15}\` query selector.`);
+          }
+          return errorResult;
+        } else {
+          let _TypeError = TypeError;
+          let typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+          throw typeError;
+        }
+      }
+      let _document = document;
+      element = document.querySelector(videoElement);
+      tmp6 = videoElement;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  },
+  destroyMonitor(videoElement) {
+    if (typeof se === "function") {
+      if (videoElement) {
+        if (undefined !== videoElement.nodeName) {
+          let tmp4 = J(videoElement);
+          let element = videoElement;
+        }
+        let str2 = "";
+        if (element) {
+          str2 = "";
+          if (element.nodeName) {
+            str2 = element.nodeName.toLowerCase();
+          }
+        }
+        items = [element, tmp4, str2];
+        const _Array = Array;
+        let tmp7;
+        if (Array.isArray(items)) {
+          tmp7 = items;
+        }
+        if (!tmp7) {
+          tmp7 = (function vt(items, arg1) {
+            let tmp6 = null;
+            if (null != items) {
+              const _Symbol = Symbol;
+              let prop = typeof Symbol !== "undefined";
+              if (typeof Symbol !== "undefined") {
+                const _Symbol2 = Symbol;
+                prop = items[Symbol.iterator];
+              }
+              if (!prop) {
+                prop = items[Symbol.iterator];
+              }
+              tmp6 = prop;
+            }
+            if (null != tmp6) {
+              let flag2 = false;
+              try {
+                items = [];
+                try {
+                  const call = tmp9.call;
+                  if (typeof call === "unknown") {
+                    let iter = tmp9();
+                  } else {
+                    iter = call(items);
+                  }
+                  const iter3 = iter.next();
+                  const done = iter3.done;
+                  let tmp11 = done;
+                  if (!done) {
+                    items.push(iter4.value);
+                    if (!arg1) {
+                      const iter5 = iter2.next();
+                      const done2 = iter5.done;
+                      tmp11 = done2;
+                      while (!done2) {
+                        let arr = items.push(iter6.value);
+                        if (!arg1) {
+                          continue;
+                        } else if (items.length === arg1) {
+                          break;
+                        }
+                        continue;
+                      }
+                    }
+                  }
+                  try {
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
+                    }
+                    if (tmp19) {
+                      iter2.return();
+                    }
+                    if (flag2) {
+                      throw tmp5;
+                    } else {
+                      return items;
+                    }
+                  } catch (tmp25) {
+                    if (tmp2) {
+                      throw tmp;
+                    } else {
+                      throw tmp25;
+                    }
+                  }
+                } catch (tmp5) {
+                  flag2 = true;
+                }
+              } catch (tmp28) {
+                try {
+                  let tmp30 = !tmp3;
+                  if (!tmp3) {
+                    tmp30 = tmp4 != obj.return;
+                  }
+                  if (tmp30) {
+                    obj.return();
+                  }
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp28;
+                  }
+                } catch (tmp36) {
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp36;
+                  }
+                }
+              }
+            }
+          })(items, 1);
+        }
+        if (!tmp7) {
+          tmp7 = Pe(items, 1);
+        }
+        if (tmp7) {
+          const first = tmp7[0];
+          if (first) {
+            if (first.mux) {
+              if (typeof first.mux.destroy === "function") {
+                const mux = first.mux;
+                mux.destroy();
+              }
+            }
+          }
+          logger.error(`A video element monitor for \`${videoElement}\` has not been initialized via \`mux.monitor\`.`);
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+          throw typeError;
+        }
+      }
+      const _document = document;
+      element = document.querySelector(videoElement);
+      tmp4 = videoElement;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  },
+  addHLSJS(merged, merged) {
+    const tmp = J(merged);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].addHLSJS(merged);
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  addDashJS(merged, merged) {
+    const tmp = J(merged);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].addDashJS(merged);
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  removeHLSJS(arg0) {
+    const tmp = J(arg0);
+    if (dependencyMap[tmp]) {
+      dependencyMap[tmp].removeHLSJS();
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  removeDashJS(arg0) {
+    const tmp = J(arg0);
+    if (dependencyMap[tmp]) {
+      dependencyMap[tmp].removeDashJS();
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  init(arg0, respectDoNotTrack) {
+    let doNotTrack = closure_39.default.doNotTrack;
+    if (!doNotTrack) {
+      doNotTrack = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
+      const tmp2 = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
+    }
+    if (tmp3) {
+      logger.info("The browser's Do Not Track flag is enabled - Mux beaconing is disabled.");
+    }
+    const tmp6 = J(arg0);
+    closure_122[tmp6] = t(ne, tmp6, respectDoNotTrack);
+    tmp3 = "1" === doNotTrack && respectDoNotTrack && respectDoNotTrack.respectDoNotTrack;
+    const tmp7 = t(ne, tmp6, respectDoNotTrack);
+  },
+  emit(arg0, arg1, arg2) {
+    const tmp3 = J(arg0);
+    if (dependencyMap[tmp3]) {
+      tmp4[tmp3].emit(arg1, arg2);
+      if ("destroy" === arg1) {
+        delete tmp[tmp2];
+      }
+    } else {
+      logger.error(`A monitor for \`${tmp3}\` has not been initialized.`);
+    }
+  },
+  updateData(arg0, arg1) {
+    const tmp = J(arg0);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].emit("hb", arg1);
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  setEmitTranslator(arg0, emitTranslator) {
+    const tmp = J(arg0);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].emitTranslator = emitTranslator;
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  setStateDataTranslator(arg0, stateDataTranslator) {
+    const tmp = J(arg0);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].stateDataTranslator = stateDataTranslator;
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  setGetPlayheadTime(arg0, getPlayheadTime) {
+    const tmp = J(arg0);
+    if (dependencyMap[tmp]) {
+      tmp2[tmp].getPlayheadTime = getPlayheadTime;
+    } else {
+      logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
+    }
+  },
+  checkDoNotTrack: function ce() {
+    let doNotTrack = closure_39.default.doNotTrack;
+    if (!doNotTrack) {
+      doNotTrack = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
+      const tmp2 = closure_39.default.navigator && closure_39.default.navigator.doNotTrack;
+    }
+    return "1" === doNotTrack;
+  },
+  log: tmp11,
+  utils: {
+    safeCall: function ut(arg0, arg1, arg2, arg3) {
+      let applyResult = arg3;
+      if (arg0) {
+        if (typeof arg0[arg1] === "function") {
+          try {
+            applyResult = arg0[arg1].apply(arg0, arg2);
+          } catch (tmp4) {
+            logger.info("safeCall error", tmp4);
+          }
+        }
+      }
+      return applyResult;
+    },
+    safeIncrement: function P(arg0, arg1, arg2) {
+      let num = 1;
+      if (undefined !== arg2) {
+        num = arg2;
+      }
+      arg0[arg1] = arg0[arg1] + num;
+    },
+    getComputedStyle: function dt(arg0, arg1) {
+      let str = "";
+      if (arg0) {
+        str = "";
+        if (arg1) {
+          str = "";
+          if (GResult1.default) {
+            str = "";
+            if (typeof GResult1.default.getComputedStyle === "function") {
+              let hasItem = weakMap;
+              if (weakMap) {
+                hasItem = weakMap.has(arg0);
+              }
+              value = undefined;
+              if (hasItem) {
+                value = weakMap.get(arg0);
+              }
+              if (!value) {
+                const computedStyle = GResult1.default.getComputedStyle(arg0, null);
+                value = computedStyle;
+                if (weakMap) {
+                  const result = weakMap.set(arg0, computedStyle);
+                  value = computedStyle;
+                }
+                const _default = GResult1.default;
+              }
+              str = value.getPropertyValue(arg1);
+            }
+          }
+        }
+      }
+      return str;
+    },
+    secondsToMs: function lt(arg0) {
+      return Math.floor(1000 * arg0);
+    },
+    assign: Object.assign,
+    headersStringToObject: function pe(arg0) {
+      let str = arg0;
+      const obj = {};
+      if (!arg0) {
+        str = "";
+      }
+      const parts = str.trim().split(/[\r\n]+/);
+      const item = parts.forEach((item) => {
+        if (item) {
+          const parts = item.split(": ");
+          const str2 = parts.shift();
+          let tmp = str2;
+          if (str2) {
+            let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+            if (!tmp3) {
+              const formatted = str2.toLowerCase();
+              tmp3 = 0 === formatted.indexOf("x-litix-");
+            }
+            tmp = tmp3;
+          }
+          if (tmp) {
+            obj[str2] = parts.join(": ");
+          }
+        }
+      });
+      return obj;
+    },
+    cdnHeadersToRequestId: function de(arg0) {
+      closure_0 = arg0;
+      if (arg0) {
+        const found = items.find((item) => undefined !== obj[item]);
+        let tmp3;
+        if (found) {
+          tmp3 = arg0[found];
+        }
+        return tmp3;
+      }
+    },
+    extractHostnameAndDomain: re,
+    extractHostname: F,
+    manifestParser: Ve,
+    generateShortID: Oe,
+    generateUUID: ee,
+    now: obj3.now,
+    findMediaElement: se
+  },
+  events: { PLAYER_READY: "playerready", VIEW_INIT: "viewinit", VIDEO_CHANGE: "videochange", PLAY: "play", PAUSE: "pause", PLAYING: "playing", TIME_UPDATE: "timeupdate", SEEKING: "seeking", SEEKED: "seeked", REBUFFER_START: "rebufferstart", REBUFFER_END: "rebufferend", ERROR: "error", ENDED: "ended", RENDITION_CHANGE: "renditionchange", ORIENTATION_CHANGE: "orientationchange", PLAYBACK_MODE_CHANGE: "playbackmodechange", AD_REQUEST: "adrequest", AD_RESPONSE: "adresponse", AD_BREAK_START: "adbreakstart", AD_PLAY: "adplay", AD_PLAYING: "adplaying", AD_PAUSE: "adpause", AD_FIRST_QUARTILE: "adfirstquartile", AD_MID_POINT: "admidpoint", AD_THIRD_QUARTILE: "adthirdquartile", AD_ENDED: "adended", AD_BREAK_END: "adbreakend", AD_ERROR: "aderror", REQUEST_COMPLETED: "requestcompleted", REQUEST_FAILED: "requestfailed", REQUEST_CANCELLED: "requestcanceled", HEARTBEAT: "hb", DESTROY: "destroy" },
+  WINDOW_HIDDEN: false,
+  WINDOW_UNLOADING: false
+};
+let obj4 = {};
+let obj6 = {};
+const obj8 = { constructor: { value: t, writable: true, configurable: true } };
+const obj9 = {
+  safeCall: function ut(arg0, arg1, arg2, arg3) {
+    let applyResult = arg3;
+    if (arg0) {
+      if (typeof arg0[arg1] === "function") {
+        try {
+          applyResult = arg0[arg1].apply(arg0, arg2);
+        } catch (tmp4) {
+          logger.info("safeCall error", tmp4);
+        }
+      }
+    }
+    return applyResult;
+  },
+  safeIncrement: function P(arg0, arg1, arg2) {
+    let num = 1;
+    if (undefined !== arg2) {
+      num = arg2;
+    }
+    arg0[arg1] = arg0[arg1] + num;
+  },
+  getComputedStyle: function dt(arg0, arg1) {
+    let str = "";
+    if (arg0) {
+      str = "";
+      if (arg1) {
+        str = "";
+        if (GResult1.default) {
+          str = "";
+          if (typeof GResult1.default.getComputedStyle === "function") {
+            let hasItem = weakMap;
+            if (weakMap) {
+              hasItem = weakMap.has(arg0);
+            }
+            value = undefined;
+            if (hasItem) {
+              value = weakMap.get(arg0);
+            }
+            if (!value) {
+              const computedStyle = GResult1.default.getComputedStyle(arg0, null);
+              value = computedStyle;
+              if (weakMap) {
+                const result = weakMap.set(arg0, computedStyle);
+                value = computedStyle;
+              }
+              const _default = GResult1.default;
+            }
+            str = value.getPropertyValue(arg1);
+          }
+        }
+      }
+    }
+    return str;
+  },
+  secondsToMs: function lt(arg0) {
+    return Math.floor(1000 * arg0);
+  },
+  assign: Object.assign,
+  headersStringToObject: function pe(arg0) {
+    let str = arg0;
+    const obj = {};
+    if (!arg0) {
+      str = "";
+    }
+    const parts = str.trim().split(/[\r\n]+/);
+    const item = parts.forEach((item) => {
+      if (item) {
+        const parts = item.split(": ");
+        const str2 = parts.shift();
+        let tmp = str2;
+        if (str2) {
+          let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+          if (!tmp3) {
+            const formatted = str2.toLowerCase();
+            tmp3 = 0 === formatted.indexOf("x-litix-");
+          }
+          tmp = tmp3;
+        }
+        if (tmp) {
+          obj[str2] = parts.join(": ");
+        }
+      }
+    });
+    return obj;
+  },
+  cdnHeadersToRequestId: function de(arg0) {
+    closure_0 = arg0;
+    if (arg0) {
+      const found = items.find((item) => undefined !== obj[item]);
+      let tmp3;
+      if (found) {
+        tmp3 = arg0[found];
+      }
+      return tmp3;
+    }
+  },
+  extractHostnameAndDomain: re,
+  extractHostname: F,
+  manifestParser: Ve,
+  generateShortID: Oe,
+  generateUUID: ee,
+  now: obj3.now,
+  findMediaElement: se
+};
+tmp28 = GResult1.default && GResult1.default.WeakMap;
+tmp34 = undefined !== GResult.default && typeof GResult.default.addEventListener === "function";
 
 export default definePropertyResult1;

@@ -1033,7 +1033,7 @@ export const parse = function urlParse(obj, arg1, arg2) {
       }
     }
   }
-  Object.create(Url.prototype);
+  obj = Object.create(Url.prototype);
   const url = {
     protocol: null,
     slashes: null,
@@ -1058,7 +1058,7 @@ export const resolve = function urlResolve(obj, arg1) {
     }
     return obj2.resolve(arg1);
   }
-  Object.create(Url.prototype);
+  obj = Object.create(Url.prototype);
   const url = {
     protocol: null,
     slashes: null,

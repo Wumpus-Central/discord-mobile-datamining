@@ -100,7 +100,7 @@ let items = [
   entry,
   {
     key: "createConfiguration",
-    value: function createConfiguration(flag) {
+    value: function createConfiguration() {
       if (flag === undefined) {
         flag = true;
       }

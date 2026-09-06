@@ -30,12 +30,12 @@ export default function ScreenStack(arg0) {
     current = {};
   }
   const ref = noop.useRef(current);
-  const ref1 = obj.useRef(null);
+  const tmp = _objectWithoutProperties(arg0, closure_3);
   const context = obj.useContext(_mod4937.GHContext);
   obj = {
     stackUseEffectCallback(ref1) {},
   };
-  const ref2 = obj.useRef(obj);
+  const ref1 = obj.useRef(null);
   const effect = obj.useEffect(() => {
     const current = ref2.current;
     const result = current.stackUseEffectCallback(ref1);
@@ -50,7 +50,7 @@ export default function ScreenStack(arg0) {
   );
   obj = { value: ref, children: null };
   const obj1 = {
-    gestureDetectorBridge: ref2,
+    gestureDetectorBridge: obj.useRef(obj),
     goBackGesture,
     transitionAnimation,
     screenEdgeGesture: null,
@@ -65,7 +65,7 @@ export default function ScreenStack(arg0) {
   obj1.screensRefs = ref;
   obj1.currentScreenId = currentScreenId;
   const obj2 = {};
-  const tmp = _objectWithoutProperties(arg0, closure_3);
+  const ref2 = obj.useRef(obj);
   const tmp12 = undefined !== goBackGesture && null === ref && undefined === currentScreenId;
   const tmp9 = "GHWrapper" !== context.name && undefined !== goBackGesture;
   const merged = Object.assign(tmp);
@@ -77,7 +77,7 @@ export default function ScreenStack(arg0) {
   obj1.children = jsx(_modDef4938, {});
   obj.children = (
     <context
-      gestureDetectorBridge={ref2}
+      gestureDetectorBridge={obj.useRef(obj)}
       goBackGesture={goBackGesture}
       transitionAnimation={transitionAnimation}
       screenEdgeGesture={null}

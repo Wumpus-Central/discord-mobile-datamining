@@ -64,7 +64,7 @@ export const theDayAfter = function theDayAfter(reference, arg1) {
   parsingComponents.delete("meridiem");
   return parsingComponents;
 };
-export const tonight = function tonight(reference, date) {
+export const tonight = function tonight(reference) {
   let num = date;
   if (date === undefined) {
     num = 22;
@@ -77,7 +77,7 @@ export const tonight = function tonight(reference, date) {
   parsingComponents.addTag("casualReference/tonight");
   return parsingComponents;
 };
-export const lastNight = function lastNight(reference, date) {
+export const lastNight = function lastNight(reference) {
   let num = date;
   if (date === undefined) {
     num = 0;
@@ -93,7 +93,7 @@ export const lastNight = function lastNight(reference, date) {
   parsingComponents.imply("hour", num);
   return parsingComponents;
 };
-export const evening = function evening(reference, date) {
+export const evening = function evening(reference) {
   let num = date;
   if (date === undefined) {
     num = 20;
@@ -104,14 +104,15 @@ export const evening = function evening(reference, date) {
   parsingComponents.addTag("casualReference/evening");
   return parsingComponents;
 };
-export const yesterdayEvening = function yesterdayEvening(reference, date) {
+export const yesterdayEvening = function yesterdayEvening(reference) {
   let num = date;
   if (date === undefined) {
     num = 20;
   }
   const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
-  assignSimilarDate.assignSimilarDate(parsingComponents, new Date(dateWithAdjustedTimezone.getTime() - 86400000));
+  date = new Date(dateWithAdjustedTimezone.getTime() - 86400000);
+  assignSimilarDate.assignSimilarDate(parsingComponents, date);
   parsingComponents.imply("hour", num);
   parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
   parsingComponents.addTag("casualReference/yesterday");
@@ -131,7 +132,7 @@ export const midnight = function midnight(reference) {
   parsingComponents.addTag("casualReference/midnight");
   return parsingComponents;
 };
-export const morning = function morning(reference, date) {
+export const morning = function morning(reference) {
   let num = date;
   if (date === undefined) {
     num = 6;
@@ -145,7 +146,7 @@ export const morning = function morning(reference, date) {
   parsingComponents.addTag("casualReference/morning");
   return parsingComponents;
 };
-export const afternoon = function afternoon(reference, date) {
+export const afternoon = function afternoon(reference) {
   let num = date;
   if (date === undefined) {
     num = 15;

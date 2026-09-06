@@ -84,11 +84,10 @@ const items = [
         const merged = Object.assign(_response);
         let result = null;
         if (null != BlobManager.__blobCollectorProvider) {
-          result = obj3.__blobCollectorProvider(tmp7);
+          result = BlobManager.__blobCollectorProvider(tmp7);
         }
         obj.__collector = result;
         data = obj;
-        obj3 = BlobManager;
       }
       return Object.assign(obj, { data });
     },
@@ -102,6 +101,7 @@ const items = [
         BlobModuleDefault.release(arg0);
         const tmpResult = BlobModuleDefault;
       }
+      obj2 = register;
     },
   },
   {

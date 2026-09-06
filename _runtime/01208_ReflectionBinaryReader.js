@@ -45,7 +45,6 @@ let items = [
       }
       if (len.pos < len) {
         while (true) {
-          let tmp2 = _slicedToArray;
           let tmp3 = _slicedToArray(len.tag(), 2);
           [tmp4, tmp5] = tmp3;
           let fieldNoToField = self.fieldNoToField;
@@ -81,7 +80,7 @@ let items = [
                     );
                   }
                 } else if ("map" === kind) {
-                  let tmp2Result = tmp2(self.mapEntry(value, len, readUnknownField), 2);
+                  let tmp2Result = _slicedToArray(self.mapEntry(value, len, readUnknownField), 2);
                   tmp21[localName][tmp2Result[0]] = tmp2Result[1];
                 }
               }
@@ -96,10 +95,9 @@ let items = [
             }
             if (repeat) {
               let arr1 = tmp21[localName];
-              let tmp29 = ReflectionBinaryReader;
               if (tmp5 == ReflectionBinaryReader(1192).WireType.LengthDelimited) {
-                if (T != tmp29(1201).ScalarType.STRING) {
-                  if (T != tmp29(1201).ScalarType.BYTES) {
+                if (T != ReflectionBinaryReader(1201).ScalarType.STRING) {
+                  if (T != ReflectionBinaryReader(1201).ScalarType.BYTES) {
                     let sum = len.uint32() + len.pos;
                     if (len.pos < sum) {
                       do {
@@ -195,9 +193,8 @@ let items = [
           str = pos.bool().toString();
           const str5 = pos.bool();
         } else {
-          str = self.scalar(pos, V.K, tmp21(1201).LongType.STRING);
+          str = self.scalar(pos, V.K, ReflectionBinaryReader(1201).LongType.STRING);
         }
-        tmp21 = ReflectionBinaryReader;
         const tmp7 = _slicedToArray(pos.tag(), 2);
       }
       if (undefined === tmp5) {
@@ -235,36 +232,36 @@ let items = [
     value: function scalar(int32, arg1, STRING) {
       if (ReflectionBinaryReader(1201).ScalarType.INT32 === arg1) {
         return int32.int32();
-      } else if (tmp(1201).ScalarType.STRING === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.STRING === arg1) {
         return int32.string();
-      } else if (tmp(1201).ScalarType.BOOL === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.BOOL === arg1) {
         return int32.bool();
-      } else if (tmp(1201).ScalarType.DOUBLE === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.DOUBLE === arg1) {
         return int32.double();
-      } else if (tmp(1201).ScalarType.FLOAT === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.FLOAT === arg1) {
         return int32.float();
-      } else if (tmp(1201).ScalarType.INT64 === arg1) {
-        let tmpResult = tmp(1206);
+      } else if (ReflectionBinaryReader(1201).ScalarType.INT64 === arg1) {
+        let tmpResult = ReflectionBinaryReader(1206);
         return tmpResult.reflectionLongConvert(int32.int64(), STRING);
-      } else if (tmp(1201).ScalarType.UINT64 === arg1) {
-        tmpResult = tmp(1206);
+      } else if (ReflectionBinaryReader(1201).ScalarType.UINT64 === arg1) {
+        tmpResult = ReflectionBinaryReader(1206);
         return tmpResult.reflectionLongConvert(int32.uint64(), STRING);
-      } else if (tmp(1201).ScalarType.FIXED64 === arg1) {
-        return tmp(1206).reflectionLongConvert(int32.fixed64(), STRING);
-      } else if (tmp(1201).ScalarType.FIXED32 === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.FIXED64 === arg1) {
+        return ReflectionBinaryReader(1206).reflectionLongConvert(int32.fixed64(), STRING);
+      } else if (ReflectionBinaryReader(1201).ScalarType.FIXED32 === arg1) {
         return int32.fixed32();
-      } else if (tmp(1201).ScalarType.BYTES === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.BYTES === arg1) {
         return int32.bytes();
-      } else if (tmp(1201).ScalarType.UINT32 === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.UINT32 === arg1) {
         return int32.uint32();
-      } else if (tmp(1201).ScalarType.SFIXED32 === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.SFIXED32 === arg1) {
         return int32.sfixed32();
-      } else if (tmp(1201).ScalarType.SFIXED64 === arg1) {
-        return tmp(1206).reflectionLongConvert(int32.sfixed64(), STRING);
-      } else if (tmp(1201).ScalarType.SINT32 === arg1) {
+      } else if (ReflectionBinaryReader(1201).ScalarType.SFIXED64 === arg1) {
+        return ReflectionBinaryReader(1206).reflectionLongConvert(int32.sfixed64(), STRING);
+      } else if (ReflectionBinaryReader(1201).ScalarType.SINT32 === arg1) {
         return int32.sint32();
-      } else if (tmp(1201).ScalarType.SINT64 === arg1) {
-        return tmp(1206).reflectionLongConvert(int32.sint64(), STRING);
+      } else if (ReflectionBinaryReader(1201).ScalarType.SINT64 === arg1) {
+        return ReflectionBinaryReader(1206).reflectionLongConvert(int32.sint64(), STRING);
       }
     },
   },

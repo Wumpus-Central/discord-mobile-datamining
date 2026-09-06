@@ -1,5 +1,6 @@
 // _runtime/11061_purchaseUpdatedListener.js
 import _mod17 from "metro/00017__.js";
+import _mod11049 from "metro/11049__.js";
 import _mod11051 from "metro/11051__.js";
 import productSk2Map from "11062_productSk2Map.js";
 
@@ -36,10 +37,10 @@ export const purchaseErrorListener = (arg0) =>
 export const promotedProductListener = (arg0) => {
   let addListenerResult = null;
   if (_mod11051.isIos) {
-    let tmpResult = tmp(11049);
+    let tmpResult = _mod11049;
     addListenerResult = null;
     if (!tmpResult.isIosStorekit2()) {
-      tmpResult = tmp(11051);
+      tmpResult = _mod11051;
       const obj3 = new NativeEventEmitter(tmpResult.getIosModule());
       addListenerResult = obj3.addListener("iap-promoted-product", arg0);
     }
@@ -49,10 +50,10 @@ export const promotedProductListener = (arg0) => {
 export const transactionListener = (arg0) => {
   let addListenerResult = null;
   if (_mod11051.isIos) {
-    let tmpResult = tmp(11049);
+    let tmpResult = _mod11049;
     addListenerResult = null;
     if (tmpResult.isIosStorekit2()) {
-      tmpResult = tmp(11051);
+      tmpResult = _mod11051;
       const obj3 = new NativeEventEmitter(tmpResult.getIosModule());
       addListenerResult = obj3.addListener("iap-transaction-updated", arg0);
     }

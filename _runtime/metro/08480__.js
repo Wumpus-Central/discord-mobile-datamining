@@ -58,14 +58,14 @@ obj.touchableHandleResponderMove = function touchableHandleResponderMove(arg0) {
   }
   return onResponderMoveResult;
 };
-obj.touchableHandleResponderRelease = function touchableHandleResponderRelease(arg0) {
+obj.touchableHandleResponderRelease = function touchableHandleResponderRelease(View) {
   const self = this;
   const onResponderRelease = this.props.onResponderRelease;
   if (onResponderRelease) {
-    let onResponderReleaseResult = onResponderRelease(arg0);
+    let onResponderReleaseResult = onResponderRelease(View);
   } else {
     const call = hasOwnProperty.call;
-    onResponderReleaseResult = typeof call === "unknown" ? hasOwnProperty(arg0) : call(self, arg0);
+    onResponderReleaseResult = typeof call === "unknown" ? hasOwnProperty(View) : call(self, View);
   }
   return onResponderReleaseResult;
 };
@@ -131,17 +131,13 @@ const keys = Object.keys(obj);
 let closure_10 = keys.map((item) => obj[item]);
 
 export default (self) => {
-  let num = 0;
-  if (0 < length) {
-    do {
-      obj = closure_10[num];
-      let bindResult = obj;
-      if (typeof obj === "function") {
-        bindResult = obj.bind(self);
-      }
-      self[keys[num]] = bindResult;
-      num = num + 1;
-    } while (num < length);
+  for (let num = 0; num < length; num = num + 1) {
+    obj = closure_10[num];
+    let bindResult = obj;
+    if (typeof obj === "function") {
+      bindResult = obj.bind(self);
+    }
+    self[keys[num]] = bindResult;
   }
   self.state = React5();
 };

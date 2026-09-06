@@ -62,10 +62,10 @@ export const Screen = function Screen(aria_hidden) {
   let tmp15Result = null;
   if (tmp6) {
     obj = { route, navigation, children: null };
-    const items2 = [tmp13.header];
+    const items2 = [container.header];
     let tmp17 = null;
     if (headerTransparent) {
-      const items3 = [tmp13.absolute];
+      const items3 = [container.absolute];
       obj1 = { minHeight: tmp10 };
       items3[1] = obj1;
       tmp17 = items3;
@@ -83,7 +83,7 @@ export const Screen = function Screen(aria_hidden) {
     };
     obj2.children = closure_5(closure_4, obj3);
     obj.children = closure_5(closure_4, obj2);
-    tmp15Result = tmp15(tmp(tmp2[10]).NavigationProvider, obj);
+    tmp15Result = closure_5(tmp(tmp2[10]).NavigationProvider, obj);
   }
   const items4 = [tmp15Result];
   const obj4 = { style: container.content, children: null };

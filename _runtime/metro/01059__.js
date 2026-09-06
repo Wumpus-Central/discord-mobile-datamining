@@ -74,6 +74,8 @@ const entry = {
       }
       const tmpResult = TouchEventBoundary(1057);
     }
+    const obj = TouchEventBoundary(682);
+    tmp5 = null === addIntegration || undefined === addIntegration;
   },
 };
 let items = [
@@ -207,13 +209,13 @@ let items = [
                 }
                 let tmp10 = typeof tmp9 === "string";
                 if (typeof tmp4[c10] === "string") {
-                  tmp10 = tmp4[tmp8].length > 0;
+                  tmp10 = tmp4[c10].length > 0;
                 }
                 if (tmp10) {
-                  tmp10 = "unknown" !== tmp4[tmp8];
+                  tmp10 = "unknown" !== tmp4[c10];
                 }
                 if (tmp10) {
-                  tmp10 = tmp4[tmp8];
+                  tmp10 = tmp4[c10];
                 }
                 if (!tmp10) {
                   tmp10 = displayName;
@@ -221,24 +223,24 @@ let items = [
                 obj = { name: tmp10, element: null, file: null, label: null };
                 let tmp13 = typeof tmp12 === "string";
                 if (typeof tmp4[closure_11] === "string") {
-                  tmp13 = tmp4[tmp11].length > 0;
+                  tmp13 = tmp4[closure_11].length > 0;
                 }
                 if (tmp13) {
-                  tmp13 = "unknown" !== tmp4[tmp11];
+                  tmp13 = "unknown" !== tmp4[closure_11];
                 }
                 if (tmp13) {
-                  tmp13 = tmp4[tmp11];
+                  tmp13 = tmp4[closure_11];
                 }
                 obj.element = tmp13;
                 let tmp16 = typeof tmp15 === "string";
                 if (typeof tmp4[closure_12] === "string") {
-                  tmp16 = tmp4[tmp14].length > 0;
+                  tmp16 = tmp4[closure_12].length > 0;
                 }
                 if (tmp16) {
-                  tmp16 = "unknown" !== tmp4[tmp14];
+                  tmp16 = "unknown" !== tmp4[closure_12];
                 }
                 if (tmp16) {
-                  tmp16 = tmp4[tmp14];
+                  tmp16 = tmp4[closure_12];
                 }
                 obj.file = tmp16;
                 if (typeof tmp4[closure_9] !== "string") {
@@ -253,7 +255,7 @@ let items = [
                   obj.label = tmp18;
                   obj2.dropUndefinedKeys(obj);
                 }
-                tmp18 = tmp4[tmp17];
+                tmp18 = tmp4[closure_9];
                 obj2 = TouchEventBoundary(682);
               }
             }

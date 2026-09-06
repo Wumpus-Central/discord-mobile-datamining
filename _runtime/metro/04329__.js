@@ -53,8 +53,8 @@ export const useRiveProperty = function useRiveProperty(instance, FillColor, f30
   const items3 = [disposableMemo];
   React4(() => {
     if (disposableMemo) {
-      closure_6(iter.value);
-      closure_0 = iter.addListener((arg0) => {
+      closure_6(disposableMemo.value);
+      closure_0 = disposableMemo.addListener((arg0) => {
         closure_1_6(arg0);
       });
       return () => {

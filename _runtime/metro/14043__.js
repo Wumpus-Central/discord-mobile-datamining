@@ -1,6 +1,7 @@
 // _runtime/metro/14043__.js
 import _mod14015 from "14015__.js";
 import _mod14016 from "14016__.js";
+import _mod14020 from "14020__.js";
 
 export default (num, arg1) => {
   if (num instanceof _mod14016) {
@@ -19,8 +20,8 @@ export default (num, arg1) => {
         obj = {};
       }
       if (obj.rtl) {
-        const safeRe2 = tmp(14020).safeRe;
-        const t2 = tmp(14020).t;
+        const safeRe2 = _mod14020.safeRe;
+        const t2 = _mod14020.t;
         if (obj.includePrerelease) {
           let obj2 = safeRe2[t2.COERCERTLFULL];
         } else {
@@ -64,8 +65,8 @@ export default (num, arg1) => {
         obj2.lastIndex = -1;
         let match2 = tmp8;
       } else {
-        const safeRe = tmp(14020).safeRe;
-        const t = tmp(14020).t;
+        const safeRe = _mod14020.safeRe;
+        const t = _mod14020.t;
         if (obj.includePrerelease) {
           let tmp3 = safeRe[t.COERCEFULL];
         } else {

@@ -73,7 +73,7 @@ function formatIssueMessage(issues) {
   }
   tmp = issues.issues[Symbol.iterator]();
 }
-function applyZodErrorsToEvent(arg0, arg1, exception, originalException) {
+function applyZodErrorsToEvent(arg0, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;

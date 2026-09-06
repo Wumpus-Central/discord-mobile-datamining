@@ -12,7 +12,7 @@ let closure_3 = {
 function dealWithAnimation(type) {
   type = type.type;
   if ("spring" === type) {
-    return (value, cb) => {
+    return (arg0, cb) => {
       type = cb;
       const fn = function o(arg0) {
         return cb(arg0);
@@ -20,11 +20,11 @@ function dealWithAnimation(type) {
       fn.__closure = { cb };
       fn.__workletHash = 5381689684735;
       fn.__initData = __initData;
-      return cancelAnimation.withSpring(value, type.config, fn);
+      return cancelAnimation.withSpring(arg0, type.config, fn);
     };
   } else {
     return "timing" === type
-      ? (value, cb) => {
+      ? (arg0, cb) => {
           type = cb;
           const fn = function o(arg0) {
             return cb(arg0);
@@ -32,7 +32,7 @@ function dealWithAnimation(type) {
           fn.__closure = { cb };
           fn.__workletHash = 457847741022;
           fn.__initData = __initData2;
-          return cancelAnimation.withTiming(value, type.config, fn);
+          return cancelAnimation.withTiming(arg0, type.config, fn);
         }
       : undefined;
   }

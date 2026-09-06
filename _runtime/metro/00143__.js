@@ -120,6 +120,7 @@ let items = [
         }
         obj2 = _modAll27;
       }
+      obj = _modDef144;
     },
   },
   {
@@ -136,6 +137,7 @@ let items = [
         }
         obj2 = _modAll27;
       }
+      obj = _modDef144;
     },
   },
   {
@@ -146,6 +148,7 @@ let items = [
         require("NativeDOMCxx").measure(nativeElementReference, arg0);
         const obj2 = require("NativeDOMCxx");
       }
+      const obj = ReactNativeElement(136);
     },
   },
   {
@@ -156,6 +159,7 @@ let items = [
         require("NativeDOMCxx").measureAsyncOnUI(nativeElementReference, _measureCallback);
         const obj2 = require("NativeDOMCxx");
       }
+      const obj = ReactNativeElement(136);
     },
   },
   {
@@ -166,6 +170,7 @@ let items = [
         require("NativeDOMCxx").measureInWindow(nativeElementReference, arg0);
         const obj2 = require("NativeDOMCxx");
       }
+      const obj = ReactNativeElement(136);
     },
   },
   {
@@ -203,6 +208,8 @@ let items = [
         require("NativeDOMCxx").setNativeProps(nativeElementReference, obj);
         const obj3 = require("NativeDOMCxx");
       }
+      const obj2 = ReactNativeElement(136);
+      tmp4 = null != nativeElementReference && null != obj;
     },
   },
 ];
@@ -213,7 +220,7 @@ const entry = {
     if (null == currentProps) {
       return null;
     } else {
-      const eventTypePropName = tmp(149).getEventTypePropName(arg0, arg1);
+      const eventTypePropName = ReactNativeElement(149).getEventTypePropName(arg0, arg1);
       if (null == eventTypePropName) {
         return null;
       } else {
@@ -223,10 +230,9 @@ const entry = {
         }
         return tmp8;
       }
-      const tmpResult = tmp(149);
+      const tmpResult = ReactNativeElement(149);
     }
     const obj = ReactNativeElement(136);
-    tmp = ReactNativeElement;
   },
 };
 items[12] = entry;

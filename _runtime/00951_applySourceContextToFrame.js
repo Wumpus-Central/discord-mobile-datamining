@@ -25,8 +25,10 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
       const _document = registerSpanErrorInstrumentation.GLOBAL_OBJ.document;
       let _location = registerSpanErrorInstrumentation.GLOBAL_OBJ.location;
       if (_location) {
-        _location = tmp(682).stripUrlQueryAndFragment(tmp(682).GLOBAL_OBJ.location.href);
-        const tmpResult = tmp(682);
+        _location = registerSpanErrorInstrumentation.stripUrlQueryAndFragment(
+          registerSpanErrorInstrumentation.GLOBAL_OBJ.location.href,
+        );
+        const tmpResult = registerSpanErrorInstrumentation;
       }
       if (_document) {
         if (_location) {
@@ -54,8 +56,8 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
                   stacktrace.frames = frames1.map((filename) => {
                     if (filename.filename === closure_1_1) {
                       if (filename.lineno) {
-                        if (arr.length) {
-                          closure_0(_location[0]).addContextToFrame(arr, filename, tmp);
+                        if (items.length) {
+                          closure_0(_location[0]).addContextToFrame(items, filename, tmp);
                           const obj = closure_0(_location[0]);
                         }
                       }

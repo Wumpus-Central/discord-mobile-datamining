@@ -146,6 +146,7 @@ const items = [
         num = Number(arg0);
       }
       _classPrivateFieldBase(this, closure_2)[closure_2] = num;
+      const tmp2 = _classPrivateFieldBase(this, closure_2);
     },
   },
   {
@@ -157,6 +158,7 @@ const items = [
         num = Number(arg0);
       }
       _classPrivateFieldBase(this, closure_3)[closure_3] = num;
+      const tmp2 = _classPrivateFieldBase(this, closure_3);
     },
   },
   {
@@ -168,6 +170,7 @@ const items = [
         num = Number(width);
       }
       _classPrivateFieldBase(this, closure_4)[closure_4] = num;
+      const tmp2 = _classPrivateFieldBase(this, closure_4);
     },
   },
   {
@@ -179,6 +182,7 @@ const items = [
         num = Number(height);
       }
       _classPrivateFieldBase(this, closure_5)[closure_5] = num;
+      const tmp2 = _classPrivateFieldBase(this, closure_5);
     },
   },
 ];
@@ -187,8 +191,8 @@ const entry = {
   value: function fromRect(arg0) {
     if (arg0) {
       ({ x, y, width, height } = arg0);
-      let obj = Object.create(tmp.prototype);
-      _classCallCheck(obj, tmp);
+      let obj = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj, _classCallCheck);
       const _Object5 = Object;
       Object.defineProperty(obj, c2, { writable: true, value: "a" });
       const _Object6 = Object;
@@ -202,8 +206,8 @@ const entry = {
       obj.__setInternalWidth(width);
       obj.__setInternalHeight(height);
     } else {
-      obj = Object.create(tmp.prototype);
-      _classCallCheck(obj, tmp);
+      obj = Object.create(_classCallCheck.prototype);
+      _classCallCheck(obj, _classCallCheck);
       const _Object = Object;
       Object.defineProperty(obj, c2, { writable: true, value: "a" });
       const _Object2 = Object;

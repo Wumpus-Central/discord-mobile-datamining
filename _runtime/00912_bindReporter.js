@@ -1,13 +1,10 @@
 // _runtime/00912_bindReporter.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export (arg0, arg1, arg2, arg3) => {
-  closure_0 = arg0;
-  value = arg1;
-  dependencyMap = arg2;
-  closure_3 = arg3;
+export (tmpResult, metric, items, reportAllChanges) => {
+  closure_3 = reportAllChanges;
   return (arg0) => {
-    let tmp = value.value >= 0;
+    let tmp = metric.value >= 0;
     if (tmp) {
       let tmp2 = arg0;
       if (!arg0) {
@@ -20,25 +17,25 @@ export (arg0, arg1, arg2, arg3) => {
       if (value == null) {
         num = 0;
       }
-      diff = iter.value - num;
+      diff = metric.value - num;
       if (!diff) {
         diff = undefined === value;
       }
       tmp = diff;
     }
     if (tmp) {
-      iter.delta = diff;
-      value = iter.value;
+      metric.delta = diff;
+      value = metric.value;
       let str = "poor";
-      if (value <= dependencyMap[1]) {
+      if (value <= items[1]) {
         let str2 = "good";
-        if (value > dependencyMap[0]) {
+        if (value > items[0]) {
           str2 = "needs-improvement";
         }
         str = str2;
       }
-      iter.rating = str;
-      closure_0(iter);
+      metric.rating = str;
+      tmpResult(metric);
     }
   };
 }

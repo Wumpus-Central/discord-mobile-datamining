@@ -194,7 +194,7 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
       let engagedIndices = arg0;
       c3 = 0;
       c4 = 0;
-      const iter = (function*(arg0, value) {
+      const iter = (function*(arg0) {
         if (1 === tmp5) {
           if (arg0 === 1) {
             c4 = 3;
@@ -266,17 +266,17 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
         const horizontal = closure_1_0.props.horizontal;
         if (animated.current) {
           if (layout >= 0) {
-            if (tmp < obj.getDataLength()) {
+            if (tmp < closure_1_0.getDataLength()) {
               closure_1_5.current = true;
-              let result = obj.setOffsetProjectionEnabled(false);
+              let result = closure_1_0.setOffsetProjectionEnabled(false);
               function getFinalOffset() {
                 const size = layout.getLayout(closure_2_0);
                 const tmp2 = horizontal ? size.x : size.y;
                 if (undefined !== closure_2_2) {
-                  const size2 = obj.getWindowSize();
+                  const size2 = layout.getWindowSize();
                   let diff = tmp2;
-                  if (undefined !== tmp3) {
-                    diff = tmp2 - ((tmp ? size2.width : size2.height) - (tmp ? size.width : size.height)) * tmp3;
+                  if (undefined !== closure_2_2) {
+                    diff = tmp2 - ((horizontal ? size2.width : size2.height) - (horizontal ? size.width : size.height)) * closure_2_2;
                   }
                   let sum = diff;
                   if (undefined !== ref) {
@@ -287,8 +287,8 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 }
                 return sum + layout.firstItemOffset;
               }
-              let setScrollDirection = obj.getAbsoluteLastScrollOffset();
-              let size = obj.getWindowSize();
+              let setScrollDirection = closure_1_0.getAbsoluteLastScrollOffset();
+              let size = closure_1_0.getWindowSize();
               let result1 = 2 * (horizontal ? size.width : size.height);
               function getStartScrollOffset() {
 
@@ -299,12 +299,12 @@ export const useRecyclerViewController = function useRecyclerViewController(recy
                 let _Math2 = Math;
                 result1 = finalOffset - result1;
                 let bound = Math.max(result1, setScrollDirection);
-                setScrollDirection = obj.setScrollDirection;
+                setScrollDirection = closure_1_0.setScrollDirection;
                 setScrollDirection("forward");
               } else {
                 let _Math = Math;
                 bound = Math.min(finalOffset + result1, setScrollDirection);
-                obj.setScrollDirection("backward");
+                closure_1_0.setScrollDirection("backward");
               }
               closure_8 = closure_6;
               function performScrollStep(arg0) {

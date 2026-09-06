@@ -30,7 +30,7 @@ fn(_mod10472);
 fn(_mod10473);
 const _isNativeReflectConstruct = fn(_mod10474);
 
-export const includeCommonConfiguration = function includeCommonConfiguration(parsers, flag) {
+export const includeCommonConfiguration = function includeCommonConfiguration(parsers) {
   if (flag === undefined) {
     flag = false;
   }

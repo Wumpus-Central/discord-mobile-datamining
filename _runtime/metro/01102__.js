@@ -103,7 +103,7 @@ function createPath(_location) {
   }
   return sum1;
 }
-function createLocation(tmp4Result, arg1, arg2, _location) {
+function createLocation(tmp4Result, arg1, key, _location) {
   let _decodeURI = arg1;
   if (typeof tmp4Result === "string") {
     const tmp5 = parsePath(tmp4Result);
@@ -212,7 +212,7 @@ let obj = {
       let text = str;
       if ("!" !== str.charAt(0)) {
         let substr = str;
-        if ("/" === str.charAt(0)) {
+        if ("/" === "/".charAt(0)) {
           substr = str.substr(1);
         }
         text = `!/${tmp2}`;
@@ -255,14 +255,14 @@ export const createBrowserHistory = function createBrowserHistory(props) {
       ({ key, state } = state.state || {});
       if (str6) {
         const formatted = str2.toLowerCase();
-        let tmp6 = 0 === formatted.indexOf(str3.toLowerCase());
+        let tmp6 = 0 === formatted.indexOf(str6.toLowerCase());
         if (tmp6) {
           const indexOf = "/?#".indexOf;
-          tmp6 = -1 !== "/?#".indexOf(str2.charAt(str3.length));
+          tmp6 = -1 !== "/?#".indexOf(str2.charAt(str6.length));
         }
         substr = str2;
         if (tmp6) {
-          substr = str2.substr(str3.length);
+          substr = str2.substr(str6.length);
         }
         tmp5 = substr;
       }
@@ -276,23 +276,23 @@ export const createBrowserHistory = function createBrowserHistory(props) {
       } else {
         closure_7.confirmTransitionTo(tmp9, "POP", getUserConfirmation, (arg0) => {
           if (arg0) {
-            obj = { action: "POP", location: tmp };
+            obj = { action: "POP", location: _location };
             closure_1_3(obj, obj);
-            obj.length = c0.length;
+            obj.length = _location.length;
             closure_7.notifyListeners(obj.location, obj.action);
           } else {
             num = substr.indexOf(obj.location.key);
             if (-1 === num) {
               num = 0;
             }
-            let num3 = substr.indexOf(tmp.key);
+            let num3 = substr.indexOf(_location.key);
             if (-1 === num3) {
               num3 = 0;
             }
             const diff = num - num3;
             if (diff) {
               c10 = true;
-              c0.go(diff);
+              _location.go(diff);
             }
           }
         });
@@ -306,14 +306,14 @@ export const createBrowserHistory = function createBrowserHistory(props) {
     ({ key, state } = substr() || {});
     if (str6) {
       const formatted = str.toLowerCase();
-      let tmp3 = 0 === formatted.indexOf(str2.toLowerCase());
+      let tmp3 = 0 === formatted.indexOf(str6.toLowerCase());
       if (tmp3) {
         const indexOf = "/?#".indexOf;
-        tmp3 = -1 !== "/?#".indexOf(str.charAt(str2.length));
+        tmp3 = -1 !== "/?#".indexOf(str.charAt(str6.length));
       }
       substr = str;
       if (tmp3) {
-        substr = str.substr(str2.length);
+        substr = str.substr(str6.length);
       }
       tmp2 = substr;
     }
@@ -327,27 +327,28 @@ export const createBrowserHistory = function createBrowserHistory(props) {
     } else {
       closure_7.confirmTransitionTo(tmp5, "POP", getUserConfirmation, (arg0) => {
         if (arg0) {
-          obj = { action: "POP", location: tmp };
+          obj = { action: "POP", location: _location };
           closure_1_3(obj, obj);
-          obj.length = c0.length;
+          obj.length = _location.length;
           closure_7.notifyListeners(obj.location, obj.action);
         } else {
           num = substr.indexOf(obj.location.key);
           if (-1 === num) {
             num = 0;
           }
-          let num3 = substr.indexOf(tmp.key);
+          let num3 = substr.indexOf(_location.key);
           if (-1 === num3) {
             num3 = 0;
           }
           const diff = num - num3;
           if (diff) {
             c10 = true;
-            c0.go(diff);
+            _location.go(diff);
           }
         }
       });
     }
+    const tmp = substr() || {};
   }
   if (undefined === props) {
     obj = {};
@@ -409,11 +410,11 @@ export const createBrowserHistory = function createBrowserHistory(props) {
         }
       };
     },
-    confirmTransitionTo(arg0, POP, getUserConfirmation, fn2) {
+    confirmTransitionTo(location, POP, getUserConfirmation, fn2) {
       if (null != c0) {
         let tmp2Result = c0;
         if (typeof c0 === "function") {
-          tmp2Result = tmp2(arg0, POP);
+          tmp2Result = tmp2(location, POP);
         }
         if (typeof tmp2Result === "string") {
           if (typeof getUserConfirmation === "function") {
@@ -523,10 +524,10 @@ export const createBrowserHistory = function createBrowserHistory(props) {
     push(arg0, arg1) {
       const str = Math.random();
       const tmp = str6(arg0, arg1, Math.random().toString(36).substr(2, num), obj.location);
-      closure_0 = tmp;
+      const _location = tmp;
       closure_7.confirmTransitionTo(tmp, "PUSH", getUserConfirmation, (arg0) => {
         if (arg0) {
-          ({ pathname, search, hash } = closure_0);
+          ({ pathname, search, hash } = _location);
           if (!pathname) {
             pathname = "/";
           }
@@ -557,15 +558,15 @@ export const createBrowserHistory = function createBrowserHistory(props) {
           const sum2 = str6 + sum1;
           if (closure_1) {
             obj = { key: tmp10, state: tmp11 };
-            let arr = c0;
-            c0.pushState(obj, null, sum2);
+            let arr = _location;
+            _location.pushState(obj, null, sum2);
             if (closure_3) {
               const _window2 = window;
               window.location.href = sum2;
             } else {
               substr = substr.slice(0, substr.indexOf(obj.location.key) + 1);
-              arr = substr.push(tmp.key);
-              obj = { action: "PUSH", location: tmp };
+              arr = substr.push(_location.key);
+              obj = { action: "PUSH", location: _location };
               closure_1_3(obj, obj);
               obj.length = arr.length;
               closure_7.notifyListeners(obj.location, obj.action);
@@ -580,10 +581,10 @@ export const createBrowserHistory = function createBrowserHistory(props) {
     replace(arg0, arg1) {
       const str = Math.random();
       const tmp = str6(arg0, arg1, Math.random().toString(36).substr(2, num), obj.location);
-      closure_0 = tmp;
+      const _location = tmp;
       closure_7.confirmTransitionTo(tmp, "REPLACE", getUserConfirmation, (arg0) => {
         if (arg0) {
-          ({ pathname, search, hash } = closure_0);
+          ({ pathname, search, hash } = _location);
           if (!pathname) {
             pathname = "/";
           }
@@ -614,21 +615,20 @@ export const createBrowserHistory = function createBrowserHistory(props) {
           const sum2 = str6 + sum1;
           if (closure_1) {
             obj = { key: tmp10, state: tmp11 };
-            c0.replaceState(obj, null, sum2);
+            _location.replaceState(obj, null, sum2);
             if (closure_3) {
               const _window2 = window;
               const replaced = str6.replace(sum2);
             } else {
               const index = substr.indexOf(obj.location.key);
               if (-1 !== index) {
-                substr[index] = tmp.key;
+                substr[index] = _location.key;
               }
-              obj = { action: "REPLACE", location: tmp };
+              obj = { action: "REPLACE", location: _location };
               closure_1_3(obj, obj);
-              obj.length = arr.length;
+              obj.length = _location.length;
               closure_7.notifyListeners(obj.location, obj.action);
             }
-            arr = c0;
           } else {
             const _window = window;
             const replaced1 = window.location.replace(sum2);
@@ -768,10 +768,6 @@ export const createHashHistory = function createHashHistory(props) {
     } else {
       const tmp25 = fn();
       const _location = obj.location;
-      if (!c7) {
-        const tmp3 =
-          _location.pathname === tmp25.pathname && _location.search === tmp25.search && _location.hash === tmp25.hash;
-      }
       ({ pathname, search, hash } = tmp25);
       if (!pathname) {
         pathname = "/";
@@ -805,15 +801,15 @@ export const createHashHistory = function createHashHistory(props) {
         _null = tmp25;
         if (c7) {
           c7 = false;
-          encodePath(tmp26, undefined);
-          tmp26.length = _null.length;
-          closure_6.notifyListeners(tmp26.location, tmp26.action);
+          encodePath(obj, undefined);
+          obj.length = _null.length;
+          closure_6.notifyListeners(obj.location, obj.action);
         } else {
           closure_6.confirmTransitionTo(tmp25, "POP", closure_1, (arg0) => {
             if (arg0) {
-              obj = { action: "POP", location: tmp };
+              obj = { action: "POP", location: _location };
               encodePath(obj, obj);
-              obj.length = c0.length;
+              obj.length = _location.length;
               closure_6.notifyListeners(obj.location, obj.action);
             } else {
               ({ pathname, search, hash } = obj.location);
@@ -848,7 +844,7 @@ export const createHashHistory = function createHashHistory(props) {
               if (-1 === num3) {
                 num3 = 0;
               }
-              ({ pathname: pathname2, search: search2, hash: hash2 } = tmp);
+              ({ pathname: pathname2, search: search2, hash: hash2 } = _location);
               if (!pathname2) {
                 pathname2 = "/";
               }
@@ -883,7 +879,7 @@ export const createHashHistory = function createHashHistory(props) {
               const diff = num3 - num7;
               if (diff) {
                 c7 = true;
-                c0.go(diff);
+                _location.go(diff);
               }
             }
           });
@@ -933,11 +929,11 @@ export const createHashHistory = function createHashHistory(props) {
         }
       };
     },
-    confirmTransitionTo(arg0, POP, getUserConfirmation, fn2) {
+    confirmTransitionTo(location, POP, getUserConfirmation, fn2) {
       if (null != c0) {
         let tmp2Result = c0;
         if (typeof c0 === "function") {
-          tmp2Result = tmp2(arg0, POP);
+          tmp2Result = tmp2(location, POP);
         }
         if (typeof tmp2Result === "string") {
           if (typeof getUserConfirmation === "function") {
@@ -1082,11 +1078,11 @@ export const createHashHistory = function createHashHistory(props) {
       return text + encodePath(str3 + sum1);
     },
     push(arg0, arg1) {
-      let tmp = closure_6(arg0, undefined, undefined, obj.location);
-      closure_0 = tmp;
+      const tmp = closure_6(arg0, undefined, undefined, obj.location);
+      const _location = tmp;
       closure_6.confirmTransitionTo(tmp, "PUSH", closure_1, (arg0) => {
         if (arg0) {
-          ({ pathname, search, hash } = closure_0);
+          ({ pathname, search, hash } = _location);
           if (!pathname) {
             pathname = "/";
           }
@@ -1154,21 +1150,20 @@ export const createHashHistory = function createHashHistory(props) {
             }
             substr = substr.slice(0, substr.lastIndexOf(sum3) + 1);
             substr.push(sum1);
-            obj = { action: "PUSH", location: tmp };
+            obj = { action: "PUSH", location: _location };
             closure_1_3(obj, obj);
-            obj.length = c0.length;
+            obj.length = _location.length;
             closure_6.notifyListeners(obj.location, obj.action);
           } else {
             closure_1_3(obj, undefined);
-            obj.length = c0.length;
+            obj.length = _location.length;
             closure_6.notifyListeners(obj.location, obj.action);
           }
-          tmp = closure_0;
         }
       });
     },
     replace(arg0, arg1) {
-      let tmp = closure_6(arg0, undefined, undefined, obj.location);
+      const tmp = closure_6(arg0, undefined, undefined, obj.location);
       closure_6.confirmTransitionTo(tmp, "REPLACE", closure_1, (arg0) => {
         if (arg0) {
           ({ pathname, search, hash } = _location);
@@ -1346,11 +1341,11 @@ export const createMemoryHistory = function createMemoryHistory(props) {
         }
       };
     },
-    confirmTransitionTo(arg0, POP, getUserConfirmation, fn2) {
+    confirmTransitionTo(location, POP, getUserConfirmation, fn2) {
       if (null != c0) {
         let tmp2Result = c0;
         if (typeof c0 === "function") {
-          tmp2Result = tmp2(arg0, POP);
+          tmp2Result = tmp2(location, POP);
         }
         if (typeof tmp2Result === "string") {
           if (typeof getUserConfirmation === "function") {
@@ -1436,9 +1431,9 @@ export const createMemoryHistory = function createMemoryHistory(props) {
     index: bound,
     entries: mapped,
     createHref: createPath,
-    push(arg0, arg1) {
+    push(tmp4Result, arg1) {
       const str = Math.random();
-      const tmp = createLocation(arg0, arg1, Math.random().toString(36).substr(2, closure_1), obj.location);
+      const tmp = createLocation(tmp4Result, arg1, Math.random().toString(36).substr(2, closure_1), obj.location);
       closure_0 = tmp;
       notifyListeners.confirmTransitionTo(tmp, "PUSH", closure_0, (arg0) => {
         if (arg0) {
@@ -1460,9 +1455,9 @@ export const createMemoryHistory = function createMemoryHistory(props) {
         }
       });
     },
-    replace(arg0, arg1) {
+    replace(tmp4Result, arg1) {
       const str = Math.random();
-      const tmp = createLocation(arg0, arg1, Math.random().toString(36).substr(2, closure_1), obj.location);
+      const tmp = createLocation(tmp4Result, arg1, Math.random().toString(36).substr(2, closure_1), obj.location);
       const _location = tmp;
       closure_2.confirmTransitionTo(tmp, "REPLACE", _location, (arg0) => {
         if (arg0) {

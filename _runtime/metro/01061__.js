@@ -1,5 +1,6 @@
 // _runtime/metro/01061__.js
 import _mod17 from "00017__.js";
+import RN_GLOBAL_OBJ2 from "../00681_RN_GLOBAL_OBJ.js";
 import TurboModuleRegistry from "../00862_TurboModuleRegistry.js";
 import _mod867 from "00867__.js";
 
@@ -57,7 +58,7 @@ export const isNativeDriverSupportedForColorAnimations = function isNativeDriver
   }
   return flag;
 };
-export const isValidEmail = (arg0) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(arg0);
+export const isValidEmail = (trimmed1) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(trimmed1);
 export const base64ToUint8Array = (match) => {
   if (typeof atob === "function") {
     if (obj.isWeb()) {
@@ -73,13 +74,14 @@ export const base64ToUint8Array = (match) => {
   const error = new Error("atob is not available in this environment.");
   throw error;
 };
-export const feedbackAlertDialog = (Alert, arg1) => {
+export const feedbackAlertDialog = (errorTitle, captureScreenshotError) => {
   if (obj.isWeb()) {
-    if (undefined !== tmp(681).RN_GLOBAL_OBJ.alert) {
-      const RN_GLOBAL_OBJ = tmp(681).RN_GLOBAL_OBJ;
+    if (undefined !== RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.alert) {
+      const RN_GLOBAL_OBJ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ;
       const _HermesInternal = HermesInternal;
-      RN_GLOBAL_OBJ.alert("" + Alert + "\n" + arg1);
+      RN_GLOBAL_OBJ.alert("" + errorTitle + "\n" + captureScreenshotError);
     }
   }
-  Alert.alert(Alert, arg1);
+  Alert.alert(errorTitle, captureScreenshotError);
+  obj = _mod867;
 };

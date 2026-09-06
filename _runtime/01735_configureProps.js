@@ -1,12 +1,12 @@
 // _runtime/01735_configureProps.js
 import _mod1640 from "metro/01640__.js";
+import _mod1647 from "metro/01647__.js";
 import _mod1649 from "metro/01649__.js";
 import runOnRuntime from "01680_runOnRuntime.js";
 import 01639__ from "metro/01639__.js";
 
 function configureProps() {
   for (const key10008 in _mod1649.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST) {
-    let tmp9 = require;
     if (!(key10008 in _mod1649.PropsAllowlists.UI_THREAD_PROPS_WHITELIST)) {
       continue;
     } else {
@@ -16,7 +16,7 @@ function configureProps() {
       let str2 = "Property `";
       let tmp2 = new.target;
       let tmp3 = new.target;
-      let reanimatedError = new tmp9(1647).ReanimatedError("Property `" + key10008 + "` was whitelisted both as UI and native prop. Please remove it from one of the lists.");
+      let reanimatedError = new _mod1647.ReanimatedError("Property `" + key10008 + "` was whitelisted both as UI and native prop. Please remove it from one of the lists.");
       throw reanimatedError;
     }
   }
@@ -35,6 +35,7 @@ export const addWhitelistedNativeProps = function addWhitelistedNativeProps(arg0
   if (Object.keys(_mod1649.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length !== Object.keys(_mod1649.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST).length) {
     configureProps();
   }
+  const obj = {};
 };
 export const addWhitelistedUIProps = function addWhitelistedUIProps(arg0) {
   const merged = Object.assign(_mod1649.PropsAllowlists.UI_THREAD_PROPS_WHITELIST);
@@ -43,12 +44,13 @@ export const addWhitelistedUIProps = function addWhitelistedUIProps(arg0) {
   if (Object.keys(_mod1649.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length !== Object.keys(_mod1649.PropsAllowlists.UI_THREAD_PROPS_WHITELIST).length) {
     configureProps();
   }
+  const obj = {};
 };
 export const configureReanimatedLogger = function configureReanimatedLogger(level) {
   _mod1640.updateLoggerConfig(level);
   if (!closure_2) {
-    tmp(1680).executeOnUIRuntimeSync(tmp(1640).updateLoggerConfig)(level);
-    const tmpResult = tmp(1680);
+    runOnRuntime.executeOnUIRuntimeSync(_mod1640.updateLoggerConfig)(level);
+    const tmpResult = runOnRuntime;
   }
 };
 export const adaptViewConfig = function adaptViewConfig(viewConfig) {
@@ -62,6 +64,7 @@ export const adaptViewConfig = function adaptViewConfig(viewConfig) {
       if (!tmp3) {
         obj[item] = true;
       }
+      tmp3 = item in _mod1649.PropsAllowlists.NATIVE_THREAD_PROPS_WHITELIST || item in _mod1649.PropsAllowlists.UI_THREAD_PROPS_WHITELIST;
     });
     const _Object2 = Object;
     UI_THREAD_PROPS_WHITELIST = {};

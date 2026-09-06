@@ -255,6 +255,8 @@ if (self2) {
             nowResult.imply("millisecond", 0);
             break;
         }
+        const str = arg1[1] || "";
+        const str2 = arg1[2] || "";
       },
     };
     items[1] = entry1;

@@ -22,8 +22,8 @@ export const Link = function Link(arg0) {
       preventDefault.preventDefault();
       preventDefault.stopPropagation();
     } else {
-      if ("onPress" in tmp) {
-        const onPress = tmp.onPress;
+      if ("onPress" in merged) {
+        const onPress = merged.onPress;
         if (onPress != null) {
           onPress(preventDefault);
         }

@@ -1,13 +1,13 @@
 // _runtime/00785_severityLevelFromString.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const severityLevelFromString = function severityLevelFromString(arg0) {
+export const severityLevelFromString = function severityLevelFromString(level) {
   let str = "warning";
-  if ("warn" !== arg0) {
+  if ("warn" !== level) {
     const items = ["fatal", "error", "warning", "log", "info", "debug"];
     let str2 = "log";
-    if (items.includes(arg0)) {
-      str2 = arg0;
+    if (items.includes(level)) {
+      str2 = level;
     }
     str = str2;
   }

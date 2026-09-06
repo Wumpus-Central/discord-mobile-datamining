@@ -1,5 +1,6 @@
 // _runtime/metro/12902__.js
 import errorCallback from "../12793_errorCallback.js";
+import _mod12804 from "12804__.js";
 import _mod12821 from "12821__.js";
 import _mod12829 from "12829__.js";
 import _mod12868 from "12868__.js";
@@ -19,7 +20,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
       const _Request = Request;
       let isInstanceOfResult = typeof Request !== "undefined";
       if (typeof Request !== "undefined") {
-        let tmpResult = tmp(12804);
+        let tmpResult = _mod12804;
         const _Request2 = Request;
         isInstanceOfResult = tmpResult.isInstanceOf(headers, Request);
       }
@@ -33,7 +34,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
       const _Headers = Headers;
       let isInstanceOfResult1 = typeof Headers !== "undefined";
       if (typeof Headers !== "undefined") {
-        tmpResult = tmp(12804);
+        tmpResult = _mod12804;
         const _Headers3 = Headers;
         isInstanceOfResult1 = tmpResult.isInstanceOf(headers, Headers);
       }

@@ -65,7 +65,7 @@ export const useOnAction = function useOnAction(router) {
         }
         let rehydratedState = tmp12;
         if (tmp13) {
-          rehydratedState = obj2.getRehydratedState(tmp12, tmp9.current);
+          rehydratedState = router.getRehydratedState(tmp12, ref.current);
         }
         if (null !== rehydratedState) {
           if (tmp6 !== rehydratedState) {
@@ -85,7 +85,7 @@ export const useOnAction = function useOnAction(router) {
             onDispatchAction(target, true);
           }
           if (undefined !== onRouteFocus) {
-            let result = obj2.shouldActionChangeFocus(target);
+            let result = router.shouldActionChangeFocus(target);
             if (result) {
               result = undefined !== key;
             }
@@ -95,7 +95,6 @@ export const useOnAction = function useOnAction(router) {
           }
           return true;
         }
-        tmp9 = ref;
       }
       if (undefined !== onAction) {
         if (onAction(target, set)) {

@@ -18,7 +18,7 @@ let obj = {
   transactionNamingScheme: "methodPath",
 };
 
-export const requestDataIntegration = setupIntegration.defineIntegration((include) => {
+export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   if (include === undefined) {
     include = {};
   }

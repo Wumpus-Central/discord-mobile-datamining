@@ -100,7 +100,7 @@ function _setAppStartEndData(arg0) {
 
 export const captureAppStart = function captureAppStart() {
   c0 = true;
-  return fn(undefined, undefined, undefined, function* (arg0, value) {
+  return fn(undefined, undefined, undefined, function* () {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -209,7 +209,7 @@ export const captureAppStart = function captureAppStart() {
 export const _captureAppStart = function _captureAppStart(_captureAppStartResult3) {
   const isManual = _captureAppStartResult3.isManual;
   c1 = undefined;
-  return fn(this, undefined, undefined, function* (arg0, value) {
+  return fn(this, undefined, undefined, function* () {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -362,7 +362,7 @@ export const appStartIntegration = () => {
   }
   function attachAppStartToTransactionEvent(arg0) {
     closure_0 = arg0;
-    return c2(undefined, undefined, undefined, function* (arg0, value) {
+    return c2(undefined, undefined, undefined, function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -614,41 +614,52 @@ export const appStartIntegration = () => {
                               frozen: endFrames.frozenFrames,
                             },
                           });
+                          const obj = {
+                            spanId: spanId.span_id,
+                            frameData: {
+                              total: endFrames.totalFrames,
+                              slow: endFrames.slowFrames,
+                              frozen: endFrames.frozenFrames,
+                            },
+                          };
                         })(closure_129_11, _true.endFrames);
                       }
-                      closure_129_14 = (function createJSExecutionStartSpan(start_timestamp, arg1) {
+                      closure_129_14 = (function createJSExecutionStartSpan(
+                        start_timestamp,
+                        recordFirstStartedActiveRootSpanId,
+                      ) {
                         let obj = closure_1_0(1021);
                         const bundleStartTimestampMs = obj.getBundleStartTimestampMs();
                         if (bundleStartTimestampMs) {
                           const result = bundleStartTimestampMs / 1000;
                           if (result < start_timestamp.start_timestamp) {
-                            const debug2 = tmp(682).debug;
+                            const debug2 = closure_1_0(682).debug;
                             debug2.warn(
                               "Bundle start timestamp is before the app start span start timestamp. Skipping JS execution span.",
                             );
-                          } else if (arg1) {
-                            tmp(1021);
+                          } else if (recordFirstStartedActiveRootSpanId) {
+                            closure_1_0(1021);
                             obj = {
                               description: "JS Bundle Execution Before React Root",
                               start_timestamp: result,
-                              timestamp: arg1 / 1000,
+                              timestamp: recordFirstStartedActiveRootSpanId / 1000,
                               origin: null,
                             };
-                            const tmpResult = tmp(1023);
+                            const tmpResult = closure_1_0(1023);
                             obj.origin = closure_1_7
                               ? tmpResult.SPAN_ORIGIN_MANUAL_APP_START
                               : tmpResult.SPAN_ORIGIN_AUTO_APP_START;
                             return tmpResult.createChildSpanJSON(start_timestamp, obj);
                           } else {
-                            const debug = tmp(682).debug;
+                            const debug = closure_1_0(682).debug;
                             debug.warn("Missing the root component first constructor call timestamp.");
                             obj = {
                               description: "JS Bundle Execution Start",
                               start_timestamp: result,
                               timestamp: result,
-                              origin: tmp(1023).SPAN_ORIGIN_AUTO_APP_START,
+                              origin: closure_1_0(1023).SPAN_ORIGIN_AUTO_APP_START,
                             };
-                            return tmp(1021).createChildSpanJSON(start_timestamp, obj);
+                            return closure_1_0(1021).createChildSpanJSON(start_timestamp, obj);
                           }
                         }
                       })(closure_129_11, recordFirstStartedActiveRootSpanId);
@@ -681,7 +692,7 @@ export const appStartIntegration = () => {
                                 timestamp: start_timestamp_ms.end_timestamp_ms / 1000,
                                 origin: closure_0(1023).SPAN_ORIGIN_AUTO_APP_START,
                               };
-                              let childSpanJSON = closure_0(1021).createChildSpanJSON(tmp3, obj);
+                              let childSpanJSON = closure_0(1021).createChildSpanJSON(start_timestamp, obj);
                               obj.setMainThreadInfo(childSpanJSON);
                               const obj3 = closure_0(1021);
                             }
@@ -696,7 +707,7 @@ export const appStartIntegration = () => {
                             obj.timestamp = bundleStartTimestampMs / 1000;
                             bundleStartTimestampMs = closure_0;
                             obj.origin = closure_0(1023).SPAN_ORIGIN_AUTO_APP_START;
-                            childSpanJSON = closure_0(1021).createChildSpanJSON(tmp3, obj);
+                            childSpanJSON = closure_0(1021).createChildSpanJSON(start_timestamp, obj);
                             const obj5 = closure_0(1021);
                           } else {
                             const obj7 = closure_0(1025);
@@ -775,11 +786,10 @@ export const appStartIntegration = () => {
     if (!spanId) {
       if (obj.isRootSpan(spanContext)) {
         spanId = spanContext.spanContext().spanId;
-        const debug = tmp2(682).debug;
+        const debug = _mod682.debug;
         debug.log("[AppStart] First started active root span id recorded.", spanId);
       }
       obj = _mod987;
-      tmp2 = require;
     }
   }
   obj = {
@@ -793,10 +803,10 @@ export const appStartIntegration = () => {
       }
       getOptions.on("spanStart", recordFirstStartedActiveRootSpanId);
     },
-    afterAllSetup(arg0) {
+    afterAllSetup(client) {
       if (!c4) {
         c4 = true;
-        const appRegistryIntegration = patchAppRegistryRunApplication.getAppRegistryIntegration(arg0);
+        const appRegistryIntegration = patchAppRegistryRunApplication.getAppRegistryIntegration(client);
         if (!tmp5) {
           appRegistryIntegration.onRunApplication(() => {
             const debug = flag(closure_1[0]).debug;
@@ -817,7 +827,7 @@ export const appStartIntegration = () => {
     },
     processEvent(arg0) {
       closure_0 = arg0;
-      return c2(undefined, undefined, undefined, function* (arg0, value) {
+      return c2(undefined, undefined, undefined, function* () {
         if (c2 === 2) {
           c2 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -875,7 +885,7 @@ export const appStartIntegration = () => {
       });
     },
     captureStandaloneAppStart() {
-      return fn(this, undefined, undefined, function* (arg0, value) {
+      return fn(this, undefined, undefined, function* () {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

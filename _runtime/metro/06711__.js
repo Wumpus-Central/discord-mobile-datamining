@@ -1,4 +1,5 @@
 // _runtime/metro/06711__.js
+import ComposedGestureName from "../06714_ComposedGestureName.js";
 import DEFAULT_PROPS_TRANSFORMER from "../06723_DEFAULT_PROPS_TRANSFORMER.js";
 import _mod6727 from "06727__.js";
 import _slicedToArray from "00032__.js";
@@ -10,11 +11,11 @@ function isSupportedGesture(gestures) {
     return gestures.some(isSupportedGesture);
   } else {
     const type = gestures.type;
-    if (tmp(6714).SingleGestureName.Tap !== type) {
-      if (tmp(6714).SingleGestureName.LongPress !== type) {
-        if (tmp(6714).SingleGestureName.Fling !== type) {
-          if (tmp(6714).SingleGestureName.Native !== type) {
-            if (tmp(6714).SingleGestureName.Hover !== type) {
+    if (ComposedGestureName.SingleGestureName.Tap !== type) {
+      if (ComposedGestureName.SingleGestureName.LongPress !== type) {
+        if (ComposedGestureName.SingleGestureName.Fling !== type) {
+          if (ComposedGestureName.SingleGestureName.Native !== type) {
+            if (ComposedGestureName.SingleGestureName.Hover !== type) {
               return false;
             }
           }
@@ -102,10 +103,10 @@ export const useJSResponderHandler = function useJSResponderHandler(gesture) {
         let flag = some(isSupportedGesture);
       } else {
         const type = some.type;
-        if (tmp(6714).SingleGestureName.Tap !== type) {
-          if (tmp(6714).SingleGestureName.LongPress !== type) {
-            if (tmp(6714).SingleGestureName.Fling !== type) {
-              if (tmp(6714).SingleGestureName.Native !== type) {
+        if (ComposedGestureName.SingleGestureName.Tap !== type) {
+          if (ComposedGestureName.SingleGestureName.LongPress !== type) {
+            if (ComposedGestureName.SingleGestureName.Fling !== type) {
+              if (ComposedGestureName.SingleGestureName.Native !== type) {
                 flag = false;
               }
             }
@@ -113,7 +114,7 @@ export const useJSResponderHandler = function useJSResponderHandler(gesture) {
         }
         flag = true;
       }
-      tmpResult = tmp(6723);
+      tmpResult = DEFAULT_PROPS_TRANSFORMER;
     }
   }, items1);
   closure_4 = tmp7;

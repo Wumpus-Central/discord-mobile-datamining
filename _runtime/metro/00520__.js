@@ -1,7 +1,6 @@
 // _runtime/metro/00520__.js
 import _mod521 from "00521__.js";
-
-const _mod522 = tmp(522);
+import _mod522 from "00522__.js";
 
 export default function isFunction(arg0) {
   if (_mod521(arg0)) {

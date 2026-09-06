@@ -144,11 +144,11 @@ export const $constructor = function $constructor(ZodError, initializer, Parent)
   obj = {
     value(_zod) {
       Parent = undefined;
-      if (closure_2 != null) {
-        Parent = tmp.Parent;
+      if (Parent != null) {
+        Parent = Parent.Parent;
       }
       if (Parent) {
-        Parent = _zod instanceof tmp.Parent;
+        Parent = _zod instanceof Parent.Parent;
       }
       let tmp3 = Parent;
       if (!tmp3) {

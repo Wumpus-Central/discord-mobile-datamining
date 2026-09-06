@@ -121,16 +121,16 @@ if (typeof exports === "object") {
                   return arg0 + "'\u0131nc\u0131";
                 } else {
                   const result = arg0 % 10;
-                  let tmp3 = closure_0[result];
+                  let tmp3 = dependencyMap[result];
                   if (!tmp3) {
-                    tmp3 = tmp2[(arg0 % 100) - result];
+                    tmp3 = dependencyMap[(arg0 % 100) - result];
                   }
                   if (!tmp3) {
                     let num5 = null;
                     if (arg0 >= 100) {
                       num5 = 100;
                     }
-                    tmp3 = tmp2[num5];
+                    tmp3 = dependencyMap[num5];
                   }
                   return arg0 + tmp3;
                 }
@@ -148,7 +148,7 @@ if (typeof exports === "object") {
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(["../moment"], function n(defineLocale) {
-      closure_0 = {
+      dependencyMap = {
         1: "'inci",
         5: "'inci",
         8: "'inci",
@@ -243,16 +243,16 @@ if (typeof globalThis.define === "function") {
                     return arg0 + "'\u0131nc\u0131";
                   } else {
                     const result = arg0 % 10;
-                    let tmp3 = closure_0[result];
+                    let tmp3 = dependencyMap[result];
                     if (!tmp3) {
-                      tmp3 = tmp2[(arg0 % 100) - result];
+                      tmp3 = dependencyMap[(arg0 % 100) - result];
                     }
                     if (!tmp3) {
                       let num5 = null;
                       if (arg0 >= 100) {
                         num5 = 100;
                       }
-                      tmp3 = tmp2[num5];
+                      tmp3 = dependencyMap[num5];
                     }
                     return arg0 + tmp3;
                   }
@@ -363,16 +363,16 @@ obj = {
               return arg0 + "'\u0131nc\u0131";
             } else {
               const result = arg0 % 10;
-              let tmp3 = closure_0[result];
+              let tmp3 = dependencyMap[result];
               if (!tmp3) {
-                tmp3 = tmp2[(arg0 % 100) - result];
+                tmp3 = dependencyMap[(arg0 % 100) - result];
               }
               if (!tmp3) {
                 let num5 = null;
                 if (arg0 >= 100) {
                   num5 = 100;
                 }
-                tmp3 = tmp2[num5];
+                tmp3 = dependencyMap[num5];
               }
               return arg0 + tmp3;
             }

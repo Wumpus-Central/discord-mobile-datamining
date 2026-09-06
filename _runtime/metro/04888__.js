@@ -27,9 +27,9 @@ let fn = function t(exports, React) {
           if (item in closure_0) {
             const _Object = Object;
             const obj = { value: tmp2, enumerable: true, configurable: true, writable: true };
-            Object.defineProperty(tmp, item, obj);
+            Object.defineProperty(closure_0, item, obj);
           } else {
-            tmp[item] = tmp2;
+            closure_0[item] = tmp2;
           }
         });
       } else {
@@ -522,12 +522,12 @@ let fn = function t(exports, React) {
         options.useState(() => {
           let stripe = null;
           if ("sync" === memo.tag) {
-            stripe = tmp.stripe;
+            stripe = memo.stripe;
           }
           const obj = { stripe, elements: null };
           let elementsResult = null;
           if ("sync" === memo.tag) {
-            stripe = tmp.stripe;
+            stripe = memo.stripe;
             elementsResult = stripe.elements(ref1);
           }
           obj.elements = elementsResult;
@@ -546,7 +546,7 @@ let fn = function t(exports, React) {
         c0 = true;
         if ("async" === memo.tag) {
           if (!first.stripe) {
-            tmp.stripePromise.then((result) => {
+            memo.stripePromise.then((result) => {
               let tmp = result;
               if (result) {
                 tmp = c0;
@@ -563,18 +563,18 @@ let fn = function t(exports, React) {
                 });
               }
             });
-            const stripePromise = tmp.stripePromise;
+            const stripePromise = memo.stripePromise;
           }
           return () => {
             c0 = false;
           };
         }
-        let stripe = "sync" !== tmp.tag;
+        let stripe = "sync" !== memo.tag;
         if (!stripe) {
           stripe = first.stripe;
         }
         if (!stripe) {
-          const stripe2 = tmp.stripe;
+          const stripe2 = memo.stripe;
           closure_4((stripe) => {
             let tmp = stripe;
             if (!stripe.stripe) {
@@ -625,26 +625,26 @@ let fn = function t(exports, React) {
           effect4 = obj.useEffect(() => {
             if (first.elements) {
               if (typeof extractAllowedOptionsUpdates === "function") {
-                closure_0 = tmp3;
+                closure_0 = tmp4;
                 closure_2 = ["clientSecret", "fonts"];
                 if (typeof isUnknownObject === "function") {
-                  let tmp7 = null !== tmp3;
+                  let tmp7 = null !== tmp4;
                   if (tmp7) {
-                    tmp7 = "object" === fn(tmp3);
+                    tmp7 = "object" === fn(tmp4);
                   }
                   let reduced = null;
                   if (tmp7) {
                     const _Object = Object;
-                    const keys = Object.keys(tmp3);
+                    const keys = Object.keys(tmp4);
                     reduced = keys.reduce((acc, item) => {
                       if (typeof current === "function") {
-                        let tmp3 = null !== tmp;
+                        let tmp3 = null !== tmp4;
                         if (tmp3) {
-                          tmp3 = "object" === onReady(tmp);
+                          tmp3 = "object" === onReady(tmp4);
                         }
                         let tmp6 = !tmp3;
                         if (tmp3) {
-                          tmp6 = !closure_2_10(dependencyMap[item], tmp[item]);
+                          tmp6 = !closure_2_10(dependencyMap[item], tmp4[item]);
                         }
                         if (closure_2.includes(item)) {
                           let tmp11 = acc;
@@ -689,7 +689,6 @@ let fn = function t(exports, React) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                ref1 = tmp4;
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -827,7 +826,7 @@ let fn = function t(exports, React) {
         c0 = true;
         if ("async" === memo.tag) {
           if (!first1.stripe) {
-            tmp.stripePromise.then((initCheckout) => {
+            memo.stripePromise.then((initCheckout) => {
               closure_0 = initCheckout;
               let tmp = initCheckout;
               if (initCheckout) {
@@ -859,19 +858,19 @@ let fn = function t(exports, React) {
                 });
               }
             });
-            const stripePromise = tmp.stripePromise;
+            const stripePromise = memo.stripePromise;
           }
           return () => {
             c0 = false;
           };
         }
-        let tmp4 = "sync" === tmp.tag && tmp.stripe;
+        let tmp4 = "sync" === memo.tag && memo.stripe;
         if (tmp4) {
           tmp4 = !ref.current;
         }
         if (tmp4) {
           ref.current = true;
-          let stripe = tmp.stripe;
+          let stripe = memo.stripe;
           let checkout = stripe.initCheckout(ref2);
           checkout.then((on) => {
             if (on) {
@@ -971,7 +970,7 @@ let fn = function t(exports, React) {
                 let tmp7 = !tmp6;
                 checkoutSdk = !current3;
                 if (!current3) {
-                  checkoutSdk = tmp.checkoutSdk;
+                  checkoutSdk = first1.checkoutSdk;
                 }
                 let tmp9 = appearance1;
                 if (appearance1) {
@@ -981,7 +980,7 @@ let fn = function t(exports, React) {
                   tmp9 = tmp7;
                 }
                 if (tmp9) {
-                  const checkoutSdk2 = tmp.checkoutSdk;
+                  const checkoutSdk2 = first1.checkoutSdk;
                   checkoutSdk2.changeAppearance(appearance1);
                 }
               }
@@ -1196,30 +1195,30 @@ let fn = function t(exports, React) {
             const first = tmp22[0];
             let ref13 = first;
             closure_5 = tmp22[1];
-            obj2.useRef(null);
-            const ref = obj2.useRef(null);
+            address.useRef(null);
+            const ref = address.useRef(null);
             if (typeof useAttachEvent === "function") {
               options = first;
               ref14 = "blur";
-              onReady = tmp26;
-              const ref1 = obj2.useRef(onBlur);
+              onReady = onBlur;
+              const ref1 = address.useRef(onBlur);
               ref13 = ref1;
               const items = [onBlur];
-              const effect = obj2.useEffect(() => {
+              const effect = address.useEffect(() => {
                 ref13.current = onReady;
               }, items);
               const items1 = [onBlur, "blur", first, ref1];
-              const effect1 = obj2.useEffect(() => {
+              const effect1 = address.useEffect(() => {
                 if (onReady) {
                   if (decoratedCb) {
                     decoratedCb = function decoratedCb() {
                       if (ref.current) {
-                        current = tmp.current;
+                        current = ref.current;
                         const apply = current.apply;
                         if (typeof apply === "unknown") {
-                          HermesBuiltin.applyArguments(tmp);
+                          HermesBuiltin.applyArguments(ref);
                         } else {
-                          apply(tmp, arguments);
+                          apply(ref, arguments);
                         }
                       }
                     };
@@ -1232,28 +1231,28 @@ let fn = function t(exports, React) {
                 }
                 return () => {};
               }, items1);
-              if (typeof tmp25 === "function") {
+              if (typeof useAttachEvent === "function") {
                 options = first;
                 ref14 = "focus";
-                onReady = tmp30;
-                const ref2 = obj2.useRef(onFocus);
+                onReady = onFocus;
+                const ref2 = address.useRef(onFocus);
                 ref13 = ref2;
                 const items2 = [onFocus];
-                const effect2 = obj2.useEffect(() => {
+                const effect2 = address.useEffect(() => {
                   ref13.current = onReady;
                 }, items2);
                 const items3 = [onFocus, "focus", first, ref2];
-                const effect3 = obj2.useEffect(() => {
+                const effect3 = address.useEffect(() => {
                   if (onReady) {
                     if (decoratedCb) {
                       decoratedCb = function decoratedCb() {
                         if (ref.current) {
-                          current = tmp.current;
+                          current = ref.current;
                           const apply = current.apply;
                           if (typeof apply === "unknown") {
-                            HermesBuiltin.applyArguments(tmp);
+                            HermesBuiltin.applyArguments(ref);
                           } else {
-                            apply(tmp, arguments);
+                            apply(ref, arguments);
                           }
                         }
                       };
@@ -1266,28 +1265,28 @@ let fn = function t(exports, React) {
                   }
                   return () => {};
                 }, items3);
-                if (typeof tmp25 === "function") {
+                if (typeof useAttachEvent === "function") {
                   options = first;
                   ref14 = "escape";
-                  onReady = tmp34;
-                  const ref3 = obj2.useRef(onEscape);
+                  onReady = onEscape;
+                  const ref3 = address.useRef(onEscape);
                   ref13 = ref3;
                   const items4 = [onEscape];
-                  const effect4 = obj2.useEffect(() => {
+                  const effect4 = address.useEffect(() => {
                     ref13.current = onReady;
                   }, items4);
                   const items5 = [onEscape, "escape", first, ref3];
-                  const effect5 = obj2.useEffect(() => {
+                  const effect5 = address.useEffect(() => {
                     if (onReady) {
                       if (decoratedCb) {
                         decoratedCb = function decoratedCb() {
                           if (ref.current) {
-                            current = tmp.current;
+                            current = ref.current;
                             const apply = current.apply;
                             if (typeof apply === "unknown") {
-                              HermesBuiltin.applyArguments(tmp);
+                              HermesBuiltin.applyArguments(ref);
                             } else {
-                              apply(tmp, arguments);
+                              apply(ref, arguments);
                             }
                           }
                         };
@@ -1300,28 +1299,28 @@ let fn = function t(exports, React) {
                     }
                     return () => {};
                   }, items5);
-                  if (typeof tmp25 === "function") {
+                  if (typeof useAttachEvent === "function") {
                     options = first;
                     ref14 = "click";
-                    onReady = tmp38;
-                    const ref4 = obj2.useRef(onClick);
+                    onReady = onClick;
+                    const ref4 = address.useRef(onClick);
                     ref13 = ref4;
                     const items6 = [onClick];
-                    const effect6 = obj2.useEffect(() => {
+                    const effect6 = address.useEffect(() => {
                       ref13.current = onReady;
                     }, items6);
                     const items7 = [onClick, "click", first, ref4];
-                    const effect7 = obj2.useEffect(() => {
+                    const effect7 = address.useEffect(() => {
                       if (onReady) {
                         if (decoratedCb) {
                           decoratedCb = function decoratedCb() {
                             if (ref.current) {
-                              current = tmp.current;
+                              current = ref.current;
                               const apply = current.apply;
                               if (typeof apply === "unknown") {
-                                HermesBuiltin.applyArguments(tmp);
+                                HermesBuiltin.applyArguments(ref);
                               } else {
-                                apply(tmp, arguments);
+                                apply(ref, arguments);
                               }
                             }
                           };
@@ -1334,28 +1333,28 @@ let fn = function t(exports, React) {
                       }
                       return () => {};
                     }, items7);
-                    if (typeof tmp25 === "function") {
+                    if (typeof useAttachEvent === "function") {
                       options = first;
                       ref14 = "loaderror";
-                      onReady = tmp42;
-                      const ref5 = obj2.useRef(onLoadError);
+                      onReady = onLoadError;
+                      const ref5 = address.useRef(onLoadError);
                       ref13 = ref5;
                       const items8 = [onLoadError];
-                      const effect8 = obj2.useEffect(() => {
+                      const effect8 = address.useEffect(() => {
                         ref13.current = onReady;
                       }, items8);
                       const items9 = [onLoadError, "loaderror", first, ref5];
-                      const effect9 = obj2.useEffect(() => {
+                      const effect9 = address.useEffect(() => {
                         if (onReady) {
                           if (decoratedCb) {
                             decoratedCb = function decoratedCb() {
                               if (ref.current) {
-                                current = tmp.current;
+                                current = ref.current;
                                 const apply = current.apply;
                                 if (typeof apply === "unknown") {
-                                  HermesBuiltin.applyArguments(tmp);
+                                  HermesBuiltin.applyArguments(ref);
                                 } else {
-                                  apply(tmp, arguments);
+                                  apply(ref, arguments);
                                 }
                               }
                             };
@@ -1368,28 +1367,28 @@ let fn = function t(exports, React) {
                         }
                         return () => {};
                       }, items9);
-                      if (typeof tmp25 === "function") {
+                      if (typeof useAttachEvent === "function") {
                         options = first;
                         ref14 = "loaderstart";
-                        onReady = tmp46;
-                        const ref6 = obj2.useRef(onLoaderStart);
+                        onReady = onLoaderStart;
+                        const ref6 = address.useRef(onLoaderStart);
                         ref13 = ref6;
                         const items10 = [onLoaderStart];
-                        const effect10 = obj2.useEffect(() => {
+                        const effect10 = address.useEffect(() => {
                           ref13.current = onReady;
                         }, items10);
                         const items11 = [onLoaderStart, "loaderstart", first, ref6];
-                        const effect11 = obj2.useEffect(() => {
+                        const effect11 = address.useEffect(() => {
                           if (onReady) {
                             if (decoratedCb) {
                               decoratedCb = function decoratedCb() {
                                 if (ref.current) {
-                                  current = tmp.current;
+                                  current = ref.current;
                                   const apply = current.apply;
                                   if (typeof apply === "unknown") {
-                                    HermesBuiltin.applyArguments(tmp);
+                                    HermesBuiltin.applyArguments(ref);
                                   } else {
-                                    apply(tmp, arguments);
+                                    apply(ref, arguments);
                                   }
                                 }
                               };
@@ -1402,28 +1401,28 @@ let fn = function t(exports, React) {
                           }
                           return () => {};
                         }, items11);
-                        if (typeof tmp25 === "function") {
+                        if (typeof useAttachEvent === "function") {
                           options = first;
                           ref14 = "networkschange";
-                          onReady = tmp50;
-                          const ref7 = obj2.useRef(onNetworksChange);
+                          onReady = onNetworksChange;
+                          const ref7 = address.useRef(onNetworksChange);
                           ref13 = ref7;
                           const items12 = [onNetworksChange];
-                          const effect12 = obj2.useEffect(() => {
+                          const effect12 = address.useEffect(() => {
                             ref13.current = onReady;
                           }, items12);
                           const items13 = [onNetworksChange, "networkschange", first, ref7];
-                          const effect13 = obj2.useEffect(() => {
+                          const effect13 = address.useEffect(() => {
                             if (onReady) {
                               if (decoratedCb) {
                                 decoratedCb = function decoratedCb() {
                                   if (ref.current) {
-                                    current = tmp.current;
+                                    current = ref.current;
                                     const apply = current.apply;
                                     if (typeof apply === "unknown") {
-                                      HermesBuiltin.applyArguments(tmp);
+                                      HermesBuiltin.applyArguments(ref);
                                     } else {
-                                      apply(tmp, arguments);
+                                      apply(ref, arguments);
                                     }
                                   }
                                 };
@@ -1436,28 +1435,28 @@ let fn = function t(exports, React) {
                             }
                             return () => {};
                           }, items13);
-                          if (typeof tmp25 === "function") {
+                          if (typeof useAttachEvent === "function") {
                             options = first;
                             ref14 = "confirm";
-                            onReady = tmp54;
-                            const ref8 = obj2.useRef(onConfirm);
+                            onReady = onConfirm;
+                            const ref8 = address.useRef(onConfirm);
                             ref13 = ref8;
                             const items14 = [onConfirm];
-                            const effect14 = obj2.useEffect(() => {
+                            const effect14 = address.useEffect(() => {
                               ref13.current = onReady;
                             }, items14);
                             const items15 = [onConfirm, "confirm", first, ref8];
-                            const effect15 = obj2.useEffect(() => {
+                            const effect15 = address.useEffect(() => {
                               if (onReady) {
                                 if (decoratedCb) {
                                   decoratedCb = function decoratedCb() {
                                     if (ref.current) {
-                                      current = tmp.current;
+                                      current = ref.current;
                                       const apply = current.apply;
                                       if (typeof apply === "unknown") {
-                                        HermesBuiltin.applyArguments(tmp);
+                                        HermesBuiltin.applyArguments(ref);
                                       } else {
-                                        apply(tmp, arguments);
+                                        apply(ref, arguments);
                                       }
                                     }
                                   };
@@ -1470,28 +1469,28 @@ let fn = function t(exports, React) {
                               }
                               return () => {};
                             }, items15);
-                            if (typeof tmp25 === "function") {
+                            if (typeof useAttachEvent === "function") {
                               options = first;
                               ref14 = "cancel";
-                              onReady = tmp58;
-                              const ref9 = obj2.useRef(onCancel);
+                              onReady = onCancel;
+                              const ref9 = address.useRef(onCancel);
                               ref13 = ref9;
                               const items16 = [onCancel];
-                              const effect16 = obj2.useEffect(() => {
+                              const effect16 = address.useEffect(() => {
                                 ref13.current = onReady;
                               }, items16);
                               const items17 = [onCancel, "cancel", first, ref9];
-                              const effect17 = obj2.useEffect(() => {
+                              const effect17 = address.useEffect(() => {
                                 if (onReady) {
                                   if (decoratedCb) {
                                     decoratedCb = function decoratedCb() {
                                       if (ref.current) {
-                                        current = tmp.current;
+                                        current = ref.current;
                                         const apply = current.apply;
                                         if (typeof apply === "unknown") {
-                                          HermesBuiltin.applyArguments(tmp);
+                                          HermesBuiltin.applyArguments(ref);
                                         } else {
-                                          apply(tmp, arguments);
+                                          apply(ref, arguments);
                                         }
                                       }
                                     };
@@ -1504,28 +1503,28 @@ let fn = function t(exports, React) {
                                 }
                                 return () => {};
                               }, items17);
-                              if (typeof tmp25 === "function") {
+                              if (typeof useAttachEvent === "function") {
                                 options = first;
                                 ref14 = "shippingaddresschange";
-                                onReady = tmp62;
-                                const ref10 = obj2.useRef(onShippingAddressChange);
+                                onReady = onShippingAddressChange;
+                                const ref10 = address.useRef(onShippingAddressChange);
                                 ref13 = ref10;
                                 const items18 = [onShippingAddressChange];
-                                const effect18 = obj2.useEffect(() => {
+                                const effect18 = address.useEffect(() => {
                                   ref13.current = onReady;
                                 }, items18);
                                 const items19 = [onShippingAddressChange, "shippingaddresschange", first, ref10];
-                                const effect19 = obj2.useEffect(() => {
+                                const effect19 = address.useEffect(() => {
                                   if (onReady) {
                                     if (decoratedCb) {
                                       decoratedCb = function decoratedCb() {
                                         if (ref.current) {
-                                          current = tmp.current;
+                                          current = ref.current;
                                           const apply = current.apply;
                                           if (typeof apply === "unknown") {
-                                            HermesBuiltin.applyArguments(tmp);
+                                            HermesBuiltin.applyArguments(ref);
                                           } else {
-                                            apply(tmp, arguments);
+                                            apply(ref, arguments);
                                           }
                                         }
                                       };
@@ -1538,28 +1537,28 @@ let fn = function t(exports, React) {
                                   }
                                   return () => {};
                                 }, items19);
-                                if (typeof tmp25 === "function") {
+                                if (typeof useAttachEvent === "function") {
                                   options = first;
                                   ref14 = "shippingratechange";
-                                  onReady = tmp66;
-                                  const ref11 = obj2.useRef(onShippingRateChange);
+                                  onReady = onShippingRateChange;
+                                  const ref11 = address.useRef(onShippingRateChange);
                                   ref13 = ref11;
                                   const items20 = [onShippingRateChange];
-                                  const effect20 = obj2.useEffect(() => {
+                                  const effect20 = address.useEffect(() => {
                                     ref13.current = onReady;
                                   }, items20);
                                   const items21 = [onShippingRateChange, "shippingratechange", first, ref11];
-                                  const effect21 = obj2.useEffect(() => {
+                                  const effect21 = address.useEffect(() => {
                                     if (onReady) {
                                       if (decoratedCb) {
                                         decoratedCb = function decoratedCb() {
                                           if (ref.current) {
-                                            current = tmp.current;
+                                            current = ref.current;
                                             const apply = current.apply;
                                             if (typeof apply === "unknown") {
-                                              HermesBuiltin.applyArguments(tmp);
+                                              HermesBuiltin.applyArguments(ref);
                                             } else {
-                                              apply(tmp, arguments);
+                                              apply(ref, arguments);
                                             }
                                           }
                                         };
@@ -1572,28 +1571,28 @@ let fn = function t(exports, React) {
                                     }
                                     return () => {};
                                   }, items21);
-                                  if (typeof tmp25 === "function") {
+                                  if (typeof useAttachEvent === "function") {
                                     options = first;
                                     ref14 = "change";
-                                    onReady = tmp70;
-                                    const ref12 = obj2.useRef(onChange);
+                                    onReady = onChange;
+                                    const ref12 = address.useRef(onChange);
                                     ref13 = ref12;
                                     const items22 = [onChange];
-                                    const effect22 = obj2.useEffect(() => {
+                                    const effect22 = address.useEffect(() => {
                                       ref13.current = onReady;
                                     }, items22);
                                     const items23 = [onChange, "change", first, ref12];
-                                    const effect23 = obj2.useEffect(() => {
+                                    const effect23 = address.useEffect(() => {
                                       if (onReady) {
                                         if (decoratedCb) {
                                           decoratedCb = function decoratedCb() {
                                             if (ref.current) {
-                                              current = tmp.current;
+                                              current = ref.current;
                                               const apply = current.apply;
                                               if (typeof apply === "unknown") {
-                                                HermesBuiltin.applyArguments(tmp);
+                                                HermesBuiltin.applyArguments(ref);
                                               } else {
-                                                apply(tmp, arguments);
+                                                apply(ref, arguments);
                                               }
                                             }
                                           };
@@ -1613,27 +1612,27 @@ let fn = function t(exports, React) {
                                         };
                                       }
                                     }
-                                    if (typeof tmp25 === "function") {
+                                    if (typeof useAttachEvent === "function") {
                                       options = first;
                                       ref14 = "ready";
                                       onReady = tmp76;
-                                      ref13 = obj2.useRef(tmp74);
+                                      ref13 = address.useRef(tmp74);
                                       const items24 = [tmp74];
-                                      const effect24 = obj2.useEffect(() => {
+                                      const effect24 = address.useEffect(() => {
                                         ref13.current = onReady;
                                       }, items24);
                                       const items25 = [tmp74, "ready", first, ref13];
-                                      const effect25 = obj2.useEffect(() => {
+                                      const effect25 = address.useEffect(() => {
                                         if (onReady) {
                                           if (decoratedCb) {
                                             decoratedCb = function decoratedCb() {
                                               if (ref.current) {
-                                                current = tmp.current;
+                                                current = ref.current;
                                                 const apply = current.apply;
                                                 if (typeof apply === "unknown") {
-                                                  HermesBuiltin.applyArguments(tmp);
+                                                  HermesBuiltin.applyArguments(ref);
                                                 } else {
-                                                  apply(tmp, arguments);
+                                                  apply(ref, arguments);
                                                 }
                                               }
                                             };
@@ -1647,19 +1646,19 @@ let fn = function t(exports, React) {
                                         return () => {};
                                       }, items25);
                                       const items26 = [elements, checkoutSdk, options];
-                                      const layoutEffect = obj2.useLayoutEffect(() => {
+                                      const layoutEffect = address.useLayoutEffect(() => {
                                         if (null === ref.current) {
                                           if (null !== ref.current) {
                                             if (onReady) {
                                               if (onReady) {
                                                 if ("payment" === closure_0) {
-                                                  let paymentElement = obj.createPaymentElement(options);
-                                                } else if ("address" === tmp6) {
+                                                  let paymentElement = onReady.createPaymentElement(options);
+                                                } else if ("address" === closure_0) {
                                                   if ("mode" in options) {
-                                                    const mode = tmp14.mode;
-                                                    const tmp22 = _objectWithoutProperties(tmp14, closure_24);
+                                                    const mode = options.mode;
+                                                    const tmp22 = _objectWithoutProperties(options, closure_24);
                                                     if ("shipping" === mode) {
-                                                      paymentElement = obj.createShippingAddressElement(tmp22);
+                                                      paymentElement = onReady.createShippingAddressElement(tmp22);
                                                     } else if ("billing" !== mode) {
                                                       const _Error3 = Error;
                                                       const error = new Error(
@@ -1667,7 +1666,7 @@ let fn = function t(exports, React) {
                                                       );
                                                       throw error;
                                                     } else {
-                                                      paymentElement = obj.createBillingAddressElement(tmp22);
+                                                      paymentElement = onReady.createBillingAddressElement(tmp22);
                                                     }
                                                   } else {
                                                     const _Error2 = Error;
@@ -1676,10 +1675,10 @@ let fn = function t(exports, React) {
                                                     );
                                                     throw error1;
                                                   }
-                                                } else if ("expressCheckout" === tmp6) {
-                                                  paymentElement = obj.createExpressCheckoutElement(options);
-                                                } else if ("currencySelector" === tmp6) {
-                                                  paymentElement = obj.createCurrencySelectorElement();
+                                                } else if ("expressCheckout" === closure_0) {
+                                                  paymentElement = onReady.createExpressCheckoutElement(options);
+                                                } else if ("currencySelector" === closure_0) {
+                                                  paymentElement = onReady.createCurrencySelectorElement();
                                                 } else {
                                                   const _Error = Error;
                                                   const concat = "Invalid Element type ".concat;
@@ -1693,8 +1692,8 @@ let fn = function t(exports, React) {
                                                 }
                                               } else {
                                                 paymentElement = null;
-                                                if (obj2) {
-                                                  paymentElement = obj2.create(closure_0, options);
+                                                if (onReady) {
+                                                  paymentElement = onReady.create(closure_0, options);
                                                 }
                                               }
                                               tmp.current = paymentElement;
@@ -1707,36 +1706,36 @@ let fn = function t(exports, React) {
                                         }
                                       }, items26);
                                       if (typeof usePrevious === "function") {
-                                        ref14 = obj2.useRef(options);
+                                        ref14 = address.useRef(options);
                                         const items27 = [options];
-                                        const effect26 = obj2.useEffect(() => {
+                                        const effect26 = address.useEffect(() => {
                                           ref14.current = options;
                                         }, items27);
                                         let current = ref14.current;
                                         const items28 = [options, current];
-                                        const effect27 = obj2.useEffect(() => {
+                                        const effect27 = address.useEffect(() => {
                                           if (ref.current) {
                                             if (typeof extractAllowedOptionsUpdates === "function") {
-                                              dependencyMap = tmp3;
+                                              dependencyMap = options;
                                               closure_2 = ["paymentRequest"];
                                               if (typeof isUnknownObject === "function") {
-                                                let tmp7 = null !== tmp3;
+                                                let tmp7 = null !== options;
                                                 if (tmp7) {
-                                                  tmp7 = "object" === fn(tmp3);
+                                                  tmp7 = "object" === fn(options);
                                                 }
                                                 let reduced = null;
                                                 if (tmp7) {
                                                   let _Object = Object;
-                                                  const keys = Object.keys(tmp3);
+                                                  const keys = Object.keys(options);
                                                   reduced = keys.reduce((acc, item) => {
                                                     if (typeof current === "function") {
-                                                      let tmp3 = null !== tmp;
+                                                      let tmp3 = null !== tmp4;
                                                       if (tmp3) {
-                                                        tmp3 = "object" === onReady(tmp);
+                                                        tmp3 = "object" === onReady(tmp4);
                                                       }
                                                       let tmp6 = !tmp3;
                                                       if (tmp3) {
-                                                        tmp6 = !closure_2_10(dependencyMap[item], tmp[item]);
+                                                        tmp6 = !closure_2_10(dependencyMap[item], tmp4[item]);
                                                       }
                                                       if (closure_2.includes(item)) {
                                                         let tmp11 = acc;
@@ -1784,10 +1783,10 @@ let fn = function t(exports, React) {
                                                 }
                                                 let tmp11 = reduced;
                                                 if (reduced) {
-                                                  tmp11 = "update" in tmp.current;
+                                                  tmp11 = "update" in ref.current;
                                                 }
                                                 if (tmp11) {
-                                                  current = tmp.current;
+                                                  current = ref.current;
                                                   current.update(reduced);
                                                 }
                                               } else {
@@ -1798,14 +1797,14 @@ let fn = function t(exports, React) {
                                             }
                                           }
                                         }, items28);
-                                        const layoutEffect1 = obj2.useLayoutEffect(
+                                        const layoutEffect1 = address.useLayoutEffect(
                                           () => () => {
                                             if (ref.current) {
-                                              if (typeof tmp.current.destroy === "function") {
+                                              if (typeof ref.current.destroy === "function") {
                                                 try {
-                                                  current = tmp.current;
+                                                  current = ref.current;
                                                   current.destroy();
-                                                  tmp.current = null;
+                                                  ref.current = null;
                                                 } catch (err) {}
                                               }
                                             }
@@ -1958,11 +1957,10 @@ let fn = function t(exports, React) {
                   if (ref.current) {
                     if (embeddedCheckout) {
                       try {
-                        obj.unmount();
+                        embeddedCheckout.unmount();
                         tmp.current = false;
                       } catch (err) {}
                     }
-                    obj = embeddedCheckout;
                   }
                 };
               }, items);
@@ -2002,8 +2000,8 @@ let fn = function t(exports, React) {
         if (!ref.current) {
           function setStripeAndInitEmbeddedCheckout(arg0) {}
           if ("async" === memo.tag) {
-            if (!tmp.current) {
-              tmp3.stripePromise.then((current) => {
+            if (!ref.current) {
+              memo.stripePromise.then((current) => {
                 if (current) {
                   if (typeof setStripeAndInitEmbeddedCheckout === "function") {
                     current = ref.current;
@@ -2011,8 +2009,8 @@ let fn = function t(exports, React) {
                       current = ref.current;
                     }
                     if (!current) {
-                      tmp2.current = current;
-                      current2 = tmp2.current;
+                      ref.current = current;
+                      current2 = ref.current;
                       const embeddedCheckout = current2.initEmbeddedCheckout(ref2);
                       ref.current = embeddedCheckout.then((embeddedCheckout) => {
                         closure_1_6({ embeddedCheckout });
@@ -2023,10 +2021,10 @@ let fn = function t(exports, React) {
                   }
                 }
               });
-              const stripePromise = tmp3.stripePromise;
+              const stripePromise = memo.stripePromise;
             }
           }
-          let tmp5 = "sync" !== tmp3.tag || tmp.current;
+          let tmp5 = "sync" !== memo.tag || ref.current;
           if (!tmp5) {
             const clientSecret = ref2.clientSecret;
             let tmp6 = !clientSecret;
@@ -2036,15 +2034,15 @@ let fn = function t(exports, React) {
             tmp5 = tmp6;
           }
           if (!tmp5) {
-            current = tmp.current;
+            current = ref.current;
             if (!current) {
-              current = tmp2.current;
+              current = ref.current;
             }
             if (!current) {
-              tmp.current = tmp3.stripe;
-              current2 = tmp.current;
+              ref.current = memo.stripe;
+              current2 = ref.current;
               let embeddedCheckout = current2.initEmbeddedCheckout(ref2);
-              tmp2.current = embeddedCheckout.then((embeddedCheckout) => {
+              ref.current = embeddedCheckout.then((embeddedCheckout) => {
                 closure_1_6({ embeddedCheckout });
               });
             }
@@ -2056,11 +2054,11 @@ let fn = function t(exports, React) {
     const effect1 = options.useEffect(
       () => () => {
         if (embeddedCheckout.embeddedCheckout) {
-          tmp2.current = null;
+          ref.current = null;
           embeddedCheckout = tmp.embeddedCheckout;
           embeddedCheckout.destroy();
-        } else if (tmp2.current) {
-          current = tmp2.current;
+        } else if (ref.current) {
+          current = ref.current;
           current.then(() => {
             closure_1_3.current = null;
             if (closure_1_5.embeddedCheckout) {
@@ -2075,16 +2073,16 @@ let fn = function t(exports, React) {
     const items3 = [ref];
     const effect2 = options.useEffect(() => {
       if (typeof registerWithStripeJs === "function") {
-        let registerAppInfo = obj;
-        if (obj) {
-          registerAppInfo = obj._registerWrapper;
+        let registerAppInfo = ref;
+        if (ref) {
+          registerAppInfo = ref._registerWrapper;
         }
         if (registerAppInfo) {
-          registerAppInfo = obj.registerAppInfo;
+          registerAppInfo = ref.registerAppInfo;
         }
         if (registerAppInfo) {
-          obj._registerWrapper({ name: "react-stripe-js", version: "3.7.0" });
-          obj.registerAppInfo({
+          ref._registerWrapper({ name: "react-stripe-js", version: "3.7.0" });
+          ref.registerAppInfo({
             name: "react-stripe-js",
             version: "3.7.0",
             url: "https://stripe.com/docs/stripe-js/react",
@@ -2163,13 +2161,14 @@ let fn = function t(exports, React) {
                   "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.",
                 );
               }
-              tmp10 = null != tmp.fetchClientSecret && tmp22.fetchClientSecret !== tmp.fetchClientSecret;
-              tmp13 = null != tmp.onComplete && tmp22.onComplete !== tmp.onComplete;
+              tmp10 = null != current2.fetchClientSecret && ref2.fetchClientSecret !== current2.fetchClientSecret;
+              tmp13 = null != current2.onComplete && ref2.onComplete !== current2.onComplete;
               tmp16 =
-                null != tmp.onShippingDetailsChange && tmp22.onShippingDetailsChange !== tmp.onShippingDetailsChange;
-              tmp19 = null != tmp.onLineItemsChange && tmp22.onLineItemsChange !== tmp.onLineItemsChange;
-              tmp4 = undefined === tmp22.clientSecret && undefined === tmp22.fetchClientSecret;
-              tmp7 = null != tmp.clientSecret && tmp22.clientSecret !== tmp.clientSecret;
+                null != current2.onShippingDetailsChange &&
+                ref2.onShippingDetailsChange !== current2.onShippingDetailsChange;
+              tmp19 = null != current2.onLineItemsChange && ref2.onLineItemsChange !== current2.onLineItemsChange;
+              tmp4 = undefined === ref2.clientSecret && undefined === ref2.fetchClientSecret;
+              tmp7 = null != current2.clientSecret && ref2.clientSecret !== current2.clientSecret;
             } else {
               const _console = console;
               console.warn(
@@ -2179,7 +2178,7 @@ let fn = function t(exports, React) {
           }
         }, items7);
         obj = { value };
-        return <context3.Provider value={value}>{arg0.children}</context3.Provider>;
+        return <context3.Provider value={value}>{stripe.children}</context3.Provider>;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2201,7 +2200,7 @@ let fn = function t(exports, React) {
   exports.useCheckout = function useCheckout() {
     if (typeof parseCheckoutSdkContext === "function") {
       if (React.useContext(context1)) {
-        context = obj.useContext(context2);
+        context = React.useContext(context2);
         if (context) {
           return context;
         } else {
@@ -2225,7 +2224,6 @@ let fn = function t(exports, React) {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    obj = React;
   };
   exports.useElements = function useElements() {
     if (typeof useElementsContextWithUseCase === "function") {

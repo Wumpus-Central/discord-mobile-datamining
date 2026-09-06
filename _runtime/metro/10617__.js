@@ -79,7 +79,6 @@ const items = [
           tmp6 = value;
         }
         match = tmp6;
-        str = text.text;
       }
       return match;
     },
@@ -90,10 +89,10 @@ const items = [
       const parseDurationResult = ENMergeRelativeDateRefiner(10601).parseDuration(text.text);
       let reverseDurationResult = parseDurationResult;
       if (null != str.match(/\s+(prima|dal)$/i)) {
-        reverseDurationResult = tmp(10434).reverseDuration(parseDurationResult);
+        reverseDurationResult = ENMergeRelativeDateRefiner(10434).reverseDuration(parseDurationResult);
       }
-      const ParsingComponents = tmp(10435).ParsingComponents;
-      const ReferenceWithTimezone = tmp(10435).ReferenceWithTimezone;
+      const ParsingComponents = ENMergeRelativeDateRefiner(10435).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeDateRefiner(10435).ReferenceWithTimezone;
       start = start.start;
       const relativeFromReference = ParsingComponents.createRelativeFromReference(
         ReferenceWithTimezone.fromDate(start.date()),

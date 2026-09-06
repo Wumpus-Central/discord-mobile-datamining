@@ -22,7 +22,7 @@ if (typeof Object.is === "function") {
 }
 ({ useRef: c3, useEffect: closure_4, useMemo: hasOwnProperty, useDebugValue: metroRequire } = noop);
 
-export const useSyncExternalStoreWithSelector = (subscribe, arg1, arg2, arg3, arg4) => {
+export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) => {
   _require = arg1;
   dependencyMap = arg2;
   closure_2 = arg3;
@@ -57,6 +57,7 @@ export const useSyncExternalStoreWithSelector = (subscribe, arg1, arg2, arg3, ar
             closure_0 = tmp;
             tmp9 = tmp5;
           }
+          tmp5 = value;
         } else {
           c2 = true;
           closure_0 = tmp;
@@ -89,6 +90,7 @@ export const useSyncExternalStoreWithSelector = (subscribe, arg1, arg2, arg3, ar
             closure_0 = tmp;
             tmp10 = tmp6;
           }
+          tmp6 = value;
         } else {
           c2 = true;
           closure_0 = tmp;
@@ -109,7 +111,7 @@ export const useSyncExternalStoreWithSelector = (subscribe, arg1, arg2, arg3, ar
     items[1] = fn;
     return items;
   }, items);
-  syncExternalStore = require("01247__.js").useSyncExternalStore(subscribe, tmp2[0], tmp2[1]);
+  syncExternalStore = require("01247__.js").useSyncExternalStore(arg0, tmp2[0], tmp2[1]);
   const items1 = [syncExternalStore];
   current(() => {
     current.hasValue = true;

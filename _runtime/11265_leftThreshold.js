@@ -215,18 +215,19 @@ function _default(hitSlop) {
     sharedValue3.value = cancelAnimation.interpolate(sum, items, items1);
     let num7 = 0;
     if (sharedValue5.value > 0) {
-      let tmp8Result = tmp8(1636);
-      const items2 = [-1, 0, iter4.value];
-      num7 = tmp8Result.interpolate(iter2.value, items2, [0, 0, 1]);
+      let tmp8Result = cancelAnimation;
+      const items2 = [-1, 0, sharedValue5.value];
+      num7 = tmp8Result.interpolate(sharedValue3.value, items2, [0, 0, 1]);
     }
     sharedValue7.value = num7;
     let num8 = 0;
     if (sharedValue6.value > 0) {
-      tmp8Result = tmp8(1636);
-      const items3 = [-iter3.value, 0, 1];
-      num8 = tmp8Result.interpolate(iter2.value, items3, [1, 0, 0]);
+      tmp8Result = cancelAnimation;
+      const items3 = [-sharedValue6.value, 0, 1];
+      num8 = tmp8Result.interpolate(sharedValue3.value, items3, [1, 0, 0]);
     }
     sharedValue8.value = num8;
+    const tmp10 = -sharedValue6.value;
   };
   obj = {
     overshootLeft,
@@ -276,10 +277,9 @@ function _default(hitSlop) {
         } else {
           RIGHT = _mod11266.SwipeDirection.RIGHT;
         }
-        cancelAnimation.runOnJS(tmp11)(RIGHT);
-        const runOnJSResult = cancelAnimation.runOnJS(tmp11);
+        cancelAnimation.runOnJS(onSwipeableWillClose)(RIGHT);
+        const runOnJSResult = cancelAnimation.runOnJS(onSwipeableWillClose);
       }
-      tmp11 = onSwipeableWillClose;
     } else {
       if (arg1 > 0) {
         let LEFT = _mod11266.SwipeDirection.RIGHT;
@@ -318,10 +318,9 @@ function _default(hitSlop) {
         } else {
           RIGHT = _mod11266.SwipeDirection.RIGHT;
         }
-        cancelAnimation.runOnJS(tmp11)(RIGHT);
-        const runOnJSResult = cancelAnimation.runOnJS(tmp11);
+        cancelAnimation.runOnJS(onSwipeableClose)(RIGHT);
+        const runOnJSResult = cancelAnimation.runOnJS(onSwipeableClose);
       }
-      tmp11 = onSwipeableClose;
     } else {
       if (arg1 > 0) {
         let LEFT = _mod11266.SwipeDirection.RIGHT;
@@ -383,14 +382,14 @@ function _default(hitSlop) {
       obj.restSpeedThreshold = 0.01;
       let interpolateResult = num;
       if (num) {
-        let tmpResult = tmp(tmp2[4]);
+        let tmpResult = leftThreshold(animationOptions[4]);
         const items = [-value, value];
         interpolateResult = tmpResult.interpolate(num, items, [-1, 1]);
       }
       obj.velocity = interpolateResult;
       value = sharedValue1.value;
       c1 = value;
-      tmpResult = tmp(tmp2[4]);
+      tmpResult = leftThreshold(animationOptions[4]);
       const fn = function n(arg0) {
         if (arg0) {
           closure_26(c1, closure_0);
@@ -407,14 +406,15 @@ function _default(hitSlop) {
         num4 = Math.sign(toValue);
       }
       const _Math2 = Math;
-      sharedValue7.value = tmp(tmp2[4]).withSpring(Math.max(num4, 0), obj);
-      const tmpResult1 = tmp(tmp2[4]);
+      sharedValue7.value = leftThreshold(animationOptions[4]).withSpring(Math.max(num4, 0), obj);
+      const tmpResult1 = leftThreshold(animationOptions[4]);
       const _Math3 = Math;
-      sharedValue8.value = tmp(tmp2[4]).withSpring(Math.max(-num4, 0), obj);
+      sharedValue8.value = leftThreshold(animationOptions[4]).withSpring(Math.max(-num4, 0), obj);
       closure_25(value, toValue);
       const _Math4 = Math;
       sharedValue1.value = Math.sign(toValue);
       sharedValue.value = 0 !== sharedValue1.value;
+      const tmpResult2 = leftThreshold(animationOptions[4]);
     }
   };
   obj2 = {

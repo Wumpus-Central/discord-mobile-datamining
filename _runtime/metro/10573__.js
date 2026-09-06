@@ -67,10 +67,10 @@ const items = [
         if ("\u043F\u0440\u043E\u0448\u043B\u044B\u0435" !== formatted) {
           let reverseDurationResult = parseDurationResult;
         }
-        const ParsingComponents = tmp2(10435).ParsingComponents;
+        const ParsingComponents = RUTimeUnitCasualRelativeFormatParser(10435).ParsingComponents;
         return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
+      reverseDurationResult = RUTimeUnitCasualRelativeFormatParser(10434).reverseDuration(parseDurationResult);
     },
   },
 ];

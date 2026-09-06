@@ -1,5 +1,7 @@
 // _runtime/metro/14562__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import ReanimatedNativeStackScreenDefault from "../14563_ReanimatedNativeStackScreen.js";
+import ReanimatedScreenDefault from "../14566_ReanimatedScreen.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -74,9 +76,9 @@ let items = [
     value: function render() {
       const self = this;
       if (this.props.isNativeStack) {
-        let tmpResult = tmp(14563);
+        let tmpResult = ReanimatedNativeStackScreenDefault;
       } else {
-        tmpResult = tmp(14566);
+        tmpResult = ReanimatedScreenDefault;
       }
       const obj = {};
       const merged = Object.assign(self.props);

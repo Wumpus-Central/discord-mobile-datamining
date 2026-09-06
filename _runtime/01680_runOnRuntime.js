@@ -47,7 +47,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
     const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
     return ReanimatedModule.getViewProp(closure_0, closure_1, closure_2, (str) => {
       if (typeof str === "string") {
-        if ("error:" === str.substr(0, 6)) {
+        if ("error:" === "error:".substr(0, 6)) {
           closure_1(str);
         }
       }
@@ -55,7 +55,7 @@ export const getViewProp = function getViewProp(arg0, arg1, arg2) {
     });
   });
 };
-export const registerEventHandler = function registerEventHandler(eventHandler, arg1) {
+export const registerEventHandler = function registerEventHandler(eventHandler, onAppear) {
   let num = arg2;
   if (arg2 === undefined) {
     num = -1;
@@ -70,11 +70,11 @@ export const registerEventHandler = function registerEventHandler(eventHandler, 
   handleAndFlushAnimationFrame.__workletHash = 6793284645440;
   handleAndFlushAnimationFrame.__initData = __initData;
   const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
-  return ReanimatedModule.registerEventHandler(freezeObjectInDev.makeShareableCloneRecursive(handleAndFlushAnimationFrame), arg1, num);
+  return ReanimatedModule.registerEventHandler(freezeObjectInDev.makeShareableCloneRecursive(handleAndFlushAnimationFrame), onAppear, num);
 };
-export const unregisterEventHandler = function unregisterEventHandler(arg0) {
+export const unregisterEventHandler = function unregisterEventHandler(onAppear) {
   const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
-  return ReanimatedModule.unregisterEventHandler(arg0);
+  return ReanimatedModule.unregisterEventHandler(onAppear);
 };
 export const subscribeForKeyboardEvents = function subscribeForKeyboardEvents(eventHandler, isStatusBarTranslucentAndroid) {
   function handleAndFlushAnimationFrame(arg0, arg1) {
@@ -114,26 +114,26 @@ export const unsubscribeFromKeyboardEvents = function unsubscribeFromKeyboardEve
 export const registerSensor = function registerSensor(arg0, arg1, arg2) {
   if (!global.__sensorContainer) {
     const sensorContainer = new SensorContainer.SensorContainer();
-    tmp.__sensorContainer = sensorContainer;
+    global.__sensorContainer = sensorContainer;
   }
-  const __sensorContainer = tmp.__sensorContainer;
+  const __sensorContainer = global.__sensorContainer;
   return __sensorContainer.registerSensor(arg0, arg1, freezeObjectInDev.makeShareableCloneRecursive(arg2));
 };
 export const initializeSensor = function initializeSensor(arg0, arg1) {
   if (!global.__sensorContainer) {
     const sensorContainer = new SensorContainer.SensorContainer();
-    tmp.__sensorContainer = sensorContainer;
+    global.__sensorContainer = sensorContainer;
   }
-  const __sensorContainer = tmp.__sensorContainer;
+  const __sensorContainer = global.__sensorContainer;
   return __sensorContainer.initializeSensor(arg0, arg1);
 };
-export const unregisterSensor = function unregisterSensor(arg0) {
+export const unregisterSensor = function unregisterSensor(registerSensorResult) {
   if (!global.__sensorContainer) {
     const sensorContainer = new SensorContainer.SensorContainer();
-    tmp.__sensorContainer = sensorContainer;
+    global.__sensorContainer = sensorContainer;
   }
-  const __sensorContainer = tmp.__sensorContainer;
-  return __sensorContainer.unregisterSensor(arg0);
+  const __sensorContainer = global.__sensorContainer;
+  return __sensorContainer.unregisterSensor(registerSensorResult);
 };
 export const enableLayoutAnimations = function enableLayoutAnimations(enableLayoutAnimations) {
   let flag = arg1;
@@ -174,7 +174,7 @@ export const markNodeAsRemovable = function markNodeAsRemovable(arg0) {
   const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
   ReanimatedModule.markNodeAsRemovable(arg0);
 };
-export const unmarkNodeAsRemovable = function unmarkNodeAsRemovable(arg0) {
+export const unmarkNodeAsRemovable = function unmarkNodeAsRemovable(componentViewTag) {
   const ReanimatedModule = ReanimatedModule3.ReanimatedModule;
-  const result = ReanimatedModule.unmarkNodeAsRemovable(arg0);
+  const result = ReanimatedModule.unmarkNodeAsRemovable(componentViewTag);
 };

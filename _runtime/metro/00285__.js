@@ -1,8 +1,8 @@
 // _runtime/metro/00285__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import _modDef286 from "00286__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 class ResponderEvent {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;

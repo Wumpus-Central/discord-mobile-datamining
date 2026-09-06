@@ -29,7 +29,7 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
   const fn = function f() {
     return { enabled: iter.value === GESTURE_SOURCE.SCROLLABLE_STATE.UNLOCKED };
   };
-  obj = { animatedScrollableState: iter, SCROLLABLE_STATE: tmp2(6628).SCROLLABLE_STATE };
+  obj = { animatedScrollableState: iter, SCROLLABLE_STATE: scrollableGesture(6628).SCROLLABLE_STATE };
   fn.__closure = obj;
   fn.__workletHash = 8403038560398;
   fn.__initData = __initData;
@@ -56,14 +56,14 @@ const memoResult = memo(function BottomSheetRefreshControlComponent(arg0) {
     const merged1 = Object.assign(merged);
     obj1.onRefresh = onRefresh;
     obj1.animatedProps = animatedProps;
-    obj.children = tmp8(closure_5, obj1);
-    let tmp8Result = tmp8(tmp2(6655).GestureDetector, obj);
+    obj.children = <closure_5 />;
+    let tmp8Result = jsx(scrollableGesture(6655).GestureDetector, { gesture: tmp7, children: null });
   } else {
     const obj2 = {};
     const merged2 = Object.assign(merged);
     obj2.onRefresh = onRefresh;
     obj2.animatedProps = animatedProps;
-    tmp8Result = tmp8(closure_5, obj2);
+    tmp8Result = <closure_5 />;
   }
   return tmp8Result;
 });

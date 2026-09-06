@@ -464,7 +464,7 @@ const items2 = [
 ];
 const entry3 = {
   key: "createRelativeFromReference",
-  value: function createRelativeFromReference(reference, reverseDurationResult) {
+  value: function createRelativeFromReference(reference) {
     let EmptyDuration = reverseDurationResult;
     if (reverseDurationResult === undefined) {
       EmptyDuration = ParsingComponents(10434).EmptyDuration;
@@ -527,6 +527,7 @@ const entry3 = {
     ParsingComponents(10438).assignSimilarTime(obj, addDurationResult);
     ParsingComponents(10438).assignSimilarDate(obj, addDurationResult);
     obj.assign("timezoneOffset", reference.getTimezoneOffset());
+    const set = new Set();
   },
 };
 const items3 = [entry3];

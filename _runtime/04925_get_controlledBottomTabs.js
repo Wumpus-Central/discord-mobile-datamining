@@ -19,13 +19,15 @@ let c1 = {
   set(arg0) {
     let tmp3 = arg0 !== ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
     if (tmp3) {
-      tmp3 = tmp.experiment[tmp2] !== c1;
+      tmp3 = ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] !== c1;
     }
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error(
-        "[RNScreens] " + tmp2 + " feature flag modified for a second time; this might lead to unexpected effects",
+        "[RNScreens] " +
+          ios26AllowInteractionsDuringTransition +
+          " feature flag modified for a second time; this might lead to unexpected effects",
       );
     }
     ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] = arg0;
@@ -39,13 +41,15 @@ let closure_2 = {
   set(arg0) {
     let tmp3 = arg0 !== ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
     if (tmp3) {
-      tmp3 = tmp.experiment[tmp2] !== c1;
+      tmp3 = ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] !== c1;
     }
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error(
-        "[RNScreens] " + tmp2 + " feature flag modified for a second time; this might lead to unexpected effects",
+        "[RNScreens] " +
+          ios26AllowInteractionsDuringTransition +
+          " feature flag modified for a second time; this might lead to unexpected effects",
       );
     }
     ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] = arg0;
@@ -59,13 +63,15 @@ let closure_3 = {
   set(arg0) {
     let tmp3 = arg0 !== ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
     if (tmp3) {
-      tmp3 = tmp.experiment[tmp2] !== c1;
+      tmp3 = ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] !== c1;
     }
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error(
-        "[RNScreens] " + tmp2 + " feature flag modified for a second time; this might lead to unexpected effects",
+        "[RNScreens] " +
+          ios26AllowInteractionsDuringTransition +
+          " feature flag modified for a second time; this might lead to unexpected effects",
       );
     }
     ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] = arg0;
@@ -79,13 +85,15 @@ let closure_4 = {
   set(arg0) {
     let tmp3 = arg0 !== ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
     if (tmp3) {
-      tmp3 = tmp.experiment[tmp2] !== c1;
+      tmp3 = ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] !== c1;
     }
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error(
-        "[RNScreens] " + tmp2 + " feature flag modified for a second time; this might lead to unexpected effects",
+        "[RNScreens] " +
+          ios26AllowInteractionsDuringTransition +
+          " feature flag modified for a second time; this might lead to unexpected effects",
       );
     }
     ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] = arg0;
@@ -99,13 +107,15 @@ let closure_5 = {
   set(arg0) {
     let tmp3 = arg0 !== ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
     if (tmp3) {
-      tmp3 = tmp.experiment[tmp2] !== c1;
+      tmp3 = ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] !== c1;
     }
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error(
-        "[RNScreens] " + tmp2 + " feature flag modified for a second time; this might lead to unexpected effects",
+        "[RNScreens] " +
+          ios26AllowInteractionsDuringTransition +
+          " feature flag modified for a second time; this might lead to unexpected effects",
       );
     }
     ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] = arg0;
@@ -119,13 +129,15 @@ let closure_6 = {
   set(arg0) {
     let tmp3 = arg0 !== ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
     if (tmp3) {
-      tmp3 = tmp.experiment[tmp2] !== c1;
+      tmp3 = ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] !== c1;
     }
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error(
-        "[RNScreens] " + tmp2 + " feature flag modified for a second time; this might lead to unexpected effects",
+        "[RNScreens] " +
+          ios26AllowInteractionsDuringTransition +
+          " feature flag modified for a second time; this might lead to unexpected effects",
       );
     }
     ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] = arg0;
@@ -140,13 +152,15 @@ let closure_7 = {
   set(arg0) {
     let tmp3 = arg0 !== ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition];
     if (tmp3) {
-      tmp3 = tmp.experiment[tmp2] !== c1;
+      tmp3 = ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] !== c1;
     }
     if (tmp3) {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error(
-        "[RNScreens] " + tmp2 + " feature flag modified for a second time; this might lead to unexpected effects",
+        "[RNScreens] " +
+          ios26AllowInteractionsDuringTransition +
+          " feature flag modified for a second time; this might lead to unexpected effects",
       );
     }
     ios26AllowInteractionsDuringTransition.experiment[ios26AllowInteractionsDuringTransition] = arg0;

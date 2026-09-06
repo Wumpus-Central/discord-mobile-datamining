@@ -31,11 +31,11 @@ function extractRequestAttributes(model, arr) {
             json = JSON.stringify(items);
           }
           if (json) {
-            obj[tmp(823).GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = json;
+            obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_AVAILABLE_TOOLS_ATTRIBUTE] = json;
           }
           const _Object = Object;
-          const merged1 = Object.assign(obj, tmp(828).extractRequestParameters(first));
-          const tmpResult = tmp(828);
+          const merged1 = Object.assign(obj, extractRequestParameters.extractRequestParameters(first));
+          const tmpResult = extractRequestParameters;
         }
         items2 = [];
       }
@@ -55,9 +55,8 @@ function addRequestAttributes(setAttribute, input) {
       const truncatedJsonString = _mod825.getTruncatedJsonString(input);
       const attr = setAttribute.setAttribute(ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE, truncatedJsonString);
       if (length) {
-        const attr1 = setAttribute.setAttribute(tmp2(823).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
+        const attr1 = setAttribute.setAttribute(ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE, length);
       }
-      tmp2 = require;
     }
   }
 }
@@ -83,11 +82,11 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
           closure_1 = methodPath;
           closure_2 = self;
           closure_3 = closure_1_1;
-          str = closure_2_2(() => {
+          closure_2_2(() => {
             closure_0 = [...arguments];
             c3 = 0;
             c4 = 0;
-            const iter = (function*(arg0, value) {
+            const iter = (function*(arg0) {
               if (c4 === 2) {
                 c4 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -196,9 +195,6 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
         if (obj) {
           instrumentedMethod = obj;
           if (typeof obj === "object") {
-            if (methodPath === undefined) {
-              str = "";
-            }
             closure_1 = closure_1_1;
             let _Proxy = Proxy;
             obj = {
@@ -210,11 +206,11 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                           closure_1 = methodPath;
                           closure_2 = self;
                           closure_3 = closure_1_1;
-                          str = closure_2_2(() => {
+                          closure_2_2(() => {
                             closure_0 = [...arguments];
                             c3 = 0;
                             c4 = 0;
-                            const iter = (function*(arg0, value) {
+                            const iter = (function*(arg0) {
                               if (c4 === 2) {
                                 c4 = 3;
                                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -317,9 +313,6 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                         if (obj) {
                           instrumentedMethod = obj;
                           if (typeof obj === "object") {
-                            if (methodPath === undefined) {
-                              str = "";
-                            }
                             closure_1 = closure_1_1;
                             let _Proxy = Proxy;
                             obj = {
@@ -331,7 +324,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                           closure_1 = methodPath;
                                           closure_2 = self;
                                           closure_3 = closure_1_1;
-                                          str = closure_2_2(() => {
+                                          closure_2_2(() => {
                                             closure_0 = [...arguments];
                                             c3 = 0;
                                             c4 = 0;
@@ -359,9 +352,6 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                         if (obj) {
                                           instrumentedMethod = obj;
                                           if (typeof obj === "object") {
-                                            if (methodPath === undefined) {
-                                              str = "";
-                                            }
                                             closure_1 = closure_1_1;
                                             let _Proxy = Proxy;
                                             obj = {
@@ -373,7 +363,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                                           closure_1 = methodPath;
                                                           closure_2 = self;
                                                           closure_3 = closure_1_1;
-                                                          str = closure_2_2(() => { ... });
+                                                          closure_2_2(() => { ... });
                                                           function instrumentedMethod() { ... }
                                                         }
                                                         return instrumentedMethod;
@@ -385,9 +375,6 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                                         if (obj) {
                                                           instrumentedMethod = obj;
                                                           if (typeof obj === "object") {
-                                                            if (methodPath === undefined) {
-                                                              str = "";
-                                                            }
                                                             closure_1 = closure_1_1;
                                                             let _Proxy = Proxy;
                                                             obj = { get() { ... } };
@@ -395,24 +382,28 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                                           }
                                                         }
                                                       }
+                                                      let obj2 = closure_2_0(closure_2_1[2]);
                                                     }
                                             };
                                             instrumentedMethod = new Proxy(obj, obj);
                                           }
                                         }
                                       }
+                                      let obj2 = closure_2_0(closure_2_1[2]);
                                     }
                             };
                             instrumentedMethod = new Proxy(obj, obj);
                           }
                         }
                       }
+                      let obj2 = closure_2_0(closure_2_1[2]);
                     }
             };
             instrumentedMethod = new Proxy(obj, obj);
           }
         }
       }
+      let obj2 = closure_2_0(closure_2_1[2]);
     }
   };
   const proxy = new Proxy(arg0, obj);

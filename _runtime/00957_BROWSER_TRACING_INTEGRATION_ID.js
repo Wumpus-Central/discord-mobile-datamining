@@ -28,7 +28,7 @@ const _sentry_idleSpan = "_sentry_idleSpan";
 let c5 = 1.5;
 
 export const BROWSER_TRACING_INTEGRATION_ID = "BrowserTracing";
-export const browserTracingIntegration = () => {
+export const browserTracingIntegration = (arg0) => {
   obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -117,7 +117,7 @@ export const browserTracingIntegration = () => {
       c2 = startIdleSpanResult;
       let tmp25 = tmp;
       if (tmp) {
-        tmp25 = tmp23;
+        tmp25 = c29;
       }
       if (tmp25) {
         c2 = startIdleSpanResult;
@@ -125,7 +125,7 @@ export const browserTracingIntegration = () => {
       const obj5 = _undefined(_undefined2[0]);
       let result = _undefined(_undefined2[0]).addNonEnumerableProperty(emit, document, startIdleSpanResult);
       if (tmp) {
-        tmp = !tmp23;
+        tmp = !c29;
       }
       if (tmp) {
         tmp = document;
@@ -144,12 +144,11 @@ export const browserTracingIntegration = () => {
         let hasItem = document;
         if (document) {
           let items = ["interactive", "complete"];
-          hasItem = items.includes(tmp30.readyState);
+          hasItem = items.includes(document.readyState);
         }
         if (hasItem) {
           emit.emit("idleSpanEnableAutoFinish", startIdleSpanResult);
         }
-        tmp30 = document;
       }
       let obj7 = _undefined(_undefined2[0]);
     } else {
@@ -203,12 +202,12 @@ export const browserTracingIntegration = () => {
         }
         if (tmp) {
           if (_mod937.DEBUG_BUILD) {
-            const debug = tmp4(682).debug;
+            const debug = _mod682.debug;
             const _HermesInternal = HermesInternal;
-            debug.log("[Tracing] Finishing current active span with op: " + tmp4(682).spanToJSON(obj).op);
-            const tmp4Result = tmp4(682);
+            debug.log("[Tracing] Finishing current active span with op: " + _mod682.spanToJSON(obj).op);
+            const tmp4Result = _mod682;
           }
-          const attr = obj.setAttribute(tmp4(682).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, "cancelled");
+          const attr = obj.setAttribute(_mod682.SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, "cancelled");
           obj.end();
         }
       };
@@ -227,24 +226,24 @@ export const browserTracingIntegration = () => {
       obj.client = client;
       dependencyMap = _undefined(_undefined2[3]).startTrackingWebVitals(obj);
       if (c5) {
-        let tmpResult = tmp(tmp2[3]);
+        let tmpResult = _undefined(_undefined2[3]);
         tmpResult.startTrackingINP();
       }
       if (c6) {
-        tmpResult = tmp(tmp2[3]);
+        tmpResult = _undefined(_undefined2[3]);
         let result1 = tmpResult.startTrackingElementTiming();
       }
       if (c8) {
-        if (tmp(tmp2[0]).GLOBAL_OBJ.PerformanceObserver) {
+        if (_undefined(_undefined2[0]).GLOBAL_OBJ.PerformanceObserver) {
           if (globalThis.PerformanceObserver.supportedEntryTypes) {
             const supportedEntryTypes = globalThis.PerformanceObserver.supportedEntryTypes;
             if (supportedEntryTypes.includes("long-animation-frame")) {
-              let result2 = tmp(tmp2[3]).startTrackingLongAnimationFrames();
-              let tmpResult1 = tmp(tmp2[3]);
+              let result2 = _undefined(_undefined2[3]).startTrackingLongAnimationFrames();
+              let tmpResult1 = _undefined(_undefined2[3]);
             }
             if (c9) {
-              const result3 = tmp(tmp2[3]).startTrackingInteractions();
-              let tmpResult2 = tmp(tmp2[3]);
+              const result3 = _undefined(_undefined2[3]).startTrackingInteractions();
+              let tmpResult2 = _undefined(_undefined2[3]);
             }
             if (c26) {
               if (document) {
@@ -266,44 +265,44 @@ export const browserTracingIntegration = () => {
                   isRedirect = isRedirect.isRedirect;
                 }
                 if (isRedirect) {
-                  if (tmp(937).DEBUG_BUILD) {
-                    const debug = tmp(682).debug;
+                  if (_mod937.DEBUG_BUILD) {
+                    const debug = _mod682.debug;
                     debug.warn(
                       "[Tracing] Detected redirect, navigation span will not be the root span, but a child span.",
                     );
                   }
                   obj = { op: "navigation.redirect" };
                   const merged = Object.assign(arg0);
-                  _createRouteSpan(tmp3, obj, false);
+                  _createRouteSpan(closure_0, obj, false);
                 } else {
                   c1 = undefined;
                   dependencyMap2();
-                  let tmpResult = tmp(682);
+                  let tmpResult = _mod682;
                   const isolationScope = tmpResult.getIsolationScope();
                   obj = { traceId: null, sampleRand: null, propagationSpanId: null };
-                  tmpResult = tmp(682);
+                  tmpResult = _mod682;
                   obj.traceId = tmpResult.generateTraceId();
                   const _Math = Math;
                   obj.sampleRand = Math.random();
                   let spanId;
                   if (!tmpResult1.hasSpansEnabled()) {
-                    spanId = tmp(682).generateSpanId();
-                    const tmpResult2 = tmp(682);
+                    spanId = _mod682.generateSpanId();
+                    const tmpResult2 = _mod682;
                   }
                   obj.propagationSpanId = spanId;
                   const result = isolationScope.setPropagationContext(obj);
-                  tmpResult1 = tmp(682);
-                  const currentScope = tmp(682).getCurrentScope();
+                  tmpResult1 = _mod682;
+                  const currentScope = _mod682.getCurrentScope();
                   const obj1 = { traceId: null, sampleRand: null, propagationSpanId: null };
-                  const tmpResult3 = tmp(682);
-                  obj1.traceId = tmp(682).generateTraceId();
+                  const tmpResult3 = _mod682;
+                  obj1.traceId = _mod682.generateTraceId();
                   const _Math2 = Math;
                   obj1.sampleRand = Math.random();
-                  const tmpResult4 = tmp(682);
+                  const tmpResult4 = _mod682;
                   let spanId1;
                   if (!tmpResult5.hasSpansEnabled()) {
-                    spanId1 = tmp(682).generateSpanId();
-                    const tmpResult6 = tmp(682);
+                    spanId1 = _mod682.generateSpanId();
+                    const tmpResult6 = _mod682;
                   }
                   obj1.propagationSpanId = spanId1;
                   const result1 = currentScope.setPropagationContext(obj1);
@@ -312,12 +311,12 @@ export const browserTracingIntegration = () => {
                   const merged1 = Object.assign(arg0);
                   obj2.parentSpan = null;
                   obj2.forceTransaction = true;
-                  _createRouteSpan(tmp3, obj2);
-                  tmpResult5 = tmp(682);
+                  _createRouteSpan(closure_0, obj2);
+                  tmpResult5 = _mod682;
                 }
               }
             });
-            client.on("startPageLoadSpan", (arg0, op) => {
+            client.on("startPageLoadSpan", (arg0) => {
               obj = op;
               if (op === undefined) {
                 obj = {};
@@ -326,7 +325,7 @@ export const browserTracingIntegration = () => {
                 dependencyMap2();
                 let sentryTrace = obj.sentryTrace;
                 if (!sentryTrace) {
-                  const _document = tmp(893).WINDOW.document;
+                  const _document = ignoreNextOnError.WINDOW.document;
                   let element;
                   if (_document != null) {
                     const _HermesInternal = HermesInternal;
@@ -340,7 +339,7 @@ export const browserTracingIntegration = () => {
                 }
                 let baggage = obj.baggage;
                 if (!baggage) {
-                  const _document2 = tmp(893).WINDOW.document;
+                  const _document2 = ignoreNextOnError.WINDOW.document;
                   let element1;
                   if (_document2 != null) {
                     const _HermesInternal2 = HermesInternal;
@@ -352,25 +351,26 @@ export const browserTracingIntegration = () => {
                   }
                   baggage = attr1;
                 }
-                let tmpResult = tmp(682);
+                let tmpResult = _mod682;
                 const result = tmpResult.propagationContextFromHeaders(sentryTrace, baggage);
-                tmpResult = tmp(682);
+                tmpResult = _mod682;
                 const currentScope = tmpResult.getCurrentScope();
                 const result1 = currentScope.setPropagationContext(result);
                 if (!tmpResult1.hasSpansEnabled()) {
                   const propagationContext = currentScope.getPropagationContext();
-                  propagationContext.propagationSpanId = tmp(682).generateSpanId();
-                  const tmpResult2 = tmp(682);
+                  propagationContext.propagationSpanId = _mod682.generateSpanId();
+                  const tmpResult2 = _mod682;
                 }
                 obj = { normalizedRequest: null };
-                tmpResult1 = tmp(682);
-                obj.normalizedRequest = tmp(893).getHttpRequestData();
+                tmpResult1 = _mod682;
+                obj.normalizedRequest = ignoreNextOnError.getHttpRequestData();
                 const result2 = currentScope.setSDKProcessingMetadata(obj);
                 obj = { op: "pageload" };
                 const merged = Object.assign(arg0);
                 _createRouteSpan(tmp3, obj);
-                const tmpResult3 = tmp(893);
+                const tmpResult3 = ignoreNextOnError;
               }
+              obj2 = _mod682;
             });
             client.on("endPageloadSpan", () => {
               let tmp = closure_1_29;
@@ -389,53 +389,55 @@ export const browserTracingIntegration = () => {
         }
       }
       if (c7) {
-        const result4 = tmp(tmp2[3]).startTrackingLongTasks();
-        let tmpResult3 = tmp(tmp2[3]);
+        const result4 = _undefined(_undefined2[3]).startTrackingLongTasks();
+        let tmpResult3 = _undefined(_undefined2[3]);
       }
+      let obj2 = _undefined(_undefined2[3]);
     },
     afterAllSetup(emit) {
       obj = _undefined(_undefined2[0]);
       _undefined2 = obj.getLocationHref();
       if ("off" !== c27) {
-        let tmpResult = tmp(tmp2[5]);
+        let tmpResult = _undefined(tmp2[5]);
         obj = { linkPreviousTrace: tmp3, consistentTraceSampling };
         tmpResult.linkTraces(emit, obj);
       }
       if (_undefined(_undefined2[2]).WINDOW.location) {
         if (c24) {
-          tmpResult = tmp(tmp2[0]);
+          tmpResult = _undefined(tmp2[0]);
           let result = tmpResult.browserPerformanceTimeOrigin();
-          obj = { name: tmp(tmp2[2]).WINDOW.location.pathname, startTime: null, attributes: null };
+          obj = { name: _undefined(tmp2[2]).WINDOW.location.pathname, startTime: null, attributes: null };
           let result1;
           if (result) {
             result1 = result / 1000;
           }
           obj.startTime = result1;
           let obj1 = {};
-          obj1[tmp(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "url";
-          obj1[tmp(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.browser";
+          obj1[_undefined(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "url";
+          obj1[_undefined(tmp2[0]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.browser";
           obj.attributes = obj1;
           emit.emit("startPageLoadSpan", obj, undefined);
-          let currentScope = tmp(tmp2[0]).getCurrentScope();
+          let currentScope = _undefined(tmp2[0]).getCurrentScope();
           currentScope.setTransactionName(obj.name);
           if (emit[document]) {
             emit.emit("afterStartPageLoadSpan", tmp12);
           }
-          const tmpResult1 = tmp(tmp2[0]);
+          const tmpResult1 = _undefined(tmp2[0]);
         }
         if (c25) {
-          let result2 = tmp(tmp2[3]).addHistoryInstrumentationHandler((to) => {
+          let result2 = _undefined(tmp2[3]).addHistoryInstrumentationHandler((to) => {
             to = to.to;
             if (undefined === to.from) {
               let index;
-              if (idleTimeout != null) {
-                index = idleTimeout.indexOf(to);
+              if (c1 != null) {
+                index = arr.indexOf(to);
               }
               if (-1 !== index) {
-                idleTimeout = undefined;
+                c1 = undefined;
               }
+              arr = c1;
             }
-            idleTimeout = undefined;
+            c1 = undefined;
             obj = _mod682;
             const result = obj.parseStringToURLObject(to);
             let obj1 = emit;
@@ -444,8 +446,7 @@ export const browserTracingIntegration = () => {
               tmp8 = c26;
             }
             if (tmp8) {
-              tmp3(682);
-              const tmp3Result = tmp3(682);
+              const tmp3Result = _mod682;
               const result1 = tmp3Result.dateTimestampInSeconds();
               let flag = false;
               if (result1 - spanToJSONResult.start_timestamp <= c5) {
@@ -465,13 +466,13 @@ export const browserTracingIntegration = () => {
               pathname = result.pathname;
             }
             if (!pathname) {
-              pathname = tmp3(893).WINDOW.location.pathname;
+              pathname = ignoreNextOnError.WINDOW.location.pathname;
             }
             obj = {
               name: pathname,
               attributes: {
-                [tmp3(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "url",
-                [tmp3(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.navigation.browser",
+                [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "url",
+                [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.navigation.browser",
               },
             };
             ({ url, isRedirect } = { url: to, isRedirect: tmp8 });
@@ -486,26 +487,27 @@ export const browserTracingIntegration = () => {
             if (tmp17) {
               obj = { normalizedRequest: null };
               obj1 = {};
-              const merged = Object.assign(tmp3(893).getHttpRequestData());
+              const merged = Object.assign(ignoreNextOnError.getHttpRequestData());
               obj1.url = url;
               obj.normalizedRequest = obj1;
               const result2 = currentScope.setSDKProcessingMetadata(obj);
-              const tmp3Result2 = tmp3(893);
+              const tmp3Result2 = ignoreNextOnError;
             }
+            const tmp3Result1 = _mod682;
           });
-          const tmpResult2 = tmp(tmp2[3]);
+          const tmpResult2 = _undefined(tmp2[3]);
         }
       }
       if (c16) {
-        const result3 = tmp(tmp2[6]).registerBackgroundTabDetection();
-        const tmpResult3 = tmp(tmp2[6]);
+        const result3 = _undefined(tmp2[6]).registerBackgroundTabDetection();
+        const tmpResult3 = _undefined(tmp2[6]);
       }
       if (c9) {
         _undefined2 = c13;
         finalTimeout = c14;
         childSpanTimeout = c15;
         name = childSpanTimeout;
-        if (tmp(tmp2[2]).WINDOW.document) {
+        if (_undefined(tmp2[2]).WINDOW.document) {
           const listener = globalThis.addEventListener(
             "click",
             function registerInteractionTransaction() {
@@ -513,8 +515,8 @@ export const browserTracingIntegration = () => {
                 let attributes = emit(idleTimeout[0]);
                 const items = ["navigation", "pageload"];
                 if (items.includes(attributes.spanToJSON(tmp).op)) {
-                  if (tmp2(tmp3[4]).DEBUG_BUILD) {
-                    const debug2 = tmp2(tmp3[0]).debug;
+                  if (emit(idleTimeout[4]).DEBUG_BUILD) {
+                    const debug2 = emit(idleTimeout[0]).debug;
                     const _HermesInternal2 = HermesInternal;
                     debug2.warn(
                       "[Tracing] Did not create " +
@@ -534,19 +536,19 @@ export const browserTracingIntegration = () => {
                 closure_5 = undefined;
               }
               if (name.name) {
-                attributes = { name: tmp9.name, op: "ui.action.click", attributes: null };
-                let str5 = tmp9.source;
+                attributes = { name: name.name, op: "ui.action.click", attributes: null };
+                let str5 = name.source;
                 if (!str5) {
                   str5 = "url";
                 }
                 attributes = {};
-                attributes[tmp10(tmp11[0]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str5;
+                attributes[emit(idleTimeout[0]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str5;
                 attributes.attributes = attributes;
                 obj1 = { idleTimeout, finalTimeout, childSpanTimeout };
-                closure_5 = tmp10(tmp11[0]).startIdleSpan(attributes, obj1);
-                const tmp10Result = tmp10(tmp11[0]);
-              } else if (tmp10(tmp11[4]).DEBUG_BUILD) {
-                const debug = tmp10(tmp11[0]).debug;
+                closure_5 = emit(idleTimeout[0]).startIdleSpan(attributes, obj1);
+                const tmp10Result = emit(idleTimeout[0]);
+              } else if (emit(idleTimeout[4]).DEBUG_BUILD) {
+                const debug = emit(idleTimeout[0]).debug;
                 const _HermesInternal = HermesInternal;
                 debug.warn(
                   "[Tracing] Did not create " + "ui.action.click" + " transaction because _latestRouteName is missing.",
@@ -558,8 +560,8 @@ export const browserTracingIntegration = () => {
         }
       }
       if (closure_5) {
-        const result4 = tmp(tmp2[3]).registerInpInteractionListener();
-        const tmpResult4 = tmp(tmp2[3]);
+        const result4 = _undefined(tmp2[3]).registerInpInteractionListener();
+        const tmpResult4 = _undefined(tmp2[3]);
       }
       const tmpResult5 = _undefined(_undefined2[1]);
       const result5 = tmpResult5.instrumentOutgoingRequests(emit, {
@@ -572,6 +574,16 @@ export const browserTracingIntegration = () => {
         onRequestSpanStart,
         onRequestSpanEnd,
       });
+      const obj2 = {
+        traceFetch,
+        traceXHR,
+        trackFetchStreamPerformance,
+        tracePropagationTargets: emit.getOptions().tracePropagationTargets,
+        shouldCreateSpanForRequest,
+        enableHTTPTimings,
+        onRequestSpanStart,
+        onRequestSpanEnd,
+      };
     },
   };
   return obj;

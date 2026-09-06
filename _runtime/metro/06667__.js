@@ -1,5 +1,7 @@
 // _runtime/metro/06667__.js
 import GestureDetectorType from "../06668_GestureDetectorType.js";
+import NativeDetector2 from "../06710_NativeDetector.js";
+import VirtualDetector from "../06734_VirtualDetector.js";
 import transformLongPressProps from "../06736_transformLongPressProps.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
@@ -9,13 +11,13 @@ let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
 const useEffect = fn(19).useEffect;
 const jsx = fn(21).jsx;
 
-export default function createNativeWrapper(displayName, gestureHandlerProps) {
+export default function createNativeWrapper(displayName) {
   _require = displayName;
   if (gestureHandlerProps === undefined) {
     gestureHandlerProps = {};
   }
-  let Native = arg2;
-  if (arg2 === undefined) {
+  let Native = Intercepting;
+  if (Intercepting === undefined) {
     Native = require("GestureDetectorType").GestureDetectorType.Native;
   }
   let str;

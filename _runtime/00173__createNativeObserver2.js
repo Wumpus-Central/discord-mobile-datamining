@@ -21,7 +21,7 @@ function _createNativeObserver2() {
         let num2 = 0;
         if (!_classPrivateFieldBase(self, closure_11)[closure_11]) {
           num2 = obj.getDroppedEntriesCount(observer);
-          tmp12(tmp13, tmp14)[tmp14] = true;
+          _classPrivateFieldBase(self, closure_11)[closure_11] = true;
         }
         obj = { droppedEntriesCount: num2 };
         _classPrivateFieldBase(self, closure_9)[closure_9](tmp11, self, obj);
@@ -165,20 +165,20 @@ const entry1 = {
     const self = this;
     _classPrivateFieldBase(this, closure_13)[closure_13](entryTypes);
     if (null == _classPrivateFieldBase(this, closure_8)[closure_8]) {
-      tmp(self, tmp4);
-      const tmpResult = tmp(self, closure_12);
-      tmpResult[tmp4] = tmpResult[closure_12]();
+      _classPrivateFieldBase(self, closure_8);
+      const tmpResult = _classPrivateFieldBase(self, closure_12);
+      tmpResult[closure_8] = tmpResult[closure_12]();
     }
     const tmp2 = _classPrivateFieldBase(this, closure_13);
     const tmp9Result = nullthrows(_classPrivateFieldBase(self, closure_8)[closure_8]);
     if (entryTypes.entryTypes) {
-      tmp(self, closure_10)[closure_10] = "multiple";
+      _classPrivateFieldBase(self, closure_10)[closure_10] = "multiple";
       let obj = { entryTypes: null };
       entryTypes = entryTypes.entryTypes;
       obj.entryTypes = entryTypes.map(PerformanceObserver(170).performanceEntryTypeToRaw);
       NativePerformanceCxx.observe(tmp9Result, obj);
     } else if (entryTypes.type) {
-      tmp(self, closure_10)[closure_10] = "single";
+      _classPrivateFieldBase(self, closure_10)[closure_10] = "single";
       obj = {
         type: PerformanceObserver(170).performanceEntryTypeToRaw(entryTypes.type),
         buffered: null,
@@ -196,7 +196,7 @@ const items1 = [
     key: "disconnect",
     value: function disconnect() {
       if (null != _classPrivateFieldBase(this, closure_8)[closure_8]) {
-        NativePerformanceCxx.disconnect(_classPrivateFieldBase(this, tmp2)[tmp2]);
+        NativePerformanceCxx.disconnect(_classPrivateFieldBase(this, closure_8)[closure_8]);
       }
     },
   },
@@ -206,7 +206,10 @@ const items1 = [
       const items = [];
       let mapped = items;
       if (null != _classPrivateFieldBase(this, closure_8)[closure_8]) {
-        const takeRecordsResult = NativePerformanceCxx.takeRecords(_classPrivateFieldBase(this, tmp2)[tmp2], true);
+        const takeRecordsResult = NativePerformanceCxx.takeRecords(
+          _classPrivateFieldBase(this, closure_8)[closure_8],
+          true,
+        );
         let tmp5 = takeRecordsResult;
         if (takeRecordsResult) {
           tmp5 = takeRecordsResult.length > 0;

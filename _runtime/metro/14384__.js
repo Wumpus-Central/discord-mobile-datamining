@@ -22,11 +22,11 @@ let fn = function _typeof(arg0) {
     str = typeof arg0;
   };
 };
-function _defineProperties(arr, arg1) {
+function _defineProperties(arr, items) {
   let num = 0;
-  if (0 < arg1.length) {
+  if (0 < items.length) {
     while (true) {
-      let tmp = arg1[num];
+      let tmp = items[num];
       let flag = tmp.enumerable;
       if (!flag) {
         flag = false;
@@ -138,8 +138,7 @@ function canonicalizeLocaleList(arg0) {
   }
 }
 
-export default function getPluralRules(arg0, arg1, arg2, arg3) {
-  const PluralRules = arg0;
+export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
   _defineProperties = arg1;
   closure_2 = arg2;
   closure_3 = arg3;
@@ -562,7 +561,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           ({ minimumIntegerDigits, minimumFractionDigits, maximumFractionDigits, maximumSignificantDigits } =
             resolvedOptionsResult);
           if (weakMap.has(self)) {
-            const iter2 = obj2.get(self);
+            const iter2 = weakMap.get(self);
             if (iter2.get) {
               const get2 = iter2.get;
               const call2 = get2.call;
@@ -576,7 +575,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                 maximumFractionDigits: null,
               };
               if (weakMap3.has(self)) {
-                const iter3 = obj4.get(self);
+                const iter3 = weakMap3.get(self);
                 if (iter3.get) {
                   const get3 = iter3.get;
                   const call3 = get3.call;
@@ -590,20 +589,20 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     obj.minimumSignificantDigits = minimumSignificantDigits;
                     obj.maximumSignificantDigits = maximumSignificantDigits;
                   }
-                  if (obj2.has(self)) {
-                    const iter4 = obj2.get(self);
+                  if (weakMap.has(self)) {
+                    const iter4 = weakMap.get(self);
                     if (iter4.get) {
                       const get4 = iter4.get;
                       const call4 = get4.call;
                       typeof call4 === "unknown" ? get4() : call4(self);
-                    } else if (obj4.has(self)) {
-                      const iter5 = obj4.get(self);
+                    } else if (weakMap3.has(self)) {
+                      const iter5 = weakMap3.get(self);
                       if (iter5.get) {
                         const get5 = iter5.get;
                         const call5 = get5.call;
                         typeof call5 === "unknown" ? get5() : call5(self);
                       } else {
-                        obj.pluralCategories = tmp20(iter4.value, "ordinal" === iter5.value).slice(0);
+                        obj.pluralCategories = closure_2(iter4.value, "ordinal" === iter5.value).slice(0);
                         if (!roundingPriority) {
                           roundingPriority = "auto";
                         }
@@ -620,7 +619,6 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     const typeError1 = new TypeError("attempted to get private field on non-instance");
                     throw typeError1;
                   }
-                  tmp20 = closure_2;
                 }
               } else {
                 const _TypeError3 = TypeError;
@@ -656,7 +654,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
           const _isFinite = isFinite;
           if (isFinite(NumberResult)) {
             if (set5.has(self)) {
-              const iter = obj.get(self);
+              const iter = set5.get(self);
               if (iter.get) {
                 const get = iter.get;
                 const call = get.call;
@@ -666,7 +664,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                 const _Math = Math;
                 const formatResult = value.format(Math.abs(NumberResult));
                 if (set3.has(self)) {
-                  const iter2 = obj2.get(self);
+                  const iter2 = set3.get(self);
                   if (iter2.get) {
                     const get2 = iter2.get;
                     const call2 = get2.call;
@@ -675,7 +673,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                     value = iter2.value;
                     const call3 = value.call;
                     if (set4.has(self)) {
-                      const iter3 = obj3.get(self);
+                      const iter3 = set4.get(self);
                       if (iter3.get) {
                         const get3 = iter3.get;
                         const call4 = get3.call;
@@ -690,21 +688,18 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                       const typeError = new TypeError("attempted to get private field on non-instance");
                       throw typeError;
                     }
-                    obj3 = set4;
                   }
                 } else {
                   const _TypeError3 = TypeError;
                   const typeError1 = new TypeError("attempted to get private field on non-instance");
                   throw typeError1;
                 }
-                obj2 = set3;
               }
             } else {
               const _TypeError2 = TypeError;
               const typeError2 = new TypeError("attempted to get private field on non-instance");
               throw typeError2;
             }
-            obj = set5;
           } else {
             return "other";
           }
@@ -759,7 +754,7 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
               const _isFinite2 = isFinite;
               if (isFinite(NumberResult1)) {
                 if (set2.has(self)) {
-                  const iter = obj.get(self);
+                  const iter = set2.get(self);
                   if (iter.get) {
                     const get = iter.get;
                     const call = get.call;
@@ -778,7 +773,6 @@ export default function getPluralRules(arg0, arg1, arg2, arg3) {
                   const typeError4 = new TypeError("attempted to get private field on non-instance");
                   throw typeError4;
                 }
-                obj = set2;
               } else {
                 const _RangeError2 = RangeError;
                 const rangeError = new RangeError("end must be finite");

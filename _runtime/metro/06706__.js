@@ -10,23 +10,23 @@ const dependencyMap = arg6;
 function getHandler(arg0, onBegin) {
   if (_mod6676.CALLBACK_TYPE.BEGAN === arg0) {
     return onBegin.onBegin;
-  } else if (tmp(6676).CALLBACK_TYPE.START === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.START === arg0) {
     return onBegin.onStart;
-  } else if (tmp(6676).CALLBACK_TYPE.UPDATE === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.UPDATE === arg0) {
     return onBegin.onUpdate;
-  } else if (tmp(6676).CALLBACK_TYPE.CHANGE === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.CHANGE === arg0) {
     return onBegin.onChange;
-  } else if (tmp(6676).CALLBACK_TYPE.END === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.END === arg0) {
     return onBegin.onEnd;
-  } else if (tmp(6676).CALLBACK_TYPE.FINALIZE === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.FINALIZE === arg0) {
     return onBegin.onFinalize;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
     return onBegin.onTouchesDown;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
     return onBegin.onTouchesMove;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_UP === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_UP === arg0) {
     return onBegin.onTouchesUp;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
     return onBegin.onTouchesCancelled;
   }
 }
@@ -38,15 +38,15 @@ getHandler.__initData = {
 };
 function touchEventTypeToCallbackType(arg0) {
   if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_DOWN;
-  } else if (tmp(6663).TouchEventType.TOUCHES_MOVE === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_MOVE;
-  } else if (tmp(6663).TouchEventType.TOUCHES_UP === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_UP;
-  } else if (tmp(6663).TouchEventType.TOUCHES_CANCEL === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_CANCEL;
+    return _mod6676.CALLBACK_TYPE.TOUCHES_DOWN;
+  } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === arg0) {
+    return _mod6676.CALLBACK_TYPE.TOUCHES_MOVE;
+  } else if (TouchEventType.TouchEventType.TOUCHES_UP === arg0) {
+    return _mod6676.CALLBACK_TYPE.TOUCHES_UP;
+  } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === arg0) {
+    return _mod6676.CALLBACK_TYPE.TOUCHES_CANCEL;
   } else {
-    return tmp(6676).CALLBACK_TYPE.UNDEFINED;
+    return _mod6676.CALLBACK_TYPE.UNDEFINED;
   }
 }
 obj = { TouchEventType: fn(6663).TouchEventType, CALLBACK_TYPE: fn(6676).CALLBACK_TYPE };
@@ -110,62 +110,58 @@ export const useAnimatedGesture = function useAnimatedGesture(current2, needsToR
           if (handlerTag.handlerTag === tmp2.handlerTag) {
             if (typeof isStateChangeEvent === "function") {
               if (null != handlerTag.oldState) {
-                let tmp15 = require;
                 if (handlerTag.oldState === _mod6661.State.UNDETERMINED) {
-                  if (handlerTag.state === tmp15(6661).State.BEGAN) {
-                    let tmp38 = runWorklet(tmp15(6676).CALLBACK_TYPE.BEGAN, tmp2, handlerTag);
+                  if (handlerTag.state === _mod6661.State.BEGAN) {
+                    let tmp38 = runWorklet(_mod6676.CALLBACK_TYPE.BEGAN, tmp2, handlerTag);
                   }
                 }
-                if (handlerTag.oldState === tmp15(6661).State.BEGAN) {
-                  if (handlerTag.state === tmp15(6661).State.ACTIVE) {
-                    let tmp18 = runWorklet(tmp15(6676).CALLBACK_TYPE.START, tmp2, handlerTag);
+                if (handlerTag.oldState === _mod6661.State.BEGAN) {
+                  if (handlerTag.state === _mod6661.State.ACTIVE) {
+                    let tmp18 = runWorklet(_mod6676.CALLBACK_TYPE.START, tmp2, handlerTag);
                     sharedValue1.value[tmp2.handlerTag] = undefined;
                   }
                 }
                 if (handlerTag.oldState !== handlerTag.state) {
-                  if (handlerTag.state === tmp15(6661).State.END) {
-                    if (handlerTag.oldState === tmp15(6661).State.ACTIVE) {
+                  if (handlerTag.state === _mod6661.State.END) {
+                    if (handlerTag.oldState === _mod6661.State.ACTIVE) {
                       let flag3 = true;
-                      let tmp32 = runWorklet(tmp15(6676).CALLBACK_TYPE.END, tmp2, handlerTag, true);
+                      let tmp32 = runWorklet(_mod6676.CALLBACK_TYPE.END, tmp2, handlerTag, true);
                     }
                     let flag4 = true;
-                    let tmp36 = runWorklet(tmp15(6676).CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, true);
+                    let tmp36 = runWorklet(_mod6676.CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, true);
                   }
                 }
-                let tmp20 = handlerTag.state !== tmp15(6661).State.FAILED;
+                let tmp20 = handlerTag.state !== _mod6661.State.FAILED;
                 if (tmp20) {
-                  tmp20 = handlerTag.state !== tmp15(6661).State.CANCELLED;
+                  tmp20 = handlerTag.state !== _mod6661.State.CANCELLED;
                 }
                 if (!tmp20) {
                   tmp20 = handlerTag.state === handlerTag.oldState;
                 }
                 if (!tmp20) {
-                  if (handlerTag.oldState === tmp15(6661).State.ACTIVE) {
+                  if (handlerTag.oldState === _mod6661.State.ACTIVE) {
                     let flag = false;
-                    let tmp24 = runWorklet(tmp15(6676).CALLBACK_TYPE.END, tmp2, handlerTag, false);
+                    let tmp24 = runWorklet(_mod6676.CALLBACK_TYPE.END, tmp2, handlerTag, false);
                   }
                   let flag2 = false;
-                  let tmp28 = runWorklet(tmp15(6676).CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, false);
+                  let tmp28 = runWorklet(_mod6676.CALLBACK_TYPE.FINALIZE, tmp2, handlerTag, false);
                 }
               } else if (typeof isTouchEvent === "function") {
                 if (null != handlerTag.eventType) {
-                  let tmp9 = items;
-                  let tmp10 = items[num] && tmp9[num].handlerTag === handlerTag.handlerTag;
+                  let tmp10 = items[num] && items[num].handlerTag === handlerTag.handlerTag;
                   if (!tmp10) {
                     let GestureStateManager = _mod6662.GestureStateManager;
-                    tmp9[num] = GestureStateManager.create(handlerTag.handlerTag);
+                    items[num] = GestureStateManager.create(handlerTag.handlerTag);
                   }
                   if (handlerTag.eventType !== TouchEventType.TouchEventType.UNDETERMINED) {
                     let tmp49 = runWorklet(
                       touchEventTypeToCallbackType(handlerTag.eventType),
                       tmp2,
                       handlerTag,
-                      tmp9[num],
+                      items[num],
                     );
                   }
                 } else {
-                  let tmp41 = runWorklet;
-                  let tmp42 = require;
                   let tmp44 = runWorklet(_mod6676.CALLBACK_TYPE.UPDATE, tmp2, handlerTag);
                   let tmp4 = tmp2.onChange && tmp2.changeEventCalculator;
                   if (tmp4) {
@@ -174,7 +170,7 @@ export const useAnimatedGesture = function useAnimatedGesture(current2, needsToR
                     if (changeEventCalculator != null) {
                       result = changeEventCalculator(handlerTag, sharedValue1.value[tmp2.handlerTag]);
                     }
-                    let tmp41Result = tmp41(tmp42(6676).CALLBACK_TYPE.CHANGE, tmp2, result);
+                    let tmp41Result = runWorklet(_mod6676.CALLBACK_TYPE.CHANGE, tmp2, result);
                     sharedValue1.value[tmp2.handlerTag] = handlerTag;
                   }
                 }

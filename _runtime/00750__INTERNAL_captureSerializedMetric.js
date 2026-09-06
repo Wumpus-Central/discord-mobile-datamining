@@ -1,8 +1,13 @@
 // _runtime/00750__INTERNAL_captureSerializedMetric.js
 import _mod688 from "metro/00688__.js";
+import consoleSandbox from "00689_consoleSandbox.js";
 import _mod690 from "metro/00690__.js";
+import dateTimestampInSeconds from "00703_dateTimestampInSeconds.js";
+import _getSpanForScope from "00709__getSpanForScope.js";
 import _mod713 from "metro/00713__.js";
 import mergeScopeData from "00736_mergeScopeData.js";
+import _getTraceInfoFromScope from "00746__getTraceInfoFromScope.js";
+import _mod748 from "metro/00748__.js";
 import _mod751 from "metro/00751__.js";
 import _slicedToArray from "metro/00032__.js";
 
@@ -92,10 +97,9 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       if (enableMetrics != null) {
         if (!enableMetrics) {
           if (_mod688.DEBUG_BUILD) {
-            const debug2 = tmp13(689).debug;
+            const debug2 = consoleSandbox.debug;
             debug2.warn("metrics option not enabled, metric will not be captured.");
           }
-          tmp13 = require;
         }
       }
     }
@@ -206,9 +210,9 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       beforeSendMetricResult = beforeSendMetric(obj);
     }
     if (beforeSendMetricResult) {
-      let tmp17Result = tmp17(746);
+      let tmp17Result = _getTraceInfoFromScope;
       const tmp37 = _slicedToArray(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
-      tmp17Result = tmp17(709);
+      tmp17Result = _getSpanForScope;
       const _getSpanForScopeResult = tmp17Result._getSpanForScope(scope);
       if (_getSpanForScopeResult) {
         let str10 = _getSpanForScopeResult.spanContext().traceId;
@@ -220,7 +224,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
         spanId = _getSpanForScopeResult.spanContext().spanId;
       }
       obj1 = {
-        timestamp: tmp17(703).timestampInSeconds(),
+        timestamp: dateTimestampInSeconds.timestampInSeconds(),
         trace_id: null,
         span_id: null,
         name: null,
@@ -236,30 +240,25 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       obj1.span_id = spanId;
       ({ name: obj12.name, type: obj12.type, unit: obj12.unit, value: obj12.value } = beforeSendMetricResult);
       obj2 = {};
-      const tmp17Result1 = tmp17(703);
-      const merged2 = Object.assign(tmp17(748).serializeAttributes(attributes));
-      const tmp17Result2 = tmp17(748);
-      const merged3 = Object.assign(
-        tmp17(748).serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"),
-      );
+      const tmp17Result1 = dateTimestampInSeconds;
+      const merged2 = Object.assign(_mod748.serializeAttributes(attributes));
+      const tmp17Result2 = _mod748;
+      const merged3 = Object.assign(_mod748.serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"));
       obj1.attributes = obj2;
-      if (tmp17(688).DEBUG_BUILD) {
-        const debug4 = tmp17(689).debug;
+      if (_mod688.DEBUG_BUILD) {
+        const debug4 = consoleSandbox.debug;
         debug4.log("[Metric]", obj1);
       }
       prop(client, obj1);
       client.emit("afterCaptureMetric", beforeSendMetricResult);
-      const tmp17Result3 = tmp17(748);
-    } else if (tmp17(688).DEBUG_BUILD) {
-      const debug3 = tmp17(689).debug;
+      const tmp17Result3 = _mod748;
+    } else if (_mod688.DEBUG_BUILD) {
+      const debug3 = consoleSandbox.debug;
       debug3.log("`beforeSendMetric` returned `null`, will not send metric.");
     }
-  } else {
-    if (_mod688.DEBUG_BUILD) {
-      const debug = tmp8(689).debug;
-      debug.warn("No client available to capture metric.");
-    }
-    tmp8 = require;
+  } else if (_mod688.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
+    debug.warn("No client available to capture metric.");
   }
 };
 export { _INTERNAL_captureSerializedMetric };

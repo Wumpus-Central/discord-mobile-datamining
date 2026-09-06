@@ -1,8 +1,9 @@
 // _runtime/metro/01332__.js
 import supported from "../01333_supported.js";
+import shim from "../01334_shim.js";
 
-function isUndefinedOrNull(arg0) {
-  return null == arg0;
+function isUndefinedOrNull(time) {
+  return null == time;
 }
 function isBuffer(copy) {
   let tmp = !copy;
@@ -46,12 +47,12 @@ const exports = (time, getTime, arg2) => {
                 if (time.prototype !== getTime.prototype) {
                   return false;
                 } else if (supported(time)) {
-                  const tmp17 = tmp23(tmp24[0])(getTime);
+                  const tmp17 = supported(getTime);
                   if (!tmp17) {
                     return tmp17;
                   } else {
                     const call = slice.call;
-                    const call2 = tmp18.call;
+                    const call2 = slice.call;
                     exports(
                       typeof call === "unknown" ? slice() : call(time),
                       typeof call2 === "unknown" ? slice() : call2(getTime),
@@ -59,54 +60,51 @@ const exports = (time, getTime, arg2) => {
                     );
                     const tmp19 = typeof call === "unknown" ? slice() : call(time);
                   }
-                } else {
-                  if (isBuffer(time)) {
-                    if (tmp3(getTime)) {
-                      if (time.length !== getTime.length) {
-                        return false;
-                      } else {
-                        let num = 0;
-                        if (0 < time.length) {
-                          while (time[num] === getTime[num]) {
-                            num = num + 1;
-                          }
-                          return false;
-                        }
-                        return true;
-                      }
-                    } else {
+                } else if (isBuffer(time)) {
+                  if (isBuffer(getTime)) {
+                    if (time.length !== getTime.length) {
                       return false;
+                    } else {
+                      let num = 0;
+                      if (0 < time.length) {
+                        while (time[num] === getTime[num]) {
+                          num = num + 1;
+                        }
+                        return false;
+                      }
+                      return true;
                     }
                   } else {
-                    try {
-                      const arr = tmp23(tmp24[1])(time);
-                      const arr2 = tmp23(tmp24[1])(getTime);
-                      if (arr.length != arr2.length) {
-                        return false;
-                      } else {
-                        const sorted = arr.sort();
-                        const sorted1 = arr2.sort();
-                        let diff = arr.length - 1;
-                        if (0 <= diff) {
-                          while (arr[diff] == arr2[diff]) {
-                            diff = diff - 1;
-                          }
-                          return false;
-                        }
-                        let diff1 = arr.length - 1;
-                        if (0 <= diff1) {
-                          while (exports(time[arr[diff1]], getTime[arr[diff1]], arg2)) {
-                            diff1 = diff1 - 1;
-                          }
-                          return false;
-                        }
-                        return typeof time === typeof getTime;
-                      }
-                    } catch (err) {
-                      return false;
-                    }
+                    return false;
                   }
-                  tmp3 = isBuffer;
+                } else {
+                  try {
+                    const arr = shim(time);
+                    const arr2 = shim(getTime);
+                    if (arr.length != arr2.length) {
+                      return false;
+                    } else {
+                      const sorted = arr.sort();
+                      const sorted1 = arr2.sort();
+                      let diff = arr.length - 1;
+                      if (0 <= diff) {
+                        while (arr[diff] == arr2[diff]) {
+                          diff = diff - 1;
+                        }
+                        return false;
+                      }
+                      let diff1 = arr.length - 1;
+                      if (0 <= diff1) {
+                        while (exports(time[arr[diff1]], getTime[arr[diff1]], arg2)) {
+                          diff1 = diff1 - 1;
+                        }
+                        return false;
+                      }
+                      return typeof time === typeof getTime;
+                    }
+                  } catch (err) {
+                    return false;
+                  }
                 }
               }
             }

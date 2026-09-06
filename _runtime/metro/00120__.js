@@ -13,6 +13,8 @@ import _mod234 from "00234__.js";
 import _mod235 from "00235__.js";
 import __fetchSegment from "../00241___fetchSegment.js";
 import AppRegistry from "../00244_AppRegistry.js";
+import _mod262 from "00262__.js";
+import _mod267 from "00267__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -35,13 +37,13 @@ export default function setUpDefaltReactNativeEnvironment() {
     __fetchSegment;
     AppRegistry;
     if (obj2.enableIntersectionObserverByDefault()) {
-      let tmpResult = tmp(262);
+      let tmpResult = _mod262;
       tmpResult.default();
     }
-    tmpResult = tmp(27);
+    tmpResult = _mod27;
     if (tmpResult.enableMutationObserverByDefault()) {
-      tmp(267).default();
-      const tmpResult1 = tmp(267);
+      _mod267.default();
+      const tmpResult1 = _mod267;
     }
     obj2 = _mod27;
   }

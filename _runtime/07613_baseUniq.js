@@ -1,23 +1,28 @@
 // _runtime/07613_baseUniq.js
+import SetCache from "00646_SetCache.js";
+import cacheHas from "00650_cacheHas.js";
+import _mod654 from "metro/00654__.js";
 import arrayIncludes from "07614_arrayIncludes.js";
+import arrayIncludesWith from "07618_arrayIncludesWith.js";
+import _mod7619 from "metro/07619__.js";
 
 export default function baseUniq(arg0, fn, arg2) {
   let tmpResult = arrayIncludes;
   const items = [];
   if (arg2) {
-    tmpResult = tmp(7618);
+    tmpResult = arrayIncludesWith;
     let flag = false;
     let items1 = items;
   } else if (length >= 200) {
     let tmp4 = null;
     if (!fn) {
-      tmp4 = tmp(7619)(arg0);
+      tmp4 = _mod7619(arg0);
     }
     if (tmp4) {
-      return tmp(654)(tmp4);
+      return _mod654(tmp4);
     } else {
-      tmpResult = tmp(650);
-      items1 = new tmp(646)();
+      tmpResult = cacheHas;
+      items1 = new SetCache();
       flag = false;
     }
   } else {

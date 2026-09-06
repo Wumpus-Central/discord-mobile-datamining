@@ -72,17 +72,16 @@ function getInlinePropsUpdate(viewDescriptors) {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let iter = tmp7;
     let obj2 = InlinePropManager(1685);
     if (obj2.isSharedValue(tmp7)) {
-      obj[tmp6] = iter.value;
+      obj[tmp6] = tmp7.value;
     } else {
       let _Array = Array;
-      if (Array.isArray(iter)) {
-        obj[tmp6] = iter.map((item) => InlinePropManager(item));
+      if (Array.isArray(tmp7)) {
+        obj[tmp6] = tmp7.map((item) => InlinePropManager(item));
       } else {
-        if (typeof iter === "object") {
-          let tmp15 = InlinePropManager(iter);
+        if (typeof tmp7 === "object") {
+          let tmp15 = InlinePropManager(tmp7);
         } else {
           tmp15 = tmp7;
         }
@@ -129,18 +128,17 @@ const entry = {
             while (tmp4 !== undefined) {
               let tmp9 = _slicedToArray(tmp6, 2);
               [tmp10, tmp11] = tmp9;
-              let tmp12 = tmp11;
               obj = InlinePropManager(1685);
               let isSharedValueResult = obj.isSharedValue(tmp11);
               if (!isSharedValueResult) {
                 let tmp17 = "transform" === tmp10;
                 if (tmp17) {
-                  tmp17 = isInlineStyleTransform(tmp12);
+                  tmp17 = isInlineStyleTransform(tmp11);
                 }
                 isSharedValueResult = tmp17;
               }
               if (isSharedValueResult) {
-                obj[tmp10] = tmp12;
+                obj[tmp10] = tmp11;
               }
               continue;
             }
@@ -161,12 +159,12 @@ const entry = {
     }
     self = this;
     closure_129_0 = _inlineProps;
-    if ((function inlinePropsHasChanged(arg0, _inlineProps) {
-      if (Object.keys(arg0).length !== Object.keys(_inlineProps).length) {
+    if ((function inlinePropsHasChanged(_inlineProps, _inlineProps) {
+      if (Object.keys(_inlineProps).length !== Object.keys(_inlineProps).length) {
         return true;
       } else {
         const _Object = Object;
-        const keys = Object.keys(arg0);
+        const keys = Object.keys(_inlineProps);
         for (const item10018 of keys) {
           if (arg0[item10018] !== arg1[item10018]) {
             obj.return();
@@ -339,18 +337,17 @@ export const getInlineStyle = function getInlineStyle(viewDescriptors, _isFirstR
     while (tmp4 !== undefined) {
       let tmp9 = _slicedToArray(tmp6, 2);
       [tmp10, tmp11] = tmp9;
-      let tmp12 = tmp11;
       let obj2 = InlinePropManager(1685);
       let isSharedValueResult = obj2.isSharedValue(tmp11);
       if (!isSharedValueResult) {
         let tmp17 = "transform" === tmp10;
         if (tmp17) {
-          tmp17 = isInlineStyleTransform(tmp12);
+          tmp17 = isInlineStyleTransform(tmp11);
         }
         isSharedValueResult = tmp17;
       }
       if (!isSharedValueResult) {
-        obj[tmp10] = tmp12;
+        obj[tmp10] = tmp11;
       }
       continue;
     }

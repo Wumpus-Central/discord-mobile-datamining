@@ -11,7 +11,7 @@ e.__extends(function MissingLocaleDataError() {
     tmp2.type = "MISSING_LOCALE_DATA";
     return tmp2;
   } else {
-    const apply = tmp.apply;
+    const apply = Error.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {

@@ -26,9 +26,9 @@ keys2.shim = function shimObjectKeys() {
       Object.keys = function keys(arg0) {
         if (_mod4836(arg0)) {
           const call = slice.call;
-          tmp(typeof call === "unknown" ? slice() : call(arg0));
+          keys(typeof call === "unknown" ? slice() : call(arg0));
         } else {
-          return tmp(arg0);
+          return keys(arg0);
         }
       };
     }

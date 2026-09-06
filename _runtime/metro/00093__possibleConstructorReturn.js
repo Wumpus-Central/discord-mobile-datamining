@@ -1,8 +1,10 @@
 // _runtime/metro/00093__possibleConstructorReturn.js
+import _mod45 from "00045__.js";
 import _assertThisInitialized from "../00094__assertThisInitialized.js";
 
 export default function _possibleConstructorReturn(arg0, fn) {
   if (fn) {
+    _mod45;
     return fn;
   }
   if (undefined !== fn) {

@@ -12,9 +12,8 @@ function createMapperRegistry() {
         value = map.get(tmp3);
         if (value) {
           for (const item10022 of value) {
-            let tmp9 = item10022;
             if (!set.has(item10022)) {
-              let tmp13 = dfs(tmp9);
+              let tmp13 = dfs(item10022);
             }
             continue;
           }
@@ -22,19 +21,18 @@ function createMapperRegistry() {
         continue;
       }
       items.push(item);
+      tmp2 = item.inputs[Symbol.iterator]();
     }
     map = new Map();
     const item = map.forEach((outputs) => {
       if (outputs.outputs) {
         outputs = outputs.outputs;
         for (const item10009 of outputs) {
-          let obj = map;
-          let tmp3 = item10009;
           value = map.get(item10009);
           let arr = value;
           if (undefined === value) {
             items = [arg0];
-            let result = obj.set(tmp3, items);
+            let result = map.set(item10009, items);
           } else {
             arr = arr.push(arg0);
           }
@@ -60,10 +58,9 @@ function createMapperRegistry() {
           updateMappersOrder();
         }
         for (const item10015 of closure_1) {
-          let obj = item10015;
           if (item10015.dirty) {
-            obj.dirty = false;
-            let workletResult = obj.worklet();
+            item10015.dirty = false;
+            let workletResult = item10015.worklet();
           }
           continue;
         }
@@ -173,9 +170,8 @@ let c5 = 9999;
 const __initData = { code: "function pnpm_mappersTs2(){const{createMapperRegistry,mapperID,worklet,inputs,outputs}=this.__closure;let mapperRegistry=global.__mapperRegistry;if(mapperRegistry===undefined){mapperRegistry=global.__mapperRegistry=createMapperRegistry();}mapperRegistry.start(mapperID,worklet,inputs,outputs);}" };
 const __initData2 = { code: "function pnpm_mappersTs3(){const{mapperID}=this.__closure;const mapperRegistry=global.__mapperRegistry;mapperRegistry===null||mapperRegistry===void 0||mapperRegistry.stop(mapperID);}" };
 
-export const startMapper = function startMapper(fn, arr2, items) {
-  closure_0 = fn;
-  items = arr2;
+export const startMapper = function startMapper(fn) {
+  let items = arr2;
   if (arr2 === undefined) {
     items = [];
   }
@@ -187,7 +183,7 @@ export const startMapper = function startMapper(fn, arr2, items) {
   c5 = sum;
   module_1639 = sum;
   items(items1[2]);
-  fn = function f() {
+  const worklet = function f() {
     let __mapperRegistry = global.__mapperRegistry;
     if (undefined === __mapperRegistry) {
       if (typeof createMapperRegistry === "function") {
@@ -198,9 +194,8 @@ export const startMapper = function startMapper(fn, arr2, items) {
               value = map.get(tmp3);
               if (value) {
                 for (const item10022 of value) {
-                  let tmp9 = item10022;
                   if (!set.has(item10022)) {
-                    let tmp13 = dfs(tmp9);
+                    let tmp13 = dfs(item10022);
                   }
                   continue;
                 }
@@ -208,19 +203,18 @@ export const startMapper = function startMapper(fn, arr2, items) {
               continue;
             }
             items.push(item);
+            tmp2 = item.inputs[Symbol.iterator]();
           }
           map = new Map();
           const item = map.forEach((outputs) => {
             if (outputs.outputs) {
               outputs = outputs.outputs;
               for (const item10009 of outputs) {
-                let obj = map;
-                let tmp3 = item10009;
                 value = map.get(item10009);
                 let arr = value;
                 if (undefined === value) {
                   items = [arg0];
-                  let result = obj.set(tmp3, items);
+                  let result = map.set(item10009, items);
                 } else {
                   arr = arr.push(arg0);
                 }
@@ -246,10 +240,9 @@ export const startMapper = function startMapper(fn, arr2, items) {
                 updateMappersOrder();
               }
               for (const item10015 of closure_1) {
-                let obj = item10015;
                 if (item10015.dirty) {
-                  obj.dirty = false;
-                  let workletResult = obj.worklet();
+                  item10015.dirty = false;
+                  let workletResult = item10015.worklet();
                 }
                 continue;
               }
@@ -306,7 +299,6 @@ export const startMapper = function startMapper(fn, arr2, items) {
           return items;
         }
         const _Map = Map;
-        let map = new Map();
         c2 = false;
         c3 = false;
         let obj = {
@@ -353,17 +345,18 @@ export const startMapper = function startMapper(fn, arr2, items) {
         };
         tmp.__mapperRegistry = obj;
         __mapperRegistry = obj;
+        let map = new Map();
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     }
     __mapperRegistry.start(sum, closure_0, items, items1);
   };
-  let obj = { createMapperRegistry, mapperID: sum, worklet: fn, inputs: items, outputs: items1 };
-  fn.__closure = obj;
-  fn.__workletHash = 1517453109481;
-  fn.__initData = __initData;
-  obj.runOnUI(fn)();
+  let obj = { createMapperRegistry, mapperID: sum, worklet, inputs: items, outputs: items1 };
+  worklet.__closure = obj;
+  worklet.__workletHash = 1517453109481;
+  worklet.__initData = __initData;
+  obj.runOnUI(worklet)();
   return sum;
 };
 export const stopMapper = function stopMapper(_inlinePropsMapperId) {

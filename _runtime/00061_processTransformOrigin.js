@@ -35,7 +35,6 @@ export default function processTransformOrigin(str) {
                 }
               }
             }
-            let tmp8 = importDefault;
             let tmp10 = _modDef38(2 !== num4, "Transform-origin %s can only be used for y-position", str);
             let num2 = "100%";
             if ("top" === formatted) {
@@ -61,7 +60,7 @@ export default function processTransformOrigin(str) {
                   items[0] = "50%";
                   num = 2;
                 } else {
-                  let tmp11 = tmp8(38)(false, "Could not parse transform-origin: %s", str);
+                  let tmp11 = _modDef38(false, "Could not parse transform-origin: %s", str);
                   num = 2;
                 }
               }

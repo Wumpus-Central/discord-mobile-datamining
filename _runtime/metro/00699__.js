@@ -1,6 +1,9 @@
 // _runtime/metro/00699__.js
+import consoleSandbox from "../00689_consoleSandbox.js";
 import generateSpanId from "../00694_generateSpanId.js";
+import safeDateNow from "../00696_safeDateNow.js";
 import MAX_BAGGAGE_STRING_LENGTH from "../00700_MAX_BAGGAGE_STRING_LENGTH.js";
+import _mod701 from "00701__.js";
 import _mod702 from "00702__.js";
 
 require = arg1;
@@ -25,25 +28,24 @@ export const extractTraceparentData = function extractTraceparentData(str) {
   }
 };
 export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  let traceId = arg0;
-  if (arg0 === undefined) {
+  if (traceId === undefined) {
     traceId = generateSpanId.generateTraceId();
   }
-  let spanId = arg1;
-  if (arg1 === undefined) {
+  let spanId = propagationSpanId;
+  if (propagationSpanId === undefined) {
     spanId = generateSpanId.generateSpanId();
   }
   let str = "";
-  if (undefined !== arg2) {
+  if (undefined !== sampled) {
     let str2 = "-0";
-    if (arg2) {
+    if (sampled) {
       str2 = "-1";
     }
     str = str2;
   }
   return "" + traceId + "-" + spanId + str;
 };
-export const generateTraceparentHeader = function generateTraceparentHeader(traceId, propagationSpanId2, sampled2) {
+export const generateTraceparentHeader = function generateTraceparentHeader() {
   if (traceId === undefined) {
     traceId = generateSpanId.generateTraceId();
   }
@@ -57,7 +59,7 @@ export const generateTraceparentHeader = function generateTraceparentHeader(trac
   }
   return "00-" + traceId + "-" + spanId + "-" + str;
 };
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, arg1) {
+export const propagationContextFromHeaders = function propagationContextFromHeaders(str, baggage) {
   let tmp;
   if (str) {
     const match = str.match(regExp);
@@ -72,13 +74,13 @@ export const propagationContextFromHeaders = function propagationContextFromHead
       tmp = obj;
     }
   }
-  let result = MAX_BAGGAGE_STRING_LENGTH.baggageHeaderToDynamicSamplingContext(arg1);
+  let result = MAX_BAGGAGE_STRING_LENGTH.baggageHeaderToDynamicSamplingContext(baggage);
   let traceId;
   if (tmp != null) {
     traceId = tmp.traceId;
   }
   if (traceId) {
-    let tmp4Result = tmp4(701);
+    let tmp4Result = _mod701;
     let sample_rand;
     if (result != null) {
       sample_rand = result.sample_rand;
@@ -97,33 +99,33 @@ export const propagationContextFromHeaders = function propagationContextFromHead
       obj.sampleRand = str3;
       return obj;
     } else {
-      tmp4Result = tmp4(701);
+      tmp4Result = _mod701;
       let sample_rate;
       if (result != null) {
         sample_rate = result.sample_rate;
       }
       const parseSampleRateResult = tmp4Result.parseSampleRate(sample_rate);
       if (!parseSampleRateResult) {
-        tmp4(696).safeMathRandom();
-        const tmp4Result1 = tmp4(696);
+        safeDateNow.safeMathRandom();
+        const tmp4Result1 = safeDateNow;
       } else {
         let parentSampled;
         if (tmp != null) {
           parentSampled = tmp.parentSampled;
         }
       }
-      const safeMathRandomResult1 = tmp4(696).safeMathRandom();
+      const safeMathRandomResult1 = safeDateNow.safeMathRandom();
       if (tmp.parentSampled) {
         let result1 = safeMathRandomResult1 * parseSampleRateResult;
       } else {
         result1 = parseSampleRateResult + safeMathRandomResult1 * (1 - parseSampleRateResult);
       }
-      const tmp4Result2 = tmp4(696);
+      const tmp4Result2 = safeDateNow;
     }
   } else {
-    obj = { traceId: tmp4(694).generateTraceId(), sampleRand: null };
-    const tmp4Result3 = tmp4(694);
-    obj.sampleRand = tmp4(696).safeMathRandom();
+    obj = { traceId: generateSpanId.generateTraceId(), sampleRand: null };
+    const tmp4Result3 = generateSpanId;
+    obj.sampleRand = safeDateNow.safeMathRandom();
     return obj;
   }
 };
@@ -132,7 +134,7 @@ export const shouldContinueTrace = function shouldContinueTrace(client, org_id) 
   if (org_id) {
     if (result) {
       if (org_id !== result) {
-        const debug2 = tmp(689).debug;
+        const debug2 = consoleSandbox.debug;
         const _HermesInternal2 = HermesInternal;
         debug2.log(
           "Won't continue trace because org IDs don't match (incoming baggage: " +
@@ -163,7 +165,7 @@ export const shouldContinueTrace = function shouldContinueTrace(client, org_id) 
     flag = !tmp5;
   }
   if (!flag) {
-    const debug = tmp(689).debug;
+    const debug = consoleSandbox.debug;
     const _HermesInternal = HermesInternal;
     debug.log(
       "Starting a new trace because strict trace continuation is enabled but one org ID is missing (incoming baggage: " +

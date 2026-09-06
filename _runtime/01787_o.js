@@ -23,6 +23,7 @@ function parseBoxShadowString(str) {
   const mapped = parts.map((item) => item.trim());
   const found = mapped.filter((item) => "" !== item);
   const iter = found[Symbol.iterator]();
+  str = iter.next();
   while (iter !== undefined) {
     let obj = { offsetX: 0, offsetY: 0 };
     let tmp2 = null;
@@ -31,7 +32,6 @@ function parseBoxShadowString(str) {
     let num = 0;
     let parts1 = str.split(/\s+(?![^(]*\))/);
     for (const item10041 of parts1) {
-      let tmp7 = item10041;
       if (fn(item10041)) {
         if (0 === num) {
           tmp2 = item10041;
@@ -53,7 +53,7 @@ function parseBoxShadowString(str) {
             iter.return();
             return items2;
           } else {
-            obj.blurRadius = tmp7;
+            obj.blurRadius = item10041;
             num = num + 1;
           }
         } else if (3 === num) {
@@ -63,7 +63,7 @@ function parseBoxShadowString(str) {
             iter.return();
             return items3;
           } else {
-            obj.spreadDistance = tmp7;
+            obj.spreadDistance = item10041;
             num = num + 1;
           }
         } else {
@@ -73,7 +73,7 @@ function parseBoxShadowString(str) {
           return items4;
         }
         continue;
-      } else if ("inset" === tmp7) {
+      } else if ("inset" === item10041) {
         if (obj.inset) {
           obj2.return();
           let items5 = [];
@@ -95,7 +95,7 @@ function parseBoxShadowString(str) {
         if (null != tmp2) {
           flag = true;
         }
-        obj.color = tmp7;
+        obj.color = item10041;
       }
       continue;
     }

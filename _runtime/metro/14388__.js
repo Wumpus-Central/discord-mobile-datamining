@@ -107,10 +107,10 @@ if (typeof global.crypto.getRandomValues !== "function") {
     } else {
       const byteLength = uint8Array.byteLength;
       if (NativeModules.RNGetRandomValues) {
-        const RNGetRandomValues = tmp24.RNGetRandomValues;
+        const RNGetRandomValues = NativeModules.RNGetRandomValues;
         let randomBase64 = RNGetRandomValues.getRandomBase64(byteLength);
-      } else if (tmp24.ExpoRandom) {
-        const ExpoRandom2 = tmp24.ExpoRandom;
+      } else if (NativeModules.ExpoRandom) {
+        const ExpoRandom2 = NativeModules.ExpoRandom;
         randomBase64 = ExpoRandom2.getRandomBase64String(byteLength);
       } else if (QuotaExceededError.ExpoModules) {
         const ExpoRandom = QuotaExceededError.ExpoModules.ExpoRandom;

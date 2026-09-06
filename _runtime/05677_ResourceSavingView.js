@@ -30,7 +30,7 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
     collapsable: false,
     removeClippedSubviews: true,
     pointerEvents: str,
-    style: visible ? tmp4.attached : tmp4.detached,
+    style: visible ? container.attached : container.detached,
     children,
   };
   obj.children = (
@@ -38,7 +38,7 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
       collapsable={false}
       removeClippedSubviews
       pointerEvents={str}
-      style={visible ? tmp4.attached : tmp4.detached}
+      style={visible ? container.attached : container.detached}
     >
       {children}
     </React>
@@ -48,7 +48,7 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
       collapsable={false}
       removeClippedSubviews
       pointerEvents={str}
-      style={visible ? tmp4.attached : tmp4.detached}
+      style={visible ? container.attached : container.detached}
     >
       {children}
     </React>

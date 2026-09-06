@@ -80,7 +80,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export { attributeValueToTypedAttributeValue };
 export { isAttributeObject };
-export const serializeAttributes = function serializeAttributes(attributes, flag) {
+export const serializeAttributes = function serializeAttributes(attributes) {
   if (flag === undefined) {
     flag = false;
   }

@@ -10,31 +10,30 @@ function addLikelySubtags(arr3) {
   if (script) {
     if (region) {
       let obj = { lang, script, region, variants: [] };
-      const tmp4 = tmp(14264).likelySubtags[tmp(undefined, 14264).emitUnicodeLanguageId(undefined, obj)];
+      const tmp4 = _mod14264.likelySubtags[_mod14264.emitUnicodeLanguageId(undefined, obj)];
       if (tmp4) {
-        const result = tmp(14264).parseUnicodeLanguageId(tmp4);
+        const result = _mod14264.parseUnicodeLanguageId(tmp4);
         if (undefined === variants) {
           variants = [];
         }
         if (result) {
           obj = { lang: null, script: null, region: null, variants: null };
           ({ lang: obj17.lang, script: obj17.script, region: obj17.region } = result);
-          tmp(1162);
-          const tmpResult = tmp(1162);
+          const tmpResult = e;
           obj.variants = tmpResult.__spreadArray(tmpResult.__spreadArray([], variants, true), result.variants, true);
         } else {
           obj = { lang: "und", script: "Array", region: "isArray", variants };
         }
         parseUnicodeLocaleIdResult.lang = obj;
-        return tmp(14264).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+        return _mod14264.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
       }
     }
   }
   if (script) {
     const obj1 = { lang, script, variants: [] };
-    const tmp5 = tmp(14264).likelySubtags[tmp(undefined, 14264).emitUnicodeLanguageId(undefined, obj1)];
+    const tmp5 = _mod14264.likelySubtags[_mod14264.emitUnicodeLanguageId(undefined, obj1)];
     if (tmp5) {
-      const result1 = tmp(14264).parseUnicodeLanguageId(tmp5);
+      const result1 = _mod14264.parseUnicodeLanguageId(tmp5);
       let items = variants;
       if (undefined === variants) {
         items = [];
@@ -46,22 +45,22 @@ function addLikelySubtags(arr3) {
           region = result1.region;
         }
         obj2.region = region;
-        const tmpResult1 = tmp(1162);
-        obj2.variants = tmpResult1.__spreadArray(tmp(1162).__spreadArray([], items, true), result1.variants, true);
+        const tmpResult1 = e;
+        obj2.variants = tmpResult1.__spreadArray(e.__spreadArray([], items, true), result1.variants, true);
         let obj3 = obj2;
-        const tmpResult2 = tmp(1162);
+        const tmpResult2 = e;
       } else {
         obj3 = { lang: "und", script: "r", region, variants: items };
       }
       parseUnicodeLocaleIdResult.lang = obj3;
-      return tmp(14264).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+      return _mod14264.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
     }
   }
   if (region) {
     const obj4 = { lang, region, variants: [] };
-    const tmp6 = tmp(14264).likelySubtags[tmp(undefined, 14264).emitUnicodeLanguageId(undefined, obj4)];
+    const tmp6 = _mod14264.likelySubtags[_mod14264.emitUnicodeLanguageId(undefined, obj4)];
     if (tmp6) {
-      const result2 = tmp(14264).parseUnicodeLanguageId(tmp6);
+      const result2 = _mod14264.parseUnicodeLanguageId(tmp6);
       let items1 = variants;
       if (undefined === variants) {
         items1 = [];
@@ -73,24 +72,24 @@ function addLikelySubtags(arr3) {
         }
         obj5.script = script;
         obj5.region = result2.region;
-        const tmpResult3 = tmp(1162);
-        obj5.variants = tmpResult3.__spreadArray(tmp(1162).__spreadArray([], items1, true), result2.variants, true);
+        const tmpResult3 = e;
+        obj5.variants = tmpResult3.__spreadArray(e.__spreadArray([], items1, true), result2.variants, true);
         let obj6 = obj5;
-        const tmpResult4 = tmp(1162);
+        const tmpResult4 = e;
       } else {
         obj6 = { lang: "und", script, region: "Array", variants: items1 };
       }
       parseUnicodeLocaleIdResult.lang = obj6;
-      return tmp(14264).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+      return _mod14264.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
     }
   }
-  let tmp7 = tmp(14264).likelySubtags[lang];
+  let tmp7 = _mod14264.likelySubtags[lang];
   if (!tmp7) {
     const obj7 = { lang: "und", script, variants: [] };
-    tmp7 = tmp(14264).likelySubtags[tmp(undefined, 14264).emitUnicodeLanguageId(undefined, obj7)];
+    tmp7 = _mod14264.likelySubtags[_mod14264.emitUnicodeLanguageId(undefined, obj7)];
   }
   if (tmp7) {
-    const result3 = tmp(14264).parseUnicodeLanguageId(tmp7);
+    const result3 = _mod14264.parseUnicodeLanguageId(tmp7);
     let items2 = variants;
     if (undefined === variants) {
       items2 = [];
@@ -108,10 +107,10 @@ function addLikelySubtags(arr3) {
         region2 = result3.region;
       }
       obj8.region = region2;
-      const tmpResult5 = tmp(1162);
-      obj8.variants = tmpResult5.__spreadArray(tmp(1162).__spreadArray([], items2, true), result3.variants, true);
+      const tmpResult5 = e;
+      obj8.variants = tmpResult5.__spreadArray(e.__spreadArray([], items2, true), result3.variants, true);
       let tmp14 = obj8;
-      const tmpResult6 = tmp(1162);
+      const tmpResult6 = e;
     } else {
       obj8.lang = "und";
       obj8.script = script;
@@ -120,7 +119,7 @@ function addLikelySubtags(arr3) {
       tmp14 = obj8;
     }
     parseUnicodeLocaleIdResult.lang = tmp14;
-    return tmp(14264).emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
+    return _mod14264.emitUnicodeLocaleId(parseUnicodeLocaleIdResult);
   } else {
     const _Error = Error;
     const error = new Error("No match for addLikelySubtags");
@@ -609,9 +608,9 @@ let tmp2 = (() => {
             const parseUnicodeLocaleIdResult = Locale(14264).parseUnicodeLocaleId(arr3);
             ({ lang, script, region, variants } = parseUnicodeLocaleIdResult.lang);
             obj = { lang, variants: [] };
-            if (tmp(Locale(14264).emitUnicodeLanguageId(obj)) === result) {
-              tmp3(1162);
-              const tmp3Result = tmp3(1162);
+            if (closure_1_6(Locale(14264).emitUnicodeLanguageId(obj)) === result) {
+              Locale(1162);
+              const tmp3Result = Locale(1162);
               if (undefined === variants) {
                 variants = [];
               }
@@ -621,17 +620,17 @@ let tmp2 = (() => {
               obj1 = { lang: null };
               const obj2 = { lang, script: "Array", region: "isArray", variants };
               obj1.lang = obj2;
-              let emitUnicodeLocaleIdResult = tmp3(14264).emitUnicodeLocaleId(
+              let emitUnicodeLocaleIdResult = Locale(14264).emitUnicodeLocaleId(
                 tmp3Result.__assign(tmp3Result.__assign({}, parseUnicodeLocaleIdResult), obj1),
               );
               const __assignResult = tmp3Result.__assign({}, parseUnicodeLocaleIdResult);
             } else {
               if (region) {
                 const obj3 = { lang, region, variants: [] };
-                if (tmp(tmp3(14264).emitUnicodeLanguageId(obj3)) === result) {
-                  const tmp3Result1 = tmp3(1162);
+                if (closure_1_6(Locale(14264).emitUnicodeLanguageId(obj3)) === result) {
+                  const tmp3Result1 = Locale(1162);
                   let items = variants;
-                  const tmp3Result2 = tmp3(1162);
+                  const tmp3Result2 = Locale(1162);
                   if (undefined === variants) {
                     items = [];
                   }
@@ -642,20 +641,20 @@ let tmp2 = (() => {
                   const obj4 = { lang: null };
                   const obj5 = { lang: str2, script: "r", region, variants: items };
                   obj4.lang = obj5;
-                  emitUnicodeLocaleIdResult = tmp3(14264).emitUnicodeLocaleId(
-                    tmp3Result1.__assign(tmp3(1162).__assign({}, parseUnicodeLocaleIdResult), obj4),
+                  emitUnicodeLocaleIdResult = Locale(14264).emitUnicodeLocaleId(
+                    tmp3Result1.__assign(Locale(1162).__assign({}, parseUnicodeLocaleIdResult), obj4),
                   );
-                  const __assignResult1 = tmp3(1162).__assign({}, parseUnicodeLocaleIdResult);
+                  const __assignResult1 = Locale(1162).__assign({}, parseUnicodeLocaleIdResult);
                 }
               }
               emitUnicodeLocaleIdResult = arr3;
               if (script) {
                 const obj6 = { lang, script, variants: [] };
                 emitUnicodeLocaleIdResult = arr3;
-                if (tmp(tmp3(14264).emitUnicodeLanguageId(obj6)) === result) {
-                  const tmp3Result3 = tmp3(1162);
+                if (closure_1_6(Locale(14264).emitUnicodeLanguageId(obj6)) === result) {
+                  const tmp3Result3 = Locale(1162);
                   let items1 = variants;
-                  const tmp3Result4 = tmp3(1162);
+                  const tmp3Result4 = Locale(1162);
                   if (undefined === variants) {
                     items1 = [];
                   }
@@ -666,10 +665,10 @@ let tmp2 = (() => {
                   const obj7 = { lang: null };
                   const obj8 = { lang: str, script, region: "Array", variants: items1 };
                   obj7.lang = obj8;
-                  emitUnicodeLocaleIdResult = tmp3(14264).emitUnicodeLocaleId(
-                    tmp3Result3.__assign(tmp3(1162).__assign({}, parseUnicodeLocaleIdResult), obj7),
+                  emitUnicodeLocaleIdResult = Locale(14264).emitUnicodeLocaleId(
+                    tmp3Result3.__assign(Locale(1162).__assign({}, parseUnicodeLocaleIdResult), obj7),
                   );
-                  const __assignResult2 = tmp3(1162).__assign({}, parseUnicodeLocaleIdResult);
+                  const __assignResult2 = Locale(1162).__assign({}, parseUnicodeLocaleIdResult);
                 }
               }
             }

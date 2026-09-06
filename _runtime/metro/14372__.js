@@ -39,10 +39,10 @@ export default {
   getSameObject(self, searchParams, fn) {
     if (!self[closure_2]) {
       const _Object = Object;
-      self[tmp] = Object.create(null);
+      self[closure_2] = Object.create(null);
     }
     if (!(searchParams in self[closure_2])) {
-      self[tmp][searchParams] = fn();
+      self[closure_2][searchParams] = fn();
     }
     return self[closure_2][searchParams];
   },

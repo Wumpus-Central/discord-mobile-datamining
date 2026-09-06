@@ -4,7 +4,7 @@ import _mod17 from "00017__.js";
 function processEvent(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg2;
-  return fn(this, undefined, undefined, function*(arg0, value) {
+  return fn(this, undefined, undefined, function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

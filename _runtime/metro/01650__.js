@@ -27,10 +27,10 @@ if (!module_1639.isJest()) {
         closure_0 = arg0;
         closure_1 = arg2;
         if (self(dependencyMap[7]).SensorType.ACCELEROMETER !== arg1) {
-          if (tmp(tmp2[7]).SensorType.GRAVITY !== arg1) {
-            if (tmp(tmp2[7]).SensorType.GYROSCOPE !== arg1) {
-              if (tmp(tmp2[7]).SensorType.MAGNETIC_FIELD !== arg1) {
-                if (tmp(tmp2[7]).SensorType.ROTATION === arg1) {
+          if (self(dependencyMap[7]).SensorType.GRAVITY !== arg1) {
+            if (self(dependencyMap[7]).SensorType.GYROSCOPE !== arg1) {
+              if (self(dependencyMap[7]).SensorType.MAGNETIC_FIELD !== arg1) {
+                if (self(dependencyMap[7]).SensorType.ROTATION === arg1) {
                   return () => {
                     [tmp2, tmp3, tmp4, tmp5] = _slicedToArray(closure_0.quaternion, 4);
                     if (self.platform === module_1639.WEB_ANDROID) {
@@ -56,6 +56,19 @@ if (!module_1639.isJest()) {
                       ),
                       interfaceOrientation: 0,
                     });
+                    const obj = {
+                      qw: tmp2,
+                      qx: tmp3,
+                      qy: tmp4,
+                      qz: tmp5,
+                      yaw: tmp8,
+                      pitch: Math.sin(-2 * (tmp3 * tmp5 - tmp2 * tmp4)),
+                      roll: -Math.atan2(
+                        2 * (tmp3 * tmp4 + tmp2 * tmp5),
+                        tmp2 * tmp2 + tmp3 * tmp3 - tmp4 * tmp4 - tmp5 * tmp5,
+                      ),
+                      interfaceOrientation: 0,
+                    };
                   };
                 }
               }
@@ -129,16 +142,16 @@ if (!module_1639.isJest()) {
     key: "enableLayoutAnimations",
     value: function enableLayoutAnimations() {
       if (obj.isWeb()) {
-        const logger3 = tmp(1640).logger;
+        const logger3 = JSReanimated(1640).logger;
         logger3.warn("Layout Animations are not supported on web yet.");
       } else {
-        let tmpResult = tmp(1639);
+        let tmpResult = JSReanimated(1639);
         if (tmpResult.isJest()) {
-          const logger2 = tmp(1640).logger;
+          const logger2 = JSReanimated(1640).logger;
           logger2.warn("Layout Animations are no-ops when using Jest.");
         } else {
-          tmpResult = tmp(1639);
-          const logger = tmp(1640).logger;
+          tmpResult = JSReanimated(1639);
+          const logger = JSReanimated(1640).logger;
           const warn = logger.warn;
           if (isChromeDebuggerResult) {
             warn("Layout Animations are no-ops when using Chrome Debugger.");
@@ -148,6 +161,7 @@ if (!module_1639.isJest()) {
           isChromeDebuggerResult = tmpResult.isChromeDebugger();
         }
       }
+      obj = JSReanimated(1639);
     },
   };
   items[5] = entry5;
@@ -185,7 +199,7 @@ if (!module_1639.isJest()) {
           self.nextSensorId = +self.nextSensorId + 1;
           return +self.nextSensorId;
         } else {
-          const logger = tmp(1640).logger;
+          const logger = JSReanimated(1640).logger;
           let str = "";
           let str2 = "";
           if (tmpResult.isWeb()) {
@@ -227,16 +241,16 @@ if (!module_1639.isJest()) {
     key: "subscribeForKeyboardEvents",
     value: function subscribeForKeyboardEvents(arg0) {
       if (obj.isWeb()) {
-        const logger3 = tmp(1640).logger;
+        const logger3 = JSReanimated(1640).logger;
         logger3.warn("useAnimatedKeyboard is not available on web yet.");
       } else {
-        let tmpResult = tmp(1639);
+        let tmpResult = JSReanimated(1639);
         if (tmpResult.isJest()) {
-          const logger2 = tmp(1640).logger;
+          const logger2 = JSReanimated(1640).logger;
           logger2.warn("useAnimatedKeyboard is not available when using Jest.");
         } else {
-          tmpResult = tmp(1639);
-          const logger = tmp(1640).logger;
+          tmpResult = JSReanimated(1639);
+          const logger = JSReanimated(1640).logger;
           const warn = logger.warn;
           if (isChromeDebuggerResult) {
             warn("useAnimatedKeyboard is not available when using Chrome Debugger.");
@@ -267,19 +281,19 @@ if (!module_1639.isJest()) {
         const _window5 = window;
         const accelerometer = new window.Accelerometer(obj);
         return accelerometer;
-      } else if (tmp(1661).SensorType.GYROSCOPE === arg0) {
+      } else if (JSReanimated(1661).SensorType.GYROSCOPE === arg0) {
         const _window4 = window;
         const gyroscope = new window.Gyroscope(obj);
         return gyroscope;
-      } else if (tmp(1661).SensorType.GRAVITY === arg0) {
+      } else if (JSReanimated(1661).SensorType.GRAVITY === arg0) {
         const _window3 = window;
         const gravitySensor = new window.GravitySensor(obj);
         return gravitySensor;
-      } else if (tmp(1661).SensorType.MAGNETIC_FIELD === arg0) {
+      } else if (JSReanimated(1661).SensorType.MAGNETIC_FIELD === arg0) {
         const _window2 = window;
         const magnetometer = new window.Magnetometer(obj);
         return magnetometer;
-      } else if (tmp(1661).SensorType.ROTATION === arg0) {
+      } else if (JSReanimated(1661).SensorType.ROTATION === arg0) {
         const _window = window;
         const absoluteOrientationSensor = new window.AbsoluteOrientationSensor(obj);
         return absoluteOrientationSensor;
@@ -292,13 +306,13 @@ if (!module_1639.isJest()) {
     value: function getSensorName(arg0) {
       if (JSReanimated(1661).SensorType.ACCELEROMETER === arg0) {
         return "Accelerometer";
-      } else if (tmp(1661).SensorType.GRAVITY === arg0) {
+      } else if (JSReanimated(1661).SensorType.GRAVITY === arg0) {
         return "GravitySensor";
-      } else if (tmp(1661).SensorType.GYROSCOPE === arg0) {
+      } else if (JSReanimated(1661).SensorType.GYROSCOPE === arg0) {
         return "Gyroscope";
-      } else if (tmp(1661).SensorType.MAGNETIC_FIELD === arg0) {
+      } else if (JSReanimated(1661).SensorType.MAGNETIC_FIELD === arg0) {
         return "Magnetometer";
-      } else if (tmp(1661).SensorType.ROTATION === arg0) {
+      } else if (JSReanimated(1661).SensorType.ROTATION === arg0) {
         return "AbsoluteOrientationSensor";
       }
     },
@@ -334,9 +348,9 @@ if (!module_1639.isJest()) {
           self.platform = module_1639.WEB_IOS;
         } else {
           if (obj2.test(opera)) {
-            self.platform = tmp.WEB_ANDROID;
+            self.platform = module_1639.WEB_ANDROID;
           } else {
-            self.platform = tmp.WEB;
+            self.platform = module_1639.WEB;
           }
           obj2 = /android/i;
         }

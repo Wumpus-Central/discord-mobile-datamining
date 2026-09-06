@@ -42,7 +42,7 @@ function _callTimer(arr, _performance, didTimeout) {
           }
           tmp23();
         } catch (tmp15) {
-          closure_13.push(_mod184.default(tmp15));
+          arr = closure_13.push(_mod184.default(tmp15));
         }
       }
     }
@@ -188,7 +188,7 @@ let obj = {
     if (null != dependencyMap) {
       const index = closure_7.indexOf(dependencyMap);
       if (-1 !== index) {
-        tmp22[index] = null;
+        closure_7[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         closure_8.push(index);
@@ -202,7 +202,6 @@ let obj = {
           obj.deleteTimer(dependencyMap);
         }
       }
-      tmp22 = closure_7;
     }
     const index1 = closure_10.indexOf(dependencyMap);
     if (-1 !== index1) {
@@ -221,7 +220,7 @@ let obj = {
     if (null != arg0) {
       const index = closure_7.indexOf(arg0);
       if (-1 !== index) {
-        tmp8[index] = null;
+        closure_7[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         closure_8.push(index);
@@ -234,14 +233,13 @@ let obj = {
           TimingDefault.deleteTimer(arg0);
         }
       }
-      tmp8 = closure_7;
     }
   },
   clearInterval(current) {
     if (null != current) {
       const index = closure_7.indexOf(current);
       if (-1 !== index) {
-        tmp8[index] = null;
+        closure_7[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         closure_8.push(index);
@@ -254,14 +252,13 @@ let obj = {
           TimingDefault.deleteTimer(current);
         }
       }
-      tmp8 = closure_7;
     }
   },
   clearReactNativeMicrotask(arg0) {
     if (null != arg0) {
       const index = closure_7.indexOf(arg0);
       if (-1 !== index) {
-        tmp11[index] = null;
+        closure_7[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         closure_8.push(index);
@@ -274,7 +271,6 @@ let obj = {
           TimingDefault.deleteTimer(arg0);
         }
       }
-      tmp11 = closure_7;
     }
     const index1 = closure_9.indexOf(arg0);
     if (-1 !== index1) {
@@ -285,7 +281,7 @@ let obj = {
     if (null != current) {
       const index = closure_7.indexOf(current);
       if (-1 !== index) {
-        tmp8[index] = null;
+        closure_7[index] = null;
         closure_5[index] = null;
         dependencyMap[index] = null;
         closure_8.push(index);
@@ -298,7 +294,6 @@ let obj = {
           TimingDefault.deleteTimer(current);
         }
       }
-      tmp8 = closure_7;
     }
   },
   callTimers(arg0) {
@@ -314,10 +309,10 @@ let obj = {
       } while (num < length);
     }
     if (closure_13.length > 0) {
-      let tmp5 = tmp4;
+      let tmp5 = closure_13;
       if (length2 > 1) {
         let num2 = 1;
-        tmp5 = tmp4;
+        tmp5 = closure_13;
         if (1 < length2) {
           do {
             let fn = (arg0) => {

@@ -193,11 +193,11 @@ let items = [
       }
       let compareIdentifiersResult = SemVer(14021).compareIdentifiers(self.major, tmpResult.major);
       if (!compareIdentifiersResult) {
-        let tmp3Result = tmp3(14021);
+        let tmp3Result = SemVer(14021);
         compareIdentifiersResult = tmp3Result.compareIdentifiers(self.minor, tmpResult.minor);
       }
       if (!compareIdentifiersResult) {
-        tmp3Result = tmp3(14021);
+        tmp3Result = SemVer(14021);
         compareIdentifiersResult = tmp3Result.compareIdentifiers(self.patch, tmpResult.patch);
       }
       return compareIdentifiersResult;
@@ -231,7 +231,6 @@ let items = [
       while (true) {
         let tmp3 = self.prerelease[num3];
         let tmp4 = tmpResult.prerelease[num3];
-        let tmp5 = SemVer;
         let str = "prerelease compare";
         let tmp10 = SemVer(14019)("prerelease compare", num3, tmp3, tmp4);
         let tmp11 = undefined === tmp3;
@@ -245,7 +244,7 @@ let items = [
         } else if (tmp11) {
           return -1;
         } else if (tmp3 !== tmp4) {
-          let tmp5Result = tmp5(14021);
+          let tmp5Result = SemVer(14021);
           return tmp5Result.compareIdentifiers(tmp3, tmp4);
         } else {
           num3 = num3 + 1;
@@ -256,17 +255,16 @@ let items = [
   },
   {
     key: "compareBuild",
-    value: function compareBuild(arg0) {
+    value: function compareBuild(dependencyMap) {
       const self = this;
-      let tmpResult = arg0;
-      if (!(arg0 instanceof SemVer)) {
-        tmpResult = SemVer(arg0, self.options);
+      let tmpResult = dependencyMap;
+      if (!(dependencyMap instanceof SemVer)) {
+        tmpResult = SemVer(dependencyMap, self.options);
       }
       let num = 0;
       while (true) {
         let tmp3 = self.build[num];
         let tmp4 = tmpResult.build[num];
-        let tmp5 = SemVer;
         let str = "build compare";
         let tmp10 = SemVer(14019)("build compare", num, tmp3, tmp4);
         let tmp11 = undefined === tmp3;
@@ -280,7 +278,7 @@ let items = [
         } else if (tmp11) {
           return -1;
         } else if (tmp3 !== tmp4) {
-          let tmp5Result = tmp5(14021);
+          let tmp5Result = SemVer(14021);
           return tmp5Result.compareIdentifiers(tmp3, tmp4);
         } else {
           num = num + 1;
@@ -291,28 +289,28 @@ let items = [
   },
   {
     key: "inc",
-    value: function inc(pre, major2, arg2) {
+    value: function inc(pre, major2, major2) {
       const self = this;
       if ("premajor" === pre) {
         self.prerelease.length = 0;
         self.patch = 0;
         self.minor = 0;
         self.major = self.major + 1;
-        self.inc("pre", major2, arg2);
+        self.inc("pre", major2, major2);
       } else if ("preminor" === pre) {
         self.prerelease.length = 0;
         self.patch = 0;
         self.minor = self.minor + 1;
-        self.inc("pre", major2, arg2);
+        self.inc("pre", major2, major2);
       } else if ("prepatch" === pre) {
         self.prerelease.length = 0;
-        self.inc("patch", major2, arg2);
-        self.inc("pre", major2, arg2);
+        self.inc("patch", major2, major2);
+        self.inc("pre", major2, major2);
       } else if ("prerelease" === pre) {
         if (0 === self.prerelease.length) {
-          self.inc("patch", major2, arg2);
+          self.inc("patch", major2, major2);
         }
-        self.inc("pre", major2, arg2);
+        self.inc("pre", major2, major2);
       } else if ("major" === pre) {
         if (!tmp22) {
           self.major = self.major + 1;
@@ -336,11 +334,11 @@ let items = [
       } else if ("pre" === pre) {
         const _Number = Number;
         let num2 = 0;
-        if (Number(arg2)) {
+        if (Number(major2)) {
           num2 = 1;
         }
         if (!major2) {
-          if (false === arg2) {
+          if (false === major2) {
             const _Error2 = Error;
             const error = new Error("invalid increment argument: identifier is empty");
             throw error;
@@ -367,7 +365,7 @@ let items = [
           if (-1 === tmp13) {
             let prerelease = self.prerelease;
             if (major2 === prerelease.join(".")) {
-              if (false === arg2) {
+              if (false === major2) {
                 const _Error3 = Error;
                 const error1 = new Error("invalid increment argument: identifier already exists");
                 throw error1;
@@ -379,7 +377,7 @@ let items = [
         }
         if (major2) {
           let items1 = [major2, num2];
-          if (false === arg2) {
+          if (false === major2) {
             const items2 = [major2];
             items1 = items2;
           }

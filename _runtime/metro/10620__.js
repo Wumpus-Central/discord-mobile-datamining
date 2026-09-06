@@ -23,15 +23,14 @@ export const parseDuration = function parseDuration(arg0) {
   while (match) {
     let str2 = match[1];
     let formatted = str2.toLowerCase();
-    let tmp3 = exports;
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[formatted]) {
-      let parsed = tmp3.INTEGER_WORD_DICTIONARY[formatted];
+      let parsed = exports.INTEGER_WORD_DICTIONARY[formatted];
     } else {
       let _parseInt = parseInt;
       parsed = parseInt(formatted);
     }
     let str3 = match[2];
-    obj[tmp3.TIME_UNIT_DICTIONARY[str3.toLowerCase(str3)]] = parsed;
+    obj[exports.TIME_UNIT_DICTIONARY[str3.toLowerCase(str3)]] = parsed;
     let substr = str.substring(match[0].length);
     match = regExp.exec(substr);
     str = substr;

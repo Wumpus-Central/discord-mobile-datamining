@@ -116,11 +116,11 @@ class BrowserClient {
             closure_0._flushOutcomes();
           }
           if (enableLogs) {
-            let tmpResult = tmp(682);
+            let tmpResult = BrowserClient(682);
             const result = tmpResult._INTERNAL_flushLogsBuffer(closure_0);
           }
           if (enableMetrics) {
-            tmpResult = tmp(682);
+            tmpResult = BrowserClient(682);
             const result1 = tmpResult._INTERNAL_flushMetricsBuffer(closure_0);
           }
         }

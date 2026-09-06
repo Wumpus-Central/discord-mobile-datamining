@@ -1,11 +1,11 @@
 // _runtime/metro/06799__.js
-const fn = function t(arg0, arg1, arr) {
-  closure_0 = arg0 + 0.2 * arg1;
+const fn = function t(arg0, velocityY, substr) {
+  closure_0 = arg0 + 0.2 * velocityY;
   closure_1 = min.apply(
     null,
-    arr.map((item) => Math.abs(closure_0 - item)),
+    substr.map((item) => Math.abs(closure_0 - item)),
   );
-  return arr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
+  return substr.filter((item) => Math.abs(closure_0 - item) === closure_1)[0];
 };
 fn.__closure = {};
 fn.__workletHash = 8913698095371;

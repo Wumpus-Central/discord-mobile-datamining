@@ -216,22 +216,19 @@ export default function _regeneratorRuntime() {
           if (!isNaN(next.length)) {
             c1 = -1;
             next = function next() {
-              let arr;
               const sum = sum1 + 1;
               sum1 = sum;
               if (sum < next.length) {
                 while (true) {
-                  let tmp2 = hasOwnProperty;
                   let call = hasOwnProperty.call;
-                  arr = next;
                   let tmp3 = sum1;
-                  if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                  if (typeof call === "unknown" ? hasOwnProperty(tmp3) : call(next, tmp3)) {
                     break;
                   } else {
                     sum1 = sum1 + 1;
                   }
                 }
-                next.value = arr[sum1];
+                next.value = next[sum1];
                 next.done = false;
                 return next;
               }
@@ -732,10 +729,9 @@ export default function _regeneratorRuntime() {
                 }
                 continue;
               } else {
-                let tmp4 = hasOwnProperty;
                 let call = hasOwnProperty.call;
                 if (typeof call === "unknown") {
-                  let callResult = tmp4(key10018);
+                  let callResult = hasOwnProperty(key10018);
                 } else {
                   callResult = call(obj, key10018);
                 }
@@ -762,11 +758,10 @@ export default function _regeneratorRuntime() {
               const completion = tmp2.completion;
               while ("root" !== self.tryEntries[diff].tryLoc) {
                 if (tmp2.tryLoc <= self.prev) {
-                  let tmp7 = hasOwnProperty;
                   let call2 = hasOwnProperty.call;
-                  let tmp4 = typeof call2 === "unknown" ? tmp7("catchLoc") : call2(tmp2, "catchLoc");
-                  let call = tmp7.call;
-                  let tmp5 = typeof call === "unknown" ? tmp7("finallyLoc") : call(tmp2, "finallyLoc");
+                  let tmp4 = typeof call2 === "unknown" ? hasOwnProperty("catchLoc") : call2(tmp2, "catchLoc");
+                  let call = hasOwnProperty.call;
+                  let tmp5 = typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp2, "finallyLoc");
                   if (tmp4) {
                     if (tmp5) {
                       if (self.prev < tmp2.catchLoc) {
@@ -834,9 +829,8 @@ export default function _regeneratorRuntime() {
             while (true) {
               let tmp3 = self.tryEntries[diff];
               if (tmp3.tryLoc <= self.prev) {
-                let tmp5 = hasOwnProperty;
                 let call = hasOwnProperty.call;
-                if (typeof call === "unknown" ? tmp5("finallyLoc") : call(tmp3, "finallyLoc")) {
+                if (typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp3, "finallyLoc")) {
                   tmp2 = tmp3;
                   if (self.prev < tmp3.finallyLoc) {
                     break;
@@ -953,22 +947,19 @@ export default function _regeneratorRuntime() {
                 if (!isNaN(next.length)) {
                   let sum1 = -1;
                   next = function next() {
-                    let arr;
                     const sum = sum1 + 1;
                     sum1 = sum;
                     if (sum < next.length) {
                       while (true) {
-                        let tmp2 = hasOwnProperty;
                         let call = hasOwnProperty.call;
-                        arr = next;
                         let tmp3 = sum1;
-                        if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                        if (typeof call === "unknown" ? hasOwnProperty(tmp3) : call(next, tmp3)) {
                           break;
                         } else {
                           sum1 = sum1 + 1;
                         }
                       }
-                      next.value = arr[sum1];
+                      next.value = next[sum1];
                       next.done = false;
                       return next;
                     }

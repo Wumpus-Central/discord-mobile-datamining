@@ -26,7 +26,7 @@ const memoResult = memo((rootHostName) => {
   const items = [rootHostName.children];
   if (flag) {
     obj = { name: str };
-    flag = tmp6(PortalHost.PortalHost, obj);
+    flag = React4(PortalHost.PortalHost, obj);
   }
   items[1] = flag;
   obj.children = items;

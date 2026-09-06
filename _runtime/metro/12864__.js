@@ -1,6 +1,7 @@
 // _runtime/metro/12864__.js
 import _mod12841 from "12841__.js";
 import _mod12844 from "12844__.js";
+import _mod12851 from "12851__.js";
 import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 
 function eventFromEnvelope(arg0, arg1) {
@@ -40,7 +41,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
         const dsnFromStringResult = _mod12844.dsnFromString(arg0);
         if (dsnFromStringResult) {
           let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = tmp4(12851).getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
+          const envelopeEndpointWithUrlEncodedAuth = _mod12851.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
           let tmp9 = tunnel;
           result = {};
           if (arg1) {
@@ -53,7 +54,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
             tmp9 = asyncGeneratorStep;
             tunnel = asyncGeneratorStep(async (release) => {
               c1 = 0;
-              return (async (arg0, value) => {
+              return (async (arg0) => {
                 if (c1 === 2) {
                   c1 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -109,15 +110,14 @@ export function makeMultiplexedTransport(arg0, arg1) {
             tmp9Result = tmp9(result);
           }
           result = result.set(combined, tmp9Result);
-          const tmp4Result = tmp4(12851);
+          const tmp4Result = _mod12851;
         }
-        tmp4 = require;
       }
     }
-    closure_4 = async function _send(envelope) {
+    closure_4 = async function _send() {
       c2 = 0;
       c1 = 0;
-      return (async (arg0, value) => {
+      return (async (arg0) => {
         const mapped = v3({
           envelope,
           getEvent(arg0) {
@@ -169,7 +169,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
       items[arraySpreadResult] = closure_2_1;
       closure_1 = closure_1 + 1;
       await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return arg1.every((item) => item);
+      return value.every((item) => item);
     };
     closure_1 = tunnel(arg0);
     const map = new Map();

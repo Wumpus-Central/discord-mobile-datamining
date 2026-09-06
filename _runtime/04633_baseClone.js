@@ -27,11 +27,11 @@ obj["[object Arguments]"] = true;
 obj["[object WeakMap]"] = false;
 obj["[object Function]"] = false;
 obj["[object Error]"] = false;
-function baseClone(arr, arg1, fn, arg3, arg4, arg5) {
+function baseClone(arr, arg1, fn, key, arr, height) {
   _require = arr;
   dependencyMap = arg1;
   closure_2 = fn;
-  closure_3 = arg5;
+  closure_3 = height;
   if (!fn) {
     {
       if (require("metro/00521__.js")(arr)) {
@@ -59,7 +59,7 @@ function baseClone(arr, arg1, fn, arg3, arg4, arg5) {
                   closure_4 = tmp14;
                 } else {
                   obj = arr;
-                  if (!arg4) {
+                  if (!arr) {
                     obj = {};
                   }
                   return obj;
@@ -86,8 +86,8 @@ function baseClone(arr, arg1, fn, arg3, arg4, arg5) {
             obj = {};
           }
         }
-        let obj3 = arg5;
-        if (!arg5) {
+        let obj3 = height;
+        if (!height) {
           const tmp21 = new tmp32(639)();
           closure_3 = tmp21;
           obj3 = tmp21;
@@ -132,8 +132,8 @@ function baseClone(arr, arg1, fn, arg3, arg4, arg5) {
       }
     }
   } else {
-    if (arg4) {
-      let tmp4 = fn(arr, arg3, arg4, arg5);
+    if (arr) {
+      let tmp4 = fn(arr, key, arr, height);
     } else {
       tmp4 = fn(arr);
     }

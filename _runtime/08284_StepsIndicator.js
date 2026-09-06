@@ -124,7 +124,7 @@ export const StepsIndicator = function StepsIndicator(options) {
     }
     items[1] = jsxResult;
     obj.children = items;
-    return < key={arg1}><get ActivityIndicator.View key={"" + arg1 + "-View"} {...obj} /></>;
+    return < key={index2}><get ActivityIndicator.View key={"" + index2 + "-View"} {...obj} /></>;
   }, items2);
   obj = { pointerEvents: "none", testID: "StepsIndicator-Container", style: memo1.stepIndicatorContainerStyle, children: reversed.map((item, index) => closure_8(item, index)) };
   return <StepMarker.View pointerEvents="none" testID="StepsIndicator-Container" style={memo1.stepIndicatorContainerStyle}>{reversed.map((item, index) => closure_8(item, index))}</StepMarker.View>;

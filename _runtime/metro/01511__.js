@@ -1,10 +1,9 @@
 // _runtime/metro/01511__.js
 import noop from "00019__.js";
 
-export const useEventEmitter = function useEventEmitter(set, onEmitEvent) {
-  let current = set;
+export const useEventEmitter = function useEventEmitter(current, onEmitEvent) {
   let current2 = onEmitEvent;
-  noop.useRef(set);
+  noop.useRef(current);
   noop.useRef(onEmitEvent);
   const insertionEffect = noop.useInsertionEffect(() => {
     closure_2.current = current;
@@ -22,7 +21,7 @@ export const useEventEmitter = function useEventEmitter(set, onEmitEvent) {
           obj = {};
         }
         ref3.current[arg0] = obj;
-        let items = tmp.current[arg0][closure_0];
+        let items = ref3.current[arg0][closure_0];
         if (!items) {
           items = [];
         }
@@ -37,12 +36,11 @@ export const useEventEmitter = function useEventEmitter(set, onEmitEvent) {
               tmp3 = ref.current[tmp][closure_0];
             }
             if (tmp3) {
-              const index = tmp3.indexOf(tmp2);
+              const index = tmp3.indexOf(closure_1);
               if (index > -1) {
                 tmp3.splice(index, 1);
               }
             }
-            tmp2 = closure_1;
           }
         };
       },

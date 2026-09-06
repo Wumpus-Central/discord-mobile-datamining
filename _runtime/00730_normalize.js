@@ -1,6 +1,7 @@
 // _runtime/00730_normalize.js
 import _mod687 from "metro/00687__.js";
 import _mod692 from "metro/00692__.js";
+import _mod698 from "metro/00698__.js";
 import _slicedToArray from "metro/00032__.js";
 
 function normalize(arg0) {
@@ -91,10 +92,10 @@ function visit(arg0, __sentry_skip_normalization__) {
               }
             }
             if (obj.isVueViewModel(_events)) {
-              let tmp4Result = tmp4(tmp5[3]);
+              let tmp4Result = _mod698;
               return tmp4Result.getVueInternalName(_events);
             } else {
-              tmp4Result = tmp4(tmp5[2]);
+              tmp4Result = _mod692;
               if (tmp4Result.isSyntheticEvent(_events)) {
                 return "[SyntheticEvent]";
               } else {
@@ -107,7 +108,7 @@ function visit(arg0, __sentry_skip_normalization__) {
                 }
                 if (typeof _events === "function") {
                   const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + tmp4(tmp5[3]).getFunctionName(_events) + "]";
+                  return "[Function: " + _mod698.getFunctionName(_events) + "]";
                 } else if (typeof _events === "symbol") {
                   const _String2 = String;
                   const _HermesInternal3 = HermesInternal;

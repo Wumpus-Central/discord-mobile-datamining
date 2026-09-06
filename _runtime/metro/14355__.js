@@ -4,6 +4,7 @@ import _mod14301 from "14301__.js";
 import _mod14304 from "14304__.js";
 import _mod14320 from "14320__.js";
 import _mod14323 from "14323__.js";
+import _mod14357 from "14357__.js";
 import state from "../14358_state.js";
 import prop from "14356__.js";
 
@@ -37,11 +38,11 @@ const fn = (toString, toString2, arg2) => {
   const tmp8 = _mod14320(toString, "name");
   let tmp9 = !tmp8;
   if (tmp8) {
-    tmp9 = tmp6(14357).CONFIGURABLE && toString.name !== text2;
-    const tmp10 = tmp6(14357).CONFIGURABLE && toString.name !== text2;
+    tmp9 = _mod14357.CONFIGURABLE && toString.name !== text2;
+    const tmp10 = _mod14357.CONFIGURABLE && toString.name !== text2;
   }
   if (tmp9) {
-    if (tmp6(14300)) {
+    if (_mod14300) {
       let obj = { value: text2, configurable: true };
       defineProperty(toString, "name", obj);
     } else {
@@ -53,7 +54,7 @@ const fn = (toString, toString2, arg2) => {
     tmp13 = arg2;
   }
   if (tmp13) {
-    tmp13 = tmp6(14320)(arg2, "arity");
+    tmp13 = _mod14320(arg2, "arity");
   }
   if (tmp13) {
     tmp13 = toString.length !== arg2.arity;
@@ -64,14 +65,14 @@ const fn = (toString, toString2, arg2) => {
   }
   try {
     if (arg2) {
-      if (tmp6(14320)(arg2, "constructor")) {
+      if (_mod14320(arg2, "constructor")) {
         if (arg2.constructor) {
-          if (tmp6(14300)) {
+          if (_mod14300) {
             defineProperty(toString, "prototype", { writable: false });
           }
         }
-        const enforceResult = tmp6(14358).enforce(toString);
-        if (!tmp6(14320)(enforceResult, "source")) {
+        const enforceResult = state.enforce(toString);
+        if (!_mod14320(enforceResult, "source")) {
           let str11 = "";
           if (typeof text2 === "string") {
             str11 = text2;

@@ -1,19 +1,29 @@
 // _runtime/04872_OrdinaryDefineOwnProperty.js
+import _mod1283 from "metro/01283__.js";
+import _mod1284 from "metro/01284__.js";
+import _mod1304 from "metro/01304__.js";
 import _mod4809 from "metro/04809__.js";
+import _mod4856 from "metro/04856__.js";
+import _mod4860 from "metro/04860__.js";
+import ToPropertyDescriptor from "04861_ToPropertyDescriptor.js";
+import SameValue from "04865_SameValue.js";
+import IsAccessorDescriptor from "04873_IsAccessorDescriptor.js";
+import _mod4874 from "metro/04874__.js";
+import ValidateAndApplyPropertyDescriptor from "04875_ValidateAndApplyPropertyDescriptor.js";
 
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
   if (_mod4809(arg0)) {
-    if (tmp(4856)(arg1)) {
-      if (tmp(4860)(__Writable__)) {
-        if (tmp(1284)) {
-          const tmp30 = tmp(1284)(arg0, arg1);
+    if (_mod4856(arg1)) {
+      if (_mod4860(__Writable__)) {
+        if (_mod1284) {
+          const tmp30 = _mod1284(arg0, arg1);
           let tmp31 = tmp30;
           if (tmp30) {
-            tmp31 = tmp(4861)(tmp30);
+            tmp31 = ToPropertyDescriptor(tmp30);
           }
-          return tmp(4875)(arg0, arg1, tmp(4874)(arg0), __Writable__, tmp31);
-        } else if (tmp(4873)(__Writable__)) {
-          const tmp28 = new tmp(1304)("This environment does not support accessor property descriptors.");
+          return ValidateAndApplyPropertyDescriptor(arg0, arg1, _mod4874(arg0), __Writable__, tmp31);
+        } else if (IsAccessorDescriptor(__Writable__)) {
+          const tmp28 = new _mod1304("This environment does not support accessor property descriptors.");
           throw tmp28;
         } else {
           let tmp17 =
@@ -42,25 +52,25 @@ export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
           }
           if (!tmp17) {
             if (!tmp18) {
-              const tmp24 = new tmp(1304)(
+              const tmp24 = new _mod1304(
                 "This environment does not support defining non-writable, non-enumerable, or non-configurable properties",
               );
               throw tmp24;
             }
           }
           arg0[arg1] = __Writable__["[[Value]]"];
-          return tmp(4865)(arg0[arg1], __Writable__["[[Value]]"]);
+          return SameValue(arg0[arg1], __Writable__["[[Value]]"]);
         }
       } else {
-        const tmp15 = new tmp(1283)("Assertion failed: Desc must be a Property Descriptor");
+        const tmp15 = new _mod1283("Assertion failed: Desc must be a Property Descriptor");
         throw tmp15;
       }
     } else {
-      const tmp10 = new tmp(1283)("Assertion failed: P must be a Property Key");
+      const tmp10 = new _mod1283("Assertion failed: P must be a Property Key");
       throw tmp10;
     }
   } else {
-    const tmp5 = new tmp(1283)("Assertion failed: O must be an Object");
+    const tmp5 = new _mod1283("Assertion failed: O must be an Object");
     throw tmp5;
   }
 }

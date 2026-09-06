@@ -63,7 +63,7 @@ export const supportsNativeFetch = function supportsNativeFetch() {
       return true;
     } else {
       let flag2 = false;
-      const _document = tmp5(12798).GLOBAL_OBJ.document;
+      const _document = _mod12798.GLOBAL_OBJ.document;
       if (_document) {
         if (typeof _document.createElement === "function") {
           try {
@@ -76,7 +76,7 @@ export const supportsNativeFetch = function supportsNativeFetch() {
               _fetch = tmp8.contentWindow.fetch;
             }
             if (_fetch) {
-              flag2 = tmp4(tmp8.contentWindow.fetch);
+              flag2 = isNativeFunction(tmp8.contentWindow.fetch);
             }
             const head2 = _document.head;
             head2.removeChild(element);
@@ -90,8 +90,6 @@ export const supportsNativeFetch = function supportsNativeFetch() {
       }
       return flag2;
     }
-    tmp4 = isNativeFunction;
-    tmp5 = require;
   } else {
     return false;
   }

@@ -59,8 +59,8 @@ export const useRive = function useRive() {
           .finally(() => {
             if (ref.current) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(tmp.current);
-              tmp.current = null;
+              clearTimeout(ref.current);
+              ref.current = null;
             }
           });
         const catchPromise = Promise.race(items)

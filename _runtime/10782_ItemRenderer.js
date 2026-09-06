@@ -26,7 +26,7 @@ export const ItemRenderer = (arg0) => {
     windowSize,
     loop,
   });
-  const tmp2 = loop(noop.useState(null), 2);
+  let tmp2 = loop(noop.useState(null), 2);
   const first = tmp2[0];
   closure_9 = tmp4;
   const fn = function p() {

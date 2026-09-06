@@ -1,9 +1,9 @@
 // _runtime/04869_Call.js
 import _mod1282 from "metro/01282__.js";
+import _mod1283 from "metro/01283__.js";
 import callBoundIntrinsic from "01316_callBoundIntrinsic.js";
 import _mod4847 from "metro/04847__.js";
 
-const _mod1283 = tmp2(1283);
 let tmp = _mod1282("%Reflect.apply%", true);
 if (!tmp) {
   tmp = callBoundIntrinsic("Function.prototype.apply");

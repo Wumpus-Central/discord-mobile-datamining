@@ -8,7 +8,7 @@ require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
 
-export const dropHandlers = function dropHandlers(arg0) {
+export const dropHandlers = function dropHandlers(current2) {
   for (const item10006 of tmp) {
     let obj = RNGestureHandlerModuleDefault;
     let dropGestureHandlerResult = obj.dropGestureHandler(item10006.handlerTag);

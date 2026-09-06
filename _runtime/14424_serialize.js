@@ -75,9 +75,9 @@ export default function serialize(arg0) {
                 arr1.push(self);
               }
               if (~index) {
-                arr3.splice(index, Infinity, arg0);
+                closure_2.splice(index, Infinity, arg0);
               } else {
-                arr3.push(arg0);
+                closure_2.push(arg0);
               }
               let str2 = nativeEvent;
               if (~arr1.indexOf(nativeEvent)) {

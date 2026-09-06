@@ -1,7 +1,10 @@
 // _runtime/00787__extractErrorData.js
+import _mod687 from "metro/00687__.js";
 import _mod688 from "metro/00688__.js";
 import consoleSandbox from "00689_consoleSandbox.js";
 import _mod692 from "metro/00692__.js";
+import _mod697 from "metro/00697__.js";
+import normalize from "00730_normalize.js";
 import setupIntegration from "00752_setupIntegration.js";
 
 function _extractErrorData(cause, arg1, arg2) {
@@ -20,7 +23,6 @@ function _extractErrorData(cause, arg1, arg2) {
       } else {
         let tmp40 = cause[tmp9];
         let tmp41 = tmp40;
-        let tmp44 = require;
         let obj5 = _mod692;
         if (!obj5.isError(tmp40)) {
           if (typeof tmp41 !== "string") {
@@ -28,7 +30,7 @@ function _extractErrorData(cause, arg1, arg2) {
           }
         }
         if (arg2) {
-          let tmp44Result = tmp44(697);
+          let tmp44Result = _mod697;
           let _HermesInternal2 = HermesInternal;
           let truncateResult = tmp44Result.truncate("" + tmp41, arg2);
         } else {
@@ -107,11 +109,11 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
           if (tmp8) {
             obj = {};
             const merged = Object.assign(contexts.contexts);
-            const normalizer = tmp4(730);
+            const normalizer = normalize;
             const normalizeResult = normalizer.normalize(tmp8, num);
-            let tmp4Result = tmp4(692);
+            let tmp4Result = _mod692;
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              tmp4Result = tmp4(687);
+              tmp4Result = _mod687;
               const result = tmp4Result.addNonEnumerableProperty(
                 normalizeResult,
                 "__sentry_skip_normalization__",

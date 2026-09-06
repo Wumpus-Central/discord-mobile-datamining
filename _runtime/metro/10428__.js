@@ -112,13 +112,12 @@ const entry1 = {
         items.push(parsingResult);
         const substr1 = text.substring(index + text.length);
         const match2 = patternResult.exec(substr1);
-      } else if (!(extractResult instanceof tmp6(10435).ParsingComponents)) {
+      } else if (!(extractResult instanceof ParsingContext(10435).ParsingComponents)) {
         parsingResult = debug.createParsingResult(match.index, match[0], extractResult);
       }
       const tmp9Result = tmp9(index, substr1);
       tmp9Result.start = extractResult;
       parsingResult = tmp9Result;
-      tmp6 = ParsingContext;
     }
     return items;
   },

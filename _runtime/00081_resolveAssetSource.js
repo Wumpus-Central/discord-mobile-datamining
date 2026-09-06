@@ -1,6 +1,7 @@
 // _runtime/00081_resolveAssetSource.js
 import _modDef82 from "metro/00082__.js";
 import _mod84 from "metro/00084__.js";
+import AssetSourceResolver from "00085_AssetSourceResolver.js";
 import pickScale from "00086_pickScale.js";
 
 function resolveAssetSource(source) {
@@ -8,7 +9,7 @@ function resolveAssetSource(source) {
     if (typeof source !== "object") {
       const assetByID = _mod84.getAssetByID(source);
       if (assetByID) {
-        const _default = new tmp12(85).default(
+        const _default = new AssetSourceResolver.default(
           (function getDevServerURL() {
             let tmp = first;
             if (undefined === first) {
@@ -66,7 +67,6 @@ function resolveAssetSource(source) {
       } else {
         return null;
       }
-      tmp12 = require;
     }
   }
   return source;

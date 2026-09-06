@@ -8,7 +8,8 @@ export const useComposedGesture = function useComposedGesture(type) {
     if (obj.isComposedGesture(handlerTags)) {
       handlerTags = handlerTags.handlerTags;
     } else {
-      handlerTags = [handlerTags.handlerTag];
+      handlerTags = [];
+      handlerTags[0] = handlerTags.handlerTag;
     }
     return handlerTags;
   });

@@ -24,14 +24,13 @@ export default noop.memo((theme) => {
       } else {
         str = "auto";
         if (React2) {
-          const colorScheme = obj2.getColorScheme();
+          const colorScheme = React2.getColorScheme();
           let tmp11;
           if (null !== colorScheme) {
             tmp11 = colorScheme;
           }
           str = tmp11;
         }
-        obj2 = React2;
       }
       let str2 = "white";
       let str4 = "white";
@@ -43,24 +42,23 @@ export default noop.memo((theme) => {
         str4 = str6;
       }
       obj.textColor = tmp7(str4);
-      tmp4(9724);
+      colorToHex;
       if (typeof getDividerColor === "function") {
         if (theme.dividerColor) {
           let dividerColor = theme.dividerColor;
-        } else if (typeof tmp8 === "function") {
+        } else if (typeof getTheme === "function") {
           if (theme.theme) {
             let str7 = theme.theme;
           } else {
             str7 = "auto";
             if (React2) {
-              const colorScheme1 = obj3.getColorScheme();
+              const colorScheme1 = React2.getColorScheme();
               let tmp17;
               if (null !== colorScheme1) {
                 tmp17 = colorScheme1;
               }
               str7 = tmp17;
             }
-            obj3 = React2;
           }
           dividerColor = str2;
           if ("dark" !== str7) {
@@ -74,24 +72,23 @@ export default noop.memo((theme) => {
           throw new TypeError("Trying to call a non-function");
         }
         obj.dividerColor = tmp13(dividerColor);
-        tmp4(9724);
+        colorToHex;
         if (typeof getButtonColor === "function") {
           if (theme.buttonColor) {
             str2 = theme.buttonColor;
-          } else if (typeof tmp8 === "function") {
+          } else if (typeof getTheme === "function") {
             if (theme.theme) {
               let str10 = theme.theme;
             } else {
               str10 = "auto";
               if (React2) {
-                const colorScheme2 = obj4.getColorScheme();
+                const colorScheme2 = React2.getColorScheme();
                 let tmp23;
                 if (null !== colorScheme2) {
                   tmp23 = colorScheme2;
                 }
                 str10 = tmp23;
               }
-              obj4 = React2;
             }
             if ("dark" !== str10) {
               let str12;
@@ -104,20 +101,19 @@ export default noop.memo((theme) => {
             throw new TypeError("Trying to call a non-function");
           }
           obj.buttonColor = tmp19(str2);
-          if (typeof tmp8 === "function") {
+          if (typeof getTheme === "function") {
             if (theme.theme) {
               let str13 = theme.theme;
             } else {
               str13 = "auto";
               if (React2) {
-                const colorScheme3 = obj5.getColorScheme();
+                const colorScheme3 = React2.getColorScheme();
                 let tmp26;
                 if (null !== colorScheme3) {
                   tmp26 = colorScheme3;
                 }
                 str13 = tmp26;
               }
-              obj5 = React2;
             }
             obj.theme = str13;
             if (typeof getTitle === "function") {
@@ -159,7 +155,7 @@ export default noop.memo((theme) => {
                 str14 = theme.timeZoneOffsetInMinutes.toString();
               }
               obj.timeZoneOffsetInMinutes = str14;
-              return tmp(tmp2, obj);
+              return <DatePickerAndroid {...obj} />;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -178,6 +174,4 @@ export default noop.memo((theme) => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = jsx;
-  tmp2 = DatePickerAndroid;
 });

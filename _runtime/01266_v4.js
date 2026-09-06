@@ -1,4 +1,5 @@
 // _runtime/01266_v4.js
+import uint8ArrayDefault from "01258_uint8Array.js";
 import unsafeStringify from "01259_unsafeStringify.js";
 import _modDef1267 from "metro/01267__.js";
 
@@ -11,7 +12,7 @@ export default function v4(arg0, arg1, arg2) {
   if (_modDef1267.randomUUID) {
     if (!arg1) {
       if (!obj) {
-        return tmp(1267).randomUUID();
+        return _modDef1267.randomUUID();
       }
     }
   }
@@ -20,8 +21,8 @@ export default function v4(arg0, arg1, arg2) {
   }
   let random = obj.random;
   if (!random) {
-    random = obj.rng || tmp(1258)();
-    const tmp3 = obj.rng || tmp(1258);
+    random = obj.rng || uint8ArrayDefault();
+    const tmp3 = obj.rng || uint8ArrayDefault;
   }
   random[6] = (15 & random[6]) | 64;
   random[8] = (63 & random[8]) | 128;

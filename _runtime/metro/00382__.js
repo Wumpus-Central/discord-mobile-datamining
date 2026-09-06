@@ -26,7 +26,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-function flatAnimatedNodes(icon, items, arg2) {
+function flatAnimatedNodes(icon) {
   if (items === undefined) {
     items = [];
   }

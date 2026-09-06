@@ -17,7 +17,7 @@ const memoResult = fn(19).memo((pointerEvents) => {
   obj.style = items;
   return (
     <View
-      pointerEvents={arg0.pointerEvents}
+      pointerEvents={pointerEvents.pointerEvents}
       accessible
       accessibilityRole="adjustable"
       accessibilityLabel="Bottom Sheet"

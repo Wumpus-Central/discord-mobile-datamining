@@ -16,14 +16,14 @@ export default (arg0) => {
     function sendToReactotron(action, data) {
       closure_0.send("asyncStorage.mutation", { action, data });
     }
-    asyncGeneratorStep(async (arg0, value, arg2) => {
+    asyncGeneratorStep(async (key, value, arg2) => {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
-        if (arg0 === 1) {
+        if (key === 1) {
           throw value;
-        } else if (arg0 === 2) {
+        } else if (key === 2) {
           let obj = { value, done: true };
           return obj;
         } else {
@@ -33,33 +33,31 @@ export default (arg0) => {
         try {
           c8 = 2;
           if (0 === c7) {
-            if (arg0 === 1) {
+            if (key === 1) {
               c8 = 3;
               throw value;
-            } else if (arg0 === 2) {
+            } else if (key === 2) {
               c8 = 3;
               obj = { value, done: true };
               return obj;
             } else {
               closure_4 = tmp3;
               closure_3 = tmp17;
-              closure_131_0 = closure_0;
-              closure_131_1 = setItem;
+              closure_131_0 = key;
+              closure_131_1 = value;
               closure_131_2 = closure_2;
               c6 = 1;
-              if (c8.indexOf(closure_0) < 0) {
-                const entry = { key: tmp25, value: tmp26 };
+              if (c8.indexOf(key) < 0) {
+                const entry = { key, value };
                 sendToReactotron("setItem", entry);
               }
               c6 = 0;
-              tmp25 = closure_0;
-              tmp26 = setItem;
             }
           } else {
             c6 = 0;
           }
           c8 = 3;
-          tmp17 = setItem(closure_131_0, closure_131_1, closure_131_2);
+          tmp17 = value(closure_131_0, closure_131_1, closure_131_2);
         } catch (tmp18) {
           closure_5 = tmp18;
           if (tmp4 === c6) {
@@ -81,14 +79,14 @@ export default (arg0) => {
       }
       return applyArgumentsResult;
     }
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async (key, arg1) => {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
-        if (arg0 === 1) {
+        if (key === 1) {
           throw value;
-        } else if (arg0 === 2) {
+        } else if (key === 2) {
           let obj = { value, done: true };
           return obj;
         } else {
@@ -98,24 +96,23 @@ export default (arg0) => {
         try {
           c7 = 2;
           if (0 === c6) {
-            if (arg0 === 1) {
+            if (key === 1) {
               c7 = 3;
               throw value;
-            } else if (arg0 === 2) {
+            } else if (key === 2) {
               c7 = 3;
               obj = { value, done: true };
               return obj;
             } else {
               closure_3 = tmp3;
-              closure_130_0 = closure_0;
+              closure_130_0 = key;
               closure_130_1 = closure_1;
               c5 = 1;
-              if (closure_1_8.indexOf(closure_0) < 0) {
-                obj = { key: tmp24 };
+              if (closure_1_8.indexOf(key) < 0) {
+                obj = { key };
                 sendToReactotron("removeItem", obj);
               }
               c5 = 0;
-              tmp24 = closure_0;
             }
           } else {
             c5 = 0;
@@ -143,14 +140,14 @@ export default (arg0) => {
       }
       return applyArgumentsResult;
     }
-    asyncGeneratorStep(async (arg0, value, arg2) => {
+    asyncGeneratorStep(async (key, value, arg2) => {
       if (c8 === 2) {
         c8 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
-        if (arg0 === 1) {
+        if (key === 1) {
           throw value;
-        } else if (arg0 === 2) {
+        } else if (key === 2) {
           let obj = { value, done: true };
           return obj;
         } else {
@@ -160,26 +157,24 @@ export default (arg0) => {
         try {
           c8 = 2;
           if (0 === c7) {
-            if (arg0 === 1) {
+            if (key === 1) {
               c8 = 3;
               throw value;
-            } else if (arg0 === 2) {
+            } else if (key === 2) {
               c8 = 3;
               obj = { value, done: true };
               return obj;
             } else {
               closure_4 = tmp3;
-              closure_131_0 = closure_0;
-              closure_131_1 = closure_1;
+              closure_131_0 = key;
+              closure_131_1 = value;
               closure_131_2 = closure_2;
               c6 = 1;
-              if (c8.indexOf(closure_0) < 0) {
-                const entry = { key: tmp25, value: tmp26 };
+              if (c8.indexOf(key) < 0) {
+                const entry = { key, value };
                 sendToReactotron("mergeItem", entry);
               }
               c6 = 0;
-              tmp25 = closure_0;
-              tmp26 = closure_1;
             }
           } else {
             c6 = 0;
@@ -207,7 +202,7 @@ export default (arg0) => {
       }
       return applyArgumentsResult;
     }
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async (arg0) => {
       if (c6 === 2) {
         c6 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -265,7 +260,7 @@ export default (arg0) => {
       }
       return applyArgumentsResult;
     }
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async (arg0, arg1) => {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -341,7 +336,7 @@ export default (arg0) => {
       }
       return applyArgumentsResult;
     }
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async (arg0, arg1) => {
       if (c7 === 2) {
         c7 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -408,7 +403,7 @@ export default (arg0) => {
       }
       return applyArgumentsResult;
     }
-    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

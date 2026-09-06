@@ -2,6 +2,7 @@
 import AI_MODEL_ID_ATTRIBUTE from "00821_AI_MODEL_ID_ATTRIBUTE.js";
 import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "00823_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
 import toolCallSpanMap2 from "00824_toolCallSpanMap.js";
+import _mod825 from "metro/00825__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -134,22 +135,23 @@ export const getSpanOpFromName = function getSpanOpFromName(description) {
 };
 export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
   if (data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE]) {
-    let tmpResult = tmp(825);
+    let tmpResult = _mod825;
     const attr = setAttribute.setAttribute(
       "gen_ai.prompt",
-      tmpResult.getTruncatedJsonString(data[tmp(undefined, 821).AI_PROMPT_ATTRIBUTE]),
+      tmpResult.getTruncatedJsonString(data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE]),
     );
   }
   const tmp4 = data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE];
   if (typeof tmp4 === "string") {
-    if (!data[tmp(undefined, 823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
-      if (!data[tmp(undefined, 821).AI_PROMPT_MESSAGES_ATTRIBUTE]) {
+    if (!data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE]) {
+      if (!data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE]) {
         const arr = convertPromptToMessages(tmp4);
         if (arr.length) {
           let obj = {};
-          tmpResult = tmp(825);
-          obj[tmp(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmpResult.getTruncatedJsonString(arr);
-          obj[tmp(823).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = arr.length;
+          tmpResult = _mod825;
+          obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] =
+            tmpResult.getTruncatedJsonString(arr);
+          obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = arr.length;
           setAttribute.setAttributes(obj);
         }
       }
@@ -158,15 +160,17 @@ export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setA
   if (typeof data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE] === "string") {
     try {
       const _JSON = JSON;
-      const parsed = JSON.parse(data[tmp(undefined, 821).AI_PROMPT_MESSAGES_ATTRIBUTE]);
+      const parsed = JSON.parse(data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE]);
       const _Array = Array;
       if (Array.isArray(parsed)) {
         obj = {};
-        obj[tmp(821).AI_PROMPT_MESSAGES_ATTRIBUTE] = undefined;
-        obj[tmp(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp(825).getTruncatedJsonString(parsed);
-        obj[tmp(823).GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] = parsed.length;
+        obj[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_MESSAGES_ATTRIBUTE] = undefined;
+        obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] =
+          _mod825.getTruncatedJsonString(parsed);
+        obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] =
+          parsed.length;
         setAttribute.setAttributes(obj);
-        const tmpResult1 = tmp(825);
+        const tmpResult1 = _mod825;
       }
     } catch (err) {}
   }

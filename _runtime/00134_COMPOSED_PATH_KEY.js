@@ -21,8 +21,8 @@ export const EVENT_INIT_TIMESTAMP_KEY = SymbolResult8;
 export const getCurrentTarget = function getCurrentTarget(arg0) {
   return arg0[SymbolResult1];
 };
-export const setCurrentTarget = function setCurrentTarget(arg0, arg1) {
-  arg0[SymbolResult1] = arg1;
+export const setCurrentTarget = function setCurrentTarget(type, _null) {
+  type[SymbolResult1] = _null;
 };
 export const getComposedPath = function getComposedPath(arg0) {
   return arg0[SymbolResult];

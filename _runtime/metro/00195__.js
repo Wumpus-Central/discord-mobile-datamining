@@ -5,7 +5,7 @@ import define from "../00197_define.js";
 
 try {
   const _module = _mod196;
-  let flag = _module.hasNativeConstructor(function* (arg0, value) {
+  let flag = _module.hasNativeConstructor(function* () {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

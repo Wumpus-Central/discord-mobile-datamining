@@ -153,28 +153,28 @@ export const makeReactFormatter = function makeReactFormatter(arg0) {
   return obj;
 };
 export const DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
-  $b(arg0, key) {
-    return <strong key={arg1}>{arg0}</strong>;
+  $b(element, key) {
+    return <strong key={key}>{element}</strong>;
   },
-  $i(arg0, key) {
-    return <em key={arg1}>{arg0}</em>;
+  $i(element, key) {
+    return <em key={key}>{element}</em>;
   },
-  $del(arg0, key) {
-    return <del key={arg1}>{arg0}</del>;
+  $del(element, key) {
+    return <del key={key}>{element}</del>;
   },
-  $code(arg0, key) {
-    return <code key={arg1}>{arg0}</code>;
+  $code(element, key) {
+    return <code key={key}>{element}</code>;
   },
-  $link(arg0, key, arg2) {
+  $link(element, key, arg2) {
     [tmp] = arg2;
     return (
-      <a href={tmp} key={arg1}>
-        {arg0}
+      <a href={tmp} key={key}>
+        {element}
       </a>
     );
   },
-  $p(arg0, key) {
-    return <p key={arg1}>{arg0}</p>;
+  $p(element, key) {
+    return <p key={key}>{element}</p>;
   },
 };
 export const reactFormatter = obj;

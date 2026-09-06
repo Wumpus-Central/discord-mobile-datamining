@@ -14,15 +14,15 @@ export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => 
   closure_1 = obj.key || "cause";
   obj = {
     name: "LinkedErrors",
-    preprocessEvent(arg0, arg1, getOptions) {
+    preprocessEvent(exception, originalException, getOptions) {
       const options = getOptions.getOptions();
       const result = aggregateExceptionsFromError.applyAggregateErrorsToEvent(
         exceptionFromError.exceptionFromError,
         options.stackParser,
         closure_1,
         closure_0,
-        arg0,
-        arg1,
+        exception,
+        originalException,
       );
     },
   };

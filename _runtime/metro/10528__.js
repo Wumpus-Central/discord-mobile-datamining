@@ -76,15 +76,15 @@ const items = [
         const date = { day: result, month: tmp3 };
         const parsingComponents = createParsingComponents.createParsingComponents(date);
         if (index[4]) {
-          parsingComponents.assign("year", tmp(10526).parseYear(index[4]));
+          parsingComponents.assign("year", NLMonthNameMiddleEndianParser(10526).parseYear(index[4]));
         } else {
           parsingComponents.imply(
             "year",
-            tmp(10433).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
+            NLMonthNameMiddleEndianParser(10433).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
           );
         }
         if (index[2]) {
-          const result1 = tmp(10526).parseOrdinalNumberPattern(index[2]);
+          const result1 = NLMonthNameMiddleEndianParser(10526).parseOrdinalNumberPattern(index[2]);
           const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
           parsingResult.start = parsingComponents;
           parsingResult.end = parsingComponents.clone();

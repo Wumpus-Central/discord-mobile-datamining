@@ -89,6 +89,7 @@ const entry = {
                     tmp3 = c3;
                   }
                   _classCallCheck[item] = tmp3;
+                  obj = iter(animatedProps[2]);
                 });
                 continue;
               } else {

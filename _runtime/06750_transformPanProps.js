@@ -136,7 +136,7 @@ fillInDefaultValues.__initData = {
 };
 let closure_6 = {};
 
-export const usePanGesture = function usePanGesture(gestureHandlerProps) {
+export const usePanGesture = function usePanGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;

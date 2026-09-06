@@ -1,6 +1,6 @@
 // _runtime/01254_read.js
 
-export const read = (arg0, arg1, arg2, exponent, arg4) => {
+export const read = (self, arg1, arg2, exponent, arg4) => {
   let num = 0;
   const diff = 8 * arg4 - exponent;
   if (arg2) {
@@ -20,7 +20,7 @@ export const read = (arg0, arg1, arg2, exponent, arg4) => {
   let tmp11 = sum1;
   if (0 < sum1) {
     do {
-      sum2 = 256 * sum2 + arg0[arg1 + sum];
+      sum2 = 256 * sum2 + self[arg1 + sum];
       sum = sum + num4;
       sum1 = sum1 - 8;
       sum5 = sum;
@@ -33,7 +33,7 @@ export const read = (arg0, arg1, arg2, exponent, arg4) => {
   let tmp15 = sum4;
   if (sum3 > 0) {
     do {
-      sum4 = 256 * sum4 + arg0[arg1 + sum5];
+      sum4 = 256 * sum4 + self[arg1 + sum5];
       sum5 = sum5 + num4;
       sum3 = sum3 - 8;
       tmp15 = sum4;
@@ -58,12 +58,12 @@ export const read = (arg0, arg1, arg2, exponent, arg4) => {
     sum6 = tmp15 + Math.pow(2, exponent);
     diff3 = tmp18 - tmp17;
   }
-  if (arg0[arg1 + num] >> 7) {
+  if (self[arg1 + num] >> 7) {
     num3 = -1;
   }
   return num3 * sum6 * Math.pow(2, diff3 - exponent);
 };
-export const write = (arg0, arg1, arg2, arg3, exponent, arg5) => {
+export const write = (self, arg1, arg2, arg3, exponent, arg5) => {
   let num = 0;
   const diff = 8 * arg5 - exponent;
   if (23 === exponent) {
@@ -143,7 +143,7 @@ export const write = (arg0, arg1, arg2, arg3, exponent, arg5) => {
     let tmp23 = exponent;
     if (exponent >= 8) {
       do {
-        arg0[arg2 + sum2] = 255 & result4;
+        self[arg2 + sum2] = 255 & result4;
         sum2 = sum2 + num7;
         result4 = result4 / 256;
         diff5 = diff5 - 8;
@@ -158,7 +158,7 @@ export const write = (arg0, arg1, arg2, arg3, exponent, arg5) => {
     let tmp27 = tmp21;
     if (sum3 > 0) {
       do {
-        arg0[arg2 + sum4] = 255 & result5;
+        self[arg2 + sum4] = 255 & result5;
         sum4 = sum4 + num7;
         result5 = result5 / 256;
         sum3 = sum3 - 8;
@@ -166,7 +166,7 @@ export const write = (arg0, arg1, arg2, arg3, exponent, arg5) => {
       } while (0 < sum3);
     }
     const diff6 = arg2 + tmp27 - num7;
-    arg0[diff6] = arg0[diff6] | (128 * num8);
+    self[diff6] = self[diff6] | (128 * num8);
   }
   let num13 = 0;
   if (isNaN(absolute)) {

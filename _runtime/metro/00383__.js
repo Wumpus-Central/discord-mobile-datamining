@@ -311,7 +311,6 @@ let items = [
         let tmp = _transforms[num];
         for (const key10012 in tmp) {
           let obj5 = tmp[key10012];
-          let tmp7 = AnimatedTransform;
           let push = items.push;
           if (obj5 instanceof AnimatedTransform(367)) {
             let obj = { type: "animated", property: key10012, nodeTag: obj5.__getNativeTag() };
@@ -319,7 +318,7 @@ let items = [
             continue;
           } else {
             obj = { type: "static", property: key10012, value: null };
-            let tmp7Result = tmp7(357);
+            let tmp7Result = AnimatedTransform(357);
             obj.value = tmp7Result.transformDataType(obj5);
             arr = push(obj);
             continue;
@@ -374,6 +373,7 @@ const entry1 = {
       tmp9Result._nodes = items1;
       tmp9Result._transforms = _transforms;
     }
+    length = items.length;
   },
 };
 let items1 = [entry1];

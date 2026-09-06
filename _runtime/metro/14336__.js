@@ -1,4 +1,5 @@
 // _runtime/metro/14336__.js
+import _mod14301 from "14301__.js";
 import _mod14323 from "14323__.js";
 
 const re2 = /#|\.prototype\./;
@@ -14,12 +15,11 @@ function isForced(arg0, arg1) {
       } else {
         let tmp11Result = dependencyMap;
         if (_mod14323(arg1)) {
-          tmp11Result = tmp11(14301);
+          tmp11Result = _mod14301;
           let tmp11ResultResult = tmp11Result(arg1);
         } else {
           tmp11ResultResult = arg1;
         }
-        tmp11 = require;
       }
     }
     return tmp7;

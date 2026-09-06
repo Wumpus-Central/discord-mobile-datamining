@@ -1,6 +1,8 @@
 // _runtime/metro/12833__.js
+import spanTimeInputToSeconds from "../12802_spanTimeInputToSeconds.js";
 import _mod12803 from "12803__.js";
 import BAGGAGE_HEADER_NAME from "../12810_BAGGAGE_HEADER_NAME.js";
+import _mod12812 from "12812__.js";
 import _mod12824 from "12824__.js";
 import _mod12834 from "12834__.js";
 
@@ -10,7 +12,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
   let obj = _mod12824;
   const client = obj.getClient();
   if (client) {
-    let tmpResult = tmp(12802);
+    let tmpResult = spanTimeInputToSeconds;
     const rootSpan = tmpResult.getRootSpan(spanContext);
     if (rootSpan[_frozenDsc]) {
       return tmp5;
@@ -22,7 +24,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
       }
       let result = value;
       if (value) {
-        tmpResult = tmp(12810);
+        tmpResult = BAGGAGE_HEADER_NAME;
         result = tmpResult.baggageHeaderToDynamicSamplingContext(value);
       }
       if (result) {
@@ -32,7 +34,7 @@ function getDynamicSamplingContextFromSpan(spanContext) {
         const tmp9 = client.getDsn() || {};
         let DEFAULT_ENVIRONMENT = options.environment;
         if (!DEFAULT_ENVIRONMENT) {
-          DEFAULT_ENVIRONMENT = tmp(12834).DEFAULT_ENVIRONMENT;
+          DEFAULT_ENVIRONMENT = _mod12834.DEFAULT_ENVIRONMENT;
         }
         obj = {
           environment: DEFAULT_ENVIRONMENT,
@@ -40,26 +42,26 @@ function getDynamicSamplingContextFromSpan(spanContext) {
           public_key: tmp9.publicKey,
           trace_id: spanContext.spanContext().traceId,
         };
-        const dropUndefinedKeysResult = tmp(12803).dropUndefinedKeys(obj);
+        const dropUndefinedKeysResult = _mod12803.dropUndefinedKeys(obj);
         client.emit("createDsc", dropUndefinedKeysResult);
-        const tmpResult1 = tmp(12803);
-        const spanToJSONResult = tmp(12802).spanToJSON(rootSpan);
+        const tmpResult1 = _mod12803;
+        const spanToJSONResult = spanTimeInputToSeconds.spanToJSON(rootSpan);
         const tmp13 = spanToJSONResult.data || {};
-        const tmp14 = tmp13[tmp(undefined, 12812).SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
+        const tmp14 = tmp13[_mod12812.SEMANTIC_ATTRIBUTE_SENTRY_SAMPLE_RATE];
         if (null != tmp14) {
           const _HermesInternal = HermesInternal;
           dropUndefinedKeysResult.sample_rate = "" + tmp14;
         }
         const description = spanToJSONResult.description;
-        const tmpResult2 = tmp(12802);
+        const tmpResult2 = spanTimeInputToSeconds;
         if (tmp17) {
           dropUndefinedKeysResult.transaction = description;
         }
-        tmp17 = "url" !== tmp13[tmp(undefined, 12812).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
+        tmp17 = "url" !== tmp13[_mod12812.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] && description;
         if (tmpResult3.hasTracingEnabled()) {
           const _String = String;
-          dropUndefinedKeysResult.sampled = String(tmp(12802).spanIsSampled(rootSpan));
-          const tmpResult4 = tmp(12802);
+          dropUndefinedKeysResult.sampled = String(spanTimeInputToSeconds.spanIsSampled(rootSpan));
+          const tmpResult4 = spanTimeInputToSeconds;
         }
         client.emit("createDsc", dropUndefinedKeysResult, rootSpan);
         return dropUndefinedKeysResult;
@@ -71,8 +73,8 @@ function getDynamicSamplingContextFromSpan(spanContext) {
 }
 const _frozenDsc = "_frozenDsc";
 
-export const freezeDscOnSpan = function freezeDscOnSpan(arg0, arg1) {
-  const result = _mod12803.addNonEnumerableProperty(arg0, _frozenDsc, arg1);
+export const freezeDscOnSpan = function freezeDscOnSpan(arg0, dsc) {
+  const result = _mod12803.addNonEnumerableProperty(arg0, _frozenDsc, dsc);
 };
 export const getDynamicSamplingContextFromClient = function getDynamicSamplingContextFromClient(trace_id, getOptions) {
   const options = getOptions.getOptions();
@@ -102,7 +104,7 @@ export const getDynamicSamplingContextFromScope = function getDynamicSamplingCon
     let obj = _mod12803;
     let DEFAULT_ENVIRONMENT = options.environment;
     if (!DEFAULT_ENVIRONMENT) {
-      DEFAULT_ENVIRONMENT = tmp5(12834).DEFAULT_ENVIRONMENT;
+      DEFAULT_ENVIRONMENT = _mod12834.DEFAULT_ENVIRONMENT;
     }
     obj = {
       environment: DEFAULT_ENVIRONMENT,
@@ -114,7 +116,6 @@ export const getDynamicSamplingContextFromScope = function getDynamicSamplingCon
     getOptions.emit("createDsc", dropUndefinedKeysResult);
     dsc = dropUndefinedKeysResult;
     const tmp4 = getOptions.getDsn() || {};
-    tmp5 = require;
   }
   return dsc;
 };

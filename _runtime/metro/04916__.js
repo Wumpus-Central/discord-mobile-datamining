@@ -1,10 +1,14 @@
 // _runtime/metro/04916__.js
+import _mod4915 from "04915__.js";
 import _modDef4917 from "04917__.js";
 import animatedComponentDefault from "../04918_animatedComponent.js";
 import _mod4919 from "04919__.js";
+import SHEET_FIT_TO_CONTENTS from "../04920_SHEET_FIT_TO_CONTENTS.js";
 import _modDef4921 from "04921__.js";
 import DelayedFreezeDefault from "../04922_DelayedFreeze.js";
+import _mod4924 from "04924__.js";
 import get_controlledBottomTabsDefault from "../04925_get_controlledBottomTabs.js";
+import _modDef4926 from "04926__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
@@ -27,9 +31,9 @@ const Animated = get_ActivityIndicator.Animated;
 const jsx = fn(21).jsx;
 const __INTERNAL_VIEW_CONFIG = Animated.createAnimatedComponent(_modDef4917);
 const animatedComponent = Animated.createAnimatedComponent(animatedComponentDefault);
-const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref) {
+const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, arg1) {
   noop.useRef(null);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ref.current, []);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current, []);
   let obj = _mod4919;
   const previous = obj.usePrevious(activityState.activityState);
   function setRef(current) {
@@ -48,12 +52,12 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref
   const current3 = noop.useRef(value1).current;
   let enabled = activityState.enabled;
   if (undefined === enabled) {
-    let tmp2Result = tmp2(4915);
+    let tmp2Result = _mod4915;
     enabled = tmp2Result.screensEnabled();
   }
   let freezeOnBlur = activityState.freezeOnBlur;
   if (undefined === freezeOnBlur) {
-    tmp2Result = tmp2(4915);
+    tmp2Result = _mod4915;
     freezeOnBlur = tmp2Result.freezeEnabled();
   }
   let shouldFreeze = activityState.shouldFreeze;
@@ -64,7 +68,7 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref
   }
   let SHEET_DIMMED_ALWAYS = tmp9.sheetLargestUndimmedDetentIndex;
   if (undefined === SHEET_DIMMED_ALWAYS) {
-    SHEET_DIMMED_ALWAYS = tmp2(4920).SHEET_DIMMED_ALWAYS;
+    SHEET_DIMMED_ALWAYS = SHEET_FIT_TO_CONTENTS.SHEET_DIMMED_ALWAYS;
   }
   const sheetGrabberVisible = tmp9.sheetGrabberVisible;
   const sheetCornerRadius = tmp9.sheetCornerRadius;
@@ -86,14 +90,14 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref
   const sheetShouldOverflowTopInset = tmp9.sheetShouldOverflowTopInset;
   const sheetDefaultResizeAnimationEnabled = tmp9.sheetDefaultResizeAnimationEnabled;
   if (enabled) {
-    if (tmp2(4915).isNativePlatformSupported) {
-      const sheetAllowedDetents1 = tmp2(4920).resolveSheetAllowedDetents(sheetAllowedDetents);
-      const tmp2Result1 = tmp2(4920);
-      const sheetLargestUndimmedDetent = tmp2(4920).resolveSheetLargestUndimmedDetent(
+    if (_mod4915.isNativePlatformSupported) {
+      const sheetAllowedDetents1 = SHEET_FIT_TO_CONTENTS.resolveSheetAllowedDetents(sheetAllowedDetents);
+      const tmp2Result1 = SHEET_FIT_TO_CONTENTS;
+      const sheetLargestUndimmedDetent = SHEET_FIT_TO_CONTENTS.resolveSheetLargestUndimmedDetent(
         SHEET_DIMMED_ALWAYS,
         sheetAllowedDetents1.length - 1,
       );
-      const tmp2Result2 = tmp2(4920);
+      const tmp2Result2 = SHEET_FIT_TO_CONTENTS;
       ({
         active: active2,
         activityState: activityState2,
@@ -103,9 +107,12 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref
         scrollEdgeEffects,
         onGestureCancel,
       } = tmp9);
-      sheetInitialDetentIndex = tmp2(4920).resolveSheetInitialDetentIndex(num3, sheetAllowedDetents1.length - 1);
+      sheetInitialDetentIndex = SHEET_FIT_TO_CONTENTS.resolveSheetInitialDetentIndex(
+        num3,
+        sheetAllowedDetents1.length - 1,
+      );
       ({ fullScreenSwipeEnabled, style } = tmp9);
-      let tmp8Result = tmp8(tmp9, closure_4);
+      let tmp8Result = _objectWithoutProperties(tmp9, closure_4);
       if (tmp28) {
         const _console = console;
         console.warn(
@@ -141,7 +148,7 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref
       obj = { freeze: freezeOnBlur, children: null };
       obj = {};
       tmp28 = undefined !== active2 && undefined === activityState2;
-      const tmp2Result3 = tmp2(4920);
+      const tmp2Result3 = SHEET_FIT_TO_CONTENTS;
       let merged = Object.assign(tmp8Result);
       obj.onAppear = tmp15;
       obj.onDisappear = tmp16;
@@ -165,7 +172,7 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref
       obj.sheetExpandsWhenScrolledToEdge = tmp11;
       obj.sheetInitialDetent = sheetInitialDetentIndex;
       const tmp31Result = DelayedFreezeDefault;
-      obj.fullScreenSwipeEnabled = tmp2(4924).parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled);
+      obj.fullScreenSwipeEnabled = _mod4924.parseBooleanToOptionalBooleanNativeProp(fullScreenSwipeEnabled);
       let num7;
       if (gestureResponseDistance != null) {
         num7 = gestureResponseDistance.start;
@@ -301,15 +308,15 @@ const forwardRefResult = noop.forwardRef(function InnerScreen(activityState, ref
         const obj4 = { progress: current2, closing: current, goingForward: current3 };
         obj3.value = obj4;
         obj3.children = children;
-        tmp33Result = tmp33(tmp31(4926).Provider, obj3);
+        tmp33Result = jsx(_modDef4926.Provider, { value: null, children: null });
       }
       obj.children = tmp33Result;
-      obj.children = <tmp25 />;
+      obj.children = <__INTERNAL_VIEW_CONFIG />;
       return <tmp31Result />;
     }
   }
   ({ active, activityState, onComponentRef } = tmp9);
-  tmp8Result = tmp8(tmp9, closure_5);
+  tmp8Result = _objectWithoutProperties(tmp9, closure_5);
   if (tmp20) {
     let num4 = 0;
     if (0 !== active) {

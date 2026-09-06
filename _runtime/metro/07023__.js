@@ -14,8 +14,8 @@ export const useKeyboardManager = function useKeyboardManager(enabled) {
   const callback = enabled.useCallback(() => {
     if (undefined !== ref3.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp.current);
-      tmp.current = undefined;
+      clearTimeout(ref3.current);
+      ref3.current = undefined;
     }
   }, []);
   const items = [callback];

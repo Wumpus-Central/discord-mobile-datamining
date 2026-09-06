@@ -22,7 +22,7 @@ function isValidBase64(value) {
     }
   }
 }
-function isValidJWT(value, alg) {
+function isValidJWT(value) {
   let tmp = alg;
   if (alg === undefined) {
     tmp = null;
@@ -113,7 +113,6 @@ function normalizeDef(shape) {
   return obj;
 }
 function handleCatchall(items, value, tmp12Result, arg3, value2, inst) {
-  const key10019 = value;
   let iter = tmp12Result;
   closure_1 = tmp12Result;
   items = [];
@@ -136,19 +135,19 @@ function handleCatchall(items, value, tmp12Result, arg3, value2, inst) {
             runResult.then((issues) => {
               if (issues.issues.length) {
                 if (!dependencyMap) {
-                  issues = iter.issues;
+                  issues = exports.issues;
                   const push = issues.push;
                   const items = [];
-                  HermesBuiltin.arraySpread(c10.prefixIssues(tmp, issues.issues), 0);
+                  HermesBuiltin.arraySpread(c10.prefixIssues(key10019, issues.issues), 0);
                   HermesBuiltin.apply(items, issues);
                 }
               }
               if (undefined === issues.value) {
-                if (tmp in tmp2) {
-                  iter.value[tmp] = undefined;
+                if (key10019 in require) {
+                  exports.value[key10019] = undefined;
                 }
               } else {
-                iter.value[tmp] = issues.value;
+                exports.value[key10019] = issues.value;
               }
             }),
           );
@@ -221,7 +220,7 @@ function handleUnionResults(arr, issues, inst, arg3) {
         return issues.map((item) => closure_2_10.finalizeIssue(item, closure_1_0, closure_2_8.config()));
       }),
     };
-    issues.push(obj);
+    arr = issues.push(obj);
     first = issues;
   }
   return first;
@@ -242,11 +241,11 @@ function handleExclusiveUnionResults(arr, issues, inst, arg3) {
         return issues.map((item) => closure_2_10.finalizeIssue(item, closure_1_0, closure_2_8.config()));
       }),
     };
-    issues.push(obj);
+    arr = issues.push(obj);
   } else {
     const issues1 = issues.issues;
     obj = { code: "invalid_union", input: issues.value, inst, errors: [], inclusive: false };
-    issues1.push(obj);
+    arr = issues1.push(obj);
   }
   return issues;
 }
@@ -342,11 +341,10 @@ function handleIntersectionResults(nextPromise, runResult, runResult1) {
       }
       let keys = tmp3.keys;
       for (const item10035 of keys) {
-        let tmp10 = item10035;
         if (!map.has(item10035)) {
-          let result = map.set(tmp10, {});
+          let result = map.set(item10035, {});
         }
-        map.get(tmp10).l = true;
+        map.get(item10035).l = true;
         continue;
       }
     } else {
@@ -356,20 +354,18 @@ function handleIntersectionResults(nextPromise, runResult, runResult1) {
     continue;
   }
   for (const item10054 of tmp14) {
-    let tmp15 = item10054;
     if ("unrecognized_keys" === item10054.code) {
-      let keys2 = tmp15.keys;
+      let keys2 = item10054.keys;
       for (const item10067 of keys2) {
-        let tmp21 = item10067;
         if (!map.has(item10067)) {
-          let result1 = map.set(tmp21, {});
+          let result1 = map.set(item10067, {});
         }
-        map.get(tmp21).r = true;
+        map.get(item10067).r = true;
         continue;
       }
     } else {
       let issues1 = arg0.issues;
-      arr = issues1.push(tmp15);
+      arr = issues1.push(item10054);
     }
     continue;
   }
@@ -440,7 +436,7 @@ function handleMapResult(issues, issues2, issues3, key, value, inst, arg6) {
     const push2 = issues2.push;
     if (propertyKeyTypes2.has(typeof key)) {
       const items1 = [];
-      HermesBuiltin.arraySpread(obj3.prefixIssues(key, issues2.issues), 0);
+      HermesBuiltin.arraySpread(closure_10.prefixIssues(key, issues2.issues), 0);
       HermesBuiltin.apply(items1, issues2);
     } else {
       obj = { origin: "map", code: "invalid_element", input: value, inst, key, issues: null };
@@ -448,7 +444,6 @@ function handleMapResult(issues, issues2, issues3, key, value, inst, arg6) {
       obj.issues = issues3.map((item) => closure_10.finalizeIssue(item, closure_0, fnResult.config()));
       push2(obj);
     }
-    obj3 = closure_10;
   }
   value = issues3.value;
   const result = value.set(issues.value, issues2.value);
@@ -476,11 +471,11 @@ function handleCodecAResult(issues, transform, direction) {
       if (transformResult instanceof Promise) {
         let nextPromise = transformResult.then((value) => {
           if (issues.issues.length) {
-            tmp.aborted = true;
-            let runResult = tmp;
+            issues.aborted = true;
+            let runResult = issues;
           } else {
             const _zod = tmp2._zod;
-            const obj = { value, issues: tmp.issues };
+            const obj = { value, issues: issues.issues };
             runResult = _zod.run(obj, tmp3);
           }
           return runResult;
@@ -499,11 +494,11 @@ function handleCodecAResult(issues, transform, direction) {
       if (reverseTransformResult instanceof Promise) {
         let nextPromise1 = reverseTransformResult.then((value) => {
           if (issues.issues.length) {
-            tmp.aborted = true;
-            let runResult = tmp;
+            issues.aborted = true;
+            let runResult = issues;
           } else {
             const _zod = tmp2._zod;
-            const obj = { value, issues: tmp.issues };
+            const obj = { value, issues: issues.issues };
             runResult = _zod.run(obj, tmp3);
           }
           return runResult;
@@ -721,16 +716,15 @@ if (self2) {
           closure_3 = closure_10.aborted(parsed1);
           function _loop() {
             if (closure_4._zod.def.when) {
-              const def = tmp._zod.def;
+              const def = closure_4._zod.def;
               if (!def.when(length)) {
                 return 0;
               }
             } else if (closure_3) {
               return 0;
             }
-            length = length.issues.length;
-            const _zod = tmp._zod;
-            const checkResult = _zod.check(length);
+            const _zod = closure_4._zod;
+            const checkResult = _zod.check(length.issues.length);
             skipChecks = checkResult;
             if (checkResult instanceof Promise) {
               let async;
@@ -756,7 +750,7 @@ if (self2) {
               resolved = Promise.resolve();
             }
             closure_2 = resolved.then(
-              closure_4(function* (arg0, value) {
+              closure_4(function* () {
                 if (c2 === 2) {
                   c2 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -824,7 +818,6 @@ if (self2) {
         function handleCanaryResult(arg0, arg1, arg2) {}
         tmp._zod.run = (value, skipChecks) => {
           closure_0 = value;
-          closure_1 = skipChecks;
           if (skipChecks.skipChecks) {
             const _zod4 = closure_0._zod;
             return _zod4.parse(value, skipChecks);
@@ -838,14 +831,14 @@ if (self2) {
             if (parsed instanceof Promise) {
               let nextPromise = parsed.then((result) => {
                 if (typeof handleCanaryResult === "function") {
-                  let _zod = tmp2;
+                  let _zod = skipChecks;
                   if (closure_1_10.aborted(result)) {
                     result.aborted = true;
                     let nextPromise = result;
                   } else {
-                    const promise = runChecks(tmp, items, tmp2);
+                    const promise = runChecks(tmp, items, skipChecks);
                     if (promise instanceof Promise) {
-                      if (false === tmp2.async) {
+                      if (false === skipChecks.async) {
                         ZodAsyncError = new ZodAsyncError.$ZodAsyncError();
                         throw ZodAsyncError;
                       } else {
@@ -856,7 +849,7 @@ if (self2) {
                       }
                     } else {
                       _zod = obj._zod;
-                      nextPromise = _zod.parse(promise, tmp2);
+                      nextPromise = _zod.parse(promise, skipChecks);
                     }
                   }
                   return nextPromise;
@@ -870,7 +863,7 @@ if (self2) {
                 parsed.aborted = true;
                 nextPromise = parsed;
               } else {
-                const promise3 = runChecks(value, closure_1, skipChecks);
+                const promise3 = runChecks(value, skipChecks, skipChecks);
                 if (promise3 instanceof Promise) {
                   if (false === skipChecks.async) {
                     let ZodAsyncError = new closure_1_8.$ZodAsyncError();
@@ -901,7 +894,7 @@ if (self2) {
                 return parsed1.then((result) => runChecks(result, items, closure_1));
               }
             } else {
-              return runChecks(parsed1, closure_1, skipChecks);
+              return runChecks(parsed1, skipChecks, skipChecks);
             }
           }
         };
@@ -1343,7 +1336,13 @@ if (self2) {
       _zod._zod.check = (value) => {
         if (!closure_1.fn(value.value)) {
           const issues = value.issues;
-          const obj = { code: "invalid_format", format: tmp.format, input: value.value, inst, continue: !tmp.abort };
+          const obj = {
+            code: "invalid_format",
+            format: closure_1.format,
+            input: value.value,
+            inst,
+            continue: !closure_1.abort,
+          };
           issues.push(obj);
         }
       };
@@ -1588,10 +1587,10 @@ if (self2) {
               let arr = items.push(
                 runResult.then((issues) => {
                   if (issues.issues.length) {
-                    issues = iter.issues;
+                    issues = num3.issues;
                     const push = issues.push;
                     const items = [];
-                    HermesBuiltin.arraySpread(closure_10.prefixIssues(tmp, issues.issues), 0);
+                    HermesBuiltin.arraySpread(closure_10.prefixIssues(num3, issues.issues), 0);
                     HermesBuiltin.apply(items, issues);
                   }
                   num3.value[num3] = issues.value;
@@ -1687,7 +1686,6 @@ if (self2) {
           shape = value.shape;
           const keys = value.keys;
           function _loop4(iter) {
-            closure_0 = iter;
             closure_1 = tmp2;
             const _zod = tmp._zod;
             const runResult = _zod.run({ value: value[iter], issues: [] }, closure_1);
@@ -1699,16 +1697,16 @@ if (self2) {
                       issues = iter.issues;
                       const push = issues.push;
                       items = [];
-                      HermesBuiltin.arraySpread(closure_3_10.prefixIssues(tmp, issues.issues), 0);
+                      HermesBuiltin.arraySpread(closure_3_10.prefixIssues(iter, issues.issues), 0);
                       HermesBuiltin.apply(items, issues);
                     }
                   }
                   if (undefined === issues.value) {
-                    if (tmp in tmp2) {
-                      iter.value[tmp] = undefined;
+                    if (iter in value) {
+                      iter.value[iter] = undefined;
                     }
                   } else {
-                    iter.value[tmp] = issues.value;
+                    iter.value[iter] = issues.value;
                   }
                 }),
               );
@@ -1723,13 +1721,14 @@ if (self2) {
                 }
               }
               if (undefined === runResult.value) {
-                if (iter in tmp3) {
+                if (iter in value) {
                   iter.value[iter] = undefined;
                 }
               } else {
                 iter.value[iter] = runResult.value;
               }
             }
+            const obj = { value: value[iter], issues: [] };
           }
           const iter = keys[Symbol.iterator]();
           while (iter !== undefined) {
@@ -1748,7 +1747,7 @@ if (self2) {
           return nextPromise;
         } else {
           let issues = value.issues;
-          const obj = { expected: "object", code: "invalid_type", input: value, inst };
+          let obj = { expected: "object", code: "invalid_type", input: value, inst };
           issues.push(obj);
           return value;
         }
@@ -1907,7 +1906,7 @@ if (self2) {
               }
             }
           }
-          let tmp11 = parse(tmp2, arg1);
+          const tmp11 = parse(tmp2, arg1);
         } else {
           const issues = tmp2.issues;
           let obj = { expected: "object", code: "invalid_type", input: value, inst };
@@ -2048,11 +2047,11 @@ if (self2) {
                     return issues.map((item) => closure_2_10.finalizeIssue(item, closure_1_0, closure_2_8.config()));
                   }),
                 };
-                issues.push(obj);
+                arr = issues.push(obj);
               } else {
                 const issues1 = iter.issues;
                 obj = { code: "invalid_union", input: iter.value, inst: tmp, errors: [], inclusive: false };
-                issues1.push(obj);
+                arr = issues1.push(obj);
               }
               return closure_0;
             });
@@ -2133,7 +2132,6 @@ if (self2) {
           if (tmp3) {
             if (0 !== tmp5.size) {
               for (const item10030 of tmp3) {
-                let tmp8 = item10030;
                 if (map.has(item10030)) {
                   let _Error = Error;
                   let _String = String;
@@ -2142,10 +2140,10 @@ if (self2) {
                   let str2 = 'Duplicate discriminator value "';
                   let tmp13 = new.target;
                   let tmp14 = new.target;
-                  let error = new Error('Duplicate discriminator value "' + String(tmp8) + '"');
+                  let error = new Error('Duplicate discriminator value "' + String(item10030) + '"');
                   throw error;
                 } else {
-                  let result = map.set(tmp8, tmp2);
+                  let result = map.set(item10030, tmp2);
                   continue;
                 }
               }
@@ -2184,12 +2182,12 @@ if (self2) {
               code: "invalid_union",
               errors: [],
               note: "No matching discriminator",
-              discriminator: tmp9.discriminator,
+              discriminator: closure_1.discriminator,
               input: value,
               path: null,
               inst: null,
             };
-            const items = [tmp9.discriminator];
+            const items = [closure_1.discriminator];
             obj.path = items;
             obj.inst = inst;
             issues.push(obj);
@@ -2228,6 +2226,7 @@ if (self2) {
           handleIntersectionResults(closure_0, tmp, tmp2);
           return closure_0;
         });
+        const allPromises = Promise.all(items);
       };
     });
     exports.$ZodTuple = fnResult.$constructor("$ZodTuple", (_zod, items) => {
@@ -2247,12 +2246,9 @@ if (self2) {
           HermesBuiltin.arraySpread(items, 0);
           const reversed = items1.reverse();
           const findIndexResult = reversed.findIndex((_zod) => "optional" !== _zod._zod.optin);
-          if (-1 !== findIndexResult) {
-            const num4 = arr4.length - findIndexResult;
-          }
           if (!items.rest) {
             let issues = nextPromise.issues;
-            if (value.length > arr4.length) {
+            if (tmp9) {
               let obj = { code: "too_big", maximum: arr4.length, inclusive: true };
             } else {
               obj = { code: "too_small", minimum: arr4.length };
@@ -2283,10 +2279,10 @@ if (self2) {
                 let arr = items.push(
                   promise.then((issues) => {
                     if (issues.issues.length) {
-                      issues = iter.issues;
+                      issues = value.issues;
                       const push = issues.push;
                       items = [];
-                      HermesBuiltin.arraySpread(closure_2_10.prefixIssues(tmp, issues.issues), 0);
+                      HermesBuiltin.arraySpread(closure_2_10.prefixIssues(sum1, issues.issues), 0);
                       HermesBuiltin.apply(items, issues);
                     }
                     value.value[sum1] = issues.value;
@@ -2312,10 +2308,10 @@ if (self2) {
                 let arr1 = items.push(
                   promise2.then((issues) => {
                     if (issues.issues.length) {
-                      issues = iter.issues;
+                      issues = value.issues;
                       const push = issues.push;
                       items = [];
-                      HermesBuiltin.arraySpread(closure_2_10.prefixIssues(tmp, issues.issues), 0);
+                      HermesBuiltin.arraySpread(closure_2_10.prefixIssues(sum1, issues.issues), 0);
                       HermesBuiltin.apply(items, issues);
                     }
                     value.value[sum1] = issues.value;
@@ -2390,6 +2386,7 @@ if (self2) {
                 }
                 inst.value[iter2] = runResult.value;
               }
+              const obj = { value: value[iter2], issues: [] };
             }
             const iter2 = values[Symbol.iterator]();
             while (iter2 !== undefined) {
@@ -2447,7 +2444,7 @@ if (self2) {
                     if (number.test(iter)) {
                       iter = runResult;
                       if (runResult.issues.length) {
-                        const _zod = tmp27.keyType._zod;
+                        const _zod = closure_1.keyType._zod;
                         obj = { value: null, issues: null };
                         const _Number = Number;
                         obj.value = Number(iter);
@@ -2467,7 +2464,7 @@ if (self2) {
                     }
                   }
                   if (iter.issues.length) {
-                    if ("loose" === tmp27.mode) {
+                    if ("loose" === closure_1.mode) {
                       inst.value[iter] = value[iter];
                     } else {
                       let issues = inst.issues;
@@ -2491,7 +2488,7 @@ if (self2) {
                     }
                     return 0;
                   } else {
-                    const _zod2 = tmp27.valueType._zod;
+                    const _zod2 = closure_1.valueType._zod;
                     const obj1 = { value: value[iter], issues: [] };
                     const runResult2 = _zod2.run(obj1, tmp28);
                     if (runResult2 instanceof Promise) {
@@ -2567,7 +2564,7 @@ if (self2) {
             const runResult1 = _zod2.run(obj, closure_1);
             if (!(runResult instanceof Promise)) {
               if (!(runResult1 instanceof Promise)) {
-                handleMapResult(runResult, runResult1, closure_0, value, closure_2, closure_0, tmp);
+                handleMapResult(runResult, runResult1, closure_0, value, closure_2, closure_0, closure_1);
               }
             }
             items = [runResult, runResult1];
@@ -2577,6 +2574,7 @@ if (self2) {
                 handleMapResult(tmp, tmp2, closure_0, closure_0, value, closure_0, closure_1);
               }),
             );
+            const allPromises = Promise.all(items);
           }
           const tmp9 = value[Symbol.iterator]();
           while (tmp9 !== undefined) {
@@ -2587,7 +2585,7 @@ if (self2) {
           }
           if (items.length) {
             nextPromise = Promise.all(items).then(() => closure_0);
-            const allPromises = Promise.all(items);
+            let allPromises = Promise.all(items);
           }
           return nextPromise;
         } else {
@@ -2623,13 +2621,13 @@ if (self2) {
               let arr = items.push(
                 promise.then((issues) => {
                   if (issues.issues.length) {
-                    issues = iter.issues;
+                    issues = value.issues;
                     const push = issues.push;
                     const items = [];
                     HermesBuiltin.arraySpread(issues.issues, 0);
                     HermesBuiltin.apply(items, issues);
                   }
-                  value = iter.value;
+                  value = value.value;
                   value.add(issues.value);
                 }),
               );
@@ -2928,7 +2926,7 @@ if (self2) {
       };
     });
     exports.$ZodNonOptional = fnResult.$constructor("$ZodNonOptional", (_zod, arg1) => {
-      closure_0 = _zod;
+      const inst = _zod;
       closure_1 = arg1;
       const $ZodType = exports.$ZodType;
       $ZodType.init(_zod, arg1);
@@ -2944,7 +2942,7 @@ if (self2) {
         return set;
       });
       _zod._zod.parse = (arg0, arg1) => {
-        _zod = closure_1.innerType._zod;
+        const _zod = closure_1.innerType._zod;
         const runResult = _zod.run(arg0, arg1);
         if (runResult instanceof Promise) {
           let nextPromise = runResult.then((issues) => {
@@ -2967,11 +2965,10 @@ if (self2) {
           nextPromise = runResult;
           if (!length) {
             let issues = runResult.issues;
-            let obj = { code: "invalid_type", expected: "nonoptional", input: runResult.value, inst: tmp };
+            let obj = { code: "invalid_type", expected: "nonoptional", input: runResult.value, inst };
             issues.push(obj);
             nextPromise = runResult;
           }
-          tmp = closure_0;
         }
         return nextPromise;
       };
@@ -3021,14 +3018,14 @@ if (self2) {
               value.value = value.value;
               if (value.issues.length) {
                 let obj = {};
-                const merged = Object.assign(iter);
+                const merged = Object.assign(value);
                 obj = { issues: null };
                 const issues = value.issues;
                 obj.issues = issues.map((item) => closure_3_10.finalizeIssue(item, direction, closure_3_8.config()));
                 obj.error = obj;
-                obj.input = iter.value;
-                iter.value = value.catchValue(obj);
-                iter.issues = [];
+                obj.input = value.value;
+                value.value = value.catchValue(obj);
+                value.issues = [];
               }
               return value;
             });
@@ -3289,13 +3286,13 @@ if (self2) {
           const pattern = inst._zod.pattern;
           if (!pattern.test(value.value)) {
             const issues1 = value.issues;
-            obj = { input: value.value, inst: tmp6, code: "invalid_format", format: null, pattern: null };
+            obj = { input: value.value, inst, code: "invalid_format", format: null, pattern: null };
             let str = format.format;
             if (str == null) {
               str = "template_literal";
             }
             obj.format = str;
-            obj.pattern = tmp6._zod.pattern.source;
+            obj.pattern = inst._zod.pattern.source;
             issues1.push(obj);
           }
         }
@@ -3319,12 +3316,12 @@ if (self2) {
             const items = [...arguments];
             let parsed = items;
             if (_def._def.input) {
-              parsed = _mod8937.parse(tmp._def.input, items);
+              parsed = _mod8937.parse(_def._def.input, items);
             }
             const applyResult = Reflect.apply(_def, this, parsed);
             let parsed1 = applyResult;
             if (_def._def.output) {
-              parsed1 = _mod8937.parse(tmp._def.output, applyResult);
+              parsed1 = _mod8937.parse(_def._def.output, applyResult);
             }
             return parsed1;
           };
@@ -3342,7 +3339,7 @@ if (self2) {
             closure_1 = [...arguments];
             c5 = 0;
             c6 = 0;
-            const iter = (async (arg0, value) => {
+            const iter = (async (arg0) => {
               if (1 === tmp5) {
                 if (arg0 === 1) {
                   c6 = 3;
@@ -3422,12 +3419,12 @@ if (self2) {
         } else {
           let output = inst._def.output;
           if (output) {
-            output = "promise" === obj2._def.output._zod.def.type;
+            output = "promise" === inst._def.output._zod.def.type;
           }
           if (output) {
-            let implementAsyncResult = obj2.implementAsync(value.value);
+            let implementAsyncResult = inst.implementAsync(value.value);
           } else {
-            implementAsyncResult = obj2.implement(value.value);
+            implementAsyncResult = inst.implement(value.value);
           }
           value.value = implementAsyncResult;
           return value;
@@ -3442,11 +3439,11 @@ if (self2) {
           [obj2.items, obj2.rest] = items;
           const ZodTuple = new exports.$ZodTuple(obj);
           obj.input = ZodTuple;
-          obj.output = tmp._def.output;
+          obj.output = inst._def.output;
           constructor = new constructor(obj);
         } else {
           obj.input = items[0];
-          obj.output = tmp._def.output;
+          obj.output = inst._def.output;
           constructor = new constructor(obj);
         }
         return constructor;
@@ -3533,24 +3530,24 @@ if (self2) {
       $ZodType.init(_zod, arg1);
       _zod._zod.parse = (arg0, arg1) => arg0;
       _zod._zod.check = (value) => {
-        closure_0 = value;
+        const inst = value;
         value = value.value;
         closure_1 = value;
         fnResult = closure_1.fn(value);
         if (fnResult instanceof Promise) {
           return fnResult.then((result) => {
             if (!result) {
-              const obj = { code: "custom", input: tmp2, inst: tmp3, path: null, continue: null };
-              let path = tmp3._zod.def.path;
+              const obj = { code: "custom", input: tmp2, inst, path: null, continue: null };
+              let path = inst._zod.def.path;
               if (path == null) {
                 path = [];
               }
               const items = [];
               HermesBuiltin.arraySpread(path, 0);
               obj.path = items;
-              obj.continue = !tmp3._zod.def.abort;
-              if (tmp3._zod.def.params) {
-                obj.params = tmp3._zod.def.params;
+              obj.continue = !inst._zod.def.abort;
+              if (inst._zod.def.params) {
+                obj.params = inst._zod.def.params;
               }
               const issues = tmp.issues;
               issues.push(closure_10.issue(obj));

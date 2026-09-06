@@ -3,9 +3,9 @@ import _modDef38 from "metro/00038__.js";
 import renderElementAll from "00114_renderElement.js";
 import childrenDefault from "00251_children.js";
 import RootTagContext from "00253_RootTagContext.js";
+import frozenDefault from "00257_frozen.js";
 import noop from "metro/00019__.js";
 
-const frozenDefault = tmp(257);
 require = fn;
 const module_247 = fn(247);
 const jsx = fn(21).jsx;
@@ -33,7 +33,7 @@ export default function renderApplication(arg0) {
   const merged = Object.assign(initialProps);
   obj.rootTag = rootTag;
   obj.children = <RootComponent />;
-  let tmp4Result = tmp4(childrenDefault, obj);
+  let tmp4Result = jsx(childrenDefault, {});
   if (true === useOffscreen) {
     if (null != displayMode) {
       let str = "hidden";
@@ -41,7 +41,7 @@ export default function renderApplication(arg0) {
         str = "visible";
       }
       obj = { mode: str, children: tmp4Result };
-      tmp4Result = tmp4(noop.unstable_Activity, obj);
+      tmp4Result = <noop.unstable_Activity mode={str}>{tmp4Result}</noop.unstable_Activity>;
     }
   }
   const obj1 = { element: tmp4Result, rootTag: null };

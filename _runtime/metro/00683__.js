@@ -1,5 +1,8 @@
 // _runtime/metro/00683__.js
 import spanToJSON from "../00684_spanToJSON.js";
+import _mod688 from "00688__.js";
+import consoleSandbox from "../00689_consoleSandbox.js";
+import SPAN_STATUS_ERROR from "../00705_SPAN_STATUS_ERROR.js";
 import instrumentError from "../00714_instrumentError.js";
 import instrumentUnhandledRejection from "../00716_instrumentUnhandledRejection.js";
 
@@ -15,16 +18,16 @@ export const registerSpanErrorInstrumentation = function registerSpanErrorInstru
       const activeSpan = obj.getActiveSpan();
       let rootSpan = activeSpan;
       if (activeSpan) {
-        rootSpan = tmp(tmp2[0]).getRootSpan(activeSpan);
-        const tmpResult = tmp(tmp2[0]);
+        rootSpan = spanToJSON.getRootSpan(activeSpan);
+        const tmpResult = spanToJSON;
       }
       if (rootSpan) {
-        if (tmp(tmp2[1]).DEBUG_BUILD) {
-          const debug = tmp(tmp2[2]).debug;
+        if (_mod688.DEBUG_BUILD) {
+          const debug = consoleSandbox.debug;
           const _HermesInternal = HermesInternal;
           debug.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");
         }
-        obj = { code: tmp(tmp2[3]).SPAN_STATUS_ERROR, message: "internal_error" };
+        obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
         rootSpan.setStatus(obj);
       }
     }

@@ -69,6 +69,7 @@ class TouchableOpacity {
       }
       obj.useNativeDriver = flag;
       React6.timing(closure_0.opacity, obj).start();
+      const timingResult = React6.timing(closure_0.opacity, obj);
     };
     tmp3Result.onStateChange = (arg0, arg1) => {
       if (arg1 === TouchableOpacity(6788).TOUCHABLE_STATE.BEGAN) {
@@ -77,7 +78,9 @@ class TouchableOpacity {
         if (!tmp3) {
           closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
         }
-        tmp3 = arg1 !== tmp(6788).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(6788).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 =
+          arg1 !== TouchableOpacity(6788).TOUCHABLE_STATE.UNDETERMINED &&
+          arg1 !== TouchableOpacity(6788).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     return tmp3Result;
@@ -102,7 +105,7 @@ const entry = {
     if (self.props.children) {
       let children = self.props.children;
     } else {
-      children = tmp2(closure_1_11, {});
+      children = <closure_1_11 />;
     }
     obj.children = children;
     return jsx(_modDef6788, {});

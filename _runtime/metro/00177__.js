@@ -68,7 +68,7 @@ class Promise {
           obj.onFulfilled = tmp11;
           let tmp12 = null;
           if (typeof closure_2 === "function") {
-            tmp12 = tmp9;
+            tmp12 = closure_2;
           }
           obj.onRejected = tmp12;
           obj.promise = obj;
@@ -130,7 +130,7 @@ function handle(_y, _A) {
     } while (3 === _y);
   }
   if (Promise._B) {
-    obj._B(tmp2);
+    Promise._B(tmp2);
   }
   if (0 === tmp2._y) {
     if (0 === tmp2._x) {
@@ -172,7 +172,7 @@ function handle(_y, _A) {
           promise._y = 2;
           promise._z = _z;
           if (Promise._C) {
-            obj._C(promise, tmp15);
+            Promise._C(promise, tmp15);
           }
           if (1 === promise._x) {
             handle(promise, promise._A);
@@ -189,7 +189,6 @@ function handle(_y, _A) {
             }
             promise._A = null;
           }
-          obj = Promise;
         } else {
           resolve(tmp2.promise, tmp11);
         }
@@ -201,7 +200,7 @@ function handle(_y, _A) {
         promise._y = 2;
         promise._z = _z;
         if (Promise._C) {
-          obj2._C(promise, _z);
+          Promise._C(promise, _z);
         }
         if (1 === promise._x) {
           handle(promise, promise._A);
@@ -218,11 +217,9 @@ function handle(_y, _A) {
           }
           promise._A = null;
         }
-        obj2 = Promise;
       }
     });
   }
-  obj = Promise;
 }
 function resolve(_x, _z) {
   let length;
@@ -357,7 +354,7 @@ function doResolve(arg0, _x) {
     _x._y = 2;
     _x._z = _z;
     if (Promise._C) {
-      obj._C(_x, tmp4);
+      Promise._C(_x, tmp4);
     }
     if (1 === _x._x) {
       handle(_x, _x._A);
@@ -374,7 +371,6 @@ function doResolve(arg0, _x) {
       }
       _x._A = null;
     }
-    obj = Promise;
   }
 }
 let c1 = null;

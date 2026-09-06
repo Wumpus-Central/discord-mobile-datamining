@@ -38,10 +38,10 @@ let items = [
       const sum = index.index + index[1].length;
       const diff = index.index + index[0].length - index[5].length;
       if (sum > 0) {
-        const str2 = text.text.substring(0, sum);
+        text.text.substring(0, sum);
       }
       if (diff < text.text.length) {
-        const str5 = text.text.substring(diff);
+        text.text.substring(diff);
       }
       const str8 = text.text.substring(sum, diff);
       if (!str8.match(/^\d\.\d$/)) {

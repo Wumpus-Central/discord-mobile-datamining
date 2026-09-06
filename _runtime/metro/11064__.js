@@ -84,7 +84,7 @@ export function withIAPContext(arg0) {
     let items1 = [connected];
     hasOwnProperty(() => {
       if (closure_0) {
-        closure_129_0 = first1(function* (arg0, value) {
+        closure_129_0 = first1(function* (arg0) {
           if (c1 === 2) {
             c1 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -130,7 +130,7 @@ export function withIAPContext(arg0) {
           return applyArgumentsResult;
         });
         let obj = first(setConnected[5]);
-        closure_130_0 = first1(function* (arg0, value) {
+        closure_130_0 = first1(function* (arg0) {
           if (c1 === 2) {
             c1 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -156,12 +156,12 @@ export function withIAPContext(arg0) {
               } else {
                 let error;
                 if (closure_0 != null) {
-                  error = tmp4.error;
+                  error = closure_0.error;
                 }
                 setCurrentPurchaseError(error);
                 let transaction;
                 if (closure_0 != null) {
-                  transaction = tmp4.transaction;
+                  transaction = closure_0.transaction;
                 }
                 closure_1_15(transaction);
                 c1 = 3;
@@ -190,7 +190,7 @@ export function withIAPContext(arg0) {
         });
         const obj3 = first(setConnected[5]);
         closure_3 = first(setConnected[5]).promotedProductListener(
-          first1(function* (arg0, value) {
+          first1(function* () {
             if (c3 === 2) {
               c3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");

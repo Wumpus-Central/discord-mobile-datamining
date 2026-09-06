@@ -70,6 +70,6 @@ const module_126 = fn(126);
 module_126.setPlatformObject(tmp2);
 
 export default tmp2;
-export const createMutationRecord = function createMutationRecord(arg0) {
-  return new closure_3(arg0);
+export const createMutationRecord = function createMutationRecord(item10013) {
+  return new closure_3(item10013);
 };

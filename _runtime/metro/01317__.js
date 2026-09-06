@@ -6,7 +6,7 @@ function addNumericSeparator(cause, StringResult) {
     if (cause !== -Infinity) {
       if (cause == cause) {
         const call = test.call;
-        if (!(typeof call === "unknown" ? tmp(StringResult) : call(tmp2, StringResult))) {
+        if (!(typeof call === "unknown" ? test(StringResult) : call(tmp2, StringResult))) {
           const tmp3 = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
           if (typeof cause === "number") {
             if (cause < 0) {
@@ -21,7 +21,7 @@ function addNumericSeparator(cause, StringResult) {
               const sum = StringResult.length + 1;
               const call4 = replace.call;
               if (typeof call4 === "unknown") {
-                tmp13(tmp3, "$&_");
+                replace(tmp3, "$&_");
               } else {
                 call4(StringResult, tmp3, "$&_");
               }
@@ -29,13 +29,13 @@ function addNumericSeparator(cause, StringResult) {
               const tmp16 = /([0-9]{3})/g;
               const text = `${tmp14}.`;
               if (typeof call6 === "unknown") {
-                let tmp13Result = tmp13(tmp16, "$&_");
+                let tmp13Result = replace(tmp16, "$&_");
               } else {
                 tmp13Result = call6(tmp12, tmp16, "$&_");
               }
               const tmp18 = /_$/;
               if (typeof call5 === "unknown") {
-                let tmp13Result1 = tmp13(tmp18, "");
+                let tmp13Result1 = replace(tmp18, "");
               } else {
                 tmp13Result1 = call5(tmp13Result, tmp18, "");
               }
@@ -50,7 +50,6 @@ function addNumericSeparator(cause, StringResult) {
           }
           return call2Result;
         }
-        tmp = test;
         tmp2 = /e/;
       }
     }
@@ -75,9 +74,9 @@ function isSymbol(custom) {
       if (typeof custom === "object") {
         if (toString) {
           try {
-            const call = tmp4.call;
+            const call = toString.call;
             if (typeof call === "unknown") {
-              tmp4();
+              toString();
             } else {
               call(custom);
             }
@@ -116,7 +115,7 @@ function inspectString(cause, maxStringLength) {
     merged[str].lastIndex = 0;
     ({ call, call: call2 } = replace);
     if (typeof call2 === "unknown") {
-      let call2Result = tmp2(tmp, "\\$1");
+      let call2Result = replace(tmp, "\\$1");
     } else {
       call2Result = call2(cause, tmp, "\\$1");
     }
@@ -144,7 +143,7 @@ function lowbyte(str) {
     }
     const call = toUpperCase.call;
     str = str.toString(16);
-    text = `\\x${str2}${typeof call === "unknown" ? toUpperCase() : call(tmp3)}`;
+    text = `\\x${str2}${typeof call === "unknown" ? tmp2() : call(tmp3)}`;
   }
   return text;
 }
@@ -157,9 +156,9 @@ function arrObjKeys(cause, inspect) {
     if (toStringTag) {
       let tmp5 = typeof cause === "object";
       if (typeof cause === "object") {
-        let tmp6 = tmp3 in cause;
+        let tmp6 = toStringTag in cause;
         if (!tmp6) {
-          tmp6 = undefined !== cause[tmp3];
+          tmp6 = undefined !== cause[toStringTag];
         }
         tmp5 = tmp6;
       }
@@ -171,10 +170,9 @@ function arrObjKeys(cause, inspect) {
   if (tmp2) {
     items.length = cause.length;
     for (let num = 0; num < cause.length; num = num + 1) {
-      let tmp7 = closure_35;
       let call2 = closure_35.call;
       let str2 = "";
-      if (typeof call2 === "unknown" ? tmp7(num) : call2(cause, num)) {
+      if (typeof call2 === "unknown" ? closure_35(num) : call2(cause, num)) {
         str2 = inspect(cause[num], cause);
       }
       items[num] = str2;
@@ -199,10 +197,9 @@ function arrObjKeys(cause, inspect) {
     }
   }
   for (const key10048 in arg0) {
-    let tmp27 = closure_35;
     let call5 = closure_35.call;
     if (typeof call5 === "unknown") {
-      let call5Result = tmp27(key10048);
+      let call5Result = closure_35(key10048);
     } else {
       call5Result = call5(arg0, key10048);
     }
@@ -229,11 +226,10 @@ function arrObjKeys(cause, inspect) {
       if (tmp12) {
         continue;
       } else {
-        let tmp14 = test;
         let call3 = test.call;
         let tmp15 = /[^\w$]/;
         if (typeof call3 === "unknown") {
-          let call3Result = tmp14(key10048);
+          let call3Result = test(key10048);
         } else {
           call3Result = call3(tmp15, key10048);
         }
@@ -255,10 +251,9 @@ function arrObjKeys(cause, inspect) {
   }
   if (typeof getOwnPropertySymbols === "function") {
     for (let num4 = 0; num4 < items.length; num4 = num4 + 1) {
-      let tmp21 = propertyIsEnumerable;
       let call4 = propertyIsEnumerable.call;
       let tmp22 = items[num4];
-      if (typeof call4 === "unknown" ? tmp21(tmp22) : call4(cause, tmp22)) {
+      if (typeof call4 === "unknown" ? propertyIsEnumerable(tmp22) : call4(cause, tmp22)) {
         let text2 = `[${inspect(arr2[num4])}`;
         let arr1 = items.push(`${`[${inspect(arr2[num4])}`}]: ${inspect(cause[arr2[num4]], cause)}`);
       }
@@ -413,23 +408,22 @@ function inspect_(cause, maxStringLength, arg2, arr) {
   }
   let call = closure_35.call;
   if (typeof call === "unknown") {
-    let callResult = tmp("quoteStyle");
+    let callResult = closure_35("quoteStyle");
   } else {
     callResult = call(obj, "quoteStyle");
   }
   if (callResult) {
     const quoteStyle = obj.quoteStyle;
-    let call2 = tmp.call;
-    if (!(typeof call2 === "unknown" ? tmp(quoteStyle) : call2(tmp3, quoteStyle))) {
+    let call2 = closure_35.call;
+    if (!(typeof call2 === "unknown" ? closure_35(quoteStyle) : call2(dependencyMap, quoteStyle))) {
       const _TypeError = TypeError;
       const typeError = new TypeError('option "quoteStyle" must be "single" or "double"');
       throw typeError;
     }
-    tmp3 = dependencyMap;
   }
-  let call3 = tmp.call;
+  let call3 = closure_35.call;
   if (typeof call3 === "unknown") {
-    let tmpResult = tmp("maxStringLength");
+    let tmpResult = closure_35("maxStringLength");
   } else {
     tmpResult = call3(obj, "maxStringLength");
   }
@@ -451,9 +445,9 @@ function inspect_(cause, maxStringLength, arg2, arr) {
       throw typeError1;
     }
   }
-  const call4 = tmp.call;
+  const call4 = closure_35.call;
   if (typeof call4 === "unknown") {
-    let tmpResult1 = tmp("customInspect");
+    let tmpResult1 = closure_35("customInspect");
   } else {
     tmpResult1 = call4(obj, "customInspect");
   }
@@ -468,9 +462,9 @@ function inspect_(cause, maxStringLength, arg2, arr) {
       throw typeError2;
     }
   }
-  const call5 = tmp.call;
+  const call5 = closure_35.call;
   if (typeof call5 === "unknown") {
-    let tmpResult2 = tmp("indent");
+    let tmpResult2 = closure_35("indent");
   } else {
     tmpResult2 = call5(obj, "indent");
   }
@@ -484,9 +478,9 @@ function inspect_(cause, maxStringLength, arg2, arr) {
       }
     }
   }
-  const call6 = tmp.call;
+  const call6 = closure_35.call;
   if (typeof call6 === "unknown") {
-    let tmpResult3 = tmp("numericSeparator");
+    let tmpResult3 = closure_35("numericSeparator");
   } else {
     tmpResult3 = call6(obj, "numericSeparator");
   }
@@ -556,8 +550,8 @@ function inspect_(cause, maxStringLength, arg2, arr) {
             if (toStringTag) {
               let tmp201 = typeof cause === "object";
               if (typeof cause === "object") {
-                tmp201 = tmp199 in cause || undefined !== cause[tmp199];
-                const tmp202 = tmp199 in cause || undefined !== cause[tmp199];
+                tmp201 = toStringTag in cause || undefined !== cause[toStringTag];
+                const tmp202 = toStringTag in cause || undefined !== cause[toStringTag];
               }
               tmp200 = !tmp201;
             }
@@ -585,12 +579,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
           const call7 = join.call;
           const _Array = Array;
           if (typeof call7 === "unknown") {
-            let call7Result = tmp22(" ");
+            let call7Result = join(" ");
           } else {
             call7Result = call7(ArrayResult1, " ");
           }
           ArrayResult1 = Array(obj.indent + 1);
-          tmp22 = join;
         }
       }
       if (undefined === arr) {
@@ -652,8 +645,8 @@ function inspect_(cause, maxStringLength, arg2, arr) {
           if (toStringTag) {
             let tmp36 = typeof cause === "object";
             if (typeof cause === "object") {
-              tmp36 = tmp34 in cause || undefined !== cause[tmp34];
-              const tmp37 = tmp34 in cause || undefined !== cause[tmp34];
+              tmp36 = toStringTag in cause || undefined !== cause[toStringTag];
+              const tmp37 = toStringTag in cause || undefined !== cause[toStringTag];
             }
             tmp35 = !tmp36;
           }
@@ -687,12 +680,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
           } else {
             const call11 = join.call;
             if (typeof call11 === "unknown") {
-              tmp45(", ");
+              join(", ");
             } else {
               call11(arr2, ", ");
             }
             const text1 = `${" { " + tmp46} }`;
-            tmp45 = join;
           }
         }
       }
@@ -702,12 +694,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
           const _String8 = String;
           const tmp193 = /^(Symbol\(.*\))_[^)]*$/;
           if (typeof call45 === "unknown") {
-            let call45Result = tmp190(tmp193, "$1");
+            let call45Result = replace(tmp193, "$1");
           } else {
             call45Result = call45(StringResult1, tmp193, "$1");
           }
           StringResult1 = String(cause);
-          tmp190 = replace;
         } else {
           const call44 = toString.call;
           const tmp189 = typeof call44 === "unknown" ? toString() : call44(cause);
@@ -741,14 +732,13 @@ function inspect_(cause, maxStringLength, arg2, arr) {
           const call41 = toLowerCase.call;
           const _String5 = String;
           String(cause.nodeName);
-          const text3 = `<${typeof call41 === "unknown" ? toLowerCase() : call41(tmp169)}`;
+          const text3 = `<${typeof call41 === "unknown" ? tmp167() : call41(tmp169)}`;
           const arr11 = cause.attributes || [];
           let num34 = 0;
           let text5 = text3;
           let tmp172 = text3;
           if (0 < arr11.length) {
             do {
-              let tmp174 = replace;
               let call42 = replace.call;
               let _String6 = String;
               let text4 = ` ${arr11[num34].name}`;
@@ -756,7 +746,7 @@ function inspect_(cause, maxStringLength, arg2, arr) {
               let tmp176 = /"/g;
               let str101 = obj.quoteStyle;
               let tmp179 =
-                typeof call42 === "unknown" ? tmp174(tmp176, "&quot;") : call42(StringResult3, tmp176, "&quot;");
+                typeof call42 === "unknown" ? replace(tmp176, "&quot;") : call42(StringResult3, tmp176, "&quot;");
               if (!str101) {
                 str101 = "double";
               }
@@ -777,14 +767,14 @@ function inspect_(cause, maxStringLength, arg2, arr) {
           return text7 + "</" + (typeof call43 === "unknown" ? toLowerCase() : call43(String(cause.nodeName))) + ">";
         } else {
           const call12 = toString.call;
-          let tmp52 = "[object Array]" === (typeof call12 === "unknown" ? tmp51() : call12(cause));
+          let tmp52 = "[object Array]" === (typeof call12 === "unknown" ? toString() : call12(cause));
           if (tmp52) {
             let tmp54 = !toStringTag;
             if (toStringTag) {
               let tmp55 = typeof cause === "object";
               if (typeof cause === "object") {
-                tmp55 = tmp53 in cause || undefined !== cause[tmp53];
-                const tmp56 = tmp53 in cause || undefined !== cause[tmp53];
+                tmp55 = toStringTag in cause || undefined !== cause[toStringTag];
+                const tmp56 = toStringTag in cause || undefined !== cause[toStringTag];
               }
               tmp54 = !tmp55;
             }
@@ -845,30 +835,29 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     const call39 = join.call;
                     const text9 = `,${tmp159}`;
                     prev = prev.prev;
-                    const text10 = `${tmp159}${typeof call39 === "unknown" ? join(`,${tmp159}`) : call39(arr12, `,${tmp159}`)}
+                    const text10 = `${tmp159}${typeof call39 === "unknown" ? tmp160(`,${tmp159}`) : call39(arr12, `,${tmp159}`)}
   ${tmp21}`;
                   }
                 }
               }
               const call40 = join.call;
               if (typeof call40 === "unknown") {
-                tmp164(", ");
+                join(", ");
               } else {
                 call40(arr12, ", ");
               }
               const text11 = `${"[ " + tmp165} ]`;
-              tmp164 = join;
             }
           } else {
-            const call13 = tmp51.call;
-            let tmp57 = "[object Error]" === (typeof call13 === "unknown" ? tmp51() : call13(cause));
+            const call13 = toString.call;
+            let tmp57 = "[object Error]" === (typeof call13 === "unknown" ? toString() : call13(cause));
             if (tmp57) {
               let tmp59 = !toStringTag;
               if (toStringTag) {
                 let tmp60 = typeof cause === "object";
                 if (typeof cause === "object") {
-                  tmp60 = tmp58 in cause || undefined !== cause[tmp58];
-                  const tmp61 = tmp58 in cause || undefined !== cause[tmp58];
+                  tmp60 = toStringTag in cause || undefined !== cause[toStringTag];
+                  const tmp61 = toStringTag in cause || undefined !== cause[toStringTag];
                 }
                 tmp59 = !tmp60;
               }
@@ -881,7 +870,7 @@ function inspect_(cause, maxStringLength, arg2, arr) {
               if (!("cause" in Error.prototype)) {
                 if ("cause" in cause) {
                   const call35 = propertyIsEnumerable.call;
-                  if (!(typeof call35 === "unknown" ? tmp139("cause") : call35(cause, "cause"))) {
+                  if (!(typeof call35 === "unknown" ? propertyIsEnumerable("cause") : call35(cause, "cause"))) {
                     const _String3 = String;
                     const call36 = join.call;
                     const call37 = concat.call;
@@ -894,7 +883,6 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     }
                     return text12 + "] " + call36Result + " }";
                   }
-                  tmp139 = propertyIsEnumerable;
                 }
               }
               if (0 === arr9.length) {
@@ -906,12 +894,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                 const call38 = join.call;
                 const text16 = `{ [${String(cause)}`;
                 if (typeof call38 === "unknown") {
-                  tmp150(", ");
+                  join(", ");
                 } else {
                   call38(arr9, ", ");
                 }
                 text15 = `${tmp149 + "] " + tmp151} }`;
-                tmp150 = join;
               }
             } else {
               if (typeof cause === "object") {
@@ -939,9 +926,9 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     if (cause) {
                       if (typeof cause === "object") {
                         try {
-                          const call = tmp.call;
+                          const call = obj.call;
                           if (typeof call === "unknown") {
-                            tmp();
+                            obj();
                           } else {
                             call(cause);
                           }
@@ -976,26 +963,24 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                       obj.depth = obj.depth;
                       const call2 = closure_35.call;
                       if (typeof call2 === "unknown") {
-                        let call2Result = tmp7("quoteStyle");
+                        let call2Result = closure_35("quoteStyle");
                       } else {
                         call2Result = call2(tmp6, "quoteStyle");
                       }
                       if (call2Result) {
                         obj.quoteStyle = tmp6.quoteStyle;
                       }
-                      if (!tmp3) {
-                        tmp2(tmp14 + inspect_(cause, tmp6, tmp11 + 1, arr));
+                      if (!closure_0) {
+                        tmp2(tmp14 + inspect_(cause, tmp6, c1 + 1, arr));
                       } else {
                         const call3 = slice.call;
                         const arr2 = typeof call3 === "unknown" ? slice() : call3(arr);
-                        arr = arr2.push(tmp3);
+                        arr = arr2.push(closure_0);
                       }
-                      tmp11 = c1;
-                      tmp7 = closure_35;
                     } else {
                       const call = slice.call;
                       arr = typeof call === "unknown" ? slice() : call(arr);
-                      arr = arr.push(tmp3);
+                      arr = arr.push(closure_0);
                     }
                   };
                   if (typeof call31 === "unknown") {
@@ -1022,11 +1007,10 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                 } else {
                   const call33 = join.call;
                   if (typeof call33 === "unknown") {
-                    str69 = tmp133(", ");
+                    str69 = join(", ");
                   } else {
                     str69 = call33(items, ", ");
                   }
-                  tmp133 = join;
                 }
                 return text17 + ") {" + str69 + "}";
               } else if (
@@ -1035,9 +1019,9 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     if (cause) {
                       if (typeof cause === "object") {
                         try {
-                          const call = tmp.call;
+                          const call = items1.call;
                           if (typeof call === "unknown") {
-                            tmp();
+                            items1();
                           } else {
                             call(cause);
                           }
@@ -1065,7 +1049,7 @@ function inspect_(cause, maxStringLength, arg2, arr) {
               ) {
                 const items1 = [];
                 if (forEach2) {
-                  const call27 = tmp120.call;
+                  const call27 = forEach2.call;
                   const fn = (cause) => {
                     if (!closure_0) {
                       tmp2(inspect_(cause, obj, c1 + 1, arr));
@@ -1076,7 +1060,7 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     }
                   };
                   if (typeof call27 === "unknown") {
-                    tmp120(fn);
+                    forEach2(fn);
                   } else {
                     call27(cause, fn);
                   }
@@ -1100,11 +1084,10 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                 } else {
                   const call29 = join.call;
                   if (typeof call29 === "unknown") {
-                    str61 = tmp124(", ");
+                    str61 = join(", ");
                   } else {
                     str61 = call29(items1, ", ");
                   }
-                  tmp124 = join;
                 }
                 return text20 + ") {" + str61 + "}";
               } else if (
@@ -1113,11 +1096,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     if (cause) {
                       if (typeof cause === "object") {
                         try {
-                          const call = tmp.call;
+                          const call = has.call;
                           if (typeof call === "unknown") {
-                            tmp(tmp);
+                            has(has);
                           } else {
-                            call(cause, tmp);
+                            call(cause, has);
                           }
                           try {
                             let tmp4 = has1;
@@ -1148,11 +1131,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     if (cause) {
                       if (typeof cause === "object") {
                         try {
-                          const call = tmp.call;
+                          const call = has1.call;
                           if (typeof call === "unknown") {
-                            tmp(tmp);
+                            has1(has1);
                           } else {
-                            call(cause, tmp);
+                            call(cause, has1);
                           }
                           try {
                             let tmp4 = has;
@@ -1183,9 +1166,9 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     if (cause) {
                       if (typeof cause === "object") {
                         try {
-                          const call = tmp.call;
+                          const call = deref.call;
                           if (typeof call === "unknown") {
-                            tmp();
+                            deref();
                           } else {
                             call(cause);
                           }
@@ -1201,16 +1184,16 @@ function inspect_(cause, maxStringLength, arg2, arr) {
               ) {
                 return "WeakRef { ? }";
               } else {
-                const call14 = tmp51.call;
+                const call14 = toString.call;
                 let tmp62 = typeof cause === "object";
-                let tmp63 = "[object Number]" === (typeof call14 === "unknown" ? tmp51() : call14(cause));
+                let tmp63 = "[object Number]" === (typeof call14 === "unknown" ? toString() : call14(cause));
                 if (tmp63) {
                   let tmp65 = !toStringTag;
                   if (toStringTag) {
                     let tmp66 = tmp62;
                     if (typeof cause === "object") {
-                      tmp66 = tmp64 in cause || undefined !== cause[tmp64];
-                      const tmp67 = tmp64 in cause || undefined !== cause[tmp64];
+                      tmp66 = toStringTag in cause || undefined !== cause[toStringTag];
+                      const tmp67 = toStringTag in cause || undefined !== cause[toStringTag];
                     }
                     tmp65 = !tmp66;
                   }
@@ -1225,9 +1208,9 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                       if (typeof cause === "object") {
                         if (valueOf) {
                           try {
-                            const call = tmp2.call;
+                            const call = valueOf.call;
                             if (typeof call === "unknown") {
-                              tmp2();
+                              valueOf();
                             } else {
                               call(cause);
                             }
@@ -1245,15 +1228,15 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                   const tmp111 = typeof call26 === "unknown" ? valueOf() : call26(cause);
                   return "Object(" + inspect_(tmp111, obj, num6 + 1, arr) + ")";
                 } else {
-                  const call15 = tmp51.call;
-                  let tmp68 = "[object Boolean]" === (typeof call15 === "unknown" ? tmp51() : call15(cause));
+                  const call15 = toString.call;
+                  let tmp68 = "[object Boolean]" === (typeof call15 === "unknown" ? toString() : call15(cause));
                   if (tmp68) {
                     let tmp70 = !toStringTag;
                     if (toStringTag) {
                       let tmp71 = tmp62;
                       if (typeof cause === "object") {
-                        tmp71 = tmp69 in cause || undefined !== cause[tmp69];
-                        const tmp72 = tmp69 in cause || undefined !== cause[tmp69];
+                        tmp71 = toStringTag in cause || undefined !== cause[toStringTag];
+                        const tmp72 = toStringTag in cause || undefined !== cause[toStringTag];
                       }
                       tmp70 = !tmp71;
                     }
@@ -1263,15 +1246,15 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                     const call25 = valueOf.call;
                     return "Object(" + (typeof call25 === "unknown" ? valueOf() : call25(cause)) + ")";
                   } else {
-                    const call16 = tmp51.call;
-                    let tmp73 = "[object String]" === (typeof call16 === "unknown" ? tmp51() : call16(cause));
+                    const call16 = toString.call;
+                    let tmp73 = "[object String]" === (typeof call16 === "unknown" ? toString() : call16(cause));
                     if (tmp73) {
                       let tmp75 = !toStringTag;
                       if (toStringTag) {
                         let tmp76 = tmp62;
                         if (typeof cause === "object") {
-                          tmp76 = tmp74 in cause || undefined !== cause[tmp74];
-                          const tmp77 = tmp74 in cause || undefined !== cause[tmp74];
+                          tmp76 = toStringTag in cause || undefined !== cause[toStringTag];
+                          const tmp77 = toStringTag in cause || undefined !== cause[toStringTag];
                         }
                         tmp75 = !tmp76;
                       }
@@ -1290,29 +1273,29 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                       }
                       const _globalThis = globalThis;
                       if (typeof globalThis === "undefined") {
-                        const call17 = tmp51.call;
-                        let tmp79 = "[object Date]" === (typeof call17 === "unknown" ? tmp51() : call17(cause));
+                        const call17 = toString.call;
+                        let tmp79 = "[object Date]" === (typeof call17 === "unknown" ? toString() : call17(cause));
                         if (tmp79) {
                           let tmp81 = !toStringTag;
                           if (toStringTag) {
                             let tmp82 = tmp62;
                             if (typeof cause === "object") {
-                              tmp82 = tmp80 in cause || undefined !== cause[tmp80];
-                              const tmp83 = tmp80 in cause || undefined !== cause[tmp80];
+                              tmp82 = toStringTag in cause || undefined !== cause[toStringTag];
+                              const tmp83 = toStringTag in cause || undefined !== cause[toStringTag];
                             }
                             tmp81 = !tmp82;
                           }
                           tmp79 = tmp81;
                         }
                         if (!tmp79) {
-                          const call18 = tmp51.call;
-                          let tmp84 = "[object RegExp]" === (typeof call18 === "unknown" ? tmp51() : call18(cause));
+                          const call18 = toString.call;
+                          let tmp84 = "[object RegExp]" === (typeof call18 === "unknown" ? toString() : call18(cause));
                           if (tmp84) {
                             let tmp86 = !toStringTag;
                             if (toStringTag) {
                               if (typeof cause === "object") {
-                                tmp62 = tmp85 in cause || undefined !== cause[tmp85];
-                                const tmp87 = tmp85 in cause || undefined !== cause[tmp85];
+                                tmp62 = toStringTag in cause || undefined !== cause[toStringTag];
+                                const tmp87 = toStringTag in cause || undefined !== cause[toStringTag];
                               }
                               tmp86 = !tmp62;
                             }
@@ -1342,14 +1325,13 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                                 if (Object(cause) === cause) {
                                   if (tmp90 in cause) {
                                     const call19 = slice.call;
-                                    const call20 = tmp51.call;
+                                    const call20 = toString.call;
                                     if (typeof call19 === "unknown") {
-                                      let call19Result = tmp91(8, -1);
+                                      let call19Result = slice(8, -1);
                                     } else {
                                       call19Result = call19(tmp92, 8, -1);
                                     }
-                                    tmp91 = slice;
-                                    tmp92 = typeof call20 === "unknown" ? tmp51() : call20(cause);
+                                    tmp92 = typeof call20 === "unknown" ? toString() : call20(cause);
                                   }
                                   let str31 = "";
                                   if (!tmp89) {
@@ -1386,12 +1368,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                                       } else {
                                         const call23 = join.call;
                                         if (typeof call23 === "unknown") {
-                                          tmp99(", ");
+                                          join(", ");
                                         } else {
                                           call23(arr3, ", ");
                                         }
                                         text24 = `${tmp98 + "{ " + tmp100} }`;
-                                        tmp99 = join;
                                       }
                                       return text24;
                                     }
@@ -1406,12 +1387,11 @@ function inspect_(cause, maxStringLength, arg2, arr) {
                                   }
                                   const items3 = [];
                                   if (typeof call21 === "unknown") {
-                                    tmp93(": ");
+                                    join(": ");
                                   } else {
                                     call21(tmp95, ": ");
                                   }
                                   const text27 = `${"[" + tmp96}] `;
-                                  tmp93 = join;
                                   tmp95 =
                                     typeof call22 === "unknown"
                                       ? concat(call19Result, items2)

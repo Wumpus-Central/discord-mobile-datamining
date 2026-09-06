@@ -1,10 +1,11 @@
 // _runtime/06729_traverseAndConfigureRelations.js
 import tagMessage from "06660_tagMessage.js";
 import ComposedGestureName from "06714_ComposedGestureName.js";
+import _mod6722 from "metro/06722__.js";
 
 require = arg1;
 let dependencyMap = arg6;
-function traverseAndConfigureRelations(gestures, map, set, items) {
+function traverseAndConfigureRelations(gestures, map, set) {
   _require = gestures;
   dependencyMap = map;
   if (items === undefined) {
@@ -15,63 +16,62 @@ function traverseAndConfigureRelations(gestures, map, set, items) {
     gestures = gestures.gestures;
     let item = gestures.forEach((type) => {
       if (obj.isComposedGesture(type)) {
-        let tmp13 = gestures.type !== tmp(6714).ComposedGestureName.Simultaneous;
+        let tmp13 = gestures.type !== ComposedGestureName.ComposedGestureName.Simultaneous;
         if (tmp13) {
-          tmp13 = type.type === tmp(6714).ComposedGestureName.Simultaneous;
+          tmp13 = type.type === ComposedGestureName.ComposedGestureName.Simultaneous;
         }
         if (tmp13) {
           const handlerTags = type.handlerTags;
           const item = handlerTags.forEach((item) => set.add(item));
         }
-        let tmp15 = tmp12.type === tmp(6714).ComposedGestureName.Simultaneous;
+        let tmp15 = gestures.type === ComposedGestureName.ComposedGestureName.Simultaneous;
         if (tmp15) {
-          tmp15 = type.type !== tmp(6714).ComposedGestureName.Simultaneous;
+          tmp15 = type.type !== ComposedGestureName.ComposedGestureName.Simultaneous;
         }
         if (tmp15) {
           const handlerTags1 = type.handlerTags;
           const item1 = handlerTags1.forEach((item) => set.delete(item));
         }
         traverseAndConfigureRelations(type, closure_1, set, items);
-        let tmp24 = type.type === tmp(6714).ComposedGestureName.Simultaneous;
+        let tmp24 = type.type === ComposedGestureName.ComposedGestureName.Simultaneous;
         if (tmp24) {
-          tmp24 = tmp12.type !== tmp(6714).ComposedGestureName.Simultaneous;
+          tmp24 = gestures.type !== ComposedGestureName.ComposedGestureName.Simultaneous;
         }
         if (tmp24) {
-          const handlerTags2 = tmp12.handlerTags;
+          const handlerTags2 = gestures.handlerTags;
           const item2 = handlerTags2.forEach((item) => set.delete(item));
         }
-        let tmp26 = type.type !== tmp(6714).ComposedGestureName.Simultaneous;
+        let tmp26 = type.type !== ComposedGestureName.ComposedGestureName.Simultaneous;
         if (tmp26) {
-          tmp26 = tmp12.type === tmp(6714).ComposedGestureName.Simultaneous;
+          tmp26 = gestures.type === ComposedGestureName.ComposedGestureName.Simultaneous;
         }
         if (tmp26) {
-          const handlerTags3 = tmp12.handlerTags;
+          const handlerTags3 = gestures.handlerTags;
           const item3 = handlerTags3.forEach((item) => set.add(item));
         }
-        if (gestures.type === tmp(6714).ComposedGestureName.Exclusive) {
+        if (gestures.type === ComposedGestureName.ComposedGestureName.Exclusive) {
           const handlerTags4 = type.handlerTags;
           const item4 = handlerTags4.forEach((item) => items.push(item));
         }
-        let tmp29 = type.type === tmp(6714).ComposedGestureName.Exclusive;
+        let tmp29 = type.type === ComposedGestureName.ComposedGestureName.Exclusive;
         if (tmp29) {
-          tmp29 = tmp12.type !== tmp(6714).ComposedGestureName.Exclusive;
+          tmp29 = gestures.type !== ComposedGestureName.ComposedGestureName.Exclusive;
         }
         if (tmp29) {
-          tmp17.length = items.length;
+          items.length = items.length;
         }
-        tmp17 = items;
       } else {
         let arr = items;
         traverseAndConfigureRelations(type, closure_1, set, items);
         if (deleteResult) {
-          obj2.add(type.handlerTag);
+          set.add(type.handlerTag);
         }
-        if (gestures.type === tmp(6714).ComposedGestureName.Exclusive) {
+        if (gestures.type === ComposedGestureName.ComposedGestureName.Exclusive) {
           arr = arr.push(type.handlerTag);
         }
         deleteResult = set.delete(type.handlerTag);
-        obj2 = set;
       }
+      obj = _mod6722;
     });
   } else {
     gestures.gestureRelations = tmp(6722).prepareRelations(gestures.config, gestures.handlerTag);

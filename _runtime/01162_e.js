@@ -611,14 +611,12 @@ let fn = (fn) => {
                       }
                     }
                   }
-                  let tmp76 = closure_1_1;
                   let call3 = closure_1_1.call;
-                  let tmp77 = closure_1_0;
                   let tmp78 = c5;
                   if (typeof call3 === "unknown") {
-                    let call3Result = tmp76(tmp78);
+                    let call3Result = closure_1_1(tmp78);
                   } else {
-                    call3Result = call3(tmp77, tmp78);
+                    call3Result = call3(closure_1_0, tmp78);
                   }
                   _return = 0;
                   c2 = 0;
@@ -793,14 +791,12 @@ let fn = (fn) => {
                       }
                     }
                   }
-                  let tmp76 = closure_1_1;
                   let call3 = closure_1_1.call;
-                  let tmp77 = closure_1_0;
                   let tmp78 = c5;
                   if (typeof call3 === "unknown") {
-                    let call3Result = tmp76(tmp78);
+                    let call3Result = closure_1_1(tmp78);
                   } else {
-                    call3Result = call3(tmp77, tmp78);
+                    call3Result = call3(closure_1_0, tmp78);
                   }
                   _return = 0;
                   c2 = 0;
@@ -976,14 +972,12 @@ let fn = (fn) => {
                       }
                     }
                   }
-                  let tmp76 = closure_1_1;
                   let call3 = closure_1_1.call;
-                  let tmp77 = closure_1_0;
                   let tmp78 = c5;
                   if (typeof call3 === "unknown") {
-                    let call3Result = tmp76(tmp78);
+                    let call3Result = closure_1_1(tmp78);
                   } else {
-                    call3Result = call3(tmp77, tmp78);
+                    call3Result = call3(closure_1_0, tmp78);
                   }
                   _return = 0;
                   c2 = 0;
@@ -1298,7 +1292,7 @@ let fn = (fn) => {
             closure_1_1[0][2](value);
             closure_1_1.shift();
             if (closure_1_1.length) {
-              resume(tmp[0][0], tmp[0][1]);
+              resume(closure_1_1[0][0], closure_1_1[0][1]);
             }
           }
         })(_return[arg0](arg1));
@@ -1312,11 +1306,11 @@ let fn = (fn) => {
     function reject(arg0) {
       resume("throw", arg0);
     }
-    function settle(fn, arg1) {
-      fn(arg1);
+    function settle(fn, value) {
+      fn(value);
       closure_1.shift();
       if (closure_1.length) {
-        resume(tmp2[0][0], tmp2[0][1]);
+        resume(closure_1[0][0], closure_1[0][1]);
       }
     }
     if (Symbol.asyncIterator) {
@@ -1618,7 +1612,7 @@ let fn = (fn) => {
   }) : ((arg0, arg1) => {
     arg0.default = arg1;
   });
-  fn = function ownKeys(arg0) {
+  fn = function ownKeys(__addDisposableResource) {
     fn = Object.getOwnPropertyNames;
     if (!fn) {
       fn = (obj) => {
@@ -1643,7 +1637,7 @@ let fn = (fn) => {
         return items;
       };
     }
-    return fn(arg0);
+    return fn(__addDisposableResource);
   };
   function g(__esModule) {
     if (__esModule) {
@@ -1831,14 +1825,14 @@ let fn = (fn) => {
     return error;
   });
   function k(arg0) {
-    const hasError = arg0;
+    closure_0 = arg0;
     function fail(arg0) {
       let tmp2 = arg0;
-      if (hasError.hasError) {
-        tmp2 = new closure_3(arg0, tmp.error, "An error was suppressed during disposal.");
+      if (closure_0.hasError) {
+        tmp2 = new closure_3(arg0, closure_0.error, "An error was suppressed during disposal.");
       }
-      hasError.error = tmp2;
-      hasError.hasError = true;
+      closure_0.error = tmp2;
+      closure_0.hasError = true;
     }
     closure_3 = 0;
     function next() {
@@ -1872,7 +1866,7 @@ let fn = (fn) => {
               return resolved1.then(next, (arg0) => {
                 let tmp2 = arg0;
                 if (hasError.hasError) {
-                  tmp2 = new closure_3(arg0, tmp.error, "An error was suppressed during disposal.");
+                  tmp2 = new closure_3(arg0, hasError.error, "An error was suppressed during disposal.");
                 }
                 hasError.error = tmp2;
                 hasError.hasError = true;

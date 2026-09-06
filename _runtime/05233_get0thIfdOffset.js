@@ -3,6 +3,8 @@ import _modDef5216 from "metro/05216__.js";
 import _modDef5230 from "metro/05230__.js";
 import IFD_TYPE_0TH2 from "05234_IFD_TYPE_0TH.js";
 
+const IFD_TYPE_0THDefault = IFD_TYPE_0TH2;
+
 require = arg1;
 function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
   obj = _modDef5230;
@@ -23,7 +25,7 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
       let str = getTagValue(byteLength, sum2, shortAt1, longAt, byteOrder);
       let tmp21 = sum2;
     } else {
-      const longAt1 = tmp4(5230).getLongAt(byteLength, sum + sum1, byteOrder);
+      const longAt1 = _modDef5230.getLongAt(byteLength, sum + sum1, byteOrder);
       str = "<faulty value>";
       tmp21 = longAt1;
       if (
@@ -35,10 +37,10 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
         str = getTagValue(byteLength, sum + longAt1, shortAt1, longAt, byteOrder, 33723 === shortAt);
         tmp21 = longAt1;
       }
-      const tmp4Result = tmp4(5230);
+      const tmp4Result = _modDef5230;
     }
     let tmp34 = str;
-    if (shortAt1 === tmp4(5230).tagTypes.ASCII) {
+    if (shortAt1 === _modDef5230.tagTypes.ASCII) {
       tmp34 = (function decodeAsciiValue(arr) {
         try {
           return arr.map((item) => decodeURIComponent(escape(item)));
@@ -72,26 +74,25 @@ function readTag(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
     const _HermesInternal = HermesInternal;
     let combined = "undefined-" + shortAt;
     let descriptionResult = tmp34;
-    if (undefined !== tmp4(5234)[IFD_TYPE_0TH][shortAt]) {
-      if (undefined !== tmp4(5234)[IFD_TYPE_0TH][shortAt].name) {
-        if (undefined !== tmp4(5234)[IFD_TYPE_0TH][shortAt].description) {
+    if (undefined !== IFD_TYPE_0THDefault[IFD_TYPE_0TH][shortAt]) {
+      if (undefined !== IFD_TYPE_0THDefault[IFD_TYPE_0TH][shortAt].name) {
+        if (undefined !== IFD_TYPE_0THDefault[IFD_TYPE_0TH][shortAt].description) {
           try {
-            descriptionResult = tmp4(5234)[IFD_TYPE_0TH][shortAt].description(tmp34);
+            descriptionResult = IFD_TYPE_0THDefault[IFD_TYPE_0TH][shortAt].description(tmp34);
             combined = tmp39;
-            const obj8 = tmp4(5234)[IFD_TYPE_0TH][shortAt];
           } catch (err) {
             descriptionResult = getDescriptionFromTagValue(tmp2);
             combined = tmp;
           }
         }
       }
-      if (shortAt1 !== tmp4(5230).tagTypes.RATIONAL) {
-        if (shortAt1 !== tmp4(5230).tagTypes.SRATIONAL) {
-          combined = tmp4(5234)[IFD_TYPE_0TH][shortAt];
+      if (shortAt1 !== _modDef5230.tagTypes.RATIONAL) {
+        if (shortAt1 !== _modDef5230.tagTypes.SRATIONAL) {
+          combined = IFD_TYPE_0THDefault[IFD_TYPE_0TH][shortAt];
           descriptionResult = getDescriptionFromTagValue(tmp34);
         }
       }
-      combined = tmp4(5234)[IFD_TYPE_0TH][shortAt];
+      combined = IFD_TYPE_0THDefault[IFD_TYPE_0TH][shortAt];
       descriptionResult = `${tmp34[0] / tmp34[1]}`;
     }
     obj = { id: shortAt, name: combined, value: tmp34, description: descriptionResult, __offset: tmp21 };
@@ -195,9 +196,9 @@ function readIfd(byteLength, IFD_TYPE_0TH, sum, sum, byteOrder, arg5) {
     }
   }
   if (_modDef5216.USE_THUMBNAIL) {
-    let tmp23Result = tmp23(5230);
+    let tmp23Result = _modDef5230;
     if (tmp5 < byteLength.byteLength - tmp23Result.getTypeSize("LONG")) {
-      tmp23Result = tmp23(5230);
+      tmp23Result = _modDef5230;
       const longAt = tmp23Result.getLongAt(byteLength, tmp5, byteOrder);
       let tmp26 = 0 !== longAt;
       if (tmp26) {

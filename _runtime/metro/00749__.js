@@ -7,7 +7,9 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const createLogContainerEnvelopeItem = function createLogContainerEnvelopeItem(items) {
-  items = [{ type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" }, { items }];
+  items = [,];
+  items[0] = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
+  items[1] = { items };
   return items;
 };
 export const createLogEnvelope = function createLogEnvelope(items, _metadata, tunnel, dsn) {
@@ -28,7 +30,8 @@ export const createLogEnvelope = function createLogEnvelope(items, _metadata, tu
     obj.dsn = _mod702.dsnToString(dsn);
   }
   obj = { type: "log", item_count: items.length, content_type: "application/vnd.sentry.items.log+json" };
-  items = [obj, { items }];
+  items = [obj];
+  items[1] = { items };
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

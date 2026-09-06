@@ -1,14 +1,14 @@
 // _runtime/metro/00022__.js
-function jsxProd(type, key, arg2) {
+function jsxProd(BaseIconImage, size, key) {
   let text = null;
-  if (undefined !== arg2) {
-    text = `${arg2}`;
+  if (undefined !== key) {
+    text = `${key}`;
   }
-  if (undefined !== key.key) {
-    text = `${key.key}`;
+  if (undefined !== size.key) {
+    text = `${size.key}`;
   }
-  let tmp3 = key;
-  if ("key" in key) {
+  let tmp3 = size;
+  if ("key" in size) {
     const obj = {};
     tmp3 = obj;
     const keys = Object.keys();
@@ -18,14 +18,14 @@ function jsxProd(type, key, arg2) {
         if ("key" === tmp6) {
           continue;
         } else {
-          obj[tmp6] = key[tmp6];
+          obj[tmp6] = size[tmp6];
           continue;
         }
         continue;
       }
     }
   }
-  const element = { $$typeof: _typeof, type, key: text, ref: null, props: null };
+  const element = { $$typeof: _typeof, type: BaseIconImage, key: text, ref: null, props: null };
   let tmp7 = null;
   if (undefined !== tmp3.ref) {
     tmp7 = ref;

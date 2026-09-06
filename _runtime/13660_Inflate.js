@@ -3,7 +3,9 @@ import _mod13651 from "metro/13651__.js";
 import ZStream from "13653_ZStream.js";
 import _mod13655 from "metro/13655__.js";
 import _mod13659 from "metro/13659__.js";
+import InflateState from "13661_InflateState.js";
 import _mod13664 from "metro/13664__.js";
+import GZheader from "13665_GZheader.js";
 
 require = arg1;
 const dependencyMap = arg6;

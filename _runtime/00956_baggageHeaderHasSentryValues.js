@@ -19,10 +19,10 @@ export const createHeadersSafely = function createHeadersSafely(request_headers)
     return headers;
   } catch (err) {}
 };
-export const getFullURL = function getFullURL(arg0) {
+export const getFullURL = function getFullURL(url) {
   try {
     const _URL = URL;
-    const uRL = new URL(arg0, ignoreNextOnError.WINDOW.location.origin);
+    const uRL = new URL(url, ignoreNextOnError.WINDOW.location.origin);
     return uRL.href;
   } catch (err) {}
 };

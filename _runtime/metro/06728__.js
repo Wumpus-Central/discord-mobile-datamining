@@ -79,7 +79,7 @@ if (tmp4) {
         if (ref.current) {
           const current = ref2.current;
           if (current != null) {
-            current.updateEvents(tmp.current);
+            current.updateEvents(ref.current);
           }
         }
         ref.current = current;
@@ -146,7 +146,7 @@ if (tmp4) {
         if (ref.current) {
           const current = ref2.current;
           if (current != null) {
-            current.updateEvents(tmp.current);
+            current.updateEvents(ref.current);
           }
         }
         ref.current = current;
@@ -214,7 +214,7 @@ if (tmp4) {
           if (ref.current) {
             const current = ref2.current;
             if (current != null) {
-              current.updateEvents(tmp.current);
+              current.updateEvents(ref.current);
             }
           }
           ref.current = current;

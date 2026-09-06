@@ -1,13 +1,13 @@
 // _runtime/00049_defineLazyObjectProperty.js
 
-export default function defineLazyObjectProperty(arg0, arg1, get) {
-  closure_0 = arg0;
-  closure_1 = arg1;
+export default function defineLazyObjectProperty(global, item, get) {
+  closure_0 = global;
+  closure_1 = item;
   get = get.get;
   const enumerable = tmp;
   const writable = false !== get.writable;
   c6 = false;
-  Object.defineProperty(arg0, arg1, {
+  Object.defineProperty(global, item, {
     get: function getValue() {
       if (!c6) {
         const tmp2 = get();

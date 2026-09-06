@@ -193,15 +193,15 @@ class RequestBase {
         closure_1 = arg1;
         _self.on("abort", () => {
           if (!self._maxRetries) {
-            if (tmp.timedout) {
-              if (tmp.timedoutError) {
-                closure_1(tmp.timedoutError);
+            if (self.timedout) {
+              if (self.timedoutError) {
+                closure_1(self.timedoutError);
               }
             }
             const _Error = Error;
             const error = new Error("Aborted");
             error.code = "ABORTED";
-            ({ status: tmp5.status, method: tmp5.method, url: tmp5.url } = tmp);
+            ({ status: tmp5.status, method: tmp5.method, url: tmp5.url } = self);
             closure_1(error);
           }
         });

@@ -7,21 +7,21 @@ const useMemo = _mod19.useMemo;
 function getHandler(arg0, onBegin) {
   if (_mod6676.CALLBACK_TYPE.BEGAN === arg0) {
     return onBegin.onBegin;
-  } else if (tmp(6676).CALLBACK_TYPE.START === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.START === arg0) {
     return onBegin.onActivate;
-  } else if (tmp(6676).CALLBACK_TYPE.UPDATE === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.UPDATE === arg0) {
     return onBegin.onUpdate;
-  } else if (tmp(6676).CALLBACK_TYPE.END === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.END === arg0) {
     return onBegin.onDeactivate;
-  } else if (tmp(6676).CALLBACK_TYPE.FINALIZE === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.FINALIZE === arg0) {
     return onBegin.onFinalize;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_DOWN === arg0) {
     return onBegin.onTouchesDown;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_MOVE === arg0) {
     return onBegin.onTouchesMove;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_UP === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_UP === arg0) {
     return onBegin.onTouchesUp;
-  } else if (tmp(6676).CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
+  } else if (_mod6676.CALLBACK_TYPE.TOUCHES_CANCEL === arg0) {
     return onBegin.onTouchesCancel;
   }
 }
@@ -33,15 +33,15 @@ getHandler.__initData = {
 };
 function touchEventTypeToCallbackType(arg0) {
   if (TouchEventType.TouchEventType.TOUCHES_DOWN === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_DOWN;
-  } else if (tmp(6663).TouchEventType.TOUCHES_MOVE === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_MOVE;
-  } else if (tmp(6663).TouchEventType.TOUCHES_UP === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_UP;
-  } else if (tmp(6663).TouchEventType.TOUCHES_CANCEL === arg0) {
-    return tmp(6676).CALLBACK_TYPE.TOUCHES_CANCEL;
+    return _mod6676.CALLBACK_TYPE.TOUCHES_DOWN;
+  } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === arg0) {
+    return _mod6676.CALLBACK_TYPE.TOUCHES_MOVE;
+  } else if (TouchEventType.TouchEventType.TOUCHES_UP === arg0) {
+    return _mod6676.CALLBACK_TYPE.TOUCHES_UP;
+  } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === arg0) {
+    return _mod6676.CALLBACK_TYPE.TOUCHES_CANCEL;
   } else {
-    return tmp(6676).CALLBACK_TYPE.UNDEFINED;
+    return _mod6676.CALLBACK_TYPE.UNDEFINED;
   }
 }
 obj = { TouchEventType: TouchEventType.TouchEventType, CALLBACK_TYPE: _mod6676.CALLBACK_TYPE };
@@ -78,31 +78,31 @@ export const useMemoizedGestureCallbacks = function useMemoizedGestureCallbacks(
   return useMemo(() => {
     const obj = {};
     if (disableReanimated.onBegin) {
-      obj.onBegin = tmp.onBegin;
+      obj.onBegin = disableReanimated.onBegin;
     }
     if (disableReanimated.onActivate) {
-      obj.onActivate = tmp.onActivate;
+      obj.onActivate = disableReanimated.onActivate;
     }
     if (disableReanimated.onDeactivate) {
-      obj.onDeactivate = tmp.onDeactivate;
+      obj.onDeactivate = disableReanimated.onDeactivate;
     }
     if (disableReanimated.onFinalize) {
-      obj.onFinalize = tmp.onFinalize;
+      obj.onFinalize = disableReanimated.onFinalize;
     }
     if (disableReanimated.onUpdate) {
-      obj.onUpdate = tmp.onUpdate;
+      obj.onUpdate = disableReanimated.onUpdate;
     }
     if (disableReanimated.onTouchesDown) {
-      obj.onTouchesDown = tmp.onTouchesDown;
+      obj.onTouchesDown = disableReanimated.onTouchesDown;
     }
     if (disableReanimated.onTouchesMove) {
-      obj.onTouchesMove = tmp.onTouchesMove;
+      obj.onTouchesMove = disableReanimated.onTouchesMove;
     }
     if (disableReanimated.onTouchesUp) {
-      obj.onTouchesUp = tmp.onTouchesUp;
+      obj.onTouchesUp = disableReanimated.onTouchesUp;
     }
     if (disableReanimated.onTouchesCancel) {
-      obj.onTouchesCancel = tmp.onTouchesCancel;
+      obj.onTouchesCancel = disableReanimated.onTouchesCancel;
     }
     return obj;
   }, items);

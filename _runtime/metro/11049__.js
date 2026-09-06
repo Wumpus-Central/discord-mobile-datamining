@@ -67,7 +67,7 @@ export const getProducts = (skus) => {
       closure_1 = tmp5;
       const androidModule = tmp2(11051).getAndroidModule();
       await androidModule.getItemsByType(closure_1_7, skus);
-      closure_128_0 = arg1.map(tmp2(11056).singleProductAndroidMap);
+      closure_128_0 = value.map(tmp2(11056).singleProductAndroidMap);
       return tmp2(11051).fillProductsWithAdditionalData(closure_128_0);
     });
     let rejectResult = (function android() {
@@ -96,7 +96,8 @@ export const getSubscriptions = (skus) => {
     closure_1 = asyncGeneratorStep(async () => {
       const androidModuleType = tmp2(11051).getAndroidModuleType();
       const androidModule = tmp2(11051).getAndroidModule();
-      closure_128_1 = await androidModule.getItemsByType(closure_1_6, skus);
+      await androidModule.getItemsByType(closure_1_6, skus);
+      closure_128_1 = value;
       if ("android" === androidModuleType) {
         return addSubscriptionPlatform(closure_128_1, tmp2(11050).SubscriptionPlatform.android);
       }
@@ -111,7 +112,8 @@ export const getSubscriptions = (skus) => {
         throw error;
       }
       closure_128_2 = closure_128_1;
-      closure_128_2 = await tmp2(11051).fillProductsWithAdditionalData(closure_128_2);
+      await tmp2(11051).fillProductsWithAdditionalData(closure_128_2);
+      closure_128_2 = value;
       return addSubscriptionPlatform(closure_128_2, tmp2(11050).SubscriptionPlatform.amazon);
     });
     let rejectResult = (function android() {
@@ -135,7 +137,7 @@ export const getPurchaseHistory = () => {
     obj = {};
   }
   ({ alsoPublishToEventListener, automaticallyFinishRestoredTransactions, onlyIncludeActiveItems } = obj);
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -164,10 +166,10 @@ export const getPurchaseHistory = () => {
             closure_0 = tmp2;
             closure_128_0 = undefined;
             closure_128_1 = undefined;
-            if (closure_1_5) {
+            if (availableItems) {
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: obj11.getAvailableItems(), done: false };
+              const obj1 = { value: availableItems.getAvailableItems(), done: false };
               return obj1;
             } else {
               c2 = 2;
@@ -175,7 +177,6 @@ export const getPurchaseHistory = () => {
               const obj2 = { value: closure_1_4.getPurchaseHistoryByType(inapp), done: false };
               return obj2;
             }
-            obj11 = closure_1_5;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -235,13 +236,13 @@ export const getPurchaseHistory = () => {
     return applyArgumentsResult;
   })();
 };
-export const getAvailablePurchases = () => {
+export const getAvailablePurchases = (arg0) => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
   }
   ({ alsoPublishToEventListener, automaticallyFinishRestoredTransactions, onlyIncludeActiveItems } = obj);
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -270,10 +271,10 @@ export const getAvailablePurchases = () => {
             closure_0 = tmp2;
             closure_128_0 = undefined;
             closure_128_1 = undefined;
-            if (closure_1_5) {
+            if (availableItems) {
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: obj11.getAvailableItems(), done: false };
+              const obj1 = { value: availableItems.getAvailableItems(), done: false };
               return obj1;
             } else {
               c2 = 2;
@@ -281,7 +282,6 @@ export const getAvailablePurchases = () => {
               const obj2 = { value: closure_1_4.getAvailableItemsByType(inapp), done: false };
               return obj2;
             }
-            obj11 = closure_1_5;
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
@@ -343,7 +343,7 @@ export const getAvailablePurchases = () => {
 };
 export const requestPurchase = (arg0) => {
   closure_0 = arg0;
-  closure_1 = asyncGeneratorStep(async (arg0, value) => {
+  closure_1 = asyncGeneratorStep(async () => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -367,9 +367,9 @@ export const requestPurchase = (arg0) => {
           obj = { value, done: true };
           return obj;
         } else if (c0(dependencyMap[3]).isAmazon) {
-          if ("sku" in tmp31) {
+          if ("sku" in closure_0) {
             c1 = 3;
-            const obj1 = { value: closure_1_5.buyItemByType(tmp31.sku, ""), done: true };
+            const obj1 = { value: closure_1_5.buyItemByType(closure_0.sku, ""), done: true };
             return obj1;
           } else {
             const _Error2 = Error;
@@ -377,9 +377,9 @@ export const requestPurchase = (arg0) => {
             throw error;
           }
         } else {
-          if ("skus" in tmp31) {
-            if (tmp31.skus.length) {
-              ({ skus, obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = tmp31);
+          if ("skus" in closure_0) {
+            if (closure_0.skus.length) {
+              ({ skus, obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = closure_0);
               c0 = isOfferPersonalized;
               if (isOfferPersonalized == null) {
                 c0 = false;
@@ -424,7 +424,7 @@ export const requestPurchase = (arg0) => {
 };
 export const requestSubscription = (arg0) => {
   closure_0 = arg0;
-  closure_1 = asyncGeneratorStep(async (arg0, value) => {
+  closure_1 = asyncGeneratorStep(async () => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -448,17 +448,17 @@ export const requestSubscription = (arg0) => {
           obj = { value, done: true };
           return obj;
         } else if (c0(dependencyMap[3]).isAmazon) {
-          if ("sku" in tmp36) {
+          if ("sku" in closure_0) {
             let str7 = "";
-            if ("prorationModeAmazon" in tmp36) {
-              let str8 = tmp36.prorationModeAmazon;
+            if ("prorationModeAmazon" in closure_0) {
+              let str8 = closure_0.prorationModeAmazon;
               if (!str8) {
                 str8 = "";
               }
               str7 = str8;
             }
             c1 = 3;
-            const obj1 = { value: closure_1_5.buyItemByType(tmp36.sku, str7), done: true };
+            const obj1 = { value: closure_1_5.buyItemByType(closure_0.sku, str7), done: true };
             return obj1;
           } else {
             const _Error2 = Error;
@@ -466,13 +466,13 @@ export const requestSubscription = (arg0) => {
             throw error;
           }
         } else {
-          if ("subscriptionOffers" in tmp36) {
-            if (0 !== tmp36.subscriptionOffers.length) {
-              ({ subscriptionOffers, purchaseTokenAndroid, replacementModeAndroid } = tmp36);
+          if ("subscriptionOffers" in closure_0) {
+            if (0 !== closure_0.subscriptionOffers.length) {
+              ({ subscriptionOffers, purchaseTokenAndroid, replacementModeAndroid } = closure_0);
               if (undefined === replacementModeAndroid) {
                 replacementModeAndroid = -1;
               }
-              ({ obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = tmp36);
+              ({ obfuscatedAccountIdAndroid, obfuscatedProfileIdAndroid, isOfferPersonalized } = closure_0);
               let mapped;
               if (subscriptionOffers != null) {
                 mapped = subscriptionOffers.map((sku) => sku.sku);
@@ -526,7 +526,7 @@ export const requestSubscription = (arg0) => {
 export const finishTransaction = (arg0) => {
   ({ purchase: require, isConsumable: importAll, developerPayloadAndroid: dependencyMap } = arg0);
   asyncGeneratorStep = undefined;
-  asyncGeneratorStep = asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep = asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -593,12 +593,12 @@ export const finishTransaction = (arg0) => {
     return applyArgumentsResult;
   })();
 };
-export const deepLinkToSubscriptions = (arg0) => {
-  ({ sku: require, isAmazonDevice } = arg0);
+export const deepLinkToSubscriptions = (isAmazonDevice2) => {
+  ({ sku: require, isAmazonDevice } = isAmazonDevice2);
   if (isAmazonDevice === undefined) {
     isAmazonDevice = true;
   }
-  closure_2 = asyncGeneratorStep(async (arg0, value) => {
+  closure_2 = asyncGeneratorStep(async () => {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -629,16 +629,13 @@ export const deepLinkToSubscriptions = (arg0) => {
             const obj1 = { isAmazonDevice };
             result = tmp14.deepLinkToSubscriptionsAmazon(obj1);
             v3 = 3;
-          } else {
-            if (!require) {
-              const _Error = Error;
-              const error = new Error("Sku is required to locate subscription in Android Store");
-              Promise.reject(error);
-            }
-            const tmp4 = require;
+          } else if (!require) {
+            const _Error = Error;
+            const error = new Error("Sku is required to locate subscription in Android Store");
+            Promise.reject(error);
           }
           obj = isAmazonDevice(result[6]);
-          const obj2 = { sku: tmp4 };
+          const obj2 = { sku: require };
           const result1 = obj.deepLinkToSubscriptionsAndroid(obj2);
         }
       } catch (tmp17) {
@@ -661,7 +658,8 @@ export const deepLinkToSubscriptions = (arg0) => {
 export const getStorefront = () => {
   closure_0 = asyncGeneratorStep(async () => {
     value = {};
-    value.countryCode = await storefront.getStorefront();
+    await storefront.getStorefront();
+    value.countryCode = value;
     value.currency = null;
     return value;
   });

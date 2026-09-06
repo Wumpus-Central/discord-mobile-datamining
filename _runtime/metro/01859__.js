@@ -11,7 +11,7 @@ const styles = StyleSheet.create({ flex: { flex: 1 } });
 export default function _default(children) {
   return (
     <React2 style={styles.flex} testID={TEST_ID_KEYBOARD_TOOLBAR.TEST_ID_KEYBOARD_TOOLBAR_CONTENT}>
-      {arg0.children}
+      {children.children}
     </React2>
   );
 }

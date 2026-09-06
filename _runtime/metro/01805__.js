@@ -7,14 +7,14 @@ const Extrapolation = { IDENTITY: "identity", CLAMP: "clamp", EXTEND: "extend" }
 function getVal(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (obj.IDENTITY === arg0) {
     return arg5;
-  } else if (tmp.CLAMP === arg0) {
+  } else if (obj.CLAMP === arg0) {
     let tmp5 = arg4;
     if (arg1 * arg2 < arg1 * arg3) {
       tmp5 = arg3;
     }
     return tmp5;
   } else {
-    const EXTEND = tmp.EXTEND;
+    const EXTEND = obj.EXTEND;
     return arg2;
   }
 }
@@ -54,10 +54,7 @@ function validateType(extrapolateLeft) {
       if (!extrapolateLeft.extrapolateLeft) {
         if (extrapolateLeft.extrapolateRight) {
           const extrapolateRight = extrapolateLeft.extrapolateRight;
-          if (typeof isExtrapolate === "function") {
-            const tmp5 =
-              extrapolateRight === tmp.EXTEND || extrapolateRight === tmp.CLAMP || extrapolateRight === tmp.IDENTITY;
-          } else {
+          if (typeof isExtrapolate !== "function") {
             throw new TypeError("Trying to call a non-function");
           }
         }
@@ -66,10 +63,7 @@ function validateType(extrapolateLeft) {
         return obj;
       } else {
         extrapolateLeft = extrapolateLeft.extrapolateLeft;
-        if (typeof isExtrapolate === "function") {
-          const tmp3 =
-            extrapolateLeft === tmp.EXTEND || extrapolateLeft === tmp.CLAMP || extrapolateLeft === tmp.IDENTITY;
-        } else {
+        if (typeof isExtrapolate !== "function") {
           throw new TypeError("Trying to call a non-function");
         }
       }
@@ -102,8 +96,8 @@ function internalInterpolate(arg0, arg1, extrapolateLeft) {
       extrapolateLeft = extrapolateLeft.extrapolateLeft;
       if (typeof getVal === "function") {
         if (obj.IDENTITY !== extrapolateLeft) {
-          if (tmp9.CLAMP !== extrapolateLeft) {
-            const EXTEND2 = tmp9.EXTEND;
+          if (obj.CLAMP !== extrapolateLeft) {
+            const EXTEND2 = obj.EXTEND;
           }
         }
         const result = num * sum;
@@ -120,8 +114,8 @@ function internalInterpolate(arg0, arg1, extrapolateLeft) {
       const extrapolateRight = extrapolateLeft.extrapolateRight;
       if (typeof getVal === "function") {
         if (obj.IDENTITY !== extrapolateRight) {
-          if (tmp4.CLAMP !== extrapolateRight) {
-            const EXTEND = tmp4.EXTEND;
+          if (obj.CLAMP !== extrapolateRight) {
+            const EXTEND = obj.EXTEND;
           }
         }
       } else {
@@ -135,29 +129,29 @@ internalInterpolate.__workletHash = 16257995045856;
 internalInterpolate.__initData = {
   code: "function internalInterpolate_Pnpm_interpolationTs4(x,narrowedInput,extrapolationConfig){const{getVal}=this.__closure;const{leftEdgeInput:leftEdgeInput,rightEdgeInput:rightEdgeInput,leftEdgeOutput:leftEdgeOutput,rightEdgeOutput:rightEdgeOutput}=narrowedInput;if(rightEdgeInput-leftEdgeInput===0){return leftEdgeOutput;}const progress=(x-leftEdgeInput)/(rightEdgeInput-leftEdgeInput);const val=leftEdgeOutput+progress*(rightEdgeOutput-leftEdgeOutput);const coef=rightEdgeOutput>=leftEdgeOutput?1:-1;if(coef*val<coef*leftEdgeOutput){return getVal(extrapolationConfig.extrapolateLeft,coef,val,leftEdgeOutput,rightEdgeOutput,x);}else if(coef*val>coef*rightEdgeOutput){return getVal(extrapolationConfig.extrapolateRight,coef,val,leftEdgeOutput,rightEdgeOutput,x);}return val;}",
 };
-function interpolate(arg0, arg1, arg2, extrapolateLeft) {
-  if (arg1.length >= 2) {
-    if (arg2.length >= 2) {
+function interpolate(arg0, items, alpha, extrapolateLeft) {
+  if (items.length >= 2) {
+    if (alpha.length >= 2) {
       const obj = { leftEdgeInput: null, rightEdgeInput: null, leftEdgeOutput: null, rightEdgeOutput: null };
-      [obj.leftEdgeInput, obj.rightEdgeInput] = arg1;
-      [obj.leftEdgeOutput, obj.rightEdgeOutput] = arg2;
-      if (arg1.length > 2) {
-        if (arg0 > arg1[length - 1]) {
-          obj.leftEdgeInput = arg1[length - 2];
-          obj.rightEdgeInput = arg1[length - 1];
-          obj.leftEdgeOutput = arg2[length - 2];
-          obj.rightEdgeOutput = arg2[length - 1];
+      [obj.leftEdgeInput, obj.rightEdgeInput] = items;
+      [obj.leftEdgeOutput, obj.rightEdgeOutput] = alpha;
+      if (items.length > 2) {
+        if (arg0 > items[length - 1]) {
+          obj.leftEdgeInput = items[length - 2];
+          obj.rightEdgeInput = items[length - 1];
+          obj.leftEdgeOutput = alpha[length - 2];
+          obj.rightEdgeOutput = alpha[length - 1];
         } else {
           let num = 1;
           if (1 < length) {
-            while (arg0 > arg1[num]) {
+            while (arg0 > items[num]) {
               num = num + 1;
             }
             const diff = num - 1;
-            obj.leftEdgeInput = arg1[diff];
-            obj.rightEdgeInput = arg1[num];
-            obj.leftEdgeOutput = arg2[diff];
-            obj.rightEdgeOutput = arg2[num];
+            obj.leftEdgeInput = items[diff];
+            obj.rightEdgeInput = items[num];
+            obj.leftEdgeOutput = alpha[diff];
+            obj.rightEdgeOutput = alpha[num];
           }
         }
       }

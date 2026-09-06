@@ -3,7 +3,7 @@ import _modDef5212 from "metro/05212__.js";
 import _mod5213 from "metro/05213__.js";
 
 require = arg1;
-function load(response, response) {
+function load(response) {
   let then = response;
   if (response === undefined) {
     then = {};
@@ -45,7 +45,7 @@ function load(response, response) {
           closure_1 = arg1;
           let isIntegerResult = Number.isInteger(length);
           if (isIntegerResult) {
-            isIntegerResult = tmp >= 0;
+            isIntegerResult = length >= 0;
           }
           let obj = {};
           if (isIntegerResult) {
@@ -70,6 +70,7 @@ function load(response, response) {
             statusCode.resume();
           });
           value.on("error", (arg0) => closure_1(arg0));
+          obj3 = /^https:\/\//;
         });
       }
     } else {
@@ -215,7 +216,7 @@ function load(response, response) {
     return nextPromise1;
   }
 }
-function loadView(byteLength, response) {
+function loadView(byteLength) {
   let obj = response;
   if (response === undefined) {
     obj = { expanded: false, async: false, includeUnknown: false, domParser: "call" };

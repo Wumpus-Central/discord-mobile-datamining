@@ -7,7 +7,7 @@ importDefault = arg2;
 const dependencyMap = arg6;
 let msecs = 0;
 
-export default function v1(arg0, arg1, arg2) {
+export default function v1(c2, arg1, arg2) {
   let unsafeStringifyResult = arg1;
   let num = arg1;
   if (arg1) {
@@ -21,8 +21,8 @@ export default function v1(arg0, arg1, arg2) {
     const _Array = Array;
     array = new Array(16);
   }
-  let obj = arg0;
-  if (!arg0) {
+  let obj = c2;
+  if (!c2) {
     obj = {};
   }
   const tmp7 = undefined !== obj.clockseq ? obj.clockseq : closure_4;

@@ -52,9 +52,9 @@ export const toJSONSchema = function toJSONSchema(_idmap, uri) {
     const obj3 = { schemas: obj };
     return obj3;
   } else {
-    tmp2(8997).process(_idmap, initializeContextResult);
-    tmp2(8997).extractDefs(initializeContextResult, _idmap);
-    return tmp2(8997).finalize(initializeContextResult, _idmap);
+    initializeContext.process(_idmap, initializeContextResult);
+    initializeContext.extractDefs(initializeContextResult, _idmap);
+    return initializeContext.finalize(initializeContextResult, _idmap);
   }
   tmp = "_idmap" in _idmap;
 };
@@ -94,8 +94,8 @@ export const stringProcessor = (_zod, arg1, format, arg3) => {
         const items1 = [];
         HermesBuiltin.arraySpread(items.map((source) => {
           if ("draft-07" !== target.target) {
-            if ("draft-04" !== tmp.target) {
-              if ("openapi-3.0" !== tmp.target) {
+            if ("draft-04" !== target.target) {
+              if ("openapi-3.0" !== target.target) {
                 let obj = {};
               }
               obj = {};
@@ -441,6 +441,7 @@ export const objectProcessor = (_zod, io, properties, path) => {
   } else if ("output" === io.io) {
     properties.additionalProperties = false;
   }
+  const set = new Set(Object.keys(shape));
 };
 export const unionProcessor = (_zod, arg1, arg2, arg3) => {
   closure_0 = arg1;

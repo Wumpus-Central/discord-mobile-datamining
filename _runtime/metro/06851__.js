@@ -24,7 +24,7 @@ try {
       let merged = Object.assign(tmp);
       return (
         <FlashList.FlashList
-          ref={arg1}
+          ref={ref}
           renderScrollComponent={closure_6(
             () =>
               forwardRef((arg0, ref) => {

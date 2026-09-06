@@ -13,7 +13,7 @@ import _mod10484 from "10484__.js";
 import _mod10485 from "10485__.js";
 import _mod10486 from "10486__.js";
 
-function createConfiguration(flag, arg1) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

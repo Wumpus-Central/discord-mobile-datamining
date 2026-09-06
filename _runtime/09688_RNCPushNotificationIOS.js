@@ -44,6 +44,7 @@ const entry = {
       self._remoteNotificationCompleteCallbackCalled = true;
       const result = RNCPushNotificationIOS.onFinishRemoteNotification(self._notificationId, arg0);
     }
+    tmp = this._isRemote && self._notificationId && !self._remoteNotificationCompleteCallbackCalled;
   }
 };
 const items = [
@@ -236,6 +237,7 @@ const items1 = [
         });
       }
       const result = map.set(arg0, addListenerResult);
+      const tmp = PushNotificationIOS(38);
     }
   },
   {
@@ -257,6 +259,7 @@ const items1 = [
         value.remove();
         map.delete(arg0);
       }
+      const tmp = PushNotificationIOS(38);
     }
   },
   {

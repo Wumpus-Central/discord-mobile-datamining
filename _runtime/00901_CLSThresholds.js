@@ -1,7 +1,9 @@
 // _runtime/00901_CLSThresholds.js
+import _mod904 from "metro/00904__.js";
 import _mod905 from "metro/00905__.js";
 import _mod909 from "metro/00909__.js";
 import observe from "00911_observe.js";
+import bindReporter from "00912_bindReporter.js";
 import _mod914 from "metro/00914__.js";
 import LayoutShiftManager from "00915_LayoutShiftManager.js";
 
@@ -11,7 +13,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const items = [0.1, 0.25];
 
 export const CLSThresholds = items;
-export const onCLS = (arg0) => {
+export const onCLS = (arg0, arg1) => {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -33,18 +35,18 @@ export const onCLS = (arg0) => {
           ({ _sessionValue: tmp7.value, _sessionEntries: tmp7.entries } = closure_2);
           bindReporterResult();
         }
+        tmp = arg0[Symbol.iterator]();
       }
-      let tmp4 = obj;
-      const observeResult = observe.observe("layout-shift", handleEntries);
+      const tmp4 = obj;
       if (observeResult) {
-        const tmpResult = tmp(912);
+        const tmpResult = bindReporter;
         const bindReporterResult = tmpResult.bindReporter(closure_0, metric, items, tmp4.reportAllChanges);
         closure_0 = bindReporterResult;
         visibilityWatcher.onHidden(() => {
           handleEntries(observeResult.takeRecords());
           bindReporterResult(true);
         });
-        const WINDOW = tmp(904).WINDOW;
+        const WINDOW = _mod904.WINDOW;
         if (WINDOW != null) {
           const _setTimeout = WINDOW.setTimeout;
           if (_setTimeout != null) {
@@ -52,6 +54,7 @@ export const onCLS = (arg0) => {
           }
         }
       }
+      observeResult = observe.observe("layout-shift", handleEntries);
     }),
   );
 };

@@ -8,7 +8,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createLangChainCallbackHandler = function createLangChainCallbackHandler(attributes) {
+export const createLangChainCallbackHandler = function createLangChainCallbackHandler() {
   if (attributes === undefined) {
     attributes = {};
   }
@@ -43,11 +43,11 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
     ignoreCustomEvent: true,
     raiseError: null,
     awaitHandlers: null,
-    handleLLMStart(arg0, arr, arg2, arg3, arg4, invocation_params, ls_provider, arg7) {
+    handleLLMStart(kwargs, arr, arg2, arg3, arg4, invocation_params, ls_provider, arg7) {
       closure_0 = arg2;
       attributes = flag(flag2[0]);
       const invocationParams = attributes.getInvocationParams(invocation_params);
-      let result = flag(flag2[0]).extractLLMRequestAttributes(arg0, arr, closure_0, invocationParams, ls_provider);
+      let result = flag(flag2[0]).extractLLMRequestAttributes(kwargs, arr, closure_0, invocationParams, ls_provider);
       const obj2 = flag(flag2[0]);
       attributes = {
         name:
@@ -103,21 +103,21 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
           value.setAttributes(result);
         }
         if (typeof exitSpan === "function") {
-          value = obj.get(arg1);
+          value = map.get(arg1);
           let isRecordingResult1;
           if (value != null) {
             isRecordingResult1 = value.isRecording();
           }
           if (isRecordingResult1) {
             value.end();
-            obj.delete(arg1);
+            map.delete(arg1);
           }
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       }
     },
-    handleLLMError(arg0, arg1) {
+    handleLLMError(error, arg1) {
       let obj = map;
       value = map.get(arg1);
       let isRecordingResult;
@@ -144,7 +144,8 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
       obj = { mechanism: null };
       const obj5 = captureCheckIn;
       obj.mechanism = { handled: false, type: "" + LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN + ".llm_error_handler" };
-      obj5.captureException(arg0, obj);
+      obj5.captureException(error, obj);
+      const obj1 = { handled: false, type: "" + LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN + ".llm_error_handler" };
     },
     handleChainStart(name, arg1, arg2, arg3) {
       closure_0 = arg2;
@@ -165,6 +166,7 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
         const result = map.set(closure_0, arg0);
         return arg0;
       });
+      const tmp2Result = flag(flag2[2]);
     },
     handleChainEnd(arg0, arg1) {
       let obj = map;
@@ -195,7 +197,7 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
         }
       }
     },
-    handleChainError(arg0, arg1) {
+    handleChainError(error, arg1) {
       let obj = map;
       value = map.get(arg1);
       let isRecordingResult;
@@ -225,7 +227,8 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
         handled: false,
         type: "" + LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN + ".chain_error_handler",
       };
-      obj5.captureException(arg0, obj);
+      obj5.captureException(error, obj);
+      const obj1 = { handled: false, type: "" + LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN + ".chain_error_handler" };
     },
     handleToolStart(name, gen_ai_tool_input, arg2, arg3) {
       closure_0 = arg2;
@@ -244,6 +247,7 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
         const result = map.set(closure_0, arg0);
         return arg0;
       });
+      const tmp2Result = flag(flag2[2]);
     },
     handleToolEnd(arg0, arg1) {
       let obj = map;
@@ -274,7 +278,7 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
         }
       }
     },
-    handleToolError(arg0, arg1) {
+    handleToolError(error, arg1) {
       let obj = map;
       value = map.get(arg1);
       let isRecordingResult;
@@ -304,7 +308,8 @@ export const createLangChainCallbackHandler = function createLangChainCallbackHa
         handled: false,
         type: "" + LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN + ".tool_error_handler",
       };
-      obj5.captureException(arg0, obj);
+      obj5.captureException(error, obj);
+      const obj1 = { handled: false, type: "" + LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN + ".tool_error_handler" };
     },
     copy() {
       return obj;

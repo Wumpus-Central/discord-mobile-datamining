@@ -10,7 +10,7 @@ function useOnLoad(arg0, arg1) {
   closure_1 = arg1;
   closure_2 = hasOwnProperty(false);
   React3(() => {
-    let isFirstLayoutComplete = getDataLength.getIsFirstLayoutComplete();
+    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
     if (isFirstLayoutComplete) {
       isFirstLayoutComplete = !ref.current;
     }
@@ -21,11 +21,12 @@ function useOnLoad(arg0, arg1) {
   });
 }
 
-export const useOnListLoad = (getDataLength, arg1) => {
-  let f80796 = arg1;
+export const useOnListLoad = (recyclerViewManager, onLoad) => {
+  let isFirstLayoutComplete = recyclerViewManager;
+  let f80796 = onLoad;
   hasOwnProperty(Date.now());
   [tmp3, closure_3] = _slicedToArray(timestampProducer(false), 2);
-  const dataLength = getDataLength.getDataLength();
+  const dataLength = recyclerViewManager.getDataLength();
   let obj = _mod6902;
   const requestAnimationFrame = obj.useUnmountAwareAnimationFrame().requestAnimationFrame;
   const items = [dataLength];
@@ -33,6 +34,7 @@ export const useOnListLoad = (getDataLength, arg1) => {
     closure_2.current = Date.now();
   }, items);
   if (typeof useOnLoad === "function") {
+    isFirstLayoutComplete = recyclerViewManager;
     f80796 = () => {
       const elapsedTimeInMs = Date.now() - ref.current;
       requestAnimationFrame(() => {
@@ -44,9 +46,9 @@ export const useOnListLoad = (getDataLength, arg1) => {
         closure_2_3(true);
       });
     };
-    tmp(false);
+    hasOwnProperty(false);
     React3(() => {
-      let isFirstLayoutComplete = getDataLength.getIsFirstLayoutComplete();
+      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
       if (isFirstLayoutComplete) {
         isFirstLayoutComplete = !ref.current;
       }
@@ -60,7 +62,6 @@ export const useOnListLoad = (getDataLength, arg1) => {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = hasOwnProperty;
   const tmp2 = _slicedToArray(timestampProducer(false), 2);
 };
 export { useOnLoad };

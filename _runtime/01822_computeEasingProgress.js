@@ -70,8 +70,6 @@ maybeScheduleNextFrame.__initData = {
   code: "function maybeScheduleNextFrame_Pnpm_swipeSimulatorTs4(step,didScreenReachDestination,screenTransitionConfig,event,isTransitionCanceled){const{computeProgress,RNScreensTurboModule}=this.__closure;if(!didScreenReachDestination){const stackTag=screenTransitionConfig.stackTag;const progress=computeProgress(screenTransitionConfig,event,isTransitionCanceled);RNScreensTurboModule.updateTransition(stackTag,progress);requestAnimationFrame(step);}else{var _screenTransitionConf;(_screenTransitionConf=screenTransitionConfig.onFinishAnimation)===null||_screenTransitionConf===void 0||_screenTransitionConf.call(screenTransitionConfig);}}",
 };
 function getSwipeSimulator(value, screenDimensions, arg2) {
-  closure_0 = value;
-  closure_1 = screenDimensions;
   v400 = arg2;
   screenDimensions = screenDimensions.screenDimensions;
   closure_4 = globalThis._getAnimationTimestamp();
@@ -121,40 +119,40 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         const _Math = Math;
         let num2 = 1;
         if (Math.abs(x) >= 1) {
-          num2 = (tmp4 * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / x;
+          num2 = (tmp4 * ((globalThis._getAnimationTimestamp() - closure_4) / 1000)) / x;
         }
-        const y = tmp3.y;
+        const y = point3.y;
         if (typeof tmp === "function") {
           const _Math2 = Math;
           let num4 = 1;
           if (Math.abs(y) >= 1) {
-            num4 = (tmp6 * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / y;
+            num4 = (tmp6 * ((globalThis._getAnimationTimestamp() - closure_4) / 1000)) / y;
           }
           if (typeof easing === "function") {
             const _Math3 = Math;
-            tmp7.translationX = tmp8 - tmp10 * (1 - Math.pow(1 - num2, 5));
+            value.translationX = tmp8 - tmp10 * (1 - Math.pow(1 - num2, 5));
             if (typeof tmp11 === "function") {
               const _Math4 = Math;
-              tmp7.translationY = tmp12 - tmp14 * (1 - Math.pow(1 - num4, 5));
-              if (tmp9 > 0) {
-                if (tmp7.translationX <= 0) {
+              value.translationY = tmp12 - tmp14 * (1 - Math.pow(1 - num4, 5));
+              if (signResult > 0) {
+                if (value.translationX <= 0) {
                   closure_10.x = true;
-                  tmp7.translationX = 0;
+                  value.translationX = 0;
                 }
-              } else if (tmp7.translationX >= 0) {
+              } else if (value.translationX >= 0) {
                 closure_10.x = true;
-                tmp7.translationX = 0;
+                value.translationX = 0;
               }
-              if (tmp13 > 0) {
-                if (tmp7.translationY <= 0) {
+              if (signResult1 > 0) {
+                if (value.translationY <= 0) {
                   closure_10.y = true;
-                  tmp7.translationY = 0;
+                  value.translationY = 0;
                 }
-              } else if (tmp7.translationY >= 0) {
+              } else if (value.translationY >= 0) {
                 closure_10.y = true;
-                tmp7.translationY = 0;
+                value.translationY = 0;
               }
-              applyStyle.applyStyle(closure_1, tmp7);
+              applyStyle.applyStyle(screenDimensions, value);
               if ("x" === closure_2) {
                 let y2 = closure_10.x;
               } else {
@@ -167,29 +165,29 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
                 }
               }
               if (y2) {
-                tmp7.translationX = tmp9 * screenDimensions.width;
-                tmp7.translationY = tmp13 * screenDimensions.height;
-                const result = tmp19(1821).applyStyleForBelowTopScreen(tmp21, tmp7);
-                const tmp19Result = tmp19(1821);
+                value.translationX = signResult * screenDimensions.width;
+                value.translationY = signResult1 * screenDimensions.height;
+                const result = applyStyle.applyStyleForBelowTopScreen(screenDimensions, value);
+                const tmp19Result = applyStyle;
               }
               if (typeof maybeScheduleNextFrame === "function") {
                 if (y2) {
-                  const onFinishAnimation = tmp21.onFinishAnimation;
+                  const onFinishAnimation = screenDimensions.onFinishAnimation;
                   if (onFinishAnimation != null) {
                     onFinishAnimation();
                   }
                 } else if (typeof computeProgress === "function") {
-                  screenDimensions = tmp21.screenDimensions;
+                  screenDimensions = screenDimensions.screenDimensions;
                   const _Math5 = Math;
                   const _Math6 = Math;
-                  const absolute = Math.abs(tmp7.translationX / screenDimensions.width);
+                  const absolute = Math.abs(value.translationX / screenDimensions.width);
                   const _Math7 = Math;
-                  const bound = Math.max(absolute, Math.abs(tmp7.translationY / screenDimensions.height));
+                  const bound = Math.max(absolute, Math.abs(value.translationY / screenDimensions.height));
                   let result1 = bound;
                   if (tmp31) {
                     result1 = bound / 2;
                   }
-                  const RNScreensTurboModule = tmp19(1823).RNScreensTurboModule;
+                  const RNScreensTurboModule = RNScreensTurboModule2.RNScreensTurboModule;
                   RNScreensTurboModule.updateTransition(tmp32, result1);
                   const _requestAnimationFrame = requestAnimationFrame;
                   const animationFrame = requestAnimationFrame(tmp30);
@@ -211,7 +209,6 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      tmp3 = point3;
     }
     return computeFrame;
   } else {
@@ -221,80 +218,77 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
         const _Math = Math;
         let num2 = 1;
         if (Math.abs(x) >= 1) {
-          num2 = (tmp4 * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / x;
+          num2 = (tmp4 * ((globalThis._getAnimationTimestamp() - closure_4) / 1000)) / x;
         }
-        const y = tmp3.y;
+        const y = point3.y;
         if (typeof tmp === "function") {
           const _Math2 = Math;
           let num4 = 1;
           if (Math.abs(y) >= 1) {
-            num4 = (tmp6 * ((globalThis._getAnimationTimestamp() - tmp2) / 1000)) / y;
+            num4 = (tmp6 * ((globalThis._getAnimationTimestamp() - closure_4) / 1000)) / y;
           }
           if (typeof easing === "function") {
             const _Math3 = Math;
-            tmp7.translationX = tmp8 + tmp10 * (1 - Math.pow(1 - num2, 5));
+            value.translationX = tmp8 + tmp10 * (1 - Math.pow(1 - num2, 5));
             if (typeof tmp11 === "function") {
               const _Math4 = Math;
-              tmp7.translationY = tmp12 + tmp14 * (1 - Math.pow(1 - num4, 5));
+              value.translationY = tmp12 + tmp14 * (1 - Math.pow(1 - num4, 5));
               if (tmp9 > 0) {
                 let tmp16 = screenDimensions;
-                if (tmp7.translationX >= screenDimensions.width) {
+                if (value.translationX >= screenDimensions.width) {
                   closure_10.x = true;
-                  tmp7.translationX = tmp18.width;
+                  value.translationX = tmp18.width;
                   tmp16 = tmp18;
                 }
               } else {
                 tmp16 = screenDimensions;
-                if (tmp7.translationX <= -screenDimensions.width) {
+                if (value.translationX <= -screenDimensions.width) {
                   closure_10.x = true;
-                  tmp7.translationX = -tmp15.width;
+                  value.translationX = -tmp15.width;
                   tmp16 = tmp15;
                 }
               }
               if (tmp13 > 0) {
-                if (tmp7.translationY >= tmp16.height) {
+                if (value.translationY >= tmp16.height) {
                   closure_10.y = true;
-                  tmp7.translationY = tmp16.height;
+                  value.translationY = tmp16.height;
                 }
-              } else if (tmp7.translationY <= -tmp16.height) {
+              } else if (value.translationY <= -tmp16.height) {
                 closure_10.y = true;
-                tmp7.translationY = -tmp16.height;
+                value.translationY = -tmp16.height;
               }
-              applyStyle.applyStyle(closure_1, tmp7);
+              applyStyle.applyStyle(screenDimensions, value);
               let y2 = closure_10.x;
               if (!y2) {
                 y2 = closure_10.y;
               }
-              if (typeof tmp26 === "function") {
+              if (typeof maybeScheduleNextFrame === "function") {
                 if (y2) {
-                  const onFinishAnimation = tmp24.onFinishAnimation;
+                  const onFinishAnimation = screenDimensions.onFinishAnimation;
                   if (onFinishAnimation != null) {
                     onFinishAnimation();
                   }
                 } else if (typeof computeProgress === "function") {
-                  screenDimensions = tmp24.screenDimensions;
+                  screenDimensions = screenDimensions.screenDimensions;
                   const _Math5 = Math;
                   const _Math6 = Math;
-                  const absolute = Math.abs(tmp7.translationX / screenDimensions.width);
+                  const absolute = Math.abs(value.translationX / screenDimensions.width);
                   const _Math7 = Math;
-                  const bound = Math.max(absolute, Math.abs(tmp7.translationY / screenDimensions.height));
+                  const bound = Math.max(absolute, Math.abs(value.translationY / screenDimensions.height));
                   let result = bound;
                   if (tmp28) {
                     result = bound / 2;
                   }
-                  const RNScreensTurboModule = tmp22(1823).RNScreensTurboModule;
+                  const RNScreensTurboModule = RNScreensTurboModule2.RNScreensTurboModule;
                   RNScreensTurboModule.updateTransition(tmp29, result);
                   const _requestAnimationFrame = requestAnimationFrame;
-                  const animationFrame = requestAnimationFrame(tmp27);
+                  const animationFrame = requestAnimationFrame(_computeFrame);
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp22 = require;
-              tmp26 = maybeScheduleNextFrame;
-              tmp27 = _computeFrame;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -307,7 +301,6 @@ function getSwipeSimulator(value, screenDimensions, arg2) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      tmp3 = point3;
     }
     return _computeFrame;
   }

@@ -60,7 +60,6 @@ function sendIndexPath(arg0, pathname, basename) {
             } else {
               diff = length;
             }
-            const charAtResult = pathname.charAt(diff);
             if (!charAtResult) {
               let tmp9 = pathname.slice(diff) || "/";
               const tmp10 = pathname.slice(diff) || "/";
@@ -68,6 +67,7 @@ function sendIndexPath(arg0, pathname, basename) {
               tmp9 = pathname;
             }
             tmp5 = tmp9;
+            charAtResult = pathname.charAt(diff);
           }
         }
       }
@@ -160,7 +160,6 @@ function rebuildRoutePathFromAllRoutes(routes2, _location) {
                   arr2 = str3;
                   if (formatted.startsWith(str5.toLowerCase())) {
                     const tmp3 = str5.endsWith("/") ? str5.length - 1 : str5.length;
-                    const charAtResult = str3.charAt(tmp3);
                     if (!charAtResult) {
                       let tmp6 = str3.slice(tmp3) || "/";
                       const tmp7 = str3.slice(tmp3) || "/";
@@ -168,6 +167,7 @@ function rebuildRoutePathFromAllRoutes(routes2, _location) {
                       tmp6 = str3;
                     }
                     arr2 = tmp6;
+                    charAtResult = str3.charAt(tmp3);
                   }
                 }
               }
@@ -221,9 +221,8 @@ function locationIsInsideDescendantRoute(_location, routes2) {
   const tmp = global(routes2, _location);
   if (tmp) {
     for (const item10009 of tmp) {
-      let tmp4 = item10009;
       if (routeIsDescendant(item10009.route)) {
-        if (pickSplat(tmp4)) {
+        if (pickSplat(item10009)) {
           obj.return();
           flag = true;
           return true;
@@ -268,7 +267,7 @@ function getFallbackTransactionName(pathname, basename) {
   }
   return str2;
 }
-function getNormalizedName(routes, pathname, items, basename) {
+function getNormalizedName(routes, pathname, items) {
   let str = basename;
   if (basename === undefined) {
     str = "";
@@ -292,7 +291,6 @@ function getNormalizedName(routes, pathname, items, basename) {
               let path = tmp8.path;
               let tmp11 = path;
               if (path) {
-                let tmp12 = pathIsWildcardAndHasChildren;
                 if (!pathIsWildcardAndHasChildren(tmp11, tmp7)) {
                   if ("/" !== tmp11[0]) {
                     if ("/" !== ``[``.length - 1]) {
@@ -318,7 +316,7 @@ function getNormalizedName(routes, pathname, items, basename) {
                         iter.return();
                         return items;
                       }
-                      if (tmp12(str4, tmp7)) {
+                      if (pathIsWildcardAndHasChildren(str4, tmp7)) {
                         str4 = str4.slice(0, -1);
                       }
                       let str8 = "";
@@ -357,13 +355,13 @@ function getNormalizedName(routes, pathname, items, basename) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_5 = [];
 
-export const clearNavigationContext = function clearNavigationContext(arg0) {
+export const clearNavigationContext = function clearNavigationContext(navigationContext) {
   let arr = closure_5;
   let token;
   if (closure_5[closure_5.length - 1] != null) {
     token = tmp.token;
   }
-  if (token === arg0) {
+  if (token === navigationContext) {
     arr = arr.pop();
   }
 };
@@ -371,11 +369,11 @@ export const getActiveRootSpan = function getActiveRootSpan() {
   const activeSpan = _mod682.getActiveSpan();
   let rootSpan;
   if (activeSpan) {
-    let tmpResult = tmp(682);
+    let tmpResult = _mod682;
     rootSpan = tmpResult.getRootSpan(activeSpan);
   }
   if (rootSpan) {
-    tmpResult = tmp(682);
+    tmpResult = _mod682;
     const op = tmpResult.spanToJSON(rootSpan).op;
     if ("navigation" === op) {
       const tmp5 = rootSpan;
@@ -396,7 +394,7 @@ export const getNavigationContext = function getNavigationContext() {
 };
 export { getNormalizedName };
 export { getNumberOfUrlSegments };
-export function initializeRouterUtils(arg0, flag) {
+export function initializeRouterUtils(arg0) {
   if (flag === undefined) {
     flag = false;
   }
@@ -407,13 +405,7 @@ export { pathEndsWithWildcard };
 export { pathIsWildcardAndHasChildren };
 export { prefixWithSlash };
 export { rebuildRoutePathFromAllRoutes };
-export const resolveRouteNameAndSource = function resolveRouteNameAndSource(
-  _location,
-  routes,
-  routes2,
-  items,
-  basename,
-) {
+export const resolveRouteNameAndSource = function resolveRouteNameAndSource(_location, routes, routes2, items) {
   let str = basename;
   if (basename === undefined) {
     str = "";
@@ -446,11 +438,10 @@ export const setNavigationContext = function setNavigationContext(path, activeRo
   let arr = closure_5;
   if (closure_5.length >= 10) {
     if (_mod1007.DEBUG_BUILD) {
-      const debug = tmp(682).debug;
+      const debug = _mod682.debug;
       debug.warn("[React Router] Navigation context stack overflow - removing oldest context");
     }
     arr = arr.shift();
-    tmp = require;
   }
   let obj = {};
   obj = { token: obj, targetPath: path, span: activeRootSpan };

@@ -118,10 +118,10 @@ class ZoomInRotate {
       const delay = closure_0.getDelay();
       let str = "0.3";
       if (closure_0.rotateV) {
-        str = tmp.rotateV;
+        str = closure_0.rotateV;
       }
-      const callbackV = tmp.callbackV;
-      const initialValues = tmp.initialValues;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };
@@ -644,10 +644,10 @@ class ZoomOutRotate {
       const delay = closure_0.getDelay();
       let str = "0.3";
       if (closure_0.rotateV) {
-        str = tmp.rotateV;
+        str = closure_0.rotateV;
       }
-      const callbackV = tmp.callbackV;
-      const initialValues = tmp.initialValues;
+      const callbackV = closure_0.callbackV;
+      const initialValues = closure_0.initialValues;
       const fn = function t() {
         let obj = { animations: null, initialValues: null, callback: null };
         obj = { transform: null };

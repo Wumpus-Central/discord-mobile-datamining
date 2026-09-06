@@ -1,4 +1,5 @@
 // _runtime/metro/04860__.js
+import _mod1283 from "01283__.js";
 import _mod1315 from "01315__.js";
 
 let closure_2 = Object.assign({
@@ -26,15 +27,15 @@ export default function isPropertyDescriptor(obj) {
       }
       let tmp4 = _mod1315(obj, "[[Value]]");
       if (!tmp4) {
-        tmp4 = tmp2(1315)(obj, "[[Writable]]");
+        tmp4 = _mod1315(obj, "[[Writable]]");
       }
-      let tmp5 = tmp2(1315)(obj, "[[Get]]");
+      let tmp5 = _mod1315(obj, "[[Get]]");
       if (!tmp5) {
-        tmp5 = tmp2(1315)(obj, "[[Set]]");
+        tmp5 = _mod1315(obj, "[[Set]]");
       }
       if (tmp4) {
         if (tmp5) {
-          const tmp8 = new tmp2(1283)("Property Descriptors may not be both accessor and data descriptors");
+          const tmp8 = new _mod1283("Property Descriptors may not be both accessor and data descriptors");
           throw tmp8;
         }
       }

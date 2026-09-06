@@ -2,9 +2,10 @@
 import _mod12803 from "metro/12803__.js";
 import _mod12804 from "metro/12804__.js";
 import _mod12808 from "metro/12808__.js";
+import _mod12842 from "metro/12842__.js";
 import _slicedToArray from "metro/00032__.js";
 
-export const eventFromMessage = function eventFromMessage(fn, value, arg2, event_id) {
+export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "info";
@@ -57,14 +58,14 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
     let items3 = items;
   } else {
     data.synthetic = true;
-    let tmp2Result = tmp2(12804);
+    let tmp2Result = _mod12804;
     if (tmp2Result.isPlainObject(name)) {
       let normalizeDepth = getOptions;
       if (getOptions) {
         normalizeDepth = getOptions.getOptions().normalizeDepth;
       }
       let obj = { __serialized__: null };
-      tmp2Result = tmp2(12842);
+      tmp2Result = _mod12842;
       obj.__serialized__ = tmp2Result.normalizeToSize(name, normalizeDepth);
       let tmp12;
       const keys = Object.keys();

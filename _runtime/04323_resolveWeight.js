@@ -18,13 +18,14 @@ function loadFontByURI(arg0) {
     return fontFromResource;
   }
   fontFromResource = closure_3.loadFontFromURL(arg0);
+  obj = /^https?:\/\//;
 }
 fn(17).Image;
 const NitroModules = fn(4293).NitroModules;
 let closure_3 = NitroModules.createHybridObject("RiveFontConfig");
 let _slicedToArray = function _loadFont() {
   const self = this;
-  const tmp = asyncGeneratorStep(async (arg0, value) => {
+  const tmp = asyncGeneratorStep(async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -51,10 +52,10 @@ let _slicedToArray = function _loadFont() {
           const _ArrayBuffer = ArrayBuffer;
           if (closure_0 instanceof ArrayBuffer) {
             c1 = 3;
-            let obj1 = { value: closure_1_3.loadFontFromBytes(tmp25), done: true };
+            let obj1 = { value: closure_1_3.loadFontFromBytes(closure_0), done: true };
             return obj1;
-          } else if (typeof tmp25 === "number") {
-            const assetSource = closure_1_2.resolveAssetSource(tmp25);
+          } else if (typeof closure_0 === "number") {
+            const assetSource = closure_1_2.resolveAssetSource(closure_0);
             let uri;
             if (assetSource != null) {
               uri = assetSource.uri;
@@ -68,41 +69,41 @@ let _slicedToArray = function _loadFont() {
               const _HermesInternal = HermesInternal;
               const error = new Error(
                 "Invalid font asset: could not resolve require() ID " +
-                  tmp25 +
+                  closure_0 +
                   ". Ensure 'ttf' is in metro.config.js assetExts.",
               );
               throw error;
             }
           } else {
-            if (typeof tmp25 === "object") {
-              if ("name" in tmp25) {
+            if (typeof closure_0 === "object") {
+              if ("name" in closure_0) {
                 c1 = 3;
-                const obj3 = { value: closure_1_3.loadFontByName(tmp25.name), done: true };
+                const obj3 = { value: closure_1_3.loadFontByName(closure_0.name), done: true };
                 return obj3;
               }
             }
-            if (typeof tmp25 === "object") {
-              if ("uri" in tmp25) {
+            if (typeof closure_0 === "object") {
+              if ("uri" in closure_0) {
                 c1 = 3;
-                const obj4 = { value: loadFontByURI(tmp25.uri), done: true };
+                const obj4 = { value: loadFontByURI(closure_0.uri), done: true };
                 return obj4;
               }
             }
-            if (typeof tmp25 === "string") {
+            if (typeof closure_0 === "string") {
               obj = /^https?:\/\//;
-              if (!obj.test(tmp25)) {
+              if (!obj.test(closure_0)) {
                 obj1 = /^file:\/\//;
-                if (!obj1.test(tmp25)) {
-                  const fontFromResource = closure_1_3.loadFontFromResource(tmp25);
+                if (!obj1.test(closure_0)) {
+                  const fontFromResource = closure_1_3.loadFontFromResource(closure_0);
                 }
                 c1 = 3;
               }
-              const fontFromURL = closure_1_3.loadFontFromURL(tmp25);
+              const fontFromURL = closure_1_3.loadFontFromURL(closure_0);
             } else {
               const _Error2 = Error;
               const _String = String;
               const _HermesInternal2 = HermesInternal;
-              const error1 = new Error("Invalid font source: " + String(tmp25));
+              const error1 = new Error("Invalid font source: " + String(closure_0));
               throw error1;
             }
           }
@@ -124,7 +125,7 @@ let _slicedToArray = function _loadFont() {
 };
 let asyncGeneratorStep = function _setFallbackFonts() {
   const self = this;
-  const tmp = asyncGeneratorStep(async (arg0, value) => {
+  const tmp = asyncGeneratorStep(async (arg0) => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -194,7 +195,7 @@ let asyncGeneratorStep = function _setFallbackFonts() {
   }
   return applyArgumentsResult;
 };
-const Image = async function _clearFallbackFonts(arg0, value) {
+const Image = async function _clearFallbackFonts() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

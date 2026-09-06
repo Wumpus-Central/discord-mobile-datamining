@@ -16,8 +16,8 @@ export const getHybridObjectConstructor = function getHybridObjectConstructor(ar
       const hybridObject = NitroModules.createHybridObject(closure_0);
       const prototypeOf = Object.getPrototypeOf(hybridObject);
       if (constructorFunc.prototype !== prototypeOf) {
-        tmp3.prototype = prototypeOf;
-        tmp3.prototypeInitialized = true;
+        constructorFunc.prototype = prototypeOf;
+        constructorFunc.prototypeInitialized = true;
       }
       return hybridObject;
     }
@@ -29,8 +29,8 @@ export const getHybridObjectConstructor = function getHybridObjectConstructor(ar
         if (!constructorFunc.prototypeInitialized) {
           const NitroModules = _mod4299.NitroModules;
           const _Object = Object;
-          tmp.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(closure_0));
-          tmp.prototypeInitialized = true;
+          constructorFunc.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(closure_0));
+          constructorFunc.prototypeInitialized = true;
         }
         let prototypeOf = Object.getPrototypeOf(arg0);
         if (null != prototypeOf) {

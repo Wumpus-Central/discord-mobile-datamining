@@ -1,9 +1,9 @@
 // _runtime/metro/04334__.js
 import c from "../04316_c.js";
-import RiveColor2 from "../04324_RiveColor.js";
 import _mod4329 from "04329__.js";
 import _slicedToArray from "00032__.js";
 
+const RiveColor2 = tmp(4324);
 require = fn;
 fn(19).useCallback;
 const f30504 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);

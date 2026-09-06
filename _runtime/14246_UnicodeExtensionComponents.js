@@ -15,7 +15,6 @@ export const UnicodeExtensionComponents = function UnicodeExtensionComponents(st
       let index = str.indexOf("-", num);
       let tmp6 = -1 === index ? length - num : index - num;
       let substr = str.slice(num, num + tmp6);
-      let tmp8 = require;
       let invariantResult2 = _mod14241.invariant(tmp6 >= 2, "Expected a subtag to have at least 2 characters");
       if (undefined === iter) {
         if (2 !== tmp6) {
@@ -56,7 +55,7 @@ export const UnicodeExtensionComponents = function UnicodeExtensionComponents(st
           iter.value = substr;
           tmp13 = iter;
         } else {
-          let invariantResult3 = tmp8(14241).invariant(undefined !== iter, "Expected keyword to be defined");
+          let invariantResult3 = _mod14241.invariant(undefined !== iter, "Expected keyword to be defined");
           iter.value = `${iter.value}-${tmp7}`;
           tmp13 = iter;
         }

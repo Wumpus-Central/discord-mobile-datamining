@@ -28,11 +28,11 @@ let obj = { createViewDescriptor: createViewDescriptorPaper, updateProps: _mod17
 applyStyleForTopScreen.__closure = obj;
 applyStyleForTopScreen.__workletHash = 541570832073;
 applyStyleForTopScreen.__initData = { code: "function applyStyleForTopScreen_Pnpm_styleUpdaterTs3(screenTransitionConfig,event){const{createViewDescriptor,updateProps}=this.__closure;const{screenDimensions:screenDimensions,topScreenId:topScreenId,screenTransition:screenTransition}=screenTransitionConfig;const{topScreenStyle:computeTopScreenStyle}=screenTransition;const topScreenStyle=computeTopScreenStyle(event,screenDimensions);const topScreenDescriptor={value:[createViewDescriptor(topScreenId)]};updateProps(topScreenDescriptor,topScreenStyle,undefined);}" };
-function applyStyleForBelowTopScreen(screenTransition, arg1) {
+function applyStyleForBelowTopScreen(screenTransition, value) {
   const obj = { value: null };
   const items = [createViewDescriptorPaper(screenTransition.belowTopScreenId)];
   obj.value = items;
-  const belowTopScreenStyleResult = screenTransition.screenTransition.belowTopScreenStyle(arg1, screenTransition.screenDimensions);
+  const belowTopScreenStyleResult = screenTransition.screenTransition.belowTopScreenStyle(value, screenTransition.screenDimensions);
   _mod1736.updateProps(obj, belowTopScreenStyleResult, undefined);
 }
 obj = { createViewDescriptor: createViewDescriptorPaper, updateProps: _mod1736.updateProps };
@@ -44,16 +44,15 @@ function applyStyle(screenTransition, value) {
     let obj = { value: null };
     const items = [createViewDescriptorPaper(screenTransition.topScreenId)];
     obj.value = items;
-    const tmp4 = createViewDescriptorPaper;
-    const tmp5 = require;
     const topScreenStyleResult = screenTransition.screenTransition.topScreenStyle(value, screenTransition.screenDimensions);
     _mod1736.updateProps(obj, topScreenStyleResult, undefined);
     if (typeof applyStyleForBelowTopScreen === "function") {
       obj = { value: null };
-      const items1 = [tmp4(screenTransition.belowTopScreenId)];
+      const items1 = [createViewDescriptorPaper(screenTransition.belowTopScreenId)];
       obj.value = items1;
       const belowTopScreenStyleResult = screenTransition.screenTransition.belowTopScreenStyle(value, screenTransition.screenDimensions);
-      tmp5(1736).updateProps(obj, belowTopScreenStyleResult, undefined);
+      _mod1736.updateProps(obj, belowTopScreenStyleResult, undefined);
+      const tmp5Result = _mod1736;
     } else {
       throw new TypeError("Trying to call a non-function");
     }

@@ -2,7 +2,7 @@
 import _modAll27 from "metro/00027__.js";
 import _slicedToArray from "metro/00032__.js";
 
-function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, zoomScale) {
+function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox) {
   let num = zoomScale;
   if (zoomScale === undefined) {
     num = 1;

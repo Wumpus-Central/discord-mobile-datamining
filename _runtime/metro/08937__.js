@@ -122,24 +122,62 @@ if (self2) {
     };
     exports.parse = exports._parse(fnResult.$ZodRealError);
     exports._parseAsync = (arg0) => {
-      let _zod = asyncGeneratorStep(async (arg0, value, arg2, arg3) => {
-        if (c8 === 2) {
-          c8 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+      closure_0 = asyncGeneratorStep(async (arg0, value, arg2, arg3) => {
+        let _zod = arg0;
+        closure_2 = arg2;
+        closure_3 = arg3;
+        c7 = 0;
+        c8 = 0;
+        return (async (arg0, value, arg2, arg3) => {
+          if (c8 === 2) {
+            c8 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              let obj = { value, done: true };
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c8 = 2;
-            if (0 === c7) {
-              if (arg0 === 1) {
+            try {
+              c8 = 2;
+              if (0 === c7) {
+                if (arg0 === 1) {
+                  c8 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c8 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                } else {
+                  closure_6 = tmp4;
+                  closure_5 = tmp4;
+                  closure_133_0 = closure_3;
+                  closure_133_1 = undefined;
+                  closure_133_2 = undefined;
+                  closure_133_3 = undefined;
+                  const obj1 = { async: true };
+                  if (closure_2) {
+                    const _Object = Object;
+                    let merged = Object.assign(tmp39, obj1);
+                  } else {
+                    merged = obj1;
+                  }
+                  closure_133_1 = merged;
+                  _zod = _zod._zod;
+                  const obj2 = { value, issues: [] };
+                  closure_133_2 = _zod.run(obj2, merged);
+                  if (closure_133_2 instanceof Promise) {
+                    c7 = 1;
+                    c8 = 1;
+                    const obj3 = { value: closure_133_2, done: false };
+                    return obj3;
+                  }
+                }
+              } else if (arg0 === 1) {
                 c8 = 3;
                 throw value;
               } else if (arg0 === 2) {
@@ -147,68 +185,37 @@ if (self2) {
                 obj = { value, done: true };
                 return obj;
               } else {
-                closure_6 = tmp4;
-                closure_5 = tmp4;
-                closure_133_0 = closure_3;
-                closure_133_1 = undefined;
-                closure_133_2 = undefined;
-                closure_133_3 = undefined;
-                const obj1 = { async: true };
-                if (closure_2) {
-                  const _Object = Object;
-                  let merged = Object.assign(tmp39, obj1);
-                } else {
-                  merged = obj1;
+                closure_133_2 = value;
+              }
+              if (closure_133_2.issues.length) {
+                let Err;
+                if (closure_133_0 != null) {
+                  Err = closure_133_0.Err;
                 }
-                closure_133_1 = merged;
-                _zod = _zod._zod;
-                const obj2 = { value, issues: [] };
-                closure_133_2 = _zod.run(obj2, merged);
-                if (closure_133_2 instanceof Promise) {
-                  c7 = 1;
-                  c8 = 1;
-                  const obj3 = { value: closure_133_2, done: false };
-                  return obj3;
+                closure_4 = Err;
+                if (Err == null) {
+                  closure_4 = _zod;
                 }
+                const issues = closure_133_2.issues;
+                const tmp24 = new closure_4(issues.map((item) => closure_6.finalizeIssue(item, closure_1_1, closure_4.config())));
+                closure_133_3 = tmp24;
+                let callee;
+                if (closure_133_0 != null) {
+                  callee = closure_133_0.callee;
+                }
+                closure_2_6.captureStackTrace(closure_133_3, callee);
+                throw closure_133_3;
+              } else {
+                c8 = 3;
+                const obj4 = { value: closure_133_2.value, done: true };
+                return obj4;
               }
-            } else if (arg0 === 1) {
-              c8 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_133_2 = value;
+            } catch (tmp32) {
+              c8 = tmp;
+              throw tmp32;
             }
-            if (closure_133_2.issues.length) {
-              let Err;
-              if (closure_133_0 != null) {
-                Err = closure_133_0.Err;
-              }
-              closure_4 = Err;
-              if (Err == null) {
-                closure_4 = _zod;
-              }
-              const issues = closure_133_2.issues;
-              const tmp24 = new closure_4(issues.map((item) => closure_6.finalizeIssue(item, closure_1_1, closure_4.config())));
-              closure_133_3 = tmp24;
-              let callee;
-              if (closure_133_0 != null) {
-                callee = closure_133_0.callee;
-              }
-              closure_2_6.captureStackTrace(closure_133_3, callee);
-              throw closure_133_3;
-            } else {
-              c8 = 3;
-              const obj4 = { value: closure_133_2.value, done: true };
-              return obj4;
-            }
-          } catch (tmp32) {
-            c8 = tmp;
-            throw tmp32;
           }
-        }
+        })();
       });
       return function(arg0, arg1, arg2, arg3) {
         const self = this;
@@ -258,24 +265,59 @@ if (self2) {
     };
     exports.safeParse = exports._safeParse(fnResult.$ZodRealError);
     exports._safeParseAsync = (arg0) => {
-      let _zod = asyncGeneratorStep(async (arg0, value, arg2) => {
-        if (c6 === 2) {
-          c6 = 3;
-          throw new TypeError("Generator functions may not be called on executing generators");
-        } else if (tmp3 === 3) {
-          if (arg0 === 1) {
-            throw value;
-          } else if (arg0 === 2) {
-            let obj = { value, done: true };
-            return obj;
+      closure_0 = asyncGeneratorStep(async (arg0, value, arg2) => {
+        let _zod = arg0;
+        closure_2 = arg2;
+        c5 = 0;
+        c6 = 0;
+        return (async (arg0, value, arg2) => {
+          if (c6 === 2) {
+            c6 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              let obj = { value, done: true };
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
+            }
           } else {
-            return { value: "HermesInternal", done: null };
-          }
-        } else {
-          try {
-            c6 = 2;
-            if (0 === c5) {
-              if (arg0 === 1) {
+            try {
+              c6 = 2;
+              if (0 === c5) {
+                if (arg0 === 1) {
+                  c6 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c6 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                } else {
+                  closure_4 = tmp4;
+                  closure_3 = tmp4;
+                  closure_131_0 = undefined;
+                  closure_131_1 = undefined;
+                  const obj1 = { async: true };
+                  if (closure_2) {
+                    const _Object = Object;
+                    let merged = Object.assign(tmp29, obj1);
+                  } else {
+                    merged = obj1;
+                  }
+                  closure_131_0 = merged;
+                  _zod = _zod._zod;
+                  const obj2 = { value, issues: [] };
+                  closure_131_1 = _zod.run(obj2, merged);
+                  if (closure_131_1 instanceof Promise) {
+                    c5 = 1;
+                    c6 = 1;
+                    const obj3 = { value: closure_131_1, done: false };
+                    return obj3;
+                  }
+                }
+              } else if (arg0 === 1) {
                 c6 = 3;
                 throw value;
               } else if (arg0 === 2) {
@@ -283,52 +325,23 @@ if (self2) {
                 obj = { value, done: true };
                 return obj;
               } else {
-                closure_4 = tmp4;
-                closure_3 = tmp4;
-                closure_131_0 = undefined;
-                closure_131_1 = undefined;
-                const obj1 = { async: true };
-                if (closure_2) {
-                  const _Object = Object;
-                  let merged = Object.assign(tmp29, obj1);
-                } else {
-                  merged = obj1;
-                }
-                closure_131_0 = merged;
-                _zod = _zod._zod;
-                const obj2 = { value, issues: [] };
-                closure_131_1 = _zod.run(obj2, merged);
-                if (closure_131_1 instanceof Promise) {
-                  c5 = 1;
-                  c6 = 1;
-                  const obj3 = { value: closure_131_1, done: false };
-                  return obj3;
-                }
+                closure_131_1 = value;
               }
-            } else if (arg0 === 1) {
+              if (closure_131_1.issues.length) {
+                const obj4 = { success: false, error: null };
+                const issues = closure_131_1.issues;
+                const tmp19 = new _zod(issues.map((item) => c6.finalizeIssue(item, _zod, closure_4.config())));
+                obj4.error = tmp19;
+              } else {
+                { success: true, data: null }[1] = closure_131_1.value;
+              }
               c6 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_131_1 = value;
+            } catch (tmp22) {
+              c6 = tmp;
+              throw tmp22;
             }
-            if (closure_131_1.issues.length) {
-              const obj4 = { success: false, error: null };
-              const issues = closure_131_1.issues;
-              const tmp19 = new _zod(issues.map((item) => c6.finalizeIssue(item, closure_1_0, closure_4.config())));
-              obj4.error = tmp19;
-            } else {
-              { success: true, data: null }[1] = closure_131_1.value;
-            }
-            c6 = 3;
-          } catch (tmp22) {
-            c6 = tmp;
-            throw tmp22;
           }
-        }
+        })();
       });
       return function(arg0, arg1, arg2) {
         const self = this;
@@ -422,7 +435,7 @@ if (self2) {
     };
     exports.encodeAsync = exports._encodeAsync(fnResult.$ZodRealError);
     exports._decodeAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep(async (arg0, value, arg2) => {
+      closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -548,7 +561,7 @@ if (self2) {
     };
     exports.safeEncodeAsync = exports._safeEncodeAsync(fnResult.$ZodRealError);
     exports._safeDecodeAsync = (arg0) => {
-      closure_0 = asyncGeneratorStep(async (arg0, value, arg2) => {
+      closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

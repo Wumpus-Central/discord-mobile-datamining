@@ -50,6 +50,7 @@ export default {
     obj.devToolsRequestId = devToolsRequestId;
     NetworkingDefault.sendRequest(arg0, arg2, +closure_3, items, obj, arg5, arg6, arg7, arg9);
     fn(+closure_3);
+    const tmpResult = NetworkingDefault;
   },
   abortRequest(_requestId) {
     NetworkingDefault.abortRequest(_requestId);

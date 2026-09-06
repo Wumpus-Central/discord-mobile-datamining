@@ -90,12 +90,15 @@ const items = [
         const parsingComponents = createParsingComponents.createParsingComponents(date);
         const addTagResult = parsingComponents.addTag("parser/ENMonthNameMiddleEndianParser");
         if (index[4]) {
-          addTagResult.assign("year", tmp(10431).parseYear(index[4]));
+          addTagResult.assign("year", ENMonthNameMiddleEndianParser(10431).parseYear(index[4]));
         } else {
-          addTagResult.imply("year", tmp(10433).findYearClosestToRef(createParsingComponents.refDate, result, tmp3));
+          addTagResult.imply(
+            "year",
+            ENMonthNameMiddleEndianParser(10433).findYearClosestToRef(createParsingComponents.refDate, result, tmp3),
+          );
         }
         if (index[3]) {
-          const result1 = tmp(10431).parseOrdinalNumberPattern(index[3]);
+          const result1 = ENMonthNameMiddleEndianParser(10431).parseOrdinalNumberPattern(index[3]);
           const parsingResult = createParsingComponents.createParsingResult(index.index, index[0]);
           parsingResult.start = addTagResult;
           parsingResult.end = addTagResult.clone();

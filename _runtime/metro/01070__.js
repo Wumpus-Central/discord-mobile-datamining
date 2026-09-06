@@ -192,7 +192,7 @@ class FeedbackWidget {
       const self = this;
       c4 = 0;
       c5 = 0;
-      return (function*(arg0, value) {
+      return (function*(arg0) {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -475,11 +475,11 @@ class FeedbackWidget {
       if (user) {
         return user;
       } else {
-        let tmpResult = tmp(682);
+        let tmpResult = closure_0(682);
         const isolationScope = tmpResult.getIsolationScope();
         let user1 = isolationScope.getUser();
         if (!user1) {
-          tmpResult = tmp(682);
+          tmpResult = closure_0(682);
           const globalScope = tmpResult.getGlobalScope();
           user1 = globalScope.getUser();
         }
@@ -492,6 +492,7 @@ class FeedbackWidget {
         closure_0(1061).feedbackAlertDialog("Development note", "The feedback widget cannot retrieve image data in Expo Go. Please build your app to test this functionality.");
         const tmpResult = closure_0(1061);
       }
+      obj = closure_0(867);
     };
     props = tmp4Result.props;
     useSentryUser = undefined;
@@ -599,11 +600,11 @@ let items = [
         }
       };
       if (this.state.isVisible) {
-        let tmpResult = tmp(tmp2[15]);
+        let tmpResult = tmp(props2[15]);
         const capturedScreenshot = tmpResult.getCapturedScreenshot();
         if ("ErrorCapturingScreenshot" === capturedScreenshot) {
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => fn(self, undefined, undefined, function*(arg0, value) {
+          const timerId = setTimeout(() => fn(self, undefined, undefined, function*() {
             if (v3 === 2) {
               v3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -642,7 +643,7 @@ let items = [
           const result = self._setCapturedScreenshot(capturedScreenshot);
         }
         let obj2 = noop;
-        tmpResult = tmp(tmp2[9]);
+        tmpResult = tmp(props2[9]);
         dismiss = undefined;
         if (tmpResult.notWeb()) {
           dismiss = dismiss.dismiss;
@@ -656,12 +657,12 @@ let items = [
         let showBranding = props.showBranding;
         if (showBranding) {
           const obj3 = { source: null, style: null, testID: "sentry-logo" };
-          const obj4 = { uri: tmp(tmp2[16]).sentryLogo };
+          const obj4 = { uri: tmp(props2[16]).sentryLogo };
           obj3.source = obj4;
           obj3.style = merged.sentryLogo;
           showBranding = <closure_8 source={null} style={null} testID="sentry-logo" />;
         }
-        const element2 = createElement2(tmp12, obj1, element, showBranding);
+        const element2 = createElement2(closure_14, obj1, element, showBranding);
         let showName = props.showName;
         if (showName) {
           const Fragment = obj2.Fragment;
@@ -682,7 +683,7 @@ let items = [
                   return self.setState({ name });
                 }
           };
-          const element4 = createElement4(tmp13, obj5, nameLabel, isNameRequired);
+          const element4 = createElement4(closure_10, obj5, nameLabel, isNameRequired);
           showName = createElement3(Fragment, null, element4, <closure_11 style={merged.input} testID="sentry-feedback-name-input" placeholder={props2.namePlaceholder} value={name} onChangeText={function onChangeText(name) {
             return self.setState({ name });
           }} />);
@@ -708,14 +709,14 @@ let items = [
                   return self.setState({ email });
                 }
           };
-          const element6 = createElement6(tmp13, obj7, emailLabel, isEmailRequired);
+          const element6 = createElement6(closure_10, obj7, emailLabel, isEmailRequired);
           showEmail = createElement5(Fragment2, null, element6, <closure_11 style={merged.input} testID="sentry-feedback-email-input" placeholder={props2.emailPlaceholder} keyboardType="email-address" value={email} onChangeText={function onChangeText(email) {
             return self.setState({ email });
           }} />);
         }
         const obj9 = { style: merged.label };
         const _HermesInternal3 = HermesInternal;
-        const element1 = <tmp13 style={merged.label}>{props2.messageLabel}{" " + props2.isRequiredLabel}</tmp13>;
+        const element1 = <closure_10 style={merged.label}>{props2.messageLabel}{" " + props2.isRequiredLabel}</closure_10>;
         const obj10 = { style: null, testID: "sentry-feedback-message-input", placeholder: null, value: null, onChangeText: null, multiline: true };
         const items = [, ];
         ({ input: arr[0], textArea: arr[1] } = merged);
@@ -728,7 +729,7 @@ let items = [
         const element3 = <closure_11 style={null} testID="sentry-feedback-message-input" placeholder={null} value={null} onChangeText={null} multiline />;
         const tmp48 = props.enableScreenshot || this.props.imagePicker || self._hasScreenshot();
         if (!tmp48) {
-          let element5 = tmp(tmp2[9]).notWeb() && props.enableTakeScreenshot && !self.state.attachmentUri;
+          let element5 = tmp(props2[9]).notWeb() && props.enableTakeScreenshot && !self.state.attachmentUri;
           if (element5) {
             const obj11 = {
               style: merged.takeScreenshotButton,
@@ -740,12 +741,12 @@ let items = [
                         } else {
                           self.setState({ isVisible: false });
                         }
-                        tmp(1062).showScreenshotButton();
+                        FeedbackWidget(1062).showScreenshotButton();
+                        const tmpResult = FeedbackWidget(1062);
                       } else {
                         throw new TypeError("Trying to call a non-function");
                       }
                       const obj = FeedbackWidget(1062);
-                      tmp = FeedbackWidget;
                     }
             };
             const obj12 = { style: merged.takeScreenshotText, testID: "sentry-feedback-take-screenshot-button" };
@@ -757,20 +758,20 @@ let items = [
                 } else {
                   self.setState({ isVisible: false });
                 }
-                tmp(1062).showScreenshotButton();
+                FeedbackWidget(1062).showScreenshotButton();
+                const tmpResult = FeedbackWidget(1062);
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
               const obj = FeedbackWidget(1062);
-              tmp = FeedbackWidget;
-            }}><tmp13 style={merged.takeScreenshotText} testID="sentry-feedback-take-screenshot-button">{props2.captureScreenshotButtonLabel}</tmp13></closure_12>;
+            }}><closure_10 style={merged.takeScreenshotText} testID="sentry-feedback-take-screenshot-button">{props2.captureScreenshotButtonLabel}</closure_10></closure_12>;
           }
           const obj13 = { style: merged.submitButton, onPress: self.handleFeedbackSubmit };
           const obj14 = { style: merged.submitText, testID: "sentry-feedback-submit-button" };
           const obj15 = { style: merged.cancelButton, onPress: onCancel };
           const obj16 = { style: merged.cancelText };
-          const element7 = <closure_12 style={merged.submitButton} onPress={self.handleFeedbackSubmit}><tmp13 style={merged.submitText} testID="sentry-feedback-submit-button">{props2.submitButtonLabel}</tmp13></closure_12>;
-          return <tmp9 {......obj}><tmp12 {......obj}>{element2}{showName}{showEmail}{element1}{element3}{tmp48}{element5}{element7}<closure_12 style={merged.cancelButton} onPress={onCancel}><tmp13 style={merged.cancelText}>{props2.cancelButtonLabel}</tmp13></closure_12></tmp12></tmp9>;
+          const element7 = <closure_12 style={merged.submitButton} onPress={self.handleFeedbackSubmit}><closure_10 style={merged.submitText} testID="sentry-feedback-submit-button">{props2.submitButtonLabel}</closure_10></closure_12>;
+          return <closure_13 {......obj}><closure_14 {......obj}>{element2}{showName}{showEmail}{element1}{element3}{tmp48}{element5}{element7}<closure_12 style={merged.cancelButton} onPress={onCancel}><closure_10 style={merged.cancelText}>{props2.cancelButtonLabel}</closure_10></closure_12></closure_14></closure_13>;
         } else {
           const obj17 = { style: merged.screenshotContainer };
           let attachmentUri = self.state.attachmentUri;
@@ -783,7 +784,7 @@ let items = [
           }
           const obj20 = { style: merged.screenshotButton, onPress: self.onScreenshotButtonPress };
           const obj21 = { style: merged.screenshotText };
-          const element8 = <tmp12 style={merged.screenshotContainer}>{attachmentUri}<closure_12 style={merged.screenshotButton} onPress={self.onScreenshotButtonPress}><tmp13 style={merged.screenshotText}>{self._hasScreenshot() ? props2.removeScreenshotButtonLabel : props2.addScreenshotButtonLabel}</tmp13></closure_12></tmp12>;
+          const element8 = <closure_14 style={merged.screenshotContainer}>{attachmentUri}<closure_12 style={merged.screenshotButton} onPress={self.onScreenshotButtonPress}><closure_10 style={merged.screenshotText}>{self._hasScreenshot() ? props2.removeScreenshotButtonLabel : props2.addScreenshotButtonLabel}</closure_10></closure_12></closure_14>;
         }
       } else {
         return null;

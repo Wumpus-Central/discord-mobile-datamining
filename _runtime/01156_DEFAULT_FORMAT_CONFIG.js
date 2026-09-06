@@ -5,7 +5,7 @@ import dataFormatterCache2 from "01158_dataFormatterCache.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export function makeDataFormatters(items, formatConfig, _forceLookupMatcher) {
+export function makeDataFormatters(items, formatConfig) {
   closure_0 = items;
   closure_1 = formatConfig;
   let flag = _forceLookupMatcher;

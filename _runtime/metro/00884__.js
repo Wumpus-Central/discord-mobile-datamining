@@ -68,7 +68,7 @@ class Promise {
           obj.onFulfilled = tmp11;
           let tmp12 = null;
           if (typeof closure_2 === "function") {
-            tmp12 = tmp9;
+            tmp12 = closure_2;
           }
           obj.onRejected = tmp12;
           obj.promise = obj;
@@ -130,7 +130,7 @@ function handle(_65, _72) {
     } while (3 === _65);
   }
   if (Promise._37) {
-    obj._37(tmp2);
+    Promise._37(tmp2);
   }
   if (0 === tmp2._65) {
     if (0 === tmp2._40) {
@@ -172,7 +172,7 @@ function handle(_65, _72) {
           promise._65 = 2;
           promise._55 = _55;
           if (Promise._87) {
-            obj._87(promise, tmp15);
+            Promise._87(promise, tmp15);
           }
           if (1 === promise._40) {
             handle(promise, promise._72);
@@ -189,7 +189,6 @@ function handle(_65, _72) {
             }
             promise._72 = null;
           }
-          obj = Promise;
         } else {
           resolve(tmp2.promise, tmp11);
         }
@@ -201,7 +200,7 @@ function handle(_65, _72) {
         promise._65 = 2;
         promise._55 = _55;
         if (Promise._87) {
-          obj2._87(promise, _55);
+          Promise._87(promise, _55);
         }
         if (1 === promise._40) {
           handle(promise, promise._72);
@@ -218,11 +217,9 @@ function handle(_65, _72) {
           }
           promise._72 = null;
         }
-        obj2 = Promise;
       }
     });
   }
-  obj = Promise;
 }
 function resolve(_40, _55) {
   let length;
@@ -357,7 +354,7 @@ function doResolve(arg0, _40) {
     _40._65 = 2;
     _40._55 = _55;
     if (Promise._87) {
-      obj._87(_40, tmp4);
+      Promise._87(_40, tmp4);
     }
     if (1 === _40._40) {
       handle(_40, _40._72);
@@ -374,7 +371,6 @@ function doResolve(arg0, _40) {
       }
       _40._72 = null;
     }
-    obj = Promise;
   }
 }
 let c1 = null;

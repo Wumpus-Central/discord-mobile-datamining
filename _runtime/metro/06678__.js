@@ -88,10 +88,14 @@ export const GestureDetector = (gesture) => {
         onGestureHandlerEvent: current2.animatedEventHandler,
         children: gesture.children,
       };
-      let tmp28Result = tmp28(tmp9Result3.AnimatedWrap, gesturesToAttach);
+      let tmp28Result = (
+        <tmp9Result3.AnimatedWrap ref={viewRefHandler} onGestureHandlerEvent={current2.animatedEventHandler}>
+          {gesture.children}
+        </tmp9Result3.AnimatedWrap>
+      );
     } else {
       obj1 = { ref: viewRefHandler, children: gesture.children };
-      tmp28Result = tmp28(tmp9Result3.Wrap, obj1);
+      tmp28Result = <tmp9Result3.Wrap ref={viewRefHandler}>{gesture.children}</tmp9Result3.Wrap>;
     }
     return tmp28Result;
   } else {

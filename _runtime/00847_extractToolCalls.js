@@ -201,8 +201,8 @@ export const setResponseAttributes = function setResponseAttributes(setAttribute
     const _Array = Array;
     if (Array.isArray(messages)) {
       let num;
-      if (c2 != null) {
-        num = c2.length;
+      if (extractToolCalls != null) {
+        num = extractToolCalls.length;
       }
       if (num == null) {
         num = 0;

@@ -8,7 +8,7 @@ const jsx = fn(21).jsx;
 const weakMap = new WeakMap();
 globalThis.REACT_NAVIGATION_DEVTOOLS = weakMap;
 
-export const NavigationContainer = noop.forwardRef(function NavigationContainerInner(direction, ref) {
+export const NavigationContainer = noop.forwardRef(function NavigationContainerInner(direction, arg1) {
   direction = direction.direction;
   if (direction === undefined) {
     let str = "ltr";
@@ -31,7 +31,7 @@ export const NavigationContainer = noop.forwardRef(function NavigationContainerI
     Object.assign({ direction: 0, theme: 0, linking: 0, fallback: 0, documentTitle: 0 }),
   );
   dependencyMap = undefined;
-  ref = undefined;
+  let ref;
   let tmp6 = linking;
   if (tmp6) {
     tmp6 = false !== linking.enabled;
@@ -65,7 +65,7 @@ export const NavigationContainer = noop.forwardRef(function NavigationContainerI
           obj.enabled = enabled;
           let prefixes;
           if (closure_1_0 != null) {
-            prefixes = tmp.prefixes;
+            prefixes = closure_1_0.prefixes;
           }
           if (prefixes == null) {
             prefixes = [];
@@ -73,7 +73,7 @@ export const NavigationContainer = noop.forwardRef(function NavigationContainerI
           obj.prefixes = prefixes;
           let getStateFromPath;
           if (closure_1_0 != null) {
-            getStateFromPath = tmp.getStateFromPath;
+            getStateFromPath = closure_1_0.getStateFromPath;
           }
           if (getStateFromPath == null) {
             getStateFromPath = linking(enabled[5]).getStateFromPath;
@@ -81,7 +81,7 @@ export const NavigationContainer = noop.forwardRef(function NavigationContainerI
           obj.getStateFromPath = getStateFromPath;
           let getPathFromState;
           if (closure_1_0 != null) {
-            getPathFromState = tmp.getPathFromState;
+            getPathFromState = closure_1_0.getPathFromState;
           }
           if (getPathFromState == null) {
             getPathFromState = linking(enabled[5]).getPathFromState;
@@ -89,7 +89,7 @@ export const NavigationContainer = noop.forwardRef(function NavigationContainerI
           obj.getPathFromState = getPathFromState;
           let getActionFromState;
           if (closure_1_0 != null) {
-            getActionFromState = tmp.getActionFromState;
+            getActionFromState = closure_1_0.getActionFromState;
           }
           if (getActionFromState == null) {
             getActionFromState = linking(enabled[5]).getActionFromState;
@@ -104,7 +104,7 @@ export const NavigationContainer = noop.forwardRef(function NavigationContainerI
   });
   const obj6 = linking(1593);
   [tmp20, initialState] = ref(linking(1593).useThenable(obj3.useLinking(ref, obj).getInitialState), 2);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ref.current);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ref.current);
   obj = { value: direction, children: null };
   if (tmp22) {
     obj1 = { value: memo, children: null };
@@ -116,12 +116,12 @@ export const NavigationContainer = noop.forwardRef(function NavigationContainerI
     }
     obj2.initialState = initialState;
     obj2.ref = ref;
-    obj1.children = tmp23(tmp12(1486).BaseNavigationContainer, obj2);
-    obj.children = tmp23(tmp12(1583).LinkingContext.Provider, obj1);
+    obj1.children = jsx(tmp12(1486).BaseNavigationContainer, {});
+    obj.children = jsx(tmp12(1583).LinkingContext.Provider, { value: memo, children: null });
     let tmp24 = obj;
   } else {
     obj3 = { value: DefaultTheme, children: fallback };
-    obj.children = tmp23(tmp12(1486).ThemeProvider, obj3);
+    obj.children = jsx(tmp12(1486).ThemeProvider, { value: DefaultTheme, children: fallback });
     tmp24 = obj;
   }
   return jsx(linking(1594).LocaleDirContext.Provider, tmp24);

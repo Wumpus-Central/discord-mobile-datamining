@@ -3,9 +3,9 @@ import _mod19 from "00019__.js";
 
 const useEffect = _mod19.useEffect;
 
-export const useUpdateGestureConfig = (arg0, enabled) => {
+export const useUpdateGestureConfig = (arg0, options) => {
   closure_0 = arg0;
-  enabled = enabled.enabled;
+  const enabled = options.enabled;
   const items = [enabled, arg0];
   useEffect(() => {
     if (undefined !== enabled) {

@@ -1,4 +1,5 @@
 // _runtime/metro/00445__.js
+import _modDef143 from "00143__.js";
 import _modDef446 from "00446__.js";
 
 importDefault = arg2;
@@ -9,7 +10,7 @@ export default function getScrollParent(arg0) {
   if (null != arg0) {
     while (!_modDef446(tmp)) {
       let parentElement = tmp.parentElement;
-      if (!(parentElement instanceof tmp2(143))) {
+      if (!(parentElement instanceof _modDef143)) {
         if (null != parentElement) {
           let _console = console;
           let errorResult = console.error(
@@ -19,7 +20,7 @@ export default function getScrollParent(arg0) {
         }
       }
       let tmp6 = null;
-      if (parentElement instanceof tmp2(143)) {
+      if (parentElement instanceof _modDef143) {
         tmp6 = parentElement;
       }
       tmp = tmp6;

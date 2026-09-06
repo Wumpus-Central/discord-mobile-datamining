@@ -38,16 +38,16 @@ function setReplace(c0, toJSON, arg2, toJSON) {
   if (undefined !== ownPropertyDescriptor.get) {
     if (ownPropertyDescriptor.configurable) {
       const _Object = Object;
-      const obj = { value: c0 };
+      const obj = { value };
       Object.defineProperty(toJSON, arg2, obj);
       const items = [toJSON, arg2, toJSON, ownPropertyDescriptor];
       closure_2.push(items);
     } else {
-      const items1 = [toJSON, arg2, c0];
+      const items1 = [toJSON, arg2, value];
       closure_3.push(items1);
     }
   } else {
-    toJSON[arg2] = c0;
+    toJSON[arg2] = value;
     const items2 = [toJSON, arg2, toJSON];
     closure_2.push(items2);
   }
@@ -69,16 +69,16 @@ function decirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
         if (undefined !== ownPropertyDescriptor.get) {
           if (ownPropertyDescriptor.configurable) {
             const _Object7 = Object;
-            obj = { value: tmp46 };
+            obj = { value: value2 };
             Object.defineProperty(arg4, arg1, obj);
             const items = [arg4, arg1, obj, ownPropertyDescriptor];
-            closure_2.push(items);
+            arr = closure_2.push(items);
           } else {
-            const items1 = [obj, arg1, tmp46];
-            closure_3.push(items1);
+            const items1 = [obj, arg1, value2];
+            arr = closure_3.push(items1);
           }
         } else {
-          arg4[arg1] = tmp46;
+          arg4[arg1] = value2;
           const items2 = [arg4, arg1, obj];
           closure_2.push(items2);
         }
@@ -90,16 +90,16 @@ function decirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
           if (undefined !== ownPropertyDescriptor1.get) {
             if (ownPropertyDescriptor1.configurable) {
               const _Object5 = Object;
-              obj = { value: tmp36 };
+              obj = { value };
               Object.defineProperty(arg4, arg1, obj);
               const items3 = [arg4, arg1, obj, ownPropertyDescriptor1];
               closure_2.push(items3);
             } else {
-              const items4 = [obj, arg1, tmp36];
+              const items4 = [obj, arg1, value];
               closure_3.push(items4);
             }
           } else {
-            arg4[arg1] = tmp36;
+            arg4[arg1] = value;
             const items5 = [arg4, arg1, obj];
             closure_2.push(items5);
           }
@@ -112,16 +112,16 @@ function decirc(obj, arg1, arg2, arr, arg4, sum, depthLimit) {
           if (undefined !== ownPropertyDescriptor2.get) {
             if (ownPropertyDescriptor2.configurable) {
               const _Object3 = Object;
-              obj = { value: tmp26 };
+              obj = { value };
               Object.defineProperty(arg4, arg1, obj);
               const items6 = [arg4, arg1, obj, ownPropertyDescriptor2];
               closure_2.push(items6);
             } else {
-              const items7 = [obj, arg1, tmp26];
+              const items7 = [obj, arg1, value];
               closure_3.push(items7);
             }
           } else {
-            arg4[arg1] = tmp26;
+            arg4[arg1] = value;
             const items8 = [arg4, arg1, obj];
             closure_2.push(items8);
           }
@@ -267,32 +267,30 @@ function replaceGetterValues(arg0) {
   if (undefined === arg0) {
     fn = (arg0, arg1) => arg1;
   }
-  return function (arg0, arg1) {
-    let arr;
+  return function (D, keys) {
     let tmp2;
-    let tmp = arg1;
+    let tmp = keys;
     if (closure_3.length > 0) {
       let num2 = 0;
-      tmp = arg1;
+      tmp = keys;
       if (0 < closure_3.length) {
         while (true) {
-          arr = closure_3;
           tmp2 = closure_3[num2];
-          if (tmp2[1] === arg0) {
-            if (tmp2[0] === arg1) {
+          if (tmp2[1] === D) {
+            if (tmp2[0] === keys) {
               break;
             }
           }
           num2 = num2 + 1;
-          tmp = arg1;
+          tmp = keys;
         }
         tmp = tmp2[2];
-        arr.splice(num2, 1);
+        closure_3.splice(num2, 1);
       }
     }
     const self = this;
     const call = fn.call;
-    return typeof call === "unknown" ? fn(arg0, tmp) : call(self, arg0, tmp);
+    return typeof call === "unknown" ? fn(D, tmp) : call(self, D, tmp);
   };
 }
 stringify.default = stringify;

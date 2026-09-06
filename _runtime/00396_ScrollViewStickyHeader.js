@@ -78,7 +78,7 @@ export default function ScrollViewStickyHeader(ref) {
     2,
   );
   closure_18 = tmp19[1];
-  first2(true);
+  ref = first2(true);
   first2(null);
   let items1 = [first3];
   first1(() => {
@@ -100,7 +100,7 @@ export default function ScrollViewStickyHeader(ref) {
     }
     if (null != ref2.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp2.current);
+      clearTimeout(ref2.current);
     }
     ref2.current = setTimeout(() => closure_12(value), 15);
   }, []);
@@ -112,7 +112,7 @@ export default function ScrollViewStickyHeader(ref) {
     if (first) {
       if (true === inverted) {
         if (null != scrollViewHeight) {
-          const diff = first1 + first2 - tmp8;
+          const diff = first1 + first2 - scrollViewHeight;
           if (diff > 0) {
             items.push(diff);
             items1.push(0);
@@ -122,7 +122,7 @@ export default function ScrollViewStickyHeader(ref) {
             if (!first4) {
               num5 = 0;
             }
-            const diff1 = num5 - tmp28 - tmp8;
+            const diff1 = num5 - tmp28 - scrollViewHeight;
             if (diff1 > diff) {
               items.push(diff1, diff1 + 1);
               items1.push(diff1 - diff, diff1 - diff);
@@ -139,9 +139,9 @@ export default function ScrollViewStickyHeader(ref) {
         const diff2 = num - first2;
         if (diff2 >= first1) {
           items.push(diff2, diff2 + 1);
-          items1.push(diff2 - tmp24, diff2 - tmp24);
+          items1.push(diff2 - first1, diff2 - first1);
         } else {
-          items.push(tmp24 + 1);
+          items.push(first1 + 1);
           items1.push(1);
         }
       }

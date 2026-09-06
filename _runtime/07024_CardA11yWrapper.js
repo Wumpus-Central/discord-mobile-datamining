@@ -5,12 +5,12 @@ import noop from "metro/00019__.js";
 get_ActivityIndicator = fn(17);
 ({ Platform, StyleSheet: c2, View: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const forwardRefResult = noop.forwardRef((arg0, ref) => {
+const forwardRefResult = noop.forwardRef((arg0, arg1) => {
   ({ focused, animated } = arg0);
   c0 = undefined;
   ({ active, isNextScreenTransparent, detachCurrentScreen, children } = arg0);
   [tmp2, c0] = _slicedToArray(noop.useState(false), 2);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({ setInert }), []);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({ setInert }), []);
   let tmp4 = !animated;
   if (!animated) {
     tmp4 = false === isNextScreenTransparent;

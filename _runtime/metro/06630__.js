@@ -4,6 +4,7 @@ import cancelAnimation2 from "../01636_cancelAnimation.js";
 import GESTURE_SOURCE from "../06628_GESTURE_SOURCE.js";
 import DEFAULT_HANDLE_HEIGHT from "../06631_DEFAULT_HANDLE_HEIGHT.js";
 import normalizeSnapPoint from "../06644_normalizeSnapPoint.js";
+import LegacyBaseButton from "../06655_LegacyBaseButton.js";
 import _slicedToArray from "00032__.js";
 import noop from "00019__.js";
 
@@ -502,8 +503,8 @@ class BottomSheet {
     items5[1] = overrideReduceMotion;
     tmp64 = DEFAULT_ENABLE_OVER_DRAG(() => {
       if (overrideReduceMotion) {
-        if (tmp !== cancelAnimation2.ReduceMotion.System) {
-          let tmp4 = tmp === cancelAnimation2.ReduceMotion.Always;
+        if (overrideReduceMotion !== cancelAnimation2.ReduceMotion.System) {
+          let tmp4 = overrideReduceMotion === cancelAnimation2.ReduceMotion.Always;
         }
         return tmp4;
       }
@@ -596,17 +597,15 @@ class BottomSheet {
     fn3 = function q() {
       if (DEFAULT_ENABLE_CONTENT_PANNING_GESTURE) {
         if (animatedScrollableOverrideState.value !== GESTURE_SOURCE.SCROLLABLE_STATE.UNDETERMINED) {
-          let UNLOCKED = iter.value;
+          let UNLOCKED = animatedScrollableOverrideState.value;
         } else {
           if (derivedValue5.value !== GESTURE_SOURCE.SHEET_STATE.FILL_PARENT) {
-            if (iter2.value !== GESTURE_SOURCE.SHEET_STATE.EXTENDED) {
+            if (derivedValue5.value !== GESTURE_SOURCE.SHEET_STATE.EXTENDED) {
               UNLOCKED = GESTURE_SOURCE.SCROLLABLE_STATE.LOCKED;
             }
           }
           UNLOCKED = GESTURE_SOURCE.SCROLLABLE_STATE.UNLOCKED;
-          iter2 = derivedValue5;
         }
-        iter = animatedScrollableOverrideState;
       } else {
         return GESTURE_SOURCE.SCROLLABLE_STATE.UNLOCKED;
       }
@@ -753,9 +752,8 @@ class BottomSheet {
           tmp3 = -1 !== arg0;
         }
         if (!tmp3) {
-          tmp(iter.value, arg0, sharedValue2.value, arg1, arg2);
+          tmp(reactiveSharedValue3.value, arg0, sharedValue2.value, arg1, arg2);
         }
-        iter = reactiveSharedValue3;
       }
     }, items10);
     closure_73 = tmp71;
@@ -826,18 +824,18 @@ class BottomSheet {
       if (initialPosition !== sharedValue2.value) {
         if (undefined !== initialPosition) {
           if (sharedValue13.value !== GESTURE_SOURCE.ANIMATION_STATE.RUNNING) {
-            if (iter2.value === tmp18(6628).ANIMATION_STATE.RUNNING) {
+            if (sharedValue13.value === GESTURE_SOURCE.ANIMATION_STATE.RUNNING) {
               workletCallback();
             }
-            iter2.value = tmp18(6628).ANIMATION_STATE.RUNNING;
+            sharedValue13.value = GESTURE_SOURCE.ANIMATION_STATE.RUNNING;
             sharedValue14.value = GESTURE;
             sharedValue3.value = initialPosition;
-            let tmp8 = state.value === tmp18(6628).KEYBOARD_STATE.SHOWN;
+            let tmp8 = state.value === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN;
             if (tmp8) {
-              tmp8 = keyboardBehavior !== tmp18(6628).KEYBOARD_BEHAVIOR.extend;
+              tmp8 = keyboardBehavior !== GESTURE_SOURCE.KEYBOARD_BEHAVIOR.extend;
             }
             if (tmp8) {
-              tmp8 = initialPosition < iter.value;
+              tmp8 = initialPosition < sharedValue2.value;
             }
             num2 = 0;
             if (tmp8) {
@@ -846,9 +844,9 @@ class BottomSheet {
             let tmp11 = arg3;
             value = first.value;
             sharedValue4.value = value.indexOf(initialPosition + num2);
-            let tmp18Result = tmp18(1636);
+            let tmp18Result = cancelAnimation2;
             tmp18Result.runOnJS(closure_73)(sharedValue4.value, initialPosition, GESTURE);
-            tmp18Result = tmp18(6644);
+            tmp18Result = normalizeSnapPoint;
             const obj = {
               point: initialPosition,
               configs: null,
@@ -863,7 +861,7 @@ class BottomSheet {
             obj.velocity = num;
             obj.overrideReduceMotion = overrideReduceMotion;
             obj.onComplete = workletCallback1;
-            iter.value = tmp18Result.animate(obj);
+            sharedValue2.value = tmp18Result.animate(obj);
           }
         }
       }
@@ -947,10 +945,10 @@ class BottomSheet {
       value = state.value;
       const value1 = derivedValue1.value;
       if (arg0 === GESTURE_SOURCE.ANIMATION_SOURCE.KEYBOARD) {
-        if (DEFAULT_KEYBOARD_BLUR_BEHAVIOR === tmp(6628).KEYBOARD_BLUR_BEHAVIOR.restore) {
-          if (value === tmp(6628).KEYBOARD_STATE.HIDDEN) {
-            if (sharedValue10.value !== tmp(6655).State.ACTIVE) {
-              if (sharedValue11.value !== tmp(6655).State.ACTIVE) {
+        if (DEFAULT_KEYBOARD_BLUR_BEHAVIOR === GESTURE_SOURCE.KEYBOARD_BLUR_BEHAVIOR.restore) {
+          if (value === GESTURE_SOURCE.KEYBOARD_STATE.HIDDEN) {
+            if (sharedValue10.value !== LegacyBaseButton.State.ACTIVE) {
+              if (sharedValue11.value !== LegacyBaseButton.State.ACTIVE) {
                 sharedValue7.value = false;
                 return value[value];
               }
@@ -959,18 +957,18 @@ class BottomSheet {
         }
       }
       if (keyboardBehavior === GESTURE_SOURCE.KEYBOARD_BEHAVIOR.extend) {
-        if (value === tmp(6628).KEYBOARD_STATE.SHOWN) {
+        if (value === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
           return value1;
         }
       }
       if (keyboardBehavior === GESTURE_SOURCE.KEYBOARD_BEHAVIOR.fillParent) {
-        if (value === tmp(6628).KEYBOARD_STATE.SHOWN) {
+        if (value === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
           sharedValue7.value = true;
           return 0;
         }
       }
       if (keyboardBehavior === GESTURE_SOURCE.KEYBOARD_BEHAVIOR.interactive) {
-        if (value === tmp(6628).KEYBOARD_STATE.SHOWN) {
+        if (value === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
           if ("adjustResize" !== DEFAULT_KEYBOARD_INPUT_MODE) {
             sharedValue7.value = true;
             const _Math = Math;
@@ -1047,16 +1045,15 @@ class BottomSheet {
                   }
                 }
                 if (sharedValue4.value !== reactiveSharedValue3.value) {
-                  workletCallback2(first.value[iter2.value], arg0, undefined, arg1);
+                  workletCallback2(first.value[sharedValue4.value], arg0, undefined, arg1);
                 }
               }
-              if (iter.value !== GESTURE_SOURCE.ANIMATION_STATE.RUNNING) {
+              if (sharedValue13.value !== GESTURE_SOURCE.ANIMATION_STATE.RUNNING) {
                 if (-1 === derivedValue7.value) {
                   workletCallback3(derivedValue2.value);
                 }
               }
               workletCallback2(tmp6, arg0, undefined, arg1);
-              iter = sharedValue13;
             }
           } else if (DEFAULT_ANIMATE_ON_MOUNT) {
             workletCallback2(tmp6, GESTURE_SOURCE.ANIMATION_SOURCE.MOUNT, undefined, arg1);
@@ -1129,8 +1126,8 @@ class BottomSheet {
     });
     closure_80 = stableCallback;
     tmp33Result37 = tmp33(tmp34[4]);
-    handleSnapToPosition = function handleSnapToPosition(arg0, arg1) {
-      const normalizeSnapPointResult = normalizeSnapPoint.normalizeSnapPoint(arg0, derivedValue.value);
+    handleSnapToPosition = function handleSnapToPosition(item, arg1) {
+      const normalizeSnapPointResult = normalizeSnapPoint.normalizeSnapPoint(item, derivedValue.value);
       let tmp4 = derivedValue4;
       if (derivedValue4) {
         tmp4 = normalizeSnapPointResult !== sharedValue3.value;
@@ -1140,9 +1137,14 @@ class BottomSheet {
       }
       if (tmp4) {
         sharedValue7.value = true;
-        const tmpResult = tmp(1636);
-        tmp(1636).runOnUI(workletCallback2)(normalizeSnapPointResult, tmp(6628).ANIMATION_SOURCE.USER, 0, arg1);
-        const runOnUIResult = tmp(1636).runOnUI(workletCallback2);
+        const tmpResult = cancelAnimation2;
+        cancelAnimation2.runOnUI(workletCallback2)(
+          normalizeSnapPointResult,
+          GESTURE_SOURCE.ANIMATION_SOURCE.USER,
+          0,
+          arg1,
+        );
+        const runOnUIResult = cancelAnimation2.runOnUI(workletCallback2);
       }
     };
     obj10 = {
@@ -1193,7 +1195,7 @@ class BottomSheet {
             }
             if (undefined !== bound) {
               sharedValue7.value = false;
-              animationConfigs(tmp2[4]);
+              animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[4]);
               const fn = function u() {
                 if (bound === sharedValue2.value) {
                   if (value === sharedValue4.value) {
@@ -1215,7 +1217,7 @@ class BottomSheet {
                 index,
                 animatedNextPositionIndex: sharedValue4,
                 animatedAnimationState: sharedValue13,
-                ANIMATION_STATE: animationConfigs(tmp2[8]).ANIMATION_STATE,
+                ANIMATION_STATE: animationConfigs(DEFAULT_ANIMATE_ON_MOUNT[8]).ANIMATION_STATE,
                 animatedCurrentIndex: reactiveSharedValue3,
                 animatedNextPosition: sharedValue3,
                 stopAnimation: workletCallback,
@@ -1234,11 +1236,11 @@ class BottomSheet {
     });
     closure_82 = stableCallback1;
     tmp33Result39 = tmp33(tmp34[6]);
-    stableCallback2 = tmp33Result39.useStableCallback(function handleSetToPosition(arg0) {
+    stableCallback2 = tmp33Result39.useStableCallback(function handleSetToPosition(item) {
       if (derivedValue4.get()) {
         if (!sharedValue8.value) {
           sharedValue7.value = true;
-          const normalizeSnapPointResult = normalizeSnapPoint.normalizeSnapPoint(arg0, derivedValue.get());
+          const normalizeSnapPointResult = normalizeSnapPoint.normalizeSnapPoint(item, derivedValue.get());
           cancelAnimation2.runOnUI(workletCallback3)(normalizeSnapPointResult);
         }
       }

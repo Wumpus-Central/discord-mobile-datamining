@@ -155,13 +155,13 @@ function useBuildAction() {
     if (str.startsWith("/")) {
       let config;
       if (options != null) {
-        config = tmp7.config;
+        config = options.config;
       }
       const tmp6Result = getStateFromPath(str, config);
       if (tmp6Result) {
         let config1;
-        if (tmp7 != null) {
-          config1 = tmp7.config;
+        if (options != null) {
+          config1 = options.config;
         }
         let resetResult = getActionFromState(tmp6Result, config1);
         if (resetResult == null) {

@@ -10,7 +10,7 @@ function _getEventFilterUrl(arg0) {
     const frames = arg0.exception.values[0].stacktrace.frames;
     let tmp4 = null;
     if (frames) {
-      tmp4 = (function _getLastValidUrl(frames) {
+      tmp4 = (function _getLastValidUrl() {
         let tmp2;
         items = frames;
         if (frames === undefined) {
@@ -37,10 +37,10 @@ function _getEventFilterUrl(arg0) {
     return tmp4;
   } catch (err) {
     if (_mod12825.DEBUG_BUILD) {
-      const logger = tmp6(12797).logger;
+      const logger = _mod12797.logger;
       const _HermesInternal = HermesInternal;
-      logger.error("Cannot extract url for event " + tmp6(12808).getEventDescription(tmp));
-      const tmp6Result = tmp6(12808);
+      logger.error("Cannot extract url for event " + _mod12808.getEventDescription(tmp));
+      const tmp6Result = _mod12808;
     }
     return null;
   }
@@ -286,6 +286,16 @@ export const inboundFiltersIntegration = setupIntegration.defineIntegration(() =
           }
         }
       }
+      const tmp = obj.allowUrls || [];
+      tmp10 = undefined === obj.ignoreInternal || obj.ignoreInternal;
+      tmp2 = options.allowUrls || [];
+      const tmp3 = obj.denyUrls || [];
+      tmp4 = options.denyUrls || [];
+      const tmp5 = obj.ignoreErrors || [];
+      tmp6 = options.ignoreErrors || [];
+      tmp7 = obj.disableErrorDefaults ? [] : items;
+      const tmp8 = obj.ignoreTransactions || [];
+      tmp9 = options.ignoreTransactions || [];
     },
   };
   return obj;

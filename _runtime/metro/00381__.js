@@ -85,7 +85,7 @@ let items = [
       let tmp;
       const keys = Object.keys(arg0);
       let num = 0;
-      if (0 < keys.length) {
+      if (0 < length) {
         while (true) {
           tmp = keys[num];
           obj = this._style[tmp];
@@ -94,10 +94,9 @@ let items = [
               break;
             }
           }
-          let tmp5 = AnimatedStyle;
           if (obj instanceof AnimatedStyle(382)) {
             arg0[tmp] = obj.__getValueWithStaticObject(arg0[tmp]);
-          } else if (obj instanceof tmp5(367)) {
+          } else if (obj instanceof AnimatedStyle(367)) {
             arg0[tmp] = obj.__getValue();
           }
           num = num + 1;
@@ -105,6 +104,7 @@ let items = [
         const _Array = Array;
         arg0[tmp] = obj.__getValueWithStaticTransforms(Array.isArray(arg0[tmp]) ? arg0[tmp] : []);
       }
+      length = keys.length;
     },
   },
   {
@@ -198,7 +198,7 @@ const entry1 = {
       const _Object = Object;
       const keys = Object.keys(arg0);
       let num = 0;
-      if (0 < keys.length) {
+      if (0 < length) {
         while (true) {
           let tmp = keys[num];
           tmp2 = arg0[tmp];
@@ -261,6 +261,7 @@ const entry1 = {
         tmp29Result._nodes = arr2;
         tmp29Result._style = tmp20;
       }
+      length = keys.length;
       const tmp18 = _slicedToArray(items2, 3);
     }
   },
@@ -269,9 +270,9 @@ let items1 = [entry1];
 hasOwnProperty = Object.prototype.hasOwnProperty;
 let fn = Object.hasOwn;
 if (fn == null) {
-  fn = (arg0, arg1) => {
+  fn = (arg0, View) => {
     const call = hasOwnProperty.call;
-    return typeof call === "unknown" ? hasOwnProperty(arg1) : call(arg0, arg1);
+    return typeof call === "unknown" ? hasOwnProperty(View) : call(arg0, View);
   };
 }
 

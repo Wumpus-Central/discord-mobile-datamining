@@ -148,14 +148,14 @@ const items = [
   },
   {
     key: "internalJsonRead",
-    value: function internalJsonRead(obj, arg1, arg2) {
+    value: function internalJsonRead(obj, arg1, PbLong) {
       const self = this;
       if (null !== obj) {
         if (typeof obj === "object") {
           const _Array = Array;
           if (!Array.isArray(obj)) {
-            obj = arg2;
-            if (null == arg2) {
+            obj = PbLong;
+            if (null == PbLong) {
               obj = self.create();
             }
             const refJsonReader = self.refJsonReader;

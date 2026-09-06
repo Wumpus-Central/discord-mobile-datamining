@@ -13,8 +13,8 @@ export const topLevelTypeToEventType = function topLevelTypeToEventType(str) {
     if (charCodeAtResult >= 65) {
       formatted = str;
       if (charCodeAtResult <= 90) {
-        formatted = str.slice(3).toLowerCase();
         str = str.slice(3);
+        formatted = str.toLowerCase();
       }
     }
   }

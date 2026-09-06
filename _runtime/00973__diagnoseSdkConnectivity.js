@@ -2,7 +2,7 @@
 import _mod682 from "metro/00682__.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-let closure_3 = async function _diagnoseSdkConnectivity(arg0, value) {
+let closure_3 = async function _diagnoseSdkConnectivity() {
   if (c0 === 2) {
     c0 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -39,7 +39,7 @@ let closure_3 = async function _diagnoseSdkConnectivity(arg0, value) {
               c1 = 2;
               c0 = 1;
               const obj1 = {
-                value: tmp13(tmp14[1]).suppressTracing(() =>
+                value: _mod682.suppressTracing(() =>
                   fetch(str, { body: "{}", method: "POST", mode: "cors", credentials: "omit" }),
                 ),
                 done: false,
@@ -53,8 +53,6 @@ let closure_3 = async function _diagnoseSdkConnectivity(arg0, value) {
             c0 = 3;
             return { value: "no-client-active", done: true };
           }
-          tmp13 = require;
-          tmp14 = dependencyMap;
         }
       } else if (1 === tmp6) {
         c2 = 0;

@@ -9,7 +9,7 @@ function fetchFromObject(FileTypes, arr) {
   return tmp2;
 }
 
-export const getFileChunk = function getFileChunk(fileChunk, chunkSize) {
+export const getFileChunk = function getFileChunk(fileChunk) {
   let num = chunkSize;
   if (chunkSize === undefined) {
     num = 32;

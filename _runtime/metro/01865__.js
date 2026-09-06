@@ -72,6 +72,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
       const effectiveHeight = _mod1866.getEffectiveHeight(height.height, sharedValue3.value, offset);
       const obj2 = _mod1866;
       let tmp12 = inverted;
+      obj2.isScrollAtEnd(offset2.value, layout.value.height, size.value.height, inverted);
       const obj3 = _mod1866;
       const visibleMinimumPaddingFraction = obj3.getVisibleMinimumPaddingFraction(
         offset2.value,
@@ -82,10 +83,10 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
       );
       let num3 = 0;
       if (visibleMinimumPaddingFraction >= 1) {
-        let tmp5Result = tmp5(1866);
-        num3 = tmp5Result.getMinimumPaddingAbsorbed(iter2.value, extraContentPadding.value);
+        let tmp5Result = _mod1866;
+        num3 = tmp5Result.getMinimumPaddingAbsorbed(blankSpace.value, extraContentPadding.value);
       }
-      tmp5Result = tmp5(1866);
+      tmp5Result = _mod1866;
       const scrollEffective = tmp5Result.getScrollEffective(effectiveHeight, num3);
       let tmp21 = tmp12;
       if (tmp12) {
@@ -99,24 +100,22 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
           }
           sharedValue5.value = num6;
           sharedValue.value = effectiveHeight;
-          sharedValue2.value = iter.value;
+          sharedValue2.value = offset2.value;
           if (!tmp12) {
-            tmp24.value = -1;
+            sharedValue2.value = -1;
           }
           if (tmp12) {
             tmp12 = 0 === scrollEffective;
           }
           if (tmp12) {
-            tmp24.value = iter.value;
+            sharedValue2.value = offset2.value;
           }
         } else if (tmp12) {
-          iter3.value = iter.value;
-        } else if (-1 !== iter3.value) {
-          iter3.value = iter.value - sharedValue6.value;
+          sharedValue2.value = offset2.value;
+        } else if (-1 !== sharedValue2.value) {
+          sharedValue2.value = offset2.value - sharedValue6.value;
         }
       }
-      const isScrollAtEndResult = obj2.isScrollAtEnd(offset2.value, layout.value.height, size.value.height, inverted);
-      iter2 = blankSpace;
     }
   };
   obj1 = {
@@ -161,7 +160,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
             sharedValue2.value,
             layout.value.height,
             size.value.height,
-            tmp3,
+            inverted,
           );
           if ("never" === keyboardLiftBehavior) {
             if (isScrollAtEndResult) {
@@ -173,21 +172,21 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
             }
           }
           if (obj10.shouldShiftContent(keyboardLiftBehavior, isScrollAtEndResult)) {
-            if ("persistent" === tmp142) {
-              if (effectiveHeight < iter3.value + sharedValue.value - offset2.value) {
+            if ("persistent" === keyboardLiftBehavior) {
+              if (effectiveHeight < sharedValue2.value + sharedValue.value - offset2.value) {
                 if (isScrollAtEndResult) {
-                  tmp93.value = effectiveHeight;
+                  sharedValue.value = effectiveHeight;
                   const obj14 = cancelAnimation;
                   obj14.scrollTo(closure_0, 0, 0, false);
                 } else if (sharedValue4.value) {
-                  tmp93.value = effectiveHeight;
+                  sharedValue.value = effectiveHeight;
                   if (typeof fn === "function") {
                     let tmp103 = effectiveHeight;
                     if (undefined !== bound) {
                       tmp103 = bound;
                     }
                     const _Math7 = Math;
-                    const bound1 = Math.max(iter5.value.height - iter4.value.height + tmp103, 0);
+                    const bound1 = Math.max(size.value.height - layout.value.height + tmp103, 0);
                     if (iter2.value > bound1) {
                       const obj13 = cancelAnimation;
                       obj13.scrollTo(closure_0, 0, bound1, false);
@@ -198,7 +197,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                 }
               }
             }
-            const diff = iter3.value + sharedValue.value - scrollEffective;
+            const diff = sharedValue2.value + sharedValue.value - scrollEffective;
             const obj12 = cancelAnimation;
             obj12.scrollTo(closure_0, 0, diff, false);
           } else {
@@ -214,7 +213,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
                   tmp84 = bound;
                 }
                 const _Math6 = Math;
-                const bound2 = Math.max(iter5.value.height - iter4.value.height + tmp84, 0);
+                const bound2 = Math.max(size.value.height - layout.value.height + tmp84, 0);
                 if (offset2.value > bound2) {
                   const obj11 = cancelAnimation;
                   obj11.scrollTo(closure_0, 0, bound2, false);
@@ -272,10 +271,10 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
               }
             }
           } else {
-            if ("persistent" === tmp20) {
+            if ("persistent" === keyboardLiftBehavior) {
               if (sharedValue4.value) {
                 const _Math2 = Math;
-                const sum = iter.value + sharedValue.value;
+                const sum = sharedValue2.value + sharedValue.value;
                 const bound6 = Math.max(size.value.height - layout.value.height + bound3, 0);
                 const obj7 = cancelAnimation;
                 const _Math3 = Math;
@@ -284,7 +283,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
             }
             const obj5 = _mod1866;
             const clampedScrollTargetResult = obj5.clampedScrollTarget(
-              iter.value,
+              sharedValue2.value,
               scrollEffective1,
               size.value.height,
               layout.value.height,
@@ -293,7 +292,7 @@ export const useChatKeyboard = function useChatKeyboard(animatedRef, inverted) {
             const obj6 = cancelAnimation;
             obj6.scrollTo(closure_0, 0, clampedScrollTargetResult, false);
             if (!sharedValue4.value) {
-              sharedValue6.value = clampedScrollTargetResult - iter.value;
+              sharedValue6.value = clampedScrollTargetResult - sharedValue2.value;
             }
           }
         }

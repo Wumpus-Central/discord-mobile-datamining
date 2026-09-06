@@ -1,5 +1,6 @@
 // _runtime/metro/12893__.js
 import errorCallback from "../12793_errorCallback.js";
+import _mod12797 from "12797__.js";
 import _mod12798 from "12798__.js";
 import spanTimeInputToSeconds from "../12802_spanTimeInputToSeconds.js";
 import _mod12811 from "12811__.js";
@@ -8,7 +9,7 @@ import _mod12825 from "12825__.js";
 import COUNTER_METRIC_TYPE from "../12894_COUNTER_METRIC_TYPE.js";
 import __SENTRY_DEBUG__ from "12796__.js";
 
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
+function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
   let obj = arg4;
   if (arg4 === undefined) {
     obj = {};
@@ -21,12 +22,12 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
     const activeSpan = spanTimeInputToSeconds.getActiveSpan();
     let rootSpan;
     if (activeSpan) {
-      let tmp3Result = tmp3(12802);
+      let tmp3Result = spanTimeInputToSeconds;
       rootSpan = tmp3Result.getRootSpan(activeSpan);
     }
     let description = rootSpan;
     if (rootSpan) {
-      tmp3Result = tmp3(12802);
+      tmp3Result = spanTimeInputToSeconds;
       description = tmp3Result.spanToJSON(rootSpan).description;
     }
     ({ unit, tags, timestamp } = obj);
@@ -43,9 +44,9 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
       obj.transaction = description;
     }
     if (_mod12825.DEBUG_BUILD) {
-      const logger = tmp3(12797).logger;
+      const logger = _mod12797.logger;
       const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + arg3 + " to " + SET_METRIC_TYPE + " metric " + arg2);
+      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
     }
     const globalSingleton = _mod12798.getGlobalSingleton("globalMetricsAggregators", () => {
       const weakMap = new WeakMap();
@@ -63,14 +64,14 @@ function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, arg3, arg4) {
     obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, arg3, unit, obj, timestamp);
+    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj, timestamp);
     const tmp3Result1 = _mod12798;
   }
 }
 errorCallback;
 
 export const metrics = {
-  increment(arg0, arg1, match) {
+  increment(arg0, arg1) {
     let num = match;
     if (match === undefined) {
       num = 1;
@@ -90,8 +91,8 @@ export const metrics = {
     }
     addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
   },
-  set(arg0, arg1, arg2, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, arg2, arg3);
+  set(arg0, arg1, parsed, arg3) {
+    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
   },
   gauge(arg0, arg1, match, arg3) {
     let parsed = match;

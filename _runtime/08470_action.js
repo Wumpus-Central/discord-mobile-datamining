@@ -10,7 +10,7 @@ const action = { type: 0, payload: fn(17).processColor("black") };
 export default function extractFill(arg0, arg1, arr) {
   ({ fill, fillRule, fillOpacity } = arg1);
   if (null != fill) {
-    arr.push("fill");
+    arr = arr.push("fill");
     if (!fill) {
       if (typeof fill !== "number") {
         let tmp5 = action;
@@ -21,7 +21,7 @@ export default function extractFill(arg0, arg1, arr) {
   } else {
     arg0.fill = action;
     if (null != fillOpacity) {
-      arr.push("fillOpacity");
+      arr = arr.push("fillOpacity");
       arg0.fillOpacity = extractOpacityDefault(fillOpacity);
     }
     if (null != fillRule) {

@@ -49,7 +49,6 @@ export default function debounce(fn, arg1, leading) {
   c8 = 0;
   leading = false;
   closure_10 = false;
-  let flag = true;
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
@@ -66,10 +65,6 @@ export default function debounce(fn, arg1, leading) {
         let tmp6 = tmp12(552)(leading.maxWait) || 0;
       }
       closure_4 = tmp5Result;
-      flag = true;
-      if ("trailing" in leading) {
-        flag = leading.trailing;
-      }
     }
     function debounced() {
       const tmp = _mod556();

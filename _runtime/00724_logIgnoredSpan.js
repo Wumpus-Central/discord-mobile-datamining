@@ -69,10 +69,9 @@ export const shouldIgnoreSpan = function shouldIgnoreSpan(timestamp, ignoreSpans
           }
           continue;
         }
-        let tmp31 = require;
         let obj3 = _mod697;
         if (obj3.isMatchingPattern(timestamp.description, tmp8)) {
-          if (tmp31(688).DEBUG_BUILD) {
+          if (_mod688.DEBUG_BUILD) {
             let tmp35 = logIgnoredSpan(timestamp);
           }
           iter.return();

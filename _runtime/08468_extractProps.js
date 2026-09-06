@@ -1,4 +1,5 @@
 // _runtime/08468_extractProps.js
+import extractOpacityDefault from "08459_extractOpacity.js";
 import extractResponderDefault from "08460_extractResponder.js";
 import appendTransformPropsDefault from "08461_appendTransformProps.js";
 import pickNotNil from "08469_pickNotNil.js";
@@ -8,7 +9,7 @@ import extractStrokeDefault from "08473_extractStroke.js";
 require = arg1;
 importDefault = arg2;
 const dependencyMap = arg6;
-function extractProps(markerMid, arg1) {
+function extractProps(markerMid, self) {
   ({ id, opacity, onLayout, clipPath, clipRule, display, mask, filter, marker, markerStart } = markerMid);
   if (undefined === markerStart) {
     markerStart = marker;
@@ -24,7 +25,7 @@ function extractProps(markerMid, arg1) {
   ({ testID, accessibilityLabel, accessible } = markerMid);
   const obj = {};
   const items = [];
-  extractResponderDefault(obj, markerMid, arg1);
+  extractResponderDefault(obj, markerMid, self);
   actionDefault(obj, markerMid, items);
   extractStrokeDefault(obj, markerMid, items);
   if (markerMid.color) {
@@ -38,7 +39,7 @@ function extractProps(markerMid, arg1) {
     obj.matrix = tmp6;
   }
   if (null != opacity) {
-    obj.opacity = tmp(8459)(opacity);
+    obj.opacity = extractOpacityDefault(opacity);
   }
   if (null != display) {
     let str4;
@@ -158,7 +159,7 @@ export const propsAndStyles = function propsAndStyles(props) {
   }
   return tmp;
 };
-export const extract = function extract(arg0, style) {
+export const extract = function extract(self, style) {
   style = style.style;
   let tmp2 = style;
   if (style) {
@@ -176,7 +177,7 @@ export const extract = function extract(arg0, style) {
     const merged1 = Object.assign(style);
     tmp2 = obj;
   }
-  return extractProps(tmp2, arg0);
+  return extractProps(tmp2, self);
 };
 export const withoutXY = function withoutXY(self, props) {
   const style = props.style;

@@ -66,7 +66,6 @@ if (self2) {
       ),
     ];
     for (const item10023 of items1) {
-      let str = item10023;
       let _Object = Object;
       hasOwnProperty = Object.prototype.hasOwnProperty;
       let call = hasOwnProperty.call;
@@ -77,7 +76,7 @@ if (self2) {
         hasOwnPropertyResult = call(FileTypes, item10023);
       }
       if (hasOwnPropertyResult) {
-        arr = items.push(str);
+        arr = items.push(item10023);
         continue;
       } else {
         let _TypeError = TypeError;
@@ -88,7 +87,7 @@ if (self2) {
         let tmp9 = new.target;
         let typeError = new TypeError(
           "Type `" +
-            str.toLowerCase() +
+            item10023.toLowerCase() +
             "` is not supported. Please make sure that `types` list conatins only supported files",
         );
         throw typeError;
@@ -144,14 +143,13 @@ if (self2) {
     let items2 = [];
     const items3 = [];
     for (const item10079 of combined) {
-      let tmp19 = item10079;
       let tmp21 = require;
       let FileTypes2 = _mod5186.FileTypes;
       items2 = items2.concat(FileTypes2.getSignaturesByName(item10079));
       let FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = _mod5186.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK;
       if (FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(item10079.toLowerCase())) {
         let FileTypes3 = tmp21(5186).FileTypes;
-        arr = items3.push(FileTypes3.getInfoByName(tmp19));
+        arr = items3.push(FileTypes3.getInfoByName(item10079));
       }
       continue;
     }

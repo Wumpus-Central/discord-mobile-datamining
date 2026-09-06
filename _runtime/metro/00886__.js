@@ -73,7 +73,7 @@ noop.all = (arg0) => {
       if (_65) {
         if (typeof _65 === "object") {
           if (_65 instanceof closure_0(dependencyMap[0])) {
-            if (_65.then === tmp(tmp2[0]).prototype.then) {
+            if (_65.then === tmp(dependencyMap[0]).prototype.then) {
               let tmp13 = _65;
               let promise2 = _65;
               if (3 === _65._65) {
@@ -99,7 +99,7 @@ noop.all = (arg0) => {
           }
           const then = _65.then;
           if (typeof then === "function") {
-            let tmpResult = tmp(tmp2[0]);
+            let tmpResult = tmp(dependencyMap[0]);
             tmpResult = new tmpResult(then.bind(_65));
             tmpResult.then((result) => {
               res(closure_0, result);
@@ -108,10 +108,11 @@ noop.all = (arg0) => {
         }
       }
       closure_0[arg0] = _65;
-      diff = diff - 1;
+      const diff = length - 1;
       if (0 == diff) {
         closure_0(tmp3);
       }
+      length = diff;
     }
     if (0 === closure_0.length) {
       return fn([]);

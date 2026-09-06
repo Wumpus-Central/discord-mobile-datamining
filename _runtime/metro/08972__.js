@@ -214,7 +214,7 @@ if (self2) {
                 if (str45 == null) {
                   str45 = "reik\u0161m\u0117";
                 }
-                if (typeof tmp65 === "function") {
+                if (typeof capitalizeFirstCharacter === "function") {
                   const formatted = str45.charAt(0).toUpperCase();
                   const sum = formatted + str45.slice(1);
                   const verb2 = tmp54.verb;
@@ -228,7 +228,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp65 = capitalizeFirstCharacter;
               } else {
                 let str49 = "ma\u017Eesnis kaip";
                 if (code.inclusive) {
@@ -241,7 +240,7 @@ if (self2) {
                 if (str50 == null) {
                   str50 = "reik\u0161m\u0117";
                 }
-                if (typeof tmp56 === "function") {
+                if (typeof capitalizeFirstCharacter === "function") {
                   const formatted1 = str50.charAt(0).toUpperCase();
                   const sum1 = formatted1 + str50.slice(1);
                   const str1 = code.maximum.toString();
@@ -254,7 +253,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp56 = capitalizeFirstCharacter;
               }
               break;
             case "too_small":
@@ -308,7 +306,7 @@ if (self2) {
                 if (str24 == null) {
                   str24 = "reik\u0161m\u0117";
                 }
-                if (typeof tmp38 === "function") {
+                if (typeof capitalizeFirstCharacter === "function") {
                   const formatted2 = str24.charAt(0).toUpperCase();
                   const sum2 = formatted2 + str24.slice(1);
                   verb = tmp27.verb;
@@ -322,7 +320,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp38 = capitalizeFirstCharacter;
               } else {
                 let str28 = "didesnis kaip";
                 if (code.inclusive) {
@@ -335,7 +332,7 @@ if (self2) {
                 if (str29 == null) {
                   str29 = "reik\u0161m\u0117";
                 }
-                if (typeof tmp29 === "function") {
+                if (typeof capitalizeFirstCharacter === "function") {
                   const formatted3 = str29.charAt(0).toUpperCase();
                   const sum3 = formatted3 + str29.slice(1);
                   let str3 = code.minimum.toString();
@@ -348,7 +345,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp29 = capitalizeFirstCharacter;
               }
               break;
             case "invalid_format":
@@ -402,7 +398,7 @@ if (self2) {
               if (str == null) {
                 str = "reik\u0161m\u0117";
               }
-              if (typeof tmp3 === "function") {
+              if (typeof capitalizeFirstCharacter === "function") {
                 str2 = str.charAt(0);
                 const formatted4 = str2.toUpperCase();
                 const _HermesInternal = HermesInternal;
@@ -411,7 +407,6 @@ if (self2) {
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp3 = capitalizeFirstCharacter;
               break;
             default:
               return "Klaidinga \u012Fvestis";

@@ -5,7 +5,7 @@ const NitroModules = fn(4293).NitroModules;
 let closure_1 = NitroModules.createHybridObject("RiveRuntime");
 let asyncGeneratorStep = function _initialize() {
   const self = this;
-  const tmp = asyncGeneratorStep(async (arg0, value) => {
+  const tmp = asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

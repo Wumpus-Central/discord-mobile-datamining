@@ -34,10 +34,10 @@ export const useScrollable = () => {
         id = null;
       }
       if (id !== id.id) {
-        if (tmp.current) {
-          closure_1.current = tmp.current;
+        if (ref.current) {
+          closure_1.current = ref.current;
         }
-        tmp.current = id;
+        ref.current = id;
       }
     }, []),
     removeScrollableRef: closure_2((current) => {

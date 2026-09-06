@@ -1,14 +1,14 @@
 // _runtime/metro/00059__.js
-function isBackgroundRepeatKeyword(arg0) {
-  let tmp = "repeat" === arg0;
+function isBackgroundRepeatKeyword(formatted1) {
+  let tmp = "repeat" === formatted1;
   if (!tmp) {
-    tmp = "space" === arg0;
+    tmp = "space" === formatted1;
   }
   if (!tmp) {
-    tmp = "round" === arg0;
+    tmp = "round" === formatted1;
   }
   if (!tmp) {
-    tmp = "no-repeat" === arg0;
+    tmp = "no-repeat" === formatted1;
   }
   return tmp;
 }
@@ -75,9 +75,8 @@ export default function processBackgroundRepeat(str) {
                     let formatted1 = str3.toLowerCase();
                     let tmp5 = formatted1;
                     let formatted2 = str4.toLowerCase();
-                    let tmp8 = isBackgroundRepeatKeyword;
                     if (isBackgroundRepeatKeyword(formatted1)) {
-                      if (tmp8(formatted2)) {
+                      if (isBackgroundRepeatKeyword(formatted2)) {
                         let point = { x: null, y: null };
                         point.x = tmp5;
                         point.y = formatted2;

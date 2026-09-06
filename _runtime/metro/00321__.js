@@ -81,7 +81,7 @@ class CellRenderer {
       const props = closure_0.props;
       const onCellLayout = props.onCellLayout;
       if (onCellLayout != null) {
-        onCellLayout(arg0, tmp.props.cellKey, tmp.props.index);
+        onCellLayout(arg0, closure_0.props.cellKey, closure_0.props.index);
       }
     };
     tmp3Result._onCellFocusCapture = (arg0) => {
@@ -97,8 +97,8 @@ class CellRenderer {
 _inherits(CellRenderer, noop.PureComponent);
 const entry = {
   key: "updateSeparatorProps",
-  value: function updateSeparatorProps(arg0) {
-    closure_0 = arg0;
+  value: function updateSeparatorProps(_cellRefs) {
+    closure_0 = _cellRefs;
     this.setState((separatorProps) => {
       let obj = { separatorProps: null };
       obj = {};
@@ -190,7 +190,7 @@ let items = [
           const merged1 = Object.assign(onCellLayout);
           const items3 = [_renderElementResult, tmp2];
           obj.children = items3;
-          let tmp10Result = tmp10(CellRendererComponent, obj);
+          let tmp10Result = React7(CellRendererComponent, obj);
         } else {
           const obj1 = { style: tmp7, onFocusCapture: self._onCellFocusCapture };
           let tmp12 = onCellLayout;
@@ -201,7 +201,7 @@ let items = [
           const merged2 = Object.assign(tmp12);
           const items4 = [_renderElementResult, tmp2];
           obj1.children = items4;
-          tmp10Result = tmp10(React5, obj1);
+          tmp10Result = React7(React5, obj1);
         }
         const obj3 = { cellKey: self.props.cellKey, children: tmp10Result };
         return React6(CellRenderer(322).VirtualizedListCellContextProvider, obj3);

@@ -5,7 +5,7 @@ import registerSpanErrorInstrumentation from "metro/00682__.js";
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let c2 = 1024;
 
-export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineIntegration((data) => {
+export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
   if (data === undefined) {
     data = {};
   }
@@ -51,12 +51,12 @@ export const breadcrumbsIntegration = registerSpanErrorInstrumentation.defineInt
           if (obj.getClient() === closure_0) {
             let serializeAttribute;
             if (typeof dom === "object") {
-              serializeAttribute = tmp15.serializeAttribute;
+              serializeAttribute = dom.serializeAttribute;
             }
             let maxStringLength;
             if (typeof dom === "object") {
-              if (typeof tmp15.maxStringLength === "number") {
-                maxStringLength = tmp15.maxStringLength;
+              if (typeof dom.maxStringLength === "number") {
+                maxStringLength = dom.maxStringLength;
               }
             }
             let tmp4 = maxStringLength;

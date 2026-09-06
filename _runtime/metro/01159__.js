@@ -64,12 +64,12 @@ function bindFormatValuesWithBuilder(builder) {
           } else {
             if (!(tmp2[1] in values)) {
               if (!formatConfig(tmp100)) {
-                const tmp10 = new currentPluralValue(tmp100, closure_1, first);
+                const tmp10 = new currentPluralValue(tmp100, other, first);
                 throw tmp10;
               }
             }
             builder = tmp12;
-            if (tmp98(tmp99[6]).FormatJsNodeType.Argument === first) {
+            if (tmp98(originalMessage[6]).FormatJsNodeType.Argument === first) {
               if (typeof tmp12 !== "object") {
                 if (typeof tmp12 !== "function") {
                   const _String = String;
@@ -77,26 +77,26 @@ function bindFormatValuesWithBuilder(builder) {
                 }
               }
               builder.pushObject(tmp12);
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Date === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Date === first) {
               if (tmp2[2] in formatConfig.date) {
                 let result = formatConfig.date[tmp83];
               } else if (null != tmp83) {
-                result = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp83);
+                result = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp83);
               }
               builder.pushLiteralText(dataFormatters.formatDate(tmp12, result));
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Time === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Time === first) {
               if (tmp2[2] in formatConfig.time) {
                 let result1 = formatConfig.time[tmp76];
               } else if (null != tmp76) {
-                result1 = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp76);
+                result1 = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp76);
               }
               builder.pushLiteralText(dataFormatters.formatTime(tmp12, result1));
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Number === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Number === first) {
               if (tmp2[2] in formatConfig.number) {
                 let parseNumberSkeletonResult = formatConfig.number[tmp67];
               } else if (null != tmp67) {
-                parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(
-                  tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67),
+                parseNumberSkeletonResult = tmp98(originalMessage[7]).parseNumberSkeleton(
+                  tmp98(originalMessage[7]).parseNumberSkeletonFromString(tmp67),
                 );
               }
               let result2 = tmp12;
@@ -115,34 +115,34 @@ function bindFormatValuesWithBuilder(builder) {
                 result2 = tmp12 * num5;
               }
               builder.pushLiteralText(dataFormatters.formatNumber(result2, parseNumberSkeletonResult));
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Tag === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Tag === first) {
               let obj = {
                 Builder: builder.constructor,
                 nodes: tmp2[2],
                 locales,
                 dataFormatters,
                 formatConfig,
-                values: tmp101,
+                values,
                 currentPluralValue,
                 keyPrefix: null,
               };
               const _HermesInternal5 = HermesInternal;
-              obj.keyPrefix = "" + keyPrefix + "." + tmp;
+              obj.keyPrefix = "" + keyPrefix + "." + v0;
               const tmp49 = v0(obj);
               if (null != tmp2[3]) {
                 obj = {
                   Builder: obj6.constructor,
                   nodes: tmp40,
                   locales: tmp43,
-                  dataFormatters: tmp44,
-                  formatConfig: tmp45,
-                  values: tmp101,
-                  currentPluralValue: tmp46,
+                  dataFormatters,
+                  formatConfig,
+                  values,
+                  currentPluralValue,
                   keyPrefix: null,
                 };
                 const _HermesInternal6 = HermesInternal;
-                obj.keyPrefix = "" + tmp47 + "." + tmp + "-control";
-                let items = tmp41(obj);
+                obj.keyPrefix = "" + keyPrefix + "." + v0 + "-control";
+                let items = v0(obj);
               } else {
                 items = [];
               }
@@ -160,7 +160,7 @@ function bindFormatValuesWithBuilder(builder) {
                 );
               } else {
                 const _HermesInternal8 = HermesInternal;
-                const tmp12Result = tmp12(tmp49, "" + tmp47 + "." + tmp);
+                const tmp12Result = tmp12(tmp49, "" + keyPrefix + "." + v0);
                 const _Array = Array;
                 let tmp55 = tmp12Result;
                 if (!Array.isArray(tmp12Result)) {
@@ -168,21 +168,16 @@ function bindFormatValuesWithBuilder(builder) {
                   tmp55 = items;
                 }
                 for (const item10128 of tmp55) {
-                  let tmp58 = item10128;
                   if (typeof item10128 === "string") {
-                    let pushLiteralTextResult6 = builder.pushLiteralText(tmp58);
+                    let pushLiteralTextResult6 = builder.pushLiteralText(item10128);
                   } else {
-                    let pushObjectResult1 = builder.pushObject(tmp58);
+                    let pushObjectResult1 = builder.pushObject(item10128);
                   }
                   continue;
                 }
               }
-              tmp41 = v0;
               tmp43 = locales;
-              tmp44 = dataFormatters;
-              tmp45 = formatConfig;
-              tmp46 = currentPluralValue;
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Select === first) {
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Select === first) {
               const tmp26 = tmp12 in tmp2[2] ? tmp2[2][tmp12] : tmp2[2].other;
               if (null == tmp26) {
                 const _Object2 = Object;
@@ -197,27 +192,19 @@ function bindFormatValuesWithBuilder(builder) {
                   keys.join(", ")
                 );
               } else {
-                const obj1 = {
-                  builder,
-                  nodes: tmp26,
-                  locales,
-                  dataFormatters,
-                  formatConfig,
-                  values: tmp101,
-                  keyPrefix: null,
-                };
+                const obj1 = { builder, nodes: tmp26, locales, dataFormatters, formatConfig, values, keyPrefix: null };
                 const _HermesInternal3 = HermesInternal;
-                obj1.keyPrefix = "" + keyPrefix + "." + tmp;
+                obj1.keyPrefix = "" + keyPrefix + "." + v0;
                 keyPrefix(obj1);
               }
-            } else if (tmp98(tmp99[6]).FormatJsNodeType.Plural === first) {
-              closure_1 = tmp102;
+            } else if (tmp98(originalMessage[6]).FormatJsNodeType.Plural === first) {
+              other = tmp102;
               nodes = tmp103;
               locales = tmp2[4];
               const tmp104 = (() => {
                 const combined = "=" + closure_0;
-                if (combined in closure_1) {
-                  return tmp3[combined];
+                if (combined in other) {
+                  return other[combined];
                 } else {
                   const obj = { type };
                   const pluralRules = dataFormatters.getPluralRules(obj);
@@ -225,13 +212,12 @@ function bindFormatValuesWithBuilder(builder) {
                   if (null != closure_2) {
                     num = closure_2;
                   }
-                  let other = tmp3[pluralRules.select(pluralRules, tmp - num)];
+                  other = other[pluralRules.select(pluralRules, closure_0 - num)];
                   if (null === other) {
-                    other = tmp3.other;
+                    other = other.other;
                   }
                   return other;
                 }
-                tmp = closure_0;
               })();
               if (null == tmp104) {
                 const _Object = Object;
@@ -252,7 +238,7 @@ function bindFormatValuesWithBuilder(builder) {
                   locales,
                   dataFormatters,
                   formatConfig,
-                  values: tmp101,
+                  values,
                   currentPluralValue: null,
                   keyPrefix: null,
                 };
@@ -262,7 +248,7 @@ function bindFormatValuesWithBuilder(builder) {
                 }
                 obj.currentPluralValue = tmp12 - num2;
                 const _HermesInternal = HermesInternal;
-                obj.keyPrefix = "" + keyPrefix + "." + tmp;
+                obj.keyPrefix = "" + keyPrefix + "." + v0;
                 keyPrefix(obj);
               }
             }
@@ -310,12 +296,12 @@ function bindFormatValues(Builder) {
             } else {
               if (!(tmp2[1] in values)) {
                 if (!formatConfig(tmp100)) {
-                  const tmp10 = new currentPluralValue(tmp100, closure_1, first);
+                  const tmp10 = new currentPluralValue(tmp100, other, first);
                   throw tmp10;
                 }
               }
               builder = tmp12;
-              if (tmp98(tmp99[6]).FormatJsNodeType.Argument === first) {
+              if (tmp98(originalMessage[6]).FormatJsNodeType.Argument === first) {
                 if (typeof tmp12 !== "object") {
                   if (typeof tmp12 !== "function") {
                     const _String = String;
@@ -323,26 +309,26 @@ function bindFormatValues(Builder) {
                   }
                 }
                 builder.pushObject(tmp12);
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Date === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Date === first) {
                 if (tmp2[2] in formatConfig.date) {
                   let result = formatConfig.date[tmp83];
                 } else if (null != tmp83) {
-                  result = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp83);
+                  result = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp83);
                 }
                 builder.pushLiteralText(dataFormatters.formatDate(tmp12, result));
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Time === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Time === first) {
                 if (tmp2[2] in formatConfig.time) {
                   let result1 = formatConfig.time[tmp76];
                 } else if (null != tmp76) {
-                  result1 = tmp98(tmp99[7]).parseDateTimeSkeleton(tmp76);
+                  result1 = tmp98(originalMessage[7]).parseDateTimeSkeleton(tmp76);
                 }
                 builder.pushLiteralText(dataFormatters.formatTime(tmp12, result1));
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Number === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Number === first) {
                 if (tmp2[2] in formatConfig.number) {
                   let parseNumberSkeletonResult = formatConfig.number[tmp67];
                 } else if (null != tmp67) {
-                  parseNumberSkeletonResult = tmp98(tmp99[7]).parseNumberSkeleton(
-                    tmp98(tmp99[7]).parseNumberSkeletonFromString(tmp67),
+                  parseNumberSkeletonResult = tmp98(originalMessage[7]).parseNumberSkeleton(
+                    tmp98(originalMessage[7]).parseNumberSkeletonFromString(tmp67),
                   );
                 }
                 let result2 = tmp12;
@@ -361,34 +347,34 @@ function bindFormatValues(Builder) {
                   result2 = tmp12 * num5;
                 }
                 builder.pushLiteralText(dataFormatters.formatNumber(result2, parseNumberSkeletonResult));
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Tag === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Tag === first) {
                 let obj = {
                   Builder: builder.constructor,
                   nodes: tmp2[2],
                   locales,
                   dataFormatters,
                   formatConfig,
-                  values: tmp101,
+                  values,
                   currentPluralValue,
                   keyPrefix: null,
                 };
                 const _HermesInternal5 = HermesInternal;
-                obj.keyPrefix = "" + keyPrefix + "." + tmp;
+                obj.keyPrefix = "" + keyPrefix + "." + v0;
                 const tmp49 = v0(obj);
                 if (null != tmp2[3]) {
                   obj = {
                     Builder: obj6.constructor,
                     nodes: tmp40,
                     locales: tmp43,
-                    dataFormatters: tmp44,
-                    formatConfig: tmp45,
-                    values: tmp101,
-                    currentPluralValue: tmp46,
+                    dataFormatters,
+                    formatConfig,
+                    values,
+                    currentPluralValue,
                     keyPrefix: null,
                   };
                   const _HermesInternal6 = HermesInternal;
-                  obj.keyPrefix = "" + tmp47 + "." + tmp + "-control";
-                  let items = tmp41(obj);
+                  obj.keyPrefix = "" + keyPrefix + "." + v0 + "-control";
+                  let items = v0(obj);
                 } else {
                   items = [];
                 }
@@ -406,7 +392,7 @@ function bindFormatValues(Builder) {
                   );
                 } else {
                   const _HermesInternal8 = HermesInternal;
-                  const tmp12Result = tmp12(tmp49, "" + tmp47 + "." + tmp);
+                  const tmp12Result = tmp12(tmp49, "" + keyPrefix + "." + v0);
                   const _Array = Array;
                   let tmp55 = tmp12Result;
                   if (!Array.isArray(tmp12Result)) {
@@ -414,21 +400,16 @@ function bindFormatValues(Builder) {
                     tmp55 = items;
                   }
                   for (const item10128 of tmp55) {
-                    let tmp58 = item10128;
                     if (typeof item10128 === "string") {
-                      let pushLiteralTextResult6 = builder.pushLiteralText(tmp58);
+                      let pushLiteralTextResult6 = builder.pushLiteralText(item10128);
                     } else {
-                      let pushObjectResult1 = builder.pushObject(tmp58);
+                      let pushObjectResult1 = builder.pushObject(item10128);
                     }
                     continue;
                   }
                 }
-                tmp41 = v0;
                 tmp43 = locales;
-                tmp44 = dataFormatters;
-                tmp45 = formatConfig;
-                tmp46 = currentPluralValue;
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Select === first) {
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Select === first) {
                 const tmp26 = tmp12 in tmp2[2] ? tmp2[2][tmp12] : tmp2[2].other;
                 if (null == tmp26) {
                   const _Object2 = Object;
@@ -449,21 +430,21 @@ function bindFormatValues(Builder) {
                     locales,
                     dataFormatters,
                     formatConfig,
-                    values: tmp101,
+                    values,
                     keyPrefix: null,
                   };
                   const _HermesInternal3 = HermesInternal;
-                  obj1.keyPrefix = "" + keyPrefix + "." + tmp;
+                  obj1.keyPrefix = "" + keyPrefix + "." + v0;
                   keyPrefix(obj1);
                 }
-              } else if (tmp98(tmp99[6]).FormatJsNodeType.Plural === first) {
-                closure_1 = tmp102;
+              } else if (tmp98(originalMessage[6]).FormatJsNodeType.Plural === first) {
+                other = tmp102;
                 nodes = tmp103;
                 locales = tmp2[4];
                 const tmp104 = (() => {
                   const combined = "=" + closure_0;
-                  if (combined in closure_1) {
-                    return tmp3[combined];
+                  if (combined in other) {
+                    return other[combined];
                   } else {
                     const obj = { type };
                     const pluralRules = dataFormatters.getPluralRules(obj);
@@ -471,13 +452,12 @@ function bindFormatValues(Builder) {
                     if (null != closure_2) {
                       num = closure_2;
                     }
-                    let other = tmp3[pluralRules.select(pluralRules, tmp - num)];
+                    other = other[pluralRules.select(pluralRules, closure_0 - num)];
                     if (null === other) {
-                      other = tmp3.other;
+                      other = other.other;
                     }
                     return other;
                   }
-                  tmp = closure_0;
                 })();
                 if (null == tmp104) {
                   const _Object = Object;
@@ -498,7 +478,7 @@ function bindFormatValues(Builder) {
                     locales,
                     dataFormatters,
                     formatConfig,
-                    values: tmp101,
+                    values,
                     currentPluralValue: null,
                     keyPrefix: null,
                   };
@@ -508,7 +488,7 @@ function bindFormatValues(Builder) {
                   }
                   obj.currentPluralValue = tmp12 - num2;
                   const _HermesInternal = HermesInternal;
-                  obj.keyPrefix = "" + keyPrefix + "." + tmp;
+                  obj.keyPrefix = "" + keyPrefix + "." + v0;
                   keyPrefix(obj);
                 }
               }

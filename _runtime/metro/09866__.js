@@ -468,12 +468,11 @@ QRCode.createData = (arg0, arg1, arg2) => {
       if (obj2.getLengthInBits() < result) {
         obj2.put(QRCode.PAD1, 8);
         while (obj2.getLengthInBits() < result) {
-          let putResult5 = obj2.put(tmp13.PAD0, 8);
+          let putResult5 = obj2.put(QRCode.PAD0, 8);
           if (obj2.getLengthInBits() >= result) {
             break;
           }
         }
-        tmp13 = QRCode;
       }
     }
     return QRCode.createBytes(obj2, rSBlocks);

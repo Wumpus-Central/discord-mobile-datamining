@@ -21,7 +21,7 @@ function hydrateSingle(arr) {
                 if (tmp23.Pound === first) {
                   return exports.FORMAT_JS_POUND;
                 } else if (tmp23.Tag === first) {
-                  let tmp21Result = tmp21(arr, 4);
+                  let tmp21Result = _slicedToArray(arr, 4);
                   let num3 = 0;
                   [tmp7, tmp8] = tmp21Result;
                   if (0 < tmp21Result[2].length) {
@@ -51,7 +51,7 @@ function hydrateSingle(arr) {
                 }
               }
             }
-            tmp21Result = tmp21(arr, 5);
+            tmp21Result = _slicedToArray(arr, 5);
             [tmp14, tmp15, tmp16, tmp17] = tmp21Result;
             for (const key10046 in tmp16) {
               let arr3 = tmp16[key10046];

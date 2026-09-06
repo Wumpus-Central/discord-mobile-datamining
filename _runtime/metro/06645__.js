@@ -1,11 +1,11 @@
 // _runtime/metro/06645__.js
-const fn = function n(str, arg1) {
-  let result = str;
-  if (typeof str === "string") {
+const fn = function n(item, value) {
+  let result = item;
+  if (typeof item === "string") {
     const _Number = Number;
-    result = (Number(str.split("%")[0]) * arg1) / 100;
+    result = (Number(item.split("%")[0]) * value) / 100;
   }
-  return Math.max(0, arg1 - result);
+  return Math.max(0, value - result);
 };
 fn.__closure = {};
 fn.__workletHash = 14612470006791;

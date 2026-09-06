@@ -78,7 +78,8 @@ const items = [
   {
     key: "_incrementSessionStatusCount",
     value: function _incrementSessionStatusCount(status, date) {
-      const setSecondsResult = new Date(date).setSeconds(0, 0);
+      date = new Date(date);
+      const setSecondsResult = date.setSeconds(0, 0);
       const _pendingAggregates = this._pendingAggregates;
       value = _pendingAggregates.get(setSecondsResult);
       if (!value) {
@@ -100,7 +101,6 @@ const items = [
         value.crashed = (value.crashed || 0) + 1;
         return value.crashed;
       }
-      date = new Date(date);
     },
   },
 ];

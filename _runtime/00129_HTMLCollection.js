@@ -55,7 +55,7 @@ const entry = {
   },
 };
 items[3] = entry;
-let tmp2 = _createClassDefault(HTMLCollection, items);
+const tmp2 = _createClassDefault(HTMLCollection, items);
 let closure_4 = tmp2;
 const module_126 = fn(126);
 module_126.setPlatformObject(tmp2);

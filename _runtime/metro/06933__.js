@@ -91,10 +91,10 @@ const memoResult = memo((animatedIndex) => {
     }
     if ("close" === pressBehavior) {
       close();
-    } else if ("collapse" === tmp3) {
+    } else if ("collapse" === pressBehavior) {
       snapToIndex(disappearsOnIndex);
-    } else if (typeof tmp3 === "number") {
-      snapToIndex(tmp3);
+    } else if (typeof pressBehavior === "number") {
+      snapToIndex(pressBehavior);
     }
   }, items);
   __initData = tmp18;

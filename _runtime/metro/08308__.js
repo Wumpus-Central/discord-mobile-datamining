@@ -85,7 +85,7 @@ class Video {
       const _root = arg0;
       c2 = 0;
       c1 = 0;
-      return (async (arg0, value) => {
+      return (async (arg0) => {
         const VideoManager = closure_2_7.VideoManager;
         await VideoManager.save(_root, closure_2_10(_root._root));
         return value;
@@ -188,10 +188,10 @@ class Video {
     };
     tmp3Result._onReadyForDisplay = (nativeEvent) => {
       if (!closure_0.props.audioOnly) {
-        obj._hidePoster();
+        closure_0._hidePoster();
       }
       if (closure_0.props.onReadyForDisplay) {
-        const props = obj.props;
+        const props = closure_0.props;
         props.onReadyForDisplay(nativeEvent.nativeEvent);
       }
     };
@@ -252,11 +252,11 @@ class Video {
     tmp3Result._onGetLicense = (nativeEvent) => {
       if (closure_0.props.drm) {
         const _Function = Function;
-        if (tmp.props.drm.getLicense instanceof Function) {
+        if (closure_0.props.drm.getLicense instanceof Function) {
           nativeEvent = nativeEvent.nativeEvent;
           if (nativeEvent) {
             if (nativeEvent.spcBase64) {
-              const drm = tmp.props.drm;
+              const drm = closure_0.props.drm;
               const resolved = Promise.resolve(
                 drm.getLicense(nativeEvent.spcBase64, nativeEvent.contentId, nativeEvent.licenseUrl),
               );
@@ -289,16 +289,16 @@ class Video {
           }
           if (React5.VideoManager.setLicenseError) {
             let VideoManager = React5.VideoManager;
-            VideoManager.setLicenseError("No spc received", closure_2_10(tmp._root));
+            VideoManager.setLicenseError("No spc received", closure_2_10(closure_0._root));
           }
         }
       }
     };
     tmp3Result.getViewManagerConfig = (arg0) => {
       if (getViewManagerConfig.getViewManagerConfig) {
-        let viewManagerConfig = obj.getViewManagerConfig(arg0);
+        let viewManagerConfig = getViewManagerConfig.getViewManagerConfig(arg0);
       } else {
-        viewManagerConfig = obj[arg0];
+        viewManagerConfig = getViewManagerConfig[arg0];
       }
       return viewManagerConfig;
     };
@@ -387,9 +387,9 @@ let items = [
       const viewManagerConfig = self.getViewManagerConfig("RNVVideo");
       if (resizeMode === Video(8309).stretch) {
         let ScaleNone = viewManagerConfig.Constants.ScaleToFill;
-      } else if (resizeMode === tmp(8309).contain) {
+      } else if (resizeMode === Video(8309).contain) {
         ScaleNone = viewManagerConfig.Constants.ScaleAspectFit;
-      } else if (resizeMode === tmp(8309).cover) {
+      } else if (resizeMode === Video(8309).cover) {
         ScaleNone = viewManagerConfig.Constants.ScaleAspectFill;
       } else {
         ScaleNone = viewManagerConfig.Constants.ScaleNone;

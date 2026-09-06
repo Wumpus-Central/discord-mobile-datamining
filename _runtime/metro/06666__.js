@@ -103,8 +103,8 @@ class BaseButton {
       }
       if (undefined !== ref2.current) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp6.current);
-        tmp6.current = undefined;
+        clearTimeout(ref2.current);
+        ref2.current = undefined;
       }
       const onFinalize = delayLongPress.onFinalize;
       if (onFinalize != null) {

@@ -1,6 +1,7 @@
 // _runtime/06712_hash.js
 import _mod6698 from "metro/06698__.js";
 import allowedNativeProps from "06713_allowedNativeProps.js";
+import _mod6722 from "metro/06722__.js";
 import _slicedToArray from "metro/00032__.js";
 
 require = fn;
@@ -56,7 +57,7 @@ function getEnabledSharedValues(Reanimated) {
       return gestures.flatMap(getEnabledSharedValues);
     } else {
       const enabled = Reanimated.config.enabled;
-      Reanimated = tmp(6698).Reanimated;
+      Reanimated = _mod6698.Reanimated;
       if (Reanimated.isSharedValue(enabled)) {
         const items = [enabled];
         let items1 = items;
@@ -65,7 +66,7 @@ function getEnabledSharedValues(Reanimated) {
       }
       return items1;
     }
-    tmpResult = tmp(6722);
+    tmpResult = _mod6722;
   }
 }
 
@@ -116,20 +117,19 @@ export const bindSharedValues = function bindSharedValues(shouldUseReanimatedDet
     while (tmp27 !== undefined) {
       let tmp5 = shouldUseReanimatedDetector(tmp2, 2);
       [tmp6, tmp7] = tmp5;
-      let tmp8 = tmp7;
       let tmp10 = _require;
       let Reanimated = require("metro/06698__.js").Reanimated;
       if (Reanimated.isSharedValue(tmp7)) {
         let Reanimated2 = tmp10(6698).Reanimated;
-        let tmp17 = Reanimated2.runOnUI(fn)(tmp8, tmp6);
+        let tmp17 = Reanimated2.runOnUI(fn)(tmp7, tmp6);
       }
       continue;
     }
   }
 };
-export const unbindSharedValues = function unbindSharedValues(arg0, arg1) {
+export const unbindSharedValues = function unbindSharedValues(dependencyMap, handlerTag) {
   if (undefined !== require("metro/06698__.js").Reanimated) {
-    _require = arg1 + c4;
+    _require = handlerTag + c4;
     const _Object = Object;
     function _loop(maybeSharedValue) {
       const Reanimated = _mod6698.Reanimated;
@@ -163,7 +163,7 @@ export const unbindSharedValues = function unbindSharedValues(arg0, arg1) {
         return 1;
       }
     }
-    const entries = Object.entries(arg0);
+    const entries = Object.entries(dependencyMap);
     const tmp7 = entries[Symbol.iterator]();
     while (tmp7 !== undefined) {
       let tmp12 = _slicedToArray(tmp9, 2);

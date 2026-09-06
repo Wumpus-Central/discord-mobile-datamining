@@ -54,9 +54,9 @@ class GenericTouchable {
       const pointerInside = nativeEvent.nativeEvent.pointerInside;
       if (closure_0.pointerInside !== pointerInside) {
         if (pointerInside) {
-          obj.onMoveIn();
+          closure_0.onMoveIn();
         } else {
-          obj.onMoveOut();
+          closure_0.onMoveOut();
         }
       }
       closure_0.pointerInside = pointerInside;
@@ -64,24 +64,24 @@ class GenericTouchable {
     tmp3Result.onHandlerStateChange = (nativeEvent) => {
       const state = nativeEvent.nativeEvent.state;
       if (state !== GenericTouchable(6661).State.CANCELLED) {
-        if (state !== tmp(6661).State.FAILED) {
-          if (state === tmp(6661).State.BEGAN) {
+        if (state !== GenericTouchable(6661).State.FAILED) {
+          if (state === GenericTouchable(6661).State.BEGAN) {
             if (closure_0.STATE === closure_0.UNDETERMINED) {
-              obj.handlePressIn();
+              closure_0.handlePressIn();
             }
           }
-          if (state === tmp(6661).State.END) {
+          if (state === GenericTouchable(6661).State.END) {
             const longPressDetected = closure_0.longPressDetected;
             let tmp5 = !longPressDetected;
             if (!longPressDetected) {
-              tmp5 = obj2.STATE !== obj.MOVED_OUTSIDE;
+              tmp5 = closure_0.STATE !== closure_0.MOVED_OUTSIDE;
             }
             if (tmp5) {
-              tmp5 = undefined === obj2.pressOutTimeout;
+              tmp5 = undefined === closure_0.pressOutTimeout;
             }
-            const result = obj2.handleGoToUndetermined();
+            const result = closure_0.handleGoToUndetermined();
             if (tmp5) {
-              const props = obj2.props;
+              const props = closure_0.props;
               const onPress = props.onPress;
               if (onPress != null) {
                 onPress();
@@ -90,7 +90,7 @@ class GenericTouchable {
           }
         }
       }
-      closure_0.moveToState(obj.UNDETERMINED);
+      closure_0.moveToState(closure_0.UNDETERMINED);
     };
     tmp3Result.onLongPressDetected = () => {
       closure_0.longPressDetected = true;
@@ -158,14 +158,14 @@ let items = [
         const _setTimeout = setTimeout;
         self.pressOutTimeout = setTimeout(() => {
           if (self.STATE === self.UNDETERMINED) {
-            obj.moveToState(tmp.BEGAN);
+            self.moveToState(self.BEGAN);
           }
           self.moveToState(self.UNDETERMINED);
           self.pressOutTimeout = undefined;
         }, self.props.delayPressOut);
       } else {
         if (self.STATE === obj.UNDETERMINED) {
-          self.moveToState(tmp2.BEGAN);
+          self.moveToState(obj.BEGAN);
         }
         self.moveToState(obj.UNDETERMINED);
       }
@@ -200,15 +200,15 @@ let items = [
           if (onPressIn != null) {
             onPressIn();
           }
-        } else if (BEGAN === tmp10.MOVED_OUTSIDE) {
+        } else if (BEGAN === obj.MOVED_OUTSIDE) {
           const props2 = self.props;
           const onPressOut2 = props2.onPressOut;
           if (onPressOut2 != null) {
             onPressOut2();
           }
-        } else if (BEGAN === tmp10.UNDETERMINED) {
+        } else if (BEGAN === obj.UNDETERMINED) {
           self.reset();
-          if (self.STATE === tmp10.BEGAN) {
+          if (self.STATE === obj.BEGAN) {
             const props = self.props;
             const onPressOut = props.onPressOut;
             if (onPressOut != null) {

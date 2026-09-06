@@ -1,11 +1,11 @@
 // _runtime/00052_PlatformColor.js
 
 export const PlatformColor = () => ({ resource_paths: HermesBuiltin.copyRestArgs() });
-export const normalizeColorObject = (arg0) => {
+export const normalizeColorObject = (tintColor) => {
   let tmp = null;
-  if ("resource_paths" in arg0) {
-    tmp = arg0;
+  if ("resource_paths" in tintColor) {
+    tmp = tintColor;
   }
   return tmp;
 };
-export (arg0) => arg0
+export (defaultResult) => defaultResult

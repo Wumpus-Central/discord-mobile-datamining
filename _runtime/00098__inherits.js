@@ -18,4 +18,5 @@ export default function _inherits(value, fn) {
   if (fn) {
     _setPrototypeOf(value, fn);
   }
+  const obj = { constructor: { value, writable: true, configurable: true } };
 }

@@ -6,7 +6,7 @@ import _mod697 from "metro/00697__.js";
 import _mod753 from "metro/00753__.js";
 import setupIntegration from "00752_setupIntegration.js";
 
-function _mergeOptions(arg0, options) {
+function _mergeOptions(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -94,10 +94,10 @@ function _getEventFilterUrl(exception) {
     return tmp10;
   } catch (err) {
     if (_mod688.DEBUG_BUILD) {
-      const debug = tmp12(689).debug;
+      const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
-      debug.error("Cannot extract url for event " + tmp12(695).getEventDescription(tmp));
-      const tmp12Result = tmp12(695);
+      debug.error("Cannot extract url for event " + uuid4.getEventDescription(tmp));
+      const tmp12Result = uuid4;
     }
     return null;
   }

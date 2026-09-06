@@ -24,7 +24,7 @@ export default function codegenNativeComponent(arg0, paperComponentName) {
           if (tmp7Result.hasViewManagerConfig(paperComponentName.paperComponentNameDeprecated)) {
             paperComponentNameDeprecated = paperComponentName.paperComponentNameDeprecated;
           }
-          tmp7Result = tmp7(68);
+          tmp7Result = measureDefault;
         }
         let str = paperComponentName.paperComponentNameDeprecated;
         if (str == null) {
@@ -35,7 +35,6 @@ export default function codegenNativeComponent(arg0, paperComponentName) {
         throw error;
       }
       obj2 = measureDefault;
-      tmp7 = importDefault;
     }
   }
   return _modDef464(paperComponentNameDeprecated);

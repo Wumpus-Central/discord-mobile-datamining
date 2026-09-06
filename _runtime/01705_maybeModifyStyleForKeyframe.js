@@ -1,14 +1,17 @@
 // _runtime/01705_maybeModifyStyleForKeyframe.js
+import _mod1640 from "metro/01640__.js";
 import _makeShareableClone from "01646__makeShareableClone.js";
 import _mod1661 from "metro/01661__.js";
 import _mod1677 from "metro/01677__.js";
+import linear from "01688_linear.js";
 import TransitionType from "01692_TransitionType.js";
+import WebEasings from "01695_WebEasings.js";
 import BaseAnimationBuilder from "01706_BaseAnimationBuilder.js";
 import _mod1722 from "metro/01722__.js";
 
 require = arg1;
 let dependencyMap = arg6;
-function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2, offsetParent) {
+function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2) {
   _require = cloneNodeResult;
   dependencyMap = dummyAnimationConfig;
   let flag = arg2;
@@ -73,14 +76,13 @@ function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2, offset
       if (isDummy) {
         let hasItem;
         if (_null != null) {
-          hasItem = obj4.contains(obj3);
+          hasItem = _null.contains(cloneNodeResult);
         }
         isDummy = hasItem;
-        obj4 = _null;
       }
       if (isDummy) {
-        obj3.removedAfterAnimation = true;
-        _null.removeChild(obj3);
+        cloneNodeResult.removedAfterAnimation = true;
+        _null.removeChild(cloneNodeResult);
       }
       if (typeof maybeCallCallback === "function") {
         let callback = !c9;
@@ -91,7 +93,7 @@ function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2, offset
           dummyAnimationConfig.callback(true);
           c9 = true;
         }
-        const removed = obj3.removeEventListener("animationcancel", animationCancelHandler);
+        const removed = cloneNodeResult.removeEventListener("animationcancel", animationCancelHandler);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -105,14 +107,13 @@ function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2, offset
       if (isDummy) {
         let hasItem;
         if (_null != null) {
-          hasItem = obj2.contains(obj);
+          hasItem = _null.contains(cloneNodeResult);
         }
         isDummy = hasItem;
-        obj2 = _null;
       }
       if (isDummy) {
-        obj.removedAfterAnimation = true;
-        _null.removeChild(obj);
+        cloneNodeResult.removedAfterAnimation = true;
+        _null.removeChild(cloneNodeResult);
       }
       if (typeof maybeCallCallback === "function") {
         let callback = !c9;
@@ -123,7 +124,7 @@ function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2, offset
           dummyAnimationConfig.callback(false);
           c9 = true;
         }
-        const removed = obj.removeEventListener("animationcancel", animationCancelHandler);
+        const removed = cloneNodeResult.removeEventListener("animationcancel", animationCancelHandler);
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -149,14 +150,13 @@ function setElementAnimation(cloneNodeResult, dummyAnimationConfig, arg2, offset
         if (isDummy) {
           let hasItem;
           if (_null != null) {
-            hasItem = obj2.contains(tmp5);
+            hasItem = _null.contains(cloneNodeResult);
           }
           isDummy = hasItem;
-          obj2 = _null;
         }
         if (isDummy) {
-          tmp5.removedAfterAnimation = true;
-          _null.removeChild(tmp5);
+          cloneNodeResult.removedAfterAnimation = true;
+          _null.removeChild(cloneNodeResult);
         }
         if (typeof maybeCallCallback === "function") {
           let callback = !c9;
@@ -183,10 +183,10 @@ export const getReducedMotionFromConfig = function getReducedMotionFromConfig(en
     const reduceMotionV = entering.reduceMotionV;
     if (_mod1661.ReduceMotion.Never === reduceMotionV) {
       return false;
-    } else if (tmp3(1661).ReduceMotion.Always === reduceMotionV) {
+    } else if (_mod1661.ReduceMotion.Always === reduceMotionV) {
       return true;
     } else {
-      return tmp3(1677).ReducedMotionManager.jsValue;
+      return _mod1677.ReducedMotionManager.jsValue;
     }
   } else {
     return _mod1677.ReducedMotionManager.jsValue;
@@ -204,7 +204,7 @@ export const getProcessedConfig = function getProcessedConfig(animationWithIniti
   };
   let num = 0.3;
   if (animationWithInitialValues in TransitionType.Animations) {
-    num = tmp(1692).Animations[animationWithInitialValues].duration;
+    num = TransitionType.Animations[animationWithInitialValues].duration;
   }
   if (undefined !== entering.durationV) {
     num = entering.durationV / 1000;
@@ -220,24 +220,24 @@ export const getProcessedConfig = function getProcessedConfig(animationWithIniti
   if (!entering.delayV) {
     obj.delay = num3;
     if (entering.easingV) {
-      const tmp8 = entering.easingV[tmp(undefined, 1688).EasingNameSymbol];
-      let tmpResult = tmp(1695);
+      const tmp8 = entering.easingV[linear.EasingNameSymbol];
+      let tmpResult = WebEasings;
       if (tmp9) {
         let easingByName = tmpResult.getEasingByName(tmp8);
       } else {
         let maybeGetBezierEasingResult = tmpResult.maybeGetBezierEasing(entering.easingV);
         if (!maybeGetBezierEasingResult) {
-          const logger = tmp(1640).logger;
+          const logger = _mod1640.logger;
           logger.warn("Selected easing is not currently supported on web. Using linear easing instead.");
-          tmpResult = tmp(1695);
+          tmpResult = WebEasings;
           maybeGetBezierEasingResult = tmpResult.getEasingByName("linear");
         }
         easingByName = maybeGetBezierEasingResult;
       }
-      tmp9 = tmp8 in tmp(1695).WebEasings;
+      tmp9 = tmp8 in WebEasings.WebEasings;
     } else {
-      easingByName = tmp(1695).getEasingByName("linear");
-      const tmpResult1 = tmp(1695);
+      easingByName = WebEasings.getEasingByName("linear");
+      const tmpResult1 = WebEasings;
     }
     obj.easing = easingByName;
     let callbackV = null;
@@ -333,6 +333,7 @@ export const handleLayoutTransition = function handleLayoutTransition(_component
     setElementAnimation(result.dummy, result.dummyAnimationConfig);
   }
   setElementAnimation(_componentDOMRef, processedConfig);
+  const TransitionGeneratorResult = tmp4Result.TransitionGenerator(ENTRY_EXIT, easingY);
 };
 export const handleExitingAnimation = function handleExitingAnimation(offsetParent, processedConfig) {
   let firstChild;
@@ -345,7 +346,7 @@ export const handleExitingAnimation = function handleExitingAnimation(offsetPare
   cloneNodeResult.style.animationName = "";
   offsetParent.dummyClone = cloneNodeResult;
   offsetParent.style.animationName = "";
-  const map = new Map();
+  new Map();
   function saveScrollPosition(scrollTop) {
     const rect = { top: scrollTop.scrollTop, left: scrollTop.scrollLeft };
     const result = map.set(scrollTop, rect);
@@ -354,6 +355,7 @@ export const handleExitingAnimation = function handleExitingAnimation(offsetPare
       let tmp6 = saveScrollPosition(tmp4);
       continue;
     }
+    tmp3 = Array.from(scrollTop.children)[Symbol.iterator]();
   }
   saveScrollPosition(offsetParent);
   if (offsetParent.firstChild) {
@@ -379,6 +381,7 @@ export const handleExitingAnimation = function handleExitingAnimation(offsetPare
       let tmp8 = restoreScrollPosition(tmp6);
       continue;
     }
+    tmp5 = Array.from(cloneNodeResult.children)[Symbol.iterator]();
   }
   let result = restoreScrollPosition(cloneNodeResult);
   const snapshots = _mod1722.snapshots;
@@ -415,8 +418,9 @@ export const handleExitingAnimation = function handleExitingAnimation(offsetPare
   if (num3 !== scrollLeftOffset) {
     rect.left = rect.left + (scrollLeftOffset - num3);
   }
-  const snapshots2 = tmp6(1722).snapshots;
+  const snapshots2 = _mod1722.snapshots;
   const result1 = snapshots2.set(cloneNodeResult, rect);
   _mod1722.setElementPosition(cloneNodeResult, rect);
   setElementAnimation(cloneNodeResult, processedConfig, false, offsetParent);
+  const tmp6Result = _mod1722;
 };

@@ -711,18 +711,18 @@ export const debuglog = (str) => {
   if (!dependencyMap[formatted]) {
     if (regExp.test(formatted)) {
       const _process = process;
-      tmp2[formatted] = () => {
+      dependencyMap[formatted] = () => {
         const format = exports.format;
         const apply = format.apply;
         if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(tmp);
+          let applyArgumentsResult = HermesBuiltin.applyArguments(exports);
         } else {
-          applyArgumentsResult = apply(tmp, arguments);
+          applyArgumentsResult = apply(exports, arguments);
         }
         console.error("%s %d: %s", formatted, pid, applyArgumentsResult);
       };
     } else {
-      tmp2[formatted] = () => {};
+      dependencyMap[formatted] = () => {};
     }
   }
   return dependencyMap[formatted];
@@ -788,27 +788,27 @@ export const log = () => {
   const apply = format.apply;
   const joined1 = items1.join(" ");
   if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(tmp6);
+    let applyArgumentsResult = HermesBuiltin.applyArguments(exports);
   } else {
-    applyArgumentsResult = apply(tmp6, arguments);
+    applyArgumentsResult = apply(exports, arguments);
   }
   console.log("%s - %s", joined1, applyArgumentsResult);
 };
 export const inherits = _mod1460;
-export const _extend = (arg0, obj) => {
+export const _extend = (arg0, showHidden) => {
   let tmp5;
-  if (obj) {
-    let tmp = typeof obj === "object";
-    if (typeof obj === "object") {
-      tmp = null !== obj;
+  if (showHidden) {
+    let tmp = typeof showHidden === "object";
+    if (typeof showHidden === "object") {
+      tmp = null !== showHidden;
     }
     if (tmp) {
       const _Object = Object;
-      const keys = Object.keys(obj);
+      const keys = Object.keys(showHidden);
       let diff = tmp3 - 1;
       if (+keys.length) {
         do {
-          arg0[keys[diff]] = obj[keys[diff]];
+          arg0[keys[diff]] = showHidden[keys[diff]];
           tmp5 = +diff;
           diff = tmp5 - 1;
         } while (tmp5);
@@ -826,15 +826,15 @@ export const promisify = function promisify(fn) {
     throw typeError;
   } else {
     if (SymbolResult) {
-      if (fn[tmp16]) {
-        if (typeof fn[tmp16] !== "function") {
+      if (fn[SymbolResult]) {
+        if (typeof fn[SymbolResult] !== "function") {
           const _TypeError = TypeError;
           const typeError1 = new TypeError('The "util.promisify.custom" argument must be of type Function');
           throw typeError1;
         } else {
           const _Object5 = Object;
           let obj = { value: tmp5, enumerable: false, writable: false, configurable: true };
-          Object.defineProperty(tmp5, tmp16, obj);
+          Object.defineProperty(tmp5, SymbolResult, obj);
           return tmp5;
         }
       }
@@ -875,7 +875,7 @@ export const promisify = function promisify(fn) {
     if (SymbolResult) {
       const _Object3 = Object;
       obj = { value, enumerable: false, writable: false, configurable: true };
-      Object.defineProperty(value, tmp16, obj);
+      Object.defineProperty(value, SymbolResult, obj);
     }
     const _Object4 = Object;
     return Object.defineProperties(value, closure_1(fn));
@@ -909,9 +909,9 @@ export const callbackify = function callbackify(fn) {
         function cb() {
           const apply = arr.apply;
           if (typeof apply === "unknown") {
-            let applyArgumentsResult = HermesBuiltin.applyArguments(tmp2);
+            let applyArgumentsResult = HermesBuiltin.applyArguments(self);
           } else {
-            applyArgumentsResult = apply(tmp2, arguments);
+            applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
         }
@@ -923,6 +923,7 @@ export const callbackify = function callbackify(fn) {
             process.nextTick(callbackifyOnRejected.bind(null, c165, cb));
           },
         );
+        const applyResult = closure_0.apply(this, items);
       }
     }
     const _Object = Object;

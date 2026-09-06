@@ -4,8 +4,7 @@ import _mod12821 from "12821__.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export function makePromiseBuffer(arg0) {
-  closure_0 = arg0;
+export function makePromiseBuffer(bufferSize) {
   const items = [];
   return {
     $: items,
@@ -37,13 +36,15 @@ export function makePromiseBuffer(arg0) {
           });
         return promise;
       } else {
-        const sentryError = new closure_0(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
-        return closure_0(items[0]).rejectedSyncPromise(sentryError);
+        const sentryError = new bufferSize(items[1]).SentryError(
+          "Not adding Promise because buffer limit was reached.",
+        );
+        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
       }
     },
     drain(arg0) {
-      closure_0 = arg0;
-      return new closure_0(items[0]).SyncPromise((fn, arg1) => {
+      bufferSize = arg0;
+      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
         closure_0 = fn;
         closure_1 = arg1;
         length = length.length;

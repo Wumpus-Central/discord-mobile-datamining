@@ -142,7 +142,7 @@ if (self2) {
           starts_with: { label: "\u05E7\u05DC\u05D8", gender: "m" },
           uppercase: { label: "\u05E7\u05DC\u05D8", gender: "m" },
         };
-        closure_8 = { nan: "NaN" };
+        dependencyMap = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -151,9 +151,9 @@ if (self2) {
               if (label == null) {
                 str135 = "";
               }
-              if (closure_8[str135] != null) {
+              if (dependencyMap[str135] != null) {
                 const parsedTypeResult = typeEntry.parsedType(code.input);
-                let tmp119 = tmp108[parsedTypeResult];
+                let tmp119 = dependencyMap[parsedTypeResult];
                 if (tmp119 == null) {
                   label = undefined;
                   if (obj[parsedTypeResult] != null) {
@@ -243,7 +243,7 @@ if (self2) {
                 if (str79 == null) {
                   str79 = "value";
                 }
-                if (typeof tmp70 === "function") {
+                if (typeof withDefinite === "function") {
                   if (typeof typeLabel === "function") {
                     if (typeof typeEntry === "function") {
                       let tmp73;
@@ -316,7 +316,7 @@ if (self2) {
                             if (str83 == null) {
                               str83 = "value";
                             }
-                            if (typeof tmp78 === "function") {
+                            if (typeof verbFor === "function") {
                               if (typeof tmp72 === "function") {
                                 let tmp79;
                                 if (str83) {
@@ -378,7 +378,6 @@ if (self2) {
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
-                            tmp78 = verbFor;
                           }
                         }
                         let str101 = "\u05E6\u05E8\u05D9\u05DA";
@@ -426,7 +425,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp70 = withDefinite;
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -446,7 +444,7 @@ if (self2) {
                 if (str25 == null) {
                   str25 = "value";
                 }
-                if (typeof tmp28 === "function") {
+                if (typeof withDefinite === "function") {
                   if (typeof typeLabel === "function") {
                     if (typeof typeEntry === "function") {
                       let tmp31;
@@ -519,7 +517,7 @@ if (self2) {
                             if (str29 == null) {
                               str29 = "value";
                             }
-                            if (typeof tmp36 === "function") {
+                            if (typeof verbFor === "function") {
                               if (typeof tmp30 === "function") {
                                 let tmp37;
                                 if (str29) {
@@ -581,7 +579,6 @@ if (self2) {
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
-                            tmp36 = verbFor;
                           }
                         }
                         let str47 = "\u05E6\u05E8\u05D9\u05DA";
@@ -649,7 +646,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp28 = withDefinite;
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -738,7 +734,7 @@ if (self2) {
               if (str == null) {
                 str = "array";
               }
-              if (typeof tmp === "function") {
+              if (typeof withDefinite === "function") {
                 if (typeof typeLabel === "function") {
                   if (typeof typeEntry === "function") {
                     let tmp5;
@@ -762,7 +758,6 @@ if (self2) {
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp = withDefinite;
               break;
             default:
               return "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF";

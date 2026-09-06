@@ -1,7 +1,7 @@
 // _runtime/11234_releaseLongTermAccess.js
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async (arg0) => {
   if (dependencyMap === 2) {
     dependencyMap = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -36,7 +36,7 @@ asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (dependencyMap === 2) {
     dependencyMap = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

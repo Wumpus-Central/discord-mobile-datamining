@@ -18,6 +18,11 @@ export default function useWindowDimensions() {
       if (!tmp2) {
         dependencyMap(_window);
       }
+      tmp2 =
+        closure_0.width === _window.width &&
+        closure_0.height === _window.height &&
+        closure_0.scale === _window.scale &&
+        closure_0.fontScale === _window.fontScale;
     });
     const obj = first(88);
     const size = first(88).get("window");

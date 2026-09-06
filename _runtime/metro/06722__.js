@@ -38,7 +38,8 @@ export const prepareRelations = function prepareRelations(config, handlerTag) {
         if ("handlerTags" in handlerTags) {
           handlerTags = handlerTags.handlerTags;
         } else {
-          handlerTags = [handlerTags.handlerTag];
+          handlerTags = [];
+          handlerTags[0] = handlerTags.handlerTag;
         }
         return handlerTags;
       });
@@ -57,7 +58,8 @@ export const prepareRelations = function prepareRelations(config, handlerTag) {
           if ("handlerTags" in handlerTags) {
             handlerTags = handlerTags.handlerTags;
           } else {
-            handlerTags = [handlerTags.handlerTag];
+            handlerTags = [];
+            handlerTags[0] = handlerTags.handlerTag;
           }
           return handlerTags;
         });
@@ -76,7 +78,8 @@ export const prepareRelations = function prepareRelations(config, handlerTag) {
             if ("handlerTags" in handlerTags) {
               handlerTags = handlerTags.handlerTags;
             } else {
-              handlerTags = [handlerTags.handlerTag];
+              handlerTags = [];
+              handlerTags[0] = handlerTags.handlerTag;
             }
             return handlerTags;
           });

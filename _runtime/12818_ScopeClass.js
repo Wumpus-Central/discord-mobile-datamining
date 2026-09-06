@@ -82,8 +82,8 @@ const entry = {
     const merged4 = Object.assign(self._propagationContext);
     obj._propagationContext = {};
     ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
-    tmp3(12819);
-    const tmp3Result = tmp3(12819);
+    ScopeClass(12819);
+    const tmp3Result = ScopeClass(12819);
     tmp3Result._setSpanForScope(obj, tmp3Result._getSpanForScope(self));
     return obj;
   },

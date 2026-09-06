@@ -1,5 +1,7 @@
 // _runtime/00790_markAsInstrumented.js
 import _mod688 from "metro/00688__.js";
+import consoleSandbox from "00689_consoleSandbox.js";
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "00704_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
 import _mod731 from "metro/00731__.js";
 import _slicedToArray from "metro/00032__.js";
 import _toArray from "00718__toArray.js";
@@ -96,7 +98,7 @@ function translateFiltersIntoMethods(str, str2) {
               str3 = str5;
             }
             const _HermesInternal = HermesInternal;
-            return "" + str3 + "(" + str + ", " + substr.join(".") + ")";
+            return "" + str3 + "(" + "." + ", " + substr.join(".") + ")";
           }
         }
         const _HermesInternal2 = HermesInternal;
@@ -124,7 +126,7 @@ function instrumentAuthOperation(arg0) {
         str2 = "(admin) ";
       }
       attributes = { name: "auth " + str2 + name.name, attributes: null };
-      attributes = { [tmp(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [tmp(704).SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
+      attributes = { [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.db.supabase", [SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP]: "db", "db.system": "postgresql" };
       if (flag) {
         str = "admin.";
       }
@@ -152,6 +154,7 @@ function instrumentAuthOperation(arg0) {
           }
           obj = closure_0;
           closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_OK });
+          const obj1 = { code: closure_0(705).SPAN_STATUS_OK };
         });
         items = [...closure_2];
         return Reflect.apply(closure_0, dependencyMap, args).then((error) => {
@@ -173,6 +176,7 @@ function instrumentAuthOperation(arg0) {
           }
           obj = closure_0;
           closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_OK });
+          const obj1 = { code: closure_0(705).SPAN_STATUS_OK };
         }).catch((error) => {
           closure_0.setStatus({ code: closure_0(705).SPAN_STATUS_ERROR });
           closure_0.end();
@@ -249,14 +253,13 @@ function instrumentSupabaseClient(supabaseClient) {
       if (auth) {
         if (!closure_1_9(supabaseClient.auth)) {
           for (const item10014 of closure_1_4) {
-            let tmp4 = item10014;
             let tmp5 = auth[item10014];
             let tmp6 = tmp5;
             if (tmp5) {
-              tmp5 = typeof arg0.auth[tmp4] === "function";
+              tmp5 = typeof arg0.auth[item10014] === "function";
             }
             if (tmp5) {
-              arg0.auth[tmp4] = closure_1_12(tmp6);
+              arg0.auth[item10014] = closure_1_12(tmp6);
             }
             continue;
           }
@@ -278,12 +281,9 @@ function instrumentSupabaseClient(supabaseClient) {
         }
       }
     })(supabaseClient);
-  } else {
-    if (_mod688.DEBUG_BUILD) {
-      const debug = tmp(689).debug;
-      debug.warn("Supabase integration was not installed because no Supabase client was provided.");
-    }
-    tmp = require;
+  } else if (_mod688.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
+    debug.warn("Supabase integration was not installed because no Supabase client was provided.");
   }
 }
 
@@ -296,11 +296,11 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
   return {
     setupOnce() {
       if (typeof instrumentSupabaseClient === "function") {
-        if (tmp) {
+        if (supabaseClient) {
           const _Function = Function;
-          let constructor = tmp;
-          if (tmp.constructor !== Function) {
-            constructor = tmp.constructor;
+          let constructor = supabaseClient;
+          if (supabaseClient.constructor !== Function) {
+            constructor = supabaseClient.constructor;
           }
           if (!isInstrumented(constructor.prototype.from)) {
             let _Proxy = Proxy;
@@ -336,14 +336,13 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
             if (auth) {
               if (!closure_1_9(supabaseClient.auth)) {
                 for (const item10014 of closure_1_4) {
-                  let tmp4 = item10014;
                   let tmp5 = auth[item10014];
                   let tmp6 = tmp5;
                   if (tmp5) {
-                    tmp5 = typeof arg0.auth[tmp4] === "function";
+                    tmp5 = typeof arg0.auth[item10014] === "function";
                   }
                   if (tmp5) {
-                    arg0.auth[tmp4] = closure_1_12(tmp6);
+                    arg0.auth[item10014] = closure_1_12(tmp6);
                   }
                   continue;
                 }
@@ -364,13 +363,10 @@ export const supabaseIntegration = setupIntegration.defineIntegration((supabaseC
                 closure_1_8(supabaseClient.auth);
               }
             }
-          })(tmp);
-        } else {
-          if (_mod688.DEBUG_BUILD) {
-            let debug = tmp2(689).debug;
-            debug.warn("Supabase integration was not installed because no Supabase client was provided.");
-          }
-          tmp2 = require;
+          })(supabaseClient);
+        } else if (_mod688.DEBUG_BUILD) {
+          let debug = consoleSandbox.debug;
+          debug.warn("Supabase integration was not installed because no Supabase client was provided.");
         }
       } else {
         throw new TypeError("Trying to call a non-function");

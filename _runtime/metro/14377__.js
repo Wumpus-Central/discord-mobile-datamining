@@ -30,11 +30,10 @@ function percentDecode(_Buffer) {
   if (0 < _Buffer.length) {
     while (true) {
       if (37 === _Buffer[num]) {
-        let tmp3 = require;
         let obj = _mod14376;
         let sum = num + 1;
         if (obj.isASCIIHex(_Buffer[sum])) {
-          let tmp3Result = tmp3(14376);
+          let tmp3Result = _mod14376;
           let sum1 = num + 2;
           if (tmp3Result.isASCIIHex(_Buffer[sum1])) {
             let sum2 = num2 + 1;
@@ -114,7 +113,7 @@ export default {
           } while (index1 >= 0);
         }
         if (num2 !== arr.length) {
-          items.push(arr.slice(num2));
+          arr = items.push(arr.slice(num2));
         }
         return items;
       })(_Buffer, 38)[Symbol.iterator]();
@@ -160,31 +159,28 @@ export default {
     while (tmp3 !== undefined) {
       let tmp6 = _slicedToArray(tmp4, 2);
       [tmp7, arr] = tmp6;
-      let tmp8 = arr;
-      let tmp9 = serializeUrlencodedByte;
-      let tmp10 = require;
       let _Buffer = Buffer.Buffer;
       let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
       let name = arr[1];
       let tmp13 = arr.length > 2;
       if (tmp13) {
-        tmp13 = undefined !== tmp8[2];
+        tmp13 = undefined !== arr[2];
       }
       if (tmp13) {
-        if ("hidden" === tmp8[2]) {
+        if ("hidden" === arr[2]) {
           if ("_charset_" === tmp12) {
             name = str;
           }
         }
-        if ("file" === tmp8[2]) {
+        if ("file" === arr[2]) {
           name = name.name;
         }
       }
       if (0 !== tmp7) {
         str2 = `${str2}&`;
       }
-      let _Buffer2 = tmp10(1253).Buffer;
-      let tmp9Result = tmp9(_Buffer2.from(name));
+      let _Buffer2 = Buffer.Buffer;
+      let tmp9Result = serializeUrlencodedByte(_Buffer2.from(name));
       let _HermesInternal = HermesInternal;
       str2 = str2 + "" + tmp12 + "=" + tmp9Result;
       continue;

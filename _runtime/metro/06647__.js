@@ -3,29 +3,29 @@ import cancelAnimation from "../01636_cancelAnimation.js";
 
 require = fn;
 const dependencyMap = arg6;
-fn = function n(arg0, duration) {
-  if ("easeIn" === arg0) {
+fn = function n(keyboard, value) {
+  if ("easeIn" === keyboard) {
     let obj = { easing: null, duration: null };
     const Easing3 = cancelAnimation.Easing;
     obj.easing = Easing3.in(cancelAnimation.Easing.ease);
-    obj.duration = duration;
+    obj.duration = value;
     return obj;
-  } else if ("easeOut" === arg0) {
+  } else if ("easeOut" === keyboard) {
     obj = { easing: null, duration: null };
     const Easing2 = cancelAnimation.Easing;
     obj.easing = Easing2.out(cancelAnimation.Easing.ease);
-    obj.duration = duration;
+    obj.duration = value;
     return obj;
-  } else if ("easeInEaseOut" === arg0) {
+  } else if ("easeInEaseOut" === keyboard) {
     const obj1 = { easing: null, duration: null };
     const Easing = cancelAnimation.Easing;
     obj1.easing = Easing.inOut(cancelAnimation.Easing.ease);
-    obj1.duration = duration;
+    obj1.duration = value;
     return obj1;
-  } else if ("linear" === arg0) {
-    obj = { easing: cancelAnimation.Easing.linear, duration };
+  } else if ("linear" === keyboard) {
+    obj = { easing: cancelAnimation.Easing.linear, duration: value };
     return obj;
-  } else if ("keyboard" === arg0) {
+  } else if ("keyboard" === keyboard) {
     return {
       damping: 500,
       stiffness: 1000,

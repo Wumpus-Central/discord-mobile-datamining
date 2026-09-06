@@ -13,9 +13,9 @@ let closure_4 = {
   code: "function pnpm_useScrollHandlerTs3(event,context){const{handleOnEndDrag,onScrollEndDrag,runOnJS}=this.__closure;handleOnEndDrag(event,context);if(onScrollEndDrag){runOnJS(onScrollEndDrag)({nativeEvent:event});}}",
 };
 
-export const useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndDrag) => {
-  let useScrollEventsHandlersDefault = arg0;
-  if (arg0 === undefined) {
+export const useScrollHandler = () => {
+  let useScrollEventsHandlersDefault = scrollEventsHandlersHook;
+  if (scrollEventsHandlersHook === undefined) {
     useScrollEventsHandlersDefault = require("06654__.js").useScrollEventsHandlersDefault;
   }
   _require = onScroll;
@@ -27,7 +27,11 @@ export const useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndD
   const animatedRef = obj.useAnimatedRef();
   let obj1 = require("cancelAnimation");
   const sharedValue = obj1.useSharedValue(0);
-  const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(animatedRef, sharedValue, arg4);
+  const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(
+    animatedRef,
+    sharedValue,
+    lockableScrollableContentOffsetY,
+  );
   let workletNoop = scrollEventsHandlersDefault.handleOnScroll;
   if (undefined === workletNoop) {
     workletNoop = tmp3(6644).workletNoop;
@@ -76,13 +80,13 @@ export const useScrollHandler = (arg0, onScroll, onScrollBeginDrag, onScrollEndD
   obj.onBeginDrag = fn2;
   class O {
     constructor(arg0, arg1) {
-      tmp = workletNoop(arg0, onScroll);
+      tmp = workletNoop(scrollEventsHandlersHook, onScroll);
       if (closure_2) {
         tmp3 = closure_0;
         tmp4 = closure_1;
         obj = closure_0(closure_1[1]);
         obj = { nativeEvent: null };
-        obj.nativeEvent = arg0;
+        obj.nativeEvent = scrollEventsHandlersHook;
         tmp5 = obj.runOnJS(tmp2)(obj);
       }
       return;

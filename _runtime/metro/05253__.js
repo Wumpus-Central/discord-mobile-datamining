@@ -9,7 +9,6 @@ function parseBezierKnot(dataView, arg1) {
   let num = 0;
   do {
     let sum = arg1 + num;
-    let tmp2 = importDefault;
     let obj = _modDef5230;
     let longAt = obj.getLongAt(dataView, sum);
     let num2 = -1;
@@ -18,14 +17,13 @@ function parseBezierKnot(dataView, arg1) {
     }
     let str = (2130706432 & longAt) >>> 24;
     let _parseInt = parseInt;
-    let tmp6 = require;
     let obj2 = _mod5213;
     let str2 = longAt & parseInt(obj2.strRepeat("1", 24), 2);
     let obj3 = _mod5213;
     let text = `${str.toString(2)}.`;
     let obj4 = _mod5213;
     let result = num2 * obj3.parseFloatRadix(`${str.toString(2)}.` + obj4.padStart(str2.toString(2), 24, "0"), 2);
-    let tmp2Result = tmp2(5230);
+    let tmp2Result = _modDef5230;
     let longAt1 = tmp2Result.getLongAt(dataView, sum + 4);
     let num3 = -1;
     if (longAt1 >>> 31 === 0) {
@@ -33,11 +31,11 @@ function parseBezierKnot(dataView, arg1) {
     }
     let str3 = (2130706432 & longAt1) >>> 24;
     let _parseInt2 = parseInt;
-    let tmp6Result = tmp6(5213);
+    let tmp6Result = _mod5213;
     let str4 = longAt1 & parseInt(tmp6Result.strRepeat("1", 24), 2);
-    tmp6Result = tmp6(5213);
+    tmp6Result = _mod5213;
     let text1 = `${str3.toString(2)}.`;
-    let tmp6Result1 = tmp6(5213);
+    let tmp6Result1 = _mod5213;
     let items1 = [num3 * tmp6Result.parseFloatRadix(`${str3.toString(2)}.` + tmp6Result1.padStart(str4.toString(2), 24, "0"), 2), result];
     let arr = items.push(items1);
     num = num + 8;
@@ -54,13 +52,12 @@ obj[2000] = {
     for (let num = 0; num < byteLength.byteLength; num = num + 26) {
       let obj2 = _modDef5230;
       let shortAt = obj2.getShortAt(byteLength, num);
-      let tmp4 = closure_4;
-      if (closure_4[shortAt]) {
+      if (dependencyMap[shortAt]) {
         if (!types[shortAt]) {
-          types[shortAt] = tmp4[shortAt].description;
+          types[shortAt] = dependencyMap[shortAt].description;
         }
         let obj = { type: shortAt, path: null };
-        let obj4 = tmp4[shortAt];
+        let obj4 = dependencyMap[shortAt];
         obj.path = obj4.path(byteLength, num + 2);
         let arr = paths.push(obj);
       }
@@ -81,7 +78,7 @@ obj = {
     return items;
   }
 };
-let closure_4 = {
+const dependencyMap = {
   [obj.CLOSED_SUBPATH_LENGTH]: obj,
   [obj.CLOSED_SUBPATH_BEZIER_LINKED]: { description: "Closed subpath Bezier knot, linked", path: parseBezierKnot },
   [obj.CLOSED_SUBPATH_BEZIER_UNLINKED]: { description: "Closed subpath Bezier knot, unlinked", path: parseBezierKnot },
@@ -121,19 +118,18 @@ let closure_4 = {
       const obj3 = _mod5213;
       const items = [num2 * obj3.parseFloatRadix(`${(2130706432 & longAt) >>> 24.toString(2)}.` + _mod5213.padStart(str2.toString(2), 24, "0"), 2), , , ];
       sum = sum + 4;
-      let tmpResult = tmp(5230);
+      let tmpResult = _modDef5230;
       const longAt1 = tmpResult.getLongAt(dataView, sum);
       let num3 = num;
       if (longAt1 >>> 31 === 0) {
         num3 = 1;
       }
-      tmp4(5213);
-      const tmp4Result = tmp4(5213);
+      const tmp4Result = _mod5213;
       const text1 = `${str3.toString(2)}.`;
       const str4 = longAt1 & parseInt(tmp4Result.strRepeat("1", 24), 2);
       items[1] = num3 * tmp4Result.parseFloatRadix(`${(2130706432 & longAt1) >>> 24.toString(2)}.` + _mod5213.padStart(str4.toString(2), 24, "0"), 2);
       const sum1 = sum + 8;
-      tmpResult = tmp(5230);
+      tmpResult = _modDef5230;
       const longAt2 = tmpResult.getLongAt(dataView, sum1);
       let num4 = num;
       if (longAt2 >>> 31 === 0) {

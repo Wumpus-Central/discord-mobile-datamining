@@ -1,6 +1,7 @@
 // _runtime/01638_overrideLogFunctionImplementation.js
 import runWorkletOnJS from "01643_runWorkletOnJS.js";
 import _mod1647 from "metro/01647__.js";
+import mockedRequestAnimationFrame from "01651_mockedRequestAnimationFrame.js";
 import 01639__ from "metro/01639__.js";
 import get_ActivityIndicator from "metro/01640__.js";
 
@@ -143,7 +144,7 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
     if (ReanimatedModule) {
       if (closure_3) {
         const _globalThis = globalThis;
-        globalThis.requestAnimationFrame = tmp(1651).mockedRequestAnimationFrame;
+        globalThis.requestAnimationFrame = mockedRequestAnimationFrame.mockedRequestAnimationFrame;
       }
       const fn = function o() {
         if (typeof closure_8 === "function") {
@@ -192,12 +193,12 @@ export const initializeUIRuntime = function initializeUIRuntime(ReanimatedModule
           throw new TypeError("Trying to call a non-function");
         }
       };
-      __closure = { setupCallGuard, setupConsole, SHOULD_BE_USE_WEB: module_1639, setupMicrotasks: tmp(1643).setupMicrotasks, setupRequestAnimationFrame };
+      __closure = { setupCallGuard, setupConsole, SHOULD_BE_USE_WEB: module_1639, setupMicrotasks: runWorkletOnJS.setupMicrotasks, setupRequestAnimationFrame };
       fn.__closure = __closure;
       fn.__workletHash = 2162023783290;
       fn.__initData = __initData;
-      tmp(1643).runOnUIImmediately(fn)();
-      const tmpResult = tmp(1643);
+      runWorkletOnJS.runOnUIImmediately(fn)();
+      const tmpResult = runWorkletOnJS;
     } else {
       const _Error = Error;
       let error = new Error("[Reanimated] Reanimated is trying to initialize the UI runtime without a valid ReanimatedModule");

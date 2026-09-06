@@ -1,4 +1,5 @@
 // _runtime/metro/00158__wrapNativeSuper.js
+import _setPrototypeOf from "../00099__setPrototypeOf.js";
 import _isNativeFunction from "../00159__isNativeFunction.js";
 
 function _wrapNativeSuper(fn) {
@@ -34,10 +35,9 @@ function _wrapNativeSuper(fn) {
           obj = { value: Wrapper, enumerable: false, writable: true, configurable: true };
           obj.constructor = obj;
           Wrapper.prototype = Object.create(fn.prototype, obj);
-          return tmp7(99)(Wrapper, fn);
+          return _setPrototypeOf(Wrapper, fn);
         }
       }
-      tmp7 = require;
     }
     return fn;
   };

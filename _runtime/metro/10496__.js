@@ -84,14 +84,17 @@ const items = [
         start5.assign("day", result);
         if (index[4]) {
           const start2 = parsingResult.start;
-          start2.assign("year", tmp2(10494).parseYear(index[4]));
+          start2.assign("year", FRMonthNameLittleEndianParser(10494).parseYear(index[4]));
         } else {
           const start = parsingResult.start;
-          start.imply("year", tmp2(10433).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
+          start.imply(
+            "year",
+            FRMonthNameLittleEndianParser(10433).findYearClosestToRef(createParsingResult.refDate, result, tmp4),
+          );
         }
         if (index[2]) {
           const start3 = parsingResult.start;
-          const result1 = tmp2(10494).parseOrdinalNumberPattern(index[2]);
+          const result1 = FRMonthNameLittleEndianParser(10494).parseOrdinalNumberPattern(index[2]);
           parsingResult.end = start3.clone();
           const end = parsingResult.end;
           end.assign("day", result1);

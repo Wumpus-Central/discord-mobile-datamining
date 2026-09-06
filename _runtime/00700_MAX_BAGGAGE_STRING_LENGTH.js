@@ -1,5 +1,6 @@
 // _runtime/00700_MAX_BAGGAGE_STRING_LENGTH.js
 import _mod688 from "metro/00688__.js";
+import consoleSandbox from "00689_consoleSandbox.js";
 import _mod692 from "metro/00692__.js";
 
 require = arg1;
@@ -105,10 +106,12 @@ export const baggageHeaderToDynamicSamplingContext = function baggageHeaderToDyn
     return tmp10;
   }
 };
-export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingContextToSentryBaggageHeader(arg0) {
-  if (arg0) {
+export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingContextToSentryBaggageHeader(
+  dynamicSamplingContextFromSpan,
+) {
+  if (dynamicSamplingContextFromSpan) {
     const _Object = Object;
-    const entries = Object.entries(arg0);
+    const entries = Object.entries(dynamicSamplingContextFromSpan);
     const reduced = entries.reduce((acc, item) => {
       [tmp, tmp2] = item;
       if (tmp2) {
@@ -133,7 +136,7 @@ export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSampl
         if (combined1.length > 8192) {
           combined1 = acc;
           if (_mod688.DEBUG_BUILD) {
-            const debug = tmp5(tmp6[2]).debug;
+            const debug = consoleSandbox.debug;
             const _HermesInternal2 = HermesInternal;
             debug.warn(
               "Not adding key: " +
@@ -144,8 +147,6 @@ export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSampl
             );
             combined1 = acc;
           }
-          tmp5 = require;
-          tmp6 = dependencyMap;
         }
         return combined1;
       }, "");
@@ -168,7 +169,7 @@ export const objectToBaggageHeader = function objectToBaggageHeader(arg0) {
       if (combined1.length > 8192) {
         combined1 = acc;
         if (_mod688.DEBUG_BUILD) {
-          const debug = tmp5(tmp6[2]).debug;
+          const debug = consoleSandbox.debug;
           const _HermesInternal2 = HermesInternal;
           debug.warn(
             "Not adding key: " +
@@ -179,8 +180,6 @@ export const objectToBaggageHeader = function objectToBaggageHeader(arg0) {
           );
           combined1 = acc;
         }
-        tmp5 = require;
-        tmp6 = dependencyMap;
       }
       return combined1;
     }, "");

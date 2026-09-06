@@ -15,7 +15,7 @@ KeyboardEvents2.addListener("keyboardWillShow", (arg0) => {
   c2 = false;
   global = arg0;
 });
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

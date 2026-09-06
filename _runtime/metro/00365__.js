@@ -67,15 +67,16 @@ export default function bezier(arg0, arg1, arg2, arg3) {
                   let diff1 = sum2;
                   if (0.001 <= sum3) {
                     const sum4 =
-                      num7 * (1 - num7 * tmp14 + num7 * tmp13) * diff1 * diff1 +
-                      2 * (num7 * tmp14 - num8 * tmp13) * diff1 +
-                      num7 * tmp13;
+                      num7 * (1 - num7 * closure_2 + num7 * closure_0) * diff1 * diff1 +
+                      2 * (num7 * closure_2 - num8 * closure_0) * diff1 +
+                      num7 * closure_0;
                     let tmp27 = diff1;
                     while (0 !== sum4) {
                       diff1 =
                         diff1 -
-                        ((((1 - num7 * tmp14 + num7 * tmp13) * diff1 + (num7 * tmp14 - num8 * tmp13)) * diff1 +
-                          num7 * tmp13) *
+                        ((((1 - num7 * closure_2 + num7 * closure_0) * diff1 + (num7 * closure_2 - num8 * closure_0)) *
+                          diff1 +
+                          num7 * closure_0) *
                           diff1 -
                           arg0) /
                           sum4;
@@ -92,8 +93,9 @@ export default function bezier(arg0, arg1, arg2, arg3) {
                     while (true) {
                       let sum6 = num4 + (sum5 - num4) / 2;
                       let diff2 =
-                        (((1 - num7 * tmp14 + num7 * tmp13) * sum6 + (num7 * tmp14 - num8 * tmp13)) * sum6 +
-                          num7 * tmp13) *
+                        (((1 - num7 * closure_2 + num7 * closure_0) * sum6 + (num7 * closure_2 - num8 * closure_0)) *
+                          sum6 +
+                          num7 * closure_0) *
                           sum6 -
                         arg0;
                       let tmp19 = sum5;
@@ -117,11 +119,11 @@ export default function bezier(arg0, arg1, arg2, arg3) {
                       }
                     }
                   }
-                  diff1 = num7 * tmp;
+                  diff1 = num7 * closure_1;
                   num12 = num7 * closure_3;
                   const result = num7 * closure_3;
-                  num7 = num7 * tmp;
-                  num8 = num12 - num8 * tmp;
+                  num7 = num7 * closure_1;
+                  num8 = num12 - num8 * closure_1;
                   const result1 = (((1 - result + diff1) * sum2 + num8) * sum2 + num7) * sum2;
                 }
               }

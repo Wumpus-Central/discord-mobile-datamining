@@ -58,7 +58,7 @@ function mapStringToNumericComponents(str) {
       num2 = num;
     }
     AnimatedInterpolation(38)(items1.length > 0, "outputRange must contain color or value with numeric component");
-    if (num2 < str.length) {
+    if (num2 < "outputRange must contain color or value with numeric component".length) {
       items1.push(str.substring(num2, str.length));
     }
     obj = { isColor: false, components: items1 };
@@ -149,13 +149,13 @@ const entry = {
               if (1 < _undefined2.length - 1) {
                 let num2 = 1;
                 num = 1;
-                if (arr[1] < num) {
+                if (_undefined2[1] < num) {
                   const sum = num2 + 1;
                   num = sum;
-                  while (sum < arr.length - 1) {
+                  while (sum < _undefined2.length - 1) {
                     num2 = sum;
                     num = sum;
-                    if (arr[sum] >= num) {
+                    if (_undefined2[sum] >= num) {
                       break;
                     }
                   }
@@ -196,18 +196,18 @@ const entry = {
                   }
                 } else {
                   tmp13 = tmp12;
-                  if ("identity" !== tmp11) {
+                  if ("identity" !== extrapolate) {
                     tmp14 = tmp12;
-                    if ("clamp" === tmp11) {
+                    if ("clamp" === extrapolate) {
                       tmp14 = tmp6;
                     }
                   }
                 }
               } else {
                 tmp13 = num;
-                if ("identity" !== tmp10) {
+                if ("identity" !== extrapolate) {
                   tmp12 = num;
-                  if ("clamp" === tmp10) {
+                  if ("clamp" === extrapolate) {
                     tmp12 = tmp4;
                   }
                 }
@@ -285,13 +285,13 @@ const entry = {
           if (1 < _undefined2.length - 1) {
             let num2 = 1;
             num = 1;
-            if (arr[1] < num) {
+            if (_undefined2[1] < num) {
               const sum = num2 + 1;
               num = sum;
-              while (sum < arr.length - 1) {
+              while (sum < _undefined2.length - 1) {
                 num2 = sum;
                 num = sum;
-                if (arr[sum] >= num) {
+                if (_undefined2[sum] >= num) {
                   break;
                 }
               }
@@ -332,18 +332,18 @@ const entry = {
               }
             } else {
               tmp13 = tmp12;
-              if ("identity" !== tmp11) {
+              if ("identity" !== extrapolate) {
                 tmp14 = tmp12;
-                if ("clamp" === tmp11) {
+                if ("clamp" === extrapolate) {
                   tmp14 = tmp6;
                 }
               }
             }
           } else {
             tmp13 = num;
-            if ("identity" !== tmp10) {
+            if ("identity" !== extrapolate) {
               tmp12 = num;
-              if ("clamp" === tmp10) {
+              if ("clamp" === extrapolate) {
                 tmp12 = tmp4;
               }
             }
@@ -382,13 +382,13 @@ const entry = {
           if (1 < _undefined2.length - 1) {
             let num2 = 1;
             num = 1;
-            if (arr[1] < num) {
+            if (_undefined2[1] < num) {
               const sum = num2 + 1;
               num = sum;
-              while (sum < arr.length - 1) {
+              while (sum < _undefined2.length - 1) {
                 num2 = sum;
                 num = sum;
-                if (arr[sum] >= num) {
+                if (_undefined2[sum] >= num) {
                   break;
                 }
               }
@@ -429,18 +429,18 @@ const entry = {
               }
             } else {
               tmp13 = tmp12;
-              if ("identity" !== tmp11) {
+              if ("identity" !== extrapolate) {
                 tmp14 = tmp12;
-                if ("clamp" === tmp11) {
+                if ("clamp" === extrapolate) {
                   tmp14 = tmp6;
                 }
               }
             }
           } else {
             tmp13 = num;
-            if ("identity" !== tmp10) {
+            if ("identity" !== extrapolate) {
               tmp12 = num;
-              if ("clamp" === tmp10) {
+              if ("clamp" === extrapolate) {
                 tmp12 = tmp4;
               }
             }

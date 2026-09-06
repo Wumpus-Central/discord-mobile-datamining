@@ -122,7 +122,7 @@ const entry = {
       }
       self._opacityActive(num);
       if (null != self.props.onPressIn) {
-        const props = tmp.props;
+        const props = self.props;
         props.onPressIn(dispatchConfig);
       }
     };

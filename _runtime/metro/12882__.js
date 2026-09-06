@@ -1,5 +1,6 @@
 // _runtime/metro/12882__.js
 import _mod12824 from "12824__.js";
+import _mod12884 from "12884__.js";
 import setupIntegration from "12853__.js";
 
 export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
@@ -28,11 +29,11 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
           if (hasItem) {
             closure_2 = handled;
             extra = { level: null, extra: null };
-            let tmpResult = tmp(12884);
+            let tmpResult = _mod12884;
             extra.level = tmpResult.severityLevelFromString(level);
             extra = { arguments: args };
             extra.extra = extra;
-            tmpResult = tmp(12824);
+            tmpResult = _mod12824;
             tmpResult.withScope((addEventProcessor) => {
               addEventProcessor.addEventProcessor((arg0) => {
                 arg0.logger = "console";
@@ -44,21 +45,20 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
               if ("assert" !== level) {
                 const found = args.find((item) => item instanceof Error);
                 if (found) {
-                  let tmp14Result = tmp14(12845);
+                  let tmp14Result = args(12845);
                   tmp14Result.captureException(found, obj);
                 } else {
-                  tmp14Result = tmp14(12806);
-                  const safeJoinResult = tmp14Result.safeJoin(tmp12, " ");
+                  tmp14Result = args(12806);
+                  const safeJoinResult = tmp14Result.safeJoin(args, " ");
                   args(12845).captureMessage(safeJoinResult, obj);
                   const obj4 = args(12845);
                 }
-                tmp12 = args;
               } else if (!args[0]) {
                 obj = args(12806);
                 const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + obj.safeJoin(arr.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", arr.slice(1));
-                const tmp4 = obj.safeJoin(arr.slice(1), " ") || "console.assert";
+                const combined = "Assertion failed: " + obj.safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                const tmp4 = obj.safeJoin(args.slice(1), " ") || "console.assert";
                 args(12845).captureMessage(combined, obj);
                 const obj2 = args(12845);
               }

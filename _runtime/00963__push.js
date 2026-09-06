@@ -154,7 +154,7 @@ function createIndexedDbStore(arg0) {
     return f71787;
   }
   const obj = { push: null, unshift: null, shift: null };
-  closure_4 = asyncGeneratorStep(async (arg0, value) => {
+  closure_4 = asyncGeneratorStep(async (arg0) => {
     closure_2 = tmp3;
     c3 = 1;
     let obj3 = dbName(dependencyMap[1]);
@@ -200,7 +200,7 @@ function createIndexedDbStore(arg0) {
     }
     return applyArgumentsResult;
   };
-  closure_3 = asyncGeneratorStep(async (arg0, value) => {
+  closure_3 = asyncGeneratorStep(async (arg0) => {
     closure_2 = tmp3;
     let obj3 = dbName(dependencyMap[1]);
     await obj3.serializeEnvelope(closure_0);
@@ -244,7 +244,7 @@ function createIndexedDbStore(arg0) {
     }
     return applyArgumentsResult;
   };
-  asyncGeneratorStep = asyncGeneratorStep(async (arg0, value) => {
+  asyncGeneratorStep = asyncGeneratorStep(async () => {
     await closure_1_5(getStore());
     if (1 === tmp7) {
       c2 = 0;
@@ -314,7 +314,7 @@ export const makeBrowserOfflineTransport = function makeBrowserOfflineTransport(
     obj.createStore = createIndexedDbStore;
     const tmp2 = closure_0(obj);
     const WINDOW = ignoreNextOnError.WINDOW;
-    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    closure_0 = asyncGeneratorStep(async (arg0) => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

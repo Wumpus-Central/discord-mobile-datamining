@@ -64,7 +64,6 @@ export default function TabsHost(onNativeFocusChange) {
   };
   let backgroundColor;
   const tmp8 = _slicedToArray(useState("regular"), 2);
-  const tmp9 = closure_9;
   if (nativeContainerStyle != null) {
     backgroundColor = nativeContainerStyle.backgroundColor;
   }
@@ -77,5 +76,5 @@ export default function TabsHost(onNativeFocusChange) {
   }
   items1[1] = bottomAccessory;
   obj.children = items1;
-  return tmp9(ref(4951), obj);
+  return closure_9(ref(4951), obj);
 }

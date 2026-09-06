@@ -1,6 +1,8 @@
 // _runtime/12847_applyScopeDataToEvent.js
+import spanTimeInputToSeconds from "12802_spanTimeInputToSeconds.js";
 import _mod12803 from "metro/12803__.js";
 import _mod12822 from "metro/12822__.js";
+import _mod12833 from "metro/12833__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -21,7 +23,7 @@ export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1)
     const merged1 = Object.assign(extra.extra);
     extra.extra = obj;
   }
-  let tmp3Result = tmp3(12803);
+  let tmp3Result = _mod12803;
   const dropUndefinedKeysResult1 = tmp3Result.dropUndefinedKeys(tags);
   let length2 = dropUndefinedKeysResult1;
   if (dropUndefinedKeysResult1) {
@@ -34,7 +36,7 @@ export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1)
     const merged3 = Object.assign(extra.tags);
     extra.tags = obj;
   }
-  tmp3Result = tmp3(12803);
+  tmp3Result = _mod12803;
   const dropUndefinedKeysResult2 = tmp3Result.dropUndefinedKeys(user);
   let length3 = dropUndefinedKeysResult2;
   if (dropUndefinedKeysResult2) {
@@ -70,18 +72,18 @@ export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1)
     extra.transaction = transactionName;
   }
   if (span) {
-    const obj3 = { trace: tmp3(12802).spanToTraceContext(span) };
+    const obj3 = { trace: spanTimeInputToSeconds.spanToTraceContext(span) };
     const merged8 = Object.assign(extra.contexts);
     extra.contexts = obj3;
     const obj4 = { dynamicSamplingContext: null };
-    const tmp3Result2 = tmp3(12802);
-    obj4.dynamicSamplingContext = tmp3(12833).getDynamicSamplingContextFromSpan(span);
+    const tmp3Result2 = spanTimeInputToSeconds;
+    obj4.dynamicSamplingContext = _mod12833.getDynamicSamplingContextFromSpan(span);
     const merged9 = Object.assign(extra.sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj4;
-    const tmp3Result3 = tmp3(12833);
-    const rootSpan = tmp3(12802).getRootSpan(span);
-    const tmp3Result4 = tmp3(12802);
-    const description = tmp3(12802).spanToJSON(rootSpan).description;
+    const tmp3Result3 = _mod12833;
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(span);
+    const tmp3Result4 = spanTimeInputToSeconds;
+    const description = spanTimeInputToSeconds.spanToJSON(rootSpan).description;
     let tmp39 = description;
     if (description) {
       tmp39 = !extra.transaction;
@@ -92,7 +94,7 @@ export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1)
     if (tmp39) {
       extra.transaction = description;
     }
-    const tmp3Result5 = tmp3(12802);
+    const tmp3Result5 = spanTimeInputToSeconds;
   }
   if (extra.fingerprint) {
     const _Array = Array;
@@ -123,7 +125,9 @@ export const applyScopeDataToEvent = function applyScopeDataToEvent(extra, arg1)
     const merged10 = Object.assign(extra.sdkProcessingMetadata);
     const merged11 = Object.assign(sdkProcessingMetadata);
     extra.sdkProcessingMetadata = obj5;
+    tmp42 = extra.fingerprint && !extra.fingerprint.length;
   }
+  const tmp3Result1 = _mod12803;
 };
 export const mergeAndOverwriteScopeData = function mergeAndOverwriteScopeData(arg0, arg1, arg2) {
   arg0[arg1] = _mod12822.merge(arg0[arg1], arg2, 1);

@@ -1,6 +1,7 @@
 // _runtime/00843_asString.js
 import SEMANTIC_ATTRIBUTE_CACHE_HIT from "00704_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
 import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "00823_ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.js";
+import truncateTextByBytes from "00826_truncateTextByBytes.js";
 import LANGCHAIN_INTEGRATION_NAME from "00844_LANGCHAIN_INTEGRATION_NAME.js";
 
 require = arg1;
@@ -18,15 +19,15 @@ function asString(str) {
     }
   }
 }
-function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_temperature) {
-  let str = arg0;
-  if (arg0 == null) {
+function baseRequestAttributes(ls_provider, unknown, chat, kwargs, temperature, ls_temperature) {
+  let str = ls_provider;
+  if (ls_provider == null) {
     str = "langchain";
   }
   let obj = {};
   obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_SYSTEM_ATTRIBUTE] = asString(str);
-  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_OPERATION_NAME_ATTRIBUTE] = arg2;
-  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(arg1);
+  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_OPERATION_NAME_ATTRIBUTE] = chat;
+  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = asString(unknown);
   obj[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = LANGCHAIN_INTEGRATION_NAME.LANGCHAIN_ORIGIN;
   if ("kwargs" in kwargs) {
     kwargs = kwargs.kwargs;
@@ -75,7 +76,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
       }
       max_tokens = max_tokens1;
     }
-    if (typeof tmp7 === "function") {
+    if (typeof setNumberIfDefined === "function") {
       const _Number3 = Number;
       const NumberResult1 = Number(max_tokens);
       const _Number4 = Number;
@@ -93,7 +94,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
         }
         top_p = top_p1;
       }
-      if (typeof tmp7 === "function") {
+      if (typeof setNumberIfDefined === "function") {
         const _Number5 = Number;
         const NumberResult2 = Number(top_p);
         const _Number6 = Number;
@@ -103,7 +104,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
         if (temperature != null) {
           const frequency_penalty = temperature.frequency_penalty;
         }
-        if (typeof tmp7 === "function") {
+        if (typeof setNumberIfDefined === "function") {
           const _Number7 = Number;
           const NumberResult3 = Number(frequency_penalty);
           const _Number8 = Number;
@@ -113,7 +114,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
           if (temperature != null) {
             const presence_penalty = temperature.presence_penalty;
           }
-          if (typeof tmp7 === "function") {
+          if (typeof setNumberIfDefined === "function") {
             const _Number9 = Number;
             const NumberResult4 = Number(presence_penalty);
             const _Number10 = Number;
@@ -129,7 +130,7 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
               const BooleanResult = Boolean(temperature.stream);
               if (typeof setIfDefined === "function") {
                 if (null != BooleanResult) {
-                  obj[tmp(823).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
+                  obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_STREAM_ATTRIBUTE] = BooleanResult;
                 }
               } else {
                 throw new TypeError("Trying to call a non-function");
@@ -154,9 +155,9 @@ function baseRequestAttributes(arg0, arg1, arg2, kwargs, temperature, ls_tempera
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-function setIfDefined(arg0, arg1, arg2) {
+function setIfDefined(arg0, GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE, arg2) {
   if (null != arg2) {
-    arg0[arg1] = arg2;
+    arg0[GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = arg2;
   }
 }
 function setNumberIfDefined(arg0, arg1, arg2) {}
@@ -330,28 +331,27 @@ export const extractChatModelRequestAttributes = function extractChatModelReques
             tmpResult[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ORIGINAL_LENGTH_ATTRIBUTE] =
               length;
           }
-          const result = tmp12(826).truncateGenAiMessages(mapped);
+          const result = truncateTextByBytes.truncateGenAiMessages(mapped);
           const tmp10 = asString(result);
-          if (typeof tmp11 === "function") {
+          if (typeof setIfDefined === "function") {
             if (null != tmp10) {
-              tmpResult[tmp12(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
+              tmpResult[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp10;
             }
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          const tmp12Result = tmp12(826);
+          const tmp12Result = truncateTextByBytes;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
         const flatResult = arr.flat();
-        tmp11 = setIfDefined;
       }
     }
   }
   return tmpResult;
 };
 export const extractLLMRequestAttributes = function extractLLMRequestAttributes(
-  arg0,
+  kwargs,
   arr,
   arg2,
   invocationParams,
@@ -375,7 +375,7 @@ export const extractLLMRequestAttributes = function extractLLMRequestAttributes(
   if (str == null) {
     str = "unknown";
   }
-  const tmp2Result = baseRequestAttributes(ls_provider, str, "pipeline", arg0, invocationParams, ls_provider);
+  const tmp2Result = baseRequestAttributes(ls_provider, str, "pipeline", kwargs, invocationParams, ls_provider);
   if (arg2) {
     const _Array = Array;
     if (Array.isArray(arr)) {
@@ -387,9 +387,9 @@ export const extractLLMRequestAttributes = function extractLLMRequestAttributes(
           }
           const mapped = arr.map((content) => ({ role: "user", content }));
           const tmp9 = asString(mapped);
-          if (typeof tmp10 === "function") {
+          if (typeof setIfDefined === "function") {
             if (null != tmp9) {
-              tmp2Result[tmp11(823).GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp9;
+              tmp2Result[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = tmp9;
             }
           } else {
             throw new TypeError("Trying to call a non-function");
@@ -397,8 +397,6 @@ export const extractLLMRequestAttributes = function extractLLMRequestAttributes(
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmp10 = setIfDefined;
-        tmp11 = require;
       }
     }
   }
@@ -469,6 +467,7 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
             asString(items),
           );
         }
+        const flatResult = generations.flat();
       })(generations.generations, obj);
       if (flag2) {
         const generations2 = generations.generations;
@@ -497,7 +496,7 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
         }
         const flatResult1 = generations2.flat();
       }
-      const flatResult = generations.flat();
+      let flatResult = generations.flat();
     }
     const llmOutput = generations.llmOutput;
     if (llmOutput) {
@@ -510,14 +509,14 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
           if (!Number.isNaN(NumberResult)) {
             obj[tmp37] = NumberResult;
           }
-          if (typeof tmp34 === "function") {
+          if (typeof setNumberIfDefined === "function") {
             const _Number17 = Number;
             const NumberResult1 = Number(tmp41);
             const _Number18 = Number;
             if (!Number.isNaN(NumberResult1)) {
               obj[tmp40] = NumberResult1;
             }
-            if (typeof tmp34 === "function") {
+            if (typeof setNumberIfDefined === "function") {
               const _Number19 = Number;
               const NumberResult2 = Number(tmp44);
               const _Number20 = Number;
@@ -541,7 +540,7 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
           if (!Number.isNaN(NumberResult3)) {
             obj[tmp19] = NumberResult3;
           }
-          if (typeof tmp16 === "function") {
+          if (typeof setNumberIfDefined === "function") {
             const _Number3 = Number;
             const NumberResult4 = Number(tmp23);
             const _Number4 = Number;
@@ -564,7 +563,7 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
             }
             const sum = num3 + num4;
             if (sum > 0) {
-              if (typeof tmp16 === "function") {
+              if (typeof setNumberIfDefined === "function") {
                 const _Number9 = Number;
                 const NumberResult7 = Number(sum);
                 const _Number10 = Number;
@@ -576,7 +575,7 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
               }
             }
             if (undefined !== usage.cache_creation_input_tokens) {
-              if (typeof tmp16 === "function") {
+              if (typeof setNumberIfDefined === "function") {
                 const _Number11 = Number;
                 const NumberResult8 = Number(tmp31);
                 const _Number12 = Number;
@@ -588,7 +587,7 @@ export const extractLlmResponseAttributes = function extractLlmResponseAttribute
               }
             }
             if (undefined !== usage.cache_read_input_tokens) {
-              if (typeof tmp16 === "function") {
+              if (typeof setNumberIfDefined === "function") {
                 const _Number13 = Number;
                 const NumberResult9 = Number(tmp68);
                 const _Number14 = Number;

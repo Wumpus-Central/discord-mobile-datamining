@@ -14,7 +14,7 @@ export default function setFunctionLength(fn, num) {
     throw tmp25;
   } else {
     if (typeof num === "number") {
-      if (num >= 0) {
+      if (0 >= 0) {
         if (num <= 4294967295) {
           if (closure_3(num) === num) {
             let flag = true;
@@ -23,7 +23,7 @@ export default function setFunctionLength(fn, num) {
               flag = true;
               flag2 = true;
               if (_mod1284) {
-                const tmp4 = tmp2(1284)(fn, "length");
+                const tmp4 = _mod1284(fn, "length");
                 let tmp5 = tmp4;
                 if (tmp4) {
                   tmp5 = !tmp4.configurable;
@@ -43,7 +43,6 @@ export default function setFunctionLength(fn, num) {
                   flag2 = flag3;
                 }
               }
-              tmp2 = require;
             }
             if (!flag2) {
               flag2 = flag;

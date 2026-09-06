@@ -13,7 +13,7 @@ const items = [
 const map = new Map(items);
 let closure_3 = {};
 
-export const useTapGesture = function useTapGesture(gestureHandlerProps) {
+export const useTapGesture = function useTapGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_3;

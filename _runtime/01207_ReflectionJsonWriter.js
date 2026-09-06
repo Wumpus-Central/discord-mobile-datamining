@@ -108,18 +108,16 @@ let items = [
           while (tmp118 !== undefined) {
             let tmp55 = _slicedToArray(tmp52, 2);
             [str6, tmp56] = tmp55;
-            let tmp57 = tmp56;
-            let tmp59 = ReflectionJsonWriter;
             let obj8 = ReflectionJsonWriter(1197);
             let tmp62 = undefined === tmp56;
             if (!tmp62) {
-              tmp62 = typeof tmp57 === "number";
+              tmp62 = typeof tmp56 === "number";
             }
             let assertResult3 = obj8.assert(tmp62);
             let flag3 = false;
             let flag4 = true;
-            let enumResult = self.enum(TResult1, tmp57, kind.name, false, true, enumAsInteger.enumAsInteger);
-            let tmp59Result = tmp59(1197);
+            let enumResult = self.enum(TResult1, tmp56, kind.name, false, true, enumAsInteger.enumAsInteger);
+            let tmp59Result = ReflectionJsonWriter(1197);
             let assertResult4 = tmp59Result.assert(undefined !== enumResult);
             obj[str6.toString()] = enumResult;
             continue;
@@ -156,7 +154,6 @@ let items = [
         } else if ("enum" === kind2) {
           const TResult2 = kind.T();
           for (let num2 = 0; num2 < obj.length; num2 = num2 + 1) {
-            let tmp24 = ReflectionJsonWriter;
             let obj3 = ReflectionJsonWriter(1197);
             let tmp27 = undefined === obj[num2];
             if (!tmp27) {
@@ -165,7 +162,7 @@ let items = [
             let assertResult7 = obj3.assert(tmp27);
             let flag = true;
             let enumResult1 = self.enum(TResult2, obj[num2], kind.name, kind.opt, true, enumAsInteger.enumAsInteger);
-            let tmp24Result = tmp24(1197);
+            let tmp24Result = ReflectionJsonWriter(1197);
             let assertResult8 = tmp24Result.assert(undefined !== enumResult1);
             arr = items.push(enumResult1);
           }
@@ -269,15 +266,15 @@ let items = [
           tmp5 = arg3;
         }
         if (ReflectionJsonWriter(1201).ScalarType.INT32 !== arg0) {
-          if (tmp7(1201).ScalarType.SFIXED32 !== arg0) {
-            if (tmp7(1201).ScalarType.SINT32 !== arg0) {
-              if (tmp7(1201).ScalarType.FIXED32 !== arg0) {
-                if (tmp7(1201).ScalarType.UINT32 !== arg0) {
-                  if (tmp7(1201).ScalarType.FLOAT === arg0) {
-                    let tmp7Result = tmp7(1197);
+          if (ReflectionJsonWriter(1201).ScalarType.SFIXED32 !== arg0) {
+            if (ReflectionJsonWriter(1201).ScalarType.SINT32 !== arg0) {
+              if (ReflectionJsonWriter(1201).ScalarType.FIXED32 !== arg0) {
+                if (ReflectionJsonWriter(1201).ScalarType.UINT32 !== arg0) {
+                  if (ReflectionJsonWriter(1201).ScalarType.FLOAT === arg0) {
+                    let tmp7Result = ReflectionJsonWriter(1197);
                     tmp7Result.assertFloat32(tmp);
-                  } else if (tmp7(1201).ScalarType.DOUBLE !== arg0) {
-                    if (tmp7(1201).ScalarType.STRING === arg0) {
+                  } else if (ReflectionJsonWriter(1201).ScalarType.DOUBLE !== arg0) {
+                    if (ReflectionJsonWriter(1201).ScalarType.STRING === arg0) {
                       if ("" === tmp) {
                         let str5;
                         if (tmp5) {
@@ -285,33 +282,33 @@ let items = [
                         }
                         let tmp19 = str5;
                       } else {
-                        tmp7Result = tmp7(1197);
+                        tmp7Result = ReflectionJsonWriter(1197);
                         tmp7Result.assert(typeof tmp === "string");
                         tmp19 = tmp;
                       }
                       return tmp19;
-                    } else if (tmp7(1201).ScalarType.BOOL === arg0) {
+                    } else if (ReflectionJsonWriter(1201).ScalarType.BOOL === arg0) {
                       if (false === tmp) {
                         let tmp16 = !tmp5;
                         const tmp17 = !tmp5;
                       } else {
-                        tmp7(1197).assert(typeof tmp === "boolean");
+                        ReflectionJsonWriter(1197).assert(typeof tmp === "boolean");
                         tmp16 = tmp;
-                        const tmp7Result1 = tmp7(1197);
+                        const tmp7Result1 = ReflectionJsonWriter(1197);
                       }
                       return tmp16;
                     } else {
-                      if (tmp7(1201).ScalarType.UINT64 !== arg0) {
-                        if (tmp7(1201).ScalarType.FIXED64 !== arg0) {
-                          if (tmp7(1201).ScalarType.INT64 !== arg0) {
-                            if (tmp7(1201).ScalarType.SFIXED64 !== arg0) {
-                              if (tmp7(1201).ScalarType.SINT64 !== arg0) {
-                                if (tmp7(1201).ScalarType.BYTES === arg0) {
+                      if (ReflectionJsonWriter(1201).ScalarType.UINT64 !== arg0) {
+                        if (ReflectionJsonWriter(1201).ScalarType.FIXED64 !== arg0) {
+                          if (ReflectionJsonWriter(1201).ScalarType.INT64 !== arg0) {
+                            if (ReflectionJsonWriter(1201).ScalarType.SFIXED64 !== arg0) {
+                              if (ReflectionJsonWriter(1201).ScalarType.SINT64 !== arg0) {
+                                if (ReflectionJsonWriter(1201).ScalarType.BYTES === arg0) {
                                   const _Uint8Array = Uint8Array;
-                                  tmp7(1197).assert(tmp instanceof Uint8Array);
+                                  ReflectionJsonWriter(1197).assert(tmp instanceof Uint8Array);
                                   if (tmp.byteLength) {
-                                    let str = tmp7(1190).base64encode(tmp);
-                                    const tmp7Result3 = tmp7(1190);
+                                    let str = ReflectionJsonWriter(1190).base64encode(tmp);
+                                    const tmp7Result3 = ReflectionJsonWriter(1190);
                                   } else if (tmp5) {
                                     str = "";
                                   }
@@ -327,10 +324,10 @@ let items = [
                           if (!tmp11) {
                             tmp11 = typeof tmp === "bigint";
                           }
-                          tmp7(1197).assert(tmp11);
-                          const PbLong = tmp7(1195).PbLong;
-                          const str2 = PbLong.from(tmp);
-                          return str2.toString();
+                          ReflectionJsonWriter(1197).assert(tmp11);
+                          const PbLong = ReflectionJsonWriter(1195).PbLong;
+                          const tmp7Result4 = ReflectionJsonWriter(1197);
+                          return PbLong.from(tmp).toString();
                         }
                       }
                       let tmp13 = typeof tmp === "number";
@@ -340,10 +337,10 @@ let items = [
                       if (!tmp13) {
                         tmp13 = typeof tmp === "bigint";
                       }
-                      tmp7(1197).assert(tmp13);
-                      const PbULong = tmp7(1195).PbULong;
-                      const str3 = PbULong.from(tmp);
-                      return str3.toString();
+                      ReflectionJsonWriter(1197).assert(tmp13);
+                      const PbULong = ReflectionJsonWriter(1195).PbULong;
+                      const tmp7Result5 = ReflectionJsonWriter(1197);
+                      return PbULong.from(tmp).toString();
                     }
                   }
                   if (0 === tmp) {
@@ -353,7 +350,7 @@ let items = [
                     }
                     let str6 = num2;
                   } else {
-                    tmp7(1197).assert(typeof tmp === "number");
+                    ReflectionJsonWriter(1197).assert(typeof tmp === "number");
                     const _Number = Number;
                     str6 = "NaN";
                     if (!Number.isNaN(tmp)) {
@@ -369,7 +366,7 @@ let items = [
                       }
                       str6 = str7;
                     }
-                    const tmp7Result6 = tmp7(1197);
+                    const tmp7Result6 = ReflectionJsonWriter(1197);
                   }
                   return str6;
                 }
@@ -381,9 +378,9 @@ let items = [
                 }
                 let tmp24 = num4;
               } else {
-                tmp7(1197).assertUInt32(tmp);
+                ReflectionJsonWriter(1197).assertUInt32(tmp);
                 tmp24 = tmp;
-                const tmp7Result7 = tmp7(1197);
+                const tmp7Result7 = ReflectionJsonWriter(1197);
               }
               return tmp24;
             }
@@ -396,8 +393,8 @@ let items = [
           }
           tmp = num6;
         } else {
-          tmp7(1197).assertInt32(tmp);
-          const tmp7Result8 = tmp7(1197);
+          ReflectionJsonWriter(1197).assertInt32(tmp);
+          const tmp7Result8 = ReflectionJsonWriter(1197);
         }
         return tmp;
       } else {

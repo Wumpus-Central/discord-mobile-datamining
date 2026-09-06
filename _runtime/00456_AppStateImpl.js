@@ -84,6 +84,7 @@ const entry = {
         if (tmp5) {
           closure_2();
         }
+        tmp5 = "focus" === closure_0 && arg0;
       });
     }
   },

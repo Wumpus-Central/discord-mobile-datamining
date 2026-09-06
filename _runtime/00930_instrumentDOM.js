@@ -47,8 +47,7 @@ function instrumentDOM() {
               tmp10 = !tmp._sentryId;
             }
             if (tmp10) {
-              tmp7(682);
-              const tmp7Result = tmp7(682);
+              const tmp7Result = _mod682;
               const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", tmp7Result.uuid4());
             }
             let str6 = "input";
@@ -81,7 +80,7 @@ function instrumentDOM() {
             }
             const _clearTimeout = clearTimeout;
             clearTimeout(timeout);
-            const WINDOW = tmp7(904).WINDOW;
+            const WINDOW = _mod904.WINDOW;
             timeout = WINDOW.setTimeout(() => {
               c4 = undefined;
               c3 = undefined;
@@ -109,7 +108,7 @@ function instrumentDOM() {
         }
       }
       if (hasOwnPropertyResult) {
-        let tmpResult = tmp(682);
+        let tmpResult = _mod682;
         tmpResult.fill(prototype, "addEventListener", (arg0) => {
           closure_0 = arg0;
           return function (arg0, arg1, arg2) {
@@ -131,7 +130,7 @@ function instrumentDOM() {
                   tmp.handler = tmp4;
                   const call = closure_0.call;
                   if (typeof call === "unknown") {
-                    tmp6(arg0, tmp4, arg2);
+                    closure_0(arg0, tmp4, arg2);
                   } else {
                     call(self, arg0, tmp4, arg2);
                   }
@@ -141,14 +140,14 @@ function instrumentDOM() {
             }
             const call2 = closure_0.call;
             if (typeof call2 === "unknown") {
-              let call2Result = tmp9(arg0, arg1, arg2);
+              let call2Result = closure_0(arg0, arg1, arg2);
             } else {
               call2Result = call2(self, arg0, arg1, arg2);
             }
             return call2Result;
           };
         });
-        tmpResult = tmp(682);
+        tmpResult = _mod682;
         tmpResult.fill(prototype, "removeEventListener", (arg0) => {
           closure_0 = arg0;
           return function (arg0, arg1, arg2) {
@@ -171,7 +170,7 @@ function instrumentDOM() {
                     const call = closure_0.call;
                     let handler = tmp7.handler;
                     if (typeof call === "unknown") {
-                      handler = tmp9(arg0, handler, arg2);
+                      handler = closure_0(arg0, handler, arg2);
                     } else {
                       call(self, arg0, handler, arg2);
                     }
@@ -184,7 +183,7 @@ function instrumentDOM() {
             }
             const call2 = closure_0.call;
             if (typeof call2 === "unknown") {
-              let call2Result = tmp12(arg0, arg1, arg2);
+              let call2Result = closure_0(arg0, arg1, arg2);
             } else {
               call2Result = call2(self, arg0, arg1, arg2);
             }
@@ -239,8 +238,7 @@ function makeDOMEventHandler(arg0) {
             tmp10 = !tmp._sentryId;
           }
           if (tmp10) {
-            tmp7(682);
-            const tmp7Result = tmp7(682);
+            const tmp7Result = _mod682;
             const result1 = tmp7Result.addNonEnumerableProperty(tmp, "_sentryId", tmp7Result.uuid4());
           }
           let str6 = "input";
@@ -273,7 +271,7 @@ function makeDOMEventHandler(arg0) {
           }
           const _clearTimeout = clearTimeout;
           clearTimeout(timeout);
-          const WINDOW = tmp7(904).WINDOW;
+          const WINDOW = _mod904.WINDOW;
           timeout = WINDOW.setTimeout(() => {
             c4 = undefined;
             c3 = undefined;

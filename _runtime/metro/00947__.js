@@ -1,5 +1,7 @@
 // _runtime/metro/00947__.js
+import _mod682 from "00682__.js";
 import ignoreNextOnError from "../00893_ignoreNextOnError.js";
+import _mod937 from "00937__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -8,7 +10,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfIsEmbeddedBrowserExtension() {
   let flag = false;
   if (undefined !== ignoreNextOnError.WINDOW.window) {
-    const WINDOW = tmp(893).WINDOW;
+    const WINDOW = ignoreNextOnError.WINDOW;
     flag = false;
     if (!WINDOW.nw) {
       let id;
@@ -20,9 +22,9 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
       }
       flag = false;
       if (id) {
-        let tmpResult = tmp(682);
+        let tmpResult = _mod682;
         const locationHref = tmpResult.getLocationHref();
-        let someResult = tmp(893).WINDOW === tmp(893).WINDOW.top;
+        let someResult = ignoreNextOnError.WINDOW === ignoreNextOnError.WINDOW.top;
         if (someResult) {
           const items = ["chrome-extension", "moz-extension", "ms-browser-extension", "safari-web-extension"];
           someResult = items.some((item) => closure_0.startsWith("" + item + "://"));
@@ -34,8 +36,8 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
   let flag2 = flag;
   if (flag2) {
     flag2 = true;
-    if (tmp(937).DEBUG_BUILD) {
-      tmpResult = tmp(682);
+    if (_mod937.DEBUG_BUILD) {
+      tmpResult = _mod682;
       tmpResult.consoleSandbox(() => {
         console.error(
           "[Sentry] You cannot use Sentry.init() in a browser extension, see: https://docs.sentry.io/platforms/javascript/best-practices/browser-extensions/",

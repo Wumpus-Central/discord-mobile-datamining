@@ -22,7 +22,7 @@ replaceByteInByteSequence.URL.createObjectURL = function createObjectURL(data) {
     throw error;
   } else {
     const _HermesInternal = HermesInternal;
-    return "" + tmp + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+    return "" + closure_0 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
   }
 };
 replaceByteInByteSequence.URL.revokeObjectURL = function revokeObjectURL(arg0) {};

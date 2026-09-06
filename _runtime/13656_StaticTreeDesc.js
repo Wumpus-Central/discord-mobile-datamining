@@ -109,7 +109,6 @@ function compress_block(last_lit, arr, array) {
         let tmp18 = send_code(last_lit, tmp3, arr);
       } else {
         let tmp22 = array1[tmp3];
-        let tmp20 = send_code;
         let tmp23 = send_code(last_lit, tmp22 + 256 + 1, arr);
         let tmp25 = dependencyMap[tmp22];
         if (0 !== tmp25) {
@@ -136,7 +135,7 @@ function compress_block(last_lit, arr, array) {
         } else {
           tmp9 = array[256 + (diff1 >>> 7)];
         }
-        let tmp20Result = tmp20(last_lit, tmp9, array);
+        let tmp20Result = send_code(last_lit, tmp9, array);
         let tmp13 = dependencyMap2[tmp9];
         if (0 !== tmp13) {
           let diff2 = diff1 - array3[tmp9];
@@ -227,7 +226,6 @@ function build_tree(heap_len, bl_desc) {
     let tmp18 = +heap_len.heap_len;
     heap_len.heap_len = tmp18 - 1;
     heap_len.heap[1] = heap_len.heap[tmp18];
-    let tmp19 = pqdownheap;
     let tmp20 = pqdownheap(heap_len, dyn_tree, 1);
     let tmp21 = heap_len.heap[1];
     let diff1 = heap_len.heap_max - 1;
@@ -248,7 +246,7 @@ function build_tree(heap_len, bl_desc) {
     let tmp26 = +sum3;
     sum3 = tmp26 + 1;
     heap_len.heap[1] = tmp26;
-    let tmp19Result = tmp19(heap_len, dyn_tree, 1);
+    let tmp19Result = pqdownheap(heap_len, dyn_tree, 1);
   } while (heap_len.heap_len >= 2);
   const diff3 = heap_len.heap_max - 1;
   heap_len.heap_max = diff3;

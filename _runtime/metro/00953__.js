@@ -290,10 +290,10 @@ function genId() {
   closure_39 = tmp + 1;
   return +closure_39;
 }
-function absoluteToStylesheet(arg0, arg1) {
-  let str = arg0;
-  closure_0 = arg1;
-  if (!arg0) {
+function absoluteToStylesheet(parentNode, rootId) {
+  let str = parentNode;
+  closure_0 = rootId;
+  if (!parentNode) {
     str = "";
   }
   return str.replace(closure_42, (arg0, arg1, arg2, arg3, arg4, arg5) => {
@@ -382,11 +382,12 @@ function getHref(createElement, str) {
   const attr = value.setAttribute("href", str2);
   return value.href;
 }
-function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
+function transformAttribute(createElement, arg1, value, str, arr, fn, size) {
   let sum3;
   if (str) {
-    if ("src" !== arg2) {
-      if ("xlink:href" === arg2) {
+    str = "src";
+    if ("src" !== value) {
+      if ("xlink:href" === value) {
         if ("#" !== str[0]) {
           let tmp48 = str;
           if (str) {
@@ -396,7 +397,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
               value = weakMap.get(createElement);
               if (!value) {
                 const element = <a />;
-                const result = obj11.set(createElement, element);
+                const result = weakMap.set(createElement, element);
                 value = element;
               }
               if (!str) {
@@ -410,13 +411,12 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 }
               }
               tmp48 = href5;
-              obj11 = weakMap;
             }
           }
           return tmp48;
         }
       }
-      if ("background" === arg2) {
+      if ("background" === value) {
         let tmp44 = str;
         if (str) {
           let str31 = "";
@@ -425,7 +425,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
             value = weakMap.get(createElement);
             if (!value) {
               const element1 = <a />;
-              const result1 = obj9.set(createElement, element1);
+              const result1 = weakMap.set(createElement, element1);
               value = element1;
             }
             if (!str) {
@@ -439,12 +439,11 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
               }
             }
             tmp44 = href4;
-            obj9 = weakMap;
           }
         }
         return tmp44;
       }
-      if ("srcset" === arg2) {
+      if ("srcset" === value) {
         let joined = str;
         if ("" !== str.trim()) {
           const match = regex2.exec(str.substring(0));
@@ -469,11 +468,10 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 if (str28) {
                   tmp35 = str28;
                   if ("" !== str28.trim()) {
-                    let obj7 = weakMap;
                     let value1 = weakMap.get(createElement);
                     if (!value1) {
                       let element2 = <a />;
-                      let result2 = obj7.set(createElement, element2);
+                      let result2 = weakMap.set(createElement, element2);
                       value1 = element2;
                     }
                     let str29 = "";
@@ -489,18 +487,17 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                     tmp35 = href3;
                   }
                 }
-                let arr = items.push(tmp35);
+                arr = items.push(tmp35);
                 let sum2 = sum;
               } else {
                 let tmp23 = str23;
                 if (str23) {
                   tmp23 = str23;
                   if ("" !== str23.trim()) {
-                    obj5 = weakMap;
                     value2 = weakMap.get(createElement);
                     if (!value2) {
                       let element3 = <a />;
-                      let result3 = obj5.set(createElement, element3);
+                      let result3 = weakMap.set(createElement, element3);
                       value2 = element3;
                     }
                     let str24 = "";
@@ -556,7 +553,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
           joined = items.join(", ");
         }
         return joined;
-      } else if ("style" === arg2) {
+      } else if ("style" === value) {
         let value3 = weakMap.get(createElement);
         if (!value3) {
           const element4 = <a />;
@@ -682,7 +679,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
         return tmp16;
       } else {
         if ("object" === arg1) {
-          if ("data" === arg2) {
+          if ("data" === value) {
             let tmp5 = str;
             if (str) {
               let str9 = "";
@@ -691,7 +688,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                 let value4 = weakMap.get(createElement);
                 if (!value4) {
                   const element5 = <a />;
-                  const result5 = obj.set(createElement, element5);
+                  const result5 = weakMap.set(createElement, element5);
                   value4 = element5;
                 }
                 if (!str) {
@@ -705,7 +702,6 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
                   }
                 }
                 tmp5 = href;
-                obj = weakMap;
               }
             }
             let tmp4 = tmp5;
@@ -714,7 +710,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
         }
         tmp4 = str;
         if (typeof fn === "function") {
-          tmp4 = fn(arg2, str, arg4);
+          tmp4 = fn(value, str, arr);
         }
       }
     }
@@ -726,7 +722,7 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
         let value5 = weakMap.get(createElement);
         if (!value5) {
           const element6 = <a />;
-          const result6 = obj14.set(createElement, element6);
+          const result6 = weakMap.set(createElement, element6);
           value5 = element6;
         }
         if (!str) {
@@ -740,7 +736,6 @@ function transformAttribute(createElement, arg1, arg2, str, arg4, fn, size) {
           }
         }
         tmp52 = href6;
-        obj14 = weakMap;
       }
     }
     return tmp52;
@@ -784,18 +779,18 @@ function distanceToMatch(nodeType, fn) {
   }
   return num3;
 }
-function createMatchPredicate(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
+function createMatchPredicate(unmaskTextClass, unmaskTextSelector) {
+  closure_0 = unmaskTextClass;
+  closure_1 = unmaskTextSelector;
   return (parentNode) => {
     if (null === parentNode) {
       return false;
     } else {
       try {
         if (c0) {
-          if (typeof tmp === "string") {
+          if (typeof c0 === "string") {
             const _HermesInternal = HermesInternal;
-            if (parentNode.matches("." + tmp)) {
+            if (parentNode.matches("." + c0)) {
               return true;
             }
           } else if ((function elementClassMatchesRegex(classList, test) {
@@ -808,7 +803,7 @@ function createMatchPredicate(arg0, arg1) {
               return true;
             }
             return false;
-          })(parentNode, tmp)) {
+          })(parentNode, c0)) {
             return true;
           }
         }
@@ -823,7 +818,7 @@ function createMatchPredicate(arg0, arg1) {
     }
   };
 }
-function needMaskingText(nodeType, arg1, arg2, arg3, arg4, arg5) {
+function needMaskingText(nodeType, maskTextClass, maskTextSelector, unmaskTextClass, unmaskTextSelector, maskAllText) {
   try {
     let parentElement = nodeType;
     if (nodeType.nodeType !== nodeType.ELEMENT_NODE) {
@@ -838,31 +833,31 @@ function needMaskingText(nodeType, arg1, arg2, arg3, arg4, arg5) {
           return true;
         }
       }
-      if (arg5) {
-        let tmp9Result = tmp9(obj, tmp11(arg3, arg4));
+      if (maskAllText) {
+        let tmp9Result = distanceToMatch(obj, createMatchPredicate(unmaskTextClass, unmaskTextSelector));
         let tmp9Result2 = tmp9Result;
         if (tmp9Result < 0) {
           return true;
         } else {
           let num7 = Infinity;
-          let tmp11Result = tmp11(arg1, arg2);
+          let tmp11Result = createMatchPredicate(maskTextClass, maskTextSelector);
           if (tmp9Result2 >= 0) {
             num7 = tmp9Result2;
           }
-          tmp9Result = tmp9(parentElement, tmp11Result, num7);
+          tmp9Result = distanceToMatch(parentElement, tmp11Result, num7);
         }
       } else {
-        const tmp9Result1 = tmp9(obj, tmp11(arg1, arg2));
+        const tmp9Result1 = distanceToMatch(obj, createMatchPredicate(maskTextClass, maskTextSelector));
         tmp9Result = tmp9Result1;
         if (tmp9Result1 < 0) {
           return false;
         } else {
           let num5 = Infinity;
-          tmp11Result = tmp11(arg3, arg4);
+          tmp11Result = createMatchPredicate(unmaskTextClass, unmaskTextSelector);
           if (tmp9Result >= 0) {
             num5 = tmp9Result;
           }
-          tmp9Result2 = tmp9(obj, tmp11Result, num5);
+          tmp9Result2 = distanceToMatch(obj, tmp11Result, num5);
         }
       }
       if (tmp9Result >= 0) {
@@ -874,7 +869,7 @@ function needMaskingText(nodeType, arg1, arg2, arg3, arg4, arg5) {
       } else {
         tmp23 = tmp9Result2 < 0;
         if (tmp23) {
-          tmp23 = arg5;
+          tmp23 = maskAllText;
         }
       }
       return tmp23;
@@ -1109,15 +1104,15 @@ function serializeNode(nodeType, newlyAddedElement) {
               function recordInlineImage() {
                 const removed = attributes2.removeEventListener("load", recordInlineImage);
                 try {
-                  closure_2_37.width = obj2.naturalWidth;
-                  closure_2_37.height = obj2.naturalHeight;
-                  closure_2_38.drawImage(obj2, 0, 0);
+                  closure_2_37.width = attributes2.naturalWidth;
+                  closure_2_37.height = attributes2.naturalHeight;
+                  closure_2_38.drawImage(attributes2, 0, 0);
                   obj.rr_dataURL = closure_2_37.toDataURL(dataURLOptions.type, dataURLOptions.quality);
-                  if ("anonymous" === obj2.crossOrigin) {
+                  if ("anonymous" === attributes2.crossOrigin) {
                     if (crossOrigin) {
                       obj.crossOrigin = tmp15;
                     } else {
-                      obj2.removeAttribute("crossorigin");
+                      attributes2.removeAttribute("crossorigin");
                     }
                   }
                 } catch (tmp11) {
@@ -1186,12 +1181,7 @@ function serializeNode(nodeType, newlyAddedElement) {
             delete tmp2[tmp];
           }
           try {
-            obj = { type: RN.Element, tagName: tmp8, attributes: tmp44, childNodes: [], isSVG: null, needBlock: null, rootId: null, isCustom: null };
-            const tmp52 = closure_50(attributes);
-            obj.isSVG = tmp52;
-            obj.needBlock = tmp7;
-            obj.rootId = tmp6;
-            obj.isCustom = flag;
+            obj = { type: RN.Element, tagName: tmp8, attributes: tmp44, childNodes: [], isSVG: closure_50(attributes), needBlock: tmp7, rootId: tmp6, isCustom: flag };
             return obj;
           } catch (err) {
           }
@@ -1213,6 +1203,7 @@ function serializeNode(nodeType, newlyAddedElement) {
       if (checked) {
         obj.checked = checked;
       }
+      length = attributes.attributes.length;
     })(nodeType, obj2);
   } else if (nodeType.TEXT_NODE === nodeType) {
     obj3 = { doc, maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, maskTextFn, maskInputOptions, maskInputFn, rootId: tmp2 };
@@ -1648,7 +1639,7 @@ function serializeNodeWithId(iframeContentDocument, doc) {
           needBlock = merged.needBlock;
         }
         if (!needBlock) {
-          let tmp29 = (function onceIframeLoaded(contentWindow, arg1, arg2) {
+          let tmp29 = (function onceIframeLoaded(contentWindow, arg1, iframeLoadTimeout) {
             closure_0 = arg1;
             contentWindow = contentWindow.contentWindow;
             if (contentWindow) {
@@ -1671,7 +1662,7 @@ function serializeNodeWithId(iframeContentDocument, doc) {
                       closure_0();
                       c1 = true;
                     }
-                  }, arg2);
+                  }, iframeLoadTimeout);
                   const listener1 = contentWindow.addEventListener("load", () => {
                     clearTimeout$1(closure_2);
                     c1 = true;
@@ -1686,10 +1677,10 @@ function serializeNodeWithId(iframeContentDocument, doc) {
             const tmp2 = getIframeContentDocument(closure_0);
             if (tmp2) {
               if (onIframeLoad) {
-                obj = { doc: tmp2, mirror, blockClass, blockSelector, unblockSelector, maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, skipChild: false, inlineStylesheet, maskInputOptions, maskAttributeFn, maskTextFn, maskInputFn, slimDOMOptions, dataURLOptions, inlineImages, recordCanvas, preserveWhiteSpace, onSerialize, onIframeLoad: tmp3, iframeLoadTimeout: num2, onStylesheetLoad, stylesheetLoadTimeout: num, keepIframeSrcFn, ignoreCSSAttributes };
+                obj = { doc: tmp2, mirror, blockClass, blockSelector, unblockSelector, maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, skipChild: false, inlineStylesheet, maskInputOptions, maskAttributeFn, maskTextFn, maskInputFn, slimDOMOptions, dataURLOptions, inlineImages, recordCanvas, preserveWhiteSpace, onSerialize, onIframeLoad, iframeLoadTimeout: num2, onStylesheetLoad, stylesheetLoadTimeout: num, keepIframeSrcFn, ignoreCSSAttributes };
                 const tmp30 = serializeNodeWithId(tmp2, obj);
                 if (tmp30) {
-                  tmp3(closure_0, tmp30);
+                  onIframeLoad(closure_0, tmp30);
                 }
               }
             }
@@ -1702,23 +1693,23 @@ function serializeNodeWithId(iframeContentDocument, doc) {
               if (merged.needBlock) {
                 function updateImageDimensions() {
                   if (iframeContentDocument.isConnected) {
-                    if (!obj.complete) {
+                    if (!iframeContentDocument.complete) {
                       if (onBlockedImageLoad) {
                         try {
-                          const boundingClientRect = obj.getBoundingClientRect();
+                          const boundingClientRect = iframeContentDocument.getBoundingClientRect();
                           let tmp4 = boundingClientRect.width > 0;
                           if (tmp4) {
                             tmp4 = tmp3.height > 0;
                           }
                           if (tmp4) {
-                            tmp(obj, merged, boundingClientRect);
+                            tmp(iframeContentDocument, merged, boundingClientRect);
                           }
                         } catch (err) {
                         }
                       }
                     }
                   }
-                  const removed = obj.removeEventListener("load", updateImageDimensions);
+                  const removed = iframeContentDocument.removeEventListener("load", updateImageDimensions);
                 }
                 if (iframeContentDocument.isConnected) {
                   let str7 = "load";
@@ -1751,7 +1742,7 @@ function serializeNodeWithId(iframeContentDocument, doc) {
           tmp31 = tmp32;
         }
         if (tmp31) {
-          let tmp35 = (function onceStylesheetLoaded(sheet, arg1, arg2) {
+          let tmp35 = (function onceStylesheetLoaded(sheet, arg1, stylesheetLoadTimeout) {
             closure_0 = arg1;
             c1 = false;
             try {
@@ -1761,7 +1752,7 @@ function serializeNodeWithId(iframeContentDocument, doc) {
                     closure_0();
                     c1 = true;
                   }
-                }, arg2);
+                }, stylesheetLoadTimeout);
                 const listener = sheet.addEventListener("load", () => {
                   clearTimeout$1(closure_2);
                   c1 = true;
@@ -1773,12 +1764,11 @@ function serializeNodeWithId(iframeContentDocument, doc) {
             }
           })(iframeContentDocument, () => {
             if (onStylesheetLoad) {
-              obj = { doc, mirror, blockClass, blockSelector, unblockSelector, maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, skipChild: false, inlineStylesheet, maskInputOptions, maskAttributeFn, maskTextFn, maskInputFn, slimDOMOptions, dataURLOptions, inlineImages, recordCanvas, preserveWhiteSpace, onSerialize, onIframeLoad, iframeLoadTimeout: num2, onStylesheetLoad: tmp, stylesheetLoadTimeout: num, keepIframeSrcFn, ignoreCSSAttributes };
+              obj = { doc, mirror, blockClass, blockSelector, unblockSelector, maskAllText, maskTextClass, unmaskTextClass, maskTextSelector, unmaskTextSelector, skipChild: false, inlineStylesheet, maskInputOptions, maskAttributeFn, maskTextFn, maskInputFn, slimDOMOptions, dataURLOptions, inlineImages, recordCanvas, preserveWhiteSpace, onSerialize, onIframeLoad, iframeLoadTimeout: num2, onStylesheetLoad, stylesheetLoadTimeout: num, keepIframeSrcFn, ignoreCSSAttributes };
               const tmp30 = serializeNodeWithId(closure_0, obj);
               if (tmp30) {
-                tmp(tmp3, tmp30);
+                onStylesheetLoad(closure_0, tmp30);
               }
-              tmp3 = closure_0;
             }
           }, num);
         }
@@ -1794,6 +1784,7 @@ function serializeNodeWithId(iframeContentDocument, doc) {
     console.warn(iframeContentDocument, "not serialized");
     return null;
   }
+  const tmp7 = undefined !== newlyAddedElement && newlyAddedElement;
 }
 function on(arg0, arg1) {
   closure_0 = arg0;
@@ -1945,9 +1936,9 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
         } else {
           try {
             if (c0) {
-              if (typeof tmp === "string") {
+              if (typeof c0 === "string") {
                 const _HermesInternal = HermesInternal;
-                if (parentNode.matches("." + tmp)) {
+                if (parentNode.matches("." + c0)) {
                   return true;
                 }
               } else if ((function elementClassMatchesRegex(classList, test) {
@@ -1960,7 +1951,7 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
                   return true;
                 }
                 return false;
-              })(parentNode, tmp)) {
+              })(parentNode, c0)) {
                 return true;
               }
             }
@@ -2019,9 +2010,9 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
                   } else {
                     try {
                       if (c0) {
-                        if (typeof tmp === "string") {
+                        if (typeof c0 === "string") {
                           const _HermesInternal = HermesInternal;
-                          if (parentNode.matches("." + tmp)) {
+                          if (parentNode.matches("." + c0)) {
                             return true;
                           }
                         } else if ((function elementClassMatchesRegex(classList, test) {
@@ -2034,7 +2025,7 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
                             return true;
                           }
                           return false;
-                        })(parentNode, tmp)) {
+                        })(parentNode, c0)) {
                           return true;
                         }
                       }
@@ -2336,11 +2327,11 @@ function initMutationObserver(doc, doc) {
     fn = (arg0) => {
       let onMutation = fn.onMutation;
       if (onMutation) {
-        onMutation = false === obj.onMutation(arg0);
+        onMutation = false === fn.onMutation(arg0);
       }
       if (!onMutation) {
-        const processMutations = obj.processMutations;
-        processMutations.bind(obj)(arg0);
+        const processMutations = fn.processMutations;
+        processMutations.bind(fn)(arg0);
       }
     };
     if (closure_79) {
@@ -2402,8 +2393,8 @@ function initMouseInteractionObserver(doc) {
         let replaced = str;
         if (window.PointerEvent) {
           if (MouseDown.MouseDown !== MouseDown[item]) {
-            if (tmp2.MouseUp !== tmp3) {
-              if (tmp2.TouchStart !== tmp3) {
+            if (MouseDown.MouseUp !== tmp3) {
+              if (MouseDown.TouchStart !== tmp3) {
                 replaced = str;
               }
             }
@@ -2427,26 +2418,26 @@ function initMouseInteractionObserver(doc) {
               if (Mouse === obj4.Touch) {
                 let str2 = "TouchStart";
                 let Touch = Mouse;
-                if (obj3[tmp2] !== obj3.MouseDown) {
-                  str2 = tmp2;
+                if (obj3[replaced] !== obj3.MouseDown) {
+                  str2 = replaced;
                   Touch = Mouse;
-                  if (tmp11[tmp2] === tmp11.MouseUp) {
+                  if (obj3[replaced] === obj3.MouseUp) {
                     str2 = "TouchEnd";
                     Touch = Mouse;
                   }
                 }
               } else {
                 const Pen = tmp10.Pen;
-                str2 = tmp2;
+                str2 = replaced;
                 Touch = Mouse;
               }
             } else {
               const _Boolean = Boolean;
-              str2 = tmp2;
+              str2 = replaced;
               Touch = null;
               if (Boolean(event.changedTouches)) {
                 Touch = obj4.Touch;
-                str2 = tmp2;
+                str2 = replaced;
               }
             }
             if (null !== Touch) {
@@ -2468,7 +2459,7 @@ function initMouseInteractionObserver(doc) {
               }
             } else {
               tmp14 = Touch;
-              if (obj3[tmp2] === obj3.Click) {
+              if (obj3[replaced] === obj3.Click) {
                 tmp14 = c8;
                 c8 = null;
               }
@@ -2513,14 +2504,15 @@ function initMouseInteractionObserver(doc) {
               }
             }
           }
+          tmp = getEventTarget(event);
         };
         let _document;
         if (fn === undefined) {
           _document = document;
         }
-        obj = { capture: true, passive: true };
-        const listener = _document.addEventListener(replaced, fn, obj);
+        const listener = _document.addEventListener(replaced, fn, { capture: true, passive: true });
         closure_7.push(() => document.removeEventListener(selectionchange, fn, obj));
+        obj = { capture: true, passive: true };
       });
       if (typeof callbackWrapper === "function") {
         let fn = () => {
@@ -2565,11 +2557,11 @@ function initScrollObserver(doc) {
         if (!isBlocked(tmp, obj, _getPrototypeOf, _inherits, true)) {
           const id = doc.getId(tmp);
           if (tmp === fn2) {
-            if (tmp9.defaultView) {
+            if (fn2.defaultView) {
               const point = { id, x: null, y: null };
-              ({ left: obj2.x, top: obj2.y } = getWindowScroll(tmp9.defaultView));
+              ({ left: obj2.x, top: obj2.y } = getWindowScroll(fn2.defaultView));
               scroll(point);
-              const tmp13 = getWindowScroll(tmp9.defaultView);
+              const tmp13 = getWindowScroll(fn2.defaultView);
             }
           }
           const point1 = { id, x: null, y: null };
@@ -2608,9 +2600,6 @@ function initScrollObserver(doc) {
         items = [...arguments];
         let self;
         const timestamp = Date.now();
-        if (!timestamp) {
-          const tmp2 = false !== leading.leading;
-        }
         const diff = self - (timestamp - timestamp);
         self = this;
         if (diff > 0) {
@@ -2664,8 +2653,7 @@ function initScrollObserver(doc) {
       if (doc === undefined) {
         doc = document;
       }
-      obj = { capture: true, passive: true };
-      const listener = doc.addEventListener("scroll", fn2, obj);
+      const listener = doc.addEventListener("scroll", fn2, { capture: true, passive: true });
       return () => document.removeEventListener(selectionchange, fn, obj);
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -2713,11 +2701,11 @@ function initInputObserver(sampling) {
                     if (tmp3) {
                       str11 = "SELECT";
                     }
-                    let tmp10 = tmp8[str11.toLowerCase(str11)];
+                    let tmp10 = text[str11.toLowerCase(str11)];
                     if (!tmp10) {
                       let tmp11 = str5;
                       if (str5) {
-                        tmp11 = tmp8[str5];
+                        tmp11 = text[str5];
                       }
                       tmp10 = tmp11;
                     }
@@ -2725,8 +2713,8 @@ function initInputObserver(sampling) {
                       tmp10 = "password" === str5;
                     }
                     if (!tmp10) {
-                      tmp10 = "INPUT" === str11 && !str5 && tmp8.text;
-                      const tmp12 = "INPUT" === str11 && !str5 && tmp8.text;
+                      tmp10 = "INPUT" === str11 && !str5 && text.text;
+                      const tmp12 = "INPUT" === str11 && !str5 && text.text;
                     }
                     const tmp19 = needMaskingText(iter, closure_11, closure_13, closure_12, closure_14, Boolean(tmp10));
                     closure_4 = tmp19;
@@ -2745,8 +2733,8 @@ function initInputObserver(sampling) {
                     let repeatResult = str10;
                     if (tmp19) {
                       let tmp21Result = str10;
-                      if (tmp21) {
-                        tmp21Result = tmp21(str10, iter);
+                      if (closure_9) {
+                        tmp21Result = closure_9(str10, iter);
                       }
                       let repeat = "*".repeat;
                       repeatResult = "*".repeat(tmp21Result.length);
@@ -2772,8 +2760,8 @@ function initInputObserver(sampling) {
                                 let repeatResult = str4;
                                 if (tmp16) {
                                   let tmpResult = str4;
-                                  if (tmp) {
-                                    tmpResult = tmp(str4, getAttribute);
+                                  if (_isNativeReflectConstruct) {
+                                    tmpResult = _isNativeReflectConstruct(str4, getAttribute);
                                   }
                                   const repeat = "*".repeat;
                                   repeatResult = "*".repeat(tmpResult.length);
@@ -2817,6 +2805,7 @@ function initInputObserver(sampling) {
                               str4 = getAttribute.getAttribute("value") || "";
                             }
                             str4 = getAttribute.value;
+                            tmp18 = str5;
                           }
                         });
                       }
@@ -2889,8 +2878,7 @@ function initInputObserver(sampling) {
       if (doc === undefined) {
         _document = document;
       }
-      obj = { capture: true, passive: true };
-      const listener = _document.addEventListener(item, fn, obj);
+      const listener = _document.addEventListener(item, fn, { capture: true, passive: true });
       return () => document.removeEventListener(selectionchange, fn, obj);
     } else {
       throw new TypeError("Trying to call a non-function");
@@ -2968,14 +2956,13 @@ function initInputObserver(sampling) {
             closure_1_72(() => {
               const call = set.call;
               if (typeof call === "unknown") {
-                const result = set(tmp2);
+                const result = set(closure_0);
               } else {
-                call(self, tmp2);
+                call(self, closure_0);
               }
             }, 0);
-            set = closure_3;
-            if (closure_3) {
-              set = tmp2.set;
+            if (set) {
+              set = set.set;
             }
             if (set) {
               let call = set2.call;
@@ -3143,9 +3130,9 @@ function initAdoptedStyleSheetObserver(doc, doc) {
           obj.set = function set(adoptedStyleSheets) {
             if (ownPropertyDescriptor.set == null) {
               if (null !== id) {
-                if (-1 !== tmp2) {
+                if (-1 !== id) {
                   try {
-                    fn2.adoptStyleSheets(adoptedStyleSheets, tmp2);
+                    fn2.adoptStyleSheets(adoptedStyleSheets, id);
                   } catch (err) {
                   }
                 }
@@ -3258,9 +3245,6 @@ function initObservers(doc) {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
-            if (!timestamp) {
-              const tmp2 = false !== leading.leading;
-            }
             const diff = self - (timestamp - timestamp);
             self = this;
             if (diff > 0) {
@@ -3290,7 +3274,7 @@ function initObservers(doc) {
             }
             items.apply(this, items);
           };
-          if (typeof tmp === "function") {
+          if (typeof closure_86 === "function") {
             let fn2 = (changedTouches) => {
               let first = changedTouches;
               if (Boolean(changedTouches.changedTouches)) {
@@ -3309,9 +3293,10 @@ function initObservers(doc) {
                 tmp5(Drag);
               }
               Drag = changedTouches instanceof globalThis.MouseEvent ? tmp6.MouseMove : tmp6.TouchMove;
+              const tmp = getEventTarget(changedTouches);
             };
             closure_131_0 = fn2;
-            if (tmp2) {
+            if (closure_79) {
               fn2 = () => {
                 items = [...arguments];
                 try {
@@ -3335,14 +3320,11 @@ function initObservers(doc) {
             closure_132_2 = { trailing: false };
             closure_132_3 = null;
             closure_132_4 = 0;
-            if (typeof tmp === "function") {
+            if (typeof closure_86 === "function") {
               fn3 = function() {
                 items = [...arguments];
                 let self;
                 const timestamp = Date.now();
-                if (!timestamp) {
-                  const tmp2 = false !== leading.leading;
-                }
                 const diff = self - (timestamp - timestamp);
                 self = this;
                 if (diff > 0) {
@@ -3373,7 +3355,7 @@ function initObservers(doc) {
                 items.apply(this, items);
               };
               closure_133_0 = fn3;
-              if (tmp2) {
+              if (closure_79) {
                 fn3 = () => {
                   items = [...arguments];
                   try {
@@ -3421,7 +3403,7 @@ function initObservers(doc) {
               closure_3 = obj;
               const listener2 = doc.addEventListener("drag", fn3, obj);
               items[2] = () => document.removeEventListener(selectionchange, fn, obj);
-              if (typeof tmp === "function") {
+              if (typeof closure_86 === "function") {
                 let fn4 = () => {
                   const item = items.forEach((fn) => fn());
                 };
@@ -3551,9 +3533,6 @@ function initObservers(doc) {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
-            if (!timestamp) {
-              const tmp2 = false !== leading.leading;
-            }
             const diff = self - (timestamp - timestamp);
             self = this;
             if (diff > 0) {
@@ -3584,7 +3563,7 @@ function initObservers(doc) {
             items.apply(this, items);
           };
           closure_130_0 = fn2;
-          if (tmp2) {
+          if (closure_79) {
             fn2 = () => {
               items = [...arguments];
               try {
@@ -3609,13 +3588,11 @@ function initObservers(doc) {
             _document = document;
           }
           innerWidth = _document;
-          obj = { capture: true, passive: true };
-          const listener = _document.addEventListener("resize", fn2, obj);
+          const listener = _document.addEventListener("resize", fn2, { capture: true, passive: true });
           return () => document.removeEventListener(selectionchange, fn, obj);
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmp2 = closure_79;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -3668,9 +3645,6 @@ function initObservers(doc) {
               items = [...arguments];
               let self;
               const timestamp = Date.now();
-              if (!timestamp) {
-                const tmp2 = false !== leading.leading;
-              }
               const diff = self - (timestamp - timestamp);
               self = this;
               if (diff > 0) {
@@ -3772,7 +3746,7 @@ function initObservers(doc) {
         obj2 = obj1;
         const listener3 = _document4.addEventListener("volumechange", fnResult3, obj1);
         items[3] = () => document.removeEventListener(selectionchange, fn, obj);
-        fnResult4 = fn(tmp3.RateChange);
+        fnResult4 = fn(Play.RateChange);
         doc = undefined;
         ratechange = "ratechange";
         if (doc === undefined) {
@@ -3898,7 +3872,7 @@ function initObservers(doc) {
               tmp3 = new tmp3(insertRule, obj);
               tmp.insertRule = tmp3;
               deleteRule = win.CSSStyleSheet.prototype.deleteRule;
-              if (typeof tmp4 === "function") {
+              if (typeof closure_86 === "function") {
                 let fn2 = (apply, ownerNode, arg2) => {
                   obj = closure_1_1;
                   const styleMirror = closure_1_2.styleMirror;
@@ -3957,7 +3931,7 @@ function initObservers(doc) {
                 tmp12.deleteRule = tmp13;
                 if (win.CSSStyleSheet.prototype.replace) {
                   replace = win.CSSStyleSheet.prototype.replace;
-                  if (typeof tmp4 === "function") {
+                  if (typeof closure_86 === "function") {
                     let fn3 = (apply, ownerNode, arg2) => {
                       obj = closure_1_1;
                       const styleMirror = closure_1_2.styleMirror;
@@ -4017,7 +3991,7 @@ function initObservers(doc) {
                 }
                 if (win.CSSStyleSheet.prototype.replaceSync) {
                   replaceSync = win.CSSStyleSheet.prototype.replaceSync;
-                  if (typeof tmp4 === "function") {
+                  if (typeof closure_86 === "function") {
                     let fn4 = (apply, ownerNode, arg2) => {
                       obj = closure_1_1;
                       const styleMirror = closure_1_2.styleMirror;
@@ -4193,6 +4167,7 @@ function initObservers(doc) {
                         }
                         return apply.apply(parentStyleSheet, arg2);
                       }
+                      const tmp = replaceSync(arg2, 2);
                     };
                     let fn2 = fn;
                     if (closure_2_79) {
@@ -4284,15 +4259,15 @@ function initObservers(doc) {
                     throw new TypeError("Trying to call a non-function");
                   }
                 });
-                if (typeof tmp4 === "function") {
+                if (typeof closure_86 === "function") {
                   let fn5 = () => {
                     win.CSSStyleSheet.prototype.insertRule = insertRule;
                     win.CSSStyleSheet.prototype.deleteRule = deleteRule;
                     if (replace) {
-                      tmp.CSSStyleSheet.prototype.replace = tmp2;
+                      win.CSSStyleSheet.prototype.replace = tmp2;
                     }
                     if (replaceSync) {
-                      tmp.CSSStyleSheet.prototype.replaceSync = tmp3;
+                      win.CSSStyleSheet.prototype.replaceSync = tmp3;
                     }
                     const entries = Object.entries(obj2);
                     const item = entries.forEach((item) => {
@@ -4359,7 +4334,7 @@ function initObservers(doc) {
               const styleMirror = closure_1_3.styleMirror;
               if (parentStyleSheet) {
                 if (parentStyleSheet.ownerNode) {
-                  id = obj2.getId(parentStyleSheet.ownerNode);
+                  id = closure_1_1.getId(parentStyleSheet.ownerNode);
                 } else {
                   const id1 = styleMirror.getId(parentStyleSheet);
                 }
@@ -4386,8 +4361,8 @@ function initObservers(doc) {
                 }
                 return apply.apply(parentRule, arg2);
               }
-              obj2 = closure_1_1;
             }
+            const tmp = closure_6(arg2, 3);
           };
           closure_129_0 = fn;
           if (closure_79) {
@@ -4413,7 +4388,7 @@ function initObservers(doc) {
           tmp2 = new tmp2(setProperty, obj);
           tmp.setProperty = tmp2;
           removeProperty = win.CSSStyleDeclaration.prototype.removeProperty;
-          if (typeof tmp3 === "function") {
+          if (typeof closure_86 === "function") {
             let fn2 = (apply, parentRule, arg2) => {
               const first = closure_6(arg2, 1)[0];
               if (set.has(first)) {
@@ -4428,7 +4403,7 @@ function initObservers(doc) {
                 const styleMirror = closure_1_3.styleMirror;
                 if (parentStyleSheet) {
                   if (parentStyleSheet.ownerNode) {
-                    id = obj2.getId(parentStyleSheet.ownerNode);
+                    id = closure_1_1.getId(parentStyleSheet.ownerNode);
                   } else {
                     const id1 = styleMirror.getId(parentStyleSheet);
                   }
@@ -4455,7 +4430,6 @@ function initObservers(doc) {
                   }
                   return apply.apply(parentRule, arg2);
                 }
-                obj2 = closure_1_1;
               }
             };
             closure_130_0 = fn2;
@@ -4481,7 +4455,7 @@ function initObservers(doc) {
             obj = { apply: fn2 };
             tmp12 = new tmp12(removeProperty, obj);
             tmp11.removeProperty = tmp12;
-            if (typeof tmp3 === "function") {
+            if (typeof closure_86 === "function") {
               let fn3 = () => {
                 win.CSSStyleDeclaration.prototype.setProperty = setProperty;
                 win.CSSStyleDeclaration.prototype.removeProperty = removeProperty;
@@ -4674,23 +4648,16 @@ function initObservers(doc) {
                 do {
                   let rangeAt = selection.getRangeAt(num);
                   ({ startContainer, endContainer } = rangeAt);
-                  let tmp7 = document;
                   let tmp8 = obj;
-                  let tmp9 = closure_1_4;
                   let flag = true;
                   ({ startOffset, endOffset } = rangeAt);
-                  let tmp6 = isBlocked;
                   let tmp6Result = isBlocked(startContainer, document, obj, closure_1_4, true);
                   if (!tmp6Result) {
                     let flag2 = true;
-                    tmp6Result = tmp6(endContainer, tmp7, tmp8, tmp9, true);
+                    tmp6Result = isBlocked(endContainer, document, tmp8, closure_1_4, true);
                   }
                   if (!tmp6Result) {
-                    obj = { start: null, startOffset: null, end: null, endOffset: null };
-                    obj.start = fn.getId(startContainer);
-                    obj.startOffset = startOffset;
-                    obj.end = fn.getId(endContainer);
-                    obj.endOffset = endOffset;
+                    obj = { start: fn.getId(startContainer), startOffset, end: fn.getId(endContainer), endOffset };
                     let arr = items.push(obj);
                   }
                   num = num + 1;
@@ -4730,8 +4697,7 @@ function initObservers(doc) {
         document = undefined;
         selectionchange = "selectionchange";
         const _document = document;
-        obj = { capture: true, passive: true };
-        const listener = document.addEventListener("selectionchange", fn, obj);
+        const listener = document.addEventListener("selectionchange", fn, { capture: true, passive: true });
         return () => document.removeEventListener(selectionchange, fn, obj);
       } else {
         throw new TypeError("Trying to call a non-function");
@@ -4865,7 +4831,6 @@ function record() {
   }
   unblockSelector = tmp2;
   const ignoreClass = slimDOMOptions.ignoreClass;
-  let str2 = "rr-ignore";
   ignoreSelector = slimDOMOptions.ignoreSelector;
   let tmp3 = null;
   if (undefined !== ignoreSelector) {
@@ -5042,9 +5007,8 @@ function record() {
         items = [];
       }
       for (const item10007 of items) {
-        obj = item10007;
         if (item10007.eventProcessor) {
-          eventProcessorResult = obj.eventProcessor(eventProcessorResult);
+          eventProcessorResult = item10007.eventProcessor(eventProcessorResult);
         }
         continue;
       }
@@ -5105,7 +5069,7 @@ function record() {
           tmp20 = timestamp;
         }
         if (tmp20) {
-          tmp20 = type.timestamp - timestamp.timestamp > tmp19;
+          tmp20 = type.timestamp - timestamp.timestamp > c1;
         }
         if (!tmp18) {
           tmp18 = tmp20;
@@ -5113,7 +5077,6 @@ function record() {
         if (tmp18) {
           takeFullSnapshot2(true);
         }
-        tmp19 = c1;
       }
     }
     wrappedMutationEmit = function wrappedMutationEmit(arg0) {
@@ -5172,10 +5135,10 @@ function record() {
       obj2 = { mirror: navigation, win: null, mutationCb: null, recordCanvas: null, blockClass: null, blockSelector: null, unblockSelector: null, maxCanvasSize: null, sampling: null, dataURLOptions: null, errorHandler: null };
       let _window4 = window;
       obj2.win = window;
-      obj2.mutationCb = function mutationCb(arg0) {
+      obj2.mutationCb = function mutationCb(attributes) {
         let data = { type: obj1.IncrementalSnapshot, data: null };
         data = { source: obj2.CanvasMutation };
-        const merged = Object.assign(arg0);
+        const merged = Object.assign(attributes);
         data.data = data;
         le(data);
       };
@@ -5290,7 +5253,7 @@ function record() {
             slimDOM.onSerialize = function onSerialize(nodeName) {
               let meta = "IFRAME" === nodeName.nodeName;
               if (meta) {
-                meta = obj.getMeta(nodeName);
+                meta = closure_2_108.getMeta(nodeName);
               }
               if (Boolean(meta)) {
                 closure_1_41.addIframe(nodeName);
@@ -5306,10 +5269,10 @@ function record() {
                 getAttribute = "stylesheet" === nodeName.getAttribute("rel");
               }
               if (getAttribute) {
-                getAttribute = obj.getMeta(nodeName);
+                getAttribute = closure_2_108.getMeta(nodeName);
               }
               if (Boolean(getAttribute)) {
-                navigation.trackLinkElement(nodeName);
+                closure_1_40.trackLinkElement(nodeName);
               }
               let shadowRoot;
               if (nodeName != null) {
@@ -5441,7 +5404,7 @@ function record() {
                 ignoreCSSAttributes = new Set([]);
               }
               slimDOM.ignoreCSSAttributes = ignoreCSSAttributes;
-              const tmp41Result = tmp41(_document9, slimDOM);
+              const tmp41Result = serializeNodeWithId(_document9, slimDOM);
               if (tmp41Result) {
                 obj3 = { type: tmp2.FullSnapshot, data: null };
                 obj4 = { node: tmp41Result, initialOffset: null };
@@ -5449,7 +5412,7 @@ function record() {
                 obj4.initialOffset = getWindowScroll(window);
                 obj3.data = obj4;
                 closure_2_103(obj3);
-                const item1 = arr.forEach((unlock) => unlock.unlock());
+                const item1 = closure_87.forEach((unlock) => unlock.unlock());
                 const _document10 = document;
                 if (adoptedStyleSheets) {
                   const _document11 = document;
@@ -5467,13 +5430,11 @@ function record() {
             }
             obj5 = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaDescKeywords: "all" === tmp40, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaAuthorship: true, headMetaVerification: true };
             obj2 = obj5;
-            arr = closure_87;
             tmp2 = obj1;
             const tmp33 = undefined !== maskAllText && maskAllText;
             const tmp37 = undefined === inlineStylesheet || inlineStylesheet;
             tmp38 = undefined !== inlineImages && inlineImages;
             tmp39 = undefined !== recordCanvas && recordCanvas;
-            tmp41 = serializeNodeWithId;
           }
         };
       } else {
@@ -5481,11 +5442,13 @@ function record() {
       tmp66 = new closure_101();
       tmp59 = navigation;
     }
-    obj5 = { mirror: navigation, mutationCb: wrappedMutationEmit, stylesheetManager: tmp35, recordCrossOriginIframes: tmp11, wrappedEmit: le };
+    obj5 = { mirror: tmp27, mutationCb: wrappedMutationEmit, stylesheetManager: tmp35, recordCrossOriginIframes: tmp11, wrappedEmit: le };
     tmp44 = new closure_100(obj5);
   }
   obj6 = { script: true, comment: true, headFavicon: true, headWhitespace: true, headMetaSocial: true, headMetaRobots: true, headMetaHttpEquiv: true, headMetaVerification: true, headMetaAuthorship: "all" === slimDOMOptions, headMetaDescKeywords: "all" === slimDOMOptions };
   slimDOMOptions = obj6;
+  tmp25 = undefined !== mousemoveWait && undefined === sampling.mousemove;
+  tmp27 = navigation;
 }
 function addBreadcrumbEvent(triggerUserActivity, category) {
   closure_0 = triggerUserActivity;
@@ -5560,7 +5523,7 @@ function updateClickDetectorForRecordingEvent(registerMutation, data) {
       if (set.has(source)) {
         registerMutation.registerMutation(data.timestamp);
       }
-      if (source === obj2.Scroll) {
+      if (tmp3 === obj2.Scroll) {
         registerMutation.registerScroll(data.timestamp);
       }
       if ((function isIncrementalMouseInteraction(data) {
@@ -5577,6 +5540,7 @@ function updateClickDetectorForRecordingEvent(registerMutation, data) {
           registerMutation.registerClick(node);
         }
       }
+      tmp3 = source;
     }
   } catch (err) {
   }
@@ -5586,12 +5550,12 @@ function getBaseDomBreadcrumb(arg0, message) {
   const id = mirror.getId(arg0);
   let node = id;
   if (id) {
-    const mirror2 = tmp.mirror;
+    const mirror2 = record.mirror;
     node = mirror2.getNode(id);
   }
   let meta = node;
   if (node) {
-    const mirror3 = tmp.mirror;
+    const mirror3 = record.mirror;
     meta = mirror3.getMeta(node);
   }
   let tmp5 = null;
@@ -5688,24 +5652,21 @@ function getCumulativeLayoutShift(rating) {
   const items = [];
   const items1 = [];
   for (const item10012 of tmp) {
-    let iter = item10012;
     if (isLayoutShift(item10012)) {
       let items2 = [];
-      let sources = iter.sources;
+      let sources = item10012.sources;
       for (const item10023 of sources) {
-        let tmp6 = item10023;
         if (item10023.node) {
-          let arr = items1.push(tmp6.node);
+          let arr = items1.push(item10023.node);
           let mirror = record.mirror;
-          let id = mirror.getId(tmp6.node);
+          let id = mirror.getId(item10023.node);
           if (id) {
             arr = items2.push(tmp11);
           }
         }
         continue;
       }
-      obj = { value: null, nodeIds: null };
-      obj.value = iter.value;
+      obj = { value: item10012.value, nodeIds: null };
       let tmp17;
       if (items2.length) {
         tmp17 = items2;
@@ -5804,7 +5765,7 @@ function makeSession(id) {
   obj = { id, started: id.started || timestamp, lastActivity: id.lastActivity || timestamp, segmentId: id.segmentId || 0, sampled: id.sampled, previousSessionId: id.previousSessionId, dirty: id.dirty || false };
   return obj;
 }
-function createSession(allowBuffering, session) {
+function createSession(allowBuffering) {
   ({ sessionSampleRate, stickySession } = allowBuffering);
   if (stickySession === undefined) {
     stickySession = false;
@@ -6024,14 +5985,14 @@ let closure_148 = async function _addEvent3(arg0, arg1, arg2) {
             if (eventBuffer) {
               closure_131_2 = tmp38;
               c6 = 1;
-              let tmp39 = tmp50;
-              if (tmp50) {
+              let tmp39 = closure_2;
+              if (closure_2) {
                 tmp39 = tmp38;
               }
               if (tmp39) {
                 eventBuffer.clear();
               }
-              if (tmp50) {
+              if (closure_2) {
                 eventBuffer.hasCheckout = true;
                 eventBuffer.waitForCheckout = false;
               }
@@ -6146,10 +6107,10 @@ function resetReplayIdOnDynamicSamplingContext() {
   if (currentScope.getPropagationContext().dsc) {
     delete tmp4[tmp3];
   }
-  let tmp5Result = tmp5(682);
+  let tmp5Result = _mod682;
   const activeSpan = tmp5Result.getActiveSpan();
   if (activeSpan) {
-    tmp5Result = tmp5(682);
+    tmp5Result = _mod682;
     const dynamicSamplingContextFromSpan = tmp5Result.getDynamicSamplingContextFromSpan(activeSpan);
     delete tmp2[tmp];
   }
@@ -6296,7 +6257,7 @@ function buildNetworkRequestOrResponse(headers, size, body) {
               return tmp3;
             })(body);
             if (tmp6) {
-              const substr = body.slice(0, tmp5);
+              const substr = body.slice(0, closure_1_12);
               obj = { body: null, warnings: null };
               if (tmp7) {
                 obj.body = substr;
@@ -6321,7 +6282,6 @@ function buildNetworkRequestOrResponse(headers, size, body) {
               } catch (err) {
               }
             }
-            tmp5 = closure_1_12;
             tmp6 = body.length > closure_1_12;
           }
         }
@@ -6344,14 +6304,14 @@ function buildNetworkRequestOrResponse(headers, size, body) {
     return _meta;
   }
 }
-function urlMatches(str, arg1) {
+function urlMatches(str, networkDetailAllowUrls) {
   const baseURI = _mod682.GLOBAL_OBJ.document.baseURI;
   let substr = str;
   if (!str.startsWith("http://")) {
     substr = str;
-    if (!str.startsWith("https://")) {
+    if (!"https://".startsWith("https://")) {
       substr = str;
-      if (!str.startsWith(tmp(682).GLOBAL_OBJ.location.origin)) {
+      if (!str.startsWith(_mod682.GLOBAL_OBJ.location.origin)) {
         const _URL = URL;
         const uRL = new URL(str, baseURI);
         const _URL2 = URL;
@@ -6370,9 +6330,9 @@ function urlMatches(str, arg1) {
       }
     }
   }
-  return _mod682.stringMatchesSomePattern(substr, arg1);
+  return _mod682.stringMatchesSomePattern(substr, networkDetailAllowUrls);
 }
-let closure_158 = async function _captureFetchBreadcrumbToReplay(arg0, arg1) {
+let closure_158 = async function _captureFetchBreadcrumbToReplay(arg0) {
   closure_4 = tmp3;
   closure_131_0 = closure_2;
   await (function _prepareFetchData(arg0, arg1, arg2) {
@@ -6394,17 +6354,17 @@ let closure_158 = async function _captureFetchBreadcrumbToReplay(arg0, arg1) {
     c8 = 3;
   } else if (arg0 === 1) {
     c8 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
-    closure_131_1 = arg1;
+    closure_131_1 = value;
     closure_131_2 = closure_132_154("resource.fetch", closure_131_1);
     closure_132_151(closure_131_0.replay, closure_131_2);
     c6 = 0;
   }
-  return arg1;
+  return value;
 };
 let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
-  closure_0 = arg0;
+  let data = arg0;
   let startTimestamp = arg1;
   closure_2 = arg2;
   c4 = 0;
@@ -6463,9 +6423,9 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
             }
             closure_131_4 = status_code;
             ({ request_body_size, response_body_size } = data);
-            let tmp15 = urlMatches(url, tmp29.networkDetailAllowUrls);
+            let tmp15 = urlMatches(url, closure_2.networkDetailAllowUrls);
             if (tmp15) {
-              tmp15 = !tmp14(url, tmp29.networkDetailDenyUrls);
+              tmp15 = !urlMatches(url, closure_2.networkDetailDenyUrls);
             }
             if (tmp15) {
               let tmp17 = (function _getRequestInfo(networkRequestHeaders, input, request_body_size) {
@@ -6584,7 +6544,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                                   return tmp3;
                                 })(body);
                                 if (tmp6) {
-                                  const substr = body.slice(0, tmp5);
+                                  const substr = body.slice(0, closure_1_12);
                                   obj = { body: null, warnings: null };
                                   if (tmp7) {
                                     obj.body = substr;
@@ -6609,7 +6569,6 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                                   } catch (err) {
                                   }
                                 }
-                                tmp5 = closure_1_12;
                                 tmp6 = body.length > closure_1_12;
                               }
                             }
@@ -6644,7 +6603,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                                   return tmp3;
                                 })(body);
                                 if (tmp6) {
-                                  const substr = body.slice(0, tmp5);
+                                  const substr = body.slice(0, closure_1_12);
                                   obj = { body: null, warnings: null };
                                   if (tmp7) {
                                     obj.body = substr;
@@ -6669,7 +6628,6 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                                   } catch (err) {
                                   }
                                 }
-                                tmp5 = closure_1_12;
                                 tmp6 = body.length > closure_1_12;
                               }
                             }
@@ -6722,7 +6680,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                     return tmp13;
                   }
                 }
-              })(tmp29, tmp28.input, request_body_size);
+              })(closure_2, tmp28.input, request_body_size);
             } else {
               tmp17 = buildSkippedNetworkRequestOrResponse(request_body_size);
             }
@@ -6739,7 +6697,6 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
             })(tmp15, closure_2, startTimestamp.response, response_body_size);
             c4 = 1;
             c5 = 1;
-            tmp14 = urlMatches;
           }
         } else if (arg0 === 1) {
           c5 = 3;
@@ -6762,7 +6719,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
     }
   })();
 };
-let closure_160 = async function _getResponseInfo2(arg0, value) {
+let closure_160 = async function _getResponseInfo2(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -6904,7 +6861,7 @@ let closure_160 = async function _getResponseInfo2(arg0, value) {
     }
   }
 };
-let closure_161 = async function _parseFetchResponseBody2(arg0, value) {
+let closure_161 = async function _parseFetchResponseBody2(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -7044,7 +7001,7 @@ function getAllHeaders(arg0, arr) {
 }
 let closure_163 = async function _getResponseText2() {
   await closure_0.text();
-  return arg1;
+  return value;
 };
 let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2) {
   closure_0 = arg0;
@@ -7069,7 +7026,6 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
     } else {
       try {
         c8 = 2;
-        exceptionResult = c7;
         if (0 === c7) {
           if (arg0 === 1) {
             c8 = 3;
@@ -7081,7 +7037,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
           } else {
             closure_4 = tmp3;
             c6 = 1;
-            exceptionResult = addNetworkBreadcrumb(replay.replay, makeNetworkReplayBreadcrumb("resource.xhr", (function _prepareXhrData(data, startTimestamp, networkDetailAllowUrls) {
+            addNetworkBreadcrumb(replay.replay, makeNetworkReplayBreadcrumb("resource.xhr", (function _prepareXhrData(data, startTimestamp, networkDetailAllowUrls) {
               const timestamp = Date.now();
               startTimestamp = startTimestamp.startTimestamp;
               if (undefined === startTimestamp) {
@@ -7102,8 +7058,8 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
               if (url) {
                 if (xhr) {
                   if (closure_1_157(url, networkDetailAllowUrls.networkDetailAllowUrls)) {
-                    if (!tmp4(url, networkDetailAllowUrls.networkDetailDenyUrls)) {
-                      let tmp7 = xhr[closure_1_0(undefined, closure_1_1[9]).SENTRY_XHR_DATA_KEY];
+                    if (!closure_1_157(url, networkDetailAllowUrls.networkDetailDenyUrls)) {
+                      let tmp7 = xhr[closure_1_0(undefined, dependencyMap[9]).SENTRY_XHR_DATA_KEY];
                       if (tmp7) {
                         let request_headers = tmp7.request_headers;
                         let networkResponseHeaders = networkDetailAllowUrls.networkRequestHeaders;
@@ -7124,7 +7080,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                       } else {
                         reduced = {};
                       }
-                      let tmp5Result = tmp5(tmp6[9]);
+                      let tmp5Result = closure_1_0(dependencyMap[9]);
                       const result = tmp5Result.parseXhrResponseHeaders(xhr);
                       request_headers = result;
                       networkResponseHeaders = networkDetailAllowUrls.networkResponseHeaders;
@@ -7143,7 +7099,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                         return acc;
                       }, {});
                       if (networkDetailAllowUrls.networkCaptureBodies) {
-                        tmp5Result = tmp5(tmp6[9]);
+                        tmp5Result = closure_1_0(dependencyMap[9]);
                         let bodyString = tmp5Result.getBodyString(startTimestamp.input, closure_1_133);
                       } else {
                         bodyString = [undefined];
@@ -7238,7 +7194,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     return tmp3;
                                   })(body);
                                   if (tmp6) {
-                                    const substr = body.slice(0, tmp5);
+                                    const substr = body.slice(0, closure_1_12);
                                     obj = { body: null, warnings: null };
                                     if (tmp7) {
                                       obj.body = substr;
@@ -7263,7 +7219,6 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     } catch (err) {
                                     }
                                   }
-                                  tmp5 = closure_1_12;
                                   tmp6 = body.length > closure_1_12;
                                 }
                               }
@@ -7298,7 +7253,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     return tmp3;
                                   })(body);
                                   if (tmp6) {
-                                    const substr = body.slice(0, tmp5);
+                                    const substr = body.slice(0, closure_1_12);
                                     obj = { body: null, warnings: null };
                                     if (tmp7) {
                                       obj.body = substr;
@@ -7323,7 +7278,6 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     } catch (err) {
                                     }
                                   }
-                                  tmp5 = closure_1_12;
                                   tmp6 = body.length > closure_1_12;
                                 }
                               }
@@ -7362,7 +7316,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     return tmp3;
                                   })(body);
                                   if (tmp6) {
-                                    const substr = body.slice(0, tmp5);
+                                    const substr = body.slice(0, closure_1_12);
                                     obj = { body: null, warnings: null };
                                     if (tmp7) {
                                       obj.body = substr;
@@ -7387,7 +7341,6 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     } catch (err) {
                                     }
                                   }
-                                  tmp5 = closure_1_12;
                                   tmp6 = body.length > closure_1_12;
                                 }
                               }
@@ -7422,7 +7375,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     return tmp3;
                                   })(body);
                                   if (tmp6) {
-                                    const substr = body.slice(0, tmp5);
+                                    const substr = body.slice(0, closure_1_12);
                                     obj = { body: null, warnings: null };
                                     if (tmp7) {
                                       obj.body = substr;
@@ -7447,7 +7400,6 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                                     } catch (err) {
                                     }
                                   }
-                                  tmp5 = closure_1_12;
                                   tmp6 = body.length > closure_1_12;
                                 }
                               }
@@ -7508,7 +7460,6 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                       const tmp11Result = closure_1_6(items, 2);
                     }
                   }
-                  tmp4 = closure_1_157;
                 }
                 const request1 = { startTimestamp, endTimestamp, url, method, statusCode: num, request: null, response: null };
                 const obj11 = { headers: {}, size: request_body_size, _meta: null };
@@ -7523,14 +7474,14 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
               } else {
                 return null;
               }
-            })(closure_0, closure_1, replay)));
+            })(closure_0, dependencyMap, replay)));
             c6 = 0;
           }
         } else {
           c6 = 0;
           closure_131_0 = closure_5;
           if (closure_132_130) {
-            exceptionResult = closure_132_133.exception(closure_131_0, "Failed to capture xhr breadcrumb");
+            closure_132_133.exception(closure_131_0, "Failed to capture xhr breadcrumb");
           }
         }
         c8 = 3;
@@ -7696,7 +7647,7 @@ function handleNetworkBreadcrumbs(getOptions) {
   } catch (err) {
   }
 }
-let closure_167 = async function _addMemoryEntry(arg0, value) {
+let closure_167 = async function _addMemoryEntry(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -7755,15 +7706,15 @@ let closure_167 = async function _addMemoryEntry(arg0, value) {
 function getHandleRecordingEmit(arg0) {
   closure_0 = arg0;
   c1 = false;
-  return (arg0, arg1) => {
-    const recordingMode = arg0;
+  return (data, arg1) => {
+    const recordingMode = data;
     if (recordingMode.checkAndHandleExpiredSession()) {
       if (!arg1) {
         const tmp4 = !c1;
       }
       c1 = true;
       if (obj.clickDetector) {
-        updateClickDetectorForRecordingEvent(obj.clickDetector, arg0);
+        updateClickDetectorForRecordingEvent(obj.clickDetector, data);
       }
       obj.addUpdate(() => {
         let payload = recordingMode;
@@ -7771,9 +7722,9 @@ function getHandleRecordingEmit(arg0) {
           payload.setInitialState();
         }
         if (addEventSync(payload, recordingMode, c1)) {
-          if (tmp4) {
+          if (c1) {
             const session = payload.session;
-            if (tmp4) {
+            if (c1) {
               if (payload.session) {
                 if (0 === payload.session.segmentId) {
                   const options = payload.getOptions();
@@ -7795,7 +7746,7 @@ function getHandleRecordingEmit(arg0) {
                   payload.networkResponseHasHeaders = options.networkResponseHeaders.length > 0;
                   obj1.payload = payload;
                   payload.data = obj1;
-                  tmp3(payload, payload, false);
+                  addEventSync(payload, payload, false);
                 }
               }
             }
@@ -7838,14 +7789,13 @@ function getHandleRecordingEmit(arg0) {
           return true;
         }
         tmp = "buffer" === recordingMode.recordingMode && c1;
-        tmp3 = addEventSync;
       });
     } else if (closure_1_130) {
       logger.warn("Received replay event after session expired.");
     }
   };
 }
-let closure_170 = async function _prepareReplayEvent(arg0, value) {
+let closure_170 = async function _prepareReplayEvent(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -7975,7 +7925,7 @@ let closure_170 = async function _prepareReplayEvent(arg0, value) {
     }
   }
 };
-let closure_171 = async function _sendReplayRequest(arg0, value) {
+let closure_171 = async function _sendReplayRequest(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -8215,7 +8165,7 @@ function sendReplay(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_175 = async function _sendReplay(arg0, value) {
+let closure_175 = async function _sendReplay(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -8326,12 +8276,12 @@ let closure_175 = async function _sendReplay(arg0, value) {
                       c4 = 3;
                     } else if (arg0 === 1) {
                       c4 = 3;
-                      throw arg1;
+                      throw value;
                     } else if (arg0 !== 2) {
                       closure_128_0(true);
                       c3 = 0;
                     }
-                    return arg1;
+                    return value;
                   }), interval.interval);
                 });
                 c7 = 3;
@@ -8943,7 +8893,6 @@ let closure_82 = (() => {
           if (!tmp.locked) {
             items = [];
             const _Set = Set;
-            set = new Set();
             const arr2 = new closure_1_80();
             function getNextId(value) {
               let id;
@@ -9060,20 +9009,18 @@ let closure_82 = (() => {
             }
             const addedSet = items.addedSet;
             for (const item10064 of addedSet) {
-              let tmp33 = item10064;
               let tmp36 = items;
-              let tmp34 = closure_1_84;
               if (!closure_1_84(items.droppedSet, item10064)) {
-                if (!closure_1_83(tmp36.removes, tmp33, tmp36.mirror)) {
-                  let pushAddResult1 = pushAdd(tmp33);
+                if (!closure_1_83(tmp36.removes, item10064, tmp36.mirror)) {
+                  let pushAddResult1 = pushAdd(item10064);
                 }
                 continue;
               }
-              if (tmp34(tmp36.movedSet, tmp33)) {
-                let pushAddResult2 = pushAdd(tmp33);
+              if (closure_1_84(tmp36.movedSet, item10064)) {
+                let pushAddResult2 = pushAdd(item10064);
               } else {
                 let droppedSet = tmp36.droppedSet;
-                let addResult = droppedSet.add(tmp33);
+                let addResult = droppedSet.add(item10064);
               }
             }
             let previous = null;
@@ -9203,6 +9150,7 @@ let closure_82 = (() => {
               obj2.movedMap = {};
               obj2.mutationCb(obj);
             }
+            set = new Set();
             tmp65 = obj.texts.length || obj.attributes.length || obj.removes.length || obj.adds.length;
           }
         }
@@ -9328,9 +9276,8 @@ let closure_82 = (() => {
                     const arr2 = Array.from(element.style);
                     for (const item10147 of arr2) {
                       let style5 = target.style;
-                      let tmp43 = item10147;
                       if ("" === style5.getPropertyValue(item10147)) {
-                        tmp7.styleDiff[tmp43] = false;
+                        tmp7.styleDiff[item10147] = false;
                       }
                       continue;
                     }
@@ -9483,6 +9430,7 @@ let closure_82 = (() => {
                           str3 = "[object ShadowRoot]";
                           const tmp28 = typeof call === "unknown" ? str3() : call(target5);
                         }
+                        tmp27 = !BooleanResult;
                       } else if (typeof moveKey === "function") {
                         const _HermesInternal = HermesInternal;
                       } else {
@@ -9937,7 +9885,7 @@ let closure_100 = (() => {
           let crossOriginIframeRootIdMap = self.crossOriginIframeRootIdMap;
           const result = crossOriginIframeRootIdMap.set(value, id);
           self.patchRootIdOnNode(event.data.node, id);
-          let data = { timestamp: event.timestamp, type: tmp.IncrementalSnapshot, data: null };
+          let data = { timestamp: event.timestamp, type: FullSnapshot.IncrementalSnapshot, data: null };
           data = { source: obj2.Mutation, adds: null, removes: null, texts: null, attributes: null, isAttachIframe: true };
           data = { parentId: null, nextId: null, node: null };
           const mirror = self.mirror;
@@ -9951,16 +9899,16 @@ let closure_100 = (() => {
           data.data = data;
           return data;
         } else {
-          if (tmp.Meta !== type) {
-            if (tmp.Load !== type) {
-              if (tmp.DomContentLoaded !== type) {
-                if (tmp.Plugin === type) {
+          if (FullSnapshot.Meta !== type) {
+            if (FullSnapshot.Load !== type) {
+              if (FullSnapshot.DomContentLoaded !== type) {
+                if (FullSnapshot.Plugin === type) {
                   return event;
-                } else if (tmp.Custom === type) {
+                } else if (FullSnapshot.Custom === type) {
                   self.replaceIds(event.data.payload, value, ["id", "parentId", "previousId", "nextId"]);
                   return event;
                 } else {
-                  if (tmp.IncrementalSnapshot === type) {
+                  if (FullSnapshot.IncrementalSnapshot === type) {
                     const source = event.data.source;
                     if (obj2.Mutation === source) {
                       const adds = event.data.adds;
@@ -9987,28 +9935,28 @@ let closure_100 = (() => {
                       });
                       return event;
                     } else {
-                      if (tmp22.Drag !== source) {
-                        if (tmp22.TouchMove !== source) {
-                          if (tmp22.MouseMove !== source) {
-                            if (tmp22.ViewportResize === source) {
+                      if (obj2.Drag !== source) {
+                        if (obj2.TouchMove !== source) {
+                          if (obj2.MouseMove !== source) {
+                            if (obj2.ViewportResize === source) {
                               return false;
                             } else {
-                              if (tmp22.MediaInteraction !== source) {
-                                if (tmp22.MouseInteraction !== source) {
-                                  if (tmp22.Scroll !== source) {
-                                    if (tmp22.CanvasMutation !== source) {
-                                      if (tmp22.Input !== source) {
-                                        if (tmp22.StyleSheetRule !== source) {
-                                          if (tmp22.StyleDeclaration !== source) {
-                                            if (tmp22.Font === source) {
+                              if (obj2.MediaInteraction !== source) {
+                                if (obj2.MouseInteraction !== source) {
+                                  if (obj2.Scroll !== source) {
+                                    if (obj2.CanvasMutation !== source) {
+                                      if (obj2.Input !== source) {
+                                        if (obj2.StyleSheetRule !== source) {
+                                          if (obj2.StyleDeclaration !== source) {
+                                            if (obj2.Font === source) {
                                               return event;
-                                            } else if (tmp22.Selection === source) {
+                                            } else if (obj2.Selection === source) {
                                               const ranges = event.data.ranges;
                                               const item4 = ranges.forEach((item) => {
                                                 self.replaceIds(item, closure_0, ["start", "end"]);
                                               });
                                               return event;
-                                            } else if (tmp22.AdoptedStyleSheet === source) {
+                                            } else if (obj2.AdoptedStyleSheet === source) {
                                               self.replaceIds(event.data, value, ["id"]);
                                               self.replaceStyleIds(event.data, value, ["styleIds"]);
                                               const styles = event.data.styles;
@@ -10206,16 +10154,18 @@ let closure_102 = (() => {
             closure_72(() => {
               let adoptedStyleSheets = doc.adoptedStyleSheets;
               if (adoptedStyleSheets) {
-                adoptedStyleSheets = tmp.adoptedStyleSheets.length > 0;
+                adoptedStyleSheets = doc.adoptedStyleSheets.length > 0;
               }
               if (adoptedStyleSheets) {
                 const stylesheetManager = self.bypassOptions.stylesheetManager;
                 const mirror = self.mirror;
-                stylesheetManager.adoptStyleSheets(tmp.adoptedStyleSheets, mirror.getId(tmp.host));
+                stylesheetManager.adoptStyleSheets(doc.adoptedStyleSheets, mirror.getId(doc.host));
               }
               self.restoreHandlers.push(initAdoptedStyleSheetObserver({ mirror: self.mirror, stylesheetManager: self.bypassOptions.stylesheetManager }, doc));
+              obj = { mirror: self.mirror, stylesheetManager: self.bypassOptions.stylesheetManager };
+              const restoreHandlers = self.restoreHandlers;
             }, 0);
-            const restoreHandlers = self.restoreHandlers;
+            let restoreHandlers = self.restoreHandlers;
             const restoreHandlers1 = self.restoreHandlers;
           }
         }

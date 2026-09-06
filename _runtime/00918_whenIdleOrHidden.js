@@ -28,4 +28,5 @@ export const whenIdleOrHidden = (fn) => {
     });
     const tmpResult1 = tmp(906);
   }
+  tmp3 = require("metro/00904__.js").WINDOW.requestIdleCallback || require("metro/00904__.js").WINDOW.setTimeout;
 };

@@ -184,12 +184,12 @@ function parseBox(getUint32, sum) {
           obj10.itemName = obj6.getNullTerminatedStringFromDataView(getUint32, sum12);
           const sum13 = sum12 + (obj10.itemName.length + 1);
           if (obj10.itemType === c4) {
-            let tmp13Result = tmp13(5213);
+            let tmp13Result = _mod5213;
             obj10.contentType = tmp13Result.getNullTerminatedStringFromDataView(getUint32, sum13);
             const sum14 = sum13 + (obj10.contentType.length + 1);
             parseItemLocationBoxResult = obj10;
             if (sum + length > sum14) {
-              tmp13Result = tmp13(5213);
+              tmp13Result = _mod5213;
               obj10.contentEncoding = tmp13Result.getNullTerminatedStringFromDataView(getUint32, sum14);
               const sum15 = obj10.contentEncoding.length + 1;
               parseItemLocationBoxResult = obj10;
@@ -197,10 +197,10 @@ function parseBox(getUint32, sum) {
           } else {
             parseItemLocationBoxResult = obj10;
             if (obj10.itemType === c5) {
-              obj10.itemUri = tmp13(5213).getNullTerminatedStringFromDataView(getUint32, sum13);
+              obj10.itemUri = _mod5213.getNullTerminatedStringFromDataView(getUint32, sum13);
               const sum16 = obj10.itemUri.length + 1;
               parseItemLocationBoxResult = obj10;
-              const tmp13Result1 = tmp13(5213);
+              const tmp13Result1 = _mod5213;
             }
           }
         }
@@ -211,8 +211,8 @@ function parseBox(getUint32, sum) {
     }
   }
 }
-function findIlocItem(subBoxes, arg1) {
-  closure_0 = arg1;
+function findIlocItem(subBoxes, itemId) {
+  closure_0 = itemId;
   subBoxes = subBoxes.subBoxes;
   const items = subBoxes.find((type) => "iloc" === type.type).items;
   return items.find((itemId) => itemId.itemId === closure_0);
@@ -226,8 +226,8 @@ export const ITEM_INFO_TYPE_MIME = 1835625829;
 export { parseBox };
 export const findOffsets = function findOffsets(byteLength) {
   if (!_modDef5216.USE_EXIF) {
-    if (!tmp(5216).USE_XMP) {
-      if (!tmp(5216).USE_ICC) {
+    if (!_modDef5216.USE_XMP) {
+      if (!_modDef5216.USE_ICC) {
         return {};
       }
     }
@@ -251,7 +251,7 @@ export const findOffsets = function findOffsets(byteLength) {
   }
   if (tmp3) {
     let obj = {};
-    if (tmp(5216).USE_EXIF) {
+    if (_modDef5216.USE_EXIF) {
       obj.tiffHeaderOffset = (function findExifOffset(byteLength, subBoxes) {
         try {
           const tmp4 = findIlocItem(
@@ -269,7 +269,7 @@ export const findOffsets = function findOffsets(byteLength) {
         } catch (err) {}
       })(byteLength, tmp3);
     }
-    if (tmp(5216).USE_XMP) {
+    if (_modDef5216.USE_XMP) {
       obj.xmpChunks = (function findXmpChunks(subBoxes) {
         try {
           const itemId = (function findIinfXmpItemId(subBoxes) {
@@ -293,7 +293,7 @@ export const findOffsets = function findOffsets(byteLength) {
         } catch (err) {}
       })(tmp3);
     }
-    if (tmp(5216).USE_ICC) {
+    if (_modDef5216.USE_ICC) {
       obj.iccChunks = (function findIccChunks(subBoxes) {
         try {
           subBoxes = subBoxes.subBoxes;

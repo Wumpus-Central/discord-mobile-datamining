@@ -22,10 +22,10 @@ export default function _default(children) {
     if (1 >= sum) {
       let addListener;
       if (closure_1_4 != null) {
-        addListener = obj.addListener;
+        addListener = closure_1_4.addListener;
       }
       if (null != addListener) {
-        const metrics = obj.metrics;
+        const metrics = closure_1_4.metrics;
         let height;
         if (metrics != null) {
           const metricsResult = metrics();
@@ -51,9 +51,9 @@ export default function _default(children) {
         }
         closure_9 = tmp5;
         items = [
-          obj.addListener("keyboardDidShow", setVisible),
-          obj.addListener("keyboardWillShow", setVisible),
-          obj.addListener("keyboardDidHide", () => {
+          closure_1_4.addListener("keyboardDidShow", setVisible),
+          closure_1_4.addListener("keyboardWillShow", setVisible),
+          closure_1_4.addListener("keyboardDidHide", () => {
             c9 = false;
           }),
         ];
@@ -112,7 +112,7 @@ export default function _default(children) {
       pointerEvents="box-none"
       style={logicalResponder.logicalResponder}
     >
-      {arg0.children}
+      {children.children}
     </closure_5>
   );
   return (
@@ -133,7 +133,7 @@ export default function _default(children) {
       pointerEvents="box-none"
       style={logicalResponder.logicalResponder}
     >
-      {arg0.children}
+      {children.children}
     </context>
   );
 }

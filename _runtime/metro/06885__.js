@@ -1,8 +1,10 @@
 // _runtime/metro/06885__.js
+import _mod6870 from "06870__.js";
 import _mod6886 from "06886__.js";
 
 export default function _possibleConstructorReturn(arg0, fn) {
   if (fn) {
+    _mod6870;
     return fn;
   }
   if (undefined !== fn) {

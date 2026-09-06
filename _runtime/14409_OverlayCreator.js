@@ -35,8 +35,8 @@ export default function OverlayCreator() {
       features: {
         overlay(emitter) {
           return () => {
-            let obj = arg0;
-            if (arg0 === undefined) {
+            let obj = size;
+            if (size === undefined) {
               obj = {};
             }
             obj = { style: { flex: 1 }, children: null };

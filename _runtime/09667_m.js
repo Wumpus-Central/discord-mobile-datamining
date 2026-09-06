@@ -174,11 +174,7 @@ let fn = function m() {
                                   let nextSymbolResult7 = iter.nextSymbol();
                                   obj = iter;
                                   if (!obj.byweekday) {
-                                    let items = [constants.MO, , , ,];
-                                    items[1] = constants.TU;
-                                    items[2] = constants.WE;
-                                    items[3] = constants.TH;
-                                    items[4] = constants.FR;
+                                    let items = [constants.MO, constants.TU, constants.WE, constants.TH, constants.FR];
                                     tmp32.byweekday = items;
                                     obj = iter;
                                   }
@@ -288,6 +284,7 @@ let fn = function m() {
               const error2 = new Error("Nth out of range: " + parsed);
               throw error2;
             }
+            acceptResult = obj.accept("on");
           };
           switch (obj.symbol) {
             case "day(s)":
@@ -3678,12 +3675,12 @@ let fn = function m() {
         if (typeof f === "function") {
           if (typeof l === "function") {
             if (typeof i === "function") {
-              let tmp7 = null != arr3;
+              let tmp7 = null != closure_1_71;
               let tmp8 = !tmp7;
               if (tmp7) {
-                tmp8 = 0 === arr3.length;
+                tmp8 = 0 === closure_1_71.length;
               }
-              let tmp9 = !tmp8 && -1 !== arr3.indexOf(tmp);
+              let tmp9 = !tmp8 && -1 !== closure_1_71.indexOf(tmp);
               if (!tmp9) {
                 let arr = items.push(tmp);
               }
@@ -4120,7 +4117,8 @@ let fn = function m() {
       } else {
         const tmp4 = at(replaced.replace(/^RRULE:/i, ""));
         closure_1 = tmp4;
-        let parts1 = replaced.replace(/^(?:RRULE|EXRULE):/i, "").split(";");
+        str = replaced.replace(/^(?:RRULE|EXRULE):/i, "");
+        let parts1 = str.split(";");
         const item1 = parts1.forEach((item) => {
           const parts = item.split("=");
           [str, str2] = parts;
@@ -4478,7 +4476,6 @@ let fn = function m() {
                   if (typeof tmp6 === "function") {
                     tmp3 = str2;
                     if (null != str5) {
-                      let tmp41 = isArray;
                       if (!isArray(str5)) {
                         if ("FREQ" === formatted) {
                           let str1 = constants.FREQUENCIES[tzid.freq];
@@ -4507,7 +4504,7 @@ let fn = function m() {
                           }
                         } else if ("BYWEEKDAY" === formatted) {
                           let arr6 = str5;
-                          if (!tmp41(str5)) {
+                          if (!isArray(str5)) {
                             let items1 = [str5];
                             arr6 = items1;
                           }
@@ -4515,7 +4512,7 @@ let fn = function m() {
                             let tmp2 = weekday;
                             if (!(weekday instanceof closure_1_2)) {
                               if (isArray(weekday)) {
-                                if (typeof tmp === "function") {
+                                if (typeof closure_1_2 === "function") {
                                   let obj = {};
                                   if (0 === tmp6) {
                                     const _Error = Error;
@@ -4528,7 +4525,7 @@ let fn = function m() {
                                 } else {
                                   throw new TypeError("Trying to call a non-function");
                                 }
-                              } else if (typeof tmp === "function") {
+                              } else if (typeof closure_1_2 === "function") {
                                 obj = { weekday, n: undefined };
                               } else {
                                 throw new TypeError("Trying to call a non-function");
@@ -4601,7 +4598,7 @@ let fn = function m() {
                             let str17 = "Trying to call a non-function";
                             throw new TypeError("Trying to call a non-function");
                           }
-                        } else if (tmp41(str5)) {
+                        } else if (isArray(str5)) {
                           let items3 = [];
                           let num2 = 0;
                           if (0 < str5.length) {
@@ -5134,7 +5131,7 @@ let fn = function m() {
           const call = closure_200_0.call;
           obj = {};
           if (typeof call === "unknown") {
-            tmp30(obj, tmp19);
+            closure_200_0(obj, tmp19);
           } else {
             let callResult = call(tmp29, obj, tmp19);
           }
@@ -5169,7 +5166,6 @@ let fn = function m() {
             callResult.rdate(dtstart);
             tmp24 = callResult;
           }
-          tmp30 = closure_200_0;
           tmp40 = tmp5.compatible && tmp5.dtstart;
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -5192,17 +5188,16 @@ let fn = function m() {
       }
       if (undefined !== self["_".concat("_", closure_0)]) {
         const concat2 = "_".concat;
-        return tmp3["_".concat("_", tmp4)];
+        return self["_".concat("_", closure_0)];
       } else {
         let num = 0;
-        if (0 < tmp3._rrule.length) {
+        if (0 < self._rrule.length) {
           while (!self._rrule[num].origOptions[closure_0]) {
             num = num + 1;
           }
           return self._rrule[num].origOptions[closure_0];
         }
       }
-      tmp4 = closure_0;
     };
   }
   function $t(arg0, arr) {
@@ -5223,7 +5218,7 @@ let fn = function m() {
                 tmp14 = -1 !== mapped.indexOf(tmp7);
               }
               if (!tmp14) {
-                arr.push(arg0);
+                arr = arr.push(arg0);
               }
             } else {
               throw new TypeError("Trying to call a non-function");
@@ -5262,7 +5257,7 @@ let fn = function m() {
                 tmp14 = -1 !== mapped.indexOf(tmp7);
               }
               if (!tmp14) {
-                arr.push(arg0);
+                arr = arr.push(arg0);
                 if (typeof R === "function") {
                   const sorted = arr.sort((getTime, getTime2) => {
                     const time = getTime.getTime();
@@ -5294,10 +5289,9 @@ let fn = function m() {
   let obj = {
     d(arg0, obj) {
       for (const key10005 in arg1) {
-        obj2 = closure_0;
         let oResult = closure_0.o(arg1, key10005);
         if (oResult) {
-          oResult = !obj2.o(arg0, key10005);
+          oResult = !closure_0.o(arg0, key10005);
         }
         if (!oResult) {
           continue;
@@ -6466,10 +6460,10 @@ let fn = function m() {
       f125024 = fn;
       mapped = arr.map(function o(item) {
         if (!fn) {
-          return tmp;
+          return fn;
         } else {
-          const call = tmp.call;
-          typeof call === "unknown" ? tmp(item) : call(self, item);
+          const call = fn.call;
+          typeof call === "unknown" ? fn(item) : call(self, item);
         }
       });
       if (arg2) {

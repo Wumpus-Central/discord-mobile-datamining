@@ -10,7 +10,7 @@ try {
     if (null != closure_0) {
       let obj = { enabled: enabled.enabled };
       const merged1 = Object.assign(merged);
-      let tmp8 = <tmp2.ScreenContainer enabled={arg0.enabled} />;
+      let tmp8 = <tmp2.ScreenContainer enabled={enabled.enabled} />;
     } else {
       obj = {};
       const merged2 = Object.assign(merged);

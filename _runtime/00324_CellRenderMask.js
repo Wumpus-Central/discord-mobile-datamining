@@ -88,6 +88,7 @@ let items = [
         items1.push(obj);
         const tmp26 = _slicedToArray(self._findRegion(VirtualizedList.last), 2);
       }
+      const tmp = CellRenderMask(38);
     },
   },
   {
@@ -116,7 +117,7 @@ let items = [
   },
   {
     key: "_findRegion",
-    value: function _findRegion(arg0) {
+    value: function _findRegion(VirtualizedList) {
       let rounded;
       let tmp4;
       let diff = this._regions.length - 1;
@@ -126,18 +127,18 @@ let items = [
           let _Math = Math;
           rounded = Math.floor((num + diff) / 2);
           tmp4 = tmp._regions[rounded];
-          if (arg0 >= tmp4.first) {
-            if (arg0 <= tmp4.last) {
+          if (VirtualizedList >= tmp4.first) {
+            if (VirtualizedList <= tmp4.last) {
               break;
             }
           }
-          if (arg0 < tmp4.first) {
+          if (VirtualizedList < tmp4.first) {
             let diff1 = rounded - 1;
             let sum = num;
           } else {
             diff1 = diff;
             sum = num;
-            if (arg0 > tmp4.last) {
+            if (VirtualizedList > tmp4.last) {
               sum = rounded + 1;
               diff1 = diff;
             }
@@ -148,7 +149,7 @@ let items = [
         const items = [tmp4, rounded];
         return items;
       }
-      CellRenderMask(38)(false, "A region was not found containing cellIdx " + arg0);
+      CellRenderMask(38)(false, "A region was not found containing cellIdx " + VirtualizedList);
     },
   },
 ];

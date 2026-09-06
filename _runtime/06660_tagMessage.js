@@ -38,10 +38,11 @@ function deepEqual(obj, obj2) {
   }
 }
 
-export const toArray = function toArray(arg0) {
-  let tmp = arg0;
-  if (!Array.isArray(arg0)) {
-    const items = [arg0];
+export const toArray = function toArray(items) {
+  let tmp = items;
+  if (!Array.isArray(items)) {
+    items = [];
+    items[0] = items;
     tmp = items;
   }
   return tmp;

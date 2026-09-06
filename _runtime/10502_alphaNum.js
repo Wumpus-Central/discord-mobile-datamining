@@ -4,17 +4,17 @@ function alphaNum(str) {
   return String.fromCharCode(str.charCodeAt(0) - 65248);
 }
 
-export const toHankaku = function toHankaku(arg0) {
-  const str = String(arg0);
-  const str2 = String(arg0).replace(/\u2019/g, "'");
-  const str3 = String(arg0)
+export const toHankaku = function toHankaku(match) {
+  const str = String(match);
+  const str2 = String(match).replace(/\u2019/g, "'");
+  const str3 = String(match)
     .replace(/\u2019/g, "'")
     .replace(/\u201D/g, '"');
-  const str4 = String(arg0)
+  const str4 = String(match)
     .replace(/\u2019/g, "'")
     .replace(/\u201D/g, '"')
     .replace(/\u3000/g, " ");
-  return String(arg0)
+  return String(match)
     .replace(/\u2019/g, "'")
     .replace(/\u201D/g, '"')
     .replace(/\u3000/g, " ")
@@ -24,12 +24,12 @@ export const toHankaku = function toHankaku(arg0) {
       alphaNum,
     );
 };
-export const jaStringToNumber = function jaStringToNumber(arg0) {
+export const jaStringToNumber = function jaStringToNumber(match) {
   let num = 0;
   let num2 = 0;
   let num3 = 0;
-  if (0 < arg0.length) {
-    while ("\u5341" !== arg0[num]) {
+  if (0 < match.length) {
+    while ("\u5341" !== match[num]) {
       let sum = num2 + exports.NUMBER[tmp];
       num = num + 1;
       num2 = sum;

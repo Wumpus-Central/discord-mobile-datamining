@@ -25,7 +25,7 @@ function CanonicalizeLocaleList(str) {
       const _Object = Object;
       const ObjectResult = Object(tmp67);
       let num3 = 0;
-      if (0 < ObjectResult.length) {
+      if (0 < length3) {
         while (true) {
           let _String = String;
           let StringResult = String(num3);
@@ -37,15 +37,14 @@ function CanonicalizeLocaleList(str) {
               if (typeof tmp4 === "string") {
                 let _String2 = String;
                 str = String(tmp4);
-                let tmp5 = require;
                 let expBCP47Syntax = expBCP47Syntax2.expBCP47Syntax;
                 let isMatch = expBCP47Syntax.test(str);
                 if (isMatch) {
-                  let expVariantDupes = tmp5(17271).expVariantDupes;
+                  let expVariantDupes = expBCP47Syntax2.expVariantDupes;
                   isMatch = expVariantDupes.test(str);
                   let tmp9 = !isMatch;
                   if (!isMatch) {
-                    let expSingletonDupes = tmp5(17271).expSingletonDupes;
+                    let expSingletonDupes = expBCP47Syntax2.expSingletonDupes;
                     tmp9 = !expSingletonDupes.test(str);
                   }
                   isMatch = tmp9;
@@ -80,10 +79,8 @@ function CanonicalizeLocaleList(str) {
                       }
                     }
                   }
-                  let tmp16 = join;
                   let call = join.call;
-                  let str8 = typeof call === "unknown" ? tmp16("-") : call(parts, "-");
-                  let tmp17 = require;
+                  let str8 = typeof call === "unknown" ? join("-") : call(parts, "-");
                   let match = str8.match(expBCP47Syntax2.expExtSequences);
                   let tmp19 = str8;
                   let tmp20 = match;
@@ -91,12 +88,11 @@ function CanonicalizeLocaleList(str) {
                     tmp20 = match.length > 1;
                   }
                   if (!tmp20) {
-                    let tmp25 = hasOwnProperty;
                     let call3 = hasOwnProperty.call;
                     let tags = obj.tags;
                     let tmp26 = obj;
                     let str9 = tmp19;
-                    if (typeof call3 === "unknown" ? tmp25(tmp19) : call3(tags, tmp19)) {
+                    if (typeof call3 === "unknown" ? hasOwnProperty(tmp19) : call3(tags, tmp19)) {
                       str9 = tmp26.tags[tmp19];
                     }
                     let parts1 = str9.split("-");
@@ -106,7 +102,6 @@ function CanonicalizeLocaleList(str) {
                     let tmp28 = parts1;
                     if (1 < length2) {
                       while (true) {
-                        let tmp29 = hasOwnProperty;
                         let call4 = hasOwnProperty.call;
                         let tmp30 = obj;
                         let subtags = obj.subtags;
@@ -114,19 +109,19 @@ function CanonicalizeLocaleList(str) {
                         let tmp32 = length2;
                         let tmp33 = num2;
                         let tmp34 = tmp27;
-                        if (typeof call4 === "unknown" ? tmp29(tmp31) : call4(subtags, tmp31)) {
+                        if (typeof call4 === "unknown" ? hasOwnProperty(tmp31) : call4(subtags, tmp31)) {
                           tmp27[num2] = tmp30.subtags[tmp27[num2]];
                           let tmp36 = length2;
                           let tmp37 = num2;
                           let tmp38 = tmp27;
                         } else {
-                          let call5 = tmp29.call;
+                          let call5 = hasOwnProperty.call;
                           let extLang = tmp30.extLang;
                           let tmp35 = tmp27[num2];
                           tmp36 = length2;
                           tmp37 = num2;
                           tmp38 = tmp27;
-                          if (typeof call5 === "unknown" ? tmp29(tmp35) : call5(extLang, tmp35)) {
+                          if (typeof call5 === "unknown" ? hasOwnProperty(tmp35) : call5(extLang, tmp35)) {
                             tmp27[num2] = tmp30.extLang[tmp27[num2]][0];
                             let tmp39 = 1 === num2;
                             if (1 === num2) {
@@ -147,22 +142,18 @@ function CanonicalizeLocaleList(str) {
                         tmp28 = tmp38;
                         continue;
                       }
-                      let tmp43 = slice;
                       let call6 = slice.call;
                       let sum = num2 + 1;
                       let diff = length2 - 1;
-                      let tmp46 = typeof call6 === "unknown" ? tmp43(num2) : call6(tmp27, num2);
+                      let tmp46 = typeof call6 === "unknown" ? slice(num2) : call6(tmp27, num2);
                     }
-                    let tmp47 = join;
                     let call7 = join.call;
-                    let tmp48 = typeof call7 === "unknown" ? tmp47("-") : call7(tmp28, "-");
-                    let tmp49 = closure_7;
+                    let tmp48 = typeof call7 === "unknown" ? join("-") : call7(tmp28, "-");
                     let call8 = closure_7.call;
-                    if (-1 === (typeof call8 === "unknown" ? tmp49(tmp48) : call8(obj, tmp48))) {
-                      let tmp50 = push;
+                    if (-1 === (typeof call8 === "unknown" ? closure_7(tmp48) : call8(obj, tmp48))) {
                       let call9 = push.call;
                       if (typeof call9 === "unknown") {
-                        let tmp50Result = tmp50(tmp48);
+                        let tmp50Result = push(tmp48);
                       } else {
                         let call9Result = call9(obj, tmp48);
                       }
@@ -170,12 +161,9 @@ function CanonicalizeLocaleList(str) {
                   } else {
                     let sorted = match.sort();
                     let _RegExp = RegExp;
-                    let call2 = tmp16.call;
+                    let call2 = join.call;
                     let RegExpResult = RegExp(`(?:${tmp17(17271).expExtSequences.source})+`, "i");
-                    let replaced = str8.replace(
-                      RegExpResult,
-                      typeof call2 === "unknown" ? tmp16("") : call2(match, ""),
-                    );
+                    let replaced = str8.replace(RegExpResult, typeof call2 === "unknown" ? join("") : call2(match, ""));
                   }
                 } else {
                   let _RangeError = RangeError;
@@ -216,10 +204,9 @@ function LookupMatcher(arg0, arg1) {
     let str3 = replaced;
     while (true) {
       while (true) {
-        let tmp7 = closure_7;
         let call = closure_7.call;
         let tmp9 = str3;
-        if ((typeof call === "unknown" ? tmp7(str3) : call(arg0, str3)) > -1) {
+        if ((typeof call === "unknown" ? closure_7(str3) : call(arg0, str3)) > -1) {
           break;
         } else {
           let lastIndexOfResult = str3.lastIndexOf("-");
@@ -268,9 +255,8 @@ function LookupMatcher(arg0, arg1) {
         }
         continue;
       } else {
-        let tmp17 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
-        let tmp18 = typeof call2 === "unknown" ? tmp17(tmp16) : call2(undefined, tmp16);
+        let tmp18 = typeof call2 === "unknown" ? hasOwnProperty(tmp16) : call2(undefined, tmp16);
       }
     }
   }
@@ -301,7 +287,7 @@ function ResolveLocale(arg0, arg1, __localeMatcher__, arg3, arg4) {
     }
     const call = hasOwnProperty.call;
     if (typeof call === "unknown") {
-      let callResult = tmp4("[[extension]]");
+      let callResult = hasOwnProperty("[[extension]]");
     } else {
       callResult = call(tmp2, "[[extension]]");
     }
@@ -319,10 +305,9 @@ function ResolveLocale(arg0, arg1, __localeMatcher__, arg3, arg4) {
           }
           continue;
         } else {
-          let tmp12 = hasOwnProperty;
           let call3 = hasOwnProperty.call;
           if (typeof call3 === "unknown") {
-            let call3Result = tmp12(key10033);
+            let call3Result = hasOwnProperty(key10033);
           } else {
             call3Result = call3(undefined, key10033);
           }
@@ -337,19 +322,21 @@ function ResolveLocale(arg0, arg1, __localeMatcher__, arg3, arg4) {
           let tmp18 = arg3[num4];
           let tmp19 = arg4[str][tmp18];
           let first = tmp19[0];
-          let tmp21 = closure_7;
           let str11 = "";
           let tmp24 = first;
           // // eliminated: always false
-          let tmp25 = hasOwnProperty;
           let call4 = hasOwnProperty.call;
           let text = `${"[[" + tmp18}]]`;
           let str12 = str11;
           let tmp27 = tmp24;
-          if (typeof call4 === "unknown" ? tmp25(`${"[[" + tmp18}]]`) : call4(__localeMatcher__, `${"[[" + tmp18}]]`)) {
+          if (
+            typeof call4 === "unknown"
+              ? hasOwnProperty(`${"[[" + tmp18}]]`)
+              : call4(__localeMatcher__, `${"[[" + tmp18}]]`)
+          ) {
             let tmp28 = __localeMatcher__["[[" + tmp18 + "]]"];
-            let call5 = tmp21.call;
-            let tmp29 = -1 !== (typeof call5 === "unknown" ? tmp21(tmp28) : call5(tmp19, tmp28)) && tmp28 !== tmp24;
+            let call5 = closure_7.call;
+            let tmp29 = -1 !== (typeof call5 === "unknown" ? closure_7(tmp28) : call5(tmp19, tmp28)) && tmp28 !== tmp24;
             str12 = str11;
             tmp27 = tmp24;
             if (tmp29) {
@@ -381,7 +368,6 @@ function ResolveLocale(arg0, arg1, __localeMatcher__, arg3, arg4) {
       }
       const prop1 = tmp2["[[extensionIndex]]"];
     }
-    tmp4 = hasOwnProperty;
   }
 }
 function LookupSupportedLocales(arg0, arg1) {
@@ -393,10 +379,9 @@ function LookupSupportedLocales(arg0, arg1) {
     str2 = String(arg1[num]).replace(re21, "");
     do {
       while (true) {
-        let tmp6 = closure_7;
         let call = closure_7.call;
         let tmp8 = str2;
-        if ((typeof call === "unknown" ? tmp6(str2) : call(arg0, str2)) > -1) {
+        if ((typeof call === "unknown" ? closure_7(str2) : call(arg0, str2)) > -1) {
           break;
         } else {
           let lastIndexOfResult = str2.lastIndexOf("-");
@@ -414,10 +399,9 @@ function LookupSupportedLocales(arg0, arg1) {
         }
       }
       if (undefined !== tmp8) {
-        let tmp12 = push;
         let call2 = push.call;
         if (typeof call2 === "unknown") {
-          let tmp12Result = tmp12(tmp3);
+          let tmp12Result = push(tmp3);
         } else {
           let call2Result = call2(obj, tmp3);
         }
@@ -514,10 +498,9 @@ function InitializeNumberFormat(__getInternalProperties, arg1, arg2) {
         }
         continue;
       } else {
-        let tmp17 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
-          let call2Result = tmp17(key10032);
+          let call2Result = hasOwnProperty(key10032);
         } else {
           call2Result = call2(undefined, key10032);
         }
@@ -531,12 +514,11 @@ function InitializeNumberFormat(__getInternalProperties, arg1, arg2) {
       const StringResult = String(localeMatcher);
       const call3 = closure_7.call;
       str5 = StringResult;
-      if (-1 === (typeof call3 === "unknown" ? tmp27(StringResult) : call3(obj2, StringResult))) {
+      if (-1 === (typeof call3 === "unknown" ? closure_7(StringResult) : call3(obj2, StringResult))) {
         const _RangeError9 = RangeError;
         const rangeError = new RangeError("'" + StringResult + "' is not an allowed value for `localeMatcher`");
         throw rangeError;
       }
-      tmp27 = closure_7;
     }
     obj["[[localeMatcher]]"] = str5;
     const prop = closure_15.NumberFormat["[[localeData]]"];
@@ -568,12 +550,11 @@ function InitializeNumberFormat(__getInternalProperties, arg1, arg2) {
       const StringResult1 = String(style);
       const call4 = closure_7.call;
       str9 = StringResult1;
-      if (-1 === (typeof call4 === "unknown" ? tmp40(StringResult1) : call4(obj3, StringResult1))) {
+      if (-1 === (typeof call4 === "unknown" ? closure_7(StringResult1) : call4(obj3, StringResult1))) {
         const _RangeError8 = RangeError;
         const rangeError1 = new RangeError("'" + StringResult1 + "' is not an allowed value for `style`");
         throw rangeError1;
       }
-      tmp40 = closure_7;
     }
     result["[[style]]"] = str9;
     const currency = ObjectResult.currency;
@@ -633,12 +614,11 @@ function InitializeNumberFormat(__getInternalProperties, arg1, arg2) {
       const StringResult4 = String(currencyDisplay);
       const call5 = closure_7.call;
       str17 = StringResult4;
-      if (-1 === (typeof call5 === "unknown" ? tmp64(StringResult4) : call5(obj4, StringResult4))) {
+      if (-1 === (typeof call5 === "unknown" ? closure_7(StringResult4) : call5(obj4, StringResult4))) {
         const _RangeError7 = RangeError;
         const rangeError3 = new RangeError("'" + StringResult4 + "' is not an allowed value for `currencyDisplay`");
         throw rangeError3;
       }
-      tmp64 = closure_7;
     }
     if ("currency" === str9) {
       result["[[currencyDisplay]]"] = str17;
@@ -828,7 +808,7 @@ function FormatNumber(numberFormat, diff) {
   const tmp = createRegExpRestore();
   const call = hasOwnProperty.call;
   if (typeof call === "unknown") {
-    let callResult = tmp2("__getInternalProperties");
+    let callResult = hasOwnProperty("__getInternalProperties");
   } else {
     callResult = call(numberFormat, "__getInternalProperties");
   }
@@ -866,16 +846,16 @@ function FormatNumber(numberFormat, diff) {
     if ("percent" === result["[[style]]"]) {
       result1 = tmp11 * 100;
     }
-    const call2 = tmp2.call;
+    const call2 = hasOwnProperty.call;
     if (typeof call2 === "unknown") {
-      let tmp2Result = tmp2("[[minimumSignificantDigits]]");
+      let tmp2Result = hasOwnProperty("[[minimumSignificantDigits]]");
     } else {
       tmp2Result = call2(result, "[[minimumSignificantDigits]]");
     }
     if (tmp2Result) {
-      const call3 = tmp2.call;
+      const call3 = hasOwnProperty.call;
       if (typeof call3 === "unknown") {
-        let tmp2Result1 = tmp2("[[maximumSignificantDigits]]");
+        let tmp2Result1 = hasOwnProperty("[[maximumSignificantDigits]]");
       } else {
         tmp2Result1 = call3(result, "[[maximumSignificantDigits]]");
       }
@@ -885,12 +865,11 @@ function FormatNumber(numberFormat, diff) {
           const call8 = join.call;
           const _Array4 = Array;
           if (typeof call8 === "unknown") {
-            let call8Result = tmp39("0");
+            let call8Result = join("0");
           } else {
             call8Result = call8(ArrayResult, "0");
           }
           ArrayResult = Array(tmp36 + 1);
-          tmp39 = join;
         } else {
           const _Math7 = Math;
           const absolute = Math.abs(result1);
@@ -924,13 +903,12 @@ function FormatNumber(numberFormat, diff) {
                   const call9 = join.call;
                   const _Array5 = Array;
                   if (typeof call9 === "unknown") {
-                    tmp43("0");
+                    join("0");
                   } else {
                     call9(ArrayResult1, "0");
                   }
                   text1 = `0.${tmp45}${arr7}`;
                   ArrayResult1 = Array(1 - (rounded + 1));
-                  tmp43 = join;
                 }
               }
               let substr = text1;
@@ -967,13 +945,12 @@ function FormatNumber(numberFormat, diff) {
           const call10 = join.call;
           const _Array6 = Array;
           if (typeof call10 === "unknown") {
-            let call10Result = tmp52("0");
+            let call10Result = join("0");
           } else {
             call10Result = call10(ArrayResult2, "0");
           }
           const sum = StringResult + call10Result;
           ArrayResult2 = Array(rounded - tmp36 + 1 + 1);
-          tmp52 = join;
         }
       }
     }
@@ -1042,19 +1019,17 @@ function FormatNumber(numberFormat, diff) {
             if (substr3.length) {
               const call11 = push.call;
               if (typeof call11 === "unknown") {
-                tmp60(substr3);
+                push(substr3);
               } else {
                 call11(obj, substr3);
               }
-              tmp60 = push;
             }
             if (result2 < diff4) {
               do {
-                let tmp62 = push;
                 let call12 = push.call;
                 let substr4 = first.slice(result2, result2 + tmp59);
                 if (typeof call12 === "unknown") {
-                  let tmp62Result = tmp62(substr4);
+                  let tmp62Result = push(substr4);
                 } else {
                   let call12Result = call12(obj, substr4);
                 }
@@ -1064,26 +1039,24 @@ function FormatNumber(numberFormat, diff) {
             const call13 = push.call;
             const substr5 = first.slice(diff4);
             if (typeof call13 === "unknown") {
-              tmp67(substr5);
+              push(substr5);
             } else {
               call13(obj, substr5);
             }
             const call14 = join.call;
             const group = tmp10.group;
             parts[0] = typeof call14 === "unknown" ? join(group) : call14(obj, group);
-            tmp67 = push;
           }
         }
       } else {
         const call7 = join.call;
         const _Array3 = Array;
         if (typeof call7 === "unknown") {
-          let call7Result = tmp30("0");
+          let call7Result = join("0");
         } else {
           call7Result = call7(ArrayResult3, "0");
         }
         ArrayResult3 = Array(tmp15 - length + 1);
-        tmp30 = join;
       }
     } else {
       const replaced = str5.slice(0, index).replace(".", "");
@@ -1091,16 +1064,16 @@ function FormatNumber(numberFormat, diff) {
       const _Array = Array;
       const str8 = str5.slice(0, index);
       if (typeof call5 === "unknown") {
-        tmp20("0");
+        join("0");
       } else {
         call5(ArrayResult4, "0");
       }
-      const call6 = tmp20.call;
+      const call6 = join.call;
       const _Array2 = Array;
       const text2 = `${tmp22}.`;
       ArrayResult4 = Array(num3 - (replaced.length - 1) + 1);
       if (typeof call6 === "unknown") {
-        let tmp20Result = tmp20("0");
+        let tmp20Result = join("0");
       } else {
         tmp20Result = call6(ArrayResult5, "0");
       }
@@ -1206,10 +1179,9 @@ function InitializeDateTimeFormat(prototype, arg1, arg2) {
         }
         continue;
       } else {
-        let tmp8 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
-          let call2Result = tmp8(key10016);
+          let call2Result = hasOwnProperty(key10016);
         } else {
           call2Result = call2(undefined, key10016);
         }
@@ -1223,12 +1195,11 @@ function InitializeDateTimeFormat(prototype, arg1, arg2) {
       const StringResult = String(localeMatcher);
       const call3 = closure_7.call;
       str4 = StringResult;
-      if (-1 === (typeof call3 === "unknown" ? tmp18(StringResult) : call3(obj1, StringResult))) {
+      if (-1 === (typeof call3 === "unknown" ? closure_7(StringResult) : call3(obj1, StringResult))) {
         const _RangeError4 = RangeError;
         const rangeError = new RangeError("'" + StringResult + "' is not an allowed value for `localeMatcher`");
         throw rangeError;
       }
-      tmp18 = closure_7;
     }
     obj["[[localeMatcher]]"] = str4;
     const DateTimeFormat = closure_15.DateTimeFormat;
@@ -1292,28 +1263,25 @@ function InitializeDateTimeFormat(prototype, arg1, arg2) {
         }
         continue;
       } else {
-        let tmp37 = hasOwnProperty;
         let call4 = hasOwnProperty.call;
         if (typeof call4 === "unknown") {
-          let call4Result = tmp37(key10081);
+          let call4Result = hasOwnProperty(key10081);
         } else {
           call4Result = call4(undefined, key10081);
         }
       }
     }
     for (const key10096 in closure_35) {
-      let tmp109 = hasOwnProperty;
       let call10 = hasOwnProperty.call;
-      let tmp110 = closure_35;
       if (typeof call10 === "unknown") {
-        let call10Result = tmp109(key10096);
+        let call10Result = hasOwnProperty(key10096);
       } else {
-        call10Result = call10(tmp110, key10096);
+        call10Result = call10(closure_35, key10096);
       }
       if (!call10Result) {
         continue;
       } else {
-        let tmp45 = tmp110[key10096];
+        let tmp45 = closure_35[key10096];
         let tmp46 = tmp98[key10096];
         let tmp47;
         if (undefined !== tmp46) {
@@ -1321,10 +1289,9 @@ function InitializeDateTimeFormat(prototype, arg1, arg2) {
           let StringResult1 = String(tmp46);
           tmp47 = StringResult1;
           if (undefined !== tmp45) {
-            let tmp49 = closure_7;
             let call5 = closure_7.call;
             if (typeof call5 === "unknown") {
-              let call5Result = tmp49(StringResult1);
+              let call5Result = closure_7(StringResult1);
             } else {
               call5Result = call5(tmp45, StringResult1);
             }
@@ -1365,12 +1332,11 @@ function InitializeDateTimeFormat(prototype, arg1, arg2) {
       const StringResult2 = String(formatMatcher);
       const call7 = closure_7.call;
       str15 = StringResult2;
-      if (-1 === (typeof call7 === "unknown" ? tmp63(StringResult2) : call7(obj4, StringResult2))) {
+      if (-1 === (typeof call7 === "unknown" ? closure_7(StringResult2) : call7(obj4, StringResult2))) {
         const _RangeError2 = RangeError;
         const rangeError3 = new RangeError("'" + StringResult2 + "' is not an allowed value for `formatMatcher`");
         throw rangeError3;
       }
-      tmp63 = closure_7;
     }
     prop[tmp25["[[dataLocale]]"]].formats = dateTimeFormats;
     if ("basic" === str15) {
@@ -1381,14 +1347,12 @@ function InitializeDateTimeFormat(prototype, arg1, arg2) {
     const keys = Object.keys();
     if (keys !== undefined) {
       while (keys[-1] !== undefined) {
-        let tmp112 = hasOwnProperty;
         let call11 = hasOwnProperty.call;
-        let tmp113 = closure_35;
-        if (!(typeof call11 === "unknown" ? tmp112(tmp69) : call11(tmp113, tmp69))) {
+        if (!(typeof call11 === "unknown" ? hasOwnProperty(tmp69) : call11(closure_35, tmp69))) {
           continue;
         } else {
-          let call8 = tmp112.call;
-          if (!(typeof call8 === "unknown" ? tmp112(tmp69) : call8(tmp65, tmp69))) {
+          let call8 = hasOwnProperty.call;
+          if (!(typeof call8 === "unknown" ? hasOwnProperty(tmp69) : call8(tmp65, tmp69))) {
             continue;
           } else {
             result["[[" + tmp69 + "]]"] = tmp65[tmp69];
@@ -1455,10 +1419,9 @@ function ToDateTimeOptions(arg0, any, date) {
           }
           continue;
         } else {
-          let tmp3 = hasOwnProperty;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {
-            let callResult = tmp3(key10004);
+            let callResult = hasOwnProperty(key10004);
           } else {
             callResult = call(undefined, key10004);
           }
@@ -1545,16 +1508,14 @@ function calculateScore(arg0, arg1, arg2) {
         num4 = num3;
         let tmp12 = keys[tmp];
         while (tmp12 !== undefined) {
-          let tmp24 = hasOwnProperty;
           let call4 = hasOwnProperty.call;
-          let tmp25 = closure_35;
-          if (!(typeof call4 === "unknown" ? tmp24(tmp12) : call4(tmp25, tmp12))) {
+          if (!(typeof call4 === "unknown" ? hasOwnProperty(tmp12) : call4(closure_35, tmp12))) {
             continue;
           } else {
             let tmp13 = arg0["[[" + tmp12 + "]]"];
-            let call = tmp24.call;
+            let call = hasOwnProperty.call;
             let tmp14;
-            if (typeof call === "unknown" ? tmp24(tmp12) : call(tmp5, tmp12)) {
+            if (typeof call === "unknown" ? hasOwnProperty(tmp12) : call(tmp5, tmp12)) {
               tmp14 = tmp5[tmp12];
             }
             if (undefined === tmp13) {
@@ -1570,14 +1531,13 @@ function calculateScore(arg0, arg1, arg2) {
               }
             }
             let items = ["2-digit", "numeric", "narrow", "short", "long"];
-            let tmp15 = closure_7;
             let call2 = closure_7.call;
-            let call3 = tmp15.call;
-            let tmp16 = typeof call2 === "unknown" ? tmp15(tmp13) : call2(items, tmp13);
+            let call3 = closure_7.call;
+            let tmp16 = typeof call2 === "unknown" ? closure_7(tmp13) : call2(items, tmp13);
             let _Math = Math;
             let _Math2 = Math;
             let bound = Math.max(
-              Math.min((typeof call3 === "unknown" ? tmp15(tmp14) : call3(items, tmp14)) - tmp16, 2),
+              Math.min((typeof call3 === "unknown" ? closure_7(tmp14) : call3(items, tmp14)) - tmp16, 2),
               -2,
             );
             let tmp18 = tmp2;
@@ -1736,10 +1696,9 @@ function FormatDateTime(__getInternalProperties, arg1) {
           }
           continue;
         } else {
-          let tmp3 = hasOwnProperty;
           let call = hasOwnProperty.call;
           if (typeof call === "unknown") {
-            let callResult = tmp3(key10051);
+            let callResult = hasOwnProperty(key10051);
           } else {
             callResult = call(obj, key10051);
           }
@@ -1756,10 +1715,9 @@ function FormatDateTime(__getInternalProperties, arg1) {
     if (keys !== undefined) {
       str17 = replaced;
       while (keys[tmp] !== undefined) {
-        let tmp69 = hasOwnProperty;
         let call = hasOwnProperty.call;
         let text = `${"[[" + tmp36}]]`;
-        if (!(typeof call === "unknown" ? tmp69(`${"[[" + tmp36}]]`) : call(result, `${"[[" + tmp36}]]`))) {
+        if (!(typeof call === "unknown" ? hasOwnProperty(`${"[[" + tmp36}]]`) : call(result, `${"[[" + tmp36}]]`))) {
           continue;
         } else {
           let tmp37 = result["[[" + tmp36 + "]]"];
@@ -1847,19 +1805,19 @@ function FormatDateTime(__getInternalProperties, arg1) {
     throw rangeError;
   }
 }
-function resolveDateString(calendars, prop3, days, arg3, arg4) {
+function resolveDateString(calendars, prop3, days, pm, arg4) {
   if (calendars[prop3]) {
     if (calendars[prop3][days]) {
       let tmp = calendars[prop3][days];
     }
     obj = { narrow: ["short", "long"], short: ["long", "narrow"], long: ["short", "narrow"] };
     const call = hasOwnProperty.call;
-    if (typeof call === "unknown" ? hasOwnProperty(arg3) : call(tmp, arg3)) {
-      let tmp6 = tmp[arg3];
+    if (typeof call === "unknown" ? hasOwnProperty(pm) : call(tmp, pm)) {
+      let tmp6 = tmp[pm];
     } else {
-      const call2 = tmp3.call;
-      const first = obj[arg3][0];
-      if (typeof call2 === "unknown" ? tmp3(first) : call2(tmp, first)) {
+      const call2 = hasOwnProperty.call;
+      const first = obj[pm][0];
+      if (typeof call2 === "unknown" ? hasOwnProperty(first) : call2(tmp, first)) {
         tmp6 = tmp[tmp5[0]];
       } else {
         tmp6 = tmp[tmp5[1]];
@@ -1962,11 +1920,10 @@ function createRegExpRestore() {
       } else {
         replaced1 = `()${str3}`;
       }
-      let tmp12 = push;
       let call = push.call;
       let substr = replaced1.slice(0, replaced1.indexOf("(") + 1);
       if (typeof call === "unknown") {
-        let tmp12Result = tmp12(substr);
+        let tmp12Result = push(substr);
       } else {
         let callResult = call(obj, substr);
       }
@@ -2045,14 +2002,13 @@ let tmp4 =
     F.prototype = arg0;
     obj = Object.create(F.prototype);
     for (const key10008 in arg1) {
-      let tmp6 = hasOwnProperty;
       class F {
         constructor() {
           return;
         }
       }
       if (typeof tmp7 === "unknown") {
-        let tmp7Result = tmp6(key10008);
+        let tmp7Result = hasOwnProperty(key10008);
       } else {
         tmp7Result = tmp7(arg1, key10008);
       }
@@ -2141,10 +2097,9 @@ function supportedLocalesOf(arg0) {
             }
             continue;
           } else {
-            let tmp17 = hasOwnProperty;
             let call2 = hasOwnProperty.call;
             if (typeof call2 === "unknown") {
-              let call2Result = tmp17(key10028);
+              let call2Result = hasOwnProperty(key10028);
             } else {
               call2Result = call2(ObjectResult, key10028);
             }
@@ -2174,9 +2129,8 @@ function supportedLocalesOf(arg0) {
       const keys = Object.keys();
       if (keys !== undefined) {
         while (keys[1] !== undefined) {
-          let tmp52 = hasOwnProperty;
           let call3 = hasOwnProperty.call;
-          if (!(typeof call3 === "unknown" ? tmp52(tmp28) : call3(tmp24, tmp28))) {
+          if (!(typeof call3 === "unknown" ? hasOwnProperty(tmp28) : call3(tmp24, tmp28))) {
             continue;
           } else {
             obj = { writable: false, configurable: false, value: tmp24[tmp28] };
@@ -2600,10 +2554,9 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
         }
         continue;
       } else {
-        let tmp2 = hasOwnProperty;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
-          let callResult = tmp2(key10006);
+          let callResult = hasOwnProperty(key10006);
         } else {
           callResult = call(undefined, key10006);
         }
@@ -2629,10 +2582,13 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
           let num = 0;
           if (0 < items.length) {
             do {
-              let tmp19 = hasOwnProperty;
               let call3 = hasOwnProperty.call;
               let text = `${"[[" + arr[num]}]]`;
-              if (typeof call3 === "unknown" ? tmp19(`${"[[" + arr[num]}]]`) : call3(tmp7, `${"[[" + arr[num]}]]`)) {
+              if (
+                typeof call3 === "unknown"
+                  ? hasOwnProperty(`${"[[" + arr[num]}]]`)
+                  : call3(tmp7, `${"[[" + arr[num]}]]`)
+              ) {
                 obj = { value: tmp7[`${"[[" + arr[num]}]]`], writable: true, configurable: true, enumerable: true };
                 obj[items[num]] = obj;
               }
@@ -2650,7 +2606,7 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
     } else {
       const call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
-        let call2Result = tmp8("__getInternalProperties");
+        let call2Result = hasOwnProperty("__getInternalProperties");
       } else {
         call2Result = call2(self, "__getInternalProperties");
       }
@@ -2659,7 +2615,6 @@ fn(obj.NumberFormat.prototype, "resolvedOptions", {
       } else {
         result = closure_8(null);
       }
-      tmp8 = hasOwnProperty;
     }
   },
 });
@@ -2706,10 +2661,9 @@ let obj3 = {
         }
         continue;
       } else {
-        let tmp2 = hasOwnProperty;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
-          let callResult = tmp2(key10006);
+          let callResult = hasOwnProperty(key10006);
         } else {
           callResult = call(undefined, key10006);
         }
@@ -2735,10 +2689,13 @@ let obj3 = {
           let num = 0;
           if (0 < items.length) {
             do {
-              let tmp19 = hasOwnProperty;
               let call3 = hasOwnProperty.call;
               let text = `${"[[" + arr[num]}]]`;
-              if (typeof call3 === "unknown" ? tmp19(`${"[[" + arr[num]}]]`) : call3(tmp7, `${"[[" + arr[num]}]]`)) {
+              if (
+                typeof call3 === "unknown"
+                  ? hasOwnProperty(`${"[[" + arr[num]}]]`)
+                  : call3(tmp7, `${"[[" + arr[num]}]]`)
+              ) {
                 obj = { value: tmp7[`${"[[" + arr[num]}]]`], writable: true, configurable: true, enumerable: true };
                 obj[items[num]] = obj;
               }
@@ -2756,7 +2713,7 @@ let obj3 = {
     } else {
       const call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
-        let call2Result = tmp8("__getInternalProperties");
+        let call2Result = hasOwnProperty("__getInternalProperties");
       } else {
         call2Result = call2(self, "__getInternalProperties");
       }
@@ -2765,7 +2722,6 @@ let obj3 = {
       } else {
         result = closure_8(null);
       }
-      tmp8 = hasOwnProperty;
     }
   },
 };
@@ -2793,10 +2749,9 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
         }
         continue;
       } else {
-        let tmp2 = hasOwnProperty;
         let call = hasOwnProperty.call;
         if (typeof call === "unknown") {
-          let callResult = tmp2(key10006);
+          let callResult = hasOwnProperty(key10006);
         } else {
           callResult = call(undefined, key10006);
         }
@@ -2825,10 +2780,13 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
           let num = 0;
           if (0 < items.length) {
             do {
-              let tmp19 = hasOwnProperty;
               let call3 = hasOwnProperty.call;
               let text = `${"[[" + arr[num]}]]`;
-              if (typeof call3 === "unknown" ? tmp19(`${"[[" + arr[num]}]]`) : call3(tmp7, `${"[[" + arr[num]}]]`)) {
+              if (
+                typeof call3 === "unknown"
+                  ? hasOwnProperty(`${"[[" + arr[num]}]]`)
+                  : call3(tmp7, `${"[[" + arr[num]}]]`)
+              ) {
                 obj = { value: tmp7[`${"[[" + arr[num]}]]`], writable: true, configurable: true, enumerable: true };
                 obj[items[num]] = obj;
               }
@@ -2846,7 +2804,7 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
     } else {
       const call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
-        let call2Result = tmp8("__getInternalProperties");
+        let call2Result = hasOwnProperty("__getInternalProperties");
       } else {
         call2Result = call2(self, "__getInternalProperties");
       }
@@ -2855,7 +2813,6 @@ fn(obj.DateTimeFormat.prototype, "resolvedOptions", {
       } else {
         result = closure_8(null);
       }
-      tmp8 = hasOwnProperty;
     }
   },
 });
@@ -2937,12 +2894,10 @@ fn(obj, "__applyLocaleSensitivePrototypes", {
     obj = { writable: true, configurable: true, value: obj8.Date.toLocaleString };
     fn(Date.prototype, "toLocaleString", obj);
     for (const key10019 in obj8.Date) {
-      let tmp7 = hasOwnProperty;
       let call = hasOwnProperty.call;
       let _Date2 = obj8.Date;
-      let tmp8 = obj8;
       if (typeof call === "unknown") {
-        let callResult = tmp7(key10019);
+        let callResult = hasOwnProperty(key10019);
       } else {
         callResult = call(_Date2, key10019);
       }
@@ -2950,7 +2905,7 @@ fn(obj, "__applyLocaleSensitivePrototypes", {
         continue;
       } else {
         let _Date = Date;
-        obj = { writable: true, configurable: true, value: tmp8.Date[key10019] };
+        obj = { writable: true, configurable: true, value: obj8.Date[key10019] };
         let tmp5 = fn(Date.prototype, key10019, obj);
         continue;
       }
@@ -2960,22 +2915,20 @@ fn(obj, "__applyLocaleSensitivePrototypes", {
 });
 fn(obj, "__addLocaleData", {
   value(locale) {
-    let tmp22;
     locale = locale.locale;
     const expBCP47Syntax = expBCP47Syntax2.expBCP47Syntax;
     let isMatch = expBCP47Syntax.test(locale);
     if (isMatch) {
-      const expVariantDupes = tmp(17271).expVariantDupes;
+      const expVariantDupes = expBCP47Syntax2.expVariantDupes;
       isMatch = expVariantDupes.test(locale);
       let tmp5 = !isMatch;
       if (!isMatch) {
-        const expSingletonDupes = tmp(17271).expSingletonDupes;
+        const expSingletonDupes = expBCP47Syntax2.expSingletonDupes;
         tmp5 = !expSingletonDupes.test(locale);
       }
       isMatch = tmp5;
     }
     if (isMatch) {
-      str2 = locale.locale;
       if (locale.number) {
         const items = [str2];
         const parts = str2.split("-");
@@ -2987,22 +2940,20 @@ fn(obj, "__addLocaleData", {
           const call = push.call;
           const text = `${arr2[0]}-${arr2[2]}`;
           if (typeof call === "unknown") {
-            tmp17(text);
+            push(text);
           } else {
             call(items, text);
           }
-          tmp17 = push;
         }
         const call2 = shift.call;
         let tmp21 = typeof call2 === "unknown" ? shift() : call2(items);
         if (tmp21) {
           while (true) {
-            tmp22 = push;
             let call3 = push.call;
             let date = closure_15;
             let prop = closure_15.NumberFormat["[[availableLocales]]"];
             if (typeof call3 === "unknown") {
-              let tmp22Result = tmp22(tmp21);
+              let tmp22Result = push(tmp21);
             } else {
               let call3Result = call3(prop, tmp21);
             }
@@ -3010,17 +2961,16 @@ fn(obj, "__addLocaleData", {
             if (locale.date) {
               break;
             } else {
-              let tmp28 = shift;
               let call5 = shift.call;
-              let tmp29 = typeof call5 === "unknown" ? tmp28() : call5(items);
+              let tmp29 = typeof call5 === "unknown" ? shift() : call5(items);
               tmp21 = tmp29;
             }
           }
           locale.date.nu = locale.number.nu;
-          const call4 = tmp22.call;
+          const call4 = push.call;
           let prop1 = date.DateTimeFormat["[[availableLocales]]"];
           if (typeof call4 === "unknown") {
-            tmp22(tmp21);
+            push(tmp21);
           } else {
             call4(prop1, tmp21);
           }

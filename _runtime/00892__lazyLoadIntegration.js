@@ -2,7 +2,7 @@
 import ignoreNextOnError from "00893_ignoreNextOnError.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-let closure_4 = async function _lazyLoadIntegration(arg0, value) {
+let closure_4 = async function _lazyLoadIntegration(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -39,14 +39,14 @@ let closure_4 = async function _lazyLoadIntegration(arg0, value) {
           ignoreNextOnError.WINDOW.Sentry = Sentry;
           closure_130_1 = Sentry;
           if (React3[closure_0]) {
-            if (typeof Sentry[tmp49] === "function") {
+            if (typeof Sentry[closure_0] === "function") {
               if (!("_isShim" in tmp27)) {
                 c5 = 3;
                 const obj1 = { value: tmp27, done: true };
                 return obj1;
               }
             }
-            const _document = tmp53(893).WINDOW.document;
+            const _document = ignoreNextOnError.WINDOW.document;
             const element = <script />;
             closure_130_2 = element;
             element.src = (function getScriptURL(arg0) {
@@ -66,18 +66,18 @@ let closure_4 = async function _lazyLoadIntegration(arg0, value) {
             })(tmp52);
             element.crossOrigin = "anonymous";
             element.referrerPolicy = "strict-origin";
-            if (tmp50) {
-              const attr = element.setAttribute("nonce", tmp50);
+            if (dependencyMap) {
+              const attr = element.setAttribute("nonce", dependencyMap);
             }
             const promise = new Promise((arg0, arg1) => {
               closure_0 = arg0;
               const listener = closure_1_2.addEventListener("load", () => closure_0());
               const listener1 = closure_1_2.addEventListener("error", arg1);
             });
-            const currentScript = tmp53(893).WINDOW.document.currentScript;
-            let head = tmp53(893).WINDOW.document.body;
+            const currentScript = ignoreNextOnError.WINDOW.document.currentScript;
+            let head = ignoreNextOnError.WINDOW.document.body;
             if (!head) {
-              head = tmp53(893).WINDOW.document.head;
+              head = ignoreNextOnError.WINDOW.document.head;
             }
             if (!head) {
               let parentElement;
@@ -96,7 +96,7 @@ let closure_4 = async function _lazyLoadIntegration(arg0, value) {
             } else {
               const _Error4 = Error;
               const _HermesInternal4 = HermesInternal;
-              const error = new Error("Could not find parent element to insert lazy-loaded " + tmp49 + " script");
+              const error = new Error("Could not find parent element to insert lazy-loaded " + closure_0 + " script");
               throw error;
             }
             const tmp28 = (function getScriptURL(arg0) {
@@ -117,7 +117,7 @@ let closure_4 = async function _lazyLoadIntegration(arg0, value) {
           } else {
             const _Error3 = Error;
             const _HermesInternal3 = HermesInternal;
-            const error1 = new Error("Cannot lazy load integration: " + tmp49);
+            const error1 = new Error("Cannot lazy load integration: " + closure_0);
             throw error1;
           }
         }

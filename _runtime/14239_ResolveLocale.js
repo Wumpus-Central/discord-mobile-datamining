@@ -2,6 +2,7 @@
 import LookupMatcher from "14240_LookupMatcher.js";
 import _mod14241 from "metro/14241__.js";
 import BestFitMatcher from "14245_BestFitMatcher.js";
+import CanonicalizeUValue from "14247_CanonicalizeUValue.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -41,7 +42,6 @@ export const ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, a
       if (null === items1) {
         items1 = [];
       }
-      let tmp14 = require;
       let _Array3 = Array;
       let concat = "keyLocaleData for ".concat;
       let isArray = Array.isArray(items1);
@@ -78,11 +78,11 @@ export const ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, a
       if (!tmp24) {
         tmp24 = typeof tmp23 === "string";
       }
-      let invariantResult2 = tmp14(14241).invariant(tmp24, "optionsValue must be a string or undefined");
+      let invariantResult2 = _mod14241.invariant(tmp24, "optionsValue must be a string or undefined");
       let str3 = tmp23;
       if (typeof tmp23 === "string") {
         let formatted = str.toLowerCase();
-        str3 = tmp14(14247).CanonicalizeUValue(formatted, tmp23);
+        str3 = CanonicalizeUValue.CanonicalizeUValue(formatted, tmp23);
         if ("" === str3) {
           str3 = "true";
         }
@@ -96,7 +96,7 @@ export const ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, a
       }
       obj[str] = str2;
       num = num + 1;
-      tmp5 = tmp14;
+      tmp5 = require;
     } while (num < arg3.length);
   }
   let result = locale;

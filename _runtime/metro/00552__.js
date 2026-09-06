@@ -1,5 +1,7 @@
 // _runtime/metro/00552__.js
+import _mod521 from "00521__.js";
 import _mod553 from "00553__.js";
+import baseTrim from "../00554_baseTrim.js";
 
 const re2 = /^[-+]0x[0-9a-f]+$/i;
 const re3 = /^0b[01]+$/i;
@@ -12,13 +14,13 @@ export default function toNumber(num) {
     return NaN;
   } else {
     let tmp = num;
-    if (tmp10(521)(num)) {
+    if (_mod521(num)) {
       let valueOfResult = num;
       if (typeof num.valueOf === "function") {
         valueOfResult = num.valueOf();
       }
       let text = valueOfResult;
-      if (tmp10(521)(valueOfResult)) {
+      if (_mod521(valueOfResult)) {
         text = `${tmp2}`;
       }
       tmp = text;
@@ -30,7 +32,7 @@ export default function toNumber(num) {
       }
       return tmp9;
     } else {
-      const arr = tmp10(554)(tmp);
+      const arr = baseTrim(tmp);
       const isMatch = re3.test(arr);
       if (!isMatch) {
         if (!re4.test(arr)) {

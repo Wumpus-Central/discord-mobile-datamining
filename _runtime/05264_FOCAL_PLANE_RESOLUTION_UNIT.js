@@ -73,8 +73,8 @@ export default {
                                                     sqrtResult = Math.sqrt(tmp3 + result ** 2);
                                                     result2 = result3[0] / result3[1];
                                                     result3 = result2 * (43.27 / sqrtResult);
-                                                  } else if (tmp6.CENTIMETERS !== value1) {
-                                                    if (tmp6.MILLIMETERS === value1) {
+                                                  } else if (constants.CENTIMETERS !== value1) {
+                                                    if (constants.MILLIMETERS === value1) {
                                                       tmp7 = closure_1_5;
                                                     }
                                                   }

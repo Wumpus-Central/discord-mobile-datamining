@@ -16,13 +16,8 @@ export const ComputeExponent = function ComputeExponent(internalSlots, timesResu
     }
     const floorResult = negatedResult.log(10).floor();
     const result = ComputeExponentForMagnitude.ComputeExponentForMagnitude(internalSlots, floorResult);
-    const _default = digitsToString.default;
-    const logResult = negatedResult.log(10);
-    const tmp2 = require;
-    const result1 = FormatNumericToString.FormatNumericToString(
-      internalSlots,
-      negatedResult.times(digitsToString.default.pow(10, -result)),
-    );
+    timesResult = negatedResult.times(digitsToString.default.pow(10, -result));
+    const result1 = FormatNumericToString.FormatNumericToString(internalSlots, timesResult);
     const roundedNumber = result1.roundedNumber;
     if (roundedNumber.isZero()) {
       const items = [result, floorResult.toNumber()];
@@ -35,13 +30,14 @@ export const ComputeExponent = function ComputeExponent(internalSlots, timesResu
         return items1;
       } else {
         const items2 = [
-          tmp2(14221).ComputeExponentForMagnitude(internalSlots, floorResult.plus(1)),
+          ComputeExponentForMagnitude.ComputeExponentForMagnitude(internalSlots, floorResult.plus(1)),
           floorResult.plus(1).toNumber(),
         ];
         return items2;
       }
       floorResult1 = roundedNumber2.log(10).floor();
     }
-    timesResult = negatedResult.times(digitsToString.default.pow(10, -result));
+    const _default = digitsToString.default;
+    const logResult = negatedResult.log(10);
   }
 };

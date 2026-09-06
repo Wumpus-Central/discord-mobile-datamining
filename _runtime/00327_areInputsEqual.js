@@ -9,10 +9,9 @@ function areInputsEqual(arg0, arg1) {
         let tmp = arg0[num];
         let tmp2 = arg1[num];
         if (tmp !== tmp2) {
-          let tmp4 = ponyfill;
           if (!ponyfill(tmp)) {
             break;
-          } else if (!tmp4(tmp2)) {
+          } else if (!ponyfill(tmp2)) {
             break;
           }
         }

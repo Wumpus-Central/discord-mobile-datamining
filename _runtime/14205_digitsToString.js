@@ -132,7 +132,7 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
         tmp16 = tmp17;
       }
       if (tmp16) {
-        tmp16 = ((d[num3 + 1] / tmp8 / 100) | 0) === tmp7(10, sum - 2) - 1;
+        tmp16 = ((d[num3 + 1] / tmp8 / 100) | 0) === pow(10, sum - 2) - 1;
         const tmp18 = (d[num3 + 1] / tmp8 / 100) | 0;
       }
       if (!tmp16) {
@@ -196,7 +196,7 @@ function checkRoundingDigits(d, precision, rounding, arg3) {
       tmp10 = tmp11;
     }
     if (tmp10) {
-      tmp10 = ((d[num3 + 1] / tmp8 / 1000) | 0) === tmp7(10, sum - 3) - 1;
+      tmp10 = ((d[num3 + 1] / tmp8 / 1000) | 0) === pow(10, sum - 3) - 1;
       const tmp12 = (d[num3 + 1] / tmp8 / 1000) | 0;
     }
   }
@@ -229,7 +229,7 @@ function convertBase(replaced, c19, c19) {
   }
   return items.reverse();
 }
-function finalise(constructor, precision, rounding, arg3) {
+function finalise(constructor, precision, rounding, flag) {
   let tmp11;
   let tmp39;
   constructor = constructor.constructor;
@@ -246,7 +246,7 @@ function finalise(constructor, precision, rounding, arg3) {
           num4 = num3;
         } while (10 <= first);
       }
-      let tmp2 = arg3;
+      let tmp2 = flag;
       const diff = precision - num4;
       if (diff < 0) {
         sum = diff + 7;
@@ -323,8 +323,8 @@ function finalise(constructor, precision, rounding, arg3) {
               num18 = pow(10, 7 - sum);
               let num19 = 0;
               if (sum3 > 0) {
-                const result1 = num6 / tmp26(10, num8 - sum3);
-                num19 = ((result1 % tmp26(10, sum3)) | 0) * num18;
+                const result1 = num6 / pow(10, num8 - sum3);
+                num19 = ((result1 % pow(10, sum3)) | 0) * num18;
               }
               d[num10] = num19;
               diff1 = num10;
@@ -446,7 +446,7 @@ function finalise(constructor, precision, rounding, arg3) {
   }
   return constructor;
 }
-function finiteToString(constructor, arg1, arg2) {
+function finiteToString(constructor, arg1, precision) {
   let tmp14;
   let tmp17;
   let tmp24;
@@ -457,8 +457,8 @@ function finiteToString(constructor, arg1, arg2) {
     const e = constructor.e;
     const arr = digitsToString(constructor.d);
     if (arg1) {
-      if (arg2) {
-        const diff = arg2 - length;
+      if (precision) {
+        const diff = precision - length;
         if (diff > 0) {
           const text = `${arr.charAt(0)}.`;
           let diff1 = tmp42 - 1;
@@ -501,9 +501,9 @@ function finiteToString(constructor, arg1, arg2) {
       }
       const _HermesInternal2 = HermesInternal;
       const combined = "0." + str16 + arr;
-      let tmp32 = arg2;
-      if (arg2) {
-        const diff4 = arg2 - length;
+      let tmp32 = precision;
+      if (precision) {
+        const diff4 = precision - length;
         tmp32 = diff4 > 0;
         const tmp31 = diff4;
       }
@@ -535,9 +535,9 @@ function finiteToString(constructor, arg1, arg2) {
           str9 = str8;
         } while (tmp17);
       }
-      let tmp18 = arg2;
-      if (arg2) {
-        const diff8 = arg2 - e - 1;
+      let tmp18 = precision;
+      if (precision) {
+        const diff8 = precision - e - 1;
         tmp18 = diff8 > 0;
         const tmp19 = diff8;
       }
@@ -565,10 +565,10 @@ function finiteToString(constructor, arg1, arg2) {
         const text3 = `${arr.slice(0, tmp45)}.`;
         text4 = `${arr.slice(0, tmp45)}.${arr.slice(tmp45)}`;
       }
-      let tmp7 = arg2;
+      let tmp7 = precision;
       let tmp8 = sum3;
-      if (arg2) {
-        const diff10 = arg2 - length;
+      if (precision) {
+        const diff10 = precision - length;
         tmp7 = diff10 > 0;
         tmp8 = diff10;
       }
@@ -872,12 +872,11 @@ function naturalLogarithm(self, sum) {
             const text1 = `${tmp7}.`;
             const constructor2 = new constructor(`${tmp7}.` + str.slice(1));
             const timesResult2 = constructor1.times("" + e);
-            const tmp42 = finalise;
             const plusResult = naturalLogarithm(constructor2, sum - 10).plus(timesResult2);
             constructor.precision = precision;
             if (tmp3) {
               c8 = true;
-              tmp42(plusResult, precision, rounding, true);
+              finalise(plusResult, precision, rounding, true);
             }
             return plusResult;
           }
@@ -961,7 +960,7 @@ function parseDecimal(d, arr) {
     if (sum1 < diff1) {
       if (sum1) {
         d = d.d;
-        d.push(+substr1.slice(0, sum1));
+        arr = d.push(+substr1.slice(0, sum1));
       }
       const diff3 = diff1 - 7;
       let tmp18 = sum1;
@@ -1020,7 +1019,6 @@ function taylorSeries(constructor, arg1, timesResult, constructor2, arg4) {
   obj = new constructor(constructor2);
   let obj2 = constructor2;
   while (true) {
-    let tmp4 = f115712;
     let timesResult1 = obj.times(timesResult);
     sum = tmp + 1;
     let tmp7 = new.target;
@@ -1039,7 +1037,7 @@ function taylorSeries(constructor, arg1, timesResult, constructor2, arg4) {
     let tmp18 = new.target;
     let tmp19 = new.target;
     let tmp20 = new constructor(sum1 * sum2);
-    let tmp4Result = tmp4(timesResult2, tmp20, precision, 1);
+    let tmp4Result = f115712(timesResult2, tmp20, precision, 1);
     plusResult1 = plusResult.plus(tmp4Result);
     obj = tmp4Result;
     obj2 = plusResult1;
@@ -1102,10 +1100,6 @@ function toLessThanHalfPi(constructor, self) {
         const tmp2 = num6 & divToIntResult.d[divToIntResult.d.length - num6];
         if (minusResult.lte(timesResult)) {
           if (tmp2) {
-            let num4 = 3;
-            if (tmp) {
-              num4 = 2;
-            }
           }
           return minusResult;
         } else {
@@ -1174,7 +1168,7 @@ function toStringBinary(isFinite, c19, arg2, arg3) {
       const replaced = arr.replace(".", "");
       constructor = new constructor(1);
       constructor.e = replaced.length - index;
-      constructor.d = convertBase(tmp9(constructor), 10, num4);
+      constructor.d = convertBase(finiteToString(constructor), 10, num4);
       constructor.e = constructor.d.length;
       tmp12 = replaced;
     }
@@ -1403,7 +1397,6 @@ function toStringBinary(isFinite, c19, arg2, arg3) {
     }
     let sum6 = str14 + str3;
     let tmp6 = tmp23;
-    tmp9 = finiteToString;
   } else {
     const _String = String;
     sum6 = String((isFinite.s * isFinite.s) / 0);
@@ -2227,7 +2220,7 @@ const fn5 = function () {
           }
           sum = arr + str2;
         }
-        const tmpResult = tmp(sum, 0.3333333333333333);
+        const tmpResult = pow(sum, 0.3333333333333333);
         let num7 = 2;
         const result1 = e % 3;
         if (e < 0) {
@@ -2250,7 +2243,6 @@ const fn5 = function () {
       str.toString();
       str = new.target;
       const constructor1 = new constructor(str);
-      tmp = pow;
     }
   }
   const constructor2 = new constructor(self);
@@ -2517,6 +2509,7 @@ const fn15 = function () {
     }
     return timesResult;
   }
+  const absResult = this.abs();
 };
 obj.acos = fn15;
 obj.inverseCosine = fn15;
@@ -2900,7 +2893,6 @@ const fn26 = function (arg0) {
           if (checkRoundingDigits(tmp28.d, precision, rounding)) {
             while (true) {
               let sum2 = tmp29 + 10;
-              let tmp31 = naturalLogarithm;
               let tmp33 = naturalLogarithm(self, sum2);
               if (flag) {
                 let sum3 = sum2 + 10;
@@ -2915,7 +2907,7 @@ const fn26 = function (arg0) {
                   let tmp31Result = constructor4;
                 }
               } else {
-                tmp31Result = tmp31(constructor, sum2);
+                tmp31Result = naturalLogarithm(constructor, sum2);
               }
               let tmp42 = f115712(tmp33, tmp31Result, sum2, 1);
               if (flag2) {
@@ -4059,22 +4051,22 @@ const fn40 = function (arg0) {
                     }
                     if (d) {
                       sum = precision + 10;
-                      const tmp55Result = tmp55(constructor.times(tmp56(constructor1, sum + bound)), sum);
+                      const tmp55Result = naturalExponential(
+                        constructor.times(naturalLogarithm(constructor1, sum + bound)),
+                        sum,
+                      );
                       finalise(tmp55Result, sum + 5, 1);
                       constructor5 = tmp55Result;
                       if (+arr.slice(precision + 1, precision + 15) + 1 === 100000000000000) {
-                        tmp25(tmp55Result, precision + 1, 0);
+                        finalise(tmp55Result, precision + 1, 0);
                         constructor5 = tmp55Result;
                       }
                       arr = digitsToString(tmp55Result.d);
-                      tmp25 = finalise;
                     }
                     constructor5.s = tmp10;
                     c8 = true;
                     constructor.rounding = rounding;
                     finalise(constructor5, precision, rounding);
-                    tmp55 = naturalExponential;
-                    tmp56 = naturalLogarithm;
                   }
                   return constructor5;
                 }
@@ -4205,7 +4197,7 @@ const fn43 = function () {
 };
 obj.toJSON = fn43;
 obj.valueOf = fn43;
-const f115712 = (s, s2, arg2, arg3, arg4, arg5) => {
+const f115712 = (s, s2, arg2, rounding, arg4, arg5) => {
   let num13;
   let tmp21;
   let tmp27;
@@ -4268,7 +4260,6 @@ const f115712 = (s, s2, arg2, arg3, arg4, arg5) => {
             if (arg4) {
               precision = tmp17 + (s.e - s2.e) + 1;
             }
-            rounding = arg3;
           }
           if (precision < 0) {
             items.push(1);

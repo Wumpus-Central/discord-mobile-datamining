@@ -10,12 +10,12 @@ let c2 = forResult;
 export const SENTRY_BUFFER_FULL_ERROR = forResult;
 export const makePromiseBuffer = function makePromiseBuffer() {
   const set = new Set();
-  let obj = {};
+  const obj = {};
   Object.defineProperty(obj, "$", { get: () => Array.from(set), set: undefined });
   obj.add = function add(fn) {
     if (set.size < promise) {
       promise = fn();
-      obj.add(promise);
+      set.add(promise);
       promise.then(
         () => {
           set.delete(promise);
@@ -28,7 +28,6 @@ export const makePromiseBuffer = function makePromiseBuffer() {
     } else {
       return num(set[0]).rejectedSyncPromise(closure_1_2);
     }
-    obj = set;
   };
   obj.drain = function drain(arg0) {
     closure_0 = arg0;

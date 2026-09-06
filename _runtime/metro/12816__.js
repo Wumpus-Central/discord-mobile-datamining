@@ -5,8 +5,8 @@ import _mod12817 from "12817__.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export const getAsyncContextStrategy = function getAsyncContextStrategy(arg0) {
-  const sentryCarrier = _mod12815.getSentryCarrier(arg0);
+export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod12815.getSentryCarrier(mainCarrier);
   if (sentryCarrier.acs) {
     let acs = sentryCarrier.acs;
   } else {

@@ -34,7 +34,7 @@ function _wrapXHR(arg0) {
     const item = items.forEach((item) => {
       _self = item;
       if (tmp2) {
-        _self(dependencyMap[0]).fill(tmp, item, (arg0) => {
+        _self(dependencyMap[0]).fill(self, item, (arg0) => {
           let obj = { mechanism: null };
           obj = { data: null, handled: false, type: null };
           obj = { handler: self(682).getFunctionName(arg0) };
@@ -44,14 +44,15 @@ function _wrapXHR(arg0) {
           const obj4 = self(682);
           const originalFunction = self(682).getOriginalFunction(arg0);
           if (originalFunction) {
-            let tmpResult = tmp(682);
+            let tmpResult = self(682);
             obj.mechanism.data.handler = tmpResult.getFunctionName(originalFunction);
           }
-          tmpResult = tmp(893);
+          tmpResult = self(893);
           return tmpResult.wrap(arg0, obj);
         });
         let obj = _self(dependencyMap[0]);
       }
+      tmp2 = item in self && typeof self[item] === "function";
     });
     return _self.apply(this, items1);
   };
@@ -59,7 +60,7 @@ function _wrapXHR(arg0) {
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_2 = ["EventTarget", "Window", "Node", "ApplicationCache", "AudioTrackList", "BroadcastChannel", "ChannelMergerNode", "CryptoOperation", "EventSource", "FileReader", "HTMLUnknownElement", "IDBDatabase", "IDBRequest", "IDBTransaction", "KeyOperation", "MediaController", "MessagePort", "ModalWindow", "Notification", "SVGElementInstance", "Screen", "SharedWorker", "TextTrack", "TextTrackCue", "TextTrackList", "WebSocket", "WebSocketWorker", "Worker", "XMLHttpRequest", "XMLHttpRequestEventTarget", "XMLHttpRequestUpload"];
 
-export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defineIntegration((mechanism) => {
+export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
   if (mechanism === undefined) {
     mechanism = {};
   }
@@ -108,7 +109,7 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
             }
           }
           if (hasOwnPropertyResult) {
-            let tmpResult = tmp(tmp2[0]);
+            let tmpResult = obj(dependencyMap[0]);
             tmpResult.fill(prototype, "addEventListener", (target) => function(arg0, handleEvent, arg2) {
               try {
                 if ((function isEventListenerObject() { ... })(handleEvent)) {
@@ -142,7 +143,7 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
               } catch (err) {
               }
             });
-            tmpResult = tmp(tmp2[0]);
+            tmpResult = obj(dependencyMap[0]);
             tmpResult.fill(prototype, "removeEventListener", (arg0) => {
               closure_0 = arg0;
               return function(arg0, __sentry_wrapped__, arg2) {
@@ -152,14 +153,14 @@ export const browserApiErrorsIntegration = registerSpanErrorInstrumentation.defi
                   if (__sentry_wrapped__) {
                     const call = closure_0.call;
                     if (typeof call === "unknown") {
-                      tmp2(arg0, __sentry_wrapped__, arg2);
+                      closure_0(arg0, __sentry_wrapped__, arg2);
                     } else {
                       call(self, arg0, tmp, arg2);
                     }
                   }
                   const call2 = closure_0.call;
                   if (typeof call2 === "unknown") {
-                    let call2Result = tmp4(arg0, __sentry_wrapped__, arg2);
+                    let call2Result = closure_0(arg0, __sentry_wrapped__, arg2);
                   } else {
                     call2Result = call2(self, arg0, __sentry_wrapped__, arg2);
                   }

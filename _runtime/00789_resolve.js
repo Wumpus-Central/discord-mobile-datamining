@@ -197,11 +197,11 @@ export const join = function join() {
   return normalizePath(items.join("/"));
 };
 export { normalizePath };
-export const relative = function relative(arg0, arg1) {
+export const relative = function relative(root, replaced) {
   let length;
-  let arr = resolve(arg0);
+  let arr = resolve(root);
   const str = arr.slice(1);
-  const arr2 = resolve(arg1);
+  const arr2 = resolve(replaced);
   const parts = str.split("/");
   let num = 0;
   if (0 < parts.length) {
@@ -241,7 +241,7 @@ export const relative = function relative(arg0, arg1) {
   } else {
     items = parts.slice(num, tmp3 - num + 1);
   }
-  const parts1 = resolve(arg1).slice(1).split("/");
+  const parts1 = resolve(replaced).slice(1).split("/");
   let num3 = 0;
   if (0 < parts1.length) {
     let num4 = 0;

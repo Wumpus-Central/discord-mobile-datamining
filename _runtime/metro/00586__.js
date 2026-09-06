@@ -1,7 +1,7 @@
 // _runtime/metro/00586__.js
 import _mod514 from "00514__.js";
+import _mod553 from "00553__.js";
 
-const _mod553 = tmp(553);
 const re2 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/;
 const re3 = /^\w*$/;
 

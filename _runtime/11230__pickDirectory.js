@@ -3,7 +3,7 @@ import _mod11226 from "metro/11226__.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 require = fn;
-let closure_3 = async function _pickDirectory(arg0, value) {
+let closure_3 = async function _pickDirectory(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

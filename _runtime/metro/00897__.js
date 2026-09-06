@@ -10,7 +10,7 @@ export const makeFetchTransport = function makeFetchTransport(bufferSize) {
     nativeImplementation = require("triggerHandlers").getNativeImplementation("fetch");
     let obj = require("triggerHandlers");
   }
-  closure_4 = async function _makeRequest(arg0, value) {
+  closure_4 = async function _makeRequest(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

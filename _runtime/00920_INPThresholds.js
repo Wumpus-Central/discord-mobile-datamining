@@ -1,11 +1,11 @@
 // _runtime/00920_INPThresholds.js
 import _mod909 from "metro/00909__.js";
 import observe from "00911_observe.js";
+import bindReporter from "00912_bindReporter.js";
 import _mod914 from "metro/00914__.js";
 import _mod921 from "metro/00921__.js";
 import InteractionManager from "00922_InteractionManager.js";
 
-const bindReporter = tmp(912);
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -74,11 +74,13 @@ export const onINP = (arg0) => {
                 }
               });
               closure_0(true);
+              obj = closure_0(metric[6]);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
           });
         }
+        const tmpResult = bindReporter;
       });
       let obj3 = require("whenActivated");
     }

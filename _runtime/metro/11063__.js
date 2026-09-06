@@ -28,7 +28,7 @@ export const useIAP = () => {
   asyncGeneratorStep(async (arg0) => {
     dependencyMap = closure_3;
     await closure_0(currentPurchaseError[3]).getProducts({ skus });
-    dependencyMap(arg1);
+    dependencyMap(value);
     await "HermesInternal";
     closure_2 = tmp2;
     skus = closure_0.skus;
@@ -37,7 +37,7 @@ export const useIAP = () => {
   const items = [setProducts];
   asyncGeneratorStep(async (arg0) => {
     await closure_0(currentPurchaseError[3]).getSubscriptions({ skus });
-    dependencyMap(arg1);
+    dependencyMap(value);
     await "HermesInternal";
     closure_2 = tmp2;
     skus = closure_0.skus;
@@ -68,7 +68,7 @@ export const useIAP = () => {
   }, items1);
   const items3 = [setPurchaseHistory];
   const tmp7 = setProducts(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -121,7 +121,7 @@ export const useIAP = () => {
     }),
     items2,
   );
-  _require = asyncGeneratorStep(async (arg0, value) => {
+  _require = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -264,7 +264,7 @@ export const useIAP = () => {
   items4[2] = setCurrentPurchase;
   items4[3] = setCurrentPurchaseError;
   const tmp8 = setProducts(
-    asyncGeneratorStep(async (arg0, value) => {
+    asyncGeneratorStep(async () => {
       if (c2 === 2) {
         c2 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

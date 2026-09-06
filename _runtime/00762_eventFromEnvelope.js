@@ -1,6 +1,7 @@
 // _runtime/00762_eventFromEnvelope.js
 import _mod702 from "metro/00702__.js";
 import forEachEnvelopeItem from "00729_forEachEnvelopeItem.js";
+import _mod740 from "metro/00740__.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 function eventFromEnvelope(arg0, arg1) {
@@ -43,7 +44,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
         const dsnFromStringResult = _mod702.dsnFromString(arg0);
         if (dsnFromStringResult) {
           let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = tmp4(740).getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
+          const envelopeEndpointWithUrlEncodedAuth = _mod740.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
           let tmp9 = tunnel;
           result = {};
           if (arg1) {
@@ -56,7 +57,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
             tmp9 = asyncGeneratorStep;
             tunnel = asyncGeneratorStep(async (release) => {
               c1 = 0;
-              return (async (arg0, value) => {
+              return (async (arg0) => {
                 if (c1 === 2) {
                   c1 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");
@@ -112,15 +113,14 @@ export function makeMultiplexedTransport(arg0, arg1) {
             tmp9Result = tmp9(result);
           }
           result = result.set(combined, tmp9Result);
-          const tmp4Result = tmp4(740);
+          const tmp4Result = _mod740;
         }
-        tmp4 = require;
       }
     }
-    closure_5 = async function _send(envelope) {
+    closure_5 = async function _send() {
       c2 = 0;
       c1 = 0;
-      return (async (arg0, value) => {
+      return (async (arg0) => {
         const mapped = fn({
           envelope,
           getEvent(arg0) {
@@ -176,7 +176,7 @@ export function makeMultiplexedTransport(arg0, arg1) {
       items[arraySpreadResult] = closure_2_1;
       closure_1 = closure_1 + 1;
       await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return arg1.every((item) => item);
+      return value.every((item) => item);
     };
     closure_1 = tunnel(arg0);
     const map = new Map();

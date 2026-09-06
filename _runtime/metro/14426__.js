@@ -46,6 +46,7 @@ export default () => {
               const _decodeURIComponent = decodeURIComponent;
               obj[tmp2] = decodeURIComponent(str.replace(/\+/g, " "));
             }
+            const tmp = _slicedToArray(item.split("="), 2);
           });
           tmp2 = obj;
           const str2 = _url.substr(num2 + 1);

@@ -3,6 +3,7 @@ import _mod14297 from "metro/14297__.js";
 import _mod14313 from "metro/14313__.js";
 import _mod14322 from "metro/14322__.js";
 import _mod14342 from "metro/14342__.js";
+import _mod14353 from "metro/14353__.js";
 import _mod14359 from "metro/14359__.js";
 import _mod14360 from "metro/14360__.js";
 
@@ -13,14 +14,13 @@ if (!_mod14359) {
     _mod14342[tmp] = true;
     let fn = function t(facade, arg1) {
       if (require("metro/14320__.js")(facade, closure_6)) {
-        const typeError = new tmp(14297).TypeError("Object already initialized");
+        const typeError = new _mod14297.TypeError("Object already initialized");
         throw typeError;
       } else {
         arg1.facade = facade;
-        tmp(14353)(facade, tmp3, arg1);
+        _mod14353(facade, closure_6, arg1);
         return arg1;
       }
-      tmp3 = closure_6;
     };
     let fn4 = fn;
     let fn2 = function n(arg0) {
@@ -32,7 +32,7 @@ if (!_mod14359) {
     };
     let fn6 = fn3;
   }
-  let obj = {
+  const obj = {
     set: fn,
     get: fn2,
     has: fn3,
@@ -74,10 +74,9 @@ fn4 = function t(facade, arg1) {
     throw typeError;
   } else {
     arg1.facade = facade;
-    const result = obj.set(facade, arg1);
+    const result = state.set(facade, arg1);
     return arg1;
   }
-  obj = state;
 };
 fn5 = function n(arg0) {
   return state.get(arg0) || {};

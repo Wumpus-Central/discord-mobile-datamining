@@ -117,10 +117,10 @@ let items = [
         const item = substr.forEach((item) => {
           if (!item[0]) {
             if (1 === self._state) {
-              item[1](tmp._value);
+              item[1](self._value);
             }
             if (2 === self._state) {
-              item[2](tmp._value);
+              item[2](self._value);
             }
             item[0] = true;
           }
@@ -137,9 +137,9 @@ let items = [
           if (obj2.isThenable(_value)) {
             _value.then(resolve, reject);
           } else {
-            obj._state = 1;
-            obj._value = _value;
-            obj._executeHandlers();
+            self._state = 1;
+            self._value = _value;
+            self._executeHandlers();
           }
           obj2 = SyncPromise(692);
         }
@@ -149,9 +149,9 @@ let items = [
           if (obj2.isThenable(_value)) {
             _value.then(resolve, reject);
           } else {
-            obj._state = 2;
-            obj._value = _value;
-            obj._executeHandlers();
+            self._state = 2;
+            self._value = _value;
+            self._executeHandlers();
           }
           obj2 = SyncPromise(692);
         }

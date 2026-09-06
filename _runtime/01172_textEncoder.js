@@ -88,28 +88,31 @@ const items = [
         tmp130[closure_15] = tmp130[closure_15] + length;
         if (0 === _classPrivateFieldBase(self, closure_16)[closure_16]) {
           const _Uint8Array = Uint8Array;
-          let tmp128Result = tmp128(self, closure_14);
+          let tmp128Result = _classPrivateFieldBase(self, closure_14);
           const uint8Array = new Uint8Array(32);
           tmp128Result[closure_14] = uint8Array;
         }
         if (_classPrivateFieldBase(self, closure_16)[closure_16] + length < 32) {
-          const obj3 = tmp128(self, closure_14)[closure_14];
-          const result = obj3.set(encodeResult.subarray(0, length), tmp128(self, tmp131)[tmp131]);
-          tmp128Result = tmp128(self, tmp131);
-          tmp128Result[tmp131] = tmp128Result[tmp131] + length;
+          const obj3 = _classPrivateFieldBase(self, closure_14)[closure_14];
+          const result = obj3.set(
+            encodeResult.subarray(0, length),
+            _classPrivateFieldBase(self, closure_16)[closure_16],
+          );
+          tmp128Result = _classPrivateFieldBase(self, closure_16);
+          tmp128Result[closure_16] = tmp128Result[closure_16] + length;
           return self;
         } else {
           let num4 = 0;
-          if (tmp128(self, tmp131)[tmp131] > 0) {
-            const obj = tmp128(self, closure_14)[closure_14];
+          if (_classPrivateFieldBase(self, closure_16)[closure_16] > 0) {
+            const obj = _classPrivateFieldBase(self, closure_14)[closure_14];
             const result1 = obj.set(
-              encodeResult.subarray(0, 32 - tmp128(self, tmp131)[tmp131]),
-              tmp128(self, tmp131)[tmp131],
+              encodeResult.subarray(0, 32 - _classPrivateFieldBase(self, closure_16)[closure_16]),
+              _classPrivateFieldBase(self, closure_16)[closure_16],
             );
-            const tmp12 = tmp128(self, closure_14)[closure_14];
+            const tmp12 = _classPrivateFieldBase(self, closure_14)[closure_14];
             const _BigInt = BigInt;
             const _BigInt2 = BigInt;
-            const subarrayResult1 = encodeResult.subarray(0, 32 - tmp128(self, tmp131)[tmp131]);
+            const subarrayResult1 = encodeResult.subarray(0, 32 - _classPrivateFieldBase(self, closure_16)[closure_16]);
             const bigint = 8n;
             const _BigInt3 = BigInt;
             const BigIntResult = BigInt(tmp12[0]);
@@ -159,19 +162,19 @@ const items = [
               (BigInt(tmp12[6]) << 48n) |
               (BigInt(tmp12[7]) << 56n);
             const _BigInt9 = BigInt;
-            const asUintNResult = BigInt.asUintN(64, tmp128(self, closure_10)[closure_10] + tmp21 * c3);
+            const asUintNResult = BigInt.asUintN(64, _classPrivateFieldBase(self, closure_10)[closure_10] + tmp21 * c3);
             const bigint8 = 31n;
             const bigint9 = 64n;
             const diff = 64n - 31n;
             const _BigInt10 = BigInt;
-            tmp128(self, closure_10)[closure_10] = BigInt.asUintN(
+            _classPrivateFieldBase(self, closure_10)[closure_10] = BigInt.asUintN(
               64,
               (((asUintNResult << 31n) & closure_7) | (asUintNResult >> diff)) * c2,
             );
             const memory = self.memory;
             const _BigInt11 = BigInt;
             const _BigInt12 = BigInt;
-            const tmp128Result1 = tmp128(self, closure_10);
+            const tmp128Result1 = _classPrivateFieldBase(self, closure_10);
             const _BigInt13 = BigInt;
             const BigIntResult1 = BigInt(memory[8]);
             const _BigInt14 = BigInt;
@@ -214,16 +217,19 @@ const items = [
               (BigInt(memory[14]) << 48n) |
               (BigInt(memory[15]) << 56n);
             const _BigInt19 = BigInt;
-            const asUintNResult1 = BigInt.asUintN(64, tmp128(self, closure_11)[closure_11] + tmp36 * c3);
+            const asUintNResult1 = BigInt.asUintN(
+              64,
+              _classPrivateFieldBase(self, closure_11)[closure_11] + tmp36 * c3,
+            );
             const _BigInt20 = BigInt;
-            tmp128(self, closure_11)[closure_11] = BigInt.asUintN(
+            _classPrivateFieldBase(self, closure_11)[closure_11] = BigInt.asUintN(
               64,
               (((asUintNResult1 << 31n) & closure_7) | (asUintNResult1 >> diff)) * c2,
             );
             const memory2 = self.memory;
             const _BigInt21 = BigInt;
             const _BigInt22 = BigInt;
-            const tmp128Result2 = tmp128(self, closure_11);
+            const tmp128Result2 = _classPrivateFieldBase(self, closure_11);
             const _BigInt23 = BigInt;
             const BigIntResult2 = BigInt(memory2[16]);
             const _BigInt24 = BigInt;
@@ -269,16 +275,19 @@ const items = [
               (BigInt(memory2[22]) << 48n) |
               (BigInt(memory2[23]) << 56n);
             const _BigInt29 = BigInt;
-            const asUintNResult2 = BigInt.asUintN(64, tmp128(self, closure_12)[closure_12] + tmp47 * c3);
+            const asUintNResult2 = BigInt.asUintN(
+              64,
+              _classPrivateFieldBase(self, closure_12)[closure_12] + tmp47 * c3,
+            );
             const _BigInt30 = BigInt;
-            tmp128(self, closure_12)[closure_12] = BigInt.asUintN(
+            _classPrivateFieldBase(self, closure_12)[closure_12] = BigInt.asUintN(
               64,
               (((asUintNResult2 << 31n) & closure_7) | (asUintNResult2 >> diff)) * c2,
             );
             const memory3 = self.memory;
             const _BigInt31 = BigInt;
             const _BigInt32 = BigInt;
-            const tmp128Result3 = tmp128(self, closure_12);
+            const tmp128Result3 = _classPrivateFieldBase(self, closure_12);
             const _BigInt33 = BigInt;
             const BigIntResult3 = BigInt(memory3[24]);
             const _BigInt34 = BigInt;
@@ -324,15 +333,18 @@ const items = [
               (BigInt(memory3[30]) << 48n) |
               (BigInt(memory3[31]) << 56n);
             const _BigInt39 = BigInt;
-            const asUintNResult3 = BigInt.asUintN(64, tmp128(self, closure_13)[closure_13] + tmp58 * c3);
+            const asUintNResult3 = BigInt.asUintN(
+              64,
+              _classPrivateFieldBase(self, closure_13)[closure_13] + tmp58 * c3,
+            );
             const _BigInt40 = BigInt;
-            tmp128(self, closure_13)[closure_13] = BigInt.asUintN(
+            _classPrivateFieldBase(self, closure_13)[closure_13] = BigInt.asUintN(
               64,
               (((asUintNResult3 << 31n) & closure_7) | (asUintNResult3 >> diff)) * c2,
             );
-            num4 = 32 - tmp128(self, tmp131)[tmp131];
-            tmp128(self, tmp131)[tmp131] = 0;
-            const tmp128Result4 = tmp128(self, closure_13);
+            num4 = 32 - _classPrivateFieldBase(self, closure_16)[closure_16];
+            _classPrivateFieldBase(self, closure_16)[closure_16] = 0;
+            const tmp128Result4 = _classPrivateFieldBase(self, closure_13);
           }
           const diff1 = tmp - 32;
           const bigint10 = 8n;
@@ -346,7 +358,7 @@ const items = [
           const bigint18 = 64n;
           const diff2 = 64n - 31n;
           let sum3 = num4;
-          let tmp66 = tmp128;
+          let tmp66 = _classPrivateFieldBase;
           let tmp67 = num4;
           if (num4 <= diff1) {
             do {
@@ -486,27 +498,27 @@ const items = [
       const tmp2 = _classPrivateFieldBase(this, closure_14)[closure_14];
       const tmp3 = _classPrivateFieldBase(this, closure_16)[closure_16];
       if (_classPrivateFieldBase(this, closure_15)[closure_15] >= 32) {
-        const tmp10 = tmp(self, closure_10)[closure_10];
+        const tmp10 = _classPrivateFieldBase(self, closure_10)[closure_10];
         const bigint = 1n;
         const bigint2 = 64n;
-        const tmp14 = tmp(self, closure_11)[closure_11];
+        const tmp14 = _classPrivateFieldBase(self, closure_11)[closure_11];
         const bigint3 = 7n;
         const sum =
           (((tmp10 << 1n) & closure_7) | (tmp10 >> (64n - 1n))) + (((tmp14 << 7n) & closure_7) | (tmp14 >> (64n - 7n)));
-        const tmp17 = tmp(self, closure_12)[closure_12];
+        const tmp17 = _classPrivateFieldBase(self, closure_12)[closure_12];
         const bigint4 = 12n;
         const sum1 = sum + (((tmp17 << 12n) & closure_7) | (tmp17 >> (64n - 12n)));
-        const tmp20 = tmp(self, closure_13)[closure_13];
+        const tmp20 = _classPrivateFieldBase(self, closure_13)[closure_13];
         const bigint5 = 18n;
         const sum2 = sum1 + (((tmp20 << 18n) & closure_7) | (tmp20 >> (64n - 18n)));
         const _BigInt2 = BigInt;
-        const asUintNResult = BigInt.asUintN(64, tmp(self, closure_10)[closure_10] * c3);
+        const asUintNResult = BigInt.asUintN(64, _classPrivateFieldBase(self, closure_10)[closure_10] * c3);
         const bigint6 = 31n;
         const diff = 64n - 31n;
         const _BigInt3 = BigInt;
         const _BigInt4 = BigInt;
         const _BigInt5 = BigInt;
-        const asUintNResult2 = BigInt.asUintN(64, tmp(self, closure_11)[closure_11] * c3);
+        const asUintNResult2 = BigInt.asUintN(64, _classPrivateFieldBase(self, closure_11)[closure_11] * c3);
         const _BigInt6 = BigInt;
         const _BigInt7 = BigInt;
         const asUintNResult1 = BigInt.asUintN(
@@ -515,7 +527,7 @@ const items = [
         );
         const tmp12 = ((tmp10 << 1n) & closure_7) | (tmp10 >> (64n - 1n));
         const _BigInt8 = BigInt;
-        const asUintNResult4 = BigInt.asUintN(64, tmp(self, closure_12)[closure_12] * c3);
+        const asUintNResult4 = BigInt.asUintN(64, _classPrivateFieldBase(self, closure_12)[closure_12] * c3);
         const _BigInt9 = BigInt;
         const _BigInt10 = BigInt;
         const asUintNResult3 = BigInt.asUintN(
@@ -533,7 +545,7 @@ const items = [
             c5,
         );
         const _BigInt11 = BigInt;
-        const asUintNResult6 = BigInt.asUintN(64, tmp(self, closure_13)[closure_13] * c3);
+        const asUintNResult6 = BigInt.asUintN(64, _classPrivateFieldBase(self, closure_13)[closure_13] * c3);
         const _BigInt12 = BigInt;
         const _BigInt13 = BigInt;
         let asUintNResult7 = BigInt.asUintN(
@@ -598,9 +610,9 @@ const items = [
         );
       } else {
         const _BigInt = BigInt;
-        asUintNResult7 = BigInt.asUintN(64, tmp(self, closure_9)[closure_9] + c6);
+        asUintNResult7 = BigInt.asUintN(64, _classPrivateFieldBase(self, closure_9)[closure_9] + c6);
       }
-      let sum3 = asUintNResult7 + BigInt(tmp(self, tmp4)[tmp4]);
+      let sum3 = asUintNResult7 + BigInt(_classPrivateFieldBase(self, closure_15)[closure_15]);
       let num3 = 0;
       let tmp37 = sum3;
       let num4 = 0;

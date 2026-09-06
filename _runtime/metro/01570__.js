@@ -102,9 +102,9 @@ export const useNavigationCache = function useNavigationCache(getState) {
         closure_0 = arg0;
         withStack(() => {
           if (typeof dispatch === "function") {
-            let tmpResult = tmp;
-            if (typeof tmp === "function") {
-              tmpResult = tmp(closure_0());
+            let tmpResult = closure_0;
+            if (typeof closure_0 === "function") {
+              tmpResult = closure_0(closure_0());
             }
             if (null != tmpResult) {
               obj = { source: key.key };
@@ -143,10 +143,9 @@ export const useNavigationCache = function useNavigationCache(getState) {
         if (tmp2) {
           let isFocusedResult = !navigation;
           if (navigation) {
-            isFocusedResult = obj.isFocused();
+            isFocusedResult = navigation.isFocused();
           }
           tmp2 = isFocusedResult;
-          obj = navigation;
         }
         return tmp2;
       };

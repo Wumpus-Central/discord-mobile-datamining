@@ -3,6 +3,10 @@ import _mod17 from "metro/00017__.js";
 import _mod682 from "metro/00682__.js";
 import NativeModules from "00866_NativeModules.js";
 import _mod867 from "metro/00867__.js";
+import PROFILE_QUEUE3 from "00982_PROFILE_QUEUE.js";
+import enrichAndroidProfileWithEventContext from "00983_enrichAndroidProfileWithEventContext.js";
+import _mod987 from "metro/00987__.js";
+import mapSamples from "00989_mapSamples.js";
 
 function stopProfiling(arg0) {
   const NATIVE = NativeModules.NATIVE;
@@ -10,10 +14,10 @@ function stopProfiling(arg0) {
   if (stopProfilingResult) {
     const _Date = Date;
     const result = Date.now() * c2;
-    let tmpResult = tmp(989);
+    let tmpResult = mapSamples;
     const result1 = tmpResult.convertToSentryProfile(stopProfilingResult.hermesProfile);
     if (result1) {
-      tmpResult = tmp(983);
+      tmpResult = enrichAndroidProfileWithEventContext;
       const hermesProfilingEvent = tmpResult.createHermesProfilingEvent(result1);
       if (hermesProfilingEvent) {
         if (stopProfilingResult.androidProfile) {
@@ -120,8 +124,7 @@ export const hermesProfilingIntegration = () => {
     if (obj.isRootSpan(activeSpan)) {
       _finishCurrentProfile();
       if (typeof _shouldStartProfiling === "function") {
-        tmp(682);
-        const tmpResult = tmp(682);
+        const tmpResult = _mod682;
         if (spanIsSampledResult) {
           const client = tmpResult.getClient();
           let getOptions;
@@ -141,7 +144,7 @@ export const hermesProfilingIntegration = () => {
             }
           }
           if (undefined === profilesSampleRate) {
-            const debug3 = tmp(682).debug;
+            const debug3 = _mod682.debug;
             debug3.log(
               "[Profiling] Profiling disabled, enable it by setting `profilesSampleRate` option to SDK init call.",
             );
@@ -150,7 +153,7 @@ export const hermesProfilingIntegration = () => {
             const _Math = Math;
             flag2 = Math.random() <= profilesSampleRate;
             if (!flag2) {
-              const debug2 = tmp(682).debug;
+              const debug2 = _mod682.debug;
               debug2.log("[Profiling] Skip profiling transaction due to sampling.");
               flag2 = false;
             }
@@ -165,6 +168,7 @@ export const hermesProfilingIntegration = () => {
         throw new TypeError("Trying to call a non-function");
       }
     }
+    obj = _mod987;
   }
   function _shouldStartProfiling(arg0) {}
   function _startNewProfile(arg0) {}
@@ -193,6 +197,7 @@ export const hermesProfilingIntegration = () => {
         );
       }
     }
+    obj = _mod987;
   }
   function _finishCurrentProfile() {
     if (typeof _clearCurrentProfileTimeout === "function") {
@@ -204,13 +209,13 @@ export const hermesProfilingIntegration = () => {
       if (undefined !== _undefined) {
         const tmp12 = stopProfiling(tmp5.startTimestampNs);
         if (tmp12) {
-          const PROFILE_QUEUE = tmp13(982).PROFILE_QUEUE;
+          const PROFILE_QUEUE = PROFILE_QUEUE3.PROFILE_QUEUE;
           PROFILE_QUEUE.add(_undefined.profile_id, tmp12);
-          const debug2 = tmp13(682).debug;
+          const debug2 = _mod682.debug;
           debug2.log("[Profiling] finished profiling: ", _undefined.profile_id);
           _undefined = undefined;
         } else {
-          const debug = tmp13(682).debug;
+          const debug = _mod682.debug;
           debug.warn("[Profiling] Stop failed. Cleaning up...");
           _undefined = undefined;
         }
@@ -278,13 +283,13 @@ export const hermesProfilingIntegration = () => {
       const PROFILE_QUEUE2 = _undefined(_undefined2[3]).PROFILE_QUEUE;
       PROFILE_QUEUE2.delete(profile_id);
       if (value) {
-        const result = tmp11(tmp12[4]).enrichCombinedProfileWithEventContext(profile_id, value, contexts);
-        const debug2 = tmp11(tmp12[2]).debug;
+        const result = _undefined(_undefined2[4]).enrichCombinedProfileWithEventContext(profile_id, value, contexts);
+        const debug2 = _undefined(_undefined2[2]).debug;
         const _HermesInternal2 = HermesInternal;
         debug2.log("[Profiling] Created profile " + profile_id + " for transaction " + contexts.event_id);
         return result;
       } else {
-        const debug = tmp11(tmp12[2]).debug;
+        const debug = _undefined(_undefined2[2]).debug;
         const _HermesInternal = HermesInternal;
         debug.log("[Profiling] cannot find profile " + profile_id + " for transaction " + contexts.event_id);
         return null;
@@ -297,7 +302,6 @@ export const hermesProfilingIntegration = () => {
     setupOnce() {
       if (!c3) {
         c3 = true;
-        const tmp = require;
         let obj2 = _mod682;
         if (isHermesEnabledResult) {
           const client = obj2.getClient();
@@ -308,18 +312,18 @@ export const hermesProfilingIntegration = () => {
           if (tmp5) {
             if (typeof _startCurrentProfileForActiveTransaction === "function") {
               if (!c0) {
-                const activeSpan = tmp(682).getActiveSpan();
+                const activeSpan = _mod682.getActiveSpan();
                 if (activeSpan) {
                   _startCurrentProfile(activeSpan);
                 }
-                let tmpResult = tmp(682);
+                let tmpResult = _mod682;
               }
               client.on("spanStart", _startCurrentProfile);
               client.on("spanEnd", _finishCurrentProfileForSpan);
               client.on("beforeEnvelope", (arg0) => {
                 const PROFILE_QUEUE = c0(982).PROFILE_QUEUE;
                 if (PROFILE_QUEUE.size()) {
-                  const result = tmp(983).findProfiledTransactionsFromEnvelope(arg0);
+                  const result = c0(983).findProfiledTransactionsFromEnvelope(arg0);
                   if (result.length) {
                     const items = [];
                     const tmp6 = result[Symbol.iterator]();
@@ -333,10 +337,10 @@ export const hermesProfilingIntegration = () => {
                     const result1 = c0(983).addProfilesToEnvelope(arg0, items);
                     const obj2 = c0(983);
                   } else {
-                    const debug = tmp(682).debug;
+                    const debug = c0(682).debug;
                     debug.log("[Profiling] no profiled transactions found in envelope");
                   }
-                  const tmpResult = tmp(983);
+                  const tmpResult = c0(983);
                 }
               });
             } else {

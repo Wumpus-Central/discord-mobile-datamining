@@ -30,7 +30,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
     [tmp2, c2] = _slicedToArray(timestampProducer(obj), 2);
     closure_3 = tmp3;
     obj = c0(436);
-    obj.useVirtualViewLogging(tmp2 !== c9, nativeID);
+    ref = obj.useVirtualViewLogging(tmp3, nativeID);
     obj = {
       initialHidden,
       nativeID,
@@ -64,7 +64,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       }
       let bindResult = null;
       if (null != closure_1) {
-        bindResult = closure_1.bind(null, obj);
+        bindResult = obj2.bind(null, obj);
       }
       closure_1 = bindResult;
       if (tmpResult !== globalThis.VirtualViewMode.Visible) {
@@ -101,6 +101,8 @@ if (measure.hasViewManagerConfig("VirtualView")) {
           bindResult();
         }
       }
+      obj2 = closure_1;
+      const tmp = initialHidden(_undefined[7]);
     };
     let children = null;
     if (tmp2 === c9) {
@@ -111,8 +113,8 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       <__INTERNAL_VIEW_CONFIG
         initialHidden={initialHidden}
         nativeID={nativeID}
-        ref={arg1}
-        removeClippedSubviews={arg0.removeClippedSubviews}
+        ref={ref}
+        removeClippedSubviews={hiddenStyle.removeClippedSubviews}
         renderState={null}
         style={null}
         onModeChange={null}
@@ -137,7 +139,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
       [tmp2, c2] = _slicedToArray(timestampProducer(obj), 2);
       closure_3 = tmp3;
       obj = c0(436);
-      obj.useVirtualViewLogging(tmp2 !== c9, nativeID);
+      ref = obj.useVirtualViewLogging(tmp3, nativeID);
       obj = {
         initialHidden,
         nativeID,
@@ -171,7 +173,7 @@ if (measure.hasViewManagerConfig("VirtualView")) {
         }
         let bindResult = null;
         if (null != closure_1) {
-          bindResult = closure_1.bind(null, obj);
+          bindResult = obj2.bind(null, obj);
         }
         closure_1 = bindResult;
         if (tmpResult !== globalThis.VirtualViewMode.Visible) {
@@ -208,6 +210,8 @@ if (measure.hasViewManagerConfig("VirtualView")) {
             bindResult();
           }
         }
+        obj2 = closure_1;
+        const tmp = initialHidden(_undefined[7]);
       };
       let children = null;
       if (tmp2 === c9) {
@@ -218,8 +222,8 @@ if (measure.hasViewManagerConfig("VirtualView")) {
         <__INTERNAL_VIEW_CONFIG
           initialHidden={initialHidden}
           nativeID={nativeID}
-          ref={arg1}
-          removeClippedSubviews={arg0.removeClippedSubviews}
+          ref={ref}
+          removeClippedSubviews={hiddenStyle.removeClippedSubviews}
           renderState={null}
           style={null}
           onModeChange={null}

@@ -1,7 +1,10 @@
 // _runtime/00734_captureCheckIn.js
 import _mod686 from "metro/00686__.js";
+import _mod688 from "metro/00688__.js";
+import consoleSandbox from "00689_consoleSandbox.js";
 import uuid4 from "00695_uuid4.js";
 import dateTimestampInSeconds from "00703_dateTimestampInSeconds.js";
+import closeSession from "00710_closeSession.js";
 import _mod713 from "metro/00713__.js";
 import _mod731 from "metro/00731__.js";
 import applyClientOptions from "00735_applyClientOptions.js";
@@ -13,17 +16,17 @@ function captureCheckIn(arg0, arg1) {
   if (client) {
     if (client.captureCheckIn) {
       return client.captureCheckIn(arg0, arg1, currentScope);
-    } else if (tmp(688).DEBUG_BUILD) {
-      const debug2 = tmp(689).debug;
+    } else if (_mod688.DEBUG_BUILD) {
+      const debug2 = consoleSandbox.debug;
       debug2.warn("Cannot capture check-in. Client does not support sending check-ins.");
     }
-  } else if (tmp(688).DEBUG_BUILD) {
-    const debug = tmp(689).debug;
+  } else if (_mod688.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
     debug.warn("Cannot capture check-in. No client defined.");
   }
   return uuid4.uuid4();
 }
-let closure_4 = async function _flush(arg0, value) {
+let closure_4 = async function _flush(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -49,17 +52,16 @@ let closure_4 = async function _flush(arg0, value) {
       } else {
         const client = require("metro/00713__.js").getClient();
         if (client) {
-          client.flush(tmp13);
+          client.flush(closure_0);
         } else {
-          if (tmp14(tmp15[3]).DEBUG_BUILD) {
-            const debug = tmp14(tmp15[4]).debug;
+          if (require("metro/00688__.js").DEBUG_BUILD) {
+            const debug = require("consoleSandbox").debug;
             debug.warn("Cannot flush events. No client defined.");
           }
           const resolved = Promise.resolve(false);
         }
         c1 = 3;
         const obj3 = require("metro/00713__.js");
-        tmp13 = closure_0;
       }
     } catch (tmp8) {
       c1 = tmp;
@@ -67,7 +69,7 @@ let closure_4 = async function _flush(arg0, value) {
     }
   }
 };
-let closure_5 = async function _close(arg0, value) {
+let closure_5 = async function _close(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -93,17 +95,16 @@ let closure_5 = async function _close(arg0, value) {
       } else {
         const client = require("metro/00713__.js").getClient();
         if (client) {
-          client.close(tmp13);
+          client.close(closure_0);
         } else {
-          if (tmp14(tmp15[3]).DEBUG_BUILD) {
-            const debug = tmp14(tmp15[4]).debug;
+          if (require("metro/00688__.js").DEBUG_BUILD) {
+            const debug = require("consoleSandbox").debug;
             debug.warn("Cannot flush events and disable SDK. No client defined.");
           }
           const resolved = Promise.resolve(false);
         }
         c1 = 3;
         const obj3 = require("metro/00713__.js");
-        tmp13 = closure_0;
       }
     } catch (tmp8) {
       c1 = tmp;
@@ -122,9 +123,9 @@ export const captureEvent = function captureEvent(arg0, arg1) {
   const currentScope = _mod713.getCurrentScope();
   return currentScope.captureEvent(arg0, arg1);
 };
-export const captureException = function captureException(arg0, arg1) {
+export const captureException = function captureException(error, captureContext) {
   const currentScope = _mod713.getCurrentScope();
-  return currentScope.captureException(arg0, applyClientOptions.parseEventHintOrCaptureContext(arg1));
+  return currentScope.captureException(error, applyClientOptions.parseEventHintOrCaptureContext(captureContext));
 };
 export const captureMessage = function captureMessage(arg0, captureContext) {
   let tmp;
@@ -151,12 +152,12 @@ export const captureSession = function captureSession() {
     const currentScope = obj3.getCurrentScope();
     const tmp6 = currentScope.getSession() || isolationScope.getSession();
     if (tmp6) {
-      let tmpResult = tmp(710);
+      let tmpResult = closeSession;
       tmpResult.closeSession(tmp6);
     }
-    tmpResult = tmp(713);
+    tmpResult = _mod713;
     const isolationScope1 = tmpResult.getIsolationScope();
-    const client = tmp(713).getClient();
+    const client = _mod713.getClient();
     const session = isolationScope1.getSession();
     let tmp9 = session;
     if (session) {
@@ -166,7 +167,7 @@ export const captureSession = function captureSession() {
       client.captureSession(session);
     }
     isolationScope.setSession();
-    const tmpResult1 = tmp(713);
+    const tmpResult1 = _mod713;
   } else {
     const client1 = obj3.getClient();
     const session1 = isolationScope.getSession();
@@ -194,10 +195,10 @@ export const endSession = function endSession() {
   const currentScope = _mod713.getCurrentScope();
   const tmp3 = currentScope.getSession() || isolationScope.getSession();
   if (tmp3) {
-    let tmpResult = tmp(710);
+    let tmpResult = closeSession;
     tmpResult.closeSession(tmp3);
   }
-  tmpResult = tmp(713);
+  tmpResult = _mod713;
   const isolationScope1 = tmpResult.getIsolationScope();
   const client = _mod713.getClient();
   const session = isolationScope1.getSession();
@@ -209,6 +210,7 @@ export const endSession = function endSession() {
     client.captureSession(session);
   }
   isolationScope.setSession();
+  const tmpResult1 = _mod713;
 };
 export const flush = function flush(arg0) {
   const self = this;
@@ -272,7 +274,7 @@ export const startSession = function startSession(arg0) {
   const isolationScope = obj.getIsolationScope();
   const currentScope = _mod713.getCurrentScope();
   const userAgent = _mod686.GLOBAL_OBJ.navigator || {}.userAgent;
-  let tmpResult = tmp(710);
+  let tmpResult = closeSession;
   const tmp3 = _mod686.GLOBAL_OBJ.navigator || {};
   obj = { user: currentScope.getUser() || isolationScope.getUser() };
   let tmp5 = userAgent;
@@ -289,7 +291,7 @@ export const startSession = function startSession(arg0) {
     status = session1.status;
   }
   if ("ok" === status) {
-    tmpResult = tmp(710);
+    tmpResult = closeSession;
     tmpResult.updateSession(session1, { status: "exited" });
   }
   const tmp4 = currentScope.getUser() || isolationScope.getUser();
@@ -298,8 +300,8 @@ export const startSession = function startSession(arg0) {
   const currentScope1 = _mod713.getCurrentScope();
   const tmp12 = currentScope1.getSession() || isolationScope1.getSession();
   if (tmp12) {
-    tmp(710).closeSession(tmp12);
-    const tmpResult3 = tmp(710);
+    closeSession.closeSession(tmp12);
+    const tmpResult3 = closeSession;
   }
   const tmpResult2 = _mod713;
   const isolationScope2 = _mod713.getIsolationScope();
@@ -334,15 +336,16 @@ export const withMonitor = function withMonitor(monitorSlug, arg1, arg2) {
       if (client) {
         if (client.captureCheckIn) {
           client.captureCheckIn(obj, undefined, currentScope);
-        } else if (tmp(688).DEBUG_BUILD) {
-          const debug2 = tmp(689).debug;
+        } else if (_mod688.DEBUG_BUILD) {
+          const debug2 = consoleSandbox.debug;
           debug2.warn("Cannot capture check-in. Client does not support sending check-ins.");
         }
-      } else if (tmp(688).DEBUG_BUILD) {
-        const debug = tmp(689).debug;
+      } else if (_mod688.DEBUG_BUILD) {
+        const debug = consoleSandbox.debug;
         debug.warn("Cannot capture check-in. No client defined.");
       }
       uuid4.uuid4();
+      const tmpResult = uuid4;
     }
     monitorSlug = runCallback({ monitorSlug, status: "in_progress" }, finishCheckIn);
     dependencyMap = monitorSlug(703).timestampInSeconds();

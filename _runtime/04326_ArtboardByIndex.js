@@ -10,4 +10,4 @@ export const ArtboardByIndex = (index) => {
     throw error;
   }
 };
-export (name) => ({ type: "name", name })
+export (artboardName) => ({ type: "name", name: artboardName })

@@ -22,7 +22,7 @@ const __initData4 = {
   code: "function pnpm_useSmoothKeyboardHandlerTs5(e){const{IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS,handler}=this.__closure;if(IS_ANDROID_ELEVEN_OR_HIGHER_OR_IOS){var _handler$onEnd,_handler;(_handler$onEnd=(_handler=handler).onEnd)===null||_handler$onEnd===void 0||_handler$onEnd.call(_handler,e);}}",
 };
 
-export const useSmoothKeyboardHandler = (handler, items) => {
+export const useSmoothKeyboardHandler = (handler, items11) => {
   _require = handler;
   __closure = require("cancelAnimation");
   sharedValue = __closure.useSharedValue(-1);
@@ -78,10 +78,10 @@ export const useSmoothKeyboardHandler = (handler, items) => {
   I.__closure = { handler, height: sharedValue1, persistedHeight: sharedValue2 };
   I.__workletHash = 1186520959152;
   I.__initData = __initData;
-  let tmp9 = items;
-  if (items) {
-    items = [];
-    HermesBuiltin.arraySpread(items, 0);
+  let tmp9 = items11;
+  if (items11) {
+    const items = [];
+    HermesBuiltin.arraySpread(items11, 0);
     tmp9 = items;
   }
   const animatedReaction = require("cancelAnimation").useAnimatedReaction(fn, I, tmp9);
@@ -114,7 +114,7 @@ export const useSmoothKeyboardHandler = (handler, items) => {
     if (onStart2 != null) {
       onStart2Result = {};
       const merged = Object.assign(height);
-      if (tmp) {
+      if (closure_2) {
         let duration = height.duration;
       } else {
         duration = obj.duration;
@@ -171,5 +171,5 @@ export const useSmoothKeyboardHandler = (handler, items) => {
   O.__workletHash = 9348108811600;
   O.__initData = __initData4;
   __closure.onEnd = O;
-  require("01830__.js").useKeyboardHandler(__closure, items);
+  require("01830__.js").useKeyboardHandler(__closure, items11);
 };

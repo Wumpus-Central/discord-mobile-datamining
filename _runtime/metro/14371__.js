@@ -9,7 +9,7 @@ const exports = {
   is(arg0) {
     if (arg0) {
       if (obj.hasOwn(arg0, _mod14372.implSymbol)) {
-        if (arg0[tmp(undefined, 14372).implSymbol] instanceof tmp(14373).implementation) {
+        if (arg0[_mod14372.implSymbol] instanceof URLImpl.implementation) {
           return true;
         }
       }
@@ -38,9 +38,8 @@ const exports = {
             return true;
           }
         }
-        const tmpResult = tmp(14372);
+        const tmpResult = _mod14372;
       }
-      tmp = require;
     }
     return false;
   },
@@ -103,8 +102,8 @@ const exports = {
     Object.defineProperty(wrapper, _mod14372.implSymbol, obj);
     wrapper[_mod14372.implSymbol][_mod14372.wrapperSymbol] = wrapper;
     if (URLImpl.init) {
-      tmp2(14373).init(wrapper[tmp2(undefined, 14372).implSymbol], obj);
-      const tmp2Result = tmp2(14373);
+      URLImpl.init(wrapper[_mod14372.implSymbol], obj);
+      const tmp2Result = URLImpl;
     }
     return wrapper;
   },
@@ -176,13 +175,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].href = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].href = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'href' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'href' property on 'URL': The provided value",
               });
             }
@@ -232,13 +234,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].protocol = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].protocol = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'protocol' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'protocol' property on 'URL': The provided value",
               });
             }
@@ -260,13 +265,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].username = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].username = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'username' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'username' property on 'URL': The provided value",
               });
             }
@@ -288,13 +296,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].password = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].password = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'password' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'password' property on 'URL': The provided value",
               });
             }
@@ -316,13 +327,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].host = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].host = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'host' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'host' property on 'URL': The provided value",
               });
             }
@@ -344,13 +358,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].hostname = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].hostname = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'hostname' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'hostname' property on 'URL': The provided value",
               });
             }
@@ -372,13 +389,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].port = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].port = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'port' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'port' property on 'URL': The provided value",
               });
             }
@@ -400,13 +420,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].pathname = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].pathname = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'pathname' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'pathname' property on 'URL': The provided value",
               });
             }
@@ -428,13 +451,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].search = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].search = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'search' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'search' property on 'URL': The provided value",
               });
             }
@@ -472,13 +498,16 @@ const exports = {
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
         },
-        set(arg0) {
+        set(item10103) {
           const self = this;
           if (this) {
             _exports = module.exports;
             if (_exports.is(self)) {
               const obj = URL(14380);
-              self[URL(undefined, 14372).implSymbol].hash = URL(14380).USVString(arg0, {
+              self[URL(undefined, 14372).implSymbol].hash = URL(14380).USVString(item10103, {
+                context: "Failed to set the 'hash' property on 'URL': The provided value",
+              });
+              const USVStringResult = URL(14380).USVString(item10103, {
                 context: "Failed to set the 'hash' property on 'URL': The provided value",
               });
             }

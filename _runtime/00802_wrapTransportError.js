@@ -1,7 +1,10 @@
 // _runtime/00802_wrapTransportError.js
 import _mod687 from "metro/00687__.js";
 import _mod731 from "metro/00731__.js";
+import extractClientInfo from "00803_extractClientInfo.js";
+import CLIENT_ADDRESS_ATTRIBUTE from "00805_CLIENT_ADDRESS_ATTRIBUTE.js";
 import _mod806 from "metro/00806__.js";
+import _mod810 from "metro/00810__.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -14,7 +17,8 @@ export const wrapTransportError = function wrapTransportError(onerror) {
         const self = this;
         (function captureTransportError(error) {
           try {
-            closure_1_0(closure_1_1[10]).captureError(error, "transport");
+            closure_1_0(dependencyMap[10]).captureError(error, "transport");
+            const obj = closure_1_0(dependencyMap[10]);
           } catch (err) {}
         })(error);
         const call = closure_0.call;
@@ -50,17 +54,17 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(onmessage,
           closure_0 = tmp10;
           if ("initialize" === method.method) {
             try {
-              let tmpResult = tmp(tmp2[3]);
+              let tmpResult = tmp(dependencyMap[3]);
               const result = tmpResult.extractSessionDataFromInitializeRequest(method);
               closure_3 = result;
-              tmpResult = tmp(tmp2[4]);
+              tmpResult = tmp(dependencyMap[4]);
               const result1 = tmpResult.storeSessionDataForTransport(self, result);
             } catch (err) {}
           }
-          const isolationScope = tmp(tmp2[5]).getIsolationScope();
-          const tmpResult1 = tmp(tmp2[5]);
+          const isolationScope = tmp(dependencyMap[5]).getIsolationScope();
+          const tmpResult1 = tmp(dependencyMap[5]);
           const cloneResult = isolationScope.clone();
-          return tmp(tmp2[5]).withIsolationScope(cloneResult, () => {
+          return tmp(dependencyMap[5]).withIsolationScope(cloneResult, () => {
             let obj = _mod806;
             const mcpServerSpanConfig = obj.buildMcpServerSpanConfig(method, self, closure_2, closure_0);
             const startInactiveSpanResult = _mod731.startInactiveSpan(mcpServerSpanConfig);
@@ -70,19 +74,18 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(onmessage,
             }
             if (tmp6) {
               obj = {};
-              let tmpResult = tmp(803);
+              let tmpResult = extractClientInfo;
               const merged = Object.assign(tmpResult.buildClientAttributesFromInfo(result.clientInfo));
               let protocolVersion = result.protocolVersion;
               if (protocolVersion) {
                 obj = {};
-                obj[tmp(805).MCP_PROTOCOL_VERSION_ATTRIBUTE] = tmp7.protocolVersion;
+                obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = result.protocolVersion;
                 protocolVersion = obj;
               }
               const merged1 = Object.assign(protocolVersion);
               startInactiveSpanResult.setAttributes(obj);
-              tmp7 = result;
             }
-            tmpResult = tmp(810);
+            tmpResult = _mod810;
             tmpResult.storeSpanForRequest(self, method.id, startInactiveSpanResult, method.method);
             return _mod731.withActiveSpan(startInactiveSpanResult, () => {
               const call = closure_0.call;
@@ -91,7 +94,7 @@ export const wrapTransportOnMessage = function wrapTransportOnMessage(onmessage,
           });
         } else {
           if (tmpResult3.isJsonRpcNotification(method)) {
-            const tmpResult4 = tmp(tmp2[6]);
+            const tmpResult4 = tmp(dependencyMap[6]);
             let mcpNotificationSpan = tmpResult4.createMcpNotificationSpan(method, self, extra, closure_0, () => {
               const call = closure_0.call;
               return typeof call === "unknown" ? closure_0(closure_1, closure_2) : call(self, closure_1, closure_2);
@@ -119,7 +122,7 @@ export const wrapTransportSend = function wrapTransportSend(send, arg1) {
         c6 = 0;
         c7 = 0;
         c5 = 0;
-        const iter = (async (arg0, value) => {
+        const iter = (async (arg0) => {
           if (c7 === 2) {
             c7 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");

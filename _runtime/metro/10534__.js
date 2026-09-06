@@ -71,10 +71,10 @@ const items = [
         if ("afgelopen" !== formatted) {
           let reverseDurationResult = parseDurationResult;
         }
-        const ParsingComponents = tmp2(10435).ParsingComponents;
+        const ParsingComponents = NLTimeUnitCasualRelativeFormatParser(10435).ParsingComponents;
         return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
-      reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
+      reverseDurationResult = NLTimeUnitCasualRelativeFormatParser(10434).reverseDuration(parseDurationResult);
     },
   },
 ];

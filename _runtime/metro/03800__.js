@@ -42,7 +42,7 @@ if (!module_3802) {
 }
 module_3802 = tmp11;
 if (!module_3803) {
-  let obj3 = { default: module_3803 };
+  const obj3 = { default: module_3803 };
   let tmp13 = obj3;
 } else {
   tmp13 = module_3803;
@@ -66,19 +66,18 @@ export default function addBusinessDays(arg0, arg1) {
     if (defaultResult3 < 0) {
       num3 = -1;
     }
-    defaultResult1.setDate(defaultResult1.getDate() + 7 * obj3.default(defaultResult3 / 5));
+    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_3654.default(defaultResult3 / 5));
     const _Math = Math;
     let absolute = Math.abs(defaultResult3 % 5);
     if (absolute > 0) {
       do {
         let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        let tmp9 = module_3801;
         diff = absolute;
         if (!module_3801.default(defaultResult1)) {
           diff = absolute - 1;
         }
         absolute = diff;
-        obj2 = tmp9;
+        obj2 = module_3801;
       } while (diff > 0);
     }
     if (defaultResult2) {
@@ -108,6 +107,5 @@ export default function addBusinessDays(arg0, arg1) {
     defaultResult1.setHours(hours);
     return defaultResult1;
   }
-  obj3 = module_3654;
 };
 export default exports.default;

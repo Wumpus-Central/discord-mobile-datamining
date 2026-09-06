@@ -8,7 +8,7 @@ const context = createContext(null);
 
 export const VirtualizedListContext = context;
 export const VirtualizedListContextResetter = function VirtualizedListContextResetter(children) {
-  return <context.Provider value={null}>{arg0.children}</context.Provider>;
+  return <context.Provider value={null}>{children.children}</context.Provider>;
 };
 export const VirtualizedListContextProvider = function VirtualizedListContextProvider(children) {
   value = children.value;
@@ -34,7 +34,7 @@ export const VirtualizedListContextProvider = function VirtualizedListContextPro
         items,
       )}
     >
-      {arg0.children}
+      {children.children}
     </context.Provider>
   );
 };
@@ -49,14 +49,14 @@ export const VirtualizedListCellContextProvider = function VirtualizedListCellCo
         let tmp2 = null;
         if (null != closure_1) {
           const obj = {};
-          const merged = Object.assign(tmp);
+          const merged = Object.assign(closure_1);
           obj.cellKey = cellKey;
           tmp2 = obj;
         }
         return tmp2;
       }, items)}
     >
-      {arg0.children}
+      {cellKey.children}
     </context.Provider>
   );
 };

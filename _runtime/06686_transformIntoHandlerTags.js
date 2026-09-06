@@ -5,8 +5,8 @@ import RNGestureHandlerModuleDefault from "06684_RNGestureHandlerModule.js";
 import ghQueueMicrotask from "06687_ghQueueMicrotask.js";
 import get_ActivityIndicator from "metro/00017__.js";
 
-function transformIntoHandlerTags(arg0) {
-  const mapped = tagMessage.toArray(arg0).map((current) => {
+function transformIntoHandlerTags(blocksHandlers) {
+  const mapped = tagMessage.toArray(blocksHandlers).map((current) => {
     let num = handlerIDToTag.handlerIDToTag[current];
     if (!num) {
       current = current.current;
@@ -27,8 +27,8 @@ function transformIntoHandlerTags(arg0) {
 let closure_5 = [];
 let c6 = false;
 
-export const selectProperties = (arg0, arr) => {
-  closure_0 = arg0;
+export const selectProperties = (config, arr) => {
+  closure_0 = config;
   const found = arr.filter((item) => item in closure_0);
   return Object.fromEntries(
     found.map((item) => {
@@ -37,7 +37,7 @@ export const selectProperties = (arg0, arr) => {
     }),
   );
 };
-export const filterConfig = function filterConfig(config, ALLOWED_PROPS, config2) {
+export const filterConfig = function filterConfig(config, ALLOWED_PROPS) {
   let obj = config2;
   if (config2 === undefined) {
     obj = {};

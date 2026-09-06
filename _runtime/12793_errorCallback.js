@@ -1,7 +1,10 @@
 // _runtime/12793_errorCallback.js
 import _mod12794 from "metro/12794__.js";
+import _mod12797 from "metro/12797__.js";
 import _mod12801 from "metro/12801__.js";
 import spanTimeInputToSeconds from "12802_spanTimeInputToSeconds.js";
+import _mod12814 from "metro/12814__.js";
+import _mod12825 from "metro/12825__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -10,16 +13,16 @@ function errorCallback() {
   const activeSpan = obj.getActiveSpan();
   let rootSpan = activeSpan;
   if (activeSpan) {
-    rootSpan = tmp(12802).getRootSpan(activeSpan);
-    const tmpResult = tmp(12802);
+    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
+    const tmpResult = spanTimeInputToSeconds;
   }
   if (rootSpan) {
-    if (tmp(12825).DEBUG_BUILD) {
-      const logger = tmp(12797).logger;
+    if (_mod12825.DEBUG_BUILD) {
+      const logger = _mod12797.logger;
       const _HermesInternal = HermesInternal;
       logger.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");
     }
-    obj = { code: tmp(12814).SPAN_STATUS_ERROR, message: "internal_error" };
+    obj = { code: _mod12814.SPAN_STATUS_ERROR, message: "internal_error" };
     rootSpan.setStatus(obj);
   }
 }

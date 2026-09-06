@@ -73,7 +73,7 @@ export const KeyboardProvider = (enabled) => {
   const obj6 = require("01825__.js");
   const obj7 = require("01825__.js");
   const update = closure_4(
-    enabled(function* (arg0, value) {
+    enabled(function* () {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

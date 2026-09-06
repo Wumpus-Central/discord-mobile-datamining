@@ -31,6 +31,7 @@ function parseBackgroundPositionCSSString(str) {
   const parts = str.split(",");
   const mapped = parts.map((item) => item.trim());
   const iter = mapped[Symbol.iterator]();
+  str = iter.next();
   while (iter !== undefined) {
     let str2;
     let str5;

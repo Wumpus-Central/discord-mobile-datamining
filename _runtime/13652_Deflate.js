@@ -1,5 +1,7 @@
 // _runtime/13652_Deflate.js
 import _mod13651 from "metro/13651__.js";
+import ZStream from "13653_ZStream.js";
+import flush_block_only from "13654_flush_block_only.js";
 import _mod13655 from "metro/13655__.js";
 import _mod13659 from "metro/13659__.js";
 

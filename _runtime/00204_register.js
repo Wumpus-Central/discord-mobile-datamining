@@ -1,21 +1,21 @@
 // _runtime/00204_register.js
 const map = new Map();
 
-export const register = (arg0) => {
-  value = map.get(arg0);
+export const register = (blobId) => {
+  value = map.get(blobId);
   if (null != value) {
-    const result = obj.set(arg0, value + 1);
+    const result = map.set(blobId, value + 1);
   } else {
-    const result1 = obj.set(arg0, 1);
+    const result1 = map.set(blobId, 1);
   }
 };
 export const unregister = (arg0) => {
   value = map.get(arg0);
   if (null != value) {
     if (value <= 1) {
-      obj.delete(arg0);
+      map.delete(arg0);
     } else {
-      const result = obj.set(arg0, value - 1);
+      const result = map.set(arg0, value - 1);
     }
   }
 };

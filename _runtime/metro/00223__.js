@@ -104,15 +104,15 @@ const items = [
         asDataURL.then(
           (result) => {
             if (!self._aborted) {
-              obj._result = FileReader(206).toByteArray(result.split(",")[1]).buffer;
-              obj._setReadyState(2);
+              self._result = FileReader(206).toByteArray(result.split(",")[1]).buffer;
+              self._setReadyState(2);
               const obj2 = FileReader(206);
             }
           },
           (_error) => {
             if (!self._aborted) {
-              obj._error = _error;
-              obj._setReadyState(2);
+              self._error = _error;
+              self._setReadyState(2);
             }
           },
         );
@@ -135,14 +135,14 @@ const items = [
         asDataURL.then(
           (_result) => {
             if (!self._aborted) {
-              obj._result = _result;
-              obj._setReadyState(2);
+              self._result = _result;
+              self._setReadyState(2);
             }
           },
           (_error) => {
             if (!self._aborted) {
-              obj._error = _error;
-              obj._setReadyState(2);
+              self._error = _error;
+              self._setReadyState(2);
             }
           },
         );
@@ -151,7 +151,7 @@ const items = [
   },
   {
     key: "readAsText",
-    value: function readAsText(_bodyBlob, match) {
+    value: function readAsText(_bodyBlob) {
       const self = this;
       let str = match;
       if (match === undefined) {
@@ -169,14 +169,14 @@ const items = [
         asText.then(
           (_result) => {
             if (!self._aborted) {
-              obj._result = _result;
-              obj._setReadyState(2);
+              self._result = _result;
+              self._setReadyState(2);
             }
           },
           (_error) => {
             if (!self._aborted) {
-              obj._error = _error;
-              obj._setReadyState(2);
+              self._error = _error;
+              self._setReadyState(2);
             }
           },
         );

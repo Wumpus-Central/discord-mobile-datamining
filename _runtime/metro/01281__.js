@@ -31,10 +31,9 @@ if (tmp) {
           return false;
         }
         if (_mod1319) {
-          if (closure_1) {
-            return obj.delete(obj);
+          if (set) {
+            return set.delete(obj);
           }
-          obj = closure_1;
         }
       },
       get(obj) {

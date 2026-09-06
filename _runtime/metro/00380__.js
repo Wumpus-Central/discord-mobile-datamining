@@ -2,8 +2,10 @@
 import _modAll27 from "00027__.js";
 import _modDef38 from "00038__.js";
 import flattenStyleDefault from "../00148_flattenStyle.js";
+import result1Default from "../00357_result1.js";
 import _assertNativeAnimatedModuleDefault from "../00367__assertNativeAnimatedModule.js";
 import _modDef381 from "00381__.js";
+import _modDef382 from "00382__.js";
 import _slicedToArray from "00032__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -14,7 +16,6 @@ import _inherits from "../00098__inherits.js";
 import _classPrivateFieldBase from "../00090__classPrivateFieldBase.js";
 import _classPrivateFieldKey from "../00091__classPrivateFieldKey.js";
 
-const result1Default = tmp(357);
 const AnimatedProps = arg1;
 function _isNativeReflectConstruct() {
   try {
@@ -56,14 +57,14 @@ function _connectShadowNode2(instance) {
       _modDef38(this.__isNative, 'Expected node to be marked as "native"');
       const nodeFromPublicInstance = AnimatedProps(272).getNodeFromPublicInstance(instance.instance);
       if (null != nodeFromPublicInstance) {
-        const API = tmp4(357).API;
+        const API = result1Default.API;
         const result = API.connectAnimatedNodeToShadowNodeFamily(self.__getNativeTag(), nodeFromPublicInstance);
       }
       const obj3 = AnimatedProps(272);
-      tmp4 = importDefault;
     }
     tmpResult = _modAll27;
   }
+  obj = _modAll27;
 }
 function _disconnectAnimatedView2(connectedViewTag) {
   const self = this;
@@ -202,7 +203,7 @@ let items = [
       const merged = Object.assign(style);
       const keys = Object.keys(style);
       let num = 0;
-      if (0 < keys.length) {
+      if (0 < length) {
         while (true) {
           let tmp2 = keys[num];
           obj2 = this._props[tmp2];
@@ -306,6 +307,7 @@ let items = [
         fn = (items) => fn.apply(self, items);
       }
       fn([]);
+      length = _nodes.length;
     },
   },
   {
@@ -339,6 +341,7 @@ let items = [
           const tmp12 = _classPrivateFieldBase(self, closure_12);
         }
       }
+      length = _nodes.length;
     },
   },
   {
@@ -392,9 +395,9 @@ let items = [
 ];
 let fn = Object.hasOwn;
 if (fn == null) {
-  fn = (arg0, arg1) => {
+  fn = (arg0, View) => {
     const call = hasOwnProperty.call;
-    return typeof call === "unknown" ? hasOwnProperty(arg1) : call(arg0, arg1);
+    return typeof call === "unknown" ? hasOwnProperty(View) : call(arg0, View);
   };
 }
 

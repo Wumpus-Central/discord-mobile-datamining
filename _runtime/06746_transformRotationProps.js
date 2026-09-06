@@ -35,7 +35,7 @@ fillInDefaultValues.__initData = {
 const map = new Map();
 let closure_6 = {};
 
-export const useRotationGesture = function useRotationGesture(gestureHandlerProps) {
+export const useRotationGesture = function useRotationGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;

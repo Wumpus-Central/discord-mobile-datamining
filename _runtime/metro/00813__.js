@@ -86,9 +86,9 @@ export const wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
-              let callResult = tmp3(tmp4, tmp5, tmp6, items);
+              let callResult = closure_2_2(closure_0, closure_1, closure_2, items);
             } else {
-              callResult = call(self, tmp4, tmp5, tmp6, items);
+              callResult = call(self, closure_0, closure_1, closure_2, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -127,9 +127,9 @@ export const wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
-              let callResult = tmp3(tmp4, tmp5, tmp6, items);
+              let callResult = closure_2_2(closure_0, closure_1, closure_2, items);
             } else {
-              callResult = call(self, tmp4, tmp5, tmp6, items);
+              callResult = call(self, closure_0, closure_1, closure_2, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -168,9 +168,9 @@ export const wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
-              let callResult = tmp3(tmp4, tmp5, tmp6, items);
+              let callResult = closure_2_2(closure_0, closure_1, closure_2, items);
             } else {
-              callResult = call(self, tmp4, tmp5, tmp6, items);
+              callResult = call(self, closure_0, closure_1, closure_2, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -210,9 +210,9 @@ export const wrapPromptHandlers = function wrapPromptHandlers(arg0) {
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
-              let callResult = tmp3(tmp4, tmp5, tmp6, items);
+              let callResult = closure_2_2(closure_0, closure_1, closure_2, items);
             } else {
-              callResult = call(self, tmp4, tmp5, tmp6, items);
+              callResult = call(self, closure_0, closure_1, closure_2, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -252,9 +252,9 @@ export const wrapResourceHandlers = function wrapResourceHandlers(arg0) {
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
-              let callResult = tmp3(tmp4, tmp5, tmp6, items);
+              let callResult = closure_2_2(closure_0, closure_1, closure_2, items);
             } else {
-              callResult = call(self, tmp4, tmp5, tmp6, items);
+              callResult = call(self, closure_0, closure_1, closure_2, items);
             }
             return callResult;
           } catch (tmp13) {
@@ -294,9 +294,9 @@ export const wrapToolHandlers = function wrapToolHandlers(arg0) {
           try {
             const call = closure_2_2.call;
             if (typeof call === "unknown") {
-              let callResult = tmp3(tmp4, tmp5, tmp6, items);
+              let callResult = closure_2_2(closure_0, closure_1, closure_2, items);
             } else {
-              callResult = call(self, tmp4, tmp5, tmp6, items);
+              callResult = call(self, closure_0, closure_1, closure_2, items);
             }
             return callResult;
           } catch (tmp13) {

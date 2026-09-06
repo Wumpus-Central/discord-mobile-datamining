@@ -58,11 +58,11 @@ export default {
         obj.description = str6;
         obj.CameraOrientation = obj;
         const sum2 = sum1 + tmp17.ROLL_ANGLE;
-        const int16 = byteLength.getInt16(sum2, byteOrder === tmp3(5218).LITTLE_ENDIAN);
+        const int16 = byteLength.getInt16(sum2, byteOrder === _modDef5218.LITTLE_ENDIAN);
         obj1 = { value: int16, description: "" + -0.5 * int16 };
         obj.RollAngle = obj1;
         const sum3 = sum1 + tmp17.PITCH_ANGLE;
-        const int161 = byteLength.getInt16(sum3, byteOrder === tmp3(5218).LITTLE_ENDIAN);
+        const int161 = byteLength.getInt16(sum3, byteOrder === _modDef5218.LITTLE_ENDIAN);
         const obj2 = { value: int161, description: "" + -0.5 * int161 };
         obj.PitchAngle = obj2;
       }

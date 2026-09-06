@@ -2,13 +2,13 @@
 function replacer(arg0, _default) {
   let arr = closure_4;
   if (closure_4.length) {
-    arr = tmp;
-    if (this !== tmp[0]) {
+    arr = closure_4;
+    if (this !== closure_4[0]) {
       closure_4.shift();
       arr = closure_4;
       while (closure_4.length) {
-        arr = tmp3;
-        if (tmp2 === tmp3[0]) {
+        arr = closure_4;
+        if (tmp2 === closure_4[0]) {
           break;
         }
       }
@@ -31,9 +31,9 @@ function replacer(arg0, _default) {
           } else {
             combined = _default;
             if (_default.length > POSITIVE_INFINITY3) {
-              const substr = _default.slice(0, tmp14);
+              const substr = _default.slice(0, POSITIVE_INFINITY3);
               const _HermesInternal2 = HermesInternal;
-              const items = ["... extra " + _default.length - tmp14 + " values truncated ..."];
+              const items = ["... extra " + _default.length - POSITIVE_INFINITY3 + " values truncated ..."];
               combined = substr.concat(items);
             }
           }
@@ -112,13 +112,13 @@ export const createStringifySafeWithLimits = function createStringifySafeWithLim
   replacer = function replacer(arg0, _default) {
     let arr = closure_4;
     if (closure_4.length) {
-      arr = tmp;
-      if (this !== tmp[0]) {
+      arr = closure_4;
+      if (this !== closure_4[0]) {
         closure_4.shift();
         arr = closure_4;
         while (closure_4.length) {
-          arr = tmp3;
-          if (tmp2 === tmp3[0]) {
+          arr = closure_4;
+          if (tmp2 === closure_4[0]) {
             break;
           }
         }
@@ -141,9 +141,9 @@ export const createStringifySafeWithLimits = function createStringifySafeWithLim
             } else {
               combined = _default;
               if (_default.length > POSITIVE_INFINITY3) {
-                const substr = _default.slice(0, tmp14);
+                const substr = _default.slice(0, POSITIVE_INFINITY3);
                 const _HermesInternal2 = HermesInternal;
-                const items = ["... extra " + _default.length - tmp14 + " values truncated ..."];
+                const items = ["... extra " + _default.length - POSITIVE_INFINITY3 + " values truncated ..."];
                 combined = substr.concat(items);
               }
             }

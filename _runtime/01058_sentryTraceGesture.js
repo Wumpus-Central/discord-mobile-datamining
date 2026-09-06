@@ -1,6 +1,7 @@
 // _runtime/01058_sentryTraceGesture.js
 import _mod682 from "metro/00682__.js";
 import DEFAULT from "01020_DEFAULT.js";
+import SPAN_ORIGIN_AUTO_INTERACTION from "01023_SPAN_ORIGIN_AUTO_INTERACTION.js";
 import userInteractionIntegration from "01030_userInteractionIntegration.js";
 
 require = arg1;
@@ -65,8 +66,8 @@ export const sentryTraceGesture = function sentryTraceGesture(elementId, handler
           const result = obj.startUserInteractionSpan(obj);
           if (result) {
             const attr = result.setAttribute(
-              tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
-              tmp(1023).SPAN_ORIGIN_AUTO_INTERACTION,
+              _mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
+              SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION,
             );
           }
           obj = { event, name: formatted };

@@ -77,10 +77,10 @@ class InnerBaseButton {
         tmp = tmp4;
       }
       if (tmp8) {
-        const props = tmp7.props;
+        const props = closure_0.props;
         props.onActiveStateChange(tmp);
       }
-      const longPressDetected = tmp7.longPressDetected;
+      const longPressDetected = closure_0.longPressDetected;
       let onPress = !longPressDetected;
       if (!longPressDetected) {
         onPress = nativeEvent.oldState === InnerBorderlessButton(6661).State.ACTIVE;
@@ -89,30 +89,30 @@ class InnerBaseButton {
         onPress = state !== InnerBorderlessButton(6661).State.CANCELLED;
       }
       if (onPress) {
-        onPress = tmp7.lastIsPressed;
+        onPress = closure_0.lastIsPressed;
       }
       if (onPress) {
-        onPress = tmp7.props.onPress;
+        onPress = closure_0.props.onPress;
       }
       if (onPress) {
-        const props2 = tmp7.props;
+        const props2 = closure_0.props;
         props2.onPress(pointerInside);
       }
       if (!closure_0.lastIsPressed) {
         if (state === InnerBorderlessButton(6661).State.BEGAN) {
           if (pointerInside) {
-            tmp7.longPressDetected = false;
-            if (tmp7.props.onLongPress) {
+            closure_0.longPressDetected = false;
+            if (closure_0.props.onLongPress) {
               const _setTimeout = setTimeout;
-              tmp7.longPressTimeout = setTimeout(tmp7.onLongPress, tmp7.props.delayLongPress);
+              closure_0.longPressTimeout = setTimeout(closure_0.onLongPress, closure_0.props.delayLongPress);
             }
           }
-          tmp7.lastIsPressed = tmp;
+          closure_0.lastIsPressed = tmp;
         }
       }
-      let tmp18 = state !== InnerBorderlessButton(6661).State.ACTIVE || pointerInside || undefined === tmp7.longPressTimeout;
+      let tmp18 = state !== InnerBorderlessButton(6661).State.ACTIVE || pointerInside || undefined === closure_0.longPressTimeout;
       if (tmp18) {
-        let tmp19 = undefined === tmp7.longPressTimeout;
+        let tmp19 = undefined === closure_0.longPressTimeout;
         if (!tmp19) {
           let tmp22 = state !== InnerBorderlessButton(6661).State.END;
           if (tmp22) {
@@ -127,9 +127,10 @@ class InnerBaseButton {
       }
       if (!tmp18) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp7.longPressTimeout);
-        tmp7.longPressTimeout = undefined;
+        clearTimeout(closure_0.longPressTimeout);
+        closure_0.longPressTimeout = undefined;
       }
+      tmp8 = tmp !== closure_0.lastIsPressed && closure_0.props.onActiveStateChange;
     };
     tmp3Result.onLongPress = () => {
       closure_0.longPressDetected = true;

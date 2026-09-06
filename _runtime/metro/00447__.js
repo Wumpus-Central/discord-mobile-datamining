@@ -109,9 +109,9 @@ export default {
   isAccessibilityServiceEnabled() {
     return new Promise((arg0, fn) => {
       if (null != AccessibilityInfoDefault) {
-        if (null != tmp(tmp2[0]).isAccessibilityServiceEnabled) {
-          const result = tmp(tmp2[0]).isAccessibilityServiceEnabled(arg0);
-          const tmpResult = tmp(tmp2[0]);
+        if (null != AccessibilityInfoDefault.isAccessibilityServiceEnabled) {
+          const result = AccessibilityInfoDefault.isAccessibilityServiceEnabled(arg0);
+          const tmpResult = AccessibilityInfoDefault;
         }
       }
       const error = new Error("NativeAccessibilityInfoAndroid.isAccessibilityServiceEnabled is not available");

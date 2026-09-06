@@ -488,7 +488,8 @@ const fn = function t(arg0) {
   }
   function decode(str) {
     const formData = new FormData();
-    let parts = str.trim().split("&");
+    str = str.trim();
+    let parts = str.split("&");
     const item = parts.forEach((item) => {
       if (item) {
         const parts = item.split("=");
@@ -1432,7 +1433,7 @@ const fn = function t(arg0) {
                 }
               }
               if (closure_1_6) {
-                if (tmp44) {
+                if (closure_1_4) {
                   let isPrototypeOfResult = _bodyInit;
                   if (_bodyInit) {
                     const _DataView = DataView;
@@ -1459,7 +1460,7 @@ const fn = function t(arg0) {
                   }
                 }
               }
-              if (tmp7) {
+              if (closure_1_6) {
                 const _ArrayBuffer = ArrayBuffer;
                 if (_bodyInit.slice) {
                   buffer = _bodyInit.slice(0);
@@ -1479,8 +1480,6 @@ const fn = function t(arg0) {
               const tmp13 = typeof call === "unknown" ? toString() : call(_bodyInit);
               self._bodyText = tmp13;
               tmp = tmp13;
-              tmp44 = closure_1_4;
-              tmp7 = closure_1_6;
             }
           } else {
             self._noBody = true;
@@ -1693,7 +1692,7 @@ const fn = function t(arg0) {
     }
     response.headers = obj;
     response.url = this.url;
-    obj = Object.create(tmp.prototype);
+    obj = Object.create(Response.prototype);
     Response(this._bodyInit, response);
     return obj;
   };

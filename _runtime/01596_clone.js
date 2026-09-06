@@ -1,10 +1,12 @@
 // _runtime/01596_clone.js
 import BaseNavigationContainer from "01486_BaseNavigationContainer.js";
 import _modDef1505 from "metro/01505__.js";
+import get_options from "01583_get_options.js";
+import _mod1597 from "metro/01597__.js";
 import noop from "metro/00019__.js";
 
 require = fn;
-function clone(screen, arg1, get) {
+function clone(screen, arg1) {
   let keys = arg1;
   if (arg1 === undefined) {
     keys = closure_4;
@@ -63,13 +65,12 @@ function clone(screen, arg1, get) {
           let tmp21 = nextResult;
           value = Reflect.get(screen, nextResult);
           let tmp23 = value;
-          let tmp24 = clone;
           if ("params" === nextResult) {
             let tmp25 = closure_5;
           } else {
             tmp25 = closure_4;
           }
-          let tmp24Result = tmp24(value, tmp25, weakMap);
+          let tmp24Result = clone(value, tmp25, weakMap);
           if (tmp24Result !== tmp23) {
             if (tmp12 != null) {
               let result1 = weakMap.set(screen, tmp12);
@@ -115,7 +116,7 @@ export const useLinkProps = function useLinkProps(arg0) {
     let error = new Error("Couldn't find a navigation object. Is your component inside NavigationContainer?");
     throw error;
   } else {
-    const options = obj.useContext(tmp2(1583).LinkingContext).options;
+    const options = obj.useContext(get_options.LinkingContext).options;
     const tmp14 = _modDef1505((preventDefault) => {
       if (preventDefault != null) {
         preventDefault.preventDefault();
@@ -132,7 +133,7 @@ export const useLinkProps = function useLinkProps(arg0) {
       }
       context1.dispatch(tmp8);
     });
-    const items = [merged.href, tmp2(1597).useDeepStableValue(undefined), ,];
+    const items = [merged.href, _mod1597.useDeepStableValue(undefined), ,];
     let getPathFromState;
     if (options != null) {
       getPathFromState = options.getPathFromState;

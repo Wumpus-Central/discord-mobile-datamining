@@ -18,24 +18,25 @@ export const reportingObserverIntegration = registerSpanErrorInstrumentation.def
           const combined = "ReportingObserver [" + iter.type + "]";
           if (iter.body) {
             const obj = {};
-            for (const key10019 in iter.body) {
+            for (const key10019 in tmp.body) {
               obj[key10019] = iter.body[key10019];
               continue;
             }
             setExtra.setExtra("body", obj);
             if ("crash" === iter.type) {
-              const body = tmp5.body;
+              const body = iter.body;
               const items = [body.crashId || "", body.reason || ""];
               const str5 = items.join(" ");
               const tmp7 = body.crashId || "";
               str = items.join(" ").trim() || "No details available";
               const tmp8 = items.join(" ").trim() || "No details available";
             } else {
-              str = tmp5.body.message || "No details available";
-              const tmp6 = tmp5.body.message || "No details available";
+              str = iter.body.message || "No details available";
+              const tmp6 = iter.body.message || "No details available";
             }
           }
           types(682).captureMessage("" + combined + ": " + str);
+          const obj2 = types(682);
         });
       }
       const iter = arg0[Symbol.iterator]();

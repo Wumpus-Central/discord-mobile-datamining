@@ -14,5 +14,5 @@ const jsx = fn(21).jsx;
 
 export default ScreenFooter;
 export const FooterComponent = function FooterComponent(children) {
-  return <ScreenFooter collapsable={false}>{arg0.children}</ScreenFooter>;
+  return <ScreenFooter collapsable={false}>{children.children}</ScreenFooter>;
 };

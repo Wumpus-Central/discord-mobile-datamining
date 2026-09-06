@@ -1,6 +1,7 @@
 // _runtime/01457_defineDataProperty.js
 import _mod1283 from "metro/01283__.js";
 import _mod1284 from "metro/01284__.js";
+import _mod1304 from "metro/01304__.js";
 import flag from "01306_flag.js";
 
 export default function defineDataProperty(obj, str, value) {
@@ -77,7 +78,7 @@ export default function defineDataProperty(obj, str, value) {
       configurable = !tmp5;
     } else {
       if (!tmp6) {
-        const tmp13 = new tmp7(1304)(
+        const tmp13 = new _mod1304(
           "This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.",
         );
         throw tmp13;

@@ -16,9 +16,9 @@ let closure_3 = [
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 
-export default noop.forwardRef(function SearchBar(autoCapitalize, ref) {
-  ref = noop.useRef(null);
-  const imperativeHandle = noop.useImperativeHandle(ref, () => ({
+export default noop.forwardRef(function SearchBar(autoCapitalize, arg1) {
+  const ref = noop.useRef(null);
+  const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     blur() {
       closure_1_1((arg0) => {
         const Commands = closure_1_0(dependencyMap[4]).Commands;

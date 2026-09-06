@@ -26,14 +26,13 @@ function captureReactException(message, componentStack, arg2) {
         recurse = function recurse(cause, error) {
           if (!weakSet.has(cause)) {
             if (cause.cause) {
-              obj.add(cause);
+              weakSet.add(cause);
               const tmp2 = recurse(cause.cause, error);
             } else {
               cause.cause = error;
             }
             return tmp2;
           }
-          obj = weakSet;
         };
         if (!weakSet.has(message)) {
           if (message.cause) {
@@ -72,12 +71,12 @@ export const isAtLeastReact17 = function isAtLeastReact17(str) {
   }
   return tmp2;
 };
-export function reactErrorHandler(arg0) {
-  closure_0 = arg0;
+export function reactErrorHandler(handled) {
   return (message, componentStack) => {
-    if (closure_0) {
-      closure_0(message, componentStack, captureReactException(message, componentStack, obj));
+    if (handled) {
+      handled(message, componentStack, captureReactException(message, componentStack, obj));
     }
+    obj = { mechanism: { handled, type: "auto.function.react.error_handler" } };
   };
 }
 export const setCause = function setCause(cause, cause2) {
@@ -85,14 +84,13 @@ export const setCause = function setCause(cause, cause2) {
   function recurse(cause, error) {
     if (!weakSet.has(cause)) {
       if (cause.cause) {
-        obj.add(cause);
+        weakSet.add(cause);
         const tmp2 = recurse(cause.cause, error);
       } else {
         cause.cause = error;
       }
       return tmp2;
     }
-    obj = weakSet;
   }
   if (!weakSet.has(cause)) {
     if (cause.cause) {

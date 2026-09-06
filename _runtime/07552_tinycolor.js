@@ -745,6 +745,7 @@ function rgbToHex(arg0, arg1, arg2, arg3) {
     str8 = items[0];
   }
   sum1 = items.join("");
+  const str5 = round(arg2);
 }
 function rgbaToArgbHex(_r, _g, _b, _a) {
   let str = Math.round(255 * parseFloat(_a));
@@ -1155,7 +1156,7 @@ tinycolor.prototype = {
       text = `${arr}`;
     }
     const items = [text, , ,];
-    let str3 = tmp(_g);
+    let str3 = round(_g);
     if (1 == str1.length) {
       let text1 = `0${arr3}`;
     } else {
@@ -1201,6 +1202,7 @@ tinycolor.prototype = {
       str10 = items[0];
     }
     sum2 = items.join("");
+    const str7 = Math.round(255 * parseFloat(_a));
   },
   toHex8String(arg0) {
     return "#" + this.toHex8(arg0);

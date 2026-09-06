@@ -195,10 +195,81 @@ function nativeFramesIntegration() {
         closure_0(null);
       });
     }));
+    let promise = new Promise((arg0) => {
+      closure_0 = arg0;
+      const promise = new Promise((arg0, arg1) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        c2 = false;
+        const timeout = setTimeout(() => {
+          if (!c2) {
+            c2 = true;
+            closure_1("Fetching native frames took too long. Dropping frames.");
+          }
+        }, 2000);
+        const NATIVE = closure_0(866).NATIVE;
+        const nativeFrames = NATIVE.fetchNativeFrames();
+        nativeFrames.then((result) => {
+          if (!c2) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(closure_3);
+            c2 = true;
+            if (result) {
+              closure_0(result);
+            } else {
+              closure_1("Native frames response is null.");
+            }
+          }
+        }).then(undefined, (arg0) => {
+          if (!c2) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(closure_3);
+            c2 = true;
+            closure_1(arg0);
+          }
+        });
+      });
+      new Promise((arg0, arg1) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        c2 = false;
+        const timeout = setTimeout(() => {
+          if (!c2) {
+            c2 = true;
+            closure_1("Fetching native frames took too long. Dropping frames.");
+          }
+        }, 2000);
+        const NATIVE = closure_0(866).NATIVE;
+        const nativeFrames = NATIVE.fetchNativeFrames();
+        nativeFrames.then((result) => {
+          if (!c2) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(closure_3);
+            c2 = true;
+            if (result) {
+              closure_0(result);
+            } else {
+              closure_1("Native frames response is null.");
+            }
+          }
+        }).then(undefined, (arg0) => {
+          if (!c2) {
+            const _clearTimeout = clearTimeout;
+            clearTimeout(closure_3);
+            c2 = true;
+            closure_1(arg0);
+          }
+        });
+      }).then((result) => closure_0(result)).then(undefined, (arg0) => {
+        const debug = closure_2_0(asyncExpiringMap[2]).debug;
+        debug.log("[" + fetchStartFramesForSpan + "] Error while fetching native frames.", arg0);
+        closure_0(null);
+      });
+    });
   }
   function fetchEndFramesForSpan(arg0) {
     closure_0 = arg0;
-    return asyncExpiringMap1(undefined, undefined, undefined, async (arg0, value) => {
+    return asyncExpiringMap1(undefined, undefined, undefined, async () => {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -272,11 +343,10 @@ function nativeFramesIntegration() {
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: obj12.get(spanId), done: false };
+                const obj1 = { value: tmp3.get(spanId), done: false };
                 return obj1;
               }
               const obj11 = obj5(682);
-              obj12 = tmp3;
             }
           } else {
             if (1 === tmp7) {
@@ -361,19 +431,19 @@ function nativeFramesIntegration() {
     name: fetchStartFramesForSpan,
     setup(on) {
       if (NativeModules.NATIVE.enableNative) {
-        const NATIVE = tmp(866).NATIVE;
+        const NATIVE = NativeModules.NATIVE;
         const result = NATIVE.enableNativeFramesTracking();
         on.on("spanStart", fetchStartFramesForSpan);
         on.on("spanEnd", fetchEndFramesForSpan);
       } else {
-        const debug = tmp(682).debug;
+        const debug = _mod682.debug;
         const _HermesInternal = HermesInternal;
         debug.warn("[" + NativeFrames + "] This is not available on the Web, Expo Go and other platforms without native modules.");
       }
     },
     processEvent(arg0) {
       closure_0 = arg0;
-      return asyncExpiringMap1(undefined, undefined, undefined, async (arg0, value) => {
+      return asyncExpiringMap1(undefined, undefined, undefined, async () => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -525,8 +595,8 @@ function nativeFramesIntegration() {
   };
 }
 
-export const createNativeFramesIntegrations = (arg0) => {
-  if (!arg0) {
+export const createNativeFramesIntegrations = (enableNative2) => {
+  if (!enableNative2) {
     if (require("NativeModules").NATIVE.enableNative) {
       let NATIVE = tmp(tmp2[0]).NATIVE;
       let result = NATIVE.disableNativeFramesTracking();
@@ -618,10 +688,81 @@ export const createNativeFramesIntegrations = (arg0) => {
           closure_0(null);
         });
       }));
+      let promise = new Promise((arg0) => {
+        closure_0 = arg0;
+        const promise = new Promise((arg0, arg1) => {
+          closure_0 = arg0;
+          closure_1 = arg1;
+          c2 = false;
+          const timeout = setTimeout(() => {
+            if (!c2) {
+              c2 = true;
+              closure_1("Fetching native frames took too long. Dropping frames.");
+            }
+          }, 2000);
+          const NATIVE = closure_0(866).NATIVE;
+          const nativeFrames = NATIVE.fetchNativeFrames();
+          nativeFrames.then((result) => {
+            if (!c2) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_3);
+              c2 = true;
+              if (result) {
+                closure_0(result);
+              } else {
+                closure_1("Native frames response is null.");
+              }
+            }
+          }).then(undefined, (arg0) => {
+            if (!c2) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_3);
+              c2 = true;
+              closure_1(arg0);
+            }
+          });
+        });
+        new Promise((arg0, arg1) => {
+          closure_0 = arg0;
+          closure_1 = arg1;
+          c2 = false;
+          const timeout = setTimeout(() => {
+            if (!c2) {
+              c2 = true;
+              closure_1("Fetching native frames took too long. Dropping frames.");
+            }
+          }, 2000);
+          const NATIVE = closure_0(866).NATIVE;
+          const nativeFrames = NATIVE.fetchNativeFrames();
+          nativeFrames.then((result) => {
+            if (!c2) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_3);
+              c2 = true;
+              if (result) {
+                closure_0(result);
+              } else {
+                closure_1("Native frames response is null.");
+              }
+            }
+          }).then(undefined, (arg0) => {
+            if (!c2) {
+              const _clearTimeout = clearTimeout;
+              clearTimeout(closure_3);
+              c2 = true;
+              closure_1(arg0);
+            }
+          });
+        }).then((result) => closure_0(result)).then(undefined, (arg0) => {
+          const debug = closure_2_0(asyncExpiringMap[2]).debug;
+          debug.log("[" + fetchStartFramesForSpan + "] Error while fetching native frames.", arg0);
+          closure_0(null);
+        });
+      });
     }
     fetchEndFramesForSpan = function fetchEndFramesForSpan(arg0) {
       closure_0 = arg0;
-      return asyncExpiringMap1(undefined, undefined, undefined, async (arg0, value) => {
+      return asyncExpiringMap1(undefined, undefined, undefined, async () => {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -695,11 +836,10 @@ export const createNativeFramesIntegrations = (arg0) => {
                   c3 = 1;
                   c4 = 2;
                   c5 = 1;
-                  const obj1 = { value: obj12.get(spanId), done: false };
+                  const obj1 = { value: tmp3.get(spanId), done: false };
                   return obj1;
                 }
                 const obj11 = obj5(682);
-                obj12 = tmp3;
               }
             } else {
               if (1 === tmp7) {
@@ -784,19 +924,19 @@ export const createNativeFramesIntegrations = (arg0) => {
       name: fetchStartFramesForSpan,
       setup(on) {
           if (NativeModules.NATIVE.enableNative) {
-            const NATIVE = tmp(866).NATIVE;
+            const NATIVE = NativeModules.NATIVE;
             const result = NATIVE.enableNativeFramesTracking();
             on.on("spanStart", fetchStartFramesForSpan);
             on.on("spanEnd", fetchEndFramesForSpan);
           } else {
-            const debug = tmp(682).debug;
+            const debug = _mod682.debug;
             const _HermesInternal = HermesInternal;
             debug.warn("[" + NativeFrames + "] This is not available on the Web, Expo Go and other platforms without native modules.");
           }
         },
       processEvent(arg0) {
           closure_0 = arg0;
-          return asyncExpiringMap1(undefined, undefined, undefined, async (arg0, value) => {
+          return asyncExpiringMap1(undefined, undefined, undefined, async () => {
             if (c3 === 2) {
               c3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");

@@ -97,7 +97,7 @@ bisectRoot.__workletHash = 3467677822604;
 bisectRoot.__initData = {
   code: "function bisectRoot_Pnpm_springUtilsTs2({min:min,max:max,func:func,maxIterations=20}){const ACCURACY=0.00005;let idx=maxIterations;let current=(max+min)/2;while(Math.abs(func(current))>ACCURACY&&idx>0){idx-=1;if(func(current)<0){min=current;}else{max=current;}current=(min+max)/2;}return current;}",
 };
-function initialCalculations(mass, skipAnimation) {
+function initialCalculations() {
   let num = mass;
   if (mass === undefined) {
     num = 0;

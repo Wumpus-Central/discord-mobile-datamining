@@ -217,7 +217,6 @@ export const getPatternParts = function getPatternParts(path) {
     while (tmp43 !== undefined) {
       let tmp48 = _slicedToArray(tmp45, 2);
       [tmp49, tmp50] = tmp48;
-      let tmp51 = tmp50;
       if (found.indexOf(tmp50) !== tmp49) {
         let _Error5 = Error;
         let _HermesInternal5 = HermesInternal;
@@ -225,7 +224,7 @@ export const getPatternParts = function getPatternParts(path) {
         let str10 = "Duplicate param name '";
         let tmp53 = new.target;
         let tmp54 = new.target;
-        let error5 = new Error("Duplicate param name '" + tmp51 + "' found in path: " + path);
+        let error5 = new Error("Duplicate param name '" + tmp50 + "' found in path: " + path);
         throw error5;
       }
     }

@@ -58,7 +58,7 @@ function makeMutableUI(initialValues) {
       });
     }
   });
-  obj.modify = function modify(fn, flag) {
+  obj.modify = function modify(fn) {
     if (flag === undefined) {
       flag = true;
     }
@@ -126,7 +126,7 @@ let closure_9 = { code: "function pnpm_mutablesTs7(){const{mutable,modifier,forc
 export { makeMutableUI };
 export const makeMutable = module_1639 ? (function makeMutableWeb(arg0) {
   closure_0 = arg0;
-  const map = new Map();
+  new Map();
   let get = {};
   Object.defineProperty(get, "value", {
     get: () => closure_0,
@@ -144,7 +144,7 @@ export const makeMutable = module_1639 ? (function makeMutableWeb(arg0) {
       });
     }
   });
-  get.modify = function modify(fn, flag) {
+  get.modify = function modify(fn) {
     if (flag === undefined) {
       flag = true;
     }

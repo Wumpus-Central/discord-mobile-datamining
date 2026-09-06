@@ -1,6 +1,6 @@
 // _runtime/01674_valueSetter.js
 const global = arg0;
-function valueSetter(iter, value, flag) {
+function valueSetter(iter, value) {
   closure_0 = iter;
   if (flag === undefined) {
     flag = false;
@@ -49,6 +49,7 @@ function valueSetter(iter, value, flag) {
           const animationFrame = requestAnimationFrame(step);
         }
       }
+      tmp = obj.timestamp || 0;
     };
     iter._animation = _animation;
     if (timestamp < tmp8) {

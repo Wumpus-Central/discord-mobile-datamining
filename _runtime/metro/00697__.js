@@ -1,5 +1,6 @@
 // _runtime/metro/00697__.js
 import _mod692 from "00692__.js";
+import _mod698 from "00698__.js";
 
 require = arg1;
 const dependencyMap = arg6;
@@ -14,11 +15,11 @@ export const isMatchingPattern = function isMatchingPattern(arr, test) {
   if (!isStringResult) {
     return isStringResult;
   } else {
-    let tmpResult = tmp(692);
+    let tmpResult = _mod692;
     if (tmpResult.isRegExp(test)) {
       let isMatch = test.test(arr);
     } else {
-      tmpResult = tmp(692);
+      tmpResult = _mod692;
       isMatch = tmpResult.isString(test);
       if (isMatch) {
         if (flag) {
@@ -38,15 +39,14 @@ export const safeJoin = function safeJoin(__v_isVNode, arg1) {
       try {
         const push = items.push;
         if (obj.isVueViewModel(tmp2)) {
-          let arr = push(tmp4(698).getVueInternalName(tmp2));
-          const tmp4Result = tmp4(698);
+          let arr = push(_mod698.getVueInternalName(tmp2));
+          const tmp4Result = _mod698;
         } else {
           const _String = String;
           arr = push(String(tmp2));
         }
         num = num + 1;
         obj = _mod692;
-        tmp4 = require;
       } catch (err) {
         arr.push(tmp);
       }
@@ -56,12 +56,12 @@ export const safeJoin = function safeJoin(__v_isVNode, arg1) {
     return "";
   }
 };
-export const snipLine = function snipLine(arr, arg1) {
+export const snipLine = function snipLine(arr, lineno) {
   if (arr.length <= 150) {
     return arr;
   } else {
-    let tmp = arg1;
-    if (arg1 > length) {
+    let tmp = lineno;
+    if (lineno > length) {
       tmp = length;
     }
     const _Math = Math;
@@ -91,10 +91,9 @@ export const snipLine = function snipLine(arr, arg1) {
     return text;
   }
 };
-export const stringMatchesSomePattern = function stringMatchesSomePattern(arg0) {
-  closure_0 = arg0;
-  let items = arg1;
-  if (arg1 === undefined) {
+export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
+  let items = allowUrls;
+  if (allowUrls === undefined) {
     items = [];
   }
   let flag = arg2;
@@ -102,24 +101,21 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(arg0) 
     flag = false;
   }
   return items.some((test) => {
-    if (flag === undefined) {
-      flag = false;
-    }
-    const isStringResult = _mod692.isString(closure_0);
+    const isStringResult = _mod692.isString(transaction);
     if (!isStringResult) {
       return isStringResult;
     } else {
-      let tmpResult = tmp(692);
+      let tmpResult = _mod692;
       if (tmpResult.isRegExp(test)) {
-        let isMatch = test.test(obj);
+        let isMatch = test.test(transaction);
       } else {
-        tmpResult = tmp(692);
+        tmpResult = _mod692;
         isMatch = tmpResult.isString(test);
         if (isMatch) {
           if (flag) {
-            let hasItem = obj === test;
+            let hasItem = transaction === test;
           } else {
-            hasItem = obj.includes(test);
+            hasItem = transaction.includes(test);
           }
         }
       }
@@ -127,8 +123,8 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(arg0) 
   });
 };
 export const truncate = function truncate(str) {
-  let num = arg1;
-  if (arg1 === undefined) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
     num = 0;
   }
   let combined = str;

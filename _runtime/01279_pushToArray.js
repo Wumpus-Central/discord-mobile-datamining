@@ -77,11 +77,10 @@ function stringify(
           break;
         }
       }
-      let tmp3 = closure_9;
       if (undefined === value.get(closure_9)) {
         num3 = 0;
       }
-      let value1 = value.get(tmp3);
+      let value1 = value.get(closure_9);
       num2 = num3;
       if (undefined !== value1) {
         num = num3;
@@ -157,8 +156,8 @@ function stringify(
             }
             let maybeMapResult = str2;
             if (tmp17) {
-              maybeMapResult = tmp10(1278).maybeMap(str2, fn2);
-              const tmp10Result = tmp10(1278);
+              maybeMapResult = arrayToObject.maybeMap(str2, fn2);
+              const tmp10Result = arrayToObject;
             }
             let tmp18;
             if (maybeMapResult.length > 0) {
@@ -209,7 +208,6 @@ function stringify(
                           let _String3 = String;
                           let str11 = String(iter);
                           let replaced1 = str11.replace(/\./g, "%2E");
-                          let tmp28 = isArray;
                           if (isArray(arr3)) {
                             let tmp31 = text;
                             if (typeof fn === "function") {
@@ -255,7 +253,7 @@ function stringify(
                               break;
                             } else {
                               let tmp60 = tmp38Result;
-                              if (!tmp28(tmp38Result)) {
+                              if (!isArray(tmp38Result)) {
                                 let items2 = [tmp38Result];
                                 tmp60 = items2;
                               }
@@ -290,13 +288,11 @@ function stringify(
           }
           arr2 = sorted;
           arr3 = str2;
-          tmp14 = tmp13;
+          tmp14 = isArray;
         }
-        tmp13 = isArray;
       }
     }
     obj3 = arrayToObject;
-    tmp10 = require;
   }
   if (fn2) {
     let tmp64 = arg1;
@@ -355,16 +351,15 @@ export default (arg0, allowEmptyArrays) => {
     let format = _mod1276.default;
     if (undefined !== allowEmptyArrays.format) {
       const call = hasOwnProperty.call;
-      const formatters = tmp3(1276).formatters;
+      const formatters = _mod1276.formatters;
       const format2 = allowEmptyArrays.format;
-      if (typeof call === "unknown" ? tmp5(format2) : call(formatters, format2)) {
+      if (typeof call === "unknown" ? hasOwnProperty(format2) : call(formatters, format2)) {
         format = allowEmptyArrays.format;
       } else {
         const _TypeError = TypeError;
         const typeError4 = new TypeError("Unknown format option provided.");
         throw typeError4;
       }
-      tmp5 = hasOwnProperty;
     }
     let filter = obj.filter;
     const filter2 = allowEmptyArrays.filter;
@@ -494,12 +489,10 @@ export default (arg0, allowEmptyArrays) => {
                 encodeDotInKeys,
               } = arr);
               let encoder = null;
-              let tmp29 = pushToArray;
-              let tmp30 = stringify;
               if (arr.encode) {
                 encoder = arr.encoder;
               }
-              let tmp30Result = tmp30(
+              let tmp30Result = stringify(
                 tmp27,
                 tmp26,
                 tmp79,
@@ -519,7 +512,7 @@ export default (arg0, allowEmptyArrays) => {
                 arr.charset,
                 tmp25,
               );
-              if (typeof tmp29 !== "function") {
+              if (typeof pushToArray !== "function") {
                 break;
               } else {
                 let tmp45 = tmp30Result;

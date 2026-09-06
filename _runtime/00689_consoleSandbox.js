@@ -7,7 +7,7 @@ require = arg1;
 let dependencyMap = arg6;
 function consoleSandbox(fn) {
   if ("console" in console(686).GLOBAL_OBJ) {
-    console = console(686).GLOBAL_OBJ.console;
+    console = tmp(686).GLOBAL_OBJ.console;
     dependencyMap = {};
     const _Object = Object;
     const keys = Object.keys(obj);
@@ -29,6 +29,7 @@ function consoleSandbox(fn) {
   } else {
     return fn();
   }
+  tmp = console;
 }
 function _maybeLog(arg0) {
   _require = arg0;

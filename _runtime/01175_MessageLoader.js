@@ -96,7 +96,7 @@ class MessageLoader {
             self = this;
             c2 = 0;
             c3 = 0;
-            return (function* (arg0, value) {
+            return (function* (arg0) {
               if (c3 === 2) {
                 c3 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -292,7 +292,7 @@ let items = [
         const self = this;
         c5 = 0;
         c6 = 0;
-        return (function* (arg0, value) {
+        return (function* (arg0) {
           if (c6 === 2) {
             c6 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -321,17 +321,17 @@ let items = [
                   closure_4 = tmp2;
                   if (null == self.messages[closure_0]) {
                     let current;
-                    if (null !== tmp37._localeLoadingPromises[closure_0]) {
+                    if (null !== self._localeLoadingPromises[closure_0]) {
                       if (undefined !== tmp41) {
                         current = tmp41.current;
                       }
                     }
                     if (null == current) {
-                      if (null != tmp37.localeImportMap[closure_0]) {
-                        const localeImportMap = tmp37.localeImportMap;
+                      if (null != self.localeImportMap[closure_0]) {
+                        const localeImportMap = self.localeImportMap;
                         const tmp25 = localeImportMap[closure_0]();
                         let initialized;
-                        if (null !== tmp37._localeLoadingPromises[closure_0]) {
+                        if (null !== self._localeLoadingPromises[closure_0]) {
                           if (undefined !== tmp27) {
                             initialized = tmp27.initialized;
                           }
@@ -344,15 +344,15 @@ let items = [
                           tmp29 = initialized;
                         }
                         const obj1 = { initialized: tmp29, current: tmp25 };
-                        tmp37._localeLoadingPromises[closure_0] = obj1;
-                        messages = tmp37.messages;
+                        self._localeLoadingPromises[closure_0] = obj1;
+                        messages = self.messages;
                         closure_1 = closure_0;
                         c5 = 1;
                         c6 = 1;
                         const obj2 = { value: tmp25, done: false };
                         return obj2;
                       } else {
-                        const supportedLocales = tmp37.supportedLocales;
+                        const supportedLocales = self.supportedLocales;
                         if (supportedLocales.includes(closure_0)) {
                           const _Error = Error;
                           const _HermesInternal = HermesInternal;
@@ -366,7 +366,7 @@ let items = [
                       }
                     } else {
                       let current1;
-                      if (null !== tmp37._localeLoadingPromises[closure_0]) {
+                      if (null !== self._localeLoadingPromises[closure_0]) {
                         if (undefined !== tmp14) {
                           current1 = tmp14.current;
                         }
@@ -474,7 +474,7 @@ let items = [
         closure_2 = arg1;
         c5 = 0;
         c6 = 0;
-        const iter = (function* (arg0, value) {
+        const iter = (function* (arg0) {
           if (1 === tmp5) {
             if (arg0 === 1) {
               c6 = 3;
@@ -530,7 +530,7 @@ let items = [
         closure_1 = arg0;
         c4 = 0;
         c5 = 0;
-        const iter = (function* (arg0, value) {
+        const iter = (function* (arg0) {
           if (c5 === 2) {
             c5 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -597,7 +597,7 @@ let closure_7 = [];
 
 export const loadAllMessagesInLocale = function loadAllMessagesInLocale(arg0) {
   closure_0 = arg0;
-  return fn(this, undefined, undefined, function* (arg0, value) {
+  return fn(this, undefined, undefined, function* () {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -649,7 +649,7 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(arg0) {
   });
 };
 export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultIntlMessagesLoaded() {
-  return fn(this, undefined, undefined, function* (arg0, value) {
+  return fn(this, undefined, undefined, function* () {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

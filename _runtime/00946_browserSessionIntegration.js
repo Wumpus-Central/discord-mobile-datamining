@@ -1,5 +1,7 @@
 // _runtime/00946_browserSessionIntegration.js
 import ignoreNextOnError from "00893_ignoreNextOnError.js";
+import triggerHandlers from "00898_triggerHandlers.js";
+import _mod937 from "metro/00937__.js";
 import registerSpanErrorInstrumentation from "metro/00682__.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -8,11 +10,11 @@ export const browserSessionIntegration = registerSpanErrorInstrumentation.define
   name: "BrowserSession",
   setupOnce() {
     if (undefined !== ignoreNextOnError.WINDOW.document) {
-      let tmpResult = tmp(tmp2[0]);
+      let tmpResult = registerSpanErrorInstrumentation;
       tmpResult.startSession({ ignoreDuration: true });
-      tmpResult = tmp(tmp2[0]);
+      tmpResult = registerSpanErrorInstrumentation;
       tmpResult.captureSession();
-      const result = tmp(tmp2[3]).addHistoryInstrumentationHandler((arg0) => {
+      const result = triggerHandlers.addHistoryInstrumentationHandler((arg0) => {
         const from = arg0.from;
         if (tmp) {
           closure_1_0(682).startSession({ ignoreDuration: true });
@@ -20,10 +22,11 @@ export const browserSessionIntegration = registerSpanErrorInstrumentation.define
           closure_1_0(682).captureSession();
           const obj2 = closure_1_0(682);
         }
+        tmp = undefined !== from && from !== arg0.to;
       });
-      const tmpResult1 = tmp(tmp2[3]);
-    } else if (tmp(tmp2[2]).DEBUG_BUILD) {
-      const debug = tmp(tmp2[0]).debug;
+      const tmpResult1 = triggerHandlers;
+    } else if (_mod937.DEBUG_BUILD) {
+      const debug = registerSpanErrorInstrumentation.debug;
       debug.warn("Using the `browserSessionIntegration` in non-browser environments is not supported.");
     }
   },

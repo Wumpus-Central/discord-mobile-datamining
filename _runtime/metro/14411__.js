@@ -1,7 +1,7 @@
 // _runtime/metro/14411__.js
+import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
@@ -24,8 +24,10 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {}
+  } catch (err) {
+  }
 }
+_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();
@@ -84,22 +86,7 @@ if (!noop) {
 } else {
   value = noop;
 }
-const container = {
-  container: { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, zIndex: 1000, opacity: 0.25 },
-  debugContainer: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "transparent",
-    zIndex: 2000,
-  },
-  debugTextContainer: { backgroundColor: "lightgray", margin: 50, padding: 20 },
-  debugText: { color: "red", fontSize: 16, marginBottom: 10 },
-};
+const container = { container: { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, zIndex: 1000, opacity: 0.25 }, debugContainer: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", zIndex: 2000 }, debugTextContainer: { backgroundColor: "lightgray", margin: 50, padding: 20 }, debugText: { color: "red", fontSize: 16, marginBottom: 10 } };
 class FullScreenOverlay {
   constructor(arg0) {
     self = this;
@@ -146,7 +133,7 @@ const entry = {
     obj.justifyContent = justifyContent;
     obj.alignItems = alignItems;
     return obj;
-  },
+  }
 };
 let items = [
   entry,
@@ -154,7 +141,7 @@ let items = [
     key: "renderDebug",
     value: function renderDebug() {
       return null;
-    },
+    }
   },
   {
     key: "render",
@@ -201,24 +188,21 @@ let items = [
           tmp8 = resizeMode;
         }
         obj.resizeMode = tmp8;
-        let jsxResult = <tmp4.Image uri={uri} />;
-        let tmp6 = tmp4;
-        let tmp7 = tmp3;
+        let jsxResult = <get ActivityIndicator.Image uri={uri} />;
+        let tmp6 = get_ActivityIndicator;
+        let tmp7 = jsxProd;
       } else {
-        jsxResult = <tmp4.View />;
-        tmp6 = tmp4;
-        tmp7 = tmp3;
+        jsxResult = <get ActivityIndicator.View />;
+        tmp6 = get_ActivityIndicator;
+        tmp7 = jsxProd;
       }
       const obj1 = { children: null };
       ({ jsxs, Fragment, jsx: jsx2 } = tmp7);
-      const items = [
-        jsx2(tmp6.View, { style: self.createContainerStyle(), pointerEvents: "none", children: jsxResult }),
-        self.renderDebug(),
-      ];
+      const items = [jsx2(tmp6.View, { style: self.createContainerStyle(), pointerEvents: "none", children: jsxResult }), self.renderDebug()];
       obj1.children = items;
       return <>{null}</>;
-    },
-  },
+    }
+  }
 ];
 
 export default _createClass(FullScreenOverlay, items);

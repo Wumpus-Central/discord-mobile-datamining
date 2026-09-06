@@ -84,9 +84,8 @@ const items = [
             }
           }
         }
-        return tmp2(10459).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
+        return ESWeekdayParser(10459).createParsingComponentsAtWeekday(reference.reference, tmp4, str5);
       }
-      tmp2 = ESWeekdayParser;
     },
   },
 ];

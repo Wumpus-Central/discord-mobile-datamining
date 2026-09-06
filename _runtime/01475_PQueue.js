@@ -370,7 +370,6 @@ export default function quantize(arr, arg1) {
           while (true) {
             let arr = activeDotStyle.pop();
             if (arr.count()) {
-              let tmp6 = closure_0;
               let tmp7;
               if (arr.count()) {
                 let sum = arr.r2 - arr.r1 + 1;
@@ -397,7 +396,7 @@ export default function quantize(arr, arg1) {
                         let tmp32 = num13;
                         if (b13 <= arr.b2) {
                           do {
-                            let num15 = tmp6[(sum << 10) + (g13 << 5) + b13];
+                            let num15 = closure_0[(sum << 10) + (g13 << 5) + b13];
                             if (!num15) {
                               num15 = 0;
                             }
@@ -429,7 +428,7 @@ export default function quantize(arr, arg1) {
                         let tmp24 = num9;
                         if (b12 <= arr.b2) {
                           do {
-                            let num11 = tmp6[(r1 << 10) + (g12 << 5) + b12];
+                            let num11 = closure_0[(r1 << 10) + (g12 << 5) + b12];
                             if (!num11) {
                               num11 = 0;
                             }
@@ -461,7 +460,7 @@ export default function quantize(arr, arg1) {
                         let tmp16 = num3;
                         if (g1 <= arr.g2) {
                           do {
-                            let num5 = tmp6[(sum7 << 10) + (g1 << 5) + b1];
+                            let num5 = closure_0[(sum7 << 10) + (g1 << 5) + b1];
                             if (!num5) {
                               num5 = 0;
                             }
@@ -656,7 +655,7 @@ export default function quantize(arr, arg1) {
             return closure_1;
           },
         };
-        obj.push(obj);
+        arr = obj.push(obj);
         iter(obj, 0.75 * arg1);
         const prototype3 = PQueue.prototype;
         PQueue = (count, count2) => {

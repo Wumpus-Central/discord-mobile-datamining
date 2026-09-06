@@ -1,7 +1,7 @@
 // _runtime/metro/06896__.js
+import _modDef6885 from "06885__.js";
 import _classCallCheck from "06866__.js";
 import _createClass from "06867__.js";
-import _possibleConstructorReturn from "06885__.js";
 import _getPrototypeOf from "06887__.js";
 import _get from "06888__.js";
 import _inherits from "06890__.js";
@@ -24,6 +24,7 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_modDef6885;
 class RVLinearLayoutManagerImpl {
   constructor(arg0, arg1) {
     self = this;
@@ -185,11 +186,10 @@ let items = [
           }
           const layouts = self.layouts;
           for (const item10035 of layouts) {
-            let tmp10 = item10035;
             if (num3 > 0) {
-              tmp10.height = tmp.height;
+              item10035.height = tmp.height;
             }
-            tmp10.minHeight = num3;
+            item10035.minHeight = num3;
             continue;
           }
           tmp.minHeight = 0;

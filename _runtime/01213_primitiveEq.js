@@ -21,7 +21,7 @@ function primitiveEq(arg0, arg1, arg2) {
     return true;
   }
 }
-function repeatedPrimitiveEq(arg0, arg1, arg2) {
+function repeatedPrimitiveEq(T, arg1, arg2) {
   if (arg1.length !== arg2.length) {
     return false;
   } else {
@@ -33,7 +33,7 @@ function repeatedPrimitiveEq(arg0, arg1, arg2) {
         let flag = true;
         if (arr !== arr2) {
           flag = false;
-          if (arg0 === ScalarType.ScalarType.BYTES) {
+          if (T === ScalarType.ScalarType.BYTES) {
             flag = false;
             if (arr.length === arr2.length) {
               let num = 0;
@@ -112,14 +112,13 @@ export const reflectionEquals = function reflectionEquals(fields, arg1, arg2) {
                   let tmp43 = values(tmp10);
                   let tmp28Result = repeatedMsgEq(TResult, tmp43, values(tmp16));
                 } else {
-                  let tmp28 = repeatedPrimitiveEq;
                   if ("enum" == obj.V.kind) {
                     let T = ScalarType.ScalarType.INT32;
                   } else {
                     T = obj.V.T;
                   }
                   let tmp35 = values(tmp10);
-                  tmp28Result = tmp28(T, tmp35, values(tmp16));
+                  tmp28Result = repeatedPrimitiveEq(T, tmp35, values(tmp16));
                 }
                 if (!tmp28Result) {
                   iter.return();

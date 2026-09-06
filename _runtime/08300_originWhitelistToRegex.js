@@ -73,7 +73,6 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
     }
     const mapped = onShouldStartLoadWithRequestCallback(["about:blank"], items, true).map(closure_13);
     const match = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/.exec(url);
-    const str = "";
     if (
       mapped.some((item) => {
         const regExp = new RegExp(item);
@@ -112,6 +111,8 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
       });
     }
     closure_0(flag, url, nativeEvent.lockIdentifier);
+    const obj2 = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/;
+    const tmpResult = onShouldStartLoadWithRequestCallback(["about:blank"], items, true);
   };
 }
 
@@ -151,7 +152,7 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
   }
   tmp(str);
   closure_13 = tmp3;
-  const tmpResult = tmp(null);
+  let tmpResult = tmp(null);
   closure_14 = tmpResult[1];
   onLoadEnd(null);
   let items = [onNavigationStateChange];
@@ -253,7 +254,6 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
         }
         const mapped = onShouldStartLoadWithRequestCallback(["about:blank"], items, true).map(closure_13);
         const match = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/.exec(url);
-        const str = "";
         if (
           mapped.some((item) => {
             const regExp = new RegExp(item);
@@ -292,6 +292,8 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
           });
         }
         closure_0(flag, url, nativeEvent.lockIdentifier);
+        const obj2 = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/;
+        const tmpResult = onShouldStartLoadWithRequestCallback(["about:blank"], items, true);
       };
     } else {
       throw new TypeError("Trying to call a non-function");

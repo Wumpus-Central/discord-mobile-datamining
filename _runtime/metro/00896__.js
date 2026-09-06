@@ -100,9 +100,9 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
       return obj;
     }
   }
-  let tmp2Result = tmp2(682);
+  let tmp2Result = _mod682;
   if (!tmp2Result.isDOMError(error)) {
-    tmp2Result = tmp2(682);
+    tmp2Result = _mod682;
     if (!tmp2Result.isDOMException(error)) {
       if (tmp2Result1.isError(error)) {
         const obj1 = { exception: null };
@@ -127,8 +127,8 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
                   obj4.values = items2;
                   obj3.exception = obj4;
                 }
-                const result = tmp2(682).addExceptionMechanism(obj3, { synthetic: true });
-                const tmp2Result4 = tmp2(682);
+                const result = _mod682.addExceptionMechanism(obj3, { synthetic: true });
+                const tmp2Result4 = _mod682;
               }
             }
             if (tmp2Result5.isParameterizedString(error)) {
@@ -138,17 +138,17 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
             } else {
               obj3.message = error;
             }
-            tmp2Result5 = tmp2(682);
+            tmp2Result5 = _mod682;
             const _HermesInternal = HermesInternal;
-            const result1 = tmp2(682).addExceptionTypeValue(obj3, "" + error, undefined);
-            const tmp2Result6 = tmp2(682);
-            const result2 = tmp2(682).addExceptionMechanism(obj3, { synthetic: true });
-            const tmp2Result7 = tmp2(682);
+            const result1 = _mod682.addExceptionTypeValue(obj3, "" + error, undefined);
+            const tmp2Result6 = _mod682;
+            const result2 = _mod682.addExceptionMechanism(obj3, { synthetic: true });
+            const tmp2Result7 = _mod682;
           }
-          tmp2Result3 = tmp2(682);
+          tmp2Result3 = _mod682;
         }
-        tmp2Result2 = tmp2(682);
-        const client = tmp2(682).getClient();
+        tmp2Result2 = _mod682;
+        const client = _mod682.getClient();
         let normalizeDepth;
         if (client != null) {
           normalizeDepth = client.getOptions().normalizeDepth;
@@ -174,8 +174,8 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
           }
         }
         let obj8 = { __serialized__: null };
-        const tmp2Result8 = tmp2(682);
-        obj8.__serialized__ = tmp2(682).normalizeToSize(error, normalizeDepth);
+        const tmp2Result8 = _mod682;
+        obj8.__serialized__ = _mod682.normalizeToSize(error, normalizeDepth);
         let obj9 = { exception: null, extra: null };
         let obj10 = { values: null };
         if (tmp13) {
@@ -195,18 +195,18 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
             }
           }
           const obj11 = { type: str2, value: null };
-          tmp2Result10 = tmp2(682);
+          tmp2Result10 = _mod682;
           let str3 = "exception";
           const result3 = _mod682.extractExceptionKeysForMessage(error);
           if (arg4) {
             str3 = "promise rejection";
           }
-          let tmp18Result = tmp18(682);
+          let tmp18Result = _mod682;
           if (tmp18Result.isErrorEvent(error)) {
             const _HermesInternal4 = HermesInternal;
             let combined = "Event `ErrorEvent` captured as " + str3 + " with message `" + error.message + "`";
           } else {
-            tmp18Result = tmp18(682);
+            tmp18Result = _mod682;
             if (tmp18Result.isEvent(error)) {
               const _HermesInternal3 = HermesInternal;
               combined =
@@ -249,10 +249,10 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
             }
           }
         }
-        obj10 = tmp2(682);
+        obj10 = _mod682;
         obj8 = obj10.addExceptionMechanism;
         obj9 = obj8(tmp24, { synthetic: true });
-        const tmp2Result9 = tmp2(682);
+        const tmp2Result9 = _mod682;
       }
       return obj3;
     }
@@ -272,7 +272,7 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
         str12 = "DOMError";
       }
       name = str12;
-      tmp2Result11 = tmp2(682);
+      tmp2Result11 = _mod682;
     }
     let combined1 = name;
     if (error.message) {
@@ -292,8 +292,8 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
           obj16.values = items6;
           obj15.exception = obj16;
         }
-        const result4 = tmp2(682).addExceptionMechanism(obj15, { synthetic: true });
-        const tmp2Result12 = tmp2(682);
+        const result4 = _mod682.addExceptionMechanism(obj15, { synthetic: true });
+        const tmp2Result12 = _mod682;
       }
     }
     if (tmp2Result13.isParameterizedString(combined1)) {
@@ -303,9 +303,9 @@ function eventFromUnknownInput(arg0, error, arg2, arg3, arg4) {
     } else {
       obj15.message = combined1;
     }
-    tmp2Result13 = tmp2(682);
-    const result5 = tmp2(682).addExceptionTypeValue(obj15, combined1);
-    const tmp2Result14 = tmp2(682);
+    tmp2Result13 = _mod682;
+    const result5 = _mod682.addExceptionTypeValue(obj15, combined1);
+    const tmp2Result14 = _mod682;
   }
   if ("code" in error) {
     const obj20 = {};
@@ -336,12 +336,12 @@ export const eventFromException = function eventFromException(arg0, arg1, synthe
   }
   return _mod682.resolvedSyncPromise(tmpResult);
 };
-export const eventFromMessage = function eventFromMessage(arg0, value, arg2, syntheticException) {
+export const eventFromMessage = function eventFromMessage(arg0, value, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "info";
   }
-  syntheticException = undefined;
+  let syntheticException;
   if (syntheticException != null) {
     syntheticException = syntheticException.syntheticException;
   }

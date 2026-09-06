@@ -26,10 +26,10 @@ class State {
     this._handleInternetReachabilityUpdate = (isInternetReachable) => {
       if (self._latestState) {
         const _latestState = {};
-        const merged = Object.assign(tmp._latestState);
+        const merged = Object.assign(self._latestState);
         _latestState.isInternetReachable = isInternetReachable;
-        tmp._latestState = _latestState;
-        const _subscriptions = tmp._subscriptions;
+        self._latestState = _latestState;
+        const _subscriptions = self._subscriptions;
         const item = _subscriptions.forEach((fn) => fn(obj));
       }
     };
@@ -38,7 +38,8 @@ class State {
       closure_2 = tmp5;
       closure_1 = tmp2;
       closure_129_0 = closure_0;
-      closure_129_1 = await closure_0(dependencyMap[3]).getCurrentState(closure_0);
+      await closure_0(dependencyMap[3]).getCurrentState(closure_0);
+      closure_129_1 = value;
       const _internetReachability = closure_0._internetReachability;
       _internetReachability.update(closure_129_1);
       closure_129_2 = closure_0._convertState(closure_129_1);
@@ -72,11 +73,11 @@ class State {
     };
     this.latest = (arg0) => {
       if (arg0) {
-        let _fetchCurrentStateResult = obj._fetchCurrentState(arg0);
-      } else if (obj._latestState) {
-        _fetchCurrentStateResult = Promise.resolve(obj._latestState);
+        let _fetchCurrentStateResult = self._fetchCurrentState(arg0);
+      } else if (self._latestState) {
+        _fetchCurrentStateResult = Promise.resolve(self._latestState);
       } else {
-        _fetchCurrentStateResult = obj._fetchCurrentState();
+        _fetchCurrentStateResult = self._fetchCurrentState();
       }
       return _fetchCurrentStateResult;
     };
@@ -84,10 +85,10 @@ class State {
       const _subscriptions = self._subscriptions;
       _subscriptions.add(fn);
       if (self._latestState) {
-        fn(obj._latestState);
+        fn(self._latestState);
       } else {
-        obj.latest().then(fn);
-        const latestResult = obj.latest();
+        self.latest().then(fn);
+        const latestResult = self.latest();
       }
     };
     this.remove = (arg0) => {
@@ -96,14 +97,14 @@ class State {
     };
     this.tearDown = () => {
       if (self._internetReachability) {
-        const _internetReachability = tmp._internetReachability;
+        const _internetReachability = self._internetReachability;
         _internetReachability.tearDown();
       }
       if (self._nativeEventSubscription) {
-        const _nativeEventSubscription = tmp._nativeEventSubscription;
+        const _nativeEventSubscription = self._nativeEventSubscription;
         _nativeEventSubscription.remove();
       }
-      const _subscriptions = tmp._subscriptions;
+      const _subscriptions = self._subscriptions;
       _subscriptions.clear();
     };
     tmp3 = new closure_0(closure_2[4])(global, this._handleInternetReachabilityUpdate);

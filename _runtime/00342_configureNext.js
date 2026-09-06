@@ -1,4 +1,5 @@
 // _runtime/00342_configureNext.js
+import measure from "00068_measure.js";
 import _mod71 from "metro/00071__.js";
 import get_VersionDefault from "00273_get_Version.js";
 import javaScriptFlagGetter from "metro/00027__.js";
@@ -41,7 +42,7 @@ function configureNext(duration, arg1, arg2) {
           }
         }
       } else {
-        const _default = tmp6(68).default;
+        const _default = measure.default;
         let prop1;
         if (_default != null) {
           prop1 = _default.configureNextLayoutAnimation;
@@ -51,8 +52,8 @@ function configureNext(duration, arg1, arg2) {
           if (fn == null) {
             fn2 = () => {};
           }
-          const result1 = tmp6(68).default.configureNextLayoutAnimation(duration, onAnimationComplete, fn2);
-          const _default2 = tmp6(68).default;
+          const result1 = measure.default.configureNextLayoutAnimation(duration, onAnimationComplete, fn2);
+          const _default2 = measure.default;
         }
       }
     }

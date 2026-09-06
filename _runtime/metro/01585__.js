@@ -37,14 +37,14 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       let obj = BaseNavigationContainer;
       let initialRouteName;
       if (linking != null) {
-        const config = tmp2.config;
+        const config = linking.config;
         if (config != null) {
           initialRouteName = config.initialRouteName;
         }
       }
       let enabled;
       if (linking != null) {
-        enabled = tmp2.enabled;
+        enabled = linking.enabled;
       }
       const pathConfigForStaticNavigation = obj.createPathConfigForStaticNavigation(
         closure_0,
@@ -53,16 +53,16 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
       );
       if (pathConfigForStaticNavigation) {
         let path;
-        if (tmp2 != null) {
-          const config2 = tmp2.config;
+        if (linking != null) {
+          const config2 = linking.config;
           if (config2 != null) {
             path = config2.path;
           }
         }
         obj = { path, initialRouteName: null, screens: null };
         let initialRouteName1;
-        if (tmp2 != null) {
-          const config3 = tmp2.config;
+        if (linking != null) {
+          const config3 = linking.config;
           if (config3 != null) {
             initialRouteName1 = config3.initialRouteName;
           }
@@ -76,8 +76,8 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
     let enabled1;
     const memo1 = obj.useMemo(() => {
       if (linking) {
-        if (typeof tmp.enabled === "boolean") {
-          let enabled = tmp.enabled;
+        if (typeof linking.enabled === "boolean") {
+          let enabled = linking.enabled;
         } else {
           let screens;
           if (memo != null) {
@@ -86,7 +86,7 @@ export const createStaticNavigation = function createStaticNavigation(getCompone
           enabled = null != screens;
         }
         const obj = {};
-        const merged = Object.assign(tmp);
+        const merged = Object.assign(linking);
         obj.enabled = enabled;
         obj.config = memo;
         return obj;

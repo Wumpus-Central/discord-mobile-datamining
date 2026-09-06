@@ -1,15 +1,16 @@
 // _runtime/04674_baseSet.js
 import _mod521 from "metro/00521__.js";
+import _mod543 from "metro/00543__.js";
 import _mod589 from "metro/00589__.js";
+import castPath from "00592_castPath.js";
+import assignValue from "04642_assignValue.js";
 
-const castPath = tmp(592);
-
-export default function baseSet(arg0, arg1, arg2, fn) {
-  if (_mod521(arg0)) {
-    const arr = castPath(arg1, arg0);
-    if (null != arg0) {
+export default function baseSet(arr, arg1, arg2, fn) {
+  if (_mod521(arr)) {
+    arr = castPath(arg1, arr);
+    if (null != arr) {
       let num2 = 0;
-      let tmp17 = arg0;
+      let tmp17 = arr;
       if (0 < length) {
         const tmp8 = _mod589(arr[num2]);
         while ("__proto__" !== tmp8) {
@@ -27,14 +28,14 @@ export default function baseSet(arg0, arg1, arg2, fn) {
               }
               tmp13 = tmp12;
               if (undefined === tmp12) {
-                if (tmp6(521)(tmp11)) {
+                if (_mod521(tmp11)) {
                   tmp13 = tmp11;
                 } else {
-                  let tmp14 = tmp6(543)(arr[num2 + 1]) ? [] : {};
+                  let tmp14 = _mod543(arr[num2 + 1]) ? [] : {};
                 }
               }
             }
-            let tmp15 = tmp6(4642)(tmp17, tmp8, tmp13);
+            let tmp15 = assignValue(tmp17, tmp8, tmp13);
             let tmp16 = tmp17[tmp8];
             if (null != tmp16) {
               num2 = num2 + 1;
@@ -42,11 +43,11 @@ export default function baseSet(arg0, arg1, arg2, fn) {
             }
           }
         }
-        return arg0;
+        return arr;
       }
     }
-    return arg0;
+    return arr;
   } else {
-    return arg0;
+    return arr;
   }
 }

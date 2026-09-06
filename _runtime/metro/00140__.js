@@ -1,13 +1,13 @@
 // _runtime/metro/00140__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
 import NativeDOMCxxDefault from "../00139_NativeDOMCxx.js";
+import _modDef141 from "00141__.js";
 import _modDef143 from "00143__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const _modDef141 = tmp(141);
 const ReactNativeDocument = arg1;
 function _isNativeReflectConstruct() {
   try {

@@ -21,10 +21,9 @@ function createStackParser() {
         if (arr3.length > 1024) {
           str = arr3.slice(0, 1024);
         }
-        let tmp2 = re0;
         let str2 = str;
         if (re0.test(str)) {
-          str2 = str.replace(tmp2, "$1");
+          str2 = str.replace(re0, "$1");
         }
         if (str2.match(/\S*Error: /)) {
           num = num + 1;

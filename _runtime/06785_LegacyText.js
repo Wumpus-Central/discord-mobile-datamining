@@ -19,10 +19,10 @@ export const LegacyText = (arg0) => {
     function handler(current) {
       closure_1_1.current = current;
       if (ref) {
-        if (typeof tmp === "function") {
-          tmp(current);
+        if (typeof ref === "function") {
+          ref(current);
         } else {
-          tmp.current = current;
+          ref.current = current;
         }
       }
     }
@@ -49,4 +49,8 @@ export const LegacyText = (arg0) => {
   const merged1 = Object.assign(tmp);
   obj.children = <closure_7 onPress={onPress} onLongPress={onLongPress} ref={tmp3} />;
   tmp10 = jsx(ref(6678).GestureDetector, { onPress, onLongPress, ref: tmp3 });
+  const tmp2 = closure_5(() => {
+    const GestureObjects = ref(closure_1[4]).GestureObjects;
+    return GestureObjects.Native().runOnJS(true);
+  }, []);
 };

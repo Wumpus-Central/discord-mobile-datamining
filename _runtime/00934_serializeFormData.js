@@ -50,7 +50,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, arg1) {
     return items5;
   }
 };
-export const getFetchRequestArgBody = function getFetchRequestArgBody(input) {
+export const getFetchRequestArgBody = function getFetchRequestArgBody() {
   let items = input;
   if (input === undefined) {
     items = [];

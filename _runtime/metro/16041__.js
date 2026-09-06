@@ -7,7 +7,7 @@ import noop from "00019__.js";
 import get_ActivityIndicator from "00017__.js";
 
 let ScrollAdjustHandler = require;
-function toNativeHorizontalOffset(state, arg1, contentSize) {
+function toNativeHorizontalOffset(state, offsetWithOffsetPosition, contentSize) {
   if (state) {
     let props;
     if (null != state) {
@@ -38,11 +38,11 @@ function toNativeHorizontalOffset(state, arg1, contentSize) {
               const _Math = Math;
               let bound = Math.max(0, contentSize - state.scrollLength);
             }
-            let bound1 = arg1;
+            let bound1 = offsetWithOffsetPosition;
             if (undefined !== bound) {
               const _Math2 = Math;
               const _Math3 = Math;
-              bound1 = Math.max(0, Math.min(bound, arg1));
+              bound1 = Math.max(0, Math.min(bound, offsetWithOffsetPosition));
             }
             let prop;
             if (null != state) {
@@ -92,7 +92,7 @@ function toNativeHorizontalOffset(state, arg1, contentSize) {
       bound = num2;
     }
   }
-  return arg1;
+  return offsetWithOffsetPosition;
 }
 function StateProvider(children) {
   return <redux.Provider value={_slicedToArray(frozen.useState(() => {
@@ -150,7 +150,7 @@ function StateProvider(children) {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  }), 1)[0]}>{arg0.children}</redux.Provider>;
+  }), 1)[0]}>{children.children}</redux.Provider>;
 }
 function listen$(listeners, arg1, arg2) {
   closure_0 = arg2;
@@ -381,7 +381,7 @@ function invalidateContainerFixedItemSizes(state) {
     continue;
   }
 }
-function ensureInitialScrollSessionCompletion(initialScrollSession, kind) {
+function ensureInitialScrollSessionCompletion(initialScrollSession) {
   let tmp = kind;
   if (kind === undefined) {
     initialScrollSession = initialScrollSession.initialScrollSession;
@@ -737,8 +737,8 @@ function scheduleAdaptiveRenderExit(state, exitDelay) {
       state.timeoutAdaptiveRender = undefined;
       const values = state.values;
       if (values.get("adaptiveRender") !== "normal") {
-        set$(tmp2, "adaptiveRender", "normal");
-        const adaptiveRender = tmp2.state.props.adaptiveRender;
+        set$(state, "adaptiveRender", "normal");
+        const adaptiveRender = state.state.props.adaptiveRender;
         let onChange;
         if (null != adaptiveRender) {
           onChange = adaptiveRender.onChange;
@@ -847,7 +847,7 @@ function setInitialRenderState(context, didLayout) {
     set$(context, "readyToRender", true);
     values = context.values;
     if (values.get("adaptiveRender") !== "normal") {
-      tmp2(context, "adaptiveRender", "normal");
+      set$(context, "adaptiveRender", "normal");
       const adaptiveRender = context.state.props.adaptiveRender;
       let onChange;
       if (null != adaptiveRender) {
@@ -890,7 +890,6 @@ function setInitialRenderState(context, didLayout) {
         onLoad(obj);
       }
     }
-    tmp2 = set$;
   }
 }
 function finishInitialScroll(context, resolvedOffset) {
@@ -947,13 +946,13 @@ function finishInitialScroll(context, resolvedOffset) {
           clearTimeout(tmp4.timeoutPreservedInitialScrollClear);
           tmp4.timeoutPreservedInitialScrollClear = undefined;
         }
-        if (tmp.schedulePreservedTargetClear) {
+        if (resolvedOffset.schedulePreservedTargetClear) {
           const _setTimeout = setTimeout;
           tmp4.timeoutPreservedInitialScrollClear = setTimeout(() => {
             state.timeoutPreservedInitialScrollClear = undefined;
             let initialScroll = state.didFinishInitialScroll;
             if (initialScroll) {
-              const scrollingTo = tmp.scrollingTo;
+              const scrollingTo = state.scrollingTo;
               let isInitialScroll;
               if (null != scrollingTo) {
                 isInitialScroll = scrollingTo.isInitialScroll;
@@ -961,30 +960,30 @@ function finishInitialScroll(context, resolvedOffset) {
               initialScroll = !isInitialScroll;
             }
             if (initialScroll) {
-              initialScroll = tmp.initialScroll;
+              initialScroll = state.initialScroll;
             }
             if (initialScroll) {
-              if (undefined !== tmp.timeoutPreservedInitialScrollClear) {
+              if (undefined !== state.timeoutPreservedInitialScrollClear) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(tmp.timeoutPreservedInitialScrollClear);
-                tmp.timeoutPreservedInitialScrollClear = undefined;
+                clearTimeout(state.timeoutPreservedInitialScrollClear);
+                state.timeoutPreservedInitialScrollClear = undefined;
               }
-              tmp.clearPreservedInitialScrollOnNextFinish = undefined;
-              tmp.initialScroll = undefined;
-              setInitialScrollSession(tmp);
+              state.clearPreservedInitialScrollOnNextFinish = undefined;
+              state.initialScroll = undefined;
+              setInitialScrollSession(state);
             }
           }, 2000);
         }
       }
-      if (!tmp.recalculateItems) {
+      if (!resolvedOffset.recalculateItems) {
         setInitialRenderState(state, { didInitialScroll: true });
-        const onFinished = tmp.onFinished;
+        const onFinished = resolvedOffset.onFinished;
         if (null != onFinished) {
           const call2 = onFinished.call;
           if (typeof call2 === "unknown") {
             onFinished();
           } else {
-            call2(tmp);
+            call2(resolvedOffset);
           }
         }
       } else {
@@ -1087,6 +1086,7 @@ function updateContentMetricsState(context) {
   if (tmp !== num) {
     set$(context, "alignItemsAtEndPadding", num);
   }
+  tmp = values.get("alignItemsAtEndPadding") || 0;
 }
 function setSize(state, itemKey, result2, arg3) {
   flag = arg3;
@@ -1560,6 +1560,7 @@ function finishScrollTo(state) {
     obj.syncObservedOffset = "offset" === kind;
     obj.waitForCompletionFrame = scrollingTo.waitForInitialScrollCompletionFrame;
     finishInitialScroll(state, obj);
+    const scrollAdjustHandler = state.scrollAdjustHandler;
   }
 }
 function shouldFinishInitialScrollWithoutNativeProgress(state, scrollingTo) {
@@ -1587,7 +1588,7 @@ function shouldFinishInitialScrollWithoutNativeProgress(state, scrollingTo) {
           }
           let tmp7 = !result;
           if (!result) {
-            let isAtZeroTargetOffsetResult = obj.isAtZeroTargetOffset(offset);
+            let isAtZeroTargetOffsetResult = closure_37.isAtZeroTargetOffset(offset);
             if (!isAtZeroTargetOffsetResult) {
               const _Math = Math;
               isAtZeroTargetOffsetResult = Math.abs(state.scroll - offset) > 1;
@@ -1600,14 +1601,14 @@ function shouldFinishInitialScrollWithoutNativeProgress(state, scrollingTo) {
             if (!isAtZeroTargetOffsetResult) {
               let prop = scrollingTo.waitForInitialScrollCompletionFrame;
               if (!prop) {
-                value = obj.get(state);
+                value = closure_37.get(state);
                 if (null != value) {
                   const targetOffset = value.targetOffset;
                 }
                 const didFinishInitialScroll = state.didFinishInitialScroll;
                 let result1 = !didFinishInitialScroll;
                 if (!didFinishInitialScroll) {
-                  result1 = obj.hasNonZeroTargetOffset(targetOffset);
+                  result1 = closure_37.hasNonZeroTargetOffset(targetOffset);
                 }
                 prop = result1;
               }
@@ -1843,7 +1844,7 @@ function checkFinishedScrollFallback(state) {
         const didFinishInitialScroll = tmp.didFinishInitialScroll;
         result = !didFinishInitialScroll;
         if (!didFinishInitialScroll) {
-          result = obj.hasNonZeroTargetOffset(targetOffset);
+          result = closure_37.hasNonZeroTargetOffset(targetOffset);
         }
         if (result) {
           result = !tmp.hasScrolled;
@@ -1898,7 +1899,7 @@ function checkFinishedScrollFallback(state) {
           tmp18 = state <= num3;
         }
         if (tmp16) {
-          value = obj.get(tmp);
+          value = closure_37.get(tmp);
           targetOffset = undefined;
           if (null != value) {
             targetOffset = value.targetOffset;
@@ -1931,13 +1932,13 @@ function checkFinishedScrollFallback(state) {
             current = num11.state.refScroller.current;
             if (null != current) {
               let num = 0;
-              if (tmp.state.props.horizontal) {
-                num = tmp2;
+              if (num11.state.props.horizontal) {
+                num = num11;
               }
               const point = { animated: false, x: num, y: null };
               let num2 = 0;
-              if (!tmp.state.props.horizontal) {
-                num2 = tmp2;
+              if (!num11.state.props.horizontal) {
+                num2 = num11;
               }
               point.y = num2;
               current.scrollTo(point);
@@ -1953,7 +1954,7 @@ function checkFinishedScrollFallback(state) {
                   if (num3 >= state) {
                     if (result) {
                       if (state <= num3) {
-                        const value1 = obj.get(tmp);
+                        const value1 = closure_37.get(tmp);
                         let targetOffset1;
                         if (null != value1) {
                           targetOffset1 = value1.targetOffset;
@@ -2028,21 +2029,17 @@ function doMaintainScrollAtEnd(context) {
         if (maintainScrollAtEnd.animated) {
           str = "pending-animated";
         }
-        let str2 = "instant";
-        if (maintainScrollAtEnd.animated) {
-          str2 = "animated";
-        }
         state.maintainingScrollAtEnd = str;
         const _requestAnimationFrame = requestAnimationFrame;
         const animationFrame = requestAnimationFrame(() => {
           values = values.values;
           if (values.get("isWithinMaintainScrollAtEndThreshold")) {
-            tmp2.maintainingScrollAtEnd = str2;
+            state.maintainingScrollAtEnd = str2;
             current = refScroller.current;
-            if (tmp2.props.horizontal) {
+            if (state.props.horizontal) {
               let props;
-              if (null != tmp2) {
-                props = tmp2.props;
+              if (null != state) {
+                props = state.props;
               }
               let horizontal;
               if (null != props) {
@@ -2060,14 +2057,14 @@ function doMaintainScrollAtEnd(context) {
                 tmp9 = rtl;
               }
               if (tmp9) {
-                const tmp14 = getContentSize(values);
+                const tmp14 = getContentSize(tmp);
                 const _Number = Number;
                 if (Number.isFinite(tmp14)) {
                   const _Number2 = Number;
-                  if (Number.isFinite(tmp2.scrollLength)) {
-                    if (tmp14 > tmp2.scrollLength) {
+                  if (Number.isFinite(state.scrollLength)) {
+                    if (tmp14 > state.scrollLength) {
                       const _Math = Math;
-                      let bound = Math.max(0, tmp14 - tmp2.scrollLength);
+                      let bound = Math.max(0, tmp14 - state.scrollLength);
                     }
                     if (null != current) {
                       const point = { animated: maintainScrollAtEnd.animated, x: tmp18, y: 0 };
@@ -2079,7 +2076,7 @@ function doMaintainScrollAtEnd(context) {
                 let num2;
                 if (Number.isFinite(tmp14)) {
                   const _Number4 = Number;
-                  if (Number.isFinite(tmp2.scrollLength)) {
+                  if (Number.isFinite(state.scrollLength)) {
                     num2 = 0;
                   }
                 }
@@ -2091,8 +2088,8 @@ function doMaintainScrollAtEnd(context) {
               }
               const timerId = setTimeout(() => {
                 if (state.maintainingScrollAtEnd === str2) {
-                  tmp.maintainingScrollAtEnd = undefined;
-                  if (tmp.pendingMaintainScrollAtEnd) {
+                  state.maintainingScrollAtEnd = undefined;
+                  if (state.pendingMaintainScrollAtEnd) {
                     doMaintainScrollAtEnd(values);
                   }
                 }
@@ -2102,9 +2099,10 @@ function doMaintainScrollAtEnd(context) {
               const obj = { animated: maintainScrollAtEnd.animated };
               current.scrollToEnd(obj);
             }
-          } else if (tmp2.maintainingScrollAtEnd === str) {
-            tmp2.maintainingScrollAtEnd = undefined;
+          } else if (state.maintainingScrollAtEnd === str) {
+            state.maintainingScrollAtEnd = undefined;
           }
+          tmp = values;
         });
       }
       return true;
@@ -2112,7 +2110,7 @@ function doMaintainScrollAtEnd(context) {
       return false;
     }
   }
-  const tmp = values.get("isWithinMaintainScrollAtEndThreshold") && maintainScrollAtEnd && didContainersLayout;
+  let tmp = values.get("isWithinMaintainScrollAtEndThreshold") && maintainScrollAtEnd && didContainersLayout;
 }
 function requestAdjust(state, arg1, arg2) {
   closure_1 = arg1;
@@ -2140,7 +2138,7 @@ function requestAdjust(state, arg1, arg2) {
           const point = { animated: !tmp7, x: null, y: null };
           let num3 = 0;
           if (horizontal) {
-            num3 = tmp9(state, offset, tmp10);
+            num3 = toNativeHorizontalOffset(state, offset, tmp10);
           }
           point.x = num3;
           let num4 = 0;
@@ -2156,7 +2154,6 @@ function requestAdjust(state, arg1, arg2) {
             state.scroll = offset;
             checkFinishedScrollFallback(tmp4);
           }
-          tmp9 = toNativeHorizontalOffset;
         }
       } else {
         const adjust = state.scrollAdjustHandler.requestAdjust(closure_1);
@@ -2193,17 +2190,17 @@ function requestAdjust(state, arg1, arg2) {
         state.ignoreScrollFromMVCP = undefined;
         let ignoreScrollFromMVCPIgnored = state.ignoreScrollFromMVCPIgnored;
         if (ignoreScrollFromMVCPIgnored) {
-          ignoreScrollFromMVCPIgnored = false !== tmp.scrollProcessingEnabled;
+          ignoreScrollFromMVCPIgnored = false !== state.scrollProcessingEnabled;
         }
         if (ignoreScrollFromMVCPIgnored) {
-          tmp.ignoreScrollFromMVCPIgnored = false;
-          ({ scroll: tmp.scrollPending, reprocessCurrentScroll } = tmp);
+          state.ignoreScrollFromMVCPIgnored = false;
+          ({ scroll: tmp.scrollPending, reprocessCurrentScroll } = state);
           if (null != reprocessCurrentScroll) {
             const call = reprocessCurrentScroll.call;
             if (typeof call === "unknown") {
               const result = reprocessCurrentScroll();
             } else {
-              call(tmp);
+              call(state);
             }
           }
         }
@@ -2224,12 +2221,12 @@ function maybeApplyPredictedNativeMVCPAdjust(state) {
     if (Math.abs(pendingNativeMVCPAdjust.manualApplied) <= c66) {
       const amount2 = pendingNativeMVCPAdjust.amount;
       const _Math9 = Math;
-      if (Math.abs(amount2) <= tmp2) {
+      if (Math.abs(amount2) <= c66) {
         const _Math7 = Math;
-        if (Math.abs(0) > tmp2) {
+        if (Math.abs(0) > c66) {
           const amount = pendingNativeMVCPAdjust.amount;
           const _Math8 = Math;
-          if (Math.abs(amount) > tmp2) {
+          if (Math.abs(amount) > c66) {
             pendingNativeMVCPAdjust.manualApplied = amount;
             requestAdjust(state, amount, true);
             pendingNativeMVCPAdjust.furthestProgressTowardAmount = 0;
@@ -2401,7 +2398,7 @@ function prepareMVCP(state, arg1) {
         let diff1 = closure_2;
         tmp20 = num;
         if (undefined !== closure_2) {
-          const value1 = indexByKey.get(tmp19);
+          const value1 = indexByKey.get(found);
           let tmp22;
           if (undefined !== value1) {
             tmp22 = positions[value1];
@@ -2432,10 +2429,10 @@ function prepareMVCP(state, arg1) {
       let sum1 = tmp20;
       if (viewPosition) {
         sum1 = tmp20;
-        if (tmp28 > 0) {
-          const tmp36 = getItemSize(state, tmp19, index, state.props.data[index]);
+        if (viewPosition > 0) {
+          const tmp36 = getItemSize(state, found, index, state.props.data[index]);
           if (null != scrollingTo) {
-            const itemSize = tmp37.itemSize;
+            const itemSize = scrollingTo.itemSize;
           }
           sum1 = tmp20;
           if (undefined !== tmp36) {
@@ -2446,8 +2443,8 @@ function prepareMVCP(state, arg1) {
                 const diff2 = tmp36 - itemSize;
                 sum1 = tmp20;
                 if (0 !== diff2) {
-                  sum1 = tmp20 + diff2 * tmp28;
-                  tmp37.itemSize = tmp36;
+                  sum1 = tmp20 + diff2 * viewPosition;
+                  scrollingTo.itemSize = tmp36;
                 }
               }
             }
@@ -2457,10 +2454,10 @@ function prepareMVCP(state, arg1) {
       let tmp40 = closure_1;
       let tmp45 = !closure_1;
       if (closure_1) {
-        tmp45 = !tmp41.props.maintainVisibleContentPosition.data;
+        tmp45 = !state.props.maintainVisibleContentPosition.data;
       }
       if (!tmp45) {
-        tmp45 = undefined !== tmp44;
+        tmp45 = undefined !== index;
       }
       if (!tmp45) {
         tmp45 = sum1 >= -0.1;
@@ -2468,19 +2465,19 @@ function prepareMVCP(state, arg1) {
       let tmp46 = !tmp45;
       if (!tmp45) {
         const _Math3 = Math;
-        const diff3 = tmp42 - tmp43 - tmp41.scrollLength;
+        const diff3 = closure_15 - scroll - state.scrollLength;
         tmp46 = diff3 < Math.abs(sum1) - c66;
       }
       if (tmp46) {
-        const obj = { amount: sum1, furthestProgressTowardAmount: 0, manualApplied: 0, startScroll: tmp43 };
-        tmp41.pendingNativeMVCPAdjust = obj;
+        const obj = { amount: sum1, furthestProgressTowardAmount: 0, manualApplied: 0, startScroll: scroll };
+        state.pendingNativeMVCPAdjust = obj;
         maybeApplyPredictedNativeMVCPAdjust(state);
       } else {
         const _Math4 = Math;
         if (Math.abs(sum1) > c66) {
-          value2 = "pending-animated" === tmp41.maintainingScrollAtEnd;
+          value2 = "pending-animated" === state.maintainingScrollAtEnd;
           if (!value2) {
-            value2 = "animated" === tmp41.maintainingScrollAtEnd;
+            value2 = "animated" === state.maintainingScrollAtEnd;
           }
           if (value2) {
             const values = state.values;
@@ -2494,12 +2491,10 @@ function prepareMVCP(state, arg1) {
           }
         }
       }
-      tmp42 = closure_15;
-      tmp44 = index;
     };
   }
 }
-function updateScroll(context, scroll, arg2, markHasScrolled) {
+function updateScroll(context, scroll, flag, markHasScrolled) {
   const state = context.state;
   ({ ignoreScrollFromMVCP, lastScrollAdjustForHistory, scrollAdjustHandler, scrollHistory, scrollingTo, scroll } = state);
   markHasScrolled = undefined;
@@ -2608,13 +2603,13 @@ function updateScroll(context, scroll, arg2, markHasScrolled) {
       flag3 = false;
     } else {
       const _Math3 = Math;
-      const sum = tmp21 + tmp22;
+      const sum = tmp21 + c66;
       if (sum >= Math.abs(diff)) {
         context.state.pendingNativeMVCPAdjust = undefined;
         const diff2 = diff - diff1;
         const _Math5 = Math;
         flag3 = true;
-        if (Math.abs(diff2) > tmp22) {
+        if (Math.abs(diff2) > c66) {
           requestAdjust(context, diff2, true);
           flag3 = true;
         }
@@ -2628,11 +2623,11 @@ function updateScroll(context, scroll, arg2, markHasScrolled) {
               flag3 = flag4;
             }
           }
-          if (tmp21 > pendingNativeMVCPAdjust.furthestProgressTowardAmount + tmp22) {
+          if (tmp21 > pendingNativeMVCPAdjust.furthestProgressTowardAmount + c66) {
             pendingNativeMVCPAdjust.furthestProgressTowardAmount = tmp21;
             flag4 = false;
           } else {
-            flag4 = pendingNativeMVCPAdjust.furthestProgressTowardAmount > tmp22 && tmp21 < pendingNativeMVCPAdjust.furthestProgressTowardAmount - tmp22;
+            flag4 = pendingNativeMVCPAdjust.furthestProgressTowardAmount > c66 && tmp21 < pendingNativeMVCPAdjust.furthestProgressTowardAmount - c66;
             if (flag4) {
               state4.pendingNativeMVCPAdjust = undefined;
               flag4 = false;
@@ -2643,7 +2638,7 @@ function updateScroll(context, scroll, arg2, markHasScrolled) {
         const diff3 = diff - diff1;
         const _Math4 = Math;
         flag4 = true;
-        if (Math.abs(diff3) > tmp22) {
+        if (Math.abs(diff3) > c66) {
           requestAdjust(context, diff3, true);
           flag4 = true;
         }
@@ -2708,7 +2703,7 @@ function updateScroll(context, scroll, arg2, markHasScrolled) {
   if (!state.dataChangeNeedsScrollUpdate) {
     if (!flag3) {
       if (undefined === tmp12) {
-        if (!arg2) {
+        if (!flag) {
           if (undefined !== scrollLastCalculate) {
             const _Math7 = Math;
           }
@@ -3035,7 +3030,7 @@ function scrollTo(state, arg1) {
             const obj3 = { end: tmp54, start: tmp49 };
             tmp30 = obj3;
           } else {
-            const tmp43 = getItemBottom(state, bound5);
+            getItemBottom(state, bound5);
           }
         }
       }
@@ -3060,7 +3055,7 @@ function scrollTo(state, arg1) {
     result = tmp60;
   }
   if (result) {
-    result = obj7.hasNonZeroTargetOffset(bound2);
+    result = closure_37.hasNonZeroTargetOffset(bound2);
   }
   const didFinishInitialScroll2 = state.didFinishInitialScroll;
   let isAtZeroTargetOffsetResult = !didFinishInitialScroll2;
@@ -3068,7 +3063,7 @@ function scrollTo(state, arg1) {
     isAtZeroTargetOffsetResult = value;
   }
   if (isAtZeroTargetOffsetResult) {
-    isAtZeroTargetOffsetResult = obj7.isAtZeroTargetOffset(tmp18);
+    isAtZeroTargetOffsetResult = closure_37.isAtZeroTargetOffset(tmp18);
   }
   if (result) {
     state.hasScrolled = false;
@@ -3080,9 +3075,9 @@ function scrollTo(state, arg1) {
       startScroll = state.scroll;
     }
     const obj4 = { startScroll, targetOffset: bound2 };
-    const result1 = obj7.set(state, obj4);
+    const result1 = closure_37.set(state, obj4);
   } else if (isAtZeroTargetOffsetResult) {
-    obj7.clear(state);
+    closure_37.clear(state);
   }
   let tmp66 = !isInitialScroll;
   if (!isInitialScroll) {
@@ -3119,7 +3114,7 @@ function scrollTo(state, arg1) {
     const point = { animated: !tmp73, x: null, y: null };
     let num10 = 0;
     if (horizontal) {
-      num10 = tmp75(state6, tmp18, tmp76);
+      num10 = toNativeHorizontalOffset(state6, tmp18, tmp76);
     }
     point.x = num10;
     let num11 = 0;
@@ -3135,7 +3130,6 @@ function scrollTo(state, arg1) {
       state6.scroll = tmp18;
       checkFinishedScrollFallback(state);
     }
-    tmp75 = toNativeHorizontalOffset;
   }
 }
 function scrollToIndex(state, animated) {
@@ -3183,6 +3177,8 @@ function scrollToIndex(state, animated) {
     }
     obj.viewPosition = num8;
     scrollTo(state, obj);
+    tmp10 = -1 === data.length - 1 && undefined === num;
+    const tmp9 = undefined !== -1 && state.state.positions[-1] || 0;
   } else if (index >= length) {
     const num2 = length - 1;
   }
@@ -3347,6 +3343,7 @@ function advanceCurrentInitialScrollSession(context, forceScroll) {
       }
     }
     let flag3 = flag6;
+    tmp32 = isInitialScroll;
   } else {
     if (null != forceScroll) {
       forceScroll = forceScroll.forceScroll;
@@ -3907,17 +3904,17 @@ function rearmBootstrapInitialScroll(context, scroll) {
     }
     let bootstrap;
     if ("bootstrap" === kind) {
-      bootstrap = tmp.initialScrollSession.bootstrap;
+      bootstrap = state.initialScrollSession.bootstrap;
     }
     if (bootstrap) {
-      const triggerCalculateItemsInView = tmp.triggerCalculateItemsInView;
+      const triggerCalculateItemsInView = state.triggerCalculateItemsInView;
       if (null != triggerCalculateItemsInView) {
         const call = triggerCalculateItemsInView.call;
         const obj = { forceFullItemPositions: true };
         if (typeof call === "unknown") {
           const result = triggerCalculateItemsInView(obj);
         } else {
-          call(tmp, obj);
+          call(state, obj);
         }
       }
     }
@@ -4207,17 +4204,17 @@ function evaluateBootstrapInitialScroll(state) {
                 }
                 let bootstrap;
                 if ("bootstrap" === kind) {
-                  bootstrap = tmp.initialScrollSession.bootstrap;
+                  bootstrap = state.initialScrollSession.bootstrap;
                 }
                 if (bootstrap) {
-                  const triggerCalculateItemsInView = tmp.triggerCalculateItemsInView;
+                  const triggerCalculateItemsInView = state.triggerCalculateItemsInView;
                   if (null != triggerCalculateItemsInView) {
                     const call = triggerCalculateItemsInView.call;
                     const obj = { forceFullItemPositions: true };
                     if (typeof call === "unknown") {
                       const result = triggerCalculateItemsInView(obj);
                     } else {
-                      call(tmp, obj);
+                      call(state, obj);
                     }
                   }
                 }
@@ -4293,17 +4290,17 @@ function evaluateBootstrapInitialScroll(state) {
                   }
                   let bootstrap;
                   if ("bootstrap" === kind) {
-                    bootstrap = tmp.initialScrollSession.bootstrap;
+                    bootstrap = state.initialScrollSession.bootstrap;
                   }
                   if (bootstrap) {
-                    const triggerCalculateItemsInView = tmp.triggerCalculateItemsInView;
+                    const triggerCalculateItemsInView = state.triggerCalculateItemsInView;
                     if (null != triggerCalculateItemsInView) {
                       const call = triggerCalculateItemsInView.call;
                       const obj = { forceFullItemPositions: true };
                       if (typeof call === "unknown") {
                         const result = triggerCalculateItemsInView(obj);
                       } else {
-                        call(tmp, obj);
+                        call(state, obj);
                       }
                     }
                   }
@@ -4313,7 +4310,7 @@ function evaluateBootstrapInitialScroll(state) {
             tmp41 = items.length > 0 && items.every((item) => {
               let tmp2 = state.idCache[item];
               if (null == tmp2) {
-                ({ data, keyExtractor } = tmp.props);
+                ({ data, keyExtractor } = state.props);
                 let str = "";
                 if (data) {
                   let tmp3 = null;
@@ -4324,12 +4321,12 @@ function evaluateBootstrapInitialScroll(state) {
                     }
                     tmp3 = keyExtractorResult;
                   }
-                  tmp.idCache[item] = tmp3;
+                  state.idCache[item] = tmp3;
                   str = tmp3;
                 }
                 tmp2 = str;
               }
-              const sizesKnown = tmp.sizesKnown;
+              const sizesKnown = state.sizesKnown;
               return sizesKnown.has(tmp2);
             });
           }
@@ -4359,7 +4356,7 @@ function retargetActiveInitialScrollAtEnd(context) {
               const lastRequestTime = preservedEndAnchorCorrection.lastRequestTime;
               let tmp4 = !lastRequestTime;
               if (lastRequestTime) {
-                const lastNativeScrollTime = tmp.lastNativeScrollTime;
+                const lastNativeScrollTime = state3.lastNativeScrollTime;
                 let num = 0;
                 if (null != lastNativeScrollTime) {
                   num = lastNativeScrollTime;
@@ -4372,9 +4369,9 @@ function retargetActiveInitialScrollAtEnd(context) {
                 requestAdjust(tmp9, tmp10);
               }
               closure_0 = tmp9;
-              closure_1 = tmp2;
+              closure_1 = obj;
               state = tmp9.state;
-              state.preservedEndAnchorCorrection = tmp2;
+              state.preservedEndAnchorCorrection = obj;
               const _requestAnimationFrame = requestAnimationFrame;
               const animationFrame = requestAnimationFrame(() => {
                 preservedEndAnchorCorrection = state3.preservedEndAnchorCorrection;
@@ -4386,7 +4383,7 @@ function retargetActiveInitialScrollAtEnd(context) {
                       const lastRequestTime = preservedEndAnchorCorrection.lastRequestTime;
                       let tmp4 = !lastRequestTime;
                       if (lastRequestTime) {
-                        const lastNativeScrollTime = tmp.lastNativeScrollTime;
+                        const lastNativeScrollTime = state3.lastNativeScrollTime;
                         let num = 0;
                         if (null != lastNativeScrollTime) {
                           num = lastNativeScrollTime;
@@ -4399,9 +4396,9 @@ function retargetActiveInitialScrollAtEnd(context) {
                         requestAdjust(tmp9, tmp10);
                       }
                       closure_0 = tmp9;
-                      closure_1 = tmp2;
+                      closure_1 = obj;
                       state = tmp9.state;
-                      state.preservedEndAnchorCorrection = tmp2;
+                      state.preservedEndAnchorCorrection = obj;
                       const _requestAnimationFrame = requestAnimationFrame;
                       const animationFrame = requestAnimationFrame(() => {
                         preservedEndAnchorCorrection = state3.preservedEndAnchorCorrection;
@@ -4413,7 +4410,7 @@ function retargetActiveInitialScrollAtEnd(context) {
                               const lastRequestTime = preservedEndAnchorCorrection.lastRequestTime;
                               let tmp4 = !lastRequestTime;
                               if (lastRequestTime) {
-                                const lastNativeScrollTime = tmp.lastNativeScrollTime;
+                                const lastNativeScrollTime = state3.lastNativeScrollTime;
                                 let num = 0;
                                 if (null != lastNativeScrollTime) {
                                   num = lastNativeScrollTime;
@@ -4426,9 +4423,9 @@ function retargetActiveInitialScrollAtEnd(context) {
                                 requestAdjust(tmp9, tmp10);
                               }
                               closure_0 = tmp9;
-                              closure_1 = tmp2;
+                              closure_1 = obj;
                               state = tmp9.state;
-                              state.preservedEndAnchorCorrection = tmp2;
+                              state.preservedEndAnchorCorrection = obj;
                               const _requestAnimationFrame = requestAnimationFrame;
                               const animationFrame = requestAnimationFrame(() => {
                                 preservedEndAnchorCorrection = state3.preservedEndAnchorCorrection;
@@ -4440,7 +4437,7 @@ function retargetActiveInitialScrollAtEnd(context) {
                                       const lastRequestTime = preservedEndAnchorCorrection.lastRequestTime;
                                       let tmp4 = !lastRequestTime;
                                       if (lastRequestTime) {
-                                        const lastNativeScrollTime = tmp.lastNativeScrollTime;
+                                        const lastNativeScrollTime = state3.lastNativeScrollTime;
                                         let num = 0;
                                         if (null != lastNativeScrollTime) {
                                           num = lastNativeScrollTime;
@@ -4453,29 +4450,29 @@ function retargetActiveInitialScrollAtEnd(context) {
                                         requestAdjust(tmp9, tmp10);
                                       }
                                       closure_0 = tmp9;
-                                      closure_1 = tmp2;
+                                      closure_1 = obj;
                                       state = tmp9.state;
-                                      state.preservedEndAnchorCorrection = tmp2;
+                                      state.preservedEndAnchorCorrection = obj;
                                       const _requestAnimationFrame = requestAnimationFrame;
                                       const animationFrame = requestAnimationFrame(() => { ... });
                                     }
                                   }
-                                  tmp.preservedEndAnchorCorrection = undefined;
+                                  state3.preservedEndAnchorCorrection = undefined;
                                 }
                               });
                             }
                           }
-                          tmp.preservedEndAnchorCorrection = undefined;
+                          state3.preservedEndAnchorCorrection = undefined;
                         }
                       });
                     }
                   }
-                  tmp.preservedEndAnchorCorrection = undefined;
+                  state3.preservedEndAnchorCorrection = undefined;
                 }
               });
             }
           }
-          tmp.preservedEndAnchorCorrection = undefined;
+          state3.preservedEndAnchorCorrection = undefined;
         }
       });
       flag = true;
@@ -4514,28 +4511,28 @@ function resetLayoutCachesForDataChange(indexByKey) {
 }
 function scheduleContainerLayout(measureInLayoutEffect, c0) {
   const pendingContainerIds = measureInLayoutEffect.pendingContainerIds;
-  if (undefined === c0) {
+  if (undefined === ScrollAdjustHandler) {
     measureInLayoutEffect.pendingContainerIds = null;
   } else if (null !== pendingContainerIds) {
     if (pendingContainerIds) {
-      if (typeof c0 === "number") {
-        pendingContainerIds.add(c0);
+      if (typeof ScrollAdjustHandler === "number") {
+        pendingContainerIds.add(ScrollAdjustHandler);
         set = pendingContainerIds;
       } else {
-        const tmp23 = c0[Symbol.iterator]();
+        const tmp23 = ScrollAdjustHandler[Symbol.iterator]();
         set = pendingContainerIds;
         while (tmp23 !== undefined) {
           let addResult1 = pendingContainerIds.add(tmp7);
           continue;
         }
       }
-    } else if (typeof c0 === "number") {
+    } else if (typeof ScrollAdjustHandler === "number") {
       const _Set = Set;
-      const items = [c0];
+      const items = [ScrollAdjustHandler];
       set = new Set(items);
     } else {
       const _Set2 = Set;
-      set = new Set(c0);
+      set = new Set(ScrollAdjustHandler);
     }
     measureInLayoutEffect.pendingContainerIds = set;
   }
@@ -4759,7 +4756,7 @@ function syncMountedContainer(state, arg1, data, updateLayout) {
     return obj;
   }
 }
-function updateItemPositions(context, arg1, sum) {
+function updateItemPositions(context, arg1) {
   let obj = sum;
   if (sum === undefined) {
     obj = { doMVCP: false, forceFullUpdate: false, optimizeForVisibleWindow: false, scrollBottomBuffered: -1, startIndex: 0 };
@@ -5181,7 +5178,6 @@ function updateItemPositions(context, arg1, sum) {
               do {
                 let tmp99 = state4.idCache[sum5];
                 let tmp101 = num22;
-                let tmp98 = getItemSize;
                 let tmp100 = sum5;
                 if (null == tmp99) {
                   ({ data: data4, keyExtractor: keyExtractor3 } = state4.props);
@@ -5200,7 +5196,7 @@ function updateItemPositions(context, arg1, sum) {
                   }
                   tmp99 = str7;
                 }
-                let tmp98Result = tmp98(context, tmp99, tmp100, data1[sum5]);
+                let tmp98Result = getItemSize(context, tmp99, tmp100, data1[sum5]);
                 if (tmp98Result > tmp101) {
                   tmp101 = tmp98Result;
                 }
@@ -5296,6 +5292,7 @@ function updateItemPositions(context, arg1, sum) {
     }
     set$(context, "snapToOffsets", ArrayResult);
   }
+  tmp = context.positionListeners.size > 0;
 }
 function ensureViewabilityState(mapViewabilityConfigStates, id) {
   mapViewabilityConfigStates = mapViewabilityConfigStates.mapViewabilityConfigStates;
@@ -5368,10 +5365,10 @@ function updateViewableItems(timeouts, arg1, arg2, arg3, start, end) {
     continue;
   }
 }
-function updateViewableItemsWithConfig(data, arg1, indexByKey, mapViewabilityAmountValues, scrollSize) {
+function updateViewableItemsWithConfig(data, iter, indexByKey, mapViewabilityAmountValues, scrollSize) {
   let length;
   let items;
-  ({ viewabilityConfig, onViewableItemsChanged } = arg1);
+  ({ viewabilityConfig, onViewableItemsChanged } = iter);
   const id = viewabilityConfig.id;
   const tmp = ensureViewabilityState(mapViewabilityAmountValues, id);
   ({ viewableItems, start, end } = tmp);
@@ -5379,19 +5376,18 @@ function updateViewableItemsWithConfig(data, arg1, indexByKey, mapViewabilityAmo
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp8] = tmp5;
-    let tmp7 = tmp6;
     if (computeViewability(indexByKey, mapViewabilityAmountValues, viewabilityConfig, tmp6, tmp8.key, scrollSize, tmp8.item, tmp8.index).sizeVisible < 0) {
       if (null == items) {
         items = [];
       }
-      let arr = items.push(tmp7);
+      let arr = items.push(tmp6);
     }
     continue;
   }
   const items1 = [];
   set = new Set();
   if (viewableItems) {
-    const iter = viewableItems[Symbol.iterator]();
+    iter = viewableItems[Symbol.iterator]();
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp23 = nextResult;
@@ -5474,18 +5470,18 @@ function updateViewableItemsWithConfig(data, arg1, indexByKey, mapViewabilityAmo
   if (items) {
     for (const item10166 of items) {
       mapViewabilityAmountValues = arg3.mapViewabilityAmountValues;
-      let tmp81 = item10166;
       value = mapViewabilityAmountValues.get(item10166);
       if (value) {
         value = tmp83.sizeVisible < 0;
       }
       if (value) {
         let mapViewabilityAmountValues2 = arg3.mapViewabilityAmountValues;
-        let deleteResult = mapViewabilityAmountValues2.delete(tmp81);
+        let deleteResult = mapViewabilityAmountValues2.delete(item10166);
       }
       continue;
     }
   }
+  tmp2 = mapViewabilityAmountValues.mapViewabilityAmountValues[Symbol.iterator]();
 }
 function areViewabilityAmountTokensEqual(mapViewabilityAmountValues, containerId2) {
   return mapViewabilityAmountValues && mapViewabilityAmountValues.containerId === containerId2.containerId && mapViewabilityAmountValues.index === containerId2.index && mapViewabilityAmountValues.isViewable === containerId2.isViewable && mapViewabilityAmountValues.item === containerId2.item && mapViewabilityAmountValues.key === containerId2.key && mapViewabilityAmountValues.percentOfScroller === containerId2.percentOfScroller && mapViewabilityAmountValues.percentVisible === containerId2.percentVisible && mapViewabilityAmountValues.scrollSize === containerId2.scrollSize && mapViewabilityAmountValues.size === containerId2.size && mapViewabilityAmountValues.sizeVisible === containerId2.sizeVisible;
@@ -5925,10 +5921,10 @@ function flushItemSizeUpdates(state, needsRecalculate) {
           if (0 !== scrollLength) {
             if (tmp16) {
               closure_8 = ref2(tmp7);
-              let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-              let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-              closure_9 = sum + tmp15(tmp7, "headerSize");
-              tmp15Result = tmp15(tmp7, "numColumns");
+              let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+              let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+              closure_9 = sum + closure_1_21(tmp7, "headerSize");
+              tmp15Result = closure_1_21(tmp7, "numColumns");
               let scrollVelocity = idCache.scrollVelocity;
               if (null == scrollVelocity) {
                 scrollVelocity = closure_1_69(tmp2);
@@ -5976,17 +5972,17 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 }
               }
               updateScroll2(scroll);
-              const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+              const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
               closure_17 = tmp15Result1;
               function resolveStickyState() {
                 num = -1;
                 let num2 = -1;
                 if (prop.length > 0) {
-                  let diff = arr.length - 1;
+                  let diff = prop.length - 1;
                   let tmp5 = num;
                   if (0 <= diff) {
                     while (true) {
-                      let tmp6 = tmp3[arr[diff]];
+                      let tmp6 = tmp3[prop[diff]];
                       if (undefined === tmp6) {
                         diff = diff - 1;
                         tmp5 = num;
@@ -6005,11 +6001,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num2 = tmp5;
                 }
                 if (0 <= num2) {
-                  num = arr[num2];
+                  num = prop[num2];
                 }
                 let tmp8 = num2 >= 0;
                 if (0 > num2) {
-                  tmp8 = tmp9 >= 0;
+                  tmp8 = closure_17 >= 0;
                 }
                 if (tmp8) {
                   context(containerItemKeys, "activeStickyIndex", num);
@@ -6017,8 +6013,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                 finishCalculateItemsInView = undefined;
                 if (closure_4) {
-                  if (arr.length > 0) {
-                    if (tmp9 !== num) {
+                  if (prop.length > 0) {
+                    if (closure_17 !== num) {
                       finishCalculateItemsInView = () => {
                         if (undefined !== data[num]) {
                           if (null != closure_2_4) {
@@ -6064,7 +6060,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         num6 = 0;
                         if (!tmp2.pendingNativeMVCPAdjust) {
                           num6 = 0;
-                          if (tmp15(tmp7, "readyToRender")) {
+                          if (closure_1_21(tmp7, "readyToRender")) {
                             let _Math2 = Math;
                             num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                               if (arg1 <= 0) {
@@ -6400,7 +6396,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         set = new Set();
                         const idsInView = tmp2.idsInView;
                         for (const item10226 of idsInView) {
-                          let tmp99 = item10226;
                           value = indexByKey.get(item10226);
                           let tmp101 = value;
                           if (undefined !== value) {
@@ -6409,7 +6404,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                               tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                             }
                             if (!tmp102) {
-                              let addResult = set.add(tmp99);
+                              let addResult = set.add(item10226);
                             }
                           }
                           continue;
@@ -6431,7 +6426,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               if (tmp114) {
                 let tmp116 = tmp107.scroll !== state.scroll;
                 if (!tmp116) {
-                  const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                  const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                   let num12 = 0;
                   if (null != tmp109Result) {
                     num12 = tmp109Result;
@@ -6533,7 +6528,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 } while (num16 < tmp16);
               }
               obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-              const length = data.length;
               let _Math4 = Math;
               const bound1 = Math.max(0, tmp143);
               let tmp157 = bound1;
@@ -6544,7 +6538,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               endNoBuffer = null;
               let tmp166 = null;
               startNoBuffer = null;
-              if (bound1 < length) {
+              if (bound1 < data.length) {
                 while (true) {
                   let tmp168 = idCache[tmp157];
                   let tmp169 = tmp157;
@@ -6975,23 +6969,23 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             } else {
                               const findIndexResult = items.findIndex(() => { ... });
                               if (-1 !== findIndexResult) {
-                                const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
+                                const containerIndex = array(arr.splice(findIndexResult, 1), 1)[0].containerIndex;
                                 if (typeof assign === "function") {
                                   const obj = { containerIndex, itemIndex: null, itemType: null };
                                   ({ itemIndex: obj.itemIndex, itemType: obj.itemType } = iter);
                                   tmp[iter.order] = obj;
                                   let deleteResult;
                                   if (null != set) {
-                                    deleteResult = obj2.delete(containerIndex);
+                                    deleteResult = set.delete(containerIndex);
                                   }
                                   if (deleteResult) {
                                     c5 = true;
                                   }
-                                  obj2 = set;
                                 } else {
                                   throw new TypeError("Trying to call a non-function");
                                 }
                               }
+                              arr = items;
                             }
                           }
                           const iter = found[Symbol.iterator]();
@@ -7018,15 +7012,14 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         assignFromPool(found, items, true);
                         assignFromPool(found1, items1, false);
                         for (const item10099 of mapped) {
-                          let tmp36 = item10099;
                           if (!array[item10099.order]) {
                             let tmp38 = +sum;
                             sum = tmp38 + 1;
                             let tmp39 = tmp38;
-                            if (tmp36.isSticky) {
+                            if (item10099.isSticky) {
                               let addResult = stickyContainerPool.add(tmp39);
                             }
-                            let obj1 = assign(tmp36, tmp39);
+                            let obj1 = assign(item10099, tmp39);
                           }
                           continue;
                         }
@@ -7072,7 +7065,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       let tmp289 = tmp288;
                       let tmp293 = containerItemKeys;
                       let _HermesInternal3 = HermesInternal;
-                      let tmp291 = closure_1_21;
                       let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                       let tmp296 = tmp295;
                       if (tmp295) {
@@ -7096,7 +7088,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         }
                         state.containerItemGenerations[containerIndex] = num28 + 1;
                       }
-                      let tmp314 = context;
                       let _HermesInternal4 = HermesInternal;
                       let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                       let _HermesInternal5 = HermesInternal;
@@ -7117,12 +7108,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       let hasItem = stickyHeaderIndicesSet.has(tmp281);
                       let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                       if (hasItem) {
-                        let tmp314Result = tmp314(tmp293, combined, true);
+                        let tmp314Result = context(tmp293, combined, true);
                         let stickyContainerPool2 = tmp323.stickyContainerPool;
                         let addResult4 = stickyContainerPool2.add(containerIndex);
                       } else {
-                        if (tmp291(tmp293, combined)) {
-                          tmp314Result = tmp314(tmp293, combined, false);
+                        if (closure_1_21(tmp293, combined)) {
+                          tmp314Result = context(tmp293, combined, false);
                         }
                         let stickyContainerPool = tmp323.stickyContainerPool;
                         if (isPinnedRenderIndexResult) {
@@ -7139,7 +7130,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     if (sum4 !== tmp16) {
                       context(containerItemKeys, "numContainers", sum4);
                       if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                        tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                        context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                           num = 0;
                           if (length > 0) {
                             num = 0;
@@ -7155,7 +7146,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           return num;
                         })(length, sum4));
                       }
-                      tmp364 = context;
                       tmp366 = containerItemKeys;
                     }
                   }
@@ -7332,11 +7322,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 if (!queuedInitialLayout) {
                   if (!tmp442.didContainersLayout) {
                     if (closure_1_41(tmp442)) {
-                      let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                      let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                     } else {
-                      tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                      tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                       if (!tmp447Result) {
-                        tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                        tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                       }
                     }
                     if (tmp447Result) {
@@ -7404,12 +7394,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   }
                 }
               }
-              tmp109 = closure_1_21;
               tmp111 = containerItemKeys;
               tmp214 = state;
             }
           }
         }
+        tmp13 = !bootstrap;
       });
       const userScrollAnchorReset2 = state2.userScrollAnchorReset;
       let size;
@@ -7460,10 +7450,10 @@ function flushItemSizeUpdates(state, needsRecalculate) {
           if (0 !== scrollLength) {
             if (tmp16) {
               closure_8 = ref2(tmp7);
-              let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-              let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-              closure_9 = sum + tmp15(tmp7, "headerSize");
-              tmp15Result = tmp15(tmp7, "numColumns");
+              let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+              let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+              closure_9 = sum + closure_1_21(tmp7, "headerSize");
+              tmp15Result = closure_1_21(tmp7, "numColumns");
               let scrollVelocity = idCache.scrollVelocity;
               if (null == scrollVelocity) {
                 scrollVelocity = closure_1_69(tmp2);
@@ -7511,17 +7501,17 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 }
               }
               updateScroll2(scroll);
-              const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+              const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
               closure_17 = tmp15Result1;
               function resolveStickyState() {
                 num = -1;
                 let num2 = -1;
                 if (prop.length > 0) {
-                  let diff = arr.length - 1;
+                  let diff = prop.length - 1;
                   let tmp5 = num;
                   if (0 <= diff) {
                     while (true) {
-                      let tmp6 = tmp3[arr[diff]];
+                      let tmp6 = tmp3[prop[diff]];
                       if (undefined === tmp6) {
                         diff = diff - 1;
                         tmp5 = num;
@@ -7540,11 +7530,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   num2 = tmp5;
                 }
                 if (0 <= num2) {
-                  num = arr[num2];
+                  num = prop[num2];
                 }
                 let tmp8 = num2 >= 0;
                 if (0 > num2) {
-                  tmp8 = tmp9 >= 0;
+                  tmp8 = closure_17 >= 0;
                 }
                 if (tmp8) {
                   context(containerItemKeys, "activeStickyIndex", num);
@@ -7552,8 +7542,8 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                 finishCalculateItemsInView = undefined;
                 if (closure_4) {
-                  if (arr.length > 0) {
-                    if (tmp9 !== num) {
+                  if (prop.length > 0) {
+                    if (closure_17 !== num) {
                       finishCalculateItemsInView = () => {
                         if (undefined !== data[num]) {
                           if (null != closure_2_4) {
@@ -7599,7 +7589,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         num6 = 0;
                         if (!tmp2.pendingNativeMVCPAdjust) {
                           num6 = 0;
-                          if (tmp15(tmp7, "readyToRender")) {
+                          if (closure_1_21(tmp7, "readyToRender")) {
                             let _Math2 = Math;
                             num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                               if (arg1 <= 0) {
@@ -7935,7 +7925,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         set = new Set();
                         const idsInView = tmp2.idsInView;
                         for (const item10226 of idsInView) {
-                          let tmp99 = item10226;
                           value = indexByKey.get(item10226);
                           let tmp101 = value;
                           if (undefined !== value) {
@@ -7944,7 +7933,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                               tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                             }
                             if (!tmp102) {
-                              let addResult = set.add(tmp99);
+                              let addResult = set.add(item10226);
                             }
                           }
                           continue;
@@ -7966,7 +7955,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               if (tmp114) {
                 let tmp116 = tmp107.scroll !== state.scroll;
                 if (!tmp116) {
-                  const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                  const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                   let num12 = 0;
                   if (null != tmp109Result) {
                     num12 = tmp109Result;
@@ -8068,7 +8057,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 } while (num16 < tmp16);
               }
               obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-              const length = data.length;
               let _Math4 = Math;
               const bound1 = Math.max(0, tmp143);
               let tmp157 = bound1;
@@ -8079,7 +8067,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
               endNoBuffer = null;
               let tmp166 = null;
               startNoBuffer = null;
-              if (bound1 < length) {
+              if (bound1 < data.length) {
                 while (true) {
                   let tmp168 = idCache[tmp157];
                   let tmp169 = tmp157;
@@ -8510,23 +8498,23 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                             } else {
                               const findIndexResult = items.findIndex(() => { ... });
                               if (-1 !== findIndexResult) {
-                                const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
+                                const containerIndex = array(arr.splice(findIndexResult, 1), 1)[0].containerIndex;
                                 if (typeof assign === "function") {
                                   const obj = { containerIndex, itemIndex: null, itemType: null };
                                   ({ itemIndex: obj.itemIndex, itemType: obj.itemType } = iter);
                                   tmp[iter.order] = obj;
                                   let deleteResult;
                                   if (null != set) {
-                                    deleteResult = obj2.delete(containerIndex);
+                                    deleteResult = set.delete(containerIndex);
                                   }
                                   if (deleteResult) {
                                     c5 = true;
                                   }
-                                  obj2 = set;
                                 } else {
                                   throw new TypeError("Trying to call a non-function");
                                 }
                               }
+                              arr = items;
                             }
                           }
                           const iter = found[Symbol.iterator]();
@@ -8553,15 +8541,14 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         assignFromPool(found, items, true);
                         assignFromPool(found1, items1, false);
                         for (const item10099 of mapped) {
-                          let tmp36 = item10099;
                           if (!array[item10099.order]) {
                             let tmp38 = +sum;
                             sum = tmp38 + 1;
                             let tmp39 = tmp38;
-                            if (tmp36.isSticky) {
+                            if (item10099.isSticky) {
                               let addResult = stickyContainerPool.add(tmp39);
                             }
-                            let obj1 = assign(tmp36, tmp39);
+                            let obj1 = assign(item10099, tmp39);
                           }
                           continue;
                         }
@@ -8607,7 +8594,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       let tmp289 = tmp288;
                       let tmp293 = containerItemKeys;
                       let _HermesInternal3 = HermesInternal;
-                      let tmp291 = closure_1_21;
                       let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                       let tmp296 = tmp295;
                       if (tmp295) {
@@ -8631,7 +8617,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                         }
                         state.containerItemGenerations[containerIndex] = num28 + 1;
                       }
-                      let tmp314 = context;
                       let _HermesInternal4 = HermesInternal;
                       let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                       let _HermesInternal5 = HermesInternal;
@@ -8652,12 +8637,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                       let hasItem = stickyHeaderIndicesSet.has(tmp281);
                       let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                       if (hasItem) {
-                        let tmp314Result = tmp314(tmp293, combined, true);
+                        let tmp314Result = context(tmp293, combined, true);
                         let stickyContainerPool2 = tmp323.stickyContainerPool;
                         let addResult4 = stickyContainerPool2.add(containerIndex);
                       } else {
-                        if (tmp291(tmp293, combined)) {
-                          tmp314Result = tmp314(tmp293, combined, false);
+                        if (closure_1_21(tmp293, combined)) {
+                          tmp314Result = context(tmp293, combined, false);
                         }
                         let stickyContainerPool = tmp323.stickyContainerPool;
                         if (isPinnedRenderIndexResult) {
@@ -8674,7 +8659,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                     if (sum4 !== tmp16) {
                       context(containerItemKeys, "numContainers", sum4);
                       if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                        tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                        context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                           num = 0;
                           if (length > 0) {
                             num = 0;
@@ -8690,7 +8675,6 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                           return num;
                         })(length, sum4));
                       }
-                      tmp364 = context;
                       tmp366 = containerItemKeys;
                     }
                   }
@@ -8867,11 +8851,11 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                 if (!queuedInitialLayout) {
                   if (!tmp442.didContainersLayout) {
                     if (closure_1_41(tmp442)) {
-                      let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                      let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                     } else {
-                      tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                      tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                       if (!tmp447Result) {
-                        tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                        tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                       }
                     }
                     if (tmp447Result) {
@@ -8939,12 +8923,12 @@ function flushItemSizeUpdates(state, needsRecalculate) {
                   }
                 }
               }
-              tmp109 = closure_1_21;
               tmp111 = containerItemKeys;
               tmp214 = state;
             }
           }
         }
+        tmp13 = !bootstrap;
       });
     }
   } else {
@@ -8964,6 +8948,7 @@ function flushItemSizeUpdates(state, needsRecalculate) {
   if (tmp9) {
     doMaintainScrollAtEnd(state);
   }
+  tmp9 = needsRecalculate.didChange && needsRecalculate.shouldMaintainScrollAtEnd;
 }
 function updateItemSizesBatch(measureInLayoutEffect, items) {
   const state = measureInLayoutEffect.state;
@@ -9111,7 +9096,6 @@ function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
       }
       if (!prop2) {
         const tmp29 = getItemSize(state, itemKey, value2, tmp14, undefined, undefined, undefined, tmp21);
-        const tmp30 = tmp12 ? size.width : size.height;
         const value3 = sizesKnown3.get(itemKey);
         if (undefined === value3) {
           const _Math2 = Math;
@@ -9161,6 +9145,7 @@ function applyItemSize(state, itemKey, size, didResolveFixedItemSize) {
           const _Math = Math;
           num2 = 0;
         }
+        tmp30 = tmp12 ? size.width : size.height;
       }
       let prop3;
       if (null != tmp6) {
@@ -9407,13 +9392,13 @@ function useValue$(totalSize, arg1) {
     if (!value) {
       const _Set = Set;
       set = new Set();
-      const result = listeners.set(tmp2, set);
+      const result = listeners.set(closure_0, set);
       obj = set;
     }
     obj.add(syncCurrentValue);
     if (typeof getNewValue === "function") {
-      let values = tmp.values;
-      value = values.get(tmp2);
+      let values = context.values;
+      value = values.get(closure_0);
       if (getValue) {
         let tmp13Result = getValue(value);
       } else {
@@ -9429,7 +9414,6 @@ function useValue$(totalSize, arg1) {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    tmp = context;
   }, items);
   return first;
 }
@@ -9524,7 +9508,7 @@ function useIsLastItem() {
   }
   closure_129_1 = first;
   const items1 = [context1, first];
-  const memo = obj.useMemo(() => {
+  const memo = frozen.useMemo(() => {
     closure_0 = context;
     closure_1 = first.split("\0");
     closure_2 = [];
@@ -9570,9 +9554,9 @@ function useIsLastItem() {
   }, items1);
   const get = memo.get;
   _slicedToArray(context2(get2[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
-  context2 = obj.useContext(closure_17);
+  context2 = frozen.useContext(closure_17);
   const items2 = [context2, "lastItemKeys"];
-  const memo1 = obj.useMemo(() => {
+  const memo1 = frozen.useMemo(() => {
     let items = ["lastItemKeys"];
     let values = context2;
     items = [];
@@ -9637,7 +9621,7 @@ function useIsLastItem() {
       return flag;
     }
   ];
-  const callback = obj.useCallback(() => {
+  const callback = frozen.useCallback(() => {
     const first = get2()[0];
     flag = ScrollAdjustHandler;
     if (ScrollAdjustHandler) {
@@ -9747,7 +9731,7 @@ function ScrollAdjust() {
     first = items.join("\0");
   }
   const items1 = [context1, first];
-  const memo = obj.useMemo(() => {
+  const memo = frozen.useMemo(() => {
     closure_0 = context;
     closure_1 = first.split("\0");
     closure_2 = [];
@@ -9948,10 +9932,10 @@ function doInitialAllocateContainers(context) {
                   if (0 !== scrollLength) {
                     if (tmp16) {
                       closure_8 = ref2(tmp7);
-                      let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-                      let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                      closure_9 = sum + tmp15(tmp7, "headerSize");
-                      tmp15Result = tmp15(tmp7, "numColumns");
+                      let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+                      let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+                      closure_9 = sum + closure_1_21(tmp7, "headerSize");
+                      tmp15Result = closure_1_21(tmp7, "numColumns");
                       let scrollVelocity = idCache.scrollVelocity;
                       if (null == scrollVelocity) {
                         scrollVelocity = closure_1_69(tmp2);
@@ -9999,17 +9983,17 @@ function doInitialAllocateContainers(context) {
                         }
                       }
                       updateScroll2(scroll);
-                      const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+                      const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
                       closure_17 = tmp15Result1;
                       function resolveStickyState() {
                         num = -1;
                         let num2 = -1;
                         if (prop.length > 0) {
-                          let diff = arr.length - 1;
+                          let diff = prop.length - 1;
                           let tmp5 = num;
                           if (0 <= diff) {
                             while (true) {
-                              let tmp6 = tmp3[arr[diff]];
+                              let tmp6 = tmp3[prop[diff]];
                               if (undefined === tmp6) {
                                 diff = diff - 1;
                                 tmp5 = num;
@@ -10028,11 +10012,11 @@ function doInitialAllocateContainers(context) {
                           num2 = tmp5;
                         }
                         if (0 <= num2) {
-                          num = arr[num2];
+                          num = prop[num2];
                         }
                         let tmp8 = num2 >= 0;
                         if (0 > num2) {
-                          tmp8 = tmp9 >= 0;
+                          tmp8 = closure_17 >= 0;
                         }
                         if (tmp8) {
                           context(containerItemKeys, "activeStickyIndex", num);
@@ -10040,8 +10024,8 @@ function doInitialAllocateContainers(context) {
                         let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                         finishCalculateItemsInView = undefined;
                         if (closure_4) {
-                          if (arr.length > 0) {
-                            if (tmp9 !== num) {
+                          if (prop.length > 0) {
+                            if (closure_17 !== num) {
                               finishCalculateItemsInView = () => {
                                 if (undefined !== data[num]) {
                                   if (null != closure_2_4) {
@@ -10087,7 +10071,7 @@ function doInitialAllocateContainers(context) {
                                 num6 = 0;
                                 if (!tmp2.pendingNativeMVCPAdjust) {
                                   num6 = 0;
-                                  if (tmp15(tmp7, "readyToRender")) {
+                                  if (closure_1_21(tmp7, "readyToRender")) {
                                     let _Math2 = Math;
                                     num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                                       if (arg1 <= 0) {
@@ -10423,7 +10407,6 @@ function doInitialAllocateContainers(context) {
                                 set = new Set();
                                 const idsInView = tmp2.idsInView;
                                 for (const item10226 of idsInView) {
-                                  let tmp99 = item10226;
                                   value = indexByKey.get(item10226);
                                   let tmp101 = value;
                                   if (undefined !== value) {
@@ -10432,7 +10415,7 @@ function doInitialAllocateContainers(context) {
                                       tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                                     }
                                     if (!tmp102) {
-                                      let addResult = set.add(tmp99);
+                                      let addResult = set.add(item10226);
                                     }
                                   }
                                   continue;
@@ -10454,7 +10437,7 @@ function doInitialAllocateContainers(context) {
                       if (tmp114) {
                         let tmp116 = tmp107.scroll !== state.scroll;
                         if (!tmp116) {
-                          const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                          const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                           let num12 = 0;
                           if (null != tmp109Result) {
                             num12 = tmp109Result;
@@ -10556,7 +10539,6 @@ function doInitialAllocateContainers(context) {
                         } while (num16 < tmp16);
                       }
                       obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-                      const length = data.length;
                       let _Math4 = Math;
                       const bound1 = Math.max(0, tmp143);
                       let tmp157 = bound1;
@@ -10567,7 +10549,7 @@ function doInitialAllocateContainers(context) {
                       endNoBuffer = null;
                       let tmp166 = null;
                       startNoBuffer = null;
-                      if (bound1 < length) {
+                      if (bound1 < data.length) {
                         while (true) {
                           let tmp168 = idCache[tmp157];
                           let tmp169 = tmp157;
@@ -11010,15 +10992,14 @@ function doInitialAllocateContainers(context) {
                                 assignFromPool(found, items, true);
                                 assignFromPool(found1, items1, false);
                                 for (const item10099 of mapped) {
-                                  let tmp36 = item10099;
                                   if (!array[item10099.order]) {
                                     let tmp38 = +sum;
                                     sum = tmp38 + 1;
                                     let tmp39 = tmp38;
-                                    if (tmp36.isSticky) {
+                                    if (item10099.isSticky) {
                                       let addResult = stickyContainerPool.add(tmp39);
                                     }
-                                    let obj1 = assign(tmp36, tmp39);
+                                    let obj1 = assign(item10099, tmp39);
                                   }
                                   continue;
                                 }
@@ -11064,7 +11045,6 @@ function doInitialAllocateContainers(context) {
                               let tmp289 = tmp288;
                               let tmp293 = containerItemKeys;
                               let _HermesInternal3 = HermesInternal;
-                              let tmp291 = closure_1_21;
                               let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                               let tmp296 = tmp295;
                               if (tmp295) {
@@ -11088,7 +11068,6 @@ function doInitialAllocateContainers(context) {
                                 }
                                 state.containerItemGenerations[containerIndex] = num28 + 1;
                               }
-                              let tmp314 = context;
                               let _HermesInternal4 = HermesInternal;
                               let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                               let _HermesInternal5 = HermesInternal;
@@ -11109,12 +11088,12 @@ function doInitialAllocateContainers(context) {
                               let hasItem = stickyHeaderIndicesSet.has(tmp281);
                               let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                               if (hasItem) {
-                                let tmp314Result = tmp314(tmp293, combined, true);
+                                let tmp314Result = context(tmp293, combined, true);
                                 let stickyContainerPool2 = tmp323.stickyContainerPool;
                                 let addResult4 = stickyContainerPool2.add(containerIndex);
                               } else {
-                                if (tmp291(tmp293, combined)) {
-                                  tmp314Result = tmp314(tmp293, combined, false);
+                                if (closure_1_21(tmp293, combined)) {
+                                  tmp314Result = context(tmp293, combined, false);
                                 }
                                 let stickyContainerPool = tmp323.stickyContainerPool;
                                 if (isPinnedRenderIndexResult) {
@@ -11131,7 +11110,7 @@ function doInitialAllocateContainers(context) {
                             if (sum4 !== tmp16) {
                               context(containerItemKeys, "numContainers", sum4);
                               if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                                tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                                context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                                   num = 0;
                                   if (length > 0) {
                                     num = 0;
@@ -11147,7 +11126,6 @@ function doInitialAllocateContainers(context) {
                                   return num;
                                 })(length, sum4));
                               }
-                              tmp364 = context;
                               tmp366 = containerItemKeys;
                             }
                           }
@@ -11324,11 +11302,11 @@ function doInitialAllocateContainers(context) {
                         if (!queuedInitialLayout) {
                           if (!tmp442.didContainersLayout) {
                             if (closure_1_41(tmp442)) {
-                              let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                              let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                             } else {
-                              tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                              tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                               if (!tmp447Result) {
-                                tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                                tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                               }
                             }
                             if (tmp447Result) {
@@ -11396,12 +11374,12 @@ function doInitialAllocateContainers(context) {
                           }
                         }
                       }
-                      tmp109 = closure_1_21;
                       tmp111 = containerItemKeys;
                       tmp214 = state;
                     }
                   }
                 }
+                tmp13 = !bootstrap;
               });
             });
           } else {
@@ -11445,10 +11423,10 @@ function doInitialAllocateContainers(context) {
                 if (0 !== scrollLength) {
                   if (tmp16) {
                     closure_8 = ref2(tmp7);
-                    let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-                    let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                    closure_9 = sum + tmp15(tmp7, "headerSize");
-                    tmp15Result = tmp15(tmp7, "numColumns");
+                    let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+                    let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+                    closure_9 = sum + closure_1_21(tmp7, "headerSize");
+                    tmp15Result = closure_1_21(tmp7, "numColumns");
                     let scrollVelocity = idCache.scrollVelocity;
                     if (null == scrollVelocity) {
                       scrollVelocity = closure_1_69(tmp2);
@@ -11496,17 +11474,17 @@ function doInitialAllocateContainers(context) {
                       }
                     }
                     updateScroll2(scroll);
-                    const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+                    const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
                     closure_17 = tmp15Result1;
                     function resolveStickyState() {
                       num = -1;
                       let num2 = -1;
                       if (prop.length > 0) {
-                        let diff = arr.length - 1;
+                        let diff = prop.length - 1;
                         let tmp5 = num;
                         if (0 <= diff) {
                           while (true) {
-                            let tmp6 = tmp3[arr[diff]];
+                            let tmp6 = tmp3[prop[diff]];
                             if (undefined === tmp6) {
                               diff = diff - 1;
                               tmp5 = num;
@@ -11525,11 +11503,11 @@ function doInitialAllocateContainers(context) {
                         num2 = tmp5;
                       }
                       if (0 <= num2) {
-                        num = arr[num2];
+                        num = prop[num2];
                       }
                       let tmp8 = num2 >= 0;
                       if (0 > num2) {
-                        tmp8 = tmp9 >= 0;
+                        tmp8 = closure_17 >= 0;
                       }
                       if (tmp8) {
                         context(containerItemKeys, "activeStickyIndex", num);
@@ -11537,8 +11515,8 @@ function doInitialAllocateContainers(context) {
                       let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                       finishCalculateItemsInView = undefined;
                       if (closure_4) {
-                        if (arr.length > 0) {
-                          if (tmp9 !== num) {
+                        if (prop.length > 0) {
+                          if (closure_17 !== num) {
                             finishCalculateItemsInView = () => {
                               if (undefined !== data[num]) {
                                 if (null != closure_2_4) {
@@ -11584,7 +11562,7 @@ function doInitialAllocateContainers(context) {
                               num6 = 0;
                               if (!tmp2.pendingNativeMVCPAdjust) {
                                 num6 = 0;
-                                if (tmp15(tmp7, "readyToRender")) {
+                                if (closure_1_21(tmp7, "readyToRender")) {
                                   let _Math2 = Math;
                                   num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                                     if (arg1 <= 0) {
@@ -11920,7 +11898,6 @@ function doInitialAllocateContainers(context) {
                               set = new Set();
                               const idsInView = tmp2.idsInView;
                               for (const item10226 of idsInView) {
-                                let tmp99 = item10226;
                                 value = indexByKey.get(item10226);
                                 let tmp101 = value;
                                 if (undefined !== value) {
@@ -11929,7 +11906,7 @@ function doInitialAllocateContainers(context) {
                                     tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                                   }
                                   if (!tmp102) {
-                                    let addResult = set.add(tmp99);
+                                    let addResult = set.add(item10226);
                                   }
                                 }
                                 continue;
@@ -11951,7 +11928,7 @@ function doInitialAllocateContainers(context) {
                     if (tmp114) {
                       let tmp116 = tmp107.scroll !== state.scroll;
                       if (!tmp116) {
-                        const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                        const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                         let num12 = 0;
                         if (null != tmp109Result) {
                           num12 = tmp109Result;
@@ -12053,7 +12030,6 @@ function doInitialAllocateContainers(context) {
                       } while (num16 < tmp16);
                     }
                     obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-                    const length = data.length;
                     let _Math4 = Math;
                     const bound1 = Math.max(0, tmp143);
                     let tmp157 = bound1;
@@ -12064,7 +12040,7 @@ function doInitialAllocateContainers(context) {
                     endNoBuffer = null;
                     let tmp166 = null;
                     startNoBuffer = null;
-                    if (bound1 < length) {
+                    if (bound1 < data.length) {
                       while (true) {
                         let tmp168 = idCache[tmp157];
                         let tmp169 = tmp157;
@@ -12495,23 +12471,23 @@ function doInitialAllocateContainers(context) {
                                   } else {
                                     const findIndexResult = items.findIndex(() => { ... });
                                     if (-1 !== findIndexResult) {
-                                      const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
+                                      const containerIndex = array(arr.splice(findIndexResult, 1), 1)[0].containerIndex;
                                       if (typeof assign === "function") {
                                         const obj = { containerIndex, itemIndex: null, itemType: null };
                                         ({ itemIndex: obj.itemIndex, itemType: obj.itemType } = iter);
                                         tmp[iter.order] = obj;
                                         let deleteResult;
                                         if (null != set) {
-                                          deleteResult = obj2.delete(containerIndex);
+                                          deleteResult = set.delete(containerIndex);
                                         }
                                         if (deleteResult) {
                                           c5 = true;
                                         }
-                                        obj2 = set;
                                       } else {
                                         throw new TypeError("Trying to call a non-function");
                                       }
                                     }
+                                    arr = items;
                                   }
                                 }
                                 const iter = found[Symbol.iterator]();
@@ -12538,15 +12514,14 @@ function doInitialAllocateContainers(context) {
                               assignFromPool(found, items, true);
                               assignFromPool(found1, items1, false);
                               for (const item10099 of mapped) {
-                                let tmp36 = item10099;
                                 if (!array[item10099.order]) {
                                   let tmp38 = +sum;
                                   sum = tmp38 + 1;
                                   let tmp39 = tmp38;
-                                  if (tmp36.isSticky) {
+                                  if (item10099.isSticky) {
                                     let addResult = stickyContainerPool.add(tmp39);
                                   }
-                                  let obj1 = assign(tmp36, tmp39);
+                                  let obj1 = assign(item10099, tmp39);
                                 }
                                 continue;
                               }
@@ -12592,7 +12567,6 @@ function doInitialAllocateContainers(context) {
                             let tmp289 = tmp288;
                             let tmp293 = containerItemKeys;
                             let _HermesInternal3 = HermesInternal;
-                            let tmp291 = closure_1_21;
                             let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                             let tmp296 = tmp295;
                             if (tmp295) {
@@ -12616,7 +12590,6 @@ function doInitialAllocateContainers(context) {
                               }
                               state.containerItemGenerations[containerIndex] = num28 + 1;
                             }
-                            let tmp314 = context;
                             let _HermesInternal4 = HermesInternal;
                             let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                             let _HermesInternal5 = HermesInternal;
@@ -12637,12 +12610,12 @@ function doInitialAllocateContainers(context) {
                             let hasItem = stickyHeaderIndicesSet.has(tmp281);
                             let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                             if (hasItem) {
-                              let tmp314Result = tmp314(tmp293, combined, true);
+                              let tmp314Result = context(tmp293, combined, true);
                               let stickyContainerPool2 = tmp323.stickyContainerPool;
                               let addResult4 = stickyContainerPool2.add(containerIndex);
                             } else {
-                              if (tmp291(tmp293, combined)) {
-                                tmp314Result = tmp314(tmp293, combined, false);
+                              if (closure_1_21(tmp293, combined)) {
+                                tmp314Result = context(tmp293, combined, false);
                               }
                               let stickyContainerPool = tmp323.stickyContainerPool;
                               if (isPinnedRenderIndexResult) {
@@ -12659,7 +12632,7 @@ function doInitialAllocateContainers(context) {
                           if (sum4 !== tmp16) {
                             context(containerItemKeys, "numContainers", sum4);
                             if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                              tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                              context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                                 num = 0;
                                 if (length > 0) {
                                   num = 0;
@@ -12675,7 +12648,6 @@ function doInitialAllocateContainers(context) {
                                 return num;
                               })(length, sum4));
                             }
-                            tmp364 = context;
                             tmp366 = containerItemKeys;
                           }
                         }
@@ -12852,11 +12824,11 @@ function doInitialAllocateContainers(context) {
                       if (!queuedInitialLayout) {
                         if (!tmp442.didContainersLayout) {
                           if (closure_1_41(tmp442)) {
-                            let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                            let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                           } else {
-                            tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                            tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                             if (!tmp447Result) {
-                              tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                              tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                             }
                           }
                           if (tmp447Result) {
@@ -12924,12 +12896,12 @@ function doInitialAllocateContainers(context) {
                         }
                       }
                     }
-                    tmp109 = closure_1_21;
                     tmp111 = containerItemKeys;
                     tmp214 = state;
                   }
                 }
               }
+              tmp13 = !bootstrap;
             });
           }
         }
@@ -13059,7 +13031,7 @@ function createAnimatedValue(arg0) {
 const redux = frozen.createContext(null);
 let c18 = 0;
 function DebugRow(children) {
-  return <map1 style={{ alignItems: "center", flexDirection: "row", justifyContent: "space-between" }}>{arg0.children}</map1>;
+  return <map1 style={{ alignItems: "center", flexDirection: "row", justifyContent: "space-between" }}>{children.children}</map1>;
 }
 frozen.memo(function DebugView2() {
   let obj = frozen;
@@ -13139,8 +13111,7 @@ frozen.memo(function DebugView2() {
   }
   const obj2 = f100917(first[6]);
   const tmp12 = undefined !== tmp6[6] && tmp6[6];
-  const tmp5 = _slicedToArray;
-  tmp5(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
+  _slicedToArray(noop.useReducer((arg0) => arg0 + 1, 0), 2)[1];
   f100917 = () => {
     f100917();
   };
@@ -13441,7 +13412,7 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
   }
   closure_129_1 = first;
   const items1 = [context1, first];
-  const memo = obj.useMemo(() => {
+  const memo = frozen.useMemo(() => {
     closure_0 = context;
     closure_1 = first.split("\0");
     closure_2 = [];
@@ -13487,7 +13458,7 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
   }, items1);
   const get = memo.get;
   const items2 = [context, _slicedToArray(context(1247).useSyncExternalStore(memo.subscribe, get, get), 1)[0]];
-  const layoutEffect = obj.useLayoutEffect(() => {
+  const layoutEffect = frozen.useLayoutEffect(() => {
     if (closure_27) {
       const tmp2 = (function getContainerLayoutEffectScope(context) {
         const pendingContainerIds = context.pendingContainerIds;
@@ -13521,19 +13492,18 @@ let closure_110 = memo(function ContainerLayoutCoordinatorComponent(children) {
         }
       })(context);
       if (undefined !== tmp2) {
-        measureContainersInLayoutEffect(tmp, tmp2);
+        measureContainersInLayoutEffect(context, tmp2);
       }
-      tmp = context;
     }
   }, items2);
   return children.children;
 });
-function getComponent(icon) {
-  let tmp = icon;
-  if (!frozen.isValidElement(icon)) {
+function getComponent(div) {
+  let tmp = div;
+  if (!frozen.isValidElement(div)) {
     let element = null;
-    if (icon) {
-      element = frozen.createElement(icon, null);
+    if (div) {
+      element = <div />;
     }
     tmp = element;
   }
@@ -13699,12 +13669,12 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
       }
       const diff = first1 + num2 + num3 + num - num;
       if (undefined !== memo1) {
-        let interpolateResult = tmp8;
-        if (tmp8 > tmp3) {
+        let interpolateResult = memo1;
+        if (memo1 > first1) {
           obj = { extrapolateLeft: "clamp", extrapolateRight: "clamp", inputRange: null, outputRange: null };
-          const items = [diff, diff + (tmp8 - tmp3)];
+          const items = [diff, diff + (memo1 - first1)];
           obj.inputRange = items;
-          const items1 = [tmp3, tmp8];
+          const items1 = [first1, memo1];
           obj.outputRange = items1;
           interpolateResult = obj.interpolate(obj);
         }
@@ -13713,7 +13683,7 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
         obj = { extrapolateLeft: "clamp", extrapolateRight: "extend", inputRange: null, outputRange: null };
         const items2 = [diff, diff + 5000];
         obj.inputRange = items2;
-        const items3 = [tmp3, tmp3 + 5000];
+        const items3 = [first1, first1 + 5000];
         obj.outputRange = items3;
         interpolateResult1 = obj.interpolate(obj);
       }
@@ -13746,15 +13716,15 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
   const memo4 = obj.useMemo(() => {
     let backdropComponent;
     if (null != stickyHeaderConfig) {
-      backdropComponent = tmp.backdropComponent;
+      backdropComponent = stickyHeaderConfig.backdropComponent;
     }
     let element1 = null;
     if (backdropComponent) {
       const obj = { style: { inset: 0, pointerEvents: "none", position: "absolute" } };
-      if (null != tmp) {
-        backdropComponent = tmp.backdropComponent;
+      if (null != stickyHeaderConfig) {
+        backdropComponent = stickyHeaderConfig.backdropComponent;
       }
-      if (typeof tmp5 === "function") {
+      if (typeof getComponent === "function") {
         let tmp6 = backdropComponent;
         if (!obj.isValidElement(backdropComponent)) {
           let element = null;
@@ -13767,7 +13737,6 @@ let closure_113 = memo(function PositionViewSticky2(animatedScrollY) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      tmp5 = getComponent;
     }
     return element1;
   }, items5);
@@ -13957,6 +13926,7 @@ let closure_121 = memo(function Container2(id) {
     current.lastSize = size;
     let items = [{ containerId, itemKey, size }];
     updateItemSizesBatch(measureInLayoutEffect, items);
+    let obj = { containerId, itemKey, size };
   }, items2);
   callback1 = num6.useCallback(() => {
     if (closure_27) {
@@ -14066,7 +14036,7 @@ let closure_121 = memo(function Container2(id) {
   const items10 = [itemKey, tmp12[2], tmp12[4]];
   const memo1 = obj2.useMemo(() => {
     if (!columnWrapperStyle) {
-      if (tmp4) {
+      if (onLayoutProp) {
         let num11;
         if ("flex-end" === tmp2) {
           if (1 === tmp5) {
@@ -14084,7 +14054,7 @@ let closure_121 = memo(function Container2(id) {
           str4 = "row";
         }
         rect.flexDirection = str4;
-        rect.height = tmp7;
+        rect.height = _undefined;
         if ("flex-end" !== tmp2) {
           const tmp19 = tmp6;
         }
@@ -14105,7 +14075,7 @@ let closure_121 = memo(function Container2(id) {
           tmp14 = null;
         }
         rect1.right = tmp14;
-        rect1.width = tmp7;
+        rect1.width = _undefined;
         if (!obj) {
           obj = {};
         }
@@ -14114,7 +14084,7 @@ let closure_121 = memo(function Container2(id) {
       return rect1;
     } else {
       ({ columnGap, rowGap, gap } = columnWrapperStyle);
-      if (tmp4) {
+      if (onLayoutProp) {
         let result;
         if (tmp5 > 1) {
           let num7 = rowGap;
@@ -14354,7 +14324,7 @@ let closure_124 = memo(function ContainersLayer2(horizontal) {
       }
     }
   }
-  return style.createElement(get_ActivityIndicator.Animated.View, { style }, <closure_110>{arg0.children}</closure_110>);
+  return style.createElement(get_ActivityIndicator.Animated.View, { style }, <closure_110>{horizontal.children}</closure_110>);
 });
 let closure_125 = memo(function Containers2(horizontal) {
   horizontal = horizontal.horizontal;
@@ -14489,7 +14459,7 @@ let closure_128 = frozen.forwardRef(function SnapWrapperInner(ScrollComponent, r
   const merged1 = Object.assign(merged);
   obj.ref = ref;
   obj.snapToOffsets = _slicedToArray(context(first[6]).useSyncExternalStore(memo.subscribe, get, get), 1)[0];
-  return obj.createElement(ScrollComponent.ScrollComponent, {});
+  return <ScrollComponent.ScrollComponent />;
 });
 function LayoutView(onLayoutChange) {
   const refView = onLayoutChange.refView;
@@ -14727,14 +14697,14 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
     const values = context.values;
     let tmp2 = values.get("footerSize") !== data;
     if (tmp2) {
-      set$(tmp, "footerSize", data);
-      updateContentMetricsState(tmp);
+      set$(context, "footerSize", data);
+      updateContentMetricsState(context);
     }
     if (null != fn) {
       fn();
     }
     if (tmp2) {
-      const maintainScrollAtEnd = tmp.state.props.maintainScrollAtEnd;
+      const maintainScrollAtEnd = context.state.props.maintainScrollAtEnd;
       let onFooterLayout;
       if (null != maintainScrollAtEnd) {
         onFooterLayout = maintainScrollAtEnd.onFooterLayout;
@@ -14742,7 +14712,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
       tmp2 = onFooterLayout;
     }
     if (tmp2) {
-      doMaintainScrollAtEnd(tmp);
+      doMaintainScrollAtEnd(context);
     }
   }, items3);
   const items4 = [ListHeaderComponent, ListFooterComponent, context, callback];
@@ -14755,10 +14725,10 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
         flag = tmp2 > 0.1;
       }
       if (tmp2 !== 0) {
-        set$(tmp, "headerSize", 0);
-        updateContentMetricsState(tmp);
+        set$(context, "headerSize", 0);
+        updateContentMetricsState(context);
         if (flag) {
-          ({ didContainersLayout, didFinishInitialScroll, props, scroll, scrollingTo } = tmp.state);
+          ({ didContainersLayout, didFinishInitialScroll, props, scroll, scrollingTo } = context.state);
           if (props.horizontal) {
             const stylePaddingLeft = props.stylePaddingLeft;
             flag = false;
@@ -14768,7 +14738,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
           }
         }
         if (flag) {
-          requestAdjust(tmp, 0 - tmp2);
+          requestAdjust(context, 0 - tmp2);
         }
       }
       state.didMeasureHeader = true;
@@ -14791,10 +14761,10 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
       flag = tmp3 > 0.1;
     }
     if (tmp3 !== data[str]) {
-      set$(tmp2, "headerSize", tmp);
-      updateContentMetricsState(tmp2);
+      set$(context, "headerSize", tmp);
+      updateContentMetricsState(context);
       if (flag) {
-        ({ didContainersLayout, didFinishInitialScroll, props, scroll, scrollingTo } = tmp2.state);
+        ({ didContainersLayout, didFinishInitialScroll, props, scroll, scrollingTo } = context.state);
         if (props.horizontal) {
           const stylePaddingLeft = props.stylePaddingLeft;
           flag = false;
@@ -14804,7 +14774,7 @@ let closure_131 = memo(function ListComponent2(ListFooterComponent) {
         }
       }
       if (flag) {
-        requestAdjust(tmp2, tmp - tmp3);
+        requestAdjust(context, tmp - tmp3);
       }
     }
     state.didMeasureHeader = true;
@@ -15174,10 +15144,10 @@ let items = [
             if (0 !== scrollLength) {
               if (tmp16) {
                 closure_8 = ref2(tmp7);
-                let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-                let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                closure_9 = sum + tmp15(tmp7, "headerSize");
-                tmp15Result = tmp15(tmp7, "numColumns");
+                let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+                let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+                closure_9 = sum + closure_1_21(tmp7, "headerSize");
+                tmp15Result = closure_1_21(tmp7, "numColumns");
                 let scrollVelocity = idCache.scrollVelocity;
                 if (null == scrollVelocity) {
                   scrollVelocity = closure_1_69(tmp2);
@@ -15225,17 +15195,17 @@ let items = [
                   }
                 }
                 updateScroll2(scroll);
-                const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+                const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
                 closure_17 = tmp15Result1;
                 function resolveStickyState() {
                   num = -1;
                   let num2 = -1;
                   if (prop.length > 0) {
-                    let diff = arr.length - 1;
+                    let diff = prop.length - 1;
                     let tmp5 = num;
                     if (0 <= diff) {
                       while (true) {
-                        let tmp6 = tmp3[arr[diff]];
+                        let tmp6 = tmp3[prop[diff]];
                         if (undefined === tmp6) {
                           diff = diff - 1;
                           tmp5 = num;
@@ -15254,11 +15224,11 @@ let items = [
                     num2 = tmp5;
                   }
                   if (0 <= num2) {
-                    num = arr[num2];
+                    num = prop[num2];
                   }
                   let tmp8 = num2 >= 0;
                   if (0 > num2) {
-                    tmp8 = tmp9 >= 0;
+                    tmp8 = closure_17 >= 0;
                   }
                   if (tmp8) {
                     context(containerItemKeys, "activeStickyIndex", num);
@@ -15266,8 +15236,8 @@ let items = [
                   let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                   finishCalculateItemsInView = undefined;
                   if (closure_4) {
-                    if (arr.length > 0) {
-                      if (tmp9 !== num) {
+                    if (prop.length > 0) {
+                      if (closure_17 !== num) {
                         finishCalculateItemsInView = () => {
                           if (undefined !== data[num]) {
                             if (null != closure_2_4) {
@@ -15313,7 +15283,7 @@ let items = [
                           num6 = 0;
                           if (!tmp2.pendingNativeMVCPAdjust) {
                             num6 = 0;
-                            if (tmp15(tmp7, "readyToRender")) {
+                            if (closure_1_21(tmp7, "readyToRender")) {
                               let _Math2 = Math;
                               num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                                 if (arg1 <= 0) {
@@ -15649,7 +15619,6 @@ let items = [
                           set = new Set();
                           const idsInView = tmp2.idsInView;
                           for (const item10226 of idsInView) {
-                            let tmp99 = item10226;
                             value = indexByKey.get(item10226);
                             let tmp101 = value;
                             if (undefined !== value) {
@@ -15658,7 +15627,7 @@ let items = [
                                 tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                               }
                               if (!tmp102) {
-                                let addResult = set.add(tmp99);
+                                let addResult = set.add(item10226);
                               }
                             }
                             continue;
@@ -15680,7 +15649,7 @@ let items = [
                 if (tmp114) {
                   let tmp116 = tmp107.scroll !== state.scroll;
                   if (!tmp116) {
-                    const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                    const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                     let num12 = 0;
                     if (null != tmp109Result) {
                       num12 = tmp109Result;
@@ -15782,7 +15751,6 @@ let items = [
                   } while (num16 < tmp16);
                 }
                 obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-                const length = data.length;
                 let _Math4 = Math;
                 const bound1 = Math.max(0, tmp143);
                 let tmp157 = bound1;
@@ -15793,7 +15761,7 @@ let items = [
                 endNoBuffer = null;
                 let tmp166 = null;
                 startNoBuffer = null;
-                if (bound1 < length) {
+                if (bound1 < data.length) {
                   while (true) {
                     let tmp168 = idCache[tmp157];
                     let tmp169 = tmp157;
@@ -16224,23 +16192,23 @@ let items = [
                               } else {
                                 const findIndexResult = items.findIndex(() => { ... });
                                 if (-1 !== findIndexResult) {
-                                  const containerIndex = array(items.splice(findIndexResult, 1), 1)[0].containerIndex;
+                                  const containerIndex = array(arr.splice(findIndexResult, 1), 1)[0].containerIndex;
                                   if (typeof assign === "function") {
                                     const obj = { containerIndex, itemIndex: null, itemType: null };
                                     ({ itemIndex: obj.itemIndex, itemType: obj.itemType } = iter);
                                     tmp[iter.order] = obj;
                                     let deleteResult;
                                     if (null != set) {
-                                      deleteResult = obj2.delete(containerIndex);
+                                      deleteResult = set.delete(containerIndex);
                                     }
                                     if (deleteResult) {
                                       c5 = true;
                                     }
-                                    obj2 = set;
                                   } else {
                                     throw new TypeError("Trying to call a non-function");
                                   }
                                 }
+                                arr = items;
                               }
                             }
                             const iter = found[Symbol.iterator]();
@@ -16267,15 +16235,14 @@ let items = [
                           assignFromPool(found, items, true);
                           assignFromPool(found1, items1, false);
                           for (const item10099 of mapped) {
-                            let tmp36 = item10099;
                             if (!array[item10099.order]) {
                               let tmp38 = +sum;
                               sum = tmp38 + 1;
                               let tmp39 = tmp38;
-                              if (tmp36.isSticky) {
+                              if (item10099.isSticky) {
                                 let addResult = stickyContainerPool.add(tmp39);
                               }
-                              let obj1 = assign(tmp36, tmp39);
+                              let obj1 = assign(item10099, tmp39);
                             }
                             continue;
                           }
@@ -16321,7 +16288,6 @@ let items = [
                         let tmp289 = tmp288;
                         let tmp293 = containerItemKeys;
                         let _HermesInternal3 = HermesInternal;
-                        let tmp291 = closure_1_21;
                         let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                         let tmp296 = tmp295;
                         if (tmp295) {
@@ -16345,7 +16311,6 @@ let items = [
                           }
                           state.containerItemGenerations[containerIndex] = num28 + 1;
                         }
-                        let tmp314 = context;
                         let _HermesInternal4 = HermesInternal;
                         let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                         let _HermesInternal5 = HermesInternal;
@@ -16366,12 +16331,12 @@ let items = [
                         let hasItem = stickyHeaderIndicesSet.has(tmp281);
                         let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                         if (hasItem) {
-                          let tmp314Result = tmp314(tmp293, combined, true);
+                          let tmp314Result = context(tmp293, combined, true);
                           let stickyContainerPool2 = tmp323.stickyContainerPool;
                           let addResult4 = stickyContainerPool2.add(containerIndex);
                         } else {
-                          if (tmp291(tmp293, combined)) {
-                            tmp314Result = tmp314(tmp293, combined, false);
+                          if (closure_1_21(tmp293, combined)) {
+                            tmp314Result = context(tmp293, combined, false);
                           }
                           let stickyContainerPool = tmp323.stickyContainerPool;
                           if (isPinnedRenderIndexResult) {
@@ -16388,7 +16353,7 @@ let items = [
                       if (sum4 !== tmp16) {
                         context(containerItemKeys, "numContainers", sum4);
                         if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                          tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                          context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                             num = 0;
                             if (length > 0) {
                               num = 0;
@@ -16404,7 +16369,6 @@ let items = [
                             return num;
                           })(length, sum4));
                         }
-                        tmp364 = context;
                         tmp366 = containerItemKeys;
                       }
                     }
@@ -16581,11 +16545,11 @@ let items = [
                   if (!queuedInitialLayout) {
                     if (!tmp442.didContainersLayout) {
                       if (closure_1_41(tmp442)) {
-                        let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                        let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                       } else {
-                        tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                        tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                         if (!tmp447Result) {
-                          tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                          tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                         }
                       }
                       if (tmp447Result) {
@@ -16653,12 +16617,12 @@ let items = [
                     }
                   }
                 }
-                tmp109 = closure_1_21;
                 tmp111 = containerItemKeys;
                 tmp214 = state;
               }
             }
           }
+          tmp13 = !bootstrap;
         });
       }
     }
@@ -16885,7 +16849,7 @@ memoResult1 = memo(function PositionViewState2(id) {
   const merged1 = Object.assign(merged);
   return <get ActivityIndicator.View ref={refView} style={null} />;
 });
-let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
+let closure_141 = forwardRef(function LegendListInner2(recycleItems, arg1) {
   let obj = snapToIndices;
   const callback = snapToIndices.useCallback((arg0) => {
 
@@ -16964,7 +16928,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
   }
   ({ refreshControl, scrollEventThrottle, snapToIndices } = recycleItems);
   ({ stickyHeaderIndices, useWindowScroll, viewabilityConfig } = recycleItems);
-  const viewabilityConfigCallbackPairs = recycleItems.viewabilityConfigCallbackPairs;
   ({ refreshing, refScrollView, renderScrollComponent, renderItem, style } = recycleItems);
   let tmp12 = onLayoutChange(recycleItems, onMetricsChange);
   ({ positionComponentInternal: positionComponentInternal2, stickyPositionComponentInternal: stickyPositionComponentInternal2 } = tmp12);
@@ -17160,7 +17123,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             num15 = rowGap;
           }
         }
-        ref = obj.useRef(null);
+        const ref = obj.useRef(null);
         let finishCalculateItemsInView = keyExtractor;
         const tmp64 = overrideItemLayout;
         const tmp66 = horizontal(viewabilityConfigCallbackPairs.useState(!overrideItemLayout), 2);
@@ -17262,10 +17225,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 indices = measureInLayoutEffect.indices;
                 for (const item10038 of indices) {
                   let _Number = Number;
-                  let tmp17 = item10038;
                   if (Number.isFinite(item10038)) {
                     let _Math4 = Math;
-                    let tmp20 = closure_1_139(set, length, Math.floor(tmp17));
+                    let tmp20 = closure_1_139(set, length, Math.floor(item10038));
                   }
                   continue;
                 }
@@ -17404,9 +17366,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               let state = context.state;
               state.triggerCalculateItemsInView = (arg0) => {
                 closure_0 = context;
-                if (arg0 === undefined) {
-                  const obj = {};
-                }
                 state = context.state;
                 fn(() => {
                   let set2;
@@ -17445,10 +17404,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (0 !== scrollLength) {
                       if (tmp16) {
                         closure_8 = ref2(tmp7);
-                        let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-                        let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                        closure_9 = sum + tmp15(tmp7, "headerSize");
-                        tmp15Result = tmp15(tmp7, "numColumns");
+                        let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+                        let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+                        closure_9 = sum + closure_1_21(tmp7, "headerSize");
+                        tmp15Result = closure_1_21(tmp7, "numColumns");
                         let scrollVelocity = idCache.scrollVelocity;
                         if (null == scrollVelocity) {
                           scrollVelocity = closure_1_69(tmp2);
@@ -17496,17 +17455,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           }
                         }
                         updateScroll2(scroll);
-                        const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+                        const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
                         closure_17 = tmp15Result1;
                         function resolveStickyState() {
                           num = -1;
                           let num2 = -1;
                           if (prop.length > 0) {
-                            let diff = arr.length - 1;
+                            let diff = prop.length - 1;
                             let tmp5 = num;
                             if (0 <= diff) {
                               while (true) {
-                                let tmp6 = tmp3[arr[diff]];
+                                let tmp6 = tmp3[prop[diff]];
                                 if (undefined === tmp6) {
                                   diff = diff - 1;
                                   tmp5 = num;
@@ -17525,11 +17484,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             num2 = tmp5;
                           }
                           if (0 <= num2) {
-                            num = arr[num2];
+                            num = prop[num2];
                           }
                           let tmp8 = num2 >= 0;
                           if (0 > num2) {
-                            tmp8 = tmp9 >= 0;
+                            tmp8 = closure_17 >= 0;
                           }
                           if (tmp8) {
                             context(containerItemKeys, "activeStickyIndex", num);
@@ -17537,8 +17496,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                           finishCalculateItemsInView = undefined;
                           if (closure_4) {
-                            if (arr.length > 0) {
-                              if (tmp9 !== num) {
+                            if (prop.length > 0) {
+                              if (closure_17 !== num) {
                                 finishCalculateItemsInView = () => {
                                   if (undefined !== data[num]) {
                                     if (null != closure_2_4) {
@@ -17584,7 +17543,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   num6 = 0;
                                   if (!tmp2.pendingNativeMVCPAdjust) {
                                     num6 = 0;
-                                    if (tmp15(tmp7, "readyToRender")) {
+                                    if (closure_1_21(tmp7, "readyToRender")) {
                                       let _Math2 = Math;
                                       num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                                         if (arg1 <= 0) {
@@ -17920,7 +17879,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   set = new Set();
                                   const idsInView = tmp2.idsInView;
                                   for (const item10226 of idsInView) {
-                                    let tmp99 = item10226;
                                     value = indexByKey.get(item10226);
                                     let tmp101 = value;
                                     if (undefined !== value) {
@@ -17929,7 +17887,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                         tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                                       }
                                       if (!tmp102) {
-                                        let addResult = set.add(tmp99);
+                                        let addResult = set.add(item10226);
                                       }
                                     }
                                     continue;
@@ -17951,7 +17909,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         if (tmp114) {
                           let tmp116 = tmp107.scroll !== state.scroll;
                           if (!tmp116) {
-                            const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                            const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                             let num12 = 0;
                             if (null != tmp109Result) {
                               num12 = tmp109Result;
@@ -18053,7 +18011,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           } while (num16 < tmp16);
                         }
                         obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-                        const length = data.length;
                         let _Math4 = Math;
                         const bound1 = Math.max(0, tmp143);
                         let tmp157 = bound1;
@@ -18064,7 +18021,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         endNoBuffer = null;
                         let tmp166 = null;
                         startNoBuffer = null;
-                        if (bound1 < length) {
+                        if (bound1 < data.length) {
                           while (true) {
                             let tmp168 = idCache[tmp157];
                             let tmp169 = tmp157;
@@ -18507,15 +18464,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   assignFromPool(found, items, true);
                                   assignFromPool(found1, items1, false);
                                   for (const item10099 of mapped) {
-                                    let tmp36 = item10099;
                                     if (!array[item10099.order]) {
                                       let tmp38 = +sum;
                                       sum = tmp38 + 1;
                                       let tmp39 = tmp38;
-                                      if (tmp36.isSticky) {
+                                      if (item10099.isSticky) {
                                         let addResult = stickyContainerPool.add(tmp39);
                                       }
-                                      let obj1 = assign(tmp36, tmp39);
+                                      let obj1 = assign(item10099, tmp39);
                                     }
                                     continue;
                                   }
@@ -18561,7 +18517,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 let tmp289 = tmp288;
                                 let tmp293 = containerItemKeys;
                                 let _HermesInternal3 = HermesInternal;
-                                let tmp291 = closure_1_21;
                                 let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                                 let tmp296 = tmp295;
                                 if (tmp295) {
@@ -18585,7 +18540,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   state.containerItemGenerations[containerIndex] = num28 + 1;
                                 }
-                                let tmp314 = context;
                                 let _HermesInternal4 = HermesInternal;
                                 let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                                 let _HermesInternal5 = HermesInternal;
@@ -18606,12 +18560,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 let hasItem = stickyHeaderIndicesSet.has(tmp281);
                                 let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                                 if (hasItem) {
-                                  let tmp314Result = tmp314(tmp293, combined, true);
+                                  let tmp314Result = context(tmp293, combined, true);
                                   let stickyContainerPool2 = tmp323.stickyContainerPool;
                                   let addResult4 = stickyContainerPool2.add(containerIndex);
                                 } else {
-                                  if (tmp291(tmp293, combined)) {
-                                    tmp314Result = tmp314(tmp293, combined, false);
+                                  if (closure_1_21(tmp293, combined)) {
+                                    tmp314Result = context(tmp293, combined, false);
                                   }
                                   let stickyContainerPool = tmp323.stickyContainerPool;
                                   if (isPinnedRenderIndexResult) {
@@ -18628,7 +18582,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               if (sum4 !== tmp16) {
                                 context(containerItemKeys, "numContainers", sum4);
                                 if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                                  tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                                  context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                                     num = 0;
                                     if (length > 0) {
                                       num = 0;
@@ -18644,7 +18598,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     return num;
                                   })(length, sum4));
                                 }
-                                tmp364 = context;
                                 tmp366 = containerItemKeys;
                               }
                             }
@@ -18821,11 +18774,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           if (!queuedInitialLayout) {
                             if (!tmp442.didContainersLayout) {
                               if (closure_1_41(tmp442)) {
-                                let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                                let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                               } else {
-                                tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                                tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                                 if (!tmp447Result) {
-                                  tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                                  tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                                 }
                               }
                               if (tmp447Result) {
@@ -18893,12 +18846,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             }
                           }
                         }
-                        tmp109 = closure_1_21;
                         tmp111 = containerItemKeys;
                         tmp214 = state;
                       }
                     }
                   }
+                  tmp13 = !bootstrap;
                 });
               };
               state.reprocessCurrentScroll = () => {
@@ -19080,7 +19033,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           const timestamp = Date.now();
           onLayoutProp.current = substr;
           if (timestamp - measureInLayoutEffect.current >= arg1) {
-            tmp3.current = timestamp;
+            measureInLayoutEffect.current = timestamp;
             let items = [];
             HermesBuiltin.arraySpread(substr, 0);
             HermesBuiltin.apply(items, undefined);
@@ -19105,12 +19058,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 const _Date = Date;
                 measureInLayoutEffect.current = Date.now();
                 const items = [];
-                HermesBuiltin.arraySpread(tmp.current, 0);
+                HermesBuiltin.arraySpread(onLayoutProp.current, 0);
                 HermesBuiltin.apply(items, undefined);
                 f100963.current = null;
-                tmp.current = null;
+                onLayoutProp.current = null;
               }
-            }, arg1 - (timestamp - tmp3.current));
+            }, arg1 - (timestamp - measureInLayoutEffect.current));
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -19304,12 +19257,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           values = context;
           closure_1 = undefined;
           if (undefined !== closure_13) {
-            values = tmp2.values;
+            values = context.values;
             const tmp8 = values.get("stylePaddingTop") || 0;
             closure_1 = tmp8;
-            if (tmp6 < tmp8) {
-              values = tmp2.values;
-              tmp(tmp2, "totalSize", (values.get("totalSize") || 0) + tmp8);
+            if (closure_13 < tmp8) {
+              values = context.values;
+              set$(context, "totalSize", (values.get("totalSize") || 0) + tmp8);
               const _setTimeout = setTimeout;
               tmp7.timeoutSetPaddingTop = setTimeout(() => {
                 values = values.values;
@@ -19317,7 +19270,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               }, 16);
               const tmp9 = values.get("totalSize") || 0;
             }
-            tmp(tmp2, "stylePaddingTop", tmp6);
+            set$(context, "stylePaddingTop", closure_13);
           }
           ref1.current.props.stylePaddingBottom = stylePaddingBottom;
           updateContentMetricsState(context);
@@ -19360,9 +19313,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           if (null != memo2) {
             num = memo2;
           }
-          let tmp6 = tmp5;
+          let tmp6 = closure_18;
           if (closure_18) {
-            tmp6 = tmp4;
+            tmp6 = closure_5;
           }
           if (tmp6) {
             tmp6 = !tmp3;
@@ -19389,7 +19342,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             const merged = Object.assign(initialScroll);
             obj.contentOffset = num;
             obj.preserveForFooterLayout = tmp6;
-            const state2 = tmp.state;
+            const state2 = context.state;
             state2.clearPreservedInitialScrollOnNextFinish = undefined;
             if (undefined !== state2.timeoutPreservedInitialScrollClear) {
               const _clearTimeout = clearTimeout;
@@ -19418,9 +19371,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               }
               if ("offset" !== kind2) {
                 const initialScroll2 = state.initialScroll;
-                const state3 = tmp.state;
-                const tmp27 = resolveInitialScrollOffset(tmp, initialScroll2);
-                if (!(0 === tmp27 && !tmp4)) {
+                const state3 = context.state;
+                const tmp27 = resolveInitialScrollOffset(context, initialScroll2);
+                if (!(0 === tmp27 && !closure_5)) {
                   if (tmp28) {
                     const initialScrollSession8 = state3.initialScrollSession;
                     let kind3;
@@ -19455,7 +19408,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     obj = { bootstrap: null, kind: kind4 };
                     setInitialScrollSession(state3, obj);
                     const obj1 = { resolvedOffset: tmp27 };
-                    finishInitialScroll(tmp, obj1);
+                    finishInitialScroll(context, obj1);
                   } else if (tmp34) {
                     const initialScrollSession6 = state3.initialScrollSession;
                     let kind5;
@@ -19490,12 +19443,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     obj2 = { bootstrap: null, kind: kind6 };
                     setInitialScrollSession(state3, obj2);
                     const obj3 = { preserveTarget: true, resolvedOffset: tmp27 };
-                    finishInitialScroll(tmp, obj3);
+                    finishInitialScroll(context, obj3);
                   } else {
                     const obj4 = { scroll: tmp27, seedContentOffset: tmp27, targetIndexSeed: initialScroll2.index };
                     startBootstrapInitialScrollSession(state3, obj4);
-                    closure_0 = tmp;
-                    const state4 = tmp.state;
+                    closure_0 = context;
+                    const state4 = context.state;
                     const initialScrollSession5 = state4.initialScrollSession;
                     let kind7;
                     if (null != initialScrollSession5) {
@@ -19663,20 +19616,21 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               tmp20 = 0 !== onLayoutProp.length;
             }
             if (!tmp20) {
-              tmp20 = 0 === num && !tmp4;
-              const tmp21 = 0 === num && !tmp4;
+              tmp20 = 0 === num && !closure_5;
+              const tmp21 = 0 === num && !closure_5;
             }
             tmp2 = !tmp20;
           }
           if (!tmp2) {
             if (initialScroll) {
-              if (!tmp4) {
+              if (!closure_5) {
                 const obj5 = { resolvedOffset: num };
-                finishInitialScroll(tmp, obj5);
+                finishInitialScroll(context, obj5);
               }
             }
-            setInitialRenderState(tmp, { didInitialScroll: true });
+            setInitialRenderState(context, { didInitialScroll: true });
           }
+          tmp3 = !ListFooterComponent;
         }, []);
         let didColumnsChange = isFirst;
         if (!isFirst) {
@@ -19714,7 +19668,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           if (isRTL) {
             str2 = "offset";
           }
-          state = tmp.state;
+          state = context.state;
           const initialScrollSession = state.initialScrollSession;
           let previousDataLength;
           if (null != initialScrollSession) {
@@ -19729,7 +19683,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             hasHadNonEmptyData = state.hasHadNonEmptyData;
             let tmp10 = !hasHadNonEmptyData;
             if (hasHadNonEmptyData) {
-              tmp10 = hasHadNonEmptyData;
+              tmp10 = tmp3;
             }
             tmp9 = tmp10;
           }
@@ -19738,7 +19692,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
           if (tmp9) {
             if (tmp5) {
-              const state2 = tmp.state;
+              const state2 = context.state;
               state2.clearPreservedInitialScrollOnNextFinish = undefined;
               if (undefined !== state2.timeoutPreservedInitialScrollClear) {
                 const _clearTimeout2 = clearTimeout;
@@ -19775,7 +19729,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
           setInitialScrollSession(state);
           if (closure_18) {
-            const state4 = tmp.state;
+            const state4 = context.state;
             ({ initialScroll, initialScrollSession: initialScrollSession4 } = state4);
             let kind1;
             if (null != initialScrollSession4) {
@@ -19792,7 +19746,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   const bootstrap = state4.initialScrollSession.bootstrap;
                 }
                 const tmp36 = !!(state4.didFinishInitialScroll && 0 === num && length > 0 && undefined !== initialScroll.index);
-                if (!tmp4) {
+                if (!closure_5) {
                   if (tmp2) {
                     if (length > 0) {
                       if (state4.didFinishInitialScroll) {
@@ -19814,8 +19768,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 }
                 let tmp41 = length > 0;
                 if (tmp41) {
-                  let tmp42 = tmp4;
-                  if (!tmp4) {
+                  let tmp42 = closure_5;
+                  if (!closure_5) {
                     let tmp43 = !initialScroll;
                     if (initialScroll) {
                       tmp43 = 1 !== initialScroll.viewPosition;
@@ -19848,7 +19802,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     tmp2 = tmp63;
                   }
                   if (tmp2) {
-                    const state5 = tmp.state;
+                    const state5 = context.state;
                     state5.clearPreservedInitialScrollOnNextFinish = undefined;
                     if (undefined !== state5.timeoutPreservedInitialScrollClear) {
                       const _clearTimeout4 = clearTimeout;
@@ -19858,7 +19812,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     state5.initialScroll = initialScroll;
                     if (tmp36) {
                       obj = { resetInitialScroll: true };
-                      const state6 = tmp.state;
+                      const state6 = context.state;
                       if (obj.resetLayout) {
                         state6.didContainersLayout = false;
                         state6.queuedInitialLayout = false;
@@ -19866,8 +19820,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (obj.resetInitialScroll) {
                         state6.didFinishInitialScroll = false;
                       }
-                      set$(tmp, "readyToRender", false);
-                      resetAdaptiveRender(tmp);
+                      set$(context, "readyToRender", false);
+                      resetAdaptiveRender(context);
                     }
                     const initialScrollSession6 = state5.initialScrollSession;
                     let kind3;
@@ -19880,7 +19834,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     const obj1 = { kind: str10 };
                     setInitialScrollSession(state5, obj1);
-                    obj2 = { scroll: resolveInitialScrollOffset(tmp, initialScroll), seedContentOffset: null, targetIndexSeed: null };
+                    obj2 = { scroll: resolveInitialScrollOffset(context, initialScroll), seedContentOffset: null, targetIndexSeed: null };
                     let tmp75;
                     if (tmp36) {
                       if (!bootstrap) {
@@ -19907,12 +19861,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     obj2.seedContentOffset = tmp75;
                     obj2.targetIndexSeed = initialScroll.index;
-                    rearmBootstrapInitialScroll(tmp, obj2);
+                    rearmBootstrapInitialScroll(context, obj2);
                   }
                 } else {
-                  const values = tmp.values;
+                  const values = context.values;
                   value = values.get("footerSize");
-                  if (tmp4) {
+                  if (closure_5) {
                     let num7 = value;
                     if (!value) {
                       num7 = 0;
@@ -19925,7 +19879,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     const _Math2 = Math;
                     obj3.index = Math.max(0, length - 1);
                     obj3.preserveForFooterLayout = !!prop3;
-                    obj3.viewOffset = -tmp6 - num7;
+                    obj3.viewOffset = -stylePaddingBottom - num7;
                     let obj4 = obj3;
                     const tmp57 = !prop3;
                   } else {
@@ -19940,7 +19894,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     obj4 = {};
                     const merged = Object.assign(initialScroll);
                     obj4.contentOffset = undefined;
-                    if (tmp4) {
+                    if (closure_5) {
                       const _Math = Math;
                       let index = Math.max(0, length - 1);
                     } else {
@@ -19953,17 +19907,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (!!prop4) {
                       num5 = num3;
                     }
-                    obj4.viewOffset = -tmp6 - num5;
+                    obj4.viewOffset = -stylePaddingBottom - num5;
                     obj4.viewPosition = 1;
                     const tmp50 = !prop4;
                   }
                   if (!tmp36) {
-                    if (didFinishedInitialScrollMoveAwayFromTarget(tmp, initialScroll)) {
-                      const obj5 = { dataLength: length, stylePaddingBottom: tmp6, target: initialScroll };
-                      clearPendingInitialScrollFooterLayout(tmp, obj5);
+                    if (didFinishedInitialScrollMoveAwayFromTarget(context, initialScroll)) {
+                      const obj5 = { dataLength: length, stylePaddingBottom, target: initialScroll };
+                      clearPendingInitialScrollFooterLayout(context, obj5);
                     }
                   }
-                  const state7 = tmp.state;
+                  const state7 = context.state;
                   state7.clearPreservedInitialScrollOnNextFinish = undefined;
                   if (undefined !== state7.timeoutPreservedInitialScrollClear) {
                     const _clearTimeout5 = clearTimeout;
@@ -19973,7 +19927,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   state7.initialScroll = obj4;
                   if (tmp36) {
                     const obj6 = { resetInitialScroll: true };
-                    const state8 = tmp.state;
+                    const state8 = context.state;
                     if (obj6.resetLayout) {
                       state8.didContainersLayout = false;
                       state8.queuedInitialLayout = false;
@@ -19981,8 +19935,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (obj6.resetInitialScroll) {
                       state8.didFinishInitialScroll = false;
                     }
-                    set$(tmp, "readyToRender", false);
-                    resetAdaptiveRender(tmp);
+                    set$(context, "readyToRender", false);
+                    resetAdaptiveRender(context);
                   }
                   const initialScrollSession7 = state7.initialScrollSession;
                   let kind4;
@@ -19994,7 +19948,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   }
                   obj7 = { kind: str };
                   setInitialScrollSession(state7, obj7);
-                  const obj8 = { scroll: resolveInitialScrollOffset(tmp, obj4), seedContentOffset: null, targetIndexSeed: null };
+                  const obj8 = { scroll: resolveInitialScrollOffset(context, obj4), seedContentOffset: null, targetIndexSeed: null };
                   let tmp91;
                   if (tmp36) {
                     if (!bootstrap) {
@@ -20021,8 +19975,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   }
                   obj8.seedContentOffset = tmp91;
                   obj8.targetIndexSeed = obj4.index;
-                  rearmBootstrapInitialScroll(tmp, obj8);
-                  const tmp62 = initialScroll.index === obj4.index && initialScroll.preserveForBottomPadding === obj4.preserveForBottomPadding && initialScroll.preserveForFooterLayout === obj4.preserveForFooterLayout && initialScroll.viewOffset === obj4.viewOffset && initialScroll.viewPosition === obj4.viewPosition;
+                  rearmBootstrapInitialScroll(context, obj8);
                 }
                 const tmp33 = state4.didFinishInitialScroll && 0 === num && length > 0 && undefined !== initialScroll.index;
                 const tmp34 = !(state4.didFinishInitialScroll && 0 === num && length > 0 && undefined !== initialScroll.index);
@@ -20038,7 +19991,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               initialScroll = state.initialScroll;
             }
             if (initialScroll) {
-              const initialScrollSession3 = tmp.state.initialScrollSession;
+              const initialScrollSession3 = context.state.initialScrollSession;
               let kind5;
               if (null != initialScrollSession3) {
                 kind5 = initialScrollSession3.kind;
@@ -20068,7 +20021,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             if (queuedInitialLayout) {
               if (initialScroll) {
                 const obj9 = { resetInitialScroll: true };
-                const state3 = tmp.state;
+                const state3 = context.state;
                 if (obj9.resetLayout) {
                   state3.didContainersLayout = false;
                   state3.queuedInitialLayout = false;
@@ -20076,12 +20029,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 if (obj9.resetInitialScroll) {
                   state3.didFinishInitialScroll = false;
                 }
-                set$(tmp, "readyToRender", false);
-                resetAdaptiveRender(tmp);
+                set$(context, "readyToRender", false);
+                resetAdaptiveRender(context);
               }
-              advanceCurrentInitialScrollSession(tmp);
+              advanceCurrentInitialScrollSession(context);
             }
           }
+          tmp3 = hasHadNonEmptyData;
         }, items10);
         const items11 = [context, data, dataVersion, , , , , ];
         let anchorIndex3;
@@ -20110,10 +20064,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (typeof call === "unknown") {
                 const result = triggerCalculateItemsInView();
               } else {
-                call(tmp);
+                call(current);
               }
             }
-            tmp = current;
           }
           maybeUpdateAnchoredEndSpace(context);
         }, items11);
@@ -20122,24 +20075,25 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           ref2.current = undefined;
           const diff = getContentInsetEnd(context) - getContentInsetEnd(context, ref2.current);
           if (0 !== diff) {
-            const values = tmp.values;
-            updateScroll(tmp, context.state.scroll, true, { markHasScrolled: false });
-            const tmp9 = retargetActiveInitialScrollAtEnd(tmp);
+            const values = context.values;
+            updateScroll(context, context.state.scroll, true, { markHasScrolled: false });
+            const tmp9 = retargetActiveInitialScrollAtEnd(context);
             let tmp10 = !tmp9;
             if (!tmp9) {
               tmp10 = !tmp4;
             }
             if (tmp10) {
-              requestAdjust(tmp, diff);
+              requestAdjust(context, diff);
             }
             tmp4 = !values.get("isWithinMaintainScrollAtEndThreshold");
           }
+          const tmp2 = getContentInsetEnd(context, ref2.current);
         }, items12);
         const items13 = [data.length, tmp9, horizontal, tmp39, tmp60];
         const items14 = [data.length, tmp9, tmp39, tmp60];
         const callback1 = obj.useCallback((arg0) => {
           if (closure_18) {
-            state = tmp.state;
+            state = context.state;
             if (closure_5) {
               ({ initialScroll, initialScrollSession } = state);
               let kind;
@@ -20160,9 +20114,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       bootstrap = state.initialScrollSession.bootstrap;
                     }
                     if (bootstrap) {
-                      if (didFinishedInitialScrollMoveAwayFromTarget(tmp, initialScroll)) {
-                        let obj = { dataLength: length, stylePaddingBottom: tmp7, target: initialScroll };
-                        clearPendingInitialScrollFooterLayout(tmp, obj);
+                      if (didFinishedInitialScrollMoveAwayFromTarget(context, initialScroll)) {
+                        let obj = { dataLength: length, stylePaddingBottom, target: initialScroll };
+                        clearPendingInitialScrollFooterLayout(context, obj);
                       } else {
                         let prop;
                         if (null != initialScroll) {
@@ -20172,16 +20126,16 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         const _Math = Math;
                         obj.index = Math.max(0, length - 1);
                         obj.preserveForFooterLayout = !!prop;
-                        obj.viewOffset = -tmp7 - tmp5;
+                        obj.viewOffset = -stylePaddingBottom - tmp5;
                         if (initialScroll.index === obj.index) {
                           if (initialScroll.viewPosition === obj.viewPosition) {
                             if (initialScroll.viewOffset === obj.viewOffset) {
-                              obj = { dataLength: length, stylePaddingBottom: tmp7, target: initialScroll };
-                              clearPendingInitialScrollFooterLayout(tmp, obj);
+                              obj = { dataLength: length, stylePaddingBottom, target: initialScroll };
+                              clearPendingInitialScrollFooterLayout(context, obj);
                             }
                           }
                         }
-                        const state2 = tmp.state;
+                        const state2 = context.state;
                         state2.clearPreservedInitialScrollOnNextFinish = undefined;
                         if (undefined !== state2.timeoutPreservedInitialScrollClear) {
                           const _clearTimeout = clearTimeout;
@@ -20191,7 +20145,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         state2.initialScroll = obj;
                         if (!tmp19) {
                           const obj1 = { resetInitialScroll: true };
-                          const state3 = tmp.state;
+                          const state3 = context.state;
                           if (obj1.resetLayout) {
                             state3.didContainersLayout = false;
                             state3.queuedInitialLayout = false;
@@ -20199,8 +20153,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           if (obj1.resetInitialScroll) {
                             state3.didFinishInitialScroll = false;
                           }
-                          set$(tmp, "readyToRender", false);
-                          resetAdaptiveRender(tmp);
+                          set$(context, "readyToRender", false);
+                          resetAdaptiveRender(context);
                         }
                         const initialScrollSession3 = state2.initialScrollSession;
                         let kind2;
@@ -20212,8 +20166,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         obj2 = { kind: str3 };
                         setInitialScrollSession(state2, obj2);
-                        const obj3 = { scroll: resolveInitialScrollOffset(tmp, obj), targetIndexSeed: obj.index };
-                        rearmBootstrapInitialScroll(tmp, obj3);
+                        const obj3 = { scroll: resolveInitialScrollOffset(context, obj), targetIndexSeed: obj.index };
+                        rearmBootstrapInitialScroll(context, obj3);
                         const tmp15 = !prop;
                         tmp19 = !state.didFinishInitialScroll;
                       }
@@ -20277,17 +20231,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   if (tmp14) {
                     state.scrollLength = scrollLength2;
                     state.otherAxisSize = tmp12;
-                    updateContentMetricsState(tmp2);
+                    updateContentMetricsState(context);
                     let _Date = Date;
                     state.lastBatchingAction = Date.now();
                     state.scrollForNextCalculateItemsInView = undefined;
                     if (scrollLength2 > 0) {
-                      doInitialAllocateContainers(tmp2);
+                      doInitialAllocateContainers(context);
                     }
                     if (tmp13) {
-                      closure_0 = tmp2;
+                      closure_0 = context;
                       preservedEndAnchorCorrection = { doMVCP: true };
-                      let state3 = tmp2.state;
+                      let state3 = context.state;
                       fn(() => {
                         let set2;
                         let tmp163;
@@ -20325,10 +20279,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           if (0 !== scrollLength) {
                             if (tmp16) {
                               closure_8 = ref2(tmp7);
-                              let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-                              let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                              closure_9 = sum + tmp15(tmp7, "headerSize");
-                              tmp15Result = tmp15(tmp7, "numColumns");
+                              let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+                              let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+                              closure_9 = sum + closure_1_21(tmp7, "headerSize");
+                              tmp15Result = closure_1_21(tmp7, "numColumns");
                               let scrollVelocity = idCache.scrollVelocity;
                               if (null == scrollVelocity) {
                                 scrollVelocity = closure_1_69(tmp2);
@@ -20376,17 +20330,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 }
                               }
                               updateScroll2(scroll);
-                              const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+                              const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
                               closure_17 = tmp15Result1;
                               function resolveStickyState() {
                                 num = -1;
                                 let num2 = -1;
                                 if (prop.length > 0) {
-                                  let diff = arr.length - 1;
+                                  let diff = prop.length - 1;
                                   let tmp5 = num;
                                   if (0 <= diff) {
                                     while (true) {
-                                      let tmp6 = tmp3[arr[diff]];
+                                      let tmp6 = tmp3[prop[diff]];
                                       if (undefined === tmp6) {
                                         diff = diff - 1;
                                         tmp5 = num;
@@ -20405,11 +20359,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   num2 = tmp5;
                                 }
                                 if (0 <= num2) {
-                                  num = arr[num2];
+                                  num = prop[num2];
                                 }
                                 let tmp8 = num2 >= 0;
                                 if (0 > num2) {
-                                  tmp8 = tmp9 >= 0;
+                                  tmp8 = closure_17 >= 0;
                                 }
                                 if (tmp8) {
                                   context(containerItemKeys, "activeStickyIndex", num);
@@ -20417,8 +20371,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                                 finishCalculateItemsInView = undefined;
                                 if (closure_4) {
-                                  if (arr.length > 0) {
-                                    if (tmp9 !== num) {
+                                  if (prop.length > 0) {
+                                    if (closure_17 !== num) {
                                       finishCalculateItemsInView = () => {
                                         if (undefined !== data[num]) {
                                           if (null != closure_2_4) {
@@ -20464,7 +20418,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                         num6 = 0;
                                         if (!tmp2.pendingNativeMVCPAdjust) {
                                           num6 = 0;
-                                          if (tmp15(tmp7, "readyToRender")) {
+                                          if (closure_1_21(tmp7, "readyToRender")) {
                                             let _Math2 = Math;
                                             num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                                               if (arg1 <= 0) {
@@ -20800,7 +20754,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                         set = new Set();
                                         const idsInView = tmp2.idsInView;
                                         for (const item10226 of idsInView) {
-                                          let tmp99 = item10226;
                                           value = indexByKey.get(item10226);
                                           let tmp101 = value;
                                           if (undefined !== value) {
@@ -20809,7 +20762,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                               tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                                             }
                                             if (!tmp102) {
-                                              let addResult = set.add(tmp99);
+                                              let addResult = set.add(item10226);
                                             }
                                           }
                                           continue;
@@ -20831,7 +20784,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               if (tmp114) {
                                 let tmp116 = tmp107.scroll !== state.scroll;
                                 if (!tmp116) {
-                                  const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                                  const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                                   let num12 = 0;
                                   if (null != tmp109Result) {
                                     num12 = tmp109Result;
@@ -20933,7 +20886,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 } while (num16 < tmp16);
                               }
                               obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-                              const length = data.length;
                               let _Math4 = Math;
                               const bound1 = Math.max(0, tmp143);
                               let tmp157 = bound1;
@@ -20944,7 +20896,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               endNoBuffer = null;
                               let tmp166 = null;
                               startNoBuffer = null;
-                              if (bound1 < length) {
+                              if (bound1 < data.length) {
                                 while (true) {
                                   let tmp168 = idCache[tmp157];
                                   let tmp169 = tmp157;
@@ -21387,15 +21339,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                         assignFromPool(found, items, true);
                                         assignFromPool(found1, items1, false);
                                         for (const item10099 of mapped) {
-                                          let tmp36 = item10099;
                                           if (!array[item10099.order]) {
                                             let tmp38 = +sum;
                                             sum = tmp38 + 1;
                                             let tmp39 = tmp38;
-                                            if (tmp36.isSticky) {
+                                            if (item10099.isSticky) {
                                               let addResult = stickyContainerPool.add(tmp39);
                                             }
-                                            let obj1 = assign(tmp36, tmp39);
+                                            let obj1 = assign(item10099, tmp39);
                                           }
                                           continue;
                                         }
@@ -21441,7 +21392,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                       let tmp289 = tmp288;
                                       let tmp293 = containerItemKeys;
                                       let _HermesInternal3 = HermesInternal;
-                                      let tmp291 = closure_1_21;
                                       let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                                       let tmp296 = tmp295;
                                       if (tmp295) {
@@ -21465,7 +21415,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                         }
                                         state.containerItemGenerations[containerIndex] = num28 + 1;
                                       }
-                                      let tmp314 = context;
                                       let _HermesInternal4 = HermesInternal;
                                       let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                                       let _HermesInternal5 = HermesInternal;
@@ -21486,12 +21435,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                       let hasItem = stickyHeaderIndicesSet.has(tmp281);
                                       let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                                       if (hasItem) {
-                                        let tmp314Result = tmp314(tmp293, combined, true);
+                                        let tmp314Result = context(tmp293, combined, true);
                                         let stickyContainerPool2 = tmp323.stickyContainerPool;
                                         let addResult4 = stickyContainerPool2.add(containerIndex);
                                       } else {
-                                        if (tmp291(tmp293, combined)) {
-                                          tmp314Result = tmp314(tmp293, combined, false);
+                                        if (closure_1_21(tmp293, combined)) {
+                                          tmp314Result = context(tmp293, combined, false);
                                         }
                                         let stickyContainerPool = tmp323.stickyContainerPool;
                                         if (isPinnedRenderIndexResult) {
@@ -21508,7 +21457,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     if (sum4 !== tmp16) {
                                       context(containerItemKeys, "numContainers", sum4);
                                       if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                                        tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                                        context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                                           num = 0;
                                           if (length > 0) {
                                             num = 0;
@@ -21524,7 +21473,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                           return num;
                                         })(length, sum4));
                                       }
-                                      tmp364 = context;
                                       tmp366 = containerItemKeys;
                                     }
                                   }
@@ -21701,11 +21649,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 if (!queuedInitialLayout) {
                                   if (!tmp442.didContainersLayout) {
                                     if (closure_1_41(tmp442)) {
-                                      let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                                      let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                                     } else {
-                                      tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                                      tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                                       if (!tmp447Result) {
-                                        tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                                        tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                                       }
                                     }
                                     if (tmp447Result) {
@@ -21773,12 +21721,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                 }
                               }
-                              tmp109 = closure_1_21;
                               tmp111 = containerItemKeys;
                               tmp214 = state;
                             }
                           }
                         }
+                        tmp13 = !bootstrap;
                       });
                     }
                     if (!tmp14) {
@@ -21787,16 +21735,16 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (tmp14) {
                       const size1 = { height: null, width: null };
                       ({ height: obj3.height, width: obj3.width } = point);
-                      set$(tmp2, "scrollSize", size1);
+                      set$(context, "scrollSize", size1);
                     }
                     let onLayout;
                     if (null != maintainScrollAtEnd) {
                       onLayout = maintainScrollAtEnd.onLayout;
                     }
                     if (onLayout) {
-                      doMaintainScrollAtEnd(tmp2);
+                      doMaintainScrollAtEnd(context);
                     }
-                    checkThresholds(tmp2);
+                    checkThresholds(context);
                     if (!state) {
                       let tmp34 = closure_31;
                       let tmp35 = closure_31;
@@ -21843,7 +21791,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     tmp45 = tmp43;
                   }
                   if (tmp45) {
-                    const state2 = tmp2.state;
+                    const state2 = context.state;
                     ({ initialScroll, initialScrollSession } = state2);
                     let kind;
                     if (null != initialScrollSession) {
@@ -21861,7 +21809,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         if ("offset" !== kind1) {
                           if (bootstrap) {
-                            const tmp51 = resolveInitialScrollOffset(tmp2, initialScroll);
+                            const tmp51 = resolveInitialScrollOffset(context, initialScroll);
                             const scrollingTo = state2.scrollingTo;
                             let isInitialScroll;
                             if (null != scrollingTo) {
@@ -21906,10 +21854,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               let _Math = Math;
                               if (Math.abs(diff) > 1) {
                                 if (state2.didFinishInitialScroll) {
-                                  if (undefined !== getPreservedEndAnchorOffsetDiff(tmp2)) {
+                                  if (undefined !== getPreservedEndAnchorOffsetDiff(context)) {
                                     preservedEndAnchorCorrection = {};
-                                    closure_0 = tmp2;
-                                    state3 = tmp2.state;
+                                    closure_0 = context;
+                                    state3 = context.state;
                                     state3.preservedEndAnchorCorrection = preservedEndAnchorCorrection;
                                     let _requestAnimationFrame = requestAnimationFrame;
                                     let animationFrame = requestAnimationFrame(() => {
@@ -21922,7 +21870,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                             const lastRequestTime = preservedEndAnchorCorrection.lastRequestTime;
                                             let tmp4 = !lastRequestTime;
                                             if (lastRequestTime) {
-                                              const lastNativeScrollTime = tmp.lastNativeScrollTime;
+                                              const lastNativeScrollTime = state3.lastNativeScrollTime;
                                               let num = 0;
                                               if (null != lastNativeScrollTime) {
                                                 num = lastNativeScrollTime;
@@ -21935,9 +21883,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                               requestAdjust(tmp9, tmp10);
                                             }
                                             closure_0 = tmp9;
-                                            closure_1 = tmp2;
+                                            closure_1 = obj;
                                             state = tmp9.state;
-                                            state.preservedEndAnchorCorrection = tmp2;
+                                            state.preservedEndAnchorCorrection = obj;
                                             const _requestAnimationFrame = requestAnimationFrame;
                                             const animationFrame = requestAnimationFrame(() => {
                                               preservedEndAnchorCorrection = state3.preservedEndAnchorCorrection;
@@ -21949,7 +21897,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                     const lastRequestTime = preservedEndAnchorCorrection.lastRequestTime;
                                                     let tmp4 = !lastRequestTime;
                                                     if (lastRequestTime) {
-                                                      const lastNativeScrollTime = tmp.lastNativeScrollTime;
+                                                      const lastNativeScrollTime = state3.lastNativeScrollTime;
                                                       let num = 0;
                                                       if (null != lastNativeScrollTime) {
                                                         num = lastNativeScrollTime;
@@ -21962,9 +21910,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                       requestAdjust(tmp9, tmp10);
                                                     }
                                                     closure_0 = tmp9;
-                                                    closure_1 = tmp2;
+                                                    closure_1 = obj;
                                                     state = tmp9.state;
-                                                    state.preservedEndAnchorCorrection = tmp2;
+                                                    state.preservedEndAnchorCorrection = obj;
                                                     const _requestAnimationFrame = requestAnimationFrame;
                                                     const animationFrame = requestAnimationFrame(() => {
                                                       preservedEndAnchorCorrection = state3.preservedEndAnchorCorrection;
@@ -21976,7 +21924,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                             const lastRequestTime = preservedEndAnchorCorrection.lastRequestTime;
                                                             let tmp4 = !lastRequestTime;
                                                             if (lastRequestTime) {
-                                                              const lastNativeScrollTime = tmp.lastNativeScrollTime;
+                                                              const lastNativeScrollTime = state3.lastNativeScrollTime;
                                                               let num = 0;
                                                               if (null != lastNativeScrollTime) {
                                                                 num = lastNativeScrollTime;
@@ -21989,24 +21937,24 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                                               requestAdjust(tmp9, tmp10);
                                                             }
                                                             closure_0 = tmp9;
-                                                            closure_1 = tmp2;
+                                                            closure_1 = obj;
                                                             state = tmp9.state;
-                                                            state.preservedEndAnchorCorrection = tmp2;
+                                                            state.preservedEndAnchorCorrection = obj;
                                                             const _requestAnimationFrame = requestAnimationFrame;
                                                             const animationFrame = requestAnimationFrame(() => { ... });
                                                           }
                                                         }
-                                                        tmp.preservedEndAnchorCorrection = undefined;
+                                                        state3.preservedEndAnchorCorrection = undefined;
                                                       }
                                                     });
                                                   }
                                                 }
-                                                tmp.preservedEndAnchorCorrection = undefined;
+                                                state3.preservedEndAnchorCorrection = undefined;
                                               }
                                             });
                                           }
                                         }
-                                        tmp.preservedEndAnchorCorrection = undefined;
+                                        state3.preservedEndAnchorCorrection = undefined;
                                       }
                                     });
                                   }
@@ -22028,20 +21976,21 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                   }
                                   obj2 = { startScroll, targetOffset: tmp51 };
                                   const result = closure_37.set(state2, obj2);
-                                  requestAdjust(tmp2, diff);
+                                  requestAdjust(context, diff);
                                 }
                               }
                             }
                             const obj3 = { scroll: tmp51, targetIndexSeed: initialScroll.index };
-                            rearmBootstrapInitialScroll(tmp2, obj3);
+                            rearmBootstrapInitialScroll(context, obj3);
                           }
                         }
                       }
                     }
                   }
                   if (!closure_18) {
-                    advanceCurrentInitialScrollSession(tmp2);
+                    advanceCurrentInitialScrollSession(context);
                   }
+                  tmp43 = scrollLength !== current.scrollLength || otherAxisSize !== current.otherAxisSize;
                 }, items14),
           onLayoutProp: onLayout,
           ref
@@ -22057,7 +22006,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         onLayoutProp = obj16.onLayoutProp;
         onLayoutChange = obj16.onLayoutChange;
         const items15 = [onLayoutChange, onLayoutProp];
-        const callback2 = obj23.useCallback((nativeEvent) => {
+        const callback2 = snapToIndices.useCallback((nativeEvent) => {
           onLayoutChange(nativeEvent.nativeEvent.layout, false);
           if (null != onLayoutProp) {
             onLayoutProp(nativeEvent);
@@ -22066,7 +22015,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         if (overrideItemLayout) {
           const items16 = [measureInLayoutEffect];
           HermesBuiltin.arraySpread([], 1);
-          const layoutEffect4 = obj23.useLayoutEffect(() => {
+          const layoutEffect4 = snapToIndices.useLayoutEffect(() => {
             current = measureInLayoutEffect;
             if (measureInLayoutEffect) {
               current = f100963.current;
@@ -22086,7 +22035,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             state = context.state;
             snapToIndices = state.props.snapToIndices;
             if (state.props.horizontal) {
-              const tmp2 = getContentSize(tmp);
+              const tmp2 = getContentSize(context);
             }
             const _Array = Array;
             const ArrayResult = Array(snapToIndices.length);
@@ -22137,7 +22086,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             if (flag === undefined) {
               flag = false;
             }
-            state = tmp9.state;
+            state = context.state;
             const previousData = state.previousData;
             const maintainScrollAtEnd = state.props.maintainScrollAtEnd;
             if (flag) {
@@ -22154,9 +22103,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               state.minIndexSizeChanged = 0;
               state.scrollForNextCalculateItemsInView = undefined;
             }
-            closure_0 = tmp9;
+            closure_0 = context;
             closure_1 = { dataChanged: true, doMVCP: true };
-            state = tmp9.state;
+            state = context.state;
             fn(() => {
               let set2;
               let tmp163;
@@ -22194,10 +22143,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                 if (0 !== scrollLength) {
                   if (tmp16) {
                     closure_8 = ref2(tmp7);
-                    let tmp15Result = tmp15(tmp7, "stylePaddingTop");
-                    let sum = tmp15Result + tmp15(tmp7, "alignItemsAtEndPadding");
-                    closure_9 = sum + tmp15(tmp7, "headerSize");
-                    tmp15Result = tmp15(tmp7, "numColumns");
+                    let tmp15Result = closure_1_21(tmp7, "stylePaddingTop");
+                    let sum = tmp15Result + closure_1_21(tmp7, "alignItemsAtEndPadding");
+                    closure_9 = sum + closure_1_21(tmp7, "headerSize");
+                    tmp15Result = closure_1_21(tmp7, "numColumns");
                     let scrollVelocity = idCache.scrollVelocity;
                     if (null == scrollVelocity) {
                       scrollVelocity = closure_1_69(tmp2);
@@ -22245,17 +22194,17 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                     }
                     updateScroll2(scroll);
-                    const tmp15Result1 = tmp15(tmp7, "activeStickyIndex");
+                    const tmp15Result1 = closure_1_21(tmp7, "activeStickyIndex");
                     closure_17 = tmp15Result1;
                     function resolveStickyState() {
                       num = -1;
                       let num2 = -1;
                       if (prop.length > 0) {
-                        let diff = arr.length - 1;
+                        let diff = prop.length - 1;
                         let tmp5 = num;
                         if (0 <= diff) {
                           while (true) {
-                            let tmp6 = tmp3[arr[diff]];
+                            let tmp6 = tmp3[prop[diff]];
                             if (undefined === tmp6) {
                               diff = diff - 1;
                               tmp5 = num;
@@ -22274,11 +22223,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         num2 = tmp5;
                       }
                       if (0 <= num2) {
-                        num = arr[num2];
+                        num = prop[num2];
                       }
                       let tmp8 = num2 >= 0;
                       if (0 > num2) {
-                        tmp8 = tmp9 >= 0;
+                        tmp8 = closure_17 >= 0;
                       }
                       if (tmp8) {
                         context(containerItemKeys, "activeStickyIndex", num);
@@ -22286,8 +22235,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       let obj = { currentStickyIdx: num2, finishCalculateItemsInView: null };
                       finishCalculateItemsInView = undefined;
                       if (closure_4) {
-                        if (arr.length > 0) {
-                          if (tmp9 !== num) {
+                        if (prop.length > 0) {
+                          if (closure_17 !== num) {
                             finishCalculateItemsInView = () => {
                               if (undefined !== data[num]) {
                                 if (null != closure_2_4) {
@@ -22333,7 +22282,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               num6 = 0;
                               if (!tmp2.pendingNativeMVCPAdjust) {
                                 num6 = 0;
-                                if (tmp15(tmp7, "readyToRender")) {
+                                if (closure_1_21(tmp7, "readyToRender")) {
                                   let _Math2 = Math;
                                   num6 = (function getProjectedBufferAdjustment(scrollVelocity, arg1) {
                                     if (arg1 <= 0) {
@@ -22669,7 +22618,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               set = new Set();
                               const idsInView = tmp2.idsInView;
                               for (const item10226 of idsInView) {
-                                let tmp99 = item10226;
                                 value = indexByKey.get(item10226);
                                 let tmp101 = value;
                                 if (undefined !== value) {
@@ -22678,7 +22626,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                     tmp102 = !shouldRestorePosition(data[tmp101], tmp101, data);
                                   }
                                   if (!tmp102) {
-                                    let addResult = set.add(tmp99);
+                                    let addResult = set.add(item10226);
                                   }
                                 }
                                 continue;
@@ -22700,7 +22648,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (tmp114) {
                       let tmp116 = tmp107.scroll !== state.scroll;
                       if (!tmp116) {
-                        const tmp109Result = tmp109(tmp111, "scrollAdjustPending");
+                        const tmp109Result = closure_1_21(tmp111, "scrollAdjustPending");
                         let num12 = 0;
                         if (null != tmp109Result) {
                           num12 = tmp109Result;
@@ -22802,7 +22750,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       } while (num16 < tmp16);
                     }
                     obj = { endNoBuffer: null, firstFullyOnScreenIndex: "Array", startNoBuffer: -1 };
-                    const length = data.length;
                     let _Math4 = Math;
                     const bound1 = Math.max(0, tmp143);
                     let tmp157 = bound1;
@@ -22813,7 +22760,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     endNoBuffer = null;
                     let tmp166 = null;
                     startNoBuffer = null;
-                    if (bound1 < length) {
+                    if (bound1 < data.length) {
                       while (true) {
                         let tmp168 = idCache[tmp157];
                         let tmp169 = tmp157;
@@ -23256,15 +23203,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               assignFromPool(found, items, true);
                               assignFromPool(found1, items1, false);
                               for (const item10099 of mapped) {
-                                let tmp36 = item10099;
                                 if (!array[item10099.order]) {
                                   let tmp38 = +sum;
                                   sum = tmp38 + 1;
                                   let tmp39 = tmp38;
-                                  if (tmp36.isSticky) {
+                                  if (item10099.isSticky) {
                                     let addResult = stickyContainerPool.add(tmp39);
                                   }
-                                  let obj1 = assign(tmp36, tmp39);
+                                  let obj1 = assign(item10099, tmp39);
                                 }
                                 continue;
                               }
@@ -23310,7 +23256,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             let tmp289 = tmp288;
                             let tmp293 = containerItemKeys;
                             let _HermesInternal3 = HermesInternal;
-                            let tmp291 = closure_1_21;
                             let tmp295 = closure_1_21(containerItemKeys, "containerItemKey" + containerIndex);
                             let tmp296 = tmp295;
                             if (tmp295) {
@@ -23334,7 +23279,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                               }
                               state.containerItemGenerations[containerIndex] = num28 + 1;
                             }
-                            let tmp314 = context;
                             let _HermesInternal4 = HermesInternal;
                             let tmp318 = context(tmp293, "containerItemKey" + containerIndex, tmp289);
                             let _HermesInternal5 = HermesInternal;
@@ -23355,12 +23299,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             let hasItem = stickyHeaderIndicesSet.has(tmp281);
                             let isPinnedRenderIndexResult = isPinnedRenderIndex(tmp281);
                             if (hasItem) {
-                              let tmp314Result = tmp314(tmp293, combined, true);
+                              let tmp314Result = context(tmp293, combined, true);
                               let stickyContainerPool2 = tmp323.stickyContainerPool;
                               let addResult4 = stickyContainerPool2.add(containerIndex);
                             } else {
-                              if (tmp291(tmp293, combined)) {
-                                tmp314Result = tmp314(tmp293, combined, false);
+                              if (closure_1_21(tmp293, combined)) {
+                                tmp314Result = context(tmp293, combined, false);
                               }
                               let stickyContainerPool = tmp323.stickyContainerPool;
                               if (isPinnedRenderIndexResult) {
@@ -23377,7 +23321,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           if (sum4 !== tmp16) {
                             context(containerItemKeys, "numContainers", sum4);
                             if (sum4 > closure_1_21(containerItemKeys, "numContainersPooled")) {
-                              tmp364(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
+                              context(tmp366, "numContainersPooled", (function getExpandedContainerPoolSize(length, sum4) {
                                 num = 0;
                                 if (length > 0) {
                                   num = 0;
@@ -23393,7 +23337,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                                 return num;
                               })(length, sum4));
                             }
-                            tmp364 = context;
                             tmp366 = containerItemKeys;
                           }
                         }
@@ -23570,11 +23513,11 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (!queuedInitialLayout) {
                         if (!tmp442.didContainersLayout) {
                           if (closure_1_41(tmp442)) {
-                            let tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                            let tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                           } else {
-                            tmp447Result = tmp447(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
+                            tmp447Result = closure_1_77(tmp442, tmp442.startNoBuffer, tmp442.endNoBuffer);
                             if (!tmp447Result) {
-                              tmp447Result = tmp447(tmp442, tmp442.startBuffered, tmp442.endBuffered);
+                              tmp447Result = closure_1_77(tmp442, tmp442.startBuffered, tmp442.endBuffered);
                             }
                           }
                           if (tmp447Result) {
@@ -23642,12 +23585,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                       }
                     }
-                    tmp109 = closure_1_21;
                     tmp111 = containerItemKeys;
                     tmp214 = state;
                   }
                 }
               }
+              tmp13 = !bootstrap;
             });
             let tmp16 = !flag;
             if (!flag) {
@@ -23658,7 +23601,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               tmp16 = onDataChange;
             }
             if (tmp16) {
-              tmp16 = doMaintainScrollAtEnd(tmp9);
+              tmp16 = doMaintainScrollAtEnd(context);
             }
             let tmp20 = !tmp16;
             if (!tmp16) {
@@ -23671,12 +23614,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               state.isEndReached = false;
             }
             if (!tmp16) {
-              checkThresholds(tmp9);
+              checkThresholds(context);
             }
             delete tmp2[tmp];
           }
           if (didDataChange) {
-            tmp5.pendingDataComparison = undefined;
+            current.pendingDataComparison = undefined;
           }
           current.didColumnsChange = false;
           current.didDataChange = false;
@@ -23701,10 +23644,9 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (typeof call === "unknown") {
                 const result = triggerCalculateItemsInView(obj);
               } else {
-                call(tmp4, obj);
+                call(current, obj);
               }
             }
-            tmp4 = current;
           }
         }, items20);
         const items21 = [context, onMetricsChange];
@@ -23712,8 +23654,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           if (onMetricsChange) {
             let values = context.values;
             let obj = { footerSize: values.get("footerSize") || 0, headerSize: null };
-            values = tmp2.values;
-            const tmp3 = values.get("footerSize") || 0;
+            values = context.values;
+            let tmp3 = values.get("footerSize") || 0;
             obj.headerSize = values.get("headerSize") || 0;
             let tmp5 = obj;
             if (obj) {
@@ -23741,9 +23683,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (!tmp4) {
                 onMetricsChange(obj);
               }
+              const tmp3 = values.get("headerSize") || 0;
             }
             obj = emitMetrics;
-            const listeners = tmp2.listeners;
+            const listeners = context.listeners;
             value = listeners.get("headerSize");
             let items = value;
             obj2 = value;
@@ -23757,7 +23700,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             obj2.add(emitMetrics);
             items = [() => set.delete(closure_0), ];
             obj = emitMetrics;
-            const listeners2 = tmp2.listeners;
+            const listeners2 = context.listeners;
             value = listeners2.get("footerSize");
             items = value;
             let obj3 = value;
@@ -23783,16 +23726,16 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           let obj = viewabilityConfig;
           let tmp3 = viewabilityConfig;
           if (!viewabilityConfig) {
-            tmp3 = tmp;
+            tmp3 = onViewableItemsChanged;
           }
-          let tmp4 = tmp2;
+          let tmp4 = viewabilityConfigCallbackPairs;
           if (tmp3) {
-            let items = tmp2;
-            if (!tmp2) {
+            let items = viewabilityConfigCallbackPairs;
+            if (!viewabilityConfigCallbackPairs) {
               items = [];
             }
             const items1 = [];
-            obj = { onViewableItemsChanged: tmp, viewabilityConfig: null };
+            obj = { onViewableItemsChanged, viewabilityConfig: null };
             if (!obj) {
               obj = { viewAreaCoveragePercentThreshold: 0 };
             }
@@ -23812,8 +23755,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
             doInitialAllocateContainers(context);
           }
         };
-        state = obj23.useState(() => f100976());
-        const imperativeHandle = obj.useImperativeHandle(ref, () => {
+        state = snapToIndices.useState(() => f100976());
+        const imperativeHandle = obj.useImperativeHandle(arg1, () => {
           closure_0 = context;
           closure_1 = closure_21;
           state = context.state;
@@ -23821,7 +23764,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           function isSettlingAfterDataChange() {
 
           }
-          function isScrollToIndexReady(index) {
+          function isScrollToIndexReady(index, arg1) {
             flag = arg1;
             if (arg1 === undefined) {
               flag = false;
@@ -23886,12 +23829,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               check = function check() {
                 if (closure_0 === onLayoutChange) {
                   if (typeof horizontal === "function") {
-                    let tmp2 = onLayoutProp.didDataChange || tmp.didColumnsChange;
+                    let tmp2 = onLayoutProp.didDataChange || onLayoutProp.didColumnsChange;
                     if (!tmp2) {
-                      tmp2 = undefined !== tmp.queuedMVCPRecalculate;
+                      tmp2 = undefined !== onLayoutProp.queuedMVCPRecalculate;
                     }
                     if (!tmp2) {
-                      tmp2 = undefined !== tmp.ignoreScrollFromMVCP;
+                      tmp2 = undefined !== onLayoutProp.ignoreScrollFromMVCP;
                     }
                     if (!tmp2) {
                       if (fn()) {
@@ -23947,7 +23890,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   const diff = state.props.data.length - 1;
                   flag = false;
                   if (-1 !== diff) {
-                    const values = tmp.values;
+                    const values = pendingScrollToEnd.values;
                     const obj = {};
                     const merged = Object.assign(options);
                     obj.index = diff;
@@ -23961,7 +23904,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     }
                     obj.viewOffset = diff1 + num;
                     obj.viewPosition = 1;
-                    scrollToIndex(tmp, obj);
+                    scrollToIndex(pendingScrollToEnd, obj);
                     flag = true;
                     const tmp3 = state.props.stylePaddingBottom || 0;
                     const tmp4 = values.get("footerSize") || 0;
@@ -24001,12 +23944,12 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               state.totalSize = 0;
               context(closure_0, "totalSize", 0);
               if ("full" === str) {
-                const indexByKey = tmp7.indexByKey;
+                const indexByKey = state.indexByKey;
                 indexByKey.clear();
-                tmp7.idCache.length = 0;
-                tmp7.positions.length = 0;
-                tmp7.columns.length = 0;
-                tmp7.columnSpans.length = 0;
+                state.idCache.length = 0;
+                state.positions.length = 0;
+                state.columns.length = 0;
+                state.columnSpans.length = 0;
               }
               (function triggerMountedContainerLayouts(containerLayoutTriggers) {
                 if (closure_1_27) {
@@ -24020,14 +23963,14 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   }
                 }
               })(closure_0);
-              const triggerCalculateItemsInView = tmp7.triggerCalculateItemsInView;
+              const triggerCalculateItemsInView = state.triggerCalculateItemsInView;
               if (null != triggerCalculateItemsInView) {
                 const call = triggerCalculateItemsInView.call;
                 const obj = { forceFullItemPositions: true };
                 if (typeof call === "unknown") {
                   const result = triggerCalculateItemsInView(obj);
                 } else {
-                  call(tmp7, obj);
+                  call(state, obj);
                 }
               }
             },
@@ -24080,7 +24023,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     tmp2.idCache[arg0] = tmp4;
                     str = tmp4;
                   }
-                  state = tmp.state;
+                  state = closure_1_0.state;
                   let containerItemKeys;
                   if (null != state) {
                     containerItemKeys = state.containerItemKeys;
@@ -24090,13 +24033,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     num = containerItemKeys.get(str);
                   }
                   if (undefined === num) {
-                    let values = tmp.values;
+                    let values = closure_1_0.values;
                     value = values.get("numContainers");
                     let num2 = 0;
                     num = -1;
                     if (0 < value) {
                       const _HermesInternal = HermesInternal;
-                      values = tmp.values;
+                      values = closure_1_0.values;
                       num = num2;
                       while (values.get("containerItemKey" + num2) !== str) {
                         let sum = num2 + 1;
@@ -24308,22 +24251,22 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               }
               state.contentInsetOverride = tmp2;
               if (!tmp5) {
-                updateContentMetricsState(tmp);
+                updateContentMetricsState(closure_0);
               }
               updateScroll(closure_0, state.scroll, true, { markHasScrolled: false });
               if (!tmp5) {
-                retargetActiveInitialScrollAtEnd(tmp);
+                retargetActiveInitialScrollAtEnd(closure_0);
               }
             },
             scrollIndexIntoView(arg0) {
-              closure_0 = arg0;
+              let index = arg0;
               if (typeof runScrollWithPromise === "function") {
                 closure_129_0 = () => {
                   if (typeof scrollIndexIntoView === "function") {
                     flag = false;
                     if (state) {
-                      const index = tmp.index;
-                      const tmp5 = closure_1_3(tmp, runScrollRequest);
+                      index = index.index;
+                      const tmp5 = closure_1_3(index, runScrollRequest);
                       const startNoBuffer = state.startNoBuffer;
                       if (index < startNoBuffer) {
                         const obj = {};
@@ -24334,7 +24277,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                           num = 0;
                         }
                         obj.viewPosition = num;
-                        closure_1_73(closure_0, obj);
+                        closure_1_73(index, obj);
                         flag = true;
                       } else {
                         flag = false;
@@ -24359,7 +24302,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (typeof call === "unknown") {
                         pendingScrollResolve();
                       } else {
-                        call(tmp3);
+                        call(state);
                       }
                     }
                     state.pendingScrollResolve = pendingScrollResolve;
@@ -24386,10 +24329,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     const merged = Object.assign(closure_1);
                     if (typeof scrollIndexIntoView === "function") {
                       flag = true;
-                      if (tmp) {
+                      if (state) {
                         index = obj.index;
                         const tmp9 = closure_1_3(obj, runScrollRequest);
-                        const startNoBuffer = tmp.startNoBuffer;
+                        const startNoBuffer = state.startNoBuffer;
                         if (index < startNoBuffer) {
                           obj = {};
                           const merged1 = Object.assign(tmp9);
@@ -24425,7 +24368,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (typeof call === "unknown") {
                         pendingScrollResolve();
                       } else {
-                        call(tmp3);
+                        call(state);
                       }
                     }
                     state.pendingScrollResolve = pendingScrollResolve;
@@ -24451,7 +24394,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                     if (typeof call === "unknown") {
                       pendingScrollResolve();
                     } else {
-                      call(tmp3);
+                      call(state);
                     }
                   }
                   state.pendingScrollResolve = pendingScrollResolve;
@@ -24460,13 +24403,13 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   if (closure_1) {
                     closure_1();
                   } else {
-                    const runPendingScrollToEnd = tmp3.runPendingScrollToEnd;
+                    const runPendingScrollToEnd = state.runPendingScrollToEnd;
                     if (null != runPendingScrollToEnd) {
                       const call2 = runPendingScrollToEnd.call;
                       if (typeof call2 === "unknown") {
                         const result = runPendingScrollToEnd();
                       } else {
-                        call2(tmp3);
+                        call2(state);
                       }
                     }
                   }
@@ -24479,7 +24422,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               if (index.index >= 0) {
                 let fn = () => isScrollToIndexReady(index.index);
               }
-              if (typeof tmp === "function") {
+              if (typeof runScrollWithPromise === "function") {
                 closure_129_0 = () => {
                   scrollToIndex(closure_0, closure_0);
                   return true;
@@ -24501,7 +24444,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (typeof call === "unknown") {
                         pendingScrollResolve();
                       } else {
-                        call(tmp3);
+                        call(state);
                       }
                     }
                     state.pendingScrollResolve = pendingScrollResolve;
@@ -24514,7 +24457,6 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp = runScrollWithPromise;
             },
             scrollToItem(item) {
               item = item.item;
@@ -24546,7 +24488,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (typeof call === "unknown") {
                         pendingScrollResolve();
                       } else {
-                        call(tmp3);
+                        call(state);
                       }
                     }
                     state.pendingScrollResolve = pendingScrollResolve;
@@ -24581,7 +24523,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       if (typeof call === "unknown") {
                         pendingScrollResolve();
                       } else {
-                        call(tmp3);
+                        call(state);
                       }
                     }
                     state.pendingScrollResolve = pendingScrollResolve;
@@ -24617,8 +24559,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const effect2 = obj.useEffect(() => () => {
           if (undefined !== current.queuedFullDrawDistancePrewarm) {
             const _cancelAnimationFrame = cancelAnimationFrame;
-            cancelAnimationFrame(tmp.queuedFullDrawDistancePrewarm);
-            tmp.queuedFullDrawDistancePrewarm = undefined;
+            cancelAnimationFrame(current.queuedFullDrawDistancePrewarm);
+            current.queuedFullDrawDistancePrewarm = undefined;
           }
           while (tmp4 !== undefined) {
             let _clearTimeout = clearTimeout;
@@ -24627,6 +24569,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
           }
           const timeouts = current.timeouts;
           timeouts.clear();
+          tmp4 = current.timeouts[Symbol.iterator]();
         }, items23);
         const layoutEffect9 = obj.useLayoutEffect(() => {
           const runPendingScrollToEnd = current.runPendingScrollToEnd;
@@ -24751,8 +24694,8 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                   if (state.scrollingTo) {
                     if (state.scrollingTo.offset >= bound4) {
                       const scrollingTo3 = state.scrollingTo;
-                      const state3 = tmp.state;
-                      const tmp65 = closure_25(tmp);
+                      const state3 = context.state;
+                      const tmp65 = closure_25(context);
                       const _Number7 = Number;
                       let bound1 = bound4;
                       if (Number.isFinite(tmp65)) {
@@ -24785,20 +24728,20 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         const _Math16 = Math;
                         if (Math.abs(bound4 - bound2) > 1) {
                           let obj = { forceScroll: true, isInitialScroll: true, noScrollingTo: true, offset: bound2 };
-                          scrollTo(tmp, obj);
+                          scrollTo(context, obj);
                         }
                       }
                     }
                   }
                   state.scrollPending = bound4;
-                  updateScroll(tmp, tmp8, flag, { fromNativeScrollEvent: true });
+                  updateScroll(context, tmp8, flag, { fromNativeScrollEvent: true });
                   obj = closure_2_37;
                   value = closure_2_37.get(state);
                   if (value) {
                     if (obj.didReachTarget(bound4, value)) {
                       obj.clear(state);
                     }
-                    const state2 = tmp.state;
+                    const state2 = context.state;
                     ({ initialScroll: initialScroll2, didFinishInitialScroll: didFinishInitialScroll2 } = state2);
                     let preservedEndAnchorCorrection = !didFinishInitialScroll2;
                     if (didFinishInitialScroll2) {
@@ -24820,7 +24763,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       preservedEndAnchorCorrection = state2.preservedEndAnchorCorrection;
                     }
                     if (!preservedEndAnchorCorrection) {
-                      if (didFinishedInitialScrollMoveAwayFromTarget(tmp, initialScroll2)) {
+                      if (didFinishedInitialScrollMoveAwayFromTarget(context, initialScroll2)) {
                         let tmp46 = !initialScroll2;
                         if (initialScroll2) {
                           tmp46 = 1 !== initialScroll2.viewPosition;
@@ -24842,7 +24785,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                         }
                         value = !tmp46;
                         if (value) {
-                          const values = tmp.values;
+                          const values = context.values;
                           value = values.get("isAtEnd");
                         }
                         if (!value) {
@@ -24859,7 +24802,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                             }
                             obj.stylePaddingBottom = num10;
                             obj.target = initialScroll2;
-                            clearPendingInitialScrollFooterLayout(tmp, obj);
+                            clearPendingInitialScrollFooterLayout(context, obj);
                           } else {
                             if (undefined !== state2.timeoutPreservedInitialScrollClear) {
                               const _clearTimeout = clearTimeout;
@@ -24874,10 +24817,10 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
                       }
                     }
                     if (state.scrollingTo) {
-                      state = tmp;
-                      const scrollingTo2 = tmp.state.scrollingTo;
+                      state = context;
+                      const scrollingTo2 = context.state.scrollingTo;
                       const _requestAnimationFrame = requestAnimationFrame;
-                      tmp.state.animFrameCheckFinishedScroll = requestAnimationFrame(() => {
+                      context.state.animFrameCheckFinishedScroll = requestAnimationFrame(() => {
                         const scrollingTo = state.state.scrollingTo;
                         if (scrollingTo) {
                           state = tmp.state;
@@ -25069,7 +25012,7 @@ let closure_141 = forwardRef(function LegendListInner2(recycleItems, ref) {
         const items25 = [joined3, horizontal, !context.state.props.stickyPositionComponentInternal];
         const Fragment = obj13.Fragment;
         const obj17 = {};
-        const memo4 = obj23.useMemo(() => {
+        const memo4 = snapToIndices.useMemo(() => {
           let length;
           if (null != f100963) {
             length = f100963.length;
@@ -25379,7 +25322,7 @@ export const useRecyclingEffect = function useRecyclingEffect(arg0) {
     if (hasItemInfo) {
       let tmp2;
       if (ref.current) {
-        let obj = { index: itemIndex, item, prevIndex: tmp.current.index, prevItem: tmp.current.item };
+        let obj = { index: itemIndex, item, prevIndex: ref.current.index, prevItem: ref.current.item };
         tmp2 = closure_0(obj);
       }
       obj = { index: itemIndex, item };
@@ -25403,12 +25346,12 @@ export const useRecyclingState = function useRecyclingState(fn) {
   const tmp3 = _slicedToArray(noop.useState(() => {
     if (typeof computeValue === "function") {
       if (typeof closure_0 !== "function") {
-        return tmp;
+        return closure_0;
       } else if (hasItemInfo) {
         const obj = { index: itemIndex, item, prevIndex: "r", prevItem: "HermesInternal" };
-        let tmpResult = tmp(obj);
+        let tmpResult = closure_0(obj);
       } else {
-        tmpResult = tmp();
+        tmpResult = closure_0();
       }
     } else {
       throw new TypeError("Trying to call a non-function");

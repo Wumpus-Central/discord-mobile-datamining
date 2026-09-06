@@ -14,7 +14,7 @@ function runScrollBenchmark(arg0, arg1, arg2, arg3) {
   }
   return applyArgumentsResult;
 }
-let closure_9 = async function _runScrollBenchmark(arg0, value) {
+let closure_9 = async function _runScrollBenchmark(arg0) {
   if (c7 === 2) {
     c7 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -81,7 +81,7 @@ let closure_9 = async function _runScrollBenchmark(arg0, value) {
             const obj5 = Cancellable;
             c6 = 1;
             c7 = 1;
-            let obj1 = { value: obj5.autoScroll(scrollNow, 0, 0, num11, num12, tmp35, tmp34), done: false };
+            let obj1 = { value: obj5.autoScroll(scrollNow, 0, 0, num11, num12, closure_3, closure_2), done: false };
             return obj1;
           }
         }
@@ -145,13 +145,13 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
           }
           if (Number(length) <= 0) {
             const _Error = Error;
-            const error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
+            const error = new Error(tmp(dependencyMap[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
             throw error;
           }
         }
       }
       closure_4(true);
-      ref = closure_2(function* (arg0, value) {
+      ref = closure_2(function* () {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -241,7 +241,6 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
         return applyArgumentsResult;
       })();
       tmp = ref;
-      tmp2 = dependencyMap;
     }
   }, items);
   closure_5(() => {

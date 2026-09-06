@@ -81,12 +81,12 @@ export const useCarouselController = function useCarouselController(size) {
     } else {
       let num = 0;
       if (result > 0) {
-        num = arr.length - result;
+        num = memo.length - result;
       }
       absolute = Math.abs(num);
     }
     obj = { i: absolute, newSharedIndexValue: null };
-    obj = { loop, rawDataLength: arr.originalLength, autoFillData, index: absolute };
+    obj = { loop, rawDataLength: memo.originalLength, autoFillData, index: absolute };
     obj.newSharedIndexValue = SINGLE_ITEM.convertToSharedIndex(obj);
     return obj;
   };
@@ -139,10 +139,9 @@ export const useCarouselController = function useCarouselController(size) {
       if (arg0) {
         cancelAnimation.runOnJS(callback3)();
         if (closure_0) {
-          tmp(1636).runOnJS(tmp5)();
-          const tmpResult = tmp(1636);
+          cancelAnimation.runOnJS(tmp5)();
+          const tmpResult = cancelAnimation;
         }
-        tmp = require;
       }
     };
     let obj = { runOnJS: size(size[2]).runOnJS, onScrollEnd: callback3, onFinished };
@@ -259,15 +258,16 @@ export const useCarouselController = function useCarouselController(size) {
         const diff = callback() - num;
         sharedValue.value = diff;
         if (tmp) {
-          tmp9.value = callback5(tmp10 * size, onFinished);
+          handlerOffset.value = callback5(tmp10 * size, onFinished);
         } else {
-          tmp9.value = tmp10 * size;
+          handlerOffset.value = tmp10 * size;
           if (onFinished != null) {
             onFinished();
           }
         }
       }
     }
+    tmp = undefined === animated || animated;
   }, items9);
   const items10 = [
     size,
@@ -294,28 +294,29 @@ export const useCarouselController = function useCarouselController(size) {
         const result2 = i * size * result;
         if (loop) {
           const _Math = Math;
-          flag = Math.abs(iter.value % result1) / result1 >= 0.5;
+          flag = Math.abs(handlerOffset.value % result1) / result1 >= 0.5;
         }
         const _Math2 = Math;
         const _Math3 = Math;
         let num2 = 0;
-        const rounded = Math.floor(Math.abs(iter.value / result1));
+        const rounded = Math.floor(Math.abs(handlerOffset.value / result1));
         if (flag) {
           num2 = 1;
         }
         const sum = (rounded + num2) * result1 * result + result2;
         if (tmp) {
-          tmp2.value = i;
-          iter.value = callback5(sum, onFinished);
+          sharedValue.value = i;
+          handlerOffset.value = callback5(sum, onFinished);
         } else {
-          iter.value = sum;
-          tmp2.value = i;
+          handlerOffset.value = sum;
+          sharedValue.value = i;
           if (onFinished != null) {
             onFinished();
           }
         }
       }
     }
+    tmp = undefined !== animated && animated;
   }, items10);
   const items11 = [callback7, callback6, callback8];
   const callback9 = loop.useCallback(() => {

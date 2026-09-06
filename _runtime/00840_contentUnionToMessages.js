@@ -4,7 +4,7 @@ import CHATS_CREATE_METHOD from "00839_CHATS_CREATE_METHOD.js";
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-function contentUnionToMessages(contents, user) {
+function contentUnionToMessages(contents) {
   let str = user;
   if (user === undefined) {
     str = "user";

@@ -8,7 +8,7 @@ function memoize(fn, fn2) {
     function memoized() {
       const self = this;
       if (closure_1) {
-        let applyResult = obj(...arguments);
+        let applyResult = closure_1(...arguments);
       } else {
         applyResult = arguments[0];
       }
@@ -17,11 +17,9 @@ function memoize(fn, fn2) {
         return cache.get(applyResult);
       } else {
         const applyResult1 = closure_0(...arguments);
-        tmp4.cache = cache.set(applyResult, applyResult1) || cache;
+        memoized.cache = cache.set(applyResult, applyResult1) || cache;
         return applyResult1;
       }
-      obj = closure_1;
-      tmp4 = memoized;
     }
     let Cache = memoize.Cache;
     if (!Cache) {

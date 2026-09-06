@@ -82,10 +82,8 @@ let items = [
         children: null,
       };
       const tmp = _objectWithoutProperties(props, closure_2);
-      const tmp2 = React6;
       obj = {};
       const tmp3 = ImageBackground(108);
-      const tmp4 = React5;
       const merged = Object.assign(tmp);
       obj.importantForAccessibility = importantForAccessibility;
       const items = [ImageBackground(254).absoluteFill, ,];
@@ -103,9 +101,9 @@ let items = [
       items[2] = imageStyle;
       obj.style = items;
       obj.ref = imageRef;
-      const items1 = [tmp4(ImageBackground(328), obj), children];
+      const items1 = [React5(ImageBackground(328), obj), children];
       obj.children = items1;
-      return tmp2(tmp3, obj);
+      return React6(tmp3, obj);
     },
   },
 ];

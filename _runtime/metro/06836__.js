@@ -17,7 +17,7 @@ export default function _default(children) {
   let tmp3 = closure_3(() => "bottom-sheet-portal-" + sharedValue(sharedValue1[4]).id(), []);
   const hostName = tmp3;
   closure_3 = mountSheet([]);
-  const tmp4 = hostName((key, current, arg2) => {
+  let tmp4 = hostName((key, current, arg2) => {
     closure_0 = key;
     current = closure_3.current;
     const substr = current.slice();
@@ -35,7 +35,7 @@ export default function _default(children) {
               current2.dismiss();
             }
           }
-        } else if (arg2 === tmp7(6628).MODAL_STACK_BEHAVIOR.switch) {
+        } else if (arg2 === GESTURE_SOURCE.MODAL_STACK_BEHAVIOR.switch) {
           if (tmp4.ref != null) {
             current = ref.current;
             if (current != null) {
@@ -43,7 +43,6 @@ export default function _default(children) {
             }
           }
         }
-        tmp7 = require;
       }
       if (-1 !== findIndexResult) {
         substr.splice(findIndexResult, 1);
@@ -78,7 +77,7 @@ export default function _default(children) {
       tmp3 = !tmp5.willUnmount;
     }
     if (tmp3) {
-      const ref = tmp.current[tmp.current.length - 1].ref;
+      const ref = closure_3.current[closure_3.current.length - 1].ref;
       if (ref != null) {
         current = ref.current;
         if (current != null) {
@@ -106,9 +105,10 @@ export default function _default(children) {
       }
     }
     closure_3.current = substr;
+    tmp4 = findIndexResult === diff && substr.length > 1;
   }, []);
   const willUnmountSheet = tmp6;
-  let tmp7 = hostName((arg0) => {
+  const tmp7 = hostName((arg0) => {
     closure_0 = arg0;
     let current = closure_3.current;
     if (arg0) {

@@ -20,7 +20,7 @@ import _mod10615 from "10615__.js";
 import _mod10616 from "10616__.js";
 import _mod10617 from "10617__.js";
 
-function createConfiguration(flag, arg1) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

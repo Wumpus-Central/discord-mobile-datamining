@@ -1,7 +1,7 @@
 // _runtime/12922__asyncOptionalChain2.js
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-let closure_1 = async function _asyncOptionalChain2(arg0, value) {
+let closure_1 = async function _asyncOptionalChain2(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

@@ -10,7 +10,7 @@ function createSpanJSON(span_id) {
   if (span_id.span_id) {
     span_id = span_id.span_id;
   } else {
-    let tmpResult = tmp(682);
+    let tmpResult = _mod682;
     span_id = tmpResult.uuid4().substring(16);
     const str = tmpResult.uuid4();
   }
@@ -18,13 +18,13 @@ function createSpanJSON(span_id) {
   if (span_id.trace_id) {
     let trace_id = span_id.trace_id;
   } else {
-    tmpResult = tmp(682);
+    tmpResult = _mod682;
     trace_id = tmpResult.uuid4();
   }
   obj.trace_id = trace_id;
   obj = {
-    [tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_OP]: span_id.op,
-    [tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: span_id.origin,
+    [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP]: span_id.op,
+    [_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: span_id.origin,
   };
   obj.data = _mod682.dropUndefinedKeys(Object.assign(obj, span_id.data ? span_id.data : {}));
   return obj.dropUndefinedKeys(Object.assign(merged, obj));
@@ -45,8 +45,8 @@ export const isNearToNow = function isNearToNow(timestamp2) {
   }
   return tmp;
 };
-export const setSpanDurationAsMeasurement = function setSpanDurationAsMeasurement(time_to_full_display, arg1) {
-  ({ timestamp, start_timestamp } = _mod682.spanToJSON(arg1));
+export const setSpanDurationAsMeasurement = function setSpanDurationAsMeasurement(time_to_full_display, _undefined) {
+  ({ timestamp, start_timestamp } = _mod682.spanToJSON(_undefined));
   let tmp4 = timestamp;
   if (timestamp) {
     tmp4 = start_timestamp;
@@ -55,6 +55,7 @@ export const setSpanDurationAsMeasurement = function setSpanDurationAsMeasuremen
     _mod682.setMeasurement(time_to_full_display, 1000 * (timestamp - start_timestamp), "millisecond");
     const tmpResult = _mod682;
   }
+  const spanToJSONResult = _mod682.spanToJSON(_undefined);
 };
 export const setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeasurementOnSpan(
   time_to_initial_display,
@@ -70,10 +71,11 @@ export const setSpanDurationAsMeasurementOnSpan = function setSpanDurationAsMeas
   if (tmp4) {
     obj = {};
     const result = 1000 * (timestamp - start_timestamp);
-    obj[tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = result;
-    obj[tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
+    obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = result;
+    obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = "millisecond";
     activeSpan.addEvent(time_to_initial_display, obj);
   }
+  const spanToJSONResult = obj.spanToJSON(arg1);
 };
 export const setSpanMeasurement = function setSpanMeasurement(addEvent, STALL_COUNT, value, unit) {
   addEvent.addEvent(STALL_COUNT, {
@@ -99,15 +101,15 @@ export const getBundleStartTimestampMs = function getBundleStartTimestampMs() {
   const __BUNDLE_START_TIME__ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.__BUNDLE_START_TIME__;
   if (__BUNDLE_START_TIME__) {
     let sum = __BUNDLE_START_TIME__;
-    if (tmp(681).RN_GLOBAL_OBJ.nativePerformanceNow) {
+    if (RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.nativePerformanceNow) {
       const _Date = Date;
       const timestamp = Date.now();
-      const RN_GLOBAL_OBJ = tmp(681).RN_GLOBAL_OBJ;
+      const RN_GLOBAL_OBJ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ;
       sum = timestamp - RN_GLOBAL_OBJ.nativePerformanceNow() + __BUNDLE_START_TIME__;
     }
     return sum;
   } else {
-    const debug = tmp(682).debug;
+    const debug = _mod682.debug;
     debug.warn("Missing the bundle start time on the global object.");
   }
 };

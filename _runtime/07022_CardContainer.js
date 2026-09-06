@@ -2,6 +2,7 @@
 import Link from "01484_Link.js";
 import _mod5631 from "metro/05631__.js";
 import ModalPresentationContext from "07012_ModalPresentationContext.js";
+import _mod7023 from "metro/07023__.js";
 import CardA11yWrapper from "07024_CardA11yWrapper.js";
 import _mod7025 from "metro/07025__.js";
 import noop from "metro/00019__.js";
@@ -63,10 +64,10 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
   if (focused) {
     tmp4 = false !== scene.descriptor.options.keyboardHandlingEnabled;
   }
-  let tmp2Result = tmp2(7023);
+  let tmp2Result = _mod7023;
   const keyboardManager = tmp2Result.useKeyboardManager({ enabled: tmp4, focused });
   ({ onPageChangeStart: c10, onPageChangeCancel: c11, onPageChangeConfirm: c12 } = keyboardManager);
-  tmp2Result = tmp2(1484);
+  tmp2Result = Link;
   const items = [scene.progress.next];
   const effect = obj.useEffect(() => {
     let next = scene.progress.next;
@@ -117,11 +118,11 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
   let tmp9;
   if (previousScene) {
     ({ route, options } = previousScene.descriptor);
-    headerTitle = tmp2(5631).getHeaderTitle(options, route.name);
+    headerTitle = _mod5631.getHeaderTitle(options, route.name);
     href = tmp2Result1.useLinkBuilder().buildHref(route.name, route.params);
     tmp8 = href;
     tmp9 = headerTitle;
-    const tmp2Result2 = tmp2(5631);
+    const tmp2Result2 = _mod5631;
   }
   closure_15 = tmp12;
   const items1 = [null != previousScene, tmp9, tmp8];
@@ -244,7 +245,7 @@ export const CardContainer = noop.memo(function CardContainerInner(active) {
     obj5.getFocusedRoute = getFocusedRoute;
     obj5.contentHeight = headerHeight;
     obj5.onContentHeightChange = onHeaderHeightChange;
-    obj5.style = tmp21.header;
+    obj5.style = container.header;
     renderHeaderResult = renderHeader(obj5);
   }
   const items4 = [renderHeaderResult];

@@ -55,17 +55,17 @@ let items = [
       const eventNames = this.eventNames;
       const mapped = eventNames.map((item) => WorkletEventHandlerWeb(1680).registerEventHandler(self.worklet, item, closure_0));
       const obj = _classPrivateFieldBase(this, closure_4)[closure_4];
-      const tmp = _classPrivateFieldBase;
       const result = _classPrivateFieldBase(this, closure_5)[closure_5].set(arg0, mapped);
       if (0 === this.eventNames.length) {
         if (arg1) {
           const obj3 = WorkletEventHandlerWeb(self[5]);
           const registerEventHandlerResult = WorkletEventHandlerWeb(self[5]).registerEventHandler(self.worklet, arg1, arg0);
           const items = [registerEventHandlerResult];
-          const result1 = tmp(self, tmp4)[tmp4].set(arg0, items);
-          const obj4 = tmp(self, tmp4)[tmp4];
+          const result1 = _classPrivateFieldBase(self, closure_5)[closure_5].set(arg0, items);
+          const obj4 = _classPrivateFieldBase(self, closure_5)[closure_5];
         }
       }
+      const obj2 = _classPrivateFieldBase(this, closure_5)[closure_5];
     }
   },
   {
@@ -73,7 +73,6 @@ let items = [
     value: function unregisterFromEvents(arg0) {
       _classPrivateFieldBase(this, closure_4)[closure_4].delete(arg0);
       const obj = _classPrivateFieldBase(this, closure_4)[closure_4];
-      const tmp = _classPrivateFieldBase;
       value = _classPrivateFieldBase(this, closure_5)[closure_5].get(arg0);
       if (value != null) {
         const item = value.forEach((item) => {
@@ -81,7 +80,8 @@ let items = [
         });
       }
       const obj2 = _classPrivateFieldBase(this, closure_5)[closure_5];
-      tmp(this, closure_5)[closure_5].delete(arg0);
+      _classPrivateFieldBase(this, closure_5)[closure_5].delete(arg0);
+      const obj3 = _classPrivateFieldBase(this, closure_5)[closure_5];
     }
   }
 ];

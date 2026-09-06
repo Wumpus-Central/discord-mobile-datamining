@@ -1,10 +1,12 @@
 // _runtime/01209_reflectionScalarDefault.js
+import _mod1195 from "metro/01195__.js";
 import ScalarType from "01201_ScalarType.js";
+import reflectionLongConvert from "01206_reflectionLongConvert.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const reflectionScalarDefault = function reflectionScalarDefault(T, L) {
+export const reflectionScalarDefault = function reflectionScalarDefault(T) {
   let STRING = L;
   if (L === undefined) {
     STRING = ScalarType.LongType.STRING;
@@ -12,18 +14,18 @@ export const reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   if (ScalarType.ScalarType.BOOL === T) {
     return false;
   } else {
-    if (tmp3(1201).ScalarType.UINT64 !== T) {
-      if (tmp3(1201).ScalarType.FIXED64 !== T) {
-        if (tmp3(1201).ScalarType.INT64 !== T) {
-          if (tmp3(1201).ScalarType.SFIXED64 !== T) {
-            if (tmp3(1201).ScalarType.SINT64 !== T) {
-              if (tmp3(1201).ScalarType.DOUBLE !== T) {
-                if (tmp3(1201).ScalarType.FLOAT !== T) {
-                  if (tmp3(1201).ScalarType.BYTES === T) {
+    if (ScalarType.ScalarType.UINT64 !== T) {
+      if (ScalarType.ScalarType.FIXED64 !== T) {
+        if (ScalarType.ScalarType.INT64 !== T) {
+          if (ScalarType.ScalarType.SFIXED64 !== T) {
+            if (ScalarType.ScalarType.SINT64 !== T) {
+              if (ScalarType.ScalarType.DOUBLE !== T) {
+                if (ScalarType.ScalarType.FLOAT !== T) {
+                  if (ScalarType.ScalarType.BYTES === T) {
                     const _Uint8Array = Uint8Array;
                     const uint8Array = new Uint8Array(0);
                     return uint8Array;
-                  } else if (tmp3(1201).ScalarType.STRING === T) {
+                  } else if (ScalarType.ScalarType.STRING === T) {
                     return "";
                   } else {
                     return 0;
@@ -34,11 +36,11 @@ export const reflectionScalarDefault = function reflectionScalarDefault(T, L) {
             }
           }
         }
-        let tmp3Result = tmp3(1206);
-        return tmp3Result.reflectionLongConvert(tmp3(1195).PbLong.ZERO, STRING);
+        let tmp3Result = reflectionLongConvert;
+        return tmp3Result.reflectionLongConvert(_mod1195.PbLong.ZERO, STRING);
       }
     }
-    tmp3Result = tmp3(1206);
-    return tmp3Result.reflectionLongConvert(tmp3(1195).PbULong.ZERO, STRING);
+    tmp3Result = reflectionLongConvert;
+    return tmp3Result.reflectionLongConvert(_mod1195.PbULong.ZERO, STRING);
   }
 };

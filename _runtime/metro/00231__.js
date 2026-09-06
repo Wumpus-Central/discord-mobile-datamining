@@ -11,7 +11,7 @@ class Alert {
 }
 const entry = {
   key: "alert",
-  value: function alert(Alert, arg1, items, arg3) {
+  value: function alert(Alert, captureScreenshotError, items, arg3) {
     closure_0 = arg3;
     const _default = Alert(232).default;
     if (_default) {
@@ -20,9 +20,9 @@ const entry = {
       if (!Alert) {
         str = "";
       }
-      let str2 = arg1;
-      let obj = { title: str, message: null, cancelable: false };
-      if (!arg1) {
+      let str2 = captureScreenshotError;
+      const obj = { title: str, message: null, cancelable: false };
+      if (!captureScreenshotError) {
         str2 = "";
       }
       obj.message = str2;
@@ -55,18 +55,16 @@ const entry = {
         (arg0) => console.warn(arg0),
         (arg0, arg1) => {
           if (arg0 === buttonClicked.buttonClicked) {
-            if (arg1 === tmp.buttonNeutral) {
+            if (arg1 === buttonClicked.buttonNeutral) {
               if (arr1.onPress) {
-                obj2.onPress();
+                arr1.onPress();
               }
-              obj2 = arr1;
-            } else if (arg1 === tmp.buttonNegative) {
+            } else if (arg1 === buttonClicked.buttonNegative) {
               if (arr.onPress) {
-                obj.onPress();
+                arr.onPress();
               }
-              obj = arr;
             } else {
-              let onPress = arg1 === tmp.buttonPositive;
+              let onPress = arg1 === buttonClicked.buttonPositive;
               if (onPress) {
                 onPress = arr.onPress;
               }
@@ -75,7 +73,7 @@ const entry = {
               }
             }
           } else {
-            let onDismiss = arg0 === tmp.dismissed && closure_0;
+            let onDismiss = arg0 === buttonClicked.dismissed && closure_0;
             if (onDismiss) {
               onDismiss = closure_0.onDismiss;
             }

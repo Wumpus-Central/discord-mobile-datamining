@@ -118,32 +118,32 @@ export const int64fromString = function int64fromString(trimmed) {
   let num2 = 0;
   let result = NumberResult;
   if (NumberResult >= c0) {
-    num2 = (NumberResult / tmp3) | 0;
-    result = NumberResult % tmp3;
+    num2 = (NumberResult / c0) | 0;
+    result = NumberResult % c0;
   }
   const result1 = num2 * 1000000;
   const sum = result * 1000000 + Number(substr.slice(-18, -12));
   let sum1 = result1;
   let result2 = sum;
   if (sum >= c0) {
-    sum1 = result1 + ((sum / tmp3) | 0);
-    result2 = sum % tmp3;
+    sum1 = result1 + ((sum / c0) | 0);
+    result2 = sum % c0;
   }
   const result3 = sum1 * 1000000;
   const sum2 = result2 * 1000000 + Number(substr.slice(-12, -6));
   let sum3 = result3;
   let result4 = sum2;
   if (sum2 >= c0) {
-    sum3 = result3 + ((sum2 / tmp3) | 0);
-    result4 = sum2 % tmp3;
+    sum3 = result3 + ((sum2 / c0) | 0);
+    result4 = sum2 % c0;
   }
   const result5 = sum3 * 1000000;
   const sum4 = result4 * 1000000 + Number(substr.slice(-6, undefined));
   let sum5 = result5;
   let result6 = sum4;
   if (sum4 >= c0) {
-    sum5 = result5 + ((sum4 / tmp3) | 0);
-    result6 = sum4 % tmp3;
+    sum5 = result5 + ((sum4 / c0) | 0);
+    result6 = sum4 % c0;
   }
   const items = ["-" == trimmed[0], result6, sum5];
   return items;

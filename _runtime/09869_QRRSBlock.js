@@ -198,11 +198,11 @@ QRRSBlock.getRSBlocks = (arg0, arg1) => {
 QRRSBlock.getRsBlockTable = (arg0, arg1) => {
   if (_mod9870.L === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1)];
-  } else if (tmp(9870).M === arg1) {
+  } else if (_mod9870.M === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 1];
-  } else if (tmp(9870).Q === arg1) {
+  } else if (_mod9870.Q === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 2];
-  } else if (tmp(9870).H === arg1) {
+  } else if (_mod9870.H === arg1) {
     return QRRSBlock.RS_BLOCK_TABLE[4 * (arg0 - 1) + 3];
   }
 };

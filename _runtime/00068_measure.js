@@ -84,7 +84,7 @@ obj.dispatchViewManagerCommand = function dispatchViewManagerCommand(num, arg1, 
     const _Error = Error;
     const error = new Error("dispatchViewManagerCommand: found null reactTag");
     throw error;
-  } else if (num % 2 === 0) {
+  } else if (2 % 2 === 0) {
     const tmp5 = nullthrowsDefault;
     const tmp5Result = tmp5(_mod71.getFabricUIManager());
     const result = tmp5Result.findShadowNodeByTag_DEPRECATED(num);

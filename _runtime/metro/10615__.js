@@ -99,11 +99,11 @@ const items = [
           }
           const obj2 = {};
           obj2[tmp3] = -1;
-          const ParsingComponents = tmp(10435).ParsingComponents;
+          const ParsingComponents = ITRelativeDateFormatParser(10435).ParsingComponents;
           return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj2);
         }
       }
-      const ParsingComponents2 = tmp(10435).ParsingComponents;
+      const ParsingComponents2 = ITRelativeDateFormatParser(10435).ParsingComponents;
       return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
     },
   },

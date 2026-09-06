@@ -228,7 +228,7 @@ function encode(arg0) {
   if (items.length) {
     items.push("-");
   }
-  if (sum2 < arr1.length) {
+  if (sum2 < length) {
     let num4 = 2147483647;
     const iter2 = arr1[Symbol.iterator]();
     while (true) {
@@ -251,7 +251,6 @@ function encode(arg0) {
         let num5 = num + (num4 - num3) * sum;
         for (const item10065 of arr1) {
           let tmp25 = item10065 < num4;
-          let tmp24 = item10065;
           if (tmp25) {
             let sum1 = num5 + 1;
             num5 = sum1;
@@ -260,11 +259,10 @@ function encode(arg0) {
           if (tmp25) {
             let str2 = "overflow";
             let tmp55 = error("overflow");
-            let tmp56 = __exception;
             obj.return();
-            throw tmp56;
+            throw __exception;
           } else {
-            if (tmp24 == num4) {
+            if (item10065 == num4) {
               let tmp45 = num5;
               let num8 = 36;
               while (true) {

@@ -120,9 +120,9 @@ function diffNestedProperty(arr, arr, arg2, arg3) {
     const isArray = Array.isArray(arr);
     const tmp36 = flattenStyleDefault;
     if (isArray) {
-      let tmp33Result = tmp33(tmp, tmp36(arr), arg2, arg3);
+      let tmp33Result = diffProperties(tmp, tmp36(arr), arg2, arg3);
     } else {
-      tmp33Result = tmp33(tmp, arr, tmp36(arg2), arg3);
+      tmp33Result = diffProperties(tmp, arr, tmp36(arg2), arg3);
     }
   } else {
     const _Array4 = Array;

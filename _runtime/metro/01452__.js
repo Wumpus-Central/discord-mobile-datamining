@@ -8,10 +8,9 @@ export default function forEach(str, call, arg2) {
       let num4 = 0;
       if (0 < str.length) {
         do {
-          let tmp19 = hasOwnProperty;
           let call4 = hasOwnProperty.call;
           let tmp20 = num4;
-          if (typeof call4 === "unknown" ? tmp19(num4) : call4(str, num4)) {
+          if (typeof call4 === "unknown" ? hasOwnProperty(num4) : call4(str, num4)) {
             if (null == tmp6) {
               let tmp23 = call(str[num4], num4, str);
             } else {
@@ -47,11 +46,9 @@ export default function forEach(str, call, arg2) {
       }
     } else {
       for (const key10024 in arg0) {
-        let tmp27 = hasOwnProperty;
         let call6 = hasOwnProperty.call;
-        let tmp26 = key10024;
         if (typeof call6 === "unknown") {
-          let call6Result = tmp27(key10024);
+          let call6Result = hasOwnProperty(key10024);
         } else {
           call6Result = call6(arg0, key10024);
         }
@@ -68,7 +65,7 @@ export default function forEach(str, call, arg2) {
               let tmp11 = arg1(tmp10, key10024, arg0);
               continue;
             } else {
-              let call2Result = call2(tmp6, tmp10, tmp26, arg0);
+              let call2Result = call2(tmp6, tmp10, key10024, arg0);
               continue;
             }
             continue;

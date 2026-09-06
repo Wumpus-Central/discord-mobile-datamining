@@ -115,10 +115,10 @@ function isPersistedRequest(operationName) {
   }
   return tmp;
 }
-function getGraphQLRequestPayload(arg0) {
+function getGraphQLRequestPayload(first1) {
   try {
     const _JSON = JSON;
-    const parsed = JSON.parse(arg0);
+    const parsed = JSON.parse(first1);
     if (isStandardRequest(parsed)) {
       const tmp9 = parsed;
     }
@@ -136,11 +136,10 @@ export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(
     const tmp7 = input.xhr[triggerHandlers.SENTRY_XHR_DATA_KEY];
     let first = tmp7;
     if (tmp7) {
-      first = tmp5(898).getBodyString(tmp7.body)[0];
-      const tmp5Result = tmp5(898);
+      first = triggerHandlers.getBodyString(tmp7.body)[0];
+      const tmp5Result = triggerHandlers;
     }
     let first1 = first;
-    tmp5 = require;
   } else {
     const fetchRequestArgBody = triggerHandlers.getFetchRequestArgBody(input.input);
     first1 = triggerHandlers.getBodyString(fetchRequestArgBody)[0];
@@ -155,26 +154,26 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
       on.on("beforeOutgoingRequestSpan", (updateName, input) => {
         const tmp3 = closure_0(682).spanToJSON(updateName).data || {};
         if ("http.client" === tmp3[closure_0(undefined, 682).SEMANTIC_ATTRIBUTE_SENTRY_OP]) {
-          const tmp4 = tmp3[tmp(undefined, 682).SEMANTIC_ATTRIBUTE_URL_FULL] || tmp3["http.url"];
-          const tmp5 = tmp3[tmp(undefined, 682).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] || tmp3["http.method"];
-          let tmpResult = tmp(682);
+          const tmp4 = tmp3[closure_0(undefined, 682).SEMANTIC_ATTRIBUTE_URL_FULL] || tmp3["http.url"];
+          const tmp5 = tmp3[closure_0(undefined, 682).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] || tmp3["http.method"];
+          let tmpResult = closure_0(682);
           if (tmpResult.isString(tmp4)) {
-            tmpResult = tmp(682);
+            tmpResult = closure_0(682);
             if (tmpResult.isString(tmp5)) {
-              const result = tmp(682).stringMatchesSomePattern(tmp4, closure_0.endpoints);
+              const result = closure_0(682).stringMatchesSomePattern(tmp4, closure_0.endpoints);
               if ("xhr" in input) {
-                const tmp11 = input.xhr[tmp(undefined, 898).SENTRY_XHR_DATA_KEY];
+                const tmp11 = input.xhr[closure_0(undefined, 898).SENTRY_XHR_DATA_KEY];
                 let first = tmp11;
                 if (tmp11) {
-                  first = tmp(898).getBodyString(tmp11.body)[0];
-                  const tmpResult2 = tmp(898);
+                  first = closure_0(898).getBodyString(tmp11.body)[0];
+                  const tmpResult2 = closure_0(898);
                 }
                 let first1 = first;
               } else {
-                const fetchRequestArgBody = tmp(898).getFetchRequestArgBody(input.input);
-                const tmpResult3 = tmp(898);
-                first1 = tmp(898).getBodyString(fetchRequestArgBody)[0];
-                const tmpResult4 = tmp(898);
+                const fetchRequestArgBody = closure_0(898).getFetchRequestArgBody(input.input);
+                const tmpResult3 = closure_0(898);
+                first1 = closure_0(898).getBodyString(fetchRequestArgBody)[0];
+                const tmpResult4 = closure_0(898);
               }
               if (result) {
                 if (first1) {
@@ -234,10 +233,11 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                   }
                 }
               }
-              const tmpResult1 = tmp(682);
+              const tmpResult1 = closure_0(682);
             }
           }
         }
+        const obj = closure_0(682);
       });
       on.on("beforeOutgoingRequestBreadcrumb", (type, input) => {
         ({ category, data } = type);
@@ -249,18 +249,18 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
             }
             const result = closure_0(682).stringMatchesSomePattern(url, closure_0.endpoints);
             if ("xhr" in input) {
-              const tmp10 = input.xhr[tmp5(undefined, 898).SENTRY_XHR_DATA_KEY];
+              const tmp10 = input.xhr[closure_0(undefined, 898).SENTRY_XHR_DATA_KEY];
               let first = tmp10;
               if (tmp10) {
-                let tmp5Result = tmp5(898);
+                let tmp5Result = closure_0(898);
                 first = tmp5Result.getBodyString(tmp10.body)[0];
               }
               let first1 = first;
             } else {
-              tmp5Result = tmp5(898);
+              tmp5Result = closure_0(898);
               const fetchRequestArgBody = tmp5Result.getFetchRequestArgBody(input.input);
-              first1 = tmp5(898).getBodyString(fetchRequestArgBody)[0];
-              const tmp5Result1 = tmp5(898);
+              first1 = closure_0(898).getBodyString(fetchRequestArgBody)[0];
+              const tmp5Result1 = closure_0(898);
             }
             if (result) {
               if (data) {

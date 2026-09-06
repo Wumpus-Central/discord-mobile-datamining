@@ -1,7 +1,7 @@
 // _runtime/metro/05184__.js
 import _mod5185 from "05185__.js";
-import _mod5186 from "05186__.js";
 
+const _mod5186 = tmp5(5186);
 require = arg1;
 const dependencyMap = arg6;
 

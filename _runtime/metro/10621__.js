@@ -78,10 +78,13 @@ const items = [
         start5.assign("day", parsed);
         if (index[4]) {
           const start2 = parsingResult.start;
-          start2.assign("year", tmp2(10620).parseYear(index[4]));
+          start2.assign("year", SVMonthNameLittleEndianParser(10620).parseYear(index[4]));
         } else {
           const start = parsingResult.start;
-          start.imply("year", tmp2(10433).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4));
+          start.imply(
+            "year",
+            SVMonthNameLittleEndianParser(10433).findYearClosestToRef(createParsingResult.refDate, parsed, tmp4),
+          );
         }
         if (index[2]) {
           const _parseInt = parseInt;

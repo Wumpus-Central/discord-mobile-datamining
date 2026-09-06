@@ -1,5 +1,6 @@
 // _runtime/metro/01781__.js
 import _mod1639 from "01639__.js";
+import _mod1647 from "01647__.js";
 import _mod1661 from "01661__.js";
 import freezeObjectInDev from "../01666_freezeObjectInDev.js";
 import _mod1782 from "01782__.js";
@@ -24,7 +25,6 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
   );
   ({ context, savedDependencies } = tmp.current);
   for (const key10024 in arg0) {
-    let tmp14 = require;
     let obj8 = _mod1661;
     if (obj8.isWorkletFunction(arg0[key10024])) {
       continue;
@@ -32,7 +32,7 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
       let tmp5 = new.target;
       let str = "Passed a function that is not a worklet. Please provide a worklet function.";
       let tmp6 = new.target;
-      let reanimatedError = new tmp14(1647).ReanimatedError(
+      let reanimatedError = new _mod1647.ReanimatedError(
         "Passed a function that is not a worklet. Please provide a worklet function.",
       );
       throw reanimatedError;

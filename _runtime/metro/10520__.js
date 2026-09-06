@@ -18,7 +18,7 @@ import _mod10535 from "10535__.js";
 import _mod10536 from "10536__.js";
 import _mod10537 from "10537__.js";
 
-function createConfiguration(flag) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(visible, ref) {
+export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(visible, arg1) {
   visible = visible.visible;
   ({ inputType, autoFocus } = visible);
   if (autoFocus === undefined) {
@@ -100,7 +100,7 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   )[0];
   first.useRef(visible);
   const ref2 = first.useRef(false);
-  ref = first.useRef(null);
+  const ref = first.useRef(null);
   const items = [visible, first1];
   const effect = first.useEffect(() => {
     if (visible !== ref.current) {
@@ -171,7 +171,7 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   }, items4);
   const items5 = [callback2, clearText];
   const imperativeHandle = first.useImperativeHandle(
-    ref,
+    arg1,
     () => ({
       focus() {
         const current = ref.current;

@@ -177,7 +177,7 @@ export const useDescriptors = function useDescriptors(state) {
     describe(route, arg1) {
       if (arg1) {
         if (typeof getOptions === "function") {
-          dependencyMap = tmp7;
+          dependencyMap = navigation;
           const items = [closure_3, ,];
           if (dependencyMap[route.name].options) {
             const options = tmp10.options;
@@ -198,10 +198,10 @@ export const useDescriptors = function useDescriptors(state) {
             }
             return Object.assign(acc, tmp);
           }, {});
-          route = render(route, tmp7, reduced, undefined);
+          route = render(route, navigation, reduced, undefined);
           obj = {
             route,
-            navigation: tmp7,
+            navigation,
             render() {
               return closure_0;
             },

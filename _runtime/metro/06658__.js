@@ -1,14 +1,17 @@
 // _runtime/metro/06658__.js
 import _mod17 from "00017__.js";
 import handlerIDToTag from "../06659_handlerIDToTag.js";
+import _mod6661 from "06661__.js";
+import _mod6662 from "06662__.js";
+import TouchEventType from "../06663_TouchEventType.js";
 
 function onGestureHandlerEvent(handlerTag) {
   let obj = handlerIDToTag;
   const findHandlerResult = obj.findHandler(handlerTag.handlerTag);
   if (findHandlerResult) {
     if (null != handlerTag.oldState) {
-      if (handlerTag.oldState === tmp(6661).State.UNDETERMINED) {
-        if (handlerTag.state === tmp(6661).State.BEGAN) {
+      if (handlerTag.oldState === _mod6661.State.UNDETERMINED) {
+        if (handlerTag.state === _mod6661.State.BEGAN) {
           const handlers11 = findHandlerResult.handlers;
           const onBegin = handlers11.onBegin;
           if (onBegin != null) {
@@ -16,8 +19,8 @@ function onGestureHandlerEvent(handlerTag) {
           }
         }
       }
-      if (handlerTag.oldState === tmp(6661).State.BEGAN) {
-        if (handlerTag.state === tmp(6661).State.ACTIVE) {
+      if (handlerTag.oldState === _mod6661.State.BEGAN) {
+        if (handlerTag.state === _mod6661.State.ACTIVE) {
           const handlers6 = findHandlerResult.handlers;
           const onStart = handlers6.onStart;
           if (onStart != null) {
@@ -27,8 +30,8 @@ function onGestureHandlerEvent(handlerTag) {
         }
       }
       if (handlerTag.oldState !== handlerTag.state) {
-        if (handlerTag.state === tmp(6661).State.END) {
-          if (handlerTag.oldState === tmp(6661).State.ACTIVE) {
+        if (handlerTag.state === _mod6661.State.END) {
+          if (handlerTag.oldState === _mod6661.State.ACTIVE) {
             const handlers9 = findHandlerResult.handlers;
             const onEnd2 = handlers9.onEnd;
             if (onEnd2 != null) {
@@ -43,15 +46,15 @@ function onGestureHandlerEvent(handlerTag) {
           closure_6[findHandlerResult.handlers.handlerTag] = undefined;
         }
       }
-      let tmp18 = handlerTag.state !== tmp(6661).State.FAILED;
+      let tmp18 = handlerTag.state !== _mod6661.State.FAILED;
       if (tmp18) {
-        tmp18 = handlerTag.state !== tmp(6661).State.CANCELLED;
+        tmp18 = handlerTag.state !== _mod6661.State.CANCELLED;
       }
       if (!tmp18) {
         tmp18 = handlerTag.oldState === handlerTag.state;
       }
       if (!tmp18) {
-        if (handlerTag.oldState === tmp(6661).State.ACTIVE) {
+        if (handlerTag.oldState === _mod6661.State.ACTIVE) {
           const handlers7 = findHandlerResult.handlers;
           const onEnd = handlers7.onEnd;
           if (onEnd != null) {
@@ -68,12 +71,12 @@ function onGestureHandlerEvent(handlerTag) {
       }
     } else if (null != handlerTag.eventType) {
       if (!map.has(handlerTag.handlerTag)) {
-        const GestureStateManager = tmp(6662).GestureStateManager;
-        const result = obj5.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
+        const GestureStateManager = _mod6662.GestureStateManager;
+        const result = map.set(handlerTag.handlerTag, GestureStateManager.create(handlerTag.handlerTag));
       }
-      value = obj5.get(handlerTag.handlerTag);
+      value = map.get(handlerTag.handlerTag);
       const eventType = handlerTag.eventType;
-      if (tmp(6663).TouchEventType.TOUCHES_DOWN === eventType) {
+      if (TouchEventType.TouchEventType.TOUCHES_DOWN === eventType) {
         const handlers5 = findHandlerResult.handlers;
         if (handlers5 != null) {
           const onTouchesDown = handlers5.onTouchesDown;
@@ -81,7 +84,7 @@ function onGestureHandlerEvent(handlerTag) {
             onTouchesDown(handlerTag, value);
           }
         }
-      } else if (tmp(6663).TouchEventType.TOUCHES_MOVE === eventType) {
+      } else if (TouchEventType.TouchEventType.TOUCHES_MOVE === eventType) {
         const handlers4 = findHandlerResult.handlers;
         if (handlers4 != null) {
           const onTouchesMove = handlers4.onTouchesMove;
@@ -89,7 +92,7 @@ function onGestureHandlerEvent(handlerTag) {
             onTouchesMove(handlerTag, value);
           }
         }
-      } else if (tmp(6663).TouchEventType.TOUCHES_UP === eventType) {
+      } else if (TouchEventType.TouchEventType.TOUCHES_UP === eventType) {
         const handlers3 = findHandlerResult.handlers;
         if (handlers3 != null) {
           const onTouchesUp = handlers3.onTouchesUp;
@@ -97,7 +100,7 @@ function onGestureHandlerEvent(handlerTag) {
             onTouchesUp(handlerTag, value);
           }
         }
-      } else if (tmp(6663).TouchEventType.TOUCHES_CANCEL === eventType) {
+      } else if (TouchEventType.TouchEventType.TOUCHES_CANCEL === eventType) {
         const handlers13 = findHandlerResult.handlers;
         if (handlers13 != null) {
           const onTouchesCancelled = handlers13.onTouchesCancelled;
@@ -129,7 +132,7 @@ function onGestureHandlerEvent(handlerTag) {
       tmp9 = findHandlerResult.handlers.onChange && findHandlerResult.handlers.changeEventCalculator;
     }
   } else {
-    const result2 = tmp(6659).findOldGestureHandler(handlerTag.handlerTag);
+    const result2 = handlerIDToTag.findOldGestureHandler(handlerTag.handlerTag);
     if (result2) {
       obj = { nativeEvent: handlerTag };
       if (null != handlerTag.oldState) {
@@ -138,7 +141,7 @@ function onGestureHandlerEvent(handlerTag) {
         result2.onGestureEvent(obj);
       }
     }
-    const tmpResult = tmp(6659);
+    const tmpResult = handlerIDToTag;
   }
 }
 const DeviceEventEmitter = _mod17.DeviceEventEmitter;

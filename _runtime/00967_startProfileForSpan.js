@@ -1,4 +1,5 @@
 // _runtime/00967_startProfileForSpan.js
+import _mod682 from "metro/00682__.js";
 import _mod937 from "metro/00937__.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
@@ -16,7 +17,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     }
     return applyArgumentsResult;
   }
-  closure_7 = async function _onProfileHandler(arg0, value) {
+  closure_7 = async function _onProfileHandler() {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -131,12 +132,12 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     let WINDOW = tmp(893).WINDOW;
     const timeout = WINDOW.setTimeout(() => {
       if (_mod937.DEBUG_BUILD) {
-        const debug = tmp(682).debug;
+        const debug = _mod682.debug;
         debug.log(
           "[Profiling] max profile duration elapsed, stopping profiling for:",
-          tmp(682).spanToJSON(closure_0).description,
+          _mod682.spanToJSON(closure_0).description,
         );
-        const tmpResult = tmp(682);
+        const tmpResult = _mod682;
       }
       onProfileHandler();
     }, tmp(966).MAX_PROFILE_DURATION_MS);

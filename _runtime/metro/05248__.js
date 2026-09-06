@@ -37,8 +37,8 @@ function readTags(_raw, buffer, arg2) {
       if (value) {
         let str2 = byteLength;
         if (typeof byteLength !== "string") {
-          str2 = ParseError(tmp[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
-          const obj3 = ParseError(tmp[7]);
+          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
+          const obj3 = ParseError(dependencyMap[7]);
         }
         obj = {
           doc: parseFromString(
@@ -55,7 +55,6 @@ function readTags(_raw, buffer, arg2) {
         const error = new Error();
         throw error;
       }
-      tmp = dependencyMap;
     })(buffer, arg2));
     if (!str) {
       str = "";
@@ -67,8 +66,8 @@ function readTags(_raw, buffer, arg2) {
       if (value) {
         let str2 = byteLength;
         if (typeof byteLength !== "string") {
-          str2 = ParseError(tmp[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
-          const obj3 = ParseError(tmp[7]);
+          str2 = ParseError(dependencyMap[7]).getStringFromDataView(byteLength, 0, byteLength.byteLength);
+          const obj3 = ParseError(dependencyMap[7]);
         }
         obj = {
           doc: parseFromString(
@@ -85,7 +84,6 @@ function readTags(_raw, buffer, arg2) {
         const error = new Error();
         throw error;
       }
-      tmp = dependencyMap;
     })(buffer, arg2);
     const tmp6 = getRDF(doc);
     ParseError(5213).objectAssign(_raw, parseXMPObject(convertToObject(tmp6, true)));
@@ -108,11 +106,11 @@ function parseFromString(parseFromString, tmp13Result) {
     if ("ParseError" === tmp12.name) {
       if (obj2.isMissingNamespaceError(tmp12)) {
         if (!tmp4) {
-          return parseFromString(tmp2, tmp13(5250).addMissingNamespaces(tmp), true);
+          tmp13Result = ParseError(5250);
+          return parseFromString(tmp2, tmp13Result.addMissingNamespaces(tmp), true);
         }
       }
       obj2 = ParseError(5250);
-      tmp13 = ParseError;
     }
     throw tmp12;
   }
@@ -182,13 +180,13 @@ function convertToObject(childNodes, arg1) {
         obj.value = convertToObject(nodeName);
         if (undefined !== nodeValue[nodeName.nodeName]) {
           const _Array = Array;
-          if (!Array.isArray(tmp3[nodeName.nodeName])) {
-            const items = [tmp3[nodeName.nodeName]];
-            tmp3[nodeName.nodeName] = items;
+          if (!Array.isArray(nodeValue[nodeName.nodeName])) {
+            const items = [nodeValue[nodeName.nodeName]];
+            nodeValue[nodeName.nodeName] = items;
           }
-          tmp3[nodeName.nodeName].push(obj);
+          nodeValue[nodeName.nodeName].push(obj);
         } else {
-          tmp3[nodeName.nodeName] = obj;
+          nodeValue[nodeName.nodeName] = obj;
         }
       }
     });
@@ -196,7 +194,6 @@ function convertToObject(childNodes, arg1) {
   }
 }
 function parseXMPObject(str) {
-  const obj = {};
   if (typeof str === "string") {
     return str;
   } else {
@@ -212,14 +209,16 @@ function parseXMPObject(str) {
         const obj = ParseError(5213);
         obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
         if (typeof attributes.value === "object") {
-          ParseError(5213).objectAssign(obj, parseNodeChildrenAsTags(attributes.value));
+          ParseError(5213).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
           const tmpResult = ParseError(5213);
         }
+        tmp3 = obj;
       });
       continue;
     }
     return obj;
   }
+  obj = {};
 }
 function parseNodeAttributesAsTags(attributes) {
   let obj = {};
@@ -272,10 +271,9 @@ function getDescription(arr) {
     if (tmp2) {
       tmp12 = tmp11;
       if (typeof calculateGPSValueDefault[tmp2] === "function") {
-        tmp12 = tmp13(5251)[tmp2](arr, tmp11);
-        const tmp13Result = tmp13(5251);
+        tmp12 = calculateGPSValueDefault[tmp2](arr, tmp11);
+        const tmp13Result = calculateGPSValueDefault;
       }
-      tmp13 = importDefault;
     }
     return tmp12;
   } else if (typeof arr === "object") {
@@ -635,9 +633,10 @@ function parseNodeAsSimpleValue(attributes, key10005) {
             const obj = ParseError(5213);
             obj.objectAssign(obj, parseNodeAttributesAsTags(attributes.attributes));
             if (typeof attributes.value === "object") {
-              ParseError(5213).objectAssign(obj, parseNodeChildrenAsTags(attributes.value));
+              ParseError(5213).objectAssign(tmp3, parseNodeChildrenAsTags(attributes.value));
               const tmpResult = ParseError(5213);
             }
+            tmp3 = obj;
           });
           continue;
         }
@@ -762,7 +761,7 @@ export default {
       let tmp25Result = readTags(obj, tmp23[0], arg2);
       if (tmp23[1]) {
         if (!tmp25Result) {
-          tmp25Result = tmp25(obj, tmp24, arg2);
+          tmp25Result = readTags(obj, tmp24, arg2);
         }
         if (!tmp25Result) {
           delete tmp[tmp2];
@@ -786,7 +785,7 @@ export default {
           }
           const _DataView3 = DataView;
           const dataView2 = new DataView(uint8Array4.buffer);
-          tmp25Result = tmp25(obj, dataView2, arg2);
+          tmp25Result = readTags(obj, dataView2, arg2);
         }
       }
       return obj;

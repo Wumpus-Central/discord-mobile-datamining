@@ -13,7 +13,7 @@ export const useThenable = function useThenable(arg0) {
   const first1 = items(tmp3, 1)[0];
   let items1 = [first, first1];
   const effect = noop.useEffect(() => {
-    c0 = first(function* (arg0, value) {
+    c0 = first(function* () {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

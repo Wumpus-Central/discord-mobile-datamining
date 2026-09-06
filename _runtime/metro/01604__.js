@@ -34,19 +34,18 @@ export const useRoutePath = function useRoutePath() {
     items[1] = config;
     items[2] = stateForPath;
     items[3] = getPathFromState;
-    return obj.useMemo(() => {
+    return noop.useMemo(() => {
       let enabled;
       if (options != null) {
-        enabled = tmp.enabled;
+        enabled = options.enabled;
       }
       if (false !== enabled) {
         let config;
-        if (tmp != null) {
-          config = tmp.config;
+        if (options != null) {
+          config = options.config;
         }
         return getPathFromState(stateForPath, config);
       }
     }, items);
   }
-  obj = noop;
 };

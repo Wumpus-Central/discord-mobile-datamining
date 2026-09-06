@@ -86,7 +86,7 @@ export const toByteArray = function toByteArray(arr) {
     return tmp7;
   }
 };
-export const fromByteArray = function fromByteArray(arg0) {
+export const fromByteArray = function fromByteArray(uint8Array) {
   let sum;
   const result = length % 3;
   const items = [];
@@ -103,7 +103,10 @@ export const fromByteArray = function fromByteArray(arg0) {
       let items1 = [];
       if (sum2 < tmp5) {
         do {
-          let sum1 = ((arg0[sum2] << 16) & 16711680) + ((arg0[sum2 + 1] << 8) & 65280) + (255 & arg0[sum2 + 2]);
+          let sum1 =
+            ((uint8Array[sum2] << 16) & 16711680) +
+            ((uint8Array[sum2 + 1] << 8) & 65280) +
+            (255 & uint8Array[sum2 + 2]);
           let arr = items1.push(
             dependencyMap[(sum1 >> 18) & 63] +
               dependencyMap[(sum1 >> 12) & 63] +
@@ -118,9 +121,9 @@ export const fromByteArray = function fromByteArray(arg0) {
     } while (sum < diff);
   }
   if (1 === result) {
-    items.push(`${closure_0[arg0[length - 1] >> 2]}${closure_0[(arg0[length - 1] << 4) & 63]}==`);
+    items.push(`${closure_0[uint8Array[length - 1] >> 2]}${closure_0[(uint8Array[length - 1] << 4) & 63]}==`);
   } else if (2 === result) {
-    const sum3 = (arg0[length - 2] << 8) + arg0[length - 1];
+    const sum3 = (uint8Array[length - 2] << 8) + uint8Array[length - 1];
     items.push(`${closure_0[tmp13 >> 10]}${closure_0[(tmp13 >> 4) & 63]}${closure_0[(tmp13 << 2) & 63]}=`);
   }
   return items.join("");

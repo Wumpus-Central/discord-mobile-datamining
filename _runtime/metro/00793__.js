@@ -2,6 +2,7 @@
 import _mod686 from "00686__.js";
 import _mod697 from "00697__.js";
 import _mod713 from "00713__.js";
+import _mod773 from "00773__.js";
 import severityLevelFromString from "../00785_severityLevelFromString.js";
 import setupIntegration from "../00752_setupIntegration.js";
 
@@ -13,8 +14,8 @@ function addConsoleBreadcrumb(level, args) {
     message: null,
   };
   if ("util" in _mod686.GLOBAL_OBJ) {
-    if (typeof tmp(686).GLOBAL_OBJ.util.format === "function") {
-      const util = tmp(686).GLOBAL_OBJ.util;
+    if (typeof _mod686.GLOBAL_OBJ.util.format === "function") {
+      const util = _mod686.GLOBAL_OBJ.util;
       const format = util.format;
       const items = [];
       HermesBuiltin.arraySpread(args, 0);
@@ -28,13 +29,13 @@ function addConsoleBreadcrumb(level, args) {
           obj.message = "Assertion failed";
           obj.data.arguments = substr;
         } else {
-          if (!("util" in tmp(686).GLOBAL_OBJ)) {
-            let tmpResult = tmp(697);
+          if (!("util" in _mod686.GLOBAL_OBJ)) {
+            let tmpResult = _mod697;
             let safeJoinResult = tmpResult.safeJoin(substr, " ");
             const _HermesInternal = HermesInternal;
             const combined = "Assertion failed: " + safeJoinResult;
           }
-          const util2 = tmp(686).GLOBAL_OBJ.util;
+          const util2 = _mod686.GLOBAL_OBJ.util;
           const format2 = util2.format;
           const items1 = [];
           HermesBuiltin.arraySpread(substr, 0);
@@ -42,11 +43,12 @@ function addConsoleBreadcrumb(level, args) {
         }
       }
     }
-    tmpResult = tmp(773);
+    tmpResult = _mod773;
     obj = { input: args, level };
     tmpResult.addBreadcrumb(obj, obj);
   }
   applyResult = _mod697.safeJoin(args, " ");
+  const tmpResult1 = _mod697;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 

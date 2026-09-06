@@ -15,12 +15,13 @@ let closure_3 = async function _saveDocuments() {
       );
     }
     const NativeDocumentPicker2 = tmp2(11226).NativeDocumentPicker;
-    closure_128_0 = await NativeDocumentPicker2.saveDocument(tmp2);
+    await NativeDocumentPicker2.saveDocument(tmp2);
+    closure_128_0 = value;
     const NativeDocumentPicker = tmp2(11226).NativeDocumentPicker;
     await NativeDocumentPicker.writeDocuments(closure_128_0);
-    return arg1;
+    return value;
   })();
-  return arg1.map(closure_129_4);
+  return value.map(closure_129_4);
 };
 function keepOnlySpecifiedFields(uri) {
   return { uri: uri.uri, name: uri.name, error: uri.error };

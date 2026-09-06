@@ -52,7 +52,7 @@ class InnerKeyframe {
                   const transform = tmp15.transform;
                   obj = {};
                   obj[arr.split(":")[1]] = tmp17Result;
-                  transform.push(obj);
+                  arr = transform.push(obj);
                 } else {
                   tmp15[arr] = tmp17Result;
                 }
@@ -62,7 +62,7 @@ class InnerKeyframe {
           let keys = Object.keys(initialValues);
           let item = keys.forEach((arr) => {
             if (arr.includes("transform")) {
-              let item = initialValues[arr].forEach((item, index) => {
+              let item = arr.forEach((item, index) => {
                 closure_0 = index;
                 const keys = Object.keys(item);
                 item = keys.forEach((item) => {
@@ -74,7 +74,6 @@ class InnerKeyframe {
                   }
                 });
               });
-              arr = initialValues[arr];
             } else {
               addAnimation(arr);
             }
@@ -86,7 +85,7 @@ class InnerKeyframe {
         fn.__closure = obj;
         fn.__workletHash = 2209924843920;
         fn.__initData = __initData;
-        tmp.parsedAnimation = fn;
+        self.parsedAnimation = fn;
       }
       return self.parsedAnimation;
     };
@@ -127,7 +126,7 @@ const entry = {
         if ("transform" === item) {
           const _Array = Array;
           if (Array.isArray(first.transform)) {
-            const transform = tmp3.transform;
+            const transform = first.transform;
             item = transform.forEach((item, index) => {
               closure_0 = index;
               const keys = Object.keys(item);
@@ -141,7 +140,6 @@ const entry = {
               });
             });
           }
-          tmp3 = first;
         } else {
           obj[item] = [];
         }
@@ -150,7 +148,7 @@ const entry = {
       const _Object2 = Object;
       const _Number = Number;
       const mapped = Array.from(Object.keys(self.definitions)).map(Number);
-      getAnimationDuration = function getAnimationDuration(arg0, arg1) {
+      getAnimationDuration = function getAnimationDuration(keyframes, arg1) {
 
       };
       const found = mapped.filter((item) => 0 !== item);
@@ -174,18 +172,17 @@ const entry = {
                   transform = tmp16.transform;
                   item = transform.forEach((item, index) => {
                     closure_0 = item;
-                    closure_1 = index;
                     const keys = Object.keys(item);
                     item = keys.forEach((item) => {
                       if (typeof makeKeyframeKey === "function") {
                         const _HermesInternal = HermesInternal;
                         const combined = "" + tmp2 + "_transform:" + item;
                         if (typeof tmp === "function") {
-                          if (combined in closure_1) {
+                          if (combined in index) {
                             if (typeof closure_0 === "function") {
                               const obj = { duration: null, value: null, easing: null };
                               const result = tmp8 / 100 * closure_1_3;
-                              obj.duration = result - tmp10[combined].reduce(() => { ... }, 0);
+                              obj.duration = result - index[combined].reduce(() => { ... }, 0);
                               obj.value = tmp7;
                               obj.easing = tmp9;
                               tmp17(obj);
@@ -196,7 +193,6 @@ const entry = {
                             const reanimatedError = new item(transform[5]).ReanimatedError("Keyframe can contain only that set of properties that were provide with initial values (keyframe 0 or 'from')");
                             throw reanimatedError;
                           }
-                          tmp10 = closure_1;
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
@@ -277,8 +273,8 @@ let items = [
     value: function getDelayFunction() {
       const reduceMotionV = this.reduceMotionV;
       if (this.delayV) {
-        const fn2 = function t(arg0, arg1) {
-          return InnerKeyframe(1708).withDelay(arg0, arg1, reduceMotionV);
+        const fn2 = function t(c12, tmpResult) {
+          return InnerKeyframe(1708).withDelay(c12, tmpResult, reduceMotionV);
         };
         let obj = { withDelay: reduceMotionV(1708).withDelay, reduceMotion: reduceMotionV };
         fn2.__closure = obj;

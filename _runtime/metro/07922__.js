@@ -34,7 +34,7 @@ export const getModalRouteKeys = (arr, arg1) => {
       tmp2 = "pageSheet" === presentation;
     }
     if (tmp2) {
-      arr.push(key.key);
+      arr = arr.push(key.key);
     }
     return arr;
   }, []);

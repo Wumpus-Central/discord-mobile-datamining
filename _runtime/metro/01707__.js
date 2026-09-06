@@ -103,8 +103,8 @@ const items = [
       const self = this;
       const reduceMotion = self.getReduceMotion();
       if (tmp) {
-        const fn2 = function n(arg0, arg1) {
-          return BaseAnimationBuilder(1708).withDelay(arg0, arg1, reduceMotion);
+        const fn2 = function n(c12, tmpResult) {
+          return BaseAnimationBuilder(1708).withDelay(c12, tmpResult, reduceMotion);
         };
         let obj = { withDelay: reduceMotion(1708).withDelay, reduceMotion };
         fn2.__closure = obj;

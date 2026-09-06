@@ -61,7 +61,7 @@ const entry1 = {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.warn("Rive invalid hex color: " + str);
+      console.warn("Rive invalid hex color: " + "Rive invalid hex color: ");
       obj = Object.create(_classCallCheck.prototype);
       _classCallCheck(obj, _classCallCheck);
       obj.r = 0;

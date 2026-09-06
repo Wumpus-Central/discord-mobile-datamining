@@ -47,7 +47,7 @@ export default function _default(icon) {
   };
   if (children == null) {
     obj = { disabled, theme, type: "next" };
-    children = tmp9(icon, obj);
+    children = <icon disabled={disabled} theme={theme} type="next" />;
   }
   obj.children = children;
   return (

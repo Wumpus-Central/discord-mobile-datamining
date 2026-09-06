@@ -21,7 +21,8 @@ for (const key10013 in require("05643__.js")) {
 }
 obj = { to: {}, get: {} };
 obj.get = (str) => {
-  const formatted = str.substring(0, 3).toLowerCase();
+  str = str.substring(0, 3);
+  const formatted = str.toLowerCase();
   if ("hsl" === formatted) {
     const get3 = obj.get;
     let hslResult = get3.hsl(str);
@@ -136,14 +137,12 @@ obj.get.rgb = (str) => {
             } else {
               const call = hasOwnProperty.call;
               items1 = null;
-              if (typeof call === "unknown" ? tmp9(match4[1]) : call(tmp12, match4[1])) {
-                const tmp15 = tmp10(5643)[match4[1]];
+              if (typeof call === "unknown" ? hasOwnProperty(match4[1]) : call(tmp12, match4[1])) {
+                const tmp15 = _mod5643[match4[1]];
                 tmp15[3] = 1;
                 items1 = tmp15;
               }
-              tmp10 = require;
               tmp12 = _mod5643;
-              tmp9 = hasOwnProperty;
             }
           }
         }

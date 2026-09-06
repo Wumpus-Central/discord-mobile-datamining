@@ -182,6 +182,7 @@ let items = [
         const backgroundOpacity = self.state.backgroundOpacity;
         backgroundOpacity.setValue(0);
       }
+      tmp7 = isVisible.isVisible && !self.state.isVisible;
     }
   },
   {
@@ -190,7 +191,7 @@ let items = [
       const self = this;
       let obj = FeedbackWidgetProvider(1061);
       if (obj.isModalSupported()) {
-        let tmpResult = tmp(1064);
+        let tmpResult = FeedbackWidgetProvider(1064);
         ({ isButtonVisible, isScreenshotButtonVisible, isVisible, backgroundOpacity } = self.state);
         obj = { inputRange: [0, 1], outputRange: ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.9)"] };
         const theme = tmpResult.getTheme();
@@ -199,29 +200,29 @@ let items = [
         const children = self.props.children;
         if (isButtonVisible) {
           const _Object = Object;
-          tmpResult = tmp(998);
-          isButtonVisible = obj3.createElement(tmp(1065).FeedbackButton, Object.assign({}, tmpResult.getFeedbackButtonOptions()));
+          tmpResult = FeedbackWidgetProvider(998);
+          isButtonVisible = obj3.createElement(FeedbackWidgetProvider(1065).FeedbackButton, Object.assign({}, tmpResult.getFeedbackButtonOptions()));
         }
         if (isScreenshotButtonVisible) {
           const _Object2 = Object;
-          isScreenshotButtonVisible = obj3.createElement(tmp(1069).ScreenshotButton, Object.assign({}, tmp(998).getScreenshotButtonOptions()));
-          const tmpResult1 = tmp(998);
+          isScreenshotButtonVisible = obj3.createElement(FeedbackWidgetProvider(1069).ScreenshotButton, Object.assign({}, FeedbackWidgetProvider(998).getScreenshotButtonOptions()));
+          const tmpResult1 = FeedbackWidgetProvider(998);
         }
         let element = isVisible;
         if (isVisible) {
           obj = { style: null };
-          const items = [tmp(1067).modalWrapper, ];
+          const items = [FeedbackWidgetProvider(1067).modalWrapper, ];
           const obj1 = { backgroundColor: interpolateResult };
           items[1] = obj1;
           obj.style = items;
           const obj2 = { visible: isVisible, transparent: true, animationType: "none", onRequestClose: self._handleClose, testID: "feedback-form-modal" };
           obj3 = { style: null };
           ({ createElement, createElement: createElement2 } = obj3);
-          obj3.style = tmp(1067).topSpacer;
+          obj3.style = FeedbackWidgetProvider(1067).topSpacer;
           const element2 = createElement2(map1, obj3);
           const _Object3 = Object;
           const obj4 = { style: null };
-          const items1 = [tmp(1067).modalSheetContainer(theme), ];
+          const items1 = [FeedbackWidgetProvider(1067).modalSheetContainer(theme), ];
           const obj5 = { transform: null };
           const obj6 = { translateY: self.state.panY };
           const items2 = [obj6];
@@ -232,15 +233,15 @@ let items = [
           const merged = Object.assign(obj4, self._panResponder.panHandlers);
           ({ createElement: createElement3, createElement: createElement4 } = obj3);
           const _Object4 = Object;
-          const tmpResult2 = tmp(1067);
+          const tmpResult2 = FeedbackWidgetProvider(1067);
           ({ _handleClose: obj17.onFormClose, _handleClose: obj17.onFormSubmitted } = self);
-          element = <RN.View style={null}><closure_1_10 visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(closure_1_12, obj7, createElement4(tmp(1070).FeedbackWidget, Object.assign({}, tmp(998).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></closure_1_10></RN.View>;
+          element = <RN.View style={null}><closure_1_10 visible={isVisible} transparent animationType="none" onRequestClose={self._handleClose} testID="feedback-form-modal">{element2}<RN.View {......merged}>{createElement3(closure_1_12, obj7, createElement4(FeedbackWidgetProvider(1070).FeedbackWidget, Object.assign({}, FeedbackWidgetProvider(998).getFeedbackOptions(), { onFormClose: null, onFormSubmitted: null })))}</RN.View></closure_1_10></RN.View>;
           const obj8 = { onFormClose: null, onFormSubmitted: null };
-          const tmpResult3 = tmp(998);
+          const tmpResult3 = FeedbackWidgetProvider(998);
         }
         return <>{children}{isButtonVisible}{isScreenshotButtonVisible}{element}</>;
       } else {
-        const debug = tmp(682).debug;
+        const debug = FeedbackWidgetProvider(682).debug;
         debug.error("FeedbackWidget Modal is not supported in React Native < 0.71 with Fabric renderer.");
         return <>{self.props.children}</>;
       }

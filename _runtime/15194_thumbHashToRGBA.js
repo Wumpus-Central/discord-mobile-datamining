@@ -411,7 +411,6 @@ function rgbaToDataURL(w, h, rgba) {
   while (tmp31 !== undefined) {
     let tmp34 = _slicedToArray(tmp32, 2);
     [tmp35, tmp36] = tmp34;
-    let tmp37 = tmp36;
     let num9 = -1;
     let tmp38 = tmp35;
     if (tmp35 < tmp36) {
@@ -421,10 +420,10 @@ function rgbaToDataURL(w, h, rgba) {
         num9 = (tmp43 >>> 4) ^ items1[15 & tmp43];
         sum5 = tmp38 + 1;
         tmp38 = sum5;
-      } while (sum5 < tmp37);
+      } while (sum5 < tmp36);
     }
     let tmp48 = ~num9;
-    let tmp51 = +tmp37;
+    let tmp51 = +tmp36;
     let sum6 = tmp51 + 1;
     items[tmp51] = tmp48 >>> 24;
     let tmp54 = +sum6;
@@ -611,9 +610,8 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
         return items2;
       }
       const maxResult2 = max(3, maxResult);
-      let tmp21 = _slicedToArray;
       [tmp23, tmp24, tmp25] = _slicedToArray(encodeChannel(items, max(3, maxResult), max(3, maxResult1)), 3);
-      let tmp22 = _slicedToArray(encodeChannel(items, max(3, maxResult), max(3, maxResult1)), 3);
+      const tmp22 = _slicedToArray(encodeChannel(items, max(3, maxResult), max(3, maxResult1)), 3);
       [tmp27, tmp28, tmp29] = _slicedToArray(encodeChannel(items1, 3, 3), 3);
       const tmp26 = _slicedToArray(encodeChannel(items1, 3, 3), 3);
       [tmp31, tmp32, tmp33] = _slicedToArray(encodeChannel(items2, 3, 3), 3);
@@ -622,7 +620,7 @@ export const rgbaToThumbHash = function rgbaToThumbHash(arg0, arg1, arg2) {
       } else {
         encodeChannelResult = [];
       }
-      const tmp21Result = tmp21(encodeChannelResult, 3);
+      const tmp21Result = _slicedToArray(encodeChannelResult, 3);
       let tmp35 = tmp21Result[1];
       const tmp30 = _slicedToArray(encodeChannel(items2, 3, 3), 3);
       const roundResult = round(63 * tmp23);

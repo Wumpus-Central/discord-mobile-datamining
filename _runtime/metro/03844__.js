@@ -18,9 +18,9 @@ const trunc = "trunc";
 
 export const getRoundingMethod = function getRoundingMethod(roundingMethod) {
   if (roundingMethod) {
-    let tmp3 = tmp[roundingMethod];
+    let tmp3 = obj[roundingMethod];
   } else {
-    tmp3 = tmp[trunc];
+    tmp3 = obj[trunc];
   }
   return tmp3;
 };

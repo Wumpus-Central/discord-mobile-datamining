@@ -1,5 +1,6 @@
 // _runtime/00752_setupIntegration.js
 import _mod688 from "metro/00688__.js";
+import consoleSandbox from "00689_consoleSandbox.js";
 import _mod713 from "metro/00713__.js";
 
 require = arg1;
@@ -8,11 +9,10 @@ function setupIntegration(on, name, arg2) {
   closure_0 = on;
   if (arg2[name.name]) {
     if (_mod688.DEBUG_BUILD) {
-      const debug2 = tmp10(689).debug;
+      const debug2 = consoleSandbox.debug;
       const _HermesInternal2 = HermesInternal;
       debug2.log("Integration skipped because it was already installed: " + name.name);
     }
-    tmp10 = require;
   } else {
     arg2[name.name] = name;
     let arr = items;
@@ -36,13 +36,12 @@ function setupIntegration(on, name, arg2) {
       on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
     }
     if (_mod688.DEBUG_BUILD) {
-      const debug = tmp6(689).debug;
+      const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
       debug.log("Integration installed: " + name.name);
     }
     tmp = items.includes(name.name) || typeof name.setupOnce !== "function";
     tmp4 = name.setup && typeof name.setup === "function";
-    tmp6 = require;
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -52,8 +51,8 @@ export const addIntegration = function addIntegration(name) {
   const client = _mod713.getClient();
   if (client) {
     client.addIntegration(name);
-  } else if (tmp(688).DEBUG_BUILD) {
-    const debug = tmp(689).debug;
+  } else if (_mod688.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
     const _HermesInternal = HermesInternal;
     debug.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
   }

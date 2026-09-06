@@ -21,23 +21,23 @@ function findDescendantWithExitingAnimation(arr, appendChild) {
       if (value) {
         arr.removedAfterAnimation = true;
         appendChild.appendChild(arr);
-        tmp2(1722).setElementPosition(arr, value);
+        _mod1722.setElementPosition(arr, value);
         const onanimationend = arr.onanimationend;
         arr.onanimationend = function (arg0) {
           appendChild.removeChild(closure_0);
           if (onanimationend != null) {
             const self = this;
-            const call = tmp2.call;
+            const call = onanimationend.call;
             if (typeof call === "unknown") {
-              tmp2(arg0);
+              onanimationend(arg0);
             } else {
               call(self, arg0);
             }
           }
         };
-        const tmp2Result = tmp2(1722);
+        const tmp2Result = _mod1722;
       } else {
-        const logger = tmp2(1640).logger;
+        const logger = _mod1640.logger;
         logger.error("Failed to obtain snapshot.");
       }
     }
@@ -65,7 +65,7 @@ export const configureWebLayoutAnimations = function configureWebLayoutAnimation
     if (null === document.getElementById(ReanimatedPredefinedWebAnimationsStyle)) {
       const _document2 = document;
       const element = <style />;
-      element.id = tmp2;
+      element.id = ReanimatedPredefinedWebAnimationsStyle;
       element.onload = () => {
         if (element.sheet) {
           for (const key10016 in tmp(1692).Animations) {
@@ -74,7 +74,7 @@ export const configureWebLayoutAnimations = function configureWebLayoutAnimation
             continue;
           }
         } else {
-          const logger = tmp(1640).logger;
+          const logger = _mod1640.logger;
           logger.error("Failed to create layout animations stylesheet.");
         }
       };
@@ -86,8 +86,8 @@ export const configureWebLayoutAnimations = function configureWebLayoutAnimation
       const _document5 = document;
       head2.appendChild(element1);
     }
-    tmp2 = ReanimatedPredefinedWebAnimationsStyle;
   }
+  obj = element(1639);
 };
 export const insertWebAnimation = function insertWebAnimation(name, result1) {
   if (obj.isWindowAvailable()) {
@@ -114,6 +114,7 @@ export const insertWebAnimation = function insertWebAnimation(name, result1) {
       logger.error("Failed to create layout animations stylesheet.");
     }
   }
+  obj = _mod1639;
 };
 export const scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName, arg1, arg2) {
   closure_0 = animationName;
@@ -123,7 +124,7 @@ export const scheduleAnimationCleanup = function scheduleAnimationCleanup(animat
       if (obj.isWindowAvailable()) {
         const _document = document;
         const element = document.getElementById(ReanimatedCustomWebAnimationsStyle);
-        let sum = map.get(tmp);
+        let sum = map.get(closure_0);
         if (undefined === sum) {
           const reanimatedError = new _mod1647.ReanimatedError("Failed to obtain animation index.");
           throw reanimatedError;
@@ -134,19 +135,19 @@ export const scheduleAnimationCleanup = function scheduleAnimationCleanup(animat
             sheet.deleteRule(sum);
           }
           closure_5.splice(sum, 1);
-          obj2.delete(tmp);
+          map.delete(closure_0);
           if (sum < closure_5.length) {
             value = map.get(closure_5[sum]);
             while (undefined !== value) {
-              let result = map.set(arr[sum], value - 1);
+              let result = map.set(closure_5[sum], value - 1);
               sum = sum + 1;
             }
             const reanimatedError1 = new _mod1647.ReanimatedError("Failed to obtain animation index.");
             throw reanimatedError1;
           }
         }
-        obj2 = map;
       }
+      obj = _mod1639;
     },
     Math.max(5 * arg1 * 1000, arg1 + 160),
   );

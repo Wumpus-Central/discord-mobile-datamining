@@ -1,7 +1,10 @@
 // _runtime/14222_FormatNumericToString.js
-import _mod14206 from "metro/14206__.js";
 import TEN from "14208_TEN.js";
 
+const _mod14206 = tmp5(14206);
+const GetUnsignedRoundingMode = tmp5(14223);
+const ToRawPrecision = tmp5(14224);
+const ToRawFixed = tmp5(14225);
 require = arg1;
 const dependencyMap = arg6;
 
@@ -11,19 +14,18 @@ export const FormatNumericToString = function FormatNumericToString(roundingType
       let ZERO = TEN.ZERO;
       let str2 = "negative";
       let tmp5Result = dependencyMap;
-      let tmp5 = require;
     }
     roundingType = roundingType.roundingType;
-    const result = tmp5(14223).GetUnsignedRoundingMode(roundingType.roundingMode, tmp9);
+    const result = GetUnsignedRoundingMode.GetUnsignedRoundingMode(roundingType.roundingMode, tmp9);
     if ("significantDigits" === roundingType) {
-      let ToRawPrecisionResult = tmp5(14224).ToRawPrecision(
+      let ToRawPrecisionResult = ToRawPrecision.ToRawPrecision(
         ZERO,
         roundingType.minimumSignificantDigits,
         roundingType.maximumSignificantDigits,
         result,
       );
     } else if ("fractionDigits" === roundingType) {
-      ToRawPrecisionResult = tmp5(14225).ToRawFixed(
+      ToRawPrecisionResult = ToRawFixed.ToRawFixed(
         ZERO,
         roundingType.minimumFractionDigits,
         roundingType.maximumFractionDigits,
@@ -31,13 +33,13 @@ export const FormatNumericToString = function FormatNumericToString(roundingType
         result,
       );
     } else {
-      const ToRawPrecisionResult1 = tmp5(14224).ToRawPrecision(
+      const ToRawPrecisionResult1 = ToRawPrecision.ToRawPrecision(
         ZERO,
         roundingType.minimumSignificantDigits,
         roundingType.maximumSignificantDigits,
         result,
       );
-      let ToRawFixedResult = tmp5(14225).ToRawFixed(
+      let ToRawFixedResult = ToRawFixed.ToRawFixed(
         ZERO,
         roundingType.minimumFractionDigits,
         roundingType.maximumFractionDigits,
@@ -50,7 +52,7 @@ export const FormatNumericToString = function FormatNumericToString(roundingType
         }
         ToRawPrecisionResult = ToRawFixedResult;
       } else {
-        tmp5(14206).invariant("lessPrecision" === roundingType.roundingType, "Invalid roundingType");
+        _mod14206.invariant("lessPrecision" === roundingType.roundingType, "Invalid roundingType");
         ToRawPrecisionResult = ToRawPrecisionResult1;
         if (ToRawPrecisionResult1.roundingMagnitude <= ToRawFixedResult.roundingMagnitude) {
           ToRawPrecisionResult = ToRawFixedResult;
@@ -73,13 +75,13 @@ export const FormatNumericToString = function FormatNumericToString(roundingType
     const minimumIntegerDigits = roundingType.minimumIntegerDigits;
     let sum = substr;
     if (integerDigitsCount < minimumIntegerDigits) {
-      sum = tmp5(14206).repeat("0", minimumIntegerDigits - integerDigitsCount) + substr;
+      sum = _mod14206.repeat("0", minimumIntegerDigits - integerDigitsCount) + substr;
     }
     if ("negative" !== str2) {
       const obj = { roundedNumber, formattedString: sum };
       return obj;
     } else if (roundedNumber.isZero()) {
-      tmp5Result = tmp5(14208);
+      tmp5Result = TEN;
       let NEGATIVE_ZERO = tmp5Result.NEGATIVE_ZERO;
     } else {
       NEGATIVE_ZERO = roundedNumber.negated();
@@ -92,12 +94,10 @@ export const FormatNumericToString = function FormatNumericToString(roundingType
   }
   ZERO = timesResult;
   str2 = str;
-  tmp5Result = tmp2;
-  tmp5 = tmp;
+  tmp5Result = dependencyMap;
   if ("negative" === str) {
     ZERO = timesResult.negated();
     str2 = str;
-    tmp5Result = tmp2;
-    tmp5 = tmp;
+    tmp5Result = dependencyMap;
   }
 };

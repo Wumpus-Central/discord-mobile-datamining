@@ -8,7 +8,7 @@ import _isFetchSupported from "00851__isFetchSupported.js";
 import _slicedToArray from "metro/00032__.js";
 import asyncGeneratorStep from "00005_asyncGeneratorStep.js";
 
-let closure_4 = async function _resolveResponse(arg0, value) {
+let closure_4 = async function _resolveResponse(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -42,19 +42,21 @@ let closure_4 = async function _resolveResponse(arg0, value) {
           let timeout2;
           let done;
           let body;
-          if (closure_0 != null) {
-            body = tmp49.body;
+          if (_require != null) {
+            body = _require.body;
           }
           if (!body) {
             c6 = 3;
             return { value: "HermesInternal", done: null };
           } else {
-            body = tmp49.body;
+            body = _require.body;
             closure_130_1 = body;
             reader = body.getReader();
             const _setTimeout = setTimeout;
             timeout = setTimeout(() => {
-              closure_1_1.cancel().then(null, () => {});
+              closure_1_1.cancel().then(null, () => {
+
+              });
             }, 90000);
             closure_130_4 = true;
             if (closure_130_4) {
@@ -62,7 +64,9 @@ let closure_4 = async function _resolveResponse(arg0, value) {
               c5 = 2;
               const _setTimeout2 = setTimeout;
               timeout2 = setTimeout(() => {
-                closure_1_1.cancel().then(null, () => {});
+                closure_1_1.cancel().then(null, () => {
+
+                });
               }, 5000);
               c3 = 3;
               c6 = 1;
@@ -72,7 +76,9 @@ let closure_4 = async function _resolveResponse(arg0, value) {
               const _clearTimeout5 = clearTimeout;
               clearTimeout(timeout);
               reader.releaseLock();
-              closure_130_1.cancel().then(null, () => {});
+              closure_130_1.cancel().then(null, () => {
+
+              });
               const cancelResult = closure_130_1.cancel();
             }
           }
@@ -125,7 +131,7 @@ let closure_4 = async function _resolveResponse(arg0, value) {
 function streamHandler(clone) {
   const response = clone;
   try {
-    !(function resolveResponse(arg0, arg1) {
+    !(function resolveResponse(clone, arg1) {
       const self = this;
       const apply = closure_1_4.apply;
       if (typeof apply === "unknown") {
@@ -207,8 +213,8 @@ function parseFetchArgs(arg0) {
     return request1;
   }
 }
-function getHeadersFromFetchArgs(arg0) {
-  [tmp2, tmp3] = _slicedToArray(arg0, 2);
+function getHeadersFromFetchArgs(items) {
+  [tmp2, tmp3] = _slicedToArray(items, 2);
   try {
     if (typeof tmp3 === "object") {
       if (null !== tmp3) {
@@ -227,12 +233,14 @@ function getHeadersFromFetchArgs(arg0) {
       return headers1;
     }
     obj = _mod692;
-  } catch (err) {}
+  } catch (err) {
+  }
+  const tmp = _slicedToArray(items, 2);
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  _mod715.addHandler("fetch-body-resolved", arg0);
+export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
+  _mod715.addHandler("fetch-body-resolved", errorCallback);
   _mod715.maybeInstrument("fetch-body-resolved", () => {
     closure_0 = closure_5;
     {
@@ -243,127 +251,80 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           const error = new Error();
           let stack = error;
           const request = parseFetchArgs(items);
-          let obj = {
-            args: items,
-            fetchData: { method: request.method, url: request.url },
-            startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(),
-            virtualError: error,
-            headers: getHeadersFromFetchArgs(items),
-          };
+          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error, headers: getHeadersFromFetchArgs(items) };
           if (!closure_2_0) {
             obj = {};
             let merged = Object.assign(obj);
-            tmp2(tmp3[2]).triggerHandlers("fetch", obj);
-            const tmp2Result = tmp2(tmp3[2]);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj);
+            const tmp2Result = tmp2(dependencyMap[2]);
           }
           const obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (arg0, value) => {
-            if (c1 === 2) {
-              c1 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F125488 */ function*() { ... })();
+          });
+          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
-              try {
-                c1 = 2;
-                if (arg0 === 1) {
-                  c1 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c1 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  if (stack) {
-                    tmp17(tmp16);
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }, (error) => {
+            closure_3_0(715);
+            obj = {};
+            const merged = Object.assign(obj);
+            obj.endTimestamp = 1000 * closure_3_0(703).timestampInSeconds();
+            obj.error = error;
+            obj.triggerHandlers("fetch", obj);
+            const obj3 = closure_3_0(703);
+            const tmp3 = obj;
+            const obj4 = closure_3_0(692);
+            if (tmp6) {
+              error.stack = stack.stack;
+              let tmpResult = closure_3_0(687);
+              const result = tmpResult.addNonEnumerableProperty(error, "framesToPop", 1);
+            }
+            tmpResult = closure_3_0(713);
+            const client = tmpResult.getClient();
+            let str2;
+            if (client != null) {
+              str2 = client.getOptions().enhanceFetchErrorMessages;
+            }
+            if (str2 == null) {
+              str2 = "always";
+            }
+            if (false !== str2) {
+              const _TypeError = TypeError;
+              if (error instanceof TypeError) {
+                try {
+                  const _URL = URL;
+                  const uRL = new URL(tmp3.fetchData.url);
+                  const host = uRL.host;
+                  if ("always" === str2) {
+                    const _HermesInternal = HermesInternal;
+                    error.message = "" + error.message + " (" + host + ")";
                   } else {
-                    obj = stack(715);
-                    const obj1 = {};
-                    const merged = Object.assign(c1);
-                    obj1.endTimestamp = 1000 * stack(703).timestampInSeconds();
-                    obj1.response = tmp16;
-                    obj.triggerHandlers("fetch", obj1);
-                    const obj3 = stack(703);
+                    const result1 = closure_3_0(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
+                    const tmpResult1 = closure_3_0(687);
                   }
-                  c1 = 3;
+                } catch (err) {
                 }
-              } catch (tmp11) {
-                c1 = tmp;
-                throw tmp11;
               }
             }
+            throw error;
           });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(
-            function (result) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            },
-            (error) => {
-              closure_3_0(715);
-              obj = {};
-              const merged = Object.assign(obj);
-              obj.endTimestamp = 1000 * closure_3_0(703).timestampInSeconds();
-              obj.error = error;
-              obj.triggerHandlers("fetch", obj);
-              const obj3 = closure_3_0(703);
-              const tmp3 = obj;
-              const obj4 = closure_3_0(692);
-              if (tmp6) {
-                error.stack = stack.stack;
-                let tmpResult = tmp(687);
-                const result = tmpResult.addNonEnumerableProperty(error, "framesToPop", 1);
-              }
-              tmpResult = tmp(713);
-              const client = tmpResult.getClient();
-              let str2;
-              if (client != null) {
-                str2 = client.getOptions().enhanceFetchErrorMessages;
-              }
-              if (str2 == null) {
-                str2 = "always";
-              }
-              if (false !== str2) {
-                const _TypeError = TypeError;
-                if (error instanceof TypeError) {
-                  try {
-                    const _URL = URL;
-                    const uRL = new URL(tmp3.fetchData.url);
-                    const host = uRL.host;
-                    if ("always" === str2) {
-                      const _HermesInternal = HermesInternal;
-                      error.message = "" + error.message + " (" + host + ")";
-                    } else {
-                      const result1 = tmp(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
-                      const tmpResult1 = tmp(687);
-                    }
-                  } catch (err) {}
-                }
-              }
-              throw error;
-            },
-          );
         };
       });
       const obj = closure_0(687);
     }
   });
 };
-export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(arg0, arg1) {
+export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
   _require = arg1;
-  require("metro/00715__.js").addHandler("fetch", arg0);
+  require("metro/00715__.js").addHandler("fetch", errorCallback);
   let obj = require("metro/00715__.js");
   require("metro/00715__.js").maybeInstrument("fetch", () => {
     let flag = closure_0;
@@ -381,118 +342,71 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           const error = new Error();
           let stack = error;
           const request = parseFetchArgs(items);
-          let obj = {
-            args: items,
-            fetchData: { method: request.method, url: request.url },
-            startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(),
-            virtualError: error,
-            headers: getHeadersFromFetchArgs(items),
-          };
+          let obj = { args: items, fetchData: { method: request.method, url: request.url }, startTimestamp: 1000 * stack(dependencyMap[6]).timestampInSeconds(), virtualError: error, headers: getHeadersFromFetchArgs(items) };
           if (!closure_2_0) {
             obj = {};
             let merged = Object.assign(obj);
-            tmp2(tmp3[2]).triggerHandlers("fetch", obj);
-            const tmp2Result = tmp2(tmp3[2]);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj);
+            const tmp2Result = tmp2(dependencyMap[2]);
           }
           const obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (arg0, value) => {
-            if (c1 === 2) {
-              c1 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F125488 */ function*() { ... })();
+          });
+          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
+            const self = this;
+            const apply = closure_0.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
             } else {
-              try {
-                c1 = 2;
-                if (arg0 === 1) {
-                  c1 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c1 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  if (stack) {
-                    tmp17(tmp16);
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          }, (error) => {
+            closure_3_0(715);
+            obj = {};
+            const merged = Object.assign(obj);
+            obj.endTimestamp = 1000 * closure_3_0(703).timestampInSeconds();
+            obj.error = error;
+            obj.triggerHandlers("fetch", obj);
+            const obj3 = closure_3_0(703);
+            const tmp3 = obj;
+            const obj4 = closure_3_0(692);
+            if (tmp6) {
+              error.stack = stack.stack;
+              let tmpResult = closure_3_0(687);
+              const result = tmpResult.addNonEnumerableProperty(error, "framesToPop", 1);
+            }
+            tmpResult = closure_3_0(713);
+            const client = tmpResult.getClient();
+            let str2;
+            if (client != null) {
+              str2 = client.getOptions().enhanceFetchErrorMessages;
+            }
+            if (str2 == null) {
+              str2 = "always";
+            }
+            if (false !== str2) {
+              const _TypeError = TypeError;
+              if (error instanceof TypeError) {
+                try {
+                  const _URL = URL;
+                  const uRL = new URL(tmp3.fetchData.url);
+                  const host = uRL.host;
+                  if ("always" === str2) {
+                    const _HermesInternal = HermesInternal;
+                    error.message = "" + error.message + " (" + host + ")";
                   } else {
-                    obj = stack(715);
-                    const obj1 = {};
-                    const merged = Object.assign(c1);
-                    obj1.endTimestamp = 1000 * stack(703).timestampInSeconds();
-                    obj1.response = tmp16;
-                    obj.triggerHandlers("fetch", obj1);
-                    const obj3 = stack(703);
+                    const result1 = closure_3_0(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
+                    const tmpResult1 = closure_3_0(687);
                   }
-                  c1 = 3;
+                } catch (err) {
                 }
-              } catch (tmp11) {
-                c1 = tmp;
-                throw tmp11;
               }
             }
+            throw error;
           });
-          return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(
-            function (result) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            },
-            (error) => {
-              closure_3_0(715);
-              obj = {};
-              const merged = Object.assign(obj);
-              obj.endTimestamp = 1000 * closure_3_0(703).timestampInSeconds();
-              obj.error = error;
-              obj.triggerHandlers("fetch", obj);
-              const obj3 = closure_3_0(703);
-              const tmp3 = obj;
-              const obj4 = closure_3_0(692);
-              if (tmp6) {
-                error.stack = stack.stack;
-                let tmpResult = tmp(687);
-                const result = tmpResult.addNonEnumerableProperty(error, "framesToPop", 1);
-              }
-              tmpResult = tmp(713);
-              const client = tmpResult.getClient();
-              let str2;
-              if (client != null) {
-                str2 = client.getOptions().enhanceFetchErrorMessages;
-              }
-              if (str2 == null) {
-                str2 = "always";
-              }
-              if (false !== str2) {
-                const _TypeError = TypeError;
-                if (error instanceof TypeError) {
-                  try {
-                    const _URL = URL;
-                    const uRL = new URL(tmp3.fetchData.url);
-                    const host = uRL.host;
-                    if ("always" === str2) {
-                      const _HermesInternal = HermesInternal;
-                      error.message = "" + error.message + " (" + host + ")";
-                    } else {
-                      const result1 = tmp(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
-                      const tmpResult1 = tmp(687);
-                    }
-                  } catch (err) {}
-                }
-              }
-              throw error;
-            },
-          );
         };
       });
     }

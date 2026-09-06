@@ -1,4 +1,6 @@
 // _runtime/metro/12870__.js
+import _mod12797 from "12797__.js";
+import _mod12811 from "12811__.js";
 import _mod12824 from "12824__.js";
 
 require = arg1;
@@ -24,12 +26,12 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
     }
     if (num > 0) {
       consoleSandboxResult = { timestamp: null };
-      let tmpResult = tmp(12811);
+      let tmpResult = _mod12811;
       consoleSandboxResult.timestamp = tmpResult.dateTimestampInSeconds();
       const merged = Object.assign(arg0);
       closure_2 = consoleSandboxResult;
       if (tmp5) {
-        tmpResult = tmp(12797);
+        tmpResult = _mod12797;
         consoleSandboxResult = tmpResult.consoleSandbox(() => beforeBreadcrumb(consoleSandboxResult, closure_0));
       }
       if (null !== consoleSandboxResult) {

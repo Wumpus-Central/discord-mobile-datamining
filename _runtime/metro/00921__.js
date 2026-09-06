@@ -34,4 +34,5 @@ export const initInteractionCountPolyfill = () => {
   if (!tmp) {
     closure_2 = observe.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
   }
+  tmp = "interactionCount" in performance || closure_2;
 };

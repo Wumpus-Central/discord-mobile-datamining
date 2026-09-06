@@ -8,13 +8,12 @@ function addTransformToKeepPosition(style, style2, _default, arg3) {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
     [tmp6, tmp7] = tmp5;
-    let tmp8 = tmp7;
     if (undefined !== tmp7.transform) {
-      let transform = tmp8.transform;
+      let transform = tmp7.transform;
       let arr = transform.unshift(_default);
     } else {
       let items = [_default];
-      tmp8.transform = items;
+      tmp7.transform = items;
     }
     let _parseInt = parseInt;
     let result = parseInt(tmp6) / 2;
@@ -25,9 +24,10 @@ function addTransformToKeepPosition(style, style2, _default, arg3) {
       bound = result + 50;
     }
     let _HermesInternal = HermesInternal;
-    style["" + bound] = tmp8;
+    style["" + bound] = tmp7;
     continue;
   }
+  tmp2 = entries[Symbol.iterator]();
 }
 
 export const EntryExitTransition = function EntryExitTransition(name, translateX) {
@@ -63,6 +63,7 @@ export const EntryExitTransition = function EntryExitTransition(name, translateX
       style[first] = obj;
       continue;
     }
+    tmp6 = map[Symbol.iterator]();
   })(obj.style);
   return obj;
 };

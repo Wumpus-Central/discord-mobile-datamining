@@ -40,13 +40,13 @@ export const getHourCyclesPreferenceDataForLocaleOrRegion = function getHourCycl
   if (region) {
     str = region.toUpperCase();
   }
-  let v001 = hourCycles.hourCycles[formatted] || tmp2(14273).hourCycles[str];
+  let v001 = hourCycles.hourCycles[formatted] || hourCycles.hourCycles[str];
   if (!v001) {
     const concat = "".concat;
-    v001 = tmp2(14273).hourCycles["".concat("", formatted, "-001")];
+    v001 = hourCycles.hourCycles["".concat("", formatted, "-001")];
   }
   if (!v001) {
-    v001 = tmp2(14273).hourCycles["001"];
+    v001 = hourCycles.hourCycles["001"];
   }
   return e.__spreadArray([], v001, true);
 };
@@ -54,7 +54,7 @@ export const getTimeZonePreferenceForRegion = function getTimeZonePreferenceForR
   const formatted = region.toLowerCase();
   const items = [];
   if (timezones.timezones[formatted]) {
-    return tmp2(1162).__spreadArray(items, tmp2(14274).timezones[formatted], true);
+    return e.__spreadArray(items, timezones.timezones[formatted], true);
   } else {
     return items;
   }

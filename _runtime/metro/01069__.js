@@ -97,7 +97,7 @@ if (!fn) {
   };
 }
 function takeScreenshot() {
-  return fn(undefined, undefined, undefined, function*(arg0, value) {
+  return fn(undefined, undefined, undefined, function*() {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -124,7 +124,7 @@ function takeScreenshot() {
           obj = ScreenshotButton(dependencyMap[7]);
           obj.hideScreenshotButton();
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(() => closure_1_12(undefined, undefined, undefined, function*(arg0, value) {
+          const timerId = setTimeout(() => closure_1_12(undefined, undefined, undefined, function*() {
             if (c3 === 2) {
               c3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -256,7 +256,7 @@ let items = [
         }
       }
       const merged2 = Object.assign(merged1, triggerButton);
-      let tmpResult = tmp(1067);
+      let tmpResult = ScreenshotButton(1067);
       const styles2 = self.props.styles;
       let triggerText;
       const merged3 = Object.assign({}, tmpResult.defaultScreenshotButtonStyles(theme).triggerText);
@@ -266,7 +266,7 @@ let items = [
         }
       }
       const style = Object.assign(merged3, triggerText);
-      tmpResult = tmp(1067);
+      tmpResult = ScreenshotButton(1067);
       const styles3 = self.props.styles;
       let triggerIcon;
       const merged5 = Object.assign({}, tmpResult.defaultScreenshotButtonStyles(theme).triggerIcon);

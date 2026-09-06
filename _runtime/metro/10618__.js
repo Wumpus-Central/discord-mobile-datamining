@@ -48,7 +48,7 @@ function createCasualConfiguration() {
   parsers.unshift(new _isNativeReflectConstruct.default());
   return result;
 }
-function createConfiguration(flag) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

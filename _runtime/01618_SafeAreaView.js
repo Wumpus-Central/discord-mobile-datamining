@@ -15,9 +15,9 @@ export const SafeAreaView = noop.forwardRef((edges, ref) => {
       return closure_4;
     } else {
       const _Array = Array;
-      let rect = arr;
-      if (Array.isArray(arr)) {
-        rect = arr.reduce((acc, item) => {
+      let rect = edges;
+      if (Array.isArray(edges)) {
+        rect = edges.reduce((acc, item) => {
           acc[item] = "additive";
           return acc;
         }, {});

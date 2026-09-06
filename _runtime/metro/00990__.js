@@ -5,7 +5,7 @@ function processEvent(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   closure_2 = arg2;
-  return closure_2(this, undefined, undefined, function*(arg0, value) {
+  return closure_2(this, undefined, undefined, function*() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -46,9 +46,9 @@ function processEvent(arg0, arg1, arg2) {
                   if (undefined !== beforeScreenshot) {
                     const call = beforeScreenshot.call;
                     if (typeof call === "unknown") {
-                      let beforeScreenshotResult = beforeScreenshot(tmp25, tmp26);
+                      let beforeScreenshotResult = beforeScreenshot(tmp25, tmp2);
                     } else {
-                      beforeScreenshotResult = call(tmp24, tmp25, tmp26);
+                      beforeScreenshotResult = call(tmp24, tmp25, tmp2);
                     }
                     tmp24 = options;
                   }

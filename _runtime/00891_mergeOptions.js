@@ -118,11 +118,10 @@ function y$1(span, arg1, formTitle) {
     } else {
       const call = slice.call;
       if (typeof call === "unknown") {
-        let callResult = tmp11(2);
+        let callResult = slice(2);
       } else {
         callResult = call(arguments, 2);
       }
-      tmp11 = slice;
     }
   }
   if (typeof span === "function") {
@@ -575,7 +574,7 @@ class C$1 {
     return;
   }
 }
-function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, arr) {
+function P$1(insertBefore, items, __k, __k2, __s2, arg5, items, arr, __d, arg9, arr) {
   let tmp63;
   __k = __k2;
   if (__k2) {
@@ -585,7 +584,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
     __k = items;
   }
   __k.__d = __d;
-  let length2 = arg1.length;
+  let length2 = items.length;
   __k.__k = [];
   let num = 0;
   let tmp = length3;
@@ -593,7 +592,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
   let tmp2 = length3;
   if (0 < length2) {
     do {
-      let vnodeResult2 = arg1[num2];
+      let vnodeResult2 = items[num2];
       let tmp7 = null;
       if (null != vnodeResult2) {
         tmp7 = null;
@@ -887,7 +886,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
   let num7 = 0;
   let tmp61;
   let tmp62 = ___d;
-  if (0 < arg1.length) {
+  if (0 < length) {
     while (true) {
       tmp63 = __k.__k[num7];
       let tmp64 = null != tmp63;
@@ -915,7 +914,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
       tmp70 = __k[tmp63.__i] || closure_19;
     }
     tmp63.__i = num7;
-    M(insertBefore, tmp63, tmp70, arg4, arg5, arg6, arg7, tmp67, arg9, arr);
+    M(insertBefore, tmp63, tmp70, __s2, arg5, items, arr, tmp67, arg9, arr);
     const __e4 = tmp63.__e;
     if (tmp83) {
       if (tmp70.ref) {
@@ -925,7 +924,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
       if (!__c) {
         __c = __e4;
       }
-      arr.push(tmp63.ref, __c, tmp63);
+      arr = arr.push(tmp63.ref, __c, tmp63);
     }
     if (tmp87) {
       tmp65 = __e4;
@@ -1047,6 +1046,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
   }
   __k.__d = tmp62;
   __k.__e = tmp61;
+  length = items.length;
 }
 function $(type, arg1, insertBefore) {
   let nextSibling;
@@ -1275,7 +1275,7 @@ function L(dependencyMap) {
     return l[dependencyMap.type + true](eventResult);
   }
 }
-function M(__P, type, __u, __s2, flag, items, arr, arg7, arg8, arg9) {
+function M(__P, type, __u, __s2, flag, items, arr, arg7, arg8, arr) {
   let length;
   let length2;
   let sum;
@@ -1429,7 +1429,7 @@ function M(__P, type, __u, __s2, flag, items, arr, arg7, arg8, arg9) {
           obj1.props = props;
           obj1.__P = __P;
           obj1.__e = false;
-          const ___r = __s.__r;
+          const ___r = tmp10.__r;
           let num5 = 0;
           if ("prototype" in type) {
             if (type.prototype.render) {
@@ -1474,7 +1474,7 @@ function M(__P, type, __u, __s2, flag, items, arr, arg7, arg8, arg9) {
                 } else {
                   items1 = [children];
                 }
-                tmp139(__P, items1, type, __u, tmp5, flag, tmp9, arr, tmp8, tmp7, arg9);
+                tmp139(__P, items1, type, __u, tmp5, flag, tmp9, arr, tmp8, tmp7, arr);
                 obj1.base = type.__e;
                 type.__u = type.__u & -161;
                 if (obj1.__h.length) {
@@ -1533,15 +1533,16 @@ function M(__P, type, __u, __s2, flag, items, arr, arg7, arg8, arg9) {
           ({ __k: type.__k, __e: type.__e } = __u);
         }
       }
-      type.__e = z$1(__u.__e, type, __u, tmp5, flag, tmp9, arr, tmp7, arg9);
+      type.__e = z$1(__u.__e, type, __u, tmp5, flag, tmp9, arr, tmp7, arr);
     }
     const diffed = __s.diffed;
     if (diffed) {
       diffed(type);
     }
+    tmp10 = __s;
   }
 }
-function z$1(__e, type, props, __s2, flag, items, arr, arg7, arg8) {
+function z$1(__e, type, props, __s2, flag, items, arr, arg7, arr) {
   let length;
   let tmp;
   let tmp30;
@@ -1728,7 +1729,7 @@ function z$1(__e, type, props, __s2, flag, items, arr, arg7, arg8) {
             }
           }
         }
-        P$1(iter, tmp51, type, props, __s2, tmp52, items, arr, first, tmp4, arg8);
+        P$1(iter, tmp51, type, props, __s2, tmp52, items, arr, first, tmp4, arr);
         if (null != items) {
           let diff = tmp98 - 1;
           if (+items.length) {
@@ -1819,11 +1820,10 @@ function O(ref, __v, arg2) {
       for (let num = 0; num < __k.length; num = num + 1) {
         if (__k[num]) {
           let tmp12 = tmp9;
-          let tmp11 = O;
           if (!tmp9) {
             tmp12 = typeof ref.type !== "function";
           }
-          let tmp11Result = tmp11(__k[num], __v, tmp12);
+          let tmp11Result = O(__k[num], __v, tmp12);
         }
       }
     }
@@ -1888,15 +1888,15 @@ let fn = function y(t, fn, fn2) {
       tmp10,
       (arg0) => {
           if (closure_0.__N) {
-            let first = obj.__N[0];
+            let first = closure_0.__N[0];
           } else {
-            first = obj.__[0];
+            first = closure_0.__[0];
           }
           const tResult = closure_0.t(first, arg0);
           if (first !== tResult) {
-            items = [tResult, obj.__[1]];
-            obj.__N = items;
-            __c = obj.__c;
+            items = [tResult, closure_0.__[1]];
+            closure_0.__N = items;
+            __c = closure_0.__c;
             __c.setState({});
           }
         }
@@ -1907,7 +1907,7 @@ let fn = function y(t, fn, fn2) {
       const shouldComponentUpdate = function f(arg0, arg1, arg2) {
         if (closure_0.__c.__H) {
           const self = this;
-          const __ = tmp.__c.__H.__;
+          const __ = closure_0.__c.__H.__;
           const found = __.filter((__c) => __c.__c);
           if (found.every((__N) => !__N.__N)) {
             if (!closure_2) {
@@ -1915,7 +1915,7 @@ let fn = function y(t, fn, fn2) {
             } else {
               const call2 = closure_2.call;
               if (typeof call2 === "unknown") {
-                let call2Result = tmp14(arg0, arg1, arg2);
+                let call2Result = closure_2(arg0, arg1, arg2);
               } else {
                 call2Result = call2(self, arg0, arg1, arg2);
               }
@@ -1933,7 +1933,7 @@ let fn = function y(t, fn, fn2) {
             });
             let tmp7 = !c0;
             if (!c0) {
-              tmp7 = tmp.__c.props === arg0;
+              tmp7 = closure_0.__c.props === arg0;
             }
             let tmp8 = !tmp7;
             if (!tmp7) {
@@ -1942,7 +1942,7 @@ let fn = function y(t, fn, fn2) {
               } else {
                 const call = closure_2.call;
                 if (typeof call === "unknown") {
-                  let callResult = tmp10(arg0, arg1, arg2);
+                  let callResult = closure_2(arg0, arg1, arg2);
                 } else {
                   callResult = call(self, arg0, arg1, arg2);
                 }
@@ -1964,9 +1964,9 @@ let fn = function y(t, fn, fn2) {
           fn(D, keys, length);
         }
         if (componentWillUpdate) {
-          const call = tmp4.call;
+          const call = componentWillUpdate.call;
           if (typeof call === "unknown") {
-            tmp4(D, keys, length);
+            componentWillUpdate(D, keys, length);
           } else {
             call(self, D, keys, length);
           }
@@ -2117,10 +2117,10 @@ function z(__c) {
 function B(arg0) {
   arg0.__c = arg0.__();
 }
-function D(arg0, fn) {
+function D(value, fn) {
   let tmp = fn;
   if (typeof fn === "function") {
-    tmp = fn(arg0);
+    tmp = fn(value);
   }
   return tmp;
 }
@@ -2147,12 +2147,12 @@ function DialogHeader(options) {
   let tmp2Result = null;
   if (options.showBranding) {
     obj = { class: "brand-link", target: "_blank", href: "https://sentry.io/welcome/", title: "Powered by Sentry", rel: "noopener noreferrer", dangerouslySetInnerHTML: tmp };
-    tmp2Result = tmp2("a", obj);
+    tmp2Result = y$1("a", obj);
   }
   return y$1("h2", { class: "dialog__header" }, y$1("span", { class: "dialog__title" }, options.formTitle), tmp2Result);
 }
-function retrieveStringValue(get, arg1) {
-  const str = get.get(arg1);
+function retrieveStringValue(get, email) {
+  const str = get.get(email);
   let str2 = "";
   if (typeof str === "string") {
     str2 = str.trim();
@@ -2178,8 +2178,6 @@ function Form(onSubmitError) {
   ({ onFormClose, showEmail, showName } = onSubmitError);
   ({ removeScreenshotButtonLabel, cancelButtonLabel, emailPlaceholder, messagePlaceholder, namePlaceholder, submitButtonLabel } = options);
   [tmp5, c10] = onSubmitError(fn(D, false), 2);
-  const tmp = fn;
-  let tmp2 = D;
   let tmp3 = onSubmitError;
   const tmp4 = onSubmitError(fn(D, false), 2);
   [tmp7, c11] = onSubmitError(fn(D, null), 2);
@@ -2192,7 +2190,7 @@ function Form(onSubmitError) {
     input = screenshotInput.input;
   }
   const tmp6 = onSubmitError(fn(D, null), 2);
-  [tmp12, c14] = tmp3(tmp(tmp2, null), 2);
+  [tmp12, c14] = tmp3(fn(D, null), 2);
   f107815 = (arg0) => {
     _undefined2(arg0);
     closure_13(false);
@@ -2226,10 +2224,9 @@ function Form(onSubmitError) {
     return 0 === items.length;
   };
   c46 = 8;
-  const tmp13 = fn2;
-  const tmp3Result = tmp3(tmp(tmp2, null), 2);
+  const tmp3Result = tmp3(fn(D, null), 2);
   closure_15 = fn2(() => f71260, items);
-  f107815 = screenshotInput(function*(arg0, value) {
+  f107815 = screenshotInput(function*(arg0) {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -2263,7 +2260,7 @@ function Form(onSubmitError) {
             closure_0.preventDefault();
             if (closure_0.target instanceof globalThis.HTMLFormElement) {
               const _FormData = FormData;
-              const formData = new FormData(tmp87.target);
+              const formData = new FormData(closure_0.target);
               closure_129_0 = formData;
               let valueResult;
               if (screenshotInput) {
@@ -2281,7 +2278,6 @@ function Form(onSubmitError) {
               c6 = 3;
               return { value: "HermesInternal", done: null };
             }
-            tmp87 = closure_0;
           }
         } else if (1 === tmp8) {
           tags = 0;
@@ -2377,37 +2373,37 @@ function Form(onSubmitError) {
     return applyArgumentsResult;
   };
   c46 = 8;
-  obj = { class: "form", onSubmit: tmp13(() => f71260, items1) };
+  obj = { class: "form", onSubmit: fn2(() => f71260, items1) };
   let tmp15Result = null;
   if (input) {
     tmp15Result = null;
     if (first) {
       obj = { onError: tmp14 };
-      tmp15Result = tmp15(input, obj);
+      tmp15Result = y$1(input, obj);
     }
   }
   obj = { class: "form__right", "data-sentry-feedback": true, disabled };
   tmp15Result = null;
   if (tmp7) {
-    tmp15Result = tmp15("div", { class: "form__error-container" }, tmp7);
+    tmp15Result = y$1("div", { class: "form__error-container" }, tmp7);
   }
   if (showName) {
     let obj1 = { label: nameLabel, isRequiredLabel, isRequired: isNameRequired };
     let obj2 = { class: "form__input", defaultValue: defaultName, id: "name", name: "name", placeholder: namePlaceholder, required: isNameRequired, type: "text" };
-    let tmp15Result2 = tmp15("label", { for: "name", class: "form__label" }, tmp15(LabelText, obj1), tmp15("input", obj2));
-    const tmp15Result1 = tmp15(LabelText, obj1);
+    let tmp15Result2 = y$1("label", { for: "name", class: "form__label" }, y$1(LabelText, obj1), y$1("input", obj2));
+    const tmp15Result1 = y$1(LabelText, obj1);
   } else {
     let obj3 = { "aria-hidden": true, value: defaultName, name: "name", type: "hidden" };
-    tmp15Result2 = tmp15("input", obj3);
+    tmp15Result2 = y$1("input", obj3);
   }
   if (showEmail) {
     let obj4 = { label: emailLabel, isRequiredLabel, isRequired: isEmailRequired };
     let obj5 = { class: "form__input", defaultValue: defaultEmail, id: "email", name: "email", placeholder: emailPlaceholder, required: isEmailRequired, type: "email" };
-    let tmp15Result4 = tmp15("label", { for: "email", class: "form__label" }, tmp15(LabelText, obj4), tmp15("input", obj5));
-    const tmp15Result3 = tmp15(LabelText, obj4);
+    let tmp15Result4 = y$1("label", { for: "email", class: "form__label" }, y$1(LabelText, obj4), y$1("input", obj5));
+    const tmp15Result3 = y$1(LabelText, obj4);
   } else {
     let obj6 = { "aria-hidden": true, value: defaultEmail, name: "email", type: "hidden" };
-    tmp15Result4 = tmp15("input", obj6);
+    tmp15Result4 = y$1("input", obj6);
   }
   tmp14 = fn2(() => f71260, []);
   const tmp15Result5 = y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true });
@@ -2425,12 +2421,12 @@ function Form(onSubmitError) {
     if (first) {
       addScreenshotButtonLabel = removeScreenshotButtonLabel;
     }
-    const tmp15Result7 = tmp15("button", obj7, addScreenshotButtonLabel);
+    const tmp15Result7 = y$1("button", obj7, addScreenshotButtonLabel);
     let tmp15Result8 = null;
     if (tmp12) {
-      tmp15Result8 = tmp15("div", { class: "form__error-container" }, tmp12.message);
+      tmp15Result8 = y$1("div", { class: "form__error-container" }, tmp12.message);
     }
-    tmp15Result9 = tmp15("label", { for: "screenshot", class: "form__label" }, tmp15Result7, tmp15Result8);
+    tmp15Result9 = y$1("label", { for: "screenshot", class: "form__label" }, tmp15Result7, tmp15Result8);
   }
   const tmp15Result6 = y$1("label", { for: "message", class: "form__label" }, y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true }), y$1("textarea", { autoFocus: true, class: "form__input form__input--textarea", id: "message", name: "message", placeholder: messagePlaceholder, required: true, rows: 5 }));
   const tmp15Result10 = y$1("div", { class: "form__top" }, tmp15Result, tmp15Result2, tmp15Result4, y$1("label", { for: "message", class: "form__label" }, y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true }), y$1("textarea", { autoFocus: true, class: "form__input form__input--textarea", id: "message", name: "message", placeholder: messagePlaceholder, required: true, rows: 5 })), tmp15Result9);
@@ -2439,7 +2435,7 @@ function Form(onSubmitError) {
 function LabelText(arg0) {
   ({ label, isRequired } = arg0);
   if (isRequired) {
-    isRequired = tmp2("span", { class: "form__label__text--required" }, tmp);
+    isRequired = y$1("span", { class: "form__label__text--required" }, tmp);
   }
   return y$1("span", { class: "form__label__text" }, label, isRequired);
 }
@@ -2527,7 +2523,7 @@ function Dialog(onFormSubmitted) {
   if (first) {
     obj = { class: "success__position", onClick: tmp5 };
     obj = { class: "success__icon", dangerouslySetInnerHTML: tmp2 };
-    let tmp7Result = tmp7("div", obj, tmp7("div", { class: "success__content" }, options.successMessageText, tmp7("span", obj)));
+    let tmp7Result = y$1("div", obj, y$1("div", { class: "success__content" }, options.successMessageText, y$1("span", obj)));
   } else {
     obj = { class: "dialog", onClick: options.onFormClose, open: onFormSubmitted.open };
     const obj1 = {
@@ -2538,10 +2534,10 @@ function Dialog(onFormSubmitted) {
     };
     const obj2 = { options };
     const obj3 = {};
-    tmp7Result = tmp7(DialogHeader, obj2);
+    tmp7Result = y$1(DialogHeader, obj2);
     const merged1 = Object.assign(merged);
     obj3.onSubmitSuccess = tmp6;
-    tmp7Result = tmp7("dialog", obj, tmp7("div", { class: "dialog__position" }, tmp7("div", obj1, tmp7Result, tmp7(Form, obj3))));
+    tmp7Result = y$1("dialog", obj, y$1("div", { class: "dialog__position" }, y$1("div", obj1, tmp7Result, y$1(Form, obj3))));
   }
   return y$1(g$1, null, tmp7Result);
 }
@@ -2565,12 +2561,12 @@ function sendFeedback(message) {
         length = Object.keys(message.tags).length;
       }
       if (length) {
-        let tmp6Result = tmp6(682);
+        let tmp6Result = _mod682;
         const currentScope = tmp6Result.getCurrentScope();
         currentScope.setTags(message.tags);
       }
-      tmp6Result = tmp6(682);
-      obj = { source: "api", url: tmp6(682).getLocationHref() };
+      tmp6Result = _mod682;
+      obj = { source: "api", url: _mod682.getLocationHref() };
       const merged = Object.assign(message);
       closure_1 = tmp6Result.captureFeedback(obj, obj);
       const promise = new Promise((arg0, arg1) => {
@@ -2872,11 +2868,11 @@ merged[1] = function P(c) {
   }
   return __;
 };
-merged[2] = function V(arg0, fn) {
+merged[2] = function V(syncExternalStore, fn) {
   if (obj.useDebugValue) {
-    let tmp3 = arg0;
+    let tmp3 = syncExternalStore;
     if (fn) {
-      tmp3 = fn(arg0);
+      tmp3 = fn(syncExternalStore);
     }
     const debugValue = obj.useDebugValue(tmp3);
   }
@@ -3032,10 +3028,10 @@ merged[6] = function T(arg0, arg1, arr) {
   }
   A(() => {
     if (typeof closure_0 === "function") {
-      tmp(closure_1());
+      closure_0(closure_1());
       fn = () => closure_1_0(null);
-    } else if (tmp) {
-      tmp.current = closure_1();
+    } else if (closure_0) {
+      closure_0.current = closure_1();
       fn = () => {
         closure_1_0.current = null;
         return null;
@@ -3236,7 +3232,7 @@ export const buildFeedbackIntegration = (arg0) => {
       }
       return c3;
     }
-    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+    closure_0 = asyncGeneratorStep(async (arg0) => {
       if (v3 === 2) {
         v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -3273,9 +3269,9 @@ export const buildFeedbackIntegration = (arg0) => {
                 enableScreenshot = (function isScreenshotSupported() {
                   let isMatch = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent.userAgent);
                   if (!isMatch) {
-                    let tmp3 = /Macintosh/i.test(tmp.userAgent) && tmp.maxTouchPoints;
+                    let tmp3 = /Macintosh/i.test(userAgent.userAgent) && userAgent.maxTouchPoints;
                     if (tmp3) {
-                      tmp3 = tmp.maxTouchPoints > 1;
+                      tmp3 = userAgent.maxTouchPoints > 1;
                     }
                     isMatch = tmp3;
                     const obj2 = /Macintosh/i;
@@ -3493,7 +3489,7 @@ export const buildFeedbackIntegration = (arg0) => {
       }
       if (element) {
         c2 = null;
-        closure_0 = asyncGeneratorStep(async (arg0, value) => {
+        closure_0 = asyncGeneratorStep(async () => {
           if (_null === 2) {
             _null = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -3589,7 +3585,7 @@ export const buildFeedbackIntegration = (arg0) => {
       let obj1 = {};
       let obj2 = {};
     }
-    function _createActor(id) {
+    function _createActor() {
       obj = id;
       if (id === undefined) {
         obj = {};
@@ -3720,13 +3716,13 @@ export const buildFeedbackIntegration = (arg0) => {
       element.appendChild(elementNS);
       if (triggerLabel) {
         const element1 = <span />;
-        element1.appendChild(obj6.createTextNode(triggerLabel));
+        element1.appendChild(document.createTextNode(triggerLabel));
         element.appendChild(element1);
       }
       element2 = <style />;
       element2.textContent = "\n.widget__actor {\n  position: fixed;\n  z-index: var(--z-index);\n  margin: var(--page-margin);\n  inset: var(--actor-inset);\n\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 16px;\n\n  font-family: inherit;\n  font-size: var(--font-size);\n  font-weight: 600;\n  line-height: 1.14em;\n  text-decoration: none;\n\n  background: var(--actor-background, var(--background));\n  border-radius: var(--actor-border-radius, 1.7em/50%);\n  border: var(--actor-border, var(--border));\n  box-shadow: var(--actor-box-shadow, var(--box-shadow));\n  color: var(--actor-color, var(--foreground));\n  fill: var(--actor-color, var(--foreground));\n  cursor: pointer;\n  opacity: 1;\n  transition: transform 0.2s ease-in-out;\n  transform: translate(0, 0) scale(1);\n}\n.widget__actor[aria-hidden=\"true\"] {\n  opacity: 0;\n  pointer-events: none;\n  visibility: hidden;\n  transform: translate(0, 16px) scale(0.98);\n}\n\n.widget__actor:hover {\n  background: var(--actor-hover-background, var(--background));\n  filter: var(--interactive-filter);\n}\n\n.widget__actor svg {\n  width: 1.14em;\n  height: 1.14em;\n}\n\n@media (max-width: 600px) {\n  .widget__actor span {\n    display: none;\n  }\n}\n";
       if (closure_0) {
-        const attr = element2.setAttribute("nonce", tmp9);
+        const attr = element2.setAttribute("nonce", closure_0);
       }
       obj3 = {
         el: element,
@@ -3768,16 +3764,15 @@ export const buildFeedbackIntegration = (arg0) => {
         }
         if (autoInject) {
           if ("loading" === document.readyState) {
-            const listener = obj2.addEventListener("DOMContentLoaded", () => _createActor().appendToDom());
+            const listener = document.addEventListener("DOMContentLoaded", () => _createActor().appendToDom());
           } else {
             _createActor().appendToDom();
             const obj3 = _createActor();
           }
-          obj2 = document;
         }
       },
       attachTo: _attachTo,
-      createWidget(id) {
+      createWidget() {
         let tags = id;
         if (id === undefined) {
           tags = {};
@@ -3854,7 +3849,7 @@ export const buildFeedbackIntegration = (arg0) => {
         if (arg0 === undefined) {
           obj = {};
         }
-        return (async (arg0, value) => {
+        return (async () => {
           if (c0 === 2) {
             c0 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -3954,11 +3949,11 @@ export () => ({
     obj.appendToDom = function appendToDom() {
       let hasItem = shadow.contains(element);
       if (!hasItem) {
-        hasItem = obj.contains(closure_5);
+        hasItem = shadow.contains(closure_5);
       }
       if (!hasItem) {
-        obj.appendChild(element);
-        obj.appendChild(closure_5);
+        shadow.appendChild(element);
+        shadow.appendChild(closure_5);
       }
     };
     obj.removeFromDom = function removeFromDom() {
@@ -3995,7 +3990,7 @@ export () => ({
       obj = { options, screenshotInput: input, showName: null, showEmail: null, defaultName: null, defaultEmail: null, onFormClose: null, onSubmit: null, onSubmitSuccess: null, onSubmitError: null, onFormSubmitted: null, open: null };
       let isNameRequired = options.showName;
       if (!isNameRequired) {
-        isNameRequired = tmp3.isNameRequired;
+        isNameRequired = options.isNameRequired;
       }
       obj.showName = isNameRequired;
       obj.showEmail = options.showEmail || options.isEmailRequired;
@@ -4003,7 +3998,7 @@ export () => ({
       if (useSentryUser) {
         let tmp7;
         if (user != null) {
-          tmp7 = tmp5[tmp4.name];
+          tmp7 = tmp5[useSentryUser.name];
         }
         str = tmp7;
       }
@@ -4011,11 +4006,11 @@ export () => ({
         str = "";
       }
       obj.defaultName = String(str);
-      let str2 = tmp4;
+      let str2 = useSentryUser;
       if (useSentryUser) {
         let tmp10;
         if (user != null) {
-          tmp10 = tmp8[tmp4.email];
+          tmp10 = tmp8[useSentryUser.email];
         }
         str2 = tmp10;
       }
@@ -4051,13 +4046,13 @@ export () => ({
         }
       };
       obj.open = open;
-      let tmpResult = tmp(Dialog, obj);
+      let tmpResult = h(Dialog, obj);
       if (closure_2_13.__) {
-        closure_2_13.__(tmpResult, tmp12);
+        closure_2_13.__(tmpResult, closure_5);
       }
-      const __k = tmp12.__k;
+      const __k = closure_5.__k;
       items = [tmpResult];
-      tmpResult = tmp(g$1, null, items);
+      tmpResult = h(g$1, null, items);
       closure_5.__k = tmpResult;
       let tmp16 = __k;
       if (!__k) {
@@ -4065,11 +4060,11 @@ export () => ({
       }
       let tmp18 = null;
       if (!__k) {
-        if (!tmp12.firstChild) {
+        if (!closure_5.firstChild) {
           tmp18 = null;
         } else {
           let call = slice.call;
-          const childNodes = tmp12.childNodes;
+          const childNodes = closure_5.childNodes;
           typeof call === "unknown" ? slice() : call(childNodes);
         }
       }
@@ -4108,6 +4103,7 @@ export () => ({
           closure_2_13.__e(tmp4, tmp.__v);
         }
       });
+      const tmp22 = __k ? __k.__e : closure_5.firstChild;
     };
     return obj;
   }
@@ -4221,7 +4217,7 @@ export () => ({
           }, []);
           useTakeScreenshot = tmp12;
           const effect1 = obj.useEffect(() => {
-            closure_0 = tmp6(function*(arg0, value) {
+            closure_0 = tmp6(function*() {
               if (c3 === 2) {
                 c3 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -4324,7 +4320,7 @@ export () => ({
     ScreenshotEditor = function ScreenshotEditor(screenshot) {
       screenshot = screenshot.screenshot;
       let action;
-      let tmp = element(action.useState("highlight"), 2);
+      const tmp = element(action.useState("highlight"), 2);
       action = tmp[0];
       const tmp3 = element(action.useState([]), 2);
       const first1 = tmp3[0];
@@ -4429,21 +4425,21 @@ export () => ({
         if (current2) {
           context1 = current2.getContext("2d", { alpha: true });
           if (context1) {
-            if (arr.length) {
+            if (first1.length) {
               context1.fillStyle = "rgba(0, 0, 0, 0.25)";
               context1.fillRect(0, 0, current2.width, current2.height);
             }
-            const item = arr.forEach((type) => {
+            const item = first1.forEach((type) => {
               type = type.type;
               if ("highlight" === type) {
-                obj.shadowColor = "rgba(0, 0, 0, 0.7)";
-                obj.shadowBlur = 50;
-                obj.fillStyle = tmp;
-                obj.fillRect(type.x - 1, type.y - 1, type.w + 2, type.h + 2);
-                obj.clearRect(type.x, type.y, type.w, type.h);
+                context1.shadowColor = "rgba(0, 0, 0, 0.7)";
+                context1.shadowBlur = 50;
+                context1.fillStyle = tmp;
+                context1.fillRect(type.x - 1, type.y - 1, type.w + 2, type.h + 2);
+                context1.clearRect(type.x, type.y, type.w, type.h);
               } else if ("hide" === type) {
-                obj.fillStyle = "rgb(0, 0, 0)";
-                obj.fillRect(type.x, type.y, type.w, type.h);
+                context1.fillStyle = "rgb(0, 0, 0)";
+                context1.fillRect(type.x, type.y, type.w, type.h);
               }
             });
           }
@@ -4464,28 +4460,28 @@ export () => ({
         if (size2) {
           const context1 = size2.getContext("2d", { alpha: true });
           if (context1) {
-            context1.scale(tmp.dpi, tmp.dpi);
-            size2.width = tmp.canvas.width;
-            size2.height = tmp.canvas.height;
+            context1.scale(screenshot.dpi, screenshot.dpi);
+            size2.width = screenshot.canvas.width;
+            size2.height = screenshot.canvas.height;
             let context2 = memo;
             if (size2) {
               context2 = size2.getContext("2d", { alpha: true });
               if (context2) {
-                if (arr.length) {
+                if (first1.length) {
                   context2.fillStyle = "rgba(0, 0, 0, 0.25)";
                   context2.fillRect(0, 0, size2.width, size2.height);
                 }
-                const item = arr.forEach((type) => {
+                const item = first1.forEach((type) => {
                   type = type.type;
                   if ("highlight" === type) {
-                    obj.shadowColor = "rgba(0, 0, 0, 0.7)";
-                    obj.shadowBlur = 50;
-                    obj.fillStyle = tmp;
-                    obj.fillRect(type.x - 1, type.y - 1, type.w + 2, type.h + 2);
-                    obj.clearRect(type.x, type.y, type.w, type.h);
+                    context1.shadowColor = "rgba(0, 0, 0, 0.7)";
+                    context1.shadowBlur = 50;
+                    context1.fillStyle = tmp;
+                    context1.fillRect(type.x - 1, type.y - 1, type.w + 2, type.h + 2);
+                    context1.clearRect(type.x, type.y, type.w, type.h);
                   } else if ("hide" === type) {
-                    obj.fillStyle = "rgb(0, 0, 0)";
-                    obj.fillRect(type.x, type.y, type.w, type.h);
+                    context1.fillStyle = "rgb(0, 0, 0)";
+                    context1.fillRect(type.x, type.y, type.w, type.h);
                   }
                 });
               }
@@ -4549,7 +4545,7 @@ export () => ({
                   const _Math4 = Math;
                   point.h = Math.abs(result1 - point.y);
                   items[tmp5] = point;
-                  let context1 = tmp4;
+                  let context1 = memo;
                   if (current2) {
                     context1 = current2.getContext("2d", { alpha: true });
                     if (context1) {
@@ -4563,7 +4559,6 @@ export () => ({
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp4 = memo;
               }
               function handleMouseUp(event) {
                 if (typeof getDrawCommand === "function") {
@@ -4584,6 +4579,7 @@ export () => ({
                   }
                   const removed = React.removeEventListener("mousemove", handleMouseMove);
                   const removed1 = React.removeEventListener("mouseup", handleMouseUp);
+                  tmp7 = point.w * first2 >= 1 && point.h * first2 >= 1;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -4606,7 +4602,7 @@ export () => ({
         return screenshot("div", obj, screenshot("button", obj, screenshot(IconClose, null)));
       })))), screenshot(ref1, obj2));
     };
-    closure_0 = options(function*(arg0, value) {
+    closure_0 = options(function*() {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

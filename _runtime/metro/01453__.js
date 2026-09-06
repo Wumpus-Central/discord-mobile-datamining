@@ -19,16 +19,16 @@ if (typeof apply === "function") {
           throw obj;
         },
       };
-      const definePropertyResult = Object.defineProperty({}, "length", obj);
       obj = {};
       apply(
         () => {
           throw 42;
         },
         null,
-        definePropertyResult,
+        Object.defineProperty({}, "length", obj),
       );
       let tmp3 = apply;
+      const definePropertyResult = Object.defineProperty({}, "length", obj);
     } catch (tmp8) {
       tmp3 = tmp2;
       if (tmp8 !== tmp) {
@@ -60,13 +60,12 @@ if (typeof apply === "function") {
       if (!tmp3) {
         const call = toString.call;
         if (typeof call === "unknown") {
-          tmp4();
+          toString();
           flag = true;
         } else {
           call(fn);
           flag = true;
         }
-        tmp4 = toString;
       }
       return flag;
     } catch (err) {
